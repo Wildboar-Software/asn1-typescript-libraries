@@ -153,12 +153,12 @@ class PumInterrogArg {
     constructor (
         pumUserId: PumInterrogArg_pumUserId,
         basicService: BasicService,
-        hostingAddr: OPTIONAL<PartyNumber>,
-        activatingUserAddr: OPTIONAL<PartyNumber>,
-        serviceOption: OPTIONAL<ServiceOption>,
-        homeInfoOnly: OPTIONAL<BOOLEAN>,
-        userPin: OPTIONAL<PumInterrogArg_userPin>,
-        argExtension: OPTIONAL<PumrExtension>
+        hostingAddr?: OPTIONAL<PartyNumber>,
+        activatingUserAddr?: OPTIONAL<PartyNumber>,
+        serviceOption?: OPTIONAL<ServiceOption>,
+        homeInfoOnly?: OPTIONAL<BOOLEAN>,
+        userPin?: OPTIONAL<PumInterrogArg_userPin>,
+        argExtension?: OPTIONAL<PumrExtension>
     ) {
         this.pumUserId = pumUserId;
         this.basicService = basicService;

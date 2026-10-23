@@ -40,13 +40,13 @@ class PositionMethodFailure_Param {
          * @public
          * @readonly
          */
-        readonly positionMethodFailure_Diagnostic: OPTIONAL<PositionMethodFailure_Diagnostic>,
+        readonly positionMethodFailure_Diagnostic?: OPTIONAL<PositionMethodFailure_Diagnostic>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

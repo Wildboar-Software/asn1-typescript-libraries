@@ -49,7 +49,7 @@ export class CollectedDigits {
          * @public
          * @readonly
          */
-        readonly endOfReplyDigit: OPTIONAL<OCTET_STRING>,
+        readonly endOfReplyDigit?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `cancelDigit`.
          * @description
@@ -61,7 +61,7 @@ export class CollectedDigits {
          * @public
          * @readonly
          */
-        readonly cancelDigit: OPTIONAL<OCTET_STRING>,
+        readonly cancelDigit?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `startDigit`.
          * @description
@@ -73,7 +73,7 @@ export class CollectedDigits {
          * @public
          * @readonly
          */
-        readonly startDigit: OPTIONAL<OCTET_STRING>,
+        readonly startDigit?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `firstDigitTimeOut`.
          * @description
@@ -83,7 +83,7 @@ export class CollectedDigits {
          * @public
          * @readonly
          */
-        readonly firstDigitTimeOut: OPTIONAL<INTEGER>,
+        readonly firstDigitTimeOut?: OPTIONAL<INTEGER>,
         /**
          * @summary `interDigitTimeOut`.
          * @description
@@ -93,9 +93,9 @@ export class CollectedDigits {
          * @public
          * @readonly
          */
-        readonly interDigitTimeOut: OPTIONAL<INTEGER>,
-        readonly errorTreatment: OPTIONAL<ErrorTreatment>,
-        readonly interruptableAnnInd: OPTIONAL<BOOLEAN>,
+        readonly interDigitTimeOut?: OPTIONAL<INTEGER>,
+        readonly errorTreatment?: OPTIONAL<ErrorTreatment>,
+        readonly interruptableAnnInd?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `voiceInformation`.
          * @description
@@ -106,7 +106,7 @@ export class CollectedDigits {
          * @public
          * @readonly
          */
-        readonly voiceInformation: OPTIONAL<BOOLEAN>,
+        readonly voiceInformation?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `voiceBack`.
          * @description
@@ -117,7 +117,7 @@ export class CollectedDigits {
          * @public
          * @readonly
          */
-        readonly voiceBack: OPTIONAL<BOOLEAN>,
+        readonly voiceBack?: OPTIONAL<BOOLEAN>,
     ) {
         if (minimumNbOfDigits !== undefined && (typeof minimumNbOfDigits === "bigint" ? (minimumNbOfDigits < 1n || minimumNbOfDigits > 30n) : (minimumNbOfDigits < 1 || minimumNbOfDigits > 30))) {
             throw new ASN1OverflowError("CollectedDigits.minimumNbOfDigits violates INTEGER constraint");

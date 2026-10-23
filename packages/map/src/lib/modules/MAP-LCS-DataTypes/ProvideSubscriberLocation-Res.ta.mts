@@ -84,7 +84,7 @@ class ProvideSubscriberLocation_Res {
          * @public
          * @readonly
          */
-        readonly ageOfLocationEstimate: OPTIONAL<AgeOfLocationInformation>,
+        readonly ageOfLocationEstimate?: OPTIONAL<AgeOfLocationInformation>,
         /**
          * @summary `extensionContainer`.
          * @description
@@ -94,7 +94,7 @@ class ProvideSubscriberLocation_Res {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `add_LocationEstimate`.
          * @description
@@ -104,7 +104,7 @@ class ProvideSubscriberLocation_Res {
          * @public
          * @readonly
          */
-        readonly add_LocationEstimate: OPTIONAL<Add_GeographicalInformation>,
+        readonly add_LocationEstimate?: OPTIONAL<Add_GeographicalInformation>,
         /**
          * @summary `deferredmt_lrResponseIndicator`.
          * @description
@@ -115,7 +115,7 @@ class ProvideSubscriberLocation_Res {
          * @public
          * @readonly
          */
-        readonly deferredmt_lrResponseIndicator: OPTIONAL<NULL>,
+        readonly deferredmt_lrResponseIndicator?: OPTIONAL<NULL>,
         /**
          * @summary `geranPositioningData`.
          * @description
@@ -126,7 +126,7 @@ class ProvideSubscriberLocation_Res {
          * @public
          * @readonly
          */
-        readonly geranPositioningData: OPTIONAL<PositioningDataInformation>,
+        readonly geranPositioningData?: OPTIONAL<PositioningDataInformation>,
         /**
          * @summary `utranPositioningData`.
          * @description
@@ -137,7 +137,7 @@ class ProvideSubscriberLocation_Res {
          * @public
          * @readonly
          */
-        readonly utranPositioningData: OPTIONAL<UtranPositioningDataInfo>,
+        readonly utranPositioningData?: OPTIONAL<UtranPositioningDataInfo>,
         /**
          * @summary `cellIdOrSai`.
          * @description
@@ -147,7 +147,7 @@ class ProvideSubscriberLocation_Res {
          * @public
          * @readonly
          */
-        readonly cellIdOrSai: OPTIONAL<CellGlobalIdOrServiceAreaIdOrLAI>,
+        readonly cellIdOrSai?: OPTIONAL<CellGlobalIdOrServiceAreaIdOrLAI>,
         /**
          * @summary `sai_Present`.
          * @description
@@ -157,7 +157,7 @@ class ProvideSubscriberLocation_Res {
          * @public
          * @readonly
          */
-        readonly sai_Present: OPTIONAL<NULL>,
+        readonly sai_Present?: OPTIONAL<NULL>,
         /**
          * @summary `accuracyFulfilmentIndicator`.
          * @description
@@ -168,7 +168,7 @@ class ProvideSubscriberLocation_Res {
          * @public
          * @readonly
          */
-        readonly accuracyFulfilmentIndicator: OPTIONAL<AccuracyFulfilmentIndicator>,
+        readonly accuracyFulfilmentIndicator?: OPTIONAL<AccuracyFulfilmentIndicator>,
         /**
          * @summary `velocityEstimate`.
          * @description
@@ -179,7 +179,7 @@ class ProvideSubscriberLocation_Res {
          * @public
          * @readonly
          */
-        readonly velocityEstimate: OPTIONAL<VelocityEstimate>,
+        readonly velocityEstimate?: OPTIONAL<VelocityEstimate>,
         /**
          * @summary `mo_lrShortCircuitIndicator`.
          * @description
@@ -189,7 +189,7 @@ class ProvideSubscriberLocation_Res {
          * @public
          * @readonly
          */
-        readonly mo_lrShortCircuitIndicator: OPTIONAL<NULL>,
+        readonly mo_lrShortCircuitIndicator?: OPTIONAL<NULL>,
         /**
          * @summary `geranGANSSpositioningData`.
          * @description
@@ -200,7 +200,7 @@ class ProvideSubscriberLocation_Res {
          * @public
          * @readonly
          */
-        readonly geranGANSSpositioningData: OPTIONAL<GeranGANSSpositioningData>,
+        readonly geranGANSSpositioningData?: OPTIONAL<GeranGANSSpositioningData>,
         /**
          * @summary `utranGANSSpositioningData`.
          * @description
@@ -211,7 +211,7 @@ class ProvideSubscriberLocation_Res {
          * @public
          * @readonly
          */
-        readonly utranGANSSpositioningData: OPTIONAL<UtranGANSSpositioningData>,
+        readonly utranGANSSpositioningData?: OPTIONAL<UtranGANSSpositioningData>,
         /**
          * @summary `targetServingNodeForHandover`.
          * @description
@@ -221,7 +221,7 @@ class ProvideSubscriberLocation_Res {
          * @public
          * @readonly
          */
-        readonly targetServingNodeForHandover: OPTIONAL<ServingNodeAddress>,
+        readonly targetServingNodeForHandover?: OPTIONAL<ServingNodeAddress>,
         /**
          * @summary `utranAdditionalPositioningData`.
          * @description
@@ -232,7 +232,7 @@ class ProvideSubscriberLocation_Res {
          * @public
          * @readonly
          */
-        readonly utranAdditionalPositioningData: OPTIONAL<UtranAdditionalPositioningData>,
+        readonly utranAdditionalPositioningData?: OPTIONAL<UtranAdditionalPositioningData>,
         /**
          * @summary `utranBaroPressureMeas`.
          * @description
@@ -243,7 +243,7 @@ class ProvideSubscriberLocation_Res {
          * @public
          * @readonly
          */
-        readonly utranBaroPressureMeas: OPTIONAL<UtranBaroPressureMeas>,
+        readonly utranBaroPressureMeas?: OPTIONAL<UtranBaroPressureMeas>,
         /**
          * @summary `utranCivicAddress`.
          * @description
@@ -254,7 +254,7 @@ class ProvideSubscriberLocation_Res {
          * @public
          * @readonly
          */
-        readonly utranCivicAddress: OPTIONAL<UtranCivicAddress>,
+        readonly utranCivicAddress?: OPTIONAL<UtranCivicAddress>,
         /**
          * @summary Extensions that are not recognized.
          * @public

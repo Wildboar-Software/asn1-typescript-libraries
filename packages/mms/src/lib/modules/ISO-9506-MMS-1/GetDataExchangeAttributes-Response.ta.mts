@@ -87,7 +87,7 @@ class GetDataExchangeAttributes_Response {
          * @public
          * @readonly
          */
-        readonly programInvocation: OPTIONAL<Identifier>,
+        readonly programInvocation?: OPTIONAL<Identifier>,
         /**
          * @summary `accessControlList`.
          * @description
@@ -100,7 +100,7 @@ class GetDataExchangeAttributes_Response {
          * @public
          * @readonly
          */
-        readonly accessControlList: OPTIONAL<Identifier>
+        readonly accessControlList?: OPTIONAL<Identifier>
     ) {}
 
     /**

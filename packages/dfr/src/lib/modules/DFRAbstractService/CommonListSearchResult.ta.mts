@@ -81,7 +81,7 @@ class CommonListSearchResult {
          * @public
          * @readonly
          */
-        readonly warnings: OPTIONAL<Warning[]>,
+        readonly warnings?: OPTIONAL<Warning[]>,
         /**
          * @summary `continuation`.
          * @description
@@ -91,7 +91,7 @@ class CommonListSearchResult {
          * @public
          * @readonly
          */
-        readonly continuation: OPTIONAL<TaskId>
+        readonly continuation?: OPTIONAL<TaskId>
     ) {}
 
     /**

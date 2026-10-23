@@ -60,7 +60,7 @@ class ElementParamIdent {
          * @public
          * @readonly
          */
-        readonly size: OPTIONAL<NULL>,
+        readonly size?: OPTIONAL<NULL>,
         /**
          * @summary `category`.
          * @description
@@ -69,7 +69,7 @@ class ElementParamIdent {
          * @public
          * @readonly
          */
-        readonly category: OPTIONAL<NULL>,
+        readonly category?: OPTIONAL<NULL>,
         /**
          * @summary `repertoire`.
          * @description
@@ -78,7 +78,7 @@ class ElementParamIdent {
          * @public
          * @readonly
          */
-        readonly repertoire: OPTIONAL<NULL>
+        readonly repertoire?: OPTIONAL<NULL>
     ) {}
 
     /**

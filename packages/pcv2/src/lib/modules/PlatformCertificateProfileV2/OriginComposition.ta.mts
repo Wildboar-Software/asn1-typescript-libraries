@@ -68,7 +68,7 @@ class OriginComposition {
 
     constructor (
         location: EntityGeoLocation,
-        hasComponents: OPTIONAL<BOOLEAN>
+        hasComponents?: OPTIONAL<BOOLEAN>
     ) {
         this.location = location;
         this.hasComponents = hasComponents;

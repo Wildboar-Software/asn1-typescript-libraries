@@ -67,7 +67,7 @@ class StopCDRTransmissionArgument {
          * @public
          * @readonly
          */
-        readonly cdrTermReason: OPTIONAL<CDRTermReason>,
+        readonly cdrTermReason?: OPTIONAL<CDRTermReason>,
         /**
          * @summary `extensions`.
          * @description
@@ -78,7 +78,7 @@ class StopCDRTransmissionArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

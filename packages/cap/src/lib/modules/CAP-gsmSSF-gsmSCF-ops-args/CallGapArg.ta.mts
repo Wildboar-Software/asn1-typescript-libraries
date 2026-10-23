@@ -86,7 +86,7 @@ class CallGapArg {
          * @public
          * @readonly
          */
-        readonly controlType: OPTIONAL<ControlType>,
+        readonly controlType?: OPTIONAL<ControlType>,
         /**
          * @summary `gapTreatment`.
          * @description
@@ -99,13 +99,13 @@ class CallGapArg {
          * @public
          * @readonly
          */
-        readonly gapTreatment: OPTIONAL<GapTreatment>,
+        readonly gapTreatment?: OPTIONAL<GapTreatment>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<Extensions>,
+        readonly extensions?: OPTIONAL<Extensions>,
         /**
          * @summary Extensions that are not recognized.
          * @public

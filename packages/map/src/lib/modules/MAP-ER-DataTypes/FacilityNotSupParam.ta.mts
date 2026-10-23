@@ -38,7 +38,7 @@ class FacilityNotSupParam {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `shapeOfLocationEstimateNotSupported`.
          * @description
@@ -49,7 +49,7 @@ class FacilityNotSupParam {
          * @public
          * @readonly
          */
-        readonly shapeOfLocationEstimateNotSupported: OPTIONAL<NULL>,
+        readonly shapeOfLocationEstimateNotSupported?: OPTIONAL<NULL>,
         /**
          * @summary `neededLcsCapabilityNotSupportedInServingNode`.
          * @description
@@ -60,7 +60,7 @@ class FacilityNotSupParam {
          * @public
          * @readonly
          */
-        readonly neededLcsCapabilityNotSupportedInServingNode: OPTIONAL<NULL>,
+        readonly neededLcsCapabilityNotSupportedInServingNode?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @public

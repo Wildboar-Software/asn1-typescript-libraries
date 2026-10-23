@@ -421,11 +421,11 @@ class CommonEquipRecord {
         releaseTime: OPTIONAL<OCTET_STRING>,
         callDuration: INTEGER,
         callReference: OCTET_STRING,
-        sequenceNumber: OPTIONAL<INTEGER>,
-        recordExtensions: OPTIONAL<ManagementExtension[]>,
-        systemType: OPTIONAL<SystemType>,
-        rateIndication: OPTIONAL<OCTET_STRING>,
-        fnur: OPTIONAL<Fnur>
+        sequenceNumber?: OPTIONAL<INTEGER>,
+        recordExtensions?: OPTIONAL<ManagementExtension[]>,
+        systemType?: OPTIONAL<SystemType>,
+        rateIndication?: OPTIONAL<OCTET_STRING>,
+        fnur?: OPTIONAL<Fnur>
     ) {
         this.recordType = recordType;
         this.equipmentType = equipmentType;

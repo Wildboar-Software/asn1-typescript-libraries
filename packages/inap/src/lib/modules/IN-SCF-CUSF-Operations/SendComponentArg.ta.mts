@@ -86,11 +86,11 @@ class SendComponentArg {
 
     constructor (
         componentType: ComponentType,
-        componentCorrelationID: OPTIONAL<ComponentCorrelationID>,
-        message: OPTIONAL<Message>,
-        monitorDuration: OPTIONAL<Duration>,
-        extensions: OPTIONAL<Extensions>,
-        component: OPTIONAL<Component>,
+        componentCorrelationID?: OPTIONAL<ComponentCorrelationID>,
+        message?: OPTIONAL<Message>,
+        monitorDuration?: OPTIONAL<Duration>,
+        extensions?: OPTIONAL<Extensions>,
+        component?: OPTIONAL<Component>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.componentType = componentType;

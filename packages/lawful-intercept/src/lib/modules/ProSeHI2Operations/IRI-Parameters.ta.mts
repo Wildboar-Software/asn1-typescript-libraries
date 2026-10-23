@@ -151,8 +151,8 @@ class IRI_Parameters {
         timeStamp: TimeStamp,
         networkIdentifier: Network_Identifier,
         proseEventData: ProSeEventData,
-        national_Parameters: OPTIONAL<National_Parameters>,
-        national_HI2_ASN1parameters: OPTIONAL<National_HI2_ASN1parameters>,
+        national_Parameters?: OPTIONAL<National_Parameters>,
+        national_HI2_ASN1parameters?: OPTIONAL<National_HI2_ASN1parameters>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.hi2ProSeDomainId = hi2ProSeDomainId;

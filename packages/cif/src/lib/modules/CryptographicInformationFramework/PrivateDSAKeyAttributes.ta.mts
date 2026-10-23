@@ -56,7 +56,7 @@ class PrivateDSAKeyAttributes {
          * @public
          * @readonly
          */
-        readonly keyInfo: OPTIONAL<KeyInfo<DomainParameters, PublicKeyOperations>>,
+        readonly keyInfo?: OPTIONAL<KeyInfo<DomainParameters, PublicKeyOperations>>,
         /**
          * @summary Extensions that are not recognized.
          * @public

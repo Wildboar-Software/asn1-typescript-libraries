@@ -60,7 +60,7 @@ class AdjacentAccessRestrictionData {
          * @public
          * @readonly
          */
-        readonly ext_AccessRestrictionData: OPTIONAL<Ext_AccessRestrictionData>,
+        readonly ext_AccessRestrictionData?: OPTIONAL<Ext_AccessRestrictionData>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -56,9 +56,9 @@ class InbandInfo {
 
     constructor (
         messageID: MessageID,
-        numberOfRepetitions: OPTIONAL<INTEGER>,
-        duration: OPTIONAL<INTEGER>,
-        interval: OPTIONAL<INTEGER>
+        numberOfRepetitions?: OPTIONAL<INTEGER>,
+        duration?: OPTIONAL<INTEGER>,
+        interval?: OPTIONAL<INTEGER>
     ) {
         this.messageID = messageID;
         this.numberOfRepetitions = numberOfRepetitions;

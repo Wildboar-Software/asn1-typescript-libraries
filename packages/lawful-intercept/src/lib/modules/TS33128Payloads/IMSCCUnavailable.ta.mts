@@ -91,7 +91,7 @@ class IMSCCUnavailable {
 
     constructor (
         cCUnavailableReason: UTF8String,
-        sDPState: OPTIONAL<OCTET_STRING>,
+        sDPState?: OPTIONAL<OCTET_STRING>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.cCUnavailableReason = cCUnavailableReason;

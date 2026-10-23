@@ -72,7 +72,7 @@ class UserCSGInformation {
     constructor (
         cSGId: OCTET_STRING,
         cSGAccessMode: UserCSGInformation_cSGAccessMode,
-        cSGMembershipIndication: OPTIONAL<NULL>
+        cSGMembershipIndication?: OPTIONAL<NULL>
     ) {
         this.cSGId = cSGId;
         this.cSGAccessMode = cSGAccessMode;

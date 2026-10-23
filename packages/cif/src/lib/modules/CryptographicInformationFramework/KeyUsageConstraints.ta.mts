@@ -57,7 +57,7 @@ class KeyUsageConstraints {
          * @public
          * @readonly
          */
-        readonly refOID: OPTIONAL<OBJECT_IDENTIFIER>,
+        readonly refOID?: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary Extensions that are not recognized.
          * @public

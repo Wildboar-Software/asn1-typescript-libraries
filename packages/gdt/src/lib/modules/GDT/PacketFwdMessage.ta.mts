@@ -41,13 +41,13 @@ class PacketFwdMessage {
          * @public
          * @readonly
          */
-        readonly payload: OPTIONAL<OCTET_STRING>,
+        readonly payload?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `params`.
          * @public
          * @readonly
          */
-        readonly params: OPTIONAL<Parameters>,
+        readonly params?: OPTIONAL<Parameters>,
         /**
          * @summary Extensions that are not recognized.
          * @public

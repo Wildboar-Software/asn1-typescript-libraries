@@ -39,7 +39,7 @@ export class EventSpecificInformationBCSM_tNoAnswerSpecificInfo {
          * @public
          * @readonly
          */
-        readonly callForwarded: OPTIONAL<NULL>,
+        readonly callForwarded?: OPTIONAL<NULL>,
         /**
          * @summary `forwardingDestinationNumber`.
          * @description
@@ -50,7 +50,7 @@ export class EventSpecificInformationBCSM_tNoAnswerSpecificInfo {
          * @public
          * @readonly
          */
-        readonly forwardingDestinationNumber: OPTIONAL<CalledPartyNumber>,
+        readonly forwardingDestinationNumber?: OPTIONAL<CalledPartyNumber>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}
 

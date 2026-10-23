@@ -323,15 +323,15 @@ class MMR1RRRecord {
         messageID: OCTET_STRING,
         recipientAddress: MMSAgentAddress,
         originatorAddress: MMSAgentAddress,
-        accessCorrelation: OPTIONAL<AccessCorrelation>,
-        mmStatusCode: OPTIONAL<MMStatusCodeType>,
-        statusText: OPTIONAL<OCTET_STRING>,
-        recordTimeStamp: OPTIONAL<OCTET_STRING>,
-        localSequenceNumber: OPTIONAL<INTEGER>,
-        recordExtensions: OPTIONAL<ManagementExtension[]>,
-        sGSNPLMNIdentifier: OPTIONAL<OCTET_STRING>,
-        rATType: OPTIONAL<INTEGER>,
-        mSTimeZone: OPTIONAL<OCTET_STRING>
+        accessCorrelation?: OPTIONAL<AccessCorrelation>,
+        mmStatusCode?: OPTIONAL<MMStatusCodeType>,
+        statusText?: OPTIONAL<OCTET_STRING>,
+        recordTimeStamp?: OPTIONAL<OCTET_STRING>,
+        localSequenceNumber?: OPTIONAL<INTEGER>,
+        recordExtensions?: OPTIONAL<ManagementExtension[]>,
+        sGSNPLMNIdentifier?: OPTIONAL<OCTET_STRING>,
+        rATType?: OPTIONAL<INTEGER>,
+        mSTimeZone?: OPTIONAL<OCTET_STRING>
     ) {
         this.recordType = recordType;
         this.recipientMmsRSAddress = recipientMmsRSAddress;

@@ -104,9 +104,9 @@ class Abort_PDU {
     public readonly reason: OPTIONAL<Abort_reason>;
 
     constructor (
-        reference: OPTIONAL<SessionConnectionIdentifier>,
-        user_data: OPTIONAL<UserData_PDU>,
-        reason: OPTIONAL<Abort_reason>,
+        reference?: OPTIONAL<SessionConnectionIdentifier>,
+        user_data?: OPTIONAL<UserData_PDU>,
+        reason?: OPTIONAL<Abort_reason>,
     ) {
         this.reference = reference;
         this.user_data = user_data;

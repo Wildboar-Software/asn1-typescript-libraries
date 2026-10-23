@@ -60,7 +60,7 @@ class GetEimPackageRequest {
          * @public
          * @readonly
          */
-        readonly notifyStateChange: OPTIONAL<NULL>,
+        readonly notifyStateChange?: OPTIONAL<NULL>,
         /**
          * @summary `stateChangeCause`.
          * @description
@@ -76,7 +76,7 @@ class GetEimPackageRequest {
          * @public
          * @readonly
          */
-        readonly stateChangeCause: OPTIONAL<StateChangeCause>,
+        readonly stateChangeCause?: OPTIONAL<StateChangeCause>,
         /**
          * @summary `rPLMN`.
          * @description
@@ -86,7 +86,7 @@ class GetEimPackageRequest {
          * @public
          * @readonly
          */
-        readonly rPLMN: OPTIONAL<OCTET_STRING>
+        readonly rPLMN?: OPTIONAL<OCTET_STRING>
     ) {
         if (this.rPLMN !== undefined && this.rPLMN.length !== 3) {
             throw new ASN1SizeError("GetEimPackageRequest.rPLMN violates SIZE constraint");

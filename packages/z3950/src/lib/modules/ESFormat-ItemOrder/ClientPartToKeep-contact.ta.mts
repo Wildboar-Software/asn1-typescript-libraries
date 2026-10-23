@@ -69,9 +69,9 @@ class ClientPartToKeep_contact {
     readonly email: OPTIONAL<InternationalString>;
 
     constructor (
-        name: OPTIONAL<InternationalString>,
-        phone: OPTIONAL<InternationalString>,
-        email: OPTIONAL<InternationalString>
+        name?: OPTIONAL<InternationalString>,
+        phone?: OPTIONAL<InternationalString>,
+        email?: OPTIONAL<InternationalString>
     ) {
         this.name = name;
         this.phone = phone;

@@ -52,7 +52,7 @@ class ServiceAddressInformation {
          * @public
          * @readonly
          */
-        readonly triggerType: OPTIONAL<TriggerType>
+        readonly triggerType?: OPTIONAL<TriggerType>
     ) {}
 
     /**

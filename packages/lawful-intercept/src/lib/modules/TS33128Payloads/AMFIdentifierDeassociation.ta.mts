@@ -178,8 +178,8 @@ class AMFIdentifierDeassociation {
         pEI: OPTIONAL<PEI>,
         gPSI: OPTIONAL<GPSI>,
         gUTI: FiveGGUTI,
-        location: OPTIONAL<Location>,
-        additionalUserIdentifiers: OPTIONAL<UserIdentifiers>,
+        location?: OPTIONAL<Location>,
+        additionalUserIdentifiers?: OPTIONAL<UserIdentifiers>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.sUPI = sUPI;

@@ -563,13 +563,13 @@ class MSCsRVCCRecord {
         causeForTerm: CauseForTerm,
         diagnostics: OPTIONAL<HLRIntResult>,
         callReference: OCTET_STRING,
-        sequenceNumber: OPTIONAL<INTEGER>,
-        recordExtensions: OPTIONAL<ManagementExtension[]>,
-        partialRecordType: OPTIONAL<PartialRecordType>,
-        iMS_Charging_Identifier: OPTIONAL<OCTET_STRING>,
-        iCSI2ActiveFlag: OPTIONAL<NULL>,
-        relatedICID: OPTIONAL<OCTET_STRING>,
-        relatedICIDGenerationNode: OPTIONAL<NodeAddress>
+        sequenceNumber?: OPTIONAL<INTEGER>,
+        recordExtensions?: OPTIONAL<ManagementExtension[]>,
+        partialRecordType?: OPTIONAL<PartialRecordType>,
+        iMS_Charging_Identifier?: OPTIONAL<OCTET_STRING>,
+        iCSI2ActiveFlag?: OPTIONAL<NULL>,
+        relatedICID?: OPTIONAL<OCTET_STRING>,
+        relatedICIDGenerationNode?: OPTIONAL<NodeAddress>
     ) {
         this.recordType = recordType;
         this.servedIMSI = servedIMSI;

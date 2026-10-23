@@ -109,7 +109,7 @@ class RCSSIPSessionMessage {
         sessionLeg: RCSSessionLeg,
         sIPMessage: IMSPayload,
         rCSSessionResult: RCSSessionResult,
-        mSRPPathInfo: OPTIONAL<MSRPPath>,
+        mSRPPathInfo?: OPTIONAL<MSRPPath>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.sessionLeg = sessionLeg;

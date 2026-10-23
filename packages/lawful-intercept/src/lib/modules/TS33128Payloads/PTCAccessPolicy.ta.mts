@@ -179,11 +179,11 @@ class PTCAccessPolicy {
     constructor (
         pTCTargetInformation: PTCTargetInformation,
         pTCDirection: Direction,
-        pTCAccessPolicyType: OPTIONAL<PTCAccessPolicyType>,
-        pTCUserAccessPolicy: OPTIONAL<PTCUserAccessPolicy>,
-        pTCGroupAuthRule: OPTIONAL<PTCGroupAuthRule>,
-        pTCContactID: OPTIONAL<PTCTargetInformation>,
-        pTCAccessPolicyFailure: OPTIONAL<PTCAccessPolicyFailure>,
+        pTCAccessPolicyType?: OPTIONAL<PTCAccessPolicyType>,
+        pTCUserAccessPolicy?: OPTIONAL<PTCUserAccessPolicy>,
+        pTCGroupAuthRule?: OPTIONAL<PTCGroupAuthRule>,
+        pTCContactID?: OPTIONAL<PTCTargetInformation>,
+        pTCAccessPolicyFailure?: OPTIONAL<PTCAccessPolicyFailure>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.pTCTargetInformation = pTCTargetInformation;

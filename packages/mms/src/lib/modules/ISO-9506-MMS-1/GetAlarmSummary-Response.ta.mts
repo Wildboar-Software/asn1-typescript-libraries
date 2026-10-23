@@ -65,7 +65,7 @@ class GetAlarmSummary_Response {
          * @public
          * @readonly
          */
-        readonly moreFollows: OPTIONAL<BOOLEAN>
+        readonly moreFollows?: OPTIONAL<BOOLEAN>
     ) {}
 
     /**

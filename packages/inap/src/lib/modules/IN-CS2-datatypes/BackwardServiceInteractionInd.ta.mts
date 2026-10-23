@@ -46,8 +46,8 @@ class BackwardServiceInteractionInd {
     readonly callCompletionTreatmentIndicator: OPTIONAL<OCTET_STRING>;
 
     constructor (
-        conferenceTreatmentIndicator: OPTIONAL<OCTET_STRING>,
-        callCompletionTreatmentIndicator: OPTIONAL<OCTET_STRING>
+        conferenceTreatmentIndicator?: OPTIONAL<OCTET_STRING>,
+        callCompletionTreatmentIndicator?: OPTIONAL<OCTET_STRING>
     ) {
         this.conferenceTreatmentIndicator = conferenceTreatmentIndicator;
         this.callCompletionTreatmentIndicator = callCompletionTreatmentIndicator;

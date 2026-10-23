@@ -72,7 +72,7 @@ class DigitsGeneratedEvent {
          * @public
          * @readonly
          */
-        readonly digitDurationList: OPTIONAL<INTEGER[]>,
+        readonly digitDurationList?: OPTIONAL<INTEGER[]>,
         /**
          * @summary `pauseDurationList`.
          * @description
@@ -81,7 +81,7 @@ class DigitsGeneratedEvent {
          * @public
          * @readonly
          */
-        readonly pauseDurationList: OPTIONAL<INTEGER[]>,
+        readonly pauseDurationList?: OPTIONAL<INTEGER[]>,
         /**
          * @summary `connectionInfo`.
          * @description
@@ -90,7 +90,7 @@ class DigitsGeneratedEvent {
          * @public
          * @readonly
          */
-        readonly connectionInfo: OPTIONAL<ConnectionInformation>,
+        readonly connectionInfo?: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `extensions`.
          * @description
@@ -100,7 +100,7 @@ class DigitsGeneratedEvent {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

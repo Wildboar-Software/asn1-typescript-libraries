@@ -176,14 +176,14 @@ class MMSMBoxViewRequest {
     constructor (
         transactionID: UTF8String,
         version: MMSVersion,
-        contentLocation: OPTIONAL<UTF8String>,
-        state: OPTIONAL<MMState[]>,
-        flags: OPTIONAL<MMFlags[]>,
-        start: OPTIONAL<INTEGER>,
-        limit: OPTIONAL<INTEGER>,
-        attributes: OPTIONAL<UTF8String[]>,
-        totals: OPTIONAL<INTEGER>,
-        quotas: OPTIONAL<MMSQuota>,
+        contentLocation?: OPTIONAL<UTF8String>,
+        state?: OPTIONAL<MMState[]>,
+        flags?: OPTIONAL<MMFlags[]>,
+        start?: OPTIONAL<INTEGER>,
+        limit?: OPTIONAL<INTEGER>,
+        attributes?: OPTIONAL<UTF8String[]>,
+        totals?: OPTIONAL<INTEGER>,
+        quotas?: OPTIONAL<MMSQuota>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.transactionID = transactionID;

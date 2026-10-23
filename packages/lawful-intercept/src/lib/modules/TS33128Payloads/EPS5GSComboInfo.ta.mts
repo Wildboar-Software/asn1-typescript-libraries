@@ -104,8 +104,8 @@ class EPS5GSComboInfo {
     constructor (
         ePSInterworkingIndication: EPSInterworkingIndication,
         ePSSubscriberIDs: EPSSubscriberIDs,
-        ePSPDNCnxInfo: OPTIONAL<EPSPDNCnxInfo>,
-        ePSBearerInfo: OPTIONAL<EPSBearerInfo>,
+        ePSPDNCnxInfo?: OPTIONAL<EPSPDNCnxInfo>,
+        ePSBearerInfo?: OPTIONAL<EPSBearerInfo>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.ePSInterworkingIndication = ePSInterworkingIndication;

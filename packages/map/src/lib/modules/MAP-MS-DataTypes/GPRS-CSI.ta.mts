@@ -53,7 +53,7 @@ class GPRS_CSI {
          * @public
          * @readonly
          */
-        readonly gprs_CamelTDPDataList: OPTIONAL<GPRS_CamelTDPDataList>,
+        readonly gprs_CamelTDPDataList?: OPTIONAL<GPRS_CamelTDPDataList>,
         /**
          * @summary `camelCapabilityHandling`.
          * @description
@@ -64,13 +64,13 @@ class GPRS_CSI {
          * @public
          * @readonly
          */
-        readonly camelCapabilityHandling: OPTIONAL<CamelCapabilityHandling>,
+        readonly camelCapabilityHandling?: OPTIONAL<CamelCapabilityHandling>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `notificationToCSE`.
          * @description
@@ -81,7 +81,7 @@ class GPRS_CSI {
          * @public
          * @readonly
          */
-        readonly notificationToCSE: OPTIONAL<NULL>,
+        readonly notificationToCSE?: OPTIONAL<NULL>,
         /**
          * @summary `csi_Active`.
          * @description
@@ -92,7 +92,7 @@ class GPRS_CSI {
          * @public
          * @readonly
          */
-        readonly csi_Active: OPTIONAL<NULL>,
+        readonly csi_Active?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @public

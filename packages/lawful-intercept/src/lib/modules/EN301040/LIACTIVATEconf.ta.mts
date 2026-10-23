@@ -109,7 +109,7 @@ class LIACTIVATEconf {
         timeStamp: UTCTime,
         invokeId: INTEGER,
         result: BOOLEAN,
-        tLIInstanceid: OPTIONAL<TLIIdType>
+        tLIInstanceid?: OPTIONAL<TLIIdType>
     ) {
         this.timeStamp = timeStamp;
         this.invokeId = invokeId;

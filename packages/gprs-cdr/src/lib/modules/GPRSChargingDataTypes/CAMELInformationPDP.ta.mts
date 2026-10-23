@@ -175,15 +175,15 @@ class CAMELInformationPDP {
     readonly fFDAppendIndicator: OPTIONAL<BOOLEAN>;
 
     constructor (
-        sCFAddress: OPTIONAL<OCTET_STRING>,
-        serviceKey: OPTIONAL<INTEGER>,
-        defaultTransactionHandling: OPTIONAL<DefaultTransactionHandling>,
-        cAMELAccessPointNameNI: OPTIONAL<IA5String>,
-        cAMELAccessPointNameOI: OPTIONAL<IA5String>,
-        numberOfDPEncountered: OPTIONAL<INTEGER>,
-        levelOfCAMELService: OPTIONAL<CAMELInformationPDP_levelOfCAMELService>,
-        freeFormatData: OPTIONAL<OCTET_STRING>,
-        fFDAppendIndicator: OPTIONAL<BOOLEAN>
+        sCFAddress?: OPTIONAL<OCTET_STRING>,
+        serviceKey?: OPTIONAL<INTEGER>,
+        defaultTransactionHandling?: OPTIONAL<DefaultTransactionHandling>,
+        cAMELAccessPointNameNI?: OPTIONAL<IA5String>,
+        cAMELAccessPointNameOI?: OPTIONAL<IA5String>,
+        numberOfDPEncountered?: OPTIONAL<INTEGER>,
+        levelOfCAMELService?: OPTIONAL<CAMELInformationPDP_levelOfCAMELService>,
+        freeFormatData?: OPTIONAL<OCTET_STRING>,
+        fFDAppendIndicator?: OPTIONAL<BOOLEAN>
     ) {
         this.sCFAddress = sCFAddress;
         this.serviceKey = serviceKey;

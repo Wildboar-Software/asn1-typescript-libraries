@@ -213,15 +213,15 @@ class TPMSecurityAssertions {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        version: OPTIONAL<Version>,
-        fieldUpgradable: OPTIONAL<BOOLEAN>,
-        ekGenerationType: OPTIONAL<EKGenerationType>,
-        ekGenerationLocation: OPTIONAL<EKGenerationLocation>,
-        ekCertificateGenerationLocation: OPTIONAL<EKCertificateGenerationLocation>,
-        ccInfo: OPTIONAL<CommonCriteriaMeasures>,
-        fipsLevel: OPTIONAL<FIPSLevel>,
-        iso9000Certified: OPTIONAL<BOOLEAN>,
-        iso9000Uri: OPTIONAL<IA5String>,
+        version?: OPTIONAL<Version>,
+        fieldUpgradable?: OPTIONAL<BOOLEAN>,
+        ekGenerationType?: OPTIONAL<EKGenerationType>,
+        ekGenerationLocation?: OPTIONAL<EKGenerationLocation>,
+        ekCertificateGenerationLocation?: OPTIONAL<EKCertificateGenerationLocation>,
+        ccInfo?: OPTIONAL<CommonCriteriaMeasures>,
+        fipsLevel?: OPTIONAL<FIPSLevel>,
+        iso9000Certified?: OPTIONAL<BOOLEAN>,
+        iso9000Uri?: OPTIONAL<IA5String>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.version = version;

@@ -49,7 +49,7 @@ class EraseCC_EntryRes {
          * @public
          * @readonly
          */
-        readonly ss_Status: OPTIONAL<SS_Status>,
+        readonly ss_Status?: OPTIONAL<SS_Status>,
         /**
          * @summary Extensions that are not recognized.
          * @public

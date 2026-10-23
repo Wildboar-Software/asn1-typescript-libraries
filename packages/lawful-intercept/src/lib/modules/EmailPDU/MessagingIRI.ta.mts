@@ -252,11 +252,11 @@ class MessagingIRI {
         status: Messaging_Status,
         party_information: OPTIONAL<Messaging_Party_Information[]>,
         trigger: Messaging_Trigger,
-        properties: OPTIONAL<Messaging_Property[]>,
-        event_identifier: OPTIONAL<INTEGER>,
-        original_message: OPTIONAL<OCTET_STRING>,
-        box_identifier: OPTIONAL<OCTET_STRING>,
-        total_recipient_count: OPTIONAL<INTEGER>,
+        properties?: OPTIONAL<Messaging_Property[]>,
+        event_identifier?: OPTIONAL<INTEGER>,
+        original_message?: OPTIONAL<OCTET_STRING>,
+        box_identifier?: OPTIONAL<OCTET_STRING>,
+        total_recipient_count?: OPTIONAL<INTEGER>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.messaging_iri_obj_id = messaging_iri_obj_id;

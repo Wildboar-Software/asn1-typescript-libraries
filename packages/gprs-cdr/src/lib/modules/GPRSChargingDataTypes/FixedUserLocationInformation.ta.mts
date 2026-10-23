@@ -64,9 +64,9 @@ class FixedUserLocationInformation {
     readonly accessLineIdentifier: OPTIONAL<AccessLineIdentifier>;
 
     constructor (
-        sSID: OPTIONAL<OCTET_STRING>,
-        bSSID: OPTIONAL<OCTET_STRING>,
-        accessLineIdentifier: OPTIONAL<AccessLineIdentifier>
+        sSID?: OPTIONAL<OCTET_STRING>,
+        bSSID?: OPTIONAL<OCTET_STRING>,
+        accessLineIdentifier?: OPTIONAL<AccessLineIdentifier>
     ) {
         this.sSID = sSID;
         this.bSSID = bSSID;

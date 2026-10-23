@@ -53,7 +53,7 @@ class CIODDO {
          * @public
          * @readonly
          */
-        readonly providerId: OPTIONAL<OBJECT_IDENTIFIER>,
+        readonly providerId?: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `odfPath`.
          * @description
@@ -62,7 +62,7 @@ class CIODDO {
          * @public
          * @readonly
          */
-        readonly odfPath: OPTIONAL<Path>,
+        readonly odfPath?: OPTIONAL<Path>,
         /**
          * @summary `ciaInfoPath`.
          * @description
@@ -71,7 +71,7 @@ class CIODDO {
          * @public
          * @readonly
          */
-        readonly ciaInfoPath: OPTIONAL<Path>,
+        readonly ciaInfoPath?: OPTIONAL<Path>,
         /**
          * @summary `aid`.
          * @description
@@ -80,7 +80,7 @@ class CIODDO {
          * @public
          * @readonly
          */
-        readonly aid: OPTIONAL<OCTET_STRING>,
+        readonly aid?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `securityFileOrObject`.
          * @description
@@ -89,7 +89,7 @@ class CIODDO {
          * @public
          * @readonly
          */
-        readonly securityFileOrObject: OPTIONAL<SecurityFileOrObject[]>,
+        readonly securityFileOrObject?: OPTIONAL<SecurityFileOrObject[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

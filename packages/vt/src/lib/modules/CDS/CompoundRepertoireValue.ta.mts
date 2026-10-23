@@ -45,7 +45,7 @@ class CompoundRepertoireValue {
          * @public
          * @readonly
          */
-        readonly repertoireCapability: OPTIONAL<INTEGER>,
+        readonly repertoireCapability?: OPTIONAL<INTEGER>,
         /**
          * @summary `repertoireFontValues`.
          * @description
@@ -54,7 +54,7 @@ class CompoundRepertoireValue {
          * @public
          * @readonly
          */
-        readonly repertoireFontValues: OPTIONAL<RepertoireFontValue[]>
+        readonly repertoireFontValues?: OPTIONAL<RepertoireFontValue[]>
     ) {}
 
     /**

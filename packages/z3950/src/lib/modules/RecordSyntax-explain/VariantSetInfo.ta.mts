@@ -95,7 +95,7 @@ class VariantSetInfo {
         commonInfo: OPTIONAL<CommonInfo>,
         variantSet: OBJECT_IDENTIFIER,
         name: InternationalString,
-        variants: OPTIONAL<VariantClass[]>
+        variants?: OPTIONAL<VariantClass[]>
     ) {
         this.commonInfo = commonInfo;
         this.variantSet = variantSet;

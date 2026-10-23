@@ -86,9 +86,9 @@ class DataNodeIdentifier {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        dataNodeAddress: OPTIONAL<DataNodeAddress>,
-        logicalFunctionType: OPTIONAL<LogicalFunctionType>,
-        dataNodeName: OPTIONAL<PrintableString>,
+        dataNodeAddress?: OPTIONAL<DataNodeAddress>,
+        logicalFunctionType?: OPTIONAL<LogicalFunctionType>,
+        dataNodeName?: OPTIONAL<PrintableString>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.dataNodeAddress = dataNodeAddress;

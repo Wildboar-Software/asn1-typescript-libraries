@@ -78,9 +78,9 @@ class CallGapArg {
     constructor (
         gapCriteria: GapCriteria,
         gapIndicators: GapIndicators,
-        controlType: OPTIONAL<ControlType>,
-        gapTreatment: OPTIONAL<GapTreatment>,
-        extensions: OPTIONAL<Extensions>,
+        controlType?: OPTIONAL<ControlType>,
+        gapTreatment?: OPTIONAL<GapTreatment>,
+        extensions?: OPTIONAL<Extensions>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.gapCriteria = gapCriteria;

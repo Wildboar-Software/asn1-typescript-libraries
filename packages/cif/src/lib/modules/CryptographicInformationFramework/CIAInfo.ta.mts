@@ -110,7 +110,7 @@ class CIAInfo {
          * @public
          * @readonly
          */
-        readonly seInfo: OPTIONAL<SecurityEnvironmentInfo[]>,
+        readonly seInfo?: OPTIONAL<SecurityEnvironmentInfo[]>,
         /**
          * @summary `recordInfo`.
          * @description
@@ -121,7 +121,7 @@ class CIAInfo {
          * @public
          * @readonly
          */
-        readonly recordInfo: OPTIONAL<RecordInfo>,
+        readonly recordInfo?: OPTIONAL<RecordInfo>,
         /**
          * @summary `supportedAlgorithms`.
          * @description
@@ -132,7 +132,7 @@ class CIAInfo {
          * @public
          * @readonly
          */
-        readonly supportedAlgorithms: OPTIONAL<AlgorithmInfo[]>,
+        readonly supportedAlgorithms?: OPTIONAL<AlgorithmInfo[]>,
         /**
          * @summary `issuerId`.
          * @description
@@ -140,7 +140,7 @@ class CIAInfo {
          * @public
          * @readonly
          */
-        readonly issuerId: OPTIONAL<Label>,
+        readonly issuerId?: OPTIONAL<Label>,
         /**
          * @summary `holderId`.
          * @description
@@ -148,7 +148,7 @@ class CIAInfo {
          * @public
          * @readonly
          */
-        readonly holderId: OPTIONAL<Label>,
+        readonly holderId?: OPTIONAL<Label>,
         /**
          * @summary `lastUpdate`.
          * @description
@@ -157,7 +157,7 @@ class CIAInfo {
          * @public
          * @readonly
          */
-        readonly lastUpdate: OPTIONAL<LastUpdate>,
+        readonly lastUpdate?: OPTIONAL<LastUpdate>,
         /**
          * @summary `preferredLanguage`.
          * @description
@@ -165,7 +165,7 @@ class CIAInfo {
          * @public
          * @readonly
          */
-        readonly preferredLanguage: OPTIONAL<PrintableString>,
+        readonly preferredLanguage?: OPTIONAL<PrintableString>,
         /**
          * @summary `profileIndication`.
          * @description
@@ -174,7 +174,7 @@ class CIAInfo {
          * @public
          * @readonly
          */
-        readonly profileIndication: OPTIONAL<ProfileIndication[]>,
+        readonly profileIndication?: OPTIONAL<ProfileIndication[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

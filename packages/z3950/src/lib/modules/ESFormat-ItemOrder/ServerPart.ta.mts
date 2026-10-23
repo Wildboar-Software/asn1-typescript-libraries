@@ -91,9 +91,9 @@ class ServerPart {
     readonly auxiliaryStatus: OPTIONAL<ServerPart_auxiliaryStatus>;
 
     constructor (
-        itemRequest: OPTIONAL<EXTERNAL>,
-        statusOrErrorReport: OPTIONAL<EXTERNAL>,
-        auxiliaryStatus: OPTIONAL<ServerPart_auxiliaryStatus>
+        itemRequest?: OPTIONAL<EXTERNAL>,
+        statusOrErrorReport?: OPTIONAL<EXTERNAL>,
+        auxiliaryStatus?: OPTIONAL<ServerPart_auxiliaryStatus>
     ) {
         this.itemRequest = itemRequest;
         this.statusOrErrorReport = statusOrErrorReport;

@@ -60,7 +60,7 @@ class DomainName {
          * @public
          * @readonly
          */
-        readonly portNumber: OPTIONAL<INTEGER>
+        readonly portNumber?: OPTIONAL<INTEGER>
     ) {
         if (portNumber !== undefined) {
             const n = typeof portNumber === "bigint" ? portNumber : BigInt(portNumber);

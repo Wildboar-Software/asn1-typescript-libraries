@@ -160,19 +160,19 @@ class FacilitySelectedAndAvailableArg {
 
     constructor (
         dpSpecificCommonParameters: DpSpecificCommonParameters,
-        calledPartyBusinessGroupID: OPTIONAL<CalledPartyBusinessGroupID>,
-        calledPartySubaddress: OPTIONAL<CalledPartySubaddress>,
-        callingPartyBusinessGroupID: OPTIONAL<CallingPartyBusinessGroupID>,
-        callingPartyNumber: OPTIONAL<CallingPartyNumber>,
-        originalCalledPartyID: OPTIONAL<OriginalCalledPartyID>,
-        redirectingPartyID: OPTIONAL<RedirectingPartyID>,
-        redirectionInformation: OPTIONAL<RedirectionInformation>,
-        routeList: OPTIONAL<RouteList>,
-        travellingClassMark: OPTIONAL<TravellingClassMark>,
-        extensions: OPTIONAL<ExtensionField[]>,
-        componentType: OPTIONAL<ComponentType>,
-        component: OPTIONAL<Component>,
-        componentCorrelationID: OPTIONAL<ComponentCorrelationID>,
+        calledPartyBusinessGroupID?: OPTIONAL<CalledPartyBusinessGroupID>,
+        calledPartySubaddress?: OPTIONAL<CalledPartySubaddress>,
+        callingPartyBusinessGroupID?: OPTIONAL<CallingPartyBusinessGroupID>,
+        callingPartyNumber?: OPTIONAL<CallingPartyNumber>,
+        originalCalledPartyID?: OPTIONAL<OriginalCalledPartyID>,
+        redirectingPartyID?: OPTIONAL<RedirectingPartyID>,
+        redirectionInformation?: OPTIONAL<RedirectionInformation>,
+        routeList?: OPTIONAL<RouteList>,
+        travellingClassMark?: OPTIONAL<TravellingClassMark>,
+        extensions?: OPTIONAL<ExtensionField[]>,
+        componentType?: OPTIONAL<ComponentType>,
+        component?: OPTIONAL<Component>,
+        componentCorrelationID?: OPTIONAL<ComponentCorrelationID>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.dpSpecificCommonParameters = dpSpecificCommonParameters;

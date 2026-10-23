@@ -81,7 +81,7 @@ class TFCArgument_Type {
         duration: Duration,
         controlType: ControlType,
         security: SecurityParameters,
-        wasChained: OPTIONAL<BOOLEAN>,
+        wasChained?: OPTIONAL<BOOLEAN>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.tfcCriteria = tfcCriteria;

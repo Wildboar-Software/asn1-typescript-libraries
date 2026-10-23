@@ -60,7 +60,7 @@ class Modality {
          * @public
          * @readonly
          */
-        readonly subtype: OPTIONAL<BiometricSubtype>
+        readonly subtype?: OPTIONAL<BiometricSubtype>
     ) {}
 
     /**

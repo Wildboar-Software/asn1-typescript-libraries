@@ -68,7 +68,7 @@ class ConnectToResourceArg {
     constructor (
         resourceAddress: ConnectToResourceArg_resourceAddress,
         extensions: ExtensionField[],
-        serviceInteractionIndicators: OPTIONAL<ServiceInteractionIndicators>,
+        serviceInteractionIndicators?: OPTIONAL<ServiceInteractionIndicators>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.resourceAddress = resourceAddress;

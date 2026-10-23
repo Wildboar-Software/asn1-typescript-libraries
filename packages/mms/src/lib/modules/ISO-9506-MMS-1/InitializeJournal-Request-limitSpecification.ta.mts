@@ -60,7 +60,7 @@ class InitializeJournal_Request_limitSpecification {
          * @public
          * @readonly
          */
-        readonly limitingEntry: OPTIONAL<OCTET_STRING>
+        readonly limitingEntry?: OPTIONAL<OCTET_STRING>
     ) {}
 
     /**

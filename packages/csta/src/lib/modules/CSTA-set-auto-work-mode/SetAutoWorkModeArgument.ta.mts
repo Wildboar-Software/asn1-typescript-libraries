@@ -67,7 +67,7 @@ class SetAutoWorkModeArgument {
          * @public
          * @readonly
          */
-        readonly autoWorkInterval: OPTIONAL<INTEGER>,
+        readonly autoWorkInterval?: OPTIONAL<INTEGER>,
         /**
          * @summary `extensions`.
          * @description
@@ -77,7 +77,7 @@ class SetAutoWorkModeArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

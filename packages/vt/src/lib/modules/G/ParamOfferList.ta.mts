@@ -52,7 +52,7 @@ class ParamOfferList {
          * @public
          * @readonly
          */
-        readonly displayObjects: OPTIONAL<CDS_Offer>,
+        readonly displayObjects?: OPTIONAL<CDS_Offer>,
         /**
          * @summary `controlObjects`.
          * @description
@@ -61,7 +61,7 @@ class ParamOfferList {
          * @public
          * @readonly
          */
-        readonly controlObjects: OPTIONAL<CSS_Offer>,
+        readonly controlObjects?: OPTIONAL<CSS_Offer>,
         /**
          * @summary `deviceObjects`.
          * @description
@@ -70,7 +70,7 @@ class ParamOfferList {
          * @public
          * @readonly
          */
-        readonly deviceObjects: OPTIONAL<DEV_Offer>,
+        readonly deviceObjects?: OPTIONAL<DEV_Offer>,
         /**
          * @summary `deliveryControl`.
          * @description
@@ -80,7 +80,7 @@ class ParamOfferList {
          * @public
          * @readonly
          */
-        readonly deliveryControl: OPTIONAL<ParamOfferList_deliveryControl>
+        readonly deliveryControl?: OPTIONAL<ParamOfferList_deliveryControl>
     ) {}
 
     /**

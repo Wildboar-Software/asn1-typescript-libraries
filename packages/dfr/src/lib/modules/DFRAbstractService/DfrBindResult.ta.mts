@@ -60,7 +60,7 @@ class DfrBindResult {
          * @public
          * @readonly
          */
-        readonly authentication_attributes: OPTIONAL<AuthenticationAttribute[]>,
+        readonly authentication_attributes?: OPTIONAL<AuthenticationAttribute[]>,
         /**
          * @summary `constraints_supported`.
          * @description
@@ -71,7 +71,7 @@ class DfrBindResult {
          * @public
          * @readonly
          */
-        readonly constraints_supported: OPTIONAL<ConstraintsType>,
+        readonly constraints_supported?: OPTIONAL<ConstraintsType>,
         /**
          * @summary `dfr_document_types_supported`.
          * @description
@@ -81,7 +81,7 @@ class DfrBindResult {
          * @public
          * @readonly
          */
-        readonly dfr_document_types_supported: OPTIONAL<TypeAndAttribute[]>,
+        readonly dfr_document_types_supported?: OPTIONAL<TypeAndAttribute[]>,
         /**
          * @summary `function_Set_supported`.
          * @description
@@ -91,7 +91,7 @@ class DfrBindResult {
          * @public
          * @readonly
          */
-        readonly function_Set_supported: OPTIONAL<FunctionSetType>,
+        readonly function_Set_supported?: OPTIONAL<FunctionSetType>,
         /**
          * @summary `maximum_length_supported`.
          * @description
@@ -101,7 +101,7 @@ class DfrBindResult {
          * @public
          * @readonly
          */
-        readonly maximum_length_supported: OPTIONAL<INTEGER>,
+        readonly maximum_length_supported?: OPTIONAL<INTEGER>,
         /**
          * @summary `dor_for_produce_operations`.
          * @description
@@ -110,7 +110,7 @@ class DfrBindResult {
          * @public
          * @readonly
          */
-        readonly dor_for_produce_operations: OPTIONAL<BOOLEAN>,
+        readonly dor_for_produce_operations?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `dor_for_consume_operations`.
          * @description
@@ -119,7 +119,7 @@ class DfrBindResult {
          * @public
          * @readonly
          */
-        readonly dor_for_consume_operations: OPTIONAL<BOOLEAN>,
+        readonly dor_for_consume_operations?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `rOA_protocols_accessee`.
          * @description
@@ -128,7 +128,7 @@ class DfrBindResult {
          * @public
          * @readonly
          */
-        readonly rOA_protocols_accessee: OPTIONAL<ROAProtocols>,
+        readonly rOA_protocols_accessee?: OPTIONAL<ROAProtocols>,
         /**
          * @summary `rOA_protocols_accessor`.
          * @description
@@ -137,7 +137,7 @@ class DfrBindResult {
          * @public
          * @readonly
          */
-        readonly rOA_protocols_accessor: OPTIONAL<ROAProtocols>
+        readonly rOA_protocols_accessor?: OPTIONAL<ROAProtocols>
     ) {}
 
     /**

@@ -57,8 +57,8 @@ class ResourceReport {
     readonly message: OPTIONAL<InternationalString>;
 
     constructor (
-        estimates: OPTIONAL<Estimate[]>,
-        message: OPTIONAL<InternationalString>
+        estimates?: OPTIONAL<Estimate[]>,
+        message?: OPTIONAL<InternationalString>
     ) {
         this.estimates = estimates;
         this.message = message;

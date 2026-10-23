@@ -58,7 +58,7 @@ class InformArg {
 
     constructor (
         pumIdentity: PumIdentity,
-        argExtension: OPTIONAL<PumiExtension>
+        argExtension?: OPTIONAL<PumiExtension>
     ) {
         this.pumIdentity = pumIdentity;
         this.argExtension = argExtension;

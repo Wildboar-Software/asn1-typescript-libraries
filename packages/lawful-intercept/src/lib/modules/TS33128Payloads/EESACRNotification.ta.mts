@@ -134,9 +134,9 @@ class EESACRNotification {
         subscriptionID: UTF8String,
         eASID: EASID,
         eventID: ACREventIDs,
-        targetInfo: OPTIONAL<TargetInfo>,
-        aCRRes: OPTIONAL<BOOLEAN>,
-        failReason: OPTIONAL<UTF8String>,
+        targetInfo?: OPTIONAL<TargetInfo>,
+        aCRRes?: OPTIONAL<BOOLEAN>,
+        failReason?: OPTIONAL<UTF8String>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.subscriptionID = subscriptionID;

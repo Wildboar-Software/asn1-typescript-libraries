@@ -60,7 +60,7 @@ class ServiceAddressInformation {
     constructor (
         serviceKey: OPTIONAL<ServiceKey>,
         miscCallInfo: MiscCallInfo,
-        triggerType: OPTIONAL<TriggerType>,
+        triggerType?: OPTIONAL<TriggerType>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.serviceKey = serviceKey;

@@ -39,7 +39,7 @@ class RoutingMessage {
          * @public
          * @readonly
          */
-        readonly params: OPTIONAL<Parameters>,
+        readonly params?: OPTIONAL<Parameters>,
         /**
          * @summary Extensions that are not recognized.
          * @public

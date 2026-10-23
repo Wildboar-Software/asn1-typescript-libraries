@@ -50,8 +50,8 @@ class EventSpecificInformationBCSM_oDisconnectSpecificInfo {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        releaseCause: OPTIONAL<Cause>,
-        connectTime: OPTIONAL<Integer4>,
+        releaseCause?: OPTIONAL<Cause>,
+        connectTime?: OPTIONAL<Integer4>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.releaseCause = releaseCause;

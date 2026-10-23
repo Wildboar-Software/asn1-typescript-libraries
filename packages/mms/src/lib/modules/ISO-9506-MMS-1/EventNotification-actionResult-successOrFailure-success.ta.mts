@@ -67,7 +67,7 @@ class EventNotification_actionResult_successOrFailure_success {
          * @public
          * @readonly
          */
-        readonly cs_Response_Detail: OPTIONAL<Response_Detail>
+        readonly cs_Response_Detail?: OPTIONAL<Response_Detail>
     ) {}
 
     /**

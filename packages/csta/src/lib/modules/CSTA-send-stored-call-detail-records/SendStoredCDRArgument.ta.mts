@@ -62,7 +62,7 @@ class SendStoredCDRArgument {
          * @public
          * @readonly
          */
-        readonly timePeriod: OPTIONAL<CDRTimePeriod>,
+        readonly timePeriod?: OPTIONAL<CDRTimePeriod>,
         /**
          * @summary `extensions`.
          * @description
@@ -73,7 +73,7 @@ class SendStoredCDRArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

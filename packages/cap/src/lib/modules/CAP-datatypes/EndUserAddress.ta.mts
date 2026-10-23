@@ -61,7 +61,7 @@ export class EndUserAddress {
          * @public
          * @readonly
          */
-        readonly pDPAddress: OPTIONAL<OCTET_STRING>,
+        readonly pDPAddress?: OPTIONAL<OCTET_STRING>,
     ) {
         if (pDPTypeOrganization.length !== 1) {
             throw new ASN1SizeError("EndUserAddress.pDPTypeOrganization violates SIZE constraint");

@@ -42,7 +42,7 @@ class IST_AlertRes {
          * @public
          * @readonly
          */
-        readonly istAlertTimer: OPTIONAL<IST_AlertTimerValue>,
+        readonly istAlertTimer?: OPTIONAL<IST_AlertTimerValue>,
         /**
          * @summary `istInformationWithdraw`.
          * @description
@@ -52,7 +52,7 @@ class IST_AlertRes {
          * @public
          * @readonly
          */
-        readonly istInformationWithdraw: OPTIONAL<NULL>,
+        readonly istInformationWithdraw?: OPTIONAL<NULL>,
         /**
          * @summary `callTerminationIndicator`.
          * @description
@@ -62,7 +62,7 @@ class IST_AlertRes {
          * @public
          * @readonly
          */
-        readonly callTerminationIndicator: OPTIONAL<CallTerminationIndicator>,
+        readonly callTerminationIndicator?: OPTIONAL<CallTerminationIndicator>,
         /**
          * @summary `extensionContainer`.
          * @description
@@ -72,7 +72,7 @@ class IST_AlertRes {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

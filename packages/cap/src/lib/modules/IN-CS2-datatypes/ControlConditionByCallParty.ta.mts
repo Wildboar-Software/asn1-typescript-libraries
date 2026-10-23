@@ -38,13 +38,13 @@ class ControlConditionByCallParty {
          * @public
          * @readonly
          */
-        readonly endOfMessageSendingDigit: OPTIONAL<OCTET_STRING>,
+        readonly endOfMessageSendingDigit?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `replayDigit`.
          * @public
          * @readonly
          */
-        readonly replayDigit: OPTIONAL<OCTET_STRING>
+        readonly replayDigit?: OPTIONAL<OCTET_STRING>
     ) {}
 
     /**

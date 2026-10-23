@@ -188,15 +188,15 @@ class MMELocationInformation {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        eCGI: OPTIONAL<ECGI>,
-        tAI: OPTIONAL<TAI>,
-        geographicalInformation: OPTIONAL<GeographicalInformationOctet>,
-        geodeticInformation: OPTIONAL<GeodeticInformationOctet>,
-        currentLocationRetrieved: OPTIONAL<BOOLEAN>,
-        ageOfLocationInformation: OPTIONAL<INTEGER>,
-        userCSGInformation: OPTIONAL<UserCSGInformation>,
-        eNbID: OPTIONAL<ENbID>,
-        additionalCellIDs: OPTIONAL<CellInformation[]>,
+        eCGI?: OPTIONAL<ECGI>,
+        tAI?: OPTIONAL<TAI>,
+        geographicalInformation?: OPTIONAL<GeographicalInformationOctet>,
+        geodeticInformation?: OPTIONAL<GeodeticInformationOctet>,
+        currentLocationRetrieved?: OPTIONAL<BOOLEAN>,
+        ageOfLocationInformation?: OPTIONAL<INTEGER>,
+        userCSGInformation?: OPTIONAL<UserCSGInformation>,
+        eNbID?: OPTIONAL<ENbID>,
+        additionalCellIDs?: OPTIONAL<CellInformation[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.eCGI = eCGI;

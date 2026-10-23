@@ -95,8 +95,8 @@ class WtanParamArg {
         wtmUserId: WtmUserId,
         authChallenge: AuthChallenge,
         authAlgorithm: AuthAlgorithm,
-        canCompute: OPTIONAL<CanCompute>,
-        dummyExtension: OPTIONAL<DummyExtension>
+        canCompute?: OPTIONAL<CanCompute>,
+        dummyExtension?: OPTIONAL<DummyExtension>
     ) {
         this.wtmUserId = wtmUserId;
         this.authChallenge = authChallenge;

@@ -116,7 +116,7 @@ class ConsultationCallArgument {
          * @public
          * @readonly
          */
-        readonly connectionReservation: OPTIONAL<BOOLEAN>,
+        readonly connectionReservation?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `accountCode`.
          * @description
@@ -127,7 +127,7 @@ class ConsultationCallArgument {
          * @public
          * @readonly
          */
-        readonly accountCode: OPTIONAL<AccountInfo>,
+        readonly accountCode?: OPTIONAL<AccountInfo>,
         /**
          * @summary `authCode`.
          * @description
@@ -137,7 +137,7 @@ class ConsultationCallArgument {
          * @public
          * @readonly
          */
-        readonly authCode: OPTIONAL<AuthCode>,
+        readonly authCode?: OPTIONAL<AuthCode>,
         /**
          * @summary `correlatorData`.
          * @description
@@ -150,7 +150,7 @@ class ConsultationCallArgument {
          * @public
          * @readonly
          */
-        readonly correlatorData: OPTIONAL<CorrelatorData>,
+        readonly correlatorData?: OPTIONAL<CorrelatorData>,
         /**
          * @summary `userData`.
          * @description
@@ -160,7 +160,7 @@ class ConsultationCallArgument {
          * @public
          * @readonly
          */
-        readonly userData: OPTIONAL<UserData>,
+        readonly userData?: OPTIONAL<UserData>,
         /**
          * @summary `callCharacteristics`.
          * @description
@@ -171,7 +171,7 @@ class ConsultationCallArgument {
          * @public
          * @readonly
          */
-        readonly callCharacteristics: OPTIONAL<CallCharacteristics>,
+        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
         /**
          * @summary `mediaCallCharacteristics`.
          * @description
@@ -183,7 +183,7 @@ class ConsultationCallArgument {
          * @public
          * @readonly
          */
-        readonly mediaCallCharacteristics: OPTIONAL<MediaCallCharacteristics>,
+        readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
         /**
          * @summary `callingConnectionInfo`.
          * @description
@@ -194,7 +194,7 @@ class ConsultationCallArgument {
          * @public
          * @readonly
          */
-        readonly callingConnectionInfo: OPTIONAL<ConnectionInformation>,
+        readonly callingConnectionInfo?: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `consultOptions`.
          * @description
@@ -208,7 +208,7 @@ class ConsultationCallArgument {
          * @public
          * @readonly
          */
-        readonly consultOptions: OPTIONAL<ConsultOptions>,
+        readonly consultOptions?: OPTIONAL<ConsultOptions>,
         /**
          * @summary `subjectOfCall`.
          * @description
@@ -219,7 +219,7 @@ class ConsultationCallArgument {
          * @public
          * @readonly
          */
-        readonly subjectOfCall: OPTIONAL<SubjectOfCall>,
+        readonly subjectOfCall?: OPTIONAL<SubjectOfCall>,
         /**
          * @summary `languagePreferences`.
          * @description
@@ -230,7 +230,7 @@ class ConsultationCallArgument {
          * @public
          * @readonly
          */
-        readonly languagePreferences: OPTIONAL<LanguagePreferences>,
+        readonly languagePreferences?: OPTIONAL<LanguagePreferences>,
         /**
          * @summary `extensions`.
          * @description
@@ -241,7 +241,7 @@ class ConsultationCallArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

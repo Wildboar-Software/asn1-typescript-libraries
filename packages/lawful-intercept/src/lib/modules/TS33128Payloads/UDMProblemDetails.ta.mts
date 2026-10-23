@@ -46,7 +46,7 @@ class UDMProblemDetails {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        cause: OPTIONAL<UDMProblemDetailsCause>,
+        cause?: OPTIONAL<UDMProblemDetailsCause>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.cause = cause;

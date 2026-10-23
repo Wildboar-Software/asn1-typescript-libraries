@@ -67,7 +67,7 @@ class ElementParamOffer {
          * @public
          * @readonly
          */
-        readonly size: OPTIONAL<IntegerOffer>,
+        readonly size?: OPTIONAL<IntegerOffer>,
         /**
          * @summary `category`.
          * @description
@@ -77,7 +77,7 @@ class ElementParamOffer {
          * @public
          * @readonly
          */
-        readonly category: OPTIONAL<ElementParamOffer_category>,
+        readonly category?: OPTIONAL<ElementParamOffer_category>,
         /**
          * @summary `repertoire`.
          * @description
@@ -86,7 +86,7 @@ class ElementParamOffer {
          * @public
          * @readonly
          */
-        readonly repertoire: OPTIONAL<RepertoireAssignment[]>
+        readonly repertoire?: OPTIONAL<RepertoireAssignment[]>
     ) {}
 
     /**

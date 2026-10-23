@@ -89,9 +89,9 @@ class TNAPID {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        sSID: OPTIONAL<SSID>,
-        bSSID: OPTIONAL<BSSID>,
-        civicAddress: OPTIONAL<CivicAddressBytes>,
+        sSID?: OPTIONAL<SSID>,
+        bSSID?: OPTIONAL<BSSID>,
+        civicAddress?: OPTIONAL<CivicAddressBytes>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.sSID = sSID;

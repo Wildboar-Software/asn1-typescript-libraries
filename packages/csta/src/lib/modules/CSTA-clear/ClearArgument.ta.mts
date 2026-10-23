@@ -61,7 +61,7 @@ class ClearArgument {
          * @public
          * @readonly
          */
-        readonly resource: OPTIONAL<ResourceID>,
+        readonly resource?: OPTIONAL<ResourceID>,
         /**
          * @summary `extensions`.
          * @description
@@ -72,7 +72,7 @@ class ClearArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

@@ -92,7 +92,7 @@ class NoteSubscriberDataModifiedArg {
          * @public
          * @readonly
          */
-        readonly forwardingInfoFor_CSE: OPTIONAL<Ext_ForwardingInfoFor_CSE>,
+        readonly forwardingInfoFor_CSE?: OPTIONAL<Ext_ForwardingInfoFor_CSE>,
         /**
          * @summary `callBarringInfoFor_CSE`.
          * @description
@@ -103,7 +103,7 @@ class NoteSubscriberDataModifiedArg {
          * @public
          * @readonly
          */
-        readonly callBarringInfoFor_CSE: OPTIONAL<Ext_CallBarringInfoFor_CSE>,
+        readonly callBarringInfoFor_CSE?: OPTIONAL<Ext_CallBarringInfoFor_CSE>,
         /**
          * @summary `odb_Info`.
          * @description
@@ -114,7 +114,7 @@ class NoteSubscriberDataModifiedArg {
          * @public
          * @readonly
          */
-        readonly odb_Info: OPTIONAL<ODB_Info>,
+        readonly odb_Info?: OPTIONAL<ODB_Info>,
         /**
          * @summary `camel_SubscriptionInfo`.
          * @description
@@ -125,7 +125,7 @@ class NoteSubscriberDataModifiedArg {
          * @public
          * @readonly
          */
-        readonly camel_SubscriptionInfo: OPTIONAL<CAMEL_SubscriptionInfo>,
+        readonly camel_SubscriptionInfo?: OPTIONAL<CAMEL_SubscriptionInfo>,
         /**
          * @summary `allInformationSent`.
          * @description
@@ -136,13 +136,13 @@ class NoteSubscriberDataModifiedArg {
          * @public
          * @readonly
          */
-        readonly allInformationSent: OPTIONAL<NULL>,
+        readonly allInformationSent?: OPTIONAL<NULL>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `ue_reachable`.
          * @description
@@ -154,7 +154,7 @@ class NoteSubscriberDataModifiedArg {
          * @public
          * @readonly
          */
-        readonly ue_reachable: OPTIONAL<ServingNode>,
+        readonly ue_reachable?: OPTIONAL<ServingNode>,
         /**
          * @summary `csg_SubscriptionDataList`.
          * @description
@@ -164,7 +164,7 @@ class NoteSubscriberDataModifiedArg {
          * @public
          * @readonly
          */
-        readonly csg_SubscriptionDataList: OPTIONAL<CSG_SubscriptionDataList>,
+        readonly csg_SubscriptionDataList?: OPTIONAL<CSG_SubscriptionDataList>,
         /**
          * @summary `cw_Data`.
          * @description
@@ -174,7 +174,7 @@ class NoteSubscriberDataModifiedArg {
          * @public
          * @readonly
          */
-        readonly cw_Data: OPTIONAL<CallWaitingData>,
+        readonly cw_Data?: OPTIONAL<CallWaitingData>,
         /**
          * @summary `ch_Data`.
          * @description
@@ -184,7 +184,7 @@ class NoteSubscriberDataModifiedArg {
          * @public
          * @readonly
          */
-        readonly ch_Data: OPTIONAL<CallHoldData>,
+        readonly ch_Data?: OPTIONAL<CallHoldData>,
         /**
          * @summary `clip_Data`.
          * @description
@@ -194,7 +194,7 @@ class NoteSubscriberDataModifiedArg {
          * @public
          * @readonly
          */
-        readonly clip_Data: OPTIONAL<ClipData>,
+        readonly clip_Data?: OPTIONAL<ClipData>,
         /**
          * @summary `clir_Data`.
          * @description
@@ -204,7 +204,7 @@ class NoteSubscriberDataModifiedArg {
          * @public
          * @readonly
          */
-        readonly clir_Data: OPTIONAL<ClirData>,
+        readonly clir_Data?: OPTIONAL<ClirData>,
         /**
          * @summary `ect_data`.
          * @description
@@ -214,7 +214,7 @@ class NoteSubscriberDataModifiedArg {
          * @public
          * @readonly
          */
-        readonly ect_data: OPTIONAL<EctData>,
+        readonly ect_data?: OPTIONAL<EctData>,
         /**
          * @summary Extensions that are not recognized.
          * @public

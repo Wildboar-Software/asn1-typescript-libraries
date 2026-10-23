@@ -51,8 +51,8 @@ class TFCBindArgument {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        credentials: OPTIONAL<Credentials>,
-        versions: OPTIONAL<Versions>,
+        credentials?: OPTIONAL<Credentials>,
+        versions?: OPTIONAL<Versions>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.credentials = credentials;

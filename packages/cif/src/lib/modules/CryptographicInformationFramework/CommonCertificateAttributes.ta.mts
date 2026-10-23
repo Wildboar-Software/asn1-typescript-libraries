@@ -64,7 +64,7 @@ class CommonCertificateAttributes {
          * @public
          * @readonly
          */
-        readonly authority: OPTIONAL<BOOLEAN>,
+        readonly authority?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `identifier`.
          * @description
@@ -72,7 +72,7 @@ class CommonCertificateAttributes {
          * @public
          * @readonly
          */
-        readonly identifier: OPTIONAL<CredentialIdentifier>,
+        readonly identifier?: OPTIONAL<CredentialIdentifier>,
         /**
          * @summary `certHash`.
          * @description
@@ -81,7 +81,7 @@ class CommonCertificateAttributes {
          * @public
          * @readonly
          */
-        readonly certHash: OPTIONAL<CertHash>,
+        readonly certHash?: OPTIONAL<CertHash>,
         /**
          * @summary `trustedUsage`.
          * @description
@@ -92,7 +92,7 @@ class CommonCertificateAttributes {
          * @public
          * @readonly
          */
-        readonly trustedUsage: OPTIONAL<Usage>,
+        readonly trustedUsage?: OPTIONAL<Usage>,
         /**
          * @summary `identifiers`.
          * @description
@@ -102,7 +102,7 @@ class CommonCertificateAttributes {
          * @public
          * @readonly
          */
-        readonly identifiers: OPTIONAL<CredentialIdentifier[]>,
+        readonly identifiers?: OPTIONAL<CredentialIdentifier[]>,
         /**
          * @summary `validity`.
          * @description
@@ -111,7 +111,7 @@ class CommonCertificateAttributes {
          * @public
          * @readonly
          */
-        readonly validity: OPTIONAL<Validity>,
+        readonly validity?: OPTIONAL<Validity>,
         /**
          * @summary Extensions that are not recognized.
          * @public

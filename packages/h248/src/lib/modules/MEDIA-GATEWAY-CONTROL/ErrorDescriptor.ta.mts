@@ -71,7 +71,7 @@ class ErrorDescriptor {
          * @public
          * @readonly
          */
-        readonly errorText: OPTIONAL<ErrorText>
+        readonly errorText?: OPTIONAL<ErrorText>
     ) {}
 
     /**

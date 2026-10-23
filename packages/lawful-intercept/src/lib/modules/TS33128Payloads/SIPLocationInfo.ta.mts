@@ -71,8 +71,8 @@ class SIPLocationInfo {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        locationInfo: OPTIONAL<LocationInfo>,
-        cellInformation: OPTIONAL<CellInformation>,
+        locationInfo?: OPTIONAL<LocationInfo>,
+        cellInformation?: OPTIONAL<CellInformation>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.locationInfo = locationInfo;

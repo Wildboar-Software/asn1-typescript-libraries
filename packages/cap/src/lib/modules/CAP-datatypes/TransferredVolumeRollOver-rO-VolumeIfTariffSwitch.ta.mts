@@ -36,7 +36,7 @@ export class TransferredVolumeRollOver_rO_VolumeIfTariffSwitch {
          * @public
          * @readonly
          */
-        readonly rO_VolumeSinceLastTariffSwitch: OPTIONAL<INTEGER>,
+        readonly rO_VolumeSinceLastTariffSwitch?: OPTIONAL<INTEGER>,
         /**
          * @summary `rO_VolumeTariffSwitchInterval`.
          * @description
@@ -46,7 +46,7 @@ export class TransferredVolumeRollOver_rO_VolumeIfTariffSwitch {
          * @public
          * @readonly
          */
-        readonly rO_VolumeTariffSwitchInterval: OPTIONAL<INTEGER>,
+        readonly rO_VolumeTariffSwitchInterval?: OPTIONAL<INTEGER>,
     ) {
         if (rO_VolumeSinceLastTariffSwitch !== undefined && (typeof rO_VolumeSinceLastTariffSwitch === "bigint" ? (rO_VolumeSinceLastTariffSwitch < 0n || rO_VolumeSinceLastTariffSwitch > 255n) : (rO_VolumeSinceLastTariffSwitch < 0 || rO_VolumeSinceLastTariffSwitch > 255))) {
             throw new ASN1OverflowError("TransferredVolumeRollOver_rO_VolumeIfTariffSwitch.rO_VolumeSinceLastTariffSwitch violates INTEGER constraint");

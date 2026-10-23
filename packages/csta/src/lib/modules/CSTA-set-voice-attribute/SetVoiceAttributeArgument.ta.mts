@@ -76,7 +76,7 @@ class SetVoiceAttributeArgument {
          * @public
          * @readonly
          */
-        readonly message: OPTIONAL<MessageID>,
+        readonly message?: OPTIONAL<MessageID>,
         /**
          * @summary `resource`.
          * @description
@@ -87,7 +87,7 @@ class SetVoiceAttributeArgument {
          * @public
          * @readonly
          */
-        readonly resource: OPTIONAL<ResourceID>,
+        readonly resource?: OPTIONAL<ResourceID>,
         /**
          * @summary `extensions`.
          * @description
@@ -98,7 +98,7 @@ class SetVoiceAttributeArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

@@ -72,7 +72,7 @@ class SIPGeolocationHeaderInfo {
 
     constructor (
         locationValue: UTF8String,
-        cidInfo: OPTIONAL<UTF8String>,
+        cidInfo?: OPTIONAL<UTF8String>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.locationValue = locationValue;

@@ -57,7 +57,7 @@ export class CAMEL_CallResult_timeDurationChargingResult {
          * @public
          * @readonly
          */
-        readonly legActive: OPTIONAL<BOOLEAN>,
+        readonly legActive?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `callLegReleasedAtTcpExpiry`.
          * @description
@@ -69,8 +69,8 @@ export class CAMEL_CallResult_timeDurationChargingResult {
          * @public
          * @readonly
          */
-        readonly callLegReleasedAtTcpExpiry: OPTIONAL<NULL>,
-        readonly extensions: OPTIONAL<Extensions>,
+        readonly callLegReleasedAtTcpExpiry?: OPTIONAL<NULL>,
+        readonly extensions?: OPTIONAL<Extensions>,
         /**
          * @summary `aChChargingAddress`.
          * @description
@@ -82,7 +82,7 @@ export class CAMEL_CallResult_timeDurationChargingResult {
          * @public
          * @readonly
          */
-        readonly aChChargingAddress: OPTIONAL<AChChargingAddress>,
+        readonly aChChargingAddress?: OPTIONAL<AChChargingAddress>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}
 

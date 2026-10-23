@@ -133,7 +133,7 @@ class ChangeOfMBMSCondition {
         dataVolumeMBMSDownlink: INTEGER,
         changeCondition: ChangeCondition,
         changeTime: OCTET_STRING,
-        failureHandlingContinue: OPTIONAL<BOOLEAN>
+        failureHandlingContinue?: OPTIONAL<BOOLEAN>
     ) {
         this.qosRequested = qosRequested;
         this.qosNegotiated = qosNegotiated;

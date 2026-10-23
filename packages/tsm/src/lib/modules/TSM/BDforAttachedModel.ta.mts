@@ -88,7 +88,7 @@ class BDforAttachedModel {
          * @public
          * @readonly
          */
-        readonly aCforBioOnClient: OPTIONAL<ACBioContentInformation>
+        readonly aCforBioOnClient?: OPTIONAL<ACBioContentInformation>
     ) {}
 
     /**

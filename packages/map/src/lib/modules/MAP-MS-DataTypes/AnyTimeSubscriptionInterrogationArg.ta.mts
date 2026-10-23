@@ -79,7 +79,7 @@ class AnyTimeSubscriptionInterrogationArg {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `longFTN_Supported`.
          * @description
@@ -90,7 +90,7 @@ class AnyTimeSubscriptionInterrogationArg {
          * @public
          * @readonly
          */
-        readonly longFTN_Supported: OPTIONAL<NULL>,
+        readonly longFTN_Supported?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @public

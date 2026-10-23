@@ -41,7 +41,7 @@ class EventSpecificInformationBCSM_authorizeRouteFailure {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        authoriseRouteFailureCause: OPTIONAL<Cause>,
+        authoriseRouteFailureCause?: OPTIONAL<Cause>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.authoriseRouteFailureCause = authoriseRouteFailureCause;

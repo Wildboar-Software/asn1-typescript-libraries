@@ -36,7 +36,7 @@ export class CallSegmentFailure {
          * @public
          * @readonly
          */
-        readonly callSegmentID: OPTIONAL<CallSegmentID>,
+        readonly callSegmentID?: OPTIONAL<CallSegmentID>,
         /**
          * @summary `cause`.
          * @description
@@ -47,7 +47,7 @@ export class CallSegmentFailure {
          * @public
          * @readonly
          */
-        readonly cause: OPTIONAL<Cause>,
+        readonly cause?: OPTIONAL<Cause>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}
 

@@ -76,10 +76,10 @@ class PlayAnnouncementArg {
 
     constructor (
         informationToSend: InformationToSend,
-        disconnectFromIPForbidden: OPTIONAL<BOOLEAN>,
-        requestAnnouncementComplete: OPTIONAL<BOOLEAN>,
-        extensions: OPTIONAL<Extensions>,
-        connectedParty: OPTIONAL<PlayAnnouncementArg_connectedParty>,
+        disconnectFromIPForbidden?: OPTIONAL<BOOLEAN>,
+        requestAnnouncementComplete?: OPTIONAL<BOOLEAN>,
+        extensions?: OPTIONAL<Extensions>,
+        connectedParty?: OPTIONAL<PlayAnnouncementArg_connectedParty>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.informationToSend = informationToSend;

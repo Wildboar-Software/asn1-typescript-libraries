@@ -57,7 +57,7 @@ class GetSpeakerVolumeArgument {
          * @public
          * @readonly
          */
-        readonly auditoryApparatus: OPTIONAL<AuditoryApparatusID>,
+        readonly auditoryApparatus?: OPTIONAL<AuditoryApparatusID>,
         /**
          * @summary `extensions`.
          * @description
@@ -67,7 +67,7 @@ class GetSpeakerVolumeArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

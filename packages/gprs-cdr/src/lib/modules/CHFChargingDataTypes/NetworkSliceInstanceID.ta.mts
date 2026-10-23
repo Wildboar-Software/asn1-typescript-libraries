@@ -43,7 +43,7 @@ class NetworkSliceInstanceID {
 
     constructor (
         sST: INTEGER,
-        sD: OPTIONAL<OCTET_STRING>
+        sD?: OPTIONAL<OCTET_STRING>
     ) {
         this.sST = sST;
         this.sD = sD;

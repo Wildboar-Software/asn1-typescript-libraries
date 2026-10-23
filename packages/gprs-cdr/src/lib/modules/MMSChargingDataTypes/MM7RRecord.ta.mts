@@ -368,14 +368,14 @@ class MM7RRecord {
         originatorAddress: MMSAgentAddress,
         serviceCode: OPTIONAL<OCTET_STRING>,
         contentType: OCTET_STRING,
-        submissionTime: OPTIONAL<OCTET_STRING>,
-        timeOfExpiry: OPTIONAL<WaitTime>,
-        earliestTimeOfDelivery: OPTIONAL<WaitTime>,
-        requestStatusCode: OPTIONAL<RequestStatusCodeType>,
-        statusText: OPTIONAL<OCTET_STRING>,
-        recordTimeStamp: OPTIONAL<OCTET_STRING>,
-        localSequenceNumber: OPTIONAL<INTEGER>,
-        recordExtensions: OPTIONAL<ManagementExtension[]>
+        submissionTime?: OPTIONAL<OCTET_STRING>,
+        timeOfExpiry?: OPTIONAL<WaitTime>,
+        earliestTimeOfDelivery?: OPTIONAL<WaitTime>,
+        requestStatusCode?: OPTIONAL<RequestStatusCodeType>,
+        statusText?: OPTIONAL<OCTET_STRING>,
+        recordTimeStamp?: OPTIONAL<OCTET_STRING>,
+        localSequenceNumber?: OPTIONAL<INTEGER>,
+        recordExtensions?: OPTIONAL<ManagementExtension[]>
     ) {
         this.recordType = recordType;
         this.originatorMmsRSAddress = originatorMmsRSAddress;

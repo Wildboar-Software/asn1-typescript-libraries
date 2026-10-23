@@ -79,10 +79,10 @@ class CallIdentificationUpdateArg {
     readonly extension: OPTIONAL<ExtensionType>;
 
     constructor (
-        globalCallID: OPTIONAL<CallIdentificationData>,
-        threadID: OPTIONAL<CallIdentificationData>,
-        legID: OPTIONAL<CallIdentificationData>,
-        extension: OPTIONAL<ExtensionType>
+        globalCallID?: OPTIONAL<CallIdentificationData>,
+        threadID?: OPTIONAL<CallIdentificationData>,
+        legID?: OPTIONAL<CallIdentificationData>,
+        extension?: OPTIONAL<ExtensionType>
     ) {
         this.globalCallID = globalCallID;
         this.threadID = threadID;

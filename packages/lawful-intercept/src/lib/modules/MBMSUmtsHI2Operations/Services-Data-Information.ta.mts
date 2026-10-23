@@ -57,7 +57,7 @@ class Services_Data_Information {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        mBMSparameters: OPTIONAL<MBMSparameters>,
+        mBMSparameters?: OPTIONAL<MBMSparameters>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.mBMSparameters = mBMSparameters;

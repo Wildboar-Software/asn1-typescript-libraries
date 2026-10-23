@@ -128,10 +128,10 @@ class RecordSyntaxInfo {
         commonInfo: OPTIONAL<CommonInfo>,
         recordSyntax: OBJECT_IDENTIFIER,
         name: InternationalString,
-        transferSyntaxes: OPTIONAL<OBJECT_IDENTIFIER[]>,
-        description: OPTIONAL<HumanString>,
-        asn1Module: OPTIONAL<InternationalString>,
-        abstractStructure: OPTIONAL<ElementInfo[]>
+        transferSyntaxes?: OPTIONAL<OBJECT_IDENTIFIER[]>,
+        description?: OPTIONAL<HumanString>,
+        asn1Module?: OPTIONAL<InternationalString>,
+        abstractStructure?: OPTIONAL<ElementInfo[]>
     ) {
         this.commonInfo = commonInfo;
         this.recordSyntax = recordSyntax;

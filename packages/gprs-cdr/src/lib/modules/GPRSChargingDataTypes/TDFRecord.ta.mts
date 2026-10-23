@@ -1015,11 +1015,11 @@ class TDFRecord {
         tWANUserLocationInformation: OPTIONAL<TWANUserLocationInfo>,
         retransmission: OPTIONAL<NULL>,
         tDFAddress: GSNAddress,
-        tDFiPv6AddressUsed: OPTIONAL<GSNAddress>,
-        tDFPLMNIdentifier: OPTIONAL<OCTET_STRING>,
-        servedFixedSubsID: OPTIONAL<OCTET_STRING>,
-        accessLineIdentifier: OPTIONAL<AccessLineIdentifier>,
-        fixedUserLocationInformation: OPTIONAL<FixedUserLocationInformation>
+        tDFiPv6AddressUsed?: OPTIONAL<GSNAddress>,
+        tDFPLMNIdentifier?: OPTIONAL<OCTET_STRING>,
+        servedFixedSubsID?: OPTIONAL<OCTET_STRING>,
+        accessLineIdentifier?: OPTIONAL<AccessLineIdentifier>,
+        fixedUserLocationInformation?: OPTIONAL<FixedUserLocationInformation>
     ) {
         this.recordType = recordType;
         this.servedIMSI = servedIMSI;

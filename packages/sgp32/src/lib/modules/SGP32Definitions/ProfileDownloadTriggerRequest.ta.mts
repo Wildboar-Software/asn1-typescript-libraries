@@ -49,7 +49,7 @@ class ProfileDownloadTriggerRequest {
          * @public
          * @readonly
          */
-        readonly profileDownloadData: OPTIONAL<ProfileDownloadData>,
+        readonly profileDownloadData?: OPTIONAL<ProfileDownloadData>,
         /**
          * @summary `eimTransactionId`.
          * @description
@@ -61,7 +61,7 @@ class ProfileDownloadTriggerRequest {
          * @public
          * @readonly
          */
-        readonly eimTransactionId: OPTIONAL<TransactionId>
+        readonly eimTransactionId?: OPTIONAL<TransactionId>
     ) {}
 
     /**

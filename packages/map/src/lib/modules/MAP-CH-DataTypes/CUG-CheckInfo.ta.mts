@@ -51,7 +51,7 @@ class CUG_CheckInfo {
          * @public
          * @readonly
          */
-        readonly cug_OutgoingAccess: OPTIONAL<NULL>,
+        readonly cug_OutgoingAccess?: OPTIONAL<NULL>,
         /**
          * @summary `extensionContainer`.
          * @description
@@ -61,7 +61,7 @@ class CUG_CheckInfo {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

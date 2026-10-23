@@ -104,9 +104,9 @@ class CompSpec {
 
     constructor (
         selectAlternativeSyntax: BOOLEAN,
-        generic: OPTIONAL<Specification>,
-        dbSpecific: OPTIONAL<CompSpec_dbSpecific_Item[]>,
-        recordSyntax: OPTIONAL<OBJECT_IDENTIFIER[]>
+        generic?: OPTIONAL<Specification>,
+        dbSpecific?: OPTIONAL<CompSpec_dbSpecific_Item[]>,
+        recordSyntax?: OPTIONAL<OBJECT_IDENTIFIER[]>
     ) {
         this.selectAlternativeSyntax = selectAlternativeSyntax;
         this.generic = generic;

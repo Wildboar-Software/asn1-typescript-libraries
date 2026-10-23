@@ -105,7 +105,7 @@ class StoreMetadataRequest {
          * @public
          * @readonly
          */
-        readonly iconType: OPTIONAL<IconType>,
+        readonly iconType?: OPTIONAL<IconType>,
         /**
          * @summary `icon`.
          * @description
@@ -114,7 +114,7 @@ class StoreMetadataRequest {
          * @public
          * @readonly
          */
-        readonly icon: OPTIONAL<OCTET_STRING>,
+        readonly icon?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `profileClass`.
          * @description
@@ -124,7 +124,7 @@ class StoreMetadataRequest {
          * @public
          * @readonly
          */
-        readonly profileClass: OPTIONAL<ProfileClass>,
+        readonly profileClass?: OPTIONAL<ProfileClass>,
         /**
          * @summary `notificationConfigurationInfo`.
          * @description
@@ -134,7 +134,7 @@ class StoreMetadataRequest {
          * @public
          * @readonly
          */
-        readonly notificationConfigurationInfo: OPTIONAL<NotificationConfigurationInformation[]>,
+        readonly notificationConfigurationInfo?: OPTIONAL<NotificationConfigurationInformation[]>,
         /**
          * @summary `profileOwner`.
          * @description
@@ -146,7 +146,7 @@ class StoreMetadataRequest {
          * @public
          * @readonly
          */
-        readonly profileOwner: OPTIONAL<OperatorId>,
+        readonly profileOwner?: OPTIONAL<OperatorId>,
         /**
          * @summary `profilePolicyRules`.
          * @description
@@ -157,7 +157,7 @@ class StoreMetadataRequest {
          * @public
          * @readonly
          */
-        readonly profilePolicyRules: OPTIONAL<PprIds>,
+        readonly profilePolicyRules?: OPTIONAL<PprIds>,
         /**
          * @summary `serviceSpecificDataStoredInEuicc`.
          * @description
@@ -168,7 +168,7 @@ class StoreMetadataRequest {
          * @public
          * @readonly
          */
-        readonly serviceSpecificDataStoredInEuicc: OPTIONAL<VendorSpecificExtension>,
+        readonly serviceSpecificDataStoredInEuicc?: OPTIONAL<VendorSpecificExtension>,
         /**
          * @summary `serviceSpecificDataNotStoredInEuicc`.
          * @description
@@ -178,7 +178,7 @@ class StoreMetadataRequest {
          * @public
          * @readonly
          */
-        readonly serviceSpecificDataNotStoredInEuicc: OPTIONAL<VendorSpecificExtension>,
+        readonly serviceSpecificDataNotStoredInEuicc?: OPTIONAL<VendorSpecificExtension>,
         /**
          * @summary `ecallIndication`.
          * @description
@@ -192,7 +192,7 @@ class StoreMetadataRequest {
          * @public
          * @readonly
          */
-        readonly ecallIndication: OPTIONAL<BOOLEAN>,
+        readonly ecallIndication?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `fallbackAllowed`.
          * @description
@@ -202,7 +202,7 @@ class StoreMetadataRequest {
          * @public
          * @readonly
          */
-        readonly fallbackAllowed: OPTIONAL<BOOLEAN>,
+        readonly fallbackAllowed?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `iotSpecificMetadata`.
          * @description
@@ -211,7 +211,7 @@ class StoreMetadataRequest {
          * @public
          * @readonly
          */
-        readonly iotSpecificMetadata: OPTIONAL<StoreMetadataRequest_iotSpecificMetadata>
+        readonly iotSpecificMetadata?: OPTIONAL<StoreMetadataRequest_iotSpecificMetadata>
     ) {
         if (this.serviceProviderName.length > 32) {
             throw new ASN1SizeError("StoreMetadataRequest.serviceProviderName violates SIZE constraint");

@@ -576,8 +576,8 @@ class SGSNNILCSRecord {
         rATType: OPTIONAL<INTEGER>,
         recordExtensions: OPTIONAL<ManagementExtension[]>,
         causeForRecClosing: CauseForRecClosing,
-        servingNodePLMNIdentifier: OPTIONAL<OCTET_STRING>,
-        cNOperatorSelectionEnt: OPTIONAL<CNOperatorSelectionEntity>
+        servingNodePLMNIdentifier?: OPTIONAL<OCTET_STRING>,
+        cNOperatorSelectionEnt?: OPTIONAL<CNOperatorSelectionEntity>
     ) {
         this.recordType = recordType;
         this.recordingEntity = recordingEntity;

@@ -45,7 +45,7 @@ class RegulatedEmbeddedDescriptor {
          * @public
          * @readonly
          */
-        readonly secondEvent: OPTIONAL<SecondEventsDescriptor>,
+        readonly secondEvent?: OPTIONAL<SecondEventsDescriptor>,
         /**
          * @summary `signalsDescriptor`.
          * @description
@@ -56,7 +56,7 @@ class RegulatedEmbeddedDescriptor {
          * @public
          * @readonly
          */
-        readonly signalsDescriptor: OPTIONAL<SignalsDescriptor>,
+        readonly signalsDescriptor?: OPTIONAL<SignalsDescriptor>,
         /**
          * @summary Extensions that are not recognized.
          * @description

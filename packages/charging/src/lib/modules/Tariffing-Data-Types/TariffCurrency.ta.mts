@@ -59,8 +59,8 @@ class TariffCurrency {
     public readonly tariffSwitchCurrency: OPTIONAL<TariffSwitchCurrency>;
 
     constructor (
-        currentTariffCurrency: OPTIONAL<TariffCurrencyFormat>,
-        tariffSwitchCurrency: OPTIONAL<TariffSwitchCurrency>
+        currentTariffCurrency?: OPTIONAL<TariffCurrencyFormat>,
+        tariffSwitchCurrency?: OPTIONAL<TariffSwitchCurrency>
     ) {
         this.currentTariffCurrency = currentTariffCurrency;
         this.tariffSwitchCurrency = tariffSwitchCurrency;

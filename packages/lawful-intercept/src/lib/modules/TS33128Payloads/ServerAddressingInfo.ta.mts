@@ -58,9 +58,9 @@ class ServerAddressingInfo {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        iPv4Address: OPTIONAL<IPv4Address>,
-        iPv6Address: OPTIONAL<IPv6Address>,
-        fQDNList: OPTIONAL<FQDNList>,
+        iPv4Address?: OPTIONAL<IPv4Address>,
+        iPv6Address?: OPTIONAL<IPv6Address>,
+        fQDNList?: OPTIONAL<FQDNList>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.iPv4Address = iPv4Address;

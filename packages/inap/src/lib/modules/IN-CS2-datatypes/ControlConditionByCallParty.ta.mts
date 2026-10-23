@@ -40,8 +40,8 @@ class ControlConditionByCallParty {
     readonly replayDigit: OPTIONAL<OCTET_STRING>;
 
     constructor (
-        endOfMessageSendingDigit: OPTIONAL<OCTET_STRING>,
-        replayDigit: OPTIONAL<OCTET_STRING>
+        endOfMessageSendingDigit?: OPTIONAL<OCTET_STRING>,
+        replayDigit?: OPTIONAL<OCTET_STRING>
     ) {
         this.endOfMessageSendingDigit = endOfMessageSendingDigit;
         this.replayDigit = replayDigit;

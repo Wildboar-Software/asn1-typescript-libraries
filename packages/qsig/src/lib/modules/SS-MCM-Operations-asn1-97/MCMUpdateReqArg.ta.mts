@@ -82,8 +82,8 @@ class MCMUpdateReqArg {
     constructor (
         servedUserNr: PartyNumber,
         specificMessageType: MessageType,
-        msgCentreId: OPTIONAL<MsgCentreId>,
-        argumentExt: OPTIONAL<MCMUpdateReqArg_argumentExt>
+        msgCentreId?: OPTIONAL<MsgCentreId>,
+        argumentExt?: OPTIONAL<MCMUpdateReqArg_argumentExt>
     ) {
         this.servedUserNr = servedUserNr;
         this.specificMessageType = specificMessageType;

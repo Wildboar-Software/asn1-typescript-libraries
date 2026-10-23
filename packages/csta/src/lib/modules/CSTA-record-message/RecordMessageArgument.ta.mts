@@ -75,7 +75,7 @@ class RecordMessageArgument {
          * @public
          * @readonly
          */
-        readonly resource: OPTIONAL<ResourceID>,
+        readonly resource?: OPTIONAL<ResourceID>,
         /**
          * @summary `samplingRate`.
          * @description
@@ -85,7 +85,7 @@ class RecordMessageArgument {
          * @public
          * @readonly
          */
-        readonly samplingRate: OPTIONAL<INTEGER>,
+        readonly samplingRate?: OPTIONAL<INTEGER>,
         /**
          * @summary `encodingAlgorithm`.
          * @description
@@ -95,7 +95,7 @@ class RecordMessageArgument {
          * @public
          * @readonly
          */
-        readonly encodingAlgorithm: OPTIONAL<EncodingAlgorithm>,
+        readonly encodingAlgorithm?: OPTIONAL<EncodingAlgorithm>,
         /**
          * @summary `maxDuration`.
          * @description
@@ -105,7 +105,7 @@ class RecordMessageArgument {
          * @public
          * @readonly
          */
-        readonly maxDuration: OPTIONAL<INTEGER>,
+        readonly maxDuration?: OPTIONAL<INTEGER>,
         /**
          * @summary `termination`.
          * @description
@@ -115,7 +115,7 @@ class RecordMessageArgument {
          * @public
          * @readonly
          */
-        readonly termination: OPTIONAL<TerminatingConditions>,
+        readonly termination?: OPTIONAL<TerminatingConditions>,
         /**
          * @summary `extensions`.
          * @description
@@ -126,7 +126,7 @@ class RecordMessageArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

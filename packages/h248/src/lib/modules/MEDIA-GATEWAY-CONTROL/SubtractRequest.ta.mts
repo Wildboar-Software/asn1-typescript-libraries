@@ -65,7 +65,7 @@ class SubtractRequest {
          * @public
          * @readonly
          */
-        readonly auditDescriptor: OPTIONAL<AuditDescriptor>,
+        readonly auditDescriptor?: OPTIONAL<AuditDescriptor>,
         /**
          * @summary Extensions that are not recognized.
          * @description

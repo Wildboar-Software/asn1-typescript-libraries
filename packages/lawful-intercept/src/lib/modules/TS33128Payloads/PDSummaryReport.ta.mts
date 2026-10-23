@@ -361,7 +361,7 @@ class PDSummaryReport {
         lastPacketTimestamp: Timestamp,
         packetCount: INTEGER,
         byteCount: INTEGER,
-        useSessionTrigger: OPTIONAL<BOOLEAN>,
+        useSessionTrigger?: OPTIONAL<BOOLEAN>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.pDUSessionID = pDUSessionID;

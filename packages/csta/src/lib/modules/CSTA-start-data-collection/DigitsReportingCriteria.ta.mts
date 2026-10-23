@@ -47,7 +47,7 @@ class DigitsReportingCriteria {
          * @public
          * @readonly
          */
-        readonly numChars: OPTIONAL<INTEGER>,
+        readonly numChars?: OPTIONAL<INTEGER>,
         /**
          * @summary `flushChar`.
          * @description
@@ -58,7 +58,7 @@ class DigitsReportingCriteria {
          * @public
          * @readonly
          */
-        readonly flushChar: OPTIONAL<IA5String>,
+        readonly flushChar?: OPTIONAL<IA5String>,
         /**
          * @summary `timeout`.
          * @description
@@ -68,7 +68,7 @@ class DigitsReportingCriteria {
          * @public
          * @readonly
          */
-        readonly timeout: OPTIONAL<INTEGER>
+        readonly timeout?: OPTIONAL<INTEGER>
     ) {}
 
     /**

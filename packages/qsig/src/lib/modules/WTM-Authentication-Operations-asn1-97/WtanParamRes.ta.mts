@@ -53,7 +53,7 @@ class WtanParamRes {
 
     constructor (
         wtanParamInfo: WtanParamInfo,
-        dummyExtension: OPTIONAL<DummyExtension>
+        dummyExtension?: OPTIONAL<DummyExtension>
     ) {
         this.wtanParamInfo = wtanParamInfo;
         this.dummyExtension = dummyExtension;

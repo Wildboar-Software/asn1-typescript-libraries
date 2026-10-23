@@ -53,7 +53,7 @@ class SMS_CSI {
          * @public
          * @readonly
          */
-        readonly sms_CAMEL_TDP_DataList: OPTIONAL<SMS_CAMEL_TDP_DataList>,
+        readonly sms_CAMEL_TDP_DataList?: OPTIONAL<SMS_CAMEL_TDP_DataList>,
         /**
          * @summary `camelCapabilityHandling`.
          * @description
@@ -66,13 +66,13 @@ class SMS_CSI {
          * @public
          * @readonly
          */
-        readonly camelCapabilityHandling: OPTIONAL<CamelCapabilityHandling>,
+        readonly camelCapabilityHandling?: OPTIONAL<CamelCapabilityHandling>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `notificationToCSE`.
          * @description
@@ -85,7 +85,7 @@ class SMS_CSI {
          * @public
          * @readonly
          */
-        readonly notificationToCSE: OPTIONAL<NULL>,
+        readonly notificationToCSE?: OPTIONAL<NULL>,
         /**
          * @summary `csi_Active`.
          * @description
@@ -98,7 +98,7 @@ class SMS_CSI {
          * @public
          * @readonly
          */
-        readonly csi_Active: OPTIONAL<NULL>,
+        readonly csi_Active?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @public

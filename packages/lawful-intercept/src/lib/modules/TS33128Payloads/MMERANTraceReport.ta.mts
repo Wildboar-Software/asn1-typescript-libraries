@@ -233,9 +233,9 @@ class MMERANTraceReport {
         traceActivationInfo: OPTIONAL<TraceActivation>,
         eUTRANCGI: ECGI,
         globalRANNodeID: GlobalRANNodeID,
-        traceCollectionEntityInfo: OPTIONAL<TraceCollectionEntityInfo>,
-        mMETraceData: OPTIONAL<XMLType>,
-        location: OPTIONAL<Location>,
+        traceCollectionEntityInfo?: OPTIONAL<TraceCollectionEntityInfo>,
+        mMETraceData?: OPTIONAL<XMLType>,
+        location?: OPTIONAL<Location>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.userIdentifiers = userIdentifiers;

@@ -69,7 +69,7 @@ class CallBackArgument {
          * @public
          * @readonly
          */
-        readonly callCharacteristics: OPTIONAL<CallCharacteristics>,
+        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
         /**
          * @summary `subjectOfCall`.
          * @description
@@ -79,7 +79,7 @@ class CallBackArgument {
          * @public
          * @readonly
          */
-        readonly subjectOfCall: OPTIONAL<SubjectOfCall>,
+        readonly subjectOfCall?: OPTIONAL<SubjectOfCall>,
         /**
          * @summary `languagePreferences`.
          * @description
@@ -89,7 +89,7 @@ class CallBackArgument {
          * @public
          * @readonly
          */
-        readonly languagePreferences: OPTIONAL<LanguagePreferences>,
+        readonly languagePreferences?: OPTIONAL<LanguagePreferences>,
         /**
          * @summary `extensions`.
          * @description
@@ -100,7 +100,7 @@ class CallBackArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

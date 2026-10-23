@@ -56,7 +56,7 @@ class ReceiveReportArgument {
 
     constructor (
         envelope: ReportDeliveryEnvelope,
-        undelivered_object: OPTIONAL<InformationObject>
+        undelivered_object?: OPTIONAL<InformationObject>
     ) {
         this.envelope = envelope;
         this.undelivered_object = undelivered_object;

@@ -42,7 +42,7 @@ class ReportSM_DeliveryStatusRes {
          * @public
          * @readonly
          */
-        readonly storedMSISDN: OPTIONAL<ISDN_AddressString>,
+        readonly storedMSISDN?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `extensionContainer`.
          * @description
@@ -52,7 +52,7 @@ class ReportSM_DeliveryStatusRes {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `registeredSMServingNodes`.
          * @description
@@ -62,7 +62,7 @@ class ReportSM_DeliveryStatusRes {
          * @public
          * @readonly
          */
-        readonly registeredSMServingNodes: OPTIONAL<SMServingNodeAddressList>,
+        readonly registeredSMServingNodes?: OPTIONAL<SMServingNodeAddressList>,
         /**
          * @summary Extensions that are not recognized.
          * @public

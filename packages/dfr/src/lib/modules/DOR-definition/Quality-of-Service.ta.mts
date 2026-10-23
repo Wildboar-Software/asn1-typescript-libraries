@@ -42,13 +42,13 @@ class Quality_of_Service {
          * @public
          * @readonly
          */
-        readonly qoS_level: OPTIONAL<QoS_level>,
+        readonly qoS_level?: OPTIONAL<QoS_level>,
         /**
          * @summary `usage_of_reference`.
          * @public
          * @readonly
          */
-        readonly usage_of_reference: OPTIONAL<Single_use_of_reference>
+        readonly usage_of_reference?: OPTIONAL<Single_use_of_reference>
     ) {}
 
     /**

@@ -61,13 +61,13 @@ class DisconnectLegArg {
          * @public
          * @readonly
          */
-        readonly releaseCause: OPTIONAL<Cause>,
+        readonly releaseCause?: OPTIONAL<Cause>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<Extensions>,
+        readonly extensions?: OPTIONAL<Extensions>,
         /**
          * @summary Extensions that are not recognized.
          * @public

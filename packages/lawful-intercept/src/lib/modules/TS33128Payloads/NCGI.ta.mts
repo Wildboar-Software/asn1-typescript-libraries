@@ -86,7 +86,7 @@ class NCGI {
     constructor (
         pLMNID: PLMNID,
         nRCellID: NRCellID,
-        nID: OPTIONAL<NID>,
+        nID?: OPTIONAL<NID>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.pLMNID = pLMNID;

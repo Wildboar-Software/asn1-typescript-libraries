@@ -236,16 +236,16 @@ class NRLocation {
     constructor (
         tAI: TAI,
         nCGI: NCGI,
-        ageOfLocationInfo: OPTIONAL<AgeOfLocation>,
-        uELocationTimestamp: OPTIONAL<Timestamp>,
-        geographicalInformation: OPTIONAL<UTF8String>,
-        geodeticInformation: OPTIONAL<UTF8String>,
-        globalGNbID: OPTIONAL<GlobalRANNodeID>,
-        cellSiteInformation: OPTIONAL<CellSiteInformation>,
-        ignoreNCGI: OPTIONAL<BOOLEAN>,
-        nRNTNTAIInfo: OPTIONAL<NRNTNTAIInfo>,
-        iABMTUserLocation: OPTIONAL<IABMTUserLocation>,
-        cellRadioRelatedInformation: OPTIONAL<CellRadioRelatedInformation[]>,
+        ageOfLocationInfo?: OPTIONAL<AgeOfLocation>,
+        uELocationTimestamp?: OPTIONAL<Timestamp>,
+        geographicalInformation?: OPTIONAL<UTF8String>,
+        geodeticInformation?: OPTIONAL<UTF8String>,
+        globalGNbID?: OPTIONAL<GlobalRANNodeID>,
+        cellSiteInformation?: OPTIONAL<CellSiteInformation>,
+        ignoreNCGI?: OPTIONAL<BOOLEAN>,
+        nRNTNTAIInfo?: OPTIONAL<NRNTNTAIInfo>,
+        iABMTUserLocation?: OPTIONAL<IABMTUserLocation>,
+        cellRadioRelatedInformation?: OPTIONAL<CellRadioRelatedInformation[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.tAI = tAI;

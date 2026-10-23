@@ -76,7 +76,7 @@ class MuxDescriptor {
          * @public
          * @readonly
          */
-        readonly nonStandardData: OPTIONAL<NonStandardData>,
+        readonly nonStandardData?: OPTIONAL<NonStandardData>,
         /**
          * @summary Extensions that are not recognized.
          * @description

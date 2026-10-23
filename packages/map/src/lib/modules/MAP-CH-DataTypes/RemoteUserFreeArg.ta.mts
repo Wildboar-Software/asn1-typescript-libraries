@@ -89,7 +89,7 @@ class RemoteUserFreeArg {
          * @public
          * @readonly
          */
-        readonly replaceB_Number: OPTIONAL<NULL>,
+        readonly replaceB_Number?: OPTIONAL<NULL>,
         /**
          * @summary `alertingPattern`.
          * @description
@@ -99,7 +99,7 @@ class RemoteUserFreeArg {
          * @public
          * @readonly
          */
-        readonly alertingPattern: OPTIONAL<AlertingPattern>,
+        readonly alertingPattern?: OPTIONAL<AlertingPattern>,
         /**
          * @summary `extensionContainer`.
          * @description
@@ -109,7 +109,7 @@ class RemoteUserFreeArg {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

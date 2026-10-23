@@ -86,7 +86,7 @@ class RouteSelectRequestArgument {
          * @public
          * @readonly
          */
-        readonly alternateRoutes: OPTIONAL<DeviceID[]>,
+        readonly alternateRoutes?: OPTIONAL<DeviceID[]>,
         /**
          * @summary `remainRetries`.
          * @description
@@ -96,7 +96,7 @@ class RouteSelectRequestArgument {
          * @public
          * @readonly
          */
-        readonly remainRetries: OPTIONAL<RetryValue>,
+        readonly remainRetries?: OPTIONAL<RetryValue>,
         /**
          * @summary `routeUsedReq`.
          * @description
@@ -105,7 +105,7 @@ class RouteSelectRequestArgument {
          * @public
          * @readonly
          */
-        readonly routeUsedReq: OPTIONAL<BOOLEAN>,
+        readonly routeUsedReq?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `correlatorData`.
          * @description
@@ -114,7 +114,7 @@ class RouteSelectRequestArgument {
          * @public
          * @readonly
          */
-        readonly correlatorData: OPTIONAL<CorrelatorData>,
+        readonly correlatorData?: OPTIONAL<CorrelatorData>,
         /**
          * @summary `extensions`.
          * @description
@@ -124,7 +124,7 @@ class RouteSelectRequestArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

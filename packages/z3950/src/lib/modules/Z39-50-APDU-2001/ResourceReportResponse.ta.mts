@@ -91,8 +91,8 @@ class ResourceReportResponse {
     constructor (
         referenceId: OPTIONAL<ReferenceId>,
         resourceReportStatus: ResourceReportResponse_resourceReportStatus,
-        resourceReport: OPTIONAL<ResourceReport>,
-        otherInfo: OPTIONAL<OtherInformation>
+        resourceReport?: OPTIONAL<ResourceReport>,
+        otherInfo?: OPTIONAL<OtherInformation>
     ) {
         this.referenceId = referenceId;
         this.resourceReportStatus = resourceReportStatus;

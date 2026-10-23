@@ -42,7 +42,7 @@ class DpSpecificCriteria_numberOfDigitsTwo {
 
     constructor (
         requestedNumberOfDigits: NumberOfDigits,
-        minNumberOfDigits: OPTIONAL<NumberOfDigits>
+        minNumberOfDigits?: OPTIONAL<NumberOfDigits>
     ) {
         this.requestedNumberOfDigits = requestedNumberOfDigits;
         this.minNumberOfDigits = minNumberOfDigits;

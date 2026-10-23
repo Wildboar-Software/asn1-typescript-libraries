@@ -105,7 +105,7 @@ class DeflectCallArgument {
          * @public
          * @readonly
          */
-        readonly addNewDestinationsList: OPTIONAL<DeviceIDList>,
+        readonly addNewDestinationsList?: OPTIONAL<DeviceIDList>,
         /**
          * @summary `correlatorData`.
          * @description
@@ -116,7 +116,7 @@ class DeflectCallArgument {
          * @public
          * @readonly
          */
-        readonly correlatorData: OPTIONAL<CorrelatorData>,
+        readonly correlatorData?: OPTIONAL<CorrelatorData>,
         /**
          * @summary `userData`.
          * @description
@@ -126,7 +126,7 @@ class DeflectCallArgument {
          * @public
          * @readonly
          */
-        readonly userData: OPTIONAL<UserData>,
+        readonly userData?: OPTIONAL<UserData>,
         /**
          * @summary `callCharacteristics`.
          * @description
@@ -136,7 +136,7 @@ class DeflectCallArgument {
          * @public
          * @readonly
          */
-        readonly callCharacteristics: OPTIONAL<CallCharacteristics>,
+        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
         /**
          * @summary `subjectOfCall`.
          * @description
@@ -146,7 +146,7 @@ class DeflectCallArgument {
          * @public
          * @readonly
          */
-        readonly subjectOfCall: OPTIONAL<SubjectOfCall>,
+        readonly subjectOfCall?: OPTIONAL<SubjectOfCall>,
         /**
          * @summary `languagePreferences`.
          * @description
@@ -156,7 +156,7 @@ class DeflectCallArgument {
          * @public
          * @readonly
          */
-        readonly languagePreferences: OPTIONAL<LanguagePreferences>,
+        readonly languagePreferences?: OPTIONAL<LanguagePreferences>,
         /**
          * @summary `reason`.
          * @description
@@ -167,7 +167,7 @@ class DeflectCallArgument {
          * @public
          * @readonly
          */
-        readonly reason: OPTIONAL<EventCause>,
+        readonly reason?: OPTIONAL<EventCause>,
         /**
          * @summary `extensions`.
          * @description
@@ -178,7 +178,7 @@ class DeflectCallArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

@@ -59,7 +59,7 @@ class PRSetupArg {
 
     constructor (
         callIdentity: CallIdentity,
-        extension: OPTIONAL<PRSetupArg_extension>
+        extension?: OPTIONAL<PRSetupArg_extension>
     ) {
         this.callIdentity = callIdentity;
         this.extension = extension;

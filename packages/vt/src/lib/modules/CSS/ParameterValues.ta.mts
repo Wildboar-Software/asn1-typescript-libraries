@@ -88,7 +88,7 @@ class ParameterValues {
          * @public
          * @readonly
          */
-        readonly access: OPTIONAL<AccessRuleValue>,
+        readonly access?: OPTIONAL<AccessRuleValue>,
         /**
          * @summary `triggerSelected`.
          * @description
@@ -100,7 +100,7 @@ class ParameterValues {
          * @public
          * @readonly
          */
-        readonly triggerSelected: OPTIONAL<BOOLEAN>,
+        readonly triggerSelected?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `size`.
          * @description
@@ -113,7 +113,7 @@ class ParameterValues {
          * @public
          * @readonly
          */
-        readonly size: OPTIONAL<INTEGER>,
+        readonly size?: OPTIONAL<INTEGER>,
         /**
          * @summary `category`.
          * @description
@@ -122,7 +122,7 @@ class ParameterValues {
          * @public
          * @readonly
          */
-        readonly category: OPTIONAL<ParameterValues_category>,
+        readonly category?: OPTIONAL<ParameterValues_category>,
         /**
          * @summary `repertoire`.
          * @description
@@ -132,7 +132,7 @@ class ParameterValues {
          * @public
          * @readonly
          */
-        readonly repertoire: OPTIONAL<RepertoireAssignment>,
+        readonly repertoire?: OPTIONAL<RepertoireAssignment>,
         /**
          * @summary `priority`.
          * @description
@@ -144,7 +144,7 @@ class ParameterValues {
          * @public
          * @readonly
          */
-        readonly priority: OPTIONAL<ParameterValues_priority>,
+        readonly priority?: OPTIONAL<ParameterValues_priority>,
         /**
          * @summary `structure`.
          * @description
@@ -154,7 +154,7 @@ class ParameterValues {
          * @public
          * @readonly
          */
-        readonly structure: OPTIONAL<ParameterValues_structure>,
+        readonly structure?: OPTIONAL<ParameterValues_structure>,
         /**
          * @summary `multiElement`.
          * @description
@@ -163,7 +163,7 @@ class ParameterValues {
          * @public
          * @readonly
          */
-        readonly multiElement: OPTIONAL<ElementParamValue[]>
+        readonly multiElement?: OPTIONAL<ElementParamValue[]>
     ) {}
 
     /**

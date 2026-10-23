@@ -71,9 +71,9 @@ class SNSSAI {
 
     constructor (
         sliceServiceType: INTEGER,
-        sliceDifferentiator: OPTIONAL<OCTET_STRING>,
-        mappedHPLMNSliceServiceType: OPTIONAL<INTEGER>,
-        mappedHPLMNSliceDifferentiator: OPTIONAL<OCTET_STRING>,
+        sliceDifferentiator?: OPTIONAL<OCTET_STRING>,
+        mappedHPLMNSliceServiceType?: OPTIONAL<INTEGER>,
+        mappedHPLMNSliceDifferentiator?: OPTIONAL<OCTET_STRING>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.sliceServiceType = sliceServiceType;

@@ -53,7 +53,7 @@ class DimensionParamValues {
          * @public
          * @readonly
          */
-        readonly bound: OPTIONAL<DimensionParamValues_bound>,
+        readonly bound?: OPTIONAL<DimensionParamValues_bound>,
         /**
          * @summary `addressing`.
          * @description
@@ -62,7 +62,7 @@ class DimensionParamValues {
          * @public
          * @readonly
          */
-        readonly addressing: OPTIONAL<DimensionParamValues_addressing>,
+        readonly addressing?: OPTIONAL<DimensionParamValues_addressing>,
         /**
          * @summary `absolute`.
          * @description
@@ -72,7 +72,7 @@ class DimensionParamValues {
          * @public
          * @readonly
          */
-        readonly absolute: OPTIONAL<BOOLEAN>,
+        readonly absolute?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `window`.
          * @description
@@ -84,7 +84,7 @@ class DimensionParamValues {
          * @public
          * @readonly
          */
-        readonly window: OPTIONAL<DimensionParamValues_window>
+        readonly window?: OPTIONAL<DimensionParamValues_window>
     ) {}
 
     /**

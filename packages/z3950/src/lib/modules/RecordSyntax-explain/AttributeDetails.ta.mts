@@ -81,8 +81,8 @@ class AttributeDetails {
     constructor (
         commonInfo: OPTIONAL<CommonInfo>,
         databaseName: DatabaseName,
-        attributesBySet: OPTIONAL<AttributeSetDetails[]>,
-        attributeCombinations: OPTIONAL<AttributeCombinations>
+        attributesBySet?: OPTIONAL<AttributeSetDetails[]>,
+        attributeCombinations?: OPTIONAL<AttributeCombinations>
     ) {
         this.commonInfo = commonInfo;
         this.databaseName = databaseName;

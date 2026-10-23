@@ -58,7 +58,7 @@ class PrivateECKeyAttributes {
          * @public
          * @readonly
          */
-        readonly keyInfo: OPTIONAL<KeyInfo<Parameters, PublicKeyOperations>>,
+        readonly keyInfo?: OPTIONAL<KeyInfo<Parameters, PublicKeyOperations>>,
         /**
          * @summary Extensions that are not recognized.
          * @public

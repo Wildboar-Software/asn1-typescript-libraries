@@ -38,7 +38,7 @@ class GetCertsRequest {
          * @public
          * @readonly
          */
-        readonly euiccCiPKId: OPTIONAL<SubjectKeyIdentifier>
+        readonly euiccCiPKId?: OPTIONAL<SubjectKeyIdentifier>
     ) {}
 
     /**

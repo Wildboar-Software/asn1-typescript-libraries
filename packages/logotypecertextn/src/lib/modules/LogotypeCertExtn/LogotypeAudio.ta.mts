@@ -46,7 +46,7 @@ class LogotypeAudio {
          * @public
          * @readonly
          */
-        readonly audioInfo: OPTIONAL<LogotypeAudioInfo>
+        readonly audioInfo?: OPTIONAL<LogotypeAudioInfo>
     ) {}
 
     /**

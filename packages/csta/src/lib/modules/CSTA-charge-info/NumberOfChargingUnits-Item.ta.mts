@@ -54,7 +54,7 @@ class NumberOfChargingUnits_Item {
          * @public
          * @readonly
          */
-        readonly typeOfUnits: OPTIONAL<OCTET_STRING>
+        readonly typeOfUnits?: OPTIONAL<OCTET_STRING>
     ) {}
 
     /**

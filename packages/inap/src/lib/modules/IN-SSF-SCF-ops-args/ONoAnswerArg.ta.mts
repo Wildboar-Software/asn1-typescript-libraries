@@ -149,18 +149,18 @@ class ONoAnswerArg {
 
     constructor (
         dpSpecificCommonParameters: DpSpecificCommonParameters,
-        callingPartyBusinessGroupID: OPTIONAL<CallingPartyBusinessGroupID>,
-        callingPartySubaddress: OPTIONAL<CallingPartySubaddress>,
-        callingFacilityGroup: OPTIONAL<FacilityGroup>,
-        callingFacilityGroupMember: OPTIONAL<FacilityGroupMember>,
-        originalCalledPartyID: OPTIONAL<OriginalCalledPartyID>,
-        prefix: OPTIONAL<Digits>,
-        redirectingPartyID: OPTIONAL<RedirectingPartyID>,
-        redirectionInformation: OPTIONAL<RedirectionInformation>,
-        routeList: OPTIONAL<RouteList>,
-        travellingClassMark: OPTIONAL<TravellingClassMark>,
-        extensions: OPTIONAL<Extensions>,
-        carrier: OPTIONAL<Carrier>,
+        callingPartyBusinessGroupID?: OPTIONAL<CallingPartyBusinessGroupID>,
+        callingPartySubaddress?: OPTIONAL<CallingPartySubaddress>,
+        callingFacilityGroup?: OPTIONAL<FacilityGroup>,
+        callingFacilityGroupMember?: OPTIONAL<FacilityGroupMember>,
+        originalCalledPartyID?: OPTIONAL<OriginalCalledPartyID>,
+        prefix?: OPTIONAL<Digits>,
+        redirectingPartyID?: OPTIONAL<RedirectingPartyID>,
+        redirectionInformation?: OPTIONAL<RedirectionInformation>,
+        routeList?: OPTIONAL<RouteList>,
+        travellingClassMark?: OPTIONAL<TravellingClassMark>,
+        extensions?: OPTIONAL<Extensions>,
+        carrier?: OPTIONAL<Carrier>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.dpSpecificCommonParameters = dpSpecificCommonParameters;

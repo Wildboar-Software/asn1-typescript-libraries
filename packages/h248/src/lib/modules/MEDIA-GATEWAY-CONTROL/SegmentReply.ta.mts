@@ -64,7 +64,7 @@ class SegmentReply {
          * @public
          * @readonly
          */
-        readonly segmentationComplete: OPTIONAL<NULL>,
+        readonly segmentationComplete?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @description

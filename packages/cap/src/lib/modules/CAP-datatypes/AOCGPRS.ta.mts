@@ -48,7 +48,7 @@ export class AOCGPRS {
          * @public
          * @readonly
          */
-        readonly aOCSubsequent: OPTIONAL<AOCSubsequent>,
+        readonly aOCSubsequent?: OPTIONAL<AOCSubsequent>,
     ) {}
 
     public static _from_object (_o: { [_K in keyof (AOCGPRS)]: (AOCGPRS)[_K] }): AOCGPRS {

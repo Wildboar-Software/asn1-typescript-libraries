@@ -64,7 +64,7 @@ class LogDevServList {
          * Capability bitmaps for this service category at the logical device;
          * omit if unsupported (ECMA-269 §13.1.2).
          */
-        readonly callControlServList: OPTIONAL<CallControlServList>,
+        readonly callControlServList?: OPTIONAL<CallControlServList>,
         /**
          * @summary `callAssociatedServList`.
          * @public
@@ -73,7 +73,7 @@ class LogDevServList {
          * Capability bitmaps for this service category at the logical device;
          * omit if unsupported (ECMA-269 §13.1.2).
          */
-        readonly callAssociatedServList: OPTIONAL<CallAssociatedServList>,
+        readonly callAssociatedServList?: OPTIONAL<CallAssociatedServList>,
         /**
          * @summary `logicalServList`.
          * @public
@@ -82,7 +82,7 @@ class LogDevServList {
          * Capability bitmaps for this service category at the logical device;
          * omit if unsupported (ECMA-269 §13.1.2).
          */
-        readonly logicalServList: OPTIONAL<LogicalServList>,
+        readonly logicalServList?: OPTIONAL<LogicalServList>,
         /**
          * @summary `mediaServList`.
          * @public
@@ -91,7 +91,7 @@ class LogDevServList {
          * Capability bitmaps for this service category at the logical device;
          * omit if unsupported (ECMA-269 §13.1.2).
          */
-        readonly mediaServList: OPTIONAL<MediaServList>,
+        readonly mediaServList?: OPTIONAL<MediaServList>,
         /**
          * @summary `iOServicesServList`.
          * @public
@@ -100,7 +100,7 @@ class LogDevServList {
          * Capability bitmaps for this service category at the logical device;
          * omit if unsupported (ECMA-269 §13.1.2).
          */
-        readonly iOServicesServList: OPTIONAL<IOServicesServList>,
+        readonly iOServicesServList?: OPTIONAL<IOServicesServList>,
         /**
          * @summary `dataCollectionServList`.
          * @public
@@ -109,7 +109,7 @@ class LogDevServList {
          * Capability bitmaps for this service category at the logical device;
          * omit if unsupported (ECMA-269 §13.1.2).
          */
-        readonly dataCollectionServList: OPTIONAL<DataCollectionServList>,
+        readonly dataCollectionServList?: OPTIONAL<DataCollectionServList>,
         /**
          * @summary `voiceUnitServList`.
          * @public
@@ -118,7 +118,7 @@ class LogDevServList {
          * Capability bitmaps for this service category at the logical device;
          * omit if unsupported (ECMA-269 §13.1.2).
          */
-        readonly voiceUnitServList: OPTIONAL<VoiceUnitServList>,
+        readonly voiceUnitServList?: OPTIONAL<VoiceUnitServList>,
         /**
          * @summary `locationServicesServList`.
          * @public
@@ -127,7 +127,7 @@ class LogDevServList {
          * Capability bitmaps for this service category at the logical device;
          * omit if unsupported (ECMA-269 §13.1.2).
          */
-        readonly locationServicesServList: OPTIONAL<LocationServicesServList>
+        readonly locationServicesServList?: OPTIONAL<LocationServicesServList>
     ) {}
 
     /**

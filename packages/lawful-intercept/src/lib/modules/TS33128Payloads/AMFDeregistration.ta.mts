@@ -276,17 +276,17 @@ class AMFDeregistration {
     constructor (
         deregistrationDirection: AMFDirection,
         accessType: AccessType,
-        sUPI: OPTIONAL<SUPI>,
-        sUCI: OPTIONAL<SUCI>,
-        pEI: OPTIONAL<PEI>,
-        gPSI: OPTIONAL<GPSI>,
-        gUTI: OPTIONAL<FiveGGUTI>,
-        cause: OPTIONAL<FiveGMMCause>,
-        location: OPTIONAL<Location>,
-        switchOffIndicator: OPTIONAL<SwitchOffIndicator>,
-        reRegRequiredIndicator: OPTIONAL<ReRegRequiredIndicator>,
-        unavailabilityPeriodDuration: OPTIONAL<UnavailabilityPeriodDuration>,
-        additionalUserIdentifiers: OPTIONAL<UserIdentifiers>,
+        sUPI?: OPTIONAL<SUPI>,
+        sUCI?: OPTIONAL<SUCI>,
+        pEI?: OPTIONAL<PEI>,
+        gPSI?: OPTIONAL<GPSI>,
+        gUTI?: OPTIONAL<FiveGGUTI>,
+        cause?: OPTIONAL<FiveGMMCause>,
+        location?: OPTIONAL<Location>,
+        switchOffIndicator?: OPTIONAL<SwitchOffIndicator>,
+        reRegRequiredIndicator?: OPTIONAL<ReRegRequiredIndicator>,
+        unavailabilityPeriodDuration?: OPTIONAL<UnavailabilityPeriodDuration>,
+        additionalUserIdentifiers?: OPTIONAL<UserIdentifiers>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.deregistrationDirection = deregistrationDirection;

@@ -55,7 +55,7 @@ class CtanParamRes {
 
     constructor (
         ctanParamInfo: CtanParamInfo,
-        dummyExtension: OPTIONAL<DummyExtension>
+        dummyExtension?: OPTIONAL<DummyExtension>
     ) {
         this.ctanParamInfo = ctanParamInfo;
         this.dummyExtension = dummyExtension;

@@ -153,13 +153,13 @@ class RecipientInfo {
     readonly sMRecipientProtocolID: OPTIONAL<OCTET_STRING>;
 
     constructor (
-        recipientIMSI: OPTIONAL<OCTET_STRING>,
-        recipientMSISDN: OPTIONAL<OCTET_STRING>,
-        recipientOtherAddress: OPTIONAL<SMAddressInfo>,
-        recipientSCCPAddress: OPTIONAL<OCTET_STRING>,
-        recipientReceivedAddress: OPTIONAL<SMAddressInfo>,
-        sMDestinationInterface: OPTIONAL<SMInterface>,
-        sMRecipientProtocolID: OPTIONAL<OCTET_STRING>
+        recipientIMSI?: OPTIONAL<OCTET_STRING>,
+        recipientMSISDN?: OPTIONAL<OCTET_STRING>,
+        recipientOtherAddress?: OPTIONAL<SMAddressInfo>,
+        recipientSCCPAddress?: OPTIONAL<OCTET_STRING>,
+        recipientReceivedAddress?: OPTIONAL<SMAddressInfo>,
+        sMDestinationInterface?: OPTIONAL<SMInterface>,
+        sMRecipientProtocolID?: OPTIONAL<OCTET_STRING>
     ) {
         this.recipientIMSI = recipientIMSI;
         this.recipientMSISDN = recipientMSISDN;

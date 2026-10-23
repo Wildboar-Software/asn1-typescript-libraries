@@ -225,15 +225,15 @@ class MBMSinformation {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        mbmsServiceName: OPTIONAL<UTF8String>,
-        mbms_join_time: OPTIONAL<UTF8String>,
-        mbms_Mode: OPTIONAL<MBMSinformation_mbms_Mode>,
-        mbmsIPIPv6Address: OPTIONAL<IPAddress>,
-        mbmsLeavingReason: OPTIONAL<MBMSinformation_mbmsLeavingReason>,
-        mbmsSubsTermReason: OPTIONAL<MBMSinformation_mbmsSubsTermReason>,
-        mBMSapn: OPTIONAL<UTF8String>,
-        mbmsSerSubscriberList: OPTIONAL<MBMSSerSubscriberList>,
-        mbmsNodeList: OPTIONAL<MBMSNodeList>,
+        mbmsServiceName?: OPTIONAL<UTF8String>,
+        mbms_join_time?: OPTIONAL<UTF8String>,
+        mbms_Mode?: OPTIONAL<MBMSinformation_mbms_Mode>,
+        mbmsIPIPv6Address?: OPTIONAL<IPAddress>,
+        mbmsLeavingReason?: OPTIONAL<MBMSinformation_mbmsLeavingReason>,
+        mbmsSubsTermReason?: OPTIONAL<MBMSinformation_mbmsSubsTermReason>,
+        mBMSapn?: OPTIONAL<UTF8String>,
+        mbmsSerSubscriberList?: OPTIONAL<MBMSSerSubscriberList>,
+        mbmsNodeList?: OPTIONAL<MBMSNodeList>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.mbmsServiceName = mbmsServiceName;

@@ -43,8 +43,8 @@ class SCFBindResult {
     readonly returnedCredentials: OPTIONAL<Credentials>;
 
     constructor (
-        respondingScfAddress: OPTIONAL<ScfAddress>,
-        returnedCredentials: OPTIONAL<Credentials>
+        respondingScfAddress?: OPTIONAL<ScfAddress>,
+        returnedCredentials?: OPTIONAL<Credentials>
     ) {
         this.respondingScfAddress = respondingScfAddress;
         this.returnedCredentials = returnedCredentials;

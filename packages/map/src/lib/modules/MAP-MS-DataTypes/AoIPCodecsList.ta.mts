@@ -55,49 +55,49 @@ class AoIPCodecsList {
          * @public
          * @readonly
          */
-        readonly codec2: OPTIONAL<AoIPCodec>,
+        readonly codec2?: OPTIONAL<AoIPCodec>,
         /**
          * @summary `codec3`.
          * @public
          * @readonly
          */
-        readonly codec3: OPTIONAL<AoIPCodec>,
+        readonly codec3?: OPTIONAL<AoIPCodec>,
         /**
          * @summary `codec4`.
          * @public
          * @readonly
          */
-        readonly codec4: OPTIONAL<AoIPCodec>,
+        readonly codec4?: OPTIONAL<AoIPCodec>,
         /**
          * @summary `codec5`.
          * @public
          * @readonly
          */
-        readonly codec5: OPTIONAL<AoIPCodec>,
+        readonly codec5?: OPTIONAL<AoIPCodec>,
         /**
          * @summary `codec6`.
          * @public
          * @readonly
          */
-        readonly codec6: OPTIONAL<AoIPCodec>,
+        readonly codec6?: OPTIONAL<AoIPCodec>,
         /**
          * @summary `codec7`.
          * @public
          * @readonly
          */
-        readonly codec7: OPTIONAL<AoIPCodec>,
+        readonly codec7?: OPTIONAL<AoIPCodec>,
         /**
          * @summary `codec8`.
          * @public
          * @readonly
          */
-        readonly codec8: OPTIONAL<AoIPCodec>,
+        readonly codec8?: OPTIONAL<AoIPCodec>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

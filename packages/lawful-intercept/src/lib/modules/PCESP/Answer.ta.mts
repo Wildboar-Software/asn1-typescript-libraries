@@ -125,7 +125,7 @@ class Answer {
         accessingElementId: AccessingElementId,
         eventTime: EventTime,
         callId: CallId,
-        answering: OPTIONAL<PartyId>,
+        answering?: OPTIONAL<PartyId>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.caseId = caseId;

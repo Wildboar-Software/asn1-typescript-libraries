@@ -70,9 +70,9 @@ class CcRequestRes {
     readonly extension: OPTIONAL<CcExtension>;
 
     constructor (
-        no_path_reservation: OPTIONAL<BOOLEAN>,
-        retain_service: OPTIONAL<BOOLEAN>,
-        extension: OPTIONAL<CcExtension>
+        no_path_reservation?: OPTIONAL<BOOLEAN>,
+        retain_service?: OPTIONAL<BOOLEAN>,
+        extension?: OPTIONAL<CcExtension>
     ) {
         this.no_path_reservation = no_path_reservation;
         this.retain_service = retain_service;

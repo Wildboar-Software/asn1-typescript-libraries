@@ -619,14 +619,14 @@ class SMFMAPDUSessionEstablishment {
         mAUpgradeIndication: OPTIONAL<SMFMAUpgradeIndication>,
         ePSPDNCnxInfo: OPTIONAL<SMFEPSPDNCnxInfo>,
         mAAcceptedIndication: SMFMAAcceptedIndication,
-        aTSSSContainer: OPTIONAL<ATSSSContainer>,
-        uEEPSPDNConnection: OPTIONAL<UEEPSPDNConnection>,
-        ePS5GSComboInfo: OPTIONAL<EPS5GSComboInfo>,
-        selectedDNN: OPTIONAL<DNN>,
-        handoverState: OPTIONAL<HandoverState>,
-        pCCRules: OPTIONAL<PCCRuleSet>,
-        ePSPDNConnectionEstablishment: OPTIONAL<EPSPDNConnectionEstablishment>,
-        alternativeNSSAI: OPTIONAL<AlternativeNSSAIList>,
+        aTSSSContainer?: OPTIONAL<ATSSSContainer>,
+        uEEPSPDNConnection?: OPTIONAL<UEEPSPDNConnection>,
+        ePS5GSComboInfo?: OPTIONAL<EPS5GSComboInfo>,
+        selectedDNN?: OPTIONAL<DNN>,
+        handoverState?: OPTIONAL<HandoverState>,
+        pCCRules?: OPTIONAL<PCCRuleSet>,
+        ePSPDNConnectionEstablishment?: OPTIONAL<EPSPDNConnectionEstablishment>,
+        alternativeNSSAI?: OPTIONAL<AlternativeNSSAIList>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.sUPI = sUPI;

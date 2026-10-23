@@ -73,11 +73,11 @@ class UEContextInfo {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        supportVoPS: OPTIONAL<BOOLEAN>,
-        supportVoPSNon3GPP: OPTIONAL<BOOLEAN>,
-        lastActiveTime: OPTIONAL<Timestamp>,
-        accessType: OPTIONAL<AccessType>,
-        rATType: OPTIONAL<RATType>,
+        supportVoPS?: OPTIONAL<BOOLEAN>,
+        supportVoPSNon3GPP?: OPTIONAL<BOOLEAN>,
+        lastActiveTime?: OPTIONAL<Timestamp>,
+        accessType?: OPTIONAL<AccessType>,
+        rATType?: OPTIONAL<RATType>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.supportVoPS = supportVoPS;

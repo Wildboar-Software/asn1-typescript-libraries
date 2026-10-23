@@ -52,7 +52,7 @@ class MMTelInformation {
     readonly listOfSupplServices: OPTIONAL<SupplService[]>;
 
     constructor (
-        listOfSupplServices: OPTIONAL<SupplService[]>
+        listOfSupplServices?: OPTIONAL<SupplService[]>
     ) {
         this.listOfSupplServices = listOfSupplServices;
     }

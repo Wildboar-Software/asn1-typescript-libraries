@@ -138,12 +138,12 @@ class divertingLegInformation2_ArgumentType {
     constructor (
         diversionCounter: INTEGER,
         diversionReason: DiversionReason,
-        originalDiversionReason: OPTIONAL<DiversionReason>,
-        divertingNr: OPTIONAL<PresentedNumberUnscreened>,
-        originalCalledNr: OPTIONAL<PresentedNumberUnscreened>,
-        redirectingName: OPTIONAL<Name>,
-        originalCalledName: OPTIONAL<Name>,
-        extension: OPTIONAL<divertingLegInformation2_ArgumentType_extension>
+        originalDiversionReason?: OPTIONAL<DiversionReason>,
+        divertingNr?: OPTIONAL<PresentedNumberUnscreened>,
+        originalCalledNr?: OPTIONAL<PresentedNumberUnscreened>,
+        redirectingName?: OPTIONAL<Name>,
+        originalCalledName?: OPTIONAL<Name>,
+        extension?: OPTIONAL<divertingLegInformation2_ArgumentType_extension>
     ) {
         this.diversionCounter = diversionCounter;
         this.diversionReason = diversionReason;

@@ -83,10 +83,10 @@ class AttributeValue {
 
     constructor (
         value: StringOrNumeric,
-        description: OPTIONAL<HumanString>,
-        subAttributes: OPTIONAL<StringOrNumeric[]>,
-        superAttributes: OPTIONAL<StringOrNumeric[]>,
-        partialSupport: OPTIONAL<NULL>
+        description?: OPTIONAL<HumanString>,
+        subAttributes?: OPTIONAL<StringOrNumeric[]>,
+        superAttributes?: OPTIONAL<StringOrNumeric[]>,
+        partialSupport?: OPTIONAL<NULL>
     ) {
         this.value = value;
         this.description = description;

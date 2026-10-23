@@ -68,7 +68,7 @@ class SnapshotCallResponseInfo {
          * @public
          * @readonly
          */
-        readonly callIdentifier: OPTIONAL<ConnectionID>,
+        readonly callIdentifier?: OPTIONAL<ConnectionID>,
         /**
          * @summary `localConnectionState`.
          * @description
@@ -78,7 +78,7 @@ class SnapshotCallResponseInfo {
          * @public
          * @readonly
          */
-        readonly localConnectionState: OPTIONAL<LocalConnectionState>,
+        readonly localConnectionState?: OPTIONAL<LocalConnectionState>,
         /**
          * @summary `servicesPermitted`.
          * @description
@@ -89,7 +89,7 @@ class SnapshotCallResponseInfo {
          * @public
          * @readonly
          */
-        readonly servicesPermitted: OPTIONAL<ServicesPermitted>,
+        readonly servicesPermitted?: OPTIONAL<ServicesPermitted>,
         /**
          * @summary `mediaServiceInfoList`.
          * @description
@@ -99,7 +99,7 @@ class SnapshotCallResponseInfo {
          * @public
          * @readonly
          */
-        readonly mediaServiceInfoList: OPTIONAL<CallMediaInfoList>,
+        readonly mediaServiceInfoList?: OPTIONAL<CallMediaInfoList>,
         /**
          * @summary `locationInfo`.
          * @description
@@ -109,7 +109,7 @@ class SnapshotCallResponseInfo {
          * @public
          * @readonly
          */
-        readonly locationInfo: OPTIONAL<LocationInfoList>
+        readonly locationInfo?: OPTIONAL<LocationInfoList>
     ) {}
 
     /**

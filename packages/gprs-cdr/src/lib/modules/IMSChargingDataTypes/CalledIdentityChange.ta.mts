@@ -67,8 +67,8 @@ class CalledIdentityChange {
     readonly changeTime: OPTIONAL<OCTET_STRING>;
 
     constructor (
-        calledIdentity: OPTIONAL<InvolvedParty>,
-        changeTime: OPTIONAL<OCTET_STRING>
+        calledIdentity?: OPTIONAL<InvolvedParty>,
+        changeTime?: OPTIONAL<OCTET_STRING>
     ) {
         this.calledIdentity = calledIdentity;
         this.changeTime = changeTime;

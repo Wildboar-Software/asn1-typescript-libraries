@@ -62,7 +62,7 @@ class MCMInterrogateRes {
 
     constructor (
         interrogateResult: MCMServiceInfo[],
-        extensions: OPTIONAL<MCMExtensions>,
+        extensions?: OPTIONAL<MCMExtensions>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.interrogateResult = interrogateResult;

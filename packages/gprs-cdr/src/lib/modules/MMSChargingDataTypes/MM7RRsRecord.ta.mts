@@ -250,11 +250,11 @@ class MM7RRsRecord {
         messageID: OCTET_STRING,
         originatorAddress: OPTIONAL<MMSAgentAddress>,
         recipientAddress: MMSAgentAddress,
-        requestStatusCode: OPTIONAL<RequestStatusCodeType>,
-        statusText: OPTIONAL<OCTET_STRING>,
-        recordTimeStamp: OPTIONAL<OCTET_STRING>,
-        localSequenceNumber: OPTIONAL<INTEGER>,
-        recordExtensions: OPTIONAL<ManagementExtension[]>
+        requestStatusCode?: OPTIONAL<RequestStatusCodeType>,
+        statusText?: OPTIONAL<OCTET_STRING>,
+        recordTimeStamp?: OPTIONAL<OCTET_STRING>,
+        localSequenceNumber?: OPTIONAL<INTEGER>,
+        recordExtensions?: OPTIONAL<ManagementExtension[]>
     ) {
         this.recordType = recordType;
         this.recipientMmsRSAddress = recipientMmsRSAddress;

@@ -96,7 +96,7 @@ class SemaphoreEntry {
          * @public
          * @readonly
          */
-        readonly namedToken: OPTIONAL<Identifier>,
+        readonly namedToken?: OPTIONAL<Identifier>,
         /**
          * @summary `priority`.
          * @description
@@ -108,7 +108,7 @@ class SemaphoreEntry {
          * @public
          * @readonly
          */
-        readonly priority: OPTIONAL<Priority>,
+        readonly priority?: OPTIONAL<Priority>,
         /**
          * @summary `remainingTimeOut`.
          * @description
@@ -120,7 +120,7 @@ class SemaphoreEntry {
          * @public
          * @readonly
          */
-        readonly remainingTimeOut: OPTIONAL<Unsigned32>,
+        readonly remainingTimeOut?: OPTIONAL<Unsigned32>,
         /**
          * @summary `abortOnTimeOut`.
          * @description
@@ -131,7 +131,7 @@ class SemaphoreEntry {
          * @public
          * @readonly
          */
-        readonly abortOnTimeOut: OPTIONAL<BOOLEAN>,
+        readonly abortOnTimeOut?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `relinquishIfConnectionLost`.
          * @description
@@ -143,7 +143,7 @@ class SemaphoreEntry {
          * @public
          * @readonly
          */
-        readonly relinquishIfConnectionLost: OPTIONAL<BOOLEAN>
+        readonly relinquishIfConnectionLost?: OPTIONAL<BOOLEAN>
     ) {}
 
     /**

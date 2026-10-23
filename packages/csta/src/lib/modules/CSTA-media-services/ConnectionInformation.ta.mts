@@ -65,7 +65,7 @@ class ConnectionInformation {
          * @public
          * @readonly
          */
-        readonly flowDirection: OPTIONAL<ConnectionInformation_flowDirection>,
+        readonly flowDirection?: OPTIONAL<ConnectionInformation_flowDirection>,
         /**
          * @summary `numberOfChannels`.
          * @description
@@ -76,7 +76,7 @@ class ConnectionInformation {
          * @public
          * @readonly
          */
-        readonly numberOfChannels: OPTIONAL<INTEGER>,
+        readonly numberOfChannels?: OPTIONAL<INTEGER>,
         /**
          * @summary `mediaSessionInformation`.
          * @description
@@ -87,7 +87,7 @@ class ConnectionInformation {
          * @public
          * @readonly
          */
-        readonly mediaSessionInformation: OPTIONAL<IA5String>
+        readonly mediaSessionInformation?: OPTIONAL<IA5String>
     ) {}
 
     /**

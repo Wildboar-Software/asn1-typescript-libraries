@@ -85,7 +85,7 @@ class GlobalRANNodeID {
     constructor (
         pLMNID: PLMNID,
         aNNodeID: ANNodeID,
-        nID: OPTIONAL<NID>,
+        nID?: OPTIONAL<NID>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.pLMNID = pLMNID;

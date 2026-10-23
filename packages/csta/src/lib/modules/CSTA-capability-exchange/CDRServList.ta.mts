@@ -54,7 +54,7 @@ class CDRServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly cdrNotification: OPTIONAL<CdrNotification>,
+        readonly cdrNotification?: OPTIONAL<CdrNotification>,
         /**
          * @summary `cdrReport`.
          * @public
@@ -63,7 +63,7 @@ class CDRServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly cdrReport: OPTIONAL<CdrReport>,
+        readonly cdrReport?: OPTIONAL<CdrReport>,
         /**
          * @summary `sendStoredCDRs`.
          * @public
@@ -72,7 +72,7 @@ class CDRServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly sendStoredCDRs: OPTIONAL<SendStoredCDRs>,
+        readonly sendStoredCDRs?: OPTIONAL<SendStoredCDRs>,
         /**
          * @summary `startCDRTransmission`.
          * @public
@@ -81,7 +81,7 @@ class CDRServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly startCDRTransmission: OPTIONAL<StartCDRTransmission>,
+        readonly startCDRTransmission?: OPTIONAL<StartCDRTransmission>,
         /**
          * @summary `stopCDRTransmission`.
          * @public
@@ -90,7 +90,7 @@ class CDRServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly stopCDRTransmission: OPTIONAL<StopCDRTransmission>
+        readonly stopCDRTransmission?: OPTIONAL<StopCDRTransmission>
     ) {}
 
     /**

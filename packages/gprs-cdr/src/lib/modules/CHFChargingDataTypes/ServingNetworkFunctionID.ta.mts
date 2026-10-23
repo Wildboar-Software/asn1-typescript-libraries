@@ -41,7 +41,7 @@ class ServingNetworkFunctionID {
 
     constructor (
         servingNetworkFunctionInformation: NetworkFunctionInformation,
-        aMFIdentifier: OPTIONAL<OCTET_STRING>
+        aMFIdentifier?: OPTIONAL<OCTET_STRING>
     ) {
         this.servingNetworkFunctionInformation = servingNetworkFunctionInformation;
         this.aMFIdentifier = aMFIdentifier;

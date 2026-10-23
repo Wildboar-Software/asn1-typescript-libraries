@@ -136,12 +136,12 @@ class MWIActivateArg {
     constructor (
         servedUserNr: PartyNumber,
         basicService: BasicService,
-        msgCentreId: OPTIONAL<MsgCentreId>,
-        nbOfMessages: OPTIONAL<NbOfMessages>,
-        originatingNr: OPTIONAL<PartyNumber>,
-        timestamp: OPTIONAL<TimeStamp>,
-        priority: OPTIONAL<INTEGER>,
-        argumentExt: OPTIONAL<MWIActivateArg_argumentExt>
+        msgCentreId?: OPTIONAL<MsgCentreId>,
+        nbOfMessages?: OPTIONAL<NbOfMessages>,
+        originatingNr?: OPTIONAL<PartyNumber>,
+        timestamp?: OPTIONAL<TimeStamp>,
+        priority?: OPTIONAL<INTEGER>,
+        argumentExt?: OPTIONAL<MWIActivateArg_argumentExt>
     ) {
         this.servedUserNr = servedUserNr;
         this.basicService = basicService;

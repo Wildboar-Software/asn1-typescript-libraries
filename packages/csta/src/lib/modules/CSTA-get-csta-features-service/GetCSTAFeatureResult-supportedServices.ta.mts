@@ -88,7 +88,7 @@ class GetCSTAFeatureResult_supportedServices {
          * @public
          * @readonly
          */
-        readonly capExchangeServList: OPTIONAL<CapExchangeServList>,
+        readonly capExchangeServList?: OPTIONAL<CapExchangeServList>,
         /**
          * @summary `systemStatServList`.
          * @description
@@ -97,7 +97,7 @@ class GetCSTAFeatureResult_supportedServices {
          * @public
          * @readonly
          */
-        readonly systemStatServList: OPTIONAL<SystemStatusServList>,
+        readonly systemStatServList?: OPTIONAL<SystemStatusServList>,
         /**
          * @summary `monitoringServList`.
          * @description
@@ -106,7 +106,7 @@ class GetCSTAFeatureResult_supportedServices {
          * @public
          * @readonly
          */
-        readonly monitoringServList: OPTIONAL<MonitoringServList>,
+        readonly monitoringServList?: OPTIONAL<MonitoringServList>,
         /**
          * @summary `snapshotServList`.
          * @description
@@ -115,7 +115,7 @@ class GetCSTAFeatureResult_supportedServices {
          * @public
          * @readonly
          */
-        readonly snapshotServList: OPTIONAL<SnapshotServList>,
+        readonly snapshotServList?: OPTIONAL<SnapshotServList>,
         /**
          * @summary `callControlServList`.
          * @description
@@ -124,7 +124,7 @@ class GetCSTAFeatureResult_supportedServices {
          * @public
          * @readonly
          */
-        readonly callControlServList: OPTIONAL<CallControlServList>,
+        readonly callControlServList?: OPTIONAL<CallControlServList>,
         /**
          * @summary `callAssociatedServList`.
          * @description
@@ -133,7 +133,7 @@ class GetCSTAFeatureResult_supportedServices {
          * @public
          * @readonly
          */
-        readonly callAssociatedServList: OPTIONAL<CallAssociatedServList>,
+        readonly callAssociatedServList?: OPTIONAL<CallAssociatedServList>,
         /**
          * @summary `mediaServList`.
          * @description
@@ -142,7 +142,7 @@ class GetCSTAFeatureResult_supportedServices {
          * @public
          * @readonly
          */
-        readonly mediaServList: OPTIONAL<MediaServList>,
+        readonly mediaServList?: OPTIONAL<MediaServList>,
         /**
          * @summary `routeingServList`.
          * @description
@@ -151,7 +151,7 @@ class GetCSTAFeatureResult_supportedServices {
          * @public
          * @readonly
          */
-        readonly routeingServList: OPTIONAL<RouteingServList>,
+        readonly routeingServList?: OPTIONAL<RouteingServList>,
         /**
          * @summary `physDevServList`.
          * @description
@@ -160,7 +160,7 @@ class GetCSTAFeatureResult_supportedServices {
          * @public
          * @readonly
          */
-        readonly physDevServList: OPTIONAL<PhysDevServList>,
+        readonly physDevServList?: OPTIONAL<PhysDevServList>,
         /**
          * @summary `logicalServList`.
          * @description
@@ -169,7 +169,7 @@ class GetCSTAFeatureResult_supportedServices {
          * @public
          * @readonly
          */
-        readonly logicalServList: OPTIONAL<LogicalServList>,
+        readonly logicalServList?: OPTIONAL<LogicalServList>,
         /**
          * @summary `iOServicesServList`.
          * @description
@@ -178,7 +178,7 @@ class GetCSTAFeatureResult_supportedServices {
          * @public
          * @readonly
          */
-        readonly iOServicesServList: OPTIONAL<IOServicesServList>,
+        readonly iOServicesServList?: OPTIONAL<IOServicesServList>,
         /**
          * @summary `dataCollectionServList`.
          * @description
@@ -187,7 +187,7 @@ class GetCSTAFeatureResult_supportedServices {
          * @public
          * @readonly
          */
-        readonly dataCollectionServList: OPTIONAL<DataCollectionServList>,
+        readonly dataCollectionServList?: OPTIONAL<DataCollectionServList>,
         /**
          * @summary `voiceServList`.
          * @description
@@ -196,7 +196,7 @@ class GetCSTAFeatureResult_supportedServices {
          * @public
          * @readonly
          */
-        readonly voiceServList: OPTIONAL<VoiceUnitServList>,
+        readonly voiceServList?: OPTIONAL<VoiceUnitServList>,
         /**
          * @summary `cDRServList`.
          * @description
@@ -205,7 +205,7 @@ class GetCSTAFeatureResult_supportedServices {
          * @public
          * @readonly
          */
-        readonly cDRServList: OPTIONAL<CDRServList>,
+        readonly cDRServList?: OPTIONAL<CDRServList>,
         /**
          * @summary `vendorSpecificServList`.
          * @description
@@ -214,7 +214,7 @@ class GetCSTAFeatureResult_supportedServices {
          * @public
          * @readonly
          */
-        readonly vendorSpecificServList: OPTIONAL<VendorSpecificServList>,
+        readonly vendorSpecificServList?: OPTIONAL<VendorSpecificServList>,
         /**
          * @summary `locationServicesServList`.
          * @description
@@ -223,7 +223,7 @@ class GetCSTAFeatureResult_supportedServices {
          * @public
          * @readonly
          */
-        readonly locationServicesServList: OPTIONAL<LocationServicesServList>
+        readonly locationServicesServList?: OPTIONAL<LocationServicesServList>
     ) {}
 
     /**

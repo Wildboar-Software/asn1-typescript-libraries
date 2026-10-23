@@ -66,7 +66,7 @@ class RoutingInfoForLCS_Res {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `v_gmlc_Address`.
          * @description
@@ -76,7 +76,7 @@ class RoutingInfoForLCS_Res {
          * @public
          * @readonly
          */
-        readonly v_gmlc_Address: OPTIONAL<GSN_Address>,
+        readonly v_gmlc_Address?: OPTIONAL<GSN_Address>,
         /**
          * @summary `h_gmlc_Address`.
          * @description
@@ -86,7 +86,7 @@ class RoutingInfoForLCS_Res {
          * @public
          * @readonly
          */
-        readonly h_gmlc_Address: OPTIONAL<GSN_Address>,
+        readonly h_gmlc_Address?: OPTIONAL<GSN_Address>,
         /**
          * @summary `ppr_Address`.
          * @description
@@ -96,7 +96,7 @@ class RoutingInfoForLCS_Res {
          * @public
          * @readonly
          */
-        readonly ppr_Address: OPTIONAL<GSN_Address>,
+        readonly ppr_Address?: OPTIONAL<GSN_Address>,
         /**
          * @summary `additional_v_gmlc_Address`.
          * @description
@@ -106,7 +106,7 @@ class RoutingInfoForLCS_Res {
          * @public
          * @readonly
          */
-        readonly additional_v_gmlc_Address: OPTIONAL<GSN_Address>,
+        readonly additional_v_gmlc_Address?: OPTIONAL<GSN_Address>,
         /**
          * @summary Extensions that are not recognized.
          * @public

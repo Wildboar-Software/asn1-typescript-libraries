@@ -56,7 +56,7 @@ class AdditionalCGIs {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        additionalNCGIList: OPTIONAL<AdditionalNCGI[]>,
+        additionalNCGIList?: OPTIONAL<AdditionalNCGI[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.additionalNCGIList = additionalNCGIList;

@@ -51,7 +51,7 @@ class TroubleProgressInfo {
          * @public
          * @readonly
          */
-        readonly additionalTroubleStatusInfo: OPTIONAL<AdditionalTroubleStatusInfo>,
+        readonly additionalTroubleStatusInfo?: OPTIONAL<AdditionalTroubleStatusInfo>,
         /**
          * @summary Extensions that are not recognized.
          * @public

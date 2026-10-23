@@ -62,7 +62,7 @@ class SuspendArgument {
          * @public
          * @readonly
          */
-        readonly message: OPTIONAL<MessageID>,
+        readonly message?: OPTIONAL<MessageID>,
         /**
          * @summary `resource`.
          * @description
@@ -73,7 +73,7 @@ class SuspendArgument {
          * @public
          * @readonly
          */
-        readonly resource: OPTIONAL<ResourceID>,
+        readonly resource?: OPTIONAL<ResourceID>,
         /**
          * @summary `extensions`.
          * @description
@@ -84,7 +84,7 @@ class SuspendArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

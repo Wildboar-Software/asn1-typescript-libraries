@@ -95,12 +95,12 @@ class ProvideAnnouncementRequestArg_Type {
 
     constructor (
         infoToSend: InformationToSend,
-        preferredLanguage: OPTIONAL<Language>,
-        securityParameters: OPTIONAL<SecurityParameters>,
-        srfAddress: OPTIONAL<CalledPartyNumber>,
-        userToConnect: OPTIONAL<UserToConnect>,
-        requestAnnouncementComplete: OPTIONAL<BOOLEAN>,
-        extensions: OPTIONAL<Extensions>,
+        preferredLanguage?: OPTIONAL<Language>,
+        securityParameters?: OPTIONAL<SecurityParameters>,
+        srfAddress?: OPTIONAL<CalledPartyNumber>,
+        userToConnect?: OPTIONAL<UserToConnect>,
+        requestAnnouncementComplete?: OPTIONAL<BOOLEAN>,
+        extensions?: OPTIONAL<Extensions>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.infoToSend = infoToSend;

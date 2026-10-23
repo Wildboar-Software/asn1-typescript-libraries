@@ -135,8 +135,8 @@ class ProSeDirectDiscovery {
         targetImsi: OCTET_STRING,
         targetRole: TargetRole,
         directDiscoveryData: DirectDiscoveryData,
-        metadata: OPTIONAL<UTF8String>,
-        otherUeImsi: OPTIONAL<OCTET_STRING>,
+        metadata?: OPTIONAL<UTF8String>,
+        otherUeImsi?: OPTIONAL<OCTET_STRING>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.proseDirectDiscoveryEvent = proseDirectDiscoveryEvent;

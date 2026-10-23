@@ -45,7 +45,7 @@ class MidCallControlInfo_Item {
          * @public
          * @readonly
          */
-        readonly midCallReportType: OPTIONAL<MidCallControlInfo_Item_midCallReportType>
+        readonly midCallReportType?: OPTIONAL<MidCallControlInfo_Item_midCallReportType>
     ) {}
 
     /**

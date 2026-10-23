@@ -66,7 +66,7 @@ class IRI_to_CC_Correlation {
 
     constructor (
         cc: OCTET_STRING[],
-        iri: OPTIONAL<OCTET_STRING>
+        iri?: OPTIONAL<OCTET_STRING>
     ) {
         this.cc = cc;
         this.iri = iri;

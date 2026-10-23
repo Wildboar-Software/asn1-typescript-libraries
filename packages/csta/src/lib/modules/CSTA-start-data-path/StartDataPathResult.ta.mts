@@ -62,7 +62,7 @@ class StartDataPathResult {
          * @public
          * @readonly
          */
-        readonly numberOfCharactersToCollect: OPTIONAL<INTEGER>,
+        readonly numberOfCharactersToCollect?: OPTIONAL<INTEGER>,
         /**
          * @summary `terminationCharacter`.
          * @description
@@ -73,7 +73,7 @@ class StartDataPathResult {
          * @public
          * @readonly
          */
-        readonly terminationCharacter: OPTIONAL<IA5String>,
+        readonly terminationCharacter?: OPTIONAL<IA5String>,
         /**
          * @summary `timeout`.
          * @description
@@ -84,7 +84,7 @@ class StartDataPathResult {
          * @public
          * @readonly
          */
-        readonly timeout: OPTIONAL<INTEGER>,
+        readonly timeout?: OPTIONAL<INTEGER>,
         /**
          * @summary `extensions`.
          * @description
@@ -95,7 +95,7 @@ class StartDataPathResult {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

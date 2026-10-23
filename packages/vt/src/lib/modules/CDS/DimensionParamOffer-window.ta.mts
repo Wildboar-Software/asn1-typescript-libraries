@@ -45,7 +45,7 @@ class DimensionParamOffer_window {
          * @public
          * @readonly
          */
-        readonly unbounded: OPTIONAL<NULL>,
+        readonly unbounded?: OPTIONAL<NULL>,
         /**
          * @summary `limit`.
          * @description
@@ -54,7 +54,7 @@ class DimensionParamOffer_window {
          * @public
          * @readonly
          */
-        readonly limit: OPTIONAL<IntegerOffer>
+        readonly limit?: OPTIONAL<IntegerOffer>
     ) {}
 
     /**

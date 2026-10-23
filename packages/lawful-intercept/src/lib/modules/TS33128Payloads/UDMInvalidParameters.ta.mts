@@ -47,8 +47,8 @@ class UDMInvalidParameters {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        parameter: OPTIONAL<UTF8String>,
-        reason: OPTIONAL<UTF8String>,
+        parameter?: OPTIONAL<UTF8String>,
+        reason?: OPTIONAL<UTF8String>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.parameter = parameter;

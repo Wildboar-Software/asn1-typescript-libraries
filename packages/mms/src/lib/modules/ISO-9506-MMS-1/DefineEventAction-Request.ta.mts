@@ -96,7 +96,7 @@ class DefineEventAction_Request {
          * @public
          * @readonly
          */
-        readonly cs_extension: OPTIONAL<Request_Detail>
+        readonly cs_extension?: OPTIONAL<Request_Detail>
     ) {}
 
     /**

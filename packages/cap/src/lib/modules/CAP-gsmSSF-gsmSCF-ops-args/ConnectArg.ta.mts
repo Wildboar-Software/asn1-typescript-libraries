@@ -91,7 +91,7 @@ class ConnectArg {
          * @public
          * @readonly
          */
-        readonly alertingPattern: OPTIONAL<AlertingPattern>,
+        readonly alertingPattern?: OPTIONAL<AlertingPattern>,
         /**
          * @summary `originalCalledPartyID`.
          * @description
@@ -102,13 +102,13 @@ class ConnectArg {
          * @public
          * @readonly
          */
-        readonly originalCalledPartyID: OPTIONAL<OriginalCalledPartyID>,
+        readonly originalCalledPartyID?: OPTIONAL<OriginalCalledPartyID>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<Extensions>,
+        readonly extensions?: OPTIONAL<Extensions>,
         /**
          * @summary `carrier`.
          * @description
@@ -120,7 +120,7 @@ class ConnectArg {
          * @public
          * @readonly
          */
-        readonly carrier: OPTIONAL<Carrier>,
+        readonly carrier?: OPTIONAL<Carrier>,
         /**
          * @summary `callingPartysCategory`.
          * @description
@@ -131,7 +131,7 @@ class ConnectArg {
          * @public
          * @readonly
          */
-        readonly callingPartysCategory: OPTIONAL<CallingPartysCategory>,
+        readonly callingPartysCategory?: OPTIONAL<CallingPartysCategory>,
         /**
          * @summary `redirectingPartyID`.
          * @description
@@ -142,7 +142,7 @@ class ConnectArg {
          * @public
          * @readonly
          */
-        readonly redirectingPartyID: OPTIONAL<RedirectingPartyID>,
+        readonly redirectingPartyID?: OPTIONAL<RedirectingPartyID>,
         /**
          * @summary `redirectionInformation`.
          * @description
@@ -153,7 +153,7 @@ class ConnectArg {
          * @public
          * @readonly
          */
-        readonly redirectionInformation: OPTIONAL<RedirectionInformation>,
+        readonly redirectionInformation?: OPTIONAL<RedirectionInformation>,
         /**
          * @summary `genericNumbers`.
          * @description
@@ -165,7 +165,7 @@ class ConnectArg {
          * @public
          * @readonly
          */
-        readonly genericNumbers: OPTIONAL<GenericNumbers>,
+        readonly genericNumbers?: OPTIONAL<GenericNumbers>,
         /**
          * @summary `serviceInteractionIndicatorsTwo`.
          * @description
@@ -176,7 +176,7 @@ class ConnectArg {
          * @public
          * @readonly
          */
-        readonly serviceInteractionIndicatorsTwo: OPTIONAL<ServiceInteractionIndicatorsTwo>,
+        readonly serviceInteractionIndicatorsTwo?: OPTIONAL<ServiceInteractionIndicatorsTwo>,
         /**
          * @summary `chargeNumber`.
          * @description
@@ -188,7 +188,7 @@ class ConnectArg {
          * @public
          * @readonly
          */
-        readonly chargeNumber: OPTIONAL<ChargeNumber>,
+        readonly chargeNumber?: OPTIONAL<ChargeNumber>,
         /**
          * @summary `legToBeConnected`.
          * @description
@@ -199,7 +199,7 @@ class ConnectArg {
          * @public
          * @readonly
          */
-        readonly legToBeConnected: OPTIONAL<LegID>,
+        readonly legToBeConnected?: OPTIONAL<LegID>,
         /**
          * @summary `cug_Interlock`.
          * @description
@@ -210,7 +210,7 @@ class ConnectArg {
          * @public
          * @readonly
          */
-        readonly cug_Interlock: OPTIONAL<CUG_Interlock>,
+        readonly cug_Interlock?: OPTIONAL<CUG_Interlock>,
         /**
          * @summary `cug_OutgoingAccess`.
          * @description
@@ -221,7 +221,7 @@ class ConnectArg {
          * @public
          * @readonly
          */
-        readonly cug_OutgoingAccess: OPTIONAL<NULL>,
+        readonly cug_OutgoingAccess?: OPTIONAL<NULL>,
         /**
          * @summary `suppressionOfAnnouncement`.
          * @description
@@ -233,7 +233,7 @@ class ConnectArg {
          * @public
          * @readonly
          */
-        readonly suppressionOfAnnouncement: OPTIONAL<SuppressionOfAnnouncement>,
+        readonly suppressionOfAnnouncement?: OPTIONAL<SuppressionOfAnnouncement>,
         /**
          * @summary `oCSIApplicable`.
          * @description
@@ -245,7 +245,7 @@ class ConnectArg {
          * @public
          * @readonly
          */
-        readonly oCSIApplicable: OPTIONAL<OCSIApplicable>,
+        readonly oCSIApplicable?: OPTIONAL<OCSIApplicable>,
         /**
          * @summary `naOliInfo`.
          * @description
@@ -257,7 +257,7 @@ class ConnectArg {
          * @public
          * @readonly
          */
-        readonly naOliInfo: OPTIONAL<NAOliInfo>,
+        readonly naOliInfo?: OPTIONAL<NAOliInfo>,
         /**
          * @summary `bor_InterrogationRequested`.
          * @description
@@ -268,7 +268,7 @@ class ConnectArg {
          * @public
          * @readonly
          */
-        readonly bor_InterrogationRequested: OPTIONAL<NULL>,
+        readonly bor_InterrogationRequested?: OPTIONAL<NULL>,
         /**
          * @summary `suppress_N_CSI`.
          * @description
@@ -279,7 +279,7 @@ class ConnectArg {
          * @public
          * @readonly
          */
-        readonly suppress_N_CSI: OPTIONAL<NULL>,
+        readonly suppress_N_CSI?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @public

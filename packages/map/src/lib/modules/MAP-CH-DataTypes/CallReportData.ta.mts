@@ -40,7 +40,7 @@ class CallReportData {
          * @public
          * @readonly
          */
-        readonly monitoringMode: OPTIONAL<MonitoringMode>,
+        readonly monitoringMode?: OPTIONAL<MonitoringMode>,
         /**
          * @summary `callOutcome`.
          * @description
@@ -50,7 +50,7 @@ class CallReportData {
          * @public
          * @readonly
          */
-        readonly callOutcome: OPTIONAL<CallOutcome>,
+        readonly callOutcome?: OPTIONAL<CallOutcome>,
         /**
          * @summary `extensionContainer`.
          * @description
@@ -60,7 +60,7 @@ class CallReportData {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

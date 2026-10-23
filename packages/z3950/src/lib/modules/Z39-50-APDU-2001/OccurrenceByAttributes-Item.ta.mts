@@ -76,8 +76,8 @@ class OccurrenceByAttributes_Item {
 
     constructor (
         attributes: AttributeList,
-        occurrences: OPTIONAL<OccurrenceByAttributes_Item_occurrences>,
-        otherOccurInfo: OPTIONAL<OtherInformation>
+        occurrences?: OPTIONAL<OccurrenceByAttributes_Item_occurrences>,
+        otherOccurInfo?: OPTIONAL<OtherInformation>
     ) {
         this.attributes = attributes;
         this.occurrences = occurrences;

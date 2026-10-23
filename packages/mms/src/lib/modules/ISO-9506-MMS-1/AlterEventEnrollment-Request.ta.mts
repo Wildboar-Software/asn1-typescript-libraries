@@ -64,7 +64,7 @@ class AlterEventEnrollment_Request {
          * @public
          * @readonly
          */
-        readonly eventConditionTransitions: OPTIONAL<Transitions>,
+        readonly eventConditionTransitions?: OPTIONAL<Transitions>,
         /**
          * @summary `alarmAcknowledgmentRule`.
          * @description
@@ -76,7 +76,7 @@ class AlterEventEnrollment_Request {
          * @public
          * @readonly
          */
-        readonly alarmAcknowledgmentRule: OPTIONAL<AlarmAckRule>
+        readonly alarmAcknowledgmentRule?: OPTIONAL<AlarmAckRule>
     ) {}
 
     /**

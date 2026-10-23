@@ -80,9 +80,9 @@ class SMAddressInfo {
     readonly sMAddressDomain: OPTIONAL<SMAddressDomain>;
 
     constructor (
-        sMAddressType: OPTIONAL<SMAddressType>,
-        sMAddressData: OPTIONAL<GraphicString>,
-        sMAddressDomain: OPTIONAL<SMAddressDomain>
+        sMAddressType?: OPTIONAL<SMAddressType>,
+        sMAddressData?: OPTIONAL<GraphicString>,
+        sMAddressDomain?: OPTIONAL<SMAddressDomain>
     ) {
         this.sMAddressType = sMAddressType;
         this.sMAddressData = sMAddressData;

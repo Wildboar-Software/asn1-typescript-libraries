@@ -62,8 +62,8 @@ class DNDActivateRes {
     readonly resultExtension: OPTIONAL<DNDActivateRes_resultExtension>;
 
     constructor (
-        status: OPTIONAL<DNDActivateRes_status_Item[]>,
-        resultExtension: OPTIONAL<DNDActivateRes_resultExtension>
+        status?: OPTIONAL<DNDActivateRes_status_Item[]>,
+        resultExtension?: OPTIONAL<DNDActivateRes_resultExtension>
     ) {
         this.status = status;
         this.resultExtension = resultExtension;

@@ -46,7 +46,7 @@ class Reason {
          * @public
          * @readonly
          */
-        readonly userA: OPTIONAL<PrintableString>,
+        readonly userA?: OPTIONAL<PrintableString>,
         /**
          * @summary `userB`.
          * @description
@@ -54,7 +54,7 @@ class Reason {
          * @public
          * @readonly
          */
-        readonly userB: OPTIONAL<ErrorCode>,
+        readonly userB?: OPTIONAL<ErrorCode>,
         /**
          * @summary `provider`.
          * @description
@@ -63,7 +63,7 @@ class Reason {
          * @public
          * @readonly
          */
-        readonly provider: OPTIONAL<ErrorCode>
+        readonly provider?: OPTIONAL<ErrorCode>
     ) {}
 
     /**

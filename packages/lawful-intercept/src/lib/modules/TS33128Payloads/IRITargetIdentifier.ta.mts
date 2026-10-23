@@ -50,7 +50,7 @@ class IRITargetIdentifier {
 
     constructor (
         identifier: TargetIdentifier,
-        provenance: OPTIONAL<TargetIdentifierProvenance>,
+        provenance?: OPTIONAL<TargetIdentifierProvenance>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.identifier = identifier;

@@ -69,7 +69,7 @@ class AutoAnswerEvent {
          * @public
          * @readonly
          */
-        readonly numberOfRings: OPTIONAL<INTEGER>,
+        readonly numberOfRings?: OPTIONAL<INTEGER>,
         /**
          * @summary `extensions`.
          * @description
@@ -79,7 +79,7 @@ class AutoAnswerEvent {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

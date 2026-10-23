@@ -97,7 +97,7 @@ class V22Diag_Item {
          * @public
          * @readonly
          */
-        readonly rxLevelEstimate: OPTIONAL<V59String>,
+        readonly rxLevelEstimate?: OPTIONAL<V59String>,
         /**
          * @summary `noiseEstimate`.
          * @description
@@ -107,7 +107,7 @@ class V22Diag_Item {
          * @public
          * @readonly
          */
-        readonly noiseEstimate: OPTIONAL<V59String>,
+        readonly noiseEstimate?: OPTIONAL<V59String>,
         /**
          * @summary `rxSignalQuality`.
          * @description
@@ -119,7 +119,7 @@ class V22Diag_Item {
          * @public
          * @readonly
          */
-        readonly rxSignalQuality: OPTIONAL<V59String>,
+        readonly rxSignalQuality?: OPTIONAL<V59String>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -52,14 +52,14 @@ class MessageInfo {
          * @public
          * @readonly
          */
-        readonly contentTypeAndSubtype: OPTIONAL<IA5String>,
+        readonly contentTypeAndSubtype?: OPTIONAL<IA5String>,
         /**
          * @summary `contentsLength`.
          * @description Length of the contents in bytes.
          * @public
          * @readonly
          */
-        readonly contentsLength: OPTIONAL<INTEGER>
+        readonly contentsLength?: OPTIONAL<INTEGER>
     ) {}
 
     /**

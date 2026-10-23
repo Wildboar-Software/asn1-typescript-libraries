@@ -112,7 +112,7 @@ class TetraLocation_ms_Loc {
         mcc: INTEGER,
         mnc: INTEGER,
         lai: INTEGER,
-        ci: OPTIONAL<INTEGER>,
+        ci?: OPTIONAL<INTEGER>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.mcc = mcc;

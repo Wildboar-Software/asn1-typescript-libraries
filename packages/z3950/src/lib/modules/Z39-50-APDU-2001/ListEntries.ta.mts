@@ -57,8 +57,8 @@ class ListEntries {
     readonly nonsurrogateDiagnostics: OPTIONAL<DiagRec[]>;
 
     constructor (
-        entries: OPTIONAL<Entry[]>,
-        nonsurrogateDiagnostics: OPTIONAL<DiagRec[]>
+        entries?: OPTIONAL<Entry[]>,
+        nonsurrogateDiagnostics?: OPTIONAL<DiagRec[]>
     ) {
         this.entries = entries;
         this.nonsurrogateDiagnostics = nonsurrogateDiagnostics;

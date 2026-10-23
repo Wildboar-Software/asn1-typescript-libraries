@@ -71,8 +71,8 @@ class ChainingResult {
     constructor (
         ultimateResponder: OPTIONAL<ScfAddress>,
         traceInformation: TraceInformation,
-        securityParameters: OPTIONAL<SecurityParameters>,
-        extensions: OPTIONAL<ExtensionField[]>,
+        securityParameters?: OPTIONAL<SecurityParameters>,
+        extensions?: OPTIONAL<ExtensionField[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.ultimateResponder = ultimateResponder;

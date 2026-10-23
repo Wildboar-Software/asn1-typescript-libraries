@@ -110,7 +110,7 @@ class SendMessageArgument {
          * @public
          * @readonly
          */
-        readonly accountCode: OPTIONAL<AccountInfo>,
+        readonly accountCode?: OPTIONAL<AccountInfo>,
         /**
          * @summary `authCode`.
          * @description
@@ -120,7 +120,7 @@ class SendMessageArgument {
          * @public
          * @readonly
          */
-        readonly authCode: OPTIONAL<AuthCode>,
+        readonly authCode?: OPTIONAL<AuthCode>,
         /**
          * @summary `correlatorData`.
          * @description
@@ -131,7 +131,7 @@ class SendMessageArgument {
          * @public
          * @readonly
          */
-        readonly correlatorData: OPTIONAL<CorrelatorData>,
+        readonly correlatorData?: OPTIONAL<CorrelatorData>,
         /**
          * @summary `callCharacteristics`.
          * @description
@@ -142,7 +142,7 @@ class SendMessageArgument {
          * @public
          * @readonly
          */
-        readonly callCharacteristics: OPTIONAL<CallCharacteristics>,
+        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
         /**
          * @summary `mediaCallCharacteristics`.
          * @description
@@ -153,7 +153,7 @@ class SendMessageArgument {
          * @public
          * @readonly
          */
-        readonly mediaCallCharacteristics: OPTIONAL<MediaCallCharacteristics>,
+        readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
         /**
          * @summary `subjectOfCall`.
          * @description
@@ -163,7 +163,7 @@ class SendMessageArgument {
          * @public
          * @readonly
          */
-        readonly subjectOfCall: OPTIONAL<SubjectOfCall>,
+        readonly subjectOfCall?: OPTIONAL<SubjectOfCall>,
         /**
          * @summary `languagePreferences`.
          * @description
@@ -173,7 +173,7 @@ class SendMessageArgument {
          * @public
          * @readonly
          */
-        readonly languagePreferences: OPTIONAL<LanguagePreferences>,
+        readonly languagePreferences?: OPTIONAL<LanguagePreferences>,
         /**
          * @summary `extensions`.
          * @description
@@ -185,7 +185,7 @@ class SendMessageArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

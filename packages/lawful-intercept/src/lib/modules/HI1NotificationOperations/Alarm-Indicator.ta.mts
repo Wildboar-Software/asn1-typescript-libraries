@@ -179,8 +179,8 @@ class Alarm_Indicator {
         communicationIdentifier: OPTIONAL<CommunicationIdentifier>,
         timeStamp: TimeStamp,
         alarm_information: OCTET_STRING,
-        lawfulInterceptionIdentifier: OPTIONAL<LawfulInterceptionIdentifier>,
-        national_HI1_ASN1parameters: OPTIONAL<National_HI1_ASN1parameters>,
+        lawfulInterceptionIdentifier?: OPTIONAL<LawfulInterceptionIdentifier>,
+        national_HI1_ASN1parameters?: OPTIONAL<National_HI1_ASN1parameters>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.domainID = domainID;

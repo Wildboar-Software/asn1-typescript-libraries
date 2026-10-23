@@ -199,7 +199,7 @@ class Origination {
         called: OPTIONAL<PartyId>,
         input: Origination_input,
         reserved0: NULL,
-        transitCarrierId: OPTIONAL<TransitCarrierId>,
+        transitCarrierId?: OPTIONAL<TransitCarrierId>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.caseId = caseId;

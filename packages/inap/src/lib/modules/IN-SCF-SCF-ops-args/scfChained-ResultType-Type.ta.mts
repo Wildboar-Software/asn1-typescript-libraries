@@ -42,7 +42,7 @@ class scfChained_ResultType_Type<ResultType> {
 
     constructor (
         chainedResult: ChainingResult,
-        result: OPTIONAL<ResultType>
+        result?: OPTIONAL<ResultType>
     ) {
         this.chainedResult = chainedResult;
         this.result = result;

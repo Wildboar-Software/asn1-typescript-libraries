@@ -94,9 +94,9 @@ class Acp127NotificationResponse {
     constructor (
         acp127_notification_type: Acp127NotificationType,
         receipt_time: ReceiptTimeField,
-        addressListIndicator: OPTIONAL<AddressListIndicator>,
-        acp127_recipient: OPTIONAL<Acp127Recipient>,
-        acp127_supp_info: OPTIONAL<Acp127SuppInfo>
+        addressListIndicator?: OPTIONAL<AddressListIndicator>,
+        acp127_recipient?: OPTIONAL<Acp127Recipient>,
+        acp127_supp_info?: OPTIONAL<Acp127SuppInfo>
     ) {
         this.acp127_notification_type = acp127_notification_type;
         this.receipt_time = receipt_time;

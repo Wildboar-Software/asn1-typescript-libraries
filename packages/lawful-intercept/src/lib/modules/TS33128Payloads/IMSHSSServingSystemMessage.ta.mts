@@ -130,7 +130,7 @@ class IMSHSSServingSystemMessage {
         oldPLMNID: PLMNID,
         authorizationRequest: AuthorizationRequest,
         roamingIndicator: RoamingIndicator,
-        deregistrationData: OPTIONAL<SBIType>,
+        deregistrationData?: OPTIONAL<SBIType>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.iMSI = iMSI;

@@ -33,13 +33,13 @@ class NegHints {
          * @public
          * @readonly
          */
-        readonly hintName: OPTIONAL<GeneralString>,
+        readonly hintName?: OPTIONAL<GeneralString>,
         /**
          * @summary `hintAddress`.
          * @public
          * @readonly
          */
-        readonly hintAddress: OPTIONAL<OCTET_STRING>
+        readonly hintAddress?: OPTIONAL<OCTET_STRING>
     ) {}
 
     /**

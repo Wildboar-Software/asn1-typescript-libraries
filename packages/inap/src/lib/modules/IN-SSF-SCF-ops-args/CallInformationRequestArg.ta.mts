@@ -68,9 +68,9 @@ class CallInformationRequestArg {
 
     constructor (
         requestedInformationTypeList: RequestedInformationTypeList,
-        correlationID: OPTIONAL<CorrelationID>,
-        extensions: OPTIONAL<Extensions>,
-        legID: OPTIONAL<LegID>,
+        correlationID?: OPTIONAL<CorrelationID>,
+        extensions?: OPTIONAL<Extensions>,
+        legID?: OPTIONAL<LegID>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.requestedInformationTypeList = requestedInformationTypeList;

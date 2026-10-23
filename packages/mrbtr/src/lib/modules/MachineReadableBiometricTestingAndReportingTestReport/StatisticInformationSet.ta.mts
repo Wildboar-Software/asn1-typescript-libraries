@@ -66,7 +66,7 @@ class StatisticInformationSet {
          * @public
          * @readonly
          */
-        readonly numberOfMeasurements: OPTIONAL<INTEGER>,
+        readonly numberOfMeasurements?: OPTIONAL<INTEGER>,
         /**
          * @summary `median`.
          * @description
@@ -76,7 +76,7 @@ class StatisticInformationSet {
          * @public
          * @readonly
          */
-        readonly median: OPTIONAL<REAL>,
+        readonly median?: OPTIONAL<REAL>,
         /**
          * @summary `mean`.
          * @description
@@ -86,7 +86,7 @@ class StatisticInformationSet {
          * @public
          * @readonly
          */
-        readonly mean: OPTIONAL<REAL>,
+        readonly mean?: OPTIONAL<REAL>,
         /**
          * @summary `minimum`.
          * @description
@@ -96,7 +96,7 @@ class StatisticInformationSet {
          * @public
          * @readonly
          */
-        readonly minimum: OPTIONAL<REAL>,
+        readonly minimum?: OPTIONAL<REAL>,
         /**
          * @summary `maximum`.
          * @description
@@ -106,7 +106,7 @@ class StatisticInformationSet {
          * @public
          * @readonly
          */
-        readonly maximum: OPTIONAL<REAL>,
+        readonly maximum?: OPTIONAL<REAL>,
         /**
          * @summary `stdDev`.
          * @description
@@ -116,7 +116,7 @@ class StatisticInformationSet {
          * @public
          * @readonly
          */
-        readonly stdDev: OPTIONAL<REAL>,
+        readonly stdDev?: OPTIONAL<REAL>,
         /**
          * @summary `medAbsDev`.
          * @description
@@ -126,7 +126,7 @@ class StatisticInformationSet {
          * @public
          * @readonly
          */
-        readonly medAbsDev: OPTIONAL<REAL>
+        readonly medAbsDev?: OPTIONAL<REAL>
     ) {}
 
     /**

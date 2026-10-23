@@ -245,15 +245,15 @@ class AMFUnsuccessfulProcedure {
     constructor (
         failedProcedureType: AMFFailedProcedureType,
         failureCause: AMFFailureCause,
-        requestedSlice: OPTIONAL<NSSAI>,
-        sUPI: OPTIONAL<SUPI>,
-        sUCI: OPTIONAL<SUCI>,
-        pEI: OPTIONAL<PEI>,
-        gPSI: OPTIONAL<GPSI>,
-        gUTI: OPTIONAL<FiveGGUTI>,
-        location: OPTIONAL<Location>,
-        additionalUserIdentifiers: OPTIONAL<UserIdentifiers>,
-        alternativeNSSAI: OPTIONAL<AlternativeNSSAIList>,
+        requestedSlice?: OPTIONAL<NSSAI>,
+        sUPI?: OPTIONAL<SUPI>,
+        sUCI?: OPTIONAL<SUCI>,
+        pEI?: OPTIONAL<PEI>,
+        gPSI?: OPTIONAL<GPSI>,
+        gUTI?: OPTIONAL<FiveGGUTI>,
+        location?: OPTIONAL<Location>,
+        additionalUserIdentifiers?: OPTIONAL<UserIdentifiers>,
+        alternativeNSSAI?: OPTIONAL<AlternativeNSSAIList>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.failedProcedureType = failedProcedureType;

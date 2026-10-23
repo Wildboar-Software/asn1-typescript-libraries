@@ -135,12 +135,12 @@ class SearchInfoReport_Item {
     constructor (
         subqueryId: OPTIONAL<InternationalString>,
         fullQuery: BOOLEAN,
-        subqueryExpression: OPTIONAL<QueryExpression>,
-        subqueryInterpretation: OPTIONAL<QueryExpression>,
-        subqueryRecommendation: OPTIONAL<QueryExpression>,
-        subqueryCount: OPTIONAL<INTEGER>,
-        subqueryWeight: OPTIONAL<IntUnit>,
-        resultsByDB: OPTIONAL<ResultsByDB>
+        subqueryExpression?: OPTIONAL<QueryExpression>,
+        subqueryInterpretation?: OPTIONAL<QueryExpression>,
+        subqueryRecommendation?: OPTIONAL<QueryExpression>,
+        subqueryCount?: OPTIONAL<INTEGER>,
+        subqueryWeight?: OPTIONAL<IntUnit>,
+        resultsByDB?: OPTIONAL<ResultsByDB>
     ) {
         this.subqueryId = subqueryId;
         this.fullQuery = fullQuery;

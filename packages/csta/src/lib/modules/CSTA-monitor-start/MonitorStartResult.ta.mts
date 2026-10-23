@@ -69,7 +69,7 @@ class MonitorStartResult {
          * @public
          * @readonly
          */
-        readonly actualmonitorFilter: OPTIONAL<MonitorFilter>,
+        readonly actualmonitorFilter?: OPTIONAL<MonitorFilter>,
         /**
          * @summary `actualMonitorMediaClass`.
          * @description
@@ -78,7 +78,7 @@ class MonitorStartResult {
          * @public
          * @readonly
          */
-        readonly actualMonitorMediaClass: OPTIONAL<MonitorMediaClass>,
+        readonly actualMonitorMediaClass?: OPTIONAL<MonitorMediaClass>,
         /**
          * @summary `monitorExistingCalls`.
          * @description
@@ -89,7 +89,7 @@ class MonitorStartResult {
          * @public
          * @readonly
          */
-        readonly monitorExistingCalls: OPTIONAL<BOOLEAN>,
+        readonly monitorExistingCalls?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `extensions`.
          * @description
@@ -99,7 +99,7 @@ class MonitorStartResult {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

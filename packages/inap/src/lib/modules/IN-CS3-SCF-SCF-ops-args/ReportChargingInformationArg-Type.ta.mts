@@ -130,18 +130,18 @@ class ReportChargingInformationArg_Type {
     readonly extensions: OPTIONAL<Extensions>;
 
     constructor (
-        callRecord: OPTIONAL<CallRecord>,
-        remainingUserCredit: OPTIONAL<UserCredit>,
-        uniqueCallID: OPTIONAL<CallIdentifier>,
-        accountNumber: OPTIONAL<AccountNumber>,
-        securityParameters: OPTIONAL<SecurityParameters>,
-        countersValues: OPTIONAL<Meters>,
-        resetOfTransmittedCounters: OPTIONAL<BOOLEAN>,
-        container: OPTIONAL<FreeContainer>,
-        correlationId: OPTIONAL<CorrelationID>,
-        acksequence: OPTIONAL<INTEGER>,
+        callRecord?: OPTIONAL<CallRecord>,
+        remainingUserCredit?: OPTIONAL<UserCredit>,
+        uniqueCallID?: OPTIONAL<CallIdentifier>,
+        accountNumber?: OPTIONAL<AccountNumber>,
+        securityParameters?: OPTIONAL<SecurityParameters>,
+        countersValues?: OPTIONAL<Meters>,
+        resetOfTransmittedCounters?: OPTIONAL<BOOLEAN>,
+        container?: OPTIONAL<FreeContainer>,
+        correlationId?: OPTIONAL<CorrelationID>,
+        acksequence?: OPTIONAL<INTEGER>,
         _unrecognizedExtensionsList: _Element[] = [],
-        extensions: OPTIONAL<Extensions>
+        extensions?: OPTIONAL<Extensions>
     ) {
         this.callRecord = callRecord;
         this.remainingUserCredit = remainingUserCredit;

@@ -50,7 +50,7 @@ class ResultMatchVerify {
          * @public
          * @readonly
          */
-        readonly infoDETFNMRFMR: OPTIONAL<InfoDETCurve>,
+        readonly infoDETFNMRFMR?: OPTIONAL<InfoDETCurve>,
         /**
          * @summary `infoDETFRRFAR`.
          * @description
@@ -61,7 +61,7 @@ class ResultMatchVerify {
          * @public
          * @readonly
          */
-        readonly infoDETFRRFAR: OPTIONAL<InfoDETCurve>,
+        readonly infoDETFRRFAR?: OPTIONAL<InfoDETCurve>,
         /**
          * @summary `infoDETGFRRGFAR`.
          * @description
@@ -72,7 +72,7 @@ class ResultMatchVerify {
          * @public
          * @readonly
          */
-        readonly infoDETGFRRGFAR: OPTIONAL<InfoDETCurve>,
+        readonly infoDETGFRRGFAR?: OPTIONAL<InfoDETCurve>,
         /**
          * @summary `cmpScrDistr`.
          * @description
@@ -82,7 +82,7 @@ class ResultMatchVerify {
          * @public
          * @readonly
          */
-        readonly cmpScrDistr: OPTIONAL<DistributionRealReal>
+        readonly cmpScrDistr?: OPTIONAL<DistributionRealReal>
     ) {}
 
     /**

@@ -822,17 +822,17 @@ class SGSNPDPRecord {
         accessPointNameOI: OPTIONAL<IA5String>,
         servedMSISDN: OPTIONAL<OCTET_STRING>,
         chargingCharacteristics: OCTET_STRING,
-        rATType: OPTIONAL<INTEGER>,
-        cAMELInformationPDP: OPTIONAL<CAMELInformationPDP>,
-        rNCUnsentDownlinkVolume: OPTIONAL<INTEGER>,
-        chChSelectionMode: OPTIONAL<ChChSelectionMode>,
-        dynamicAddressFlag: OPTIONAL<BOOLEAN>,
-        iMSIunauthenticatedFlag: OPTIONAL<NULL>,
-        userCSGInformation: OPTIONAL<UserCSGInformation>,
-        servedPDPPDNAddressExt: OPTIONAL<PDPAddress>,
-        lowPriorityIndicator: OPTIONAL<NULL>,
-        servingNodePLMNIdentifier: OPTIONAL<OCTET_STRING>,
-        cNOperatorSelectionEnt: OPTIONAL<CNOperatorSelectionEntity>
+        rATType?: OPTIONAL<INTEGER>,
+        cAMELInformationPDP?: OPTIONAL<CAMELInformationPDP>,
+        rNCUnsentDownlinkVolume?: OPTIONAL<INTEGER>,
+        chChSelectionMode?: OPTIONAL<ChChSelectionMode>,
+        dynamicAddressFlag?: OPTIONAL<BOOLEAN>,
+        iMSIunauthenticatedFlag?: OPTIONAL<NULL>,
+        userCSGInformation?: OPTIONAL<UserCSGInformation>,
+        servedPDPPDNAddressExt?: OPTIONAL<PDPAddress>,
+        lowPriorityIndicator?: OPTIONAL<NULL>,
+        servingNodePLMNIdentifier?: OPTIONAL<OCTET_STRING>,
+        cNOperatorSelectionEnt?: OPTIONAL<CNOperatorSelectionEntity>
     ) {
         this.recordType = recordType;
         this.networkInitiation = networkInitiation;

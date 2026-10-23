@@ -267,10 +267,10 @@ class MM7RRqRecord {
         recipientAddress: MMSAgentAddress,
         mmDateAndTime: OPTIONAL<OCTET_STRING>,
         readStatus: MMStatusCodeType,
-        mmStatusText: OPTIONAL<OCTET_STRING>,
-        recordTimeStamp: OPTIONAL<OCTET_STRING>,
-        localSequenceNumber: OPTIONAL<INTEGER>,
-        recordExtensions: OPTIONAL<ManagementExtension[]>
+        mmStatusText?: OPTIONAL<OCTET_STRING>,
+        recordTimeStamp?: OPTIONAL<OCTET_STRING>,
+        localSequenceNumber?: OPTIONAL<INTEGER>,
+        recordExtensions?: OPTIONAL<ManagementExtension[]>
     ) {
         this.recordType = recordType;
         this.recipientMmsRSAddress = recipientMmsRSAddress;

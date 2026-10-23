@@ -94,12 +94,12 @@ class QOSFlowList {
 
     constructor (
         qFI: QFI,
-        qOSRules: OPTIONAL<QOSRules>,
-        eBI: OPTIONAL<EPSBearerID>,
-        qOSFlowDescription: OPTIONAL<QOSFlowDescription>,
-        qOSFlowProfile: OPTIONAL<QOSFlowProfile>,
-        associatedANType: OPTIONAL<AccessType>,
-        defaultQOSRuleIndication: OPTIONAL<BOOLEAN>,
+        qOSRules?: OPTIONAL<QOSRules>,
+        eBI?: OPTIONAL<EPSBearerID>,
+        qOSFlowDescription?: OPTIONAL<QOSFlowDescription>,
+        qOSFlowProfile?: OPTIONAL<QOSFlowProfile>,
+        associatedANType?: OPTIONAL<AccessType>,
+        defaultQOSRuleIndication?: OPTIONAL<BOOLEAN>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.qFI = qFI;

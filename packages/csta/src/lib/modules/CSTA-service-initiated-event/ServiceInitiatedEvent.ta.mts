@@ -167,7 +167,7 @@ class ServiceInitiatedEvent {
          * @public
          * @readonly
          */
-        readonly servicesPermitted: OPTIONAL<ServicesPermitted>,
+        readonly servicesPermitted?: OPTIONAL<ServicesPermitted>,
         /**
          * @summary `mediaCallCharacteristics`.
          * @description
@@ -177,7 +177,7 @@ class ServiceInitiatedEvent {
          * @public
          * @readonly
          */
-        readonly mediaCallCharacteristics: OPTIONAL<MediaCallCharacteristics>,
+        readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
         /**
          * @summary `callCharacteristics`.
          * @description
@@ -187,7 +187,7 @@ class ServiceInitiatedEvent {
          * @public
          * @readonly
          */
-        readonly callCharacteristics: OPTIONAL<CallCharacteristics>,
+        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
         /**
          * @summary `initiatedConnectionInfo`.
          * @description
@@ -198,7 +198,7 @@ class ServiceInitiatedEvent {
          * @public
          * @readonly
          */
-        readonly initiatedConnectionInfo: OPTIONAL<ConnectionInformation>,
+        readonly initiatedConnectionInfo?: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `networkCallingDevice`.
          * @description
@@ -209,7 +209,7 @@ class ServiceInitiatedEvent {
          * @public
          * @readonly
          */
-        readonly networkCallingDevice: OPTIONAL<NetworkCallingDeviceID>,
+        readonly networkCallingDevice?: OPTIONAL<NetworkCallingDeviceID>,
         /**
          * @summary `networkCalledDevice`.
          * @description
@@ -220,7 +220,7 @@ class ServiceInitiatedEvent {
          * @public
          * @readonly
          */
-        readonly networkCalledDevice: OPTIONAL<NetworkCalledDeviceID>,
+        readonly networkCalledDevice?: OPTIONAL<NetworkCalledDeviceID>,
         /**
          * @summary `associatedCallingDevice`.
          * @description
@@ -231,7 +231,7 @@ class ServiceInitiatedEvent {
          * @public
          * @readonly
          */
-        readonly associatedCallingDevice: OPTIONAL<AssociatedCallingDeviceID>,
+        readonly associatedCallingDevice?: OPTIONAL<AssociatedCallingDeviceID>,
         /**
          * @summary `callLinkageData`.
          * @description
@@ -241,7 +241,7 @@ class ServiceInitiatedEvent {
          * @public
          * @readonly
          */
-        readonly callLinkageData: OPTIONAL<CallLinkageData>,
+        readonly callLinkageData?: OPTIONAL<CallLinkageData>,
         /**
          * @summary `subjectOfCall`.
          * @description
@@ -251,7 +251,7 @@ class ServiceInitiatedEvent {
          * @public
          * @readonly
          */
-        readonly subjectOfCall: OPTIONAL<SubjectOfCall>,
+        readonly subjectOfCall?: OPTIONAL<SubjectOfCall>,
         /**
          * @summary `messageInfo`.
          * @description
@@ -261,7 +261,7 @@ class ServiceInitiatedEvent {
          * @public
          * @readonly
          */
-        readonly messageInfo: OPTIONAL<MessageInfo>,
+        readonly messageInfo?: OPTIONAL<MessageInfo>,
         /**
          * @summary `languagePreferences`.
          * @description
@@ -271,7 +271,7 @@ class ServiceInitiatedEvent {
          * @public
          * @readonly
          */
-        readonly languagePreferences: OPTIONAL<LanguagePreferences>,
+        readonly languagePreferences?: OPTIONAL<LanguagePreferences>,
         /**
          * @summary `locationInfo`.
          * @description
@@ -281,7 +281,7 @@ class ServiceInitiatedEvent {
          * @public
          * @readonly
          */
-        readonly locationInfo: OPTIONAL<LocationInfoList>,
+        readonly locationInfo?: OPTIONAL<LocationInfoList>,
         /**
          * @summary `extensions`.
          * @description
@@ -292,7 +292,7 @@ class ServiceInitiatedEvent {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

@@ -322,10 +322,10 @@ class MMO4DRecord {
         mmDateAndTime: OCTET_STRING,
         acknowledgementRequest: BOOLEAN,
         mmStatusCode: MMStatusCodeType,
-        statusText: OPTIONAL<OCTET_STRING>,
-        recordTimeStamp: OPTIONAL<OCTET_STRING>,
-        localSequenceNumber: OPTIONAL<INTEGER>,
-        recordExtensions: OPTIONAL<ManagementExtension[]>
+        statusText?: OPTIONAL<OCTET_STRING>,
+        recordTimeStamp?: OPTIONAL<OCTET_STRING>,
+        localSequenceNumber?: OPTIONAL<INTEGER>,
+        recordExtensions?: OPTIONAL<ManagementExtension[]>
     ) {
         this.recordType = recordType;
         this.recipientMmsRSAddress = recipientMmsRSAddress;

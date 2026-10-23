@@ -39,7 +39,7 @@ class GDTMessage {
          * @public
          * @readonly
          */
-        readonly body: OPTIONAL<Body>,
+        readonly body?: OPTIONAL<Body>,
         /**
          * @summary Extensions that are not recognized.
          * @public

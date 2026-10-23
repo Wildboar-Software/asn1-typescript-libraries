@@ -58,7 +58,7 @@ class AccreditationStatus {
          * @public
          * @readonly
          */
-        readonly scopeAccreditation: OPTIONAL<ScopeAccreditation>
+        readonly scopeAccreditation?: OPTIONAL<ScopeAccreditation>
     ) {}
 
     /**

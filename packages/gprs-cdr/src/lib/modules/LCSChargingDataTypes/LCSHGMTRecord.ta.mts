@@ -300,11 +300,11 @@ class LCSHGMTRecord {
         lCSPriority: OPTIONAL<OCTET_STRING>,
         resultCode: OPTIONAL<INTEGER>,
         recordTimeStamp: OCTET_STRING,
-        localSequenceNumber: OPTIONAL<INTEGER>,
-        recordExtensions: OPTIONAL<ManagementExtension[]>,
-        requestingGMLCIdentity: OPTIONAL<IPAddress>,
-        visitedGMLCIdentity: OPTIONAL<IPAddress>,
-        servingNetworkIdentity: OPTIONAL<OCTET_STRING>
+        localSequenceNumber?: OPTIONAL<INTEGER>,
+        recordExtensions?: OPTIONAL<ManagementExtension[]>,
+        requestingGMLCIdentity?: OPTIONAL<IPAddress>,
+        visitedGMLCIdentity?: OPTIONAL<IPAddress>,
+        servingNetworkIdentity?: OPTIONAL<OCTET_STRING>
     ) {
         this.recordType = recordType;
         this.recordingEntity = recordingEntity;

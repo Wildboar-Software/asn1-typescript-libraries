@@ -65,7 +65,7 @@ class SIPAccessNetworkInformation {
 
     constructor (
         accessNetworkInfo: UTF8String,
-        servingPLMN: OPTIONAL<PLMNID>,
+        servingPLMN?: OPTIONAL<PLMNID>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.accessNetworkInfo = accessNetworkInfo;

@@ -83,9 +83,9 @@ class S_CSCF_Information {
     readonly serverName: OPTIONAL<GraphicString>;
 
     constructor (
-        mandatoryCapabilities: OPTIONAL<GraphicString[]>,
-        optionalCapabilities: OPTIONAL<GraphicString[]>,
-        serverName: OPTIONAL<GraphicString>
+        mandatoryCapabilities?: OPTIONAL<GraphicString[]>,
+        optionalCapabilities?: OPTIONAL<GraphicString[]>,
+        serverName?: OPTIONAL<GraphicString>
     ) {
         this.mandatoryCapabilities = mandatoryCapabilities;
         this.optionalCapabilities = optionalCapabilities;

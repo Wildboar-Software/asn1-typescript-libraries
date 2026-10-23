@@ -55,7 +55,7 @@ class MicrophoneGainList_Item {
          * @public
          * @readonly
          */
-        readonly micGainAbs: OPTIONAL<MicGainAbs>
+        readonly micGainAbs?: OPTIONAL<MicGainAbs>
     ) {}
 
     /**

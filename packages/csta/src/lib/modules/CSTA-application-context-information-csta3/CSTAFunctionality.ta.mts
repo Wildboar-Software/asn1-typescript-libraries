@@ -58,14 +58,14 @@ class CSTAFunctionality {
          * @public
          * @readonly
          */
-        readonly switchingFunctionServices: OPTIONAL<SwitchingFunctionServicesC2>,
+        readonly switchingFunctionServices?: OPTIONAL<SwitchingFunctionServicesC2>,
         /**
          * @summary `eventReportServices`.
          * @description Event reports this association will use.
          * @public
          * @readonly
          */
-        readonly eventReportServices: OPTIONAL<EventReportServicesC2>,
+        readonly eventReportServices?: OPTIONAL<EventReportServicesC2>,
         /**
          * @summary `computingFunctionServices`.
          * @description
@@ -73,35 +73,35 @@ class CSTAFunctionality {
          * @public
          * @readonly
          */
-        readonly computingFunctionServices: OPTIONAL<ComputingFunctionServicesC2>,
+        readonly computingFunctionServices?: OPTIONAL<ComputingFunctionServicesC2>,
         /**
          * @summary `bidirectionalServices`.
          * @description Bidirectional services (escape, system status).
          * @public
          * @readonly
          */
-        readonly bidirectionalServices: OPTIONAL<BidirectionalServicesC2>,
+        readonly bidirectionalServices?: OPTIONAL<BidirectionalServicesC2>,
         /**
          * @summary `statusReportingServices`.
          * @description Status-reporting services.
          * @public
          * @readonly
          */
-        readonly statusReportingServices: OPTIONAL<StatusReportingServicesC2>,
+        readonly statusReportingServices?: OPTIONAL<StatusReportingServicesC2>,
         /**
          * @summary `inputOutputServices`.
          * @description I/O data-path services.
          * @public
          * @readonly
          */
-        readonly inputOutputServices: OPTIONAL<InputOutputServicesC2>,
+        readonly inputOutputServices?: OPTIONAL<InputOutputServicesC2>,
         /**
          * @summary `voiceUnitServices`.
          * @description Voice-unit services.
          * @public
          * @readonly
          */
-        readonly voiceUnitServices: OPTIONAL<VoiceUnitServicesC2>
+        readonly voiceUnitServices?: OPTIONAL<VoiceUnitServicesC2>
     ) {}
 
     /**

@@ -151,14 +151,14 @@ class CAMELSMSInformation {
     readonly smsReferenceNumber: OPTIONAL<OCTET_STRING>;
 
     constructor (
-        gsm_SCFAddress: OPTIONAL<OCTET_STRING>,
-        serviceKey: OPTIONAL<INTEGER>,
-        defaultSMSHandling: OPTIONAL<CAMELSMSInformation_defaultSMSHandling>,
-        freeFormatData: OPTIONAL<OCTET_STRING>,
-        callingPartyNumber: OPTIONAL<OCTET_STRING>,
-        destinationSubscriberNumber: OPTIONAL<OCTET_STRING>,
-        cAMELSMSCAddress: OPTIONAL<OCTET_STRING>,
-        smsReferenceNumber: OPTIONAL<OCTET_STRING>
+        gsm_SCFAddress?: OPTIONAL<OCTET_STRING>,
+        serviceKey?: OPTIONAL<INTEGER>,
+        defaultSMSHandling?: OPTIONAL<CAMELSMSInformation_defaultSMSHandling>,
+        freeFormatData?: OPTIONAL<OCTET_STRING>,
+        callingPartyNumber?: OPTIONAL<OCTET_STRING>,
+        destinationSubscriberNumber?: OPTIONAL<OCTET_STRING>,
+        cAMELSMSCAddress?: OPTIONAL<OCTET_STRING>,
+        smsReferenceNumber?: OPTIONAL<OCTET_STRING>
     ) {
         this.gsm_SCFAddress = gsm_SCFAddress;
         this.serviceKey = serviceKey;

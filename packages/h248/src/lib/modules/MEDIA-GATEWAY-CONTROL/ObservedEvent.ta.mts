@@ -81,7 +81,7 @@ class ObservedEvent {
          * @public
          * @readonly
          */
-        readonly timeNotation: OPTIONAL<TimeNotation>,
+        readonly timeNotation?: OPTIONAL<TimeNotation>,
         /**
          * @summary Extensions that are not recognized.
          * @description

@@ -122,10 +122,10 @@ class PacketReportSummary {
         header: OCTET_STRING,
         indications: PacketReportIndications,
         trigger: PacketReportTrigger,
-        packetCount: OPTIONAL<INTEGER>,
-        byteCount: OPTIONAL<INTEGER>,
-        firstTimestamp: OPTIONAL<GeneralizedTime>,
-        lastTimestamp: OPTIONAL<GeneralizedTime>,
+        packetCount?: OPTIONAL<INTEGER>,
+        byteCount?: OPTIONAL<INTEGER>,
+        firstTimestamp?: OPTIONAL<GeneralizedTime>,
+        lastTimestamp?: OPTIONAL<GeneralizedTime>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.header = header;

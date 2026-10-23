@@ -65,8 +65,8 @@ class Totals {
     readonly numberOfOctets: OPTIONAL<INTEGER>;
 
     constructor (
-        numberOfMessages: OPTIONAL<INTEGER>,
-        numberOfOctets: OPTIONAL<INTEGER>
+        numberOfMessages?: OPTIONAL<INTEGER>,
+        numberOfOctets?: OPTIONAL<INTEGER>
     ) {
         this.numberOfMessages = numberOfMessages;
         this.numberOfOctets = numberOfOctets;

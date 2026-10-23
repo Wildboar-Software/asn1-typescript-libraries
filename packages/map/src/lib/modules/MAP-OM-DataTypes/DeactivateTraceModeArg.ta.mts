@@ -64,7 +64,7 @@ class DeactivateTraceModeArg {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `traceReference2`.
          * @description
@@ -74,7 +74,7 @@ class DeactivateTraceModeArg {
          * @public
          * @readonly
          */
-        readonly traceReference2: OPTIONAL<TraceReference2>,
+        readonly traceReference2?: OPTIONAL<TraceReference2>,
         /**
          * @summary Extensions that are not recognized.
          * @public

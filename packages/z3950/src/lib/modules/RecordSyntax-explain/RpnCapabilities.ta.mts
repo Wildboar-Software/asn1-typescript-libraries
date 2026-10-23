@@ -84,7 +84,7 @@ class RpnCapabilities {
         operators: OPTIONAL<RpnCapabilities_operators_Item[]>,
         resultSetAsOperandSupported: BOOLEAN,
         restrictionOperandSupported: BOOLEAN,
-        proximity: OPTIONAL<ProximitySupport>
+        proximity?: OPTIONAL<ProximitySupport>
     ) {
         this.operators = operators;
         this.resultSetAsOperandSupported = resultSetAsOperandSupported;

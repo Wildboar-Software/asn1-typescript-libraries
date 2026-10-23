@@ -122,10 +122,10 @@ class ASMTPAAAInformation {
 
     constructor (
         username: UTF8String,
-        authMethod: OPTIONAL<AAAauthMethod>,
-        challenge: OPTIONAL<OCTET_STRING>,
-        response: OPTIONAL<OCTET_STRING>,
-        aAAResult: OPTIONAL<AAAResult>,
+        authMethod?: OPTIONAL<AAAauthMethod>,
+        challenge?: OPTIONAL<OCTET_STRING>,
+        response?: OPTIONAL<OCTET_STRING>,
+        aAAResult?: OPTIONAL<AAAResult>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.username = username;

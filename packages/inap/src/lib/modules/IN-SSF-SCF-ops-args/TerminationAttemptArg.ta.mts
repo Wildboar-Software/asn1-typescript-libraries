@@ -131,16 +131,16 @@ class TerminationAttemptArg {
 
     constructor (
         dpSpecificCommonParameters: DpSpecificCommonParameters,
-        calledPartyBusinessGroupID: OPTIONAL<CalledPartyBusinessGroupID>,
-        calledPartySubaddress: OPTIONAL<CalledPartySubaddress>,
-        callingPartyBusinessGroupID: OPTIONAL<CallingPartyBusinessGroupID>,
-        callingPartySubaddress: OPTIONAL<CallingPartySubaddress>,
-        originalCalledPartyID: OPTIONAL<OriginalCalledPartyID>,
-        redirectingPartyID: OPTIONAL<RedirectingPartyID>,
-        redirectionInformation: OPTIONAL<RedirectionInformation>,
-        routeList: OPTIONAL<RouteList>,
-        travellingClassMark: OPTIONAL<TravellingClassMark>,
-        extensions: OPTIONAL<Extensions>,
+        calledPartyBusinessGroupID?: OPTIONAL<CalledPartyBusinessGroupID>,
+        calledPartySubaddress?: OPTIONAL<CalledPartySubaddress>,
+        callingPartyBusinessGroupID?: OPTIONAL<CallingPartyBusinessGroupID>,
+        callingPartySubaddress?: OPTIONAL<CallingPartySubaddress>,
+        originalCalledPartyID?: OPTIONAL<OriginalCalledPartyID>,
+        redirectingPartyID?: OPTIONAL<RedirectingPartyID>,
+        redirectionInformation?: OPTIONAL<RedirectionInformation>,
+        routeList?: OPTIONAL<RouteList>,
+        travellingClassMark?: OPTIONAL<TravellingClassMark>,
+        extensions?: OPTIONAL<Extensions>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.dpSpecificCommonParameters = dpSpecificCommonParameters;

@@ -133,12 +133,12 @@ class GcsePartyIdentity {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        imei: OPTIONAL<OCTET_STRING>,
-        imsi: OPTIONAL<OCTET_STRING>,
-        iMPU: OPTIONAL<IMSIdentity[]>,
-        iMPI: OPTIONAL<IMSIdentity[]>,
-        proseUEID: OPTIONAL<ProSeUEID[]>,
-        otherID: OPTIONAL<OtherIdentity>,
+        imei?: OPTIONAL<OCTET_STRING>,
+        imsi?: OPTIONAL<OCTET_STRING>,
+        iMPU?: OPTIONAL<IMSIdentity[]>,
+        iMPI?: OPTIONAL<IMSIdentity[]>,
+        proseUEID?: OPTIONAL<ProSeUEID[]>,
+        otherID?: OPTIONAL<OtherIdentity>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.imei = imei;

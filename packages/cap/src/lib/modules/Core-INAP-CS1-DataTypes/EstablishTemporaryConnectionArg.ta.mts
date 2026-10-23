@@ -51,25 +51,25 @@ class EstablishTemporaryConnectionArg {
          * @public
          * @readonly
          */
-        readonly correlationID: OPTIONAL<CorrelationID>,
+        readonly correlationID?: OPTIONAL<CorrelationID>,
         /**
          * @summary `scfID`.
          * @public
          * @readonly
          */
-        readonly scfID: OPTIONAL<ScfID>,
+        readonly scfID?: OPTIONAL<ScfID>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<ExtensionField[]>,
+        readonly extensions?: OPTIONAL<ExtensionField[]>,
         /**
          * @summary `serviceInteractionIndicators`.
          * @public
          * @readonly
          */
-        readonly serviceInteractionIndicators: OPTIONAL<ServiceInteractionIndicators>
+        readonly serviceInteractionIndicators?: OPTIONAL<ServiceInteractionIndicators>
     ) {}
 
     /**

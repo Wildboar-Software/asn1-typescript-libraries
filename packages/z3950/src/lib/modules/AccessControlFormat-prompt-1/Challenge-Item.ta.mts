@@ -157,14 +157,14 @@ class Challenge_Item {
 
     constructor (
         promptId: PromptId,
-        defaultResponse: OPTIONAL<InternationalString>,
-        promptInfo: OPTIONAL<Challenge_Item_promptInfo>,
-        regExpr: OPTIONAL<InternationalString>,
-        responseRequired: OPTIONAL<NULL>,
-        allowedValues: OPTIONAL<InternationalString[]>,
-        shouldSave: OPTIONAL<NULL>,
-        dataType: OPTIONAL<Challenge_Item_dataType>,
-        diagnostic: OPTIONAL<EXTERNAL>
+        defaultResponse?: OPTIONAL<InternationalString>,
+        promptInfo?: OPTIONAL<Challenge_Item_promptInfo>,
+        regExpr?: OPTIONAL<InternationalString>,
+        responseRequired?: OPTIONAL<NULL>,
+        allowedValues?: OPTIONAL<InternationalString[]>,
+        shouldSave?: OPTIONAL<NULL>,
+        dataType?: OPTIONAL<Challenge_Item_dataType>,
+        diagnostic?: OPTIONAL<EXTERNAL>
     ) {
         this.promptId = promptId;
         this.defaultResponse = defaultResponse;

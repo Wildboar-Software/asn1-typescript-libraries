@@ -43,7 +43,7 @@ class SetReportingStateArg {
          * @public
          * @readonly
          */
-        readonly imsi: OPTIONAL<IMSI>,
+        readonly imsi?: OPTIONAL<IMSI>,
         /**
          * @summary `lmsi`.
          * @description
@@ -53,7 +53,7 @@ class SetReportingStateArg {
          * @public
          * @readonly
          */
-        readonly lmsi: OPTIONAL<LMSI>,
+        readonly lmsi?: OPTIONAL<LMSI>,
         /**
          * @summary `ccbs_Monitoring`.
          * @description
@@ -63,7 +63,7 @@ class SetReportingStateArg {
          * @public
          * @readonly
          */
-        readonly ccbs_Monitoring: OPTIONAL<ReportingState>,
+        readonly ccbs_Monitoring?: OPTIONAL<ReportingState>,
         /**
          * @summary `extensionContainer`.
          * @description
@@ -73,7 +73,7 @@ class SetReportingStateArg {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

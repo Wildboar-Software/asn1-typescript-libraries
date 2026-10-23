@@ -82,7 +82,7 @@ class StartLocationTrackingSessionArgument {
          * @public
          * @readonly
          */
-        readonly collectionType: OPTIONAL<CollectionType>,
+        readonly collectionType?: OPTIONAL<CollectionType>,
         /**
          * @summary `collectionInterval`.
          * @description
@@ -93,7 +93,7 @@ class StartLocationTrackingSessionArgument {
          * @public
          * @readonly
          */
-        readonly collectionInterval: OPTIONAL<INTEGER>,
+        readonly collectionInterval?: OPTIONAL<INTEGER>,
         /**
          * @summary `maxCollections`.
          * @description
@@ -104,7 +104,7 @@ class StartLocationTrackingSessionArgument {
          * @public
          * @readonly
          */
-        readonly maxCollections: OPTIONAL<INTEGER>,
+        readonly maxCollections?: OPTIONAL<INTEGER>,
         /**
          * @summary `collectionFilter`.
          * @description
@@ -114,7 +114,7 @@ class StartLocationTrackingSessionArgument {
          * @public
          * @readonly
          */
-        readonly collectionFilter: OPTIONAL<CollectionFilter>,
+        readonly collectionFilter?: OPTIONAL<CollectionFilter>,
         /**
          * @summary `reportingType`.
          * @description
@@ -124,7 +124,7 @@ class StartLocationTrackingSessionArgument {
          * @public
          * @readonly
          */
-        readonly reportingType: OPTIONAL<ReportingType>,
+        readonly reportingType?: OPTIONAL<ReportingType>,
         /**
          * @summary `reportingInterval`.
          * @description
@@ -135,7 +135,7 @@ class StartLocationTrackingSessionArgument {
          * @public
          * @readonly
          */
-        readonly reportingInterval: OPTIONAL<INTEGER>,
+        readonly reportingInterval?: OPTIONAL<INTEGER>,
         /**
          * @summary `reportingCount`.
          * @description
@@ -146,7 +146,7 @@ class StartLocationTrackingSessionArgument {
          * @public
          * @readonly
          */
-        readonly reportingCount: OPTIONAL<INTEGER>,
+        readonly reportingCount?: OPTIONAL<INTEGER>,
         /**
          * @summary `extensions`.
          * @description
@@ -157,7 +157,7 @@ class StartLocationTrackingSessionArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

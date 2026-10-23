@@ -199,12 +199,12 @@ class SmsStatusReportArg {
         recipientName: OPTIONAL<Name>,
         destinationAddress: PartyNumber,
         status: Status,
-        priority: OPTIONAL<BOOLEAN>,
-        moreMessagesToSend: OPTIONAL<BOOLEAN>,
-        statusReportQualifier: OPTIONAL<BOOLEAN>,
-        protocolIdentifier: OPTIONAL<ProtocolIdentifier>,
-        userData: OPTIONAL<UserData>,
-        smsExtension: OPTIONAL<SmsExtension>
+        priority?: OPTIONAL<BOOLEAN>,
+        moreMessagesToSend?: OPTIONAL<BOOLEAN>,
+        statusReportQualifier?: OPTIONAL<BOOLEAN>,
+        protocolIdentifier?: OPTIONAL<ProtocolIdentifier>,
+        userData?: OPTIONAL<UserData>,
+        smsExtension?: OPTIONAL<SmsExtension>
     ) {
         this.messageReference = messageReference;
         this.serviceCentreTimeStamp = serviceCentreTimeStamp;

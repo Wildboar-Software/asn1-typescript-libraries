@@ -194,7 +194,7 @@ class TLS12UAStarParams {
         serverSequenceNumber: INTEGER,
         sessionID: OCTET_STRING,
         tLSServerExtensions: OCTET_STRING,
-        tLSClientExtensions: OPTIONAL<OCTET_STRING>,
+        tLSClientExtensions?: OPTIONAL<OCTET_STRING>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.preMasterSecret = preMasterSecret;

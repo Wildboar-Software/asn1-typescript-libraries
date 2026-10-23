@@ -149,18 +149,18 @@ class ODisconnectArg {
 
     constructor (
         dpSpecificCommonParameters: DpSpecificCommonParameters,
-        callingPartyBusinessGroupID: OPTIONAL<CallingPartyBusinessGroupID>,
-        callingPartySubaddress: OPTIONAL<CallingPartySubaddress>,
-        callingFacilityGroup: OPTIONAL<FacilityGroup>,
-        callingFacilityGroupMember: OPTIONAL<FacilityGroupMember>,
-        releaseCause: OPTIONAL<Cause>,
-        routeList: OPTIONAL<RouteList>,
-        extensions: OPTIONAL<Extensions>,
-        carrier: OPTIONAL<Carrier>,
-        connectTime: OPTIONAL<Integer4>,
-        componentType: OPTIONAL<ComponentType>,
-        component: OPTIONAL<Component>,
-        componentCorrelationID: OPTIONAL<ComponentCorrelationID>,
+        callingPartyBusinessGroupID?: OPTIONAL<CallingPartyBusinessGroupID>,
+        callingPartySubaddress?: OPTIONAL<CallingPartySubaddress>,
+        callingFacilityGroup?: OPTIONAL<FacilityGroup>,
+        callingFacilityGroupMember?: OPTIONAL<FacilityGroupMember>,
+        releaseCause?: OPTIONAL<Cause>,
+        routeList?: OPTIONAL<RouteList>,
+        extensions?: OPTIONAL<Extensions>,
+        carrier?: OPTIONAL<Carrier>,
+        connectTime?: OPTIONAL<Integer4>,
+        componentType?: OPTIONAL<ComponentType>,
+        component?: OPTIONAL<Component>,
+        componentCorrelationID?: OPTIONAL<ComponentCorrelationID>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.dpSpecificCommonParameters = dpSpecificCommonParameters;

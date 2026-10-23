@@ -51,7 +51,7 @@ class InitiateCallAttemptRes {
          * @public
          * @readonly
          */
-        readonly supportedCamelPhases: OPTIONAL<SupportedCamelPhases>,
+        readonly supportedCamelPhases?: OPTIONAL<SupportedCamelPhases>,
         /**
          * @summary `offeredCamel4Functionalities`.
          * @description
@@ -62,13 +62,13 @@ class InitiateCallAttemptRes {
          * @public
          * @readonly
          */
-        readonly offeredCamel4Functionalities: OPTIONAL<OfferedCamel4Functionalities>,
+        readonly offeredCamel4Functionalities?: OPTIONAL<OfferedCamel4Functionalities>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<Extensions>,
+        readonly extensions?: OPTIONAL<Extensions>,
         /**
          * @summary `releaseCallArgExtensionAllowed`.
          * @description
@@ -79,7 +79,7 @@ class InitiateCallAttemptRes {
          * @public
          * @readonly
          */
-        readonly releaseCallArgExtensionAllowed: OPTIONAL<NULL>,
+        readonly releaseCallArgExtensionAllowed?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -75,12 +75,12 @@ class CAMELModificationParameters {
     readonly redirectionCounter: OPTIONAL<INTEGER>;
 
     constructor (
-        callingPartyNumber: OPTIONAL<OCTET_STRING>,
-        callingPartyCategory: OPTIONAL<OCTET_STRING>,
-        originalCalledPartyNumber: OPTIONAL<OCTET_STRING>,
-        genericNumbers: OPTIONAL<OCTET_STRING[]>,
-        redirectingPartyNumber: OPTIONAL<OCTET_STRING>,
-        redirectionCounter: OPTIONAL<INTEGER>
+        callingPartyNumber?: OPTIONAL<OCTET_STRING>,
+        callingPartyCategory?: OPTIONAL<OCTET_STRING>,
+        originalCalledPartyNumber?: OPTIONAL<OCTET_STRING>,
+        genericNumbers?: OPTIONAL<OCTET_STRING[]>,
+        redirectingPartyNumber?: OPTIONAL<OCTET_STRING>,
+        redirectionCounter?: OPTIONAL<INTEGER>
     ) {
         this.callingPartyNumber = callingPartyNumber;
         this.callingPartyCategory = callingPartyCategory;

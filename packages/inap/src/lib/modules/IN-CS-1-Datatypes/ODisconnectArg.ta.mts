@@ -131,8 +131,8 @@ class ODisconnectArg {
         releaseCause: OPTIONAL<Cause>,
         routeList: OPTIONAL<RouteList>,
         extensions: ExtensionField[],
-        carrier: OPTIONAL<Carrier>,
-        connectTime: OPTIONAL<Integer4>,
+        carrier?: OPTIONAL<Carrier>,
+        connectTime?: OPTIONAL<Integer4>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.dpSpecificCommonParameters = dpSpecificCommonParameters;

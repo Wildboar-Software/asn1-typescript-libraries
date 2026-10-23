@@ -62,7 +62,7 @@ class CapExchangeServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly getCSTAFeatures: OPTIONAL<GetCSTAFeatures>,
+        readonly getCSTAFeatures?: OPTIONAL<GetCSTAFeatures>,
         /**
          * @summary `getLogicalDeviceInformation`.
          * @public
@@ -71,7 +71,7 @@ class CapExchangeServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly getLogicalDeviceInformation: OPTIONAL<GetLogicalDeviceInformation>,
+        readonly getLogicalDeviceInformation?: OPTIONAL<GetLogicalDeviceInformation>,
         /**
          * @summary `getPhysicalDeviceInformation`.
          * @public
@@ -80,7 +80,7 @@ class CapExchangeServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly getPhysicalDeviceInformation: OPTIONAL<GetPhysicalDeviceInformation>,
+        readonly getPhysicalDeviceInformation?: OPTIONAL<GetPhysicalDeviceInformation>,
         /**
          * @summary `getSwitchingFunctionCaps`.
          * @public
@@ -89,7 +89,7 @@ class CapExchangeServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly getSwitchingFunctionCaps: OPTIONAL<GetSwitchingFunctionCapabilities>,
+        readonly getSwitchingFunctionCaps?: OPTIONAL<GetSwitchingFunctionCapabilities>,
         /**
          * @summary `getSwitchingFunctionDevices`.
          * @public
@@ -98,7 +98,7 @@ class CapExchangeServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly getSwitchingFunctionDevices: OPTIONAL<GetSwitchingFunctionDevices>,
+        readonly getSwitchingFunctionDevices?: OPTIONAL<GetSwitchingFunctionDevices>,
         /**
          * @summary `switchingFunctionDevices`.
          * @public
@@ -107,7 +107,7 @@ class CapExchangeServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly switchingFunctionDevices: OPTIONAL<SwitchingFunctionDevices>
+        readonly switchingFunctionDevices?: OPTIONAL<SwitchingFunctionDevices>
     ) {}
 
     /**

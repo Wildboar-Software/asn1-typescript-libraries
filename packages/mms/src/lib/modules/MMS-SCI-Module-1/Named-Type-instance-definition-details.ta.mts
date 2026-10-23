@@ -72,7 +72,7 @@ class Named_Type_instance_definition_details {
          * @public
          * @readonly
          */
-        readonly meaning: OPTIONAL<VisibleString>
+        readonly meaning?: OPTIONAL<VisibleString>
     ) {}
 
     /**

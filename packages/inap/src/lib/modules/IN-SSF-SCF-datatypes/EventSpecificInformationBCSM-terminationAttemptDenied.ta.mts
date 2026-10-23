@@ -41,7 +41,7 @@ class EventSpecificInformationBCSM_terminationAttemptDenied {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        terminationDeniedCause: OPTIONAL<Cause>,
+        terminationDeniedCause?: OPTIONAL<Cause>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.terminationDeniedCause = terminationDeniedCause;

@@ -48,7 +48,7 @@ export class QualityOfService {
          * @public
          * @readonly
          */
-        readonly requested_QoS: OPTIONAL<GPRS_QoS>,
+        readonly requested_QoS?: OPTIONAL<GPRS_QoS>,
         /**
          * @summary `subscribed_QoS`.
          * @description
@@ -60,7 +60,7 @@ export class QualityOfService {
          * @public
          * @readonly
          */
-        readonly subscribed_QoS: OPTIONAL<GPRS_QoS>,
+        readonly subscribed_QoS?: OPTIONAL<GPRS_QoS>,
         /**
          * @summary `negotiated_QoS`.
          * @description
@@ -75,7 +75,7 @@ export class QualityOfService {
          * @public
          * @readonly
          */
-        readonly negotiated_QoS: OPTIONAL<GPRS_QoS>,
+        readonly negotiated_QoS?: OPTIONAL<GPRS_QoS>,
         /**
          * @summary `requested_QoS_Extension`.
          * @description
@@ -86,7 +86,7 @@ export class QualityOfService {
          * @public
          * @readonly
          */
-        readonly requested_QoS_Extension: OPTIONAL<GPRS_QoS_Extension>,
+        readonly requested_QoS_Extension?: OPTIONAL<GPRS_QoS_Extension>,
         /**
          * @summary `subscribed_QoS_Extension`.
          * @description
@@ -97,7 +97,7 @@ export class QualityOfService {
          * @public
          * @readonly
          */
-        readonly subscribed_QoS_Extension: OPTIONAL<GPRS_QoS_Extension>,
+        readonly subscribed_QoS_Extension?: OPTIONAL<GPRS_QoS_Extension>,
         /**
          * @summary `negotiated_QoS_Extension`.
          * @description
@@ -109,7 +109,7 @@ export class QualityOfService {
          * @public
          * @readonly
          */
-        readonly negotiated_QoS_Extension: OPTIONAL<GPRS_QoS_Extension>,
+        readonly negotiated_QoS_Extension?: OPTIONAL<GPRS_QoS_Extension>,
         /**
          * @summary Extensions that are not recognized.
          * @public

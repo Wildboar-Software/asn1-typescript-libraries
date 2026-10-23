@@ -46,7 +46,7 @@ class SendGroupCallEndSignalArg {
          * @public
          * @readonly
          */
-        readonly imsi: OPTIONAL<IMSI>,
+        readonly imsi?: OPTIONAL<IMSI>,
         /**
          * @summary `extensionContainer`.
          * @description
@@ -56,7 +56,7 @@ class SendGroupCallEndSignalArg {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `talkerPriority`.
          * @description
@@ -66,7 +66,7 @@ class SendGroupCallEndSignalArg {
          * @public
          * @readonly
          */
-        readonly talkerPriority: OPTIONAL<TalkerPriority>,
+        readonly talkerPriority?: OPTIONAL<TalkerPriority>,
         /**
          * @summary `additionalInfo`.
          * @description
@@ -76,7 +76,7 @@ class SendGroupCallEndSignalArg {
          * @public
          * @readonly
          */
-        readonly additionalInfo: OPTIONAL<AdditionalInfo>,
+        readonly additionalInfo?: OPTIONAL<AdditionalInfo>,
         /**
          * @summary Extensions that are not recognized.
          * @public

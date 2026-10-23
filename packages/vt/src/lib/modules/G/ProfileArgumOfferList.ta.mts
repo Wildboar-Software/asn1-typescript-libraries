@@ -54,7 +54,7 @@ class ProfileArgumOfferList {
          * @public
          * @readonly
          */
-        readonly specialProfileArgums: OPTIONAL<ProfileArgumOfferList_specialProfileArgums_Item[]>,
+        readonly specialProfileArgums?: OPTIONAL<ProfileArgumOfferList_specialProfileArgums_Item[]>,
         /**
          * @summary `vteParams`.
          * @description
@@ -63,7 +63,7 @@ class ProfileArgumOfferList {
          * @public
          * @readonly
          */
-        readonly vteParams: OPTIONAL<ParamOfferList>
+        readonly vteParams?: OPTIONAL<ParamOfferList>
     ) {}
 
     /**

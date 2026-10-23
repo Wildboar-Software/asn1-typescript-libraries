@@ -59,7 +59,7 @@ class TraceDepthList {
          * @public
          * @readonly
          */
-        readonly msc_s_TraceDepth: OPTIONAL<TraceDepth>,
+        readonly msc_s_TraceDepth?: OPTIONAL<TraceDepth>,
         /**
          * @summary `mgw_TraceDepth`.
          * @description
@@ -69,7 +69,7 @@ class TraceDepthList {
          * @public
          * @readonly
          */
-        readonly mgw_TraceDepth: OPTIONAL<TraceDepth>,
+        readonly mgw_TraceDepth?: OPTIONAL<TraceDepth>,
         /**
          * @summary `sgsn_TraceDepth`.
          * @description
@@ -79,7 +79,7 @@ class TraceDepthList {
          * @public
          * @readonly
          */
-        readonly sgsn_TraceDepth: OPTIONAL<TraceDepth>,
+        readonly sgsn_TraceDepth?: OPTIONAL<TraceDepth>,
         /**
          * @summary `ggsn_TraceDepth`.
          * @description
@@ -89,7 +89,7 @@ class TraceDepthList {
          * @public
          * @readonly
          */
-        readonly ggsn_TraceDepth: OPTIONAL<TraceDepth>,
+        readonly ggsn_TraceDepth?: OPTIONAL<TraceDepth>,
         /**
          * @summary `rnc_TraceDepth`.
          * @description
@@ -99,7 +99,7 @@ class TraceDepthList {
          * @public
          * @readonly
          */
-        readonly rnc_TraceDepth: OPTIONAL<TraceDepth>,
+        readonly rnc_TraceDepth?: OPTIONAL<TraceDepth>,
         /**
          * @summary `bmsc_TraceDepth`.
          * @description
@@ -109,7 +109,7 @@ class TraceDepthList {
          * @public
          * @readonly
          */
-        readonly bmsc_TraceDepth: OPTIONAL<TraceDepth>,
+        readonly bmsc_TraceDepth?: OPTIONAL<TraceDepth>,
         /**
          * @summary `mme_TraceDepth`.
          * @description
@@ -119,7 +119,7 @@ class TraceDepthList {
          * @public
          * @readonly
          */
-        readonly mme_TraceDepth: OPTIONAL<TraceDepth>,
+        readonly mme_TraceDepth?: OPTIONAL<TraceDepth>,
         /**
          * @summary `sgw_TraceDepth`.
          * @description
@@ -129,7 +129,7 @@ class TraceDepthList {
          * @public
          * @readonly
          */
-        readonly sgw_TraceDepth: OPTIONAL<TraceDepth>,
+        readonly sgw_TraceDepth?: OPTIONAL<TraceDepth>,
         /**
          * @summary `pgw_TraceDepth`.
          * @description
@@ -139,7 +139,7 @@ class TraceDepthList {
          * @public
          * @readonly
          */
-        readonly pgw_TraceDepth: OPTIONAL<TraceDepth>,
+        readonly pgw_TraceDepth?: OPTIONAL<TraceDepth>,
         /**
          * @summary `eNB_TraceDepth`.
          * @description
@@ -149,7 +149,7 @@ class TraceDepthList {
          * @public
          * @readonly
          */
-        readonly eNB_TraceDepth: OPTIONAL<TraceDepth>,
+        readonly eNB_TraceDepth?: OPTIONAL<TraceDepth>,
         /**
          * @summary `msc_s_TraceDepthExtension`.
          * @description
@@ -159,7 +159,7 @@ class TraceDepthList {
          * @public
          * @readonly
          */
-        readonly msc_s_TraceDepthExtension: OPTIONAL<TraceDepthExtension>,
+        readonly msc_s_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>,
         /**
          * @summary `mgw_TraceDepthExtension`.
          * @description
@@ -169,7 +169,7 @@ class TraceDepthList {
          * @public
          * @readonly
          */
-        readonly mgw_TraceDepthExtension: OPTIONAL<TraceDepthExtension>,
+        readonly mgw_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>,
         /**
          * @summary `sgsn_TraceDepthExtension`.
          * @description
@@ -179,7 +179,7 @@ class TraceDepthList {
          * @public
          * @readonly
          */
-        readonly sgsn_TraceDepthExtension: OPTIONAL<TraceDepthExtension>,
+        readonly sgsn_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>,
         /**
          * @summary `ggsn_TraceDepthExtension`.
          * @description
@@ -189,7 +189,7 @@ class TraceDepthList {
          * @public
          * @readonly
          */
-        readonly ggsn_TraceDepthExtension: OPTIONAL<TraceDepthExtension>,
+        readonly ggsn_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>,
         /**
          * @summary `rnc_TraceDepthExtension`.
          * @description
@@ -199,7 +199,7 @@ class TraceDepthList {
          * @public
          * @readonly
          */
-        readonly rnc_TraceDepthExtension: OPTIONAL<TraceDepthExtension>,
+        readonly rnc_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>,
         /**
          * @summary `bmsc_TraceDepthExtension`.
          * @description
@@ -209,7 +209,7 @@ class TraceDepthList {
          * @public
          * @readonly
          */
-        readonly bmsc_TraceDepthExtension: OPTIONAL<TraceDepthExtension>,
+        readonly bmsc_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>,
         /**
          * @summary `mme_TraceDepthExtension`.
          * @description
@@ -219,7 +219,7 @@ class TraceDepthList {
          * @public
          * @readonly
          */
-        readonly mme_TraceDepthExtension: OPTIONAL<TraceDepthExtension>,
+        readonly mme_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>,
         /**
          * @summary `sgw_TraceDepthExtension`.
          * @description
@@ -229,7 +229,7 @@ class TraceDepthList {
          * @public
          * @readonly
          */
-        readonly sgw_TraceDepthExtension: OPTIONAL<TraceDepthExtension>,
+        readonly sgw_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>,
         /**
          * @summary `pgw_TraceDepthExtension`.
          * @description
@@ -239,7 +239,7 @@ class TraceDepthList {
          * @public
          * @readonly
          */
-        readonly pgw_TraceDepthExtension: OPTIONAL<TraceDepthExtension>,
+        readonly pgw_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>,
         /**
          * @summary `eNB_TraceDepthExtension`.
          * @description
@@ -249,7 +249,7 @@ class TraceDepthList {
          * @public
          * @readonly
          */
-        readonly eNB_TraceDepthExtension: OPTIONAL<TraceDepthExtension>,
+        readonly eNB_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>,
         /**
          * @summary Extensions that are not recognized.
          * @public

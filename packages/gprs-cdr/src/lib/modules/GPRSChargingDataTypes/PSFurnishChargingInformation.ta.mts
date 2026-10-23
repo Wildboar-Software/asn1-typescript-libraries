@@ -60,7 +60,7 @@ class PSFurnishChargingInformation {
 
     constructor (
         pSFreeFormatData: OCTET_STRING,
-        pSFFDAppendIndicator: OPTIONAL<BOOLEAN>
+        pSFFDAppendIndicator?: OPTIONAL<BOOLEAN>
     ) {
         this.pSFreeFormatData = pSFreeFormatData;
         this.pSFFDAppendIndicator = pSFFDAppendIndicator;

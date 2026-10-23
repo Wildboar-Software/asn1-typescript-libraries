@@ -200,9 +200,9 @@ class Content_Report {
         lawfulInterceptionIdentifier: OPTIONAL<LawfulInterceptionIdentifier>,
         communicationIdentifier: CommunicationIdentifier,
         timeStamp: TimeStamp,
-        initiator: OPTIONAL<Content_Report_initiator>,
-        content: OPTIONAL<Supplementary_Services>,
-        sMS_report: OPTIONAL<SMS_report>,
+        initiator?: OPTIONAL<Content_Report_initiator>,
+        content?: OPTIONAL<Supplementary_Services>,
+        sMS_report?: OPTIONAL<SMS_report>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.domainID = domainID;

@@ -186,15 +186,15 @@ class PartyInformation_partyIdentity {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        mSISDN: OPTIONAL<OCTET_STRING>,
-        mMSAddress: OPTIONAL<OCTET_STRING>,
-        mMSAddressNonLocalID: OPTIONAL<OCTET_STRING>,
-        e_Mail: OPTIONAL<OCTET_STRING>,
-        e164_Format: OPTIONAL<OCTET_STRING>,
-        iPAddress: OPTIONAL<IPAddress>,
-        alphanum_Shortcode: OPTIONAL<OCTET_STRING>,
-        num_Shortcode: OPTIONAL<OCTET_STRING>,
-        iMSI: OPTIONAL<OCTET_STRING>,
+        mSISDN?: OPTIONAL<OCTET_STRING>,
+        mMSAddress?: OPTIONAL<OCTET_STRING>,
+        mMSAddressNonLocalID?: OPTIONAL<OCTET_STRING>,
+        e_Mail?: OPTIONAL<OCTET_STRING>,
+        e164_Format?: OPTIONAL<OCTET_STRING>,
+        iPAddress?: OPTIONAL<IPAddress>,
+        alphanum_Shortcode?: OPTIONAL<OCTET_STRING>,
+        num_Shortcode?: OPTIONAL<OCTET_STRING>,
+        iMSI?: OPTIONAL<OCTET_STRING>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.mSISDN = mSISDN;

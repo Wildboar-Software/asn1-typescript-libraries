@@ -48,37 +48,37 @@ class InformationToRecord_controlDigits {
          * @public
          * @readonly
          */
-        readonly endOfRecordingDigit: OPTIONAL<OCTET_STRING>,
+        readonly endOfRecordingDigit?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `cancelDigit`.
          * @public
          * @readonly
          */
-        readonly cancelDigit: OPTIONAL<OCTET_STRING>,
+        readonly cancelDigit?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `replayDigit`.
          * @public
          * @readonly
          */
-        readonly replayDigit: OPTIONAL<OCTET_STRING>,
+        readonly replayDigit?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `restartRecordingDigit`.
          * @public
          * @readonly
          */
-        readonly restartRecordingDigit: OPTIONAL<OCTET_STRING>,
+        readonly restartRecordingDigit?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `restartAllowed`.
          * @public
          * @readonly
          */
-        readonly restartAllowed: OPTIONAL<BOOLEAN>,
+        readonly restartAllowed?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `replayAllowed`.
          * @public
          * @readonly
          */
-        readonly replayAllowed: OPTIONAL<BOOLEAN>
+        readonly replayAllowed?: OPTIONAL<BOOLEAN>
     ) {
         if (endOfRecordingDigit !== undefined && (endOfRecordingDigit.length < 1 || endOfRecordingDigit.length > 2)) {
             throw new ASN1SizeError("InformationToRecord_controlDigits.endOfRecordingDigit violates SIZE constraint");

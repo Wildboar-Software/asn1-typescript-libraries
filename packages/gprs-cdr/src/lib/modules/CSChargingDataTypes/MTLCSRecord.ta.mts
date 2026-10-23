@@ -553,7 +553,7 @@ class MTLCSRecord {
         systemType: OPTIONAL<SystemType>,
         recordExtensions: OPTIONAL<ManagementExtension[]>,
         causeForTerm: CauseForTerm,
-        servedIMEI: OPTIONAL<OCTET_STRING>
+        servedIMEI?: OPTIONAL<OCTET_STRING>
     ) {
         this.recordType = recordType;
         this.recordingEntity = recordingEntity;

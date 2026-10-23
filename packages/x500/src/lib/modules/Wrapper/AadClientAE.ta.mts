@@ -106,7 +106,7 @@ export class AadClientAE extends AadClient {
          * @public
          * @readonly
          */
-        override readonly keyEst: OPTIONAL<AlgoInvoke> /* REPLICATED_COMPONENT */,
+        override readonly keyEst?: OPTIONAL<AlgoInvoke> /* REPLICATED_COMPONENT */,
         /**
          * @summary `encInvoke`.
          * @description

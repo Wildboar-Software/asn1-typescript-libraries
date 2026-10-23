@@ -94,8 +94,8 @@ class TariffPulseFormat {
     constructor (
         communicationChargeSequencePulse: OPTIONAL<CommunicationChargePulse[]>,
         tariffControlIndicators: TariffPulseFormat_tariffControlIndicators,
-        callAttemptChargePulse: OPTIONAL<PulseUnits>,
-        callSetupChargePulse: OPTIONAL<PulseUnits>
+        callAttemptChargePulse?: OPTIONAL<PulseUnits>,
+        callSetupChargePulse?: OPTIONAL<PulseUnits>
     ) {
         this.communicationChargeSequencePulse = communicationChargeSequencePulse;
         this.tariffControlIndicators = tariffControlIndicators;

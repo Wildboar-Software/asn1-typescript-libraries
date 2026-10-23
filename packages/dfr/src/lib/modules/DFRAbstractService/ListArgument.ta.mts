@@ -66,7 +66,7 @@ class ListArgument {
          * @public
          * @readonly
          */
-        readonly continue_: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
+        readonly continue_?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
         /**
          * @summary `limits`.
          * @description
@@ -76,7 +76,7 @@ class ListArgument {
          * @public
          * @readonly
          */
-        readonly limits: OPTIONAL<Limits> /* REPLICATED_COMPONENT */,
+        readonly limits?: OPTIONAL<Limits> /* REPLICATED_COMPONENT */,
         /**
          * @summary `selection`.
          * @description
@@ -87,7 +87,7 @@ class ListArgument {
          * @public
          * @readonly
          */
-        readonly selection: OPTIONAL<AttributeSelection> /* REPLICATED_COMPONENT */,
+        readonly selection?: OPTIONAL<AttributeSelection> /* REPLICATED_COMPONENT */,
         /**
          * @summary `ordering`.
          * @description
@@ -98,7 +98,7 @@ class ListArgument {
          * @public
          * @readonly
          */
-        readonly ordering: OPTIONAL<OrderingRule> /* REPLICATED_COMPONENT */,
+        readonly ordering?: OPTIONAL<OrderingRule> /* REPLICATED_COMPONENT */,
         /**
          * @summary `task_id`.
          * @description
@@ -110,7 +110,7 @@ class ListArgument {
          * @public
          * @readonly
          */
-        readonly task_id: OPTIONAL<TaskId> /* REPLICATED_COMPONENT */,
+        readonly task_id?: OPTIONAL<TaskId> /* REPLICATED_COMPONENT */,
         /**
          * @summary `reservation`.
          * @description
@@ -122,7 +122,7 @@ class ListArgument {
          * @public
          * @readonly
          */
-        readonly reservation: OPTIONAL<Reservation> /* REPLICATED_COMPONENT */,
+        readonly reservation?: OPTIONAL<Reservation> /* REPLICATED_COMPONENT */,
         /**
          * @summary `error_handling`.
          * @description
@@ -133,7 +133,7 @@ class ListArgument {
          * @public
          * @readonly
          */
-        readonly error_handling: OPTIONAL<ErrorHandlingMode> /* REPLICATED_COMPONENT */,
+        readonly error_handling?: OPTIONAL<ErrorHandlingMode> /* REPLICATED_COMPONENT */,
         /**
          * @summary `priority`.
          * @description
@@ -144,7 +144,7 @@ class ListArgument {
          * @public
          * @readonly
          */
-        readonly priority: OPTIONAL<Priority> /* REPLICATED_COMPONENT */,
+        readonly priority?: OPTIONAL<Priority> /* REPLICATED_COMPONENT */,
         /**
          * @summary `privileges`.
          * @description
@@ -156,7 +156,7 @@ class ListArgument {
          * @public
          * @readonly
          */
-        readonly privileges: OPTIONAL<Privileges> /* REPLICATED_COMPONENT */
+        readonly privileges?: OPTIONAL<Privileges> /* REPLICATED_COMPONENT */
     ) {
         if (selection === undefined) {
             throw new _ConstructionError("ListArgument.selection shall be present");

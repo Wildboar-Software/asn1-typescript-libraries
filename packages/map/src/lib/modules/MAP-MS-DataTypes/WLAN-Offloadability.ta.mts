@@ -43,7 +43,7 @@ class WLAN_Offloadability {
          * @public
          * @readonly
          */
-        readonly wlan_offloadability_EUTRAN: OPTIONAL<WLAN_Offloadability_Indication>,
+        readonly wlan_offloadability_EUTRAN?: OPTIONAL<WLAN_Offloadability_Indication>,
         /**
          * @summary `wlan_offloadability_UTRAN`.
          * @description
@@ -55,13 +55,13 @@ class WLAN_Offloadability {
          * @public
          * @readonly
          */
-        readonly wlan_offloadability_UTRAN: OPTIONAL<WLAN_Offloadability_Indication>,
+        readonly wlan_offloadability_UTRAN?: OPTIONAL<WLAN_Offloadability_Indication>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

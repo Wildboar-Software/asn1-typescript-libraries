@@ -75,7 +75,7 @@ class DataCollectedArgument {
          * @public
          * @readonly
          */
-        readonly digitsData: OPTIONAL<DigitsData>,
+        readonly digitsData?: OPTIONAL<DigitsData>,
         /**
          * @summary `telTonesData`.
          * @description
@@ -86,7 +86,7 @@ class DataCollectedArgument {
          * @public
          * @readonly
          */
-        readonly telTonesData: OPTIONAL<TelTonesData>,
+        readonly telTonesData?: OPTIONAL<TelTonesData>,
         /**
          * @summary `connectionInformation`.
          * @description
@@ -97,7 +97,7 @@ class DataCollectedArgument {
          * @public
          * @readonly
          */
-        readonly connectionInformation: OPTIONAL<ConnectionInformation>,
+        readonly connectionInformation?: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `dcollCause`.
          * @description
@@ -108,7 +108,7 @@ class DataCollectedArgument {
          * @public
          * @readonly
          */
-        readonly dcollCause: OPTIONAL<DcollCause>,
+        readonly dcollCause?: OPTIONAL<DcollCause>,
         /**
          * @summary `extensions`.
          * @description
@@ -119,7 +119,7 @@ class DataCollectedArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

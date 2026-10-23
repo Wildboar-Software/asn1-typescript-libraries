@@ -69,7 +69,7 @@ class AttachToSemaphore {
          * @public
          * @readonly
          */
-        readonly namedToken: OPTIONAL<Identifier>,
+        readonly namedToken?: OPTIONAL<Identifier>,
         /**
          * @summary `priority`.
          * @description
@@ -81,7 +81,7 @@ class AttachToSemaphore {
          * @public
          * @readonly
          */
-        readonly priority: OPTIONAL<Priority>,
+        readonly priority?: OPTIONAL<Priority>,
         /**
          * @summary `acceptableDelay`.
          * @description
@@ -92,7 +92,7 @@ class AttachToSemaphore {
          * @public
          * @readonly
          */
-        readonly acceptableDelay: OPTIONAL<Unsigned32>,
+        readonly acceptableDelay?: OPTIONAL<Unsigned32>,
         /**
          * @summary `controlTimeOut`.
          * @description
@@ -104,7 +104,7 @@ class AttachToSemaphore {
          * @public
          * @readonly
          */
-        readonly controlTimeOut: OPTIONAL<Unsigned32>,
+        readonly controlTimeOut?: OPTIONAL<Unsigned32>,
         /**
          * @summary `abortOnTimeOut`.
          * @description
@@ -116,7 +116,7 @@ class AttachToSemaphore {
          * @public
          * @readonly
          */
-        readonly abortOnTimeOut: OPTIONAL<BOOLEAN>,
+        readonly abortOnTimeOut?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `relinquishIfConnectionLost`.
          * @description
@@ -127,7 +127,7 @@ class AttachToSemaphore {
          * @public
          * @readonly
          */
-        readonly relinquishIfConnectionLost: OPTIONAL<BOOLEAN>
+        readonly relinquishIfConnectionLost?: OPTIONAL<BOOLEAN>
     ) {}
 
     /**

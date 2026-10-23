@@ -264,9 +264,9 @@ class LCSVGMTRecord {
         lCSPriority: OPTIONAL<OCTET_STRING>,
         resultCode: OPTIONAL<INTEGER>,
         recordTimeStamp: OCTET_STRING,
-        localSequenceNumber: OPTIONAL<INTEGER>,
-        recordExtensions: OPTIONAL<ManagementExtension[]>,
-        homeGMLCIdentity: OPTIONAL<IPAddress>
+        localSequenceNumber?: OPTIONAL<INTEGER>,
+        recordExtensions?: OPTIONAL<ManagementExtension[]>,
+        homeGMLCIdentity?: OPTIONAL<IPAddress>
     ) {
         this.recordType = recordType;
         this.recordingEntity = recordingEntity;

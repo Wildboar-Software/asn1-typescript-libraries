@@ -193,13 +193,13 @@ class SCDVTT4Record {
         recordType: RecordType,
         sMSNodeAddress: OCTET_STRING,
         eventtimestamp: OCTET_STRING,
-        originatorInfo: OPTIONAL<OriginatorInfo>,
-        recipientInfo: OPTIONAL<RecipientInfo>,
-        sMDeviceTriggerIndicator: OPTIONAL<SMDeviceTriggerIndicator>,
-        sMDeviceTriggerInformation: OPTIONAL<SMDeviceTriggerInformation>,
-        sMSResult: OPTIONAL<SMSResult>,
-        localSequenceNumber: OPTIONAL<INTEGER>,
-        recordExtensions: OPTIONAL<ManagementExtension[]>
+        originatorInfo?: OPTIONAL<OriginatorInfo>,
+        recipientInfo?: OPTIONAL<RecipientInfo>,
+        sMDeviceTriggerIndicator?: OPTIONAL<SMDeviceTriggerIndicator>,
+        sMDeviceTriggerInformation?: OPTIONAL<SMDeviceTriggerInformation>,
+        sMSResult?: OPTIONAL<SMSResult>,
+        localSequenceNumber?: OPTIONAL<INTEGER>,
+        recordExtensions?: OPTIONAL<ManagementExtension[]>
     ) {
         this.recordType = recordType;
         this.sMSNodeAddress = sMSNodeAddress;

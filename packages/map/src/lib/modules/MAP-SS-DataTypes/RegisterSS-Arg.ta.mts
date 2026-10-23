@@ -63,7 +63,7 @@ class RegisterSS_Arg {
          * @public
          * @readonly
          */
-        readonly basicService: OPTIONAL<BasicServiceCode>,
+        readonly basicService?: OPTIONAL<BasicServiceCode>,
         /**
          * @summary `forwardedToNumber`.
          * @description
@@ -73,7 +73,7 @@ class RegisterSS_Arg {
          * @public
          * @readonly
          */
-        readonly forwardedToNumber: OPTIONAL<AddressString>,
+        readonly forwardedToNumber?: OPTIONAL<AddressString>,
         /**
          * @summary `forwardedToSubaddress`.
          * @description
@@ -83,7 +83,7 @@ class RegisterSS_Arg {
          * @public
          * @readonly
          */
-        readonly forwardedToSubaddress: OPTIONAL<ISDN_SubaddressString>,
+        readonly forwardedToSubaddress?: OPTIONAL<ISDN_SubaddressString>,
         /**
          * @summary `noReplyConditionTime`.
          * @description
@@ -94,7 +94,7 @@ class RegisterSS_Arg {
          * @public
          * @readonly
          */
-        readonly noReplyConditionTime: OPTIONAL<NoReplyConditionTime>,
+        readonly noReplyConditionTime?: OPTIONAL<NoReplyConditionTime>,
         /**
          * @summary `defaultPriority`.
          * @description
@@ -104,7 +104,7 @@ class RegisterSS_Arg {
          * @public
          * @readonly
          */
-        readonly defaultPriority: OPTIONAL<EMLPP_Priority>,
+        readonly defaultPriority?: OPTIONAL<EMLPP_Priority>,
         /**
          * @summary `nbrUser`.
          * @description
@@ -114,7 +114,7 @@ class RegisterSS_Arg {
          * @public
          * @readonly
          */
-        readonly nbrUser: OPTIONAL<MC_Bearers>,
+        readonly nbrUser?: OPTIONAL<MC_Bearers>,
         /**
          * @summary `longFTN_Supported`.
          * @description
@@ -124,7 +124,7 @@ class RegisterSS_Arg {
          * @public
          * @readonly
          */
-        readonly longFTN_Supported: OPTIONAL<NULL>,
+        readonly longFTN_Supported?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @public

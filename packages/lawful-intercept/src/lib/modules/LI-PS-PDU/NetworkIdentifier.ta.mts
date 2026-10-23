@@ -110,8 +110,8 @@ class NetworkIdentifier {
 
     constructor (
         operatorIdentifier: OCTET_STRING,
-        networkElementIdentifier: OPTIONAL<OCTET_STRING>,
-        eTSI671NEID: OPTIONAL<HI2Operations.Network_Element_Identifier>,
+        networkElementIdentifier?: OPTIONAL<OCTET_STRING>,
+        eTSI671NEID?: OPTIONAL<HI2Operations.Network_Element_Identifier>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.operatorIdentifier = operatorIdentifier;

@@ -58,8 +58,8 @@ class AdditionalChgInfo {
     readonly chargeParameters: OPTIONAL<OCTET_STRING>;
 
     constructor (
-        chargeIndicator: OPTIONAL<AdditionalChgInfo_chargeIndicator>,
-        chargeParameters: OPTIONAL<OCTET_STRING>
+        chargeIndicator?: OPTIONAL<AdditionalChgInfo_chargeIndicator>,
+        chargeParameters?: OPTIONAL<OCTET_STRING>
     ) {
         this.chargeIndicator = chargeIndicator;
         this.chargeParameters = chargeParameters;

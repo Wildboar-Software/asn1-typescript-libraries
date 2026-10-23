@@ -128,10 +128,10 @@ class SortResponse {
     constructor (
         referenceId: OPTIONAL<ReferenceId>,
         sortStatus: SortResponse_sortStatus,
-        resultSetStatus: OPTIONAL<SortResponse_resultSetStatus>,
-        diagnostics: OPTIONAL<DiagRec[]>,
-        resultCount: OPTIONAL<INTEGER>,
-        otherInfo: OPTIONAL<OtherInformation>
+        resultSetStatus?: OPTIONAL<SortResponse_resultSetStatus>,
+        diagnostics?: OPTIONAL<DiagRec[]>,
+        resultCount?: OPTIONAL<INTEGER>,
+        otherInfo?: OPTIONAL<OtherInformation>
     ) {
         this.referenceId = referenceId;
         this.sortStatus = sortStatus;

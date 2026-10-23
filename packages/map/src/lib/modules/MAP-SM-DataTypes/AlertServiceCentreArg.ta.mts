@@ -75,7 +75,7 @@ class AlertServiceCentreArg {
          * @public
          * @readonly
          */
-        readonly imsi: OPTIONAL<IMSI>,
+        readonly imsi?: OPTIONAL<IMSI>,
         /**
          * @summary `correlationID`.
          * @description
@@ -85,7 +85,7 @@ class AlertServiceCentreArg {
          * @public
          * @readonly
          */
-        readonly correlationID: OPTIONAL<CorrelationID>,
+        readonly correlationID?: OPTIONAL<CorrelationID>,
         /**
          * @summary `maximumUeAvailabilityTime`.
          * @description
@@ -95,7 +95,7 @@ class AlertServiceCentreArg {
          * @public
          * @readonly
          */
-        readonly maximumUeAvailabilityTime: OPTIONAL<Time>,
+        readonly maximumUeAvailabilityTime?: OPTIONAL<Time>,
         /**
          * @summary `smsGmscAlertEvent`.
          * @description
@@ -105,7 +105,7 @@ class AlertServiceCentreArg {
          * @public
          * @readonly
          */
-        readonly smsGmscAlertEvent: OPTIONAL<SmsGmsc_Alert_Event>,
+        readonly smsGmscAlertEvent?: OPTIONAL<SmsGmsc_Alert_Event>,
         /**
          * @summary `smsGmscDiameterAddress`.
          * @description
@@ -115,7 +115,7 @@ class AlertServiceCentreArg {
          * @public
          * @readonly
          */
-        readonly smsGmscDiameterAddress: OPTIONAL<NetworkNodeDiameterAddress>,
+        readonly smsGmscDiameterAddress?: OPTIONAL<NetworkNodeDiameterAddress>,
         /**
          * @summary `newSGSNNumber`.
          * @description
@@ -125,7 +125,7 @@ class AlertServiceCentreArg {
          * @public
          * @readonly
          */
-        readonly newSGSNNumber: OPTIONAL<ISDN_AddressString>,
+        readonly newSGSNNumber?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `newSGSNDiameterAddress`.
          * @description
@@ -135,7 +135,7 @@ class AlertServiceCentreArg {
          * @public
          * @readonly
          */
-        readonly newSGSNDiameterAddress: OPTIONAL<NetworkNodeDiameterAddress>,
+        readonly newSGSNDiameterAddress?: OPTIONAL<NetworkNodeDiameterAddress>,
         /**
          * @summary `newMMENumber`.
          * @description
@@ -145,7 +145,7 @@ class AlertServiceCentreArg {
          * @public
          * @readonly
          */
-        readonly newMMENumber: OPTIONAL<ISDN_AddressString>,
+        readonly newMMENumber?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `newMMEDiameterAddress`.
          * @description
@@ -155,7 +155,7 @@ class AlertServiceCentreArg {
          * @public
          * @readonly
          */
-        readonly newMMEDiameterAddress: OPTIONAL<NetworkNodeDiameterAddress>,
+        readonly newMMEDiameterAddress?: OPTIONAL<NetworkNodeDiameterAddress>,
         /**
          * @summary `newMSCNumber`.
          * @description
@@ -165,7 +165,7 @@ class AlertServiceCentreArg {
          * @public
          * @readonly
          */
-        readonly newMSCNumber: OPTIONAL<ISDN_AddressString>,
+        readonly newMSCNumber?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary Extensions that are not recognized.
          * @public

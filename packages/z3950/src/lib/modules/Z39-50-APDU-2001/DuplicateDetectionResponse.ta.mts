@@ -100,9 +100,9 @@ class DuplicateDetectionResponse {
     constructor (
         referenceId: OPTIONAL<ReferenceId>,
         status: DuplicateDetectionResponse_status,
-        resultSetCount: OPTIONAL<INTEGER>,
-        diagnostics: OPTIONAL<DiagRec[]>,
-        otherInfo: OPTIONAL<OtherInformation>
+        resultSetCount?: OPTIONAL<INTEGER>,
+        diagnostics?: OPTIONAL<DiagRec[]>,
+        otherInfo?: OPTIONAL<OtherInformation>
     ) {
         this.referenceId = referenceId;
         this.status = status;

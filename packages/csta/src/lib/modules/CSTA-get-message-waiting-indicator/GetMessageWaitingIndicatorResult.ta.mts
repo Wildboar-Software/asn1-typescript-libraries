@@ -56,7 +56,7 @@ class GetMessageWaitingIndicatorResult {
          * @public
          * @readonly
          */
-        readonly deviceForMessage: OPTIONAL<DeviceID>,
+        readonly deviceForMessage?: OPTIONAL<DeviceID>,
         /**
          * @summary `lampIsPresent`.
          * @description
@@ -65,7 +65,7 @@ class GetMessageWaitingIndicatorResult {
          * @public
          * @readonly
          */
-        readonly lampIsPresent: OPTIONAL<BOOLEAN>,
+        readonly lampIsPresent?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `extensions`.
          * @description
@@ -75,7 +75,7 @@ class GetMessageWaitingIndicatorResult {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

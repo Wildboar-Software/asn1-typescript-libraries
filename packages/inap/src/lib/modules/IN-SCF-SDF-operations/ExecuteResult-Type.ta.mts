@@ -94,12 +94,12 @@ class ExecuteResult_Type {
 
     constructor (
         method_id: OBJECT_IDENTIFIER,
-        output_assertions: OPTIONAL<ExecuteResult_Type_output_assertions_Item[]>,
-        specific_output: OPTIONAL<_Element>,
-        securityParameters: OPTIONAL<SecurityParameters> /* REPLICATED_COMPONENT */,
-        performer: OPTIONAL<DistinguishedName> /* REPLICATED_COMPONENT */,
-        aliasDereferenced: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
-        notification: OPTIONAL<Attribute[]> /* REPLICATED_COMPONENT */
+        output_assertions?: OPTIONAL<ExecuteResult_Type_output_assertions_Item[]>,
+        specific_output?: OPTIONAL<_Element>,
+        securityParameters?: OPTIONAL<SecurityParameters> /* REPLICATED_COMPONENT */,
+        performer?: OPTIONAL<DistinguishedName> /* REPLICATED_COMPONENT */,
+        aliasDereferenced?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
+        notification?: OPTIONAL<Attribute[]> /* REPLICATED_COMPONENT */
     ) {
         this.method_id = method_id;
         this.output_assertions = output_assertions;

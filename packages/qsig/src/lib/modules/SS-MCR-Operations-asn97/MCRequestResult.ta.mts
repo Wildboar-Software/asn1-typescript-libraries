@@ -49,7 +49,7 @@ class MCRequestResult {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        extensions: OPTIONAL<MCRExtensions>,
+        extensions?: OPTIONAL<MCRExtensions>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.extensions = extensions;

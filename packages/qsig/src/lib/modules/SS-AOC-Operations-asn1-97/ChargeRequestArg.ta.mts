@@ -61,7 +61,7 @@ class ChargeRequestArg {
 
     constructor (
         adviceModeCombinations: AdviceModeCombination[],
-        chargeReqArgExtension: OPTIONAL<ChargeRequestArg_chargeReqArgExtension>
+        chargeReqArgExtension?: OPTIONAL<ChargeRequestArg_chargeReqArgExtension>
     ) {
         this.adviceModeCombinations = adviceModeCombinations;
         this.chargeReqArgExtension = chargeReqArgExtension;

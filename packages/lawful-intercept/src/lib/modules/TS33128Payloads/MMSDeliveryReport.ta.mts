@@ -180,10 +180,10 @@ class MMSDeliveryReport {
         terminatingMMSParty: MMSParty[],
         mMSDateTime: Timestamp,
         responseStatus: MMSResponseStatus,
-        responseStatusText: OPTIONAL<UTF8String>,
-        applicID: OPTIONAL<UTF8String>,
-        replyApplicID: OPTIONAL<UTF8String>,
-        auxApplicInfo: OPTIONAL<UTF8String>,
+        responseStatusText?: OPTIONAL<UTF8String>,
+        applicID?: OPTIONAL<UTF8String>,
+        replyApplicID?: OPTIONAL<UTF8String>,
+        auxApplicInfo?: OPTIONAL<UTF8String>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.version = version;

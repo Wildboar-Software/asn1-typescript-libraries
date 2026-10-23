@@ -89,9 +89,9 @@ class CTUpdateArg {
 
     constructor (
         redirectionNumber: PresentedNumberScreened,
-        redirectionName: OPTIONAL<Name>,
-        basicCallInfoElements: OPTIONAL<PSS1InformationElement>,
-        argumentExtension: OPTIONAL<CTUpdateArg_argumentExtension>
+        redirectionName?: OPTIONAL<Name>,
+        basicCallInfoElements?: OPTIONAL<PSS1InformationElement>,
+        argumentExtension?: OPTIONAL<CTUpdateArg_argumentExtension>
     ) {
         this.redirectionNumber = redirectionNumber;
         this.redirectionName = redirectionName;

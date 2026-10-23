@@ -189,8 +189,8 @@ class MultipleQFIContainer {
         presenceReportingAreaInfo: OPTIONAL<PresenceReportingAreaInfo>,
         rATType: OPTIONAL<INTEGER>,
         reportTime: OCTET_STRING,
-        servingNetworkFunctionID: OPTIONAL<ServingNetworkFunctionID[]>,
-        threeGPPPSDataOffStatus: OPTIONAL<ThreeGPPPSDataOffStatus>
+        servingNetworkFunctionID?: OPTIONAL<ServingNetworkFunctionID[]>,
+        threeGPPPSDataOffStatus?: OPTIONAL<ThreeGPPPSDataOffStatus>
     ) {
         this.qosFlowId = qosFlowId;
         this.triggers = triggers;

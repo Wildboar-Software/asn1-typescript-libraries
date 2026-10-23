@@ -106,7 +106,7 @@ class SmsSubmitArg {
         messageReference: MessageReference,
         smSubmitParameter: SmSubmitParameter,
         userData: UserData,
-        smsExtension: OPTIONAL<SmsExtension>
+        smsExtension?: OPTIONAL<SmsExtension>
     ) {
         this.destinationAddress = destinationAddress;
         this.originatingAddress = originatingAddress;

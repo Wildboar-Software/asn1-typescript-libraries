@@ -138,12 +138,12 @@ class ClientPartNotToKeep {
     readonly additionalSearchInfo: OPTIONAL<OtherInformation>;
 
     constructor (
-        databaseNames: OPTIONAL<InternationalString[]>,
-        querySpec: OPTIONAL<ClientPartNotToKeep_querySpec>,
-        clientSuggestedPeriod: OPTIONAL<Period>,
-        expiration: OPTIONAL<GeneralizedTime>,
-        resultSetPackage: OPTIONAL<InternationalString>,
-        additionalSearchInfo: OPTIONAL<OtherInformation>
+        databaseNames?: OPTIONAL<InternationalString[]>,
+        querySpec?: OPTIONAL<ClientPartNotToKeep_querySpec>,
+        clientSuggestedPeriod?: OPTIONAL<Period>,
+        expiration?: OPTIONAL<GeneralizedTime>,
+        resultSetPackage?: OPTIONAL<InternationalString>,
+        additionalSearchInfo?: OPTIONAL<OtherInformation>
     ) {
         this.databaseNames = databaseNames;
         this.querySpec = querySpec;

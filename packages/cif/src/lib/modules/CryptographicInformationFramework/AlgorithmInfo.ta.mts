@@ -91,7 +91,7 @@ class AlgorithmInfo {
          * @public
          * @readonly
          */
-        readonly algRef: OPTIONAL<Reference>
+        readonly algRef?: OPTIONAL<Reference>
     ) {}
 
     /**

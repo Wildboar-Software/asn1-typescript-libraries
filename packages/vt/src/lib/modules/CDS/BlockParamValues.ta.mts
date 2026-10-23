@@ -46,7 +46,7 @@ class BlockParamValues {
          * @public
          * @readonly
          */
-        readonly capability: OPTIONAL<BOOLEAN>,
+        readonly capability?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `bound`.
          * @description
@@ -55,7 +55,7 @@ class BlockParamValues {
          * @public
          * @readonly
          */
-        readonly bound: OPTIONAL<BlockParamValues_bound>
+        readonly bound?: OPTIONAL<BlockParamValues_bound>
     ) {}
 
     /**

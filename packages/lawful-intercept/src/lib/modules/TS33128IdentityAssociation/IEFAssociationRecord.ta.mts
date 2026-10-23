@@ -235,11 +235,11 @@ class IEFAssociationRecord {
         tAI: TAI,
         nCGI: NCGI,
         nCGITime: GeneralizedTime,
-        sUCI: OPTIONAL<SUCI>,
-        pEI: OPTIONAL<PEI>,
-        fiveGSTAIList: OPTIONAL<FiveGSTAIList>,
-        gPSI: OPTIONAL<GPSI>,
-        additionalCGIs: OPTIONAL<AdditionalCGIs>,
+        sUCI?: OPTIONAL<SUCI>,
+        pEI?: OPTIONAL<PEI>,
+        fiveGSTAIList?: OPTIONAL<FiveGSTAIList>,
+        gPSI?: OPTIONAL<GPSI>,
+        additionalCGIs?: OPTIONAL<AdditionalCGIs>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.sUPI = sUPI;

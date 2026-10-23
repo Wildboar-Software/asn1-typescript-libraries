@@ -501,7 +501,7 @@ class GetSwitchingFunctionCapsResult {
          * @public
          * @readonly
          */
-        readonly maxLengthParametersContinued: OPTIONAL<MaxLengthParametersContinued>,
+        readonly maxLengthParametersContinued?: OPTIONAL<MaxLengthParametersContinued>,
         /**
          * @summary `servEvtsList`.
          * @description
@@ -511,7 +511,7 @@ class GetSwitchingFunctionCapsResult {
          * @public
          * @readonly
          */
-        readonly servEvtsList: OPTIONAL<ServEvtsList>,
+        readonly servEvtsList?: OPTIONAL<ServEvtsList>,
         /**
          * @summary `privateDataVersionList`.
          * @description
@@ -521,7 +521,7 @@ class GetSwitchingFunctionCapsResult {
          * @public
          * @readonly
          */
-        readonly privateDataVersionList: OPTIONAL<PrivateDataVersionList>,
+        readonly privateDataVersionList?: OPTIONAL<PrivateDataVersionList>,
         /**
          * @summary `systemStatusTimer`.
          * @description
@@ -532,7 +532,7 @@ class GetSwitchingFunctionCapsResult {
          * @public
          * @readonly
          */
-        readonly systemStatusTimer: OPTIONAL<INTEGER>,
+        readonly systemStatusTimer?: OPTIONAL<INTEGER>,
         /**
          * @summary `simpleThreshold`.
          * @description
@@ -542,7 +542,7 @@ class GetSwitchingFunctionCapsResult {
          * @public
          * @readonly
          */
-        readonly simpleThreshold: OPTIONAL<INTEGER>,
+        readonly simpleThreshold?: OPTIONAL<INTEGER>,
         /**
          * @summary `filterThreshold`.
          * @description
@@ -552,7 +552,7 @@ class GetSwitchingFunctionCapsResult {
          * @public
          * @readonly
          */
-        readonly filterThreshold: OPTIONAL<FilterThreshold>,
+        readonly filterThreshold?: OPTIONAL<FilterThreshold>,
         /**
          * @summary `mediaServiceCapsList`.
          * @description
@@ -563,7 +563,7 @@ class GetSwitchingFunctionCapsResult {
          * @public
          * @readonly
          */
-        readonly mediaServiceCapsList: OPTIONAL<MediaServiceCapsList>,
+        readonly mediaServiceCapsList?: OPTIONAL<MediaServiceCapsList>,
         /**
          * @summary `maxDeviceHistoryLength`.
          * @description
@@ -572,7 +572,7 @@ class GetSwitchingFunctionCapsResult {
          * @public
          * @readonly
          */
-        readonly maxDeviceHistoryLength: OPTIONAL<INTEGER>,
+        readonly maxDeviceHistoryLength?: OPTIONAL<INTEGER>,
         /**
          * @summary `maxDestinationDevicesForDeflect`.
          * @description
@@ -581,7 +581,7 @@ class GetSwitchingFunctionCapsResult {
          * @public
          * @readonly
          */
-        readonly maxDestinationDevicesForDeflect: OPTIONAL<INTEGER>,
+        readonly maxDestinationDevicesForDeflect?: OPTIONAL<INTEGER>,
         /**
          * @summary `extensions`.
          * @description
@@ -591,7 +591,7 @@ class GetSwitchingFunctionCapsResult {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

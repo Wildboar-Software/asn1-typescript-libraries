@@ -103,14 +103,14 @@ class UPPathChange {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        sourceDNAI: OPTIONAL<DNAI>,
-        targetDNAI: OPTIONAL<DNAI>,
-        dNAIChangeType: OPTIONAL<DNAIChangeType>,
-        sourceUEIPAddr: OPTIONAL<IPAddress>,
-        targetUEIPAddr: OPTIONAL<IPAddress>,
-        sourceTrafficRouting: OPTIONAL<RouteToLocation>,
-        targetTrafficRouting: OPTIONAL<RouteToLocation>,
-        mACAddress: OPTIONAL<MACAddress>,
+        sourceDNAI?: OPTIONAL<DNAI>,
+        targetDNAI?: OPTIONAL<DNAI>,
+        dNAIChangeType?: OPTIONAL<DNAIChangeType>,
+        sourceUEIPAddr?: OPTIONAL<IPAddress>,
+        targetUEIPAddr?: OPTIONAL<IPAddress>,
+        sourceTrafficRouting?: OPTIONAL<RouteToLocation>,
+        targetTrafficRouting?: OPTIONAL<RouteToLocation>,
+        mACAddress?: OPTIONAL<MACAddress>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.sourceDNAI = sourceDNAI;

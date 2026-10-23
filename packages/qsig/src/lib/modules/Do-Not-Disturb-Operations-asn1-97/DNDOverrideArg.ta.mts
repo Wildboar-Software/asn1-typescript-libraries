@@ -60,7 +60,7 @@ class DNDOverrideArg {
 
     constructor (
         dndoCapabilityLevel: DNDOCapabilityLevel,
-        argumentExtension: OPTIONAL<DNDOverrideArg_argumentExtension>
+        argumentExtension?: OPTIONAL<DNDOverrideArg_argumentExtension>
     ) {
         this.dndoCapabilityLevel = dndoCapabilityLevel;
         this.argumentExtension = argumentExtension;

@@ -81,7 +81,7 @@ class ReportEventConditionStatus_Response {
          * @public
          * @readonly
          */
-        readonly enabled: OPTIONAL<BOOLEAN>,
+        readonly enabled?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `timeOfLastTransitionToActive`.
          * @description
@@ -93,7 +93,7 @@ class ReportEventConditionStatus_Response {
          * @public
          * @readonly
          */
-        readonly timeOfLastTransitionToActive: OPTIONAL<EventTime>,
+        readonly timeOfLastTransitionToActive?: OPTIONAL<EventTime>,
         /**
          * @summary `timeOfLastTransitionToIdle`.
          * @description
@@ -105,7 +105,7 @@ class ReportEventConditionStatus_Response {
          * @public
          * @readonly
          */
-        readonly timeOfLastTransitionToIdle: OPTIONAL<EventTime>
+        readonly timeOfLastTransitionToIdle?: OPTIONAL<EventTime>
     ) {}
 
     /**

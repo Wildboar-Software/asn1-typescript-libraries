@@ -40,7 +40,7 @@ class ContinueAssociationArg {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        extensions: OPTIONAL<Extensions>,
+        extensions?: OPTIONAL<Extensions>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.extensions = extensions;

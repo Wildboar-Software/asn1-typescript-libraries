@@ -164,7 +164,7 @@ class PDP_Context {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `ext_QoS_Subscribed`.
          * @description
@@ -177,7 +177,7 @@ class PDP_Context {
          * @public
          * @readonly
          */
-        readonly ext_QoS_Subscribed: OPTIONAL<Ext_QoS_Subscribed>,
+        readonly ext_QoS_Subscribed?: OPTIONAL<Ext_QoS_Subscribed>,
         /**
          * @summary `pdp_ChargingCharacteristics`.
          * @description
@@ -189,7 +189,7 @@ class PDP_Context {
          * @public
          * @readonly
          */
-        readonly pdp_ChargingCharacteristics: OPTIONAL<ChargingCharacteristics>,
+        readonly pdp_ChargingCharacteristics?: OPTIONAL<ChargingCharacteristics>,
         /**
          * @summary `ext2_QoS_Subscribed`.
          * @description
@@ -202,7 +202,7 @@ class PDP_Context {
          * @public
          * @readonly
          */
-        readonly ext2_QoS_Subscribed: OPTIONAL<Ext2_QoS_Subscribed>,
+        readonly ext2_QoS_Subscribed?: OPTIONAL<Ext2_QoS_Subscribed>,
         /**
          * @summary `ext3_QoS_Subscribed`.
          * @description
@@ -216,7 +216,7 @@ class PDP_Context {
          * @public
          * @readonly
          */
-        readonly ext3_QoS_Subscribed: OPTIONAL<Ext3_QoS_Subscribed>,
+        readonly ext3_QoS_Subscribed?: OPTIONAL<Ext3_QoS_Subscribed>,
         /**
          * @summary `ext4_QoS_Subscribed`.
          * @description
@@ -230,7 +230,7 @@ class PDP_Context {
          * @public
          * @readonly
          */
-        readonly ext4_QoS_Subscribed: OPTIONAL<Ext4_QoS_Subscribed>,
+        readonly ext4_QoS_Subscribed?: OPTIONAL<Ext4_QoS_Subscribed>,
         /**
          * @summary `apn_oi_Replacement`.
          * @description
@@ -243,7 +243,7 @@ class PDP_Context {
          * @public
          * @readonly
          */
-        readonly apn_oi_Replacement: OPTIONAL<APN_OI_Replacement>,
+        readonly apn_oi_Replacement?: OPTIONAL<APN_OI_Replacement>,
         /**
          * @summary `ext_pdp_Type`.
          * @description
@@ -256,7 +256,7 @@ class PDP_Context {
          * @public
          * @readonly
          */
-        readonly ext_pdp_Type: OPTIONAL<Ext_PDP_Type>,
+        readonly ext_pdp_Type?: OPTIONAL<Ext_PDP_Type>,
         /**
          * @summary `ext_pdp_Address`.
          * @description
@@ -270,7 +270,7 @@ class PDP_Context {
          * @public
          * @readonly
          */
-        readonly ext_pdp_Address: OPTIONAL<PDP_Address>,
+        readonly ext_pdp_Address?: OPTIONAL<PDP_Address>,
         /**
          * @summary `ambr`.
          * @description
@@ -282,7 +282,7 @@ class PDP_Context {
          * @public
          * @readonly
          */
-        readonly ambr: OPTIONAL<AMBR>,
+        readonly ambr?: OPTIONAL<AMBR>,
         /**
          * @summary `sipto_Permission`.
          * @description
@@ -295,7 +295,7 @@ class PDP_Context {
          * @public
          * @readonly
          */
-        readonly sipto_Permission: OPTIONAL<SIPTO_Permission>,
+        readonly sipto_Permission?: OPTIONAL<SIPTO_Permission>,
         /**
          * @summary `lipa_Permission`.
          * @description
@@ -307,7 +307,7 @@ class PDP_Context {
          * @public
          * @readonly
          */
-        readonly lipa_Permission: OPTIONAL<LIPA_Permission>,
+        readonly lipa_Permission?: OPTIONAL<LIPA_Permission>,
         /**
          * @summary `restoration_Priority`.
          * @description
@@ -319,7 +319,7 @@ class PDP_Context {
          * @public
          * @readonly
          */
-        readonly restoration_Priority: OPTIONAL<Restoration_Priority>,
+        readonly restoration_Priority?: OPTIONAL<Restoration_Priority>,
         /**
          * @summary `sipto_local_network_Permission`.
          * @description
@@ -332,7 +332,7 @@ class PDP_Context {
          * @public
          * @readonly
          */
-        readonly sipto_local_network_Permission: OPTIONAL<SIPTO_Local_Network_Permission>,
+        readonly sipto_local_network_Permission?: OPTIONAL<SIPTO_Local_Network_Permission>,
         /**
          * @summary `nIDD_Mechanism`.
          * @description
@@ -344,7 +344,7 @@ class PDP_Context {
          * @public
          * @readonly
          */
-        readonly nIDD_Mechanism: OPTIONAL<NIDD_Mechanism>,
+        readonly nIDD_Mechanism?: OPTIONAL<NIDD_Mechanism>,
         /**
          * @summary `sCEF_ID`.
          * @description
@@ -356,7 +356,7 @@ class PDP_Context {
          * @public
          * @readonly
          */
-        readonly sCEF_ID: OPTIONAL<FQDN>,
+        readonly sCEF_ID?: OPTIONAL<FQDN>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -42,7 +42,7 @@ class Tone {
          * @public
          * @readonly
          */
-        readonly duration: OPTIONAL<Integer4>
+        readonly duration?: OPTIONAL<Integer4>
     ) {}
 
     /**

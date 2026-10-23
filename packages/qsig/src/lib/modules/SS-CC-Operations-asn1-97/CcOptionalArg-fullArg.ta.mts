@@ -109,9 +109,9 @@ class CcOptionalArg_fullArg {
         numberA: PartyNumber,
         numberB: PartyNumber,
         service: PSS1InformationElement,
-        subaddrA: OPTIONAL<PartySubaddress>,
-        subaddrB: OPTIONAL<PartySubaddress>,
-        extension: OPTIONAL<CcExtension>
+        subaddrA?: OPTIONAL<PartySubaddress>,
+        subaddrB?: OPTIONAL<PartySubaddress>,
+        extension?: OPTIONAL<CcExtension>
     ) {
         this.numberA = numberA;
         this.numberB = numberB;

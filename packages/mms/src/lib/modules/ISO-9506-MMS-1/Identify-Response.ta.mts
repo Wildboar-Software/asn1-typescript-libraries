@@ -79,7 +79,7 @@ class Identify_Response {
          * @public
          * @readonly
          */
-        readonly listOfAbstractSyntaxes: OPTIONAL<OBJECT_IDENTIFIER[]>
+        readonly listOfAbstractSyntaxes?: OPTIONAL<OBJECT_IDENTIFIER[]>
     ) {}
 
     /**

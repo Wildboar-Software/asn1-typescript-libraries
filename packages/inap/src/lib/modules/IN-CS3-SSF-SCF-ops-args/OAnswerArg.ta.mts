@@ -131,16 +131,16 @@ class OAnswerArg {
 
     constructor (
         dpSpecificCommonParameters: DpSpecificCommonParameters,
-        callingPartyBusinessGroupID: OPTIONAL<CallingPartyBusinessGroupID>,
-        callingPartySubaddress: OPTIONAL<CallingPartySubaddress>,
-        callingFacilityGroup: OPTIONAL<FacilityGroup>,
-        callingFacilityGroupMember: OPTIONAL<FacilityGroupMember>,
-        originalCalledPartyID: OPTIONAL<OriginalCalledPartyID>,
-        redirectingPartyID: OPTIONAL<RedirectingPartyID>,
-        redirectionInformation: OPTIONAL<RedirectionInformation>,
-        routeList: OPTIONAL<RouteList>,
-        travellingClassMark: OPTIONAL<TravellingClassMark>,
-        extensions: OPTIONAL<Extensions>,
+        callingPartyBusinessGroupID?: OPTIONAL<CallingPartyBusinessGroupID>,
+        callingPartySubaddress?: OPTIONAL<CallingPartySubaddress>,
+        callingFacilityGroup?: OPTIONAL<FacilityGroup>,
+        callingFacilityGroupMember?: OPTIONAL<FacilityGroupMember>,
+        originalCalledPartyID?: OPTIONAL<OriginalCalledPartyID>,
+        redirectingPartyID?: OPTIONAL<RedirectingPartyID>,
+        redirectionInformation?: OPTIONAL<RedirectionInformation>,
+        routeList?: OPTIONAL<RouteList>,
+        travellingClassMark?: OPTIONAL<TravellingClassMark>,
+        extensions?: OPTIONAL<Extensions>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.dpSpecificCommonParameters = dpSpecificCommonParameters;

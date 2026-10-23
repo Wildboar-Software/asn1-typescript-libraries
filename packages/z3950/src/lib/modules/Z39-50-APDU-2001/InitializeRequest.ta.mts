@@ -209,12 +209,12 @@ class InitializeRequest {
         options: Options,
         preferredMessageSize: INTEGER,
         exceptionalRecordSize: INTEGER,
-        idAuthentication: OPTIONAL<_Element>,
-        implementationId: OPTIONAL<InternationalString>,
-        implementationName: OPTIONAL<InternationalString>,
-        implementationVersion: OPTIONAL<InternationalString>,
-        userInformationField: OPTIONAL<EXTERNAL>,
-        otherInfo: OPTIONAL<OtherInformation>
+        idAuthentication?: OPTIONAL<_Element>,
+        implementationId?: OPTIONAL<InternationalString>,
+        implementationName?: OPTIONAL<InternationalString>,
+        implementationVersion?: OPTIONAL<InternationalString>,
+        userInformationField?: OPTIONAL<EXTERNAL>,
+        otherInfo?: OPTIONAL<OtherInformation>
     ) {
         this.referenceId = referenceId;
         this.protocolVersion = protocolVersion;

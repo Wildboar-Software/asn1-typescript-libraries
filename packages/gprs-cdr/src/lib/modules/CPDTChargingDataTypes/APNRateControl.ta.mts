@@ -51,8 +51,8 @@ class APNRateControl {
     readonly aPNRateControlDownlink: OPTIONAL<APNRateControlParameters>;
 
     constructor (
-        aPNRateControlUplink: OPTIONAL<APNRateControlParameters>,
-        aPNRateControlDownlink: OPTIONAL<APNRateControlParameters>
+        aPNRateControlUplink?: OPTIONAL<APNRateControlParameters>,
+        aPNRateControlDownlink?: OPTIONAL<APNRateControlParameters>
     ) {
         this.aPNRateControlUplink = aPNRateControlUplink;
         this.aPNRateControlDownlink = aPNRateControlDownlink;

@@ -51,7 +51,7 @@ class TransactionAck {
          * @public
          * @readonly
          */
-        readonly lastAck: OPTIONAL<TransactionId>
+        readonly lastAck?: OPTIONAL<TransactionId>
     ) {}
 
     /**

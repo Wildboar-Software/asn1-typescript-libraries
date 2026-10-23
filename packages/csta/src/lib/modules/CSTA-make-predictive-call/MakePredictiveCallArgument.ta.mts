@@ -116,7 +116,7 @@ class MakePredictiveCallArgument {
          * @public
          * @readonly
          */
-        readonly signallingDetection: OPTIONAL<SignallingDetection>,
+        readonly signallingDetection?: OPTIONAL<SignallingDetection>,
         /**
          * @summary `destinationDetection`.
          * @description
@@ -130,7 +130,7 @@ class MakePredictiveCallArgument {
          * @public
          * @readonly
          */
-        readonly destinationDetection: OPTIONAL<DestinationDetection>,
+        readonly destinationDetection?: OPTIONAL<DestinationDetection>,
         /**
          * @summary `defaultAction`.
          * @description
@@ -141,7 +141,7 @@ class MakePredictiveCallArgument {
          * @public
          * @readonly
          */
-        readonly defaultAction: OPTIONAL<DefaultAction>,
+        readonly defaultAction?: OPTIONAL<DefaultAction>,
         /**
          * @summary `accountCode`.
          * @description
@@ -151,7 +151,7 @@ class MakePredictiveCallArgument {
          * @public
          * @readonly
          */
-        readonly accountCode: OPTIONAL<AccountInfo>,
+        readonly accountCode?: OPTIONAL<AccountInfo>,
         /**
          * @summary `authCode`.
          * @description
@@ -161,7 +161,7 @@ class MakePredictiveCallArgument {
          * @public
          * @readonly
          */
-        readonly authCode: OPTIONAL<AuthCode>,
+        readonly authCode?: OPTIONAL<AuthCode>,
         /**
          * @summary `autoOriginate`.
          * @description
@@ -173,7 +173,7 @@ class MakePredictiveCallArgument {
          * @public
          * @readonly
          */
-        readonly autoOriginate: OPTIONAL<AutoOriginate>,
+        readonly autoOriginate?: OPTIONAL<AutoOriginate>,
         /**
          * @summary `alertTime`.
          * @description
@@ -184,7 +184,7 @@ class MakePredictiveCallArgument {
          * @public
          * @readonly
          */
-        readonly alertTime: OPTIONAL<INTEGER>,
+        readonly alertTime?: OPTIONAL<INTEGER>,
         /**
          * @summary `correlatorData`.
          * @description
@@ -195,7 +195,7 @@ class MakePredictiveCallArgument {
          * @public
          * @readonly
          */
-        readonly correlatorData: OPTIONAL<CorrelatorData>,
+        readonly correlatorData?: OPTIONAL<CorrelatorData>,
         /**
          * @summary `callCharacteristics`.
          * @description
@@ -206,7 +206,7 @@ class MakePredictiveCallArgument {
          * @public
          * @readonly
          */
-        readonly callCharacteristics: OPTIONAL<CallCharacteristics>,
+        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
         /**
          * @summary `userData`.
          * @description
@@ -217,7 +217,7 @@ class MakePredictiveCallArgument {
          * @public
          * @readonly
          */
-        readonly userData: OPTIONAL<UserData>,
+        readonly userData?: OPTIONAL<UserData>,
         /**
          * @summary `subjectOfCall`.
          * @description
@@ -227,7 +227,7 @@ class MakePredictiveCallArgument {
          * @public
          * @readonly
          */
-        readonly subjectOfCall: OPTIONAL<SubjectOfCall>,
+        readonly subjectOfCall?: OPTIONAL<SubjectOfCall>,
         /**
          * @summary `languagePreferences`.
          * @description
@@ -237,7 +237,7 @@ class MakePredictiveCallArgument {
          * @public
          * @readonly
          */
-        readonly languagePreferences: OPTIONAL<LanguagePreferences>,
+        readonly languagePreferences?: OPTIONAL<LanguagePreferences>,
         /**
          * @summary `extensions`.
          * @description
@@ -249,7 +249,7 @@ class MakePredictiveCallArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

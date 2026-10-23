@@ -134,15 +134,15 @@ class SMServingNode {
     readonly iPSMGWName: OPTIONAL<OCTET_STRING>;
 
     constructor (
-        sGSNName: OPTIONAL<OCTET_STRING>,
-        sGSNRealm: OPTIONAL<OCTET_STRING>,
-        sGSNNumber: OPTIONAL<OCTET_STRING>,
-        mMEName: OPTIONAL<OCTET_STRING>,
-        mMERealm: OPTIONAL<OCTET_STRING>,
-        mMENumberForMTSMS: OPTIONAL<OCTET_STRING>,
-        mSCNumber: OPTIONAL<OCTET_STRING>,
-        iPSMGWNumber: OPTIONAL<OCTET_STRING>,
-        iPSMGWName: OPTIONAL<OCTET_STRING>
+        sGSNName?: OPTIONAL<OCTET_STRING>,
+        sGSNRealm?: OPTIONAL<OCTET_STRING>,
+        sGSNNumber?: OPTIONAL<OCTET_STRING>,
+        mMEName?: OPTIONAL<OCTET_STRING>,
+        mMERealm?: OPTIONAL<OCTET_STRING>,
+        mMENumberForMTSMS?: OPTIONAL<OCTET_STRING>,
+        mSCNumber?: OPTIONAL<OCTET_STRING>,
+        iPSMGWNumber?: OPTIONAL<OCTET_STRING>,
+        iPSMGWName?: OPTIONAL<OCTET_STRING>
     ) {
         this.sGSNName = sGSNName;
         this.sGSNRealm = sGSNRealm;

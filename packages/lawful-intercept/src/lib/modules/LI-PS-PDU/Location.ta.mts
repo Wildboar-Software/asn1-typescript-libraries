@@ -135,11 +135,11 @@ class Location {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        umtsHI2Location: OPTIONAL<UmtsHI2Operations.Location>,
-        epsLocation: OPTIONAL<EpsHI2Operations.EPSLocation>,
-        wlanLocationAttributes: OPTIONAL<WlanLocationAttributes>,
-        eTSI671HI2Location: OPTIONAL<HI2Operations.Location>,
-        threeGPP33128UserLocation: OPTIONAL<TS33128Payloads.UserLocation>,
+        umtsHI2Location?: OPTIONAL<UmtsHI2Operations.Location>,
+        epsLocation?: OPTIONAL<EpsHI2Operations.EPSLocation>,
+        wlanLocationAttributes?: OPTIONAL<WlanLocationAttributes>,
+        eTSI671HI2Location?: OPTIONAL<HI2Operations.Location>,
+        threeGPP33128UserLocation?: OPTIONAL<TS33128Payloads.UserLocation>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.umtsHI2Location = umtsHI2Location;

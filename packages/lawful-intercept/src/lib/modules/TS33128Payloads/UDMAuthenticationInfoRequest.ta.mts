@@ -146,9 +146,9 @@ class UDMAuthenticationInfoRequest {
         rGAuthCtx: SubscriberIdentifier[],
         authType: PrimaryAuthenticationType,
         servingNetworkName: PLMNID,
-        aUSFInstanceID: OPTIONAL<NFID>,
-        cellCAGInfo: OPTIONAL<CAGID>,
-        n5GCIndicator: OPTIONAL<BOOLEAN>,
+        aUSFInstanceID?: OPTIONAL<NFID>,
+        cellCAGInfo?: OPTIONAL<CAGID>,
+        n5GCIndicator?: OPTIONAL<BOOLEAN>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.infoRequestType = infoRequestType;

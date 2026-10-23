@@ -51,8 +51,8 @@ class CurrencyFactorScale {
     public readonly currencyScale: OPTIONAL<CurrencyScale>;
 
     constructor (
-        currencyFactor: OPTIONAL<CurrencyFactor>,
-        currencyScale: OPTIONAL<CurrencyScale>
+        currencyFactor?: OPTIONAL<CurrencyFactor>,
+        currencyScale?: OPTIONAL<CurrencyScale>
     ) {
         this.currencyFactor = currencyFactor;
         this.currencyScale = currencyScale;

@@ -62,7 +62,7 @@ class ContextAttrAuditRequest {
          * @public
          * @readonly
          */
-        readonly topology: OPTIONAL<NULL>,
+        readonly topology?: OPTIONAL<NULL>,
         /**
          * @summary `emergency`.
          * @description
@@ -72,7 +72,7 @@ class ContextAttrAuditRequest {
          * @public
          * @readonly
          */
-        readonly emergency: OPTIONAL<NULL>,
+        readonly emergency?: OPTIONAL<NULL>,
         /**
          * @summary `priority`.
          * @description
@@ -82,7 +82,7 @@ class ContextAttrAuditRequest {
          * @public
          * @readonly
          */
-        readonly priority: OPTIONAL<NULL>,
+        readonly priority?: OPTIONAL<NULL>,
         /**
          * @summary `iepscallind`.
          * @description
@@ -92,7 +92,7 @@ class ContextAttrAuditRequest {
          * @public
          * @readonly
          */
-        readonly iepscallind: OPTIONAL<NULL>,
+        readonly iepscallind?: OPTIONAL<NULL>,
         /**
          * @summary `contextPropAud`.
          * @description
@@ -104,7 +104,7 @@ class ContextAttrAuditRequest {
          * @public
          * @readonly
          */
-        readonly contextPropAud: OPTIONAL<IndAudPropertyParm[]>,
+        readonly contextPropAud?: OPTIONAL<IndAudPropertyParm[]>,
         /**
          * @summary `selectpriority`.
          * @description
@@ -115,7 +115,7 @@ class ContextAttrAuditRequest {
          * @public
          * @readonly
          */
-        readonly selectpriority: OPTIONAL<INTEGER>,
+        readonly selectpriority?: OPTIONAL<INTEGER>,
         /**
          * @summary `selectemergency`.
          * @description
@@ -127,7 +127,7 @@ class ContextAttrAuditRequest {
          * @public
          * @readonly
          */
-        readonly selectemergency: OPTIONAL<BOOLEAN>,
+        readonly selectemergency?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `selectiepscallind`.
          * @description
@@ -138,7 +138,7 @@ class ContextAttrAuditRequest {
          * @public
          * @readonly
          */
-        readonly selectiepscallind: OPTIONAL<BOOLEAN>,
+        readonly selectiepscallind?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `selectLogic`.
          * @description
@@ -149,7 +149,7 @@ class ContextAttrAuditRequest {
          * @public
          * @readonly
          */
-        readonly selectLogic: OPTIONAL<SelectLogic>,
+        readonly selectLogic?: OPTIONAL<SelectLogic>,
         /**
          * @summary Extensions that are not recognized.
          * @description

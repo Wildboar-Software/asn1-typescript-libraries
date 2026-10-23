@@ -45,7 +45,7 @@ class ChangeMonitorFilterResult {
          * @public
          * @readonly
          */
-        readonly actualFilterList: OPTIONAL<MonitorFilter>,
+        readonly actualFilterList?: OPTIONAL<MonitorFilter>,
         /**
          * @summary `extensions`.
          * @description
@@ -55,7 +55,7 @@ class ChangeMonitorFilterResult {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

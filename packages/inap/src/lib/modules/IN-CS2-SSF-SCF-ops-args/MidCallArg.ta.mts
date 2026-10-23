@@ -133,16 +133,16 @@ class MidCallArg {
 
     constructor (
         dpSpecificCommonParameters: DpSpecificCommonParameters,
-        calledPartyBusinessGroupID: OPTIONAL<CalledPartyBusinessGroupID>,
-        calledPartySubaddress: OPTIONAL<CalledPartySubaddress>,
-        callingPartyBusinessGroupID: OPTIONAL<CallingPartyBusinessGroupID>,
-        callingPartySubaddress: OPTIONAL<CallingPartySubaddress>,
-        featureRequestIndicator: OPTIONAL<FeatureRequestIndicator>,
-        extensions: OPTIONAL<ExtensionField[]>,
-        carrier: OPTIONAL<Carrier>,
-        componentType: OPTIONAL<ComponentType>,
-        component: OPTIONAL<Component>,
-        componentCorrelationID: OPTIONAL<ComponentCorrelationID>,
+        calledPartyBusinessGroupID?: OPTIONAL<CalledPartyBusinessGroupID>,
+        calledPartySubaddress?: OPTIONAL<CalledPartySubaddress>,
+        callingPartyBusinessGroupID?: OPTIONAL<CallingPartyBusinessGroupID>,
+        callingPartySubaddress?: OPTIONAL<CallingPartySubaddress>,
+        featureRequestIndicator?: OPTIONAL<FeatureRequestIndicator>,
+        extensions?: OPTIONAL<ExtensionField[]>,
+        carrier?: OPTIONAL<Carrier>,
+        componentType?: OPTIONAL<ComponentType>,
+        component?: OPTIONAL<Component>,
+        componentCorrelationID?: OPTIONAL<ComponentCorrelationID>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.dpSpecificCommonParameters = dpSpecificCommonParameters;

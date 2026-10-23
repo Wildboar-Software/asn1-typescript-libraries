@@ -90,8 +90,8 @@ class AAnFStartOfInterceptWithEstablishedAKMAKeyMaterial {
 
     constructor (
         aKID: NAI,
-        kAKMA: OPTIONAL<KAKMA>,
-        aFKeyList: OPTIONAL<AFKeyInfo[]>,
+        kAKMA?: OPTIONAL<KAKMA>,
+        aFKeyList?: OPTIONAL<AFKeyInfo[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.aKID = aKID;

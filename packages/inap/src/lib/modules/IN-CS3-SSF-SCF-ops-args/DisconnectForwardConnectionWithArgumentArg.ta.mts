@@ -70,9 +70,9 @@ class DisconnectForwardConnectionWithArgumentArg {
 
     constructor (
         partyToDisconnect: DisconnectForwardConnectionWithArgumentArg_partyToDisconnect,
-        extensions: OPTIONAL<Extensions>,
-        uSIServiceIndicator: OPTIONAL<USIServiceIndicator>,
-        uSIInformation: OPTIONAL<USIInformation>,
+        extensions?: OPTIONAL<Extensions>,
+        uSIServiceIndicator?: OPTIONAL<USIServiceIndicator>,
+        uSIInformation?: OPTIONAL<USIInformation>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.partyToDisconnect = partyToDisconnect;

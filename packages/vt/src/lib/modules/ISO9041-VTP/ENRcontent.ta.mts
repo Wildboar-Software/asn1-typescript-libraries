@@ -54,7 +54,7 @@ class ENRcontent {
          * @public
          * @readonly
          */
-        readonly vteChoice: OPTIONAL<BOOLEAN>,
+        readonly vteChoice?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `retList`.
          * @description
@@ -63,7 +63,7 @@ class ENRcontent {
          * @public
          * @readonly
          */
-        readonly retList: OPTIONAL<PrintableString[]>
+        readonly retList?: OPTIONAL<PrintableString[]>
     ) {}
 
     /**

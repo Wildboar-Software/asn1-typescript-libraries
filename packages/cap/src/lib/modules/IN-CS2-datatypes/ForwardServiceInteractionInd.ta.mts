@@ -49,19 +49,19 @@ class ForwardServiceInteractionInd {
          * @public
          * @readonly
          */
-        readonly conferenceTreatmentIndicator: OPTIONAL<OCTET_STRING>,
+        readonly conferenceTreatmentIndicator?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `callDiversionTreatmentIndicator`.
          * @public
          * @readonly
          */
-        readonly callDiversionTreatmentIndicator: OPTIONAL<OCTET_STRING>,
+        readonly callDiversionTreatmentIndicator?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `callOfferingTreatmentIndicator`.
          * @public
          * @readonly
          */
-        readonly callOfferingTreatmentIndicator: OPTIONAL<OCTET_STRING>
+        readonly callOfferingTreatmentIndicator?: OPTIONAL<OCTET_STRING>
     ) {
         if (conferenceTreatmentIndicator !== undefined && conferenceTreatmentIndicator.length !== 1) {
             throw new ASN1SizeError("ForwardServiceInteractionInd.conferenceTreatmentIndicator violates SIZE constraint");

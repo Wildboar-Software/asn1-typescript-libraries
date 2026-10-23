@@ -26,7 +26,7 @@ import { type ChangeOfPositionControlInfo, _decode_ChangeOfPositionControlInfo, 
  */
 export class DpSpecificCriteriaAlt {
     constructor (
-        readonly changeOfPositionControlInfo: OPTIONAL<ChangeOfPositionControlInfo>,
+        readonly changeOfPositionControlInfo?: OPTIONAL<ChangeOfPositionControlInfo>,
         /**
          * @summary `interDigitTimeout`.
          * @description
@@ -36,7 +36,7 @@ export class DpSpecificCriteriaAlt {
          * @public
          * @readonly
          */
-        readonly interDigitTimeout: OPTIONAL<INTEGER>,
+        readonly interDigitTimeout?: OPTIONAL<INTEGER>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {
         if (interDigitTimeout !== undefined && (typeof interDigitTimeout === "bigint" ? (interDigitTimeout < 1n || interDigitTimeout > 127n) : (interDigitTimeout < 1 || interDigitTimeout > 127))) {

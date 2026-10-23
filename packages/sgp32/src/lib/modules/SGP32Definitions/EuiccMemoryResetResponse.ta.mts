@@ -55,7 +55,7 @@ class EuiccMemoryResetResponse {
          * @public
          * @readonly
          */
-        readonly resetEimResult: OPTIONAL<EuiccMemoryResetResponse_resetEimResult>,
+        readonly resetEimResult?: OPTIONAL<EuiccMemoryResetResponse_resetEimResult>,
         /**
          * @summary `resetImmediateEnableConfigResult`.
          * @description
@@ -65,7 +65,7 @@ class EuiccMemoryResetResponse {
          * @public
          * @readonly
          */
-        readonly resetImmediateEnableConfigResult: OPTIONAL<EuiccMemoryResetResponse_resetImmediateEnableConfigResult>
+        readonly resetImmediateEnableConfigResult?: OPTIONAL<EuiccMemoryResetResponse_resetImmediateEnableConfigResult>
     ) {}
 
     /**

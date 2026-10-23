@@ -68,8 +68,8 @@ class UERadioCapability {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        uERadioCapibilityNR: OPTIONAL<OCTET_STRING>,
-        uERadioCapabilityEUTRA: OPTIONAL<OCTET_STRING>,
+        uERadioCapibilityNR?: OPTIONAL<OCTET_STRING>,
+        uERadioCapabilityEUTRA?: OPTIONAL<OCTET_STRING>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.uERadioCapibilityNR = uERadioCapibilityNR;

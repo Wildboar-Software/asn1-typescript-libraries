@@ -58,7 +58,7 @@ class InsertSubscriberDataRes {
          * @public
          * @readonly
          */
-        readonly teleserviceList: OPTIONAL<TeleserviceList>,
+        readonly teleserviceList?: OPTIONAL<TeleserviceList>,
         /**
          * @summary `bearerServiceList`.
          * @description
@@ -69,7 +69,7 @@ class InsertSubscriberDataRes {
          * @public
          * @readonly
          */
-        readonly bearerServiceList: OPTIONAL<BearerServiceList>,
+        readonly bearerServiceList?: OPTIONAL<BearerServiceList>,
         /**
          * @summary `ss_List`.
          * @description
@@ -80,7 +80,7 @@ class InsertSubscriberDataRes {
          * @public
          * @readonly
          */
-        readonly ss_List: OPTIONAL<SS_List>,
+        readonly ss_List?: OPTIONAL<SS_List>,
         /**
          * @summary `odb_GeneralData`.
          * @description
@@ -91,7 +91,7 @@ class InsertSubscriberDataRes {
          * @public
          * @readonly
          */
-        readonly odb_GeneralData: OPTIONAL<ODB_GeneralData>,
+        readonly odb_GeneralData?: OPTIONAL<ODB_GeneralData>,
         /**
          * @summary `regionalSubscriptionResponse`.
          * @description
@@ -103,7 +103,7 @@ class InsertSubscriberDataRes {
          * @public
          * @readonly
          */
-        readonly regionalSubscriptionResponse: OPTIONAL<RegionalSubscriptionResponse>,
+        readonly regionalSubscriptionResponse?: OPTIONAL<RegionalSubscriptionResponse>,
         /**
          * @summary `supportedCamelPhases`.
          * @description
@@ -115,13 +115,13 @@ class InsertSubscriberDataRes {
          * @public
          * @readonly
          */
-        readonly supportedCamelPhases: OPTIONAL<SupportedCamelPhases>,
+        readonly supportedCamelPhases?: OPTIONAL<SupportedCamelPhases>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `offeredCamel4CSIs`.
          * @description
@@ -132,7 +132,7 @@ class InsertSubscriberDataRes {
          * @public
          * @readonly
          */
-        readonly offeredCamel4CSIs: OPTIONAL<OfferedCamel4CSIs>,
+        readonly offeredCamel4CSIs?: OPTIONAL<OfferedCamel4CSIs>,
         /**
          * @summary `supportedFeatures`.
          * @description
@@ -143,7 +143,7 @@ class InsertSubscriberDataRes {
          * @public
          * @readonly
          */
-        readonly supportedFeatures: OPTIONAL<SupportedFeatures>,
+        readonly supportedFeatures?: OPTIONAL<SupportedFeatures>,
         /**
          * @summary `ext_SupportedFeatures`.
          * @description
@@ -154,7 +154,7 @@ class InsertSubscriberDataRes {
          * @public
          * @readonly
          */
-        readonly ext_SupportedFeatures: OPTIONAL<Ext_SupportedFeatures>,
+        readonly ext_SupportedFeatures?: OPTIONAL<Ext_SupportedFeatures>,
         /**
          * @summary Extensions that are not recognized.
          * @public

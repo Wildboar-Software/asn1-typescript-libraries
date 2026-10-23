@@ -92,7 +92,7 @@ class DurationCurrency {
         dAmount: Amount,
         dChargingType: ChargingType,
         dTime: Time,
-        dGranularity: OPTIONAL<Time>
+        dGranularity?: OPTIONAL<Time>
     ) {
         this.dCurrency = dCurrency;
         this.dAmount = dAmount;

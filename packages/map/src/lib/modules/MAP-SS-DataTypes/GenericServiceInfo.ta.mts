@@ -59,7 +59,7 @@ class GenericServiceInfo {
          * @public
          * @readonly
          */
-        readonly cliRestrictionOption: OPTIONAL<CliRestrictionOption>,
+        readonly cliRestrictionOption?: OPTIONAL<CliRestrictionOption>,
         /**
          * @summary `maximumEntitledPriority`.
          * @description
@@ -69,7 +69,7 @@ class GenericServiceInfo {
          * @public
          * @readonly
          */
-        readonly maximumEntitledPriority: OPTIONAL<EMLPP_Priority>,
+        readonly maximumEntitledPriority?: OPTIONAL<EMLPP_Priority>,
         /**
          * @summary `defaultPriority`.
          * @description
@@ -79,7 +79,7 @@ class GenericServiceInfo {
          * @public
          * @readonly
          */
-        readonly defaultPriority: OPTIONAL<EMLPP_Priority>,
+        readonly defaultPriority?: OPTIONAL<EMLPP_Priority>,
         /**
          * @summary `ccbs_FeatureList`.
          * @description
@@ -89,7 +89,7 @@ class GenericServiceInfo {
          * @public
          * @readonly
          */
-        readonly ccbs_FeatureList: OPTIONAL<CCBS_FeatureList>,
+        readonly ccbs_FeatureList?: OPTIONAL<CCBS_FeatureList>,
         /**
          * @summary `nbrSB`.
          * @description
@@ -99,7 +99,7 @@ class GenericServiceInfo {
          * @public
          * @readonly
          */
-        readonly nbrSB: OPTIONAL<MaxMC_Bearers>,
+        readonly nbrSB?: OPTIONAL<MaxMC_Bearers>,
         /**
          * @summary `nbrUser`.
          * @description
@@ -109,7 +109,7 @@ class GenericServiceInfo {
          * @public
          * @readonly
          */
-        readonly nbrUser: OPTIONAL<MC_Bearers>,
+        readonly nbrUser?: OPTIONAL<MC_Bearers>,
         /**
          * @summary `nbrSN`.
          * @description
@@ -119,7 +119,7 @@ class GenericServiceInfo {
          * @public
          * @readonly
          */
-        readonly nbrSN: OPTIONAL<MC_Bearers>,
+        readonly nbrSN?: OPTIONAL<MC_Bearers>,
         /**
          * @summary Extensions that are not recognized.
          * @public

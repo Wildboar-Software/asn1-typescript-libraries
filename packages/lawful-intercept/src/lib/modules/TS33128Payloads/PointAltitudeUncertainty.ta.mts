@@ -130,7 +130,7 @@ class PointAltitudeUncertainty {
         uncertaintyEllipse: UncertaintyEllipse,
         deprecatedUncertaintyAltitude: Uncertainty,
         confidence: Confidence,
-        uncertaintyAltitudeSBI: OPTIONAL<UncertaintySBI>,
+        uncertaintyAltitudeSBI?: OPTIONAL<UncertaintySBI>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.point = point;

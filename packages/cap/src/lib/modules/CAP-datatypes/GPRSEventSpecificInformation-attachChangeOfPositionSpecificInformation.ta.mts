@@ -22,7 +22,7 @@ import { LocationInformationGPRS, _decode_LocationInformationGPRS, _encode_Locat
  */
 export class GPRSEventSpecificInformation_attachChangeOfPositionSpecificInformation {
     constructor (
-        readonly locationInformationGPRS: OPTIONAL<LocationInformationGPRS>,
+        readonly locationInformationGPRS?: OPTIONAL<LocationInformationGPRS>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}
 

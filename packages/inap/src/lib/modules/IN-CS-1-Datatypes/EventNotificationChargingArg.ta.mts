@@ -83,7 +83,7 @@ class EventNotificationChargingArg {
         eventSpecificInformationCharging: OPTIONAL<EventSpecificInformationCharging>,
         legID: OPTIONAL<LegID>,
         extensions: ExtensionField[],
-        monitorMode: OPTIONAL<MonitorMode>,
+        monitorMode?: OPTIONAL<MonitorMode>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.eventTypeCharging = eventTypeCharging;

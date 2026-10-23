@@ -38,7 +38,7 @@ export class Burst {
          * @public
          * @readonly
          */
-        readonly numberOfBursts: OPTIONAL<INTEGER>,
+        readonly numberOfBursts?: OPTIONAL<INTEGER>,
         /**
          * @summary `burstInterval`.
          * @description
@@ -49,7 +49,7 @@ export class Burst {
          * @public
          * @readonly
          */
-        readonly burstInterval: OPTIONAL<INTEGER>,
+        readonly burstInterval?: OPTIONAL<INTEGER>,
         /**
          * @summary `numberOfTonesInBurst`.
          * @description
@@ -60,7 +60,7 @@ export class Burst {
          * @public
          * @readonly
          */
-        readonly numberOfTonesInBurst: OPTIONAL<INTEGER>,
+        readonly numberOfTonesInBurst?: OPTIONAL<INTEGER>,
         /**
          * @summary `toneDuration`.
          * @description
@@ -71,7 +71,7 @@ export class Burst {
          * @public
          * @readonly
          */
-        readonly toneDuration: OPTIONAL<INTEGER>,
+        readonly toneDuration?: OPTIONAL<INTEGER>,
         /**
          * @summary `toneInterval`.
          * @description
@@ -82,7 +82,7 @@ export class Burst {
          * @public
          * @readonly
          */
-        readonly toneInterval: OPTIONAL<INTEGER>,
+        readonly toneInterval?: OPTIONAL<INTEGER>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {
         if (numberOfBursts !== undefined && (typeof numberOfBursts === "bigint" ? (numberOfBursts < 1n || numberOfBursts > 3n) : (numberOfBursts < 1 || numberOfBursts > 3))) {

@@ -71,8 +71,8 @@ class MBMSNodeList_Item_mBMSNODELIST {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        mbmsnodeIPAdress: OPTIONAL<IPAddress>,
-        mbmsnodeName: OPTIONAL<UTF8String>,
+        mbmsnodeIPAdress?: OPTIONAL<IPAddress>,
+        mbmsnodeName?: OPTIONAL<UTF8String>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.mbmsnodeIPAdress = mbmsnodeIPAdress;

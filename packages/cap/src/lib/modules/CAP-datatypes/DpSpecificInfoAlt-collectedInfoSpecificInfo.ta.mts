@@ -32,7 +32,7 @@ export class DpSpecificInfoAlt_collectedInfoSpecificInfo {
          * @public
          * @readonly
          */
-        readonly calledPartyNumber: OPTIONAL<CalledPartyNumber>,
+        readonly calledPartyNumber?: OPTIONAL<CalledPartyNumber>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}
 

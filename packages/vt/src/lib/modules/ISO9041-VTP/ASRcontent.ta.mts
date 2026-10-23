@@ -59,7 +59,7 @@ class ASRcontent {
          * @public
          * @readonly
          */
-        readonly implementation: OPTIONAL<ImplementationIdent>,
+        readonly implementation?: OPTIONAL<ImplementationIdent>,
         /**
          * @summary `protocol_verison`.
          * @description
@@ -70,7 +70,7 @@ class ASRcontent {
          * @public
          * @readonly
          */
-        readonly protocol_verison: OPTIONAL<ProtocolVersion>,
+        readonly protocol_verison?: OPTIONAL<ProtocolVersion>,
         /**
          * @summary `profile_arguments`.
          * @description
@@ -79,7 +79,7 @@ class ASRcontent {
          * @public
          * @readonly
          */
-        readonly profile_arguments: OPTIONAL<ProfileArgumValueList>,
+        readonly profile_arguments?: OPTIONAL<ProfileArgumValueList>,
         /**
          * @summary `functional_units`.
          * @description
@@ -87,7 +87,7 @@ class ASRcontent {
          * @public
          * @readonly
          */
-        readonly functional_units: OPTIONAL<FunctionalUnits>
+        readonly functional_units?: OPTIONAL<FunctionalUnits>
     ) {}
 
     /**

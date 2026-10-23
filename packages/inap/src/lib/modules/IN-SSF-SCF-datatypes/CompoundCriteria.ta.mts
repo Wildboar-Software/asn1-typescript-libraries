@@ -43,7 +43,7 @@ class CompoundCriteria {
 
     constructor (
         basicGapCriteria: BasicGapCriteria,
-        scfID: OPTIONAL<ScfID>
+        scfID?: OPTIONAL<ScfID>
     ) {
         this.basicGapCriteria = basicGapCriteria;
         this.scfID = scfID;

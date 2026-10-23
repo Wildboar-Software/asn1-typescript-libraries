@@ -74,7 +74,7 @@ class DNDActivateArg {
     constructor (
         basicService: BasicService,
         servedUserNr: PartyNumber,
-        argumentExtension: OPTIONAL<DNDActivateArg_argumentExtension>
+        argumentExtension?: OPTIONAL<DNDActivateArg_argumentExtension>
     ) {
         this.basicService = basicService;
         this.servedUserNr = servedUserNr;

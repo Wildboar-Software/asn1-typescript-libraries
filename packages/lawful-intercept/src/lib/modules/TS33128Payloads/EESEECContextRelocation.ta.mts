@@ -129,9 +129,9 @@ class EESEECContextRelocation {
     constructor (
         eECID: UTF8String,
         eECContextID: UTF8String,
-        gPSI: OPTIONAL<GPSI>,
-        uELoc: OPTIONAL<Location>,
-        aCProfiles: OPTIONAL<ACProfiles>,
+        gPSI?: OPTIONAL<GPSI>,
+        uELoc?: OPTIONAL<Location>,
+        aCProfiles?: OPTIONAL<ACProfiles>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.eECID = eECID;

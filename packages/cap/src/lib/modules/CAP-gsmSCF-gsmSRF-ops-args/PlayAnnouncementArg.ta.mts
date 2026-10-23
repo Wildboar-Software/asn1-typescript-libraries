@@ -76,7 +76,7 @@ class PlayAnnouncementArg {
          * @public
          * @readonly
          */
-        readonly disconnectFromIPForbidden: OPTIONAL<BOOLEAN>,
+        readonly disconnectFromIPForbidden?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `requestAnnouncementCompleteNotification`.
          * @description
@@ -89,13 +89,13 @@ class PlayAnnouncementArg {
          * @public
          * @readonly
          */
-        readonly requestAnnouncementCompleteNotification: OPTIONAL<BOOLEAN>,
+        readonly requestAnnouncementCompleteNotification?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<Extensions>,
+        readonly extensions?: OPTIONAL<Extensions>,
         /**
          * @summary `callSegmentID`.
          * @description
@@ -107,7 +107,7 @@ class PlayAnnouncementArg {
          * @public
          * @readonly
          */
-        readonly callSegmentID: OPTIONAL<CallSegmentID>,
+        readonly callSegmentID?: OPTIONAL<CallSegmentID>,
         /**
          * @summary `requestAnnouncementStartedNotification`.
          * @description
@@ -120,7 +120,7 @@ class PlayAnnouncementArg {
          * @public
          * @readonly
          */
-        readonly requestAnnouncementStartedNotification: OPTIONAL<BOOLEAN>,
+        readonly requestAnnouncementStartedNotification?: OPTIONAL<BOOLEAN>,
         /**
          * @summary Extensions that are not recognized.
          * @public

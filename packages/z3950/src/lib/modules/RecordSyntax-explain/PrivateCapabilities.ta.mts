@@ -65,9 +65,9 @@ class PrivateCapabilities {
     readonly description: OPTIONAL<HumanString[]>;
 
     constructor (
-        operators: OPTIONAL<PrivateCapabilities_operators_Item[]>,
-        searchKeys: OPTIONAL<SearchKey[]>,
-        description: OPTIONAL<HumanString[]>
+        operators?: OPTIONAL<PrivateCapabilities_operators_Item[]>,
+        searchKeys?: OPTIONAL<SearchKey[]>,
+        description?: OPTIONAL<HumanString[]>
     ) {
         this.operators = operators;
         this.searchKeys = searchKeys;

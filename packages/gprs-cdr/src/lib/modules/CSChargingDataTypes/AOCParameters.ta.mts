@@ -86,13 +86,13 @@ class AOCParameters {
     readonly e7: OPTIONAL<INTEGER>;
 
     constructor (
-        e1: OPTIONAL<INTEGER>,
-        e2: OPTIONAL<INTEGER>,
-        e3: OPTIONAL<INTEGER>,
-        e4: OPTIONAL<INTEGER>,
-        e5: OPTIONAL<INTEGER>,
-        e6: OPTIONAL<INTEGER>,
-        e7: OPTIONAL<INTEGER>
+        e1?: OPTIONAL<INTEGER>,
+        e2?: OPTIONAL<INTEGER>,
+        e3?: OPTIONAL<INTEGER>,
+        e4?: OPTIONAL<INTEGER>,
+        e5?: OPTIONAL<INTEGER>,
+        e6?: OPTIONAL<INTEGER>,
+        e7?: OPTIONAL<INTEGER>
     ) {
         this.e1 = e1;
         this.e2 = e2;

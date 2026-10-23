@@ -173,13 +173,13 @@ class MERERecord {
 
     constructor (
         recordType: RecordType,
-        retransmission: OPTIONAL<NULL>,
-        serviceContextID: OPTIONAL<UTF8String>,
-        nodeID: OPTIONAL<IA5String>,
-        recordTimeStamp: OPTIONAL<OCTET_STRING>,
-        localRecordSequenceNumber: OPTIONAL<INTEGER>,
-        listofMonitoringEventReportData: OPTIONAL<MonitoringEventReportData[]>,
-        recordExtensions: OPTIONAL<ManagementExtension[]>
+        retransmission?: OPTIONAL<NULL>,
+        serviceContextID?: OPTIONAL<UTF8String>,
+        nodeID?: OPTIONAL<IA5String>,
+        recordTimeStamp?: OPTIONAL<OCTET_STRING>,
+        localRecordSequenceNumber?: OPTIONAL<INTEGER>,
+        listofMonitoringEventReportData?: OPTIONAL<MonitoringEventReportData[]>,
+        recordExtensions?: OPTIONAL<ManagementExtension[]>
     ) {
         this.recordType = recordType;
         this.retransmission = retransmission;

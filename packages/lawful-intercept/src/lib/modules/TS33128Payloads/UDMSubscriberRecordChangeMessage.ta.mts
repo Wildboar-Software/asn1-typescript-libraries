@@ -242,7 +242,7 @@ class UDMSubscriberRecordChangeMessage {
         oldGPSI: OPTIONAL<GPSI>,
         oldserviceID: OPTIONAL<ServiceID>,
         subscriberRecordChangeMethod: UDMSubscriberRecordChangeMethod,
-        serviceID: OPTIONAL<ServiceID>,
+        serviceID?: OPTIONAL<ServiceID>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.sUPI = sUPI;

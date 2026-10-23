@@ -77,7 +77,7 @@ class DefineEventConditionList_Request {
          * @public
          * @readonly
          */
-        readonly listOfEventConditionListName: OPTIONAL<ObjectName[]>
+        readonly listOfEventConditionListName?: OPTIONAL<ObjectName[]>
     ) {}
 
     /**

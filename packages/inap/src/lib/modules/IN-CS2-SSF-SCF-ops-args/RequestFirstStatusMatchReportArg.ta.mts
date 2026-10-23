@@ -87,12 +87,12 @@ class RequestFirstStatusMatchReportArg {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        resourceID: OPTIONAL<ResourceID>,
-        resourceStatus: OPTIONAL<ResourceStatus>,
-        correlationID: OPTIONAL<CorrelationID>,
-        monitorDuration: OPTIONAL<Duration>,
-        extensions: OPTIONAL<ExtensionField[]>,
-        bearerCapability: OPTIONAL<BearerCapability>,
+        resourceID?: OPTIONAL<ResourceID>,
+        resourceStatus?: OPTIONAL<ResourceStatus>,
+        correlationID?: OPTIONAL<CorrelationID>,
+        monitorDuration?: OPTIONAL<Duration>,
+        extensions?: OPTIONAL<ExtensionField[]>,
+        bearerCapability?: OPTIONAL<BearerCapability>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.resourceID = resourceID;

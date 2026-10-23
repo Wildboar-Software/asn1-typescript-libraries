@@ -52,7 +52,7 @@ class ApplicationReference {
          * @public
          * @readonly
          */
-        readonly ap_title: OPTIONAL<AP_title>,
+        readonly ap_title?: OPTIONAL<AP_title>,
         /**
          * @summary `ap_invocation_id`.
          * @description
@@ -62,7 +62,7 @@ class ApplicationReference {
          * @public
          * @readonly
          */
-        readonly ap_invocation_id: OPTIONAL<AP_invocation_identifier>,
+        readonly ap_invocation_id?: OPTIONAL<AP_invocation_identifier>,
         /**
          * @summary `ae_qualifier`.
          * @description
@@ -72,7 +72,7 @@ class ApplicationReference {
          * @public
          * @readonly
          */
-        readonly ae_qualifier: OPTIONAL<AE_qualifier>,
+        readonly ae_qualifier?: OPTIONAL<AE_qualifier>,
         /**
          * @summary `ae_invocation_id`.
          * @description
@@ -82,7 +82,7 @@ class ApplicationReference {
          * @public
          * @readonly
          */
-        readonly ae_invocation_id: OPTIONAL<AE_invocation_identifier>
+        readonly ae_invocation_id?: OPTIONAL<AE_invocation_identifier>
     ) {}
 
     /**

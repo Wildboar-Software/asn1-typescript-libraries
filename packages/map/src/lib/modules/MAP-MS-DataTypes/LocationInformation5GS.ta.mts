@@ -64,7 +64,7 @@ class LocationInformation5GS {
          * @public
          * @readonly
          */
-        readonly nrCellGlobalIdentity: OPTIONAL<NR_CGI>,
+        readonly nrCellGlobalIdentity?: OPTIONAL<NR_CGI>,
         /**
          * @summary `e_utranCellGlobalIdentity`.
          * @description
@@ -74,7 +74,7 @@ class LocationInformation5GS {
          * @public
          * @readonly
          */
-        readonly e_utranCellGlobalIdentity: OPTIONAL<E_UTRAN_CGI>,
+        readonly e_utranCellGlobalIdentity?: OPTIONAL<E_UTRAN_CGI>,
         /**
          * @summary `geographicalInformation`.
          * @description
@@ -85,7 +85,7 @@ class LocationInformation5GS {
          * @public
          * @readonly
          */
-        readonly geographicalInformation: OPTIONAL<GeographicalInformation>,
+        readonly geographicalInformation?: OPTIONAL<GeographicalInformation>,
         /**
          * @summary `geodeticInformation`.
          * @description
@@ -96,7 +96,7 @@ class LocationInformation5GS {
          * @public
          * @readonly
          */
-        readonly geodeticInformation: OPTIONAL<GeodeticInformation>,
+        readonly geodeticInformation?: OPTIONAL<GeodeticInformation>,
         /**
          * @summary `amf_address`.
          * @description
@@ -106,7 +106,7 @@ class LocationInformation5GS {
          * @public
          * @readonly
          */
-        readonly amf_address: OPTIONAL<FQDN>,
+        readonly amf_address?: OPTIONAL<FQDN>,
         /**
          * @summary `trackingAreaIdentity`.
          * @description
@@ -116,7 +116,7 @@ class LocationInformation5GS {
          * @public
          * @readonly
          */
-        readonly trackingAreaIdentity: OPTIONAL<TA_Id>,
+        readonly trackingAreaIdentity?: OPTIONAL<TA_Id>,
         /**
          * @summary `currentLocationRetrieved`.
          * @description
@@ -127,7 +127,7 @@ class LocationInformation5GS {
          * @public
          * @readonly
          */
-        readonly currentLocationRetrieved: OPTIONAL<NULL>,
+        readonly currentLocationRetrieved?: OPTIONAL<NULL>,
         /**
          * @summary `ageOfLocationInformation`.
          * @description
@@ -137,7 +137,7 @@ class LocationInformation5GS {
          * @public
          * @readonly
          */
-        readonly ageOfLocationInformation: OPTIONAL<AgeOfLocationInformation>,
+        readonly ageOfLocationInformation?: OPTIONAL<AgeOfLocationInformation>,
         /**
          * @summary `vplmnId`.
          * @description
@@ -147,7 +147,7 @@ class LocationInformation5GS {
          * @public
          * @readonly
          */
-        readonly vplmnId: OPTIONAL<PLMN_Id>,
+        readonly vplmnId?: OPTIONAL<PLMN_Id>,
         /**
          * @summary `localtimeZone`.
          * @description
@@ -158,7 +158,7 @@ class LocationInformation5GS {
          * @public
          * @readonly
          */
-        readonly localtimeZone: OPTIONAL<TimeZone>,
+        readonly localtimeZone?: OPTIONAL<TimeZone>,
         /**
          * @summary `rat_Type`.
          * @description
@@ -169,13 +169,13 @@ class LocationInformation5GS {
          * @public
          * @readonly
          */
-        readonly rat_Type: OPTIONAL<Used_RAT_Type>,
+        readonly rat_Type?: OPTIONAL<Used_RAT_Type>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `nrTrackingAreaIdentity`.
          * @description
@@ -185,7 +185,7 @@ class LocationInformation5GS {
          * @public
          * @readonly
          */
-        readonly nrTrackingAreaIdentity: OPTIONAL<NR_TA_Id>,
+        readonly nrTrackingAreaIdentity?: OPTIONAL<NR_TA_Id>,
         /**
          * @summary Extensions that are not recognized.
          * @public

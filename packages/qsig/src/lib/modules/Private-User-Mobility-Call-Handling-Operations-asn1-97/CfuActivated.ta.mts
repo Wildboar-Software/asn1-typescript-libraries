@@ -85,8 +85,8 @@ class CfuActivated {
     constructor (
         divToAddress: Address,
         divOptions: SubscriptionOption,
-        pumName: OPTIONAL<Name>,
-        argExtension: OPTIONAL<PumiExtension>
+        pumName?: OPTIONAL<Name>,
+        argExtension?: OPTIONAL<PumiExtension>
     ) {
         this.divToAddress = divToAddress;
         this.divOptions = divOptions;

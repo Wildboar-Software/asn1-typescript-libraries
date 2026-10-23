@@ -83,8 +83,8 @@ class CalcCtatInfoUnit {
     constructor (
         authChallenge: AuthChallenge,
         authResponse: AuthResponse,
-        derivedCipherKey: OPTIONAL<DerivedCipherKey>,
-        calculationParam: OPTIONAL<CalculationParam>
+        derivedCipherKey?: OPTIONAL<DerivedCipherKey>,
+        calculationParam?: OPTIONAL<CalculationParam>
     ) {
         this.authChallenge = authChallenge;
         this.authResponse = authResponse;

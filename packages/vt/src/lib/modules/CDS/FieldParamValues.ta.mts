@@ -52,7 +52,7 @@ class FieldParamValues {
          * @public
          * @readonly
          */
-        readonly capability: OPTIONAL<BOOLEAN>,
+        readonly capability?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `maxFields`.
          * @description
@@ -61,7 +61,7 @@ class FieldParamValues {
          * @public
          * @readonly
          */
-        readonly maxFields: OPTIONAL<FieldParamValues_maxFields>,
+        readonly maxFields?: OPTIONAL<FieldParamValues_maxFields>,
         /**
          * @summary `maxFieldElements`.
          * @description
@@ -70,7 +70,7 @@ class FieldParamValues {
          * @public
          * @readonly
          */
-        readonly maxFieldElements: OPTIONAL<FieldParamValues_maxFieldElements>,
+        readonly maxFieldElements?: OPTIONAL<FieldParamValues_maxFieldElements>,
         /**
          * @summary `accessOutside`.
          * @description
@@ -80,7 +80,7 @@ class FieldParamValues {
          * @public
          * @readonly
          */
-        readonly accessOutside: OPTIONAL<FieldParamValues_accessOutside>
+        readonly accessOutside?: OPTIONAL<FieldParamValues_accessOutside>
     ) {}
 
     /**

@@ -110,13 +110,13 @@ class UpdateLocationArg {
          * @public
          * @readonly
          */
-        readonly lmsi: OPTIONAL<LMSI>,
+        readonly lmsi?: OPTIONAL<LMSI>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `vlr_Capability`.
          * @description
@@ -128,7 +128,7 @@ class UpdateLocationArg {
          * @public
          * @readonly
          */
-        readonly vlr_Capability: OPTIONAL<VLR_Capability>,
+        readonly vlr_Capability?: OPTIONAL<VLR_Capability>,
         /**
          * @summary `informPreviousNetworkEntity`.
          * @description
@@ -143,7 +143,7 @@ class UpdateLocationArg {
          * @public
          * @readonly
          */
-        readonly informPreviousNetworkEntity: OPTIONAL<NULL>,
+        readonly informPreviousNetworkEntity?: OPTIONAL<NULL>,
         /**
          * @summary `cs_LCS_NotSupportedByUE`.
          * @description
@@ -155,7 +155,7 @@ class UpdateLocationArg {
          * @public
          * @readonly
          */
-        readonly cs_LCS_NotSupportedByUE: OPTIONAL<NULL>,
+        readonly cs_LCS_NotSupportedByUE?: OPTIONAL<NULL>,
         /**
          * @summary `v_gmlc_Address`.
          * @description
@@ -167,7 +167,7 @@ class UpdateLocationArg {
          * @public
          * @readonly
          */
-        readonly v_gmlc_Address: OPTIONAL<GSN_Address>,
+        readonly v_gmlc_Address?: OPTIONAL<GSN_Address>,
         /**
          * @summary `add_info`.
          * @description
@@ -180,7 +180,7 @@ class UpdateLocationArg {
          * @public
          * @readonly
          */
-        readonly add_info: OPTIONAL<ADD_Info>,
+        readonly add_info?: OPTIONAL<ADD_Info>,
         /**
          * @summary `pagingArea`.
          * @description
@@ -193,7 +193,7 @@ class UpdateLocationArg {
          * @public
          * @readonly
          */
-        readonly pagingArea: OPTIONAL<PagingArea>,
+        readonly pagingArea?: OPTIONAL<PagingArea>,
         /**
          * @summary `skipSubscriberDataUpdate`.
          * @description
@@ -207,7 +207,7 @@ class UpdateLocationArg {
          * @public
          * @readonly
          */
-        readonly skipSubscriberDataUpdate: OPTIONAL<NULL>,
+        readonly skipSubscriberDataUpdate?: OPTIONAL<NULL>,
         /**
          * @summary `restorationIndicator`.
          * @description
@@ -222,7 +222,7 @@ class UpdateLocationArg {
          * @public
          * @readonly
          */
-        readonly restorationIndicator: OPTIONAL<NULL>,
+        readonly restorationIndicator?: OPTIONAL<NULL>,
         /**
          * @summary `eplmn_List`.
          * @description
@@ -234,7 +234,7 @@ class UpdateLocationArg {
          * @public
          * @readonly
          */
-        readonly eplmn_List: OPTIONAL<EPLMN_List>,
+        readonly eplmn_List?: OPTIONAL<EPLMN_List>,
         /**
          * @summary `mme_DiameterAddress`.
          * @description
@@ -247,7 +247,7 @@ class UpdateLocationArg {
          * @public
          * @readonly
          */
-        readonly mme_DiameterAddress: OPTIONAL<NetworkNodeDiameterAddress>,
+        readonly mme_DiameterAddress?: OPTIONAL<NetworkNodeDiameterAddress>,
         /**
          * @summary Extensions that are not recognized.
          * @public

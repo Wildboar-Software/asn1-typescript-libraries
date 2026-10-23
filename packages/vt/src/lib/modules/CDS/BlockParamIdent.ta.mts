@@ -45,7 +45,7 @@ class BlockParamIdent {
          * @public
          * @readonly
          */
-        readonly capability: OPTIONAL<NULL>,
+        readonly capability?: OPTIONAL<NULL>,
         /**
          * @summary `bound`.
          * @description
@@ -54,7 +54,7 @@ class BlockParamIdent {
          * @public
          * @readonly
          */
-        readonly bound: OPTIONAL<NULL>
+        readonly bound?: OPTIONAL<NULL>
     ) {}
 
     /**

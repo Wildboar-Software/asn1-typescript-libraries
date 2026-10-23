@@ -69,7 +69,7 @@ class GPRSSubscriptionData {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `apn_oi_Replacement`.
          * @description
@@ -79,7 +79,7 @@ class GPRSSubscriptionData {
          * @public
          * @readonly
          */
-        readonly apn_oi_Replacement: OPTIONAL<APN_OI_Replacement>,
+        readonly apn_oi_Replacement?: OPTIONAL<APN_OI_Replacement>,
         /**
          * @summary Extensions that are not recognized.
          * @public

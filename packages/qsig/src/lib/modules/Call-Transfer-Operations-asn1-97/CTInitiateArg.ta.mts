@@ -74,7 +74,7 @@ class CTInitiateArg {
     constructor (
         callIdentity: CallIdentity,
         rerouteingNumber: PartyNumber,
-        argumentExtension: OPTIONAL<CTInitiateArg_argumentExtension>
+        argumentExtension?: OPTIONAL<CTInitiateArg_argumentExtension>
     ) {
         this.callIdentity = callIdentity;
         this.rerouteingNumber = rerouteingNumber;

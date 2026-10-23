@@ -65,7 +65,7 @@ class AocInterimArg {
 
     constructor (
         interimCharge: AocInterimArg_interimCharge,
-        interimArgExtension: OPTIONAL<AocInterimArg_interimArgExtension>
+        interimArgExtension?: OPTIONAL<AocInterimArg_interimArgExtension>
     ) {
         this.interimCharge = interimCharge;
         this.interimArgExtension = interimArgExtension;

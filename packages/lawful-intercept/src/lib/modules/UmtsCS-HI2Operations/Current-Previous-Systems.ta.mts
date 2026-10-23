@@ -126,12 +126,12 @@ class Current_Previous_Systems {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        current_Serving_System_Identifier: OPTIONAL<OCTET_STRING>,
-        current_Serving_MSC_Number: OPTIONAL<OCTET_STRING>,
-        current_Serving_MSC_Address: OPTIONAL<OCTET_STRING>,
-        previous_Serving_System_Identifier: OPTIONAL<OCTET_STRING>,
-        previous_Serving_MSC_Number: OPTIONAL<OCTET_STRING>,
-        previous_Serving_MSC_Address: OPTIONAL<OCTET_STRING>,
+        current_Serving_System_Identifier?: OPTIONAL<OCTET_STRING>,
+        current_Serving_MSC_Number?: OPTIONAL<OCTET_STRING>,
+        current_Serving_MSC_Address?: OPTIONAL<OCTET_STRING>,
+        previous_Serving_System_Identifier?: OPTIONAL<OCTET_STRING>,
+        previous_Serving_MSC_Number?: OPTIONAL<OCTET_STRING>,
+        previous_Serving_MSC_Address?: OPTIONAL<OCTET_STRING>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.current_Serving_System_Identifier = current_Serving_System_Identifier;

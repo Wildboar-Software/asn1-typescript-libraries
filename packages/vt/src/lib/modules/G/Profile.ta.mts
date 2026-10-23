@@ -46,7 +46,7 @@ class Profile {
          * @public
          * @readonly
          */
-        readonly name: OPTIONAL<OBJECT_IDENTIFIER>,
+        readonly name?: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `argumentOfferList`.
          * @description
@@ -56,7 +56,7 @@ class Profile {
          * @public
          * @readonly
          */
-        readonly argumentOfferList: OPTIONAL<ProfileArgumOfferList>
+        readonly argumentOfferList?: OPTIONAL<ProfileArgumOfferList>
     ) {}
 
     /**

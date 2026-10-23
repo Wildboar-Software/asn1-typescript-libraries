@@ -103,11 +103,11 @@ class PumInterrogRes_Item {
     readonly argExtension: OPTIONAL<PumrExtension>;
 
     constructor (
-        basicService: OPTIONAL<BasicService>,
-        hostingAddr: OPTIONAL<PartyNumber>,
-        serviceOption: OPTIONAL<ServiceOption>,
-        interrogParams: OPTIONAL<SessionParams>,
-        argExtension: OPTIONAL<PumrExtension>
+        basicService?: OPTIONAL<BasicService>,
+        hostingAddr?: OPTIONAL<PartyNumber>,
+        serviceOption?: OPTIONAL<ServiceOption>,
+        interrogParams?: OPTIONAL<SessionParams>,
+        argExtension?: OPTIONAL<PumrExtension>
     ) {
         this.basicService = basicService;
         this.hostingAddr = hostingAddr;

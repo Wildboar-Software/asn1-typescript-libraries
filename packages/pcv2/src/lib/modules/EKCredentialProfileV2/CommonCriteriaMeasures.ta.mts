@@ -204,12 +204,12 @@ class CommonCriteriaMeasures {
         version: IA5String,
         assurancelevel: EvaluationAssuranceLevel,
         evaluationStatus: EvaluationStatus,
-        plus: OPTIONAL<BOOLEAN>,
-        strengthOfFunction: OPTIONAL<StrengthOfFunction>,
-        profileOid: OPTIONAL<OBJECT_IDENTIFIER>,
-        profileUri: OPTIONAL<URIReference>,
-        targetOid: OPTIONAL<OBJECT_IDENTIFIER>,
-        targetUri: OPTIONAL<URIReference>,
+        plus?: OPTIONAL<BOOLEAN>,
+        strengthOfFunction?: OPTIONAL<StrengthOfFunction>,
+        profileOid?: OPTIONAL<OBJECT_IDENTIFIER>,
+        profileUri?: OPTIONAL<URIReference>,
+        targetOid?: OPTIONAL<OBJECT_IDENTIFIER>,
+        targetUri?: OPTIONAL<URIReference>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.version = version;

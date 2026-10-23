@@ -72,8 +72,8 @@ class EMM5GMMStatus {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        eMMRegStatus: OPTIONAL<EMMRegStatus>,
-        fiveGMMStatus: OPTIONAL<FiveGMMStatus>,
+        eMMRegStatus?: OPTIONAL<EMMRegStatus>,
+        fiveGMMStatus?: OPTIONAL<FiveGMMStatus>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.eMMRegStatus = eMMRegStatus;

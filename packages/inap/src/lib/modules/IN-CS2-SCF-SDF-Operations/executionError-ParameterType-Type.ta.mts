@@ -68,10 +68,10 @@ class executionError_ParameterType_Type {
 
     constructor (
         problem: ExecutionProblem,
-        securityParameters: OPTIONAL<SecurityParameters> /* REPLICATED_COMPONENT */,
-        performer: OPTIONAL<DistinguishedName> /* REPLICATED_COMPONENT */,
-        aliasDereferenced: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
-        notification: OPTIONAL<Attribute[]> /* REPLICATED_COMPONENT */
+        securityParameters?: OPTIONAL<SecurityParameters> /* REPLICATED_COMPONENT */,
+        performer?: OPTIONAL<DistinguishedName> /* REPLICATED_COMPONENT */,
+        aliasDereferenced?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
+        notification?: OPTIONAL<Attribute[]> /* REPLICATED_COMPONENT */
     ) {
         this.problem = problem;
         this.securityParameters = securityParameters;

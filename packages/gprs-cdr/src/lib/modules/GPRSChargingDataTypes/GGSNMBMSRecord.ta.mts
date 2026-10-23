@@ -387,12 +387,12 @@ class GGSNMBMSRecord {
         recordOpeningTime: OCTET_STRING,
         duration: INTEGER,
         causeForRecClosing: CauseForRecClosing,
-        diagnostics: OPTIONAL<Diagnostics>,
-        recordSequenceNumber: OPTIONAL<INTEGER>,
-        nodeID: OPTIONAL<IA5String>,
-        recordExtensions: OPTIONAL<ManagementExtension[]>,
-        localSequenceNumber: OPTIONAL<INTEGER>,
-        mbmsInformation: OPTIONAL<MBMSInformation>
+        diagnostics?: OPTIONAL<Diagnostics>,
+        recordSequenceNumber?: OPTIONAL<INTEGER>,
+        nodeID?: OPTIONAL<IA5String>,
+        recordExtensions?: OPTIONAL<ManagementExtension[]>,
+        localSequenceNumber?: OPTIONAL<INTEGER>,
+        mbmsInformation?: OPTIONAL<MBMSInformation>
     ) {
         this.recordType = recordType;
         this.ggsnAddress = ggsnAddress;

@@ -61,7 +61,7 @@ class SendMulticastDataArgument {
          * @public
          * @readonly
          */
-        readonly ioData: OPTIONAL<OCTET_STRING>,
+        readonly ioData?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `displayAttributes`.
          * @description
@@ -71,7 +71,7 @@ class SendMulticastDataArgument {
          * @public
          * @readonly
          */
-        readonly displayAttributes: OPTIONAL<DisplayAttributeList>,
+        readonly displayAttributes?: OPTIONAL<DisplayAttributeList>,
         /**
          * @summary `extensions`.
          * @description
@@ -82,7 +82,7 @@ class SendMulticastDataArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

@@ -49,7 +49,7 @@ class ChangeOfRadioChannel {
     constructor (
         radioChannel: TrafficChannel,
         changeTime: OCTET_STRING,
-        speechVersionUsed: OPTIONAL<OCTET_STRING>
+        speechVersionUsed?: OPTIONAL<OCTET_STRING>
     ) {
         this.radioChannel = radioChannel;
         this.changeTime = changeTime;

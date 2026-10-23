@@ -76,7 +76,7 @@ class CTIdentifyRes {
     constructor (
         callIdentity: CallIdentity,
         rerouteingNumber: PartyNumber,
-        resultExtension: OPTIONAL<CTIdentifyRes_resultExtension>
+        resultExtension?: OPTIONAL<CTIdentifyRes_resultExtension>
     ) {
         this.callIdentity = callIdentity;
         this.rerouteingNumber = rerouteingNumber;

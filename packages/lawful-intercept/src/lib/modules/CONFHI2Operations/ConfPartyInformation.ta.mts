@@ -71,8 +71,8 @@ class ConfPartyInformation {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        partyIdentity: OPTIONAL<PartyIdentity>,
-        supportedmedia: OPTIONAL<SupportedMedia>,
+        partyIdentity?: OPTIONAL<PartyIdentity>,
+        supportedmedia?: OPTIONAL<SupportedMedia>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.partyIdentity = partyIdentity;

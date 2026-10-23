@@ -46,7 +46,7 @@ class Psmo_configureImmediateEnable {
          * @public
          * @readonly
          */
-        readonly immediateEnableFlag: OPTIONAL<NULL>,
+        readonly immediateEnableFlag?: OPTIONAL<NULL>,
         /**
          * @summary `defaultSmdpOid`.
          * @description
@@ -56,7 +56,7 @@ class Psmo_configureImmediateEnable {
          * @public
          * @readonly
          */
-        readonly defaultSmdpOid: OPTIONAL<OBJECT_IDENTIFIER>,
+        readonly defaultSmdpOid?: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `defaultSmdpAddress`.
          * @description
@@ -67,7 +67,7 @@ class Psmo_configureImmediateEnable {
          * @public
          * @readonly
          */
-        readonly defaultSmdpAddress: OPTIONAL<UTF8String>
+        readonly defaultSmdpAddress?: OPTIONAL<UTF8String>
     ) {}
 
     /**

@@ -56,7 +56,7 @@ class COupdate_objectUpdate_booleanUpdate {
          * @public
          * @readonly
          */
-        readonly mask: OPTIONAL<BIT_STRING>
+        readonly mask?: OPTIONAL<BIT_STRING>
     ) {}
 
     /**

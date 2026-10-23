@@ -56,9 +56,9 @@ class ForwardServiceInteractionInd {
     readonly callOfferingTreatmentIndicator: OPTIONAL<OCTET_STRING>;
 
     constructor (
-        conferenceTreatmentIndicator: OPTIONAL<OCTET_STRING>,
-        callDiversionTreatmentIndicator: OPTIONAL<OCTET_STRING>,
-        callOfferingTreatmentIndicator: OPTIONAL<OCTET_STRING>
+        conferenceTreatmentIndicator?: OPTIONAL<OCTET_STRING>,
+        callDiversionTreatmentIndicator?: OPTIONAL<OCTET_STRING>,
+        callOfferingTreatmentIndicator?: OPTIONAL<OCTET_STRING>
     ) {
         this.conferenceTreatmentIndicator = conferenceTreatmentIndicator;
         this.callDiversionTreatmentIndicator = callDiversionTreatmentIndicator;

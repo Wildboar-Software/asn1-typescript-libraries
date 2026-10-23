@@ -56,8 +56,8 @@ class RCDDisplayInfo {
 
     constructor (
         name: UTF8String,
-        jcd: OPTIONAL<OCTET_STRING>,
-        jcl: OPTIONAL<OCTET_STRING>,
+        jcd?: OPTIONAL<OCTET_STRING>,
+        jcl?: OPTIONAL<OCTET_STRING>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.name = name;

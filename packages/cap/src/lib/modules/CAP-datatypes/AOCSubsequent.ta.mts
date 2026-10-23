@@ -47,7 +47,7 @@ export class AOCSubsequent {
          * @public
          * @readonly
          */
-        readonly tariffSwitchInterval: OPTIONAL<INTEGER>,
+        readonly tariffSwitchInterval?: OPTIONAL<INTEGER>,
     ) {
         if (tariffSwitchInterval !== undefined && (typeof tariffSwitchInterval === "bigint" ? (tariffSwitchInterval < 1n || tariffSwitchInterval > 86400n) : (tariffSwitchInterval < 1 || tariffSwitchInterval > 86400))) {
             throw new ASN1OverflowError("AOCSubsequent.tariffSwitchInterval violates INTEGER constraint");

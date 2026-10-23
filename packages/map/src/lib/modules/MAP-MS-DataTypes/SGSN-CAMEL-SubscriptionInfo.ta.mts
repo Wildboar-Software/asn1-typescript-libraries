@@ -51,7 +51,7 @@ class SGSN_CAMEL_SubscriptionInfo {
          * @public
          * @readonly
          */
-        readonly gprs_CSI: OPTIONAL<GPRS_CSI>,
+        readonly gprs_CSI?: OPTIONAL<GPRS_CSI>,
         /**
          * @summary `mo_sms_CSI`.
          * @description
@@ -63,13 +63,13 @@ class SGSN_CAMEL_SubscriptionInfo {
          * @public
          * @readonly
          */
-        readonly mo_sms_CSI: OPTIONAL<SMS_CSI>,
+        readonly mo_sms_CSI?: OPTIONAL<SMS_CSI>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `mt_sms_CSI`.
          * @description
@@ -81,7 +81,7 @@ class SGSN_CAMEL_SubscriptionInfo {
          * @public
          * @readonly
          */
-        readonly mt_sms_CSI: OPTIONAL<SMS_CSI>,
+        readonly mt_sms_CSI?: OPTIONAL<SMS_CSI>,
         /**
          * @summary `mt_smsCAMELTDP_CriteriaList`.
          * @description
@@ -93,7 +93,7 @@ class SGSN_CAMEL_SubscriptionInfo {
          * @public
          * @readonly
          */
-        readonly mt_smsCAMELTDP_CriteriaList: OPTIONAL<MT_smsCAMELTDP_CriteriaList>,
+        readonly mt_smsCAMELTDP_CriteriaList?: OPTIONAL<MT_smsCAMELTDP_CriteriaList>,
         /**
          * @summary `mg_csi`.
          * @description
@@ -105,7 +105,7 @@ class SGSN_CAMEL_SubscriptionInfo {
          * @public
          * @readonly
          */
-        readonly mg_csi: OPTIONAL<MG_CSI>,
+        readonly mg_csi?: OPTIONAL<MG_CSI>,
         /**
          * @summary Extensions that are not recognized.
          * @public

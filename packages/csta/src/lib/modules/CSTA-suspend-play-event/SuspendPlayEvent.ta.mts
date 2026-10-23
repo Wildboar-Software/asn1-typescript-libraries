@@ -90,7 +90,7 @@ class SuspendPlayEvent {
          * @public
          * @readonly
          */
-        readonly resource: OPTIONAL<ResourceID>,
+        readonly resource?: OPTIONAL<ResourceID>,
         /**
          * @summary `length`.
          * @description
@@ -100,7 +100,7 @@ class SuspendPlayEvent {
          * @public
          * @readonly
          */
-        readonly length: OPTIONAL<INTEGER>,
+        readonly length?: OPTIONAL<INTEGER>,
         /**
          * @summary `currentPosition`.
          * @description
@@ -110,7 +110,7 @@ class SuspendPlayEvent {
          * @public
          * @readonly
          */
-        readonly currentPosition: OPTIONAL<INTEGER>,
+        readonly currentPosition?: OPTIONAL<INTEGER>,
         /**
          * @summary `cause`.
          * @description
@@ -120,7 +120,7 @@ class SuspendPlayEvent {
          * @public
          * @readonly
          */
-        readonly cause: OPTIONAL<EventCause>,
+        readonly cause?: OPTIONAL<EventCause>,
         /**
          * @summary `servicesPermitted`.
          * @description
@@ -130,7 +130,7 @@ class SuspendPlayEvent {
          * @public
          * @readonly
          */
-        readonly servicesPermitted: OPTIONAL<ServicesPermitted>,
+        readonly servicesPermitted?: OPTIONAL<ServicesPermitted>,
         /**
          * @summary `extensions`.
          * @description
@@ -141,7 +141,7 @@ class SuspendPlayEvent {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

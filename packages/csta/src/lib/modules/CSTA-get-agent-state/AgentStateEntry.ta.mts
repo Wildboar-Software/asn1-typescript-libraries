@@ -66,7 +66,7 @@ class AgentStateEntry {
          * @public
          * @readonly
          */
-        readonly agentInfo: OPTIONAL<AgentInfo[]>
+        readonly agentInfo?: OPTIONAL<AgentInfo[]>
     ) {}
 
     /**

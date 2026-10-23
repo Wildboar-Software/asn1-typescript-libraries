@@ -72,7 +72,7 @@ class SendSTUIArg {
         uSIServiceIndicator: USIServiceIndicator,
         legID: OPTIONAL<LegID>,
         uSIInformation: USIInformation,
-        extensions: OPTIONAL<Extensions>,
+        extensions?: OPTIONAL<Extensions>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.uSIServiceIndicator = uSIServiceIndicator;

@@ -106,7 +106,7 @@ class TETRACGIType {
         mcc: MCCType,
         mnc: MNCType,
         lai: LocationAreaType,
-        cI: OPTIONAL<CellIdType>
+        cI?: OPTIONAL<CellIdType>
     ) {
         this.mcc = mcc;
         this.mnc = mnc;

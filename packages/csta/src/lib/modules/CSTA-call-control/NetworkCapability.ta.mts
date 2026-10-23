@@ -116,7 +116,7 @@ class NetworkCapability {
          * @public
          * @readonly
          */
-        readonly eventsProvided: OPTIONAL<NetworkCapability_eventsProvided>
+        readonly eventsProvided?: OPTIONAL<NetworkCapability_eventsProvided>
     ) {}
 
     /**

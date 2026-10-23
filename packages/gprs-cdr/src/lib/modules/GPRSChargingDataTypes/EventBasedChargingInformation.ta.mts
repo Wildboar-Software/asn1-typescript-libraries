@@ -59,7 +59,7 @@ class EventBasedChargingInformation {
 
     constructor (
         numberOfEvents: INTEGER,
-        eventTimeStamps: OPTIONAL<OCTET_STRING[]>
+        eventTimeStamps?: OPTIONAL<OCTET_STRING[]>
     ) {
         this.numberOfEvents = numberOfEvents;
         this.eventTimeStamps = eventTimeStamps;

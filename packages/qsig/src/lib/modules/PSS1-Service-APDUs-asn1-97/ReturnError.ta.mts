@@ -97,7 +97,7 @@ class ReturnError {
     constructor (
         invokeId: InvokeId,
         errcode: Code,
-        parameter: OPTIONAL<_Element>
+        parameter?: OPTIONAL<_Element>
     ) {
         this.invokeId = invokeId;
         this.errcode = errcode;

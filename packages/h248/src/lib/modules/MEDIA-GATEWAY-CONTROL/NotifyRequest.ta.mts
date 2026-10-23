@@ -73,7 +73,7 @@ class NotifyRequest {
          * @public
          * @readonly
          */
-        readonly errorDescriptor: OPTIONAL<ErrorDescriptor>,
+        readonly errorDescriptor?: OPTIONAL<ErrorDescriptor>,
         /**
          * @summary Extensions that are not recognized.
          * @description

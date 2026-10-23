@@ -67,7 +67,7 @@ class Reservation {
          * @public
          * @readonly
          */
-        readonly reservation_Status: OPTIONAL<ReservationStatus>
+        readonly reservation_Status?: OPTIONAL<ReservationStatus>
     ) {}
 
     /**

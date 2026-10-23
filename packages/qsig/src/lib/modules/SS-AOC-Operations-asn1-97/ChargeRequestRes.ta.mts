@@ -57,7 +57,7 @@ class ChargeRequestRes {
 
     constructor (
         adviceModeCombination: AdviceModeCombination,
-        chargeReqResExtension: OPTIONAL<ChargeRequestRes_chargeReqResExtension>
+        chargeReqResExtension?: OPTIONAL<ChargeRequestRes_chargeReqResExtension>
     ) {
         this.adviceModeCombination = adviceModeCombination;
         this.chargeReqResExtension = chargeReqResExtension;

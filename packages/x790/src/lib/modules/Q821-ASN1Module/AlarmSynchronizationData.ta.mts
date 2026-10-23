@@ -99,17 +99,17 @@ export class AlarmSynchronizationData {
         readonly probableCause: ProbableCause,
         readonly specificProblems: OPTIONAL<SpecificProblems>,
         readonly perceivedSeverity: PerceivedSeverity,
-        readonly backedUpStatus: OPTIONAL<BackedUpStatus>,
-        readonly backUpObject: OPTIONAL<ObjectInstance>,
-        readonly trendIndication: OPTIONAL<TrendIndication>,
-        readonly thresholdInfo: OPTIONAL<ThresholdInfo>,
-        readonly notificationIdentifier: OPTIONAL<NotificationIdentifier>,
-        readonly correlatedNotifications: OPTIONAL<CorrelatedNotifications>,
-        readonly stateChangeDefinition: OPTIONAL<AttributeValueChangeDefinition>,
-        readonly monitoredAttributes: OPTIONAL<MonitoredAttributes>,
-        readonly proposedRepairActions: OPTIONAL<ProposedRepairActions>,
-        readonly additionalText: OPTIONAL<AdditionalText>,
-        readonly additionalInformation: OPTIONAL<AdditionalInformation>
+        readonly backedUpStatus?: OPTIONAL<BackedUpStatus>,
+        readonly backUpObject?: OPTIONAL<ObjectInstance>,
+        readonly trendIndication?: OPTIONAL<TrendIndication>,
+        readonly thresholdInfo?: OPTIONAL<ThresholdInfo>,
+        readonly notificationIdentifier?: OPTIONAL<NotificationIdentifier>,
+        readonly correlatedNotifications?: OPTIONAL<CorrelatedNotifications>,
+        readonly stateChangeDefinition?: OPTIONAL<AttributeValueChangeDefinition>,
+        readonly monitoredAttributes?: OPTIONAL<MonitoredAttributes>,
+        readonly proposedRepairActions?: OPTIONAL<ProposedRepairActions>,
+        readonly additionalText?: OPTIONAL<AdditionalText>,
+        readonly additionalInformation?: OPTIONAL<AdditionalInformation>
     ) {}
 
     public static _from_object(

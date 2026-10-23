@@ -92,7 +92,7 @@ class SnapshotDeviceResponseInfo {
          * @public
          * @readonly
          */
-        readonly servicesPermitted: OPTIONAL<ServicesPermitted>,
+        readonly servicesPermitted?: OPTIONAL<ServicesPermitted>,
         /**
          * @summary `mediaServiceInfoList`.
          * @description
@@ -102,7 +102,7 @@ class SnapshotDeviceResponseInfo {
          * @public
          * @readonly
          */
-        readonly mediaServiceInfoList: OPTIONAL<DeviceMediaInfoList>,
+        readonly mediaServiceInfoList?: OPTIONAL<DeviceMediaInfoList>,
         /**
          * @summary `mediaCallCharacteristics`.
          * @description
@@ -113,7 +113,7 @@ class SnapshotDeviceResponseInfo {
          * @public
          * @readonly
          */
-        readonly mediaCallCharacteristics: OPTIONAL<MediaCallCharacteristics>,
+        readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
         /**
          * @summary `callLinkageData`.
          * @description
@@ -124,7 +124,7 @@ class SnapshotDeviceResponseInfo {
          * @public
          * @readonly
          */
-        readonly callLinkageData: OPTIONAL<CallLinkageData>
+        readonly callLinkageData?: OPTIONAL<CallLinkageData>
     ) {}
 
     /**

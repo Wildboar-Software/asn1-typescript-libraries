@@ -184,16 +184,16 @@ class AccessTransferInformation {
     readonly cellularNetworkInformation: OPTIONAL<OCTET_STRING>;
 
     constructor (
-        accessTransferType: OPTIONAL<AccessTransferType>,
-        accessNetworkInformation: OPTIONAL<OCTET_STRING>,
-        additionalAccessNetworkInformation: OPTIONAL<OCTET_STRING>,
-        inter_UE_Transfer: OPTIONAL<NULL>,
-        relatedICID: OPTIONAL<OCTET_STRING>,
-        relatedICIDGenerationNode: OPTIONAL<NodeAddress>,
-        accessTransferTime: OPTIONAL<OCTET_STRING>,
-        subscriberEquipmentNumber: OPTIONAL<SubscriberEquipmentNumber>,
-        instanceId: OPTIONAL<OCTET_STRING>,
-        cellularNetworkInformation: OPTIONAL<OCTET_STRING>
+        accessTransferType?: OPTIONAL<AccessTransferType>,
+        accessNetworkInformation?: OPTIONAL<OCTET_STRING>,
+        additionalAccessNetworkInformation?: OPTIONAL<OCTET_STRING>,
+        inter_UE_Transfer?: OPTIONAL<NULL>,
+        relatedICID?: OPTIONAL<OCTET_STRING>,
+        relatedICIDGenerationNode?: OPTIONAL<NodeAddress>,
+        accessTransferTime?: OPTIONAL<OCTET_STRING>,
+        subscriberEquipmentNumber?: OPTIONAL<SubscriberEquipmentNumber>,
+        instanceId?: OPTIONAL<OCTET_STRING>,
+        cellularNetworkInformation?: OPTIONAL<OCTET_STRING>
     ) {
         this.accessTransferType = accessTransferType;
         this.accessNetworkInformation = accessNetworkInformation;

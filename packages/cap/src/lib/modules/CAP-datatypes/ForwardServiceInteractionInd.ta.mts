@@ -42,7 +42,7 @@ export class ForwardServiceInteractionInd {
          * @public
          * @readonly
          */
-        readonly conferenceTreatmentIndicator: OPTIONAL<OCTET_STRING>,
+        readonly conferenceTreatmentIndicator?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `callDiversionTreatmentIndicator`.
          * @description
@@ -55,7 +55,7 @@ export class ForwardServiceInteractionInd {
          * @public
          * @readonly
          */
-        readonly callDiversionTreatmentIndicator: OPTIONAL<OCTET_STRING>,
+        readonly callDiversionTreatmentIndicator?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `callingPartyRestrictionIndicator`.
          * @description
@@ -68,7 +68,7 @@ export class ForwardServiceInteractionInd {
          * @public
          * @readonly
          */
-        readonly callingPartyRestrictionIndicator: OPTIONAL<OCTET_STRING>,
+        readonly callingPartyRestrictionIndicator?: OPTIONAL<OCTET_STRING>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {
         if (conferenceTreatmentIndicator !== undefined && conferenceTreatmentIndicator.length !== 1) {

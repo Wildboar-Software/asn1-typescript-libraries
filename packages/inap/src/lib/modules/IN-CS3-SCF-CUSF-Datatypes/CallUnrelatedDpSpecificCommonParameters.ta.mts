@@ -149,18 +149,18 @@ class CallUnrelatedDpSpecificCommonParameters {
 
     constructor (
         serviceAddressInformation: ServiceAddressInformation,
-        callingPartyNumber: OPTIONAL<CallingPartyNumber>,
-        locationNumber: OPTIONAL<LocationNumber>,
-        terminalType: OPTIONAL<TerminalType>,
-        extensions: OPTIONAL<Extensions>,
-        uSIServiceIndicator: OPTIONAL<USIServiceIndicator>,
-        uSIInformation: OPTIONAL<USIInformation>,
-        cUApplicationInd: OPTIONAL<CUApplicationInd>,
-        calledPartyNumber: OPTIONAL<CalledPartyNumber>,
-        callingPartySubadress: OPTIONAL<CallingPartySubaddress>,
-        highLayerCompatibility: OPTIONAL<HighLayerCompatibility>,
-        bearerCapability: OPTIONAL<BearerCapability>,
-        genericNumbers: OPTIONAL<GenericNumbers>,
+        callingPartyNumber?: OPTIONAL<CallingPartyNumber>,
+        locationNumber?: OPTIONAL<LocationNumber>,
+        terminalType?: OPTIONAL<TerminalType>,
+        extensions?: OPTIONAL<Extensions>,
+        uSIServiceIndicator?: OPTIONAL<USIServiceIndicator>,
+        uSIInformation?: OPTIONAL<USIInformation>,
+        cUApplicationInd?: OPTIONAL<CUApplicationInd>,
+        calledPartyNumber?: OPTIONAL<CalledPartyNumber>,
+        callingPartySubadress?: OPTIONAL<CallingPartySubaddress>,
+        highLayerCompatibility?: OPTIONAL<HighLayerCompatibility>,
+        bearerCapability?: OPTIONAL<BearerCapability>,
+        genericNumbers?: OPTIONAL<GenericNumbers>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.serviceAddressInformation = serviceAddressInformation;

@@ -48,7 +48,7 @@ class Tone {
 
     constructor (
         toneID: Integer4,
-        duration: OPTIONAL<Integer4>,
+        duration?: OPTIONAL<Integer4>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.toneID = toneID;

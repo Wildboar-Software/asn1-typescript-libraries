@@ -144,19 +144,19 @@ class PDUContainerInformation {
     readonly threeGPPPSDataOffStatus: OPTIONAL<ThreeGPPPSDataOffStatus>;
 
     constructor (
-        chargingRuleBaseName: OPTIONAL<IA5String>,
-        aFCorrelationInformation: OPTIONAL<OCTET_STRING>,
-        timeOfFirstUsage: OPTIONAL<OCTET_STRING>,
-        timeOfLastUsage: OPTIONAL<OCTET_STRING>,
-        qoSInformation: OPTIONAL<FiveGQoSInformation>,
-        userLocationInformation: OPTIONAL<OCTET_STRING>,
-        presenceReportingAreaInfo: OPTIONAL<PresenceReportingAreaInfo>,
-        rATType: OPTIONAL<INTEGER>,
-        sponsorIdentity: OPTIONAL<OCTET_STRING>,
-        applicationServiceProviderIdentity: OPTIONAL<OCTET_STRING>,
-        servingNetworkFunctionID: OPTIONAL<ServingNetworkFunctionID[]>,
-        uETimeZone: OPTIONAL<OCTET_STRING>,
-        threeGPPPSDataOffStatus: OPTIONAL<ThreeGPPPSDataOffStatus>
+        chargingRuleBaseName?: OPTIONAL<IA5String>,
+        aFCorrelationInformation?: OPTIONAL<OCTET_STRING>,
+        timeOfFirstUsage?: OPTIONAL<OCTET_STRING>,
+        timeOfLastUsage?: OPTIONAL<OCTET_STRING>,
+        qoSInformation?: OPTIONAL<FiveGQoSInformation>,
+        userLocationInformation?: OPTIONAL<OCTET_STRING>,
+        presenceReportingAreaInfo?: OPTIONAL<PresenceReportingAreaInfo>,
+        rATType?: OPTIONAL<INTEGER>,
+        sponsorIdentity?: OPTIONAL<OCTET_STRING>,
+        applicationServiceProviderIdentity?: OPTIONAL<OCTET_STRING>,
+        servingNetworkFunctionID?: OPTIONAL<ServingNetworkFunctionID[]>,
+        uETimeZone?: OPTIONAL<OCTET_STRING>,
+        threeGPPPSDataOffStatus?: OPTIONAL<ThreeGPPPSDataOffStatus>
     ) {
         this.chargingRuleBaseName = chargingRuleBaseName;
         this.aFCorrelationInformation = aFCorrelationInformation;

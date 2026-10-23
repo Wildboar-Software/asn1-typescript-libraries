@@ -320,11 +320,11 @@ class MMR4RRqRecord {
         recipientAddress: MMSAgentAddress,
         mmDateAndTime: OPTIONAL<OCTET_STRING>,
         acknowledgementRequest: BOOLEAN,
-        mmStatusCode: OPTIONAL<MMStatusCodeType>,
-        statusText: OPTIONAL<OCTET_STRING>,
-        recordTimeStamp: OPTIONAL<OCTET_STRING>,
-        localSequenceNumber: OPTIONAL<INTEGER>,
-        recordExtensions: OPTIONAL<ManagementExtension[]>
+        mmStatusCode?: OPTIONAL<MMStatusCodeType>,
+        statusText?: OPTIONAL<OCTET_STRING>,
+        recordTimeStamp?: OPTIONAL<OCTET_STRING>,
+        localSequenceNumber?: OPTIONAL<INTEGER>,
+        recordExtensions?: OPTIONAL<ManagementExtension[]>
     ) {
         this.recordType = recordType;
         this.recipientMmsRSAddress = recipientMmsRSAddress;

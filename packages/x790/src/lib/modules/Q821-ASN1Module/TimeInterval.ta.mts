@@ -38,31 +38,31 @@ class TimeInterval {
          * @public
          * @readonly
          */
-        readonly day: OPTIONAL<INTEGER>,
+        readonly day?: OPTIONAL<INTEGER>,
         /**
          * @summary `hour`.
          * @public
          * @readonly
          */
-        readonly hour: OPTIONAL<INTEGER>,
+        readonly hour?: OPTIONAL<INTEGER>,
         /**
          * @summary `minute`.
          * @public
          * @readonly
          */
-        readonly minute: OPTIONAL<INTEGER>,
+        readonly minute?: OPTIONAL<INTEGER>,
         /**
          * @summary `second`.
          * @public
          * @readonly
          */
-        readonly second: OPTIONAL<INTEGER>,
+        readonly second?: OPTIONAL<INTEGER>,
         /**
          * @summary `msec`.
          * @public
          * @readonly
          */
-        readonly msec: OPTIONAL<INTEGER>
+        readonly msec?: OPTIONAL<INTEGER>
     ) {
         const check = (name: string, v: INTEGER | undefined, min: number, max: number): void => {
             if (v === undefined) {

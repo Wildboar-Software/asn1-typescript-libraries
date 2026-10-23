@@ -49,8 +49,8 @@ class EventSpecificInformationBCUSM_associationReleaseRequestedSpecificInfo {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        associationReleaseInfo: OPTIONAL<OCTET_STRING>,
-        releaseCause: OPTIONAL<Cause>,
+        associationReleaseInfo?: OPTIONAL<OCTET_STRING>,
+        releaseCause?: OPTIONAL<Cause>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.associationReleaseInfo = associationReleaseInfo;

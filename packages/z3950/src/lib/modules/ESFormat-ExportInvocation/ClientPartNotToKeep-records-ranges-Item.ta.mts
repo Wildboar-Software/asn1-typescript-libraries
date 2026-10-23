@@ -60,7 +60,7 @@ class ClientPartNotToKeep_records_ranges_Item {
 
     constructor (
         start: INTEGER,
-        count: OPTIONAL<INTEGER>
+        count?: OPTIONAL<INTEGER>
     ) {
         this.start = start;
         this.count = count;

@@ -61,7 +61,7 @@ class ExportInvocation_taskPackage {
 
     constructor (
         clientPart: ClientPartToKeep,
-        serverPart: OPTIONAL<ServerPart>
+        serverPart?: OPTIONAL<ServerPart>
     ) {
         this.clientPart = clientPart;
         this.serverPart = serverPart;

@@ -94,7 +94,7 @@ class Network_Identifier {
 
     constructor (
         operator_Identifier: OCTET_STRING,
-        network_Element_Identifier: OPTIONAL<Network_Element_Identifier>,
+        network_Element_Identifier?: OPTIONAL<Network_Element_Identifier>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.operator_Identifier = operator_Identifier;

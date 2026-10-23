@@ -75,7 +75,7 @@ class SortDetails {
     constructor (
         commonInfo: OPTIONAL<CommonInfo>,
         databaseName: DatabaseName,
-        sortKeys: OPTIONAL<SortKeyDetails[]>
+        sortKeys?: OPTIONAL<SortKeyDetails[]>
     ) {
         this.commonInfo = commonInfo;
         this.databaseName = databaseName;

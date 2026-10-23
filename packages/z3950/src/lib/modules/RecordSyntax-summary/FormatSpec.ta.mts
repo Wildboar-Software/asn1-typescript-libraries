@@ -66,8 +66,8 @@ class FormatSpec {
 
     constructor (
         type_: InternationalString,
-        size: OPTIONAL<INTEGER>,
-        bestPosn: OPTIONAL<INTEGER>
+        size?: OPTIONAL<INTEGER>,
+        bestPosn?: OPTIONAL<INTEGER>
     ) {
         this.type_ = type_;
         this.size = size;

@@ -59,8 +59,8 @@ class LTEV2XServiceAuthorization {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        v2XVehicleUEAuthorizationIndicator: OPTIONAL<V2XUEAuthorizationIndicator>,
-        v2XPedestrianUEAuthorizationIndicator: OPTIONAL<V2XUEAuthorizationIndicator>,
+        v2XVehicleUEAuthorizationIndicator?: OPTIONAL<V2XUEAuthorizationIndicator>,
+        v2XPedestrianUEAuthorizationIndicator?: OPTIONAL<V2XUEAuthorizationIndicator>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.v2XVehicleUEAuthorizationIndicator = v2XVehicleUEAuthorizationIndicator;

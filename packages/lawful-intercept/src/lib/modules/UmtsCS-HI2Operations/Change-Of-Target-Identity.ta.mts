@@ -125,12 +125,12 @@ class Change_Of_Target_Identity {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        new_MSISDN: OPTIONAL<PartyInformation>,
-        old_MSISDN: OPTIONAL<PartyInformation>,
-        new_IMSI: OPTIONAL<PartyInformation>,
-        old_IMSI: OPTIONAL<PartyInformation>,
-        new_IMEI: OPTIONAL<PartyInformation>,
-        old_IMEI: OPTIONAL<PartyInformation>,
+        new_MSISDN?: OPTIONAL<PartyInformation>,
+        old_MSISDN?: OPTIONAL<PartyInformation>,
+        new_IMSI?: OPTIONAL<PartyInformation>,
+        old_IMSI?: OPTIONAL<PartyInformation>,
+        new_IMEI?: OPTIONAL<PartyInformation>,
+        old_IMEI?: OPTIONAL<PartyInformation>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.new_MSISDN = new_MSISDN;

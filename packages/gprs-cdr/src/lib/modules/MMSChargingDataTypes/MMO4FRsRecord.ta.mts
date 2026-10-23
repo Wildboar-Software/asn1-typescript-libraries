@@ -241,12 +241,12 @@ class MMO4FRsRecord {
         originatorMmsRSAddress: OPTIONAL<MMSRSAddress>,
         recipientMmsRSAddress: MMSRSAddress,
         messageID: OCTET_STRING,
-        mms3GPPVersion: OPTIONAL<OCTET_STRING>,
-        requestStatusCode: OPTIONAL<RequestStatusCodeType>,
-        statusText: OPTIONAL<OCTET_STRING>,
-        recordTimeStamp: OPTIONAL<OCTET_STRING>,
-        localSequenceNumber: OPTIONAL<INTEGER>,
-        recordExtensions: OPTIONAL<ManagementExtension[]>
+        mms3GPPVersion?: OPTIONAL<OCTET_STRING>,
+        requestStatusCode?: OPTIONAL<RequestStatusCodeType>,
+        statusText?: OPTIONAL<OCTET_STRING>,
+        recordTimeStamp?: OPTIONAL<OCTET_STRING>,
+        localSequenceNumber?: OPTIONAL<INTEGER>,
+        recordExtensions?: OPTIONAL<ManagementExtension[]>
     ) {
         this.recordType = recordType;
         this.originatorMmsRSAddress = originatorMmsRSAddress;

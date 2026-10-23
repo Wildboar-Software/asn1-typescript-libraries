@@ -184,12 +184,12 @@ class StartOfInterceptionForActiveIMSSession {
     constructor (
         originatingId: IMPU[],
         terminatingId: IMPU,
-        sDPState: OPTIONAL<OCTET_STRING[]>,
-        diversionIdentity: OPTIONAL<IMPU>,
-        voIPRoamingIndication: OPTIONAL<VoIPRoamingIndication>,
-        location: OPTIONAL<Location>,
-        accessNetworkInformation: OPTIONAL<SIPAccessNetworkInformation[]>,
-        cellularNetworkInformation: OPTIONAL<SIPCellularNetworkInformation[]>,
+        sDPState?: OPTIONAL<OCTET_STRING[]>,
+        diversionIdentity?: OPTIONAL<IMPU>,
+        voIPRoamingIndication?: OPTIONAL<VoIPRoamingIndication>,
+        location?: OPTIONAL<Location>,
+        accessNetworkInformation?: OPTIONAL<SIPAccessNetworkInformation[]>,
+        cellularNetworkInformation?: OPTIONAL<SIPCellularNetworkInformation[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.originatingId = originatingId;

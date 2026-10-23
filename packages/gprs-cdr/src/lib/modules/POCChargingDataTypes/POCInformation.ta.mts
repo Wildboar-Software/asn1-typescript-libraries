@@ -222,15 +222,15 @@ class POCInformation {
     readonly pOCEventType: OPTIONAL<POCEventType>;
 
     constructor (
-        pOCSessionType: OPTIONAL<POCSessionType>,
-        numberofParticipants: OPTIONAL<INTEGER>,
-        listofParticipants: OPTIONAL<POCParticipant[]>,
-        listofTalkBurstExchange: OPTIONAL<ListofTalkBurstExchange[]>,
-        pOCControllingAddress: OPTIONAL<UTF8String>,
-        pOCGroupName: OPTIONAL<UTF8String>,
-        pOCSessionId: OPTIONAL<UTF8String>,
-        pOCSessionInitiationType: OPTIONAL<POCSessionInitType>,
-        pOCEventType: OPTIONAL<POCEventType>
+        pOCSessionType?: OPTIONAL<POCSessionType>,
+        numberofParticipants?: OPTIONAL<INTEGER>,
+        listofParticipants?: OPTIONAL<POCParticipant[]>,
+        listofTalkBurstExchange?: OPTIONAL<ListofTalkBurstExchange[]>,
+        pOCControllingAddress?: OPTIONAL<UTF8String>,
+        pOCGroupName?: OPTIONAL<UTF8String>,
+        pOCSessionId?: OPTIONAL<UTF8String>,
+        pOCSessionInitiationType?: OPTIONAL<POCSessionInitType>,
+        pOCEventType?: OPTIONAL<POCEventType>
     ) {
         this.pOCSessionType = pOCSessionType;
         this.numberofParticipants = numberofParticipants;

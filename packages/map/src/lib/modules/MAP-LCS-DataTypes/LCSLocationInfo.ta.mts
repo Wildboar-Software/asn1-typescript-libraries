@@ -67,7 +67,7 @@ class LCSLocationInfo {
          * @public
          * @readonly
          */
-        readonly lmsi: OPTIONAL<LMSI>,
+        readonly lmsi?: OPTIONAL<LMSI>,
         /**
          * @summary `extensionContainer`.
          * @description
@@ -77,7 +77,7 @@ class LCSLocationInfo {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `gprsNodeIndicator`.
          * @description
@@ -87,7 +87,7 @@ class LCSLocationInfo {
          * @public
          * @readonly
          */
-        readonly gprsNodeIndicator: OPTIONAL<NULL>,
+        readonly gprsNodeIndicator?: OPTIONAL<NULL>,
         /**
          * @summary `additional_Number`.
          * @description
@@ -97,7 +97,7 @@ class LCSLocationInfo {
          * @public
          * @readonly
          */
-        readonly additional_Number: OPTIONAL<Additional_Number>,
+        readonly additional_Number?: OPTIONAL<Additional_Number>,
         /**
          * @summary `supportedLCS_CapabilitySets`.
          * @description
@@ -108,7 +108,7 @@ class LCSLocationInfo {
          * @public
          * @readonly
          */
-        readonly supportedLCS_CapabilitySets: OPTIONAL<SupportedLCS_CapabilitySets>,
+        readonly supportedLCS_CapabilitySets?: OPTIONAL<SupportedLCS_CapabilitySets>,
         /**
          * @summary `additional_LCS_CapabilitySets`.
          * @description
@@ -119,7 +119,7 @@ class LCSLocationInfo {
          * @public
          * @readonly
          */
-        readonly additional_LCS_CapabilitySets: OPTIONAL<SupportedLCS_CapabilitySets>,
+        readonly additional_LCS_CapabilitySets?: OPTIONAL<SupportedLCS_CapabilitySets>,
         /**
          * @summary `mme_Name`.
          * @description
@@ -129,7 +129,7 @@ class LCSLocationInfo {
          * @public
          * @readonly
          */
-        readonly mme_Name: OPTIONAL<DiameterIdentity>,
+        readonly mme_Name?: OPTIONAL<DiameterIdentity>,
         /**
          * @summary `aaa_Server_Name`.
          * @description
@@ -139,7 +139,7 @@ class LCSLocationInfo {
          * @public
          * @readonly
          */
-        readonly aaa_Server_Name: OPTIONAL<DiameterIdentity>,
+        readonly aaa_Server_Name?: OPTIONAL<DiameterIdentity>,
         /**
          * @summary `sgsn_Name`.
          * @description
@@ -149,7 +149,7 @@ class LCSLocationInfo {
          * @public
          * @readonly
          */
-        readonly sgsn_Name: OPTIONAL<DiameterIdentity>,
+        readonly sgsn_Name?: OPTIONAL<DiameterIdentity>,
         /**
          * @summary `sgsn_Realm`.
          * @description
@@ -159,7 +159,7 @@ class LCSLocationInfo {
          * @public
          * @readonly
          */
-        readonly sgsn_Realm: OPTIONAL<DiameterIdentity>,
+        readonly sgsn_Realm?: OPTIONAL<DiameterIdentity>,
         /**
          * @summary Extensions that are not recognized.
          * @public

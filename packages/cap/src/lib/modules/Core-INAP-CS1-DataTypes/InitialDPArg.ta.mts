@@ -77,103 +77,103 @@ class InitialDPArg {
          * @public
          * @readonly
          */
-        readonly calledPartyNumber: OPTIONAL<CalledPartyNumber>,
+        readonly calledPartyNumber?: OPTIONAL<CalledPartyNumber>,
         /**
          * @summary `callingPartyNumber`.
          * @public
          * @readonly
          */
-        readonly callingPartyNumber: OPTIONAL<CallingPartyNumber>,
+        readonly callingPartyNumber?: OPTIONAL<CallingPartyNumber>,
         /**
          * @summary `callingPartysCategory`.
          * @public
          * @readonly
          */
-        readonly callingPartysCategory: OPTIONAL<CallingPartysCategory>,
+        readonly callingPartysCategory?: OPTIONAL<CallingPartysCategory>,
         /**
          * @summary `cGEncountered`.
          * @public
          * @readonly
          */
-        readonly cGEncountered: OPTIONAL<CGEncountered>,
+        readonly cGEncountered?: OPTIONAL<CGEncountered>,
         /**
          * @summary `iPSSPCapabilities`.
          * @public
          * @readonly
          */
-        readonly iPSSPCapabilities: OPTIONAL<IPSSPCapabilities>,
+        readonly iPSSPCapabilities?: OPTIONAL<IPSSPCapabilities>,
         /**
          * @summary `iPAvailable`.
          * @public
          * @readonly
          */
-        readonly iPAvailable: OPTIONAL<IPAvailable>,
+        readonly iPAvailable?: OPTIONAL<IPAvailable>,
         /**
          * @summary `locationNumber`.
          * @public
          * @readonly
          */
-        readonly locationNumber: OPTIONAL<LocationNumber>,
+        readonly locationNumber?: OPTIONAL<LocationNumber>,
         /**
          * @summary `originalCalledPartyID`.
          * @public
          * @readonly
          */
-        readonly originalCalledPartyID: OPTIONAL<OriginalCalledPartyID>,
+        readonly originalCalledPartyID?: OPTIONAL<OriginalCalledPartyID>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<ExtensionField[]>,
+        readonly extensions?: OPTIONAL<ExtensionField[]>,
         /**
          * @summary `highLayerCompatibility`.
          * @public
          * @readonly
          */
-        readonly highLayerCompatibility: OPTIONAL<HighLayerCompatibility>,
+        readonly highLayerCompatibility?: OPTIONAL<HighLayerCompatibility>,
         /**
          * @summary `serviceInteractionIndicators`.
          * @public
          * @readonly
          */
-        readonly serviceInteractionIndicators: OPTIONAL<ServiceInteractionIndicators>,
+        readonly serviceInteractionIndicators?: OPTIONAL<ServiceInteractionIndicators>,
         /**
          * @summary `additionalCallingPartyNumber`.
          * @public
          * @readonly
          */
-        readonly additionalCallingPartyNumber: OPTIONAL<AdditionalCallingPartyNumber>,
+        readonly additionalCallingPartyNumber?: OPTIONAL<AdditionalCallingPartyNumber>,
         /**
          * @summary `forwardCallIndicators`.
          * @public
          * @readonly
          */
-        readonly forwardCallIndicators: OPTIONAL<ForwardCallIndicators>,
+        readonly forwardCallIndicators?: OPTIONAL<ForwardCallIndicators>,
         /**
          * @summary `bearerCapability`.
          * @public
          * @readonly
          */
-        readonly bearerCapability: OPTIONAL<BearerCapability>,
+        readonly bearerCapability?: OPTIONAL<BearerCapability>,
         /**
          * @summary `eventTypeBCSM`.
          * @public
          * @readonly
          */
-        readonly eventTypeBCSM: OPTIONAL<EventTypeBCSM>,
+        readonly eventTypeBCSM?: OPTIONAL<EventTypeBCSM>,
         /**
          * @summary `redirectingPartyID`.
          * @public
          * @readonly
          */
-        readonly redirectingPartyID: OPTIONAL<RedirectingPartyID>,
+        readonly redirectingPartyID?: OPTIONAL<RedirectingPartyID>,
         /**
          * @summary `redirectionInformation`.
          * @public
          * @readonly
          */
-        readonly redirectionInformation: OPTIONAL<RedirectionInformation>
+        readonly redirectionInformation?: OPTIONAL<RedirectionInformation>
     ) {}
 
     /**

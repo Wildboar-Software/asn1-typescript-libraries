@@ -103,7 +103,7 @@ class ParameterOffers {
          * @public
          * @readonly
          */
-        readonly defaultCOaccess: OPTIONAL<AccessRuleOffer>,
+        readonly defaultCOaccess?: OPTIONAL<AccessRuleOffer>,
         /**
          * @summary `defaultCOPriority`.
          * @description
@@ -112,7 +112,7 @@ class ParameterOffers {
          * @public
          * @readonly
          */
-        readonly defaultCOPriority: OPTIONAL<ParameterOffers_defaultCOPriority>,
+        readonly defaultCOPriority?: OPTIONAL<ParameterOffers_defaultCOPriority>,
         /**
          * @summary `deviceRepertoireAssignment`.
          * @description
@@ -122,7 +122,7 @@ class ParameterOffers {
          * @public
          * @readonly
          */
-        readonly deviceRepertoireAssignment: OPTIONAL<CompoundRepertoireOffer>,
+        readonly deviceRepertoireAssignment?: OPTIONAL<CompoundRepertoireOffer>,
         /**
          * @summary `deviceEmphasisAssignment`.
          * @description
@@ -132,7 +132,7 @@ class ParameterOffers {
          * @public
          * @readonly
          */
-        readonly deviceEmphasisAssignment: OPTIONAL<CompoundEmphasisOffer>,
+        readonly deviceEmphasisAssignment?: OPTIONAL<CompoundEmphasisOffer>,
         /**
          * @summary `deviceForegroundAssignment`.
          * @description
@@ -142,7 +142,7 @@ class ParameterOffers {
          * @public
          * @readonly
          */
-        readonly deviceForegroundAssignment: OPTIONAL<CompoundColourOffer>,
+        readonly deviceForegroundAssignment?: OPTIONAL<CompoundColourOffer>,
         /**
          * @summary `deviceBackgroundAssignment`.
          * @description
@@ -152,7 +152,7 @@ class ParameterOffers {
          * @public
          * @readonly
          */
-        readonly deviceBackgroundAssignment: OPTIONAL<CompoundColourOffer>,
+        readonly deviceBackgroundAssignment?: OPTIONAL<CompoundColourOffer>,
         /**
          * @summary `minimumXarrayLength`.
          * @description
@@ -161,7 +161,7 @@ class ParameterOffers {
          * @public
          * @readonly
          */
-        readonly minimumXarrayLength: OPTIONAL<IntegerOffer>,
+        readonly minimumXarrayLength?: OPTIONAL<IntegerOffer>,
         /**
          * @summary `minimumYarrayLength`.
          * @description
@@ -170,7 +170,7 @@ class ParameterOffers {
          * @public
          * @readonly
          */
-        readonly minimumYarrayLength: OPTIONAL<IntegerOffer>,
+        readonly minimumYarrayLength?: OPTIONAL<IntegerOffer>,
         /**
          * @summary `deviceControlObjectNames`.
          * @description
@@ -180,7 +180,7 @@ class ParameterOffers {
          * @public
          * @readonly
          */
-        readonly deviceControlObjectNames: OPTIONAL<PrintableString[][]>,
+        readonly deviceControlObjectNames?: OPTIONAL<PrintableString[][]>,
         /**
          * @summary `deviceDisplayObjectName`.
          * @description
@@ -189,7 +189,7 @@ class ParameterOffers {
          * @public
          * @readonly
          */
-        readonly deviceDisplayObjectName: OPTIONAL<PrintableString[]>,
+        readonly deviceDisplayObjectName?: OPTIONAL<PrintableString[]>,
         /**
          * @summary `terminationEventList`.
          * @description
@@ -201,7 +201,7 @@ class ParameterOffers {
          * @public
          * @readonly
          */
-        readonly terminationEventList: OPTIONAL<ParameterOffers_terminationEventList_Item_Item[][]>,
+        readonly terminationEventList?: OPTIONAL<ParameterOffers_terminationEventList_Item_Item[][]>,
         /**
          * @summary `terminationLength`.
          * @description
@@ -211,7 +211,7 @@ class ParameterOffers {
          * @public
          * @readonly
          */
-        readonly terminationLength: OPTIONAL<ParameterOffers_terminationLength>,
+        readonly terminationLength?: OPTIONAL<ParameterOffers_terminationLength>,
         /**
          * @summary `terminationTimeout`.
          * @description
@@ -223,7 +223,7 @@ class ParameterOffers {
          * @public
          * @readonly
          */
-        readonly terminationTimeout: OPTIONAL<ParameterOffers_terminationTimeout>,
+        readonly terminationTimeout?: OPTIONAL<ParameterOffers_terminationTimeout>,
         /**
          * @summary `defaultCOtrigger`.
          * @description
@@ -232,7 +232,7 @@ class ParameterOffers {
          * @public
          * @readonly
          */
-        readonly defaultCOtrigger: OPTIONAL<ParameterOffers_defaultCOtrigger>,
+        readonly defaultCOtrigger?: OPTIONAL<ParameterOffers_defaultCOtrigger>,
         /**
          * @summary `defaultCOinitialValue`.
          * @description
@@ -243,7 +243,7 @@ class ParameterOffers {
          * @public
          * @readonly
          */
-        readonly defaultCOinitialValue: OPTIONAL<ParameterOffers_defaultCOinitialValue_Item[]>
+        readonly defaultCOinitialValue?: OPTIONAL<ParameterOffers_defaultCOinitialValue_Item[]>
     ) {}
 
     /**

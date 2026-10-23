@@ -40,7 +40,7 @@ class ActivateTraceModeRes {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `traceSupportIndicator`.
          * @description
@@ -51,7 +51,7 @@ class ActivateTraceModeRes {
          * @public
          * @readonly
          */
-        readonly traceSupportIndicator: OPTIONAL<NULL>,
+        readonly traceSupportIndicator?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -269,17 +269,17 @@ class PartyInformation_partyIdentity {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        imei: OPTIONAL<OCTET_STRING>,
-        tei: OPTIONAL<OCTET_STRING>,
-        imsi: OPTIONAL<OCTET_STRING>,
-        callingPartyNumber: OPTIONAL<CallingPartyNumber>,
-        calledPartyNumber: OPTIONAL<CalledPartyNumber>,
-        msISDN: OPTIONAL<OCTET_STRING>,
-        e164_Format: OPTIONAL<OCTET_STRING>,
-        sip_uri: OPTIONAL<OCTET_STRING>,
-        tel_url: OPTIONAL<OCTET_STRING>,
-        party_Validity: OPTIONAL<PartyInformation_partyIdentity_party_Validity>,
-        alphanumeric: OPTIONAL<UTF8String>,
+        imei?: OPTIONAL<OCTET_STRING>,
+        tei?: OPTIONAL<OCTET_STRING>,
+        imsi?: OPTIONAL<OCTET_STRING>,
+        callingPartyNumber?: OPTIONAL<CallingPartyNumber>,
+        calledPartyNumber?: OPTIONAL<CalledPartyNumber>,
+        msISDN?: OPTIONAL<OCTET_STRING>,
+        e164_Format?: OPTIONAL<OCTET_STRING>,
+        sip_uri?: OPTIONAL<OCTET_STRING>,
+        tel_url?: OPTIONAL<OCTET_STRING>,
+        party_Validity?: OPTIONAL<PartyInformation_partyIdentity_party_Validity>,
+        alphanumeric?: OPTIONAL<UTF8String>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.imei = imei;

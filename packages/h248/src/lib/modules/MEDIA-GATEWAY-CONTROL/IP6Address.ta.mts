@@ -55,7 +55,7 @@ class IP6Address {
          * @public
          * @readonly
          */
-        readonly portNumber: OPTIONAL<INTEGER>
+        readonly portNumber?: OPTIONAL<INTEGER>
     ) {
             if (address.length !== 16) {
                 throw new ASN1SizeError("IP6Address.address violates SIZE constraint");

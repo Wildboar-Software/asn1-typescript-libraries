@@ -114,7 +114,7 @@ class TTPResponsebyServer {
          * @public
          * @readonly
          */
-        readonly aCforBioOnTTP: OPTIONAL<ACBioContentInformation>
+        readonly aCforBioOnTTP?: OPTIONAL<ACBioContentInformation>
     ) {}
 
     /**

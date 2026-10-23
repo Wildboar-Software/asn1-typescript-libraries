@@ -54,7 +54,7 @@ class AocInterimArg_interimCharge_specificCurrency {
 
     constructor (
         recordedCurrency: RecordedCurrency,
-        interimBillingId: OPTIONAL<InterimBillingId>
+        interimBillingId?: OPTIONAL<InterimBillingId>
     ) {
         this.recordedCurrency = recordedCurrency;
         this.interimBillingId = interimBillingId;

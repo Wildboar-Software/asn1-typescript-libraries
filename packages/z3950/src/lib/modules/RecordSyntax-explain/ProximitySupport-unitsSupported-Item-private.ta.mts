@@ -49,7 +49,7 @@ class ProximitySupport_unitsSupported_Item_private {
 
     constructor (
         unit: INTEGER,
-        description: OPTIONAL<HumanString>
+        description?: OPTIONAL<HumanString>
     ) {
         this.unit = unit;
         this.description = description;

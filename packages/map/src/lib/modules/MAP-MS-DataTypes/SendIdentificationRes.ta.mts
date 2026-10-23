@@ -55,7 +55,7 @@ class SendIdentificationRes {
          * @public
          * @readonly
          */
-        readonly imsi: OPTIONAL<IMSI>,
+        readonly imsi?: OPTIONAL<IMSI>,
         /**
          * @summary `authenticationSetList`.
          * @description
@@ -67,7 +67,7 @@ class SendIdentificationRes {
          * @public
          * @readonly
          */
-        readonly authenticationSetList: OPTIONAL<AuthenticationSetList>,
+        readonly authenticationSetList?: OPTIONAL<AuthenticationSetList>,
         /**
          * @summary `currentSecurityContext`.
          * @description
@@ -79,13 +79,13 @@ class SendIdentificationRes {
          * @public
          * @readonly
          */
-        readonly currentSecurityContext: OPTIONAL<CurrentSecurityContext>,
+        readonly currentSecurityContext?: OPTIONAL<CurrentSecurityContext>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `lastUsedLtePLMN_Id`.
          * @description
@@ -97,7 +97,7 @@ class SendIdentificationRes {
          * @public
          * @readonly
          */
-        readonly lastUsedLtePLMN_Id: OPTIONAL<PLMN_Id>,
+        readonly lastUsedLtePLMN_Id?: OPTIONAL<PLMN_Id>,
         /**
          * @summary `mtCallPendingFlag`.
          * @description
@@ -109,7 +109,7 @@ class SendIdentificationRes {
          * @public
          * @readonly
          */
-        readonly mtCallPendingFlag: OPTIONAL<NULL>,
+        readonly mtCallPendingFlag?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @public

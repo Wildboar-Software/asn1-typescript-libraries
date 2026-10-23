@@ -48,7 +48,7 @@ class MAP_OpenInfo {
          * @public
          * @readonly
          */
-        readonly destinationReference: OPTIONAL<AddressString>,
+        readonly destinationReference?: OPTIONAL<AddressString>,
         /**
          * @summary `originationReference`.
          * @description
@@ -61,7 +61,7 @@ class MAP_OpenInfo {
          * @public
          * @readonly
          */
-        readonly originationReference: OPTIONAL<AddressString>,
+        readonly originationReference?: OPTIONAL<AddressString>,
         /**
          * @summary `extensionContainer`.
          * @description
@@ -71,7 +71,7 @@ class MAP_OpenInfo {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

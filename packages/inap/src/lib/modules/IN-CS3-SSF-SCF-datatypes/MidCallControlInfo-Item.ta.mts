@@ -54,7 +54,7 @@ class MidCallControlInfo_Item {
 
     constructor (
         midCallInfoType: MidCallInfoType,
-        midCallReportType: OPTIONAL<MidCallControlInfo_Item_midCallReportType>,
+        midCallReportType?: OPTIONAL<MidCallControlInfo_Item_midCallReportType>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.midCallInfoType = midCallInfoType;

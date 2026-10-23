@@ -219,7 +219,7 @@ class TARGETACTIVITYMONITOR {
         iRITransaction: OPTIONAL<IRITransactionType>,
         iRITransactionNumber: INTEGER,
         userSignal: UserSignalType,
-        cryptoCheckSum: OPTIONAL<BIT_STRING>
+        cryptoCheckSum?: OPTIONAL<BIT_STRING>
     ) {
         this.version = version;
         this.lIInstanceid = lIInstanceid;

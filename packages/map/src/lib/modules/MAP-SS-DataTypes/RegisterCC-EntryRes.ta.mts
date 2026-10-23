@@ -37,7 +37,7 @@ class RegisterCC_EntryRes {
          * @public
          * @readonly
          */
-        readonly ccbs_Feature: OPTIONAL<CCBS_Feature>,
+        readonly ccbs_Feature?: OPTIONAL<CCBS_Feature>,
         /**
          * @summary Extensions that are not recognized.
          * @public

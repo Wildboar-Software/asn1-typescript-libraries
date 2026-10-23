@@ -62,7 +62,7 @@ class DiscoveredEAS {
 
     constructor (
         eASProfile: EASProfile,
-        lifetime: OPTIONAL<INTEGER>,
+        lifetime?: OPTIONAL<INTEGER>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.eASProfile = eASProfile;

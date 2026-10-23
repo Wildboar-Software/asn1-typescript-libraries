@@ -59,7 +59,7 @@ class SubaddressTransferArg {
 
     constructor (
         redirectionSubaddress: PartySubaddress,
-        argumentExtension: OPTIONAL<SubaddressTransferArg_argumentExtension>
+        argumentExtension?: OPTIONAL<SubaddressTransferArg_argumentExtension>
     ) {
         this.redirectionSubaddress = redirectionSubaddress;
         this.argumentExtension = argumentExtension;

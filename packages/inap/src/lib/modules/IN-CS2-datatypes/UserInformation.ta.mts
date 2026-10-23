@@ -51,7 +51,7 @@ class UserInformation {
     constructor (
         infoToSend: InfoToSend,
         constraints: Constraints,
-        errorInfo: OPTIONAL<InfoToSend>
+        errorInfo?: OPTIONAL<InfoToSend>
     ) {
         this.infoToSend = infoToSend;
         this.constraints = constraints;

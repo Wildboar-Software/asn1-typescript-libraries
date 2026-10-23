@@ -49,7 +49,7 @@ class SubscriberLocationReport_Res {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `na_ESRK`.
          * @description
@@ -59,7 +59,7 @@ class SubscriberLocationReport_Res {
          * @public
          * @readonly
          */
-        readonly na_ESRK: OPTIONAL<ISDN_AddressString>,
+        readonly na_ESRK?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `na_ESRD`.
          * @description
@@ -69,7 +69,7 @@ class SubscriberLocationReport_Res {
          * @public
          * @readonly
          */
-        readonly na_ESRD: OPTIONAL<ISDN_AddressString>,
+        readonly na_ESRD?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `h_gmlc_Address`.
          * @description
@@ -79,7 +79,7 @@ class SubscriberLocationReport_Res {
          * @public
          * @readonly
          */
-        readonly h_gmlc_Address: OPTIONAL<GSN_Address>,
+        readonly h_gmlc_Address?: OPTIONAL<GSN_Address>,
         /**
          * @summary `mo_lrShortCircuitIndicator`.
          * @description
@@ -89,7 +89,7 @@ class SubscriberLocationReport_Res {
          * @public
          * @readonly
          */
-        readonly mo_lrShortCircuitIndicator: OPTIONAL<NULL>,
+        readonly mo_lrShortCircuitIndicator?: OPTIONAL<NULL>,
         /**
          * @summary `reportingPLMNList`.
          * @description
@@ -99,7 +99,7 @@ class SubscriberLocationReport_Res {
          * @public
          * @readonly
          */
-        readonly reportingPLMNList: OPTIONAL<ReportingPLMNList>,
+        readonly reportingPLMNList?: OPTIONAL<ReportingPLMNList>,
         /**
          * @summary `lcs_ReferenceNumber`.
          * @description
@@ -109,7 +109,7 @@ class SubscriberLocationReport_Res {
          * @public
          * @readonly
          */
-        readonly lcs_ReferenceNumber: OPTIONAL<LCS_ReferenceNumber>,
+        readonly lcs_ReferenceNumber?: OPTIONAL<LCS_ReferenceNumber>,
         /**
          * @summary Extensions that are not recognized.
          * @public

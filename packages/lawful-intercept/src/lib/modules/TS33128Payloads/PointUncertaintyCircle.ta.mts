@@ -90,7 +90,7 @@ class PointUncertaintyCircle {
     constructor (
         geographicalCoordinates: GeographicalCoordinates,
         deprecatedUncertainty: Uncertainty,
-        uncertaintySBI: OPTIONAL<UncertaintySBI>,
+        uncertaintySBI?: OPTIONAL<UncertaintySBI>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.geographicalCoordinates = geographicalCoordinates;

@@ -372,15 +372,15 @@ class SUBBMSCRecord {
         recordOpeningTime: OCTET_STRING,
         duration: INTEGER,
         causeForRecClosing: SUBBMSCRecord_causeForRecClosing,
-        diagnostics: OPTIONAL<Diagnostics>,
-        recordSequenceNumber: OPTIONAL<INTEGER>,
-        nodeID: OPTIONAL<IA5String>,
-        recordExtensions: OPTIONAL<ManagementExtension[]>,
-        localSequenceNumber: OPTIONAL<INTEGER>,
-        servedMSISDN: OPTIONAL<OCTET_STRING>,
-        bearerServiceDescription: OPTIONAL<BearerServiceDescription>,
-        mbmsInformation: OPTIONAL<MBMSInformation>,
-        serviceContextID: OPTIONAL<UTF8String>
+        diagnostics?: OPTIONAL<Diagnostics>,
+        recordSequenceNumber?: OPTIONAL<INTEGER>,
+        nodeID?: OPTIONAL<IA5String>,
+        recordExtensions?: OPTIONAL<ManagementExtension[]>,
+        localSequenceNumber?: OPTIONAL<INTEGER>,
+        servedMSISDN?: OPTIONAL<OCTET_STRING>,
+        bearerServiceDescription?: OPTIONAL<BearerServiceDescription>,
+        mbmsInformation?: OPTIONAL<MBMSInformation>,
+        serviceContextID?: OPTIONAL<UTF8String>
     ) {
         this.recordType = recordType;
         this.servedIMSI = servedIMSI;

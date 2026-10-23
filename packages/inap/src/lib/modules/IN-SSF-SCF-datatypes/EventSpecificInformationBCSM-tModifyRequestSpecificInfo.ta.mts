@@ -50,8 +50,8 @@ class EventSpecificInformationBCSM_tModifyRequestSpecificInfo {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        aTMCellRate: OPTIONAL<ATMCellRate>,
-        additionalATMCellRate: OPTIONAL<AdditionalATMCellRate>,
+        aTMCellRate?: OPTIONAL<ATMCellRate>,
+        additionalATMCellRate?: OPTIONAL<AdditionalATMCellRate>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.aTMCellRate = aTMCellRate;

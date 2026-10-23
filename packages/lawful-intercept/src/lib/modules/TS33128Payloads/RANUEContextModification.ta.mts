@@ -241,16 +241,16 @@ class RANUEContextModification {
     constructor (
         aMFUENGAPID: AMFUENGAPID,
         rANUENGAPID: RANUENGAPID,
-        rATFrequencySelectionPriority: OPTIONAL<RATFrequencySelectionPriority>,
-        newAMFUENGAPID: OPTIONAL<AMFUENGAPID>,
-        newGUAMI: OPTIONAL<GUAMI>,
-        iABAuthorizedIndicator: OPTIONAL<IABAuthorizedIndicator>,
-        nRV2XServicesAuthorization: OPTIONAL<NRV2XServicesAuthorization>,
-        lTEV2XServiceAuthorization: OPTIONAL<LTEV2XServiceAuthorization>,
-        rGLevelWirelineAccessCharacteristics: OPTIONAL<OCTET_STRING>,
-        uERadioCapabilityID: OPTIONAL<OCTET_STRING>,
-        fiveGProSeAuthorizationIndication: OPTIONAL<FiveGProSeAuthorizationIndication>,
-        mobileIABAuthorizedIndicator: OPTIONAL<MobileIABAuthorizedIndicator>,
+        rATFrequencySelectionPriority?: OPTIONAL<RATFrequencySelectionPriority>,
+        newAMFUENGAPID?: OPTIONAL<AMFUENGAPID>,
+        newGUAMI?: OPTIONAL<GUAMI>,
+        iABAuthorizedIndicator?: OPTIONAL<IABAuthorizedIndicator>,
+        nRV2XServicesAuthorization?: OPTIONAL<NRV2XServicesAuthorization>,
+        lTEV2XServiceAuthorization?: OPTIONAL<LTEV2XServiceAuthorization>,
+        rGLevelWirelineAccessCharacteristics?: OPTIONAL<OCTET_STRING>,
+        uERadioCapabilityID?: OPTIONAL<OCTET_STRING>,
+        fiveGProSeAuthorizationIndication?: OPTIONAL<FiveGProSeAuthorizationIndication>,
+        mobileIABAuthorizedIndicator?: OPTIONAL<MobileIABAuthorizedIndicator>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.aMFUENGAPID = aMFUENGAPID;

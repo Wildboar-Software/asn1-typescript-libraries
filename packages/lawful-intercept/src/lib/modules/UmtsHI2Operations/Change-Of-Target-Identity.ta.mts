@@ -225,18 +225,18 @@ class Change_Of_Target_Identity {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        new_MSISDN: OPTIONAL<PartyInformation>,
-        old_MSISDN: OPTIONAL<PartyInformation>,
-        new_IMSI: OPTIONAL<PartyInformation>,
-        old_IMSI: OPTIONAL<PartyInformation>,
-        new_IMEI: OPTIONAL<PartyInformation>,
-        old_IMEI: OPTIONAL<PartyInformation>,
-        new_IMPI: OPTIONAL<PartyInformation>,
-        old_IMPI: OPTIONAL<PartyInformation>,
-        new_SIP_URI: OPTIONAL<PartyInformation>,
-        old_SIP_URI: OPTIONAL<PartyInformation>,
-        new_TEL_URI: OPTIONAL<PartyInformation>,
-        old_TEL_URI: OPTIONAL<PartyInformation>,
+        new_MSISDN?: OPTIONAL<PartyInformation>,
+        old_MSISDN?: OPTIONAL<PartyInformation>,
+        new_IMSI?: OPTIONAL<PartyInformation>,
+        old_IMSI?: OPTIONAL<PartyInformation>,
+        new_IMEI?: OPTIONAL<PartyInformation>,
+        old_IMEI?: OPTIONAL<PartyInformation>,
+        new_IMPI?: OPTIONAL<PartyInformation>,
+        old_IMPI?: OPTIONAL<PartyInformation>,
+        new_SIP_URI?: OPTIONAL<PartyInformation>,
+        old_SIP_URI?: OPTIONAL<PartyInformation>,
+        new_TEL_URI?: OPTIONAL<PartyInformation>,
+        old_TEL_URI?: OPTIONAL<PartyInformation>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.new_MSISDN = new_MSISDN;

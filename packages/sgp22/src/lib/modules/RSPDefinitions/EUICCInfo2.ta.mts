@@ -252,7 +252,7 @@ class EUICCInfo2 {
          * @public
          * @readonly
          */
-        readonly certificationDataObject: OPTIONAL<CertificationDataObject>,
+        readonly certificationDataObject?: OPTIONAL<CertificationDataObject>,
         /**
          * @summary `treProperties`.
          * @description
@@ -264,7 +264,7 @@ class EUICCInfo2 {
          * @public
          * @readonly
          */
-        readonly treProperties: OPTIONAL<EUICCInfo2_treProperties>,
+        readonly treProperties?: OPTIONAL<EUICCInfo2_treProperties>,
         /**
          * @summary `treProductReference`.
          * @description
@@ -275,7 +275,7 @@ class EUICCInfo2 {
          * @public
          * @readonly
          */
-        readonly treProductReference: OPTIONAL<UTF8String>,
+        readonly treProductReference?: OPTIONAL<UTF8String>,
         /**
          * @summary `additionalEuiccProfilePackageVersions`.
          * @description
@@ -287,7 +287,7 @@ class EUICCInfo2 {
          * @public
          * @readonly
          */
-        readonly additionalEuiccProfilePackageVersions: OPTIONAL<VersionType[]>,
+        readonly additionalEuiccProfilePackageVersions?: OPTIONAL<VersionType[]>,
         /**
          * @summary `lpaMode`.
          * @description
@@ -299,7 +299,7 @@ class EUICCInfo2 {
          * @public
          * @readonly
          */
-        readonly lpaMode: OPTIONAL<LpaMode>,
+        readonly lpaMode?: OPTIONAL<LpaMode>,
         /**
          * @summary `euiccCiPKIdListForSigningV3`.
          * @description
@@ -312,7 +312,7 @@ class EUICCInfo2 {
          * @public
          * @readonly
          */
-        readonly euiccCiPKIdListForSigningV3: OPTIONAL<OCTET_STRING[]>,
+        readonly euiccCiPKIdListForSigningV3?: OPTIONAL<OCTET_STRING[]>,
         /**
          * @summary `additionalEuiccInfo`.
          * @description
@@ -324,7 +324,7 @@ class EUICCInfo2 {
          * @public
          * @readonly
          */
-        readonly additionalEuiccInfo: OPTIONAL<OCTET_STRING>,
+        readonly additionalEuiccInfo?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `highestSvn`.
          * @description
@@ -336,7 +336,7 @@ class EUICCInfo2 {
          * @public
          * @readonly
          */
-        readonly highestSvn: OPTIONAL<VersionType>,
+        readonly highestSvn?: OPTIONAL<VersionType>,
         /**
          * @summary `iotSpecificInfo`.
          * @description
@@ -346,7 +346,7 @@ class EUICCInfo2 {
          * @public
          * @readonly
          */
-        readonly iotSpecificInfo: OPTIONAL<IoTSpecificInfo>,
+        readonly iotSpecificInfo?: OPTIONAL<IoTSpecificInfo>,
         /**
          * @summary `euiccMinimumSecurityLevel`.
          * @description
@@ -358,7 +358,7 @@ class EUICCInfo2 {
          * @public
          * @readonly
          */
-        readonly euiccMinimumSecurityLevel: OPTIONAL<OCTET_STRING>
+        readonly euiccMinimumSecurityLevel?: OPTIONAL<OCTET_STRING>
     ) {
         if (this.sasAcreditationNumber.length > 64) {
             throw new ASN1SizeError("EUICCInfo2.sasAcreditationNumber violates SIZE constraint");

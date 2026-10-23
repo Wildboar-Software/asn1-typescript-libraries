@@ -51,7 +51,7 @@ class MT_smsCAMELTDP_Criteria {
          * @public
          * @readonly
          */
-        readonly tpdu_TypeCriterion: OPTIONAL<TPDU_TypeCriterion>,
+        readonly tpdu_TypeCriterion?: OPTIONAL<TPDU_TypeCriterion>,
         /**
          * @summary Extensions that are not recognized.
          * @public

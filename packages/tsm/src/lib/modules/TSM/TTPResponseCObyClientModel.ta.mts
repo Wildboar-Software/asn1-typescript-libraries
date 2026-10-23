@@ -112,7 +112,7 @@ class TTPResponseCObyClientModel {
          * @public
          * @readonly
          */
-        readonly aCforBioTTP: OPTIONAL<ACBioContentInformation>
+        readonly aCforBioTTP?: OPTIONAL<ACBioContentInformation>
     ) {}
 
     /**

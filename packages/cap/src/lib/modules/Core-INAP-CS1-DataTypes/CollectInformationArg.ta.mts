@@ -37,7 +37,7 @@ class CollectInformationArg {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<ExtensionField[]>
+        readonly extensions?: OPTIONAL<ExtensionField[]>
     ) {}
 
     /**

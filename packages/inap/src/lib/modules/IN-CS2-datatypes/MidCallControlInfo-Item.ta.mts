@@ -47,7 +47,7 @@ class MidCallControlInfo_Item {
 
     constructor (
         midCallInfoType: MidCallInfoType,
-        midCallReportType: OPTIONAL<MidCallControlInfo_Item_midCallReportType>
+        midCallReportType?: OPTIONAL<MidCallControlInfo_Item_midCallReportType>
     ) {
         this.midCallInfoType = midCallInfoType;
         this.midCallReportType = midCallReportType;

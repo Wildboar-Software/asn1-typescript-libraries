@@ -114,7 +114,7 @@ class SetDisplayArgument {
          * @public
          * @readonly
          */
-        readonly offset: OPTIONAL<INTEGER>,
+        readonly offset?: OPTIONAL<INTEGER>,
         /**
          * @summary `characterSet`.
          * @description
@@ -124,7 +124,7 @@ class SetDisplayArgument {
          * @public
          * @readonly
          */
-        readonly characterSet: OPTIONAL<CharacterSet>,
+        readonly characterSet?: OPTIONAL<CharacterSet>,
         /**
          * @summary `extensions`.
          * @description
@@ -134,7 +134,7 @@ class SetDisplayArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

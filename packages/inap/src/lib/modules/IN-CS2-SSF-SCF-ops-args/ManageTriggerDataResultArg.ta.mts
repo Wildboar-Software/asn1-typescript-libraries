@@ -52,7 +52,7 @@ class ManageTriggerDataResultArg {
 
     constructor (
         actionPerformed: ActionPerformed,
-        extensions: OPTIONAL<ExtensionField[]>,
+        extensions?: OPTIONAL<ExtensionField[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.actionPerformed = actionPerformed;

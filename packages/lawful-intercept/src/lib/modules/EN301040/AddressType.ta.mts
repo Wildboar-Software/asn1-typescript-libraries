@@ -73,7 +73,7 @@ class AddressType {
 
     constructor (
         tSI: TSIType,
-        supplementaryAddress: OPTIONAL<TETRAAddressType[]>
+        supplementaryAddress?: OPTIONAL<TETRAAddressType[]>
     ) {
         this.tSI = tSI;
         this.supplementaryAddress = supplementaryAddress;

@@ -168,8 +168,8 @@ class DuplicateDetectionRequest {
         duplicateDetectionCriteria: OPTIONAL<DuplicateDetectionCriterion[]>,
         clustering: OPTIONAL<BOOLEAN>,
         retentionCriteria: RetentionCriterion[],
-        sortCriteria: OPTIONAL<SortCriterion[]>,
-        otherInfo: OPTIONAL<OtherInformation>
+        sortCriteria?: OPTIONAL<SortCriterion[]>,
+        otherInfo?: OPTIONAL<OtherInformation>
     ) {
         this.referenceId = referenceId;
         this.inputResultSetIds = inputResultSetIds;

@@ -46,7 +46,7 @@ class DeviceMediaInfoList_Item {
          * @public
          * @readonly
          */
-        readonly mediaStreamID: OPTIONAL<MediaStreamID>,
+        readonly mediaStreamID?: OPTIONAL<MediaStreamID>,
         /**
          * @summary `connectionInformation`.
          * @description
@@ -56,7 +56,7 @@ class DeviceMediaInfoList_Item {
          * @public
          * @readonly
          */
-        readonly connectionInformation: OPTIONAL<ConnectionInformation>
+        readonly connectionInformation?: OPTIONAL<ConnectionInformation>
     ) {}
 
     /**

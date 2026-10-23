@@ -72,7 +72,7 @@ class GenerateTelephonyTonesArgument {
          * @public
          * @readonly
          */
-        readonly toneDuration: OPTIONAL<INTEGER>,
+        readonly toneDuration?: OPTIONAL<INTEGER>,
         /**
          * @summary `extensions`.
          * @description
@@ -82,7 +82,7 @@ class GenerateTelephonyTonesArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

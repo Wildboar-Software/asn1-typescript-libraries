@@ -75,7 +75,7 @@ class ThreadData {
          * @public
          * @readonly
          */
-        readonly threadIDTimeStamp: OPTIONAL<TimeInfo>
+        readonly threadIDTimeStamp?: OPTIONAL<TimeInfo>
     ) {}
 
     /**

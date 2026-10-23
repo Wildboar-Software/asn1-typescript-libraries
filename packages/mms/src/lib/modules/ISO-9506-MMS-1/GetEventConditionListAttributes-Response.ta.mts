@@ -62,7 +62,7 @@ class GetEventConditionListAttributes_Response {
          * @public
          * @readonly
          */
-        readonly listOfEventConditionListName: OPTIONAL<ObjectName[]>
+        readonly listOfEventConditionListName?: OPTIONAL<ObjectName[]>
     ) {}
 
     /**

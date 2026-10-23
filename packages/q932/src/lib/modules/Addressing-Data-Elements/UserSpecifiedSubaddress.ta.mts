@@ -55,7 +55,7 @@ class UserSpecifiedSubaddress {
 
     constructor (
         subaddressInformation: SubaddressInformation,
-        oddCountIndicator: OPTIONAL<BOOLEAN>
+        oddCountIndicator?: OPTIONAL<BOOLEAN>
     ) {
         this.subaddressInformation = subaddressInformation;
         this.oddCountIndicator = oddCountIndicator;

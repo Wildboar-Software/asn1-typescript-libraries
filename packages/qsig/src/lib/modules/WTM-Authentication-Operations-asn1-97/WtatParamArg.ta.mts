@@ -80,9 +80,9 @@ class WtatParamArg {
 
     constructor (
         wtmUserId: WtmUserId,
-        canCompute: OPTIONAL<CanCompute>,
-        authChallenge: OPTIONAL<AuthChallenge>,
-        dummyExtension: OPTIONAL<DummyExtension>
+        canCompute?: OPTIONAL<CanCompute>,
+        authChallenge?: OPTIONAL<AuthChallenge>,
+        dummyExtension?: OPTIONAL<DummyExtension>
     ) {
         this.wtmUserId = wtmUserId;
         this.canCompute = canCompute;

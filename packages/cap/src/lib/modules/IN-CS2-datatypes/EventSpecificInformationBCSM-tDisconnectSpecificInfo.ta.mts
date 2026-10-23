@@ -39,13 +39,13 @@ class EventSpecificInformationBCSM_tDisconnectSpecificInfo {
          * @public
          * @readonly
          */
-        readonly releaseCause: OPTIONAL<Cause>,
+        readonly releaseCause?: OPTIONAL<Cause>,
         /**
          * @summary `connectTime`.
          * @public
          * @readonly
          */
-        readonly connectTime: OPTIONAL<Integer4>,
+        readonly connectTime?: OPTIONAL<Integer4>,
         /**
          * @summary Extensions that are not recognized.
          * @public

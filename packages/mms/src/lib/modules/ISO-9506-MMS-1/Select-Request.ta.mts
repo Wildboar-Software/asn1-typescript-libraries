@@ -49,7 +49,7 @@ class Select_Request {
          * @public
          * @readonly
          */
-        readonly controlling: OPTIONAL<Identifier>,
+        readonly controlling?: OPTIONAL<Identifier>,
         /**
          * @summary `controlled`.
          * @description
@@ -60,7 +60,7 @@ class Select_Request {
          * @public
          * @readonly
          */
-        readonly controlled: OPTIONAL<Identifier[]>
+        readonly controlled?: OPTIONAL<Identifier[]>
     ) {}
 
     /**

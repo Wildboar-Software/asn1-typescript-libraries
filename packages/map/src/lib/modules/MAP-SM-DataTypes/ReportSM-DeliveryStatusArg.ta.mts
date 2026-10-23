@@ -129,7 +129,7 @@ class ReportSM_DeliveryStatusArg {
          * @public
          * @readonly
          */
-        readonly absentSubscriberDiagnosticSM: OPTIONAL<AbsentSubscriberDiagnosticSM>,
+        readonly absentSubscriberDiagnosticSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>,
         /**
          * @summary `extensionContainer`.
          * @description
@@ -139,7 +139,7 @@ class ReportSM_DeliveryStatusArg {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `gprsSupportIndicator`.
          * @description
@@ -149,7 +149,7 @@ class ReportSM_DeliveryStatusArg {
          * @public
          * @readonly
          */
-        readonly gprsSupportIndicator: OPTIONAL<NULL>,
+        readonly gprsSupportIndicator?: OPTIONAL<NULL>,
         /**
          * @summary `deliveryOutcomeIndicator`.
          * @description
@@ -160,7 +160,7 @@ class ReportSM_DeliveryStatusArg {
          * @public
          * @readonly
          */
-        readonly deliveryOutcomeIndicator: OPTIONAL<NULL>,
+        readonly deliveryOutcomeIndicator?: OPTIONAL<NULL>,
         /**
          * @summary `additionalSM_DeliveryOutcome`.
          * @description
@@ -170,7 +170,7 @@ class ReportSM_DeliveryStatusArg {
          * @public
          * @readonly
          */
-        readonly additionalSM_DeliveryOutcome: OPTIONAL<SM_DeliveryOutcome>,
+        readonly additionalSM_DeliveryOutcome?: OPTIONAL<SM_DeliveryOutcome>,
         /**
          * @summary `additionalAbsentSubscriberDiagnosticSM`.
          * @description
@@ -180,7 +180,7 @@ class ReportSM_DeliveryStatusArg {
          * @public
          * @readonly
          */
-        readonly additionalAbsentSubscriberDiagnosticSM: OPTIONAL<AbsentSubscriberDiagnosticSM>,
+        readonly additionalAbsentSubscriberDiagnosticSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>,
         /**
          * @summary `ip_sm_gw_Indicator`.
          * @description
@@ -191,7 +191,7 @@ class ReportSM_DeliveryStatusArg {
          * @public
          * @readonly
          */
-        readonly ip_sm_gw_Indicator: OPTIONAL<NULL>,
+        readonly ip_sm_gw_Indicator?: OPTIONAL<NULL>,
         /**
          * @summary `ip_sm_gw_sm_deliveryOutcome`.
          * @description
@@ -201,7 +201,7 @@ class ReportSM_DeliveryStatusArg {
          * @public
          * @readonly
          */
-        readonly ip_sm_gw_sm_deliveryOutcome: OPTIONAL<SM_DeliveryOutcome>,
+        readonly ip_sm_gw_sm_deliveryOutcome?: OPTIONAL<SM_DeliveryOutcome>,
         /**
          * @summary `ip_sm_gw_absentSubscriberDiagnosticSM`.
          * @description
@@ -211,7 +211,7 @@ class ReportSM_DeliveryStatusArg {
          * @public
          * @readonly
          */
-        readonly ip_sm_gw_absentSubscriberDiagnosticSM: OPTIONAL<AbsentSubscriberDiagnosticSM>,
+        readonly ip_sm_gw_absentSubscriberDiagnosticSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>,
         /**
          * @summary `imsi`.
          * @description
@@ -221,7 +221,7 @@ class ReportSM_DeliveryStatusArg {
          * @public
          * @readonly
          */
-        readonly imsi: OPTIONAL<IMSI>,
+        readonly imsi?: OPTIONAL<IMSI>,
         /**
          * @summary `singleAttemptDelivery`.
          * @description
@@ -231,7 +231,7 @@ class ReportSM_DeliveryStatusArg {
          * @public
          * @readonly
          */
-        readonly singleAttemptDelivery: OPTIONAL<NULL>,
+        readonly singleAttemptDelivery?: OPTIONAL<NULL>,
         /**
          * @summary `correlationID`.
          * @description
@@ -241,7 +241,7 @@ class ReportSM_DeliveryStatusArg {
          * @public
          * @readonly
          */
-        readonly correlationID: OPTIONAL<CorrelationID>,
+        readonly correlationID?: OPTIONAL<CorrelationID>,
         /**
          * @summary `smsf_3gpp_deliveryOutcomeIndicator`.
          * @description
@@ -252,7 +252,7 @@ class ReportSM_DeliveryStatusArg {
          * @public
          * @readonly
          */
-        readonly smsf_3gpp_deliveryOutcomeIndicator: OPTIONAL<NULL>,
+        readonly smsf_3gpp_deliveryOutcomeIndicator?: OPTIONAL<NULL>,
         /**
          * @summary `smsf_3gpp_deliveryOutcome`.
          * @description
@@ -262,7 +262,7 @@ class ReportSM_DeliveryStatusArg {
          * @public
          * @readonly
          */
-        readonly smsf_3gpp_deliveryOutcome: OPTIONAL<SM_DeliveryOutcome>,
+        readonly smsf_3gpp_deliveryOutcome?: OPTIONAL<SM_DeliveryOutcome>,
         /**
          * @summary `smsf_3gpp_absentSubscriberDiagSM`.
          * @description
@@ -272,7 +272,7 @@ class ReportSM_DeliveryStatusArg {
          * @public
          * @readonly
          */
-        readonly smsf_3gpp_absentSubscriberDiagSM: OPTIONAL<AbsentSubscriberDiagnosticSM>,
+        readonly smsf_3gpp_absentSubscriberDiagSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>,
         /**
          * @summary `smsf_non_3gpp_deliveryOutcomeIndicator`.
          * @description
@@ -283,7 +283,7 @@ class ReportSM_DeliveryStatusArg {
          * @public
          * @readonly
          */
-        readonly smsf_non_3gpp_deliveryOutcomeIndicator: OPTIONAL<NULL>,
+        readonly smsf_non_3gpp_deliveryOutcomeIndicator?: OPTIONAL<NULL>,
         /**
          * @summary `smsf_non_3gpp_deliveryOutcome`.
          * @description
@@ -293,7 +293,7 @@ class ReportSM_DeliveryStatusArg {
          * @public
          * @readonly
          */
-        readonly smsf_non_3gpp_deliveryOutcome: OPTIONAL<SM_DeliveryOutcome>,
+        readonly smsf_non_3gpp_deliveryOutcome?: OPTIONAL<SM_DeliveryOutcome>,
         /**
          * @summary `smsf_non_3gpp_absentSubscriberDiagSM`.
          * @description
@@ -303,7 +303,7 @@ class ReportSM_DeliveryStatusArg {
          * @public
          * @readonly
          */
-        readonly smsf_non_3gpp_absentSubscriberDiagSM: OPTIONAL<AbsentSubscriberDiagnosticSM>,
+        readonly smsf_non_3gpp_absentSubscriberDiagSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>,
         /**
          * @summary `failedSMServingNodes`.
          * @description
@@ -313,7 +313,7 @@ class ReportSM_DeliveryStatusArg {
          * @public
          * @readonly
          */
-        readonly failedSMServingNodes: OPTIONAL<SMServingNodeAddressList>,
+        readonly failedSMServingNodes?: OPTIONAL<SMServingNodeAddressList>,
         /**
          * @summary Extensions that are not recognized.
          * @public

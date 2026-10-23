@@ -52,7 +52,7 @@ class UserCSGInformation {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `accessMode`.
          * @description
@@ -64,7 +64,7 @@ class UserCSGInformation {
          * @public
          * @readonly
          */
-        readonly accessMode: OPTIONAL<OCTET_STRING>,
+        readonly accessMode?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `cmi`.
          * @description
@@ -77,7 +77,7 @@ class UserCSGInformation {
          * @public
          * @readonly
          */
-        readonly cmi: OPTIONAL<OCTET_STRING>,
+        readonly cmi?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary Extensions that are not recognized.
          * @public

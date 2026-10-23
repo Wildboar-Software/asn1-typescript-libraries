@@ -61,13 +61,13 @@ class RepairActivityList_Item {
          * @public
          * @readonly
          */
-        readonly activityPerson: OPTIONAL<PersonReach>,
+        readonly activityPerson?: OPTIONAL<PersonReach>,
         /**
          * @summary `activityCode`.
          * @public
          * @readonly
          */
-        readonly activityCode: OPTIONAL<ActivityCode>,
+        readonly activityCode?: OPTIONAL<ActivityCode>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -68,9 +68,9 @@ class RequestEveryStatusChangeReportArg {
 
     constructor (
         resourceID: ResourceID,
-        correlationID: OPTIONAL<CorrelationID>,
-        monitorDuration: OPTIONAL<Duration>,
-        extensions: OPTIONAL<Extensions>,
+        correlationID?: OPTIONAL<CorrelationID>,
+        monitorDuration?: OPTIONAL<Duration>,
+        extensions?: OPTIONAL<Extensions>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.resourceID = resourceID;

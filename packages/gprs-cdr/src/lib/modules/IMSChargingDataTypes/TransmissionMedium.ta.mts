@@ -57,8 +57,8 @@ class TransmissionMedium {
     readonly tMU: OPTIONAL<OCTET_STRING>;
 
     constructor (
-        tMR: OPTIONAL<OCTET_STRING>,
-        tMU: OPTIONAL<OCTET_STRING>
+        tMR?: OPTIONAL<OCTET_STRING>,
+        tMU?: OPTIONAL<OCTET_STRING>
     ) {
         this.tMR = tMR;
         this.tMU = tMU;

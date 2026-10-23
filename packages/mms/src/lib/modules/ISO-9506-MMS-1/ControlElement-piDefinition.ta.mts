@@ -70,7 +70,7 @@ class ControlElement_piDefinition {
          * @public
          * @readonly
          */
-        readonly reusable: OPTIONAL<BOOLEAN>,
+        readonly reusable?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `monitorType`.
          * @description
@@ -82,7 +82,7 @@ class ControlElement_piDefinition {
          * @public
          * @readonly
          */
-        readonly monitorType: OPTIONAL<BOOLEAN>,
+        readonly monitorType?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `pIState`.
          * @description
@@ -93,7 +93,7 @@ class ControlElement_piDefinition {
          * @public
          * @readonly
          */
-        readonly pIState: OPTIONAL<ProgramInvocationState>
+        readonly pIState?: OPTIONAL<ProgramInvocationState>
     ) {}
 
     /**

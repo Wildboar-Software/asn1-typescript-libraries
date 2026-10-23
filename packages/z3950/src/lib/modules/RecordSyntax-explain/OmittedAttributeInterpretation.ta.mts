@@ -55,8 +55,8 @@ class OmittedAttributeInterpretation {
     readonly defaultDescription: OPTIONAL<HumanString>;
 
     constructor (
-        defaultValue: OPTIONAL<StringOrNumeric>,
-        defaultDescription: OPTIONAL<HumanString>
+        defaultValue?: OPTIONAL<StringOrNumeric>,
+        defaultDescription?: OPTIONAL<HumanString>
     ) {
         this.defaultValue = defaultValue;
         this.defaultDescription = defaultDescription;

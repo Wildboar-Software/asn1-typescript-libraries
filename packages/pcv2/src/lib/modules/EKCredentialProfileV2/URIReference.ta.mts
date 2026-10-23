@@ -97,8 +97,8 @@ class URIReference {
 
     constructor (
         uniformResourceIdentifier: IA5String,
-        hashAlgorithm: OPTIONAL<AlgorithmIdentifier>,
-        hashValue: OPTIONAL<BIT_STRING>,
+        hashAlgorithm?: OPTIONAL<AlgorithmIdentifier>,
+        hashValue?: OPTIONAL<BIT_STRING>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.uniformResourceIdentifier = uniformResourceIdentifier;

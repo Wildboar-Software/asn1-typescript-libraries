@@ -159,15 +159,15 @@ class EPS_DSMIP_SpecificParameters {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        lifetime: OPTIONAL<INTEGER>,
-        requestedIPv6HomePrefix: OPTIONAL<OCTET_STRING>,
-        homeAddress: OPTIONAL<OCTET_STRING>,
-        iPv4careOfAddress: OPTIONAL<OCTET_STRING>,
-        iPv6careOfAddress: OPTIONAL<OCTET_STRING>,
-        aPN: OPTIONAL<OCTET_STRING>,
-        status: OPTIONAL<INTEGER>,
-        hSS_AAA_address: OPTIONAL<OCTET_STRING>,
-        targetPDN_GW_Address: OPTIONAL<OCTET_STRING>,
+        lifetime?: OPTIONAL<INTEGER>,
+        requestedIPv6HomePrefix?: OPTIONAL<OCTET_STRING>,
+        homeAddress?: OPTIONAL<OCTET_STRING>,
+        iPv4careOfAddress?: OPTIONAL<OCTET_STRING>,
+        iPv6careOfAddress?: OPTIONAL<OCTET_STRING>,
+        aPN?: OPTIONAL<OCTET_STRING>,
+        status?: OPTIONAL<INTEGER>,
+        hSS_AAA_address?: OPTIONAL<OCTET_STRING>,
+        targetPDN_GW_Address?: OPTIONAL<OCTET_STRING>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.lifetime = lifetime;

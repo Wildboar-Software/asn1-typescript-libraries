@@ -61,7 +61,7 @@ class SuspendDataPathArgument {
          * @public
          * @readonly
          */
-        readonly ioRegisterReqID: OPTIONAL<IORegisterReqID>,
+        readonly ioRegisterReqID?: OPTIONAL<IORegisterReqID>,
         /**
          * @summary `extensions`.
          * @description
@@ -72,7 +72,7 @@ class SuspendDataPathArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

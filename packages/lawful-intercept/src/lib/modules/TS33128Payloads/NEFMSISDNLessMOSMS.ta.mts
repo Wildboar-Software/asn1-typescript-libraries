@@ -144,9 +144,9 @@ class NEFMSISDNLessMOSMS {
         sUPI: SUPI,
         gPSI: GPSI,
         terminatingSMSParty: AFID,
-        sMS: OPTIONAL<SMSTPDUData>,
-        sourcePort: OPTIONAL<PortNumber>,
-        destinationPort: OPTIONAL<PortNumber>,
+        sMS?: OPTIONAL<SMSTPDUData>,
+        sourcePort?: OPTIONAL<PortNumber>,
+        destinationPort?: OPTIONAL<PortNumber>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.sUPI = sUPI;

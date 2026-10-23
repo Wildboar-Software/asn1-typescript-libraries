@@ -67,8 +67,8 @@ class MCMServiceInfo {
 
     constructor (
         messageType: MessageType,
-        mCMModeNew: OPTIONAL<MCMMode>,
-        mCMModeRetrieved: OPTIONAL<MCMMode>
+        mCMModeNew?: OPTIONAL<MCMMode>,
+        mCMModeRetrieved?: OPTIONAL<MCMMode>
     ) {
         this.messageType = messageType;
         this.mCMModeNew = mCMModeNew;

@@ -122,12 +122,12 @@ class MWIInterrogateResElt {
 
     constructor (
         basicService: BasicService,
-        msgCentreId: OPTIONAL<MsgCentreId>,
-        nbOfMessages: OPTIONAL<NbOfMessages>,
-        originatingNr: OPTIONAL<PartyNumber>,
-        timestamp: OPTIONAL<TimeStamp>,
-        priority: OPTIONAL<INTEGER>,
-        argumentExt: OPTIONAL<MWIInterrogateResElt_argumentExt>
+        msgCentreId?: OPTIONAL<MsgCentreId>,
+        nbOfMessages?: OPTIONAL<NbOfMessages>,
+        originatingNr?: OPTIONAL<PartyNumber>,
+        timestamp?: OPTIONAL<TimeStamp>,
+        priority?: OPTIONAL<INTEGER>,
+        argumentExt?: OPTIONAL<MWIInterrogateResElt_argumentExt>
     ) {
         this.basicService = basicService;
         this.msgCentreId = msgCentreId;

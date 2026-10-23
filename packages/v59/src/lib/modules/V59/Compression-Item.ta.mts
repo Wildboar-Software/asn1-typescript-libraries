@@ -135,7 +135,7 @@ class Compression_Item {
          * @public
          * @readonly
          */
-        readonly v44EncoderDictionarySize: OPTIONAL<INTEGER>,
+        readonly v44EncoderDictionarySize?: OPTIONAL<INTEGER>,
         /**
          * @summary `v44EncoderHistorySize`.
          * @description
@@ -145,7 +145,7 @@ class Compression_Item {
          * @public
          * @readonly
          */
-        readonly v44EncoderHistorySize: OPTIONAL<INTEGER>,
+        readonly v44EncoderHistorySize?: OPTIONAL<INTEGER>,
         /**
          * @summary `v44EncoderStringLength`.
          * @description
@@ -155,7 +155,7 @@ class Compression_Item {
          * @public
          * @readonly
          */
-        readonly v44EncoderStringLength: OPTIONAL<INTEGER>,
+        readonly v44EncoderStringLength?: OPTIONAL<INTEGER>,
         /**
          * @summary `v44DecoderDictionarySize`.
          * @description
@@ -165,7 +165,7 @@ class Compression_Item {
          * @public
          * @readonly
          */
-        readonly v44DecoderDictionarySize: OPTIONAL<INTEGER>,
+        readonly v44DecoderDictionarySize?: OPTIONAL<INTEGER>,
         /**
          * @summary `v44DecoderHistorySize`.
          * @description
@@ -175,7 +175,7 @@ class Compression_Item {
          * @public
          * @readonly
          */
-        readonly v44DecoderHistorySize: OPTIONAL<INTEGER>,
+        readonly v44DecoderHistorySize?: OPTIONAL<INTEGER>,
         /**
          * @summary `v44DecoderStringLength`.
          * @description
@@ -185,7 +185,7 @@ class Compression_Item {
          * @public
          * @readonly
          */
-        readonly v44DecoderStringLength: OPTIONAL<INTEGER>,
+        readonly v44DecoderStringLength?: OPTIONAL<INTEGER>,
         /**
          * @summary Extensions that are not recognized.
          * @public

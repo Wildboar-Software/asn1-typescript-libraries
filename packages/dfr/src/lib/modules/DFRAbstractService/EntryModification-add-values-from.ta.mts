@@ -54,7 +54,7 @@ class EntryModification_add_values_from {
          * @public
          * @readonly
          */
-        readonly attribute_selection: OPTIONAL<AttributeType[]>
+        readonly attribute_selection?: OPTIONAL<AttributeType[]>
     ) {}
 
     /**

@@ -112,10 +112,10 @@ class ConnectResponse_PDU {
     public readonly user_data: OPTIONAL<UserData_PDU>;
 
     constructor (
-        reference: OPTIONAL<SessionConnectionIdentifier>,
-        responding: OPTIONAL<PresentationSelector>,
-        reason: OPTIONAL<Rejection_reason>,
-        user_data: OPTIONAL<UserData_PDU>,
+        reference?: OPTIONAL<SessionConnectionIdentifier>,
+        responding?: OPTIONAL<PresentationSelector>,
+        reason?: OPTIONAL<Rejection_reason>,
+        user_data?: OPTIONAL<UserData_PDU>,
     ) {
         this.reference = reference;
         this.responding = responding;

@@ -65,55 +65,55 @@ class ServiceInteractionIndicatorsTwo {
          * @public
          * @readonly
          */
-        readonly forwardServiceInteractionInd: OPTIONAL<ForwardServiceInteractionInd>,
+        readonly forwardServiceInteractionInd?: OPTIONAL<ForwardServiceInteractionInd>,
         /**
          * @summary `backwardServiceInteractionInd`.
          * @public
          * @readonly
          */
-        readonly backwardServiceInteractionInd: OPTIONAL<BackwardServiceInteractionInd>,
+        readonly backwardServiceInteractionInd?: OPTIONAL<BackwardServiceInteractionInd>,
         /**
          * @summary `bothwayThroughConnectionInd`.
          * @public
          * @readonly
          */
-        readonly bothwayThroughConnectionInd: OPTIONAL<BothwayThroughConnectionInd>,
+        readonly bothwayThroughConnectionInd?: OPTIONAL<BothwayThroughConnectionInd>,
         /**
          * @summary `suspendTimer`.
          * @public
          * @readonly
          */
-        readonly suspendTimer: OPTIONAL<SuspendTimer>,
+        readonly suspendTimer?: OPTIONAL<SuspendTimer>,
         /**
          * @summary `connectedNumberTreatmentInd`.
          * @public
          * @readonly
          */
-        readonly connectedNumberTreatmentInd: OPTIONAL<ConnectedNumberTreatmentInd>,
+        readonly connectedNumberTreatmentInd?: OPTIONAL<ConnectedNumberTreatmentInd>,
         /**
          * @summary `suppressCallDiversionNotification`.
          * @public
          * @readonly
          */
-        readonly suppressCallDiversionNotification: OPTIONAL<BOOLEAN>,
+        readonly suppressCallDiversionNotification?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `suppressCallTransferNotification`.
          * @public
          * @readonly
          */
-        readonly suppressCallTransferNotification: OPTIONAL<BOOLEAN>,
+        readonly suppressCallTransferNotification?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `allowCdINNoPresentationInd`.
          * @public
          * @readonly
          */
-        readonly allowCdINNoPresentationInd: OPTIONAL<BOOLEAN>,
+        readonly allowCdINNoPresentationInd?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `userDialogueDurationInd`.
          * @public
          * @readonly
          */
-        readonly userDialogueDurationInd: OPTIONAL<BOOLEAN>,
+        readonly userDialogueDurationInd?: OPTIONAL<BOOLEAN>,
         /**
          * @summary Extensions that are not recognized.
          * @public

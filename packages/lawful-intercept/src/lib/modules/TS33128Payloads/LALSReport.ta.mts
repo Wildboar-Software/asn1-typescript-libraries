@@ -168,13 +168,13 @@ class LALSReport {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        sUPI: OPTIONAL<SUPI>,
-        deprecatedPEI: OPTIONAL<PEI>,
-        gPSI: OPTIONAL<GPSI>,
-        location: OPTIONAL<Location>,
-        iMPU: OPTIONAL<IMPU>,
-        iMSI: OPTIONAL<IMSI>,
-        mSISDN: OPTIONAL<MSISDN>,
+        sUPI?: OPTIONAL<SUPI>,
+        deprecatedPEI?: OPTIONAL<PEI>,
+        gPSI?: OPTIONAL<GPSI>,
+        location?: OPTIONAL<Location>,
+        iMPU?: OPTIONAL<IMPU>,
+        iMSI?: OPTIONAL<IMSI>,
+        mSISDN?: OPTIONAL<MSISDN>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.sUPI = sUPI;

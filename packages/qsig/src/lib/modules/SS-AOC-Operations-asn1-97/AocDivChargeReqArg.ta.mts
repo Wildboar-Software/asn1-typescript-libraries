@@ -86,7 +86,7 @@ class AocDivChargeReqArg {
         divertingUser: PartyNumber,
         chargingAssociation: OPTIONAL<ChargingAssociation>,
         diversionType: DiversionType,
-        aocDivChargeReqArgExt: OPTIONAL<AocDivChargeReqArg_aocDivChargeReqArgExt>
+        aocDivChargeReqArgExt?: OPTIONAL<AocDivChargeReqArg_aocDivChargeReqArgExt>
     ) {
         this.divertingUser = divertingUser;
         this.chargingAssociation = chargingAssociation;

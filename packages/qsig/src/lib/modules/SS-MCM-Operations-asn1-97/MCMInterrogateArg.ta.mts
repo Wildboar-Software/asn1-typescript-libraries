@@ -74,7 +74,7 @@ class MCMInterrogateArg {
     constructor (
         partyInfo: PartyInfo,
         interrogateInfo: MessageType[],
-        extensions: OPTIONAL<MCMExtensions>,
+        extensions?: OPTIONAL<MCMExtensions>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.partyInfo = partyInfo;

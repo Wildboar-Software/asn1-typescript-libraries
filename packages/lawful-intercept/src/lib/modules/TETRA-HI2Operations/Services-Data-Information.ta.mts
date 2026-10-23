@@ -64,7 +64,7 @@ class Services_Data_Information {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        gPRS_parameters: OPTIONAL<GPRS_parameters>,
+        gPRS_parameters?: OPTIONAL<GPRS_parameters>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.gPRS_parameters = gPRS_parameters;

@@ -112,7 +112,7 @@ class activateDiversionQ_ArgumentType {
         divertedToAddress: Address,
         servedUserNr: PartyNumber,
         activatingUserNr: PartyNumber,
-        extension: OPTIONAL<activateDiversionQ_ArgumentType_extension>
+        extension?: OPTIONAL<activateDiversionQ_ArgumentType_extension>
     ) {
         this.procedure = procedure;
         this.basicService = basicService;

@@ -126,8 +126,8 @@ class PstnIsdnCC {
     constructor (
         pstnIsdnCCObjId: RELATIVE_OID,
         pstnIsdnCCContents: OCTET_STRING,
-        cCLinkID: OPTIONAL<INTEGER>,
-        supplementaryInfo: OPTIONAL<SupplementaryInfo>,
+        cCLinkID?: OPTIONAL<INTEGER>,
+        supplementaryInfo?: OPTIONAL<SupplementaryInfo>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.pstnIsdnCCObjId = pstnIsdnCCObjId;

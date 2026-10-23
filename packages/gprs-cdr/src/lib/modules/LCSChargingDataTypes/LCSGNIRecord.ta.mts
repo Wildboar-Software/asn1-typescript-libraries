@@ -226,8 +226,8 @@ class LCSGNIRecord {
         servingEntity: OPTIONAL<OCTET_STRING>,
         resultCode: OPTIONAL<INTEGER>,
         recordTimeStamp: OCTET_STRING,
-        localSequenceNumber: OPTIONAL<INTEGER>,
-        recordExtensions: OPTIONAL<ManagementExtension[]>
+        localSequenceNumber?: OPTIONAL<INTEGER>,
+        recordExtensions?: OPTIONAL<ManagementExtension[]>
     ) {
         this.recordType = recordType;
         this.recordingEntity = recordingEntity;

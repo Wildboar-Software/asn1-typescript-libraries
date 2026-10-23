@@ -102,7 +102,7 @@ class SortKeySpec {
         sortElement: SortElement,
         sortRelation: SortKeySpec_sortRelation,
         caseSensitivity: SortKeySpec_caseSensitivity,
-        missingValueAction: OPTIONAL<SortKeySpec_missingValueAction>
+        missingValueAction?: OPTIONAL<SortKeySpec_missingValueAction>
     ) {
         this.sortElement = sortElement;
         this.sortRelation = sortRelation;

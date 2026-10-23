@@ -41,7 +41,7 @@ class LCSClientExternalID {
          * @public
          * @readonly
          */
-        readonly externalAddress: OPTIONAL<ISDN_AddressString>,
+        readonly externalAddress?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `extensionContainer`.
          * @description
@@ -51,7 +51,7 @@ class LCSClientExternalID {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -78,7 +78,7 @@ class Named_Variable_Definition_Details {
          * @public
          * @readonly
          */
-        readonly address: OPTIONAL<MaybeAddress>,
+        readonly address?: OPTIONAL<MaybeAddress>,
         /**
          * @summary `meaning`.
          * @description
@@ -89,7 +89,7 @@ class Named_Variable_Definition_Details {
          * @public
          * @readonly
          */
-        readonly meaning: OPTIONAL<VisibleString>
+        readonly meaning?: OPTIONAL<VisibleString>
     ) {}
 
     /**

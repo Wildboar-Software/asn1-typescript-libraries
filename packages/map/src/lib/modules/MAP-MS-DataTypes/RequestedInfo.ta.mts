@@ -58,7 +58,7 @@ class RequestedInfo {
          * @public
          * @readonly
          */
-        readonly locationInformation: OPTIONAL<NULL>,
+        readonly locationInformation?: OPTIONAL<NULL>,
         /**
          * @summary `subscriberState`.
          * @description
@@ -70,13 +70,13 @@ class RequestedInfo {
          * @public
          * @readonly
          */
-        readonly subscriberState: OPTIONAL<NULL>,
+        readonly subscriberState?: OPTIONAL<NULL>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `currentLocation`.
          * @description
@@ -90,7 +90,7 @@ class RequestedInfo {
          * @public
          * @readonly
          */
-        readonly currentLocation: OPTIONAL<NULL>,
+        readonly currentLocation?: OPTIONAL<NULL>,
         /**
          * @summary `requestedDomain`.
          * @description
@@ -103,7 +103,7 @@ class RequestedInfo {
          * @public
          * @readonly
          */
-        readonly requestedDomain: OPTIONAL<DomainType>,
+        readonly requestedDomain?: OPTIONAL<DomainType>,
         /**
          * @summary `imei`.
          * @description
@@ -115,7 +115,7 @@ class RequestedInfo {
          * @public
          * @readonly
          */
-        readonly imei: OPTIONAL<NULL>,
+        readonly imei?: OPTIONAL<NULL>,
         /**
          * @summary `ms_classmark`.
          * @description
@@ -127,7 +127,7 @@ class RequestedInfo {
          * @public
          * @readonly
          */
-        readonly ms_classmark: OPTIONAL<NULL>,
+        readonly ms_classmark?: OPTIONAL<NULL>,
         /**
          * @summary `mnpRequestedInfo`.
          * @description
@@ -139,7 +139,7 @@ class RequestedInfo {
          * @public
          * @readonly
          */
-        readonly mnpRequestedInfo: OPTIONAL<NULL>,
+        readonly mnpRequestedInfo?: OPTIONAL<NULL>,
         /**
          * @summary `locationInformationEPS_Supported`.
          * @description
@@ -152,7 +152,7 @@ class RequestedInfo {
          * @public
          * @readonly
          */
-        readonly locationInformationEPS_Supported: OPTIONAL<NULL>,
+        readonly locationInformationEPS_Supported?: OPTIONAL<NULL>,
         /**
          * @summary `t_adsData`.
          * @description
@@ -165,7 +165,7 @@ class RequestedInfo {
          * @public
          * @readonly
          */
-        readonly t_adsData: OPTIONAL<NULL>,
+        readonly t_adsData?: OPTIONAL<NULL>,
         /**
          * @summary `requestedNodes`.
          * @description
@@ -178,7 +178,7 @@ class RequestedInfo {
          * @public
          * @readonly
          */
-        readonly requestedNodes: OPTIONAL<RequestedNodes>,
+        readonly requestedNodes?: OPTIONAL<RequestedNodes>,
         /**
          * @summary `servingNodeIndication`.
          * @description
@@ -192,7 +192,7 @@ class RequestedInfo {
          * @public
          * @readonly
          */
-        readonly servingNodeIndication: OPTIONAL<NULL>,
+        readonly servingNodeIndication?: OPTIONAL<NULL>,
         /**
          * @summary `localTimeZoneRequest`.
          * @description
@@ -204,7 +204,7 @@ class RequestedInfo {
          * @public
          * @readonly
          */
-        readonly localTimeZoneRequest: OPTIONAL<NULL>,
+        readonly localTimeZoneRequest?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @public

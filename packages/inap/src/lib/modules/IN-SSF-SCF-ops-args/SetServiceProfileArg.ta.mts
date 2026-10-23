@@ -53,7 +53,7 @@ class SetServiceProfileArg {
     constructor (
         iNprofiles: INprofile[],
         _unrecognizedExtensionsList: _Element[] = [],
-        extensions: OPTIONAL<Extensions>
+        extensions?: OPTIONAL<Extensions>
     ) {
         this.iNprofiles = iNprofiles;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;

@@ -86,7 +86,7 @@ class TraceActivationInfo {
         interfacestoTrace: BIT_STRING,
         traceDepth: TraceDepth,
         traceCollectionEntityIPAddress: IPAddress,
-        mDTConfiguration: OPTIONAL<MDTConfiguration>,
+        mDTConfiguration?: OPTIONAL<MDTConfiguration>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.nGRANTraceID = nGRANTraceID;

@@ -66,7 +66,7 @@ class ButtonList_Item {
          * @public
          * @readonly
          */
-        readonly buttonLabel: OPTIONAL<IA5String>,
+        readonly buttonLabel?: OPTIONAL<IA5String>,
         /**
          * @summary `buttonLabelSettable`.
          * @description
@@ -75,7 +75,7 @@ class ButtonList_Item {
          * @public
          * @readonly
          */
-        readonly buttonLabelSettable: OPTIONAL<BOOLEAN>,
+        readonly buttonLabelSettable?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `buttonFunction`.
          * @description
@@ -84,7 +84,7 @@ class ButtonList_Item {
          * @public
          * @readonly
          */
-        readonly buttonFunction: OPTIONAL<IA5String>,
+        readonly buttonFunction?: OPTIONAL<IA5String>,
         /**
          * @summary `buttonAssociatedNumber`.
          * @description
@@ -94,7 +94,7 @@ class ButtonList_Item {
          * @public
          * @readonly
          */
-        readonly buttonAssociatedNumber: OPTIONAL<DeviceID>,
+        readonly buttonAssociatedNumber?: OPTIONAL<DeviceID>,
         /**
          * @summary `buttonAssociatedNumberSettable`.
          * @description
@@ -103,7 +103,7 @@ class ButtonList_Item {
          * @public
          * @readonly
          */
-        readonly buttonAssociatedNumberSettable: OPTIONAL<BOOLEAN>,
+        readonly buttonAssociatedNumberSettable?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `buttonPressIndicator`.
          * @description
@@ -112,7 +112,7 @@ class ButtonList_Item {
          * @public
          * @readonly
          */
-        readonly buttonPressIndicator: OPTIONAL<BOOLEAN>,
+        readonly buttonPressIndicator?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `lampList`.
          * @description
@@ -121,7 +121,7 @@ class ButtonList_Item {
          * @public
          * @readonly
          */
-        readonly lampList: OPTIONAL<LampID[]>
+        readonly lampList?: OPTIONAL<LampID[]>
     ) {}
 
     /**

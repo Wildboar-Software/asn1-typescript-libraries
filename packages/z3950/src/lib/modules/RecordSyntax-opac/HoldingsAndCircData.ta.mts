@@ -274,25 +274,25 @@ class HoldingsAndCircData {
     readonly circulationData: OPTIONAL<CircRecord[]>;
 
     constructor (
-        typeOfRecord: OPTIONAL<InternationalString>,
-        encodingLevel: OPTIONAL<InternationalString>,
-        format: OPTIONAL<InternationalString>,
-        receiptAcqStatus: OPTIONAL<InternationalString>,
-        generalRetention: OPTIONAL<InternationalString>,
-        completeness: OPTIONAL<InternationalString>,
-        dateOfReport: OPTIONAL<InternationalString>,
-        nucCode: OPTIONAL<InternationalString>,
-        localLocation: OPTIONAL<InternationalString>,
-        shelvingLocation: OPTIONAL<InternationalString>,
-        callNumber: OPTIONAL<InternationalString>,
-        shelvingData: OPTIONAL<InternationalString>,
-        copyNumber: OPTIONAL<InternationalString>,
-        publicNote: OPTIONAL<InternationalString>,
-        reproductionNote: OPTIONAL<InternationalString>,
-        termsUseRepro: OPTIONAL<InternationalString>,
-        enumAndChron: OPTIONAL<InternationalString>,
-        volumes: OPTIONAL<Volume[]>,
-        circulationData: OPTIONAL<CircRecord[]>
+        typeOfRecord?: OPTIONAL<InternationalString>,
+        encodingLevel?: OPTIONAL<InternationalString>,
+        format?: OPTIONAL<InternationalString>,
+        receiptAcqStatus?: OPTIONAL<InternationalString>,
+        generalRetention?: OPTIONAL<InternationalString>,
+        completeness?: OPTIONAL<InternationalString>,
+        dateOfReport?: OPTIONAL<InternationalString>,
+        nucCode?: OPTIONAL<InternationalString>,
+        localLocation?: OPTIONAL<InternationalString>,
+        shelvingLocation?: OPTIONAL<InternationalString>,
+        callNumber?: OPTIONAL<InternationalString>,
+        shelvingData?: OPTIONAL<InternationalString>,
+        copyNumber?: OPTIONAL<InternationalString>,
+        publicNote?: OPTIONAL<InternationalString>,
+        reproductionNote?: OPTIONAL<InternationalString>,
+        termsUseRepro?: OPTIONAL<InternationalString>,
+        enumAndChron?: OPTIONAL<InternationalString>,
+        volumes?: OPTIONAL<Volume[]>,
+        circulationData?: OPTIONAL<CircRecord[]>
     ) {
         this.typeOfRecord = typeOfRecord;
         this.encodingLevel = encodingLevel;

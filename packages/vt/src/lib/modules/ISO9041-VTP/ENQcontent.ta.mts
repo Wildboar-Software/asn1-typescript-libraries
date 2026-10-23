@@ -56,7 +56,7 @@ class ENQcontent {
          * @public
          * @readonly
          */
-        readonly failAllowed: OPTIONAL<BOOLEAN>,
+        readonly failAllowed?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `retList`.
          * @description
@@ -65,7 +65,7 @@ class ENQcontent {
          * @public
          * @readonly
          */
-        readonly retList: OPTIONAL<PrintableString[]>
+        readonly retList?: OPTIONAL<PrintableString[]>
     ) {}
 
     /**

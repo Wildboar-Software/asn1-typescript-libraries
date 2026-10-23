@@ -75,7 +75,7 @@ export class ReturnResult {
 
   constructor(
     invokeId: InvokeId,
-    result: OPTIONAL<ReturnResult_result>
+    result?: OPTIONAL<ReturnResult_result>
   ) {
     this.invokeId = invokeId;
     this.result = result;

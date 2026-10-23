@@ -66,7 +66,7 @@ class ReRouteRequestArgument {
          * @public
          * @readonly
          */
-        readonly routeRegisterReqID: OPTIONAL<RouteRegisterReqID>,
+        readonly routeRegisterReqID?: OPTIONAL<RouteRegisterReqID>,
         /**
          * @summary `replyTimeout`.
          * @description
@@ -75,7 +75,7 @@ class ReRouteRequestArgument {
          * @public
          * @readonly
          */
-        readonly replyTimeout: OPTIONAL<INTEGER>,
+        readonly replyTimeout?: OPTIONAL<INTEGER>,
         /**
          * @summary `correlatorData`.
          * @description
@@ -84,7 +84,7 @@ class ReRouteRequestArgument {
          * @public
          * @readonly
          */
-        readonly correlatorData: OPTIONAL<CorrelatorData>,
+        readonly correlatorData?: OPTIONAL<CorrelatorData>,
         /**
          * @summary `callLinkageData`.
          * @description
@@ -93,7 +93,7 @@ class ReRouteRequestArgument {
          * @public
          * @readonly
          */
-        readonly callLinkageData: OPTIONAL<CallLinkageData>,
+        readonly callLinkageData?: OPTIONAL<CallLinkageData>,
         /**
          * @summary `extensions`.
          * @description
@@ -103,7 +103,7 @@ class ReRouteRequestArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

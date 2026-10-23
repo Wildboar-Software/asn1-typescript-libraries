@@ -157,7 +157,7 @@ class CnxDiag_Item {
          * @public
          * @readonly
          */
-        readonly reverseRoles: OPTIONAL<BOOLEAN>,
+        readonly reverseRoles?: OPTIONAL<BOOLEAN>,
         /**
          * @summary Extensions that are not recognized.
          * @public

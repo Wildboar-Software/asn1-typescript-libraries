@@ -49,7 +49,7 @@ class IndAudLocalControlDescriptor {
          * @public
          * @readonly
          */
-        readonly streamMode: OPTIONAL<NULL>,
+        readonly streamMode?: OPTIONAL<NULL>,
         /**
          * @summary `reserveValue`.
          * @description
@@ -59,7 +59,7 @@ class IndAudLocalControlDescriptor {
          * @public
          * @readonly
          */
-        readonly reserveValue: OPTIONAL<NULL>,
+        readonly reserveValue?: OPTIONAL<NULL>,
         /**
          * @summary `reserveGroup`.
          * @description
@@ -69,7 +69,7 @@ class IndAudLocalControlDescriptor {
          * @public
          * @readonly
          */
-        readonly reserveGroup: OPTIONAL<NULL>,
+        readonly reserveGroup?: OPTIONAL<NULL>,
         /**
          * @summary `propertyParms`.
          * @description
@@ -80,7 +80,7 @@ class IndAudLocalControlDescriptor {
          * @public
          * @readonly
          */
-        readonly propertyParms: OPTIONAL<IndAudPropertyParm[]>,
+        readonly propertyParms?: OPTIONAL<IndAudPropertyParm[]>,
         /**
          * @summary `streamModeSel`.
          * @description
@@ -91,7 +91,7 @@ class IndAudLocalControlDescriptor {
          * @public
          * @readonly
          */
-        readonly streamModeSel: OPTIONAL<StreamMode>,
+        readonly streamModeSel?: OPTIONAL<StreamMode>,
         /**
          * @summary Extensions that are not recognized.
          * @description

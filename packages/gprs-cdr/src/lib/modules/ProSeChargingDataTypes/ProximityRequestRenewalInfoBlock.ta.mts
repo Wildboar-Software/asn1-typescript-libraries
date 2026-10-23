@@ -92,10 +92,10 @@ class ProximityRequestRenewalInfoBlock {
     readonly uELocation: OPTIONAL<OCTET_STRING>;
 
     constructor (
-        proSeRequestTimestamp: OPTIONAL<OCTET_STRING>,
-        timeWindow: OPTIONAL<INTEGER>,
-        rangeClass: OPTIONAL<RangeClass>,
-        uELocation: OPTIONAL<OCTET_STRING>
+        proSeRequestTimestamp?: OPTIONAL<OCTET_STRING>,
+        timeWindow?: OPTIONAL<INTEGER>,
+        rangeClass?: OPTIONAL<RangeClass>,
+        uELocation?: OPTIONAL<OCTET_STRING>
     ) {
         this.proSeRequestTimestamp = proSeRequestTimestamp;
         this.timeWindow = timeWindow;

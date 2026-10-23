@@ -72,10 +72,10 @@ class InbandInfo {
 
     constructor (
         messageID: MessageID,
-        numberOfRepetitions: OPTIONAL<INTEGER>,
-        duration: OPTIONAL<INTEGER>,
-        interval: OPTIONAL<INTEGER>,
-        preferredLanguage: OPTIONAL<Language>,
+        numberOfRepetitions?: OPTIONAL<INTEGER>,
+        duration?: OPTIONAL<INTEGER>,
+        interval?: OPTIONAL<INTEGER>,
+        preferredLanguage?: OPTIONAL<Language>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.messageID = messageID;

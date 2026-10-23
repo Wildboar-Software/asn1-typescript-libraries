@@ -53,8 +53,8 @@ class EntityReleasedArg_cSFailure {
 
     constructor (
         callSegmentID: CallSegmentID,
-        reason: OPTIONAL<Reason>,
-        cause: OPTIONAL<Cause>
+        reason?: OPTIONAL<Reason>,
+        cause?: OPTIONAL<Cause>
     ) {
         this.callSegmentID = callSegmentID;
         this.reason = reason;

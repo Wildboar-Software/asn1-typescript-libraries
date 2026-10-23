@@ -58,9 +58,9 @@ class IMEIUpdateInfo {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        iMSI: OPTIONAL<IMSI>,
-        iMEI: OPTIONAL<IMEI>,
-        iMEISV: OPTIONAL<IMEISV>,
+        iMSI?: OPTIONAL<IMSI>,
+        iMEI?: OPTIONAL<IMEI>,
+        iMEISV?: OPTIONAL<IMEISV>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.iMSI = iMSI;

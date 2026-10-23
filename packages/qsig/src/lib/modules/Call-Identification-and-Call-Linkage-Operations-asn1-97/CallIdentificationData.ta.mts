@@ -79,7 +79,7 @@ class CallIdentificationData {
     constructor (
         switchingSubDomainName: OPTIONAL<SwitchingSubDomainName>,
         linkageID: CallIdentificationData_linkageID,
-        timeStamp: OPTIONAL<TimeStamp>
+        timeStamp?: OPTIONAL<TimeStamp>
     ) {
         this.switchingSubDomainName = switchingSubDomainName;
         this.linkageID = linkageID;

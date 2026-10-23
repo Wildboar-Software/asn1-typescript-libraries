@@ -129,11 +129,11 @@ class TermListDetails {
     constructor (
         commonInfo: OPTIONAL<CommonInfo>,
         termListName: InternationalString,
-        description: OPTIONAL<HumanString>,
-        attributes: OPTIONAL<AttributeCombinations>,
-        scanInfo: OPTIONAL<TermListDetails_scanInfo>,
-        estNumberTerms: OPTIONAL<INTEGER>,
-        sampleTerms: OPTIONAL<Term[]>
+        description?: OPTIONAL<HumanString>,
+        attributes?: OPTIONAL<AttributeCombinations>,
+        scanInfo?: OPTIONAL<TermListDetails_scanInfo>,
+        estNumberTerms?: OPTIONAL<INTEGER>,
+        sampleTerms?: OPTIONAL<Term[]>
     ) {
         this.commonInfo = commonInfo;
         this.termListName = termListName;

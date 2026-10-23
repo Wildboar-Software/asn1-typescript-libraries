@@ -62,9 +62,9 @@ class AuthorizedQoSInformation {
     constructor (
         fiveQi: INTEGER,
         aRP: AllocationRetentionPriority,
-        priorityLevel: OPTIONAL<INTEGER>,
-        averWindow: OPTIONAL<INTEGER>,
-        maxDataBurstVol: OPTIONAL<INTEGER>
+        priorityLevel?: OPTIONAL<INTEGER>,
+        averWindow?: OPTIONAL<INTEGER>,
+        maxDataBurstVol?: OPTIONAL<INTEGER>
     ) {
         this.fiveQi = fiveQi;
         this.aRP = aRP;

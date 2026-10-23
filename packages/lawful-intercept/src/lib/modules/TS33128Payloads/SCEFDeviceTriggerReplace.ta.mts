@@ -208,12 +208,12 @@ class SCEFDeviceTriggerReplace {
         mSISDN: OPTIONAL<MSISDN>,
         externalIdentifier: OPTIONAL<NAI>,
         triggerId: TriggerID,
-        sCSASID: OPTIONAL<SCSASID>,
-        triggerPayload: OPTIONAL<TriggerPayload>,
-        validityPeriod: OPTIONAL<INTEGER>,
-        priorityDT: OPTIONAL<PriorityDT>,
-        sourcePortId: OPTIONAL<PortNumber>,
-        destinationPortId: OPTIONAL<PortNumber>,
+        sCSASID?: OPTIONAL<SCSASID>,
+        triggerPayload?: OPTIONAL<TriggerPayload>,
+        validityPeriod?: OPTIONAL<INTEGER>,
+        priorityDT?: OPTIONAL<PriorityDT>,
+        sourcePortId?: OPTIONAL<PortNumber>,
+        destinationPortId?: OPTIONAL<PortNumber>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.iMSI = iMSI;

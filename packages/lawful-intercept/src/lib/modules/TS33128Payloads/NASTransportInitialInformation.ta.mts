@@ -139,12 +139,12 @@ class NASTransportInitialInformation {
 
     constructor (
         rANUENGAPID: RANUENGAPID,
-        iABNodeIndication: OPTIONAL<BOOLEAN>,
-        eDTSession: OPTIONAL<BOOLEAN>,
-        authenticatedIndication: OPTIONAL<BOOLEAN>,
-        nPNAccessInformation: OPTIONAL<CellCAGList>,
-        rEDCAPIndication: OPTIONAL<REDCAPIndication>,
-        mobileIABNodeIndication: OPTIONAL<BOOLEAN>,
+        iABNodeIndication?: OPTIONAL<BOOLEAN>,
+        eDTSession?: OPTIONAL<BOOLEAN>,
+        authenticatedIndication?: OPTIONAL<BOOLEAN>,
+        nPNAccessInformation?: OPTIONAL<CellCAGList>,
+        rEDCAPIndication?: OPTIONAL<REDCAPIndication>,
+        mobileIABNodeIndication?: OPTIONAL<BOOLEAN>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.rANUENGAPID = rANUENGAPID;

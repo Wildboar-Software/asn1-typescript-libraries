@@ -106,11 +106,11 @@ class CintInformation2Arg {
 
     constructor (
         interceptionCause: CintCause,
-        calledNumber: OPTIONAL<PresentedNumberUnscreened>,
-        originalCalledNumber: OPTIONAL<PresentedNumberUnscreened>,
-        calledName: OPTIONAL<Name>,
-        originalCalledName: OPTIONAL<Name>,
-        extension: OPTIONAL<CintExtension>
+        calledNumber?: OPTIONAL<PresentedNumberUnscreened>,
+        originalCalledNumber?: OPTIONAL<PresentedNumberUnscreened>,
+        calledName?: OPTIONAL<Name>,
+        originalCalledName?: OPTIONAL<Name>,
+        extension?: OPTIONAL<CintExtension>
     ) {
         this.interceptionCause = interceptionCause;
         this.calledNumber = calledNumber;

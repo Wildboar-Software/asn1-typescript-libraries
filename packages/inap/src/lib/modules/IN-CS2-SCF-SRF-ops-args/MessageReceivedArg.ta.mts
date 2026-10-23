@@ -70,9 +70,9 @@ class MessageReceivedArg {
 
     constructor (
         receivedStatus: ReceivedStatus,
-        recordedMessageID: OPTIONAL<RecordedMessageID>,
-        recordedMessageUnits: OPTIONAL<INTEGER>,
-        extensions: OPTIONAL<ExtensionField[]>,
+        recordedMessageID?: OPTIONAL<RecordedMessageID>,
+        recordedMessageUnits?: OPTIONAL<INTEGER>,
+        extensions?: OPTIONAL<ExtensionField[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.receivedStatus = receivedStatus;

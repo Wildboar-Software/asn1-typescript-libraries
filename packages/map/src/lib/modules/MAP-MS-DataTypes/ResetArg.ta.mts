@@ -68,13 +68,13 @@ class ResetArg {
          * @public
          * @readonly
          */
-        readonly hlr_List: OPTIONAL<HLR_List>,
+        readonly hlr_List?: OPTIONAL<HLR_List>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `reset_Id_List`.
          * @description
@@ -87,7 +87,7 @@ class ResetArg {
          * @public
          * @readonly
          */
-        readonly reset_Id_List: OPTIONAL<Reset_Id_List>,
+        readonly reset_Id_List?: OPTIONAL<Reset_Id_List>,
         /**
          * @summary `subscriptionData`.
          * @description
@@ -100,7 +100,7 @@ class ResetArg {
          * @public
          * @readonly
          */
-        readonly subscriptionData: OPTIONAL<InsertSubscriberDataArg>,
+        readonly subscriptionData?: OPTIONAL<InsertSubscriberDataArg>,
         /**
          * @summary `subscriptionDataDeletion`.
          * @description
@@ -113,7 +113,7 @@ class ResetArg {
          * @public
          * @readonly
          */
-        readonly subscriptionDataDeletion: OPTIONAL<DeleteSubscriberDataArg>,
+        readonly subscriptionDataDeletion?: OPTIONAL<DeleteSubscriberDataArg>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -140,7 +140,7 @@ class IEFDeassociationRecord {
         timestamp: GeneralizedTime,
         nCGI: NCGI,
         nCGITime: GeneralizedTime,
-        additionalCGIs: OPTIONAL<AdditionalCGIs>,
+        additionalCGIs?: OPTIONAL<AdditionalCGIs>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.sUPI = sUPI;

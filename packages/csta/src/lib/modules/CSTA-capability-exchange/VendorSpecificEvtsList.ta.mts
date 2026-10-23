@@ -42,7 +42,7 @@ class VendorSpecificEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly privateEvent: OPTIONAL<PrivateEvent>
+        readonly privateEvent?: OPTIONAL<PrivateEvent>
     ) {}
 
     /**

@@ -53,13 +53,13 @@ class Constraints {
          * @public
          * @readonly
          */
-        readonly typeOfRequestedInfo: OPTIONAL<InfoType>,
+        readonly typeOfRequestedInfo?: OPTIONAL<InfoType>,
         /**
          * @summary `numberOfAllowedRetries`.
          * @public
          * @readonly
          */
-        readonly numberOfAllowedRetries: OPTIONAL<INTEGER>
+        readonly numberOfAllowedRetries?: OPTIONAL<INTEGER>
     ) {
         if ((typeof maximumNumberOfDigits === "bigint" ? (maximumNumberOfDigits < 1n || maximumNumberOfDigits > 127n) : (maximumNumberOfDigits < 1 || maximumNumberOfDigits > 127))) {
             throw new ASN1OverflowError("Constraints.maximumNumberOfDigits violates INTEGER constraint");

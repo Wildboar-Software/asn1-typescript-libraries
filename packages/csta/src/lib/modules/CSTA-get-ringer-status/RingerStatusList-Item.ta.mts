@@ -75,7 +75,7 @@ class RingerStatusList_Item {
          * @public
          * @readonly
          */
-        readonly ringCount: OPTIONAL<INTEGER>,
+        readonly ringCount?: OPTIONAL<INTEGER>,
         /**
          * @summary `ringDuration`.
          * @description
@@ -84,7 +84,7 @@ class RingerStatusList_Item {
          * @public
          * @readonly
          */
-        readonly ringDuration: OPTIONAL<INTEGER>,
+        readonly ringDuration?: OPTIONAL<INTEGER>,
         /**
          * @summary `ringPattern`.
          * @description
@@ -94,7 +94,7 @@ class RingerStatusList_Item {
          * @public
          * @readonly
          */
-        readonly ringPattern: OPTIONAL<INTEGER>,
+        readonly ringPattern?: OPTIONAL<INTEGER>,
         /**
          * @summary `ringVolAbs`.
          * @description
@@ -104,7 +104,7 @@ class RingerStatusList_Item {
          * @public
          * @readonly
          */
-        readonly ringVolAbs: OPTIONAL<INTEGER>
+        readonly ringVolAbs?: OPTIONAL<INTEGER>
     ) {}
 
     /**

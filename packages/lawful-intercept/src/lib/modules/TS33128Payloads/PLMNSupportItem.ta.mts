@@ -83,8 +83,8 @@ class PLMNSupportItem {
 
     constructor (
         pLMNIdentity: PLMNID,
-        nPNSupport: OPTIONAL<NID>,
-        onboardingSupport: OPTIONAL<BOOLEAN>,
+        nPNSupport?: OPTIONAL<NID>,
+        onboardingSupport?: OPTIONAL<BOOLEAN>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.pLMNIdentity = pLMNIdentity;

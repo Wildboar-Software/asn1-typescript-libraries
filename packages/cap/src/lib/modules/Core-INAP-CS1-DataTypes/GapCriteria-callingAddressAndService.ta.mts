@@ -52,7 +52,7 @@ class GapCriteria_callingAddressAndService {
          * @public
          * @readonly
          */
-        readonly locationNumber: OPTIONAL<LocationNumber>
+        readonly locationNumber?: OPTIONAL<LocationNumber>
     ) {}
 
     /**

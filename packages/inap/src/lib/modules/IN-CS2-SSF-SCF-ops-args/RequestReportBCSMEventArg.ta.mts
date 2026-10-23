@@ -62,8 +62,8 @@ class RequestReportBCSMEventArg {
 
     constructor (
         bcsmEvents: BCSMEvent[],
-        bcsmEventCorrelationID: OPTIONAL<CorrelationID>,
-        extensions: OPTIONAL<ExtensionField[]>,
+        bcsmEventCorrelationID?: OPTIONAL<CorrelationID>,
+        extensions?: OPTIONAL<ExtensionField[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.bcsmEvents = bcsmEvents;

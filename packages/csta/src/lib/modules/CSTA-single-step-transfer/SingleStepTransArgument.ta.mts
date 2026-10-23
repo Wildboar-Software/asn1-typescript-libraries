@@ -103,7 +103,7 @@ class SingleStepTransArgument {
          * @public
          * @readonly
          */
-        readonly accountCode: OPTIONAL<AccountInfo>,
+        readonly accountCode?: OPTIONAL<AccountInfo>,
         /**
          * @summary `authCode`.
          * @description
@@ -113,7 +113,7 @@ class SingleStepTransArgument {
          * @public
          * @readonly
          */
-        readonly authCode: OPTIONAL<AuthCode>,
+        readonly authCode?: OPTIONAL<AuthCode>,
         /**
          * @summary `correlatorData`.
          * @description
@@ -124,7 +124,7 @@ class SingleStepTransArgument {
          * @public
          * @readonly
          */
-        readonly correlatorData: OPTIONAL<CorrelatorData>,
+        readonly correlatorData?: OPTIONAL<CorrelatorData>,
         /**
          * @summary `userData`.
          * @description
@@ -135,7 +135,7 @@ class SingleStepTransArgument {
          * @public
          * @readonly
          */
-        readonly userData: OPTIONAL<UserData>,
+        readonly userData?: OPTIONAL<UserData>,
         /**
          * @summary `callCharacteristics`.
          * @description
@@ -145,7 +145,7 @@ class SingleStepTransArgument {
          * @public
          * @readonly
          */
-        readonly callCharacteristics: OPTIONAL<CallCharacteristics>,
+        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
         /**
          * @summary `subjectOfCall`.
          * @description
@@ -155,7 +155,7 @@ class SingleStepTransArgument {
          * @public
          * @readonly
          */
-        readonly subjectOfCall: OPTIONAL<SubjectOfCall>,
+        readonly subjectOfCall?: OPTIONAL<SubjectOfCall>,
         /**
          * @summary `languagePreferences`.
          * @description
@@ -165,7 +165,7 @@ class SingleStepTransArgument {
          * @public
          * @readonly
          */
-        readonly languagePreferences: OPTIONAL<LanguagePreferences>,
+        readonly languagePreferences?: OPTIONAL<LanguagePreferences>,
         /**
          * @summary `reason`.
          * @description
@@ -176,7 +176,7 @@ class SingleStepTransArgument {
          * @public
          * @readonly
          */
-        readonly reason: OPTIONAL<EventCause>,
+        readonly reason?: OPTIONAL<EventCause>,
         /**
          * @summary `extensions`.
          * @description
@@ -188,7 +188,7 @@ class SingleStepTransArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

@@ -37,7 +37,7 @@ class EventSpecificInformationBCSM_oAnswerSpecificInfo {
          * @public
          * @readonly
          */
-        readonly backwardGVNS: OPTIONAL<BackwardGVNS>,
+        readonly backwardGVNS?: OPTIONAL<BackwardGVNS>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -71,7 +71,7 @@ class GpLocationInfo_civicLocGml_civicLoc {
          * @public
          * @readonly
          */
-        readonly a1: OPTIONAL<IA5String>,
+        readonly a1?: OPTIONAL<IA5String>,
         /**
          * @summary `a2`.
          * @description
@@ -81,7 +81,7 @@ class GpLocationInfo_civicLocGml_civicLoc {
          * @public
          * @readonly
          */
-        readonly a2: OPTIONAL<IA5String>,
+        readonly a2?: OPTIONAL<IA5String>,
         /**
          * @summary `a3`.
          * @description
@@ -91,7 +91,7 @@ class GpLocationInfo_civicLocGml_civicLoc {
          * @public
          * @readonly
          */
-        readonly a3: OPTIONAL<IA5String>,
+        readonly a3?: OPTIONAL<IA5String>,
         /**
          * @summary `a4`.
          * @description
@@ -101,7 +101,7 @@ class GpLocationInfo_civicLocGml_civicLoc {
          * @public
          * @readonly
          */
-        readonly a4: OPTIONAL<IA5String>,
+        readonly a4?: OPTIONAL<IA5String>,
         /**
          * @summary `a5`.
          * @description
@@ -111,7 +111,7 @@ class GpLocationInfo_civicLocGml_civicLoc {
          * @public
          * @readonly
          */
-        readonly a5: OPTIONAL<IA5String>,
+        readonly a5?: OPTIONAL<IA5String>,
         /**
          * @summary `a6`.
          * @description
@@ -121,7 +121,7 @@ class GpLocationInfo_civicLocGml_civicLoc {
          * @public
          * @readonly
          */
-        readonly a6: OPTIONAL<IA5String>,
+        readonly a6?: OPTIONAL<IA5String>,
         /**
          * @summary `prd`.
          * @description
@@ -131,7 +131,7 @@ class GpLocationInfo_civicLocGml_civicLoc {
          * @public
          * @readonly
          */
-        readonly prd: OPTIONAL<IA5String>,
+        readonly prd?: OPTIONAL<IA5String>,
         /**
          * @summary `pod`.
          * @description
@@ -141,7 +141,7 @@ class GpLocationInfo_civicLocGml_civicLoc {
          * @public
          * @readonly
          */
-        readonly pod: OPTIONAL<IA5String>,
+        readonly pod?: OPTIONAL<IA5String>,
         /**
          * @summary `sts`.
          * @description
@@ -151,7 +151,7 @@ class GpLocationInfo_civicLocGml_civicLoc {
          * @public
          * @readonly
          */
-        readonly sts: OPTIONAL<IA5String>,
+        readonly sts?: OPTIONAL<IA5String>,
         /**
          * @summary `hno`.
          * @description
@@ -161,7 +161,7 @@ class GpLocationInfo_civicLocGml_civicLoc {
          * @public
          * @readonly
          */
-        readonly hno: OPTIONAL<IA5String>,
+        readonly hno?: OPTIONAL<IA5String>,
         /**
          * @summary `hns`.
          * @description
@@ -171,7 +171,7 @@ class GpLocationInfo_civicLocGml_civicLoc {
          * @public
          * @readonly
          */
-        readonly hns: OPTIONAL<IA5String>,
+        readonly hns?: OPTIONAL<IA5String>,
         /**
          * @summary `lmk`.
          * @description
@@ -181,7 +181,7 @@ class GpLocationInfo_civicLocGml_civicLoc {
          * @public
          * @readonly
          */
-        readonly lmk: OPTIONAL<IA5String>,
+        readonly lmk?: OPTIONAL<IA5String>,
         /**
          * @summary `loc`.
          * @description
@@ -191,7 +191,7 @@ class GpLocationInfo_civicLocGml_civicLoc {
          * @public
          * @readonly
          */
-        readonly loc: OPTIONAL<IA5String>,
+        readonly loc?: OPTIONAL<IA5String>,
         /**
          * @summary `flr`.
          * @description
@@ -201,7 +201,7 @@ class GpLocationInfo_civicLocGml_civicLoc {
          * @public
          * @readonly
          */
-        readonly flr: OPTIONAL<IA5String>,
+        readonly flr?: OPTIONAL<IA5String>,
         /**
          * @summary `nam`.
          * @description
@@ -211,7 +211,7 @@ class GpLocationInfo_civicLocGml_civicLoc {
          * @public
          * @readonly
          */
-        readonly nam: OPTIONAL<IA5String>,
+        readonly nam?: OPTIONAL<IA5String>,
         /**
          * @summary `pc`.
          * @description
@@ -221,7 +221,7 @@ class GpLocationInfo_civicLocGml_civicLoc {
          * @public
          * @readonly
          */
-        readonly pc: OPTIONAL<IA5String>
+        readonly pc?: OPTIONAL<IA5String>
     ) {}
 
     /**

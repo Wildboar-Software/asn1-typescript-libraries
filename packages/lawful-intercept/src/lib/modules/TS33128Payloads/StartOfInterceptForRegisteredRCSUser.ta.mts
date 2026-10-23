@@ -124,8 +124,8 @@ class StartOfInterceptForRegisteredRCSUser {
         rCSTargetIdentities: RCSIdentity[],
         rCSRegistrationInformation: RCSRegistrationInformation[],
         userOnline: BOOLEAN,
-        location: OPTIONAL<Location>,
-        additionalInstanceLocation: OPTIONAL<AdditionalInstanceLocation[]>,
+        location?: OPTIONAL<Location>,
+        additionalInstanceLocation?: OPTIONAL<AdditionalInstanceLocation[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.rCSTargetIdentities = rCSTargetIdentities;

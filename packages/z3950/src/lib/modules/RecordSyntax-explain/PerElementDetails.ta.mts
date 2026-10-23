@@ -210,13 +210,13 @@ class PerElementDetails {
         fixedSize: OPTIONAL<INTEGER>,
         repeatable: BOOLEAN,
         required: BOOLEAN,
-        description: OPTIONAL<HumanString>,
-        contents: OPTIONAL<HumanString>,
-        billingInfo: OPTIONAL<HumanString>,
-        restrictions: OPTIONAL<HumanString>,
-        alternateNames: OPTIONAL<InternationalString[]>,
-        genericNames: OPTIONAL<InternationalString[]>,
-        searchAccess: OPTIONAL<AttributeCombinations>
+        description?: OPTIONAL<HumanString>,
+        contents?: OPTIONAL<HumanString>,
+        billingInfo?: OPTIONAL<HumanString>,
+        restrictions?: OPTIONAL<HumanString>,
+        alternateNames?: OPTIONAL<InternationalString[]>,
+        genericNames?: OPTIONAL<InternationalString[]>,
+        searchAccess?: OPTIONAL<AttributeCombinations>
     ) {
         this.name = name;
         this.recordTag = recordTag;

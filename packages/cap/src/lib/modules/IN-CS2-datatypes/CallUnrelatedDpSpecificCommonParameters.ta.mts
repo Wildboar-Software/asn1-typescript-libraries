@@ -53,25 +53,25 @@ class CallUnrelatedDpSpecificCommonParameters {
          * @public
          * @readonly
          */
-        readonly callingPartyNumber: OPTIONAL<CallingPartyNumber>,
+        readonly callingPartyNumber?: OPTIONAL<CallingPartyNumber>,
         /**
          * @summary `locationNumber`.
          * @public
          * @readonly
          */
-        readonly locationNumber: OPTIONAL<LocationNumber>,
+        readonly locationNumber?: OPTIONAL<LocationNumber>,
         /**
          * @summary `terminalType`.
          * @public
          * @readonly
          */
-        readonly terminalType: OPTIONAL<TerminalType>,
+        readonly terminalType?: OPTIONAL<TerminalType>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<ExtensionField[]>
+        readonly extensions?: OPTIONAL<ExtensionField[]>
     ) {}
 
     /**

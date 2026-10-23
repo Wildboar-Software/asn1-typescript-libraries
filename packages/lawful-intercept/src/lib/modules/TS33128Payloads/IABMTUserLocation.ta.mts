@@ -63,7 +63,7 @@ class IABMTUserLocation {
 
     constructor (
         nRCGI: NCGI,
-        tAI: OPTIONAL<TAI>,
+        tAI?: OPTIONAL<TAI>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.nRCGI = nRCGI;

@@ -40,8 +40,8 @@ class AddPartyArg {
     readonly destinationCallID: OPTIONAL<CallID>;
 
     constructor (
-        originalCallID: OPTIONAL<CallID>,
-        destinationCallID: OPTIONAL<CallID>
+        originalCallID?: OPTIONAL<CallID>,
+        destinationCallID?: OPTIONAL<CallID>
     ) {
         this.originalCallID = originalCallID;
         this.destinationCallID = destinationCallID;

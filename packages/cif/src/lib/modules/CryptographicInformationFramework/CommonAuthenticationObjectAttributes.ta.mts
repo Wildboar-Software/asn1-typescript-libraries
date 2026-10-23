@@ -46,7 +46,7 @@ class CommonAuthenticationObjectAttributes {
          * @public
          * @readonly
          */
-        readonly authId: OPTIONAL<Identifier>,
+        readonly authId?: OPTIONAL<Identifier>,
         /**
          * @summary `authReference`.
          * @description
@@ -55,7 +55,7 @@ class CommonAuthenticationObjectAttributes {
          * @public
          * @readonly
          */
-        readonly authReference: OPTIONAL<Reference>,
+        readonly authReference?: OPTIONAL<Reference>,
         /**
          * @summary `seIdentifier`.
          * @description
@@ -64,7 +64,7 @@ class CommonAuthenticationObjectAttributes {
          * @public
          * @readonly
          */
-        readonly seIdentifier: OPTIONAL<Reference>,
+        readonly seIdentifier?: OPTIONAL<Reference>,
         /**
          * @summary Extensions that are not recognized.
          * @public

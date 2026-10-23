@@ -79,13 +79,13 @@ class EscalationList_Item {
          * @public
          * @readonly
          */
-        readonly level: OPTIONAL<OrgLevel>,
+        readonly level?: OPTIONAL<OrgLevel>,
         /**
          * @summary `escPerson`.
          * @public
          * @readonly
          */
-        readonly escPerson: OPTIONAL<PersonReach>,
+        readonly escPerson?: OPTIONAL<PersonReach>,
         /**
          * @summary Extensions that are not recognized.
          * @public

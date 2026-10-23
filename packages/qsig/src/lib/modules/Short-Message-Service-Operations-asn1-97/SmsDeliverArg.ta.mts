@@ -103,7 +103,7 @@ class SmsDeliverArg {
         originatingName: OPTIONAL<Name>,
         smDeliverParameter: SmDeliverParameter,
         userData: UserData,
-        smsExtension: OPTIONAL<SmsExtension>
+        smsExtension?: OPTIONAL<SmsExtension>
     ) {
         this.originatingAddress = originatingAddress;
         this.destinationAddress = destinationAddress;

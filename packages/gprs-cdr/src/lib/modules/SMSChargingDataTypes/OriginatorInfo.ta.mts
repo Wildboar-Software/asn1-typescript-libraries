@@ -149,13 +149,13 @@ class OriginatorInfo {
     readonly sMOriginatorProtocolID: OPTIONAL<OCTET_STRING>;
 
     constructor (
-        originatorIMSI: OPTIONAL<OCTET_STRING>,
-        originatorMSISDN: OPTIONAL<OCTET_STRING>,
-        originatorOtherAddress: OPTIONAL<SMAddressInfo>,
-        originatorSCCPAddress: OPTIONAL<OCTET_STRING>,
-        originatorReceivedAddress: OPTIONAL<SMAddressInfo>,
-        sMOriginatorInterface: OPTIONAL<SMInterface>,
-        sMOriginatorProtocolID: OPTIONAL<OCTET_STRING>
+        originatorIMSI?: OPTIONAL<OCTET_STRING>,
+        originatorMSISDN?: OPTIONAL<OCTET_STRING>,
+        originatorOtherAddress?: OPTIONAL<SMAddressInfo>,
+        originatorSCCPAddress?: OPTIONAL<OCTET_STRING>,
+        originatorReceivedAddress?: OPTIONAL<SMAddressInfo>,
+        sMOriginatorInterface?: OPTIONAL<SMInterface>,
+        sMOriginatorProtocolID?: OPTIONAL<OCTET_STRING>
     ) {
         this.originatorIMSI = originatorIMSI;
         this.originatorMSISDN = originatorMSISDN;

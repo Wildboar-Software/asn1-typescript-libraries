@@ -84,10 +84,10 @@ class MobilityRestrictionList {
 
     constructor (
         servingPLMN: PLMNID,
-        equivalentPLMNs: OPTIONAL<EquivalentPLMNs>,
-        rATRestrictions: OPTIONAL<RATRestrictions>,
-        forbiddenAreaInformation: OPTIONAL<ForbiddenAreaInformation>,
-        serviceAreaInformation: OPTIONAL<ServiceAreaInformation>,
+        equivalentPLMNs?: OPTIONAL<EquivalentPLMNs>,
+        rATRestrictions?: OPTIONAL<RATRestrictions>,
+        forbiddenAreaInformation?: OPTIONAL<ForbiddenAreaInformation>,
+        serviceAreaInformation?: OPTIONAL<ServiceAreaInformation>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.servingPLMN = servingPLMN;

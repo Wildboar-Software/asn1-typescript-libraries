@@ -57,7 +57,7 @@ class MailboxFullPar {
 
     constructor (
         messageType: MessageType,
-        capacityReached: OPTIONAL<INTEGER>
+        capacityReached?: OPTIONAL<INTEGER>
     ) {
         this.messageType = messageType;
         this.capacityReached = capacityReached;

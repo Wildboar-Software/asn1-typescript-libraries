@@ -128,10 +128,10 @@ class SSCTInitiateArg {
         rerouteingNumber: PartyNumber,
         transferredAddress: PresentedAddressScreened,
         awaitConnect: AwaitConnect,
-        transferredName: OPTIONAL<Name>,
-        transferringAddress: OPTIONAL<PresentedAddressScreened>,
-        transferringName: OPTIONAL<Name>,
-        argumentExtension: OPTIONAL<SSCTInitiateArg_argumentExtension>
+        transferredName?: OPTIONAL<Name>,
+        transferringAddress?: OPTIONAL<PresentedAddressScreened>,
+        transferringName?: OPTIONAL<Name>,
+        argumentExtension?: OPTIONAL<SSCTInitiateArg_argumentExtension>
     ) {
         this.rerouteingNumber = rerouteingNumber;
         this.transferredAddress = transferredAddress;

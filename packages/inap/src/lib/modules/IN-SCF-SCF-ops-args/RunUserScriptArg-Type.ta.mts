@@ -90,10 +90,10 @@ class RunUserScriptArg_Type {
         srfAddress: CalledPartyNumber,
         correlationID: CorrelationID,
         scfID: ScfID,
-        userToConnect: OPTIONAL<UserToConnect>,
-        securityParameters: OPTIONAL<SecurityParameters>,
+        userToConnect?: OPTIONAL<UserToConnect>,
+        securityParameters?: OPTIONAL<SecurityParameters>,
         _unrecognizedExtensionsList: _Element[] = [],
-        extensions: OPTIONAL<Extensions>
+        extensions?: OPTIONAL<Extensions>
     ) {
         this.srfAddress = srfAddress;
         this.correlationID = correlationID;

@@ -50,7 +50,7 @@ class CreateCallSegmentAssociationResultArg {
 
     constructor (
         newCallSegmentAssociation: CSAID,
-        extensions: OPTIONAL<Extensions>,
+        extensions?: OPTIONAL<Extensions>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.newCallSegmentAssociation = newCallSegmentAssociation;

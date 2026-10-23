@@ -56,7 +56,7 @@ class RequestedActions {
          * @public
          * @readonly
          */
-        readonly keepActive: OPTIONAL<BOOLEAN>,
+        readonly keepActive?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `eventDM`.
          * @description
@@ -68,7 +68,7 @@ class RequestedActions {
          * @public
          * @readonly
          */
-        readonly eventDM: OPTIONAL<EventDM>,
+        readonly eventDM?: OPTIONAL<EventDM>,
         /**
          * @summary `secondEvent`.
          * @description
@@ -80,7 +80,7 @@ class RequestedActions {
          * @public
          * @readonly
          */
-        readonly secondEvent: OPTIONAL<SecondEventsDescriptor>,
+        readonly secondEvent?: OPTIONAL<SecondEventsDescriptor>,
         /**
          * @summary `signalsDescriptor`.
          * @description
@@ -92,7 +92,7 @@ class RequestedActions {
          * @public
          * @readonly
          */
-        readonly signalsDescriptor: OPTIONAL<SignalsDescriptor>,
+        readonly signalsDescriptor?: OPTIONAL<SignalsDescriptor>,
         /**
          * @summary `notifyBehaviour`.
          * @description
@@ -104,7 +104,7 @@ class RequestedActions {
          * @public
          * @readonly
          */
-        readonly notifyBehaviour: OPTIONAL<NotifyBehaviour>,
+        readonly notifyBehaviour?: OPTIONAL<NotifyBehaviour>,
         /**
          * @summary `resetEventsDescriptor`.
          * @description
@@ -119,7 +119,7 @@ class RequestedActions {
          * @public
          * @readonly
          */
-        readonly resetEventsDescriptor: OPTIONAL<NULL>,
+        readonly resetEventsDescriptor?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @description

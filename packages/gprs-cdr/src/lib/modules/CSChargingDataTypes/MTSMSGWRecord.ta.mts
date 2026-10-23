@@ -186,8 +186,8 @@ class MTSMSGWRecord {
         servedMSISDN: OPTIONAL<OCTET_STRING>,
         recordingEntity: OCTET_STRING,
         eventTime: OCTET_STRING,
-        smsResult: OPTIONAL<HLRIntResult>,
-        recordExtensions: OPTIONAL<ManagementExtension[]>
+        smsResult?: OPTIONAL<HLRIntResult>,
+        recordExtensions?: OPTIONAL<ManagementExtension[]>
     ) {
         this.recordType = recordType;
         this.serviceCentre = serviceCentre;

@@ -251,7 +251,7 @@ class MMSNotification {
         priority: OPTIONAL<MMSPriority>,
         messageSize: INTEGER,
         expiry: MMSExpiry,
-        replyCharging: OPTIONAL<MMSReplyCharging>,
+        replyCharging?: OPTIONAL<MMSReplyCharging>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.transactionID = transactionID;

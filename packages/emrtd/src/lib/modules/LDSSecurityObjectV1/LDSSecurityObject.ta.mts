@@ -61,7 +61,7 @@ class LDSSecurityObject {
          * @public
          * @readonly
          */
-        readonly ldsVersionInfo: OPTIONAL<LDSVersionInfo>
+        readonly ldsVersionInfo?: OPTIONAL<LDSVersionInfo>
     ) {
         if (
             dataGroupHashValues.length < 2

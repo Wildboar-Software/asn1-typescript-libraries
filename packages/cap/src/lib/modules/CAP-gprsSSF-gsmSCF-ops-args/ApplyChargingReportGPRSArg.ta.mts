@@ -75,7 +75,7 @@ class ApplyChargingReportGPRSArg {
          * @public
          * @readonly
          */
-        readonly qualityOfService: OPTIONAL<QualityOfService>,
+        readonly qualityOfService?: OPTIONAL<QualityOfService>,
         /**
          * @summary `active`.
          * @description
@@ -86,7 +86,7 @@ class ApplyChargingReportGPRSArg {
          * @public
          * @readonly
          */
-        readonly active: OPTIONAL<BOOLEAN>,
+        readonly active?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `pDPID`.
          * @description
@@ -98,7 +98,7 @@ class ApplyChargingReportGPRSArg {
          * @public
          * @readonly
          */
-        readonly pDPID: OPTIONAL<PDPID>,
+        readonly pDPID?: OPTIONAL<PDPID>,
         /**
          * @summary `chargingRollOver`.
          * @description
@@ -113,7 +113,7 @@ class ApplyChargingReportGPRSArg {
          * @public
          * @readonly
          */
-        readonly chargingRollOver: OPTIONAL<ChargingRollOver>,
+        readonly chargingRollOver?: OPTIONAL<ChargingRollOver>,
         /**
          * @summary Extensions that are not recognized.
          * @public

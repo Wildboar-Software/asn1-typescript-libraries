@@ -58,7 +58,7 @@ class CPIPRequestArg {
 
     constructor (
         cpiProtectionLevel: CPIProtectionLevel,
-        argumentExtension: OPTIONAL<CPIPRequestArg_argumentExtension>
+        argumentExtension?: OPTIONAL<CPIPRequestArg_argumentExtension>
     ) {
         this.cpiProtectionLevel = cpiProtectionLevel;
         this.argumentExtension = argumentExtension;

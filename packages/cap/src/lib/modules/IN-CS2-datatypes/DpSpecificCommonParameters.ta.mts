@@ -90,127 +90,127 @@ class DpSpecificCommonParameters {
          * @public
          * @readonly
          */
-        readonly bearerCapability: OPTIONAL<BearerCapability>,
+        readonly bearerCapability?: OPTIONAL<BearerCapability>,
         /**
          * @summary `calledPartyNumber`.
          * @public
          * @readonly
          */
-        readonly calledPartyNumber: OPTIONAL<CalledPartyNumber>,
+        readonly calledPartyNumber?: OPTIONAL<CalledPartyNumber>,
         /**
          * @summary `callingPartyNumber`.
          * @public
          * @readonly
          */
-        readonly callingPartyNumber: OPTIONAL<CallingPartyNumber>,
+        readonly callingPartyNumber?: OPTIONAL<CallingPartyNumber>,
         /**
          * @summary `callingPartysCategory`.
          * @public
          * @readonly
          */
-        readonly callingPartysCategory: OPTIONAL<CallingPartysCategory>,
+        readonly callingPartysCategory?: OPTIONAL<CallingPartysCategory>,
         /**
          * @summary `iPSSPCapabilities`.
          * @public
          * @readonly
          */
-        readonly iPSSPCapabilities: OPTIONAL<IPSSPCapabilities>,
+        readonly iPSSPCapabilities?: OPTIONAL<IPSSPCapabilities>,
         /**
          * @summary `iPAvailable`.
          * @public
          * @readonly
          */
-        readonly iPAvailable: OPTIONAL<IPAvailable>,
+        readonly iPAvailable?: OPTIONAL<IPAvailable>,
         /**
          * @summary `iSDNAccessRelatedInformation`.
          * @public
          * @readonly
          */
-        readonly iSDNAccessRelatedInformation: OPTIONAL<ISDNAccessRelatedInformation>,
+        readonly iSDNAccessRelatedInformation?: OPTIONAL<ISDNAccessRelatedInformation>,
         /**
          * @summary `cGEncountered`.
          * @public
          * @readonly
          */
-        readonly cGEncountered: OPTIONAL<CGEncountered>,
+        readonly cGEncountered?: OPTIONAL<CGEncountered>,
         /**
          * @summary `locationNumber`.
          * @public
          * @readonly
          */
-        readonly locationNumber: OPTIONAL<LocationNumber>,
+        readonly locationNumber?: OPTIONAL<LocationNumber>,
         /**
          * @summary `serviceProfileIdentifier`.
          * @public
          * @readonly
          */
-        readonly serviceProfileIdentifier: OPTIONAL<ServiceProfileIdentifier>,
+        readonly serviceProfileIdentifier?: OPTIONAL<ServiceProfileIdentifier>,
         /**
          * @summary `terminalType`.
          * @public
          * @readonly
          */
-        readonly terminalType: OPTIONAL<TerminalType>,
+        readonly terminalType?: OPTIONAL<TerminalType>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<ExtensionField[]>,
+        readonly extensions?: OPTIONAL<ExtensionField[]>,
         /**
          * @summary `chargeNumber`.
          * @public
          * @readonly
          */
-        readonly chargeNumber: OPTIONAL<ChargeNumber>,
+        readonly chargeNumber?: OPTIONAL<ChargeNumber>,
         /**
          * @summary `servingAreaID`.
          * @public
          * @readonly
          */
-        readonly servingAreaID: OPTIONAL<ServingAreaID>,
+        readonly servingAreaID?: OPTIONAL<ServingAreaID>,
         /**
          * @summary `serviceInteractionIndicators`.
          * @public
          * @readonly
          */
-        readonly serviceInteractionIndicators: OPTIONAL<ServiceInteractionIndicators>,
+        readonly serviceInteractionIndicators?: OPTIONAL<ServiceInteractionIndicators>,
         /**
          * @summary `iNServiceCompatibilityIndication`.
          * @public
          * @readonly
          */
-        readonly iNServiceCompatibilityIndication: OPTIONAL<INServiceCompatibilityIndication>,
+        readonly iNServiceCompatibilityIndication?: OPTIONAL<INServiceCompatibilityIndication>,
         /**
          * @summary `serviceInteractionIndicatorsTwo`.
          * @public
          * @readonly
          */
-        readonly serviceInteractionIndicatorsTwo: OPTIONAL<ServiceInteractionIndicatorsTwo>,
+        readonly serviceInteractionIndicatorsTwo?: OPTIONAL<ServiceInteractionIndicatorsTwo>,
         /**
          * @summary `uSIServiceIndicator`.
          * @public
          * @readonly
          */
-        readonly uSIServiceIndicator: OPTIONAL<USIServiceIndicator>,
+        readonly uSIServiceIndicator?: OPTIONAL<USIServiceIndicator>,
         /**
          * @summary `uSIInformation`.
          * @public
          * @readonly
          */
-        readonly uSIInformation: OPTIONAL<USIInformation>,
+        readonly uSIInformation?: OPTIONAL<USIInformation>,
         /**
          * @summary `forwardGVNS`.
          * @public
          * @readonly
          */
-        readonly forwardGVNS: OPTIONAL<ForwardGVNS>,
+        readonly forwardGVNS?: OPTIONAL<ForwardGVNS>,
         /**
          * @summary `createdCallSegmentAssociation`.
          * @public
          * @readonly
          */
-        readonly createdCallSegmentAssociation: OPTIONAL<CSAID>,
+        readonly createdCallSegmentAssociation?: OPTIONAL<CSAID>,
         /**
          * @summary Extensions that are not recognized.
          * @public

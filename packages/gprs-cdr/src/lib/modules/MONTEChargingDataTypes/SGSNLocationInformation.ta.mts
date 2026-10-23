@@ -160,15 +160,15 @@ class SGSNLocationInformation {
     readonly userCSGInformation: OPTIONAL<UserCSGInformation>;
 
     constructor (
-        cellGlobalIdentity: OPTIONAL<OCTET_STRING>,
-        locationAreaIdentity: OPTIONAL<OCTET_STRING>,
-        serviceAreaIdentity: OPTIONAL<OCTET_STRING>,
-        routingAreaIdentity: OPTIONAL<OCTET_STRING>,
-        geographicalInformation: OPTIONAL<OCTET_STRING>,
-        geodeticInformation: OPTIONAL<OCTET_STRING>,
-        currentLocationRetrieved: OPTIONAL<CurrentLocationRetrieved>,
-        ageOfLocationInformation: OPTIONAL<INTEGER>,
-        userCSGInformation: OPTIONAL<UserCSGInformation>
+        cellGlobalIdentity?: OPTIONAL<OCTET_STRING>,
+        locationAreaIdentity?: OPTIONAL<OCTET_STRING>,
+        serviceAreaIdentity?: OPTIONAL<OCTET_STRING>,
+        routingAreaIdentity?: OPTIONAL<OCTET_STRING>,
+        geographicalInformation?: OPTIONAL<OCTET_STRING>,
+        geodeticInformation?: OPTIONAL<OCTET_STRING>,
+        currentLocationRetrieved?: OPTIONAL<CurrentLocationRetrieved>,
+        ageOfLocationInformation?: OPTIONAL<INTEGER>,
+        userCSGInformation?: OPTIONAL<UserCSGInformation>
     ) {
         this.cellGlobalIdentity = cellGlobalIdentity;
         this.locationAreaIdentity = locationAreaIdentity;

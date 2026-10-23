@@ -75,7 +75,7 @@ class SetPresenceStateArgument {
          * @public
          * @readonly
          */
-        readonly fromTime: OPTIONAL<TimeInfo>,
+        readonly fromTime?: OPTIONAL<TimeInfo>,
         /**
          * @summary `untilTime`.
          * @description
@@ -84,7 +84,7 @@ class SetPresenceStateArgument {
          * @public
          * @readonly
          */
-        readonly untilTime: OPTIONAL<TimeInfo>,
+        readonly untilTime?: OPTIONAL<TimeInfo>,
         /**
          * @summary `place`.
          * @description
@@ -93,7 +93,7 @@ class SetPresenceStateArgument {
          * @public
          * @readonly
          */
-        readonly place: OPTIONAL<OCTET_STRING>,
+        readonly place?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `mood`.
          * @description
@@ -102,7 +102,7 @@ class SetPresenceStateArgument {
          * @public
          * @readonly
          */
-        readonly mood: OPTIONAL<OCTET_STRING>,
+        readonly mood?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `namedPresenceState`.
          * @description
@@ -111,7 +111,7 @@ class SetPresenceStateArgument {
          * @public
          * @readonly
          */
-        readonly namedPresenceState: OPTIONAL<OCTET_STRING>,
+        readonly namedPresenceState?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `extensions`.
          * @description
@@ -121,7 +121,7 @@ class SetPresenceStateArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

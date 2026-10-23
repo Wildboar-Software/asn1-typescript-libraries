@@ -51,7 +51,7 @@ class DiagFormat_attCombo {
 
     constructor (
         unsupportedCombination: AttributeList,
-        recommendedAlternatives: OPTIONAL<AttributeList[]>
+        recommendedAlternatives?: OPTIONAL<AttributeList[]>
     ) {
         this.unsupportedCombination = unsupportedCombination;
         this.recommendedAlternatives = recommendedAlternatives;

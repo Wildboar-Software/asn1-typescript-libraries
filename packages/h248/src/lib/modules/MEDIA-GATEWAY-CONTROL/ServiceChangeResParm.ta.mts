@@ -57,7 +57,7 @@ class ServiceChangeResParm {
          * @public
          * @readonly
          */
-        readonly serviceChangeMgcId: OPTIONAL<MId>,
+        readonly serviceChangeMgcId?: OPTIONAL<MId>,
         /**
          * @summary `serviceChangeAddress`.
          * @description
@@ -68,7 +68,7 @@ class ServiceChangeResParm {
          * @public
          * @readonly
          */
-        readonly serviceChangeAddress: OPTIONAL<ServiceChangeAddress>,
+        readonly serviceChangeAddress?: OPTIONAL<ServiceChangeAddress>,
         /**
          * @summary `serviceChangeVersion`.
          * @description
@@ -80,7 +80,7 @@ class ServiceChangeResParm {
          * @public
          * @readonly
          */
-        readonly serviceChangeVersion: OPTIONAL<INTEGER>,
+        readonly serviceChangeVersion?: OPTIONAL<INTEGER>,
         /**
          * @summary `serviceChangeProfile`.
          * @description
@@ -92,7 +92,7 @@ class ServiceChangeResParm {
          * @public
          * @readonly
          */
-        readonly serviceChangeProfile: OPTIONAL<ServiceChangeProfile>,
+        readonly serviceChangeProfile?: OPTIONAL<ServiceChangeProfile>,
         /**
          * @summary `timestamp`.
          * @description
@@ -103,7 +103,7 @@ class ServiceChangeResParm {
          * @public
          * @readonly
          */
-        readonly timestamp: OPTIONAL<TimeNotation>,
+        readonly timestamp?: OPTIONAL<TimeNotation>,
         /**
          * @summary Extensions that are not recognized.
          * @description

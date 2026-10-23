@@ -78,8 +78,8 @@ class AocFinalArg {
 
     constructor (
         finalCharge: AocFinalArg_finalCharge,
-        chargingAssociation: OPTIONAL<ChargingAssociation>,
-        finalArgExtension: OPTIONAL<AocFinalArg_finalArgExtension>
+        chargingAssociation?: OPTIONAL<ChargingAssociation>,
+        finalArgExtension?: OPTIONAL<AocFinalArg_finalArgExtension>
     ) {
         this.finalCharge = finalCharge;
         this.chargingAssociation = chargingAssociation;

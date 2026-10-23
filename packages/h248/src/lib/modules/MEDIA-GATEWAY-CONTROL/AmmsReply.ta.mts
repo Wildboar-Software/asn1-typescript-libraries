@@ -59,7 +59,7 @@ class AmmsReply {
          * @public
          * @readonly
          */
-        readonly terminationAudit: OPTIONAL<TerminationAudit>,
+        readonly terminationAudit?: OPTIONAL<TerminationAudit>,
         /**
          * @summary Extensions that are not recognized.
          * @description

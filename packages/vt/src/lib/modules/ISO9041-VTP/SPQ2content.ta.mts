@@ -56,7 +56,7 @@ class SPQ2content {
          * @public
          * @readonly
          */
-        readonly retList: OPTIONAL<PrintableString[]>
+        readonly retList?: OPTIONAL<PrintableString[]>
     ) {}
 
     /**

@@ -62,9 +62,9 @@ class FilteredCallTreatment {
 
     constructor (
         sFBillingChargingCharacteristics: SFBillingChargingCharacteristics,
-        informationToSend: OPTIONAL<InformationToSend>,
-        maximumNumberOfCounters: OPTIONAL<MaximumNumberOfCounters>,
-        releaseCause: OPTIONAL<Cause>
+        informationToSend?: OPTIONAL<InformationToSend>,
+        maximumNumberOfCounters?: OPTIONAL<MaximumNumberOfCounters>,
+        releaseCause?: OPTIONAL<Cause>
     ) {
         this.sFBillingChargingCharacteristics = sFBillingChargingCharacteristics;
         this.informationToSend = informationToSend;

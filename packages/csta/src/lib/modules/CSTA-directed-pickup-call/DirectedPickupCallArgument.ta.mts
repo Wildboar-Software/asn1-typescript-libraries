@@ -81,7 +81,7 @@ class DirectedPickupCallArgument {
          * @public
          * @readonly
          */
-        readonly correlatorData: OPTIONAL<CorrelatorData>,
+        readonly correlatorData?: OPTIONAL<CorrelatorData>,
         /**
          * @summary `userData`.
          * @description
@@ -91,7 +91,7 @@ class DirectedPickupCallArgument {
          * @public
          * @readonly
          */
-        readonly userData: OPTIONAL<UserData>,
+        readonly userData?: OPTIONAL<UserData>,
         /**
          * @summary `extensions`.
          * @description
@@ -102,7 +102,7 @@ class DirectedPickupCallArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

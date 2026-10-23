@@ -159,20 +159,20 @@ class CollectInformationArg {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        alertingPattern: OPTIONAL<AlertingPattern>,
-        numberingPlan: OPTIONAL<NumberingPlan>,
-        originalCalledPartyID: OPTIONAL<OriginalCalledPartyID>,
-        travellingClassMark: OPTIONAL<TravellingClassMark>,
-        extensions: OPTIONAL<Extensions>,
-        callingPartyNumber: OPTIONAL<CallingPartyNumber>,
-        dialledDigits: OPTIONAL<CalledPartyNumber>,
-        serviceInteractionIndicators: OPTIONAL<ServiceInteractionIndicators>,
-        iNServiceCompatibilityResponse: OPTIONAL<INServiceCompatibilityResponse>,
-        forwardGVNS: OPTIONAL<ForwardGVNS>,
-        backwardGVNS: OPTIONAL<BackwardGVNS>,
-        serviceInteractionIndicatorsTwo: OPTIONAL<ServiceInteractionIndicatorsTwo>,
-        callSegmentID: OPTIONAL<CallSegmentID>,
-        legToBeCreated: OPTIONAL<LegID>,
+        alertingPattern?: OPTIONAL<AlertingPattern>,
+        numberingPlan?: OPTIONAL<NumberingPlan>,
+        originalCalledPartyID?: OPTIONAL<OriginalCalledPartyID>,
+        travellingClassMark?: OPTIONAL<TravellingClassMark>,
+        extensions?: OPTIONAL<Extensions>,
+        callingPartyNumber?: OPTIONAL<CallingPartyNumber>,
+        dialledDigits?: OPTIONAL<CalledPartyNumber>,
+        serviceInteractionIndicators?: OPTIONAL<ServiceInteractionIndicators>,
+        iNServiceCompatibilityResponse?: OPTIONAL<INServiceCompatibilityResponse>,
+        forwardGVNS?: OPTIONAL<ForwardGVNS>,
+        backwardGVNS?: OPTIONAL<BackwardGVNS>,
+        serviceInteractionIndicatorsTwo?: OPTIONAL<ServiceInteractionIndicatorsTwo>,
+        callSegmentID?: OPTIONAL<CallSegmentID>,
+        legToBeCreated?: OPTIONAL<LegID>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.alertingPattern = alertingPattern;

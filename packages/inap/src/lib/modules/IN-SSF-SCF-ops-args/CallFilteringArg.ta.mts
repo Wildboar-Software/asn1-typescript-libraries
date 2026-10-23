@@ -70,9 +70,9 @@ class CallFilteringArg {
     constructor (
         destinationIndex: DestinationIndex,
         gapIndicators: GapIndicators,
-        registratorIdentifier: OPTIONAL<RegistratorIdentifier>,
+        registratorIdentifier?: OPTIONAL<RegistratorIdentifier>,
         _unrecognizedExtensionsList: _Element[] = [],
-        extensions: OPTIONAL<Extensions>
+        extensions?: OPTIONAL<Extensions>
     ) {
         this.destinationIndex = destinationIndex;
         this.gapIndicators = gapIndicators;

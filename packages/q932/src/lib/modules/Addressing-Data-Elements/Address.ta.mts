@@ -56,7 +56,7 @@ class Address {
 
     constructor (
         partyNumber: PartyNumber,
-        partySubaddress: OPTIONAL<PartySubaddress>
+        partySubaddress?: OPTIONAL<PartySubaddress>
     ) {
         this.partyNumber = partyNumber;
         this.partySubaddress = partySubaddress;

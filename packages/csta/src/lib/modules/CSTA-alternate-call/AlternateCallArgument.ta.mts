@@ -82,7 +82,7 @@ class AlternateCallArgument {
          * @public
          * @readonly
          */
-        readonly connectionReservation: OPTIONAL<BOOLEAN>,
+        readonly connectionReservation?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `consultOptions`.
          * @description
@@ -94,7 +94,7 @@ class AlternateCallArgument {
          * @public
          * @readonly
          */
-        readonly consultOptions: OPTIONAL<ConsultOptions>,
+        readonly consultOptions?: OPTIONAL<ConsultOptions>,
         /**
          * @summary `extensions`.
          * @description
@@ -105,7 +105,7 @@ class AlternateCallArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

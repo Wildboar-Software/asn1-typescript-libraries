@@ -46,7 +46,7 @@ class ConnectivityParameters {
          * @public
          * @readonly
          */
-        readonly httpParams: OPTIONAL<OCTET_STRING>
+        readonly httpParams?: OPTIONAL<OCTET_STRING>
     ) {}
 
     /**

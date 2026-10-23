@@ -49,7 +49,7 @@ class ECNAMDisplayInfo {
 
     constructor (
         name: UTF8String,
-        additionalInfo: OPTIONAL<OCTET_STRING>,
+        additionalInfo?: OPTIONAL<OCTET_STRING>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.name = name;

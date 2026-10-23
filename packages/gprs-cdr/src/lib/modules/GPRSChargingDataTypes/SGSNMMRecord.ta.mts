@@ -570,12 +570,12 @@ class SGSNMMRecord {
         localSequenceNumber: OPTIONAL<INTEGER>,
         servedMSISDN: OPTIONAL<OCTET_STRING>,
         chargingCharacteristics: OCTET_STRING,
-        cAMELInformationMM: OPTIONAL<CAMELInformationMM>,
-        rATType: OPTIONAL<INTEGER>,
-        chChSelectionMode: OPTIONAL<ChChSelectionMode>,
-        cellPLMNId: OPTIONAL<OCTET_STRING>,
-        servingNodePLMNIdentifier: OPTIONAL<OCTET_STRING>,
-        cNOperatorSelectionEnt: OPTIONAL<CNOperatorSelectionEntity>
+        cAMELInformationMM?: OPTIONAL<CAMELInformationMM>,
+        rATType?: OPTIONAL<INTEGER>,
+        chChSelectionMode?: OPTIONAL<ChChSelectionMode>,
+        cellPLMNId?: OPTIONAL<OCTET_STRING>,
+        servingNodePLMNIdentifier?: OPTIONAL<OCTET_STRING>,
+        cNOperatorSelectionEnt?: OPTIONAL<CNOperatorSelectionEntity>
     ) {
         this.recordType = recordType;
         this.servedIMSI = servedIMSI;

@@ -70,7 +70,7 @@ class InitialDPArgExtension {
          * @public
          * @readonly
          */
-        readonly gmscAddress: OPTIONAL<ISDN_AddressString>,
+        readonly gmscAddress?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `forwardingDestinationNumber`.
          * @description
@@ -80,7 +80,7 @@ class InitialDPArgExtension {
          * @public
          * @readonly
          */
-        readonly forwardingDestinationNumber: OPTIONAL<CalledPartyNumber>,
+        readonly forwardingDestinationNumber?: OPTIONAL<CalledPartyNumber>,
         /**
          * @summary `ms_Classmark2`.
          * @description
@@ -91,7 +91,7 @@ class InitialDPArgExtension {
          * @public
          * @readonly
          */
-        readonly ms_Classmark2: OPTIONAL<MS_Classmark2>,
+        readonly ms_Classmark2?: OPTIONAL<MS_Classmark2>,
         /**
          * @summary `iMEI`.
          * @description
@@ -102,7 +102,7 @@ class InitialDPArgExtension {
          * @public
          * @readonly
          */
-        readonly iMEI: OPTIONAL<IMEI>,
+        readonly iMEI?: OPTIONAL<IMEI>,
         /**
          * @summary `supportedCamelPhases`.
          * @description
@@ -113,7 +113,7 @@ class InitialDPArgExtension {
          * @public
          * @readonly
          */
-        readonly supportedCamelPhases: OPTIONAL<SupportedCamelPhases>,
+        readonly supportedCamelPhases?: OPTIONAL<SupportedCamelPhases>,
         /**
          * @summary `offeredCamel4Functionalities`.
          * @description
@@ -124,7 +124,7 @@ class InitialDPArgExtension {
          * @public
          * @readonly
          */
-        readonly offeredCamel4Functionalities: OPTIONAL<OfferedCamel4Functionalities>,
+        readonly offeredCamel4Functionalities?: OPTIONAL<OfferedCamel4Functionalities>,
         /**
          * @summary `bearerCapability2`.
          * @description
@@ -135,7 +135,7 @@ class InitialDPArgExtension {
          * @public
          * @readonly
          */
-        readonly bearerCapability2: OPTIONAL<BearerCapability>,
+        readonly bearerCapability2?: OPTIONAL<BearerCapability>,
         /**
          * @summary `ext_basicServiceCode2`.
          * @description
@@ -146,7 +146,7 @@ class InitialDPArgExtension {
          * @public
          * @readonly
          */
-        readonly ext_basicServiceCode2: OPTIONAL<Ext_BasicServiceCode>,
+        readonly ext_basicServiceCode2?: OPTIONAL<Ext_BasicServiceCode>,
         /**
          * @summary `highLayerCompatibility2`.
          * @description
@@ -157,7 +157,7 @@ class InitialDPArgExtension {
          * @public
          * @readonly
          */
-        readonly highLayerCompatibility2: OPTIONAL<HighLayerCompatibility>,
+        readonly highLayerCompatibility2?: OPTIONAL<HighLayerCompatibility>,
         /**
          * @summary `lowLayerCompatibility`.
          * @description
@@ -167,7 +167,7 @@ class InitialDPArgExtension {
          * @public
          * @readonly
          */
-        readonly lowLayerCompatibility: OPTIONAL<LowLayerCompatibility>,
+        readonly lowLayerCompatibility?: OPTIONAL<LowLayerCompatibility>,
         /**
          * @summary `lowLayerCompatibility2`.
          * @description
@@ -178,7 +178,7 @@ class InitialDPArgExtension {
          * @public
          * @readonly
          */
-        readonly lowLayerCompatibility2: OPTIONAL<LowLayerCompatibility>,
+        readonly lowLayerCompatibility2?: OPTIONAL<LowLayerCompatibility>,
         /**
          * @summary `enhancedDialledServicesAllowed`.
          * @description
@@ -189,7 +189,7 @@ class InitialDPArgExtension {
          * @public
          * @readonly
          */
-        readonly enhancedDialledServicesAllowed: OPTIONAL<NULL>,
+        readonly enhancedDialledServicesAllowed?: OPTIONAL<NULL>,
         /**
          * @summary `uu_Data`.
          * @description
@@ -200,7 +200,7 @@ class InitialDPArgExtension {
          * @public
          * @readonly
          */
-        readonly uu_Data: OPTIONAL<UU_Data>,
+        readonly uu_Data?: OPTIONAL<UU_Data>,
         /**
          * @summary `collectInformationAllowed`.
          * @description
@@ -211,7 +211,7 @@ class InitialDPArgExtension {
          * @public
          * @readonly
          */
-        readonly collectInformationAllowed: OPTIONAL<NULL>,
+        readonly collectInformationAllowed?: OPTIONAL<NULL>,
         /**
          * @summary `releaseCallArgExtensionAllowed`.
          * @description
@@ -222,7 +222,7 @@ class InitialDPArgExtension {
          * @public
          * @readonly
          */
-        readonly releaseCallArgExtensionAllowed: OPTIONAL<NULL>,
+        readonly releaseCallArgExtensionAllowed?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @public

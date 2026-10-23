@@ -77,10 +77,10 @@ class OCLC_UserInformation {
     readonly text: OPTIONAL<VisibleString>;
 
     constructor (
-        motd: OPTIONAL<VisibleString>,
-        dblist: OPTIONAL<DBName[]>,
-        failReason: OPTIONAL<BOOLEAN>,
-        text: OPTIONAL<VisibleString>
+        motd?: OPTIONAL<VisibleString>,
+        dblist?: OPTIONAL<DBName[]>,
+        failReason?: OPTIONAL<BOOLEAN>,
+        text?: OPTIONAL<VisibleString>
     ) {
         this.motd = motd;
         this.dblist = dblist;

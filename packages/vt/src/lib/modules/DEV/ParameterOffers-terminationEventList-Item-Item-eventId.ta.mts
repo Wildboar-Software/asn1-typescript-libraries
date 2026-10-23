@@ -44,7 +44,7 @@ class ParameterOffers_terminationEventList_Item_Item_eventId {
          * @public
          * @readonly
          */
-        readonly integer: OPTIONAL<IntegerOffer>,
+        readonly integer?: OPTIONAL<IntegerOffer>,
         /**
          * @summary `nul`.
          * @description
@@ -52,7 +52,7 @@ class ParameterOffers_terminationEventList_Item_Item_eventId {
          * @public
          * @readonly
          */
-        readonly nul: OPTIONAL<NULL>
+        readonly nul?: OPTIONAL<NULL>
     ) {}
 
     /**

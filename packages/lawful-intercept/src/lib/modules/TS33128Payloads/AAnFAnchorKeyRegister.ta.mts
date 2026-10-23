@@ -90,7 +90,7 @@ class AAnFAnchorKeyRegister {
     constructor (
         aKID: NAI,
         sUPI: SUPI,
-        kAKMA: OPTIONAL<KAKMA>,
+        kAKMA?: OPTIONAL<KAKMA>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.aKID = aKID;

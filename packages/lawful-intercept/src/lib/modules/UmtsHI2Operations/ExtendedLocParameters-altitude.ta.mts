@@ -61,7 +61,7 @@ class ExtendedLocParameters_altitude {
 
     constructor (
         alt: PrintableString,
-        alt_uncertainty: OPTIONAL<PrintableString>
+        alt_uncertainty?: OPTIONAL<PrintableString>
     ) {
         this.alt = alt;
         this.alt_uncertainty = alt_uncertainty;

@@ -154,7 +154,7 @@ class CDRInformationItem {
          * @public
          * @readonly
          */
-        readonly callingDevice: OPTIONAL<CallingDeviceID>,
+        readonly callingDevice?: OPTIONAL<CallingDeviceID>,
         /**
          * @summary `calledDevice`.
          * @description
@@ -164,7 +164,7 @@ class CDRInformationItem {
          * @public
          * @readonly
          */
-        readonly calledDevice: OPTIONAL<CalledDeviceID>,
+        readonly calledDevice?: OPTIONAL<CalledDeviceID>,
         /**
          * @summary `associatedCallingDevice`.
          * @description
@@ -175,7 +175,7 @@ class CDRInformationItem {
          * @public
          * @readonly
          */
-        readonly associatedCallingDevice: OPTIONAL<AssociatedCallingDeviceID>,
+        readonly associatedCallingDevice?: OPTIONAL<AssociatedCallingDeviceID>,
         /**
          * @summary `associatedCalledDevice`.
          * @description
@@ -186,7 +186,7 @@ class CDRInformationItem {
          * @public
          * @readonly
          */
-        readonly associatedCalledDevice: OPTIONAL<AssociatedCalledDeviceID>,
+        readonly associatedCalledDevice?: OPTIONAL<AssociatedCalledDeviceID>,
         /**
          * @summary `networkCallingDevice`.
          * @description
@@ -196,7 +196,7 @@ class CDRInformationItem {
          * @public
          * @readonly
          */
-        readonly networkCallingDevice: OPTIONAL<NetworkCallingDeviceID>,
+        readonly networkCallingDevice?: OPTIONAL<NetworkCallingDeviceID>,
         /**
          * @summary `networkCalledDevice`.
          * @description
@@ -206,7 +206,7 @@ class CDRInformationItem {
          * @public
          * @readonly
          */
-        readonly networkCalledDevice: OPTIONAL<NetworkCalledDeviceID>,
+        readonly networkCalledDevice?: OPTIONAL<NetworkCalledDeviceID>,
         /**
          * @summary `callCharacteristics`.
          * @description
@@ -217,7 +217,7 @@ class CDRInformationItem {
          * @public
          * @readonly
          */
-        readonly callCharacteristics: OPTIONAL<CallCharacteristics>,
+        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
         /**
          * @summary `mediaCallCharacteristics`.
          * @description
@@ -227,7 +227,7 @@ class CDRInformationItem {
          * @public
          * @readonly
          */
-        readonly mediaCallCharacteristics: OPTIONAL<MediaCallCharacteristics>,
+        readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
         /**
          * @summary `chargedDevice`.
          * @description
@@ -237,7 +237,7 @@ class CDRInformationItem {
          * @public
          * @readonly
          */
-        readonly chargedDevice: OPTIONAL<ChargedDevice>,
+        readonly chargedDevice?: OPTIONAL<ChargedDevice>,
         /**
          * @summary `recordedCall`.
          * @description
@@ -247,7 +247,7 @@ class CDRInformationItem {
          * @public
          * @readonly
          */
-        readonly recordedCall: OPTIONAL<ConnectionID>,
+        readonly recordedCall?: OPTIONAL<ConnectionID>,
         /**
          * @summary `nodeNumber`.
          * @description
@@ -257,7 +257,7 @@ class CDRInformationItem {
          * @public
          * @readonly
          */
-        readonly nodeNumber: OPTIONAL<NodeNumber>,
+        readonly nodeNumber?: OPTIONAL<NodeNumber>,
         /**
          * @summary `tariffTable`.
          * @description
@@ -268,7 +268,7 @@ class CDRInformationItem {
          * @public
          * @readonly
          */
-        readonly tariffTable: OPTIONAL<INTEGER>,
+        readonly tariffTable?: OPTIONAL<INTEGER>,
         /**
          * @summary `connectionStart`.
          * @description
@@ -278,7 +278,7 @@ class CDRInformationItem {
          * @public
          * @readonly
          */
-        readonly connectionStart: OPTIONAL<TimeInfo>,
+        readonly connectionStart?: OPTIONAL<TimeInfo>,
         /**
          * @summary `connectionEnd`.
          * @description
@@ -288,7 +288,7 @@ class CDRInformationItem {
          * @public
          * @readonly
          */
-        readonly connectionEnd: OPTIONAL<TimeInfo>,
+        readonly connectionEnd?: OPTIONAL<TimeInfo>,
         /**
          * @summary `connectionDuration`.
          * @description
@@ -298,7 +298,7 @@ class CDRInformationItem {
          * @public
          * @readonly
          */
-        readonly connectionDuration: OPTIONAL<INTEGER>,
+        readonly connectionDuration?: OPTIONAL<INTEGER>,
         /**
          * @summary `accessCode`.
          * @description
@@ -309,7 +309,7 @@ class CDRInformationItem {
          * @public
          * @readonly
          */
-        readonly accessCode: OPTIONAL<OCTET_STRING>,
+        readonly accessCode?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `carrier`.
          * @description
@@ -319,7 +319,7 @@ class CDRInformationItem {
          * @public
          * @readonly
          */
-        readonly carrier: OPTIONAL<INTEGER>,
+        readonly carrier?: OPTIONAL<INTEGER>,
         /**
          * @summary `selectedRoute`.
          * @description
@@ -329,7 +329,7 @@ class CDRInformationItem {
          * @public
          * @readonly
          */
-        readonly selectedRoute: OPTIONAL<INTEGER>,
+        readonly selectedRoute?: OPTIONAL<INTEGER>,
         /**
          * @summary `billingID`.
          * @description
@@ -340,7 +340,7 @@ class CDRInformationItem {
          * @public
          * @readonly
          */
-        readonly billingID: OPTIONAL<BillingID>,
+        readonly billingID?: OPTIONAL<BillingID>,
         /**
          * @summary `chargingInfo`.
          * @description
@@ -351,7 +351,7 @@ class CDRInformationItem {
          * @public
          * @readonly
          */
-        readonly chargingInfo: OPTIONAL<ChargingInfo>,
+        readonly chargingInfo?: OPTIONAL<ChargingInfo>,
         /**
          * @summary `supplServiceInfo`.
          * @description
@@ -362,7 +362,7 @@ class CDRInformationItem {
          * @public
          * @readonly
          */
-        readonly supplServiceInfo: OPTIONAL<SupplServiceInfo>,
+        readonly supplServiceInfo?: OPTIONAL<SupplServiceInfo>,
         /**
          * @summary `reasonForTerm`.
          * @description
@@ -372,7 +372,7 @@ class CDRInformationItem {
          * @public
          * @readonly
          */
-        readonly reasonForTerm: OPTIONAL<ReasonForTerm>,
+        readonly reasonForTerm?: OPTIONAL<ReasonForTerm>,
         /**
          * @summary `authCode`.
          * @description
@@ -382,7 +382,7 @@ class CDRInformationItem {
          * @public
          * @readonly
          */
-        readonly authCode: OPTIONAL<AuthCode>,
+        readonly authCode?: OPTIONAL<AuthCode>,
         /**
          * @summary `accountInfo`.
          * @description
@@ -392,7 +392,7 @@ class CDRInformationItem {
          * @public
          * @readonly
          */
-        readonly accountInfo: OPTIONAL<AccountInfo>,
+        readonly accountInfo?: OPTIONAL<AccountInfo>,
         /**
          * @summary `deviceCategory`.
          * @description
@@ -403,7 +403,7 @@ class CDRInformationItem {
          * @public
          * @readonly
          */
-        readonly deviceCategory: OPTIONAL<DeviceCategory>,
+        readonly deviceCategory?: OPTIONAL<DeviceCategory>,
         /**
          * @summary `namedDeviceTypes`.
          * @description
@@ -414,7 +414,7 @@ class CDRInformationItem {
          * @public
          * @readonly
          */
-        readonly namedDeviceTypes: OPTIONAL<NamedDeviceTypes>,
+        readonly namedDeviceTypes?: OPTIONAL<NamedDeviceTypes>,
         /**
          * @summary `operatorDevice`.
          * @description
@@ -424,7 +424,7 @@ class CDRInformationItem {
          * @public
          * @readonly
          */
-        readonly operatorDevice: OPTIONAL<DeviceID>
+        readonly operatorDevice?: OPTIONAL<DeviceID>
     ) {}
 
     /**

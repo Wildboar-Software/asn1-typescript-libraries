@@ -39,7 +39,7 @@ class EventReportData {
          * @public
          * @readonly
          */
-        readonly ccbs_SubscriberStatus: OPTIONAL<CCBS_SubscriberStatus>,
+        readonly ccbs_SubscriberStatus?: OPTIONAL<CCBS_SubscriberStatus>,
         /**
          * @summary `extensionContainer`.
          * @description
@@ -49,7 +49,7 @@ class EventReportData {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

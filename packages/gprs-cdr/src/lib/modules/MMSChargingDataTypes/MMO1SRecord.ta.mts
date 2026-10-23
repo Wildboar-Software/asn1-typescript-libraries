@@ -759,13 +759,13 @@ class MMO1SRecord {
         readReplyRequested: OPTIONAL<BOOLEAN>,
         statusText: OCTET_STRING,
         recordTimeStamp: OCTET_STRING,
-        localSequenceNumber: OPTIONAL<INTEGER>,
-        recordExtensions: OPTIONAL<ManagementExtension[]>,
-        mMBoxstorageInformation: OPTIONAL<MMBoxStorageInformation>,
-        mscfInformation: OPTIONAL<MSCFInformation>,
-        sGSNPLMNIdentifier: OPTIONAL<OCTET_STRING>,
-        rATType: OPTIONAL<INTEGER>,
-        mSTimeZone: OPTIONAL<OCTET_STRING>
+        localSequenceNumber?: OPTIONAL<INTEGER>,
+        recordExtensions?: OPTIONAL<ManagementExtension[]>,
+        mMBoxstorageInformation?: OPTIONAL<MMBoxStorageInformation>,
+        mscfInformation?: OPTIONAL<MSCFInformation>,
+        sGSNPLMNIdentifier?: OPTIONAL<OCTET_STRING>,
+        rATType?: OPTIONAL<INTEGER>,
+        mSTimeZone?: OPTIONAL<OCTET_STRING>
     ) {
         this.recordType = recordType;
         this.originatorMmsRSAddress = originatorMmsRSAddress;

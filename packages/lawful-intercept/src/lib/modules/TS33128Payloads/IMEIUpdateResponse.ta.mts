@@ -49,8 +49,8 @@ class IMEIUpdateResponse {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        previousIMEI: OPTIONAL<IMEI>,
-        previousIMEISV: OPTIONAL<IMEISV>,
+        previousIMEI?: OPTIONAL<IMEI>,
+        previousIMEISV?: OPTIONAL<IMEISV>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.previousIMEI = previousIMEI;

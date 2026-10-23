@@ -70,8 +70,8 @@ class DiagFormat_badSpec {
 
     constructor (
         spec: Specification,
-        db: OPTIONAL<DatabaseName>,
-        goodOnes: OPTIONAL<Specification[]>
+        db?: OPTIONAL<DatabaseName>,
+        goodOnes?: OPTIONAL<Specification[]>
     ) {
         this.spec = spec;
         this.db = db;

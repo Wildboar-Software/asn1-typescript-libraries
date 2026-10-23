@@ -33,7 +33,7 @@ import { type MessageID, _decode_MessageID, _encode_MessageID } from "./MessageI
 export class InbandInfo {
     constructor (
         readonly messageID: MessageID,
-        readonly numberOfRepetitions: OPTIONAL<INTEGER>,
+        readonly numberOfRepetitions?: OPTIONAL<INTEGER>,
         /**
          * @summary `duration`.
          * @description
@@ -44,7 +44,7 @@ export class InbandInfo {
          * @public
          * @readonly
          */
-        readonly duration: OPTIONAL<INTEGER>,
+        readonly duration?: OPTIONAL<INTEGER>,
         /**
          * @summary `interval`.
          * @description
@@ -55,7 +55,7 @@ export class InbandInfo {
          * @public
          * @readonly
          */
-        readonly interval: OPTIONAL<INTEGER>,
+        readonly interval?: OPTIONAL<INTEGER>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {
         if (numberOfRepetitions !== undefined && (typeof numberOfRepetitions === "bigint" ? (numberOfRepetitions < 1n || numberOfRepetitions > 127n) : (numberOfRepetitions < 1 || numberOfRepetitions > 127))) {

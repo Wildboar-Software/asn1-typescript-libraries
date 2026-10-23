@@ -42,7 +42,7 @@ class Privileges {
          * @public
          * @readonly
          */
-        readonly operation_pac: OPTIONAL<PrivilegeAttributeCertificate>,
+        readonly operation_pac?: OPTIONAL<PrivilegeAttributeCertificate>,
         /**
          * @summary `proxy_pac`.
          * @description
@@ -51,7 +51,7 @@ class Privileges {
          * @public
          * @readonly
          */
-        readonly proxy_pac: OPTIONAL<PrivilegeAttributeCertificate>
+        readonly proxy_pac?: OPTIONAL<PrivilegeAttributeCertificate>
     ) {}
 
     /**

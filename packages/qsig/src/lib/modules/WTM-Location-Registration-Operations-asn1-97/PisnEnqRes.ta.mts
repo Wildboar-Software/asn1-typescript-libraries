@@ -58,7 +58,7 @@ class PisnEnqRes {
 
     constructor (
         wtmUserId: WtmUserId,
-        resExtension: OPTIONAL<LrExtension>
+        resExtension?: OPTIONAL<LrExtension>
     ) {
         this.wtmUserId = wtmUserId;
         this.resExtension = resExtension;

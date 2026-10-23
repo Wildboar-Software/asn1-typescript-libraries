@@ -50,7 +50,7 @@ class ParkCallResult {
          * @public
          * @readonly
          */
-        readonly parkedTo: OPTIONAL<ConnectionID>,
+        readonly parkedTo?: OPTIONAL<ConnectionID>,
         /**
          * @summary `callLinkageData`.
          * @description
@@ -60,7 +60,7 @@ class ParkCallResult {
          * @public
          * @readonly
          */
-        readonly callLinkageData: OPTIONAL<CallLinkageData>,
+        readonly callLinkageData?: OPTIONAL<CallLinkageData>,
         /**
          * @summary `extensions`.
          * @description
@@ -71,7 +71,7 @@ class ParkCallResult {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

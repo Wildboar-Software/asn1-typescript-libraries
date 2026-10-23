@@ -87,7 +87,7 @@ class SendAuthenticationInfoArg {
          * @public
          * @readonly
          */
-        readonly segmentationProhibited: OPTIONAL<NULL>,
+        readonly segmentationProhibited?: OPTIONAL<NULL>,
         /**
          * @summary `immediateResponsePreferred`.
          * @description
@@ -102,7 +102,7 @@ class SendAuthenticationInfoArg {
          * @public
          * @readonly
          */
-        readonly immediateResponsePreferred: OPTIONAL<NULL>,
+        readonly immediateResponsePreferred?: OPTIONAL<NULL>,
         /**
          * @summary `re_synchronisationInfo`.
          * @description
@@ -115,13 +115,13 @@ class SendAuthenticationInfoArg {
          * @public
          * @readonly
          */
-        readonly re_synchronisationInfo: OPTIONAL<Re_synchronisationInfo>,
+        readonly re_synchronisationInfo?: OPTIONAL<Re_synchronisationInfo>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `requestingNodeType`.
          * @description
@@ -135,7 +135,7 @@ class SendAuthenticationInfoArg {
          * @public
          * @readonly
          */
-        readonly requestingNodeType: OPTIONAL<RequestingNodeType>,
+        readonly requestingNodeType?: OPTIONAL<RequestingNodeType>,
         /**
          * @summary `requestingPLMN_Id`.
          * @description
@@ -148,7 +148,7 @@ class SendAuthenticationInfoArg {
          * @public
          * @readonly
          */
-        readonly requestingPLMN_Id: OPTIONAL<PLMN_Id>,
+        readonly requestingPLMN_Id?: OPTIONAL<PLMN_Id>,
         /**
          * @summary `numberOfRequestedAdditional_Vectors`.
          * @description
@@ -162,7 +162,7 @@ class SendAuthenticationInfoArg {
          * @public
          * @readonly
          */
-        readonly numberOfRequestedAdditional_Vectors: OPTIONAL<NumberOfRequestedVectors>,
+        readonly numberOfRequestedAdditional_Vectors?: OPTIONAL<NumberOfRequestedVectors>,
         /**
          * @summary `additionalVectorsAreForEPS`.
          * @description
@@ -175,7 +175,7 @@ class SendAuthenticationInfoArg {
          * @public
          * @readonly
          */
-        readonly additionalVectorsAreForEPS: OPTIONAL<NULL>,
+        readonly additionalVectorsAreForEPS?: OPTIONAL<NULL>,
         /**
          * @summary `ueUsageTypeRequestIndication`.
          * @description
@@ -188,7 +188,7 @@ class SendAuthenticationInfoArg {
          * @public
          * @readonly
          */
-        readonly ueUsageTypeRequestIndication: OPTIONAL<NULL>,
+        readonly ueUsageTypeRequestIndication?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @public

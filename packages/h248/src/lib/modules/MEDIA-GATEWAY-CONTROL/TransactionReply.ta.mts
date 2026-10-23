@@ -92,7 +92,7 @@ class TransactionReply {
          * @public
          * @readonly
          */
-        readonly segmentNumber: OPTIONAL<SegmentNumber>,
+        readonly segmentNumber?: OPTIONAL<SegmentNumber>,
         /**
          * @summary `segmentationComplete`.
          * @description
@@ -103,7 +103,7 @@ class TransactionReply {
          * @public
          * @readonly
          */
-        readonly segmentationComplete: OPTIONAL<NULL>,
+        readonly segmentationComplete?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @description

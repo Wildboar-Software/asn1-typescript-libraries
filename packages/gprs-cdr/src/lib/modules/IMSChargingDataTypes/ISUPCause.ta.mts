@@ -76,9 +76,9 @@ class ISUPCause {
     readonly iSUPCauseDiagnostics: OPTIONAL<OCTET_STRING>;
 
     constructor (
-        iSUPCauseLocation: OPTIONAL<INTEGER>,
-        iSUPCauseValue: OPTIONAL<INTEGER>,
-        iSUPCauseDiagnostics: OPTIONAL<OCTET_STRING>
+        iSUPCauseLocation?: OPTIONAL<INTEGER>,
+        iSUPCauseValue?: OPTIONAL<INTEGER>,
+        iSUPCauseDiagnostics?: OPTIONAL<OCTET_STRING>
     ) {
         this.iSUPCauseLocation = iSUPCauseLocation;
         this.iSUPCauseValue = iSUPCauseValue;

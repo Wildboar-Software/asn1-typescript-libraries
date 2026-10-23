@@ -274,9 +274,9 @@ class SMSChargingInformation {
         submissionTime: OPTIONAL<OCTET_STRING>,
         sMPriority: OPTIONAL<SMSChargingInformation_sMPriority>,
         messageReference: OCTET_STRING,
-        messageSize: OPTIONAL<INTEGER>,
-        messageClass: OPTIONAL<SMSChargingInformation_messageClass>,
-        sMdeliveryReportRequested: OPTIONAL<SMdeliveryReportRequested>
+        messageSize?: OPTIONAL<INTEGER>,
+        messageClass?: OPTIONAL<SMSChargingInformation_messageClass>,
+        sMdeliveryReportRequested?: OPTIONAL<SMdeliveryReportRequested>
     ) {
         this.sMSNodeAddress = sMSNodeAddress;
         this.originatorInfo = originatorInfo;

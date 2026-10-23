@@ -59,7 +59,7 @@ class VoiceGroupCallData {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `additionalSubscriptions`.
          * @description
@@ -71,7 +71,7 @@ class VoiceGroupCallData {
          * @public
          * @readonly
          */
-        readonly additionalSubscriptions: OPTIONAL<AdditionalSubscriptions>,
+        readonly additionalSubscriptions?: OPTIONAL<AdditionalSubscriptions>,
         /**
          * @summary `additionalInfo`.
          * @description
@@ -83,7 +83,7 @@ class VoiceGroupCallData {
          * @public
          * @readonly
          */
-        readonly additionalInfo: OPTIONAL<AdditionalInfo>,
+        readonly additionalInfo?: OPTIONAL<AdditionalInfo>,
         /**
          * @summary `longGroupId`.
          * @description
@@ -97,7 +97,7 @@ class VoiceGroupCallData {
          * @public
          * @readonly
          */
-        readonly longGroupId: OPTIONAL<Long_GroupId>,
+        readonly longGroupId?: OPTIONAL<Long_GroupId>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -97,7 +97,7 @@ class GetCSTAFeatureResult {
          * @public
          * @readonly
          */
-        readonly supportedEvents: OPTIONAL<GetCSTAFeatureResult_supportedEvents>,
+        readonly supportedEvents?: OPTIONAL<GetCSTAFeatureResult_supportedEvents>,
         /**
          * @summary `extensions`.
          * @description
@@ -106,7 +106,7 @@ class GetCSTAFeatureResult {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

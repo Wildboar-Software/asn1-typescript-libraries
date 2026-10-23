@@ -101,8 +101,8 @@ class InitiateCallAttemptArg {
         iSDNAccessRelatedInformation: OPTIONAL<ISDNAccessRelatedInformation>,
         travellingClassMark: OPTIONAL<TravellingClassMark>,
         extensions: ExtensionField[],
-        serviceInteractionIndicators: OPTIONAL<ServiceInteractionIndicators>,
-        callingPartyNumber: OPTIONAL<CallingPartyNumber>,
+        serviceInteractionIndicators?: OPTIONAL<ServiceInteractionIndicators>,
+        callingPartyNumber?: OPTIONAL<CallingPartyNumber>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.destinationRoutingAddress = destinationRoutingAddress;

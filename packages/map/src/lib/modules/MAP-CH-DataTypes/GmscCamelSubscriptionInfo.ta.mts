@@ -47,7 +47,7 @@ class GmscCamelSubscriptionInfo {
          * @public
          * @readonly
          */
-        readonly t_CSI: OPTIONAL<T_CSI>,
+        readonly t_CSI?: OPTIONAL<T_CSI>,
         /**
          * @summary `o_CSI`.
          * @description
@@ -57,7 +57,7 @@ class GmscCamelSubscriptionInfo {
          * @public
          * @readonly
          */
-        readonly o_CSI: OPTIONAL<O_CSI>,
+        readonly o_CSI?: OPTIONAL<O_CSI>,
         /**
          * @summary `extensionContainer`.
          * @description
@@ -67,7 +67,7 @@ class GmscCamelSubscriptionInfo {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `o_BcsmCamelTDP_CriteriaList`.
          * @description
@@ -77,7 +77,7 @@ class GmscCamelSubscriptionInfo {
          * @public
          * @readonly
          */
-        readonly o_BcsmCamelTDP_CriteriaList: OPTIONAL<O_BcsmCamelTDPCriteriaList>,
+        readonly o_BcsmCamelTDP_CriteriaList?: OPTIONAL<O_BcsmCamelTDPCriteriaList>,
         /**
          * @summary `t_BCSM_CAMEL_TDP_CriteriaList`.
          * @description
@@ -87,7 +87,7 @@ class GmscCamelSubscriptionInfo {
          * @public
          * @readonly
          */
-        readonly t_BCSM_CAMEL_TDP_CriteriaList: OPTIONAL<T_BCSM_CAMEL_TDP_CriteriaList>,
+        readonly t_BCSM_CAMEL_TDP_CriteriaList?: OPTIONAL<T_BCSM_CAMEL_TDP_CriteriaList>,
         /**
          * @summary `d_csi`.
          * @description
@@ -97,7 +97,7 @@ class GmscCamelSubscriptionInfo {
          * @public
          * @readonly
          */
-        readonly d_csi: OPTIONAL<D_CSI>,
+        readonly d_csi?: OPTIONAL<D_CSI>,
         /**
          * @summary Extensions that are not recognized.
          * @public

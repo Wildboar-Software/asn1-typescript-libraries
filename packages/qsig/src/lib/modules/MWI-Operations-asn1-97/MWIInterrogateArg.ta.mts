@@ -80,8 +80,8 @@ class MWIInterrogateArg {
     constructor (
         servedUserNr: PartyNumber,
         basicService: BasicService,
-        msgCentreId: OPTIONAL<MsgCentreId>,
-        argumentExt: OPTIONAL<MWIInterrogateArg_argumentExt>
+        msgCentreId?: OPTIONAL<MsgCentreId>,
+        argumentExt?: OPTIONAL<MWIInterrogateArg_argumentExt>
     ) {
         this.servedUserNr = servedUserNr;
         this.basicService = basicService;

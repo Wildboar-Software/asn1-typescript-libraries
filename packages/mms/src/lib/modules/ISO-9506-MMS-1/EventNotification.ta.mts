@@ -149,7 +149,7 @@ class EventNotification {
          * @public
          * @readonly
          */
-        readonly notificationLost: OPTIONAL<BOOLEAN>,
+        readonly notificationLost?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `alarmAcknowledgmentRule`.
          * @description
@@ -168,7 +168,7 @@ class EventNotification {
          * @public
          * @readonly
          */
-        readonly alarmAcknowledgmentRule: OPTIONAL<AlarmAckRule>,
+        readonly alarmAcknowledgmentRule?: OPTIONAL<AlarmAckRule>,
         /**
          * @summary `actionResult`.
          * @description
@@ -183,7 +183,7 @@ class EventNotification {
          * @public
          * @readonly
          */
-        readonly actionResult: OPTIONAL<EventNotification_actionResult>
+        readonly actionResult?: OPTIONAL<EventNotification_actionResult>
     ) {}
 
     /**

@@ -65,7 +65,7 @@ class TagPath_Item {
     constructor (
         tagType: OPTIONAL<INTEGER>,
         tagValue: StringOrNumeric,
-        tagOccurrence: OPTIONAL<INTEGER>
+        tagOccurrence?: OPTIONAL<INTEGER>
     ) {
         this.tagType = tagType;
         this.tagValue = tagValue;

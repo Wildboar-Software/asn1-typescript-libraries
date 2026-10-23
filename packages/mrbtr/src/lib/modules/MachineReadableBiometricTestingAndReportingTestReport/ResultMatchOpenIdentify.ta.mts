@@ -85,7 +85,7 @@ class ResultMatchOpenIdentify {
          * @public
          * @readonly
          */
-        readonly infoDETCurveFNIRFPIR: OPTIONAL<InfoDETCurve>,
+        readonly infoDETCurveFNIRFPIR?: OPTIONAL<InfoDETCurve>,
         /**
          * @summary `durationOpenIdentify`.
          * @description
@@ -96,7 +96,7 @@ class ResultMatchOpenIdentify {
          * @public
          * @readonly
          */
-        readonly durationOpenIdentify: OPTIONAL<StatisticInformationSet>
+        readonly durationOpenIdentify?: OPTIONAL<StatisticInformationSet>
     ) {}
 
     /**

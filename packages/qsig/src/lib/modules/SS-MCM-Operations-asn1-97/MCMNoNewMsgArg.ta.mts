@@ -85,8 +85,8 @@ class MCMNoNewMsgArg {
     constructor (
         servedUserNr: PartyNumber,
         specificMessageType: MessageType,
-        msgCentreId: OPTIONAL<MsgCentreId>,
-        argumentExt: OPTIONAL<MCMNoNewMsgArg_argumentExt>
+        msgCentreId?: OPTIONAL<MsgCentreId>,
+        argumentExt?: OPTIONAL<MCMNoNewMsgArg_argumentExt>
     ) {
         this.servedUserNr = servedUserNr;
         this.specificMessageType = specificMessageType;

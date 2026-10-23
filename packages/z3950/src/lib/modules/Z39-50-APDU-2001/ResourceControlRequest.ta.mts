@@ -143,8 +143,8 @@ class ResourceControlRequest {
         resourceReport: OPTIONAL<ResourceReport>,
         partialResultsAvailable: OPTIONAL<ResourceControlRequest_partialResultsAvailable>,
         responseRequired: BOOLEAN,
-        triggeredRequestFlag: OPTIONAL<BOOLEAN>,
-        otherInfo: OPTIONAL<OtherInformation>
+        triggeredRequestFlag?: OPTIONAL<BOOLEAN>,
+        otherInfo?: OPTIONAL<OtherInformation>
     ) {
         this.referenceId = referenceId;
         this.suspendedFlag = suspendedFlag;

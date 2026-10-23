@@ -64,7 +64,7 @@ class ModificationRequestFor_CF_Info {
          * @public
          * @readonly
          */
-        readonly basicService: OPTIONAL<Ext_BasicServiceCode>,
+        readonly basicService?: OPTIONAL<Ext_BasicServiceCode>,
         /**
          * @summary `ss_Status`.
          * @description
@@ -75,7 +75,7 @@ class ModificationRequestFor_CF_Info {
          * @public
          * @readonly
          */
-        readonly ss_Status: OPTIONAL<Ext_SS_Status>,
+        readonly ss_Status?: OPTIONAL<Ext_SS_Status>,
         /**
          * @summary `forwardedToNumber`.
          * @description
@@ -86,7 +86,7 @@ class ModificationRequestFor_CF_Info {
          * @public
          * @readonly
          */
-        readonly forwardedToNumber: OPTIONAL<AddressString>,
+        readonly forwardedToNumber?: OPTIONAL<AddressString>,
         /**
          * @summary `forwardedToSubaddress`.
          * @description
@@ -97,7 +97,7 @@ class ModificationRequestFor_CF_Info {
          * @public
          * @readonly
          */
-        readonly forwardedToSubaddress: OPTIONAL<ISDN_SubaddressString>,
+        readonly forwardedToSubaddress?: OPTIONAL<ISDN_SubaddressString>,
         /**
          * @summary `noReplyConditionTime`.
          * @description
@@ -108,7 +108,7 @@ class ModificationRequestFor_CF_Info {
          * @public
          * @readonly
          */
-        readonly noReplyConditionTime: OPTIONAL<Ext_NoRepCondTime>,
+        readonly noReplyConditionTime?: OPTIONAL<Ext_NoRepCondTime>,
         /**
          * @summary `modifyNotificationToCSE`.
          * @description
@@ -119,13 +119,13 @@ class ModificationRequestFor_CF_Info {
          * @public
          * @readonly
          */
-        readonly modifyNotificationToCSE: OPTIONAL<ModificationInstruction>,
+        readonly modifyNotificationToCSE?: OPTIONAL<ModificationInstruction>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -74,7 +74,7 @@ class AttributeDescription {
         name: OPTIONAL<InternationalString>,
         description: OPTIONAL<HumanString>,
         attributeValue: StringOrNumeric,
-        equivalentAttributes: OPTIONAL<StringOrNumeric[]>
+        equivalentAttributes?: OPTIONAL<StringOrNumeric[]>
     ) {
         this.name = name;
         this.description = description;

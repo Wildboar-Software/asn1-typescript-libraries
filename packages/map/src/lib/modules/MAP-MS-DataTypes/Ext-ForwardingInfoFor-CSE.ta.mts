@@ -60,13 +60,13 @@ class Ext_ForwardingInfoFor_CSE {
          * @public
          * @readonly
          */
-        readonly notificationToCSE: OPTIONAL<NULL>,
+        readonly notificationToCSE?: OPTIONAL<NULL>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

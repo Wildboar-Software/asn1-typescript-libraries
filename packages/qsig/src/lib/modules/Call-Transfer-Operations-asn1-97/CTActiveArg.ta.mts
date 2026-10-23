@@ -90,9 +90,9 @@ class CTActiveArg {
 
     constructor (
         connectedAddress: PresentedAddressScreened,
-        basicCallInfoElements: OPTIONAL<PSS1InformationElement>,
-        connectedName: OPTIONAL<Name>,
-        argumentExtension: OPTIONAL<CTActiveArg_argumentExtension>
+        basicCallInfoElements?: OPTIONAL<PSS1InformationElement>,
+        connectedName?: OPTIONAL<Name>,
+        argumentExtension?: OPTIONAL<CTActiveArg_argumentExtension>
     ) {
         this.connectedAddress = connectedAddress;
         this.basicCallInfoElements = basicCallInfoElements;

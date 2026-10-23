@@ -61,7 +61,7 @@ class GetEventEnrollmentAttributes_Request {
          * @public
          * @readonly
          */
-        readonly scopeOfRequest: OPTIONAL<GetEventEnrollmentAttributes_Request_scopeOfRequest>,
+        readonly scopeOfRequest?: OPTIONAL<GetEventEnrollmentAttributes_Request_scopeOfRequest>,
         /**
          * @summary `eventEnrollmentNames`.
          * @description
@@ -73,7 +73,7 @@ class GetEventEnrollmentAttributes_Request {
          * @public
          * @readonly
          */
-        readonly eventEnrollmentNames: OPTIONAL<ObjectName[]>,
+        readonly eventEnrollmentNames?: OPTIONAL<ObjectName[]>,
         /**
          * @summary `clientApplication`.
          * @description
@@ -86,7 +86,7 @@ class GetEventEnrollmentAttributes_Request {
          * @public
          * @readonly
          */
-        readonly clientApplication: OPTIONAL<Nullable<ApplicationReference>>,
+        readonly clientApplication?: OPTIONAL<Nullable<ApplicationReference>>,
         /**
          * @summary `eventConditionName`.
          * @description
@@ -98,7 +98,7 @@ class GetEventEnrollmentAttributes_Request {
          * @public
          * @readonly
          */
-        readonly eventConditionName: OPTIONAL<ObjectName>,
+        readonly eventConditionName?: OPTIONAL<ObjectName>,
         /**
          * @summary `eventActionName`.
          * @description
@@ -110,7 +110,7 @@ class GetEventEnrollmentAttributes_Request {
          * @public
          * @readonly
          */
-        readonly eventActionName: OPTIONAL<ObjectName>,
+        readonly eventActionName?: OPTIONAL<ObjectName>,
         /**
          * @summary `continueAfter`.
          * @description
@@ -122,7 +122,7 @@ class GetEventEnrollmentAttributes_Request {
          * @public
          * @readonly
          */
-        readonly continueAfter: OPTIONAL<ObjectName>
+        readonly continueAfter?: OPTIONAL<ObjectName>
     ) {}
 
     /**

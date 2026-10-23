@@ -103,10 +103,10 @@ class SmSubmitParameter {
 
     constructor (
         protocolIdentifier: ProtocolIdentifier,
-        validityPeriod: OPTIONAL<ValidityPeriod>,
-        statusReportRequest: OPTIONAL<BOOLEAN>,
-        replyPath: OPTIONAL<BOOLEAN>,
-        rejectDuplicates: OPTIONAL<BOOLEAN>
+        validityPeriod?: OPTIONAL<ValidityPeriod>,
+        statusReportRequest?: OPTIONAL<BOOLEAN>,
+        replyPath?: OPTIONAL<BOOLEAN>,
+        rejectDuplicates?: OPTIONAL<BOOLEAN>
     ) {
         this.protocolIdentifier = protocolIdentifier;
         this.validityPeriod = validityPeriod;

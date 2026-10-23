@@ -89,7 +89,7 @@ class RPError {
          * @public
          * @readonly
          */
-        readonly alerting_MS_ISDN: OPTIONAL<SMS_Address>,
+        readonly alerting_MS_ISDN?: OPTIONAL<SMS_Address>,
         /**
          * @summary `sm_diag_info`.
          * @description
@@ -100,7 +100,7 @@ class RPError {
          * @public
          * @readonly
          */
-        readonly sm_diag_info: OPTIONAL<RP_UD>,
+        readonly sm_diag_info?: OPTIONAL<RP_UD>,
         /**
          * @summary Extensions that are not recognized.
          * @description

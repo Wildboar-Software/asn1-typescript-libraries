@@ -104,8 +104,8 @@ class IRIPayload {
     constructor (
         iRIPayloadOID: RELATIVE_OID,
         event: IRIEvent,
-        targetIdentifiers: OPTIONAL<IRITargetIdentifier[]>,
-        mediatedFromIndicator: OPTIONAL<MediatedFromIndicator>,
+        targetIdentifiers?: OPTIONAL<IRITargetIdentifier[]>,
+        mediatedFromIndicator?: OPTIONAL<MediatedFromIndicator>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.iRIPayloadOID = iRIPayloadOID;

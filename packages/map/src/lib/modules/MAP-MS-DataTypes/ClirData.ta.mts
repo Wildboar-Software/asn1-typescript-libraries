@@ -49,7 +49,7 @@ class ClirData {
          * @public
          * @readonly
          */
-        readonly cliRestrictionOption: OPTIONAL<CliRestrictionOption>,
+        readonly cliRestrictionOption?: OPTIONAL<CliRestrictionOption>,
         /**
          * @summary `notificationToCSE`.
          * @description
@@ -59,7 +59,7 @@ class ClirData {
          * @public
          * @readonly
          */
-        readonly notificationToCSE: OPTIONAL<NULL>,
+        readonly notificationToCSE?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @public

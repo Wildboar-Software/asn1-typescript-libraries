@@ -72,7 +72,7 @@ class CurrLocation {
     constructor (
         visitPINX: PartyNumber,
         wtmIdentity: WtmIdentity,
-        argExtension: OPTIONAL<WtmiExtension>
+        argExtension?: OPTIONAL<WtmiExtension>
     ) {
         this.visitPINX = visitPINX;
         this.wtmIdentity = wtmIdentity;

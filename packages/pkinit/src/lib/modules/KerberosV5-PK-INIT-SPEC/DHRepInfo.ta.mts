@@ -106,7 +106,7 @@ class DHRepInfo {
          * @public
          * @readonly
          */
-        readonly serverDHNonce: OPTIONAL<DHNonce>,
+        readonly serverDHNonce?: OPTIONAL<DHNonce>,
         /**
          * Key-derivation function the KDC selected. RFC 4556 does
          * not define this field and its reply-key calculation does
@@ -115,7 +115,7 @@ class DHRepInfo {
          * @public
          * @readonly
          */
-        readonly kdf: OPTIONAL<KDFAlgorithmId>,
+        readonly kdf?: OPTIONAL<KDFAlgorithmId>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -62,8 +62,8 @@ class ApplyChargingArg {
 
     constructor (
         aChBillingChargingCharacteristics: AChBillingChargingCharacteristics,
-        partyToCharge: OPTIONAL<LegID>,
-        extensions: OPTIONAL<ExtensionField[]>,
+        partyToCharge?: OPTIONAL<LegID>,
+        extensions?: OPTIONAL<ExtensionField[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.aChBillingChargingCharacteristics = aChBillingChargingCharacteristics;

@@ -168,16 +168,16 @@ class TCPInformation {
     readonly options: OPTIONAL<OCTET_STRING>;
 
     constructor (
-        sourcePort: OPTIONAL<OCTET_STRING>,
-        destinationPort: OPTIONAL<OCTET_STRING>,
-        sequenceNumber: OPTIONAL<OCTET_STRING>,
-        ackNumber: OPTIONAL<OCTET_STRING>,
-        dataOffset: OPTIONAL<BIT_STRING>,
-        controlBits: OPTIONAL<BIT_STRING>,
-        windowSize: OPTIONAL<OCTET_STRING>,
-        checkSum: OPTIONAL<OCTET_STRING>,
-        urgentPointer: OPTIONAL<OCTET_STRING>,
-        options: OPTIONAL<OCTET_STRING>
+        sourcePort?: OPTIONAL<OCTET_STRING>,
+        destinationPort?: OPTIONAL<OCTET_STRING>,
+        sequenceNumber?: OPTIONAL<OCTET_STRING>,
+        ackNumber?: OPTIONAL<OCTET_STRING>,
+        dataOffset?: OPTIONAL<BIT_STRING>,
+        controlBits?: OPTIONAL<BIT_STRING>,
+        windowSize?: OPTIONAL<OCTET_STRING>,
+        checkSum?: OPTIONAL<OCTET_STRING>,
+        urgentPointer?: OPTIONAL<OCTET_STRING>,
+        options?: OPTIONAL<OCTET_STRING>
     ) {
         this.sourcePort = sourcePort;
         this.destinationPort = destinationPort;

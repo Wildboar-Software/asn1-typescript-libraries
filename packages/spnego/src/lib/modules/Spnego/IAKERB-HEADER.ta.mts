@@ -48,13 +48,13 @@ class IAKERB_HEADER {
          * @public
          * @readonly
          */
-        readonly cookie: OPTIONAL<OCTET_STRING>,
+        readonly cookie?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `header_flags`.
          * @public
          * @readonly
          */
-        readonly header_flags: OPTIONAL<HeaderFlags>,
+        readonly header_flags?: OPTIONAL<HeaderFlags>,
         /**
          * @summary Extensions that are not recognized.
          * @public

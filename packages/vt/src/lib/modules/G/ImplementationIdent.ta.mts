@@ -45,7 +45,7 @@ class ImplementationIdent {
          * @public
          * @readonly
          */
-        readonly implementationIdentifier: OPTIONAL<OBJECT_IDENTIFIER>,
+        readonly implementationIdentifier?: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `implementationName`.
          * @description
@@ -53,7 +53,7 @@ class ImplementationIdent {
          * @public
          * @readonly
          */
-        readonly implementationName: OPTIONAL<PrintableString>,
+        readonly implementationName?: OPTIONAL<PrintableString>,
         /**
          * @summary `implementationVersion`.
          * @description
@@ -61,7 +61,7 @@ class ImplementationIdent {
          * @public
          * @readonly
          */
-        readonly implementationVersion: OPTIONAL<PrintableString>
+        readonly implementationVersion?: OPTIONAL<PrintableString>
     ) {}
 
     /**

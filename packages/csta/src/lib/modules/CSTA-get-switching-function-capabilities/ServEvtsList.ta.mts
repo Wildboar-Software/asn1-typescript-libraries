@@ -114,7 +114,7 @@ class ServEvtsList {
          * @public
          * @readonly
          */
-        readonly capExchangeServList: OPTIONAL<CapExchangeServList>,
+        readonly capExchangeServList?: OPTIONAL<CapExchangeServList>,
         /**
          * @summary `systemServList`.
          * @description
@@ -123,7 +123,7 @@ class ServEvtsList {
          * @public
          * @readonly
          */
-        readonly systemServList: OPTIONAL<SystemStatusServList>,
+        readonly systemServList?: OPTIONAL<SystemStatusServList>,
         /**
          * @summary `monitoringServList`.
          * @description
@@ -132,7 +132,7 @@ class ServEvtsList {
          * @public
          * @readonly
          */
-        readonly monitoringServList: OPTIONAL<MonitoringServList>,
+        readonly monitoringServList?: OPTIONAL<MonitoringServList>,
         /**
          * @summary `snapshotServList`.
          * @description
@@ -141,7 +141,7 @@ class ServEvtsList {
          * @public
          * @readonly
          */
-        readonly snapshotServList: OPTIONAL<SnapshotServList>,
+        readonly snapshotServList?: OPTIONAL<SnapshotServList>,
         /**
          * @summary `callControlServList`.
          * @description
@@ -150,7 +150,7 @@ class ServEvtsList {
          * @public
          * @readonly
          */
-        readonly callControlServList: OPTIONAL<CallControlServList>,
+        readonly callControlServList?: OPTIONAL<CallControlServList>,
         /**
          * @summary `callControlEvtsList`.
          * @description
@@ -159,7 +159,7 @@ class ServEvtsList {
          * @public
          * @readonly
          */
-        readonly callControlEvtsList: OPTIONAL<CallControlEvtsList>,
+        readonly callControlEvtsList?: OPTIONAL<CallControlEvtsList>,
         /**
          * @summary `callAssociatedServList`.
          * @description
@@ -168,7 +168,7 @@ class ServEvtsList {
          * @public
          * @readonly
          */
-        readonly callAssociatedServList: OPTIONAL<CallAssociatedServList>,
+        readonly callAssociatedServList?: OPTIONAL<CallAssociatedServList>,
         /**
          * @summary `callAssociatedEvtsList`.
          * @description
@@ -177,7 +177,7 @@ class ServEvtsList {
          * @public
          * @readonly
          */
-        readonly callAssociatedEvtsList: OPTIONAL<CallAssociatedEvtsList>,
+        readonly callAssociatedEvtsList?: OPTIONAL<CallAssociatedEvtsList>,
         /**
          * @summary `mediaServList`.
          * @description
@@ -186,7 +186,7 @@ class ServEvtsList {
          * @public
          * @readonly
          */
-        readonly mediaServList: OPTIONAL<MediaServList>,
+        readonly mediaServList?: OPTIONAL<MediaServList>,
         /**
          * @summary `mediaEvtsList`.
          * @description
@@ -195,7 +195,7 @@ class ServEvtsList {
          * @public
          * @readonly
          */
-        readonly mediaEvtsList: OPTIONAL<MediaEvtsList>,
+        readonly mediaEvtsList?: OPTIONAL<MediaEvtsList>,
         /**
          * @summary `routeingServList`.
          * @description
@@ -204,7 +204,7 @@ class ServEvtsList {
          * @public
          * @readonly
          */
-        readonly routeingServList: OPTIONAL<RouteingServList>,
+        readonly routeingServList?: OPTIONAL<RouteingServList>,
         /**
          * @summary `physDevServList`.
          * @description
@@ -213,7 +213,7 @@ class ServEvtsList {
          * @public
          * @readonly
          */
-        readonly physDevServList: OPTIONAL<PhysDevServList>,
+        readonly physDevServList?: OPTIONAL<PhysDevServList>,
         /**
          * @summary `physDevEvtsList`.
          * @description
@@ -222,7 +222,7 @@ class ServEvtsList {
          * @public
          * @readonly
          */
-        readonly physDevEvtsList: OPTIONAL<PhysDevEvtsList>,
+        readonly physDevEvtsList?: OPTIONAL<PhysDevEvtsList>,
         /**
          * @summary `logicalServList`.
          * @description
@@ -231,7 +231,7 @@ class ServEvtsList {
          * @public
          * @readonly
          */
-        readonly logicalServList: OPTIONAL<LogicalServList>,
+        readonly logicalServList?: OPTIONAL<LogicalServList>,
         /**
          * @summary `logicalEvtsList`.
          * @description
@@ -240,7 +240,7 @@ class ServEvtsList {
          * @public
          * @readonly
          */
-        readonly logicalEvtsList: OPTIONAL<LogicalEvtsList>,
+        readonly logicalEvtsList?: OPTIONAL<LogicalEvtsList>,
         /**
          * @summary `deviceMaintEvtsList`.
          * @description
@@ -249,7 +249,7 @@ class ServEvtsList {
          * @public
          * @readonly
          */
-        readonly deviceMaintEvtsList: OPTIONAL<DeviceMaintEvtsList>,
+        readonly deviceMaintEvtsList?: OPTIONAL<DeviceMaintEvtsList>,
         /**
          * @summary `iOServicesServList`.
          * @description
@@ -258,7 +258,7 @@ class ServEvtsList {
          * @public
          * @readonly
          */
-        readonly iOServicesServList: OPTIONAL<IOServicesServList>,
+        readonly iOServicesServList?: OPTIONAL<IOServicesServList>,
         /**
          * @summary `dataCollectionServList`.
          * @description
@@ -267,7 +267,7 @@ class ServEvtsList {
          * @public
          * @readonly
          */
-        readonly dataCollectionServList: OPTIONAL<DataCollectionServList>,
+        readonly dataCollectionServList?: OPTIONAL<DataCollectionServList>,
         /**
          * @summary `voiceUnitServList`.
          * @description
@@ -276,7 +276,7 @@ class ServEvtsList {
          * @public
          * @readonly
          */
-        readonly voiceUnitServList: OPTIONAL<VoiceUnitServList>,
+        readonly voiceUnitServList?: OPTIONAL<VoiceUnitServList>,
         /**
          * @summary `voiceUnitEvtsList`.
          * @description
@@ -285,7 +285,7 @@ class ServEvtsList {
          * @public
          * @readonly
          */
-        readonly voiceUnitEvtsList: OPTIONAL<VoiceUnitEvtsList>,
+        readonly voiceUnitEvtsList?: OPTIONAL<VoiceUnitEvtsList>,
         /**
          * @summary `cdrServList`.
          * @description
@@ -294,7 +294,7 @@ class ServEvtsList {
          * @public
          * @readonly
          */
-        readonly cdrServList: OPTIONAL<CDRServList>,
+        readonly cdrServList?: OPTIONAL<CDRServList>,
         /**
          * @summary `vendorSpecificServList`.
          * @description
@@ -303,7 +303,7 @@ class ServEvtsList {
          * @public
          * @readonly
          */
-        readonly vendorSpecificServList: OPTIONAL<VendorSpecificServList>,
+        readonly vendorSpecificServList?: OPTIONAL<VendorSpecificServList>,
         /**
          * @summary `vendorSpecificEvtsList`.
          * @description
@@ -312,7 +312,7 @@ class ServEvtsList {
          * @public
          * @readonly
          */
-        readonly vendorSpecificEvtsList: OPTIONAL<VendorSpecificEvtsList>,
+        readonly vendorSpecificEvtsList?: OPTIONAL<VendorSpecificEvtsList>,
         /**
          * @summary `statusReportingServList`.
          * @description
@@ -321,7 +321,7 @@ class ServEvtsList {
          * @public
          * @readonly
          */
-        readonly statusReportingServList: OPTIONAL<StatusReportingServList>,
+        readonly statusReportingServList?: OPTIONAL<StatusReportingServList>,
         /**
          * @summary `locationServList`.
          * @description
@@ -330,7 +330,7 @@ class ServEvtsList {
          * @public
          * @readonly
          */
-        readonly locationServList: OPTIONAL<LocationServicesServList>
+        readonly locationServList?: OPTIONAL<LocationServicesServList>
     ) {}
 
     /**

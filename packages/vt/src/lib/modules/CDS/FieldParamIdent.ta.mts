@@ -47,7 +47,7 @@ class FieldParamIdent {
          * @public
          * @readonly
          */
-        readonly capability: OPTIONAL<NULL>,
+        readonly capability?: OPTIONAL<NULL>,
         /**
          * @summary `maxFields`.
          * @description
@@ -56,7 +56,7 @@ class FieldParamIdent {
          * @public
          * @readonly
          */
-        readonly maxFields: OPTIONAL<NULL>,
+        readonly maxFields?: OPTIONAL<NULL>,
         /**
          * @summary `maxFieldElements`.
          * @description
@@ -65,7 +65,7 @@ class FieldParamIdent {
          * @public
          * @readonly
          */
-        readonly maxFieldElements: OPTIONAL<NULL>,
+        readonly maxFieldElements?: OPTIONAL<NULL>,
         /**
          * @summary `accessOutside`.
          * @description
@@ -74,7 +74,7 @@ class FieldParamIdent {
          * @public
          * @readonly
          */
-        readonly accessOutside: OPTIONAL<NULL>
+        readonly accessOutside?: OPTIONAL<NULL>
     ) {}
 
     /**

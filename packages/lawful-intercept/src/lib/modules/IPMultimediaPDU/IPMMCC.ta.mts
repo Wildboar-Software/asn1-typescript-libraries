@@ -176,9 +176,9 @@ class IPMMCC {
     constructor (
         iPMMCCObjId: RELATIVE_OID,
         mMCCContents: OCTET_STRING,
-        frameType: OPTIONAL<FrameType>,
-        streamIdentifier: OPTIONAL<OCTET_STRING>,
-        mMCCprotocol: OPTIONAL<MMCCprotocol>,
+        frameType?: OPTIONAL<FrameType>,
+        streamIdentifier?: OPTIONAL<OCTET_STRING>,
+        mMCCprotocol?: OPTIONAL<MMCCprotocol>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.iPMMCCObjId = iPMMCCObjId;

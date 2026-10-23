@@ -131,7 +131,7 @@ class SubscriberLocationReport_Arg {
          * @public
          * @readonly
          */
-        readonly msisdn: OPTIONAL<ISDN_AddressString>,
+        readonly msisdn?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `imsi`.
          * @description
@@ -141,7 +141,7 @@ class SubscriberLocationReport_Arg {
          * @public
          * @readonly
          */
-        readonly imsi: OPTIONAL<IMSI>,
+        readonly imsi?: OPTIONAL<IMSI>,
         /**
          * @summary `imei`.
          * @description
@@ -151,7 +151,7 @@ class SubscriberLocationReport_Arg {
          * @public
          * @readonly
          */
-        readonly imei: OPTIONAL<IMEI>,
+        readonly imei?: OPTIONAL<IMEI>,
         /**
          * @summary `na_ESRD`.
          * @description
@@ -162,7 +162,7 @@ class SubscriberLocationReport_Arg {
          * @public
          * @readonly
          */
-        readonly na_ESRD: OPTIONAL<ISDN_AddressString>,
+        readonly na_ESRD?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `na_ESRK`.
          * @description
@@ -173,7 +173,7 @@ class SubscriberLocationReport_Arg {
          * @public
          * @readonly
          */
-        readonly na_ESRK: OPTIONAL<ISDN_AddressString>,
+        readonly na_ESRK?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `locationEstimate`.
          * @description
@@ -184,7 +184,7 @@ class SubscriberLocationReport_Arg {
          * @public
          * @readonly
          */
-        readonly locationEstimate: OPTIONAL<Ext_GeographicalInformation>,
+        readonly locationEstimate?: OPTIONAL<Ext_GeographicalInformation>,
         /**
          * @summary `ageOfLocationEstimate`.
          * @description
@@ -194,7 +194,7 @@ class SubscriberLocationReport_Arg {
          * @public
          * @readonly
          */
-        readonly ageOfLocationEstimate: OPTIONAL<AgeOfLocationInformation>,
+        readonly ageOfLocationEstimate?: OPTIONAL<AgeOfLocationInformation>,
         /**
          * @summary `slr_ArgExtensionContainer`.
          * @description
@@ -204,7 +204,7 @@ class SubscriberLocationReport_Arg {
          * @public
          * @readonly
          */
-        readonly slr_ArgExtensionContainer: OPTIONAL<SLR_ArgExtensionContainer>,
+        readonly slr_ArgExtensionContainer?: OPTIONAL<SLR_ArgExtensionContainer>,
         /**
          * @summary `add_LocationEstimate`.
          * @description
@@ -214,7 +214,7 @@ class SubscriberLocationReport_Arg {
          * @public
          * @readonly
          */
-        readonly add_LocationEstimate: OPTIONAL<Add_GeographicalInformation>,
+        readonly add_LocationEstimate?: OPTIONAL<Add_GeographicalInformation>,
         /**
          * @summary `deferredmt_lrData`.
          * @description
@@ -224,7 +224,7 @@ class SubscriberLocationReport_Arg {
          * @public
          * @readonly
          */
-        readonly deferredmt_lrData: OPTIONAL<Deferredmt_lrData>,
+        readonly deferredmt_lrData?: OPTIONAL<Deferredmt_lrData>,
         /**
          * @summary `lcs_ReferenceNumber`.
          * @description
@@ -234,7 +234,7 @@ class SubscriberLocationReport_Arg {
          * @public
          * @readonly
          */
-        readonly lcs_ReferenceNumber: OPTIONAL<LCS_ReferenceNumber>,
+        readonly lcs_ReferenceNumber?: OPTIONAL<LCS_ReferenceNumber>,
         /**
          * @summary `geranPositioningData`.
          * @description
@@ -244,7 +244,7 @@ class SubscriberLocationReport_Arg {
          * @public
          * @readonly
          */
-        readonly geranPositioningData: OPTIONAL<PositioningDataInformation>,
+        readonly geranPositioningData?: OPTIONAL<PositioningDataInformation>,
         /**
          * @summary `utranPositioningData`.
          * @description
@@ -254,7 +254,7 @@ class SubscriberLocationReport_Arg {
          * @public
          * @readonly
          */
-        readonly utranPositioningData: OPTIONAL<UtranPositioningDataInfo>,
+        readonly utranPositioningData?: OPTIONAL<UtranPositioningDataInfo>,
         /**
          * @summary `cellIdOrSai`.
          * @description
@@ -264,7 +264,7 @@ class SubscriberLocationReport_Arg {
          * @public
          * @readonly
          */
-        readonly cellIdOrSai: OPTIONAL<CellGlobalIdOrServiceAreaIdOrLAI>,
+        readonly cellIdOrSai?: OPTIONAL<CellGlobalIdOrServiceAreaIdOrLAI>,
         /**
          * @summary `h_gmlc_Address`.
          * @description
@@ -274,7 +274,7 @@ class SubscriberLocationReport_Arg {
          * @public
          * @readonly
          */
-        readonly h_gmlc_Address: OPTIONAL<GSN_Address>,
+        readonly h_gmlc_Address?: OPTIONAL<GSN_Address>,
         /**
          * @summary `lcsServiceTypeID`.
          * @description
@@ -284,7 +284,7 @@ class SubscriberLocationReport_Arg {
          * @public
          * @readonly
          */
-        readonly lcsServiceTypeID: OPTIONAL<LCSServiceTypeID>,
+        readonly lcsServiceTypeID?: OPTIONAL<LCSServiceTypeID>,
         /**
          * @summary `sai_Present`.
          * @description
@@ -294,7 +294,7 @@ class SubscriberLocationReport_Arg {
          * @public
          * @readonly
          */
-        readonly sai_Present: OPTIONAL<NULL>,
+        readonly sai_Present?: OPTIONAL<NULL>,
         /**
          * @summary `pseudonymIndicator`.
          * @description
@@ -304,7 +304,7 @@ class SubscriberLocationReport_Arg {
          * @public
          * @readonly
          */
-        readonly pseudonymIndicator: OPTIONAL<NULL>,
+        readonly pseudonymIndicator?: OPTIONAL<NULL>,
         /**
          * @summary `accuracyFulfilmentIndicator`.
          * @description
@@ -314,7 +314,7 @@ class SubscriberLocationReport_Arg {
          * @public
          * @readonly
          */
-        readonly accuracyFulfilmentIndicator: OPTIONAL<AccuracyFulfilmentIndicator>,
+        readonly accuracyFulfilmentIndicator?: OPTIONAL<AccuracyFulfilmentIndicator>,
         /**
          * @summary `velocityEstimate`.
          * @description
@@ -324,7 +324,7 @@ class SubscriberLocationReport_Arg {
          * @public
          * @readonly
          */
-        readonly velocityEstimate: OPTIONAL<VelocityEstimate>,
+        readonly velocityEstimate?: OPTIONAL<VelocityEstimate>,
         /**
          * @summary `sequenceNumber`.
          * @description
@@ -334,7 +334,7 @@ class SubscriberLocationReport_Arg {
          * @public
          * @readonly
          */
-        readonly sequenceNumber: OPTIONAL<SequenceNumber>,
+        readonly sequenceNumber?: OPTIONAL<SequenceNumber>,
         /**
          * @summary `periodicLDRInfo`.
          * @description
@@ -344,7 +344,7 @@ class SubscriberLocationReport_Arg {
          * @public
          * @readonly
          */
-        readonly periodicLDRInfo: OPTIONAL<PeriodicLDRInfo>,
+        readonly periodicLDRInfo?: OPTIONAL<PeriodicLDRInfo>,
         /**
          * @summary `mo_lrShortCircuitIndicator`.
          * @description
@@ -354,7 +354,7 @@ class SubscriberLocationReport_Arg {
          * @public
          * @readonly
          */
-        readonly mo_lrShortCircuitIndicator: OPTIONAL<NULL>,
+        readonly mo_lrShortCircuitIndicator?: OPTIONAL<NULL>,
         /**
          * @summary `geranGANSSpositioningData`.
          * @description
@@ -364,7 +364,7 @@ class SubscriberLocationReport_Arg {
          * @public
          * @readonly
          */
-        readonly geranGANSSpositioningData: OPTIONAL<GeranGANSSpositioningData>,
+        readonly geranGANSSpositioningData?: OPTIONAL<GeranGANSSpositioningData>,
         /**
          * @summary `utranGANSSpositioningData`.
          * @description
@@ -374,7 +374,7 @@ class SubscriberLocationReport_Arg {
          * @public
          * @readonly
          */
-        readonly utranGANSSpositioningData: OPTIONAL<UtranGANSSpositioningData>,
+        readonly utranGANSSpositioningData?: OPTIONAL<UtranGANSSpositioningData>,
         /**
          * @summary `targetServingNodeForHandover`.
          * @description
@@ -384,7 +384,7 @@ class SubscriberLocationReport_Arg {
          * @public
          * @readonly
          */
-        readonly targetServingNodeForHandover: OPTIONAL<ServingNodeAddress>,
+        readonly targetServingNodeForHandover?: OPTIONAL<ServingNodeAddress>,
         /**
          * @summary `utranAdditionalPositioningData`.
          * @description
@@ -395,7 +395,7 @@ class SubscriberLocationReport_Arg {
          * @public
          * @readonly
          */
-        readonly utranAdditionalPositioningData: OPTIONAL<UtranAdditionalPositioningData>,
+        readonly utranAdditionalPositioningData?: OPTIONAL<UtranAdditionalPositioningData>,
         /**
          * @summary `utranBaroPressureMeas`.
          * @description
@@ -405,7 +405,7 @@ class SubscriberLocationReport_Arg {
          * @public
          * @readonly
          */
-        readonly utranBaroPressureMeas: OPTIONAL<UtranBaroPressureMeas>,
+        readonly utranBaroPressureMeas?: OPTIONAL<UtranBaroPressureMeas>,
         /**
          * @summary `utranCivicAddress`.
          * @description
@@ -415,7 +415,7 @@ class SubscriberLocationReport_Arg {
          * @public
          * @readonly
          */
-        readonly utranCivicAddress: OPTIONAL<UtranCivicAddress>,
+        readonly utranCivicAddress?: OPTIONAL<UtranCivicAddress>,
         /**
          * @summary Extensions that are not recognized.
          * @public

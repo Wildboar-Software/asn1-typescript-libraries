@@ -48,7 +48,7 @@ class StreamParms {
          * @public
          * @readonly
          */
-        readonly localControlDescriptor: OPTIONAL<LocalControlDescriptor>,
+        readonly localControlDescriptor?: OPTIONAL<LocalControlDescriptor>,
         /**
          * @summary `localDescriptor`.
          * @description
@@ -60,7 +60,7 @@ class StreamParms {
          * @public
          * @readonly
          */
-        readonly localDescriptor: OPTIONAL<LocalRemoteDescriptor>,
+        readonly localDescriptor?: OPTIONAL<LocalRemoteDescriptor>,
         /**
          * @summary `remoteDescriptor`.
          * @description
@@ -71,7 +71,7 @@ class StreamParms {
          * @public
          * @readonly
          */
-        readonly remoteDescriptor: OPTIONAL<LocalRemoteDescriptor>,
+        readonly remoteDescriptor?: OPTIONAL<LocalRemoteDescriptor>,
         /**
          * @summary `statisticsDescriptor`.
          * @description
@@ -84,7 +84,7 @@ class StreamParms {
          * @public
          * @readonly
          */
-        readonly statisticsDescriptor: OPTIONAL<StatisticsDescriptor>,
+        readonly statisticsDescriptor?: OPTIONAL<StatisticsDescriptor>,
         /**
          * @summary Extensions that are not recognized.
          * @description

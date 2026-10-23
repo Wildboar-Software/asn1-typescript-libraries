@@ -53,7 +53,7 @@ class DestinationNumberCriteria {
          * @public
          * @readonly
          */
-        readonly destinationNumberList: OPTIONAL<DestinationNumberList>,
+        readonly destinationNumberList?: OPTIONAL<DestinationNumberList>,
         /**
          * @summary `destinationNumberLengthList`.
          * @description
@@ -64,7 +64,7 @@ class DestinationNumberCriteria {
          * @public
          * @readonly
          */
-        readonly destinationNumberLengthList: OPTIONAL<DestinationNumberLengthList>,
+        readonly destinationNumberLengthList?: OPTIONAL<DestinationNumberLengthList>,
         /**
          * @summary Extensions that are not recognized.
          * @public

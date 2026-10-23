@@ -58,7 +58,7 @@ class UpdateMetadataRequest {
          * @public
          * @readonly
          */
-        readonly serviceProviderName: OPTIONAL<UTF8String>,
+        readonly serviceProviderName?: OPTIONAL<UTF8String>,
         /**
          * @summary `profileName`.
          * @description
@@ -69,7 +69,7 @@ class UpdateMetadataRequest {
          * @public
          * @readonly
          */
-        readonly profileName: OPTIONAL<UTF8String>,
+        readonly profileName?: OPTIONAL<UTF8String>,
         /**
          * @summary `iconType`.
          * @description
@@ -79,7 +79,7 @@ class UpdateMetadataRequest {
          * @public
          * @readonly
          */
-        readonly iconType: OPTIONAL<IconType>,
+        readonly iconType?: OPTIONAL<IconType>,
         /**
          * @summary `icon`.
          * @description
@@ -90,7 +90,7 @@ class UpdateMetadataRequest {
          * @public
          * @readonly
          */
-        readonly icon: OPTIONAL<OCTET_STRING>,
+        readonly icon?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `profilePolicyRules`.
          * @description
@@ -103,7 +103,7 @@ class UpdateMetadataRequest {
          * @public
          * @readonly
          */
-        readonly profilePolicyRules: OPTIONAL<PprIds>,
+        readonly profilePolicyRules?: OPTIONAL<PprIds>,
         /**
          * @summary `serviceSpecificDataStoredInEuicc`.
          * @description
@@ -114,7 +114,7 @@ class UpdateMetadataRequest {
          * @public
          * @readonly
          */
-        readonly serviceSpecificDataStoredInEuicc: OPTIONAL<VendorSpecificExtension>,
+        readonly serviceSpecificDataStoredInEuicc?: OPTIONAL<VendorSpecificExtension>,
         /**
          * @summary `reserved103`.
          * @description
@@ -125,7 +125,7 @@ class UpdateMetadataRequest {
          * @public
          * @readonly
          */
-        readonly reserved103: OPTIONAL<BOOLEAN>
+        readonly reserved103?: OPTIONAL<BOOLEAN>
     ) {
         if (this.serviceProviderName !== undefined && (this.serviceProviderName.length > 32)) {
             throw new ASN1SizeError("UpdateMetadataRequest.serviceProviderName violates SIZE constraint");

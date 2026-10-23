@@ -68,7 +68,7 @@ class SupplementaryLocationData {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        azimuth: OPTIONAL<INTEGER>,
+        azimuth?: OPTIONAL<INTEGER>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.azimuth = azimuth;

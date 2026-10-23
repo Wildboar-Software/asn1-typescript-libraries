@@ -62,7 +62,7 @@ class UpdateVcsgLocationArg {
          * @public
          * @readonly
          */
-        readonly msisdn: OPTIONAL<ISDN_AddressString>,
+        readonly msisdn?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `vlr_Number`.
          * @description
@@ -74,7 +74,7 @@ class UpdateVcsgLocationArg {
          * @public
          * @readonly
          */
-        readonly vlr_Number: OPTIONAL<ISDN_AddressString>,
+        readonly vlr_Number?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `sgsn_Number`.
          * @description
@@ -86,13 +86,13 @@ class UpdateVcsgLocationArg {
          * @public
          * @readonly
          */
-        readonly sgsn_Number: OPTIONAL<ISDN_AddressString>,
+        readonly sgsn_Number?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

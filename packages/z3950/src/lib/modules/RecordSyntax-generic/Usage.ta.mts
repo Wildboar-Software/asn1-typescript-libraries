@@ -58,7 +58,7 @@ class Usage {
 
     constructor (
         type_: Usage_type,
-        restriction: OPTIONAL<InternationalString>
+        restriction?: OPTIONAL<InternationalString>
     ) {
         this.type_ = type_;
         this.restriction = restriction;

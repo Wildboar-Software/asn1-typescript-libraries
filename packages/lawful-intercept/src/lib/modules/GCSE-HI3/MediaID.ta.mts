@@ -69,8 +69,8 @@ class MediaID {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        sourceUserID: OPTIONAL<GcsePartyIdentity>,
-        streamID: OPTIONAL<OCTET_STRING>,
+        sourceUserID?: OPTIONAL<GcsePartyIdentity>,
+        streamID?: OPTIONAL<OCTET_STRING>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.sourceUserID = sourceUserID;

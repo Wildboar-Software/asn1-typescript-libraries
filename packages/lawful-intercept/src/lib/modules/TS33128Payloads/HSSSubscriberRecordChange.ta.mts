@@ -86,7 +86,7 @@ class HSSSubscriberRecordChange {
 
     constructor (
         hSSIdentities: HSSIdentities[],
-        subscriberRecordChangePayload: OPTIONAL<SubscriberRecordChangePayload>,
+        subscriberRecordChangePayload?: OPTIONAL<SubscriberRecordChangePayload>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.hSSIdentities = hSSIdentities;

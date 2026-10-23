@@ -89,9 +89,9 @@ class Payload_description {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        copyOfSDPdescription: OPTIONAL<OCTET_STRING>,
-        mediaFormat: OPTIONAL<INTEGER>,
-        mediaAttributes: OPTIONAL<OCTET_STRING>,
+        copyOfSDPdescription?: OPTIONAL<OCTET_STRING>,
+        mediaFormat?: OPTIONAL<INTEGER>,
+        mediaAttributes?: OPTIONAL<OCTET_STRING>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.copyOfSDPdescription = copyOfSDPdescription;

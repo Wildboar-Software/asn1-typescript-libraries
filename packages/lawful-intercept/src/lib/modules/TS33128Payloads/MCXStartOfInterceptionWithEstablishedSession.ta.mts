@@ -177,10 +177,10 @@ class MCXStartOfInterceptionWithEstablishedSession {
         mCServiceDirection: Direction,
         mCServiceOriginatingID: MCServiceID,
         mCServiceSessionInfo: MCServiceSessionInfo,
-        mCServiceParticipants: OPTIONAL<MCServiceID[]>,
-        location: OPTIONAL<Location>,
-        mCServiceMediaStreamAvailable: OPTIONAL<BOOLEAN>,
-        mCServiceBearerCapability: OPTIONAL<UTF8String>,
+        mCServiceParticipants?: OPTIONAL<MCServiceID[]>,
+        location?: OPTIONAL<Location>,
+        mCServiceMediaStreamAvailable?: OPTIONAL<BOOLEAN>,
+        mCServiceBearerCapability?: OPTIONAL<UTF8String>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.mCServiceIdentitiesOrGroupID = mCServiceIdentitiesOrGroupID;

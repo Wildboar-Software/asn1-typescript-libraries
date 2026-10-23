@@ -126,12 +126,12 @@ class MCMUpdateReqResElt {
 
     constructor (
         specificMessageType: MessageType,
-        msgCentreId: OPTIONAL<MsgCentreId>,
-        nrOfMessages: OPTIONAL<NrOfMessages>,
-        originatingNr: OPTIONAL<PartyNumber>,
-        timestamp: OPTIONAL<TimeStamp>,
-        priority: OPTIONAL<INTEGER>,
-        argumentExt: OPTIONAL<MCMUpdateReqResElt_argumentExt>
+        msgCentreId?: OPTIONAL<MsgCentreId>,
+        nrOfMessages?: OPTIONAL<NrOfMessages>,
+        originatingNr?: OPTIONAL<PartyNumber>,
+        timestamp?: OPTIONAL<TimeStamp>,
+        priority?: OPTIONAL<INTEGER>,
+        argumentExt?: OPTIONAL<MCMUpdateReqResElt_argumentExt>
     ) {
         this.specificMessageType = specificMessageType;
         this.msgCentreId = msgCentreId;

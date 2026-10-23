@@ -90,10 +90,10 @@ class PilotInformation {
     readonly pilotHandling: OPTIONAL<MilitaryString[]>;
 
     constructor (
-        pilotPrecedence: OPTIONAL<MMHSPrecedence>,
-        pilotRecipient: OPTIONAL<ORDescriptor[]>,
-        pilotSecurity: OPTIONAL<SecurityLabel>,
-        pilotHandling: OPTIONAL<MilitaryString[]>
+        pilotPrecedence?: OPTIONAL<MMHSPrecedence>,
+        pilotRecipient?: OPTIONAL<ORDescriptor[]>,
+        pilotSecurity?: OPTIONAL<SecurityLabel>,
+        pilotHandling?: OPTIONAL<MilitaryString[]>
     ) {
         this.pilotPrecedence = pilotPrecedence;
         this.pilotRecipient = pilotRecipient;

@@ -78,7 +78,7 @@ class ReviewArgument {
          * @public
          * @readonly
          */
-        readonly messageToReview: OPTIONAL<MessageID>,
+        readonly messageToReview?: OPTIONAL<MessageID>,
         /**
          * @summary `resource`.
          * @description
@@ -89,7 +89,7 @@ class ReviewArgument {
          * @public
          * @readonly
          */
-        readonly resource: OPTIONAL<ResourceID>,
+        readonly resource?: OPTIONAL<ResourceID>,
         /**
          * @summary `extensions`.
          * @description
@@ -100,7 +100,7 @@ class ReviewArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

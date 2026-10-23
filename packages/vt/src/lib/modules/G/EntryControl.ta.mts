@@ -55,7 +55,7 @@ class EntryControl {
          * @public
          * @readonly
          */
-        readonly deviceObjectList: OPTIONAL<PrintableString[]>,
+        readonly deviceObjectList?: OPTIONAL<PrintableString[]>,
         /**
          * @summary `feirList`.
          * @description
@@ -65,7 +65,7 @@ class EntryControl {
          * @public
          * @readonly
          */
-        readonly feirList: OPTIONAL<EntryControl_feirList_Item[]>,
+        readonly feirList?: OPTIONAL<EntryControl_feirList_Item[]>,
         /**
          * @summary `feprList`.
          * @description
@@ -75,7 +75,7 @@ class EntryControl {
          * @public
          * @readonly
          */
-        readonly feprList: OPTIONAL<EntryControl_feprList_Item[]>
+        readonly feprList?: OPTIONAL<EntryControl_feprList_Item[]>
     ) {}
 
     /**

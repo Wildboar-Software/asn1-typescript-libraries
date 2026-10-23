@@ -64,7 +64,7 @@ class StopLocationTrackingSessionArgument {
          * @public
          * @readonly
          */
-        readonly reason: OPTIONAL<EventCause>,
+        readonly reason?: OPTIONAL<EventCause>,
         /**
          * @summary `extensions`.
          * @description
@@ -75,7 +75,7 @@ class StopLocationTrackingSessionArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

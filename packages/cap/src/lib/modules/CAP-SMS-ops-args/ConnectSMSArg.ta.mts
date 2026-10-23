@@ -54,7 +54,7 @@ class ConnectSMSArg {
          * @public
          * @readonly
          */
-        readonly callingPartysNumber: OPTIONAL<SMS_AddressString>,
+        readonly callingPartysNumber?: OPTIONAL<SMS_AddressString>,
         /**
          * @summary `destinationSubscriberNumber`.
          * @description
@@ -65,7 +65,7 @@ class ConnectSMSArg {
          * @public
          * @readonly
          */
-        readonly destinationSubscriberNumber: OPTIONAL<CalledPartyBCDNumber>,
+        readonly destinationSubscriberNumber?: OPTIONAL<CalledPartyBCDNumber>,
         /**
          * @summary `sMSCAddress`.
          * @description
@@ -76,13 +76,13 @@ class ConnectSMSArg {
          * @public
          * @readonly
          */
-        readonly sMSCAddress: OPTIONAL<ISDN_AddressString>,
+        readonly sMSCAddress?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<Extensions>,
+        readonly extensions?: OPTIONAL<Extensions>,
         /**
          * @summary Extensions that are not recognized.
          * @public

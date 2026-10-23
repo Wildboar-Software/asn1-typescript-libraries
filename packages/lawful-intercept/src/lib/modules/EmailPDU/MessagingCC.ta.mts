@@ -204,7 +204,7 @@ class MessagingCC {
         end_of_sequence: OPTIONAL<BOOLEAN>,
         content_type: OCTET_STRING,
         content: OCTET_STRING,
-        content_transfer_encoding: OPTIONAL<OCTET_STRING>,
+        content_transfer_encoding?: OPTIONAL<OCTET_STRING>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.messaging_cc_obj_id = messaging_cc_obj_id;

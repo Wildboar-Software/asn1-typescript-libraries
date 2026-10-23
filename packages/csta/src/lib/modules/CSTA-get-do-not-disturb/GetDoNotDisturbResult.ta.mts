@@ -59,7 +59,7 @@ class GetDoNotDisturbResult {
          * @public
          * @readonly
          */
-        readonly callOrigination: OPTIONAL<CallOrigination>,
+        readonly callOrigination?: OPTIONAL<CallOrigination>,
         /**
          * @summary `callingDeviceList`.
          * @description
@@ -69,7 +69,7 @@ class GetDoNotDisturbResult {
          * @public
          * @readonly
          */
-        readonly callingDeviceList: OPTIONAL<DeviceID[]>,
+        readonly callingDeviceList?: OPTIONAL<DeviceID[]>,
         /**
          * @summary `extensions`.
          * @description
@@ -79,7 +79,7 @@ class GetDoNotDisturbResult {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

@@ -64,14 +64,14 @@ class DeviationDescription {
          * @public
          * @readonly
          */
-        readonly parameters: OPTIONAL<_Element>,
+        readonly parameters?: OPTIONAL<_Element>,
         /**
          * For internal State use. Not governed by an ICAO specification.
          * @summary `nationalUse`.
          * @public
          * @readonly
          */
-        readonly nationalUse: OPTIONAL<_Element>,
+        readonly nationalUse?: OPTIONAL<_Element>,
     ) {}
 
     /**

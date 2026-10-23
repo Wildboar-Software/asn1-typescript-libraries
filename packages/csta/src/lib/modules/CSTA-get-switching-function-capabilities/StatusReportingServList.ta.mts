@@ -47,7 +47,7 @@ class StatusReportingServList {
          * @public
          * @readonly
          */
-        readonly monitoringServices: OPTIONAL<MonitoringServList>,
+        readonly monitoringServices?: OPTIONAL<MonitoringServList>,
         /**
          * @summary `snapshotServices`.
          * @description
@@ -56,7 +56,7 @@ class StatusReportingServList {
          * @public
          * @readonly
          */
-        readonly snapshotServices: OPTIONAL<SnapshotServList>,
+        readonly snapshotServices?: OPTIONAL<SnapshotServList>,
         /**
          * @summary `systemServices`.
          * @description
@@ -65,7 +65,7 @@ class StatusReportingServList {
          * @public
          * @readonly
          */
-        readonly systemServices: OPTIONAL<SystemStatusServList>
+        readonly systemServices?: OPTIONAL<SystemStatusServList>
     ) {}
 
     /**

@@ -58,9 +58,9 @@ class EDNConnectionInfo {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        dNN: OPTIONAL<DNN>,
-        sNSSAI: OPTIONAL<SNSSAI>,
-        serviceArea: OPTIONAL<Location>,
+        dNN?: OPTIONAL<DNN>,
+        sNSSAI?: OPTIONAL<SNSSAI>,
+        serviceArea?: OPTIONAL<Location>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.dNN = dNN;

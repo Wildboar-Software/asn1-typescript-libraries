@@ -39,7 +39,7 @@ class EndPointDescriptor {
          * @public
          * @readonly
          */
-        readonly id: OPTIONAL<IA5String>,
+        readonly id?: OPTIONAL<IA5String>,
         /**
          * @summary Extensions that are not recognized.
          * @public

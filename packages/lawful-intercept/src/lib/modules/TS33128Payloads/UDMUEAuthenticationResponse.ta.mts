@@ -150,10 +150,10 @@ class UDMUEAuthenticationResponse {
     constructor (
         sUPI: SUPI,
         authenticationInfoRequest: UDMAuthenticationInfoRequest,
-        aKMAIndicator: OPTIONAL<BOOLEAN>,
-        problemDetails: OPTIONAL<UDMProblemDetails>,
-        authAAA: OPTIONAL<BOOLEAN>,
-        pvsInfo: OPTIONAL<ServerAddressingInfoList>,
+        aKMAIndicator?: OPTIONAL<BOOLEAN>,
+        problemDetails?: OPTIONAL<UDMProblemDetails>,
+        authAAA?: OPTIONAL<BOOLEAN>,
+        pvsInfo?: OPTIONAL<ServerAddressingInfoList>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.sUPI = sUPI;

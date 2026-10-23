@@ -86,8 +86,8 @@ class ResourceControlResponse {
     constructor (
         referenceId: OPTIONAL<ReferenceId>,
         continueFlag: BOOLEAN,
-        resultSetWanted: OPTIONAL<BOOLEAN>,
-        otherInfo: OPTIONAL<OtherInformation>
+        resultSetWanted?: OPTIONAL<BOOLEAN>,
+        otherInfo?: OPTIONAL<OtherInformation>
     ) {
         this.referenceId = referenceId;
         this.continueFlag = continueFlag;

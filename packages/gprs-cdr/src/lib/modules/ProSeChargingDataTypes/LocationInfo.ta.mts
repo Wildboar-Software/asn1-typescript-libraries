@@ -60,8 +60,8 @@ class LocationInfo {
     readonly timeStamp: OPTIONAL<OCTET_STRING>;
 
     constructor (
-        uELocation: OPTIONAL<OCTET_STRING>,
-        timeStamp: OPTIONAL<OCTET_STRING>
+        uELocation?: OPTIONAL<OCTET_STRING>,
+        timeStamp?: OPTIONAL<OCTET_STRING>
     ) {
         this.uELocation = uELocation;
         this.timeStamp = timeStamp;

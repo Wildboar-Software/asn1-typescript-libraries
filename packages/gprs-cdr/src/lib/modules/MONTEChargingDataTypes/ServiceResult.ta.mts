@@ -62,8 +62,8 @@ class ServiceResult {
     readonly serviceResultCode: OPTIONAL<INTEGER>;
 
     constructor (
-        vendorId: OPTIONAL<INTEGER>,
-        serviceResultCode: OPTIONAL<INTEGER>
+        vendorId?: OPTIONAL<INTEGER>,
+        serviceResultCode?: OPTIONAL<INTEGER>
     ) {
         this.vendorId = vendorId;
         this.serviceResultCode = serviceResultCode;

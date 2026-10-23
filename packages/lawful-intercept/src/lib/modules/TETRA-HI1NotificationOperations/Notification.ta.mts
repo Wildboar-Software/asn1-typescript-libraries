@@ -181,8 +181,8 @@ class Notification {
         lawfulInterceptionIdentifier: LawfulInterceptionIdentifier,
         communicationIdentifier: OPTIONAL<CommunicationIdentifier>,
         timeStamp: TimeStamp,
-        location: OPTIONAL<TETRACGIType>,
-        national_HI1_ASN1parameters: OPTIONAL<National_HI1_ASN1parameters>,
+        location?: OPTIONAL<TETRACGIType>,
+        national_HI1_ASN1parameters?: OPTIONAL<National_HI1_ASN1parameters>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.domainID = domainID;

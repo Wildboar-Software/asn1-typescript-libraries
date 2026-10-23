@@ -331,13 +331,13 @@ class MMO1DRecord {
         mms3GPPVersion: OPTIONAL<OCTET_STRING>,
         originatorAddress: OPTIONAL<MMSAgentAddress>,
         recipientAddress: MMSAgentAddress,
-        mmStatusCode: OPTIONAL<MMStatusCodeType>,
-        recordTimeStamp: OPTIONAL<OCTET_STRING>,
-        localSequenceNumber: OPTIONAL<INTEGER>,
-        recordExtensions: OPTIONAL<ManagementExtension[]>,
-        sGSNPLMNIdentifier: OPTIONAL<OCTET_STRING>,
-        rATType: OPTIONAL<INTEGER>,
-        mSTimeZone: OPTIONAL<OCTET_STRING>
+        mmStatusCode?: OPTIONAL<MMStatusCodeType>,
+        recordTimeStamp?: OPTIONAL<OCTET_STRING>,
+        localSequenceNumber?: OPTIONAL<INTEGER>,
+        recordExtensions?: OPTIONAL<ManagementExtension[]>,
+        sGSNPLMNIdentifier?: OPTIONAL<OCTET_STRING>,
+        rATType?: OPTIONAL<INTEGER>,
+        mSTimeZone?: OPTIONAL<OCTET_STRING>
     ) {
         this.recordType = recordType;
         this.recipientMmsRSAddress = recipientMmsRSAddress;

@@ -70,7 +70,7 @@ class SingleStepTransResult {
          * @public
          * @readonly
          */
-        readonly connections: OPTIONAL<ConnectionList>,
+        readonly connections?: OPTIONAL<ConnectionList>,
         /**
          * @summary `transferredCallInfo`.
          * @description
@@ -81,7 +81,7 @@ class SingleStepTransResult {
          * @public
          * @readonly
          */
-        readonly transferredCallInfo: OPTIONAL<ConnectionInformation>,
+        readonly transferredCallInfo?: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `callLinkageDataList`.
          * @description
@@ -92,7 +92,7 @@ class SingleStepTransResult {
          * @public
          * @readonly
          */
-        readonly callLinkageDataList: OPTIONAL<CallLinkageDataList>,
+        readonly callLinkageDataList?: OPTIONAL<CallLinkageDataList>,
         /**
          * @summary `extensions`.
          * @description
@@ -104,7 +104,7 @@ class SingleStepTransResult {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

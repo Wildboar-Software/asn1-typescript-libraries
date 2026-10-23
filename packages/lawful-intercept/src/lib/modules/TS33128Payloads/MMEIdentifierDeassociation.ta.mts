@@ -167,7 +167,7 @@ class MMEIdentifierDeassociation {
         iMEI: OPTIONAL<IMEI>,
         mSISDN: OPTIONAL<MSISDN>,
         gUTI: GUTI,
-        location: OPTIONAL<Location>,
+        location?: OPTIONAL<Location>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.iMSI = iMSI;

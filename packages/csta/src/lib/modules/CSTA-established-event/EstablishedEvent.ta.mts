@@ -225,7 +225,7 @@ class EstablishedEvent {
          * @public
          * @readonly
          */
-        readonly servicesPermitted: OPTIONAL<ServicesPermitted>,
+        readonly servicesPermitted?: OPTIONAL<ServicesPermitted>,
         /**
          * @summary `networkCallingDevice`.
          * @description
@@ -236,7 +236,7 @@ class EstablishedEvent {
          * @public
          * @readonly
          */
-        readonly networkCallingDevice: OPTIONAL<NetworkCallingDeviceID>,
+        readonly networkCallingDevice?: OPTIONAL<NetworkCallingDeviceID>,
         /**
          * @summary `networkCalledDevice`.
          * @description
@@ -247,7 +247,7 @@ class EstablishedEvent {
          * @public
          * @readonly
          */
-        readonly networkCalledDevice: OPTIONAL<NetworkCalledDeviceID>,
+        readonly networkCalledDevice?: OPTIONAL<NetworkCalledDeviceID>,
         /**
          * @summary `associatedCallingDevice`.
          * @description
@@ -258,7 +258,7 @@ class EstablishedEvent {
          * @public
          * @readonly
          */
-        readonly associatedCallingDevice: OPTIONAL<AssociatedCallingDeviceID>,
+        readonly associatedCallingDevice?: OPTIONAL<AssociatedCallingDeviceID>,
         /**
          * @summary `associatedCalledDevice`.
          * @description
@@ -269,7 +269,7 @@ class EstablishedEvent {
          * @public
          * @readonly
          */
-        readonly associatedCalledDevice: OPTIONAL<AssociatedCalledDeviceID>,
+        readonly associatedCalledDevice?: OPTIONAL<AssociatedCalledDeviceID>,
         /**
          * @summary `mediaCallCharacteristics`.
          * @description
@@ -279,7 +279,7 @@ class EstablishedEvent {
          * @public
          * @readonly
          */
-        readonly mediaCallCharacteristics: OPTIONAL<MediaCallCharacteristics>,
+        readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
         /**
          * @summary `callCharacteristics`.
          * @description
@@ -289,7 +289,7 @@ class EstablishedEvent {
          * @public
          * @readonly
          */
-        readonly callCharacteristics: OPTIONAL<CallCharacteristics>,
+        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
         /**
          * @summary `establishedConnectionInfo`.
          * @description
@@ -300,7 +300,7 @@ class EstablishedEvent {
          * @public
          * @readonly
          */
-        readonly establishedConnectionInfo: OPTIONAL<ConnectionInformation>,
+        readonly establishedConnectionInfo?: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `callLinkageData`.
          * @description
@@ -310,7 +310,7 @@ class EstablishedEvent {
          * @public
          * @readonly
          */
-        readonly callLinkageData: OPTIONAL<CallLinkageData>,
+        readonly callLinkageData?: OPTIONAL<CallLinkageData>,
         /**
          * @summary `subjectOfCall`.
          * @description
@@ -320,7 +320,7 @@ class EstablishedEvent {
          * @public
          * @readonly
          */
-        readonly subjectOfCall: OPTIONAL<SubjectOfCall>,
+        readonly subjectOfCall?: OPTIONAL<SubjectOfCall>,
         /**
          * @summary `messageInfo`.
          * @description
@@ -330,7 +330,7 @@ class EstablishedEvent {
          * @public
          * @readonly
          */
-        readonly messageInfo: OPTIONAL<MessageInfo>,
+        readonly messageInfo?: OPTIONAL<MessageInfo>,
         /**
          * @summary `languagePreferences`.
          * @description
@@ -340,7 +340,7 @@ class EstablishedEvent {
          * @public
          * @readonly
          */
-        readonly languagePreferences: OPTIONAL<LanguagePreferences>,
+        readonly languagePreferences?: OPTIONAL<LanguagePreferences>,
         /**
          * @summary `deviceHistory`.
          * @description
@@ -351,7 +351,7 @@ class EstablishedEvent {
          * @public
          * @readonly
          */
-        readonly deviceHistory: OPTIONAL<DeviceHistory>,
+        readonly deviceHistory?: OPTIONAL<DeviceHistory>,
         /**
          * @summary `locationInfo`.
          * @description
@@ -361,7 +361,7 @@ class EstablishedEvent {
          * @public
          * @readonly
          */
-        readonly locationInfo: OPTIONAL<LocationInfoList>,
+        readonly locationInfo?: OPTIONAL<LocationInfoList>,
         /**
          * @summary `extensions`.
          * @description
@@ -372,7 +372,7 @@ class EstablishedEvent {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

@@ -53,13 +53,13 @@ class FilteringCriteria_addressAndService {
          * @public
          * @readonly
          */
-        readonly callingAddressValue: OPTIONAL<Digits>,
+        readonly callingAddressValue?: OPTIONAL<Digits>,
         /**
          * @summary `locationNumber`.
          * @public
          * @readonly
          */
-        readonly locationNumber: OPTIONAL<LocationNumber>
+        readonly locationNumber?: OPTIONAL<LocationNumber>
     ) {}
 
     /**

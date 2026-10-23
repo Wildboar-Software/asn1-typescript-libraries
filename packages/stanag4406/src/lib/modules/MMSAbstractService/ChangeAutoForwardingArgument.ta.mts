@@ -103,9 +103,9 @@ class ChangeAutoForwardingArgument {
 
     constructor (
         autoforward_MMs: BOOLEAN,
-        auto_forward_recipients: OPTIONAL<ORName[]>,
-        auto_forward_heading: OPTIONAL<Heading>,
-        auto_forward_comment: OPTIONAL<AutoForwardComment>
+        auto_forward_recipients?: OPTIONAL<ORName[]>,
+        auto_forward_heading?: OPTIONAL<Heading>,
+        auto_forward_comment?: OPTIONAL<AutoForwardComment>
     ) {
         this.autoforward_MMs = autoforward_MMs;
         this.auto_forward_recipients = auto_forward_recipients;

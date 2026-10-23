@@ -59,7 +59,7 @@ class SystemRegisterArgument {
          * @public
          * @readonly
          */
-        readonly requestedStatusFilter: OPTIONAL<StatusFilter>,
+        readonly requestedStatusFilter?: OPTIONAL<StatusFilter>,
         /**
          * @summary `extensions`.
          * @description
@@ -69,7 +69,7 @@ class SystemRegisterArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

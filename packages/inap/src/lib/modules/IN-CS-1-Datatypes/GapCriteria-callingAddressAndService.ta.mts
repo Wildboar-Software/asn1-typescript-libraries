@@ -54,7 +54,7 @@ class GapCriteria_callingAddressAndService {
     constructor (
         callingAddressValue: Digits,
         serviceKey: ServiceKey,
-        locationNumber: OPTIONAL<LocationNumber>
+        locationNumber?: OPTIONAL<LocationNumber>
     ) {
         this.callingAddressValue = callingAddressValue;
         this.serviceKey = serviceKey;

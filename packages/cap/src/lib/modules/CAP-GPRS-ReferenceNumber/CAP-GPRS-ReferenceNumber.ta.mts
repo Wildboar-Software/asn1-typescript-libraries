@@ -53,7 +53,7 @@ class CAP_GPRS_ReferenceNumber {
          * @public
          * @readonly
          */
-        readonly destinationReference: OPTIONAL<Integer4>,
+        readonly destinationReference?: OPTIONAL<Integer4>,
         /**
          * @summary `originationReference`.
          * @description
@@ -66,7 +66,7 @@ class CAP_GPRS_ReferenceNumber {
          * @public
          * @readonly
          */
-        readonly originationReference: OPTIONAL<Integer4>
+        readonly originationReference?: OPTIONAL<Integer4>
     ) {}
 
     /**

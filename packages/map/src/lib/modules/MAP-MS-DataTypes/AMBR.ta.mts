@@ -55,7 +55,7 @@ class AMBR {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `extended_Max_RequestedBandwidth_UL`.
          * @description
@@ -66,7 +66,7 @@ class AMBR {
          * @public
          * @readonly
          */
-        readonly extended_Max_RequestedBandwidth_UL: OPTIONAL<BandwidthExt>,
+        readonly extended_Max_RequestedBandwidth_UL?: OPTIONAL<BandwidthExt>,
         /**
          * @summary `extended_Max_RequestedBandwidth_DL`.
          * @description
@@ -77,7 +77,7 @@ class AMBR {
          * @public
          * @readonly
          */
-        readonly extended_Max_RequestedBandwidth_DL: OPTIONAL<BandwidthExt>,
+        readonly extended_Max_RequestedBandwidth_DL?: OPTIONAL<BandwidthExt>,
         /**
          * @summary Extensions that are not recognized.
          * @public

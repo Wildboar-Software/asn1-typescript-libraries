@@ -293,13 +293,13 @@ class ICSregisterRecord {
         privateUserID: OPTIONAL<GraphicString>,
         recordingEntity: OCTET_STRING,
         newLocation: Location_info,
-        locationExtension: OPTIONAL<BIT_STRING>,
-        updateTime: OPTIONAL<OCTET_STRING>,
-        iMS_Charging_Identifier: OPTIONAL<OCTET_STRING>,
-        interOperatorIdentifiers: OPTIONAL<InterOperatorIdentifiers[]>,
-        transit_IOI_Lists: OPTIONAL<GraphicString[]>,
-        updateResult: OPTIONAL<HLRIntResult>,
-        recordExtensions: OPTIONAL<ManagementExtension[]>
+        locationExtension?: OPTIONAL<BIT_STRING>,
+        updateTime?: OPTIONAL<OCTET_STRING>,
+        iMS_Charging_Identifier?: OPTIONAL<OCTET_STRING>,
+        interOperatorIdentifiers?: OPTIONAL<InterOperatorIdentifiers[]>,
+        transit_IOI_Lists?: OPTIONAL<GraphicString[]>,
+        updateResult?: OPTIONAL<HLRIntResult>,
+        recordExtensions?: OPTIONAL<ManagementExtension[]>
     ) {
         this.recordType = recordType;
         this.servedIMSI = servedIMSI;

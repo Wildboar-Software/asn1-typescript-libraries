@@ -171,11 +171,11 @@ class IMSMessage {
     constructor (
         payload: IMSPayload,
         sessionDirection: SessionDirection,
-        voIPRoamingIndication: OPTIONAL<VoIPRoamingIndication>,
-        location: OPTIONAL<Location>,
-        accessNetworkInformation: OPTIONAL<SIPAccessNetworkInformation[]>,
-        cellularNetworkInformation: OPTIONAL<SIPCellularNetworkInformation[]>,
-        numberTranslationInformation: OPTIONAL<NumberTranslation[]>,
+        voIPRoamingIndication?: OPTIONAL<VoIPRoamingIndication>,
+        location?: OPTIONAL<Location>,
+        accessNetworkInformation?: OPTIONAL<SIPAccessNetworkInformation[]>,
+        cellularNetworkInformation?: OPTIONAL<SIPCellularNetworkInformation[]>,
+        numberTranslationInformation?: OPTIONAL<NumberTranslation[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.payload = payload;

@@ -55,8 +55,8 @@ class MMSElementDescriptor {
 
     constructor (
         reference: UTF8String,
-        parameter: OPTIONAL<UTF8String>,
-        value: OPTIONAL<UTF8String>,
+        parameter?: OPTIONAL<UTF8String>,
+        value?: OPTIONAL<UTF8String>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.reference = reference;

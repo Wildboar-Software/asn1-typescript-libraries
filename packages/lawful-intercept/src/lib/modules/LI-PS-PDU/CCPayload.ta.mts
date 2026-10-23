@@ -145,8 +145,8 @@ class CCPayload {
         payloadDirection: OPTIONAL<PayloadDirection>,
         timeStamp: OPTIONAL<GeneralizedTime>,
         cCContents: CCContents,
-        microSecondTimeStamp: OPTIONAL<MicroSecondTimeStamp>,
-        timeStampQualifier: OPTIONAL<TimeStampQualifier>,
+        microSecondTimeStamp?: OPTIONAL<MicroSecondTimeStamp>,
+        timeStampQualifier?: OPTIONAL<TimeStampQualifier>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.payloadDirection = payloadDirection;

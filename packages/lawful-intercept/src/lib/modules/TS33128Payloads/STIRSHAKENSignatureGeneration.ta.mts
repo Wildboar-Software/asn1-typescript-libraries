@@ -213,7 +213,7 @@ class STIRSHAKENSignatureGeneration {
 
     constructor (
         pASSporTs: PASSporT[],
-        encapsulatedSIPMessage: OPTIONAL<SIPMessage>,
+        encapsulatedSIPMessage?: OPTIONAL<SIPMessage>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.pASSporTs = pASSporTs;

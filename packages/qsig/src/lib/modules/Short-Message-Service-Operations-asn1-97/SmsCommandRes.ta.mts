@@ -78,9 +78,9 @@ class SmsCommandRes {
 
     constructor (
         serviceCentreTimeStamp: ServiceCentreTimeStamp,
-        protocolIdentifier: OPTIONAL<ProtocolIdentifier>,
-        userData: OPTIONAL<UserData>,
-        smsExtension: OPTIONAL<SmsExtension>
+        protocolIdentifier?: OPTIONAL<ProtocolIdentifier>,
+        userData?: OPTIONAL<UserData>,
+        smsExtension?: OPTIONAL<SmsExtension>
     ) {
         this.serviceCentreTimeStamp = serviceCentreTimeStamp;
         this.protocolIdentifier = protocolIdentifier;

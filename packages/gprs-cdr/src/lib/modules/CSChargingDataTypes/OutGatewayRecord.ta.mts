@@ -510,16 +510,16 @@ class OutGatewayRecord {
         causeForTerm: CauseForTerm,
         diagnostics: OPTIONAL<HLRIntResult>,
         callReference: OCTET_STRING,
-        sequenceNumber: OPTIONAL<INTEGER>,
-        recordExtensions: OPTIONAL<ManagementExtension[]>,
-        locationRoutNum: OPTIONAL<OCTET_STRING>,
-        lrnSoInd: OPTIONAL<OutGatewayRecord_lrnSoInd>,
-        lrnQuryStatus: OPTIONAL<OutGatewayRecord_lrnQuryStatus>,
-        jIPPara: OPTIONAL<OCTET_STRING>,
-        jIPSoInd: OPTIONAL<OutGatewayRecord_jIPSoInd>,
-        jIPQuryStatus: OPTIONAL<OutGatewayRecord_jIPQuryStatus>,
-        reasonForServiceChange: OPTIONAL<ReasonForServiceChange>,
-        serviceChangeInitiator: OPTIONAL<BOOLEAN>
+        sequenceNumber?: OPTIONAL<INTEGER>,
+        recordExtensions?: OPTIONAL<ManagementExtension[]>,
+        locationRoutNum?: OPTIONAL<OCTET_STRING>,
+        lrnSoInd?: OPTIONAL<OutGatewayRecord_lrnSoInd>,
+        lrnQuryStatus?: OPTIONAL<OutGatewayRecord_lrnQuryStatus>,
+        jIPPara?: OPTIONAL<OCTET_STRING>,
+        jIPSoInd?: OPTIONAL<OutGatewayRecord_jIPSoInd>,
+        jIPQuryStatus?: OPTIONAL<OutGatewayRecord_jIPQuryStatus>,
+        reasonForServiceChange?: OPTIONAL<ReasonForServiceChange>,
+        serviceChangeInitiator?: OPTIONAL<BOOLEAN>
     ) {
         this.recordType = recordType;
         this.callingNumber = callingNumber;

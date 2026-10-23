@@ -57,8 +57,8 @@ class DiagFormat_dbUnavail_why {
     readonly message: OPTIONAL<InternationalString>;
 
     constructor (
-        reasonCode: OPTIONAL<DiagFormat_dbUnavail_why_reasonCode>,
-        message: OPTIONAL<InternationalString>
+        reasonCode?: OPTIONAL<DiagFormat_dbUnavail_why_reasonCode>,
+        message?: OPTIONAL<InternationalString>
     ) {
         this.reasonCode = reasonCode;
         this.message = message;

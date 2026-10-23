@@ -72,8 +72,8 @@ class EPSLocationInformation {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        mMELocationInformation: OPTIONAL<MMELocationInformation>,
-        sGSNLocationInformation: OPTIONAL<SGSNLocationInformation>,
+        mMELocationInformation?: OPTIONAL<MMELocationInformation>,
+        sGSNLocationInformation?: OPTIONAL<SGSNLocationInformation>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.mMELocationInformation = mMELocationInformation;

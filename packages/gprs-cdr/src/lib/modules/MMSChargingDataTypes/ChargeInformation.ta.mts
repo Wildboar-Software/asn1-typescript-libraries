@@ -76,8 +76,8 @@ class ChargeInformation {
     readonly chargetype: OPTIONAL<ChargeType>;
 
     constructor (
-        chargedparty: OPTIONAL<ChargedParty>,
-        chargetype: OPTIONAL<ChargeType>
+        chargedparty?: OPTIONAL<ChargedParty>,
+        chargetype?: OPTIONAL<ChargeType>
     ) {
         this.chargedparty = chargedparty;
         this.chargetype = chargetype;

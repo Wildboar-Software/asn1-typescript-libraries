@@ -55,7 +55,7 @@ class TraceInterfaceList {
          * @public
          * @readonly
          */
-        readonly msc_s_List: OPTIONAL<MSC_S_InterfaceList>,
+        readonly msc_s_List?: OPTIONAL<MSC_S_InterfaceList>,
         /**
          * @summary `mgw_List`.
          * @description
@@ -65,7 +65,7 @@ class TraceInterfaceList {
          * @public
          * @readonly
          */
-        readonly mgw_List: OPTIONAL<MGW_InterfaceList>,
+        readonly mgw_List?: OPTIONAL<MGW_InterfaceList>,
         /**
          * @summary `sgsn_List`.
          * @description
@@ -75,7 +75,7 @@ class TraceInterfaceList {
          * @public
          * @readonly
          */
-        readonly sgsn_List: OPTIONAL<SGSN_InterfaceList>,
+        readonly sgsn_List?: OPTIONAL<SGSN_InterfaceList>,
         /**
          * @summary `ggsn_List`.
          * @description
@@ -85,7 +85,7 @@ class TraceInterfaceList {
          * @public
          * @readonly
          */
-        readonly ggsn_List: OPTIONAL<GGSN_InterfaceList>,
+        readonly ggsn_List?: OPTIONAL<GGSN_InterfaceList>,
         /**
          * @summary `rnc_List`.
          * @description
@@ -95,7 +95,7 @@ class TraceInterfaceList {
          * @public
          * @readonly
          */
-        readonly rnc_List: OPTIONAL<RNC_InterfaceList>,
+        readonly rnc_List?: OPTIONAL<RNC_InterfaceList>,
         /**
          * @summary `bmsc_List`.
          * @description
@@ -105,7 +105,7 @@ class TraceInterfaceList {
          * @public
          * @readonly
          */
-        readonly bmsc_List: OPTIONAL<BMSC_InterfaceList>,
+        readonly bmsc_List?: OPTIONAL<BMSC_InterfaceList>,
         /**
          * @summary `mme_List`.
          * @description
@@ -115,7 +115,7 @@ class TraceInterfaceList {
          * @public
          * @readonly
          */
-        readonly mme_List: OPTIONAL<MME_InterfaceList>,
+        readonly mme_List?: OPTIONAL<MME_InterfaceList>,
         /**
          * @summary `sgw_List`.
          * @description
@@ -125,7 +125,7 @@ class TraceInterfaceList {
          * @public
          * @readonly
          */
-        readonly sgw_List: OPTIONAL<SGW_InterfaceList>,
+        readonly sgw_List?: OPTIONAL<SGW_InterfaceList>,
         /**
          * @summary `pgw_List`.
          * @description
@@ -135,7 +135,7 @@ class TraceInterfaceList {
          * @public
          * @readonly
          */
-        readonly pgw_List: OPTIONAL<PGW_InterfaceList>,
+        readonly pgw_List?: OPTIONAL<PGW_InterfaceList>,
         /**
          * @summary `eNB_List`.
          * @description
@@ -145,7 +145,7 @@ class TraceInterfaceList {
          * @public
          * @readonly
          */
-        readonly eNB_List: OPTIONAL<ENB_InterfaceList>,
+        readonly eNB_List?: OPTIONAL<ENB_InterfaceList>,
         /**
          * @summary Extensions that are not recognized.
          * @public

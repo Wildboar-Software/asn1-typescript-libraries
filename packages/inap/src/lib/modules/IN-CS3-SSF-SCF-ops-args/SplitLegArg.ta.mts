@@ -59,7 +59,7 @@ class SplitLegArg {
     constructor (
         legToBeSplit: LegID,
         newCallSegment: INTEGER,
-        extensions: OPTIONAL<Extensions>,
+        extensions?: OPTIONAL<Extensions>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.legToBeSplit = legToBeSplit;

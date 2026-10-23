@@ -325,14 +325,14 @@ class ChargingRecord {
         duration: INTEGER,
         recordSequenceNumber: OPTIONAL<INTEGER>,
         causeForRecClosing: CauseForRecClosing,
-        diagnostics: OPTIONAL<Diagnostics>,
-        localRecordSequenceNumber: OPTIONAL<INTEGER>,
-        recordExtensions: OPTIONAL<ManagementExtension[]>,
-        pDUSessionChargingInformation: OPTIONAL<PDUSessionChargingInformation>,
-        roamingQBCInformation: OPTIONAL<RoamingQBCInformation>,
-        sMSChargingInformation: OPTIONAL<SMSChargingInformation>,
-        chargingSessionIdentifier: OPTIONAL<OCTET_STRING>,
-        serviceSpecificationInformation: OPTIONAL<OCTET_STRING>
+        diagnostics?: OPTIONAL<Diagnostics>,
+        localRecordSequenceNumber?: OPTIONAL<INTEGER>,
+        recordExtensions?: OPTIONAL<ManagementExtension[]>,
+        pDUSessionChargingInformation?: OPTIONAL<PDUSessionChargingInformation>,
+        roamingQBCInformation?: OPTIONAL<RoamingQBCInformation>,
+        sMSChargingInformation?: OPTIONAL<SMSChargingInformation>,
+        chargingSessionIdentifier?: OPTIONAL<OCTET_STRING>,
+        serviceSpecificationInformation?: OPTIONAL<OCTET_STRING>
     ) {
         this.recordType = recordType;
         this.recordingNetworkFunctionID = recordingNetworkFunctionID;

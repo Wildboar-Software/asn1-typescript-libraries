@@ -114,11 +114,11 @@ class Espec_2 {
     readonly elements: OPTIONAL<ElementRequest[]>;
 
     constructor (
-        elementSetNames: OPTIONAL<InternationalString[]>,
-        defaultVariantSetId: OPTIONAL<OBJECT_IDENTIFIER>,
-        defaultVariantRequest: OPTIONAL<Variant>,
-        defaultTagType: OPTIONAL<INTEGER>,
-        elements: OPTIONAL<ElementRequest[]>
+        elementSetNames?: OPTIONAL<InternationalString[]>,
+        defaultVariantSetId?: OPTIONAL<OBJECT_IDENTIFIER>,
+        defaultVariantRequest?: OPTIONAL<Variant>,
+        defaultTagType?: OPTIONAL<INTEGER>,
+        elements?: OPTIONAL<ElementRequest[]>
     ) {
         this.elementSetNames = elementSetNames;
         this.defaultVariantSetId = defaultVariantSetId;

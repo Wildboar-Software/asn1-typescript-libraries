@@ -91,8 +91,8 @@ class ActivateServiceFilteringArg {
         filteringCharacteristics: FilteringCharacteristics,
         filteringTimeOut: FilteringTimeOut,
         filteringCriteria: FilteringCriteria,
-        startTime: OPTIONAL<DateAndTime>,
-        extensions: OPTIONAL<ExtensionField[]>,
+        startTime?: OPTIONAL<DateAndTime>,
+        extensions?: OPTIONAL<ExtensionField[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.filteredCallTreatment = filteredCallTreatment;

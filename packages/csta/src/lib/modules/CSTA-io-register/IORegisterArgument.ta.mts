@@ -50,7 +50,7 @@ class IORegisterArgument {
          * @public
          * @readonly
          */
-        readonly ioDevice: OPTIONAL<DeviceID>,
+        readonly ioDevice?: OPTIONAL<DeviceID>,
         /**
          * @summary `extensions`.
          * @description
@@ -61,7 +61,7 @@ class IORegisterArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

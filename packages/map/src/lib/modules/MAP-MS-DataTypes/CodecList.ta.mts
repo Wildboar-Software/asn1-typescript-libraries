@@ -48,49 +48,49 @@ class CodecList {
          * @public
          * @readonly
          */
-        readonly codec2: OPTIONAL<Codec>,
+        readonly codec2?: OPTIONAL<Codec>,
         /**
          * @summary `codec3`.
          * @public
          * @readonly
          */
-        readonly codec3: OPTIONAL<Codec>,
+        readonly codec3?: OPTIONAL<Codec>,
         /**
          * @summary `codec4`.
          * @public
          * @readonly
          */
-        readonly codec4: OPTIONAL<Codec>,
+        readonly codec4?: OPTIONAL<Codec>,
         /**
          * @summary `codec5`.
          * @public
          * @readonly
          */
-        readonly codec5: OPTIONAL<Codec>,
+        readonly codec5?: OPTIONAL<Codec>,
         /**
          * @summary `codec6`.
          * @public
          * @readonly
          */
-        readonly codec6: OPTIONAL<Codec>,
+        readonly codec6?: OPTIONAL<Codec>,
         /**
          * @summary `codec7`.
          * @public
          * @readonly
          */
-        readonly codec7: OPTIONAL<Codec>,
+        readonly codec7?: OPTIONAL<Codec>,
         /**
          * @summary `codec8`.
          * @public
          * @readonly
          */
-        readonly codec8: OPTIONAL<Codec>,
+        readonly codec8?: OPTIONAL<Codec>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

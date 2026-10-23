@@ -54,7 +54,7 @@ class GroupPickupCallResult {
          * @public
          * @readonly
          */
-        readonly pickedCall: OPTIONAL<ConnectionID>,
+        readonly pickedCall?: OPTIONAL<ConnectionID>,
         /**
          * @summary `pickedCallInfo`.
          * @description
@@ -65,7 +65,7 @@ class GroupPickupCallResult {
          * @public
          * @readonly
          */
-        readonly pickedCallInfo: OPTIONAL<ConnectionInformation>,
+        readonly pickedCallInfo?: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `callLinkageData`.
          * @description
@@ -75,7 +75,7 @@ class GroupPickupCallResult {
          * @public
          * @readonly
          */
-        readonly callLinkageData: OPTIONAL<CallLinkageData>,
+        readonly callLinkageData?: OPTIONAL<CallLinkageData>,
         /**
          * @summary `extensions`.
          * @description
@@ -86,7 +86,7 @@ class GroupPickupCallResult {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

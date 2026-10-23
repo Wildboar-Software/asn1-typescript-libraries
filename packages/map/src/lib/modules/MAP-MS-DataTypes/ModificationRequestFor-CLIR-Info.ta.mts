@@ -45,7 +45,7 @@ class ModificationRequestFor_CLIR_Info {
          * @public
          * @readonly
          */
-        readonly ss_Status: OPTIONAL<Ext_SS_Status>,
+        readonly ss_Status?: OPTIONAL<Ext_SS_Status>,
         /**
          * @summary `cliRestrictionOption`.
          * @description
@@ -55,7 +55,7 @@ class ModificationRequestFor_CLIR_Info {
          * @public
          * @readonly
          */
-        readonly cliRestrictionOption: OPTIONAL<CliRestrictionOption>,
+        readonly cliRestrictionOption?: OPTIONAL<CliRestrictionOption>,
         /**
          * @summary `modifyNotificationToCSE`.
          * @description
@@ -66,13 +66,13 @@ class ModificationRequestFor_CLIR_Info {
          * @public
          * @readonly
          */
-        readonly modifyNotificationToCSE: OPTIONAL<ModificationInstruction>,
+        readonly modifyNotificationToCSE?: OPTIONAL<ModificationInstruction>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

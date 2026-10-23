@@ -92,7 +92,7 @@ class RequestFirstStatusMatchReportArg {
         correlationID: OPTIONAL<CorrelationID>,
         monitorDuration: OPTIONAL<Duration>,
         extensions: ExtensionField[],
-        bearerCapability: OPTIONAL<BearerCapability>,
+        bearerCapability?: OPTIONAL<BearerCapability>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.resourceID = resourceID;

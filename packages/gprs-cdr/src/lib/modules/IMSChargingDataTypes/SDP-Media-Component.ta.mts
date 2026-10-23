@@ -134,12 +134,12 @@ class SDP_Media_Component {
     readonly transcoderInsertedIndication: OPTIONAL<BOOLEAN>;
 
     constructor (
-        sDP_Media_Name: OPTIONAL<GraphicString>,
-        sDP_Media_Descriptions: OPTIONAL<GraphicString[]>,
-        accessCorrelationID: OPTIONAL<AccessCorrelationID>,
-        localGWInsertedIndication: OPTIONAL<BOOLEAN>,
-        iPRealmDefaultIndication: OPTIONAL<BOOLEAN>,
-        transcoderInsertedIndication: OPTIONAL<BOOLEAN>
+        sDP_Media_Name?: OPTIONAL<GraphicString>,
+        sDP_Media_Descriptions?: OPTIONAL<GraphicString[]>,
+        accessCorrelationID?: OPTIONAL<AccessCorrelationID>,
+        localGWInsertedIndication?: OPTIONAL<BOOLEAN>,
+        iPRealmDefaultIndication?: OPTIONAL<BOOLEAN>,
+        transcoderInsertedIndication?: OPTIONAL<BOOLEAN>
     ) {
         this.sDP_Media_Name = sDP_Media_Name;
         this.sDP_Media_Descriptions = sDP_Media_Descriptions;

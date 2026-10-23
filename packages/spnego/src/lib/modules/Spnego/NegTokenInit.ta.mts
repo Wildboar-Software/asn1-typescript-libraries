@@ -35,25 +35,25 @@ class NegTokenInit {
          * @public
          * @readonly
          */
-        readonly mechTypes: OPTIONAL<MechTypeList>,
+        readonly mechTypes?: OPTIONAL<MechTypeList>,
         /**
          * @summary `reqFlags`.
          * @public
          * @readonly
          */
-        readonly reqFlags: OPTIONAL<ContextFlags>,
+        readonly reqFlags?: OPTIONAL<ContextFlags>,
         /**
          * @summary `mechToken`.
          * @public
          * @readonly
          */
-        readonly mechToken: OPTIONAL<OCTET_STRING>,
+        readonly mechToken?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `mechListMIC`.
          * @public
          * @readonly
          */
-        readonly mechListMIC: OPTIONAL<OCTET_STRING>
+        readonly mechListMIC?: OPTIONAL<OCTET_STRING>
     ) {}
 
     /**

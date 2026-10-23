@@ -102,7 +102,7 @@ class ForwardingEvent {
          * @public
          * @readonly
          */
-        readonly forwardTo: OPTIONAL<DeviceID>,
+        readonly forwardTo?: OPTIONAL<DeviceID>,
         /**
          * @summary `forwardDefault`.
          * @description
@@ -112,7 +112,7 @@ class ForwardingEvent {
          * @public
          * @readonly
          */
-        readonly forwardDefault: OPTIONAL<ForwardDefault>,
+        readonly forwardDefault?: OPTIONAL<ForwardDefault>,
         /**
          * @summary `ringCount`.
          * @description
@@ -121,7 +121,7 @@ class ForwardingEvent {
          * @public
          * @readonly
          */
-        readonly ringCount: OPTIONAL<INTEGER>,
+        readonly ringCount?: OPTIONAL<INTEGER>,
         /**
          * @summary `ringDuration`.
          * @description
@@ -130,7 +130,7 @@ class ForwardingEvent {
          * @public
          * @readonly
          */
-        readonly ringDuration: OPTIONAL<INTEGER>,
+        readonly ringDuration?: OPTIONAL<INTEGER>,
         /**
          * @summary `extensions`.
          * @description
@@ -140,7 +140,7 @@ class ForwardingEvent {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

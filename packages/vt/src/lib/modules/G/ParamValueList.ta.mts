@@ -53,7 +53,7 @@ class ParamValueList {
          * @public
          * @readonly
          */
-        readonly displayObjects: OPTIONAL<CDS_Values>,
+        readonly displayObjects?: OPTIONAL<CDS_Values>,
         /**
          * @summary `controlObjects`.
          * @description
@@ -62,7 +62,7 @@ class ParamValueList {
          * @public
          * @readonly
          */
-        readonly controlObjects: OPTIONAL<CSS_Values>,
+        readonly controlObjects?: OPTIONAL<CSS_Values>,
         /**
          * @summary `deviceObjects`.
          * @description
@@ -71,7 +71,7 @@ class ParamValueList {
          * @public
          * @readonly
          */
-        readonly deviceObjects: OPTIONAL<DEV_Values>,
+        readonly deviceObjects?: OPTIONAL<DEV_Values>,
         /**
          * @summary `deliveryControl`.
          * @description
@@ -81,7 +81,7 @@ class ParamValueList {
          * @public
          * @readonly
          */
-        readonly deliveryControl: OPTIONAL<ParamValueList_deliveryControl>
+        readonly deliveryControl?: OPTIONAL<ParamValueList_deliveryControl>
     ) {}
 
     /**

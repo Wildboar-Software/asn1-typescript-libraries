@@ -35,7 +35,7 @@ class UnknownSubscriberParam {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `unknownSubscriberDiagnostic`.
          * @description
@@ -46,7 +46,7 @@ class UnknownSubscriberParam {
          * @public
          * @readonly
          */
-        readonly unknownSubscriberDiagnostic: OPTIONAL<UnknownSubscriberDiagnostic>,
+        readonly unknownSubscriberDiagnostic?: OPTIONAL<UnknownSubscriberDiagnostic>,
         /**
          * @summary Extensions that are not recognized.
          * @public

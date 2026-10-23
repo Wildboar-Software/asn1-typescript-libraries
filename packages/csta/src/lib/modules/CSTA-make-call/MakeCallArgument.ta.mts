@@ -119,7 +119,7 @@ class MakeCallArgument {
          * @public
          * @readonly
          */
-        readonly accountCode: OPTIONAL<AccountInfo>,
+        readonly accountCode?: OPTIONAL<AccountInfo>,
         /**
          * @summary `authCode`.
          * @description
@@ -129,7 +129,7 @@ class MakeCallArgument {
          * @public
          * @readonly
          */
-        readonly authCode: OPTIONAL<AuthCode>,
+        readonly authCode?: OPTIONAL<AuthCode>,
         /**
          * @summary `autoOriginate`.
          * @description
@@ -142,7 +142,7 @@ class MakeCallArgument {
          * @public
          * @readonly
          */
-        readonly autoOriginate: OPTIONAL<AutoOriginate>,
+        readonly autoOriginate?: OPTIONAL<AutoOriginate>,
         /**
          * @summary `correlatorData`.
          * @description
@@ -153,7 +153,7 @@ class MakeCallArgument {
          * @public
          * @readonly
          */
-        readonly correlatorData: OPTIONAL<CorrelatorData>,
+        readonly correlatorData?: OPTIONAL<CorrelatorData>,
         /**
          * @summary `userData`.
          * @description
@@ -163,7 +163,7 @@ class MakeCallArgument {
          * @public
          * @readonly
          */
-        readonly userData: OPTIONAL<UserData>,
+        readonly userData?: OPTIONAL<UserData>,
         /**
          * @summary `callCharacteristics`.
          * @description
@@ -173,7 +173,7 @@ class MakeCallArgument {
          * @public
          * @readonly
          */
-        readonly callCharacteristics: OPTIONAL<CallCharacteristics>,
+        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
         /**
          * @summary `mediaCallCharacteristics`.
          * @description
@@ -185,7 +185,7 @@ class MakeCallArgument {
          * @public
          * @readonly
          */
-        readonly mediaCallCharacteristics: OPTIONAL<MediaCallCharacteristics>,
+        readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
         /**
          * @summary `callingConnectionInfo`.
          * @description
@@ -196,7 +196,7 @@ class MakeCallArgument {
          * @public
          * @readonly
          */
-        readonly callingConnectionInfo: OPTIONAL<ConnectionInformation>,
+        readonly callingConnectionInfo?: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `subjectOfCall`.
          * @description
@@ -206,7 +206,7 @@ class MakeCallArgument {
          * @public
          * @readonly
          */
-        readonly subjectOfCall: OPTIONAL<SubjectOfCall>,
+        readonly subjectOfCall?: OPTIONAL<SubjectOfCall>,
         /**
          * @summary `languagePreferences`.
          * @description
@@ -216,7 +216,7 @@ class MakeCallArgument {
          * @public
          * @readonly
          */
-        readonly languagePreferences: OPTIONAL<LanguagePreferences>,
+        readonly languagePreferences?: OPTIONAL<LanguagePreferences>,
         /**
          * @summary `reason`.
          * @description
@@ -227,7 +227,7 @@ class MakeCallArgument {
          * @public
          * @readonly
          */
-        readonly reason: OPTIONAL<EventCause>,
+        readonly reason?: OPTIONAL<EventCause>,
         /**
          * @summary `extensions`.
          * @description
@@ -238,7 +238,7 @@ class MakeCallArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

@@ -62,7 +62,7 @@ class O_BcsmCamelTDP_Criteria {
          * @public
          * @readonly
          */
-        readonly destinationNumberCriteria: OPTIONAL<DestinationNumberCriteria>,
+        readonly destinationNumberCriteria?: OPTIONAL<DestinationNumberCriteria>,
         /**
          * @summary `basicServiceCriteria`.
          * @description
@@ -73,7 +73,7 @@ class O_BcsmCamelTDP_Criteria {
          * @public
          * @readonly
          */
-        readonly basicServiceCriteria: OPTIONAL<BasicServiceCriteria>,
+        readonly basicServiceCriteria?: OPTIONAL<BasicServiceCriteria>,
         /**
          * @summary `callTypeCriteria`.
          * @description
@@ -84,7 +84,7 @@ class O_BcsmCamelTDP_Criteria {
          * @public
          * @readonly
          */
-        readonly callTypeCriteria: OPTIONAL<CallTypeCriteria>,
+        readonly callTypeCriteria?: OPTIONAL<CallTypeCriteria>,
         /**
          * @summary `o_CauseValueCriteria`.
          * @description
@@ -95,13 +95,13 @@ class O_BcsmCamelTDP_Criteria {
          * @public
          * @readonly
          */
-        readonly o_CauseValueCriteria: OPTIONAL<O_CauseValueCriteria>,
+        readonly o_CauseValueCriteria?: OPTIONAL<O_CauseValueCriteria>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

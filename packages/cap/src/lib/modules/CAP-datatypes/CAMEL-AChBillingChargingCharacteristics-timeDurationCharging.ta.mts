@@ -51,7 +51,7 @@ export class CAMEL_AChBillingChargingCharacteristics_timeDurationCharging {
          * @public
          * @readonly
          */
-        readonly releaseIfdurationExceeded: OPTIONAL<BOOLEAN>,
+        readonly releaseIfdurationExceeded?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `tariffSwitchInterval`.
          * @description
@@ -64,7 +64,7 @@ export class CAMEL_AChBillingChargingCharacteristics_timeDurationCharging {
          * @public
          * @readonly
          */
-        readonly tariffSwitchInterval: OPTIONAL<INTEGER>,
+        readonly tariffSwitchInterval?: OPTIONAL<INTEGER>,
         /**
          * @summary `audibleIndicator`.
          * @description
@@ -76,8 +76,8 @@ export class CAMEL_AChBillingChargingCharacteristics_timeDurationCharging {
          * @public
          * @readonly
          */
-        readonly audibleIndicator: OPTIONAL<AudibleIndicator>,
-        readonly extensions: OPTIONAL<Extensions>,
+        readonly audibleIndicator?: OPTIONAL<AudibleIndicator>,
+        readonly extensions?: OPTIONAL<Extensions>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {
         if ((typeof maxCallPeriodDuration === "bigint" ? (maxCallPeriodDuration < 1n || maxCallPeriodDuration > 864000n) : (maxCallPeriodDuration < 1 || maxCallPeriodDuration > 864000))) {

@@ -83,8 +83,8 @@ class TSSmartCardCreds {
     constructor (
         pin: OCTET_STRING,
         cspData: TSCspDataDetail,
-        userHint: OPTIONAL<OCTET_STRING>,
-        domainHint: OPTIONAL<OCTET_STRING>
+        userHint?: OPTIONAL<OCTET_STRING>,
+        domainHint?: OPTIONAL<OCTET_STRING>
     ) {
         this.pin = pin;
         this.cspData = cspData;

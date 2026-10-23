@@ -76,11 +76,11 @@ class EventReportFacilityArg {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        componentType: OPTIONAL<ComponentType>,
-        component: OPTIONAL<Component>,
-        legID: OPTIONAL<LegID>,
-        componentCorrelationID: OPTIONAL<ComponentCorrelationID>,
-        extensions: OPTIONAL<Extensions>,
+        componentType?: OPTIONAL<ComponentType>,
+        component?: OPTIONAL<Component>,
+        legID?: OPTIONAL<LegID>,
+        componentCorrelationID?: OPTIONAL<ComponentCorrelationID>,
+        extensions?: OPTIONAL<Extensions>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.componentType = componentType;

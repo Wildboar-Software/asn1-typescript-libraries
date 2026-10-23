@@ -32,13 +32,13 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export class CAI_GSM0224 {
     constructor (
-        readonly e1: OPTIONAL<INTEGER>,
-        readonly e2: OPTIONAL<INTEGER>,
-        readonly e3: OPTIONAL<INTEGER>,
-        readonly e4: OPTIONAL<INTEGER>,
-        readonly e5: OPTIONAL<INTEGER>,
-        readonly e6: OPTIONAL<INTEGER>,
-        readonly e7: OPTIONAL<INTEGER>,
+        readonly e1?: OPTIONAL<INTEGER>,
+        readonly e2?: OPTIONAL<INTEGER>,
+        readonly e3?: OPTIONAL<INTEGER>,
+        readonly e4?: OPTIONAL<INTEGER>,
+        readonly e5?: OPTIONAL<INTEGER>,
+        readonly e6?: OPTIONAL<INTEGER>,
+        readonly e7?: OPTIONAL<INTEGER>,
     ) {
         for (const [name, n] of [["e1", e1], ["e2", e2], ["e3", e3], ["e4", e4], ["e5", e5], ["e6", e6], ["e7", e7]] as const) {
             if (n !== undefined && (typeof n === "bigint" ? (n < 0n || n > 8191n) : (n < 0 || n > 8191))) {

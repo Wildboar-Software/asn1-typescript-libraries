@@ -127,10 +127,10 @@ class StartOfInterceptionWithEstablishedIMSDataChannel {
 
     constructor (
         targetIdentity: IMPU,
-        callingIdentity: OPTIONAL<IMPU>,
-        calledIdentities: OPTIONAL<IMPU[]>,
-        sessionEventNotification: OPTIONAL<SBIType>,
-        mediaInstructions: OPTIONAL<SBIType>,
+        callingIdentity?: OPTIONAL<IMPU>,
+        calledIdentities?: OPTIONAL<IMPU[]>,
+        sessionEventNotification?: OPTIONAL<SBIType>,
+        mediaInstructions?: OPTIONAL<SBIType>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.targetIdentity = targetIdentity;

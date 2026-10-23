@@ -155,8 +155,8 @@ class ILHIPayload {
     constructor (
         iLHIObjId: OBJECT_IDENTIFIER,
         resPayload: EncapsulationPayload,
-        mappingInfo: OPTIONAL<MappingInfo>,
-        originalPayload: OPTIONAL<EncapsulationPayload>,
+        mappingInfo?: OPTIONAL<MappingInfo>,
+        originalPayload?: OPTIONAL<EncapsulationPayload>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.iLHIObjId = iLHIObjId;

@@ -65,7 +65,7 @@ class EvidenceRecordWantBack {
 
     constructor (
         targetWantBack: OBJECT_IDENTIFIER,
-        evidenceRecord: OPTIONAL<EvidenceRecord>
+        evidenceRecord?: OPTIONAL<EvidenceRecord>
     ) {
         this.targetWantBack = targetWantBack;
         this.evidenceRecord = evidenceRecord;

@@ -138,9 +138,9 @@ class IPIRIOnly {
         iPIRIOnlyObjId: RELATIVE_OID,
         iPInformation: IPInformation,
         protocolInformation: ProtocolInformation,
-        iPAggregatedNbrOfPackets: OPTIONAL<INTEGER>,
-        iPAggregatedNbrOfBytes: OPTIONAL<INTEGER>,
-        pDSRInformation: OPTIONAL<PDSRInformation>,
+        iPAggregatedNbrOfPackets?: OPTIONAL<INTEGER>,
+        iPAggregatedNbrOfBytes?: OPTIONAL<INTEGER>,
+        pDSRInformation?: OPTIONAL<PDSRInformation>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.iPIRIOnlyObjId = iPIRIOnlyObjId;

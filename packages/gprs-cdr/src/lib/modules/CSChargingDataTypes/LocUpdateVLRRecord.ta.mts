@@ -266,9 +266,9 @@ class LocUpdateVLRRecord {
         newLocation: Location_info,
         msClassmark: OCTET_STRING,
         updateTime: OCTET_STRING,
-        updateResult: OPTIONAL<HLRIntResult>,
-        recordExtensions: OPTIONAL<ManagementExtension[]>,
-        locationExtension: OPTIONAL<BIT_STRING>
+        updateResult?: OPTIONAL<HLRIntResult>,
+        recordExtensions?: OPTIONAL<ManagementExtension[]>,
+        locationExtension?: OPTIONAL<BIT_STRING>
     ) {
         this.recordType = recordType;
         this.servedIMSI = servedIMSI;

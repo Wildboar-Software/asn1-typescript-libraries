@@ -58,7 +58,7 @@ class BKQcontent {
          * @public
          * @readonly
          */
-        readonly standard: OPTIONAL<BKQcontent_standard>,
+        readonly standard?: OPTIONAL<BKQcontent_standard>,
         /**
          * @summary `profile`.
          * @description
@@ -67,7 +67,7 @@ class BKQcontent {
          * @public
          * @readonly
          */
-        readonly profile: OPTIONAL<BKQcontent_profile_Item[]>,
+        readonly profile?: OPTIONAL<BKQcontent_profile_Item[]>,
         /**
          * @summary `stuser`.
          * @description
@@ -76,7 +76,7 @@ class BKQcontent {
          * @public
          * @readonly
          */
-        readonly stuser: OPTIONAL<BKQcontent_stuser_Item[]>
+        readonly stuser?: OPTIONAL<BKQcontent_stuser_Item[]>
     ) {}
 
     /**

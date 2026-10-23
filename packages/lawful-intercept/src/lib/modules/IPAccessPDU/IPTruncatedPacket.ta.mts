@@ -64,7 +64,7 @@ class IPTruncatedPacket {
 
     constructor (
         truncatedPacket: OCTET_STRING,
-        originalLength: OPTIONAL<INTEGER>,
+        originalLength?: OPTIONAL<INTEGER>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.truncatedPacket = truncatedPacket;

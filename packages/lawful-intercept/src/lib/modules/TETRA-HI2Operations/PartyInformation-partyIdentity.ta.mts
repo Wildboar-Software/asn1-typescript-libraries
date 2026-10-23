@@ -210,15 +210,15 @@ class PartyInformation_partyIdentity {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        imei: OPTIONAL<OCTET_STRING>,
-        tei: OPTIONAL<OCTET_STRING>,
-        imsi: OPTIONAL<OCTET_STRING>,
-        callingPartyNumber: OPTIONAL<CallingPartyNumber>,
-        calledPartyNumber: OPTIONAL<CalledPartyNumber>,
-        msISDN: OPTIONAL<OCTET_STRING>,
-        e164_Format: OPTIONAL<OCTET_STRING>,
-        sip_uri: OPTIONAL<OCTET_STRING>,
-        tel_url: OPTIONAL<OCTET_STRING>,
+        imei?: OPTIONAL<OCTET_STRING>,
+        tei?: OPTIONAL<OCTET_STRING>,
+        imsi?: OPTIONAL<OCTET_STRING>,
+        callingPartyNumber?: OPTIONAL<CallingPartyNumber>,
+        calledPartyNumber?: OPTIONAL<CalledPartyNumber>,
+        msISDN?: OPTIONAL<OCTET_STRING>,
+        e164_Format?: OPTIONAL<OCTET_STRING>,
+        sip_uri?: OPTIONAL<OCTET_STRING>,
+        tel_url?: OPTIONAL<OCTET_STRING>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.imei = imei;

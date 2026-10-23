@@ -86,7 +86,7 @@ class RingerStatusEvent {
          * @public
          * @readonly
          */
-        readonly ringMode: OPTIONAL<RingMode>,
+        readonly ringMode?: OPTIONAL<RingMode>,
         /**
          * @summary `ringCount`.
          * @description
@@ -95,7 +95,7 @@ class RingerStatusEvent {
          * @public
          * @readonly
          */
-        readonly ringCount: OPTIONAL<INTEGER>,
+        readonly ringCount?: OPTIONAL<INTEGER>,
         /**
          * @summary `ringDuration`.
          * @description
@@ -104,7 +104,7 @@ class RingerStatusEvent {
          * @public
          * @readonly
          */
-        readonly ringDuration: OPTIONAL<INTEGER>,
+        readonly ringDuration?: OPTIONAL<INTEGER>,
         /**
          * @summary `ringPattern`.
          * @description
@@ -113,7 +113,7 @@ class RingerStatusEvent {
          * @public
          * @readonly
          */
-        readonly ringPattern: OPTIONAL<INTEGER>,
+        readonly ringPattern?: OPTIONAL<INTEGER>,
         /**
          * @summary `ringVolume`.
          * @description
@@ -124,7 +124,7 @@ class RingerStatusEvent {
          * @public
          * @readonly
          */
-        readonly ringVolume: OPTIONAL<Volume>,
+        readonly ringVolume?: OPTIONAL<Volume>,
         /**
          * @summary `extensions`.
          * @description
@@ -134,7 +134,7 @@ class RingerStatusEvent {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

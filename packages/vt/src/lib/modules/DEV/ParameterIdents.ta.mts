@@ -64,7 +64,7 @@ class ParameterIdents {
          * @public
          * @readonly
          */
-        readonly defaultCOaccess: OPTIONAL<NULL>,
+        readonly defaultCOaccess?: OPTIONAL<NULL>,
         /**
          * @summary `defaultCOPriority`.
          * @description
@@ -73,7 +73,7 @@ class ParameterIdents {
          * @public
          * @readonly
          */
-        readonly defaultCOPriority: OPTIONAL<NULL>,
+        readonly defaultCOPriority?: OPTIONAL<NULL>,
         /**
          * @summary `deviceRepertoire`.
          * @description
@@ -83,7 +83,7 @@ class ParameterIdents {
          * @public
          * @readonly
          */
-        readonly deviceRepertoire: OPTIONAL<CompoundRepertoireIdent>,
+        readonly deviceRepertoire?: OPTIONAL<CompoundRepertoireIdent>,
         /**
          * @summary `deviceEmphasis`.
          * @description
@@ -93,7 +93,7 @@ class ParameterIdents {
          * @public
          * @readonly
          */
-        readonly deviceEmphasis: OPTIONAL<CompoundEmphasisIdent>,
+        readonly deviceEmphasis?: OPTIONAL<CompoundEmphasisIdent>,
         /**
          * @summary `deviceForeground`.
          * @description
@@ -103,7 +103,7 @@ class ParameterIdents {
          * @public
          * @readonly
          */
-        readonly deviceForeground: OPTIONAL<CompoundColourIdent>,
+        readonly deviceForeground?: OPTIONAL<CompoundColourIdent>,
         /**
          * @summary `deviceBackground`.
          * @description
@@ -113,7 +113,7 @@ class ParameterIdents {
          * @public
          * @readonly
          */
-        readonly deviceBackground: OPTIONAL<CompoundColourIdent>,
+        readonly deviceBackground?: OPTIONAL<CompoundColourIdent>,
         /**
          * @summary `minimumXarrayLength`.
          * @description
@@ -122,7 +122,7 @@ class ParameterIdents {
          * @public
          * @readonly
          */
-        readonly minimumXarrayLength: OPTIONAL<NULL>,
+        readonly minimumXarrayLength?: OPTIONAL<NULL>,
         /**
          * @summary `minimumYarrayLength`.
          * @description
@@ -131,7 +131,7 @@ class ParameterIdents {
          * @public
          * @readonly
          */
-        readonly minimumYarrayLength: OPTIONAL<NULL>,
+        readonly minimumYarrayLength?: OPTIONAL<NULL>,
         /**
          * @summary `deviceControlObjectNames`.
          * @description
@@ -141,7 +141,7 @@ class ParameterIdents {
          * @public
          * @readonly
          */
-        readonly deviceControlObjectNames: OPTIONAL<NULL>,
+        readonly deviceControlObjectNames?: OPTIONAL<NULL>,
         /**
          * @summary `deviceDisplayObjectName`.
          * @description
@@ -150,7 +150,7 @@ class ParameterIdents {
          * @public
          * @readonly
          */
-        readonly deviceDisplayObjectName: OPTIONAL<NULL>,
+        readonly deviceDisplayObjectName?: OPTIONAL<NULL>,
         /**
          * @summary `terminationEventList`.
          * @description
@@ -160,7 +160,7 @@ class ParameterIdents {
          * @public
          * @readonly
          */
-        readonly terminationEventList: OPTIONAL<NULL>,
+        readonly terminationEventList?: OPTIONAL<NULL>,
         /**
          * @summary `terminationLength`.
          * @description
@@ -169,7 +169,7 @@ class ParameterIdents {
          * @public
          * @readonly
          */
-        readonly terminationLength: OPTIONAL<NULL>,
+        readonly terminationLength?: OPTIONAL<NULL>,
         /**
          * @summary `terminationTimeout`.
          * @description
@@ -178,7 +178,7 @@ class ParameterIdents {
          * @public
          * @readonly
          */
-        readonly terminationTimeout: OPTIONAL<NULL>,
+        readonly terminationTimeout?: OPTIONAL<NULL>,
         /**
          * @summary `defaultCOtrigger`.
          * @description
@@ -187,7 +187,7 @@ class ParameterIdents {
          * @public
          * @readonly
          */
-        readonly defaultCOtrigger: OPTIONAL<NULL>,
+        readonly defaultCOtrigger?: OPTIONAL<NULL>,
         /**
          * @summary `defaultCOinitialValue`.
          * @description
@@ -196,7 +196,7 @@ class ParameterIdents {
          * @public
          * @readonly
          */
-        readonly defaultCOinitialValue: OPTIONAL<NULL>
+        readonly defaultCOinitialValue?: OPTIONAL<NULL>
     ) {}
 
     /**

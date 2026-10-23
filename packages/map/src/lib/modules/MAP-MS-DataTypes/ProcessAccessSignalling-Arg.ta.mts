@@ -74,7 +74,7 @@ class ProcessAccessSignalling_Arg {
          * @public
          * @readonly
          */
-        readonly selectedUMTS_Algorithms: OPTIONAL<SelectedUMTS_Algorithms>,
+        readonly selectedUMTS_Algorithms?: OPTIONAL<SelectedUMTS_Algorithms>,
         /**
          * @summary `selectedGSM_Algorithm`.
          * @description
@@ -87,7 +87,7 @@ class ProcessAccessSignalling_Arg {
          * @public
          * @readonly
          */
-        readonly selectedGSM_Algorithm: OPTIONAL<SelectedGSM_Algorithm>,
+        readonly selectedGSM_Algorithm?: OPTIONAL<SelectedGSM_Algorithm>,
         /**
          * @summary `chosenRadioResourceInformation`.
          * @description
@@ -99,7 +99,7 @@ class ProcessAccessSignalling_Arg {
          * @public
          * @readonly
          */
-        readonly chosenRadioResourceInformation: OPTIONAL<ChosenRadioResourceInformation>,
+        readonly chosenRadioResourceInformation?: OPTIONAL<ChosenRadioResourceInformation>,
         /**
          * @summary `selectedRab_Id`.
          * @description
@@ -112,13 +112,13 @@ class ProcessAccessSignalling_Arg {
          * @public
          * @readonly
          */
-        readonly selectedRab_Id: OPTIONAL<RAB_Id>,
+        readonly selectedRab_Id?: OPTIONAL<RAB_Id>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `iUSelectedCodec`.
          * @description
@@ -130,7 +130,7 @@ class ProcessAccessSignalling_Arg {
          * @public
          * @readonly
          */
-        readonly iUSelectedCodec: OPTIONAL<Codec>,
+        readonly iUSelectedCodec?: OPTIONAL<Codec>,
         /**
          * @summary `iuAvailableCodecsList`.
          * @description
@@ -143,7 +143,7 @@ class ProcessAccessSignalling_Arg {
          * @public
          * @readonly
          */
-        readonly iuAvailableCodecsList: OPTIONAL<CodecList>,
+        readonly iuAvailableCodecsList?: OPTIONAL<CodecList>,
         /**
          * @summary `aoipSelectedCodecTarget`.
          * @description
@@ -155,7 +155,7 @@ class ProcessAccessSignalling_Arg {
          * @public
          * @readonly
          */
-        readonly aoipSelectedCodecTarget: OPTIONAL<AoIPCodec>,
+        readonly aoipSelectedCodecTarget?: OPTIONAL<AoIPCodec>,
         /**
          * @summary `aoipAvailableCodecsListMap`.
          * @description
@@ -167,7 +167,7 @@ class ProcessAccessSignalling_Arg {
          * @public
          * @readonly
          */
-        readonly aoipAvailableCodecsListMap: OPTIONAL<AoIPCodecsList>,
+        readonly aoipAvailableCodecsListMap?: OPTIONAL<AoIPCodecsList>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -84,7 +84,7 @@ class Ext_ForwFeature {
          * @public
          * @readonly
          */
-        readonly forwardedToNumber: OPTIONAL<ISDN_AddressString>,
+        readonly forwardedToNumber?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `forwardedToSubaddress`.
          * @description
@@ -95,7 +95,7 @@ class Ext_ForwFeature {
          * @public
          * @readonly
          */
-        readonly forwardedToSubaddress: OPTIONAL<ISDN_SubaddressString>,
+        readonly forwardedToSubaddress?: OPTIONAL<ISDN_SubaddressString>,
         /**
          * @summary `forwardingOptions`.
          * @description
@@ -107,7 +107,7 @@ class Ext_ForwFeature {
          * @public
          * @readonly
          */
-        readonly forwardingOptions: OPTIONAL<Ext_ForwOptions>,
+        readonly forwardingOptions?: OPTIONAL<Ext_ForwOptions>,
         /**
          * @summary `noReplyConditionTime`.
          * @description
@@ -119,13 +119,13 @@ class Ext_ForwFeature {
          * @public
          * @readonly
          */
-        readonly noReplyConditionTime: OPTIONAL<Ext_NoRepCondTime>,
+        readonly noReplyConditionTime?: OPTIONAL<Ext_NoRepCondTime>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `longForwardedToNumber`.
          * @description
@@ -137,7 +137,7 @@ class Ext_ForwFeature {
          * @public
          * @readonly
          */
-        readonly longForwardedToNumber: OPTIONAL<FTN_AddressString>,
+        readonly longForwardedToNumber?: OPTIONAL<FTN_AddressString>,
         /**
          * @summary Extensions that are not recognized.
          * @public

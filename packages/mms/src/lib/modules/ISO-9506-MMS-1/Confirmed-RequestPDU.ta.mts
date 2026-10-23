@@ -91,7 +91,7 @@ class Confirmed_RequestPDU {
          * @public
          * @readonly
          */
-        readonly service_ext: OPTIONAL<Request_Detail>,
+        readonly service_ext?: OPTIONAL<Request_Detail>,
         /**
          * @summary Extensions that are not recognized.
          * @public

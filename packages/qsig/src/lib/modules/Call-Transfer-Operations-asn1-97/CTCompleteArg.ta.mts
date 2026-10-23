@@ -115,10 +115,10 @@ class CTCompleteArg {
     constructor (
         endDesignation: EndDesignation,
         redirectionNumber: PresentedNumberScreened,
-        basicCallInfoElements: OPTIONAL<PSS1InformationElement>,
-        redirectionName: OPTIONAL<Name>,
-        callStatus: OPTIONAL<CallStatus>,
-        argumentExtension: OPTIONAL<CTCompleteArg_argumentExtension>
+        basicCallInfoElements?: OPTIONAL<PSS1InformationElement>,
+        redirectionName?: OPTIONAL<Name>,
+        callStatus?: OPTIONAL<CallStatus>,
+        argumentExtension?: OPTIONAL<CTCompleteArg_argumentExtension>
     ) {
         this.endDesignation = endDesignation;
         this.redirectionNumber = redirectionNumber;

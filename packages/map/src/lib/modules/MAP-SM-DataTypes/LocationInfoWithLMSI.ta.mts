@@ -97,7 +97,7 @@ class LocationInfoWithLMSI {
          * @public
          * @readonly
          */
-        readonly lmsi: OPTIONAL<LMSI>,
+        readonly lmsi?: OPTIONAL<LMSI>,
         /**
          * @summary `extensionContainer`.
          * @description
@@ -107,7 +107,7 @@ class LocationInfoWithLMSI {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `gprsNodeIndicator`.
          * @description
@@ -118,7 +118,7 @@ class LocationInfoWithLMSI {
          * @public
          * @readonly
          */
-        readonly gprsNodeIndicator: OPTIONAL<NULL>,
+        readonly gprsNodeIndicator?: OPTIONAL<NULL>,
         /**
          * @summary `additional_Number`.
          * @description
@@ -129,7 +129,7 @@ class LocationInfoWithLMSI {
          * @public
          * @readonly
          */
-        readonly additional_Number: OPTIONAL<Additional_Number>,
+        readonly additional_Number?: OPTIONAL<Additional_Number>,
         /**
          * @summary `networkNodeDiameterAddress`.
          * @description
@@ -139,7 +139,7 @@ class LocationInfoWithLMSI {
          * @public
          * @readonly
          */
-        readonly networkNodeDiameterAddress: OPTIONAL<NetworkNodeDiameterAddress>,
+        readonly networkNodeDiameterAddress?: OPTIONAL<NetworkNodeDiameterAddress>,
         /**
          * @summary `additionalNetworkNodeDiameterAddress`.
          * @description
@@ -149,7 +149,7 @@ class LocationInfoWithLMSI {
          * @public
          * @readonly
          */
-        readonly additionalNetworkNodeDiameterAddress: OPTIONAL<NetworkNodeDiameterAddress>,
+        readonly additionalNetworkNodeDiameterAddress?: OPTIONAL<NetworkNodeDiameterAddress>,
         /**
          * @summary `thirdNumber`.
          * @description
@@ -159,7 +159,7 @@ class LocationInfoWithLMSI {
          * @public
          * @readonly
          */
-        readonly thirdNumber: OPTIONAL<Additional_Number>,
+        readonly thirdNumber?: OPTIONAL<Additional_Number>,
         /**
          * @summary `thirdNetworkNodeDiameterAddress`.
          * @description
@@ -169,7 +169,7 @@ class LocationInfoWithLMSI {
          * @public
          * @readonly
          */
-        readonly thirdNetworkNodeDiameterAddress: OPTIONAL<NetworkNodeDiameterAddress>,
+        readonly thirdNetworkNodeDiameterAddress?: OPTIONAL<NetworkNodeDiameterAddress>,
         /**
          * @summary `imsNodeIndicator`.
          * @description
@@ -179,7 +179,7 @@ class LocationInfoWithLMSI {
          * @public
          * @readonly
          */
-        readonly imsNodeIndicator: OPTIONAL<NULL>,
+        readonly imsNodeIndicator?: OPTIONAL<NULL>,
         /**
          * @summary `smsf_3gpp_Number`.
          * @description
@@ -189,7 +189,7 @@ class LocationInfoWithLMSI {
          * @public
          * @readonly
          */
-        readonly smsf_3gpp_Number: OPTIONAL<ISDN_AddressString>,
+        readonly smsf_3gpp_Number?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `smsf_3gpp_DiameterAddress`.
          * @description
@@ -199,7 +199,7 @@ class LocationInfoWithLMSI {
          * @public
          * @readonly
          */
-        readonly smsf_3gpp_DiameterAddress: OPTIONAL<NetworkNodeDiameterAddress>,
+        readonly smsf_3gpp_DiameterAddress?: OPTIONAL<NetworkNodeDiameterAddress>,
         /**
          * @summary `smsf_non_3gpp_Number`.
          * @description
@@ -209,7 +209,7 @@ class LocationInfoWithLMSI {
          * @public
          * @readonly
          */
-        readonly smsf_non_3gpp_Number: OPTIONAL<ISDN_AddressString>,
+        readonly smsf_non_3gpp_Number?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `smsf_non_3gpp_DiameterAddress`.
          * @description
@@ -219,7 +219,7 @@ class LocationInfoWithLMSI {
          * @public
          * @readonly
          */
-        readonly smsf_non_3gpp_DiameterAddress: OPTIONAL<NetworkNodeDiameterAddress>,
+        readonly smsf_non_3gpp_DiameterAddress?: OPTIONAL<NetworkNodeDiameterAddress>,
         /**
          * @summary `smsf_3gpp_address_indicator`.
          * @description
@@ -230,7 +230,7 @@ class LocationInfoWithLMSI {
          * @public
          * @readonly
          */
-        readonly smsf_3gpp_address_indicator: OPTIONAL<NULL>,
+        readonly smsf_3gpp_address_indicator?: OPTIONAL<NULL>,
         /**
          * @summary `smsf_non_3gpp_address_indicator`.
          * @description
@@ -241,7 +241,7 @@ class LocationInfoWithLMSI {
          * @public
          * @readonly
          */
-        readonly smsf_non_3gpp_address_indicator: OPTIONAL<NULL>,
+        readonly smsf_non_3gpp_address_indicator?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @public

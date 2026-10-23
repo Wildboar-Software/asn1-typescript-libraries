@@ -257,10 +257,10 @@ class AMFLocationUpdate {
         gPSI: OPTIONAL<GPSI>,
         gUTI: OPTIONAL<FiveGGUTI>,
         location: Location,
-        deprecatedSMSOverNASIndicator: OPTIONAL<SMSOverNASIndicator>,
-        deprecatedOldGUTI: OPTIONAL<EPS5GGUTI>,
-        uEAreaIndication: OPTIONAL<UEAreaIndication>,
-        additionalUserIdentifiers: OPTIONAL<UserIdentifiers>,
+        deprecatedSMSOverNASIndicator?: OPTIONAL<SMSOverNASIndicator>,
+        deprecatedOldGUTI?: OPTIONAL<EPS5GGUTI>,
+        uEAreaIndication?: OPTIONAL<UEAreaIndication>,
+        additionalUserIdentifiers?: OPTIONAL<UserIdentifiers>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.sUPI = sUPI;

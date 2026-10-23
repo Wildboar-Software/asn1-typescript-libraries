@@ -212,14 +212,14 @@ class AMFUEServiceAccept {
     constructor (
         userIdentifiers: UserIdentifiers,
         serviceMessageIdentity: ServiceMessageIdentity,
-        serviceType: OPTIONAL<OCTET_STRING>,
-        fiveGTMSI: OPTIONAL<FiveGTMSI>,
-        uplinkDataStatus: OPTIONAL<OCTET_STRING>,
-        pDUSessionStatus: OPTIONAL<OCTET_STRING>,
-        deprecatedUERequestType: OPTIONAL<FiveGSMRequestType>,
-        pagingRestriction: OPTIONAL<PagingRestrictionIndicator>,
-        forbiddenTAIList: OPTIONAL<TAIList>,
-        uERequestType: OPTIONAL<MUSIMUERequestType>,
+        serviceType?: OPTIONAL<OCTET_STRING>,
+        fiveGTMSI?: OPTIONAL<FiveGTMSI>,
+        uplinkDataStatus?: OPTIONAL<OCTET_STRING>,
+        pDUSessionStatus?: OPTIONAL<OCTET_STRING>,
+        deprecatedUERequestType?: OPTIONAL<FiveGSMRequestType>,
+        pagingRestriction?: OPTIONAL<PagingRestrictionIndicator>,
+        forbiddenTAIList?: OPTIONAL<TAIList>,
+        uERequestType?: OPTIONAL<MUSIMUERequestType>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.userIdentifiers = userIdentifiers;

@@ -53,7 +53,7 @@ class WtatParamRes {
 
     constructor (
         wtatParamInfo: WtatParamInfo,
-        dummyExtension: OPTIONAL<DummyExtension>
+        dummyExtension?: OPTIONAL<DummyExtension>
     ) {
         this.wtatParamInfo = wtatParamInfo;
         this.dummyExtension = dummyExtension;

@@ -56,13 +56,13 @@ class AbsentSubscriberSM_Param {
          * @public
          * @readonly
          */
-        readonly absentSubscriberDiagnosticSM: OPTIONAL<AbsentSubscriberDiagnosticSM>,
+        readonly absentSubscriberDiagnosticSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `additionalAbsentSubscriberDiagnosticSM`.
          * @description
@@ -74,7 +74,7 @@ class AbsentSubscriberSM_Param {
          * @public
          * @readonly
          */
-        readonly additionalAbsentSubscriberDiagnosticSM: OPTIONAL<AbsentSubscriberDiagnosticSM>,
+        readonly additionalAbsentSubscriberDiagnosticSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>,
         /**
          * @summary `imsi`.
          * @description
@@ -86,7 +86,7 @@ class AbsentSubscriberSM_Param {
          * @public
          * @readonly
          */
-        readonly imsi: OPTIONAL<IMSI>,
+        readonly imsi?: OPTIONAL<IMSI>,
         /**
          * @summary `requestedRetransmissionTime`.
          * @description
@@ -98,13 +98,13 @@ class AbsentSubscriberSM_Param {
          * @public
          * @readonly
          */
-        readonly requestedRetransmissionTime: OPTIONAL<Time>,
+        readonly requestedRetransmissionTime?: OPTIONAL<Time>,
         /**
          * @summary `userIdentifierAlert`.
          * @public
          * @readonly
          */
-        readonly userIdentifierAlert: OPTIONAL<IMSI>,
+        readonly userIdentifierAlert?: OPTIONAL<IMSI>,
         /**
          * @summary Extensions that are not recognized.
          * @public

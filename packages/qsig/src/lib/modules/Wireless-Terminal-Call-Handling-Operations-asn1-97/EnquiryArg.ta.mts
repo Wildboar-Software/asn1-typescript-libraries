@@ -73,7 +73,7 @@ class EnquiryArg {
     constructor (
         pisnNumber: PartyNumber,
         qSIGInfoElement: PSS1InformationElement,
-        argExtension: OPTIONAL<WtmiExtension>
+        argExtension?: OPTIONAL<WtmiExtension>
     ) {
         this.pisnNumber = pisnNumber;
         this.qSIGInfoElement = qSIGInfoElement;

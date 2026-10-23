@@ -37,7 +37,7 @@ class AbsentSubscriberParam {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `absentSubscriberReason`.
          * @description
@@ -49,7 +49,7 @@ class AbsentSubscriberParam {
          * @public
          * @readonly
          */
-        readonly absentSubscriberReason: OPTIONAL<AbsentSubscriberReason>,
+        readonly absentSubscriberReason?: OPTIONAL<AbsentSubscriberReason>,
         /**
          * @summary Extensions that are not recognized.
          * @public

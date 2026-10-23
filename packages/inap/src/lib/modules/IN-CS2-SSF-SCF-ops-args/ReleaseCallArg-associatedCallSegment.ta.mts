@@ -43,7 +43,7 @@ class ReleaseCallArg_associatedCallSegment {
 
     constructor (
         callSegment: INTEGER,
-        releaseCause: OPTIONAL<Cause>
+        releaseCause?: OPTIONAL<Cause>
     ) {
         this.callSegment = callSegment;
         this.releaseCause = releaseCause;

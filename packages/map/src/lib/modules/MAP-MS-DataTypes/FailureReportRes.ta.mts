@@ -41,13 +41,13 @@ class FailureReportRes {
          * @public
          * @readonly
          */
-        readonly ggsn_Address: OPTIONAL<GSN_Address>,
+        readonly ggsn_Address?: OPTIONAL<GSN_Address>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

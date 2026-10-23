@@ -202,14 +202,14 @@ class LocationPresenceReport {
     constructor (
         type_: AMFEventType,
         timestamp: Timestamp,
-        areaList: OPTIONAL<AMFEventArea[]>,
-        timeZone: OPTIONAL<TimeZone>,
-        accessTypes: OPTIONAL<AccessType[]>,
-        rMInfoList: OPTIONAL<RMInfo[]>,
-        cMInfoList: OPTIONAL<CMInfo[]>,
-        reachability: OPTIONAL<UEReachability>,
-        location: OPTIONAL<UserLocation>,
-        additionalCellIDs: OPTIONAL<CellInformation[]>,
+        areaList?: OPTIONAL<AMFEventArea[]>,
+        timeZone?: OPTIONAL<TimeZone>,
+        accessTypes?: OPTIONAL<AccessType[]>,
+        rMInfoList?: OPTIONAL<RMInfo[]>,
+        cMInfoList?: OPTIONAL<CMInfo[]>,
+        reachability?: OPTIONAL<UEReachability>,
+        location?: OPTIONAL<UserLocation>,
+        additionalCellIDs?: OPTIONAL<CellInformation[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.type_ = type_;

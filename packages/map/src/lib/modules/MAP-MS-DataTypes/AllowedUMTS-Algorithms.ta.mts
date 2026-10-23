@@ -43,7 +43,7 @@ class AllowedUMTS_Algorithms {
          * @public
          * @readonly
          */
-        readonly integrityProtectionAlgorithms: OPTIONAL<PermittedIntegrityProtectionAlgorithms>,
+        readonly integrityProtectionAlgorithms?: OPTIONAL<PermittedIntegrityProtectionAlgorithms>,
         /**
          * @summary `encryptionAlgorithms`.
          * @description
@@ -54,13 +54,13 @@ class AllowedUMTS_Algorithms {
          * @public
          * @readonly
          */
-        readonly encryptionAlgorithms: OPTIONAL<PermittedEncryptionAlgorithms>,
+        readonly encryptionAlgorithms?: OPTIONAL<PermittedEncryptionAlgorithms>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

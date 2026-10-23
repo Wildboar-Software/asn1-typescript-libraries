@@ -49,7 +49,7 @@ class IMSCCPDU {
 
     constructor (
         payload: IMSCCPDUPayload,
-        sDPInfo: OPTIONAL<OCTET_STRING>,
+        sDPInfo?: OPTIONAL<OCTET_STRING>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.payload = payload;

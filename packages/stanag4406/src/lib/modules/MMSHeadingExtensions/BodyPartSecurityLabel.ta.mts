@@ -57,7 +57,7 @@ class BodyPartSecurityLabel {
 
     constructor (
         body_part_security_label: SecurityLabel,
-        body_part_sequence_number: OPTIONAL<BodyPartSequenceNumber>
+        body_part_sequence_number?: OPTIONAL<BodyPartSequenceNumber>
     ) {
         this.body_part_security_label = body_part_security_label;
         this.body_part_sequence_number = body_part_sequence_number;

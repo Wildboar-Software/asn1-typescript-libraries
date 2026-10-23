@@ -52,7 +52,7 @@ class SetAgentStateResult {
          * @public
          * @readonly
          */
-        readonly pendingAgentState: OPTIONAL<PendingAgentState>,
+        readonly pendingAgentState?: OPTIONAL<PendingAgentState>,
         /**
          * @summary `extensions`.
          * @description
@@ -62,7 +62,7 @@ class SetAgentStateResult {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

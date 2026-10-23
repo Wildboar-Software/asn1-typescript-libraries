@@ -184,12 +184,12 @@ class MMELocationUpdate {
 
     constructor (
         iMSI: IMSI,
-        iMEI: OPTIONAL<IMEI>,
-        mSISDN: OPTIONAL<MSISDN>,
-        gUTI: OPTIONAL<GUTI>,
-        location: OPTIONAL<Location>,
-        oldGUTI: OPTIONAL<GUTI>,
-        sMSServiceStatus: OPTIONAL<EPSSMSServiceStatus>,
+        iMEI?: OPTIONAL<IMEI>,
+        mSISDN?: OPTIONAL<MSISDN>,
+        gUTI?: OPTIONAL<GUTI>,
+        location?: OPTIONAL<Location>,
+        oldGUTI?: OPTIONAL<GUTI>,
+        sMSServiceStatus?: OPTIONAL<EPSSMSServiceStatus>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.iMSI = iMSI;

@@ -45,7 +45,7 @@ class LogotypeImage {
          * @public
          * @readonly
          */
-        readonly imageInfo: OPTIONAL<LogotypeImageInfo>
+        readonly imageInfo?: OPTIONAL<LogotypeImageInfo>
     ) {}
 
     /**

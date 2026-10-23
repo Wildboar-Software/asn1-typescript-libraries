@@ -145,7 +145,7 @@ class NEFExpectedUEBehaviourUpdate {
         trafficProfile: OPTIONAL<TrafficProfile>,
         expectedTimeAndDayOfWeekInTrajectory: OPTIONAL<UMTLocationArea5G[]>,
         aFID: AFID,
-        validityTime: OPTIONAL<Timestamp>,
+        validityTime?: OPTIONAL<Timestamp>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.gPSI = gPSI;

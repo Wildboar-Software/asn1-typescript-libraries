@@ -169,9 +169,9 @@ class SMFProSeRemoteUEReport {
         gPSI: OPTIONAL<GPSI>,
         pEI: OPTIONAL<PEI>,
         pDUSessionID: PDUSessionID,
-        remoteUEContextConnected: OPTIONAL<RemoteUEContext>,
-        remoteUEContextDisconnected: OPTIONAL<RemoteUEContext>,
-        location: OPTIONAL<Location>,
+        remoteUEContextConnected?: OPTIONAL<RemoteUEContext>,
+        remoteUEContextDisconnected?: OPTIONAL<RemoteUEContext>,
+        location?: OPTIONAL<Location>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.sUPI = sUPI;

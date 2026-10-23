@@ -45,7 +45,7 @@ class ModificationRequestFor_CW_Info {
          * @public
          * @readonly
          */
-        readonly basicService: OPTIONAL<Ext_BasicServiceCode>,
+        readonly basicService?: OPTIONAL<Ext_BasicServiceCode>,
         /**
          * @summary `ss_Status`.
          * @description
@@ -56,7 +56,7 @@ class ModificationRequestFor_CW_Info {
          * @public
          * @readonly
          */
-        readonly ss_Status: OPTIONAL<Ext_SS_Status>,
+        readonly ss_Status?: OPTIONAL<Ext_SS_Status>,
         /**
          * @summary `modifyNotificationToCSE`.
          * @description
@@ -67,13 +67,13 @@ class ModificationRequestFor_CW_Info {
          * @public
          * @readonly
          */
-        readonly modifyNotificationToCSE: OPTIONAL<ModificationInstruction>,
+        readonly modifyNotificationToCSE?: OPTIONAL<ModificationInstruction>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

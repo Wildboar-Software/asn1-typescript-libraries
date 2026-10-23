@@ -150,10 +150,10 @@ class ScanResponse {
         stepSize: OPTIONAL<INTEGER>,
         scanStatus: ScanResponse_scanStatus,
         numberOfEntriesReturned: INTEGER,
-        positionOfTerm: OPTIONAL<INTEGER>,
-        entries: OPTIONAL<ListEntries>,
-        attributeSet: OPTIONAL<AttributeSetId>,
-        otherInfo: OPTIONAL<OtherInformation>
+        positionOfTerm?: OPTIONAL<INTEGER>,
+        entries?: OPTIONAL<ListEntries>,
+        attributeSet?: OPTIONAL<AttributeSetId>,
+        otherInfo?: OPTIONAL<OtherInformation>
     ) {
         this.referenceId = referenceId;
         this.stepSize = stepSize;

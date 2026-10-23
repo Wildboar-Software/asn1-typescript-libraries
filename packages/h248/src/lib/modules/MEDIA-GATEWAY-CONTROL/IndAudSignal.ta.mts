@@ -54,7 +54,7 @@ class IndAudSignal {
          * @public
          * @readonly
          */
-        readonly streamID: OPTIONAL<StreamID>,
+        readonly streamID?: OPTIONAL<StreamID>,
         /**
          * @summary `signalRequestID`.
          * @description
@@ -65,7 +65,7 @@ class IndAudSignal {
          * @public
          * @readonly
          */
-        readonly signalRequestID: OPTIONAL<RequestID>,
+        readonly signalRequestID?: OPTIONAL<RequestID>,
         /**
          * @summary Extensions that are not recognized.
          * @description

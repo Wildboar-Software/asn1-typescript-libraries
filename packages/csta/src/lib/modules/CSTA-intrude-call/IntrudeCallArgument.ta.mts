@@ -72,7 +72,7 @@ class IntrudeCallArgument {
          * @public
          * @readonly
          */
-        readonly participationType: OPTIONAL<ParticipationType>,
+        readonly participationType?: OPTIONAL<ParticipationType>,
         /**
          * @summary `userData`.
          * @description
@@ -82,7 +82,7 @@ class IntrudeCallArgument {
          * @public
          * @readonly
          */
-        readonly userData: OPTIONAL<UserData>,
+        readonly userData?: OPTIONAL<UserData>,
         /**
          * @summary `extensions`.
          * @description
@@ -93,7 +93,7 @@ class IntrudeCallArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

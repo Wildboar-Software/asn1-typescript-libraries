@@ -34,7 +34,7 @@ class ReleaseCallArg_allCallSegments {
     readonly releaseCause: OPTIONAL<Cause>;
 
     constructor (
-        releaseCause: OPTIONAL<Cause>
+        releaseCause?: OPTIONAL<Cause>
     ) {
         this.releaseCause = releaseCause;
     }

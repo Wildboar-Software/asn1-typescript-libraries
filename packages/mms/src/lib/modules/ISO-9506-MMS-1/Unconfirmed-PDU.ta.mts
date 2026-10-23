@@ -60,7 +60,7 @@ class Unconfirmed_PDU {
          * @public
          * @readonly
          */
-        readonly service_ext: OPTIONAL<Unconfirmed_Detail>,
+        readonly service_ext?: OPTIONAL<Unconfirmed_Detail>,
         /**
          * @summary Extensions that are not recognized.
          * @public

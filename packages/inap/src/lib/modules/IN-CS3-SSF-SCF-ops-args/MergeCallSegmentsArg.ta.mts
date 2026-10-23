@@ -59,8 +59,8 @@ class MergeCallSegmentsArg {
 
     constructor (
         sourceCallSegment: CallSegmentID,
-        targetCallSegment: OPTIONAL<CallSegmentID>,
-        extensions: OPTIONAL<Extensions>,
+        targetCallSegment?: OPTIONAL<CallSegmentID>,
+        extensions?: OPTIONAL<Extensions>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.sourceCallSegment = sourceCallSegment;

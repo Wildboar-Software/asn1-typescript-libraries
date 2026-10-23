@@ -40,7 +40,7 @@ class ChosenRadioResourceInformation {
          * @public
          * @readonly
          */
-        readonly chosenChannelInfo: OPTIONAL<ChosenChannelInfo>,
+        readonly chosenChannelInfo?: OPTIONAL<ChosenChannelInfo>,
         /**
          * @summary `chosenSpeechVersion`.
          * @description
@@ -51,7 +51,7 @@ class ChosenRadioResourceInformation {
          * @public
          * @readonly
          */
-        readonly chosenSpeechVersion: OPTIONAL<ChosenSpeechVersion>,
+        readonly chosenSpeechVersion?: OPTIONAL<ChosenSpeechVersion>,
         /**
          * @summary Extensions that are not recognized.
          * @public

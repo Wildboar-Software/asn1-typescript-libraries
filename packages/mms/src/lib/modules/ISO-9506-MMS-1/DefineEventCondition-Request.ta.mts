@@ -90,7 +90,7 @@ class DefineEventCondition_Request {
          * @public
          * @readonly
          */
-        readonly priority: OPTIONAL<Priority>,
+        readonly priority?: OPTIONAL<Priority>,
         /**
          * @summary `severity`.
          * @description
@@ -103,7 +103,7 @@ class DefineEventCondition_Request {
          * @public
          * @readonly
          */
-        readonly severity: OPTIONAL<Unsigned8>,
+        readonly severity?: OPTIONAL<Unsigned8>,
         /**
          * @summary `alarmSummaryReports`.
          * @description
@@ -116,7 +116,7 @@ class DefineEventCondition_Request {
          * @public
          * @readonly
          */
-        readonly alarmSummaryReports: OPTIONAL<BOOLEAN>,
+        readonly alarmSummaryReports?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `monitoredVariable`.
          * @description
@@ -129,7 +129,7 @@ class DefineEventCondition_Request {
          * @public
          * @readonly
          */
-        readonly monitoredVariable: OPTIONAL<VariableSpecification>,
+        readonly monitoredVariable?: OPTIONAL<VariableSpecification>,
         /**
          * @summary `evaluationInterval`.
          * @description
@@ -142,7 +142,7 @@ class DefineEventCondition_Request {
          * @public
          * @readonly
          */
-        readonly evaluationInterval: OPTIONAL<Unsigned32>
+        readonly evaluationInterval?: OPTIONAL<Unsigned32>
     ) {}
 
     /**

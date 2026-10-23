@@ -86,10 +86,10 @@ class ResourceReportRequest {
     readonly otherInfo: OPTIONAL<OtherInformation>;
 
     constructor (
-        referenceId: OPTIONAL<ReferenceId>,
-        opId: OPTIONAL<ReferenceId>,
-        prefResourceReportFormat: OPTIONAL<ResourceReportId>,
-        otherInfo: OPTIONAL<OtherInformation>
+        referenceId?: OPTIONAL<ReferenceId>,
+        opId?: OPTIONAL<ReferenceId>,
+        prefResourceReportFormat?: OPTIONAL<ResourceReportId>,
+        otherInfo?: OPTIONAL<OtherInformation>
     ) {
         this.referenceId = referenceId;
         this.opId = opId;

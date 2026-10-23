@@ -67,13 +67,13 @@ class RestoreDataArg {
          * @public
          * @readonly
          */
-        readonly lmsi: OPTIONAL<LMSI>,
+        readonly lmsi?: OPTIONAL<LMSI>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `vlr_Capability`.
          * @description
@@ -85,7 +85,7 @@ class RestoreDataArg {
          * @public
          * @readonly
          */
-        readonly vlr_Capability: OPTIONAL<VLR_Capability>,
+        readonly vlr_Capability?: OPTIONAL<VLR_Capability>,
         /**
          * @summary `restorationIndicator`.
          * @description
@@ -100,7 +100,7 @@ class RestoreDataArg {
          * @public
          * @readonly
          */
-        readonly restorationIndicator: OPTIONAL<NULL>,
+        readonly restorationIndicator?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @public

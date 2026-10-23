@@ -72,7 +72,7 @@ class CreateProgramInvocation_Request {
          * @public
          * @readonly
          */
-        readonly reusable: OPTIONAL<BOOLEAN>,
+        readonly reusable?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `monitorType`.
          * @description
@@ -84,7 +84,7 @@ class CreateProgramInvocation_Request {
          * @public
          * @readonly
          */
-        readonly monitorType: OPTIONAL<BOOLEAN>
+        readonly monitorType?: OPTIONAL<BOOLEAN>
     ) {}
 
     /**

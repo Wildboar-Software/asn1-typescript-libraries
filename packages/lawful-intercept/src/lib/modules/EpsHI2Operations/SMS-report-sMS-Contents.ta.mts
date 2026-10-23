@@ -134,10 +134,10 @@ class SMS_report_sMS_Contents {
 
     constructor (
         sms_initiator: SMS_report_sMS_Contents_sms_initiator,
-        transfer_status: OPTIONAL<SMS_report_sMS_Contents_transfer_status>,
-        other_message: OPTIONAL<SMS_report_sMS_Contents_other_message>,
-        content: OPTIONAL<OCTET_STRING>,
-        sMSContentRemovedIndicator: OPTIONAL<BOOLEAN>,
+        transfer_status?: OPTIONAL<SMS_report_sMS_Contents_transfer_status>,
+        other_message?: OPTIONAL<SMS_report_sMS_Contents_other_message>,
+        content?: OPTIONAL<OCTET_STRING>,
+        sMSContentRemovedIndicator?: OPTIONAL<BOOLEAN>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.sms_initiator = sms_initiator;

@@ -74,7 +74,7 @@ class CurrLocation {
     constructor (
         hostingAddr: PartyNumber,
         pumIdentity: PumIdentity,
-        argExtension: OPTIONAL<PumiExtension>
+        argExtension?: OPTIONAL<PumiExtension>
     ) {
         this.hostingAddr = hostingAddr;
         this.pumIdentity = pumIdentity;

@@ -65,9 +65,9 @@ class Slice {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        allowedNSSAI: OPTIONAL<NSSAI>,
-        configuredNSSAI: OPTIONAL<NSSAI>,
-        rejectedNSSAI: OPTIONAL<RejectedNSSAI>,
+        allowedNSSAI?: OPTIONAL<NSSAI>,
+        configuredNSSAI?: OPTIONAL<NSSAI>,
+        rejectedNSSAI?: OPTIONAL<RejectedNSSAI>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.allowedNSSAI = allowedNSSAI;

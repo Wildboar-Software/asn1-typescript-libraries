@@ -78,9 +78,9 @@ class EPSBearerContextCreated {
     constructor (
         ePSBearerID: EPSBearerID,
         cause: EPSBearerCreationCauseValue,
-        gTPTunnelInfo: OPTIONAL<GTPTunnelInfo>,
-        bearerQOS: OPTIONAL<EPSBearerQOS>,
-        protocolConfigurationOptions: OPTIONAL<PDNProtocolConfigurationOptions>,
+        gTPTunnelInfo?: OPTIONAL<GTPTunnelInfo>,
+        bearerQOS?: OPTIONAL<EPSBearerQOS>,
+        protocolConfigurationOptions?: OPTIONAL<PDNProtocolConfigurationOptions>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.ePSBearerID = ePSBearerID;

@@ -59,7 +59,7 @@ class VariableAccessSpecification_listOfVariable_Item {
          * @public
          * @readonly
          */
-        readonly alternateAccess: OPTIONAL<AlternateAccess>
+        readonly alternateAccess?: OPTIONAL<AlternateAccess>
     ) {}
 
     /**

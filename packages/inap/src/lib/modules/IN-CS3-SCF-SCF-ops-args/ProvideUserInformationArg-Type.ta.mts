@@ -131,15 +131,15 @@ class ProvideUserInformationArg_Type {
     constructor (
         constraints: CollectedInfo,
         infoToSend: InformationToSend,
-        errorInfo: OPTIONAL<InformationToSend>,
-        typeOfRequestedInfo: OPTIONAL<InfoType>,
-        numberOfAllowedRetries: OPTIONAL<INTEGER>,
-        actions: OPTIONAL<Actions>,
-        preferredLanguage: OPTIONAL<Language>,
-        securityParameters: OPTIONAL<SecurityParameters>,
-        extensions: OPTIONAL<Extensions>,
-        srfAddress: OPTIONAL<CalledPartyNumber>,
-        userToConnect: OPTIONAL<UserToConnect>,
+        errorInfo?: OPTIONAL<InformationToSend>,
+        typeOfRequestedInfo?: OPTIONAL<InfoType>,
+        numberOfAllowedRetries?: OPTIONAL<INTEGER>,
+        actions?: OPTIONAL<Actions>,
+        preferredLanguage?: OPTIONAL<Language>,
+        securityParameters?: OPTIONAL<SecurityParameters>,
+        extensions?: OPTIONAL<Extensions>,
+        srfAddress?: OPTIONAL<CalledPartyNumber>,
+        userToConnect?: OPTIONAL<UserToConnect>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.constraints = constraints;

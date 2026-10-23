@@ -73,10 +73,10 @@ class TWANUserLocationInfo {
 
     constructor (
         sSID: OCTET_STRING,
-        bSSID: OPTIONAL<OCTET_STRING>,
-        civicAddressInformation: OPTIONAL<OCTET_STRING>,
-        wLANOperatorId: OPTIONAL<WLANOperatorId>,
-        logicalAccessID: OPTIONAL<OCTET_STRING>
+        bSSID?: OPTIONAL<OCTET_STRING>,
+        civicAddressInformation?: OPTIONAL<OCTET_STRING>,
+        wLANOperatorId?: OPTIONAL<WLANOperatorId>,
+        logicalAccessID?: OPTIONAL<OCTET_STRING>
     ) {
         this.sSID = sSID;
         this.bSSID = bSSID;

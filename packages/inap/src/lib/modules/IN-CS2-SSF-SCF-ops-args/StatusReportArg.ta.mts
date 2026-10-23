@@ -78,11 +78,11 @@ class StatusReportArg {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        resourceStatus: OPTIONAL<ResourceStatus>,
-        correlationID: OPTIONAL<CorrelationID>,
-        resourceID: OPTIONAL<ResourceID>,
-        extensions: OPTIONAL<ExtensionField[]>,
-        reportCondition: OPTIONAL<ReportCondition>,
+        resourceStatus?: OPTIONAL<ResourceStatus>,
+        correlationID?: OPTIONAL<CorrelationID>,
+        resourceID?: OPTIONAL<ResourceID>,
+        extensions?: OPTIONAL<ExtensionField[]>,
+        reportCondition?: OPTIONAL<ReportCondition>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.resourceStatus = resourceStatus;

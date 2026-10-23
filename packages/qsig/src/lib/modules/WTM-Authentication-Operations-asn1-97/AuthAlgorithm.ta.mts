@@ -55,7 +55,7 @@ class AuthAlgorithm {
 
     constructor (
         authAlg: DefinedIDs,
-        param: OPTIONAL<_Element>
+        param?: OPTIONAL<_Element>
     ) {
         this.authAlg = authAlg;
         this.param = param;

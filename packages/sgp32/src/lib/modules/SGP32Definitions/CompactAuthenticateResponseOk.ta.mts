@@ -79,7 +79,7 @@ class CompactAuthenticateResponseOk {
          * @public
          * @readonly
          */
-        readonly euiccCertificate: OPTIONAL<Certificate>,
+        readonly euiccCertificate?: OPTIONAL<Certificate>,
         /**
          * @summary `eumCertificate`.
          * @description
@@ -91,7 +91,7 @@ class CompactAuthenticateResponseOk {
          * @public
          * @readonly
          */
-        readonly eumCertificate: OPTIONAL<Certificate>
+        readonly eumCertificate?: OPTIONAL<Certificate>
     ) {}
 
     /**

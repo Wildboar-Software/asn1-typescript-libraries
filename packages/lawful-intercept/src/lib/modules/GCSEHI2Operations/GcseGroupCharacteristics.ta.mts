@@ -67,8 +67,8 @@ class GcseGroupCharacteristics {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        characteristicsEncoding: OPTIONAL<UTF8String>,
-        characteristics: OPTIONAL<OCTET_STRING>,
+        characteristicsEncoding?: OPTIONAL<UTF8String>,
+        characteristics?: OPTIONAL<OCTET_STRING>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.characteristicsEncoding = characteristicsEncoding;

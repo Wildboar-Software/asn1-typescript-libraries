@@ -52,7 +52,7 @@ class DisplayAttribute {
          * @public
          * @readonly
          */
-        readonly displayID: OPTIONAL<DisplayID>,
+        readonly displayID?: OPTIONAL<DisplayID>,
         /**
          * @summary `physicalBaseRowNumber`.
          * @description
@@ -63,7 +63,7 @@ class DisplayAttribute {
          * @public
          * @readonly
          */
-        readonly physicalBaseRowNumber: OPTIONAL<INTEGER>,
+        readonly physicalBaseRowNumber?: OPTIONAL<INTEGER>,
         /**
          * @summary `physicalBaseColumnNumber`.
          * @description
@@ -74,7 +74,7 @@ class DisplayAttribute {
          * @public
          * @readonly
          */
-        readonly physicalBaseColumnNumber: OPTIONAL<INTEGER>,
+        readonly physicalBaseColumnNumber?: OPTIONAL<INTEGER>,
         /**
          * @summary `offset`.
          * @description
@@ -85,7 +85,7 @@ class DisplayAttribute {
          * @public
          * @readonly
          */
-        readonly offset: OPTIONAL<INTEGER>
+        readonly offset?: OPTIONAL<INTEGER>
     ) {}
 
     /**

@@ -89,8 +89,8 @@ class SendFacilityInformationArg {
         legID: OPTIONAL<LegID>,
         componentCorrelationID: OPTIONAL<ComponentCorrelationID>,
         component: Component,
-        callProcessingOperation: OPTIONAL<CallProcessingOperation>,
-        extensions: OPTIONAL<Extensions>,
+        callProcessingOperation?: OPTIONAL<CallProcessingOperation>,
+        extensions?: OPTIONAL<Extensions>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.componentType = componentType;

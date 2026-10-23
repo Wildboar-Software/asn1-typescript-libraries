@@ -77,8 +77,8 @@ class CellSiteInformation {
 
     constructor (
         geographicalCoordinates: GeographicalCoordinates,
-        azimuth: OPTIONAL<INTEGER>,
-        operatorSpecificInformation: OPTIONAL<UTF8String>,
+        azimuth?: OPTIONAL<INTEGER>,
+        operatorSpecificInformation?: OPTIONAL<UTF8String>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.geographicalCoordinates = geographicalCoordinates;

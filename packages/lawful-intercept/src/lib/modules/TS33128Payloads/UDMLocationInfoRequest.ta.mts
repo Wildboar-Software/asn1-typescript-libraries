@@ -68,11 +68,11 @@ class UDMLocationInfoRequest {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        requested5GSLocation: OPTIONAL<BOOLEAN>,
-        requestedCurrentLocation: OPTIONAL<BOOLEAN>,
-        requestedRATType: OPTIONAL<BOOLEAN>,
-        requestedTimeZone: OPTIONAL<BOOLEAN>,
-        requestedServingNode: OPTIONAL<BOOLEAN>,
+        requested5GSLocation?: OPTIONAL<BOOLEAN>,
+        requestedCurrentLocation?: OPTIONAL<BOOLEAN>,
+        requestedRATType?: OPTIONAL<BOOLEAN>,
+        requestedTimeZone?: OPTIONAL<BOOLEAN>,
+        requestedServingNode?: OPTIONAL<BOOLEAN>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.requested5GSLocation = requested5GSLocation;

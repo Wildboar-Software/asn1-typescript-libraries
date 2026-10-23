@@ -119,7 +119,7 @@ class Invoke {
         invokeId: InvokeId,
         linkedId: OPTIONAL<Invoke_linkedId>,
         opcode: Code,
-        argument: OPTIONAL<_Element>
+        argument?: OPTIONAL<_Element>
     ) {
         this.invokeId = invokeId;
         this.linkedId = linkedId;

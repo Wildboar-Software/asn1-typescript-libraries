@@ -73,7 +73,7 @@ class GeoPriv {
          * @public
          * @readonly
          */
-        readonly usageRules: OPTIONAL<UsageRules>,
+        readonly usageRules?: OPTIONAL<UsageRules>,
         /**
          * @summary `method`.
          * @description
@@ -84,7 +84,7 @@ class GeoPriv {
          * @public
          * @readonly
          */
-        readonly method: OPTIONAL<Method>,
+        readonly method?: OPTIONAL<Method>,
         /**
          * @summary `providedBy`.
          * @description
@@ -95,7 +95,7 @@ class GeoPriv {
          * @public
          * @readonly
          */
-        readonly providedBy: OPTIONAL<ProvidedBy>
+        readonly providedBy?: OPTIONAL<ProvidedBy>
     ) {}
 
     /**

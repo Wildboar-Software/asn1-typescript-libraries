@@ -69,7 +69,7 @@ class MakeCallResult {
          * @public
          * @readonly
          */
-        readonly mediaCallCharacteristics: OPTIONAL<MediaCallCharacteristics>,
+        readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
         /**
          * @summary `initiatedCallInfo`.
          * @description
@@ -80,7 +80,7 @@ class MakeCallResult {
          * @public
          * @readonly
          */
-        readonly initiatedCallInfo: OPTIONAL<ConnectionInformation>,
+        readonly initiatedCallInfo?: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `callLinkageData`.
          * @description
@@ -90,7 +90,7 @@ class MakeCallResult {
          * @public
          * @readonly
          */
-        readonly callLinkageData: OPTIONAL<CallLinkageData>,
+        readonly callLinkageData?: OPTIONAL<CallLinkageData>,
         /**
          * @summary `extensions`.
          * @description
@@ -101,7 +101,7 @@ class MakeCallResult {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

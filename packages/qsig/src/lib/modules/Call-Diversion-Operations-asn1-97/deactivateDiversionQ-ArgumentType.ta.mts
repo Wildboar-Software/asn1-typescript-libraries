@@ -94,7 +94,7 @@ class deactivateDiversionQ_ArgumentType {
         basicService: BasicService,
         servedUserNr: PartyNumber,
         deactivatingUserNr: PartyNumber,
-        extension: OPTIONAL<deactivateDiversionQ_ArgumentType_extension>
+        extension?: OPTIONAL<deactivateDiversionQ_ArgumentType_extension>
     ) {
         this.procedure = procedure;
         this.basicService = basicService;

@@ -47,19 +47,19 @@ class InbandInfo {
          * @public
          * @readonly
          */
-        readonly numberOfRepetitions: OPTIONAL<INTEGER>,
+        readonly numberOfRepetitions?: OPTIONAL<INTEGER>,
         /**
          * @summary `duration`.
          * @public
          * @readonly
          */
-        readonly duration: OPTIONAL<INTEGER>,
+        readonly duration?: OPTIONAL<INTEGER>,
         /**
          * @summary `interval`.
          * @public
          * @readonly
          */
-        readonly interval: OPTIONAL<INTEGER>
+        readonly interval?: OPTIONAL<INTEGER>
     ) {
         if (numberOfRepetitions !== undefined && (typeof numberOfRepetitions === "bigint" ? (numberOfRepetitions < 1n || numberOfRepetitions > 127n) : (numberOfRepetitions < 1 || numberOfRepetitions > 127))) {
             throw new ASN1OverflowError("InbandInfo.numberOfRepetitions violates INTEGER constraint");

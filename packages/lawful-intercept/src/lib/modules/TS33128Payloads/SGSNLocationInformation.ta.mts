@@ -189,15 +189,15 @@ class SGSNLocationInformation {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        cGI: OPTIONAL<CGI>,
-        lAI: OPTIONAL<LAI>,
-        sAI: OPTIONAL<SAI>,
-        rAI: OPTIONAL<RAI>,
-        geographicalInformation: OPTIONAL<GeographicalInformationOctet>,
-        geodeticInformation: OPTIONAL<GeodeticInformationOctet>,
-        currentLocationRetrieved: OPTIONAL<BOOLEAN>,
-        ageOfLocationInformation: OPTIONAL<INTEGER>,
-        userCSGInformation: OPTIONAL<UserCSGInformation>,
+        cGI?: OPTIONAL<CGI>,
+        lAI?: OPTIONAL<LAI>,
+        sAI?: OPTIONAL<SAI>,
+        rAI?: OPTIONAL<RAI>,
+        geographicalInformation?: OPTIONAL<GeographicalInformationOctet>,
+        geodeticInformation?: OPTIONAL<GeodeticInformationOctet>,
+        currentLocationRetrieved?: OPTIONAL<BOOLEAN>,
+        ageOfLocationInformation?: OPTIONAL<INTEGER>,
+        userCSGInformation?: OPTIONAL<UserCSGInformation>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.cGI = cGI;

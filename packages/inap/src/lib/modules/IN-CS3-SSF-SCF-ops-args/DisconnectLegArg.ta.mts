@@ -59,8 +59,8 @@ class DisconnectLegArg {
 
     constructor (
         legToBeReleased: LegID,
-        releaseCause: OPTIONAL<Cause>,
-        extensions: OPTIONAL<Extensions>,
+        releaseCause?: OPTIONAL<Cause>,
+        extensions?: OPTIONAL<Extensions>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.legToBeReleased = legToBeReleased;

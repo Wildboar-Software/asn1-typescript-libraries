@@ -66,7 +66,7 @@ class ModifyArgument {
          * @public
          * @readonly
          */
-        readonly object_class: OPTIONAL<DfrObjectClass> /* REPLICATED_COMPONENT */,
+        readonly object_class?: OPTIONAL<DfrObjectClass> /* REPLICATED_COMPONENT */,
         /**
          * @summary `entry`.
          * @description
@@ -76,7 +76,7 @@ class ModifyArgument {
          * @public
          * @readonly
          */
-        readonly entry: OPTIONAL<CommonUpdateArguments_entry> /* REPLICATED_COMPONENT */,
+        readonly entry?: OPTIONAL<CommonUpdateArguments_entry> /* REPLICATED_COMPONENT */,
         /**
          * @summary `destination`.
          * @description
@@ -86,7 +86,7 @@ class ModifyArgument {
          * @public
          * @readonly
          */
-        readonly destination: OPTIONAL<DfrEntryName> /* REPLICATED_COMPONENT */,
+        readonly destination?: OPTIONAL<DfrEntryName> /* REPLICATED_COMPONENT */,
         /**
          * @summary `position`.
          * @description
@@ -96,7 +96,7 @@ class ModifyArgument {
          * @public
          * @readonly
          */
-        readonly position: OPTIONAL<GroupMemberPosition> /* REPLICATED_COMPONENT */,
+        readonly position?: OPTIONAL<GroupMemberPosition> /* REPLICATED_COMPONENT */,
         /**
          * @summary `modifications`.
          * @description
@@ -106,7 +106,7 @@ class ModifyArgument {
          * @public
          * @readonly
          */
-        readonly modifications: OPTIONAL<EntryModification[]> /* REPLICATED_COMPONENT */,
+        readonly modifications?: OPTIONAL<EntryModification[]> /* REPLICATED_COMPONENT */,
         /**
          * @summary `selection`.
          * @description
@@ -116,7 +116,7 @@ class ModifyArgument {
          * @public
          * @readonly
          */
-        readonly selection: OPTIONAL<EntryInformationSelection> /* REPLICATED_COMPONENT */,
+        readonly selection?: OPTIONAL<EntryInformationSelection> /* REPLICATED_COMPONENT */,
         /**
          * @summary `reference_qos`.
          * @description
@@ -125,7 +125,7 @@ class ModifyArgument {
          * @public
          * @readonly
          */
-        readonly reference_qos: OPTIONAL<Requested_QoS_level> /* REPLICATED_COMPONENT */,
+        readonly reference_qos?: OPTIONAL<Requested_QoS_level> /* REPLICATED_COMPONENT */,
         /**
          * @summary `task_id`.
          * @description
@@ -137,7 +137,7 @@ class ModifyArgument {
          * @public
          * @readonly
          */
-        readonly task_id: OPTIONAL<TaskId> /* REPLICATED_COMPONENT */,
+        readonly task_id?: OPTIONAL<TaskId> /* REPLICATED_COMPONENT */,
         /**
          * @summary `reservation`.
          * @description
@@ -149,7 +149,7 @@ class ModifyArgument {
          * @public
          * @readonly
          */
-        readonly reservation: OPTIONAL<Reservation> /* REPLICATED_COMPONENT */,
+        readonly reservation?: OPTIONAL<Reservation> /* REPLICATED_COMPONENT */,
         /**
          * @summary `error_handling`.
          * @description
@@ -159,7 +159,7 @@ class ModifyArgument {
          * @public
          * @readonly
          */
-        readonly error_handling: OPTIONAL<ErrorHandlingMode> /* REPLICATED_COMPONENT */,
+        readonly error_handling?: OPTIONAL<ErrorHandlingMode> /* REPLICATED_COMPONENT */,
         /**
          * @summary `priority`.
          * @description
@@ -170,7 +170,7 @@ class ModifyArgument {
          * @public
          * @readonly
          */
-        readonly priority: OPTIONAL<Priority> /* REPLICATED_COMPONENT */,
+        readonly priority?: OPTIONAL<Priority> /* REPLICATED_COMPONENT */,
         /**
          * @summary `privileges`.
          * @description
@@ -182,7 +182,7 @@ class ModifyArgument {
          * @public
          * @readonly
          */
-        readonly privileges: OPTIONAL<Privileges> /* REPLICATED_COMPONENT */
+        readonly privileges?: OPTIONAL<Privileges> /* REPLICATED_COMPONENT */
     ) {
         if (entry === undefined) {
             throw new _ConstructionError("ModifyArgument.entry shall be present");

@@ -88,7 +88,7 @@ class TagPath_Item_specificTag {
         schemaId: OPTIONAL<OBJECT_IDENTIFIER>,
         tagType: OPTIONAL<INTEGER>,
         tagValue: StringOrNumeric,
-        occurrence: OPTIONAL<Occurrences>
+        occurrence?: OPTIONAL<Occurrences>
     ) {
         this.schemaId = schemaId;
         this.tagType = tagType;

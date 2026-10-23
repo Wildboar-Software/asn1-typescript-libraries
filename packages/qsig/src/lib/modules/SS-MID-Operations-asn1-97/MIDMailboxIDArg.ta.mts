@@ -87,7 +87,7 @@ class MIDMailboxIDArg {
         partyInfo: PartyInfo,
         servedUserName: OPTIONAL<Name>,
         mailBox: String,
-        extensions: OPTIONAL<MIDExtensions>,
+        extensions?: OPTIONAL<MIDExtensions>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.partyInfo = partyInfo;

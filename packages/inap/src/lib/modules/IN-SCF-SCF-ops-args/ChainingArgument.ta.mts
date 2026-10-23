@@ -98,10 +98,10 @@ class ChainingArgument {
         originatingSCF: ScfID,
         target: OPTIONAL<SubscriberID>,
         traceInformation: TraceInformation,
-        scfAuthenticationLevel: OPTIONAL<AuthenticationLevel>,
-        timeLimit: OPTIONAL<UTCTime>,
-        securityParameters: OPTIONAL<SecurityParameters>,
-        extensions: OPTIONAL<Extensions>,
+        scfAuthenticationLevel?: OPTIONAL<AuthenticationLevel>,
+        timeLimit?: OPTIONAL<UTCTime>,
+        securityParameters?: OPTIONAL<SecurityParameters>,
+        extensions?: OPTIONAL<Extensions>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.originatingSCF = originatingSCF;

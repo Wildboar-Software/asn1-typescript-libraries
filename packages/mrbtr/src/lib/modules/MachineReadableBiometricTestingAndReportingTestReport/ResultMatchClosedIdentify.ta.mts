@@ -70,7 +70,7 @@ class ResultMatchClosedIdentify {
          * @public
          * @readonly
          */
-        readonly durationClosedIdentify: OPTIONAL<StatisticInformationSet>
+        readonly durationClosedIdentify?: OPTIONAL<StatisticInformationSet>
     ) {}
 
     /**

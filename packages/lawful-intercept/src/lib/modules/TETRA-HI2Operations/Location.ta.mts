@@ -201,14 +201,14 @@ class Location {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        e164_Number: OPTIONAL<OCTET_STRING>,
-        globalCellID: OPTIONAL<OCTET_STRING>,
-        tetraLocation: OPTIONAL<TetraLocation>,
-        rAI: OPTIONAL<OCTET_STRING>,
-        gsmLocation: OPTIONAL<GSMLocation>,
-        umtsLocation: OPTIONAL<UMTSLocation>,
-        sAI: OPTIONAL<OCTET_STRING>,
-        oldRAI: OPTIONAL<OCTET_STRING>,
+        e164_Number?: OPTIONAL<OCTET_STRING>,
+        globalCellID?: OPTIONAL<OCTET_STRING>,
+        tetraLocation?: OPTIONAL<TetraLocation>,
+        rAI?: OPTIONAL<OCTET_STRING>,
+        gsmLocation?: OPTIONAL<GSMLocation>,
+        umtsLocation?: OPTIONAL<UMTSLocation>,
+        sAI?: OPTIONAL<OCTET_STRING>,
+        oldRAI?: OPTIONAL<OCTET_STRING>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.e164_Number = e164_Number;

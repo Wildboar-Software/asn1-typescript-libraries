@@ -56,7 +56,7 @@ class InformArg {
 
     constructor (
         wtmIdentity: WtmIdentity,
-        argExtension: OPTIONAL<WtmiExtension>
+        argExtension?: OPTIONAL<WtmiExtension>
     ) {
         this.wtmIdentity = wtmIdentity;
         this.argExtension = argExtension;

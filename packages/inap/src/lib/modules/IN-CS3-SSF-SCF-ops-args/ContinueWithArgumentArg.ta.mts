@@ -117,15 +117,15 @@ class ContinueWithArgumentArg {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        legorCSID: OPTIONAL<ContinueWithArgumentArg_legorCSID>,
-        alertingPattern: OPTIONAL<AlertingPattern>,
-        genericName: OPTIONAL<GenericName>,
-        iNServiceCompatibilityResponse: OPTIONAL<INServiceCompatibilityResponse>,
-        forwardGVNS: OPTIONAL<ForwardGVNS>,
-        backwardGVNS: OPTIONAL<BackwardGVNS>,
-        extensions: OPTIONAL<Extensions>,
-        serviceInteractionIndicatorsTwo: OPTIONAL<ServiceInteractionIndicatorsTwo>,
-        sDSSinformation: OPTIONAL<SDSSinformation>,
+        legorCSID?: OPTIONAL<ContinueWithArgumentArg_legorCSID>,
+        alertingPattern?: OPTIONAL<AlertingPattern>,
+        genericName?: OPTIONAL<GenericName>,
+        iNServiceCompatibilityResponse?: OPTIONAL<INServiceCompatibilityResponse>,
+        forwardGVNS?: OPTIONAL<ForwardGVNS>,
+        backwardGVNS?: OPTIONAL<BackwardGVNS>,
+        extensions?: OPTIONAL<Extensions>,
+        serviceInteractionIndicatorsTwo?: OPTIONAL<ServiceInteractionIndicatorsTwo>,
+        sDSSinformation?: OPTIONAL<SDSSinformation>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.legorCSID = legorCSID;

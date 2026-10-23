@@ -76,7 +76,7 @@ class CommonKeyAttributes {
          * @public
          * @readonly
          */
-        readonly native: OPTIONAL<BOOLEAN>,
+        readonly native?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `accessFlags`.
          * @description
@@ -85,7 +85,7 @@ class CommonKeyAttributes {
          * @public
          * @readonly
          */
-        readonly accessFlags: OPTIONAL<KeyAccessFlags>,
+        readonly accessFlags?: OPTIONAL<KeyAccessFlags>,
         /**
          * @summary `keyReference`.
          * @description
@@ -95,7 +95,7 @@ class CommonKeyAttributes {
          * @public
          * @readonly
          */
-        readonly keyReference: OPTIONAL<KeyReference>,
+        readonly keyReference?: OPTIONAL<KeyReference>,
         /**
          * @summary `startDate`.
          * @description
@@ -103,7 +103,7 @@ class CommonKeyAttributes {
          * @public
          * @readonly
          */
-        readonly startDate: OPTIONAL<GeneralizedTime>,
+        readonly startDate?: OPTIONAL<GeneralizedTime>,
         /**
          * @summary `endDate`.
          * @description
@@ -111,7 +111,7 @@ class CommonKeyAttributes {
          * @public
          * @readonly
          */
-        readonly endDate: OPTIONAL<GeneralizedTime>,
+        readonly endDate?: OPTIONAL<GeneralizedTime>,
         /**
          * @summary `algReference`.
          * @description
@@ -120,7 +120,7 @@ class CommonKeyAttributes {
          * @public
          * @readonly
          */
-        readonly algReference: OPTIONAL<Reference[]>,
+        readonly algReference?: OPTIONAL<Reference[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

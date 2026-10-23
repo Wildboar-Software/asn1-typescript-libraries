@@ -61,7 +61,7 @@ class AocRateArg {
 
     constructor (
         aocRate: AocRateArg_aocRate,
-        rateArgExtension: OPTIONAL<AocRateArg_rateArgExtension>
+        rateArgExtension?: OPTIONAL<AocRateArg_rateArgExtension>
     ) {
         this.aocRate = aocRate;
         this.rateArgExtension = rateArgExtension;

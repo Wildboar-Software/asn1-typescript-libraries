@@ -83,7 +83,7 @@ class QueryVoiceAttributeArgument {
          * @public
          * @readonly
          */
-        readonly resource: OPTIONAL<ResourceID>,
+        readonly resource?: OPTIONAL<ResourceID>,
         /**
          * @summary `connection`.
          * @description
@@ -94,7 +94,7 @@ class QueryVoiceAttributeArgument {
          * @public
          * @readonly
          */
-        readonly connection: OPTIONAL<ConnectionID>,
+        readonly connection?: OPTIONAL<ConnectionID>,
         /**
          * @summary `extensions`.
          * @description
@@ -105,7 +105,7 @@ class QueryVoiceAttributeArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

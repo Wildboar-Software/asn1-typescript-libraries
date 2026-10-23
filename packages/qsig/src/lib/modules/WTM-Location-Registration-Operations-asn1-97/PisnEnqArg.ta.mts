@@ -59,7 +59,7 @@ class PisnEnqArg {
 
     constructor (
         alternativeId: AlternativeId,
-        argExtension: OPTIONAL<LrExtension>
+        argExtension?: OPTIONAL<LrExtension>
     ) {
         this.alternativeId = alternativeId;
         this.argExtension = argExtension;

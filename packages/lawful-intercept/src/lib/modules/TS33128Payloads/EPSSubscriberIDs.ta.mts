@@ -76,9 +76,9 @@ class EPSSubscriberIDs {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        iMSI: OPTIONAL<IMSI>,
-        mSISDN: OPTIONAL<MSISDN>,
-        iMEI: OPTIONAL<IMEI>,
+        iMSI?: OPTIONAL<IMSI>,
+        mSISDN?: OPTIONAL<MSISDN>,
+        iMEI?: OPTIONAL<IMEI>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.iMSI = iMSI;

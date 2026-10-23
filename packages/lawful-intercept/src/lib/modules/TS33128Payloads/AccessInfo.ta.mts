@@ -131,11 +131,11 @@ class AccessInfo {
         gTPTunnelID: FTEID,
         non3GPPAccessEndpoint: OPTIONAL<UEEndpointAddress>,
         establishmentStatus: EstablishmentStatus,
-        aNTypeToReactivate: OPTIONAL<AccessType>,
-        gTPTunnelInfo: OPTIONAL<GTPTunnelInfo>,
-        satelliteBackhaulCategory: OPTIONAL<SBIType>,
-        gEOSatelliteID: OPTIONAL<GEOSatelliteID>,
-        servingSatelliteID: OPTIONAL<SatelliteID>,
+        aNTypeToReactivate?: OPTIONAL<AccessType>,
+        gTPTunnelInfo?: OPTIONAL<GTPTunnelInfo>,
+        satelliteBackhaulCategory?: OPTIONAL<SBIType>,
+        gEOSatelliteID?: OPTIONAL<GEOSatelliteID>,
+        servingSatelliteID?: OPTIONAL<SatelliteID>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.accessType = accessType;

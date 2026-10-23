@@ -184,8 +184,8 @@ class LocUpdateHLRRecord {
         oldLocation: OPTIONAL<Visited_Location_info>,
         newLocation: Visited_Location_info,
         updateTime: OCTET_STRING,
-        updateResult: OPTIONAL<HLRIntResult>,
-        recordExtensions: OPTIONAL<ManagementExtension[]>
+        updateResult?: OPTIONAL<HLRIntResult>,
+        recordExtensions?: OPTIONAL<ManagementExtension[]>
     ) {
         this.recordType = recordType;
         this.servedIMSI = servedIMSI;

@@ -50,7 +50,7 @@ class SearchKey {
 
     constructor (
         searchKey: InternationalString,
-        description: OPTIONAL<HumanString>
+        description?: OPTIONAL<HumanString>
     ) {
         this.searchKey = searchKey;
         this.description = description;

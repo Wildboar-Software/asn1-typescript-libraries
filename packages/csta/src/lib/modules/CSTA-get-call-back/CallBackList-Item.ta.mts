@@ -64,7 +64,7 @@ class CallBackList_Item {
          * @public
          * @readonly
          */
-        readonly callBackMessageIndicator: OPTIONAL<BOOLEAN>
+        readonly callBackMessageIndicator?: OPTIONAL<BOOLEAN>
     ) {}
 
     /**

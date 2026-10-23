@@ -41,7 +41,7 @@ class TLS13EstablishedSecrets {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        dHE: OPTIONAL<OCTET_STRING>,
+        dHE?: OPTIONAL<OCTET_STRING>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.dHE = dHE;

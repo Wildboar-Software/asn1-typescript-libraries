@@ -74,7 +74,7 @@ class ReadJournal_Request {
          * @public
          * @readonly
          */
-        readonly rangeStartSpecification: OPTIONAL<ReadJournal_Request_rangeStartSpecification>,
+        readonly rangeStartSpecification?: OPTIONAL<ReadJournal_Request_rangeStartSpecification>,
         /**
          * @summary `rangeStopSpecification`.
          * @description
@@ -86,7 +86,7 @@ class ReadJournal_Request {
          * @public
          * @readonly
          */
-        readonly rangeStopSpecification: OPTIONAL<ReadJournal_Request_rangeStopSpecification>,
+        readonly rangeStopSpecification?: OPTIONAL<ReadJournal_Request_rangeStopSpecification>,
         /**
          * @summary `listOfVariables`.
          * @description
@@ -97,7 +97,7 @@ class ReadJournal_Request {
          * @public
          * @readonly
          */
-        readonly listOfVariables: OPTIONAL<VisibleString[]>,
+        readonly listOfVariables?: OPTIONAL<VisibleString[]>,
         /**
          * @summary `entryToStartAfter`.
          * @description
@@ -108,7 +108,7 @@ class ReadJournal_Request {
          * @public
          * @readonly
          */
-        readonly entryToStartAfter: OPTIONAL<ReadJournal_Request_entryToStartAfter>
+        readonly entryToStartAfter?: OPTIONAL<ReadJournal_Request_entryToStartAfter>
     ) {}
 
     /**

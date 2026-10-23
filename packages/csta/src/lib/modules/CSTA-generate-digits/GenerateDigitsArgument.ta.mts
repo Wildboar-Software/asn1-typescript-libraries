@@ -85,7 +85,7 @@ class GenerateDigitsArgument {
          * @public
          * @readonly
          */
-        readonly toneDuration: OPTIONAL<INTEGER>,
+        readonly toneDuration?: OPTIONAL<INTEGER>,
         /**
          * @summary `pulseRate`.
          * @description
@@ -94,7 +94,7 @@ class GenerateDigitsArgument {
          * @public
          * @readonly
          */
-        readonly pulseRate: OPTIONAL<INTEGER>,
+        readonly pulseRate?: OPTIONAL<INTEGER>,
         /**
          * @summary `pauseDuration`.
          * @description
@@ -103,7 +103,7 @@ class GenerateDigitsArgument {
          * @public
          * @readonly
          */
-        readonly pauseDuration: OPTIONAL<INTEGER>,
+        readonly pauseDuration?: OPTIONAL<INTEGER>,
         /**
          * @summary `extensions`.
          * @description
@@ -113,7 +113,7 @@ class GenerateDigitsArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

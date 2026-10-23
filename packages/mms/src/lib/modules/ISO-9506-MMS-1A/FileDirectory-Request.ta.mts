@@ -54,7 +54,7 @@ class FileDirectory_Request {
          * @public
          * @readonly
          */
-        readonly fileSpecification: OPTIONAL<FileName>,
+        readonly fileSpecification?: OPTIONAL<FileName>,
         /**
          * @summary `continueAfter`.
          * @description
@@ -69,7 +69,7 @@ class FileDirectory_Request {
          * @public
          * @readonly
          */
-        readonly continueAfter: OPTIONAL<FileName>
+        readonly continueAfter?: OPTIONAL<FileName>
     ) {}
 
     /**

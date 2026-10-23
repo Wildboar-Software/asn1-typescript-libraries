@@ -45,7 +45,7 @@ class ExtensionContainer {
          * @public
          * @readonly
          */
-        readonly privateExtensionList: OPTIONAL<PrivateExtensionList>,
+        readonly privateExtensionList?: OPTIONAL<PrivateExtensionList>,
         /**
          * @summary `pcs_Extensions`.
          * @description
@@ -56,7 +56,7 @@ class ExtensionContainer {
          * @public
          * @readonly
          */
-        readonly pcs_Extensions: OPTIONAL<PCS_Extensions>,
+        readonly pcs_Extensions?: OPTIONAL<PCS_Extensions>,
         /**
          * @summary Extensions that are not recognized.
          * @public

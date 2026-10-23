@@ -91,10 +91,10 @@ class CintCondArg {
 
     constructor (
         interceptionCause: Condition,
-        originalCalledNumber: OPTIONAL<PresentedNumberUnscreened>,
-        calledName: OPTIONAL<Name>,
-        originalCalledName: OPTIONAL<Name>,
-        extension: OPTIONAL<CintExtension>
+        originalCalledNumber?: OPTIONAL<PresentedNumberUnscreened>,
+        calledName?: OPTIONAL<Name>,
+        originalCalledName?: OPTIONAL<Name>,
+        extension?: OPTIONAL<CintExtension>
     ) {
         this.interceptionCause = interceptionCause;
         this.originalCalledNumber = originalCalledNumber;

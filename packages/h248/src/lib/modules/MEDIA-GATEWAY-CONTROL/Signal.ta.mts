@@ -148,7 +148,7 @@ class Signal {
          * @public
          * @readonly
          */
-        readonly direction: OPTIONAL<SignalDirection>,
+        readonly direction?: OPTIONAL<SignalDirection>,
         /**
          * @summary `requestID`.
          * @description
@@ -160,7 +160,7 @@ class Signal {
          * @public
          * @readonly
          */
-        readonly requestID: OPTIONAL<RequestID>,
+        readonly requestID?: OPTIONAL<RequestID>,
         /**
          * @summary `intersigDelay`.
          * @description
@@ -174,7 +174,7 @@ class Signal {
          * @public
          * @readonly
          */
-        readonly intersigDelay: OPTIONAL<INTEGER>,
+        readonly intersigDelay?: OPTIONAL<INTEGER>,
         /**
          * @summary Extensions that are not recognized.
          * @description

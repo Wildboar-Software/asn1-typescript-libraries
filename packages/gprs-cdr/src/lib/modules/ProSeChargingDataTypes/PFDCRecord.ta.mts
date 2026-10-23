@@ -585,10 +585,10 @@ class PFDCRecord {
         listOfReceptionData: OPTIONAL<ChangeOfProSeCondition[]>,
         causeForRecClosing: ProSeCauseForRecClosing,
         listOfAppSpecificData: OCTET_STRING[],
-        targetIPaddress: OPTIONAL<IPAddress>,
-        relayIPaddress: OPTIONAL<IPAddress>,
-        proSeUEtoNetworkRelayUEID: OPTIONAL<OCTET_STRING>,
-        proSeTargetLayerTwoID: OPTIONAL<OCTET_STRING>
+        targetIPaddress?: OPTIONAL<IPAddress>,
+        relayIPaddress?: OPTIONAL<IPAddress>,
+        proSeUEtoNetworkRelayUEID?: OPTIONAL<OCTET_STRING>,
+        proSeTargetLayerTwoID?: OPTIONAL<OCTET_STRING>
     ) {
         this.recordType = recordType;
         this.retransmission = retransmission;

@@ -48,7 +48,7 @@ class LCS_PrivacyCheck {
          * @public
          * @readonly
          */
-        readonly callSessionRelated: OPTIONAL<PrivacyCheckRelatedAction>,
+        readonly callSessionRelated?: OPTIONAL<PrivacyCheckRelatedAction>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -261,17 +261,17 @@ class EPSRANUEContext {
     constructor (
         mMEUES1APID: MMEUES1APID,
         rANUES1APID: RANUES1APID,
-        eRABSetupRequest: OPTIONAL<ERABContextList>,
-        handoverRestrictionList: OPTIONAL<EPSHandoverRestrictionList>,
-        uERadioCapability: OPTIONAL<EPSUERadioCapability>,
-        rATFrequencySelectionPriority: OPTIONAL<RATFrequencySelectionPriority>,
-        cSFallbackIndicator: OPTIONAL<EPSCSFallbackIndicator>,
-        proSeAuthorized: OPTIONAL<EPSProSeAuthorization>,
-        lTEV2XServicesAuthorized: OPTIONAL<LTEV2XServiceAuthorization>,
-        aerialUESubscription: OPTIONAL<AerialUESubscriptionIndicator>,
-        subscriptionBasedUEDifferentiationIndication: OPTIONAL<EPSSubscriptionBasedUEDifferentiationIndication>,
-        iABAuthorizedIndicator: OPTIONAL<IABAuthorizedIndicator>,
-        nRV2XServicesAuthorization: OPTIONAL<NRV2XServicesAuthorization>,
+        eRABSetupRequest?: OPTIONAL<ERABContextList>,
+        handoverRestrictionList?: OPTIONAL<EPSHandoverRestrictionList>,
+        uERadioCapability?: OPTIONAL<EPSUERadioCapability>,
+        rATFrequencySelectionPriority?: OPTIONAL<RATFrequencySelectionPriority>,
+        cSFallbackIndicator?: OPTIONAL<EPSCSFallbackIndicator>,
+        proSeAuthorized?: OPTIONAL<EPSProSeAuthorization>,
+        lTEV2XServicesAuthorized?: OPTIONAL<LTEV2XServiceAuthorization>,
+        aerialUESubscription?: OPTIONAL<AerialUESubscriptionIndicator>,
+        subscriptionBasedUEDifferentiationIndication?: OPTIONAL<EPSSubscriptionBasedUEDifferentiationIndication>,
+        iABAuthorizedIndicator?: OPTIONAL<IABAuthorizedIndicator>,
+        nRV2XServicesAuthorization?: OPTIONAL<NRV2XServicesAuthorization>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.mMEUES1APID = mMEUES1APID;

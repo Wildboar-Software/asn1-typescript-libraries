@@ -49,7 +49,7 @@ class ScfTaskRefusedParameter_Type {
 
     constructor (
         reason: ScfTaskRefusedParameter_Type_reason,
-        securityParameters: OPTIONAL<SecurityParameters>
+        securityParameters?: OPTIONAL<SecurityParameters>
     ) {
         this.reason = reason;
         this.securityParameters = securityParameters;

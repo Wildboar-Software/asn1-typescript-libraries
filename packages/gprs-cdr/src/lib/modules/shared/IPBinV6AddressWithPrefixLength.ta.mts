@@ -43,7 +43,7 @@ class IPBinV6AddressWithPrefixLength {
 
     constructor (
         iPBinV6Address: OCTET_STRING,
-        pDPAddressPrefixLength: OPTIONAL<INTEGER>
+        pDPAddressPrefixLength?: OPTIONAL<INTEGER>
     ) {
         this.iPBinV6Address = iPBinV6Address;
         this.pDPAddressPrefixLength = pDPAddressPrefixLength;

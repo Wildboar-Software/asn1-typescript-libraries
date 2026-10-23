@@ -51,8 +51,8 @@ class CancelStatusReportRequestArg {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        resourceID: OPTIONAL<ResourceID>,
-        extensions: OPTIONAL<ExtensionField[]>,
+        resourceID?: OPTIONAL<ResourceID>,
+        extensions?: OPTIONAL<ExtensionField[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.resourceID = resourceID;

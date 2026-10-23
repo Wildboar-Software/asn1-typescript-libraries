@@ -47,7 +47,7 @@ class ImplicitNullable<T> {
          * @public
          * @readonly
          */
-        readonly present: OPTIONAL<T>
+        readonly present?: OPTIONAL<T>
     ) {}
 
     /**

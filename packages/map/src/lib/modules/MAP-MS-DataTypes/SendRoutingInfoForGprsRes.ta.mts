@@ -59,7 +59,7 @@ class SendRoutingInfoForGprsRes {
          * @public
          * @readonly
          */
-        readonly ggsn_Address: OPTIONAL<GSN_Address>,
+        readonly ggsn_Address?: OPTIONAL<GSN_Address>,
         /**
          * @summary `mobileNotReachableReason`.
          * @description
@@ -72,13 +72,13 @@ class SendRoutingInfoForGprsRes {
          * @public
          * @readonly
          */
-        readonly mobileNotReachableReason: OPTIONAL<AbsentSubscriberDiagnosticSM>,
+        readonly mobileNotReachableReason?: OPTIONAL<AbsentSubscriberDiagnosticSM>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

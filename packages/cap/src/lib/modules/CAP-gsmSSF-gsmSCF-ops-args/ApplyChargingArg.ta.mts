@@ -71,13 +71,13 @@ class ApplyChargingArg {
          * @public
          * @readonly
          */
-        readonly partyToCharge: OPTIONAL<SendingSideID>,
+        readonly partyToCharge?: OPTIONAL<SendingSideID>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<Extensions>,
+        readonly extensions?: OPTIONAL<Extensions>,
         /**
          * @summary `aChChargingAddress`.
          * @description
@@ -90,7 +90,7 @@ class ApplyChargingArg {
          * @public
          * @readonly
          */
-        readonly aChChargingAddress: OPTIONAL<AChChargingAddress>,
+        readonly aChChargingAddress?: OPTIONAL<AChChargingAddress>,
         /**
          * @summary Extensions that are not recognized.
          * @public

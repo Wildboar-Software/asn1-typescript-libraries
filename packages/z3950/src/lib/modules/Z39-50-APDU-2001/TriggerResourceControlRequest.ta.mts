@@ -107,9 +107,9 @@ class TriggerResourceControlRequest {
     constructor (
         referenceId: OPTIONAL<ReferenceId>,
         requestedAction: TriggerResourceControlRequest_requestedAction,
-        prefResourceReportFormat: OPTIONAL<ResourceReportId>,
-        resultSetWanted: OPTIONAL<BOOLEAN>,
-        otherInfo: OPTIONAL<OtherInformation>
+        prefResourceReportFormat?: OPTIONAL<ResourceReportId>,
+        resultSetWanted?: OPTIONAL<BOOLEAN>,
+        otherInfo?: OPTIONAL<OtherInformation>
     ) {
         this.referenceId = referenceId;
         this.requestedAction = requestedAction;

@@ -198,9 +198,9 @@ class TARGETACTIVITYMONITORind {
         timestamp: UTCTime,
         targetLocation: LocationType,
         targetAction: ActivityType,
-        supplementaryTargetaddress: OPTIONAL<AddressType>,
-        cotargetaddress: OPTIONAL<AddressType[]>,
-        cotargetlocation: OPTIONAL<LocationType[]>
+        supplementaryTargetaddress?: OPTIONAL<AddressType>,
+        cotargetaddress?: OPTIONAL<AddressType[]>,
+        cotargetlocation?: OPTIONAL<LocationType[]>
     ) {
         this.tLIInstanceid = tLIInstanceid;
         this.timestamp = timestamp;

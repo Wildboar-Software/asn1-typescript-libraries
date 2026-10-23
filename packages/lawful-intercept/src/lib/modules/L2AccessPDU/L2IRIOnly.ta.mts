@@ -122,8 +122,8 @@ class L2IRIOnly {
     constructor (
         l2IRIOnlyObjId: RELATIVE_OID,
         l2protocolInformation: L2ProtocolInformation,
-        l2AggregatedNbrOfPackets: OPTIONAL<INTEGER>,
-        l2AggregatedNbrOfBytes: OPTIONAL<INTEGER>,
+        l2AggregatedNbrOfPackets?: OPTIONAL<INTEGER>,
+        l2AggregatedNbrOfBytes?: OPTIONAL<INTEGER>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.l2IRIOnlyObjId = l2IRIOnlyObjId;

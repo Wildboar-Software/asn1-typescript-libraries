@@ -74,7 +74,7 @@ class ReportUTSIArg {
         uSIServiceIndicator: USIServiceIndicator,
         legID: OPTIONAL<LegID>,
         uSIInformation: USIInformation,
-        extensions: OPTIONAL<ExtensionField[]>,
+        extensions?: OPTIONAL<ExtensionField[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.uSIServiceIndicator = uSIServiceIndicator;

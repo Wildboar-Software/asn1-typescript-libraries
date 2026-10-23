@@ -63,7 +63,7 @@ class EuiccPackageErrorUnsigned {
          * @public
          * @readonly
          */
-        readonly eimTransactionId: OPTIONAL<TransactionId>,
+        readonly eimTransactionId?: OPTIONAL<TransactionId>,
         /**
          * @summary `associationToken`.
          * @description
@@ -74,7 +74,7 @@ class EuiccPackageErrorUnsigned {
          * @public
          * @readonly
          */
-        readonly associationToken: OPTIONAL<INTEGER>,
+        readonly associationToken?: OPTIONAL<INTEGER>,
         /**
          * @summary `euiccPackageUnsignedErrorCode`.
          * @description
@@ -84,7 +84,7 @@ class EuiccPackageErrorUnsigned {
          * @public
          * @readonly
          */
-        readonly euiccPackageUnsignedErrorCode: OPTIONAL<EuiccPackageUnsignedErrorCode>
+        readonly euiccPackageUnsignedErrorCode?: OPTIONAL<EuiccPackageUnsignedErrorCode>
     ) {
         if (this.eimId.length < 1 || this.eimId.length > 128) {
             throw new ASN1SizeError("EuiccPackageErrorUnsigned.eimId violates SIZE constraint");

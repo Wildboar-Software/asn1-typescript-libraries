@@ -48,7 +48,7 @@ class SS_Data {
          * @public
          * @readonly
          */
-        readonly ss_Code: OPTIONAL<SS_Code>,
+        readonly ss_Code?: OPTIONAL<SS_Code>,
         /**
          * @summary `ss_Status`.
          * @description
@@ -58,7 +58,7 @@ class SS_Data {
          * @public
          * @readonly
          */
-        readonly ss_Status: OPTIONAL<SS_Status>,
+        readonly ss_Status?: OPTIONAL<SS_Status>,
         /**
          * @summary `ss_SubscriptionOption`.
          * @description
@@ -68,7 +68,7 @@ class SS_Data {
          * @public
          * @readonly
          */
-        readonly ss_SubscriptionOption: OPTIONAL<SS_SubscriptionOption>,
+        readonly ss_SubscriptionOption?: OPTIONAL<SS_SubscriptionOption>,
         /**
          * @summary `basicServiceGroupList`.
          * @description
@@ -78,7 +78,7 @@ class SS_Data {
          * @public
          * @readonly
          */
-        readonly basicServiceGroupList: OPTIONAL<BasicServiceGroupList>,
+        readonly basicServiceGroupList?: OPTIONAL<BasicServiceGroupList>,
         /**
          * @summary `defaultPriority`.
          * @description
@@ -88,7 +88,7 @@ class SS_Data {
          * @public
          * @readonly
          */
-        readonly defaultPriority: OPTIONAL<EMLPP_Priority>,
+        readonly defaultPriority?: OPTIONAL<EMLPP_Priority>,
         /**
          * @summary `nbrUser`.
          * @description
@@ -98,7 +98,7 @@ class SS_Data {
          * @public
          * @readonly
          */
-        readonly nbrUser: OPTIONAL<MC_Bearers>,
+        readonly nbrUser?: OPTIONAL<MC_Bearers>,
         /**
          * @summary Extensions that are not recognized.
          * @public

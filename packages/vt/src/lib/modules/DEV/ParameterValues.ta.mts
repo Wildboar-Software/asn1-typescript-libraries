@@ -100,7 +100,7 @@ class ParameterValues {
          * @public
          * @readonly
          */
-        readonly defaultCOaccess: OPTIONAL<AccessRuleValue>,
+        readonly defaultCOaccess?: OPTIONAL<AccessRuleValue>,
         /**
          * @summary `defaultCOPriority`.
          * @description
@@ -109,7 +109,7 @@ class ParameterValues {
          * @public
          * @readonly
          */
-        readonly defaultCOPriority: OPTIONAL<ParameterValues_defaultCOPriority>,
+        readonly defaultCOPriority?: OPTIONAL<ParameterValues_defaultCOPriority>,
         /**
          * @summary `deviceRepertoireAssignment`.
          * @description
@@ -119,7 +119,7 @@ class ParameterValues {
          * @public
          * @readonly
          */
-        readonly deviceRepertoireAssignment: OPTIONAL<CompoundRepertoireValue>,
+        readonly deviceRepertoireAssignment?: OPTIONAL<CompoundRepertoireValue>,
         /**
          * @summary `deviceEmphasisAssignment`.
          * @description
@@ -128,7 +128,7 @@ class ParameterValues {
          * @public
          * @readonly
          */
-        readonly deviceEmphasisAssignment: OPTIONAL<CompoundEmphasisValue>,
+        readonly deviceEmphasisAssignment?: OPTIONAL<CompoundEmphasisValue>,
         /**
          * @summary `deviceForegroundAssignment`.
          * @description
@@ -138,7 +138,7 @@ class ParameterValues {
          * @public
          * @readonly
          */
-        readonly deviceForegroundAssignment: OPTIONAL<CompoundColourValue>,
+        readonly deviceForegroundAssignment?: OPTIONAL<CompoundColourValue>,
         /**
          * @summary `deviceBackgroundAssignment`.
          * @description
@@ -148,7 +148,7 @@ class ParameterValues {
          * @public
          * @readonly
          */
-        readonly deviceBackgroundAssignment: OPTIONAL<CompoundColourValue>,
+        readonly deviceBackgroundAssignment?: OPTIONAL<CompoundColourValue>,
         /**
          * @summary `minimumXarrayLength`.
          * @description
@@ -157,7 +157,7 @@ class ParameterValues {
          * @public
          * @readonly
          */
-        readonly minimumXarrayLength: OPTIONAL<INTEGER>,
+        readonly minimumXarrayLength?: OPTIONAL<INTEGER>,
         /**
          * @summary `minimumYarrayLength`.
          * @description
@@ -166,7 +166,7 @@ class ParameterValues {
          * @public
          * @readonly
          */
-        readonly minimumYarrayLength: OPTIONAL<INTEGER>,
+        readonly minimumYarrayLength?: OPTIONAL<INTEGER>,
         /**
          * @summary `deviceControlObjectNames`.
          * @description
@@ -176,7 +176,7 @@ class ParameterValues {
          * @public
          * @readonly
          */
-        readonly deviceControlObjectNames: OPTIONAL<PrintableString[]>,
+        readonly deviceControlObjectNames?: OPTIONAL<PrintableString[]>,
         /**
          * @summary `deviceDisplayObjectName`.
          * @description
@@ -185,7 +185,7 @@ class ParameterValues {
          * @public
          * @readonly
          */
-        readonly deviceDisplayObjectName: OPTIONAL<PrintableString>,
+        readonly deviceDisplayObjectName?: OPTIONAL<PrintableString>,
         /**
          * @summary `terminationEventList`.
          * @description
@@ -196,7 +196,7 @@ class ParameterValues {
          * @public
          * @readonly
          */
-        readonly terminationEventList: OPTIONAL<ParameterValues_terminationEventList_Item[]>,
+        readonly terminationEventList?: OPTIONAL<ParameterValues_terminationEventList_Item[]>,
         /**
          * @summary `terminationLength`.
          * @description
@@ -206,7 +206,7 @@ class ParameterValues {
          * @public
          * @readonly
          */
-        readonly terminationLength: OPTIONAL<ParameterValues_terminationLength>,
+        readonly terminationLength?: OPTIONAL<ParameterValues_terminationLength>,
         /**
          * @summary `terminationTimeout`.
          * @description
@@ -218,7 +218,7 @@ class ParameterValues {
          * @public
          * @readonly
          */
-        readonly terminationTimeout: OPTIONAL<ParameterValues_terminationTimeout>,
+        readonly terminationTimeout?: OPTIONAL<ParameterValues_terminationTimeout>,
         /**
          * @summary `defaultCOtriggerSelected`.
          * @description
@@ -228,7 +228,7 @@ class ParameterValues {
          * @public
          * @readonly
          */
-        readonly defaultCOtriggerSelected: OPTIONAL<BOOLEAN>,
+        readonly defaultCOtriggerSelected?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `defaultCOinitialValue`.
          * @description
@@ -239,7 +239,7 @@ class ParameterValues {
          * @public
          * @readonly
          */
-        readonly defaultCOinitialValue: OPTIONAL<ParameterValues_defaultCOinitialValue>
+        readonly defaultCOinitialValue?: OPTIONAL<ParameterValues_defaultCOinitialValue>
     ) {}
 
     /**

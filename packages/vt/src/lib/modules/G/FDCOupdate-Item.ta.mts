@@ -86,7 +86,7 @@ class FDCOupdate_Item {
          * @public
          * @readonly
          */
-        readonly labelZCoordinate: OPTIONAL<INTEGER>,
+        readonly labelZCoordinate?: OPTIONAL<INTEGER>,
         /**
          * @summary `status`.
          * @description
@@ -95,7 +95,7 @@ class FDCOupdate_Item {
          * @public
          * @readonly
          */
-        readonly status: OPTIONAL<FDCOupdate_Item_status>,
+        readonly status?: OPTIONAL<FDCOupdate_Item_status>,
         /**
          * @summary `extent`.
          * @description
@@ -104,7 +104,7 @@ class FDCOupdate_Item {
          * @public
          * @readonly
          */
-        readonly extent: OPTIONAL<FDCOupdate_Item_extent_Item[]>,
+        readonly extent?: OPTIONAL<FDCOupdate_Item_extent_Item[]>,
         /**
          * @summary `attributes`.
          * @description
@@ -113,7 +113,7 @@ class FDCOupdate_Item {
          * @public
          * @readonly
          */
-        readonly attributes: OPTIONAL<FDCOupdate_Item_attributes>,
+        readonly attributes?: OPTIONAL<FDCOupdate_Item_attributes>,
         /**
          * @summary `nextField`.
          * @description
@@ -122,7 +122,7 @@ class FDCOupdate_Item {
          * @public
          * @readonly
          */
-        readonly nextField: OPTIONAL<INTEGER>,
+        readonly nextField?: OPTIONAL<INTEGER>,
         /**
          * @summary `previousField`.
          * @description
@@ -131,7 +131,7 @@ class FDCOupdate_Item {
          * @public
          * @readonly
          */
-        readonly previousField: OPTIONAL<INTEGER>,
+        readonly previousField?: OPTIONAL<INTEGER>,
         /**
          * @summary `transmissionPolicy`.
          * @description
@@ -140,7 +140,7 @@ class FDCOupdate_Item {
          * @public
          * @readonly
          */
-        readonly transmissionPolicy: OPTIONAL<FDCOupdate_Item_transmissionPolicy>,
+        readonly transmissionPolicy?: OPTIONAL<FDCOupdate_Item_transmissionPolicy>,
         /**
          * @summary `entryControlList`.
          * @description
@@ -151,7 +151,7 @@ class FDCOupdate_Item {
          * @public
          * @readonly
          */
-        readonly entryControlList: OPTIONAL<EntryControl[]>
+        readonly entryControlList?: OPTIONAL<EntryControl[]>
     ) {}
 
     /**

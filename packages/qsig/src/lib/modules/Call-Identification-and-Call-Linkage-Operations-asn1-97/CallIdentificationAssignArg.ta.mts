@@ -81,9 +81,9 @@ class CallIdentificationAssignArg {
 
     constructor (
         globalCallID: CallIdentificationData,
-        threadID: OPTIONAL<CallIdentificationData>,
-        legID: OPTIONAL<CallIdentificationData>,
-        extension: OPTIONAL<ExtensionType>
+        threadID?: OPTIONAL<CallIdentificationData>,
+        legID?: OPTIONAL<CallIdentificationData>,
+        extension?: OPTIONAL<ExtensionType>
     ) {
         this.globalCallID = globalCallID;
         this.threadID = threadID;

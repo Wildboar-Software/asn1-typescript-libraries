@@ -72,9 +72,9 @@ class ReAlertingArg {
     readonly argumentExtension: OPTIONAL<ReAlertingArg_argumentExtension>;
 
     constructor (
-        alertedNumber: OPTIONAL<PresentedNumberScreened>,
-        alertedName: OPTIONAL<Name>,
-        argumentExtension: OPTIONAL<ReAlertingArg_argumentExtension>
+        alertedNumber?: OPTIONAL<PresentedNumberScreened>,
+        alertedName?: OPTIONAL<Name>,
+        argumentExtension?: OPTIONAL<ReAlertingArg_argumentExtension>
     ) {
         this.alertedNumber = alertedNumber;
         this.alertedName = alertedName;

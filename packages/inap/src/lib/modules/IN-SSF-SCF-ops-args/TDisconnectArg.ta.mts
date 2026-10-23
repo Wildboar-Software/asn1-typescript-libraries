@@ -131,16 +131,16 @@ class TDisconnectArg {
 
     constructor (
         dpSpecificCommonParameters: DpSpecificCommonParameters,
-        calledPartyBusinessGroupID: OPTIONAL<CalledPartyBusinessGroupID>,
-        calledPartySubaddress: OPTIONAL<CalledPartySubaddress>,
-        calledFacilityGroup: OPTIONAL<FacilityGroup>,
-        calledFacilityGroupMember: OPTIONAL<FacilityGroupMember>,
-        releaseCause: OPTIONAL<Cause>,
-        extensions: OPTIONAL<Extensions>,
-        connectTime: OPTIONAL<Integer4>,
-        componentType: OPTIONAL<ComponentType>,
-        component: OPTIONAL<Component>,
-        componentCorrelationID: OPTIONAL<ComponentCorrelationID>,
+        calledPartyBusinessGroupID?: OPTIONAL<CalledPartyBusinessGroupID>,
+        calledPartySubaddress?: OPTIONAL<CalledPartySubaddress>,
+        calledFacilityGroup?: OPTIONAL<FacilityGroup>,
+        calledFacilityGroupMember?: OPTIONAL<FacilityGroupMember>,
+        releaseCause?: OPTIONAL<Cause>,
+        extensions?: OPTIONAL<Extensions>,
+        connectTime?: OPTIONAL<Integer4>,
+        componentType?: OPTIONAL<ComponentType>,
+        component?: OPTIONAL<Component>,
+        componentCorrelationID?: OPTIONAL<ComponentCorrelationID>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.dpSpecificCommonParameters = dpSpecificCommonParameters;

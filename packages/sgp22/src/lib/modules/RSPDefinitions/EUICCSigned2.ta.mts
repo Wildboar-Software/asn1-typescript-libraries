@@ -68,7 +68,7 @@ class EUICCSigned2 {
          * @public
          * @readonly
          */
-        readonly hashCc: OPTIONAL<Octet32>
+        readonly hashCc?: OPTIONAL<Octet32>
     ) {}
 
     /**

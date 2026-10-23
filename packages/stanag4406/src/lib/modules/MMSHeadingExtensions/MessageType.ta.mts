@@ -52,7 +52,7 @@ class MessageType {
 
     constructor (
         type_: TypeMessage,
-        identifier: OPTIONAL<MessageIdentifier>
+        identifier?: OPTIONAL<MessageIdentifier>
     ) {
         this.type_ = type_;
         this.identifier = identifier;

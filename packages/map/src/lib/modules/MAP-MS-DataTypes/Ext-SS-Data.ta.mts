@@ -65,19 +65,19 @@ class Ext_SS_Data {
          * @public
          * @readonly
          */
-        readonly ss_SubscriptionOption: OPTIONAL<SS_SubscriptionOption>,
+        readonly ss_SubscriptionOption?: OPTIONAL<SS_SubscriptionOption>,
         /**
          * @summary `basicServiceGroupList`.
          * @public
          * @readonly
          */
-        readonly basicServiceGroupList: OPTIONAL<Ext_BasicServiceGroupList>,
+        readonly basicServiceGroupList?: OPTIONAL<Ext_BasicServiceGroupList>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -99,10 +99,10 @@ class Current_Previous_Systems {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        serving_System_Identifier: OPTIONAL<OCTET_STRING>,
-        current_Serving_MME_Address: OPTIONAL<DataNodeIdentifier>,
-        previous_Serving_System_Identifier: OPTIONAL<OCTET_STRING>,
-        previous_Serving_MME_Address: OPTIONAL<DataNodeIdentifier>,
+        serving_System_Identifier?: OPTIONAL<OCTET_STRING>,
+        current_Serving_MME_Address?: OPTIONAL<DataNodeIdentifier>,
+        previous_Serving_System_Identifier?: OPTIONAL<OCTET_STRING>,
+        previous_Serving_MME_Address?: OPTIONAL<DataNodeIdentifier>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.serving_System_Identifier = serving_System_Identifier;

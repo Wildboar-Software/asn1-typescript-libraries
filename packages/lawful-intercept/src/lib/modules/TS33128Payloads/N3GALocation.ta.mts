@@ -249,19 +249,19 @@ class N3GALocation {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        tAI: OPTIONAL<TAI>,
-        n3IWFID: OPTIONAL<N3IWFIDNGAP>,
-        uEIPAddr: OPTIONAL<IPAddr>,
-        portNumber: OPTIONAL<INTEGER>,
-        tNAPID: OPTIONAL<TNAPID>,
-        tWAPID: OPTIONAL<TWAPID>,
-        hFCNodeID: OPTIONAL<HFCNodeID>,
-        gLI: OPTIONAL<GLI>,
-        w5GBANLineType: OPTIONAL<W5GBANLineType>,
-        gCI: OPTIONAL<GCI>,
-        ageOfLocationInfo: OPTIONAL<AgeOfLocation>,
-        uELocationTimestamp: OPTIONAL<Timestamp>,
-        protocol: OPTIONAL<TransportProtocol>,
+        tAI?: OPTIONAL<TAI>,
+        n3IWFID?: OPTIONAL<N3IWFIDNGAP>,
+        uEIPAddr?: OPTIONAL<IPAddr>,
+        portNumber?: OPTIONAL<INTEGER>,
+        tNAPID?: OPTIONAL<TNAPID>,
+        tWAPID?: OPTIONAL<TWAPID>,
+        hFCNodeID?: OPTIONAL<HFCNodeID>,
+        gLI?: OPTIONAL<GLI>,
+        w5GBANLineType?: OPTIONAL<W5GBANLineType>,
+        gCI?: OPTIONAL<GCI>,
+        ageOfLocationInfo?: OPTIONAL<AgeOfLocation>,
+        uELocationTimestamp?: OPTIONAL<Timestamp>,
+        protocol?: OPTIONAL<TransportProtocol>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.tAI = tAI;

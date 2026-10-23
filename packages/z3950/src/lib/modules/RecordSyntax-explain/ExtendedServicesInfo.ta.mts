@@ -195,9 +195,9 @@ class ExtendedServicesInfo {
         available: BOOLEAN,
         retentionSupported: BOOLEAN,
         waitAction: ExtendedServicesInfo_waitAction,
-        description: OPTIONAL<HumanString>,
-        specificExplain: OPTIONAL<EXTERNAL>,
-        esASN: OPTIONAL<InternationalString>
+        description?: OPTIONAL<HumanString>,
+        specificExplain?: OPTIONAL<EXTERNAL>,
+        esASN?: OPTIONAL<InternationalString>
     ) {
         this.commonInfo = commonInfo;
         this.type_ = type_;

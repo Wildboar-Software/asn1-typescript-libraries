@@ -37,7 +37,7 @@ class NotificationInformation_calledNumberSpecificInfo {
          * @public
          * @readonly
          */
-        readonly calledNumber: OPTIONAL<CalledPartyNumber>,
+        readonly calledNumber?: OPTIONAL<CalledPartyNumber>,
         /**
          * @summary Extensions that are not recognized.
          * @public

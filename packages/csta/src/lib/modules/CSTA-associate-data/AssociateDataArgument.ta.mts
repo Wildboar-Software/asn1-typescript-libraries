@@ -77,7 +77,7 @@ class AssociateDataArgument {
          * @public
          * @readonly
          */
-        readonly accountCode: OPTIONAL<AccountInfo>,
+        readonly accountCode?: OPTIONAL<AccountInfo>,
         /**
          * @summary `authCode`.
          * @description
@@ -86,7 +86,7 @@ class AssociateDataArgument {
          * @public
          * @readonly
          */
-        readonly authCode: OPTIONAL<AuthCode>,
+        readonly authCode?: OPTIONAL<AuthCode>,
         /**
          * @summary `correlatorData`.
          * @description
@@ -95,7 +95,7 @@ class AssociateDataArgument {
          * @public
          * @readonly
          */
-        readonly correlatorData: OPTIONAL<CorrelatorData>,
+        readonly correlatorData?: OPTIONAL<CorrelatorData>,
         /**
          * @summary `callQualifyingData`.
          * @description
@@ -104,7 +104,7 @@ class AssociateDataArgument {
          * @public
          * @readonly
          */
-        readonly callQualifyingData: OPTIONAL<CallQualifyingData>,
+        readonly callQualifyingData?: OPTIONAL<CallQualifyingData>,
         /**
          * @summary `callCharacteristics`.
          * @description
@@ -113,7 +113,7 @@ class AssociateDataArgument {
          * @public
          * @readonly
          */
-        readonly callCharacteristics: OPTIONAL<CallCharacteristics>,
+        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
         /**
          * @summary `subjectOfCall`.
          * @description
@@ -122,7 +122,7 @@ class AssociateDataArgument {
          * @public
          * @readonly
          */
-        readonly subjectOfCall: OPTIONAL<SubjectOfCall>,
+        readonly subjectOfCall?: OPTIONAL<SubjectOfCall>,
         /**
          * @summary `languagePreferences`.
          * @description
@@ -131,7 +131,7 @@ class AssociateDataArgument {
          * @public
          * @readonly
          */
-        readonly languagePreferences: OPTIONAL<LanguagePreferences>,
+        readonly languagePreferences?: OPTIONAL<LanguagePreferences>,
         /**
          * @summary `deviceInfo`.
          * @description
@@ -140,7 +140,7 @@ class AssociateDataArgument {
          * @public
          * @readonly
          */
-        readonly deviceInfo: OPTIONAL<DeviceID>,
+        readonly deviceInfo?: OPTIONAL<DeviceID>,
         /**
          * @summary `extensions`.
          * @description
@@ -150,7 +150,7 @@ class AssociateDataArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

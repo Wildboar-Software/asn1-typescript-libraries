@@ -52,7 +52,7 @@ class PrivateExtension {
          * @public
          * @readonly
          */
-        readonly extType: OPTIONAL<_Element>
+        readonly extType?: OPTIONAL<_Element>
     ) {}
 
     /**

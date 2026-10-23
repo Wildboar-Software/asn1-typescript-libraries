@@ -95,7 +95,7 @@ class FIPSLevel {
     constructor (
         version: IA5String,
         level: SecurityLevel,
-        plus: OPTIONAL<BOOLEAN>,
+        plus?: OPTIONAL<BOOLEAN>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.version = version;

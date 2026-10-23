@@ -50,8 +50,8 @@ class EventSpecificInformationBCSM_tMidCallSpecificInfo {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        connectTime: OPTIONAL<Integer4>,
-        tMidCallInfo: OPTIONAL<MidCallInfo>,
+        connectTime?: OPTIONAL<Integer4>,
+        tMidCallInfo?: OPTIONAL<MidCallInfo>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.connectTime = connectTime;

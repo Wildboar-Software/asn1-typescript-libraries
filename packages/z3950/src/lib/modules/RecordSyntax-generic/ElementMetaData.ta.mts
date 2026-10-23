@@ -156,16 +156,16 @@ class ElementMetaData {
     readonly other: OPTIONAL<EXTERNAL>;
 
     constructor (
-        seriesOrder: OPTIONAL<Order>,
-        usageRight: OPTIONAL<Usage>,
-        hits: OPTIONAL<HitVector[]>,
-        displayName: OPTIONAL<InternationalString>,
-        supportedVariants: OPTIONAL<Variant[]>,
-        message: OPTIONAL<InternationalString>,
-        elementDescriptor: OPTIONAL<OCTET_STRING>,
-        surrogateFor: OPTIONAL<TagPath>,
-        surrogateElement: OPTIONAL<TagPath>,
-        other: OPTIONAL<EXTERNAL>
+        seriesOrder?: OPTIONAL<Order>,
+        usageRight?: OPTIONAL<Usage>,
+        hits?: OPTIONAL<HitVector[]>,
+        displayName?: OPTIONAL<InternationalString>,
+        supportedVariants?: OPTIONAL<Variant[]>,
+        message?: OPTIONAL<InternationalString>,
+        elementDescriptor?: OPTIONAL<OCTET_STRING>,
+        surrogateFor?: OPTIONAL<TagPath>,
+        surrogateElement?: OPTIONAL<TagPath>,
+        other?: OPTIONAL<EXTERNAL>
     ) {
         this.seriesOrder = seriesOrder;
         this.usageRight = usageRight;

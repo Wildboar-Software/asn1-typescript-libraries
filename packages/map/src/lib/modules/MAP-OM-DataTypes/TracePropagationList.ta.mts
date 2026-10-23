@@ -63,7 +63,7 @@ class TracePropagationList {
          * @public
          * @readonly
          */
-        readonly traceReference: OPTIONAL<TraceReference>,
+        readonly traceReference?: OPTIONAL<TraceReference>,
         /**
          * @summary `traceType`.
          * @description
@@ -73,7 +73,7 @@ class TracePropagationList {
          * @public
          * @readonly
          */
-        readonly traceType: OPTIONAL<TraceType>,
+        readonly traceType?: OPTIONAL<TraceType>,
         /**
          * @summary `traceReference2`.
          * @description
@@ -83,7 +83,7 @@ class TracePropagationList {
          * @public
          * @readonly
          */
-        readonly traceReference2: OPTIONAL<TraceReference2>,
+        readonly traceReference2?: OPTIONAL<TraceReference2>,
         /**
          * @summary `traceRecordingSessionReference`.
          * @description
@@ -93,7 +93,7 @@ class TracePropagationList {
          * @public
          * @readonly
          */
-        readonly traceRecordingSessionReference: OPTIONAL<TraceRecordingSessionReference>,
+        readonly traceRecordingSessionReference?: OPTIONAL<TraceRecordingSessionReference>,
         /**
          * @summary `rnc_TraceDepth`.
          * @description
@@ -103,7 +103,7 @@ class TracePropagationList {
          * @public
          * @readonly
          */
-        readonly rnc_TraceDepth: OPTIONAL<TraceDepth>,
+        readonly rnc_TraceDepth?: OPTIONAL<TraceDepth>,
         /**
          * @summary `rnc_InterfaceList`.
          * @description
@@ -113,7 +113,7 @@ class TracePropagationList {
          * @public
          * @readonly
          */
-        readonly rnc_InterfaceList: OPTIONAL<RNC_InterfaceList>,
+        readonly rnc_InterfaceList?: OPTIONAL<RNC_InterfaceList>,
         /**
          * @summary `msc_s_TraceDepth`.
          * @description
@@ -123,7 +123,7 @@ class TracePropagationList {
          * @public
          * @readonly
          */
-        readonly msc_s_TraceDepth: OPTIONAL<TraceDepth>,
+        readonly msc_s_TraceDepth?: OPTIONAL<TraceDepth>,
         /**
          * @summary `msc_s_InterfaceList`.
          * @description
@@ -133,7 +133,7 @@ class TracePropagationList {
          * @public
          * @readonly
          */
-        readonly msc_s_InterfaceList: OPTIONAL<MSC_S_InterfaceList>,
+        readonly msc_s_InterfaceList?: OPTIONAL<MSC_S_InterfaceList>,
         /**
          * @summary `msc_s_EventList`.
          * @description
@@ -143,7 +143,7 @@ class TracePropagationList {
          * @public
          * @readonly
          */
-        readonly msc_s_EventList: OPTIONAL<MSC_S_EventList>,
+        readonly msc_s_EventList?: OPTIONAL<MSC_S_EventList>,
         /**
          * @summary `mgw_TraceDepth`.
          * @description
@@ -153,7 +153,7 @@ class TracePropagationList {
          * @public
          * @readonly
          */
-        readonly mgw_TraceDepth: OPTIONAL<TraceDepth>,
+        readonly mgw_TraceDepth?: OPTIONAL<TraceDepth>,
         /**
          * @summary `mgw_InterfaceList`.
          * @description
@@ -163,7 +163,7 @@ class TracePropagationList {
          * @public
          * @readonly
          */
-        readonly mgw_InterfaceList: OPTIONAL<MGW_InterfaceList>,
+        readonly mgw_InterfaceList?: OPTIONAL<MGW_InterfaceList>,
         /**
          * @summary `mgw_EventList`.
          * @description
@@ -173,7 +173,7 @@ class TracePropagationList {
          * @public
          * @readonly
          */
-        readonly mgw_EventList: OPTIONAL<MGW_EventList>,
+        readonly mgw_EventList?: OPTIONAL<MGW_EventList>,
         /**
          * @summary `rnc_TraceDepthExtension`.
          * @description
@@ -183,7 +183,7 @@ class TracePropagationList {
          * @public
          * @readonly
          */
-        readonly rnc_TraceDepthExtension: OPTIONAL<TraceDepthExtension>,
+        readonly rnc_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>,
         /**
          * @summary `msc_s_TraceDepthExtension`.
          * @description
@@ -193,7 +193,7 @@ class TracePropagationList {
          * @public
          * @readonly
          */
-        readonly msc_s_TraceDepthExtension: OPTIONAL<TraceDepthExtension>,
+        readonly msc_s_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>,
         /**
          * @summary `mgw_TraceDepthExtension`.
          * @description
@@ -203,7 +203,7 @@ class TracePropagationList {
          * @public
          * @readonly
          */
-        readonly mgw_TraceDepthExtension: OPTIONAL<TraceDepthExtension>,
+        readonly mgw_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>,
         /**
          * @summary Extensions that are not recognized.
          * @public

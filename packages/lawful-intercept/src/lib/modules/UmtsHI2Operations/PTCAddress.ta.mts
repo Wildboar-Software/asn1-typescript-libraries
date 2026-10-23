@@ -111,8 +111,8 @@ class PTCAddress {
     constructor (
         uri: UTF8String,
         privacy_setting: BOOLEAN,
-        privacy_alias: OPTIONAL<VisibleString>,
-        nickname: OPTIONAL<UTF8String>,
+        privacy_alias?: OPTIONAL<VisibleString>,
+        nickname?: OPTIONAL<UTF8String>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.uri = uri;

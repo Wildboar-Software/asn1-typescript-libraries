@@ -75,7 +75,7 @@ class MCMServiceArg {
     constructor (
         partyInfo: PartyInfo,
         mCMChange: MCMChange,
-        extensions: OPTIONAL<MCMExtensions>,
+        extensions?: OPTIONAL<MCMExtensions>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.partyInfo = partyInfo;

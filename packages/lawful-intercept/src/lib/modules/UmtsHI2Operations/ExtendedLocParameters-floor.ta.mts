@@ -62,7 +62,7 @@ class ExtendedLocParameters_floor {
 
     constructor (
         floor_number: PrintableString,
-        floor_number_uncertainty: OPTIONAL<PrintableString>
+        floor_number_uncertainty?: OPTIONAL<PrintableString>
     ) {
         this.floor_number = floor_number;
         this.floor_number_uncertainty = floor_number_uncertainty;

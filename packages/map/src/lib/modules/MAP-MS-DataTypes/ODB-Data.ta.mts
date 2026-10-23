@@ -55,13 +55,13 @@ class ODB_Data {
          * @public
          * @readonly
          */
-        readonly odb_HPLMN_Data: OPTIONAL<ODB_HPLMN_Data>,
+        readonly odb_HPLMN_Data?: OPTIONAL<ODB_HPLMN_Data>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

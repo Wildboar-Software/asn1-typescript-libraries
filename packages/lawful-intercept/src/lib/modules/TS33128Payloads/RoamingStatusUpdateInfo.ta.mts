@@ -49,8 +49,8 @@ class RoamingStatusUpdateInfo {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        iMSI: OPTIONAL<IMSI>,
-        pLMNID: OPTIONAL<PLMNID>,
+        iMSI?: OPTIONAL<IMSI>,
+        pLMNID?: OPTIONAL<PLMNID>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.iMSI = iMSI;

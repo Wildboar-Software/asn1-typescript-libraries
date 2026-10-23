@@ -56,7 +56,7 @@ class CompactEuiccSigned1 {
          * @public
          * @readonly
          */
-        readonly ctxParams1: OPTIONAL<CtxParams1>
+        readonly ctxParams1?: OPTIONAL<CtxParams1>
     ) {}
 
     /**

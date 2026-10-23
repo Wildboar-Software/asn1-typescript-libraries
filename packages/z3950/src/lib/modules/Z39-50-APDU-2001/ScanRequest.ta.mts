@@ -152,8 +152,8 @@ class ScanRequest {
         termListAndStartPoint: AttributesPlusTerm,
         stepSize: OPTIONAL<INTEGER>,
         numberOfTermsRequested: INTEGER,
-        preferredPositionInResponse: OPTIONAL<INTEGER>,
-        otherInfo: OPTIONAL<OtherInformation>
+        preferredPositionInResponse?: OPTIONAL<INTEGER>,
+        otherInfo?: OPTIONAL<OtherInformation>
     ) {
         this.referenceId = referenceId;
         this.databaseNames = databaseNames;

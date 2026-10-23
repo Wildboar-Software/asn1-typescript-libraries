@@ -89,10 +89,10 @@ class UnitInfo {
     readonly units: OPTIONAL<UnitType[]>;
 
     constructor (
-        commonInfo: OPTIONAL<CommonInfo>,
-        unitSystem: OPTIONAL<InternationalString>,
-        description: OPTIONAL<HumanString>,
-        units: OPTIONAL<UnitType[]>
+        commonInfo?: OPTIONAL<CommonInfo>,
+        unitSystem?: OPTIONAL<InternationalString>,
+        description?: OPTIONAL<HumanString>,
+        units?: OPTIONAL<UnitType[]>
     ) {
         this.commonInfo = commonInfo;
         this.unitSystem = unitSystem;

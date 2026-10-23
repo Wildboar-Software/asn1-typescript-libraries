@@ -56,8 +56,8 @@ class HSSIdentities {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        ePSSubscriberIDs: OPTIONAL<EPSSubscriberIDs>,
-        iMSSubscriberIDs: OPTIONAL<IMSSubscriberIDs>,
+        ePSSubscriberIDs?: OPTIONAL<EPSSubscriberIDs>,
+        iMSSubscriberIDs?: OPTIONAL<IMSSubscriberIDs>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.ePSSubscriberIDs = ePSSubscriberIDs;

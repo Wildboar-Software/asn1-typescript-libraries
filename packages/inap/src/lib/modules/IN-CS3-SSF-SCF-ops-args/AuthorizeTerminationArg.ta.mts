@@ -159,20 +159,20 @@ class AuthorizeTerminationArg {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        alertingPattern: OPTIONAL<AlertingPattern>,
-        callingPartyNumber: OPTIONAL<CallingPartyNumber>,
-        destinationNumberRoutingAddress: OPTIONAL<CalledPartyNumber>,
-        displayInformation: OPTIONAL<DisplayInformation>,
-        iSDNAccessRelatedInformation: OPTIONAL<ISDNAccessRelatedInformation>,
-        originalCalledPartyID: OPTIONAL<OriginalCalledPartyID>,
-        travellingClassMark: OPTIONAL<TravellingClassMark>,
-        extensions: OPTIONAL<Extensions>,
-        iNServiceCompatibilityResponse: OPTIONAL<INServiceCompatibilityResponse>,
-        forwardGVNS: OPTIONAL<ForwardGVNS>,
-        backwardGVNS: OPTIONAL<BackwardGVNS>,
-        legID: OPTIONAL<LegID>,
-        serviceInteractionIndicatorsTwo: OPTIONAL<ServiceInteractionIndicatorsTwo>,
-        scfID: OPTIONAL<ScfID>,
+        alertingPattern?: OPTIONAL<AlertingPattern>,
+        callingPartyNumber?: OPTIONAL<CallingPartyNumber>,
+        destinationNumberRoutingAddress?: OPTIONAL<CalledPartyNumber>,
+        displayInformation?: OPTIONAL<DisplayInformation>,
+        iSDNAccessRelatedInformation?: OPTIONAL<ISDNAccessRelatedInformation>,
+        originalCalledPartyID?: OPTIONAL<OriginalCalledPartyID>,
+        travellingClassMark?: OPTIONAL<TravellingClassMark>,
+        extensions?: OPTIONAL<Extensions>,
+        iNServiceCompatibilityResponse?: OPTIONAL<INServiceCompatibilityResponse>,
+        forwardGVNS?: OPTIONAL<ForwardGVNS>,
+        backwardGVNS?: OPTIONAL<BackwardGVNS>,
+        legID?: OPTIONAL<LegID>,
+        serviceInteractionIndicatorsTwo?: OPTIONAL<ServiceInteractionIndicatorsTwo>,
+        scfID?: OPTIONAL<ScfID>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.alertingPattern = alertingPattern;

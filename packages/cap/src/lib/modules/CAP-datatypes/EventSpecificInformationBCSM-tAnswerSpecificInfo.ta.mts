@@ -43,7 +43,7 @@ export class EventSpecificInformationBCSM_tAnswerSpecificInfo {
          * @public
          * @readonly
          */
-        readonly destinationAddress: OPTIONAL<CalledPartyNumber>,
+        readonly destinationAddress?: OPTIONAL<CalledPartyNumber>,
         /**
          * @summary `or_Call`.
          * @description
@@ -54,7 +54,7 @@ export class EventSpecificInformationBCSM_tAnswerSpecificInfo {
          * @public
          * @readonly
          */
-        readonly or_Call: OPTIONAL<NULL>,
+        readonly or_Call?: OPTIONAL<NULL>,
         /**
          * @summary `forwardedCall`.
          * @description
@@ -65,7 +65,7 @@ export class EventSpecificInformationBCSM_tAnswerSpecificInfo {
          * @public
          * @readonly
          */
-        readonly forwardedCall: OPTIONAL<NULL>,
+        readonly forwardedCall?: OPTIONAL<NULL>,
         /**
          * @summary `chargeIndicator`.
          * @description
@@ -76,7 +76,7 @@ export class EventSpecificInformationBCSM_tAnswerSpecificInfo {
          * @public
          * @readonly
          */
-        readonly chargeIndicator: OPTIONAL<ChargeIndicator>,
+        readonly chargeIndicator?: OPTIONAL<ChargeIndicator>,
         /**
          * @summary `ext_basicServiceCode`.
          * @description
@@ -87,7 +87,7 @@ export class EventSpecificInformationBCSM_tAnswerSpecificInfo {
          * @public
          * @readonly
          */
-        readonly ext_basicServiceCode: OPTIONAL<Ext_BasicServiceCode>,
+        readonly ext_basicServiceCode?: OPTIONAL<Ext_BasicServiceCode>,
         /**
          * @summary `ext_basicServiceCode2`.
          * @description
@@ -98,7 +98,7 @@ export class EventSpecificInformationBCSM_tAnswerSpecificInfo {
          * @public
          * @readonly
          */
-        readonly ext_basicServiceCode2: OPTIONAL<Ext_BasicServiceCode>,
+        readonly ext_basicServiceCode2?: OPTIONAL<Ext_BasicServiceCode>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}
 

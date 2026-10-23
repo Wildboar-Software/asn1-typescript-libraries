@@ -97,11 +97,11 @@ class SortKeyDetails {
     readonly caseSensitivity: OPTIONAL<SortKeyDetails_caseSensitivity>;
 
     constructor (
-        description: OPTIONAL<HumanString>,
-        elementSpecifications: OPTIONAL<Specification[]>,
-        attributeSpecifications: OPTIONAL<AttributeCombinations>,
-        sortType: OPTIONAL<SortKeyDetails_sortType>,
-        caseSensitivity: OPTIONAL<SortKeyDetails_caseSensitivity>
+        description?: OPTIONAL<HumanString>,
+        elementSpecifications?: OPTIONAL<Specification[]>,
+        attributeSpecifications?: OPTIONAL<AttributeCombinations>,
+        sortType?: OPTIONAL<SortKeyDetails_sortType>,
+        caseSensitivity?: OPTIONAL<SortKeyDetails_caseSensitivity>
     ) {
         this.description = description;
         this.elementSpecifications = elementSpecifications;

@@ -49,7 +49,7 @@ class RegisterCC_EntryArg {
          * @public
          * @readonly
          */
-        readonly ccbs_Data: OPTIONAL<CCBS_Data>,
+        readonly ccbs_Data?: OPTIONAL<CCBS_Data>,
         /**
          * @summary Extensions that are not recognized.
          * @public

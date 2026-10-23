@@ -198,9 +198,9 @@ class PartyInformation {
     constructor (
         party_Qualifier: PartyInformation_party_Qualifier,
         partyIdentity: PartyInformation_partyIdentity,
-        services_Information: OPTIONAL<Services_Information>,
-        supplementary_Services_Information: OPTIONAL<Supplementary_Services>,
-        services_Data_Information: OPTIONAL<Services_Data_Information>,
+        services_Information?: OPTIONAL<Services_Information>,
+        supplementary_Services_Information?: OPTIONAL<Supplementary_Services>,
+        services_Data_Information?: OPTIONAL<Services_Data_Information>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.party_Qualifier = party_Qualifier;

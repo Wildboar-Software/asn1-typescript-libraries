@@ -46,7 +46,7 @@ class MT_ForwardSM_VGCS_Res {
          * @public
          * @readonly
          */
-        readonly sm_RP_UI: OPTIONAL<SignalInfo>,
+        readonly sm_RP_UI?: OPTIONAL<SignalInfo>,
         /**
          * @summary `dispatcherList`.
          * @description
@@ -56,7 +56,7 @@ class MT_ForwardSM_VGCS_Res {
          * @public
          * @readonly
          */
-        readonly dispatcherList: OPTIONAL<DispatcherList>,
+        readonly dispatcherList?: OPTIONAL<DispatcherList>,
         /**
          * @summary `ongoingCall`.
          * @description
@@ -66,7 +66,7 @@ class MT_ForwardSM_VGCS_Res {
          * @public
          * @readonly
          */
-        readonly ongoingCall: OPTIONAL<NULL>,
+        readonly ongoingCall?: OPTIONAL<NULL>,
         /**
          * @summary `extensionContainer`.
          * @description
@@ -76,7 +76,7 @@ class MT_ForwardSM_VGCS_Res {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `additionalDispatcherList`.
          * @description
@@ -87,7 +87,7 @@ class MT_ForwardSM_VGCS_Res {
          * @public
          * @readonly
          */
-        readonly additionalDispatcherList: OPTIONAL<AdditionalDispatcherList>,
+        readonly additionalDispatcherList?: OPTIONAL<AdditionalDispatcherList>,
         /**
          * @summary Extensions that are not recognized.
          * @public

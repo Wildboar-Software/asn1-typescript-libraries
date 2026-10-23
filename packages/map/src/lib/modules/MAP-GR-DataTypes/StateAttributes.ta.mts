@@ -40,7 +40,7 @@ class StateAttributes {
          * @public
          * @readonly
          */
-        readonly downlinkAttached: OPTIONAL<NULL>,
+        readonly downlinkAttached?: OPTIONAL<NULL>,
         /**
          * @summary `uplinkAttached`.
          * @description
@@ -50,7 +50,7 @@ class StateAttributes {
          * @public
          * @readonly
          */
-        readonly uplinkAttached: OPTIONAL<NULL>,
+        readonly uplinkAttached?: OPTIONAL<NULL>,
         /**
          * @summary `dualCommunication`.
          * @description
@@ -60,7 +60,7 @@ class StateAttributes {
          * @public
          * @readonly
          */
-        readonly dualCommunication: OPTIONAL<NULL>,
+        readonly dualCommunication?: OPTIONAL<NULL>,
         /**
          * @summary `callOriginator`.
          * @description
@@ -70,7 +70,7 @@ class StateAttributes {
          * @public
          * @readonly
          */
-        readonly callOriginator: OPTIONAL<NULL>
+        readonly callOriginator?: OPTIONAL<NULL>
     ) {}
 
     /**

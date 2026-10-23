@@ -41,7 +41,7 @@ class SLR_ArgExtensionContainer {
          * @public
          * @readonly
          */
-        readonly privateExtensionList: OPTIONAL<PrivateExtensionList>,
+        readonly privateExtensionList?: OPTIONAL<PrivateExtensionList>,
         /**
          * @summary `slr_Arg_PCS_Extensions`.
          * @description
@@ -53,7 +53,7 @@ class SLR_ArgExtensionContainer {
          * @public
          * @readonly
          */
-        readonly slr_Arg_PCS_Extensions: OPTIONAL<SLR_Arg_PCS_Extensions>,
+        readonly slr_Arg_PCS_Extensions?: OPTIONAL<SLR_Arg_PCS_Extensions>,
         /**
          * @summary Extensions that are not recognized.
          * @public

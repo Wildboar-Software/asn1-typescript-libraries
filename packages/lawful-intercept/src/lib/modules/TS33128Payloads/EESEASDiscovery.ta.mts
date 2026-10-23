@@ -161,13 +161,13 @@ class EESEASDiscovery {
 
     constructor (
         eECID: UTF8String,
-        gPSI: OPTIONAL<GPSI>,
-        eASDiscoveryFilter: OPTIONAL<EASDiscoveryFilter>,
-        eECServiceContSupport: OPTIONAL<ACRScenarios>,
-        uELocation: OPTIONAL<Location>,
-        eASTargetDNAIs: OPTIONAL<DNAIs>,
-        discoveredEAS: OPTIONAL<DiscoveredEAS>,
-        failureResponse: OPTIONAL<FailureResponse>,
+        gPSI?: OPTIONAL<GPSI>,
+        eASDiscoveryFilter?: OPTIONAL<EASDiscoveryFilter>,
+        eECServiceContSupport?: OPTIONAL<ACRScenarios>,
+        uELocation?: OPTIONAL<Location>,
+        eASTargetDNAIs?: OPTIONAL<DNAIs>,
+        discoveredEAS?: OPTIONAL<DiscoveredEAS>,
+        failureResponse?: OPTIONAL<FailureResponse>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.eECID = eECID;

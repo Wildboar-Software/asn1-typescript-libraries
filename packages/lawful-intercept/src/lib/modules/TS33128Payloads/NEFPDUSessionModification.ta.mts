@@ -245,13 +245,13 @@ class NEFPDUSessionModification {
         gPSI: GPSI,
         sNSSAI: SNSSAI,
         initiator: Initiator,
-        rDSSourcePortNumber: OPTIONAL<RDSPortNumber>,
-        rDSDestinationPortNumber: OPTIONAL<RDSPortNumber>,
-        applicationID: OPTIONAL<ApplicationID>,
-        aFID: OPTIONAL<AFID>,
-        rDSAction: OPTIONAL<RDSAction>,
-        serializationFormat: OPTIONAL<SerializationFormat>,
-        pDUSessionID: OPTIONAL<PDUSessionID>,
+        rDSSourcePortNumber?: OPTIONAL<RDSPortNumber>,
+        rDSDestinationPortNumber?: OPTIONAL<RDSPortNumber>,
+        applicationID?: OPTIONAL<ApplicationID>,
+        aFID?: OPTIONAL<AFID>,
+        rDSAction?: OPTIONAL<RDSAction>,
+        serializationFormat?: OPTIONAL<SerializationFormat>,
+        pDUSessionID?: OPTIONAL<PDUSessionID>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.sUPI = sUPI;

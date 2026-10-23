@@ -55,7 +55,7 @@ class DeleteNamedType_Request {
          * @public
          * @readonly
          */
-        readonly scopeOfDelete: OPTIONAL<DeleteNamedType_Request_scopeOfDelete>,
+        readonly scopeOfDelete?: OPTIONAL<DeleteNamedType_Request_scopeOfDelete>,
         /**
          * @summary `listOfTypeName`.
          * @description
@@ -66,7 +66,7 @@ class DeleteNamedType_Request {
          * @public
          * @readonly
          */
-        readonly listOfTypeName: OPTIONAL<ObjectName[]>,
+        readonly listOfTypeName?: OPTIONAL<ObjectName[]>,
         /**
          * @summary `domainName`.
          * @description
@@ -78,7 +78,7 @@ class DeleteNamedType_Request {
          * @public
          * @readonly
          */
-        readonly domainName: OPTIONAL<Identifier>
+        readonly domainName?: OPTIONAL<Identifier>
     ) {}
 
     /**

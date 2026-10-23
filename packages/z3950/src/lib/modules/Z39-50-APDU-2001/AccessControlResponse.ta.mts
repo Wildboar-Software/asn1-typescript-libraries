@@ -88,10 +88,10 @@ class AccessControlResponse {
     readonly otherInfo: OPTIONAL<OtherInformation>;
 
     constructor (
-        referenceId: OPTIONAL<ReferenceId>,
-        securityChallengeResponse: OPTIONAL<AccessControlResponse_securityChallengeResponse>,
-        diagnostic: OPTIONAL<DiagRec>,
-        otherInfo: OPTIONAL<OtherInformation>
+        referenceId?: OPTIONAL<ReferenceId>,
+        securityChallengeResponse?: OPTIONAL<AccessControlResponse_securityChallengeResponse>,
+        diagnostic?: OPTIONAL<DiagRec>,
+        otherInfo?: OPTIONAL<OtherInformation>
     ) {
         this.referenceId = referenceId;
         this.securityChallengeResponse = securityChallengeResponse;

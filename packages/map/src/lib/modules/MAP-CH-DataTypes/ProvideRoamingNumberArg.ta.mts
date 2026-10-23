@@ -97,7 +97,7 @@ class ProvideRoamingNumberArg {
          * @public
          * @readonly
          */
-        readonly msisdn: OPTIONAL<ISDN_AddressString>,
+        readonly msisdn?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `lmsi`.
          * @description
@@ -107,7 +107,7 @@ class ProvideRoamingNumberArg {
          * @public
          * @readonly
          */
-        readonly lmsi: OPTIONAL<LMSI>,
+        readonly lmsi?: OPTIONAL<LMSI>,
         /**
          * @summary `gsm_BearerCapability`.
          * @description
@@ -117,7 +117,7 @@ class ProvideRoamingNumberArg {
          * @public
          * @readonly
          */
-        readonly gsm_BearerCapability: OPTIONAL<ExternalSignalInfo>,
+        readonly gsm_BearerCapability?: OPTIONAL<ExternalSignalInfo>,
         /**
          * @summary `networkSignalInfo`.
          * @description
@@ -127,7 +127,7 @@ class ProvideRoamingNumberArg {
          * @public
          * @readonly
          */
-        readonly networkSignalInfo: OPTIONAL<ExternalSignalInfo>,
+        readonly networkSignalInfo?: OPTIONAL<ExternalSignalInfo>,
         /**
          * @summary `suppressionOfAnnouncement`.
          * @description
@@ -137,7 +137,7 @@ class ProvideRoamingNumberArg {
          * @public
          * @readonly
          */
-        readonly suppressionOfAnnouncement: OPTIONAL<SuppressionOfAnnouncement>,
+        readonly suppressionOfAnnouncement?: OPTIONAL<SuppressionOfAnnouncement>,
         /**
          * @summary `gmsc_Address`.
          * @description
@@ -147,7 +147,7 @@ class ProvideRoamingNumberArg {
          * @public
          * @readonly
          */
-        readonly gmsc_Address: OPTIONAL<ISDN_AddressString>,
+        readonly gmsc_Address?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `callReferenceNumber`.
          * @description
@@ -158,7 +158,7 @@ class ProvideRoamingNumberArg {
          * @public
          * @readonly
          */
-        readonly callReferenceNumber: OPTIONAL<CallReferenceNumber>,
+        readonly callReferenceNumber?: OPTIONAL<CallReferenceNumber>,
         /**
          * @summary `or_Interrogation`.
          * @description
@@ -168,7 +168,7 @@ class ProvideRoamingNumberArg {
          * @public
          * @readonly
          */
-        readonly or_Interrogation: OPTIONAL<NULL>,
+        readonly or_Interrogation?: OPTIONAL<NULL>,
         /**
          * @summary `extensionContainer`.
          * @description
@@ -178,7 +178,7 @@ class ProvideRoamingNumberArg {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `alertingPattern`.
          * @description
@@ -188,7 +188,7 @@ class ProvideRoamingNumberArg {
          * @public
          * @readonly
          */
-        readonly alertingPattern: OPTIONAL<AlertingPattern>,
+        readonly alertingPattern?: OPTIONAL<AlertingPattern>,
         /**
          * @summary `ccbs_Call`.
          * @description
@@ -198,7 +198,7 @@ class ProvideRoamingNumberArg {
          * @public
          * @readonly
          */
-        readonly ccbs_Call: OPTIONAL<NULL>,
+        readonly ccbs_Call?: OPTIONAL<NULL>,
         /**
          * @summary `supportedCamelPhasesInInterrogatingNode`.
          * @description
@@ -208,7 +208,7 @@ class ProvideRoamingNumberArg {
          * @public
          * @readonly
          */
-        readonly supportedCamelPhasesInInterrogatingNode: OPTIONAL<SupportedCamelPhases>,
+        readonly supportedCamelPhasesInInterrogatingNode?: OPTIONAL<SupportedCamelPhases>,
         /**
          * @summary `additionalSignalInfo`.
          * @description
@@ -218,7 +218,7 @@ class ProvideRoamingNumberArg {
          * @public
          * @readonly
          */
-        readonly additionalSignalInfo: OPTIONAL<Ext_ExternalSignalInfo>,
+        readonly additionalSignalInfo?: OPTIONAL<Ext_ExternalSignalInfo>,
         /**
          * @summary `orNotSupportedInGMSC`.
          * @description
@@ -228,7 +228,7 @@ class ProvideRoamingNumberArg {
          * @public
          * @readonly
          */
-        readonly orNotSupportedInGMSC: OPTIONAL<NULL>,
+        readonly orNotSupportedInGMSC?: OPTIONAL<NULL>,
         /**
          * @summary `pre_pagingSupported`.
          * @description
@@ -238,7 +238,7 @@ class ProvideRoamingNumberArg {
          * @public
          * @readonly
          */
-        readonly pre_pagingSupported: OPTIONAL<NULL>,
+        readonly pre_pagingSupported?: OPTIONAL<NULL>,
         /**
          * @summary `longFTN_Supported`.
          * @description
@@ -248,7 +248,7 @@ class ProvideRoamingNumberArg {
          * @public
          * @readonly
          */
-        readonly longFTN_Supported: OPTIONAL<NULL>,
+        readonly longFTN_Supported?: OPTIONAL<NULL>,
         /**
          * @summary `suppress_VT_CSI`.
          * @description
@@ -258,7 +258,7 @@ class ProvideRoamingNumberArg {
          * @public
          * @readonly
          */
-        readonly suppress_VT_CSI: OPTIONAL<NULL>,
+        readonly suppress_VT_CSI?: OPTIONAL<NULL>,
         /**
          * @summary `offeredCamel4CSIsInInterrogatingNode`.
          * @description
@@ -268,7 +268,7 @@ class ProvideRoamingNumberArg {
          * @public
          * @readonly
          */
-        readonly offeredCamel4CSIsInInterrogatingNode: OPTIONAL<OfferedCamel4CSIs>,
+        readonly offeredCamel4CSIsInInterrogatingNode?: OPTIONAL<OfferedCamel4CSIs>,
         /**
          * @summary `mtRoamingRetrySupported`.
          * @description
@@ -278,7 +278,7 @@ class ProvideRoamingNumberArg {
          * @public
          * @readonly
          */
-        readonly mtRoamingRetrySupported: OPTIONAL<NULL>,
+        readonly mtRoamingRetrySupported?: OPTIONAL<NULL>,
         /**
          * @summary `pagingArea`.
          * @description
@@ -288,7 +288,7 @@ class ProvideRoamingNumberArg {
          * @public
          * @readonly
          */
-        readonly pagingArea: OPTIONAL<PagingArea>,
+        readonly pagingArea?: OPTIONAL<PagingArea>,
         /**
          * @summary `callPriority`.
          * @description
@@ -298,7 +298,7 @@ class ProvideRoamingNumberArg {
          * @public
          * @readonly
          */
-        readonly callPriority: OPTIONAL<EMLPP_Priority>,
+        readonly callPriority?: OPTIONAL<EMLPP_Priority>,
         /**
          * @summary `mtrf_Indicator`.
          * @description
@@ -308,7 +308,7 @@ class ProvideRoamingNumberArg {
          * @public
          * @readonly
          */
-        readonly mtrf_Indicator: OPTIONAL<NULL>,
+        readonly mtrf_Indicator?: OPTIONAL<NULL>,
         /**
          * @summary `oldMSC_Number`.
          * @description
@@ -318,7 +318,7 @@ class ProvideRoamingNumberArg {
          * @public
          * @readonly
          */
-        readonly oldMSC_Number: OPTIONAL<ISDN_AddressString>,
+        readonly oldMSC_Number?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `lastUsedLtePLMN_Id`.
          * @description
@@ -328,7 +328,7 @@ class ProvideRoamingNumberArg {
          * @public
          * @readonly
          */
-        readonly lastUsedLtePLMN_Id: OPTIONAL<PLMN_Id>,
+        readonly lastUsedLtePLMN_Id?: OPTIONAL<PLMN_Id>,
         /**
          * @summary Extensions that are not recognized.
          * @public

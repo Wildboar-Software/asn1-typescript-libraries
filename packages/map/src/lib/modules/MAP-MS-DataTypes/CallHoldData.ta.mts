@@ -46,7 +46,7 @@ class CallHoldData {
          * @public
          * @readonly
          */
-        readonly notificationToCSE: OPTIONAL<NULL>,
+        readonly notificationToCSE?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @public

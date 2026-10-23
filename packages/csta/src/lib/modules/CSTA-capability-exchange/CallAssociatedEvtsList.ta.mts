@@ -54,7 +54,7 @@ class CallAssociatedEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly callInformation: OPTIONAL<CallInformation>,
+        readonly callInformation?: OPTIONAL<CallInformation>,
         /**
          * @summary `charging`.
          * @public
@@ -63,7 +63,7 @@ class CallAssociatedEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly charging: OPTIONAL<Charging>,
+        readonly charging?: OPTIONAL<Charging>,
         /**
          * @summary `digitsGenerated`.
          * @public
@@ -72,7 +72,7 @@ class CallAssociatedEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly digitsGenerated: OPTIONAL<DigitsGenerated>,
+        readonly digitsGenerated?: OPTIONAL<DigitsGenerated>,
         /**
          * @summary `telephonyTonesGenerated`.
          * @public
@@ -81,7 +81,7 @@ class CallAssociatedEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly telephonyTonesGenerated: OPTIONAL<TelephonyTonesGenerated>,
+        readonly telephonyTonesGenerated?: OPTIONAL<TelephonyTonesGenerated>,
         /**
          * @summary `serviceCompletionFailure`.
          * @public
@@ -90,7 +90,7 @@ class CallAssociatedEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly serviceCompletionFailure: OPTIONAL<ServiceCompletionFailure>
+        readonly serviceCompletionFailure?: OPTIONAL<ServiceCompletionFailure>
     ) {}
 
     /**

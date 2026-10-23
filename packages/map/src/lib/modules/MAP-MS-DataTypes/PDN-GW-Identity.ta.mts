@@ -48,7 +48,7 @@ class PDN_GW_Identity {
          * @public
          * @readonly
          */
-        readonly pdn_gw_ipv4_Address: OPTIONAL<PDP_Address>,
+        readonly pdn_gw_ipv4_Address?: OPTIONAL<PDP_Address>,
         /**
          * @summary `pdn_gw_ipv6_Address`.
          * @description
@@ -60,7 +60,7 @@ class PDN_GW_Identity {
          * @public
          * @readonly
          */
-        readonly pdn_gw_ipv6_Address: OPTIONAL<PDP_Address>,
+        readonly pdn_gw_ipv6_Address?: OPTIONAL<PDP_Address>,
         /**
          * @summary `pdn_gw_name`.
          * @description
@@ -72,13 +72,13 @@ class PDN_GW_Identity {
          * @public
          * @readonly
          */
-        readonly pdn_gw_name: OPTIONAL<FQDN>,
+        readonly pdn_gw_name?: OPTIONAL<FQDN>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -43,7 +43,7 @@ class ErrorControl_Item_ecStatistics {
          * @public
          * @readonly
          */
-        readonly framesSentAck: OPTIONAL<INTEGER>,
+        readonly framesSentAck?: OPTIONAL<INTEGER>,
         /**
          * @summary `framesRetransmitted`.
          * @description
@@ -53,7 +53,7 @@ class ErrorControl_Item_ecStatistics {
          * @public
          * @readonly
          */
-        readonly framesRetransmitted: OPTIONAL<INTEGER>,
+        readonly framesRetransmitted?: OPTIONAL<INTEGER>,
         /**
          * @summary `framesReceivedAck`.
          * @description
@@ -63,7 +63,7 @@ class ErrorControl_Item_ecStatistics {
          * @public
          * @readonly
          */
-        readonly framesReceivedAck: OPTIONAL<INTEGER>,
+        readonly framesReceivedAck?: OPTIONAL<INTEGER>,
         /**
          * @summary `framesReceivedDiscard`.
          * @description
@@ -73,7 +73,7 @@ class ErrorControl_Item_ecStatistics {
          * @public
          * @readonly
          */
-        readonly framesReceivedDiscard: OPTIONAL<INTEGER>
+        readonly framesReceivedDiscard?: OPTIONAL<INTEGER>
     ) {
         if (this.framesSentAck !== undefined) {
                 const _n = typeof this.framesSentAck === "bigint" ? Number(this.framesSentAck) : this.framesSentAck;

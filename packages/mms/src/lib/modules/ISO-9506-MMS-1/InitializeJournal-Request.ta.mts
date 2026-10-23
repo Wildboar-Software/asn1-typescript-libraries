@@ -61,7 +61,7 @@ class InitializeJournal_Request {
          * @public
          * @readonly
          */
-        readonly limitSpecification: OPTIONAL<InitializeJournal_Request_limitSpecification>
+        readonly limitSpecification?: OPTIONAL<InitializeJournal_Request_limitSpecification>
     ) {}
 
     /**

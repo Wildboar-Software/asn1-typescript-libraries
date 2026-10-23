@@ -45,7 +45,7 @@ class MediaEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly mediaAttached: OPTIONAL<MediaAttached>,
+        readonly mediaAttached?: OPTIONAL<MediaAttached>,
         /**
          * @summary `mediaDetached`.
          * @public
@@ -54,7 +54,7 @@ class MediaEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly mediaDetached: OPTIONAL<MediaDetached>
+        readonly mediaDetached?: OPTIONAL<MediaDetached>
     ) {}
 
     /**

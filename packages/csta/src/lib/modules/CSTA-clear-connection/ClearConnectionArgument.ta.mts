@@ -75,7 +75,7 @@ class ClearConnectionArgument {
          * @public
          * @readonly
          */
-        readonly correlatorData: OPTIONAL<CorrelatorData>,
+        readonly correlatorData?: OPTIONAL<CorrelatorData>,
         /**
          * @summary `userData`.
          * @description
@@ -86,7 +86,7 @@ class ClearConnectionArgument {
          * @public
          * @readonly
          */
-        readonly userData: OPTIONAL<UserData>,
+        readonly userData?: OPTIONAL<UserData>,
         /**
          * @summary `reason`.
          * @description
@@ -98,7 +98,7 @@ class ClearConnectionArgument {
          * @public
          * @readonly
          */
-        readonly reason: OPTIONAL<EventCause>,
+        readonly reason?: OPTIONAL<EventCause>,
         /**
          * @summary `extensions`.
          * @description
@@ -109,7 +109,7 @@ class ClearConnectionArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

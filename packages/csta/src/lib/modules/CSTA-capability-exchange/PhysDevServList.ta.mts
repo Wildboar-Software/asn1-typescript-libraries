@@ -108,7 +108,7 @@ class PhysDevServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly buttonPress: OPTIONAL<ButtonPress>,
+        readonly buttonPress?: OPTIONAL<ButtonPress>,
         /**
          * @summary `getAuditoryApparatusInfo`.
          * @public
@@ -117,7 +117,7 @@ class PhysDevServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly getAuditoryApparatusInfo: OPTIONAL<GetAuditoryApparatusInfo>,
+        readonly getAuditoryApparatusInfo?: OPTIONAL<GetAuditoryApparatusInfo>,
         /**
          * @summary `getButtonInformation`.
          * @public
@@ -126,7 +126,7 @@ class PhysDevServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly getButtonInformation: OPTIONAL<GetButtonInformation>,
+        readonly getButtonInformation?: OPTIONAL<GetButtonInformation>,
         /**
          * @summary `getDisplay`.
          * @public
@@ -135,7 +135,7 @@ class PhysDevServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly getDisplay: OPTIONAL<GetDisplay>,
+        readonly getDisplay?: OPTIONAL<GetDisplay>,
         /**
          * @summary `getHookSwitchStatus`.
          * @public
@@ -144,7 +144,7 @@ class PhysDevServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly getHookSwitchStatus: OPTIONAL<GetHookSwitchStatus>,
+        readonly getHookSwitchStatus?: OPTIONAL<GetHookSwitchStatus>,
         /**
          * @summary `getLampInfo`.
          * @public
@@ -153,7 +153,7 @@ class PhysDevServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly getLampInfo: OPTIONAL<GetLampInfo>,
+        readonly getLampInfo?: OPTIONAL<GetLampInfo>,
         /**
          * @summary `getLampMode`.
          * @public
@@ -162,7 +162,7 @@ class PhysDevServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly getLampMode: OPTIONAL<GetLampMode>,
+        readonly getLampMode?: OPTIONAL<GetLampMode>,
         /**
          * @summary `getMessageWaitingIndicator`.
          * @public
@@ -171,7 +171,7 @@ class PhysDevServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly getMessageWaitingIndicator: OPTIONAL<GetMessageWaitingIndicator>,
+        readonly getMessageWaitingIndicator?: OPTIONAL<GetMessageWaitingIndicator>,
         /**
          * @summary `getMicrophoneGain`.
          * @public
@@ -180,7 +180,7 @@ class PhysDevServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly getMicrophoneGain: OPTIONAL<GetMicrophoneGain>,
+        readonly getMicrophoneGain?: OPTIONAL<GetMicrophoneGain>,
         /**
          * @summary `getMicrophoneMute`.
          * @public
@@ -189,7 +189,7 @@ class PhysDevServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly getMicrophoneMute: OPTIONAL<GetMicrophoneMute>,
+        readonly getMicrophoneMute?: OPTIONAL<GetMicrophoneMute>,
         /**
          * @summary `getRingerStatus`.
          * @public
@@ -198,7 +198,7 @@ class PhysDevServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly getRingerStatus: OPTIONAL<GetRingerStatus>,
+        readonly getRingerStatus?: OPTIONAL<GetRingerStatus>,
         /**
          * @summary `getSpeakerMute`.
          * @public
@@ -207,7 +207,7 @@ class PhysDevServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly getSpeakerMute: OPTIONAL<GetSpeakerMute>,
+        readonly getSpeakerMute?: OPTIONAL<GetSpeakerMute>,
         /**
          * @summary `getSpeakerVolume`.
          * @public
@@ -216,7 +216,7 @@ class PhysDevServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly getSpeakerVolume: OPTIONAL<GetSpeakerVolume>,
+        readonly getSpeakerVolume?: OPTIONAL<GetSpeakerVolume>,
         /**
          * @summary `setButtonInformation`.
          * @public
@@ -225,7 +225,7 @@ class PhysDevServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly setButtonInformation: OPTIONAL<SetButtonInformation>,
+        readonly setButtonInformation?: OPTIONAL<SetButtonInformation>,
         /**
          * @summary `setDisplay`.
          * @public
@@ -234,7 +234,7 @@ class PhysDevServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly setDisplay: OPTIONAL<SetDisplay>,
+        readonly setDisplay?: OPTIONAL<SetDisplay>,
         /**
          * @summary `setHookSwitchStatus`.
          * @public
@@ -243,7 +243,7 @@ class PhysDevServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly setHookSwitchStatus: OPTIONAL<SetHookSwitchStatus>,
+        readonly setHookSwitchStatus?: OPTIONAL<SetHookSwitchStatus>,
         /**
          * @summary `setLampMode`.
          * @public
@@ -252,7 +252,7 @@ class PhysDevServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly setLampMode: OPTIONAL<SetLampMode>,
+        readonly setLampMode?: OPTIONAL<SetLampMode>,
         /**
          * @summary `setMessageWaitingIndicator`.
          * @public
@@ -261,7 +261,7 @@ class PhysDevServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly setMessageWaitingIndicator: OPTIONAL<SetMessageWaitingIndicator>,
+        readonly setMessageWaitingIndicator?: OPTIONAL<SetMessageWaitingIndicator>,
         /**
          * @summary `setMicrophoneGain`.
          * @public
@@ -270,7 +270,7 @@ class PhysDevServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly setMicrophoneGain: OPTIONAL<SetMicrophoneGain>,
+        readonly setMicrophoneGain?: OPTIONAL<SetMicrophoneGain>,
         /**
          * @summary `setMicrophoneMute`.
          * @public
@@ -279,7 +279,7 @@ class PhysDevServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly setMicrophoneMute: OPTIONAL<SetMicrophoneMute>,
+        readonly setMicrophoneMute?: OPTIONAL<SetMicrophoneMute>,
         /**
          * @summary `setRingerStatus`.
          * @public
@@ -288,7 +288,7 @@ class PhysDevServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly setRingerStatus: OPTIONAL<SetRingerStatus>,
+        readonly setRingerStatus?: OPTIONAL<SetRingerStatus>,
         /**
          * @summary `setSpeakerMute`.
          * @public
@@ -297,7 +297,7 @@ class PhysDevServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly setSpeakerMute: OPTIONAL<SetSpeakerMute>,
+        readonly setSpeakerMute?: OPTIONAL<SetSpeakerMute>,
         /**
          * @summary `setSpeakerVolume`.
          * @public
@@ -306,7 +306,7 @@ class PhysDevServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly setSpeakerVolume: OPTIONAL<SetSpeakerVolume>
+        readonly setSpeakerVolume?: OPTIONAL<SetSpeakerVolume>
     ) {}
 
     /**

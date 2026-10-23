@@ -56,7 +56,7 @@ class AttachMediaServiceResult {
          * @public
          * @readonly
          */
-        readonly mediaConnection: OPTIONAL<ConnectionID>,
+        readonly mediaConnection?: OPTIONAL<ConnectionID>,
         /**
          * @summary `mediaDevice`.
          * @description
@@ -65,7 +65,7 @@ class AttachMediaServiceResult {
          * @public
          * @readonly
          */
-        readonly mediaDevice: OPTIONAL<DeviceID>,
+        readonly mediaDevice?: OPTIONAL<DeviceID>,
         /**
          * @summary `mediaServiceInstanceID`.
          * @description
@@ -74,7 +74,7 @@ class AttachMediaServiceResult {
          * @public
          * @readonly
          */
-        readonly mediaServiceInstanceID: OPTIONAL<MediaServiceInstanceID>,
+        readonly mediaServiceInstanceID?: OPTIONAL<MediaServiceInstanceID>,
         /**
          * @summary `mediaConnectionInfo`.
          * @description
@@ -83,7 +83,7 @@ class AttachMediaServiceResult {
          * @public
          * @readonly
          */
-        readonly mediaConnectionInfo: OPTIONAL<ConnectionInformation>,
+        readonly mediaConnectionInfo?: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `callLinkageData`.
          * @description
@@ -92,7 +92,7 @@ class AttachMediaServiceResult {
          * @public
          * @readonly
          */
-        readonly callLinkageData: OPTIONAL<CallLinkageData>,
+        readonly callLinkageData?: OPTIONAL<CallLinkageData>,
         /**
          * @summary `extensions`.
          * @description
@@ -102,7 +102,7 @@ class AttachMediaServiceResult {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

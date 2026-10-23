@@ -130,11 +130,11 @@ class EntityGeoLocation {
 
     constructor (
         countryCode: ISO3166CountryCode,
-        stateOrProvince: OPTIONAL<ISO3166AdminSubdivisionCode>,
-        localityName: OPTIONAL<UTF8String>,
-        streetAddress: OPTIONAL<UTF8String>,
-        locationCoords: OPTIONAL<OpenLocationCode>,
-        postalCode: OPTIONAL<UTF8String>
+        stateOrProvince?: OPTIONAL<ISO3166AdminSubdivisionCode>,
+        localityName?: OPTIONAL<UTF8String>,
+        streetAddress?: OPTIONAL<UTF8String>,
+        locationCoords?: OPTIONAL<OpenLocationCode>,
+        postalCode?: OPTIONAL<UTF8String>
     ) {
         this.countryCode = countryCode;
         this.stateOrProvince = stateOrProvince;

@@ -207,13 +207,13 @@ class AMFUEConfigurationUpdate {
     constructor (
         userIdentifiers: UserIdentifiers,
         gUTI: GUTI,
-        oldGUTI: OPTIONAL<EPS5GGUTI>,
-        fiveGSTAIList: OPTIONAL<TAIList>,
-        slice: OPTIONAL<Slice>,
-        serviceAreaList: OPTIONAL<ServiceAreaList>,
-        registrationResult: OPTIONAL<AMFRegistrationResult>,
-        sMSOverNASIndicator: OPTIONAL<SMSOverNASIndicator>,
-        alternativeNSSAI: OPTIONAL<AlternativeNSSAIList>,
+        oldGUTI?: OPTIONAL<EPS5GGUTI>,
+        fiveGSTAIList?: OPTIONAL<TAIList>,
+        slice?: OPTIONAL<Slice>,
+        serviceAreaList?: OPTIONAL<ServiceAreaList>,
+        registrationResult?: OPTIONAL<AMFRegistrationResult>,
+        sMSOverNASIndicator?: OPTIONAL<SMSOverNASIndicator>,
+        alternativeNSSAI?: OPTIONAL<AlternativeNSSAIList>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.userIdentifiers = userIdentifiers;

@@ -104,7 +104,7 @@ class TopologyRequest {
          * @public
          * @readonly
          */
-        readonly streamID: OPTIONAL<StreamID>,
+        readonly streamID?: OPTIONAL<StreamID>,
         /**
          * @summary `topologyDirectionExtension`.
          * @description
@@ -118,7 +118,7 @@ class TopologyRequest {
          * @public
          * @readonly
          */
-        readonly topologyDirectionExtension: OPTIONAL<TopologyRequest_topologyDirectionExtension>,
+        readonly topologyDirectionExtension?: OPTIONAL<TopologyRequest_topologyDirectionExtension>,
         /**
          * @summary Extensions that are not recognized.
          * @description

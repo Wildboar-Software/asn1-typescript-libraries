@@ -58,7 +58,7 @@ class TerminateDownloadSequence_Request {
          * @public
          * @readonly
          */
-        readonly discard: OPTIONAL<ServiceError>
+        readonly discard?: OPTIONAL<ServiceError>
     ) {}
 
     /**

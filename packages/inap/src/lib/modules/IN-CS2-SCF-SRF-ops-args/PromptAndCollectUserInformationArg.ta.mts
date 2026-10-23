@@ -78,10 +78,10 @@ class PromptAndCollectUserInformationArg {
 
     constructor (
         collectedInfo: CollectedInfo,
-        disconnectFromIPForbidden: OPTIONAL<BOOLEAN>,
-        informationToSend: OPTIONAL<InformationToSend>,
-        extensions: OPTIONAL<ExtensionField[]>,
-        callSegmentID: OPTIONAL<CallSegmentID>,
+        disconnectFromIPForbidden?: OPTIONAL<BOOLEAN>,
+        informationToSend?: OPTIONAL<InformationToSend>,
+        extensions?: OPTIONAL<ExtensionField[]>,
+        callSegmentID?: OPTIONAL<CallSegmentID>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.collectedInfo = collectedInfo;

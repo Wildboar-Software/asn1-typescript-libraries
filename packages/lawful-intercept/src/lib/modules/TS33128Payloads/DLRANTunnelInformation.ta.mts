@@ -95,10 +95,10 @@ class DLRANTunnelInformation {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        dLQOSFlowTunnelInformation: OPTIONAL<QOSFlowTunnelInformation>,
-        additionalDLQOSFlowTunnelInformation: OPTIONAL<QOSFlowTunnelInformationList>,
-        redundantDLQOSFlowTunnelInformation: OPTIONAL<QOSFlowTunnelInformationList>,
-        additionalredundantDLQOSFlowTunnelInformation: OPTIONAL<QOSFlowTunnelInformationList>,
+        dLQOSFlowTunnelInformation?: OPTIONAL<QOSFlowTunnelInformation>,
+        additionalDLQOSFlowTunnelInformation?: OPTIONAL<QOSFlowTunnelInformationList>,
+        redundantDLQOSFlowTunnelInformation?: OPTIONAL<QOSFlowTunnelInformationList>,
+        additionalredundantDLQOSFlowTunnelInformation?: OPTIONAL<QOSFlowTunnelInformationList>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.dLQOSFlowTunnelInformation = dLQOSFlowTunnelInformation;

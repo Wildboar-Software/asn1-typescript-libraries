@@ -50,7 +50,7 @@ class DigitMapDescriptor {
          * @public
          * @readonly
          */
-        readonly digitMapName: OPTIONAL<DigitMapName>,
+        readonly digitMapName?: OPTIONAL<DigitMapName>,
         /**
          * @summary `digitMapValue`.
          * @description
@@ -61,7 +61,7 @@ class DigitMapDescriptor {
          * @public
          * @readonly
          */
-        readonly digitMapValue: OPTIONAL<DigitMapValue>
+        readonly digitMapValue?: OPTIONAL<DigitMapValue>
     ) {}
 
     /**

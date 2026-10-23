@@ -102,7 +102,7 @@ class ChangeLocation {
         routingAreaCode: OCTET_STRING,
         cellId: OPTIONAL<OCTET_STRING>,
         changeTime: OCTET_STRING,
-        mCC_MNC: OPTIONAL<OCTET_STRING>
+        mCC_MNC?: OPTIONAL<OCTET_STRING>
     ) {
         this.locationAreaCode = locationAreaCode;
         this.routingAreaCode = routingAreaCode;

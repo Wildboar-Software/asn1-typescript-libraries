@@ -55,7 +55,7 @@ class IntrudeCallResult {
          * @public
          * @readonly
          */
-        readonly conferencedCall: OPTIONAL<ConnectionID>,
+        readonly conferencedCall?: OPTIONAL<ConnectionID>,
         /**
          * @summary `conferencedCallInfo`.
          * @description
@@ -66,7 +66,7 @@ class IntrudeCallResult {
          * @public
          * @readonly
          */
-        readonly conferencedCallInfo: OPTIONAL<ConnectionInformation>,
+        readonly conferencedCallInfo?: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `callLinkageDataList`.
          * @description
@@ -77,7 +77,7 @@ class IntrudeCallResult {
          * @public
          * @readonly
          */
-        readonly callLinkageDataList: OPTIONAL<CallLinkageDataList>,
+        readonly callLinkageDataList?: OPTIONAL<CallLinkageDataList>,
         /**
          * @summary `extensions`.
          * @description
@@ -88,7 +88,7 @@ class IntrudeCallResult {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

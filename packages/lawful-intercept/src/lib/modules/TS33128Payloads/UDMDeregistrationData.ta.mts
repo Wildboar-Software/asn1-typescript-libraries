@@ -65,9 +65,9 @@ class UDMDeregistrationData {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        deregReason: OPTIONAL<UDMDeregReason>,
-        accessType: OPTIONAL<AccessType>,
-        pDUSessionID: OPTIONAL<PDUSessionID>,
+        deregReason?: OPTIONAL<UDMDeregReason>,
+        accessType?: OPTIONAL<AccessType>,
+        pDUSessionID?: OPTIONAL<PDUSessionID>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.deregReason = deregReason;

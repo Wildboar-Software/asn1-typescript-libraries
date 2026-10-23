@@ -62,7 +62,7 @@ class ConnectGPRSArg {
          * @public
          * @readonly
          */
-        readonly pdpID: OPTIONAL<PDPID>,
+        readonly pdpID?: OPTIONAL<PDPID>,
         /**
          * @summary Extensions that are not recognized.
          * @public

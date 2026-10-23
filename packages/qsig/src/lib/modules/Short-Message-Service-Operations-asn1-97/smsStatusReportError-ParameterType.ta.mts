@@ -78,9 +78,9 @@ class smsStatusReportError_ParameterType {
 
     constructor (
         failureCause: FailureCause,
-        protocolIdentifier: OPTIONAL<ProtocolIdentifier>,
-        userData: OPTIONAL<UserData>,
-        scAddressSaved: OPTIONAL<BOOLEAN>
+        protocolIdentifier?: OPTIONAL<ProtocolIdentifier>,
+        userData?: OPTIONAL<UserData>,
+        scAddressSaved?: OPTIONAL<BOOLEAN>
     ) {
         this.failureCause = failureCause;
         this.protocolIdentifier = protocolIdentifier;

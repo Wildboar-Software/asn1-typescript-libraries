@@ -140,7 +140,7 @@ class PDP_ContextInfo {
          * @public
          * @readonly
          */
-        readonly pdp_Address: OPTIONAL<PDP_Address>,
+        readonly pdp_Address?: OPTIONAL<PDP_Address>,
         /**
          * @summary `apn_Subscribed`.
          * @description
@@ -152,7 +152,7 @@ class PDP_ContextInfo {
          * @public
          * @readonly
          */
-        readonly apn_Subscribed: OPTIONAL<APN>,
+        readonly apn_Subscribed?: OPTIONAL<APN>,
         /**
          * @summary `apn_InUse`.
          * @description
@@ -164,7 +164,7 @@ class PDP_ContextInfo {
          * @public
          * @readonly
          */
-        readonly apn_InUse: OPTIONAL<APN>,
+        readonly apn_InUse?: OPTIONAL<APN>,
         /**
          * @summary `nsapi`.
          * @description
@@ -176,7 +176,7 @@ class PDP_ContextInfo {
          * @public
          * @readonly
          */
-        readonly nsapi: OPTIONAL<NSAPI>,
+        readonly nsapi?: OPTIONAL<NSAPI>,
         /**
          * @summary `transactionId`.
          * @description
@@ -189,7 +189,7 @@ class PDP_ContextInfo {
          * @public
          * @readonly
          */
-        readonly transactionId: OPTIONAL<TransactionId>,
+        readonly transactionId?: OPTIONAL<TransactionId>,
         /**
          * @summary `teid_ForGnAndGp`.
          * @description
@@ -201,7 +201,7 @@ class PDP_ContextInfo {
          * @public
          * @readonly
          */
-        readonly teid_ForGnAndGp: OPTIONAL<TEID>,
+        readonly teid_ForGnAndGp?: OPTIONAL<TEID>,
         /**
          * @summary `teid_ForIu`.
          * @description
@@ -213,7 +213,7 @@ class PDP_ContextInfo {
          * @public
          * @readonly
          */
-        readonly teid_ForIu: OPTIONAL<TEID>,
+        readonly teid_ForIu?: OPTIONAL<TEID>,
         /**
          * @summary `ggsn_Address`.
          * @description
@@ -225,7 +225,7 @@ class PDP_ContextInfo {
          * @public
          * @readonly
          */
-        readonly ggsn_Address: OPTIONAL<GSN_Address>,
+        readonly ggsn_Address?: OPTIONAL<GSN_Address>,
         /**
          * @summary `qos_Subscribed`.
          * @description
@@ -237,7 +237,7 @@ class PDP_ContextInfo {
          * @public
          * @readonly
          */
-        readonly qos_Subscribed: OPTIONAL<Ext_QoS_Subscribed>,
+        readonly qos_Subscribed?: OPTIONAL<Ext_QoS_Subscribed>,
         /**
          * @summary `qos_Requested`.
          * @description
@@ -250,7 +250,7 @@ class PDP_ContextInfo {
          * @public
          * @readonly
          */
-        readonly qos_Requested: OPTIONAL<Ext_QoS_Subscribed>,
+        readonly qos_Requested?: OPTIONAL<Ext_QoS_Subscribed>,
         /**
          * @summary `qos_Negotiated`.
          * @description
@@ -263,7 +263,7 @@ class PDP_ContextInfo {
          * @public
          * @readonly
          */
-        readonly qos_Negotiated: OPTIONAL<Ext_QoS_Subscribed>,
+        readonly qos_Negotiated?: OPTIONAL<Ext_QoS_Subscribed>,
         /**
          * @summary `chargingId`.
          * @description
@@ -275,7 +275,7 @@ class PDP_ContextInfo {
          * @public
          * @readonly
          */
-        readonly chargingId: OPTIONAL<GPRSChargingID>,
+        readonly chargingId?: OPTIONAL<GPRSChargingID>,
         /**
          * @summary `chargingCharacteristics`.
          * @description
@@ -287,7 +287,7 @@ class PDP_ContextInfo {
          * @public
          * @readonly
          */
-        readonly chargingCharacteristics: OPTIONAL<ChargingCharacteristics>,
+        readonly chargingCharacteristics?: OPTIONAL<ChargingCharacteristics>,
         /**
          * @summary `rnc_Address`.
          * @description
@@ -299,13 +299,13 @@ class PDP_ContextInfo {
          * @public
          * @readonly
          */
-        readonly rnc_Address: OPTIONAL<GSN_Address>,
+        readonly rnc_Address?: OPTIONAL<GSN_Address>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `qos2_Subscribed`.
          * @description
@@ -318,7 +318,7 @@ class PDP_ContextInfo {
          * @public
          * @readonly
          */
-        readonly qos2_Subscribed: OPTIONAL<Ext2_QoS_Subscribed>,
+        readonly qos2_Subscribed?: OPTIONAL<Ext2_QoS_Subscribed>,
         /**
          * @summary `qos2_Requested`.
          * @description
@@ -331,7 +331,7 @@ class PDP_ContextInfo {
          * @public
          * @readonly
          */
-        readonly qos2_Requested: OPTIONAL<Ext2_QoS_Subscribed>,
+        readonly qos2_Requested?: OPTIONAL<Ext2_QoS_Subscribed>,
         /**
          * @summary `qos2_Negotiated`.
          * @description
@@ -344,7 +344,7 @@ class PDP_ContextInfo {
          * @public
          * @readonly
          */
-        readonly qos2_Negotiated: OPTIONAL<Ext2_QoS_Subscribed>,
+        readonly qos2_Negotiated?: OPTIONAL<Ext2_QoS_Subscribed>,
         /**
          * @summary `qos3_Subscribed`.
          * @description
@@ -357,7 +357,7 @@ class PDP_ContextInfo {
          * @public
          * @readonly
          */
-        readonly qos3_Subscribed: OPTIONAL<Ext3_QoS_Subscribed>,
+        readonly qos3_Subscribed?: OPTIONAL<Ext3_QoS_Subscribed>,
         /**
          * @summary `qos3_Requested`.
          * @description
@@ -370,7 +370,7 @@ class PDP_ContextInfo {
          * @public
          * @readonly
          */
-        readonly qos3_Requested: OPTIONAL<Ext3_QoS_Subscribed>,
+        readonly qos3_Requested?: OPTIONAL<Ext3_QoS_Subscribed>,
         /**
          * @summary `qos3_Negotiated`.
          * @description
@@ -383,7 +383,7 @@ class PDP_ContextInfo {
          * @public
          * @readonly
          */
-        readonly qos3_Negotiated: OPTIONAL<Ext3_QoS_Subscribed>,
+        readonly qos3_Negotiated?: OPTIONAL<Ext3_QoS_Subscribed>,
         /**
          * @summary `qos4_Subscribed`.
          * @description
@@ -396,7 +396,7 @@ class PDP_ContextInfo {
          * @public
          * @readonly
          */
-        readonly qos4_Subscribed: OPTIONAL<Ext4_QoS_Subscribed>,
+        readonly qos4_Subscribed?: OPTIONAL<Ext4_QoS_Subscribed>,
         /**
          * @summary `qos4_Requested`.
          * @description
@@ -409,7 +409,7 @@ class PDP_ContextInfo {
          * @public
          * @readonly
          */
-        readonly qos4_Requested: OPTIONAL<Ext4_QoS_Subscribed>,
+        readonly qos4_Requested?: OPTIONAL<Ext4_QoS_Subscribed>,
         /**
          * @summary `qos4_Negotiated`.
          * @description
@@ -422,7 +422,7 @@ class PDP_ContextInfo {
          * @public
          * @readonly
          */
-        readonly qos4_Negotiated: OPTIONAL<Ext4_QoS_Subscribed>,
+        readonly qos4_Negotiated?: OPTIONAL<Ext4_QoS_Subscribed>,
         /**
          * @summary `ext_pdp_Type`.
          * @description
@@ -435,7 +435,7 @@ class PDP_ContextInfo {
          * @public
          * @readonly
          */
-        readonly ext_pdp_Type: OPTIONAL<Ext_PDP_Type>,
+        readonly ext_pdp_Type?: OPTIONAL<Ext_PDP_Type>,
         /**
          * @summary `ext_pdp_Address`.
          * @description
@@ -448,7 +448,7 @@ class PDP_ContextInfo {
          * @public
          * @readonly
          */
-        readonly ext_pdp_Address: OPTIONAL<PDP_Address>,
+        readonly ext_pdp_Address?: OPTIONAL<PDP_Address>,
         /**
          * @summary Extensions that are not recognized.
          * @public

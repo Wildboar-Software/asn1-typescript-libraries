@@ -57,8 +57,8 @@ class DistributionCodes {
     readonly dist_Extensions: OPTIONAL<DistributionExtensionField[]>;
 
     constructor (
-        sics: OPTIONAL<Sic[]>,
-        dist_Extensions: OPTIONAL<DistributionExtensionField[]>
+        sics?: OPTIONAL<Sic[]>,
+        dist_Extensions?: OPTIONAL<DistributionExtensionField[]>
     ) {
         this.sics = sics;
         this.dist_Extensions = dist_Extensions;

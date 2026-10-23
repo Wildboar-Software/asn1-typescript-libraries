@@ -53,7 +53,7 @@ class ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownl
          * @public
          * @readonly
          */
-        readonly errorResponse: OPTIONAL<OCTET_STRING>
+        readonly errorResponse?: OPTIONAL<OCTET_STRING>
     ) {}
 
     /**

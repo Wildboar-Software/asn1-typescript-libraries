@@ -119,7 +119,7 @@ class InitialDPArg {
          * @public
          * @readonly
          */
-        readonly calledPartyNumber: OPTIONAL<CalledPartyNumber>,
+        readonly calledPartyNumber?: OPTIONAL<CalledPartyNumber>,
         /**
          * @summary `callingPartyNumber`.
          * @description
@@ -130,7 +130,7 @@ class InitialDPArg {
          * @public
          * @readonly
          */
-        readonly callingPartyNumber: OPTIONAL<CallingPartyNumber>,
+        readonly callingPartyNumber?: OPTIONAL<CallingPartyNumber>,
         /**
          * @summary `callingPartysCategory`.
          * @description
@@ -142,7 +142,7 @@ class InitialDPArg {
          * @public
          * @readonly
          */
-        readonly callingPartysCategory: OPTIONAL<CallingPartysCategory>,
+        readonly callingPartysCategory?: OPTIONAL<CallingPartysCategory>,
         /**
          * @summary `cGEncountered`.
          * @description
@@ -153,7 +153,7 @@ class InitialDPArg {
          * @public
          * @readonly
          */
-        readonly cGEncountered: OPTIONAL<CGEncountered>,
+        readonly cGEncountered?: OPTIONAL<CGEncountered>,
         /**
          * @summary `iPSSPCapabilities`.
          * @description
@@ -168,7 +168,7 @@ class InitialDPArg {
          * @public
          * @readonly
          */
-        readonly iPSSPCapabilities: OPTIONAL<IPSSPCapabilities>,
+        readonly iPSSPCapabilities?: OPTIONAL<IPSSPCapabilities>,
         /**
          * @summary `locationNumber`.
          * @description
@@ -181,7 +181,7 @@ class InitialDPArg {
          * @public
          * @readonly
          */
-        readonly locationNumber: OPTIONAL<LocationNumber>,
+        readonly locationNumber?: OPTIONAL<LocationNumber>,
         /**
          * @summary `originalCalledPartyID`.
          * @description
@@ -193,13 +193,13 @@ class InitialDPArg {
          * @public
          * @readonly
          */
-        readonly originalCalledPartyID: OPTIONAL<OriginalCalledPartyID>,
+        readonly originalCalledPartyID?: OPTIONAL<OriginalCalledPartyID>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<Extensions>,
+        readonly extensions?: OPTIONAL<Extensions>,
         /**
          * @summary `highLayerCompatibility`.
          * @description
@@ -211,7 +211,7 @@ class InitialDPArg {
          * @public
          * @readonly
          */
-        readonly highLayerCompatibility: OPTIONAL<HighLayerCompatibility>,
+        readonly highLayerCompatibility?: OPTIONAL<HighLayerCompatibility>,
         /**
          * @summary `additionalCallingPartyNumber`.
          * @description
@@ -222,7 +222,7 @@ class InitialDPArg {
          * @public
          * @readonly
          */
-        readonly additionalCallingPartyNumber: OPTIONAL<AdditionalCallingPartyNumber>,
+        readonly additionalCallingPartyNumber?: OPTIONAL<AdditionalCallingPartyNumber>,
         /**
          * @summary `bearerCapability`.
          * @description
@@ -236,7 +236,7 @@ class InitialDPArg {
          * @public
          * @readonly
          */
-        readonly bearerCapability: OPTIONAL<BearerCapability>,
+        readonly bearerCapability?: OPTIONAL<BearerCapability>,
         /**
          * @summary `eventTypeBCSM`.
          * @description
@@ -247,7 +247,7 @@ class InitialDPArg {
          * @public
          * @readonly
          */
-        readonly eventTypeBCSM: OPTIONAL<EventTypeBCSM>,
+        readonly eventTypeBCSM?: OPTIONAL<EventTypeBCSM>,
         /**
          * @summary `redirectingPartyID`.
          * @description
@@ -258,7 +258,7 @@ class InitialDPArg {
          * @public
          * @readonly
          */
-        readonly redirectingPartyID: OPTIONAL<RedirectingPartyID>,
+        readonly redirectingPartyID?: OPTIONAL<RedirectingPartyID>,
         /**
          * @summary `redirectionInformation`.
          * @description
@@ -270,7 +270,7 @@ class InitialDPArg {
          * @public
          * @readonly
          */
-        readonly redirectionInformation: OPTIONAL<RedirectionInformation>,
+        readonly redirectionInformation?: OPTIONAL<RedirectionInformation>,
         /**
          * @summary `cause`.
          * @description
@@ -284,7 +284,7 @@ class InitialDPArg {
          * @public
          * @readonly
          */
-        readonly cause: OPTIONAL<Cause>,
+        readonly cause?: OPTIONAL<Cause>,
         /**
          * @summary `serviceInteractionIndicatorsTwo`.
          * @description
@@ -295,7 +295,7 @@ class InitialDPArg {
          * @public
          * @readonly
          */
-        readonly serviceInteractionIndicatorsTwo: OPTIONAL<ServiceInteractionIndicatorsTwo>,
+        readonly serviceInteractionIndicatorsTwo?: OPTIONAL<ServiceInteractionIndicatorsTwo>,
         /**
          * @summary `carrier`.
          * @description
@@ -309,7 +309,7 @@ class InitialDPArg {
          * @public
          * @readonly
          */
-        readonly carrier: OPTIONAL<Carrier>,
+        readonly carrier?: OPTIONAL<Carrier>,
         /**
          * @summary `cug_Index`.
          * @description
@@ -321,7 +321,7 @@ class InitialDPArg {
          * @public
          * @readonly
          */
-        readonly cug_Index: OPTIONAL<CUG_Index>,
+        readonly cug_Index?: OPTIONAL<CUG_Index>,
         /**
          * @summary `cug_Interlock`.
          * @description
@@ -332,7 +332,7 @@ class InitialDPArg {
          * @public
          * @readonly
          */
-        readonly cug_Interlock: OPTIONAL<CUG_Interlock>,
+        readonly cug_Interlock?: OPTIONAL<CUG_Interlock>,
         /**
          * @summary `cug_OutgoingAccess`.
          * @description
@@ -343,7 +343,7 @@ class InitialDPArg {
          * @public
          * @readonly
          */
-        readonly cug_OutgoingAccess: OPTIONAL<NULL>,
+        readonly cug_OutgoingAccess?: OPTIONAL<NULL>,
         /**
          * @summary `iMSI`.
          * @description
@@ -354,7 +354,7 @@ class InitialDPArg {
          * @public
          * @readonly
          */
-        readonly iMSI: OPTIONAL<IMSI>,
+        readonly iMSI?: OPTIONAL<IMSI>,
         /**
          * @summary `subscriberState`.
          * @description
@@ -365,7 +365,7 @@ class InitialDPArg {
          * @public
          * @readonly
          */
-        readonly subscriberState: OPTIONAL<SubscriberState>,
+        readonly subscriberState?: OPTIONAL<SubscriberState>,
         /**
          * @summary `locationInformation`.
          * @description
@@ -377,7 +377,7 @@ class InitialDPArg {
          * @public
          * @readonly
          */
-        readonly locationInformation: OPTIONAL<LocationInformation>,
+        readonly locationInformation?: OPTIONAL<LocationInformation>,
         /**
          * @summary `ext_basicServiceCode`.
          * @description
@@ -387,7 +387,7 @@ class InitialDPArg {
          * @public
          * @readonly
          */
-        readonly ext_basicServiceCode: OPTIONAL<Ext_BasicServiceCode>,
+        readonly ext_basicServiceCode?: OPTIONAL<Ext_BasicServiceCode>,
         /**
          * @summary `callReferenceNumber`.
          * @description
@@ -398,7 +398,7 @@ class InitialDPArg {
          * @public
          * @readonly
          */
-        readonly callReferenceNumber: OPTIONAL<CallReferenceNumber>,
+        readonly callReferenceNumber?: OPTIONAL<CallReferenceNumber>,
         /**
          * @summary `mscAddress`.
          * @description
@@ -408,7 +408,7 @@ class InitialDPArg {
          * @public
          * @readonly
          */
-        readonly mscAddress: OPTIONAL<ISDN_AddressString>,
+        readonly mscAddress?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `calledPartyBCDNumber`.
          * @description
@@ -420,7 +420,7 @@ class InitialDPArg {
          * @public
          * @readonly
          */
-        readonly calledPartyBCDNumber: OPTIONAL<CalledPartyBCDNumber>,
+        readonly calledPartyBCDNumber?: OPTIONAL<CalledPartyBCDNumber>,
         /**
          * @summary `timeAndTimezone`.
          * @description
@@ -431,7 +431,7 @@ class InitialDPArg {
          * @public
          * @readonly
          */
-        readonly timeAndTimezone: OPTIONAL<TimeAndTimezone>,
+        readonly timeAndTimezone?: OPTIONAL<TimeAndTimezone>,
         /**
          * @summary `callForwardingSS_Pending`.
          * @description
@@ -444,7 +444,7 @@ class InitialDPArg {
          * @public
          * @readonly
          */
-        readonly callForwardingSS_Pending: OPTIONAL<NULL>,
+        readonly callForwardingSS_Pending?: OPTIONAL<NULL>,
         /**
          * @summary `initialDPArgExtension`.
          * @description
@@ -457,7 +457,7 @@ class InitialDPArg {
          * @public
          * @readonly
          */
-        readonly initialDPArgExtension: OPTIONAL<InitialDPArgExtension>,
+        readonly initialDPArgExtension?: OPTIONAL<InitialDPArgExtension>,
         /**
          * @summary Extensions that are not recognized.
          * @public

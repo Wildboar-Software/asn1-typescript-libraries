@@ -67,7 +67,7 @@ class IMS_VoIP_Correlation_Item {
 
     constructor (
         ims_iri: IRI_to_IRI_Correlation,
-        ims_cc: OPTIONAL<IRI_to_CC_Correlation>
+        ims_cc?: OPTIONAL<IRI_to_CC_Correlation>
     ) {
         this.ims_iri = ims_iri;
         this.ims_cc = ims_cc;

@@ -84,7 +84,7 @@ class PromptAndCollectUserInformationArg {
          * @public
          * @readonly
          */
-        readonly disconnectFromIPForbidden: OPTIONAL<BOOLEAN>,
+        readonly disconnectFromIPForbidden?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `informationToSend`.
          * @description
@@ -98,13 +98,13 @@ class PromptAndCollectUserInformationArg {
          * @public
          * @readonly
          */
-        readonly informationToSend: OPTIONAL<InformationToSend>,
+        readonly informationToSend?: OPTIONAL<InformationToSend>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<Extensions>,
+        readonly extensions?: OPTIONAL<Extensions>,
         /**
          * @summary `callSegmentID`.
          * @description
@@ -116,7 +116,7 @@ class PromptAndCollectUserInformationArg {
          * @public
          * @readonly
          */
-        readonly callSegmentID: OPTIONAL<CallSegmentID>,
+        readonly callSegmentID?: OPTIONAL<CallSegmentID>,
         /**
          * @summary `requestAnnouncementStartedNotification`.
          * @description
@@ -129,7 +129,7 @@ class PromptAndCollectUserInformationArg {
          * @public
          * @readonly
          */
-        readonly requestAnnouncementStartedNotification: OPTIONAL<BOOLEAN>,
+        readonly requestAnnouncementStartedNotification?: OPTIONAL<BOOLEAN>,
         /**
          * @summary Extensions that are not recognized.
          * @public

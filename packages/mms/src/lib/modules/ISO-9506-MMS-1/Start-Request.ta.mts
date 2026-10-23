@@ -62,7 +62,7 @@ class Start_Request {
          * @public
          * @readonly
          */
-        readonly executionArgument: OPTIONAL<Start_Request_executionArgument>
+        readonly executionArgument?: OPTIONAL<Start_Request_executionArgument>
     ) {}
 
     /**

@@ -49,7 +49,7 @@ class FDCOupdate_Item_attributes {
          * @public
          * @readonly
          */
-        readonly graphicCharacterRepertoire: OPTIONAL<INTEGER>,
+        readonly graphicCharacterRepertoire?: OPTIONAL<INTEGER>,
         /**
          * @summary `foregroundColour`.
          * @description
@@ -58,7 +58,7 @@ class FDCOupdate_Item_attributes {
          * @public
          * @readonly
          */
-        readonly foregroundColour: OPTIONAL<INTEGER>,
+        readonly foregroundColour?: OPTIONAL<INTEGER>,
         /**
          * @summary `backgroundColour`.
          * @description
@@ -67,7 +67,7 @@ class FDCOupdate_Item_attributes {
          * @public
          * @readonly
          */
-        readonly backgroundColour: OPTIONAL<INTEGER>,
+        readonly backgroundColour?: OPTIONAL<INTEGER>,
         /**
          * @summary `emphasis`.
          * @description
@@ -75,7 +75,7 @@ class FDCOupdate_Item_attributes {
          * @public
          * @readonly
          */
-        readonly emphasis: OPTIONAL<PrintableString>,
+        readonly emphasis?: OPTIONAL<PrintableString>,
         /**
          * @summary `font`.
          * @description
@@ -83,7 +83,7 @@ class FDCOupdate_Item_attributes {
          * @public
          * @readonly
          */
-        readonly font: OPTIONAL<INTEGER>
+        readonly font?: OPTIONAL<INTEGER>
     ) {}
 
     /**

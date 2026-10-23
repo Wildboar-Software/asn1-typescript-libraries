@@ -79,7 +79,7 @@ class LTENTNTAIInformation {
     constructor (
         pLMN: PLMNID,
         tACListInLTENTN: TACList,
-        uETAC: OPTIONAL<TAC>,
+        uETAC?: OPTIONAL<TAC>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.pLMN = pLMN;

@@ -122,7 +122,7 @@ class MMSNotificationResponse {
         version: MMSVersion,
         direction: MMSDirection,
         status: MMStatus,
-        reportAllowed: OPTIONAL<BOOLEAN>,
+        reportAllowed?: OPTIONAL<BOOLEAN>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.transactionID = transactionID;

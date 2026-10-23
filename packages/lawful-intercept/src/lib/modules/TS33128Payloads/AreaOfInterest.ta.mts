@@ -58,9 +58,9 @@ class AreaOfInterest {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        areaOfInterestTAIList: OPTIONAL<AreaOfInterestTAIList>,
-        areaOfInterestCellList: OPTIONAL<AreaOfInterestCellList>,
-        areaOfInterestRANNodeList: OPTIONAL<AreaOfInterestRANNodeList>,
+        areaOfInterestTAIList?: OPTIONAL<AreaOfInterestTAIList>,
+        areaOfInterestCellList?: OPTIONAL<AreaOfInterestCellList>,
+        areaOfInterestRANNodeList?: OPTIONAL<AreaOfInterestRANNodeList>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.areaOfInterestTAIList = areaOfInterestTAIList;

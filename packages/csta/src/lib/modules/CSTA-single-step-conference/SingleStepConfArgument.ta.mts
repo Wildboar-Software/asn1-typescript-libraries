@@ -96,7 +96,7 @@ class SingleStepConfArgument {
          * @public
          * @readonly
          */
-        readonly participationType: OPTIONAL<ParticipationType>,
+        readonly participationType?: OPTIONAL<ParticipationType>,
         /**
          * @summary `accountCode`.
          * @description
@@ -106,7 +106,7 @@ class SingleStepConfArgument {
          * @public
          * @readonly
          */
-        readonly accountCode: OPTIONAL<AccountInfo>,
+        readonly accountCode?: OPTIONAL<AccountInfo>,
         /**
          * @summary `authCode`.
          * @description
@@ -116,7 +116,7 @@ class SingleStepConfArgument {
          * @public
          * @readonly
          */
-        readonly authCode: OPTIONAL<AuthCode>,
+        readonly authCode?: OPTIONAL<AuthCode>,
         /**
          * @summary `correlatorData`.
          * @description
@@ -127,7 +127,7 @@ class SingleStepConfArgument {
          * @public
          * @readonly
          */
-        readonly correlatorData: OPTIONAL<CorrelatorData>,
+        readonly correlatorData?: OPTIONAL<CorrelatorData>,
         /**
          * @summary `userData`.
          * @description
@@ -138,7 +138,7 @@ class SingleStepConfArgument {
          * @public
          * @readonly
          */
-        readonly userData: OPTIONAL<UserData>,
+        readonly userData?: OPTIONAL<UserData>,
         /**
          * @summary `subjectOfCall`.
          * @description
@@ -148,7 +148,7 @@ class SingleStepConfArgument {
          * @public
          * @readonly
          */
-        readonly subjectOfCall: OPTIONAL<SubjectOfCall>,
+        readonly subjectOfCall?: OPTIONAL<SubjectOfCall>,
         /**
          * @summary `languagePreferences`.
          * @description
@@ -158,7 +158,7 @@ class SingleStepConfArgument {
          * @public
          * @readonly
          */
-        readonly languagePreferences: OPTIONAL<LanguagePreferences>,
+        readonly languagePreferences?: OPTIONAL<LanguagePreferences>,
         /**
          * @summary `extensions`.
          * @description
@@ -170,7 +170,7 @@ class SingleStepConfArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

@@ -86,7 +86,7 @@ class ECGI {
     constructor (
         pLMNID: PLMNID,
         eUTRACellID: EUTRACellID,
-        nID: OPTIONAL<NID>,
+        nID?: OPTIONAL<NID>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.pLMNID = pLMNID;

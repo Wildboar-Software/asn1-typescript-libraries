@@ -50,7 +50,7 @@ class ReportingPLMN {
          * @public
          * @readonly
          */
-        readonly ran_Technology: OPTIONAL<RAN_Technology>,
+        readonly ran_Technology?: OPTIONAL<RAN_Technology>,
         /**
          * @summary `ran_PeriodicLocationSupport`.
          * @description
@@ -60,7 +60,7 @@ class ReportingPLMN {
          * @public
          * @readonly
          */
-        readonly ran_PeriodicLocationSupport: OPTIONAL<NULL>,
+        readonly ran_PeriodicLocationSupport?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @public

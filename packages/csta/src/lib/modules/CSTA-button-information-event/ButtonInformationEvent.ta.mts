@@ -77,7 +77,7 @@ class ButtonInformationEvent {
          * @public
          * @readonly
          */
-        readonly buttonLabel: OPTIONAL<IA5String>,
+        readonly buttonLabel?: OPTIONAL<IA5String>,
         /**
          * @summary `buttonAssociatedNumber`.
          * @description
@@ -86,7 +86,7 @@ class ButtonInformationEvent {
          * @public
          * @readonly
          */
-        readonly buttonAssociatedNumber: OPTIONAL<DeviceID>,
+        readonly buttonAssociatedNumber?: OPTIONAL<DeviceID>,
         /**
          * @summary `buttonPressIndicator`.
          * @description
@@ -95,7 +95,7 @@ class ButtonInformationEvent {
          * @public
          * @readonly
          */
-        readonly buttonPressIndicator: OPTIONAL<BOOLEAN>,
+        readonly buttonPressIndicator?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `extensions`.
          * @description
@@ -105,7 +105,7 @@ class ButtonInformationEvent {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

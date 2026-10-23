@@ -55,7 +55,7 @@ class DisplayArg {
 
     constructor (
         displayString: DisplayString,
-        extension: OPTIONAL<SDExtension>
+        extension?: OPTIONAL<SDExtension>
     ) {
         this.displayString = displayString;
         this.extension = extension;

@@ -224,13 +224,13 @@ class UDMLocationInformationResult {
         pEI: OPTIONAL<PEI>,
         gPSI: OPTIONAL<GPSI>,
         locationInfoRequest: UDMLocationInfoRequest,
-        vPLMNID: OPTIONAL<PLMNID>,
-        currentLocationIndicator: OPTIONAL<BOOLEAN>,
-        aMFInstanceID: OPTIONAL<NFID>,
-        sMSFInstanceID: OPTIONAL<NFID>,
-        location: OPTIONAL<Location>,
-        rATType: OPTIONAL<RATType>,
-        problemDetails: OPTIONAL<UDMProblemDetails>,
+        vPLMNID?: OPTIONAL<PLMNID>,
+        currentLocationIndicator?: OPTIONAL<BOOLEAN>,
+        aMFInstanceID?: OPTIONAL<NFID>,
+        sMSFInstanceID?: OPTIONAL<NFID>,
+        location?: OPTIONAL<Location>,
+        rATType?: OPTIONAL<RATType>,
+        problemDetails?: OPTIONAL<UDMProblemDetails>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.sUPI = sUPI;

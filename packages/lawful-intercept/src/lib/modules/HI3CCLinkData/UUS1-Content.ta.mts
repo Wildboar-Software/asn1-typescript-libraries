@@ -214,8 +214,8 @@ class UUS1_Content {
         communicationIdentifier: CommunicationIdentifier,
         cC_Link_Identifier: OPTIONAL<CC_Link_Identifier>,
         direction_Indication: Direction_Indication,
-        bearer_capability: OPTIONAL<OCTET_STRING>,
-        service_Information: OPTIONAL<Service_Information>,
+        bearer_capability?: OPTIONAL<OCTET_STRING>,
+        service_Information?: OPTIONAL<Service_Information>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.domainID = domainID;

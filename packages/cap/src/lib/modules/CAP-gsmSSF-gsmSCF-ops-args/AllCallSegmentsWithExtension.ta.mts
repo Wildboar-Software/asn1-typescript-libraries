@@ -53,7 +53,7 @@ class AllCallSegmentsWithExtension {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<Extensions>
+        readonly extensions?: OPTIONAL<Extensions>
     ) {}
 
     /**

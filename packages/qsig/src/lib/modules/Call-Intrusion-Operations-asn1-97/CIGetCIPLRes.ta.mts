@@ -57,7 +57,7 @@ class CIGetCIPLRes {
 
     constructor (
         ciProtectionLevel: CIProtectionLevel,
-        resultExtension: OPTIONAL<CIGetCIPLRes_resultExtension>
+        resultExtension?: OPTIONAL<CIGetCIPLRes_resultExtension>
     ) {
         this.ciProtectionLevel = ciProtectionLevel;
         this.resultExtension = resultExtension;

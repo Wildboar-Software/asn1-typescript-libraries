@@ -67,8 +67,8 @@ class OccurrenceByAttributes_Item_occurrences_byDatabase_Item {
 
     constructor (
         db: DatabaseName,
-        num: OPTIONAL<INTEGER>,
-        otherDbInfo: OPTIONAL<OtherInformation>
+        num?: OPTIONAL<INTEGER>,
+        otherDbInfo?: OPTIONAL<OtherInformation>
     ) {
         this.db = db;
         this.num = num;

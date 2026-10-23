@@ -107,7 +107,7 @@ class PrepareGroupCallArg {
          * @public
          * @readonly
          */
-        readonly groupKeyNumber_Vk_Id: OPTIONAL<GroupKeyNumber>,
+        readonly groupKeyNumber_Vk_Id?: OPTIONAL<GroupKeyNumber>,
         /**
          * @summary `groupKey`.
          * @description
@@ -118,7 +118,7 @@ class PrepareGroupCallArg {
          * @public
          * @readonly
          */
-        readonly groupKey: OPTIONAL<Kc>,
+        readonly groupKey?: OPTIONAL<Kc>,
         /**
          * @summary `priority`.
          * @description
@@ -128,7 +128,7 @@ class PrepareGroupCallArg {
          * @public
          * @readonly
          */
-        readonly priority: OPTIONAL<EMLPP_Priority>,
+        readonly priority?: OPTIONAL<EMLPP_Priority>,
         /**
          * @summary `uplinkFree`.
          * @description
@@ -139,7 +139,7 @@ class PrepareGroupCallArg {
          * @public
          * @readonly
          */
-        readonly uplinkFree: OPTIONAL<NULL>,
+        readonly uplinkFree?: OPTIONAL<NULL>,
         /**
          * @summary `extensionContainer`.
          * @description
@@ -149,7 +149,7 @@ class PrepareGroupCallArg {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `vstk`.
          * @description
@@ -161,7 +161,7 @@ class PrepareGroupCallArg {
          * @public
          * @readonly
          */
-        readonly vstk: OPTIONAL<VSTK>,
+        readonly vstk?: OPTIONAL<VSTK>,
         /**
          * @summary `vstk_rand`.
          * @description
@@ -173,7 +173,7 @@ class PrepareGroupCallArg {
          * @public
          * @readonly
          */
-        readonly vstk_rand: OPTIONAL<VSTK_RAND>,
+        readonly vstk_rand?: OPTIONAL<VSTK_RAND>,
         /**
          * @summary `talkerChannelParameter`.
          * @description
@@ -184,7 +184,7 @@ class PrepareGroupCallArg {
          * @public
          * @readonly
          */
-        readonly talkerChannelParameter: OPTIONAL<NULL>,
+        readonly talkerChannelParameter?: OPTIONAL<NULL>,
         /**
          * @summary `uplinkReplyIndicator`.
          * @description
@@ -195,7 +195,7 @@ class PrepareGroupCallArg {
          * @public
          * @readonly
          */
-        readonly uplinkReplyIndicator: OPTIONAL<NULL>,
+        readonly uplinkReplyIndicator?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @public

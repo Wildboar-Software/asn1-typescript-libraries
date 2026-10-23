@@ -398,12 +398,12 @@ class MMFRecord {
         deliveryReportRequested: OPTIONAL<BOOLEAN>,
         readReplyRequested: OPTIONAL<BOOLEAN>,
         messageReference: OCTET_STRING,
-        mmStatusCode: OPTIONAL<MMStatusCodeType>,
-        statusText: OPTIONAL<OCTET_STRING>,
-        recordTimeStamp: OPTIONAL<OCTET_STRING>,
-        localSequenceNumber: OPTIONAL<INTEGER>,
-        recordExtensions: OPTIONAL<ManagementExtension[]>,
-        mMBoxstorageInformation: OPTIONAL<MMBoxStorageInformation>
+        mmStatusCode?: OPTIONAL<MMStatusCodeType>,
+        statusText?: OPTIONAL<OCTET_STRING>,
+        recordTimeStamp?: OPTIONAL<OCTET_STRING>,
+        localSequenceNumber?: OPTIONAL<INTEGER>,
+        recordExtensions?: OPTIONAL<ManagementExtension[]>,
+        mMBoxstorageInformation?: OPTIONAL<MMBoxStorageInformation>
     ) {
         this.recordType = recordType;
         this.forwardingMmsRSAddress = forwardingMmsRSAddress;

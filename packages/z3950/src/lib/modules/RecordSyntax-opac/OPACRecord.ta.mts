@@ -56,8 +56,8 @@ class OPACRecord {
     readonly holdingsData: OPTIONAL<HoldingsRecord[]>;
 
     constructor (
-        bibliographicRecord: OPTIONAL<EXTERNAL>,
-        holdingsData: OPTIONAL<HoldingsRecord[]>
+        bibliographicRecord?: OPTIONAL<EXTERNAL>,
+        holdingsData?: OPTIONAL<HoldingsRecord[]>
     ) {
         this.bibliographicRecord = bibliographicRecord;
         this.holdingsData = holdingsData;

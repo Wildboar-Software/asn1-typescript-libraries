@@ -73,7 +73,7 @@ class EXQcontent {
          * @public
          * @readonly
          */
-        readonly standard: OPTIONAL<EXQcontent_standard>,
+        readonly standard?: OPTIONAL<EXQcontent_standard>,
         /**
          * @summary `profile`.
          * @description
@@ -82,7 +82,7 @@ class EXQcontent {
          * @public
          * @readonly
          */
-        readonly profile: OPTIONAL<EXQcontent_profile_Item[]>
+        readonly profile?: OPTIONAL<EXQcontent_profile_Item[]>
     ) {}
 
     /**

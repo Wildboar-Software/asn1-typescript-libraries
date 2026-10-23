@@ -60,7 +60,7 @@ class PersistentResultSet_taskPackage {
 
     constructor (
         clientPart: NULL,
-        serverPart: OPTIONAL<ServerPart>
+        serverPart?: OPTIONAL<ServerPart>
     ) {
         this.clientPart = clientPart;
         this.serverPart = serverPart;

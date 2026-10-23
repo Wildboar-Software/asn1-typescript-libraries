@@ -68,7 +68,7 @@ class OtherCall {
          * @public
          * @readonly
          */
-        readonly localConnectionState: OPTIONAL<LocalConnectionState>,
+        readonly localConnectionState?: OPTIONAL<LocalConnectionState>,
         /**
          * @summary `connectionInfo`.
          * @description
@@ -77,7 +77,7 @@ class OtherCall {
          * @public
          * @readonly
          */
-        readonly connectionInfo: OPTIONAL<ConnectionInformation>
+        readonly connectionInfo?: OPTIONAL<ConnectionInformation>
     ) {}
 
     /**

@@ -55,7 +55,7 @@ class CtatParamRes {
 
     constructor (
         ctatParamInfo: CtatParamInfo,
-        dummyExtension: OPTIONAL<DummyExtension>
+        dummyExtension?: OPTIONAL<DummyExtension>
     ) {
         this.ctatParamInfo = ctatParamInfo;
         this.dummyExtension = dummyExtension;

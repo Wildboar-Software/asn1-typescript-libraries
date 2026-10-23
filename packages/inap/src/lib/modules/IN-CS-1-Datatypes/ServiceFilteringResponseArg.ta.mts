@@ -72,7 +72,7 @@ class ServiceFilteringResponseArg {
         countersValue: CountersValue,
         filteringCriteria: FilteringCriteria,
         extensions: ExtensionField[],
-        responseCondition: OPTIONAL<ResponseCondition>,
+        responseCondition?: OPTIONAL<ResponseCondition>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.countersValue = countersValue;

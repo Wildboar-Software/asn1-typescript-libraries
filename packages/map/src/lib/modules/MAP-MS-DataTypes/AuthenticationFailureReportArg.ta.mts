@@ -69,7 +69,7 @@ class AuthenticationFailureReportArg {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `re_attempt`.
          * @description
@@ -81,7 +81,7 @@ class AuthenticationFailureReportArg {
          * @public
          * @readonly
          */
-        readonly re_attempt: OPTIONAL<BOOLEAN>,
+        readonly re_attempt?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `accessType`.
          * @description
@@ -94,7 +94,7 @@ class AuthenticationFailureReportArg {
          * @public
          * @readonly
          */
-        readonly accessType: OPTIONAL<AccessType>,
+        readonly accessType?: OPTIONAL<AccessType>,
         /**
          * @summary `rand`.
          * @description
@@ -105,7 +105,7 @@ class AuthenticationFailureReportArg {
          * @public
          * @readonly
          */
-        readonly rand: OPTIONAL<RAND>,
+        readonly rand?: OPTIONAL<RAND>,
         /**
          * @summary `vlr_Number`.
          * @description
@@ -116,7 +116,7 @@ class AuthenticationFailureReportArg {
          * @public
          * @readonly
          */
-        readonly vlr_Number: OPTIONAL<ISDN_AddressString>,
+        readonly vlr_Number?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `sgsn_Number`.
          * @description
@@ -127,7 +127,7 @@ class AuthenticationFailureReportArg {
          * @public
          * @readonly
          */
-        readonly sgsn_Number: OPTIONAL<ISDN_AddressString>,
+        readonly sgsn_Number?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -66,8 +66,8 @@ class OtherIdentity {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        otherIdentityEncoding: OPTIONAL<UTF8String>,
-        otherIDInfo: OPTIONAL<OCTET_STRING>,
+        otherIdentityEncoding?: OPTIONAL<UTF8String>,
+        otherIDInfo?: OPTIONAL<OCTET_STRING>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.otherIdentityEncoding = otherIdentityEncoding;

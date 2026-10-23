@@ -57,7 +57,7 @@ class NDQcontent {
          * @public
          * @readonly
          */
-        readonly echoNow: OPTIONAL<NULL>,
+        readonly echoNow?: OPTIONAL<NULL>,
         /**
          * @summary `startEntry`.
          * @description
@@ -67,7 +67,7 @@ class NDQcontent {
          * @public
          * @readonly
          */
-        readonly startEntry: OPTIONAL<NULL>
+        readonly startEntry?: OPTIONAL<NULL>
     ) {}
 
     /**

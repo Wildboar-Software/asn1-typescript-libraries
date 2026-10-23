@@ -72,8 +72,8 @@ class UserIdentifiers {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        fiveGSSubscriberIDs: OPTIONAL<FiveGSSubscriberIDs>,
-        ePSSubscriberIDs: OPTIONAL<EPSSubscriberIDs>,
+        fiveGSSubscriberIDs?: OPTIONAL<FiveGSSubscriberIDs>,
+        ePSSubscriberIDs?: OPTIONAL<EPSSubscriberIDs>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.fiveGSSubscriberIDs = fiveGSSubscriberIDs;

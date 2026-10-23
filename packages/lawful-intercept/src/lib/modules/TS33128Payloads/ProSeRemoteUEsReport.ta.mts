@@ -63,8 +63,8 @@ class ProSeRemoteUEsReport {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        remoteUEsContextConnected: OPTIONAL<RemoteUEContextList>,
-        remoteUEsContextDisconnected: OPTIONAL<RemoteUEContextList>,
+        remoteUEsContextConnected?: OPTIONAL<RemoteUEContextList>,
+        remoteUEsContextDisconnected?: OPTIONAL<RemoteUEContextList>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.remoteUEsContextConnected = remoteUEsContextConnected;

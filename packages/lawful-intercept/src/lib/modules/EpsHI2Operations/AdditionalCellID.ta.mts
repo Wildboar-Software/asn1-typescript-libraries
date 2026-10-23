@@ -103,9 +103,9 @@ class AdditionalCellID {
 
     constructor (
         nCGI: NCGI,
-        gsmLocation: OPTIONAL<GSMLocation>,
-        umtsLocation: OPTIONAL<UMTSLocation>,
-        timeOfLocation: OPTIONAL<GeneralizedTime>,
+        gsmLocation?: OPTIONAL<GSMLocation>,
+        umtsLocation?: OPTIONAL<UMTSLocation>,
+        timeOfLocation?: OPTIONAL<GeneralizedTime>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.nCGI = nCGI;

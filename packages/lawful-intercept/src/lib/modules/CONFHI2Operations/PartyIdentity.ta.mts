@@ -67,8 +67,8 @@ class PartyIdentity {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        iMPU: OPTIONAL<IMSIdentity[]>,
-        iMPI: OPTIONAL<IMSIdentity[]>,
+        iMPU?: OPTIONAL<IMSIdentity[]>,
+        iMPI?: OPTIONAL<IMSIdentity[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.iMPU = iMPU;

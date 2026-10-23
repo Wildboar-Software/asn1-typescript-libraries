@@ -232,10 +232,10 @@ class SupplService {
         associated_Party_Address: OPTIONAL<InvolvedParty>,
         serviceId: OPTIONAL<GraphicString>,
         changeTime: OCTET_STRING,
-        numberOfParticipants: OPTIONAL<INTEGER>,
-        participantActionType: OPTIONAL<ParticipantActionType>,
-        cUGInformation: OPTIONAL<OCTET_STRING>,
-        aoCInformation: OPTIONAL<AoCInformation[]>
+        numberOfParticipants?: OPTIONAL<INTEGER>,
+        participantActionType?: OPTIONAL<ParticipantActionType>,
+        cUGInformation?: OPTIONAL<OCTET_STRING>,
+        aoCInformation?: OPTIONAL<AoCInformation[]>
     ) {
         this.serviceType = serviceType;
         this.serviceMode = serviceMode;

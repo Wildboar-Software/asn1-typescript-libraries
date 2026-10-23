@@ -41,7 +41,7 @@ class NotificationInformation_creditLimitReachedSpecificInfo {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        timeStamp: OPTIONAL<DateAndTime>,
+        timeStamp?: OPTIONAL<DateAndTime>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.timeStamp = timeStamp;

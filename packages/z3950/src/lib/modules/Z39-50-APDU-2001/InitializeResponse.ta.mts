@@ -200,11 +200,11 @@ class InitializeResponse {
         preferredMessageSize: INTEGER,
         exceptionalRecordSize: INTEGER,
         result: BOOLEAN,
-        implementationId: OPTIONAL<InternationalString>,
-        implementationName: OPTIONAL<InternationalString>,
-        implementationVersion: OPTIONAL<InternationalString>,
-        userInformationField: OPTIONAL<EXTERNAL>,
-        otherInfo: OPTIONAL<OtherInformation>
+        implementationId?: OPTIONAL<InternationalString>,
+        implementationName?: OPTIONAL<InternationalString>,
+        implementationVersion?: OPTIONAL<InternationalString>,
+        userInformationField?: OPTIONAL<EXTERNAL>,
+        otherInfo?: OPTIONAL<OtherInformation>
     ) {
         this.referenceId = referenceId;
         this.protocolVersion = protocolVersion;

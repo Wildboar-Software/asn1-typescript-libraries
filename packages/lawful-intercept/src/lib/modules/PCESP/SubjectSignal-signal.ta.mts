@@ -113,10 +113,10 @@ class SubjectSignal_signal {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        switchhookFlash: OPTIONAL<VisibleString>,
-        dialedDigits: OPTIONAL<VisibleString>,
-        featureKey: OPTIONAL<VisibleString>,
-        otherSignalingInformation: OPTIONAL<VisibleString>,
+        switchhookFlash?: OPTIONAL<VisibleString>,
+        dialedDigits?: OPTIONAL<VisibleString>,
+        featureKey?: OPTIONAL<VisibleString>,
+        otherSignalingInformation?: OPTIONAL<VisibleString>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.switchhookFlash = switchhookFlash;

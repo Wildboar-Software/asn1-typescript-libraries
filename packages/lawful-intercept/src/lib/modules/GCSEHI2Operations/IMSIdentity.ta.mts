@@ -65,8 +65,8 @@ class IMSIdentity {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        sip_uri: OPTIONAL<OCTET_STRING>,
-        tel_uri: OPTIONAL<OCTET_STRING>,
+        sip_uri?: OPTIONAL<OCTET_STRING>,
+        tel_uri?: OPTIONAL<OCTET_STRING>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.sip_uri = sip_uri;

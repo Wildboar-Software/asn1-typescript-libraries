@@ -49,19 +49,19 @@ class ApplyChargingArg {
          * @public
          * @readonly
          */
-        readonly sendCalculationToSCPIndication: OPTIONAL<BOOLEAN>,
+        readonly sendCalculationToSCPIndication?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `partyToCharge`.
          * @public
          * @readonly
          */
-        readonly partyToCharge: OPTIONAL<LegID>,
+        readonly partyToCharge?: OPTIONAL<LegID>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<ExtensionField[]>
+        readonly extensions?: OPTIONAL<ExtensionField[]>
     ) {}
 
     /**

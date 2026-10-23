@@ -86,9 +86,9 @@ class DTLS13UAStarParams {
         tLS13CommonParams: TLS13UAStarParams,
         clientEpoch: INTEGER,
         serverEpoch: INTEGER,
-        clientSnKey: OPTIONAL<OCTET_STRING>,
-        serverSnKey: OPTIONAL<OCTET_STRING>,
-        connectionID: OPTIONAL<OCTET_STRING>,
+        clientSnKey?: OPTIONAL<OCTET_STRING>,
+        serverSnKey?: OPTIONAL<OCTET_STRING>,
+        connectionID?: OPTIONAL<OCTET_STRING>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.tLS13CommonParams = tLS13CommonParams;

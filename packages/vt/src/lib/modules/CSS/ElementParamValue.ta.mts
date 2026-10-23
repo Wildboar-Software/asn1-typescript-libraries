@@ -65,7 +65,7 @@ class ElementParamValue {
          * @public
          * @readonly
          */
-        readonly size: OPTIONAL<INTEGER>,
+        readonly size?: OPTIONAL<INTEGER>,
         /**
          * @summary `category`.
          * @description
@@ -74,7 +74,7 @@ class ElementParamValue {
          * @public
          * @readonly
          */
-        readonly category: OPTIONAL<ElementParamValue_category>,
+        readonly category?: OPTIONAL<ElementParamValue_category>,
         /**
          * @summary `repertoire`.
          * @description
@@ -83,7 +83,7 @@ class ElementParamValue {
          * @public
          * @readonly
          */
-        readonly repertoire: OPTIONAL<RepertoireAssignment>
+        readonly repertoire?: OPTIONAL<RepertoireAssignment>
     ) {}
 
     /**

@@ -207,8 +207,8 @@ class Redirection {
         transitCarrierId: OPTIONAL<TransitCarrierId>,
         reserved0: NULL,
         reserved1: NULL,
-        new_: OPTIONAL<CallId>,
-        redirectedfrom: OPTIONAL<PartyId>,
+        new_?: OPTIONAL<CallId>,
+        redirectedfrom?: OPTIONAL<PartyId>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.caseId = caseId;

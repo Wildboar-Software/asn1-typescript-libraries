@@ -54,9 +54,9 @@ class RoamingQBCInformation {
     readonly roamingChargingProfile: OPTIONAL<RoamingChargingProfile>;
 
     constructor (
-        multipleQFIcontainer: OPTIONAL<MultipleQFIContainer[]>,
-        uPFID: OPTIONAL<IA5String>,
-        roamingChargingProfile: OPTIONAL<RoamingChargingProfile>
+        multipleQFIcontainer?: OPTIONAL<MultipleQFIContainer[]>,
+        uPFID?: OPTIONAL<IA5String>,
+        roamingChargingProfile?: OPTIONAL<RoamingChargingProfile>
     ) {
         this.multipleQFIcontainer = multipleQFIcontainer;
         this.uPFID = uPFID;

@@ -66,7 +66,7 @@ class InitiateCallAttemptArg {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<Extensions>,
+        readonly extensions?: OPTIONAL<Extensions>,
         /**
          * @summary `legToBeCreated`.
          * @description
@@ -78,7 +78,7 @@ class InitiateCallAttemptArg {
          * @public
          * @readonly
          */
-        readonly legToBeCreated: OPTIONAL<LegID>,
+        readonly legToBeCreated?: OPTIONAL<LegID>,
         /**
          * @summary `newCallSegment`.
          * @description
@@ -89,7 +89,7 @@ class InitiateCallAttemptArg {
          * @public
          * @readonly
          */
-        readonly newCallSegment: OPTIONAL<CallSegmentID>,
+        readonly newCallSegment?: OPTIONAL<CallSegmentID>,
         /**
          * @summary `callingPartyNumber`.
          * @description
@@ -100,7 +100,7 @@ class InitiateCallAttemptArg {
          * @public
          * @readonly
          */
-        readonly callingPartyNumber: OPTIONAL<CallingPartyNumber>,
+        readonly callingPartyNumber?: OPTIONAL<CallingPartyNumber>,
         /**
          * @summary `callReferenceNumber`.
          * @description
@@ -111,7 +111,7 @@ class InitiateCallAttemptArg {
          * @public
          * @readonly
          */
-        readonly callReferenceNumber: OPTIONAL<CallReferenceNumber>,
+        readonly callReferenceNumber?: OPTIONAL<CallReferenceNumber>,
         /**
          * @summary `gsmSCFAddress`.
          * @description
@@ -122,7 +122,7 @@ class InitiateCallAttemptArg {
          * @public
          * @readonly
          */
-        readonly gsmSCFAddress: OPTIONAL<ISDN_AddressString>,
+        readonly gsmSCFAddress?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `suppress_T_CSI`.
          * @description
@@ -133,7 +133,7 @@ class InitiateCallAttemptArg {
          * @public
          * @readonly
          */
-        readonly suppress_T_CSI: OPTIONAL<NULL>,
+        readonly suppress_T_CSI?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -70,7 +70,7 @@ class GetAlarmSummary_Request {
          * @public
          * @readonly
          */
-        readonly enrollmentsOnly: OPTIONAL<BOOLEAN>,
+        readonly enrollmentsOnly?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `activeAlarmsOnly`.
          * @description
@@ -83,7 +83,7 @@ class GetAlarmSummary_Request {
          * @public
          * @readonly
          */
-        readonly activeAlarmsOnly: OPTIONAL<BOOLEAN>,
+        readonly activeAlarmsOnly?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `acknowledgementFilter`.
          * @description
@@ -99,7 +99,7 @@ class GetAlarmSummary_Request {
          * @public
          * @readonly
          */
-        readonly acknowledgementFilter: OPTIONAL<GetAlarmSummary_Request_acknowledgementFilter>,
+        readonly acknowledgementFilter?: OPTIONAL<GetAlarmSummary_Request_acknowledgementFilter>,
         /**
          * @summary `severityFilter`.
          * @description
@@ -112,7 +112,7 @@ class GetAlarmSummary_Request {
          * @public
          * @readonly
          */
-        readonly severityFilter: OPTIONAL<GetAlarmSummary_Request_severityFilter>,
+        readonly severityFilter?: OPTIONAL<GetAlarmSummary_Request_severityFilter>,
         /**
          * @summary `continueAfter`.
          * @description
@@ -127,7 +127,7 @@ class GetAlarmSummary_Request {
          * @public
          * @readonly
          */
-        readonly continueAfter: OPTIONAL<ObjectName>
+        readonly continueAfter?: OPTIONAL<ObjectName>
     ) {}
 
     /**

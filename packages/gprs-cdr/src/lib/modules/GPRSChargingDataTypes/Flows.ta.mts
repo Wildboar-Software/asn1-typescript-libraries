@@ -48,7 +48,7 @@ class Flows {
 
     constructor (
         mediaComponentNumber: INTEGER,
-        flowNumber: OPTIONAL<INTEGER[]>
+        flowNumber?: OPTIONAL<INTEGER[]>
     ) {
         this.mediaComponentNumber = mediaComponentNumber;
         this.flowNumber = flowNumber;

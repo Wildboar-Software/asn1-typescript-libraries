@@ -211,17 +211,17 @@ class MonitoringEventReportData {
     readonly listOfNumberOfUEPerLocationReport: OPTIONAL<NumberOfUEPerLocationReport[]>;
 
     constructor (
-        eventTimestamp: OPTIONAL<OCTET_STRING>,
-        sCEFReferenceID: OPTIONAL<INTEGER>,
-        sCEFID: OPTIONAL<OCTET_STRING>,
-        monitoringEventReportNumber: OPTIONAL<INTEGER>,
-        chargeablePartyIdentifier: OPTIONAL<UTF8String>,
-        monitoredUser: OPTIONAL<OCTET_STRING>,
-        monitoringType: OPTIONAL<MonitoringType>,
-        reachabilityInformation: OPTIONAL<ReachabilityType>,
-        reportedLocation: OPTIONAL<EPSLocationInfo>,
-        communicationFailureInformation: OPTIONAL<CommunicationFailureInfo[]>,
-        listOfNumberOfUEPerLocationReport: OPTIONAL<NumberOfUEPerLocationReport[]>
+        eventTimestamp?: OPTIONAL<OCTET_STRING>,
+        sCEFReferenceID?: OPTIONAL<INTEGER>,
+        sCEFID?: OPTIONAL<OCTET_STRING>,
+        monitoringEventReportNumber?: OPTIONAL<INTEGER>,
+        chargeablePartyIdentifier?: OPTIONAL<UTF8String>,
+        monitoredUser?: OPTIONAL<OCTET_STRING>,
+        monitoringType?: OPTIONAL<MonitoringType>,
+        reachabilityInformation?: OPTIONAL<ReachabilityType>,
+        reportedLocation?: OPTIONAL<EPSLocationInfo>,
+        communicationFailureInformation?: OPTIONAL<CommunicationFailureInfo[]>,
+        listOfNumberOfUEPerLocationReport?: OPTIONAL<NumberOfUEPerLocationReport[]>
     ) {
         this.eventTimestamp = eventTimestamp;
         this.sCEFReferenceID = sCEFReferenceID;

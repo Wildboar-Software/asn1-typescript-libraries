@@ -144,8 +144,8 @@ class ProcessingInformation {
         processingContext: ProcessingInformation_processingContext,
         name: InternationalString,
         oid: OBJECT_IDENTIFIER,
-        description: OPTIONAL<HumanString>,
-        instructions: OPTIONAL<EXTERNAL>
+        description?: OPTIONAL<HumanString>,
+        instructions?: OPTIONAL<EXTERNAL>
     ) {
         this.commonInfo = commonInfo;
         this.databaseName = databaseName;

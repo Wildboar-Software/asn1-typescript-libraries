@@ -58,7 +58,7 @@ class TestResultIdentify {
          * @public
          * @readonly
          */
-        readonly resultMatchOpenIdentify: OPTIONAL<ResultMatchOpenIdentify>
+        readonly resultMatchOpenIdentify?: OPTIONAL<ResultMatchOpenIdentify>
     ) {}
 
     /**

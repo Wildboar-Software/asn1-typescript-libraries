@@ -50,7 +50,7 @@ class CallBackResult {
          * @public
          * @readonly
          */
-        readonly targetDevice: OPTIONAL<DeviceID>,
+        readonly targetDevice?: OPTIONAL<DeviceID>,
         /**
          * @summary `extensions`.
          * @description
@@ -61,7 +61,7 @@ class CallBackResult {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

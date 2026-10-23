@@ -54,7 +54,7 @@ class Allocation_Retention_Priority {
          * @public
          * @readonly
          */
-        readonly pre_emption_capability: OPTIONAL<BOOLEAN>,
+        readonly pre_emption_capability?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `pre_emption_vulnerability`.
          * @description
@@ -64,13 +64,13 @@ class Allocation_Retention_Priority {
          * @public
          * @readonly
          */
-        readonly pre_emption_vulnerability: OPTIONAL<BOOLEAN>,
+        readonly pre_emption_vulnerability?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

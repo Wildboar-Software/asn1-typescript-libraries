@@ -84,8 +84,8 @@ class Tetra_IRI_Parameters_callContentLinkInformation {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        cCLink1Characteristics: OPTIONAL<CallContentLinkCharacteristics>,
-        cCLink2Characteristics: OPTIONAL<CallContentLinkCharacteristics>,
+        cCLink1Characteristics?: OPTIONAL<CallContentLinkCharacteristics>,
+        cCLink2Characteristics?: OPTIONAL<CallContentLinkCharacteristics>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.cCLink1Characteristics = cCLink1Characteristics;

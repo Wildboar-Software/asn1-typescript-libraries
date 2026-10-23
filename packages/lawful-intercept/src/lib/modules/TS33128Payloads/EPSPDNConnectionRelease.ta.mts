@@ -258,9 +258,9 @@ class EPSPDNConnectionRelease {
         gTPTunnelInfo: OPTIONAL<GTPTunnelInfo>,
         rANNASCause: OPTIONAL<EPSRANNASCause>,
         pDNConnectionType: PDNConnectionType,
-        indicationFlags: OPTIONAL<PDNConnectionIndicationFlags>,
-        scopeIndication: OPTIONAL<EPSPDNConnectionReleaseScopeIndication>,
-        bearersDeleted: OPTIONAL<EPSBearersDeleted[]>,
+        indicationFlags?: OPTIONAL<PDNConnectionIndicationFlags>,
+        scopeIndication?: OPTIONAL<EPSPDNConnectionReleaseScopeIndication>,
+        bearersDeleted?: OPTIONAL<EPSBearersDeleted[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.ePSSubscriberIDs = ePSSubscriberIDs;

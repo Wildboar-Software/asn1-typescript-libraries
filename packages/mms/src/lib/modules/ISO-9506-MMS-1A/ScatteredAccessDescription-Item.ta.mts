@@ -87,7 +87,7 @@ class ScatteredAccessDescription_Item {
          * @public
          * @readonly
          */
-        readonly alternateAccess: OPTIONAL<AlternateAccess>
+        readonly alternateAccess?: OPTIONAL<AlternateAccess>
     ) {}
 
     /**

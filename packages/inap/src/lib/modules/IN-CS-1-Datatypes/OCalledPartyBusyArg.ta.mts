@@ -172,7 +172,7 @@ class OCalledPartyBusyArg {
         routeList: OPTIONAL<RouteList>,
         travellingClassMark: OPTIONAL<TravellingClassMark>,
         extensions: ExtensionField[],
-        carrier: OPTIONAL<Carrier>,
+        carrier?: OPTIONAL<Carrier>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.dpSpecificCommonParameters = dpSpecificCommonParameters;

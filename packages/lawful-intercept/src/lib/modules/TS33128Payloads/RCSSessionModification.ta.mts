@@ -222,7 +222,7 @@ class RCSSessionModification {
         sessionDirection: Direction,
         sessionEndpoints: RCSSessionEndpoints,
         rCSSIPSessionMessage: RCSSIPSessionMessage,
-        location: OPTIONAL<Location>,
+        location?: OPTIONAL<Location>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.rCSTargetIdentities = rCSTargetIdentities;

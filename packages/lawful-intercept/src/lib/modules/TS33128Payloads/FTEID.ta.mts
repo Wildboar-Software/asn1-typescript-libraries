@@ -67,8 +67,8 @@ class FTEID {
 
     constructor (
         tEID: INTEGER,
-        iPv4Address: OPTIONAL<IPv4Address>,
-        iPv6Address: OPTIONAL<IPv6Address>,
+        iPv4Address?: OPTIONAL<IPv4Address>,
+        iPv6Address?: OPTIONAL<IPv6Address>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.tEID = tEID;

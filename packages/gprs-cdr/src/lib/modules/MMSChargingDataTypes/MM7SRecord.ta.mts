@@ -690,9 +690,9 @@ class MM7SRecord {
         requestStatusCode: OPTIONAL<RequestStatusCodeType>,
         statusText: OPTIONAL<OCTET_STRING>,
         recordTimeStamp: OCTET_STRING,
-        localSequenceNumber: OPTIONAL<INTEGER>,
-        recordExtensions: OPTIONAL<ManagementExtension[]>,
-        mscfInformation: OPTIONAL<MSCFInformation>
+        localSequenceNumber?: OPTIONAL<INTEGER>,
+        recordExtensions?: OPTIONAL<ManagementExtension[]>,
+        mscfInformation?: OPTIONAL<MSCFInformation>
     ) {
         this.recordType = recordType;
         this.originatorMmsRSAddress = originatorMmsRSAddress;

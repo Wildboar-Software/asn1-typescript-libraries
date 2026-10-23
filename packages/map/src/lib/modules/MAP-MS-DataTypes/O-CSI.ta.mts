@@ -54,7 +54,7 @@ class O_CSI {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `camelCapabilityHandling`.
          * @description
@@ -65,7 +65,7 @@ class O_CSI {
          * @public
          * @readonly
          */
-        readonly camelCapabilityHandling: OPTIONAL<CamelCapabilityHandling>,
+        readonly camelCapabilityHandling?: OPTIONAL<CamelCapabilityHandling>,
         /**
          * @summary `notificationToCSE`.
          * @description
@@ -76,7 +76,7 @@ class O_CSI {
          * @public
          * @readonly
          */
-        readonly notificationToCSE: OPTIONAL<NULL>,
+        readonly notificationToCSE?: OPTIONAL<NULL>,
         /**
          * @summary `csiActive`.
          * @description
@@ -87,7 +87,7 @@ class O_CSI {
          * @public
          * @readonly
          */
-        readonly csiActive: OPTIONAL<NULL>,
+        readonly csiActive?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @public

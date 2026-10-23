@@ -63,8 +63,8 @@ class FiveGSRVCCInfo {
 
     constructor (
         uE5GSRVCCCapability: BOOLEAN,
-        sessionTransferNumber: OPTIONAL<UTF8String>,
-        correlationMSISDN: OPTIONAL<MSISDN>,
+        sessionTransferNumber?: OPTIONAL<UTF8String>,
+        correlationMSISDN?: OPTIONAL<MSISDN>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.uE5GSRVCCCapability = uE5GSRVCCCapability;

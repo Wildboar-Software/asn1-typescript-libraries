@@ -100,11 +100,11 @@ class ConnectToResourceArg {
 
     constructor (
         resourceAddress: ConnectToResourceArg_resourceAddress,
-        extensions: OPTIONAL<Extensions>,
-        serviceInteractionIndicators: OPTIONAL<ServiceInteractionIndicators>,
-        serviceInteractionIndicatorsTwo: OPTIONAL<ServiceInteractionIndicatorsTwo>,
-        uSIServiceIndicator: OPTIONAL<USIServiceIndicator>,
-        uSIInformation: OPTIONAL<USIInformation>,
+        extensions?: OPTIONAL<Extensions>,
+        serviceInteractionIndicators?: OPTIONAL<ServiceInteractionIndicators>,
+        serviceInteractionIndicatorsTwo?: OPTIONAL<ServiceInteractionIndicatorsTwo>,
+        uSIServiceIndicator?: OPTIONAL<USIServiceIndicator>,
+        uSIInformation?: OPTIONAL<USIInformation>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.resourceAddress = resourceAddress;

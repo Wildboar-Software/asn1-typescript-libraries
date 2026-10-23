@@ -57,7 +57,7 @@ class DeleteVariableAccess_Request {
          * @public
          * @readonly
          */
-        readonly scopeOfDelete: OPTIONAL<DeleteVariableAccess_Request_scopeOfDelete>,
+        readonly scopeOfDelete?: OPTIONAL<DeleteVariableAccess_Request_scopeOfDelete>,
         /**
          * @summary `listOfName`.
          * @description
@@ -68,7 +68,7 @@ class DeleteVariableAccess_Request {
          * @public
          * @readonly
          */
-        readonly listOfName: OPTIONAL<ObjectName[]>,
+        readonly listOfName?: OPTIONAL<ObjectName[]>,
         /**
          * @summary `domainName`.
          * @description
@@ -80,7 +80,7 @@ class DeleteVariableAccess_Request {
          * @public
          * @readonly
          */
-        readonly domainName: OPTIONAL<Identifier>
+        readonly domainName?: OPTIONAL<Identifier>
     ) {}
 
     /**

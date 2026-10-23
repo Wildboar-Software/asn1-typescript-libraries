@@ -55,13 +55,13 @@ class EPS_SubscriptionData {
          * @public
          * @readonly
          */
-        readonly apn_oi_Replacement: OPTIONAL<APN_OI_Replacement>,
+        readonly apn_oi_Replacement?: OPTIONAL<APN_OI_Replacement>,
         /**
          * @summary `rfsp_id`.
          * @public
          * @readonly
          */
-        readonly rfsp_id: OPTIONAL<RFSP_ID>,
+        readonly rfsp_id?: OPTIONAL<RFSP_ID>,
         /**
          * @summary `ambr`.
          * @description
@@ -72,7 +72,7 @@ class EPS_SubscriptionData {
          * @public
          * @readonly
          */
-        readonly ambr: OPTIONAL<AMBR>,
+        readonly ambr?: OPTIONAL<AMBR>,
         /**
          * @summary `apn_ConfigurationProfile`.
          * @description
@@ -83,19 +83,19 @@ class EPS_SubscriptionData {
          * @public
          * @readonly
          */
-        readonly apn_ConfigurationProfile: OPTIONAL<APN_ConfigurationProfile>,
+        readonly apn_ConfigurationProfile?: OPTIONAL<APN_ConfigurationProfile>,
         /**
          * @summary `stn_sr`.
          * @public
          * @readonly
          */
-        readonly stn_sr: OPTIONAL<ISDN_AddressString>,
+        readonly stn_sr?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `mps_CSPriority`.
          * @description
@@ -106,7 +106,7 @@ class EPS_SubscriptionData {
          * @public
          * @readonly
          */
-        readonly mps_CSPriority: OPTIONAL<NULL>,
+        readonly mps_CSPriority?: OPTIONAL<NULL>,
         /**
          * @summary `mps_EPSPriority`.
          * @description
@@ -117,7 +117,7 @@ class EPS_SubscriptionData {
          * @public
          * @readonly
          */
-        readonly mps_EPSPriority: OPTIONAL<NULL>,
+        readonly mps_EPSPriority?: OPTIONAL<NULL>,
         /**
          * @summary `subscribed_vsrvcc`.
          * @description
@@ -128,7 +128,7 @@ class EPS_SubscriptionData {
          * @public
          * @readonly
          */
-        readonly subscribed_vsrvcc: OPTIONAL<NULL>,
+        readonly subscribed_vsrvcc?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @public

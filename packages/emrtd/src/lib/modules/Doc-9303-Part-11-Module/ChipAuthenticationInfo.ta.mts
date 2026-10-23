@@ -94,7 +94,7 @@ class ChipAuthenticationInfo {
          * @public
          * @readonly
          */
-        readonly keyId: OPTIONAL<INTEGER>
+        readonly keyId?: OPTIONAL<INTEGER>
     ) {
         if (!_permitted_protocols_for_ChipAuthenticationInfo.some((id) => id.isEqualTo(protocol))) {
             throw new ASN1Error("ChipAuthenticationInfo.protocol violates permitted OBJECT IDENTIFIER constraint");

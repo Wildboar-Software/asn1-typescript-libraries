@@ -129,7 +129,7 @@ class PACEInfo {
          * @public
          * @readonly
          */
-        readonly parameterId: OPTIONAL<INTEGER>
+        readonly parameterId?: OPTIONAL<INTEGER>
     ) {
         if (!_permitted_protocols_for_PACEInfo.some((id) => id.isEqualTo(protocol))) {
             throw new ASN1Error("PACEInfo.protocol violates permitted OBJECT IDENTIFIER constraint");

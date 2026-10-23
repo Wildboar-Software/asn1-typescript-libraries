@@ -37,7 +37,7 @@ export class CompoundCriteria {
          * @public
          * @readonly
          */
-        readonly scfID: OPTIONAL<ScfID>,
+        readonly scfID?: OPTIONAL<ScfID>,
     ) {}
 
     public static _from_object (_o: { [_K in keyof (CompoundCriteria)]: (CompoundCriteria)[_K] }): CompoundCriteria {

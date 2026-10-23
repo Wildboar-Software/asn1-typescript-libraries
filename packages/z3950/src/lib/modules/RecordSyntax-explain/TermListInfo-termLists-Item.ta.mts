@@ -112,8 +112,8 @@ class TermListInfo_termLists_Item {
         title: OPTIONAL<HumanString>,
         searchCost: OPTIONAL<TermListInfo_termLists_Item_searchCost>,
         scanable: BOOLEAN,
-        broader: OPTIONAL<InternationalString[]>,
-        narrower: OPTIONAL<InternationalString[]>
+        broader?: OPTIONAL<InternationalString[]>,
+        narrower?: OPTIONAL<InternationalString[]>
     ) {
         this.name = name;
         this.title = title;

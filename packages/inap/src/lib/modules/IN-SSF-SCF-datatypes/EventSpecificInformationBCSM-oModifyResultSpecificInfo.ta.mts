@@ -59,9 +59,9 @@ class EventSpecificInformationBCSM_oModifyResultSpecificInfo {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        modifyResultType: OPTIONAL<ModifyResultType>,
-        aTMCellRate: OPTIONAL<ATMCellRate>,
-        additionalATMCellRate: OPTIONAL<AdditionalATMCellRate>,
+        modifyResultType?: OPTIONAL<ModifyResultType>,
+        aTMCellRate?: OPTIONAL<ATMCellRate>,
+        additionalATMCellRate?: OPTIONAL<AdditionalATMCellRate>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.modifyResultType = modifyResultType;

@@ -84,9 +84,9 @@ class PumRegistrRes {
 
     constructor (
         pumNumber: PartyNumber,
-        serviceOption: OPTIONAL<ServiceOption>,
-        sessionParams: OPTIONAL<SessionParams>,
-        argExtension: OPTIONAL<PumrExtension>
+        serviceOption?: OPTIONAL<ServiceOption>,
+        sessionParams?: OPTIONAL<SessionParams>,
+        argExtension?: OPTIONAL<PumrExtension>
     ) {
         this.pumNumber = pumNumber;
         this.serviceOption = serviceOption;

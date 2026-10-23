@@ -47,8 +47,8 @@ class SubscribedQoSInformation {
 
     constructor (
         fiveQi: INTEGER,
-        aRP: OPTIONAL<AllocationRetentionPriority>,
-        priorityLevel: OPTIONAL<INTEGER>
+        aRP?: OPTIONAL<AllocationRetentionPriority>,
+        priorityLevel?: OPTIONAL<INTEGER>
     ) {
         this.fiveQi = fiveQi;
         this.aRP = aRP;

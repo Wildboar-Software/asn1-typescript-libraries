@@ -70,11 +70,11 @@ class ReportChargingInformationArg_Type {
     readonly securityParameters: OPTIONAL<SecurityParameters>;
 
     constructor (
-        callRecord: OPTIONAL<CallRecord>,
-        remainingUserCredit: OPTIONAL<UserCredit>,
-        uniqueCallID: OPTIONAL<CallIdentifier>,
-        accountNumber: OPTIONAL<AccountNumber>,
-        securityParameters: OPTIONAL<SecurityParameters>
+        callRecord?: OPTIONAL<CallRecord>,
+        remainingUserCredit?: OPTIONAL<UserCredit>,
+        uniqueCallID?: OPTIONAL<CallIdentifier>,
+        accountNumber?: OPTIONAL<AccountNumber>,
+        securityParameters?: OPTIONAL<SecurityParameters>
     ) {
         this.callRecord = callRecord;
         this.remainingUserCredit = remainingUserCredit;

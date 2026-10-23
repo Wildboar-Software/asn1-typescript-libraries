@@ -66,7 +66,7 @@ class EventReportGPRSArg {
          * @public
          * @readonly
          */
-        readonly miscGPRSInfo: OPTIONAL<MiscCallInfo>,
+        readonly miscGPRSInfo?: OPTIONAL<MiscCallInfo>,
         /**
          * @summary `gPRSEventSpecificInformation`.
          * @description
@@ -86,7 +86,7 @@ class EventReportGPRSArg {
          * @public
          * @readonly
          */
-        readonly gPRSEventSpecificInformation: OPTIONAL<GPRSEventSpecificInformation>,
+        readonly gPRSEventSpecificInformation?: OPTIONAL<GPRSEventSpecificInformation>,
         /**
          * @summary `pDPID`.
          * @description
@@ -98,7 +98,7 @@ class EventReportGPRSArg {
          * @public
          * @readonly
          */
-        readonly pDPID: OPTIONAL<PDPID>,
+        readonly pDPID?: OPTIONAL<PDPID>,
         /**
          * @summary Extensions that are not recognized.
          * @public

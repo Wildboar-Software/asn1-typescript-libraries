@@ -70,7 +70,7 @@ class APN_ConfigurationProfile {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `additionalDefaultContext`.
          * @description
@@ -80,7 +80,7 @@ class APN_ConfigurationProfile {
          * @public
          * @readonly
          */
-        readonly additionalDefaultContext: OPTIONAL<ContextId>,
+        readonly additionalDefaultContext?: OPTIONAL<ContextId>,
         /**
          * @summary Extensions that are not recognized.
          * @public

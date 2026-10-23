@@ -48,7 +48,7 @@ class ParameterOffers_structure {
          * @public
          * @readonly
          */
-        readonly nonParametric: OPTIONAL<NULL>,
+        readonly nonParametric?: OPTIONAL<NULL>,
         /**
          * @summary `numberElements`.
          * @description
@@ -58,7 +58,7 @@ class ParameterOffers_structure {
          * @public
          * @readonly
          */
-        readonly numberElements: OPTIONAL<IntegerOffer>
+        readonly numberElements?: OPTIONAL<IntegerOffer>
     ) {}
 
     /**

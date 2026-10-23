@@ -161,7 +161,7 @@ class V91Diag_Item {
          * @public
          * @readonly
          */
-        readonly noiseEstimate: OPTIONAL<V59String>,
+        readonly noiseEstimate?: OPTIONAL<V59String>,
         /**
          * @summary `rxSignalQuality`.
          * @description
@@ -173,7 +173,7 @@ class V91Diag_Item {
          * @public
          * @readonly
          */
-        readonly rxSignalQuality: OPTIONAL<V59String>,
+        readonly rxSignalQuality?: OPTIONAL<V59String>,
         /**
          * @summary `rBSpattern`.
          * @description
@@ -185,7 +185,7 @@ class V91Diag_Item {
          * @public
          * @readonly
          */
-        readonly rBSpattern: OPTIONAL<RobBitPatt>,
+        readonly rBSpattern?: OPTIONAL<RobBitPatt>,
         /**
          * @summary `digitalPadLoss`.
          * @description
@@ -196,7 +196,7 @@ class V91Diag_Item {
          * @public
          * @readonly
          */
-        readonly digitalPadLoss: OPTIONAL<V59String>,
+        readonly digitalPadLoss?: OPTIONAL<V59String>,
         /**
          * @summary `localCodecLaw`.
          * @description
@@ -206,7 +206,7 @@ class V91Diag_Item {
          * @public
          * @readonly
          */
-        readonly localCodecLaw: OPTIONAL<BOOLEAN>,
+        readonly localCodecLaw?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `remoteCodecLaw`.
          * @description
@@ -216,7 +216,7 @@ class V91Diag_Item {
          * @public
          * @readonly
          */
-        readonly remoteCodecLaw: OPTIONAL<BOOLEAN>,
+        readonly remoteCodecLaw?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `frameSlipsDetected`.
          * @description
@@ -226,7 +226,7 @@ class V91Diag_Item {
          * @public
          * @readonly
          */
-        readonly frameSlipsDetected: OPTIONAL<INTEGER>,
+        readonly frameSlipsDetected?: OPTIONAL<INTEGER>,
         /**
          * @summary Extensions that are not recognized.
          * @public

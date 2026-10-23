@@ -55,7 +55,7 @@ class TxPowerLevel_Item {
          * @public
          * @readonly
          */
-        readonly txPowerDrop: OPTIONAL<V59String>,
+        readonly txPowerDrop?: OPTIONAL<V59String>,
         /**
          * @summary `txPower`.
          * @description
@@ -65,7 +65,7 @@ class TxPowerLevel_Item {
          * @public
          * @readonly
          */
-        readonly txPower: OPTIONAL<V59String>,
+        readonly txPower?: OPTIONAL<V59String>,
         /**
          * @summary Extensions that are not recognized.
          * @public

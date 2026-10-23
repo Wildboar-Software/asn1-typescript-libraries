@@ -58,7 +58,7 @@ class CIRequestRes {
 
     constructor (
         ciUnwantedUserStatus: CIUnwantedUserStatus,
-        resultExtension: OPTIONAL<CIRequestRes_resultExtension>
+        resultExtension?: OPTIONAL<CIRequestRes_resultExtension>
     ) {
         this.ciUnwantedUserStatus = ciUnwantedUserStatus;
         this.resultExtension = resultExtension;

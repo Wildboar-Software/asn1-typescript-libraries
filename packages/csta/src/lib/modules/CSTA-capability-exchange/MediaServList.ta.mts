@@ -45,7 +45,7 @@ class MediaServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly attachMediaService: OPTIONAL<AttachMediaService>,
+        readonly attachMediaService?: OPTIONAL<AttachMediaService>,
         /**
          * @summary `detachMediaService`.
          * @public
@@ -54,7 +54,7 @@ class MediaServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly detachMediaService: OPTIONAL<DetachMediaService>
+        readonly detachMediaService?: OPTIONAL<DetachMediaService>
     ) {}
 
     /**

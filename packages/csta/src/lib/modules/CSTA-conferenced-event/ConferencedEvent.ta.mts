@@ -197,7 +197,7 @@ class ConferencedEvent {
          * @public
          * @readonly
          */
-        readonly servicesPermitted: OPTIONAL<ServicesPermitted>,
+        readonly servicesPermitted?: OPTIONAL<ServicesPermitted>,
         /**
          * @summary `mediaCallCharacteristics`.
          * @description
@@ -208,7 +208,7 @@ class ConferencedEvent {
          * @public
          * @readonly
          */
-        readonly mediaCallCharacteristics: OPTIONAL<MediaCallCharacteristics>,
+        readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
         /**
          * @summary `callCharacteristics`.
          * @description
@@ -219,7 +219,7 @@ class ConferencedEvent {
          * @public
          * @readonly
          */
-        readonly callCharacteristics: OPTIONAL<CallCharacteristics>,
+        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
         /**
          * @summary `callLinkageDataList`.
          * @description
@@ -231,7 +231,7 @@ class ConferencedEvent {
          * @public
          * @readonly
          */
-        readonly callLinkageDataList: OPTIONAL<CallLinkageDataList>,
+        readonly callLinkageDataList?: OPTIONAL<CallLinkageDataList>,
         /**
          * @summary `languagePreferences`.
          * @description
@@ -241,7 +241,7 @@ class ConferencedEvent {
          * @public
          * @readonly
          */
-        readonly languagePreferences: OPTIONAL<LanguagePreferences>,
+        readonly languagePreferences?: OPTIONAL<LanguagePreferences>,
         /**
          * @summary `deviceHistory`.
          * @description
@@ -252,7 +252,7 @@ class ConferencedEvent {
          * @public
          * @readonly
          */
-        readonly deviceHistory: OPTIONAL<DeviceHistory>,
+        readonly deviceHistory?: OPTIONAL<DeviceHistory>,
         /**
          * @summary `locationInfo`.
          * @description
@@ -263,7 +263,7 @@ class ConferencedEvent {
          * @public
          * @readonly
          */
-        readonly locationInfo: OPTIONAL<LocationInfoList>,
+        readonly locationInfo?: OPTIONAL<LocationInfoList>,
         /**
          * @summary `extensions`.
          * @description
@@ -275,7 +275,7 @@ class ConferencedEvent {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

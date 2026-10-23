@@ -59,7 +59,7 @@ class TestResultEnrol {
          * @public
          * @readonly
          */
-        readonly durationEnrol: OPTIONAL<StatisticInformationSet>
+        readonly durationEnrol?: OPTIONAL<StatisticInformationSet>
     ) {}
 
     /**

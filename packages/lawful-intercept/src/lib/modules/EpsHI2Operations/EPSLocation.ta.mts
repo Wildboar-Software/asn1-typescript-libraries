@@ -193,16 +193,16 @@ class EPSLocation {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        userLocationInfo: OPTIONAL<OCTET_STRING>,
-        gsmLocation: OPTIONAL<GSMLocation>,
-        umtsLocation: OPTIONAL<UMTSLocation>,
-        olduserLocationInfo: OPTIONAL<OCTET_STRING>,
-        lastVisitedTAI: OPTIONAL<OCTET_STRING>,
-        tAIlist: OPTIONAL<OCTET_STRING>,
-        threeGPP2Bsid: OPTIONAL<OCTET_STRING>,
-        civicAddress: OPTIONAL<CivicAddress>,
-        operatorSpecificInfo: OPTIONAL<OCTET_STRING>,
-        uELocationTimestamp: OPTIONAL<EPSLocation_uELocationTimestamp>,
+        userLocationInfo?: OPTIONAL<OCTET_STRING>,
+        gsmLocation?: OPTIONAL<GSMLocation>,
+        umtsLocation?: OPTIONAL<UMTSLocation>,
+        olduserLocationInfo?: OPTIONAL<OCTET_STRING>,
+        lastVisitedTAI?: OPTIONAL<OCTET_STRING>,
+        tAIlist?: OPTIONAL<OCTET_STRING>,
+        threeGPP2Bsid?: OPTIONAL<OCTET_STRING>,
+        civicAddress?: OPTIONAL<CivicAddress>,
+        operatorSpecificInfo?: OPTIONAL<OCTET_STRING>,
+        uELocationTimestamp?: OPTIONAL<EPSLocation_uELocationTimestamp>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.userLocationInfo = userLocationInfo;

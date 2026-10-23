@@ -40,7 +40,7 @@ class Tone {
 
     constructor (
         toneId: Integer4,
-        duration: OPTIONAL<Integer4>
+        duration?: OPTIONAL<Integer4>
     ) {
         this.toneId = toneId;
         this.duration = duration;

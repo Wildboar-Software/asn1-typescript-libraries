@@ -37,7 +37,7 @@ export class EventSpecificInformationBCSM_oAbandonSpecificInfo {
          * @public
          * @readonly
          */
-        readonly routeNotPermitted: OPTIONAL<NULL>,
+        readonly routeNotPermitted?: OPTIONAL<NULL>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}
 

@@ -81,12 +81,12 @@ class FlowInformation {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        flowDescription: OPTIONAL<FlowDescription>,
-        ethFlowDescription: OPTIONAL<EthFlowDescription>,
-        tosTrafficClass: OPTIONAL<OCTET_STRING>,
-        spi: OPTIONAL<OCTET_STRING>,
-        flowLabel: OPTIONAL<OCTET_STRING>,
-        flowDirection: OPTIONAL<FlowDirection>,
+        flowDescription?: OPTIONAL<FlowDescription>,
+        ethFlowDescription?: OPTIONAL<EthFlowDescription>,
+        tosTrafficClass?: OPTIONAL<OCTET_STRING>,
+        spi?: OPTIONAL<OCTET_STRING>,
+        flowLabel?: OPTIONAL<OCTET_STRING>,
+        flowDirection?: OPTIONAL<FlowDirection>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.flowDescription = flowDescription;

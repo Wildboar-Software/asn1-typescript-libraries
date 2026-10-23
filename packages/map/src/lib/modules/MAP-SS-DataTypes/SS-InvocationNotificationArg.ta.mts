@@ -85,7 +85,7 @@ class SS_InvocationNotificationArg {
          * @public
          * @readonly
          */
-        readonly ss_EventSpecification: OPTIONAL<SS_EventSpecification>,
+        readonly ss_EventSpecification?: OPTIONAL<SS_EventSpecification>,
         /**
          * @summary `extensionContainer`.
          * @description
@@ -95,7 +95,7 @@ class SS_InvocationNotificationArg {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `b_subscriberNumber`.
          * @description
@@ -105,7 +105,7 @@ class SS_InvocationNotificationArg {
          * @public
          * @readonly
          */
-        readonly b_subscriberNumber: OPTIONAL<ISDN_AddressString>,
+        readonly b_subscriberNumber?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `ccbs_RequestState`.
          * @description
@@ -115,7 +115,7 @@ class SS_InvocationNotificationArg {
          * @public
          * @readonly
          */
-        readonly ccbs_RequestState: OPTIONAL<CCBS_RequestState>,
+        readonly ccbs_RequestState?: OPTIONAL<CCBS_RequestState>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -145,8 +145,8 @@ class SMFStartOfInterceptionWithConnectedProSeRemoteUE {
         gPSI: OPTIONAL<GPSI>,
         pEI: OPTIONAL<PEI>,
         pDUSessionID: PDUSessionID,
-        remoteUEContextConnected: OPTIONAL<RemoteUEContextList>,
-        location: OPTIONAL<Location>,
+        remoteUEContextConnected?: OPTIONAL<RemoteUEContextList>,
+        location?: OPTIONAL<Location>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.sUPI = sUPI;

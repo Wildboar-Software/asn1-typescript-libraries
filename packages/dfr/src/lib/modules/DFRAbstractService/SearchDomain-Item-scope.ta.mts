@@ -58,7 +58,7 @@ class SearchDomain_Item_scope {
          * @public
          * @readonly
          */
-        readonly descent_depth: OPTIONAL<INTEGER>,
+        readonly descent_depth?: OPTIONAL<INTEGER>,
         /**
          * @summary `dereferencing_depth`.
          * @description
@@ -67,7 +67,7 @@ class SearchDomain_Item_scope {
          * @public
          * @readonly
          */
-        readonly dereferencing_depth: OPTIONAL<INTEGER>
+        readonly dereferencing_depth?: OPTIONAL<INTEGER>
     ) {}
 
     /**

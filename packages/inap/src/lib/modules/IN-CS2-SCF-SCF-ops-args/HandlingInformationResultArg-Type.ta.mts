@@ -140,18 +140,18 @@ class HandlingInformationResultArg_Type {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        routingAddress: OPTIONAL<RoutingAddress>,
-        highLayerCompatibility: OPTIONAL<HighLayerCompatibility>,
-        supplementaryServices: OPTIONAL<SupplementaryServices>,
-        preferredLanguage: OPTIONAL<Language>,
-        carrier: OPTIONAL<Carrier>,
-        callingPartyNumber: OPTIONAL<CallingPartyNumber>,
-        originalCalledPartyID: OPTIONAL<OriginalCalledPartyID>,
-        redirectingPartyID: OPTIONAL<RedirectingPartyID>,
-        redirectionInformation: OPTIONAL<RedirectionInformation>,
-        callingPartysCategory: OPTIONAL<CallingPartysCategory>,
-        securityParameters: OPTIONAL<SecurityParameters>,
-        extensions: OPTIONAL<ExtensionField[]>,
+        routingAddress?: OPTIONAL<RoutingAddress>,
+        highLayerCompatibility?: OPTIONAL<HighLayerCompatibility>,
+        supplementaryServices?: OPTIONAL<SupplementaryServices>,
+        preferredLanguage?: OPTIONAL<Language>,
+        carrier?: OPTIONAL<Carrier>,
+        callingPartyNumber?: OPTIONAL<CallingPartyNumber>,
+        originalCalledPartyID?: OPTIONAL<OriginalCalledPartyID>,
+        redirectingPartyID?: OPTIONAL<RedirectingPartyID>,
+        redirectionInformation?: OPTIONAL<RedirectionInformation>,
+        callingPartysCategory?: OPTIONAL<CallingPartysCategory>,
+        securityParameters?: OPTIONAL<SecurityParameters>,
+        extensions?: OPTIONAL<ExtensionField[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.routingAddress = routingAddress;

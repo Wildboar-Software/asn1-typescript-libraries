@@ -271,7 +271,7 @@ class V90Diag_Item {
          * @public
          * @readonly
          */
-        readonly rxLevelEstimate: OPTIONAL<V59String>,
+        readonly rxLevelEstimate?: OPTIONAL<V59String>,
         /**
          * @summary `noiseEstimate`.
          * @description
@@ -281,7 +281,7 @@ class V90Diag_Item {
          * @public
          * @readonly
          */
-        readonly noiseEstimate: OPTIONAL<V59String>,
+        readonly noiseEstimate?: OPTIONAL<V59String>,
         /**
          * @summary `rxSignalQuality`.
          * @description
@@ -293,7 +293,7 @@ class V90Diag_Item {
          * @public
          * @readonly
          */
-        readonly rxSignalQuality: OPTIONAL<V59String>,
+        readonly rxSignalQuality?: OPTIONAL<V59String>,
         /**
          * @summary `nearEchoEstimate`.
          * @description
@@ -304,7 +304,7 @@ class V90Diag_Item {
          * @public
          * @readonly
          */
-        readonly nearEchoEstimate: OPTIONAL<V59String>,
+        readonly nearEchoEstimate?: OPTIONAL<V59String>,
         /**
          * @summary `farEchoEstimate`.
          * @description
@@ -315,7 +315,7 @@ class V90Diag_Item {
          * @public
          * @readonly
          */
-        readonly farEchoEstimate: OPTIONAL<V59String>,
+        readonly farEchoEstimate?: OPTIONAL<V59String>,
         /**
          * @summary `roundTripDelay`.
          * @description
@@ -326,7 +326,7 @@ class V90Diag_Item {
          * @public
          * @readonly
          */
-        readonly roundTripDelay: OPTIONAL<V59String>,
+        readonly roundTripDelay?: OPTIONAL<V59String>,
         /**
          * @summary `rBSpattern`.
          * @description
@@ -338,7 +338,7 @@ class V90Diag_Item {
          * @public
          * @readonly
          */
-        readonly rBSpattern: OPTIONAL<RobBitPatt>,
+        readonly rBSpattern?: OPTIONAL<RobBitPatt>,
         /**
          * @summary `digitalPadLoss`.
          * @description
@@ -349,7 +349,7 @@ class V90Diag_Item {
          * @public
          * @readonly
          */
-        readonly digitalPadLoss: OPTIONAL<V59String>,
+        readonly digitalPadLoss?: OPTIONAL<V59String>,
         /**
          * @summary `codecLaw`.
          * @description
@@ -360,7 +360,7 @@ class V90Diag_Item {
          * @public
          * @readonly
          */
-        readonly codecLaw: OPTIONAL<BOOLEAN>,
+        readonly codecLaw?: OPTIONAL<BOOLEAN>,
         /**
          * @summary Extensions that are not recognized.
          * @public

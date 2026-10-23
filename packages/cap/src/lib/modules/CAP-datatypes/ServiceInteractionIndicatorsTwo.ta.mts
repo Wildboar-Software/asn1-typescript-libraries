@@ -49,7 +49,7 @@ export class ServiceInteractionIndicatorsTwo {
          * @public
          * @readonly
          */
-        readonly forwardServiceInteractionInd: OPTIONAL<ForwardServiceInteractionInd>,
+        readonly forwardServiceInteractionInd?: OPTIONAL<ForwardServiceInteractionInd>,
         /**
          * @summary `backwardServiceInteractionInd`.
          * @description
@@ -60,7 +60,7 @@ export class ServiceInteractionIndicatorsTwo {
          * @public
          * @readonly
          */
-        readonly backwardServiceInteractionInd: OPTIONAL<BackwardServiceInteractionInd>,
+        readonly backwardServiceInteractionInd?: OPTIONAL<BackwardServiceInteractionInd>,
         /**
          * @summary `bothwayThroughConnectionInd`.
          * @description
@@ -71,7 +71,7 @@ export class ServiceInteractionIndicatorsTwo {
          * @public
          * @readonly
          */
-        readonly bothwayThroughConnectionInd: OPTIONAL<BothwayThroughConnectionInd>,
+        readonly bothwayThroughConnectionInd?: OPTIONAL<BothwayThroughConnectionInd>,
         /**
          * @summary `connectedNumberTreatmentInd`.
          * @description
@@ -82,7 +82,7 @@ export class ServiceInteractionIndicatorsTwo {
          * @public
          * @readonly
          */
-        readonly connectedNumberTreatmentInd: OPTIONAL<ConnectedNumberTreatmentInd>,
+        readonly connectedNumberTreatmentInd?: OPTIONAL<ConnectedNumberTreatmentInd>,
         /**
          * @summary `nonCUGCall`.
          * @description
@@ -96,7 +96,7 @@ export class ServiceInteractionIndicatorsTwo {
          * @public
          * @readonly
          */
-        readonly nonCUGCall: OPTIONAL<NULL>,
+        readonly nonCUGCall?: OPTIONAL<NULL>,
         /**
          * @summary `holdTreatmentIndicator`.
          * @description
@@ -109,7 +109,7 @@ export class ServiceInteractionIndicatorsTwo {
          * @public
          * @readonly
          */
-        readonly holdTreatmentIndicator: OPTIONAL<OCTET_STRING>,
+        readonly holdTreatmentIndicator?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `cwTreatmentIndicator`.
          * @description
@@ -122,7 +122,7 @@ export class ServiceInteractionIndicatorsTwo {
          * @public
          * @readonly
          */
-        readonly cwTreatmentIndicator: OPTIONAL<OCTET_STRING>,
+        readonly cwTreatmentIndicator?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `ectTreatmentIndicator`.
          * @description
@@ -135,7 +135,7 @@ export class ServiceInteractionIndicatorsTwo {
          * @public
          * @readonly
          */
-        readonly ectTreatmentIndicator: OPTIONAL<OCTET_STRING>,
+        readonly ectTreatmentIndicator?: OPTIONAL<OCTET_STRING>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {
         if (holdTreatmentIndicator !== undefined && holdTreatmentIndicator.length !== 1) {

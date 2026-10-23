@@ -107,9 +107,9 @@ class ExtendedServicesResponse {
     constructor (
         referenceId: OPTIONAL<ReferenceId>,
         operationStatus: ExtendedServicesResponse_operationStatus,
-        diagnostics: OPTIONAL<DiagRec[]>,
-        taskPackage: OPTIONAL<EXTERNAL>,
-        otherInfo: OPTIONAL<OtherInformation>
+        diagnostics?: OPTIONAL<DiagRec[]>,
+        taskPackage?: OPTIONAL<EXTERNAL>,
+        otherInfo?: OPTIONAL<OtherInformation>
     ) {
         this.referenceId = referenceId;
         this.operationStatus = operationStatus;

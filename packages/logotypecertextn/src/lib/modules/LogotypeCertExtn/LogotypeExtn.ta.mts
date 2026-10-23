@@ -74,7 +74,7 @@ class LogotypeExtn {
          * @public
          * @readonly
          */
-        readonly communityLogos: OPTIONAL<LogotypeInfo[]>,
+        readonly communityLogos?: OPTIONAL<LogotypeInfo[]>,
         /**
          * Logotype of the organization named as the issuer. It is
          * consistent with, and its presence requires, an organization
@@ -87,7 +87,7 @@ class LogotypeExtn {
          * @public
          * @readonly
          */
-        readonly issuerLogo: OPTIONAL<LogotypeInfo>,
+        readonly issuerLogo?: OPTIONAL<LogotypeInfo>,
         /**
          * Logotype of the organization named as the subject. It is
          * consistent with, and its presence requires, an organization
@@ -100,7 +100,7 @@ class LogotypeExtn {
          * @public
          * @readonly
          */
-        readonly subjectLogo: OPTIONAL<LogotypeInfo>,
+        readonly subjectLogo?: OPTIONAL<LogotypeInfo>,
         /**
          * Logotypes outside the three standard classes: partners,
          * products, services, or anything else the local application
@@ -115,7 +115,7 @@ class LogotypeExtn {
          * @public
          * @readonly
          */
-        readonly otherLogos: OPTIONAL<OtherLogotypeInfo[]>
+        readonly otherLogos?: OPTIONAL<OtherLogotypeInfo[]>
     ) {}
 
     /**

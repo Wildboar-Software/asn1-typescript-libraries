@@ -120,7 +120,7 @@ class CallControlServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly acceptCall: OPTIONAL<AcceptCall>,
+        readonly acceptCall?: OPTIONAL<AcceptCall>,
         /**
          * @summary `alternateCall`.
          * @public
@@ -129,7 +129,7 @@ class CallControlServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly alternateCall: OPTIONAL<AlternateCall>,
+        readonly alternateCall?: OPTIONAL<AlternateCall>,
         /**
          * @summary `answerCall`.
          * @public
@@ -138,7 +138,7 @@ class CallControlServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly answerCall: OPTIONAL<AnswerCall>,
+        readonly answerCall?: OPTIONAL<AnswerCall>,
         /**
          * @summary `callBack`.
          * @public
@@ -147,7 +147,7 @@ class CallControlServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly callBack: OPTIONAL<CallBack>,
+        readonly callBack?: OPTIONAL<CallBack>,
         /**
          * @summary `callBackMessage`.
          * @public
@@ -156,7 +156,7 @@ class CallControlServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly callBackMessage: OPTIONAL<CallBackMessage>,
+        readonly callBackMessage?: OPTIONAL<CallBackMessage>,
         /**
          * @summary `campOnCall`.
          * @public
@@ -165,7 +165,7 @@ class CallControlServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly campOnCall: OPTIONAL<CampOnCall>,
+        readonly campOnCall?: OPTIONAL<CampOnCall>,
         /**
          * @summary `clearCall`.
          * @public
@@ -174,7 +174,7 @@ class CallControlServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly clearCall: OPTIONAL<ClearCall>,
+        readonly clearCall?: OPTIONAL<ClearCall>,
         /**
          * @summary `clearConnection`.
          * @public
@@ -183,7 +183,7 @@ class CallControlServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly clearConnection: OPTIONAL<ClearConnection>,
+        readonly clearConnection?: OPTIONAL<ClearConnection>,
         /**
          * @summary `conferenceCall`.
          * @public
@@ -192,7 +192,7 @@ class CallControlServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly conferenceCall: OPTIONAL<ConferenceCall>,
+        readonly conferenceCall?: OPTIONAL<ConferenceCall>,
         /**
          * @summary `consultationCall`.
          * @public
@@ -201,7 +201,7 @@ class CallControlServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly consultationCall: OPTIONAL<ConsultationCall>,
+        readonly consultationCall?: OPTIONAL<ConsultationCall>,
         /**
          * @summary `deflectCall`.
          * @public
@@ -210,7 +210,7 @@ class CallControlServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly deflectCall: OPTIONAL<DeflectCall>,
+        readonly deflectCall?: OPTIONAL<DeflectCall>,
         /**
          * @summary `dialDigits`.
          * @public
@@ -219,7 +219,7 @@ class CallControlServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly dialDigits: OPTIONAL<DialDigits>,
+        readonly dialDigits?: OPTIONAL<DialDigits>,
         /**
          * @summary `directedPickupCall`.
          * @public
@@ -228,7 +228,7 @@ class CallControlServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly directedPickupCall: OPTIONAL<DirectedPickupCall>,
+        readonly directedPickupCall?: OPTIONAL<DirectedPickupCall>,
         /**
          * @summary `groupPickupCall`.
          * @public
@@ -237,7 +237,7 @@ class CallControlServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly groupPickupCall: OPTIONAL<GroupPickupCall>,
+        readonly groupPickupCall?: OPTIONAL<GroupPickupCall>,
         /**
          * @summary `holdCall`.
          * @public
@@ -246,7 +246,7 @@ class CallControlServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly holdCall: OPTIONAL<HoldCall>,
+        readonly holdCall?: OPTIONAL<HoldCall>,
         /**
          * @summary `intrudeCall`.
          * @public
@@ -255,7 +255,7 @@ class CallControlServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly intrudeCall: OPTIONAL<IntrudeCall>,
+        readonly intrudeCall?: OPTIONAL<IntrudeCall>,
         /**
          * @summary `joinCall`.
          * @public
@@ -264,7 +264,7 @@ class CallControlServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly joinCall: OPTIONAL<JoinCall>,
+        readonly joinCall?: OPTIONAL<JoinCall>,
         /**
          * @summary `makeCall`.
          * @public
@@ -273,7 +273,7 @@ class CallControlServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly makeCall: OPTIONAL<MakeCall>,
+        readonly makeCall?: OPTIONAL<MakeCall>,
         /**
          * @summary `makeConnection`.
          * @public
@@ -282,7 +282,7 @@ class CallControlServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly makeConnection: OPTIONAL<MakeConnection>,
+        readonly makeConnection?: OPTIONAL<MakeConnection>,
         /**
          * @summary `makePredictiveCall`.
          * @public
@@ -291,7 +291,7 @@ class CallControlServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly makePredictiveCall: OPTIONAL<MakePredictiveCall>,
+        readonly makePredictiveCall?: OPTIONAL<MakePredictiveCall>,
         /**
          * @summary `parkCall`.
          * @public
@@ -300,7 +300,7 @@ class CallControlServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly parkCall: OPTIONAL<ParkCall>,
+        readonly parkCall?: OPTIONAL<ParkCall>,
         /**
          * @summary `reconnectCall`.
          * @public
@@ -309,7 +309,7 @@ class CallControlServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly reconnectCall: OPTIONAL<ReconnectCall>,
+        readonly reconnectCall?: OPTIONAL<ReconnectCall>,
         /**
          * @summary `retrieveCall`.
          * @public
@@ -318,7 +318,7 @@ class CallControlServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly retrieveCall: OPTIONAL<RetrieveCall>,
+        readonly retrieveCall?: OPTIONAL<RetrieveCall>,
         /**
          * @summary `sendMessage`.
          * @public
@@ -327,7 +327,7 @@ class CallControlServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly sendMessage: OPTIONAL<SendMessage>,
+        readonly sendMessage?: OPTIONAL<SendMessage>,
         /**
          * @summary `singleStepConference`.
          * @public
@@ -336,7 +336,7 @@ class CallControlServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly singleStepConference: OPTIONAL<SingleStepConference>,
+        readonly singleStepConference?: OPTIONAL<SingleStepConference>,
         /**
          * @summary `singleStepTransfer`.
          * @public
@@ -345,7 +345,7 @@ class CallControlServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly singleStepTransfer: OPTIONAL<SingleStepTransfer>,
+        readonly singleStepTransfer?: OPTIONAL<SingleStepTransfer>,
         /**
          * @summary `transferCall`.
          * @public
@@ -354,7 +354,7 @@ class CallControlServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly transferCall: OPTIONAL<TransferCall>
+        readonly transferCall?: OPTIONAL<TransferCall>
     ) {}
 
     /**

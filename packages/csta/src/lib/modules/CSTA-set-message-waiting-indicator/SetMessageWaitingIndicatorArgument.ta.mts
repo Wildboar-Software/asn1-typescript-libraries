@@ -66,7 +66,7 @@ class SetMessageWaitingIndicatorArgument {
          * @public
          * @readonly
          */
-        readonly deviceForMessage: OPTIONAL<DeviceID>,
+        readonly deviceForMessage?: OPTIONAL<DeviceID>,
         /**
          * @summary `extensions`.
          * @description
@@ -76,7 +76,7 @@ class SetMessageWaitingIndicatorArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

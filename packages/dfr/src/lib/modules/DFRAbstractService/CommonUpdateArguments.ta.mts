@@ -59,7 +59,7 @@ class CommonUpdateArguments {
          * @public
          * @readonly
          */
-        readonly object_class: OPTIONAL<DfrObjectClass>,
+        readonly object_class?: OPTIONAL<DfrObjectClass>,
         /**
          * @summary `entry`.
          * @description
@@ -69,7 +69,7 @@ class CommonUpdateArguments {
          * @public
          * @readonly
          */
-        readonly entry: OPTIONAL<CommonUpdateArguments_entry>,
+        readonly entry?: OPTIONAL<CommonUpdateArguments_entry>,
         /**
          * @summary `destination`.
          * @description
@@ -79,7 +79,7 @@ class CommonUpdateArguments {
          * @public
          * @readonly
          */
-        readonly destination: OPTIONAL<DfrEntryName>,
+        readonly destination?: OPTIONAL<DfrEntryName>,
         /**
          * @summary `position`.
          * @description
@@ -91,7 +91,7 @@ class CommonUpdateArguments {
          * @public
          * @readonly
          */
-        readonly position: OPTIONAL<GroupMemberPosition>,
+        readonly position?: OPTIONAL<GroupMemberPosition>,
         /**
          * @summary `modifications`.
          * @description
@@ -101,7 +101,7 @@ class CommonUpdateArguments {
          * @public
          * @readonly
          */
-        readonly modifications: OPTIONAL<EntryModification[]>,
+        readonly modifications?: OPTIONAL<EntryModification[]>,
         /**
          * @summary `selection`.
          * @description
@@ -111,7 +111,7 @@ class CommonUpdateArguments {
          * @public
          * @readonly
          */
-        readonly selection: OPTIONAL<EntryInformationSelection>,
+        readonly selection?: OPTIONAL<EntryInformationSelection>,
         /**
          * @summary `reference_qos`.
          * @description
@@ -121,7 +121,7 @@ class CommonUpdateArguments {
          * @public
          * @readonly
          */
-        readonly reference_qos: OPTIONAL<Requested_QoS_level>
+        readonly reference_qos?: OPTIONAL<Requested_QoS_level>
     ) {}
 
     /**

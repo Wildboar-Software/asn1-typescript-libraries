@@ -50,7 +50,7 @@ class ContinueWithArgumentArgExtension {
          * @public
          * @readonly
          */
-        readonly suppress_D_CSI: OPTIONAL<NULL>,
+        readonly suppress_D_CSI?: OPTIONAL<NULL>,
         /**
          * @summary `suppress_N_CSI`.
          * @description
@@ -61,7 +61,7 @@ class ContinueWithArgumentArgExtension {
          * @public
          * @readonly
          */
-        readonly suppress_N_CSI: OPTIONAL<NULL>,
+        readonly suppress_N_CSI?: OPTIONAL<NULL>,
         /**
          * @summary `suppressOutgoingCallBarring`.
          * @description
@@ -72,7 +72,7 @@ class ContinueWithArgumentArgExtension {
          * @public
          * @readonly
          */
-        readonly suppressOutgoingCallBarring: OPTIONAL<NULL>,
+        readonly suppressOutgoingCallBarring?: OPTIONAL<NULL>,
         /**
          * @summary `legOrCallSegment`.
          * @description
@@ -83,7 +83,7 @@ class ContinueWithArgumentArgExtension {
          * @public
          * @readonly
          */
-        readonly legOrCallSegment: OPTIONAL<LegOrCallSegment>,
+        readonly legOrCallSegment?: OPTIONAL<LegOrCallSegment>,
         /**
          * @summary Extensions that are not recognized.
          * @public

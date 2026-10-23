@@ -138,7 +138,7 @@ class HeldEvent {
          * @public
          * @readonly
          */
-        readonly servicesPermitted: OPTIONAL<ServicesPermitted>,
+        readonly servicesPermitted?: OPTIONAL<ServicesPermitted>,
         /**
          * @summary `mediaCallCharacteristics`.
          * @description
@@ -148,7 +148,7 @@ class HeldEvent {
          * @public
          * @readonly
          */
-        readonly mediaCallCharacteristics: OPTIONAL<MediaCallCharacteristics>,
+        readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
         /**
          * @summary `callCharacteristics`.
          * @description
@@ -158,7 +158,7 @@ class HeldEvent {
          * @public
          * @readonly
          */
-        readonly callCharacteristics: OPTIONAL<CallCharacteristics>,
+        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
         /**
          * @summary `heldConnectionInfo`.
          * @description
@@ -169,7 +169,7 @@ class HeldEvent {
          * @public
          * @readonly
          */
-        readonly heldConnectionInfo: OPTIONAL<ConnectionInformation>,
+        readonly heldConnectionInfo?: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `callLinkageData`.
          * @description
@@ -179,7 +179,7 @@ class HeldEvent {
          * @public
          * @readonly
          */
-        readonly callLinkageData: OPTIONAL<CallLinkageData>,
+        readonly callLinkageData?: OPTIONAL<CallLinkageData>,
         /**
          * @summary `languagePreferences`.
          * @description
@@ -189,7 +189,7 @@ class HeldEvent {
          * @public
          * @readonly
          */
-        readonly languagePreferences: OPTIONAL<LanguagePreferences>,
+        readonly languagePreferences?: OPTIONAL<LanguagePreferences>,
         /**
          * @summary `locationInfo`.
          * @description
@@ -199,7 +199,7 @@ class HeldEvent {
          * @public
          * @readonly
          */
-        readonly locationInfo: OPTIONAL<LocationInfoList>,
+        readonly locationInfo?: OPTIONAL<LocationInfoList>,
         /**
          * @summary `extensions`.
          * @description
@@ -210,7 +210,7 @@ class HeldEvent {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

@@ -78,7 +78,7 @@ class DefineNamedVariable_Request {
          * @public
          * @readonly
          */
-        readonly typeSpecification: OPTIONAL<TypeSpecification>
+        readonly typeSpecification?: OPTIONAL<TypeSpecification>
     ) {}
 
     /**

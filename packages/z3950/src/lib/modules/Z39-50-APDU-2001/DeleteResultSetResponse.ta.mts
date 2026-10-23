@@ -127,11 +127,11 @@ class DeleteResultSetResponse {
     constructor (
         referenceId: OPTIONAL<ReferenceId>,
         deleteOperationStatus: DeleteSetStatus,
-        deleteListStatuses: OPTIONAL<ListStatuses>,
-        numberNotDeleted: OPTIONAL<INTEGER>,
-        bulkStatuses: OPTIONAL<ListStatuses>,
-        deleteMessage: OPTIONAL<InternationalString>,
-        otherInfo: OPTIONAL<OtherInformation>
+        deleteListStatuses?: OPTIONAL<ListStatuses>,
+        numberNotDeleted?: OPTIONAL<INTEGER>,
+        bulkStatuses?: OPTIONAL<ListStatuses>,
+        deleteMessage?: OPTIONAL<InternationalString>,
+        otherInfo?: OPTIONAL<OtherInformation>
     ) {
         this.referenceId = referenceId;
         this.deleteOperationStatus = deleteOperationStatus;

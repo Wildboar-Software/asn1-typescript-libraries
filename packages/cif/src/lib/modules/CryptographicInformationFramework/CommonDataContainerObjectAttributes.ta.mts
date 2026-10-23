@@ -52,7 +52,7 @@ class CommonDataContainerObjectAttributes {
          * @public
          * @readonly
          */
-        readonly applicationName: OPTIONAL<Label>,
+        readonly applicationName?: OPTIONAL<Label>,
         /**
          * @summary `applicationOID`.
          * @description
@@ -60,7 +60,7 @@ class CommonDataContainerObjectAttributes {
          * @public
          * @readonly
          */
-        readonly applicationOID: OPTIONAL<OBJECT_IDENTIFIER>,
+        readonly applicationOID?: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `iD`.
          * @description
@@ -69,7 +69,7 @@ class CommonDataContainerObjectAttributes {
          * @public
          * @readonly
          */
-        readonly iD: OPTIONAL<Identifier>,
+        readonly iD?: OPTIONAL<Identifier>,
         /**
          * @summary Extensions that are not recognized.
          * @public

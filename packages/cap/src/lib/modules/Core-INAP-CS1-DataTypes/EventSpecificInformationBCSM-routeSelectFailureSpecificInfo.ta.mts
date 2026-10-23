@@ -37,7 +37,7 @@ class EventSpecificInformationBCSM_routeSelectFailureSpecificInfo {
          * @public
          * @readonly
          */
-        readonly failureCause: OPTIONAL<Cause>
+        readonly failureCause?: OPTIONAL<Cause>
     ) {}
 
     /**

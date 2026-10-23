@@ -54,7 +54,7 @@ class CommandRequest {
          * @public
          * @readonly
          */
-        readonly optional: OPTIONAL<NULL>,
+        readonly optional?: OPTIONAL<NULL>,
         /**
          * @summary `wildcardReturn`.
          * @description
@@ -69,7 +69,7 @@ class CommandRequest {
          * @public
          * @readonly
          */
-        readonly wildcardReturn: OPTIONAL<NULL>,
+        readonly wildcardReturn?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @description

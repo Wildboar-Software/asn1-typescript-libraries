@@ -42,31 +42,31 @@ class NegTokenTarg {
          * @public
          * @readonly
          */
-        readonly negResult: OPTIONAL<NegTokenTarg_negResult>,
+        readonly negResult?: OPTIONAL<NegTokenTarg_negResult>,
         /**
          * @summary `supportedMech`.
          * @public
          * @readonly
          */
-        readonly supportedMech: OPTIONAL<MechType>,
+        readonly supportedMech?: OPTIONAL<MechType>,
         /**
          * @summary `responseToken`.
          * @public
          * @readonly
          */
-        readonly responseToken: OPTIONAL<OCTET_STRING>,
+        readonly responseToken?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `mechListMIC`.
          * @public
          * @readonly
          */
-        readonly mechListMIC: OPTIONAL<OCTET_STRING>,
+        readonly mechListMIC?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `mechTypes`.
          * @public
          * @readonly
          */
-        readonly mechTypes: OPTIONAL<MechTypeList>
+        readonly mechTypes?: OPTIONAL<MechTypeList>
     ) {}
 
     /**

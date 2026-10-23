@@ -131,10 +131,10 @@ class ClientPartToKeep {
 
     constructor (
         activeFlag: BOOLEAN,
-        databaseNames: OPTIONAL<InternationalString[]>,
-        resultSetDisposition: OPTIONAL<ClientPartToKeep_resultSetDisposition>,
-        alertDestination: OPTIONAL<Destination>,
-        exportParameters: OPTIONAL<ClientPartToKeep_exportParameters>
+        databaseNames?: OPTIONAL<InternationalString[]>,
+        resultSetDisposition?: OPTIONAL<ClientPartToKeep_resultSetDisposition>,
+        alertDestination?: OPTIONAL<Destination>,
+        exportParameters?: OPTIONAL<ClientPartToKeep_exportParameters>
     ) {
         this.activeFlag = activeFlag;
         this.databaseNames = databaseNames;

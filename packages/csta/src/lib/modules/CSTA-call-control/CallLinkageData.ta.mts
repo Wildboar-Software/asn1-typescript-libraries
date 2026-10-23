@@ -72,7 +72,7 @@ class CallLinkageData {
          * @public
          * @readonly
          */
-        readonly threadData: OPTIONAL<ThreadData>
+        readonly threadData?: OPTIONAL<ThreadData>
     ) {}
 
     /**

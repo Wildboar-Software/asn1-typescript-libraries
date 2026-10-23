@@ -204,9 +204,9 @@ class MMSReadReport {
         direction: MMSDirection,
         mMSDateTime: Timestamp,
         readStatus: MMSReadStatus,
-        applicID: OPTIONAL<UTF8String>,
-        replyApplicID: OPTIONAL<UTF8String>,
-        auxApplicInfo: OPTIONAL<UTF8String>,
+        applicID?: OPTIONAL<UTF8String>,
+        replyApplicID?: OPTIONAL<UTF8String>,
+        auxApplicInfo?: OPTIONAL<UTF8String>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.version = version;

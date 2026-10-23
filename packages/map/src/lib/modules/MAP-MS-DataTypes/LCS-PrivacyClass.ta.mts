@@ -93,7 +93,7 @@ class LCS_PrivacyClass {
          * @public
          * @readonly
          */
-        readonly notificationToMSUser: OPTIONAL<NotificationToMSUser>,
+        readonly notificationToMSUser?: OPTIONAL<NotificationToMSUser>,
         /**
          * @summary `externalClientList`.
          * @description
@@ -106,7 +106,7 @@ class LCS_PrivacyClass {
          * @public
          * @readonly
          */
-        readonly externalClientList: OPTIONAL<ExternalClientList>,
+        readonly externalClientList?: OPTIONAL<ExternalClientList>,
         /**
          * @summary `plmnClientList`.
          * @description
@@ -117,13 +117,13 @@ class LCS_PrivacyClass {
          * @public
          * @readonly
          */
-        readonly plmnClientList: OPTIONAL<PLMNClientList>,
+        readonly plmnClientList?: OPTIONAL<PLMNClientList>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `ext_externalClientList`.
          * @description
@@ -135,7 +135,7 @@ class LCS_PrivacyClass {
          * @public
          * @readonly
          */
-        readonly ext_externalClientList: OPTIONAL<Ext_ExternalClientList>,
+        readonly ext_externalClientList?: OPTIONAL<Ext_ExternalClientList>,
         /**
          * @summary `serviceTypeList`.
          * @description
@@ -147,7 +147,7 @@ class LCS_PrivacyClass {
          * @public
          * @readonly
          */
-        readonly serviceTypeList: OPTIONAL<ServiceTypeList>,
+        readonly serviceTypeList?: OPTIONAL<ServiceTypeList>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -82,10 +82,10 @@ class ScriptEventArg {
 
     constructor (
         uIScriptId: Code,
-        uIScriptResult: OPTIONAL<_Element>,
-        extensions: OPTIONAL<ExtensionField[]>,
-        callSegmentID: OPTIONAL<CallSegmentID>,
-        lastEventIndicator: OPTIONAL<BOOLEAN>,
+        uIScriptResult?: OPTIONAL<_Element>,
+        extensions?: OPTIONAL<ExtensionField[]>,
+        callSegmentID?: OPTIONAL<CallSegmentID>,
+        lastEventIndicator?: OPTIONAL<BOOLEAN>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.uIScriptId = uIScriptId;

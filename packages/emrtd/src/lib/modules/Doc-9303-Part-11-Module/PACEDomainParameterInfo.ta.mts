@@ -87,7 +87,7 @@ class PACEDomainParameterInfo {
          * @public
          * @readonly
          */
-        readonly parameterId: OPTIONAL<INTEGER>
+        readonly parameterId?: OPTIONAL<INTEGER>
     ) {
         if (!_permitted_protocols_for_PACEDomainParameterInfo.some((id) => id.isEqualTo(protocol))) {
             throw new ASN1Error("PACEDomainParameterInfo.protocol violates permitted OBJECT IDENTIFIER constraint");

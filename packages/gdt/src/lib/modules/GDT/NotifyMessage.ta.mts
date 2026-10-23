@@ -41,13 +41,13 @@ class NotifyMessage {
          * @public
          * @readonly
          */
-        readonly message: OPTIONAL<OCTET_STRING>,
+        readonly message?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `params`.
          * @public
          * @readonly
          */
-        readonly params: OPTIONAL<Parameters>,
+        readonly params?: OPTIONAL<Parameters>,
         /**
          * @summary Extensions that are not recognized.
          * @public

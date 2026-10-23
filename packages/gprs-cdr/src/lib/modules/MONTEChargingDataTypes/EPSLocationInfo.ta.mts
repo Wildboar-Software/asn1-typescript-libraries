@@ -67,8 +67,8 @@ class EPSLocationInfo {
     readonly sGSNLocationInformation: OPTIONAL<SGSNLocationInformation>;
 
     constructor (
-        mMELocationInformation: OPTIONAL<MMELocationInformation>,
-        sGSNLocationInformation: OPTIONAL<SGSNLocationInformation>
+        mMELocationInformation?: OPTIONAL<MMELocationInformation>,
+        sGSNLocationInformation?: OPTIONAL<SGSNLocationInformation>
     ) {
         this.mMELocationInformation = mMELocationInformation;
         this.sGSNLocationInformation = sGSNLocationInformation;

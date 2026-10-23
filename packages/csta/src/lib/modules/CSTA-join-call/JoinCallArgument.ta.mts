@@ -105,7 +105,7 @@ class JoinCallArgument {
          * @public
          * @readonly
          */
-        readonly autoOriginate: OPTIONAL<AutoOriginate>,
+        readonly autoOriginate?: OPTIONAL<AutoOriginate>,
         /**
          * @summary `participationType`.
          * @description
@@ -117,7 +117,7 @@ class JoinCallArgument {
          * @public
          * @readonly
          */
-        readonly participationType: OPTIONAL<ParticipationType>,
+        readonly participationType?: OPTIONAL<ParticipationType>,
         /**
          * @summary `accountCode`.
          * @description
@@ -127,7 +127,7 @@ class JoinCallArgument {
          * @public
          * @readonly
          */
-        readonly accountCode: OPTIONAL<AccountInfo>,
+        readonly accountCode?: OPTIONAL<AccountInfo>,
         /**
          * @summary `authCode`.
          * @description
@@ -137,7 +137,7 @@ class JoinCallArgument {
          * @public
          * @readonly
          */
-        readonly authCode: OPTIONAL<AuthCode>,
+        readonly authCode?: OPTIONAL<AuthCode>,
         /**
          * @summary `correlatorData`.
          * @description
@@ -148,7 +148,7 @@ class JoinCallArgument {
          * @public
          * @readonly
          */
-        readonly correlatorData: OPTIONAL<CorrelatorData>,
+        readonly correlatorData?: OPTIONAL<CorrelatorData>,
         /**
          * @summary `userData`.
          * @description
@@ -158,7 +158,7 @@ class JoinCallArgument {
          * @public
          * @readonly
          */
-        readonly userData: OPTIONAL<UserData>,
+        readonly userData?: OPTIONAL<UserData>,
         /**
          * @summary `extensions`.
          * @description
@@ -169,7 +169,7 @@ class JoinCallArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

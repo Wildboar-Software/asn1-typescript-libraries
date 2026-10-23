@@ -46,7 +46,7 @@ class CompoundRepertoireOffer {
          * @public
          * @readonly
          */
-        readonly repertoireCapability: OPTIONAL<IntegerOffer>,
+        readonly repertoireCapability?: OPTIONAL<IntegerOffer>,
         /**
          * @summary `fontOffers`.
          * @description
@@ -55,7 +55,7 @@ class CompoundRepertoireOffer {
          * @public
          * @readonly
          */
-        readonly fontOffers: OPTIONAL<RepertoireFontOffer[]>
+        readonly fontOffers?: OPTIONAL<RepertoireFontOffer[]>
     ) {}
 
     /**

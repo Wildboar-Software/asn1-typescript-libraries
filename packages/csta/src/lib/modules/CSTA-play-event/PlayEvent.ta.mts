@@ -91,7 +91,7 @@ class PlayEvent {
          * @public
          * @readonly
          */
-        readonly resource: OPTIONAL<ResourceID>,
+        readonly resource?: OPTIONAL<ResourceID>,
         /**
          * @summary `length`.
          * @description
@@ -101,7 +101,7 @@ class PlayEvent {
          * @public
          * @readonly
          */
-        readonly length: OPTIONAL<INTEGER>,
+        readonly length?: OPTIONAL<INTEGER>,
         /**
          * @summary `currentPosition`.
          * @description
@@ -111,7 +111,7 @@ class PlayEvent {
          * @public
          * @readonly
          */
-        readonly currentPosition: OPTIONAL<INTEGER>,
+        readonly currentPosition?: OPTIONAL<INTEGER>,
         /**
          * @summary `speed`.
          * @description
@@ -121,7 +121,7 @@ class PlayEvent {
          * @public
          * @readonly
          */
-        readonly speed: OPTIONAL<INTEGER>,
+        readonly speed?: OPTIONAL<INTEGER>,
         /**
          * @summary `cause`.
          * @description
@@ -131,7 +131,7 @@ class PlayEvent {
          * @public
          * @readonly
          */
-        readonly cause: OPTIONAL<EventCause>,
+        readonly cause?: OPTIONAL<EventCause>,
         /**
          * @summary `servicesPermitted`.
          * @description
@@ -141,7 +141,7 @@ class PlayEvent {
          * @public
          * @readonly
          */
-        readonly servicesPermitted: OPTIONAL<ServicesPermitted>,
+        readonly servicesPermitted?: OPTIONAL<ServicesPermitted>,
         /**
          * @summary `extensions`.
          * @description
@@ -152,7 +152,7 @@ class PlayEvent {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

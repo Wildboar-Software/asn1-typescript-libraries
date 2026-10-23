@@ -64,8 +64,8 @@ class DNDInterrogateRes {
     readonly resultExtension: OPTIONAL<DNDInterrogateRes_resultExtension>;
 
     constructor (
-        status: OPTIONAL<DNDInterrogateRes_status_Item[]>,
-        resultExtension: OPTIONAL<DNDInterrogateRes_resultExtension>
+        status?: OPTIONAL<DNDInterrogateRes_status_Item[]>,
+        resultExtension?: OPTIONAL<DNDInterrogateRes_resultExtension>
     ) {
         this.status = status;
         this.resultExtension = resultExtension;

@@ -76,7 +76,7 @@ class HSCSDParmsChange {
         initiatingParty: OPTIONAL<InitiatingParty>,
         aiurRequested: OPTIONAL<AiurRequested>,
         chanCodingUsed: ChannelCoding,
-        hSCSDChanRequested: OPTIONAL<INTEGER>
+        hSCSDChanRequested?: OPTIONAL<INTEGER>
     ) {
         this.changeTime = changeTime;
         this.hSCSDChanAllocated = hSCSDChanAllocated;

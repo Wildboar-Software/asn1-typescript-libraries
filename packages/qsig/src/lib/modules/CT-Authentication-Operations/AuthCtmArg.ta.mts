@@ -70,8 +70,8 @@ class AuthCtmArg {
 
     constructor (
         pisnNumber: PartyNumber,
-        calcCtatInfo: OPTIONAL<CalcCtatInfo>,
-        dummyExtension: OPTIONAL<DummyExtension>
+        calcCtatInfo?: OPTIONAL<CalcCtatInfo>,
+        dummyExtension?: OPTIONAL<DummyExtension>
     ) {
         this.pisnNumber = pisnNumber;
         this.calcCtatInfo = calcCtatInfo;

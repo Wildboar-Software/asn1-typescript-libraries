@@ -144,12 +144,12 @@ class NIDDsubmission {
     readonly serviceChangeCondition: OPTIONAL<NIDDsubmission_serviceChangeCondition>;
 
     constructor (
-        submissionTimestamp: OPTIONAL<OCTET_STRING>,
-        eventTimestamp: OPTIONAL<OCTET_STRING>,
-        dataVolumeGPRSUplink: OPTIONAL<INTEGER>,
-        dataVolumeGPRSDownlink: OPTIONAL<INTEGER>,
-        submissionResultCode: OPTIONAL<INTEGER>,
-        serviceChangeCondition: OPTIONAL<NIDDsubmission_serviceChangeCondition>
+        submissionTimestamp?: OPTIONAL<OCTET_STRING>,
+        eventTimestamp?: OPTIONAL<OCTET_STRING>,
+        dataVolumeGPRSUplink?: OPTIONAL<INTEGER>,
+        dataVolumeGPRSDownlink?: OPTIONAL<INTEGER>,
+        submissionResultCode?: OPTIONAL<INTEGER>,
+        serviceChangeCondition?: OPTIONAL<NIDDsubmission_serviceChangeCondition>
     ) {
         this.submissionTimestamp = submissionTimestamp;
         this.eventTimestamp = eventTimestamp;

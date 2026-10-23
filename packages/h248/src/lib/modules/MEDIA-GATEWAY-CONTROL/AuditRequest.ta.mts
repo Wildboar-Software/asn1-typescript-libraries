@@ -76,7 +76,7 @@ class AuditRequest {
          * @public
          * @readonly
          */
-        readonly terminationIDList: OPTIONAL<TerminationIDList>,
+        readonly terminationIDList?: OPTIONAL<TerminationIDList>,
         /**
          * @summary Extensions that are not recognized.
          * @description

@@ -57,7 +57,7 @@ class GetHookswitchStatusArgument {
          * @public
          * @readonly
          */
-        readonly hookswitch: OPTIONAL<HookswitchID>,
+        readonly hookswitch?: OPTIONAL<HookswitchID>,
         /**
          * @summary `extensions`.
          * @description
@@ -67,7 +67,7 @@ class GetHookswitchStatusArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

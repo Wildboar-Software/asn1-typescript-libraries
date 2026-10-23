@@ -98,8 +98,8 @@ class CtanParamArg {
         pisnNumber: PartyNumber,
         authChallenge: AuthChallenge,
         authAlgorithm: AuthAlgorithm,
-        canCompute: OPTIONAL<CanCompute>,
-        dummyExtension: OPTIONAL<DummyExtension>
+        canCompute?: OPTIONAL<CanCompute>,
+        dummyExtension?: OPTIONAL<DummyExtension>
     ) {
         this.pisnNumber = pisnNumber;
         this.authChallenge = authChallenge;

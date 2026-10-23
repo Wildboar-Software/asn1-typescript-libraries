@@ -74,7 +74,7 @@ class VariantType {
         name: OPTIONAL<InternationalString>,
         description: OPTIONAL<HumanString>,
         variantType: INTEGER,
-        variantValue: OPTIONAL<VariantValue>
+        variantValue?: OPTIONAL<VariantValue>
     ) {
         this.name = name;
         this.description = description;

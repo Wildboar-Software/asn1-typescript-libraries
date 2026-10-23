@@ -61,7 +61,7 @@ class DimensionParamOffer {
          * @public
          * @readonly
          */
-        readonly bound: OPTIONAL<DimensionParamOffer_bound>,
+        readonly bound?: OPTIONAL<DimensionParamOffer_bound>,
         /**
          * @summary `addressing`.
          * @description
@@ -70,7 +70,7 @@ class DimensionParamOffer {
          * @public
          * @readonly
          */
-        readonly addressing: OPTIONAL<DimensionParamOffer_addressing>,
+        readonly addressing?: OPTIONAL<DimensionParamOffer_addressing>,
         /**
          * @summary `absolute`.
          * @description
@@ -79,7 +79,7 @@ class DimensionParamOffer {
          * @public
          * @readonly
          */
-        readonly absolute: OPTIONAL<DimensionParamOffer_absolute>,
+        readonly absolute?: OPTIONAL<DimensionParamOffer_absolute>,
         /**
          * @summary `window`.
          * @description
@@ -89,7 +89,7 @@ class DimensionParamOffer {
          * @public
          * @readonly
          */
-        readonly window: OPTIONAL<DimensionParamOffer_window>
+        readonly window?: OPTIONAL<DimensionParamOffer_window>
     ) {}
 
     /**

@@ -40,7 +40,7 @@ class SLR_Arg_PCS_Extensions {
          * @public
          * @readonly
          */
-        readonly na_ESRK_Request: OPTIONAL<NULL>,
+        readonly na_ESRK_Request?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @public

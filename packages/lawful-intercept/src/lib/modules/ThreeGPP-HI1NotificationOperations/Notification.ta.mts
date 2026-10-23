@@ -176,10 +176,10 @@ class Notification {
         lawfulInterceptionIdentifier: LawfulInterceptionIdentifier,
         communicationIdentifier: OPTIONAL<CommunicationIdentifier>,
         timeStamp: TimeStamp,
-        threeGPP_National_HI1_ASN1parameters: OPTIONAL<ThreeGPP_National_HI1_ASN1parameters>,
-        target_Information: OPTIONAL<Target_Information>,
-        network_Identifier: OPTIONAL<Network_Identifier>,
-        broadcastStatus: OPTIONAL<BroadcastStatus>,
+        threeGPP_National_HI1_ASN1parameters?: OPTIONAL<ThreeGPP_National_HI1_ASN1parameters>,
+        target_Information?: OPTIONAL<Target_Information>,
+        network_Identifier?: OPTIONAL<Network_Identifier>,
+        broadcastStatus?: OPTIONAL<BroadcastStatus>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.domainID = domainID;

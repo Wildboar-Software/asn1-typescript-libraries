@@ -67,73 +67,73 @@ class ConnectArg {
          * @public
          * @readonly
          */
-        readonly alertingPattern: OPTIONAL<AlertingPattern>,
+        readonly alertingPattern?: OPTIONAL<AlertingPattern>,
         /**
          * @summary `correlationID`.
          * @public
          * @readonly
          */
-        readonly correlationID: OPTIONAL<CorrelationID>,
+        readonly correlationID?: OPTIONAL<CorrelationID>,
         /**
          * @summary `cutAndPaste`.
          * @public
          * @readonly
          */
-        readonly cutAndPaste: OPTIONAL<CutAndPaste>,
+        readonly cutAndPaste?: OPTIONAL<CutAndPaste>,
         /**
          * @summary `originalCalledPartyID`.
          * @public
          * @readonly
          */
-        readonly originalCalledPartyID: OPTIONAL<OriginalCalledPartyID>,
+        readonly originalCalledPartyID?: OPTIONAL<OriginalCalledPartyID>,
         /**
          * @summary `routeList`.
          * @public
          * @readonly
          */
-        readonly routeList: OPTIONAL<RouteList>,
+        readonly routeList?: OPTIONAL<RouteList>,
         /**
          * @summary `scfID`.
          * @public
          * @readonly
          */
-        readonly scfID: OPTIONAL<ScfID>,
+        readonly scfID?: OPTIONAL<ScfID>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<ExtensionField[]>,
+        readonly extensions?: OPTIONAL<ExtensionField[]>,
         /**
          * @summary `serviceInteractionIndicators`.
          * @public
          * @readonly
          */
-        readonly serviceInteractionIndicators: OPTIONAL<ServiceInteractionIndicators>,
+        readonly serviceInteractionIndicators?: OPTIONAL<ServiceInteractionIndicators>,
         /**
          * @summary `callingPartyNumber`.
          * @public
          * @readonly
          */
-        readonly callingPartyNumber: OPTIONAL<CallingPartyNumber>,
+        readonly callingPartyNumber?: OPTIONAL<CallingPartyNumber>,
         /**
          * @summary `callingPartysCategory`.
          * @public
          * @readonly
          */
-        readonly callingPartysCategory: OPTIONAL<CallingPartysCategory>,
+        readonly callingPartysCategory?: OPTIONAL<CallingPartysCategory>,
         /**
          * @summary `redirectingPartyID`.
          * @public
          * @readonly
          */
-        readonly redirectingPartyID: OPTIONAL<RedirectingPartyID>,
+        readonly redirectingPartyID?: OPTIONAL<RedirectingPartyID>,
         /**
          * @summary `redirectionInformation`.
          * @public
          * @readonly
          */
-        readonly redirectionInformation: OPTIONAL<RedirectionInformation>
+        readonly redirectionInformation?: OPTIONAL<RedirectionInformation>
     ) {}
 
     /**

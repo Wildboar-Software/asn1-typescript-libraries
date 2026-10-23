@@ -102,8 +102,8 @@ class GSMLocation_geoCoordinates {
     constructor (
         latitude: PrintableString,
         longitude: PrintableString,
-        mapDatum: OPTIONAL<MapDatum>,
-        azimuth: OPTIONAL<INTEGER>,
+        mapDatum?: OPTIONAL<MapDatum>,
+        azimuth?: OPTIONAL<INTEGER>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.latitude = latitude;

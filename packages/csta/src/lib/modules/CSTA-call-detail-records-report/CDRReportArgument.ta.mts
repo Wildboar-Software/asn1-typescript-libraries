@@ -89,7 +89,7 @@ class CDRReportArgument {
          * @public
          * @readonly
          */
-        readonly lastStoredCDRReportSent: OPTIONAL<BOOLEAN>,
+        readonly lastStoredCDRReportSent?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `extensions`.
          * @description
@@ -100,7 +100,7 @@ class CDRReportArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

@@ -39,7 +39,7 @@ class ListNotificationRequest {
          * @public
          * @readonly
          */
-        readonly profileManagementOperation: OPTIONAL<NotificationEvent>
+        readonly profileManagementOperation?: OPTIONAL<NotificationEvent>
     ) {}
 
     /**

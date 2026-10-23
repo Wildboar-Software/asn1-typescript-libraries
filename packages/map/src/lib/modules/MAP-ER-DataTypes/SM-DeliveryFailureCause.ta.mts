@@ -57,13 +57,13 @@ class SM_DeliveryFailureCause {
          * @public
          * @readonly
          */
-        readonly diagnosticInfo: OPTIONAL<SignalInfo>,
+        readonly diagnosticInfo?: OPTIONAL<SignalInfo>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

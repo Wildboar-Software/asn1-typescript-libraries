@@ -43,7 +43,7 @@ class MessageID_text {
 
     constructor (
         messageContent: IA5String,
-        attributes: OPTIONAL<OCTET_STRING>
+        attributes?: OPTIONAL<OCTET_STRING>
     ) {
         this.messageContent = messageContent;
         this.attributes = attributes;

@@ -61,10 +61,10 @@ class IPRelatedInformation {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        alternativeCalledPartyIds: OPTIONAL<AlternativeIdentities>,
-        alternativeOriginatingPartyIds: OPTIONAL<AlternativeIdentities>,
-        alternativeOriginalCalledPartyIds: OPTIONAL<AlternativeIdentities>,
-        alternativeRedirectingPartyIds: OPTIONAL<AlternativeIdentities>,
+        alternativeCalledPartyIds?: OPTIONAL<AlternativeIdentities>,
+        alternativeOriginatingPartyIds?: OPTIONAL<AlternativeIdentities>,
+        alternativeOriginalCalledPartyIds?: OPTIONAL<AlternativeIdentities>,
+        alternativeRedirectingPartyIds?: OPTIONAL<AlternativeIdentities>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.alternativeCalledPartyIds = alternativeCalledPartyIds;

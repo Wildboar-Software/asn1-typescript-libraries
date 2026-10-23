@@ -70,8 +70,8 @@ class ClientPartNotToKeep {
     readonly replaceOrAppend: OPTIONAL<ClientPartNotToKeep_replaceOrAppend>;
 
     constructor (
-        clientSuppliedResultSet: OPTIONAL<InternationalString>,
-        replaceOrAppend: OPTIONAL<ClientPartNotToKeep_replaceOrAppend>
+        clientSuppliedResultSet?: OPTIONAL<InternationalString>,
+        replaceOrAppend?: OPTIONAL<ClientPartNotToKeep_replaceOrAppend>
     ) {
         this.clientSuppliedResultSet = clientSuppliedResultSet;
         this.replaceOrAppend = replaceOrAppend;

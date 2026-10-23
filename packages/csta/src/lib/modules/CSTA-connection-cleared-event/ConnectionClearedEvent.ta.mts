@@ -172,7 +172,7 @@ class ConnectionClearedEvent {
          * @public
          * @readonly
          */
-        readonly servicesPermitted: OPTIONAL<ServicesPermitted>,
+        readonly servicesPermitted?: OPTIONAL<ServicesPermitted>,
         /**
          * @summary `mediaCallCharacteristics`.
          * @description
@@ -183,7 +183,7 @@ class ConnectionClearedEvent {
          * @public
          * @readonly
          */
-        readonly mediaCallCharacteristics: OPTIONAL<MediaCallCharacteristics>,
+        readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
         /**
          * @summary `callCharacteristics`.
          * @description
@@ -194,7 +194,7 @@ class ConnectionClearedEvent {
          * @public
          * @readonly
          */
-        readonly callCharacteristics: OPTIONAL<CallCharacteristics>,
+        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
         /**
          * @summary `droppedConnectionInfo`.
          * @description
@@ -205,7 +205,7 @@ class ConnectionClearedEvent {
          * @public
          * @readonly
          */
-        readonly droppedConnectionInfo: OPTIONAL<ConnectionInformation>,
+        readonly droppedConnectionInfo?: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `callLinkageData`.
          * @description
@@ -216,7 +216,7 @@ class ConnectionClearedEvent {
          * @public
          * @readonly
          */
-        readonly callLinkageData: OPTIONAL<CallLinkageData>,
+        readonly callLinkageData?: OPTIONAL<CallLinkageData>,
         /**
          * @summary `languagePreferences`.
          * @description
@@ -226,7 +226,7 @@ class ConnectionClearedEvent {
          * @public
          * @readonly
          */
-        readonly languagePreferences: OPTIONAL<LanguagePreferences>,
+        readonly languagePreferences?: OPTIONAL<LanguagePreferences>,
         /**
          * @summary `deviceHistory`.
          * @description
@@ -237,7 +237,7 @@ class ConnectionClearedEvent {
          * @public
          * @readonly
          */
-        readonly deviceHistory: OPTIONAL<DeviceHistory>,
+        readonly deviceHistory?: OPTIONAL<DeviceHistory>,
         /**
          * @summary `locationInfo`.
          * @description
@@ -248,7 +248,7 @@ class ConnectionClearedEvent {
          * @public
          * @readonly
          */
-        readonly locationInfo: OPTIONAL<LocationInfoList>,
+        readonly locationInfo?: OPTIONAL<LocationInfoList>,
         /**
          * @summary `extensions`.
          * @description
@@ -260,7 +260,7 @@ class ConnectionClearedEvent {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

@@ -147,7 +147,7 @@ class BDforCObyClientModel {
          * @public
          * @readonly
          */
-        readonly aCforBioOnClient: OPTIONAL<ACBioContentInformation>,
+        readonly aCforBioOnClient?: OPTIONAL<ACBioContentInformation>,
         /**
          * @summary `aCforBioOnTTP`.
          * @description
@@ -159,7 +159,7 @@ class BDforCObyClientModel {
          * @public
          * @readonly
          */
-        readonly aCforBioOnTTP: OPTIONAL<ACBioContentInformation>
+        readonly aCforBioOnTTP?: OPTIONAL<ACBioContentInformation>
     ) {}
 
     /**

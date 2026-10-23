@@ -52,7 +52,7 @@ class ConfigureImmediateProfileEnablingRequest {
          * @public
          * @readonly
          */
-        readonly immediateEnableFlag: OPTIONAL<NULL>,
+        readonly immediateEnableFlag?: OPTIONAL<NULL>,
         /**
          * @summary `defaultSmdpOid`.
          * @description
@@ -64,7 +64,7 @@ class ConfigureImmediateProfileEnablingRequest {
          * @public
          * @readonly
          */
-        readonly defaultSmdpOid: OPTIONAL<OBJECT_IDENTIFIER>,
+        readonly defaultSmdpOid?: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `defaultSmdpAddress`.
          * @description
@@ -77,7 +77,7 @@ class ConfigureImmediateProfileEnablingRequest {
          * @public
          * @readonly
          */
-        readonly defaultSmdpAddress: OPTIONAL<UTF8String>
+        readonly defaultSmdpAddress?: OPTIONAL<UTF8String>
     ) {}
 
     /**

@@ -67,7 +67,7 @@ class PurgeMS_Arg {
          * @public
          * @readonly
          */
-        readonly vlr_Number: OPTIONAL<ISDN_AddressString>,
+        readonly vlr_Number?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `sgsn_Number`.
          * @description
@@ -79,13 +79,13 @@ class PurgeMS_Arg {
          * @public
          * @readonly
          */
-        readonly sgsn_Number: OPTIONAL<ISDN_AddressString>,
+        readonly sgsn_Number?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `locationInformation`.
          * @description
@@ -97,7 +97,7 @@ class PurgeMS_Arg {
          * @public
          * @readonly
          */
-        readonly locationInformation: OPTIONAL<LocationInformation>,
+        readonly locationInformation?: OPTIONAL<LocationInformation>,
         /**
          * @summary `locationInformationGPRS`.
          * @description
@@ -109,7 +109,7 @@ class PurgeMS_Arg {
          * @public
          * @readonly
          */
-        readonly locationInformationGPRS: OPTIONAL<LocationInformationGPRS>,
+        readonly locationInformationGPRS?: OPTIONAL<LocationInformationGPRS>,
         /**
          * @summary `locationInformationEPS`.
          * @description
@@ -121,7 +121,7 @@ class PurgeMS_Arg {
          * @public
          * @readonly
          */
-        readonly locationInformationEPS: OPTIONAL<LocationInformationEPS>,
+        readonly locationInformationEPS?: OPTIONAL<LocationInformationEPS>,
         /**
          * @summary Extensions that are not recognized.
          * @public

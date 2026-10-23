@@ -41,7 +41,7 @@ class EventSpecificInformationBCSM_oNoAnswerSpecificInfo {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        cause: OPTIONAL<Cause>,
+        cause?: OPTIONAL<Cause>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.cause = cause;

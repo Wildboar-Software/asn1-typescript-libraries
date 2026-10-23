@@ -64,7 +64,7 @@ class CommonUpdateResult {
          * @public
          * @readonly
          */
-        readonly entry_information: OPTIONAL<EntryInformation>,
+        readonly entry_information?: OPTIONAL<EntryInformation>,
         /**
          * @summary `warnings`.
          * @description
@@ -74,7 +74,7 @@ class CommonUpdateResult {
          * @public
          * @readonly
          */
-        readonly warnings: OPTIONAL<Warning[]>,
+        readonly warnings?: OPTIONAL<Warning[]>,
         /**
          * @summary `continuation`.
          * @description
@@ -85,7 +85,7 @@ class CommonUpdateResult {
          * @public
          * @readonly
          */
-        readonly continuation: OPTIONAL<TaskId>,
+        readonly continuation?: OPTIONAL<TaskId>,
         /**
          * @summary `reference_qos`.
          * @description
@@ -96,7 +96,7 @@ class CommonUpdateResult {
          * @public
          * @readonly
          */
-        readonly reference_qos: OPTIONAL<Quality_of_Service>,
+        readonly reference_qos?: OPTIONAL<Quality_of_Service>,
         /**
          * @summary `referent_altered`.
          * @description
@@ -106,7 +106,7 @@ class CommonUpdateResult {
          * @public
          * @readonly
          */
-        readonly referent_altered: OPTIONAL<ReferentStatus>
+        readonly referent_altered?: OPTIONAL<ReferentStatus>
     ) {}
 
     /**

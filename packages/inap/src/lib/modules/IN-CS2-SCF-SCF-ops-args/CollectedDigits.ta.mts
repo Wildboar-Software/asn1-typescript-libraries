@@ -108,15 +108,15 @@ class CollectedDigits {
     constructor (
         minimumNbOfDigits: OPTIONAL<INTEGER>,
         maximumNbOfDigits: INTEGER,
-        endOfReplyDigit: OPTIONAL<IA5String>,
-        cancelDigit: OPTIONAL<IA5String>,
-        startDigit: OPTIONAL<IA5String>,
-        firstDigitTimeOut: OPTIONAL<INTEGER>,
-        interDigitTimeOut: OPTIONAL<INTEGER>,
-        errorTreatment: OPTIONAL<ErrorTreatment>,
-        interruptableAnnInd: OPTIONAL<BOOLEAN>,
-        voiceInformation: OPTIONAL<BOOLEAN>,
-        voiceBack: OPTIONAL<BOOLEAN>
+        endOfReplyDigit?: OPTIONAL<IA5String>,
+        cancelDigit?: OPTIONAL<IA5String>,
+        startDigit?: OPTIONAL<IA5String>,
+        firstDigitTimeOut?: OPTIONAL<INTEGER>,
+        interDigitTimeOut?: OPTIONAL<INTEGER>,
+        errorTreatment?: OPTIONAL<ErrorTreatment>,
+        interruptableAnnInd?: OPTIONAL<BOOLEAN>,
+        voiceInformation?: OPTIONAL<BOOLEAN>,
+        voiceBack?: OPTIONAL<BOOLEAN>
     ) {
         this.minimumNbOfDigits = minimumNbOfDigits;
         this.maximumNbOfDigits = maximumNbOfDigits;

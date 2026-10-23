@@ -74,9 +74,9 @@ class ScriptCloseArg {
 
     constructor (
         uIScriptId: Code,
-        uIScriptSpecificInfo: OPTIONAL<_Element>,
-        extensions: OPTIONAL<ExtensionField[]>,
-        callSegmentID: OPTIONAL<CallSegmentID>,
+        uIScriptSpecificInfo?: OPTIONAL<_Element>,
+        extensions?: OPTIONAL<ExtensionField[]>,
+        callSegmentID?: OPTIONAL<CallSegmentID>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.uIScriptId = uIScriptId;

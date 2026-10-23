@@ -305,12 +305,12 @@ class PSHeader {
         authorizationCountryCode: OPTIONAL<PrintableString>,
         communicationIdentifier: CommunicationIdentifier,
         sequenceNumber: INTEGER,
-        timeStamp: OPTIONAL<GeneralizedTime>,
-        interceptionPointID: OPTIONAL<PrintableString>,
-        microSecondTimeStamp: OPTIONAL<MicroSecondTimeStamp>,
-        timeStampQualifier: OPTIONAL<TimeStampQualifier>,
-        extendedInterceptionPointID: OPTIONAL<OCTET_STRING>,
-        networkFunctionIdentifier: OPTIONAL<OCTET_STRING>,
+        timeStamp?: OPTIONAL<GeneralizedTime>,
+        interceptionPointID?: OPTIONAL<PrintableString>,
+        microSecondTimeStamp?: OPTIONAL<MicroSecondTimeStamp>,
+        timeStampQualifier?: OPTIONAL<TimeStampQualifier>,
+        extendedInterceptionPointID?: OPTIONAL<OCTET_STRING>,
+        networkFunctionIdentifier?: OPTIONAL<OCTET_STRING>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.li_psDomainId = li_psDomainId;

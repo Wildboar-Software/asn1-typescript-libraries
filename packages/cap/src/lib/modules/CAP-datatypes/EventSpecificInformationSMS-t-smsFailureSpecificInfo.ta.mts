@@ -22,7 +22,7 @@ import { type MT_SMSCause, _decode_MT_SMSCause, _encode_MT_SMSCause } from "./MT
  */
 export class EventSpecificInformationSMS_t_smsFailureSpecificInfo {
     constructor (
-        readonly failureCause: OPTIONAL<MT_SMSCause>,
+        readonly failureCause?: OPTIONAL<MT_SMSCause>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}
 

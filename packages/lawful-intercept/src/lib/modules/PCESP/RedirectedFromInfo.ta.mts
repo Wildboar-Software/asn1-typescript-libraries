@@ -90,9 +90,9 @@ class RedirectedFromInfo {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        lastRedirecting: OPTIONAL<PartyId>,
-        originalCalled: OPTIONAL<PartyId>,
-        numRedirections: OPTIONAL<INTEGER>,
+        lastRedirecting?: OPTIONAL<PartyId>,
+        originalCalled?: OPTIONAL<PartyId>,
+        numRedirections?: OPTIONAL<INTEGER>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.lastRedirecting = lastRedirecting;

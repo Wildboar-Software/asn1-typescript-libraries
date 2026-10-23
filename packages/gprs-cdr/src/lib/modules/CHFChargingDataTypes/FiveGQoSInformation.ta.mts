@@ -120,17 +120,17 @@ class FiveGQoSInformation {
     constructor (
         fiveQi: INTEGER,
         aRP: AllocationRetentionPriority,
-        qoSNotificationControl: OPTIONAL<BOOLEAN>,
-        reflectiveQos: OPTIONAL<BOOLEAN>,
-        maxbitrateUL: OPTIONAL<OCTET_STRING>,
-        maxbitrateDL: OPTIONAL<OCTET_STRING>,
-        guaranteedbitrateUL: OPTIONAL<OCTET_STRING>,
-        guaranteedbitrateDL: OPTIONAL<OCTET_STRING>,
-        priorityLevel: OPTIONAL<INTEGER>,
-        averWindow: OPTIONAL<INTEGER>,
-        maxDataBurstVol: OPTIONAL<INTEGER>,
-        maxPacketLossRateDL: OPTIONAL<INTEGER>,
-        maxPacketLossRateUL: OPTIONAL<INTEGER>
+        qoSNotificationControl?: OPTIONAL<BOOLEAN>,
+        reflectiveQos?: OPTIONAL<BOOLEAN>,
+        maxbitrateUL?: OPTIONAL<OCTET_STRING>,
+        maxbitrateDL?: OPTIONAL<OCTET_STRING>,
+        guaranteedbitrateUL?: OPTIONAL<OCTET_STRING>,
+        guaranteedbitrateDL?: OPTIONAL<OCTET_STRING>,
+        priorityLevel?: OPTIONAL<INTEGER>,
+        averWindow?: OPTIONAL<INTEGER>,
+        maxDataBurstVol?: OPTIONAL<INTEGER>,
+        maxPacketLossRateDL?: OPTIONAL<INTEGER>,
+        maxPacketLossRateUL?: OPTIONAL<INTEGER>
     ) {
         this.fiveQi = fiveQi;
         this.aRP = aRP;

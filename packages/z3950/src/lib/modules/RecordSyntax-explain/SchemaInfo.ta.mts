@@ -124,9 +124,9 @@ class SchemaInfo {
         commonInfo: OPTIONAL<CommonInfo>,
         schema: OBJECT_IDENTIFIER,
         name: InternationalString,
-        description: OPTIONAL<HumanString>,
-        tagTypeMapping: OPTIONAL<SchemaInfo_tagTypeMapping_Item[]>,
-        recordStructure: OPTIONAL<ElementInfo[]>
+        description?: OPTIONAL<HumanString>,
+        tagTypeMapping?: OPTIONAL<SchemaInfo_tagTypeMapping_Item[]>,
+        recordStructure?: OPTIONAL<ElementInfo[]>
     ) {
         this.commonInfo = commonInfo;
         this.schema = schema;

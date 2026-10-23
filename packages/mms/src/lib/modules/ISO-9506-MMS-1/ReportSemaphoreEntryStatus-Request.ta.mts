@@ -75,7 +75,7 @@ class ReportSemaphoreEntryStatus_Request {
          * @public
          * @readonly
          */
-        readonly entryIDToStartAfter: OPTIONAL<OCTET_STRING>
+        readonly entryIDToStartAfter?: OPTIONAL<OCTET_STRING>
     ) {}
 
     /**

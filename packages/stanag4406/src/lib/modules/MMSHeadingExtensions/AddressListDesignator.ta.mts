@@ -91,8 +91,8 @@ class AddressListDesignator {
     constructor (
         type_: AddressListDesignator_type,
         listName: ORDescriptor,
-        notificationRequest: OPTIONAL<AddressListRequest>,
-        replyRequest: OPTIONAL<AddressListRequest>
+        notificationRequest?: OPTIONAL<AddressListRequest>,
+        replyRequest?: OPTIONAL<AddressListRequest>
     ) {
         this.type_ = type_;
         this.listName = listName;

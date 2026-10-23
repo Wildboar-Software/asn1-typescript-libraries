@@ -50,7 +50,7 @@ class ExtendedUPFCCPDU {
 
     constructor (
         payload: UPFCCPDUPayload,
-        qFI: OPTIONAL<QFI>,
+        qFI?: OPTIONAL<QFI>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.payload = payload;

@@ -67,8 +67,8 @@ class Specification {
     readonly elementSpec: OPTIONAL<Specification_elementSpec>;
 
     constructor (
-        schema: OPTIONAL<Specification_schema>,
-        elementSpec: OPTIONAL<Specification_elementSpec>
+        schema?: OPTIONAL<Specification_schema>,
+        elementSpec?: OPTIONAL<Specification_elementSpec>
     ) {
         this.schema = schema;
         this.elementSpec = elementSpec;

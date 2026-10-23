@@ -303,8 +303,8 @@ class LCSGMORecord {
         userError: OPTIONAL<OCTET_STRING>,
         providerError: OPTIONAL<INTEGER>,
         recordTimeStamp: OCTET_STRING,
-        localSequenceNumber: OPTIONAL<INTEGER>,
-        recordExtensions: OPTIONAL<ManagementExtension[]>
+        localSequenceNumber?: OPTIONAL<INTEGER>,
+        recordExtensions?: OPTIONAL<ManagementExtension[]>
     ) {
         this.recordType = recordType;
         this.recordingEntity = recordingEntity;

@@ -154,7 +154,7 @@ class PTCGroupAdvertisement {
         pTCIDList: OPTIONAL<PTCTargetInformation[]>,
         pTCGroupAuthRule: OPTIONAL<PTCGroupAuthRule>,
         pTCGroupAdSender: PTCTargetInformation,
-        pTCGroupNickname: OPTIONAL<UTF8String>,
+        pTCGroupNickname?: OPTIONAL<UTF8String>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.pTCTargetInformation = pTCTargetInformation;

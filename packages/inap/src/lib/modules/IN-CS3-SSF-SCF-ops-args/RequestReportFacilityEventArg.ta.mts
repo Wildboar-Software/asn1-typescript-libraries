@@ -81,7 +81,7 @@ class RequestReportFacilityEventArg {
         legID: OPTIONAL<LegID>,
         componentCorrelationID: OPTIONAL<ComponentCorrelationID>,
         monitorDuration: Duration,
-        extensions: OPTIONAL<Extensions>,
+        extensions?: OPTIONAL<Extensions>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.componentTypes = componentTypes;

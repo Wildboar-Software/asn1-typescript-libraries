@@ -86,9 +86,9 @@ class ApplicationServersInformation {
     readonly sTatus: OPTIONAL<Status>;
 
     constructor (
-        applicationServersInvolved: OPTIONAL<NodeAddress>,
-        applicationProvidedCalledParties: OPTIONAL<InvolvedParty[]>,
-        sTatus: OPTIONAL<Status>
+        applicationServersInvolved?: OPTIONAL<NodeAddress>,
+        applicationProvidedCalledParties?: OPTIONAL<InvolvedParty[]>,
+        sTatus?: OPTIONAL<Status>
     ) {
         this.applicationServersInvolved = applicationServersInvolved;
         this.applicationProvidedCalledParties = applicationProvidedCalledParties;

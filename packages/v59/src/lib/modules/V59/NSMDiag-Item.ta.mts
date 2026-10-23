@@ -44,7 +44,7 @@ class NSMDiag_Item {
          * @public
          * @readonly
          */
-        readonly proprietaryMode: OPTIONAL<V59String>,
+        readonly proprietaryMode?: OPTIONAL<V59String>,
         /**
          * @summary `fieldData`.
          * @description
@@ -54,7 +54,7 @@ class NSMDiag_Item {
          * @public
          * @readonly
          */
-        readonly fieldData: OPTIONAL<IA5String>,
+        readonly fieldData?: OPTIONAL<IA5String>,
         /**
          * @summary Extensions that are not recognized.
          * @public

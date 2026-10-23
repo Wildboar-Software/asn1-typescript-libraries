@@ -50,7 +50,7 @@ class MessageID_text {
 
     constructor (
         messageContent: IA5String,
-        attributes: OPTIONAL<OCTET_STRING>,
+        attributes?: OPTIONAL<OCTET_STRING>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.messageContent = messageContent;

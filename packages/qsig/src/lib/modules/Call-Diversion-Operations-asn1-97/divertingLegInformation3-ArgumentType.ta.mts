@@ -75,8 +75,8 @@ class divertingLegInformation3_ArgumentType {
 
     constructor (
         presentationAllowedIndicator: PresentationAllowedIndicator,
-        redirectionName: OPTIONAL<Name>,
-        extension: OPTIONAL<divertingLegInformation3_ArgumentType_extension>
+        redirectionName?: OPTIONAL<Name>,
+        extension?: OPTIONAL<divertingLegInformation3_ArgumentType_extension>
     ) {
         this.presentationAllowedIndicator = presentationAllowedIndicator;
         this.redirectionName = redirectionName;

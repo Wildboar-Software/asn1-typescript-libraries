@@ -136,12 +136,12 @@ class PresenceInfo {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        presenceState: OPTIONAL<PresenceState>,
-        trackingAreaList: OPTIONAL<TAI[]>,
-        eCGIList: OPTIONAL<ECGI[]>,
-        nCGIList: OPTIONAL<NCGI[]>,
-        globalRANNodeIDList: OPTIONAL<GlobalRANNodeID[]>,
-        globalENbIDList: OPTIONAL<GlobalRANNodeID[]>,
+        presenceState?: OPTIONAL<PresenceState>,
+        trackingAreaList?: OPTIONAL<TAI[]>,
+        eCGIList?: OPTIONAL<ECGI[]>,
+        nCGIList?: OPTIONAL<NCGI[]>,
+        globalRANNodeIDList?: OPTIONAL<GlobalRANNodeID[]>,
+        globalENbIDList?: OPTIONAL<GlobalRANNodeID[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.presenceState = presenceState;

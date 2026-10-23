@@ -251,9 +251,9 @@ class ObservedIMEITicket {
         recordingEntity: OCTET_STRING,
         eventTime: OCTET_STRING,
         location: LocationAreaAndCell,
-        imeiCheckEvent: OPTIONAL<ObservedIMEITicket_imeiCheckEvent>,
-        callReference: OPTIONAL<OCTET_STRING>,
-        recordExtensions: OPTIONAL<ManagementExtension[]>
+        imeiCheckEvent?: OPTIONAL<ObservedIMEITicket_imeiCheckEvent>,
+        callReference?: OPTIONAL<OCTET_STRING>,
+        recordExtensions?: OPTIONAL<ManagementExtension[]>
     ) {
         this.servedIMEI = servedIMEI;
         this.imeiStatus = imeiStatus;

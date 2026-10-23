@@ -61,8 +61,8 @@ class RequestCurrentStatusReportResultArg {
 
     constructor (
         resourceStatus: ResourceStatus,
-        resourceID: OPTIONAL<ResourceID>,
-        extensions: OPTIONAL<ExtensionField[]>,
+        resourceID?: OPTIONAL<ResourceID>,
+        extensions?: OPTIONAL<ExtensionField[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.resourceStatus = resourceStatus;

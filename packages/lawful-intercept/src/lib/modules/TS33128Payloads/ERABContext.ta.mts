@@ -116,10 +116,10 @@ class ERABContext {
 
     constructor (
         eRABID: EPSBearerID,
-        eRABQoSParameters: OPTIONAL<ERABQoSParameters>,
-        transportLayerAddress: OPTIONAL<IPAddr>,
-        uLGTPTEID: OPTIONAL<FTEID>,
-        dLGTPTEID: OPTIONAL<FTEID>,
+        eRABQoSParameters?: OPTIONAL<ERABQoSParameters>,
+        transportLayerAddress?: OPTIONAL<IPAddr>,
+        uLGTPTEID?: OPTIONAL<FTEID>,
+        dLGTPTEID?: OPTIONAL<FTEID>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.eRABID = eRABID;

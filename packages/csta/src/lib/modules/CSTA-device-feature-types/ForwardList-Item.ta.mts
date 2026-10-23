@@ -81,7 +81,7 @@ class ForwardList_Item {
          * @public
          * @readonly
          */
-        readonly forwardDN: OPTIONAL<DeviceID>,
+        readonly forwardDN?: OPTIONAL<DeviceID>,
         /**
          * @summary `forwardDefault`.
          * @description
@@ -89,7 +89,7 @@ class ForwardList_Item {
          * @public
          * @readonly
          */
-        readonly forwardDefault: OPTIONAL<ForwardDefault>,
+        readonly forwardDefault?: OPTIONAL<ForwardDefault>,
         /**
          * @summary `ringDuration`.
          * @description
@@ -98,7 +98,7 @@ class ForwardList_Item {
          * @public
          * @readonly
          */
-        readonly ringDuration: OPTIONAL<INTEGER>,
+        readonly ringDuration?: OPTIONAL<INTEGER>,
         /**
          * @summary `ringCount`.
          * @description
@@ -106,7 +106,7 @@ class ForwardList_Item {
          * @public
          * @readonly
          */
-        readonly ringCount: OPTIONAL<INTEGER>
+        readonly ringCount?: OPTIONAL<INTEGER>
     ) {}
 
     /**

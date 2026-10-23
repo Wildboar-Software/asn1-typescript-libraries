@@ -44,7 +44,7 @@ class ReferralParameter_Type {
 
     constructor (
         tryhere: AccessPointInformation,
-        securityParameters: OPTIONAL<SecurityParameters>
+        securityParameters?: OPTIONAL<SecurityParameters>
     ) {
         this.tryhere = tryhere;
         this.securityParameters = securityParameters;

@@ -67,7 +67,7 @@ class DfrEntryList_Item {
          * @public
          * @readonly
          */
-        readonly ordering_attribute: OPTIONAL<Attribute[]>,
+        readonly ordering_attribute?: OPTIONAL<Attribute[]>,
         /**
          * @summary `other_attributes`.
          * @description
@@ -76,7 +76,7 @@ class DfrEntryList_Item {
          * @public
          * @readonly
          */
-        readonly other_attributes: OPTIONAL<Attribute[]>
+        readonly other_attributes?: OPTIONAL<Attribute[]>
     ) {}
 
     /**

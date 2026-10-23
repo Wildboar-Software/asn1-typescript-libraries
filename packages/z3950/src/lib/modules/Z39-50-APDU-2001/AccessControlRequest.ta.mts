@@ -86,7 +86,7 @@ class AccessControlRequest {
     constructor (
         referenceId: OPTIONAL<ReferenceId>,
         securityChallenge: AccessControlRequest_securityChallenge,
-        otherInfo: OPTIONAL<OtherInformation>
+        otherInfo?: OPTIONAL<OtherInformation>
     ) {
         this.referenceId = referenceId;
         this.securityChallenge = securityChallenge;

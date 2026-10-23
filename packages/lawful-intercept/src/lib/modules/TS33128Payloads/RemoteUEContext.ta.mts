@@ -113,8 +113,8 @@ class RemoteUEContext {
         uDPPortRangeIndicator: BOOLEAN,
         tCPPortRangeIndicator: BOOLEAN,
         protocolUsedByRemoteUE: ProtocolUsedByRemoteUE,
-        addressInformation: OPTIONAL<AddressInformation>,
-        hPLMNID: OPTIONAL<PLMNID>,
+        addressInformation?: OPTIONAL<AddressInformation>,
+        hPLMNID?: OPTIONAL<PLMNID>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.remoteUEIDFormat = remoteUEIDFormat;

@@ -37,7 +37,7 @@ class NotificationInformation_answeredCallSpecificInfo {
          * @public
          * @readonly
          */
-        readonly timeStamp: OPTIONAL<DateAndTime>,
+        readonly timeStamp?: OPTIONAL<DateAndTime>,
         /**
          * @summary Extensions that are not recognized.
          * @public

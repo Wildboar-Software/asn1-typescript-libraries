@@ -66,8 +66,8 @@ class ReportConditionEvent {
         now: OPTIONAL<NULL>,
         endOfCall: OPTIONAL<NULL>,
         period: INTEGER,
-        remainingthreshold: OPTIONAL<UserCredit>,
-        eachNumOfUnit: OPTIONAL<INTEGER>
+        remainingthreshold?: OPTIONAL<UserCredit>,
+        eachNumOfUnit?: OPTIONAL<INTEGER>
     ) {
         this.now = now;
         this.endOfCall = endOfCall;

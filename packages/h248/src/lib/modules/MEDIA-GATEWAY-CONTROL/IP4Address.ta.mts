@@ -55,7 +55,7 @@ class IP4Address {
          * @public
          * @readonly
          */
-        readonly portNumber: OPTIONAL<INTEGER>
+        readonly portNumber?: OPTIONAL<INTEGER>
     ) {
             if (address.length !== 4) {
                 throw new ASN1SizeError("IP4Address.address violates SIZE constraint");

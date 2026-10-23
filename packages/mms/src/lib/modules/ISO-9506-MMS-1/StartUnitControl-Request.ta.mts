@@ -61,7 +61,7 @@ class StartUnitControl_Request {
          * @public
          * @readonly
          */
-        readonly executionArgument: OPTIONAL<StartUnitControl_Request_executionArgument>
+        readonly executionArgument?: OPTIONAL<StartUnitControl_Request_executionArgument>
     ) {}
 
     /**

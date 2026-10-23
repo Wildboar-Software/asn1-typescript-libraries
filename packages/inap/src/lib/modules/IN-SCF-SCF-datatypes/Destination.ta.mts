@@ -52,8 +52,8 @@ class Destination {
 
     constructor (
         type_: Destination_type,
-        genadd: OPTIONAL<GenericNumber>,
-        presadd: OPTIONAL<PresentationAddress>
+        genadd?: OPTIONAL<GenericNumber>,
+        presadd?: OPTIONAL<PresentationAddress>
     ) {
         this.type_ = type_;
         this.genadd = genadd;

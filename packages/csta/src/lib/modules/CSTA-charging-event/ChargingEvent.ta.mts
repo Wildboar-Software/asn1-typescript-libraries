@@ -87,7 +87,7 @@ class ChargingEvent {
          * @public
          * @readonly
          */
-        readonly cause: OPTIONAL<EventCause>,
+        readonly cause?: OPTIONAL<EventCause>,
         /**
          * @summary `extensions`.
          * @description
@@ -97,7 +97,7 @@ class ChargingEvent {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

@@ -61,7 +61,7 @@ class GpLocationInfo_civicLocGml {
          * @public
          * @readonly
          */
-        readonly civicLoc: OPTIONAL<GpLocationInfo_civicLocGml_civicLoc>
+        readonly civicLoc?: OPTIONAL<GpLocationInfo_civicLocGml_civicLoc>
     ) {}
 
     /**

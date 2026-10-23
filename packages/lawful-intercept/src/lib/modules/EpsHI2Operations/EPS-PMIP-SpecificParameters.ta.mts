@@ -214,20 +214,20 @@ class EPS_PMIP_SpecificParameters {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        lifetime: OPTIONAL<INTEGER>,
-        accessTechnologyType: OPTIONAL<OCTET_STRING>,
-        aPN: OPTIONAL<OCTET_STRING>,
-        iPv6HomeNetworkPrefix: OPTIONAL<OCTET_STRING>,
-        protConfigurationOption: OPTIONAL<OCTET_STRING>,
-        handoverIndication: OPTIONAL<OCTET_STRING>,
-        status: OPTIONAL<INTEGER>,
-        revocationTrigger: OPTIONAL<INTEGER>,
-        iPv4HomeAddress: OPTIONAL<OCTET_STRING>,
-        iPv6careOfAddress: OPTIONAL<OCTET_STRING>,
-        iPv4careOfAddress: OPTIONAL<OCTET_STRING>,
-        servingNetwork: OPTIONAL<OCTET_STRING>,
-        dHCPv4AddressAllocationInd: OPTIONAL<OCTET_STRING>,
-        ePSlocationOfTheTarget: OPTIONAL<EPSLocation>,
+        lifetime?: OPTIONAL<INTEGER>,
+        accessTechnologyType?: OPTIONAL<OCTET_STRING>,
+        aPN?: OPTIONAL<OCTET_STRING>,
+        iPv6HomeNetworkPrefix?: OPTIONAL<OCTET_STRING>,
+        protConfigurationOption?: OPTIONAL<OCTET_STRING>,
+        handoverIndication?: OPTIONAL<OCTET_STRING>,
+        status?: OPTIONAL<INTEGER>,
+        revocationTrigger?: OPTIONAL<INTEGER>,
+        iPv4HomeAddress?: OPTIONAL<OCTET_STRING>,
+        iPv6careOfAddress?: OPTIONAL<OCTET_STRING>,
+        iPv4careOfAddress?: OPTIONAL<OCTET_STRING>,
+        servingNetwork?: OPTIONAL<OCTET_STRING>,
+        dHCPv4AddressAllocationInd?: OPTIONAL<OCTET_STRING>,
+        ePSlocationOfTheTarget?: OPTIONAL<EPSLocation>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.lifetime = lifetime;

@@ -47,7 +47,7 @@ class PurgeMS_Res {
          * @public
          * @readonly
          */
-        readonly freezeTMSI: OPTIONAL<NULL>,
+        readonly freezeTMSI?: OPTIONAL<NULL>,
         /**
          * @summary `freezeP_TMSI`.
          * @description
@@ -60,13 +60,13 @@ class PurgeMS_Res {
          * @public
          * @readonly
          */
-        readonly freezeP_TMSI: OPTIONAL<NULL>,
+        readonly freezeP_TMSI?: OPTIONAL<NULL>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `freezeM_TMSI`.
          * @description
@@ -79,7 +79,7 @@ class PurgeMS_Res {
          * @public
          * @readonly
          */
-        readonly freezeM_TMSI: OPTIONAL<NULL>,
+        readonly freezeM_TMSI?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @public

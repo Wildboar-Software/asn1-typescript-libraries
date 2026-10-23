@@ -49,7 +49,7 @@ class CSTACommonArguments {
          * @public
          * @readonly
          */
-        readonly security: OPTIONAL<CSTASecurityData>,
+        readonly security?: OPTIONAL<CSTASecurityData>,
         /**
          * @summary `privateData`.
          * @description
@@ -60,7 +60,7 @@ class CSTACommonArguments {
          * @public
          * @readonly
          */
-        readonly privateData: OPTIONAL<CSTAPrivateData[]>
+        readonly privateData?: OPTIONAL<CSTAPrivateData[]>
     ) {}
 
     /**

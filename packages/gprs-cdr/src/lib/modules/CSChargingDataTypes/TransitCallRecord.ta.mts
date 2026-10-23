@@ -482,14 +482,14 @@ class TransitCallRecord {
         causeForTerm: CauseForTerm,
         diagnostics: OPTIONAL<HLRIntResult>,
         callReference: OCTET_STRING,
-        sequenceNumber: OPTIONAL<INTEGER>,
-        recordExtensions: OPTIONAL<ManagementExtension[]>,
-        locationRoutNum: OPTIONAL<OCTET_STRING>,
-        lrnSoInd: OPTIONAL<TransitCallRecord_lrnSoInd>,
-        lrnQuryStatus: OPTIONAL<TransitCallRecord_lrnQuryStatus>,
-        jIPPara: OPTIONAL<OCTET_STRING>,
-        jIPSoInd: OPTIONAL<TransitCallRecord_jIPSoInd>,
-        jIPQuryStatus: OPTIONAL<TransitCallRecord_jIPQuryStatus>
+        sequenceNumber?: OPTIONAL<INTEGER>,
+        recordExtensions?: OPTIONAL<ManagementExtension[]>,
+        locationRoutNum?: OPTIONAL<OCTET_STRING>,
+        lrnSoInd?: OPTIONAL<TransitCallRecord_lrnSoInd>,
+        lrnQuryStatus?: OPTIONAL<TransitCallRecord_lrnQuryStatus>,
+        jIPPara?: OPTIONAL<OCTET_STRING>,
+        jIPSoInd?: OPTIONAL<TransitCallRecord_jIPSoInd>,
+        jIPQuryStatus?: OPTIONAL<TransitCallRecord_jIPQuryStatus>
     ) {
         this.recordType = recordType;
         this.recordingEntity = recordingEntity;

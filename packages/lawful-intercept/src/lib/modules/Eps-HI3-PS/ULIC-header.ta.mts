@@ -165,8 +165,8 @@ class ULIC_header {
         timeStamp: OPTIONAL<TimeStamp>,
         sequence_number: INTEGER,
         t_PDU_direction: TPDU_direction,
-        national_HI3_ASN1parameters: OPTIONAL<National_HI3_ASN1parameters>,
-        ice_type: OPTIONAL<ICE_type>,
+        national_HI3_ASN1parameters?: OPTIONAL<National_HI3_ASN1parameters>,
+        ice_type?: OPTIONAL<ICE_type>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.hi3DomainId = hi3DomainId;

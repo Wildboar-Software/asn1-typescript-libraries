@@ -90,14 +90,14 @@ class ServiceKPIs {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        connectionBandwidth: OPTIONAL<INTEGER>,
-        requestRate: OPTIONAL<INTEGER>,
-        responseTime: OPTIONAL<INTEGER>,
-        requestedAvailability: OPTIONAL<INTEGER>,
-        requestedCompute: OPTIONAL<OCTET_STRING>,
-        requestedGraphCompute: OPTIONAL<OCTET_STRING>,
-        requestedMemory: OPTIONAL<OCTET_STRING>,
-        requestedStorage: OPTIONAL<OCTET_STRING>,
+        connectionBandwidth?: OPTIONAL<INTEGER>,
+        requestRate?: OPTIONAL<INTEGER>,
+        responseTime?: OPTIONAL<INTEGER>,
+        requestedAvailability?: OPTIONAL<INTEGER>,
+        requestedCompute?: OPTIONAL<OCTET_STRING>,
+        requestedGraphCompute?: OPTIONAL<OCTET_STRING>,
+        requestedMemory?: OPTIONAL<OCTET_STRING>,
+        requestedStorage?: OPTIONAL<OCTET_STRING>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.connectionBandwidth = connectionBandwidth;

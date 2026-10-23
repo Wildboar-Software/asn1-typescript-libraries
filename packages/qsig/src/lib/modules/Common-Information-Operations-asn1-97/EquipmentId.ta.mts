@@ -68,9 +68,9 @@ class EquipmentId {
     readonly unitId: OPTIONAL<IA5String>;
 
     constructor (
-        nodeId: OPTIONAL<IA5String>,
-        groupId: OPTIONAL<IA5String>,
-        unitId: OPTIONAL<IA5String>
+        nodeId?: OPTIONAL<IA5String>,
+        groupId?: OPTIONAL<IA5String>,
+        unitId?: OPTIONAL<IA5String>
     ) {
         this.nodeId = nodeId;
         this.groupId = groupId;

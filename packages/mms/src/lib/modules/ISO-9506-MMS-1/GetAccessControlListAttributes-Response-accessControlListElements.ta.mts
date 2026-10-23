@@ -55,7 +55,7 @@ class GetAccessControlListAttributes_Response_accessControlListElements {
          * @public
          * @readonly
          */
-        readonly readAccessCondition: OPTIONAL<AccessCondition>,
+        readonly readAccessCondition?: OPTIONAL<AccessCondition>,
         /**
          * @summary `storeAccessCondition`.
          * @description
@@ -68,7 +68,7 @@ class GetAccessControlListAttributes_Response_accessControlListElements {
          * @public
          * @readonly
          */
-        readonly storeAccessCondition: OPTIONAL<AccessCondition>,
+        readonly storeAccessCondition?: OPTIONAL<AccessCondition>,
         /**
          * @summary `writeAccessCondition`.
          * @description
@@ -79,7 +79,7 @@ class GetAccessControlListAttributes_Response_accessControlListElements {
          * @public
          * @readonly
          */
-        readonly writeAccessCondition: OPTIONAL<AccessCondition>,
+        readonly writeAccessCondition?: OPTIONAL<AccessCondition>,
         /**
          * @summary `loadAccessCondition`.
          * @description
@@ -93,7 +93,7 @@ class GetAccessControlListAttributes_Response_accessControlListElements {
          * @public
          * @readonly
          */
-        readonly loadAccessCondition: OPTIONAL<AccessCondition>,
+        readonly loadAccessCondition?: OPTIONAL<AccessCondition>,
         /**
          * @summary `executeAccessCondition`.
          * @description
@@ -105,7 +105,7 @@ class GetAccessControlListAttributes_Response_accessControlListElements {
          * @public
          * @readonly
          */
-        readonly executeAccessCondition: OPTIONAL<AccessCondition>,
+        readonly executeAccessCondition?: OPTIONAL<AccessCondition>,
         /**
          * @summary `deleteAccessCondition`.
          * @description
@@ -120,7 +120,7 @@ class GetAccessControlListAttributes_Response_accessControlListElements {
          * @public
          * @readonly
          */
-        readonly deleteAccessCondition: OPTIONAL<AccessCondition>,
+        readonly deleteAccessCondition?: OPTIONAL<AccessCondition>,
         /**
          * @summary `editAccessCondition`.
          * @description
@@ -134,7 +134,7 @@ class GetAccessControlListAttributes_Response_accessControlListElements {
          * @public
          * @readonly
          */
-        readonly editAccessCondition: OPTIONAL<AccessCondition>
+        readonly editAccessCondition?: OPTIONAL<AccessCondition>
     ) {}
 
     /**

@@ -46,7 +46,7 @@ class MonitorFilterItems {
          * @public
          * @readonly
          */
-        readonly deviceOnDeviceMonitorFilter: OPTIONAL<MonitorFilter>,
+        readonly deviceOnDeviceMonitorFilter?: OPTIONAL<MonitorFilter>,
         /**
          * @summary `deviceOnConnectionMonitorFilter`.
          * @description
@@ -55,7 +55,7 @@ class MonitorFilterItems {
          * @public
          * @readonly
          */
-        readonly deviceOnConnectionMonitorFilter: OPTIONAL<MonitorFilter>,
+        readonly deviceOnConnectionMonitorFilter?: OPTIONAL<MonitorFilter>,
         /**
          * @summary `callOnDeviceMonitorFilter`.
          * @description
@@ -64,7 +64,7 @@ class MonitorFilterItems {
          * @public
          * @readonly
          */
-        readonly callOnDeviceMonitorFilter: OPTIONAL<MonitorFilter>,
+        readonly callOnDeviceMonitorFilter?: OPTIONAL<MonitorFilter>,
         /**
          * @summary `callOnConnectionMonitorFilter`.
          * @description
@@ -73,7 +73,7 @@ class MonitorFilterItems {
          * @public
          * @readonly
          */
-        readonly callOnConnectionMonitorFilter: OPTIONAL<MonitorFilter>
+        readonly callOnConnectionMonitorFilter?: OPTIONAL<MonitorFilter>
     ) {}
 
     /**

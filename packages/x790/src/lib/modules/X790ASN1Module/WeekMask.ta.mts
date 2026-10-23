@@ -63,13 +63,13 @@ class WeekMask {
          * @public
          * @readonly
          */
-        readonly daysOfWeek: OPTIONAL<WeekMask_daysOfWeek>,
+        readonly daysOfWeek?: OPTIONAL<WeekMask_daysOfWeek>,
         /**
          * @summary `intervalsOfDay`.
          * @public
          * @readonly
          */
-        readonly intervalsOfDay: OPTIONAL<WeekMask_intervalsOfDay_Item[]>,
+        readonly intervalsOfDay?: OPTIONAL<WeekMask_intervalsOfDay_Item[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

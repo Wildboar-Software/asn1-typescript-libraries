@@ -113,16 +113,16 @@ class CreateOrRemoveTriggerDataArg {
     readonly extensions: OPTIONAL<Extensions>;
 
     constructor (
-        createOrRemove: OPTIONAL<CreateOrRemoveIndicator>,
-        dPName: OPTIONAL<EventTypeBCSM>,
-        triggerDPType: OPTIONAL<TriggerDPType>,
-        serviceKey: OPTIONAL<ServiceKey>,
-        profile: OPTIONAL<ProfileIdentifier>,
-        triggerData: OPTIONAL<TriggerData>,
-        defaultFaultHandling: OPTIONAL<DefaultFaultHandling>,
-        tDPIdentifier: OPTIONAL<TDPIdentifier>,
+        createOrRemove?: OPTIONAL<CreateOrRemoveIndicator>,
+        dPName?: OPTIONAL<EventTypeBCSM>,
+        triggerDPType?: OPTIONAL<TriggerDPType>,
+        serviceKey?: OPTIONAL<ServiceKey>,
+        profile?: OPTIONAL<ProfileIdentifier>,
+        triggerData?: OPTIONAL<TriggerData>,
+        defaultFaultHandling?: OPTIONAL<DefaultFaultHandling>,
+        tDPIdentifier?: OPTIONAL<TDPIdentifier>,
         _unrecognizedExtensionsList: _Element[] = [],
-        extensions: OPTIONAL<Extensions>
+        extensions?: OPTIONAL<Extensions>
     ) {
         this.createOrRemove = createOrRemove;
         this.dPName = dPName;

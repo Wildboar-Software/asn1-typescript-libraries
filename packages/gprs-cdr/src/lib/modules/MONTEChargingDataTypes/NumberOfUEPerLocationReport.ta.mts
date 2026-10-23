@@ -61,8 +61,8 @@ class NumberOfUEPerLocationReport {
     readonly uECount: OPTIONAL<INTEGER>;
 
     constructor (
-        ePSLocationInformation: OPTIONAL<EPSLocationInfo>,
-        uECount: OPTIONAL<INTEGER>
+        ePSLocationInformation?: OPTIONAL<EPSLocationInfo>,
+        uECount?: OPTIONAL<INTEGER>
     ) {
         this.ePSLocationInformation = ePSLocationInformation;
         this.uECount = uECount;

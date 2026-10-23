@@ -54,7 +54,7 @@ class GetSwitchingFunctionDevicesArgument {
          * @public
          * @readonly
          */
-        readonly requestedDeviceID: OPTIONAL<DeviceID>,
+        readonly requestedDeviceID?: OPTIONAL<DeviceID>,
         /**
          * @summary `requestedDeviceCategory`.
          * @description
@@ -64,7 +64,7 @@ class GetSwitchingFunctionDevicesArgument {
          * @public
          * @readonly
          */
-        readonly requestedDeviceCategory: OPTIONAL<ReqDeviceCategory>,
+        readonly requestedDeviceCategory?: OPTIONAL<ReqDeviceCategory>,
         /**
          * @summary `extensions`.
          * @description
@@ -74,7 +74,7 @@ class GetSwitchingFunctionDevicesArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

@@ -61,7 +61,7 @@ class PairwiseTag {
     constructor (
         kmid: Kmid,
         edition: INTEGER,
-        date: OPTIONAL<UTCTime>
+        date?: OPTIONAL<UTCTime>
     ) {
         this.kmid = kmid;
         this.edition = edition;

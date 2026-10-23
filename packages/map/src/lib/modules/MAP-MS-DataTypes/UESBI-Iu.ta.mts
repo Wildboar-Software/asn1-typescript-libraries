@@ -43,7 +43,7 @@ class UESBI_Iu {
          * @public
          * @readonly
          */
-        readonly uesbi_IuA: OPTIONAL<UESBI_IuA>,
+        readonly uesbi_IuA?: OPTIONAL<UESBI_IuA>,
         /**
          * @summary `uesbi_IuB`.
          * @description
@@ -55,7 +55,7 @@ class UESBI_Iu {
          * @public
          * @readonly
          */
-        readonly uesbi_IuB: OPTIONAL<UESBI_IuB>,
+        readonly uesbi_IuB?: OPTIONAL<UESBI_IuB>,
         /**
          * @summary Extensions that are not recognized.
          * @public

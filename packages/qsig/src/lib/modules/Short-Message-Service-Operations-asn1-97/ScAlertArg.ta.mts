@@ -53,7 +53,7 @@ class ScAlertArg {
 
     constructor (
         originatingAddress: PartyNumber,
-        smsExtension: OPTIONAL<SmsExtension>
+        smsExtension?: OPTIONAL<SmsExtension>
     ) {
         this.originatingAddress = originatingAddress;
         this.smsExtension = smsExtension;

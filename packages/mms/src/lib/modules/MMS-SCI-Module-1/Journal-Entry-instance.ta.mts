@@ -141,7 +141,7 @@ class Journal_Entry_instance {
          * @public
          * @readonly
          */
-        readonly textComment: OPTIONAL<MMS255String>,
+        readonly textComment?: OPTIONAL<MMS255String>,
         /**
          * @summary `eventTransitionRecord`.
          * @description
@@ -152,7 +152,7 @@ class Journal_Entry_instance {
          * @public
          * @readonly
          */
-        readonly eventTransitionRecord: OPTIONAL<Journal_Entry_instance_eventTransitionRecord>,
+        readonly eventTransitionRecord?: OPTIONAL<Journal_Entry_instance_eventTransitionRecord>,
         /**
          * @summary `journalVariables`.
          * @description
@@ -163,7 +163,7 @@ class Journal_Entry_instance {
          * @public
          * @readonly
          */
-        readonly journalVariables: OPTIONAL<Journal_Entry_instance_journalVariables_Item[]>
+        readonly journalVariables?: OPTIONAL<Journal_Entry_instance_journalVariables_Item[]>
     ) {}
 
     /**

@@ -389,23 +389,23 @@ class CAMELInformation {
     readonly freeFormatDataAppend_2: OPTIONAL<BOOLEAN>;
 
     constructor (
-        cAMELDestinationNumber: OPTIONAL<OCTET_STRING[]>,
-        connectedNumber: OPTIONAL<OCTET_STRING>,
-        roamingNumber: OPTIONAL<OCTET_STRING>,
-        mscOutgoingTKGP: OPTIONAL<TrunkGroup>,
-        seizureTime: OPTIONAL<OCTET_STRING>,
-        answerTime: OPTIONAL<OCTET_STRING>,
-        releaseTime: OPTIONAL<OCTET_STRING>,
-        callDuration: OPTIONAL<INTEGER>,
-        dataVolume: OPTIONAL<INTEGER>,
-        cAMELInitCFIndicator: OPTIONAL<CAMELInitCFIndicator>,
-        causeForTerm: OPTIONAL<CauseForTerm>,
-        cAMELModification: OPTIONAL<ChangedParameters>,
-        freeFormatData: OPTIONAL<OCTET_STRING>,
-        diagnostics: OPTIONAL<HLRIntResult>,
-        freeFormatDataAppend: OPTIONAL<BOOLEAN>,
-        freeFormatData_2: OPTIONAL<OCTET_STRING>,
-        freeFormatDataAppend_2: OPTIONAL<BOOLEAN>
+        cAMELDestinationNumber?: OPTIONAL<OCTET_STRING[]>,
+        connectedNumber?: OPTIONAL<OCTET_STRING>,
+        roamingNumber?: OPTIONAL<OCTET_STRING>,
+        mscOutgoingTKGP?: OPTIONAL<TrunkGroup>,
+        seizureTime?: OPTIONAL<OCTET_STRING>,
+        answerTime?: OPTIONAL<OCTET_STRING>,
+        releaseTime?: OPTIONAL<OCTET_STRING>,
+        callDuration?: OPTIONAL<INTEGER>,
+        dataVolume?: OPTIONAL<INTEGER>,
+        cAMELInitCFIndicator?: OPTIONAL<CAMELInitCFIndicator>,
+        causeForTerm?: OPTIONAL<CauseForTerm>,
+        cAMELModification?: OPTIONAL<ChangedParameters>,
+        freeFormatData?: OPTIONAL<OCTET_STRING>,
+        diagnostics?: OPTIONAL<HLRIntResult>,
+        freeFormatDataAppend?: OPTIONAL<BOOLEAN>,
+        freeFormatData_2?: OPTIONAL<OCTET_STRING>,
+        freeFormatDataAppend_2?: OPTIONAL<BOOLEAN>
     ) {
         this.cAMELDestinationNumber = cAMELDestinationNumber;
         this.connectedNumber = connectedNumber;

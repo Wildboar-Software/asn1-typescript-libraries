@@ -47,7 +47,7 @@ class GetCapabilityList_Request {
          * @public
          * @readonly
          */
-        readonly continueAfter: OPTIONAL<MMSString>
+        readonly continueAfter?: OPTIONAL<MMSString>
     ) {}
 
     /**

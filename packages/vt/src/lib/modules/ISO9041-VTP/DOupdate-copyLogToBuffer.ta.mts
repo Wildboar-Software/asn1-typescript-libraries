@@ -63,7 +63,7 @@ class DOupdate_copyLogToBuffer {
          * @public
          * @readonly
          */
-        readonly rioName: OPTIONAL<PrintableString>,
+        readonly rioName?: OPTIONAL<PrintableString>,
         /**
          * @summary `recordId`.
          * @description
@@ -73,7 +73,7 @@ class DOupdate_copyLogToBuffer {
          * @public
          * @readonly
          */
-        readonly recordId: OPTIONAL<PrintableString>,
+        readonly recordId?: OPTIONAL<PrintableString>,
         /**
          * @summary `rendition`.
          * @description
@@ -82,7 +82,7 @@ class DOupdate_copyLogToBuffer {
          * @public
          * @readonly
          */
-        readonly rendition: OPTIONAL<NULL>,
+        readonly rendition?: OPTIONAL<NULL>,
         /**
          * @summary `structure`.
          * @description
@@ -91,7 +91,7 @@ class DOupdate_copyLogToBuffer {
          * @public
          * @readonly
          */
-        readonly structure: OPTIONAL<NULL>
+        readonly structure?: OPTIONAL<NULL>
     ) {}
 
     /**

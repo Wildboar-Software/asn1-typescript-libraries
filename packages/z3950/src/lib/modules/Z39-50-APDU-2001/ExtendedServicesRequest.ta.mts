@@ -233,8 +233,8 @@ class ExtendedServicesRequest {
         description: OPTIONAL<InternationalString>,
         taskSpecificParameters: OPTIONAL<EXTERNAL>,
         waitAction: ExtendedServicesRequest_waitAction,
-        elements: OPTIONAL<ElementSetName>,
-        otherInfo: OPTIONAL<OtherInformation>
+        elements?: OPTIONAL<ElementSetName>,
+        otherInfo?: OPTIONAL<OtherInformation>
     ) {
         this.referenceId = referenceId;
         this.function_ = function_;

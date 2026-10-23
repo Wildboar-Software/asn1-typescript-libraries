@@ -190,15 +190,15 @@ class TerminalDisplayInfo {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        generalDisplay: OPTIONAL<VisibleString>,
-        calledNumber: OPTIONAL<VisibleString>,
-        callingNumber: OPTIONAL<VisibleString>,
-        callingName: OPTIONAL<VisibleString>,
-        originalCalledNumber: OPTIONAL<VisibleString>,
-        lastRedirectingNumber: OPTIONAL<VisibleString>,
-        redirectingName: OPTIONAL<VisibleString>,
-        redirectingReason: OPTIONAL<VisibleString>,
-        messageWaitingNotif: OPTIONAL<VisibleString>,
+        generalDisplay?: OPTIONAL<VisibleString>,
+        calledNumber?: OPTIONAL<VisibleString>,
+        callingNumber?: OPTIONAL<VisibleString>,
+        callingName?: OPTIONAL<VisibleString>,
+        originalCalledNumber?: OPTIONAL<VisibleString>,
+        lastRedirectingNumber?: OPTIONAL<VisibleString>,
+        redirectingName?: OPTIONAL<VisibleString>,
+        redirectingReason?: OPTIONAL<VisibleString>,
+        messageWaitingNotif?: OPTIONAL<VisibleString>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.generalDisplay = generalDisplay;

@@ -658,17 +658,17 @@ class RoamingRecord {
         causeForTerm: CauseForTerm,
         diagnostics: OPTIONAL<HLRIntResult>,
         callReference: OCTET_STRING,
-        sequenceNumber: OPTIONAL<INTEGER>,
-        recordExtensions: OPTIONAL<ManagementExtension[]>,
-        networkCallReference: OPTIONAL<OCTET_STRING>,
-        mSCAddress: OPTIONAL<OCTET_STRING>,
-        locationRoutNum: OPTIONAL<OCTET_STRING>,
-        lrnSoInd: OPTIONAL<RoamingRecord_lrnSoInd>,
-        lrnQuryStatus: OPTIONAL<RoamingRecord_lrnQuryStatus>,
-        jIPPara: OPTIONAL<OCTET_STRING>,
-        jIPSoInd: OPTIONAL<RoamingRecord_jIPSoInd>,
-        jIPQuryStatus: OPTIONAL<RoamingRecord_jIPQuryStatus>,
-        partialRecordType: OPTIONAL<PartialRecordType>
+        sequenceNumber?: OPTIONAL<INTEGER>,
+        recordExtensions?: OPTIONAL<ManagementExtension[]>,
+        networkCallReference?: OPTIONAL<OCTET_STRING>,
+        mSCAddress?: OPTIONAL<OCTET_STRING>,
+        locationRoutNum?: OPTIONAL<OCTET_STRING>,
+        lrnSoInd?: OPTIONAL<RoamingRecord_lrnSoInd>,
+        lrnQuryStatus?: OPTIONAL<RoamingRecord_lrnQuryStatus>,
+        jIPPara?: OPTIONAL<OCTET_STRING>,
+        jIPSoInd?: OPTIONAL<RoamingRecord_jIPSoInd>,
+        jIPQuryStatus?: OPTIONAL<RoamingRecord_jIPQuryStatus>,
+        partialRecordType?: OPTIONAL<PartialRecordType>
     ) {
         this.recordType = recordType;
         this.servedIMSI = servedIMSI;

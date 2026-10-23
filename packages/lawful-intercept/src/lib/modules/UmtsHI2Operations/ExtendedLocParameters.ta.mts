@@ -228,17 +228,17 @@ class ExtendedLocParameters {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        posMethod: OPTIONAL<PrintableString>,
-        mapData: OPTIONAL<ExtendedLocParameters_mapData>,
-        altitude: OPTIONAL<ExtendedLocParameters_altitude>,
-        speed: OPTIONAL<PrintableString>,
-        direction: OPTIONAL<PrintableString>,
-        level_conf: OPTIONAL<PrintableString>,
-        qOS_not_met: OPTIONAL<BOOLEAN>,
-        motionStateList: OPTIONAL<ExtendedLocParameters_motionStateList>,
-        floor: OPTIONAL<ExtendedLocParameters_floor>,
-        additional_info: OPTIONAL<PrintableString>,
-        lALS_rawMLPPosData: OPTIONAL<UTF8String>,
+        posMethod?: OPTIONAL<PrintableString>,
+        mapData?: OPTIONAL<ExtendedLocParameters_mapData>,
+        altitude?: OPTIONAL<ExtendedLocParameters_altitude>,
+        speed?: OPTIONAL<PrintableString>,
+        direction?: OPTIONAL<PrintableString>,
+        level_conf?: OPTIONAL<PrintableString>,
+        qOS_not_met?: OPTIONAL<BOOLEAN>,
+        motionStateList?: OPTIONAL<ExtendedLocParameters_motionStateList>,
+        floor?: OPTIONAL<ExtendedLocParameters_floor>,
+        additional_info?: OPTIONAL<PrintableString>,
+        lALS_rawMLPPosData?: OPTIONAL<UTF8String>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.posMethod = posMethod;

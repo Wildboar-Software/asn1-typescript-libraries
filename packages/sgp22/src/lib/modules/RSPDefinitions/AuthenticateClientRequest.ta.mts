@@ -73,7 +73,7 @@ class AuthenticateClientRequest {
          * @public
          * @readonly
          */
-        readonly useMatchingIdForAcr: OPTIONAL<NULL>
+        readonly useMatchingIdForAcr?: OPTIONAL<NULL>
     ) {}
 
     /**

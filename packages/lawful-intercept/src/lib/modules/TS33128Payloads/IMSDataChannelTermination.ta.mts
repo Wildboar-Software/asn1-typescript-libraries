@@ -134,10 +134,10 @@ class IMSDataChannelTermination {
 
     constructor (
         targetIdentity: IMPU,
-        callingIdentity: OPTIONAL<IMPU>,
-        calledIdentity: OPTIONAL<IMPU[]>,
-        sessionEventNotification: OPTIONAL<SBIType>,
-        mediaInstructionData: OPTIONAL<SBIType>,
+        callingIdentity?: OPTIONAL<IMPU>,
+        calledIdentity?: OPTIONAL<IMPU[]>,
+        sessionEventNotification?: OPTIONAL<SBIType>,
+        mediaInstructionData?: OPTIONAL<SBIType>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.targetIdentity = targetIdentity;

@@ -61,8 +61,8 @@ class ClientPartToKeep {
     readonly additionalSearchInfo: OPTIONAL<OtherInformation>;
 
     constructor (
-        dbNames: OPTIONAL<InternationalString[]>,
-        additionalSearchInfo: OPTIONAL<OtherInformation>
+        dbNames?: OPTIONAL<InternationalString[]>,
+        additionalSearchInfo?: OPTIONAL<OtherInformation>
     ) {
         this.dbNames = dbNames;
         this.additionalSearchInfo = additionalSearchInfo;

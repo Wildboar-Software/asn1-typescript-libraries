@@ -59,7 +59,7 @@ class AnyTimeModificationRes {
          * @public
          * @readonly
          */
-        readonly ss_InfoFor_CSE: OPTIONAL<Ext_SS_InfoFor_CSE>,
+        readonly ss_InfoFor_CSE?: OPTIONAL<Ext_SS_InfoFor_CSE>,
         /**
          * @summary `camel_SubscriptionInfo`.
          * @description
@@ -70,13 +70,13 @@ class AnyTimeModificationRes {
          * @public
          * @readonly
          */
-        readonly camel_SubscriptionInfo: OPTIONAL<CAMEL_SubscriptionInfo>,
+        readonly camel_SubscriptionInfo?: OPTIONAL<CAMEL_SubscriptionInfo>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `odb_Info`.
          * @description
@@ -87,7 +87,7 @@ class AnyTimeModificationRes {
          * @public
          * @readonly
          */
-        readonly odb_Info: OPTIONAL<ODB_Info>,
+        readonly odb_Info?: OPTIONAL<ODB_Info>,
         /**
          * @summary `cw_Data`.
          * @description
@@ -98,7 +98,7 @@ class AnyTimeModificationRes {
          * @public
          * @readonly
          */
-        readonly cw_Data: OPTIONAL<CallWaitingData>,
+        readonly cw_Data?: OPTIONAL<CallWaitingData>,
         /**
          * @summary `ch_Data`.
          * @description
@@ -109,7 +109,7 @@ class AnyTimeModificationRes {
          * @public
          * @readonly
          */
-        readonly ch_Data: OPTIONAL<CallHoldData>,
+        readonly ch_Data?: OPTIONAL<CallHoldData>,
         /**
          * @summary `clip_Data`.
          * @description
@@ -120,7 +120,7 @@ class AnyTimeModificationRes {
          * @public
          * @readonly
          */
-        readonly clip_Data: OPTIONAL<ClipData>,
+        readonly clip_Data?: OPTIONAL<ClipData>,
         /**
          * @summary `clir_Data`.
          * @description
@@ -131,7 +131,7 @@ class AnyTimeModificationRes {
          * @public
          * @readonly
          */
-        readonly clir_Data: OPTIONAL<ClirData>,
+        readonly clir_Data?: OPTIONAL<ClirData>,
         /**
          * @summary `ect_data`.
          * @description
@@ -141,7 +141,7 @@ class AnyTimeModificationRes {
          * @public
          * @readonly
          */
-        readonly ect_data: OPTIONAL<EctData>,
+        readonly ect_data?: OPTIONAL<EctData>,
         /**
          * @summary `serviceCentreAddress`.
          * @description
@@ -153,7 +153,7 @@ class AnyTimeModificationRes {
          * @public
          * @readonly
          */
-        readonly serviceCentreAddress: OPTIONAL<AddressString>,
+        readonly serviceCentreAddress?: OPTIONAL<AddressString>,
         /**
          * @summary Extensions that are not recognized.
          * @public

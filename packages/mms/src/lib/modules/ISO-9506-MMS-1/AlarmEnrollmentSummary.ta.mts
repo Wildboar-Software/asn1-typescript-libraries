@@ -164,7 +164,7 @@ class AlarmEnrollmentSummary {
          * @public
          * @readonly
          */
-        readonly enrollmentState: OPTIONAL<EE_State>,
+        readonly enrollmentState?: OPTIONAL<EE_State>,
         /**
          * @summary `timeOfLastTransitionToActive`.
          * @description
@@ -177,7 +177,7 @@ class AlarmEnrollmentSummary {
          * @public
          * @readonly
          */
-        readonly timeOfLastTransitionToActive: OPTIONAL<EventTime>,
+        readonly timeOfLastTransitionToActive?: OPTIONAL<EventTime>,
         /**
          * @summary `timeActiveAcknowledged`.
          * @description
@@ -189,7 +189,7 @@ class AlarmEnrollmentSummary {
          * @public
          * @readonly
          */
-        readonly timeActiveAcknowledged: OPTIONAL<EventTime>,
+        readonly timeActiveAcknowledged?: OPTIONAL<EventTime>,
         /**
          * @summary `timeOfLastTransitionToIdle`.
          * @description
@@ -202,7 +202,7 @@ class AlarmEnrollmentSummary {
          * @public
          * @readonly
          */
-        readonly timeOfLastTransitionToIdle: OPTIONAL<EventTime>,
+        readonly timeOfLastTransitionToIdle?: OPTIONAL<EventTime>,
         /**
          * @summary `timeIdleAcknowledged`.
          * @description
@@ -214,7 +214,7 @@ class AlarmEnrollmentSummary {
          * @public
          * @readonly
          */
-        readonly timeIdleAcknowledged: OPTIONAL<EventTime>
+        readonly timeIdleAcknowledged?: OPTIONAL<EventTime>
     ) {}
 
     /**

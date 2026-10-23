@@ -446,9 +446,9 @@ class MTRFRecord {
         causeForTerm: CauseForTerm,
         diagnostics: OPTIONAL<HLRIntResult>,
         callReference: OCTET_STRING,
-        sequenceNumber: OPTIONAL<INTEGER>,
-        recordExtensions: OPTIONAL<ManagementExtension[]>,
-        partialRecordType: OPTIONAL<PartialRecordType>
+        sequenceNumber?: OPTIONAL<INTEGER>,
+        recordExtensions?: OPTIONAL<ManagementExtension[]>,
+        partialRecordType?: OPTIONAL<PartialRecordType>
     ) {
         this.recordType = recordType;
         this.servedIMSI = servedIMSI;

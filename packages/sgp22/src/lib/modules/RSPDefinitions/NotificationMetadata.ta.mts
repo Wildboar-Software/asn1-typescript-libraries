@@ -80,7 +80,7 @@ class NotificationMetadata {
          * @public
          * @readonly
          */
-        readonly iccid: OPTIONAL<Iccid>
+        readonly iccid?: OPTIONAL<Iccid>
     ) {}
 
     /**

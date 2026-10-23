@@ -81,7 +81,7 @@ class checkRestriction_ArgumentType {
         servedUserNr: PartyNumber,
         basicService: BasicService,
         divertedToNr: PartyNumber,
-        extension: OPTIONAL<checkRestriction_ArgumentType_extension>
+        extension?: OPTIONAL<checkRestriction_ArgumentType_extension>
     ) {
         this.servedUserNr = servedUserNr;
         this.basicService = basicService;

@@ -70,7 +70,7 @@ class DTLS12UAStarParams {
         tLS12CommonParams: TLS12UAStarParams,
         clientEpoch: INTEGER,
         serverEpoch: INTEGER,
-        connectionID: OPTIONAL<OCTET_STRING>,
+        connectionID?: OPTIONAL<OCTET_STRING>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.tLS12CommonParams = tLS12CommonParams;

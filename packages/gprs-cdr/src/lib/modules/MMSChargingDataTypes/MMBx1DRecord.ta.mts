@@ -287,16 +287,16 @@ class MMBx1DRecord {
         recordType: RecordType,
         mmsRelayAddress: IPAddress,
         managingAddress: MMSAgentAddress,
-        accessCorrelation: OPTIONAL<AccessCorrelation>,
-        messageReference: OPTIONAL<OCTET_STRING>,
-        requestStatusCode: OPTIONAL<RequestStatusCodeType>,
-        statusText: OPTIONAL<OCTET_STRING>,
-        sequenceNumber: OPTIONAL<INTEGER>,
-        timeStamp: OPTIONAL<OCTET_STRING>,
-        recordExtensions: OPTIONAL<ManagementExtension[]>,
-        sGSNPLMNIdentifier: OPTIONAL<OCTET_STRING>,
-        rATType: OPTIONAL<INTEGER>,
-        mSTimeZone: OPTIONAL<OCTET_STRING>
+        accessCorrelation?: OPTIONAL<AccessCorrelation>,
+        messageReference?: OPTIONAL<OCTET_STRING>,
+        requestStatusCode?: OPTIONAL<RequestStatusCodeType>,
+        statusText?: OPTIONAL<OCTET_STRING>,
+        sequenceNumber?: OPTIONAL<INTEGER>,
+        timeStamp?: OPTIONAL<OCTET_STRING>,
+        recordExtensions?: OPTIONAL<ManagementExtension[]>,
+        sGSNPLMNIdentifier?: OPTIONAL<OCTET_STRING>,
+        rATType?: OPTIONAL<INTEGER>,
+        mSTimeZone?: OPTIONAL<OCTET_STRING>
     ) {
         this.recordType = recordType;
         this.mmsRelayAddress = mmsRelayAddress;

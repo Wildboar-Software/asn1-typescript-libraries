@@ -73,7 +73,7 @@ class ReportJournalStatus_Response {
          * @public
          * @readonly
          */
-        readonly accessControlList: OPTIONAL<Identifier>
+        readonly accessControlList?: OPTIONAL<Identifier>
     ) {}
 
     /**

@@ -63,7 +63,7 @@ class SendChargingInformationArg {
     constructor (
         sCIBillingChargingCharacteristics: SCIBillingChargingCharacteristics,
         partyToCharge: LegID,
-        extensions: OPTIONAL<ExtensionField[]>,
+        extensions?: OPTIONAL<ExtensionField[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.sCIBillingChargingCharacteristics = sCIBillingChargingCharacteristics;

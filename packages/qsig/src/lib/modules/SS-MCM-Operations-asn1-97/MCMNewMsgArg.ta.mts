@@ -145,12 +145,12 @@ class MCMNewMsgArg {
     constructor (
         servedUserNr: PartyNumber,
         specificMessageType: MessageType,
-        msgCentreId: OPTIONAL<MsgCentreId>,
-        nrOfMessages: OPTIONAL<NrOfMessages>,
-        originatingNr: OPTIONAL<PartyNumber>,
-        timestamp: OPTIONAL<TimeStamp>,
-        priority: OPTIONAL<INTEGER>,
-        argumentExt: OPTIONAL<MCMNewMsgArg_argumentExt>
+        msgCentreId?: OPTIONAL<MsgCentreId>,
+        nrOfMessages?: OPTIONAL<NrOfMessages>,
+        originatingNr?: OPTIONAL<PartyNumber>,
+        timestamp?: OPTIONAL<TimeStamp>,
+        priority?: OPTIONAL<INTEGER>,
+        argumentExt?: OPTIONAL<MCMNewMsgArg_argumentExt>
     ) {
         this.servedUserNr = servedUserNr;
         this.specificMessageType = specificMessageType;

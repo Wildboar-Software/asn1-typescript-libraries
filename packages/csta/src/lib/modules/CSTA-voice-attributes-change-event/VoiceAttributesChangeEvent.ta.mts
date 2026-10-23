@@ -136,7 +136,7 @@ class VoiceAttributesChangeEvent {
          * @public
          * @readonly
          */
-        readonly playVolume: OPTIONAL<Volume>,
+        readonly playVolume?: OPTIONAL<Volume>,
         /**
          * @summary `recordingGain`.
          * @description
@@ -146,7 +146,7 @@ class VoiceAttributesChangeEvent {
          * @public
          * @readonly
          */
-        readonly recordingGain: OPTIONAL<INTEGER>,
+        readonly recordingGain?: OPTIONAL<INTEGER>,
         /**
          * @summary `speed`.
          * @description
@@ -156,7 +156,7 @@ class VoiceAttributesChangeEvent {
          * @public
          * @readonly
          */
-        readonly speed: OPTIONAL<INTEGER>,
+        readonly speed?: OPTIONAL<INTEGER>,
         /**
          * @summary `currentPosition`.
          * @description
@@ -166,7 +166,7 @@ class VoiceAttributesChangeEvent {
          * @public
          * @readonly
          */
-        readonly currentPosition: OPTIONAL<INTEGER>,
+        readonly currentPosition?: OPTIONAL<INTEGER>,
         /**
          * @summary `grammars`.
          * @description
@@ -176,7 +176,7 @@ class VoiceAttributesChangeEvent {
          * @public
          * @readonly
          */
-        readonly grammars: OPTIONAL<IA5String>,
+        readonly grammars?: OPTIONAL<IA5String>,
         /**
          * @summary `language`.
          * @description
@@ -186,7 +186,7 @@ class VoiceAttributesChangeEvent {
          * @public
          * @readonly
          */
-        readonly language: OPTIONAL<IA5String>,
+        readonly language?: OPTIONAL<IA5String>,
         /**
          * @summary `mode`.
          * @description
@@ -196,7 +196,7 @@ class VoiceAttributesChangeEvent {
          * @public
          * @readonly
          */
-        readonly mode: OPTIONAL<VoiceAttributesChangeEvent_mode>,
+        readonly mode?: OPTIONAL<VoiceAttributesChangeEvent_mode>,
         /**
          * @summary `retainAudio`.
          * @description
@@ -206,7 +206,7 @@ class VoiceAttributesChangeEvent {
          * @public
          * @readonly
          */
-        readonly retainAudio: OPTIONAL<BOOLEAN>,
+        readonly retainAudio?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `silenceTimeout`.
          * @description
@@ -216,7 +216,7 @@ class VoiceAttributesChangeEvent {
          * @public
          * @readonly
          */
-        readonly silenceTimeout: OPTIONAL<INTEGER>,
+        readonly silenceTimeout?: OPTIONAL<INTEGER>,
         /**
          * @summary `maxTimeout`.
          * @description
@@ -226,7 +226,7 @@ class VoiceAttributesChangeEvent {
          * @public
          * @readonly
          */
-        readonly maxTimeout: OPTIONAL<INTEGER>,
+        readonly maxTimeout?: OPTIONAL<INTEGER>,
         /**
          * @summary `babbleTimeout`.
          * @description
@@ -236,7 +236,7 @@ class VoiceAttributesChangeEvent {
          * @public
          * @readonly
          */
-        readonly babbleTimeout: OPTIONAL<INTEGER>,
+        readonly babbleTimeout?: OPTIONAL<INTEGER>,
         /**
          * @summary `endSilence`.
          * @description
@@ -246,7 +246,7 @@ class VoiceAttributesChangeEvent {
          * @public
          * @readonly
          */
-        readonly endSilence: OPTIONAL<INTEGER>,
+        readonly endSilence?: OPTIONAL<INTEGER>,
         /**
          * @summary `rejectionThreshold`.
          * @description
@@ -256,7 +256,7 @@ class VoiceAttributesChangeEvent {
          * @public
          * @readonly
          */
-        readonly rejectionThreshold: OPTIONAL<INTEGER>,
+        readonly rejectionThreshold?: OPTIONAL<INTEGER>,
         /**
          * @summary `autoInterruptible`.
          * @description
@@ -266,7 +266,7 @@ class VoiceAttributesChangeEvent {
          * @public
          * @readonly
          */
-        readonly autoInterruptible: OPTIONAL<BOOLEAN>,
+        readonly autoInterruptible?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `innerXML`.
          * @description
@@ -276,7 +276,7 @@ class VoiceAttributesChangeEvent {
          * @public
          * @readonly
          */
-        readonly innerXML: OPTIONAL<IA5String>,
+        readonly innerXML?: OPTIONAL<IA5String>,
         /**
          * @summary `interDigitTimeout`.
          * @description
@@ -286,7 +286,7 @@ class VoiceAttributesChangeEvent {
          * @public
          * @readonly
          */
-        readonly interDigitTimeout: OPTIONAL<INTEGER>,
+        readonly interDigitTimeout?: OPTIONAL<INTEGER>,
         /**
          * @summary `preflush`.
          * @description
@@ -296,7 +296,7 @@ class VoiceAttributesChangeEvent {
          * @public
          * @readonly
          */
-        readonly preflush: OPTIONAL<BOOLEAN>,
+        readonly preflush?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `cause`.
          * @description
@@ -306,7 +306,7 @@ class VoiceAttributesChangeEvent {
          * @public
          * @readonly
          */
-        readonly cause: OPTIONAL<EventCause>,
+        readonly cause?: OPTIONAL<EventCause>,
         /**
          * @summary `servicesPermitted`.
          * @description
@@ -316,7 +316,7 @@ class VoiceAttributesChangeEvent {
          * @public
          * @readonly
          */
-        readonly servicesPermitted: OPTIONAL<ServicesPermitted>,
+        readonly servicesPermitted?: OPTIONAL<ServicesPermitted>,
         /**
          * @summary `extensions`.
          * @description
@@ -327,7 +327,7 @@ class VoiceAttributesChangeEvent {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

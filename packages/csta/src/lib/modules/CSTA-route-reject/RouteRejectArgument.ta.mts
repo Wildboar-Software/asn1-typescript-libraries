@@ -67,7 +67,7 @@ class RouteRejectArgument {
          * @public
          * @readonly
          */
-        readonly routeRegisterReqID: OPTIONAL<RouteRegisterReqID>,
+        readonly routeRegisterReqID?: OPTIONAL<RouteRegisterReqID>,
         /**
          * @summary `rejectCause`.
          * @description
@@ -77,7 +77,7 @@ class RouteRejectArgument {
          * @public
          * @readonly
          */
-        readonly rejectCause: OPTIONAL<RejectCause>,
+        readonly rejectCause?: OPTIONAL<RejectCause>,
         /**
          * @summary `correlatorData`.
          * @description
@@ -86,7 +86,7 @@ class RouteRejectArgument {
          * @public
          * @readonly
          */
-        readonly correlatorData: OPTIONAL<CorrelatorData>,
+        readonly correlatorData?: OPTIONAL<CorrelatorData>,
         /**
          * @summary `extensions`.
          * @description
@@ -96,7 +96,7 @@ class RouteRejectArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

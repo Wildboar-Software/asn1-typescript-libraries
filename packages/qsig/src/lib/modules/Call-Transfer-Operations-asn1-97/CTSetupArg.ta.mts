@@ -59,7 +59,7 @@ class CTSetupArg {
 
     constructor (
         callIdentity: CallIdentity,
-        argumentExtension: OPTIONAL<CTSetupArg_argumentExtension>
+        argumentExtension?: OPTIONAL<CTSetupArg_argumentExtension>
     ) {
         this.callIdentity = callIdentity;
         this.argumentExtension = argumentExtension;

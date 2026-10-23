@@ -50,7 +50,7 @@ class ParamIdentList {
          * @public
          * @readonly
          */
-        readonly displayObjects: OPTIONAL<CDS_Identifier>,
+        readonly displayObjects?: OPTIONAL<CDS_Identifier>,
         /**
          * @summary `controlObjects`.
          * @description
@@ -59,7 +59,7 @@ class ParamIdentList {
          * @public
          * @readonly
          */
-        readonly controlObjects: OPTIONAL<CSS_Identifier>,
+        readonly controlObjects?: OPTIONAL<CSS_Identifier>,
         /**
          * @summary `deviceObjects`.
          * @description
@@ -68,7 +68,7 @@ class ParamIdentList {
          * @public
          * @readonly
          */
-        readonly deviceObjects: OPTIONAL<DEV_Identifier>,
+        readonly deviceObjects?: OPTIONAL<DEV_Identifier>,
         /**
          * @summary `deliveryControl`.
          * @description
@@ -77,7 +77,7 @@ class ParamIdentList {
          * @public
          * @readonly
          */
-        readonly deliveryControl: OPTIONAL<NULL>
+        readonly deliveryControl?: OPTIONAL<NULL>
     ) {}
 
     /**
