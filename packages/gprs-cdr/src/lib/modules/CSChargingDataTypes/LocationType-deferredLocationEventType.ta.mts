@@ -1,0 +1,15 @@
+export {
+    type LocationType_deferredLocationEventType,
+    LocationType_deferredLocationEventType_msAvailable,
+    msAvailable,
+    LocationType_deferredLocationEventType_enteringIntoArea,
+    enteringIntoArea,
+    LocationType_deferredLocationEventType_leavingFromArea,
+    leavingFromArea,
+    LocationType_deferredLocationEventType_beingInsideArea,
+    beingInsideArea,
+    LocationType_deferredLocationEventType_periodicLDR,
+    periodicLDR,
+    _decode_LocationType_deferredLocationEventType,
+    _encode_LocationType_deferredLocationEventType,
+} from "../shared/LocationType-deferredLocationEventType.ta.mjs";

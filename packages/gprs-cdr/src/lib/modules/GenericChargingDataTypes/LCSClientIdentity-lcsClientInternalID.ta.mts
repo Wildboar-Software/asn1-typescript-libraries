@@ -1,0 +1,16 @@
+export {
+    _enum_for_LCSClientIdentity_lcsClientInternalID,
+    type LCSClientIdentity_lcsClientInternalID,
+    LCSClientIdentity_lcsClientInternalID_broadcastService,
+    broadcastService,
+    LCSClientIdentity_lcsClientInternalID_o_andM_HPLMN,
+    o_andM_HPLMN,
+    LCSClientIdentity_lcsClientInternalID_o_andM_VPLMN,
+    o_andM_VPLMN,
+    LCSClientIdentity_lcsClientInternalID_anonymousLocation,
+    anonymousLocation,
+    LCSClientIdentity_lcsClientInternalID_targetMSsubscribedService,
+    targetMSsubscribedService,
+    _decode_LCSClientIdentity_lcsClientInternalID,
+    _encode_LCSClientIdentity_lcsClientInternalID,
+} from "../shared/LCSClientIdentity-lcsClientInternalID.ta.mjs";

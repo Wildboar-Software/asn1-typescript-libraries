@@ -1,0 +1,16 @@
+export {
+    _enum_for_SubscriptionID_subscriptionIDType,
+    type SubscriptionID_subscriptionIDType,
+    SubscriptionID_subscriptionIDType_eND_USER_E164,
+    eND_USER_E164,
+    SubscriptionID_subscriptionIDType_eND_USER_IMSI,
+    eND_USER_IMSI,
+    SubscriptionID_subscriptionIDType_eND_USER_SIP_URI,
+    eND_USER_SIP_URI,
+    SubscriptionID_subscriptionIDType_eND_USER_NAI,
+    eND_USER_NAI,
+    SubscriptionID_subscriptionIDType_eND_USER_PRIVATE,
+    eND_USER_PRIVATE,
+    _decode_SubscriptionID_subscriptionIDType,
+    _encode_SubscriptionID_subscriptionIDType,
+} from "../shared/SubscriptionID-subscriptionIDType.ta.mjs";

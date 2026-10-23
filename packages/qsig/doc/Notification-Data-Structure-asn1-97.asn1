@@ -1,0 +1,24 @@
+Notification-Data-Structure-asn1-97
+{iso(1) standard(0) pss1-generic-procedures(11582)
+notification-data-structure-asn1-97(18)}
+DEFINITIONS ::=
+BEGIN
+IMPORTS
+
+    NOTIFICATION
+        FROM Notification-class-asn1-97
+        {iso(1) standard(0) pss1-generic-procedures(11582)
+        notification-class-asn1-97(21)}
+    ;
+
+NotificationDataStructure { NOTIFICATION: NotificationSet } ::= SEQUENCE {
+    notificationValue NOTIFICATION.&notificationCode ({NotificationSet}),
+    notificationArgument NOTIFICATION.&ArgumentType ({NotificationSet} {@notificationValue}) OPTIONAL
+}
+
+NotificationSet NOTIFICATION ::= {...}
+-- NotificationSet is a set of objects of class NOTIFICATION. Element notificationValue is
+-- constrained to be the identifier of an object from that set, and element notificationArgument is
+-- constrained to be the argument type for that particular object.
+
+END           -- of Notification-Data-Structure-asn1-97

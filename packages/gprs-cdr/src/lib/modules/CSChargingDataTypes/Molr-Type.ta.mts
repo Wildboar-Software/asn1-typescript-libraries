@@ -1,0 +1,269 @@
+/* eslint-disable */
+import {
+    ENUMERATED
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+
+
+
+export
+enum _enum_for_Molr_Type {
+    locationEstimate = 0,
+    assistanceData = 1,
+    deCipheringKeys = 2,
+    deferredMo_lrTTTPInitiation = 3,
+    deferredMo_lrSelfLocationInitiation = 4,
+    deferredMt_lrOrmo_lrTTTPLocationEstimate = 5,
+    deferredMt_lrOrmo_lrCancellation = 6,
+    periodicEvent = 7,
+    enteringAreaEvent = 8,
+    leavingAreaEvent = 9,
+    beingInsideAreaEvent = 10,
+    motionEvent = 11,
+    maximumIntervalExpirationEvent = 12,
+}
+
+/**
+ * @summary Molr_Type
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * Molr-Type  ::=  ENUMERATED {
+ *    locationEstimate                            ( 0 ),
+ *    assistanceData                              ( 1 ),
+ *    deCipheringKeys                             ( 2 ),
+ *    ... ,
+ *    deferredMo-lrTTTPInitiation                 ( 3 ),
+ *    deferredMo-lrSelfLocationInitiation         ( 4 ),
+ *    deferredMt-lrOrmo-lrTTTPLocationEstimate    ( 5 ),
+ *    deferredMt-lrOrmo-lrCancellation            ( 6 ),
+ *    periodicEvent                               ( 7 ),
+ *    enteringAreaEvent                           ( 8 ),
+ *    leavingAreaEvent                            ( 9 ),
+ *    beingInsideAreaEvent                        ( 10 ),
+ *    motionEvent                                 ( 11 ),
+ *    maximumIntervalExpirationEvent              ( 12 ) }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+type Molr_Type = _enum_for_Molr_Type | ENUMERATED;
+
+/**
+ * @summary Molr_Type_locationEstimate
+ * @constant
+ * @type {number}
+ */
+export
+const Molr_Type_locationEstimate: Molr_Type = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary locationEstimate
+ * @constant
+ * @type {number}
+ */
+export
+const locationEstimate: Molr_Type = Molr_Type_locationEstimate; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary Molr_Type_assistanceData
+ * @constant
+ * @type {number}
+ */
+export
+const Molr_Type_assistanceData: Molr_Type = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary assistanceData
+ * @constant
+ * @type {number}
+ */
+export
+const assistanceData: Molr_Type = Molr_Type_assistanceData; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary Molr_Type_deCipheringKeys
+ * @constant
+ * @type {number}
+ */
+export
+const Molr_Type_deCipheringKeys: Molr_Type = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary deCipheringKeys
+ * @constant
+ * @type {number}
+ */
+export
+const deCipheringKeys: Molr_Type = Molr_Type_deCipheringKeys; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary Molr_Type_deferredMo_lrTTTPInitiation
+ * @constant
+ * @type {number}
+ */
+export
+const Molr_Type_deferredMo_lrTTTPInitiation: Molr_Type = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary deferredMo_lrTTTPInitiation
+ * @constant
+ * @type {number}
+ */
+export
+const deferredMo_lrTTTPInitiation: Molr_Type = Molr_Type_deferredMo_lrTTTPInitiation; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary Molr_Type_deferredMo_lrSelfLocationInitiation
+ * @constant
+ * @type {number}
+ */
+export
+const Molr_Type_deferredMo_lrSelfLocationInitiation: Molr_Type = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary deferredMo_lrSelfLocationInitiation
+ * @constant
+ * @type {number}
+ */
+export
+const deferredMo_lrSelfLocationInitiation: Molr_Type = Molr_Type_deferredMo_lrSelfLocationInitiation; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary Molr_Type_deferredMt_lrOrmo_lrTTTPLocationEstimate
+ * @constant
+ * @type {number}
+ */
+export
+const Molr_Type_deferredMt_lrOrmo_lrTTTPLocationEstimate: Molr_Type = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary deferredMt_lrOrmo_lrTTTPLocationEstimate
+ * @constant
+ * @type {number}
+ */
+export
+const deferredMt_lrOrmo_lrTTTPLocationEstimate: Molr_Type = Molr_Type_deferredMt_lrOrmo_lrTTTPLocationEstimate; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary Molr_Type_deferredMt_lrOrmo_lrCancellation
+ * @constant
+ * @type {number}
+ */
+export
+const Molr_Type_deferredMt_lrOrmo_lrCancellation: Molr_Type = 6; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary deferredMt_lrOrmo_lrCancellation
+ * @constant
+ * @type {number}
+ */
+export
+const deferredMt_lrOrmo_lrCancellation: Molr_Type = Molr_Type_deferredMt_lrOrmo_lrCancellation; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary Molr_Type_periodicEvent
+ * @constant
+ * @type {number}
+ */
+export
+const Molr_Type_periodicEvent: Molr_Type = 7; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary periodicEvent
+ * @constant
+ * @type {number}
+ */
+export
+const periodicEvent: Molr_Type = Molr_Type_periodicEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary Molr_Type_enteringAreaEvent
+ * @constant
+ * @type {number}
+ */
+export
+const Molr_Type_enteringAreaEvent: Molr_Type = 8; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary enteringAreaEvent
+ * @constant
+ * @type {number}
+ */
+export
+const enteringAreaEvent: Molr_Type = Molr_Type_enteringAreaEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary Molr_Type_leavingAreaEvent
+ * @constant
+ * @type {number}
+ */
+export
+const Molr_Type_leavingAreaEvent: Molr_Type = 9; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary leavingAreaEvent
+ * @constant
+ * @type {number}
+ */
+export
+const leavingAreaEvent: Molr_Type = Molr_Type_leavingAreaEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary Molr_Type_beingInsideAreaEvent
+ * @constant
+ * @type {number}
+ */
+export
+const Molr_Type_beingInsideAreaEvent: Molr_Type = 10; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary beingInsideAreaEvent
+ * @constant
+ * @type {number}
+ */
+export
+const beingInsideAreaEvent: Molr_Type = Molr_Type_beingInsideAreaEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary Molr_Type_motionEvent
+ * @constant
+ * @type {number}
+ */
+export
+const Molr_Type_motionEvent: Molr_Type = 11; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary motionEvent
+ * @constant
+ * @type {number}
+ */
+export
+const motionEvent: Molr_Type = Molr_Type_motionEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary Molr_Type_maximumIntervalExpirationEvent
+ * @constant
+ * @type {number}
+ */
+export
+const Molr_Type_maximumIntervalExpirationEvent: Molr_Type = 12; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary maximumIntervalExpirationEvent
+ * @constant
+ * @type {number}
+ */
+export
+const maximumIntervalExpirationEvent: Molr_Type = Molr_Type_maximumIntervalExpirationEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+export
+const _decode_Molr_Type: $.ASN1Decoder<Molr_Type> = $._decodeEnumerated;
+
+export
+const _encode_Molr_Type: $.ASN1Encoder<Molr_Type> = $._encodeEnumerated;
+
+/* eslint-enable */

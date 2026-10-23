@@ -1,0 +1,13 @@
+Network-Protocol-Profile-definition
+{iso(1) standard(0) pss1-generic-procedures(11582)
+network-protocol-profile-definition(8)}
+DEFINITIONS                        ::=
+BEGIN
+EXPORTS NetworkProtocolProfile;
+
+NetworkProtocolProfile ::= [18] IMPLICIT INTEGER {
+    acse(19),
+    dse(32)
+} (0..254)
+
+END -- of Network Protocol Profile definition

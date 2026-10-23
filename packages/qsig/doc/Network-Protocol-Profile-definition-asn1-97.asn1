@@ -1,0 +1,11 @@
+Network-Protocol-Profile-definition-asn1-97
+{iso(1) standard(0) pss1-generic-procedures(11582)
+network-protocol-profile-definition-asn1-97(19)}
+DEFINITIONS                       ::=
+BEGIN
+NetworkProtocolProfile ::= [18] IMPLICIT INTEGER {
+    acse(19),
+    dse(32)
+} (0..254)
+
+END -- of Network-Protocol-Profile-definition-asn1-97

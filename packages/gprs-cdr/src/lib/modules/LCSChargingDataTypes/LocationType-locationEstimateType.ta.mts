@@ -1,0 +1,18 @@
+export {
+    _enum_for_LocationType_locationEstimateType,
+    type LocationType_locationEstimateType,
+    LocationType_locationEstimateType_currentLocation,
+    currentLocation,
+    LocationType_locationEstimateType_currentOrLastKnownLocation,
+    currentOrLastKnownLocation,
+    LocationType_locationEstimateType_initialLocation,
+    initialLocation,
+    LocationType_locationEstimateType_activateDeferredLocation,
+    activateDeferredLocation,
+    LocationType_locationEstimateType_cancelDeferredLocation,
+    cancelDeferredLocation,
+    LocationType_locationEstimateType_notificationVerificationOnly,
+    notificationVerificationOnly,
+    _decode_LocationType_locationEstimateType,
+    _encode_LocationType_locationEstimateType,
+} from "../shared/LocationType-locationEstimateType.ta.mjs";

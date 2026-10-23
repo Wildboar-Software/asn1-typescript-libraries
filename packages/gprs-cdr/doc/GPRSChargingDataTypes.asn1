@@ -1,0 +1,1450 @@
+-- Modified by Jonathan M. Wilbur to fix invalid syntax.
+--     Expanded ASN1 Module 'GPRSChargingDataTypes'
+--SIEMENS ASN.1 Compiler         R6.31  (Production_6.31)
+--            Date: 2020-07-10 Time: 16:14:40
+
+GPRSChargingDataTypes
+{itu-t(0) identified-organization(4) etsi(0) mobileDomain(0) charging(5)
+gprsChargingDataTypes(2) asn1Module(0) version2(1)}
+DEFINITIONS
+::=
+BEGIN
+
+CauseForRecClosing ::= INTEGER {
+   normalRelease                    ( 0 ),
+   abnormalRelease                  ( 4 ),
+   cAMELInitCallRelease             ( 5 ),
+   volumeLimit                      ( 16 ),
+   timeLimit                        ( 17 ),
+   servingNodeChange                ( 18 ),
+   maxChangeCond                    ( 19 ),
+   managementIntervention           ( 20 ),
+   intraSGSNIntersystemChange       ( 21 ),
+   rATChange                        ( 22 ),
+   mSTimeZoneChange                 ( 23 ),
+   sGSNPLMNIDChange                 ( 24 ),
+   sGWChange                        ( 25 ),
+   aPNAMBRChange                    ( 26 ),
+   mOExceptionDataCounterReceipt    ( 27 ),
+   unauthorizedRequestingNetwork    ( 52 ),
+   unauthorizedLCSClient            ( 53 ),
+   positionMethodFailure            ( 54 ),
+   unknownOrUnreachableLCSClient    ( 58 ),
+   listofDownstreamNodeChange       ( 59 )}
+
+RecordType ::= INTEGER {
+   moCallRecord              ( 0 ),
+   mtCallRecord              ( 1 ),
+   roamingRecord             ( 2 ),
+   incGatewayRecord          ( 3 ),
+   outGatewayRecord          ( 4 ),
+   transitCallRecord         ( 5 ),
+   moSMSRecord               ( 6 ),
+   mtSMSRecord               ( 7 ),
+   moSMSIWRecord             ( 8 ),
+   mtSMSGWRecord             ( 9 ),
+   ssActionRecord            ( 10 ),
+   hlrIntRecord              ( 11 ),
+   locUpdateHLRRecord        ( 12 ),
+   locUpdateVLRRecord        ( 13 ),
+   commonEquipRecord         ( 14 ),
+   moTraceRecord             ( 15 ),
+   mtTraceRecord             ( 16 ),
+   termCAMELRecord           ( 17 ),
+   sgsnPDPRecord             ( 18 ),
+   sgsnMMRecord              ( 20 ),
+   sgsnSMORecord             ( 21 ),
+   sgsnSMTRecord             ( 22 ),
+   mtLCSRecord               ( 23 ),
+   moLCSRecord               ( 24 ),
+   niLCSRecord               ( 25 ),
+   sgsnMTLCSRecord           ( 26 ),
+   sgsnMOLCSRecord           ( 27 ),
+   sgsnNILCSRecord           ( 28 ),
+   mMO1SRecord               ( 30 ),
+   mMO4FRqRecord             ( 31 ),
+   mMO4FRsRecord             ( 32 ),
+   mMO4DRecord               ( 33 ),
+   mMO1DRecord               ( 34 ),
+   mMO4RRecord               ( 35 ),
+   mMO1RRecord               ( 36 ),
+   mMOMDRecord               ( 37 ),
+   mMR4FRecord               ( 38 ),
+   mMR1NRqRecord             ( 39 ),
+   mMR1NRsRecord             ( 40 ),
+   mMR1RtRecord              ( 41 ),
+   mMR1AFRecord              ( 42 ),
+   mMR4DRqRecord             ( 43 ),
+   mMR4DRsRecord             ( 44 ),
+   mMR1RRRecord              ( 45 ),
+   mMR4RRqRecord             ( 46 ),
+   mMR4RRsRecord             ( 47 ),
+   mMRMDRecord               ( 48 ),
+   mMFRecord                 ( 49 ),
+   mMBx1SRecord              ( 50 ),
+   mMBx1VRecord              ( 51 ),
+   mMBx1URecord              ( 52 ),
+   mMBx1DRecord              ( 53 ),
+   mM7SRecord                ( 54 ),
+   mM7DRqRecord              ( 55 ),
+   mM7DRsRecord              ( 56 ),
+   mM7CRecord                ( 57 ),
+   mM7RRecord                ( 58 ),
+   mM7DRRqRecord             ( 59 ),
+   mM7DRRsRecord             ( 60 ),
+   mM7RRqRecord              ( 61 ),
+   mM7RRsRecord              ( 62 ),
+   sCSCFRecord               ( 63 ),
+   pCSCFRecord               ( 64 ),
+   iCSCFRecord               ( 65 ),
+   mRFCRecord                ( 66 ),
+   mGCFRecord                ( 67 ),
+   bGCFRecord                ( 68 ),
+   aSRecord                  ( 69 ),
+   eCSCFRecord               ( 70 ),
+   iBCFRecord                ( 82 ),
+   tRFRecord                 ( 89 ),
+   tFRecord                  ( 90 ),
+   aTCFRecord                ( 91 ),
+   lCSGMORecord              ( 71 ),
+   lCSRGMTRecord             ( 72 ),
+   lCSHGMTRecord             ( 73 ),
+   lCSVGMTRecord             ( 74 ),
+   lCSGNIRecord              ( 75 ),
+   sgsnMBMSRecord            ( 76 ),
+   ggsnMBMSRecord            ( 77 ),
+   gwMBMSRecord              ( 86 ),
+   sUBBMSCRecord             ( 78 ),
+   cONTENTBMSCRecord         ( 79 ),
+   pPFRecord                 ( 80 ),
+   cPFRecord                 ( 81 ),
+   sGWRecord                 ( 84 ),
+   pGWRecord                 ( 85 ),
+   tDFRecord                 ( 92 ),
+   iPERecord                 ( 95 ),
+   ePDGRecord                ( 96 ),
+   tWAGRecord                ( 97 ),
+   mMTelRecord               ( 83 ),
+   mSCsRVCCRecord            ( 87 ),
+   mMTRFRecord               ( 88 ),
+   iCSRegisterRecord         ( 99 ),
+   sCSMORecord               ( 93 ),
+   sCSMTRecord               ( 94 ),
+   pFDDRecord                ( 100 ),
+   pFEDRecord                ( 101 ),
+   pFDCRecord                ( 102 ),
+   mECORecord                ( 103 ),
+   mERERecord                ( 104 ),
+   cPDTSCERecord             ( 105 ),
+   cPDTSNNRecord             ( 106 ),
+   sCDVTT4Record             ( 110 ),
+   sCSMOT4Record             ( 111 ),
+   iSMSMORecord              ( 112 ),
+   iSMSMTRecord              ( 113 ),
+   eASCERecord               ( 120 ),
+   chargingFunctionRecord    ( 200 )}
+
+ThreeGPPPSDataOffStatus ::= ENUMERATED {
+   active      ( 0 ),
+   inactive    ( 1 ) }
+
+DefaultTransactionHandling ::= ENUMERATED {
+   continueTransaction    ( 0 ),
+   releaseTransaction     ( 1 ),
+   ...  }
+
+LCSClientType ::= ENUMERATED {
+   emergencyServices          ( 0 ),
+   valueAddedServices         ( 1 ),
+   plmnOperatorServices       ( 2 ),
+   lawfulInterceptServices    ( 3 ),
+   ...  }
+
+PositionMethodFailure-Diagnostic ::= ENUMERATED {
+   congestion                                  ( 0 ),
+   insufficientResources                       ( 1 ),
+   insufficientMeasurementData                 ( 2 ),
+   inconsistentMeasurementData                 ( 3 ),
+   locationProcedureNotCompleted               ( 4 ),
+   locationProcedureNotSupportedByTargetMS     ( 5 ),
+   qoSNotAttainable                            ( 6 ),
+   positionMethodNotAvailableInNetwork         ( 7 ),
+   positionMethodNotAvailableInLocationArea    ( 8 ),
+   ...  }
+
+UnauthorizedLCSClient-Diagnostic ::= ENUMERATED {
+   noAdditionalInformation                           ( 0 ),
+   clientNotInMSPrivacyExceptionList                 ( 1 ),
+   callToClientNotSetup                              ( 2 ),
+   privacyOverrideNotApplicable                      ( 3 ),
+   disallowedByLocalRegulatoryRequirements           ( 4 ),
+   ... ,
+   unauthorizedPrivacyClass                          ( 5 ),
+   unauthorizedCallSessionUnrelatedExternalClient    ( 6 ),
+   unauthorizedCallSessionRelatedExternalClient      ( 7 ) }
+
+Pcs-Extensions ::= SEQUENCE {
+   ... }
+
+EnhancedDiagnostics ::= SEQUENCE {
+   rANNASCause   [0] IMPLICIT SEQUENCE  OF
+      OCTET STRING}
+
+IPBinV6AddressWithPrefixLength ::= SEQUENCE {
+   iPBinV6Address           OCTET STRING ( SIZE( 16 ) ),
+   pDPAddressPrefixLength   INTEGER ( 1 .. 64 ) DEFAULT 64}
+
+ServiceSpecificInfo ::= SEQUENCE {
+   serviceSpecificData   [0] IMPLICIT GraphicString OPTIONAL,
+   serviceSpecificType   [1] IMPLICIT INTEGER OPTIONAL}
+
+IPTextRepresentedAddress ::= CHOICE {
+   iPTextV4Address     [2] IMPLICIT IA5String  ( SIZE( 7 .. 15 ) ),
+   iPTextV6Address     [3] IMPLICIT IA5String  ( SIZE( 15 .. 45 ) )}
+
+IPBinV6AddressWithOrWithoutPrefixLength ::= CHOICE {
+   iPBinV6Address               [1] IMPLICIT OCTET STRING ( SIZE( 16 ) ),
+   iPBinV6AddressWithPrefix     [4] IMPLICIT IPBinV6AddressWithPrefixLength}
+
+IPBinaryAddress ::= CHOICE {
+   iPBinV4Address     [0] IMPLICIT OCTET STRING ( SIZE( 4 ) ),
+   iPBinV6Address     IPBinV6AddressWithOrWithoutPrefixLength}
+
+PDPAddress ::= CHOICE {
+   iPAddress     [0] GSNAddress}
+
+SCSASAddress ::= SET {
+   sCSAddress   [1] GSNAddress,
+   sCSRealm     [2] IMPLICIT OCTET STRING}
+
+PrivateExtension ::= SEQUENCE {
+   extId      MAP-EXTENSION.&extensionId ({ExtensionSet}) ,
+   extType    MAP-EXTENSION.&ExtensionType ({ExtensionSet}{@extId})  OPTIONAL}
+
+ExtensionContainer ::= SEQUENCE {
+   privateExtensionList   [0] IMPLICIT SEQUENCE  ( SIZE( 1 .. 10 ) ) OF
+      PrivateExtension OPTIONAL,
+   pcs-Extensions         [1] IMPLICIT Pcs-Extensions OPTIONAL,
+   ... }
+
+LCSClientExternalID ::= SEQUENCE {
+   externalAddress      [0] IMPLICIT OCTET STRING ( SIZE( 1 .. 20 ) ) ( SIZE( 1 .. 9 ) ) OPTIONAL,
+   extensionContainer   [1] IMPLICIT ExtensionContainer OPTIONAL,
+   ... }
+
+LocationAreaAndCell ::= SEQUENCE {
+   locationAreaCode   [0] IMPLICIT OCTET STRING ( SIZE( 2 ) ),
+   cellId             [1] IMPLICIT OCTET STRING ( SIZE( 2 ) ),
+   mCC-MNC            [2] IMPLICIT OCTET STRING ( SIZE( 3 ) ) OPTIONAL}
+
+SubscriptionID ::= SET {
+   subscriptionIDType   [0] IMPLICIT ENUMERATED {
+      eND-USER-E164       ( 0 ),
+      eND-USER-IMSI       ( 1 ),
+      eND-USER-SIP-URI    ( 2 ),
+      eND-USER-NAI        ( 3 ),
+      eND-USER-PRIVATE    ( 4 ) },
+   subscriptionIDData   [1] IMPLICIT UTF8String}
+
+ManagementExtension ::= SEQUENCE {
+   identifier     DMI-EXTENSION.&id ({ManagementExtensionSet}) ,
+   significance   [1] IMPLICIT BOOLEAN DEFAULT FALSE,
+   information    [2] DMI-EXTENSION.&Value ({ManagementExtensionSet}{@.identifier}) }
+
+LCSClientIdentity ::= SEQUENCE {
+   lcsClientExternalID   [0] IMPLICIT LCSClientExternalID OPTIONAL,
+   lcsClientDialedByMS   [1] IMPLICIT OCTET STRING ( SIZE( 1 .. 20 ) ) OPTIONAL,
+   lcsClientInternalID   [2] IMPLICIT ENUMERATED {
+      broadcastService             ( 0 ),
+      o-andM-HPLMN                 ( 1 ),
+      o-andM-VPLMN                 ( 2 ),
+      anonymousLocation            ( 3 ),
+      targetMSsubscribedService    ( 4 ),
+      ...  } OPTIONAL}
+
+LocationType ::= SEQUENCE {
+   locationEstimateType        [0] IMPLICIT ENUMERATED {
+      currentLocation                 ( 0 ),
+      currentOrLastKnownLocation      ( 1 ),
+      initialLocation                 ( 2 ),
+      ... ,
+      activateDeferredLocation        ( 3 ),
+      cancelDeferredLocation          ( 4 ),
+      notificationVerificationOnly    ( 5 ) },
+   ... ,
+   deferredLocationEventType   [1] IMPLICIT BIT STRING {
+      msAvailable  (0 ),
+      enteringIntoArea  (1 ),
+      leavingFromArea  (2 ),
+      beingInsideArea  (3 ),
+      periodicLDR  (4 )} ( SIZE( 1 .. 16 ) ) OPTIONAL}
+
+MBMSInformation ::= SET {
+   tMGI                        [1] IMPLICIT OCTET STRING OPTIONAL,
+   mBMSSessionIdentity         [2] IMPLICIT OCTET STRING ( SIZE( 1 ) ) OPTIONAL,
+   mBMSServiceType             [3] IMPLICIT ENUMERATED {
+      mULTICAST    ( 0 ),
+      bROADCAST    ( 1 ) } OPTIONAL,
+   mBMSUserServiceType         [4] IMPLICIT ENUMERATED {
+      dOWNLOAD     ( 0 ),
+      sTREAMING    ( 1 ) } OPTIONAL,
+   mBMS2G3GIndicator           [5] IMPLICIT ENUMERATED {
+      twoG               ( 0 ),
+      threeG             ( 1 ),
+      twoG-AND-threeG    ( 2 ) } OPTIONAL,
+   fileRepairSupported         [6] IMPLICIT BOOLEAN OPTIONAL,
+   rAI                         [7] IMPLICIT OCTET STRING ( SIZE( 1 ) ) OPTIONAL,
+   mBMSServiceArea             [8] IMPLICIT OCTET STRING OPTIONAL,
+   requiredMBMSBearerCaps      [9] IMPLICIT OCTET STRING ( SIZE( 3 .. 14 ) ) OPTIONAL,
+   mBMSGWAddress               [10] GSNAddress OPTIONAL,
+   cNIPMulticastDistribution   [11] IMPLICIT ENUMERATED {
+      nO-IP-MULTICAST    ( 0 ),
+      iP-MULTICAST       ( 1 ) } OPTIONAL,
+   mBMSDataTransferStart       [12] IMPLICIT OCTET STRING ( SIZE( 8 ) ) OPTIONAL,
+   mBMSDataTransferStop        [13] IMPLICIT OCTET STRING ( SIZE( 8 ) ) OPTIONAL}
+
+Diagnostics ::= CHOICE {
+   gsm0408Cause                                [0] IMPLICIT INTEGER,
+   gsm0902MapErrorValue                        [1] IMPLICIT INTEGER,
+   itu-tQ767Cause                              [2] IMPLICIT INTEGER,
+   networkSpecificCause                        [3] IMPLICIT ManagementExtension,
+   manufacturerSpecificCause                   [4] IMPLICIT ManagementExtension,
+   positionMethodFailureCause                  [5] IMPLICIT PositionMethodFailure-Diagnostic,
+   unauthorizedLCSClientCause                  [6] IMPLICIT UnauthorizedLCSClient-Diagnostic,
+   diameterResultCodeAndExperimentalResult     [7] IMPLICIT INTEGER}
+
+GPRSRecord ::= CHOICE {
+   sgsnPDPRecord       [20] IMPLICIT SGSNPDPRecord,
+   sgsnMMRecord        [22] IMPLICIT SGSNMMRecord,
+   sgsnSMORecord       [23] IMPLICIT SGSNSMORecord,
+   sgsnSMTRecord       [24] IMPLICIT SGSNSMTRecord,
+   sgsnMTLCSRecord     [25] IMPLICIT SGSNMTLCSRecord,
+   sgsnMOLCSRecord     [26] IMPLICIT SGSNMOLCSRecord,
+   sgsnNILCSRecord     [27] IMPLICIT SGSNNILCSRecord,
+   sgsnMBMSRecord      [76] IMPLICIT SGSNMBMSRecord,
+   ggsnMBMSRecord      [77] IMPLICIT GGSNMBMSRecord,
+   sGWRecord           [78] IMPLICIT SGWRecord,
+   pGWRecord           [79] IMPLICIT PGWRecord,
+   gwMBMSRecord        [86] IMPLICIT GWMBMSRecord,
+   tDFRecord           [92] IMPLICIT TDFRecord,
+   iPERecord           [95] IMPLICIT IPERecord,
+   ePDGRecord          [96] IMPLICIT EPDGRecord,
+   tWAGRecord          [97] IMPLICIT TWAGRecord}
+
+SGWRecord  ::= SET {
+   recordType                          [0] IMPLICIT RecordType,
+   servedIMSI                          [3] IMPLICIT OCTET STRING ( SIZE( 3 .. 8 ) ) OPTIONAL,
+   s-GWAddress                         [4] GSNAddress,
+   chargingID                          [5] IMPLICIT INTEGER ( 0 .. 4294967295 ),
+   servingNodeAddress                  [6] IMPLICIT SEQUENCE  OF
+      GSNAddress,
+   accessPointNameNI                   [7] IMPLICIT IA5String  ( SIZE( 1 .. 63 ) ) OPTIONAL,
+   pdpPDNType                          [8] IMPLICIT OCTET STRING ( SIZE( 2 ) ) OPTIONAL,
+   servedPDPPDNAddress                 [9] PDPAddress OPTIONAL,
+   dynamicAddressFlag                  [11] IMPLICIT BOOLEAN OPTIONAL,
+   listOfTrafficVolumes                [12] IMPLICIT SEQUENCE  OF
+      ChangeOfCharCondition OPTIONAL,
+   recordOpeningTime                   [13] IMPLICIT OCTET STRING ( SIZE( 9 ) ),
+   duration                            [14] IMPLICIT INTEGER,
+   causeForRecClosing                  [15] IMPLICIT CauseForRecClosing,
+   diagnostics                         [16] Diagnostics OPTIONAL,
+   recordSequenceNumber                [17] IMPLICIT INTEGER OPTIONAL,
+   nodeID                              [18] IMPLICIT IA5String  ( SIZE( 1 .. 20 ) ) OPTIONAL,
+   recordExtensions                    [19] IMPLICIT SET  OF
+      ManagementExtension OPTIONAL,
+   localSequenceNumber                 [20] IMPLICIT INTEGER ( 0 .. 4294967295 ) OPTIONAL,
+   apnSelectionMode                    [21] IMPLICIT APNSelectionMode OPTIONAL,
+   servedMSISDN                        [22] IMPLICIT OCTET STRING ( SIZE( 1 .. 20 ) ) ( SIZE( 1 .. 9 ) ) OPTIONAL,
+   chargingCharacteristics             [23] IMPLICIT OCTET STRING ( SIZE( 2 ) ),
+   chChSelectionMode                   [24] IMPLICIT ChChSelectionMode OPTIONAL,
+   iMSsignalingContext                 [25] IMPLICIT NULL OPTIONAL,
+   servingNodePLMNIdentifier           [27] IMPLICIT OCTET STRING ( SIZE( 3 ) ) OPTIONAL,
+   servedIMEI                          [29] IMPLICIT OCTET STRING ( SIZE( 8 ) ) OPTIONAL,
+   rATType                             [30] IMPLICIT INTEGER ( 0 .. 255 ) OPTIONAL,
+   mSTimeZone                          [31] IMPLICIT OCTET STRING ( SIZE( 2 ) ) OPTIONAL,
+   userLocationInformation             [32] IMPLICIT OCTET STRING OPTIONAL,
+   sGWChange                           [34] IMPLICIT BOOLEAN OPTIONAL,
+   servingNodeType                     [35] IMPLICIT SEQUENCE  OF
+      ServingNodeType,
+   p-GWAddressUsed                     [36] GSNAddress OPTIONAL,
+   p-GWPLMNIdentifier                  [37] IMPLICIT OCTET STRING ( SIZE( 3 ) ) OPTIONAL,
+   startTime                           [38] IMPLICIT OCTET STRING ( SIZE( 9 ) ) OPTIONAL,
+   stopTime                            [39] IMPLICIT OCTET STRING ( SIZE( 9 ) ) OPTIONAL,
+   pDNConnectionChargingID             [40] IMPLICIT INTEGER ( 0 .. 4294967295 ) OPTIONAL,
+   iMSIunauthenticatedFlag             [41] IMPLICIT NULL OPTIONAL,
+   userCSGInformation                  [42] IMPLICIT UserCSGInformation OPTIONAL,
+   servedPDPPDNAddressExt              [43] PDPAddress OPTIONAL,
+   lowPriorityIndicator                [44] IMPLICIT NULL OPTIONAL,
+   dynamicAddressFlagExt               [47] IMPLICIT BOOLEAN OPTIONAL,
+   s-GWiPv6Address                     [48] GSNAddress OPTIONAL,
+   servingNodeiPv6Address              [49] IMPLICIT SEQUENCE  OF
+      GSNAddress OPTIONAL,
+   p-GWiPv6AddressUsed                 [50] GSNAddress OPTIONAL,
+   retransmission                      [51] IMPLICIT NULL OPTIONAL,
+   userLocationInfoTime                [52] IMPLICIT OCTET STRING ( SIZE( 9 ) ) OPTIONAL,
+   cNOperatorSelectionEnt              [53] IMPLICIT CNOperatorSelectionEntity OPTIONAL,
+   presenceReportingAreaInfo           [54] IMPLICIT PresenceReportingAreaInfo OPTIONAL,
+   lastUserLocationInformation         [55] IMPLICIT OCTET STRING OPTIONAL,
+   lastMSTimeZone                      [56] IMPLICIT OCTET STRING ( SIZE( 2 ) ) OPTIONAL,
+   enhancedDiagnostics                 [57] IMPLICIT EnhancedDiagnostics OPTIONAL,
+   cPCIoTEPSOptimisationIndicator      [59] IMPLICIT BOOLEAN OPTIONAL,
+   uNIPDUCPOnlyFlag                    [60] IMPLICIT BOOLEAN OPTIONAL,
+   servingPLMNRateControl              [61] IMPLICIT ServingPLMNRateControl OPTIONAL,
+   pDPPDNTypeExtension                 [62] IMPLICIT INTEGER OPTIONAL,
+   mOExceptionDataCounter              [63] IMPLICIT MOExceptionDataCounter OPTIONAL,
+   listOfRANSecondaryRATUsageReports   [64] IMPLICIT SEQUENCE  OF
+      RANSecondaryRATUsageReport OPTIONAL}
+
+PGWRecord  ::= SET {
+   recordType                          [0] IMPLICIT RecordType,
+   servedIMSI                          [3] IMPLICIT OCTET STRING ( SIZE( 3 .. 8 ) ) OPTIONAL,
+   p-GWAddress                         [4] GSNAddress,
+   chargingID                          [5] IMPLICIT INTEGER ( 0 .. 4294967295 ),
+   servingNodeAddress                  [6] IMPLICIT SEQUENCE  OF
+      GSNAddress,
+   accessPointNameNI                   [7] IMPLICIT IA5String  ( SIZE( 1 .. 63 ) ) OPTIONAL,
+   pdpPDNType                          [8] IMPLICIT OCTET STRING ( SIZE( 2 ) ) OPTIONAL,
+   servedPDPPDNAddress                 [9] PDPAddress OPTIONAL,
+   dynamicAddressFlag                  [11] IMPLICIT BOOLEAN OPTIONAL,
+   listOfTrafficVolumes                [12] IMPLICIT SEQUENCE  OF
+      ChangeOfCharCondition OPTIONAL,
+   recordOpeningTime                   [13] IMPLICIT OCTET STRING ( SIZE( 9 ) ),
+   duration                            [14] IMPLICIT INTEGER,
+   causeForRecClosing                  [15] IMPLICIT CauseForRecClosing,
+   diagnostics                         [16] Diagnostics OPTIONAL,
+   recordSequenceNumber                [17] IMPLICIT INTEGER OPTIONAL,
+   nodeID                              [18] IMPLICIT IA5String  ( SIZE( 1 .. 20 ) ) OPTIONAL,
+   recordExtensions                    [19] IMPLICIT SET  OF
+      ManagementExtension OPTIONAL,
+   localSequenceNumber                 [20] IMPLICIT INTEGER ( 0 .. 4294967295 ) OPTIONAL,
+   apnSelectionMode                    [21] IMPLICIT APNSelectionMode OPTIONAL,
+   servedMSISDN                        [22] IMPLICIT OCTET STRING ( SIZE( 1 .. 20 ) ) ( SIZE( 1 .. 9 ) ) OPTIONAL,
+   chargingCharacteristics             [23] IMPLICIT OCTET STRING ( SIZE( 2 ) ),
+   chChSelectionMode                   [24] IMPLICIT ChChSelectionMode OPTIONAL,
+   iMSsignalingContext                 [25] IMPLICIT NULL OPTIONAL,
+   servingNodePLMNIdentifier           [27] IMPLICIT OCTET STRING ( SIZE( 3 ) ) OPTIONAL,
+   pSFurnishChargingInformation        [28] IMPLICIT PSFurnishChargingInformation OPTIONAL,
+   servedIMEI                          [29] IMPLICIT OCTET STRING ( SIZE( 8 ) ) OPTIONAL,
+   rATType                             [30] IMPLICIT INTEGER ( 0 .. 255 ) OPTIONAL,
+   mSTimeZone                          [31] IMPLICIT OCTET STRING ( SIZE( 2 ) ) OPTIONAL,
+   userLocationInformation             [32] IMPLICIT OCTET STRING OPTIONAL,
+   cAMELChargingInformation            [33] IMPLICIT OCTET STRING OPTIONAL,
+   listOfServiceData                   [34] IMPLICIT SEQUENCE  OF
+      ChangeOfServiceCondition OPTIONAL,
+   servingNodeType                     [35] IMPLICIT SEQUENCE  OF
+      ServingNodeType,
+   servedMNNAI                         [36] IMPLICIT SubscriptionID OPTIONAL,
+   p-GWPLMNIdentifier                  [37] IMPLICIT OCTET STRING ( SIZE( 3 ) ) OPTIONAL,
+   startTime                           [38] IMPLICIT OCTET STRING ( SIZE( 9 ) ) OPTIONAL,
+   stopTime                            [39] IMPLICIT OCTET STRING ( SIZE( 9 ) ) OPTIONAL,
+   served3gpp2MEID                     [40] IMPLICIT OCTET STRING OPTIONAL,
+   pDNConnectionChargingID             [41] IMPLICIT INTEGER ( 0 .. 4294967295 ) OPTIONAL,
+   iMSIunauthenticatedFlag             [42] IMPLICIT NULL OPTIONAL,
+   userCSGInformation                  [43] IMPLICIT UserCSGInformation OPTIONAL,
+   threeGPP2UserLocationInformation    [44] IMPLICIT OCTET STRING OPTIONAL,
+   servedPDPPDNAddressExt              [45] PDPAddress OPTIONAL,
+   lowPriorityIndicator                [46] IMPLICIT NULL OPTIONAL,
+   dynamicAddressFlagExt               [47] IMPLICIT BOOLEAN OPTIONAL,
+   servingNodeiPv6Address              [49] IMPLICIT SEQUENCE  OF
+      GSNAddress OPTIONAL,
+   p-GWiPv6AddressUsed                 [50] GSNAddress OPTIONAL,
+   tWANUserLocationInformation         [51] IMPLICIT TWANUserLocationInfo OPTIONAL,
+   retransmission                      [52] IMPLICIT NULL OPTIONAL,
+   userLocationInfoTime                [53] IMPLICIT OCTET STRING ( SIZE( 9 ) ) OPTIONAL,
+   cNOperatorSelectionEnt              [54] IMPLICIT CNOperatorSelectionEntity OPTIONAL,
+   ePCQoSInformation                   [55] IMPLICIT EPCQoSInformation OPTIONAL,
+   presenceReportingAreaInfo           [56] IMPLICIT PresenceReportingAreaInfo OPTIONAL,
+   lastUserLocationInformation         [57] IMPLICIT OCTET STRING OPTIONAL,
+   lastMSTimeZone                      [58] IMPLICIT OCTET STRING ( SIZE( 2 ) ) OPTIONAL,
+   enhancedDiagnostics                 [59] IMPLICIT EnhancedDiagnostics OPTIONAL,
+   nBIFOMMode                          [60] IMPLICIT NBIFOMMode OPTIONAL,
+   nBIFOMSupport                       [61] IMPLICIT NBIFOMSupport OPTIONAL,
+   uWANUserLocationInformation         [62] IMPLICIT UWANUserLocationInfo OPTIONAL,
+   sGiPtPTunnellingMethod              [64] IMPLICIT SGiPtPTunnellingMethod OPTIONAL,
+   uNIPDUCPOnlyFlag                    [65] IMPLICIT BOOLEAN OPTIONAL,
+   servingPLMNRateControl              [66] IMPLICIT ServingPLMNRateControl OPTIONAL,
+   aPNRateControl                      [67] IMPLICIT APNRateControl OPTIONAL,
+   pDPPDNTypeExtension                 [68] IMPLICIT INTEGER OPTIONAL,
+   mOExceptionDataCounter              [69] IMPLICIT MOExceptionDataCounter OPTIONAL,
+   chargingPerIPCANSessionIndicator    [70] IMPLICIT ChargingPerIPCANSessionIndicator OPTIONAL,
+   threeGPPPSDataOffStatus             [71] IMPLICIT ThreeGPPPSDataOffStatus OPTIONAL,
+   sCSASAddress                        [72] IMPLICIT SCSASAddress OPTIONAL,
+   listOfRANSecondaryRATUsageReports   [73] IMPLICIT SEQUENCE  OF
+      RANSecondaryRATUsageReport OPTIONAL}
+
+TDFRecord  ::= SET {
+   recordType                         [0] IMPLICIT RecordType,
+   servedIMSI                         [3] IMPLICIT OCTET STRING ( SIZE( 3 .. 8 ) ) OPTIONAL,
+   p-GWAddress                        [4] GSNAddress,
+   servingNodeAddress                 [6] IMPLICIT SEQUENCE  OF
+      GSNAddress,
+   accessPointNameNI                  [7] IMPLICIT IA5String  ( SIZE( 1 .. 63 ) ) OPTIONAL,
+   pdpPDNType                         [8] IMPLICIT OCTET STRING ( SIZE( 2 ) ) OPTIONAL,
+   servedPDPPDNAddress                [9] PDPAddress OPTIONAL,
+   dynamicAddressFlag                 [11] IMPLICIT BOOLEAN OPTIONAL,
+   recordOpeningTime                  [13] IMPLICIT OCTET STRING ( SIZE( 9 ) ),
+   duration                           [14] IMPLICIT INTEGER,
+   causeForRecClosing                 [15] IMPLICIT CauseForRecClosing,
+   diagnostics                        [16] Diagnostics OPTIONAL,
+   recordSequenceNumber               [17] IMPLICIT INTEGER OPTIONAL,
+   nodeID                             [18] IMPLICIT IA5String  ( SIZE( 1 .. 20 ) ) OPTIONAL,
+   recordExtensions                   [19] IMPLICIT SET  OF
+      ManagementExtension OPTIONAL,
+   localSequenceNumber                [20] IMPLICIT INTEGER ( 0 .. 4294967295 ) OPTIONAL,
+   apnSelectionMode                   [21] IMPLICIT APNSelectionMode OPTIONAL,
+   servedMSISDN                       [22] IMPLICIT OCTET STRING ( SIZE( 1 .. 20 ) ) ( SIZE( 1 .. 9 ) ) OPTIONAL,
+   chargingCharacteristics            [23] IMPLICIT OCTET STRING ( SIZE( 2 ) ),
+   chChSelectionMode                  [24] IMPLICIT ChChSelectionMode OPTIONAL,
+   servingNodePLMNIdentifier          [27] IMPLICIT OCTET STRING ( SIZE( 3 ) ) OPTIONAL,
+   pSFurnishChargingInformation       [28] IMPLICIT PSFurnishChargingInformation OPTIONAL,
+   servedIMEI                         [29] IMPLICIT OCTET STRING ( SIZE( 8 ) ) OPTIONAL,
+   rATType                            [30] IMPLICIT INTEGER ( 0 .. 255 ) OPTIONAL,
+   mSTimeZone                         [31] IMPLICIT OCTET STRING ( SIZE( 2 ) ) OPTIONAL,
+   userLocationInformation            [32] IMPLICIT OCTET STRING OPTIONAL,
+   listOfServiceData                  [34] IMPLICIT SEQUENCE  OF
+      ChangeOfServiceCondition OPTIONAL,
+   servingNodeType                    [35] IMPLICIT SEQUENCE  OF
+      ServingNodeType,
+   servedMNNAI                        [36] IMPLICIT SubscriptionID OPTIONAL,
+   p-GWPLMNIdentifier                 [37] IMPLICIT OCTET STRING ( SIZE( 3 ) ) OPTIONAL,
+   startTime                          [38] IMPLICIT OCTET STRING ( SIZE( 9 ) ) OPTIONAL,
+   stopTime                           [39] IMPLICIT OCTET STRING ( SIZE( 9 ) ) OPTIONAL,
+   served3gpp2MEID                    [40] IMPLICIT OCTET STRING OPTIONAL,
+   pDNConnectionChargingID            [41] IMPLICIT INTEGER ( 0 .. 4294967295 ),
+   userCSGInformation                 [43] IMPLICIT UserCSGInformation OPTIONAL,
+   threeGPP2UserLocationInformation   [44] IMPLICIT OCTET STRING OPTIONAL,
+   servedPDPPDNAddressExt             [45] PDPAddress OPTIONAL,
+   dynamicAddressFlagExt              [47] IMPLICIT BOOLEAN OPTIONAL,
+   servingNodeiPv6Address             [49] IMPLICIT SEQUENCE  OF
+      GSNAddress OPTIONAL,
+   p-GWiPv6AddressUsed                [50] GSNAddress OPTIONAL,
+   tWANUserLocationInformation        [51] IMPLICIT TWANUserLocationInfo OPTIONAL,
+   retransmission                     [52] IMPLICIT NULL OPTIONAL,
+   tDFAddress                         [53] GSNAddress,
+   tDFiPv6AddressUsed                 [54] GSNAddress OPTIONAL,
+   tDFPLMNIdentifier                  [55] IMPLICIT OCTET STRING ( SIZE( 3 ) ) OPTIONAL,
+   servedFixedSubsID                  [56] IMPLICIT OCTET STRING OPTIONAL,
+   accessLineIdentifier               [57] IMPLICIT AccessLineIdentifier OPTIONAL,
+   fixedUserLocationInformation       [59] IMPLICIT FixedUserLocationInformation OPTIONAL}
+
+IPERecord  ::= SET {
+   recordType                     [0] IMPLICIT RecordType,
+   servedIMSI                     [3] IMPLICIT OCTET STRING ( SIZE( 3 .. 8 ) ) OPTIONAL,
+   iPEdgeAddress                  [4] GSNAddress,
+   chargingID                     [5] IMPLICIT INTEGER ( 0 .. 4294967295 ),
+   accessPointNameNI              [7] IMPLICIT IA5String  ( SIZE( 1 .. 63 ) ) OPTIONAL,
+   iPCANsessionType               [8] IMPLICIT OCTET STRING ( SIZE( 2 ) ) OPTIONAL,
+   servedIPCANsessionAddress      [9] PDPAddress OPTIONAL,
+   dynamicAddressFlag             [11] IMPLICIT BOOLEAN OPTIONAL,
+   listOfTrafficVolumes           [12] IMPLICIT SEQUENCE  OF
+      ChangeOfCharCondition OPTIONAL,
+   recordOpeningTime              [13] IMPLICIT OCTET STRING ( SIZE( 9 ) ),
+   duration                       [14] IMPLICIT INTEGER,
+   causeForRecClosing             [15] IMPLICIT CauseForRecClosing,
+   diagnostics                    [16] Diagnostics OPTIONAL,
+   recordSequenceNumber           [17] IMPLICIT INTEGER OPTIONAL,
+   nodeID                         [18] IMPLICIT IA5String  ( SIZE( 1 .. 20 ) ) OPTIONAL,
+   recordExtensions               [19] IMPLICIT SET  OF
+      ManagementExtension OPTIONAL,
+   localSequenceNumber            [20] IMPLICIT INTEGER ( 0 .. 4294967295 ) OPTIONAL,
+   servedMSISDN                   [22] IMPLICIT OCTET STRING ( SIZE( 1 .. 20 ) ) ( SIZE( 1 .. 9 ) ) OPTIONAL,
+   chargingCharacteristics        [23] IMPLICIT OCTET STRING ( SIZE( 2 ) ),
+   chChSelectionMode              [24] IMPLICIT ChChSelectionMode OPTIONAL,
+   pSFurnishChargingInformation   [28] IMPLICIT PSFurnishChargingInformation OPTIONAL,
+   servedIMEI                     [29] IMPLICIT OCTET STRING ( SIZE( 8 ) ) OPTIONAL,
+   listOfServiceData              [34] IMPLICIT SEQUENCE  OF
+      ChangeOfServiceCondition OPTIONAL,
+   servedMNNAI                    [36] IMPLICIT SubscriptionID OPTIONAL,
+   iPEdgeOperatorIdentifier       [37] IMPLICIT OCTET STRING ( SIZE( 3 ) ) OPTIONAL,
+   startTime                      [38] IMPLICIT OCTET STRING ( SIZE( 9 ) ) OPTIONAL,
+   stopTime                       [39] IMPLICIT OCTET STRING ( SIZE( 9 ) ) OPTIONAL,
+   servedIPCANsessionAddressExt   [45] PDPAddress OPTIONAL,
+   dynamicAddressFlagExt          [47] IMPLICIT BOOLEAN OPTIONAL,
+   iPEdgeiPv6AddressUsed          [50] GSNAddress OPTIONAL,
+   retransmission                 [52] IMPLICIT NULL OPTIONAL,
+   servedFixedSubsID              [55] IMPLICIT OCTET STRING OPTIONAL,
+   accessLineIdentifier           [56] IMPLICIT AccessLineIdentifier OPTIONAL,
+   fixedUserLocationInformation   [57] IMPLICIT FixedUserLocationInformation OPTIONAL}
+
+EPDGRecord ::= SET {
+   recordType                    [0] IMPLICIT RecordType,
+   servedIMSI                    [3] IMPLICIT OCTET STRING ( SIZE( 3 .. 8 ) ) OPTIONAL,
+   ePDGAddressUsed               [4] GSNAddress,
+   chargingID                    [5] IMPLICIT INTEGER ( 0 .. 4294967295 ),
+   accessPointNameNI             [7] IMPLICIT IA5String  ( SIZE( 1 .. 63 ) ) OPTIONAL,
+   pdpPDNType                    [8] IMPLICIT OCTET STRING ( SIZE( 2 ) ) OPTIONAL,
+   servedPDPPDNAddress           [9] PDPAddress OPTIONAL,
+   dynamicAddressFlag            [11] IMPLICIT BOOLEAN OPTIONAL,
+   listOfTrafficVolumes          [12] IMPLICIT SEQUENCE  OF
+      ChangeOfCharCondition OPTIONAL,
+   recordOpeningTime             [13] IMPLICIT OCTET STRING ( SIZE( 9 ) ),
+   duration                      [14] IMPLICIT INTEGER,
+   causeForRecClosing            [15] IMPLICIT CauseForRecClosing,
+   diagnostics                   [16] Diagnostics OPTIONAL,
+   recordSequenceNumber          [17] IMPLICIT INTEGER OPTIONAL,
+   nodeID                        [18] IMPLICIT IA5String  ( SIZE( 1 .. 20 ) ) OPTIONAL,
+   recordExtensions              [19] IMPLICIT SET  OF
+      ManagementExtension OPTIONAL,
+   localSequenceNumber           [20] IMPLICIT INTEGER ( 0 .. 4294967295 ) OPTIONAL,
+   apnSelectionMode              [21] IMPLICIT APNSelectionMode OPTIONAL,
+   servedMSISDN                  [22] IMPLICIT OCTET STRING ( SIZE( 1 .. 20 ) ) ( SIZE( 1 .. 9 ) ) OPTIONAL,
+   chargingCharacteristics       [23] IMPLICIT OCTET STRING ( SIZE( 2 ) ),
+   chChSelectionMode             [24] IMPLICIT ChChSelectionMode OPTIONAL,
+   iMSsignalingContext           [25] IMPLICIT NULL OPTIONAL,
+   servedIMEI                    [29] IMPLICIT OCTET STRING ( SIZE( 8 ) ) OPTIONAL,
+   rATType                       [30] IMPLICIT INTEGER ( 0 .. 255 ) OPTIONAL,
+   sGWChange                     [34] IMPLICIT BOOLEAN OPTIONAL,
+   p-GWAddressUsed               [36] GSNAddress OPTIONAL,
+   p-GWPLMNIdentifier            [37] IMPLICIT OCTET STRING ( SIZE( 3 ) ) OPTIONAL,
+   startTime                     [38] IMPLICIT OCTET STRING ( SIZE( 9 ) ) OPTIONAL,
+   stopTime                      [39] IMPLICIT OCTET STRING ( SIZE( 9 ) ) OPTIONAL,
+   pDNConnectionChargingID       [40] IMPLICIT INTEGER ( 0 .. 4294967295 ) OPTIONAL,
+   servedPDPPDNAddressExt        [43] PDPAddress OPTIONAL,
+   dynamicAddressFlagExt         [47] IMPLICIT BOOLEAN OPTIONAL,
+   ePDGiPv6AddressUsed           [48] GSNAddress OPTIONAL,
+   p-GWiPv6AddressUsed           [50] GSNAddress OPTIONAL,
+   retransmission                [51] IMPLICIT NULL OPTIONAL,
+   enhancedDiagnostics           [52] IMPLICIT EnhancedDiagnostics OPTIONAL,
+   uWANUserLocationInformation   [53] IMPLICIT UWANUserLocationInfo OPTIONAL,
+   userLocationInfoTime          [54] IMPLICIT OCTET STRING ( SIZE( 9 ) ) OPTIONAL,
+   iMSIunauthenticatedFlag       [55] IMPLICIT NULL OPTIONAL}
+
+TWAGRecord ::= SET {
+   recordType                    [0] IMPLICIT RecordType,
+   servedIMSI                    [3] IMPLICIT OCTET STRING ( SIZE( 3 .. 8 ) ) OPTIONAL,
+   tWAGAddressUsed               [4] GSNAddress,
+   chargingID                    [5] IMPLICIT INTEGER ( 0 .. 4294967295 ),
+   accessPointNameNI             [7] IMPLICIT IA5String  ( SIZE( 1 .. 63 ) ) OPTIONAL,
+   pdpPDNType                    [8] IMPLICIT OCTET STRING ( SIZE( 2 ) ) OPTIONAL,
+   servedPDPPDNAddress           [9] PDPAddress OPTIONAL,
+   dynamicAddressFlag            [11] IMPLICIT BOOLEAN OPTIONAL,
+   listOfTrafficVolumes          [12] IMPLICIT SEQUENCE  OF
+      ChangeOfCharCondition OPTIONAL,
+   recordOpeningTime             [13] IMPLICIT OCTET STRING ( SIZE( 9 ) ),
+   duration                      [14] IMPLICIT INTEGER,
+   causeForRecClosing            [15] IMPLICIT CauseForRecClosing,
+   diagnostics                   [16] Diagnostics OPTIONAL,
+   recordSequenceNumber          [17] IMPLICIT INTEGER OPTIONAL,
+   nodeID                        [18] IMPLICIT IA5String  ( SIZE( 1 .. 20 ) ) OPTIONAL,
+   recordExtensions              [19] IMPLICIT SET  OF
+      ManagementExtension OPTIONAL,
+   localSequenceNumber           [20] IMPLICIT INTEGER ( 0 .. 4294967295 ) OPTIONAL,
+   apnSelectionMode              [21] IMPLICIT APNSelectionMode OPTIONAL,
+   servedMSISDN                  [22] IMPLICIT OCTET STRING ( SIZE( 1 .. 20 ) ) ( SIZE( 1 .. 9 ) ) OPTIONAL,
+   chargingCharacteristics       [23] IMPLICIT OCTET STRING ( SIZE( 2 ) ),
+   chChSelectionMode             [24] IMPLICIT ChChSelectionMode OPTIONAL,
+   servedIMEI                    [29] IMPLICIT OCTET STRING ( SIZE( 8 ) ) OPTIONAL,
+   rATType                       [30] IMPLICIT INTEGER ( 0 .. 255 ) OPTIONAL,
+   sGWChange                     [34] IMPLICIT BOOLEAN OPTIONAL,
+   p-GWAddressUsed               [36] GSNAddress OPTIONAL,
+   p-GWPLMNIdentifier            [37] IMPLICIT OCTET STRING ( SIZE( 3 ) ) OPTIONAL,
+   startTime                     [38] IMPLICIT OCTET STRING ( SIZE( 9 ) ) OPTIONAL,
+   stopTime                      [39] IMPLICIT OCTET STRING ( SIZE( 9 ) ) OPTIONAL,
+   pDNConnectionChargingID       [40] IMPLICIT INTEGER ( 0 .. 4294967295 ) OPTIONAL,
+   servedPDPPDNAddressExt        [43] PDPAddress OPTIONAL,
+   dynamicAddressFlagExt         [47] IMPLICIT BOOLEAN OPTIONAL,
+   tWAGiPv6AddressUsed           [48] GSNAddress OPTIONAL,
+   p-GWiPv6AddressUsed           [50] GSNAddress OPTIONAL,
+   retransmission                [51] IMPLICIT NULL OPTIONAL,
+   enhancedDiagnostics           [52] IMPLICIT EnhancedDiagnostics OPTIONAL,
+   tWANUserLocationInformation   [53] IMPLICIT TWANUserLocationInfo OPTIONAL,
+   iMSIunauthenticatedFlag       [54] IMPLICIT NULL OPTIONAL}
+
+SGSNMMRecord ::= SET {
+   recordType                  [0] IMPLICIT RecordType,
+   servedIMSI                  [1] IMPLICIT OCTET STRING ( SIZE( 3 .. 8 ) ),
+   servedIMEI                  [2] IMPLICIT OCTET STRING ( SIZE( 8 ) ) OPTIONAL,
+   sgsnAddress                 [3] GSNAddress OPTIONAL,
+   msNetworkCapability         [4] IMPLICIT OCTET STRING ( SIZE( 1 .. 8 ) ) OPTIONAL,
+   routingArea                 [5] IMPLICIT OCTET STRING ( SIZE( 1 ) ) OPTIONAL,
+   locationAreaCode            [6] IMPLICIT OCTET STRING ( SIZE( 2 ) ) OPTIONAL,
+   cellIdentifier              [7] IMPLICIT OCTET STRING ( SIZE( 2 ) ) OPTIONAL,
+   changeLocation              [8] IMPLICIT SEQUENCE  OF
+      ChangeLocation OPTIONAL,
+   recordOpeningTime           [9] IMPLICIT OCTET STRING ( SIZE( 9 ) ),
+   duration                    [10] IMPLICIT INTEGER OPTIONAL,
+   sgsnChange                  [11] IMPLICIT BOOLEAN OPTIONAL,
+   causeForRecClosing          [12] IMPLICIT CauseForRecClosing,
+   diagnostics                 [13] Diagnostics OPTIONAL,
+   recordSequenceNumber        [14] IMPLICIT INTEGER OPTIONAL,
+   nodeID                      [15] IMPLICIT IA5String  ( SIZE( 1 .. 20 ) ) OPTIONAL,
+   recordExtensions            [16] IMPLICIT SET  OF
+      ManagementExtension OPTIONAL,
+   localSequenceNumber         [17] IMPLICIT INTEGER ( 0 .. 4294967295 ) OPTIONAL,
+   servedMSISDN                [18] IMPLICIT OCTET STRING ( SIZE( 1 .. 20 ) ) ( SIZE( 1 .. 9 ) ) OPTIONAL,
+   chargingCharacteristics     [19] IMPLICIT OCTET STRING ( SIZE( 2 ) ),
+   cAMELInformationMM          [20] IMPLICIT CAMELInformationMM OPTIONAL,
+   rATType                     [21] IMPLICIT INTEGER ( 0 .. 255 ) OPTIONAL,
+   chChSelectionMode           [22] IMPLICIT ChChSelectionMode OPTIONAL,
+   cellPLMNId                  [23] IMPLICIT OCTET STRING ( SIZE( 3 ) ) OPTIONAL,
+   servingNodePLMNIdentifier   [24] IMPLICIT OCTET STRING ( SIZE( 3 ) ) OPTIONAL,
+   cNOperatorSelectionEnt      [25] IMPLICIT CNOperatorSelectionEntity OPTIONAL}
+
+SGSNPDPRecord ::= SET {
+   recordType                  [0] IMPLICIT RecordType,
+   networkInitiation           [1] IMPLICIT BOOLEAN OPTIONAL,
+   servedIMSI                  [3] IMPLICIT OCTET STRING ( SIZE( 3 .. 8 ) ) OPTIONAL,
+   servedIMEI                  [4] IMPLICIT OCTET STRING ( SIZE( 8 ) ) OPTIONAL,
+   sgsnAddress                 [5] GSNAddress OPTIONAL,
+   msNetworkCapability         [6] IMPLICIT OCTET STRING ( SIZE( 1 .. 8 ) ) OPTIONAL,
+   routingArea                 [7] IMPLICIT OCTET STRING ( SIZE( 1 ) ) OPTIONAL,
+   locationAreaCode            [8] IMPLICIT OCTET STRING ( SIZE( 2 ) ) OPTIONAL,
+   cellIdentifier              [9] IMPLICIT OCTET STRING ( SIZE( 2 ) ) OPTIONAL,
+   chargingID                  [10] IMPLICIT INTEGER ( 0 .. 4294967295 ),
+   ggsnAddressUsed             [11] GSNAddress,
+   accessPointNameNI           [12] IMPLICIT IA5String  ( SIZE( 1 .. 63 ) ) OPTIONAL,
+   pdpType                     [13] IMPLICIT OCTET STRING ( SIZE( 2 ) ) OPTIONAL,
+   servedPDPAddress            [14] PDPAddress OPTIONAL,
+   listOfTrafficVolumes        [15] IMPLICIT SEQUENCE  OF
+      ChangeOfCharCondition OPTIONAL,
+   recordOpeningTime           [16] IMPLICIT OCTET STRING ( SIZE( 9 ) ),
+   duration                    [17] IMPLICIT INTEGER,
+   sgsnChange                  [18] IMPLICIT BOOLEAN OPTIONAL,
+   causeForRecClosing          [19] IMPLICIT CauseForRecClosing,
+   diagnostics                 [20] Diagnostics OPTIONAL,
+   recordSequenceNumber        [21] IMPLICIT INTEGER OPTIONAL,
+   nodeID                      [22] IMPLICIT IA5String  ( SIZE( 1 .. 20 ) ) OPTIONAL,
+   recordExtensions            [23] IMPLICIT SET  OF
+      ManagementExtension OPTIONAL,
+   localSequenceNumber         [24] IMPLICIT INTEGER ( 0 .. 4294967295 ) OPTIONAL,
+   apnSelectionMode            [25] IMPLICIT APNSelectionMode OPTIONAL,
+   accessPointNameOI           [26] IMPLICIT IA5String  ( SIZE( 1 .. 37 ) ) OPTIONAL,
+   servedMSISDN                [27] IMPLICIT OCTET STRING ( SIZE( 1 .. 20 ) ) ( SIZE( 1 .. 9 ) ) OPTIONAL,
+   chargingCharacteristics     [28] IMPLICIT OCTET STRING ( SIZE( 2 ) ),
+   rATType                     [29] IMPLICIT INTEGER ( 0 .. 255 ) OPTIONAL,
+   cAMELInformationPDP         [30] IMPLICIT CAMELInformationPDP OPTIONAL,
+   rNCUnsentDownlinkVolume     [31] IMPLICIT INTEGER OPTIONAL,
+   chChSelectionMode           [32] IMPLICIT ChChSelectionMode OPTIONAL,
+   dynamicAddressFlag          [33] IMPLICIT BOOLEAN OPTIONAL,
+   iMSIunauthenticatedFlag     [34] IMPLICIT NULL OPTIONAL,
+   userCSGInformation          [35] IMPLICIT UserCSGInformation OPTIONAL,
+   servedPDPPDNAddressExt      [36] PDPAddress OPTIONAL,
+   lowPriorityIndicator        [37] IMPLICIT NULL OPTIONAL,
+   servingNodePLMNIdentifier   [38] IMPLICIT OCTET STRING ( SIZE( 3 ) ) OPTIONAL,
+   cNOperatorSelectionEnt      [39] IMPLICIT CNOperatorSelectionEntity OPTIONAL}
+
+SGSNSMORecord ::= SET {
+   recordType                  [0] IMPLICIT RecordType,
+   servedIMSI                  [1] IMPLICIT OCTET STRING ( SIZE( 3 .. 8 ) ),
+   servedIMEI                  [2] IMPLICIT OCTET STRING ( SIZE( 8 ) ) OPTIONAL,
+   servedMSISDN                [3] IMPLICIT OCTET STRING ( SIZE( 1 .. 20 ) ) ( SIZE( 1 .. 9 ) ) OPTIONAL,
+   msNetworkCapability         [4] IMPLICIT OCTET STRING ( SIZE( 1 .. 8 ) ) OPTIONAL,
+   serviceCentre               [5] IMPLICIT OCTET STRING ( SIZE( 1 .. 20 ) ) OPTIONAL,
+   recordingEntity             [6] IMPLICIT OCTET STRING ( SIZE( 1 .. 20 ) ) OPTIONAL,
+   locationArea                [7] IMPLICIT OCTET STRING ( SIZE( 2 ) ) OPTIONAL,
+   routingArea                 [8] IMPLICIT OCTET STRING ( SIZE( 1 ) ) OPTIONAL,
+   cellIdentifier              [9] IMPLICIT OCTET STRING ( SIZE( 2 ) ) OPTIONAL,
+   messageReference            [10] IMPLICIT OCTET STRING,
+   eventTimeStamp              [11] IMPLICIT OCTET STRING ( SIZE( 9 ) ),
+   smsResult                   [12] Diagnostics OPTIONAL,
+   recordExtensions            [13] IMPLICIT SET  OF
+      ManagementExtension OPTIONAL,
+   nodeID                      [14] IMPLICIT IA5String  ( SIZE( 1 .. 20 ) ) OPTIONAL,
+   localSequenceNumber         [15] IMPLICIT INTEGER ( 0 .. 4294967295 ) OPTIONAL,
+   chargingCharacteristics     [16] IMPLICIT OCTET STRING ( SIZE( 2 ) ),
+   rATType                     [17] IMPLICIT INTEGER ( 0 .. 255 ) OPTIONAL,
+   destinationNumber           [18] IMPLICIT OCTET STRING OPTIONAL,
+   cAMELInformationSMS         [19] IMPLICIT CAMELInformationSMS OPTIONAL,
+   chChSelectionMode           [20] IMPLICIT ChChSelectionMode OPTIONAL,
+   servingNodeType             [21] IMPLICIT ServingNodeType,
+   servingNodeAddress          [22] GSNAddress OPTIONAL,
+   servingNodeiPv6Address      [23] GSNAddress OPTIONAL,
+   mMEName                     [24] IMPLICIT OCTET STRING OPTIONAL,
+   mMERealm                    [25] IMPLICIT OCTET STRING OPTIONAL,
+   userLocationInformation     [26] IMPLICIT OCTET STRING OPTIONAL,
+   retransmission              [27] IMPLICIT NULL OPTIONAL,
+   servingNodePLMNIdentifier   [28] IMPLICIT OCTET STRING ( SIZE( 3 ) ) OPTIONAL,
+   userLocationInfoTime        [29] IMPLICIT OCTET STRING ( SIZE( 9 ) ) OPTIONAL,
+   cNOperatorSelectionEnt      [30] IMPLICIT CNOperatorSelectionEntity OPTIONAL}
+
+SGSNSMTRecord ::= SET {
+   recordType                  [0] IMPLICIT RecordType,
+   servedIMSI                  [1] IMPLICIT OCTET STRING ( SIZE( 3 .. 8 ) ),
+   servedIMEI                  [2] IMPLICIT OCTET STRING ( SIZE( 8 ) ) OPTIONAL,
+   servedMSISDN                [3] IMPLICIT OCTET STRING ( SIZE( 1 .. 20 ) ) ( SIZE( 1 .. 9 ) ) OPTIONAL,
+   msNetworkCapability         [4] IMPLICIT OCTET STRING ( SIZE( 1 .. 8 ) ) OPTIONAL,
+   serviceCentre               [5] IMPLICIT OCTET STRING ( SIZE( 1 .. 20 ) ) OPTIONAL,
+   recordingEntity             [6] IMPLICIT OCTET STRING ( SIZE( 1 .. 20 ) ) OPTIONAL,
+   locationArea                [7] IMPLICIT OCTET STRING ( SIZE( 2 ) ) OPTIONAL,
+   routingArea                 [8] IMPLICIT OCTET STRING ( SIZE( 1 ) ) OPTIONAL,
+   cellIdentifier              [9] IMPLICIT OCTET STRING ( SIZE( 2 ) ) OPTIONAL,
+   eventTimeStamp              [10] IMPLICIT OCTET STRING ( SIZE( 9 ) ),
+   smsResult                   [11] Diagnostics OPTIONAL,
+   recordExtensions            [12] IMPLICIT SET  OF
+      ManagementExtension OPTIONAL,
+   nodeID                      [13] IMPLICIT IA5String  ( SIZE( 1 .. 20 ) ) OPTIONAL,
+   localSequenceNumber         [14] IMPLICIT INTEGER ( 0 .. 4294967295 ) OPTIONAL,
+   chargingCharacteristics     [15] IMPLICIT OCTET STRING ( SIZE( 2 ) ),
+   rATType                     [16] IMPLICIT INTEGER ( 0 .. 255 ) OPTIONAL,
+   chChSelectionMode           [17] IMPLICIT ChChSelectionMode OPTIONAL,
+   cAMELInformationSMS         [18] IMPLICIT CAMELInformationSMS OPTIONAL,
+   originatingAddress          [19] IMPLICIT OCTET STRING ( SIZE( 1 .. 20 ) ) OPTIONAL,
+   servingNodeType             [20] IMPLICIT ServingNodeType,
+   servingNodeAddress          [21] GSNAddress OPTIONAL,
+   servingNodeiPv6Address      [22] GSNAddress OPTIONAL,
+   mMEName                     [23] IMPLICIT OCTET STRING OPTIONAL,
+   mMERealm                    [24] IMPLICIT OCTET STRING OPTIONAL,
+   userLocationInformation     [25] IMPLICIT OCTET STRING OPTIONAL,
+   retransmission              [26] IMPLICIT NULL OPTIONAL,
+   servingNodePLMNIdentifier   [27] IMPLICIT OCTET STRING ( SIZE( 3 ) ) OPTIONAL,
+   userLocationInfoTime        [28] IMPLICIT OCTET STRING ( SIZE( 9 ) ) OPTIONAL,
+   cNOperatorSelectionEnt      [29] IMPLICIT CNOperatorSelectionEntity OPTIONAL}
+
+SGSNMTLCSRecord ::= SET {
+   recordType                  [0] IMPLICIT RecordType,
+   recordingEntity             [1] IMPLICIT OCTET STRING ( SIZE( 1 .. 20 ) ),
+   lcsClientType               [2] IMPLICIT LCSClientType,
+   lcsClientIdentity           [3] IMPLICIT LCSClientIdentity,
+   servedIMSI                  [4] IMPLICIT OCTET STRING ( SIZE( 3 .. 8 ) ),
+   servedMSISDN                [5] IMPLICIT OCTET STRING ( SIZE( 1 .. 20 ) ) ( SIZE( 1 .. 9 ) ) OPTIONAL,
+   sgsnAddress                 [6] GSNAddress OPTIONAL,
+   locationType                [7] IMPLICIT LocationType,
+   lcsQos                      [8] IMPLICIT OCTET STRING ( SIZE( 4 ) ) OPTIONAL,
+   lcsPriority                 [9] IMPLICIT OCTET STRING ( SIZE( 1 ) ) OPTIONAL,
+   mlcNumber                   [10] IMPLICIT OCTET STRING ( SIZE( 1 .. 20 ) ) ( SIZE( 1 .. 9 ) ),
+   eventTimeStamp              [11] IMPLICIT OCTET STRING ( SIZE( 9 ) ),
+   measurementDuration         [12] IMPLICIT INTEGER OPTIONAL,
+   notificationToMSUser        [13] IMPLICIT ENUMERATED {
+      notifyLocationAllowed                             ( 0 ),
+      notifyAndVerify-LocationAllowedIfNoResponse       ( 1 ),
+      notifyAndVerify-LocationNotAllowedIfNoResponse    ( 2 ),
+      ... ,
+      locationNotAllowed                                ( 3 ) } OPTIONAL,
+   privacyOverride             [14] IMPLICIT NULL OPTIONAL,
+   location                    [15] IMPLICIT LocationAreaAndCell OPTIONAL,
+   routingArea                 [16] IMPLICIT OCTET STRING ( SIZE( 1 ) ) OPTIONAL,
+   locationEstimate            [17] IMPLICIT OCTET STRING ( SIZE( 1 .. 20 ) ) OPTIONAL,
+   positioningData             [18] IMPLICIT OCTET STRING ( SIZE( 1 .. 33 ) ) OPTIONAL,
+   lcsCause                    [19] IMPLICIT OCTET STRING ( SIZE( 1 ) ) OPTIONAL,
+   diagnostics                 [20] Diagnostics OPTIONAL,
+   nodeID                      [21] IMPLICIT IA5String  ( SIZE( 1 .. 20 ) ) OPTIONAL,
+   localSequenceNumber         [22] IMPLICIT INTEGER ( 0 .. 4294967295 ) OPTIONAL,
+   chargingCharacteristics     [23] IMPLICIT OCTET STRING ( SIZE( 2 ) ),
+   chChSelectionMode           [24] IMPLICIT ChChSelectionMode OPTIONAL,
+   rATType                     [25] IMPLICIT INTEGER ( 0 .. 255 ) OPTIONAL,
+   recordExtensions            [26] IMPLICIT SET  OF
+      ManagementExtension OPTIONAL,
+   causeForRecClosing          [27] IMPLICIT CauseForRecClosing,
+   servingNodePLMNIdentifier   [28] IMPLICIT OCTET STRING ( SIZE( 3 ) ) OPTIONAL,
+   cNOperatorSelectionEnt      [29] IMPLICIT CNOperatorSelectionEntity OPTIONAL}
+
+SGSNMOLCSRecord ::= SET {
+   recordType                  [0] IMPLICIT RecordType,
+   recordingEntity             [1] IMPLICIT OCTET STRING ( SIZE( 1 .. 20 ) ),
+   lcsClientType               [2] IMPLICIT LCSClientType OPTIONAL,
+   lcsClientIdentity           [3] IMPLICIT LCSClientIdentity OPTIONAL,
+   servedIMSI                  [4] IMPLICIT OCTET STRING ( SIZE( 3 .. 8 ) ),
+   servedMSISDN                [5] IMPLICIT OCTET STRING ( SIZE( 1 .. 20 ) ) ( SIZE( 1 .. 9 ) ) OPTIONAL,
+   sgsnAddress                 [6] GSNAddress OPTIONAL,
+   locationMethod              [7] IMPLICIT ENUMERATED {
+      msBasedEOTD            ( 0 ),
+      msAssistedEOTD         ( 1 ),
+      assistedGPS            ( 2 ),
+      ... ,
+      msBasedOTDOA           ( 3 ),
+      assistedGANSS          ( 4 ),
+      assistedGPSandGANSS    ( 5 ) },
+   lcsQos                      [8] IMPLICIT OCTET STRING ( SIZE( 4 ) ) OPTIONAL,
+   lcsPriority                 [9] IMPLICIT OCTET STRING ( SIZE( 1 ) ) OPTIONAL,
+   mlcNumber                   [10] IMPLICIT OCTET STRING ( SIZE( 1 .. 20 ) ) ( SIZE( 1 .. 9 ) ) OPTIONAL,
+   eventTimeStamp              [11] IMPLICIT OCTET STRING ( SIZE( 9 ) ),
+   measurementDuration         [12] IMPLICIT INTEGER OPTIONAL,
+   location                    [13] IMPLICIT LocationAreaAndCell OPTIONAL,
+   routingArea                 [14] IMPLICIT OCTET STRING ( SIZE( 1 ) ) OPTIONAL,
+   locationEstimate            [15] IMPLICIT OCTET STRING ( SIZE( 1 .. 20 ) ) OPTIONAL,
+   positioningData             [16] IMPLICIT OCTET STRING ( SIZE( 1 .. 33 ) ) OPTIONAL,
+   lcsCause                    [17] IMPLICIT OCTET STRING ( SIZE( 1 ) ) OPTIONAL,
+   diagnostics                 [18] Diagnostics OPTIONAL,
+   nodeID                      [19] IMPLICIT IA5String  ( SIZE( 1 .. 20 ) ) OPTIONAL,
+   localSequenceNumber         [20] IMPLICIT INTEGER ( 0 .. 4294967295 ) OPTIONAL,
+   chargingCharacteristics     [21] IMPLICIT OCTET STRING ( SIZE( 2 ) ),
+   chChSelectionMode           [22] IMPLICIT ChChSelectionMode OPTIONAL,
+   rATType                     [23] IMPLICIT INTEGER ( 0 .. 255 ) OPTIONAL,
+   recordExtensions            [24] IMPLICIT SET  OF
+      ManagementExtension OPTIONAL,
+   causeForRecClosing          [25] IMPLICIT CauseForRecClosing,
+   servingNodePLMNIdentifier   [26] IMPLICIT OCTET STRING ( SIZE( 3 ) ) OPTIONAL,
+   cNOperatorSelectionEnt      [27] IMPLICIT CNOperatorSelectionEntity OPTIONAL}
+
+SGSNNILCSRecord ::= SET {
+   recordType                  [0] IMPLICIT RecordType,
+   recordingEntity             [1] IMPLICIT OCTET STRING ( SIZE( 1 .. 20 ) ),
+   lcsClientType               [2] IMPLICIT LCSClientType OPTIONAL,
+   lcsClientIdentity           [3] IMPLICIT LCSClientIdentity OPTIONAL,
+   servedIMSI                  [4] IMPLICIT OCTET STRING ( SIZE( 3 .. 8 ) ) OPTIONAL,
+   servedMSISDN                [5] IMPLICIT OCTET STRING ( SIZE( 1 .. 20 ) ) ( SIZE( 1 .. 9 ) ) OPTIONAL,
+   sgsnAddress                 [6] GSNAddress OPTIONAL,
+   servedIMEI                  [7] IMPLICIT OCTET STRING ( SIZE( 8 ) ) OPTIONAL,
+   lcsQos                      [8] IMPLICIT OCTET STRING ( SIZE( 4 ) ) OPTIONAL,
+   lcsPriority                 [9] IMPLICIT OCTET STRING ( SIZE( 1 ) ) OPTIONAL,
+   mlcNumber                   [10] IMPLICIT OCTET STRING ( SIZE( 1 .. 20 ) ) ( SIZE( 1 .. 9 ) ) OPTIONAL,
+   eventTimeStamp              [11] IMPLICIT OCTET STRING ( SIZE( 9 ) ),
+   measurementDuration         [12] IMPLICIT INTEGER OPTIONAL,
+   location                    [13] IMPLICIT LocationAreaAndCell OPTIONAL,
+   routingArea                 [14] IMPLICIT OCTET STRING ( SIZE( 1 ) ) OPTIONAL,
+   locationEstimate            [15] IMPLICIT OCTET STRING ( SIZE( 1 .. 20 ) ) OPTIONAL,
+   positioningData             [16] IMPLICIT OCTET STRING ( SIZE( 1 .. 33 ) ) OPTIONAL,
+   lcsCause                    [17] IMPLICIT OCTET STRING ( SIZE( 1 ) ) OPTIONAL,
+   diagnostics                 [18] Diagnostics OPTIONAL,
+   nodeID                      [19] IMPLICIT IA5String  ( SIZE( 1 .. 20 ) ) OPTIONAL,
+   localSequenceNumber         [20] IMPLICIT INTEGER ( 0 .. 4294967295 ) OPTIONAL,
+   chargingCharacteristics     [21] IMPLICIT OCTET STRING ( SIZE( 2 ) ),
+   chChSelectionMode           [22] IMPLICIT ChChSelectionMode OPTIONAL,
+   rATType                     [23] IMPLICIT INTEGER ( 0 .. 255 ) OPTIONAL,
+   recordExtensions            [24] IMPLICIT SET  OF
+      ManagementExtension OPTIONAL,
+   causeForRecClosing          [25] IMPLICIT CauseForRecClosing,
+   servingNodePLMNIdentifier   [26] IMPLICIT OCTET STRING ( SIZE( 3 ) ) OPTIONAL,
+   cNOperatorSelectionEnt      [27] IMPLICIT CNOperatorSelectionEntity OPTIONAL}
+
+SGSNMBMSRecord ::= SET {
+   recordType             [0] IMPLICIT RecordType,
+   ggsnAddress            [1] GSNAddress,
+   chargingID             [2] IMPLICIT INTEGER ( 0 .. 4294967295 ),
+   listofRAs              [3] IMPLICIT SEQUENCE  OF
+      OCTET STRING ( SIZE( 6 ) ) OPTIONAL,
+   accessPointNameNI      [4] IMPLICIT IA5String  ( SIZE( 1 .. 63 ) ) OPTIONAL,
+   servedPDPAddress       [5] PDPAddress OPTIONAL,
+   listOfTrafficVolumes   [6] IMPLICIT SEQUENCE  OF
+      ChangeOfMBMSCondition OPTIONAL,
+   recordOpeningTime      [7] IMPLICIT OCTET STRING ( SIZE( 9 ) ),
+   duration               [8] IMPLICIT INTEGER,
+   causeForRecClosing     [9] IMPLICIT CauseForRecClosing,
+   diagnostics            [10] Diagnostics OPTIONAL,
+   recordSequenceNumber   [11] IMPLICIT INTEGER OPTIONAL,
+   nodeID                 [12] IMPLICIT IA5String  ( SIZE( 1 .. 20 ) ) OPTIONAL,
+   recordExtensions       [13] IMPLICIT SET  OF
+      ManagementExtension OPTIONAL,
+   localSequenceNumber    [14] IMPLICIT INTEGER ( 0 .. 4294967295 ) OPTIONAL,
+   sgsnPLMNIdentifier     [15] IMPLICIT OCTET STRING ( SIZE( 3 ) ) OPTIONAL,
+   numberofReceivingUE    [16] IMPLICIT INTEGER OPTIONAL,
+   mbmsInformation        [17] IMPLICIT MBMSInformation OPTIONAL}
+
+GGSNMBMSRecord ::= SET {
+   recordType              [0] IMPLICIT RecordType,
+   ggsnAddress             [1] GSNAddress,
+   chargingID              [2] IMPLICIT INTEGER ( 0 .. 4294967295 ),
+   listofDownstreamNodes   [3] IMPLICIT SEQUENCE  OF
+      GSNAddress,
+   accessPointNameNI       [4] IMPLICIT IA5String  ( SIZE( 1 .. 63 ) ) OPTIONAL,
+   servedPDPAddress        [5] PDPAddress OPTIONAL,
+   listOfTrafficVolumes    [6] IMPLICIT SEQUENCE  OF
+      ChangeOfMBMSCondition OPTIONAL,
+   recordOpeningTime       [7] IMPLICIT OCTET STRING ( SIZE( 9 ) ),
+   duration                [8] IMPLICIT INTEGER,
+   causeForRecClosing      [9] IMPLICIT CauseForRecClosing,
+   diagnostics             [10] Diagnostics OPTIONAL,
+   recordSequenceNumber    [11] IMPLICIT INTEGER OPTIONAL,
+   nodeID                  [12] IMPLICIT IA5String  ( SIZE( 1 .. 20 ) ) OPTIONAL,
+   recordExtensions        [13] IMPLICIT SET  OF
+      ManagementExtension OPTIONAL,
+   localSequenceNumber     [14] IMPLICIT INTEGER ( 0 .. 4294967295 ) OPTIONAL,
+   mbmsInformation         [15] IMPLICIT MBMSInformation OPTIONAL}
+
+GWMBMSRecord ::= SET {
+   recordType                 [0] IMPLICIT RecordType,
+   mbmsGWAddress              [1] GSNAddress,
+   chargingID                 [2] IMPLICIT INTEGER ( 0 .. 4294967295 ),
+   listofDownstreamNodes      [3] IMPLICIT SEQUENCE  OF
+      GSNAddress,
+   accessPointNameNI          [4] IMPLICIT IA5String  ( SIZE( 1 .. 63 ) ) OPTIONAL,
+   pdpPDNType                 [5] IMPLICIT OCTET STRING ( SIZE( 2 ) ) OPTIONAL,
+   servedPDPPDNAddress        [6] PDPAddress OPTIONAL,
+   listOfTrafficVolumes       [7] IMPLICIT SEQUENCE  OF
+      ChangeOfMBMSCondition OPTIONAL,
+   recordOpeningTime          [8] IMPLICIT OCTET STRING ( SIZE( 9 ) ),
+   duration                   [9] IMPLICIT INTEGER,
+   causeForRecClosing         [10] IMPLICIT CauseForRecClosing,
+   diagnostics                [11] Diagnostics OPTIONAL,
+   recordSequenceNumber       [12] IMPLICIT INTEGER OPTIONAL,
+   nodeID                     [13] IMPLICIT IA5String  ( SIZE( 1 .. 20 ) ) OPTIONAL,
+   recordExtensions           [14] IMPLICIT SET  OF
+      ManagementExtension OPTIONAL,
+   localSequenceNumber        [15] IMPLICIT INTEGER ( 0 .. 4294967295 ) OPTIONAL,
+   mbmsInformation            [16] IMPLICIT MBMSInformation OPTIONAL,
+   commonTeid                 [17] IMPLICIT OCTET STRING ( SIZE( 4 ) ) OPTIONAL,
+   iPMulticastSourceAddress   [18] PDPAddress OPTIONAL}
+
+AccessAvailabilityChangeReason ::= INTEGER ( 0 .. 4294967295 )
+
+AccessLineIdentifier ::= SEQUENCE {
+   physicalAccessID   [0] IMPLICIT UTF8String OPTIONAL,
+   logicalAccessID    [1] IMPLICIT OCTET STRING OPTIONAL}
+
+AccessPointNameNI ::= IA5String  ( SIZE( 1 .. 63 ) )
+
+AccessPointNameOI ::= IA5String  ( SIZE( 1 .. 37 ) )
+
+ADCRuleBaseName ::= IA5String
+
+AdditionalExceptionReports ::= ENUMERATED {
+   notAllowed    ( 0 ),
+   allowed       ( 1 ) }
+
+AFChargingIdentifier ::= OCTET STRING
+
+AFRecordInformation ::= SEQUENCE {
+   aFChargingIdentifier   [1] IMPLICIT OCTET STRING,
+   flows                  [2] IMPLICIT Flows OPTIONAL}
+
+APNRateControl ::= SEQUENCE {
+   aPNRateControlUplink     [0] IMPLICIT APNRateControlParameters OPTIONAL,
+   aPNRateControlDownlink   [1] IMPLICIT APNRateControlParameters OPTIONAL}
+
+APNRateControlParameters ::= SEQUENCE {
+   additionalExceptionReports   [0] IMPLICIT AdditionalExceptionReports OPTIONAL,
+   rateControlTimeUnit          [1] IMPLICIT INTEGER {
+      unrestricted    ( 0 ),
+      minute          ( 1 ),
+      hour            ( 2 ),
+      day             ( 3 ),
+      week            ( 4 )} OPTIONAL,
+   rateControlMaxRate           [2] IMPLICIT INTEGER OPTIONAL,
+   rateControlMaxMessageSize    [3] IMPLICIT INTEGER OPTIONAL}
+
+APNSelectionMode ::= ENUMERATED {
+   mSorNetworkProvidedSubscriptionVerified    ( 0 ),
+   mSProvidedSubscriptionNotVerified          ( 1 ),
+   networkProvidedSubscriptionNotVerified     ( 2 ) }
+
+CAMELAccessPointNameNI ::= IA5String  ( SIZE( 1 .. 63 ) )
+
+CAMELAccessPointNameOI ::= IA5String  ( SIZE( 1 .. 37 ) )
+
+CAMELInformationMM ::= SET {
+   sCFAddress                   [1] IMPLICIT OCTET STRING ( SIZE( 1 .. 20 ) ) OPTIONAL,
+   serviceKey                   [2] IMPLICIT INTEGER ( 0 .. 2147483647 ) OPTIONAL,
+   defaultTransactionHandling   [3] IMPLICIT DefaultTransactionHandling OPTIONAL,
+   numberOfDPEncountered        [4] IMPLICIT INTEGER OPTIONAL,
+   levelOfCAMELService          [5] IMPLICIT BIT STRING {
+      basic  (0 ),
+      callDurationSupervision  (1 ),
+      onlineCharging  (2 )} OPTIONAL,
+   freeFormatData               [6] IMPLICIT OCTET STRING ( SIZE( 1 .. 160 ) ) OPTIONAL,
+   fFDAppendIndicator           [7] IMPLICIT BOOLEAN OPTIONAL}
+
+CAMELInformationPDP ::= SET {
+   sCFAddress                   [1] IMPLICIT OCTET STRING ( SIZE( 1 .. 20 ) ) OPTIONAL,
+   serviceKey                   [2] IMPLICIT INTEGER ( 0 .. 2147483647 ) OPTIONAL,
+   defaultTransactionHandling   [3] IMPLICIT DefaultTransactionHandling OPTIONAL,
+   cAMELAccessPointNameNI       [4] IMPLICIT IA5String  ( SIZE( 1 .. 63 ) ) OPTIONAL,
+   cAMELAccessPointNameOI       [5] IMPLICIT IA5String  ( SIZE( 1 .. 37 ) ) OPTIONAL,
+   numberOfDPEncountered        [6] IMPLICIT INTEGER OPTIONAL,
+   levelOfCAMELService          [7] IMPLICIT BIT STRING {
+      basic  (0 ),
+      callDurationSupervision  (1 ),
+      onlineCharging  (2 )} OPTIONAL,
+   freeFormatData               [8] IMPLICIT OCTET STRING ( SIZE( 1 .. 160 ) ) OPTIONAL,
+   fFDAppendIndicator           [9] IMPLICIT BOOLEAN OPTIONAL}
+
+CAMELInformationSMS ::= SET {
+   sCFAddress                         [1] IMPLICIT OCTET STRING ( SIZE( 1 .. 20 ) ) OPTIONAL,
+   serviceKey                         [2] IMPLICIT INTEGER ( 0 .. 2147483647 ) OPTIONAL,
+   defaultSMSHandling                 [3] IMPLICIT DefaultTransactionHandling OPTIONAL,
+   cAMELCallingPartyNumber            [4] IMPLICIT OCTET STRING OPTIONAL,
+   cAMELDestinationSubscriberNumber   [5] IMPLICIT OCTET STRING OPTIONAL,
+   cAMELSMSCAddress                   [6] IMPLICIT OCTET STRING ( SIZE( 1 .. 20 ) ) OPTIONAL,
+   freeFormatData                     [7] IMPLICIT OCTET STRING ( SIZE( 1 .. 160 ) ) OPTIONAL,
+   smsReferenceNumber                 [8] IMPLICIT OCTET STRING ( SIZE( 1 .. 8 ) ) OPTIONAL}
+
+ChangeCondition ::= ENUMERATED {
+   qoSChange                        ( 0 ),
+   tariffTime                       ( 1 ),
+   recordClosure                    ( 2 ),
+   cGI-SAICHange                    ( 6 ),
+   rAIChange                        ( 7 ),
+   dT-Establishment                 ( 8 ),
+   dT-Removal                       ( 9 ),
+   eCGIChange                       ( 10 ),
+   tAIChange                        ( 11 ),
+   userLocationChange               ( 12 ),
+   userCSGInformationChange         ( 13 ),
+   presenceInPRAChange              ( 14 ),
+   removalOfAccess                  ( 15 ),
+   unusabilityOfAccess              ( 16 ),
+   indirectChangeCondition          ( 17 ),
+   userPlaneToUEChange              ( 18 ),
+   servingPLMNRateControlChange     ( 19 ),
+   threeGPPPSDataOffStatusChange    ( 20 ),
+   aPNRateControlChange             ( 21 ) }
+
+ChangeOfCharCondition ::= SEQUENCE {
+   qosRequested                             [1] IMPLICIT OCTET STRING ( SIZE( 4 .. 255 ) ) OPTIONAL,
+   qosNegotiated                            [2] IMPLICIT OCTET STRING ( SIZE( 4 .. 255 ) ) OPTIONAL,
+   dataVolumeGPRSUplink                     [3] IMPLICIT INTEGER OPTIONAL,
+   dataVolumeGPRSDownlink                   [4] IMPLICIT INTEGER OPTIONAL,
+   changeCondition                          [5] IMPLICIT ChangeCondition,
+   changeTime                               [6] IMPLICIT OCTET STRING ( SIZE( 9 ) ),
+   userLocationInformation                  [8] IMPLICIT OCTET STRING OPTIONAL,
+   ePCQoSInformation                        [9] IMPLICIT EPCQoSInformation OPTIONAL,
+   chargingID                               [10] IMPLICIT INTEGER ( 0 .. 4294967295 ) OPTIONAL,
+   presenceReportingAreaStatus              [11] IMPLICIT PresenceReportingAreaStatus OPTIONAL,
+   userCSGInformation                       [12] IMPLICIT UserCSGInformation OPTIONAL,
+   diagnostics                              [13] Diagnostics OPTIONAL,
+   enhancedDiagnostics                      [14] IMPLICIT EnhancedDiagnostics OPTIONAL,
+   rATType                                  [15] IMPLICIT INTEGER ( 0 .. 255 ) OPTIONAL,
+   accessAvailabilityChangeReason           [16] IMPLICIT INTEGER ( 0 .. 4294967295 ) OPTIONAL,
+   uWANUserLocationInformation              [17] IMPLICIT UWANUserLocationInfo OPTIONAL,
+   relatedChangeOfCharCondition             [18] IMPLICIT RelatedChangeOfCharCondition OPTIONAL,
+   cPCIoTEPSOptimisationIndicator           [19] IMPLICIT BOOLEAN OPTIONAL,
+   servingPLMNRateControl                   [20] IMPLICIT ServingPLMNRateControl OPTIONAL,
+   threeGPPPSDataOffStatus                  [21] IMPLICIT ThreeGPPPSDataOffStatus OPTIONAL,
+   listOfPresenceReportingAreaInformation   [22] IMPLICIT SEQUENCE  OF
+      PresenceReportingAreaInfo OPTIONAL,
+   aPNRateControl                           [23] IMPLICIT APNRateControl OPTIONAL}
+
+ChangeOfMBMSCondition ::= SEQUENCE {
+   qosRequested              [1] IMPLICIT OCTET STRING ( SIZE( 4 .. 255 ) ) OPTIONAL,
+   qosNegotiated             [2] IMPLICIT OCTET STRING ( SIZE( 4 .. 255 ) ) OPTIONAL,
+   dataVolumeMBMSUplink      [3] IMPLICIT INTEGER OPTIONAL,
+   dataVolumeMBMSDownlink    [4] IMPLICIT INTEGER,
+   changeCondition           [5] IMPLICIT ChangeCondition,
+   changeTime                [6] IMPLICIT OCTET STRING ( SIZE( 9 ) ),
+   failureHandlingContinue   [7] IMPLICIT BOOLEAN OPTIONAL}
+
+ChangeOfServiceCondition ::= SEQUENCE {
+   ratingGroup                              [1] IMPLICIT INTEGER,
+   chargingRuleBaseName                     [2] IMPLICIT IA5String  OPTIONAL,
+   resultCode                               [3] IMPLICIT INTEGER OPTIONAL,
+   localSequenceNumber                      [4] IMPLICIT INTEGER ( 0 .. 4294967295 ) OPTIONAL,
+   timeOfFirstUsage                         [5] IMPLICIT OCTET STRING ( SIZE( 9 ) ) OPTIONAL,
+   timeOfLastUsage                          [6] IMPLICIT OCTET STRING ( SIZE( 9 ) ) OPTIONAL,
+   timeUsage                                [7] IMPLICIT INTEGER OPTIONAL,
+   serviceConditionChange                   [8] IMPLICIT ServiceConditionChange,
+   qoSInformationNeg                        [9] IMPLICIT EPCQoSInformation OPTIONAL,
+   servingNodeAddress                       [10] GSNAddress OPTIONAL,
+   datavolumeFBCUplink                      [12] IMPLICIT INTEGER OPTIONAL,
+   datavolumeFBCDownlink                    [13] IMPLICIT INTEGER OPTIONAL,
+   timeOfReport                             [14] IMPLICIT OCTET STRING ( SIZE( 9 ) ),
+   failureHandlingContinue                  [16] IMPLICIT BOOLEAN OPTIONAL,
+   serviceIdentifier                        [17] IMPLICIT INTEGER ( 0 .. 4294967295 ) OPTIONAL,
+   pSFurnishChargingInformation             [18] IMPLICIT PSFurnishChargingInformation OPTIONAL,
+   aFRecordInformation                      [19] IMPLICIT SEQUENCE  OF
+      AFRecordInformation OPTIONAL,
+   userLocationInformation                  [20] IMPLICIT OCTET STRING OPTIONAL,
+   eventBasedChargingInformation            [21] IMPLICIT EventBasedChargingInformation OPTIONAL,
+   timeQuotaMechanism                       [22] IMPLICIT TimeQuotaMechanism OPTIONAL,
+   serviceSpecificInfo                      [23] IMPLICIT SEQUENCE  OF
+      ServiceSpecificInfo OPTIONAL,
+   threeGPP2UserLocationInformation         [24] IMPLICIT OCTET STRING OPTIONAL,
+   sponsorIdentity                          [25] IMPLICIT OCTET STRING OPTIONAL,
+   applicationServiceProviderIdentity       [26] IMPLICIT OCTET STRING OPTIONAL,
+   aDCRuleBaseName                          [27] IMPLICIT IA5String  OPTIONAL,
+   presenceReportingAreaStatus              [28] IMPLICIT PresenceReportingAreaStatus OPTIONAL,
+   userCSGInformation                       [29] IMPLICIT UserCSGInformation OPTIONAL,
+   rATType                                  [30] IMPLICIT INTEGER ( 0 .. 255 ) OPTIONAL,
+   uWANUserLocationInformation              [32] IMPLICIT UWANUserLocationInfo OPTIONAL,
+   relatedChangeOfServiceCondition          [33] IMPLICIT RelatedChangeOfServiceCondition OPTIONAL,
+   servingPLMNRateControl                   [35] IMPLICIT ServingPLMNRateControl OPTIONAL,
+   aPNRateControl                           [36] IMPLICIT APNRateControl OPTIONAL,
+   threeGPPPSDataOffStatus                  [37] IMPLICIT ThreeGPPPSDataOffStatus OPTIONAL,
+   trafficSteeringPolicyIDDownlink          [38] IMPLICIT OCTET STRING OPTIONAL,
+   trafficSteeringPolicyIDUplink            [39] IMPLICIT OCTET STRING OPTIONAL,
+   tWANUserLocationInformation              [40] IMPLICIT TWANUserLocationInfo OPTIONAL,
+   listOfPresenceReportingAreaInformation   [41] IMPLICIT SEQUENCE  OF
+      PresenceReportingAreaInfo OPTIONAL}
+
+ChangeLocation ::= SEQUENCE {
+   locationAreaCode   [0] IMPLICIT OCTET STRING ( SIZE( 2 ) ),
+   routingAreaCode    [1] IMPLICIT OCTET STRING ( SIZE( 1 ) ),
+   cellId             [2] IMPLICIT OCTET STRING ( SIZE( 2 ) ) OPTIONAL,
+   changeTime         [3] IMPLICIT OCTET STRING ( SIZE( 9 ) ),
+   mCC-MNC            [4] IMPLICIT OCTET STRING ( SIZE( 3 ) ) OPTIONAL}
+
+ChargingCharacteristics ::= OCTET STRING ( SIZE( 2 ) )
+
+ChargingPerIPCANSessionIndicator ::= ENUMERATED {
+   inactive    ( 0 ),
+   active      ( 1 ) }
+
+ChargingRuleBaseName ::= IA5String
+
+ChChSelectionMode ::= ENUMERATED {
+   servingNodeSupplied     ( 0 ),
+   subscriptionSpecific    ( 1 ),
+   aPNSpecific             ( 2 ),
+   homeDefault             ( 3 ),
+   roamingDefault          ( 4 ),
+   visitingDefault         ( 5 ),
+   fixedDefault            ( 6 ) }
+
+CNOperatorSelectionEntity ::= ENUMERATED {
+   servCNSelectedbyUE     ( 0 ),
+   servCNSelectedbyNtw    ( 1 ) }
+
+CPCIoTEPSOptimisationIndicator ::= BOOLEAN
+
+CSGAccessMode ::= ENUMERATED {
+   closedMode    ( 0 ),
+   hybridMode    ( 1 ) }
+
+CSGId      ::= OCTET STRING ( SIZE( 4 ) )
+
+CTEID      ::= OCTET STRING ( SIZE( 4 ) )
+
+DataVolumeGPRS ::= INTEGER
+
+DataVolumeMBMS ::= INTEGER
+
+EPCQoSInformation ::= SEQUENCE {
+   qCI                        [1] IMPLICIT INTEGER,
+   maxRequestedBandwithUL     [2] IMPLICIT INTEGER OPTIONAL,
+   maxRequestedBandwithDL     [3] IMPLICIT INTEGER OPTIONAL,
+   guaranteedBitrateUL        [4] IMPLICIT INTEGER OPTIONAL,
+   guaranteedBitrateDL        [5] IMPLICIT INTEGER OPTIONAL,
+   aRP                        [6] IMPLICIT INTEGER OPTIONAL,
+   aPNAggregateMaxBitrateUL   [7] IMPLICIT INTEGER OPTIONAL,
+   aPNAggregateMaxBitrateDL   [8] IMPLICIT INTEGER OPTIONAL,
+   extendedMaxRequestedBWUL   [9] IMPLICIT INTEGER OPTIONAL,
+   extendedMaxRequestedBWDL   [10] IMPLICIT INTEGER OPTIONAL,
+   extendedGBRUL              [11] IMPLICIT INTEGER OPTIONAL,
+   extendedGBRDL              [12] IMPLICIT INTEGER OPTIONAL,
+   extendedAPNAMBRUL          [13] IMPLICIT INTEGER OPTIONAL,
+   extendedAPNAMBRDL          [14] IMPLICIT INTEGER OPTIONAL}
+
+EventBasedChargingInformation ::= SEQUENCE {
+   numberOfEvents    [1] IMPLICIT INTEGER,
+   eventTimeStamps   [2] IMPLICIT SEQUENCE  OF
+      OCTET STRING ( SIZE( 9 ) ) OPTIONAL}
+
+FailureHandlingContinue ::= BOOLEAN
+
+FFDAppendIndicator ::= BOOLEAN
+
+FixedSubsID ::= OCTET STRING
+
+FixedUserLocationInformation ::= SEQUENCE {
+   sSID                   [0] IMPLICIT OCTET STRING OPTIONAL,
+   bSSID                  [1] IMPLICIT OCTET STRING OPTIONAL,
+   accessLineIdentifier   [2] IMPLICIT AccessLineIdentifier OPTIONAL}
+
+Flows      ::= SEQUENCE {
+   mediaComponentNumber   [1] IMPLICIT INTEGER,
+   flowNumber             [2] IMPLICIT SEQUENCE  OF
+      INTEGER OPTIONAL}
+
+FreeFormatData ::= OCTET STRING ( SIZE( 1 .. 160 ) )
+
+GSNAddress ::= CHOICE {
+   iPBinaryAddress              IPBinaryAddress,
+   iPTextRepresentedAddress     IPTextRepresentedAddress}
+
+MOExceptionDataCounter ::= SEQUENCE {
+   counterValue       [0] IMPLICIT INTEGER,
+   counterTimestamp   [1] IMPLICIT OCTET STRING ( SIZE( 9 ) )}
+
+MSNetworkCapability ::= OCTET STRING ( SIZE( 1 .. 8 ) )
+
+NBIFOMMode ::= ENUMERATED {
+   uEINITIATED         ( 0 ),
+   nETWORKINITIATED    ( 1 ) }
+
+NBIFOMSupport ::= ENUMERATED {
+   nBIFOMNotSupported    ( 0 ),
+   nBIFOMSupported       ( 1 ) }
+
+NetworkInitiatedPDPContext ::= BOOLEAN
+
+NumberOfDPEncountered ::= INTEGER
+
+PDPType    ::= OCTET STRING ( SIZE( 2 ) )
+
+PDPPDNTypeExtension ::= INTEGER
+
+PresenceReportingAreaElementsList ::= OCTET STRING
+
+PresenceReportingAreaInfo ::= SEQUENCE {
+   presenceReportingAreaIdentifier     [0] IMPLICIT OCTET STRING,
+   presenceReportingAreaStatus         [1] IMPLICIT PresenceReportingAreaStatus OPTIONAL,
+   presenceReportingAreaElementsList   [2] IMPLICIT OCTET STRING OPTIONAL,
+   presenceReportingAreaNode           [3] IMPLICIT BIT STRING {
+      oCS  (0 ),
+      pCRF  (1 )} OPTIONAL}
+
+PresenceReportingAreaNode ::= BIT STRING {
+   oCS  (0 ),
+   pCRF  (1 )}
+
+PresenceReportingAreaStatus ::= ENUMERATED {
+   insideArea     ( 0 ),
+   outsideArea    ( 1 ),
+   inactive       ( 2 ),
+   unknown        ( 3 ) }
+
+PSFurnishChargingInformation ::= SEQUENCE {
+   pSFreeFormatData       [1] IMPLICIT OCTET STRING ( SIZE( 1 .. 160 ) ),
+   pSFFDAppendIndicator   [2] IMPLICIT BOOLEAN OPTIONAL}
+
+QoSInformation ::= OCTET STRING ( SIZE( 4 .. 255 ) )
+
+RANSecondaryRATUsageReport ::= SEQUENCE {
+   dataVolumeUplink     [1] IMPLICIT INTEGER,
+   dataVolumeDownlink   [2] IMPLICIT INTEGER,
+   rANStartTime         [3] IMPLICIT OCTET STRING ( SIZE( 9 ) ),
+   rANEndTime           [4] IMPLICIT OCTET STRING ( SIZE( 9 ) ),
+   secondaryRATType     [5] IMPLICIT INTEGER {
+      nR          ( 0 )} OPTIONAL,
+   chargingID           [6] IMPLICIT INTEGER ( 0 .. 4294967295 ) OPTIONAL}
+
+RateControlTimeUnit ::= INTEGER {
+   unrestricted    ( 0 ),
+   minute          ( 1 ),
+   hour            ( 2 ),
+   day             ( 3 ),
+   week            ( 4 )}
+
+RatingGroupId ::= INTEGER
+
+RelatedChangeOfCharCondition ::= SEQUENCE {
+   changeCondition               [5] IMPLICIT ChangeCondition,
+   changeTime                    [6] IMPLICIT OCTET STRING ( SIZE( 9 ) ),
+   userLocationInformation       [8] IMPLICIT OCTET STRING OPTIONAL,
+   presenceReportingAreaStatus   [11] IMPLICIT PresenceReportingAreaStatus OPTIONAL,
+   userCSGInformation            [12] IMPLICIT UserCSGInformation OPTIONAL,
+   rATType                       [15] IMPLICIT INTEGER ( 0 .. 255 ) OPTIONAL,
+   uWANUserLocationInformation   [17] IMPLICIT UWANUserLocationInfo OPTIONAL}
+
+RelatedChangeOfServiceCondition ::= SEQUENCE {
+   userLocationInformation            [20] IMPLICIT OCTET STRING OPTIONAL,
+   threeGPP2UserLocationInformation   [24] IMPLICIT OCTET STRING OPTIONAL,
+   presenceReportingAreaStatus        [28] IMPLICIT PresenceReportingAreaStatus OPTIONAL,
+   userCSGInformation                 [29] IMPLICIT UserCSGInformation OPTIONAL,
+   rATType                            [30] IMPLICIT INTEGER ( 0 .. 255 ) OPTIONAL,
+   uWANUserLocationInformation        [32] IMPLICIT UWANUserLocationInfo OPTIONAL,
+   relatedServiceConditionChange      [33] IMPLICIT ServiceConditionChange OPTIONAL}
+
+ResultCode ::= INTEGER
+
+SecondaryRATType ::= INTEGER {
+   nR          ( 0 )}
+
+ServiceConditionChange ::= BIT STRING {
+   qoSChange  (0 ),
+   sGSNChange  (1 ),
+   sGSNPLMNIDChange  (2 ),
+   tariffTimeSwitch  (3 ),
+   pDPContextRelease  (4 ),
+   rATChange  (5 ),
+   serviceIdledOut  (6 ),
+   reserved  (7 ),
+   configurationChange  (8 ),
+   serviceStop  (9 ),
+   dCCATimeThresholdReached  (10 ),
+   dCCAVolumeThresholdReached  (11 ),
+   dCCAServiceSpecificUnitThresholdReached  (12 ),
+   dCCATimeExhausted  (13 ),
+   dCCAVolumeExhausted  (14 ),
+   dCCAValidityTimeout  (15 ),
+   reserved1  (16 ),
+   dCCAReauthorisationRequest  (17 ),
+   dCCAContinueOngoingSession  (18 ),
+   dCCARetryAndTerminateOngoingSession  (19 ),
+   dCCATerminateOngoingSession  (20 ),
+   cGI-SAIChange  (21 ),
+   rAIChange  (22 ),
+   dCCAServiceSpecificUnitExhausted  (23 ),
+   recordClosure  (24 ),
+   timeLimit  (25 ),
+   volumeLimit  (26 ),
+   serviceSpecificUnitLimit  (27 ),
+   envelopeClosure  (28 ),
+   eCGIChange  (29 ),
+   tAIChange  (30 ),
+   userLocationChange  (31 ),
+   userCSGInformationChange  (32 ),
+   presenceInPRAChange  (33 ),
+   accessChangeOfSDF  (34 ),
+   indirectServiceConditionChange  (35 ),
+   servingPLMNRateControlChange  (36 ),
+   aPNRateControlChange  (37 )}
+
+SCFAddress ::= OCTET STRING ( SIZE( 1 .. 20 ) )
+
+ServiceIdentifier ::= INTEGER ( 0 .. 4294967295 )
+
+ServingNodeType ::= ENUMERATED {
+   sGSN        ( 0 ),
+   pMIPSGW     ( 1 ),
+   gTPSGW      ( 2 ),
+   ePDG        ( 3 ),
+   hSGW        ( 4 ),
+   mME         ( 5 ),
+   tWAN        ( 6 ) }
+
+ServingPLMNRateControl ::= SEQUENCE {
+   sPLMNDLRateControlValue   [0] IMPLICIT INTEGER,
+   sPLMNULRateControlValue   [1] IMPLICIT INTEGER}
+
+SGiPtPTunnellingMethod ::= ENUMERATED {
+   uDPIPbased    ( 0 ),
+   others        ( 1 ) }
+
+SGSNChange ::= BOOLEAN
+
+SGWChange  ::= BOOLEAN
+
+TimeQuotaMechanism ::= SEQUENCE {
+   timeQuotaType      [1] IMPLICIT TimeQuotaType,
+   baseTimeInterval   [2] IMPLICIT INTEGER}
+
+TimeQuotaType ::= ENUMERATED {
+   dISCRETETIMEPERIOD      ( 0 ),
+   cONTINUOUSTIMEPERIOD    ( 1 ) }
+
+TrafficSteeringPolicyIDDownlink ::= OCTET STRING
+
+TrafficSteeringPolicyIDUplink ::= OCTET STRING
+
+TWANUserLocationInfo ::= SEQUENCE {
+   sSID                      [0] IMPLICIT OCTET STRING,
+   bSSID                     [1] IMPLICIT OCTET STRING OPTIONAL,
+   civicAddressInformation   [2] IMPLICIT OCTET STRING OPTIONAL,
+   wLANOperatorId            [3] IMPLICIT WLANOperatorId OPTIONAL,
+   logicalAccessID           [4] IMPLICIT OCTET STRING OPTIONAL}
+
+UNIPDUCPOnlyFlag ::= BOOLEAN
+
+UserCSGInformation ::= SEQUENCE {
+   cSGId                     [0] IMPLICIT OCTET STRING ( SIZE( 4 ) ),
+   cSGAccessMode             [1] IMPLICIT CSGAccessMode,
+   cSGMembershipIndication   [2] IMPLICIT NULL OPTIONAL}
+
+UWANUserLocationInfo ::= SEQUENCE {
+   uELocalIPAddress          [0] GSNAddress,
+   uDPSourcePort             [1] IMPLICIT OCTET STRING ( SIZE( 2 ) ) OPTIONAL,
+   sSID                      [2] IMPLICIT OCTET STRING OPTIONAL,
+   bSSID                     [3] IMPLICIT OCTET STRING OPTIONAL,
+   tCPSourcePort             [4] IMPLICIT OCTET STRING ( SIZE( 2 ) ) OPTIONAL,
+   civicAddressInformation   [5] IMPLICIT OCTET STRING OPTIONAL,
+   wLANOperatorId            [6] IMPLICIT WLANOperatorId OPTIONAL,
+   logicalAccessID           [7] IMPLICIT OCTET STRING OPTIONAL}
+
+WLANOperatorId ::= SEQUENCE {
+   wLANOperatorName   [0] IMPLICIT OCTET STRING,
+   wLANPLMNId         [1] IMPLICIT OCTET STRING ( SIZE( 3 ) )}
+
+
+-- X.721 DMI-EXTENSION. The set is the standard form of the original
+-- extensible empty table constraint ({, ...}) and does not change BER.
+DMI-EXTENSION ::= CLASS {
+    &id     OBJECT IDENTIFIER UNIQUE,
+    &Value
+}
+WITH SYNTAX {
+    TYPE &Value
+    ID &id
+}
+
+ManagementExtensionSet DMI-EXTENSION ::= {...}
+
+
+-- 3GPP TS 29.002 MAP-EXTENSION. ExtensionSet is the standard form of
+-- the original extensible empty table constraint ({, ...}).
+MAP-EXTENSION ::= CLASS {
+    &ExtensionType OPTIONAL,
+    &extensionId OBJECT IDENTIFIER
+}
+
+ExtensionSet MAP-EXTENSION ::= {...}
+
+END

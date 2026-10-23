@@ -1,0 +1,27 @@
+Network-Facility-Extension-asn1-97
+{iso(1) standard(0) pss1-generic-procedures(11582)
+network-facility-extension-asn1-97(13)}
+DEFINITIONS ::=
+BEGIN
+IMPORTS
+
+    PartyNumber
+        FROM Addressing-Data-Elements-asn1-97
+        {iso(1) standard(0) pss1-generic-procedures(11582)
+        addressing-data-elements-asn1-97(20) }
+    ;
+NetworkFacilityExtension ::= [10] IMPLICIT SEQUENCE {
+    sourceEntity [0] IMPLICIT EntityType,
+    sourceEntityAddress [1] AddressInformation OPTIONAL,
+    destinationEntity [2] IMPLICIT EntityType,
+    destinationEntityAddress [3] AddressInformation OPTIONAL
+}
+
+EntityType ::= ENUMERATED {
+    endPINX(0),
+    anyTypeOfPINX(1)
+}
+
+AddressInformation ::= PartyNumber
+
+END      -- of Network-Facility-Extension-asn1-97
