@@ -1,10 +1,10 @@
 # Intelligent Network Application Protocol (INAP) in TypeScript
 
-ASN.1 data structures, operations, and errors for the Intelligent Network
-Application Protocol (INAP), the telephony protocol used between intelligent
-network entities such as the service switching function, service control
-function, specialized resource function, service data function, and call
-unrelated service function.
+ASN.1 data structures, operations, and errors for the ITU-T Q.1200-series
+Intelligent Network Application Protocol (INAP), the telephony protocol used
+between intelligent network entities such as the service switching function,
+service control function, specialized resource function, service data function,
+and call unrelated service function. This module is ESM-only.
 
 The modules follow ITU-T Recommendations
 [Q.1218](https://www.itu.int/rec/T-REC-Q.1218) (CS-1),
@@ -30,9 +30,46 @@ If you would like to see additional ASN.1 libraries in TypeScript or other
 programming languages, or if you have any other questions, please contact us at
 [contact@wildboarsoftware.com](mailto:contact@wildboarsoftware.com).
 
-## ESM-Only
+## Example Usage
 
-This module is ESM-only.
+```typescript
+const methodId = _OID.fromParts([1, 2, 3]);
+const name: Name = {
+    rdnSequence: [[
+        new AttributeTypeAndValue(
+            _OID.fromParts([2, 5, 4, 3]),
+            $._encodeUTF8String("scf", $.BER),
+        ),
+    ]],
+};
+const withContext = new ExecuteArgument_Type_input_assertions_Item_valuesWithContext_Item(
+    $._encodeInteger(7, $.BER),
+    [],
+);
+const assertion = new ExecuteArgument_Type_input_assertions_Item(
+    $._encodeObjectIdentifier(methodId, $.BER),
+    [$._encodeInteger(1, $.BER)],
+    [withContext],
+);
+const original = new ExecuteArgument_Type(
+    name,
+    methodId,
+    [assertion],
+    $._encodeNull(null, $.BER),
+    ExecuteArgument_Type._default_value_for_serviceControls,
+    undefined,
+    undefined,
+    ExecuteArgument_Type._default_value_for_operationProgress,
+    undefined,
+    undefined,
+    undefined,
+    ExecuteArgument_Type._default_value_for_entryOnly,
+    ExecuteArgument_Type._default_value_for_nameResolveOnMaste,
+    undefined,
+    ExecuteArgument_Type._default_value_for_familyGrouping,
+);
+const encoded = _encode_ExecuteArgument_Type(original, $.BER).toBytes();
+```
 
 ## AI Usage Statement
 

@@ -67,7 +67,6 @@ done
 - [ ] `sv` package: implement the framing that goes around this too. It's a simple protocol.
 - [ ] Prune `nist-csor`, `lnpdqp`, and `gdt`: these modules are stupid. Get rid of them.
 - [ ] IEC 63047:2018 radiation detector protocol https://webstore.iec.ch/en/publication/28999
-- [ ] ANSI C12.22-2026 Smart Meter Protocol https://webstore.ansi.org/standards/nema/ansic12222026
 - [ ] Publish NPM packages with Provenance
 - [ ] Refactor `XSD` into a separate module
 - [ ] Documentation
@@ -103,6 +102,13 @@ import { Certificate } from "@wildboar/x500/AuthenticationFramework";
 
 - CINF and RINF may be useful for the OID registry.
 - Error in `attributeDescriptor` in `AttributeCertificateDefinitions`: `&id` enclosed in unnecessary `{}`.
+- Telcordia GR-1299 Advanced Intelligent Networks (AIN) may never be done. The
+  specification costs about $700, and I'm just not willing to pay for that,
+  especially when I know that the specification might not have all I need to
+  complete this ASN.1 module. Maybe if I get a generous donation...
+- [IEC 62056](https://webstore.iec.ch/publication/6410) COSEM will not be done.
+  It only uses BER for the outer ACSE data structures, but the user information
+  carried by ACSE use a BER-derived serialization called "A-XDR."
 
 ## Adding a new package
 

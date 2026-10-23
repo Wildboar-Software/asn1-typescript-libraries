@@ -1,6 +1,8 @@
 # QSIG Supplementary Service PDUs in TypeScript
 
-ASN.1 data structures and PDUs for QSIG / PSS1 supplementary services at the Q reference point.
+ASN.1 data structures and PDUs for the QSIG ISDN signalling protocol
+described in ECMA specifications by [ECMA International](https://ecma-international.org/).
+This module is ESM-only.
 
 Import a module subpath such as `@wildboar/qsig/PSS1-Service-APDUs-asn1-97`.
 `ACSE-1` and `Remote-Operations-Information-Objects` are not entry points.
@@ -21,9 +23,62 @@ If you would like to see additional ASN.1 libraries in TypeScript or other
 programming languages, or if you have any other questions, please contact us at
 [contact@wildboarsoftware.com](mailto:contact@wildboarsoftware.com).
 
-## ESM-Only
+## Example Usage
 
-This module is ESM-only.
+```typescript
+import { ObjectIdentifier } from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import {
+    Address,
+    type PartyNumber,
+    NumberScreened,
+    PublicPartyNumber,
+    PublicTypeOfNumber,
+    ScreeningIndicator,
+} from "@wildboar/qsig/Addressing-Data-Elements-asn1-97";
+import { Extension } from "@wildboar/qsig/Manufacturer-specific-service-extension-class-asn1-97";
+import {
+    DiversionReason,
+    SubscriptionOption,
+    callRerouteing_ArgumentType,
+    _decode_callRerouteing_ArgumentType,
+    _encode_callRerouteing_ArgumentType,
+} from "@wildboar/qsig/Call-Diversion-Operations-asn1-97";
+
+const called: PartyNumber = { unknownPartyNumber: "15551212" };
+const original = new callRerouteing_ArgumentType(
+    DiversionReason.cfb,
+    DiversionReason.cfnr,
+    new Address(called, { nSAPSubaddress: Uint8Array.from([0x01, 0x02, 0x03]) }),
+    2,
+    Uint8Array.from([0x04, 0x03, 0x80, 0x90, 0xa3]),
+    { presentationAllowedAddress: called },
+    SubscriptionOption.notificationWithDivertedToNr,
+    { nSAPSubaddress: Uint8Array.from([0xaa, 0xbb]) },
+    {
+        presentationAllowedAddress: new NumberScreened(
+            {
+                publicPartyNumber: new PublicPartyNumber(
+                    PublicTypeOfNumber.internationalNumber,
+                    "12125551212",
+                ),
+            },
+            ScreeningIndicator.networkProvided,
+        ),
+    },
+    { namePresentationAllowed: { namePresentationAllowedSimple: Uint8Array.from([0x41, 0x6e, 0x6e]) } },
+    { presentationRestricted: null },
+    { nameNotAvailable: null },
+    { namePresentationAllowed: { namePresentationAllowedSimple: Uint8Array.from([0x42, 0x6f, 0x62]) } },
+    {
+        multiple: [
+            new Extension(ObjectIdentifier.fromString("1.2.3"), $._encodeNull(null, $.BER)),
+            new Extension(ObjectIdentifier.fromString("1.2.4"), $._encodeNull(null, $.BER)),
+        ],
+    },
+);
+const encoded = _encode_callRerouteing_ArgumentType(original, $.BER).toBytes();
+```
 
 ## AI Usage Statement
 

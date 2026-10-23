@@ -1,6 +1,7 @@
 import { ObjectIdentifier } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Address } from "./lib/modules/Addressing-Data-Elements-asn1-97/Address.ta.mjs";
+import { type PartyNumber } from "./lib/modules/Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { NumberScreened } from "./lib/modules/Addressing-Data-Elements-asn1-97/NumberScreened.ta.mjs";
 import { PublicPartyNumber } from "./lib/modules/Addressing-Data-Elements-asn1-97/PublicPartyNumber.ta.mjs";
 import { PublicTypeOfNumber } from "./lib/modules/Addressing-Data-Elements-asn1-97/PublicTypeOfNumber.ta.mjs";
@@ -16,7 +17,7 @@ import {
 
 describe("callRerouteing_ArgumentType", () => {
     test("round-trips a fully populated argument", () => {
-        const called = { unknownPartyNumber: "15551212" };
+        const called: PartyNumber = { unknownPartyNumber: "15551212" };
         const original = new callRerouteing_ArgumentType(
             DiversionReason.cfb,
             DiversionReason.cfnr,

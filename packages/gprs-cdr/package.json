@@ -2,6 +2,14 @@
     "name": "@wildboar/gprs-cdr",
     "type": "module",
     "version": "1.0.0",
+    "description": "3GPP TS 32.298 Charging Data Records (CDR) ASN.1 data structures in TypeScript",
+    "keywords": [
+        "gprs",
+        "cdr",
+        "charging",
+        "records",
+        "ts32298"
+    ],
     "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
     "bugs": {
         "email": "jonathan@wilbur.space"

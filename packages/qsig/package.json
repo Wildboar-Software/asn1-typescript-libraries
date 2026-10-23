@@ -2,6 +2,12 @@
     "name": "@wildboar/qsig",
     "type": "module",
     "version": "1.0.0",
+    "description": "QSIG ISDN signalling protocol ASN.1 data structures and PDUs in TypeScript",
+    "keywords": [
+        "qsig",
+        "isdn",
+        "signalling"
+    ],
     "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
     "bugs": {
         "email": "jonathan@wilbur.space"

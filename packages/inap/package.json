@@ -2,6 +2,13 @@
     "name": "@wildboar/inap",
     "type": "module",
     "version": "1.0.0",
+    "description": "ITU-T Q.1200-series Intelligent Network Application Part (INAP) ASN.1 data structures in TypeScript",
+    "keywords": [
+        "inap",
+        "ss7",
+        "q1200",
+        "intelligent"
+    ],
     "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
     "bugs": {
         "email": "jonathan@wilbur.space"
