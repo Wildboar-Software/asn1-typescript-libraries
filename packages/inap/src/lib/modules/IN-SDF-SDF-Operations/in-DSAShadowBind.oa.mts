@@ -1,0 +1,26 @@
+/* eslint-disable */
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
+// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
+import { in_DirectoryBind } from "../IN-SCF-SDF-Additional-Definitions/in-DirectoryBind.oa.mjs";
+// export { in_DirectoryBind } from "../IN-SCF-SDF-Additional-Definitions/in-DirectoryBind.oa.mjs";
+
+
+/**
+ * @summary in_DSAShadowBind
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * in-DSAShadowBind OPERATION ::= in-DirectoryBind
+ * ```
+ * 
+ * @constant
+ * @type {OPERATION}
+ * @implements {OPERATION}
+ */
+export
+const in_DSAShadowBind: OPERATION = in_DirectoryBind;
+
+/* eslint-enable */

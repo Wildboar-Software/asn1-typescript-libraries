@@ -49,6 +49,7 @@ jobs:
           - "gprs-cdr"
           - "guls"
           - "h248"
+          - "inap"
           - "isis"
           - "iso-9798-3-sasl"
           - "kerberos5"

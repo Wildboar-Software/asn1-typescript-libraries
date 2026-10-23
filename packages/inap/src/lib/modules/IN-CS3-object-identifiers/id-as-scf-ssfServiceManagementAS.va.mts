@@ -1,0 +1,27 @@
+/* eslint-disable */
+import {
+    ObjectIdentifier as _OID,
+    OBJECT_IDENTIFIER
+} from "@wildboar/asn1";
+import { id_as } from "../IN-CS3-object-identifiers/id-as.va.mjs";
+// export { id_as } from "../IN-CS3-object-identifiers/id-as.va.mjs";
+
+
+/**
+ * @summary id_as_scf_ssfServiceManagementAS
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * id-as-scf-ssfServiceManagementAS OBJECT IDENTIFIER ::= {id-as scf-ssfServiceManagementAS(10)}
+ * ```
+ * 
+ * @constant
+ */
+export
+const id_as_scf_ssfServiceManagementAS: OBJECT_IDENTIFIER = _OID.fromParts([
+    /* scf-ssfServiceManagementAS */ 10,
+], id_as);
+
+/* eslint-enable */

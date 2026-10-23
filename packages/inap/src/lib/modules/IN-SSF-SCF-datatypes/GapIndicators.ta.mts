@@ -1,0 +1,176 @@
+/* eslint-disable */
+import {
+    ASN1ConstructionError as _ConstructionError,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { Duration, _decode_Duration, _encode_Duration } from "../IN-SSF-SCF-datatypes/Duration.ta.mjs";
+// export { Duration, _decode_Duration, _encode_Duration } from "../IN-SSF-SCF-datatypes/Duration.ta.mjs";
+import { Interval, _decode_Interval, _encode_Interval } from "../IN-SSF-SCF-datatypes/Interval.ta.mjs";
+// export { Interval, _decode_Interval, _encode_Interval } from "../IN-SSF-SCF-datatypes/Interval.ta.mjs";
+
+
+/**
+ * @summary GapIndicators
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * GapIndicators ::= SEQUENCE {
+ *   duration     [0]  Duration,
+ *   gapInterval  [1]  Interval,
+ *   ...
+ * }
+ * ```
+ * 
+ * @class
+ */
+export
+class GapIndicators {
+    /**
+     * @summary `duration`.
+     * @public
+     * @readonly
+     */
+    readonly duration: Duration;
+    /**
+     * @summary `gapInterval`.
+     * @public
+     * @readonly
+     */
+    readonly gapInterval: Interval;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
+    constructor (
+        duration: Duration,
+        gapInterval: Interval,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.duration = duration;
+        this.gapInterval = gapInterval;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
+
+    /**
+     * @summary Restructures an object into a GapIndicators
+     * @description
+     * 
+     * This takes an `object` and converts it to a `GapIndicators`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `GapIndicators`.
+     * @returns {GapIndicators}
+     */
+    public static _from_object (_o: { [_K in keyof (GapIndicators)]: (GapIndicators)[_K] }): GapIndicators {
+        return new GapIndicators(_o.duration, _o.gapInterval, _o._unrecognizedExtensionsList);
+    }
+
+
+}
+
+/**
+ * @summary The Leading Root Component Types of GapIndicators
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_GapIndicators: $.ComponentSpec[] = [
+    new $.ComponentSpec("duration", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("gapInterval", false, $.hasTag(_TagClass.context, 1))
+];
+
+/**
+ * @summary The Trailing Root Component Types of GapIndicators
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_GapIndicators: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of GapIndicators
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_GapIndicators: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_GapIndicators: $.ASN1Decoder<GapIndicators> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) GapIndicators
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_GapIndicators (el: _Element): GapIndicators {
+    if (!_cached_decoder_for_GapIndicators) { _cached_decoder_for_GapIndicators = function (el: _Element): GapIndicators {
+    const sequence: _Element[] = el.sequence;
+    if (sequence.length < 2) {
+        throw new _ConstructionError("GapIndicators contained only " + sequence.length.toString() + " elements.");
+    }
+    sequence[0].name = "duration";
+    sequence[1].name = "gapInterval";
+    const duration: Duration = $._decode_implicit<Duration>(() => _decode_Duration)(sequence[0]);
+    const gapInterval: Interval = $._decode_implicit<Interval>(() => _decode_Interval)(sequence[1]);
+    return new GapIndicators(
+        duration,
+        gapInterval,
+        sequence.slice(2),
+    );
+}; }
+    return _cached_decoder_for_GapIndicators(el);
+}
+
+let _cached_encoder_for_GapIndicators: $.ASN1Encoder<GapIndicators> | null = null;
+
+/**
+ * @summary Encodes a(n) GapIndicators into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The GapIndicators, encoded as an ASN.1 Element.
+ */
+export
+function _encode_GapIndicators (value: GapIndicators, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_GapIndicators) { _cached_encoder_for_GapIndicators = function (value: GapIndicators, elGetter: $.ASN1Encoder<GapIndicators>): _Element {
+    const _unrecognized = value._unrecognizedExtensionsList;
+    const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
+    let _components_i = 0;
+    _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_Duration, $.BER)(value.duration, $.BER);
+    _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_Interval, $.BER)(value.gapInterval, $.BER);
+    if (_unrecognized) {
+        for (let _unrecognized_i = 0; _unrecognized_i < _unrecognized.length; _unrecognized_i++) {
+            _components[_components_i++] = _unrecognized[_unrecognized_i];
+        }
+    }
+    return $._encodeSequence(_components, $.BER);
+}; }
+    return _cached_encoder_for_GapIndicators(value, elGetter);
+}
+
+
+/* eslint-enable */

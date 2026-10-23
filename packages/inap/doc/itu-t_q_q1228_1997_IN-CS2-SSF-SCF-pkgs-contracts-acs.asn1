@@ -1,0 +1,1119 @@
+-- Module IN-CS2-SSF-SCF-pkgs-contracts-acs (Q.1228:09/1997)
+-- See also ITU-T Q.1228 (09/1997)
+-- See also the index of all ASN.1 assignments needed in this document
+
+IN-CS2-SSF-SCF-pkgs-contracts-acs {itu-t recommendation q 1228 modules(0)
+  in-cs2-ssf-scf-pkgs-contracts-acs(6) version1(0)} DEFINITIONS ::=
+BEGIN
+
+-- This module describes the operation-packages, contracts and application-contexts used
+-- over the SSF-SCF interface.
+IMPORTS
+  PARAMETERS-BOUND, networkSpecificBoundSet
+    FROM IN-CS2-classes {itu-t recommendation q 1228 modules(0)
+      in-cs2-classes(4) version1(0)}
+  ROS-OBJECT-CLASS, CONTRACT, OPERATION-PACKAGE, OPERATION
+    FROM Remote-Operations-Information-Objects {joint-iso-itu-t
+      remote-operations(4) informationObjects(5) version1(0)}
+  TCMessage{}
+    FROM TCAPMessages {itu-t recommendation q 773 modules(2) messages(1)
+      version3(3)}
+  APPLICATION-CONTEXT, dialogue-abstract-syntax
+    FROM TC-Notation-Extensions {itu-t recommendation q 775 modules(2)
+      notation-extension(4) version1(1)}
+  activateServiceFiltering, activityTest, analysedInformation,
+    analyseInformation, applyCharging, applyChargingReport,
+    assistRequestInstructions, authorizeTermination, callGap,
+    callInformationReport, callInformationRequest, cancel,
+    cancelStatusReportRequest, collectedInformation, collectInformation,
+    connect, connectToResource, continue, continueWithArgument,
+    createCallSegmentAssociation, disconnectForwardConnection,
+    disconnectForwardConnectionWithArgument, disconnectLeg,
+    entityReleased, establishTemporaryConnection,
+    eventNotificationCharging, eventReportBCSM, eventReportFacility,
+    facilitySelectedAndAvailable, furnishChargingInformation,
+    holdCallInNetwork, initialDP, initiateCallAttempt, manageTriggerData,
+    mergeCallSegments, moveCallSegments, moveLeg, oAbandon, oAnswer,
+    oCalledPartyBusy, oDisconnect, oMidCall, oNoAnswer,
+    originationAttempt, originationAttemptAuthorized, oSuspended,
+    reconnect, releaseCall, reportUTSI, requestCurrentStatusReport,
+    requestEveryStatusChangeReport, requestFirstStatusMatchReport,
+    requestNotificationChargingEvent, requestReportBCSMEvent,
+    requestReportUTSI, requestReportFacilityEvent, resetTimer,
+    routeSelectFailure, selectFacility, selectRoute,
+    sendChargingInformation, sendFacilityInformation, sendSTUI,
+    serviceFilteringResponse, splitLeg, statusReport, tAnswer,
+    tBusy, tDisconnect, terminationAttempt, termAttemptAuthorized,
+    tMidCall, tNoAnswer, tSuspended
+    FROM IN-CS2-SSF-SCF-ops-args {itu-t recommendation q 1228 modules(0)
+      in-cs2-ssf-scf-ops-args(5) version1(0)}
+  playAnnouncement, promptAndCollectUserInformation,
+    promptAndReceiveMessage, scriptClose, scriptEvent,
+    scriptInformation, scriptRun, specializedResourceReport
+    FROM IN-CS2-SCF-SRF-ops-args {itu-t recommendation q 1228 modules(0)
+      in-cs2-scf-srf-ops-args(7) version1(0)}
+  specializedResourceControlPackage, scriptControlPackage,
+    messageControlPackage
+    FROM IN-CS2-SCF-SRF-pkgs-contracts-acs {itu-t recommendation q 1228
+      modules(0) in-cs2-scf-srf-pkgs-contracts-acs(8) version1(0)}
+  id-ac-cs2-ssf-scfGenericAC, id-ac-cs2-ssf-scfDPSpecificAC,
+    id-ac-cs2-ssf-scfAssistHandoffAC, id-ac-cs2-ssf-scfServiceManagementAC,
+    id-ac-cs2-scf-ssfGenericAC, id-ac-cs2-scf-ssfDPSpecificAC,
+    id-ac-cs2-scf-ssfTrafficManagementAC, id-ac-cs2-scf-ssfServiceManagementAC,
+    id-ac-cs2-scf-ssfStatusReportingAC, id-ac-cs2-scf-ssfTriggerManagementAC,
+    id-inCs2SsfToScfGeneric, id-inCs2SsfToScfDpSpecific,
+    id-inCs2AssistHandoffSsfToScf, id-inCs2ScfToSsfGeneric,
+    id-inCs2ScfToSsfDpSpecific, id-inCs2ScfToSsfTrafficManagement,
+    id-inCs2ScfToSsfServiceManagement, id-inCs2SsfToScfServiceManagement,
+    id-inCs2ScfToSsfStatusReporting, id-inCs2ScfToSsfTriggerManagement,
+    id-as-ssf-scfGenericAS, id-as-ssf-scfDpSpecificAS,
+    id-as-assistHandoff-ssf-scfAS, id-as-scf-ssfGenericAS,
+    id-as-scf-ssfDpSpecificAS, id-as-scf-ssfTrafficManagementAS,
+    id-as-scf-ssfServiceManagementAS, id-as-ssf-scfServiceManagementAS,
+    id-as-scf-ssfStatusReportingAS, id-as-scf-ssfTriggerManagementAS,
+    id-package-scfActivation, id-package-basicBCPDP, id-package-advancedBCPDP,
+    id-package-srf-scfActivationOfAssist,
+    id-package-assistConnectionEstablishment,
+    id-package-genericDisconnectResource,
+    id-package-nonAssistedConnectionEstablishment, id-package-connect,
+    id-package-callHandling, id-package-bcsmEventHandling,
+    id-package-chargingEventHandling, id-package-ssfCallProcessing,
+    id-package-scfCallInitiation, id-package-timer, id-package-billing,
+    id-package-charging, id-package-trafficManagement,
+    id-package-serviceManagementActivate, id-package-serviceManagementResponse,
+    id-package-callReport, id-package-signallingControl,
+    id-package-activityTest, id-package-statusReporting, id-package-cancel,
+    id-package-cphResponse, id-package-entityReleased,
+    id-package-triggerManagement, id-package-uSIHandling,
+    id-package-facilityIEHandling, id-package-dpSpecificEventHandling,
+    classes, ros-InformationObjects, tc-Messages, tc-NotationExtensions,
+    ssf-scf-Operations, scf-srf-Operations, scf-srf-Protocol
+    FROM IN-CS2-object-identifiers {itu-t recommendation q 1228 modules(0)
+      in-cs2-object-identifiers(17) version1(0)};
+
+-- Application Contexts
+cs2ssf-scfGenericAC APPLICATION-CONTEXT ::= {
+  CONTRACT                  inCs2SsfToScfGeneric
+  DIALOGUE MODE             structured
+  ABSTRACT SYNTAXES
+    {dialogue-abstract-syntax | ssf-scfGenericAbstractSyntax}
+  APPLICATION CONTEXT NAME  id-ac-cs2-ssf-scfGenericAC
+}
+
+cs2ssf-scfDPSpecificAC APPLICATION-CONTEXT ::= {
+  CONTRACT                  inCs2SsfToScfDpSpecific
+  DIALOGUE MODE             structured
+  ABSTRACT SYNTAXES
+    {dialogue-abstract-syntax | ssf-scfDpSpecificAbstractSyntax}
+  APPLICATION CONTEXT NAME  id-ac-cs2-ssf-scfDPSpecificAC
+}
+
+cs2ssf-scfAssistHandoffAC APPLICATION-CONTEXT ::= {
+  CONTRACT                  inCs2AssistHandoffSsfToScf
+  DIALOGUE MODE             structured
+  ABSTRACT SYNTAXES
+    {dialogue-abstract-syntax | assistHandoff-ssf-scfAbstractSyntax}
+  APPLICATION CONTEXT NAME  id-ac-cs2-ssf-scfAssistHandoffAC
+}
+
+cs2ssf-scfServiceManagementAC APPLICATION-CONTEXT ::= {
+  CONTRACT                  inCs2SsfToScfServiceManagement
+  DIALOGUE MODE             structured
+  ABSTRACT SYNTAXES
+    {dialogue-abstract-syntax | ssf-scfServiceManagementAbstractSyntax}
+  APPLICATION CONTEXT NAME  id-ac-cs2-ssf-scfServiceManagementAC
+}
+
+cs2scf-ssfGenericAC APPLICATION-CONTEXT ::= {
+  CONTRACT                  inCs2ScfToSsfGeneric
+  DIALOGUE MODE             structured
+  ABSTRACT SYNTAXES
+    {dialogue-abstract-syntax | ssf-scfGenericAbstractSyntax}
+  APPLICATION CONTEXT NAME  id-ac-cs2-scf-ssfGenericAC
+}
+
+cs2scf-ssfDPSpecificAC APPLICATION-CONTEXT ::= {
+  CONTRACT                  inCs2ScfToSsfDpSpecific
+  DIALOGUE MODE             structured
+  ABSTRACT SYNTAXES
+    {dialogue-abstract-syntax | scf-ssfDpSpecificAbstractSyntax}
+  APPLICATION CONTEXT NAME  id-ac-cs2-scf-ssfDPSpecificAC
+}
+
+cs2scf-ssfTrafficManagementAC APPLICATION-CONTEXT ::= {
+  CONTRACT                  inCs2ScfToSsfTrafficManagement
+  DIALOGUE MODE             structured
+  ABSTRACT SYNTAXES
+    {dialogue-abstract-syntax | scf-ssfTrafficManagementAbstractSyntax}
+  APPLICATION CONTEXT NAME  id-ac-cs2-scf-ssfTrafficManagementAC
+}
+
+cs2scf-ssfServiceManagementAC APPLICATION-CONTEXT ::= {
+  CONTRACT                  inCs2ScfToSsfServiceManagement
+  DIALOGUE MODE             structured
+  ABSTRACT SYNTAXES
+    {dialogue-abstract-syntax | scf-ssfServiceManagementAbstractSyntax}
+  APPLICATION CONTEXT NAME  id-ac-cs2-scf-ssfServiceManagementAC
+}
+
+cs2scf-ssfStatusReportingAC APPLICATION-CONTEXT ::= {
+  CONTRACT                  inCs2ScfToSsfStatusReporting
+  DIALOGUE MODE             structured
+  ABSTRACT SYNTAXES
+    {dialogue-abstract-syntax | scf-ssfStatusReportingAbstractSyntax}
+  APPLICATION CONTEXT NAME  id-ac-cs2-scf-ssfStatusReportingAC
+}
+
+cs2scf-ssfTriggerManagementAC APPLICATION-CONTEXT ::= {
+  CONTRACT                  inCs2ScfToSsfTriggerManagement
+  DIALOGUE MODE             structured
+  ABSTRACT SYNTAXES
+    {dialogue-abstract-syntax | scf-ssfTriggerManagementAbstractSyntax}
+  APPLICATION CONTEXT NAME  id-ac-cs2-scf-ssfTriggerManagementAC
+}
+
+-- Contracts
+inCs2SsfToScfGeneric CONTRACT ::= {
+  -- dialogue initiated by SSF with InitialDP Operation
+  INITIATOR CONSUMER OF
+    {exceptionInformPackage |
+      scfActivationPackage}
+  RESPONDER CONSUMER OF
+    {activityTestPackage |
+      assistConnectionEstablishmentPackage |
+      bcsmEventHandlingPackage |
+      billingPackage |
+      callHandlingPackage |
+      callReportPackage |
+      cancelPackage |
+      chargingEventHandlingPackage |
+      chargingPackage |
+      connectPackage |
+      cphResponsePackage |
+      facilityIEHandlingPackage |
+      genericDisconnectResourcePackage |
+      nonAssistedConnectionEstablishmentPackage |
+      signallingControlPackage |
+      specializedResourceControlPackage |
+      scriptControlPackage |
+      messageControlPackage |
+      ssfCallProcessingPackage |
+      statusReportingPackage |
+      timerPackage |
+      trafficManagementPackage |
+      uSIHandlingPackage |
+      scfCallInitiationPackage}
+  ID                     id-inCs2SsfToScfGeneric
+}
+
+inCs2SsfToScfDpSpecific CONTRACT ::= {
+  -- dialogue initiated by SSF with DP Specific Iniltial Operations
+  INITIATOR CONSUMER OF
+    {advancedBCPDPPackage |
+      basicBCPDPPackage |
+      exceptionInformPackage}
+  RESPONDER CONSUMER OF
+    {activityTestPackage |
+      assistConnectionEstablishmentPackage |
+      billingPackage |
+      callHandlingPackage |
+      callReportPackage |
+      cancelPackage |
+      chargingEventHandlingPackage |
+      chargingPackage |
+      connectPackage |
+      cphResponsePackage |
+      dpSpecificEventHandlingPackage |
+      facilityIEHandlingPackage |
+      genericDisconnectResourcePackage |
+      nonAssistedConnectionEstablishmentPackage |
+      signallingControlPackage |
+      specializedResourceControlPackage |
+      scriptControlPackage |
+      messageControlPackage |
+      ssfCallProcessingPackage |
+      statusReportingPackage |
+      timerPackage |
+      trafficManagementPackage |
+      uSIHandlingPackage |
+      scfCallInitiationPackage}
+  ID                     id-inCs2SsfToScfDpSpecific
+}
+
+inCs2AssistHandoffSsfToScf CONTRACT ::= {
+  -- dialogue initiated by SSF with AssistRequestInstructions
+  INITIATOR CONSUMER OF
+    {srf-scfActivationOfAssistPackage}
+  RESPONDER CONSUMER OF
+    {activityTestPackage | billingPackage |
+      callHandlingPackage |
+      cancelPackage |
+      chargingPackage |
+      genericDisconnectResourcePackage |
+      nonAssistedConnectionEstablishmentPackage |
+      specializedResourceControlPackage |
+      scriptControlPackage |
+      messageControlPackage |
+      statusReportingPackage |
+      timerPackage}
+  ID                     id-inCs2AssistHandoffSsfToScf
+}
+
+inCs2ScfToSsfGeneric CONTRACT ::= {
+  -- dialogue initiated by SCF with InitiateCallAttempt, Generic Case
+  INITIATOR CONSUMER OF
+    {activityTestPackage |
+      assistConnectionEstablishmentPackage |
+      bcsmEventHandlingPackage |
+      billingPackage |
+      callHandlingPackage |
+      callReportPackage |
+      cancelPackage |
+      chargingPackage |
+      connectPackage |
+      cphResponsePackage |
+      facilityIEHandlingPackage |
+      genericDisconnectResourcePackage |
+      nonAssistedConnectionEstablishmentPackage |
+      scfCallInitiationPackage |
+      signallingControlPackage |
+      specializedResourceControlPackage |
+      scriptControlPackage |
+      messageControlPackage |
+      ssfCallProcessingPackage |
+      statusReportingPackage |
+      timerPackage |
+      uSIHandlingPackage |
+      scfCallInitiationPackage}
+  RESPONDER CONSUMER OF  {exceptionInformPackage}
+  ID                     id-inCs2ScfToSsfGeneric
+}
+
+inCs2ScfToSsfDpSpecific CONTRACT ::= {
+  -- dialogue initiated by SCF with InitiateCallAttempt, DP Specific Case
+  INITIATOR CONSUMER OF
+    {activityTestPackage |
+      assistConnectionEstablishmentPackage |
+      billingPackage |
+      callHandlingPackage |
+      callReportPackage |
+      cancelPackage |
+      chargingEventHandlingPackage |
+      chargingPackage |
+      connectPackage |
+      cphResponsePackage |
+      dpSpecificEventHandlingPackage |
+      facilityIEHandlingPackage |
+      genericDisconnectResourcePackage |
+      nonAssistedConnectionEstablishmentPackage |
+      scfCallInitiationPackage |
+      signallingControlPackage |
+      specializedResourceControlPackage |
+      scriptControlPackage |
+      messageControlPackage |
+      ssfCallProcessingPackage |
+      statusReportingPackage |
+      timerPackage |
+      uSIHandlingPackage |
+      scfCallInitiationPackage}
+  RESPONDER CONSUMER OF  {exceptionInformPackage}
+  ID                     id-inCs2ScfToSsfDpSpecific
+}
+
+inCs2ScfToSsfTrafficManagement CONTRACT ::= {
+  -- dialogue initiated by SCF with CallGap
+  INITIATOR CONSUMER OF  {trafficManagementPackage}
+  ID                     id-inCs2ScfToSsfTrafficManagement
+}
+
+inCs2ScfToSsfServiceManagement CONTRACT ::= {
+  -- dialogue initiated by SCF with ActivateServiceFiltering
+  INITIATOR CONSUMER OF
+    {serviceManagementActivatePackage}
+  ID                     id-inCs2ScfToSsfServiceManagement
+}
+
+inCs2SsfToScfServiceManagement CONTRACT ::= {
+  -- dialogue initiated/ended by SSF with ServiceFilteringResponse
+  INITIATOR CONSUMER OF
+    {serviceManagementResponsePackage}
+  ID                     id-inCs2SsfToScfServiceManagement
+}
+
+inCs2ScfToSsfStatusReporting CONTRACT ::= {
+  -- dialogue initiated by SCF with StatusReporting Operations
+  INITIATOR CONSUMER OF
+    {cancelPackage |
+      statusReportingPackage}
+  ID                     id-inCs2ScfToSsfStatusReporting
+}
+
+inCs2ScfToSsfTriggerManagement CONTRACT ::= {
+  -- dialogue initiated by SCF with Manage Trigger Data
+  INITIATOR CONSUMER OF  {triggerManagementPackage}
+  ID                     id-inCs2ScfToSsfTriggerManagement
+}
+
+-- Operation Packages
+scfActivationPackage OPERATION-PACKAGE ::= {
+  CONSUMER INVOKES  {initialDP}
+  ID                id-package-scfActivation
+}
+
+basicBCPDPPackage OPERATION-PACKAGE ::= {
+  CONSUMER INVOKES
+    {originationAttemptAuthorized | collectedInformation |
+      analysedInformation | routeSelectFailure |
+      facilitySelectedAndAvailable | oAbandon |
+      originationAttempt | terminationAttempt |
+      oCalledPartyBusy | oNoAnswer | oAnswer |
+      oDisconnect | termAttemptAuthorized | tBusy |
+      tNoAnswer | tAnswer | tDisconnect}
+  ID                id-package-basicBCPDP
+}
+
+advancedBCPDPPackage OPERATION-PACKAGE ::= {
+  CONSUMER INVOKES
+    {oMidCall | oSuspended | tMidCall | tSuspended}
+  ID                id-package-advancedBCPDP
+}
+
+srf-scfActivationOfAssistPackage OPERATION-PACKAGE ::=
+  {
+  CONSUMER INVOKES  {assistRequestInstructions}
+  ID                id-package-srf-scfActivationOfAssist
+}
+
+assistConnectionEstablishmentPackage OPERATION-PACKAGE
+  ::= {
+  CONSUMER INVOKES  {establishTemporaryConnection}
+  ID                id-package-assistConnectionEstablishment
+}
+
+genericDisconnectResourcePackage OPERATION-PACKAGE ::=
+  {
+  CONSUMER INVOKES
+    {disconnectForwardConnection |
+      disconnectForwardConnectionWithArgument}
+  ID                id-package-genericDisconnectResource
+}
+
+nonAssistedConnectionEstablishmentPackage
+  OPERATION-PACKAGE ::= {
+  CONSUMER INVOKES  {connectToResource}
+  ID                id-package-nonAssistedConnectionEstablishment
+}
+
+connectPackage OPERATION-PACKAGE ::= {
+  CONSUMER INVOKES  {connect}
+  ID                id-package-connect
+}
+
+callHandlingPackage OPERATION-PACKAGE ::= {
+  CONSUMER INVOKES  {holdCallInNetwork | releaseCall}
+  ID                id-package-callHandling
+}
+
+bcsmEventHandlingPackage OPERATION-PACKAGE ::=
+{
+  CONSUMER INVOKES  {requestReportBCSMEvent}
+  SUPPLIER INVOKES  {eventReportBCSM}
+  ID                id-package-bcsmEventHandling
+}
+
+dpSpecificEventHandlingPackage OPERATION-PACKAGE ::=
+{
+  CONSUMER INVOKES  {requestReportBCSMEvent}
+  SUPPLIER INVOKES
+    {originationAttemptAuthorized | collectedInformation |
+      analysedInformation | routeSelectFailure |
+      facilitySelectedAndAvailable | oAbandon |
+      originationAttempt | terminationAttempt |
+      oCalledPartyBusy | oNoAnswer | oAnswer |
+      oDisconnect | termAttemptAuthorized | tBusy |
+      tNoAnswer | tAnswer | tDisconnect | oMidCall
+      | oSuspended | tMidCall | tSuspended}
+  ID                id-package-dpSpecificEventHandling
+}
+
+chargingEventHandlingPackage OPERATION-PACKAGE ::=
+{
+  CONSUMER INVOKES  {requestNotificationChargingEvent}
+  SUPPLIER INVOKES  {eventNotificationCharging}
+  ID                id-package-chargingEventHandling
+}
+
+ssfCallProcessingPackage OPERATION-PACKAGE ::=
+{
+  CONSUMER INVOKES
+    {collectInformation | analyseInformation |
+      authorizeTermination | selectRoute | selectFacility
+      | continue}
+  ID                id-package-ssfCallProcessing
+}
+
+scfCallInitiationPackage OPERATION-PACKAGE ::=
+{
+  CONSUMER INVOKES  {initiateCallAttempt}
+  ID                id-package-scfCallInitiation
+}
+
+timerPackage OPERATION-PACKAGE ::= {
+  CONSUMER INVOKES  {resetTimer}
+  ID                id-package-timer
+}
+
+billingPackage OPERATION-PACKAGE ::= {
+  CONSUMER INVOKES  {furnishChargingInformation}
+  ID                id-package-billing
+}
+
+chargingPackage OPERATION-PACKAGE ::= {
+  CONSUMER INVOKES  {applyCharging}
+  SUPPLIER INVOKES  {applyChargingReport}
+  ID                id-package-charging
+}
+
+trafficManagementPackage OPERATION-PACKAGE ::=
+{
+  CONSUMER INVOKES  {callGap}
+  ID                id-package-trafficManagement
+}
+
+serviceManagementActivatePackage OPERATION-PACKAGE ::=
+  {
+  CONSUMER INVOKES  {activateServiceFiltering}
+  ID                id-package-serviceManagementActivate
+}
+
+serviceManagementResponsePackage OPERATION-PACKAGE ::=
+  {
+  CONSUMER INVOKES  {serviceFilteringResponse}
+  ID                id-package-serviceManagementResponse
+}
+
+callReportPackage OPERATION-PACKAGE ::= {
+  CONSUMER INVOKES  {callInformationRequest}
+  SUPPLIER INVOKES  {callInformationReport}
+  ID                id-package-callReport
+}
+
+signallingControlPackage OPERATION-PACKAGE ::=
+{
+  CONSUMER INVOKES  {sendChargingInformation}
+  ID                id-package-signallingControl
+}
+
+activityTestPackage OPERATION-PACKAGE ::= {
+  CONSUMER INVOKES  {activityTest}
+  ID                id-package-activityTest
+}
+
+statusReportingPackage OPERATION-PACKAGE ::=
+{
+  CONSUMER INVOKES
+    {requestCurrentStatusReport | requestEveryStatusChangeReport
+      | requestFirstStatusMatchReport}
+  SUPPLIER INVOKES  {statusReport}
+  ID                id-package-statusReporting
+}
+
+cancelPackage OPERATION-PACKAGE ::= {
+  CONSUMER INVOKES  {cancel | cancelStatusReportRequest}
+  ID                id-package-cancel
+}
+
+cphResponsePackage OPERATION-PACKAGE ::= {
+  CONSUMER INVOKES
+    {continueWithArgument | disconnectLeg |
+      mergeCallSegments | moveCallSegments | moveLeg |
+      createCallSegmentAssociation | reconnect | splitLeg}
+  ID                id-package-cphResponse
+}
+
+exceptionInformPackage OPERATION-PACKAGE ::=
+{
+  CONSUMER INVOKES  {entityReleased}
+  ID                id-package-entityReleased
+}
+
+triggerManagementPackage OPERATION-PACKAGE ::=
+{
+  CONSUMER INVOKES  {manageTriggerData}
+  ID                id-package-triggerManagement
+}
+
+uSIHandlingPackage OPERATION-PACKAGE ::= {
+  CONSUMER INVOKES  {requestReportUTSI | sendSTUI}
+  SUPPLIER INVOKES  {reportUTSI}
+  ID                id-package-uSIHandling
+}
+
+facilityIEHandlingPackage OPERATION-PACKAGE ::=
+{
+  CONSUMER INVOKES
+    {requestReportFacilityEvent | sendFacilityInformation}
+  SUPPLIER INVOKES  {eventReportFacility}
+  ID                id-package-facilityIEHandling
+}
+
+-- Abstract Syntaxes
+ssf-scfGenericAbstractSyntax ABSTRACT-SYNTAX ::= {
+  GenericSSF-SCF-PDUs
+  IDENTIFIED BY  id-as-ssf-scfGenericAS
+}
+
+GenericSSF-SCF-PDUs ::=
+  TCMessage{{SsfToScfGenericInvokable}, {SsfToScfGenericReturnable}}
+
+SsfToScfGenericInvokable OPERATION ::=
+  {activateServiceFiltering | activityTest |
+   applyCharging |
+   applyChargingReport |
+   callInformationReport |
+   callInformationRequest |
+   cancel |
+   cancelStatusReportRequest |
+   collectInformation |
+   connect |
+   connectToResource | disconnectForwardConnection |
+   disconnectForwardConnectionWithArgument |
+   disconnectLeg |
+   entityReleased |
+   establishTemporaryConnection |
+   eventNotificationCharging |
+   eventReportBCSM |
+   eventReportFacility |
+   furnishChargingInformation | holdCallInNetwork |
+   initialDP |
+   mergeCallSegments |
+   moveCallSegments | moveLeg
+   | createCallSegmentAssociation |
+   reconnect | releaseCall |
+   reportUTSI |
+   requestCurrentStatusReport |
+   requestEveryStatusChangeReport |
+   requestFirstStatusMatchReport |
+   requestNotificationChargingEvent |
+   requestReportBCSMEvent |
+   requestReportFacilityEvent |
+   requestReportUTSI |
+   resetTimer |
+   sendChargingInformation |
+   sendFacilityInformation |
+   sendSTUI |
+   serviceFilteringResponse |
+   splitLeg | statusReport |
+   playAnnouncement |
+   promptAndCollectUserInformation |
+   scriptClose | scriptEvent
+   | scriptInformation |
+   scriptRun | specializedResourceReport |
+   promptAndReceiveMessage}
+
+SsfToScfGenericReturnable OPERATION ::=
+  {activateServiceFiltering | activityTest |
+   applyCharging |
+   applyChargingReport |
+   callGap |
+   callInformationRequest |
+   cancel |
+   cancelStatusReportRequest |
+   collectInformation |
+   connect |
+   connectToResource | continue |
+   continueWithArgument | disconnectForwardConnection
+   | disconnectForwardConnectionWithArgument |
+   disconnectLeg |
+   establishTemporaryConnection |
+   furnishChargingInformation | holdCallInNetwork |
+   initialDP |
+   mergeCallSegments |
+   moveCallSegments | moveLeg
+   | createCallSegmentAssociation |
+   reconnect | releaseCall |
+   requestCurrentStatusReport |
+   requestEveryStatusChangeReport |
+   requestFirstStatusMatchReport |
+   requestNotificationChargingEvent |
+   requestReportBCSMEvent |
+   requestReportFacilityEvent |
+   requestReportUTSI |
+   resetTimer |
+   sendChargingInformation |
+   sendFacilityInformation |
+   sendSTUI | splitLeg |
+   playAnnouncement |
+   promptAndCollectUserInformation |
+   scriptClose |
+   scriptInformation |
+   scriptRun |
+   promptAndReceiveMessage}
+
+ssf-scfDpSpecificAbstractSyntax ABSTRACT-SYNTAX ::= {
+  DpSpecificSSF-SCF-PDUs
+  IDENTIFIED BY  id-as-ssf-scfDpSpecificAS
+}
+
+DpSpecificSSF-SCF-PDUs ::=
+  TCMessage{{SsfToScfDpSpecificInvokable}, {SsfToScfDpSpecificReturnable}}
+
+SsfToScfDpSpecificInvokable OPERATION ::=
+  {activateServiceFiltering | activityTest |
+   analyseInformation |
+   analysedInformation |
+   applyCharging |
+   applyChargingReport |
+   assistRequestInstructions |
+   callInformationReport |
+   callInformationRequest |
+   cancel |
+   cancelStatusReportRequest |
+   collectedInformation |
+   collectInformation |
+   connect |
+   connectToResource | disconnectForwardConnection |
+   disconnectForwardConnectionWithArgument |
+   disconnectLeg |
+   entityReleased |
+   establishTemporaryConnection |
+   eventNotificationCharging |
+   eventReportFacility |
+   furnishChargingInformation | holdCallInNetwork |
+   initiateCallAttempt |
+   mergeCallSegments |
+   moveCallSegments | moveLeg
+   | oAbandon | oAnswer |
+   oCalledPartyBusy |
+   oDisconnect | oMidCall |
+   oNoAnswer |
+   createCallSegmentAssociation |
+   originationAttemptAuthorized |
+   reconnect | releaseCall |
+   reportUTSI |
+   requestCurrentStatusReport |
+   requestEveryStatusChangeReport |
+   requestFirstStatusMatchReport |
+   requestNotificationChargingEvent |
+   requestReportBCSMEvent |
+   requestReportFacilityEvent |
+   requestReportUTSI |
+   resetTimer |
+   routeSelectFailure |
+   selectFacility |
+   selectRoute |
+   sendChargingInformation |
+   sendFacilityInformation |
+   sendSTUI |
+   serviceFilteringResponse |
+   splitLeg | statusReport |
+   tAnswer | tBusy |
+   tDisconnect |
+   termAttemptAuthorized |
+   tMidCall | tNoAnswer |
+   playAnnouncement |
+   promptAndCollectUserInformation |
+   scriptClose | scriptEvent
+   | scriptInformation |
+   scriptRun | specializedResourceReport |
+   promptAndReceiveMessage}
+
+SsfToScfDpSpecificReturnable OPERATION ::=
+  {activateServiceFiltering | activityTest |
+   analyseInformation |
+   analysedInformation |
+   applyCharging |
+   applyChargingReport |
+   assistRequestInstructions |
+   callGap |
+   callInformationRequest |
+   cancel |
+   cancelStatusReportRequest |
+   collectedInformation |
+   collectInformation |
+   connect |
+   connectToResource | continue |
+   continueWithArgument | disconnectForwardConnection
+   | disconnectForwardConnectionWithArgument |
+   disconnectLeg |
+   establishTemporaryConnection |
+   furnishChargingInformation | holdCallInNetwork |
+   initiateCallAttempt |
+   mergeCallSegments |
+   moveCallSegments | moveLeg
+   | oAbandon | oAnswer |
+   oCalledPartyBusy |
+   oDisconnect | oMidCall |
+   oNoAnswer |
+   createCallSegmentAssociation |
+   originationAttemptAuthorized |
+   reconnect | releaseCall |
+   requestCurrentStatusReport |
+   requestEveryStatusChangeReport |
+   requestFirstStatusMatchReport |
+   requestNotificationChargingEvent |
+   requestReportBCSMEvent |
+   requestReportFacilityEvent |
+   requestReportUTSI |
+   resetTimer |
+   routeSelectFailure |
+   selectFacility |
+   selectRoute |
+   sendChargingInformation |
+   sendFacilityInformation |
+   sendSTUI | splitLeg |
+   tAnswer | tBusy |
+   tDisconnect |
+   termAttemptAuthorized |
+   tMidCall | tNoAnswer |
+   playAnnouncement |
+   promptAndCollectUserInformation |
+   scriptClose |
+   scriptInformation |
+   scriptRun |
+   promptAndReceiveMessage}
+
+assistHandoff-ssf-scfAbstractSyntax ABSTRACT-SYNTAX ::= {
+  AssistHandoffSSF-SCF-PDUs
+  IDENTIFIED BY  id-as-assistHandoff-ssf-scfAS
+}
+
+AssistHandoffSSF-SCF-PDUs ::=
+  TCMessage
+    {{AssistHandoffSsfToScfInvokable}, {AssistHandoffSsfToScfReturnable}}
+
+AssistHandoffSsfToScfInvokable OPERATION ::=
+  {activityTest | applyCharging |
+   applyChargingReport |
+   assistRequestInstructions |
+   cancel |
+   cancelStatusReportRequest |
+   connectToResource | disconnectForwardConnection |
+   disconnectForwardConnectionWithArgument |
+   furnishChargingInformation | holdCallInNetwork |
+   playAnnouncement |
+   promptAndCollectUserInformation |
+   requestCurrentStatusReport |
+   requestEveryStatusChangeReport |
+   requestFirstStatusMatchReport |
+   resetTimer | statusReport
+   | scriptClose |
+   scriptEvent |
+   scriptInformation |
+   scriptRun | specializedResourceReport |
+   promptAndReceiveMessage}
+
+AssistHandoffSsfToScfReturnable OPERATION ::=
+  {activityTest | applyCharging |
+   applyChargingReport |
+   assistRequestInstructions |
+   cancel |
+   cancelStatusReportRequest |
+   connectToResource | disconnectForwardConnection |
+   disconnectForwardConnectionWithArgument |
+   furnishChargingInformation | holdCallInNetwork |
+   playAnnouncement |
+   promptAndCollectUserInformation |
+   requestCurrentStatusReport |
+   requestEveryStatusChangeReport |
+   requestFirstStatusMatchReport |
+   resetTimer | scriptClose |
+   scriptInformation |
+   scriptRun |
+   promptAndReceiveMessage}
+
+scf-ssfGenericAbstractSyntax ABSTRACT-SYNTAX ::= {
+  GenericSCF-SSF-PDUs
+  IDENTIFIED BY  id-as-scf-ssfGenericAS
+}
+
+GenericSCF-SSF-PDUs ::=
+  TCMessage{{ScfToSsfGenericInvokable}, {ScfToSsfGenericReturnable}}
+
+ScfToSsfGenericInvokable OPERATION ::=
+  {activateServiceFiltering | activityTest |
+   applyCharging |
+   applyChargingReport |
+   callInformationRequest |
+   cancel |
+   cancelStatusReportRequest |
+   collectInformation |
+   connect |
+   connectToResource | continue |
+   continueWithArgument | disconnectForwardConnection
+   | disconnectForwardConnectionWithArgument |
+   disconnectLeg |
+   establishTemporaryConnection |
+   furnishChargingInformation | holdCallInNetwork |
+   initiateCallAttempt |
+   mergeCallSegments |
+   moveCallSegments | moveLeg
+   | createCallSegmentAssociation |
+   releaseCall | reconnect |
+   requestCurrentStatusReport |
+   requestEveryStatusChangeReport |
+   requestFirstStatusMatchReport |
+   requestNotificationChargingEvent |
+   requestReportBCSMEvent |
+   requestReportFacilityEvent |
+   requestReportUTSI |
+   resetTimer |
+   sendChargingInformation |
+   sendFacilityInformation |
+   sendSTUI | splitLeg |
+   playAnnouncement |
+   promptAndCollectUserInformation |
+   scriptClose |
+   scriptInformation |
+   scriptRun |
+   promptAndReceiveMessage}
+
+ScfToSsfGenericReturnable OPERATION ::=
+  {activateServiceFiltering | activityTest |
+   applyCharging |
+   applyChargingReport |
+   callInformationReport |
+   callInformationRequest |
+   cancel |
+   cancelStatusReportRequest |
+   collectInformation |
+   connect |
+   connectToResource | disconnectForwardConnection |
+   disconnectForwardConnectionWithArgument |
+   disconnectLeg |
+   entityReleased |
+   establishTemporaryConnection |
+   eventNotificationCharging |
+   resetTimer |
+   eventReportBCSM |
+   eventReportFacility |
+   furnishChargingInformation | holdCallInNetwork |
+   initiateCallAttempt |
+   mergeCallSegments |
+   moveCallSegments | moveLeg
+   | createCallSegmentAssociation |
+   reconnect | reportUTSI |
+   requestCurrentStatusReport |
+   requestEveryStatusChangeReport |
+   requestFirstStatusMatchReport |
+   requestNotificationChargingEvent |
+   requestReportBCSMEvent |
+   requestReportFacilityEvent |
+   requestReportUTSI |
+   sendChargingInformation |
+   sendFacilityInformation |
+   sendSTUI |
+   serviceFilteringResponse |
+   splitLeg | statusReport |
+   playAnnouncement |
+   promptAndCollectUserInformation |
+   scriptClose | scriptEvent
+   | scriptInformation |
+   scriptRun | specializedResourceReport |
+   promptAndReceiveMessage}
+
+scf-ssfDpSpecificAbstractSyntax ABSTRACT-SYNTAX ::= {
+  DpSpecificSCF-SSF-PDUs
+  IDENTIFIED BY  id-as-scf-ssfDpSpecificAS
+}
+
+DpSpecificSCF-SSF-PDUs ::=
+  TCMessage{{ScfToSsfDpSpecificInvokable}, {ScfToSsfDpSpecificReturnable}}
+
+ScfToSsfDpSpecificInvokable OPERATION ::=
+  {activateServiceFiltering | activityTest |
+   analyseInformation |
+   analysedInformation |
+   applyCharging |
+   applyChargingReport |
+   callInformationRequest |
+   cancel |
+   cancelStatusReportRequest |
+   collectedInformation |
+   collectInformation |
+   connect |
+   connectToResource | continue |
+   continueWithArgument | disconnectForwardConnection
+   | disconnectForwardConnectionWithArgument |
+   disconnectLeg |
+   establishTemporaryConnection |
+   furnishChargingInformation | holdCallInNetwork |
+   initiateCallAttempt |
+   mergeCallSegments |
+   moveCallSegments | moveLeg
+   | oAbandon | oAnswer |
+   oCalledPartyBusy |
+   oDisconnect | oMidCall |
+   oNoAnswer |
+   createCallSegmentAssociation |
+   originationAttemptAuthorized |
+   reconnect | releaseCall |
+   requestCurrentStatusReport |
+   requestEveryStatusChangeReport |
+   requestFirstStatusMatchReport |
+   requestNotificationChargingEvent |
+   requestReportBCSMEvent |
+   requestReportFacilityEvent |
+   requestReportUTSI |
+   resetTimer |
+   routeSelectFailure |
+   selectFacility |
+   selectRoute |
+   sendChargingInformation |
+   sendFacilityInformation |
+   sendSTUI | splitLeg |
+   tAnswer | tBusy |
+   tDisconnect |
+   termAttemptAuthorized |
+   tMidCall | tNoAnswer |
+   playAnnouncement |
+   promptAndCollectUserInformation |
+   scriptClose |
+   scriptInformation |
+   scriptRun |
+   promptAndReceiveMessage}
+
+ScfToSsfDpSpecificReturnable OPERATION ::=
+  {activateServiceFiltering | activityTest |
+   analyseInformation |
+   analysedInformation |
+   applyCharging |
+   applyChargingReport |
+   callInformationReport |
+   callInformationRequest |
+   cancel |
+   cancelStatusReportRequest |
+   collectedInformation |
+   collectInformation |
+   connect |
+   connectToResource | disconnectForwardConnection |
+   disconnectForwardConnectionWithArgument |
+   disconnectLeg |
+   entityReleased |
+   establishTemporaryConnection |
+   eventNotificationCharging |
+   eventReportFacility |
+   furnishChargingInformation | holdCallInNetwork |
+   initiateCallAttempt |
+   initiateCallAttempt |
+   mergeCallSegments |
+   moveCallSegments | moveLeg
+   | oAnswer |
+   oCalledPartyBusy |
+   oDisconnect | oMidCall |
+   oAbandon | oNoAnswer |
+   createCallSegmentAssociation |
+   originationAttemptAuthorized |
+   reconnect | reportUTSI |
+   requestCurrentStatusReport |
+   requestEveryStatusChangeReport |
+   requestFirstStatusMatchReport |
+   requestNotificationChargingEvent |
+   requestReportBCSMEvent |
+   requestReportFacilityEvent |
+   requestReportUTSI |
+   resetTimer |
+   routeSelectFailure |
+   selectFacility |
+   selectRoute |
+   sendChargingInformation |
+   sendFacilityInformation |
+   sendSTUI |
+   serviceFilteringResponse |
+   splitLeg | statusReport |
+   tAnswer | tBusy |
+   tDisconnect |
+   termAttemptAuthorized |
+   tMidCall | tNoAnswer |
+   playAnnouncement |
+   promptAndCollectUserInformation |
+   scriptClose | scriptEvent
+   | scriptInformation |
+   scriptRun | specializedResourceReport |
+   promptAndReceiveMessage}
+
+scf-ssfTrafficManagementAbstractSyntax ABSTRACT-SYNTAX ::= {
+  TrafficManagementSCF-SSF-PDUs
+  IDENTIFIED BY  id-as-scf-ssfTrafficManagementAS
+}
+
+TrafficManagementSCF-SSF-PDUs ::=
+  TCMessage{{ScfToSsfTrafficManagementInvokable}, {EmptyReturnable}}
+
+ScfToSsfTrafficManagementInvokable OPERATION ::=
+  {callGap}
+
+scf-ssfServiceManagementAbstractSyntax ABSTRACT-SYNTAX ::= {
+  ServiceManagementSCF-SSF-PDUs
+  IDENTIFIED BY  id-as-scf-ssfServiceManagementAS
+}
+
+ServiceManagementSCF-SSF-PDUs ::=
+  TCMessage
+    {{ScfToSsfServiceManagementInvokable},
+    {ScfToSsfServiceManagementReturnable}}
+
+ScfToSsfServiceManagementInvokable OPERATION ::=
+  {activateServiceFiltering}
+
+ScfToSsfServiceManagementReturnable OPERATION ::=
+  {activateServiceFiltering}
+
+ssf-scfServiceManagementAbstractSyntax ABSTRACT-SYNTAX ::= {
+  ServiceManagementSSF-SCF-PDUs
+  IDENTIFIED BY  id-as-ssf-scfServiceManagementAS
+}
+
+ServiceManagementSSF-SCF-PDUs ::=
+  TCMessage{{SsfToScfServiceManagementInvokable}, {EmptyReturnable}}
+
+EmptyReturnable OPERATION ::=
+  {...}
+
+SsfToScfServiceManagementInvokable OPERATION ::=
+  {serviceFilteringResponse}
+
+scf-ssfStatusReportingAbstractSyntax ABSTRACT-SYNTAX ::= {
+  StatusReportingSCF-SSF-PDUs
+  IDENTIFIED BY  id-as-scf-ssfStatusReportingAS
+}
+
+StatusReportingSCF-SSF-PDUs ::=
+  TCMessage
+    {{ScfToSsfStatusReportingInvokable}, {ScfToSsfStatusReportingReturnable}}
+
+ScfToSsfStatusReportingInvokable OPERATION ::=
+  {cancel |
+   cancelStatusReportRequest |
+   requestCurrentStatusReport |
+   requestEveryStatusChangeReport |
+   requestFirstStatusMatchReport}
+
+ScfToSsfStatusReportingReturnable OPERATION ::=
+  {cancel |
+   cancelStatusReportRequest |
+   requestCurrentStatusReport |
+   requestEveryStatusChangeReport |
+   requestFirstStatusMatchReport |
+   statusReport}
+
+scf-ssfTriggerManagementAbstractSyntax ABSTRACT-SYNTAX ::= {
+  TriggerManagementSCF-SSF-PDUs
+  IDENTIFIED BY  id-as-scf-ssfTriggerManagementAS
+}
+
+TriggerManagementSCF-SSF-PDUs ::=
+  TCMessage
+    {{ScfToSsfTriggerManagementInvokable},
+    {ScfToSsfTriggerManagementReturnable}}
+
+ScfToSsfTriggerManagementInvokable OPERATION ::=
+  {manageTriggerData}
+
+ScfToSsfTriggerManagementReturnable OPERATION ::=
+  {manageTriggerData}
+
+END
+
+-- Generated by Asnp, the ASN.1 pretty-printer of France Telecom R&D
+
