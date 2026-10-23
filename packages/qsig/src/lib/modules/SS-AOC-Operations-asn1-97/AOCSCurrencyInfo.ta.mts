@@ -11,7 +11,13 @@ import { AOCSCurrencyInfo_rateType, _decode_AOCSCurrencyInfo_rateType, _encode_A
 /**
  * @summary AOCSCurrencyInfo
  * @description
- * 
+ *
+ * One charged item and the rate applied to it (ECMA-212 §6.3.1). Which rate
+ * forms are legal for which item is ECMA-211 §A.2.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +41,22 @@ export
 class AOCSCurrencyInfo {
     /**
      * @summary `chargedItem`.
+     * @description
+     *
+     * The part of the call this rate applies to. Basic communication may be
+     * repeated when the rate changes. Call attempt and call setup appear only
+     * in the initial information (ECMA-211 §A.1.2, §A.2).
      * @public
      * @readonly
      */
     readonly chargedItem: ChargedItem;
     /**
      * @summary `rateType`.
+     * @description
+     *
+     * Duration, flat, volume, special code, free of charge, free from the
+     * beginning, or not available. Legal pairings with `chargedItem` are
+     * ECMA-211 §A.2.
      * @public
      * @readonly
      */

@@ -9,7 +9,13 @@ import { PumInterrogRes_Item, _decode_PumInterrogRes_Item, _encode_PumInterrogRe
 /**
  * @summary PumInterrogRes
  * @description
- * 
+ *
+ * Result of `pumInterrog` (ECMA-282 §6.3.1). One to eight session records. The
+ * Home PINX can collect several Visitor PINX replies into this set (§6.7.2.1).
+ * If timer T5 expires, it returns the records it already has (§6.7.2.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-282/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

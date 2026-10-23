@@ -11,7 +11,14 @@ import { LrExtension, _decode_LrExtension, _encode_LrExtension } from "../WTM-Lo
 /**
  * @summary PisnEnqRes
  * @description
- * 
+ *
+ * Identity returned by `pisnEnquiry` (ECMA-302 §6.5.7, §6.5.8). The Visitor
+ * PINX may then use it in `locUpdate`. ECMA-282 §6.8.2.1 requires the PUM
+ * user's PISN number in this result when the enquiry is a PUM directory lookup.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-302/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-282/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +34,23 @@ export
 class PisnEnqRes {
     /**
      * @summary `wtmUserId`.
+     * @description
+     *
+     * Identity found in the VDB or produced by the Directory PINX (ECMA-302
+     * §6.5.7.1, §6.5.8.1). For an ECMA-282 directory enquiry, §6.8.2.1 requires
+     * the PUM user's PISN number and is silent on which alternative carries it.
+     *
      * @public
      * @readonly
      */
     readonly wtmUserId: WtmUserId;
     /**
      * @summary `resExtension`.
+     * @description
+     *
+     * Manufacturer-specific data. ECMA-302 §6.3.1 names this element and is
+     * silent on its contents. `WTMLRExtSet` assigns no extensions.
+     *
      * @public
      * @readonly
      */

@@ -4,7 +4,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AuthWtmRes_autWtmResValue
  * @description
- * 
+ *
+ * Comparison of the response received from the WTM user with the expected
+ * response (ECMA-306 §6.5.5.1). The component name in the module is
+ * `autWtmResValue`. If the WTM user does not answer, the Visitor PINX returns
+ * `temporarilyUnavailable` (§6.5.5.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-306/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,7 +32,14 @@ enum _enum_for_AuthWtmRes_autWtmResValue {
 /**
  * @summary AuthWtmRes_autWtmResValue
  * @description
- * 
+ *
+ * Comparison of the response received from the WTM user with the expected
+ * response (ECMA-306 §6.5.5.1). The component name in the module is
+ * `autWtmResValue`. If the WTM user does not answer, the Visitor PINX returns
+ * `temporarilyUnavailable` (§6.5.5.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-306/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,7 +57,14 @@ type AuthWtmRes_autWtmResValue = _enum_for_AuthWtmRes_autWtmResValue;
 /**
  * @summary AuthWtmRes_autWtmResValue
  * @description
- * 
+ *
+ * Comparison of the response received from the WTM user with the expected
+ * response (ECMA-306 §6.5.5.1). The component name in the module is
+ * `autWtmResValue`. If the WTM user does not answer, the Visitor PINX returns
+ * `temporarilyUnavailable` (§6.5.5.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-306/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -60,6 +81,9 @@ const AuthWtmRes_autWtmResValue = _enum_for_AuthWtmRes_autWtmResValue;
 
 /**
  * @summary AuthWtmRes_autWtmResValue_auth_res_correct
+ * @description
+ * WTM user response matched the expected response. ECMA-306 §6.5.5.1.
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-306/
  * @constant
  * @type {number}
  */
@@ -68,6 +92,7 @@ const AuthWtmRes_autWtmResValue_auth_res_correct: AuthWtmRes_autWtmResValue = Au
 
 /**
  * @summary auth_res_correct
+ * @description Alias of {@link AuthWtmRes_autWtmResValue_auth_res_correct}.
  * @constant
  * @type {number}
  */
@@ -76,6 +101,9 @@ const auth_res_correct: AuthWtmRes_autWtmResValue = AuthWtmRes_autWtmResValue.au
 
 /**
  * @summary AuthWtmRes_autWtmResValue_auth_res_incorrect
+ * @description
+ * WTM user response differed from the expected response. ECMA-306 §6.5.5.1.
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-306/
  * @constant
  * @type {number}
  */
@@ -84,6 +112,7 @@ const AuthWtmRes_autWtmResValue_auth_res_incorrect: AuthWtmRes_autWtmResValue = 
 
 /**
  * @summary auth_res_incorrect
+ * @description Alias of {@link AuthWtmRes_autWtmResValue_auth_res_incorrect}.
  * @constant
  * @type {number}
  */

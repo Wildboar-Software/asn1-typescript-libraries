@@ -5,7 +5,12 @@ import { doNotDisturb } from "../Do-Not-Disturb-Notifications-asn1-97/doNotDistu
 /**
  * @summary Do_Not_Disturb_Notifications
  * @description
- * 
+ *
+ * Notifications of module `Do-Not-Disturb-Notifications-asn1-97`
+ * (ECMA-194 §6.3.2, Table 2). The only member is `doNotDisturb`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-194/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

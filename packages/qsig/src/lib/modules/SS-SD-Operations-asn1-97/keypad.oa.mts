@@ -5,7 +5,21 @@ import { KeypadArg, _decode_KeypadArg, _encode_KeypadArg } from "../SS-SD-Operat
 /**
  * @summary keypad
  * @description
- * 
+ *
+ * Client User PINX to Server User PINX, local code 104. No return result and no
+ * errors. The Client User PINX sends the Client User's keypad information as a
+ * BMP string of the normal size (ECMA-311 §6.5.1.1.2). Transport uses an
+ * existing call-related or call-independent connection; otherwise the Client
+ * User sets up a call-independent connection (ECMA-165 §7.3) and clears it. The
+ * Server User PINX delivers the keypad information to the Server User
+ * (§6.5.2.1.2). On a keypad reject APDU, the Client User PINX generates DTMF
+ * tones toward the Server User PINX (§6.5.1.2.2). Generation of those tones
+ * toward a public network is outside this standard (§6.6). NFE destination is
+ * `endPINX`. The Interpretation APDU is omitted or
+ * `rejectAnyUnrecognizedInvokePdu` (§6.3.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-311/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

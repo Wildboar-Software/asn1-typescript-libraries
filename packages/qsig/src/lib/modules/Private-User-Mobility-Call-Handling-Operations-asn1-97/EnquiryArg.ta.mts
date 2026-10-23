@@ -12,7 +12,12 @@ import { PumiExtension, _decode_PumiExtension, _encode_PumiExtension } from "../
 /**
  * @summary EnquiryArg
  * @description
- * 
+ *
+ * Argument of `pumiEnquiry` (ECMA-284 §6.3.1, §6.5.2.1). Taken from the
+ * incoming SETUP.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-284/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,18 +38,36 @@ export
 class EnquiryArg {
     /**
      * @summary `pisnNumber`.
+     * @description
+     *
+     * Called party number from the incoming SETUP: the PISN number of the PUM
+     * user (§6.3.1, §6.5.2.1). It need not be complete. A PISN number in the
+     * result, when present, is complete (§6.5.3.1).
+     *
      * @public
      * @readonly
      */
     readonly pisnNumber: PartyNumber;
     /**
      * @summary `qSIGInfoElement`.
+     * @description
+     *
+     * Embedded Bearer capability from the incoming SETUP, plus High layer
+     * compatibility and Low layer compatibility when those were received
+     * (§6.5.2.1). The Home PINX uses them to see whether that basic service is
+     * provided (§6.5.3.1).
+     *
      * @public
      * @readonly
      */
     readonly qSIGInfoElement: PSS1InformationElement;
     /**
      * @summary `argExtension`.
+     * @description
+     *
+     * Manufacturer-specific data. `PUMCHExtSet` assigns no extensions (ECMA-284
+     * §6.3.1).
+     *
      * @public
      * @readonly
      */

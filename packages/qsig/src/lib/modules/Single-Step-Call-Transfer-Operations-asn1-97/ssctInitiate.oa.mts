@@ -12,7 +12,29 @@ import { supplementaryServiceInteractionNotAllowed } from "../General-Error-List
 /**
  * @summary ssctInitiate
  * @description
- * 
+ *
+ * Transferring PINX toward the Transferred PINX, on the original call,
+ * to ask a Rerouting PINX on that path to connect User B to User C.
+ * The original call must be Active. ROSE local 99. Interpretation
+ * APDU is `rejectAnyUnrecognisedInvokePdu` or omitted. NFE
+ * `destinationEntity` is `endPINX`.
+ * The result is returned in DISCONNECT on the original call once the
+ * new connection is through-connected. The Rerouting PINX also sends
+ * `callTransferComplete` (and, after an alerting transfer,
+ * `callTransferActive`) to the Transferred PINX as in ECMA-178.
+ * Timer T1 at the Transferring PINX is at least 50 s. On reject,
+ * return error, or T1 expiry the original call continues.
+ * Errors: `notAvailable` when the Rerouting PINX cannot perform the
+ * request; `establishmentFailure` on timer T2 expiry, on timer T3
+ * expiry when the digits are not enough to proceed, or when the new
+ * connection clears; `supplementaryServiceInteractionNotAllowed` when
+ * a SS-CT Transferring PINX has already sent `callTransferComplete`.
+ * `invalidCallState`, `invalidRerouteingNumber`, and `unspecified`
+ * are listed; ECMA-300 §6.5 does not define when those three are
+ * chosen. ECMA-300 §6.3.1, §6.3.2.1, §6.5.1, §6.5.2, §6.8.9.2, §6.9.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-300/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

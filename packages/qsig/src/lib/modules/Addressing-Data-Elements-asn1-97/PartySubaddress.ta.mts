@@ -9,7 +9,14 @@ import { NSAPSubaddress, _decode_NSAPSubaddress, _encode_NSAPSubaddress } from "
 /**
  * @summary PartySubaddress
  * @description
- * 
+ *
+ * Subaddress accompanying a party number (ECMA-165 Annex B Table B.1).
+ * `userSpecifiedSubaddress` is not recommended. `nSAPSubaddress` follows ITU-T
+ * X.213. ECMA-155 §10, which ECMA-165 relies on for PISN addressing, requires a
+ * PINX to accept a subaddress and, in a pure PISN, not to alter it (§10.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -4,7 +4,14 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary notBusy
  * @description
- * 
+ *
+ * The called user is not busy (ECMA-192 §6.3.1, §6.6.2.2). The
+ * Terminating PINX returns this on `callOfferRequest` in the
+ * resulting ALERTING or CONNECT and stays in CO-Idle. The call
+ * continues as a basic call. Local code 1009.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-192/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

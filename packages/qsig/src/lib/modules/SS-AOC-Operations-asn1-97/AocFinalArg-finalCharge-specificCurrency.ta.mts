@@ -11,7 +11,13 @@ import { FinalBillingId, _decode_FinalBillingId, _encode_FinalBillingId, _enum_f
 /**
  * @summary AocFinalArg_finalCharge_specificCurrency
  * @description
- * 
+ *
+ * Total recorded currency, with an optional billing identification (ECMA-211
+ * §9.2.1.9, §C.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +33,21 @@ export
 class AocFinalArg_finalCharge_specificCurrency {
     /**
      * @summary `recordedCurrency`.
+     * @description
+     *
+     * Total in currency units (ECMA-211 §9.2.1.9). The charging-unit
+     * alternative in ECMA-211 §C.1.2 has no encoding in ECMA-212 §6.3.1.
      * @public
      * @readonly
      */
     readonly recordedCurrency: RecordedCurrency;
     /**
      * @summary `finalBillingId`.
+     * @description
+     *
+     * Who is billed and why. Omit it for normal charging (ECMA-211 table 9 note
+     * 2). After transfer it shall be `callTransfer`; after diversion it shall
+     * match the diversion (ECMA-212 §6.6.2.3.1, §6.6.2.4.1).
      * @public
      * @readonly
      */

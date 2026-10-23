@@ -1,6 +1,23 @@
 /**
  * @module
- * @description ASN.1 module `PUM-Registration-Operations-asn1-97`.
+ * @description
+ *
+ * SS-PUMR, Private User Mobility Registration, at the Q reference point.
+ * ECMA-282 3rd edition (December 2001), aligned with ISO/IEC 17876. A PUM user
+ * registers at, or de-registers from, any wired or wireless terminal in one
+ * PISN, and may interrogate current registration sessions. InCall registration
+ * is mandatory; OutCall and AllCall are optional (ECMA-282 §6.1).
+ * De-registration tells the PISN that the user is temporarily unable to use the
+ * provided services, including receipt of calls. The operations use
+ * call-independent signalling connections (ECMA-165). An invoke APDU sets NFE
+ * `destinationEntity` to `endPINX`; Interpretation is omitted or
+ * `rejectAnyUnrecognisedInvokePdu` (§6.3.2.1). Module
+ * `PUM-Registration-Operations-asn1-97`, under `pss1-pum-registration(17876)`
+ * arc `pum-registration-operations-asn1-97(1)` (§6.3.1). `pisnEnquiry` is
+ * imported from Wireless Terminal Location Registration (ECMA-302) and is
+ * defined in that module.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-282/
  */
 export * from "./AlternativeId.ta.mjs";
 export * from "./DummyRes.ta.mjs";

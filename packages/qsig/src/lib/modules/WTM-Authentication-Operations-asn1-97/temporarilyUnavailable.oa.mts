@@ -4,7 +4,14 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary temporarilyUnavailable
  * @description
- * 
+ *
+ * Local error code 1000, with no parameter (ECMA-306 §6.3.1). The Visitor PINX
+ * returns it when the WTM user does not answer an SS-WTAT request (§6.5.5.2).
+ * The Home PINX returns it for `getWtatParam` when the parameter fetch times
+ * out (§6.5.2.2), and for `getWtanParam` when timer T5 expires (§7.5.2.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-306/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

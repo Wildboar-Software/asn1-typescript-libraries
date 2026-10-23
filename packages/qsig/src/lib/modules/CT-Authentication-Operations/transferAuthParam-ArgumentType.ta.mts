@@ -14,7 +14,14 @@ import { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "
 /**
  * @summary transferAuthParam_ArgumentType
  * @description
- * 
+ *
+ * Argument of unconfirmed `transferAuthParam` (ECMA-243 §6.8.1). Carries
+ * SS-CTAT parameters from the previous Visitor PINX to the Visitor PINX during
+ * SS-CTLR. Table 1 leaves the first component unnamed; the fence names it
+ * `info`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-243/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +34,19 @@ export
 class transferAuthParam_ArgumentType {
     /**
      * @summary `info`.
+     * @description
+     *
+     * `CtatParamInfo` the Visitor PINX may store for a later authentication of
+     * this CTM user (ECMA-243 §6.8.1). Table 1 leaves the component unnamed.
      * @public
      * @readonly
      */
     readonly info: CtatParamInfo;
     /**
      * @summary `dummyExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-243 §6.3.1 defines none.
      * @public
      * @readonly
      */

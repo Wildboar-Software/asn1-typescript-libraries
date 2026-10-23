@@ -9,7 +9,16 @@ import { ServiceAvailableArg_extendedServiceList, _decode_ServiceAvailableArg_ex
 /**
  * @summary ServiceAvailableArg
  * @description
- * 
+ *
+ * Argument of `serviceAvailable` (ECMA-203 §6.3.1, Annex A).
+ *
+ * - `serviceList`: services that can be invoked on the retained
+ *   connection.
+ * - `extendedServiceList`: that list plus one `CIExtSet` extension.
+ *   §A.5 does not say when this alternative is used.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-203/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

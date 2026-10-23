@@ -8,7 +8,12 @@ import { ssctDigitInfo } from "../Single-Step-Call-Transfer-Operations-asn1-97/s
 /**
  * @summary Single_Step_Call_Transfer_Operations
  * @description
- * 
+ *
+ * The four operations that support SS-SSCT: initiate, setup, post-dial,
+ * and digit info. ECMA-300 §6.3.1.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-300/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

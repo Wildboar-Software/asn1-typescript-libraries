@@ -5,7 +5,13 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary unspecified
  * @description
- * 
+ *
+ * Manufacturer-specific failure of `callOfferRequest` (ECMA-192
+ * §6.3.1). The parameter is an extension from `COExtSet`. Local
+ * code 1008. §6.6 does not say when this error is chosen.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-192/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

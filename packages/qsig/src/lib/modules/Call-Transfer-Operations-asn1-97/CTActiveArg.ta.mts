@@ -13,7 +13,14 @@ import { CTActiveArg_argumentExtension, _decode_CTActiveArg_argumentExtension, _
 /**
  * @summary CTActiveArg
  * @description
- * 
+ *
+ * Argument of `callTransferActive`. Sent to the Primary PINX when User
+ * C answers an alerting transfer by join. ECMA-178 §6.5.1.1;
+ * ECMA-177 §7.2.1.3.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-178/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-177/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,24 +43,46 @@ export
 class CTActiveArg {
     /**
      * @summary `connectedAddress`.
+     * @description
+     *
+     * Address of the user who has answered. Stage 2 makes Connected
+     * Number mandatory in Transfer Active (ECMA-177 §7.2.1.3).
+     * ECMA-178 §6.5.1.1 does not say how this element is taken from
+     * the CONNECT message. A restricted number is withheld from the
+     * transferred user (ECMA-178 §6.5.5).
      * @public
      * @readonly
      */
     readonly connectedAddress: PresentedAddressScreened;
     /**
      * @summary `basicCallInfoElements`.
+     * @description
+     *
+     * Progress indicator information elements from ECMA-143, embedded
+     * as specified in ECMA-165 Annex B. May be included.
+     * ECMA-178 §6.3.2.2, §6.5.1.1.
      * @public
      * @readonly
      */
     readonly basicCallInfoElements: OPTIONAL<PSS1InformationElement>;
     /**
      * @summary `connectedName`.
+     * @description
+     *
+     * Name of the answered user. If CONNECT carried a `connectedName`
+     * invoke (ECMA-164), that name may be placed here instead of
+     * relaying the invoke. ECMA-178 §6.5.1.1. A restricted name is
+     * withheld from the transferred user (§6.5.5).
      * @public
      * @readonly
      */
     readonly connectedName: OPTIONAL<Name>;
     /**
      * @summary `argumentExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-178 §6.3.1 defines no
+     * member of `CTExtSet`.
      * @public
      * @readonly
      */

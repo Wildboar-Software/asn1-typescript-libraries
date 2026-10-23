@@ -10,7 +10,18 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary DummyArg
  * @description
- * 
+ *
+ * Argument of `callOfferRequest` and `cfbOverride` (ECMA-192
+ * §6.3.1). §6.6 requires no Call Offer parameter in the argument.
+ *
+ * - `null`: no manufacturer-specific information.
+ * - `extension`: one extension from `COExtSet`.
+ * - `sequenceOfExtn`: more than one extension from `COExtSet`.
+ *
+ * `COExtSet` is empty in the standard.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-192/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

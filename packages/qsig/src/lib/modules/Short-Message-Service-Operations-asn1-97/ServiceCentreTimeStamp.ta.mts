@@ -9,7 +9,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ServiceCentreTimeStamp
  * @description
- * 
+ *
+ * Time local to the entity that sends the APDU, to one-second accuracy, as ISO
+ * 8601 GeneralizedTime of size 12..19 (ECMA-325 §6.3.1, §E.2.1). When the
+ * Service Centre assigns it, simultaneous arrivals for one Receiving User get
+ * distinct stamps with the smallest modification.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

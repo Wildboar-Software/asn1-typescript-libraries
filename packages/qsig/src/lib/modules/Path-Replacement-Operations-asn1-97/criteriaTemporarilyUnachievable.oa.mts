@@ -4,7 +4,14 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary criteriaTemporarilyUnachievable
  * @description
- * 
+ *
+ * ROSE local 1003. Requested special criteria for the new connection
+ * cannot be met because the resources are temporarily unavailable. A
+ * later attempt can succeed. The criteria are not carried in the
+ * ANF-PR arguments. ECMA-176 §6.1, §6.3.1, §6.5.1.4.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-176/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

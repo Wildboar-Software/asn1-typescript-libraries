@@ -12,7 +12,15 @@ import { CTInitiateArg_argumentExtension, _decode_CTInitiateArg_argumentExtensio
 /**
  * @summary CTInitiateArg
  * @description
- * 
+ *
+ * Argument of `callTransferInitiate`. The Transferring PINX copies
+ * `callIdentity` and `rerouteingNumber` from the
+ * `callTransferIdentify` result. ECMA-178 §6.5.1.3;
+ * ECMA-177 §8.2.1.4.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-178/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-177/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,18 +40,32 @@ export
 class CTInitiateArg {
     /**
      * @summary `callIdentity`.
+     * @description
+     *
+     * Call identity from the `callTransferIdentify` result, relayed
+     * unchanged. The Primary PINX copies it into `callTransferSetup`.
+     * ECMA-178 §6.5.1.3, §6.5.2.3.
      * @public
      * @readonly
      */
     readonly callIdentity: CallIdentity;
     /**
      * @summary `rerouteingNumber`.
+     * @description
+     *
+     * Number from the `callTransferIdentify` result, relayed unchanged.
+     * The Primary PINX uses it as Called party number of the new SETUP
+     * and to select the outgoing route. ECMA-178 §6.5.1.3, §6.5.2.3.
      * @public
      * @readonly
      */
     readonly rerouteingNumber: PartyNumber;
     /**
      * @summary `argumentExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-178 §6.3.1 defines no
+     * member of `CTExtSet`.
      * @public
      * @readonly
      */

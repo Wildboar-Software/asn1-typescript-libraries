@@ -9,7 +9,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ChargeIdentifier
  * @description
- * 
+ *
+ * Integer charge identifier, -32768..32767 (ECMA-212 §6.3.1). It has a meaning
+ * only to the user (ECMA-211 §9.2.1.5). ECMA-211 does not state the integer
+ * bounds.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

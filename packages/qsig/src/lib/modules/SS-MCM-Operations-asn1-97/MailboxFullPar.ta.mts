@@ -12,7 +12,13 @@ import { MessageType, _decode_MessageType, _encode_MessageType, _enum_for_Messag
 /**
  * @summary MailboxFullPar
  * @description
- * 
+ *
+ * One Message Type in a mailbox-full indication (ECMA-347
+ * §6.5.1.1.6). The percentage is optional. The procedure's
+ * example of a threshold is 80 percent of capacity.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +35,21 @@ export
 class MailboxFullPar {
     /**
      * @summary `messageType`.
+     * @description
+     *
+     * Message Type whose storage has reached the threshold
+     * or is full. ECMA-347 §6.5.1.1.6.
      * @public
      * @readonly
      */
     readonly messageType: MessageType;
     /**
      * @summary `capacityReached`.
+     * @description
+     *
+     * Percentage of storage already used, from 0 to 100
+     * (§6.3.1). Optional. §6.5.1.1.6 uses 80 percent as an
+     * example and does not require this component.
      * @public
      * @readonly
      */

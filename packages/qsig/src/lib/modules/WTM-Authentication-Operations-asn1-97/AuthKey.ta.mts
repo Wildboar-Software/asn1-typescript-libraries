@@ -9,7 +9,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AuthKey
  * @description
- * 
+ *
+ * Authentication key (ECMA-306 §6.3.1). Carried as choice `authKey` of
+ * `transferAuthParam` during the ANF-WTINFO interaction (§6.8.22.1). It shall
+ * not appear in a `wtatParamEnq` result (§6.5.7.1). How the key is applied is
+ * outside ECMA-306 (§1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-306/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

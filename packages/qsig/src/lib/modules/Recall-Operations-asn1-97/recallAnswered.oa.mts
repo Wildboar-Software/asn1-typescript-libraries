@@ -5,7 +5,24 @@ import { ReAnswerArg, _decode_ReAnswerArg, _encode_ReAnswerArg } from "../Recall
 /**
  * @summary recallAnswered
  * @description
- * 
+ *
+ * User A has answered the recall. The Served User PINX sends it to the Primary
+ * PINX in a FACILITY and then returns to RE-Idle (ECMA-214 §6.5.1.1).
+ * Unconfirmed. ROSE local code 58. No errors. The Primary PINX gives user B an
+ * answer notification and stays in RE-Idle-P (§6.5.2.1).
+ *
+ * The argument may include `connectedSubaddress` or `connectedName`
+ * (ECMA-214 §6.5.1.1). §6.3.1 includes `connectedNumber`, which that
+ * clause does not describe. Number information may be given to user B
+ * subject to number presentation restriction, and a name subject to name
+ * presentation restriction (§6.5.2.1).
+ *
+ * If CFU or CFB applies, the argument describes the diverted-to user instead of
+ * user A (ECMA-214 §6.9.3.1, §6.9.4). If CFNR diverts the recall, answering by
+ * the diverted-to user is handled as answering by user A (§6.9.5.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-214/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

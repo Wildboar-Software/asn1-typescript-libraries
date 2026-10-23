@@ -5,7 +5,20 @@ import { CallIdentificationAssignArg, _decode_CallIdentificationAssignArg, _enco
 /**
  * @summary callIdentificationAssign
  * @description
- * 
+ *
+ * Assign call-identification data (ECMA-314 §6.5.1.1). No result. Sent once
+ * in the SETUP of a new call, containing every element the Originating PINX
+ * generated. globalCallID is mandatory and shall be unique within the PISN;
+ * threadID and legID are optional and likewise unique within the PISN. The
+ * sender starts timer T1 (2 s, §6.9.1) and enters
+ * CIDL-Simultaneous-Assignment-Supervision. A CIDL PINX that is not the End
+ * PINX forwards the received data in another callIdentificationAssign toward
+ * the End PINX (§6.5.2.1). ROSE local CODE 105. NFE destinationEntity is
+ * anyTypeOfPINX. The Interpretation APDU is discardAnyUnrecognisedInvokePdu
+ * (§6.3.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-314/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -4,7 +4,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CheckResult
  * @description
- * 
+ *
+ * Outcome of a location-data check (ECMA-302 §6.3.1, §7.6). The invoker may act
+ * on the value. The procedures are silent on which comparison produces either
+ * value and on what the invoker must do.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-302/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,7 +31,13 @@ enum _enum_for_CheckResult {
 /**
  * @summary CheckResult
  * @description
- * 
+ *
+ * Outcome of a location-data check (ECMA-302 §6.3.1, §7.6). The invoker may act
+ * on the value. The procedures are silent on which comparison produces either
+ * value and on what the invoker must do.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-302/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,7 +55,13 @@ type CheckResult = _enum_for_CheckResult;
 /**
  * @summary CheckResult
  * @description
- * 
+ *
+ * Outcome of a location-data check (ECMA-302 §6.3.1, §7.6). The invoker may act
+ * on the value. The procedures are silent on which comparison produces either
+ * value and on what the invoker must do.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-302/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -60,6 +78,12 @@ const CheckResult = _enum_for_CheckResult;
 
 /**
  * @summary CheckResult_locInfChk_correct
+ * @description
+ *
+ * Location information checked as correct. ECMA-302 §6.3.1 names this value.
+ * §7.6 is silent on the comparison that produces it.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-302/
  * @constant
  * @type {number}
  */
@@ -68,6 +92,7 @@ const CheckResult_locInfChk_correct: CheckResult = CheckResult.locInfChk_correct
 
 /**
  * @summary locInfChk_correct
+ * @description Alias of {@link CheckResult_locInfChk_correct}.
  * @constant
  * @type {number}
  */
@@ -76,6 +101,12 @@ const locInfChk_correct: CheckResult = CheckResult.locInfChk_correct; /* SHORT_N
 
 /**
  * @summary CheckResult_locInfChk_incorrect
+ * @description
+ *
+ * Location information checked as incorrect. ECMA-302 §6.3.1 names this value.
+ * §7.6 is silent on the comparison that produces it.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-302/
  * @constant
  * @type {number}
  */
@@ -84,6 +115,7 @@ const CheckResult_locInfChk_incorrect: CheckResult = CheckResult.locInfChk_incor
 
 /**
  * @summary locInfChk_incorrect
+ * @description Alias of {@link CheckResult_locInfChk_incorrect}.
  * @constant
  * @type {number}
  */

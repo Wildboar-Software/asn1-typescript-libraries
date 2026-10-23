@@ -10,7 +10,15 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary DummyRes
  * @description
- * 
+ *
+ * Result of `callTransferInitiate` and `callTransferSetup`. A return
+ * result means the request succeeded. The procedures describe no
+ * standardized result elements. `null` is that empty result. `single`
+ * and `multiple` carry manufacturer extensions. ECMA-178 §6.3.1
+ * defines no members of `CTExtSet`. ECMA-178 §6.5.2.3, §6.5.3.3.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-178/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

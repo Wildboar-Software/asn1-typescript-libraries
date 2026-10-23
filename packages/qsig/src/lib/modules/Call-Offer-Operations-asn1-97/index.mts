@@ -1,6 +1,14 @@
 /**
  * @module
- * @description ASN.1 module `Call-Offer-Operations-asn1-97`.
+ * @description
+ *
+ * Call Offer (SS-CO) signalling operations (ECMA-192 4th ed.,
+ * December 2001). On request from the calling user, a call is
+ * offered to a busy called user and waits for that user to accept
+ * it (ECMA-191 §6.1.1; ECMA-192 §6.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-192/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-191/
  */
 export * from "./COExtSet.osa.mjs";
 export * from "./Call-Offer-Operations.osa.mjs";

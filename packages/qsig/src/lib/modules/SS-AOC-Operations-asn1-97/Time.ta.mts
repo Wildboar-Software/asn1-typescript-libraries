@@ -11,7 +11,13 @@ import { Scale, _decode_Scale, _encode_Scale, _enum_for_Scale } from "../SS-AOC-
 /**
  * @summary Time
  * @description
- * 
+ *
+ * A duration as an integer count of scale units (ECMA-211 §A.1.3.1). Used both
+ * for the rated time unit and, when present, for granularity.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +33,19 @@ export
 class Time {
     /**
      * @summary `lengthOfTimeUnit`.
+     * @description
+     *
+     * How many `scale` units long this interval is. Bound 0..16777215 (ECMA-212
+     * §6.3.1).
      * @public
      * @readonly
      */
     readonly lengthOfTimeUnit: LengthOfTimeUnit;
     /**
      * @summary `scale`.
+     * @description
+     *
+     * The unit being counted, from 0,01 s to 24 hours (ECMA-211 §A.1.3.1).
      * @public
      * @readonly
      */

@@ -15,7 +15,29 @@ import { unspecified } from "../Path-Replacement-Operations-asn1-97/unspecified.
 /**
  * @summary pathReplacePropose
  * @description
- * 
+ *
+ * Requesting PINX to Cooperating PINX, on an Active call, asking for a
+ * new connection back to the Requesting PINX. No return result: success
+ * is a later `pathReplaceSetup`, and failure is a return error. ROSE
+ * local 4. NFE is included and `destinationEntity` is `endPINX`.
+ * Interpretation APDU is omitted or `rejectAnyUnrecognisedInvokePdu`.
+ * Enters PR-Req-Initiated. Timer T1 there is at least 30 s; its expiry
+ * abandons replacement and leaves the call on the old connection.
+ * If `rerouteingNumber` shows that both ends are this PINX (a trombone),
+ * the new connection stays inside the PINX and only clearing of the old
+ * connection appears at Q.
+ * A propose received while this PINX is already in PR-Req-Initiated is
+ * answered with `collision`. During SS-CT, a Transferring, Primary, or
+ * Secondary PINX answers with `temporarilyUnavailable`. Aborting
+ * replacement in order to accept SS-CT uses
+ * `supplementaryServiceInteractionNotAllowed`. `notAvailable` is
+ * listed; §6.5 does not say when it is chosen.
+ * ECMA-176 §6.3.1, §6.3.2.1, §6.5.1.3, §6.5.1.4, §6.5.2, §6.5.3,
+ * §6.9.5, §6.10.1. §6.9.5.1.1 names the state PR-Req-Initiating;
+ * §6.4.1.2 names it PR-Req-Initiated.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-176/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

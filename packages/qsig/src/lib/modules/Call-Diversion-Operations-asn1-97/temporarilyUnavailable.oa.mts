@@ -4,7 +4,15 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary temporarilyUnavailable
  * @description
- * 
+ *
+ * ROSE local code 1000. No parameter. Allowed on `activateDiversionQ`,
+ * `deactivateDiversionQ`, and `interrogateDiversionQ` (ECMA-174 §6.3.1). §6.5
+ * does not state the condition for this error, and ECMA-173 does not use this
+ * term.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-173/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

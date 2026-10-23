@@ -12,7 +12,14 @@ import { ReturnErrorProblem, _decode_ReturnErrorProblem, _encode_ReturnErrorProb
 /**
  * @summary Reject_problem
  * @description
- * 
+ *
+ * The problem component of a Reject APDU (ECMA-165 §11.3.3.4). The chosen
+ * alternative says which kind of APDU failed. The integer is the code Annex G
+ * defines for that kind. This is not the `RejectProblem` integer, which names
+ * the Table 34 constraint exceptions.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

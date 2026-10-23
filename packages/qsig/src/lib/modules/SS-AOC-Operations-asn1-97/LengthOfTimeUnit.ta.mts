@@ -9,7 +9,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary LengthOfTimeUnit
  * @description
- * 
+ *
+ * How many `Scale` units make up the time unit or the granularity (ECMA-211
+ * §A.1.3.1). The integer bound 0..16777215 is stated only in ECMA-212 §6.3.1.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -12,7 +12,12 @@ import { WtmiExtension, _decode_WtmiExtension, _encode_WtmiExtension } from "../
 /**
  * @summary EnquiryArg
  * @description
- * 
+ *
+ * Argument of `wtmiEnquiry` (ECMA-304 §6.5.2.1). Identifies the called WTMI
+ * user and the basic service of the incoming call.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-304/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,18 +38,33 @@ export
 class EnquiryArg {
     /**
      * @summary `pisnNumber`.
+     * @description
+     *
+     * PISN number of the called WTMI user, from the Called party number of the
+     * incoming SETUP (ECMA-304 §6.5.2.1). The number used to reach the Home
+     * PINX on the call-independent connection is outside this standard.
      * @public
      * @readonly
      */
     readonly pisnNumber: PartyNumber;
     /**
      * @summary `qSIGInfoElement`.
+     * @description
+     *
+     * Embedded bearer capability from the incoming SETUP, plus high-layer and
+     * low-layer compatibility when those were received (ECMA-304 §6.5.2.1). The
+     * Home PINX uses them to check that the basic service is provided
+     * (§6.5.3.1).
      * @public
      * @readonly
      */
     readonly qSIGInfoElement: PSS1InformationElement;
     /**
      * @summary `argExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-304 §6.3.1 defines no members of
+     * `WTMCHExtSet`.
      * @public
      * @readonly
      */

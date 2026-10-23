@@ -9,7 +9,16 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary DischargeTime
  * @description
- * 
+ *
+ * Time at which a previously submitted Short Message was delivered, delivery
+ * was attempted, or the Service Centre disposed of it (ECMA-325 §E.7.3). ISO
+ * 8601 GeneralizedTime, size 12..19 (§6.3.1). For a completed transaction this
+ * is the completion time. While the Service Centre is still trying, it is the
+ * last attempt. For a permanent or temporary error with no further attempts,
+ * it is the last attempt or the disposal time, following `status`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

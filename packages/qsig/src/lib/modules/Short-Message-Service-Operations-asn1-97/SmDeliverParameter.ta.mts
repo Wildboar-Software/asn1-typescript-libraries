@@ -12,7 +12,12 @@ import { ServiceCentreTimeStamp, _decode_ServiceCentreTimeStamp, _encode_Service
 /**
  * @summary SmDeliverParameter
  * @description
- * 
+ *
+ * Delivery parameters the Service Centre attaches to `smsDeliver` (ECMA-325
+ * §6.5.3.1.1, §E.4.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,36 +37,68 @@ export
 class SmDeliverParameter {
     /**
      * @summary `protocolIdentifier`.
+     * @description
+     *
+     * The submit's `protocolIdentifier` (ECMA-325 §E.4.2.1, §E.1.2.1).
      * @public
      * @readonly
      */
     readonly protocolIdentifier: ProtocolIdentifier;
     /**
      * @summary `serviceCentreTimeStamp`.
+     * @description
+     *
+     * Arrival time the Service Centre assigned to the original `smsSubmit`
+     * (ECMA-325 §6.5.3.1.1, §E.2.1).
      * @public
      * @readonly
      */
     readonly serviceCentreTimeStamp: ServiceCentreTimeStamp;
     /**
      * @summary `priority`.
+     * @description
+     *
+     * Default FALSE. Assigned by the Service Centre (ECMA-325 §6.5.3.1.1).
+     * FALSE means transfer should stop when this Service Centre's address is
+     * already in Short Message Waiting Data (§E.4.2.3). TRUE is still attempted
+     * while the receiver is waiting to send `scAlert` (§6.5.4.2, §6.5.5.2).
+     * When the validity period expires in SMS-SC-Await-Alert, one more delivery
+     * may be sent with priority TRUE (§6.5.3.2.1). Annex E gives no other rule
+     * for how the Service Centre chooses the value.
      * @public
      * @readonly
      */
     readonly priority: OPTIONAL<BOOLEAN>;
     /**
      * @summary `moreMessagesToSend`.
+     * @description
+     *
+     * Default FALSE. TRUE means this Service Centre still has Short Messages or
+     * Status Reports waiting for this Receiving User (ECMA-325 §6.5.3.1.1,
+     * §E.4.2.4).
      * @public
      * @readonly
      */
     readonly moreMessagesToSend: OPTIONAL<BOOLEAN>;
     /**
      * @summary `statusReportIndication`.
+     * @description
+     *
+     * Default FALSE. TRUE means a Status Report will be returned to the Sending
+     * User because `statusReportRequest` was TRUE on the original `smsSubmit`
+     * (ECMA-325 §6.5.3.1.1, §E.4.2.5).
      * @public
      * @readonly
      */
     readonly statusReportIndication: OPTIONAL<BOOLEAN>;
     /**
      * @summary `replyPath`.
+     * @description
+     *
+     * Default FALSE. TRUE means a reply can be sent through this Service Centre
+     * even when it is not the Receiving User's default Service Centre (ECMA-325
+     * §E.4.2.6, §E.1.2.4). The Service Centre sets TRUE only if it supports
+     * reply path (§6.5.3.1.1).
      * @public
      * @readonly
      */

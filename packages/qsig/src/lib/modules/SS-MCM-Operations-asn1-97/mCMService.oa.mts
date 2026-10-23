@@ -11,7 +11,37 @@ import { unspecified } from "../SS-MCM-Operations-asn1-97/unspecified.oa.mjs";
 /**
  * @summary mCMService
  * @description
- * 
+ *
+ * Activate, deactivate, or reset monitoring (ECMA-347
+ * §6.5.2.1.1). The Served User PINX sends this from
+ * MCM-SU-idle, starts timer T2 (at least 10 s, §6.9.2), and
+ * waits in MCM-SU-wait. Local code 116.
+ *
+ * The Message Centre PINX stays in MCM-MC-idle and accepts
+ * the request only within the service provider's default
+ * configuration (§6.5.1.1.1). Activation is confirmed with
+ * `MCMDummyRes`, then the update procedure runs for the
+ * activated Message Types. Deactivation is confirmed and
+ * does not start an update. Reset to the provider default
+ * is confirmed and starts an update for the Message Types
+ * the reset affected. Those default parameters are outside
+ * this Standard.
+ *
+ * Errors: `userNotSubscribed`, `invalidServedUserNr`,
+ * `basicServiceNotProvided`, `mCMModeNotProvided`,
+ * `unspecified`. An invalid request is a return error; the
+ * code is not stated (§6.5.1.2.1). On a return error or T2
+ * expiry the Served User PINX releases the call-independent
+ * connection unless it is still required (§6.5.2.2.1).
+ *
+ * On a `mIDMailboxAuth` return error or reject, this invoke
+ * shall not be sent (§6.8.40).
+ *
+ * NFE destination `endPINX`. Interpretation APDU omitted or
+ * `rejectAnyUnrecognisedInvokePdu` (§6.3.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

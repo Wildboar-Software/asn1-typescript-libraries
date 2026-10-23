@@ -16,7 +16,13 @@ import { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "
 /**
  * @summary AuthCtmArg
  * @description
- * 
+ *
+ * Argument of `authCtmUser` (ECMA-243 §6.5.1). Identifies the CTM user and,
+ * when the Home PINX has them, supplies the challenge and expected-response
+ * values the Visitor PINX is to use.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-243/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,18 +39,30 @@ export
 class AuthCtmArg {
     /**
      * @summary `pisnNumber`.
+     * @description
+     *
+     * PISN number of the CTM user to authenticate (ECMA-243 §6.3.1).
      * @public
      * @readonly
      */
     readonly pisnNumber: PartyNumber;
     /**
      * @summary `calcCtatInfo`.
+     * @description
+     *
+     * Challenge and expected-response values. Omit when the Visitor PINX must
+     * fetch parameters itself; include them when the Home PINX supplies them
+     * (ECMA-243 §6.5.1.1). Extra pairs may be stored for a later SS-CTAT
+     * (§6.5.6.1, note 5).
      * @public
      * @readonly
      */
     readonly calcCtatInfo: OPTIONAL<CalcCtatInfo>;
     /**
      * @summary `dummyExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-243 §6.3.1 defines none.
      * @public
      * @readonly
      */

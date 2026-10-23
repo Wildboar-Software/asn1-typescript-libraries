@@ -10,7 +10,17 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary DummyRes
  * @description
- * 
+ *
+ * Result of `callOfferRequest` (ECMA-192 §6.3.1). Successful
+ * invocation is the return result itself (§6.6.2.1). §6.6 puts no
+ * Call Offer data in the result.
+ *
+ * - `null`: no manufacturer-specific information.
+ * - `extension`: one extension from `COExtSet`.
+ * - `sequenceOfExtn`: more than one extension from `COExtSet`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-192/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

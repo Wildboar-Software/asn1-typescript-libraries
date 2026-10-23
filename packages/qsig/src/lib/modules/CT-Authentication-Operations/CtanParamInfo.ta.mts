@@ -13,7 +13,13 @@ import { CalcCtanInfo, _decode_CalcCtanInfo, _encode_CalcCtanInfo } from "../CT-
 /**
  * @summary CtanParamInfo
  * @description
- * 
+ *
+ * SS-CTAN parameters (ECMA-243 §7.5.3.1). `authSessionKeyInfo` when the Visitor
+ * PINX computes the response from the session key and the CTM user's challenge.
+ * `calcCtanInfo` when the Authentication Server PINX computed the response.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-243/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

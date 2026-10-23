@@ -10,7 +10,14 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary DummyRes
  * @description
- * 
+ *
+ * Result of `wtmiDivert`, placed in the DISCONNECT that releases the leg toward
+ * the WTMI-detect PINX (ECMA-304 §6.5.1.1). The procedures do not say which
+ * alternative is sent. `null` adds no information. The extension alternatives
+ * are manufacturer-specific, and `WTMCHExtSet` defines no members (§6.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-304/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

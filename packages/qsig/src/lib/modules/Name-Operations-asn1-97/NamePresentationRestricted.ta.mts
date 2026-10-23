@@ -11,7 +11,18 @@ import { NameSet, _decode_NameSet, _encode_NameSet } from "../Name-Operations-as
 /**
  * @summary NamePresentationRestricted
  * @description
- * 
+ *
+ * The name is available but presentation is restricted, unless the receiving
+ * user can override that restriction (ECMA-164 §7.4.2.1, §8.4.2.1; ECMA-163
+ * §6.2.1). `namePresentationRestrictedSimple` implies ISO 8859-1.
+ * `namePresentationRestrictedExtended` is a `NameSet`.
+ * `namePresentationRestrictedNull` carries no name and is used only when
+ * another network indicates restriction without providing the name (§6.1,
+ * §7.5.1, §8.5.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-164/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-163/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

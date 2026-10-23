@@ -9,7 +9,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AlternativeId
  * @description
- * 
+ *
+ * Alternative to the PISN number in `WtmUserId` (ECMA-306 §6.3.1). The standard
+ * does not define the octet contents.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-306/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -10,7 +10,16 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary DummyRes
  * @description
- * 
+ *
+ * Result of `ssctInitiate`, returned in DISCONNECT on the original
+ * call when the new connection is through-connected. The procedures
+ * describe no standardized result elements. `null` is that empty
+ * result. `single` and `multiple` are manufacturer extensions.
+ * ECMA-300 §6.3.1 defines no members of `SSCTExtSet`.
+ * ECMA-300 §6.5.1.1, §6.5.2.1.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-300/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

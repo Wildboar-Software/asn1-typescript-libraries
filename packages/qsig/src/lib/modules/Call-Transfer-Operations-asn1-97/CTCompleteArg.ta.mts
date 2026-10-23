@@ -15,7 +15,14 @@ import { CTCompleteArg_argumentExtension, _decode_CTCompleteArg_argumentExtensio
 /**
  * @summary CTCompleteArg
  * @description
- * 
+ *
+ * Argument of `callTransferComplete`. Names which end of the new call
+ * is receiving the invoke, and gives what is known about the other
+ * user. ECMA-178 §6.5.1.1; ECMA-177 §7.2.1.2.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-178/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-177/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,36 +47,66 @@ export
 class CTCompleteArg {
     /**
      * @summary `endDesignation`.
+     * @description
+     *
+     * Which end of the new call receives this invoke. `primaryEnd`
+     * means the receiver acts as Primary PINX; `secondaryEnd` means
+     * Secondary PINX. ECMA-178 §6.5.1.1, §6.5.2.1, §6.5.3.1.
      * @public
      * @readonly
      */
     readonly endDesignation: EndDesignation;
     /**
      * @summary `redirectionNumber`.
+     * @description
+     *
+     * Number of the other user in the transferred call, when that
+     * number is available. §6.5.1.1 does not define the value when the
+     * number is unknown. A number marked restricted is withheld from
+     * the transferred user (§6.5.2.1). ECMA-178 §6.5.1.1.
      * @public
      * @readonly
      */
     readonly redirectionNumber: PresentedNumberScreened;
     /**
      * @summary `basicCallInfoElements`.
+     * @description
+     *
+     * Progress indicators encountered while the other call was set up,
+     * coded as ECMA-143 Progress indicator information elements.
+     * ECMA-178 §6.3.2.2, §6.5.1.1.
      * @public
      * @readonly
      */
     readonly basicCallInfoElements: OPTIONAL<PSS1InformationElement>;
     /**
      * @summary `redirectionName`.
+     * @description
+     *
+     * Name of the other user, when available. A name marked restricted
+     * is withheld from the transferred user. ECMA-178 §6.5.1.1,
+     * §6.5.2.1.
      * @public
      * @readonly
      */
     readonly redirectionName: OPTIONAL<Name>;
     /**
      * @summary `callStatus`.
+     * @description
+     *
+     * `alerting` on the invoke sent to the Primary PINX when the
+     * Secondary Call was not Active. Omission means `answered`.
+     * ECMA-178 §6.3.1, §6.5.1.1.
      * @public
      * @readonly
      */
     readonly callStatus: OPTIONAL<CallStatus>;
     /**
      * @summary `argumentExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-178 §6.3.1 defines no
+     * member of `CTExtSet`.
      * @public
      * @readonly
      */

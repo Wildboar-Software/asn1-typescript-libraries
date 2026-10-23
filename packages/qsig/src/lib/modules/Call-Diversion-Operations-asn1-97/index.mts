@@ -1,6 +1,17 @@
 /**
  * @module
- * @description ASN.1 module `Call-Diversion-Operations-asn1-97`.
+ * @description
+ *
+ * QSIG call diversion (ECMA-174, 3rd edition, December 2001). Call Forwarding
+ * Unconditional redirects calls to the served user's PISN number regardless of
+ * that user's status. Call Forwarding Busy redirects calls that meet busy. Call
+ * Forwarding No Reply redirects calls that are not answered within a predefined
+ * time. Call Deflection Immediate uses the CFU protocol and Call Deflection
+ * from Alert uses the CFNR protocol (ECMA-174 §6.1; ECMA-173 §6.1.1, §7.1.1,
+ * §8.1.1). This module is the X.680 (asn1-97) coding of those operations.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-173/
  */
 export * from "./BasicService.ta.mjs";
 export * from "./Call-Diversion-Operations.osa.mjs";

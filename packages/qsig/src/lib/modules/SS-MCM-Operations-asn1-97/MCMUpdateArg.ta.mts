@@ -14,7 +14,13 @@ import { MCMExtensions, _decode_MCMExtensions, _encode_MCMExtensions } from "../
 /**
  * @summary MCMUpdateArg
  * @description
- * 
+ *
+ * Argument of `mCMUpdate` (ECMA-347 §6.5.1.1.4). One Message
+ * Type. `moreInfoFollows` is TRUE on every fragment except
+ * the last when the update is split across invokes.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,30 +40,52 @@ export
 class MCMUpdateArg {
     /**
      * @summary `partyInfo`.
+     * @description
+     *
+     * Served User address and Message Centre identity.
+     * ECMA-347 §6.5.1.1.4.
      * @public
      * @readonly
      */
     readonly partyInfo: PartyInfo;
     /**
      * @summary `messageType`.
+     * @description
+     *
+     * Message Type whose stored messages changed.
+     * ECMA-347 §6.5.1.1.4.
      * @public
      * @readonly
      */
     readonly messageType: MessageType;
     /**
      * @summary `updateInfo`.
+     * @description
+     *
+     * Compressed or complete information for new messages,
+     * retrieved messages, or both. ECMA-347 §6.5.1.1.4.
      * @public
      * @readonly
      */
     readonly updateInfo: UpdateInfo;
     /**
      * @summary `moreInfoFollows`.
+     * @description
+     *
+     * TRUE on every fragment except the last when the update
+     * is split (§6.5.1.1.4). Omitted means FALSE. While it
+     * is TRUE the Served User PINX runs timer T3
+     * (§6.5.2.1.4).
      * @public
      * @readonly
      */
     readonly moreInfoFollows: OPTIONAL<BOOLEAN>;
     /**
      * @summary `extensions`.
+     * @description
+     *
+     * Manufacturer-specific extension. `MCMExtSet` defines none.
+     * The procedures do not mention this component. ECMA-347 §6.3.1.
      * @public
      * @readonly
      */

@@ -9,7 +9,12 @@ import { scAlert } from "../Short-Message-Service-Operations-asn1-97/scAlert.oa.
 /**
  * @summary Sms_Operations
  * @description
- * 
+ *
+ * SMS operations (ECMA-325 §6.3.1): `smsSubmit`, `smsDeliver`,
+ * `smsStatusReport`, `smsCommand`, and `scAlert`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

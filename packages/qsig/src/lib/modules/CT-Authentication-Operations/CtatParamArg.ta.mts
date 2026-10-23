@@ -16,7 +16,12 @@ import { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "
 /**
  * @summary CtatParamArg
  * @description
- * 
+ *
+ * Argument of `getCtatParam` and of `ctatParamEnq` (ECMA-243 §6.5.2, §6.5.6,
+ * §6.5.7).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-243/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,18 +38,30 @@ export
 class CtatParamArg {
     /**
      * @summary `pisnNumber`.
+     * @description
+     *
+     * PISN number of the CTM user. An invalid number is rejected with
+     * `invalidServedUserNr` (ECMA-243 §6.5.2.2, §6.5.7.2).
      * @public
      * @readonly
      */
     readonly pisnNumber: PartyNumber;
     /**
      * @summary `canCompute`.
+     * @description
+     *
+     * Present when the Visitor PINX can compute a challenge and the expected
+     * response from session-key information (ECMA-243 §6.3.1). The Home PINX
+     * copies that indication into `ctatParamEnq` (§6.5.3.1).
      * @public
      * @readonly
      */
     readonly canCompute: OPTIONAL<CanCompute>;
     /**
      * @summary `dummyExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-243 §6.3.1 defines none.
      * @public
      * @readonly
      */

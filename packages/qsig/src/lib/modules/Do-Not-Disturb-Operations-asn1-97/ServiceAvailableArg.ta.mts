@@ -9,7 +9,15 @@ import { ServiceAvailableArg_extendedServiceList, _decode_ServiceAvailableArg_ex
 /**
  * @summary ServiceAvailableArg
  * @description
- * 
+ *
+ * Services for which the Terminating PINX has retained the network
+ * connection (ECMA-194 §A.5.2). Bits set to ONE are services that
+ * can be invoked now and for which retention was requested. The
+ * extended alternative adds one manufacturer extension, which
+ * ECMA-194 §6.3.1 does not define.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-194/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

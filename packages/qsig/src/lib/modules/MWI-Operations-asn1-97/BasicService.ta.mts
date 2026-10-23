@@ -4,7 +4,19 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary BasicService
  * @description
- * 
+ *
+ * Service for which a message is waiting, or for which interrogation applies
+ * (ECMA-242 §6.3.1, ECMA-241 §6.1.1). A Served User can have a separate
+ * indication per service. Values 0-3 and 32-36 were kept from Call Diversion
+ * operations so edition 2 encodings still interwork. `telefaxGroup2-3` (37)
+ * is the group 2/3 fax value added to that set. Values 38-42 are reserved and
+ * unused. Values 51-67 are multimedia message classes added in the 3rd
+ * edition. Values 68-75 are reserved for future additions. Values 4-31 and
+ * 43-50 are unassigned. For voice mail, `speech` is recommended.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -112,7 +124,19 @@ enum _enum_for_BasicService {
 /**
  * @summary BasicService
  * @description
- * 
+ *
+ * Service for which a message is waiting, or for which interrogation applies
+ * (ECMA-242 §6.3.1, ECMA-241 §6.1.1). A Served User can have a separate
+ * indication per service. Values 0-3 and 32-36 were kept from Call Diversion
+ * operations so edition 2 encodings still interwork. `telefaxGroup2-3` (37)
+ * is the group 2/3 fax value added to that set. Values 38-42 are reserved and
+ * unused. Values 51-67 are multimedia message classes added in the 3rd
+ * edition. Values 68-75 are reserved for future additions. Values 4-31 and
+ * 43-50 are unassigned. For voice mail, `speech` is recommended.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -179,7 +203,19 @@ type BasicService = _enum_for_BasicService;
 /**
  * @summary BasicService
  * @description
- * 
+ *
+ * Service for which a message is waiting, or for which interrogation applies
+ * (ECMA-242 §6.3.1, ECMA-241 §6.1.1). A Served User can have a separate
+ * indication per service. Values 0-3 and 32-36 were kept from Call Diversion
+ * operations so edition 2 encodings still interwork. `telefaxGroup2-3` (37)
+ * is the group 2/3 fax value added to that set. Values 38-42 are reserved and
+ * unused. Values 51-67 are multimedia message classes added in the 3rd
+ * edition. Values 68-75 are reserved for future additions. Values 4-31 and
+ * 43-50 are unassigned. For voice mail, `speech` is recommended.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -245,14 +281,24 @@ const BasicService = _enum_for_BasicService;
 
 /**
  * @summary BasicService_allServices
+ * @description
+ *
+ * Value 0, retained for edition-2 compatibility (ECMA-242 §6.3.1). ECMA-241
+ * §7.2.1.3 note 2 requires an interrogation request to name one service or all
+ * services. The protocol text does not state that this value is that
+ * all-services request.
+ *
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
 const BasicService_allServices: BasicService = BasicService.allServices; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary allServices
+ * @description Alias of {@link BasicService_allServices}.
  * @constant
  * @type {number}
  */
@@ -261,14 +307,22 @@ const allServices: BasicService = BasicService.allServices; /* SHORT_NAMED_ENUME
 
 /**
  * @summary BasicService_speech
+ * @description
+ *
+ * Speech, value 1. Recommended for voice-mail indications so that vendors
+ * interwork (ECMA-242 §6.3.1). Retained for edition-2 compatibility.
+ *
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
 const BasicService_speech: BasicService = BasicService.speech; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speech
+ * @description Alias of {@link BasicService_speech}.
  * @constant
  * @type {number}
  */
@@ -277,14 +331,23 @@ const speech: BasicService = BasicService.speech; /* SHORT_NAMED_ENUMERATED_VALU
 
 /**
  * @summary BasicService_unrestrictedDigitalInformation
+ * @description
+ *
+ * Unrestricted digital information. Retained from Call Diversion operations for
+ * compatibility with edition 2 (ECMA-242 §6.3.1). The protocol text does not
+ * define this value beyond its name.
+ *
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
 const BasicService_unrestrictedDigitalInformation: BasicService = BasicService.unrestrictedDigitalInformation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unrestrictedDigitalInformation
+ * @description Alias of {@link BasicService_unrestrictedDigitalInformation}.
  * @constant
  * @type {number}
  */
@@ -293,14 +356,23 @@ const unrestrictedDigitalInformation: BasicService = BasicService.unrestrictedDi
 
 /**
  * @summary BasicService_audio3100Hz
+ * @description
+ *
+ * 3.1 kHz audio, from the identifier. Retained from Call Diversion operations
+ * for compatibility with edition 2 (ECMA-242 §6.3.1). The protocol text does
+ * not define this value beyond its name.
+ *
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
 const BasicService_audio3100Hz: BasicService = BasicService.audio3100Hz; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary audio3100Hz
+ * @description Alias of {@link BasicService_audio3100Hz}.
  * @constant
  * @type {number}
  */
@@ -309,14 +381,23 @@ const audio3100Hz: BasicService = BasicService.audio3100Hz; /* SHORT_NAMED_ENUME
 
 /**
  * @summary BasicService_telephony
+ * @description
+ *
+ * Telephony. Retained from Call Diversion operations for compatibility with
+ * edition 2 (ECMA-242 §6.3.1). The protocol text does not define this value
+ * beyond its name.
+ *
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
 const BasicService_telephony: BasicService = BasicService.telephony; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary telephony
+ * @description Alias of {@link BasicService_telephony}.
  * @constant
  * @type {number}
  */
@@ -325,14 +406,23 @@ const telephony: BasicService = BasicService.telephony; /* SHORT_NAMED_ENUMERATE
 
 /**
  * @summary BasicService_teletex
+ * @description
+ *
+ * Teletex. Retained from Call Diversion operations for compatibility with
+ * edition 2 (ECMA-242 §6.3.1). The protocol text does not define this value
+ * beyond its name.
+ *
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
 const BasicService_teletex: BasicService = BasicService.teletex; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary teletex
+ * @description Alias of {@link BasicService_teletex}.
  * @constant
  * @type {number}
  */
@@ -341,14 +431,23 @@ const teletex: BasicService = BasicService.teletex; /* SHORT_NAMED_ENUMERATED_VA
 
 /**
  * @summary BasicService_telefaxGroup4Class1
+ * @description
+ *
+ * Telefax group 4 class 1. Retained from Call Diversion operations for
+ * compatibility with edition 2 (ECMA-242 §6.3.1). The protocol text does not
+ * define this value beyond its name.
+ *
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
 const BasicService_telefaxGroup4Class1: BasicService = BasicService.telefaxGroup4Class1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary telefaxGroup4Class1
+ * @description Alias of {@link BasicService_telefaxGroup4Class1}.
  * @constant
  * @type {number}
  */
@@ -357,14 +456,23 @@ const telefaxGroup4Class1: BasicService = BasicService.telefaxGroup4Class1; /* S
 
 /**
  * @summary BasicService_videotextSyntaxBased
+ * @description
+ *
+ * Syntax-based videotext. Retained from Call Diversion operations for
+ * compatibility with edition 2 (ECMA-242 §6.3.1). The protocol text does not
+ * define this value beyond its name.
+ *
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
 const BasicService_videotextSyntaxBased: BasicService = BasicService.videotextSyntaxBased; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary videotextSyntaxBased
+ * @description Alias of {@link BasicService_videotextSyntaxBased}.
  * @constant
  * @type {number}
  */
@@ -373,14 +481,23 @@ const videotextSyntaxBased: BasicService = BasicService.videotextSyntaxBased; /*
 
 /**
  * @summary BasicService_videotelephony
+ * @description
+ *
+ * Videotelephony. Retained from Call Diversion operations for compatibility
+ * with edition 2 (ECMA-242 §6.3.1). The protocol text does not define this
+ * value beyond its name.
+ *
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
 const BasicService_videotelephony: BasicService = BasicService.videotelephony; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary videotelephony
+ * @description Alias of {@link BasicService_videotelephony}.
  * @constant
  * @type {number}
  */
@@ -389,14 +506,22 @@ const videotelephony: BasicService = BasicService.videotelephony; /* SHORT_NAMED
 
 /**
  * @summary BasicService_telefaxGroup2_3
+ * @description
+ *
+ * Telefax group 2 and group 3. Added relative to the basic services imported
+ * from Call Diversion (ECMA-242 §6.3.1).
+ *
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
 const BasicService_telefaxGroup2_3: BasicService = BasicService.telefaxGroup2_3; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary telefaxGroup2_3
+ * @description Alias of {@link BasicService_telefaxGroup2_3}.
  * @constant
  * @type {number}
  */
@@ -405,14 +530,18 @@ const telefaxGroup2_3: BasicService = BasicService.telefaxGroup2_3; /* SHORT_NAM
 
 /**
  * @summary BasicService_reservedNotUsed1
+ * @description Reserved and not used (ECMA-242 §6.3.1).
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
 const BasicService_reservedNotUsed1: BasicService = BasicService.reservedNotUsed1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reservedNotUsed1
+ * @description Alias of {@link BasicService_reservedNotUsed1}.
  * @constant
  * @type {number}
  */
@@ -421,14 +550,18 @@ const reservedNotUsed1: BasicService = BasicService.reservedNotUsed1; /* SHORT_N
 
 /**
  * @summary BasicService_reservedNotUsed2
+ * @description Reserved and not used (ECMA-242 §6.3.1).
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
 const BasicService_reservedNotUsed2: BasicService = BasicService.reservedNotUsed2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reservedNotUsed2
+ * @description Alias of {@link BasicService_reservedNotUsed2}.
  * @constant
  * @type {number}
  */
@@ -437,14 +570,18 @@ const reservedNotUsed2: BasicService = BasicService.reservedNotUsed2; /* SHORT_N
 
 /**
  * @summary BasicService_reservedNotUsed3
+ * @description Reserved and not used (ECMA-242 §6.3.1).
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
 const BasicService_reservedNotUsed3: BasicService = BasicService.reservedNotUsed3; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reservedNotUsed3
+ * @description Alias of {@link BasicService_reservedNotUsed3}.
  * @constant
  * @type {number}
  */
@@ -453,14 +590,18 @@ const reservedNotUsed3: BasicService = BasicService.reservedNotUsed3; /* SHORT_N
 
 /**
  * @summary BasicService_reservedNotUsed4
+ * @description Reserved and not used (ECMA-242 §6.3.1).
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
 const BasicService_reservedNotUsed4: BasicService = BasicService.reservedNotUsed4; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reservedNotUsed4
+ * @description Alias of {@link BasicService_reservedNotUsed4}.
  * @constant
  * @type {number}
  */
@@ -469,14 +610,18 @@ const reservedNotUsed4: BasicService = BasicService.reservedNotUsed4; /* SHORT_N
 
 /**
  * @summary BasicService_reservedNotUsed5
+ * @description Reserved and not used (ECMA-242 §6.3.1).
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
 const BasicService_reservedNotUsed5: BasicService = BasicService.reservedNotUsed5; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reservedNotUsed5
+ * @description Alias of {@link BasicService_reservedNotUsed5}.
  * @constant
  * @type {number}
  */
@@ -485,14 +630,22 @@ const reservedNotUsed5: BasicService = BasicService.reservedNotUsed5; /* SHORT_N
 
 /**
  * @summary BasicService_email
+ * @description
+ *
+ * Electronic mail. Multimedia message class added in the 3rd edition (ECMA-242
+ * §6.3.1). No further definition is given.
+ *
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
 const BasicService_email: BasicService = BasicService.email; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary email
+ * @description Alias of {@link BasicService_email}.
  * @constant
  * @type {number}
  */
@@ -501,14 +654,22 @@ const email: BasicService = BasicService.email; /* SHORT_NAMED_ENUMERATED_VALUE 
 
 /**
  * @summary BasicService_video
+ * @description
+ *
+ * Video. Multimedia message class added in the 3rd edition (ECMA-242 §6.3.1).
+ * No further definition is given.
+ *
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
 const BasicService_video: BasicService = BasicService.video; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary video
+ * @description Alias of {@link BasicService_video}.
  * @constant
  * @type {number}
  */
@@ -517,14 +678,22 @@ const video: BasicService = BasicService.video; /* SHORT_NAMED_ENUMERATED_VALUE 
 
 /**
  * @summary BasicService_fileTransfer
+ * @description
+ *
+ * File transfer. Multimedia message class added in the 3rd edition (ECMA-242
+ * §6.3.1). No further definition is given.
+ *
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
 const BasicService_fileTransfer: BasicService = BasicService.fileTransfer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fileTransfer
+ * @description Alias of {@link BasicService_fileTransfer}.
  * @constant
  * @type {number}
  */
@@ -533,14 +702,22 @@ const fileTransfer: BasicService = BasicService.fileTransfer; /* SHORT_NAMED_ENU
 
 /**
  * @summary BasicService_shortMessageService
+ * @description
+ *
+ * Short message service. Multimedia message class added in the 3rd edition
+ * (ECMA-242 §6.3.1). No further definition is given.
+ *
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
 const BasicService_shortMessageService: BasicService = BasicService.shortMessageService; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary shortMessageService
+ * @description Alias of {@link BasicService_shortMessageService}.
  * @constant
  * @type {number}
  */
@@ -549,14 +726,22 @@ const shortMessageService: BasicService = BasicService.shortMessageService; /* S
 
 /**
  * @summary BasicService_speechAndVideo
+ * @description
+ *
+ * Speech and video. Multimedia message class added in the 3rd edition (ECMA-242
+ * §6.3.1). No further definition is given.
+ *
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
 const BasicService_speechAndVideo: BasicService = BasicService.speechAndVideo; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speechAndVideo
+ * @description Alias of {@link BasicService_speechAndVideo}.
  * @constant
  * @type {number}
  */
@@ -565,14 +750,22 @@ const speechAndVideo: BasicService = BasicService.speechAndVideo; /* SHORT_NAMED
 
 /**
  * @summary BasicService_speechAndFax
+ * @description
+ *
+ * Speech and fax. Multimedia message class added in the 3rd edition (ECMA-242
+ * §6.3.1). No further definition is given.
+ *
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
 const BasicService_speechAndFax: BasicService = BasicService.speechAndFax; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speechAndFax
+ * @description Alias of {@link BasicService_speechAndFax}.
  * @constant
  * @type {number}
  */
@@ -581,14 +774,22 @@ const speechAndFax: BasicService = BasicService.speechAndFax; /* SHORT_NAMED_ENU
 
 /**
  * @summary BasicService_speechAndEmail
+ * @description
+ *
+ * Speech and electronic mail. Multimedia message class added in the 3rd edition
+ * (ECMA-242 §6.3.1). No further definition is given.
+ *
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
 const BasicService_speechAndEmail: BasicService = BasicService.speechAndEmail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speechAndEmail
+ * @description Alias of {@link BasicService_speechAndEmail}.
  * @constant
  * @type {number}
  */
@@ -597,14 +798,22 @@ const speechAndEmail: BasicService = BasicService.speechAndEmail; /* SHORT_NAMED
 
 /**
  * @summary BasicService_videoAndFax
+ * @description
+ *
+ * Video and fax. Multimedia message class added in the 3rd edition (ECMA-242
+ * §6.3.1). No further definition is given.
+ *
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
 const BasicService_videoAndFax: BasicService = BasicService.videoAndFax; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary videoAndFax
+ * @description Alias of {@link BasicService_videoAndFax}.
  * @constant
  * @type {number}
  */
@@ -613,14 +822,22 @@ const videoAndFax: BasicService = BasicService.videoAndFax; /* SHORT_NAMED_ENUME
 
 /**
  * @summary BasicService_videoAndEmail
+ * @description
+ *
+ * Video and electronic mail. Multimedia message class added in the 3rd edition
+ * (ECMA-242 §6.3.1). No further definition is given.
+ *
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
 const BasicService_videoAndEmail: BasicService = BasicService.videoAndEmail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary videoAndEmail
+ * @description Alias of {@link BasicService_videoAndEmail}.
  * @constant
  * @type {number}
  */
@@ -629,14 +846,22 @@ const videoAndEmail: BasicService = BasicService.videoAndEmail; /* SHORT_NAMED_E
 
 /**
  * @summary BasicService_faxAndEmail
+ * @description
+ *
+ * Fax and electronic mail. Multimedia message class added in the 3rd edition
+ * (ECMA-242 §6.3.1). No further definition is given.
+ *
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
 const BasicService_faxAndEmail: BasicService = BasicService.faxAndEmail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary faxAndEmail
+ * @description Alias of {@link BasicService_faxAndEmail}.
  * @constant
  * @type {number}
  */
@@ -645,14 +870,22 @@ const faxAndEmail: BasicService = BasicService.faxAndEmail; /* SHORT_NAMED_ENUME
 
 /**
  * @summary BasicService_speechVideoAndFax
+ * @description
+ *
+ * Speech, video, and fax. Multimedia message class added in the 3rd edition
+ * (ECMA-242 §6.3.1). No further definition is given.
+ *
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
 const BasicService_speechVideoAndFax: BasicService = BasicService.speechVideoAndFax; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speechVideoAndFax
+ * @description Alias of {@link BasicService_speechVideoAndFax}.
  * @constant
  * @type {number}
  */
@@ -661,14 +894,22 @@ const speechVideoAndFax: BasicService = BasicService.speechVideoAndFax; /* SHORT
 
 /**
  * @summary BasicService_speechVideoAndEmail
+ * @description
+ *
+ * Speech, video, and electronic mail. Multimedia message class added in the 3rd
+ * edition (ECMA-242 §6.3.1). No further definition is given.
+ *
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
 const BasicService_speechVideoAndEmail: BasicService = BasicService.speechVideoAndEmail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speechVideoAndEmail
+ * @description Alias of {@link BasicService_speechVideoAndEmail}.
  * @constant
  * @type {number}
  */
@@ -677,14 +918,22 @@ const speechVideoAndEmail: BasicService = BasicService.speechVideoAndEmail; /* S
 
 /**
  * @summary BasicService_speechFaxAndEmail
+ * @description
+ *
+ * Speech, fax, and electronic mail. Multimedia message class added in the 3rd
+ * edition (ECMA-242 §6.3.1). No further definition is given.
+ *
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
 const BasicService_speechFaxAndEmail: BasicService = BasicService.speechFaxAndEmail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speechFaxAndEmail
+ * @description Alias of {@link BasicService_speechFaxAndEmail}.
  * @constant
  * @type {number}
  */
@@ -693,14 +942,22 @@ const speechFaxAndEmail: BasicService = BasicService.speechFaxAndEmail; /* SHORT
 
 /**
  * @summary BasicService_videoFaxAndEmail
+ * @description
+ *
+ * Video, fax, and electronic mail. Multimedia message class added in the 3rd
+ * edition (ECMA-242 §6.3.1). No further definition is given.
+ *
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
 const BasicService_videoFaxAndEmail: BasicService = BasicService.videoFaxAndEmail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary videoFaxAndEmail
+ * @description Alias of {@link BasicService_videoFaxAndEmail}.
  * @constant
  * @type {number}
  */
@@ -709,14 +966,22 @@ const videoFaxAndEmail: BasicService = BasicService.videoFaxAndEmail; /* SHORT_N
 
 /**
  * @summary BasicService_speechVideoFaxAndEmail
+ * @description
+ *
+ * Speech, video, fax, and electronic mail. Multimedia message class added in
+ * the 3rd edition (ECMA-242 §6.3.1). No further definition is given.
+ *
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
 const BasicService_speechVideoFaxAndEmail: BasicService = BasicService.speechVideoFaxAndEmail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speechVideoFaxAndEmail
+ * @description Alias of {@link BasicService_speechVideoFaxAndEmail}.
  * @constant
  * @type {number}
  */
@@ -725,14 +990,18 @@ const speechVideoFaxAndEmail: BasicService = BasicService.speechVideoFaxAndEmail
 
 /**
  * @summary BasicService_multimediaUnknown
+ * @description Multimedia whose class is unknown (ECMA-242 §6.3.1).
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
 const BasicService_multimediaUnknown: BasicService = BasicService.multimediaUnknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary multimediaUnknown
+ * @description Alias of {@link BasicService_multimediaUnknown}.
  * @constant
  * @type {number}
  */
@@ -741,14 +1010,18 @@ const multimediaUnknown: BasicService = BasicService.multimediaUnknown; /* SHORT
 
 /**
  * @summary BasicService_serviceUnknown
+ * @description The service is unknown (ECMA-242 §6.3.1).
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
 const BasicService_serviceUnknown: BasicService = BasicService.serviceUnknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary serviceUnknown
+ * @description Alias of {@link BasicService_serviceUnknown}.
  * @constant
  * @type {number}
  */
@@ -757,14 +1030,21 @@ const serviceUnknown: BasicService = BasicService.serviceUnknown; /* SHORT_NAMED
 
 /**
  * @summary BasicService_futureReserve1
+ * @description
+ *
+ * Reserved for a future addition (ECMA-242 §6.3.1). No meaning is assigned.
+ *
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
 const BasicService_futureReserve1: BasicService = BasicService.futureReserve1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary futureReserve1
+ * @description Alias of {@link BasicService_futureReserve1}.
  * @constant
  * @type {number}
  */
@@ -773,14 +1053,21 @@ const futureReserve1: BasicService = BasicService.futureReserve1; /* SHORT_NAMED
 
 /**
  * @summary BasicService_futureReserve2
+ * @description
+ *
+ * Reserved for a future addition (ECMA-242 §6.3.1). No meaning is assigned.
+ *
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
 const BasicService_futureReserve2: BasicService = BasicService.futureReserve2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary futureReserve2
+ * @description Alias of {@link BasicService_futureReserve2}.
  * @constant
  * @type {number}
  */
@@ -789,14 +1076,21 @@ const futureReserve2: BasicService = BasicService.futureReserve2; /* SHORT_NAMED
 
 /**
  * @summary BasicService_futureReserve3
+ * @description
+ *
+ * Reserved for a future addition (ECMA-242 §6.3.1). No meaning is assigned.
+ *
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
 const BasicService_futureReserve3: BasicService = BasicService.futureReserve3; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary futureReserve3
+ * @description Alias of {@link BasicService_futureReserve3}.
  * @constant
  * @type {number}
  */
@@ -805,14 +1099,21 @@ const futureReserve3: BasicService = BasicService.futureReserve3; /* SHORT_NAMED
 
 /**
  * @summary BasicService_futureReserve4
+ * @description
+ *
+ * Reserved for a future addition (ECMA-242 §6.3.1). No meaning is assigned.
+ *
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
 const BasicService_futureReserve4: BasicService = BasicService.futureReserve4; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary futureReserve4
+ * @description Alias of {@link BasicService_futureReserve4}.
  * @constant
  * @type {number}
  */
@@ -821,14 +1122,21 @@ const futureReserve4: BasicService = BasicService.futureReserve4; /* SHORT_NAMED
 
 /**
  * @summary BasicService_futureReserve5
+ * @description
+ *
+ * Reserved for a future addition (ECMA-242 §6.3.1). No meaning is assigned.
+ *
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
 const BasicService_futureReserve5: BasicService = BasicService.futureReserve5; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary futureReserve5
+ * @description Alias of {@link BasicService_futureReserve5}.
  * @constant
  * @type {number}
  */
@@ -837,14 +1145,21 @@ const futureReserve5: BasicService = BasicService.futureReserve5; /* SHORT_NAMED
 
 /**
  * @summary BasicService_futureReserve6
+ * @description
+ *
+ * Reserved for a future addition (ECMA-242 §6.3.1). No meaning is assigned.
+ *
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
 const BasicService_futureReserve6: BasicService = BasicService.futureReserve6; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary futureReserve6
+ * @description Alias of {@link BasicService_futureReserve6}.
  * @constant
  * @type {number}
  */
@@ -853,14 +1168,21 @@ const futureReserve6: BasicService = BasicService.futureReserve6; /* SHORT_NAMED
 
 /**
  * @summary BasicService_futureReserve7
+ * @description
+ *
+ * Reserved for a future addition (ECMA-242 §6.3.1). No meaning is assigned.
+ *
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
 const BasicService_futureReserve7: BasicService = BasicService.futureReserve7; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary futureReserve7
+ * @description Alias of {@link BasicService_futureReserve7}.
  * @constant
  * @type {number}
  */
@@ -869,14 +1191,21 @@ const futureReserve7: BasicService = BasicService.futureReserve7; /* SHORT_NAMED
 
 /**
  * @summary BasicService_futureReserve8
+ * @description
+ *
+ * Reserved for a future addition (ECMA-242 §6.3.1). No meaning is assigned.
+ *
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
  */
 export
 const BasicService_futureReserve8: BasicService = BasicService.futureReserve8; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary futureReserve8
+ * @description Alias of {@link BasicService_futureReserve8}.
  * @constant
  * @type {number}
  */

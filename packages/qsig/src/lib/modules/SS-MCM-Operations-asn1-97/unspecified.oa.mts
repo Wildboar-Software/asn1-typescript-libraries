@@ -5,7 +5,16 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary unspecified
  * @description
- * 
+ *
+ * Error with a manufacturer-specific parameter (ECMA-347
+ * §6.3.1). Local code 1008, the same local code as SS-MID
+ * `unspecified`. Listed on every SS-MCM operation except
+ * `mCMailboxFull`. The procedures do not say when to send
+ * it. `MCMExtSet` defines no extensions, so the parameter
+ * is outside this Standard.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

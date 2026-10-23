@@ -11,7 +11,13 @@ import { InterimBillingId, _decode_InterimBillingId, _encode_InterimBillingId, _
 /**
  * @summary AocInterimArg_interimCharge_specificCurrency
  * @description
- * 
+ *
+ * Subtotal in currency units, with an optional billing identification (ECMA-211
+ * §9.2.1.8, §B.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +33,20 @@ export
 class AocInterimArg_interimCharge_specificCurrency {
     /**
      * @summary `recordedCurrency`.
+     * @description
+     *
+     * Subtotal in currency units (ECMA-211 §9.2.1.8). ECMA-212 §6.3.1 cannot
+     * carry the charging-unit counts allowed by ECMA-211 §B.1.2.
      * @public
      * @readonly
      */
     readonly recordedCurrency: RecordedCurrency;
     /**
      * @summary `interimBillingId`.
+     * @description
+     *
+     * Normal charging or credit-card charging. Omit it for normal charging;
+     * absence means normal charging (ECMA-211 table 8 note 1, §B.2).
      * @public
      * @readonly
      */

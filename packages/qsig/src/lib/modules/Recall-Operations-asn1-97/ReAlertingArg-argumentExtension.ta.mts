@@ -9,7 +9,13 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary ReAlertingArg_argumentExtension
  * @description
- * 
+ *
+ * Manufacturer-specific extension on `recallAlerting`. Either one extension or
+ * a sequence of them, from `REExtSet`. The standardized set is empty (ECMA-214
+ * §6.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-214/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

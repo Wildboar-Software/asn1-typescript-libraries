@@ -4,7 +4,16 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary invalidRerouteingNumber
  * @description
- * 
+ *
+ * ROSE local 1004. The new connection failed because the Called party
+ * number is not a valid number for routing that connection. The ASN.1
+ * comment stops at "routeing the new connection to". Also one of the
+ * cause-29 choices when a SETUP's `callIdentity` and Called party
+ * number match no Requesting entity in PR-Req-Initiated.
+ * ECMA-176 §6.3.1, §6.5.1.4.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-176/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

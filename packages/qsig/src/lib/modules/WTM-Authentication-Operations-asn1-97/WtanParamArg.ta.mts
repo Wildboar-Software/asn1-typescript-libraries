@@ -14,7 +14,13 @@ import { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "
 /**
  * @summary WtanParamArg
  * @description
- * 
+ *
+ * Argument of `getWtanParam` and of `wtanParamEnq` (ECMA-306 §7.5.1, §7.5.3).
+ * Carries the challenge received from the WTM user, and the authentication
+ * algorithm.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-306/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,30 +39,53 @@ export
 class WtanParamArg {
     /**
      * @summary `wtmUserId`.
+     * @description
+     *
+     * Identity of the WTM user that is authenticating the PISN. An invalid
+     * identity is rejected with `invalidServedUserNr` (ECMA-306 §7.5.2.2,
+     * §7.5.3.2).
      * @public
      * @readonly
      */
     readonly wtmUserId: WtmUserId;
     /**
      * @summary `authChallenge`.
+     * @description
+     *
+     * Challenge received from the WTM user (ECMA-306 §7.5.1.1). Described as a
+     * randomly generated parameter (§6.3.1). Generation is outside ECMA-306
+     * (§1).
      * @public
      * @readonly
      */
     readonly authChallenge: AuthChallenge;
     /**
      * @summary `authAlgorithm`.
+     * @description
+     *
+     * Required by the type (ECMA-306 §6.3.1). §7.5.1.1 mentions the challenge
+     * received from the WTM user and does not mention this element. Algorithm
+     * behaviour is outside ECMA-306 (§1).
      * @public
      * @readonly
      */
     readonly authAlgorithm: AuthAlgorithm;
     /**
      * @summary `canCompute`.
+     * @description
+     *
+     * Present when the Visitor PINX can compute the response from session-key
+     * information (ECMA-306 §6.3.1, §7.5.1.1).
      * @public
      * @readonly
      */
     readonly canCompute: OPTIONAL<CanCompute>;
     /**
      * @summary `dummyExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-306 §6.3.1 defines no members of
+     * `WTMAuthExtSet`.
      * @public
      * @readonly
      */

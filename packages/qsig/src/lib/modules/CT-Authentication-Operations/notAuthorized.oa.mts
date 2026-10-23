@@ -7,7 +7,13 @@ import type { ERROR } from "@wildboar/rose";
 /**
  * @summary notAuthorized
  * @description
- * 
+ *
+ * Local error code 1007, with no parameter (ECMA-243 §6.3.1). The Home PINX
+ * returns it when the CTM user is not authorised for SS-CTAT (§6.5.2.2) or for
+ * SS-CTAN (§7.5.2.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-243/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

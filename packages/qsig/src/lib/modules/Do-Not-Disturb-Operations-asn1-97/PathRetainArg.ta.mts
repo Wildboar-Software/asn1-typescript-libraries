@@ -9,7 +9,14 @@ import { PathRetainArg_extendedServiceList, _decode_PathRetainArg_extendedServic
 /**
  * @summary PathRetainArg
  * @description
- * 
+ *
+ * Services for which the Originating PINX requests path retention
+ * (ECMA-194 §A.5.1). Bits set to ONE in `serviceList` are those
+ * services. `extendedServiceList` adds one manufacturer extension;
+ * ECMA-194 §6.3.1 and §A.3.1 define none.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-194/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

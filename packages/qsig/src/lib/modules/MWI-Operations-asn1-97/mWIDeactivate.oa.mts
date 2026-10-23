@@ -10,7 +10,18 @@ import { unspecified } from "../MWI-Operations-asn1-97/unspecified.oa.mjs";
 /**
  * @summary mWIDeactivate
  * @description
- * 
+ *
+ * Message Centre PINX to Served User PINX, local code 81. Cancels the
+ * message-waiting indication for one service. Same call-independent connection,
+ * timer T1, and result as `mWIActivate` (ECMA-242 §6.5.1.1.1, §6.5.2.1.1,
+ * §6.9.1). The argument shall contain the Served User's PISN number and the
+ * service. The same errors are listed. §6.5.2.2.1 does not assign each error a
+ * cause. If a previous activation included a Message Centre identity,
+ * deactivation shall include it again (ECMA-241 §7.2.1.2 note 3).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -5,7 +5,16 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary unspecified
  * @description
- * 
+ *
+ * Manufacturer-specific SS-CC error (ECMA-186 §6.3.1). The parameter
+ * is an extension from `CCExtSet`. Local code 1008. On
+ * `ccPathReserve` or `ccRingout`, receipt makes the Originating PINX
+ * delete the request (§6.5.2.2.5, §6.5.2.2.6). §6.5.3 does not say
+ * when the Terminating PINX sends it. On `ccbsRequest` and
+ * `ccnrRequest` it is only listed in the ERRORS set (§6.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-186/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -9,7 +9,12 @@ import { MessageInfo, _decode_MessageInfo, _encode_MessageInfo } from "../SS-MCM
 /**
  * @summary AllMsgInfo
  * @description
- * 
+ *
+ * New and retrieved messages of one Message Type in the
+ * same `mCMUpdate` (ECMA-347 §6.5.1.1.4).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,12 +30,19 @@ export
 class AllMsgInfo {
     /**
      * @summary `newMsgInfo`.
+     * @description
+     *
+     * New messages of this Message Type. ECMA-347 §6.5.1.1.4.
      * @public
      * @readonly
      */
     readonly newMsgInfo: MessageInfo;
     /**
      * @summary `retrievedMsgInfo`.
+     * @description
+     *
+     * Retrieved messages of this Message Type.
+     * ECMA-347 §6.5.1.1.4.
      * @public
      * @readonly
      */

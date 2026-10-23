@@ -5,7 +5,20 @@ import { DummyArg, _decode_DummyArg, _encode_DummyArg } from "../SS-AOC-Operatio
 /**
  * @summary getFinalCharge
  * @description
- * 
+ *
+ * Asks for the final charge when the calling user releases first, local code
+ * 60, no return result. If interim or final charge provision is in operation,
+ * the Originating PINX suspends clearing, sends this invoke in FACILITY, starts
+ * timer T2 (at least 15 s), and waits in Aoc-Orig-Wait-Charge (ECMA-212
+ * §6.6.1.1.3, §6.10). The charge arrives later as `aocFinal` in DISCONNECT. The
+ * argument carries no charge data (ECMA-211 §9.2.1.10). If neither interim nor
+ * final provision is in operation, the Gateway clears the call in both
+ * directions (ECMA-212 §6.6.2.2). Interpretation APDU is
+ * `clearCallIfAnyInvokePduNotRecognised` (§6.3.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

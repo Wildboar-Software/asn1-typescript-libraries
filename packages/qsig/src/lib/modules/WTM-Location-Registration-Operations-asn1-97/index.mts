@@ -1,6 +1,21 @@
 /**
  * @module
- * @description ASN.1 module `WTM-Location-Registration-Operations-asn1-97`.
+ * @description
+ *
+ * SS-WTLR and ANF-WTINFO at the Q reference point. ECMA-302 2nd edition
+ * (December 2001), aligned with ISO/IEC 15429. SS-WTLR registers or deregisters
+ * a WTM user's location so the PISN can route incoming calls and offer services
+ * in the current location area (ECMA-302 §6.1). ANF-WTINFO carries
+ * route-restriction information from the Home PINX to the Visitor PINX and lets
+ * either PINX check location data (§7.1). Module
+ * `WTM-Location-Registration-Operations-asn1-97`. §6.3.1 assigns arc
+ * `wtlr-operations-asn1-97(1)` under `pss1-location-registration(15429)`.
+ * ECMA-282 §6.3.1 imports this module under arc `wtmlr-operations-asn1-97(1)`.
+ * Invokes set NFE `destinationEntity` to `endPINX`; Interpretation is omitted
+ * or `rejectAnyUnrecognisedInvokePdu` (§6.3.2.1, §7.3.2.1). `pisnEnquiry` is
+ * defined here; ECMA-282 only imports it.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-302/
  */
 export * from "./AlternativeId.ta.mjs";
 export * from "./CheckResult.ta.mjs";

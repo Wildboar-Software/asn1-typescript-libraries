@@ -11,7 +11,13 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary ServiceAvailableArg_extendedServiceList
  * @description
- * 
+ *
+ * `serviceAvailable` argument carrying a service list and one
+ * manufacturer-specific extension (ECMA-203 §6.3.1). §A.5 does not
+ * say when this is sent instead of `serviceList` alone.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-203/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +33,21 @@ export
 class ServiceAvailableArg_extendedServiceList {
     /**
      * @summary `serviceList`.
+     * @description
+     *
+     * Services that can be invoked now and for which retention was
+     * requested. A bit set to ONE means that service is invokable;
+     * other bits are ZERO (ECMA-203 §A.5.2).
      * @public
      * @readonly
      */
     readonly serviceList: ServiceList;
     /**
      * @summary `extension`.
+     * @description
+     *
+     * Manufacturer-specific extension from `CIExtSet`. ECMA-203 §6.3.1
+     * leaves that set empty, and §A.5 does not define this component.
      * @public
      * @readonly
      */

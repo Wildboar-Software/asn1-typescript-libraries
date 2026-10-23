@@ -13,7 +13,13 @@ import { _decode_interrogateDiversionQ_ArgumentType_extension, _encode_interroga
 /**
  * @summary interrogateDiversionQ_ArgumentType
  * @description
- * 
+ *
+ * Argument of `interrogateDiversionQ`, from the Interrogating PINX to the
+ * Served User PINX (ECMA-174 §6.3.1, §6.5.8.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-173/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,30 +41,53 @@ export
 class interrogateDiversionQ_ArgumentType {
     /**
      * @summary `procedure`.
+     * @description
+     *
+     * CFU, CFB, or CFNR being interrogated (ECMA-174 §6.5.3.1.3).
      * @public
      * @readonly
      */
     readonly procedure: Procedure;
     /**
      * @summary `basicService`.
+     * @description
+     *
+     * Basic service to interrogate, or all basic services. The default is all
+     * basic services (ECMA-174 §6.3.1). A response for all basic services
+     * repeats the activation data for each basic service that was activated
+     * separately (ECMA-173 §6.2.2.1.3).
      * @public
      * @readonly
      */
     readonly basicService: OPTIONAL<BasicService>;
     /**
      * @summary `servedUserNr`.
+     * @description
+     *
+     * PISN number of the served user. Remote interrogation includes this number
+     * (ECMA-174 §6.5.3.1.3; ECMA-173 §6.2.2.1.4).
      * @public
      * @readonly
      */
     readonly servedUserNr: PartyNumber;
     /**
      * @summary `interrogatingUserNr`.
+     * @description
+     *
+     * Number of the user requesting interrogation. The Served User PINX may use
+     * it to decide whether interrogation is allowed (ECMA-174 §6.5.3.1.3). A
+     * diverted-to user or an authorized user may interrogate remotely (ECMA-173
+     * §6.2.2.1.4).
      * @public
      * @readonly
      */
     readonly interrogatingUserNr: PartyNumber;
     /**
      * @summary `extension`.
+     * @description
+     *
+     * Manufacturer-specific extension from `DiversionExtensionSet`. The
+     * standardized set is empty (ECMA-174 §6.3.1).
      * @public
      * @readonly
      */

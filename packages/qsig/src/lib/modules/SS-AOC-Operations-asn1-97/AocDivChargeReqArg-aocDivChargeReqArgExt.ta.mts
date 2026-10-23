@@ -9,7 +9,14 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary AocDivChargeReqArg_aocDivChargeReqArgExt
  * @description
- * 
+ *
+ * Optional manufacturer-specific extension on `aocDivChargeReq`. ECMA-212
+ * §6.3.1 defines `AOCExtSet` as `{...}` and names no member. It does not say
+ * when to send one extension rather than several.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

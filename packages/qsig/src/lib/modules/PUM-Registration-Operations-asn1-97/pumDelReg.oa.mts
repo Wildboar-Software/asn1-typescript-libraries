@@ -10,7 +10,23 @@ import { supplementaryServiceInteractionNotAllowed } from "../General-Error-List
 /**
  * @summary pumDelReg
  * @description
- * 
+ *
+ * Delete one registration session from a Visitor PINX (ECMA-282 §6.5.3, §6.5.5,
+ * §6.6). The Home PINX sends it to the previous Visitor PINX after a new
+ * registration, or to the Visitor PINX whose session is being de-registered.
+ * ROSE local CODE 90. The result is `DummyRes`. The addressed PINX deletes the
+ * VDB entry selected by basic service, PUM identity, hosting address, and
+ * service option, and still returns a result if that entry is already absent
+ * (§6.5.5.2). It returns `temporarilyUnavailable` when the VDB is temporarily
+ * unavailable. Timer T4, at least 15 s, runs at the Home PINX in HomeDelete
+ * (§6.12.4). Expiry of T4, or a return error or reject, may lead to management
+ * action to correct the VDB; the Home PINX returns to HomeIdle (§6.5.3.2).
+ * Other errors: `notAvailable`, `unspecified`,
+ * `supplementaryServiceInteractionNotAllowed`. Clause 6 is silent on when to
+ * return those three.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-282/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

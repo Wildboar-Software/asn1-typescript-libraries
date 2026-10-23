@@ -4,7 +4,20 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary mCMModeNotProvided
  * @description
- * 
+ *
+ * Error on `mCMService` and `mCMInterrogate` (ECMA-347
+ * §6.3.1). Local code 1037. No parameter.
+ *
+ * §6.5.1.2.1 requires a return error for an invalid
+ * activation, deactivation, or interrogation, for example a
+ * Message Type the service provider does not provide. It
+ * does not say when this error is chosen rather than
+ * `unspecified` or an imported general error. The
+ * identifier says the mode is not provided; the procedure
+ * does not use that wording.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

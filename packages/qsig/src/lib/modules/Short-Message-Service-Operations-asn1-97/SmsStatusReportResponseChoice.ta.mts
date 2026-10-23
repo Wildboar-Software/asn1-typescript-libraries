@@ -12,7 +12,15 @@ import { ResChoiceSeq, _decode_ResChoiceSeq, _encode_ResChoiceSeq } from "../Sho
 /**
  * @summary SmsStatusReportResponseChoice
  * @description
- * 
+ *
+ * Payload of an `smsStatusReport` result (ECMA-325 §E.8). Annex E.8 requires
+ * one or both of `protocolIdentifier` and `userData`. `null` is also in the
+ * choice and is not described there. When `userData` is present it includes
+ * the invoke's user data; the Sending User PINX or Message Centre may add
+ * headers after a `dataHeaderSourceIndicator`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

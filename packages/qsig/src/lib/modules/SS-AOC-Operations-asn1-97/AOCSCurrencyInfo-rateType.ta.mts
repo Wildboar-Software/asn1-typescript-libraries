@@ -13,7 +13,21 @@ import { SpecialChargingCode, _decode_SpecialChargingCode, _encode_SpecialChargi
 /**
  * @summary AOCSCurrencyInfo_rateType
  * @description
- * 
+ *
+ * Rate for the accompanying charged item (ECMA-211 §A.1.3). `durationCurrency`
+ * is a price per time unit (§A.1.3.1). `flatRateCurrency` is a fixed currency
+ * value per event (§A.1.3.3). `volumeRateCurrency` is a price per volume unit
+ * (§A.1.3.2). `specialChargingCode` is an integer 1..10 identifying a charging
+ * algorithm; the algorithm is outside this standard (§A.1.3.3). `freeOfCharge`
+ * means no further charge for that item from receipt of this rate.
+ * `freeOfChargefromBeginning` means no charge even if a rate was sent earlier,
+ * and is reserved for basic communication (table 2 note 3, §6.2.2.2).
+ * `currencyInfoNotAvailable` means the rate is not available and no reason is
+ * given (§A.1.3.3); do not treat it as free of charge (§6.2.3.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

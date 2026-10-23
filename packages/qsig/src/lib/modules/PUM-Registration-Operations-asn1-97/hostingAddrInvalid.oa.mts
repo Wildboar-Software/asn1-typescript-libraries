@@ -4,7 +4,12 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary hostingAddrInvalid
  * @description
- * 
+ *
+ * ROSE local CODE 1021. No parameter. Listed on `pumRegistr`, `pumDe-reg`, and
+ * `pumInterrog` (ECMA-282 §6.3.1). Clause 6 is silent on when to return it.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-282/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

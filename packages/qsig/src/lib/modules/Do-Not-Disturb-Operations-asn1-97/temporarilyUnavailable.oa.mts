@@ -4,7 +4,14 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary temporarilyUnavailable
  * @description
- * 
+ *
+ * ECMA-194 defines this error (local CODE 1000) on activation,
+ * deactivation, interrogation, and override execution, but does not
+ * say when the Served User PINX or Terminating PINX returns it
+ * (§6.3.1, §6.5.6.2, §6.6.1.2). No parameter.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-194/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

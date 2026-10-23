@@ -13,7 +13,13 @@ import { Time, _decode_Time, _encode_Time } from "../SS-AOC-Operations-asn1-97/T
 /**
  * @summary DurationCurrency
  * @description
- * 
+ *
+ * Currency value of one time unit, the length of that unit, and whether
+ * charging is continuous or stepped (ECMA-211 §A.1.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,30 +38,50 @@ export
 class DurationCurrency {
     /**
      * @summary `dCurrency`.
+     * @description
+     *
+     * Currency identifier for the price of one time unit. Length 0 means the
+     * PISN default currency (ECMA-212 §6.3.1).
      * @public
      * @readonly
      */
     readonly dCurrency: Currency;
     /**
      * @summary `dAmount`.
+     * @description
+     *
+     * Price of one time unit, as an integer and a multiplier (ECMA-211
+     * §A.1.3.1).
      * @public
      * @readonly
      */
     readonly dAmount: Amount;
     /**
      * @summary `dChargingType`.
+     * @description
+     *
+     * Step function charges at the start of each time unit, including a partial
+     * unit. Continuous charging accrues evenly (ECMA-211 §A.1.3.1).
      * @public
      * @readonly
      */
     readonly dChargingType: ChargingType;
     /**
      * @summary `dTime`.
+     * @description
+     *
+     * Length of the rated time unit: an integer count of scale units (ECMA-211
+     * §A.1.3.1).
      * @public
      * @readonly
      */
     readonly dTime: Time;
     /**
      * @summary `dGranularity`.
+     * @description
+     *
+     * Time unit the PISN uses when calculating the charge. Include it only when
+     * the granularity is known (ECMA-211 table 2 note 2).
      * @public
      * @readonly
      */

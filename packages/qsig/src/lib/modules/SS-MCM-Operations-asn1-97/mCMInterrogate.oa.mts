@@ -11,7 +11,31 @@ import { unspecified } from "../SS-MCM-Operations-asn1-97/unspecified.oa.mjs";
 /**
  * @summary mCMInterrogate
  * @description
- * 
+ *
+ * Read the monitoring configuration (ECMA-347 §6.5.2.1.1).
+ * The Served User PINX sends this from MCM-SU-idle for one
+ * or more Message Types, starts timer T2 (at least 10 s),
+ * and waits in MCM-SU-wait. Local code 117.
+ *
+ * The Message Centre PINX returns, for each requested
+ * Message Type, whether complete or compressed information
+ * is provided for new messages, retrieved messages, or both,
+ * and stays in MCM-MC-idle (§6.5.1.1.1).
+ *
+ * Errors: `userNotSubscribed`, `invalidServedUserNr`,
+ * `basicServiceNotProvided`, `mCMModeNotProvided`,
+ * `unspecified`. An invalid request is a return error; the
+ * code is not stated (§6.5.1.2.1).
+ *
+ * On a `mIDMailboxAuth` return error or reject, this invoke
+ * shall not be sent (§6.8.40). §7.8.40 spells this operation
+ * `mCInterrogate`.
+ *
+ * NFE destination `endPINX`. Interpretation APDU omitted or
+ * `rejectAnyUnrecognisedInvokePdu` (§6.3.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

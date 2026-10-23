@@ -5,7 +5,15 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary unspecified
  * @description
- * 
+ *
+ * ROSE local 1008. The parameter is one `Extension` from `CTExtSet`.
+ * Allowed on `callTransferIdentify`, `callTransferInitiate`, and
+ * `callTransferSetup`. ECMA-178 §6.3.1 does not define when this error
+ * is selected instead of another listed error. It also does not define
+ * the parameter: `CTExtSet` is an ellipsis.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-178/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

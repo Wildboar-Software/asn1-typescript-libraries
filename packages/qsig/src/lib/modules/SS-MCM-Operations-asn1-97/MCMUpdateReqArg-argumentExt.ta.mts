@@ -9,7 +9,14 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary MCMUpdateReqArg_argumentExt
  * @description
- * 
+ *
+ * Optional manufacturer extension on `mCMUpdateReq`
+ * (ECMA-347 §6.3.1). One extension, or several.
+ * `MCMExtSet` defines none. §6.5.2.1.5 does not mention
+ * this component.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

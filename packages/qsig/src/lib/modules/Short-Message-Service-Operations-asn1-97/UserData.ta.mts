@@ -14,7 +14,13 @@ import { ShortMessageText, _decode_ShortMessageText, _encode_ShortMessageText } 
 /**
  * @summary UserData
  * @description
- * 
+ *
+ * Headers, class, compression flag, and text of a Short Message (ECMA-325
+ * §E.1.3). On a result or error, the responding side may insert extra headers
+ * after a `dataHeaderSourceIndicator`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,24 +38,51 @@ export
 class UserData {
     /**
      * @summary `userDataHeader`.
+     * @description
+     *
+     * Present when the Short Message carries one or more special headers
+     * (ECMA-325 §E.1.3.1). In GSM, headers plus text fit in 140 octets. A PISN
+     * ASN.1 encoding does not guarantee that, and interworking behaviour for an
+     * over-long encoding is outside this standard.
      * @public
      * @readonly
      */
     readonly userDataHeader: OPTIONAL<UserDataHeader>;
     /**
      * @summary `class_`.
+     * @description
+     *
+     * How the receiver displays, stores, and acknowledges the Short Message.
+     * The ASN.1 name is `class` (ECMA-325 §E.1.3.2). Integer 0..3.
+     *
+     * - 0: display immediately, return an `smsDeliver` result even when no
+     *   memory is available, and do not store it automatically. If it cannot be
+     *   displayed, treat the Short Message as having no class.
+     * - 1: return the result once the Short Message has reached the Receiving
+     *   User PINX or Message Centre and can be stored.
+     * - 2: transfer the Short Message into the SIM SMS data field before
+     *   returning the result.
+     * - 3: GSM-specific handling; treat as 1.
      * @public
      * @readonly
      */
     readonly class_: OPTIONAL<INTEGER>;
     /**
      * @summary `compressed`.
+     * @description
+     *
+     * Default FALSE. TRUE means the text is compressed with the GSM 03.42
+     * algorithm (ECMA-325 §E.1.3.3). Required to be TRUE when the text type is
+     * `compressedCoded` (§E.1.3.4.4).
      * @public
      * @readonly
      */
     readonly compressed: OPTIONAL<BOOLEAN>;
     /**
      * @summary `shortMessageText`.
+     * @description
+     *
+     * The text and its coding (ECMA-325 §E.1.3.4).
      * @public
      * @readonly
      */

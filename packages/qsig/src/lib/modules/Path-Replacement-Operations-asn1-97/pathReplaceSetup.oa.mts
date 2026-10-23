@@ -12,7 +12,26 @@ import { unspecified } from "../Path-Replacement-Operations-asn1-97/unspecified.
 /**
  * @summary pathReplaceSetup
  * @description
- * 
+ *
+ * Cooperating PINX, or a Transit PINX that is branching off a retained
+ * path, to the Requesting PINX. Carried in the SETUP of the new
+ * connection. The result is returned in CONNECT when that connection is
+ * accepted; the old B-channel is then released. ROSE local 5.
+ * Interpretation APDU: `clearCallIfAnyInvokePduNotRecognised`. NFE
+ * `destinationEntity` is `endPINX`.
+ * If `callIdentity` plus Called party number match no entity in
+ * PR-Req-Initiated, the Requesting PINX clears the new connection with
+ * cause 1, or with cause 29 and either `invalidRerouteingNumber` or
+ * `unrecognizedCallIdentity`. If the connection is associated but
+ * unsuitable, it clears with cause 29 and an appropriate error and
+ * stays in PR-Req-Initiated.
+ * If SS-CT has been invoked since `pathReplacePropose` was sent, the
+ * Requesting PINX returns `temporarilyUnavailable` so switch-over does
+ * not strand the transfer signalling. ECMA-176 §6.3.2.1, §6.5.1.3,
+ * §6.5.1.4, §6.5.2.1, §6.6.3.2, §6.9.5.1.1.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-176/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

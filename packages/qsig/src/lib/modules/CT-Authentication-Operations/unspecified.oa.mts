@@ -9,7 +9,13 @@ import type { ERROR } from "@wildboar/rose";
 /**
  * @summary unspecified
  * @description
- * 
+ *
+ * Local error code 1008. The parameter is a manufacturer-specific extension
+ * (ECMA-243 §6.3.1). The authentication operations list this error. §6.3.1 does
+ * not state a condition for returning it.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-243/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

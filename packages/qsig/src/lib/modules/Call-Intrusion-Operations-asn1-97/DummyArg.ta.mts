@@ -10,7 +10,19 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary DummyArg
  * @description
- * 
+ *
+ * Argument of the SS-CI operations that carry no Call Intrusion
+ * parameter (ECMA-203 §6.3.1). §6.6 does not say which alternative
+ * is sent.
+ *
+ * - `null`: no manufacturer-specific information.
+ * - `extension`: one extension from `CIExtSet`.
+ * - `sequenceOfExtn`: more than one extension from `CIExtSet`.
+ *
+ * `CIExtSet` is empty in the standard.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-203/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

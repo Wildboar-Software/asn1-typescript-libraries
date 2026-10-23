@@ -14,7 +14,12 @@ import { CalculationParam, _decode_CalculationParam, _encode_CalculationParam } 
 /**
  * @summary CalcCtanInfo
  * @description
- * 
+ *
+ * Response the PISN sends to the CTM user for SS-CTAN, with an optional
+ * calculation parameter (ECMA-243 §7.5.1.1, §7.5.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-243/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +35,20 @@ export
 class CalcCtanInfo {
     /**
      * @summary `authResponse`.
+     * @description
+     *
+     * Response value from the network (ECMA-243 §6.3.1). The Visitor PINX sends
+     * it to the CTM user to accept the authentication request (§7.5.1.1).
      * @public
      * @readonly
      */
     readonly authResponse: AuthResponse;
     /**
      * @summary `calculationParam`.
+     * @description
+     *
+     * Included when the algorithm in use requires it (ECMA-243 §6.3.1). The
+     * calculation is outside ECMA-243 (§1).
      * @public
      * @readonly
      */

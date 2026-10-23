@@ -5,7 +5,15 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary unspecified
  * @description
- * 
+ *
+ * Unspecified diversion error. ROSE local code 1008. The parameter is a
+ * manufacturer-specific extension from `DiversionExtensionSet`; the
+ * standardized set is empty (ECMA-174 §6.3.1). Allowed on `activateDiversionQ`,
+ * `deactivateDiversionQ`, `interrogateDiversionQ`, `checkRestriction`, and
+ * `callRerouteing`. §6.5 does not state when to return it.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

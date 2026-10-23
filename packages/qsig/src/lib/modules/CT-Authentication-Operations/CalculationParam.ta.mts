@@ -9,7 +9,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CalculationParam
  * @description
- * 
+ *
+ * Parameter used when calculating the authentication session key from the real
+ * authentication key. It may be transferred to the CTM user during both SS-CTAT
+ * and SS-CTAN (ECMA-243 §6.3.1). ECMA-243 does not define that calculation
+ * (§1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-243/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -5,7 +5,18 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary smsCommandError
  * @description
- * 
+ *
+ * Rejection of `smsCommand` (ECMA-325 §6.5.1.2.2, §6.5.3.2.2, Annex E.12).
+ * ROSE local CODE 1029. The Service Centre returns it to the Sending User PINX
+ * or Sending User Message Centre.
+ *
+ * When no stored Short Message matches the command, the cause is
+ * `commandCannotBeActioned` (§6.5.3.2.2). Table E.4 spells that value
+ * `commandCanNotBeActioned` (160). Other Table E.4 command causes are
+ * `commandUnsupported` (161) and `unspecifiedCommandError` (175).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

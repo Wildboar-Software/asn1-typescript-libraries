@@ -9,7 +9,13 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary SDExtension
  * @description
- * 
+ *
+ * One manufacturer-specific extension, or a sequence of them, from `SDExtSet`
+ * (ECMA-311 §6.3.1). No member is defined, and the standard does not say when
+ * to send one extension rather than several.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-311/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -8,7 +8,17 @@ import { AddressHeader, _decode_AddressHeader, _encode_AddressHeader } from "../
 /**
  * @summary CompleteInfo
  * @description
- * 
+ *
+ * Complete information in an update: one `AddressHeader`
+ * per message (ECMA-347 §6.3.1, §6.5.1.1.4). §6.5.1.1.4
+ * does not say whether every stored message is included.
+ *
+ * The complete-mode rules for `mCMNewMsg` (§6.5.1.1.2) are
+ * a single originator plus an optional count. They are not
+ * this list.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

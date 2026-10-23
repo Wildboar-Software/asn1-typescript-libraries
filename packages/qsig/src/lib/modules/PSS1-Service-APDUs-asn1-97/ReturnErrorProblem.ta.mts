@@ -7,7 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ReturnErrorProblem
  * @description
- * 
+ *
+ * Problem code for a return-error APDU, carried in a Reject APDU (ECMA-165
+ * §11.3.3.4, Annex G).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,14 +30,20 @@ type ReturnErrorProblem = INTEGER;
 
 /**
  * @summary ReturnErrorProblem_unrecognisedInvocation
+ * @description
+ *
+ * No operation with this invoke identifier is in progress (ECMA-165 Annex G,
+ * §11.3.3.4).
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
 const ReturnErrorProblem_unrecognisedInvocation: ReturnErrorProblem = 0; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary ReturnErrorProblem_unrecognisedInvocation
+ * @summary unrecognisedInvocation
+ * @description Alias of {@link ReturnErrorProblem_unrecognisedInvocation}.
  * @constant
  * @type {number}
  */
@@ -41,14 +52,19 @@ const unrecognisedInvocation: ReturnErrorProblem = ReturnErrorProblem_unrecognis
 
 /**
  * @summary ReturnErrorProblem_errorResponseUnexpected
+ * @description
+ *
+ * The invoked operation does not report failure (ECMA-165 Annex G, §11.3.3.4).
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
 const ReturnErrorProblem_errorResponseUnexpected: ReturnErrorProblem = 1; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary ReturnErrorProblem_errorResponseUnexpected
+ * @summary errorResponseUnexpected
+ * @description Alias of {@link ReturnErrorProblem_errorResponseUnexpected}.
  * @constant
  * @type {number}
  */
@@ -57,14 +73,20 @@ const errorResponseUnexpected: ReturnErrorProblem = ReturnErrorProblem_errorResp
 
 /**
  * @summary ReturnErrorProblem_unrecognisedError
+ * @description
+ *
+ * The reported error is not one expected (ECMA-165 Annex G). Table 34 raises
+ * this when the error code is outside the Errors set.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
 const ReturnErrorProblem_unrecognisedError: ReturnErrorProblem = 2; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary ReturnErrorProblem_unrecognisedError
+ * @summary unrecognisedError
+ * @description Alias of {@link ReturnErrorProblem_unrecognisedError}.
  * @constant
  * @type {number}
  */
@@ -73,14 +95,20 @@ const unrecognisedError: ReturnErrorProblem = ReturnErrorProblem_unrecognisedErr
 
 /**
  * @summary ReturnErrorProblem_unexpectedError
+ * @description
+ *
+ * The reported error is not one that the invoked operation may report (ECMA-165
+ * Annex G). Table 34 requires the code to be in that operation's `&Errors`.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
 const ReturnErrorProblem_unexpectedError: ReturnErrorProblem = 3; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary ReturnErrorProblem_unexpectedError
+ * @summary unexpectedError
+ * @description Alias of {@link ReturnErrorProblem_unexpectedError}.
  * @constant
  * @type {number}
  */
@@ -89,14 +117,20 @@ const unexpectedError: ReturnErrorProblem = ReturnErrorProblem_unexpectedError; 
 
 /**
  * @summary ReturnErrorProblem_mistypedParameter
+ * @description
+ *
+ * The error parameter is not of the expected type (ECMA-165 Annex G,
+ * §11.3.3.4).
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
 const ReturnErrorProblem_mistypedParameter: ReturnErrorProblem = 4; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary ReturnErrorProblem_mistypedParameter
+ * @summary mistypedParameter
+ * @description Alias of {@link ReturnErrorProblem_mistypedParameter}.
  * @constant
  * @type {number}
  */

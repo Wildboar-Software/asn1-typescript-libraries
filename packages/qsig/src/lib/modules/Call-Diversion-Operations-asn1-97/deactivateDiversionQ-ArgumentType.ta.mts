@@ -13,7 +13,13 @@ import { _decode_deactivateDiversionQ_ArgumentType_extension, _encode_deactivate
 /**
  * @summary deactivateDiversionQ_ArgumentType
  * @description
- * 
+ *
+ * Argument of `deactivateDiversionQ`, from the Deactivating PINX to the Served
+ * User PINX (ECMA-174 §6.3.1, §6.5.7.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-173/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,30 +41,49 @@ export
 class deactivateDiversionQ_ArgumentType {
     /**
      * @summary `procedure`.
+     * @description
+     *
+     * CFU, CFB, or CFNR to deactivate (ECMA-174 §6.5.3.1.2).
      * @public
      * @readonly
      */
     readonly procedure: Procedure;
     /**
      * @summary `basicService`.
+     * @description
+     *
+     * Basic service whose forwarding is to be deactivated, or all basic
+     * services. The Served User PINX checks that it is consistent for the
+     * served user (ECMA-174 §6.5.3.1.2; ECMA-173 §6.2.2.1.1).
      * @public
      * @readonly
      */
     readonly basicService: BasicService;
     /**
      * @summary `servedUserNr`.
+     * @description
+     *
+     * PISN number of the served user (ECMA-174 §6.5.3.1.2).
      * @public
      * @readonly
      */
     readonly servedUserNr: PartyNumber;
     /**
      * @summary `deactivatingUserNr`.
+     * @description
+     *
+     * Number of the user requesting deactivation. The Served User PINX may use
+     * it to decide whether deactivation is allowed (ECMA-174 §6.5.3.1.2).
      * @public
      * @readonly
      */
     readonly deactivatingUserNr: PartyNumber;
     /**
      * @summary `extension`.
+     * @description
+     *
+     * Manufacturer-specific extension from `DiversionExtensionSet`. The
+     * standardized set is empty (ECMA-174 §6.3.1).
      * @public
      * @readonly
      */

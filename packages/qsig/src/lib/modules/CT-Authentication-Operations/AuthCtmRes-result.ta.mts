@@ -6,7 +6,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AuthCtmRes_result
  * @description
- * 
+ *
+ * Comparison of the response received from the CTM user with the expected
+ * response (ECMA-243 §6.5.5.1). If the CTM user does not answer, the Visitor
+ * PINX returns `temporarilyUnavailable` (§6.5.5.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-243/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -24,7 +30,13 @@ enum _enum_for_AuthCtmRes_result {
 /**
  * @summary AuthCtmRes_result
  * @description
- * 
+ *
+ * Comparison of the response received from the CTM user with the expected
+ * response (ECMA-243 §6.5.5.1). If the CTM user does not answer, the Visitor
+ * PINX returns `temporarilyUnavailable` (§6.5.5.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-243/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,7 +51,13 @@ type AuthCtmRes_result = _enum_for_AuthCtmRes_result;
 /**
  * @summary AuthCtmRes_result
  * @description
- * 
+ *
+ * Comparison of the response received from the CTM user with the expected
+ * response (ECMA-243 §6.5.5.1). If the CTM user does not answer, the Visitor
+ * PINX returns `temporarilyUnavailable` (§6.5.5.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-243/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -53,6 +71,9 @@ const AuthCtmRes_result = _enum_for_AuthCtmRes_result;
 
 /**
  * @summary AuthCtmRes_result_auth_res_correct
+ * @description
+ * CTM user response matched the expected response. ECMA-243 §6.5.5.1.
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-243/
  * @constant
  * @type {number}
  */
@@ -61,6 +82,7 @@ const AuthCtmRes_result_auth_res_correct: AuthCtmRes_result = AuthCtmRes_result.
 
 /**
  * @summary auth_res_correct
+ * @description Alias of {@link AuthCtmRes_result_auth_res_correct}.
  * @constant
  * @type {number}
  */
@@ -69,6 +91,9 @@ const auth_res_correct: AuthCtmRes_result = AuthCtmRes_result.auth_res_correct; 
 
 /**
  * @summary AuthCtmRes_result_auth_res_incorrect
+ * @description
+ * CTM user response differed from the expected response. ECMA-243 §6.5.5.1.
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-243/
  * @constant
  * @type {number}
  */
@@ -77,6 +102,7 @@ const AuthCtmRes_result_auth_res_incorrect: AuthCtmRes_result = AuthCtmRes_resul
 
 /**
  * @summary auth_res_incorrect
+ * @description Alias of {@link AuthCtmRes_result_auth_res_incorrect}.
  * @constant
  * @type {number}
  */

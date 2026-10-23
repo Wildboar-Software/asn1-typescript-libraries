@@ -13,7 +13,14 @@ import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addres
 /**
  * @summary MsgCentreId
  * @description
- * 
+ *
+ * Identity of a Message Centre (ECMA-347 §6.3.1). An
+ * integer 0..65535, a party number, or a numeric string of
+ * 1 to 10 digits. §6.3.1 does not say which alternative
+ * to send.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

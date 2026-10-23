@@ -11,7 +11,14 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary DummyExtension
  * @description
- * 
+ *
+ * Manufacturer-specific extension on the authentication APDUs (ECMA-243
+ * §6.3.1). `extension` carries one extension; `sequOfExtn` carries several. The
+ * module defines no extensions. Table 1 imports an unparameterized `Extension`;
+ * the fences bind it to `CTAuthExtSet`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-243/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -11,7 +11,14 @@ import { CTSetupArg_argumentExtension, _decode_CTSetupArg_argumentExtension, _en
 /**
  * @summary CTSetupArg
  * @description
- * 
+ *
+ * Argument of `callTransferSetup`, carried in the SETUP of the new
+ * connection so the Secondary PINX can bind that connection to the
+ * secondary call. ECMA-178 §6.5.2.3, §6.5.3.3; ECMA-177 §8.2.1.5.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-178/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-177/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +37,21 @@ export
 class CTSetupArg {
     /**
      * @summary `callIdentity`.
+     * @description
+     *
+     * Same value as in `callTransferInitiate`. The Secondary PINX
+     * associates the new connection with the call whose SS-CT entity
+     * is in CT-Await-Setup. ECMA-178 §6.5.2.3, §6.5.3.3.
      * @public
      * @readonly
      */
     readonly callIdentity: CallIdentity;
     /**
      * @summary `argumentExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-178 §6.3.1 defines no
+     * member of `CTExtSet`.
      * @public
      * @readonly
      */

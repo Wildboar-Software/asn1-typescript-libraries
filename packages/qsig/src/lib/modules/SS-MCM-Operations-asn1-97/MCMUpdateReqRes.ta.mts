@@ -9,7 +9,15 @@ import { MCMUpdateReqResElt, _decode_MCMUpdateReqResElt, _encode_MCMUpdateReqRes
 /**
  * @summary MCMUpdateReqRes
  * @description
- * 
+ *
+ * Result of `mCMUpdateReq` (ECMA-347 §6.5.1.1.5). One to
+ * ten elements describing New Messages of the requested
+ * Message Type. §6.3.1 does not say why the size stops at
+ * 10. After this result the Message Centre PINX starts the
+ * update procedure (§6.5.1.1.4).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

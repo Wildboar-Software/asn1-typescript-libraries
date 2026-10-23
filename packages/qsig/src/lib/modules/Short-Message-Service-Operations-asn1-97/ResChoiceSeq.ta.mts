@@ -11,7 +11,12 @@ import { UserData, _decode_UserData, _encode_UserData } from "../Short-Message-S
 /**
  * @summary ResChoiceSeq
  * @description
- * 
+ *
+ * Both `protocolIdentifier` and `userData`, used when an `smsDeliver` or
+ * `smsStatusReport` result carries both (ECMA-325 §E.5, §E.8).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +32,20 @@ export
 class ResChoiceSeq {
     /**
      * @summary `protocolIdentifier`.
+     * @description
+     *
+     * Protocol identifier returned with the result (ECMA-325 §E.5.1, §E.8.1,
+     * §E.1.2.1).
      * @public
      * @readonly
      */
     readonly protocolIdentifier: ProtocolIdentifier;
     /**
      * @summary `userData`.
+     * @description
+     *
+     * User data returned with the result. The responding entity may add headers
+     * after a `dataHeaderSourceIndicator` (ECMA-325 §E.5.2, §E.8.2).
      * @public
      * @readonly
      */

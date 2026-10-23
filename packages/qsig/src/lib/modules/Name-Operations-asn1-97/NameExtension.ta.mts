@@ -9,7 +9,13 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary NameExtension
  * @description
- * 
+ *
+ * Manufacturer-specific extension on `NameArg`. Either one extension or a
+ * sequence of them, from `NameExtensionSet`. The standardized set is empty
+ * (ECMA-164 §6.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-164/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

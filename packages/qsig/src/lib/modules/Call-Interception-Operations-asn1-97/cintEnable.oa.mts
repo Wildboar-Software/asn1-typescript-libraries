@@ -5,7 +5,16 @@ import { CintExtension, _decode_CintExtension, _encode_CintExtension } from "../
 /**
  * @summary cintEnable
  * @description
- * 
+ *
+ * Cancel a previous `cintDisable` and allow interception delayed
+ * again (ECMA-221 §6.3.1, §6.6.1, §6.6.3). No result. Sent in
+ * FACILITY or ALERTING. The argument carries no service parameters.
+ * ROSE local CODE 70. NFE `destinationEntity` is `endPINX`.
+ * Interpretation APDU is `discardAnyUnrecognisedInvokePdu`
+ * (§6.3.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-221/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

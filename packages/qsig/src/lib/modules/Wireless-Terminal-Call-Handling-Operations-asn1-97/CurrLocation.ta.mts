@@ -12,7 +12,13 @@ import { WtmiExtension, _decode_WtmiExtension, _encode_WtmiExtension } from "../
 /**
  * @summary CurrLocation
  * @description
- * 
+ *
+ * Current location of the WTMI user for the requested basic service (ECMA-304
+ * §6.5.3.1). The WTMI-detect PINX copies `visitPINX` and `wtmIdentity` into
+ * `wtmiDivert`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-304/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,18 +39,31 @@ export
 class CurrLocation {
     /**
      * @summary `visitPINX`.
+     * @description
+     *
+     * PISN number of the Visitor PINX. Always a complete number (ECMA-304
+     * §6.3.1, §6.5.3.1).
      * @public
      * @readonly
      */
     readonly visitPINX: PartyNumber;
     /**
      * @summary `wtmIdentity`.
+     * @description
+     *
+     * PISN number of the WTMI user, an alternative identifier, or both
+     * (ECMA-304 §6.5.3.1). A PISN number here is complete even when the enquiry
+     * number was not.
      * @public
      * @readonly
      */
     readonly wtmIdentity: WtmIdentity;
     /**
      * @summary `argExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-304 §6.3.1 defines no members of
+     * `WTMCHExtSet`.
      * @public
      * @readonly
      */

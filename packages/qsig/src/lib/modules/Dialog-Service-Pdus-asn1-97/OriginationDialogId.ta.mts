@@ -10,7 +10,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary OriginationDialogId
  * @description
- * 
+ *
+ * Dialogue identifier chosen by the PINX that sends it, sufficient to
+ * distinguish that PINX's dialogues (ECMA-165 §8.4.1, §8.4.2). Table 33 limits
+ * it to at most 8 octets and does not forbid an empty value. The peer later
+ * returns this value as `destinationDialogId`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

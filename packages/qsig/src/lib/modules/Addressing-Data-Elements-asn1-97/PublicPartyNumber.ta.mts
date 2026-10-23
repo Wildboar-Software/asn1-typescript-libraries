@@ -11,7 +11,12 @@ import { NumberDigits, _decode_NumberDigits, _encode_NumberDigits } from "../Add
 /**
  * @summary PublicPartyNumber
  * @description
- * 
+ *
+ * A number in the public ISDN numbering plan, ITU-T E.163 and E.164 (ECMA-165
+ * Annex B Table B.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +32,20 @@ export
 class PublicPartyNumber {
     /**
      * @summary `publicTypeOfNumber`.
+     * @description
+     *
+     * Type of number within the public plan (ECMA-165 Annex B Table B.1).
+     * ECMA-155 §7.2.1 Table 1 aligns these values with E.164.
      * @public
      * @readonly
      */
     readonly publicTypeOfNumber: PublicTypeOfNumber;
     /**
      * @summary `publicNumberDigits`.
+     * @description
+     *
+     * Digits of the public number. Table B.1 limits the digit string to between
+     * 1 and 20 characters.
      * @public
      * @readonly
      */

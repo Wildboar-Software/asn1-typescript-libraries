@@ -12,7 +12,14 @@ import { MCRExtensions, _decode_MCRExtensions, _encode_MCRExtensions } from "../
 /**
  * @summary MCInformArg
  * @description
- * 
+ *
+ * Argument of `mCInform` (ECMA-344 §6.3.1). `requestingAddress`,
+ * `cooperatingAddress`, and `correlation` are copied from `mCRequest`
+ * (§6.5.2.1.2). The Destination PINX may present them to the Destination User
+ * (§6.5.3.1.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-344/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,24 +38,39 @@ export
 class MCInformArg {
     /**
      * @summary `requestingAddress`.
+     * @description
+     *
+     * Requesting User address copied from `mCRequest`, when that element was
+     * present (ECMA-344 §6.5.2.1.2).
      * @public
      * @readonly
      */
     readonly requestingAddress: OPTIONAL<PresentedAddressUnscreened>;
     /**
      * @summary `cooperatingAddress`.
+     * @description
+     *
+     * Co-operating User address copied from `mCRequest`, when that element was
+     * present (ECMA-344 §6.5.2.1.2).
      * @public
      * @readonly
      */
     readonly cooperatingAddress: OPTIONAL<PresentedAddressUnscreened>;
     /**
      * @summary `correlation`.
+     * @description
+     *
+     * Correlation copied from `mCRequest` (ECMA-344 §6.5.2.1.2).
      * @public
      * @readonly
      */
     readonly correlation: Correlation;
     /**
      * @summary `extensions`.
+     * @description
+     *
+     * Manufacturer-specific extension. This edition defines none in
+     * `MakeCallRequestExtension` (ECMA-344 §6.3.1).
      * @public
      * @readonly
      */

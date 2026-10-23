@@ -8,7 +8,13 @@ import { MailboxFullPar, _decode_MailboxFullPar, _encode_MailboxFullPar } from "
 /**
  * @summary MailboxFullFor
  * @description
- * 
+ *
+ * Message Types in a `mCMailboxFull` invoke (ECMA-347
+ * §6.5.1.1.6). One entry per Message Type at or above its
+ * threshold.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

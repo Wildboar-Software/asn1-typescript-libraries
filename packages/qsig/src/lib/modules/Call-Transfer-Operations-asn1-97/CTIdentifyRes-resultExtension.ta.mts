@@ -9,7 +9,12 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary CTIdentifyRes_resultExtension
  * @description
- * 
+ *
+ * Manufacturer-specific extension on the `callTransferIdentify`
+ * result. ECMA-178 §6.3.1 defines no member of `CTExtSet`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-178/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

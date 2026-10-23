@@ -13,7 +13,13 @@ import { cfbOverride } from "../Call-Intrusion-Operations-asn1-97/cfbOverride.oa
 /**
  * @summary Call_Intrusion_Operations
  * @description
- * 
+ *
+ * Operations of Call-Intrusion-Operations-asn1-97 (ECMA-203
+ * §6.3.1): path retention, intrusion, CIPL enquiry, isolation,
+ * forced release, wait on busy, completion, and CFB override.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-203/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

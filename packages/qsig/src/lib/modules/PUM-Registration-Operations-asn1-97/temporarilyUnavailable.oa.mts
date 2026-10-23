@@ -4,7 +4,14 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary temporarilyUnavailable
  * @description
- * 
+ *
+ * ROSE local CODE 1000. No parameter (ECMA-282 §6.3.1). The previous Visitor
+ * PINX returns this on `pumDelReg` when the VDB is temporarily unavailable
+ * (§6.5.5.2, §6.6.1.2). A Visitor PINX also returns it to a Remote PINX when
+ * timer T1 expires during remote registration (§6.5.2.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-282/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

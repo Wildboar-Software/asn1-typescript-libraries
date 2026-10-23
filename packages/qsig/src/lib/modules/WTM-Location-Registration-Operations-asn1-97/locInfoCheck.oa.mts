@@ -8,7 +8,21 @@ import { unspecified } from "../WTM-Location-Registration-Operations-asn1-97/uns
 /**
  * @summary locInfoCheck
  * @description
- * 
+ *
+ * Check stored location data (ANF-WTINFO, ECMA-302 §7.6). Either direction:
+ * Visitor PINX to Home PINX, or Home PINX to Visitor PINX. ROSE local CODE 98.
+ * The receiver compares `wtmUserId` with the HDB or the VDB and returns
+ * `CheckResult`. It returns `notAvailable` when that user is not in the
+ * database being checked (§7.6.1.2, §7.6.2.2). Timer T6, at least 15 s, runs at
+ * the invoker in VisitWaitIC or HomeWaitIC (§7.10.2). `unspecified` is also
+ * listed; clause 7 is silent on when to return it. The invoker may act on the
+ * result; §7.6 is silent on what either `CheckResult` value requires. On a
+ * return error, reject, or T6 expiry, §7.6.2.2 tells the Home PINX to enter
+ * VisitIdle; the Home state defined for this operation is HomeWaitIC
+ * (§7.4.2.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-302/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

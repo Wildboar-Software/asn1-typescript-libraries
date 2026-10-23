@@ -11,7 +11,15 @@ import { CompressedInfo, _decode_CompressedInfo, _encode_CompressedInfo } from "
 /**
  * @summary MessageInfo
  * @description
- * 
+ *
+ * Messages of one status inside an update (ECMA-347 §6.3.1,
+ * §6.5.1.1.4). `completeInfo` is one address header per
+ * message. `compressedInfo` is a summary. `noMsgsOfMsgType`
+ * means none of that status are stored for this Message
+ * Type.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -14,7 +14,12 @@ import { SmsExtension, _decode_SmsExtension, _encode_SmsExtension } from "../Sho
 /**
  * @summary SmsDeliverArg
  * @description
- * 
+ *
+ * Argument of `smsDeliver` (ECMA-325 §6.5.3.1.1, Annex E.4). Built from the
+ * accepted `smsSubmit` plus Service Centre additions.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,36 +39,59 @@ export
 class SmsDeliverArg {
     /**
      * @summary `originatingAddress`.
+     * @description
+     *
+     * Party number of the Sending User, from `smsSubmit` (ECMA-325 §6.5.3.1.1).
      * @public
      * @readonly
      */
     readonly originatingAddress: PartyNumber;
     /**
      * @summary `destinationAddress`.
+     * @description
+     *
+     * Party number of the Receiving User (ECMA-325 §6.5.3.1.1).
+     * `moreMessagesToSend` refers to further messages waiting for this address.
      * @public
      * @readonly
      */
     readonly destinationAddress: PartyNumber;
     /**
      * @summary `originatingName`.
+     * @description
+     *
+     * Name of the Sending User, included when the Service Centre has it and
+     * name restriction allows it (ECMA-325 §6.5.3.1.1, §E.4.1).
      * @public
      * @readonly
      */
     readonly originatingName: OPTIONAL<Name>;
     /**
      * @summary `smDeliverParameter`.
+     * @description
+     *
+     * Protocol identifier, Service Centre time stamp, and the delivery flags
+     * the Service Centre adds (ECMA-325 §6.5.3.1.1, §E.4.2).
      * @public
      * @readonly
      */
     readonly smDeliverParameter: SmDeliverParameter;
     /**
      * @summary `userData`.
+     * @description
+     *
+     * User data from `smsSubmit`. The Service Centre may add headers after a
+     * `dataHeaderSourceIndicator` (ECMA-325 §E.4.3).
      * @public
      * @readonly
      */
     readonly userData: UserData;
     /**
      * @summary `smsExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. This edition defines none in `SmsExtSet`
+     * (ECMA-325 §6.3.1).
      * @public
      * @readonly
      */

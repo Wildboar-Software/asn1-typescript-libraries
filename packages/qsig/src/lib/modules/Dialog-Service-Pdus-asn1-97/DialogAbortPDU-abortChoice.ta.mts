@@ -10,7 +10,14 @@ import { UserAbortInformation, _decode_UserAbortInformation, _encode_UserAbortIn
 /**
  * @summary DialogAbortPDU_abortChoice
  * @description
- * 
+ *
+ * `p-AbortCause` is one of the provider causes named in Table 33.
+ * `userAbortInformation` is an Extension from the open set `DSE-Extension-Set`.
+ * ECMA-165 §8.4 does not say which alternative is sent, or what user
+ * information a PINX includes.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

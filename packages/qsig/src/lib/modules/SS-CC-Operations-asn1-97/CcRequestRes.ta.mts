@@ -11,7 +11,13 @@ import { CcExtension, _decode_CcExtension, _encode_CcExtension } from "../SS-CC-
 /**
  * @summary CcRequestRes
  * @description
- * 
+ *
+ * Result of `ccbsRequest` and `ccnrRequest` (ECMA-186 §6.3.1,
+ * §6.5.3.1.3). Sent in CONNECT when the signalling connection is
+ * retained, or in RELEASE with cause 16 when it is released.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-186/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,18 +34,36 @@ export
 class CcRequestRes {
     /**
      * @summary `no_path_reservation`.
+     * @description
+     *
+     * TRUE forces the non-reservation method. The Terminating PINX
+     * sets this when it cannot receive a path-reservation CC call
+     * (ECMA-186 §6.5.3.1.3). An Outgoing Gateway PINX sets it when the
+     * other network cannot reserve a path (§6.6.2, §6.7.2). If absent
+     * or FALSE, the Originating PINX may choose either method
+     * (§6.5.2.1.3).
      * @public
      * @readonly
      */
     readonly no_path_reservation: OPTIONAL<BOOLEAN>;
     /**
      * @summary `retain_service`.
+     * @description
+     *
+     * TRUE only when `can-retain-service` was TRUE and this PINX can
+     * use service retention. Otherwise omit it or send FALSE, and the
+     * service is cancelled if User B is busy again (ECMA-186
+     * §6.5.2.1.3, §6.5.3.1.3).
      * @public
      * @readonly
      */
     readonly retain_service: OPTIONAL<BOOLEAN>;
     /**
      * @summary `extension`.
+     * @description
+     *
+     * Manufacturer-specific data from `CCExtSet`. ECMA-186 §6.5.3.1.3
+     * does not include it in the result that must be sent.
      * @public
      * @readonly
      */

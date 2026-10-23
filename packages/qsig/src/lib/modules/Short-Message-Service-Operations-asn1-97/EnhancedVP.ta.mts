@@ -12,7 +12,15 @@ import { ValidityPeriodSemi, _decode_ValidityPeriodSemi, _encode_ValidityPeriodS
 /**
  * @summary EnhancedVP
  * @description
- * 
+ *
+ * Encoding of an enhanced Validity Period (ECMA-325 §E.1.2.2).
+ * `validityPeriodRel` uses Table E.2. `validityPeriodSec` is an integer
+ * 0..255; the text says "in seconds" and defines no other scaling, and it is
+ * silent on the meaning of 0. `validityPeriodSemi` is the three-octet
+ * semi-octet form.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

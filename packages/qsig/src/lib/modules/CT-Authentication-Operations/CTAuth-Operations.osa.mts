@@ -18,7 +18,25 @@ import { transferAuthParam } from "../CT-Authentication-Operations/transferAuthP
 /**
  * @summary CTAuth_Operations
  * @description
- * 
+ *
+ * Operations for authentication of a CTM user (SS-CTAT) and of the PISN
+ * (SS-CTAN). ECMA-243 2nd edition, September 1997, §6.3.1 table 1.
+ * `authCtmUser`, `getCtatParam`, and `ctatParamEnq` belong to SS-CTAT.
+ * `getCtanParam` and `ctanParamEnq` belong to SS-CTAN. `transferAuthParam` is
+ * the interaction with cordless terminal location registration (SS-CTLR). Both
+ * services use challenge and response. The algorithms are outside the scope of
+ * ECMA-243 (§1).
+ *
+ * Invoke APDUs travel in a Facility information element. The NFE
+ * `destinationEntity` is `endPINX`. The interpretation APDU is omitted or has
+ * value `rejectAnyUnrecognisedInvokePdu` (§6.3.2.1, §7.3.2.1).
+ *
+ * Table 1 is the X.208 module `CT-Authentication-Operations`. ECMA-243 2nd
+ * edition has no asn1-97 module. These fences use the X.680 operation class;
+ * the types and local codes are those of table 1.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-243/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -11,7 +11,13 @@ import { PRSetupArg_extension, _decode_PRSetupArg_extension, _encode_PRSetupArg_
 /**
  * @summary PRSetupArg
  * @description
- * 
+ *
+ * Argument of `pathReplaceSetup`, carried in the SETUP of the new
+ * connection so the Requesting PINX can bind that connection to the
+ * call. ECMA-176 §6.5.1.3, §6.5.2.1.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-176/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +36,22 @@ export
 class PRSetupArg {
     /**
      * @summary `callIdentity`.
+     * @description
+     *
+     * Same value as in `pathReplacePropose`, or as in `pathReplaceRetain`
+     * when a Transit PINX branches. With Called party number, it must
+     * match an entity in PR-Req-Initiated. ECMA-176 §6.5.1.3,
+     * §6.5.2.1, §6.6.3.2.1.
      * @public
      * @readonly
      */
     readonly callIdentity: CallIdentity;
     /**
      * @summary `extension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-176 §6.3.1 defines no
+     * member of `PRExtSet`.
      * @public
      * @readonly
      */

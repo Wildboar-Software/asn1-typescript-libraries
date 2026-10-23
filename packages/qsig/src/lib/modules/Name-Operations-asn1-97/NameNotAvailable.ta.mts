@@ -9,7 +9,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary NameNotAvailable
  * @description
- * 
+ *
+ * The name is not available (ECMA-164 §6.1). The receiving PINX delivers no
+ * name, only the indicator "name not available" (§7.4.2.1, §8.4.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-164/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

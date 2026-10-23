@@ -13,7 +13,14 @@ import { CcExtension, _decode_CcExtension, _encode_CcExtension } from "../SS-CC-
 /**
  * @summary CcOptionalArg_fullArg
  * @description
- * 
+ *
+ * Basic call information that identifies one CC Request (ECMA-186
+ * §6.5.2.1.10, §6.5.3.1.4). A match still succeeds when a
+ * subaddress or High or Low layer compatibility element is missing,
+ * provided every element that is present matches (§6.5.2.1.4).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-186/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,36 +44,62 @@ export
 class CcOptionalArg_fullArg {
     /**
      * @summary `numberA`.
+     * @description
+     *
+     * User A's number as stored for this CC Request (ECMA-186
+     * §6.5.3.1.4). Unlike `CcRequestArg`, this element has no
+     * presentation restriction. §6.5 does not say how an unavailable or
+     * restricted number from the request is represented here.
      * @public
      * @readonly
      */
     readonly numberA: PartyNumber;
     /**
      * @summary `numberB`.
+     * @description
+     *
+     * User B's number as stored for this CC Request (ECMA-186
+     * §6.5.3.1.4).
      * @public
      * @readonly
      */
     readonly numberB: PartyNumber;
     /**
      * @summary `service`.
+     * @description
+     *
+     * Bearer capability and, if stored, High layer compatibility and
+     * Low layer compatibility (ECMA-186 §6.5.3.1.4).
      * @public
      * @readonly
      */
     readonly service: PSS1InformationElement;
     /**
      * @summary `subaddrA`.
+     * @description
+     *
+     * User A's subaddress if it was stored; otherwise omitted
+     * (ECMA-186 §6.5.3.1.4).
      * @public
      * @readonly
      */
     readonly subaddrA: OPTIONAL<PartySubaddress>;
     /**
      * @summary `subaddrB`.
+     * @description
+     *
+     * User B's subaddress if it was stored; otherwise omitted
+     * (ECMA-186 §6.5.3.1.4).
      * @public
      * @readonly
      */
     readonly subaddrB: OPTIONAL<PartySubaddress>;
     /**
      * @summary `extension`.
+     * @description
+     *
+     * Optional manufacturer-specific data. ECMA-186 §6.5.3.1.4 does not
+     * include it in the information that must be sent.
      * @public
      * @readonly
      */

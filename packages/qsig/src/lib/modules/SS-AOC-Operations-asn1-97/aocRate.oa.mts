@@ -5,7 +5,18 @@ import { AocRateArg, _decode_AocRateArg, _encode_AocRateArg } from "../SS-AOC-Op
 /**
  * @summary aocRate
  * @description
- * 
+ *
+ * Charge-rate provision, local code 63, no return result. While charge rate
+ * provision is in operation, the Outgoing Gateway PINX sends this invoke with
+ * the `chargeRequest` return result, and again in a FACILITY message whenever
+ * the rate changes (ECMA-212 §6.6.2.1). The Originating PINX stays in
+ * Aoc-Orig-Active (§6.6.1.1.3). NFE destination is `endPINX` and the
+ * Interpretation APDU is `discardAnyUnrecognisedInvokePdu` (§6.3.2.1). This is
+ * the protocol form of AOC-S (ECMA-212 §6.1, ECMA-211 §6.1.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

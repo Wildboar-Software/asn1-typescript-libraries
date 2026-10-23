@@ -1,6 +1,14 @@
 /**
  * @module
- * @description ASN.1 module `Call-Transfer-Operations-asn1-97`.
+ * @description
+ *
+ * QSIG Call Transfer (SS-CT), ECMA-178 3rd edition (December 2001).
+ * User A transforms two calls into one call between User B and User C.
+ * Join is mandatory; rerouteing is optional and falls back to join.
+ * Service: ECMA-177 3rd edition (December 2001).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-178/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-177/
  */
 export * from "./CTActiveArg-argumentExtension.ta.mjs";
 export * from "./CTActiveArg.ta.mjs";

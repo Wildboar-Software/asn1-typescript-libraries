@@ -10,7 +10,14 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary cfnrDivertedLegFailed_ArgumentType
  * @description
- * 
+ *
+ * Argument of `cfnrDivertedLegFailed` (ECMA-174 §6.3.1). `null` carries no
+ * standardized information. `single` and `multiple` are manufacturer-specific
+ * extensions from `DiversionExtensionSet`, which is empty in this Standard. The
+ * procedures do not define any other argument contents (§6.5.4.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

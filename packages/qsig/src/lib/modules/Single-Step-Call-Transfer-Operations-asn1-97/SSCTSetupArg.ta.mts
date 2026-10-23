@@ -12,7 +12,15 @@ import { SSCTSetupArg_argumentExtension, _decode_SSCTSetupArg_argumentExtension,
 /**
  * @summary SSCTSetupArg
  * @description
- * 
+ *
+ * Argument of `ssctSetup`. Tells the Transferred-To PINX who User A
+ * is, when that address or name was present in `ssctInitiate`. User B
+ * is identified by the basic-call Calling party number and an optional
+ * `callingName` invoke, not by this argument. ECMA-300 §6.5.2.1,
+ * §6.5.4.1.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-300/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,18 +40,30 @@ export
 class SSCTSetupArg {
     /**
      * @summary `transferringAddress`.
+     * @description
+     *
+     * Address of User A, copied from `ssctInitiate` when that element
+     * was present. ECMA-300 §6.5.2.1.
      * @public
      * @readonly
      */
     readonly transferringAddress: OPTIONAL<PresentedAddressScreened>;
     /**
      * @summary `transferringName`.
+     * @description
+     *
+     * Name of User A, copied from `ssctInitiate` when that element was
+     * present. ECMA-300 §6.5.2.1.
      * @public
      * @readonly
      */
     readonly transferringName: OPTIONAL<Name>;
     /**
      * @summary `argumentExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-300 §6.3.1 defines no
+     * member of `SSCTExtSet`.
      * @public
      * @readonly
      */

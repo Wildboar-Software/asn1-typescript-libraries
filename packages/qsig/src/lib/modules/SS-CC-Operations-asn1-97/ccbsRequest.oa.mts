@@ -10,7 +10,28 @@ import { supplementaryServiceInteractionNotAllowed } from "../General-Error-List
 /**
  * @summary ccbsRequest
  * @description
- * 
+ *
+ * Invokes Completion of Calls to Busy Subscriber (ECMA-186
+ * §6.5.2.1.1). The Originating PINX sends it to the Terminating PINX
+ * in the SETUP of a call-independent signalling connection after
+ * User A requests SS-CCBS for a busy User B. Local code 40. Timer T1
+ * (10-30 s) guards the response (§6.10.1). On a result the
+ * Originating PINX starts service-duration timer T2, whose length is
+ * implementation-dependent, and waits for `ccExecPossible`.
+ *
+ * The Terminating PINX accepts by returning a result and monitoring
+ * User B (§6.5.3.1.1). The result is in CONNECT if the signalling
+ * connection is retained, or in RELEASE with cause 16 if it is
+ * released (§6.5.3.1.3). A request that cannot be accepted is
+ * rejected in that RELEASE with `longTermRejection` when the failure
+ * is persistent, or `shortTermRejection` when it is transient
+ * (§6.5.3.2.1).
+ *
+ * `unspecified` and `supplementaryServiceInteractionNotAllowed` are
+ * in the ERRORS set (§6.3.1). §6.5.3.2.1 does not name them.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-186/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

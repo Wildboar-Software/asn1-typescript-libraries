@@ -11,7 +11,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Concatenated8BitSMHeader
  * @description
- * 
+ *
+ * Segments a message that does not fit in one Short Message, using an 8-bit
+ * reference (ECMA-325 §E.1.3.1.2). The receiver ignores the whole header when
+ * the maximum is 0, or when the sequence number is 0 or greater than the
+ * maximum.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,18 +35,33 @@ export
 class Concatenated8BitSMHeader {
     /**
      * @summary `concatenated8BitSMReferenceNumber`.
+     * @description
+     *
+     * Identifies one concatenated Short Message and stays constant on every
+     * segment. §E.1.3.1.2 calls it a modulo-255 counter. The ASN.1 range is
+     * 0..255 (ECMA-325 §E.1.3.1.2).
      * @public
      * @readonly
      */
     readonly concatenated8BitSMReferenceNumber: INTEGER;
     /**
      * @summary `maximumNumberOf8BitSMInConcatenatedSM`.
+     * @description
+     *
+     * How many Short Messages make up the concatenated message. Starts at 1 and
+     * stays constant. Zero means the receiver ignores this whole header
+     * (ECMA-325 §E.1.3.1.2).
      * @public
      * @readonly
      */
     readonly maximumNumberOf8BitSMInConcatenatedSM: INTEGER;
     /**
      * @summary `sequenceNumberOf8BitSM`.
+     * @description
+     *
+     * This segment's position. Starts at 1 and increases by one. Zero, or a
+     * value above the maximum, means the receiver ignores this whole header
+     * (ECMA-325 §E.1.3.1.2).
      * @public
      * @readonly
      */

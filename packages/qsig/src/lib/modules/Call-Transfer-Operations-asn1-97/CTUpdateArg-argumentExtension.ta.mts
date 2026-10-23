@@ -9,7 +9,12 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary CTUpdateArg_argumentExtension
  * @description
- * 
+ *
+ * Manufacturer-specific extension on `callTransferUpdate`.
+ * ECMA-178 §6.3.1 defines no member of `CTExtSet`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-178/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

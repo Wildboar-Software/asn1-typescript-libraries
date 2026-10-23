@@ -11,7 +11,16 @@ import { PumIdentity_both, _decode_PumIdentity_both, _encode_PumIdentity_both } 
 /**
  * @summary PumIdentity
  * @description
- * 
+ *
+ * PISN number and/or alternative identifier of the PUM user (ECMA-284 §6.3.1,
+ * §4.2). `pisnNumber` alone, `alternativeId` alone, or `both`. In a
+ * `pumiEnquiry` result a PISN number is a complete number even when the enquiry
+ * number was not (§6.5.3.1). On `pumoCall`, `alternativeId` is how the
+ * Originating PINX identifies the user when the Calling party number does not
+ * carry the PUM number (§7.5.1.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-284/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

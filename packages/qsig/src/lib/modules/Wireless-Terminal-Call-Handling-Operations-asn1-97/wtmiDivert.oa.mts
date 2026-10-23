@@ -8,7 +8,19 @@ import { unspecified } from "../Wireless-Terminal-Call-Handling-Operations-asn1-
 /**
  * @summary wtmiDivert
  * @description
- * 
+ *
+ * ANF-WTMI request from the WTMI-detect PINX to the Rerouteing PINX, in a
+ * FACILITY message on the incoming call, after `currLocation` is received
+ * (ECMA-304 §6.5.2.1). Local code 55. If the Rerouteing PINX can proceed, it
+ * establishes a new call to the Visitor PINX and releases the leg toward the
+ * WTMI-detect PINX with a DISCONNECT carrying the return result (§6.5.1.1).
+ * Timer T2 at the WTMI-detect PINX, in state WTMI-Divert, shall be at least 15
+ * s (§6.9.2). If the Rerouteing PINX cannot proceed it returns `notAvailable`
+ * (§6.5.1.2). `unspecified` is listed in §6.3.1, which does not say when it is
+ * returned.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-304/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -12,7 +12,15 @@ import { DialogAbortPDU, _decode_DialogAbortPDU, _encode_DialogAbortPDU } from "
 /**
  * @summary DseAPDU
  * @description
- * 
+ *
+ * One dialogue PDU: begin, continue, end, or abort (ECMA-165 §6.6 Table 1,
+ * §8.4, §11.3.3.3). Sent when the network protocol profile is `dse`. Begin
+ * opens a dialogue and starts timer T_Originating_Dialogue at the initiator.
+ * Continue establishes or carries on the active dialogue. End terminates it.
+ * Abort abandons it. Except for abort, the PDU may carry ROSE or ACSE APDUs.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

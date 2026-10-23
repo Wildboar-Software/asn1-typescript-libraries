@@ -8,7 +8,16 @@ import { type NOTIFICATION } from "../Notification-class-asn1-97/NOTIFICATION.oc
 /**
  * @summary endOfIntrusion
  * @description
- * 
+ *
+ * Intrusion has stopped and the established call is restored
+ * (ECMA-203 §6.6.2.4.1, §6.6.2.6.1). Sent to the unwanted user in
+ * NOTIFY when wait on busy removes the calling user. Also sent on
+ * the established call if the intruding call clears during
+ * CI-Dest-Notify, CI-Dest-Notify-WOB, CI-Dest-Invoked, or
+ * CI-Dest-Isolated. Notification code 2007. The argument is NULL.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-203/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

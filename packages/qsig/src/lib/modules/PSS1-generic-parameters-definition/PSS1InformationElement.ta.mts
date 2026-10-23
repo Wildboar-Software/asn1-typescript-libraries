@@ -9,7 +9,18 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary PSS1InformationElement
  * @description
- * 
+ *
+ * X.208 edition (ECMA-165 Annex K Table K.11), object identifier
+ * `pss1-generic-parameters(6)`. One or more information elements encoded by the
+ * rules of ECMA-143 §14.5, carried in a ROSE invoke argument, return-result, or
+ * return-error parameter (ECMA-165 §11.3.3.4). The Facility information element
+ * shall not be embedded this way. Every information element for the same
+ * argument, result, or parameter is grouped in one value. Also the argument of
+ * `pss1IeNotification` (§11.3.4, Annex B §B.2). Annex K states that the encoded
+ * value is identical to the X.680 edition.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

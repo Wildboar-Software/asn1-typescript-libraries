@@ -11,7 +11,16 @@ import { mCMailboxFull } from "../SS-MCM-Operations-asn1-97/mCMailboxFull.oa.mjs
 /**
  * @summary MCM_Operations
  * @description
- * 
+ *
+ * Operations of SS-MCM (ECMA-347 §6.3.1). Each invoke is
+ * carried in a Facility information element on a
+ * call-independent signalling connection (§6.3.2, §6.5).
+ * The NFE destination entity is `endPINX`. The sender that
+ * opened the connection may clear it on a return result,
+ * return error, or reject, or may keep it (§6.5).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

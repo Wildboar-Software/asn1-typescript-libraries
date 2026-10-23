@@ -12,7 +12,14 @@ import { ResChoiceSeq, _decode_ResChoiceSeq, _encode_ResChoiceSeq } from "../Sho
 /**
  * @summary SmsDeliverResChoice
  * @description
- * 
+ *
+ * Payload of an `smsDeliver` result (ECMA-325 §E.5): neither element (`null`),
+ * only `protocolIdentifier`, only `userData`, or both (`resChoiceSeq`).
+ * `userData` is for the Receiving User PINX or Message Centre, which may add
+ * headers after a `dataHeaderSourceIndicator`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

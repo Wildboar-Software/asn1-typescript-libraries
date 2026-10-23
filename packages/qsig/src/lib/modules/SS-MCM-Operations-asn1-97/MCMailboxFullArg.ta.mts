@@ -12,7 +12,13 @@ import { MCMExtensions, _decode_MCMExtensions, _encode_MCMExtensions } from "../
 /**
  * @summary MCMailboxFullArg
  * @description
- * 
+ *
+ * Argument of `mCMailboxFull` (ECMA-347 §6.5.1.1.6).
+ * Message Types whose storage has reached a threshold,
+ * each with an optional percentage already used.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,18 +36,30 @@ export
 class MCMailboxFullArg {
     /**
      * @summary `partyInfo`.
+     * @description
+     *
+     * Served User address and Message Centre identity
+     * (§6.3.1). §6.5.1.1.6 does not describe this component.
      * @public
      * @readonly
      */
     readonly partyInfo: PartyInfo;
     /**
      * @summary `mailboxFullFor`.
+     * @description
+     *
+     * Message Types at or above the storage threshold.
+     * ECMA-347 §6.5.1.1.6.
      * @public
      * @readonly
      */
     readonly mailboxFullFor: MailboxFullFor;
     /**
      * @summary `extensions`.
+     * @description
+     *
+     * Manufacturer-specific extension. `MCMExtSet` defines none.
+     * The procedures do not mention this component. ECMA-347 §6.3.1.
      * @public
      * @readonly
      */

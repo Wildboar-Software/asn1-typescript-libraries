@@ -5,7 +5,20 @@ import { InformArg, _decode_InformArg, _encode_InformArg } from "../Private-User
 /**
  * @summary pumiInform
  * @description
- * 
+ *
+ * Identify the PUM user on the rerouted call (ECMA-284 §6.5.1.1, §6.5.4). The
+ * Rerouteing PINX places it in the SETUP sent to the Visitor PINX. ROSE local
+ * CODE 95. No result and no error
+ * (`RETURN RESULT FALSE`, `ALWAYS RESPONDS FALSE`).
+ * `pumIdentity` repeats the `pumiDivert` argument. The Visitor PINX
+ * may check the VDB and shall offer the call to the terminal selected by the
+ * Called party number, including this identity in the call request (§6.5.4.1).
+ * If the user is not in the VDB it may clear the call with cause #41
+ * (§6.5.4.2). A WTMI reroute that already carries this invoke forwards it with
+ * `wtmiInform` (§6.8.22.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-284/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

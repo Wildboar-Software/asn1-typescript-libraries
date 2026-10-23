@@ -11,7 +11,13 @@ import { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "
 /**
  * @summary transferAuthParam_ArgumentType
  * @description
- * 
+ *
+ * Argument of unconfirmed `transferAuthParam` (ECMA-306 §6.8.22). Sent from the
+ * Home PINX to the Visitor PINX with a `getRRCInf` result. The choice inside
+ * `wtatParamInfo` shall be `authKey` or `challLen`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-306/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +33,20 @@ export
 class transferAuthParam_ArgumentType {
     /**
      * @summary `wtatParamInfo`.
+     * @description
+     *
+     * Authentication information to store at the Visitor PINX (ECMA-306
+     * §6.8.22). The choice shall be `authKey` or `challLen`.
      * @public
      * @readonly
      */
     readonly wtatParamInfo: WtatParamInfo;
     /**
      * @summary `dummyExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-306 §6.3.1 defines no members of
+     * `WTMAuthExtSet`.
      * @public
      * @readonly
      */

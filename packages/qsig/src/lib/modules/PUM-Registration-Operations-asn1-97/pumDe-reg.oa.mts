@@ -14,7 +14,27 @@ import { pumUserNotRegistered } from "../PUM-Registration-Operations-asn1-97/pum
 /**
  * @summary pumDe_reg
  * @description
- * 
+ *
+ * De-register a PUM user (ECMA-282 §6.6). The Visitor PINX or a Remote PINX
+ * sends it to the Home PINX. It also ends a session when the Visitor PINX
+ * duration timer expires or the outgoing call limit is reached (§6.5.1.1,
+ * conditional de-registration). ROSE local CODE 91. The result is `DummyRes`.
+ * Timer T3, at least 15 s, runs in VisitDe-reg or RemoteDe-reg (§6.12.3). If
+ * `serviceOption` is absent the Home PINX assumes InCall (§6.6.2.1). OutCall
+ * with `hostingAddr` omitted clears every OutCall session of this user; AllCall
+ * with `hostingAddr` omitted clears the AllCall session and every OutCall
+ * session. A present `hostingAddr` limits the request to that hosting address.
+ * The Home PINX updates the HDB and may send `pumDelReg` to the affected
+ * Visitor PINX. A request to clear every PUM user at one hosting address is one
+ * invoke per user (§6.6.1.1). Errors: `invalidServedUserNr` when the user is
+ * not in the HDB (§6.6.2.2); `notAuthorized` when de-registration is not
+ * allowed; `unspecified`; `supplementaryServiceInteractionNotAllowed`;
+ * `pumUserNotSubscribedToThisServiceOpt`; `pumUserFailedAuthentication`;
+ * `hostingAddrInvalid`; `pumUserNotRegistered`. Clause 6 names only the first
+ * two as Home PINX returns and is silent on when to return the others.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-282/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

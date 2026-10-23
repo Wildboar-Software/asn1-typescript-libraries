@@ -12,7 +12,12 @@ import { WtmoArg_extension, _decode_WtmoArg_extension, _encode_WtmoArg_extension
 /**
  * @summary WtmoArg
  * @description
- * 
+ *
+ * Argument of `wtmoCall` (ECMA-304 §7.5.1). Carries destination digits as they
+ * become available, and an end-of-number mark.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-304/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,18 +37,33 @@ export
 class WtmoArg {
     /**
      * @summary `destinationNumber`.
+     * @description
+     *
+     * Destination digits already available (ECMA-304 §7.5.1.1). Further digits
+     * may follow in another `wtmoCall`. Absent when no digits are available
+     * yet. The Home PINX extends the call once a route can be selected
+     * (§7.5.2.1).
      * @public
      * @readonly
      */
     readonly destinationNumber: OPTIONAL<PartyNumber>;
     /**
      * @summary `sendingComplete`.
+     * @description
+     *
+     * Present when destination-number transmission has ended (ECMA-304
+     * §7.5.1.1). The Home PINX then stops timer T3 and extends the call if it
+     * has not already done so (§7.5.2.1).
      * @public
      * @readonly
      */
     readonly sendingComplete: OPTIONAL<NULL>;
     /**
      * @summary `extension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-304 §6.3.1 defines no members of
+     * `WTMCHExtSet`.
      * @public
      * @readonly
      */

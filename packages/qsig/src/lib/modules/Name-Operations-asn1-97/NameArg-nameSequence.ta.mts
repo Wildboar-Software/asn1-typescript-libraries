@@ -11,7 +11,12 @@ import { NameExtension, _decode_NameExtension, _encode_NameExtension } from "../
 /**
  * @summary NameArg_nameSequence
  * @description
- * 
+ *
+ * Name together with an optional extension, one alternative of `NameArg`
+ * (ECMA-164 §6.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-164/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +32,20 @@ export
 class NameArg_nameSequence {
     /**
      * @summary `name`.
+     * @description
+     *
+     * The name, with presentation allowed, restricted, or not available
+     * (ECMA-164 §6.1, §7.4.1.1, §8.4.1.1).
      * @public
      * @readonly
      */
     readonly name: Name;
     /**
      * @summary `extension`.
+     * @description
+     *
+     * Manufacturer-specific extension from `NameExtensionSet`. The standardized
+     * set is empty (ECMA-164 §6.1).
      * @public
      * @readonly
      */

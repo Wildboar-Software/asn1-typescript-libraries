@@ -11,7 +11,30 @@ import { unspecified } from "../Call-Diversion-Operations-asn1-97/unspecified.oa
 /**
  * @summary checkRestriction
  * @description
- * 
+ *
+ * Verification of a diverted-to number. The Served User PINX may send this to
+ * the Diverted-to PINX on a call-independent signalling connection while
+ * activating diversion (ECMA-174 §6.5.3.1.4). ROSE local code 18. The
+ * called-party number used to establish that connection is outside the scope of
+ * the Standard.
+ *
+ * The Diverted-to PINX checks that `divertedToNr` exists and that no
+ * restriction, such as the basic service, would prevent diversion from
+ * `servedUserNr`. It returns a result if there is no such restriction, and an
+ * error if there is (ECMA-174 §6.5.5.1.2, §6.5.5.2.2). A result means the
+ * Served User PINX treats the number as valid. An error means it treats the
+ * number as invalid.
+ *
+ * Timer T5 is at least 15 s (ECMA-174 §6.9.5). If it expires, the connection
+ * cannot be established, or the invoke is rejected, the Served User PINX may
+ * treat the number as either valid or invalid (§6.5.3.2.4).
+ *
+ * Errors: `notAvailable`, `invalidServedUserNr`, `invalidDivertedToNr`,
+ * `specialServiceNr`, and `unspecified`. `diversionToServedUserNr` is not in
+ * this list. The procedures do not map the codes.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

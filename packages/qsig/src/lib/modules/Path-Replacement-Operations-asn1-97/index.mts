@@ -1,6 +1,16 @@
 /**
  * @module
- * @description ASN.1 module `Path-Replacement-Operations-asn1-97`.
+ * @description
+ *
+ * QSIG Path Replacement (ANF-PR), ECMA-176 4th edition (December 2001).
+ * Replaces an established call's connection through the PISN with a new
+ * one. The Requesting PINX asks the Cooperating PINX to set that
+ * connection up toward the Requesting PINX. An Inviting PINX may choose
+ * the direction. Part of the old connection may be retained.
+ * Service: ECMA-175 3rd edition (December 1998).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-176/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-175/
  */
 export * from "./CallIdentity.ta.mjs";
 export * from "./DummyArg.ta.mjs";

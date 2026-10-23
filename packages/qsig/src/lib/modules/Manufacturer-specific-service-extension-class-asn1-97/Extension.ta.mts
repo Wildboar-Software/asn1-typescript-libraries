@@ -10,7 +10,15 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Extension
  * @description
- * 
+ *
+ * One manufacturer-specific addition inside a standardised argument, result, or
+ * error (ECMA-165 §9.2, Table 14). The receiver processes it only when it
+ * recognises `extensionId`. Otherwise it discards the whole Extension. In a
+ * sequence, each Extension is judged separately, so only the unrecognised ones
+ * are discarded.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,12 +34,21 @@ export
 class Extension {
     /**
      * @summary `extensionId`.
+     * @description
+     *
+     * Object identifier of this manufacturer-specific information. Unrecognised
+     * values cause this Extension to be discarded (ECMA-165 §9.2).
      * @public
      * @readonly
      */
     readonly extensionId: OBJECT_IDENTIFIER;
     /**
      * @summary `extensionArgument`.
+     * @description
+     *
+     * Payload of the extension identified by `extensionId`. Table 14 constrains
+     * it to the argument type of that object. The Standard does not define the
+     * contents; the manufacturer identified by the object identifier does.
      * @public
      * @readonly
      */

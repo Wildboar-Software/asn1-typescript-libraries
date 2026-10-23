@@ -5,7 +5,27 @@ import { ReAlertingArg, _decode_ReAlertingArg, _encode_ReAlertingArg } from "../
 /**
  * @summary recallAlerting
  * @description
- * 
+ *
+ * Recall has reached alerting. The Served User PINX sends it to the Primary
+ * PINX in a FACILITY when alerting of user A starts (ECMA-214 §6.5.1.1).
+ * Unconfirmed. ROSE local code 57. No errors. SS-CT has already succeeded and
+ * user C has not answered. Recall applies if user C does not answer while
+ * alerting, or stays busy, for a specified time (§6.1). §6.8 defines no timer.
+ *
+ * `alertedNumber` and `alertedName` may be included only when it is known that
+ * presentation restriction does not apply (ECMA-214 §6.5.1.1). The Primary PINX
+ * stays in RE-Idle-P and gives user B an alerting notification. It may pass on
+ * a number subject to number presentation restriction, and a name subject to
+ * name presentation restriction (§6.5.2.1).
+ *
+ * If CFU or CFB diverts the recall, the argument describes the diverted-to user
+ * instead of user A, and no `divertingLegInformation1` or
+ * `divertingLegInformation3` is sent to the Primary PINX (ECMA-214 §6.9.3.1,
+ * §6.9.4). During CFNR those diversion notifications are relayed to the Primary
+ * PINX (§6.9.5).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-214/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

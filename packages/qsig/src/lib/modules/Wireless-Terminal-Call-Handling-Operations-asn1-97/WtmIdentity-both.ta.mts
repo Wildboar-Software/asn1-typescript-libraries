@@ -11,7 +11,12 @@ import { AlternativeId, _decode_AlternativeId, _encode_AlternativeId } from "../
 /**
  * @summary WtmIdentity_both
  * @description
- * 
+ *
+ * PISN number and alternative identifier of the same WTMI user (ECMA-304
+ * §6.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-304/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +32,20 @@ export
 class WtmIdentity_both {
     /**
      * @summary `pisnNumber`.
+     * @description
+     *
+     * PISN number of the WTMI user. When the Home PINX sends it, a complete
+     * number (ECMA-304 §6.5.3.1).
      * @public
      * @readonly
      */
     readonly pisnNumber: PartyNumber;
     /**
      * @summary `alternativeId`.
+     * @description
+     *
+     * Identifier other than the PISN number which identifies the WTMI user
+     * uniquely (ECMA-304 §4.2.1). Octet contents are not defined (§6.3.1).
      * @public
      * @readonly
      */

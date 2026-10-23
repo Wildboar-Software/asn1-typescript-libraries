@@ -12,7 +12,29 @@ import { unspecified } from "../Call-Diversion-Operations-asn1-97/unspecified.oa
 /**
  * @summary deactivateDiversionQ
  * @description
- * 
+ *
+ * Remote deactivation of CFU, CFB, or CFNR. The Deactivating PINX sends this to
+ * the Served User PINX on a call-independent signalling connection when the
+ * user requests deactivation (ECMA-174 §6.5.7.1). ROSE local code 16.
+ *
+ * The Served User PINX checks that `basicService` is consistent for
+ * `servedUserNr` and may take `deactivatingUserNr` into account. If the request
+ * is valid it deactivates `procedure`, returns a result, and may notify the
+ * served user (ECMA-174 §6.5.3.1.2). An invalid request returns an error
+ * (§6.5.3.2.2).
+ *
+ * Timer T3 at the Deactivating PINX is at least 15 s. Expiry is treated as a
+ * reject (ECMA-174 §6.9.3, §6.5.7.2).
+ *
+ * Errors: `userNotSubscribed`, `notAvailable`, `invalidServedUserNr`,
+ * `temporarilyUnavailable`, `notAuthorized`, and `unspecified`. The procedures
+ * do not map these codes. Stage 1 deactivation causes include service not
+ * subscribed, insufficient information, service not activated, and an incorrect
+ * served-user number (ECMA-173 §6.2.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-173/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

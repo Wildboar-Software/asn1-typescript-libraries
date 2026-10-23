@@ -13,7 +13,12 @@ import { UserData, _decode_UserData, _encode_UserData } from "../Short-Message-S
 /**
  * @summary smsStatusReportError_ParameterType
  * @description
- * 
+ *
+ * Parameter of `smsStatusReportError` (ECMA-325 Annex E.9). `failureCause` is
+ * mandatory. `scAddressSaved` defaults to FALSE.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,24 +36,41 @@ export
 class smsStatusReportError_ParameterType {
     /**
      * @summary `failureCause`.
+     * @description
+     *
+     * Why the status report was refused. §6.5.1.2.3 requires an appropriate
+     * Table E.4 value and does not name one (ECMA-325 §E.9.1).
      * @public
      * @readonly
      */
     readonly failureCause: FailureCause;
     /**
      * @summary `protocolIdentifier`.
+     * @description
+     *
+     * As on the related invoke (ECMA-325 §E.9.2, §E.1.2.1).
      * @public
      * @readonly
      */
     readonly protocolIdentifier: OPTIONAL<ProtocolIdentifier>;
     /**
      * @summary `userData`.
+     * @description
+     *
+     * When present, includes `userData` from the `smsStatusReport` invoke. The
+     * Sending User side may add headers after a `dataHeaderSourceIndicator`
+     * (ECMA-325 §E.9.3).
      * @public
      * @readonly
      */
     readonly userData: OPTIONAL<UserData>;
     /**
      * @summary `scAddressSaved`.
+     * @description
+     *
+     * Annex E.9.4 points at §E.6.4: TRUE would mean the Service Centre address
+     * was stored in Short Message Waiting Data. §6.5 never does that while
+     * handling a status report.
      * @public
      * @readonly
      */

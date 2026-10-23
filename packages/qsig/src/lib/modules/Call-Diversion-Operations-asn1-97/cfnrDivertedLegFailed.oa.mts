@@ -5,7 +5,18 @@ import { _decode_cfnrDivertedLegFailed_ArgumentType, _encode_cfnrDivertedLegFail
 /**
  * @summary cfnrDivertedLegFailed
  * @description
- * 
+ *
+ * Notification that the diverted-to leg cleared during CFNR. The Rerouteing
+ * PINX sends it to the Served User PINX in a FACILITY when, in state
+ * CDR-Invoked, it receives DISCONNECT, RELEASE, or RELEASE COMPLETE from the
+ * Diverted-to PINX (ECMA-174 §6.5.4.2, §6.3.1). Unconfirmed. ROSE local code
+ * 23. The original call remains between the Originating PINX and the Served
+ * User PINX. The Served User PINX stays in CDS-Inv-Idle and may notify the
+ * served user (§6.5.3.2.5). The Interpretation APDU discards an unrecognised
+ * invoke (§6.3.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

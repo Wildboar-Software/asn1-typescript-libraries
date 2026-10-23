@@ -15,7 +15,30 @@ import { hostingAddrInvalid } from "../PUM-Registration-Operations-asn1-97/hosti
 /**
  * @summary pumRegistr
  * @description
- * 
+ *
+ * Register a PUM user (ECMA-282 §6.5). The Visitor PINX sends it to the Home
+ * PINX, or a Remote PINX sends it to the Visitor PINX, on a call-independent
+ * signalling connection. ROSE local CODE 89. Timer T1, at least 15 s, runs in
+ * VisitReg or RemoteReg until the result, error, or reject arrives (§6.12.1).
+ * If `serviceOption` is absent the Home PINX treats the request as InCall
+ * (§6.5.3.1). On success the Home PINX updates the HDB. For InCall or AllCall
+ * it sends `pumDelReg` to end the previous InCall or AllCall session. For an
+ * OutCall registration, that `pumDelReg` of the previous InCall or AllCall
+ * session is optional, and existing OutCall sessions may stay
+ * (§6.5.3.1). A Visitor PINX that receives this invoke from a
+ * Remote PINX forwards the Home PINX result unchanged (§6.5.2.1). If T1 expires
+ * in that case, the Visitor PINX returns `temporarilyUnavailable` to the Remote
+ * PINX (§6.5.2.2). Errors: `invalidServedUserNr` when the PUM user is not in
+ * the HDB (§6.5.3.2); `notAuthorized` when registration is not allowed;
+ * `notAvailable`; `temporarilyUnavailable`; `unspecified`;
+ * `supplementaryServiceInteractionNotAllowed`;
+ * `pumUserNotSubscribedToThisServiceOpt`; `pumUserFailedAuthentication`;
+ * `hostingAddrInvalid`. Clause 6 is silent on when to return the last three,
+ * `notAvailable`, `unspecified`, and
+ * `supplementaryServiceInteractionNotAllowed`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-282/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -9,7 +9,21 @@ import { supplementaryServiceInteractionNotAllowed } from "../General-Error-List
 /**
  * @summary callIntrusionForcedRelease
  * @description
- * 
+ *
+ * Releases the established call during intrusion (ECMA-203
+ * §6.6.1.3, §6.6.2.3). Optional. The Originating PINX sends the
+ * invoke in FACILITY from CI-Orig-Invoked or CI-Orig-Isolated and
+ * starts timer T3 (at least 30 s, §6.10.3). Local code 46. The
+ * Terminating PINX clears the established call. From a conference
+ * it also disconnects the unwanted user and leaves the calling and
+ * called users connected. It returns a result, sends
+ * `forcedReleaseAfterIntrusion` in the DISCONNECT to the unwanted
+ * user, and enters CI-Idle. If forced release is not possible it
+ * returns an error and stays in the current state. §6.6.2.3 does
+ * not say which error from the ERRORS set is used (§6.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-203/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

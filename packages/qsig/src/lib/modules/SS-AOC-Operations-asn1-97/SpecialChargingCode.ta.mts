@@ -9,7 +9,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SpecialChargingCode
  * @description
- * 
+ *
+ * Integer N from 1 to 10 identifying a charging algorithm (ECMA-211 §A.1.3.3,
+ * ECMA-212 §6.3.1). What each code means is outside both standards.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

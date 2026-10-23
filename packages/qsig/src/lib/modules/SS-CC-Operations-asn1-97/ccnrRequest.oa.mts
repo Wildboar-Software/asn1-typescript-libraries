@@ -10,7 +10,18 @@ import { supplementaryServiceInteractionNotAllowed } from "../General-Error-List
 /**
  * @summary ccnrRequest
  * @description
- * 
+ *
+ * Invokes Completion of Calls on No Reply (ECMA-186 §6.5.2.1.2).
+ * Same signalling as `ccbsRequest`, after a call to User B has gone
+ * unanswered. Local code 27. The Terminating PINX monitors User B
+ * for becoming free after a later period of activity (§6.5.3.1.2).
+ * Which activities count is outside the scope of ECMA-186 §6.1 and
+ * ECMA-185 §7.1.1. Timer T1 and the errors are those of
+ * `ccbsRequest` (§6.5.3.2.1, §6.10.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-186/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-185/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

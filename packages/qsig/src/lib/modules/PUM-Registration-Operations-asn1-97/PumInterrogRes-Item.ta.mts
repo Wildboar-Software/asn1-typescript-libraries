@@ -14,7 +14,12 @@ import { PumrExtension, _decode_PumrExtension, _encode_PumrExtension } from "../
 /**
  * @summary PumInterrogRes_Item
  * @description
- * 
+ *
+ * One registration session in a `pumInterrog` result (ECMA-282 §6.3.1,
+ * §6.7.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-282/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,30 +49,54 @@ export
 class PumInterrogRes_Item {
     /**
      * @summary `basicService`.
+     * @description
+     *
+     * Basic service of this session, or all basic services. Home PINX
+     * information (§6.3.1).
+     *
      * @public
      * @readonly
      */
     readonly basicService: OPTIONAL<BasicService>;
     /**
      * @summary `hostingAddr`.
+     * @description
+     *
+     * PISN number of the hosting user; always a complete number. Home PINX
+     * information (§6.3.1).
+     *
      * @public
      * @readonly
      */
     readonly hostingAddr: OPTIONAL<PartyNumber>;
     /**
      * @summary `serviceOption`.
+     * @description
+     *
+     * InCall, OutCall, or AllCall. Home PINX information (§6.3.1).
+     *
      * @public
      * @readonly
      */
     readonly serviceOption: OPTIONAL<ServiceOption>;
     /**
      * @summary `interrogParams`.
+     * @description
+     *
+     * Time left in the session and outgoing calls left. Visitor PINX
+     * information (§6.3.1, §6.7.1.1).
+     *
      * @public
      * @readonly
      */
     readonly interrogParams: OPTIONAL<SessionParams>;
     /**
      * @summary `argExtension`.
+     * @description
+     *
+     * Manufacturer-specific data. `PUMRExtSet` assigns no extensions (ECMA-282
+     * §6.3.1).
+     *
      * @public
      * @readonly
      */

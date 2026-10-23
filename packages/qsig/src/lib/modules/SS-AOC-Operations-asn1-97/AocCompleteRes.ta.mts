@@ -11,7 +11,14 @@ import { AocCompleteRes_completeResExtension, _decode_AocCompleteRes_completeRes
 /**
  * @summary AocCompleteRes
  * @description
- * 
+ *
+ * Result of `aocComplete`: the accounting function's decision on whether user A
+ * is charged for the call before the transfer, after it, or both (ECMA-212
+ * §6.6.2.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +37,22 @@ export
 class AocCompleteRes {
     /**
      * @summary `chargingOption`.
+     * @description
+     *
+     * `aocFreeOfCharge` if user A is charged neither before nor after transfer,
+     * `aocContinueCharging` if charged both, or `aocStopCharging` if charged
+     * only before transfer (ECMA-212 §6.6.2.3.1).
      * @public
      * @readonly
      */
     readonly chargingOption: ChargingOption;
     /**
      * @summary `completeResExtension`.
+     * @description
+     *
+     * Optional manufacturer-specific extension on `aocComplete result`.
+     * ECMA-212 §6.3.1 defines `AOCExtSet` as `{...}` and names no member. It
+     * does not say when to send one extension rather than several.
      * @public
      * @readonly
      */

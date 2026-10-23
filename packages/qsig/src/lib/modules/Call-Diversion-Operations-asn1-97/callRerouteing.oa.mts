@@ -15,7 +15,39 @@ import { unspecified } from "../Call-Diversion-Operations-asn1-97/unspecified.oa
 /**
  * @summary callRerouteing
  * @description
- * 
+ *
+ * Invocation of diversion. The Served User PINX sends this to the Rerouteing
+ * PINX in a call-related FACILITY (ECMA-174 §6.5.3.1.5). ROSE local code 19.
+ * For CFU, CFB, and Call Deflection Immediate the basic-call state at the
+ * Served User PINX is Incoming Call Proceeding or Overlap Receiving. For CFNR
+ * and Call Deflection from Alert it is Call Received. The Rerouteing PINX
+ * receives it in Overlap Sending or Outgoing Call Proceeding for CFU/CFB, and
+ * in Call Delivered for CFNR (§6.5.4.1).
+ *
+ * `rerouteingReason` selects the CFU/CFB procedure or the CFNR procedure, and
+ * is never `unknown` when the Served User PINX sends it (ECMA-174 §6.5.3.1.5,
+ * §6.5.4.1). If the request can be performed, the Rerouteing PINX returns a
+ * result, sends a new SETUP containing `divertingLegInformation2` toward the
+ * diverted-to user, and for CFU/CFB releases the leg toward the Served User
+ * PINX. The result for CFU/CFB may be carried in that DISCONNECT. For CFNR the
+ * leg to the served user stays until the diverted-to user alerts or answers, or
+ * the served user answers (§6.5.4.1).
+ *
+ * An Incoming Gateway PINX may ask the public ISDN to do partial rerouteing
+ * instead of acting as the Rerouteing PINX (ECMA-174 §6.6.1.3). On a return
+ * error, reject, or timer T1 expiry the Served User PINX follows an
+ * implementation-specific procedure (§6.5.3.2.5). T1 is at least 10 s (§6.9.1).
+ *
+ * Errors: `userNotSubscribed`, `notAvailable`, `resourceUnavailable`,
+ * `invalidDivertedToNr`, `specialServiceNr`, `diversionToServedUserNr`,
+ * `numberOfDiversionsExceeded`, `supplementaryServiceInteractionNotAllowed`,
+ * and `unspecified`. `numberOfDiversionsExceeded` applies only to partial
+ * rerouteing (§6.3.1). A Transferring PINX that has started call transfer by
+ * rerouteing returns `supplementaryServiceInteractionNotAllowed` (§6.8.3.5.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-173/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

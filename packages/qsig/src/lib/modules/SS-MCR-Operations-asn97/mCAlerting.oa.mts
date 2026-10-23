@@ -5,7 +5,22 @@ import { MCAlertingArg, _decode_MCAlertingArg, _encode_MCAlertingArg } from "../
 /**
  * @summary mCAlerting
  * @description
- * 
+ *
+ * The Requested Call is alerting (ECMA-344 §6.5.2.1.2). Direction:
+ * Co-operating PINX to Requesting PINX, in a FACILITY message, when an
+ * ALERTING message arrives from the Destination PINX while the Co-operating
+ * PINX is in MCR-Active. ROSE local CODE 114. No result (`RETURN RESULT
+ * FALSE`, `ALWAYS RESPONDS FALSE`). No errors.
+ *
+ * `correlation` is the value from the `mCRequest` invoke. The Requesting PINX
+ * may indicate this to the Requesting User and remains in MCR-Active
+ * (§6.5.1.1.2).
+ *
+ * Invoke interpretation is `discardAnyUnrecognisedInvokePdu`. The NFE
+ * destination entity is `endPINX` (§6.3.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-344/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -1,6 +1,28 @@
 /**
  * @module
- * @description ASN.1 module `SS-MCM-Operations-asn1-97`.
+ * @description
+ *
+ * Message Centre Monitoring (ECMA-347, 1st edition,
+ * June 2003). The Message Centre PINX reports a new
+ * message, an empty new-message queue, a change in stored
+ * messages, or a full mailbox. The Served User PINX
+ * activates, deactivates, interrogates, or requests an
+ * update (§6.1, §6.5). SS-MCM includes SS-MWI: local codes
+ * 80, 81, and 82 are `mWIActivate`, `mWIDeactivate`, and
+ * `mWIInterrogate` (§6.3.1, §6.8.24).
+ *
+ * APDUs use a call-independent signalling connection. The
+ * sender that opened it may clear on a return result,
+ * return error, or reject, or may keep it (§6.5). The NFE
+ * destination entity is `endPINX` (§6.3.2.1).
+ *
+ * If the Served User has more than one mailbox, Message
+ * Centre Access profile 3 identifies that mailbox with
+ * SS-MID before the SS-MCM APDUs that refer to it
+ * (ECMA-345 §7.3.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-345/
  */
 export * from "./AddressHeader.ta.mjs";
 export * from "./AllMsgInfo.ta.mjs";

@@ -9,7 +9,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary UserPin
  * @description
- * 
+ *
+ * PIN of the PUM user or of the activating user (ECMA-282 §6.3.1, §6.5.1.1,
+ * §6.5.6.1). One to 20 octets. The octet encoding is not specified. Clause 6
+ * allows authentication to use the PIN and is silent on the check.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-282/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

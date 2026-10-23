@@ -13,7 +13,16 @@ import { CintExtension, _decode_CintExtension, _encode_CintExtension } from "../
 /**
  * @summary CintInformation2Arg
  * @description
- * 
+ *
+ * Notification delivered to the intercepted-to user (ECMA-221
+ * §6.6.4.1, §6.6.6.1; ECMA-220 §6.2.2.2.1). The cause is mandatory.
+ * Called number and name are included when available. Original
+ * called number and name are included only when the call was
+ * diverted before interception and that information is available.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-221/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-220/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,36 +42,63 @@ export
 class CintInformation2Arg {
     /**
      * @summary `interceptionCause`.
+     * @description
+     *
+     * Cause given to the intercepted-to user (ECMA-221 §6.6.4.1;
+     * ECMA-220 §6.2.2.2.1).
      * @public
      * @readonly
      */
     readonly interceptionCause: CintCause;
     /**
      * @summary `calledNumber`.
+     * @description
+     *
+     * Number of the user the call was directed to before
+     * interception, when that number is available (ECMA-221
+     * §6.6.4.1; ECMA-220 §4.2.5).
      * @public
      * @readonly
      */
     readonly calledNumber: OPTIONAL<PresentedNumberUnscreened>;
     /**
      * @summary `originalCalledNumber`.
+     * @description
+     *
+     * Original called number, included only if the call was diverted
+     * before interception and the number is available (ECMA-221
+     * §6.6.4.1).
      * @public
      * @readonly
      */
     readonly originalCalledNumber: OPTIONAL<PresentedNumberUnscreened>;
     /**
      * @summary `calledName`.
+     * @description
+     *
+     * Name of the called user, when available (ECMA-221 §6.6.4.1;
+     * ECMA-220 §6.2.2.2.1).
      * @public
      * @readonly
      */
     readonly calledName: OPTIONAL<Name>;
     /**
      * @summary `originalCalledName`.
+     * @description
+     *
+     * Original called name, included only if the call was diverted
+     * before interception and the name is available (ECMA-221
+     * §6.6.4.1).
      * @public
      * @readonly
      */
     readonly originalCalledName: OPTIONAL<Name>;
     /**
      * @summary `extension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-221 §6.3.1 leaves
+     * `CINTExtSet` empty.
      * @public
      * @readonly
      */

@@ -11,7 +11,13 @@ import { CIRequestRes_resultExtension, _decode_CIRequestRes_resultExtension, _en
 /**
  * @summary CIRequestRes
  * @description
- * 
+ *
+ * Result of `callIntrusionRequest` (ECMA-203 §6.3.1). It reports
+ * whether the unwanted user was placed in the conference or
+ * isolated (§6.6.2.1.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-203/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +36,21 @@ export
 class CIRequestRes {
     /**
      * @summary `ciUnwantedUserStatus`.
+     * @description
+     *
+     * `unwantedUserIntruded` for a three-party conference, or
+     * `unwantedUserIsolated` when the unwanted user is disconnected
+     * (ECMA-203 §6.6.2.1.1).
      * @public
      * @readonly
      */
     readonly ciUnwantedUserStatus: CIUnwantedUserStatus;
     /**
      * @summary `resultExtension`.
+     * @description
+     *
+     * Optional manufacturer-specific data from `CIExtSet`. ECMA-203
+     * §6.6.2.1.1 does not include it in the result that must be sent.
      * @public
      * @readonly
      */

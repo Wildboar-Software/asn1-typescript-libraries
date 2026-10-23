@@ -1,6 +1,15 @@
 /**
  * @module
- * @description ASN.1 module `Addressing-Data-Elements-asn1-97`.
+ * @description
+ *
+ * PISN party numbers, addresses, and subaddresses for QSIG supplementary
+ * services (ECMA-165 Annex B, Table B.1). ITU-T X.680 edition, object
+ * identifier `addressing-data-elements-asn1-97(20)` (Annex I). A PINX address
+ * is a complete PISN number, as defined in ECMA-155, that unambiguously
+ * identifies the PINX or an addressable entity associated with it (§4.30).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-155/
  */
 export * from "./Address.ta.mjs";
 export * from "./AddressScreened.ta.mjs";

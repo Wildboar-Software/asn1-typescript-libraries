@@ -4,7 +4,12 @@ import { EXTENSION } from "../Manufacturer-specific-service-extension-class-asn1
 /**
  * @summary SDExtSet
  * @description
- * 
+ *
+ * Extensible object set of manufacturer-specific extensions. ECMA-311 §6.3.1
+ * writes it as `{...}` and specifies no member.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-311/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

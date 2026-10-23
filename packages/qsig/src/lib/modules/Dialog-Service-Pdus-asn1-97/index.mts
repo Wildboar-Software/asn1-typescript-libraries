@@ -1,6 +1,12 @@
 /**
  * @module
- * @description ASN.1 module `Dialog-Service-Pdus-asn1-97`.
+ * @description
+ *
+ * Dialogue Service Element APDUs. DSE correlates ROSE or ACSE exchanges that
+ * are not tied to one network-layer connection (ECMA-165 §4.15, §6.6, §8.4,
+ * §11.3.3.3 Table 33). X.680 edition, `dialogue-service-pdus-asn1-97(15)`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export * from "./DSE-Extension-Set.osa.mjs";
 export * from "./DestinationDialogId.ta.mjs";

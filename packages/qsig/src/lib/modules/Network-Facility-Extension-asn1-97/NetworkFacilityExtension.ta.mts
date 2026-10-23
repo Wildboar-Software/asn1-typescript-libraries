@@ -11,7 +11,16 @@ import { AddressInformation, _decode_AddressInformation, _encode_AddressInformat
 /**
  * @summary NetworkFacilityExtension
  * @description
- * 
+ *
+ * Origin and destination of a Facility information element that has network
+ * significance (ECMA-165 §11.3.3.1, §7.1.2). Table 10 gives the six codings.
+ * A receiving End or Transit PINX uses the NFE to decide whether it is the
+ * Destination PINX, must relay the element, or must discard it (§7.1.2.2).
+ * A non-conforming NFE causes the Facility information element to be
+ * discarded.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,24 +38,47 @@ export
 class NetworkFacilityExtension {
     /**
      * @summary `sourceEntity`.
+     * @description
+     *
+ * Role of the sending PINX: `endPINX` or `anyTypeOfPINX`. Avoid `endPINX`
+ * if this PINX might cease to be an End PINX before a response is received
+ * (ECMA-165 §7.1.2.1, Table 10).
      * @public
      * @readonly
      */
     readonly sourceEntity: EntityType;
     /**
      * @summary `sourceEntityAddress`.
+     * @description
+     *
+     * PINX address of the source (§4.30). Omitted when `sourceEntity` is
+     * `endPINX` (Table 10, cases 1 to 3). Included when a Transit PINX is the
+     * source (cases 4 to 6).
      * @public
      * @readonly
      */
     readonly sourceEntityAddress: OPTIONAL<AddressInformation>;
     /**
      * @summary `destinationEntity`.
+     * @description
+     *
+     * `endPINX` selects the End PINX in the direction of this Facility
+     * information element. `anyTypeOfPINX` selects either a specific PINX or
+     * the next PINX that understands the contents (ECMA-165 §7.1.2.1 Table 10,
+     * §7.1.2.2).
      * @public
      * @readonly
      */
     readonly destinationEntity: EntityType;
     /**
      * @summary `destinationEntityAddress`.
+     * @description
+     *
+     * Present when a specific PINX is addressed (Table 10, cases 2 and 5).
+     * Absent for the End PINX (cases 1 and 4) and for the next PINX that
+     * understands the contents (cases 3 and 6). If `endPINX` is indicated and
+     * an address is present in error, the receiver ignores the address
+     * (§7.1.2.2).
      * @public
      * @readonly
      */

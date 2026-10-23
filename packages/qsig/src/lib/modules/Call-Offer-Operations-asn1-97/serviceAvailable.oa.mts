@@ -5,7 +5,17 @@ import { ServiceAvailableArg, _decode_ServiceAvailableArg, _encode_ServiceAvaila
 /**
  * @summary serviceAvailable
  * @description
- * 
+ *
+ * Reports why a network connection was retained (ECMA-192 §A.5.2).
+ * The Terminating PINX sends the invoke in FACILITY or PROGRESS
+ * when a condition for a requested service is met, and starts timer
+ * PRT1 (at least 60 s, §A.8). No result. Local code 42. Bits set to
+ * ONE are services that can be invoked now. For SS-CO, `callOffer`
+ * means SS-CO is invokable (§6.6.2.1). NFE and Interpretation APDU
+ * requirements are the same as for `pathRetain` (§A.3.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-192/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

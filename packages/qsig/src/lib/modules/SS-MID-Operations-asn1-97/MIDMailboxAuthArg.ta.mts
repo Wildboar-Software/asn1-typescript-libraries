@@ -13,7 +13,13 @@ import { MIDExtensions, _decode_MIDExtensions, _encode_MIDExtensions } from "../
 /**
  * @summary MIDMailboxAuthArg
  * @description
- * 
+ *
+ * Argument of `mIDMailboxAuth` (ECMA-347 §7.5.2.1.2). The
+ * password is required. The mailbox identifier, Message
+ * Type, and Served User name are optional.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,30 +39,51 @@ export
 class MIDMailboxAuthArg {
     /**
      * @summary `partyInfo`.
+     * @description
+     *
+     * Served User address, Message Centre identity, and an
+     * optional Message Type. ECMA-347 §7.5.2.1.2.
      * @public
      * @readonly
      */
     readonly partyInfo: PartyInfo;
     /**
      * @summary `servedUserName`.
+     * @description
+     *
+     * Name of the Served User, when sent.
+     * ECMA-347 §7.5.2.1.2.
      * @public
      * @readonly
      */
     readonly servedUserName: OPTIONAL<Name>;
     /**
      * @summary `mailBox`.
+     * @description
+     *
+     * Mailbox identifier, for example its name. Optional
+     * here; required on `mIDMailboxID`. ECMA-347 §7.5.2.1.2.
+     * §7.3.1 does not explain context tag 8.
      * @public
      * @readonly
      */
     readonly mailBox: OPTIONAL<String>;
     /**
      * @summary `password`.
+     * @description
+     *
+     * Password the Served User presents for that mailbox.
+     * ECMA-347 §7.5.2.1.2.
      * @public
      * @readonly
      */
     readonly password: String;
     /**
      * @summary `extensions`.
+     * @description
+     *
+     * Manufacturer-specific extension. `MIDExtSet` defines none.
+     * The procedures do not mention this component. ECMA-347 §7.3.1.
      * @public
      * @readonly
      */

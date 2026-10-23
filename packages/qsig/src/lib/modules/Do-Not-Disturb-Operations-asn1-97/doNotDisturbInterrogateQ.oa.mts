@@ -12,7 +12,18 @@ import { unspecified } from "../Do-Not-Disturb-Operations-asn1-97/unspecified.oa
 /**
  * @summary doNotDisturbInterrogateQ
  * @description
- * 
+ *
+ * Remote interrogation of SS-DND (ECMA-194 §6.5.5, §6.5.6.1.3).
+ * Call-independent. The Interrogating PINX runs timer T3 (>= 15 s,
+ * §6.11.3) in state DND-iWait. A valid request is answered with the
+ * basic services for which SS-DND is active, and optionally each
+ * DNDPL (ECMA-193 §6.2.2.1.3, §8.2.1.8). ROSE local CODE 37. The
+ * Interpretation APDU is omitted; NFE `destinationEntity` is
+ * `endPINX` (§6.3.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-194/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-193/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

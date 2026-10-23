@@ -9,7 +9,12 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary SSCTDigitInfoArg_argumentExtension
  * @description
- * 
+ *
+ * Manufacturer-specific extension on `ssctDigitInfo`. ECMA-300 §6.3.1
+ * defines no member of `SSCTExtSet`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-300/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

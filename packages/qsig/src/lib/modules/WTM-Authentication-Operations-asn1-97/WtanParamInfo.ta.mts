@@ -10,7 +10,13 @@ import { CalcWtanInfo, _decode_CalcWtanInfo, _encode_CalcWtanInfo } from "../WTM
 /**
  * @summary WtanParamInfo
  * @description
- * 
+ *
+ * SS-WTAN parameters (ECMA-306 §7.5.3.1). `authSessionKeyInfo` when the Visitor
+ * PINX computes the response from the session key and the WTM user's challenge.
+ * `calcWtanInfo` when the Authentication Server PINX computed the response.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-306/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

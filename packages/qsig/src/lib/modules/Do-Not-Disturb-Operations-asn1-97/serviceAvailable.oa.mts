@@ -5,7 +5,19 @@ import { ServiceAvailableArg, _decode_ServiceAvailableArg, _encode_ServiceAvaila
 /**
  * @summary serviceAvailable
  * @description
- * 
+ *
+ * Report which requested supplementary services can be invoked, and
+ * that the network connection is retained (ECMA-194 Annex A §A.5.2).
+ * Sent in FACILITY, or in PROGRESS when progress description 8 is
+ * sent with it. No result. For SS-DNDO the bit set to ONE is the
+ * same `dndo-*` bit that was set in `pathRetain` (§6.6.1.1). The
+ * Terminating PINX then runs timer PRT1 (>= 60 s, §A.8) in
+ * PRTT-Retained. ROSE local CODE 42. The Interpretation APDU is
+ * `discardAnyUnrecognisedInvokePdu`; NFE `destinationEntity` is
+ * `endPINX` (§A.3.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-194/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -11,7 +11,24 @@ import { notActivated } from "../General-Error-List/notActivated.oa.mjs";
 /**
  * @summary mWIInterrogate
  * @description
- * 
+ *
+ * Served User PINX to Message Centre PINX, local code 82. The Served User PINX
+ * sends this invoke on a call-independent connection, starts timer T2 (at least
+ * 15 s), and waits in MWI-Ser-Wait (ECMA-242 §6.5.2.1.2, §6.9.2). The argument
+ * contains the Served User's PISN number, the service, and optionally a Message
+ * Centre identity. If interrogation is possible and any received identity is
+ * correct, the Message Centre PINX returns the status and stays in MWI-Mc-Idle
+ * (§6.5.1.1.2). The result may carry the same optional information as
+ * `mWIActivate`. The Served User PINX clears the connection. Errors are
+ * `userNotSubscribed`, `invalidServedUserNr`, `notActivated`,
+ * `invalidMsgCentreId`, and `unspecified`. §6.5.1.2.2 requires an error when
+ * interrogation is not possible or the Message Centre identifier is incorrect,
+ * and does not name which error. The corresponding public ISDN service does not
+ * support interrogation (§6.6).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

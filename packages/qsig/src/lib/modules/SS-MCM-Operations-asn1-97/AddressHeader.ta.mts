@@ -12,7 +12,14 @@ import { Priority, _decode_Priority, _encode_Priority } from "../SS-MCM-Operatio
 /**
  * @summary AddressHeader
  * @description
- * 
+ *
+ * Who left one message, with an optional time and priority
+ * (ECMA-347 §6.3.1). An element of complete information in
+ * an `mCMUpdate`. §6.5.1.1.4 does not further define the
+ * components.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,18 +36,30 @@ export
 class AddressHeader {
     /**
      * @summary `originatorNr`.
+     * @description
+     *
+     * Address of the user who left the message. The update
+     * procedure does not say more. ECMA-347 §6.3.1.
      * @public
      * @readonly
      */
     readonly originatorNr: PartyNumber;
     /**
      * @summary `timeStamp`.
+     * @description
+     *
+     * Time associated with the message. Optional. Which
+     * instant is not stated. ECMA-347 §6.3.1.
      * @public
      * @readonly
      */
     readonly timeStamp: OPTIONAL<TimeStamp>;
     /**
      * @summary `priority`.
+     * @description
+     *
+     * Priority of the message. Optional. 0 is highest and 9
+     * is lowest. ECMA-347 §6.3.1.
      * @public
      * @readonly
      */

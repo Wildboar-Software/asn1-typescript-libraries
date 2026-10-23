@@ -9,7 +9,13 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary WtmoArg_extension
  * @description
- * 
+ *
+ * Extension choice inside `WtmoArg` (ECMA-304 §6.3.1). `single` is one
+ * extension; `multiple` is a sequence of them. `WTMCHExtSet` defines no
+ * members.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-304/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -10,7 +10,12 @@ import { locInfoCheck } from "../WTM-Location-Registration-Operations-asn1-97/lo
 /**
  * @summary WTMLR_Operations
  * @description
- * 
+ *
+ * SS-WTLR and ANF-WTINFO operations (ECMA-302 §6.3.1): `locUpdate`,
+ * `locDelete`, `locDeReg`, `pisnEnquiry`, `getRRCInf`, and `locInfoCheck`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-302/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

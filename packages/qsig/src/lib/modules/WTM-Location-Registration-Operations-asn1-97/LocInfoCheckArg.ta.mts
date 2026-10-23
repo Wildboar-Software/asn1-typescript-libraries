@@ -13,7 +13,12 @@ import { LrExtension, _decode_LrExtension, _encode_LrExtension } from "../WTM-Lo
 /**
  * @summary LocInfoCheckArg
  * @description
- * 
+ *
+ * Argument of `locInfoCheck` (ECMA-302 §6.3.1, §7.6). Sent by either the
+ * Visitor PINX or the Home PINX.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-302/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,24 +38,45 @@ export
 class LocInfoCheckArg {
     /**
      * @summary `wtmUserId`.
+     * @description
+     *
+     * WTM user whose location data is checked (§7.6.1.1).
+     *
      * @public
      * @readonly
      */
     readonly wtmUserId: WtmUserId;
     /**
      * @summary `basicService`.
+     * @description
+     *
+     * Basic service of the registration. Omission means `allServices` (§6.3.1).
+     * The invoker may include the service for which the user is registered
+     * (§7.6.1.1).
+     *
      * @public
      * @readonly
      */
     readonly basicService: OPTIONAL<BasicService>;
     /**
      * @summary `visitPINX`.
+     * @description
+     *
+     * PISN number of the Visitor PINX; always a complete number (§6.3.1,
+     * §7.6.1.1). The note after §6.3.1, about a per-user roaming number or one
+     * number for every user in the PINX, is stated for `LocUpdArg` only.
+     *
      * @public
      * @readonly
      */
     readonly visitPINX: PartyNumber;
     /**
      * @summary `argExtension`.
+     * @description
+     *
+     * Manufacturer-specific data. `WTMLRExtSet` assigns no extensions (ECMA-302
+     * §6.3.1).
+     *
      * @public
      * @readonly
      */

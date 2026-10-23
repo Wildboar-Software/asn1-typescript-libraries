@@ -12,7 +12,12 @@ import { PartySubaddress, _decode_PartySubaddress, _encode_PartySubaddress } fro
 /**
  * @summary AddressScreened
  * @description
- * 
+ *
+ * A party number, the result of screening it, and an optional subaddress
+ * (ECMA-165 Annex B Table B.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,18 +34,30 @@ export
 class AddressScreened {
     /**
      * @summary `partyNumber`.
+     * @description
+     *
+     * Number of the party. The numbering plan is selected by the PartyNumber
+     * alternative (ECMA-165 Annex B Table B.1).
      * @public
      * @readonly
      */
     readonly partyNumber: PartyNumber;
     /**
      * @summary `screeningIndicator`.
+     * @description
+     *
+     * Who provided the number, and which network screened it (ECMA-165 Annex B
+     * Table B.1).
      * @public
      * @readonly
      */
     readonly screeningIndicator: ScreeningIndicator;
     /**
      * @summary `partySubaddress`.
+     * @description
+     *
+     * Optional subaddress. User-specified coding is not recommended; an NSAP
+     * subaddress follows ITU-T X.213 (Table B.1).
      * @public
      * @readonly
      */

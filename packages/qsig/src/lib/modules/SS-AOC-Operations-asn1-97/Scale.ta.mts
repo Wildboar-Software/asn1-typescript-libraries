@@ -4,7 +4,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Scale
  * @description
- * 
+ *
+ * Unit of `LengthOfTimeUnit`: 0,01 s, 0,1 s, 1 s, 10 s, 1 min, 1 hour, or 24
+ * hours (ECMA-211 §A.1.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,7 +41,13 @@ enum _enum_for_Scale {
 /**
  * @summary Scale
  * @description
- * 
+ *
+ * Unit of `LengthOfTimeUnit`: 0,01 s, 0,1 s, 1 s, 10 s, 1 min, 1 hour, or 24
+ * hours (ECMA-211 §A.1.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -58,7 +70,13 @@ type Scale = _enum_for_Scale;
 /**
  * @summary Scale
  * @description
- * 
+ *
+ * Unit of `LengthOfTimeUnit`: 0,01 s, 0,1 s, 1 s, 10 s, 1 min, 1 hour, or 24
+ * hours (ECMA-211 §A.1.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -80,14 +98,18 @@ const Scale = _enum_for_Scale;
 
 /**
  * @summary Scale_oneHundredthSecond
+ * @description 0,01 s (ECMA-211 §A.1.3.1).
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
 const Scale_oneHundredthSecond: Scale = Scale.oneHundredthSecond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oneHundredthSecond
+ * @description Alias of {@link Scale_oneHundredthSecond}.
  * @constant
  * @type {number}
  */
@@ -96,14 +118,18 @@ const oneHundredthSecond: Scale = Scale.oneHundredthSecond; /* SHORT_NAMED_ENUME
 
 /**
  * @summary Scale_oneTenthSecond
+ * @description 0,1 s (ECMA-211 §A.1.3.1).
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
 const Scale_oneTenthSecond: Scale = Scale.oneTenthSecond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oneTenthSecond
+ * @description Alias of {@link Scale_oneTenthSecond}.
  * @constant
  * @type {number}
  */
@@ -112,14 +138,18 @@ const oneTenthSecond: Scale = Scale.oneTenthSecond; /* SHORT_NAMED_ENUMERATED_VA
 
 /**
  * @summary Scale_oneSecond
+ * @description 1 s (ECMA-211 §A.1.3.1).
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
 const Scale_oneSecond: Scale = Scale.oneSecond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oneSecond
+ * @description Alias of {@link Scale_oneSecond}.
  * @constant
  * @type {number}
  */
@@ -128,14 +158,18 @@ const oneSecond: Scale = Scale.oneSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Scale_tenSeconds
+ * @description 10 s (ECMA-211 §A.1.3.1).
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
 const Scale_tenSeconds: Scale = Scale.tenSeconds; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tenSeconds
+ * @description Alias of {@link Scale_tenSeconds}.
  * @constant
  * @type {number}
  */
@@ -144,14 +178,18 @@ const tenSeconds: Scale = Scale.tenSeconds; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Scale_oneMinute
+ * @description 1 min (ECMA-211 §A.1.3.1).
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
 const Scale_oneMinute: Scale = Scale.oneMinute; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oneMinute
+ * @description Alias of {@link Scale_oneMinute}.
  * @constant
  * @type {number}
  */
@@ -160,14 +198,18 @@ const oneMinute: Scale = Scale.oneMinute; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Scale_oneHour
+ * @description 1 hour (ECMA-211 §A.1.3.1).
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
 const Scale_oneHour: Scale = Scale.oneHour; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oneHour
+ * @description Alias of {@link Scale_oneHour}.
  * @constant
  * @type {number}
  */
@@ -176,14 +218,18 @@ const oneHour: Scale = Scale.oneHour; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Scale_twentyFourHours
+ * @description 24 hours (ECMA-211 §A.1.3.1).
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
 const Scale_twentyFourHours: Scale = Scale.twentyFourHours; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary twentyFourHours
+ * @description Alias of {@link Scale_twentyFourHours}.
  * @constant
  * @type {number}
  */

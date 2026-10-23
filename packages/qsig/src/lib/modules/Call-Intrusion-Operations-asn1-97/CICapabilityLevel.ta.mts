@@ -4,7 +4,17 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CICapabilityLevel
  * @description
- * 
+ *
+ * Call Intrusion Capability Level of the calling user (ECMA-203
+ * §6.3.1; ECMA-202 §6.2.1). Values run from 1 (lowest) to 3
+ * (highest). Sent in `callIntrusionRequest` (ECMA-203 §6.6.1.1).
+ * Intrusion proceeds only when this value is higher than the CIPL
+ * of both the called user and the unwanted user (§6.6.2.1.1;
+ * ECMA-202 §6.1.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-203/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-202/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,7 +37,17 @@ enum _enum_for_CICapabilityLevel {
 /**
  * @summary CICapabilityLevel
  * @description
- * 
+ *
+ * Call Intrusion Capability Level of the calling user (ECMA-203
+ * §6.3.1; ECMA-202 §6.2.1). Values run from 1 (lowest) to 3
+ * (highest). Sent in `callIntrusionRequest` (ECMA-203 §6.6.1.1).
+ * Intrusion proceeds only when this value is higher than the CIPL
+ * of both the called user and the unwanted user (§6.6.2.1.1;
+ * ECMA-202 §6.1.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-203/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-202/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -46,7 +66,17 @@ type CICapabilityLevel = _enum_for_CICapabilityLevel;
 /**
  * @summary CICapabilityLevel
  * @description
- * 
+ *
+ * Call Intrusion Capability Level of the calling user (ECMA-203
+ * §6.3.1; ECMA-202 §6.2.1). Values run from 1 (lowest) to 3
+ * (highest). Sent in `callIntrusionRequest` (ECMA-203 §6.6.1.1).
+ * Intrusion proceeds only when this value is higher than the CIPL
+ * of both the called user and the unwanted user (§6.6.2.1.1;
+ * ECMA-202 §6.1.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-203/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-202/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -64,6 +94,12 @@ const CICapabilityLevel = _enum_for_CICapabilityLevel;
 
 /**
  * @summary CICapabilityLevel_intrusionLowProt
+ * @description
+ *
+ * Lowest CICL, value 1 (ECMA-202 §6.2.1; ECMA-203 §6.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-203/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-202/
  * @constant
  * @type {number}
  */
@@ -72,6 +108,7 @@ const CICapabilityLevel_intrusionLowProt: CICapabilityLevel = CICapabilityLevel.
 
 /**
  * @summary intrusionLowProt
+ * @description Alias of {@link CICapabilityLevel_intrusionLowProt}.
  * @constant
  * @type {number}
  */
@@ -80,6 +117,12 @@ const intrusionLowProt: CICapabilityLevel = CICapabilityLevel.intrusionLowProt; 
 
 /**
  * @summary CICapabilityLevel_intrusionMediumProt
+ * @description
+ *
+ * CICL value 2 (ECMA-202 §6.2.1; ECMA-203 §6.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-203/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-202/
  * @constant
  * @type {number}
  */
@@ -88,6 +131,7 @@ const CICapabilityLevel_intrusionMediumProt: CICapabilityLevel = CICapabilityLev
 
 /**
  * @summary intrusionMediumProt
+ * @description Alias of {@link CICapabilityLevel_intrusionMediumProt}.
  * @constant
  * @type {number}
  */
@@ -96,6 +140,12 @@ const intrusionMediumProt: CICapabilityLevel = CICapabilityLevel.intrusionMedium
 
 /**
  * @summary CICapabilityLevel_intrusionHighProt
+ * @description
+ *
+ * Highest CICL, value 3 (ECMA-202 §6.2.1; ECMA-203 §6.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-203/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-202/
  * @constant
  * @type {number}
  */
@@ -104,6 +154,7 @@ const CICapabilityLevel_intrusionHighProt: CICapabilityLevel = CICapabilityLevel
 
 /**
  * @summary intrusionHighProt
+ * @description Alias of {@link CICapabilityLevel_intrusionHighProt}.
  * @constant
  * @type {number}
  */

@@ -11,7 +11,12 @@ import { SmsExtension, _decode_SmsExtension, _encode_SmsExtension } from "../Sho
 /**
  * @summary SmsStatusReportRes
  * @description
- * 
+ *
+ * Result of `smsStatusReport` (ECMA-325 Annex E.8). Annex E.8 requires one or
+ * both of `protocolIdentifier` and `userData`. The choice also allows `null`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +32,20 @@ export
 class SmsStatusReportRes {
     /**
      * @summary `smsStatusReportResponseChoice`.
+     * @description
+     *
+     * Protocol identifier, user data, or both. `null` is in the choice; Annex
+     * E.8 does not describe it (ECMA-325 §E.8).
      * @public
      * @readonly
      */
     readonly smsStatusReportResponseChoice: SmsStatusReportResponseChoice;
     /**
      * @summary `smsExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. This edition defines none in `SmsExtSet`
+     * (ECMA-325 §6.3.1).
      * @public
      * @readonly
      */

@@ -9,7 +9,15 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary MessageReference
  * @description
- * 
+ *
+ * Integer 0..255 identifying a Short Message or a Command (ECMA-325 §E.1.1,
+ * §E.10.1). The Sending User allocates it, or the Sending User PINX does if
+ * the user does not. It increments by one for each new Short Message and each
+ * Command and wraps from 255 to 0. On a status report, an Enquiry uses the
+ * original Short Message reference instead (§E.7.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -5,7 +5,18 @@ import { DummyArg, _decode_DummyArg, _encode_DummyArg } from "../Single-Step-Cal
 /**
  * @summary ssctPostDial
  * @description
- * 
+ *
+ * Unconfirmed. Rerouting PINX to Transferred PINX when
+ * `rerouteingNumber` in `ssctInitiate` is not a complete number.
+ * Asks User B for the remaining digits, which come back in
+ * `ssctDigitInfo`. ROSE local 101. Interpretation APDU is
+ * `rejectAnyUnrecognisedInvokePdu` or omitted. NFE `destinationEntity`
+ * is `endPINX`. Sending this invoke starts timer T3 (14 s to 16 s)
+ * and state SSCT-Await-Info. The argument carries no standardized
+ * elements. ECMA-300 §6.3.1, §6.3.2.1, §6.5.2.1, §6.9.3.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-300/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

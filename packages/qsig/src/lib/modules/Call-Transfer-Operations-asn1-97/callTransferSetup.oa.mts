@@ -12,7 +12,27 @@ import { supplementaryServiceInteractionNotAllowed } from "../General-Error-List
 /**
  * @summary callTransferSetup
  * @description
- * 
+ *
+ * Primary PINX to Secondary PINX, in the SETUP of the new connection
+ * during transfer by rerouteing. `callIdentity` is the value from
+ * `callTransferInitiate`. The result is sent in CONNECT when the
+ * secondary call is Active, in ALERTING when it is not, and in
+ * PROGRESS at an outgoing gateway whose secondary call is Incoming
+ * Call Proceeding or Overlap Receiving. ROSE local 10. Interpretation
+ * APDU: `clearCallIfAnyInvokePduNotRecognised` (an unrecognised invoke
+ * clears the new call). NFE `destinationEntity` is `endPINX`.
+ * Errors: `notAvailable`, `invalidCallState`,
+ * `invalidRerouteingNumber`, `unrecognizedCallIdentity`,
+ * `unspecified`, `supplementaryServiceInteractionNotAllowed`.
+ * If `callIdentity` matches no entity in CT-Await-Setup, the Secondary
+ * PINX clears the new connection, either with cause 29 and
+ * `unrecognizedCallIdentity` or with a Cause such as 1 and no return
+ * error. ECMA-178 §6.3.1, §6.3.2.1, §6.5.2.3, §6.5.3.3, §6.5.3.4,
+ * §6.7.1.1; ECMA-177 §8.2.1.5.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-178/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-177/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

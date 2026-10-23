@@ -9,7 +9,14 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary MWIDeactivateArg_argumentExt
  * @description
- * 
+ *
+ * Optional manufacturer-specific extension on `mWIDeactivate`. ECMA-242 §6.3.1
+ * defines `MWIExtSet` as `{...}` and names no member. It does not say when to
+ * send one extension rather than several.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

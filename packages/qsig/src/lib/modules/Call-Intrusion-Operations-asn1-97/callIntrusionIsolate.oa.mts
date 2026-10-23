@@ -9,7 +9,24 @@ import { supplementaryServiceInteractionNotAllowed } from "../General-Error-List
 /**
  * @summary callIntrusionIsolate
  * @description
- * 
+ *
+ * After a conference intrusion, disconnects the unwanted user
+ * (ECMA-203 §6.6.1.2, §6.6.2.2). Optional. The Originating PINX
+ * sends the invoke in FACILITY from CI-Orig-Invoked and starts
+ * timer T2 (at least 30 s, §6.10.2). Local code 45. The Terminating
+ * PINX leaves the calling and called users connected, returns a
+ * result, sends `isolationThroughIntrusion` to the unwanted user,
+ * and enters CI-Dest-Isolated. If isolation is not possible it
+ * returns an error and stays in CI-Dest-Invoked. The ERRORS set is
+ * `notAvailable`, `unspecified`, and
+ * `supplementaryServiceInteractionNotAllowed` (§6.3.1). §6.6.2.2
+ * does not say which of those is sent.
+ *
+ * §6.6.1.2.2 names the return error `callIntrusionIsolationRequest`.
+ * The operation defined in §6.3.1 is `callIntrusionIsolate`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-203/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

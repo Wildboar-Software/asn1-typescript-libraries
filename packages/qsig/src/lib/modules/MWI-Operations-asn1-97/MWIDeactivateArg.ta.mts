@@ -13,7 +13,13 @@ import { MWIDeactivateArg_argumentExt, _decode_MWIDeactivateArg_argumentExt, _en
 /**
  * @summary MWIDeactivateArg
  * @description
- * 
+ *
+ * Argument of `mWIDeactivate`. The PISN number and the service for which no
+ * message remains are required (ECMA-241 §6.2.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,24 +40,39 @@ export
 class MWIDeactivateArg {
     /**
      * @summary `servedUserNr`.
+     * @description PISN number of the Served User (ECMA-242 §6.5.1.1.1).
      * @public
      * @readonly
      */
     readonly servedUserNr: PartyNumber;
     /**
      * @summary `basicService`.
+     * @description
+     *
+     * Service for which there is no longer a message waiting (ECMA-241
+     * §6.2.2.1).
      * @public
      * @readonly
      */
     readonly basicService: BasicService;
     /**
      * @summary `msgCentreId`.
+     * @description
+     *
+     * Message Centre at which the messages were retrieved. Mandatory if a
+     * previous activation for this service included it, although the ASN.1
+     * marks it OPTIONAL (ECMA-241 §7.2.1.2 note 3, ECMA-242 §6.3.1).
      * @public
      * @readonly
      */
     readonly msgCentreId: OPTIONAL<MsgCentreId>;
     /**
      * @summary `argumentExt`.
+     * @description
+     *
+     * Optional manufacturer-specific extension on `mWIDeactivate`. ECMA-242
+     * §6.3.1 defines `MWIExtSet` as `{...}` and names no member. It does not
+     * say when to send one extension rather than several.
      * @public
      * @readonly
      */

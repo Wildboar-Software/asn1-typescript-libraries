@@ -12,7 +12,27 @@ import { unspecified } from "../Call-Diversion-Operations-asn1-97/unspecified.oa
 /**
  * @summary interrogateDiversionQ
  * @description
- * 
+ *
+ * Remote interrogation of CFU, CFB, or CFNR. The Interrogating PINX sends this
+ * to the Served User PINX on a call-independent signalling connection (ECMA-174
+ * §6.5.8.1). ROSE local code 17. The result is an `IntResultList` when the
+ * request is valid and that Call Forwarding is activated (§6.5.3.1.3).
+ * `interrogatingUserNr` may be taken into account.
+ *
+ * If the request is not valid, or that type of Call Forwarding is not
+ * activated, the Served User PINX returns an error (§6.5.3.2.3). Timer T4 at
+ * the Interrogating PINX is at least 15 s; expiry is treated as a reject
+ * (§6.9.4, §6.5.8.2).
+ *
+ * Errors: `userNotSubscribed`, `notAvailable`, `invalidServedUserNr`,
+ * `temporarilyUnavailable`, `notAuthorized`, and `unspecified`. The procedures
+ * do not map these codes. Stage 1 interrogation failures include service not
+ * subscribed, insufficient information, and a basic service that is not
+ * subscribed (ECMA-173 §6.2.3.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-173/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

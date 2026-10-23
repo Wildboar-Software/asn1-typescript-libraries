@@ -12,7 +12,15 @@ import { DNDDeactivateArg_argumentExtension, _decode_DNDDeactivateArg_argumentEx
 /**
  * @summary DNDDeactivateArg
  * @description
- * 
+ *
+ * Remote SS-DND deactivation request (ECMA-194 §6.5.6.1.2;
+ * ECMA-193 §8.2.1.7). Identifies the basic service and the served
+ * user's PISN number. Deactivation is refused with `notActivated`
+ * when SS-DND is not active for that pair (ECMA-194 §6.5.6.2.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-194/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-193/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,18 +40,33 @@ export
 class DNDDeactivateArg {
     /**
      * @summary `basicService`.
+     * @description
+     *
+     * Basic service to deactivate, or all basic services for which
+     * SS-DND is subscribed (ECMA-193 §6.2.2.1.2, §8.2.1.7 NOTE 25).
+     * The Served User PINX checks consistency of this element
+     * (ECMA-194 §6.5.6.1.2).
      * @public
      * @readonly
      */
     readonly basicService: BasicService;
     /**
      * @summary `servedUserNr`.
+     * @description
+     *
+     * PISN number for which SS-DND shall no longer apply. Required
+     * on a remote deactivation (ECMA-193 §6.2.2.1.2, §8.2.1.7
+     * NOTE 26).
      * @public
      * @readonly
      */
     readonly servedUserNr: PartyNumber;
     /**
      * @summary `argumentExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-194 §6.3.1 defines the
+     * CHOICE and leaves `DNDExtSet` empty.
      * @public
      * @readonly
      */

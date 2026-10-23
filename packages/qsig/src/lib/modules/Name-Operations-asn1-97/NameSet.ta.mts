@@ -11,7 +11,13 @@ import { CharacterSet, _decode_CharacterSet, _encode_CharacterSet } from "../Nam
 /**
  * @summary NameSet
  * @description
- * 
+ *
+ * A name and an optional character set, used by the extended presentation
+ * alternatives (ECMA-164 §6.1). If `characterSet` is absent, ISO 8859-1 is
+ * implied.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-164/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +33,19 @@ export
 class NameSet {
     /**
      * @summary `nameData`.
+     * @description
+     *
+     * Octets of the name, 1 to 50 octets (ECMA-164 §6.1).
      * @public
      * @readonly
      */
     readonly nameData: NameData;
     /**
      * @summary `characterSet`.
+     * @description
+     *
+     * Character set of `nameData`. If absent, ISO 8859-1 is implied (ECMA-164
+     * §6.1).
      * @public
      * @readonly
      */

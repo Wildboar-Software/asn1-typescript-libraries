@@ -11,7 +11,13 @@ import { LrExtension, _decode_LrExtension, _encode_LrExtension } from "../WTM-Lo
 /**
  * @summary LocInfoCheckRes
  * @description
- * 
+ *
+ * Result of `locInfoCheck` (ECMA-302 §7.6). The receiver returns the outcome of
+ * comparing its database with the request. §7.6 is silent on which outcome is
+ * `locInfChk-correct`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-302/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +33,22 @@ export
 class LocInfoCheckRes {
     /**
      * @summary `checkResult`.
+     * @description
+     *
+     * Outcome of the HDB or VDB comparison (§7.6.1.1, §7.6.2.1). §7.6 is silent
+     * on what either value requires the invoker to do.
+     *
      * @public
      * @readonly
      */
     readonly checkResult: CheckResult;
     /**
      * @summary `argExtension`.
+     * @description
+     *
+     * Manufacturer-specific data. `WTMLRExtSet` assigns no extensions (ECMA-302
+     * §6.3.1).
+     *
      * @public
      * @readonly
      */

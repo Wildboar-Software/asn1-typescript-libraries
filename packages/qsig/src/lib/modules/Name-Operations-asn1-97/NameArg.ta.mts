@@ -9,7 +9,16 @@ import { NameArg_nameSequence, _decode_NameArg_nameSequence, _encode_NameArg_nam
 /**
  * @summary NameArg
  * @description
- * 
+ *
+ * Argument of `callingName`, `calledName`, `connectedName`, and `busyName`
+ * (ECMA-164 §6.1). `name` is the name alone. `nameSequence` is the same name
+ * plus an optional manufacturer-specific extension. The procedures select
+ * `namePresentationAllowed`, `namePresentationRestricted`, or
+ * `nameNotAvailable` and do not say when to use `name` rather than
+ * `nameSequence` (§7.4, §8.4).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-164/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

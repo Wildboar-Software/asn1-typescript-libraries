@@ -4,7 +4,14 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary notActivated
  * @description
- * 
+ *
+ * SS-DND is not activated for the PISN number and basic service in
+ * the deactivation request (ECMA-194 §6.5.6.2.2). Returned on
+ * `doNotDisturbDeactivateQ`. ROSE local CODE 43. No parameter.
+ * ECMA-194 gives no other use.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-194/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

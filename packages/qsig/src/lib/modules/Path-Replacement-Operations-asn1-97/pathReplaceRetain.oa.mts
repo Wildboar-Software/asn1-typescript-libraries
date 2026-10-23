@@ -15,7 +15,26 @@ import { unspecified } from "../Path-Replacement-Operations-asn1-97/unspecified.
 /**
  * @summary pathReplaceRetain
  * @description
- * 
+ *
+ * Optional. Cooperating PINX or Transit PINX to the next PINX on the
+ * old connection, asking that PINX to keep the connection that far and
+ * continue replacement beyond it. The NFE is omitted so the next PINX
+ * processes the invoke; a PINX that does not support retention rejects
+ * it. ROSE local 6. Interpretation APDU is omitted or
+ * `rejectAnyUnrecognisedInvokePdu`.
+ * `callIdentity` and `rerouteingNumber` are copied from
+ * `pathReplacePropose`, or from the retain that this PINX received.
+ * On a return result the Cooperating PINX enters PR-Coop-Idle. A
+ * Transit PINX forwards that result to the preceding PINX and enters
+ * PR-Transit-Idle. Timer T4 (at least 30 s) guards the response.
+ * On error or reject the PINX either sets up the new connection itself
+ * or returns an error to the preceding PINX. From the Cooperating PINX
+ * that error is a `pathReplacePropose` error. `notAvailable` is
+ * listed; §6.6 does not say when it is chosen.
+ * ECMA-176 §6.3.2.1, §6.6.1, §6.6.2, §6.6.3, §6.10.4.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-176/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

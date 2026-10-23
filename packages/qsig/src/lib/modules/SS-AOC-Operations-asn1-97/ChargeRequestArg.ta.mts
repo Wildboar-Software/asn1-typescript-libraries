@@ -12,7 +12,13 @@ import { ChargeRequestArg_chargeReqArgExtension, _decode_ChargeRequestArg_charge
 /**
  * @summary ChargeRequestArg
  * @description
- * 
+ *
+ * Argument of `chargeRequest`: the advice-mode combinations the Originating
+ * PINX will accept, in preference order (ECMA-212 §6.6.1.1.4).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +37,23 @@ export
 class ChargeRequestArg {
     /**
      * @summary `adviceModeCombinations`.
+     * @description
+     *
+     * Zero to seven acceptable combinations, most preferred first. Zero means
+     * any combination is acceptable and none is preferred (ECMA-212
+     * §6.6.1.1.4). While AOC is already active, at least one element is
+     * required (§6.6.1.1.2).
      * @public
      * @readonly
      */
     readonly adviceModeCombinations: AdviceModeCombination[];
     /**
      * @summary `chargeReqArgExtension`.
+     * @description
+     *
+     * Optional manufacturer-specific extension on `chargeRequest invoke`.
+     * ECMA-212 §6.3.1 defines `AOCExtSet` as `{...}` and names no member. It
+     * does not say when to send one extension rather than several.
      * @public
      * @readonly
      */

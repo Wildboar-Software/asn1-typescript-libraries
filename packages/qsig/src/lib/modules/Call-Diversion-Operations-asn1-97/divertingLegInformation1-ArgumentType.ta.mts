@@ -13,7 +13,12 @@ import { _decode_divertingLegInformation1_ArgumentType_extension, _encode_divert
 /**
  * @summary divertingLegInformation1_ArgumentType
  * @description
- * 
+ *
+ * Argument of `divertingLegInformation1`, from the Rerouteing PINX to the
+ * Originating PINX (ECMA-174 §6.3.1, §6.5.4.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,24 +39,45 @@ export
 class divertingLegInformation1_ArgumentType {
     /**
      * @summary `diversionReason`.
+     * @description
+     *
+     * Reason for this diversion, copied from `rerouteingReason` (ECMA-174
+     * §6.5.4.1). A further `cfu` or `cfb` is not notified to the calling user;
+     * a further `cfnr` may be (§6.5.1.1).
      * @public
      * @readonly
      */
     readonly diversionReason: DiversionReason;
     /**
      * @summary `subscriptionOption`.
+     * @description
+     *
+     * Served user's notification choice, copied from `callRerouteing` (ECMA-174
+     * §6.5.4.1). `noNotification` suppresses notification of diversion to the
+     * calling user. Any earlier `noNotification` on this call also suppresses a
+     * later CFNR notification (§6.5.1.1).
      * @public
      * @readonly
      */
     readonly subscriptionOption: SubscriptionOption;
     /**
      * @summary `nominatedNr`.
+     * @description
+     *
+     * Diverted-to number, taken from `calledAddress` of `callRerouteing`
+     * (ECMA-174 §6.5.4.1). Not presented to the calling user until
+     * `divertingLegInformation3`, and only when the conditions in §6.5.1.1 are
+     * met.
      * @public
      * @readonly
      */
     readonly nominatedNr: PartyNumber;
     /**
      * @summary `extension`.
+     * @description
+     *
+     * Manufacturer-specific extension from `DiversionExtensionSet`. The
+     * standardized set is empty (ECMA-174 §6.3.1).
      * @public
      * @readonly
      */

@@ -12,7 +12,13 @@ import { AocFinalArg_finalArgExtension, _decode_AocFinalArg_finalArgExtension, _
 /**
  * @summary AocFinalArg
  * @description
- * 
+ *
+ * Argument of `aocFinal`: the total recorded charge, optionally tied back to
+ * the call by a charging association (ECMA-212 §6.3.1, §4.2.6).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,18 +45,32 @@ export
 class AocFinalArg {
     /**
      * @summary `finalCharge`.
+     * @description
+     *
+     * Total recorded for the call, free of charge, or total not available
+     * (ECMA-211 §C.1.1).
      * @public
      * @readonly
      */
     readonly finalCharge: AocFinalArg_finalCharge;
     /**
      * @summary `chargingAssociation`.
+     * @description
+     *
+     * Optional tie between this total and the call (ECMA-212 §4.2.6). Copied
+     * from `aocComplete` or `aocDivChargeReq` when that element was present
+     * (§6.6.2.3.1, §6.6.2.4.1).
      * @public
      * @readonly
      */
     readonly chargingAssociation: OPTIONAL<ChargingAssociation>;
     /**
      * @summary `finalArgExtension`.
+     * @description
+     *
+     * Optional manufacturer-specific extension on `aocFinal`. ECMA-212 §6.3.1
+     * defines `AOCExtSet` as `{...}` and names no member. It does not say when
+     * to send one extension rather than several.
      * @public
      * @readonly
      */

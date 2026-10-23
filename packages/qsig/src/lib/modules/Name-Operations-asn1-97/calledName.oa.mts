@@ -5,7 +5,21 @@ import { NameArg, _decode_NameArg, _encode_NameArg } from "../Name-Operations-as
 /**
  * @summary calledName
  * @description
- * 
+ *
+ * Optional name of the alerting user (SS-CONP). The Terminating PINX may send
+ * it to the Originating PINX in ALERTING when alerting starts (ECMA-164
+ * §8.4.1.1; ECMA-163 §7.1.1). Unconfirmed. ROSE local code 1. No errors.
+ *
+ * Use `namePresentationAllowed`, `namePresentationRestricted`, or
+ * `nameNotAvailable` as for `callingName`. The Originating PINX may deliver an
+ * allowed name to the calling user. A restricted name yields only the
+ * presentation indicator, unless the calling user can override the restriction
+ * (ECMA-164 §8.4.2.1). If the invoke is absent, or the name is not available,
+ * only "name not available" may be given.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-164/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-163/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

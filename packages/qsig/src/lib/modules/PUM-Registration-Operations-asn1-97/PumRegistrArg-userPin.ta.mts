@@ -9,7 +9,14 @@ import { UserPin, _decode_UserPin, _encode_UserPin } from "../PUM-Registration-O
 /**
  * @summary PumRegistrArg_userPin
  * @description
- * 
+ *
+ * PIN on `pumRegistr` (ECMA-282 §6.3.1). `pumUserPin` is the PUM user's PIN,
+ * included when the Visitor PINX has it (§6.5.1.1). `activatingUserPin` is the
+ * activating user's PIN on a remote registration (§6.5.6.1). The octet encoding
+ * is not specified.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-282/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

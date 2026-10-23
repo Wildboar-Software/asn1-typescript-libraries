@@ -8,7 +8,14 @@ import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addres
 /**
  * @summary AddressInformation
  * @description
- * 
+ *
+ * A party number used as a PINX address in the Network Facility Extension
+ * (ECMA-165 §11.3.3.1). §4.30: a complete PISN number, as defined in ECMA-155,
+ * that unambiguously identifies the addressed PINX or an addressable entity
+ * associated with it.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

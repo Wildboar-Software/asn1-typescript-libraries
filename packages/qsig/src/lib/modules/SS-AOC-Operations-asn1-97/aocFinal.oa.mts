@@ -5,7 +5,20 @@ import { AocFinalArg, _decode_AocFinalArg, _encode_AocFinalArg } from "../SS-AOC
 /**
  * @summary aocFinal
  * @description
- * 
+ *
+ * Final recorded charges, local code 61, no return result. The Outgoing Gateway
+ * PINX sends it in a DISCONNECT when the accounting function supplies the final
+ * charge, including after `getFinalCharge` (ECMA-212 §6.6.2.1). After transfer
+ * or diversion, when the charged user has left the call, it is sent in the
+ * SETUP of a call-independent signalling connection; `finalBillingId` is
+ * `callTransfer` or the diversion cause (§6.6.2.3.1, §6.6.2.4.1).
+ * Interpretation APDU is `discardAnyUnrecognisedInvokePdu` (§6.3.2.1). Supports
+ * AOC-E and the total at the end of AOC-D (ECMA-212 §6.1, ECMA-211 §7.2.2.2,
+ * §8.2.2.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

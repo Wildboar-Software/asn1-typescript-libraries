@@ -4,7 +4,14 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary shortTermRejection
  * @description
- * 
+ *
+ * Transient rejection of `ccbsRequest` or `ccnrRequest` (ECMA-186
+ * §6.5.3.2.1). The examples given are a duplicate CC Request and an
+ * excess of active CC Requests. The Terminating PINX sends it in
+ * RELEASE with cause 16. Local code 1010.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-186/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -9,7 +9,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ValidityPeriodAbs
  * @description
- * 
+ *
+ * Absolute end of the Validity Period (ECMA-325 §E.1.2.2). ISO 8601
+ * GeneralizedTime, size 12..19. After this time the Service Centre deletes the
+ * Short Message.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

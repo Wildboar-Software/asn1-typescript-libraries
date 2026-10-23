@@ -4,7 +4,14 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary pumUserFailedAuthentication
  * @description
- * 
+ *
+ * ROSE local CODE 1020. No parameter. Listed on `pumRegistr`, `pumDe-reg`, and
+ * `pumInterrog` (ECMA-282 §6.3.1). Notes in §6.5.1.1, §6.6.1.1, and §6.7.1.1
+ * say that validating a request can involve authentication. Clause 6 is silent
+ * on when to return this error.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-282/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

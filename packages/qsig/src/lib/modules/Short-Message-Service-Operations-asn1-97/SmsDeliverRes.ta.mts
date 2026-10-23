@@ -11,7 +11,12 @@ import { SmsExtension, _decode_SmsExtension, _encode_SmsExtension } from "../Sho
 /**
  * @summary SmsDeliverRes
  * @description
- * 
+ *
+ * Result of `smsDeliver` (ECMA-325 Annex E.5). The choice carries neither,
+ * one, or both of `protocolIdentifier` and `userData`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +32,20 @@ export
 class SmsDeliverRes {
     /**
      * @summary `smsDeliverResponseChoice`.
+     * @description
+     *
+     * Nothing (`null`), only the protocol identifier, only user data, or both
+     * (ECMA-325 §E.5).
      * @public
      * @readonly
      */
     readonly smsDeliverResponseChoice: SmsDeliverResChoice;
     /**
      * @summary `smsExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. This edition defines none in `SmsExtSet`
+     * (ECMA-325 §6.3.1).
      * @public
      * @readonly
      */

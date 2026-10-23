@@ -5,7 +5,18 @@ import { CintCondArg, _decode_CintCondArg, _encode_CintCondArg } from "../Call-I
 /**
  * @summary cintCondition
  * @description
- * 
+ *
+ * Tell a preceding PINX of a call-failure condition it may use for
+ * interception immediate (ECMA-221 §6.3.1, §6.6.1). No result. Sent
+ * in DISCONNECT, or in PROGRESS when an in-band tone or announcement
+ * is applied. A Transit PINX that does not itself intercept forwards
+ * the same cause (§6.6.2). ROSE local CODE 68. Unlike the other
+ * CINT operations, NFE `destinationEntity` is `anyTypeOfPINX`.
+ * Interpretation APDU is `discardAnyUnrecognisedInvokePdu`
+ * (§6.3.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-221/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

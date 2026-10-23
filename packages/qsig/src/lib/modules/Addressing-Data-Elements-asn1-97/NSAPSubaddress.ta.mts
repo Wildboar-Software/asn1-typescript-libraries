@@ -9,7 +9,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary NSAPSubaddress
  * @description
- * 
+ *
+ * An NSAP subaddress specified according to ITU-T X.213 (ECMA-165 Annex B Table
+ * B.1). Table B.1 allows 1 to 20 octets and notes that some networks limit the
+ * value, for example to 4 octets. ECMA-155 §10 says an NSAP subaddress conforms
+ * to ISO/IEC 8348 and that a PINX does not alter it in a pure PISN (§10.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

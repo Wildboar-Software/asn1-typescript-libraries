@@ -11,7 +11,24 @@ import { unspecified } from "../WTM-Authentication-Operations-asn1-97/unspecifie
 /**
  * @summary getWtanParam
  * @description
- * 
+ *
+ * SS-WTAN parameter request from the Visitor PINX to the Home PINX (ECMA-306
+ * §7.1, §7.5.1). Local code 75. Used when the Visitor PINX does not already
+ * hold SS-WTAN parameters. §7.5.1.1 requires the challenge received from the
+ * WTM user; the argument also carries `authAlgorithm` (§6.3.1). A session-key
+ * result is used, with that challenge, to compute the response; a
+ * calculated-response result is sent to the WTM user as acceptance. Timer T4 at
+ * the Visitor PINX, in state WtanVisitRequesting, shall be at least 15 s
+ * (§7.9.1).
+ *
+ * Home PINX errors (§7.5.2.2): `invalidServedUserNr` when the identity is
+ * invalid; `notAuthorized` when the user is not authorized for SS-WTAN; the
+ * error received from the Authentication Server PINX; `paramNotAvailable` when
+ * that PINX rejects; `temporarilyUnavailable` when timer T5 expires.
+ * `unspecified` is listed in §6.3.1, which does not say when it is returned.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-306/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

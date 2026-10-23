@@ -11,7 +11,14 @@ import { EnhancedVP, _decode_EnhancedVP, _encode_EnhancedVP } from "../Short-Mes
 /**
  * @summary ValidityPeriodEnh
  * @description
- * 
+ *
+ * Enhanced Validity Period (ECMA-325 §E.1.2.2). `singleShotSM` TRUE means the
+ * Service Centre tries delivery only once. `enhancedVP` may give the period in
+ * relative units, seconds, or semi-octets. The standard says further formats
+ * may be added later.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +34,20 @@ export
 class ValidityPeriodEnh {
     /**
      * @summary `singleShotSM`.
+     * @description
+     *
+     * Default FALSE. TRUE means the Service Centre attempts delivery only once
+     * (ECMA-325 §E.1.2.2).
      * @public
      * @readonly
      */
     readonly singleShotSM: OPTIONAL<BOOLEAN>;
     /**
      * @summary `enhancedVP`.
+     * @description
+     *
+     * Optional period: relative (Table E.2), seconds, or semi-octets (ECMA-325
+     * §E.1.2.2). The standard gives no separate rule for omitting it.
      * @public
      * @readonly
      */

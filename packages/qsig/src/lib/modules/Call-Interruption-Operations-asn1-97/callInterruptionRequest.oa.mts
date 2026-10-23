@@ -5,7 +5,19 @@ import { CPIRequestArg, _decode_CPIRequestArg, _encode_CPIRequestArg } from "../
 /**
  * @summary callInterruptionRequest
  * @description
- * 
+ *
+ * Invoke SS-CPI (ECMA-264 §6.8.1.1). No result. Sent in the SETUP that
+ * establishes the call, carrying the calling user's CPICL. How that level is
+ * assigned is outside the standard. On a congested inter-PINX link the
+ * Originating or Transit PINX becomes the Interrupting PINX and interrupts
+ * an established call whose CPIPL is strictly lower (§6.8.3.1). A call with
+ * no CPICL is not a priority call (§4.14). After interruption the same
+ * argument is placed in the new SETUP (§6.8.3.1). ROSE local CODE 87. NFE
+ * destinationEntity is anyTypeOfPINX. The Interpretation APDU is
+ * discardAnyUnrecognisedInvokePdu (§6.3.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-264/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

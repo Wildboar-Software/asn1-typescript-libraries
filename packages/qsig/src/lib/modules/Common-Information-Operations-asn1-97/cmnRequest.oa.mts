@@ -6,7 +6,20 @@ import { CmnArg, _decode_CmnArg, _encode_CmnArg } from "../Common-Information-Op
 /**
  * @summary cmnRequest
  * @description
- * 
+ *
+ * Solicited ANF-CMN (ECMA-251 §6.6.1.1, §6.6.2.1). The argument carries no
+ * common information; the result is CmnArg. ALWAYS RESPONDS FALSE. During
+ * call establishment it may be sent in SETUP (forward) or in ALERTING,
+ * CONNECT, or PROGRESS (backward), or in FACILITY after the first end-to-end
+ * basic-call message. During the active phase it is sent in FACILITY.
+ * Timer T1 (not less than 30 s, §6.10) runs unless the invoke was
+ * sent in SETUP. A forward SETUP invoke relies on basic-call timers
+ * (§6.6.1.1). The sender waits in CMN-Wait-Answer. ROSE local CODE 84.
+ * NFE `destinationEntity` is `endPINX`. The Interpretation APDU is
+ * omitted or is `rejectAnyUnrecognisedInvokePdu` (§6.3.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-251/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

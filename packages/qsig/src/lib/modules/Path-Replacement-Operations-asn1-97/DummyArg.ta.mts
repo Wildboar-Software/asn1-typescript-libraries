@@ -10,7 +10,14 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary DummyArg
  * @description
- * 
+ *
+ * Argument of `pathReplaceInvite`. The invite carries no standardized
+ * data. `null` is that empty argument. `single` and `multiple` are
+ * manufacturer extensions. ECMA-176 §6.3.1 defines no members of
+ * `PRExtSet`. ECMA-176 §6.5.5.1.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-176/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

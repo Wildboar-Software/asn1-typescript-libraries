@@ -13,7 +13,18 @@ import { unspecified } from "../Do-Not-Disturb-Operations-asn1-97/unspecified.oa
 /**
  * @summary doNotDisturbActivateQ
  * @description
- * 
+ *
+ * Remote activation of SS-DND (ECMA-194 §6.5.3, §6.5.6.1.1).
+ * Call-independent signalling connection (ECMA-165 §7.3). The
+ * Activating PINX starts timer T1 (>= 15 s, §6.11.1) and waits in
+ * DND-aWait. The Served User PINX activates SS-DND at the subscribed
+ * protection level and returns `DNDActivateRes`, or an error
+ * (§6.5.6.2.1). ROSE local CODE 35. The Interpretation APDU is
+ * omitted; NFE `destinationEntity` is `endPINX` (§6.3.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-194/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-193/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -12,7 +12,13 @@ import { MCMExtensions, _decode_MCMExtensions, _encode_MCMExtensions } from "../
 /**
  * @summary MCMInterrogateArg
  * @description
- * 
+ *
+ * Argument of `mCMInterrogate` (ECMA-347 §6.5.2.1.1). The
+ * Served User asks how monitoring is set for the listed
+ * Message Types.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,18 +36,30 @@ export
 class MCMInterrogateArg {
     /**
      * @summary `partyInfo`.
+     * @description
+     *
+     * Served User address and Message Centre identity.
+     * ECMA-347 §6.5.2.1.1.
      * @public
      * @readonly
      */
     readonly partyInfo: PartyInfo;
     /**
      * @summary `interrogateInfo`.
+     * @description
+     *
+     * Message Types whose configuration is requested.
+     * ECMA-347 §6.5.2.1.1.
      * @public
      * @readonly
      */
     readonly interrogateInfo: MessageType[];
     /**
      * @summary `extensions`.
+     * @description
+     *
+     * Manufacturer-specific extension. `MCMExtSet` defines none.
+     * The procedures do not mention this component. ECMA-347 §6.3.1.
      * @public
      * @readonly
      */

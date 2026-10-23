@@ -11,7 +11,12 @@ import { SDExtension, _decode_SDExtension, _encode_SDExtension } from "../SS-SD-
 /**
  * @summary KeypadArg
  * @description
- * 
+ *
+ * Argument of `keypad`: the Client User's keypad information, and an optional
+ * manufacturer extension (ECMA-311 §6.5.1.1.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-311/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +32,21 @@ export
 class KeypadArg {
     /**
      * @summary `keypadString`.
+     * @description
+     *
+     * The Client User's keypad information, coded as a normal-size BMP string
+     * (ECMA-311 §6.5.1.1.2). The extended display size is not available here.
      * @public
      * @readonly
      */
     readonly keypadString: BMPStringNormal;
     /**
      * @summary `extension`.
+     * @description
+     *
+     * Optional manufacturer-specific extension on `keypad`. ECMA-311 §6.3.1
+     * defines `SDExtSet` as `{...}` and names no member. It does not say when
+     * to send one extension rather than several.
      * @public
      * @readonly
      */

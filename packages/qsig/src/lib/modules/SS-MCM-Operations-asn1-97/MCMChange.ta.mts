@@ -11,7 +11,22 @@ import { MessageType, _decode_MessageType, _encode_MessageType } from "../SS-MCM
 /**
  * @summary MCMChange
  * @description
- * 
+ *
+ * The change requested by `mCMService` (ECMA-347
+ * §6.5.2.1.1, §6.5.1.1.1).
+ *
+ * `activateMCM` starts monitoring of new messages, retrieved
+ * messages, or both, for one or more Message Types, each
+ * with an optional compressed or complete mode. The Message
+ * Centre PINX then runs the update procedure.
+ * `deactivateMCM` stops monitoring the listed Message Types
+ * and does not start an update. `setToDefaultValues`
+ * restores the service-provider default and starts an
+ * update for the Message Types that changed. The default
+ * itself is outside this Standard.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

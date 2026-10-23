@@ -5,7 +5,21 @@ import { NameArg, _decode_NameArg, _encode_NameArg } from "../Name-Operations-as
 /**
  * @summary busyName
  * @description
- * 
+ *
+ * Optional name of a called user who cannot be reached because of busy
+ * (SS-CONP). The Terminating PINX may send it to the Originating PINX in the
+ * message that indicates the busy condition (ECMA-164 §8.4.1.1; ECMA-163
+ * §7.1.1). Unconfirmed. ROSE local code 3. No errors. §8.4.1.1 does not name
+ * that message. The receiving procedure, for `nameNotAvailable` only, also
+ * refers to DISCONNECT (§8.4.2.1).
+ *
+ * Presentation allowed, restricted, or not available is chosen as for
+ * `connectedName`. Delivery to the calling user is optional (ECMA-164
+ * §8.4.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-164/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-163/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

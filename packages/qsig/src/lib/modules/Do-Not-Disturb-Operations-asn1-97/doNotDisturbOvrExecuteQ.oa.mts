@@ -10,7 +10,20 @@ import { unspecified } from "../Do-Not-Disturb-Operations-asn1-97/unspecified.oa
 /**
  * @summary doNotDisturbOvrExecuteQ
  * @description
- * 
+ *
+ * Execute SS-DNDO on a connection already retained by path retention
+ * (ECMA-194 §6.6.2.1.2, §6.6.1.1). Sent in FACILITY on that call
+ * reference after `serviceAvailable` has indicated SS-DNDO. The
+ * Originating PINX runs timer T4 (>= 15 s, §6.11.4) in
+ * DNDO-oAwaitExecResult. Success lets the call proceed as a basic
+ * call and returns the PINX to DND-tIdle. On failure the Terminating
+ * PINX returns an error in FACILITY or DISCONNECT. ROSE local
+ * CODE 39. Argument and result carry no service parameters.
+ * The Interpretation APDU is omitted (§6.3.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-194/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-193/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

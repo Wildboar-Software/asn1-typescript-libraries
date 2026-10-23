@@ -15,7 +15,15 @@ import { CcExtension, _decode_CcExtension, _encode_CcExtension } from "../SS-CC-
 /**
  * @summary CcRequestArg
  * @description
- * 
+ *
+ * Argument of `ccbsRequest` and `ccnrRequest` (ECMA-186 §6.3.1,
+ * §6.5.2.1.3). Sent in the SETUP of a call-independent signalling
+ * connection. It identifies the original call and carries the
+ * Originating PINX's choices for service retention and for keeping
+ * that signalling connection.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-186/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,48 +50,87 @@ export
 class CcRequestArg {
     /**
      * @summary `numberA`.
+     * @description
+     *
+     * Number of User A from the original call, or an indication that
+     * the number is unavailable or restricted (ECMA-186 §6.5.2.1.3).
      * @public
      * @readonly
      */
     readonly numberA: PresentedNumberUnscreened;
     /**
      * @summary `numberB`.
+     * @description
+     *
+     * Number of User B from the original call (ECMA-186 §6.5.2.1.3).
      * @public
      * @readonly
      */
     readonly numberB: PartyNumber;
     /**
      * @summary `service`.
+     * @description
+     *
+     * Bearer capability of the original call, plus Low layer
+     * compatibility and High layer compatibility when they were
+     * available (ECMA-186 §6.3.1, §6.5.2.1.3).
      * @public
      * @readonly
      */
     readonly service: PSS1InformationElement;
     /**
      * @summary `subaddrA`.
+     * @description
+     *
+     * Subaddress of User A, included only when it is available
+     * (ECMA-186 §6.5.2.1.3). The Terminating PINX may discard it
+     * (§6.5.3.1.3).
      * @public
      * @readonly
      */
     readonly subaddrA: OPTIONAL<PartySubaddress>;
     /**
      * @summary `subaddrB`.
+     * @description
+     *
+     * Subaddress of User B, included when it is available (ECMA-186
+     * §6.5.2.1.3). The Terminating PINX may discard it (§6.5.3.1.3).
      * @public
      * @readonly
      */
     readonly subaddrB: OPTIONAL<PartySubaddress>;
     /**
      * @summary `can_retain_service`.
+     * @description
+     *
+     * TRUE when the Originating PINX can use service retention if User
+     * B is busy again after recall. Otherwise omit it or send FALSE
+     * (ECMA-186 §6.5.2.1.3).
      * @public
      * @readonly
      */
     readonly can_retain_service: OPTIONAL<BOOLEAN>;
     /**
      * @summary `retain_sig_connection`.
+     * @description
+     *
+     * TRUE asks to keep the call-independent signalling connection
+     * until SS-CC ends. FALSE asks to release it after this phase.
+     * Omit it to leave the choice to the Terminating PINX (ECMA-186
+     * §6.5.1.2, §6.5.2.1.3). If User A's number is unavailable, the
+     * Terminating PINX retains the connection even when this is FALSE
+     * (§6.5.3.1.3).
      * @public
      * @readonly
      */
     readonly retain_sig_connection: OPTIONAL<BOOLEAN>;
     /**
      * @summary `extension`.
+     * @description
+     *
+     * Manufacturer-specific data from `CCExtSet`. ECMA-186 §6.3.1
+     * leaves that set empty, and §6.5.2.1.3 does not require this
+     * element.
      * @public
      * @readonly
      */

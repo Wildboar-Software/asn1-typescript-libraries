@@ -9,7 +9,15 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary DefinedIDs
  * @description
- * 
+ *
+ * Integer identifiers for authentication algorithms, range 0 to 255 (ECMA-306
+ * §6.3.1). Named values are `ct2` (0), `dect` (1), `gsm` (2), `pci` (3), `pwt`
+ * (4), `us-gsm` (5), `phs` (6), and `tetra` (7). ECMA-306 does not expand these
+ * names, does not assign the other values in the range, and does not define the
+ * algorithms (§1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-306/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,6 +38,8 @@ type DefinedIDs = INTEGER;
 
 /**
  * @summary DefinedIDs_ct2
+ * @description Identifier `ct2` (0). ECMA-306 §6.3.1. Algorithm undefined (§1).
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-306/
  * @constant
  * @type {number}
  */
@@ -38,6 +48,7 @@ const DefinedIDs_ct2: DefinedIDs = 0; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DefinedIDs_ct2
+ * @description Alias of {@link DefinedIDs_ct2}.
  * @constant
  * @type {number}
  */
@@ -46,6 +57,9 @@ const ct2: DefinedIDs = DefinedIDs_ct2; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DefinedIDs_dect
+ * @description
+ * Identifier `dect` (1). ECMA-306 §6.3.1. Algorithm undefined (§1).
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-306/
  * @constant
  * @type {number}
  */
@@ -54,6 +68,7 @@ const DefinedIDs_dect: DefinedIDs = 1; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DefinedIDs_dect
+ * @description Alias of {@link DefinedIDs_dect}.
  * @constant
  * @type {number}
  */
@@ -62,6 +77,8 @@ const dect: DefinedIDs = DefinedIDs_dect; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DefinedIDs_gsm
+ * @description Identifier `gsm` (2). ECMA-306 §6.3.1. Algorithm undefined (§1).
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-306/
  * @constant
  * @type {number}
  */
@@ -70,6 +87,7 @@ const DefinedIDs_gsm: DefinedIDs = 2; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DefinedIDs_gsm
+ * @description Alias of {@link DefinedIDs_gsm}.
  * @constant
  * @type {number}
  */
@@ -78,6 +96,8 @@ const gsm: DefinedIDs = DefinedIDs_gsm; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DefinedIDs_pci
+ * @description Identifier `pci` (3). ECMA-306 §6.3.1. Algorithm undefined (§1).
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-306/
  * @constant
  * @type {number}
  */
@@ -86,6 +106,7 @@ const DefinedIDs_pci: DefinedIDs = 3; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DefinedIDs_pci
+ * @description Alias of {@link DefinedIDs_pci}.
  * @constant
  * @type {number}
  */
@@ -94,6 +115,8 @@ const pci: DefinedIDs = DefinedIDs_pci; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DefinedIDs_pwt
+ * @description Identifier `pwt` (4). ECMA-306 §6.3.1. Algorithm undefined (§1).
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-306/
  * @constant
  * @type {number}
  */
@@ -102,6 +125,7 @@ const DefinedIDs_pwt: DefinedIDs = 4; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DefinedIDs_pwt
+ * @description Alias of {@link DefinedIDs_pwt}.
  * @constant
  * @type {number}
  */
@@ -110,6 +134,9 @@ const pwt: DefinedIDs = DefinedIDs_pwt; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DefinedIDs_us_gsm
+ * @description
+ * Identifier `us-gsm` (5). ECMA-306 §6.3.1. Algorithm undefined (§1).
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-306/
  * @constant
  * @type {number}
  */
@@ -118,6 +145,7 @@ const DefinedIDs_us_gsm: DefinedIDs = 5; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DefinedIDs_us_gsm
+ * @description Alias of {@link DefinedIDs_us_gsm}.
  * @constant
  * @type {number}
  */
@@ -126,6 +154,8 @@ const us_gsm: DefinedIDs = DefinedIDs_us_gsm; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DefinedIDs_phs
+ * @description Identifier `phs` (6). ECMA-306 §6.3.1. Algorithm undefined (§1).
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-306/
  * @constant
  * @type {number}
  */
@@ -134,6 +164,7 @@ const DefinedIDs_phs: DefinedIDs = 6; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DefinedIDs_phs
+ * @description Alias of {@link DefinedIDs_phs}.
  * @constant
  * @type {number}
  */
@@ -142,6 +173,9 @@ const phs: DefinedIDs = DefinedIDs_phs; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DefinedIDs_tetra
+ * @description
+ * Identifier `tetra` (7). ECMA-306 §6.3.1. Algorithm undefined (§1).
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-306/
  * @constant
  * @type {number}
  */
@@ -150,6 +184,7 @@ const DefinedIDs_tetra: DefinedIDs = 7; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DefinedIDs_tetra
+ * @description Alias of {@link DefinedIDs_tetra}.
  * @constant
  * @type {number}
  */

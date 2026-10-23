@@ -9,7 +9,15 @@ import { _decode_BasicService, _encode_BasicService, BasicService } from "../Cal
 /**
  * @summary CallType
  * @description
- * 
+ *
+ * Kind of Requested Call (ECMA-344 §4.2.7, §6.3.1). `basicService` is the
+ * bearer service of a basic call; ECMA-344 imports that type and does not
+ * redefine its values. `cisc` asks for a call-independent signalling
+ * connection. The Co-operating PINX still supplies Bearer Capability and
+ * Channel Identification appropriate to this choice (§6.5.2.1.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-344/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

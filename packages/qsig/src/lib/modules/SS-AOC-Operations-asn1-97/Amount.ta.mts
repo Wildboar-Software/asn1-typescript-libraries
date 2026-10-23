@@ -11,7 +11,13 @@ import { Multiplier, _decode_Multiplier, _encode_Multiplier, _enum_for_Multiplie
 /**
  * @summary Amount
  * @description
- * 
+ *
+ * A currency quantity as an integer and a scale factor. The factor is 0,001,
+ * 0,01, 0,1, 1, 10, 100, or 1000 (ECMA-211 §A.1.3).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +33,20 @@ export
 class Amount {
     /**
      * @summary `currencyAmount`.
+     * @description
+     *
+     * Integer part of the quantity, 0..16777215 (ECMA-212 §6.3.1). ECMA-211
+     * does not state that bound.
      * @public
      * @readonly
      */
     readonly currencyAmount: CurrencyAmount;
     /**
      * @summary `multiplier`.
+     * @description
+     *
+     * Factor of 0,001, 0,01, 0,1, 1, 10, 100, or 1000 applied to
+     * `currencyAmount` (ECMA-211 §A.1.3).
      * @public
      * @readonly
      */

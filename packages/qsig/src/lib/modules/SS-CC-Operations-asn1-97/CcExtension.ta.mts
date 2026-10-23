@@ -10,7 +10,20 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary CcExtension
  * @description
- * 
+ *
+ * Manufacturer-specific SS-CC data, or an explicit empty value
+ * (ECMA-186 §6.3.1). `CCExtSet` is empty in the standard.
+ *
+ * - `none`: no extension.
+ * - `single`: one extension.
+ * - `multiple`: more than one extension.
+ *
+ * `ccPathReserve` and `ccRingout` use this as their whole argument
+ * and result (where a result exists). §6.5 does not say which
+ * alternative those operations send.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-186/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

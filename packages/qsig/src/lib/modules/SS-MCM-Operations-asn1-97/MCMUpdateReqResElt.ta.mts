@@ -17,7 +17,19 @@ import { MCMUpdateReqResElt_argumentExt, _decode_MCMUpdateReqResElt_argumentExt,
 /**
  * @summary MCMUpdateReqResElt
  * @description
- * 
+ *
+ * One element of an `mCMUpdateReq` result (ECMA-347
+ * §6.5.1.1.5). What is present depends on the mode
+ * configured for New Messages of this Message Type.
+ *
+ * Compressed mode may include the count, the priority,
+ * originator, and time of the highest-priority New Message,
+ * and the Message Centre identity. Complete mode may
+ * include the Message Centre identity and the count only.
+ * The procedure requires none of the optional components.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,42 +53,72 @@ export
 class MCMUpdateReqResElt {
     /**
      * @summary `specificMessageType`.
+     * @description
+     *
+     * Message Type the Served User asked about. Present in
+     * both modes. ECMA-347 §6.5.1.1.5.
      * @public
      * @readonly
      */
     readonly specificMessageType: MessageType;
     /**
      * @summary `msgCentreId`.
+     * @description
+     *
+     * Message Centre identity. Optional in both modes.
+     * ECMA-347 §6.5.1.1.5.
      * @public
      * @readonly
      */
     readonly msgCentreId: OPTIONAL<MsgCentreId>;
     /**
      * @summary `nrOfMessages`.
+     * @description
+     *
+     * How many New Messages of this type are waiting.
+     * Optional in both modes. ECMA-347 §6.5.1.1.5.
      * @public
      * @readonly
      */
     readonly nrOfMessages: OPTIONAL<NrOfMessages>;
     /**
      * @summary `originatingNr`.
+     * @description
+     *
+     * Address of the user who left the highest-priority New
+     * Message. Listed for compressed mode only.
+     * ECMA-347 §6.5.1.1.5.
      * @public
      * @readonly
      */
     readonly originatingNr: OPTIONAL<PartyNumber>;
     /**
      * @summary `timestamp`.
+     * @description
+     *
+     * Time the highest-priority New Message was left.
+     * Listed for compressed mode only. ECMA-347 §6.5.1.1.5.
      * @public
      * @readonly
      */
     readonly timestamp: OPTIONAL<TimeStamp>;
     /**
      * @summary `priority`.
+     * @description
+     *
+     * Priority of the highest-priority New Message. 0 is
+     * highest and 9 is lowest (§6.3.1). Listed for
+     * compressed mode only. ECMA-347 §6.5.1.1.5.
      * @public
      * @readonly
      */
     readonly priority: OPTIONAL<INTEGER>;
     /**
      * @summary `argumentExt`.
+     * @description
+     *
+     * Manufacturer-specific extension. `MCMExtSet` defines none.
+     * The procedures do not mention this component. ECMA-347 §6.3.1.
      * @public
      * @readonly
      */

@@ -9,7 +9,13 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary DummyExtension
  * @description
- * 
+ *
+ * Manufacturer-specific extension on the authentication APDUs (ECMA-306
+ * §6.3.1). `extension` carries one extension; `sequOfExtn` carries several.
+ * `WTMAuthExtSet` defines no members.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-306/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

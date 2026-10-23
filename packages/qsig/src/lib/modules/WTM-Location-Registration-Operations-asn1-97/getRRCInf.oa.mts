@@ -8,7 +8,19 @@ import { unspecified } from "../WTM-Location-Registration-Operations-asn1-97/uns
 /**
  * @summary getRRCInf
  * @description
- * 
+ *
+ * Fetch route-restriction information for a WTM user (ANF-WTINFO, ECMA-302
+ * §7.5). The Visitor PINX sends it to the Home PINX. ROSE local CODE 97. The
+ * Home PINX reads the HDB and returns the route restriction class, an
+ * alternative identity, or both, when it has them (§7.5.2.1). If it cannot
+ * retrieve the information, for example because the user is unknown, it returns
+ * an error; §7.5.2.2 is silent on whether that error is `notAvailable` or
+ * `unspecified`. Timer T5, at least 15 s, runs in VisitWaitRRC (§7.10.1). When
+ * SS-WTAT is supported, the Home PINX may put `transferAuthParam` (`authKey` or
+ * `challLen`) in the same message as the result (§7.9.24).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-302/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -12,7 +12,11 @@ import { ReAlertingArg_argumentExtension, _decode_ReAlertingArg_argumentExtensio
 /**
  * @summary ReAlertingArg
  * @description
- * 
+ *
+ * Argument of `recallAlerting` (ECMA-214 §6.3.1, §6.5.1.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-214/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,18 +36,36 @@ export
 class ReAlertingArg {
     /**
      * @summary `alertedNumber`.
+     * @description
+     *
+     * Number of the user being alerted for the recall. Included only when it is
+     * known that presentation restriction does not apply (ECMA-214 §6.5.1.1).
+     * The Primary PINX may give it to user B subject to number presentation
+     * restriction (§6.5.2.1). If CFU or CFB applies, this is the diverted-to
+     * user rather than user A (§6.9.3.1).
      * @public
      * @readonly
      */
     readonly alertedNumber: OPTIONAL<PresentedNumberScreened>;
     /**
      * @summary `alertedName`.
+     * @description
+     *
+     * Name of the user being alerted. Included only when it is known that
+     * presentation restriction does not apply (ECMA-214 §6.5.1.1). The Primary
+     * PINX may give it to user B subject to name presentation restriction
+     * (§6.5.2.1). If CFU or CFB applies, this is the diverted-to user rather
+     * than user A (§6.9.3.1).
      * @public
      * @readonly
      */
     readonly alertedName: OPTIONAL<Name>;
     /**
      * @summary `argumentExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension from `REExtSet`. The standardized set is
+     * empty (ECMA-214 §6.3.1).
      * @public
      * @readonly
      */

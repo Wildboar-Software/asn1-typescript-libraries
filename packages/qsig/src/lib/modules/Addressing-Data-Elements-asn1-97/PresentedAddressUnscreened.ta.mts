@@ -10,7 +10,18 @@ import { Address, _decode_Address, _encode_Address } from "../Addressing-Data-El
 /**
  * @summary PresentedAddressUnscreened
  * @description
- * 
+ *
+ * A party number and optional subaddress, with no screening indicator, together
+ * with a presentation instruction (ECMA-165 Annex B Table B.1).
+ * `presentationAllowedAddress` carries the number or address and allows
+ * presentation. `presentationRestricted` and
+ * `numberNotAvailableDueToInterworking` carry no number.
+ * `presentationRestrictedAddress` still carries the number or address and
+ * indicates that presentation is restricted. Table B.1 does not say which
+ * alternative a PINX chooses.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

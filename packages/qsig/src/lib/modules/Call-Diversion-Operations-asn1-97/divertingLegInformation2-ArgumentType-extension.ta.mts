@@ -9,7 +9,13 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary divertingLegInformation2_ArgumentType_extension
  * @description
- * 
+ *
+ * Manufacturer-specific extension on `divertingLegInformation2`. Either one
+ * extension or a sequence of them, from `DiversionExtensionSet`. The
+ * standardized set is empty (ECMA-174 §6.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

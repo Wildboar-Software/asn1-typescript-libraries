@@ -9,7 +9,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary BMPStringExtended
  * @description
- * 
+ *
+ * BMP string of 2 to 160 octets, used as `displayStringExtended`
+ * (ECMA-311 §6.3.1). Code it per ISO/IEC 10646-1 as a BMPString under ITU-T
+ * X.690. The comment cites no clause of either standard, so it does not state
+ * how many characters that octet bound allows.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-311/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

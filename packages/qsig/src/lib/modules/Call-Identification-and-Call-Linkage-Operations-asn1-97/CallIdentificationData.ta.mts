@@ -12,7 +12,18 @@ import { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../Call-Identif
 /**
  * @summary CallIdentificationData
  * @description
- * 
+ *
+ * One identifier, used for the global call, the thread, or a leg (ECMA-314
+ * §6.3.1). The layout is the globalCallData structure of ECMA-269 §12.2.5,
+ * imported in ECMA-314 Annex D. It is globally unique either by a sub-domain
+ * name plus a sub-domain identifier, or by a globally unique identifier
+ * alone (Annex D, functional requirement 2). When the data is updated, the
+ * timestamp shall also be updated (requirement 3).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-314/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,18 +44,33 @@ export
 class CallIdentificationData {
     /**
      * @summary `switchingSubDomainName`.
+     * @description
+     *
+     * Name of the switching sub-domain that created this data (ECMA-314
+     * Annex D). Required when linkageID is not globally unique; optional
+     * when it is. Used as the last tie-break in §6.5.2.2.
      * @public
      * @readonly
      */
     readonly switchingSubDomainName: OPTIONAL<SwitchingSubDomainName>;
     /**
      * @summary `linkageID`.
+     * @description
+     *
+     * Sub-domain identifier or globally unique identifier (ECMA-314 Annex D,
+     * functional requirement 2). The higher binary value wins a simultaneous
+     * assignment (§6.5.2.2).
      * @public
      * @readonly
      */
     readonly linkageID: CallIdentificationData_linkageID;
     /**
      * @summary `timeStamp`.
+     * @description
+     *
+     * Time this data was created. Update it whenever the global or thread
+     * data is updated (ECMA-314 Annex D, requirement 3). A later timestamp
+     * wins when the linkage identifiers are equal (§6.5.2.2).
      * @public
      * @readonly
      */

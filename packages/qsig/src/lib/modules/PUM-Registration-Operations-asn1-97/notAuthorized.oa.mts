@@ -4,7 +4,13 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary notAuthorized
  * @description
- * 
+ *
+ * The PUM user is not allowed to register (ECMA-282 §6.5.3.2), de-register
+ * (§6.6.2.2), or interrogate (§6.7.2.2). ROSE local CODE 1007. No parameter
+ * (§6.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-282/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -10,7 +10,16 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary MCMExtensions
  * @description
- * 
+ *
+ * Manufacturer-specific data on an SS-MCM argument or
+ * result (ECMA-347 §6.3.1). `none` is an explicit empty
+ * choice; `extension` is one value; `multipleExtension` is
+ * several. `MCMExtSet` defines no extensions. Where the
+ * containing component is OPTIONAL, §6.3.1 does not say how
+ * `none` differs from omitting it.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -16,7 +16,14 @@ import { SmsExtension, _decode_SmsExtension, _encode_SmsExtension } from "../Sho
 /**
  * @summary SmsCommandArg
  * @description
- * 
+ *
+ * Argument of `smsCommand` (ECMA-325 §6.5.1.1.2, Annex E.10). §6.5.3.1.2 finds
+ * the stored Short Message using `originatingAddress` and `messageNumber`.
+ * This argument has no `originatingAddress`. The standard does not say where
+ * that address is taken from.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,48 +45,81 @@ export
 class SmsCommandArg {
     /**
      * @summary `destinationAddress`.
+     * @description
+     *
+     * Party number of the Receiving User of the Short Message this command
+     * refers to (ECMA-325 §6.5.1.1.2).
      * @public
      * @readonly
      */
     readonly destinationAddress: PartyNumber;
     /**
      * @summary `messageReference`.
+     * @description
+     *
+     * New reference for this Command, 0..255, wrapping from 255 to 0 (ECMA-325
+     * §E.10.1). It is not the reference of the Short Message being commanded.
      * @public
      * @readonly
      */
     readonly messageReference: MessageReference;
     /**
      * @summary `messageNumber`.
+     * @description
+     *
+     * Reference of the Short Message this Command acts on (ECMA-325 §E.10.2).
+     * The Service Centre uses it to find the stored Short Message (§6.5.3.1.2).
+     * Ignored when the command does not act on one Short Message. The four
+     * named command types in §6.5.3.1.2 all identify a stored Short Message.
      * @public
      * @readonly
      */
     readonly messageNumber: MessageReference;
     /**
      * @summary `protocolIdentifier`.
+     * @description
+     *
+     * Higher-layer protocol (ECMA-325 §6.5.1.1.2, §E.10.3, §E.1.2.1).
      * @public
      * @readonly
      */
     readonly protocolIdentifier: ProtocolIdentifier;
     /**
      * @summary `commandType`.
+     * @description
+     *
+     * What to do to the stored Short Message (ECMA-325 §E.10.4, §6.5.3.1.2).
      * @public
      * @readonly
      */
     readonly commandType: CommandType;
     /**
      * @summary `commandData`.
+     * @description
+     *
+     * Octets related to the requested operation (ECMA-325 §E.10.5). No format
+     * is specified.
      * @public
      * @readonly
      */
     readonly commandData: OPTIONAL<CommandData>;
     /**
      * @summary `statusReportRequest`.
+     * @description
+     *
+     * Whether this Command wants a Status Report. Annex E.10.6 requires TRUE
+     * for `enquiry` and FALSE otherwise. The element is optional; the annex is
+     * silent on omission.
      * @public
      * @readonly
      */
     readonly statusReportRequest: OPTIONAL<BOOLEAN>;
     /**
      * @summary `smsExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. This edition defines none in `SmsExtSet`
+     * (ECMA-325 §6.3.1).
      * @public
      * @readonly
      */

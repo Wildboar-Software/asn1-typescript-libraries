@@ -13,7 +13,12 @@ import { UserData, _decode_UserData, _encode_UserData } from "../Short-Message-S
 /**
  * @summary smsSubmitError_ParameterType
  * @description
- * 
+ *
+ * Parameter of `smsSubmitError` (ECMA-325 Annex E.3). `failureCause` and
+ * `serviceCentreTimeStamp` are mandatory.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,24 +36,42 @@ export
 class smsSubmitError_ParameterType {
     /**
      * @summary `failureCause`.
+     * @description
+     *
+     * Why `smsSubmit` failed. Table E.4 lists the defined values; every other
+     * integer is reserved (ECMA-325 §E.3.1). §6.5.3.2.1 uses
+     * `smRejectedDuplicateSM` and `telematicInterworkingNotSupported`.
      * @public
      * @readonly
      */
     readonly failureCause: FailureCause;
     /**
      * @summary `serviceCentreTimeStamp`.
+     * @description
+     *
+     * Arrival time at the Service Centre, with the same rules as on a
+     * successful submit (ECMA-325 §E.2.1, §E.3.2).
      * @public
      * @readonly
      */
     readonly serviceCentreTimeStamp: ServiceCentreTimeStamp;
     /**
      * @summary `protocolIdentifier`.
+     * @description
+     *
+     * The `protocolIdentifier` from the `smsSubmit` invoke (ECMA-325 §E.3.3,
+     * §E.1.2.1).
      * @public
      * @readonly
      */
     readonly protocolIdentifier: OPTIONAL<ProtocolIdentifier>;
     /**
      * @summary `userData`.
+     * @description
+     *
+     * For Service Centre use. When present, includes the invoke's user data.
+     * The Service Centre may add headers after a `dataHeaderSourceIndicator`
+     * (ECMA-325 §E.3.4).
      * @public
      * @readonly
      */

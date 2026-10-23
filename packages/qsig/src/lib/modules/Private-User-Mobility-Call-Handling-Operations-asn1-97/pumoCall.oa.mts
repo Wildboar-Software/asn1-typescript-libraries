@@ -5,7 +5,28 @@ import { PumoArg, _decode_PumoArg, _encode_PumoArg } from "../Private-User-Mobil
 /**
  * @summary pumoCall
  * @description
- * 
+ *
+ * Pass an outgoing PUM call to the Home PINX for processing (ECMA-284 §7.5).
+ * The Originating PINX sends the first invoke in a SETUP whose Called party
+ * number can route to the Home PINX, and sends further invokes in FACILITY
+ * messages for overlap digits. ROSE local CODE 96. No result
+ * (`RETURN RESULT FALSE`, `ALWAYS RESPONDS FALSE`). The Facility
+ * information element uses Interpretation
+ * `clearCallIfAnyInvokePduNotRecognised`. In a FACILITY message,
+ * Interpretation is omitted or `rejectAnyUnrecognisedInvokePdu`
+ * (§7.3.2.1).
+ * A SETUP that contains this invoke shall not invoke ANF-PUMI
+ * (§6.8.27.1). The Home PINX joins the incoming leg to a new leg
+ * toward the destination once it has enough digits (§7.5.2.1). Timer T3
+ * at the Home PINX is 14-16 s while the
+ * number is incomplete (§7.9.2). On expiry the Home PINX extends the call if
+ * the digits suffice, or clears it, for example with cause #28.
+ * The value below does not set `&operationCode`, and `&returnResult`
+ * stays at the class default `true`. ECMA-284 §6.3.1 specifies local
+ * code 96 and `RETURN RESULT FALSE`, as in the ASN.1 below.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-284/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

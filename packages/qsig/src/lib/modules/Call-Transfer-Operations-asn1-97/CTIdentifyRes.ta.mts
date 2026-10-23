@@ -12,7 +12,15 @@ import { CTIdentifyRes_resultExtension, _decode_CTIdentifyRes_resultExtension, _
 /**
  * @summary CTIdentifyRes
  * @description
- * 
+ *
+ * Result of `callTransferIdentify`. The Secondary PINX assigns an
+ * identity for the secondary call and a number that will route a new
+ * SETUP back to itself, then waits in CT-Await-Setup.
+ * ECMA-178 §6.5.3.3; ECMA-177 §8.2.1.2.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-178/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-177/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,18 +40,34 @@ export
 class CTIdentifyRes {
     /**
      * @summary `callIdentity`.
+     * @description
+     *
+     * Identifies the secondary call at the Secondary PINX, possibly
+     * together with `rerouteingNumber`. It need not be significant
+     * anywhere else. ECMA-178 §6.5.3.3.
      * @public
      * @readonly
      */
     readonly callIdentity: CallIdentity;
     /**
      * @summary `rerouteingNumber`.
+     * @description
+     *
+     * Number placed in Called party number so the new SETUP routes to
+     * this Secondary PINX. It should be significant throughout the
+     * PISN. A PNP number should be a Complete Number. A subscriber
+     * E.164 number can be insufficient, and in some networks so can a
+     * national number. ECMA-178 §6.5.3.3.
      * @public
      * @readonly
      */
     readonly rerouteingNumber: PartyNumber;
     /**
      * @summary `resultExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-178 §6.3.1 defines no
+     * member of `CTExtSet`.
      * @public
      * @readonly
      */

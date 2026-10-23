@@ -11,7 +11,23 @@ import { unspecified } from "../Private-User-Mobility-Call-Handling-Operations-a
 /**
  * @summary pumiEnquiry
  * @description
- * 
+ *
+ * Ask the Home PINX where the called PUM user is (ECMA-284 §6.5.2, §6.5.3). The
+ * PUMI-detect PINX sends it on a call-independent signalling connection. ROSE
+ * local CODE 93. Timer T1, at least 15 s, runs in state PUMI-Detected (§6.9.1).
+ * `currLocation` is followed by `pumiDivert`. `cfuActivated` means SS-CFU is
+ * active (§6.5.3.3). A PUMI-detect PINX that supports §6.8.6.1 then acts as the
+ * SS-CFU Served User PINX in ECMA-174 §6.5.4; otherwise what it does with
+ * `cfuActivated` is an implementation matter (§6.5.2.1). Errors and the
+ * basic-call cause the PUMI-detect PINX applies (§6.5.2.2, §6.5.3.2):
+ * `invalidServedUserNr` (user not in the HDB, cause #1), `locationNotKnown`
+ * (cause #3), `notAvailable` (user has deregistered, cause #20),
+ * `basicServiceNotProvided` (cause #88), `unspecified`. A reject, or T1 expiry,
+ * leaves the PUMI-detect PINX to continue basic call or, on T1 expiry, to
+ * release with cause #41. Clause 6 is silent on when to return `unspecified`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-284/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

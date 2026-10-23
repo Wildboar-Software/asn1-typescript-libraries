@@ -15,7 +15,14 @@ import { IntResult_extension, _decode_IntResult_extension, _encode_IntResult_ext
 /**
  * @summary IntResult
  * @description
- * 
+ *
+ * One active diversion returned by `interrogateDiversionQ` (ECMA-174 §6.3.1). A
+ * result is sent only when the request is valid and Call Forwarding is
+ * activated (§6.5.3.1.3).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-173/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,36 +45,61 @@ export
 class IntResult {
     /**
      * @summary `servedUserNr`.
+     * @description
+     *
+     * PISN number whose forwarding is reported. Remote interrogation includes
+     * it (ECMA-173 §6.2.2.1.4; ECMA-174 §6.3.1).
      * @public
      * @readonly
      */
     readonly servedUserNr: PartyNumber;
     /**
      * @summary `basicService`.
+     * @description
+     *
+     * Basic service of this activation, or all basic services (ECMA-173
+     * §6.2.2.1.3).
      * @public
      * @readonly
      */
     readonly basicService: BasicService;
     /**
      * @summary `procedure`.
+     * @description
+     *
+     * CFU, CFB, or CFNR that is active for this entry (ECMA-174 §6.3.1).
      * @public
      * @readonly
      */
     readonly procedure: Procedure;
     /**
      * @summary `divertedToAddress`.
+     * @description
+     *
+     * Diverted-to number and, when one was registered, subaddress (ECMA-173
+     * §6.2.2.1.3).
      * @public
      * @readonly
      */
     readonly divertedToAddress: Address;
     /**
      * @summary `remoteEnabled`.
+     * @description
+     *
+     * Whether remote activation is enabled. The default is false (ECMA-174
+     * §6.3.1). Stage 1 says interrogation may tell the served user whether
+     * remote activation has been allowed (ECMA-173 §6.2.2.1.3). §6.5.3.1.3 does
+     * not say when this element is true.
      * @public
      * @readonly
      */
     readonly remoteEnabled: OPTIONAL<BOOLEAN>;
     /**
      * @summary `extension`.
+     * @description
+     *
+     * Manufacturer-specific extension from `DiversionExtensionSet`. The
+     * standardized set is empty (ECMA-174 §6.3.1).
      * @public
      * @readonly
      */

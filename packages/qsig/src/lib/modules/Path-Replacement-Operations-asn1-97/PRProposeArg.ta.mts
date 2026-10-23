@@ -12,7 +12,13 @@ import { PRProposeArg_extension, _decode_PRProposeArg_extension, _encode_PRPropo
 /**
  * @summary PRProposeArg
  * @description
- * 
+ *
+ * Argument of `pathReplacePropose`. Tells the Cooperating PINX how to
+ * route a new SETUP back to this Requesting PINX and which call to
+ * bind it to. ECMA-176 §6.5.1.3.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-176/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,18 +38,34 @@ export
 class PRProposeArg {
     /**
      * @summary `callIdentity`.
+     * @description
+     *
+     * Identifies this ANF-PR entity at the Requesting PINX. Together
+     * with `rerouteingNumber` it identifies the call. It need not be
+     * significant elsewhere. ECMA-176 §6.5.1.3.
      * @public
      * @readonly
      */
     readonly callIdentity: CallIdentity;
     /**
      * @summary `rerouteingNumber`.
+     * @description
+     *
+     * Number from a native PISN numbering plan (ECMA-155). Used as
+     * Called party number, it routes the new connection to this
+     * Requesting PINX. The Cooperating PINX also uses it to detect a
+     * trombone, where both ends are the same PINX. ECMA-176 §6.5.1.3,
+     * §6.5.3.
      * @public
      * @readonly
      */
     readonly rerouteingNumber: PartyNumber;
     /**
      * @summary `extension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-176 §6.3.1 defines no
+     * member of `PRExtSet`.
      * @public
      * @readonly
      */

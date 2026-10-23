@@ -4,7 +4,15 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary diversionToServedUserNr
  * @description
- * 
+ *
+ * Diverted-to number is the served user's own number. ROSE local code 15. No
+ * parameter. Allowed on `activateDiversionQ` and `callRerouteing`, not on
+ * `checkRestriction` (ECMA-174 §6.3.1). Stage 1 lists this as an activation
+ * failure (ECMA-173 §6.2.3.1). The protocol procedures do not name this code.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-173/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

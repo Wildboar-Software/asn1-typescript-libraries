@@ -10,7 +10,15 @@ import { AllMsgInfo, _decode_AllMsgInfo, _encode_AllMsgInfo } from "../SS-MCM-Op
 /**
  * @summary UpdateInfo
  * @description
- * 
+ *
+ * What one `mCMUpdate` reports for a Message Type (ECMA-347
+ * §6.5.1.1.4). `newMsgInfoOnly` is new messages,
+ * `retrievedMsgInfoOnly` is retrieved messages, and
+ * `allMsgInfo` is both. Each side is complete information,
+ * compressed information, or no messages of that status.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

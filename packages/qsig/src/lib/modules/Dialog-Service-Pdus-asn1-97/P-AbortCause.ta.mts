@@ -10,7 +10,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary P_AbortCause
  * @description
- * 
+ *
+ * Provider reason on a DialogAbortPDU (ECMA-165 §11.3.3.3 Table 33). The
+ * integer is limited to 0..255. Clause 8.4 says when a dialogue is aborted and
+ * does not assign any of these cause values to those procedures. Values other
+ * than the five named here are not defined.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,14 +35,20 @@ type P_AbortCause = INTEGER;
 
 /**
  * @summary P_AbortCause_unrecognisedDseApdu
+ * @description
+ *
+ * Named in ECMA-165 §11.3.3.3 Table 33. Clause 8.4 describes when a dialogue is
+ * aborted and does not say that this cause is sent.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
 const P_AbortCause_unrecognisedDseApdu: P_AbortCause = 0; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary P_AbortCause_unrecognisedDseApdu
+ * @summary unrecognisedDseApdu
+ * @description Alias of {@link P_AbortCause_unrecognisedDseApdu}.
  * @constant
  * @type {number}
  */
@@ -44,14 +57,20 @@ const unrecognisedDseApdu: P_AbortCause = P_AbortCause_unrecognisedDseApdu; /* S
 
 /**
  * @summary P_AbortCause_unrecognisedDialogId
+ * @description
+ *
+ * Named in ECMA-165 §11.3.3.3 Table 33. §8.4.5 discards or aborts some
+ * dialogues with an unrecognised identifier, but does not assign this cause.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
 const P_AbortCause_unrecognisedDialogId: P_AbortCause = 1; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary P_AbortCause_unrecognisedDialogId
+ * @summary unrecognisedDialogId
+ * @description Alias of {@link P_AbortCause_unrecognisedDialogId}.
  * @constant
  * @type {number}
  */
@@ -60,14 +79,20 @@ const unrecognisedDialogId: P_AbortCause = P_AbortCause_unrecognisedDialogId; /*
 
 /**
  * @summary P_AbortCause_badlyFormattedDseApdu
+ * @description
+ *
+ * Named in ECMA-165 §11.3.3.3 Table 33. §8.4.5 discards an incorrectly
+ * formatted DSE APDU and does not assign this cause.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
 const P_AbortCause_badlyFormattedDseApdu: P_AbortCause = 2; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary P_AbortCause_badlyFormattedDseApdu
+ * @summary badlyFormattedDseApdu
+ * @description Alias of {@link P_AbortCause_badlyFormattedDseApdu}.
  * @constant
  * @type {number}
  */
@@ -76,14 +101,20 @@ const badlyFormattedDseApdu: P_AbortCause = P_AbortCause_badlyFormattedDseApdu; 
 
 /**
  * @summary P_AbortCause_incorrectDseApdu
+ * @description
+ *
+ * Named in ECMA-165 §11.3.3.3 Table 33. Clause 8.4 does not define this cause
+ * or say when it is sent.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
 const P_AbortCause_incorrectDseApdu: P_AbortCause = 3; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary P_AbortCause_incorrectDseApdu
+ * @summary incorrectDseApdu
+ * @description Alias of {@link P_AbortCause_incorrectDseApdu}.
  * @constant
  * @type {number}
  */
@@ -92,14 +123,20 @@ const incorrectDseApdu: P_AbortCause = P_AbortCause_incorrectDseApdu; /* SHORT_N
 
 /**
  * @summary P_AbortCause_resourceLimitation
+ * @description
+ *
+ * Named in ECMA-165 §11.3.3.3 Table 33. Clause 8.4 does not define this cause.
+ * It is distinct from the ROSE invoke problem of the same name (Annex G).
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
 const P_AbortCause_resourceLimitation: P_AbortCause = 4; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary P_AbortCause_resourceLimitation
+ * @summary resourceLimitation
+ * @description Alias of {@link P_AbortCause_resourceLimitation}.
  * @constant
  * @type {number}
  */

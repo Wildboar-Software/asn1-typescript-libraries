@@ -19,7 +19,14 @@ import { SmsExtension, _decode_SmsExtension, _encode_SmsExtension } from "../Sho
 /**
  * @summary SmsStatusReportArg
  * @description
- * 
+ *
+ * Argument of `smsStatusReport` (ECMA-325 §6.5.3.1.3, Annex E.7). Reports the
+ * outcome of an earlier `smsSubmit` or `smsCommand`. Tags on the name and the
+ * three booleans are the 25 September 2001 errata, so they stay distinct from
+ * `PartyNumber` and from each other.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -46,78 +53,139 @@ export
 class SmsStatusReportArg {
     /**
      * @summary `messageReference`.
+     * @description
+     *
+     * Reference of the `smsSubmit` or `smsCommand` this report is about. For an
+     * Enquiry it is that command's `messageNumber`, the original Short Message
+     * reference, not the command's own reference (ECMA-325 §E.7.1, §6.5.3.1.3).
      * @public
      * @readonly
      */
     readonly messageReference: MessageReference;
     /**
      * @summary `serviceCentreTimeStamp`.
+     * @description
+     *
+     * Time stamp of the Short Message this report is about, so the Sending User
+     * can match the report to the submit (ECMA-325 §E.7.2).
      * @public
      * @readonly
      */
     readonly serviceCentreTimeStamp: ServiceCentreTimeStamp;
     /**
      * @summary `dischargeTime`.
+     * @description
+     *
+     * When the Short Message was delivered, delivery was attempted, or the
+     * Service Centre disposed of it. For a completed transaction, the
+     * completion time. While the Service Centre is still trying, the last
+     * attempt. For a permanent or temporary error with no further attempts,
+     * either the last attempt or the time the Service Centre disposed of the
+     * Short Message, following `status` (ECMA-325 §E.7.3).
      * @public
      * @readonly
      */
     readonly dischargeTime: DischargeTime;
     /**
      * @summary `recipientAddress`.
+     * @description
+     *
+     * Address of the Receiving User of the previously submitted Short Message
+     * (ECMA-325 §E.7.4).
      * @public
      * @readonly
      */
     readonly recipientAddress: PartyNumber;
     /**
      * @summary `recipientName`.
+     * @description
+     *
+     * Name of that Receiving User, when the Service Centre has it and name
+     * restriction allows it (ECMA-325 §E.7.5).
      * @public
      * @readonly
      */
     readonly recipientName: OPTIONAL<Name>;
     /**
      * @summary `destinationAddress`.
+     * @description
+     *
+     * Present in the argument (ECMA-325 §6.3.1). Annex E.7 defines the other
+     * elements and is silent on this one.
      * @public
      * @readonly
      */
     readonly destinationAddress: PartyNumber;
     /**
      * @summary `status`.
+     * @description
+     *
+     * Outcome of the previous Short Message or Command (ECMA-325 §E.7.6).
+     * Defined integers are on `Status`. §6.5 also names
+     * `smValidityPeriodExpired` and `errorInSme`, which Table E.5 does not list
+     * as those spellings.
      * @public
      * @readonly
      */
     readonly status: Status;
     /**
      * @summary `priority`.
+     * @description
+     *
+     * Same rule as on `smsDeliver` (ECMA-325 §E.7.7, §E.4.2.3). Default FALSE:
+     * transfer should stop when the Service Centre address is already in Short
+     * Message Waiting Data.
      * @public
      * @readonly
      */
     readonly priority: OPTIONAL<BOOLEAN>;
     /**
      * @summary `moreMessagesToSend`.
+     * @description
+     *
+     * Same rule as on `smsDeliver` (ECMA-325 §E.7.8, §E.4.2.4). Default FALSE.
+     * TRUE means more Short Messages or Status Reports are waiting in this
+     * Service Centre.
      * @public
      * @readonly
      */
     readonly moreMessagesToSend: OPTIONAL<BOOLEAN>;
     /**
      * @summary `statusReportQualifier`.
+     * @description
+     *
+     * Default FALSE: this report comes from a Short Message. TRUE: it comes
+     * from a Command, for example an Enquiry (ECMA-325 §E.7.9).
      * @public
      * @readonly
      */
     readonly statusReportQualifier: OPTIONAL<BOOLEAN>;
     /**
      * @summary `protocolIdentifier`.
+     * @description
+     *
+     * The `protocolIdentifier` of the related `smsSubmit` (ECMA-325 §E.7.10).
      * @public
      * @readonly
      */
     readonly protocolIdentifier: OPTIONAL<ProtocolIdentifier>;
     /**
      * @summary `userData`.
+     * @description
+     *
+     * When present, includes `userData` from the `smsDeliver` return result.
+     * The Service Centre may add headers after a `dataHeaderSourceIndicator`
+     * (ECMA-325 §E.7.11).
      * @public
      * @readonly
      */
     readonly userData: OPTIONAL<UserData>;
     /**
      * @summary `smsExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. This edition defines none in `SmsExtSet`
+     * (ECMA-325 §6.3.1).
      * @public
      * @readonly
      */

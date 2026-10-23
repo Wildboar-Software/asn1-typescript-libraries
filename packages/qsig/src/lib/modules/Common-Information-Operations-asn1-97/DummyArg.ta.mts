@@ -10,7 +10,13 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary DummyArg
  * @description
- * 
+ *
+ * Argument of cmnRequest. ECMA-251 §6.3.1 defines no common-information
+ * elements: null, or a manufacturer extension from the empty CMNExtSet. The
+ * solicited information is in the result.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-251/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

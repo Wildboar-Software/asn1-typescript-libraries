@@ -8,7 +8,22 @@ import { type NOTIFICATION } from "../Notification-class-asn1-97/NOTIFICATION.oc
 /**
  * @summary remoteUserAlerting
  * @description
- * 
+ *
+ * The called user, who was busy, is now being alerted (ECMA-192
+ * §6.6.2.1). In CO-Dest-Invoked, if alerting starts and an ALERTING
+ * message was already sent, the Terminating PINX sends this
+ * notification in NOTIFY and enters CO-Idle. If ALERTING was not
+ * sent earlier, it sends ALERTING instead. Notification code 2000.
+ * The argument is NULL.
+ *
+ * On transfer by rerouteing, if "call is a waiting call" was sent,
+ * this notification follows when user C of SS-CT becomes not busy
+ * (§6.9.5.2.2). On transfer by join, this notification is not sent
+ * in that case if "call is a waiting call" was not sent
+ * (§6.9.5.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-192/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

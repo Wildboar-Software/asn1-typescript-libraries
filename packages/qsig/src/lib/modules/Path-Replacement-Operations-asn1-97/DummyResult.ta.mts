@@ -10,7 +10,15 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary DummyResult
  * @description
- * 
+ *
+ * Result of `pathReplaceSetup` and `pathReplaceRetain`. A return result
+ * means the request succeeded. The procedures describe no standardized
+ * result elements. `null` is that empty result. `single` and
+ * `multiple` are manufacturer extensions. ECMA-176 §6.3.1 defines no
+ * members of `PRExtSet`. ECMA-176 §6.5.1.3, §6.6.1.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-176/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

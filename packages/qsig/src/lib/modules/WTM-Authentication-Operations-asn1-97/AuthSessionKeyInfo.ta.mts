@@ -11,7 +11,14 @@ import { CalculationParam, _decode_CalculationParam, _encode_CalculationParam } 
 /**
  * @summary AuthSessionKeyInfo
  * @description
- * 
+ *
+ * Session key and the parameter used to derive it from the real authentication
+ * key (ECMA-306 §6.3.1). Returned when `canCompute` is present and the
+ * application leaves the challenge or response to the Visitor PINX (§6.5.7.1,
+ * §7.5.3.1). The derivation is outside ECMA-306 (§1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-306/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +34,22 @@ export
 class AuthSessionKeyInfo {
     /**
      * @summary `authSessionKey`.
+     * @description
+     *
+     * Authentication session key (ECMA-306 §6.3.1). The Visitor PINX uses it to
+     * compute a challenge and/or a response (§6.5.6.1, §7.5.1.1). The
+     * computation is outside ECMA-306 (§1).
      * @public
      * @readonly
      */
     readonly authSessionKey: AuthSessionKey;
     /**
      * @summary `calculationParam`.
+     * @description
+     *
+     * Used when calculating the session key from the real authentication key.
+     * It may be sent to the WTM user during SS-WTAT and during SS-WTAN
+     * (ECMA-306 §6.3.1). The calculation is outside ECMA-306 (§1).
      * @public
      * @readonly
      */

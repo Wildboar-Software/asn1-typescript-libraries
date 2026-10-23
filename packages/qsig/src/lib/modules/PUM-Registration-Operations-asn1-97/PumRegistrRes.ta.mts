@@ -13,7 +13,14 @@ import { PumrExtension, _decode_PumrExtension, _encode_PumrExtension } from "../
 /**
  * @summary PumRegistrRes
  * @description
- * 
+ *
+ * Result of `pumRegistr` (ECMA-282 §6.3.1). On remote registration the Visitor
+ * PINX forwards this result to the Remote PINX with the same contents
+ * (§6.5.2.1). The Visitor PINX then updates the VDB for the requested basic
+ * service and hosting address (§6.5.1.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-282/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,24 +40,43 @@ export
 class PumRegistrRes {
     /**
      * @summary `pumNumber`.
+     * @description
+     *
+     * PISN number of the PUM user (§6.3.1). The complete-number rule is stated
+     * for `pumNumber` inside the argument's `pumUserId`; §6.3.1 is silent on
+     * that rule for this element.
+     *
      * @public
      * @readonly
      */
     readonly pumNumber: PartyNumber;
     /**
      * @summary `serviceOption`.
+     * @description
+     *
+     * Registration type: InCall, OutCall, or AllCall (§6.3.1). Optional.
+     *
      * @public
      * @readonly
      */
     readonly serviceOption: OPTIONAL<ServiceOption>;
     /**
      * @summary `sessionParams`.
+     * @description
+     *
+     * Session duration and number of outgoing calls (§6.3.1).
+     *
      * @public
      * @readonly
      */
     readonly sessionParams: OPTIONAL<SessionParams>;
     /**
      * @summary `argExtension`.
+     * @description
+     *
+     * Manufacturer-specific data. `PUMRExtSet` assigns no extensions (ECMA-282
+     * §6.3.1).
+     *
      * @public
      * @readonly
      */

@@ -4,7 +4,15 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary collision
  * @description
- * 
+ *
+ * ROSE local 1001. Returned on `pathReplacePropose` when the receiving
+ * PINX has itself already sent `pathReplacePropose` (state
+ * PR-Req-Initiated). The state does not change, and the peer can
+ * expect the same error in return. A note recommends a later attempt
+ * after a random delay. ECMA-176 §6.3.1, §6.5.1.4.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-176/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -14,7 +14,14 @@ import { SmsExtension, _decode_SmsExtension, _encode_SmsExtension } from "../Sho
 /**
  * @summary SmsSubmitArg
  * @description
- * 
+ *
+ * Argument of `smsSubmit` (ECMA-325 §6.5.1.1.1). The Sending User PINX or
+ * Message Centre fills it from the Sending User's Short Message. The procedure
+ * text calls the parameter element `smsSubmitParameters`; the element name is
+ * `smSubmitParameter`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,36 +41,60 @@ export
 class SmsSubmitArg {
     /**
      * @summary `destinationAddress`.
+     * @description
+     *
+     * Party number of the Receiving User (ECMA-325 §6.5.1.1.1).
      * @public
      * @readonly
      */
     readonly destinationAddress: PartyNumber;
     /**
      * @summary `originatingAddress`.
+     * @description
+     *
+     * Party number of the Sending User (ECMA-325 §6.5.1.1.1). The Service
+     * Centre also uses it when detecting duplicates and when replacing a Short
+     * Message (§6.5.3.1.1, §6.5.3.2.1).
      * @public
      * @readonly
      */
     readonly originatingAddress: PartyNumber;
     /**
      * @summary `messageReference`.
+     * @description
+     *
+     * Reference allocated for this Short Message, 0..255, wrapping from 255 to
+     * 0 (ECMA-325 §E.1.1, §6.5.1.1.1).
      * @public
      * @readonly
      */
     readonly messageReference: MessageReference;
     /**
      * @summary `smSubmitParameter`.
+     * @description
+     *
+     * Protocol, validity, status-report, reply-path, and duplicate-handling
+     * parameters (ECMA-325 §6.5.1.1.1, §E.1.2).
      * @public
      * @readonly
      */
     readonly smSubmitParameter: SmSubmitParameter;
     /**
      * @summary `userData`.
+     * @description
+     *
+     * Short Message text and related headers, class, and compression (ECMA-325
+     * §6.5.1.1.1, §E.1.3).
      * @public
      * @readonly
      */
     readonly userData: UserData;
     /**
      * @summary `smsExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. This edition defines none in `SmsExtSet`
+     * (ECMA-325 §6.3.1).
      * @public
      * @readonly
      */

@@ -1,6 +1,14 @@
 /**
  * @module
- * @description ASN.1 module `SS-AOC-Operations-asn1-97`.
+ * @description
+ *
+ * QSIG Advice of Charge operations (ECMA-212, 3rd edition, December 2001). An
+ * Originating PINX asks an Outgoing Gateway PINX for charge-rate provision
+ * (AOC-S), interim recorded charges (AOC-D), final recorded charges (AOC-E), or
+ * a combination. Service behaviour is ECMA-211, 3rd edition, December 2001.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export * from "./AOC-Operations.osa.mjs";
 export * from "./AOCExtSet.osa.mjs";

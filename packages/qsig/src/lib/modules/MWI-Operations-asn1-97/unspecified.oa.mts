@@ -5,7 +5,14 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary unspecified
  * @description
- * 
+ *
+ * Error on activate, deactivate, and interrogate, local code 1008. The
+ * parameter is one extension from `MWIExtSet`. ECMA-242 §6.3.1 lists it; §6.5
+ * does not state when it is returned.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

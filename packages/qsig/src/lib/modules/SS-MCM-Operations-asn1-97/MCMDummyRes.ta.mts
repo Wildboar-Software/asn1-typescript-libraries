@@ -8,7 +8,14 @@ import { MCMExtensions, _decode_MCMExtensions, _encode_MCMExtensions } from "../
 /**
  * @summary MCMDummyRes
  * @description
- * 
+ *
+ * Result of an SS-MCM operation that confirms without
+ * defined result parameters (ECMA-347 §6.3.1). Only a
+ * manufacturer extension may be present. Returned by
+ * `mCMNewMsg`, `mCMNoNewMsg`, `mCMUpdate`, and `mCMService`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

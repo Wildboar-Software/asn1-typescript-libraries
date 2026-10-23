@@ -5,7 +5,18 @@ import { SSCTDigitInfoArg, _decode_SSCTDigitInfoArg, _encode_SSCTDigitInfoArg } 
 /**
  * @summary ssctDigitInfo
  * @description
- * 
+ *
+ * Unconfirmed. Transferred PINX to Rerouting PINX, carrying further
+ * digits of User C's number after `ssctPostDial`. ROSE local 102.
+ * Interpretation APDU is `rejectAnyUnrecognisedInvokePdu` or omitted.
+ * NFE `destinationEntity` is `endPINX`. Honoured only in
+ * SSCT-Await-Info; ignored in every other state. Incomplete digits
+ * restart timer T3. A final number, or `sendingComplete`, stops T3
+ * and lets the Rerouting PINX extend the call. ECMA-300 §6.3.1,
+ * §6.3.2.1, §6.5.2.2, §6.5.3.1, §6.9.3.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-300/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

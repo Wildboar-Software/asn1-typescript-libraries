@@ -5,7 +5,19 @@ import { DummyArg, _decode_DummyArg, _encode_DummyArg } from "../Call-Intrusion-
 /**
  * @summary cfbOverride
  * @description
- * 
+ *
+ * Overrides Call Forwarding Busy so that SS-CI applies at the first
+ * busy user (ECMA-203 §6.9.7). The Originating PINX sends the invoke
+ * in the SETUP of the new call, together with `callIntrusionRequest`
+ * or with `pathRetain` (`ci-low`, `ci-medium`, or `ci-high` set to
+ * ONE). No result. Local code 49. The NFE matches the accompanying
+ * operation, and the Interpretation APDU is
+ * `discardAnyUnrecognisedInvokePdu` (§6.9.7.2). If the called user
+ * is busy, the served PINX skips SS-CFB and applies SS-CI
+ * (§6.9.7.3).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-203/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -9,7 +9,18 @@ import { IntResult, _decode_IntResult, _encode_IntResult } from "../Call-Diversi
 /**
  * @summary IntResultList
  * @description
- * 
+ *
+ * Result of a successful `interrogateDiversionQ` (ECMA-174 §6.3.1, §6.5.3.1.3).
+ * One `IntResult` for each activation. When interrogation covers all basic
+ * services and forwarding was activated separately for more than one, the
+ * information is repeated for each (ECMA-173 §6.2.2.1.3). The ASN.1 size is 0
+ * to 29. The Standard does not say why 29 is the limit, or whether the set may
+ * be empty. If the requested type of Call Forwarding is not activated, the
+ * Served User PINX returns an error instead of a result (§6.5.3.2.3).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-173/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

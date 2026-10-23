@@ -13,7 +13,15 @@ import { PumiExtension, _decode_PumiExtension, _encode_PumiExtension } from "../
 /**
  * @summary CfuActivated
  * @description
- * 
+ *
+ * SS-CFU is active for the called PUM user (ECMA-284 §6.5.3.3). This is
+ * the `cfuActivated` choice of `EnquiryRes`. A supporting PUMI-detect
+ * PINX then acts as the SS-CFU Served User PINX (ECMA-174 §6.5.4,
+ * invoked from ECMA-284 §6.8.6.1).
+ * §6.3.1 names these elements and is silent on their contents beyond the ASN.1.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-284/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,24 +39,44 @@ export
 class CfuActivated {
     /**
      * @summary `divToAddress`.
+     * @description
+     *
+     * Diverted-to address of the active SS-CFU. ECMA-284 §6.3.1 gives this
+     * element no further text.
+     *
      * @public
      * @readonly
      */
     readonly divToAddress: Address;
     /**
      * @summary `divOptions`.
+     * @description
+     *
+     * Notification subscription for that SS-CFU. See `SubscriptionOption`.
+     * ECMA-284 §6.3.1 does not say which value the Home PINX selects.
+     *
      * @public
      * @readonly
      */
     readonly divOptions: SubscriptionOption;
     /**
      * @summary `pumName`.
+     * @description
+     *
+     * Name of the PUM user. Optional. ECMA-284 §6.3.1 is silent on when it is
+     * included.
+     *
      * @public
      * @readonly
      */
     readonly pumName: OPTIONAL<Name>;
     /**
      * @summary `argExtension`.
+     * @description
+     *
+     * Manufacturer-specific data. `PUMCHExtSet` assigns no extensions (ECMA-284
+     * §6.3.1).
+     *
      * @public
      * @readonly
      */

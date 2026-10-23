@@ -1,6 +1,13 @@
 /**
  * @module
- * @description ASN.1 module `Wireless-Terminal-Call-Handling-Operations-asn1-97`.
+ * @description
+ *
+ * Wireless Terminal Call Handling (ECMA-304 2nd edition, December 2001).
+ * ANF-WTMI directs an incoming call to a WTMI user whose PINX is not fixed.
+ * ANF-WTMO lets the Home PINX process a call request from a WTMO user. Module
+ * `Wireless-Terminal-Call-Handling-Operations-asn1-97`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-304/
  */
 export * from "./AlternativeId.ta.mjs";
 export * from "./CfuActivated.ta.mjs";

@@ -9,7 +9,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AlternativeId
  * @description
- * 
+ *
+ * An identifier, other than the PISN number, that uniquely identifies the PUM
+ * user (ECMA-282 §4.4, §6.3.1). One to 20 octets. The octet encoding is not
+ * specified. A PINX that lacks a PISN number may send `pisnEnquiry` to a
+ * Directory PINX to translate this identifier (§6.8.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-282/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

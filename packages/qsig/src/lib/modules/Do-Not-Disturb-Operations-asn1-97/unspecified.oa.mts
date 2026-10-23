@@ -5,7 +5,14 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary unspecified
  * @description
- * 
+ *
+ * Unspecified failure. The parameter is one manufacturer-specific
+ * extension from `DNDExtSet`, which ECMA-194 §6.3.1 leaves empty.
+ * ROSE local CODE 1008. The standard does not say when this error
+ * is chosen instead of a specific error.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-194/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

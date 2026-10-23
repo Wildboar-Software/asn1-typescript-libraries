@@ -13,7 +13,14 @@ import { WtmiExtension, _decode_WtmiExtension, _encode_WtmiExtension } from "../
 /**
  * @summary CfuActivated
  * @description
- * 
+ *
+ * Returned by `wtmiEnquiry` when the WTMI user is in the HDB and SS-CFU is
+ * active (ECMA-304 §6.5.3.3). A WTMI-detect PINX that supports §6.8.6.1 stops
+ * timer T1 and acts as the Served User PINX for SS-CFU (ECMA-174 §6.5.3).
+ * Otherwise the action is an implementation matter (§6.5.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-304/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,24 +38,40 @@ export
 class CfuActivated {
     /**
      * @summary `divToAddress`.
+     * @description
+     *
+     * Diverted-to address for the active SS-CFU (ECMA-304 §6.3.1, §6.5.3.3).
+     * ECMA-304 does not further define it; SS-CFU procedures are in ECMA-174.
      * @public
      * @readonly
      */
     readonly divToAddress: Address;
     /**
      * @summary `divOptions`.
+     * @description
+     *
+     * SS-CFU subscription option accompanying the diverted-to address (ECMA-304
+     * §6.3.1). ECMA-304 does not define the notification behaviour.
      * @public
      * @readonly
      */
     readonly divOptions: SubscriptionOption;
     /**
      * @summary `wtmName`.
+     * @description
+     *
+     * Optional name. ECMA-304 §6.3.1 and §6.5.3.3 do not say when the Home PINX
+     * includes it.
      * @public
      * @readonly
      */
     readonly wtmName: OPTIONAL<Name>;
     /**
      * @summary `argExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-304 §6.3.1 defines no members of
+     * `WTMCHExtSet`.
      * @public
      * @readonly
      */

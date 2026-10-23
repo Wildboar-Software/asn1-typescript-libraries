@@ -9,7 +9,14 @@ import { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../PSS1-Service-AP
 /**
  * @summary InvokeIdOrNull
  * @description
- * 
+ *
+ * Invoke identifier on a Reject APDU (ECMA-165 §11.3.3.4). `present` carries
+ * the identifier of the rejected APDU, within `InvokeIdSet`. `absent` is the
+ * NULL alternative. Table 34 does not say when NULL is used; §8.2 applies ITU-T
+ * X.880 for that ROSE procedure.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

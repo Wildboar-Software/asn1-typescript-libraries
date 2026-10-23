@@ -1,6 +1,13 @@
 /**
  * @module
- * @description ASN.1 module `WTM-Authentication-Operations-asn1-97`.
+ * @description
+ *
+ * Wireless Terminal Authentication (ECMA-306 2nd edition, December 2001).
+ * SS-WTAT lets the PISN validate a WTM user. SS-WTAN lets that user validate
+ * the PISN. Both use challenge and response; algorithms are outside the scope
+ * of ECMA-306 (§1). Module `WTM-Authentication-Operations-asn1-97`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-306/
  */
 export * from "./AUTH-ALG.oca.mjs";
 export * from "./AlternativeId.ta.mjs";

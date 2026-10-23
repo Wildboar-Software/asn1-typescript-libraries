@@ -5,7 +5,21 @@ import { SubaddressTransferArg, _decode_SubaddressTransferArg, _encode_Subaddres
 /**
  * @summary subaddressTransfer
  * @description
- * 
+ *
+ * Unconfirmed. Carries one transferred user's subaddress to the other
+ * after transfer. A Primary or Secondary PINX sends it when the local
+ * terminal supplies a subaddress; the receiver may deliver it to the
+ * local user. In CT-Await-Answer-From-User-C the Transferring PINX
+ * relays the invoke with the same argument. A Gateway PINX maps a
+ * subaddress to or from a public ISDN or non-ISDN in this invoke.
+ * ROSE local 14. Interpretation APDU:
+ * `discardAnyUnrecognisedInvokePdu`. NFE `destinationEntity` is
+ * `endPINX`. ECMA-178 §6.3.1, §6.3.2.1, §6.5.1.1, §6.5.5, §6.6.1,
+ * §6.7.1; ECMA-177 §6.2.2.2, §7.2.1.5.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-178/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-177/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -10,7 +10,14 @@ import { MCRExtensions, _decode_MCRExtensions, _encode_MCRExtensions } from "../
 /**
  * @summary MCRequestResult
  * @description
- * 
+ *
+ * Result of `mCRequest` (ECMA-344 §6.3.1). The Co-operating PINX sends it when
+ * the Destination PINX returns CONNECT (§6.5.2.1.2). Receipt means the
+ * Requested Call is connected (§6.5.1.1.2). The only element is optional
+ * extensions; §6.5 defines no other result contents.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-344/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,6 +33,10 @@ export
 class MCRequestResult {
     /**
      * @summary `extensions`.
+     * @description
+     *
+     * Manufacturer-specific extension. This edition defines none in
+     * `MakeCallRequestExtension` (ECMA-344 §6.3.1).
      * @public
      * @readonly
      */

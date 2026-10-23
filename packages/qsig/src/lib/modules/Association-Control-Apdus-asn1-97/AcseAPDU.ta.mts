@@ -8,7 +8,17 @@ import { ACSE_apdu, _decode_ACSE_apdu, _encode_ACSE_apdu } from "../ACSE-1/ACSE-
 /**
  * @summary AcseAPDU
  * @description
- * 
+ *
+ * An ACSE APDU as defined by `ACSE-apdu` in ITU-T X.227 §9 (ECMA-165 §11.3.3.5
+ * Table 35). The services are associate request and response, release request
+ * and response, and abort (§6.5). Carried when the network protocol profile is
+ * `acse` (19), or inside a DSE remote-operations portion (§8.4). A PINX that
+ * supports ACSE recognises received APDUs and rejects an unrecognised
+ * association context name (§8.3). Further behaviour is supplementary-service
+ * specific.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

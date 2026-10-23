@@ -5,7 +5,14 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary unspecified
  * @description
- * 
+ *
+ * `display` error, local code 1008. The parameter is one extension from
+ * `SDExtSet`. ECMA-311 §6.3.1 lists it among the display errors. §6.5.1.2.2
+ * names the three presentation errors and does not state when `unspecified` is
+ * returned.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-311/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

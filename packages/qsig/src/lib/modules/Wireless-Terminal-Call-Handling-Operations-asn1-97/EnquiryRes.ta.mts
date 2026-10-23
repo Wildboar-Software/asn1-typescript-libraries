@@ -10,7 +10,13 @@ import { CfuActivated, _decode_CfuActivated, _encode_CfuActivated } from "../Wir
 /**
  * @summary EnquiryRes
  * @description
- * 
+ *
+ * Result of `wtmiEnquiry` (ECMA-304 §6.5.3). `currLocation` when the WTMI user
+ * is in the HDB and the location is known for the requested basic service.
+ * `cfuActivated` when the user is in the HDB and SS-CFU is active (§6.5.3.3).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-304/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -12,7 +12,15 @@ import { DNDActivateArg_argumentExtension, _decode_DNDActivateArg_argumentExtens
 /**
  * @summary DNDActivateArg
  * @description
- * 
+ *
+ * Remote SS-DND activation request (ECMA-194 §6.5.6.1.1;
+ * ECMA-193 §8.2.1.6). The activating user identifies the basic
+ * service and the served user's PISN number. On acceptance the
+ * Served User PINX activates SS-DND at the subscribed DNDPL.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-194/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-193/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,18 +40,32 @@ export
 class DNDActivateArg {
     /**
      * @summary `basicService`.
+     * @description
+     *
+     * Basic service to activate, or all basic services for which
+     * SS-DND is subscribed (ECMA-193 §6.2.2.1.2, §8.2.1.6 NOTE 19).
+     * The Served User PINX checks this before activating
+     * (ECMA-194 §6.5.6.1.1).
      * @public
      * @readonly
      */
     readonly basicService: BasicService;
     /**
      * @summary `servedUserNr`.
+     * @description
+     *
+     * PISN number for which SS-DND shall apply. Required on a remote
+     * activation (ECMA-193 §6.2.2.1.2, §8.2.1.6 NOTE 21).
      * @public
      * @readonly
      */
     readonly servedUserNr: PartyNumber;
     /**
      * @summary `argumentExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-194 §6.3.1 defines the
+     * CHOICE and leaves `DNDExtSet` empty.
      * @public
      * @readonly
      */

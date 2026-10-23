@@ -11,7 +11,16 @@ import { DialogAbortPDU_abortChoice, _decode_DialogAbortPDU_abortChoice, _encode
 /**
  * @summary DialogAbortPDU
  * @description
- * 
+ *
+ * Abandons a dialogue (ECMA-165 §8.4). Sent when the responder cannot accept
+ * the dialogue, when the Coordination Function requests an abort, or in the
+ * error cases of §8.4.5. The receiver treats the dialogue as aborted and
+ * releases both identifiers. An abort received in Idle is discarded. §8.4 does
+ * not say whether the abort choice is a provider cause or user information. No
+ * ROSE or ACSE APDUs are carried.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +39,22 @@ export
 class DialogAbortPDU {
     /**
      * @summary `destinationDialogId`.
+     * @description
+     *
+     * Identifies the dialogue being aborted. In the §8.4.5 error cases it is
+     * set to the origination identifier of the unexpected DialogContinuePDU
+     * (ECMA-165 §8.4.5).
      * @public
      * @readonly
      */
     readonly destinationDialogId: DestinationDialogId;
     /**
      * @summary `abortChoice`.
+     * @description
+     *
+     * Provider abort cause or manufacturer-specific user abort information
+     * (ECMA-165 §11.3.3.3). Clause 8.4 requires an abort in several cases and
+     * does not choose this alternative.
      * @public
      * @readonly
      */

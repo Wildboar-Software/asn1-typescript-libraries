@@ -13,7 +13,15 @@ import { AuthKey, _decode_AuthKey, _encode_AuthKey } from "../WTM-Authentication
 /**
  * @summary WtatParamInfo_wtatParamInfoChoice
  * @description
- * 
+ *
+ * Choice inside `WtatParamInfo` (ECMA-306 §6.3.1). `authSessionKeyInfo` and
+ * `calcWtatInfo` are fetch results (§6.5.7.1). `authKey` and `challLen` are for
+ * `transferAuthParam` during ANF-WTINFO (§6.8.22.1) and shall not appear in a
+ * `wtatParamEnq` result. ECMA-306 does not define what the `challLen` integer
+ * represents.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-306/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

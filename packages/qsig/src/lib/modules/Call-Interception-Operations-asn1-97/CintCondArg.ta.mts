@@ -13,7 +13,15 @@ import { CintExtension, _decode_CintExtension, _encode_CintExtension } from "../
 /**
  * @summary CintCondArg
  * @description
- * 
+ *
+ * Call-failure condition offered to a preceding PINX for possible
+ * interception immediate (ECMA-221 §6.6.1, §6.6.2). The cause is
+ * what a Transit PINX must copy when it relays `cintCondition`.
+ * ECMA-221 does not say when the optional number and name elements
+ * are included.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-221/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,30 +40,50 @@ export
 class CintCondArg {
     /**
      * @summary `interceptionCause`.
+     * @description
+     *
+     * Failure condition. A Transit PINX that relays `cintCondition`
+     * sends this same cause (ECMA-221 §6.6.2).
      * @public
      * @readonly
      */
     readonly interceptionCause: Condition;
     /**
      * @summary `originalCalledNumber`.
+     * @description
+     *
+     * ECMA-221 §6.3.1 includes this element and does not say when it
+     * is present on `cintCondition`.
      * @public
      * @readonly
      */
     readonly originalCalledNumber: OPTIONAL<PresentedNumberUnscreened>;
     /**
      * @summary `calledName`.
+     * @description
+     *
+     * ECMA-221 §6.3.1 includes this element and does not say when it
+     * is present on `cintCondition`.
      * @public
      * @readonly
      */
     readonly calledName: OPTIONAL<Name>;
     /**
      * @summary `originalCalledName`.
+     * @description
+     *
+     * ECMA-221 §6.3.1 includes this element and does not say when it
+     * is present on `cintCondition`.
      * @public
      * @readonly
      */
     readonly originalCalledName: OPTIONAL<Name>;
     /**
      * @summary `extension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-221 §6.3.1 leaves
+     * `CINTExtSet` empty.
      * @public
      * @readonly
      */

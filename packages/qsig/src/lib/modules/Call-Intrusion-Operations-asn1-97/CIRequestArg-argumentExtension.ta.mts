@@ -9,7 +9,15 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary CIRequestArg_argumentExtension
  * @description
- * 
+ *
+ * Optional manufacturer-specific addition to `callIntrusionRequest`
+ * (ECMA-203 §6.3.1). §6.6 does not say when it is present.
+ *
+ * - `extension`: one extension from `CIExtSet`.
+ * - `sequenceOfExtn`: more than one extension from `CIExtSet`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-203/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

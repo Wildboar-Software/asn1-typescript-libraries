@@ -13,7 +13,11 @@ import { ReAnswerArg_argumentExtension, _decode_ReAnswerArg_argumentExtension, _
 /**
  * @summary ReAnswerArg
  * @description
- * 
+ *
+ * Argument of `recallAnswered` (ECMA-214 §6.3.1, §6.5.1.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-214/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,24 +38,47 @@ export
 class ReAnswerArg {
     /**
      * @summary `connectedNumber`.
+     * @description
+     *
+     * Number of the user who answered the recall. The Primary PINX may give
+     * received number information to user B subject to number presentation
+     * restriction (ECMA-214 §6.5.2.1). If CFU or CFB applies, the argument
+     * describes the diverted-to user rather than user A (§6.9.3.1). §6.5.1.1
+     * does not name this element. §6.3.1 includes it.
      * @public
      * @readonly
      */
     readonly connectedNumber: PresentedNumberScreened;
     /**
      * @summary `connectedSubaddress`.
+     * @description
+     *
+     * Subaddress of the user who answered. The argument may contain it
+     * (ECMA-214 §6.5.1.1). The Standard does not define its contents further.
+     * The Primary PINX may convey other received information to user B
+     * (§6.5.2.1).
      * @public
      * @readonly
      */
     readonly connectedSubaddress: OPTIONAL<PartySubaddress>;
     /**
      * @summary `connectedName`.
+     * @description
+     *
+     * Name of the user who answered. The argument may contain it (ECMA-214
+     * §6.5.1.1). The Primary PINX may give it to user B subject to name
+     * presentation restriction (§6.5.2.1, §6.9.2). If CFU or CFB applies, this
+     * is the diverted-to user (§6.9.3.1).
      * @public
      * @readonly
      */
     readonly connectedName: OPTIONAL<Name>;
     /**
      * @summary `argumentExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension from `REExtSet`. The standardized set is
+     * empty (ECMA-214 §6.3.1).
      * @public
      * @readonly
      */

@@ -10,7 +10,14 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary DummyArg
  * @description
- * 
+ *
+ * Argument of `ssctPostDial`. The procedures carry no standardized
+ * data in this invoke. `null` is that empty argument. `single` and
+ * `multiple` are manufacturer extensions. ECMA-300 §6.3.1 defines no
+ * members of `SSCTExtSet`. ECMA-300 §6.5.2.1.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-300/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

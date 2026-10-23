@@ -13,7 +13,14 @@ import { SmsExtension, _decode_SmsExtension, _encode_SmsExtension } from "../Sho
 /**
  * @summary SmsSubmitRes
  * @description
- * 
+ *
+ * Result of `smsSubmit` (ECMA-325 §6.5.3.1.1, Annex E.2). The Service Centre
+ * has accepted and time-stamped the Short Message. Tags [3] and [4] are the 25
+ * September 2001 errata, so these optional elements stay distinct from
+ * `SmsExtension`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,24 +38,41 @@ export
 class SmsSubmitRes {
     /**
      * @summary `serviceCentreTimeStamp`.
+     * @description
+     *
+     * Time of arrival at the Service Centre, local to the Service Centre, to
+     * one second (ECMA-325 §E.2.1). If several Short Messages arrive together,
+     * stamps for one Receiving User are made distinct with the smallest change.
      * @public
      * @readonly
      */
     readonly serviceCentreTimeStamp: ServiceCentreTimeStamp;
     /**
      * @summary `protocolIdentifier`.
+     * @description
+     *
+     * Echo of `protocolIdentifier` from the invoke (ECMA-325 §E.2.2).
      * @public
      * @readonly
      */
     readonly protocolIdentifier: OPTIONAL<ProtocolIdentifier>;
     /**
      * @summary `userData`.
+     * @description
+     *
+     * Optional, for Service Centre use. When present, includes the invoke's
+     * user data. Further headers may follow a `dataHeaderSourceIndicator`
+     * (ECMA-325 §E.2.3).
      * @public
      * @readonly
      */
     readonly userData: OPTIONAL<UserData>;
     /**
      * @summary `smsExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. This edition defines none in `SmsExtSet`
+     * (ECMA-325 §6.3.1).
      * @public
      * @readonly
      */

@@ -11,7 +11,12 @@ import { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "
 /**
  * @summary WtanParamRes
  * @description
- * 
+ *
+ * Result of `getWtanParam` and of `wtanParamEnq`. The Home PINX forwards the
+ * information from the `wtanParamEnq` result (ECMA-306 §7.5.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-306/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +32,20 @@ export
 class WtanParamRes {
     /**
      * @summary `wtanParamInfo`.
+     * @description
+     *
+     * Session key, or the response computed by the Authentication Server PINX
+     * (ECMA-306 §7.5.1.1, §7.5.3.1).
      * @public
      * @readonly
      */
     readonly wtanParamInfo: WtanParamInfo;
     /**
      * @summary `dummyExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-306 §6.3.1 defines no members of
+     * `WTMAuthExtSet`.
      * @public
      * @readonly
      */

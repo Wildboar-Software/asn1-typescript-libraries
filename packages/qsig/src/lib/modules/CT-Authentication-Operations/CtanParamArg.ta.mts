@@ -20,7 +20,12 @@ import { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "
 /**
  * @summary CtanParamArg
  * @description
- * 
+ *
+ * Argument of `getCtanParam` and of `ctanParamEnq` (ECMA-243 §7.5.1, §7.5.3).
+ * Carries the challenge and algorithm received from the CTM user.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-243/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,30 +44,51 @@ export
 class CtanParamArg {
     /**
      * @summary `pisnNumber`.
+     * @description
+     *
+     * PISN number of the CTM user that is authenticating the PISN. An invalid
+     * number is rejected with `invalidServedUserNr` (ECMA-243 §7.5.2.2,
+     * §7.5.3.2).
      * @public
      * @readonly
      */
     readonly pisnNumber: PartyNumber;
     /**
      * @summary `authChallenge`.
+     * @description
+     *
+     * Challenge received from the CTM user (ECMA-243 §7.5.1.1). Described as a
+     * randomly generated parameter (§6.3.1). Generation is outside ECMA-243
+     * (§1).
      * @public
      * @readonly
      */
     readonly authChallenge: AuthChallenge;
     /**
      * @summary `authAlgorithm`.
+     * @description
+     *
+     * Algorithm identifier received from the CTM user (ECMA-243 §6.3.1,
+     * §7.5.1.1). Algorithm behaviour is outside ECMA-243 (§1).
      * @public
      * @readonly
      */
     readonly authAlgorithm: AuthAlgorithm;
     /**
      * @summary `canCompute`.
+     * @description
+     *
+     * Present when the Visitor PINX can compute the response from session-key
+     * information (ECMA-243 §6.3.1, §7.5.1.1).
      * @public
      * @readonly
      */
     readonly canCompute: OPTIONAL<CanCompute>;
     /**
      * @summary `dummyExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-243 §6.3.1 defines none.
      * @public
      * @readonly
      */

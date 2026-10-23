@@ -21,7 +21,23 @@ import { unspecified } from "../CT-Authentication-Operations/unspecified.oa.mjs"
 /**
  * @summary getCtanParam
  * @description
- * 
+ *
+ * SS-CTAN parameter request from the Visitor PINX to the Home PINX (ECMA-243
+ * §7.1, §7.5.1). Local code 75. Used when the Visitor PINX does not already
+ * hold SS-CTAN parameters. The argument carries the challenge and the
+ * authentication algorithm received from the CTM user. A session-key result is
+ * used, with that challenge, to compute the response; a calculated-response
+ * result is sent to the CTM user as acceptance (§7.5.1.1). Timer T4 at the
+ * Visitor PINX, in state CtanVisitRequesting, shall be at least 15 s (§7.9.1).
+ *
+ * Home PINX errors (§7.5.2.2): `invalidServedUserNr` when the PISN number is
+ * invalid; `notAuthorized` when the user is not authorised for SS-CTAN; the
+ * error received from the Authentication Server PINX; `paramNotAvailable` when
+ * that PINX rejects; `temporarilyUnavailable` when timer T5 expires.
+ * `unspecified` is listed in §6.3.1, which does not say when it is returned.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-243/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

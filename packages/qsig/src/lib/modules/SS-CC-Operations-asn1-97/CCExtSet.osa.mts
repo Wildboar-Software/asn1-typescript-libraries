@@ -4,7 +4,12 @@ import { EXTENSION } from "../Manufacturer-specific-service-extension-class-asn1
 /**
  * @summary CCExtSet
  * @description
- * 
+ *
+ * Extension marker for manufacturer-specific Call Completion
+ * information (ECMA-186 §6.3.1). The standard leaves the set empty.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-186/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

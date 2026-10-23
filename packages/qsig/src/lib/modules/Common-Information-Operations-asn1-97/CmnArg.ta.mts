@@ -15,7 +15,16 @@ import { CmnArg_extension, _decode_CmnArg_extension, _encode_CmnArg_extension } 
 /**
  * @summary CmnArg
  * @description
- * 
+ *
+ * Common information exchanged by cmnInform, and returned by cmnRequest
+ * (ECMA-251 §6.1, §6.3.1). Every element is optional. It may contain feature
+ * identifiers available for this call, a DND-override protection level, a
+ * call-intrusion protection level, an equipment identity, and a party
+ * category. The receiver may use it for any purpose, for example indications
+ * or filtering feature requests (§6.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-251/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,36 +54,66 @@ export
 class CmnArg {
     /**
      * @summary `featureIdentifier`.
+     * @description
+     *
+     * Features available for this call. A bit set to ONE means that feature
+     * is available (ECMA-251 §6.3.1). Each named bit has its own direction
+     * restriction.
      * @public
      * @readonly
      */
     readonly featureIdentifier: OPTIONAL<FeatureIdList>;
     /**
      * @summary `ssDNDOprotectionLevel`.
+     * @description
+     *
+     * Do Not Disturb Override protection level, integer 0..3. Meaningful
+     * only in the backward direction. Presence indicates that SS-DNDO is
+     * supported and gives the applicable protection level (ECMA-251 §6.3.1).
+     * ECMA-251 does not define what each integer means.
      * @public
      * @readonly
      */
     readonly ssDNDOprotectionLevel: OPTIONAL<INTEGER>;
     /**
      * @summary `ssCIprotectionLevel`.
+     * @description
+     *
+     * Call Intrusion protection level, integer 0..3. Meaningful in both
+     * directions. Presence indicates support of SS-CI as an Unwanted-user
+     * PINX in the forward direction, or as a Terminating PINX in the
+     * backward direction, and gives the applicable protection level
+     * (ECMA-251 §6.3.1). ECMA-251 does not define what each integer means.
      * @public
      * @readonly
      */
     readonly ssCIprotectionLevel: OPTIONAL<INTEGER>;
     /**
      * @summary `equipmentIdentity`.
+     * @description
+     *
+     * Equipment of a calling or called party (ECMA-251 §6.3.1). Network-wide
+     * unique assignment is outside the scope of the standard.
      * @public
      * @readonly
      */
     readonly equipmentIdentity: OPTIONAL<EquipmentId>;
     /**
      * @summary `partyCategory`.
+     * @description
+     *
+     * Category of the calling user (forward, in SETUP) or the called user
+     * (backward, in ALERTING or CONNECT), ECMA-251 §6.3.1.
      * @public
      * @readonly
      */
     readonly partyCategory: OPTIONAL<PartyCategory>;
     /**
      * @summary `extension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-251 §6.3.1 leaves CMNExtSet
+     * empty.
      * @public
      * @readonly
      */

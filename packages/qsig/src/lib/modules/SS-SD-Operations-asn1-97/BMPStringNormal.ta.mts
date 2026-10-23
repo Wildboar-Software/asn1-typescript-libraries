@@ -9,7 +9,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary BMPStringNormal
  * @description
- * 
+ *
+ * BMP string of 2 to 64 octets (ECMA-311 §6.3.1). Use it according to ISO/IEC
+ * 10646-1 §6.2, coded as a BMPString under ITU-T X.690 §8.20.8, which places
+ * two octets in each character. The bound is therefore 1 to 32 characters. This
+ * is the only size allowed for keypad information.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-311/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -12,7 +12,12 @@ import { ValidityPeriod, _decode_ValidityPeriod, _encode_ValidityPeriod } from "
 /**
  * @summary SmSubmitParameter
  * @description
- * 
+ *
+ * Per-message parameters of `smsSubmit` (ECMA-325 §E.1.2). The Service Centre
+ * stores them with the Short Message (§6.5.3.1.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,30 +36,66 @@ export
 class SmSubmitParameter {
     /**
      * @summary `protocolIdentifier`.
+     * @description
+     *
+     * Higher-layer protocol, telematic interworking, a replace code, or
+     * `shortMessageType0`. Simple transfer uses 0 (`noIw`) (ECMA-325 §E.1.2.1).
      * @public
      * @readonly
      */
     readonly protocolIdentifier: ProtocolIdentifier;
     /**
      * @summary `validityPeriod`.
+     * @description
+     *
+     * How long the Service Centre keeps the Short Message and keeps trying to
+     * deliver it. After expiry the Short Message is deleted (ECMA-325
+     * §E.1.2.2). If omitted, the Service Centre uses an implementation-specific
+     * default (§6.5.3.2.1 NOTE 6).
      * @public
      * @readonly
      */
     readonly validityPeriod: OPTIONAL<ValidityPeriod>;
     /**
      * @summary `statusReportRequest`.
+     * @description
+     *
+     * Default FALSE. TRUE asks the Service Centre for Status Reports about this
+     * Short Message (ECMA-325 §E.1.2.3). It also enables
+     * `smscControlParameterHeader` (§E.1.3.1.1). The Service Centre combines
+     * this flag with that header; if the header is absent, every header
+     * condition is treated as requested (§6.5.3.1.1).
      * @public
      * @readonly
      */
     readonly statusReportRequest: OPTIONAL<BOOLEAN>;
     /**
      * @summary `replyPath`.
+     * @description
+     *
+     * Default FALSE. TRUE asks the Service Centre to carry a reply Short
+     * Message through this same Service Centre (ECMA-325 §E.1.2.4). Both this
+     * Service Centre and the Receiving User PINX must support reply path. The
+     * reply goes to this Service Centre; the Receiving User's own Service
+     * Centre is not used. On `smsDeliver` the Service Centre sets the flag TRUE
+     * only when it supports reply path (§6.5.3.1.1).
      * @public
      * @readonly
      */
     readonly replyPath: OPTIONAL<BOOLEAN>;
     /**
      * @summary `rejectDuplicates`.
+     * @description
+     *
+     * Default FALSE. TRUE tells the Service Centre to reject a Short Message
+     * that repeats `messageReference` and `destinationAddress` from the same
+     * `originatingAddress`, with cause `smRejectedDuplicateSM` (ECMA-325
+     * §6.5.3.2.1, §E.1.2.5). FALSE accepts that duplicate and does not
+     * overwrite the stored Short Message. Replacement uses a replace
+     * `protocolIdentifier`, not this flag. The same `messageReference` from the
+     * same Sending User with a different destination is rejected even when this
+     * flag is FALSE (§6.5.3.2.1). Annex E.1.2.5 calls the failure an
+     * `smsDeliver` return error; §6.5.3.2.1 returns `smsSubmit` error.
      * @public
      * @readonly
      */

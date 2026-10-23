@@ -11,7 +11,13 @@ import { AocRateArg_rateArgExtension, _decode_AocRateArg_rateArgExtension, _enco
 /**
  * @summary AocRateArg
  * @description
- * 
+ *
+ * Argument of `aocRate`. Either the rate is unavailable, or a list of per-item
+ * charging rates is given (ECMA-212 §6.3.1, ECMA-211 Annex A).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +39,21 @@ export
 class AocRateArg {
     /**
      * @summary `aocRate`.
+     * @description
+     *
+     * Either no rate is available, or the list of charged items and their
+     * rates.
      * @public
      * @readonly
      */
     readonly aocRate: AocRateArg_aocRate;
     /**
      * @summary `rateArgExtension`.
+     * @description
+     *
+     * Optional manufacturer-specific extension on `aocRate`. ECMA-212 §6.3.1
+     * defines `AOCExtSet` as `{...}` and names no member. It does not say when
+     * to send one extension rather than several.
      * @public
      * @readonly
      */

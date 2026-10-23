@@ -11,7 +11,13 @@ import { SubaddressTransferArg_argumentExtension, _decode_SubaddressTransferArg_
 /**
  * @summary SubaddressTransferArg
  * @description
- * 
+ *
+ * Argument of `subaddressTransfer`. Carries one user's subaddress to
+ * the other user after transfer. ECMA-178 §6.5.5; ECMA-177 §7.2.1.5.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-178/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-177/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +36,22 @@ export
 class SubaddressTransferArg {
     /**
      * @summary `redirectionSubaddress`.
+     * @description
+     *
+     * Subaddress to present to the other transferred user.
+     * ECMA-178 §6.5.5. Gateway procedures call this element
+     * `connectedSubaddress`; the ASN.1 name is
+     * `redirectionSubaddress` (§6.6.1.1, §6.7.1.2).
      * @public
      * @readonly
      */
     readonly redirectionSubaddress: PartySubaddress;
     /**
      * @summary `argumentExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-178 §6.3.1 defines no
+     * member of `CTExtSet`.
      * @public
      * @readonly
      */

@@ -11,7 +11,15 @@ import { RemoteOperationsPortion, _decode_RemoteOperationsPortion, _encode_Remot
 /**
  * @summary DialogEndPDU
  * @description
- * 
+ *
+ * Terminates a dialogue (ECMA-165 §8.4). Either PINX may send it when the
+ * Coordination Function requests termination, or the responder may send it
+ * instead of accepting the dialogue (§8.4.2.2). The receiver releases both
+ * dialogue identifiers and returns to Idle. An end received in Idle is
+ * discarded (§8.4.5).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +35,22 @@ export
 class DialogEndPDU {
     /**
      * @summary `destinationDialogId`.
+     * @description
+     *
+     * The peer's dialogue identifier. DialogEnd carries no origination
+     * identifier (ECMA-165 §6.6 Table 1, §8.4).
      * @public
      * @readonly
      */
     readonly destinationDialogId: DestinationDialogId;
     /**
      * @summary `remoteOperationsPortion`.
+     * @description
+     *
+     * Optional ROSE or ACSE APDUs belonging to this dialogue (ECMA-165 §8.4). A
+     * DialogAbortPDU does not carry this element. §8.4 says one or more ROSE
+     * APDUs or one or more ACSE APDUs; it does not discuss mixing the two in
+     * one portion.
      * @public
      * @readonly
      */

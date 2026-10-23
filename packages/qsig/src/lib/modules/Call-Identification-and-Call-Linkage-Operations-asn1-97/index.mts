@@ -1,6 +1,15 @@
 /**
  * @module
- * @description ASN.1 module `Call-Identification-and-Call-Linkage-Operations-asn1-97`.
+ * @description
+ *
+ * Operations for ANF Call Identification and Call Linkage
+ * (ECMA-314 2nd ed., Dec 2001, §6.3.1). Assigns an end-to-end
+ * Global Call Identification and, optionally, a Thread
+ * Identification and a Leg Identification. The data structure
+ * follows ECMA-269 §12.2.5, imported in ECMA-314 Annex D.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-314/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export * from "./CallIdentification-Operations.osa.mjs";
 export * from "./CallIdentificationAssignArg.ta.mjs";

@@ -10,7 +10,14 @@ import { NameSet, _decode_NameSet, _encode_NameSet } from "../Name-Operations-as
 /**
  * @summary NamePresentationAllowed
  * @description
- * 
+ *
+ * The name may be presented (ECMA-164 §7.4.1.1, §8.4.1.1).
+ * `namePresentationAllowedSimple` is the name in ISO 8859-1.
+ * `namePresentationAllowedExtended` is a `NameSet`, which may name another
+ * character set (§6.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-164/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -11,7 +11,12 @@ import { MCRExtensions, _decode_MCRExtensions, _encode_MCRExtensions } from "../
 /**
  * @summary MCAlertingArg
  * @description
- * 
+ *
+ * Argument of `mCAlerting` (ECMA-344 §6.3.1). Sent in FACILITY when the
+ * Requested Call is alerting (§6.5.2.1.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-344/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +33,19 @@ export
 class MCAlertingArg {
     /**
      * @summary `correlation`.
+     * @description
+     *
+     * The `correlation` value received in `mCRequest` (ECMA-344 §6.5.2.1.2).
      * @public
      * @readonly
      */
     readonly correlation: Correlation;
     /**
      * @summary `extensions`.
+     * @description
+     *
+     * Manufacturer-specific extension. This edition defines none in
+     * `MakeCallRequestExtension` (ECMA-344 §6.3.1).
      * @public
      * @readonly
      */

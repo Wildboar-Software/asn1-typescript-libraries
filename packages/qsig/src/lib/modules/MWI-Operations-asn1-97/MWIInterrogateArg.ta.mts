@@ -13,7 +13,13 @@ import { MWIInterrogateArg_argumentExt, _decode_MWIInterrogateArg_argumentExt, _
 /**
  * @summary MWIInterrogateArg
  * @description
- * 
+ *
+ * Argument of `mWIInterrogate`. Names the Served User and either one service or
+ * all services (ECMA-242 §6.5.2.1.2, ECMA-241 §7.2.1.3 note 2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,24 +40,38 @@ export
 class MWIInterrogateArg {
     /**
      * @summary `servedUserNr`.
+     * @description PISN number of the Served User (ECMA-242 §6.5.2.1.2).
      * @public
      * @readonly
      */
     readonly servedUserNr: PartyNumber;
     /**
      * @summary `basicService`.
+     * @description
+     *
+     * One service, or all services (ECMA-241 §7.2.1.3 note 2). ECMA-242 §6.3.1
+     * does not state which enumerated value means all services.
      * @public
      * @readonly
      */
     readonly basicService: BasicService;
     /**
      * @summary `msgCentreId`.
+     * @description
+     *
+     * Optional identity of the Message Centre to interrogate (ECMA-242
+     * §6.5.2.1.2). An incorrect value causes a return error (§6.5.1.2.2).
      * @public
      * @readonly
      */
     readonly msgCentreId: OPTIONAL<MsgCentreId>;
     /**
      * @summary `argumentExt`.
+     * @description
+     *
+     * Optional manufacturer-specific extension on `mWIInterrogate`. ECMA-242
+     * §6.3.1 defines `MWIExtSet` as `{...}` and names no member. It does not
+     * say when to send one extension rather than several.
      * @public
      * @readonly
      */

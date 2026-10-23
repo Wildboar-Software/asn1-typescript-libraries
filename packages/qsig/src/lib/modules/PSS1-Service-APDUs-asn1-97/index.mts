@@ -1,6 +1,14 @@
 /**
  * @module
- * @description ASN.1 module `PSS1-Service-APDUs-asn1-97`.
+ * @description
+ *
+ * ROSE invoke, return result, return error, and reject APDUs carried in the
+ * Facility information element (ECMA-165 §6.4, §8.2, §11.3.3.4 Table 34). X.680
+ * edition, `pss1-service-apdus-asn1-97(16)`. Annex G defines the problem codes.
+ * The operations and errors are defined by the supplementary service, not by
+ * this module (§8.2, §8.5).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export * from "./Errors.vsa.mjs";
 export * from "./GeneralProblem.ta.mjs";

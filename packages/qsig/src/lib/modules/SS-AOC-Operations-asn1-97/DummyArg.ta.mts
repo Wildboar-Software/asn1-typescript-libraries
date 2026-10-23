@@ -10,7 +10,14 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary DummyArg
  * @description
- * 
+ *
+ * Argument of `getFinalCharge`. The service flow has no elements (ECMA-211
+ * §9.2.1.10). `none` carries no data. The extension alternatives are
+ * manufacturer-specific; ECMA-212 §6.3.1 does not say when to use them.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

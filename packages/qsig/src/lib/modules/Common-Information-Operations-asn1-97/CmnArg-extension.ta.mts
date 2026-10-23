@@ -9,7 +9,12 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary CmnArg_extension
  * @description
- * 
+ *
+ * Manufacturer-specific extension on CmnArg. ECMA-251 §6.3.1 defines single
+ * and multiple alternatives and registers none in CMNExtSet.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-251/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -9,7 +9,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SubaddressInformation
  * @description
- * 
+ *
+ * Octets of a user-specified subaddress, coded according to user requirements
+ * (ECMA-165 Annex B Table B.1). Table B.1 allows 1 to 20 octets and notes that
+ * some networks limit the value, for example to 4 octets. It does not define
+ * the contents.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

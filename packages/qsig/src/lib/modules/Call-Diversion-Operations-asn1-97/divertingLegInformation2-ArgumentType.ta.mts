@@ -15,7 +15,12 @@ import { _decode_divertingLegInformation2_ArgumentType_extension, _encode_divert
 /**
  * @summary divertingLegInformation2_ArgumentType
  * @description
- * 
+ *
+ * Argument of `divertingLegInformation2`, from the Rerouteing PINX to the
+ * Diverted-to PINX (ECMA-174 §6.3.1, §6.5.4.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,48 +46,90 @@ export
 class divertingLegInformation2_ArgumentType {
     /**
      * @summary `diversionCounter`.
+     * @description
+     *
+     * Diversion count from `callRerouteing`, in the range 1 to 15 (ECMA-174
+     * §6.5.4.1).
      * @public
      * @readonly
      */
     readonly diversionCounter: INTEGER;
     /**
      * @summary `diversionReason`.
+     * @description
+     *
+     * Reason for the last diversion, copied from `rerouteingReason` (ECMA-174
+     * §6.5.4.1). Presented to the diverted-to user with the diversion
+     * notification (§6.5.5.1.1).
      * @public
      * @readonly
      */
     readonly diversionReason: DiversionReason;
     /**
      * @summary `originalDiversionReason`.
+     * @description
+     *
+     * Reason for the original diversion, copied from `originalRerouteingReason`
+     * when that element was received (ECMA-174 §6.5.4.1). On multiple diversion
+     * the diverted-to user may receive both reasons (ECMA-173 §6.2.2.2.2).
      * @public
      * @readonly
      */
     readonly originalDiversionReason: OPTIONAL<DiversionReason>;
     /**
      * @summary `divertingNr`.
+     * @description
+     *
+     * Number of the last diverting user, copied from `lastRerouteingNr`
+     * (ECMA-174 §6.5.4.1). Mandatory except when interworking (§6.3.1).
+     * Presented if the called user is able and authorized (§6.5.5.1.1). On
+     * multiple diversion, presentation also follows the subscription option of
+     * that user (ECMA-173 §6.2.2.2.2).
      * @public
      * @readonly
      */
     readonly divertingNr: OPTIONAL<PresentedNumberUnscreened>;
     /**
      * @summary `originalCalledNr`.
+     * @description
+     *
+     * Number of the original called user. Optional, and included only if
+     * `callRerouteing` carried it (ECMA-174 §6.5.4.1). Presented on multiple
+     * diversion when the called user is able and authorized (§6.5.5.1.1).
      * @public
      * @readonly
      */
     readonly originalCalledNr: OPTIONAL<PresentedNumberUnscreened>;
     /**
      * @summary `redirectingName`.
+     * @description
+     *
+     * Optional name copied from `callRerouteing` when that element was received
+     * (ECMA-174 §6.5.4.1). The Diverted-to PINX may present it to the called
+     * user (§6.5.5.1.1). The protocol does not state whether this is the last
+     * diverting user's name.
      * @public
      * @readonly
      */
     readonly redirectingName: OPTIONAL<Name>;
     /**
      * @summary `originalCalledName`.
+     * @description
+     *
+     * Optional name copied from `callRerouteing` when that element was received
+     * (ECMA-174 §6.5.4.1). The Diverted-to PINX may present it on multiple
+     * diversion (§6.5.5.1.1). The protocol does not define its contents beyond
+     * the element name.
      * @public
      * @readonly
      */
     readonly originalCalledName: OPTIONAL<Name>;
     /**
      * @summary `extension`.
+     * @description
+     *
+     * Manufacturer-specific extension from `DiversionExtensionSet`. The
+     * standardized set is empty (ECMA-174 §6.3.1).
      * @public
      * @readonly
      */

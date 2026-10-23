@@ -1,6 +1,14 @@
 /**
  * @module
- * @description ASN.1 module `SS-MCR-Operations-asn97`.
+ * @description
+ *
+ * Make Call Request (SS-MCR) at the Q reference point. A Requesting
+ * User asks a Co-operating User to set up a Requested Call to a
+ * Destination User. That call is correlated with the Original Call
+ * and is either a basic call or a call-independent signalling
+ * connection. ECMA-344 1st edition (June 2003), §6.1.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-344/
  */
 export * from "./CallType.ta.mjs";
 export * from "./Correlation.ta.mjs";

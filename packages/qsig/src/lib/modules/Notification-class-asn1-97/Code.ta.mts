@@ -9,7 +9,17 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Code
  * @description
- * 
+ *
+ * Identifier of a notification (ECMA-165 Annex B Table B.2, §11.3.4). `local`
+ * is an integer assigned by ITU-T, used with the "discriminator for
+ * notification extension", or an integer assigned by ISO, used with the
+ * "discriminator for extension to ISO defined ASN.1 encoded notification data
+ * structure". `global` is an object identifier. Manufacturer-specific
+ * notifications use an object identifier (§9.3) and shall not use the
+ * notification-description field except for the extension discriminator.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

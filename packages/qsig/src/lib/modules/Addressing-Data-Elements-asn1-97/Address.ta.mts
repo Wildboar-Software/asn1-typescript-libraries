@@ -11,7 +11,12 @@ import { PartySubaddress, _decode_PartySubaddress, _encode_PartySubaddress } fro
 /**
  * @summary Address
  * @description
- * 
+ *
+ * A party number and an optional subaddress, with no screening and no
+ * presentation instruction (ECMA-165 Annex B Table B.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +32,21 @@ export
 class Address {
     /**
      * @summary `partyNumber`.
+     * @description
+     *
+     * Number of the party. The numbering plan is selected by the PartyNumber
+     * alternative (ECMA-165 Annex B Table B.1).
      * @public
      * @readonly
      */
     readonly partyNumber: PartyNumber;
     /**
      * @summary `partySubaddress`.
+     * @description
+     *
+     * Optional subaddress. User-specified coding is not recommended; an NSAP
+     * subaddress follows ITU-T X.213 (Table B.1). ECMA-155 §10.1 says a PINX
+     * does not alter a subaddress in a pure PISN.
      * @public
      * @readonly
      */

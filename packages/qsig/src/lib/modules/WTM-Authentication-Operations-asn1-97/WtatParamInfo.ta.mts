@@ -11,7 +11,14 @@ import { WtatParamInfo_wtatParamInfoChoice, _decode_WtatParamInfo_wtatParamInfoC
 /**
  * @summary WtatParamInfo
  * @description
- * 
+ *
+ * SS-WTAT parameters and the algorithm in use (ECMA-306 §6.3.1, §6.5.7.1). A
+ * `wtatParamEnq` result uses `calcWtatInfo` or `authSessionKeyInfo`, and shall
+ * not use `authKey` or `challLen`. `transferAuthParam` during ANF-WTINFO shall
+ * use `authKey` or `challLen` (§6.8.22.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-306/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +39,21 @@ export
 class WtatParamInfo {
     /**
      * @summary `authAlgorithm`.
+     * @description
+     *
+     * Algorithm in use. The `wtatParamEnq` result shall contain it (ECMA-306
+     * §6.5.7.1). Algorithm behaviour is outside ECMA-306 (§1).
      * @public
      * @readonly
      */
     readonly authAlgorithm: AuthAlgorithm;
     /**
      * @summary `wtatParamInfoChoice`.
+     * @description
+     *
+     * Session key, computed values, authentication key, or `challLen` (ECMA-306
+     * §6.3.1). A parameter enquiry uses only the first two (§6.5.7.1).
+     * `transferAuthParam` uses `authKey` or `challLen` (§6.8.22.1).
      * @public
      * @readonly
      */

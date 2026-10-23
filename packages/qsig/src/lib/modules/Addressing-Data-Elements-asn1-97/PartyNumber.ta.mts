@@ -11,7 +11,16 @@ import { PrivatePartyNumber, _decode_PrivatePartyNumber, _encode_PrivatePartyNum
 /**
  * @summary PartyNumber
  * @description
- * 
+ *
+ * Digits of a party number and the numbering plan those digits belong to
+ * (ECMA-165 Annex B Table B.1). `unknownPartyNumber` is the network's default
+ * numbering plan; Table B.1 recommends it. `publicPartyNumber` uses ITU-T E.163
+ * and E.164. `privatePartyNumber` is a private numbering plan (ECMA-155, cited
+ * by §4.30). `dataPartyNumber`, `telexPartyNumber`, and
+ * `nationalStandardPartyNumber` are not used; those values are reserved.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -11,7 +11,15 @@ import { DNDOverrideArg_argumentExtension, _decode_DNDOverrideArg_argumentExtens
 /**
  * @summary DNDOverrideArg
  * @description
- * 
+ *
+ * Immediate SS-DNDO request carried in SETUP (ECMA-194 §6.6.2.1.1).
+ * The Terminating PINX compares `dndoCapabilityLevel` with the
+ * called user's DNDPL and overrides SS-DND only when DNDPL is
+ * strictly smaller (ECMA-194 §6.6.1.1; ECMA-193 §6.3.15).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-194/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-193/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +38,21 @@ export
 class DNDOverrideArg {
     /**
      * @summary `dndoCapabilityLevel`.
+     * @description
+     *
+     * Calling user's DNDOCL for this call. Override is allowed only
+     * when this value is strictly greater than the called user's
+     * DNDPL (ECMA-194 §6.6.1.1; ECMA-193 §6.3.15).
      * @public
      * @readonly
      */
     readonly dndoCapabilityLevel: DNDOCapabilityLevel;
     /**
      * @summary `argumentExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-194 §6.3.1 defines the
+     * CHOICE and leaves `DNDExtSet` empty.
      * @public
      * @readonly
      */

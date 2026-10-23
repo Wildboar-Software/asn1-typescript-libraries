@@ -9,7 +9,13 @@ import { UserPin, _decode_UserPin, _encode_UserPin } from "../PUM-Registration-O
 /**
  * @summary PumInterrogArg_userPin
  * @description
- * 
+ *
+ * PIN on `pumInterrog` (ECMA-282 §6.3.1). `pumUserPin` is the PUM user's PIN.
+ * `activatingUserPin` is the activating user's PIN. §6.7 is silent on which
+ * alternative is sent. The octet encoding is not specified.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-282/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

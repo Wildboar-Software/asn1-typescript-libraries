@@ -9,7 +9,14 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary SmsExtension
  * @description
- * 
+ *
+ * One (`single`) or more (`multiple`) manufacturer-specific extensions from
+ * `SmsExtSet` (ECMA-325 §6.3.1). This edition defines none. Tags [1] and [2]
+ * are why other optional elements in this module were given different tags
+ * (errata of 25 September 2001).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

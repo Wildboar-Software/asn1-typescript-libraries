@@ -17,7 +17,33 @@ import { unspecified } from "../Call-Diversion-Operations-asn1-97/unspecified.oa
 /**
  * @summary activateDiversionQ
  * @description
- * 
+ *
+ * Remote activation of CFU, CFB, or CFNR. The Activating PINX sends this to the
+ * Served User PINX on a call-independent signalling connection when the user
+ * requests activation (ECMA-174 §6.5.6.1). ROSE local code 15.
+ *
+ * The Served User PINX checks `basicService` for `servedUserNr`, checks that
+ * remote activation is supported and enabled, and may take `activatingUserNr`
+ * into account (ECMA-174 §6.5.3.1.1). It may verify the diverted-to number by
+ * `checkRestriction` or locally (§6.5.3.1.4). If the request is acceptable it
+ * activates `procedure`, stores the diverted-to number and any subaddress,
+ * returns a result, and may notify the served user.
+ *
+ * The Activating PINX runs timer T2, at least 30 s. Expiry is treated as a
+ * reject (ECMA-174 §6.9.2). On a return error or reject it indicates rejection
+ * to the activating user (§6.5.6.2).
+ *
+ * Errors: `userNotSubscribed`, `notAvailable`, `invalidServedUserNr`,
+ * `basicServiceNotProvided`, and `resourceUnavailable` (imported from
+ * General-Error-List; this Standard does not define them), plus
+ * `invalidDivertedToNr`, `specialServiceNr`, `diversionToServedUserNr`,
+ * `temporarilyUnavailable`, `notAuthorized`, and `unspecified`. §6.5.3.2.1
+ * requires an appropriate error and does not name the code. Stage 1 rejection
+ * causes are in ECMA-173 §6.2.3.1.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-173/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

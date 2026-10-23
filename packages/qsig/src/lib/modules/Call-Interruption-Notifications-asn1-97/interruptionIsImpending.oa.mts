@@ -8,7 +8,16 @@ import { type NOTIFICATION } from "../Notification-class-asn1-97/NOTIFICATION.oc
 /**
  * @summary interruptionIsImpending
  * @description
- * 
+ *
+ * Notification that an established call is about to be interrupted (ECMA-264
+ * §6.8.3.1). Optional. Sent in NOTIFY on the established call's call
+ * references. The Interrupting PINX then runs timer T1 (1-10 s, §6.15.1)
+ * in state CPI-Impending and interrupts when T1 expires. Argument is NULL.
+ * Local CODE 2008. If this notification is not sent, interruption is
+ * immediate.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-264/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

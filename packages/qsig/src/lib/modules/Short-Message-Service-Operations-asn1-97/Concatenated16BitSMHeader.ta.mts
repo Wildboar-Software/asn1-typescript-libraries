@@ -11,7 +11,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Concatenated16BitSMHeader
  * @description
- * 
+ *
+ * Segments a long message using a 16-bit reference (ECMA-325 §E.1.3.1.3). An
+ * enhanced form of the 8-bit concatenation header. Maximum and sequence number
+ * follow §E.1.3.1.2, including the rule that an unusable maximum or sequence
+ * number makes the receiver ignore the whole header.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,18 +35,32 @@ export
 class Concatenated16BitSMHeader {
     /**
      * @summary `concatenated16BitSMReferenceNumber`.
+     * @description
+     *
+     * Identifies one concatenated Short Message and stays constant on every
+     * segment. §E.1.3.1.3 calls it a modulo-65536 counter. The ASN.1 range is
+     * 0..65536.
      * @public
      * @readonly
      */
     readonly concatenated16BitSMReferenceNumber: INTEGER;
     /**
      * @summary `maximumNumberOf16BitSMInConcatenatedSM`.
+     * @description
+     *
+     * How many Short Messages make up the concatenated message. Same rules as
+     * the 8-bit header: starts at 1, stays constant, and zero means ignore the
+     * whole header (ECMA-325 §E.1.3.1.3, §E.1.3.1.2).
      * @public
      * @readonly
      */
     readonly maximumNumberOf16BitSMInConcatenatedSM: INTEGER;
     /**
      * @summary `sequenceNumberOf16BitSM`.
+     * @description
+     *
+     * This segment's position. Same rules as the 8-bit header (ECMA-325
+     * §E.1.3.1.3, §E.1.3.1.2).
      * @public
      * @readonly
      */

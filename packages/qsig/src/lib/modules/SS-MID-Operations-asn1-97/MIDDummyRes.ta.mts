@@ -8,7 +8,14 @@ import { MIDExtensions, _decode_MIDExtensions, _encode_MIDExtensions } from "../
 /**
  * @summary MIDDummyRes
  * @description
- * 
+ *
+ * Result of `mIDMailboxID` and `mIDMailboxAuth` (ECMA-347
+ * §7.3.1). Confirms the invoke. Only a manufacturer
+ * extension may be present. The procedures define no
+ * result parameters (§7.5.1.1.2, §7.5.2.1.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -1,6 +1,14 @@
 /**
  * @module
- * @description ASN.1 module `Call-Interception-Operations-asn1-97`.
+ * @description
+ *
+ * Operations for ANF Call Interception (ECMA-221 3rd ed., Dec 2001,
+ * §6.3.1). Reports an interception to the calling and intercepted-to
+ * users, and lets a PINX disable or re-enable interception delayed.
+ * The feature is specified in ECMA-220 (3rd ed., Dec 2001).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-221/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-220/
  */
 export * from "./CINTExtSet.osa.mjs";
 export * from "./Call-Interception-Operations.osa.mjs";

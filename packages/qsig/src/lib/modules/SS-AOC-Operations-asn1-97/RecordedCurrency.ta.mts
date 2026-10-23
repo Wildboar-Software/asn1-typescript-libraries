@@ -11,7 +11,15 @@ import { Amount, _decode_Amount, _encode_Amount } from "../SS-AOC-Operations-asn
 /**
  * @summary RecordedCurrency
  * @description
- * 
+ *
+ * Recorded currency units incurred for the call: a currency identifier and an
+ * amount scaled by a multiplier (ECMA-211 §B.1.2, §C.1.2). ECMA-211 Annexes B
+ * and C also allow a count of charging units with a type code 1..16. ECMA-212
+ * §6.3.1 has no type for that alternative.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +35,21 @@ export
 class RecordedCurrency {
     /**
      * @summary `rCurrency`.
+     * @description
+     *
+     * Currency identifier of the recorded charge. Length 0 means the PISN
+     * default currency (ECMA-212 §6.3.1). AOC-D and AOC-E use local currency
+     * units (ECMA-211 §7.2.1, §8.2.1).
      * @public
      * @readonly
      */
     readonly rCurrency: Currency;
     /**
      * @summary `rAmount`.
+     * @description
+     *
+     * Recorded currency units, as an integer and a multiplier (ECMA-211
+     * §B.1.2).
      * @public
      * @readonly
      */

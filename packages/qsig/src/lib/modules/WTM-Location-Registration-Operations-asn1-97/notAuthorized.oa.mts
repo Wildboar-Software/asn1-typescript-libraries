@@ -4,7 +4,14 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary notAuthorized
  * @description
- * 
+ *
+ * The WTM user is not allowed to update location information (ECMA-302
+ * §6.5.4.2). ROSE local CODE 1007. No parameter. Listed only on `locUpdate`
+ * (§6.3.1). When the user may not deregister, `locDeReg` returns
+ * `notAvailable` (§6.6.2.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-302/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

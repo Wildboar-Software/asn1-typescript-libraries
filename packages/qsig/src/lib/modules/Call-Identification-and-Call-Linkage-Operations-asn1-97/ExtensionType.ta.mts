@@ -9,7 +9,13 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary ExtensionType
  * @description
- * 
+ *
+ * Manufacturer-specific extension on an assign or update argument. ECMA-314
+ * §6.3.1 defines the single-extension and sequence-of-extensions
+ * alternatives and registers none in ExampleExtSet.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-314/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

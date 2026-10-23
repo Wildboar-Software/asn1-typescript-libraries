@@ -9,7 +9,15 @@ import { Code, _decode_Code, _encode_Code } from "../Notification-class-asn1-97/
 /**
  * @summary NotificationDataStructure
  * @description
- * 
+ *
+ * Contents of octet 4 of the Notification indicator when octet 3 is the
+ * discriminator for notification extension or the discriminator for an ISO
+ * ASN.1 notification (ECMA-165 §11.3.4 Table 37). `notificationValue` is the
+ * notification code. `notificationArgument` is any additional data for that
+ * code. The set parameter constrains the code to a defined notification.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,12 +33,20 @@ export
 class NotificationDataStructure {
     /**
      * @summary `notificationValue`.
+     * @description
+     *
+     * Notification code, constrained to `NotificationSet`. This is the value in
+     * octet 4, not the description codepoint in octet 3 (ECMA-165 §11.3.4).
      * @public
      * @readonly
      */
     readonly notificationValue: Code;
     /**
      * @summary `notificationArgument`.
+     * @description
+     *
+     * Additional data for `notificationValue`. Omitted when that notification
+     * defines no argument (ECMA-165 §11.3.4).
      * @public
      * @readonly
      */

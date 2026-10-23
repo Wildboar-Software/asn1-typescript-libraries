@@ -11,7 +11,12 @@ import { ScreeningIndicator, _decode_ScreeningIndicator, _encode_ScreeningIndica
 /**
  * @summary NumberScreened
  * @description
- * 
+ *
+ * A party number and the result of screening it, with no subaddress (ECMA-165
+ * Annex B Table B.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +32,19 @@ export
 class NumberScreened {
     /**
      * @summary `partyNumber`.
+     * @description
+     *
+     * Number of the party (ECMA-165 Annex B Table B.1).
      * @public
      * @readonly
      */
     readonly partyNumber: PartyNumber;
     /**
      * @summary `screeningIndicator`.
+     * @description
+     *
+     * Who provided the number, and which network screened it (ECMA-165 Annex B
+     * Table B.1).
      * @public
      * @readonly
      */

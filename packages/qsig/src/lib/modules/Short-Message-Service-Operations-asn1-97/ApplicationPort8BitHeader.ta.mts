@@ -11,7 +11,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ApplicationPort8BitHeader
  * @description
- * 
+ *
+ * Routes a Short Message to one of several applications in the terminal, using
+ * 8-bit ports (ECMA-325 §E.1.3.1.4). On a concatenated Short Message, include
+ * this header in every segment. Ports 0 to 239 are reserved. Ports 240 to 255
+ * are for allocation by applications.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +34,21 @@ export
 class ApplicationPort8BitHeader {
     /**
      * @summary `destination8BitPort`.
+     * @description
+     *
+     * Receiving application, 0..255. Ports 0 to 239 are reserved; 240 to 255
+     * are for applications (ECMA-325 §E.1.3.1.4).
      * @public
      * @readonly
      */
     readonly destination8BitPort: INTEGER;
     /**
      * @summary `originator8BitPort`.
+     * @description
+     *
+     * Sending application, 0..255. Same reservation as the destination port
+     * (ECMA-325 §E.1.3.1.4). The prose names this element
+     * `originating8BitPort`; the ASN.1 name is `originator8BitPort`.
      * @public
      * @readonly
      */

@@ -11,7 +11,13 @@ import { _decode_DNDProtectionLevel, _encode_DNDProtectionLevel, _enum_for_DNDPr
 /**
  * @summary DNDActivateRes_status_Item
  * @description
- * 
+ *
+ * One basic service for which SS-DND has been activated, and
+ * optionally its DNDPL (ECMA-193 §8.2.1.6 NOTE 20, NOTE 24).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-193/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-194/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +33,21 @@ export
 class DNDActivateRes_status_Item {
     /**
      * @summary `basicService`.
+     * @description
+     *
+     * A basic service for which SS-DND has been activated
+     * (ECMA-193 §8.2.1.6 NOTE 20).
      * @public
      * @readonly
      */
     readonly basicService: BasicService;
     /**
      * @summary `dndProtectionLevel`.
+     * @description
+     *
+     * DNDPL of that basic service. Present only as an implementation
+     * option on a successful activation (ECMA-193 §6.2.2.1.2,
+     * §8.2.1.6 NOTE 24).
      * @public
      * @readonly
      */

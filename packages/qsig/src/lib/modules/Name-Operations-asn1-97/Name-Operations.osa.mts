@@ -8,7 +8,15 @@ import { busyName } from "../Name-Operations-asn1-97/busyName.oa.mjs";
 /**
  * @summary Name_Operations
  * @description
- * 
+ *
+ * Name notifications for SS-CNIP and SS-CONP (ECMA-164 §6.1): `callingName`,
+ * `calledName`, `connectedName`, and `busyName`. All are unconfirmed. Each
+ * invoke is addressed to `endPINX`, and the Interpretation APDU discards an
+ * unrecognised invoke (§6.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-164/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-163/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

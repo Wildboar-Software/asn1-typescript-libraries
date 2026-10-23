@@ -9,7 +9,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CalculationParam
  * @description
- * 
+ *
+ * Parameter used when calculating the authentication session key from the real
+ * authentication key. It may be transferred to the WTM user during both SS-WTAT
+ * and SS-WTAN (ECMA-306 §6.3.1). ECMA-306 does not define that calculation
+ * (§1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-306/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

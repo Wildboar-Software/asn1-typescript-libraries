@@ -10,7 +10,13 @@ import { CfuActivated, _decode_CfuActivated, _encode_CfuActivated } from "../Pri
 /**
  * @summary EnquiryRes
  * @description
- * 
+ *
+ * Result of `pumiEnquiry` (ECMA-284 §6.3.1). `currLocation` gives the hosting
+ * address when the user is in the HDB and the location for that basic service
+ * is known (§6.5.3.1). `cfuActivated` means SS-CFU is active (§6.5.3.3).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-284/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

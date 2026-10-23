@@ -12,7 +12,13 @@ import { subaddressTransfer } from "../Call-Transfer-Operations-asn1-97/subaddre
 /**
  * @summary Call_Transfer_Operations
  * @description
- * 
+ *
+ * The eight operations that support SS-CT: identify, abandon,
+ * initiate, setup, active, complete, update, and subaddress transfer.
+ * ECMA-178 §6.3.1.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-178/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

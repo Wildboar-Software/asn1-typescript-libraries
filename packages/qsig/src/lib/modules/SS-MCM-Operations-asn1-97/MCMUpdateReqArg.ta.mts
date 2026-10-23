@@ -13,7 +13,14 @@ import { MCMUpdateReqArg_argumentExt, _decode_MCMUpdateReqArg_argumentExt, _enco
 /**
  * @summary MCMUpdateReqArg
  * @description
- * 
+ *
+ * Argument of `mCMUpdateReq` (ECMA-347 §6.5.2.1.5). The
+ * Served User asks for updated information about New
+ * Messages of one Message Type. Same structure as
+ * `mWIInterrogate` in SS-MWI (§6.5.1.1.5).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,24 +41,39 @@ export
 class MCMUpdateReqArg {
     /**
      * @summary `servedUserNr`.
+     * @description
+     *
+     * Address of the Served User. ECMA-347 §6.5.2.1.5.
      * @public
      * @readonly
      */
     readonly servedUserNr: PartyNumber;
     /**
      * @summary `specificMessageType`.
+     * @description
+     *
+     * Message Type for which an update is requested.
+     * ECMA-347 §6.5.2.1.5.
      * @public
      * @readonly
      */
     readonly specificMessageType: MessageType;
     /**
      * @summary `msgCentreId`.
+     * @description
+     *
+     * Message Centre identity, when the Served User PINX
+     * sends it. Optional. ECMA-347 §6.5.2.1.5.
      * @public
      * @readonly
      */
     readonly msgCentreId: OPTIONAL<MsgCentreId>;
     /**
      * @summary `argumentExt`.
+     * @description
+     *
+     * Manufacturer-specific extension. `MCMExtSet` defines none.
+     * The procedures do not mention this component. ECMA-347 §6.3.1.
      * @public
      * @readonly
      */

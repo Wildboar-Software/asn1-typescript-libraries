@@ -4,7 +4,19 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary MessageType
  * @description
- * 
+ *
+ * Kind of message in a Served User mailbox. Activation,
+ * updates, and mailbox-full reports are per Message Type
+ * (ECMA-347 §6.1, §6.3.1). Annex D (informative) supplies
+ * the meanings. Telephony types follow the depositing call
+ * (annex D.1). Data types need a specific retrieval
+ * application (annex D.2). A combination value means
+ * several of those types are waiting (annex D.3). Annex D.4
+ * recommends not using the types defined there. For voice
+ * mail, `speech` is recommended (§6.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -108,7 +120,19 @@ enum _enum_for_MessageType {
 /**
  * @summary MessageType
  * @description
- * 
+ *
+ * Kind of message in a Served User mailbox. Activation,
+ * updates, and mailbox-full reports are per Message Type
+ * (ECMA-347 §6.1, §6.3.1). Annex D (informative) supplies
+ * the meanings. Telephony types follow the depositing call
+ * (annex D.1). Data types need a specific retrieval
+ * application (annex D.2). A combination value means
+ * several of those types are waiting (annex D.3). Annex D.4
+ * recommends not using the types defined there. For voice
+ * mail, `speech` is recommended (§6.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -171,7 +195,19 @@ type MessageType = _enum_for_MessageType;
 /**
  * @summary MessageType
  * @description
- * 
+ *
+ * Kind of message in a Served User mailbox. Activation,
+ * updates, and mailbox-full reports are per Message Type
+ * (ECMA-347 §6.1, §6.3.1). Annex D (informative) supplies
+ * the meanings. Telephony types follow the depositing call
+ * (annex D.1). Data types need a specific retrieval
+ * application (annex D.2). A combination value means
+ * several of those types are waiting (annex D.3). Annex D.4
+ * recommends not using the types defined there. For voice
+ * mail, `speech` is recommended (§6.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -233,14 +269,21 @@ const MessageType = _enum_for_MessageType;
 
 /**
  * @summary MessageType_allServices
+ * @description
+ *
+ * Messages of different types are waiting at the Message
+ * Centre. Annex D recommends not using this value.
+ * ECMA-347 §D.4, §D.4.1.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
 const MessageType_allServices: MessageType = MessageType.allServices; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary allServices
+ * @description Alias of {@link MessageType_allServices}.
  * @constant
  * @type {number}
  */
@@ -249,14 +292,21 @@ const allServices: MessageType = MessageType.allServices; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary MessageType_speech
+ * @description
+ *
+ * Depositing call indicated information transfer capability
+ * "Speech" (ECMA-142). Recommended for voice-mail
+ * indications. ECMA-347 §6.3.1, §D.1.1.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
 const MessageType_speech: MessageType = MessageType.speech; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speech
+ * @description Alias of {@link MessageType_speech}.
  * @constant
  * @type {number}
  */
@@ -265,14 +315,21 @@ const speech: MessageType = MessageType.speech; /* SHORT_NAMED_ENUMERATED_VALUE 
 
 /**
  * @summary MessageType_unrestrictedDigitalInformation
+ * @description
+ *
+ * Depositing call indicated information transfer capability
+ * "Unrestricted Digital Information" (ECMA-142).
+ * ECMA-347 §D.1.2.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
 const MessageType_unrestrictedDigitalInformation: MessageType = MessageType.unrestrictedDigitalInformation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unrestrictedDigitalInformation
+ * @description Alias of {@link MessageType_unrestrictedDigitalInformation}.
  * @constant
  * @type {number}
  */
@@ -281,14 +338,21 @@ const unrestrictedDigitalInformation: MessageType = MessageType.unrestrictedDigi
 
 /**
  * @summary MessageType_audio3100Hz
+ * @description
+ *
+ * Depositing call indicated information transfer capability
+ * "3,1 kHz audio (encoded)" (ECMA-142). No further type
+ * was available. ECMA-347 §D.1.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
 const MessageType_audio3100Hz: MessageType = MessageType.audio3100Hz; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary audio3100Hz
+ * @description Alias of {@link MessageType_audio3100Hz}.
  * @constant
  * @type {number}
  */
@@ -297,14 +361,20 @@ const audio3100Hz: MessageType = MessageType.audio3100Hz; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary MessageType_telephony
+ * @description
+ *
+ * Depositing call did not indicate a specific telephony
+ * bearer capability. ECMA-347 §D.1.4.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
 const MessageType_telephony: MessageType = MessageType.telephony; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary telephony
+ * @description Alias of {@link MessageType_telephony}.
  * @constant
  * @type {number}
  */
@@ -313,14 +383,19 @@ const telephony: MessageType = MessageType.telephony; /* SHORT_NAMED_ENUMERATED_
 
 /**
  * @summary MessageType_teletex
+ * @description
+ *
+ * Annex D.1.5 gives only this name. ECMA-347 §D.1.5.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
 const MessageType_teletex: MessageType = MessageType.teletex; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary teletex
+ * @description Alias of {@link MessageType_teletex}.
  * @constant
  * @type {number}
  */
@@ -329,14 +404,21 @@ const teletex: MessageType = MessageType.teletex; /* SHORT_NAMED_ENUMERATED_VALU
 
 /**
  * @summary MessageType_telefaxGroup4Class1
+ * @description
+ *
+ * Depositing call indicated teleservice "Telefax Group 4"
+ * (ECMA-142). Combination values use this as "Fax".
+ * ECMA-347 §D.1.6, §D.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
 const MessageType_telefaxGroup4Class1: MessageType = MessageType.telefaxGroup4Class1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary telefaxGroup4Class1
+ * @description Alias of {@link MessageType_telefaxGroup4Class1}.
  * @constant
  * @type {number}
  */
@@ -345,14 +427,20 @@ const telefaxGroup4Class1: MessageType = MessageType.telefaxGroup4Class1; /* SHO
 
 /**
  * @summary MessageType_videotextSyntaxBased
+ * @description
+ *
+ * Depositing call indicated teleservice "Circuit-mode
+ * syntax-based videotext" (ECMA-142). ECMA-347 §D.1.7.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
 const MessageType_videotextSyntaxBased: MessageType = MessageType.videotextSyntaxBased; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary videotextSyntaxBased
+ * @description Alias of {@link MessageType_videotextSyntaxBased}.
  * @constant
  * @type {number}
  */
@@ -361,14 +449,20 @@ const videotextSyntaxBased: MessageType = MessageType.videotextSyntaxBased; /* S
 
 /**
  * @summary MessageType_videotelephony
+ * @description
+ *
+ * Annex D.1.8 gives only this name. Combination values use
+ * it as "Video". ECMA-347 §D.1.8, §D.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
 const MessageType_videotelephony: MessageType = MessageType.videotelephony; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary videotelephony
+ * @description Alias of {@link MessageType_videotelephony}.
  * @constant
  * @type {number}
  */
@@ -377,14 +471,20 @@ const videotelephony: MessageType = MessageType.videotelephony; /* SHORT_NAMED_E
 
 /**
  * @summary MessageType_telefaxGroup2_3
+ * @description
+ *
+ * Determined to be Telefax Group 2 or Telefax Group 3.
+ * ECMA-347 §D.1.9.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
 const MessageType_telefaxGroup2_3: MessageType = MessageType.telefaxGroup2_3; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary telefaxGroup2_3
+ * @description Alias of {@link MessageType_telefaxGroup2_3}.
  * @constant
  * @type {number}
  */
@@ -393,14 +493,20 @@ const telefaxGroup2_3: MessageType = MessageType.telefaxGroup2_3; /* SHORT_NAMED
 
 /**
  * @summary MessageType_reservedNotUsed1
+ * @description
+ *
+ * Reserved and not used. Annex D does not define this
+ * value. ECMA-347 §6.3.1.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
 const MessageType_reservedNotUsed1: MessageType = MessageType.reservedNotUsed1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reservedNotUsed1
+ * @description Alias of {@link MessageType_reservedNotUsed1}.
  * @constant
  * @type {number}
  */
@@ -409,14 +515,20 @@ const reservedNotUsed1: MessageType = MessageType.reservedNotUsed1; /* SHORT_NAM
 
 /**
  * @summary MessageType_reservedNotUsed2
+ * @description
+ *
+ * Reserved and not used. Annex D does not define this
+ * value. ECMA-347 §6.3.1.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
 const MessageType_reservedNotUsed2: MessageType = MessageType.reservedNotUsed2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reservedNotUsed2
+ * @description Alias of {@link MessageType_reservedNotUsed2}.
  * @constant
  * @type {number}
  */
@@ -425,14 +537,20 @@ const reservedNotUsed2: MessageType = MessageType.reservedNotUsed2; /* SHORT_NAM
 
 /**
  * @summary MessageType_reservedNotUsed3
+ * @description
+ *
+ * Reserved and not used. Annex D does not define this
+ * value. ECMA-347 §6.3.1.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
 const MessageType_reservedNotUsed3: MessageType = MessageType.reservedNotUsed3; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reservedNotUsed3
+ * @description Alias of {@link MessageType_reservedNotUsed3}.
  * @constant
  * @type {number}
  */
@@ -441,14 +559,20 @@ const reservedNotUsed3: MessageType = MessageType.reservedNotUsed3; /* SHORT_NAM
 
 /**
  * @summary MessageType_reservedNotUsed4
+ * @description
+ *
+ * Reserved and not used. Annex D does not define this
+ * value. ECMA-347 §6.3.1.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
 const MessageType_reservedNotUsed4: MessageType = MessageType.reservedNotUsed4; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reservedNotUsed4
+ * @description Alias of {@link MessageType_reservedNotUsed4}.
  * @constant
  * @type {number}
  */
@@ -457,14 +581,20 @@ const reservedNotUsed4: MessageType = MessageType.reservedNotUsed4; /* SHORT_NAM
 
 /**
  * @summary MessageType_reservedNotUsed5
+ * @description
+ *
+ * Reserved and not used. Annex D does not define this
+ * value. ECMA-347 §6.3.1.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
 const MessageType_reservedNotUsed5: MessageType = MessageType.reservedNotUsed5; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reservedNotUsed5
+ * @description Alias of {@link MessageType_reservedNotUsed5}.
  * @constant
  * @type {number}
  */
@@ -473,14 +603,21 @@ const reservedNotUsed5: MessageType = MessageType.reservedNotUsed5; /* SHORT_NAM
 
 /**
  * @summary MessageType_email
+ * @description
+ *
+ * Data-type message. Annex D.2.1 gives only this name.
+ * Retrieval needs a specific application or equipment
+ * (§D.2). Combination values use this as "Email" (§D.3).
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
 const MessageType_email: MessageType = MessageType.email; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary email
+ * @description Alias of {@link MessageType_email}.
  * @constant
  * @type {number}
  */
@@ -489,14 +626,22 @@ const email: MessageType = MessageType.email; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageType_video
+ * @description
+ *
+ * Data-type message. Annex D.2.2 gives only this name.
+ * Retrieval needs a specific application or equipment
+ * (§D.2). Combination "Video" is `videotelephony`, not
+ * this value (§D.3).
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
 const MessageType_video: MessageType = MessageType.video; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary video
+ * @description Alias of {@link MessageType_video}.
  * @constant
  * @type {number}
  */
@@ -505,14 +650,21 @@ const video: MessageType = MessageType.video; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageType_fileTransfer
+ * @description
+ *
+ * Data-type message. Annex D.2.3 gives only this name.
+ * Retrieval needs a specific application or equipment.
+ * ECMA-347 §D.2, §D.2.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
 const MessageType_fileTransfer: MessageType = MessageType.fileTransfer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fileTransfer
+ * @description Alias of {@link MessageType_fileTransfer}.
  * @constant
  * @type {number}
  */
@@ -521,14 +673,21 @@ const fileTransfer: MessageType = MessageType.fileTransfer; /* SHORT_NAMED_ENUME
 
 /**
  * @summary MessageType_shortMessageService
+ * @description
+ *
+ * Data-type message. Annex D.2.4 gives only this name.
+ * Retrieval needs a specific application or equipment.
+ * ECMA-347 §D.2, §D.2.4.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
 const MessageType_shortMessageService: MessageType = MessageType.shortMessageService; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary shortMessageService
+ * @description Alias of {@link MessageType_shortMessageService}.
  * @constant
  * @type {number}
  */
@@ -537,14 +696,20 @@ const shortMessageService: MessageType = MessageType.shortMessageService; /* SHO
 
 /**
  * @summary MessageType_speechAndVideo
+ * @description
+ *
+ * Speech and videotelephony messages are waiting.
+ * ECMA-347 §D.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
 const MessageType_speechAndVideo: MessageType = MessageType.speechAndVideo; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speechAndVideo
+ * @description Alias of {@link MessageType_speechAndVideo}.
  * @constant
  * @type {number}
  */
@@ -553,14 +718,20 @@ const speechAndVideo: MessageType = MessageType.speechAndVideo; /* SHORT_NAMED_E
 
 /**
  * @summary MessageType_speechAndFax
+ * @description
+ *
+ * Speech and Telefax Group 4 messages are waiting.
+ * ECMA-347 §D.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
 const MessageType_speechAndFax: MessageType = MessageType.speechAndFax; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speechAndFax
+ * @description Alias of {@link MessageType_speechAndFax}.
  * @constant
  * @type {number}
  */
@@ -569,14 +740,19 @@ const speechAndFax: MessageType = MessageType.speechAndFax; /* SHORT_NAMED_ENUME
 
 /**
  * @summary MessageType_speechAndEmail
+ * @description
+ *
+ * Speech and email messages are waiting. ECMA-347 §D.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
 const MessageType_speechAndEmail: MessageType = MessageType.speechAndEmail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speechAndEmail
+ * @description Alias of {@link MessageType_speechAndEmail}.
  * @constant
  * @type {number}
  */
@@ -585,14 +761,20 @@ const speechAndEmail: MessageType = MessageType.speechAndEmail; /* SHORT_NAMED_E
 
 /**
  * @summary MessageType_videoAndFax
+ * @description
+ *
+ * Videotelephony and Telefax Group 4 messages are waiting.
+ * ECMA-347 §D.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
 const MessageType_videoAndFax: MessageType = MessageType.videoAndFax; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary videoAndFax
+ * @description Alias of {@link MessageType_videoAndFax}.
  * @constant
  * @type {number}
  */
@@ -601,14 +783,20 @@ const videoAndFax: MessageType = MessageType.videoAndFax; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary MessageType_videoAndEmail
+ * @description
+ *
+ * Videotelephony and email messages are waiting.
+ * ECMA-347 §D.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
 const MessageType_videoAndEmail: MessageType = MessageType.videoAndEmail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary videoAndEmail
+ * @description Alias of {@link MessageType_videoAndEmail}.
  * @constant
  * @type {number}
  */
@@ -617,14 +805,20 @@ const videoAndEmail: MessageType = MessageType.videoAndEmail; /* SHORT_NAMED_ENU
 
 /**
  * @summary MessageType_faxAndEmail
+ * @description
+ *
+ * Telefax Group 4 and email messages are waiting.
+ * ECMA-347 §D.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
 const MessageType_faxAndEmail: MessageType = MessageType.faxAndEmail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary faxAndEmail
+ * @description Alias of {@link MessageType_faxAndEmail}.
  * @constant
  * @type {number}
  */
@@ -633,14 +827,20 @@ const faxAndEmail: MessageType = MessageType.faxAndEmail; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary MessageType_speechVideoAndFax
+ * @description
+ *
+ * Speech, videotelephony, and Telefax Group 4 messages
+ * are waiting. ECMA-347 §D.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
 const MessageType_speechVideoAndFax: MessageType = MessageType.speechVideoAndFax; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speechVideoAndFax
+ * @description Alias of {@link MessageType_speechVideoAndFax}.
  * @constant
  * @type {number}
  */
@@ -649,14 +849,20 @@ const speechVideoAndFax: MessageType = MessageType.speechVideoAndFax; /* SHORT_N
 
 /**
  * @summary MessageType_speechVideoAndEmail
+ * @description
+ *
+ * Speech, videotelephony, and email messages are waiting.
+ * ECMA-347 §D.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
 const MessageType_speechVideoAndEmail: MessageType = MessageType.speechVideoAndEmail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speechVideoAndEmail
+ * @description Alias of {@link MessageType_speechVideoAndEmail}.
  * @constant
  * @type {number}
  */
@@ -665,14 +871,20 @@ const speechVideoAndEmail: MessageType = MessageType.speechVideoAndEmail; /* SHO
 
 /**
  * @summary MessageType_speechFaxAndEmail
+ * @description
+ *
+ * Speech, Telefax Group 4, and email messages are waiting.
+ * ECMA-347 §D.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
 const MessageType_speechFaxAndEmail: MessageType = MessageType.speechFaxAndEmail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speechFaxAndEmail
+ * @description Alias of {@link MessageType_speechFaxAndEmail}.
  * @constant
  * @type {number}
  */
@@ -681,14 +893,20 @@ const speechFaxAndEmail: MessageType = MessageType.speechFaxAndEmail; /* SHORT_N
 
 /**
  * @summary MessageType_videoFaxAndEmail
+ * @description
+ *
+ * Videotelephony, Telefax Group 4, and email messages are
+ * waiting. ECMA-347 §D.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
 const MessageType_videoFaxAndEmail: MessageType = MessageType.videoFaxAndEmail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary videoFaxAndEmail
+ * @description Alias of {@link MessageType_videoFaxAndEmail}.
  * @constant
  * @type {number}
  */
@@ -697,14 +915,20 @@ const videoFaxAndEmail: MessageType = MessageType.videoFaxAndEmail; /* SHORT_NAM
 
 /**
  * @summary MessageType_speechVideoFaxAndEmail
+ * @description
+ *
+ * Speech, videotelephony, Telefax Group 4, and email
+ * messages are waiting. ECMA-347 §D.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
 const MessageType_speechVideoFaxAndEmail: MessageType = MessageType.speechVideoFaxAndEmail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speechVideoFaxAndEmail
+ * @description Alias of {@link MessageType_speechVideoFaxAndEmail}.
  * @constant
  * @type {number}
  */
@@ -713,14 +937,21 @@ const speechVideoFaxAndEmail: MessageType = MessageType.speechVideoFaxAndEmail; 
 
 /**
  * @summary MessageType_multimediaUnknown
+ * @description
+ *
+ * A data-type message that matches none of the types in
+ * annex D.2. Annex D recommends not using this value.
+ * ECMA-347 §D.4, §D.4.2.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
 const MessageType_multimediaUnknown: MessageType = MessageType.multimediaUnknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary multimediaUnknown
+ * @description Alias of {@link MessageType_multimediaUnknown}.
  * @constant
  * @type {number}
  */
@@ -729,14 +960,21 @@ const multimediaUnknown: MessageType = MessageType.multimediaUnknown; /* SHORT_N
 
 /**
  * @summary MessageType_serviceUnknown
+ * @description
+ *
+ * No information about the message type is available.
+ * Annex D recommends not using this value. ECMA-347 §D.4,
+ * §D.4.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
 const MessageType_serviceUnknown: MessageType = MessageType.serviceUnknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary serviceUnknown
+ * @description Alias of {@link MessageType_serviceUnknown}.
  * @constant
  * @type {number}
  */
@@ -745,14 +983,20 @@ const serviceUnknown: MessageType = MessageType.serviceUnknown; /* SHORT_NAMED_E
 
 /**
  * @summary MessageType_futureReserve1
+ * @description
+ *
+ * Reserved for future use. Annex D does not define this
+ * value. ECMA-347 §6.3.1.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
 const MessageType_futureReserve1: MessageType = MessageType.futureReserve1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary futureReserve1
+ * @description Alias of {@link MessageType_futureReserve1}.
  * @constant
  * @type {number}
  */
@@ -761,14 +1005,20 @@ const futureReserve1: MessageType = MessageType.futureReserve1; /* SHORT_NAMED_E
 
 /**
  * @summary MessageType_futureReserve2
+ * @description
+ *
+ * Reserved for future use. Annex D does not define this
+ * value. ECMA-347 §6.3.1.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
 const MessageType_futureReserve2: MessageType = MessageType.futureReserve2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary futureReserve2
+ * @description Alias of {@link MessageType_futureReserve2}.
  * @constant
  * @type {number}
  */
@@ -777,14 +1027,20 @@ const futureReserve2: MessageType = MessageType.futureReserve2; /* SHORT_NAMED_E
 
 /**
  * @summary MessageType_futureReserve3
+ * @description
+ *
+ * Reserved for future use. Annex D does not define this
+ * value. ECMA-347 §6.3.1.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
 const MessageType_futureReserve3: MessageType = MessageType.futureReserve3; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary futureReserve3
+ * @description Alias of {@link MessageType_futureReserve3}.
  * @constant
  * @type {number}
  */
@@ -793,14 +1049,20 @@ const futureReserve3: MessageType = MessageType.futureReserve3; /* SHORT_NAMED_E
 
 /**
  * @summary MessageType_futureReserve4
+ * @description
+ *
+ * Reserved for future use. Annex D does not define this
+ * value. ECMA-347 §6.3.1.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
 const MessageType_futureReserve4: MessageType = MessageType.futureReserve4; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary futureReserve4
+ * @description Alias of {@link MessageType_futureReserve4}.
  * @constant
  * @type {number}
  */
@@ -809,14 +1071,20 @@ const futureReserve4: MessageType = MessageType.futureReserve4; /* SHORT_NAMED_E
 
 /**
  * @summary MessageType_futureReserve5
+ * @description
+ *
+ * Reserved for future use. Annex D does not define this
+ * value. ECMA-347 §6.3.1.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
 const MessageType_futureReserve5: MessageType = MessageType.futureReserve5; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary futureReserve5
+ * @description Alias of {@link MessageType_futureReserve5}.
  * @constant
  * @type {number}
  */
@@ -825,14 +1093,20 @@ const futureReserve5: MessageType = MessageType.futureReserve5; /* SHORT_NAMED_E
 
 /**
  * @summary MessageType_futureReserve6
+ * @description
+ *
+ * Reserved for future use. Annex D does not define this
+ * value. ECMA-347 §6.3.1.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
 const MessageType_futureReserve6: MessageType = MessageType.futureReserve6; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary futureReserve6
+ * @description Alias of {@link MessageType_futureReserve6}.
  * @constant
  * @type {number}
  */
@@ -841,14 +1115,20 @@ const futureReserve6: MessageType = MessageType.futureReserve6; /* SHORT_NAMED_E
 
 /**
  * @summary MessageType_futureReserve7
+ * @description
+ *
+ * Reserved for future use. Annex D does not define this
+ * value. ECMA-347 §6.3.1.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
 const MessageType_futureReserve7: MessageType = MessageType.futureReserve7; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary futureReserve7
+ * @description Alias of {@link MessageType_futureReserve7}.
  * @constant
  * @type {number}
  */
@@ -857,14 +1137,20 @@ const futureReserve7: MessageType = MessageType.futureReserve7; /* SHORT_NAMED_E
 
 /**
  * @summary MessageType_futureReserve8
+ * @description
+ *
+ * Reserved for future use. Annex D does not define this
+ * value. ECMA-347 §6.3.1.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
 const MessageType_futureReserve8: MessageType = MessageType.futureReserve8; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary futureReserve8
+ * @description Alias of {@link MessageType_futureReserve8}.
  * @constant
  * @type {number}
  */

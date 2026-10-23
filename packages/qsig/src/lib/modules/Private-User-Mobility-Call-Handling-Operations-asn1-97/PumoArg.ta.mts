@@ -13,7 +13,15 @@ import { PumoArg_extension, _decode_PumoArg_extension, _encode_PumoArg_extension
 /**
  * @summary PumoArg
  * @description
- * 
+ *
+ * Argument of `pumoCall` (ECMA-284 §6.3.1, §7.5.1.1). The first invoke travels
+ * in the SETUP to the Home PINX. Later invokes, in FACILITY messages, carry
+ * more destination digits while the Home PINX is in PUMO-Await-Info. An invoke
+ * received in FACILITY while the Home PINX is in PUMO-Idle is ignored
+ * (§7.5.2.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-284/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,24 +44,48 @@ export
 class PumoArg {
     /**
      * @summary `destinationNumber`.
+     * @description
+     *
+     * Destination digits known so far (§7.5.1.1). The Called party number of
+     * the SETUP only has to reach the Home PINX; these digits are the called
+     * destination. Further digits arrive in later invokes (§7.5.2.1).
+     *
      * @public
      * @readonly
      */
     readonly destinationNumber: OPTIONAL<PartyNumber>;
     /**
      * @summary `pumIdentity`.
+     * @description
+     *
+     * PISN number and/or alternative identifier of the PUM user (§6.3.1).
+     * Included when the PUM user's number is not in the Calling party number
+     * (§7.5.1.1). The Home PINX may use the alternative identifier to find that
+     * number before extending the call (§7.5.2.1).
+     *
      * @public
      * @readonly
      */
     readonly pumIdentity: OPTIONAL<PumIdentity>;
     /**
      * @summary `sendingComplete`.
+     * @description
+     *
+     * Present when the destination number is complete (§7.5.1.1). Received in
+     * PUMO-Await-Info, it stops timer T3 and the Home PINX extends the call
+     * (§7.5.2.1).
+     *
      * @public
      * @readonly
      */
     readonly sendingComplete: OPTIONAL<NULL>;
     /**
      * @summary `extension`.
+     * @description
+     *
+     * Manufacturer-specific extension from `PUMCHExtSet`, one or several
+     * (ECMA-284 §6.3.1). This module assigns no extensions.
+     *
      * @public
      * @readonly
      */

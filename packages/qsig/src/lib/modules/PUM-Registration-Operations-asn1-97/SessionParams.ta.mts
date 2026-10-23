@@ -10,7 +10,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SessionParams
  * @description
- * 
+ *
+ * Limits of a registration session (ECMA-282 §6.3.1). On `pumRegistr` they are
+ * the maximum duration and the maximum number of outgoing calls. On
+ * `pumInterrog`, the same elements report time left and outgoing calls left,
+ * taken from the Visitor PINX (§6.7.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-282/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +35,23 @@ export
 class SessionParams {
     /**
      * @summary `durationOfSession`.
+     * @description
+     *
+     * Duration of the session in seconds. Omission means the duration is
+     * unlimited (§6.3.1). In an interrogation result, time left in the session.
+     *
      * @public
      * @readonly
      */
     readonly durationOfSession: OPTIONAL<INTEGER>;
     /**
      * @summary `numberOfOutgCalls`.
+     * @description
+     *
+     * Maximum number of outgoing calls, for OutCall or AllCall. Omission means
+     * the number is unlimited (§6.3.1). In an interrogation result, outgoing
+     * calls left.
+     *
      * @public
      * @readonly
      */

@@ -11,7 +11,13 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary PathRetainArg_extendedServiceList
  * @description
- * 
+ *
+ * `serviceList` plus one manufacturer extension, for a `pathRetain`
+ * invoke (ECMA-194 §6.3.1, §A.3.1). No extension is defined in
+ * `DNDExtSet`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-194/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +33,20 @@ export
 class PathRetainArg_extendedServiceList {
     /**
      * @summary `serviceList`.
+     * @description
+     *
+     * Bits set to ONE are the supplementary services for which path
+     * retention is requested (ECMA-194 §A.5.1).
      * @public
      * @readonly
      */
     readonly serviceList: ServiceList;
     /**
      * @summary `extension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-194 §6.3.1 leaves
+     * `DNDExtSet` empty.
      * @public
      * @readonly
      */

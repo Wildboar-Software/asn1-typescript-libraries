@@ -11,7 +11,13 @@ import { NumberDigits, _decode_NumberDigits, _encode_NumberDigits } from "../Add
 /**
  * @summary PrivatePartyNumber
  * @description
- * 
+ *
+ * A number in a private numbering plan (ECMA-165 Annex B Table B.1). The type
+ * of number selects the regional level defined in ECMA-155 §7.4.1. ECMA-165
+ * §4.30 uses such a number as a PINX address when the number is complete.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +33,20 @@ export
 class PrivatePartyNumber {
     /**
      * @summary `privateTypeOfNumber`.
+     * @description
+     *
+     * Regional level or other private type of number (ECMA-165 Annex B Table
+     * B.1, ECMA-155 §7.4.1).
      * @public
      * @readonly
      */
     readonly privateTypeOfNumber: PrivateTypeOfNumber;
     /**
      * @summary `privateNumberDigits`.
+     * @description
+     *
+     * Digits of the private number. Table B.1 limits the digit string to
+     * between 1 and 20 characters.
      * @public
      * @readonly
      */

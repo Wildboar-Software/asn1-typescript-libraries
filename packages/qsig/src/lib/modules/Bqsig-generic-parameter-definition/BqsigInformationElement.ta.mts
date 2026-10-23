@@ -9,7 +9,22 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary BqsigInformationElement
  * @description
- * 
+ *
+ * Embedded B-QSIG information elements (ECMA-254 2nd edition, December 1999,
+ * §9.2.2.4, annex B.2, annex C.2). When a specification encapsulates existing
+ * ECMA-266 information elements, it groups them, in their ISO/IEC 13247 coding,
+ * as the contents of this `[APPLICATION 0]` element. The element may stand
+ * alone or be a member of a sequence or set. Which elements are embedded is
+ * stated by a comment at each use. A Facility information element shall not be
+ * encapsulated inside a Facility information element.
+ *
+ * Annex B.2 (X.208, arc `bqsig-generic-parameters(2)`) and annex C.2 (X.680,
+ * arc `bqsig-generic-parameters(12)`) publish the same module name and the same
+ * type. This module matches that type. ECMA-254 defines no further octet
+ * layout.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-254/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

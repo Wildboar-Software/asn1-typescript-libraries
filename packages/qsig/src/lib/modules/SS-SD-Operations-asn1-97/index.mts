@@ -1,6 +1,15 @@
 /**
  * @module
- * @description ASN.1 module `SS-SD-Operations-asn1-97`.
+ * @description
+ *
+ * QSIG Simple Dialog (ECMA-311, 2nd edition, December 2001). The Server User
+ * PINX sends display text to the Client User PINX, and the Client User PINX
+ * sends keypad information back. The service is used only for those two kinds
+ * of information, on an existing call or on a call-independent connection.
+ * ECMA-311 §1 places stage 1 and stage 2 in ECMA-310; this module follows the
+ * stage 3 procedures in ECMA-311.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-311/
  */
 export * from "./BMPStringExtended.ta.mjs";
 export * from "./BMPStringNormal.ta.mjs";

@@ -10,7 +10,18 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary DummyRes
  * @description
- * 
+ *
+ * Result of `callIntrusionIsolate`, `callIntrusionForcedRelease`,
+ * and `callIntrusionWOBRequest` (ECMA-203 §6.3.1). Successful
+ * invocation is the return result itself (§6.6.2.2 to §6.6.2.4).
+ * §6.6 puts no Call Intrusion data in the result.
+ *
+ * - `null`: no manufacturer-specific information.
+ * - `extension`: one extension from `CIExtSet`.
+ * - `sequenceOfExtn`: more than one extension from `CIExtSet`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-203/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

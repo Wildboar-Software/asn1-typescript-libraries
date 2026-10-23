@@ -9,7 +9,13 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary LrExtension
  * @description
- * 
+ *
+ * Manufacturer-specific extension on an SS-WTLR or ANF-WTINFO argument or
+ * result (ECMA-302 §6.3.1). `extension` is one extension from `WTMLRExtSet`;
+ * `sequOfExtn` is a sequence of them. This module assigns no extensions.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-302/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

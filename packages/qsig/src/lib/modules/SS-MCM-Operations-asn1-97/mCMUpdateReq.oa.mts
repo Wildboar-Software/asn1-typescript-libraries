@@ -10,7 +10,37 @@ import { unspecified } from "../SS-MCM-Operations-asn1-97/unspecified.oa.mjs";
 /**
  * @summary mCMUpdateReq
  * @description
- * 
+ *
+ * Served User request for an update (ECMA-347 §6.5.2.1.5).
+ * The Served User PINX sends this from MCM-SU-idle and enters
+ * MCM-SU-wait. Local code 82, the same code as
+ * `mWIInterrogate` (§6.3.1).
+ *
+ * The Message Centre PINX stays in MCM-MC-idle and returns
+ * information about New Messages of the requested Message
+ * Type, in the mode configured for those New Messages
+ * (§6.5.1.1.5). It then starts the update procedure of
+ * §6.5.1.1.4, which can also cover retrieved messages.
+ *
+ * The return result stops timer T2 (§6.5.2.1.5). §6.5.2.1.5
+ * does not say that T2 is started when the invoke is sent.
+ * T2 is at least 10 s (§6.9.2). §6.5.2.2.5 places receipt of
+ * a return error in MCM-SU-idle, although the invoke enters
+ * MCM-SU-wait, and it does not mention T2.
+ *
+ * Errors: `userNotSubscribed`, `invalidServedUserNr`,
+ * `basicServiceNotProvided`, `unspecified`. An invalid
+ * request is a return error; the code is not stated
+ * (§6.5.1.2.5).
+ *
+ * On a `mIDMailboxAuth` return error or reject, this invoke
+ * shall not be sent (§6.8.40).
+ *
+ * NFE destination `endPINX`. Interpretation APDU omitted or
+ * `rejectAnyUnrecognisedInvokePdu` (§6.3.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

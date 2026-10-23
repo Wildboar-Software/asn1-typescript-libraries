@@ -21,7 +21,23 @@ import { unspecified } from "../CT-Authentication-Operations/unspecified.oa.mjs"
 /**
  * @summary getCtatParam
  * @description
- * 
+ *
+ * SS-CTAT parameter request from the Visitor PINX to the Home PINX (ECMA-243
+ * §6.5.6). Local code 73. The Home PINX checks the PISN number and that the CTM
+ * user is authorised for SS-CTAT, then fetches parameters from the
+ * Authentication Server PINX (§6.5.2). If the result carries a session key, the
+ * Visitor PINX calculates the challenge and the expected response; otherwise it
+ * uses the received challenge and response (§6.5.6.1). Timer T3 at the Visitor
+ * PINX, in state CtatVisitRequesting, shall be at least 15 s (§6.9.3).
+ *
+ * Home PINX errors (§6.5.2.2): `invalidServedUserNr` when the PISN number is
+ * invalid; `notAuthorized` when the user is not authorised for SS-CTAT;
+ * `temporarilyUnavailable` when the fetch times out; `paramNotAvailable` when
+ * the fetch fails for another reason. `unspecified` is listed in §6.3.1, which
+ * does not say when it is returned.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-243/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

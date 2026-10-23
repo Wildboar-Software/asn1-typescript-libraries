@@ -5,7 +5,19 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary smsSubmitError
  * @description
- * 
+ *
+ * Rejection of `smsSubmit` (ECMA-325 §6.5.1.2.1, §6.5.3.2.1, Annex E.3). ROSE
+ * local CODE 1027. The Service Centre returns it to the Sending User PINX or
+ * Sending User Message Centre.
+ *
+ * §6.5.3.2.1 names causes `smRejectedDuplicateSM` and
+ * `telematicInterworkingNotSupported`. The parameter's `failureCause` may be
+ * any Table E.4 value; other integers are reserved (§E.3.1).
+ * `serviceCentreTimeStamp` is mandatory. `protocolIdentifier` and `userData`
+ * are optional echoes the Service Centre may extend with further headers.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

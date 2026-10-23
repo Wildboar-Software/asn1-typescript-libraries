@@ -9,7 +9,12 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary CPIRequestArg_argumentExtension
  * @description
- * 
+ *
+ * Manufacturer-specific extension on an SS-CPI request. ECMA-264 §6.3.1
+ * defines the two alternatives and registers none in CPIPExtSet.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-264/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

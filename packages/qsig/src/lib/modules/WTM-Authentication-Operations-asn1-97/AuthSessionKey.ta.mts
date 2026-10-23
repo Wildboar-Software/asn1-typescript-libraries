@@ -9,7 +9,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AuthSessionKey
  * @description
- * 
+ *
+ * Authentication session key (ECMA-306 §6.3.1). When this choice is received,
+ * the Visitor PINX calculates the challenge and the expected response
+ * (§6.5.6.1), or the SS-WTAN response (§7.5.1.1). That computation is outside
+ * ECMA-306 (§1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-306/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

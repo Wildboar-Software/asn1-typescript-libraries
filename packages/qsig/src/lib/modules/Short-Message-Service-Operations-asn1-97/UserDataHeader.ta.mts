@@ -8,7 +8,16 @@ import { UserDataHeaderChoice, _decode_UserDataHeaderChoice, _encode_UserDataHea
 /**
  * @summary UserDataHeader
  * @description
- * 
+ *
+ * One or more user-data headers (ECMA-325 §E.1.3.1). Their presence marks a
+ * special Short Message. In GSM the headers together with `shortMessageText`
+ * stay within 140 octets for a single, non-concatenated Short Message. ASN.1
+ * coding in a PISN does not guarantee that limit. A Service Centre's
+ * interworking behaviour for an encoding that exceeds it is outside this
+ * standard.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

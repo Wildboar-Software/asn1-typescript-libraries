@@ -11,7 +11,15 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ApplicationPort16BitHeader
  * @description
- * 
+ *
+ * Routes a Short Message to an application using 16-bit ports (ECMA-325
+ * §E.1.3.1.5). Include this header in every segment of a concatenated Short
+ * Message. The prose range is 0 to 65535: 0 to 15999 are IANA allocations,
+ * 16000 to 16999 are for applications, and other values are reserved. The
+ * ASN.1 constraint is 0..65536, which also allows 65536.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +35,22 @@ export
 class ApplicationPort16BitHeader {
     /**
      * @summary `destination16BitPort`.
+     * @description
+     *
+     * Receiving application. Prose: 0 to 65535, with 0-15999 IANA, 16000-16999
+     * for applications, and the rest reserved (ECMA-325 §E.1.3.1.5). ASN.1
+     * allows 0..65536.
      * @public
      * @readonly
      */
     readonly destination16BitPort: INTEGER;
     /**
      * @summary `originator16BitPort`.
+     * @description
+     *
+     * Sending application. Same ranges as the destination port (ECMA-325
+     * §E.1.3.1.5). The prose names this element `originating16BitPort`; the
+     * ASN.1 name is `originator16BitPort`.
      * @public
      * @readonly
      */

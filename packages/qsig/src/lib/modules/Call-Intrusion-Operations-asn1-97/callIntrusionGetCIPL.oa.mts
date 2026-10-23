@@ -6,7 +6,20 @@ import { CIGetCIPLRes, _decode_CIGetCIPLRes, _encode_CIGetCIPLRes } from "../Cal
 /**
  * @summary callIntrusionGetCIPL
  * @description
- * 
+ *
+ * Asks the Unwanted User PINX for that user's CIPL (ECMA-203
+ * §6.6.2.1.1, §6.6.3). The Terminating PINX sends the invoke in
+ * FACILITY when intrusion is otherwise possible, including during
+ * wait on busy (§6.6.2.5.1), and starts timer T5 (at least 10 s,
+ * §6.10.5). Local code 44. The Unwanted User PINX returns the CIPL.
+ * The operation is defined `ALWAYS RESPONDS FALSE` (§6.3.1). A
+ * reject of unrecognized operation is treated as the lowest CIPL
+ * (§6.6.2.1.2, §6.6.2.5.2). NFE destination is the end PINX; the
+ * Interpretation APDU is omitted (§6.3.3.1). §6.6 does not say
+ * which `DummyArg` alternative is sent.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-203/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

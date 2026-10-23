@@ -1,6 +1,13 @@
 /**
  * @module
- * @description ASN.1 module `Call-Interruption-Operations-asn1-97`.
+ * @description
+ *
+ * Operations for Call Priority Interruption (SS-CPI) and Call
+ * Priority Interruption Protection (SS-CPIP), ECMA-264 3rd ed.,
+ * Dec 2001, §6.3.1. A priority call can take a B-channel from an
+ * established call whose protection level is strictly lower.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-264/
  */
 export * from "./CPICapabilityLevel.ta.mjs";
 export * from "./CPIPExtSet.osa.mjs";

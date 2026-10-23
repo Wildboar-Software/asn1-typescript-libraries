@@ -11,7 +11,16 @@ import { ValidityPeriodEnh, _decode_ValidityPeriodEnh, _encode_ValidityPeriodEnh
 /**
  * @summary ValidityPeriod
  * @description
- * 
+ *
+ * How long the Sending User considers the Short Message valid (ECMA-325
+ * §E.1.2.2). The Service Centre keeps it and keeps trying until this period
+ * ends, then deletes it. `validityPeriodRel` uses Table E.2.
+ * `validityPeriodAbs` is an absolute ISO 8601 time. `validityPeriodEnh` is
+ * one-shot and/or an alternate encoding. If `smsSubmit` omits the element, the
+ * Service Centre uses an implementation-specific default (§6.5.3.2.1 NOTE 6).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

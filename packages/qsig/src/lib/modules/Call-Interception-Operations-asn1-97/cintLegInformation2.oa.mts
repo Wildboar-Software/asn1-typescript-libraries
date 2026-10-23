@@ -5,7 +5,21 @@ import { CintInformation2Arg, _decode_CintInformation2Arg, _encode_CintInformati
 /**
  * @summary cintLegInformation2
  * @description
- * 
+ *
+ * Interception notification from the Intercepting PINX to the
+ * Intercepted-to PINX, in the SETUP of the new call (ECMA-221
+ * §6.3.1, §6.6.4.1, §6.6.5.1). No result. That SETUP shall not also
+ * carry `divertingLegInformation2`. The Intercepted-to PINX notifies
+ * the intercepted-to user with the cause and any called number or
+ * name, then waits for presentation-restriction information before
+ * sending `divertingLegInformation3` (§6.6.6.1; ECMA-220 §6.2.2.2.1).
+ * ROSE local CODE 67. NFE `destinationEntity` is `endPINX`.
+ * Interpretation APDU is `discardAnyUnrecognisedInvokePdu`
+ * (§6.3.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-221/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-220/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -11,7 +11,12 @@ import { AlternativeId, _decode_AlternativeId, _encode_AlternativeId } from "../
 /**
  * @summary PumIdentity_both
  * @description
- * 
+ *
+ * PISN number and alternative identifier together (ECMA-284 §6.3.1). The `both`
+ * alternative of `PumIdentity`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-284/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +32,22 @@ export
 class PumIdentity_both {
     /**
      * @summary `pisnNumber`.
+     * @description
+     *
+     * PISN number of the PUM user. In a `currLocation` result it is a complete
+     * number (§6.5.3.1).
+     *
      * @public
      * @readonly
      */
     readonly pisnNumber: PartyNumber;
     /**
      * @summary `alternativeId`.
+     * @description
+     *
+     * Identifier other than the PISN number that uniquely identifies the PUM
+     * user (§4.2).
+     *
      * @public
      * @readonly
      */

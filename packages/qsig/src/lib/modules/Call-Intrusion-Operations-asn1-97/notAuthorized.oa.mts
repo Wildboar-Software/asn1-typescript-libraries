@@ -4,7 +4,15 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary notAuthorized
  * @description
- * 
+ *
+ * The SS-CI request is rejected because the calling user's CICL is
+ * insufficient (ECMA-203 §6.3.1). Local code 1007. §6.6.2.1.2 says
+ * that a CIPL which is too high, and any other reason the called
+ * user is busy but intrusion is impossible, uses an error other
+ * than `notBusy`. It does not name this error in that procedure.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-203/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

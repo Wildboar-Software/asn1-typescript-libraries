@@ -5,7 +5,14 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary unspecified
  * @description
- * 
+ *
+ * `chargeRequest` error, local code 1008. The parameter is one
+ * manufacturer-specific extension from `AOCExtSet`. ECMA-212 §6.3.1 lists the
+ * error; §6.6 does not state when it is returned.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

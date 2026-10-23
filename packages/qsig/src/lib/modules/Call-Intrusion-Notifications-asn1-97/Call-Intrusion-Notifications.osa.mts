@@ -10,7 +10,13 @@ import { endOfIntrusion } from "../Call-Intrusion-Notifications-asn1-97/endOfInt
 /**
  * @summary Call_Intrusion_Notifications
  * @description
- * 
+ *
+ * Notifications of Call-Intrusion-Notifications-asn1-97 (ECMA-203
+ * §6.3.2): alerting during wait on busy, impending intrusion,
+ * conference, isolation, forced release, and end of intrusion.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-203/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

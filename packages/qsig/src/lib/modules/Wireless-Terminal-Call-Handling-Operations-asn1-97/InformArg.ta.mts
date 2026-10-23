@@ -11,7 +11,12 @@ import { WtmiExtension, _decode_WtmiExtension, _encode_WtmiExtension } from "../
 /**
  * @summary InformArg
  * @description
- * 
+ *
+ * Argument of `wtmiInform` (ECMA-304 §6.5.1.1, §6.5.4). Identifies the visiting
+ * user to the Visitor PINX.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-304/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +34,21 @@ export
 class InformArg {
     /**
      * @summary `wtmIdentity`.
+     * @description
+     *
+     * Same contents as `wtmIdentity` in the `wtmiDivert` that caused this SETUP
+     * (ECMA-304 §6.5.1.1). The Visitor PINX searches the VDB with the PISN
+     * number or the alternative identifier (§6.5.4.1).
      * @public
      * @readonly
      */
     readonly wtmIdentity: WtmIdentity;
     /**
      * @summary `argExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-304 §6.3.1 defines no members of
+     * `WTMCHExtSet`.
      * @public
      * @readonly
      */

@@ -11,7 +11,15 @@ import { DNDInterrogateArg_argumentExtension, _decode_DNDInterrogateArg_argument
 /**
  * @summary DNDInterrogateArg
  * @description
- * 
+ *
+ * Remote SS-DND interrogation request (ECMA-194 §6.5.6.1.3;
+ * ECMA-193 §8.2.1.8). Carries the served user's PISN number. The
+ * list of basic services is returned in `DNDInterrogateRes`, not
+ * in this argument (ECMA-193 §6.2.2.1.4).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-194/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-193/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +38,20 @@ export
 class DNDInterrogateArg {
     /**
      * @summary `servedUserNr`.
+     * @description
+     *
+     * PISN number to interrogate. Required on a remote interrogation
+     * (ECMA-193 §6.2.2.1.4, §8.2.1.8 NOTE 30).
      * @public
      * @readonly
      */
     readonly servedUserNr: PartyNumber;
     /**
      * @summary `argumentExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-194 §6.3.1 defines the
+     * CHOICE and leaves `DNDExtSet` empty.
      * @public
      * @readonly
      */

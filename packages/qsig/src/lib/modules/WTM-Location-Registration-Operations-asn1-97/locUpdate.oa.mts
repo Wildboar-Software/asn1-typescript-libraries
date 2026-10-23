@@ -9,7 +9,23 @@ import { unspecified } from "../WTM-Location-Registration-Operations-asn1-97/uns
 /**
  * @summary locUpdate
  * @description
- * 
+ *
+ * Register a WTM user's location (ECMA-302 §6.5). The Visitor PINX sends it to
+ * the Home PINX when a user who is not already registered in this visitor area
+ * makes a valid request and the Visitor PINX can address the Home PINX. ROSE
+ * local CODE 50. The Home PINX stores `visitPINX` in the HDB. If the visitor
+ * area for that basic service changed, it sends `locDelete` to the previous
+ * Visitor PINX (§6.5.4.1). If the area is unchanged it returns the result and
+ * stays idle (§6.5.4.2). Timer T1, at least 15 s, runs in VisitUpdate
+ * (§6.10.1). Errors: `invalidServedUserNr` when the user is not in the HDB;
+ * `notAuthorized` when the user may not update location information;
+ * `unspecified`. Clause 6 is silent on when to return `unspecified`. Before
+ * this invoke, the Visitor PINX may send `pisnEnquiry` to the previous Visitor
+ * PINX or a Directory PINX to turn an identifier into a PISN number (§6.5.1.1
+ * notes 2 and 3).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-302/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

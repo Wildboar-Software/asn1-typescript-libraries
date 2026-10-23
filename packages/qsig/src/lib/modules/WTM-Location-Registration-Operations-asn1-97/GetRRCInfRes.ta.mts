@@ -12,7 +12,13 @@ import { LrExtension, _decode_LrExtension, _encode_LrExtension } from "../WTM-Lo
 /**
  * @summary GetRRCInfRes
  * @description
- * 
+ *
+ * Route-restriction information from the HDB (ECMA-302 §7.5.2.1). The Home PINX
+ * includes the route restriction class, the alternative identity, or both, if
+ * applicable. Both may be absent; §7.5.2.1 does not require either element.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-302/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,18 +35,34 @@ export
 class GetRRCInfRes {
     /**
      * @summary `alternativeId`.
+     * @description
+     *
+     * Alternative identity of the WTM user, included when the Home PINX has one
+     * (§7.5.2.1).
+     *
      * @public
      * @readonly
      */
     readonly alternativeId: OPTIONAL<AlternativeId>;
     /**
      * @summary `rrClass`.
+     * @description
+     *
+     * Route restriction class, included when applicable (§7.5.2.1). Integer
+     * values 0 through 99 are not assigned meanings (§6.3.1). §6.9.19 states no
+     * protocol interaction with ANF-RRC.
+     *
      * @public
      * @readonly
      */
     readonly rrClass: OPTIONAL<RRClass>;
     /**
      * @summary `argExtension`.
+     * @description
+     *
+     * Manufacturer-specific data. `WTMLRExtSet` assigns no extensions (ECMA-302
+     * §6.3.1).
+     *
      * @public
      * @readonly
      */

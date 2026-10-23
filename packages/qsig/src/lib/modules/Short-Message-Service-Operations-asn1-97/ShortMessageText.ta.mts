@@ -11,7 +11,11 @@ import { ShortMessageTextData, _decode_ShortMessageTextData, _encode_ShortMessag
 /**
  * @summary ShortMessageText
  * @description
- * 
+ *
+ * Text of a Short Message and the coding used to read it (ECMA-325 §E.1.3.4).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +31,19 @@ export
 class ShortMessageText {
     /**
      * @summary `shortMessageTextType`.
+     * @description
+     *
+     * Alphabet or compression of the following octets (ECMA-325 §E.1.3.4).
      * @public
      * @readonly
      */
     readonly shortMessageTextType: ShortMessageTextType;
     /**
      * @summary `shortMessageTextData`.
+     * @description
+     *
+     * The text octets, at most 140. Character capacity depends on
+     * `shortMessageTextType` (ECMA-325 §E.1.3.4).
      * @public
      * @readonly
      */

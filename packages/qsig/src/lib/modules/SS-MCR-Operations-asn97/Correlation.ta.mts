@@ -11,7 +11,13 @@ import { CorrelationReason, _decode_CorrelationReason, _encode_CorrelationReason
 /**
  * @summary Correlation
  * @description
- * 
+ *
+ * Correlation of the Original Call with the Requested Call (ECMA-344 §4.2.6,
+ * §4.2.7, §6.1). The Co-operating PINX stores it from `mCRequest` and copies
+ * it into `mCInform` and `mCAlerting` (§6.5.2.1.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-344/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +33,21 @@ export
 class Correlation {
     /**
      * @summary `correlationData`.
+     * @description
+     *
+     * Call identity shared by the Original Call and the Requested Call.
+     * ECMA-344 imports `CallIdentity` from path replacement and does not define
+     * its contents (§6.3.1).
      * @public
      * @readonly
      */
     readonly correlationData: CallIdentity;
     /**
      * @summary `correlationReason`.
+     * @description
+     *
+     * Optional reason the calls are correlated. §6.5 is silent on when to
+     * include it and which value to send (ECMA-344 §6.3.1).
      * @public
      * @readonly
      */

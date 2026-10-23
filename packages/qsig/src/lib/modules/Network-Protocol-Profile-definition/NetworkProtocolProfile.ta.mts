@@ -10,7 +10,20 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary NetworkProtocolProfile
  * @description
- * 
+ *
+ * X.208 / X.209 edition retained in ECMA-165 Annex K Table K.2, object
+ * identifier `network-protocol-profile-definition(8)`. Annex K states that the
+ * encoded value is the same as the X.680 module in §11.3.3 Table 29. Selects
+ * the service APDUs in octets 4 onwards of a Facility information element whose
+ * protocol profile is Networking Extensions (ECMA-165 §11.3.3, Table 30).
+ * `acse` (19) selects ACSE; `dse` (32) selects DSE. If this element is absent,
+ * the service APDUs are ROSE (§11.3.3 NOTE 3, §7.1.2.3). Table 29 assigns no
+ * ROSE value. An incorrectly coded profile causes the whole Facility
+ * information element to be discarded (§7.1.2.3). Any other profile value
+ * causes the Coordination Function to discard the APDUs (§8.1.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,14 +38,20 @@ type NetworkProtocolProfile = INTEGER;
 
 /**
  * @summary NetworkProtocolProfile_acse
+ * @description
+ *
+ * Service APDUs in this Facility information element are ACSE APDUs (ECMA-165
+ * §11.3.3, §8.1.2, §11.3.3.5). Value 19.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
 const NetworkProtocolProfile_acse: NetworkProtocolProfile = 19; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary NetworkProtocolProfile_acse
+ * @summary acse
+ * @description Alias of {@link NetworkProtocolProfile_acse}.
  * @constant
  * @type {number}
  */
@@ -41,14 +60,20 @@ const acse: NetworkProtocolProfile = NetworkProtocolProfile_acse; /* SHORT_NAMED
 
 /**
  * @summary NetworkProtocolProfile_dse
+ * @description
+ *
+ * Service APDUs in this Facility information element are DSE APDUs (ECMA-165
+ * §11.3.3, §8.1.2, §11.3.3.3). Value 32.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
 const NetworkProtocolProfile_dse: NetworkProtocolProfile = 32; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary NetworkProtocolProfile_dse
+ * @summary dse
+ * @description Alias of {@link NetworkProtocolProfile_dse}.
  * @constant
  * @type {number}
  */

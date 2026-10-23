@@ -11,7 +11,14 @@ import { serviceAvailable } from "../Do-Not-Disturb-Operations-asn1-97/serviceAv
 /**
  * @summary Do_Not_Disturb_Operations
  * @description
- * 
+ *
+ * Operations of module `Do-Not-Disturb-Operations-asn1-97`
+ * (ECMA-194 §6.3.1, Table 1): remote activation, deactivation, and
+ * interrogation of SS-DND; immediate and path-retention SS-DNDO;
+ * and the generic path-retention pair.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-194/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -9,7 +9,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AuthResponse
  * @description
- * 
+ *
+ * In SS-WTAT, the response the WTM user is expected to return. In SS-WTAN, the
+ * response value from the network (ECMA-306 §6.3.1). How either value is
+ * computed is outside ECMA-306 (§1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-306/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

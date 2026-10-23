@@ -4,7 +4,17 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary BasicService
  * @description
- * 
+ *
+ * Basic service for which diversion applies, or all basic services (ECMA-174
+ * §6.3.1). SS-DIV applies to the basic services of ECMA-142 (§6.1). This
+ * Standard lists the identifiers and does not define the services further.
+ * `allServices` is the default `basicService` of `interrogateDiversionQ`.
+ * Activation may be for one subscribed basic service or for all of them
+ * (ECMA-173 §6.2.2.1.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-173/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,7 +49,17 @@ enum _enum_for_BasicService {
 /**
  * @summary BasicService
  * @description
- * 
+ *
+ * Basic service for which diversion applies, or all basic services (ECMA-174
+ * §6.3.1). SS-DIV applies to the basic services of ECMA-142 (§6.1). This
+ * Standard lists the identifiers and does not define the services further.
+ * `allServices` is the default `basicService` of `interrogateDiversionQ`.
+ * Activation may be for one subscribed basic service or for all of them
+ * (ECMA-173 §6.2.2.1.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-173/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -64,7 +84,17 @@ type BasicService = _enum_for_BasicService;
 /**
  * @summary BasicService
  * @description
- * 
+ *
+ * Basic service for which diversion applies, or all basic services (ECMA-174
+ * §6.3.1). SS-DIV applies to the basic services of ECMA-142 (§6.1). This
+ * Standard lists the identifiers and does not define the services further.
+ * `allServices` is the default `basicService` of `interrogateDiversionQ`.
+ * Activation may be for one subscribed basic service or for all of them
+ * (ECMA-173 §6.2.2.1.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-173/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -88,14 +118,22 @@ const BasicService = _enum_for_BasicService;
 
 /**
  * @summary BasicService_allServices
+ * @description
+ *
+ * All basic services for which the supplementary service is subscribed
+ * (ECMA-173 §6.2.2.1.1). Default `basicService` on `interrogateDiversionQ`
+ * (ECMA-174 §6.3.1).
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-173/
  */
 export
 const BasicService_allServices: BasicService = BasicService.allServices; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary allServices
+ * @description Alias of {@link BasicService_allServices}.
  * @constant
  * @type {number}
  */
@@ -104,14 +142,20 @@ const allServices: BasicService = BasicService.allServices; /* SHORT_NAMED_ENUME
 
 /**
  * @summary BasicService_speech
+ * @description
+ *
+ * Speech. ECMA-174 §6.3.1 lists the identifier and does not define the basic
+ * service further.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
  */
 export
 const BasicService_speech: BasicService = BasicService.speech; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speech
+ * @description Alias of {@link BasicService_speech}.
  * @constant
  * @type {number}
  */
@@ -120,14 +164,20 @@ const speech: BasicService = BasicService.speech; /* SHORT_NAMED_ENUMERATED_VALU
 
 /**
  * @summary BasicService_unrestrictedDigitalInformation
+ * @description
+ *
+ * Unrestricted digital information. ECMA-174 §6.3.1 lists the identifier and
+ * does not define the basic service further.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
  */
 export
 const BasicService_unrestrictedDigitalInformation: BasicService = BasicService.unrestrictedDigitalInformation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unrestrictedDigitalInformation
+ * @description Alias of {@link BasicService_unrestrictedDigitalInformation}.
  * @constant
  * @type {number}
  */
@@ -136,14 +186,20 @@ const unrestrictedDigitalInformation: BasicService = BasicService.unrestrictedDi
 
 /**
  * @summary BasicService_audio3100Hz
+ * @description
+ *
+ * 3.1 kHz audio. ECMA-174 §6.3.1 lists the identifier and does not define the
+ * basic service further.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
  */
 export
 const BasicService_audio3100Hz: BasicService = BasicService.audio3100Hz; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary audio3100Hz
+ * @description Alias of {@link BasicService_audio3100Hz}.
  * @constant
  * @type {number}
  */
@@ -152,14 +208,20 @@ const audio3100Hz: BasicService = BasicService.audio3100Hz; /* SHORT_NAMED_ENUME
 
 /**
  * @summary BasicService_telephony
+ * @description
+ *
+ * Telephony. ECMA-174 §6.3.1 lists the identifier and does not define the basic
+ * service further.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
  */
 export
 const BasicService_telephony: BasicService = BasicService.telephony; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary telephony
+ * @description Alias of {@link BasicService_telephony}.
  * @constant
  * @type {number}
  */
@@ -168,14 +230,20 @@ const telephony: BasicService = BasicService.telephony; /* SHORT_NAMED_ENUMERATE
 
 /**
  * @summary BasicService_teletex
+ * @description
+ *
+ * Teletex. ECMA-174 §6.3.1 lists the identifier and does not define the basic
+ * service further.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
  */
 export
 const BasicService_teletex: BasicService = BasicService.teletex; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary teletex
+ * @description Alias of {@link BasicService_teletex}.
  * @constant
  * @type {number}
  */
@@ -184,14 +252,20 @@ const teletex: BasicService = BasicService.teletex; /* SHORT_NAMED_ENUMERATED_VA
 
 /**
  * @summary BasicService_telefaxGroup4Class1
+ * @description
+ *
+ * Telefax group 4 class 1. ECMA-174 §6.3.1 lists the identifier and does not
+ * define the basic service further.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
  */
 export
 const BasicService_telefaxGroup4Class1: BasicService = BasicService.telefaxGroup4Class1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary telefaxGroup4Class1
+ * @description Alias of {@link BasicService_telefaxGroup4Class1}.
  * @constant
  * @type {number}
  */
@@ -200,14 +274,20 @@ const telefaxGroup4Class1: BasicService = BasicService.telefaxGroup4Class1; /* S
 
 /**
  * @summary BasicService_videotexSyntaxBased
+ * @description
+ *
+ * Videotex syntax-based. ECMA-174 §6.3.1 lists the identifier and does not
+ * define the basic service further.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
  */
 export
 const BasicService_videotexSyntaxBased: BasicService = BasicService.videotexSyntaxBased; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary videotexSyntaxBased
+ * @description Alias of {@link BasicService_videotexSyntaxBased}.
  * @constant
  * @type {number}
  */
@@ -216,14 +296,20 @@ const videotexSyntaxBased: BasicService = BasicService.videotexSyntaxBased; /* S
 
 /**
  * @summary BasicService_videotelephony
+ * @description
+ *
+ * Videotelephony. ECMA-174 §6.3.1 lists the identifier and does not define the
+ * basic service further.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
  */
 export
 const BasicService_videotelephony: BasicService = BasicService.videotelephony; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary videotelephony
+ * @description Alias of {@link BasicService_videotelephony}.
  * @constant
  * @type {number}
  */

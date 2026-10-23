@@ -9,7 +9,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CommandData
  * @description
- * 
+ *
+ * Octets accompanying a Command (ECMA-325 §E.10.5). Size 0..157. The standard
+ * says only that they relate to the operation the Sending User requested. No
+ * format is given.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

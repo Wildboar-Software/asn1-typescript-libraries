@@ -18,7 +18,12 @@ import { CalculationParam, _decode_CalculationParam, _encode_CalculationParam } 
 /**
  * @summary CalcCtatInfoUnit
  * @description
- * 
+ *
+ * One SS-CTAT challenge and the response the CTM user is expected to return
+ * (ECMA-243 §6.3.1, §6.5.5.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-243/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,24 +41,40 @@ export
 class CalcCtatInfoUnit {
     /**
      * @summary `authChallenge`.
+     * @description
+     *
+     * Randomly generated challenge sent toward the CTM user (ECMA-243 §6.3.1).
+     * Generation is outside ECMA-243 (§1).
      * @public
      * @readonly
      */
     readonly authChallenge: AuthChallenge;
     /**
      * @summary `authResponse`.
+     * @description
+     *
+     * Expected response for this challenge (ECMA-243 §6.3.1). The Visitor PINX
+     * compares the CTM user's response with it (§6.5.5.1).
      * @public
      * @readonly
      */
     readonly authResponse: AuthResponse;
     /**
      * @summary `derivedCipherKey`.
+     * @description
+     *
+     * Included when the algorithm in use requires it (ECMA-243 §6.3.1).
+     * ECMA-243 does not define how it is derived (§1).
      * @public
      * @readonly
      */
     readonly derivedCipherKey: OPTIONAL<DerivedCipherKey>;
     /**
      * @summary `calculationParam`.
+     * @description
+     *
+     * Included when the algorithm in use requires it (ECMA-243 §6.3.1). The
+     * calculation is outside ECMA-243 (§1).
      * @public
      * @readonly
      */

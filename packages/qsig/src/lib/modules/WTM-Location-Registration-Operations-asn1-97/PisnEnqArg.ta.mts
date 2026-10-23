@@ -11,7 +11,13 @@ import { LrExtension, _decode_LrExtension, _encode_LrExtension } from "../WTM-Lo
 /**
  * @summary PisnEnqArg
  * @description
- * 
+ *
+ * Argument of `pisnEnquiry` (ECMA-302 §6.3.1, §6.5.2.1). ECMA-282 §6.8.1 puts
+ * the identifier supplied by the PUM user in `alternativeId`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-302/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-282/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +35,23 @@ export
 class PisnEnqArg {
     /**
      * @summary `alternativeId`.
+     * @description
+     *
+     * Identifier to translate (§6.5.2.1, §6.5.3.1). It can be a temporary
+     * identifier, for example a Network Assigned Identity, or a fixed handset
+     * identifier (§6.3.1).
+     *
      * @public
      * @readonly
      */
     readonly alternativeId: AlternativeId;
     /**
      * @summary `argExtension`.
+     * @description
+     *
+     * Manufacturer-specific data. `WTMLRExtSet` assigns no extensions (ECMA-302
+     * §6.3.1).
+     *
      * @public
      * @readonly
      */

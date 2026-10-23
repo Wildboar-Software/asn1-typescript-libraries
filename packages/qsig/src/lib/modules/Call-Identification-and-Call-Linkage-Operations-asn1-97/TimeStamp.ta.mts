@@ -9,7 +9,18 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary TimeStamp
  * @description
- * 
+ *
+ * Time at which this call-identification data was created (ECMA-314 Annex D,
+ * requirement 3). When the global or thread data is updated, the timestamp
+ * shall be updated too. If two linkage identifiers are equal, the later
+ * timestamp wins; a value that has a timestamp beats one that does not
+ * (ECMA-314 §6.5.2.2). GeneralizedTime of 16..19 characters. ECMA-314 does
+ * not specify the character layout beyond the ASN.1 type.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-314/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

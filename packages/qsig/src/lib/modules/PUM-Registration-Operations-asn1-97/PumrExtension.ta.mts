@@ -9,7 +9,13 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary PumrExtension
  * @description
- * 
+ *
+ * Manufacturer-specific extension on an SS-PUMR argument or result (ECMA-282
+ * §6.3.1). `extension` is one extension from `PUMRExtSet`; `sequOfExtn` is a
+ * sequence of them. This module assigns no extensions.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-282/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

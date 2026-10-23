@@ -13,7 +13,24 @@ import { pumUserNotRegistered } from "../PUM-Registration-Operations-asn1-97/pum
 /**
  * @summary pumInterrog
  * @description
- * 
+ *
+ * Interrogate registration sessions (ECMA-282 §6.7). The Visitor PINX or a
+ * Remote PINX sends it to the Home PINX. When `homeInfoOnly` is FALSE, the Home
+ * PINX also sends it to each relevant Visitor PINX to collect session
+ * parameters, then returns the combined result (§6.7.2.1). ROSE local CODE 92.
+ * Timer T5, at least 15 s, runs in VisitInterrogation, RemoteInterrogation, and
+ * HomeInterrogation (§6.12.5). If T5 expires at the Home PINX, it still returns
+ * the information it has (§6.7.2.2). The Visitor PINX, answering an invoke from
+ * the Home PINX, returns `interrogParams`, or `pumUserNotRegistered` when the
+ * user is not in the VDB (§6.7.1.2). Errors toward the Home PINX:
+ * `invalidServedUserNr` when the user is not in the HDB; `notAuthorized` when
+ * interrogation is not allowed (§6.7.2.2); `unspecified`;
+ * `supplementaryServiceInteractionNotAllowed`; `pumUserFailedAuthentication`;
+ * `hostingAddrInvalid`; `pumUserNotRegistered`. Clause 6 is silent on when to
+ * return the last four except `pumUserNotRegistered` from the Visitor PINX.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-282/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

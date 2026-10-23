@@ -1,6 +1,15 @@
 /**
  * @module
- * @description ASN.1 module `SS-CC-Operations-asn1-97`.
+ * @description
+ *
+ * Call Completion signalling operations (ECMA-186 4th ed.,
+ * December 2001): Completion of Calls to Busy Subscriber (SS-CCBS)
+ * and Completion of Calls on No Reply (SS-CCNR). User A asks the
+ * PISN to monitor User B and to complete the call when User B is
+ * free (ECMA-185 §6.1.1, §7.1.1; ECMA-186 §6.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-186/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-185/
  */
 export * from "./CC-Operations.osa.mjs";
 export * from "./CCExtSet.osa.mjs";

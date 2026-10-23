@@ -12,7 +12,11 @@ import { LrExtension, _decode_LrExtension, _encode_LrExtension } from "../WTM-Lo
 /**
  * @summary LocDeRegArg
  * @description
- * 
+ *
+ * Argument of `locDeReg` (ECMA-302 §6.3.1, §6.6.1.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-302/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,18 +33,32 @@ export
 class LocDeRegArg {
     /**
      * @summary `wtmUserId`.
+     * @description
+     *
+     * Identity of the WTM user who has deregistered.
+     *
      * @public
      * @readonly
      */
     readonly wtmUserId: WtmUserId;
     /**
      * @summary `basicService`.
+     * @description
+     *
+     * Basic service for which the user deregistered. Omission means
+     * `allServices` (§6.3.1). The Home PINX may check it (§6.6.2.1).
+     *
      * @public
      * @readonly
      */
     readonly basicService: OPTIONAL<BasicService>;
     /**
      * @summary `argExtension`.
+     * @description
+     *
+     * Manufacturer-specific data. `WTMLRExtSet` assigns no extensions (ECMA-302
+     * §6.3.1).
+     *
      * @public
      * @readonly
      */

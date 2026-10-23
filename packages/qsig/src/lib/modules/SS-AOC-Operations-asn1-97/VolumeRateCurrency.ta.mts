@@ -12,7 +12,13 @@ import { VolumeUnit, _decode_VolumeUnit, _encode_VolumeUnit, _enum_for_VolumeUni
 /**
  * @summary VolumeRateCurrency
  * @description
- * 
+ *
+ * Currency value of one volume unit (ECMA-211 §A.1.3.2). ECMA-211 §A.2
+ * associates a volume rate with user-to-user information transfer.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,18 +35,30 @@ export
 class VolumeRateCurrency {
     /**
      * @summary `vRCurrency`.
+     * @description
+     *
+     * Currency identifier for the price of one volume unit. Length 0 means the
+     * PISN default currency (ECMA-212 §6.3.1).
      * @public
      * @readonly
      */
     readonly vRCurrency: Currency;
     /**
      * @summary `vRAmount`.
+     * @description
+     *
+     * Price of one volume unit, as an integer and a multiplier (ECMA-211
+     * §A.1.3.2).
      * @public
      * @readonly
      */
     readonly vRAmount: Amount;
     /**
      * @summary `vRVolumeUnit`.
+     * @description
+     *
+     * Octet, segment, or a message that carries user-to-user information
+     * (ECMA-211 §A.1.3.2).
      * @public
      * @readonly
      */

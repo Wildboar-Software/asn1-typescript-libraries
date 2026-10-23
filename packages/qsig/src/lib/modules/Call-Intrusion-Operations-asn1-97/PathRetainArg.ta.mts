@@ -9,7 +9,16 @@ import { PathRetainArg_extendedServiceList, _decode_PathRetainArg_extendedServic
 /**
  * @summary PathRetainArg
  * @description
- * 
+ *
+ * Argument of `pathRetain` (ECMA-203 §6.3.1, Annex A).
+ *
+ * - `serviceList`: services for which the connection should be
+ *   retained.
+ * - `extendedServiceList`: that list plus one `CIExtSet` extension.
+ *   §A.5 does not say when this alternative is used.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-203/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

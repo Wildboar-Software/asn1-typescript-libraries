@@ -11,7 +11,23 @@ import { unspecified } from "../WTM-Authentication-Operations-asn1-97/unspecifie
 /**
  * @summary authWtmUser
  * @description
- * 
+ *
+ * SS-WTAT from the Home PINX to the Visitor PINX (ECMA-306 §6.1, §6.5.1).
+ * Call-independent signalling connection (ECMA-165 §7.3). Local code 72.
+ * Include `calcWtatInfo` when challenge and expected-response values are
+ * supplied; omit it when the Visitor PINX must obtain parameters itself
+ * (§6.5.1.1). The result says whether the response from the WTM user matched
+ * (§6.5.5.1). Timer T1 at the Home PINX, in state WtatHomeInitiating, shall be
+ * at least 15 s (§6.9.1).
+ *
+ * If parameters cannot be obtained, the Visitor PINX returns an error
+ * (§6.5.5.2). If the WTM user does not answer, the error is
+ * `temporarilyUnavailable`. §6.5.5 does not name the error used when the
+ * parameter fetch fails. §6.3.1 also lists `invalidServedUserNr`,
+ * `notAuthorized`, `paramNotAvailable`, and `unspecified`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-306/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -9,7 +9,20 @@ import { unspecified } from "../WTM-Authentication-Operations-asn1-97/unspecifie
 /**
  * @summary wtanParamEnq
  * @description
- * 
+ *
+ * SS-WTAN parameter enquiry from the Home PINX to the Authentication Server
+ * PINX (ECMA-306 §7.5.2, §7.5.3). Local code 76. Carries the challenge received
+ * from the WTM user. If `canCompute` is absent, or the application requires a
+ * computed response, the result choice is `calcWtanInfo`; otherwise it may be
+ * `authSessionKeyInfo` (§7.5.3.1). Timer T5 at the Home PINX, in state
+ * WtanHomeFetching, shall be at least 15 s (§7.9.2).
+ *
+ * Errors (§7.5.3.2): `invalidServedUserNr` when the identity is invalid;
+ * `paramNotAvailable` when authentication parameters are not available.
+ * `unspecified` is listed in §6.3.1, which does not say when it is returned.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-306/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

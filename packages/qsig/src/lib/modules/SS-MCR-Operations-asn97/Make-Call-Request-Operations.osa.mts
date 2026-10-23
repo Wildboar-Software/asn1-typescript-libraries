@@ -7,7 +7,12 @@ import { mCInform } from "../SS-MCR-Operations-asn97/mCInform.oa.mjs";
 /**
  * @summary Make_Call_Request_Operations
  * @description
- * 
+ *
+ * SS-MCR operations (ECMA-344 §6.3.1): `mCRequest`, `mCAlerting`, and
+ * `mCInform`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-344/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -10,7 +10,25 @@ import { unspecified } from "../MWI-Operations-asn1-97/unspecified.oa.mjs";
 /**
  * @summary mWIActivate
  * @description
- * 
+ *
+ * Message Centre PINX to Served User PINX, local code 80. On a request from the
+ * Message Centre, the PINX sends this invoke on a call-independent signalling
+ * connection (ECMA-165 §7.3), starts timer T1 (at least 15 s), and waits in
+ * MWI-Mc-Wait (ECMA-242 §6.5.1.1.1, §6.9.1). The argument shall contain the
+ * Served User's PISN number and the service. Message centre identity, message
+ * count, originating number, timestamp, and priority are optional. The Served
+ * User PINX activates SS-MWI and returns `DummyRes` (§6.5.2.1.1). The Message
+ * Centre PINX clears the connection, or may keep it for another application.
+ * Errors are `userNotSubscribed`, `invalidServedUserNr`,
+ * `basicServiceNotProvided`, and `unspecified`. §6.5.2.2.1 says to return an
+ * appropriate error and does not assign each error a cause. NFE destination is
+ * `endPINX`. The Interpretation APDU is omitted or
+ * `rejectAnyUnrecognizedInvokePdu` (§6.3.2.1). May be sent again when the
+ * number of waiting messages changes (ECMA-241 §6.2.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

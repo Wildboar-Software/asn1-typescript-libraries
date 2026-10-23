@@ -11,7 +11,16 @@ import { NameNotAvailable, _decode_NameNotAvailable, _encode_NameNotAvailable } 
 /**
  * @summary Name
  * @description
- * 
+ *
+ * A user's name and whether it may be presented (ECMA-164 §6.1). Choose
+ * `namePresentationAllowed` when the name is available and presentation is
+ * allowed, `namePresentationRestricted` when it is available and restricted,
+ * and `nameNotAvailable` when it is not available (§7.4.1.1, §8.4.1.1). A name
+ * is a string of at most 50 characters (§4.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-164/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-163/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

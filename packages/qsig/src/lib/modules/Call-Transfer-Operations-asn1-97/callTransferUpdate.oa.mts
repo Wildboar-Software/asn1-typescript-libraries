@@ -5,7 +5,22 @@ import { CTUpdateArg, _decode_CTUpdateArg, _encode_CTUpdateArg } from "../Call-T
 /**
  * @summary callTransferUpdate
  * @description
- * 
+ *
+ * Unconfirmed. Either transferred PINX may send the other user's
+ * number, name, and progress indicators. Sent on the call reference of
+ * `callTransferComplete`, or inside the SETUP, CONNECT, or ALERTING of
+ * rerouteing. While the Transferring PINX remains in
+ * CT-Await-Answer-From-User-C it relays the invoke with the same
+ * argument. Later information replaces an earlier
+ * `callTransferComplete`. A restricted number or name is withheld from
+ * the local user. ROSE local 13. Interpretation APDU:
+ * `discardAnyUnrecognisedInvokePdu`. NFE `destinationEntity` is
+ * `endPINX`. ECMA-178 §6.3.1, §6.3.2.1, §6.5.1.1, §6.5.2.1, §6.5.2.3,
+ * §6.5.3.1, §6.5.3.3, §6.5.5; ECMA-177 §7.2.1.6.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-178/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-177/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

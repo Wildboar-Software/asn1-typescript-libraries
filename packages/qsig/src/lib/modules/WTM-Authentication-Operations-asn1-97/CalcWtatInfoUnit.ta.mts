@@ -13,7 +13,12 @@ import { CalculationParam, _decode_CalculationParam, _encode_CalculationParam } 
 /**
  * @summary CalcWtatInfoUnit
  * @description
- * 
+ *
+ * One SS-WTAT challenge and the response the WTM user is expected to return
+ * (ECMA-306 §6.3.1, §6.5.5.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-306/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,24 +36,41 @@ export
 class CalcWtatInfoUnit {
     /**
      * @summary `authChallenge`.
+     * @description
+     *
+     * Randomly generated challenge sent toward the WTM user (ECMA-306 §6.3.1).
+     * The server generates it unless the Visitor PINX supplied one (§6.5.7.1).
+     * Generation is outside ECMA-306 (§1).
      * @public
      * @readonly
      */
     readonly authChallenge: AuthChallenge;
     /**
      * @summary `authResponse`.
+     * @description
+     *
+     * Expected response for this challenge (ECMA-306 §6.3.1). The Visitor PINX
+     * compares the WTM user's response with it (§6.5.5.1).
      * @public
      * @readonly
      */
     readonly authResponse: AuthResponse;
     /**
      * @summary `derivedCipherKey`.
+     * @description
+     *
+     * Included when the algorithm in use requires it (ECMA-306 §6.3.1).
+     * ECMA-306 does not define how it is derived (§1).
      * @public
      * @readonly
      */
     readonly derivedCipherKey: OPTIONAL<DerivedCipherKey>;
     /**
      * @summary `calculationParam`.
+     * @description
+     *
+     * Included when the algorithm in use requires it (ECMA-306 §6.3.1). The
+     * calculation is outside ECMA-306 (§1).
      * @public
      * @readonly
      */

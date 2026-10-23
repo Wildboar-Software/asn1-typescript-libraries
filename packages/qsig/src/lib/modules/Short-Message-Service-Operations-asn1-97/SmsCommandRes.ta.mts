@@ -13,7 +13,13 @@ import { SmsExtension, _decode_SmsExtension, _encode_SmsExtension } from "../Sho
 /**
  * @summary SmsCommandRes
  * @description
- * 
+ *
+ * Result of `smsCommand` (ECMA-325 Annex E.11). The Service Centre has
+ * actioned the command. §6.5.3.1.2 does not add result elements beyond this
+ * type.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,24 +37,40 @@ export
 class SmsCommandRes {
     /**
      * @summary `serviceCentreTimeStamp`.
+     * @description
+     *
+     * Time at the Service Centre, as on a successful submit (ECMA-325 §E.11.1,
+     * §E.2.1).
      * @public
      * @readonly
      */
     readonly serviceCentreTimeStamp: ServiceCentreTimeStamp;
     /**
      * @summary `protocolIdentifier`.
+     * @description
+     *
+     * As on the invoke (ECMA-325 §E.11.2, §E.1.2.1).
      * @public
      * @readonly
      */
     readonly protocolIdentifier: OPTIONAL<ProtocolIdentifier>;
     /**
      * @summary `userData`.
+     * @description
+     *
+     * For Service Centre use. Further headers may follow a
+     * `dataHeaderSourceIndicator` (ECMA-325 §E.11.3). §E.11 does not say this
+     * echoes the invoke.
      * @public
      * @readonly
      */
     readonly userData: OPTIONAL<UserData>;
     /**
      * @summary `smsExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. This edition defines none in `SmsExtSet`
+     * (ECMA-325 §6.3.1).
      * @public
      * @readonly
      */

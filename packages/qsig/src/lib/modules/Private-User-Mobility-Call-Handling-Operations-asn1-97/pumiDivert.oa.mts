@@ -8,7 +8,23 @@ import { unspecified } from "../Private-User-Mobility-Call-Handling-Operations-a
 /**
  * @summary pumiDivert
  * @description
- * 
+ *
+ * Ask the Rerouteing PINX to extend the call to the Visitor PINX (ECMA-284
+ * §6.5.1, §6.5.2). The PUMI-detect PINX sends it in a FACILITY message on the
+ * incoming call. The Rerouteing PINX acts in basic-call state Outgoing Call
+ * Proceeding: it opens a new call to `hostingAddr`, puts `pumiInform` in that
+ * SETUP, and releases the leg toward the PUMI-detect PINX with a DISCONNECT
+ * that carries the return result. ROSE local CODE 94. The result is `DummyRes`.
+ * Timer T2, at least 15 s, runs at the PUMI-detect PINX in state PUMI-Divert
+ * (§6.9.2). If the Rerouteing PINX cannot proceed it returns `notAvailable`
+ * (§6.5.1.2). `unspecified` is also listed (§6.3.1); clause 6 is silent on when
+ * to return it. On error, reject, or T2 expiry the PUMI-detect PINX either
+ * releases the basic call or performs rerouteing locally (§6.5.2.2). When the
+ * PUMI-detect PINX is also the Rerouteing PINX, that exchange stays inside the
+ * PINX (§6.5.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-284/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

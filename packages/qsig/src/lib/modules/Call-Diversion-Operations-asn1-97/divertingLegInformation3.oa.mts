@@ -5,7 +5,32 @@ import { _decode_divertingLegInformation3_ArgumentType, _encode_divertingLegInfo
 /**
  * @summary divertingLegInformation3
  * @description
- * 
+ *
+ * Notification from the Diverted-to PINX to the Originating PINX of whether the
+ * diverted-to number may be presented, and optionally the diverted-to user's
+ * name (ECMA-174 §6.5.5.1.1). Unconfirmed. ROSE local code 22. Sent in
+ * FACILITY, ALERTING, or CONNECT once presentation restriction of the
+ * diverted-to number is known. For CFNR it is not sent in FACILITY before an
+ * ALERTING has been sent. If it has not been sent earlier, it is sent in the
+ * CONNECT.
+ *
+ * The Originating PINX presents `nominatedNr` from the last
+ * `divertingLegInformation1` only when every such notification had
+ * `notificationWithDivertedToNr`, this and any earlier
+ * `presentationAllowedIndicator` allows presentation, and no diverted-to number
+ * was already presented unless a later `cfnr` reason was received (ECMA-174
+ * §6.5.1.1). `redirectionName` may be presented only under those conditions and
+ * when it is not marked presentation restricted. Receipt in CONNECT returns the
+ * Originating PINX to CDO-Idle.
+ *
+ * If this notification is missing up to and including CONNECT, an Incoming
+ * Gateway PINX tells the public ISDN that presentation is restricted (ECMA-174
+ * §6.6.1.1). If the public ISDN gives the Outgoing Gateway PINX nothing from
+ * which to build it, that PINX takes no specific action and the diverted-to
+ * number is not presented (§6.6.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

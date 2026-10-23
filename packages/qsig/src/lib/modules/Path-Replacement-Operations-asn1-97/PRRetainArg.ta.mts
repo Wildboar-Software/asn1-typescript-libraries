@@ -12,7 +12,13 @@ import { PRRetainArg_extension, _decode_PRRetainArg_extension, _encode_PRRetainA
 /**
  * @summary PRRetainArg
  * @description
- * 
+ *
+ * Argument of `pathReplaceRetain`. The next PINX needs the same
+ * identity and number the Requesting PINX sent, either to retain
+ * further or to branch a new connection. ECMA-176 §6.6.2.1, §6.6.3.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-176/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,18 +38,31 @@ export
 class PRRetainArg {
     /**
      * @summary `callIdentity`.
+     * @description
+     *
+     * Copied from `pathReplacePropose`, or from the `pathReplaceRetain`
+     * this PINX received. ECMA-176 §6.6.2.1, §6.6.3.1.1.
      * @public
      * @readonly
      */
     readonly callIdentity: CallIdentity;
     /**
      * @summary `rerouteingNumber`.
+     * @description
+     *
+     * Copied from `pathReplacePropose`, or from the retain this PINX
+     * received. A PINX that cannot retain further uses it as Called
+     * party number of the new SETUP. ECMA-176 §6.6.2.1, §6.6.3.2.1.
      * @public
      * @readonly
      */
     readonly rerouteingNumber: PartyNumber;
     /**
      * @summary `extension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-176 §6.3.1 defines no
+     * member of `PRExtSet`.
      * @public
      * @readonly
      */

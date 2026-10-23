@@ -11,7 +11,14 @@ import { Amount, _decode_Amount, _encode_Amount } from "../SS-AOC-Operations-asn
 /**
  * @summary FlatRateCurrency
  * @description
- * 
+ *
+ * Fixed currency value per event (ECMA-211 §A.1.3.3). Used for a flat-rate
+ * specific charge. For call attempt and call setup it is also how a transferred
+ * user is told of charges incurred before transfer (§A.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +34,17 @@ export
 class FlatRateCurrency {
     /**
      * @summary `fRCurrency`.
+     * @description
+     *
+     * Currency identifier for the flat rate. Length 0 means the PISN default
+     * currency (ECMA-212 §6.3.1).
      * @public
      * @readonly
      */
     readonly fRCurrency: Currency;
     /**
      * @summary `fRAmount`.
+     * @description Fixed currency value charged per event (ECMA-211 §A.1.3.3).
      * @public
      * @readonly
      */

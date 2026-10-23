@@ -8,7 +8,13 @@ import { cfbOverride } from "../Call-Offer-Operations-asn1-97/cfbOverride.oa.mjs
 /**
  * @summary Call_Offer_Operations
  * @description
- * 
+ *
+ * Operations of Call-Offer-Operations-asn1-97 (ECMA-192 §6.3.1):
+ * `callOfferRequest`, `pathRetain`, `serviceAvailable`, and
+ * `cfbOverride`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-192/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

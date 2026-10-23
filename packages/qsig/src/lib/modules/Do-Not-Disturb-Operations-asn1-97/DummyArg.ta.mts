@@ -10,7 +10,15 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary DummyArg
  * @description
- * 
+ *
+ * Argument of `doNotDisturbOvrExecuteQ`. ECMA-194 §6.3.1 defines no
+ * service parameters: `null`, or a manufacturer extension drawn from
+ * the empty `DNDExtSet`. The execute procedure itself carries no
+ * DNDOCL; capability was selected by the earlier `pathRetain`
+ * (ECMA-194 §6.6.1.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-194/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

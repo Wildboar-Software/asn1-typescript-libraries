@@ -13,7 +13,15 @@ import { CTUpdateArg_argumentExtension, _decode_CTUpdateArg_argumentExtension, _
 /**
  * @summary CTUpdateArg
  * @description
- * 
+ *
+ * Argument of `callTransferUpdate`. Details of the user at the sending
+ * PINX, for presentation at the other end. Later information replaces
+ * what arrived in `callTransferComplete`. ECMA-178 §6.5.5;
+ * ECMA-177 §7.2.1.6.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-178/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-177/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,24 +44,44 @@ export
 class CTUpdateArg {
     /**
      * @summary `redirectionNumber`.
+     * @description
+     *
+     * Number of the user at the sending PINX: User B from the Primary
+     * PINX, User C from the Secondary PINX. A restricted number is
+     * withheld from the local user. ECMA-178 §6.5.2.1, §6.5.3.1,
+     * §6.5.5.
      * @public
      * @readonly
      */
     readonly redirectionNumber: PresentedNumberScreened;
     /**
      * @summary `redirectionName`.
+     * @description
+     *
+     * Name of the user at the sending PINX. A restricted name is
+     * withheld from the local user. ECMA-178 §6.5.2.1, §6.5.3.1,
+     * §6.5.5.
      * @public
      * @readonly
      */
     readonly redirectionName: OPTIONAL<Name>;
     /**
      * @summary `basicCallInfoElements`.
+     * @description
+     *
+     * Progress indicator information elements relating to the user at
+     * the sending PINX, coded as in ECMA-143. ECMA-178 §6.3.2.2,
+     * §6.5.2.1, §6.5.3.1.
      * @public
      * @readonly
      */
     readonly basicCallInfoElements: OPTIONAL<PSS1InformationElement>;
     /**
      * @summary `argumentExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-178 §6.3.1 defines no
+     * member of `CTExtSet`.
      * @public
      * @readonly
      */

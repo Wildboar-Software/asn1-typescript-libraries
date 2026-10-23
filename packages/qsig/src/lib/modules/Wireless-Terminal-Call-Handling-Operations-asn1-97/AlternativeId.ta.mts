@@ -9,7 +9,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AlternativeId
  * @description
- * 
+ *
+ * An identifier, other than the PISN number, which identifies the WTMI user
+ * uniquely (ECMA-304 §4.2.1, §6.3.1). The standard does not define the octet
+ * contents.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-304/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

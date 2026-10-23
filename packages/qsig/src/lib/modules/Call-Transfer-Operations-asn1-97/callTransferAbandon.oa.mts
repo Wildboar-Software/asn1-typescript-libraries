@@ -5,7 +5,19 @@ import { DummyArg, _decode_DummyArg, _encode_DummyArg } from "../Call-Transfer-O
 /**
  * @summary callTransferAbandon
  * @description
- * 
+ *
+ * Transferring PINX to Secondary PINX, on the secondary call, to abort
+ * transfer by rerouteing. Sent when timer T1 expires, when
+ * `callTransferInitiate` is rejected or returns an error, or when
+ * timer T3 expires while the secondary call is still up. No result.
+ * ROSE local 8. Interpretation APDU:
+ * `discardAnyUnrecognisedInvokePdu`. NFE `destinationEntity` is
+ * `endPINX`. The Secondary PINX stops timer T2 and returns to CT-Idle.
+ * ECMA-178 §6.3.1, §6.3.2.1, §6.5.1.4, §6.5.3.4; ECMA-177 §8.2.1.3.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-178/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-177/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -9,7 +9,13 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary DNDActivateRes_resultExtension
  * @description
- * 
+ *
+ * Manufacturer-specific extension on an activation result.
+ * ECMA-194 §6.3.1 defines the two alternatives and registers none
+ * in `DNDExtSet`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-194/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

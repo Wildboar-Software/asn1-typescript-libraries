@@ -9,7 +9,13 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary PumiExtension
  * @description
- * 
+ *
+ * Manufacturer-specific extension on an ANF-PUMI argument or result (ECMA-284
+ * §6.3.1). `extension` is one extension from `PUMCHExtSet`; `sequOfExtn` is a
+ * sequence of them. This module assigns no extensions.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-284/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

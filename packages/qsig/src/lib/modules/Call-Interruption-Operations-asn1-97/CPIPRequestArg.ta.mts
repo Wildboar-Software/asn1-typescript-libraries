@@ -11,7 +11,13 @@ import { CPIPRequestArg_argumentExtension, _decode_CPIPRequestArg_argumentExtens
 /**
  * @summary CPIPRequestArg
  * @description
- * 
+ *
+ * SS-CPIP invocation argument (ECMA-264 §6.9.1.1, §6.9.3.1). The CPIPL is
+ * saved for the duration of the call. A later backward value replaces it
+ * only when it is higher.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-264/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +36,21 @@ export
 class CPIPRequestArg {
     /**
      * @summary `cpiProtectionLevel`.
+     * @description
+     *
+     * CPIPL to save for the duration of the call (ECMA-264 §6.9.1.1). A
+     * backward CONNECT value is stored only when it is higher than the level
+     * already saved (§6.9.3.1).
      * @public
      * @readonly
      */
     readonly cpiProtectionLevel: CPIProtectionLevel;
     /**
      * @summary `argumentExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-264 §6.3.1 defines the CHOICE
+     * and leaves CPIPExtSet empty.
      * @public
      * @readonly
      */

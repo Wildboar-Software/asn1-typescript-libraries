@@ -4,7 +4,12 @@ import { EXTENSION } from "../Manufacturer-specific-service-extension-class-asn1
 /**
  * @summary DiversionExtensionSet
  * @description
- * 
+ *
+ * Manufacturer-specific extensions for call diversion. The standardized set is
+ * empty (ECMA-174 §6.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

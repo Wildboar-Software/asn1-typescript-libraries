@@ -13,7 +13,12 @@ import { UserData, _decode_UserData, _encode_UserData } from "../Short-Message-S
 /**
  * @summary smsCommandError_ParameterType
  * @description
- * 
+ *
+ * Parameter of `smsCommandError` (ECMA-325 Annex E.12). `failureCause` and
+ * `serviceCentreTimeStamp` are mandatory.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,24 +36,41 @@ export
 class smsCommandError_ParameterType {
     /**
      * @summary `failureCause`.
+     * @description
+     *
+     * Why the command failed. §6.5.3.2.2 uses `commandCannotBeActioned` when no
+     * Short Message is found. Table E.4 spells that cause
+     * `commandCanNotBeActioned` (160) (ECMA-325 §E.12.1).
      * @public
      * @readonly
      */
     readonly failureCause: FailureCause;
     /**
      * @summary `serviceCentreTimeStamp`.
+     * @description
+     *
+     * Arrival time at the Service Centre, as on a successful submit (ECMA-325
+     * §E.12.2, §E.2.1).
      * @public
      * @readonly
      */
     readonly serviceCentreTimeStamp: ServiceCentreTimeStamp;
     /**
      * @summary `protocolIdentifier`.
+     * @description
+     *
+     * As on the `smsCommand` invoke (ECMA-325 §E.12.3, §E.1.2.1).
      * @public
      * @readonly
      */
     readonly protocolIdentifier: OPTIONAL<ProtocolIdentifier>;
     /**
      * @summary `userData`.
+     * @description
+     *
+     * For Service Centre use. The Service Centre may add headers after a
+     * `dataHeaderSourceIndicator` (ECMA-325 §E.12.4). Unlike the submit error,
+     * §E.12 does not say this echoes the invoke.
      * @public
      * @readonly
      */

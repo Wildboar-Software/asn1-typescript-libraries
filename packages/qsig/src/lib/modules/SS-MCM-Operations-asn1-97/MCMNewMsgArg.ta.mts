@@ -17,7 +17,23 @@ import { MCMNewMsgArg_argumentExt, _decode_MCMNewMsgArg_argumentExt, _encode_MCM
 /**
  * @summary MCMNewMsgArg
  * @description
- * 
+ *
+ * Argument of `mCMNewMsg` (ECMA-347 §6.5.1.1.2). Identifies
+ * the Served User and the Message Type of the new message,
+ * and may identify the Message Centre.
+ *
+ * In compressed mode the procedure also requires the number
+ * of New Messages of that type, and allows the priority,
+ * originator, and time of the latest highest-priority New
+ * Message. In complete mode it requires the originator of
+ * the last incoming message, and allows the count, priority,
+ * and time of that message. The ASN.1 marks all of those
+ * components OPTIONAL.
+ *
+ * Same structure as `mWIActivate` in SS-MWI (§6.5.1.1.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,48 +58,85 @@ export
 class MCMNewMsgArg {
     /**
      * @summary `servedUserNr`.
+     * @description
+     *
+     * Address of the Served User. ECMA-347 §6.5.1.1.2.
      * @public
      * @readonly
      */
     readonly servedUserNr: PartyNumber;
     /**
      * @summary `specificMessageType`.
+     * @description
+     *
+     * Message Type of this new message. ECMA-347 §6.5.1.1.2.
      * @public
      * @readonly
      */
     readonly specificMessageType: MessageType;
     /**
      * @summary `msgCentreId`.
+     * @description
+     *
+     * Message Centre identity, when sent. Optional.
+     * ECMA-347 §6.5.1.1.2.
      * @public
      * @readonly
      */
     readonly msgCentreId: OPTIONAL<MsgCentreId>;
     /**
      * @summary `nrOfMessages`.
+     * @description
+     *
+     * Compressed mode: how many New Messages of this type
+     * are waiting. §6.5.1.1.2 requires it there. Complete
+     * mode: optional. ECMA-347 §6.5.1.1.2.
      * @public
      * @readonly
      */
     readonly nrOfMessages: OPTIONAL<NrOfMessages>;
     /**
      * @summary `originatingNr`.
+     * @description
+     *
+     * Compressed mode: optional address of the user who left
+     * the latest highest-priority New Message. Complete
+     * mode: user who left the last incoming message;
+     * §6.5.1.1.2 requires it in that mode.
      * @public
      * @readonly
      */
     readonly originatingNr: OPTIONAL<PartyNumber>;
     /**
      * @summary `timestamp`.
+     * @description
+     *
+     * Compressed mode: optional time the latest
+     * highest-priority New Message was left. Complete mode:
+     * optional time of the last incoming message.
+     * ECMA-347 §6.5.1.1.2.
      * @public
      * @readonly
      */
     readonly timestamp: OPTIONAL<TimeStamp>;
     /**
      * @summary `priority`.
+     * @description
+     *
+     * 0 is highest and 9 is lowest, as for `Priority`
+     * (§6.3.1). Compressed mode: optional priority of the
+     * latest highest-priority New Message. Complete mode:
+     * optional priority of the last incoming message.
      * @public
      * @readonly
      */
     readonly priority: OPTIONAL<INTEGER>;
     /**
      * @summary `argumentExt`.
+     * @description
+     *
+     * Manufacturer-specific extension. `MCMExtSet` defines none.
+     * The procedures do not mention this component. ECMA-347 §6.3.1.
      * @public
      * @readonly
      */

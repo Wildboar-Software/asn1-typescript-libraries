@@ -9,7 +9,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary NrOfMessages
  * @description
- * 
+ *
+ * How many messages a summary covers (ECMA-347 §6.3.1).
+ * Integer 0..65535. On `mCMNewMsg` in compressed mode this
+ * is the number of New Messages of that type.
+ * §6.5.1.1.2 requires it.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

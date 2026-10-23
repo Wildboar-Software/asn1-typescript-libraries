@@ -11,7 +11,13 @@ import { ChargeRequestRes_chargeReqResExtension, _decode_ChargeRequestRes_charge
 /**
  * @summary ChargeRequestRes
  * @description
- * 
+ *
+ * Result of `chargeRequest`: the single advice-mode combination the Outgoing
+ * Gateway placed in operation (ECMA-212 §6.6.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +36,20 @@ export
 class ChargeRequestRes {
     /**
      * @summary `adviceModeCombination`.
+     * @description
+     *
+     * The combination now in operation, and no other (ECMA-212 §6.6.2.1).
      * @public
      * @readonly
      */
     readonly adviceModeCombination: AdviceModeCombination;
     /**
      * @summary `chargeReqResExtension`.
+     * @description
+     *
+     * Optional manufacturer-specific extension on `chargeRequest result`.
+     * ECMA-212 §6.3.1 defines `AOCExtSet` as `{...}` and names no member. It
+     * does not say when to send one extension rather than several.
      * @public
      * @readonly
      */

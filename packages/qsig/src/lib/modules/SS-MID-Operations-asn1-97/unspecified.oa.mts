@@ -5,7 +5,15 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary unspecified
  * @description
- * 
+ *
+ * Error with a manufacturer-specific parameter (ECMA-347
+ * §7.3.1). Local code 1008, the same local code as SS-MCM
+ * `unspecified`. Listed for both SS-MID operations. The
+ * procedures do not say when to send it. `MIDExtSet`
+ * defines no extensions.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

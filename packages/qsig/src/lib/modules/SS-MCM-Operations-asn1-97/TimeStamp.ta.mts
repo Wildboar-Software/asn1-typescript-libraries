@@ -9,7 +9,18 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary TimeStamp
  * @description
- * 
+ *
+ * Local date and time (ECMA-347 §6.3.1). A
+ * `GeneralizedTime` of 12 to 19 characters, following
+ * ISO 8601: `YYYYMMDD`, then `HHMM` or `HHMMSS`, then
+ * optionally `Z` or a differential `+HHMM` or `-HHMM`.
+ *
+ * Examples in §6.3.1: `19970621194530` is 21 June 1997,
+ * 19:45:30 local; a `Z` suffix is that instant as UTC;
+ * `-0500` means that local time is five hours behind UTC.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

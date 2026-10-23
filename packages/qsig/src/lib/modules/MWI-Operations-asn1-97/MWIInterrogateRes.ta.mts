@@ -9,7 +9,16 @@ import { MWIInterrogateResElt, _decode_MWIInterrogateResElt, _encode_MWIInterrog
 /**
  * @summary MWIInterrogateRes
  * @description
- * 
+ *
+ * One to ten `MWIInterrogateResElt` values (ECMA-242 §6.3.1). Each element is a
+ * service for which SS-MWI is active. ECMA-241 §7.2.1.3 note 2 says the
+ * confirmation lists zero or more such services. This type cannot encode an
+ * empty list, and neither standard says what to send when no service is active
+ * or when more than ten are active.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

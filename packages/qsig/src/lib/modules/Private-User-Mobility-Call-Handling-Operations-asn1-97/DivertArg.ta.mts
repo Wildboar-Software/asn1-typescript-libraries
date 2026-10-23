@@ -16,7 +16,12 @@ import { PumiExtension, _decode_PumiExtension, _encode_PumiExtension } from "../
 /**
  * @summary DivertArg
  * @description
- * 
+ *
+ * Argument of `pumiDivert` (ECMA-284 §6.3.1, §6.5.2.1). The Rerouteing PINX
+ * copies these elements into the SETUP sent to the Visitor PINX (§6.5.1.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-284/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,48 +50,96 @@ export
 class DivertArg {
     /**
      * @summary `hostingAddr`.
+     * @description
+     *
+     * PISN number of the hosting user; always a complete number (§6.3.1).
+     * Copied from `currLocation`. It becomes the Called party number of the new
+     * SETUP (§6.5.1.1).
+     *
      * @public
      * @readonly
      */
     readonly hostingAddr: PartyNumber;
     /**
      * @summary `callingNumber`.
+     * @description
+     *
+     * Calling party number from the incoming SETUP (§6.5.2.1). It becomes the
+     * Calling party number of the new SETUP (§6.5.1.1).
+     *
      * @public
      * @readonly
      */
     readonly callingNumber: PresentedNumberScreened;
     /**
      * @summary `pumIdentity`.
+     * @description
+     *
+     * PISN number, always a complete number when a number is present, and/or an
+     * alternative identifier (§6.3.1). Copied from the enquiry result
+     * (§6.5.2.1) and repeated in `pumiInform` (§6.5.1.1).
+     *
      * @public
      * @readonly
      */
     readonly pumIdentity: PumIdentity;
     /**
      * @summary `qSIGInfoElement`.
+     * @description
+     *
+     * Embedded Bearer capability from the incoming SETUP, plus High layer
+     * compatibility, Low layer compatibility, and Progress indicator when those
+     * were received (§6.5.2.1). The new SETUP carries the same embedded
+     * information elements (§6.5.1.1).
+     *
      * @public
      * @readonly
      */
     readonly qSIGInfoElement: PSS1InformationElement;
     /**
      * @summary `callingUserSub`.
+     * @description
+     *
+     * Calling party subaddress, included when the incoming SETUP had one
+     * (§6.5.2.1). It becomes the Calling party subaddress of the new SETUP
+     * (§6.5.1.1).
+     *
      * @public
      * @readonly
      */
     readonly callingUserSub: OPTIONAL<PartySubaddress>;
     /**
      * @summary `callingUserName`.
+     * @description
+     *
+     * Calling name, included when the incoming SETUP carried a `callingName`
+     * invoke and CNIP is supported (§6.5.2.1, ECMA-164). The Rerouteing PINX
+     * also repeats a `callingName` invoke in the new SETUP when the original
+     * SETUP had one (§6.8.1.1).
+     *
      * @public
      * @readonly
      */
     readonly callingUserName: OPTIONAL<Name>;
     /**
      * @summary `pumUserSub`.
+     * @description
+     *
+     * Called party subaddress from the incoming SETUP, when one was received
+     * (§6.5.2.1). It becomes the Called party subaddress of the new SETUP
+     * (§6.5.1.1).
+     *
      * @public
      * @readonly
      */
     readonly pumUserSub: OPTIONAL<PartySubaddress>;
     /**
      * @summary `argExtension`.
+     * @description
+     *
+     * Manufacturer-specific data. `PUMCHExtSet` assigns no extensions (ECMA-284
+     * §6.3.1).
+     *
      * @public
      * @readonly
      */

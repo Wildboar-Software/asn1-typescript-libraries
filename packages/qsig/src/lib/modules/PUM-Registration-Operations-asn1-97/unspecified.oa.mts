@@ -5,7 +5,14 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary unspecified
  * @description
- * 
+ *
+ * ROSE local CODE 1008. The parameter is one `Extension` from `PUMRExtSet`
+ * (ECMA-282 §6.3.1). Listed on `pumRegistr`, `pumDelReg`, `pumDe-reg`, and
+ * `pumInterrog`. Clause 6 tells the Home or Visitor PINX to return an
+ * appropriate error and is silent on when this error is that choice.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-282/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

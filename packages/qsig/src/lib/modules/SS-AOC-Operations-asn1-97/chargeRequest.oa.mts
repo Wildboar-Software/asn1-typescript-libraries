@@ -10,7 +10,22 @@ import { unspecified } from "../SS-AOC-Operations-asn1-97/unspecified.oa.mjs";
 /**
  * @summary chargeRequest
  * @description
- * 
+ *
+ * Invokes SS-AOC, local code 59. The Originating PINX sends it in SETUP at call
+ * establishment, or in FACILITY during the call, listing acceptable advice-mode
+ * combinations (ECMA-212 §6.6.1.1.1, §6.6.1.1.2, §6.6.1.1.4). The result is the
+ * one combination placed in operation. During the call, timer T1 (at least 15
+ * s) guards the response (§6.10). A Terminating PINX rejects with
+ * `freeOfCharge` (§6.6.4.2). The Outgoing Gateway returns `notAvailable` or
+ * `freeOfCharge` when the accounting function rejects the request, and
+ * `notAvailable` when it can accept none of the combinations offered while AOC
+ * is already active (§6.6.2.2). `unspecified` and
+ * `supplementaryServiceInteractionNotAllowed` are listed errors; §6.6 does not
+ * state when they are returned.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

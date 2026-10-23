@@ -11,7 +11,13 @@ import { AocInterimArg_interimArgExtension, _decode_AocInterimArg_interimArgExte
 /**
  * @summary AocInterimArg
  * @description
- * 
+ *
+ * Argument of `aocInterim`: the subtotal recorded so far, or an indication that
+ * the subtotal is free or unavailable (ECMA-212 §6.3.1, ECMA-211 §B.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,12 +43,21 @@ export
 class AocInterimArg {
     /**
      * @summary `interimCharge`.
+     * @description
+     *
+     * Subtotal so far, free of charge, or subtotal not available (ECMA-211
+     * §B.1.1).
      * @public
      * @readonly
      */
     readonly interimCharge: AocInterimArg_interimCharge;
     /**
      * @summary `interimArgExtension`.
+     * @description
+     *
+     * Optional manufacturer-specific extension on `aocInterim`. ECMA-212 §6.3.1
+     * defines `AOCExtSet` as `{...}` and names no member. It does not say when
+     * to send one extension rather than several.
      * @public
      * @readonly
      */

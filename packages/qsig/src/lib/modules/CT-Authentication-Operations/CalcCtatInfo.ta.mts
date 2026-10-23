@@ -10,7 +10,13 @@ import { CalcCtatInfoUnit, _decode_CalcCtatInfoUnit, _encode_CalcCtatInfoUnit } 
 /**
  * @summary CalcCtatInfo
  * @description
- * 
+ *
+ * From one to five SS-CTAT challenge and expected-response pairs (ECMA-243
+ * §6.3.1). When several pairs are returned, the Visitor PINX may store the
+ * unused pairs for a later SS-CTAT (§6.5.6.1, note 5).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-243/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

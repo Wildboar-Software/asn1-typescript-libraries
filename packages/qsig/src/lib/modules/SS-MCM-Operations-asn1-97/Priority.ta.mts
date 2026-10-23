@@ -9,7 +9,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Priority
  * @description
- * 
+ *
+ * Priority of a message (ECMA-347 §6.3.1). Integer 0..9.
+ * 0 is the highest priority and 9 is the lowest. The same
+ * range is used by the untyped priority components of
+ * `mCMNewMsg` and `mCMUpdateReq`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

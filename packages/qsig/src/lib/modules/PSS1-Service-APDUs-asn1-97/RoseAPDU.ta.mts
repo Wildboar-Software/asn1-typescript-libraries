@@ -12,7 +12,18 @@ import { Reject, _decode_Reject, _encode_Reject } from "../PSS1-Service-APDUs-as
 /**
  * @summary RoseAPDU
  * @description
- * 
+ *
+ * One ROSE APDU in a Facility information element, or inside a DSE
+ * remote-operations portion (ECMA-165 §6.4, §11.3.3.4). `invoke` requests an
+ * operation. `returnResult` reports success. `returnError` reports an error the
+ * operation defines. `reject` reports that the APDU itself is unacceptable
+ * (Annex G). When the protocol profile is ROSE, the Coordination Function
+ * delivers these APDUs to ROSE, skipping a leading Interpretation APDU
+ * (§8.1.2). A value that does not conform to this choice is rejected as
+ * `general-unrecognisedPDU`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

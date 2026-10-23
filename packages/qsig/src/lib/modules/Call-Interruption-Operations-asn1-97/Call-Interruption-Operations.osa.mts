@@ -6,7 +6,12 @@ import { callProtectionRequest } from "../Call-Interruption-Operations-asn1-97/c
 /**
  * @summary Call_Interruption_Operations
  * @description
- * 
+ *
+ * Operations of module Call-Interruption-Operations-asn1-97 (ECMA-264
+ * §6.3.1, Table 1): callInterruptionRequest and callProtectionRequest.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-264/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

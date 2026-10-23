@@ -4,7 +4,15 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary remoteUserBusyAgain
  * @description
- * 
+ *
+ * User B is busy again (ECMA-186 §6.5.3.2.3, §6.5.3.2.4). Local code
+ * 1012. On `ccPathReserve`, the Terminating PINX clears the attempt
+ * with cause 17, resumes monitoring, and enters CC-Invoked-User-B.
+ * On `ccRingout`, the same cause is used; the request is kept only
+ * if service retention is in use (§6.5.3.2.4, §6.5.2.2.6).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-186/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

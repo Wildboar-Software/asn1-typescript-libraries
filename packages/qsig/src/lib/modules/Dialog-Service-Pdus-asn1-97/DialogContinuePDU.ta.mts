@@ -12,7 +12,16 @@ import { RemoteOperationsPortion, _decode_RemoteOperationsPortion, _encode_Remot
 /**
  * @summary DialogContinuePDU
  * @description
- * 
+ *
+ * Continues a dialogue (ECMA-165 §8.4). The PINX that received DialogBegin
+ * sends the first continue, carrying its own new origination identifier and the
+ * initiator's identifier as the destination. Each later continue carries the
+ * sender's identifier and the peer's identifier (§8.4.3, §8.4.6). A continue in
+ * Idle, or an active continue whose origination identifier is unrecognised, is
+ * answered with DialogAbort (§8.4.5).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,18 +38,33 @@ export
 class DialogContinuePDU {
     /**
      * @summary `originationDialogId`.
+     * @description
+     *
+     * Dialogue identifier selected by the sender of this PDU. The peer stores
+     * it and returns it as `destinationDialogId` (ECMA-165 §8.4.1.2, §8.4.2.2,
+     * §8.4.6).
      * @public
      * @readonly
      */
     readonly originationDialogId: OriginationDialogId;
     /**
      * @summary `destinationDialogId`.
+     * @description
+     *
+     * The peer's dialogue identifier: the origination identifier previously
+     * received from that peer (ECMA-165 §8.4.6).
      * @public
      * @readonly
      */
     readonly destinationDialogId: DestinationDialogId;
     /**
      * @summary `remoteOperationsPortion`.
+     * @description
+     *
+     * Optional ROSE or ACSE APDUs belonging to this dialogue (ECMA-165 §8.4). A
+     * DialogAbortPDU does not carry this element. §8.4 says one or more ROSE
+     * APDUs or one or more ACSE APDUs; it does not discuss mixing the two in
+     * one portion.
      * @public
      * @readonly
      */

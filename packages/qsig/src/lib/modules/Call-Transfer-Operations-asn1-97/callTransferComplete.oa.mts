@@ -5,7 +5,24 @@ import { CTCompleteArg, _decode_CTCompleteArg, _encode_CTCompleteArg } from "../
 /**
  * @summary callTransferComplete
  * @description
- * 
+ *
+ * Unconfirmed. Transferring PINX to both the Primary PINX and the
+ * Secondary PINX, each on its own call reference, to join the two
+ * B-channels. A Gateway PINX also sends it when a public ISDN or
+ * non-ISDN performs the transfer and indicates that fact. ROSE
+ * local 12. Interpretation APDU:
+ * `discardAnyUnrecognisedInvokePdu`. NFE `destinationEntity` is
+ * `endPINX`.
+ * `endDesignation` names the receiving end. When the secondary call
+ * was not Active, the invoke toward the Primary PINX carries
+ * `callStatus` `alerting` and the Transferring PINX enters
+ * CT-Await-Answer-From-User-C. A restricted number or name is withheld
+ * from the transferred user. ECMA-178 §6.3.1, §6.3.2.1, §6.5.1.1,
+ * §6.5.2.1, §6.5.3.1, §6.6.1.2, §6.7.1.2; ECMA-177 §7.2.1.2.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-178/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-177/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

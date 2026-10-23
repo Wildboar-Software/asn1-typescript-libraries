@@ -11,7 +11,13 @@ import { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../PSS1-Service-AP
 /**
  * @summary ReturnError
  * @description
- * 
+ *
+ * Failure of an outstanding invoke, using an error that operation declares
+ * (ECMA-165 §6.4, §11.3.3.4). The error values come from the supplementary
+ * service. General-Error-List supplies the errors shared across services.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -56,18 +62,33 @@ export
 class ReturnError {
     /**
      * @summary `invokeId`.
+     * @description
+     *
+     * Identifier of the outstanding invoke. Rejected as
+     * `unrecognisedInvocation` if none is in progress, or as
+     * `errorResponseUnexpected` if that operation does not report failure
+     * (ECMA-165 Annex G).
      * @public
      * @readonly
      */
     readonly invokeId: InvokeId;
     /**
      * @summary `errcode`.
+     * @description
+     *
+     * Error being reported. It must be one of the Errors in scope and one that
+     * the invoked operation may report; otherwise `unrecognisedError` or
+     * `unexpectedError` (ECMA-165 Annex G).
      * @public
      * @readonly
      */
     readonly errcode: Code;
     /**
      * @summary `parameter`.
+     * @description
+     *
+     * Parameter of `errcode`, when that error has one. The wrong type is
+     * `mistypedParameter` (ECMA-165 Annex G).
      * @public
      * @readonly
      */

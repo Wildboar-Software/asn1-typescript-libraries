@@ -8,7 +8,12 @@ import { pumoCall } from "../Private-User-Mobility-Call-Handling-Operations-asn1
 /**
  * @summary Private_User_Mobility_Call_Handling_Operations
  * @description
- * 
+ *
+ * ANF-PUMI and ANF-PUMO operations (ECMA-284 §6.3.1): `pumiEnquiry`,
+ * `pumiDivert`, `pumiInform`, and `pumoCall`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-284/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

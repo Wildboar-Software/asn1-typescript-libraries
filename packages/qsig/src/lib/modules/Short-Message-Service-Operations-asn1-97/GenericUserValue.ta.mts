@@ -12,7 +12,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary GenericUserValue
  * @description
- * 
+ *
+ * Reserved for further extensions introduced in GSM 03.40 (ECMA-325
+ * §E.1.3.1.8). The standard does not define `parameterValue` or
+ * `genericUserData`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +34,20 @@ export
 class GenericUserValue {
     /**
      * @summary `parameterValue`.
+     * @description
+     *
+     * Integer 0..255. ECMA-325 §E.1.3.1.8 does not define it. The header is
+     * reserved for GSM 03.40 extensions.
      * @public
      * @readonly
      */
     readonly parameterValue: INTEGER;
     /**
      * @summary `genericUserData`.
+     * @description
+     *
+     * ECMA-325 §E.1.3.1.8 does not define these octets. The header is reserved
+     * for GSM 03.40 extensions.
      * @public
      * @readonly
      */

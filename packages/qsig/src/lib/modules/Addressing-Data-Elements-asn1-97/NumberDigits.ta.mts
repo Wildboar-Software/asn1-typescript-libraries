@@ -9,7 +9,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary NumberDigits
  * @description
- * 
+ *
+ * The digits of a party number (ECMA-165 Annex B Table B.1). The numbering plan
+ * is the PartyNumber alternative that contains these digits. Table B.1 limits
+ * the string to between 1 and 20 numeric characters.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

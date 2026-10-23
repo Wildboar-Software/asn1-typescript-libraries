@@ -9,7 +9,13 @@ import { AlternativeId, _decode_AlternativeId, _encode_AlternativeId } from "../
 /**
  * @summary PumDe_regArg_pumUserId
  * @description
- * 
+ *
+ * PUM user identity on `pumDe-reg` (ECMA-282 §6.3.1). `pumNumber` is the PISN
+ * number and is always a complete number. `alternativeId` uniquely identifies
+ * the PUM user by some other identifier (§4.4).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-282/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -10,7 +10,16 @@ import { AocInterimArg_interimCharge_specificCurrency, _decode_AocInterimArg_int
 /**
  * @summary AocInterimArg_interimCharge
  * @description
- * 
+ *
+ * `chargeNotAvailable` means subtotal information is not available and shall
+ * not be repeated periodically (ECMA-211 §7.2.3.2). `freeOfCharge` means there
+ * is no charge; the same fact may instead be a currency amount of 0, and that
+ * indication is not repeated periodically (§7.2.2.2, §B.1.2).
+ * `specificCurrency` is the subtotal in currency units.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -10,7 +10,15 @@ import { DefinedIDs, _decode_DefinedIDs, _encode_DefinedIDs } from "../WTM-Authe
 /**
  * @summary AuthAlgorithm
  * @description
- * 
+ *
+ * Algorithm identifier and an optional parameter whose type depends on that
+ * identifier (ECMA-306 §6.3.1). `authAlg` is an `&id` from `AuthAlgSet`.
+ * `param` has type `AUTH-ALG.&Type` for the selected object. `AuthAlgSet` is
+ * `{...}` and defines no objects, so no parameter type is specified. Algorithms
+ * are outside the scope of ECMA-306 (§1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-306/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,12 +34,20 @@ export
 class AuthAlgorithm {
     /**
      * @summary `authAlg`.
+     * @description
+     *
+     * Algorithm identifier, an `&id` of `AuthAlgSet` (ECMA-306 §6.3.1). That
+     * set defines no objects.
      * @public
      * @readonly
      */
     readonly authAlg: DefinedIDs;
     /**
      * @summary `param`.
+     * @description
+     *
+     * Optional parameter whose type is `AUTH-ALG.&Type` of the object selected
+     * by `authAlg` (ECMA-306 §6.3.1). No such type is defined (§1).
      * @public
      * @readonly
      */

@@ -7,7 +7,19 @@ import { supplementaryServiceInteractionNotAllowed } from "../General-Error-List
 /**
  * @summary aocComplete
  * @description
- * 
+ *
+ * Call Transfer interaction, local code 64. Before continuing transfer, the
+ * Originating PINX sends this invoke in FACILITY, starts timer T1, and waits in
+ * Aoc-Orig-Wait-Completion (ECMA-212 §6.9.3.1.1, §6.10). The result is whether
+ * user A is charged before the transfer, after it, both, or neither
+ * (§6.6.2.3.1). The only listed error is
+ * `supplementaryServiceInteractionNotAllowed`; §6.6 and §6.9 do not say when
+ * that error is returned. On error, reject, or T1 expiry the Originating PINX
+ * continues transfer anyway (§6.9.3.1.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

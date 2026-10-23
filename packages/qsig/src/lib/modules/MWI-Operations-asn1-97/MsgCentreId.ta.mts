@@ -13,7 +13,18 @@ import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addres
 /**
  * @summary MsgCentreId
  * @description
- * 
+ *
+ * Identity of the Message Centre at which messages are waiting (ECMA-241
+ * §7.2.1.1 note 5). `integer` is 0..65535. `numericString` is 1 to 10 numeric
+ * characters. `partyNumber` shall be a complete number as required for routing
+ * (ECMA-242 §6.3.1). The standard does not say when to use each alternative,
+ * nor what the integer or numeric string denotes beyond identifying the centre.
+ * On deactivation this element is mandatory if a previous activation included
+ * it (ECMA-241 §7.2.1.2 note 3).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

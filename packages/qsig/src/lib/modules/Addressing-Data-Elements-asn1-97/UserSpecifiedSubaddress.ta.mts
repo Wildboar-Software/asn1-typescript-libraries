@@ -11,7 +11,12 @@ import { SubaddressInformation, _decode_SubaddressInformation, _encode_Subaddres
 /**
  * @summary UserSpecifiedSubaddress
  * @description
- * 
+ *
+ * A user-specified subaddress. Table B.1 marks this choice as not recommended
+ * (ECMA-165 Annex B).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +32,21 @@ export
 class UserSpecifiedSubaddress {
     /**
      * @summary `subaddressInformation`.
+     * @description
+     *
+     * Subaddress octets coded according to user requirements. Table B.1 does
+     * not define those contents, and notes that some networks limit the length,
+     * for example to 4 octets.
      * @public
      * @readonly
      */
     readonly subaddressInformation: SubaddressInformation;
     /**
      * @summary `oddCountIndicator`.
+     * @description
+     *
+     * Included when the subaddress is coded in BCD (ECMA-165 Annex B Table
+     * B.1). Table B.1 does not define what true or false means.
      * @public
      * @readonly
      */

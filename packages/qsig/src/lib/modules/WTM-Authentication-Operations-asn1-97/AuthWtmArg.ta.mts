@@ -12,7 +12,13 @@ import { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "
 /**
  * @summary AuthWtmArg
  * @description
- * 
+ *
+ * Argument of `authWtmUser` (ECMA-306 §6.5.1). Identifies the WTM user and,
+ * when the Home PINX has them, supplies the challenge and expected-response
+ * values the Visitor PINX is to use.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-306/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,18 +35,30 @@ export
 class AuthWtmArg {
     /**
      * @summary `wtmUserId`.
+     * @description
+     *
+     * Identity of the WTM user to authenticate (ECMA-306 §6.3.1, §6.5.1).
      * @public
      * @readonly
      */
     readonly wtmUserId: WtmUserId;
     /**
      * @summary `calcWtatInfo`.
+     * @description
+     *
+     * Challenge and expected-response values. Omit when the Visitor PINX must
+     * fetch parameters itself; include them when the Home PINX supplies them
+     * (ECMA-306 §6.5.1.1).
      * @public
      * @readonly
      */
     readonly calcWtatInfo: OPTIONAL<CalcWtatInfo>;
     /**
      * @summary `dummyExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-306 §6.3.1 defines no members of
+     * `WTMAuthExtSet`.
      * @public
      * @readonly
      */

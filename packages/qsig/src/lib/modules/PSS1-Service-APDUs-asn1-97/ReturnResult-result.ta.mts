@@ -9,7 +9,13 @@ import { type Code, _decode_Code, _encode_Code } from "../Remote-Operations-Info
 /**
  * @summary ReturnResult_result
  * @description
- * 
+ *
+ * Operation code and result value inside a return-result APDU (ECMA-165
+ * §11.3.3.4). The code is the operation identified by the return result's
+ * invoke identifier.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +41,20 @@ export
 class ReturnResult_result {
     /**
      * @summary `opcode`.
+     * @description
+     *
+     * Operation code of the invoke identified by the enclosing return result. A
+     * different code is `unrecognisedInvocation` (ECMA-165 §11.3.3.4, Annex G).
      * @public
      * @readonly
      */
     readonly opcode: Code;
     /**
      * @summary `result`.
+     * @description
+     *
+     * Result of that operation, as defined by the supplementary service. The
+     * wrong type is `mistypedResult` (ECMA-165 Annex G).
      * @public
      * @readonly
      */

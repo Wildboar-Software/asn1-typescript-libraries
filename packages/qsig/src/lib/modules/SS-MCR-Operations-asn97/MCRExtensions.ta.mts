@@ -10,7 +10,13 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary MCRExtensions
  * @description
- * 
+ *
+ * Manufacturer-specific extensions on an SS-MCR APDU (ECMA-344 §6.3.1).
+ * `none`, one extension (`single`), or several (`multiple`), drawn from
+ * `MakeCallRequestExtension`. This edition defines no extensions.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-344/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

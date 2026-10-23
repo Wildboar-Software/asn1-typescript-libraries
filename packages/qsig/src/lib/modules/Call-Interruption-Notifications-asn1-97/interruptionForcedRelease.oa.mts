@@ -8,7 +8,14 @@ import { type NOTIFICATION } from "../Notification-class-asn1-97/NOTIFICATION.oc
 /**
  * @summary interruptionForcedRelease
  * @description
- * 
+ *
+ * The established call is being forced released so the priority call can use
+ * the B-channel (ECMA-264 §6.8.3.1, §4.11). Carried in DISCONNECT on the
+ * established call's call references, with cause 31 "Normal, unspecified".
+ * Argument is NULL. Local CODE 2010.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-264/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

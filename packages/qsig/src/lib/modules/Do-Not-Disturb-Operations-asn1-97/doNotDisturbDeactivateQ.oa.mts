@@ -13,7 +13,18 @@ import { unspecified } from "../Do-Not-Disturb-Operations-asn1-97/unspecified.oa
 /**
  * @summary doNotDisturbDeactivateQ
  * @description
- * 
+ *
+ * Remote deactivation of SS-DND (ECMA-194 §6.5.4, §6.5.6.1.2).
+ * Call-independent. The Deactivating PINX runs timer T2 (>= 15 s,
+ * §6.11.2) in state DND-dWait. The Served User PINX deactivates
+ * SS-DND only when it is active for that PISN number and basic
+ * service; otherwise it returns `notActivated` (§6.5.6.2.2). ROSE
+ * local CODE 36. The Interpretation APDU is omitted; NFE
+ * `destinationEntity` is `endPINX` (§6.3.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-194/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-193/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

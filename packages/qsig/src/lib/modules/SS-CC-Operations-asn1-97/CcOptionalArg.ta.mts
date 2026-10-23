@@ -10,7 +10,20 @@ import { CcExtension, _decode_CcExtension, _encode_CcExtension } from "../SS-CC-
 /**
  * @summary CcOptionalArg
  * @description
- * 
+ *
+ * Argument of `ccCancel`, `ccExecPossible`, `ccSuspend`, and
+ * `ccResume` (ECMA-186 §6.3.1).
+ *
+ * - `fullArg`: basic call information that identifies the CC
+ *   Request when no signalling connection is already tied to it.
+ *   Used in a new SETUP (§6.5.2.1.10, §6.5.3.1.4, §6.5.3.1.8).
+ * - `extArg`: used on an existing connection or reserved path.
+ *   Basic call information, if present, is ignored (§6.5.2.1.4,
+ *   §6.5.2.1.10). §6.5 does not say which alternative `ccSuspend`
+ *   and `ccResume` use.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-186/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

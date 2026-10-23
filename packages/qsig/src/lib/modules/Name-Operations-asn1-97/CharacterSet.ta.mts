@@ -9,7 +9,15 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CharacterSet
  * @description
- * 
+ *
+ * Character set of an extended name (ECMA-164 §6.1). If the element is absent
+ * from `NameSet`, ISO 8859-1 is implied. The integer is constrained to 0..255.
+ * Value 2 was assigned to CCITT Rec. T.61, which ITU-T has withdrawn, and is
+ * not named. The Standard says further editions might add character sets; it
+ * does not say when to use `unknown`. ISO 8859-6 is not named.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-164/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -53,14 +61,19 @@ type CharacterSet = INTEGER;
 
 /**
  * @summary CharacterSet_unknown
+ * @description
+ *
+ * Value 0. ECMA-164 §6.1 assigns the name and does not state when to use it.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-164/
  */
 export
 const CharacterSet_unknown: CharacterSet = 0; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary CharacterSet_unknown
+ * @summary unknown
+ * @description Alias of {@link CharacterSet_unknown}.
  * @constant
  * @type {number}
  */
@@ -69,14 +82,20 @@ const unknown: CharacterSet = CharacterSet_unknown; /* SHORT_NAMED_INTEGER_VALUE
 
 /**
  * @summary CharacterSet_iso8859_1
+ * @description
+ *
+ * ISO 8859-1 (ECMA-164 §6.1). Also implied by the simple presentation choices
+ * and when `characterSet` is omitted from `NameSet`.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-164/
  */
 export
 const CharacterSet_iso8859_1: CharacterSet = 1; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary CharacterSet_iso8859_1
+ * @summary iso8859_1
+ * @description Alias of {@link CharacterSet_iso8859_1}.
  * @constant
  * @type {number}
  */
@@ -85,14 +104,17 @@ const iso8859_1: CharacterSet = CharacterSet_iso8859_1; /* SHORT_NAMED_INTEGER_V
 
 /**
  * @summary CharacterSet_iso8859_2
+ * @description ISO 8859-2 (ECMA-164 §6.1).
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-164/
  */
 export
 const CharacterSet_iso8859_2: CharacterSet = 3; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary CharacterSet_iso8859_2
+ * @summary iso8859_2
+ * @description Alias of {@link CharacterSet_iso8859_2}.
  * @constant
  * @type {number}
  */
@@ -101,14 +123,17 @@ const iso8859_2: CharacterSet = CharacterSet_iso8859_2; /* SHORT_NAMED_INTEGER_V
 
 /**
  * @summary CharacterSet_iso8859_3
+ * @description ISO 8859-3 (ECMA-164 §6.1).
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-164/
  */
 export
 const CharacterSet_iso8859_3: CharacterSet = 4; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary CharacterSet_iso8859_3
+ * @summary iso8859_3
+ * @description Alias of {@link CharacterSet_iso8859_3}.
  * @constant
  * @type {number}
  */
@@ -117,14 +142,17 @@ const iso8859_3: CharacterSet = CharacterSet_iso8859_3; /* SHORT_NAMED_INTEGER_V
 
 /**
  * @summary CharacterSet_iso8859_4
+ * @description ISO 8859-4 (ECMA-164 §6.1).
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-164/
  */
 export
 const CharacterSet_iso8859_4: CharacterSet = 5; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary CharacterSet_iso8859_4
+ * @summary iso8859_4
+ * @description Alias of {@link CharacterSet_iso8859_4}.
  * @constant
  * @type {number}
  */
@@ -133,14 +161,17 @@ const iso8859_4: CharacterSet = CharacterSet_iso8859_4; /* SHORT_NAMED_INTEGER_V
 
 /**
  * @summary CharacterSet_iso8859_5
+ * @description ISO 8859-5 (ECMA-164 §6.1).
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-164/
  */
 export
 const CharacterSet_iso8859_5: CharacterSet = 6; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary CharacterSet_iso8859_5
+ * @summary iso8859_5
+ * @description Alias of {@link CharacterSet_iso8859_5}.
  * @constant
  * @type {number}
  */
@@ -149,14 +180,17 @@ const iso8859_5: CharacterSet = CharacterSet_iso8859_5; /* SHORT_NAMED_INTEGER_V
 
 /**
  * @summary CharacterSet_iso8859_7
+ * @description ISO 8859-7 (ECMA-164 §6.1). ISO 8859-6 is not assigned.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-164/
  */
 export
 const CharacterSet_iso8859_7: CharacterSet = 7; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary CharacterSet_iso8859_7
+ * @summary iso8859_7
+ * @description Alias of {@link CharacterSet_iso8859_7}.
  * @constant
  * @type {number}
  */
@@ -165,14 +199,20 @@ const iso8859_7: CharacterSet = CharacterSet_iso8859_7; /* SHORT_NAMED_INTEGER_V
 
 /**
  * @summary CharacterSet_iso10646_BmpString
+ * @description
+ *
+ * ISO/IEC 10646 BMP, also BMPString in ITU-T Rec. X.680. Each character
+ * occupies 2 octets in `NameData` (ECMA-164 §6.1).
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-164/
  */
 export
 const CharacterSet_iso10646_BmpString: CharacterSet = 8; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary CharacterSet_iso10646_BmpString
+ * @summary iso10646_BmpString
+ * @description Alias of {@link CharacterSet_iso10646_BmpString}.
  * @constant
  * @type {number}
  */
@@ -181,14 +221,20 @@ const iso10646_BmpString: CharacterSet = CharacterSet_iso10646_BmpString; /* SHO
 
 /**
  * @summary CharacterSet_iso10646_utf_8String
+ * @description
+ *
+ * ISO/IEC 10646 UTF-8, Annex R of ISO/IEC 10646-1. Each character occupies 1 to
+ * 6 octets in `NameData` (ECMA-164 §6.1).
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-164/
  */
 export
 const CharacterSet_iso10646_utf_8String: CharacterSet = 9; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary CharacterSet_iso10646_utf_8String
+ * @summary iso10646_utf_8String
+ * @description Alias of {@link CharacterSet_iso10646_utf_8String}.
  * @constant
  * @type {number}
  */

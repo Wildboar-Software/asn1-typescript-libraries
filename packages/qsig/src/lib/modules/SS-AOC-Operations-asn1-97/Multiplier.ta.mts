@@ -4,7 +4,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Multiplier
  * @description
- * 
+ *
+ * Scale factor applied to `CurrencyAmount`. The allowed factors are 0,001,
+ * 0,01, 0,1, 1, 10, 100, and 1000 (ECMA-211 §A.1.3).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,7 +41,13 @@ enum _enum_for_Multiplier {
 /**
  * @summary Multiplier
  * @description
- * 
+ *
+ * Scale factor applied to `CurrencyAmount`. The allowed factors are 0,001,
+ * 0,01, 0,1, 1, 10, 100, and 1000 (ECMA-211 §A.1.3).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -58,7 +70,13 @@ type Multiplier = _enum_for_Multiplier;
 /**
  * @summary Multiplier
  * @description
- * 
+ *
+ * Scale factor applied to `CurrencyAmount`. The allowed factors are 0,001,
+ * 0,01, 0,1, 1, 10, 100, and 1000 (ECMA-211 §A.1.3).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -80,14 +98,18 @@ const Multiplier = _enum_for_Multiplier;
 
 /**
  * @summary Multiplier_oneThousandth
+ * @description Scale factor 0,001 (ECMA-211 §A.1.3).
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
 const Multiplier_oneThousandth: Multiplier = Multiplier.oneThousandth; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oneThousandth
+ * @description Alias of {@link Multiplier_oneThousandth}.
  * @constant
  * @type {number}
  */
@@ -96,14 +118,18 @@ const oneThousandth: Multiplier = Multiplier.oneThousandth; /* SHORT_NAMED_ENUME
 
 /**
  * @summary Multiplier_oneHundredth
+ * @description Scale factor 0,01 (ECMA-211 §A.1.3).
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
 const Multiplier_oneHundredth: Multiplier = Multiplier.oneHundredth; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oneHundredth
+ * @description Alias of {@link Multiplier_oneHundredth}.
  * @constant
  * @type {number}
  */
@@ -112,14 +138,18 @@ const oneHundredth: Multiplier = Multiplier.oneHundredth; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary Multiplier_oneTenth
+ * @description Scale factor 0,1 (ECMA-211 §A.1.3).
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
 const Multiplier_oneTenth: Multiplier = Multiplier.oneTenth; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oneTenth
+ * @description Alias of {@link Multiplier_oneTenth}.
  * @constant
  * @type {number}
  */
@@ -128,14 +158,18 @@ const oneTenth: Multiplier = Multiplier.oneTenth; /* SHORT_NAMED_ENUMERATED_VALU
 
 /**
  * @summary Multiplier_one
+ * @description Scale factor 1 (ECMA-211 §A.1.3).
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
 const Multiplier_one: Multiplier = Multiplier.one; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary one
+ * @description Alias of {@link Multiplier_one}.
  * @constant
  * @type {number}
  */
@@ -144,14 +178,18 @@ const one: Multiplier = Multiplier.one; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Multiplier_ten
+ * @description Scale factor 10 (ECMA-211 §A.1.3).
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
 const Multiplier_ten: Multiplier = Multiplier.ten; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ten
+ * @description Alias of {@link Multiplier_ten}.
  * @constant
  * @type {number}
  */
@@ -160,14 +198,18 @@ const ten: Multiplier = Multiplier.ten; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Multiplier_hundred
+ * @description Scale factor 100 (ECMA-211 §A.1.3).
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
 const Multiplier_hundred: Multiplier = Multiplier.hundred; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary hundred
+ * @description Alias of {@link Multiplier_hundred}.
  * @constant
  * @type {number}
  */
@@ -176,14 +218,18 @@ const hundred: Multiplier = Multiplier.hundred; /* SHORT_NAMED_ENUMERATED_VALUE 
 
 /**
  * @summary Multiplier_thousand
+ * @description Scale factor 1000 (ECMA-211 §A.1.3).
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
 const Multiplier_thousand: Multiplier = Multiplier.thousand; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary thousand
+ * @description Alias of {@link Multiplier_thousand}.
  * @constant
  * @type {number}
  */

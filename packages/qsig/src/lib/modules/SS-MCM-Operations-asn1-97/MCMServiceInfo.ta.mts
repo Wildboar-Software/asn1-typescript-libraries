@@ -11,7 +11,14 @@ import { MCMMode, _decode_MCMMode, _encode_MCMMode } from "../SS-MCM-Operations-
 /**
  * @summary MCMServiceInfo
  * @description
- * 
+ *
+ * Monitoring for one Message Type (ECMA-347 §6.3.1,
+ * §6.5.2.1.1). Carried in an activation and returned by
+ * `mCMInterrogate`. Either mode may be omitted.
+ * §6.5.2.1.1 does not define what an omitted mode means.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,18 +35,31 @@ export
 class MCMServiceInfo {
     /**
      * @summary `messageType`.
+     * @description
+     *
+     * Message Type being activated, or reported by
+     * `mCMInterrogate`. ECMA-347 §6.5.2.1.1.
      * @public
      * @readonly
      */
     readonly messageType: MessageType;
     /**
      * @summary `mCMModeNew`.
+     * @description
+     *
+     * Compressed or complete presentation for new messages
+     * of this type. Omission is not defined (§6.5.2.1.1).
      * @public
      * @readonly
      */
     readonly mCMModeNew: OPTIONAL<MCMMode>;
     /**
      * @summary `mCMModeRetrieved`.
+     * @description
+     *
+     * Compressed or complete presentation for retrieved
+     * messages of this type. Omission is not defined
+     * (§6.5.2.1.1).
      * @public
      * @readonly
      */

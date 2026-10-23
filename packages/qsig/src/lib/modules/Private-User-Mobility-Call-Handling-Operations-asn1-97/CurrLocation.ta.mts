@@ -12,7 +12,12 @@ import { PumiExtension, _decode_PumiExtension, _encode_PumiExtension } from "../
 /**
  * @summary CurrLocation
  * @description
- * 
+ *
+ * Current location of the called PUM user (ECMA-284 §6.5.3.1). The PUMI-detect
+ * PINX copies `hostingAddr` and `pumIdentity` into `pumiDivert` (§6.5.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-284/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,18 +38,34 @@ export
 class CurrLocation {
     /**
      * @summary `hostingAddr`.
+     * @description
+     *
+     * PISN number of the hosting user; always a complete number (§6.3.1). It
+     * becomes the Called party number of the SETUP the Rerouteing PINX sends to
+     * the Visitor PINX (§6.5.1.1).
+     *
      * @public
      * @readonly
      */
     readonly hostingAddr: PartyNumber;
     /**
      * @summary `pumIdentity`.
+     * @description
+     *
+     * PISN number, alternative identifier, or both. A PISN number here is
+     * complete even when `pisnNumber` in the enquiry was not (§6.5.3.1).
+     *
      * @public
      * @readonly
      */
     readonly pumIdentity: PumIdentity;
     /**
      * @summary `argExtension`.
+     * @description
+     *
+     * Manufacturer-specific data. `PUMCHExtSet` assigns no extensions (ECMA-284
+     * §6.3.1).
+     *
      * @public
      * @readonly
      */

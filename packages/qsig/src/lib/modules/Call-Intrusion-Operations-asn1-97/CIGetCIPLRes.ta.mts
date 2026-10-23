@@ -11,7 +11,12 @@ import { CIGetCIPLRes_resultExtension, _decode_CIGetCIPLRes_resultExtension, _en
 /**
  * @summary CIGetCIPLRes
  * @description
- * 
+ *
+ * Result of `callIntrusionGetCIPL` (ECMA-203 §6.3.1). The Unwanted
+ * User PINX returns the unwanted user's CIPL (§6.6.3).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-203/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +35,21 @@ export
 class CIGetCIPLRes {
     /**
      * @summary `ciProtectionLevel`.
+     * @description
+     *
+     * CIPL of the unwanted user (ECMA-203 §6.6.3). The Terminating PINX
+     * continues only when the calling user's CICL is higher than this
+     * value (§6.6.2.1.1).
      * @public
      * @readonly
      */
     readonly ciProtectionLevel: CIProtectionLevel;
     /**
      * @summary `resultExtension`.
+     * @description
+     *
+     * Optional manufacturer-specific data from `CIExtSet`. ECMA-203
+     * §6.6.3 requires only the CIPL and does not mention this component.
      * @public
      * @readonly
      */

@@ -4,7 +4,14 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary authorizationFailed
  * @description
- * 
+ *
+ * Authentication not accepted (ECMA-347 §7.3.1). Local
+ * code 1040. No parameter. Listed only for
+ * `mIDMailboxAuth`. §7.5.1.2.2 gives an invalid Served User
+ * password as an example and does not name this error.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

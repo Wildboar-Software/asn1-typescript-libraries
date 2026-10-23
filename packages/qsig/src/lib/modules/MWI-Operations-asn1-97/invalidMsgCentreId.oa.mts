@@ -4,7 +4,14 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary invalidMsgCentreId
  * @description
- * 
+ *
+ * Error on `mWIInterrogate` only, local code 1018, with no parameter (ECMA-242
+ * §6.3.1). §6.5.1.2.2 requires a return error when the received Message Centre
+ * identifier is incorrect, and does not name this error.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

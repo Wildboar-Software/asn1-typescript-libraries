@@ -16,7 +16,13 @@ import { WtmiExtension, _decode_WtmiExtension, _encode_WtmiExtension } from "../
 /**
  * @summary DivertArg
  * @description
- * 
+ *
+ * Argument of `wtmiDivert` (ECMA-304 §6.5.2.1). Tells the Rerouteing PINX where
+ * the WTMI user is visiting and which basic-call information to place in the
+ * new SETUP (§6.5.1.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-304/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,48 +51,83 @@ export
 class DivertArg {
     /**
      * @summary `visitPINX`.
+     * @description
+     *
+     * PISN number of the Visitor PINX from the enquiry result. Always a
+     * complete number (ECMA-304 §6.3.1, §6.5.2.1). The Rerouteing PINX uses it
+     * as the Called party number of the new SETUP (§6.5.1.1).
      * @public
      * @readonly
      */
     readonly visitPINX: PartyNumber;
     /**
      * @summary `callingNumber`.
+     * @description
+     *
+     * Calling party number from the incoming SETUP (ECMA-304 §6.5.2.1). Copied
+     * to the Calling party number of the new SETUP (§6.5.1.1).
      * @public
      * @readonly
      */
     readonly callingNumber: PresentedNumberScreened;
     /**
      * @summary `wtmIdentity`.
+     * @description
+     *
+     * Identity from the `wtmiEnquiry` result (ECMA-304 §6.5.2.1). Copied into
+     * `wtmiInform` (§6.5.1.1).
      * @public
      * @readonly
      */
     readonly wtmIdentity: WtmIdentity;
     /**
      * @summary `qSIGInfoElement`.
+     * @description
+     *
+     * Embedded bearer capability, plus high-layer compatibility, low-layer
+     * compatibility, and progress indicator when the incoming SETUP contained
+     * them (ECMA-304 §6.5.2.1). Copied into the new SETUP (§6.5.1.1).
      * @public
      * @readonly
      */
     readonly qSIGInfoElement: PSS1InformationElement;
     /**
      * @summary `callingUserSub`.
+     * @description
+     *
+     * Calling party subaddress, included when the incoming SETUP contained one
+     * (ECMA-304 §6.5.2.1). Copied to the new SETUP (§6.5.1.1).
      * @public
      * @readonly
      */
     readonly callingUserSub: OPTIONAL<PartySubaddress>;
     /**
      * @summary `callingName`.
+     * @description
+     *
+     * Optional. ECMA-304 §6.5.2.1 does not say when it is included. SS-CNIP
+     * uses a separate `callingName` invoke APDU (§6.8.1).
      * @public
      * @readonly
      */
     readonly callingName: OPTIONAL<Name>;
     /**
      * @summary `wtmUserSub`.
+     * @description
+     *
+     * Called party subaddress, included when the incoming SETUP contained one
+     * (ECMA-304 §6.5.2.1). Copied to the Called party subaddress of the new
+     * SETUP (§6.5.1.1).
      * @public
      * @readonly
      */
     readonly wtmUserSub: OPTIONAL<PartySubaddress>;
     /**
      * @summary `argExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-304 §6.3.1 defines no members of
+     * `WTMCHExtSet`.
      * @public
      * @readonly
      */

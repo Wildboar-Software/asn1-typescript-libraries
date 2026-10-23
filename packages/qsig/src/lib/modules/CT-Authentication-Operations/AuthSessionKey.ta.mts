@@ -9,7 +9,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AuthSessionKey
  * @description
- * 
+ *
+ * Authentication session key (ECMA-243 §6.3.1). When `canCompute` was
+ * indicated, the Visitor PINX uses it to compute a challenge and/or a response
+ * (§6.5.6.1, §7.5.1.1). That computation is outside ECMA-243 (§1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-243/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

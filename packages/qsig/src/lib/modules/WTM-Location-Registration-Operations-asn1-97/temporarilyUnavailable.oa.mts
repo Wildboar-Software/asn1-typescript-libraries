@@ -4,7 +4,13 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary temporarilyUnavailable
  * @description
- * 
+ *
+ * The previous Visitor PINX returns this on `locDelete` when its VDB is
+ * temporarily unavailable (ECMA-302 §6.5.6.2). ROSE local CODE 1000. No
+ * parameter. Listed on `locDelete` (§6.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-302/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -13,7 +13,13 @@ import { CalcCtatInfo, _decode_CalcCtatInfo, _encode_CalcCtatInfo } from "../CT-
 /**
  * @summary CtatParamInfo_info
  * @description
- * 
+ *
+ * Choice inside `CtatParamInfo` (ECMA-243 §6.5.7.1). `authSessionKeyInfo` when
+ * the Visitor PINX will compute the challenge and expected response.
+ * `calcCtatInfo` when the Authentication Server PINX has already computed them.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-243/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

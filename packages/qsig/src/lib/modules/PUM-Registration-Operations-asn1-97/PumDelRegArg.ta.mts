@@ -14,7 +14,12 @@ import { PumrExtension, _decode_PumrExtension, _encode_PumrExtension } from "../
 /**
  * @summary PumDelRegArg
  * @description
- * 
+ *
+ * Argument of `pumDelReg` (ECMA-282 §6.3.1, §6.5.3.1). Selects the VDB entry
+ * the previous Visitor PINX deletes (§6.5.5.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-282/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,30 +47,55 @@ export
 class PumDelRegArg {
     /**
      * @summary `pumUserId`.
+     * @description
+     *
+     * PISN number, always a complete number, or an alternative identifier of
+     * the PUM user (§6.3.1, §6.5.5.1).
+     *
      * @public
      * @readonly
      */
     readonly pumUserId: PumDelRegArg_pumUserId;
     /**
      * @summary `basicService`.
+     * @description
+     *
+     * Basic service of the session to delete, or all basic services (§6.3.1,
+     * §6.5.5.1).
+     *
      * @public
      * @readonly
      */
     readonly basicService: BasicService;
     /**
      * @summary `hostingAddr`.
+     * @description
+     *
+     * PISN number of the hosting user; always a complete number (§6.3.1). The
+     * previous Visitor PINX matches it against the VDB entry (§6.5.5.1).
+     *
      * @public
      * @readonly
      */
     readonly hostingAddr: PartyNumber;
     /**
      * @summary `serviceOption`.
+     * @description
+     *
+     * InCall, OutCall, or AllCall session to delete. This element is
+     * required (§6.3.1, §6.5.3.1).
+     *
      * @public
      * @readonly
      */
     readonly serviceOption: ServiceOption;
     /**
      * @summary `argExtension`.
+     * @description
+     *
+     * Manufacturer-specific data. `PUMRExtSet` assigns no extensions (ECMA-282
+     * §6.3.1).
+     *
      * @public
      * @readonly
      */

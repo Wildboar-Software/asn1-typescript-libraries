@@ -13,7 +13,20 @@ import { cfnrDivertedLegFailed } from "../Call-Diversion-Operations-asn1-97/cfnr
 /**
  * @summary Call_Diversion_Operations
  * @description
- * 
+ *
+ * SS-DIV operations (ECMA-174 §6.3.1): remote activation, deactivation, and
+ * interrogation; `checkRestriction`; invocation by `callRerouteing`; and the
+ * notifications `divertingLegInformation1`, `divertingLegInformation2`,
+ * `divertingLegInformation3`, and `cfnrDivertedLegFailed`. Invoke APDUs are
+ * addressed to `endPINX`. The notifications require an Interpretation APDU that
+ * discards an unrecognised invoke. `callRerouteing` may omit that APDU or
+ * reject an unrecognised invoke. Other operations may omit it, reject an
+ * unrecognised PDU, or clear the call if an invoke is not recognised
+ * (§6.3.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-173/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

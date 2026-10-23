@@ -14,7 +14,15 @@ import { CtatParamInfo_info, _decode_CtatParamInfo_info, _encode_CtatParamInfo_i
 /**
  * @summary CtatParamInfo
  * @description
- * 
+ *
+ * SS-CTAT parameters chosen by the Authentication Server PINX (ECMA-243
+ * §6.5.7.1). Choice `authSessionKeyInfo` means the Visitor PINX computes the
+ * challenge and expected response. Choice `calcCtatInfo` is that computation
+ * already done. The same value may be sent on to a new Visitor PINX by
+ * `transferAuthParam` during SS-CTLR (§6.8.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-243/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +41,20 @@ export
 class CtatParamInfo {
     /**
      * @summary `authAlgorithm`.
+     * @description
+     *
+     * Algorithm in use. The `ctatParamEnq` result shall contain it (ECMA-243
+     * §6.5.7.1). Algorithm behaviour is outside ECMA-243 (§1).
      * @public
      * @readonly
      */
     readonly authAlgorithm: AuthAlgorithm;
     /**
      * @summary `info`.
+     * @description
+     *
+     * Session key, or the computed challenge and response values (ECMA-243
+     * §6.5.7.1).
      * @public
      * @readonly
      */

@@ -10,7 +10,15 @@ import { Reject_problem, _decode_Reject_problem, _encode_Reject_problem } from "
 /**
  * @summary Reject
  * @description
- * 
+ *
+ * Report that a received ROSE APDU cannot be processed (ECMA-165 §11.3.3.4,
+ * Annex G). The problem says whether the fault is general or belongs to an
+ * invoke, return result, or return error. If no Interpretation APDU says
+ * otherwise, the Reject is delivered to the destination ROSE indicated
+ * (§8.1.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,12 +45,22 @@ export
 class Reject {
     /**
      * @summary `invokeId`.
+     * @description
+     *
+     * Invoke identifier of the rejected APDU, or the NULL alternative when that
+     * identifier is not carried (ECMA-165 §11.3.3.4). Table 34 does not say
+     * when NULL is chosen; §8.2 applies the ROSE procedures of ITU-T X.880.
      * @public
      * @readonly
      */
     readonly invokeId: InvokeIdOrNull;
     /**
      * @summary `problem`.
+     * @description
+     *
+     * Which APDU was at fault, and the Annex G problem code. `general` is the
+     * APDU as a whole; `invoke`, `returnResult`, and `returnError` are those
+     * APDU types (ECMA-165 §11.3.3.4).
      * @public
      * @readonly
      */

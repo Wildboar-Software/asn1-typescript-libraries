@@ -5,7 +5,19 @@ import { DNDOverrideArg, _decode_DNDOverrideArg, _encode_DNDOverrideArg } from "
 /**
  * @summary doNotDisturbOverrideQ
  * @description
- * 
+ *
+ * Immediate SS-DNDO, without path retention (ECMA-194 §6.6.2.1.1).
+ * Carried in SETUP. No result (`RETURN RESULT FALSE`,
+ * `ALWAYS RESPONDS FALSE`). The Terminating PINX overrides SS-DND
+ * only when the called user's DNDPL is strictly less than this
+ * DNDOCL (ECMA-194 §6.6.1.1; ECMA-193 §6.3.15). Otherwise SS-DND
+ * runs as if this invoke were absent. ROSE local CODE 38. The
+ * Interpretation APDU is `discardAnyUnrecognisedInvokePdu`; NFE
+ * `destinationEntity` is `endPINX` (§6.3.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-194/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-193/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

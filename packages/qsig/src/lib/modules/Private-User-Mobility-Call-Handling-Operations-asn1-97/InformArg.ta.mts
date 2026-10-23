@@ -11,7 +11,12 @@ import { PumiExtension, _decode_PumiExtension, _encode_PumiExtension } from "../
 /**
  * @summary InformArg
  * @description
- * 
+ *
+ * Argument of `pumiInform` (ECMA-284 §6.3.1). Carried in the SETUP from the
+ * Rerouteing PINX to the Visitor PINX (§6.5.1.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-284/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +34,23 @@ export
 class InformArg {
     /**
      * @summary `pumIdentity`.
+     * @description
+     *
+     * Same contents as `pumIdentity` in the `pumiDivert` argument (§6.5.1.1).
+     * The Visitor PINX includes it in the call request to the terminal
+     * identified by the Called party number (§6.5.4.1).
+     *
      * @public
      * @readonly
      */
     readonly pumIdentity: PumIdentity;
     /**
      * @summary `argExtension`.
+     * @description
+     *
+     * Manufacturer-specific data. `PUMCHExtSet` assigns no extensions (ECMA-284
+     * §6.3.1).
+     *
      * @public
      * @readonly
      */

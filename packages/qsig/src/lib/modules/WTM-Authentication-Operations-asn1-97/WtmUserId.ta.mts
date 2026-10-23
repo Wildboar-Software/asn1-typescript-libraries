@@ -9,7 +9,13 @@ import { AlternativeId, _decode_AlternativeId, _encode_AlternativeId } from "../
 /**
  * @summary WtmUserId
  * @description
- * 
+ *
+ * Identity of the WTM user (ECMA-306 §6.3.1). `pisnNumber` is the PISN number
+ * and is always a complete number. `alternativeId` is the other form; the
+ * standard does not define its octet contents.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-306/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -21,7 +21,24 @@ import { unspecified } from "../CT-Authentication-Operations/unspecified.oa.mjs"
 /**
  * @summary authCtmUser
  * @description
- * 
+ *
+ * SS-CTAT from the Home PINX to the Visitor PINX (ECMA-243 §6.1, §6.5.1).
+ * Call-independent signalling connection (ECMA-165 §7.3). Local code 72.
+ * Include `calcCtatInfo` when challenge and expected-response values are
+ * supplied; omit it when the Visitor PINX must obtain parameters itself
+ * (§6.5.1.1). The result says whether the response from the CTM user matched
+ * (§6.5.5.1). Timer T1 at the Home PINX, in state CtatHomeInitiating, shall be
+ * at least 15 s (§6.9.1).
+ *
+ * If parameters cannot be obtained, the Visitor PINX returns an error;
+ * §6.5.5.2 does not name which one. If the CTM user does not answer, the
+ * error is `temporarilyUnavailable`. That sentence then says the error value
+ * shall follow §6.5.2.2. §6.3.1 also lists `invalidServedUserNr`,
+ * `notAuthorized`, and `unspecified`; §6.5.5 gives them no separate
+ * condition.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-243/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -9,7 +9,15 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary UserAbortInformation
  * @description
- * 
+ *
+ * Manufacturer-specific information on a dialogue abort, carried as an
+ * Extension whose identifier comes from `DSE-Extension-Set` (ECMA-165
+ * §11.3.3.3, §9.2). Table 33 leaves that set open and does not define a member.
+ * An unrecognised extension identifier causes the Extension to be discarded
+ * (§9.2). Clause 8.4 does not say when this alternative is chosen.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -10,7 +10,29 @@ import { supplementaryServiceInteractionNotAllowed } from "../General-Error-List
 /**
  * @summary callTransferIdentify
  * @description
- * 
+ *
+ * Transferring PINX to Secondary PINX, on the secondary call, to start
+ * transfer by rerouteing. The Secondary PINX returns `callIdentity` and
+ * `rerouteingNumber` when it can participate, then waits in
+ * CT-Await-Setup for `callTransferSetup` (timer T2, at least 50 s).
+ * ROSE local 7. Interpretation APDU is
+ * `rejectUnrecognizedInvokePdu` or omitted. NFE `destinationEntity`
+ * is `endPINX`.
+ * Errors: `notAvailable`, `invalidCallState`, `unspecified`,
+ * `supplementaryServiceInteractionNotAllowed`. §6.5.3.4 forbids
+ * `unrecognizedCallIdentity` here. That clause lists invalid call
+ * state, a temporary condition, and rerouteing not implemented, and
+ * does not bind those reasons to a particular error. On reject or
+ * return error, the Transferring PINX may fall back to join.
+ * Timer T1 (at least 10 s) guards this response. After SS-CFNR
+ * rerouteing has started, the Secondary PINX returns
+ * `supplementaryServiceInteractionNotAllowed`.
+ * ECMA-178 §6.3.1, §6.3.2.1, §6.5.1.3, §6.5.1.4, §6.5.3.3, §6.5.3.4,
+ * §6.8.7.3, §6.8.7.4, §6.9.1, §6.9.2; ECMA-177 §8.2.1.2.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-178/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-177/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

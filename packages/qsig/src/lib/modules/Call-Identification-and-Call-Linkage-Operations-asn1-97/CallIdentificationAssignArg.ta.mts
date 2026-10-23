@@ -11,7 +11,15 @@ import { ExtensionType, _decode_ExtensionType, _encode_ExtensionType } from "../
 /**
  * @summary CallIdentificationAssignArg
  * @description
- * 
+ *
+ * Data assigned to a new call (ECMA-314 §6.5.1.1). globalCallID identifies
+ * the call end-to-end between the two end PINXs (§6.1). threadID optionally
+ * links calls that other supplementary services or ANFs have related. legID
+ * optionally identifies one leg of the call. All generated elements are sent
+ * in the one SETUP invoke.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-314/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,24 +37,43 @@ export
 class CallIdentificationAssignArg {
     /**
      * @summary `globalCallID`.
+     * @description
+     *
+     * End-to-end identification of this call, between the two end PINXs
+     * (ECMA-314 §6.1, §6.5.1.1). Generated anew, or as required by an
+     * interaction in §6.8, and unique within the PISN.
      * @public
      * @readonly
      */
     readonly globalCallID: CallIdentificationData;
     /**
      * @summary `threadID`.
+     * @description
+     *
+     * Optional identification shared by calls that are logically linked by
+     * another supplementary service or ANF (ECMA-314 §6.1, §6.5.1.1). Unique
+     * within the PISN when generated.
      * @public
      * @readonly
      */
     readonly threadID: OPTIONAL<CallIdentificationData>;
     /**
      * @summary `legID`.
+     * @description
+     *
+     * Optional identification of one leg of the call (ECMA-314 §6.1).
+     * Generated as for the global call data and unique within the PISN
+     * (§6.5.1.1).
      * @public
      * @readonly
      */
     readonly legID: OPTIONAL<CallIdentificationData>;
     /**
      * @summary `extension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-314 §6.3.1 leaves ExampleExtSet
+     * empty.
      * @public
      * @readonly
      */

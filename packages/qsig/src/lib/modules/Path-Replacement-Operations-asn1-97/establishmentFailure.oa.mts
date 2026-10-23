@@ -4,7 +4,14 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary establishmentFailure
  * @description
- * 
+ *
+ * ROSE local 1006. Establishment of the new connection failed and no
+ * other error applies. Listed on `pathReplacePropose`,
+ * `pathReplaceRetain`, and `pathReplaceInvite`. It is not an error of
+ * `pathReplaceSetup`. ECMA-176 §6.3.1, §6.5.2.2, §6.6.3.2.2.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-176/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

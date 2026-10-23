@@ -9,7 +9,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CurrencyAmount
  * @description
- * 
+ *
+ * Integer part of a currency quantity, 0..16777215 (ECMA-212 §6.3.1). Scale it
+ * by `Multiplier` (ECMA-211 §A.1.3). ECMA-211 does not state the upper bound.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

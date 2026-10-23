@@ -9,7 +9,13 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary PumoArg_extension
  * @description
- * 
+ *
+ * Manufacturer-specific extension on `pumoCall` (ECMA-284 §6.3.1). `single` is
+ * one extension from `PUMCHExtSet`; `multiple` is a sequence of them. This
+ * module assigns no extensions.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-284/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

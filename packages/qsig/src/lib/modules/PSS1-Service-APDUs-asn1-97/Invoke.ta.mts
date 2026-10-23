@@ -11,7 +11,15 @@ import { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../PSS1-Service-AP
 /**
  * @summary Invoke
  * @description
- * 
+ *
+ * Request that the remote SS-Control perform an operation (ECMA-165 §4.22,
+ * §6.4, §11.3.3.4). The operation and its argument are defined by the
+ * supplementary service (§8.2). The invoke identifier correlates the later
+ * return result, return error, or reject. A child invoke also names the
+ * parent operation it continues.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -72,24 +80,45 @@ export
 class Invoke {
     /**
      * @summary `invokeId`.
+     * @description
+     *
+     * Identifier of this invocation. It must be unambiguous; a duplicate is
+     * rejected as `duplicateInvocation` (ECMA-165 §11.3.3.4, Annex G). Values
+     * used here are constrained to `InvokeIdSet`.
      * @public
      * @readonly
      */
     readonly invokeId: InvokeId;
     /**
      * @summary `linkedId`.
+     * @description
+     *
+     * Invoke identifier of the parent operation. Present only for a linked
+     * child. It must name an outstanding operation that has linked operations,
+     * and `opcode` must be one of those linked operations (ECMA-165 §11.3.3.4,
+     * Annex G).
      * @public
      * @readonly
      */
     readonly linkedId: OPTIONAL<InvokeId>;
     /**
      * @summary `opcode`.
+     * @description
+     *
+     * Operation to perform. It must be one of the Operations supplied for this
+     * APDU; otherwise the receiver rejects `unrecognisedOperation` (ECMA-165
+     * §8.2, §11.3.3.4).
      * @public
      * @readonly
      */
     readonly opcode: Code;
     /**
      * @summary `argument`.
+     * @description
+     *
+     * Argument of `opcode`, as defined by that supplementary service. Omitted
+     * when the operation has no argument. A value of the wrong type is
+     * `mistypedArgument` (ECMA-165 Annex G).
      * @public
      * @readonly
      */

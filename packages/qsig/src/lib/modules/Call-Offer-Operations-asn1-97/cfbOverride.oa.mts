@@ -5,7 +5,18 @@ import { DummyArg, _decode_DummyArg, _encode_DummyArg } from "../Call-Offer-Oper
 /**
  * @summary cfbOverride
  * @description
- * 
+ *
+ * Overrides Call Forwarding Busy so that SS-CO applies at the first
+ * busy user (ECMA-192 §6.9.7). The Originating PINX sends the invoke
+ * in the SETUP of the new call, together with `callOfferRequest` or
+ * with `pathRetain` (`callOffer` set to ONE). No result. Local code
+ * 49. The NFE matches the accompanying operation, and the
+ * Interpretation APDU is `discardAnyUnrecognisedInvokePdu`
+ * (§6.9.7.2). If the called user is busy, the served PINX skips
+ * SS-CFB and applies SS-CO (§6.9.7.3).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-192/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

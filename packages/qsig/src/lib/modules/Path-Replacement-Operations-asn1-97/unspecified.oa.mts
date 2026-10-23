@@ -5,7 +5,14 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary unspecified
  * @description
- * 
+ *
+ * ROSE local 1008. Manufacturer-specific error. The parameter is one
+ * `Extension` from `PRExtSet`. ECMA-176 §6.3.1 says it conveys a
+ * manufacturer-specific error, possibly with other information, and
+ * defines no members of `PRExtSet`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-176/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

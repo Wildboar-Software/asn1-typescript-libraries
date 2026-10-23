@@ -5,7 +5,22 @@ import { CcOptionalArg, _decode_CcOptionalArg, _encode_CcOptionalArg } from "../
 /**
  * @summary ccExecPossible
  * @description
- * 
+ *
+ * User B is not busy (ECMA-186 §6.5.3.1.4). The Terminating PINX
+ * sends this to the Originating PINX and enters
+ * CC-Await-Call-Completion. For SS-CCNR that is after a period of
+ * activity following invocation (§6.5.3.1.2). No result. Local code
+ * 29.
+ *
+ * On a retained signalling connection the argument is `extArg` in
+ * FACILITY, and the Originating PINX ignores any basic call
+ * information (§6.5.2.1.4). After the connection was released, the
+ * argument is `fullArg` in a new SETUP and is matched against the
+ * stored request. Subaddresses and High or Low layer compatibility
+ * may be absent from that comparison.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-186/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

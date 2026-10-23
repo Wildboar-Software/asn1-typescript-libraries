@@ -9,7 +9,15 @@ import { AOCSCurrencyInfo, _decode_AOCSCurrencyInfo, _encode_AOCSCurrencyInfo } 
 /**
  * @summary AOCSCurrencyInfoList
  * @description
- * 
+ *
+ * One to ten `AOCSCurrencyInfo` values (ECMA-212 §6.3.1). Include a charged
+ * item only when it carries information about the charging applied to the call.
+ * Each included item is accompanied by its rate (ECMA-211 §A.1.2, table 2 note
+ * 1). An omitted item means free of charge for that item (§A.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

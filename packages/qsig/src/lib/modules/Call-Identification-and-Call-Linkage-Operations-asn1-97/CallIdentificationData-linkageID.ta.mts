@@ -10,7 +10,16 @@ import { GloballyUniqueID, _decode_GloballyUniqueID, _encode_GloballyUniqueID } 
 /**
  * @summary CallIdentificationData_linkageID
  * @description
- * 
+ *
+ * Linkage identifier inside CallIdentificationData (ECMA-314 §6.3.1; Annex
+ * D). subDomainID is unique only together with switchingSubDomainName.
+ * globallyUniqueID is unique by itself and is coded as an H.225
+ * GloballyUniqueID (Annex D.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-314/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

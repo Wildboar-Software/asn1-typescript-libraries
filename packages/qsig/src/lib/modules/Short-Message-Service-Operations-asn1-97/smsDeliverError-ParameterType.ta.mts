@@ -13,7 +13,12 @@ import { UserData, _decode_UserData, _encode_UserData } from "../Short-Message-S
 /**
  * @summary smsDeliverError_ParameterType
  * @description
- * 
+ *
+ * Parameter of `smsDeliverError` (ECMA-325 Annex E.6). `failureCause` is
+ * mandatory. `scAddressSaved` defaults to FALSE.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,24 +36,46 @@ export
 class smsDeliverError_ParameterType {
     /**
      * @summary `failureCause`.
+     * @description
+     *
+     * Why delivery failed. Table E.4 lists the defined values; every other
+     * integer is reserved (ECMA-325 §E.3.1, §E.6.1). §6.5.4.2 and §6.5.5.2 use
+     * `memoryCapacityExceeded` or `simSmsStorageFull` when the Short Message
+     * cannot be stored.
      * @public
      * @readonly
      */
     readonly failureCause: FailureCause;
     /**
      * @summary `protocolIdentifier`.
+     * @description
+     *
+     * Optional copy of `protocolIdentifier` from the `smsDeliver` invoke
+     * (ECMA-325 §6.5.4.2, §E.6.2).
      * @public
      * @readonly
      */
     readonly protocolIdentifier: OPTIONAL<ProtocolIdentifier>;
     /**
      * @summary `userData`.
+     * @description
+     *
+     * Optional copy of `userData` from the `smsDeliver` invoke. The receiver
+     * may add headers after a `dataHeaderSourceIndicator` (ECMA-325 §E.6.3).
      * @public
      * @readonly
      */
     readonly userData: OPTIONAL<UserData>;
     /**
      * @summary `scAddressSaved`.
+     * @description
+     *
+     * Default FALSE. TRUE means the Receiving User PINX or Message Centre
+     * stored the Service Centre address in Short Message Waiting Data, so the
+     * Service Centre does not poll and an `scAlert` will follow (ECMA-325
+     * §E.6.4, §6.5.4.2). FALSE means no `scAlert` will be sent; the Service
+     * Centre may start timer T4 (§6.5.3.2.1). §6.5.5 sometimes spells this
+     * element `scAddressStored`.
      * @public
      * @readonly
      */

@@ -5,7 +5,22 @@ import { SSCTSetupArg, _decode_SSCTSetupArg, _encode_SSCTSetupArg } from "../Sin
 /**
  * @summary ssctSetup
  * @description
- * 
+ *
+ * Unconfirmed. Rerouting PINX to Transferred-To PINX, in the SETUP of
+ * the new connection. ROSE local 100. Interpretation APDU:
+ * `discardAnyUnrecognisedInvokePdu`. NFE `destinationEntity` is
+ * `endPINX`. The SETUP also carries the original call's bearer
+ * capability, User C's number as Called party number, and User B's
+ * number as Calling party number. User B's name, if present, is a
+ * separate `callingName` invoke, not part of this argument. On
+ * diversion the invoke is forwarded with the new call; the diverted-to
+ * PINX becomes the Transferred-To PINX. The Rerouting PINX may set
+ * the Transit counter in that SETUP to zero; the Transferred-To PINX
+ * ignores it. ECMA-300 §6.3.1, §6.3.2.1, §6.5.2.1, §6.5.4.1, §6.8.5.3,
+ * §6.8.7.3, §6.8.18.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-300/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -10,7 +10,14 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary DummyRes
  * @description
- * 
+ *
+ * Result of `locUpdate`, `locDelete`, and `locDeReg` when no SS-WTLR parameters
+ * are returned (ECMA-302 §6.3.1). `null` has no parameters. `extension` is one
+ * manufacturer extension from `WTMLRExtSet`; `sequOfExtn` is a sequence of
+ * them.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-302/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

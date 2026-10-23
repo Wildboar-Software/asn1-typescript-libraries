@@ -8,7 +8,25 @@ import { unspecified } from "../WTM-Location-Registration-Operations-asn1-97/uns
 /**
  * @summary pisnEnquiry
  * @description
- * 
+ *
+ * Translate an alternative identifier into a WTM user identity (ECMA-302
+ * §6.5.2, §6.5.3, §6.5.7, §6.5.8). The Visitor PINX sends it to the previous
+ * Visitor PINX or to a Directory PINX. ROSE local CODE 53. The previous Visitor
+ * PINX returns the identity stored in the VDB. The Directory PINX translates
+ * the identifier. Either returns `invalidServedUserNr` when it cannot.
+ * A PINX that is both Visitor and Directory PINX should return that
+ * error only when the user is in neither the VDB nor the directory
+ * (§6.5.7.2 note 9, §6.5.8.2 note 10). Timer T2, at least
+ * 15 s, runs in VisitEnquiry (§6.10.2). `unspecified` is also listed; clause 6
+ * is silent on when to return it. ECMA-282 §6.8 reuses this operation so a PUM
+ * PINX can ask a Directory PINX to translate a PUM identifier into a PISN
+ * number. ECMA-282 §6.8.2.1 requires that PISN number in the result and is
+ * silent on which `WtmUserId` alternative carries it. Its timer for this invoke
+ * is also T2, at least 15 s (ECMA-282 §6.12.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-302/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-282/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -15,7 +15,27 @@ import { unspecified } from "../Path-Replacement-Operations-asn1-97/unspecified.
 /**
  * @summary pathReplaceInvite
  * @description
- * 
+ *
+ * Optional. Inviting PINX to a Requesting PINX (either end of an Active
+ * call), asking that end to start path replacement and thereby choosing
+ * the direction of the new connection. No return result. Success is
+ * clearing of the old connection, or a `pathReplaceRetain` return
+ * result when the Inviting PINX sits on the retained part. ROSE
+ * local 86. NFE is included and `destinationEntity` is `endPINX`.
+ * Interpretation APDU is omitted or `rejectAnyUnrecognisedInvokePdu`.
+ * The argument has no standardized elements. A return error may be
+ * sent if the Requesting PINX cannot act in PR-Req-Idle, and may relay
+ * a `pathReplacePropose` error. `notAvailable` is among the listed
+ * errors; §6.5 does not say when it is chosen. The invoke is ignored in
+ * PR-Req-Initiated and PR-Req-Completing. A Cooperating PINX in
+ * PR-Coop-Retain or PR-Coop-Establishment may also return an error.
+ * What the Inviting PINX does with an error is implementation
+ * dependent. ECMA-176 §6.3.1, §6.3.2.1, §6.5.1.2, §6.5.5, §6.6.5;
+ * ECMA-175 §1.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-176/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-175/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

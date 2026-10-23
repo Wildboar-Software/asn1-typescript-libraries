@@ -9,7 +9,14 @@ import { RemoteOperationsPortion_Item, _decode_RemoteOperationsPortion_Item, _en
 /**
  * @summary RemoteOperationsPortion
  * @description
- * 
+ *
+ * The ROSE or ACSE APDUs carried inside a DialogBegin, DialogContinue, or
+ * DialogEnd PDU (ECMA-165 §8.4, §11.3.3.3). Not used on DialogAbort. Both the
+ * invokable and returnable operation sets passed to RoseAPDU are the open
+ * `OperationSet`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

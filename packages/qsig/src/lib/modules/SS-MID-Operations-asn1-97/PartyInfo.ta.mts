@@ -12,7 +12,17 @@ import { MsgCentreId, _decode_MsgCentreId, _encode_MsgCentreId } from "../SS-MCM
 /**
  * @summary PartyInfo
  * @description
- * 
+ *
+ * Parties named in an SS-MID invoke (ECMA-347 §7.5.1.1.2).
+ * The Served User address is a presented address, and a
+ * Message Type may be included.
+ *
+ * This is not the SS-MCM `PartyInfo`, which uses a party
+ * number and has no Message Type. §7.3.1 does not say why
+ * the two types differ.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,18 +39,28 @@ export
 class PartyInfo {
     /**
      * @summary `servedUserNr`.
+     * @description
+     *
+     * Address of the Served User. ECMA-347 §7.5.1.1.2.
      * @public
      * @readonly
      */
     readonly servedUserNr: PresentedAddressUnscreened;
     /**
      * @summary `messageType`.
+     * @description
+     *
+     * Message Type of the messages stored in this mailbox,
+     * when sent. ECMA-347 §7.5.1.1.2.
      * @public
      * @readonly
      */
     readonly messageType: OPTIONAL<MessageType>;
     /**
      * @summary `messageCentreID`.
+     * @description
+     *
+     * Identity of the Message Centre. ECMA-347 §7.5.1.1.2.
      * @public
      * @readonly
      */

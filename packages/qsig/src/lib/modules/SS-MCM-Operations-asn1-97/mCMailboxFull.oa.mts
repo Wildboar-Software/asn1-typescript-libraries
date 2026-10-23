@@ -5,7 +5,26 @@ import { MCMailboxFullArg, _decode_MCMailboxFullArg, _encode_MCMailboxFullArg } 
 /**
  * @summary mCMailboxFull
  * @description
- * 
+ *
+ * Mailbox-full indication (ECMA-347 §6.5.1.1.6). The
+ * Message Centre PINX sends this from MCM-MC-idle when the
+ * mailbox is full for one or more Message Types, or has
+ * reached a storage threshold. There is no result, and no
+ * response is required. Local code 118.
+ * The Message Centre PINX stays in MCM-MC-idle.
+ *
+ * The Served User PINX may tell the Served User and stays
+ * in MCM-SU-idle (§6.5.2.1.6). No errors are defined.
+ *
+ * NFE destination `endPINX`. Unlike the other SS-MCM
+ * invokes, the interpretation APDU shall be
+ * `discardAnyUnrecognisedInvokePDU` (§6.3.2.1).
+ *
+ * A `mIDMailboxID` return error or reject does not forbid
+ * this invoke (§6.8.40).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

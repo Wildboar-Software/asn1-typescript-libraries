@@ -5,7 +5,14 @@ import { DefinedIDs } from "../WTM-Authentication-Operations-asn1-97/DefinedIDs.
 /**
  * @summary AUTH_ALG
  * @description
- * 
+ *
+ * Information object class for an authentication algorithm (ECMA-306 §6.3.1).
+ * `&id` is a unique `DefinedIDs` value. `&Type`, when present, is the ASN.1
+ * type of that algorithm's parameter. ECMA-306 defines no objects of this
+ * class. Algorithm behaviour is outside its scope (§1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-306/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,10 +46,18 @@ interface AUTH_ALG<
     }>;
     /**
      * @summary &id
+     * @description
+     *
+     * Unique algorithm identifier (`DefinedIDs`). ECMA-306 §6.3.1 names eight
+     * values and defines no algorithm objects.
      */
     readonly "&id"?: DefinedIDs;
     /**
      * @summary &Type
+     * @description
+     *
+     * Optional ASN.1 type of this algorithm's parameter (ECMA-306 §6.3.1). The
+     * standard assigns no type to any identifier (§1).
      */
     readonly "&Type": Type;
 };

@@ -9,7 +9,16 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Currency
  * @description
- * 
+ *
+ * Currency identifier, IA5String of length 0..10. Length 0 means the default
+ * currency of the PISN. Coding of any other currency is outside the scope of
+ * ECMA-212 (§6.3.1). For AOC-D and AOC-E the service requires local currency
+ * units, the currency of the country where the served user's PINX is located
+ * (ECMA-211 §4.2.4, §7.2.1, §8.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

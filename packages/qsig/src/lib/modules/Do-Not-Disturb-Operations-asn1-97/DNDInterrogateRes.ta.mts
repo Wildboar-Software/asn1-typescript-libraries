@@ -11,7 +11,16 @@ import { DNDInterrogateRes_resultExtension, _decode_DNDInterrogateRes_resultExte
 /**
  * @summary DNDInterrogateRes
  * @description
- * 
+ *
+ * SS-DND interrogation result (ECMA-194 §6.5.6.1.3;
+ * ECMA-193 §6.2.2.1.3, §8.2.1.8). Lists each basic service for
+ * which SS-DND is active. An empty list means it is active for
+ * none (ECMA-193 NOTE 29). Rejection is a return error, not this
+ * result.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-194/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-193/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +42,22 @@ export
 class DNDInterrogateRes {
     /**
      * @summary `status`.
+     * @description
+     *
+     * Basic services for which SS-DND is active, each with an
+     * optional DNDPL (ECMA-193 §8.2.1.8 NOTE 29, NOTE 33). An empty
+     * list means SS-DND is not active for any basic service.
+     * ECMA-194 does not say when this element is omitted.
      * @public
      * @readonly
      */
     readonly status: OPTIONAL<DNDInterrogateRes_status_Item[]>;
     /**
      * @summary `resultExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-194 §6.3.1 defines the
+     * CHOICE and leaves `DNDExtSet` empty.
      * @public
      * @readonly
      */

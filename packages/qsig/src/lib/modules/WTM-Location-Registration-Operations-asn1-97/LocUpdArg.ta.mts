@@ -13,7 +13,11 @@ import { LrExtension, _decode_LrExtension, _encode_LrExtension } from "../WTM-Lo
 /**
  * @summary LocUpdArg
  * @description
- * 
+ *
+ * Argument of `locUpdate` (ECMA-302 §6.3.1, §6.5.1.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-302/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,24 +37,47 @@ export
 class LocUpdArg {
     /**
      * @summary `wtmUserId`.
+     * @description
+     *
+     * Identity of the WTM user to register (§6.5.1.1).
+     *
      * @public
      * @readonly
      */
     readonly wtmUserId: WtmUserId;
     /**
      * @summary `basicService`.
+     * @description
+     *
+     * Basic service to register. The Visitor PINX may omit it; omission means
+     * `allServices` (§6.3.1, §6.5.1.1). The Home PINX may check it (§6.5.4.1).
+     *
      * @public
      * @readonly
      */
     readonly basicService: OPTIONAL<BasicService>;
     /**
      * @summary `visitPINX`.
+     * @description
+     *
+     * PISN number of the Visitor PINX; always a complete number, and suitable
+     * as the Called party number of a call routed to that PINX (§6.3.1,
+     * §6.5.1.1). It may be a roaming number for this user, or one number shared
+     * by every WTLR user currently registered in this PINX. In the shared case
+     * the users are distinguished by `wtmUserId` (note after §6.3.1). The Home
+     * PINX stores this number in the HDB (§6.5.4.1).
+     *
      * @public
      * @readonly
      */
     readonly visitPINX: PartyNumber;
     /**
      * @summary `argExtension`.
+     * @description
+     *
+     * Manufacturer-specific data. `WTMLRExtSet` assigns no extensions (ECMA-302
+     * §6.3.1).
+     *
      * @public
      * @readonly
      */

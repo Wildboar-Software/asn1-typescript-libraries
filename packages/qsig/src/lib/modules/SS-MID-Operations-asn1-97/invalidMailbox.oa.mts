@@ -4,7 +4,16 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary invalidMailbox
  * @description
- * 
+ *
+ * Mailbox not accepted (ECMA-347 §7.3.1). Local code 1039.
+ * No parameter. Listed for `mIDMailboxID` and
+ * `mIDMailboxAuth`. §7.5.2.2.2 gives an invalid mailbox
+ * identifier as an example for `mIDMailboxID` and does not
+ * name this error. It does not say when to use this code
+ * rather than `unspecified` or an imported general error.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

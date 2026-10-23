@@ -11,7 +11,12 @@ import { CalculationParam, _decode_CalculationParam, _encode_CalculationParam } 
 /**
  * @summary CalcWtanInfo
  * @description
- * 
+ *
+ * Response the PISN sends to the WTM user for SS-WTAN, with an optional
+ * calculation parameter (ECMA-306 §7.5.1.1, §7.5.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-306/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +32,20 @@ export
 class CalcWtanInfo {
     /**
      * @summary `authResponse`.
+     * @description
+     *
+     * Response value from the network (ECMA-306 §6.3.1). The Visitor PINX sends
+     * it to the WTM user to accept the authentication request (§7.5.1.1).
      * @public
      * @readonly
      */
     readonly authResponse: AuthResponse;
     /**
      * @summary `calculationParam`.
+     * @description
+     *
+     * Included when the algorithm in use requires it (ECMA-306 §6.3.1). The
+     * calculation is outside ECMA-306 (§1).
      * @public
      * @readonly
      */

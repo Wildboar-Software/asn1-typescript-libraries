@@ -14,7 +14,13 @@ import { MCRExtensions, _decode_MCRExtensions, _encode_MCRExtensions } from "../
 /**
  * @summary MCRequestArg
  * @description
- * 
+ *
+ * Argument of `mCRequest` (ECMA-344 §6.3.1, §6.5.1.1.2). The elements are
+ * taken from the Requesting User's request. The Co-operating PINX stores
+ * `correlation` and `retainOrigCall` before sending SETUP (§6.5.2.1.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-344/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,42 +42,76 @@ export
 class MCRequestArg {
     /**
      * @summary `callType`.
+     * @description
+     *
+     * Basic service of the Requested Call, or a call-independent signalling
+     * connection. The Co-operating PINX sets Bearer Capability and Channel
+     * Identification from this value (ECMA-344 §6.5.2.1.2).
      * @public
      * @readonly
      */
     readonly callType: CallType;
     /**
      * @summary `retainOrigCall`.
+     * @description
+     *
+     * Default TRUE, meaning the Original Call stays up. If FALSE, the
+     * Co-operating PINX puts the `mCRequest` return result or return error in
+     * the first call-clearing message instead of a FACILITY (ECMA-344
+     * §6.5.2.1.2, §6.5.2.2.2).
      * @public
      * @readonly
      */
     readonly retainOrigCall: OPTIONAL<BOOLEAN>;
     /**
      * @summary `destinationAddress`.
+     * @description
+     *
+     * Called party of the Requested Call. The Co-operating PINX copies it into
+     * the Called Party information element of SETUP (ECMA-344 §6.5.2.1.2).
      * @public
      * @readonly
      */
     readonly destinationAddress: PresentedAddressUnscreened;
     /**
      * @summary `requestingAddress`.
+     * @description
+     *
+     * Address of the Requesting User. Copied into `mCInform` when present
+     * (ECMA-344 §6.5.2.1.2). §6.5 is silent on when to omit it.
      * @public
      * @readonly
      */
     readonly requestingAddress: OPTIONAL<PresentedAddressUnscreened>;
     /**
      * @summary `cooperatingAddress`.
+     * @description
+     *
+     * Address of the Co-operating User. Copied into `mCInform`. Required when
+     * `mCRequest` is sent on a new call-independent signalling connection
+     * (ECMA-344 §6.5.1.1.2 NOTE). On an existing call reference the
+     * Co-operating User is the user served on that reference.
      * @public
      * @readonly
      */
     readonly cooperatingAddress: OPTIONAL<PresentedAddressUnscreened>;
     /**
      * @summary `correlation`.
+     * @description
+     *
+     * Ties the Original Call to the Requested Call (ECMA-344 §4.2.6, §4.2.7).
+     * Stored by the Co-operating PINX and copied into `mCInform` and
+     * `mCAlerting` (§6.5.2.1.2).
      * @public
      * @readonly
      */
     readonly correlation: Correlation;
     /**
      * @summary `extensions`.
+     * @description
+     *
+     * Manufacturer-specific extension. This edition defines none in
+     * `MakeCallRequestExtension` (ECMA-344 §6.3.1).
      * @public
      * @readonly
      */

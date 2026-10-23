@@ -12,7 +12,11 @@ import { LrExtension, _decode_LrExtension, _encode_LrExtension } from "../WTM-Lo
 /**
  * @summary GetRRCInfArg
  * @description
- * 
+ *
+ * Argument of `getRRCInf` (ECMA-302 §7.5.1.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-302/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,18 +33,32 @@ export
 class GetRRCInfArg {
     /**
      * @summary `wtmUserId`.
+     * @description
+     *
+     * WTM user whose restriction information is requested.
+     *
      * @public
      * @readonly
      */
     readonly wtmUserId: WtmUserId;
     /**
      * @summary `basicService`.
+     * @description
+     *
+     * Basic service for that user. Omission means `allServices` (§6.3.1,
+     * §7.5.1.1).
+     *
      * @public
      * @readonly
      */
     readonly basicService: OPTIONAL<BasicService>;
     /**
      * @summary `argExtension`.
+     * @description
+     *
+     * Manufacturer-specific data. `WTMLRExtSet` assigns no extensions (ECMA-302
+     * §6.3.1).
+     *
      * @public
      * @readonly
      */

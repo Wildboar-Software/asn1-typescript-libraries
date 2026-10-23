@@ -9,7 +9,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary DerivedCipherKey
  * @description
- * 
+ *
+ * May be computed while computing a challenge and the expected response
+ * (ECMA-243 §6.3.1). Included in `CalcCtatInfoUnit` only when the algorithm in
+ * use requires it. ECMA-243 does not define the derivation (§1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-243/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

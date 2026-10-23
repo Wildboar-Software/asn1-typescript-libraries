@@ -20,7 +20,13 @@ import { _decode_callRerouteing_ArgumentType_extension, _encode_callRerouteing_A
 /**
  * @summary callRerouteing_ArgumentType
  * @description
- * 
+ *
+ * Argument of `callRerouteing`, from the Served User PINX to the Rerouteing
+ * PINX (ECMA-174 §6.3.1, §6.5.3.1.5).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-173/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -54,84 +60,164 @@ export
 class callRerouteing_ArgumentType {
     /**
      * @summary `rerouteingReason`.
+     * @description
+     *
+     * Reason for this diversion. The Served User PINX sends a value other than
+     * `unknown` (ECMA-174 §6.5.3.1.5). It tells the Rerouteing PINX whether to
+     * follow the CFU/CFB procedure or the CFNR procedure (§6.5.4.1).
      * @public
      * @readonly
      */
     readonly rerouteingReason: DiversionReason;
     /**
      * @summary `originalRerouteingReason`.
+     * @description
+     *
+     * Reason for the original diversion. Included only when the call has
+     * already been diverted (ECMA-174 §6.5.3.1.5). Copied to
+     * `originalDiversionReason` of `divertingLegInformation2`.
      * @public
      * @readonly
      */
     readonly originalRerouteingReason: OPTIONAL<DiversionReason>;
     /**
      * @summary `calledAddress`.
+     * @description
+     *
+     * Diverted-to number, and subaddress if stored, at the Served User PINX
+     * (ECMA-174 §6.5.3.1.5). It becomes the called-party number of the new
+     * SETUP, and the called-party subaddress when a subaddress is present
+     * (§6.5.4.1). The Standard notes that the number should be significant
+     * throughout the PISN: a private numbering plan number should be complete,
+     * and an E.164 subscriber number, sometimes even a national number, can be
+     * insufficient.
      * @public
      * @readonly
      */
     readonly calledAddress: Address;
     /**
      * @summary `diversionCounter`.
+     * @description
+     *
+     * How many diversions this call has undergone, 1 for the first. The
+     * encoding range is 1 to 15 (ECMA-174 §6.3.1, §6.5.3.1.5). The service
+     * limit is a separate implementation option and counts every type of
+     * diversion (§6.1).
      * @public
      * @readonly
      */
     readonly diversionCounter: INTEGER;
     /**
      * @summary `pSS1InfoElement`.
+     * @description
+     *
+     * Bearer capability from the incoming SETUP, plus any high-layer
+     * compatibility, low-layer compatibility, and progress indicator received
+     * in that SETUP (ECMA-174 §6.5.3.1.5). Those elements are placed in the new
+     * SETUP (§6.5.4.1).
      * @public
      * @readonly
      */
     readonly pSS1InfoElement: PSS1InformationElement;
     /**
      * @summary `lastRerouteingNr`.
+     * @description
+     *
+     * Number of the last diverting user (ECMA-174 §4.2.10, §6.5.3.1.5). Copied
+     * to `divertingNr` of `divertingLegInformation2`.
      * @public
      * @readonly
      */
     readonly lastRerouteingNr: PresentedNumberUnscreened;
     /**
      * @summary `subscriptionOption`.
+     * @description
+     *
+     * Served user's choice for notifying the calling user (ECMA-174
+     * §6.5.3.1.5). Copied to `divertingLegInformation1`.
      * @public
      * @readonly
      */
     readonly subscriptionOption: SubscriptionOption;
     /**
      * @summary `callingPartySubaddress`.
+     * @description
+     *
+     * Calling-party subaddress from the incoming SETUP, included when that
+     * information element was received (ECMA-174 §6.5.3.1.5). Placed in the
+     * calling-party subaddress of the new SETUP (§6.5.4.1).
      * @public
      * @readonly
      */
     readonly callingPartySubaddress: OPTIONAL<PartySubaddress>;
     /**
      * @summary `callingNumber`.
+     * @description
+     *
+     * Calling-party number from the incoming SETUP (ECMA-174 §6.5.3.1.5).
+     * Placed in the calling-party number of the new SETUP (§6.5.4.1).
      * @public
      * @readonly
      */
     readonly callingNumber: PresentedNumberScreened;
     /**
      * @summary `callingName`.
+     * @description
+     *
+     * Calling name from a `callingName` invoke in the incoming SETUP, included
+     * when the Served User PINX recognised that APDU (ECMA-174 §6.5.3.1.5,
+     * citing ECMA-164). The Rerouteing PINX may send `callingName` in the new
+     * SETUP when this element was received and name identification is supported
+     * (§6.5.4.1).
      * @public
      * @readonly
      */
     readonly callingName: OPTIONAL<Name>;
     /**
      * @summary `originalCalledNr`.
+     * @description
+     *
+     * Number of the original called user (user B, or B1 when diversion is
+     * multiple). Included only for multiple diversion (ECMA-174 §4.2.15,
+     * §6.5.3.1.5).
      * @public
      * @readonly
      */
     readonly originalCalledNr: OPTIONAL<PresentedNumberUnscreened>;
     /**
      * @summary `redirectingName`.
+     * @description
+     *
+     * Optional. The Rerouteing PINX may copy it into
+     * `divertingLegInformation2`, and the Diverted-to PINX may present a
+     * redirecting name to the called user (ECMA-174 §6.5.3.1.5, §6.5.4.1,
+     * §6.5.5.1.1). Stage 1 allows the diverted-to user to receive the served
+     * user's name and, on multiple diversion, the last diverting user's name
+     * (ECMA-173 §6.2.2.2.2). The protocol does not say which of those names
+     * this element carries, as opposed to `originalCalledName`.
      * @public
      * @readonly
      */
     readonly redirectingName: OPTIONAL<Name>;
     /**
      * @summary `originalCalledName`.
+     * @description
+     *
+     * Optional name associated with the original called user. Included at the
+     * Served User PINX's choice and copied onward only if received (ECMA-174
+     * §6.5.3.1.5, §6.5.4.1). The protocol does not define its contents beyond
+     * the element name. Stage 1 allows the original called user's name on
+     * multiple diversion (ECMA-173 §6.2.2.2.2).
      * @public
      * @readonly
      */
     readonly originalCalledName: OPTIONAL<Name>;
     /**
      * @summary `extension`.
+     * @description
+     *
+     * Manufacturer-specific extension from `DiversionExtensionSet`. The
+     * standardized set is empty (ECMA-174 §6.3.1).
      * @public
      * @readonly
      */

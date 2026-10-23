@@ -5,7 +5,18 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary unspecified
  * @description
- * 
+ *
+ * Unspecified SMS error (ECMA-325 §6.3.1). ROSE local CODE 1008. Parameter is
+ * an `SmsExtension`. Listed on `smsSubmit`, `smsDeliver`, `smsStatusReport`,
+ * `smsCommand`, and `scAlert`. On `scAlert` it is the only error.
+ *
+ * The procedures name `failureCause` values for the typed errors and are
+ * silent on when to return `unspecified` instead. This edition defines no
+ * extensions in `SmsExtSet`. §6.5.3.2.1 says an invalid `scAlert` gets a
+ * return error and does not define invalidity.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

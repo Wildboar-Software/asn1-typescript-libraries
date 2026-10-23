@@ -4,7 +4,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SubscriptionOption
  * @description
- * 
+ *
+ * SS-CFU subscription option carried in `cfuActivated` (ECMA-304 §6.3.1,
+ * §6.5.3.3). The WTMI-detect PINX applies SS-CFU as Served User PINX when it
+ * supports §6.8.6.1. ECMA-304 does not define the notification behaviour of
+ * these three values.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-304/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,7 +34,14 @@ enum _enum_for_SubscriptionOption {
 /**
  * @summary SubscriptionOption
  * @description
- * 
+ *
+ * SS-CFU subscription option carried in `cfuActivated` (ECMA-304 §6.3.1,
+ * §6.5.3.3). The WTMI-detect PINX applies SS-CFU as Served User PINX when it
+ * supports §6.8.6.1. ECMA-304 does not define the notification behaviour of
+ * these three values.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-304/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -46,7 +60,14 @@ type SubscriptionOption = _enum_for_SubscriptionOption;
 /**
  * @summary SubscriptionOption
  * @description
- * 
+ *
+ * SS-CFU subscription option carried in `cfuActivated` (ECMA-304 §6.3.1,
+ * §6.5.3.3). The WTMI-detect PINX applies SS-CFU as Served User PINX when it
+ * supports §6.8.6.1. ECMA-304 does not define the notification behaviour of
+ * these three values.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-304/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -64,6 +85,9 @@ const SubscriptionOption = _enum_for_SubscriptionOption;
 
 /**
  * @summary SubscriptionOption_noNotification
+ * @description
+ * No diversion notification. ECMA-304 §6.3.1 gives no further meaning.
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-304/
  * @constant
  * @type {number}
  */
@@ -72,6 +96,7 @@ const SubscriptionOption_noNotification: SubscriptionOption = SubscriptionOption
 
 /**
  * @summary noNotification
+ * @description Alias of {@link SubscriptionOption_noNotification}.
  * @constant
  * @type {number}
  */
@@ -80,6 +105,8 @@ const noNotification: SubscriptionOption = SubscriptionOption.noNotification; /*
 
 /**
  * @summary SubscriptionOption_notificationWithoutDivertedToNr
+ * @description Notification without the diverted-to number. ECMA-304 §6.3.1.
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-304/
  * @constant
  * @type {number}
  */
@@ -88,6 +115,8 @@ const SubscriptionOption_notificationWithoutDivertedToNr: SubscriptionOption = S
 
 /**
  * @summary notificationWithoutDivertedToNr
+ * @description
+ * Alias of {@link SubscriptionOption_notificationWithoutDivertedToNr}.
  * @constant
  * @type {number}
  */
@@ -96,6 +125,8 @@ const notificationWithoutDivertedToNr: SubscriptionOption = SubscriptionOption.n
 
 /**
  * @summary SubscriptionOption_notificationWithDivertedToNr
+ * @description Notification with the diverted-to number. ECMA-304 §6.3.1.
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-304/
  * @constant
  * @type {number}
  */
@@ -104,6 +135,8 @@ const SubscriptionOption_notificationWithDivertedToNr: SubscriptionOption = Subs
 
 /**
  * @summary notificationWithDivertedToNr
+ * @description
+ * Alias of {@link SubscriptionOption_notificationWithDivertedToNr}.
  * @constant
  * @type {number}
  */

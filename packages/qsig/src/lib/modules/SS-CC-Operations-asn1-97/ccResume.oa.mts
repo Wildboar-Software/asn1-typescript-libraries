@@ -5,7 +5,17 @@ import { CcExtension, _decode_CcExtension, _encode_CcExtension } from "../SS-CC-
 /**
  * @summary ccResume
  * @description
- * 
+ *
+ * User A is free again after `ccSuspend` without path reservation
+ * (ECMA-186 §6.5.2.1.7). The Originating PINX sends the invoke in
+ * FACILITY on the retained signalling connection and returns to
+ * CC-Invoked-User-A-RET, waiting for another `ccExecPossible`. No
+ * result. Local code 33. The Terminating PINX resumes monitoring
+ * User B and enters CC-Invoked-User-B (§6.5.3.1.7). §6.5 does not
+ * say whether the argument is `fullArg` or `extArg`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-186/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

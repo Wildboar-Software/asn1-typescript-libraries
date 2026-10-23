@@ -9,7 +9,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AlternativeId
  * @description
- * 
+ *
+ * Identifier other than the PISN number (ECMA-302 §6.3.1). One to 20 octets. On
+ * `pisnEnquiry` it can be a temporary identifier, for example a Network
+ * Assigned Identity structure, or a fixed handset identifier. The octet
+ * encoding is not specified.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-302/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

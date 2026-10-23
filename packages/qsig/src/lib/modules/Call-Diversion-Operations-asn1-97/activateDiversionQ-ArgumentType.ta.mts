@@ -14,7 +14,13 @@ import { _decode_activateDiversionQ_ArgumentType_extension, _encode_activateDive
 /**
  * @summary activateDiversionQ_ArgumentType
  * @description
- * 
+ *
+ * Argument of `activateDiversionQ`, from the Activating PINX to the Served User
+ * PINX (ECMA-174 §6.3.1, §6.5.6.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-173/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,36 +43,64 @@ export
 class activateDiversionQ_ArgumentType {
     /**
      * @summary `procedure`.
+     * @description
+     *
+     * CFU, CFB, or CFNR to activate (ECMA-174 §6.5.3.1.1). Registration is
+     * performed by activation; there is no separate registration procedure
+     * (ECMA-173 §6.2.2.1).
      * @public
      * @readonly
      */
     readonly procedure: Procedure;
     /**
      * @summary `basicService`.
+     * @description
+     *
+     * Basic service to which this activation applies, or all basic services for
+     * which forwarding is subscribed (ECMA-173 §6.2.2.1.1; ECMA-174
+     * §6.5.3.1.1).
      * @public
      * @readonly
      */
     readonly basicService: BasicService;
     /**
      * @summary `divertedToAddress`.
+     * @description
+     *
+     * Number to which calls are diverted, with a subaddress if one was
+     * supplied. Stored when activation is accepted (ECMA-174 §6.5.3.1.1;
+     * ECMA-173 §6.2.2.1.1).
      * @public
      * @readonly
      */
     readonly divertedToAddress: Address;
     /**
      * @summary `servedUserNr`.
+     * @description
+     *
+     * PISN number of the served user, the user whose calls are diverted
+     * (ECMA-174 §4.2.21, §6.5.3.1.1). Stage 1 includes this number for remote
+     * activation (ECMA-173 §10.2.1.14).
      * @public
      * @readonly
      */
     readonly servedUserNr: PartyNumber;
     /**
      * @summary `activatingUserNr`.
+     * @description
+     *
+     * Number of the user requesting activation. The Served User PINX may use it
+     * to decide whether activation is allowed (ECMA-174 §6.5.3.1.1).
      * @public
      * @readonly
      */
     readonly activatingUserNr: PartyNumber;
     /**
      * @summary `extension`.
+     * @description
+     *
+     * Manufacturer-specific extension from `DiversionExtensionSet`. The
+     * standardized set is empty (ECMA-174 §6.3.1).
      * @public
      * @readonly
      */

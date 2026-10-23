@@ -10,7 +10,18 @@ import { MsgCentreId, _decode_MsgCentreId, _encode_MsgCentreId } from "../SS-MCM
 /**
  * @summary PartyInfo
  * @description
- * 
+ *
+ * Served User address together with the Message Centre
+ * identity (ECMA-347 §6.5.1.1.4, §6.5.2.1.1). Used by
+ * `mCMService`, `mCMInterrogate`, `mCMUpdate`, and
+ * `mCMailboxFull`.
+ *
+ * The operations that share SS-MWI codes carry these as
+ * separate components, and the Message Centre identity is
+ * optional there. This Standard does not say why.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,12 +37,20 @@ export
 class PartyInfo {
     /**
      * @summary `servedUserNr`.
+     * @description
+     *
+     * Address of the Served User. ECMA-347 §6.5.2.1.1.
      * @public
      * @readonly
      */
     readonly servedUserNr: PartyNumber;
     /**
      * @summary `messageCentreID`.
+     * @description
+     *
+     * Identity of the Message Centre. The update procedure
+     * calls this the Message Centre PINX. ECMA-347
+     * §6.5.1.1.4.
      * @public
      * @readonly
      */

@@ -11,7 +11,14 @@ import { ExtensionType, _decode_ExtensionType, _encode_ExtensionType } from "../
 /**
  * @summary CallIdentificationUpdateArg
  * @description
- * 
+ *
+ * Data changed on an existing call (ECMA-314 §6.5.2.1). Include elements
+ * that changed. Unchanged elements may be included. A received legID shall
+ * be ignored. When more than one value changes, send them in this one
+ * argument.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-314/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,24 +36,43 @@ export
 class CallIdentificationUpdateArg {
     /**
      * @summary `globalCallID`.
+     * @description
+     *
+     * New global call identification. The receiver assigns it and, if it is
+     * not the End PINX, forwards it (ECMA-314 §6.5.2.1). During timer T1 the
+     * higher binary linkage id wins, then the later timestamp, then the
+     * higher switchingSubDomainName (§6.5.2.2).
      * @public
      * @readonly
      */
     readonly globalCallID: OPTIONAL<CallIdentificationData>;
     /**
      * @summary `threadID`.
+     * @description
+     *
+     * New thread identification. The receiver assigns it to this call and to
+     * other calls that already share the thread (ECMA-314 §6.5.2.1). The
+     * same tie-break as globalCallID applies during timer T1 (§6.5.2.2).
      * @public
      * @readonly
      */
     readonly threadID: OPTIONAL<CallIdentificationData>;
     /**
      * @summary `legID`.
+     * @description
+     *
+     * A received leg identification shall be ignored (ECMA-314 §6.5.2.1). It
+     * may still be included when several values are sent together.
      * @public
      * @readonly
      */
     readonly legID: OPTIONAL<CallIdentificationData>;
     /**
      * @summary `extension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-314 §6.3.1 leaves ExampleExtSet
+     * empty.
      * @public
      * @readonly
      */

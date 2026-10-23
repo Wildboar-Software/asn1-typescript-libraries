@@ -12,7 +12,13 @@ import { SSCTDigitInfoArg_argumentExtension, _decode_SSCTDigitInfoArg_argumentEx
 /**
  * @summary SSCTDigitInfoArg
  * @description
- * 
+ *
+ * Argument of `ssctDigitInfo`. Further digits of User C's number, and
+ * an optional mark that digit sending is finished. ECMA-300 §6.5.3.1,
+ * §6.9.3.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-300/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,18 +39,34 @@ export
 class SSCTDigitInfoArg {
     /**
      * @summary `reroutingNumber`.
+     * @description
+     *
+     * Remaining digits of User C's number, collected from User B after
+     * `ssctPostDial`. The Rerouting PINX uses them to select a route or
+     * passes them on in overlap sending. ECMA-300 §6.3.1, §6.5.2.1,
+     * §6.5.3.1. The initiate argument spells the same role
+     * `rerouteingNumber`.
      * @public
      * @readonly
      */
     readonly reroutingNumber: OPTIONAL<PartyNumber>;
     /**
      * @summary `sendingComplete`.
+     * @description
+     *
+     * Present when User B has finished sending digits. Its presence
+     * stops timer T3 and allows the new call to proceed.
+     * ECMA-300 §6.5.3.1, §6.9.3.
      * @public
      * @readonly
      */
     readonly sendingComplete: OPTIONAL<NULL>;
     /**
      * @summary `argumentExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-300 §6.3.1 defines no
+     * member of `SSCTExtSet`.
      * @public
      * @readonly
      */

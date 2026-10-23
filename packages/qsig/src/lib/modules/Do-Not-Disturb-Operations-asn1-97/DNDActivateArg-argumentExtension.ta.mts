@@ -9,7 +9,14 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary DNDActivateArg_argumentExtension
  * @description
- * 
+ *
+ * Manufacturer-specific extension on a remote activation request.
+ * ECMA-194 §6.3.1 defines the single-extension and
+ * sequence-of-extensions alternatives and registers none in
+ * `DNDExtSet`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-194/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -12,7 +12,17 @@ import { Priority, _decode_Priority, _encode_Priority } from "../SS-MCM-Operatio
 /**
  * @summary CompressedInfo
  * @description
- * 
+ *
+ * Compressed information in an update (ECMA-347 §6.3.1,
+ * §6.5.1.1.4): a count, and optionally a timestamp and a
+ * priority. §6.5.1.1.4 does not say which message those
+ * optional values refer to.
+ *
+ * The "latest highest-priority New Message" rules in
+ * §6.5.1.1.2 apply to `mCMNewMsg`, not to this type.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,18 +39,33 @@ export
 class CompressedInfo {
     /**
      * @summary `nrOfMessages`.
+     * @description
+     *
+     * How many messages this summary covers. Whether they
+     * are new, retrieved, or both depends on the
+     * `UpdateInfo` alternative that contains it.
+     * ECMA-347 §6.3.1.
      * @public
      * @readonly
      */
     readonly nrOfMessages: NrOfMessages;
     /**
      * @summary `lastTimeStamp`.
+     * @description
+     *
+     * Optional timestamp. §6.3.1 and §6.5.1.1.4 do not say
+     * which message's time this is.
      * @public
      * @readonly
      */
     readonly lastTimeStamp: OPTIONAL<TimeStamp>;
     /**
      * @summary `highestPriority`.
+     * @description
+     *
+     * Optional priority. 0 is highest and 9 is lowest
+     * (§6.3.1). The update procedure does not say which
+     * message it refers to.
      * @public
      * @readonly
      */

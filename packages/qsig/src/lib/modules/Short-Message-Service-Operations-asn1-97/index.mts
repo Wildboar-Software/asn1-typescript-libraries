@@ -1,6 +1,15 @@
 /**
  * @module
- * @description ASN.1 module `Short-Message-Service-Operations-asn1-97`.
+ * @description
+ *
+ * Short Message Service (SMS) at the Q reference point. A PISN user
+ * sends and receives short messages through a Service Centre:
+ * submit, deliver, status report, command, and service-centre alert.
+ * ECMA-325 1st edition (June 2001), §6.1. These types follow Table 1
+ * as corrected by the 25 September 2001 errata (`SmsSubmitRes` tags
+ * and the tags on `SmsStatusReportArg`).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
  */
 export * from "./ApplicationPort16BitHeader.ta.mjs";
 export * from "./ApplicationPort8BitHeader.ta.mjs";

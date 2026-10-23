@@ -5,7 +5,14 @@ import { type NOTIFICATION } from "../Notification-class-asn1-97/NOTIFICATION.oc
 /**
  * @summary pss1IeNotification
  * @description
- * 
+ *
+ * Notification that carries PSS1 information elements across the PISN (ECMA-165
+ * Annex B §B.2, §11.3.4). Local code 2001. The argument is one
+ * `PSS1InformationElement`. Like any notification it is one-way, requires no
+ * response, and may be discarded if not recognised (§4.27).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

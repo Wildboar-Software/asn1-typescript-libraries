@@ -12,7 +12,13 @@ import { ccResume } from "../SS-CC-Operations-asn1-97/ccResume.oa.mjs";
 /**
  * @summary CC_Operations
  * @description
- * 
+ *
+ * Operations of SS-CC-Operations-asn1-97 (ECMA-186 §6.3.1):
+ * `ccbsRequest`, `ccnrRequest`, `ccCancel`, `ccExecPossible`,
+ * `ccPathReserve`, `ccRingout`, `ccSuspend`, and `ccResume`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-186/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

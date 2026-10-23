@@ -4,7 +4,16 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary unrecognizedCallIdentity
  * @description
- * 
+ *
+ * ROSE local 1005. The new connection could not be associated with the
+ * old connection at the Requesting PINX. Sent, with cause 29, as one
+ * implementation choice when `callIdentity` plus Called party number
+ * match no entity in PR-Req-Initiated. The other choices are cause 1
+ * with no error, or cause 29 with `invalidRerouteingNumber`.
+ * ECMA-176 §6.3.1, §6.5.1.4.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-176/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

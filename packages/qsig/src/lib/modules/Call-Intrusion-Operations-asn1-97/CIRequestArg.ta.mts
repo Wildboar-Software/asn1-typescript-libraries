@@ -11,7 +11,13 @@ import { CIRequestArg_argumentExtension, _decode_CIRequestArg_argumentExtension,
 /**
  * @summary CIRequestArg
  * @description
- * 
+ *
+ * Argument of `callIntrusionRequest` (ECMA-203 §6.3.1). It carries
+ * the calling user's CICL (§6.6.1.1). An extension may be added;
+ * §6.6 does not say when.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-203/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +36,22 @@ export
 class CIRequestArg {
     /**
      * @summary `ciCapabilityLevel`.
+     * @description
+     *
+     * CICL of the calling user. The Terminating PINX compares it with
+     * the CIPL of the called user and of the unwanted user (ECMA-203
+     * §6.6.1.1, §6.6.2.1.1).
      * @public
      * @readonly
      */
     readonly ciCapabilityLevel: CICapabilityLevel;
     /**
      * @summary `argumentExtension`.
+     * @description
+     *
+     * Optional manufacturer-specific data from `CIExtSet`. ECMA-203
+     * §6.6.1.1 requires only the CICL and does not say when this is
+     * present. `CIExtSet` is empty in the standard (§6.3.1).
      * @public
      * @readonly
      */

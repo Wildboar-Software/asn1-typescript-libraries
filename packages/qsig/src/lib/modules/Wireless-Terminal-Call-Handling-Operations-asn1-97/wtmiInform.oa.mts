@@ -5,7 +5,18 @@ import { InformArg, _decode_InformArg, _encode_InformArg } from "../Wireless-Ter
 /**
  * @summary wtmiInform
  * @description
- * 
+ *
+ * Unconfirmed ANF-WTMI invoke from the Rerouteing PINX to the Visitor PINX, in
+ * the SETUP of the new call (ECMA-304 §6.5.1.1, §6.5.4). Local code 56. There
+ * is no return result. The Visitor PINX looks up `wtmIdentity` in the VDB for
+ * the basic service of the call. When the user is accessible it attempts the
+ * call to the PISN access in that entry. When the user is absent from the VDB
+ * it clears with cause 41; when the user is not accessible, with cause 18
+ * (§6.5.4). Authentication of the WTMI user can be performed on this incoming
+ * call (§6.5.4.1 note).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-304/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

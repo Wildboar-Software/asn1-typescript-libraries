@@ -4,7 +4,16 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary PartyCategory
  * @description
- * 
+ *
+ * Category of a user involved in the call, for another user or PINX
+ * (ECMA-251 §6.3.1). An Originating PINX may send the calling user's
+ * category in SETUP. A Terminating PINX may send the called user's category
+ * in ALERTING or CONNECT. A receiver may display it or select
+ * supplementary-service options. The NOTE distinguishes an extension from a
+ * PISN attendant and does not define unknown or emergExt.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-251/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,7 +38,16 @@ enum _enum_for_PartyCategory {
 /**
  * @summary PartyCategory
  * @description
- * 
+ *
+ * Category of a user involved in the call, for another user or PINX
+ * (ECMA-251 §6.3.1). An Originating PINX may send the calling user's
+ * category in SETUP. A Terminating PINX may send the called user's category
+ * in ALERTING or CONNECT. A receiver may display it or select
+ * supplementary-service options. The NOTE distinguishes an extension from a
+ * PISN attendant and does not define unknown or emergExt.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-251/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,7 +67,16 @@ type PartyCategory = _enum_for_PartyCategory;
 /**
  * @summary PartyCategory
  * @description
- * 
+ *
+ * Category of a user involved in the call, for another user or PINX
+ * (ECMA-251 §6.3.1). An Originating PINX may send the calling user's
+ * category in SETUP. A Terminating PINX may send the called user's category
+ * in ALERTING or CONNECT. A receiver may display it or select
+ * supplementary-service options. The NOTE distinguishes an extension from a
+ * PISN attendant and does not define unknown or emergExt.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-251/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -68,14 +95,19 @@ const PartyCategory = _enum_for_PartyCategory;
 
 /**
  * @summary PartyCategory_unknown
+ * @description
+ *
+ * Value 0. ECMA-251 §6.3.1 names it and does not say when it is used.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-251/
  */
 export
 const PartyCategory_unknown: PartyCategory = PartyCategory.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
+ * @description Alias of {@link PartyCategory_unknown}.
  * @constant
  * @type {number}
  */
@@ -84,14 +116,20 @@ const unknown: PartyCategory = PartyCategory.unknown; /* SHORT_NAMED_ENUMERATED_
 
 /**
  * @summary PartyCategory_extension
+ * @description
+ *
+ * The party is an extension. ECMA-251 §6.3.1 says PINX call handling may
+ * differ for an extension and for a PISN attendant.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-251/
  */
 export
 const PartyCategory_extension: PartyCategory = PartyCategory.extension; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary extension
+ * @description Alias of {@link PartyCategory_extension}.
  * @constant
  * @type {number}
  */
@@ -100,14 +138,20 @@ const extension: PartyCategory = PartyCategory.extension; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary PartyCategory_pisnAttendant
+ * @description
+ *
+ * The party is a PISN attendant. ECMA-251 §6.3.1 says PINX call handling may
+ * differ for an extension and for a PISN attendant.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-251/
  */
 export
 const PartyCategory_pisnAttendant: PartyCategory = PartyCategory.pisnAttendant; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pisnAttendant
+ * @description Alias of {@link PartyCategory_pisnAttendant}.
  * @constant
  * @type {number}
  */
@@ -116,14 +160,20 @@ const pisnAttendant: PartyCategory = PartyCategory.pisnAttendant; /* SHORT_NAMED
 
 /**
  * @summary PartyCategory_emergExt
+ * @description
+ *
+ * ECMA-251 §6.3.1 names emergExt and does not define it. The party-category
+ * NOTE mentions only an extension and a PISN attendant.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-251/
  */
 export
 const PartyCategory_emergExt: PartyCategory = PartyCategory.emergExt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary emergExt
+ * @description Alias of {@link PartyCategory_emergExt}.
  * @constant
  * @type {number}
  */

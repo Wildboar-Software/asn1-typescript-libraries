@@ -4,7 +4,16 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary notBusy
  * @description
- * 
+ *
+ * The called user is not busy (ECMA-203 §6.3.1, §6.6.2.1.2). The
+ * Terminating PINX returns this on `callIntrusionRequest` in the
+ * resulting ALERTING or CONNECT. It is also sent if the called user
+ * becomes free during CI-GetCIPL-I or CI-Dest-Notify, and, together
+ * with `callIntrusionCompleted` or `remoteUserAlerting`, during
+ * wait-on-busy reinvocation (§6.6.2.6.2). Local code 1009.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-203/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

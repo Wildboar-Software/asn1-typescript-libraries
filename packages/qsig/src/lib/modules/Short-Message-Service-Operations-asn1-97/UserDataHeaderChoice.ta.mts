@@ -16,7 +16,16 @@ import { GenericUserValue, _decode_GenericUserValue, _encode_GenericUserValue } 
 /**
  * @summary UserDataHeaderChoice
  * @description
- * 
+ *
+ * One user-data header (ECMA-325 §E.1.3.1). `smscControlParameterHeader`
+ * controls Status Reports. The concatenated headers segment a long message
+ * (8-bit or 16-bit reference). The application-port headers route the Short
+ * Message to a terminal application. `dataHeaderSourceIndicator` separates
+ * headers by who inserted them. `wirelessControlHeader` carries a WCMP PDU.
+ * `genericUserValue` (context tag 99) is reserved for GSM 03.40 extensions.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

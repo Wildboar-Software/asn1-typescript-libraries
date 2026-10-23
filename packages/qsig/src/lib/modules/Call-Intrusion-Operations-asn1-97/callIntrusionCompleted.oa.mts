@@ -5,7 +5,22 @@ import { DummyArg, _decode_DummyArg, _encode_DummyArg } from "../Call-Intrusion-
 /**
  * @summary callIntrusionCompleted
  * @description
- * 
+ *
+ * SS-CI has finished and the call continues as a basic call
+ * (ECMA-203 §6.6.1.6, §6.6.2.6). The Terminating PINX sends the
+ * invoke in FACILITY. No result. Local code 48. The Interpretation
+ * APDU is `discardAnyUnrecognisedInvokePdu` (§6.3.3.1).
+ *
+ * Sent from CI-Dest-Invoked or CI-Dest-Isolated when the established
+ * call clears, and from CI-Dest-WOB when the called user answers the
+ * waiting call. The calling and called users stay connected, or are
+ * connected, in basic-call state Active. The Originating PINX, in
+ * any SS-CI state except CI-Idle and CI-Wait-Ack, stops its timers
+ * and enters CI-Idle. §6.6 does not say which `DummyArg` alternative
+ * is sent.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-203/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

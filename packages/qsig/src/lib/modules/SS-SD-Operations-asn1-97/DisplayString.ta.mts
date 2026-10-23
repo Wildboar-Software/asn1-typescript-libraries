@@ -10,7 +10,14 @@ import { BMPStringExtended, _decode_BMPStringExtended, _encode_BMPStringExtended
 /**
  * @summary DisplayString
  * @description
- * 
+ *
+ * Display text coded as a BMP string. `displayStringNormal` is 2 to 64 octets.
+ * `displayStringExtended` is 2 to 160 octets (ECMA-311 §6.3.1). The standard
+ * does not say when to choose the extended form other than by that larger
+ * bound. Keypad information cannot use the extended form.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-311/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

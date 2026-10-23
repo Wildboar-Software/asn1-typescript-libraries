@@ -11,7 +11,13 @@ import { WtmIdentity_both, _decode_WtmIdentity_both, _encode_WtmIdentity_both } 
 /**
  * @summary WtmIdentity
  * @description
- * 
+ *
+ * Identity of a WTMI user: PISN number, alternative identifier, or both
+ * (ECMA-304 §4.2.1, §6.3.1). A PISN number supplied by the Home PINX is a
+ * complete number (§6.5.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-304/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

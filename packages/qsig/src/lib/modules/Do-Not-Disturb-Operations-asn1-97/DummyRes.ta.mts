@@ -10,7 +10,17 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary DummyRes
  * @description
- * 
+ *
+ * Result of `doNotDisturbDeactivateQ` and of
+ * `doNotDisturbOvrExecuteQ`. ECMA-194 §6.3.1 defines no service
+ * parameters: `null`, or a manufacturer extension from the empty
+ * `DNDExtSet`. Acceptance is the return result itself; SS-DND
+ * deactivation does not echo the basic service or DNDPL
+ * (ECMA-193 §8.2.1.7).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-194/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-193/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

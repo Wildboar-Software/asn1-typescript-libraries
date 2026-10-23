@@ -9,7 +9,13 @@ import { cintEnable } from "../Call-Interception-Operations-asn1-97/cintEnable.o
 /**
  * @summary Call_Interception_Operations
  * @description
- * 
+ *
+ * Operations of module `Call-Interception-Operations-asn1-97`
+ * (ECMA-221 §6.3.1, Table 1). `divertingLegInformation3` from
+ * ECMA-174 is also required (§6.3.1) and is not in this set.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-221/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

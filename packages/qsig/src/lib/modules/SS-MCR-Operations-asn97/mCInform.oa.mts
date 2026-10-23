@@ -5,7 +5,32 @@ import { MCInformArg, _decode_MCInformArg, _encode_MCInformArg } from "../SS-MCR
 /**
  * @summary mCInform
  * @description
- * 
+ *
+ * Tell the Destination PINX about a Make Call Request (ECMA-344 §6.5.2.1.2,
+ * §6.5.3). Direction: Co-operating PINX to Destination PINX, in the SETUP of
+ * the Requested Call. ROSE local CODE 113. No result (`RETURN RESULT FALSE`,
+ * `ALWAYS RESPONDS FALSE`).
+ *
+ * Carries `requestingAddress`, `cooperatingAddress`, and `correlation` as
+ * received in `mCRequest`. The Destination PINX may show that information to
+ * the Destination User (§6.5.3.1.2). There are no SS-MCR states at the
+ * Destination PINX (§6.4.3).
+ *
+ * Errors: `userNotSubscribed`, `basicServiceNotProvided`,
+ * `supplementaryServiceInteractionNotAllowed`, `invalidDestinationNumber`,
+ * `mCExecutionNotAllowed`, `mCDestUserBusy`, `unspecified`. The imported
+ * errors are not defined in ECMA-344. The Destination PINX returns an error
+ * when the Destination User is busy or another error condition is found
+ * (§6.5.3.2.2). The Co-operating PINX maps that error onto `mCRequest` with
+ * the same code (§6.5.2.2.2). The text does not bind codes to conditions. If
+ * do-not-disturb at the Destination User overrides SS-MCR, the Destination
+ * PINX returns an error (§6.8.17).
+ *
+ * Invoke interpretation is `discardAnyUnrecognisedInvokePdu`. The NFE
+ * destination entity is `endPINX` (§6.3.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-344/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

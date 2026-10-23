@@ -5,7 +5,20 @@ import { WtmoArg, _decode_WtmoArg, _encode_WtmoArg } from "../Wireless-Terminal-
 /**
  * @summary wtmoCall
  * @description
- * 
+ *
+ * Unconfirmed ANF-WTMO invoke from the Originating PINX to the Home PINX
+ * (ECMA-304 §7.1, §7.5). Local code 71. There is no return result. The SETUP
+ * carries the first invoke; further destination digits go in FACILITY messages.
+ * In a SETUP the interpretation APDU is `clearCallIfAnyInvokePduNotRecognised`.
+ * In a FACILITY message it is omitted or is `rejectAnyUnrecognisedInvokePdu`
+ * (§7.3.2.1). The NFE `destinationEntity` is `endPINX`. The Home PINX extends
+ * the call once the digits suffice to select a route (§7.5.2.1). Timer T3,
+ * while the number is incomplete, should be 14 to 16 s (§7.9.2). A `wtmoCall`
+ * invoke in a FACILITY message during state WTMO-Idle is ignored (§7.5.2.2). A
+ * SETUP that contains `wtmoCall` does not invoke ANF-WTMI (§6.8.23.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-304/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -9,7 +9,16 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SubDomainID
  * @description
- * 
+ *
+ * Switching-function-specific linkage identifier (ECMA-314 Annex D).
+ * Globally unique only together with switchingSubDomainName. Length 1..8
+ * octets. When two assignments collide, the higher binary value is kept
+ * (§6.5.2.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-314/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

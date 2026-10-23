@@ -4,7 +4,13 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary notPresentable
  * @description
- * 
+ *
+ * `display` error, local code 1025, with no parameter. The Client User PINX
+ * sends it when the received display information cannot be presented correctly
+ * or completely (ECMA-311 §6.5.1.2.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-311/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

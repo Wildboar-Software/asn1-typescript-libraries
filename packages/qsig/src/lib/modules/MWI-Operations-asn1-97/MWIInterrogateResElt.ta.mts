@@ -17,7 +17,15 @@ import { MWIInterrogateResElt_argumentExt, _decode_MWIInterrogateResElt_argument
 /**
  * @summary MWIInterrogateResElt
  * @description
- * 
+ *
+ * Status of SS-MWI for one service, analogous to the optional information on
+ * `mWIActivate` (ECMA-242 §6.5.1.1.2). When the request was for all services,
+ * repeat the optional elements for each active service (ECMA-241 §7.2.1.3 notes
+ * 3 and 4).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,42 +50,71 @@ export
 class MWIInterrogateResElt {
     /**
      * @summary `basicService`.
+     * @description
+     *
+     * A service for which SS-MWI is active (ECMA-241 §7.2.1.3 note 2).
      * @public
      * @readonly
      */
     readonly basicService: BasicService;
     /**
      * @summary `msgCentreId`.
+     * @description
+     *
+     * Message Centre that was interrogated (ECMA-241 §7.2.1.3 note 5).
+     * Optional.
      * @public
      * @readonly
      */
     readonly msgCentreId: OPTIONAL<MsgCentreId>;
     /**
      * @summary `nbOfMessages`.
+     * @description
+     *
+     * Optional non-zero count of messages waiting for this service. If the
+     * request was for all services, repeat it on each active service (ECMA-241
+     * §7.2.1.3 note 3). The ASN.1 range includes 0 (ECMA-242 §6.3.1).
      * @public
      * @readonly
      */
     readonly nbOfMessages: OPTIONAL<NbOfMessages>;
     /**
      * @summary `originatingNr`.
+     * @description
+     *
+     * Optional PISN number of the user that left a message (ECMA-241 §7.2.1.3
+     * note 6).
      * @public
      * @readonly
      */
     readonly originatingNr: OPTIONAL<PartyNumber>;
     /**
      * @summary `timestamp`.
+     * @description
+     *
+     * Optional time at which a message was left (ECMA-241 §7.2.1.3 note 7).
      * @public
      * @readonly
      */
     readonly timestamp: OPTIONAL<TimeStamp>;
     /**
      * @summary `priority`.
+     * @description
+     *
+     * Optional priority of the highest-priority waiting message, 0 highest
+     * through 9 lowest. If the request was for all services, repeat it on each
+     * active service (ECMA-242 §6.3.1, ECMA-241 §7.2.1.3 note 4).
      * @public
      * @readonly
      */
     readonly priority: OPTIONAL<INTEGER>;
     /**
      * @summary `argumentExt`.
+     * @description
+     *
+     * Optional manufacturer-specific extension on `an interrogate result
+     * element`. ECMA-242 §6.3.1 defines `MWIExtSet` as `{...}` and names no
+     * member. It does not say when to send one extension rather than several.
      * @public
      * @readonly
      */

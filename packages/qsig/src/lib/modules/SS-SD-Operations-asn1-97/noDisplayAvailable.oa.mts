@@ -4,7 +4,13 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary noDisplayAvailable
  * @description
- * 
+ *
+ * `display` error, local code 1023, with no parameter. The Client User PINX
+ * sends it when no display is available at the Client User (ECMA-311
+ * §6.5.1.2.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-311/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

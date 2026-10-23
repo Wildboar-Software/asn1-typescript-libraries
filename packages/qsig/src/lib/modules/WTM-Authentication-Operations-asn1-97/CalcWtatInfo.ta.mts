@@ -9,7 +9,13 @@ import { CalcWtatInfoUnit, _decode_CalcWtatInfoUnit, _encode_CalcWtatInfoUnit } 
 /**
  * @summary CalcWtatInfo
  * @description
- * 
+ *
+ * From one to five SS-WTAT challenge and expected-response pairs (ECMA-306
+ * §6.3.1). When the result uses this choice, the Visitor PINX uses the values
+ * and does not calculate them (§6.5.6.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-306/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

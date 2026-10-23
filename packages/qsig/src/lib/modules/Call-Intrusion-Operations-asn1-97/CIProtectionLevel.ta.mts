@@ -4,7 +4,16 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CIProtectionLevel
  * @description
- * 
+ *
+ * Call Intrusion Protection Level (ECMA-203 §6.3.1; ECMA-202
+ * §6.2.1). Intrusion is accepted only when the calling user's CICL
+ * is higher than the CIPL of both the called user and the unwanted
+ * user (ECMA-203 §6.6.2.1.1; ECMA-202 §6.1.1). Values 0 and 3 are
+ * required; 1 and 2 are optional (ECMA-202 §6.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-203/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-202/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,7 +38,16 @@ enum _enum_for_CIProtectionLevel {
 /**
  * @summary CIProtectionLevel
  * @description
- * 
+ *
+ * Call Intrusion Protection Level (ECMA-203 §6.3.1; ECMA-202
+ * §6.2.1). Intrusion is accepted only when the calling user's CICL
+ * is higher than the CIPL of both the called user and the unwanted
+ * user (ECMA-203 §6.6.2.1.1; ECMA-202 §6.1.1). Values 0 and 3 are
+ * required; 1 and 2 are optional (ECMA-202 §6.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-203/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-202/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,7 +67,16 @@ type CIProtectionLevel = _enum_for_CIProtectionLevel;
 /**
  * @summary CIProtectionLevel
  * @description
- * 
+ *
+ * Call Intrusion Protection Level (ECMA-203 §6.3.1; ECMA-202
+ * §6.2.1). Intrusion is accepted only when the calling user's CICL
+ * is higher than the CIPL of both the called user and the unwanted
+ * user (ECMA-203 §6.6.2.1.1; ECMA-202 §6.1.1). Values 0 and 3 are
+ * required; 1 and 2 are optional (ECMA-202 §6.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-203/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-202/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -68,6 +95,15 @@ const CIProtectionLevel = _enum_for_CIProtectionLevel;
 
 /**
  * @summary CIProtectionLevel_lowProtection
+ * @description
+ *
+ * No protection. CIPL 0 (ECMA-202 §6.2.1; ECMA-203 §6.3.1). This is
+ * the numerically lowest value. §6.6.2.1.2 says to assume the lowest
+ * CIPL value if `callIntrusionGetCIPL` is rejected as unrecognized;
+ * it does not name this enumeration.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-203/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-202/
  * @constant
  * @type {number}
  */
@@ -76,6 +112,7 @@ const CIProtectionLevel_lowProtection: CIProtectionLevel = CIProtectionLevel.low
 
 /**
  * @summary lowProtection
+ * @description Alias of {@link CIProtectionLevel_lowProtection}.
  * @constant
  * @type {number}
  */
@@ -84,6 +121,13 @@ const lowProtection: CIProtectionLevel = CIProtectionLevel.lowProtection; /* SHO
 
 /**
  * @summary CIProtectionLevel_mediumProtection
+ * @description
+ *
+ * CIPL 1 (ECMA-203 §6.3.1). ECMA-202 §6.2.1 allows this value as an
+ * implementation option and gives it no further meaning.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-203/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-202/
  * @constant
  * @type {number}
  */
@@ -92,6 +136,7 @@ const CIProtectionLevel_mediumProtection: CIProtectionLevel = CIProtectionLevel.
 
 /**
  * @summary mediumProtection
+ * @description Alias of {@link CIProtectionLevel_mediumProtection}.
  * @constant
  * @type {number}
  */
@@ -100,6 +145,13 @@ const mediumProtection: CIProtectionLevel = CIProtectionLevel.mediumProtection; 
 
 /**
  * @summary CIProtectionLevel_highProtection
+ * @description
+ *
+ * CIPL 2 (ECMA-203 §6.3.1). ECMA-202 §6.2.1 allows this value as an
+ * implementation option and gives it no further meaning.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-203/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-202/
  * @constant
  * @type {number}
  */
@@ -108,6 +160,7 @@ const CIProtectionLevel_highProtection: CIProtectionLevel = CIProtectionLevel.hi
 
 /**
  * @summary highProtection
+ * @description Alias of {@link CIProtectionLevel_highProtection}.
  * @constant
  * @type {number}
  */
@@ -116,6 +169,12 @@ const highProtection: CIProtectionLevel = CIProtectionLevel.highProtection; /* S
 
 /**
  * @summary CIProtectionLevel_fullProtection
+ * @description
+ *
+ * Total protection. CIPL 3 (ECMA-202 §6.2.1; ECMA-203 §6.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-203/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-202/
  * @constant
  * @type {number}
  */
@@ -124,6 +183,7 @@ const CIProtectionLevel_fullProtection: CIProtectionLevel = CIProtectionLevel.fu
 
 /**
  * @summary fullProtection
+ * @description Alias of {@link CIProtectionLevel_fullProtection}.
  * @constant
  * @type {number}
  */

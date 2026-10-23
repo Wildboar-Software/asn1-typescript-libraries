@@ -16,7 +16,12 @@ import { PumrExtension, _decode_PumrExtension, _encode_PumrExtension } from "../
 /**
  * @summary PumInterrogArg
  * @description
- * 
+ *
+ * Argument of `pumInterrog` (ECMA-282 §6.3.1, §6.7). Sent to the Home PINX, or
+ * from the Home PINX to a Visitor PINX when session parameters are required.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-282/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -54,48 +59,92 @@ export
 class PumInterrogArg {
     /**
      * @summary `pumUserId`.
+     * @description
+     *
+     * PISN number, always a complete number, or an alternative identifier of
+     * the PUM user (§6.3.1, §6.7.1.1).
+     *
      * @public
      * @readonly
      */
     readonly pumUserId: PumInterrogArg_pumUserId;
     /**
      * @summary `basicService`.
+     * @description
+     *
+     * Specific basic service, or all basic services (ECMA-282 §6.3.1).
+     *
      * @public
      * @readonly
      */
     readonly basicService: BasicService;
     /**
      * @summary `hostingAddr`.
+     * @description
+     *
+     * PISN number of one hosting user; always a complete number. Omission means
+     * every hosting address of this PUM user and basic service (§6.3.1,
+     * §6.7.1.1). The Home PINX includes it when it interrogates one Visitor
+     * PINX session (§6.7.2.1).
+     *
      * @public
      * @readonly
      */
     readonly hostingAddr: OPTIONAL<PartyNumber>;
     /**
      * @summary `activatingUserAddr`.
+     * @description
+     *
+     * PISN number of the activating user; always a complete number (§6.3.1).
+     * The Remote PINX includes it (§6.7.3.1). The Home PINX checks it when it
+     * is present (§6.7.2.1). §6.7.1 is silent on the Visitor PINX sending it.
+     *
      * @public
      * @readonly
      */
     readonly activatingUserAddr: OPTIONAL<PartyNumber>;
     /**
      * @summary `serviceOption`.
+     * @description
+     *
+     * InCall, OutCall, or AllCall session to interrogate. The Visitor PINX
+     * includes the type the user asked about (§6.7.1.1). Optional in §6.3.1.
+     *
      * @public
      * @readonly
      */
     readonly serviceOption: OPTIONAL<ServiceOption>;
     /**
      * @summary `homeInfoOnly`.
+     * @description
+     *
+     * TRUE, the default, asks only for Home PINX information (`basicService`,
+     * `hostingAddr`, `serviceOption`). FALSE asks for complete information,
+     * including Visitor PINX session parameters (§6.3.1, §6.7.2.1).
+     *
      * @public
      * @readonly
      */
     readonly homeInfoOnly: OPTIONAL<BOOLEAN>;
     /**
      * @summary `userPin`.
+     * @description
+     *
+     * Optional PIN (ECMA-282 §6.3.1). §6.7 says validation of an interrogation
+     * can involve authentication and is silent on which PIN alternative is
+     * sent.
+     *
      * @public
      * @readonly
      */
     readonly userPin: OPTIONAL<PumInterrogArg_userPin>;
     /**
      * @summary `argExtension`.
+     * @description
+     *
+     * Manufacturer-specific data. `PUMRExtSet` assigns no extensions (ECMA-282
+     * §6.3.1).
+     *
      * @public
      * @readonly
      */

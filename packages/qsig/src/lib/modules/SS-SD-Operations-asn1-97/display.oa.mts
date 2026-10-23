@@ -9,7 +9,23 @@ import { notPresentable } from "../SS-SD-Operations-asn1-97/notPresentable.oa.mj
 /**
  * @summary display
  * @description
- * 
+ *
+ * Server User PINX to Client User PINX, local code 103. No return result. On
+ * request of the Server User, the PINX sends the display text as a BMP string
+ * (ECMA-311 §6.5.2.1.2). Use the call reference of an existing call-related or
+ * call-independent connection. If none exists and no call has to be
+ * established, the Server User sets up a call-independent connection (ECMA-165
+ * §7.3) and is responsible for clearing it. The Client User PINX presents the
+ * text in an appropriate format (§6.5.1.1.2). Errors, sent by the Client User
+ * PINX: `noDisplayAvailable`, `displayTemporarilyNotAvailable`,
+ * `notPresentable`, and `unspecified` (§6.5.1.2.2). Success carries no result.
+ * `ALWAYS RESPONDS FALSE` means a response is not required in every case; the
+ * Client User PINX still sends those errors when the display cannot be used.
+ * NFE destination is `endPINX`. The Interpretation APDU is omitted or
+ * `rejectAnyUnrecognizedInvokePdu` (§6.3.2.1). There is no timer (§6.9).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-311/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

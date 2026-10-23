@@ -5,13 +5,16 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
  * @summary notActivated
  * @description
  *
- * Imported by `MWI-Operations-asn1-97` from `General-Error-List`.
- * ITU-T Rec. Q.950 (06/1997) assigns local value 46. The 06/2000
- * module dropped this error; Q.950 (06/1997) is:
+ * Bound here as local value 46 because QSIG services import `notActivated` from
+ * General-Error-List. ITU-T Q.950 (06/2000) §5.1.3 does not export it. §5.1.4
+ * defines the same local value as a service-specific error: an indication of a
+ * call-diversion failure because the supplementary service has not been
+ * activated, used by Q.950 for diversion services. ECMA-165 Annex J §J.2 only
+ * names the module. A QSIG service that imports this error states its own
+ * condition for returning it; that condition is not defined here.
  *
- * ```
- * notActivated ERROR ::= 46
- * ```
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ * @see https://www.itu.int/rec/T-REC-Q.950/en
  *
  * ### ASN.1 Definition:
  *

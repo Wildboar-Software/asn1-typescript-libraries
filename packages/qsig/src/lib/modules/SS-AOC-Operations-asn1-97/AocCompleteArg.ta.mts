@@ -12,7 +12,14 @@ import { AocCompleteArg_completeArgExtension, _decode_AocCompleteArg_completeArg
 /**
  * @summary AocCompleteArg
  * @description
- * 
+ *
+ * Argument of `aocComplete`. Tells the Outgoing Gateway that user A is
+ * transferring and is about to leave the call (ECMA-212 §6.9.3.1.1, ECMA-211
+ * §9.2.1.11).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,18 +39,32 @@ export
 class AocCompleteArg {
     /**
      * @summary `chargedUser`.
+     * @description
+     *
+     * PISN number of user A (ECMA-211 table 10 note 1). It becomes the Called
+     * party number of the call-independent connection that later carries
+     * `aocFinal` (ECMA-212 §6.6.2.3.1, §6.9.3.1.1).
      * @public
      * @readonly
      */
     readonly chargedUser: PartyNumber;
     /**
      * @summary `chargingAssociation`.
+     * @description
+     *
+     * Include it when charging-association information is available (ECMA-212
+     * §6.9.3.1.1). The same value is copied into the later `aocFinal`.
      * @public
      * @readonly
      */
     readonly chargingAssociation: OPTIONAL<ChargingAssociation>;
     /**
      * @summary `completeArgExtension`.
+     * @description
+     *
+     * Optional manufacturer-specific extension on `aocComplete invoke`.
+     * ECMA-212 §6.3.1 defines `AOCExtSet` as `{...}` and names no member. It
+     * does not say when to send one extension rather than several.
      * @public
      * @readonly
      */

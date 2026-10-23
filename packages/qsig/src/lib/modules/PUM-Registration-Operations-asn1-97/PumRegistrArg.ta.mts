@@ -16,7 +16,12 @@ import { PumrExtension, _decode_PumrExtension, _encode_PumrExtension } from "../
 /**
  * @summary PumRegistrArg
  * @description
- * 
+ *
+ * Argument of `pumRegistr` (ECMA-282 §6.3.1, §6.5). Sent from the Visitor PINX
+ * to the Home PINX, or from a Remote PINX to the Visitor PINX.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-282/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -54,48 +59,91 @@ export
 class PumRegistrArg {
     /**
      * @summary `pumUserId`.
+     * @description
+     *
+     * PISN number, always a complete number, or an alternative identifier of
+     * the PUM user (§4.4, §6.3.1, §6.5.1.1).
+     *
      * @public
      * @readonly
      */
     readonly pumUserId: PumRegistrArg_pumUserId;
     /**
      * @summary `basicService`.
+     * @description
+     *
+     * Specific basic service, or all basic services (ECMA-282 §6.3.1).
+     *
      * @public
      * @readonly
      */
     readonly basicService: BasicService;
     /**
      * @summary `hostingAddr`.
+     * @description
+     *
+     * PISN number of the hosting user; always a complete number. It must be
+     * usable as the Called party number of a call or call-independent
+     * connection routed to that user (§6.3.1, §6.5.1.1).
+     *
      * @public
      * @readonly
      */
     readonly hostingAddr: PartyNumber;
     /**
      * @summary `activatingUserAddr`.
+     * @description
+     *
+     * PISN number of the activating user, the PUM user or an authorized user
+     * (§4.5); always a complete number. Required when a Remote PINX sends the
+     * invoke, and omitted otherwise (§6.3.1, §6.5.6.1).
+     *
      * @public
      * @readonly
      */
     readonly activatingUserAddr: OPTIONAL<PartyNumber>;
     /**
      * @summary `serviceOption`.
+     * @description
+     *
+     * InCall, OutCall, or AllCall (§6.3.1). Omission means InCall; the Home
+     * PINX then follows the InCall actions (§6.5.3.1).
+     *
      * @public
      * @readonly
      */
     readonly serviceOption: OPTIONAL<ServiceOption>;
     /**
      * @summary `sessionParams`.
+     * @description
+     *
+     * Optional limit on session duration, outgoing calls, or both. A Visitor
+     * PINX that supports the limit starts a timer or counter and sends
+     * `pumDe-reg` when the limit is reached (§6.5.1.1).
+     *
      * @public
      * @readonly
      */
     readonly sessionParams: OPTIONAL<SessionParams>;
     /**
      * @summary `userPin`.
+     * @description
+     *
+     * PIN supplied in the registration request (§6.5.1.1, §6.5.6.1). Omitted
+     * when the request has no PIN. Validation may use it to authenticate the
+     * user; clause 6 does not require a particular check.
+     *
      * @public
      * @readonly
      */
     readonly userPin: OPTIONAL<PumRegistrArg_userPin>;
     /**
      * @summary `argExtension`.
+     * @description
+     *
+     * Manufacturer-specific data. `PUMRExtSet` assigns no extensions (ECMA-282
+     * §6.3.1).
+     *
      * @public
      * @readonly
      */

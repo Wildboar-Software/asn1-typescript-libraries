@@ -5,7 +5,14 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary unspecified
  * @description
- * 
+ *
+ * ROSE local 1008. The parameter is one `Extension` from `SSCTExtSet`.
+ * Listed on `ssctInitiate`. ECMA-300 §6.3.1 and §6.5 do not define when
+ * this error is selected, nor the parameter contents (`SSCTExtSet` is
+ * an ellipsis).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-300/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

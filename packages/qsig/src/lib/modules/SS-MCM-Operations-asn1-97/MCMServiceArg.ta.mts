@@ -12,7 +12,14 @@ import { MCMExtensions, _decode_MCMExtensions, _encode_MCMExtensions } from "../
 /**
  * @summary MCMServiceArg
  * @description
- * 
+ *
+ * Argument of `mCMService` (ECMA-347 §6.5.2.1.1). Identifies
+ * the Served User and the Message Centre, and carries one
+ * request: activation, deactivation, or reset to the
+ * service-provider default.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,18 +37,30 @@ export
 class MCMServiceArg {
     /**
      * @summary `partyInfo`.
+     * @description
+     *
+     * Served User address and Message Centre identity.
+     * ECMA-347 §6.5.2.1.1.
      * @public
      * @readonly
      */
     readonly partyInfo: PartyInfo;
     /**
      * @summary `mCMChange`.
+     * @description
+     *
+     * Activation, deactivation, or reset to the provider
+     * default. ECMA-347 §6.5.2.1.1.
      * @public
      * @readonly
      */
     readonly mCMChange: MCMChange;
     /**
      * @summary `extensions`.
+     * @description
+     *
+     * Manufacturer-specific extension. `MCMExtSet` defines none.
+     * The procedures do not mention this component. ECMA-347 §6.3.1.
      * @public
      * @readonly
      */

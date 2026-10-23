@@ -10,7 +10,15 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary activateDiversionQ_ResultType
  * @description
- * 
+ *
+ * Result of a successful `activateDiversionQ`. Sent when the Served User PINX
+ * accepts activation (ECMA-174 §6.5.3.1.1). `null` carries no standardized
+ * information. `single` and `multiple` are manufacturer-specific extensions
+ * from `DiversionExtensionSet`, which is empty in this Standard (ECMA-174
+ * §6.3.1). The procedures do not define result contents.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

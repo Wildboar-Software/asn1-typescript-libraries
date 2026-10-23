@@ -5,7 +5,23 @@ import { CintInformation1Arg, _decode_CintInformation1Arg, _encode_CintInformati
 /**
  * @summary cintLegInformation1
  * @description
- * 
+ *
+ * Interception notification from the Intercepting PINX to the
+ * Originating PINX (ECMA-221 §6.3.1, §6.6.3). No result. On
+ * interception immediate it is sent in FACILITY when the new call is
+ * started (§6.6.4.1). On interception delayed it is sent when the
+ * intercepted-to leg alerts, waits on busy, or connects (§6.6.5.1).
+ * The Originating PINX may tell the calling user that the call was
+ * intercepted, but shall not present `interceptedToNumber` until a
+ * later `divertingLegInformation3` has `presentationIndicator` TRUE.
+ * A further interception's cause is not forwarded; its intercepted-to
+ * number may replace the one sent here (§6.6.5.1). ROSE local
+ * CODE 66. NFE `destinationEntity` is `endPINX`. Interpretation APDU
+ * is `discardAnyUnrecognisedInvokePdu` (§6.3.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-221/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-220/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -5,7 +5,20 @@ import { CallIdentificationUpdateArg, _decode_CallIdentificationUpdateArg, _enco
 /**
  * @summary callIdentificationUpdate
  * @description
- * 
+ *
+ * Replace stored call-identification data (ECMA-314 §6.5.2.1). No result.
+ * Elements whose values changed shall be included; elements that did not
+ * change may also be included. Several updated values between the same PINXs
+ * go in one invoke. A received legID is ignored. On globalCallID or threadID
+ * the receiver stores the value and, if it is not the End PINX, forwards it.
+ * During simultaneous-assignment supervision, the higher binary linkage
+ * identifier wins, then the later timestamp, then the higher
+ * switchingSubDomainName (§6.5.2.2). ROSE local CODE 106. NFE
+ * destinationEntity is anyTypeOfPINX. The Interpretation APDU is
+ * discardAnyUnrecognisedInvokePdu (§6.3.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-314/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

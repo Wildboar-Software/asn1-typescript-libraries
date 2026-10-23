@@ -5,7 +5,13 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary unspecified
  * @description
- * 
+ *
+ * Local error code 1008. The parameter is a manufacturer-specific extension
+ * (ECMA-304 §6.3.1). Listed for `wtmiEnquiry` and `wtmiDivert`. §6.3.1 does not
+ * state a condition for returning it.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-304/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

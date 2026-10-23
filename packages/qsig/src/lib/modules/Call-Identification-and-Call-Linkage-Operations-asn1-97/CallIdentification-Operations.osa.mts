@@ -6,7 +6,13 @@ import { callIdentificationUpdate } from "../Call-Identification-and-Call-Linkag
 /**
  * @summary CallIdentification_Operations
  * @description
- * 
+ *
+ * Operations of module
+ * Call-Identification-and-Call-Linkage-Operations-asn1-97 (ECMA-314 §6.3.1,
+ * Table 1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-314/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

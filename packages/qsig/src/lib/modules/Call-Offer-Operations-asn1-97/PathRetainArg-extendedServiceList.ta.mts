@@ -11,7 +11,13 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary PathRetainArg_extendedServiceList
  * @description
- * 
+ *
+ * `pathRetain` argument carrying a service list and one
+ * manufacturer-specific extension (ECMA-192 §6.3.1). §A.5 does not
+ * say when this is sent instead of `serviceList` alone.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-192/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +33,22 @@ export
 class PathRetainArg_extendedServiceList {
     /**
      * @summary `serviceList`.
+     * @description
+     *
+     * Services for which the connection should be retained. A bit set
+     * to ONE requests retention; other bits are ZERO (ECMA-192
+     * §A.5.1). Bits other than those named in §6.3.1 may request other
+     * supplementary services (§A.3.1).
      * @public
      * @readonly
      */
     readonly serviceList: ServiceList;
     /**
      * @summary `extension`.
+     * @description
+     *
+     * Manufacturer-specific extension from `COExtSet`. ECMA-192 §6.3.1
+     * leaves that set empty, and §A.5 does not define this component.
      * @public
      * @readonly
      */

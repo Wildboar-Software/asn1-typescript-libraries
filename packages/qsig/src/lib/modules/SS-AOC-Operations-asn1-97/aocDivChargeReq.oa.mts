@@ -5,7 +5,19 @@ import { AocDivChargeReqArg, _decode_AocDivChargeReqArg, _encode_AocDivChargeReq
 /**
  * @summary aocDivChargeReq
  * @description
- * 
+ *
+ * Call Diversion interaction, local code 65, no return result. Used only when
+ * the diverting user is charged for the diverted call (ECMA-212 §6.6.2.4). If
+ * final charge provision is required, the Served User PINX sends this invoke in
+ * the same FACILITY message as `callRerouting` (§6.9.4.1). The Rerouting PINX
+ * forwards it in the SETUP that carries `divertingLegInformation2` (§6.9.4.2).
+ * The later `aocFinal` uses a call-independent connection routed from
+ * `divertingUser` (§6.6.2.4.1). Interpretation APDU is
+ * `discardAnyUnrecognisedInvokePdu` (§6.3.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -13,7 +13,14 @@ import { AocDivChargeReqArg_aocDivChargeReqArgExt, _decode_AocDivChargeReqArg_ao
 /**
  * @summary AocDivChargeReqArg
  * @description
- * 
+ *
+ * Argument of `aocDivChargeReq`: who is diverting, which diversion service was
+ * invoked, and an optional association for the later final charge (ECMA-212
+ * §6.9.4.1, ECMA-211 §9.2.1.12).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,24 +41,42 @@ export
 class AocDivChargeReqArg {
     /**
      * @summary `divertingUser`.
+     * @description
+     *
+     * PISN number of the diverting user (ECMA-212 §6.9.4.1). It routes the
+     * later call-independent `aocFinal` (§6.6.2.4.1).
      * @public
      * @readonly
      */
     readonly divertingUser: PartyNumber;
     /**
      * @summary `chargingAssociation`.
+     * @description
+     *
+     * Optional association copied into `aocFinal` when present (ECMA-212
+     * §6.6.2.4.1). ECMA-211 §9.2.1.12 note 2 includes it when a charge
+     * identifier was supplied for call deflection.
      * @public
      * @readonly
      */
     readonly chargingAssociation: OPTIONAL<ChargingAssociation>;
     /**
      * @summary `diversionType`.
+     * @description
+     *
+     * The diversion service invoked at the Served User PINX (ECMA-212
+     * §6.9.4.1).
      * @public
      * @readonly
      */
     readonly diversionType: DiversionType;
     /**
      * @summary `aocDivChargeReqArgExt`.
+     * @description
+     *
+     * Optional manufacturer-specific extension on `aocDivChargeReq`. ECMA-212
+     * §6.3.1 defines `AOCExtSet` as `{...}` and names no member. It does not
+     * say when to send one extension rather than several.
      * @public
      * @readonly
      */

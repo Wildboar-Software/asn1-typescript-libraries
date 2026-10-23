@@ -5,7 +5,19 @@ import { PathRetainArg, _decode_PathRetainArg, _encode_PathRetainArg } from "../
 /**
  * @summary pathRetain
  * @description
- * 
+ *
+ * Asks the Terminating PINX to retain the network connection if a
+ * selected supplementary service becomes invokable (ECMA-203
+ * Annex A). The Originating PINX sends the invoke in SETUP
+ * (§A.5.1). No result. Local code 41. Other supplementary services
+ * may reuse it with other argument values (§6.3.1). NFE destination
+ * is the end PINX; the Interpretation APDU is
+ * `discardAnyUnrecognisedInvokePdu` (§A.3.2). For SS-CI one of
+ * `ci-low`, `ci-medium`, or `ci-high` is set to ONE (§6.9.7).
+ * §6.3.1 does not say which of those bits matches which CICL.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-203/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -11,7 +11,15 @@ import { DNDActivateRes_resultExtension, _decode_DNDActivateRes_resultExtension,
 /**
  * @summary DNDActivateRes
  * @description
- * 
+ *
+ * Acceptance of remote SS-DND activation (ECMA-194 §6.5.6.1.1;
+ * ECMA-193 §8.2.1.6). Returned only when the request is accepted;
+ * rejection is a return error. `status` lists the basic services
+ * activated and, optionally, each DNDPL (NOTE 20, NOTE 24).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-194/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-193/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +41,21 @@ export
 class DNDActivateRes {
     /**
      * @summary `status`.
+     * @description
+     *
+     * Basic services for which SS-DND has been activated, each with
+     * an optional DNDPL (ECMA-193 §8.2.1.6 NOTE 20, NOTE 24).
+     * ECMA-194 does not say when this element is omitted.
      * @public
      * @readonly
      */
     readonly status: OPTIONAL<DNDActivateRes_status_Item[]>;
     /**
      * @summary `resultExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-194 §6.3.1 defines the
+     * CHOICE and leaves `DNDExtSet` empty.
      * @public
      * @readonly
      */

@@ -9,7 +9,17 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CallIdentity
  * @description
- * 
+ *
+ * One to four numeric characters identifying the secondary call at the
+ * Secondary PINX during transfer by rerouteing. It need not be
+ * significant outside that PINX. The Transferring PINX copies it
+ * unchanged into `callTransferInitiate`, and the Primary PINX copies
+ * it unchanged into `callTransferSetup`. ECMA-178 §6.5.1.3, §6.5.3.3;
+ * ECMA-177 §8.2.1.2.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-178/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-177/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

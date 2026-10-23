@@ -9,7 +9,14 @@ import { AOCSCurrencyInfoList, _decode_AOCSCurrencyInfoList, _encode_AOCSCurrenc
 /**
  * @summary AocRateArg_aocRate
  * @description
- * 
+ *
+ * `chargeNotAvailable` means charging-rate information is not available
+ * (ECMA-211 §A.1.1). `aocSCurrencyInfoList` is one to ten charged items with
+ * their rates. An unavailable rate is not free of charge (ECMA-211 §6.2.3.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -5,7 +5,25 @@ import { CcExtension, _decode_CcExtension, _encode_CcExtension } from "../SS-CC-
 /**
  * @summary ccSuspend
  * @description
- * 
+ *
+ * Postpones SS-CC because User A is busy (ECMA-186 §6.5.2.1.7,
+ * §6.5.2.1.8, §6.5.2.1.9). The Originating PINX sends it. No result.
+ * Local code 32.
+ *
+ * Without path reservation: FACILITY on a retained signalling
+ * connection, or CONNECT when the connection-release method was in
+ * use. That CONNECT switches the request to connection retention.
+ * Before a path exists, the invoke is optional, in RELEASE or
+ * FACILITY. After a path has been reserved, it is in the DISCONNECT
+ * that releases the path.
+ *
+ * The Terminating PINX enters CC-Suspended-User-B. If the invoke
+ * arrives in DISCONNECT during CC-Path-Complete, it releases the
+ * path and returns to CC-Await-Call-Completion (§6.5.3.1.7). §6.5
+ * does not say whether the argument is `fullArg` or `extArg`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-186/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

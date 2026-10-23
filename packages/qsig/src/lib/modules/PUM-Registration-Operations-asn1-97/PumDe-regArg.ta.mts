@@ -15,7 +15,12 @@ import { PumrExtension, _decode_PumrExtension, _encode_PumrExtension } from "../
 /**
  * @summary PumDe_regArg
  * @description
- * 
+ *
+ * Argument of `pumDe-reg` (ECMA-282 §6.3.1, §6.6). Identifies the user and
+ * which sessions to clear.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-282/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -60,42 +65,81 @@ export
 class PumDe_regArg {
     /**
      * @summary `pumUserId`.
+     * @description
+     *
+     * PISN number, always a complete number, or an alternative identifier of
+     * the PUM user (§6.3.1, §6.6.1.1).
+     *
      * @public
      * @readonly
      */
     readonly pumUserId: PumDe_regArg_pumUserId;
     /**
      * @summary `basicService`.
+     * @description
+     *
+     * Basic service to de-register, or all basic services (§6.3.1, §6.6.1.1).
+     *
      * @public
      * @readonly
      */
     readonly basicService: BasicService;
     /**
      * @summary `hostingAddr`.
+     * @description
+     *
+     * PISN number of the hosting user; always a complete number. Omitted for
+     * InCall. Optional for OutCall and AllCall (§6.3.1). If omitted with
+     * OutCall, every OutCall session of this user is cleared. If omitted with
+     * AllCall, the AllCall session and every OutCall session are cleared. A
+     * present value limits de-registration to that hosting address (§6.6.2.1).
+     *
      * @public
      * @readonly
      */
     readonly hostingAddr: OPTIONAL<PartyNumber>;
     /**
      * @summary `activatingUserAddr`.
+     * @description
+     *
+     * PISN number of the activating user; always a complete number. Required
+     * when a Remote PINX sends the invoke, and omitted otherwise (§6.3.1,
+     * §6.6.4.1). The Home PINX checks it when it is present (§6.6.2.1).
+     *
      * @public
      * @readonly
      */
     readonly activatingUserAddr: OPTIONAL<PartyNumber>;
     /**
      * @summary `serviceOption`.
+     * @description
+     *
+     * InCall, OutCall, or AllCall session to clear (§6.3.1). Omission means
+     * InCall (§6.6.2.1).
+     *
      * @public
      * @readonly
      */
     readonly serviceOption: OPTIONAL<ServiceOption>;
     /**
      * @summary `userPin`.
+     * @description
+     *
+     * PIN supplied with the de-registration request. The activating user's PIN
+     * is sent on a remote request (§6.6.1.1, §6.6.4.1). Omitted when no PIN was
+     * supplied.
+     *
      * @public
      * @readonly
      */
     readonly userPin: OPTIONAL<PumDe_regArg_userPin>;
     /**
      * @summary `argExtension`.
+     * @description
+     *
+     * Manufacturer-specific data. `PUMRExtSet` assigns no extensions (ECMA-282
+     * §6.3.1).
+     *
      * @public
      * @readonly
      */

@@ -11,7 +11,14 @@ import { MCMExtensions, _decode_MCMExtensions, _encode_MCMExtensions } from "../
 /**
  * @summary MCMInterrogateRes
  * @description
- * 
+ *
+ * Result of `mCMInterrogate` (ECMA-347 §6.5.1.1.1). For
+ * every Message Type in the invoke, whether complete or
+ * compressed information is provided for new messages,
+ * retrieved messages, or both.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +35,20 @@ export
 class MCMInterrogateRes {
     /**
      * @summary `interrogateResult`.
+     * @description
+     *
+     * One entry per Message Type named in the invoke.
+     * ECMA-347 §6.5.1.1.1.
      * @public
      * @readonly
      */
     readonly interrogateResult: MCMServiceInfo[];
     /**
      * @summary `extensions`.
+     * @description
+     *
+     * Manufacturer-specific extension. `MCMExtSet` defines none.
+     * The procedures do not mention this component. ECMA-347 §6.3.1.
      * @public
      * @readonly
      */

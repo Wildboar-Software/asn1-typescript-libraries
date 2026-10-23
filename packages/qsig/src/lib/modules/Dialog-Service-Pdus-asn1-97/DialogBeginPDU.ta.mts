@@ -11,7 +11,16 @@ import { RemoteOperationsPortion, _decode_RemoteOperationsPortion, _encode_Remot
 /**
  * @summary DialogBeginPDU
  * @description
- * 
+ *
+ * Opens a dialogue (ECMA-165 §8.4.1.1). The initiator chooses an origination
+ * identifier that distinguishes this dialogue from its others, may include ROSE
+ * or ACSE APDUs, starts timer T_Originating_Dialogue (Table 13), and enters
+ * Initiate sending. The receiver checks the identifier, saves it, and enters
+ * Initiate receiving (§8.4.2.1). An invalid identifier is discarded and the
+ * receiver stays Idle.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +36,23 @@ export
 class DialogBeginPDU {
     /**
      * @summary `originationDialogId`.
+     * @description
+     *
+     * Dialogue identifier selected by the initiating PINX. It must distinguish
+     * this dialogue from any other dialogue that PINX is in (ECMA-165
+     * §8.4.1.1).
      * @public
      * @readonly
      */
     readonly originationDialogId: OriginationDialogId;
     /**
      * @summary `remoteOperationsPortion`.
+     * @description
+     *
+     * Optional ROSE or ACSE APDUs belonging to this dialogue (ECMA-165 §8.4). A
+     * DialogAbortPDU does not carry this element. §8.4 says one or more ROSE
+     * APDUs or one or more ACSE APDUs; it does not discuss mixing the two in
+     * one portion.
      * @public
      * @readonly
      */

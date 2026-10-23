@@ -9,7 +9,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ShortMessageTextType
  * @description
- * 
+ *
+ * How to read `shortMessageTextData` (ECMA-325 §E.1.3.4). Range 0..8. Only 0
+ * to 3 are named. The standard is silent on values 4 to 8.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,14 +31,20 @@ type ShortMessageTextType = INTEGER;
 
 /**
  * @summary ShortMessageTextType_iA5Coded
+ * @description
+ *
+ * Value 0. IA5 text, 0 to 140 octets, at most 160 characters (ECMA-325
+ * §E.1.3.4.1).
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
  */
 export
 const ShortMessageTextType_iA5Coded: ShortMessageTextType = 0; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary ShortMessageTextType_iA5Coded
+ * @summary iA5Coded
+ * @description Alias of {@link ShortMessageTextType_iA5Coded}.
  * @constant
  * @type {number}
  */
@@ -42,14 +53,20 @@ const iA5Coded: ShortMessageTextType = ShortMessageTextType_iA5Coded; /* SHORT_N
 
 /**
  * @summary ShortMessageTextType_octetCoded
+ * @description
+ *
+ * Value 1. Octet-coded text, 0 to 140 octets, at most 140 characters (ECMA-325
+ * §E.1.3.4.2).
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
  */
 export
 const ShortMessageTextType_octetCoded: ShortMessageTextType = 1; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary ShortMessageTextType_octetCoded
+ * @summary octetCoded
+ * @description Alias of {@link ShortMessageTextType_octetCoded}.
  * @constant
  * @type {number}
  */
@@ -58,14 +75,20 @@ const octetCoded: ShortMessageTextType = ShortMessageTextType_octetCoded; /* SHO
 
 /**
  * @summary ShortMessageTextType_uniCoded
+ * @description
+ *
+ * Value 2. ISO/IEC 10646-1 text, 0 to 140 octets, at most 70 characters
+ * (ECMA-325 §E.1.3.4.3).
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
  */
 export
 const ShortMessageTextType_uniCoded: ShortMessageTextType = 2; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary ShortMessageTextType_uniCoded
+ * @summary uniCoded
+ * @description Alias of {@link ShortMessageTextType_uniCoded}.
  * @constant
  * @type {number}
  */
@@ -74,14 +97,21 @@ const uniCoded: ShortMessageTextType = ShortMessageTextType_uniCoded; /* SHORT_N
 
 /**
  * @summary ShortMessageTextType_compressedCoded
+ * @description
+ *
+ * Value 3. Compressed text, 0 to 140 octets, including the GSM 03.42
+ * compressed-data header and footer. `compressed` shall be TRUE (ECMA-325
+ * §E.1.3.4.4).
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
  */
 export
 const ShortMessageTextType_compressedCoded: ShortMessageTextType = 3; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary ShortMessageTextType_compressedCoded
+ * @summary compressedCoded
+ * @description Alias of {@link ShortMessageTextType_compressedCoded}.
  * @constant
  * @type {number}
  */

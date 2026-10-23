@@ -10,7 +10,16 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary DummyArg
  * @description
- * 
+ *
+ * Argument of `callTransferIdentify` and `callTransferAbandon`.
+ * Identify's request has no service elements (ECMA-177 §8.2.1.2) and
+ * abandon has none (ECMA-177 §8.2.1.3.2). `null` is that empty
+ * argument. `single` and `multiple` carry manufacturer extensions.
+ * ECMA-178 §6.3.1 defines no members of `CTExtSet`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-178/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-177/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

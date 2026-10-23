@@ -14,7 +14,12 @@ import { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "
 /**
  * @summary CtatParamRes
  * @description
- * 
+ *
+ * Result of `getCtatParam` and of `ctatParamEnq`. The Home PINX returns the
+ * parameters received from the Authentication Server PINX (ECMA-243 §6.5.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-243/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +35,19 @@ export
 class CtatParamRes {
     /**
      * @summary `ctatParamInfo`.
+     * @description
+     *
+     * Session key, or precomputed challenge and response values, with the
+     * algorithm in use (ECMA-243 §6.5.6.1, §6.5.7.1).
      * @public
      * @readonly
      */
     readonly ctatParamInfo: CtatParamInfo;
     /**
      * @summary `dummyExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-243 §6.3.1 defines none.
      * @public
      * @readonly
      */

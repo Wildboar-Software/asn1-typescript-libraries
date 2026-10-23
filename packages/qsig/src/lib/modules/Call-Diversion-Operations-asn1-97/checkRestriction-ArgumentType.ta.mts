@@ -12,7 +12,12 @@ import { _decode_checkRestriction_ArgumentType_extension, _encode_checkRestricti
 /**
  * @summary checkRestriction_ArgumentType
  * @description
- * 
+ *
+ * Argument of `checkRestriction`, from the Served User PINX to the Diverted-to
+ * PINX (ECMA-174 §6.3.1, §6.5.3.1.4).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,24 +38,40 @@ export
 class checkRestriction_ArgumentType {
     /**
      * @summary `servedUserNr`.
+     * @description
+     *
+     * Served user from whom diversion to `divertedToNr` is proposed (ECMA-174
+     * §6.5.5.1.2).
      * @public
      * @readonly
      */
     readonly servedUserNr: PartyNumber;
     /**
      * @summary `basicService`.
+     * @description
+     *
+     * Basic service checked for a restriction that would prevent diversion
+     * (ECMA-174 §6.5.5.1.2).
      * @public
      * @readonly
      */
     readonly basicService: BasicService;
     /**
      * @summary `divertedToNr`.
+     * @description
+     *
+     * Number of the intended diverted-to user. The Diverted-to PINX checks that
+     * this number exists (ECMA-174 §6.5.5.1.2).
      * @public
      * @readonly
      */
     readonly divertedToNr: PartyNumber;
     /**
      * @summary `extension`.
+     * @description
+     *
+     * Manufacturer-specific extension from `DiversionExtensionSet`. The
+     * standardized set is empty (ECMA-174 §6.3.1).
      * @public
      * @readonly
      */

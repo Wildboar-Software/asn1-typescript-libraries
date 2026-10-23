@@ -13,7 +13,13 @@ import { MIDExtensions, _decode_MIDExtensions, _encode_MIDExtensions } from "../
 /**
  * @summary MIDMailboxIDArg
  * @description
- * 
+ *
+ * Argument of `mIDMailboxID` (ECMA-347 §7.5.1.1.2). The
+ * mailbox identifier is required. Message Type and the
+ * Served User's name are optional.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,24 +38,40 @@ export
 class MIDMailboxIDArg {
     /**
      * @summary `partyInfo`.
+     * @description
+     *
+     * Served User address, Message Centre identity, and an
+     * optional Message Type. ECMA-347 §7.5.1.1.2.
      * @public
      * @readonly
      */
     readonly partyInfo: PartyInfo;
     /**
      * @summary `servedUserName`.
+     * @description
+     *
+     * Name of the Served User, when sent.
+     * ECMA-347 §7.5.1.1.2.
      * @public
      * @readonly
      */
     readonly servedUserName: OPTIONAL<Name>;
     /**
      * @summary `mailBox`.
+     * @description
+     *
+     * Identifier of the mailbox, for example its name.
+     * Required on this operation. ECMA-347 §7.5.1.1.2.
      * @public
      * @readonly
      */
     readonly mailBox: String;
     /**
      * @summary `extensions`.
+     * @description
+     *
+     * Manufacturer-specific extension. `MIDExtSet` defines none.
+     * The procedures do not mention this component. ECMA-347 §7.3.1.
      * @public
      * @readonly
      */

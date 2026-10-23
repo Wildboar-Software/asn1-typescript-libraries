@@ -5,7 +5,19 @@ import { PathRetainArg, _decode_PathRetainArg, _encode_PathRetainArg } from "../
 /**
  * @summary pathRetain
  * @description
- * 
+ *
+ * Ask the Terminating PINX to retain the network connection if it
+ * meets the conditions for one or more listed supplementary services
+ * (ECMA-194 Annex A §A.1, §A.5.1). Sent in SETUP. No result. For
+ * SS-DNDO, a `dndo-low`, `dndo-medium`, or `dndo-high` bit asks for
+ * retention when DNDPL is strictly less than the DNDOCL selected by
+ * that bit (§6.6.1.1). Other bits request retention for other
+ * supplementary services (§A.3.1). ROSE local CODE 41. The
+ * Interpretation APDU is `discardAnyUnrecognisedInvokePdu`; NFE
+ * `destinationEntity` is `endPINX` (§A.3.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-194/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

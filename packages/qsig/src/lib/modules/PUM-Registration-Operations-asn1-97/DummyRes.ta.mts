@@ -10,7 +10,13 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary DummyRes
  * @description
- * 
+ *
+ * Result that carries no SS-PUMR parameters (ECMA-282 §6.3.1). Used by
+ * `pumDelReg` and `pumDe-reg`. `null` has no parameters. `extension` is one
+ * manufacturer extension from `PUMRExtSet`; `sequOfExtn` is a sequence of them.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-282/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

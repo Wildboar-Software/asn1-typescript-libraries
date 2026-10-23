@@ -10,7 +10,19 @@ import { ChargeIdentifier, _decode_ChargeIdentifier, _encode_ChargeIdentifier } 
 /**
  * @summary ChargingAssociation
  * @description
- * 
+ *
+ * Information that ties final charge information to the call (ECMA-212 §4.2.6).
+ * `chargeIdentifier` is an integer meaningful only to the user. `chargeNumber`
+ * is a party number that is not evaluated as a directory number (ECMA-211
+ * §9.2.1.5). When the element was present on `aocComplete` or
+ * `aocDivChargeReq`, the same value is copied into `aocFinal` (ECMA-212
+ * §6.6.2.3.1, §6.6.2.4.1). ECMA-211 §9.2.1.9 lists charged number and charge
+ * identifier as separate optional elements; this module encodes them as
+ * alternatives, so only one can be sent.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

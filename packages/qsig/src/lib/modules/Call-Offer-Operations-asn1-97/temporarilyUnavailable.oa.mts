@@ -4,7 +4,14 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary temporarilyUnavailable
  * @description
- * 
+ *
+ * Conditions for invoking SS-CO are momentarily not met (ECMA-192
+ * §6.3.1). Local code 1000. §6.6.2.2 requires an error other than
+ * `notBusy` when the called user is busy but SS-CO cannot be
+ * invoked, and does not name this error for that case.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-192/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

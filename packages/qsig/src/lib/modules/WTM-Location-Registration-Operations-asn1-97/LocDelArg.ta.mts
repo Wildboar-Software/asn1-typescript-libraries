@@ -12,7 +12,12 @@ import { LrExtension, _decode_LrExtension, _encode_LrExtension } from "../WTM-Lo
 /**
  * @summary LocDelArg
  * @description
- * 
+ *
+ * Argument of `locDelete` (ECMA-302 §6.3.1, §6.5.4.1). Selects the VDB entry to
+ * remove.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-302/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,18 +34,32 @@ export
 class LocDelArg {
     /**
      * @summary `wtmUserId`.
+     * @description
+     *
+     * Identity whose previous VDB entry is deleted (§6.5.6.1).
+     *
      * @public
      * @readonly
      */
     readonly wtmUserId: WtmUserId;
     /**
      * @summary `basicService`.
+     * @description
+     *
+     * Basic service of that entry. Omission means `allServices` (§6.3.1). The
+     * previous Visitor PINX checks it only when it is present (§6.5.6.1).
+     *
      * @public
      * @readonly
      */
     readonly basicService: OPTIONAL<BasicService>;
     /**
      * @summary `argExtension`.
+     * @description
+     *
+     * Manufacturer-specific data. `WTMLRExtSet` assigns no extensions (ECMA-302
+     * §6.3.1).
+     *
      * @public
      * @readonly
      */

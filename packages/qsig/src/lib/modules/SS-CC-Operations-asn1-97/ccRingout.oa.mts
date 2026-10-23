@@ -8,7 +8,24 @@ import { unspecified } from "../SS-CC-Operations-asn1-97/unspecified.oa.mjs";
 /**
  * @summary ccRingout
  * @description
- * 
+ *
+ * User A has accepted SS-CC recall (ECMA-186 §6.5.2.1.5,
+ * §6.5.2.1.6). No result. Local code 31. Without path reservation
+ * the invoke is in the SETUP of the CC call. With path reservation
+ * it is in a FACILITY on the reserved path. The Terminating PINX
+ * extends the call to User B if User B is still free (§6.5.3.1.5,
+ * §6.5.3.1.6). §6.5 does not say which `CcExtension` alternative is
+ * sent.
+ *
+ * `remoteUserBusyAgain`, with cause 17, means User B is busy again
+ * (§6.5.3.2.4). The request is kept only when service retention is
+ * in use. `failureToMatch` means the call matches no request in
+ * CC-Await-Call-Completion (§6.5.3.2.2). Receipt of `unspecified`
+ * makes the Originating PINX delete the request (§6.5.2.2.6).
+ * §6.5.3 does not say when `unspecified` is sent.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-186/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

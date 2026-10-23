@@ -10,7 +10,15 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary DummyRes
  * @description
- * 
+ *
+ * Result of `mWIActivate` and `mWIDeactivate`: acceptance, with no further
+ * elements (ECMA-241 §7.2.1.1 note 8). `null` carries nothing. The extension
+ * alternatives are manufacturer-specific; ECMA-242 §6.3.1 does not say when to
+ * use them. A rejection is a return error, not this result.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -4,7 +4,12 @@ import { EXTENSION } from "../Manufacturer-specific-service-extension-class-asn1
 /**
  * @summary NameExtensionSet
  * @description
- * 
+ *
+ * Manufacturer-specific extensions for a name. The standardized set is empty
+ * (ECMA-164 §6.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-164/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

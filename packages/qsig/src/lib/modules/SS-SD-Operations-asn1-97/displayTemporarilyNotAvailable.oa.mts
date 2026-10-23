@@ -4,7 +4,15 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary displayTemporarilyNotAvailable
  * @description
- * 
+ *
+ * `display` error, local code 1024, with no parameter. The Client User PINX
+ * sends it when the Client User's display is in use by another process
+ * (ECMA-311 §6.5.1.2.2). The procedure text spells the error
+ * `DisplayTemporarilyNotAvailable`; the ASN.1 identifier is
+ * `displayTemporarilyNotAvailable`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-311/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

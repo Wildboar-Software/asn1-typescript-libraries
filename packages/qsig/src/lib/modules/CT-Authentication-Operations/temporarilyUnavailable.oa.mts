@@ -7,7 +7,14 @@ import type { ERROR } from "@wildboar/rose";
 /**
  * @summary temporarilyUnavailable
  * @description
- * 
+ *
+ * Local error code 1000, with no parameter (ECMA-243 §6.3.1). The Visitor PINX
+ * returns it when the CTM user does not answer an SS-CTAT request (§6.5.5.2).
+ * The Home PINX returns it for `getCtatParam` when the parameter fetch times
+ * out (§6.5.2.2), and for `getCtanParam` when timer T5 expires (§7.5.2.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-243/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

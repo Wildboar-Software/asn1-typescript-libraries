@@ -9,7 +9,15 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CommandType
  * @description
- * 
+ *
+ * Operation a Command asks the Service Centre to perform on a stored Short
+ * Message (ECMA-325 §E.10.4, §6.5.3.1.2). Range 0..255. Values 4 to 223 are
+ * reserved. Values 224 to 255 are specific to each Service Centre.
+ * `statusReportRequest` is TRUE for `enquiry` and FALSE for the other named
+ * types (§E.10.6).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,14 +34,22 @@ type CommandType = INTEGER;
 
 /**
  * @summary CommandType_enquiry
+ * @description
+ *
+ * Value 0. The Service Centre generates a Status Report even when its stored
+ * Status Report flags are clear (ECMA-325 §6.5.3.1.2). The report's
+ * `messageReference` is this command's `messageNumber` (§6.5.3.1.3).
+ * `statusReportRequest` shall be TRUE (§E.10.6).
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
  */
 export
 const CommandType_enquiry: CommandType = 0; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary CommandType_enquiry
+ * @summary enquiry
+ * @description Alias of {@link CommandType_enquiry}.
  * @constant
  * @type {number}
  */
@@ -42,14 +58,21 @@ const enquiry: CommandType = CommandType_enquiry; /* SHORT_NAMED_INTEGER_VALUE *
 
 /**
  * @summary CommandType_cancelSRR
+ * @description
+ *
+ * Value 1. The Service Centre clears Status Report requests for every
+ * condition on the identified Short Message (ECMA-325 §6.5.3.1.2).
+ * `statusReportRequest` shall be FALSE (§E.10.6).
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
  */
 export
 const CommandType_cancelSRR: CommandType = 1; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary CommandType_cancelSRR
+ * @summary cancelSRR
+ * @description Alias of {@link CommandType_cancelSRR}.
  * @constant
  * @type {number}
  */
@@ -58,14 +81,22 @@ const cancelSRR: CommandType = CommandType_cancelSRR; /* SHORT_NAMED_INTEGER_VAL
 
 /**
  * @summary CommandType_deletePreviouslySubmittedSM
+ * @description
+ *
+ * Value 2. The Service Centre deletes the identified Short Message and, if a
+ * Status Report is due for that condition, requests status
+ * `smDeletedByOriginatingSME` (ECMA-325 §6.5.3.1.2). `statusReportRequest`
+ * shall be FALSE (§E.10.6).
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
  */
 export
 const CommandType_deletePreviouslySubmittedSM: CommandType = 2; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary CommandType_deletePreviouslySubmittedSM
+ * @summary deletePreviouslySubmittedSM
+ * @description Alias of {@link CommandType_deletePreviouslySubmittedSM}.
  * @constant
  * @type {number}
  */
@@ -74,14 +105,22 @@ const deletePreviouslySubmittedSM: CommandType = CommandType_deletePreviouslySub
 
 /**
  * @summary CommandType_enableSRRrelatingToPreviouslySubmittedSM
+ * @description
+ *
+ * Value 3. The Service Centre sets Status Report requests for every condition
+ * on the identified Short Message (ECMA-325 §6.5.3.1.2). `statusReportRequest`
+ * shall be FALSE (§E.10.6).
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
  */
 export
 const CommandType_enableSRRrelatingToPreviouslySubmittedSM: CommandType = 3; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary CommandType_enableSRRrelatingToPreviouslySubmittedSM
+ * @summary enableSRRrelatingToPreviouslySubmittedSM
+ * @description
+ * Alias of {@link CommandType_enableSRRrelatingToPreviouslySubmittedSM}.
  * @constant
  * @type {number}
  */

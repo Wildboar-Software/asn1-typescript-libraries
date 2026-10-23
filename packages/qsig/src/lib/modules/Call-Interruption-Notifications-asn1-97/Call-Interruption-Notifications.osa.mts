@@ -7,7 +7,12 @@ import { interruptionForcedRelease } from "../Call-Interruption-Notifications-as
 /**
  * @summary Call_Interruption_Notifications
  * @description
- * 
+ *
+ * Notifications of module Call-Interruption-Notifications-asn1-97 (ECMA-264
+ * §6.3.2, Table 2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-264/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

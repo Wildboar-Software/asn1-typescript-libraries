@@ -4,7 +4,13 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary invalidRerouteingNumber
  * @description
- * 
+ *
+ * ROSE local 1004. The new connection was not established because
+ * `rerouteingNumber` is not a valid PISN address. Listed on
+ * `callTransferInitiate` and `callTransferSetup`. ECMA-178 §6.3.1.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-178/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

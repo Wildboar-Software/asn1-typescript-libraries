@@ -10,7 +10,14 @@ import { AcseAPDU, _decode_AcseAPDU, _encode_AcseAPDU } from "../Association-Con
 /**
  * @summary RemoteOperationsPortion_Item
  * @description
- * 
+ *
+ * One ROSE APDU or one ACSE APDU inside a dialogue PDU (ECMA-165 §11.3.3.3).
+ * §8.4 allows one or more of either and does not say whether a single portion
+ * may mix them. RoseAPDU here uses `InvokeIdSet` and the open `OperationSet`
+ * for both directions.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

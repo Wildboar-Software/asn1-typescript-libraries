@@ -17,7 +17,20 @@ import { unspecified } from "../CT-Authentication-Operations/unspecified.oa.mjs"
 /**
  * @summary ctanParamEnq
  * @description
- * 
+ *
+ * SS-CTAN parameter enquiry from the Home PINX to the Authentication Server
+ * PINX (ECMA-243 §7.5.2, §7.5.3). Local code 76. Carries the challenge received
+ * from the CTM user. If `canCompute` is absent, or the application requires a
+ * computed response, the result choice is `calcCtanInfo`; otherwise it may be
+ * `authSessionKeyInfo` (§7.5.3.1). Timer T5 at the Home PINX, in state
+ * CtanHomeFetching, shall be at least 15 s (§7.9.2).
+ *
+ * Errors (§7.5.3.2): `invalidServedUserNr` when the PISN number is invalid;
+ * `paramNotAvailable` when authentication parameters are not available.
+ * `unspecified` is listed in §6.3.1, which does not say when it is returned.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-243/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

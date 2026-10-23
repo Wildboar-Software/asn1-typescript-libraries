@@ -1,6 +1,15 @@
 /**
  * @module
- * @description ASN.1 module `Do-Not-Disturb-Operations-asn1-97`.
+ * @description
+ *
+ * Operations for SS-DND and SS-DNDO (ECMA-194 4th ed., Dec 2001,
+ * §6.3.1). Call-independent activation, deactivation, and
+ * interrogation of Do Not Disturb, plus call-related override and
+ * the path-retention operations used by SS-DNDO. Service behaviour
+ * is specified in ECMA-193.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-194/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-193/
  */
 export * from "./DNDActivateArg-argumentExtension.ta.mjs";
 export * from "./DNDActivateArg.ta.mjs";

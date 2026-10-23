@@ -12,7 +12,12 @@ import { _decode_divertingLegInformation3_ArgumentType_extension, _encode_divert
 /**
  * @summary divertingLegInformation3_ArgumentType
  * @description
- * 
+ *
+ * Argument of `divertingLegInformation3`, from the Diverted-to PINX to the
+ * Originating PINX (ECMA-174 §6.3.1, §6.5.5.1.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,18 +37,37 @@ export
 class divertingLegInformation3_ArgumentType {
     /**
      * @summary `presentationAllowedIndicator`.
+     * @description
+     *
+     * Whether the diverted-to number may be presented to the calling user,
+     * derived from the diverted-to user's CLIR (ECMA-174 §4.2.18, §6.5.5.1.1).
+     * Presentation also requires `notificationWithDivertedToNr` on every
+     * `divertingLegInformation1` for the call, and no earlier presentation of a
+     * diverted-to number unless a later `cfnr` reason was received (§6.5.1.1).
+     * The procedure requires the value that allows presentation, written there
+     * as TRUE.
      * @public
      * @readonly
      */
     readonly presentationAllowedIndicator: PresentationAllowedIndicator;
     /**
      * @summary `redirectionName`.
+     * @description
+     *
+     * Name of the diverted-to user. It may also mark that name as presentation
+     * restricted (ECMA-174 §6.5.5.1.1). The Originating PINX may present it
+     * only when the diverted-to number may be presented and the name is not
+     * restricted (§6.5.1.1).
      * @public
      * @readonly
      */
     readonly redirectionName: OPTIONAL<Name>;
     /**
      * @summary `extension`.
+     * @description
+     *
+     * Manufacturer-specific extension from `DiversionExtensionSet`. The
+     * standardized set is empty (ECMA-174 §6.3.1).
      * @public
      * @readonly
      */

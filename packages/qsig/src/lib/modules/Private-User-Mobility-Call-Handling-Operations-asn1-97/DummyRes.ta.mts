@@ -10,7 +10,13 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary DummyRes
  * @description
- * 
+ *
+ * Result of `pumiDivert` when no ANF-PUMI parameters are returned (ECMA-284
+ * §6.3.1). `null` has no parameters. `extension` is one manufacturer extension
+ * from `PUMCHExtSet`; `sequOfExtn` is a sequence of them.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-284/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

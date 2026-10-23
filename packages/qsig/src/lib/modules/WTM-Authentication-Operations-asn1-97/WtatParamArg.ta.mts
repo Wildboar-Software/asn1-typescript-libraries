@@ -13,7 +13,12 @@ import { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "
 /**
  * @summary WtatParamArg
  * @description
- * 
+ *
+ * Argument of `getWtatParam` and of `wtatParamEnq` (ECMA-306 §6.5.2, §6.5.6,
+ * §6.5.7). Unlike SS-CTAT, the Visitor PINX may supply a challenge of its own.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-306/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,24 +36,43 @@ export
 class WtatParamArg {
     /**
      * @summary `wtmUserId`.
+     * @description
+     *
+     * Identity of the WTM user. An invalid identity is rejected with
+     * `invalidServedUserNr` (ECMA-306 §6.5.2.2, §6.5.7.2).
      * @public
      * @readonly
      */
     readonly wtmUserId: WtmUserId;
     /**
      * @summary `canCompute`.
+     * @description
+     *
+     * Present when the Visitor PINX can compute a challenge and the expected
+     * response from session-key information (ECMA-306 §6.3.1). The Home PINX
+     * copies that indication into `wtatParamEnq` (§6.5.3.1).
      * @public
      * @readonly
      */
     readonly canCompute: OPTIONAL<CanCompute>;
     /**
      * @summary `authChallenge`.
+     * @description
+     *
+     * Optional challenge calculated by the Visitor PINX (ECMA-306 §6.5.4.1,
+     * §6.5.5.1). The Home PINX forwards it when present (§6.5.3.1). The
+     * Authentication Server PINX generates a challenge unless this element is
+     * present (§6.5.7.1).
      * @public
      * @readonly
      */
     readonly authChallenge: OPTIONAL<AuthChallenge>;
     /**
      * @summary `dummyExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-306 §6.3.1 defines no members of
+     * `WTMAuthExtSet`.
      * @public
      * @readonly
      */

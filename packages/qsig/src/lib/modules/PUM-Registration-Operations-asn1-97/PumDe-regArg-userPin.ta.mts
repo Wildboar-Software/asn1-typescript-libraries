@@ -9,7 +9,14 @@ import { UserPin, _decode_UserPin, _encode_UserPin } from "../PUM-Registration-O
 /**
  * @summary PumDe_regArg_userPin
  * @description
- * 
+ *
+ * PIN on `pumDe-reg` (ECMA-282 §6.3.1). `activatingUserPin` is the PIN supplied
+ * by the activating user (§6.6.1.1 and §6.6.4.1, which call the element
+ * activatingUserPIN). `pumUserPin` is the PUM user's PIN. §6.6 is silent on
+ * when that alternative is sent. The octet encoding is not specified.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-282/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

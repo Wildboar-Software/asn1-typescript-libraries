@@ -11,7 +11,12 @@ import { ReturnResult_result, _decode_ReturnResult_result, _encode_ReturnResult_
 /**
  * @summary ReturnResult
  * @description
- * 
+ *
+ * Successful outcome of an outstanding invoke that reports a result
+ * (ECMA-165 §6.4, §11.3.3.4).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -58,12 +63,23 @@ export
 class ReturnResult {
     /**
      * @summary `invokeId`.
+     * @description
+     *
+     * Identifier of the outstanding invoke. Rejected as
+     * `unrecognisedInvocation` if none is in progress, or as
+     * `resultResponseUnexpected` if that operation does not report a result
+     * (ECMA-165 Annex G).
      * @public
      * @readonly
      */
     readonly invokeId: InvokeId;
     /**
      * @summary `result`.
+     * @description
+     *
+     * Operation code and result value. Omitted when the operation returns no
+     * result parameter. The code must be the operation named by `invokeId`
+     * (ECMA-165 §11.3.3.4).
      * @public
      * @readonly
      */

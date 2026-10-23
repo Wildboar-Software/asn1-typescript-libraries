@@ -14,7 +14,14 @@ import { SSCTInitiateArg_argumentExtension, _decode_SSCTInitiateArg_argumentExte
 /**
  * @summary SSCTInitiateArg
  * @description
- * 
+ *
+ * Argument of `ssctInitiate`. Identifies User C as far as the number is
+ * known, identifies User B, and says whether the original call is
+ * released on ALERTING or on CONNECT. Address and name of User A are
+ * optional. ECMA-300 §6.5.1.1.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-300/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,42 +45,80 @@ export
 class SSCTInitiateArg {
     /**
      * @summary `rerouteingNumber`.
+     * @description
+     *
+     * Number of User C, the transferred-to user, as far as it is
+     * available. It becomes Called party number of the new SETUP.
+     * If it is incomplete the Rerouting PINX sends `ssctPostDial`.
+     * When User B is in a public ISDN, or User B or User C is in a
+     * non-ISDN, only a complete number is allowed.
+     * ECMA-300 §4.2.1, §6.5.1.1, §6.5.2.1, §6.6.1.1, §6.7.1.
+     * Some procedure text spells this element `reroutingNumber`.
      * @public
      * @readonly
      */
     readonly rerouteingNumber: PartyNumber;
     /**
      * @summary `transferredAddress`.
+     * @description
+     *
+     * Address of User B, the transferred user. The Rerouting PINX
+     * places the number in Calling party number of the new SETUP, and
+     * may place the subaddress in Calling party subaddress.
+     * ECMA-300 §6.5.1.1, §6.5.2.1.
      * @public
      * @readonly
      */
     readonly transferredAddress: PresentedAddressScreened;
     /**
      * @summary `awaitConnect`.
+     * @description
+     *
+     * `TRUE` releases the original call when CONNECT arrives from the
+     * Transferred-To PINX. `FALSE` releases it on ALERTING.
+     * ECMA-300 §6.3.1, §6.5.1.1. §6.4.2 names this element
+     * `waitConnect`.
      * @public
      * @readonly
      */
     readonly awaitConnect: AwaitConnect;
     /**
      * @summary `transferredName`.
+     * @description
+     *
+     * Name of User B. The Rerouting PINX may send it in a separate
+     * `callingName` invoke in the SETUP, not inside `ssctSetup`.
+     * ECMA-300 §6.5.1.1, §6.5.2.1.
      * @public
      * @readonly
      */
     readonly transferredName: OPTIONAL<Name>;
     /**
      * @summary `transferringAddress`.
+     * @description
+     *
+     * Address of User A, the transferring user. Copied into
+     * `ssctSetup` when present. ECMA-300 §6.5.1.1, §6.5.2.1.
      * @public
      * @readonly
      */
     readonly transferringAddress: OPTIONAL<PresentedAddressScreened>;
     /**
      * @summary `transferringName`.
+     * @description
+     *
+     * Name of User A. Copied into `ssctSetup` when present.
+     * ECMA-300 §6.5.1.1, §6.5.2.1.
      * @public
      * @readonly
      */
     readonly transferringName: OPTIONAL<Name>;
     /**
      * @summary `argumentExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-300 §6.3.1 defines no
+     * member of `SSCTExtSet`.
      * @public
      * @readonly
      */

@@ -10,7 +10,14 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary CintExtension
  * @description
- * 
+ *
+ * Manufacturer-specific extension for an ANF-CINT APDU. `none`
+ * carries nothing. `single` and `multiple` draw on `CINTExtSet`,
+ * which ECMA-221 §6.3.1 leaves empty. This is the whole argument of
+ * `cintDisable` and `cintEnable`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-221/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

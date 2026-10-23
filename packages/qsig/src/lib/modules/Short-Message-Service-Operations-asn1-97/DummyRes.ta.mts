@@ -9,7 +9,14 @@ import { SmsExtension, _decode_SmsExtension, _encode_SmsExtension } from "../Sho
 /**
  * @summary DummyRes
  * @description
- * 
+ *
+ * Result of `scAlert` (ECMA-325 §6.3.1). Either `null` or a
+ * manufacturer-specific `smsExtension`. §6.5.3.2.1 says the Service Centre
+ * returns a result or an error after checking the alert. It defines neither
+ * the result contents nor what makes an alert invalid.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

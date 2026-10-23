@@ -11,7 +11,12 @@ import { SmsExtension, _decode_SmsExtension, _encode_SmsExtension } from "../Sho
 /**
  * @summary ScAlertArg
  * @description
- * 
+ *
+ * Argument of `scAlert` (ECMA-325 §6.3.1, §6.5.4.2). Sent to each Service
+ * Centre stored in Short Message Waiting Data.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +32,20 @@ export
 class ScAlertArg {
     /**
      * @summary `originatingAddress`.
+     * @description
+     *
+     * Party number of the Receiving User who can take Short Messages again
+     * (ECMA-325 §6.5.4.2, §6.5.5.2).
      * @public
      * @readonly
      */
     readonly originatingAddress: PartyNumber;
     /**
      * @summary `smsExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. This edition defines none in `SmsExtSet`
+     * (ECMA-325 §6.3.1).
      * @public
      * @readonly
      */

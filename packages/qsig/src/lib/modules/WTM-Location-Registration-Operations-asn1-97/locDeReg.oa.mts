@@ -8,7 +8,18 @@ import { unspecified } from "../WTM-Location-Registration-Operations-asn1-97/uns
 /**
  * @summary locDeReg
  * @description
- * 
+ *
+ * Deregister a WTM user's location (ECMA-302 §6.6). The Visitor PINX sends it
+ * to the Home PINX when it determines that the user is deregistered, or when
+ * the user requests deregistration. ROSE local CODE 52. The result is
+ * `DummyRes`. The Home PINX checks the identity, may check the basic service,
+ * updates the HDB, and returns a result (§6.6.2.1). If the user may not
+ * deregister it returns `notAvailable` (§6.6.2.2). Timer T3, at least 15 s,
+ * runs in VisitDeReg (§6.10.3). `unspecified` is also listed; clause 6 is
+ * silent on when to return it.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-302/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

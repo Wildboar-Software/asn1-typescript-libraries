@@ -11,7 +11,13 @@ import { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "
 /**
  * @summary AuthWtmRes
  * @description
- * 
+ *
+ * Result of `authWtmUser`. The Visitor PINX compares the response from the WTM
+ * user with the expected response (ECMA-306 §6.5.5.1). If the user does not
+ * answer, the Visitor PINX returns `temporarilyUnavailable` (§6.5.5.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-306/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +36,20 @@ export
 class AuthWtmRes {
     /**
      * @summary `autWtmResValue`.
+     * @description
+     *
+     * `auth-res-correct` when the WTM user's response matches the expected
+     * response; `auth-res-incorrect` when it differs (ECMA-306 §6.5.5.1).
      * @public
      * @readonly
      */
     readonly autWtmResValue: AuthWtmRes_autWtmResValue;
     /**
      * @summary `dummyExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-306 §6.3.1 defines no members of
+     * `WTMAuthExtSet`.
      * @public
      * @readonly
      */

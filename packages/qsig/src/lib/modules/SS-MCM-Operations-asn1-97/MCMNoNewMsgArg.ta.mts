@@ -13,7 +13,17 @@ import { MCMNoNewMsgArg_argumentExt, _decode_MCMNoNewMsgArg_argumentExt, _encode
 /**
  * @summary MCMNoNewMsgArg
  * @description
- * 
+ *
+ * Argument of `mCMNoNewMsg` (ECMA-347 §6.5.1.1.3). Identifies
+ * the Served User and one Message Type for which no New
+ * Messages remain, and may identify the Message Centre.
+ * Same structure as `mWIDeactivate` in SS-MWI.
+ *
+ * §6.5.1.1.3 says "Message Type(s)"; this argument carries
+ * a single `specificMessageType`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,24 +44,39 @@ export
 class MCMNoNewMsgArg {
     /**
      * @summary `servedUserNr`.
+     * @description
+     *
+     * Address of the Served User. ECMA-347 §6.5.1.1.3.
      * @public
      * @readonly
      */
     readonly servedUserNr: PartyNumber;
     /**
      * @summary `specificMessageType`.
+     * @description
+     *
+     * Message Type for which New Messages are gone.
+     * §6.5.1.1.3 says "Message Type(s)"; this is one value.
      * @public
      * @readonly
      */
     readonly specificMessageType: MessageType;
     /**
      * @summary `msgCentreId`.
+     * @description
+     *
+     * Message Centre identity, when sent. Optional.
+     * ECMA-347 §6.5.1.1.3.
      * @public
      * @readonly
      */
     readonly msgCentreId: OPTIONAL<MsgCentreId>;
     /**
      * @summary `argumentExt`.
+     * @description
+     *
+     * Manufacturer-specific extension. `MCMExtSet` defines none.
+     * The procedures do not mention this component. ECMA-347 §6.3.1.
      * @public
      * @readonly
      */

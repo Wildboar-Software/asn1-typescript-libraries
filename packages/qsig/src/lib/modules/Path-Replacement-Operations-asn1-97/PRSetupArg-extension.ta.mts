@@ -9,7 +9,12 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
 /**
  * @summary PRSetupArg_extension
  * @description
- * 
+ *
+ * Manufacturer-specific extension on `pathReplaceSetup`.
+ * ECMA-176 §6.3.1 defines no member of `PRExtSet`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-176/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -9,7 +9,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CanCompute
  * @description
- * 
+ *
+ * NULL. Presence means the Visitor PINX can compute a challenge and/or a
+ * response from session-key information (ECMA-243 §6.3.1). Absence causes the
+ * Authentication Server PINX to return computed values (§6.5.7.1, §7.5.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-243/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -11,7 +11,13 @@ import { CPIRequestArg_argumentExtension, _decode_CPIRequestArg_argumentExtensio
 /**
  * @summary CPIRequestArg
  * @description
- * 
+ *
+ * SS-CPI invocation argument (ECMA-264 §6.8.1.1.1). The CPICL is compared
+ * with the CPIPL of established calls on a congested link; interruption
+ * requires CPICL strictly greater than CPIPL (§6.8.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-264/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +36,20 @@ export
 class CPIRequestArg {
     /**
      * @summary `cpiCapabilityLevel`.
+     * @description
+     *
+     * CPICL of the calling user (ECMA-264 §6.8.1.1.1). Copied unchanged into
+     * the SETUP sent after a successful interruption (§6.8.3.1).
      * @public
      * @readonly
      */
     readonly cpiCapabilityLevel: CPICapabilityLevel;
     /**
      * @summary `argumentExtension`.
+     * @description
+     *
+     * Manufacturer-specific extension. ECMA-264 §6.3.1 defines the CHOICE
+     * and leaves CPIPExtSet empty.
      * @public
      * @readonly
      */

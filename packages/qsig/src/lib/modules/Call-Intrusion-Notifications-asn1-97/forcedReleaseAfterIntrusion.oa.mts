@@ -8,7 +8,14 @@ import { type NOTIFICATION } from "../Notification-class-asn1-97/NOTIFICATION.oc
 /**
  * @summary forcedReleaseAfterIntrusion
  * @description
- * 
+ *
+ * The established call is being cleared because of forced release
+ * (ECMA-203 §6.6.2.3.1). The Terminating PINX sends this in the
+ * DISCONNECT toward the Unwanted User PINX. Notification code 2006.
+ * The argument is NULL.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-203/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

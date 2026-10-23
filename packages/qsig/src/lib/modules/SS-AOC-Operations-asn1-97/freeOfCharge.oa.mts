@@ -4,7 +4,17 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary freeOfCharge
  * @description
- * 
+ *
+ * `chargeRequest` error, local code 1016, with no parameter. A Terminating PINX
+ * returns it for a `chargeRequest` received in SETUP (the error goes in
+ * CONNECT) or in FACILITY (ECMA-212 §6.6.4.2). The Outgoing Gateway may return
+ * it when the accounting function rejects the request (§6.6.2.2). This error is
+ * distinct from the `freeOfCharge` alternatives inside rate and recorded-charge
+ * values.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-212/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

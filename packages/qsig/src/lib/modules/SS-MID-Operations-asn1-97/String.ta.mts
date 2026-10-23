@@ -9,7 +9,15 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary String
  * @description
- * 
+ *
+ * Text of a mailbox identifier or a password (ECMA-347
+ * §7.3.1). A BMP string or a UTF-8 string. §7.3.1 does not
+ * say which to send. The procedures call the mailbox value
+ * an identifier, for example a name, and the authentication
+ * value a password (§7.5.1.1.2, §7.5.2.1.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

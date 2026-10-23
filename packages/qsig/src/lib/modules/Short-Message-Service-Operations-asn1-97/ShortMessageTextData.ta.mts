@@ -9,7 +9,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ShortMessageTextData
  * @description
- * 
+ *
+ * Short Message text octets, size 0..140 (ECMA-325 §6.3.1, §E.1.3.4). IA5
+ * holds at most 160 characters, octet coding at most 140 characters, ISO/IEC
+ * 10646-1 at most 70 characters. Compressed text includes the GSM 03.42 header
+ * and footer.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

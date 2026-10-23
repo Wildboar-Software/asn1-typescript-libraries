@@ -5,7 +5,17 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary smsStatusReportError
  * @description
- * 
+ *
+ * Rejection of `smsStatusReport` (ECMA-325 §6.5.1.2.3, Annex E.9). ROSE local
+ * CODE 1028. The Sending User PINX or Sending User Message Centre returns it
+ * to the Service Centre with an appropriate `failureCause`.
+ *
+ * §6.5 does not name which Table E.4 value to use. `scAddressSaved` is
+ * specified by pointing at §E.6.4, but §6.5 never stores a Service Centre
+ * address while handling a status report.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

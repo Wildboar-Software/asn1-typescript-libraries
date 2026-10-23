@@ -4,7 +4,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SubscriptionOption
  * @description
- * 
+ *
+ * SS-CFU notification option in `cfuActivated` (ECMA-284 §6.3.1, §6.5.3.3). The
+ * standard names the three values and is silent on the notification behaviour.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-284/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,7 +32,12 @@ enum _enum_for_SubscriptionOption {
 /**
  * @summary SubscriptionOption
  * @description
- * 
+ *
+ * SS-CFU notification option in `cfuActivated` (ECMA-284 §6.3.1, §6.5.3.3). The
+ * standard names the three values and is silent on the notification behaviour.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-284/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -46,7 +56,12 @@ type SubscriptionOption = _enum_for_SubscriptionOption;
 /**
  * @summary SubscriptionOption
  * @description
- * 
+ *
+ * SS-CFU notification option in `cfuActivated` (ECMA-284 §6.3.1, §6.5.3.3). The
+ * standard names the three values and is silent on the notification behaviour.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-284/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -64,6 +79,12 @@ const SubscriptionOption = _enum_for_SubscriptionOption;
 
 /**
  * @summary SubscriptionOption_noNotification
+ * @description
+ *
+ * No notification. ECMA-284 §6.3.1 names this value and is silent on the
+ * notification behaviour.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-284/
  * @constant
  * @type {number}
  */
@@ -72,6 +93,7 @@ const SubscriptionOption_noNotification: SubscriptionOption = SubscriptionOption
 
 /**
  * @summary noNotification
+ * @description Alias of {@link SubscriptionOption_noNotification}.
  * @constant
  * @type {number}
  */
@@ -80,6 +102,12 @@ const noNotification: SubscriptionOption = SubscriptionOption.noNotification; /*
 
 /**
  * @summary SubscriptionOption_notificationWithoutDivertedToNr
+ * @description
+ *
+ * Notification without the diverted-to number. ECMA-284 §6.3.1 names this value
+ * and is silent on the notification behaviour.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-284/
  * @constant
  * @type {number}
  */
@@ -88,6 +116,8 @@ const SubscriptionOption_notificationWithoutDivertedToNr: SubscriptionOption = S
 
 /**
  * @summary notificationWithoutDivertedToNr
+ * @description
+ * Alias of {@link SubscriptionOption_notificationWithoutDivertedToNr}.
  * @constant
  * @type {number}
  */
@@ -96,6 +126,12 @@ const notificationWithoutDivertedToNr: SubscriptionOption = SubscriptionOption.n
 
 /**
  * @summary SubscriptionOption_notificationWithDivertedToNr
+ * @description
+ *
+ * Notification that includes the diverted-to number. ECMA-284 §6.3.1 names this
+ * value and is silent on the notification behaviour.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-284/
  * @constant
  * @type {number}
  */
@@ -104,6 +140,8 @@ const SubscriptionOption_notificationWithDivertedToNr: SubscriptionOption = Subs
 
 /**
  * @summary notificationWithDivertedToNr
+ * @description
+ * Alias of {@link SubscriptionOption_notificationWithDivertedToNr}.
  * @constant
  * @type {number}
  */

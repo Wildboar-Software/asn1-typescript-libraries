@@ -17,7 +17,14 @@ import { MWIActivateArg_argumentExt, _decode_MWIActivateArg_argumentExt, _encode
 /**
  * @summary MWIActivateArg
  * @description
- * 
+ *
+ * Argument of `mWIActivate`. The PISN number and the service are required. The
+ * other elements are an implementation option (ECMA-242 §6.5.1.1.1, ECMA-241
+ * §6.2.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-242/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-241/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,48 +50,84 @@ export
 class MWIActivateArg {
     /**
      * @summary `servedUserNr`.
+     * @description
+     *
+     * PISN number of the Served User, the user to whom the indication is sent
+     * (ECMA-242 §6.5.1.1.1, ECMA-241 §4.2.1).
      * @public
      * @readonly
      */
     readonly servedUserNr: PartyNumber;
     /**
      * @summary `basicService`.
+     * @description
+     *
+     * Service for which there is a message waiting (ECMA-242 §6.5.1.1.1). A
+     * separate indication may exist for each service (ECMA-241 §6.1.1).
      * @public
      * @readonly
      */
     readonly basicService: BasicService;
     /**
      * @summary `msgCentreId`.
+     * @description
+     *
+     * Optional identity of the Message Centre that holds the messages (ECMA-242
+     * §6.5.1.1.1).
      * @public
      * @readonly
      */
     readonly msgCentreId: OPTIONAL<MsgCentreId>;
     /**
      * @summary `nbOfMessages`.
+     * @description
+     *
+     * Optional count of messages waiting for this service. ECMA-241 §7.2.1.1
+     * note 3: a present value is non-zero, and absence means one or more
+     * messages are waiting. The ASN.1 range still includes 0 (ECMA-242 §6.3.1).
      * @public
      * @readonly
      */
     readonly nbOfMessages: OPTIONAL<NbOfMessages>;
     /**
      * @summary `originatingNr`.
+     * @description
+     *
+     * Optional PISN number of the user that left a message (ECMA-242
+     * §6.5.1.1.1). The standard does not say which message this is when more
+     * than one is waiting.
      * @public
      * @readonly
      */
     readonly originatingNr: OPTIONAL<PartyNumber>;
     /**
      * @summary `timestamp`.
+     * @description
+     *
+     * Optional local time at which a message was left (ECMA-242 §6.5.1.1.1).
+     * The character layout is on `TimeStamp`.
      * @public
      * @readonly
      */
     readonly timestamp: OPTIONAL<TimeStamp>;
     /**
      * @summary `priority`.
+     * @description
+     *
+     * Optional priority of the highest-priority waiting message, 0 through 9. 0
+     * is the highest and 9 the lowest (ECMA-242 §6.3.1, ECMA-241 §7.2.1.1 note
+     * 4).
      * @public
      * @readonly
      */
     readonly priority: OPTIONAL<INTEGER>;
     /**
      * @summary `argumentExt`.
+     * @description
+     *
+     * Optional manufacturer-specific extension on `mWIActivate`. ECMA-242
+     * §6.3.1 defines `MWIExtSet` as `{...}` and names no member. It does not
+     * say when to send one extension rather than several.
      * @public
      * @readonly
      */

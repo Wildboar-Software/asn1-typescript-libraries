@@ -11,7 +11,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary EquipmentId
  * @description
- * 
+ *
+ * Identity of equipment involved in the call, for another user or PINX
+ * (ECMA-251 §6.3.1). All three elements are optional. Network-wide
+ * uniqueness is outside the scope of ECMA-251. The standard does not assign
+ * distinct roles to nodeId, groupId, and unitId beyond those names.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-251/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,18 +35,33 @@ export
 class EquipmentId {
     /**
      * @summary `nodeId`.
+     * @description
+     *
+     * ECMA-251 §6.3.1 names this element and does not distinguish it from
+     * the other EquipmentId elements. Length 1..10. Network-wide uniqueness
+     * is outside the scope of the standard.
      * @public
      * @readonly
      */
     readonly nodeId: OPTIONAL<IA5String>;
     /**
      * @summary `groupId`.
+     * @description
+     *
+     * ECMA-251 §6.3.1 names this element and does not distinguish it from
+     * the other EquipmentId elements. Length 1..10. Network-wide uniqueness
+     * is outside the scope of the standard.
      * @public
      * @readonly
      */
     readonly groupId: OPTIONAL<IA5String>;
     /**
      * @summary `unitId`.
+     * @description
+     *
+     * ECMA-251 §6.3.1 names this element and does not distinguish it from
+     * the other EquipmentId elements. Length 1..10. Network-wide uniqueness
+     * is outside the scope of the standard.
      * @public
      * @readonly
      */

@@ -5,7 +5,22 @@ import { NameArg, _decode_NameArg, _encode_NameArg } from "../Name-Operations-as
 /**
  * @summary connectedName
  * @description
- * 
+ *
+ * Name of the user who answers (SS-CONP). The Terminating PINX sends it to the
+ * Originating PINX in CONNECT (ECMA-164 §8.4.1.1; ECMA-163 §7.1.1).
+ * Unconfirmed. ROSE local code 2. No errors. It shall be sent when the name is
+ * available, whether presentation is allowed or restricted, and may be sent
+ * with `nameNotAvailable` when the name is not available.
+ *
+ * The Originating PINX delivers an allowed name, including the presentation
+ * indicator, to the calling user if that user is able and authorized. A
+ * restricted name yields only the presentation indicator unless the calling
+ * user can override the restriction. If the invoke is missing, or the name is
+ * not available, the indicator is "name not available" (ECMA-164 §8.4.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-164/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-163/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

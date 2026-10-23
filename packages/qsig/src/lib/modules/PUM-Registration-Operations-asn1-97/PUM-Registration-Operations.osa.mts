@@ -9,7 +9,13 @@ import { pisnEnquiry } from "../WTM-Location-Registration-Operations-asn1-97/pis
 /**
  * @summary PUM_Registration_Operations
  * @description
- * 
+ *
+ * SS-PUMR operation set (ECMA-282 §6.3.1): `pumRegistr`, `pumDelReg`,
+ * `pumDe-reg`, `pumInterrog`, and `pisnEnquiry` imported from
+ * `WTM-Location-Registration-Operations-asn1-97`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-282/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
