@@ -30,13 +30,21 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
 export
 type GetNamedVariableListAttributes_Request = ObjectName; // DefinedType
 
+let _cached_decoder_for_GetNamedVariableListAttributes_Request: $.ASN1Decoder<GetNamedVariableListAttributes_Request> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) GetNamedVariableListAttributes_Request
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_GetNamedVariableListAttributes_Request: $.ASN1Decoder<GetNamedVariableListAttributes_Request> = _decode_ObjectName;
+export
+function _decode_GetNamedVariableListAttributes_Request (el: _Element): GetNamedVariableListAttributes_Request {
+    if (!_cached_decoder_for_GetNamedVariableListAttributes_Request) { _cached_decoder_for_GetNamedVariableListAttributes_Request = _decode_ObjectName; }
+    return _cached_decoder_for_GetNamedVariableListAttributes_Request(el);
+}
+
+let _cached_encoder_for_GetNamedVariableListAttributes_Request: $.ASN1Encoder<GetNamedVariableListAttributes_Request> | null = null;
 
 /**
  * @summary Encodes a(n) GetNamedVariableListAttributes_Request into an ASN.1 Element.
@@ -45,7 +53,11 @@ export const _decode_GetNamedVariableListAttributes_Request: $.ASN1Decoder<GetNa
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The GetNamedVariableListAttributes_Request, encoded as an ASN.1 Element.
  */
-export const _encode_GetNamedVariableListAttributes_Request: (value: GetNamedVariableListAttributes_Request, elGetter: $.ASN1Encoder<any>) => _Element = _encode_ObjectName;
+export
+function _encode_GetNamedVariableListAttributes_Request (value: GetNamedVariableListAttributes_Request, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_GetNamedVariableListAttributes_Request) { _cached_encoder_for_GetNamedVariableListAttributes_Request = _encode_ObjectName; }
+    return _cached_encoder_for_GetNamedVariableListAttributes_Request(value, elGetter);
+}
 
 
 /* eslint-enable */

@@ -27,13 +27,21 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
 export
 type MACAlgorithmIdentifier = AlgorithmIdentifier; // DefinedType
 
+let _cached_decoder_for_MACAlgorithmIdentifier: $.ASN1Decoder<MACAlgorithmIdentifier> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MACAlgorithmIdentifier
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_MACAlgorithmIdentifier: $.ASN1Decoder<MACAlgorithmIdentifier> = _decode_AlgorithmIdentifier;
+export
+function _decode_MACAlgorithmIdentifier (el: _Element): MACAlgorithmIdentifier {
+    if (!_cached_decoder_for_MACAlgorithmIdentifier) { _cached_decoder_for_MACAlgorithmIdentifier = _decode_AlgorithmIdentifier; }
+    return _cached_decoder_for_MACAlgorithmIdentifier(el);
+}
+
+let _cached_encoder_for_MACAlgorithmIdentifier: $.ASN1Encoder<MACAlgorithmIdentifier> | null = null;
 
 /**
  * @summary Encodes a(n) MACAlgorithmIdentifier into an ASN.1 Element.
@@ -42,7 +50,11 @@ export const _decode_MACAlgorithmIdentifier: $.ASN1Decoder<MACAlgorithmIdentifie
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MACAlgorithmIdentifier, encoded as an ASN.1 Element.
  */
-export const _encode_MACAlgorithmIdentifier: (value: MACAlgorithmIdentifier, elGetter: $.ASN1Encoder<any>) => _Element = _encode_AlgorithmIdentifier;
+export
+function _encode_MACAlgorithmIdentifier (value: MACAlgorithmIdentifier, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_MACAlgorithmIdentifier) { _cached_encoder_for_MACAlgorithmIdentifier = _encode_AlgorithmIdentifier; }
+    return _cached_encoder_for_MACAlgorithmIdentifier(value, elGetter);
+}
 
 
 /* eslint-enable */

@@ -31,13 +31,21 @@ import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-
 export
 type DeleteNamedType_Error = Unsigned32; // DefinedType
 
+let _cached_decoder_for_DeleteNamedType_Error: $.ASN1Decoder<DeleteNamedType_Error> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DeleteNamedType_Error
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_DeleteNamedType_Error: $.ASN1Decoder<DeleteNamedType_Error> = _decode_Unsigned32;
+export
+function _decode_DeleteNamedType_Error (el: _Element): DeleteNamedType_Error {
+    if (!_cached_decoder_for_DeleteNamedType_Error) { _cached_decoder_for_DeleteNamedType_Error = _decode_Unsigned32; }
+    return _cached_decoder_for_DeleteNamedType_Error(el);
+}
+
+let _cached_encoder_for_DeleteNamedType_Error: $.ASN1Encoder<DeleteNamedType_Error> | null = null;
 
 /**
  * @summary Encodes a(n) DeleteNamedType_Error into an ASN.1 Element.
@@ -46,7 +54,11 @@ export const _decode_DeleteNamedType_Error: $.ASN1Decoder<DeleteNamedType_Error>
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DeleteNamedType_Error, encoded as an ASN.1 Element.
  */
-export const _encode_DeleteNamedType_Error: (value: DeleteNamedType_Error, elGetter: $.ASN1Encoder<any>) => _Element = _encode_Unsigned32;
+export
+function _encode_DeleteNamedType_Error (value: DeleteNamedType_Error, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_DeleteNamedType_Error) { _cached_encoder_for_DeleteNamedType_Error = _encode_Unsigned32; }
+    return _cached_encoder_for_DeleteNamedType_Error(value, elGetter);
+}
 
 
 /* eslint-enable */

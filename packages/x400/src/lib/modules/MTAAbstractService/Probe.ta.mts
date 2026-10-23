@@ -29,13 +29,22 @@ import {
  */
 export type Probe = ProbeTransferEnvelope; // DefinedType
 
+let _cached_decoder_for_Probe: $.ASN1Decoder<Probe> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Probe
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {Probe} The decoded data structure.
  */
-export const _decode_Probe: $.ASN1Decoder<Probe> = _decode_ProbeTransferEnvelope;
+export function _decode_Probe(el: _Element): Probe {
+    if (!_cached_decoder_for_Probe) {
+        _cached_decoder_for_Probe = _decode_ProbeTransferEnvelope;
+    }
+    return _cached_decoder_for_Probe(el);
+}
+
+let _cached_encoder_for_Probe: $.ASN1Encoder<Probe> | null = null;
 
 /**
  * @summary Encodes a(n) Probe into an ASN.1 Element.
@@ -44,7 +53,12 @@ export const _decode_Probe: $.ASN1Decoder<Probe> = _decode_ProbeTransferEnvelope
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Probe, encoded as an ASN.1 Element.
  */
-export const _encode_Probe: $.ASN1Encoder<Probe> = _encode_ProbeTransferEnvelope;
+export function _encode_Probe(value: Probe, elGetter: $.ASN1Encoder<Probe>): _Element {
+    if (!_cached_encoder_for_Probe) {
+        _cached_encoder_for_Probe = _encode_ProbeTransferEnvelope;
+    }
+    return _cached_encoder_for_Probe(value, elGetter);
+}
 
 
 /* eslint-enable */

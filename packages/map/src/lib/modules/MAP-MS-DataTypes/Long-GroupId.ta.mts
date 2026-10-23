@@ -24,13 +24,21 @@ import { _decode_TBCD_STRING, _encode_TBCD_STRING, TBCD_STRING } from "../MAP-Co
 export
 type Long_GroupId = TBCD_STRING; // DefinedType
 
+let _cached_decoder_for_Long_GroupId: $.ASN1Decoder<Long_GroupId> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Long_GroupId
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_Long_GroupId: $.ASN1Decoder<Long_GroupId> = _decode_TBCD_STRING;
+export
+function _decode_Long_GroupId (el: _Element): Long_GroupId {
+    if (!_cached_decoder_for_Long_GroupId) { _cached_decoder_for_Long_GroupId = _decode_TBCD_STRING; }
+    return _cached_decoder_for_Long_GroupId(el);
+}
+
+let _cached_encoder_for_Long_GroupId: $.ASN1Encoder<Long_GroupId> | null = null;
 
 /**
  * @summary Encodes a(n) Long_GroupId into an ASN.1 Element.
@@ -39,7 +47,11 @@ export const _decode_Long_GroupId: $.ASN1Decoder<Long_GroupId> = _decode_TBCD_ST
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Long_GroupId, encoded as an ASN.1 Element.
  */
-export const _encode_Long_GroupId: (value: Long_GroupId, elGetter: $.ASN1Encoder<any>) => _Element = _encode_TBCD_STRING;
+export
+function _encode_Long_GroupId (value: Long_GroupId, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_Long_GroupId) { _cached_encoder_for_Long_GroupId = _encode_TBCD_STRING; }
+    return _cached_encoder_for_Long_GroupId(value, elGetter);
+}
 
 
 /* eslint-enable */

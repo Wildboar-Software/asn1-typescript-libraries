@@ -26,13 +26,21 @@ import { DetectionAction, _decode_DetectionAction, _encode_DetectionAction } fro
 export
 type DefaultAction = DetectionAction; // DefinedType
 
+let _cached_decoder_for_DefaultAction: $.ASN1Decoder<DefaultAction> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DefaultAction
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_DefaultAction: $.ASN1Decoder<DefaultAction> = _decode_DetectionAction;
+export
+function _decode_DefaultAction (el: _Element): DefaultAction {
+    if (!_cached_decoder_for_DefaultAction) { _cached_decoder_for_DefaultAction = _decode_DetectionAction; }
+    return _cached_decoder_for_DefaultAction(el);
+}
+
+let _cached_encoder_for_DefaultAction: $.ASN1Encoder<DefaultAction> | null = null;
 
 /**
  * @summary Encodes a(n) DefaultAction into an ASN.1 Element.
@@ -41,7 +49,11 @@ export const _decode_DefaultAction: $.ASN1Decoder<DefaultAction> = _decode_Detec
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DefaultAction, encoded as an ASN.1 Element.
  */
-export const _encode_DefaultAction: (value: DefaultAction, elGetter: $.ASN1Encoder<any>) => _Element = _encode_DetectionAction;
+export
+function _encode_DefaultAction (value: DefaultAction, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_DefaultAction) { _cached_encoder_for_DefaultAction = _encode_DetectionAction; }
+    return _cached_encoder_for_DefaultAction(value, elGetter);
+}
 
 
 /* eslint-enable */

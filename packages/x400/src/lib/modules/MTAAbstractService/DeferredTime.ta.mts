@@ -32,13 +32,22 @@ import {
  */
 export type DeferredTime = Time; // DefinedType
 
+let _cached_decoder_for_DeferredTime: $.ASN1Decoder<DeferredTime> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DeferredTime
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {DeferredTime} The decoded data structure.
  */
-export const _decode_DeferredTime: $.ASN1Decoder<DeferredTime> = _decode_Time;
+export function _decode_DeferredTime(el: _Element): DeferredTime {
+    if (!_cached_decoder_for_DeferredTime) {
+        _cached_decoder_for_DeferredTime = _decode_Time;
+    }
+    return _cached_decoder_for_DeferredTime(el);
+}
+
+let _cached_encoder_for_DeferredTime: $.ASN1Encoder<DeferredTime> | null = null;
 
 /**
  * @summary Encodes a(n) DeferredTime into an ASN.1 Element.
@@ -47,7 +56,15 @@ export const _decode_DeferredTime: $.ASN1Decoder<DeferredTime> = _decode_Time;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DeferredTime, encoded as an ASN.1 Element.
  */
-export const _encode_DeferredTime: $.ASN1Encoder<DeferredTime> = _encode_Time;
+export function _encode_DeferredTime(
+    value: DeferredTime,
+    elGetter: $.ASN1Encoder<DeferredTime>
+): _Element {
+    if (!_cached_encoder_for_DeferredTime) {
+        _cached_encoder_for_DeferredTime = _encode_Time;
+    }
+    return _cached_encoder_for_DeferredTime(value, elGetter);
+}
 
 
 /* eslint-enable */

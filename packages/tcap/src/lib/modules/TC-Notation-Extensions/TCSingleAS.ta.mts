@@ -28,13 +28,22 @@ import {
  */
 export type TCSingleAS = TCMessage; // DefinedType
 
+let _cached_decoder_for_TCSingleAS: $.ASN1Decoder<TCSingleAS> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TCSingleAS
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {TCSingleAS} The decoded data structure.
  */
-export const _decode_TCSingleAS: $.ASN1Decoder<TCSingleAS> = _decode_TCMessage;
+export function _decode_TCSingleAS(el: _Element): TCSingleAS {
+    if (!_cached_decoder_for_TCSingleAS) {
+        _cached_decoder_for_TCSingleAS = _decode_TCMessage;
+    }
+    return _cached_decoder_for_TCSingleAS(el);
+}
+
+let _cached_encoder_for_TCSingleAS: $.ASN1Encoder<TCSingleAS> | null = null;
 
 /**
  * @summary Encodes a(n) TCSingleAS into an ASN.1 Element.
@@ -43,7 +52,15 @@ export const _decode_TCSingleAS: $.ASN1Decoder<TCSingleAS> = _decode_TCMessage;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TCSingleAS, encoded as an ASN.1 Element.
  */
-export const _encode_TCSingleAS: $.ASN1Encoder<TCSingleAS> = _encode_TCMessage;
+export function _encode_TCSingleAS(
+    value: TCSingleAS,
+    elGetter: $.ASN1Encoder<TCSingleAS>
+): _Element {
+    if (!_cached_encoder_for_TCSingleAS) {
+        _cached_encoder_for_TCSingleAS = _encode_TCMessage;
+    }
+    return _cached_encoder_for_TCSingleAS(value, elGetter);
+}
 
 
 /* eslint-enable */

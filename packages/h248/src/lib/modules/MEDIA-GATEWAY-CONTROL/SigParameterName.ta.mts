@@ -21,13 +21,21 @@ import { Name, _decode_Name, _encode_Name } from "../MEDIA-GATEWAY-CONTROL/Name.
 export
 type SigParameterName = Name; // DefinedType
 
+let _cached_decoder_for_SigParameterName: $.ASN1Decoder<SigParameterName> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SigParameterName
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_SigParameterName: $.ASN1Decoder<SigParameterName> = _decode_Name;
+export
+function _decode_SigParameterName (el: _Element): SigParameterName {
+    if (!_cached_decoder_for_SigParameterName) { _cached_decoder_for_SigParameterName = _decode_Name; }
+    return _cached_decoder_for_SigParameterName(el);
+}
+
+let _cached_encoder_for_SigParameterName: $.ASN1Encoder<SigParameterName> | null = null;
 
 /**
  * @summary Encodes a(n) SigParameterName into an ASN.1 Element.
@@ -36,7 +44,11 @@ export const _decode_SigParameterName: $.ASN1Decoder<SigParameterName> = _decode
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SigParameterName, encoded as an ASN.1 Element.
  */
-export const _encode_SigParameterName: (value: SigParameterName, elGetter: $.ASN1Encoder<any>) => _Element = _encode_Name;
+export
+function _encode_SigParameterName (value: SigParameterName, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_SigParameterName) { _cached_encoder_for_SigParameterName = _encode_Name; }
+    return _cached_encoder_for_SigParameterName(value, elGetter);
+}
 
 
 /* eslint-enable */

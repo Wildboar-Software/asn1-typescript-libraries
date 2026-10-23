@@ -21,13 +21,22 @@ import {
  */
 export type UniversalOrganizationalUnitName = UniversalOrBMPString; // DefinedType
 
+let _cached_decoder_for_UniversalOrganizationalUnitName: $.ASN1Decoder<UniversalOrganizationalUnitName> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) UniversalOrganizationalUnitName
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {UniversalOrganizationalUnitName} The decoded data structure.
  */
-export const _decode_UniversalOrganizationalUnitName: $.ASN1Decoder<UniversalOrganizationalUnitName> = _decode_UniversalOrBMPString;
+export function _decode_UniversalOrganizationalUnitName(el: _Element): UniversalOrganizationalUnitName {
+    if (!_cached_decoder_for_UniversalOrganizationalUnitName) {
+        _cached_decoder_for_UniversalOrganizationalUnitName = _decode_UniversalOrBMPString;
+    }
+    return _cached_decoder_for_UniversalOrganizationalUnitName(el);
+}
+
+let _cached_encoder_for_UniversalOrganizationalUnitName: $.ASN1Encoder<UniversalOrganizationalUnitName> | null = null;
 
 /**
  * @summary Encodes a(n) UniversalOrganizationalUnitName into an ASN.1 Element.
@@ -36,7 +45,15 @@ export const _decode_UniversalOrganizationalUnitName: $.ASN1Decoder<UniversalOrg
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UniversalOrganizationalUnitName, encoded as an ASN.1 Element.
  */
-export const _encode_UniversalOrganizationalUnitName: $.ASN1Encoder<UniversalOrganizationalUnitName> = _encode_UniversalOrBMPString;
+export function _encode_UniversalOrganizationalUnitName(
+    value: UniversalOrganizationalUnitName,
+    elGetter: $.ASN1Encoder<UniversalOrganizationalUnitName>
+): _Element {
+    if (!_cached_encoder_for_UniversalOrganizationalUnitName) {
+        _cached_encoder_for_UniversalOrganizationalUnitName = _encode_UniversalOrBMPString;
+    }
+    return _cached_encoder_for_UniversalOrganizationalUnitName(value, elGetter);
+}
 
 
 /* eslint-enable */

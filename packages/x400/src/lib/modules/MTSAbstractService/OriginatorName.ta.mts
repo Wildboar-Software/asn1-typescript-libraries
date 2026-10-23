@@ -30,13 +30,22 @@ import {
  */
 export type OriginatorName = ORAddressAndOrDirectoryName; // DefinedType
 
+let _cached_decoder_for_OriginatorName: $.ASN1Decoder<OriginatorName> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) OriginatorName
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {OriginatorName} The decoded data structure.
  */
-export const _decode_OriginatorName: $.ASN1Decoder<OriginatorName> = _decode_ORAddressAndOrDirectoryName;
+export function _decode_OriginatorName(el: _Element): OriginatorName {
+    if (!_cached_decoder_for_OriginatorName) {
+        _cached_decoder_for_OriginatorName = _decode_ORAddressAndOrDirectoryName;
+    }
+    return _cached_decoder_for_OriginatorName(el);
+}
+
+let _cached_encoder_for_OriginatorName: $.ASN1Encoder<OriginatorName> | null = null;
 
 /**
  * @summary Encodes a(n) OriginatorName into an ASN.1 Element.
@@ -45,7 +54,15 @@ export const _decode_OriginatorName: $.ASN1Decoder<OriginatorName> = _decode_ORA
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The OriginatorName, encoded as an ASN.1 Element.
  */
-export const _encode_OriginatorName: $.ASN1Encoder<OriginatorName> = _encode_ORAddressAndOrDirectoryName;
+export function _encode_OriginatorName(
+    value: OriginatorName,
+    elGetter: $.ASN1Encoder<OriginatorName>
+): _Element {
+    if (!_cached_encoder_for_OriginatorName) {
+        _cached_encoder_for_OriginatorName = _encode_ORAddressAndOrDirectoryName;
+    }
+    return _cached_encoder_for_OriginatorName(value, elGetter);
+}
 
 
 /* eslint-enable */

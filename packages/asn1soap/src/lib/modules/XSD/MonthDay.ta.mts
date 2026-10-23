@@ -32,13 +32,26 @@ import {
  */
 export type MonthDay = DateTimeType; // DefinedType
 
+
+let _cached_decoder_for_MonthDay: $.ASN1Decoder<MonthDay> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MonthDay
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {MonthDay} The decoded data structure.
  */
-export const _decode_MonthDay: $.ASN1Decoder<MonthDay> = _decode_DateTimeType;
+export function _decode_MonthDay(el: _Element): MonthDay {
+  if (!_cached_decoder_for_MonthDay) {
+    _cached_decoder_for_MonthDay = _decode_DateTimeType;
+  }
+  return _cached_decoder_for_MonthDay(el);
+}
+
+
+let _cached_encoder_for_MonthDay: $.ASN1Encoder<MonthDay> | null = null;
+
 
 /**
  * @summary Encodes a(n) MonthDay into an ASN.1 Element.
@@ -47,7 +60,15 @@ export const _decode_MonthDay: $.ASN1Decoder<MonthDay> = _decode_DateTimeType;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MonthDay, encoded as an ASN.1 Element.
  */
-export const _encode_MonthDay: $.ASN1Encoder<MonthDay> = _encode_DateTimeType;
+export function _encode_MonthDay(
+  value: MonthDay,
+  elGetter: $.ASN1Encoder<MonthDay>
+): _Element {
+  if (!_cached_encoder_for_MonthDay) {
+    _cached_encoder_for_MonthDay = _encode_DateTimeType;
+  }
+  return _cached_encoder_for_MonthDay(value, elGetter);
+}
 
 
 /* eslint-enable */

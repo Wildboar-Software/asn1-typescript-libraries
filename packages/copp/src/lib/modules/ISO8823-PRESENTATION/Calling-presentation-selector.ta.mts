@@ -30,13 +30,26 @@ import {
  */
 export type Calling_presentation_selector = Presentation_selector; // DefinedType
 
+
+let _cached_decoder_for_Calling_presentation_selector: $.ASN1Decoder<Calling_presentation_selector> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Calling_presentation_selector
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {Calling_presentation_selector} The decoded data structure.
  */
-export const _decode_Calling_presentation_selector: $.ASN1Decoder<Calling_presentation_selector> = _decode_Presentation_selector;
+export function _decode_Calling_presentation_selector(el: _Element): Calling_presentation_selector {
+    if (!_cached_decoder_for_Calling_presentation_selector) {
+        _cached_decoder_for_Calling_presentation_selector = _decode_Presentation_selector;
+    }
+    return _cached_decoder_for_Calling_presentation_selector(el);
+}
+
+
+let _cached_encoder_for_Calling_presentation_selector: $.ASN1Encoder<Calling_presentation_selector> | null = null;
+
 
 /**
  * @summary Encodes a(n) Calling_presentation_selector into an ASN.1 Element.
@@ -45,7 +58,15 @@ export const _decode_Calling_presentation_selector: $.ASN1Decoder<Calling_presen
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Calling_presentation_selector, encoded as an ASN.1 Element.
  */
-export const _encode_Calling_presentation_selector: $.ASN1Encoder<Calling_presentation_selector> = _encode_Presentation_selector;
+export function _encode_Calling_presentation_selector(
+    value: Calling_presentation_selector,
+    elGetter: $.ASN1Encoder<Calling_presentation_selector>
+): _Element {
+    if (!_cached_encoder_for_Calling_presentation_selector) {
+        _cached_encoder_for_Calling_presentation_selector = _encode_Presentation_selector;
+    }
+    return _cached_encoder_for_Calling_presentation_selector(value, elGetter);
+}
 
 
 /* eslint-enable */

@@ -23,13 +23,22 @@ import {
  */
 export type ECPKAlgorithm = AlgorithmIdentifier; // DefinedType
 
+let _cached_decoder_for_ECPKAlgorithm: $.ASN1Decoder<ECPKAlgorithm> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ECPKAlgorithm
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ECPKAlgorithm} The decoded data structure.
  */
-export const _decode_ECPKAlgorithm: $.ASN1Decoder<ECPKAlgorithm> = _decode_AlgorithmIdentifier;
+export function _decode_ECPKAlgorithm(el: _Element): ECPKAlgorithm {
+    if (!_cached_decoder_for_ECPKAlgorithm) {
+        _cached_decoder_for_ECPKAlgorithm = _decode_AlgorithmIdentifier;
+    }
+    return _cached_decoder_for_ECPKAlgorithm(el);
+}
+
+let _cached_encoder_for_ECPKAlgorithm: $.ASN1Encoder<ECPKAlgorithm> | null = null;
 
 /**
  * @summary Encodes a(n) ECPKAlgorithm into an ASN.1 Element.
@@ -38,7 +47,15 @@ export const _decode_ECPKAlgorithm: $.ASN1Decoder<ECPKAlgorithm> = _decode_Algor
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ECPKAlgorithm, encoded as an ASN.1 Element.
  */
-export const _encode_ECPKAlgorithm: $.ASN1Encoder<ECPKAlgorithm> = _encode_AlgorithmIdentifier;
+export function _encode_ECPKAlgorithm(
+    value: ECPKAlgorithm,
+    elGetter: $.ASN1Encoder<ECPKAlgorithm>
+): _Element {
+    if (!_cached_encoder_for_ECPKAlgorithm) {
+        _cached_encoder_for_ECPKAlgorithm = _encode_AlgorithmIdentifier;
+    }
+    return _cached_encoder_for_ECPKAlgorithm(value, elGetter);
+}
 
 
 /* eslint-enable */

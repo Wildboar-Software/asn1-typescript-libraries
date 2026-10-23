@@ -28,13 +28,21 @@ import { XMLType, _decode_XMLType, _encode_XMLType } from "../TS33128Payloads/XM
 export
 type PINProfile = XMLType; // DefinedType
 
+let _cached_decoder_for_PINProfile: $.ASN1Decoder<PINProfile> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PINProfile
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_PINProfile: $.ASN1Decoder<PINProfile> = _decode_XMLType;
+export
+function _decode_PINProfile (el: _Element): PINProfile {
+    if (!_cached_decoder_for_PINProfile) { _cached_decoder_for_PINProfile = _decode_XMLType; }
+    return _cached_decoder_for_PINProfile(el);
+}
+
+let _cached_encoder_for_PINProfile: $.ASN1Encoder<PINProfile> | null = null;
 
 /**
  * @summary Encodes a(n) PINProfile into an ASN.1 Element.
@@ -43,7 +51,11 @@ export const _decode_PINProfile: $.ASN1Decoder<PINProfile> = _decode_XMLType;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PINProfile, encoded as an ASN.1 Element.
  */
-export const _encode_PINProfile: (value: PINProfile, elGetter: $.ASN1Encoder<any>) => _Element = _encode_XMLType;
+export
+function _encode_PINProfile (value: PINProfile, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_PINProfile) { _cached_encoder_for_PINProfile = _encode_XMLType; }
+    return _cached_encoder_for_PINProfile(value, elGetter);
+}
 
 
 /* eslint-enable */

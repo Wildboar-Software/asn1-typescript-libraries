@@ -28,13 +28,21 @@ import { XMLType, _decode_XMLType, _encode_XMLType } from "../TS33128Payloads/XM
 export
 type KMSResponseBodyKRR = XMLType; // DefinedType
 
+let _cached_decoder_for_KMSResponseBodyKRR: $.ASN1Decoder<KMSResponseBodyKRR> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) KMSResponseBodyKRR
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_KMSResponseBodyKRR: $.ASN1Decoder<KMSResponseBodyKRR> = _decode_XMLType;
+export
+function _decode_KMSResponseBodyKRR (el: _Element): KMSResponseBodyKRR {
+    if (!_cached_decoder_for_KMSResponseBodyKRR) { _cached_decoder_for_KMSResponseBodyKRR = _decode_XMLType; }
+    return _cached_decoder_for_KMSResponseBodyKRR(el);
+}
+
+let _cached_encoder_for_KMSResponseBodyKRR: $.ASN1Encoder<KMSResponseBodyKRR> | null = null;
 
 /**
  * @summary Encodes a(n) KMSResponseBodyKRR into an ASN.1 Element.
@@ -43,7 +51,11 @@ export const _decode_KMSResponseBodyKRR: $.ASN1Decoder<KMSResponseBodyKRR> = _de
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The KMSResponseBodyKRR, encoded as an ASN.1 Element.
  */
-export const _encode_KMSResponseBodyKRR: (value: KMSResponseBodyKRR, elGetter: $.ASN1Encoder<any>) => _Element = _encode_XMLType;
+export
+function _encode_KMSResponseBodyKRR (value: KMSResponseBodyKRR, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_KMSResponseBodyKRR) { _cached_encoder_for_KMSResponseBodyKRR = _encode_XMLType; }
+    return _cached_encoder_for_KMSResponseBodyKRR(value, elGetter);
+}
 
 
 /* eslint-enable */

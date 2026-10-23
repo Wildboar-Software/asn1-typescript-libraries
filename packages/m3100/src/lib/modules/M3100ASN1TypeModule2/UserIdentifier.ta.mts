@@ -29,13 +29,26 @@ import {
  */
 export type UserIdentifier = NameType; // DefinedType
 
+
+let _cached_decoder_for_UserIdentifier: $.ASN1Decoder<UserIdentifier> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) UserIdentifier
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {UserIdentifier} The decoded data structure.
  */
-export const _decode_UserIdentifier: $.ASN1Decoder<UserIdentifier> = _decode_NameType;
+export function _decode_UserIdentifier(el: _Element): UserIdentifier {
+    if (!_cached_decoder_for_UserIdentifier) {
+        _cached_decoder_for_UserIdentifier = _decode_NameType;
+    }
+    return _cached_decoder_for_UserIdentifier(el);
+}
+
+
+let _cached_encoder_for_UserIdentifier: $.ASN1Encoder<UserIdentifier> | null = null;
+
 
 /**
  * @summary Encodes a(n) UserIdentifier into an ASN.1 Element.
@@ -44,7 +57,15 @@ export const _decode_UserIdentifier: $.ASN1Decoder<UserIdentifier> = _decode_Nam
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UserIdentifier, encoded as an ASN.1 Element.
  */
-export const _encode_UserIdentifier: $.ASN1Encoder<UserIdentifier> = _encode_NameType;
+export function _encode_UserIdentifier(
+    value: UserIdentifier,
+    elGetter: $.ASN1Encoder<UserIdentifier>
+): _Element {
+    if (!_cached_encoder_for_UserIdentifier) {
+        _cached_encoder_for_UserIdentifier = _encode_NameType;
+    }
+    return _cached_encoder_for_UserIdentifier(value, elGetter);
+}
 
 
 /* eslint-enable */

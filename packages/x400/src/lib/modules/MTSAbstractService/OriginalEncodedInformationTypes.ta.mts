@@ -31,13 +31,22 @@ import {
  */
 export type OriginalEncodedInformationTypes = EncodedInformationTypes; // DefinedType
 
+let _cached_decoder_for_OriginalEncodedInformationTypes: $.ASN1Decoder<OriginalEncodedInformationTypes> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) OriginalEncodedInformationTypes
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {OriginalEncodedInformationTypes} The decoded data structure.
  */
-export const _decode_OriginalEncodedInformationTypes: $.ASN1Decoder<OriginalEncodedInformationTypes> = _decode_EncodedInformationTypes;
+export function _decode_OriginalEncodedInformationTypes(el: _Element): OriginalEncodedInformationTypes {
+    if (!_cached_decoder_for_OriginalEncodedInformationTypes) {
+        _cached_decoder_for_OriginalEncodedInformationTypes = _decode_EncodedInformationTypes;
+    }
+    return _cached_decoder_for_OriginalEncodedInformationTypes(el);
+}
+
+let _cached_encoder_for_OriginalEncodedInformationTypes: $.ASN1Encoder<OriginalEncodedInformationTypes> | null = null;
 
 /**
  * @summary Encodes a(n) OriginalEncodedInformationTypes into an ASN.1 Element.
@@ -46,7 +55,15 @@ export const _decode_OriginalEncodedInformationTypes: $.ASN1Decoder<OriginalEnco
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The OriginalEncodedInformationTypes, encoded as an ASN.1 Element.
  */
-export const _encode_OriginalEncodedInformationTypes: $.ASN1Encoder<OriginalEncodedInformationTypes> = _encode_EncodedInformationTypes;
+export function _encode_OriginalEncodedInformationTypes(
+    value: OriginalEncodedInformationTypes,
+    elGetter: $.ASN1Encoder<OriginalEncodedInformationTypes>
+): _Element {
+    if (!_cached_encoder_for_OriginalEncodedInformationTypes) {
+        _cached_encoder_for_OriginalEncodedInformationTypes = _encode_EncodedInformationTypes;
+    }
+    return _cached_encoder_for_OriginalEncodedInformationTypes(value, elGetter);
+}
 
 
 /* eslint-enable */

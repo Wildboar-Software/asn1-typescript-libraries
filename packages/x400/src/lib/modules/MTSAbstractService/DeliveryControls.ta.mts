@@ -29,13 +29,22 @@ import {
  */
 export type DeliveryControls = Controls; // DefinedType
 
+let _cached_decoder_for_DeliveryControls: $.ASN1Decoder<DeliveryControls> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DeliveryControls
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {DeliveryControls} The decoded data structure.
  */
-export const _decode_DeliveryControls: $.ASN1Decoder<DeliveryControls> = _decode_Controls;
+export function _decode_DeliveryControls(el: _Element): DeliveryControls {
+    if (!_cached_decoder_for_DeliveryControls) {
+        _cached_decoder_for_DeliveryControls = _decode_Controls;
+    }
+    return _cached_decoder_for_DeliveryControls(el);
+}
+
+let _cached_encoder_for_DeliveryControls: $.ASN1Encoder<DeliveryControls> | null = null;
 
 /**
  * @summary Encodes a(n) DeliveryControls into an ASN.1 Element.
@@ -44,7 +53,15 @@ export const _decode_DeliveryControls: $.ASN1Decoder<DeliveryControls> = _decode
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DeliveryControls, encoded as an ASN.1 Element.
  */
-export const _encode_DeliveryControls: $.ASN1Encoder<DeliveryControls> = _encode_Controls;
+export function _encode_DeliveryControls(
+    value: DeliveryControls,
+    elGetter: $.ASN1Encoder<DeliveryControls>
+): _Element {
+    if (!_cached_encoder_for_DeliveryControls) {
+        _cached_encoder_for_DeliveryControls = _encode_Controls;
+    }
+    return _cached_encoder_for_DeliveryControls(value, elGetter);
+}
 
 
 /* eslint-enable */

@@ -75,6 +75,8 @@ function _decode_RocfDeliveryMode (el: _Element): RocfDeliveryMode {
     return _decoded;
 }
 
+let _cached_encoder_for_RocfDeliveryMode: $.ASN1Encoder<RocfDeliveryMode> | null = null;
+
 /**
  * @summary Encodes a(n) RocfDeliveryMode into an ASN.1 Element.
  * @function
@@ -82,7 +84,11 @@ function _decode_RocfDeliveryMode (el: _Element): RocfDeliveryMode {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RocfDeliveryMode, encoded as an ASN.1 Element.
  */
-export const _encode_RocfDeliveryMode: (value: RocfDeliveryMode, elGetter: $.ASN1Encoder<any>) => _Element = _encode_DeliveryMode;
+export
+function _encode_RocfDeliveryMode (value: RocfDeliveryMode, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_RocfDeliveryMode) { _cached_encoder_for_RocfDeliveryMode = _encode_DeliveryMode; }
+    return _cached_encoder_for_RocfDeliveryMode(value, elGetter);
+}
 
 
 /* eslint-enable */

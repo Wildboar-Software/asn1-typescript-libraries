@@ -38,13 +38,22 @@ import {
  */
 export type TCInvokeIdSet = InvokeId; // DefinedType
 
+let _cached_decoder_for_TCInvokeIdSet: $.ASN1Decoder<TCInvokeIdSet> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TCInvokeIdSet
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {TCInvokeIdSet} The decoded data structure.
  */
-export const _decode_TCInvokeIdSet: $.ASN1Decoder<TCInvokeIdSet> = _decode_InvokeId;
+export function _decode_TCInvokeIdSet(el: _Element): TCInvokeIdSet {
+  if (!_cached_decoder_for_TCInvokeIdSet) {
+    _cached_decoder_for_TCInvokeIdSet = _decode_InvokeId;
+  }
+  return _cached_decoder_for_TCInvokeIdSet(el);
+}
+
+let _cached_encoder_for_TCInvokeIdSet: $.ASN1Encoder<TCInvokeIdSet> | null = null;
 
 /**
  * @summary Encodes a(n) TCInvokeIdSet into an ASN.1 Element.
@@ -53,7 +62,15 @@ export const _decode_TCInvokeIdSet: $.ASN1Decoder<TCInvokeIdSet> = _decode_Invok
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TCInvokeIdSet, encoded as an ASN.1 Element.
  */
-export const _encode_TCInvokeIdSet: $.ASN1Encoder<TCInvokeIdSet> = _encode_InvokeId;
+export function _encode_TCInvokeIdSet(
+  value: TCInvokeIdSet,
+  elGetter: $.ASN1Encoder<TCInvokeIdSet>
+): _Element {
+  if (!_cached_encoder_for_TCInvokeIdSet) {
+    _cached_encoder_for_TCInvokeIdSet = _encode_InvokeId;
+  }
+  return _cached_encoder_for_TCInvokeIdSet(value, elGetter);
+}
 
 
 /* eslint-enable */

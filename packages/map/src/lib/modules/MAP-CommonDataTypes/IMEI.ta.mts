@@ -26,13 +26,21 @@ import { _decode_TBCD_STRING, _encode_TBCD_STRING, TBCD_STRING } from "../MAP-Co
 export
 type IMEI = TBCD_STRING; // DefinedType
 
+let _cached_decoder_for_IMEI: $.ASN1Decoder<IMEI> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) IMEI
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_IMEI: $.ASN1Decoder<IMEI> = _decode_TBCD_STRING;
+export
+function _decode_IMEI (el: _Element): IMEI {
+    if (!_cached_decoder_for_IMEI) { _cached_decoder_for_IMEI = _decode_TBCD_STRING; }
+    return _cached_decoder_for_IMEI(el);
+}
+
+let _cached_encoder_for_IMEI: $.ASN1Encoder<IMEI> | null = null;
 
 /**
  * @summary Encodes a(n) IMEI into an ASN.1 Element.
@@ -41,7 +49,11 @@ export const _decode_IMEI: $.ASN1Decoder<IMEI> = _decode_TBCD_STRING;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The IMEI, encoded as an ASN.1 Element.
  */
-export const _encode_IMEI: (value: IMEI, elGetter: $.ASN1Encoder<any>) => _Element = _encode_TBCD_STRING;
+export
+function _encode_IMEI (value: IMEI, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_IMEI) { _cached_encoder_for_IMEI = _encode_TBCD_STRING; }
+    return _cached_encoder_for_IMEI(value, elGetter);
+}
 
 
 /* eslint-enable */

@@ -29,13 +29,22 @@ import {
  */
 export type MessageReference = EDIMIdentifier; // DefinedType
 
+let _cached_decoder_for_MessageReference: $.ASN1Decoder<MessageReference> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageReference
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {MessageReference} The decoded data structure.
  */
-export const _decode_MessageReference: $.ASN1Decoder<MessageReference> = _decode_EDIMIdentifier;
+export function _decode_MessageReference(el: _Element): MessageReference {
+    if (!_cached_decoder_for_MessageReference) {
+        _cached_decoder_for_MessageReference = _decode_EDIMIdentifier;
+    }
+    return _cached_decoder_for_MessageReference(el);
+}
+
+let _cached_encoder_for_MessageReference: $.ASN1Encoder<MessageReference> | null = null;
 
 /**
  * @summary Encodes a(n) MessageReference into an ASN.1 Element.
@@ -44,7 +53,15 @@ export const _decode_MessageReference: $.ASN1Decoder<MessageReference> = _decode
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MessageReference, encoded as an ASN.1 Element.
  */
-export const _encode_MessageReference: $.ASN1Encoder<MessageReference> = _encode_EDIMIdentifier;
+export function _encode_MessageReference(
+    value: MessageReference,
+    elGetter: $.ASN1Encoder<MessageReference>
+): _Element {
+    if (!_cached_encoder_for_MessageReference) {
+        _cached_encoder_for_MessageReference = _encode_EDIMIdentifier;
+    }
+    return _cached_encoder_for_MessageReference(value, elGetter);
+}
 
 
 /* eslint-enable */

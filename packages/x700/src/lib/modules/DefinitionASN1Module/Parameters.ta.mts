@@ -33,13 +33,26 @@ import {
  */
 export type Parameters = TemplateList; // DefinedType
 
+
+let _cached_decoder_for_Parameters: $.ASN1Decoder<Parameters> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Parameters
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {Parameters} The decoded data structure.
  */
-export const _decode_Parameters: $.ASN1Decoder<Parameters> = _decode_TemplateList;
+export function _decode_Parameters(el: _Element): Parameters {
+    if (!_cached_decoder_for_Parameters) {
+        _cached_decoder_for_Parameters = _decode_TemplateList;
+    }
+    return _cached_decoder_for_Parameters(el);
+}
+
+
+let _cached_encoder_for_Parameters: $.ASN1Encoder<Parameters> | null = null;
+
 
 /**
  * @summary Encodes a(n) Parameters into an ASN.1 Element.
@@ -48,7 +61,15 @@ export const _decode_Parameters: $.ASN1Decoder<Parameters> = _decode_TemplateLis
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Parameters, encoded as an ASN.1 Element.
  */
-export const _encode_Parameters: $.ASN1Encoder<Parameters> = _encode_TemplateList;
+export function _encode_Parameters(
+    value: Parameters,
+    elGetter: $.ASN1Encoder<Parameters>
+): _Element {
+    if (!_cached_encoder_for_Parameters) {
+        _cached_encoder_for_Parameters = _encode_TemplateList;
+    }
+    return _cached_encoder_for_Parameters(value, elGetter);
+}
 
 
 /* eslint-enable */

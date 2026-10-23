@@ -36,13 +36,21 @@ import { type FCISMSBillingChargingCharacteristics, _decode_FCISMSBillingChargin
 export
 type FurnishChargingInformationSMSArg = FCISMSBillingChargingCharacteristics; // DefinedType
 
+let _cached_decoder_for_FurnishChargingInformationSMSArg: $.ASN1Decoder<FurnishChargingInformationSMSArg> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) FurnishChargingInformationSMSArg
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_FurnishChargingInformationSMSArg: $.ASN1Decoder<FurnishChargingInformationSMSArg> = _decode_FCISMSBillingChargingCharacteristics;
+export
+function _decode_FurnishChargingInformationSMSArg (el: _Element): FurnishChargingInformationSMSArg {
+    if (!_cached_decoder_for_FurnishChargingInformationSMSArg) { _cached_decoder_for_FurnishChargingInformationSMSArg = _decode_FCISMSBillingChargingCharacteristics; }
+    return _cached_decoder_for_FurnishChargingInformationSMSArg(el);
+}
+
+let _cached_encoder_for_FurnishChargingInformationSMSArg: $.ASN1Encoder<FurnishChargingInformationSMSArg> | null = null;
 
 /**
  * @summary Encodes a(n) FurnishChargingInformationSMSArg into an ASN.1 Element.
@@ -51,7 +59,11 @@ export const _decode_FurnishChargingInformationSMSArg: $.ASN1Decoder<FurnishChar
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The FurnishChargingInformationSMSArg, encoded as an ASN.1 Element.
  */
-export const _encode_FurnishChargingInformationSMSArg: (value: FurnishChargingInformationSMSArg, elGetter: $.ASN1Encoder<any>) => _Element = _encode_FCISMSBillingChargingCharacteristics;
+export
+function _encode_FurnishChargingInformationSMSArg (value: FurnishChargingInformationSMSArg, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_FurnishChargingInformationSMSArg) { _cached_encoder_for_FurnishChargingInformationSMSArg = _encode_FCISMSBillingChargingCharacteristics; }
+    return _cached_encoder_for_FurnishChargingInformationSMSArg(value, elGetter);
+}
 
 
 /* eslint-enable */

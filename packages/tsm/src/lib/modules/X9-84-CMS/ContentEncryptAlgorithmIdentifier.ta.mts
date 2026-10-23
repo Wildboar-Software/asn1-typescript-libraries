@@ -28,13 +28,21 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
 export
 type ContentEncryptAlgorithmIdentifier = AlgorithmIdentifier; // DefinedType
 
+let _cached_decoder_for_ContentEncryptAlgorithmIdentifier: $.ASN1Decoder<ContentEncryptAlgorithmIdentifier> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ContentEncryptAlgorithmIdentifier
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_ContentEncryptAlgorithmIdentifier: $.ASN1Decoder<ContentEncryptAlgorithmIdentifier> = _decode_AlgorithmIdentifier;
+export
+function _decode_ContentEncryptAlgorithmIdentifier (el: _Element): ContentEncryptAlgorithmIdentifier {
+    if (!_cached_decoder_for_ContentEncryptAlgorithmIdentifier) { _cached_decoder_for_ContentEncryptAlgorithmIdentifier = _decode_AlgorithmIdentifier; }
+    return _cached_decoder_for_ContentEncryptAlgorithmIdentifier(el);
+}
+
+let _cached_encoder_for_ContentEncryptAlgorithmIdentifier: $.ASN1Encoder<ContentEncryptAlgorithmIdentifier> | null = null;
 
 /**
  * @summary Encodes a(n) ContentEncryptAlgorithmIdentifier into an ASN.1 Element.
@@ -43,7 +51,11 @@ export const _decode_ContentEncryptAlgorithmIdentifier: $.ASN1Decoder<ContentEnc
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ContentEncryptAlgorithmIdentifier, encoded as an ASN.1 Element.
  */
-export const _encode_ContentEncryptAlgorithmIdentifier: (value: ContentEncryptAlgorithmIdentifier, elGetter: $.ASN1Encoder<any>) => _Element = _encode_AlgorithmIdentifier;
+export
+function _encode_ContentEncryptAlgorithmIdentifier (value: ContentEncryptAlgorithmIdentifier, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_ContentEncryptAlgorithmIdentifier) { _cached_encoder_for_ContentEncryptAlgorithmIdentifier = _encode_AlgorithmIdentifier; }
+    return _cached_encoder_for_ContentEncryptAlgorithmIdentifier(value, elGetter);
+}
 
 
 /* eslint-enable */

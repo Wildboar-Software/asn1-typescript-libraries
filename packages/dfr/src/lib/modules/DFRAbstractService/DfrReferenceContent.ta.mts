@@ -31,13 +31,21 @@ import { DOR, _decode_DOR, _encode_DOR } from "../DOR-definition/DOR.ta.mjs";
 export
 type DfrReferenceContent = DOR; // DefinedType
 
+let _cached_decoder_for_DfrReferenceContent: $.ASN1Decoder<DfrReferenceContent> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DfrReferenceContent
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_DfrReferenceContent: $.ASN1Decoder<DfrReferenceContent> = _decode_DOR;
+export
+function _decode_DfrReferenceContent (el: _Element): DfrReferenceContent {
+    if (!_cached_decoder_for_DfrReferenceContent) { _cached_decoder_for_DfrReferenceContent = _decode_DOR; }
+    return _cached_decoder_for_DfrReferenceContent(el);
+}
+
+let _cached_encoder_for_DfrReferenceContent: $.ASN1Encoder<DfrReferenceContent> | null = null;
 
 /**
  * @summary Encodes a(n) DfrReferenceContent into an ASN.1 Element.
@@ -46,7 +54,11 @@ export const _decode_DfrReferenceContent: $.ASN1Decoder<DfrReferenceContent> = _
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DfrReferenceContent, encoded as an ASN.1 Element.
  */
-export const _encode_DfrReferenceContent: (value: DfrReferenceContent, elGetter: $.ASN1Encoder<any>) => _Element = _encode_DOR;
+export
+function _encode_DfrReferenceContent (value: DfrReferenceContent, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_DfrReferenceContent) { _cached_encoder_for_DfrReferenceContent = _encode_DOR; }
+    return _cached_encoder_for_DfrReferenceContent(value, elGetter);
+}
 
 
 /* eslint-enable */

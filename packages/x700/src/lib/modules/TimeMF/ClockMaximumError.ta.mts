@@ -33,13 +33,22 @@ import {
  */
 export type ClockMaximumError = TimeInterval; // DefinedType
 
+let _cached_decoder_for_ClockMaximumError: $.ASN1Decoder<ClockMaximumError> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ClockMaximumError
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ClockMaximumError} The decoded data structure.
  */
-export const _decode_ClockMaximumError: $.ASN1Decoder<ClockMaximumError> = _decode_TimeInterval;
+export function _decode_ClockMaximumError(el: _Element): ClockMaximumError {
+    if (!_cached_decoder_for_ClockMaximumError) {
+        _cached_decoder_for_ClockMaximumError = _decode_TimeInterval;
+    }
+    return _cached_decoder_for_ClockMaximumError(el);
+}
+
+let _cached_encoder_for_ClockMaximumError: $.ASN1Encoder<ClockMaximumError> | null = null;
 
 /**
  * @summary Encodes a(n) ClockMaximumError into an ASN.1 Element.
@@ -48,7 +57,15 @@ export const _decode_ClockMaximumError: $.ASN1Decoder<ClockMaximumError> = _deco
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ClockMaximumError, encoded as an ASN.1 Element.
  */
-export const _encode_ClockMaximumError: $.ASN1Encoder<ClockMaximumError> = _encode_TimeInterval;
+export function _encode_ClockMaximumError(
+    value: ClockMaximumError,
+    elGetter: $.ASN1Encoder<ClockMaximumError>
+): _Element {
+    if (!_cached_encoder_for_ClockMaximumError) {
+        _cached_encoder_for_ClockMaximumError = _encode_TimeInterval;
+    }
+    return _cached_encoder_for_ClockMaximumError(value, elGetter);
+}
 
 
 /* eslint-enable */

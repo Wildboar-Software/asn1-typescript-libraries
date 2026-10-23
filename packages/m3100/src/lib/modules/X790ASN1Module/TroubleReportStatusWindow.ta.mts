@@ -28,13 +28,26 @@ import {
  */
 export type TroubleReportStatusWindow = TimeInterval; // DefinedType
 
+
+let _cached_decoder_for_TroubleReportStatusWindow: $.ASN1Decoder<TroubleReportStatusWindow> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TroubleReportStatusWindow
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {TroubleReportStatusWindow} The decoded data structure.
  */
-export const _decode_TroubleReportStatusWindow: $.ASN1Decoder<TroubleReportStatusWindow> = _decode_TimeInterval;
+export function _decode_TroubleReportStatusWindow(el: _Element): TroubleReportStatusWindow {
+    if (!_cached_decoder_for_TroubleReportStatusWindow) {
+        _cached_decoder_for_TroubleReportStatusWindow = _decode_TimeInterval;
+    }
+    return _cached_decoder_for_TroubleReportStatusWindow(el);
+}
+
+
+let _cached_encoder_for_TroubleReportStatusWindow: $.ASN1Encoder<TroubleReportStatusWindow> | null = null;
+
 
 /**
  * @summary Encodes a(n) TroubleReportStatusWindow into an ASN.1 Element.
@@ -43,7 +56,15 @@ export const _decode_TroubleReportStatusWindow: $.ASN1Decoder<TroubleReportStatu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TroubleReportStatusWindow, encoded as an ASN.1 Element.
  */
-export const _encode_TroubleReportStatusWindow: $.ASN1Encoder<TroubleReportStatusWindow> = _encode_TimeInterval;
+export function _encode_TroubleReportStatusWindow(
+    value: TroubleReportStatusWindow,
+    elGetter: $.ASN1Encoder<TroubleReportStatusWindow>
+): _Element {
+    if (!_cached_encoder_for_TroubleReportStatusWindow) {
+        _cached_encoder_for_TroubleReportStatusWindow = _encode_TimeInterval;
+    }
+    return _cached_encoder_for_TroubleReportStatusWindow(value, elGetter);
+}
 
 
 /* eslint-enable */

@@ -31,13 +31,21 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
 export
 type AddEventConditionListReference_Error = ObjectName; // DefinedType
 
+let _cached_decoder_for_AddEventConditionListReference_Error: $.ASN1Decoder<AddEventConditionListReference_Error> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AddEventConditionListReference_Error
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_AddEventConditionListReference_Error: $.ASN1Decoder<AddEventConditionListReference_Error> = _decode_ObjectName;
+export
+function _decode_AddEventConditionListReference_Error (el: _Element): AddEventConditionListReference_Error {
+    if (!_cached_decoder_for_AddEventConditionListReference_Error) { _cached_decoder_for_AddEventConditionListReference_Error = _decode_ObjectName; }
+    return _cached_decoder_for_AddEventConditionListReference_Error(el);
+}
+
+let _cached_encoder_for_AddEventConditionListReference_Error: $.ASN1Encoder<AddEventConditionListReference_Error> | null = null;
 
 /**
  * @summary Encodes a(n) AddEventConditionListReference_Error into an ASN.1 Element.
@@ -46,7 +54,11 @@ export const _decode_AddEventConditionListReference_Error: $.ASN1Decoder<AddEven
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AddEventConditionListReference_Error, encoded as an ASN.1 Element.
  */
-export const _encode_AddEventConditionListReference_Error: (value: AddEventConditionListReference_Error, elGetter: $.ASN1Encoder<any>) => _Element = _encode_ObjectName;
+export
+function _encode_AddEventConditionListReference_Error (value: AddEventConditionListReference_Error, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_AddEventConditionListReference_Error) { _cached_encoder_for_AddEventConditionListReference_Error = _encode_ObjectName; }
+    return _cached_encoder_for_AddEventConditionListReference_Error(value, elGetter);
+}
 
 
 /* eslint-enable */

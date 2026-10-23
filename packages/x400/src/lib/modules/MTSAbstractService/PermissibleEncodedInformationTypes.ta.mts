@@ -32,13 +32,22 @@ import {
  */
 export type PermissibleEncodedInformationTypes = EncodedInformationTypesConstraints; // DefinedType
 
+let _cached_decoder_for_PermissibleEncodedInformationTypes: $.ASN1Decoder<PermissibleEncodedInformationTypes> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PermissibleEncodedInformationTypes
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {PermissibleEncodedInformationTypes} The decoded data structure.
  */
-export const _decode_PermissibleEncodedInformationTypes: $.ASN1Decoder<PermissibleEncodedInformationTypes> = _decode_EncodedInformationTypesConstraints;
+export function _decode_PermissibleEncodedInformationTypes(el: _Element): PermissibleEncodedInformationTypes {
+    if (!_cached_decoder_for_PermissibleEncodedInformationTypes) {
+        _cached_decoder_for_PermissibleEncodedInformationTypes = _decode_EncodedInformationTypesConstraints;
+    }
+    return _cached_decoder_for_PermissibleEncodedInformationTypes(el);
+}
+
+let _cached_encoder_for_PermissibleEncodedInformationTypes: $.ASN1Encoder<PermissibleEncodedInformationTypes> | null = null;
 
 /**
  * @summary Encodes a(n) PermissibleEncodedInformationTypes into an ASN.1 Element.
@@ -47,7 +56,18 @@ export const _decode_PermissibleEncodedInformationTypes: $.ASN1Decoder<Permissib
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PermissibleEncodedInformationTypes, encoded as an ASN.1 Element.
  */
-export const _encode_PermissibleEncodedInformationTypes: $.ASN1Encoder<PermissibleEncodedInformationTypes> = _encode_EncodedInformationTypesConstraints;
+export function _encode_PermissibleEncodedInformationTypes(
+    value: PermissibleEncodedInformationTypes,
+    elGetter: $.ASN1Encoder<PermissibleEncodedInformationTypes>
+): _Element {
+    if (!_cached_encoder_for_PermissibleEncodedInformationTypes) {
+        _cached_encoder_for_PermissibleEncodedInformationTypes = _encode_EncodedInformationTypesConstraints;
+    }
+    return _cached_encoder_for_PermissibleEncodedInformationTypes(
+        value,
+        elGetter
+    );
+}
 
 
 /* eslint-enable */

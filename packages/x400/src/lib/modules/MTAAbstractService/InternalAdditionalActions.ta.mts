@@ -29,13 +29,22 @@ import {
  */
 export type InternalAdditionalActions = AdditionalActions; // DefinedType
 
+let _cached_decoder_for_InternalAdditionalActions: $.ASN1Decoder<InternalAdditionalActions> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) InternalAdditionalActions
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {InternalAdditionalActions} The decoded data structure.
  */
-export const _decode_InternalAdditionalActions: $.ASN1Decoder<InternalAdditionalActions> = _decode_AdditionalActions;
+export function _decode_InternalAdditionalActions(el: _Element): InternalAdditionalActions {
+    if (!_cached_decoder_for_InternalAdditionalActions) {
+        _cached_decoder_for_InternalAdditionalActions = _decode_AdditionalActions;
+    }
+    return _cached_decoder_for_InternalAdditionalActions(el);
+}
+
+let _cached_encoder_for_InternalAdditionalActions: $.ASN1Encoder<InternalAdditionalActions> | null = null;
 
 /**
  * @summary Encodes a(n) InternalAdditionalActions into an ASN.1 Element.
@@ -44,7 +53,15 @@ export const _decode_InternalAdditionalActions: $.ASN1Decoder<InternalAdditional
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The InternalAdditionalActions, encoded as an ASN.1 Element.
  */
-export const _encode_InternalAdditionalActions: $.ASN1Encoder<InternalAdditionalActions> = _encode_AdditionalActions;
+export function _encode_InternalAdditionalActions(
+    value: InternalAdditionalActions,
+    elGetter: $.ASN1Encoder<InternalAdditionalActions>
+): _Element {
+    if (!_cached_encoder_for_InternalAdditionalActions) {
+        _cached_encoder_for_InternalAdditionalActions = _encode_AdditionalActions;
+    }
+    return _cached_encoder_for_InternalAdditionalActions(value, elGetter);
+}
 
 
 /* eslint-enable */

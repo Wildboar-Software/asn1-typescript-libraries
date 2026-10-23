@@ -29,13 +29,22 @@ import {
  */
 export type MessageDeliveryPDUs88 = ROS_SingleAS; // DefinedType
 
+let _cached_decoder_for_MessageDeliveryPDUs88: $.ASN1Decoder<MessageDeliveryPDUs88> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageDeliveryPDUs88
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {MessageDeliveryPDUs88} The decoded data structure.
  */
-export const _decode_MessageDeliveryPDUs88: $.ASN1Decoder<MessageDeliveryPDUs88> = _decode_ROS_SingleAS;
+export function _decode_MessageDeliveryPDUs88(el: _Element): MessageDeliveryPDUs88 {
+    if (!_cached_decoder_for_MessageDeliveryPDUs88) {
+        _cached_decoder_for_MessageDeliveryPDUs88 = _decode_ROS_SingleAS;
+    }
+    return _cached_decoder_for_MessageDeliveryPDUs88(el);
+}
+
+let _cached_encoder_for_MessageDeliveryPDUs88: $.ASN1Encoder<MessageDeliveryPDUs88> | null = null;
 
 /**
  * @summary Encodes a(n) MessageDeliveryPDUs88 into an ASN.1 Element.
@@ -44,7 +53,15 @@ export const _decode_MessageDeliveryPDUs88: $.ASN1Decoder<MessageDeliveryPDUs88>
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MessageDeliveryPDUs88, encoded as an ASN.1 Element.
  */
-export const _encode_MessageDeliveryPDUs88: $.ASN1Encoder<MessageDeliveryPDUs88> = _encode_ROS_SingleAS;
+export function _encode_MessageDeliveryPDUs88(
+    value: MessageDeliveryPDUs88,
+    elGetter: $.ASN1Encoder<MessageDeliveryPDUs88>
+): _Element {
+    if (!_cached_encoder_for_MessageDeliveryPDUs88) {
+        _cached_encoder_for_MessageDeliveryPDUs88 = _encode_ROS_SingleAS;
+    }
+    return _cached_encoder_for_MessageDeliveryPDUs88(value, elGetter);
+}
 
 
 /* eslint-enable */

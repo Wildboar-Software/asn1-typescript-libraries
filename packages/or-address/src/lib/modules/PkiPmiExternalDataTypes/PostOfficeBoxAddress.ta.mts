@@ -21,13 +21,22 @@ import {
  */
 export type PostOfficeBoxAddress = PDSParameter; // DefinedType
 
+let _cached_decoder_for_PostOfficeBoxAddress: $.ASN1Decoder<PostOfficeBoxAddress> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PostOfficeBoxAddress
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {PostOfficeBoxAddress} The decoded data structure.
  */
-export const _decode_PostOfficeBoxAddress: $.ASN1Decoder<PostOfficeBoxAddress> = _decode_PDSParameter;
+export function _decode_PostOfficeBoxAddress(el: _Element): PostOfficeBoxAddress {
+    if (!_cached_decoder_for_PostOfficeBoxAddress) {
+        _cached_decoder_for_PostOfficeBoxAddress = _decode_PDSParameter;
+    }
+    return _cached_decoder_for_PostOfficeBoxAddress(el);
+}
+
+let _cached_encoder_for_PostOfficeBoxAddress: $.ASN1Encoder<PostOfficeBoxAddress> | null = null;
 
 /**
  * @summary Encodes a(n) PostOfficeBoxAddress into an ASN.1 Element.
@@ -36,7 +45,15 @@ export const _decode_PostOfficeBoxAddress: $.ASN1Decoder<PostOfficeBoxAddress> =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PostOfficeBoxAddress, encoded as an ASN.1 Element.
  */
-export const _encode_PostOfficeBoxAddress: $.ASN1Encoder<PostOfficeBoxAddress> = _encode_PDSParameter;
+export function _encode_PostOfficeBoxAddress(
+    value: PostOfficeBoxAddress,
+    elGetter: $.ASN1Encoder<PostOfficeBoxAddress>
+): _Element {
+    if (!_cached_encoder_for_PostOfficeBoxAddress) {
+        _cached_encoder_for_PostOfficeBoxAddress = _encode_PDSParameter;
+    }
+    return _cached_encoder_for_PostOfficeBoxAddress(value, elGetter);
+}
 
 
 /* eslint-enable */

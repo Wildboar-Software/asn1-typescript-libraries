@@ -29,13 +29,22 @@ import {
  */
 export type CopyRecipientsSubfield = RecipientSpecifier; // DefinedType
 
+let _cached_decoder_for_CopyRecipientsSubfield: $.ASN1Decoder<CopyRecipientsSubfield> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CopyRecipientsSubfield
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {CopyRecipientsSubfield} The decoded data structure.
  */
-export const _decode_CopyRecipientsSubfield: $.ASN1Decoder<CopyRecipientsSubfield> = _decode_RecipientSpecifier;
+export function _decode_CopyRecipientsSubfield(el: _Element): CopyRecipientsSubfield {
+    if (!_cached_decoder_for_CopyRecipientsSubfield) {
+        _cached_decoder_for_CopyRecipientsSubfield = _decode_RecipientSpecifier;
+    }
+    return _cached_decoder_for_CopyRecipientsSubfield(el);
+}
+
+let _cached_encoder_for_CopyRecipientsSubfield: $.ASN1Encoder<CopyRecipientsSubfield> | null = null;
 
 /**
  * @summary Encodes a(n) CopyRecipientsSubfield into an ASN.1 Element.
@@ -44,7 +53,15 @@ export const _decode_CopyRecipientsSubfield: $.ASN1Decoder<CopyRecipientsSubfiel
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CopyRecipientsSubfield, encoded as an ASN.1 Element.
  */
-export const _encode_CopyRecipientsSubfield: $.ASN1Encoder<CopyRecipientsSubfield> = _encode_RecipientSpecifier;
+export function _encode_CopyRecipientsSubfield(
+    value: CopyRecipientsSubfield,
+    elGetter: $.ASN1Encoder<CopyRecipientsSubfield>
+): _Element {
+    if (!_cached_encoder_for_CopyRecipientsSubfield) {
+        _cached_encoder_for_CopyRecipientsSubfield = _encode_RecipientSpecifier;
+    }
+    return _cached_encoder_for_CopyRecipientsSubfield(value, elGetter);
+}
 
 
 /* eslint-enable */

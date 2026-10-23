@@ -32,8 +32,15 @@ import {
  */
 export type ROSEInvokeIds = InvokeId; // VALUE_SET_TYPE
 
-export const _decode_ROSEInvokeIds: $.ASN1Decoder<ROSEInvokeIds> = _decode_InvokeId;
+export function _decode_ROSEInvokeIds(el: _Element): ROSEInvokeIds {
+  return _decode_InvokeId(el);
+}
 
-export const _encode_ROSEInvokeIds: $.ASN1Encoder<ROSEInvokeIds> = _encode_InvokeId;
+export function _encode_ROSEInvokeIds(
+  value: ROSEInvokeIds,
+  elGetter: $.ASN1Encoder<ROSEInvokeIds>
+): _Element {
+  return _encode_InvokeId(value, elGetter);
+}
 
 /* eslint-enable */

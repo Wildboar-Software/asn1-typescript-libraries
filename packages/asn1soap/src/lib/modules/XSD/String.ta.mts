@@ -32,13 +32,26 @@ import {
  */
 export type String = XMLCompatibleString; // DefinedType
 
+
+let _cached_decoder_for_String: $.ASN1Decoder<String> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) String
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {String} The decoded data structure.
  */
-export const _decode_String: $.ASN1Decoder<String> = _decode_XMLCompatibleString;
+export function _decode_String(el: _Element): String {
+  if (!_cached_decoder_for_String) {
+    _cached_decoder_for_String = _decode_XMLCompatibleString;
+  }
+  return _cached_decoder_for_String(el);
+}
+
+
+let _cached_encoder_for_String: $.ASN1Encoder<String> | null = null;
+
 
 /**
  * @summary Encodes a(n) String into an ASN.1 Element.
@@ -47,7 +60,12 @@ export const _decode_String: $.ASN1Decoder<String> = _decode_XMLCompatibleString
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The String, encoded as an ASN.1 Element.
  */
-export const _encode_String: $.ASN1Encoder<String> = _encode_XMLCompatibleString;
+export function _encode_String(value: String, elGetter: $.ASN1Encoder<String>): _Element {
+  if (!_cached_encoder_for_String) {
+    _cached_encoder_for_String = _encode_XMLCompatibleString;
+  }
+  return _cached_encoder_for_String(value, elGetter);
+}
 
 
 /* eslint-enable */

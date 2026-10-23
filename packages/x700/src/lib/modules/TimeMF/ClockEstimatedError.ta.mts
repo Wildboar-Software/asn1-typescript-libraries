@@ -32,13 +32,22 @@ import {
  */
 export type ClockEstimatedError = TimeInterval; // DefinedType
 
+let _cached_decoder_for_ClockEstimatedError: $.ASN1Decoder<ClockEstimatedError> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ClockEstimatedError
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ClockEstimatedError} The decoded data structure.
  */
-export const _decode_ClockEstimatedError: $.ASN1Decoder<ClockEstimatedError> = _decode_TimeInterval;
+export function _decode_ClockEstimatedError(el: _Element): ClockEstimatedError {
+    if (!_cached_decoder_for_ClockEstimatedError) {
+        _cached_decoder_for_ClockEstimatedError = _decode_TimeInterval;
+    }
+    return _cached_decoder_for_ClockEstimatedError(el);
+}
+
+let _cached_encoder_for_ClockEstimatedError: $.ASN1Encoder<ClockEstimatedError> | null = null;
 
 /**
  * @summary Encodes a(n) ClockEstimatedError into an ASN.1 Element.
@@ -47,7 +56,15 @@ export const _decode_ClockEstimatedError: $.ASN1Decoder<ClockEstimatedError> = _
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ClockEstimatedError, encoded as an ASN.1 Element.
  */
-export const _encode_ClockEstimatedError: $.ASN1Encoder<ClockEstimatedError> = _encode_TimeInterval;
+export function _encode_ClockEstimatedError(
+    value: ClockEstimatedError,
+    elGetter: $.ASN1Encoder<ClockEstimatedError>
+): _Element {
+    if (!_cached_encoder_for_ClockEstimatedError) {
+        _cached_encoder_for_ClockEstimatedError = _encode_TimeInterval;
+    }
+    return _cached_encoder_for_ClockEstimatedError(value, elGetter);
+}
 
 
 /* eslint-enable */

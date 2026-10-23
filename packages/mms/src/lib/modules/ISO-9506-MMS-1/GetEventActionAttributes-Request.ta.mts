@@ -31,13 +31,21 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
 export
 type GetEventActionAttributes_Request = ObjectName; // DefinedType
 
+let _cached_decoder_for_GetEventActionAttributes_Request: $.ASN1Decoder<GetEventActionAttributes_Request> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) GetEventActionAttributes_Request
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_GetEventActionAttributes_Request: $.ASN1Decoder<GetEventActionAttributes_Request> = _decode_ObjectName;
+export
+function _decode_GetEventActionAttributes_Request (el: _Element): GetEventActionAttributes_Request {
+    if (!_cached_decoder_for_GetEventActionAttributes_Request) { _cached_decoder_for_GetEventActionAttributes_Request = _decode_ObjectName; }
+    return _cached_decoder_for_GetEventActionAttributes_Request(el);
+}
+
+let _cached_encoder_for_GetEventActionAttributes_Request: $.ASN1Encoder<GetEventActionAttributes_Request> | null = null;
 
 /**
  * @summary Encodes a(n) GetEventActionAttributes_Request into an ASN.1 Element.
@@ -46,7 +54,11 @@ export const _decode_GetEventActionAttributes_Request: $.ASN1Decoder<GetEventAct
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The GetEventActionAttributes_Request, encoded as an ASN.1 Element.
  */
-export const _encode_GetEventActionAttributes_Request: (value: GetEventActionAttributes_Request, elGetter: $.ASN1Encoder<any>) => _Element = _encode_ObjectName;
+export
+function _encode_GetEventActionAttributes_Request (value: GetEventActionAttributes_Request, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_GetEventActionAttributes_Request) { _cached_encoder_for_GetEventActionAttributes_Request = _encode_ObjectName; }
+    return _cached_encoder_for_GetEventActionAttributes_Request(value, elGetter);
+}
 
 
 /* eslint-enable */

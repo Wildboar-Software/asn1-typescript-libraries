@@ -21,13 +21,21 @@ import { TFCBindArgument, _decode_TFCBindArgument, _encode_TFCBindArgument } fro
 export
 type TFCBindResult = TFCBindArgument; // DefinedType
 
+let _cached_decoder_for_TFCBindResult: $.ASN1Decoder<TFCBindResult> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TFCBindResult
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_TFCBindResult: $.ASN1Decoder<TFCBindResult> = _decode_TFCBindArgument;
+export
+function _decode_TFCBindResult (el: _Element): TFCBindResult {
+    if (!_cached_decoder_for_TFCBindResult) { _cached_decoder_for_TFCBindResult = _decode_TFCBindArgument; }
+    return _cached_decoder_for_TFCBindResult(el);
+}
+
+let _cached_encoder_for_TFCBindResult: $.ASN1Encoder<TFCBindResult> | null = null;
 
 /**
  * @summary Encodes a(n) TFCBindResult into an ASN.1 Element.
@@ -36,7 +44,11 @@ export const _decode_TFCBindResult: $.ASN1Decoder<TFCBindResult> = _decode_TFCBi
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TFCBindResult, encoded as an ASN.1 Element.
  */
-export const _encode_TFCBindResult: (value: TFCBindResult, elGetter: $.ASN1Encoder<any>) => _Element = _encode_TFCBindArgument;
+export
+function _encode_TFCBindResult (value: TFCBindResult, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_TFCBindResult) { _cached_encoder_for_TFCBindResult = _encode_TFCBindArgument; }
+    return _cached_encoder_for_TFCBindResult(value, elGetter);
+}
 
 
 /* eslint-enable */

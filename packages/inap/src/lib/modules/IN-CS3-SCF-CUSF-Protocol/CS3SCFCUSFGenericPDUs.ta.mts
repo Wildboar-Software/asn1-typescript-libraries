@@ -21,13 +21,21 @@ import { TCMessage, _decode_TCMessage, _encode_TCMessage } from "../TCAPMessages
 export
 type CS3SCFCUSFGenericPDUs = TCMessage; // DefinedType
 
+let _cached_decoder_for_CS3SCFCUSFGenericPDUs: $.ASN1Decoder<CS3SCFCUSFGenericPDUs> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CS3SCFCUSFGenericPDUs
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_CS3SCFCUSFGenericPDUs: $.ASN1Decoder<CS3SCFCUSFGenericPDUs> = _decode_TCMessage;
+export
+function _decode_CS3SCFCUSFGenericPDUs (el: _Element): CS3SCFCUSFGenericPDUs {
+    if (!_cached_decoder_for_CS3SCFCUSFGenericPDUs) { _cached_decoder_for_CS3SCFCUSFGenericPDUs = _decode_TCMessage; }
+    return _cached_decoder_for_CS3SCFCUSFGenericPDUs(el);
+}
+
+let _cached_encoder_for_CS3SCFCUSFGenericPDUs: $.ASN1Encoder<CS3SCFCUSFGenericPDUs> | null = null;
 
 /**
  * @summary Encodes a(n) CS3SCFCUSFGenericPDUs into an ASN.1 Element.
@@ -36,7 +44,11 @@ export const _decode_CS3SCFCUSFGenericPDUs: $.ASN1Decoder<CS3SCFCUSFGenericPDUs>
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CS3SCFCUSFGenericPDUs, encoded as an ASN.1 Element.
  */
-export const _encode_CS3SCFCUSFGenericPDUs: (value: CS3SCFCUSFGenericPDUs, elGetter: $.ASN1Encoder<any>) => _Element = _encode_TCMessage;
+export
+function _encode_CS3SCFCUSFGenericPDUs (value: CS3SCFCUSFGenericPDUs, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_CS3SCFCUSFGenericPDUs) { _cached_encoder_for_CS3SCFCUSFGenericPDUs = _encode_TCMessage; }
+    return _cached_encoder_for_CS3SCFCUSFGenericPDUs(value, elGetter);
+}
 
 
 /* eslint-enable */

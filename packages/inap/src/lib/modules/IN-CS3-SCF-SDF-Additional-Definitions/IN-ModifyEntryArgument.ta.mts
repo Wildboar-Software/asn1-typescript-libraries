@@ -30,13 +30,21 @@ import { ModifyEntryArgument, _decode_ModifyEntryArgument, _encode_ModifyEntryAr
 export
 type IN_ModifyEntryArgument = ModifyEntryArgument; // DefinedType
 
+let _cached_decoder_for_IN_ModifyEntryArgument: $.ASN1Decoder<IN_ModifyEntryArgument> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) IN_ModifyEntryArgument
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_IN_ModifyEntryArgument: $.ASN1Decoder<IN_ModifyEntryArgument> = _decode_ModifyEntryArgument;
+export
+function _decode_IN_ModifyEntryArgument (el: _Element): IN_ModifyEntryArgument {
+    if (!_cached_decoder_for_IN_ModifyEntryArgument) { _cached_decoder_for_IN_ModifyEntryArgument = _decode_ModifyEntryArgument; }
+    return _cached_decoder_for_IN_ModifyEntryArgument(el);
+}
+
+let _cached_encoder_for_IN_ModifyEntryArgument: $.ASN1Encoder<IN_ModifyEntryArgument> | null = null;
 
 /**
  * @summary Encodes a(n) IN_ModifyEntryArgument into an ASN.1 Element.
@@ -45,7 +53,11 @@ export const _decode_IN_ModifyEntryArgument: $.ASN1Decoder<IN_ModifyEntryArgumen
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The IN_ModifyEntryArgument, encoded as an ASN.1 Element.
  */
-export const _encode_IN_ModifyEntryArgument: (value: IN_ModifyEntryArgument, elGetter: $.ASN1Encoder<any>) => _Element = _encode_ModifyEntryArgument;
+export
+function _encode_IN_ModifyEntryArgument (value: IN_ModifyEntryArgument, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_IN_ModifyEntryArgument) { _cached_encoder_for_IN_ModifyEntryArgument = _encode_ModifyEntryArgument; }
+    return _cached_encoder_for_IN_ModifyEntryArgument(value, elGetter);
+}
 
 
 /* eslint-enable */

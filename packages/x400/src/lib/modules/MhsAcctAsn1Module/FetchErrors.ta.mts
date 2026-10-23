@@ -28,13 +28,22 @@ import {
  */
 export type FetchErrors = RetrievalError; // DefinedType
 
+let _cached_decoder_for_FetchErrors: $.ASN1Decoder<FetchErrors> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) FetchErrors
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {FetchErrors} The decoded data structure.
  */
-export const _decode_FetchErrors: $.ASN1Decoder<FetchErrors> = _decode_RetrievalError;
+export function _decode_FetchErrors(el: _Element): FetchErrors {
+    if (!_cached_decoder_for_FetchErrors) {
+        _cached_decoder_for_FetchErrors = _decode_RetrievalError;
+    }
+    return _cached_decoder_for_FetchErrors(el);
+}
+
+let _cached_encoder_for_FetchErrors: $.ASN1Encoder<FetchErrors> | null = null;
 
 /**
  * @summary Encodes a(n) FetchErrors into an ASN.1 Element.
@@ -43,7 +52,15 @@ export const _decode_FetchErrors: $.ASN1Decoder<FetchErrors> = _decode_Retrieval
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The FetchErrors, encoded as an ASN.1 Element.
  */
-export const _encode_FetchErrors: $.ASN1Encoder<FetchErrors> = _encode_RetrievalError;
+export function _encode_FetchErrors(
+    value: FetchErrors,
+    elGetter: $.ASN1Encoder<FetchErrors>
+): _Element {
+    if (!_cached_encoder_for_FetchErrors) {
+        _cached_encoder_for_FetchErrors = _encode_RetrievalError;
+    }
+    return _cached_encoder_for_FetchErrors(value, elGetter);
+}
 
 
 /* eslint-enable */

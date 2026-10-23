@@ -57,6 +57,8 @@ function _decode_FrameSyncLockStatus (el: _Element): FrameSyncLockStatus {
     return _decoded;
 }
 
+let _cached_encoder_for_FrameSyncLockStatus: $.ASN1Encoder<FrameSyncLockStatus> | null = null;
+
 /**
  * @summary Encodes a(n) FrameSyncLockStatus into an ASN.1 Element.
  * @function
@@ -64,7 +66,11 @@ function _decode_FrameSyncLockStatus (el: _Element): FrameSyncLockStatus {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The FrameSyncLockStatus, encoded as an ASN.1 Element.
  */
-export const _encode_FrameSyncLockStatus: (value: FrameSyncLockStatus, elGetter: $.ASN1Encoder<any>) => _Element = _encode_LockStatus;
+export
+function _encode_FrameSyncLockStatus (value: FrameSyncLockStatus, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_FrameSyncLockStatus) { _cached_encoder_for_FrameSyncLockStatus = _encode_LockStatus; }
+    return _cached_encoder_for_FrameSyncLockStatus(value, elGetter);
+}
 
 
 /* eslint-enable */

@@ -33,13 +33,22 @@ import {
  */
 export type MaxClockAge = TimeInterval; // DefinedType
 
+let _cached_decoder_for_MaxClockAge: $.ASN1Decoder<MaxClockAge> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MaxClockAge
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {MaxClockAge} The decoded data structure.
  */
-export const _decode_MaxClockAge: $.ASN1Decoder<MaxClockAge> = _decode_TimeInterval;
+export function _decode_MaxClockAge(el: _Element): MaxClockAge {
+    if (!_cached_decoder_for_MaxClockAge) {
+        _cached_decoder_for_MaxClockAge = _decode_TimeInterval;
+    }
+    return _cached_decoder_for_MaxClockAge(el);
+}
+
+let _cached_encoder_for_MaxClockAge: $.ASN1Encoder<MaxClockAge> | null = null;
 
 /**
  * @summary Encodes a(n) MaxClockAge into an ASN.1 Element.
@@ -48,7 +57,15 @@ export const _decode_MaxClockAge: $.ASN1Decoder<MaxClockAge> = _decode_TimeInter
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MaxClockAge, encoded as an ASN.1 Element.
  */
-export const _encode_MaxClockAge: $.ASN1Encoder<MaxClockAge> = _encode_TimeInterval;
+export function _encode_MaxClockAge(
+    value: MaxClockAge,
+    elGetter: $.ASN1Encoder<MaxClockAge>
+): _Element {
+    if (!_cached_encoder_for_MaxClockAge) {
+        _cached_encoder_for_MaxClockAge = _encode_TimeInterval;
+    }
+    return _cached_encoder_for_MaxClockAge(value, elGetter);
+}
 
 
 /* eslint-enable */

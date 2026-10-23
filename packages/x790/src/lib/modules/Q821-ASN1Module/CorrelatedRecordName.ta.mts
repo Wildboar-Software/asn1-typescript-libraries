@@ -25,13 +25,21 @@ import {
 export
 type CorrelatedRecordName = ObjectInstance; // DefinedType
 
+let _cached_decoder_for_CorrelatedRecordName: $.ASN1Decoder<CorrelatedRecordName> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CorrelatedRecordName
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_CorrelatedRecordName: $.ASN1Decoder<CorrelatedRecordName> = _decode_ObjectInstance;
+export
+function _decode_CorrelatedRecordName (el: _Element): CorrelatedRecordName {
+    if (!_cached_decoder_for_CorrelatedRecordName) { _cached_decoder_for_CorrelatedRecordName = _decode_ObjectInstance; }
+    return _cached_decoder_for_CorrelatedRecordName(el);
+}
+
+let _cached_encoder_for_CorrelatedRecordName: $.ASN1Encoder<CorrelatedRecordName> | null = null;
 
 /**
  * @summary Encodes a(n) CorrelatedRecordName into an ASN.1 Element.
@@ -40,7 +48,11 @@ export const _decode_CorrelatedRecordName: $.ASN1Decoder<CorrelatedRecordName> =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CorrelatedRecordName, encoded as an ASN.1 Element.
  */
-export const _encode_CorrelatedRecordName: (value: CorrelatedRecordName, elGetter: $.ASN1Encoder<any>) => _Element = _encode_ObjectInstance;
+export
+function _encode_CorrelatedRecordName (value: CorrelatedRecordName, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_CorrelatedRecordName) { _cached_encoder_for_CorrelatedRecordName = _encode_ObjectInstance; }
+    return _cached_encoder_for_CorrelatedRecordName(value, elGetter);
+}
 
 
 /* eslint-enable */

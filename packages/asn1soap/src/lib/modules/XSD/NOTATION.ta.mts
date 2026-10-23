@@ -27,13 +27,26 @@ import { QName, _decode_QName, _encode_QName } from '../XSD/QName.ta.mjs';
  */
 export type NOTATION = QName; // DefinedType
 
+
+let _cached_decoder_for_NOTATION: $.ASN1Decoder<NOTATION> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) NOTATION
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {NOTATION} The decoded data structure.
  */
-export const _decode_NOTATION: $.ASN1Decoder<NOTATION> = _decode_QName;
+export function _decode_NOTATION(el: _Element): NOTATION {
+  if (!_cached_decoder_for_NOTATION) {
+    _cached_decoder_for_NOTATION = _decode_QName;
+  }
+  return _cached_decoder_for_NOTATION(el);
+}
+
+
+let _cached_encoder_for_NOTATION: $.ASN1Encoder<NOTATION> | null = null;
+
 
 /**
  * @summary Encodes a(n) NOTATION into an ASN.1 Element.
@@ -42,7 +55,15 @@ export const _decode_NOTATION: $.ASN1Decoder<NOTATION> = _decode_QName;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NOTATION, encoded as an ASN.1 Element.
  */
-export const _encode_NOTATION: $.ASN1Encoder<NOTATION> = _encode_QName;
+export function _encode_NOTATION(
+  value: NOTATION,
+  elGetter: $.ASN1Encoder<NOTATION>
+): _Element {
+  if (!_cached_encoder_for_NOTATION) {
+    _cached_encoder_for_NOTATION = _encode_QName;
+  }
+  return _cached_encoder_for_NOTATION(value, elGetter);
+}
 
 
 /* eslint-enable */

@@ -26,13 +26,21 @@ import { IntUnsignedLong, _decode_IntUnsignedLong, _encode_IntUnsignedLong } fro
 export
 type DirectiveExecutedId = IntUnsignedLong; // DefinedType
 
+let _cached_decoder_for_DirectiveExecutedId: $.ASN1Decoder<DirectiveExecutedId> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DirectiveExecutedId
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_DirectiveExecutedId: $.ASN1Decoder<DirectiveExecutedId> = _decode_IntUnsignedLong;
+export
+function _decode_DirectiveExecutedId (el: _Element): DirectiveExecutedId {
+    if (!_cached_decoder_for_DirectiveExecutedId) { _cached_decoder_for_DirectiveExecutedId = _decode_IntUnsignedLong; }
+    return _cached_decoder_for_DirectiveExecutedId(el);
+}
+
+let _cached_encoder_for_DirectiveExecutedId: $.ASN1Encoder<DirectiveExecutedId> | null = null;
 
 /**
  * @summary Encodes a(n) DirectiveExecutedId into an ASN.1 Element.
@@ -41,7 +49,11 @@ export const _decode_DirectiveExecutedId: $.ASN1Decoder<DirectiveExecutedId> = _
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DirectiveExecutedId, encoded as an ASN.1 Element.
  */
-export const _encode_DirectiveExecutedId: (value: DirectiveExecutedId, elGetter: $.ASN1Encoder<any>) => _Element = _encode_IntUnsignedLong;
+export
+function _encode_DirectiveExecutedId (value: DirectiveExecutedId, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_DirectiveExecutedId) { _cached_encoder_for_DirectiveExecutedId = _encode_IntUnsignedLong; }
+    return _cached_encoder_for_DirectiveExecutedId(value, elGetter);
+}
 
 
 /* eslint-enable */

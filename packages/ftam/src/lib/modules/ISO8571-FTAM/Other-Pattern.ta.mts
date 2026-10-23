@@ -31,13 +31,26 @@ import {
  */
 export type Other_Pattern = Equality_Comparision; // DefinedType
 
+
+let _cached_decoder_for_Other_Pattern: $.ASN1Decoder<Other_Pattern> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Other_Pattern
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {Other_Pattern} The decoded data structure.
  */
-export const _decode_Other_Pattern: $.ASN1Decoder<Other_Pattern> = _decode_Equality_Comparision;
+export function _decode_Other_Pattern(el: _Element): Other_Pattern {
+  if (!_cached_decoder_for_Other_Pattern) {
+    _cached_decoder_for_Other_Pattern = _decode_Equality_Comparision;
+  }
+  return _cached_decoder_for_Other_Pattern(el);
+}
+
+
+let _cached_encoder_for_Other_Pattern: $.ASN1Encoder<Other_Pattern> | null = null;
+
 
 /**
  * @summary Encodes a(n) Other_Pattern into an ASN.1 Element.
@@ -46,7 +59,15 @@ export const _decode_Other_Pattern: $.ASN1Decoder<Other_Pattern> = _decode_Equal
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Other_Pattern, encoded as an ASN.1 Element.
  */
-export const _encode_Other_Pattern: $.ASN1Encoder<Other_Pattern> = _encode_Equality_Comparision;
+export function _encode_Other_Pattern(
+  value: Other_Pattern,
+  elGetter: $.ASN1Encoder<Other_Pattern>
+): _Element {
+  if (!_cached_encoder_for_Other_Pattern) {
+    _cached_encoder_for_Other_Pattern = _encode_Equality_Comparision;
+  }
+  return _cached_encoder_for_Other_Pattern(value, elGetter);
+}
 
 
 /* eslint-enable */

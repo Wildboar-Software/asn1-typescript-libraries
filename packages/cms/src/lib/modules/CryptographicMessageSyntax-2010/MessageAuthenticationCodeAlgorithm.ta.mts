@@ -19,13 +19,26 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  */
 export type MessageAuthenticationCodeAlgorithm = AlgorithmIdentifier; // DefinedType
 
+
+let _cached_decoder_for_MessageAuthenticationCodeAlgorithm: $.ASN1Decoder<MessageAuthenticationCodeAlgorithm> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageAuthenticationCodeAlgorithm
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {MessageAuthenticationCodeAlgorithm} The decoded data structure.
  */
-export const _decode_MessageAuthenticationCodeAlgorithm: $.ASN1Decoder<MessageAuthenticationCodeAlgorithm> = _decode_AlgorithmIdentifier;
+export function _decode_MessageAuthenticationCodeAlgorithm(el: _Element): MessageAuthenticationCodeAlgorithm {
+    if (!_cached_decoder_for_MessageAuthenticationCodeAlgorithm) {
+        _cached_decoder_for_MessageAuthenticationCodeAlgorithm = _decode_AlgorithmIdentifier;
+    }
+    return _cached_decoder_for_MessageAuthenticationCodeAlgorithm(el);
+}
+
+
+let _cached_encoder_for_MessageAuthenticationCodeAlgorithm: $.ASN1Encoder<MessageAuthenticationCodeAlgorithm> | null = null;
+
 
 /**
  * @summary Encodes a(n) MessageAuthenticationCodeAlgorithm into an ASN.1 Element.
@@ -34,7 +47,18 @@ export const _decode_MessageAuthenticationCodeAlgorithm: $.ASN1Decoder<MessageAu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MessageAuthenticationCodeAlgorithm, encoded as an ASN.1 Element.
  */
-export const _encode_MessageAuthenticationCodeAlgorithm: $.ASN1Encoder<MessageAuthenticationCodeAlgorithm> = _encode_AlgorithmIdentifier;
+export function _encode_MessageAuthenticationCodeAlgorithm(
+    value: MessageAuthenticationCodeAlgorithm,
+    elGetter: $.ASN1Encoder<MessageAuthenticationCodeAlgorithm>
+): _Element {
+    if (!_cached_encoder_for_MessageAuthenticationCodeAlgorithm) {
+        _cached_encoder_for_MessageAuthenticationCodeAlgorithm = _encode_AlgorithmIdentifier;
+    }
+    return _cached_encoder_for_MessageAuthenticationCodeAlgorithm(
+        value,
+        elGetter
+    );
+}
 
 
 /* eslint-enable */

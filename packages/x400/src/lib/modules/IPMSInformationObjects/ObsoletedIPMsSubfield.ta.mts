@@ -29,13 +29,22 @@ import {
  */
 export type ObsoletedIPMsSubfield = IPMIdentifier; // DefinedType
 
+let _cached_decoder_for_ObsoletedIPMsSubfield: $.ASN1Decoder<ObsoletedIPMsSubfield> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ObsoletedIPMsSubfield
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ObsoletedIPMsSubfield} The decoded data structure.
  */
-export const _decode_ObsoletedIPMsSubfield: $.ASN1Decoder<ObsoletedIPMsSubfield> = _decode_IPMIdentifier;
+export function _decode_ObsoletedIPMsSubfield(el: _Element): ObsoletedIPMsSubfield {
+    if (!_cached_decoder_for_ObsoletedIPMsSubfield) {
+        _cached_decoder_for_ObsoletedIPMsSubfield = _decode_IPMIdentifier;
+    }
+    return _cached_decoder_for_ObsoletedIPMsSubfield(el);
+}
+
+let _cached_encoder_for_ObsoletedIPMsSubfield: $.ASN1Encoder<ObsoletedIPMsSubfield> | null = null;
 
 /**
  * @summary Encodes a(n) ObsoletedIPMsSubfield into an ASN.1 Element.
@@ -44,7 +53,15 @@ export const _decode_ObsoletedIPMsSubfield: $.ASN1Decoder<ObsoletedIPMsSubfield>
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ObsoletedIPMsSubfield, encoded as an ASN.1 Element.
  */
-export const _encode_ObsoletedIPMsSubfield: $.ASN1Encoder<ObsoletedIPMsSubfield> = _encode_IPMIdentifier;
+export function _encode_ObsoletedIPMsSubfield(
+    value: ObsoletedIPMsSubfield,
+    elGetter: $.ASN1Encoder<ObsoletedIPMsSubfield>
+): _Element {
+    if (!_cached_encoder_for_ObsoletedIPMsSubfield) {
+        _cached_encoder_for_ObsoletedIPMsSubfield = _encode_IPMIdentifier;
+    }
+    return _cached_encoder_for_ObsoletedIPMsSubfield(value, elGetter);
+}
 
 
 /* eslint-enable */

@@ -30,13 +30,22 @@ import {
  */
 export type RecipientAssignedAlternateRecipient = ORAddressAndOrDirectoryName; // DefinedType
 
+let _cached_decoder_for_RecipientAssignedAlternateRecipient: $.ASN1Decoder<RecipientAssignedAlternateRecipient> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RecipientAssignedAlternateRecipient
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {RecipientAssignedAlternateRecipient} The decoded data structure.
  */
-export const _decode_RecipientAssignedAlternateRecipient: $.ASN1Decoder<RecipientAssignedAlternateRecipient> = _decode_ORAddressAndOrDirectoryName;
+export function _decode_RecipientAssignedAlternateRecipient(el: _Element): RecipientAssignedAlternateRecipient {
+    if (!_cached_decoder_for_RecipientAssignedAlternateRecipient) {
+        _cached_decoder_for_RecipientAssignedAlternateRecipient = _decode_ORAddressAndOrDirectoryName;
+    }
+    return _cached_decoder_for_RecipientAssignedAlternateRecipient(el);
+}
+
+let _cached_encoder_for_RecipientAssignedAlternateRecipient: $.ASN1Encoder<RecipientAssignedAlternateRecipient> | null = null;
 
 /**
  * @summary Encodes a(n) RecipientAssignedAlternateRecipient into an ASN.1 Element.
@@ -45,7 +54,18 @@ export const _decode_RecipientAssignedAlternateRecipient: $.ASN1Decoder<Recipien
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RecipientAssignedAlternateRecipient, encoded as an ASN.1 Element.
  */
-export const _encode_RecipientAssignedAlternateRecipient: $.ASN1Encoder<RecipientAssignedAlternateRecipient> = _encode_ORAddressAndOrDirectoryName;
+export function _encode_RecipientAssignedAlternateRecipient(
+    value: RecipientAssignedAlternateRecipient,
+    elGetter: $.ASN1Encoder<RecipientAssignedAlternateRecipient>
+): _Element {
+    if (!_cached_encoder_for_RecipientAssignedAlternateRecipient) {
+        _cached_encoder_for_RecipientAssignedAlternateRecipient = _encode_ORAddressAndOrDirectoryName;
+    }
+    return _cached_encoder_for_RecipientAssignedAlternateRecipient(
+        value,
+        elGetter
+    );
+}
 
 
 /* eslint-enable */

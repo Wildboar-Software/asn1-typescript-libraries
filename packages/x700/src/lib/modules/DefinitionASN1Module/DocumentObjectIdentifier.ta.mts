@@ -35,13 +35,26 @@ import {
  */
 export type DocumentObjectIdentifier = OptionallyRegisteredAs; // DefinedType
 
+
+let _cached_decoder_for_DocumentObjectIdentifier: $.ASN1Decoder<DocumentObjectIdentifier> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DocumentObjectIdentifier
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {DocumentObjectIdentifier} The decoded data structure.
  */
-export const _decode_DocumentObjectIdentifier: $.ASN1Decoder<DocumentObjectIdentifier> = _decode_OptionallyRegisteredAs;
+export function _decode_DocumentObjectIdentifier(el: _Element): DocumentObjectIdentifier {
+    if (!_cached_decoder_for_DocumentObjectIdentifier) {
+        _cached_decoder_for_DocumentObjectIdentifier = _decode_OptionallyRegisteredAs;
+    }
+    return _cached_decoder_for_DocumentObjectIdentifier(el);
+}
+
+
+let _cached_encoder_for_DocumentObjectIdentifier: $.ASN1Encoder<DocumentObjectIdentifier> | null = null;
+
 
 /**
  * @summary Encodes a(n) DocumentObjectIdentifier into an ASN.1 Element.
@@ -50,7 +63,15 @@ export const _decode_DocumentObjectIdentifier: $.ASN1Decoder<DocumentObjectIdent
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DocumentObjectIdentifier, encoded as an ASN.1 Element.
  */
-export const _encode_DocumentObjectIdentifier: $.ASN1Encoder<DocumentObjectIdentifier> = _encode_OptionallyRegisteredAs;
+export function _encode_DocumentObjectIdentifier(
+    value: DocumentObjectIdentifier,
+    elGetter: $.ASN1Encoder<DocumentObjectIdentifier>
+): _Element {
+    if (!_cached_encoder_for_DocumentObjectIdentifier) {
+        _cached_encoder_for_DocumentObjectIdentifier = _encode_OptionallyRegisteredAs;
+    }
+    return _cached_encoder_for_DocumentObjectIdentifier(value, elGetter);
+}
 
 
 /* eslint-enable */

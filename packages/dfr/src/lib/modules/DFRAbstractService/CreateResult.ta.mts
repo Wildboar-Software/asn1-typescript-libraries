@@ -48,6 +48,8 @@ function _decode_CreateResult (el: _Element): CreateResult {
     return value;
 }
 
+let _cached_encoder_for_CreateResult: $.ASN1Encoder<CreateResult> | null = null;
+
 /**
  * @summary Encodes a(n) CreateResult into an ASN.1 Element.
  * @function
@@ -55,7 +57,11 @@ function _decode_CreateResult (el: _Element): CreateResult {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CreateResult, encoded as an ASN.1 Element.
  */
-export const _encode_CreateResult: (value: CreateResult, elGetter: $.ASN1Encoder<any>) => _Element = _encode_CommonUpdateResult;
+export
+function _encode_CreateResult (value: CreateResult, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_CreateResult) { _cached_encoder_for_CreateResult = _encode_CommonUpdateResult; }
+    return _cached_encoder_for_CreateResult(value, elGetter);
+}
 
 
 /* eslint-enable */

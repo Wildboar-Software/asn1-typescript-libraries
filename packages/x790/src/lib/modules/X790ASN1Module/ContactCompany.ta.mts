@@ -24,13 +24,21 @@ import {
 export
 type ContactCompany = GraphicStringBase; // DefinedType
 
+let _cached_decoder_for_ContactCompany: $.ASN1Decoder<ContactCompany> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ContactCompany
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_ContactCompany: $.ASN1Decoder<ContactCompany> = _decode_GraphicStringBase;
+export
+function _decode_ContactCompany (el: _Element): ContactCompany {
+    if (!_cached_decoder_for_ContactCompany) { _cached_decoder_for_ContactCompany = _decode_GraphicStringBase; }
+    return _cached_decoder_for_ContactCompany(el);
+}
+
+let _cached_encoder_for_ContactCompany: $.ASN1Encoder<ContactCompany> | null = null;
 
 /**
  * @summary Encodes a(n) ContactCompany into an ASN.1 Element.
@@ -39,7 +47,11 @@ export const _decode_ContactCompany: $.ASN1Decoder<ContactCompany> = _decode_Gra
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ContactCompany, encoded as an ASN.1 Element.
  */
-export const _encode_ContactCompany: (value: ContactCompany, elGetter: $.ASN1Encoder<any>) => _Element = _encode_GraphicStringBase;
+export
+function _encode_ContactCompany (value: ContactCompany, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_ContactCompany) { _cached_encoder_for_ContactCompany = _encode_GraphicStringBase; }
+    return _cached_encoder_for_ContactCompany(value, elGetter);
+}
 
 
 /* eslint-enable */

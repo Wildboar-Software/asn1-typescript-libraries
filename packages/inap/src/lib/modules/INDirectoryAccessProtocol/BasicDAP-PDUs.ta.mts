@@ -20,13 +20,21 @@ import { TCMessage, _decode_TCMessage, _encode_TCMessage } from "../TCAPMessages
 export
 type BasicDAP_PDUs = TCMessage; // DefinedType
 
+let _cached_decoder_for_BasicDAP_PDUs: $.ASN1Decoder<BasicDAP_PDUs> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BasicDAP_PDUs
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_BasicDAP_PDUs: $.ASN1Decoder<BasicDAP_PDUs> = _decode_TCMessage;
+export
+function _decode_BasicDAP_PDUs (el: _Element): BasicDAP_PDUs {
+    if (!_cached_decoder_for_BasicDAP_PDUs) { _cached_decoder_for_BasicDAP_PDUs = _decode_TCMessage; }
+    return _cached_decoder_for_BasicDAP_PDUs(el);
+}
+
+let _cached_encoder_for_BasicDAP_PDUs: $.ASN1Encoder<BasicDAP_PDUs> | null = null;
 
 /**
  * @summary Encodes a(n) BasicDAP_PDUs into an ASN.1 Element.
@@ -35,7 +43,11 @@ export const _decode_BasicDAP_PDUs: $.ASN1Decoder<BasicDAP_PDUs> = _decode_TCMes
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The BasicDAP_PDUs, encoded as an ASN.1 Element.
  */
-export const _encode_BasicDAP_PDUs: (value: BasicDAP_PDUs, elGetter: $.ASN1Encoder<any>) => _Element = _encode_TCMessage;
+export
+function _encode_BasicDAP_PDUs (value: BasicDAP_PDUs, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_BasicDAP_PDUs) { _cached_encoder_for_BasicDAP_PDUs = _encode_TCMessage; }
+    return _cached_encoder_for_BasicDAP_PDUs(value, elGetter);
+}
 
 
 /* eslint-enable */

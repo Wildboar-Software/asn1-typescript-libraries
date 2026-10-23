@@ -18,13 +18,26 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  */
 export type HashAlgorithm = AlgorithmIdentifier; // DefinedType
 
+
+let _cached_decoder_for_HashAlgorithm: $.ASN1Decoder<HashAlgorithm> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) HashAlgorithm
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {HashAlgorithm} The decoded data structure.
  */
-export const _decode_HashAlgorithm: $.ASN1Decoder<HashAlgorithm> = _decode_AlgorithmIdentifier;
+export function _decode_HashAlgorithm(el: _Element): HashAlgorithm {
+    if (!_cached_decoder_for_HashAlgorithm) {
+        _cached_decoder_for_HashAlgorithm = _decode_AlgorithmIdentifier;
+    }
+    return _cached_decoder_for_HashAlgorithm(el);
+}
+
+
+let _cached_encoder_for_HashAlgorithm: $.ASN1Encoder<HashAlgorithm> | null = null;
+
 
 /**
  * @summary Encodes a(n) HashAlgorithm into an ASN.1 Element.
@@ -33,7 +46,15 @@ export const _decode_HashAlgorithm: $.ASN1Decoder<HashAlgorithm> = _decode_Algor
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The HashAlgorithm, encoded as an ASN.1 Element.
  */
-export const _encode_HashAlgorithm: $.ASN1Encoder<HashAlgorithm> = _encode_AlgorithmIdentifier;
+export function _encode_HashAlgorithm(
+    value: HashAlgorithm,
+    elGetter: $.ASN1Encoder<HashAlgorithm>
+): _Element {
+    if (!_cached_encoder_for_HashAlgorithm) {
+        _cached_encoder_for_HashAlgorithm = _encode_AlgorithmIdentifier;
+    }
+    return _cached_encoder_for_HashAlgorithm(value, elGetter);
+}
 
 
 /* eslint-enable */

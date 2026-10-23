@@ -31,13 +31,22 @@ import {
  */
 export type Application_context_name = ASO_context_name; // DefinedType
 
+let _cached_decoder_for_Application_context_name: $.ASN1Decoder<Application_context_name> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Application_context_name
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {Application_context_name} The decoded data structure.
  */
-export const _decode_Application_context_name: $.ASN1Decoder<Application_context_name> = _decode_ASO_context_name;
+export function _decode_Application_context_name(el: _Element): Application_context_name {
+  if (!_cached_decoder_for_Application_context_name) {
+    _cached_decoder_for_Application_context_name = _decode_ASO_context_name;
+  }
+  return _cached_decoder_for_Application_context_name(el);
+}
+
+let _cached_encoder_for_Application_context_name: $.ASN1Encoder<Application_context_name> | null = null;
 
 /**
  * @summary Encodes a(n) Application_context_name into an ASN.1 Element.
@@ -46,7 +55,15 @@ export const _decode_Application_context_name: $.ASN1Decoder<Application_context
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Application_context_name, encoded as an ASN.1 Element.
  */
-export const _encode_Application_context_name: $.ASN1Encoder<Application_context_name> = _encode_ASO_context_name;
+export function _encode_Application_context_name(
+  value: Application_context_name,
+  elGetter: $.ASN1Encoder<Application_context_name>
+): _Element {
+  if (!_cached_encoder_for_Application_context_name) {
+    _cached_encoder_for_Application_context_name = _encode_ASO_context_name;
+  }
+  return _cached_encoder_for_Application_context_name(value, elGetter);
+}
 
 
 /* eslint-enable */

@@ -31,13 +31,21 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
 export
 type ReportEventConditionStatus_Request = ObjectName; // DefinedType
 
+let _cached_decoder_for_ReportEventConditionStatus_Request: $.ASN1Decoder<ReportEventConditionStatus_Request> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ReportEventConditionStatus_Request
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_ReportEventConditionStatus_Request: $.ASN1Decoder<ReportEventConditionStatus_Request> = _decode_ObjectName;
+export
+function _decode_ReportEventConditionStatus_Request (el: _Element): ReportEventConditionStatus_Request {
+    if (!_cached_decoder_for_ReportEventConditionStatus_Request) { _cached_decoder_for_ReportEventConditionStatus_Request = _decode_ObjectName; }
+    return _cached_decoder_for_ReportEventConditionStatus_Request(el);
+}
+
+let _cached_encoder_for_ReportEventConditionStatus_Request: $.ASN1Encoder<ReportEventConditionStatus_Request> | null = null;
 
 /**
  * @summary Encodes a(n) ReportEventConditionStatus_Request into an ASN.1 Element.
@@ -46,7 +54,11 @@ export const _decode_ReportEventConditionStatus_Request: $.ASN1Decoder<ReportEve
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ReportEventConditionStatus_Request, encoded as an ASN.1 Element.
  */
-export const _encode_ReportEventConditionStatus_Request: (value: ReportEventConditionStatus_Request, elGetter: $.ASN1Encoder<any>) => _Element = _encode_ObjectName;
+export
+function _encode_ReportEventConditionStatus_Request (value: ReportEventConditionStatus_Request, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_ReportEventConditionStatus_Request) { _cached_encoder_for_ReportEventConditionStatus_Request = _encode_ObjectName; }
+    return _cached_encoder_for_ReportEventConditionStatus_Request(value, elGetter);
+}
 
 
 /* eslint-enable */

@@ -24,13 +24,21 @@ import { _decode_TBCD_STRING, _encode_TBCD_STRING, TBCD_STRING } from "../MAP-Co
 export
 type RouteingNumber = TBCD_STRING; // DefinedType
 
+let _cached_decoder_for_RouteingNumber: $.ASN1Decoder<RouteingNumber> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RouteingNumber
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_RouteingNumber: $.ASN1Decoder<RouteingNumber> = _decode_TBCD_STRING;
+export
+function _decode_RouteingNumber (el: _Element): RouteingNumber {
+    if (!_cached_decoder_for_RouteingNumber) { _cached_decoder_for_RouteingNumber = _decode_TBCD_STRING; }
+    return _cached_decoder_for_RouteingNumber(el);
+}
+
+let _cached_encoder_for_RouteingNumber: $.ASN1Encoder<RouteingNumber> | null = null;
 
 /**
  * @summary Encodes a(n) RouteingNumber into an ASN.1 Element.
@@ -39,7 +47,11 @@ export const _decode_RouteingNumber: $.ASN1Decoder<RouteingNumber> = _decode_TBC
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RouteingNumber, encoded as an ASN.1 Element.
  */
-export const _encode_RouteingNumber: (value: RouteingNumber, elGetter: $.ASN1Encoder<any>) => _Element = _encode_TBCD_STRING;
+export
+function _encode_RouteingNumber (value: RouteingNumber, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_RouteingNumber) { _cached_encoder_for_RouteingNumber = _encode_TBCD_STRING; }
+    return _cached_encoder_for_RouteingNumber(value, elGetter);
+}
 
 
 /* eslint-enable */

@@ -36,13 +36,22 @@ import {
  */
 export type ProceduralStatusValue = ProceduralStatus; // DefinedType
 
+let _cached_decoder_for_ProceduralStatusValue: $.ASN1Decoder<ProceduralStatusValue> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ProceduralStatusValue
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ProceduralStatusValue} The decoded data structure.
  */
-export const _decode_ProceduralStatusValue: $.ASN1Decoder<ProceduralStatusValue> = _decode_ProceduralStatus;
+export function _decode_ProceduralStatusValue(el: _Element): ProceduralStatusValue {
+    if (!_cached_decoder_for_ProceduralStatusValue) {
+        _cached_decoder_for_ProceduralStatusValue = _decode_ProceduralStatus;
+    }
+    return _cached_decoder_for_ProceduralStatusValue(el);
+}
+
+let _cached_encoder_for_ProceduralStatusValue: $.ASN1Encoder<ProceduralStatusValue> | null = null;
 
 /**
  * @summary Encodes a(n) ProceduralStatusValue into an ASN.1 Element.
@@ -51,7 +60,15 @@ export const _decode_ProceduralStatusValue: $.ASN1Decoder<ProceduralStatusValue>
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ProceduralStatusValue, encoded as an ASN.1 Element.
  */
-export const _encode_ProceduralStatusValue: $.ASN1Encoder<ProceduralStatusValue> = _encode_ProceduralStatus;
+export function _encode_ProceduralStatusValue(
+    value: ProceduralStatusValue,
+    elGetter: $.ASN1Encoder<ProceduralStatusValue>
+): _Element {
+    if (!_cached_encoder_for_ProceduralStatusValue) {
+        _cached_encoder_for_ProceduralStatusValue = _encode_ProceduralStatus;
+    }
+    return _cached_encoder_for_ProceduralStatusValue(value, elGetter);
+}
 
 
 /* eslint-enable */

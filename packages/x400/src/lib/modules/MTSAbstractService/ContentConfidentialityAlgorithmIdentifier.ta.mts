@@ -34,13 +34,24 @@ import {
  */
 export type ContentConfidentialityAlgorithmIdentifier = AlgorithmIdentifier; // DefinedType
 
+let _cached_decoder_for_ContentConfidentialityAlgorithmIdentifier: $.ASN1Decoder<ContentConfidentialityAlgorithmIdentifier> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ContentConfidentialityAlgorithmIdentifier
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ContentConfidentialityAlgorithmIdentifier} The decoded data structure.
  */
-export const _decode_ContentConfidentialityAlgorithmIdentifier: $.ASN1Decoder<ContentConfidentialityAlgorithmIdentifier> = _decode_AlgorithmIdentifier;
+export function _decode_ContentConfidentialityAlgorithmIdentifier(
+    el: _Element
+): ContentConfidentialityAlgorithmIdentifier {
+    if (!_cached_decoder_for_ContentConfidentialityAlgorithmIdentifier) {
+        _cached_decoder_for_ContentConfidentialityAlgorithmIdentifier = _decode_AlgorithmIdentifier;
+    }
+    return _cached_decoder_for_ContentConfidentialityAlgorithmIdentifier(el);
+}
+
+let _cached_encoder_for_ContentConfidentialityAlgorithmIdentifier: $.ASN1Encoder<ContentConfidentialityAlgorithmIdentifier> | null = null;
 
 /**
  * @summary Encodes a(n) ContentConfidentialityAlgorithmIdentifier into an ASN.1 Element.
@@ -49,7 +60,18 @@ export const _decode_ContentConfidentialityAlgorithmIdentifier: $.ASN1Decoder<Co
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ContentConfidentialityAlgorithmIdentifier, encoded as an ASN.1 Element.
  */
-export const _encode_ContentConfidentialityAlgorithmIdentifier: $.ASN1Encoder<ContentConfidentialityAlgorithmIdentifier> = _encode_AlgorithmIdentifier;
+export function _encode_ContentConfidentialityAlgorithmIdentifier(
+    value: ContentConfidentialityAlgorithmIdentifier,
+    elGetter: $.ASN1Encoder<ContentConfidentialityAlgorithmIdentifier>
+): _Element {
+    if (!_cached_encoder_for_ContentConfidentialityAlgorithmIdentifier) {
+        _cached_encoder_for_ContentConfidentialityAlgorithmIdentifier = _encode_AlgorithmIdentifier;
+    }
+    return _cached_encoder_for_ContentConfidentialityAlgorithmIdentifier(
+        value,
+        elGetter
+    );
+}
 
 
 /* eslint-enable */

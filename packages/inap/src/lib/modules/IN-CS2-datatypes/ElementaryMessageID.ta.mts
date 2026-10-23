@@ -20,13 +20,21 @@ import { Integer4, _decode_Integer4, _encode_Integer4 } from "../IN-CS2-datatype
 export
 type ElementaryMessageID = Integer4; // DefinedType
 
+let _cached_decoder_for_ElementaryMessageID: $.ASN1Decoder<ElementaryMessageID> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ElementaryMessageID
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_ElementaryMessageID: $.ASN1Decoder<ElementaryMessageID> = _decode_Integer4;
+export
+function _decode_ElementaryMessageID (el: _Element): ElementaryMessageID {
+    if (!_cached_decoder_for_ElementaryMessageID) { _cached_decoder_for_ElementaryMessageID = _decode_Integer4; }
+    return _cached_decoder_for_ElementaryMessageID(el);
+}
+
+let _cached_encoder_for_ElementaryMessageID: $.ASN1Encoder<ElementaryMessageID> | null = null;
 
 /**
  * @summary Encodes a(n) ElementaryMessageID into an ASN.1 Element.
@@ -35,7 +43,11 @@ export const _decode_ElementaryMessageID: $.ASN1Decoder<ElementaryMessageID> = _
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ElementaryMessageID, encoded as an ASN.1 Element.
  */
-export const _encode_ElementaryMessageID: (value: ElementaryMessageID, elGetter: $.ASN1Encoder<any>) => _Element = _encode_Integer4;
+export
+function _encode_ElementaryMessageID (value: ElementaryMessageID, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_ElementaryMessageID) { _cached_encoder_for_ElementaryMessageID = _encode_Integer4; }
+    return _cached_encoder_for_ElementaryMessageID(value, elGetter);
+}
 
 
 /* eslint-enable */

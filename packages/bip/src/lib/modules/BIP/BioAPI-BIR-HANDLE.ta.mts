@@ -35,13 +35,26 @@ import {
  */
 export type BioAPI_BIR_HANDLE = SignedInt; // DefinedType
 
+
+let _cached_decoder_for_BioAPI_BIR_HANDLE: $.ASN1Decoder<BioAPI_BIR_HANDLE> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BioAPI_BIR_HANDLE
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {BioAPI_BIR_HANDLE} The decoded data structure.
  */
-export const _decode_BioAPI_BIR_HANDLE: $.ASN1Decoder<BioAPI_BIR_HANDLE> = _decode_SignedInt;
+export function _decode_BioAPI_BIR_HANDLE(el: _Element): BioAPI_BIR_HANDLE {
+  if (!_cached_decoder_for_BioAPI_BIR_HANDLE) {
+    _cached_decoder_for_BioAPI_BIR_HANDLE = _decode_SignedInt;
+  }
+  return _cached_decoder_for_BioAPI_BIR_HANDLE(el);
+}
+
+
+let _cached_encoder_for_BioAPI_BIR_HANDLE: $.ASN1Encoder<BioAPI_BIR_HANDLE> | null = null;
+
 
 /**
  * @summary Encodes a(n) BioAPI_BIR_HANDLE into an ASN.1 Element.
@@ -50,7 +63,15 @@ export const _decode_BioAPI_BIR_HANDLE: $.ASN1Decoder<BioAPI_BIR_HANDLE> = _deco
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The BioAPI_BIR_HANDLE, encoded as an ASN.1 Element.
  */
-export const _encode_BioAPI_BIR_HANDLE: $.ASN1Encoder<BioAPI_BIR_HANDLE> = _encode_SignedInt;
+export function _encode_BioAPI_BIR_HANDLE(
+  value: BioAPI_BIR_HANDLE,
+  elGetter: $.ASN1Encoder<BioAPI_BIR_HANDLE>
+): _Element {
+  if (!_cached_encoder_for_BioAPI_BIR_HANDLE) {
+    _cached_encoder_for_BioAPI_BIR_HANDLE = _encode_SignedInt;
+  }
+  return _cached_encoder_for_BioAPI_BIR_HANDLE(value, elGetter);
+}
 
 
 /* eslint-enable */

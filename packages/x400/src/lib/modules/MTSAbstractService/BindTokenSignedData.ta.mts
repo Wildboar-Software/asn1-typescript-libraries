@@ -29,13 +29,22 @@ import {
  */
 export type BindTokenSignedData = RandomNumber; // DefinedType
 
+let _cached_decoder_for_BindTokenSignedData: $.ASN1Decoder<BindTokenSignedData> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BindTokenSignedData
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {BindTokenSignedData} The decoded data structure.
  */
-export const _decode_BindTokenSignedData: $.ASN1Decoder<BindTokenSignedData> = _decode_RandomNumber;
+export function _decode_BindTokenSignedData(el: _Element): BindTokenSignedData {
+    if (!_cached_decoder_for_BindTokenSignedData) {
+        _cached_decoder_for_BindTokenSignedData = _decode_RandomNumber;
+    }
+    return _cached_decoder_for_BindTokenSignedData(el);
+}
+
+let _cached_encoder_for_BindTokenSignedData: $.ASN1Encoder<BindTokenSignedData> | null = null;
 
 /**
  * @summary Encodes a(n) BindTokenSignedData into an ASN.1 Element.
@@ -44,7 +53,15 @@ export const _decode_BindTokenSignedData: $.ASN1Decoder<BindTokenSignedData> = _
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The BindTokenSignedData, encoded as an ASN.1 Element.
  */
-export const _encode_BindTokenSignedData: $.ASN1Encoder<BindTokenSignedData> = _encode_RandomNumber;
+export function _encode_BindTokenSignedData(
+    value: BindTokenSignedData,
+    elGetter: $.ASN1Encoder<BindTokenSignedData>
+): _Element {
+    if (!_cached_encoder_for_BindTokenSignedData) {
+        _cached_encoder_for_BindTokenSignedData = _encode_RandomNumber;
+    }
+    return _cached_encoder_for_BindTokenSignedData(value, elGetter);
+}
 
 
 /* eslint-enable */

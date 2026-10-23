@@ -19,13 +19,26 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  */
 export type PBKDF2_SaltSourcesAlgorithmIdentifier = AlgorithmIdentifier; // DefinedType
 
+
+let _cached_decoder_for_PBKDF2_SaltSourcesAlgorithmIdentifier: $.ASN1Decoder<PBKDF2_SaltSourcesAlgorithmIdentifier> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PBKDF2_SaltSourcesAlgorithmIdentifier
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {PBKDF2_SaltSourcesAlgorithmIdentifier} The decoded data structure.
  */
-export const _decode_PBKDF2_SaltSourcesAlgorithmIdentifier: $.ASN1Decoder<PBKDF2_SaltSourcesAlgorithmIdentifier> = _decode_AlgorithmIdentifier;
+export function _decode_PBKDF2_SaltSourcesAlgorithmIdentifier(el: _Element): PBKDF2_SaltSourcesAlgorithmIdentifier {
+    if (!_cached_decoder_for_PBKDF2_SaltSourcesAlgorithmIdentifier) {
+        _cached_decoder_for_PBKDF2_SaltSourcesAlgorithmIdentifier = _decode_AlgorithmIdentifier;
+    }
+    return _cached_decoder_for_PBKDF2_SaltSourcesAlgorithmIdentifier(el);
+}
+
+
+let _cached_encoder_for_PBKDF2_SaltSourcesAlgorithmIdentifier: $.ASN1Encoder<PBKDF2_SaltSourcesAlgorithmIdentifier> | null = null;
+
 
 /**
  * @summary Encodes a(n) PBKDF2_SaltSourcesAlgorithmIdentifier into an ASN.1 Element.
@@ -34,7 +47,18 @@ export const _decode_PBKDF2_SaltSourcesAlgorithmIdentifier: $.ASN1Decoder<PBKDF2
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PBKDF2_SaltSourcesAlgorithmIdentifier, encoded as an ASN.1 Element.
  */
-export const _encode_PBKDF2_SaltSourcesAlgorithmIdentifier: $.ASN1Encoder<PBKDF2_SaltSourcesAlgorithmIdentifier> = _encode_AlgorithmIdentifier;
+export function _encode_PBKDF2_SaltSourcesAlgorithmIdentifier(
+    value: PBKDF2_SaltSourcesAlgorithmIdentifier,
+    elGetter: $.ASN1Encoder<PBKDF2_SaltSourcesAlgorithmIdentifier>
+): _Element {
+    if (!_cached_encoder_for_PBKDF2_SaltSourcesAlgorithmIdentifier) {
+        _cached_encoder_for_PBKDF2_SaltSourcesAlgorithmIdentifier = _encode_AlgorithmIdentifier;
+    }
+    return _cached_encoder_for_PBKDF2_SaltSourcesAlgorithmIdentifier(
+        value,
+        elGetter
+    );
+}
 
 
 /* eslint-enable */

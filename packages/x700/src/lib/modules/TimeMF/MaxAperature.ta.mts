@@ -32,13 +32,22 @@ import {
  */
 export type MaxAperature = TimeInterval; // DefinedType
 
+let _cached_decoder_for_MaxAperature: $.ASN1Decoder<MaxAperature> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MaxAperature
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {MaxAperature} The decoded data structure.
  */
-export const _decode_MaxAperature: $.ASN1Decoder<MaxAperature> = _decode_TimeInterval;
+export function _decode_MaxAperature(el: _Element): MaxAperature {
+    if (!_cached_decoder_for_MaxAperature) {
+        _cached_decoder_for_MaxAperature = _decode_TimeInterval;
+    }
+    return _cached_decoder_for_MaxAperature(el);
+}
+
+let _cached_encoder_for_MaxAperature: $.ASN1Encoder<MaxAperature> | null = null;
 
 /**
  * @summary Encodes a(n) MaxAperature into an ASN.1 Element.
@@ -47,7 +56,15 @@ export const _decode_MaxAperature: $.ASN1Decoder<MaxAperature> = _decode_TimeInt
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MaxAperature, encoded as an ASN.1 Element.
  */
-export const _encode_MaxAperature: $.ASN1Encoder<MaxAperature> = _encode_TimeInterval;
+export function _encode_MaxAperature(
+    value: MaxAperature,
+    elGetter: $.ASN1Encoder<MaxAperature>
+): _Element {
+    if (!_cached_encoder_for_MaxAperature) {
+        _cached_encoder_for_MaxAperature = _encode_TimeInterval;
+    }
+    return _cached_encoder_for_MaxAperature(value, elGetter);
+}
 
 
 /* eslint-enable */

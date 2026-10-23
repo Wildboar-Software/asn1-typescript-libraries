@@ -40,13 +40,21 @@ import {
 export
 type BiometricDeviceCertificateInfo = AttributeCertificateInfo; // DefinedType
 
+let _cached_decoder_for_BiometricDeviceCertificateInfo: $.ASN1Decoder<BiometricDeviceCertificateInfo> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BiometricDeviceCertificateInfo
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {BiometricDeviceCertificateInfo} The decoded data structure.
  */
-export const _decode_BiometricDeviceCertificateInfo: $.ASN1Decoder<BiometricDeviceCertificateInfo> = _decode_AttributeCertificateInfo;
+export
+function _decode_BiometricDeviceCertificateInfo (el: _Element): BiometricDeviceCertificateInfo {
+    if (!_cached_decoder_for_BiometricDeviceCertificateInfo) { _cached_decoder_for_BiometricDeviceCertificateInfo = _decode_AttributeCertificateInfo; }
+    return _cached_decoder_for_BiometricDeviceCertificateInfo(el);
+}
+
+let _cached_encoder_for_BiometricDeviceCertificateInfo: $.ASN1Encoder<BiometricDeviceCertificateInfo> | null = null;
 
 /**
  * @summary Encodes a(n) BiometricDeviceCertificateInfo into an ASN.1 Element.
@@ -55,7 +63,11 @@ export const _decode_BiometricDeviceCertificateInfo: $.ASN1Decoder<BiometricDevi
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The BiometricDeviceCertificateInfo, encoded as an ASN.1 Element.
  */
-export const _encode_BiometricDeviceCertificateInfo: $.ASN1Encoder<BiometricDeviceCertificateInfo> = _encode_AttributeCertificateInfo;
+export
+function _encode_BiometricDeviceCertificateInfo (value: BiometricDeviceCertificateInfo, elGetter: $.ASN1Encoder<BiometricDeviceCertificateInfo>): _Element {
+    if (!_cached_encoder_for_BiometricDeviceCertificateInfo) { _cached_encoder_for_BiometricDeviceCertificateInfo = _encode_AttributeCertificateInfo; }
+    return _cached_encoder_for_BiometricDeviceCertificateInfo(value, elGetter);
+}
 
 
 /* eslint-enable */

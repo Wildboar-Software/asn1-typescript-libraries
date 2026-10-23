@@ -30,13 +30,21 @@ import { NullableBitString, _decode_NullableBitString, _encode_NullableBitString
 export
 type NullableAdditionalCBBOptions = NullableBitString; // DefinedType
 
+let _cached_decoder_for_NullableAdditionalCBBOptions: $.ASN1Decoder<NullableAdditionalCBBOptions> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) NullableAdditionalCBBOptions
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_NullableAdditionalCBBOptions: $.ASN1Decoder<NullableAdditionalCBBOptions> = _decode_NullableBitString;
+export
+function _decode_NullableAdditionalCBBOptions (el: _Element): NullableAdditionalCBBOptions {
+    if (!_cached_decoder_for_NullableAdditionalCBBOptions) { _cached_decoder_for_NullableAdditionalCBBOptions = _decode_NullableBitString; }
+    return _cached_decoder_for_NullableAdditionalCBBOptions(el);
+}
+
+let _cached_encoder_for_NullableAdditionalCBBOptions: $.ASN1Encoder<NullableAdditionalCBBOptions> | null = null;
 
 /**
  * @summary Encodes a(n) NullableAdditionalCBBOptions into an ASN.1 Element.
@@ -45,7 +53,11 @@ export const _decode_NullableAdditionalCBBOptions: $.ASN1Decoder<NullableAdditio
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NullableAdditionalCBBOptions, encoded as an ASN.1 Element.
  */
-export const _encode_NullableAdditionalCBBOptions: (value: NullableAdditionalCBBOptions, elGetter: $.ASN1Encoder<any>) => _Element = _encode_NullableBitString;
+export
+function _encode_NullableAdditionalCBBOptions (value: NullableAdditionalCBBOptions, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_NullableAdditionalCBBOptions) { _cached_encoder_for_NullableAdditionalCBBOptions = _encode_NullableBitString; }
+    return _cached_encoder_for_NullableAdditionalCBBOptions(value, elGetter);
+}
 
 
 /* eslint-enable */

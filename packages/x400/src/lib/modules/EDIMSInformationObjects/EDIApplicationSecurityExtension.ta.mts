@@ -29,13 +29,22 @@ import {
  */
 export type EDIApplicationSecurityExtension = ExtensionField; // DefinedType
 
+let _cached_decoder_for_EDIApplicationSecurityExtension: $.ASN1Decoder<EDIApplicationSecurityExtension> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) EDIApplicationSecurityExtension
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {EDIApplicationSecurityExtension} The decoded data structure.
  */
-export const _decode_EDIApplicationSecurityExtension: $.ASN1Decoder<EDIApplicationSecurityExtension> = _decode_ExtensionField;
+export function _decode_EDIApplicationSecurityExtension(el: _Element): EDIApplicationSecurityExtension {
+    if (!_cached_decoder_for_EDIApplicationSecurityExtension) {
+        _cached_decoder_for_EDIApplicationSecurityExtension = _decode_ExtensionField;
+    }
+    return _cached_decoder_for_EDIApplicationSecurityExtension(el);
+}
+
+let _cached_encoder_for_EDIApplicationSecurityExtension: $.ASN1Encoder<EDIApplicationSecurityExtension> | null = null;
 
 /**
  * @summary Encodes a(n) EDIApplicationSecurityExtension into an ASN.1 Element.
@@ -44,7 +53,15 @@ export const _decode_EDIApplicationSecurityExtension: $.ASN1Decoder<EDIApplicati
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The EDIApplicationSecurityExtension, encoded as an ASN.1 Element.
  */
-export const _encode_EDIApplicationSecurityExtension: $.ASN1Encoder<EDIApplicationSecurityExtension> = _encode_ExtensionField;
+export function _encode_EDIApplicationSecurityExtension(
+    value: EDIApplicationSecurityExtension,
+    elGetter: $.ASN1Encoder<EDIApplicationSecurityExtension>
+): _Element {
+    if (!_cached_encoder_for_EDIApplicationSecurityExtension) {
+        _cached_encoder_for_EDIApplicationSecurityExtension = _encode_ExtensionField;
+    }
+    return _cached_encoder_for_EDIApplicationSecurityExtension(value, elGetter);
+}
 
 
 /* eslint-enable */

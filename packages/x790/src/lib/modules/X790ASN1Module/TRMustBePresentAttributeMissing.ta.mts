@@ -24,13 +24,21 @@ import {
 export
 type TRMustBePresentAttributeMissing = AttributeIDList; // DefinedType
 
+let _cached_decoder_for_TRMustBePresentAttributeMissing: $.ASN1Decoder<TRMustBePresentAttributeMissing> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TRMustBePresentAttributeMissing
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_TRMustBePresentAttributeMissing: $.ASN1Decoder<TRMustBePresentAttributeMissing> = _decode_AttributeIDList;
+export
+function _decode_TRMustBePresentAttributeMissing (el: _Element): TRMustBePresentAttributeMissing {
+    if (!_cached_decoder_for_TRMustBePresentAttributeMissing) { _cached_decoder_for_TRMustBePresentAttributeMissing = _decode_AttributeIDList; }
+    return _cached_decoder_for_TRMustBePresentAttributeMissing(el);
+}
+
+let _cached_encoder_for_TRMustBePresentAttributeMissing: $.ASN1Encoder<TRMustBePresentAttributeMissing> | null = null;
 
 /**
  * @summary Encodes a(n) TRMustBePresentAttributeMissing into an ASN.1 Element.
@@ -39,7 +47,11 @@ export const _decode_TRMustBePresentAttributeMissing: $.ASN1Decoder<TRMustBePres
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TRMustBePresentAttributeMissing, encoded as an ASN.1 Element.
  */
-export const _encode_TRMustBePresentAttributeMissing: (value: TRMustBePresentAttributeMissing, elGetter: $.ASN1Encoder<any>) => _Element = _encode_AttributeIDList;
+export
+function _encode_TRMustBePresentAttributeMissing (value: TRMustBePresentAttributeMissing, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_TRMustBePresentAttributeMissing) { _cached_encoder_for_TRMustBePresentAttributeMissing = _encode_AttributeIDList; }
+    return _cached_encoder_for_TRMustBePresentAttributeMissing(value, elGetter);
+}
 
 
 /* eslint-enable */

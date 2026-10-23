@@ -27,13 +27,22 @@ import {
  */
 export type AlertErrors = RetrievalError; // DefinedType
 
+let _cached_decoder_for_AlertErrors: $.ASN1Decoder<AlertErrors> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AlertErrors
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {AlertErrors} The decoded data structure.
  */
-export const _decode_AlertErrors: $.ASN1Decoder<AlertErrors> = _decode_RetrievalError;
+export function _decode_AlertErrors(el: _Element): AlertErrors {
+    if (!_cached_decoder_for_AlertErrors) {
+        _cached_decoder_for_AlertErrors = _decode_RetrievalError;
+    }
+    return _cached_decoder_for_AlertErrors(el);
+}
+
+let _cached_encoder_for_AlertErrors: $.ASN1Encoder<AlertErrors> | null = null;
 
 /**
  * @summary Encodes a(n) AlertErrors into an ASN.1 Element.
@@ -42,7 +51,15 @@ export const _decode_AlertErrors: $.ASN1Decoder<AlertErrors> = _decode_Retrieval
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AlertErrors, encoded as an ASN.1 Element.
  */
-export const _encode_AlertErrors: $.ASN1Encoder<AlertErrors> = _encode_RetrievalError;
+export function _encode_AlertErrors(
+    value: AlertErrors,
+    elGetter: $.ASN1Encoder<AlertErrors>
+): _Element {
+    if (!_cached_encoder_for_AlertErrors) {
+        _cached_encoder_for_AlertErrors = _encode_RetrievalError;
+    }
+    return _cached_encoder_for_AlertErrors(value, elGetter);
+}
 
 
 /* eslint-enable */

@@ -29,13 +29,22 @@ import {
  */
 export type DeferralOfDeliveryProcessingInfo = DeferredDeliveryTime; // DefinedType
 
+let _cached_decoder_for_DeferralOfDeliveryProcessingInfo: $.ASN1Decoder<DeferralOfDeliveryProcessingInfo> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DeferralOfDeliveryProcessingInfo
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {DeferralOfDeliveryProcessingInfo} The decoded data structure.
  */
-export const _decode_DeferralOfDeliveryProcessingInfo: $.ASN1Decoder<DeferralOfDeliveryProcessingInfo> = _decode_DeferredDeliveryTime;
+export function _decode_DeferralOfDeliveryProcessingInfo(el: _Element): DeferralOfDeliveryProcessingInfo {
+    if (!_cached_decoder_for_DeferralOfDeliveryProcessingInfo) {
+        _cached_decoder_for_DeferralOfDeliveryProcessingInfo = _decode_DeferredDeliveryTime;
+    }
+    return _cached_decoder_for_DeferralOfDeliveryProcessingInfo(el);
+}
+
+let _cached_encoder_for_DeferralOfDeliveryProcessingInfo: $.ASN1Encoder<DeferralOfDeliveryProcessingInfo> | null = null;
 
 /**
  * @summary Encodes a(n) DeferralOfDeliveryProcessingInfo into an ASN.1 Element.
@@ -44,7 +53,18 @@ export const _decode_DeferralOfDeliveryProcessingInfo: $.ASN1Decoder<DeferralOfD
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DeferralOfDeliveryProcessingInfo, encoded as an ASN.1 Element.
  */
-export const _encode_DeferralOfDeliveryProcessingInfo: $.ASN1Encoder<DeferralOfDeliveryProcessingInfo> = _encode_DeferredDeliveryTime;
+export function _encode_DeferralOfDeliveryProcessingInfo(
+    value: DeferralOfDeliveryProcessingInfo,
+    elGetter: $.ASN1Encoder<DeferralOfDeliveryProcessingInfo>
+): _Element {
+    if (!_cached_encoder_for_DeferralOfDeliveryProcessingInfo) {
+        _cached_encoder_for_DeferralOfDeliveryProcessingInfo = _encode_DeferredDeliveryTime;
+    }
+    return _cached_encoder_for_DeferralOfDeliveryProcessingInfo(
+        value,
+        elGetter
+    );
+}
 
 
 /* eslint-enable */

@@ -28,13 +28,21 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
 export
 type MessageAuthenticationCode = AlgorithmIdentifier; // DefinedType
 
+let _cached_decoder_for_MessageAuthenticationCode: $.ASN1Decoder<MessageAuthenticationCode> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageAuthenticationCode
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {MessageAuthenticationCode} The decoded data structure.
  */
-export const _decode_MessageAuthenticationCode: $.ASN1Decoder<MessageAuthenticationCode> = _decode_AlgorithmIdentifier;
+export
+function _decode_MessageAuthenticationCode (el: _Element): MessageAuthenticationCode {
+    if (!_cached_decoder_for_MessageAuthenticationCode) { _cached_decoder_for_MessageAuthenticationCode = _decode_AlgorithmIdentifier; }
+    return _cached_decoder_for_MessageAuthenticationCode(el);
+}
+
+let _cached_encoder_for_MessageAuthenticationCode: $.ASN1Encoder<MessageAuthenticationCode> | null = null;
 
 /**
  * @summary Encodes a(n) MessageAuthenticationCode into an ASN.1 Element.
@@ -43,7 +51,11 @@ export const _decode_MessageAuthenticationCode: $.ASN1Decoder<MessageAuthenticat
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MessageAuthenticationCode, encoded as an ASN.1 Element.
  */
-export const _encode_MessageAuthenticationCode: $.ASN1Encoder<MessageAuthenticationCode> = _encode_AlgorithmIdentifier;
+export
+function _encode_MessageAuthenticationCode (value: MessageAuthenticationCode, elGetter: $.ASN1Encoder<MessageAuthenticationCode>): _Element {
+    if (!_cached_encoder_for_MessageAuthenticationCode) { _cached_encoder_for_MessageAuthenticationCode = _encode_AlgorithmIdentifier; }
+    return _cached_encoder_for_MessageAuthenticationCode(value, elGetter);
+}
 
 
 /* eslint-enable */

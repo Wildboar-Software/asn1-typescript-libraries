@@ -30,13 +30,22 @@ import {
  */
 export type ProbeSubmissionTime = Time; // DefinedType
 
+let _cached_decoder_for_ProbeSubmissionTime: $.ASN1Decoder<ProbeSubmissionTime> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ProbeSubmissionTime
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ProbeSubmissionTime} The decoded data structure.
  */
-export const _decode_ProbeSubmissionTime: $.ASN1Decoder<ProbeSubmissionTime> = _decode_Time;
+export function _decode_ProbeSubmissionTime(el: _Element): ProbeSubmissionTime {
+    if (!_cached_decoder_for_ProbeSubmissionTime) {
+        _cached_decoder_for_ProbeSubmissionTime = _decode_Time;
+    }
+    return _cached_decoder_for_ProbeSubmissionTime(el);
+}
+
+let _cached_encoder_for_ProbeSubmissionTime: $.ASN1Encoder<ProbeSubmissionTime> | null = null;
 
 /**
  * @summary Encodes a(n) ProbeSubmissionTime into an ASN.1 Element.
@@ -45,7 +54,15 @@ export const _decode_ProbeSubmissionTime: $.ASN1Decoder<ProbeSubmissionTime> = _
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ProbeSubmissionTime, encoded as an ASN.1 Element.
  */
-export const _encode_ProbeSubmissionTime: $.ASN1Encoder<ProbeSubmissionTime> = _encode_Time;
+export function _encode_ProbeSubmissionTime(
+    value: ProbeSubmissionTime,
+    elGetter: $.ASN1Encoder<ProbeSubmissionTime>
+): _Element {
+    if (!_cached_encoder_for_ProbeSubmissionTime) {
+        _cached_encoder_for_ProbeSubmissionTime = _encode_Time;
+    }
+    return _cached_encoder_for_ProbeSubmissionTime(value, elGetter);
+}
 
 
 /* eslint-enable */

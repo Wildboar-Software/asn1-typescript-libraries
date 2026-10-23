@@ -31,13 +31,22 @@ import {
  */
 export type ClockEventTime = GlobalTime; // DefinedType
 
+let _cached_decoder_for_ClockEventTime: $.ASN1Decoder<ClockEventTime> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ClockEventTime
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ClockEventTime} The decoded data structure.
  */
-export const _decode_ClockEventTime: $.ASN1Decoder<ClockEventTime> = _decode_GlobalTime;
+export function _decode_ClockEventTime(el: _Element): ClockEventTime {
+    if (!_cached_decoder_for_ClockEventTime) {
+        _cached_decoder_for_ClockEventTime = _decode_GlobalTime;
+    }
+    return _cached_decoder_for_ClockEventTime(el);
+}
+
+let _cached_encoder_for_ClockEventTime: $.ASN1Encoder<ClockEventTime> | null = null;
 
 /**
  * @summary Encodes a(n) ClockEventTime into an ASN.1 Element.
@@ -46,7 +55,15 @@ export const _decode_ClockEventTime: $.ASN1Decoder<ClockEventTime> = _decode_Glo
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ClockEventTime, encoded as an ASN.1 Element.
  */
-export const _encode_ClockEventTime: $.ASN1Encoder<ClockEventTime> = _encode_GlobalTime;
+export function _encode_ClockEventTime(
+    value: ClockEventTime,
+    elGetter: $.ASN1Encoder<ClockEventTime>
+): _Element {
+    if (!_cached_encoder_for_ClockEventTime) {
+        _cached_encoder_for_ClockEventTime = _encode_GlobalTime;
+    }
+    return _cached_encoder_for_ClockEventTime(value, elGetter);
+}
 
 
 /* eslint-enable */

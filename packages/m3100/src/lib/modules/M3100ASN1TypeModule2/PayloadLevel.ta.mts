@@ -29,13 +29,26 @@ import {
  */
 export type PayloadLevel = CharacteristicInformation; // DefinedType
 
+
+let _cached_decoder_for_PayloadLevel: $.ASN1Decoder<PayloadLevel> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PayloadLevel
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {PayloadLevel} The decoded data structure.
  */
-export const _decode_PayloadLevel: $.ASN1Decoder<PayloadLevel> = _decode_CharacteristicInformation;
+export function _decode_PayloadLevel(el: _Element): PayloadLevel {
+    if (!_cached_decoder_for_PayloadLevel) {
+        _cached_decoder_for_PayloadLevel = _decode_CharacteristicInformation;
+    }
+    return _cached_decoder_for_PayloadLevel(el);
+}
+
+
+let _cached_encoder_for_PayloadLevel: $.ASN1Encoder<PayloadLevel> | null = null;
+
 
 /**
  * @summary Encodes a(n) PayloadLevel into an ASN.1 Element.
@@ -44,7 +57,15 @@ export const _decode_PayloadLevel: $.ASN1Decoder<PayloadLevel> = _decode_Charact
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PayloadLevel, encoded as an ASN.1 Element.
  */
-export const _encode_PayloadLevel: $.ASN1Encoder<PayloadLevel> = _encode_CharacteristicInformation;
+export function _encode_PayloadLevel(
+    value: PayloadLevel,
+    elGetter: $.ASN1Encoder<PayloadLevel>
+): _Element {
+    if (!_cached_encoder_for_PayloadLevel) {
+        _cached_encoder_for_PayloadLevel = _encode_CharacteristicInformation;
+    }
+    return _cached_encoder_for_PayloadLevel(value, elGetter);
+}
 
 
 /* eslint-enable */

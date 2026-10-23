@@ -28,13 +28,28 @@ import {
  */
 export type RemoveCapacityFromTopologicalLinkInformation = RequestedCapacity; // DefinedType
 
+
+let _cached_decoder_for_RemoveCapacityFromTopologicalLinkInformation: $.ASN1Decoder<RemoveCapacityFromTopologicalLinkInformation> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RemoveCapacityFromTopologicalLinkInformation
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {RemoveCapacityFromTopologicalLinkInformation} The decoded data structure.
  */
-export const _decode_RemoveCapacityFromTopologicalLinkInformation: $.ASN1Decoder<RemoveCapacityFromTopologicalLinkInformation> = _decode_RequestedCapacity;
+export function _decode_RemoveCapacityFromTopologicalLinkInformation(
+    el: _Element
+): RemoveCapacityFromTopologicalLinkInformation {
+    if (!_cached_decoder_for_RemoveCapacityFromTopologicalLinkInformation) {
+        _cached_decoder_for_RemoveCapacityFromTopologicalLinkInformation = _decode_RequestedCapacity;
+    }
+    return _cached_decoder_for_RemoveCapacityFromTopologicalLinkInformation(el);
+}
+
+
+let _cached_encoder_for_RemoveCapacityFromTopologicalLinkInformation: $.ASN1Encoder<RemoveCapacityFromTopologicalLinkInformation> | null = null;
+
 
 /**
  * @summary Encodes a(n) RemoveCapacityFromTopologicalLinkInformation into an ASN.1 Element.
@@ -43,7 +58,18 @@ export const _decode_RemoveCapacityFromTopologicalLinkInformation: $.ASN1Decoder
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RemoveCapacityFromTopologicalLinkInformation, encoded as an ASN.1 Element.
  */
-export const _encode_RemoveCapacityFromTopologicalLinkInformation: $.ASN1Encoder<RemoveCapacityFromTopologicalLinkInformation> = _encode_RequestedCapacity;
+export function _encode_RemoveCapacityFromTopologicalLinkInformation(
+    value: RemoveCapacityFromTopologicalLinkInformation,
+    elGetter: $.ASN1Encoder<RemoveCapacityFromTopologicalLinkInformation>
+): _Element {
+    if (!_cached_encoder_for_RemoveCapacityFromTopologicalLinkInformation) {
+        _cached_encoder_for_RemoveCapacityFromTopologicalLinkInformation = _encode_RequestedCapacity;
+    }
+    return _cached_encoder_for_RemoveCapacityFromTopologicalLinkInformation(
+        value,
+        elGetter
+    );
+}
 
 
 /* eslint-enable */

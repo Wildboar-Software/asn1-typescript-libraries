@@ -29,13 +29,22 @@ import {
  */
 export type MHSDistributionListName = DistinguishedName; // DefinedType
 
+let _cached_decoder_for_MHSDistributionListName: $.ASN1Decoder<MHSDistributionListName> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MHSDistributionListName
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {MHSDistributionListName} The decoded data structure.
  */
-export const _decode_MHSDistributionListName: $.ASN1Decoder<MHSDistributionListName> = _decode_DistinguishedName;
+export function _decode_MHSDistributionListName(el: _Element): MHSDistributionListName {
+    if (!_cached_decoder_for_MHSDistributionListName) {
+        _cached_decoder_for_MHSDistributionListName = _decode_DistinguishedName;
+    }
+    return _cached_decoder_for_MHSDistributionListName(el);
+}
+
+let _cached_encoder_for_MHSDistributionListName: $.ASN1Encoder<MHSDistributionListName> | null = null;
 
 /**
  * @summary Encodes a(n) MHSDistributionListName into an ASN.1 Element.
@@ -44,7 +53,15 @@ export const _decode_MHSDistributionListName: $.ASN1Decoder<MHSDistributionListN
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MHSDistributionListName, encoded as an ASN.1 Element.
  */
-export const _encode_MHSDistributionListName: $.ASN1Encoder<MHSDistributionListName> = _encode_DistinguishedName;
+export function _encode_MHSDistributionListName(
+    value: MHSDistributionListName,
+    elGetter: $.ASN1Encoder<MHSDistributionListName>
+): _Element {
+    if (!_cached_encoder_for_MHSDistributionListName) {
+        _cached_encoder_for_MHSDistributionListName = _encode_DistinguishedName;
+    }
+    return _cached_encoder_for_MHSDistributionListName(value, elGetter);
+}
 
 
 /* eslint-enable */

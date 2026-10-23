@@ -33,13 +33,22 @@ import {
  */
 export type ProbeIdentifier = MTSIdentifier; // DefinedType
 
+let _cached_decoder_for_ProbeIdentifier: $.ASN1Decoder<ProbeIdentifier> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ProbeIdentifier
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ProbeIdentifier} The decoded data structure.
  */
-export const _decode_ProbeIdentifier: $.ASN1Decoder<ProbeIdentifier> = _decode_MTSIdentifier;
+export function _decode_ProbeIdentifier(el: _Element): ProbeIdentifier {
+    if (!_cached_decoder_for_ProbeIdentifier) {
+        _cached_decoder_for_ProbeIdentifier = _decode_MTSIdentifier;
+    }
+    return _cached_decoder_for_ProbeIdentifier(el);
+}
+
+let _cached_encoder_for_ProbeIdentifier: $.ASN1Encoder<ProbeIdentifier> | null = null;
 
 /**
  * @summary Encodes a(n) ProbeIdentifier into an ASN.1 Element.
@@ -48,7 +57,15 @@ export const _decode_ProbeIdentifier: $.ASN1Decoder<ProbeIdentifier> = _decode_M
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ProbeIdentifier, encoded as an ASN.1 Element.
  */
-export const _encode_ProbeIdentifier: $.ASN1Encoder<ProbeIdentifier> = _encode_MTSIdentifier;
+export function _encode_ProbeIdentifier(
+    value: ProbeIdentifier,
+    elGetter: $.ASN1Encoder<ProbeIdentifier>
+): _Element {
+    if (!_cached_encoder_for_ProbeIdentifier) {
+        _cached_encoder_for_ProbeIdentifier = _encode_MTSIdentifier;
+    }
+    return _cached_encoder_for_ProbeIdentifier(value, elGetter);
+}
 
 
 /* eslint-enable */

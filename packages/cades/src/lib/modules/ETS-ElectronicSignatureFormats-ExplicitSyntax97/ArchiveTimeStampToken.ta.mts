@@ -34,13 +34,21 @@ import { TimeStampToken, _decode_TimeStampToken, _encode_TimeStampToken } from "
 export
 type ArchiveTimeStampToken = TimeStampToken; // DefinedType
 
+let _cached_decoder_for_ArchiveTimeStampToken: $.ASN1Decoder<ArchiveTimeStampToken> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ArchiveTimeStampToken
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ArchiveTimeStampToken} The decoded data structure.
  */
-export const _decode_ArchiveTimeStampToken: $.ASN1Decoder<ArchiveTimeStampToken> = _decode_TimeStampToken;
+export
+function _decode_ArchiveTimeStampToken (el: _Element): ArchiveTimeStampToken {
+    if (!_cached_decoder_for_ArchiveTimeStampToken) { _cached_decoder_for_ArchiveTimeStampToken = _decode_TimeStampToken; }
+    return _cached_decoder_for_ArchiveTimeStampToken(el);
+}
+
+let _cached_encoder_for_ArchiveTimeStampToken: $.ASN1Encoder<ArchiveTimeStampToken> | null = null;
 
 /**
  * @summary Encodes a(n) ArchiveTimeStampToken into an ASN.1 Element.
@@ -49,7 +57,11 @@ export const _decode_ArchiveTimeStampToken: $.ASN1Decoder<ArchiveTimeStampToken>
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ArchiveTimeStampToken, encoded as an ASN.1 Element.
  */
-export const _encode_ArchiveTimeStampToken: $.ASN1Encoder<ArchiveTimeStampToken> = _encode_TimeStampToken;
+export
+function _encode_ArchiveTimeStampToken (value: ArchiveTimeStampToken, elGetter: $.ASN1Encoder<ArchiveTimeStampToken>): _Element {
+    if (!_cached_encoder_for_ArchiveTimeStampToken) { _cached_encoder_for_ArchiveTimeStampToken = _encode_TimeStampToken; }
+    return _cached_encoder_for_ArchiveTimeStampToken(value, elGetter);
+}
 
 
 /* eslint-enable */

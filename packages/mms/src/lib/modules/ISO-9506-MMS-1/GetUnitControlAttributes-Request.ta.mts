@@ -32,13 +32,21 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
 export
 type GetUnitControlAttributes_Request = Identifier; // DefinedType
 
+let _cached_decoder_for_GetUnitControlAttributes_Request: $.ASN1Decoder<GetUnitControlAttributes_Request> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) GetUnitControlAttributes_Request
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_GetUnitControlAttributes_Request: $.ASN1Decoder<GetUnitControlAttributes_Request> = _decode_Identifier;
+export
+function _decode_GetUnitControlAttributes_Request (el: _Element): GetUnitControlAttributes_Request {
+    if (!_cached_decoder_for_GetUnitControlAttributes_Request) { _cached_decoder_for_GetUnitControlAttributes_Request = _decode_Identifier; }
+    return _cached_decoder_for_GetUnitControlAttributes_Request(el);
+}
+
+let _cached_encoder_for_GetUnitControlAttributes_Request: $.ASN1Encoder<GetUnitControlAttributes_Request> | null = null;
 
 /**
  * @summary Encodes a(n) GetUnitControlAttributes_Request into an ASN.1 Element.
@@ -47,7 +55,11 @@ export const _decode_GetUnitControlAttributes_Request: $.ASN1Decoder<GetUnitCont
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The GetUnitControlAttributes_Request, encoded as an ASN.1 Element.
  */
-export const _encode_GetUnitControlAttributes_Request: (value: GetUnitControlAttributes_Request, elGetter: $.ASN1Encoder<any>) => _Element = _encode_Identifier;
+export
+function _encode_GetUnitControlAttributes_Request (value: GetUnitControlAttributes_Request, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_GetUnitControlAttributes_Request) { _cached_encoder_for_GetUnitControlAttributes_Request = _encode_Identifier; }
+    return _cached_encoder_for_GetUnitControlAttributes_Request(value, elGetter);
+}
 
 
 /* eslint-enable */

@@ -33,13 +33,21 @@ import { StatusResponse, _decode_StatusResponse, _encode_StatusResponse } from "
 export
 type UnsolicitedStatus = StatusResponse; // DefinedType
 
+let _cached_decoder_for_UnsolicitedStatus: $.ASN1Decoder<UnsolicitedStatus> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) UnsolicitedStatus
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_UnsolicitedStatus: $.ASN1Decoder<UnsolicitedStatus> = _decode_StatusResponse;
+export
+function _decode_UnsolicitedStatus (el: _Element): UnsolicitedStatus {
+    if (!_cached_decoder_for_UnsolicitedStatus) { _cached_decoder_for_UnsolicitedStatus = _decode_StatusResponse; }
+    return _cached_decoder_for_UnsolicitedStatus(el);
+}
+
+let _cached_encoder_for_UnsolicitedStatus: $.ASN1Encoder<UnsolicitedStatus> | null = null;
 
 /**
  * @summary Encodes a(n) UnsolicitedStatus into an ASN.1 Element.
@@ -48,7 +56,11 @@ export const _decode_UnsolicitedStatus: $.ASN1Decoder<UnsolicitedStatus> = _deco
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UnsolicitedStatus, encoded as an ASN.1 Element.
  */
-export const _encode_UnsolicitedStatus: (value: UnsolicitedStatus, elGetter: $.ASN1Encoder<any>) => _Element = _encode_StatusResponse;
+export
+function _encode_UnsolicitedStatus (value: UnsolicitedStatus, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_UnsolicitedStatus) { _cached_encoder_for_UnsolicitedStatus = _encode_StatusResponse; }
+    return _cached_encoder_for_UnsolicitedStatus(value, elGetter);
+}
 
 
 /* eslint-enable */

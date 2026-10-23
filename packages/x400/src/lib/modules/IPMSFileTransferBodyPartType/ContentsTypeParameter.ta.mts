@@ -32,13 +32,22 @@ import {
  */
 export type ContentsTypeParameter = Contents_Type_Attribute; // DefinedType
 
+let _cached_decoder_for_ContentsTypeParameter: $.ASN1Decoder<ContentsTypeParameter> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ContentsTypeParameter
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ContentsTypeParameter} The decoded data structure.
  */
-export const _decode_ContentsTypeParameter: $.ASN1Decoder<ContentsTypeParameter> = _decode_Contents_Type_Attribute;
+export function _decode_ContentsTypeParameter(el: _Element): ContentsTypeParameter {
+    if (!_cached_decoder_for_ContentsTypeParameter) {
+        _cached_decoder_for_ContentsTypeParameter = _decode_Contents_Type_Attribute;
+    }
+    return _cached_decoder_for_ContentsTypeParameter(el);
+}
+
+let _cached_encoder_for_ContentsTypeParameter: $.ASN1Encoder<ContentsTypeParameter> | null = null;
 
 /**
  * @summary Encodes a(n) ContentsTypeParameter into an ASN.1 Element.
@@ -47,7 +56,15 @@ export const _decode_ContentsTypeParameter: $.ASN1Decoder<ContentsTypeParameter>
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ContentsTypeParameter, encoded as an ASN.1 Element.
  */
-export const _encode_ContentsTypeParameter: $.ASN1Encoder<ContentsTypeParameter> = _encode_Contents_Type_Attribute;
+export function _encode_ContentsTypeParameter(
+    value: ContentsTypeParameter,
+    elGetter: $.ASN1Encoder<ContentsTypeParameter>
+): _Element {
+    if (!_cached_encoder_for_ContentsTypeParameter) {
+        _cached_encoder_for_ContentsTypeParameter = _encode_Contents_Type_Attribute;
+    }
+    return _cached_encoder_for_ContentsTypeParameter(value, elGetter);
+}
 
 
 /* eslint-enable */

@@ -27,13 +27,21 @@ import { UniversalFailure, _decode_UniversalFailure, _encode_UniversalFailure } 
 export
 type ErrorValue = UniversalFailure; // DefinedType
 
+let _cached_decoder_for_ErrorValue: $.ASN1Decoder<ErrorValue> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ErrorValue
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_ErrorValue: $.ASN1Decoder<ErrorValue> = _decode_UniversalFailure;
+export
+function _decode_ErrorValue (el: _Element): ErrorValue {
+    if (!_cached_decoder_for_ErrorValue) { _cached_decoder_for_ErrorValue = _decode_UniversalFailure; }
+    return _cached_decoder_for_ErrorValue(el);
+}
+
+let _cached_encoder_for_ErrorValue: $.ASN1Encoder<ErrorValue> | null = null;
 
 /**
  * @summary Encodes a(n) ErrorValue into an ASN.1 Element.
@@ -42,7 +50,11 @@ export const _decode_ErrorValue: $.ASN1Decoder<ErrorValue> = _decode_UniversalFa
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ErrorValue, encoded as an ASN.1 Element.
  */
-export const _encode_ErrorValue: (value: ErrorValue, elGetter: $.ASN1Encoder<any>) => _Element = _encode_UniversalFailure;
+export
+function _encode_ErrorValue (value: ErrorValue, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_ErrorValue) { _cached_encoder_for_ErrorValue = _encode_UniversalFailure; }
+    return _cached_encoder_for_ErrorValue(value, elGetter);
+}
 
 
 /* eslint-enable */

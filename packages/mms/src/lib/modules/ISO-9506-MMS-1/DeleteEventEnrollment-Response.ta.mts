@@ -31,13 +31,21 @@ import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-
 export
 type DeleteEventEnrollment_Response = Unsigned32; // DefinedType
 
+let _cached_decoder_for_DeleteEventEnrollment_Response: $.ASN1Decoder<DeleteEventEnrollment_Response> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DeleteEventEnrollment_Response
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_DeleteEventEnrollment_Response: $.ASN1Decoder<DeleteEventEnrollment_Response> = _decode_Unsigned32;
+export
+function _decode_DeleteEventEnrollment_Response (el: _Element): DeleteEventEnrollment_Response {
+    if (!_cached_decoder_for_DeleteEventEnrollment_Response) { _cached_decoder_for_DeleteEventEnrollment_Response = _decode_Unsigned32; }
+    return _cached_decoder_for_DeleteEventEnrollment_Response(el);
+}
+
+let _cached_encoder_for_DeleteEventEnrollment_Response: $.ASN1Encoder<DeleteEventEnrollment_Response> | null = null;
 
 /**
  * @summary Encodes a(n) DeleteEventEnrollment_Response into an ASN.1 Element.
@@ -46,7 +54,11 @@ export const _decode_DeleteEventEnrollment_Response: $.ASN1Decoder<DeleteEventEn
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DeleteEventEnrollment_Response, encoded as an ASN.1 Element.
  */
-export const _encode_DeleteEventEnrollment_Response: (value: DeleteEventEnrollment_Response, elGetter: $.ASN1Encoder<any>) => _Element = _encode_Unsigned32;
+export
+function _encode_DeleteEventEnrollment_Response (value: DeleteEventEnrollment_Response, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_DeleteEventEnrollment_Response) { _cached_encoder_for_DeleteEventEnrollment_Response = _encode_Unsigned32; }
+    return _cached_encoder_for_DeleteEventEnrollment_Response(value, elGetter);
+}
 
 
 /* eslint-enable */

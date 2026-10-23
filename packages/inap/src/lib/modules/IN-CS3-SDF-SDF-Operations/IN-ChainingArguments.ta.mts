@@ -27,13 +27,21 @@ import { ChainingArguments, _decode_ChainingArguments, _encode_ChainingArguments
 export
 type IN_ChainingArguments = ChainingArguments; // DefinedType
 
+let _cached_decoder_for_IN_ChainingArguments: $.ASN1Decoder<IN_ChainingArguments> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) IN_ChainingArguments
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_IN_ChainingArguments: $.ASN1Decoder<IN_ChainingArguments> = _decode_ChainingArguments;
+export
+function _decode_IN_ChainingArguments (el: _Element): IN_ChainingArguments {
+    if (!_cached_decoder_for_IN_ChainingArguments) { _cached_decoder_for_IN_ChainingArguments = _decode_ChainingArguments; }
+    return _cached_decoder_for_IN_ChainingArguments(el);
+}
+
+let _cached_encoder_for_IN_ChainingArguments: $.ASN1Encoder<IN_ChainingArguments> | null = null;
 
 /**
  * @summary Encodes a(n) IN_ChainingArguments into an ASN.1 Element.
@@ -42,7 +50,11 @@ export const _decode_IN_ChainingArguments: $.ASN1Decoder<IN_ChainingArguments> =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The IN_ChainingArguments, encoded as an ASN.1 Element.
  */
-export const _encode_IN_ChainingArguments: (value: IN_ChainingArguments, elGetter: $.ASN1Encoder<any>) => _Element = _encode_ChainingArguments;
+export
+function _encode_IN_ChainingArguments (value: IN_ChainingArguments, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_IN_ChainingArguments) { _cached_encoder_for_IN_ChainingArguments = _encode_ChainingArguments; }
+    return _cached_encoder_for_IN_ChainingArguments(value, elGetter);
+}
 
 
 /* eslint-enable */

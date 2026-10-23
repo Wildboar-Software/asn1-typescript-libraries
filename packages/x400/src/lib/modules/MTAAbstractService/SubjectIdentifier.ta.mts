@@ -31,13 +31,22 @@ import {
  */
 export type SubjectIdentifier = MessageOrProbeIdentifier; // DefinedType
 
+let _cached_decoder_for_SubjectIdentifier: $.ASN1Decoder<SubjectIdentifier> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SubjectIdentifier
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {SubjectIdentifier} The decoded data structure.
  */
-export const _decode_SubjectIdentifier: $.ASN1Decoder<SubjectIdentifier> = _decode_MessageOrProbeIdentifier;
+export function _decode_SubjectIdentifier(el: _Element): SubjectIdentifier {
+    if (!_cached_decoder_for_SubjectIdentifier) {
+        _cached_decoder_for_SubjectIdentifier = _decode_MessageOrProbeIdentifier;
+    }
+    return _cached_decoder_for_SubjectIdentifier(el);
+}
+
+let _cached_encoder_for_SubjectIdentifier: $.ASN1Encoder<SubjectIdentifier> | null = null;
 
 /**
  * @summary Encodes a(n) SubjectIdentifier into an ASN.1 Element.
@@ -46,7 +55,15 @@ export const _decode_SubjectIdentifier: $.ASN1Decoder<SubjectIdentifier> = _deco
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SubjectIdentifier, encoded as an ASN.1 Element.
  */
-export const _encode_SubjectIdentifier: $.ASN1Encoder<SubjectIdentifier> = _encode_MessageOrProbeIdentifier;
+export function _encode_SubjectIdentifier(
+    value: SubjectIdentifier,
+    elGetter: $.ASN1Encoder<SubjectIdentifier>
+): _Element {
+    if (!_cached_encoder_for_SubjectIdentifier) {
+        _cached_encoder_for_SubjectIdentifier = _encode_MessageOrProbeIdentifier;
+    }
+    return _cached_encoder_for_SubjectIdentifier(value, elGetter);
+}
 
 
 /* eslint-enable */

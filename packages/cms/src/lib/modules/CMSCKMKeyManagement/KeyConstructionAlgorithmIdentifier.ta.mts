@@ -19,13 +19,26 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  */
 export type KeyConstructionAlgorithmIdentifier = AlgorithmIdentifier; // DefinedType
 
+
+let _cached_decoder_for_KeyConstructionAlgorithmIdentifier: $.ASN1Decoder<KeyConstructionAlgorithmIdentifier> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) KeyConstructionAlgorithmIdentifier
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {KeyConstructionAlgorithmIdentifier} The decoded data structure.
  */
-export const _decode_KeyConstructionAlgorithmIdentifier: $.ASN1Decoder<KeyConstructionAlgorithmIdentifier> = _decode_AlgorithmIdentifier;
+export function _decode_KeyConstructionAlgorithmIdentifier(el: _Element): KeyConstructionAlgorithmIdentifier {
+    if (!_cached_decoder_for_KeyConstructionAlgorithmIdentifier) {
+        _cached_decoder_for_KeyConstructionAlgorithmIdentifier = _decode_AlgorithmIdentifier;
+    }
+    return _cached_decoder_for_KeyConstructionAlgorithmIdentifier(el);
+}
+
+
+let _cached_encoder_for_KeyConstructionAlgorithmIdentifier: $.ASN1Encoder<KeyConstructionAlgorithmIdentifier> | null = null;
+
 
 /**
  * @summary Encodes a(n) KeyConstructionAlgorithmIdentifier into an ASN.1 Element.
@@ -34,7 +47,18 @@ export const _decode_KeyConstructionAlgorithmIdentifier: $.ASN1Decoder<KeyConstr
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The KeyConstructionAlgorithmIdentifier, encoded as an ASN.1 Element.
  */
-export const _encode_KeyConstructionAlgorithmIdentifier: $.ASN1Encoder<KeyConstructionAlgorithmIdentifier> = _encode_AlgorithmIdentifier;
+export function _encode_KeyConstructionAlgorithmIdentifier(
+    value: KeyConstructionAlgorithmIdentifier,
+    elGetter: $.ASN1Encoder<KeyConstructionAlgorithmIdentifier>
+): _Element {
+    if (!_cached_encoder_for_KeyConstructionAlgorithmIdentifier) {
+        _cached_encoder_for_KeyConstructionAlgorithmIdentifier = _encode_AlgorithmIdentifier;
+    }
+    return _cached_encoder_for_KeyConstructionAlgorithmIdentifier(
+        value,
+        elGetter
+    );
+}
 
 
 /* eslint-enable */

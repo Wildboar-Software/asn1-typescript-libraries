@@ -29,13 +29,22 @@ import {
  */
 export type HeadingExtensionsSubField = ExtensionField; // DefinedType
 
+let _cached_decoder_for_HeadingExtensionsSubField: $.ASN1Decoder<HeadingExtensionsSubField> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) HeadingExtensionsSubField
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {HeadingExtensionsSubField} The decoded data structure.
  */
-export const _decode_HeadingExtensionsSubField: $.ASN1Decoder<HeadingExtensionsSubField> = _decode_ExtensionField;
+export function _decode_HeadingExtensionsSubField(el: _Element): HeadingExtensionsSubField {
+    if (!_cached_decoder_for_HeadingExtensionsSubField) {
+        _cached_decoder_for_HeadingExtensionsSubField = _decode_ExtensionField;
+    }
+    return _cached_decoder_for_HeadingExtensionsSubField(el);
+}
+
+let _cached_encoder_for_HeadingExtensionsSubField: $.ASN1Encoder<HeadingExtensionsSubField> | null = null;
 
 /**
  * @summary Encodes a(n) HeadingExtensionsSubField into an ASN.1 Element.
@@ -44,7 +53,15 @@ export const _decode_HeadingExtensionsSubField: $.ASN1Decoder<HeadingExtensionsS
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The HeadingExtensionsSubField, encoded as an ASN.1 Element.
  */
-export const _encode_HeadingExtensionsSubField: $.ASN1Encoder<HeadingExtensionsSubField> = _encode_ExtensionField;
+export function _encode_HeadingExtensionsSubField(
+    value: HeadingExtensionsSubField,
+    elGetter: $.ASN1Encoder<HeadingExtensionsSubField>
+): _Element {
+    if (!_cached_encoder_for_HeadingExtensionsSubField) {
+        _cached_encoder_for_HeadingExtensionsSubField = _encode_ExtensionField;
+    }
+    return _cached_encoder_for_HeadingExtensionsSubField(value, elGetter);
+}
 
 
 /* eslint-enable */

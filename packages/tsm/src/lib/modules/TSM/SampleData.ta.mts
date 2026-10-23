@@ -31,13 +31,21 @@ import { BioAPI_BIR, _decode_BioAPI_BIR, _encode_BioAPI_BIR } from "../BIP/BioAP
 export
 type SampleData = BioAPI_BIR; // DefinedType
 
+let _cached_decoder_for_SampleData: $.ASN1Decoder<SampleData> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SampleData
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_SampleData: $.ASN1Decoder<SampleData> = _decode_BioAPI_BIR;
+export
+function _decode_SampleData (el: _Element): SampleData {
+    if (!_cached_decoder_for_SampleData) { _cached_decoder_for_SampleData = _decode_BioAPI_BIR; }
+    return _cached_decoder_for_SampleData(el);
+}
+
+let _cached_encoder_for_SampleData: $.ASN1Encoder<SampleData> | null = null;
 
 /**
  * @summary Encodes a(n) SampleData into an ASN.1 Element.
@@ -46,7 +54,11 @@ export const _decode_SampleData: $.ASN1Decoder<SampleData> = _decode_BioAPI_BIR;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SampleData, encoded as an ASN.1 Element.
  */
-export const _encode_SampleData: (value: SampleData, elGetter: $.ASN1Encoder<any>) => _Element = _encode_BioAPI_BIR;
+export
+function _encode_SampleData (value: SampleData, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_SampleData) { _cached_encoder_for_SampleData = _encode_BioAPI_BIR; }
+    return _cached_encoder_for_SampleData(value, elGetter);
+}
 
 
 /* eslint-enable */

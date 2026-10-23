@@ -29,13 +29,22 @@ import {
  */
 export type ConversionEITsField = EncodedInformationTypes; // DefinedType
 
+let _cached_decoder_for_ConversionEITsField: $.ASN1Decoder<ConversionEITsField> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ConversionEITsField
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ConversionEITsField} The decoded data structure.
  */
-export const _decode_ConversionEITsField: $.ASN1Decoder<ConversionEITsField> = _decode_EncodedInformationTypes;
+export function _decode_ConversionEITsField(el: _Element): ConversionEITsField {
+    if (!_cached_decoder_for_ConversionEITsField) {
+        _cached_decoder_for_ConversionEITsField = _decode_EncodedInformationTypes;
+    }
+    return _cached_decoder_for_ConversionEITsField(el);
+}
+
+let _cached_encoder_for_ConversionEITsField: $.ASN1Encoder<ConversionEITsField> | null = null;
 
 /**
  * @summary Encodes a(n) ConversionEITsField into an ASN.1 Element.
@@ -44,7 +53,15 @@ export const _decode_ConversionEITsField: $.ASN1Decoder<ConversionEITsField> = _
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ConversionEITsField, encoded as an ASN.1 Element.
  */
-export const _encode_ConversionEITsField: $.ASN1Encoder<ConversionEITsField> = _encode_EncodedInformationTypes;
+export function _encode_ConversionEITsField(
+    value: ConversionEITsField,
+    elGetter: $.ASN1Encoder<ConversionEITsField>
+): _Element {
+    if (!_cached_encoder_for_ConversionEITsField) {
+        _cached_encoder_for_ConversionEITsField = _encode_EncodedInformationTypes;
+    }
+    return _cached_encoder_for_ConversionEITsField(value, elGetter);
+}
 
 
 /* eslint-enable */

@@ -33,13 +33,22 @@ import {
  */
 export type EstablishmentTime = Timespec; // DefinedType
 
+let _cached_decoder_for_EstablishmentTime: $.ASN1Decoder<EstablishmentTime> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) EstablishmentTime
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {EstablishmentTime} The decoded data structure.
  */
-export const _decode_EstablishmentTime: $.ASN1Decoder<EstablishmentTime> = _decode_Timespec;
+export function _decode_EstablishmentTime(el: _Element): EstablishmentTime {
+    if (!_cached_decoder_for_EstablishmentTime) {
+        _cached_decoder_for_EstablishmentTime = _decode_Timespec;
+    }
+    return _cached_decoder_for_EstablishmentTime(el);
+}
+
+let _cached_encoder_for_EstablishmentTime: $.ASN1Encoder<EstablishmentTime> | null = null;
 
 /**
  * @summary Encodes a(n) EstablishmentTime into an ASN.1 Element.
@@ -48,7 +57,15 @@ export const _decode_EstablishmentTime: $.ASN1Decoder<EstablishmentTime> = _deco
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The EstablishmentTime, encoded as an ASN.1 Element.
  */
-export const _encode_EstablishmentTime: $.ASN1Encoder<EstablishmentTime> = _encode_Timespec;
+export function _encode_EstablishmentTime(
+    value: EstablishmentTime,
+    elGetter: $.ASN1Encoder<EstablishmentTime>
+): _Element {
+    if (!_cached_encoder_for_EstablishmentTime) {
+        _cached_encoder_for_EstablishmentTime = _encode_Timespec;
+    }
+    return _cached_encoder_for_EstablishmentTime(value, elGetter);
+}
 
 
 /* eslint-enable */

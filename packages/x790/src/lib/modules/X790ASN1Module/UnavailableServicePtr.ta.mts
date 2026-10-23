@@ -24,13 +24,21 @@ import {
 export
 type UnavailableServicePtr = RelatedObject; // DefinedType
 
+let _cached_decoder_for_UnavailableServicePtr: $.ASN1Decoder<UnavailableServicePtr> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) UnavailableServicePtr
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_UnavailableServicePtr: $.ASN1Decoder<UnavailableServicePtr> = _decode_RelatedObject;
+export
+function _decode_UnavailableServicePtr (el: _Element): UnavailableServicePtr {
+    if (!_cached_decoder_for_UnavailableServicePtr) { _cached_decoder_for_UnavailableServicePtr = _decode_RelatedObject; }
+    return _cached_decoder_for_UnavailableServicePtr(el);
+}
+
+let _cached_encoder_for_UnavailableServicePtr: $.ASN1Encoder<UnavailableServicePtr> | null = null;
 
 /**
  * @summary Encodes a(n) UnavailableServicePtr into an ASN.1 Element.
@@ -39,7 +47,11 @@ export const _decode_UnavailableServicePtr: $.ASN1Decoder<UnavailableServicePtr>
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UnavailableServicePtr, encoded as an ASN.1 Element.
  */
-export const _encode_UnavailableServicePtr: (value: UnavailableServicePtr, elGetter: $.ASN1Encoder<any>) => _Element = _encode_RelatedObject;
+export
+function _encode_UnavailableServicePtr (value: UnavailableServicePtr, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_UnavailableServicePtr) { _cached_encoder_for_UnavailableServicePtr = _encode_RelatedObject; }
+    return _cached_encoder_for_UnavailableServicePtr(value, elGetter);
+}
 
 
 /* eslint-enable */

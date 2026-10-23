@@ -30,13 +30,21 @@ import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../SNMPv2-PD
 export
 type Gauge32 = Unsigned32; // DefinedType
 
+let _cached_decoder_for_Gauge32: $.ASN1Decoder<Gauge32> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Gauge32
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {Gauge32} The decoded data structure.
  */
-export const _decode_Gauge32: $.ASN1Decoder<Gauge32> = _decode_Unsigned32;
+export
+function _decode_Gauge32 (el: _Element): Gauge32 {
+    if (!_cached_decoder_for_Gauge32) { _cached_decoder_for_Gauge32 = _decode_Unsigned32; }
+    return _cached_decoder_for_Gauge32(el);
+}
+
+let _cached_encoder_for_Gauge32: $.ASN1Encoder<Gauge32> | null = null;
 
 /**
  * @summary Encodes a(n) Gauge32 into an ASN.1 Element.
@@ -45,7 +53,11 @@ export const _decode_Gauge32: $.ASN1Decoder<Gauge32> = _decode_Unsigned32;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Gauge32, encoded as an ASN.1 Element.
  */
-export const _encode_Gauge32: $.ASN1Encoder<Gauge32> = _encode_Unsigned32;
+export
+function _encode_Gauge32 (value: Gauge32, elGetter: $.ASN1Encoder<Gauge32>): _Element {
+    if (!_cached_encoder_for_Gauge32) { _cached_encoder_for_Gauge32 = _encode_Unsigned32; }
+    return _cached_encoder_for_Gauge32(value, elGetter);
+}
 
 
 /* eslint-enable */

@@ -37,13 +37,26 @@ import {
  */
 export type DepositNotice = DepositNoticeType; // DefinedType
 
+
+let _cached_decoder_for_DepositNotice: $.ASN1Decoder<DepositNotice> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DepositNotice
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {DepositNotice} The decoded data structure.
  */
-export const _decode_DepositNotice: $.ASN1Decoder<DepositNotice> = _decode_DepositNoticeType;
+export function _decode_DepositNotice(el: _Element): DepositNotice {
+  if (!_cached_decoder_for_DepositNotice) {
+    _cached_decoder_for_DepositNotice = _decode_DepositNoticeType;
+  }
+  return _cached_decoder_for_DepositNotice(el);
+}
+
+
+let _cached_encoder_for_DepositNotice: $.ASN1Encoder<DepositNotice> | null = null;
+
 
 /**
  * @summary Encodes a(n) DepositNotice into an ASN.1 Element.
@@ -52,7 +65,15 @@ export const _decode_DepositNotice: $.ASN1Decoder<DepositNotice> = _decode_Depos
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DepositNotice, encoded as an ASN.1 Element.
  */
-export const _encode_DepositNotice: $.ASN1Encoder<DepositNotice> = _encode_DepositNoticeType;
+export function _encode_DepositNotice(
+  value: DepositNotice,
+  elGetter: $.ASN1Encoder<DepositNotice>
+): _Element {
+  if (!_cached_encoder_for_DepositNotice) {
+    _cached_encoder_for_DepositNotice = _encode_DepositNoticeType;
+  }
+  return _cached_encoder_for_DepositNotice(value, elGetter);
+}
 
 
 /* eslint-enable */

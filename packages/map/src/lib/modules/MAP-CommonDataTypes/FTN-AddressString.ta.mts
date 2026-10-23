@@ -31,13 +31,21 @@ import { _decode_AddressString, _encode_AddressString, AddressString } from "../
 export
 type FTN_AddressString = AddressString; // DefinedType
 
+let _cached_decoder_for_FTN_AddressString: $.ASN1Decoder<FTN_AddressString> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) FTN_AddressString
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_FTN_AddressString: $.ASN1Decoder<FTN_AddressString> = _decode_AddressString;
+export
+function _decode_FTN_AddressString (el: _Element): FTN_AddressString {
+    if (!_cached_decoder_for_FTN_AddressString) { _cached_decoder_for_FTN_AddressString = _decode_AddressString; }
+    return _cached_decoder_for_FTN_AddressString(el);
+}
+
+let _cached_encoder_for_FTN_AddressString: $.ASN1Encoder<FTN_AddressString> | null = null;
 
 /**
  * @summary Encodes a(n) FTN_AddressString into an ASN.1 Element.
@@ -46,7 +54,11 @@ export const _decode_FTN_AddressString: $.ASN1Decoder<FTN_AddressString> = _deco
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The FTN_AddressString, encoded as an ASN.1 Element.
  */
-export const _encode_FTN_AddressString: (value: FTN_AddressString, elGetter: $.ASN1Encoder<any>) => _Element = _encode_AddressString;
+export
+function _encode_FTN_AddressString (value: FTN_AddressString, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_FTN_AddressString) { _cached_encoder_for_FTN_AddressString = _encode_AddressString; }
+    return _cached_encoder_for_FTN_AddressString(value, elGetter);
+}
 
 
 /* eslint-enable */

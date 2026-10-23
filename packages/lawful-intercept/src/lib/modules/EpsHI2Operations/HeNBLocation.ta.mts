@@ -25,13 +25,21 @@ import { EPSLocation, _decode_EPSLocation, _encode_EPSLocation } from "../EpsHI2
 export
 type HeNBLocation = EPSLocation; // DefinedType
 
+let _cached_decoder_for_HeNBLocation: $.ASN1Decoder<HeNBLocation> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) HeNBLocation
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_HeNBLocation: $.ASN1Decoder<HeNBLocation> = _decode_EPSLocation;
+export
+function _decode_HeNBLocation (el: _Element): HeNBLocation {
+    if (!_cached_decoder_for_HeNBLocation) { _cached_decoder_for_HeNBLocation = _decode_EPSLocation; }
+    return _cached_decoder_for_HeNBLocation(el);
+}
+
+let _cached_encoder_for_HeNBLocation: $.ASN1Encoder<HeNBLocation> | null = null;
 
 /**
  * @summary Encodes a(n) HeNBLocation into an ASN.1 Element.
@@ -40,7 +48,11 @@ export const _decode_HeNBLocation: $.ASN1Decoder<HeNBLocation> = _decode_EPSLoca
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The HeNBLocation, encoded as an ASN.1 Element.
  */
-export const _encode_HeNBLocation: (value: HeNBLocation, elGetter: $.ASN1Encoder<any>) => _Element = _encode_EPSLocation;
+export
+function _encode_HeNBLocation (value: HeNBLocation, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_HeNBLocation) { _cached_encoder_for_HeNBLocation = _encode_EPSLocation; }
+    return _cached_encoder_for_HeNBLocation(value, elGetter);
+}
 
 
 /* eslint-enable */

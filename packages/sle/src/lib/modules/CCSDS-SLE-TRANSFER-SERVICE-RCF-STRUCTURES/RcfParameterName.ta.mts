@@ -81,6 +81,8 @@ function _decode_RcfParameterName (el: _Element): RcfParameterName {
     return _decoded;
 }
 
+let _cached_encoder_for_RcfParameterName: $.ASN1Encoder<RcfParameterName> | null = null;
+
 /**
  * @summary Encodes a(n) RcfParameterName into an ASN.1 Element.
  * @function
@@ -88,7 +90,11 @@ function _decode_RcfParameterName (el: _Element): RcfParameterName {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RcfParameterName, encoded as an ASN.1 Element.
  */
-export const _encode_RcfParameterName: (value: RcfParameterName, elGetter: $.ASN1Encoder<any>) => _Element = _encode_ParameterName;
+export
+function _encode_RcfParameterName (value: RcfParameterName, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_RcfParameterName) { _cached_encoder_for_RcfParameterName = _encode_ParameterName; }
+    return _cached_encoder_for_RcfParameterName(value, elGetter);
+}
 
 
 /* eslint-enable */

@@ -21,13 +21,21 @@ import { CallResult, _decode_CallResult, _encode_CallResult } from "../IN-CS2-da
 export
 type ApplyChargingReportArg = CallResult; // DefinedType
 
+let _cached_decoder_for_ApplyChargingReportArg: $.ASN1Decoder<ApplyChargingReportArg> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ApplyChargingReportArg
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_ApplyChargingReportArg: $.ASN1Decoder<ApplyChargingReportArg> = _decode_CallResult;
+export
+function _decode_ApplyChargingReportArg (el: _Element): ApplyChargingReportArg {
+    if (!_cached_decoder_for_ApplyChargingReportArg) { _cached_decoder_for_ApplyChargingReportArg = _decode_CallResult; }
+    return _cached_decoder_for_ApplyChargingReportArg(el);
+}
+
+let _cached_encoder_for_ApplyChargingReportArg: $.ASN1Encoder<ApplyChargingReportArg> | null = null;
 
 /**
  * @summary Encodes a(n) ApplyChargingReportArg into an ASN.1 Element.
@@ -36,7 +44,11 @@ export const _decode_ApplyChargingReportArg: $.ASN1Decoder<ApplyChargingReportAr
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ApplyChargingReportArg, encoded as an ASN.1 Element.
  */
-export const _encode_ApplyChargingReportArg: (value: ApplyChargingReportArg, elGetter: $.ASN1Encoder<any>) => _Element = _encode_CallResult;
+export
+function _encode_ApplyChargingReportArg (value: ApplyChargingReportArg, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_ApplyChargingReportArg) { _cached_encoder_for_ApplyChargingReportArg = _encode_CallResult; }
+    return _cached_encoder_for_ApplyChargingReportArg(value, elGetter);
+}
 
 
 /* eslint-enable */

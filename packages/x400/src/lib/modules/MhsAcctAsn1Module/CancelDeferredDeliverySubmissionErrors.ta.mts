@@ -30,13 +30,22 @@ import {
  */
 export type CancelDeferredDeliverySubmissionErrors = SubmissionError; // DefinedType
 
+let _cached_decoder_for_CancelDeferredDeliverySubmissionErrors: $.ASN1Decoder<CancelDeferredDeliverySubmissionErrors> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CancelDeferredDeliverySubmissionErrors
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {CancelDeferredDeliverySubmissionErrors} The decoded data structure.
  */
-export const _decode_CancelDeferredDeliverySubmissionErrors: $.ASN1Decoder<CancelDeferredDeliverySubmissionErrors> = _decode_SubmissionError;
+export function _decode_CancelDeferredDeliverySubmissionErrors(el: _Element): CancelDeferredDeliverySubmissionErrors {
+    if (!_cached_decoder_for_CancelDeferredDeliverySubmissionErrors) {
+        _cached_decoder_for_CancelDeferredDeliverySubmissionErrors = _decode_SubmissionError;
+    }
+    return _cached_decoder_for_CancelDeferredDeliverySubmissionErrors(el);
+}
+
+let _cached_encoder_for_CancelDeferredDeliverySubmissionErrors: $.ASN1Encoder<CancelDeferredDeliverySubmissionErrors> | null = null;
 
 /**
  * @summary Encodes a(n) CancelDeferredDeliverySubmissionErrors into an ASN.1 Element.
@@ -45,7 +54,18 @@ export const _decode_CancelDeferredDeliverySubmissionErrors: $.ASN1Decoder<Cance
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CancelDeferredDeliverySubmissionErrors, encoded as an ASN.1 Element.
  */
-export const _encode_CancelDeferredDeliverySubmissionErrors: $.ASN1Encoder<CancelDeferredDeliverySubmissionErrors> = _encode_SubmissionError;
+export function _encode_CancelDeferredDeliverySubmissionErrors(
+    value: CancelDeferredDeliverySubmissionErrors,
+    elGetter: $.ASN1Encoder<CancelDeferredDeliverySubmissionErrors>
+): _Element {
+    if (!_cached_encoder_for_CancelDeferredDeliverySubmissionErrors) {
+        _cached_encoder_for_CancelDeferredDeliverySubmissionErrors = _encode_SubmissionError;
+    }
+    return _cached_encoder_for_CancelDeferredDeliverySubmissionErrors(
+        value,
+        elGetter
+    );
+}
 
 
 /* eslint-enable */

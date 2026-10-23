@@ -33,13 +33,26 @@ import {
  */
 export type CertAnnContent = CMPCertificate; // DefinedType
 
+
+let _cached_decoder_for_CertAnnContent: $.ASN1Decoder<CertAnnContent> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CertAnnContent
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {CertAnnContent} The decoded data structure.
  */
-export const _decode_CertAnnContent: $.ASN1Decoder<CertAnnContent> = _decode_CMPCertificate;
+export function _decode_CertAnnContent(el: _Element): CertAnnContent {
+  if (!_cached_decoder_for_CertAnnContent) {
+    _cached_decoder_for_CertAnnContent = _decode_CMPCertificate;
+  }
+  return _cached_decoder_for_CertAnnContent(el);
+}
+
+
+let _cached_encoder_for_CertAnnContent: $.ASN1Encoder<CertAnnContent> | null = null;
+
 
 /**
  * @summary Encodes a(n) CertAnnContent into an ASN.1 Element.
@@ -48,7 +61,15 @@ export const _decode_CertAnnContent: $.ASN1Decoder<CertAnnContent> = _decode_CMP
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CertAnnContent, encoded as an ASN.1 Element.
  */
-export const _encode_CertAnnContent: $.ASN1Encoder<CertAnnContent> = _encode_CMPCertificate;
+export function _encode_CertAnnContent(
+  value: CertAnnContent,
+  elGetter: $.ASN1Encoder<CertAnnContent>
+): _Element {
+  if (!_cached_encoder_for_CertAnnContent) {
+    _cached_encoder_for_CertAnnContent = _encode_CMPCertificate;
+  }
+  return _cached_encoder_for_CertAnnContent(value, elGetter);
+}
 
 
 /* eslint-enable */

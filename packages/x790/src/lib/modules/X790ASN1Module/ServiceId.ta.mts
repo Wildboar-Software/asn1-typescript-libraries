@@ -24,13 +24,21 @@ import {
 export
 type ServiceId = NameType; // DefinedType
 
+let _cached_decoder_for_ServiceId: $.ASN1Decoder<ServiceId> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ServiceId
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_ServiceId: $.ASN1Decoder<ServiceId> = _decode_NameType;
+export
+function _decode_ServiceId (el: _Element): ServiceId {
+    if (!_cached_decoder_for_ServiceId) { _cached_decoder_for_ServiceId = _decode_NameType; }
+    return _cached_decoder_for_ServiceId(el);
+}
+
+let _cached_encoder_for_ServiceId: $.ASN1Encoder<ServiceId> | null = null;
 
 /**
  * @summary Encodes a(n) ServiceId into an ASN.1 Element.
@@ -39,7 +47,11 @@ export const _decode_ServiceId: $.ASN1Decoder<ServiceId> = _decode_NameType;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ServiceId, encoded as an ASN.1 Element.
  */
-export const _encode_ServiceId: (value: ServiceId, elGetter: $.ASN1Encoder<any>) => _Element = _encode_NameType;
+export
+function _encode_ServiceId (value: ServiceId, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_ServiceId) { _cached_encoder_for_ServiceId = _encode_NameType; }
+    return _cached_encoder_for_ServiceId(value, elGetter);
+}
 
 
 /* eslint-enable */

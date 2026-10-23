@@ -27,13 +27,21 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
 export
 type KeyWrapFunction = AlgorithmIdentifier; // DefinedType
 
+let _cached_decoder_for_KeyWrapFunction: $.ASN1Decoder<KeyWrapFunction> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) KeyWrapFunction
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {KeyWrapFunction} The decoded data structure.
  */
-export const _decode_KeyWrapFunction: $.ASN1Decoder<KeyWrapFunction> = _decode_AlgorithmIdentifier;
+export
+function _decode_KeyWrapFunction (el: _Element): KeyWrapFunction {
+    if (!_cached_decoder_for_KeyWrapFunction) { _cached_decoder_for_KeyWrapFunction = _decode_AlgorithmIdentifier; }
+    return _cached_decoder_for_KeyWrapFunction(el);
+}
+
+let _cached_encoder_for_KeyWrapFunction: $.ASN1Encoder<KeyWrapFunction> | null = null;
 
 /**
  * @summary Encodes a(n) KeyWrapFunction into an ASN.1 Element.
@@ -42,7 +50,11 @@ export const _decode_KeyWrapFunction: $.ASN1Decoder<KeyWrapFunction> = _decode_A
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The KeyWrapFunction, encoded as an ASN.1 Element.
  */
-export const _encode_KeyWrapFunction: $.ASN1Encoder<KeyWrapFunction> = _encode_AlgorithmIdentifier;
+export
+function _encode_KeyWrapFunction (value: KeyWrapFunction, elGetter: $.ASN1Encoder<KeyWrapFunction>): _Element {
+    if (!_cached_encoder_for_KeyWrapFunction) { _cached_encoder_for_KeyWrapFunction = _encode_AlgorithmIdentifier; }
+    return _cached_encoder_for_KeyWrapFunction(value, elGetter);
+}
 
 
 /* eslint-enable */

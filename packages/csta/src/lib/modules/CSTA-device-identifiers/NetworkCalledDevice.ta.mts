@@ -25,13 +25,21 @@ import { NetworkCalledDeviceID, _decode_NetworkCalledDeviceID, _encode_NetworkCa
 export
 type NetworkCalledDevice = NetworkCalledDeviceID; // DefinedType
 
+let _cached_decoder_for_NetworkCalledDevice: $.ASN1Decoder<NetworkCalledDevice> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) NetworkCalledDevice
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_NetworkCalledDevice: $.ASN1Decoder<NetworkCalledDevice> = _decode_NetworkCalledDeviceID;
+export
+function _decode_NetworkCalledDevice (el: _Element): NetworkCalledDevice {
+    if (!_cached_decoder_for_NetworkCalledDevice) { _cached_decoder_for_NetworkCalledDevice = _decode_NetworkCalledDeviceID; }
+    return _cached_decoder_for_NetworkCalledDevice(el);
+}
+
+let _cached_encoder_for_NetworkCalledDevice: $.ASN1Encoder<NetworkCalledDevice> | null = null;
 
 /**
  * @summary Encodes a(n) NetworkCalledDevice into an ASN.1 Element.
@@ -40,7 +48,11 @@ export const _decode_NetworkCalledDevice: $.ASN1Decoder<NetworkCalledDevice> = _
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NetworkCalledDevice, encoded as an ASN.1 Element.
  */
-export const _encode_NetworkCalledDevice: (value: NetworkCalledDevice, elGetter: $.ASN1Encoder<any>) => _Element = _encode_NetworkCalledDeviceID;
+export
+function _encode_NetworkCalledDevice (value: NetworkCalledDevice, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_NetworkCalledDevice) { _cached_encoder_for_NetworkCalledDevice = _encode_NetworkCalledDeviceID; }
+    return _cached_encoder_for_NetworkCalledDevice(value, elGetter);
+}
 
 
 /* eslint-enable */

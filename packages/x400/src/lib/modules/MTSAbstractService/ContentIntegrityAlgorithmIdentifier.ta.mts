@@ -31,13 +31,22 @@ import {
  */
 export type ContentIntegrityAlgorithmIdentifier = AlgorithmIdentifier; // DefinedType
 
+let _cached_decoder_for_ContentIntegrityAlgorithmIdentifier: $.ASN1Decoder<ContentIntegrityAlgorithmIdentifier> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ContentIntegrityAlgorithmIdentifier
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ContentIntegrityAlgorithmIdentifier} The decoded data structure.
  */
-export const _decode_ContentIntegrityAlgorithmIdentifier: $.ASN1Decoder<ContentIntegrityAlgorithmIdentifier> = _decode_AlgorithmIdentifier;
+export function _decode_ContentIntegrityAlgorithmIdentifier(el: _Element): ContentIntegrityAlgorithmIdentifier {
+    if (!_cached_decoder_for_ContentIntegrityAlgorithmIdentifier) {
+        _cached_decoder_for_ContentIntegrityAlgorithmIdentifier = _decode_AlgorithmIdentifier;
+    }
+    return _cached_decoder_for_ContentIntegrityAlgorithmIdentifier(el);
+}
+
+let _cached_encoder_for_ContentIntegrityAlgorithmIdentifier: $.ASN1Encoder<ContentIntegrityAlgorithmIdentifier> | null = null;
 
 /**
  * @summary Encodes a(n) ContentIntegrityAlgorithmIdentifier into an ASN.1 Element.
@@ -46,7 +55,18 @@ export const _decode_ContentIntegrityAlgorithmIdentifier: $.ASN1Decoder<ContentI
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ContentIntegrityAlgorithmIdentifier, encoded as an ASN.1 Element.
  */
-export const _encode_ContentIntegrityAlgorithmIdentifier: $.ASN1Encoder<ContentIntegrityAlgorithmIdentifier> = _encode_AlgorithmIdentifier;
+export function _encode_ContentIntegrityAlgorithmIdentifier(
+    value: ContentIntegrityAlgorithmIdentifier,
+    elGetter: $.ASN1Encoder<ContentIntegrityAlgorithmIdentifier>
+): _Element {
+    if (!_cached_encoder_for_ContentIntegrityAlgorithmIdentifier) {
+        _cached_encoder_for_ContentIntegrityAlgorithmIdentifier = _encode_AlgorithmIdentifier;
+    }
+    return _cached_encoder_for_ContentIntegrityAlgorithmIdentifier(
+        value,
+        elGetter
+    );
+}
 
 
 /* eslint-enable */

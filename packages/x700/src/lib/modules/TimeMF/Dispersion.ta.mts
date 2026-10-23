@@ -33,13 +33,22 @@ import {
  */
 export type Dispersion = TimeInterval; // DefinedType
 
+let _cached_decoder_for_Dispersion: $.ASN1Decoder<Dispersion> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Dispersion
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {Dispersion} The decoded data structure.
  */
-export const _decode_Dispersion: $.ASN1Decoder<Dispersion> = _decode_TimeInterval;
+export function _decode_Dispersion(el: _Element): Dispersion {
+    if (!_cached_decoder_for_Dispersion) {
+        _cached_decoder_for_Dispersion = _decode_TimeInterval;
+    }
+    return _cached_decoder_for_Dispersion(el);
+}
+
+let _cached_encoder_for_Dispersion: $.ASN1Encoder<Dispersion> | null = null;
 
 /**
  * @summary Encodes a(n) Dispersion into an ASN.1 Element.
@@ -48,7 +57,15 @@ export const _decode_Dispersion: $.ASN1Decoder<Dispersion> = _decode_TimeInterva
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Dispersion, encoded as an ASN.1 Element.
  */
-export const _encode_Dispersion: $.ASN1Encoder<Dispersion> = _encode_TimeInterval;
+export function _encode_Dispersion(
+    value: Dispersion,
+    elGetter: $.ASN1Encoder<Dispersion>
+): _Element {
+    if (!_cached_encoder_for_Dispersion) {
+        _cached_encoder_for_Dispersion = _encode_TimeInterval;
+    }
+    return _cached_encoder_for_Dispersion(value, elGetter);
+}
 
 
 /* eslint-enable */

@@ -28,13 +28,21 @@ import { AvailabilityStatus, _decode_AvailabilityStatus, _encode_AvailabilitySta
 export
 type LogAvailability = AvailabilityStatus; // DefinedType
 
+let _cached_decoder_for_LogAvailability: $.ASN1Decoder<LogAvailability> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) LogAvailability
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {LogAvailability} The decoded data structure.
  */
-export const _decode_LogAvailability: $.ASN1Decoder<LogAvailability> = _decode_AvailabilityStatus;
+export
+function _decode_LogAvailability (el: _Element): LogAvailability {
+    if (!_cached_decoder_for_LogAvailability) { _cached_decoder_for_LogAvailability = _decode_AvailabilityStatus; }
+    return _cached_decoder_for_LogAvailability(el);
+}
+
+let _cached_encoder_for_LogAvailability: $.ASN1Encoder<LogAvailability> | null = null;
 
 /**
  * @summary Encodes a(n) LogAvailability into an ASN.1 Element.
@@ -43,7 +51,11 @@ export const _decode_LogAvailability: $.ASN1Decoder<LogAvailability> = _decode_A
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LogAvailability, encoded as an ASN.1 Element.
  */
-export const _encode_LogAvailability: $.ASN1Encoder<LogAvailability> = _encode_AvailabilityStatus;
+export
+function _encode_LogAvailability (value: LogAvailability, elGetter: $.ASN1Encoder<LogAvailability>): _Element {
+    if (!_cached_encoder_for_LogAvailability) { _cached_encoder_for_LogAvailability = _encode_AvailabilityStatus; }
+    return _cached_encoder_for_LogAvailability(value, elGetter);
+}
 
 
 /* eslint-enable */

@@ -25,13 +25,26 @@ import {
  */
 export type MarkingPhrase = DirectoryString; // DefinedType
 
+
+let _cached_decoder_for_MarkingPhrase: $.ASN1Decoder<MarkingPhrase> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MarkingPhrase
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {MarkingPhrase} The decoded data structure.
  */
-export const _decode_MarkingPhrase: $.ASN1Decoder<MarkingPhrase> = _decode_DirectoryString;
+export function _decode_MarkingPhrase(el: _Element): MarkingPhrase {
+    if (!_cached_decoder_for_MarkingPhrase) {
+        _cached_decoder_for_MarkingPhrase = _decode_DirectoryString;
+    }
+    return _cached_decoder_for_MarkingPhrase(el);
+}
+
+
+let _cached_encoder_for_MarkingPhrase: $.ASN1Encoder<MarkingPhrase> | null = null;
+
 
 /**
  * @summary Encodes a(n) MarkingPhrase into an ASN.1 Element.
@@ -40,7 +53,15 @@ export const _decode_MarkingPhrase: $.ASN1Decoder<MarkingPhrase> = _decode_Direc
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MarkingPhrase, encoded as an ASN.1 Element.
  */
-export const _encode_MarkingPhrase: $.ASN1Encoder<MarkingPhrase> = _encode_DirectoryString;
+export function _encode_MarkingPhrase(
+    value: MarkingPhrase,
+    elGetter: $.ASN1Encoder<MarkingPhrase>
+): _Element {
+    if (!_cached_encoder_for_MarkingPhrase) {
+        _cached_encoder_for_MarkingPhrase = _encode_DirectoryString;
+    }
+    return _cached_encoder_for_MarkingPhrase(value, elGetter);
+}
 
 
 /* eslint-enable */

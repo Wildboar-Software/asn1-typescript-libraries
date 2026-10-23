@@ -30,13 +30,22 @@ import {
  */
 export type ForwardedTo = ORName; // DefinedType
 
+let _cached_decoder_for_ForwardedTo: $.ASN1Decoder<ForwardedTo> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ForwardedTo
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ForwardedTo} The decoded data structure.
  */
-export const _decode_ForwardedTo: $.ASN1Decoder<ForwardedTo> = _decode_ORName;
+export function _decode_ForwardedTo(el: _Element): ForwardedTo {
+    if (!_cached_decoder_for_ForwardedTo) {
+        _cached_decoder_for_ForwardedTo = _decode_ORName;
+    }
+    return _cached_decoder_for_ForwardedTo(el);
+}
+
+let _cached_encoder_for_ForwardedTo: $.ASN1Encoder<ForwardedTo> | null = null;
 
 /**
  * @summary Encodes a(n) ForwardedTo into an ASN.1 Element.
@@ -45,7 +54,15 @@ export const _decode_ForwardedTo: $.ASN1Decoder<ForwardedTo> = _decode_ORName;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ForwardedTo, encoded as an ASN.1 Element.
  */
-export const _encode_ForwardedTo: $.ASN1Encoder<ForwardedTo> = _encode_ORName;
+export function _encode_ForwardedTo(
+    value: ForwardedTo,
+    elGetter: $.ASN1Encoder<ForwardedTo>
+): _Element {
+    if (!_cached_encoder_for_ForwardedTo) {
+        _cached_encoder_for_ForwardedTo = _encode_ORName;
+    }
+    return _cached_encoder_for_ForwardedTo(value, elGetter);
+}
 
 
 /* eslint-enable */

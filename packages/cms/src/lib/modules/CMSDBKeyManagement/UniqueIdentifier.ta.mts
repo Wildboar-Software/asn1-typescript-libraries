@@ -22,13 +22,26 @@ import {
  */
 export type UniqueIdentifier = UniqueID; // DefinedType
 
+
+let _cached_decoder_for_UniqueIdentifier: $.ASN1Decoder<UniqueIdentifier> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) UniqueIdentifier
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {UniqueIdentifier} The decoded data structure.
  */
-export const _decode_UniqueIdentifier: $.ASN1Decoder<UniqueIdentifier> = _decode_UniqueID;
+export function _decode_UniqueIdentifier(el: _Element): UniqueIdentifier {
+    if (!_cached_decoder_for_UniqueIdentifier) {
+        _cached_decoder_for_UniqueIdentifier = _decode_UniqueID;
+    }
+    return _cached_decoder_for_UniqueIdentifier(el);
+}
+
+
+let _cached_encoder_for_UniqueIdentifier: $.ASN1Encoder<UniqueIdentifier> | null = null;
+
 
 /**
  * @summary Encodes a(n) UniqueIdentifier into an ASN.1 Element.
@@ -37,7 +50,15 @@ export const _decode_UniqueIdentifier: $.ASN1Decoder<UniqueIdentifier> = _decode
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UniqueIdentifier, encoded as an ASN.1 Element.
  */
-export const _encode_UniqueIdentifier: $.ASN1Encoder<UniqueIdentifier> = _encode_UniqueID;
+export function _encode_UniqueIdentifier(
+    value: UniqueIdentifier,
+    elGetter: $.ASN1Encoder<UniqueIdentifier>
+): _Element {
+    if (!_cached_encoder_for_UniqueIdentifier) {
+        _cached_encoder_for_UniqueIdentifier = _encode_UniqueID;
+    }
+    return _cached_encoder_for_UniqueIdentifier(value, elGetter);
+}
 
 
 /* eslint-enable */

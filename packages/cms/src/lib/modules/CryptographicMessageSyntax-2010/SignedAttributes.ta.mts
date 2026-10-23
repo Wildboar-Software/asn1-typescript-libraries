@@ -22,13 +22,26 @@ import {
  */
 export type SignedAttributes = Attributes; // DefinedType
 
+
+let _cached_decoder_for_SignedAttributes: $.ASN1Decoder<SignedAttributes> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SignedAttributes
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {SignedAttributes} The decoded data structure.
  */
-export const _decode_SignedAttributes: $.ASN1Decoder<SignedAttributes> = _decode_Attributes;
+export function _decode_SignedAttributes(el: _Element): SignedAttributes {
+    if (!_cached_decoder_for_SignedAttributes) {
+        _cached_decoder_for_SignedAttributes = _decode_Attributes;
+    }
+    return _cached_decoder_for_SignedAttributes(el);
+}
+
+
+let _cached_encoder_for_SignedAttributes: $.ASN1Encoder<SignedAttributes> | null = null;
+
 
 /**
  * @summary Encodes a(n) SignedAttributes into an ASN.1 Element.
@@ -37,7 +50,15 @@ export const _decode_SignedAttributes: $.ASN1Decoder<SignedAttributes> = _decode
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SignedAttributes, encoded as an ASN.1 Element.
  */
-export const _encode_SignedAttributes: $.ASN1Encoder<SignedAttributes> = _encode_Attributes;
+export function _encode_SignedAttributes(
+    value: SignedAttributes,
+    elGetter: $.ASN1Encoder<SignedAttributes>
+): _Element {
+    if (!_cached_encoder_for_SignedAttributes) {
+        _cached_encoder_for_SignedAttributes = _encode_Attributes;
+    }
+    return _cached_encoder_for_SignedAttributes(value, elGetter);
+}
 
 
 /* eslint-enable */

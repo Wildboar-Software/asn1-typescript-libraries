@@ -22,13 +22,22 @@ import {
  */
 export type SDSEType = DSEType; // DefinedType
 
+let _cached_decoder_for_SDSEType: $.ASN1Decoder<SDSEType> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SDSEType
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {SDSEType} The decoded data structure.
  */
-export const _decode_SDSEType: $.ASN1Decoder<SDSEType> = _decode_DSEType;
+export function _decode_SDSEType(el: _Element): SDSEType {
+    if (!_cached_decoder_for_SDSEType) {
+        _cached_decoder_for_SDSEType = _decode_DSEType;
+    }
+    return _cached_decoder_for_SDSEType(el);
+}
+
+let _cached_encoder_for_SDSEType: $.ASN1Encoder<SDSEType> | null = null;
 
 /**
  * @summary Encodes a(n) SDSEType into an ASN.1 Element.
@@ -37,7 +46,15 @@ export const _decode_SDSEType: $.ASN1Decoder<SDSEType> = _decode_DSEType;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SDSEType, encoded as an ASN.1 Element.
  */
-export const _encode_SDSEType: $.ASN1Encoder<SDSEType> = _encode_DSEType;
+export function _encode_SDSEType(
+    value: SDSEType,
+    elGetter: $.ASN1Encoder<SDSEType>
+): _Element {
+    if (!_cached_encoder_for_SDSEType) {
+        _cached_encoder_for_SDSEType = _encode_DSEType;
+    }
+    return _cached_encoder_for_SDSEType(value, elGetter);
+}
 
 
 /* eslint-enable */

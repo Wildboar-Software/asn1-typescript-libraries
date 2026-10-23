@@ -28,13 +28,21 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
 export
 type KeyEncryptionAlgorithmIdentifier = AlgorithmIdentifier; // DefinedType
 
+let _cached_decoder_for_KeyEncryptionAlgorithmIdentifier: $.ASN1Decoder<KeyEncryptionAlgorithmIdentifier> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) KeyEncryptionAlgorithmIdentifier
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_KeyEncryptionAlgorithmIdentifier: $.ASN1Decoder<KeyEncryptionAlgorithmIdentifier> = _decode_AlgorithmIdentifier;
+export
+function _decode_KeyEncryptionAlgorithmIdentifier (el: _Element): KeyEncryptionAlgorithmIdentifier {
+    if (!_cached_decoder_for_KeyEncryptionAlgorithmIdentifier) { _cached_decoder_for_KeyEncryptionAlgorithmIdentifier = _decode_AlgorithmIdentifier; }
+    return _cached_decoder_for_KeyEncryptionAlgorithmIdentifier(el);
+}
+
+let _cached_encoder_for_KeyEncryptionAlgorithmIdentifier: $.ASN1Encoder<KeyEncryptionAlgorithmIdentifier> | null = null;
 
 /**
  * @summary Encodes a(n) KeyEncryptionAlgorithmIdentifier into an ASN.1 Element.
@@ -43,7 +51,11 @@ export const _decode_KeyEncryptionAlgorithmIdentifier: $.ASN1Decoder<KeyEncrypti
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The KeyEncryptionAlgorithmIdentifier, encoded as an ASN.1 Element.
  */
-export const _encode_KeyEncryptionAlgorithmIdentifier: (value: KeyEncryptionAlgorithmIdentifier, elGetter: $.ASN1Encoder<any>) => _Element = _encode_AlgorithmIdentifier;
+export
+function _encode_KeyEncryptionAlgorithmIdentifier (value: KeyEncryptionAlgorithmIdentifier, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_KeyEncryptionAlgorithmIdentifier) { _cached_encoder_for_KeyEncryptionAlgorithmIdentifier = _encode_AlgorithmIdentifier; }
+    return _cached_encoder_for_KeyEncryptionAlgorithmIdentifier(value, elGetter);
+}
 
 
 /* eslint-enable */

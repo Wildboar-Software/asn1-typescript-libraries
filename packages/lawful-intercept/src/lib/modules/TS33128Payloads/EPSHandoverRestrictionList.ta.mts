@@ -27,13 +27,21 @@ import { ExternalASNType, _decode_ExternalASNType, _encode_ExternalASNType } fro
 export
 type EPSHandoverRestrictionList = ExternalASNType; // DefinedType
 
+let _cached_decoder_for_EPSHandoverRestrictionList: $.ASN1Decoder<EPSHandoverRestrictionList> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) EPSHandoverRestrictionList
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_EPSHandoverRestrictionList: $.ASN1Decoder<EPSHandoverRestrictionList> = _decode_ExternalASNType;
+export
+function _decode_EPSHandoverRestrictionList (el: _Element): EPSHandoverRestrictionList {
+    if (!_cached_decoder_for_EPSHandoverRestrictionList) { _cached_decoder_for_EPSHandoverRestrictionList = _decode_ExternalASNType; }
+    return _cached_decoder_for_EPSHandoverRestrictionList(el);
+}
+
+let _cached_encoder_for_EPSHandoverRestrictionList: $.ASN1Encoder<EPSHandoverRestrictionList> | null = null;
 
 /**
  * @summary Encodes a(n) EPSHandoverRestrictionList into an ASN.1 Element.
@@ -42,7 +50,11 @@ export const _decode_EPSHandoverRestrictionList: $.ASN1Decoder<EPSHandoverRestri
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The EPSHandoverRestrictionList, encoded as an ASN.1 Element.
  */
-export const _encode_EPSHandoverRestrictionList: (value: EPSHandoverRestrictionList, elGetter: $.ASN1Encoder<any>) => _Element = _encode_ExternalASNType;
+export
+function _encode_EPSHandoverRestrictionList (value: EPSHandoverRestrictionList, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_EPSHandoverRestrictionList) { _cached_encoder_for_EPSHandoverRestrictionList = _encode_ExternalASNType; }
+    return _cached_encoder_for_EPSHandoverRestrictionList(value, elGetter);
+}
 
 
 /* eslint-enable */

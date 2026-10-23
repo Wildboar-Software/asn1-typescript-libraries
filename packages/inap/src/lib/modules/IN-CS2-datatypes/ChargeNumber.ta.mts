@@ -21,13 +21,21 @@ import { LocationNumber, _decode_LocationNumber, _encode_LocationNumber } from "
 export
 type ChargeNumber = LocationNumber; // DefinedType
 
+let _cached_decoder_for_ChargeNumber: $.ASN1Decoder<ChargeNumber> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ChargeNumber
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_ChargeNumber: $.ASN1Decoder<ChargeNumber> = _decode_LocationNumber;
+export
+function _decode_ChargeNumber (el: _Element): ChargeNumber {
+    if (!_cached_decoder_for_ChargeNumber) { _cached_decoder_for_ChargeNumber = _decode_LocationNumber; }
+    return _cached_decoder_for_ChargeNumber(el);
+}
+
+let _cached_encoder_for_ChargeNumber: $.ASN1Encoder<ChargeNumber> | null = null;
 
 /**
  * @summary Encodes a(n) ChargeNumber into an ASN.1 Element.
@@ -36,7 +44,11 @@ export const _decode_ChargeNumber: $.ASN1Decoder<ChargeNumber> = _decode_Locatio
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ChargeNumber, encoded as an ASN.1 Element.
  */
-export const _encode_ChargeNumber: (value: ChargeNumber, elGetter: $.ASN1Encoder<any>) => _Element = _encode_LocationNumber;
+export
+function _encode_ChargeNumber (value: ChargeNumber, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_ChargeNumber) { _cached_encoder_for_ChargeNumber = _encode_LocationNumber; }
+    return _cached_encoder_for_ChargeNumber(value, elGetter);
+}
 
 
 /* eslint-enable */

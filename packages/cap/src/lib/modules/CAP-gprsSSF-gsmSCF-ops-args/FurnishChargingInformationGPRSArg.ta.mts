@@ -35,13 +35,21 @@ import { type FCIGPRSBillingChargingCharacteristics, _decode_FCIGPRSBillingCharg
 export
 type FurnishChargingInformationGPRSArg = FCIGPRSBillingChargingCharacteristics; // DefinedType
 
+let _cached_decoder_for_FurnishChargingInformationGPRSArg: $.ASN1Decoder<FurnishChargingInformationGPRSArg> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) FurnishChargingInformationGPRSArg
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_FurnishChargingInformationGPRSArg: $.ASN1Decoder<FurnishChargingInformationGPRSArg> = _decode_FCIGPRSBillingChargingCharacteristics;
+export
+function _decode_FurnishChargingInformationGPRSArg (el: _Element): FurnishChargingInformationGPRSArg {
+    if (!_cached_decoder_for_FurnishChargingInformationGPRSArg) { _cached_decoder_for_FurnishChargingInformationGPRSArg = _decode_FCIGPRSBillingChargingCharacteristics; }
+    return _cached_decoder_for_FurnishChargingInformationGPRSArg(el);
+}
+
+let _cached_encoder_for_FurnishChargingInformationGPRSArg: $.ASN1Encoder<FurnishChargingInformationGPRSArg> | null = null;
 
 /**
  * @summary Encodes a(n) FurnishChargingInformationGPRSArg into an ASN.1 Element.
@@ -50,7 +58,11 @@ export const _decode_FurnishChargingInformationGPRSArg: $.ASN1Decoder<FurnishCha
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The FurnishChargingInformationGPRSArg, encoded as an ASN.1 Element.
  */
-export const _encode_FurnishChargingInformationGPRSArg: (value: FurnishChargingInformationGPRSArg, elGetter: $.ASN1Encoder<any>) => _Element = _encode_FCIGPRSBillingChargingCharacteristics;
+export
+function _encode_FurnishChargingInformationGPRSArg (value: FurnishChargingInformationGPRSArg, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_FurnishChargingInformationGPRSArg) { _cached_encoder_for_FurnishChargingInformationGPRSArg = _encode_FCIGPRSBillingChargingCharacteristics; }
+    return _cached_encoder_for_FurnishChargingInformationGPRSArg(value, elGetter);
+}
 
 
 /* eslint-enable */

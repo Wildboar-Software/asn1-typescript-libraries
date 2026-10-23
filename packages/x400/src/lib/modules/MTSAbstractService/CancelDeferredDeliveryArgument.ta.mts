@@ -29,13 +29,22 @@ import {
  */
 export type CancelDeferredDeliveryArgument = MessageSubmissionIdentifier; // DefinedType
 
+let _cached_decoder_for_CancelDeferredDeliveryArgument: $.ASN1Decoder<CancelDeferredDeliveryArgument> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CancelDeferredDeliveryArgument
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {CancelDeferredDeliveryArgument} The decoded data structure.
  */
-export const _decode_CancelDeferredDeliveryArgument: $.ASN1Decoder<CancelDeferredDeliveryArgument> = _decode_MessageSubmissionIdentifier;
+export function _decode_CancelDeferredDeliveryArgument(el: _Element): CancelDeferredDeliveryArgument {
+    if (!_cached_decoder_for_CancelDeferredDeliveryArgument) {
+        _cached_decoder_for_CancelDeferredDeliveryArgument = _decode_MessageSubmissionIdentifier;
+    }
+    return _cached_decoder_for_CancelDeferredDeliveryArgument(el);
+}
+
+let _cached_encoder_for_CancelDeferredDeliveryArgument: $.ASN1Encoder<CancelDeferredDeliveryArgument> | null = null;
 
 /**
  * @summary Encodes a(n) CancelDeferredDeliveryArgument into an ASN.1 Element.
@@ -44,7 +53,15 @@ export const _decode_CancelDeferredDeliveryArgument: $.ASN1Decoder<CancelDeferre
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CancelDeferredDeliveryArgument, encoded as an ASN.1 Element.
  */
-export const _encode_CancelDeferredDeliveryArgument: $.ASN1Encoder<CancelDeferredDeliveryArgument> = _encode_MessageSubmissionIdentifier;
+export function _encode_CancelDeferredDeliveryArgument(
+    value: CancelDeferredDeliveryArgument,
+    elGetter: $.ASN1Encoder<CancelDeferredDeliveryArgument>
+): _Element {
+    if (!_cached_encoder_for_CancelDeferredDeliveryArgument) {
+        _cached_encoder_for_CancelDeferredDeliveryArgument = _encode_MessageSubmissionIdentifier;
+    }
+    return _cached_encoder_for_CancelDeferredDeliveryArgument(value, elGetter);
+}
 
 
 /* eslint-enable */

@@ -33,13 +33,22 @@ import {
  */
 export type CmipPduSendingSupport = CmipPduType; // DefinedType
 
+let _cached_decoder_for_CmipPduSendingSupport: $.ASN1Decoder<CmipPduSendingSupport> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CmipPduSendingSupport
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {CmipPduSendingSupport} The decoded data structure.
  */
-export const _decode_CmipPduSendingSupport: $.ASN1Decoder<CmipPduSendingSupport> = _decode_CmipPduType;
+export function _decode_CmipPduSendingSupport(el: _Element): CmipPduSendingSupport {
+    if (!_cached_decoder_for_CmipPduSendingSupport) {
+        _cached_decoder_for_CmipPduSendingSupport = _decode_CmipPduType;
+    }
+    return _cached_decoder_for_CmipPduSendingSupport(el);
+}
+
+let _cached_encoder_for_CmipPduSendingSupport: $.ASN1Encoder<CmipPduSendingSupport> | null = null;
 
 /**
  * @summary Encodes a(n) CmipPduSendingSupport into an ASN.1 Element.
@@ -48,7 +57,15 @@ export const _decode_CmipPduSendingSupport: $.ASN1Decoder<CmipPduSendingSupport>
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CmipPduSendingSupport, encoded as an ASN.1 Element.
  */
-export const _encode_CmipPduSendingSupport: $.ASN1Encoder<CmipPduSendingSupport> = _encode_CmipPduType;
+export function _encode_CmipPduSendingSupport(
+    value: CmipPduSendingSupport,
+    elGetter: $.ASN1Encoder<CmipPduSendingSupport>
+): _Element {
+    if (!_cached_encoder_for_CmipPduSendingSupport) {
+        _cached_encoder_for_CmipPduSendingSupport = _encode_CmipPduType;
+    }
+    return _cached_encoder_for_CmipPduSendingSupport(value, elGetter);
+}
 
 
 /* eslint-enable */

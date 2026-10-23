@@ -22,13 +22,22 @@ import {
  */
 export type MgtCommonName = UnboundedDirectoryString; // DefinedType
 
+let _cached_decoder_for_MgtCommonName: $.ASN1Decoder<MgtCommonName> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MgtCommonName
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {MgtCommonName} The decoded data structure.
  */
-export const _decode_MgtCommonName: $.ASN1Decoder<MgtCommonName> = _decode_UnboundedDirectoryString;
+export function _decode_MgtCommonName(el: _Element): MgtCommonName {
+    if (!_cached_decoder_for_MgtCommonName) {
+        _cached_decoder_for_MgtCommonName = _decode_UnboundedDirectoryString;
+    }
+    return _cached_decoder_for_MgtCommonName(el);
+}
+
+let _cached_encoder_for_MgtCommonName: $.ASN1Encoder<MgtCommonName> | null = null;
 
 /**
  * @summary Encodes a(n) MgtCommonName into an ASN.1 Element.
@@ -37,7 +46,15 @@ export const _decode_MgtCommonName: $.ASN1Decoder<MgtCommonName> = _decode_Unbou
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MgtCommonName, encoded as an ASN.1 Element.
  */
-export const _encode_MgtCommonName: $.ASN1Encoder<MgtCommonName> = _encode_UnboundedDirectoryString;
+export function _encode_MgtCommonName(
+    value: MgtCommonName,
+    elGetter: $.ASN1Encoder<MgtCommonName>
+): _Element {
+    if (!_cached_encoder_for_MgtCommonName) {
+        _cached_encoder_for_MgtCommonName = _encode_UnboundedDirectoryString;
+    }
+    return _cached_encoder_for_MgtCommonName(value, elGetter);
+}
 
 
 /* eslint-enable */

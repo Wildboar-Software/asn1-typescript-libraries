@@ -32,13 +32,26 @@ import {
  */
 export type AD_IF_RELEVANT = AuthorizationData; // DefinedType
 
+
+let _cached_decoder_for_AD_IF_RELEVANT: $.ASN1Decoder<AD_IF_RELEVANT> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AD_IF_RELEVANT
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {AD_IF_RELEVANT} The decoded data structure.
  */
-export const _decode_AD_IF_RELEVANT: $.ASN1Decoder<AD_IF_RELEVANT> = _decode_AuthorizationData;
+export function _decode_AD_IF_RELEVANT(el: _Element): AD_IF_RELEVANT {
+  if (!_cached_decoder_for_AD_IF_RELEVANT) {
+    _cached_decoder_for_AD_IF_RELEVANT = _decode_AuthorizationData;
+  }
+  return _cached_decoder_for_AD_IF_RELEVANT(el);
+}
+
+
+let _cached_encoder_for_AD_IF_RELEVANT: $.ASN1Encoder<AD_IF_RELEVANT> | null = null;
+
 
 /**
  * @summary Encodes a(n) AD_IF_RELEVANT into an ASN.1 Element.
@@ -47,7 +60,15 @@ export const _decode_AD_IF_RELEVANT: $.ASN1Decoder<AD_IF_RELEVANT> = _decode_Aut
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AD_IF_RELEVANT, encoded as an ASN.1 Element.
  */
-export const _encode_AD_IF_RELEVANT: $.ASN1Encoder<AD_IF_RELEVANT> = _encode_AuthorizationData;
+export function _encode_AD_IF_RELEVANT(
+  value: AD_IF_RELEVANT,
+  elGetter: $.ASN1Encoder<AD_IF_RELEVANT>
+): _Element {
+  if (!_cached_encoder_for_AD_IF_RELEVANT) {
+    _cached_encoder_for_AD_IF_RELEVANT = _encode_AuthorizationData;
+  }
+  return _cached_encoder_for_AD_IF_RELEVANT(value, elGetter);
+}
 
 
 /* eslint-enable */

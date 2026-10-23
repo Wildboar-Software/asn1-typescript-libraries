@@ -22,13 +22,22 @@ import {
  */
 export type ExtensionORAddressComponents = PDSParameter; // DefinedType
 
+let _cached_decoder_for_ExtensionORAddressComponents: $.ASN1Decoder<ExtensionORAddressComponents> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ExtensionORAddressComponents
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ExtensionORAddressComponents} The decoded data structure.
  */
-export const _decode_ExtensionORAddressComponents: $.ASN1Decoder<ExtensionORAddressComponents> = _decode_PDSParameter;
+export function _decode_ExtensionORAddressComponents(el: _Element): ExtensionORAddressComponents {
+    if (!_cached_decoder_for_ExtensionORAddressComponents) {
+        _cached_decoder_for_ExtensionORAddressComponents = _decode_PDSParameter;
+    }
+    return _cached_decoder_for_ExtensionORAddressComponents(el);
+}
+
+let _cached_encoder_for_ExtensionORAddressComponents: $.ASN1Encoder<ExtensionORAddressComponents> | null = null;
 
 /**
  * @summary Encodes a(n) ExtensionORAddressComponents into an ASN.1 Element.
@@ -37,7 +46,15 @@ export const _decode_ExtensionORAddressComponents: $.ASN1Decoder<ExtensionORAddr
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ExtensionORAddressComponents, encoded as an ASN.1 Element.
  */
-export const _encode_ExtensionORAddressComponents: $.ASN1Encoder<ExtensionORAddressComponents> = _encode_PDSParameter;
+export function _encode_ExtensionORAddressComponents(
+    value: ExtensionORAddressComponents,
+    elGetter: $.ASN1Encoder<ExtensionORAddressComponents>
+): _Element {
+    if (!_cached_encoder_for_ExtensionORAddressComponents) {
+        _cached_encoder_for_ExtensionORAddressComponents = _encode_PDSParameter;
+    }
+    return _cached_encoder_for_ExtensionORAddressComponents(value, elGetter);
+}
 
 
 /* eslint-enable */

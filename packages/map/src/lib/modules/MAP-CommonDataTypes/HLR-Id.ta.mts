@@ -24,13 +24,21 @@ import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta
 export
 type HLR_Id = IMSI; // DefinedType
 
+let _cached_decoder_for_HLR_Id: $.ASN1Decoder<HLR_Id> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) HLR_Id
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_HLR_Id: $.ASN1Decoder<HLR_Id> = _decode_IMSI;
+export
+function _decode_HLR_Id (el: _Element): HLR_Id {
+    if (!_cached_decoder_for_HLR_Id) { _cached_decoder_for_HLR_Id = _decode_IMSI; }
+    return _cached_decoder_for_HLR_Id(el);
+}
+
+let _cached_encoder_for_HLR_Id: $.ASN1Encoder<HLR_Id> | null = null;
 
 /**
  * @summary Encodes a(n) HLR_Id into an ASN.1 Element.
@@ -39,7 +47,11 @@ export const _decode_HLR_Id: $.ASN1Decoder<HLR_Id> = _decode_IMSI;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The HLR_Id, encoded as an ASN.1 Element.
  */
-export const _encode_HLR_Id: (value: HLR_Id, elGetter: $.ASN1Encoder<any>) => _Element = _encode_IMSI;
+export
+function _encode_HLR_Id (value: HLR_Id, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_HLR_Id) { _cached_encoder_for_HLR_Id = _encode_IMSI; }
+    return _cached_encoder_for_HLR_Id(value, elGetter);
+}
 
 
 /* eslint-enable */

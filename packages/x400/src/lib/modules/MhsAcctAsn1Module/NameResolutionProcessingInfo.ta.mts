@@ -29,13 +29,22 @@ import {
  */
 export type NameResolutionProcessingInfo = DirectoryNameAndOptionalORAddress; // DefinedType
 
+let _cached_decoder_for_NameResolutionProcessingInfo: $.ASN1Decoder<NameResolutionProcessingInfo> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) NameResolutionProcessingInfo
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {NameResolutionProcessingInfo} The decoded data structure.
  */
-export const _decode_NameResolutionProcessingInfo: $.ASN1Decoder<NameResolutionProcessingInfo> = _decode_DirectoryNameAndOptionalORAddress;
+export function _decode_NameResolutionProcessingInfo(el: _Element): NameResolutionProcessingInfo {
+    if (!_cached_decoder_for_NameResolutionProcessingInfo) {
+        _cached_decoder_for_NameResolutionProcessingInfo = _decode_DirectoryNameAndOptionalORAddress;
+    }
+    return _cached_decoder_for_NameResolutionProcessingInfo(el);
+}
+
+let _cached_encoder_for_NameResolutionProcessingInfo: $.ASN1Encoder<NameResolutionProcessingInfo> | null = null;
 
 /**
  * @summary Encodes a(n) NameResolutionProcessingInfo into an ASN.1 Element.
@@ -44,7 +53,15 @@ export const _decode_NameResolutionProcessingInfo: $.ASN1Decoder<NameResolutionP
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NameResolutionProcessingInfo, encoded as an ASN.1 Element.
  */
-export const _encode_NameResolutionProcessingInfo: $.ASN1Encoder<NameResolutionProcessingInfo> = _encode_DirectoryNameAndOptionalORAddress;
+export function _encode_NameResolutionProcessingInfo(
+    value: NameResolutionProcessingInfo,
+    elGetter: $.ASN1Encoder<NameResolutionProcessingInfo>
+): _Element {
+    if (!_cached_encoder_for_NameResolutionProcessingInfo) {
+        _cached_encoder_for_NameResolutionProcessingInfo = _encode_DirectoryNameAndOptionalORAddress;
+    }
+    return _cached_encoder_for_NameResolutionProcessingInfo(value, elGetter);
+}
 
 
 /* eslint-enable */

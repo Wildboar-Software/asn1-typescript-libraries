@@ -34,13 +34,22 @@ import {
  */
 export type OriginatingMTACertificate = Certificates; // DefinedType
 
+let _cached_decoder_for_OriginatingMTACertificate: $.ASN1Decoder<OriginatingMTACertificate> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) OriginatingMTACertificate
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {OriginatingMTACertificate} The decoded data structure.
  */
-export const _decode_OriginatingMTACertificate: $.ASN1Decoder<OriginatingMTACertificate> = _decode_Certificates;
+export function _decode_OriginatingMTACertificate(el: _Element): OriginatingMTACertificate {
+    if (!_cached_decoder_for_OriginatingMTACertificate) {
+        _cached_decoder_for_OriginatingMTACertificate = _decode_Certificates;
+    }
+    return _cached_decoder_for_OriginatingMTACertificate(el);
+}
+
+let _cached_encoder_for_OriginatingMTACertificate: $.ASN1Encoder<OriginatingMTACertificate> | null = null;
 
 /**
  * @summary Encodes a(n) OriginatingMTACertificate into an ASN.1 Element.
@@ -49,7 +58,15 @@ export const _decode_OriginatingMTACertificate: $.ASN1Decoder<OriginatingMTACert
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The OriginatingMTACertificate, encoded as an ASN.1 Element.
  */
-export const _encode_OriginatingMTACertificate: $.ASN1Encoder<OriginatingMTACertificate> = _encode_Certificates;
+export function _encode_OriginatingMTACertificate(
+    value: OriginatingMTACertificate,
+    elGetter: $.ASN1Encoder<OriginatingMTACertificate>
+): _Element {
+    if (!_cached_encoder_for_OriginatingMTACertificate) {
+        _cached_encoder_for_OriginatingMTACertificate = _encode_Certificates;
+    }
+    return _cached_encoder_for_OriginatingMTACertificate(value, elGetter);
+}
 
 
 /* eslint-enable */

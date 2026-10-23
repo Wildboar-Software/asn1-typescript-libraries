@@ -23,13 +23,22 @@ import {
  */
 export type ConsumerUpdateMode = SchedulingParameters; // DefinedType
 
+let _cached_decoder_for_ConsumerUpdateMode: $.ASN1Decoder<ConsumerUpdateMode> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ConsumerUpdateMode
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ConsumerUpdateMode} The decoded data structure.
  */
-export const _decode_ConsumerUpdateMode: $.ASN1Decoder<ConsumerUpdateMode> = _decode_SchedulingParameters;
+export function _decode_ConsumerUpdateMode(el: _Element): ConsumerUpdateMode {
+    if (!_cached_decoder_for_ConsumerUpdateMode) {
+        _cached_decoder_for_ConsumerUpdateMode = _decode_SchedulingParameters;
+    }
+    return _cached_decoder_for_ConsumerUpdateMode(el);
+}
+
+let _cached_encoder_for_ConsumerUpdateMode: $.ASN1Encoder<ConsumerUpdateMode> | null = null;
 
 /**
  * @summary Encodes a(n) ConsumerUpdateMode into an ASN.1 Element.
@@ -38,7 +47,15 @@ export const _decode_ConsumerUpdateMode: $.ASN1Decoder<ConsumerUpdateMode> = _de
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ConsumerUpdateMode, encoded as an ASN.1 Element.
  */
-export const _encode_ConsumerUpdateMode: $.ASN1Encoder<ConsumerUpdateMode> = _encode_SchedulingParameters;
+export function _encode_ConsumerUpdateMode(
+    value: ConsumerUpdateMode,
+    elGetter: $.ASN1Encoder<ConsumerUpdateMode>
+): _Element {
+    if (!_cached_encoder_for_ConsumerUpdateMode) {
+        _cached_encoder_for_ConsumerUpdateMode = _encode_SchedulingParameters;
+    }
+    return _cached_encoder_for_ConsumerUpdateMode(value, elGetter);
+}
 
 
 /* eslint-enable */

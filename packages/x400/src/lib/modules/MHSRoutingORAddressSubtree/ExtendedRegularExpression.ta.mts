@@ -30,13 +30,22 @@ import {
  */
 export type ExtendedRegularExpression = UniversalOrBMPString; // DefinedType
 
+let _cached_decoder_for_ExtendedRegularExpression: $.ASN1Decoder<ExtendedRegularExpression> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ExtendedRegularExpression
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ExtendedRegularExpression} The decoded data structure.
  */
-export const _decode_ExtendedRegularExpression: $.ASN1Decoder<ExtendedRegularExpression> = _decode_UniversalOrBMPString;
+export function _decode_ExtendedRegularExpression(el: _Element): ExtendedRegularExpression {
+    if (!_cached_decoder_for_ExtendedRegularExpression) {
+        _cached_decoder_for_ExtendedRegularExpression = _decode_UniversalOrBMPString;
+    }
+    return _cached_decoder_for_ExtendedRegularExpression(el);
+}
+
+let _cached_encoder_for_ExtendedRegularExpression: $.ASN1Encoder<ExtendedRegularExpression> | null = null;
 
 /**
  * @summary Encodes a(n) ExtendedRegularExpression into an ASN.1 Element.
@@ -45,7 +54,15 @@ export const _decode_ExtendedRegularExpression: $.ASN1Decoder<ExtendedRegularExp
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ExtendedRegularExpression, encoded as an ASN.1 Element.
  */
-export const _encode_ExtendedRegularExpression: $.ASN1Encoder<ExtendedRegularExpression> = _encode_UniversalOrBMPString;
+export function _encode_ExtendedRegularExpression(
+    value: ExtendedRegularExpression,
+    elGetter: $.ASN1Encoder<ExtendedRegularExpression>
+): _Element {
+    if (!_cached_encoder_for_ExtendedRegularExpression) {
+        _cached_encoder_for_ExtendedRegularExpression = _encode_UniversalOrBMPString;
+    }
+    return _cached_encoder_for_ExtendedRegularExpression(value, elGetter);
+}
 
 
 /* eslint-enable */

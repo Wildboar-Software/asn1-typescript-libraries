@@ -29,13 +29,22 @@ import {
  */
 export type StartUpDate = Time; // DefinedType
 
+let _cached_decoder_for_StartUpDate: $.ASN1Decoder<StartUpDate> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) StartUpDate
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {StartUpDate} The decoded data structure.
  */
-export const _decode_StartUpDate: $.ASN1Decoder<StartUpDate> = _decode_Time;
+export function _decode_StartUpDate(el: _Element): StartUpDate {
+    if (!_cached_decoder_for_StartUpDate) {
+        _cached_decoder_for_StartUpDate = _decode_Time;
+    }
+    return _cached_decoder_for_StartUpDate(el);
+}
+
+let _cached_encoder_for_StartUpDate: $.ASN1Encoder<StartUpDate> | null = null;
 
 /**
  * @summary Encodes a(n) StartUpDate into an ASN.1 Element.
@@ -44,7 +53,15 @@ export const _decode_StartUpDate: $.ASN1Decoder<StartUpDate> = _decode_Time;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The StartUpDate, encoded as an ASN.1 Element.
  */
-export const _encode_StartUpDate: $.ASN1Encoder<StartUpDate> = _encode_Time;
+export function _encode_StartUpDate(
+    value: StartUpDate,
+    elGetter: $.ASN1Encoder<StartUpDate>
+): _Element {
+    if (!_cached_encoder_for_StartUpDate) {
+        _cached_encoder_for_StartUpDate = _encode_Time;
+    }
+    return _cached_encoder_for_StartUpDate(value, elGetter);
+}
 
 
 /* eslint-enable */

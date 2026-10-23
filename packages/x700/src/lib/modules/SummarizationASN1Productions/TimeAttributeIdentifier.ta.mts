@@ -35,13 +35,22 @@ import {
  */
 export type TimeAttributeIdentifier = AttributeId; // DefinedType
 
+let _cached_decoder_for_TimeAttributeIdentifier: $.ASN1Decoder<TimeAttributeIdentifier> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TimeAttributeIdentifier
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {TimeAttributeIdentifier} The decoded data structure.
  */
-export const _decode_TimeAttributeIdentifier: $.ASN1Decoder<TimeAttributeIdentifier> = _decode_AttributeId;
+export function _decode_TimeAttributeIdentifier(el: _Element): TimeAttributeIdentifier {
+    if (!_cached_decoder_for_TimeAttributeIdentifier) {
+        _cached_decoder_for_TimeAttributeIdentifier = _decode_AttributeId;
+    }
+    return _cached_decoder_for_TimeAttributeIdentifier(el);
+}
+
+let _cached_encoder_for_TimeAttributeIdentifier: $.ASN1Encoder<TimeAttributeIdentifier> | null = null;
 
 /**
  * @summary Encodes a(n) TimeAttributeIdentifier into an ASN.1 Element.
@@ -50,7 +59,15 @@ export const _decode_TimeAttributeIdentifier: $.ASN1Decoder<TimeAttributeIdentif
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TimeAttributeIdentifier, encoded as an ASN.1 Element.
  */
-export const _encode_TimeAttributeIdentifier: $.ASN1Encoder<TimeAttributeIdentifier> = _encode_AttributeId;
+export function _encode_TimeAttributeIdentifier(
+    value: TimeAttributeIdentifier,
+    elGetter: $.ASN1Encoder<TimeAttributeIdentifier>
+): _Element {
+    if (!_cached_encoder_for_TimeAttributeIdentifier) {
+        _cached_encoder_for_TimeAttributeIdentifier = _encode_AttributeId;
+    }
+    return _cached_encoder_for_TimeAttributeIdentifier(value, elGetter);
+}
 
 
 /* eslint-enable */

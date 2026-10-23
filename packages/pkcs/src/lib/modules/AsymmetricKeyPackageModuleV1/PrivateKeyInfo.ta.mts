@@ -19,13 +19,26 @@ import {
  */
 export type PrivateKeyInfo = OneAsymmetricKey; // DefinedType
 
+
+let _cached_decoder_for_PrivateKeyInfo: $.ASN1Decoder<PrivateKeyInfo> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PrivateKeyInfo
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {PrivateKeyInfo} The decoded data structure.
  */
-export const _decode_PrivateKeyInfo: $.ASN1Decoder<PrivateKeyInfo> = _decode_OneAsymmetricKey;
+export function _decode_PrivateKeyInfo(el: _Element): PrivateKeyInfo {
+    if (!_cached_decoder_for_PrivateKeyInfo) {
+        _cached_decoder_for_PrivateKeyInfo = _decode_OneAsymmetricKey;
+    }
+    return _cached_decoder_for_PrivateKeyInfo(el);
+}
+
+
+let _cached_encoder_for_PrivateKeyInfo: $.ASN1Encoder<PrivateKeyInfo> | null = null;
+
 
 /**
  * @summary Encodes a(n) PrivateKeyInfo into an ASN.1 Element.
@@ -34,7 +47,15 @@ export const _decode_PrivateKeyInfo: $.ASN1Decoder<PrivateKeyInfo> = _decode_One
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PrivateKeyInfo, encoded as an ASN.1 Element.
  */
-export const _encode_PrivateKeyInfo: $.ASN1Encoder<PrivateKeyInfo> = _encode_OneAsymmetricKey;
+export function _encode_PrivateKeyInfo(
+    value: PrivateKeyInfo,
+    elGetter: $.ASN1Encoder<PrivateKeyInfo>
+): _Element {
+    if (!_cached_encoder_for_PrivateKeyInfo) {
+        _cached_encoder_for_PrivateKeyInfo = _encode_OneAsymmetricKey;
+    }
+    return _cached_encoder_for_PrivateKeyInfo(value, elGetter);
+}
 
 
 /* eslint-enable */

@@ -23,13 +23,21 @@ import { MN, _decode_MN, _encode_MN } from "../MMSInformationObjects/MN.ta.mjs";
 export
 type MON = MN; // DefinedType
 
+let _cached_decoder_for_MON: $.ASN1Decoder<MON> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MON
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_MON: $.ASN1Decoder<MON> = _decode_MN;
+export
+function _decode_MON (el: _Element): MON {
+    if (!_cached_decoder_for_MON) { _cached_decoder_for_MON = _decode_MN; }
+    return _cached_decoder_for_MON(el);
+}
+
+let _cached_encoder_for_MON: $.ASN1Encoder<MON> | null = null;
 
 /**
  * @summary Encodes a(n) MON into an ASN.1 Element.
@@ -38,7 +46,11 @@ export const _decode_MON: $.ASN1Decoder<MON> = _decode_MN;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MON, encoded as an ASN.1 Element.
  */
-export const _encode_MON: (value: MON, elGetter: $.ASN1Encoder<any>) => _Element = _encode_MN;
+export
+function _encode_MON (value: MON, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_MON) { _cached_encoder_for_MON = _encode_MN; }
+    return _cached_encoder_for_MON(value, elGetter);
+}
 
 
 /* eslint-enable */

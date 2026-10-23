@@ -29,13 +29,22 @@ import {
  */
 export type OriginatorField = ORDescriptor; // DefinedType
 
+let _cached_decoder_for_OriginatorField: $.ASN1Decoder<OriginatorField> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) OriginatorField
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {OriginatorField} The decoded data structure.
  */
-export const _decode_OriginatorField: $.ASN1Decoder<OriginatorField> = _decode_ORDescriptor;
+export function _decode_OriginatorField(el: _Element): OriginatorField {
+    if (!_cached_decoder_for_OriginatorField) {
+        _cached_decoder_for_OriginatorField = _decode_ORDescriptor;
+    }
+    return _cached_decoder_for_OriginatorField(el);
+}
+
+let _cached_encoder_for_OriginatorField: $.ASN1Encoder<OriginatorField> | null = null;
 
 /**
  * @summary Encodes a(n) OriginatorField into an ASN.1 Element.
@@ -44,7 +53,15 @@ export const _decode_OriginatorField: $.ASN1Decoder<OriginatorField> = _decode_O
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The OriginatorField, encoded as an ASN.1 Element.
  */
-export const _encode_OriginatorField: $.ASN1Encoder<OriginatorField> = _encode_ORDescriptor;
+export function _encode_OriginatorField(
+    value: OriginatorField,
+    elGetter: $.ASN1Encoder<OriginatorField>
+): _Element {
+    if (!_cached_encoder_for_OriginatorField) {
+        _cached_encoder_for_OriginatorField = _encode_ORDescriptor;
+    }
+    return _cached_encoder_for_OriginatorField(value, elGetter);
+}
 
 
 /* eslint-enable */

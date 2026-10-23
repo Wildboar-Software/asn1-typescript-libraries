@@ -27,13 +27,21 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
 export
 type ECCAlgorithm = AlgorithmIdentifier; // DefinedType
 
+let _cached_decoder_for_ECCAlgorithm: $.ASN1Decoder<ECCAlgorithm> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ECCAlgorithm
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ECCAlgorithm} The decoded data structure.
  */
-export const _decode_ECCAlgorithm: $.ASN1Decoder<ECCAlgorithm> = _decode_AlgorithmIdentifier;
+export
+function _decode_ECCAlgorithm (el: _Element): ECCAlgorithm {
+    if (!_cached_decoder_for_ECCAlgorithm) { _cached_decoder_for_ECCAlgorithm = _decode_AlgorithmIdentifier; }
+    return _cached_decoder_for_ECCAlgorithm(el);
+}
+
+let _cached_encoder_for_ECCAlgorithm: $.ASN1Encoder<ECCAlgorithm> | null = null;
 
 /**
  * @summary Encodes a(n) ECCAlgorithm into an ASN.1 Element.
@@ -42,7 +50,11 @@ export const _decode_ECCAlgorithm: $.ASN1Decoder<ECCAlgorithm> = _decode_Algorit
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ECCAlgorithm, encoded as an ASN.1 Element.
  */
-export const _encode_ECCAlgorithm: $.ASN1Encoder<ECCAlgorithm> = _encode_AlgorithmIdentifier;
+export
+function _encode_ECCAlgorithm (value: ECCAlgorithm, elGetter: $.ASN1Encoder<ECCAlgorithm>): _Element {
+    if (!_cached_encoder_for_ECCAlgorithm) { _cached_encoder_for_ECCAlgorithm = _encode_AlgorithmIdentifier; }
+    return _cached_encoder_for_ECCAlgorithm(value, elGetter);
+}
 
 
 /* eslint-enable */

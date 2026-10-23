@@ -21,13 +21,22 @@ import {
  */
 export type UniversalPDSParameter = UniversalOrBMPString; // DefinedType
 
+let _cached_decoder_for_UniversalPDSParameter: $.ASN1Decoder<UniversalPDSParameter> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) UniversalPDSParameter
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {UniversalPDSParameter} The decoded data structure.
  */
-export const _decode_UniversalPDSParameter: $.ASN1Decoder<UniversalPDSParameter> = _decode_UniversalOrBMPString;
+export function _decode_UniversalPDSParameter(el: _Element): UniversalPDSParameter {
+    if (!_cached_decoder_for_UniversalPDSParameter) {
+        _cached_decoder_for_UniversalPDSParameter = _decode_UniversalOrBMPString;
+    }
+    return _cached_decoder_for_UniversalPDSParameter(el);
+}
+
+let _cached_encoder_for_UniversalPDSParameter: $.ASN1Encoder<UniversalPDSParameter> | null = null;
 
 /**
  * @summary Encodes a(n) UniversalPDSParameter into an ASN.1 Element.
@@ -36,7 +45,15 @@ export const _decode_UniversalPDSParameter: $.ASN1Decoder<UniversalPDSParameter>
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UniversalPDSParameter, encoded as an ASN.1 Element.
  */
-export const _encode_UniversalPDSParameter: $.ASN1Encoder<UniversalPDSParameter> = _encode_UniversalOrBMPString;
+export function _encode_UniversalPDSParameter(
+    value: UniversalPDSParameter,
+    elGetter: $.ASN1Encoder<UniversalPDSParameter>
+): _Element {
+    if (!_cached_encoder_for_UniversalPDSParameter) {
+        _cached_encoder_for_UniversalPDSParameter = _encode_UniversalOrBMPString;
+    }
+    return _cached_encoder_for_UniversalPDSParameter(value, elGetter);
+}
 
 
 /* eslint-enable */

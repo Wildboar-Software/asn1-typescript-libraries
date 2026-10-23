@@ -20,13 +20,21 @@ import { FCIBillingChargingCharacteristics, _decode_FCIBillingChargingCharacteri
 export
 type FurnishChargingInformationArg = FCIBillingChargingCharacteristics; // DefinedType
 
+let _cached_decoder_for_FurnishChargingInformationArg: $.ASN1Decoder<FurnishChargingInformationArg> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) FurnishChargingInformationArg
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_FurnishChargingInformationArg: $.ASN1Decoder<FurnishChargingInformationArg> = _decode_FCIBillingChargingCharacteristics;
+export
+function _decode_FurnishChargingInformationArg (el: _Element): FurnishChargingInformationArg {
+    if (!_cached_decoder_for_FurnishChargingInformationArg) { _cached_decoder_for_FurnishChargingInformationArg = _decode_FCIBillingChargingCharacteristics; }
+    return _cached_decoder_for_FurnishChargingInformationArg(el);
+}
+
+let _cached_encoder_for_FurnishChargingInformationArg: $.ASN1Encoder<FurnishChargingInformationArg> | null = null;
 
 /**
  * @summary Encodes a(n) FurnishChargingInformationArg into an ASN.1 Element.
@@ -35,7 +43,11 @@ export const _decode_FurnishChargingInformationArg: $.ASN1Decoder<FurnishChargin
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The FurnishChargingInformationArg, encoded as an ASN.1 Element.
  */
-export const _encode_FurnishChargingInformationArg: (value: FurnishChargingInformationArg, elGetter: $.ASN1Encoder<any>) => _Element = _encode_FCIBillingChargingCharacteristics;
+export
+function _encode_FurnishChargingInformationArg (value: FurnishChargingInformationArg, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_FurnishChargingInformationArg) { _cached_encoder_for_FurnishChargingInformationArg = _encode_FCIBillingChargingCharacteristics; }
+    return _cached_encoder_for_FurnishChargingInformationArg(value, elGetter);
+}
 
 
 /* eslint-enable */

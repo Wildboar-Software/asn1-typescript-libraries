@@ -32,13 +32,22 @@ import {
  */
 export type InternalTrace = InternalTraceInformation; // DefinedType
 
+let _cached_decoder_for_InternalTrace: $.ASN1Decoder<InternalTrace> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) InternalTrace
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {InternalTrace} The decoded data structure.
  */
-export const _decode_InternalTrace: $.ASN1Decoder<InternalTrace> = _decode_InternalTraceInformation;
+export function _decode_InternalTrace(el: _Element): InternalTrace {
+    if (!_cached_decoder_for_InternalTrace) {
+        _cached_decoder_for_InternalTrace = _decode_InternalTraceInformation;
+    }
+    return _cached_decoder_for_InternalTrace(el);
+}
+
+let _cached_encoder_for_InternalTrace: $.ASN1Encoder<InternalTrace> | null = null;
 
 /**
  * @summary Encodes a(n) InternalTrace into an ASN.1 Element.
@@ -47,7 +56,15 @@ export const _decode_InternalTrace: $.ASN1Decoder<InternalTrace> = _decode_Inter
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The InternalTrace, encoded as an ASN.1 Element.
  */
-export const _encode_InternalTrace: $.ASN1Encoder<InternalTrace> = _encode_InternalTraceInformation;
+export function _encode_InternalTrace(
+    value: InternalTrace,
+    elGetter: $.ASN1Encoder<InternalTrace>
+): _Element {
+    if (!_cached_encoder_for_InternalTrace) {
+        _cached_encoder_for_InternalTrace = _encode_InternalTraceInformation;
+    }
+    return _cached_encoder_for_InternalTrace(value, elGetter);
+}
 
 
 /* eslint-enable */

@@ -30,13 +30,22 @@ import {
  */
 export type OtherRecipientName = ORAddressAndOptionalDirectoryName; // DefinedType
 
+let _cached_decoder_for_OtherRecipientName: $.ASN1Decoder<OtherRecipientName> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) OtherRecipientName
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {OtherRecipientName} The decoded data structure.
  */
-export const _decode_OtherRecipientName: $.ASN1Decoder<OtherRecipientName> = _decode_ORAddressAndOptionalDirectoryName;
+export function _decode_OtherRecipientName(el: _Element): OtherRecipientName {
+    if (!_cached_decoder_for_OtherRecipientName) {
+        _cached_decoder_for_OtherRecipientName = _decode_ORAddressAndOptionalDirectoryName;
+    }
+    return _cached_decoder_for_OtherRecipientName(el);
+}
+
+let _cached_encoder_for_OtherRecipientName: $.ASN1Encoder<OtherRecipientName> | null = null;
 
 /**
  * @summary Encodes a(n) OtherRecipientName into an ASN.1 Element.
@@ -45,7 +54,15 @@ export const _decode_OtherRecipientName: $.ASN1Decoder<OtherRecipientName> = _de
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The OtherRecipientName, encoded as an ASN.1 Element.
  */
-export const _encode_OtherRecipientName: $.ASN1Encoder<OtherRecipientName> = _encode_ORAddressAndOptionalDirectoryName;
+export function _encode_OtherRecipientName(
+    value: OtherRecipientName,
+    elGetter: $.ASN1Encoder<OtherRecipientName>
+): _Element {
+    if (!_cached_encoder_for_OtherRecipientName) {
+        _cached_encoder_for_OtherRecipientName = _encode_ORAddressAndOptionalDirectoryName;
+    }
+    return _cached_encoder_for_OtherRecipientName(value, elGetter);
+}
 
 
 /* eslint-enable */

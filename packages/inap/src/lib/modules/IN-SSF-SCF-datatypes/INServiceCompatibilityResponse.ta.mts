@@ -21,13 +21,21 @@ import { Entry, _decode_Entry, _encode_Entry } from "../IN-SSF-SCF-datatypes/Ent
 export
 type INServiceCompatibilityResponse = Entry; // DefinedType
 
+let _cached_decoder_for_INServiceCompatibilityResponse: $.ASN1Decoder<INServiceCompatibilityResponse> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) INServiceCompatibilityResponse
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_INServiceCompatibilityResponse: $.ASN1Decoder<INServiceCompatibilityResponse> = _decode_Entry;
+export
+function _decode_INServiceCompatibilityResponse (el: _Element): INServiceCompatibilityResponse {
+    if (!_cached_decoder_for_INServiceCompatibilityResponse) { _cached_decoder_for_INServiceCompatibilityResponse = _decode_Entry; }
+    return _cached_decoder_for_INServiceCompatibilityResponse(el);
+}
+
+let _cached_encoder_for_INServiceCompatibilityResponse: $.ASN1Encoder<INServiceCompatibilityResponse> | null = null;
 
 /**
  * @summary Encodes a(n) INServiceCompatibilityResponse into an ASN.1 Element.
@@ -36,7 +44,11 @@ export const _decode_INServiceCompatibilityResponse: $.ASN1Decoder<INServiceComp
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The INServiceCompatibilityResponse, encoded as an ASN.1 Element.
  */
-export const _encode_INServiceCompatibilityResponse: (value: INServiceCompatibilityResponse, elGetter: $.ASN1Encoder<any>) => _Element = _encode_Entry;
+export
+function _encode_INServiceCompatibilityResponse (value: INServiceCompatibilityResponse, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_INServiceCompatibilityResponse) { _cached_encoder_for_INServiceCompatibilityResponse = _encode_Entry; }
+    return _cached_encoder_for_INServiceCompatibilityResponse(value, elGetter);
+}
 
 
 /* eslint-enable */

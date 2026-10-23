@@ -45,6 +45,8 @@ function _decode_AuthorityIdentifier (el: _Element): AuthorityIdentifier {
     return _decoded;
 }
 
+let _cached_encoder_for_AuthorityIdentifier: $.ASN1Encoder<AuthorityIdentifier> | null = null;
+
 /**
  * @summary Encodes a(n) AuthorityIdentifier into an ASN.1 Element.
  * @function
@@ -52,7 +54,11 @@ function _decode_AuthorityIdentifier (el: _Element): AuthorityIdentifier {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AuthorityIdentifier, encoded as an ASN.1 Element.
  */
-export const _encode_AuthorityIdentifier: (value: AuthorityIdentifier, elGetter: $.ASN1Encoder<any>) => _Element = _encode_IdentifierString;
+export
+function _encode_AuthorityIdentifier (value: AuthorityIdentifier, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_AuthorityIdentifier) { _cached_encoder_for_AuthorityIdentifier = _encode_IdentifierString; }
+    return _cached_encoder_for_AuthorityIdentifier(value, elGetter);
+}
 
 
 /* eslint-enable */

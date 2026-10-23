@@ -31,13 +31,22 @@ import {
  */
 export type OriginatorCertificate = Certificates; // DefinedType
 
+let _cached_decoder_for_OriginatorCertificate: $.ASN1Decoder<OriginatorCertificate> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) OriginatorCertificate
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {OriginatorCertificate} The decoded data structure.
  */
-export const _decode_OriginatorCertificate: $.ASN1Decoder<OriginatorCertificate> = _decode_Certificates;
+export function _decode_OriginatorCertificate(el: _Element): OriginatorCertificate {
+    if (!_cached_decoder_for_OriginatorCertificate) {
+        _cached_decoder_for_OriginatorCertificate = _decode_Certificates;
+    }
+    return _cached_decoder_for_OriginatorCertificate(el);
+}
+
+let _cached_encoder_for_OriginatorCertificate: $.ASN1Encoder<OriginatorCertificate> | null = null;
 
 /**
  * @summary Encodes a(n) OriginatorCertificate into an ASN.1 Element.
@@ -46,7 +55,15 @@ export const _decode_OriginatorCertificate: $.ASN1Decoder<OriginatorCertificate>
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The OriginatorCertificate, encoded as an ASN.1 Element.
  */
-export const _encode_OriginatorCertificate: $.ASN1Encoder<OriginatorCertificate> = _encode_Certificates;
+export function _encode_OriginatorCertificate(
+    value: OriginatorCertificate,
+    elGetter: $.ASN1Encoder<OriginatorCertificate>
+): _Element {
+    if (!_cached_encoder_for_OriginatorCertificate) {
+        _cached_encoder_for_OriginatorCertificate = _encode_Certificates;
+    }
+    return _cached_encoder_for_OriginatorCertificate(value, elGetter);
+}
 
 
 /* eslint-enable */

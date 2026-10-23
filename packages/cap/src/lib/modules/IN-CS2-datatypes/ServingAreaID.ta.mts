@@ -27,13 +27,21 @@ import { LocationNumber, _decode_LocationNumber, _encode_LocationNumber } from "
 export
 type ServingAreaID = LocationNumber; // DefinedType
 
+let _cached_decoder_for_ServingAreaID: $.ASN1Decoder<ServingAreaID> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ServingAreaID
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_ServingAreaID: $.ASN1Decoder<ServingAreaID> = _decode_LocationNumber;
+export
+function _decode_ServingAreaID (el: _Element): ServingAreaID {
+    if (!_cached_decoder_for_ServingAreaID) { _cached_decoder_for_ServingAreaID = _decode_LocationNumber; }
+    return _cached_decoder_for_ServingAreaID(el);
+}
+
+let _cached_encoder_for_ServingAreaID: $.ASN1Encoder<ServingAreaID> | null = null;
 
 /**
  * @summary Encodes a(n) ServingAreaID into an ASN.1 Element.
@@ -42,7 +50,11 @@ export const _decode_ServingAreaID: $.ASN1Decoder<ServingAreaID> = _decode_Locat
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ServingAreaID, encoded as an ASN.1 Element.
  */
-export const _encode_ServingAreaID: (value: ServingAreaID, elGetter: $.ASN1Encoder<any>) => _Element = _encode_LocationNumber;
+export
+function _encode_ServingAreaID (value: ServingAreaID, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_ServingAreaID) { _cached_encoder_for_ServingAreaID = _encode_LocationNumber; }
+    return _cached_encoder_for_ServingAreaID(value, elGetter);
+}
 
 
 /* eslint-enable */

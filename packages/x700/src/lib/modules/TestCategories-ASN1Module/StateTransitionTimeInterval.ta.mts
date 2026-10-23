@@ -35,13 +35,22 @@ import {
  */
 export type StateTransitionTimeInterval = Timespec; // DefinedType
 
+let _cached_decoder_for_StateTransitionTimeInterval: $.ASN1Decoder<StateTransitionTimeInterval> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) StateTransitionTimeInterval
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {StateTransitionTimeInterval} The decoded data structure.
  */
-export const _decode_StateTransitionTimeInterval: $.ASN1Decoder<StateTransitionTimeInterval> = _decode_Timespec;
+export function _decode_StateTransitionTimeInterval(el: _Element): StateTransitionTimeInterval {
+    if (!_cached_decoder_for_StateTransitionTimeInterval) {
+        _cached_decoder_for_StateTransitionTimeInterval = _decode_Timespec;
+    }
+    return _cached_decoder_for_StateTransitionTimeInterval(el);
+}
+
+let _cached_encoder_for_StateTransitionTimeInterval: $.ASN1Encoder<StateTransitionTimeInterval> | null = null;
 
 /**
  * @summary Encodes a(n) StateTransitionTimeInterval into an ASN.1 Element.
@@ -50,7 +59,15 @@ export const _decode_StateTransitionTimeInterval: $.ASN1Decoder<StateTransitionT
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The StateTransitionTimeInterval, encoded as an ASN.1 Element.
  */
-export const _encode_StateTransitionTimeInterval: $.ASN1Encoder<StateTransitionTimeInterval> = _encode_Timespec;
+export function _encode_StateTransitionTimeInterval(
+    value: StateTransitionTimeInterval,
+    elGetter: $.ASN1Encoder<StateTransitionTimeInterval>
+): _Element {
+    if (!_cached_encoder_for_StateTransitionTimeInterval) {
+        _cached_encoder_for_StateTransitionTimeInterval = _encode_Timespec;
+    }
+    return _cached_encoder_for_StateTransitionTimeInterval(value, elGetter);
+}
 
 
 /* eslint-enable */

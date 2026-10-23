@@ -23,13 +23,22 @@ import {
  */
 export type SuperiorToSubordinateModification = SuperiorToSubordinate; // DefinedType
 
+let _cached_decoder_for_SuperiorToSubordinateModification: $.ASN1Decoder<SuperiorToSubordinateModification> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SuperiorToSubordinateModification
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {SuperiorToSubordinateModification} The decoded data structure.
  */
-export const _decode_SuperiorToSubordinateModification: $.ASN1Decoder<SuperiorToSubordinateModification> = _decode_SuperiorToSubordinate;
+export function _decode_SuperiorToSubordinateModification(el: _Element): SuperiorToSubordinateModification {
+    if (!_cached_decoder_for_SuperiorToSubordinateModification) {
+        _cached_decoder_for_SuperiorToSubordinateModification = _decode_SuperiorToSubordinate;
+    }
+    return _cached_decoder_for_SuperiorToSubordinateModification(el);
+}
+
+let _cached_encoder_for_SuperiorToSubordinateModification: $.ASN1Encoder<SuperiorToSubordinateModification> | null = null;
 
 /**
  * @summary Encodes a(n) SuperiorToSubordinateModification into an ASN.1 Element.
@@ -38,7 +47,18 @@ export const _decode_SuperiorToSubordinateModification: $.ASN1Decoder<SuperiorTo
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SuperiorToSubordinateModification, encoded as an ASN.1 Element.
  */
-export const _encode_SuperiorToSubordinateModification: $.ASN1Encoder<SuperiorToSubordinateModification> = _encode_SuperiorToSubordinate;
+export function _encode_SuperiorToSubordinateModification(
+    value: SuperiorToSubordinateModification,
+    elGetter: $.ASN1Encoder<SuperiorToSubordinateModification>
+): _Element {
+    if (!_cached_encoder_for_SuperiorToSubordinateModification) {
+        _cached_encoder_for_SuperiorToSubordinateModification = _encode_SuperiorToSubordinate;
+    }
+    return _cached_encoder_for_SuperiorToSubordinateModification(
+        value,
+        elGetter
+    );
+}
 
 
 /* eslint-enable */

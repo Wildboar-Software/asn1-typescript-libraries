@@ -54,6 +54,8 @@ function _decode_UpdateMode (el: _Element): UpdateMode {
     return _decoded;
 }
 
+let _cached_encoder_for_UpdateMode: $.ASN1Encoder<UpdateMode> | null = null;
+
 /**
  * @summary Encodes a(n) UpdateMode into an ASN.1 Element.
  * @function
@@ -61,7 +63,11 @@ function _decode_UpdateMode (el: _Element): UpdateMode {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UpdateMode, encoded as an ASN.1 Element.
  */
-export const _encode_UpdateMode: (value: UpdateMode, elGetter: $.ASN1Encoder<any>) => _Element = _encode_RequestedUpdateMode;
+export
+function _encode_UpdateMode (value: UpdateMode, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_UpdateMode) { _cached_encoder_for_UpdateMode = _encode_RequestedUpdateMode; }
+    return _cached_encoder_for_UpdateMode(value, elGetter);
+}
 
 
 /* eslint-enable */

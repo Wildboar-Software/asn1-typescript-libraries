@@ -38,13 +38,26 @@ import {
  */
 export type SignedReceiptNotice = SignedReceiptNoticeType; // DefinedType
 
+
+let _cached_decoder_for_SignedReceiptNotice: $.ASN1Decoder<SignedReceiptNotice> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SignedReceiptNotice
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {SignedReceiptNotice} The decoded data structure.
  */
-export const _decode_SignedReceiptNotice: $.ASN1Decoder<SignedReceiptNotice> = _decode_SignedReceiptNoticeType;
+export function _decode_SignedReceiptNotice(el: _Element): SignedReceiptNotice {
+  if (!_cached_decoder_for_SignedReceiptNotice) {
+    _cached_decoder_for_SignedReceiptNotice = _decode_SignedReceiptNoticeType;
+  }
+  return _cached_decoder_for_SignedReceiptNotice(el);
+}
+
+
+let _cached_encoder_for_SignedReceiptNotice: $.ASN1Encoder<SignedReceiptNotice> | null = null;
+
 
 /**
  * @summary Encodes a(n) SignedReceiptNotice into an ASN.1 Element.
@@ -53,7 +66,15 @@ export const _decode_SignedReceiptNotice: $.ASN1Decoder<SignedReceiptNotice> = _
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SignedReceiptNotice, encoded as an ASN.1 Element.
  */
-export const _encode_SignedReceiptNotice: $.ASN1Encoder<SignedReceiptNotice> = _encode_SignedReceiptNoticeType;
+export function _encode_SignedReceiptNotice(
+  value: SignedReceiptNotice,
+  elGetter: $.ASN1Encoder<SignedReceiptNotice>
+): _Element {
+  if (!_cached_encoder_for_SignedReceiptNotice) {
+    _cached_encoder_for_SignedReceiptNotice = _encode_SignedReceiptNoticeType;
+  }
+  return _cached_encoder_for_SignedReceiptNotice(value, elGetter);
+}
 
 
 /* eslint-enable */

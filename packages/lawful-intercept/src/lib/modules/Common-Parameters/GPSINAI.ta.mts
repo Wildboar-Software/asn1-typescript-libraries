@@ -33,13 +33,21 @@ import { NAI, _decode_NAI, _encode_NAI } from "../Common-Parameters/NAI.ta.mjs";
 export
 type GPSINAI = NAI; // DefinedType
 
+let _cached_decoder_for_GPSINAI: $.ASN1Decoder<GPSINAI> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) GPSINAI
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_GPSINAI: $.ASN1Decoder<GPSINAI> = _decode_NAI;
+export
+function _decode_GPSINAI (el: _Element): GPSINAI {
+    if (!_cached_decoder_for_GPSINAI) { _cached_decoder_for_GPSINAI = _decode_NAI; }
+    return _cached_decoder_for_GPSINAI(el);
+}
+
+let _cached_encoder_for_GPSINAI: $.ASN1Encoder<GPSINAI> | null = null;
 
 /**
  * @summary Encodes a(n) GPSINAI into an ASN.1 Element.
@@ -48,7 +56,11 @@ export const _decode_GPSINAI: $.ASN1Decoder<GPSINAI> = _decode_NAI;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The GPSINAI, encoded as an ASN.1 Element.
  */
-export const _encode_GPSINAI: (value: GPSINAI, elGetter: $.ASN1Encoder<any>) => _Element = _encode_NAI;
+export
+function _encode_GPSINAI (value: GPSINAI, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_GPSINAI) { _cached_encoder_for_GPSINAI = _encode_NAI; }
+    return _cached_encoder_for_GPSINAI(value, elGetter);
+}
 
 
 /* eslint-enable */

@@ -31,13 +31,22 @@ import {
  */
 export type BindingOperations = EventTypeId; // DefinedType
 
+let _cached_decoder_for_BindingOperations: $.ASN1Decoder<BindingOperations> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BindingOperations
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {BindingOperations} The decoded data structure.
  */
-export const _decode_BindingOperations: $.ASN1Decoder<BindingOperations> = _decode_EventTypeId;
+export function _decode_BindingOperations(el: _Element): BindingOperations {
+    if (!_cached_decoder_for_BindingOperations) {
+        _cached_decoder_for_BindingOperations = _decode_EventTypeId;
+    }
+    return _cached_decoder_for_BindingOperations(el);
+}
+
+let _cached_encoder_for_BindingOperations: $.ASN1Encoder<BindingOperations> | null = null;
 
 /**
  * @summary Encodes a(n) BindingOperations into an ASN.1 Element.
@@ -46,7 +55,15 @@ export const _decode_BindingOperations: $.ASN1Decoder<BindingOperations> = _deco
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The BindingOperations, encoded as an ASN.1 Element.
  */
-export const _encode_BindingOperations: $.ASN1Encoder<BindingOperations> = _encode_EventTypeId;
+export function _encode_BindingOperations(
+    value: BindingOperations,
+    elGetter: $.ASN1Encoder<BindingOperations>
+): _Element {
+    if (!_cached_encoder_for_BindingOperations) {
+        _cached_encoder_for_BindingOperations = _encode_EventTypeId;
+    }
+    return _cached_encoder_for_BindingOperations(value, elGetter);
+}
 
 
 /* eslint-enable */

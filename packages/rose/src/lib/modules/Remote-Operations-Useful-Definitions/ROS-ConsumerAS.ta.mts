@@ -37,13 +37,26 @@ import {
  */
 export type ROS_ConsumerAS = ROS; // DefinedType
 
+
+let _cached_decoder_for_ROS_ConsumerAS: $.ASN1Decoder<ROS_ConsumerAS> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ROS_ConsumerAS
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ROS_ConsumerAS} The decoded data structure.
  */
-export const _decode_ROS_ConsumerAS: $.ASN1Decoder<ROS_ConsumerAS> = _decode_ROS;
+export function _decode_ROS_ConsumerAS(el: _Element): ROS_ConsumerAS {
+  if (!_cached_decoder_for_ROS_ConsumerAS) {
+    _cached_decoder_for_ROS_ConsumerAS = _decode_ROS;
+  }
+  return _cached_decoder_for_ROS_ConsumerAS(el);
+}
+
+
+let _cached_encoder_for_ROS_ConsumerAS: $.ASN1Encoder<ROS_ConsumerAS> | null = null;
+
 
 /**
  * @summary Encodes a(n) ROS_ConsumerAS into an ASN.1 Element.
@@ -52,7 +65,15 @@ export const _decode_ROS_ConsumerAS: $.ASN1Decoder<ROS_ConsumerAS> = _decode_ROS
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ROS_ConsumerAS, encoded as an ASN.1 Element.
  */
-export const _encode_ROS_ConsumerAS: $.ASN1Encoder<ROS_ConsumerAS> = _encode_ROS;
+export function _encode_ROS_ConsumerAS(
+  value: ROS_ConsumerAS,
+  elGetter: $.ASN1Encoder<ROS_ConsumerAS>
+): _Element {
+  if (!_cached_encoder_for_ROS_ConsumerAS) {
+    _cached_encoder_for_ROS_ConsumerAS = _encode_ROS;
+  }
+  return _cached_encoder_for_ROS_ConsumerAS(value, elGetter);
+}
 
 
 /* eslint-enable */

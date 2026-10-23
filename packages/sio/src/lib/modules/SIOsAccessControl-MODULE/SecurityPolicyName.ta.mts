@@ -24,13 +24,26 @@ import {
  */
 export type SecurityPolicyName = DirectoryString; // DefinedType
 
+
+let _cached_decoder_for_SecurityPolicyName: $.ASN1Decoder<SecurityPolicyName> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SecurityPolicyName
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {SecurityPolicyName} The decoded data structure.
  */
-export const _decode_SecurityPolicyName: $.ASN1Decoder<SecurityPolicyName> = _decode_DirectoryString;
+export function _decode_SecurityPolicyName(el: _Element): SecurityPolicyName {
+    if (!_cached_decoder_for_SecurityPolicyName) {
+        _cached_decoder_for_SecurityPolicyName = _decode_DirectoryString;
+    }
+    return _cached_decoder_for_SecurityPolicyName(el);
+}
+
+
+let _cached_encoder_for_SecurityPolicyName: $.ASN1Encoder<SecurityPolicyName> | null = null;
+
 
 /**
  * @summary Encodes a(n) SecurityPolicyName into an ASN.1 Element.
@@ -39,7 +52,15 @@ export const _decode_SecurityPolicyName: $.ASN1Decoder<SecurityPolicyName> = _de
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SecurityPolicyName, encoded as an ASN.1 Element.
  */
-export const _encode_SecurityPolicyName: $.ASN1Encoder<SecurityPolicyName> = _encode_DirectoryString;
+export function _encode_SecurityPolicyName(
+    value: SecurityPolicyName,
+    elGetter: $.ASN1Encoder<SecurityPolicyName>
+): _Element {
+    if (!_cached_encoder_for_SecurityPolicyName) {
+        _cached_encoder_for_SecurityPolicyName = _encode_DirectoryString;
+    }
+    return _cached_encoder_for_SecurityPolicyName(value, elGetter);
+}
 
 
 /* eslint-enable */

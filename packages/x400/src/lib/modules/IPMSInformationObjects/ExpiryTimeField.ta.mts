@@ -29,13 +29,22 @@ import {
  */
 export type ExpiryTimeField = Time; // DefinedType
 
+let _cached_decoder_for_ExpiryTimeField: $.ASN1Decoder<ExpiryTimeField> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ExpiryTimeField
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ExpiryTimeField} The decoded data structure.
  */
-export const _decode_ExpiryTimeField: $.ASN1Decoder<ExpiryTimeField> = _decode_Time;
+export function _decode_ExpiryTimeField(el: _Element): ExpiryTimeField {
+    if (!_cached_decoder_for_ExpiryTimeField) {
+        _cached_decoder_for_ExpiryTimeField = _decode_Time;
+    }
+    return _cached_decoder_for_ExpiryTimeField(el);
+}
+
+let _cached_encoder_for_ExpiryTimeField: $.ASN1Encoder<ExpiryTimeField> | null = null;
 
 /**
  * @summary Encodes a(n) ExpiryTimeField into an ASN.1 Element.
@@ -44,7 +53,15 @@ export const _decode_ExpiryTimeField: $.ASN1Decoder<ExpiryTimeField> = _decode_T
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ExpiryTimeField, encoded as an ASN.1 Element.
  */
-export const _encode_ExpiryTimeField: $.ASN1Encoder<ExpiryTimeField> = _encode_Time;
+export function _encode_ExpiryTimeField(
+    value: ExpiryTimeField,
+    elGetter: $.ASN1Encoder<ExpiryTimeField>
+): _Element {
+    if (!_cached_encoder_for_ExpiryTimeField) {
+        _cached_encoder_for_ExpiryTimeField = _encode_Time;
+    }
+    return _cached_encoder_for_ExpiryTimeField(value, elGetter);
+}
 
 
 /* eslint-enable */

@@ -23,13 +23,22 @@ import {
  */
 export type UniversalCommonName = UniversalOrBMPString; // DefinedType
 
+let _cached_decoder_for_UniversalCommonName: $.ASN1Decoder<UniversalCommonName> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) UniversalCommonName
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {UniversalCommonName} The decoded data structure.
  */
-export const _decode_UniversalCommonName: $.ASN1Decoder<UniversalCommonName> = _decode_UniversalOrBMPString;
+export function _decode_UniversalCommonName(el: _Element): UniversalCommonName {
+    if (!_cached_decoder_for_UniversalCommonName) {
+        _cached_decoder_for_UniversalCommonName = _decode_UniversalOrBMPString;
+    }
+    return _cached_decoder_for_UniversalCommonName(el);
+}
+
+let _cached_encoder_for_UniversalCommonName: $.ASN1Encoder<UniversalCommonName> | null = null;
 
 /**
  * @summary Encodes a(n) UniversalCommonName into an ASN.1 Element.
@@ -38,7 +47,15 @@ export const _decode_UniversalCommonName: $.ASN1Decoder<UniversalCommonName> = _
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UniversalCommonName, encoded as an ASN.1 Element.
  */
-export const _encode_UniversalCommonName: $.ASN1Encoder<UniversalCommonName> = _encode_UniversalOrBMPString;
+export function _encode_UniversalCommonName(
+    value: UniversalCommonName,
+    elGetter: $.ASN1Encoder<UniversalCommonName>
+): _Element {
+    if (!_cached_encoder_for_UniversalCommonName) {
+        _cached_encoder_for_UniversalCommonName = _encode_UniversalOrBMPString;
+    }
+    return _cached_encoder_for_UniversalCommonName(value, elGetter);
+}
 
 
 /* eslint-enable */

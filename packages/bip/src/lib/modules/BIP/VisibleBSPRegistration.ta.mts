@@ -43,13 +43,26 @@ import {
  */
 export type VisibleBSPRegistration = BioAPI_BSP_SCHEMA; // DefinedType
 
+
+let _cached_decoder_for_VisibleBSPRegistration: $.ASN1Decoder<VisibleBSPRegistration> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) VisibleBSPRegistration
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {VisibleBSPRegistration} The decoded data structure.
  */
-export const _decode_VisibleBSPRegistration: $.ASN1Decoder<VisibleBSPRegistration> = _decode_BioAPI_BSP_SCHEMA;
+export function _decode_VisibleBSPRegistration(el: _Element): VisibleBSPRegistration {
+  if (!_cached_decoder_for_VisibleBSPRegistration) {
+    _cached_decoder_for_VisibleBSPRegistration = _decode_BioAPI_BSP_SCHEMA;
+  }
+  return _cached_decoder_for_VisibleBSPRegistration(el);
+}
+
+
+let _cached_encoder_for_VisibleBSPRegistration: $.ASN1Encoder<VisibleBSPRegistration> | null = null;
+
 
 /**
  * @summary Encodes a(n) VisibleBSPRegistration into an ASN.1 Element.
@@ -58,7 +71,15 @@ export const _decode_VisibleBSPRegistration: $.ASN1Decoder<VisibleBSPRegistratio
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The VisibleBSPRegistration, encoded as an ASN.1 Element.
  */
-export const _encode_VisibleBSPRegistration: $.ASN1Encoder<VisibleBSPRegistration> = _encode_BioAPI_BSP_SCHEMA;
+export function _encode_VisibleBSPRegistration(
+  value: VisibleBSPRegistration,
+  elGetter: $.ASN1Encoder<VisibleBSPRegistration>
+): _Element {
+  if (!_cached_encoder_for_VisibleBSPRegistration) {
+    _cached_encoder_for_VisibleBSPRegistration = _encode_BioAPI_BSP_SCHEMA;
+  }
+  return _cached_encoder_for_VisibleBSPRegistration(value, elGetter);
+}
 
 
 /* eslint-enable */

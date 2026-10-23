@@ -29,13 +29,21 @@ import { RemoveEntryArgument, _decode_RemoveEntryArgument, _encode_RemoveEntryAr
 export
 type IN_RemoveEntryArgument = RemoveEntryArgument; // DefinedType
 
+let _cached_decoder_for_IN_RemoveEntryArgument: $.ASN1Decoder<IN_RemoveEntryArgument> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) IN_RemoveEntryArgument
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_IN_RemoveEntryArgument: $.ASN1Decoder<IN_RemoveEntryArgument> = _decode_RemoveEntryArgument;
+export
+function _decode_IN_RemoveEntryArgument (el: _Element): IN_RemoveEntryArgument {
+    if (!_cached_decoder_for_IN_RemoveEntryArgument) { _cached_decoder_for_IN_RemoveEntryArgument = _decode_RemoveEntryArgument; }
+    return _cached_decoder_for_IN_RemoveEntryArgument(el);
+}
+
+let _cached_encoder_for_IN_RemoveEntryArgument: $.ASN1Encoder<IN_RemoveEntryArgument> | null = null;
 
 /**
  * @summary Encodes a(n) IN_RemoveEntryArgument into an ASN.1 Element.
@@ -44,7 +52,11 @@ export const _decode_IN_RemoveEntryArgument: $.ASN1Decoder<IN_RemoveEntryArgumen
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The IN_RemoveEntryArgument, encoded as an ASN.1 Element.
  */
-export const _encode_IN_RemoveEntryArgument: (value: IN_RemoveEntryArgument, elGetter: $.ASN1Encoder<any>) => _Element = _encode_RemoveEntryArgument;
+export
+function _encode_IN_RemoveEntryArgument (value: IN_RemoveEntryArgument, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_IN_RemoveEntryArgument) { _cached_encoder_for_IN_RemoveEntryArgument = _encode_RemoveEntryArgument; }
+    return _cached_encoder_for_IN_RemoveEntryArgument(value, elGetter);
+}
 
 
 /* eslint-enable */

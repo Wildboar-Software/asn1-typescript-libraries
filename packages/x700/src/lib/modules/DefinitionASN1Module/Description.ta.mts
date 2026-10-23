@@ -34,13 +34,26 @@ import {
  */
 export type Description = TextualRepresentation; // DefinedType
 
+
+let _cached_decoder_for_Description: $.ASN1Decoder<Description> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Description
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {Description} The decoded data structure.
  */
-export const _decode_Description: $.ASN1Decoder<Description> = _decode_TextualRepresentation;
+export function _decode_Description(el: _Element): Description {
+    if (!_cached_decoder_for_Description) {
+        _cached_decoder_for_Description = _decode_TextualRepresentation;
+    }
+    return _cached_decoder_for_Description(el);
+}
+
+
+let _cached_encoder_for_Description: $.ASN1Encoder<Description> | null = null;
+
 
 /**
  * @summary Encodes a(n) Description into an ASN.1 Element.
@@ -49,7 +62,15 @@ export const _decode_Description: $.ASN1Decoder<Description> = _decode_TextualRe
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Description, encoded as an ASN.1 Element.
  */
-export const _encode_Description: $.ASN1Encoder<Description> = _encode_TextualRepresentation;
+export function _encode_Description(
+    value: Description,
+    elGetter: $.ASN1Encoder<Description>
+): _Element {
+    if (!_cached_encoder_for_Description) {
+        _cached_encoder_for_Description = _encode_TextualRepresentation;
+    }
+    return _cached_encoder_for_Description(value, elGetter);
+}
 
 
 /* eslint-enable */

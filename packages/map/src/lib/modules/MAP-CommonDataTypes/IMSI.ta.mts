@@ -25,13 +25,21 @@ import { _decode_TBCD_STRING, _encode_TBCD_STRING, TBCD_STRING } from "../MAP-Co
 export
 type IMSI = TBCD_STRING; // DefinedType
 
+let _cached_decoder_for_IMSI: $.ASN1Decoder<IMSI> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) IMSI
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_IMSI: $.ASN1Decoder<IMSI> = _decode_TBCD_STRING;
+export
+function _decode_IMSI (el: _Element): IMSI {
+    if (!_cached_decoder_for_IMSI) { _cached_decoder_for_IMSI = _decode_TBCD_STRING; }
+    return _cached_decoder_for_IMSI(el);
+}
+
+let _cached_encoder_for_IMSI: $.ASN1Encoder<IMSI> | null = null;
 
 /**
  * @summary Encodes a(n) IMSI into an ASN.1 Element.
@@ -40,7 +48,11 @@ export const _decode_IMSI: $.ASN1Decoder<IMSI> = _decode_TBCD_STRING;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The IMSI, encoded as an ASN.1 Element.
  */
-export const _encode_IMSI: (value: IMSI, elGetter: $.ASN1Encoder<any>) => _Element = _encode_TBCD_STRING;
+export
+function _encode_IMSI (value: IMSI, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_IMSI) { _cached_encoder_for_IMSI = _encode_TBCD_STRING; }
+    return _cached_encoder_for_IMSI(value, elGetter);
+}
 
 
 /* eslint-enable */

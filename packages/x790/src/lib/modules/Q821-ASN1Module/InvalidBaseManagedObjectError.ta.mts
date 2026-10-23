@@ -24,13 +24,21 @@ import {
 export
 type InvalidBaseManagedObjectError = ObjectInstance; // DefinedType
 
+let _cached_decoder_for_InvalidBaseManagedObjectError: $.ASN1Decoder<InvalidBaseManagedObjectError> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) InvalidBaseManagedObjectError
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_InvalidBaseManagedObjectError: $.ASN1Decoder<InvalidBaseManagedObjectError> = _decode_ObjectInstance;
+export
+function _decode_InvalidBaseManagedObjectError (el: _Element): InvalidBaseManagedObjectError {
+    if (!_cached_decoder_for_InvalidBaseManagedObjectError) { _cached_decoder_for_InvalidBaseManagedObjectError = _decode_ObjectInstance; }
+    return _cached_decoder_for_InvalidBaseManagedObjectError(el);
+}
+
+let _cached_encoder_for_InvalidBaseManagedObjectError: $.ASN1Encoder<InvalidBaseManagedObjectError> | null = null;
 
 /**
  * @summary Encodes a(n) InvalidBaseManagedObjectError into an ASN.1 Element.
@@ -39,7 +47,11 @@ export const _decode_InvalidBaseManagedObjectError: $.ASN1Decoder<InvalidBaseMan
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The InvalidBaseManagedObjectError, encoded as an ASN.1 Element.
  */
-export const _encode_InvalidBaseManagedObjectError: (value: InvalidBaseManagedObjectError, elGetter: $.ASN1Encoder<any>) => _Element = _encode_ObjectInstance;
+export
+function _encode_InvalidBaseManagedObjectError (value: InvalidBaseManagedObjectError, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_InvalidBaseManagedObjectError) { _cached_encoder_for_InvalidBaseManagedObjectError = _encode_ObjectInstance; }
+    return _cached_encoder_for_InvalidBaseManagedObjectError(value, elGetter);
+}
 
 
 /* eslint-enable */

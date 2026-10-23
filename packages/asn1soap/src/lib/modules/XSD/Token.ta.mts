@@ -33,13 +33,26 @@ import {
  */
 export type Token = NormalizedString; // DefinedType
 
+
+let _cached_decoder_for_Token: $.ASN1Decoder<Token> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Token
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {Token} The decoded data structure.
  */
-export const _decode_Token: $.ASN1Decoder<Token> = _decode_NormalizedString;
+export function _decode_Token(el: _Element): Token {
+  if (!_cached_decoder_for_Token) {
+    _cached_decoder_for_Token = _decode_NormalizedString;
+  }
+  return _cached_decoder_for_Token(el);
+}
+
+
+let _cached_encoder_for_Token: $.ASN1Encoder<Token> | null = null;
+
 
 /**
  * @summary Encodes a(n) Token into an ASN.1 Element.
@@ -48,7 +61,12 @@ export const _decode_Token: $.ASN1Decoder<Token> = _decode_NormalizedString;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Token, encoded as an ASN.1 Element.
  */
-export const _encode_Token: $.ASN1Encoder<Token> = _encode_NormalizedString;
+export function _encode_Token(value: Token, elGetter: $.ASN1Encoder<Token>): _Element {
+  if (!_cached_encoder_for_Token) {
+    _cached_encoder_for_Token = _encode_NormalizedString;
+  }
+  return _cached_encoder_for_Token(value, elGetter);
+}
 
 
 /* eslint-enable */

@@ -28,13 +28,26 @@ import {
  */
 export type RemoveCapacityFromTopologicalLinkResult = Capacity; // DefinedType
 
+
+let _cached_decoder_for_RemoveCapacityFromTopologicalLinkResult: $.ASN1Decoder<RemoveCapacityFromTopologicalLinkResult> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RemoveCapacityFromTopologicalLinkResult
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {RemoveCapacityFromTopologicalLinkResult} The decoded data structure.
  */
-export const _decode_RemoveCapacityFromTopologicalLinkResult: $.ASN1Decoder<RemoveCapacityFromTopologicalLinkResult> = _decode_Capacity;
+export function _decode_RemoveCapacityFromTopologicalLinkResult(el: _Element): RemoveCapacityFromTopologicalLinkResult {
+    if (!_cached_decoder_for_RemoveCapacityFromTopologicalLinkResult) {
+        _cached_decoder_for_RemoveCapacityFromTopologicalLinkResult = _decode_Capacity;
+    }
+    return _cached_decoder_for_RemoveCapacityFromTopologicalLinkResult(el);
+}
+
+
+let _cached_encoder_for_RemoveCapacityFromTopologicalLinkResult: $.ASN1Encoder<RemoveCapacityFromTopologicalLinkResult> | null = null;
+
 
 /**
  * @summary Encodes a(n) RemoveCapacityFromTopologicalLinkResult into an ASN.1 Element.
@@ -43,7 +56,18 @@ export const _decode_RemoveCapacityFromTopologicalLinkResult: $.ASN1Decoder<Remo
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RemoveCapacityFromTopologicalLinkResult, encoded as an ASN.1 Element.
  */
-export const _encode_RemoveCapacityFromTopologicalLinkResult: $.ASN1Encoder<RemoveCapacityFromTopologicalLinkResult> = _encode_Capacity;
+export function _encode_RemoveCapacityFromTopologicalLinkResult(
+    value: RemoveCapacityFromTopologicalLinkResult,
+    elGetter: $.ASN1Encoder<RemoveCapacityFromTopologicalLinkResult>
+): _Element {
+    if (!_cached_encoder_for_RemoveCapacityFromTopologicalLinkResult) {
+        _cached_encoder_for_RemoveCapacityFromTopologicalLinkResult = _encode_Capacity;
+    }
+    return _cached_encoder_for_RemoveCapacityFromTopologicalLinkResult(
+        value,
+        elGetter
+    );
+}
 
 
 /* eslint-enable */

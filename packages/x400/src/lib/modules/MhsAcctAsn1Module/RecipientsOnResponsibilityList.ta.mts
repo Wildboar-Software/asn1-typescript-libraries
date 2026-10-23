@@ -29,13 +29,22 @@ import {
  */
 export type RecipientsOnResponsibilityList = RecipientName; // DefinedType
 
+let _cached_decoder_for_RecipientsOnResponsibilityList: $.ASN1Decoder<RecipientsOnResponsibilityList> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RecipientsOnResponsibilityList
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {RecipientsOnResponsibilityList} The decoded data structure.
  */
-export const _decode_RecipientsOnResponsibilityList: $.ASN1Decoder<RecipientsOnResponsibilityList> = _decode_RecipientName;
+export function _decode_RecipientsOnResponsibilityList(el: _Element): RecipientsOnResponsibilityList {
+    if (!_cached_decoder_for_RecipientsOnResponsibilityList) {
+        _cached_decoder_for_RecipientsOnResponsibilityList = _decode_RecipientName;
+    }
+    return _cached_decoder_for_RecipientsOnResponsibilityList(el);
+}
+
+let _cached_encoder_for_RecipientsOnResponsibilityList: $.ASN1Encoder<RecipientsOnResponsibilityList> | null = null;
 
 /**
  * @summary Encodes a(n) RecipientsOnResponsibilityList into an ASN.1 Element.
@@ -44,7 +53,15 @@ export const _decode_RecipientsOnResponsibilityList: $.ASN1Decoder<RecipientsOnR
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RecipientsOnResponsibilityList, encoded as an ASN.1 Element.
  */
-export const _encode_RecipientsOnResponsibilityList: $.ASN1Encoder<RecipientsOnResponsibilityList> = _encode_RecipientName;
+export function _encode_RecipientsOnResponsibilityList(
+    value: RecipientsOnResponsibilityList,
+    elGetter: $.ASN1Encoder<RecipientsOnResponsibilityList>
+): _Element {
+    if (!_cached_encoder_for_RecipientsOnResponsibilityList) {
+        _cached_encoder_for_RecipientsOnResponsibilityList = _encode_RecipientName;
+    }
+    return _cached_encoder_for_RecipientsOnResponsibilityList(value, elGetter);
+}
 
 
 /* eslint-enable */

@@ -29,13 +29,22 @@ import {
  */
 export type NotificationExtensionsSubField = ExtensionField; // DefinedType
 
+let _cached_decoder_for_NotificationExtensionsSubField: $.ASN1Decoder<NotificationExtensionsSubField> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) NotificationExtensionsSubField
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {NotificationExtensionsSubField} The decoded data structure.
  */
-export const _decode_NotificationExtensionsSubField: $.ASN1Decoder<NotificationExtensionsSubField> = _decode_ExtensionField;
+export function _decode_NotificationExtensionsSubField(el: _Element): NotificationExtensionsSubField {
+    if (!_cached_decoder_for_NotificationExtensionsSubField) {
+        _cached_decoder_for_NotificationExtensionsSubField = _decode_ExtensionField;
+    }
+    return _cached_decoder_for_NotificationExtensionsSubField(el);
+}
+
+let _cached_encoder_for_NotificationExtensionsSubField: $.ASN1Encoder<NotificationExtensionsSubField> | null = null;
 
 /**
  * @summary Encodes a(n) NotificationExtensionsSubField into an ASN.1 Element.
@@ -44,7 +53,15 @@ export const _decode_NotificationExtensionsSubField: $.ASN1Decoder<NotificationE
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NotificationExtensionsSubField, encoded as an ASN.1 Element.
  */
-export const _encode_NotificationExtensionsSubField: $.ASN1Encoder<NotificationExtensionsSubField> = _encode_ExtensionField;
+export function _encode_NotificationExtensionsSubField(
+    value: NotificationExtensionsSubField,
+    elGetter: $.ASN1Encoder<NotificationExtensionsSubField>
+): _Element {
+    if (!_cached_encoder_for_NotificationExtensionsSubField) {
+        _cached_encoder_for_NotificationExtensionsSubField = _encode_ExtensionField;
+    }
+    return _cached_encoder_for_NotificationExtensionsSubField(value, elGetter);
+}
 
 
 /* eslint-enable */

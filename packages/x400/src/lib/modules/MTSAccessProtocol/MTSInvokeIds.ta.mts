@@ -29,13 +29,22 @@ import {
  */
 export type MTSInvokeIds = InvokeId; // DefinedType
 
+let _cached_decoder_for_MTSInvokeIds: $.ASN1Decoder<MTSInvokeIds> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MTSInvokeIds
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {MTSInvokeIds} The decoded data structure.
  */
-export const _decode_MTSInvokeIds: $.ASN1Decoder<MTSInvokeIds> = _decode_InvokeId;
+export function _decode_MTSInvokeIds(el: _Element): MTSInvokeIds {
+    if (!_cached_decoder_for_MTSInvokeIds) {
+        _cached_decoder_for_MTSInvokeIds = _decode_InvokeId;
+    }
+    return _cached_decoder_for_MTSInvokeIds(el);
+}
+
+let _cached_encoder_for_MTSInvokeIds: $.ASN1Encoder<MTSInvokeIds> | null = null;
 
 /**
  * @summary Encodes a(n) MTSInvokeIds into an ASN.1 Element.
@@ -44,7 +53,15 @@ export const _decode_MTSInvokeIds: $.ASN1Decoder<MTSInvokeIds> = _decode_InvokeI
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MTSInvokeIds, encoded as an ASN.1 Element.
  */
-export const _encode_MTSInvokeIds: $.ASN1Encoder<MTSInvokeIds> = _encode_InvokeId;
+export function _encode_MTSInvokeIds(
+    value: MTSInvokeIds,
+    elGetter: $.ASN1Encoder<MTSInvokeIds>
+): _Element {
+    if (!_cached_encoder_for_MTSInvokeIds) {
+        _cached_encoder_for_MTSInvokeIds = _encode_InvokeId;
+    }
+    return _cached_encoder_for_MTSInvokeIds(value, elGetter);
+}
 
 
 /* eslint-enable */

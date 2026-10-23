@@ -31,13 +31,22 @@ import {
  */
 export type ASO_qualifier_form1 = RelativeDistinguishedName; // DefinedType
 
+let _cached_decoder_for_ASO_qualifier_form1: $.ASN1Decoder<ASO_qualifier_form1> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ASO_qualifier_form1
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ASO_qualifier_form1} The decoded data structure.
  */
-export const _decode_ASO_qualifier_form1: $.ASN1Decoder<ASO_qualifier_form1> = _decode_RelativeDistinguishedName;
+export function _decode_ASO_qualifier_form1(el: _Element): ASO_qualifier_form1 {
+  if (!_cached_decoder_for_ASO_qualifier_form1) {
+    _cached_decoder_for_ASO_qualifier_form1 = _decode_RelativeDistinguishedName;
+  }
+  return _cached_decoder_for_ASO_qualifier_form1(el);
+}
+
+let _cached_encoder_for_ASO_qualifier_form1: $.ASN1Encoder<ASO_qualifier_form1> | null = null;
 
 /**
  * @summary Encodes a(n) ASO_qualifier_form1 into an ASN.1 Element.
@@ -46,7 +55,15 @@ export const _decode_ASO_qualifier_form1: $.ASN1Decoder<ASO_qualifier_form1> = _
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ASO_qualifier_form1, encoded as an ASN.1 Element.
  */
-export const _encode_ASO_qualifier_form1: $.ASN1Encoder<ASO_qualifier_form1> = _encode_RelativeDistinguishedName;
+export function _encode_ASO_qualifier_form1(
+  value: ASO_qualifier_form1,
+  elGetter: $.ASN1Encoder<ASO_qualifier_form1>
+): _Element {
+  if (!_cached_encoder_for_ASO_qualifier_form1) {
+    _cached_encoder_for_ASO_qualifier_form1 = _encode_RelativeDistinguishedName;
+  }
+  return _cached_encoder_for_ASO_qualifier_form1(value, elGetter);
+}
 
 
 /* eslint-enable */

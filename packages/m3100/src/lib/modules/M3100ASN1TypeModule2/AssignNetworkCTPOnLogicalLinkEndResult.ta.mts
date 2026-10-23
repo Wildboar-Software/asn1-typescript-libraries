@@ -28,13 +28,26 @@ import {
  */
 export type AssignNetworkCTPOnLogicalLinkEndResult = CTPList; // DefinedType
 
+
+let _cached_decoder_for_AssignNetworkCTPOnLogicalLinkEndResult: $.ASN1Decoder<AssignNetworkCTPOnLogicalLinkEndResult> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AssignNetworkCTPOnLogicalLinkEndResult
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {AssignNetworkCTPOnLogicalLinkEndResult} The decoded data structure.
  */
-export const _decode_AssignNetworkCTPOnLogicalLinkEndResult: $.ASN1Decoder<AssignNetworkCTPOnLogicalLinkEndResult> = _decode_CTPList;
+export function _decode_AssignNetworkCTPOnLogicalLinkEndResult(el: _Element): AssignNetworkCTPOnLogicalLinkEndResult {
+    if (!_cached_decoder_for_AssignNetworkCTPOnLogicalLinkEndResult) {
+        _cached_decoder_for_AssignNetworkCTPOnLogicalLinkEndResult = _decode_CTPList;
+    }
+    return _cached_decoder_for_AssignNetworkCTPOnLogicalLinkEndResult(el);
+}
+
+
+let _cached_encoder_for_AssignNetworkCTPOnLogicalLinkEndResult: $.ASN1Encoder<AssignNetworkCTPOnLogicalLinkEndResult> | null = null;
+
 
 /**
  * @summary Encodes a(n) AssignNetworkCTPOnLogicalLinkEndResult into an ASN.1 Element.
@@ -43,7 +56,18 @@ export const _decode_AssignNetworkCTPOnLogicalLinkEndResult: $.ASN1Decoder<Assig
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AssignNetworkCTPOnLogicalLinkEndResult, encoded as an ASN.1 Element.
  */
-export const _encode_AssignNetworkCTPOnLogicalLinkEndResult: $.ASN1Encoder<AssignNetworkCTPOnLogicalLinkEndResult> = _encode_CTPList;
+export function _encode_AssignNetworkCTPOnLogicalLinkEndResult(
+    value: AssignNetworkCTPOnLogicalLinkEndResult,
+    elGetter: $.ASN1Encoder<AssignNetworkCTPOnLogicalLinkEndResult>
+): _Element {
+    if (!_cached_encoder_for_AssignNetworkCTPOnLogicalLinkEndResult) {
+        _cached_encoder_for_AssignNetworkCTPOnLogicalLinkEndResult = _encode_CTPList;
+    }
+    return _cached_encoder_for_AssignNetworkCTPOnLogicalLinkEndResult(
+        value,
+        elGetter
+    );
+}
 
 
 /* eslint-enable */

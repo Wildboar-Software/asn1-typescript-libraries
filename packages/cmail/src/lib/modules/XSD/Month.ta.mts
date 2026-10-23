@@ -29,13 +29,26 @@ import {
  */
 export type Month = DateTimeType; // DefinedType
 
+
+let _cached_decoder_for_Month: $.ASN1Decoder<Month> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Month
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {Month} The decoded data structure.
  */
-export const _decode_Month: $.ASN1Decoder<Month> = _decode_DateTimeType;
+export function _decode_Month(el: _Element): Month {
+  if (!_cached_decoder_for_Month) {
+    _cached_decoder_for_Month = _decode_DateTimeType;
+  }
+  return _cached_decoder_for_Month(el);
+}
+
+
+let _cached_encoder_for_Month: $.ASN1Encoder<Month> | null = null;
+
 
 /**
  * @summary Encodes a(n) Month into an ASN.1 Element.
@@ -44,7 +57,12 @@ export const _decode_Month: $.ASN1Decoder<Month> = _decode_DateTimeType;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Month, encoded as an ASN.1 Element.
  */
-export const _encode_Month: $.ASN1Encoder<Month> = _encode_DateTimeType;
+export function _encode_Month(value: Month, elGetter: $.ASN1Encoder<Month>): _Element {
+  if (!_cached_encoder_for_Month) {
+    _cached_encoder_for_Month = _encode_DateTimeType;
+  }
+  return _cached_encoder_for_Month(value, elGetter);
+}
 
 
 /* eslint-enable */

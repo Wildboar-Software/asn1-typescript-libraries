@@ -22,13 +22,26 @@ import {
  */
 export type EncryptionAlgorithmIdentifier = AlgorithmIdentifier; // DefinedType
 
+
+let _cached_decoder_for_EncryptionAlgorithmIdentifier: $.ASN1Decoder<EncryptionAlgorithmIdentifier> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) EncryptionAlgorithmIdentifier
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {EncryptionAlgorithmIdentifier} The decoded data structure.
  */
-export const _decode_EncryptionAlgorithmIdentifier: $.ASN1Decoder<EncryptionAlgorithmIdentifier> = _decode_AlgorithmIdentifier;
+export function _decode_EncryptionAlgorithmIdentifier(el: _Element): EncryptionAlgorithmIdentifier {
+    if (!_cached_decoder_for_EncryptionAlgorithmIdentifier) {
+        _cached_decoder_for_EncryptionAlgorithmIdentifier = _decode_AlgorithmIdentifier;
+    }
+    return _cached_decoder_for_EncryptionAlgorithmIdentifier(el);
+}
+
+
+let _cached_encoder_for_EncryptionAlgorithmIdentifier: $.ASN1Encoder<EncryptionAlgorithmIdentifier> | null = null;
+
 
 /**
  * @summary Encodes a(n) EncryptionAlgorithmIdentifier into an ASN.1 Element.
@@ -37,7 +50,15 @@ export const _decode_EncryptionAlgorithmIdentifier: $.ASN1Decoder<EncryptionAlgo
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The EncryptionAlgorithmIdentifier, encoded as an ASN.1 Element.
  */
-export const _encode_EncryptionAlgorithmIdentifier: $.ASN1Encoder<EncryptionAlgorithmIdentifier> = _encode_AlgorithmIdentifier;
+export function _encode_EncryptionAlgorithmIdentifier(
+    value: EncryptionAlgorithmIdentifier,
+    elGetter: $.ASN1Encoder<EncryptionAlgorithmIdentifier>
+): _Element {
+    if (!_cached_encoder_for_EncryptionAlgorithmIdentifier) {
+        _cached_encoder_for_EncryptionAlgorithmIdentifier = _encode_AlgorithmIdentifier;
+    }
+    return _cached_encoder_for_EncryptionAlgorithmIdentifier(value, elGetter);
+}
 
 
 /* eslint-enable */

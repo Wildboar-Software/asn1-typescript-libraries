@@ -33,13 +33,21 @@ import { FileName, _decode_FileName, _encode_FileName } from "../ISO-9506-MMS-1/
 export
 type FileDelete_Request = FileName; // DefinedType
 
+let _cached_decoder_for_FileDelete_Request: $.ASN1Decoder<FileDelete_Request> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) FileDelete_Request
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_FileDelete_Request: $.ASN1Decoder<FileDelete_Request> = _decode_FileName;
+export
+function _decode_FileDelete_Request (el: _Element): FileDelete_Request {
+    if (!_cached_decoder_for_FileDelete_Request) { _cached_decoder_for_FileDelete_Request = _decode_FileName; }
+    return _cached_decoder_for_FileDelete_Request(el);
+}
+
+let _cached_encoder_for_FileDelete_Request: $.ASN1Encoder<FileDelete_Request> | null = null;
 
 /**
  * @summary Encodes a(n) FileDelete_Request into an ASN.1 Element.
@@ -48,7 +56,11 @@ export const _decode_FileDelete_Request: $.ASN1Decoder<FileDelete_Request> = _de
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The FileDelete_Request, encoded as an ASN.1 Element.
  */
-export const _encode_FileDelete_Request: (value: FileDelete_Request, elGetter: $.ASN1Encoder<any>) => _Element = _encode_FileName;
+export
+function _encode_FileDelete_Request (value: FileDelete_Request, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_FileDelete_Request) { _cached_encoder_for_FileDelete_Request = _encode_FileName; }
+    return _cached_encoder_for_FileDelete_Request(value, elGetter);
+}
 
 
 /* eslint-enable */

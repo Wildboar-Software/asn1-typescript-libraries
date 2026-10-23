@@ -32,13 +32,22 @@ import {
  */
 export type ReportingDLName = ORAddressAndOptionalDirectoryName; // DefinedType
 
+let _cached_decoder_for_ReportingDLName: $.ASN1Decoder<ReportingDLName> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ReportingDLName
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ReportingDLName} The decoded data structure.
  */
-export const _decode_ReportingDLName: $.ASN1Decoder<ReportingDLName> = _decode_ORAddressAndOptionalDirectoryName;
+export function _decode_ReportingDLName(el: _Element): ReportingDLName {
+    if (!_cached_decoder_for_ReportingDLName) {
+        _cached_decoder_for_ReportingDLName = _decode_ORAddressAndOptionalDirectoryName;
+    }
+    return _cached_decoder_for_ReportingDLName(el);
+}
+
+let _cached_encoder_for_ReportingDLName: $.ASN1Encoder<ReportingDLName> | null = null;
 
 /**
  * @summary Encodes a(n) ReportingDLName into an ASN.1 Element.
@@ -47,7 +56,15 @@ export const _decode_ReportingDLName: $.ASN1Decoder<ReportingDLName> = _decode_O
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ReportingDLName, encoded as an ASN.1 Element.
  */
-export const _encode_ReportingDLName: $.ASN1Encoder<ReportingDLName> = _encode_ORAddressAndOptionalDirectoryName;
+export function _encode_ReportingDLName(
+    value: ReportingDLName,
+    elGetter: $.ASN1Encoder<ReportingDLName>
+): _Element {
+    if (!_cached_encoder_for_ReportingDLName) {
+        _cached_encoder_for_ReportingDLName = _encode_ORAddressAndOptionalDirectoryName;
+    }
+    return _cached_encoder_for_ReportingDLName(value, elGetter);
+}
 
 
 /* eslint-enable */

@@ -29,13 +29,22 @@ import {
  */
 export type RelatedIPMsSubfield = IPMIdentifier; // DefinedType
 
+let _cached_decoder_for_RelatedIPMsSubfield: $.ASN1Decoder<RelatedIPMsSubfield> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RelatedIPMsSubfield
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {RelatedIPMsSubfield} The decoded data structure.
  */
-export const _decode_RelatedIPMsSubfield: $.ASN1Decoder<RelatedIPMsSubfield> = _decode_IPMIdentifier;
+export function _decode_RelatedIPMsSubfield(el: _Element): RelatedIPMsSubfield {
+    if (!_cached_decoder_for_RelatedIPMsSubfield) {
+        _cached_decoder_for_RelatedIPMsSubfield = _decode_IPMIdentifier;
+    }
+    return _cached_decoder_for_RelatedIPMsSubfield(el);
+}
+
+let _cached_encoder_for_RelatedIPMsSubfield: $.ASN1Encoder<RelatedIPMsSubfield> | null = null;
 
 /**
  * @summary Encodes a(n) RelatedIPMsSubfield into an ASN.1 Element.
@@ -44,7 +53,15 @@ export const _decode_RelatedIPMsSubfield: $.ASN1Decoder<RelatedIPMsSubfield> = _
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RelatedIPMsSubfield, encoded as an ASN.1 Element.
  */
-export const _encode_RelatedIPMsSubfield: $.ASN1Encoder<RelatedIPMsSubfield> = _encode_IPMIdentifier;
+export function _encode_RelatedIPMsSubfield(
+    value: RelatedIPMsSubfield,
+    elGetter: $.ASN1Encoder<RelatedIPMsSubfield>
+): _Element {
+    if (!_cached_encoder_for_RelatedIPMsSubfield) {
+        _cached_encoder_for_RelatedIPMsSubfield = _encode_IPMIdentifier;
+    }
+    return _cached_encoder_for_RelatedIPMsSubfield(value, elGetter);
+}
 
 
 /* eslint-enable */

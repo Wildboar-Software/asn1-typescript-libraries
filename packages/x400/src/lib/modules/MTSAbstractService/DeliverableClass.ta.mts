@@ -41,13 +41,22 @@ import {
  */
 export type DeliverableClass = MessageClass; // DefinedType
 
+let _cached_decoder_for_DeliverableClass: $.ASN1Decoder<DeliverableClass> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DeliverableClass
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {DeliverableClass} The decoded data structure.
  */
-export const _decode_DeliverableClass: $.ASN1Decoder<DeliverableClass> = _decode_MessageClass;
+export function _decode_DeliverableClass(el: _Element): DeliverableClass {
+    if (!_cached_decoder_for_DeliverableClass) {
+        _cached_decoder_for_DeliverableClass = _decode_MessageClass;
+    }
+    return _cached_decoder_for_DeliverableClass(el);
+}
+
+let _cached_encoder_for_DeliverableClass: $.ASN1Encoder<DeliverableClass> | null = null;
 
 /**
  * @summary Encodes a(n) DeliverableClass into an ASN.1 Element.
@@ -56,7 +65,15 @@ export const _decode_DeliverableClass: $.ASN1Decoder<DeliverableClass> = _decode
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DeliverableClass, encoded as an ASN.1 Element.
  */
-export const _encode_DeliverableClass: $.ASN1Encoder<DeliverableClass> = _encode_MessageClass;
+export function _encode_DeliverableClass(
+    value: DeliverableClass,
+    elGetter: $.ASN1Encoder<DeliverableClass>
+): _Element {
+    if (!_cached_encoder_for_DeliverableClass) {
+        _cached_encoder_for_DeliverableClass = _encode_MessageClass;
+    }
+    return _cached_encoder_for_DeliverableClass(value, elGetter);
+}
 
 
 /* eslint-enable */

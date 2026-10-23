@@ -30,13 +30,21 @@ import { NullableBitString, _decode_NullableBitString, _encode_NullableBitString
 export
 type NullableAdditionalSupportOptions = NullableBitString; // DefinedType
 
+let _cached_decoder_for_NullableAdditionalSupportOptions: $.ASN1Decoder<NullableAdditionalSupportOptions> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) NullableAdditionalSupportOptions
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_NullableAdditionalSupportOptions: $.ASN1Decoder<NullableAdditionalSupportOptions> = _decode_NullableBitString;
+export
+function _decode_NullableAdditionalSupportOptions (el: _Element): NullableAdditionalSupportOptions {
+    if (!_cached_decoder_for_NullableAdditionalSupportOptions) { _cached_decoder_for_NullableAdditionalSupportOptions = _decode_NullableBitString; }
+    return _cached_decoder_for_NullableAdditionalSupportOptions(el);
+}
+
+let _cached_encoder_for_NullableAdditionalSupportOptions: $.ASN1Encoder<NullableAdditionalSupportOptions> | null = null;
 
 /**
  * @summary Encodes a(n) NullableAdditionalSupportOptions into an ASN.1 Element.
@@ -45,7 +53,11 @@ export const _decode_NullableAdditionalSupportOptions: $.ASN1Decoder<NullableAdd
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NullableAdditionalSupportOptions, encoded as an ASN.1 Element.
  */
-export const _encode_NullableAdditionalSupportOptions: (value: NullableAdditionalSupportOptions, elGetter: $.ASN1Encoder<any>) => _Element = _encode_NullableBitString;
+export
+function _encode_NullableAdditionalSupportOptions (value: NullableAdditionalSupportOptions, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_NullableAdditionalSupportOptions) { _cached_encoder_for_NullableAdditionalSupportOptions = _encode_NullableBitString; }
+    return _cached_encoder_for_NullableAdditionalSupportOptions(value, elGetter);
+}
 
 
 /* eslint-enable */

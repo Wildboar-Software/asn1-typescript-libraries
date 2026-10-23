@@ -28,13 +28,26 @@ import {
  */
 export type PersonLocation = PremisesAddress; // DefinedType
 
+
+let _cached_decoder_for_PersonLocation: $.ASN1Decoder<PersonLocation> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PersonLocation
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {PersonLocation} The decoded data structure.
  */
-export const _decode_PersonLocation: $.ASN1Decoder<PersonLocation> = _decode_PremisesAddress;
+export function _decode_PersonLocation(el: _Element): PersonLocation {
+    if (!_cached_decoder_for_PersonLocation) {
+        _cached_decoder_for_PersonLocation = _decode_PremisesAddress;
+    }
+    return _cached_decoder_for_PersonLocation(el);
+}
+
+
+let _cached_encoder_for_PersonLocation: $.ASN1Encoder<PersonLocation> | null = null;
+
 
 /**
  * @summary Encodes a(n) PersonLocation into an ASN.1 Element.
@@ -43,7 +56,15 @@ export const _decode_PersonLocation: $.ASN1Decoder<PersonLocation> = _decode_Pre
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PersonLocation, encoded as an ASN.1 Element.
  */
-export const _encode_PersonLocation: $.ASN1Encoder<PersonLocation> = _encode_PremisesAddress;
+export function _encode_PersonLocation(
+    value: PersonLocation,
+    elGetter: $.ASN1Encoder<PersonLocation>
+): _Element {
+    if (!_cached_encoder_for_PersonLocation) {
+        _cached_encoder_for_PersonLocation = _encode_PremisesAddress;
+    }
+    return _cached_encoder_for_PersonLocation(value, elGetter);
+}
 
 
 /* eslint-enable */

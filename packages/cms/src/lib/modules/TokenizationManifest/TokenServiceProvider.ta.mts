@@ -17,13 +17,26 @@ import { URI, _decode_URI, _encode_URI } from "../TokenizationManifest/URI.ta.mj
  */
 export type TokenServiceProvider = URI; // DefinedType
 
+
+let _cached_decoder_for_TokenServiceProvider: $.ASN1Decoder<TokenServiceProvider> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TokenServiceProvider
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {TokenServiceProvider} The decoded data structure.
  */
-export const _decode_TokenServiceProvider: $.ASN1Decoder<TokenServiceProvider> = _decode_URI;
+export function _decode_TokenServiceProvider(el: _Element): TokenServiceProvider {
+    if (!_cached_decoder_for_TokenServiceProvider) {
+        _cached_decoder_for_TokenServiceProvider = _decode_URI;
+    }
+    return _cached_decoder_for_TokenServiceProvider(el);
+}
+
+
+let _cached_encoder_for_TokenServiceProvider: $.ASN1Encoder<TokenServiceProvider> | null = null;
+
 
 /**
  * @summary Encodes a(n) TokenServiceProvider into an ASN.1 Element.
@@ -32,7 +45,15 @@ export const _decode_TokenServiceProvider: $.ASN1Decoder<TokenServiceProvider> =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TokenServiceProvider, encoded as an ASN.1 Element.
  */
-export const _encode_TokenServiceProvider: $.ASN1Encoder<TokenServiceProvider> = _encode_URI;
+export function _encode_TokenServiceProvider(
+    value: TokenServiceProvider,
+    elGetter: $.ASN1Encoder<TokenServiceProvider>
+): _Element {
+    if (!_cached_encoder_for_TokenServiceProvider) {
+        _cached_encoder_for_TokenServiceProvider = _encode_URI;
+    }
+    return _cached_encoder_for_TokenServiceProvider(value, elGetter);
+}
 
 
 /* eslint-enable */

@@ -31,13 +31,22 @@ import {
  */
 export type ExtendedSubject = UniversalOrBMPString; // DefinedType
 
+let _cached_decoder_for_ExtendedSubject: $.ASN1Decoder<ExtendedSubject> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ExtendedSubject
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ExtendedSubject} The decoded data structure.
  */
-export const _decode_ExtendedSubject: $.ASN1Decoder<ExtendedSubject> = _decode_UniversalOrBMPString;
+export function _decode_ExtendedSubject(el: _Element): ExtendedSubject {
+    if (!_cached_decoder_for_ExtendedSubject) {
+        _cached_decoder_for_ExtendedSubject = _decode_UniversalOrBMPString;
+    }
+    return _cached_decoder_for_ExtendedSubject(el);
+}
+
+let _cached_encoder_for_ExtendedSubject: $.ASN1Encoder<ExtendedSubject> | null = null;
 
 /**
  * @summary Encodes a(n) ExtendedSubject into an ASN.1 Element.
@@ -46,7 +55,15 @@ export const _decode_ExtendedSubject: $.ASN1Decoder<ExtendedSubject> = _decode_U
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ExtendedSubject, encoded as an ASN.1 Element.
  */
-export const _encode_ExtendedSubject: $.ASN1Encoder<ExtendedSubject> = _encode_UniversalOrBMPString;
+export function _encode_ExtendedSubject(
+    value: ExtendedSubject,
+    elGetter: $.ASN1Encoder<ExtendedSubject>
+): _Element {
+    if (!_cached_encoder_for_ExtendedSubject) {
+        _cached_encoder_for_ExtendedSubject = _encode_UniversalOrBMPString;
+    }
+    return _cached_encoder_for_ExtendedSubject(value, elGetter);
+}
 
 
 /* eslint-enable */

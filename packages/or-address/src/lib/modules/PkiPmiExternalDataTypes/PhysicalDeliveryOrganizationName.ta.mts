@@ -20,13 +20,22 @@ import {
  */
 export type PhysicalDeliveryOrganizationName = PDSParameter; // DefinedType
 
+let _cached_decoder_for_PhysicalDeliveryOrganizationName: $.ASN1Decoder<PhysicalDeliveryOrganizationName> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PhysicalDeliveryOrganizationName
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {PhysicalDeliveryOrganizationName} The decoded data structure.
  */
-export const _decode_PhysicalDeliveryOrganizationName: $.ASN1Decoder<PhysicalDeliveryOrganizationName> = _decode_PDSParameter;
+export function _decode_PhysicalDeliveryOrganizationName(el: _Element): PhysicalDeliveryOrganizationName {
+    if (!_cached_decoder_for_PhysicalDeliveryOrganizationName) {
+        _cached_decoder_for_PhysicalDeliveryOrganizationName = _decode_PDSParameter;
+    }
+    return _cached_decoder_for_PhysicalDeliveryOrganizationName(el);
+}
+
+let _cached_encoder_for_PhysicalDeliveryOrganizationName: $.ASN1Encoder<PhysicalDeliveryOrganizationName> | null = null;
 
 /**
  * @summary Encodes a(n) PhysicalDeliveryOrganizationName into an ASN.1 Element.
@@ -35,7 +44,18 @@ export const _decode_PhysicalDeliveryOrganizationName: $.ASN1Decoder<PhysicalDel
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PhysicalDeliveryOrganizationName, encoded as an ASN.1 Element.
  */
-export const _encode_PhysicalDeliveryOrganizationName: $.ASN1Encoder<PhysicalDeliveryOrganizationName> = _encode_PDSParameter;
+export function _encode_PhysicalDeliveryOrganizationName(
+    value: PhysicalDeliveryOrganizationName,
+    elGetter: $.ASN1Encoder<PhysicalDeliveryOrganizationName>
+): _Element {
+    if (!_cached_encoder_for_PhysicalDeliveryOrganizationName) {
+        _cached_encoder_for_PhysicalDeliveryOrganizationName = _encode_PDSParameter;
+    }
+    return _cached_encoder_for_PhysicalDeliveryOrganizationName(
+        value,
+        elGetter
+    );
+}
 
 
 /* eslint-enable */

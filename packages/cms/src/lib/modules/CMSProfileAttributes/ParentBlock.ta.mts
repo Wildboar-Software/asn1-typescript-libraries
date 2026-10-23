@@ -21,13 +21,26 @@ import {
  */
 export type ParentBlock = HashPointer; // DefinedType
 
+
+let _cached_decoder_for_ParentBlock: $.ASN1Decoder<ParentBlock> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ParentBlock
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ParentBlock} The decoded data structure.
  */
-export const _decode_ParentBlock: $.ASN1Decoder<ParentBlock> = _decode_HashPointer;
+export function _decode_ParentBlock(el: _Element): ParentBlock {
+    if (!_cached_decoder_for_ParentBlock) {
+        _cached_decoder_for_ParentBlock = _decode_HashPointer;
+    }
+    return _cached_decoder_for_ParentBlock(el);
+}
+
+
+let _cached_encoder_for_ParentBlock: $.ASN1Encoder<ParentBlock> | null = null;
+
 
 /**
  * @summary Encodes a(n) ParentBlock into an ASN.1 Element.
@@ -36,7 +49,15 @@ export const _decode_ParentBlock: $.ASN1Decoder<ParentBlock> = _decode_HashPoint
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ParentBlock, encoded as an ASN.1 Element.
  */
-export const _encode_ParentBlock: $.ASN1Encoder<ParentBlock> = _encode_HashPointer;
+export function _encode_ParentBlock(
+    value: ParentBlock,
+    elGetter: $.ASN1Encoder<ParentBlock>
+): _Element {
+    if (!_cached_encoder_for_ParentBlock) {
+        _cached_encoder_for_ParentBlock = _encode_HashPointer;
+    }
+    return _cached_encoder_for_ParentBlock(value, elGetter);
+}
 
 
 /* eslint-enable */

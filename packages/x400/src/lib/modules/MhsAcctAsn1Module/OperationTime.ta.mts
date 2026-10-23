@@ -32,13 +32,22 @@ import {
  */
 export type OperationTime = Time; // DefinedType
 
+let _cached_decoder_for_OperationTime: $.ASN1Decoder<OperationTime> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) OperationTime
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {OperationTime} The decoded data structure.
  */
-export const _decode_OperationTime: $.ASN1Decoder<OperationTime> = _decode_Time;
+export function _decode_OperationTime(el: _Element): OperationTime {
+    if (!_cached_decoder_for_OperationTime) {
+        _cached_decoder_for_OperationTime = _decode_Time;
+    }
+    return _cached_decoder_for_OperationTime(el);
+}
+
+let _cached_encoder_for_OperationTime: $.ASN1Encoder<OperationTime> | null = null;
 
 /**
  * @summary Encodes a(n) OperationTime into an ASN.1 Element.
@@ -47,7 +56,15 @@ export const _decode_OperationTime: $.ASN1Decoder<OperationTime> = _decode_Time;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The OperationTime, encoded as an ASN.1 Element.
  */
-export const _encode_OperationTime: $.ASN1Encoder<OperationTime> = _encode_Time;
+export function _encode_OperationTime(
+    value: OperationTime,
+    elGetter: $.ASN1Encoder<OperationTime>
+): _Element {
+    if (!_cached_encoder_for_OperationTime) {
+        _cached_encoder_for_OperationTime = _encode_Time;
+    }
+    return _cached_encoder_for_OperationTime(value, elGetter);
+}
 
 
 /* eslint-enable */

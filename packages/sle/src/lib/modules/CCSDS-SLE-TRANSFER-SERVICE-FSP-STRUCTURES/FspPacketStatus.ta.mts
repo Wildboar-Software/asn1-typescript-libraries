@@ -93,6 +93,8 @@ function _decode_FspPacketStatus (el: _Element): FspPacketStatus {
     return _decoded;
 }
 
+let _cached_encoder_for_FspPacketStatus: $.ASN1Encoder<FspPacketStatus> | null = null;
+
 /**
  * @summary Encodes a(n) FspPacketStatus into an ASN.1 Element.
  * @function
@@ -100,7 +102,11 @@ function _decode_FspPacketStatus (el: _Element): FspPacketStatus {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The FspPacketStatus, encoded as an ASN.1 Element.
  */
-export const _encode_FspPacketStatus: (value: FspPacketStatus, elGetter: $.ASN1Encoder<any>) => _Element = _encode_ForwardDuStatus;
+export
+function _encode_FspPacketStatus (value: FspPacketStatus, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_FspPacketStatus) { _cached_encoder_for_FspPacketStatus = _encode_ForwardDuStatus; }
+    return _cached_encoder_for_FspPacketStatus(value, elGetter);
+}
 
 
 /* eslint-enable */

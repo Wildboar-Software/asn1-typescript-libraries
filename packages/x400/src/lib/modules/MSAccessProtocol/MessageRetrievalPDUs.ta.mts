@@ -30,13 +30,22 @@ import {
  */
 export type MessageRetrievalPDUs = ROS_SingleAS; // DefinedType
 
+let _cached_decoder_for_MessageRetrievalPDUs: $.ASN1Decoder<MessageRetrievalPDUs> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageRetrievalPDUs
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {MessageRetrievalPDUs} The decoded data structure.
  */
-export const _decode_MessageRetrievalPDUs: $.ASN1Decoder<MessageRetrievalPDUs> = _decode_ROS_SingleAS;
+export function _decode_MessageRetrievalPDUs(el: _Element): MessageRetrievalPDUs {
+    if (!_cached_decoder_for_MessageRetrievalPDUs) {
+        _cached_decoder_for_MessageRetrievalPDUs = _decode_ROS_SingleAS;
+    }
+    return _cached_decoder_for_MessageRetrievalPDUs(el);
+}
+
+let _cached_encoder_for_MessageRetrievalPDUs: $.ASN1Encoder<MessageRetrievalPDUs> | null = null;
 
 /**
  * @summary Encodes a(n) MessageRetrievalPDUs into an ASN.1 Element.
@@ -45,7 +54,15 @@ export const _decode_MessageRetrievalPDUs: $.ASN1Decoder<MessageRetrievalPDUs> =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MessageRetrievalPDUs, encoded as an ASN.1 Element.
  */
-export const _encode_MessageRetrievalPDUs: $.ASN1Encoder<MessageRetrievalPDUs> = _encode_ROS_SingleAS;
+export function _encode_MessageRetrievalPDUs(
+    value: MessageRetrievalPDUs,
+    elGetter: $.ASN1Encoder<MessageRetrievalPDUs>
+): _Element {
+    if (!_cached_encoder_for_MessageRetrievalPDUs) {
+        _cached_encoder_for_MessageRetrievalPDUs = _encode_ROS_SingleAS;
+    }
+    return _cached_encoder_for_MessageRetrievalPDUs(value, elGetter);
+}
 
 
 /* eslint-enable */

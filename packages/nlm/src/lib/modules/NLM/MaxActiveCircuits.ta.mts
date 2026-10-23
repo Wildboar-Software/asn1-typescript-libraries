@@ -33,13 +33,26 @@ import {
  */
 export type MaxActiveCircuits = ChoiceInteger; // DefinedType
 
+
+let _cached_decoder_for_MaxActiveCircuits: $.ASN1Decoder<MaxActiveCircuits> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MaxActiveCircuits
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {MaxActiveCircuits} The decoded data structure.
  */
-export const _decode_MaxActiveCircuits: $.ASN1Decoder<MaxActiveCircuits> = _decode_ChoiceInteger;
+export function _decode_MaxActiveCircuits(el: _Element): MaxActiveCircuits {
+    if (!_cached_decoder_for_MaxActiveCircuits) {
+        _cached_decoder_for_MaxActiveCircuits = _decode_ChoiceInteger;
+    }
+    return _cached_decoder_for_MaxActiveCircuits(el);
+}
+
+
+let _cached_encoder_for_MaxActiveCircuits: $.ASN1Encoder<MaxActiveCircuits> | null = null;
+
 
 /**
  * @summary Encodes a(n) MaxActiveCircuits into an ASN.1 Element.
@@ -48,7 +61,15 @@ export const _decode_MaxActiveCircuits: $.ASN1Decoder<MaxActiveCircuits> = _deco
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MaxActiveCircuits, encoded as an ASN.1 Element.
  */
-export const _encode_MaxActiveCircuits: $.ASN1Encoder<MaxActiveCircuits> = _encode_ChoiceInteger;
+export function _encode_MaxActiveCircuits(
+    value: MaxActiveCircuits,
+    elGetter: $.ASN1Encoder<MaxActiveCircuits>
+): _Element {
+    if (!_cached_encoder_for_MaxActiveCircuits) {
+        _cached_encoder_for_MaxActiveCircuits = _encode_ChoiceInteger;
+    }
+    return _cached_encoder_for_MaxActiveCircuits(value, elGetter);
+}
 
 
 /* eslint-enable */

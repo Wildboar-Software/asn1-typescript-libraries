@@ -29,13 +29,22 @@ import {
  */
 export type SupplReceiptInfoField = SupplementaryInformation; // DefinedType
 
+let _cached_decoder_for_SupplReceiptInfoField: $.ASN1Decoder<SupplReceiptInfoField> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SupplReceiptInfoField
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {SupplReceiptInfoField} The decoded data structure.
  */
-export const _decode_SupplReceiptInfoField: $.ASN1Decoder<SupplReceiptInfoField> = _decode_SupplementaryInformation;
+export function _decode_SupplReceiptInfoField(el: _Element): SupplReceiptInfoField {
+    if (!_cached_decoder_for_SupplReceiptInfoField) {
+        _cached_decoder_for_SupplReceiptInfoField = _decode_SupplementaryInformation;
+    }
+    return _cached_decoder_for_SupplReceiptInfoField(el);
+}
+
+let _cached_encoder_for_SupplReceiptInfoField: $.ASN1Encoder<SupplReceiptInfoField> | null = null;
 
 /**
  * @summary Encodes a(n) SupplReceiptInfoField into an ASN.1 Element.
@@ -44,7 +53,15 @@ export const _decode_SupplReceiptInfoField: $.ASN1Decoder<SupplReceiptInfoField>
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SupplReceiptInfoField, encoded as an ASN.1 Element.
  */
-export const _encode_SupplReceiptInfoField: $.ASN1Encoder<SupplReceiptInfoField> = _encode_SupplementaryInformation;
+export function _encode_SupplReceiptInfoField(
+    value: SupplReceiptInfoField,
+    elGetter: $.ASN1Encoder<SupplReceiptInfoField>
+): _Element {
+    if (!_cached_encoder_for_SupplReceiptInfoField) {
+        _cached_encoder_for_SupplReceiptInfoField = _encode_SupplementaryInformation;
+    }
+    return _cached_encoder_for_SupplReceiptInfoField(value, elGetter);
+}
 
 
 /* eslint-enable */

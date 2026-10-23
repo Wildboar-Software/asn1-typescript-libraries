@@ -31,13 +31,22 @@ import {
  */
 export type ProofOfSubmissionAlgorithmIdentifier = AlgorithmIdentifier; // DefinedType
 
+let _cached_decoder_for_ProofOfSubmissionAlgorithmIdentifier: $.ASN1Decoder<ProofOfSubmissionAlgorithmIdentifier> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ProofOfSubmissionAlgorithmIdentifier
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ProofOfSubmissionAlgorithmIdentifier} The decoded data structure.
  */
-export const _decode_ProofOfSubmissionAlgorithmIdentifier: $.ASN1Decoder<ProofOfSubmissionAlgorithmIdentifier> = _decode_AlgorithmIdentifier;
+export function _decode_ProofOfSubmissionAlgorithmIdentifier(el: _Element): ProofOfSubmissionAlgorithmIdentifier {
+    if (!_cached_decoder_for_ProofOfSubmissionAlgorithmIdentifier) {
+        _cached_decoder_for_ProofOfSubmissionAlgorithmIdentifier = _decode_AlgorithmIdentifier;
+    }
+    return _cached_decoder_for_ProofOfSubmissionAlgorithmIdentifier(el);
+}
+
+let _cached_encoder_for_ProofOfSubmissionAlgorithmIdentifier: $.ASN1Encoder<ProofOfSubmissionAlgorithmIdentifier> | null = null;
 
 /**
  * @summary Encodes a(n) ProofOfSubmissionAlgorithmIdentifier into an ASN.1 Element.
@@ -46,7 +55,18 @@ export const _decode_ProofOfSubmissionAlgorithmIdentifier: $.ASN1Decoder<ProofOf
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ProofOfSubmissionAlgorithmIdentifier, encoded as an ASN.1 Element.
  */
-export const _encode_ProofOfSubmissionAlgorithmIdentifier: $.ASN1Encoder<ProofOfSubmissionAlgorithmIdentifier> = _encode_AlgorithmIdentifier;
+export function _encode_ProofOfSubmissionAlgorithmIdentifier(
+    value: ProofOfSubmissionAlgorithmIdentifier,
+    elGetter: $.ASN1Encoder<ProofOfSubmissionAlgorithmIdentifier>
+): _Element {
+    if (!_cached_encoder_for_ProofOfSubmissionAlgorithmIdentifier) {
+        _cached_encoder_for_ProofOfSubmissionAlgorithmIdentifier = _encode_AlgorithmIdentifier;
+    }
+    return _cached_encoder_for_ProofOfSubmissionAlgorithmIdentifier(
+        value,
+        elGetter
+    );
+}
 
 
 /* eslint-enable */

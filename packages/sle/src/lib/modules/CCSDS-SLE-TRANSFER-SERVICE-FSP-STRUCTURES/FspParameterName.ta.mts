@@ -164,6 +164,8 @@ function _decode_FspParameterName (el: _Element): FspParameterName {
     return _decoded;
 }
 
+let _cached_encoder_for_FspParameterName: $.ASN1Encoder<FspParameterName> | null = null;
+
 /**
  * @summary Encodes a(n) FspParameterName into an ASN.1 Element.
  * @function
@@ -171,7 +173,11 @@ function _decode_FspParameterName (el: _Element): FspParameterName {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The FspParameterName, encoded as an ASN.1 Element.
  */
-export const _encode_FspParameterName: (value: FspParameterName, elGetter: $.ASN1Encoder<any>) => _Element = _encode_ParameterName;
+export
+function _encode_FspParameterName (value: FspParameterName, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_FspParameterName) { _cached_encoder_for_FspParameterName = _encode_ParameterName; }
+    return _cached_encoder_for_FspParameterName(value, elGetter);
+}
 
 
 /* eslint-enable */

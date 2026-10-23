@@ -32,13 +32,22 @@ import {
  */
 export type SubmissionPortOperations = EventTypeId; // DefinedType
 
+let _cached_decoder_for_SubmissionPortOperations: $.ASN1Decoder<SubmissionPortOperations> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SubmissionPortOperations
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {SubmissionPortOperations} The decoded data structure.
  */
-export const _decode_SubmissionPortOperations: $.ASN1Decoder<SubmissionPortOperations> = _decode_EventTypeId;
+export function _decode_SubmissionPortOperations(el: _Element): SubmissionPortOperations {
+    if (!_cached_decoder_for_SubmissionPortOperations) {
+        _cached_decoder_for_SubmissionPortOperations = _decode_EventTypeId;
+    }
+    return _cached_decoder_for_SubmissionPortOperations(el);
+}
+
+let _cached_encoder_for_SubmissionPortOperations: $.ASN1Encoder<SubmissionPortOperations> | null = null;
 
 /**
  * @summary Encodes a(n) SubmissionPortOperations into an ASN.1 Element.
@@ -47,7 +56,15 @@ export const _decode_SubmissionPortOperations: $.ASN1Decoder<SubmissionPortOpera
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SubmissionPortOperations, encoded as an ASN.1 Element.
  */
-export const _encode_SubmissionPortOperations: $.ASN1Encoder<SubmissionPortOperations> = _encode_EventTypeId;
+export function _encode_SubmissionPortOperations(
+    value: SubmissionPortOperations,
+    elGetter: $.ASN1Encoder<SubmissionPortOperations>
+): _Element {
+    if (!_cached_encoder_for_SubmissionPortOperations) {
+        _cached_encoder_for_SubmissionPortOperations = _encode_EventTypeId;
+    }
+    return _cached_encoder_for_SubmissionPortOperations(value, elGetter);
+}
 
 
 /* eslint-enable */

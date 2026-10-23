@@ -31,13 +31,22 @@ import {
  */
 export type MessageDeliveryTime = Time; // DefinedType
 
+let _cached_decoder_for_MessageDeliveryTime: $.ASN1Decoder<MessageDeliveryTime> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageDeliveryTime
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {MessageDeliveryTime} The decoded data structure.
  */
-export const _decode_MessageDeliveryTime: $.ASN1Decoder<MessageDeliveryTime> = _decode_Time;
+export function _decode_MessageDeliveryTime(el: _Element): MessageDeliveryTime {
+    if (!_cached_decoder_for_MessageDeliveryTime) {
+        _cached_decoder_for_MessageDeliveryTime = _decode_Time;
+    }
+    return _cached_decoder_for_MessageDeliveryTime(el);
+}
+
+let _cached_encoder_for_MessageDeliveryTime: $.ASN1Encoder<MessageDeliveryTime> | null = null;
 
 /**
  * @summary Encodes a(n) MessageDeliveryTime into an ASN.1 Element.
@@ -46,7 +55,15 @@ export const _decode_MessageDeliveryTime: $.ASN1Decoder<MessageDeliveryTime> = _
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MessageDeliveryTime, encoded as an ASN.1 Element.
  */
-export const _encode_MessageDeliveryTime: $.ASN1Encoder<MessageDeliveryTime> = _encode_Time;
+export function _encode_MessageDeliveryTime(
+    value: MessageDeliveryTime,
+    elGetter: $.ASN1Encoder<MessageDeliveryTime>
+): _Element {
+    if (!_cached_encoder_for_MessageDeliveryTime) {
+        _cached_encoder_for_MessageDeliveryTime = _encode_Time;
+    }
+    return _cached_encoder_for_MessageDeliveryTime(value, elGetter);
+}
 
 
 /* eslint-enable */

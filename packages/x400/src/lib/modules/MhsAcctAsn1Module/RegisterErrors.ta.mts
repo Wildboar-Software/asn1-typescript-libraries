@@ -27,13 +27,22 @@ import {
  */
 export type RegisterErrors = AdministrationError; // DefinedType
 
+let _cached_decoder_for_RegisterErrors: $.ASN1Decoder<RegisterErrors> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RegisterErrors
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {RegisterErrors} The decoded data structure.
  */
-export const _decode_RegisterErrors: $.ASN1Decoder<RegisterErrors> = _decode_AdministrationError;
+export function _decode_RegisterErrors(el: _Element): RegisterErrors {
+    if (!_cached_decoder_for_RegisterErrors) {
+        _cached_decoder_for_RegisterErrors = _decode_AdministrationError;
+    }
+    return _cached_decoder_for_RegisterErrors(el);
+}
+
+let _cached_encoder_for_RegisterErrors: $.ASN1Encoder<RegisterErrors> | null = null;
 
 /**
  * @summary Encodes a(n) RegisterErrors into an ASN.1 Element.
@@ -42,7 +51,15 @@ export const _decode_RegisterErrors: $.ASN1Decoder<RegisterErrors> = _decode_Adm
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RegisterErrors, encoded as an ASN.1 Element.
  */
-export const _encode_RegisterErrors: $.ASN1Encoder<RegisterErrors> = _encode_AdministrationError;
+export function _encode_RegisterErrors(
+    value: RegisterErrors,
+    elGetter: $.ASN1Encoder<RegisterErrors>
+): _Element {
+    if (!_cached_encoder_for_RegisterErrors) {
+        _cached_encoder_for_RegisterErrors = _encode_AdministrationError;
+    }
+    return _cached_encoder_for_RegisterErrors(value, elGetter);
+}
 
 
 /* eslint-enable */

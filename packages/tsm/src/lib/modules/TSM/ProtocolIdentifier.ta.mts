@@ -31,13 +31,21 @@ import { UINT8, _decode_UINT8, _encode_UINT8 } from "../TSM/UINT8.ta.mjs";
 export
 type ProtocolIdentifier = UINT8; // DefinedType
 
+let _cached_decoder_for_ProtocolIdentifier: $.ASN1Decoder<ProtocolIdentifier> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ProtocolIdentifier
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_ProtocolIdentifier: $.ASN1Decoder<ProtocolIdentifier> = _decode_UINT8;
+export
+function _decode_ProtocolIdentifier (el: _Element): ProtocolIdentifier {
+    if (!_cached_decoder_for_ProtocolIdentifier) { _cached_decoder_for_ProtocolIdentifier = _decode_UINT8; }
+    return _cached_decoder_for_ProtocolIdentifier(el);
+}
+
+let _cached_encoder_for_ProtocolIdentifier: $.ASN1Encoder<ProtocolIdentifier> | null = null;
 
 /**
  * @summary Encodes a(n) ProtocolIdentifier into an ASN.1 Element.
@@ -46,7 +54,11 @@ export const _decode_ProtocolIdentifier: $.ASN1Decoder<ProtocolIdentifier> = _de
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ProtocolIdentifier, encoded as an ASN.1 Element.
  */
-export const _encode_ProtocolIdentifier: (value: ProtocolIdentifier, elGetter: $.ASN1Encoder<any>) => _Element = _encode_UINT8;
+export
+function _encode_ProtocolIdentifier (value: ProtocolIdentifier, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_ProtocolIdentifier) { _cached_encoder_for_ProtocolIdentifier = _encode_UINT8; }
+    return _cached_encoder_for_ProtocolIdentifier(value, elGetter);
+}
 
 
 /* eslint-enable */

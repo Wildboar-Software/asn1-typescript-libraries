@@ -28,13 +28,22 @@ import {
  */
 export type BDBCreationDate = Date_Time; // DefinedType
 
+let _cached_decoder_for_BDBCreationDate: $.ASN1Decoder<BDBCreationDate> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) BDBCreationDate
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {BDBCreationDate} The decoded data structure.
  */
-export const _decode_BDBCreationDate: $.ASN1Decoder<BDBCreationDate> = _decode_Date_Time;
+export function _decode_BDBCreationDate(el: _Element): BDBCreationDate {
+  if (!_cached_decoder_for_BDBCreationDate) {
+    _cached_decoder_for_BDBCreationDate = _decode_Date_Time;
+  }
+  return _cached_decoder_for_BDBCreationDate(el);
+}
+
+let _cached_encoder_for_BDBCreationDate: $.ASN1Encoder<BDBCreationDate> | null = null;
 
 /**
  * @summary Encodes a(n) BDBCreationDate into an ASN.1 Element.
@@ -43,7 +52,15 @@ export const _decode_BDBCreationDate: $.ASN1Decoder<BDBCreationDate> = _decode_D
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The BDBCreationDate, encoded as an ASN.1 Element.
  */
-export const _encode_BDBCreationDate: $.ASN1Encoder<BDBCreationDate> = _encode_Date_Time;
+export function _encode_BDBCreationDate(
+  value: BDBCreationDate,
+  elGetter: $.ASN1Encoder<BDBCreationDate>
+): _Element {
+  if (!_cached_encoder_for_BDBCreationDate) {
+    _cached_encoder_for_BDBCreationDate = _encode_Date_Time;
+  }
+  return _cached_encoder_for_BDBCreationDate(value, elGetter);
+}
 
 
 /* eslint-enable */

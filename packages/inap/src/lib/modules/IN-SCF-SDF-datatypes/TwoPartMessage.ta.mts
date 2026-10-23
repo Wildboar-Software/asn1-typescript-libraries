@@ -20,13 +20,21 @@ import { NPartsMessage, _decode_NPartsMessage, _encode_NPartsMessage } from "../
 export
 type TwoPartMessage = NPartsMessage; // DefinedType
 
+let _cached_decoder_for_TwoPartMessage: $.ASN1Decoder<TwoPartMessage> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TwoPartMessage
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_TwoPartMessage: $.ASN1Decoder<TwoPartMessage> = _decode_NPartsMessage;
+export
+function _decode_TwoPartMessage (el: _Element): TwoPartMessage {
+    if (!_cached_decoder_for_TwoPartMessage) { _cached_decoder_for_TwoPartMessage = _decode_NPartsMessage; }
+    return _cached_decoder_for_TwoPartMessage(el);
+}
+
+let _cached_encoder_for_TwoPartMessage: $.ASN1Encoder<TwoPartMessage> | null = null;
 
 /**
  * @summary Encodes a(n) TwoPartMessage into an ASN.1 Element.
@@ -35,7 +43,11 @@ export const _decode_TwoPartMessage: $.ASN1Decoder<TwoPartMessage> = _decode_NPa
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TwoPartMessage, encoded as an ASN.1 Element.
  */
-export const _encode_TwoPartMessage: (value: TwoPartMessage, elGetter: $.ASN1Encoder<any>) => _Element = _encode_NPartsMessage;
+export
+function _encode_TwoPartMessage (value: TwoPartMessage, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_TwoPartMessage) { _cached_encoder_for_TwoPartMessage = _encode_NPartsMessage; }
+    return _cached_encoder_for_TwoPartMessage(value, elGetter);
+}
 
 
 /* eslint-enable */

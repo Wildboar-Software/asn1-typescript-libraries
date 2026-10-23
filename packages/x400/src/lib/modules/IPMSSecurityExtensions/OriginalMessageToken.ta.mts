@@ -29,13 +29,22 @@ import {
  */
 export type OriginalMessageToken = MessageToken; // DefinedType
 
+let _cached_decoder_for_OriginalMessageToken: $.ASN1Decoder<OriginalMessageToken> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) OriginalMessageToken
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {OriginalMessageToken} The decoded data structure.
  */
-export const _decode_OriginalMessageToken: $.ASN1Decoder<OriginalMessageToken> = _decode_MessageToken;
+export function _decode_OriginalMessageToken(el: _Element): OriginalMessageToken {
+    if (!_cached_decoder_for_OriginalMessageToken) {
+        _cached_decoder_for_OriginalMessageToken = _decode_MessageToken;
+    }
+    return _cached_decoder_for_OriginalMessageToken(el);
+}
+
+let _cached_encoder_for_OriginalMessageToken: $.ASN1Encoder<OriginalMessageToken> | null = null;
 
 /**
  * @summary Encodes a(n) OriginalMessageToken into an ASN.1 Element.
@@ -44,7 +53,15 @@ export const _decode_OriginalMessageToken: $.ASN1Decoder<OriginalMessageToken> =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The OriginalMessageToken, encoded as an ASN.1 Element.
  */
-export const _encode_OriginalMessageToken: $.ASN1Encoder<OriginalMessageToken> = _encode_MessageToken;
+export function _encode_OriginalMessageToken(
+    value: OriginalMessageToken,
+    elGetter: $.ASN1Encoder<OriginalMessageToken>
+): _Element {
+    if (!_cached_encoder_for_OriginalMessageToken) {
+        _cached_encoder_for_OriginalMessageToken = _encode_MessageToken;
+    }
+    return _cached_encoder_for_OriginalMessageToken(value, elGetter);
+}
 
 
 /* eslint-enable */

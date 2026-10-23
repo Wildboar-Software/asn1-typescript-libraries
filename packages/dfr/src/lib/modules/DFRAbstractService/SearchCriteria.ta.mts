@@ -30,13 +30,21 @@ import { Filter, _decode_Filter, _encode_Filter } from "../DirectoryAbstractServ
 export
 type SearchCriteria = Filter; // DefinedType
 
+let _cached_decoder_for_SearchCriteria: $.ASN1Decoder<SearchCriteria> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SearchCriteria
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_SearchCriteria: $.ASN1Decoder<SearchCriteria> = _decode_Filter;
+export
+function _decode_SearchCriteria (el: _Element): SearchCriteria {
+    if (!_cached_decoder_for_SearchCriteria) { _cached_decoder_for_SearchCriteria = _decode_Filter; }
+    return _cached_decoder_for_SearchCriteria(el);
+}
+
+let _cached_encoder_for_SearchCriteria: $.ASN1Encoder<SearchCriteria> | null = null;
 
 /**
  * @summary Encodes a(n) SearchCriteria into an ASN.1 Element.
@@ -45,7 +53,11 @@ export const _decode_SearchCriteria: $.ASN1Decoder<SearchCriteria> = _decode_Fil
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SearchCriteria, encoded as an ASN.1 Element.
  */
-export const _encode_SearchCriteria: (value: SearchCriteria, elGetter: $.ASN1Encoder<any>) => _Element = _encode_Filter;
+export
+function _encode_SearchCriteria (value: SearchCriteria, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_SearchCriteria) { _cached_encoder_for_SearchCriteria = _encode_Filter; }
+    return _cached_encoder_for_SearchCriteria(value, elGetter);
+}
 
 
 /* eslint-enable */

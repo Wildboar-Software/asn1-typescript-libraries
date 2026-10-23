@@ -35,13 +35,26 @@ import {
  */
 export type ROS_SingleAS = ROS; // DefinedType
 
+
+let _cached_decoder_for_ROS_SingleAS: $.ASN1Decoder<ROS_SingleAS> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ROS_SingleAS
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ROS_SingleAS} The decoded data structure.
  */
-export const _decode_ROS_SingleAS: $.ASN1Decoder<ROS_SingleAS> = _decode_ROS;
+export function _decode_ROS_SingleAS(el: _Element): ROS_SingleAS {
+  if (!_cached_decoder_for_ROS_SingleAS) {
+    _cached_decoder_for_ROS_SingleAS = _decode_ROS;
+  }
+  return _cached_decoder_for_ROS_SingleAS(el);
+}
+
+
+let _cached_encoder_for_ROS_SingleAS: $.ASN1Encoder<ROS_SingleAS> | null = null;
+
 
 /**
  * @summary Encodes a(n) ROS_SingleAS into an ASN.1 Element.
@@ -50,7 +63,15 @@ export const _decode_ROS_SingleAS: $.ASN1Decoder<ROS_SingleAS> = _decode_ROS;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ROS_SingleAS, encoded as an ASN.1 Element.
  */
-export const _encode_ROS_SingleAS: $.ASN1Encoder<ROS_SingleAS> = _encode_ROS;
+export function _encode_ROS_SingleAS(
+  value: ROS_SingleAS,
+  elGetter: $.ASN1Encoder<ROS_SingleAS>
+): _Element {
+  if (!_cached_encoder_for_ROS_SingleAS) {
+    _cached_encoder_for_ROS_SingleAS = _encode_ROS;
+  }
+  return _cached_encoder_for_ROS_SingleAS(value, elGetter);
+}
 
 
 /* eslint-enable */

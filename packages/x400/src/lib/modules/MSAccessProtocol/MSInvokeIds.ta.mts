@@ -29,13 +29,22 @@ import {
  */
 export type MSInvokeIds = InvokeId; // DefinedType
 
+let _cached_decoder_for_MSInvokeIds: $.ASN1Decoder<MSInvokeIds> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MSInvokeIds
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {MSInvokeIds} The decoded data structure.
  */
-export const _decode_MSInvokeIds: $.ASN1Decoder<MSInvokeIds> = _decode_InvokeId;
+export function _decode_MSInvokeIds(el: _Element): MSInvokeIds {
+    if (!_cached_decoder_for_MSInvokeIds) {
+        _cached_decoder_for_MSInvokeIds = _decode_InvokeId;
+    }
+    return _cached_decoder_for_MSInvokeIds(el);
+}
+
+let _cached_encoder_for_MSInvokeIds: $.ASN1Encoder<MSInvokeIds> | null = null;
 
 /**
  * @summary Encodes a(n) MSInvokeIds into an ASN.1 Element.
@@ -44,7 +53,15 @@ export const _decode_MSInvokeIds: $.ASN1Decoder<MSInvokeIds> = _decode_InvokeId;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MSInvokeIds, encoded as an ASN.1 Element.
  */
-export const _encode_MSInvokeIds: $.ASN1Encoder<MSInvokeIds> = _encode_InvokeId;
+export function _encode_MSInvokeIds(
+    value: MSInvokeIds,
+    elGetter: $.ASN1Encoder<MSInvokeIds>
+): _Element {
+    if (!_cached_encoder_for_MSInvokeIds) {
+        _cached_encoder_for_MSInvokeIds = _encode_InvokeId;
+    }
+    return _cached_encoder_for_MSInvokeIds(value, elGetter);
+}
 
 
 /* eslint-enable */

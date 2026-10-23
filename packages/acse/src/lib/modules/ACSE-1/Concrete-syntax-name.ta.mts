@@ -31,13 +31,22 @@ import {
  */
 export type Concrete_syntax_name = Transfer_syntax_name; // DefinedType
 
+let _cached_decoder_for_Concrete_syntax_name: $.ASN1Decoder<Concrete_syntax_name> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Concrete_syntax_name
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {Concrete_syntax_name} The decoded data structure.
  */
-export const _decode_Concrete_syntax_name: $.ASN1Decoder<Concrete_syntax_name> = _decode_Transfer_syntax_name;
+export function _decode_Concrete_syntax_name(el: _Element): Concrete_syntax_name {
+  if (!_cached_decoder_for_Concrete_syntax_name) {
+    _cached_decoder_for_Concrete_syntax_name = _decode_Transfer_syntax_name;
+  }
+  return _cached_decoder_for_Concrete_syntax_name(el);
+}
+
+let _cached_encoder_for_Concrete_syntax_name: $.ASN1Encoder<Concrete_syntax_name> | null = null;
 
 /**
  * @summary Encodes a(n) Concrete_syntax_name into an ASN.1 Element.
@@ -46,7 +55,15 @@ export const _decode_Concrete_syntax_name: $.ASN1Decoder<Concrete_syntax_name> =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Concrete_syntax_name, encoded as an ASN.1 Element.
  */
-export const _encode_Concrete_syntax_name: $.ASN1Encoder<Concrete_syntax_name> = _encode_Transfer_syntax_name;
+export function _encode_Concrete_syntax_name(
+  value: Concrete_syntax_name,
+  elGetter: $.ASN1Encoder<Concrete_syntax_name>
+): _Element {
+  if (!_cached_encoder_for_Concrete_syntax_name) {
+    _cached_encoder_for_Concrete_syntax_name = _encode_Transfer_syntax_name;
+  }
+  return _cached_encoder_for_Concrete_syntax_name(value, elGetter);
+}
 
 
 /* eslint-enable */

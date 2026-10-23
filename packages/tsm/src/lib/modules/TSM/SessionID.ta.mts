@@ -30,13 +30,21 @@ import { UINT32, _decode_UINT32, _encode_UINT32 } from "../TSM/UINT32.ta.mjs";
 export
 type SessionID = UINT32; // DefinedType
 
+let _cached_decoder_for_SessionID: $.ASN1Decoder<SessionID> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SessionID
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_SessionID: $.ASN1Decoder<SessionID> = _decode_UINT32;
+export
+function _decode_SessionID (el: _Element): SessionID {
+    if (!_cached_decoder_for_SessionID) { _cached_decoder_for_SessionID = _decode_UINT32; }
+    return _cached_decoder_for_SessionID(el);
+}
+
+let _cached_encoder_for_SessionID: $.ASN1Encoder<SessionID> | null = null;
 
 /**
  * @summary Encodes a(n) SessionID into an ASN.1 Element.
@@ -45,7 +53,11 @@ export const _decode_SessionID: $.ASN1Decoder<SessionID> = _decode_UINT32;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SessionID, encoded as an ASN.1 Element.
  */
-export const _encode_SessionID: (value: SessionID, elGetter: $.ASN1Encoder<any>) => _Element = _encode_UINT32;
+export
+function _encode_SessionID (value: SessionID, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_SessionID) { _cached_encoder_for_SessionID = _encode_UINT32; }
+    return _cached_encoder_for_SessionID(value, elGetter);
+}
 
 
 /* eslint-enable */

@@ -25,13 +25,21 @@ import {
 export
 type ObjectOfReference = ObjectInstance; // DefinedType
 
+let _cached_decoder_for_ObjectOfReference: $.ASN1Decoder<ObjectOfReference> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ObjectOfReference
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_ObjectOfReference: $.ASN1Decoder<ObjectOfReference> = _decode_ObjectInstance;
+export
+function _decode_ObjectOfReference (el: _Element): ObjectOfReference {
+    if (!_cached_decoder_for_ObjectOfReference) { _cached_decoder_for_ObjectOfReference = _decode_ObjectInstance; }
+    return _cached_decoder_for_ObjectOfReference(el);
+}
+
+let _cached_encoder_for_ObjectOfReference: $.ASN1Encoder<ObjectOfReference> | null = null;
 
 /**
  * @summary Encodes a(n) ObjectOfReference into an ASN.1 Element.
@@ -40,7 +48,11 @@ export const _decode_ObjectOfReference: $.ASN1Decoder<ObjectOfReference> = _deco
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ObjectOfReference, encoded as an ASN.1 Element.
  */
-export const _encode_ObjectOfReference: (value: ObjectOfReference, elGetter: $.ASN1Encoder<any>) => _Element = _encode_ObjectInstance;
+export
+function _encode_ObjectOfReference (value: ObjectOfReference, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_ObjectOfReference) { _cached_encoder_for_ObjectOfReference = _encode_ObjectInstance; }
+    return _cached_encoder_for_ObjectOfReference(value, elGetter);
+}
 
 
 /* eslint-enable */

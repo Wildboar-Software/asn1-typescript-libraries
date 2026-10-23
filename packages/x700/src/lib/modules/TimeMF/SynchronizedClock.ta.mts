@@ -32,13 +32,22 @@ import {
  */
 export type SynchronizedClock = ObjectInstance; // DefinedType
 
+let _cached_decoder_for_SynchronizedClock: $.ASN1Decoder<SynchronizedClock> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SynchronizedClock
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {SynchronizedClock} The decoded data structure.
  */
-export const _decode_SynchronizedClock: $.ASN1Decoder<SynchronizedClock> = _decode_ObjectInstance;
+export function _decode_SynchronizedClock(el: _Element): SynchronizedClock {
+    if (!_cached_decoder_for_SynchronizedClock) {
+        _cached_decoder_for_SynchronizedClock = _decode_ObjectInstance;
+    }
+    return _cached_decoder_for_SynchronizedClock(el);
+}
+
+let _cached_encoder_for_SynchronizedClock: $.ASN1Encoder<SynchronizedClock> | null = null;
 
 /**
  * @summary Encodes a(n) SynchronizedClock into an ASN.1 Element.
@@ -47,7 +56,15 @@ export const _decode_SynchronizedClock: $.ASN1Decoder<SynchronizedClock> = _deco
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SynchronizedClock, encoded as an ASN.1 Element.
  */
-export const _encode_SynchronizedClock: $.ASN1Encoder<SynchronizedClock> = _encode_ObjectInstance;
+export function _encode_SynchronizedClock(
+    value: SynchronizedClock,
+    elGetter: $.ASN1Encoder<SynchronizedClock>
+): _Element {
+    if (!_cached_encoder_for_SynchronizedClock) {
+        _cached_encoder_for_SynchronizedClock = _encode_ObjectInstance;
+    }
+    return _cached_encoder_for_SynchronizedClock(value, elGetter);
+}
 
 
 /* eslint-enable */

@@ -31,13 +31,21 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
 export
 type ReportEventEnrollmentStatus_Request = ObjectName; // DefinedType
 
+let _cached_decoder_for_ReportEventEnrollmentStatus_Request: $.ASN1Decoder<ReportEventEnrollmentStatus_Request> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ReportEventEnrollmentStatus_Request
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_ReportEventEnrollmentStatus_Request: $.ASN1Decoder<ReportEventEnrollmentStatus_Request> = _decode_ObjectName;
+export
+function _decode_ReportEventEnrollmentStatus_Request (el: _Element): ReportEventEnrollmentStatus_Request {
+    if (!_cached_decoder_for_ReportEventEnrollmentStatus_Request) { _cached_decoder_for_ReportEventEnrollmentStatus_Request = _decode_ObjectName; }
+    return _cached_decoder_for_ReportEventEnrollmentStatus_Request(el);
+}
+
+let _cached_encoder_for_ReportEventEnrollmentStatus_Request: $.ASN1Encoder<ReportEventEnrollmentStatus_Request> | null = null;
 
 /**
  * @summary Encodes a(n) ReportEventEnrollmentStatus_Request into an ASN.1 Element.
@@ -46,7 +54,11 @@ export const _decode_ReportEventEnrollmentStatus_Request: $.ASN1Decoder<ReportEv
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ReportEventEnrollmentStatus_Request, encoded as an ASN.1 Element.
  */
-export const _encode_ReportEventEnrollmentStatus_Request: (value: ReportEventEnrollmentStatus_Request, elGetter: $.ASN1Encoder<any>) => _Element = _encode_ObjectName;
+export
+function _encode_ReportEventEnrollmentStatus_Request (value: ReportEventEnrollmentStatus_Request, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_ReportEventEnrollmentStatus_Request) { _cached_encoder_for_ReportEventEnrollmentStatus_Request = _encode_ObjectName; }
+    return _cached_encoder_for_ReportEventEnrollmentStatus_Request(value, elGetter);
+}
 
 
 /* eslint-enable */

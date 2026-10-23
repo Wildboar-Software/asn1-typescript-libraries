@@ -22,13 +22,26 @@ import {
  */
 export type SigncryptedPartsManifest = Signcrypted; // DefinedType
 
+
+let _cached_decoder_for_SigncryptedPartsManifest: $.ASN1Decoder<SigncryptedPartsManifest> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SigncryptedPartsManifest
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {SigncryptedPartsManifest} The decoded data structure.
  */
-export const _decode_SigncryptedPartsManifest: $.ASN1Decoder<SigncryptedPartsManifest> = _decode_Signcrypted;
+export function _decode_SigncryptedPartsManifest(el: _Element): SigncryptedPartsManifest {
+    if (!_cached_decoder_for_SigncryptedPartsManifest) {
+        _cached_decoder_for_SigncryptedPartsManifest = _decode_Signcrypted;
+    }
+    return _cached_decoder_for_SigncryptedPartsManifest(el);
+}
+
+
+let _cached_encoder_for_SigncryptedPartsManifest: $.ASN1Encoder<SigncryptedPartsManifest> | null = null;
+
 
 /**
  * @summary Encodes a(n) SigncryptedPartsManifest into an ASN.1 Element.
@@ -37,7 +50,15 @@ export const _decode_SigncryptedPartsManifest: $.ASN1Decoder<SigncryptedPartsMan
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SigncryptedPartsManifest, encoded as an ASN.1 Element.
  */
-export const _encode_SigncryptedPartsManifest: $.ASN1Encoder<SigncryptedPartsManifest> = _encode_Signcrypted;
+export function _encode_SigncryptedPartsManifest(
+    value: SigncryptedPartsManifest,
+    elGetter: $.ASN1Encoder<SigncryptedPartsManifest>
+): _Element {
+    if (!_cached_encoder_for_SigncryptedPartsManifest) {
+        _cached_encoder_for_SigncryptedPartsManifest = _encode_Signcrypted;
+    }
+    return _cached_encoder_for_SigncryptedPartsManifest(value, elGetter);
+}
 
 
 /* eslint-enable */

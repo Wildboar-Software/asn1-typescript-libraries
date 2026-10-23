@@ -25,13 +25,21 @@ import { MCMExtensions, _decode_MCMExtensions, _encode_MCMExtensions } from "../
 export
 type MCMDummyRes = MCMExtensions; // DefinedType
 
+let _cached_decoder_for_MCMDummyRes: $.ASN1Decoder<MCMDummyRes> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MCMDummyRes
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_MCMDummyRes: $.ASN1Decoder<MCMDummyRes> = _decode_MCMExtensions;
+export
+function _decode_MCMDummyRes (el: _Element): MCMDummyRes {
+    if (!_cached_decoder_for_MCMDummyRes) { _cached_decoder_for_MCMDummyRes = _decode_MCMExtensions; }
+    return _cached_decoder_for_MCMDummyRes(el);
+}
+
+let _cached_encoder_for_MCMDummyRes: $.ASN1Encoder<MCMDummyRes> | null = null;
 
 /**
  * @summary Encodes a(n) MCMDummyRes into an ASN.1 Element.
@@ -40,6 +48,10 @@ export const _decode_MCMDummyRes: $.ASN1Decoder<MCMDummyRes> = _decode_MCMExtens
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MCMDummyRes, encoded as an ASN.1 Element.
  */
-export const _encode_MCMDummyRes: (value: MCMDummyRes, elGetter: $.ASN1Encoder<any>) => _Element = _encode_MCMExtensions;
+export
+function _encode_MCMDummyRes (value: MCMDummyRes, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_MCMDummyRes) { _cached_encoder_for_MCMDummyRes = _encode_MCMExtensions; }
+    return _cached_encoder_for_MCMDummyRes(value, elGetter);
+}
 
 /* eslint-enable */

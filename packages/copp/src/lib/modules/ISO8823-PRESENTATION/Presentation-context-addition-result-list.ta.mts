@@ -31,13 +31,28 @@ import {
  */
 export type Presentation_context_addition_result_list = Result_list; // DefinedType
 
+
+let _cached_decoder_for_Presentation_context_addition_result_list: $.ASN1Decoder<Presentation_context_addition_result_list> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Presentation_context_addition_result_list
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {Presentation_context_addition_result_list} The decoded data structure.
  */
-export const _decode_Presentation_context_addition_result_list: $.ASN1Decoder<Presentation_context_addition_result_list> = _decode_Result_list;
+export function _decode_Presentation_context_addition_result_list(
+    el: _Element
+): Presentation_context_addition_result_list {
+    if (!_cached_decoder_for_Presentation_context_addition_result_list) {
+        _cached_decoder_for_Presentation_context_addition_result_list = _decode_Result_list;
+    }
+    return _cached_decoder_for_Presentation_context_addition_result_list(el);
+}
+
+
+let _cached_encoder_for_Presentation_context_addition_result_list: $.ASN1Encoder<Presentation_context_addition_result_list> | null = null;
+
 
 /**
  * @summary Encodes a(n) Presentation_context_addition_result_list into an ASN.1 Element.
@@ -46,7 +61,18 @@ export const _decode_Presentation_context_addition_result_list: $.ASN1Decoder<Pr
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Presentation_context_addition_result_list, encoded as an ASN.1 Element.
  */
-export const _encode_Presentation_context_addition_result_list: $.ASN1Encoder<Presentation_context_addition_result_list> = _encode_Result_list;
+export function _encode_Presentation_context_addition_result_list(
+    value: Presentation_context_addition_result_list,
+    elGetter: $.ASN1Encoder<Presentation_context_addition_result_list>
+): _Element {
+    if (!_cached_encoder_for_Presentation_context_addition_result_list) {
+        _cached_encoder_for_Presentation_context_addition_result_list = _encode_Result_list;
+    }
+    return _cached_encoder_for_Presentation_context_addition_result_list(
+        value,
+        elGetter
+    );
+}
 
 
 /* eslint-enable */

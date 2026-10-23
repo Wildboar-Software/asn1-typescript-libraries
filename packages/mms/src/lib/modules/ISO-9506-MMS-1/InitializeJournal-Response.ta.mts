@@ -29,13 +29,21 @@ import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-
 export
 type InitializeJournal_Response = Unsigned32; // DefinedType
 
+let _cached_decoder_for_InitializeJournal_Response: $.ASN1Decoder<InitializeJournal_Response> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) InitializeJournal_Response
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_InitializeJournal_Response: $.ASN1Decoder<InitializeJournal_Response> = _decode_Unsigned32;
+export
+function _decode_InitializeJournal_Response (el: _Element): InitializeJournal_Response {
+    if (!_cached_decoder_for_InitializeJournal_Response) { _cached_decoder_for_InitializeJournal_Response = _decode_Unsigned32; }
+    return _cached_decoder_for_InitializeJournal_Response(el);
+}
+
+let _cached_encoder_for_InitializeJournal_Response: $.ASN1Encoder<InitializeJournal_Response> | null = null;
 
 /**
  * @summary Encodes a(n) InitializeJournal_Response into an ASN.1 Element.
@@ -44,7 +52,11 @@ export const _decode_InitializeJournal_Response: $.ASN1Decoder<InitializeJournal
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The InitializeJournal_Response, encoded as an ASN.1 Element.
  */
-export const _encode_InitializeJournal_Response: (value: InitializeJournal_Response, elGetter: $.ASN1Encoder<any>) => _Element = _encode_Unsigned32;
+export
+function _encode_InitializeJournal_Response (value: InitializeJournal_Response, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_InitializeJournal_Response) { _cached_encoder_for_InitializeJournal_Response = _encode_Unsigned32; }
+    return _cached_encoder_for_InitializeJournal_Response(value, elGetter);
+}
 
 
 /* eslint-enable */

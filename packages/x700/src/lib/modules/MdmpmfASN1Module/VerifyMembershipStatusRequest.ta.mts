@@ -32,13 +32,22 @@ import {
  */
 export type VerifyMembershipStatusRequest = ObjectInstance; // DefinedType
 
+let _cached_decoder_for_VerifyMembershipStatusRequest: $.ASN1Decoder<VerifyMembershipStatusRequest> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) VerifyMembershipStatusRequest
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {VerifyMembershipStatusRequest} The decoded data structure.
  */
-export const _decode_VerifyMembershipStatusRequest: $.ASN1Decoder<VerifyMembershipStatusRequest> = _decode_ObjectInstance;
+export function _decode_VerifyMembershipStatusRequest(el: _Element): VerifyMembershipStatusRequest {
+    if (!_cached_decoder_for_VerifyMembershipStatusRequest) {
+        _cached_decoder_for_VerifyMembershipStatusRequest = _decode_ObjectInstance;
+    }
+    return _cached_decoder_for_VerifyMembershipStatusRequest(el);
+}
+
+let _cached_encoder_for_VerifyMembershipStatusRequest: $.ASN1Encoder<VerifyMembershipStatusRequest> | null = null;
 
 /**
  * @summary Encodes a(n) VerifyMembershipStatusRequest into an ASN.1 Element.
@@ -47,7 +56,15 @@ export const _decode_VerifyMembershipStatusRequest: $.ASN1Decoder<VerifyMembersh
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The VerifyMembershipStatusRequest, encoded as an ASN.1 Element.
  */
-export const _encode_VerifyMembershipStatusRequest: $.ASN1Encoder<VerifyMembershipStatusRequest> = _encode_ObjectInstance;
+export function _encode_VerifyMembershipStatusRequest(
+    value: VerifyMembershipStatusRequest,
+    elGetter: $.ASN1Encoder<VerifyMembershipStatusRequest>
+): _Element {
+    if (!_cached_encoder_for_VerifyMembershipStatusRequest) {
+        _cached_encoder_for_VerifyMembershipStatusRequest = _encode_ObjectInstance;
+    }
+    return _cached_encoder_for_VerifyMembershipStatusRequest(value, elGetter);
+}
 
 
 /* eslint-enable */

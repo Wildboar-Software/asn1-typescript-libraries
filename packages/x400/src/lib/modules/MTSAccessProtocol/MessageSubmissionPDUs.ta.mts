@@ -29,13 +29,22 @@ import {
  */
 export type MessageSubmissionPDUs = ROS_SingleAS; // DefinedType
 
+let _cached_decoder_for_MessageSubmissionPDUs: $.ASN1Decoder<MessageSubmissionPDUs> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageSubmissionPDUs
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {MessageSubmissionPDUs} The decoded data structure.
  */
-export const _decode_MessageSubmissionPDUs: $.ASN1Decoder<MessageSubmissionPDUs> = _decode_ROS_SingleAS;
+export function _decode_MessageSubmissionPDUs(el: _Element): MessageSubmissionPDUs {
+    if (!_cached_decoder_for_MessageSubmissionPDUs) {
+        _cached_decoder_for_MessageSubmissionPDUs = _decode_ROS_SingleAS;
+    }
+    return _cached_decoder_for_MessageSubmissionPDUs(el);
+}
+
+let _cached_encoder_for_MessageSubmissionPDUs: $.ASN1Encoder<MessageSubmissionPDUs> | null = null;
 
 /**
  * @summary Encodes a(n) MessageSubmissionPDUs into an ASN.1 Element.
@@ -44,7 +53,15 @@ export const _decode_MessageSubmissionPDUs: $.ASN1Decoder<MessageSubmissionPDUs>
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MessageSubmissionPDUs, encoded as an ASN.1 Element.
  */
-export const _encode_MessageSubmissionPDUs: $.ASN1Encoder<MessageSubmissionPDUs> = _encode_ROS_SingleAS;
+export function _encode_MessageSubmissionPDUs(
+    value: MessageSubmissionPDUs,
+    elGetter: $.ASN1Encoder<MessageSubmissionPDUs>
+): _Element {
+    if (!_cached_encoder_for_MessageSubmissionPDUs) {
+        _cached_encoder_for_MessageSubmissionPDUs = _encode_ROS_SingleAS;
+    }
+    return _cached_encoder_for_MessageSubmissionPDUs(value, elGetter);
+}
 
 
 /* eslint-enable */

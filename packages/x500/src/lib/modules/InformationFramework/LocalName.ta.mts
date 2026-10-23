@@ -23,13 +23,22 @@ import {
  */
 export type LocalName = RDNSequence; // DefinedType
 
+let _cached_decoder_for_LocalName: $.ASN1Decoder<LocalName> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) LocalName
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {LocalName} The decoded data structure.
  */
-export const _decode_LocalName: $.ASN1Decoder<LocalName> = _decode_RDNSequence;
+export function _decode_LocalName(el: _Element): LocalName {
+    if (!_cached_decoder_for_LocalName) {
+        _cached_decoder_for_LocalName = _decode_RDNSequence;
+    }
+    return _cached_decoder_for_LocalName(el);
+}
+
+let _cached_encoder_for_LocalName: $.ASN1Encoder<LocalName> | null = null;
 
 /**
  * @summary Encodes a(n) LocalName into an ASN.1 Element.
@@ -38,7 +47,15 @@ export const _decode_LocalName: $.ASN1Decoder<LocalName> = _decode_RDNSequence;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LocalName, encoded as an ASN.1 Element.
  */
-export const _encode_LocalName: $.ASN1Encoder<LocalName> = _encode_RDNSequence;
+export function _encode_LocalName(
+    value: LocalName,
+    elGetter: $.ASN1Encoder<LocalName>
+): _Element {
+    if (!_cached_encoder_for_LocalName) {
+        _cached_encoder_for_LocalName = _encode_RDNSequence;
+    }
+    return _cached_encoder_for_LocalName(value, elGetter);
+}
 
 
 /* eslint-enable */

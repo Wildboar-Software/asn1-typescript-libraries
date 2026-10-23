@@ -33,13 +33,22 @@ import {
  */
 export type OriginalContent = Content; // DefinedType
 
+let _cached_decoder_for_OriginalContent: $.ASN1Decoder<OriginalContent> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) OriginalContent
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {OriginalContent} The decoded data structure.
  */
-export const _decode_OriginalContent: $.ASN1Decoder<OriginalContent> = _decode_Content;
+export function _decode_OriginalContent(el: _Element): OriginalContent {
+    if (!_cached_decoder_for_OriginalContent) {
+        _cached_decoder_for_OriginalContent = _decode_Content;
+    }
+    return _cached_decoder_for_OriginalContent(el);
+}
+
+let _cached_encoder_for_OriginalContent: $.ASN1Encoder<OriginalContent> | null = null;
 
 /**
  * @summary Encodes a(n) OriginalContent into an ASN.1 Element.
@@ -48,7 +57,15 @@ export const _decode_OriginalContent: $.ASN1Decoder<OriginalContent> = _decode_C
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The OriginalContent, encoded as an ASN.1 Element.
  */
-export const _encode_OriginalContent: $.ASN1Encoder<OriginalContent> = _encode_Content;
+export function _encode_OriginalContent(
+    value: OriginalContent,
+    elGetter: $.ASN1Encoder<OriginalContent>
+): _Element {
+    if (!_cached_encoder_for_OriginalContent) {
+        _cached_encoder_for_OriginalContent = _encode_Content;
+    }
+    return _cached_encoder_for_OriginalContent(value, elGetter);
+}
 
 
 /* eslint-enable */

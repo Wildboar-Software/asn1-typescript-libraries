@@ -25,13 +25,21 @@ import { RedirectionDeviceID, _decode_RedirectionDeviceID, _encode_RedirectionDe
 export
 type LastRedirectionDevice = RedirectionDeviceID; // DefinedType
 
+let _cached_decoder_for_LastRedirectionDevice: $.ASN1Decoder<LastRedirectionDevice> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) LastRedirectionDevice
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_LastRedirectionDevice: $.ASN1Decoder<LastRedirectionDevice> = _decode_RedirectionDeviceID;
+export
+function _decode_LastRedirectionDevice (el: _Element): LastRedirectionDevice {
+    if (!_cached_decoder_for_LastRedirectionDevice) { _cached_decoder_for_LastRedirectionDevice = _decode_RedirectionDeviceID; }
+    return _cached_decoder_for_LastRedirectionDevice(el);
+}
+
+let _cached_encoder_for_LastRedirectionDevice: $.ASN1Encoder<LastRedirectionDevice> | null = null;
 
 /**
  * @summary Encodes a(n) LastRedirectionDevice into an ASN.1 Element.
@@ -40,7 +48,11 @@ export const _decode_LastRedirectionDevice: $.ASN1Decoder<LastRedirectionDevice>
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LastRedirectionDevice, encoded as an ASN.1 Element.
  */
-export const _encode_LastRedirectionDevice: (value: LastRedirectionDevice, elGetter: $.ASN1Encoder<any>) => _Element = _encode_RedirectionDeviceID;
+export
+function _encode_LastRedirectionDevice (value: LastRedirectionDevice, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_LastRedirectionDevice) { _cached_encoder_for_LastRedirectionDevice = _encode_RedirectionDeviceID; }
+    return _cached_encoder_for_LastRedirectionDevice(value, elGetter);
+}
 
 
 /* eslint-enable */

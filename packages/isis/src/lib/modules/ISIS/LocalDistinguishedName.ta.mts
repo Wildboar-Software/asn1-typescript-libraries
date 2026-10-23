@@ -34,13 +34,22 @@ import {
  */
 export type LocalDistinguishedName = BaseManagedObjectId; // DefinedType
 
+let _cached_decoder_for_LocalDistinguishedName: $.ASN1Decoder<LocalDistinguishedName> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) LocalDistinguishedName
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {LocalDistinguishedName} The decoded data structure.
  */
-export const _decode_LocalDistinguishedName: $.ASN1Decoder<LocalDistinguishedName> = _decode_BaseManagedObjectId;
+export function _decode_LocalDistinguishedName(el: _Element): LocalDistinguishedName {
+  if (!_cached_decoder_for_LocalDistinguishedName) {
+    _cached_decoder_for_LocalDistinguishedName = _decode_BaseManagedObjectId;
+  }
+  return _cached_decoder_for_LocalDistinguishedName(el);
+}
+
+let _cached_encoder_for_LocalDistinguishedName: $.ASN1Encoder<LocalDistinguishedName> | null = null;
 
 /**
  * @summary Encodes a(n) LocalDistinguishedName into an ASN.1 Element.
@@ -49,7 +58,15 @@ export const _decode_LocalDistinguishedName: $.ASN1Decoder<LocalDistinguishedNam
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LocalDistinguishedName, encoded as an ASN.1 Element.
  */
-export const _encode_LocalDistinguishedName: $.ASN1Encoder<LocalDistinguishedName> = _encode_BaseManagedObjectId;
+export function _encode_LocalDistinguishedName(
+  value: LocalDistinguishedName,
+  elGetter: $.ASN1Encoder<LocalDistinguishedName>
+): _Element {
+  if (!_cached_encoder_for_LocalDistinguishedName) {
+    _cached_encoder_for_LocalDistinguishedName = _encode_BaseManagedObjectId;
+  }
+  return _cached_encoder_for_LocalDistinguishedName(value, elGetter);
+}
 
 
 /* eslint-enable */

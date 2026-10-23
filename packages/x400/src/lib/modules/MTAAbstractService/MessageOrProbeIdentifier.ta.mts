@@ -33,13 +33,22 @@ import {
  */
 export type MessageOrProbeIdentifier = MTSIdentifier; // DefinedType
 
+let _cached_decoder_for_MessageOrProbeIdentifier: $.ASN1Decoder<MessageOrProbeIdentifier> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageOrProbeIdentifier
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {MessageOrProbeIdentifier} The decoded data structure.
  */
-export const _decode_MessageOrProbeIdentifier: $.ASN1Decoder<MessageOrProbeIdentifier> = _decode_MTSIdentifier;
+export function _decode_MessageOrProbeIdentifier(el: _Element): MessageOrProbeIdentifier {
+    if (!_cached_decoder_for_MessageOrProbeIdentifier) {
+        _cached_decoder_for_MessageOrProbeIdentifier = _decode_MTSIdentifier;
+    }
+    return _cached_decoder_for_MessageOrProbeIdentifier(el);
+}
+
+let _cached_encoder_for_MessageOrProbeIdentifier: $.ASN1Encoder<MessageOrProbeIdentifier> | null = null;
 
 /**
  * @summary Encodes a(n) MessageOrProbeIdentifier into an ASN.1 Element.
@@ -48,7 +57,15 @@ export const _decode_MessageOrProbeIdentifier: $.ASN1Decoder<MessageOrProbeIdent
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MessageOrProbeIdentifier, encoded as an ASN.1 Element.
  */
-export const _encode_MessageOrProbeIdentifier: $.ASN1Encoder<MessageOrProbeIdentifier> = _encode_MTSIdentifier;
+export function _encode_MessageOrProbeIdentifier(
+    value: MessageOrProbeIdentifier,
+    elGetter: $.ASN1Encoder<MessageOrProbeIdentifier>
+): _Element {
+    if (!_cached_encoder_for_MessageOrProbeIdentifier) {
+        _cached_encoder_for_MessageOrProbeIdentifier = _encode_MTSIdentifier;
+    }
+    return _cached_encoder_for_MessageOrProbeIdentifier(value, elGetter);
+}
 
 
 /* eslint-enable */

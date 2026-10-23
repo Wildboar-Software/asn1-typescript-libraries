@@ -31,13 +31,22 @@ import {
  */
 export type MessageSubmissionIdentifier = MTSIdentifier; // DefinedType
 
+let _cached_decoder_for_MessageSubmissionIdentifier: $.ASN1Decoder<MessageSubmissionIdentifier> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageSubmissionIdentifier
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {MessageSubmissionIdentifier} The decoded data structure.
  */
-export const _decode_MessageSubmissionIdentifier: $.ASN1Decoder<MessageSubmissionIdentifier> = _decode_MTSIdentifier;
+export function _decode_MessageSubmissionIdentifier(el: _Element): MessageSubmissionIdentifier {
+    if (!_cached_decoder_for_MessageSubmissionIdentifier) {
+        _cached_decoder_for_MessageSubmissionIdentifier = _decode_MTSIdentifier;
+    }
+    return _cached_decoder_for_MessageSubmissionIdentifier(el);
+}
+
+let _cached_encoder_for_MessageSubmissionIdentifier: $.ASN1Encoder<MessageSubmissionIdentifier> | null = null;
 
 /**
  * @summary Encodes a(n) MessageSubmissionIdentifier into an ASN.1 Element.
@@ -46,7 +55,15 @@ export const _decode_MessageSubmissionIdentifier: $.ASN1Decoder<MessageSubmissio
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MessageSubmissionIdentifier, encoded as an ASN.1 Element.
  */
-export const _encode_MessageSubmissionIdentifier: $.ASN1Encoder<MessageSubmissionIdentifier> = _encode_MTSIdentifier;
+export function _encode_MessageSubmissionIdentifier(
+    value: MessageSubmissionIdentifier,
+    elGetter: $.ASN1Encoder<MessageSubmissionIdentifier>
+): _Element {
+    if (!_cached_encoder_for_MessageSubmissionIdentifier) {
+        _cached_encoder_for_MessageSubmissionIdentifier = _encode_MTSIdentifier;
+    }
+    return _cached_encoder_for_MessageSubmissionIdentifier(value, elGetter);
+}
 
 
 /* eslint-enable */

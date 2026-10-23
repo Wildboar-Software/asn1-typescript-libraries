@@ -22,13 +22,26 @@ import {
  */
 export type CBCParameter = IV; // DefinedType
 
+
+let _cached_decoder_for_CBCParameter: $.ASN1Decoder<CBCParameter> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CBCParameter
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {CBCParameter} The decoded data structure.
  */
-export const _decode_CBCParameter: $.ASN1Decoder<CBCParameter> = _decode_IV;
+export function _decode_CBCParameter(el: _Element): CBCParameter {
+    if (!_cached_decoder_for_CBCParameter) {
+        _cached_decoder_for_CBCParameter = _decode_IV;
+    }
+    return _cached_decoder_for_CBCParameter(el);
+}
+
+
+let _cached_encoder_for_CBCParameter: $.ASN1Encoder<CBCParameter> | null = null;
+
 
 /**
  * @summary Encodes a(n) CBCParameter into an ASN.1 Element.
@@ -37,7 +50,15 @@ export const _decode_CBCParameter: $.ASN1Decoder<CBCParameter> = _decode_IV;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CBCParameter, encoded as an ASN.1 Element.
  */
-export const _encode_CBCParameter: $.ASN1Encoder<CBCParameter> = _encode_IV;
+export function _encode_CBCParameter(
+    value: CBCParameter,
+    elGetter: $.ASN1Encoder<CBCParameter>
+): _Element {
+    if (!_cached_encoder_for_CBCParameter) {
+        _cached_encoder_for_CBCParameter = _encode_IV;
+    }
+    return _cached_encoder_for_CBCParameter(value, elGetter);
+}
 
 
 /* eslint-enable */

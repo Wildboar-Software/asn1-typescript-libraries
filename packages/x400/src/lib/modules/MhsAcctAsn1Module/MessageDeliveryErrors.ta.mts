@@ -30,13 +30,22 @@ import {
  */
 export type MessageDeliveryErrors = DeliveryError; // DefinedType
 
+let _cached_decoder_for_MessageDeliveryErrors: $.ASN1Decoder<MessageDeliveryErrors> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageDeliveryErrors
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {MessageDeliveryErrors} The decoded data structure.
  */
-export const _decode_MessageDeliveryErrors: $.ASN1Decoder<MessageDeliveryErrors> = _decode_DeliveryError;
+export function _decode_MessageDeliveryErrors(el: _Element): MessageDeliveryErrors {
+    if (!_cached_decoder_for_MessageDeliveryErrors) {
+        _cached_decoder_for_MessageDeliveryErrors = _decode_DeliveryError;
+    }
+    return _cached_decoder_for_MessageDeliveryErrors(el);
+}
+
+let _cached_encoder_for_MessageDeliveryErrors: $.ASN1Encoder<MessageDeliveryErrors> | null = null;
 
 /**
  * @summary Encodes a(n) MessageDeliveryErrors into an ASN.1 Element.
@@ -45,7 +54,15 @@ export const _decode_MessageDeliveryErrors: $.ASN1Decoder<MessageDeliveryErrors>
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MessageDeliveryErrors, encoded as an ASN.1 Element.
  */
-export const _encode_MessageDeliveryErrors: $.ASN1Encoder<MessageDeliveryErrors> = _encode_DeliveryError;
+export function _encode_MessageDeliveryErrors(
+    value: MessageDeliveryErrors,
+    elGetter: $.ASN1Encoder<MessageDeliveryErrors>
+): _Element {
+    if (!_cached_encoder_for_MessageDeliveryErrors) {
+        _cached_encoder_for_MessageDeliveryErrors = _encode_DeliveryError;
+    }
+    return _cached_encoder_for_MessageDeliveryErrors(value, elGetter);
+}
 
 
 /* eslint-enable */

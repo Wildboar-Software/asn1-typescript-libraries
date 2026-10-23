@@ -21,13 +21,21 @@ import { GenericNumber, _decode_GenericNumber, _encode_GenericNumber } from "../
 export
 type SubscriberID = GenericNumber; // DefinedType
 
+let _cached_decoder_for_SubscriberID: $.ASN1Decoder<SubscriberID> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SubscriberID
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_SubscriberID: $.ASN1Decoder<SubscriberID> = _decode_GenericNumber;
+export
+function _decode_SubscriberID (el: _Element): SubscriberID {
+    if (!_cached_decoder_for_SubscriberID) { _cached_decoder_for_SubscriberID = _decode_GenericNumber; }
+    return _cached_decoder_for_SubscriberID(el);
+}
+
+let _cached_encoder_for_SubscriberID: $.ASN1Encoder<SubscriberID> | null = null;
 
 /**
  * @summary Encodes a(n) SubscriberID into an ASN.1 Element.
@@ -36,7 +44,11 @@ export const _decode_SubscriberID: $.ASN1Decoder<SubscriberID> = _decode_Generic
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SubscriberID, encoded as an ASN.1 Element.
  */
-export const _encode_SubscriberID: (value: SubscriberID, elGetter: $.ASN1Encoder<any>) => _Element = _encode_GenericNumber;
+export
+function _encode_SubscriberID (value: SubscriberID, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_SubscriberID) { _cached_encoder_for_SubscriberID = _encode_GenericNumber; }
+    return _cached_encoder_for_SubscriberID(value, elGetter);
+}
 
 
 /* eslint-enable */

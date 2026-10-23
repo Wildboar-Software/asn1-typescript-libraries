@@ -31,13 +31,21 @@ import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-
 export
 type DeleteNamedVariableList_Error = Unsigned32; // DefinedType
 
+let _cached_decoder_for_DeleteNamedVariableList_Error: $.ASN1Decoder<DeleteNamedVariableList_Error> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DeleteNamedVariableList_Error
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_DeleteNamedVariableList_Error: $.ASN1Decoder<DeleteNamedVariableList_Error> = _decode_Unsigned32;
+export
+function _decode_DeleteNamedVariableList_Error (el: _Element): DeleteNamedVariableList_Error {
+    if (!_cached_decoder_for_DeleteNamedVariableList_Error) { _cached_decoder_for_DeleteNamedVariableList_Error = _decode_Unsigned32; }
+    return _cached_decoder_for_DeleteNamedVariableList_Error(el);
+}
+
+let _cached_encoder_for_DeleteNamedVariableList_Error: $.ASN1Encoder<DeleteNamedVariableList_Error> | null = null;
 
 /**
  * @summary Encodes a(n) DeleteNamedVariableList_Error into an ASN.1 Element.
@@ -46,7 +54,11 @@ export const _decode_DeleteNamedVariableList_Error: $.ASN1Decoder<DeleteNamedVar
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DeleteNamedVariableList_Error, encoded as an ASN.1 Element.
  */
-export const _encode_DeleteNamedVariableList_Error: (value: DeleteNamedVariableList_Error, elGetter: $.ASN1Encoder<any>) => _Element = _encode_Unsigned32;
+export
+function _encode_DeleteNamedVariableList_Error (value: DeleteNamedVariableList_Error, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_DeleteNamedVariableList_Error) { _cached_encoder_for_DeleteNamedVariableList_Error = _encode_Unsigned32; }
+    return _cached_encoder_for_DeleteNamedVariableList_Error(value, elGetter);
+}
 
 
 /* eslint-enable */

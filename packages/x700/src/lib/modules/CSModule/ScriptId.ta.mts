@@ -37,13 +37,22 @@ import {
  */
 export type ScriptId = ObjectInstance; // DefinedType
 
+let _cached_decoder_for_ScriptId: $.ASN1Decoder<ScriptId> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ScriptId
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ScriptId} The decoded data structure.
  */
-export const _decode_ScriptId: $.ASN1Decoder<ScriptId> = _decode_ObjectInstance;
+export function _decode_ScriptId(el: _Element): ScriptId {
+    if (!_cached_decoder_for_ScriptId) {
+        _cached_decoder_for_ScriptId = _decode_ObjectInstance;
+    }
+    return _cached_decoder_for_ScriptId(el);
+}
+
+let _cached_encoder_for_ScriptId: $.ASN1Encoder<ScriptId> | null = null;
 
 /**
  * @summary Encodes a(n) ScriptId into an ASN.1 Element.
@@ -52,7 +61,15 @@ export const _decode_ScriptId: $.ASN1Decoder<ScriptId> = _decode_ObjectInstance;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ScriptId, encoded as an ASN.1 Element.
  */
-export const _encode_ScriptId: $.ASN1Encoder<ScriptId> = _encode_ObjectInstance;
+export function _encode_ScriptId(
+    value: ScriptId,
+    elGetter: $.ASN1Encoder<ScriptId>
+): _Element {
+    if (!_cached_encoder_for_ScriptId) {
+        _cached_encoder_for_ScriptId = _encode_ObjectInstance;
+    }
+    return _cached_encoder_for_ScriptId(value, elGetter);
+}
 
 
 /* eslint-enable */

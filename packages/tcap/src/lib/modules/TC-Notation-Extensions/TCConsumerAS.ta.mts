@@ -28,13 +28,22 @@ import {
  */
 export type TCConsumerAS = TCMessage; // DefinedType
 
+let _cached_decoder_for_TCConsumerAS: $.ASN1Decoder<TCConsumerAS> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TCConsumerAS
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {TCConsumerAS} The decoded data structure.
  */
-export const _decode_TCConsumerAS: $.ASN1Decoder<TCConsumerAS> = _decode_TCMessage;
+export function _decode_TCConsumerAS(el: _Element): TCConsumerAS {
+    if (!_cached_decoder_for_TCConsumerAS) {
+        _cached_decoder_for_TCConsumerAS = _decode_TCMessage;
+    }
+    return _cached_decoder_for_TCConsumerAS(el);
+}
+
+let _cached_encoder_for_TCConsumerAS: $.ASN1Encoder<TCConsumerAS> | null = null;
 
 /**
  * @summary Encodes a(n) TCConsumerAS into an ASN.1 Element.
@@ -43,7 +52,15 @@ export const _decode_TCConsumerAS: $.ASN1Decoder<TCConsumerAS> = _decode_TCMessa
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TCConsumerAS, encoded as an ASN.1 Element.
  */
-export const _encode_TCConsumerAS: $.ASN1Encoder<TCConsumerAS> = _encode_TCMessage;
+export function _encode_TCConsumerAS(
+    value: TCConsumerAS,
+    elGetter: $.ASN1Encoder<TCConsumerAS>
+): _Element {
+    if (!_cached_encoder_for_TCConsumerAS) {
+        _cached_encoder_for_TCConsumerAS = _encode_TCMessage;
+    }
+    return _cached_encoder_for_TCConsumerAS(value, elGetter);
+}
 
 
 /* eslint-enable */

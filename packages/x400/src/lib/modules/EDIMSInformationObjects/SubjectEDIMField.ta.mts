@@ -29,13 +29,22 @@ import {
  */
 export type SubjectEDIMField = EDIMIdentifier; // DefinedType
 
+let _cached_decoder_for_SubjectEDIMField: $.ASN1Decoder<SubjectEDIMField> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SubjectEDIMField
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {SubjectEDIMField} The decoded data structure.
  */
-export const _decode_SubjectEDIMField: $.ASN1Decoder<SubjectEDIMField> = _decode_EDIMIdentifier;
+export function _decode_SubjectEDIMField(el: _Element): SubjectEDIMField {
+    if (!_cached_decoder_for_SubjectEDIMField) {
+        _cached_decoder_for_SubjectEDIMField = _decode_EDIMIdentifier;
+    }
+    return _cached_decoder_for_SubjectEDIMField(el);
+}
+
+let _cached_encoder_for_SubjectEDIMField: $.ASN1Encoder<SubjectEDIMField> | null = null;
 
 /**
  * @summary Encodes a(n) SubjectEDIMField into an ASN.1 Element.
@@ -44,7 +53,15 @@ export const _decode_SubjectEDIMField: $.ASN1Decoder<SubjectEDIMField> = _decode
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SubjectEDIMField, encoded as an ASN.1 Element.
  */
-export const _encode_SubjectEDIMField: $.ASN1Encoder<SubjectEDIMField> = _encode_EDIMIdentifier;
+export function _encode_SubjectEDIMField(
+    value: SubjectEDIMField,
+    elGetter: $.ASN1Encoder<SubjectEDIMField>
+): _Element {
+    if (!_cached_encoder_for_SubjectEDIMField) {
+        _cached_encoder_for_SubjectEDIMField = _encode_EDIMIdentifier;
+    }
+    return _cached_encoder_for_SubjectEDIMField(value, elGetter);
+}
 
 
 /* eslint-enable */

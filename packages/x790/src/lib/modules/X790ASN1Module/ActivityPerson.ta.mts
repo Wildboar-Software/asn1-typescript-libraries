@@ -24,13 +24,21 @@ import {
 export
 type ActivityPerson = PersonReach; // DefinedType
 
+let _cached_decoder_for_ActivityPerson: $.ASN1Decoder<ActivityPerson> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ActivityPerson
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_ActivityPerson: $.ASN1Decoder<ActivityPerson> = _decode_PersonReach;
+export
+function _decode_ActivityPerson (el: _Element): ActivityPerson {
+    if (!_cached_decoder_for_ActivityPerson) { _cached_decoder_for_ActivityPerson = _decode_PersonReach; }
+    return _cached_decoder_for_ActivityPerson(el);
+}
+
+let _cached_encoder_for_ActivityPerson: $.ASN1Encoder<ActivityPerson> | null = null;
 
 /**
  * @summary Encodes a(n) ActivityPerson into an ASN.1 Element.
@@ -39,7 +47,11 @@ export const _decode_ActivityPerson: $.ASN1Decoder<ActivityPerson> = _decode_Per
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ActivityPerson, encoded as an ASN.1 Element.
  */
-export const _encode_ActivityPerson: (value: ActivityPerson, elGetter: $.ASN1Encoder<any>) => _Element = _encode_PersonReach;
+export
+function _encode_ActivityPerson (value: ActivityPerson, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_ActivityPerson) { _cached_encoder_for_ActivityPerson = _encode_PersonReach; }
+    return _cached_encoder_for_ActivityPerson(value, elGetter);
+}
 
 
 /* eslint-enable */

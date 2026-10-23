@@ -48,6 +48,8 @@ function _decode_ReadResult (el: _Element): ReadResult {
     return value;
 }
 
+let _cached_encoder_for_ReadResult: $.ASN1Encoder<ReadResult> | null = null;
+
 /**
  * @summary Encodes a(n) ReadResult into an ASN.1 Element.
  * @function
@@ -55,7 +57,11 @@ function _decode_ReadResult (el: _Element): ReadResult {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ReadResult, encoded as an ASN.1 Element.
  */
-export const _encode_ReadResult: (value: ReadResult, elGetter: $.ASN1Encoder<any>) => _Element = _encode_CommonUpdateResult;
+export
+function _encode_ReadResult (value: ReadResult, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_ReadResult) { _cached_encoder_for_ReadResult = _encode_CommonUpdateResult; }
+    return _cached_encoder_for_ReadResult(value, elGetter);
+}
 
 
 /* eslint-enable */

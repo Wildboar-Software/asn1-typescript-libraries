@@ -31,13 +31,21 @@ import { IMEICheckDigit, _decode_IMEICheckDigit, _encode_IMEICheckDigit } from "
 export
 type PEIIMEICheckDigit = IMEICheckDigit; // DefinedType
 
+let _cached_decoder_for_PEIIMEICheckDigit: $.ASN1Decoder<PEIIMEICheckDigit> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PEIIMEICheckDigit
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_PEIIMEICheckDigit: $.ASN1Decoder<PEIIMEICheckDigit> = _decode_IMEICheckDigit;
+export
+function _decode_PEIIMEICheckDigit (el: _Element): PEIIMEICheckDigit {
+    if (!_cached_decoder_for_PEIIMEICheckDigit) { _cached_decoder_for_PEIIMEICheckDigit = _decode_IMEICheckDigit; }
+    return _cached_decoder_for_PEIIMEICheckDigit(el);
+}
+
+let _cached_encoder_for_PEIIMEICheckDigit: $.ASN1Encoder<PEIIMEICheckDigit> | null = null;
 
 /**
  * @summary Encodes a(n) PEIIMEICheckDigit into an ASN.1 Element.
@@ -46,7 +54,11 @@ export const _decode_PEIIMEICheckDigit: $.ASN1Decoder<PEIIMEICheckDigit> = _deco
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PEIIMEICheckDigit, encoded as an ASN.1 Element.
  */
-export const _encode_PEIIMEICheckDigit: (value: PEIIMEICheckDigit, elGetter: $.ASN1Encoder<any>) => _Element = _encode_IMEICheckDigit;
+export
+function _encode_PEIIMEICheckDigit (value: PEIIMEICheckDigit, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_PEIIMEICheckDigit) { _cached_encoder_for_PEIIMEICheckDigit = _encode_IMEICheckDigit; }
+    return _cached_encoder_for_PEIIMEICheckDigit(value, elGetter);
+}
 
 
 /* eslint-enable */

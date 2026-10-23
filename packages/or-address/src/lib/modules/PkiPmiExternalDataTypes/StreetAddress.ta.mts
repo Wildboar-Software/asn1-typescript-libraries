@@ -20,13 +20,22 @@ import {
  */
 export type StreetAddress = PDSParameter; // DefinedType
 
+let _cached_decoder_for_StreetAddress: $.ASN1Decoder<StreetAddress> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) StreetAddress
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {StreetAddress} The decoded data structure.
  */
-export const _decode_StreetAddress: $.ASN1Decoder<StreetAddress> = _decode_PDSParameter;
+export function _decode_StreetAddress(el: _Element): StreetAddress {
+    if (!_cached_decoder_for_StreetAddress) {
+        _cached_decoder_for_StreetAddress = _decode_PDSParameter;
+    }
+    return _cached_decoder_for_StreetAddress(el);
+}
+
+let _cached_encoder_for_StreetAddress: $.ASN1Encoder<StreetAddress> | null = null;
 
 /**
  * @summary Encodes a(n) StreetAddress into an ASN.1 Element.
@@ -35,7 +44,15 @@ export const _decode_StreetAddress: $.ASN1Decoder<StreetAddress> = _decode_PDSPa
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The StreetAddress, encoded as an ASN.1 Element.
  */
-export const _encode_StreetAddress: $.ASN1Encoder<StreetAddress> = _encode_PDSParameter;
+export function _encode_StreetAddress(
+    value: StreetAddress,
+    elGetter: $.ASN1Encoder<StreetAddress>
+): _Element {
+    if (!_cached_encoder_for_StreetAddress) {
+        _cached_encoder_for_StreetAddress = _encode_PDSParameter;
+    }
+    return _cached_encoder_for_StreetAddress(value, elGetter);
+}
 
 
 /* eslint-enable */

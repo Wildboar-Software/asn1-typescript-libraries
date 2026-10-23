@@ -29,13 +29,22 @@ import {
  */
 export type SubmissionControlArgument = SubmissionControls; // DefinedType
 
+let _cached_decoder_for_SubmissionControlArgument: $.ASN1Decoder<SubmissionControlArgument> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SubmissionControlArgument
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {SubmissionControlArgument} The decoded data structure.
  */
-export const _decode_SubmissionControlArgument: $.ASN1Decoder<SubmissionControlArgument> = _decode_SubmissionControls;
+export function _decode_SubmissionControlArgument(el: _Element): SubmissionControlArgument {
+    if (!_cached_decoder_for_SubmissionControlArgument) {
+        _cached_decoder_for_SubmissionControlArgument = _decode_SubmissionControls;
+    }
+    return _cached_decoder_for_SubmissionControlArgument(el);
+}
+
+let _cached_encoder_for_SubmissionControlArgument: $.ASN1Encoder<SubmissionControlArgument> | null = null;
 
 /**
  * @summary Encodes a(n) SubmissionControlArgument into an ASN.1 Element.
@@ -44,7 +53,15 @@ export const _decode_SubmissionControlArgument: $.ASN1Decoder<SubmissionControlA
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SubmissionControlArgument, encoded as an ASN.1 Element.
  */
-export const _encode_SubmissionControlArgument: $.ASN1Encoder<SubmissionControlArgument> = _encode_SubmissionControls;
+export function _encode_SubmissionControlArgument(
+    value: SubmissionControlArgument,
+    elGetter: $.ASN1Encoder<SubmissionControlArgument>
+): _Element {
+    if (!_cached_encoder_for_SubmissionControlArgument) {
+        _cached_encoder_for_SubmissionControlArgument = _encode_SubmissionControls;
+    }
+    return _cached_encoder_for_SubmissionControlArgument(value, elGetter);
+}
 
 
 /* eslint-enable */

@@ -30,13 +30,21 @@ import { PerceivedSeverity, _enum_for_PerceivedSeverity, _decode_PerceivedSeveri
 export
 type SecurityAlarmSeverity = PerceivedSeverity; // DefinedType
 
+let _cached_decoder_for_SecurityAlarmSeverity: $.ASN1Decoder<SecurityAlarmSeverity> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) SecurityAlarmSeverity
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {SecurityAlarmSeverity} The decoded data structure.
  */
-export const _decode_SecurityAlarmSeverity: $.ASN1Decoder<SecurityAlarmSeverity> = _decode_PerceivedSeverity;
+export
+function _decode_SecurityAlarmSeverity (el: _Element): SecurityAlarmSeverity {
+    if (!_cached_decoder_for_SecurityAlarmSeverity) { _cached_decoder_for_SecurityAlarmSeverity = _decode_PerceivedSeverity; }
+    return _cached_decoder_for_SecurityAlarmSeverity(el);
+}
+
+let _cached_encoder_for_SecurityAlarmSeverity: $.ASN1Encoder<SecurityAlarmSeverity> | null = null;
 
 /**
  * @summary Encodes a(n) SecurityAlarmSeverity into an ASN.1 Element.
@@ -45,7 +53,11 @@ export const _decode_SecurityAlarmSeverity: $.ASN1Decoder<SecurityAlarmSeverity>
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SecurityAlarmSeverity, encoded as an ASN.1 Element.
  */
-export const _encode_SecurityAlarmSeverity: $.ASN1Encoder<SecurityAlarmSeverity> = _encode_PerceivedSeverity;
+export
+function _encode_SecurityAlarmSeverity (value: SecurityAlarmSeverity, elGetter: $.ASN1Encoder<SecurityAlarmSeverity>): _Element {
+    if (!_cached_encoder_for_SecurityAlarmSeverity) { _cached_encoder_for_SecurityAlarmSeverity = _encode_PerceivedSeverity; }
+    return _cached_encoder_for_SecurityAlarmSeverity(value, elGetter);
+}
 
 
 /* eslint-enable */

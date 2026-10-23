@@ -30,13 +30,22 @@ import {
  */
 export type ORAddressAndOrDirectoryName = ORName; // DefinedType
 
+let _cached_decoder_for_ORAddressAndOrDirectoryName: $.ASN1Decoder<ORAddressAndOrDirectoryName> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ORAddressAndOrDirectoryName
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ORAddressAndOrDirectoryName} The decoded data structure.
  */
-export const _decode_ORAddressAndOrDirectoryName: $.ASN1Decoder<ORAddressAndOrDirectoryName> = _decode_ORName;
+export function _decode_ORAddressAndOrDirectoryName(el: _Element): ORAddressAndOrDirectoryName {
+    if (!_cached_decoder_for_ORAddressAndOrDirectoryName) {
+        _cached_decoder_for_ORAddressAndOrDirectoryName = _decode_ORName;
+    }
+    return _cached_decoder_for_ORAddressAndOrDirectoryName(el);
+}
+
+let _cached_encoder_for_ORAddressAndOrDirectoryName: $.ASN1Encoder<ORAddressAndOrDirectoryName> | null = null;
 
 /**
  * @summary Encodes a(n) ORAddressAndOrDirectoryName into an ASN.1 Element.
@@ -45,7 +54,15 @@ export const _decode_ORAddressAndOrDirectoryName: $.ASN1Decoder<ORAddressAndOrDi
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ORAddressAndOrDirectoryName, encoded as an ASN.1 Element.
  */
-export const _encode_ORAddressAndOrDirectoryName: $.ASN1Encoder<ORAddressAndOrDirectoryName> = _encode_ORName;
+export function _encode_ORAddressAndOrDirectoryName(
+    value: ORAddressAndOrDirectoryName,
+    elGetter: $.ASN1Encoder<ORAddressAndOrDirectoryName>
+): _Element {
+    if (!_cached_encoder_for_ORAddressAndOrDirectoryName) {
+        _cached_encoder_for_ORAddressAndOrDirectoryName = _encode_ORName;
+    }
+    return _cached_encoder_for_ORAddressAndOrDirectoryName(value, elGetter);
+}
 
 
 /* eslint-enable */

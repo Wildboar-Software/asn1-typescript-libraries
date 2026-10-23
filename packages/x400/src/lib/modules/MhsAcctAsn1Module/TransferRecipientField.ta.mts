@@ -29,13 +29,22 @@ import {
  */
 export type TransferRecipientField = MTAName; // DefinedType
 
+let _cached_decoder_for_TransferRecipientField: $.ASN1Decoder<TransferRecipientField> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) TransferRecipientField
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {TransferRecipientField} The decoded data structure.
  */
-export const _decode_TransferRecipientField: $.ASN1Decoder<TransferRecipientField> = _decode_MTAName;
+export function _decode_TransferRecipientField(el: _Element): TransferRecipientField {
+    if (!_cached_decoder_for_TransferRecipientField) {
+        _cached_decoder_for_TransferRecipientField = _decode_MTAName;
+    }
+    return _cached_decoder_for_TransferRecipientField(el);
+}
+
+let _cached_encoder_for_TransferRecipientField: $.ASN1Encoder<TransferRecipientField> | null = null;
 
 /**
  * @summary Encodes a(n) TransferRecipientField into an ASN.1 Element.
@@ -44,7 +53,15 @@ export const _decode_TransferRecipientField: $.ASN1Decoder<TransferRecipientFiel
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TransferRecipientField, encoded as an ASN.1 Element.
  */
-export const _encode_TransferRecipientField: $.ASN1Encoder<TransferRecipientField> = _encode_MTAName;
+export function _encode_TransferRecipientField(
+    value: TransferRecipientField,
+    elGetter: $.ASN1Encoder<TransferRecipientField>
+): _Element {
+    if (!_cached_encoder_for_TransferRecipientField) {
+        _cached_encoder_for_TransferRecipientField = _encode_MTAName;
+    }
+    return _cached_encoder_for_TransferRecipientField(value, elGetter);
+}
 
 
 /* eslint-enable */

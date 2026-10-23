@@ -35,13 +35,22 @@ import {
  */
 export type ScanInitiationTime = GlobalTime; // DefinedType
 
+let _cached_decoder_for_ScanInitiationTime: $.ASN1Decoder<ScanInitiationTime> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ScanInitiationTime
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ScanInitiationTime} The decoded data structure.
  */
-export const _decode_ScanInitiationTime: $.ASN1Decoder<ScanInitiationTime> = _decode_GlobalTime;
+export function _decode_ScanInitiationTime(el: _Element): ScanInitiationTime {
+    if (!_cached_decoder_for_ScanInitiationTime) {
+        _cached_decoder_for_ScanInitiationTime = _decode_GlobalTime;
+    }
+    return _cached_decoder_for_ScanInitiationTime(el);
+}
+
+let _cached_encoder_for_ScanInitiationTime: $.ASN1Encoder<ScanInitiationTime> | null = null;
 
 /**
  * @summary Encodes a(n) ScanInitiationTime into an ASN.1 Element.
@@ -50,7 +59,15 @@ export const _decode_ScanInitiationTime: $.ASN1Decoder<ScanInitiationTime> = _de
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ScanInitiationTime, encoded as an ASN.1 Element.
  */
-export const _encode_ScanInitiationTime: $.ASN1Encoder<ScanInitiationTime> = _encode_GlobalTime;
+export function _encode_ScanInitiationTime(
+    value: ScanInitiationTime,
+    elGetter: $.ASN1Encoder<ScanInitiationTime>
+): _Element {
+    if (!_cached_encoder_for_ScanInitiationTime) {
+        _cached_encoder_for_ScanInitiationTime = _encode_GlobalTime;
+    }
+    return _cached_encoder_for_ScanInitiationTime(value, elGetter);
+}
 
 
 /* eslint-enable */

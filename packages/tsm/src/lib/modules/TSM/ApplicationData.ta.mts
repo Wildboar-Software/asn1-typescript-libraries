@@ -32,13 +32,21 @@ import { Opaque, _decode_Opaque, _encode_Opaque } from "../TSM/Opaque.ta.mjs";
 export
 type ApplicationData = Opaque; // DefinedType
 
+let _cached_decoder_for_ApplicationData: $.ASN1Decoder<ApplicationData> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ApplicationData
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_ApplicationData: $.ASN1Decoder<ApplicationData> = _decode_Opaque;
+export
+function _decode_ApplicationData (el: _Element): ApplicationData {
+    if (!_cached_decoder_for_ApplicationData) { _cached_decoder_for_ApplicationData = _decode_Opaque; }
+    return _cached_decoder_for_ApplicationData(el);
+}
+
+let _cached_encoder_for_ApplicationData: $.ASN1Encoder<ApplicationData> | null = null;
 
 /**
  * @summary Encodes a(n) ApplicationData into an ASN.1 Element.
@@ -47,7 +55,11 @@ export const _decode_ApplicationData: $.ASN1Decoder<ApplicationData> = _decode_O
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ApplicationData, encoded as an ASN.1 Element.
  */
-export const _encode_ApplicationData: (value: ApplicationData, elGetter: $.ASN1Encoder<any>) => _Element = _encode_Opaque;
+export
+function _encode_ApplicationData (value: ApplicationData, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_ApplicationData) { _cached_encoder_for_ApplicationData = _encode_Opaque; }
+    return _cached_encoder_for_ApplicationData(value, elGetter);
+}
 
 
 /* eslint-enable */

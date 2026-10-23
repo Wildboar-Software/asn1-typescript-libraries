@@ -52,6 +52,8 @@ function _decode_GFPInvokeIDSet (el: _Element): GFPInvokeIDSet {
     return value;
 }
 
+let _cached_encoder_for_GFPInvokeIDSet: $.ASN1Encoder<GFPInvokeIDSet> | null = null;
+
 /**
  * @summary Encodes a(n) GFPInvokeIDSet into an ASN.1 Element.
  * @function
@@ -59,7 +61,11 @@ function _decode_GFPInvokeIDSet (el: _Element): GFPInvokeIDSet {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The GFPInvokeIDSet, encoded as an ASN.1 Element.
  */
-export const _encode_GFPInvokeIDSet: (value: GFPInvokeIDSet, elGetter: $.ASN1Encoder<any>) => _Element = _encode_InvokeId;
+export
+function _encode_GFPInvokeIDSet (value: GFPInvokeIDSet, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_GFPInvokeIDSet) { _cached_encoder_for_GFPInvokeIDSet = _encode_InvokeId; }
+    return _cached_encoder_for_GFPInvokeIDSet(value, elGetter);
+}
 
 
 /* eslint-enable */

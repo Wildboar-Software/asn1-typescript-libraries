@@ -19,13 +19,26 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  */
 export type KeyDerivationAlgorithmIdentifier = AlgorithmIdentifier; // DefinedType
 
+
+let _cached_decoder_for_KeyDerivationAlgorithmIdentifier: $.ASN1Decoder<KeyDerivationAlgorithmIdentifier> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) KeyDerivationAlgorithmIdentifier
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {KeyDerivationAlgorithmIdentifier} The decoded data structure.
  */
-export const _decode_KeyDerivationAlgorithmIdentifier: $.ASN1Decoder<KeyDerivationAlgorithmIdentifier> = _decode_AlgorithmIdentifier;
+export function _decode_KeyDerivationAlgorithmIdentifier(el: _Element): KeyDerivationAlgorithmIdentifier {
+    if (!_cached_decoder_for_KeyDerivationAlgorithmIdentifier) {
+        _cached_decoder_for_KeyDerivationAlgorithmIdentifier = _decode_AlgorithmIdentifier;
+    }
+    return _cached_decoder_for_KeyDerivationAlgorithmIdentifier(el);
+}
+
+
+let _cached_encoder_for_KeyDerivationAlgorithmIdentifier: $.ASN1Encoder<KeyDerivationAlgorithmIdentifier> | null = null;
+
 
 /**
  * @summary Encodes a(n) KeyDerivationAlgorithmIdentifier into an ASN.1 Element.
@@ -34,7 +47,18 @@ export const _decode_KeyDerivationAlgorithmIdentifier: $.ASN1Decoder<KeyDerivati
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The KeyDerivationAlgorithmIdentifier, encoded as an ASN.1 Element.
  */
-export const _encode_KeyDerivationAlgorithmIdentifier: $.ASN1Encoder<KeyDerivationAlgorithmIdentifier> = _encode_AlgorithmIdentifier;
+export function _encode_KeyDerivationAlgorithmIdentifier(
+    value: KeyDerivationAlgorithmIdentifier,
+    elGetter: $.ASN1Encoder<KeyDerivationAlgorithmIdentifier>
+): _Element {
+    if (!_cached_encoder_for_KeyDerivationAlgorithmIdentifier) {
+        _cached_encoder_for_KeyDerivationAlgorithmIdentifier = _encode_AlgorithmIdentifier;
+    }
+    return _cached_encoder_for_KeyDerivationAlgorithmIdentifier(
+        value,
+        elGetter
+    );
+}
 
 
 /* eslint-enable */

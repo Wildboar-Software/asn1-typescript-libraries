@@ -29,13 +29,22 @@ import {
  */
 export type DestinationADMD = AdministrationDomainName; // DefinedType
 
+let _cached_decoder_for_DestinationADMD: $.ASN1Decoder<DestinationADMD> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) DestinationADMD
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {DestinationADMD} The decoded data structure.
  */
-export const _decode_DestinationADMD: $.ASN1Decoder<DestinationADMD> = _decode_AdministrationDomainName;
+export function _decode_DestinationADMD(el: _Element): DestinationADMD {
+    if (!_cached_decoder_for_DestinationADMD) {
+        _cached_decoder_for_DestinationADMD = _decode_AdministrationDomainName;
+    }
+    return _cached_decoder_for_DestinationADMD(el);
+}
+
+let _cached_encoder_for_DestinationADMD: $.ASN1Encoder<DestinationADMD> | null = null;
 
 /**
  * @summary Encodes a(n) DestinationADMD into an ASN.1 Element.
@@ -44,7 +53,15 @@ export const _decode_DestinationADMD: $.ASN1Decoder<DestinationADMD> = _decode_A
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DestinationADMD, encoded as an ASN.1 Element.
  */
-export const _encode_DestinationADMD: $.ASN1Encoder<DestinationADMD> = _encode_AdministrationDomainName;
+export function _encode_DestinationADMD(
+    value: DestinationADMD,
+    elGetter: $.ASN1Encoder<DestinationADMD>
+): _Element {
+    if (!_cached_encoder_for_DestinationADMD) {
+        _cached_encoder_for_DestinationADMD = _encode_AdministrationDomainName;
+    }
+    return _cached_encoder_for_DestinationADMD(value, elGetter);
+}
 
 
 /* eslint-enable */

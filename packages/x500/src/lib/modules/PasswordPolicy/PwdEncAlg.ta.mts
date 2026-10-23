@@ -22,13 +22,22 @@ import {
  */
 export type PwdEncAlg = AlgorithmIdentifier; // DefinedType
 
+let _cached_decoder_for_PwdEncAlg: $.ASN1Decoder<PwdEncAlg> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PwdEncAlg
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {PwdEncAlg} The decoded data structure.
  */
-export const _decode_PwdEncAlg: $.ASN1Decoder<PwdEncAlg> = _decode_AlgorithmIdentifier;
+export function _decode_PwdEncAlg(el: _Element): PwdEncAlg {
+    if (!_cached_decoder_for_PwdEncAlg) {
+        _cached_decoder_for_PwdEncAlg = _decode_AlgorithmIdentifier;
+    }
+    return _cached_decoder_for_PwdEncAlg(el);
+}
+
+let _cached_encoder_for_PwdEncAlg: $.ASN1Encoder<PwdEncAlg> | null = null;
 
 /**
  * @summary Encodes a(n) PwdEncAlg into an ASN.1 Element.
@@ -37,7 +46,15 @@ export const _decode_PwdEncAlg: $.ASN1Decoder<PwdEncAlg> = _decode_AlgorithmIden
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PwdEncAlg, encoded as an ASN.1 Element.
  */
-export const _encode_PwdEncAlg: $.ASN1Encoder<PwdEncAlg> = _encode_AlgorithmIdentifier;
+export function _encode_PwdEncAlg(
+    value: PwdEncAlg,
+    elGetter: $.ASN1Encoder<PwdEncAlg>
+): _Element {
+    if (!_cached_encoder_for_PwdEncAlg) {
+        _cached_encoder_for_PwdEncAlg = _encode_AlgorithmIdentifier;
+    }
+    return _cached_encoder_for_PwdEncAlg(value, elGetter);
+}
 
 
 /* eslint-enable */

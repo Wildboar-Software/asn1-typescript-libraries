@@ -24,13 +24,26 @@ import {
  */
 export type ProtocolEncrKey = SubjectPublicKeyInfo; // DefinedType
 
+
+let _cached_decoder_for_ProtocolEncrKey: $.ASN1Decoder<ProtocolEncrKey> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ProtocolEncrKey
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ProtocolEncrKey} The decoded data structure.
  */
-export const _decode_ProtocolEncrKey: $.ASN1Decoder<ProtocolEncrKey> = _decode_SubjectPublicKeyInfo;
+export function _decode_ProtocolEncrKey(el: _Element): ProtocolEncrKey {
+    if (!_cached_decoder_for_ProtocolEncrKey) {
+        _cached_decoder_for_ProtocolEncrKey = _decode_SubjectPublicKeyInfo;
+    }
+    return _cached_decoder_for_ProtocolEncrKey(el);
+}
+
+
+let _cached_encoder_for_ProtocolEncrKey: $.ASN1Encoder<ProtocolEncrKey> | null = null;
+
 
 /**
  * @summary Encodes a(n) ProtocolEncrKey into an ASN.1 Element.
@@ -39,7 +52,15 @@ export const _decode_ProtocolEncrKey: $.ASN1Decoder<ProtocolEncrKey> = _decode_S
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ProtocolEncrKey, encoded as an ASN.1 Element.
  */
-export const _encode_ProtocolEncrKey: $.ASN1Encoder<ProtocolEncrKey> = _encode_SubjectPublicKeyInfo;
+export function _encode_ProtocolEncrKey(
+    value: ProtocolEncrKey,
+    elGetter: $.ASN1Encoder<ProtocolEncrKey>
+): _Element {
+    if (!_cached_encoder_for_ProtocolEncrKey) {
+        _cached_encoder_for_ProtocolEncrKey = _encode_SubjectPublicKeyInfo;
+    }
+    return _cached_encoder_for_ProtocolEncrKey(value, elGetter);
+}
 
 
 /* eslint-enable */

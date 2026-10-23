@@ -32,13 +32,22 @@ import {
  */
 export type PrimaryObject = ObjectInstance; // DefinedType
 
+let _cached_decoder_for_PrimaryObject: $.ASN1Decoder<PrimaryObject> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PrimaryObject
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {PrimaryObject} The decoded data structure.
  */
-export const _decode_PrimaryObject: $.ASN1Decoder<PrimaryObject> = _decode_ObjectInstance;
+export function _decode_PrimaryObject(el: _Element): PrimaryObject {
+    if (!_cached_decoder_for_PrimaryObject) {
+        _cached_decoder_for_PrimaryObject = _decode_ObjectInstance;
+    }
+    return _cached_decoder_for_PrimaryObject(el);
+}
+
+let _cached_encoder_for_PrimaryObject: $.ASN1Encoder<PrimaryObject> | null = null;
 
 /**
  * @summary Encodes a(n) PrimaryObject into an ASN.1 Element.
@@ -47,7 +56,15 @@ export const _decode_PrimaryObject: $.ASN1Decoder<PrimaryObject> = _decode_Objec
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PrimaryObject, encoded as an ASN.1 Element.
  */
-export const _encode_PrimaryObject: $.ASN1Encoder<PrimaryObject> = _encode_ObjectInstance;
+export function _encode_PrimaryObject(
+    value: PrimaryObject,
+    elGetter: $.ASN1Encoder<PrimaryObject>
+): _Element {
+    if (!_cached_encoder_for_PrimaryObject) {
+        _cached_encoder_for_PrimaryObject = _encode_ObjectInstance;
+    }
+    return _cached_encoder_for_PrimaryObject(value, elGetter);
+}
 
 
 /* eslint-enable */

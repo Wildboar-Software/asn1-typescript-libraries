@@ -28,13 +28,26 @@ import {
  */
 export type Pointer = ObjectInstance; // DefinedType
 
+
+let _cached_decoder_for_Pointer: $.ASN1Decoder<Pointer> | null = null;
+
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Pointer
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {Pointer} The decoded data structure.
  */
-export const _decode_Pointer: $.ASN1Decoder<Pointer> = _decode_ObjectInstance;
+export function _decode_Pointer(el: _Element): Pointer {
+    if (!_cached_decoder_for_Pointer) {
+        _cached_decoder_for_Pointer = _decode_ObjectInstance;
+    }
+    return _cached_decoder_for_Pointer(el);
+}
+
+
+let _cached_encoder_for_Pointer: $.ASN1Encoder<Pointer> | null = null;
+
 
 /**
  * @summary Encodes a(n) Pointer into an ASN.1 Element.
@@ -43,7 +56,15 @@ export const _decode_Pointer: $.ASN1Decoder<Pointer> = _decode_ObjectInstance;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Pointer, encoded as an ASN.1 Element.
  */
-export const _encode_Pointer: $.ASN1Encoder<Pointer> = _encode_ObjectInstance;
+export function _encode_Pointer(
+    value: Pointer,
+    elGetter: $.ASN1Encoder<Pointer>
+): _Element {
+    if (!_cached_encoder_for_Pointer) {
+        _cached_encoder_for_Pointer = _encode_ObjectInstance;
+    }
+    return _cached_encoder_for_Pointer(value, elGetter);
+}
 
 
 /* eslint-enable */

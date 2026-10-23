@@ -20,13 +20,21 @@ import { Integer4, _decode_Integer4, _encode_Integer4 } from "../IN-CS3-common-d
 export
 type CallIdentifier = Integer4; // DefinedType
 
+let _cached_decoder_for_CallIdentifier: $.ASN1Decoder<CallIdentifier> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CallIdentifier
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_CallIdentifier: $.ASN1Decoder<CallIdentifier> = _decode_Integer4;
+export
+function _decode_CallIdentifier (el: _Element): CallIdentifier {
+    if (!_cached_decoder_for_CallIdentifier) { _cached_decoder_for_CallIdentifier = _decode_Integer4; }
+    return _cached_decoder_for_CallIdentifier(el);
+}
+
+let _cached_encoder_for_CallIdentifier: $.ASN1Encoder<CallIdentifier> | null = null;
 
 /**
  * @summary Encodes a(n) CallIdentifier into an ASN.1 Element.
@@ -35,7 +43,11 @@ export const _decode_CallIdentifier: $.ASN1Decoder<CallIdentifier> = _decode_Int
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CallIdentifier, encoded as an ASN.1 Element.
  */
-export const _encode_CallIdentifier: (value: CallIdentifier, elGetter: $.ASN1Encoder<any>) => _Element = _encode_Integer4;
+export
+function _encode_CallIdentifier (value: CallIdentifier, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_CallIdentifier) { _cached_encoder_for_CallIdentifier = _encode_Integer4; }
+    return _cached_encoder_for_CallIdentifier(value, elGetter);
+}
 
 
 /* eslint-enable */

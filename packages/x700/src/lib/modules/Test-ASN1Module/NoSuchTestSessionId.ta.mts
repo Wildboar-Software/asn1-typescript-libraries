@@ -32,13 +32,22 @@ import {
  */
 export type NoSuchTestSessionId = TestSessionId; // DefinedType
 
+let _cached_decoder_for_NoSuchTestSessionId: $.ASN1Decoder<NoSuchTestSessionId> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) NoSuchTestSessionId
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {NoSuchTestSessionId} The decoded data structure.
  */
-export const _decode_NoSuchTestSessionId: $.ASN1Decoder<NoSuchTestSessionId> = _decode_TestSessionId;
+export function _decode_NoSuchTestSessionId(el: _Element): NoSuchTestSessionId {
+    if (!_cached_decoder_for_NoSuchTestSessionId) {
+        _cached_decoder_for_NoSuchTestSessionId = _decode_TestSessionId;
+    }
+    return _cached_decoder_for_NoSuchTestSessionId(el);
+}
+
+let _cached_encoder_for_NoSuchTestSessionId: $.ASN1Encoder<NoSuchTestSessionId> | null = null;
 
 /**
  * @summary Encodes a(n) NoSuchTestSessionId into an ASN.1 Element.
@@ -47,7 +56,15 @@ export const _decode_NoSuchTestSessionId: $.ASN1Decoder<NoSuchTestSessionId> = _
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NoSuchTestSessionId, encoded as an ASN.1 Element.
  */
-export const _encode_NoSuchTestSessionId: $.ASN1Encoder<NoSuchTestSessionId> = _encode_TestSessionId;
+export function _encode_NoSuchTestSessionId(
+    value: NoSuchTestSessionId,
+    elGetter: $.ASN1Encoder<NoSuchTestSessionId>
+): _Element {
+    if (!_cached_encoder_for_NoSuchTestSessionId) {
+        _cached_encoder_for_NoSuchTestSessionId = _encode_TestSessionId;
+    }
+    return _cached_encoder_for_NoSuchTestSessionId(value, elGetter);
+}
 
 
 /* eslint-enable */

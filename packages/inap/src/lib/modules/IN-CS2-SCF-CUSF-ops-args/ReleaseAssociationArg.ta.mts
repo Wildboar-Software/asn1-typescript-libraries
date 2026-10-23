@@ -21,13 +21,21 @@ import { Cause, _decode_Cause, _encode_Cause } from "../IN-CS2-datatypes/Cause.t
 export
 type ReleaseAssociationArg = Cause; // DefinedType
 
+let _cached_decoder_for_ReleaseAssociationArg: $.ASN1Decoder<ReleaseAssociationArg> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ReleaseAssociationArg
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_ReleaseAssociationArg: $.ASN1Decoder<ReleaseAssociationArg> = _decode_Cause;
+export
+function _decode_ReleaseAssociationArg (el: _Element): ReleaseAssociationArg {
+    if (!_cached_decoder_for_ReleaseAssociationArg) { _cached_decoder_for_ReleaseAssociationArg = _decode_Cause; }
+    return _cached_decoder_for_ReleaseAssociationArg(el);
+}
+
+let _cached_encoder_for_ReleaseAssociationArg: $.ASN1Encoder<ReleaseAssociationArg> | null = null;
 
 /**
  * @summary Encodes a(n) ReleaseAssociationArg into an ASN.1 Element.
@@ -36,7 +44,11 @@ export const _decode_ReleaseAssociationArg: $.ASN1Decoder<ReleaseAssociationArg>
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ReleaseAssociationArg, encoded as an ASN.1 Element.
  */
-export const _encode_ReleaseAssociationArg: (value: ReleaseAssociationArg, elGetter: $.ASN1Encoder<any>) => _Element = _encode_Cause;
+export
+function _encode_ReleaseAssociationArg (value: ReleaseAssociationArg, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_ReleaseAssociationArg) { _cached_encoder_for_ReleaseAssociationArg = _encode_Cause; }
+    return _cached_encoder_for_ReleaseAssociationArg(value, elGetter);
+}
 
 
 /* eslint-enable */

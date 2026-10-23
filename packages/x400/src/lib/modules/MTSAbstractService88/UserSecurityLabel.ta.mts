@@ -31,13 +31,22 @@ import {
  */
 export type UserSecurityLabel = SecurityLabel; // DefinedType
 
+let _cached_decoder_for_UserSecurityLabel: $.ASN1Decoder<UserSecurityLabel> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) UserSecurityLabel
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {UserSecurityLabel} The decoded data structure.
  */
-export const _decode_UserSecurityLabel: $.ASN1Decoder<UserSecurityLabel> = _decode_SecurityLabel;
+export function _decode_UserSecurityLabel(el: _Element): UserSecurityLabel {
+    if (!_cached_decoder_for_UserSecurityLabel) {
+        _cached_decoder_for_UserSecurityLabel = _decode_SecurityLabel;
+    }
+    return _cached_decoder_for_UserSecurityLabel(el);
+}
+
+let _cached_encoder_for_UserSecurityLabel: $.ASN1Encoder<UserSecurityLabel> | null = null;
 
 /**
  * @summary Encodes a(n) UserSecurityLabel into an ASN.1 Element.
@@ -46,7 +55,15 @@ export const _decode_UserSecurityLabel: $.ASN1Decoder<UserSecurityLabel> = _deco
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UserSecurityLabel, encoded as an ASN.1 Element.
  */
-export const _encode_UserSecurityLabel: $.ASN1Encoder<UserSecurityLabel> = _encode_SecurityLabel;
+export function _encode_UserSecurityLabel(
+    value: UserSecurityLabel,
+    elGetter: $.ASN1Encoder<UserSecurityLabel>
+): _Element {
+    if (!_cached_encoder_for_UserSecurityLabel) {
+        _cached_encoder_for_UserSecurityLabel = _encode_SecurityLabel;
+    }
+    return _cached_encoder_for_UserSecurityLabel(value, elGetter);
+}
 
 
 /* eslint-enable */

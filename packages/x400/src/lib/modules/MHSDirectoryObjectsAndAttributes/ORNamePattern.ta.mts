@@ -29,13 +29,22 @@ import {
  */
 export type ORNamePattern = ORName; // DefinedType
 
+let _cached_decoder_for_ORNamePattern: $.ASN1Decoder<ORNamePattern> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) ORNamePattern
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ORNamePattern} The decoded data structure.
  */
-export const _decode_ORNamePattern: $.ASN1Decoder<ORNamePattern> = _decode_ORName;
+export function _decode_ORNamePattern(el: _Element): ORNamePattern {
+    if (!_cached_decoder_for_ORNamePattern) {
+        _cached_decoder_for_ORNamePattern = _decode_ORName;
+    }
+    return _cached_decoder_for_ORNamePattern(el);
+}
+
+let _cached_encoder_for_ORNamePattern: $.ASN1Encoder<ORNamePattern> | null = null;
 
 /**
  * @summary Encodes a(n) ORNamePattern into an ASN.1 Element.
@@ -44,7 +53,15 @@ export const _decode_ORNamePattern: $.ASN1Decoder<ORNamePattern> = _decode_ORNam
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ORNamePattern, encoded as an ASN.1 Element.
  */
-export const _encode_ORNamePattern: $.ASN1Encoder<ORNamePattern> = _encode_ORName;
+export function _encode_ORNamePattern(
+    value: ORNamePattern,
+    elGetter: $.ASN1Encoder<ORNamePattern>
+): _Element {
+    if (!_cached_encoder_for_ORNamePattern) {
+        _cached_encoder_for_ORNamePattern = _encode_ORName;
+    }
+    return _cached_encoder_for_ORNamePattern(value, elGetter);
+}
 
 
 /* eslint-enable */

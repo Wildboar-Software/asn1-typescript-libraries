@@ -31,13 +31,22 @@ import {
  */
 export type AP_title_form1 = Name; // DefinedType
 
+let _cached_decoder_for_AP_title_form1: $.ASN1Decoder<AP_title_form1> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) AP_title_form1
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {AP_title_form1} The decoded data structure.
  */
-export const _decode_AP_title_form1: $.ASN1Decoder<AP_title_form1> = _decode_Name;
+export function _decode_AP_title_form1(el: _Element): AP_title_form1 {
+  if (!_cached_decoder_for_AP_title_form1) {
+    _cached_decoder_for_AP_title_form1 = _decode_Name;
+  }
+  return _cached_decoder_for_AP_title_form1(el);
+}
+
+let _cached_encoder_for_AP_title_form1: $.ASN1Encoder<AP_title_form1> | null = null;
 
 /**
  * @summary Encodes a(n) AP_title_form1 into an ASN.1 Element.
@@ -46,7 +55,15 @@ export const _decode_AP_title_form1: $.ASN1Decoder<AP_title_form1> = _decode_Nam
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AP_title_form1, encoded as an ASN.1 Element.
  */
-export const _encode_AP_title_form1: $.ASN1Encoder<AP_title_form1> = _encode_Name;
+export function _encode_AP_title_form1(
+  value: AP_title_form1,
+  elGetter: $.ASN1Encoder<AP_title_form1>
+): _Element {
+  if (!_cached_encoder_for_AP_title_form1) {
+    _cached_encoder_for_AP_title_form1 = _encode_Name;
+  }
+  return _cached_encoder_for_AP_title_form1(value, elGetter);
+}
 
 
 /* eslint-enable */

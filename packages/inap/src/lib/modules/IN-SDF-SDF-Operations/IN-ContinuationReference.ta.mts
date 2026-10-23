@@ -28,13 +28,21 @@ import { ContinuationReference, _decode_ContinuationReference, _encode_Continuat
 export
 type IN_ContinuationReference = ContinuationReference; // DefinedType
 
+let _cached_decoder_for_IN_ContinuationReference: $.ASN1Decoder<IN_ContinuationReference> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) IN_ContinuationReference
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_IN_ContinuationReference: $.ASN1Decoder<IN_ContinuationReference> = _decode_ContinuationReference;
+export
+function _decode_IN_ContinuationReference (el: _Element): IN_ContinuationReference {
+    if (!_cached_decoder_for_IN_ContinuationReference) { _cached_decoder_for_IN_ContinuationReference = _decode_ContinuationReference; }
+    return _cached_decoder_for_IN_ContinuationReference(el);
+}
+
+let _cached_encoder_for_IN_ContinuationReference: $.ASN1Encoder<IN_ContinuationReference> | null = null;
 
 /**
  * @summary Encodes a(n) IN_ContinuationReference into an ASN.1 Element.
@@ -43,7 +51,11 @@ export const _decode_IN_ContinuationReference: $.ASN1Decoder<IN_ContinuationRefe
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The IN_ContinuationReference, encoded as an ASN.1 Element.
  */
-export const _encode_IN_ContinuationReference: (value: IN_ContinuationReference, elGetter: $.ASN1Encoder<any>) => _Element = _encode_ContinuationReference;
+export
+function _encode_IN_ContinuationReference (value: IN_ContinuationReference, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_IN_ContinuationReference) { _cached_encoder_for_IN_ContinuationReference = _encode_ContinuationReference; }
+    return _cached_encoder_for_IN_ContinuationReference(value, elGetter);
+}
 
 
 /* eslint-enable */

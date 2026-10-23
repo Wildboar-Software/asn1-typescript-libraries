@@ -33,13 +33,21 @@ import {
 export
 type CertifiedAttributes = AttributeCertificate; // DefinedType
 
+let _cached_decoder_for_CertifiedAttributes: $.ASN1Decoder<CertifiedAttributes> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) CertifiedAttributes
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {CertifiedAttributes} The decoded data structure.
  */
-export const _decode_CertifiedAttributes: $.ASN1Decoder<CertifiedAttributes> = _decode_AttributeCertificate;
+export
+function _decode_CertifiedAttributes (el: _Element): CertifiedAttributes {
+    if (!_cached_decoder_for_CertifiedAttributes) { _cached_decoder_for_CertifiedAttributes = _decode_AttributeCertificate; }
+    return _cached_decoder_for_CertifiedAttributes(el);
+}
+
+let _cached_encoder_for_CertifiedAttributes: $.ASN1Encoder<CertifiedAttributes> | null = null;
 
 /**
  * @summary Encodes a(n) CertifiedAttributes into an ASN.1 Element.
@@ -48,7 +56,11 @@ export const _decode_CertifiedAttributes: $.ASN1Decoder<CertifiedAttributes> = _
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CertifiedAttributes, encoded as an ASN.1 Element.
  */
-export const _encode_CertifiedAttributes: $.ASN1Encoder<CertifiedAttributes> = _encode_AttributeCertificate;
+export
+function _encode_CertifiedAttributes (value: CertifiedAttributes, elGetter: $.ASN1Encoder<CertifiedAttributes>): _Element {
+    if (!_cached_encoder_for_CertifiedAttributes) { _cached_encoder_for_CertifiedAttributes = _encode_AttributeCertificate; }
+    return _cached_encoder_for_CertifiedAttributes(value, elGetter);
+}
 
 
 /* eslint-enable */

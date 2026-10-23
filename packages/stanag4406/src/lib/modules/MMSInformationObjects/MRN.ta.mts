@@ -22,13 +22,21 @@ import { MN, _decode_MN, _encode_MN } from "../MMSInformationObjects/MN.ta.mjs";
 export
 type MRN = MN; // DefinedType
 
+let _cached_decoder_for_MRN: $.ASN1Decoder<MRN> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) MRN
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_MRN: $.ASN1Decoder<MRN> = _decode_MN;
+export
+function _decode_MRN (el: _Element): MRN {
+    if (!_cached_decoder_for_MRN) { _cached_decoder_for_MRN = _decode_MN; }
+    return _cached_decoder_for_MRN(el);
+}
+
+let _cached_encoder_for_MRN: $.ASN1Encoder<MRN> | null = null;
 
 /**
  * @summary Encodes a(n) MRN into an ASN.1 Element.
@@ -37,7 +45,11 @@ export const _decode_MRN: $.ASN1Decoder<MRN> = _decode_MN;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MRN, encoded as an ASN.1 Element.
  */
-export const _encode_MRN: (value: MRN, elGetter: $.ASN1Encoder<any>) => _Element = _encode_MN;
+export
+function _encode_MRN (value: MRN, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_MRN) { _cached_encoder_for_MRN = _encode_MN; }
+    return _cached_encoder_for_MRN(value, elGetter);
+}
 
 
 /* eslint-enable */

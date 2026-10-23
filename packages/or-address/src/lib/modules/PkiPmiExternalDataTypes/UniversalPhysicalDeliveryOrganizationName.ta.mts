@@ -22,13 +22,24 @@ import {
  */
 export type UniversalPhysicalDeliveryOrganizationName = UniversalPDSParameter; // DefinedType
 
+let _cached_decoder_for_UniversalPhysicalDeliveryOrganizationName: $.ASN1Decoder<UniversalPhysicalDeliveryOrganizationName> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) UniversalPhysicalDeliveryOrganizationName
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {UniversalPhysicalDeliveryOrganizationName} The decoded data structure.
  */
-export const _decode_UniversalPhysicalDeliveryOrganizationName: $.ASN1Decoder<UniversalPhysicalDeliveryOrganizationName> = _decode_UniversalPDSParameter;
+export function _decode_UniversalPhysicalDeliveryOrganizationName(
+    el: _Element
+): UniversalPhysicalDeliveryOrganizationName {
+    if (!_cached_decoder_for_UniversalPhysicalDeliveryOrganizationName) {
+        _cached_decoder_for_UniversalPhysicalDeliveryOrganizationName = _decode_UniversalPDSParameter;
+    }
+    return _cached_decoder_for_UniversalPhysicalDeliveryOrganizationName(el);
+}
+
+let _cached_encoder_for_UniversalPhysicalDeliveryOrganizationName: $.ASN1Encoder<UniversalPhysicalDeliveryOrganizationName> | null = null;
 
 /**
  * @summary Encodes a(n) UniversalPhysicalDeliveryOrganizationName into an ASN.1 Element.
@@ -37,7 +48,18 @@ export const _decode_UniversalPhysicalDeliveryOrganizationName: $.ASN1Decoder<Un
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UniversalPhysicalDeliveryOrganizationName, encoded as an ASN.1 Element.
  */
-export const _encode_UniversalPhysicalDeliveryOrganizationName: $.ASN1Encoder<UniversalPhysicalDeliveryOrganizationName> = _encode_UniversalPDSParameter;
+export function _encode_UniversalPhysicalDeliveryOrganizationName(
+    value: UniversalPhysicalDeliveryOrganizationName,
+    elGetter: $.ASN1Encoder<UniversalPhysicalDeliveryOrganizationName>
+): _Element {
+    if (!_cached_encoder_for_UniversalPhysicalDeliveryOrganizationName) {
+        _cached_encoder_for_UniversalPhysicalDeliveryOrganizationName = _encode_UniversalPDSParameter;
+    }
+    return _cached_encoder_for_UniversalPhysicalDeliveryOrganizationName(
+        value,
+        elGetter
+    );
+}
 
 
 /* eslint-enable */

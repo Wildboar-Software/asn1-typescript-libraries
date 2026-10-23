@@ -31,13 +31,22 @@ import {
  */
 export type RecipientCertificate = Certificates; // DefinedType
 
+let _cached_decoder_for_RecipientCertificate: $.ASN1Decoder<RecipientCertificate> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) RecipientCertificate
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {RecipientCertificate} The decoded data structure.
  */
-export const _decode_RecipientCertificate: $.ASN1Decoder<RecipientCertificate> = _decode_Certificates;
+export function _decode_RecipientCertificate(el: _Element): RecipientCertificate {
+    if (!_cached_decoder_for_RecipientCertificate) {
+        _cached_decoder_for_RecipientCertificate = _decode_Certificates;
+    }
+    return _cached_decoder_for_RecipientCertificate(el);
+}
+
+let _cached_encoder_for_RecipientCertificate: $.ASN1Encoder<RecipientCertificate> | null = null;
 
 /**
  * @summary Encodes a(n) RecipientCertificate into an ASN.1 Element.
@@ -46,7 +55,15 @@ export const _decode_RecipientCertificate: $.ASN1Decoder<RecipientCertificate> =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RecipientCertificate, encoded as an ASN.1 Element.
  */
-export const _encode_RecipientCertificate: $.ASN1Encoder<RecipientCertificate> = _encode_Certificates;
+export function _encode_RecipientCertificate(
+    value: RecipientCertificate,
+    elGetter: $.ASN1Encoder<RecipientCertificate>
+): _Element {
+    if (!_cached_encoder_for_RecipientCertificate) {
+        _cached_encoder_for_RecipientCertificate = _encode_Certificates;
+    }
+    return _cached_encoder_for_RecipientCertificate(value, elGetter);
+}
 
 
 /* eslint-enable */

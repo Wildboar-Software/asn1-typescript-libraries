@@ -29,13 +29,22 @@ import {
  */
 export type PSAPAddress = PresentationAddress; // DefinedType
 
+let _cached_decoder_for_PSAPAddress: $.ASN1Decoder<PSAPAddress> | null = null;
+
 /**
  * @summary Decodes an ASN.1 element into a(n) PSAPAddress
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {PSAPAddress} The decoded data structure.
  */
-export const _decode_PSAPAddress: $.ASN1Decoder<PSAPAddress> = _decode_PresentationAddress;
+export function _decode_PSAPAddress(el: _Element): PSAPAddress {
+    if (!_cached_decoder_for_PSAPAddress) {
+        _cached_decoder_for_PSAPAddress = _decode_PresentationAddress;
+    }
+    return _cached_decoder_for_PSAPAddress(el);
+}
+
+let _cached_encoder_for_PSAPAddress: $.ASN1Encoder<PSAPAddress> | null = null;
 
 /**
  * @summary Encodes a(n) PSAPAddress into an ASN.1 Element.
@@ -44,7 +53,15 @@ export const _decode_PSAPAddress: $.ASN1Decoder<PSAPAddress> = _decode_Presentat
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PSAPAddress, encoded as an ASN.1 Element.
  */
-export const _encode_PSAPAddress: $.ASN1Encoder<PSAPAddress> = _encode_PresentationAddress;
+export function _encode_PSAPAddress(
+    value: PSAPAddress,
+    elGetter: $.ASN1Encoder<PSAPAddress>
+): _Element {
+    if (!_cached_encoder_for_PSAPAddress) {
+        _cached_encoder_for_PSAPAddress = _encode_PresentationAddress;
+    }
+    return _cached_encoder_for_PSAPAddress(value, elGetter);
+}
 
 
 /* eslint-enable */
