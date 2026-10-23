@@ -29,22 +29,13 @@ import {
  */
 export type ObsoletedEDIMsSubfield = EDIMIdentifier; // DefinedType
 
-let _cached_decoder_for_ObsoletedEDIMsSubfield: $.ASN1Decoder<ObsoletedEDIMsSubfield> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ObsoletedEDIMsSubfield
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ObsoletedEDIMsSubfield} The decoded data structure.
  */
-export function _decode_ObsoletedEDIMsSubfield(el: _Element): ObsoletedEDIMsSubfield {
-    if (!_cached_decoder_for_ObsoletedEDIMsSubfield) {
-        _cached_decoder_for_ObsoletedEDIMsSubfield = _decode_EDIMIdentifier;
-    }
-    return _cached_decoder_for_ObsoletedEDIMsSubfield(el);
-}
-
-let _cached_encoder_for_ObsoletedEDIMsSubfield: $.ASN1Encoder<ObsoletedEDIMsSubfield> | null = null;
+export const _decode_ObsoletedEDIMsSubfield: $.ASN1Decoder<ObsoletedEDIMsSubfield> = _decode_EDIMIdentifier;
 
 /**
  * @summary Encodes a(n) ObsoletedEDIMsSubfield into an ASN.1 Element.
@@ -53,15 +44,7 @@ let _cached_encoder_for_ObsoletedEDIMsSubfield: $.ASN1Encoder<ObsoletedEDIMsSubf
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ObsoletedEDIMsSubfield, encoded as an ASN.1 Element.
  */
-export function _encode_ObsoletedEDIMsSubfield(
-    value: ObsoletedEDIMsSubfield,
-    elGetter: $.ASN1Encoder<ObsoletedEDIMsSubfield>
-): _Element {
-    if (!_cached_encoder_for_ObsoletedEDIMsSubfield) {
-        _cached_encoder_for_ObsoletedEDIMsSubfield = _encode_EDIMIdentifier;
-    }
-    return _cached_encoder_for_ObsoletedEDIMsSubfield(value, elGetter);
-}
+export const _encode_ObsoletedEDIMsSubfield: $.ASN1Encoder<ObsoletedEDIMsSubfield> = _encode_EDIMIdentifier;
 
 
 /* eslint-enable */

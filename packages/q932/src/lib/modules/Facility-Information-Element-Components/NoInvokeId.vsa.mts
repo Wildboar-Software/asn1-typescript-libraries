@@ -38,9 +38,6 @@ function _decode_NoInvokeId (el: _Element): NoInvokeId {
     return value;
 }
 
-let _cached_encoder_for_NoInvokeId: $.ASN1Encoder<NoInvokeId> | null = null;
-
-export
-function _encode_NoInvokeId (value: NoInvokeId, elGetter: $.ASN1Encoder<NoInvokeId>) {    if (!_cached_encoder_for_NoInvokeId) { _cached_encoder_for_NoInvokeId = _encode_InvokeId; }    return _cached_encoder_for_NoInvokeId(value, elGetter);}
+export const _encode_NoInvokeId: $.ASN1Encoder<NoInvokeId> = _encode_InvokeId;
 
 /* eslint-enable */

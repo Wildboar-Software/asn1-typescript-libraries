@@ -35,26 +35,13 @@ import {
  */
 export type ASN1ModuleContents = TextualRepresentation; // DefinedType
 
-
-let _cached_decoder_for_ASN1ModuleContents: $.ASN1Decoder<ASN1ModuleContents> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ASN1ModuleContents
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ASN1ModuleContents} The decoded data structure.
  */
-export function _decode_ASN1ModuleContents(el: _Element): ASN1ModuleContents {
-    if (!_cached_decoder_for_ASN1ModuleContents) {
-        _cached_decoder_for_ASN1ModuleContents = _decode_TextualRepresentation;
-    }
-    return _cached_decoder_for_ASN1ModuleContents(el);
-}
-
-
-let _cached_encoder_for_ASN1ModuleContents: $.ASN1Encoder<ASN1ModuleContents> | null = null;
-
+export const _decode_ASN1ModuleContents: $.ASN1Decoder<ASN1ModuleContents> = _decode_TextualRepresentation;
 
 /**
  * @summary Encodes a(n) ASN1ModuleContents into an ASN.1 Element.
@@ -63,15 +50,7 @@ let _cached_encoder_for_ASN1ModuleContents: $.ASN1Encoder<ASN1ModuleContents> | 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ASN1ModuleContents, encoded as an ASN.1 Element.
  */
-export function _encode_ASN1ModuleContents(
-    value: ASN1ModuleContents,
-    elGetter: $.ASN1Encoder<ASN1ModuleContents>
-): _Element {
-    if (!_cached_encoder_for_ASN1ModuleContents) {
-        _cached_encoder_for_ASN1ModuleContents = _encode_TextualRepresentation;
-    }
-    return _cached_encoder_for_ASN1ModuleContents(value, elGetter);
-}
+export const _encode_ASN1ModuleContents: $.ASN1Encoder<ASN1ModuleContents> = _encode_TextualRepresentation;
 
 
 /* eslint-enable */

@@ -32,26 +32,13 @@ import {
  */
 export type Presentation_context_addition_list = Context_list; // DefinedType
 
-
-let _cached_decoder_for_Presentation_context_addition_list: $.ASN1Decoder<Presentation_context_addition_list> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) Presentation_context_addition_list
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {Presentation_context_addition_list} The decoded data structure.
  */
-export function _decode_Presentation_context_addition_list(el: _Element): Presentation_context_addition_list {
-    if (!_cached_decoder_for_Presentation_context_addition_list) {
-        _cached_decoder_for_Presentation_context_addition_list = _decode_Context_list;
-    }
-    return _cached_decoder_for_Presentation_context_addition_list(el);
-}
-
-
-let _cached_encoder_for_Presentation_context_addition_list: $.ASN1Encoder<Presentation_context_addition_list> | null = null;
-
+export const _decode_Presentation_context_addition_list: $.ASN1Decoder<Presentation_context_addition_list> = _decode_Context_list;
 
 /**
  * @summary Encodes a(n) Presentation_context_addition_list into an ASN.1 Element.
@@ -60,18 +47,7 @@ let _cached_encoder_for_Presentation_context_addition_list: $.ASN1Encoder<Presen
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Presentation_context_addition_list, encoded as an ASN.1 Element.
  */
-export function _encode_Presentation_context_addition_list(
-    value: Presentation_context_addition_list,
-    elGetter: $.ASN1Encoder<Presentation_context_addition_list>
-): _Element {
-    if (!_cached_encoder_for_Presentation_context_addition_list) {
-        _cached_encoder_for_Presentation_context_addition_list = _encode_Context_list;
-    }
-    return _cached_encoder_for_Presentation_context_addition_list(
-        value,
-        elGetter
-    );
-}
+export const _encode_Presentation_context_addition_list: $.ASN1Encoder<Presentation_context_addition_list> = _encode_Context_list;
 
 
 /* eslint-enable */

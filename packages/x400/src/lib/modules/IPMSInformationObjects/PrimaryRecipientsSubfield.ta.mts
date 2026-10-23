@@ -29,22 +29,13 @@ import {
  */
 export type PrimaryRecipientsSubfield = RecipientSpecifier; // DefinedType
 
-let _cached_decoder_for_PrimaryRecipientsSubfield: $.ASN1Decoder<PrimaryRecipientsSubfield> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) PrimaryRecipientsSubfield
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {PrimaryRecipientsSubfield} The decoded data structure.
  */
-export function _decode_PrimaryRecipientsSubfield(el: _Element): PrimaryRecipientsSubfield {
-    if (!_cached_decoder_for_PrimaryRecipientsSubfield) {
-        _cached_decoder_for_PrimaryRecipientsSubfield = _decode_RecipientSpecifier;
-    }
-    return _cached_decoder_for_PrimaryRecipientsSubfield(el);
-}
-
-let _cached_encoder_for_PrimaryRecipientsSubfield: $.ASN1Encoder<PrimaryRecipientsSubfield> | null = null;
+export const _decode_PrimaryRecipientsSubfield: $.ASN1Decoder<PrimaryRecipientsSubfield> = _decode_RecipientSpecifier;
 
 /**
  * @summary Encodes a(n) PrimaryRecipientsSubfield into an ASN.1 Element.
@@ -53,15 +44,7 @@ let _cached_encoder_for_PrimaryRecipientsSubfield: $.ASN1Encoder<PrimaryRecipien
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PrimaryRecipientsSubfield, encoded as an ASN.1 Element.
  */
-export function _encode_PrimaryRecipientsSubfield(
-    value: PrimaryRecipientsSubfield,
-    elGetter: $.ASN1Encoder<PrimaryRecipientsSubfield>
-): _Element {
-    if (!_cached_encoder_for_PrimaryRecipientsSubfield) {
-        _cached_encoder_for_PrimaryRecipientsSubfield = _encode_RecipientSpecifier;
-    }
-    return _cached_encoder_for_PrimaryRecipientsSubfield(value, elGetter);
-}
+export const _encode_PrimaryRecipientsSubfield: $.ASN1Encoder<PrimaryRecipientsSubfield> = _encode_RecipientSpecifier;
 
 
 /* eslint-enable */

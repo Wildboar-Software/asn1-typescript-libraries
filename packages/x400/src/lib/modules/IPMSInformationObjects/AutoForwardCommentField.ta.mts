@@ -30,22 +30,13 @@ import {
  */
 export type AutoForwardCommentField = AutoForwardComment; // DefinedType
 
-let _cached_decoder_for_AutoForwardCommentField: $.ASN1Decoder<AutoForwardCommentField> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AutoForwardCommentField
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {AutoForwardCommentField} The decoded data structure.
  */
-export function _decode_AutoForwardCommentField(el: _Element): AutoForwardCommentField {
-    if (!_cached_decoder_for_AutoForwardCommentField) {
-        _cached_decoder_for_AutoForwardCommentField = _decode_AutoForwardComment;
-    }
-    return _cached_decoder_for_AutoForwardCommentField(el);
-}
-
-let _cached_encoder_for_AutoForwardCommentField: $.ASN1Encoder<AutoForwardCommentField> | null = null;
+export const _decode_AutoForwardCommentField: $.ASN1Decoder<AutoForwardCommentField> = _decode_AutoForwardComment;
 
 /**
  * @summary Encodes a(n) AutoForwardCommentField into an ASN.1 Element.
@@ -54,15 +45,7 @@ let _cached_encoder_for_AutoForwardCommentField: $.ASN1Encoder<AutoForwardCommen
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AutoForwardCommentField, encoded as an ASN.1 Element.
  */
-export function _encode_AutoForwardCommentField(
-    value: AutoForwardCommentField,
-    elGetter: $.ASN1Encoder<AutoForwardCommentField>
-): _Element {
-    if (!_cached_encoder_for_AutoForwardCommentField) {
-        _cached_encoder_for_AutoForwardCommentField = _encode_AutoForwardComment;
-    }
-    return _cached_encoder_for_AutoForwardCommentField(value, elGetter);
-}
+export const _encode_AutoForwardCommentField: $.ASN1Encoder<AutoForwardCommentField> = _encode_AutoForwardComment;
 
 
 /* eslint-enable */

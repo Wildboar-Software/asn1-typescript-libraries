@@ -42,26 +42,13 @@ import {
  */
 export type TemplateDefinition = TextualRepresentation; // DefinedType
 
-
-let _cached_decoder_for_TemplateDefinition: $.ASN1Decoder<TemplateDefinition> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) TemplateDefinition
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {TemplateDefinition} The decoded data structure.
  */
-export function _decode_TemplateDefinition(el: _Element): TemplateDefinition {
-    if (!_cached_decoder_for_TemplateDefinition) {
-        _cached_decoder_for_TemplateDefinition = _decode_TextualRepresentation;
-    }
-    return _cached_decoder_for_TemplateDefinition(el);
-}
-
-
-let _cached_encoder_for_TemplateDefinition: $.ASN1Encoder<TemplateDefinition> | null = null;
-
+export const _decode_TemplateDefinition: $.ASN1Decoder<TemplateDefinition> = _decode_TextualRepresentation;
 
 /**
  * @summary Encodes a(n) TemplateDefinition into an ASN.1 Element.
@@ -70,15 +57,7 @@ let _cached_encoder_for_TemplateDefinition: $.ASN1Encoder<TemplateDefinition> | 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TemplateDefinition, encoded as an ASN.1 Element.
  */
-export function _encode_TemplateDefinition(
-    value: TemplateDefinition,
-    elGetter: $.ASN1Encoder<TemplateDefinition>
-): _Element {
-    if (!_cached_encoder_for_TemplateDefinition) {
-        _cached_encoder_for_TemplateDefinition = _encode_TextualRepresentation;
-    }
-    return _cached_encoder_for_TemplateDefinition(value, elGetter);
-}
+export const _encode_TemplateDefinition: $.ASN1Encoder<TemplateDefinition> = _encode_TextualRepresentation;
 
 
 /* eslint-enable */

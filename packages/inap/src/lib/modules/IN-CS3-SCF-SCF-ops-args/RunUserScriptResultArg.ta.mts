@@ -21,21 +21,13 @@ import { ProvideUserInformationResultArg, _decode_ProvideUserInformationResultAr
 export
 type RunUserScriptResultArg = ProvideUserInformationResultArg; // DefinedType
 
-let _cached_decoder_for_RunUserScriptResultArg: $.ASN1Decoder<RunUserScriptResultArg> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) RunUserScriptResultArg
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_RunUserScriptResultArg (el: _Element): RunUserScriptResultArg {
-    if (!_cached_decoder_for_RunUserScriptResultArg) { _cached_decoder_for_RunUserScriptResultArg = _decode_ProvideUserInformationResultArg; }
-    return _cached_decoder_for_RunUserScriptResultArg(el);
-}
-
-let _cached_encoder_for_RunUserScriptResultArg: $.ASN1Encoder<RunUserScriptResultArg> | null = null;
+export const _decode_RunUserScriptResultArg: $.ASN1Decoder<RunUserScriptResultArg> = _decode_ProvideUserInformationResultArg;
 
 /**
  * @summary Encodes a(n) RunUserScriptResultArg into an ASN.1 Element.
@@ -44,11 +36,7 @@ let _cached_encoder_for_RunUserScriptResultArg: $.ASN1Encoder<RunUserScriptResul
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RunUserScriptResultArg, encoded as an ASN.1 Element.
  */
-export
-function _encode_RunUserScriptResultArg (value: RunUserScriptResultArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RunUserScriptResultArg) { _cached_encoder_for_RunUserScriptResultArg = _encode_ProvideUserInformationResultArg; }
-    return _cached_encoder_for_RunUserScriptResultArg(value, elGetter);
-}
+export const _encode_RunUserScriptResultArg: $.ASN1Encoder<RunUserScriptResultArg> = _encode_ProvideUserInformationResultArg;
 
 
 /* eslint-enable */

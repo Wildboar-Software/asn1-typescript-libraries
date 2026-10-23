@@ -29,22 +29,13 @@ import {
  */
 export type OriginalMessageOriginAuthenticationCheck = MessageOriginAuthenticationCheck; // DefinedType
 
-let _cached_decoder_for_OriginalMessageOriginAuthenticationCheck: $.ASN1Decoder<OriginalMessageOriginAuthenticationCheck> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) OriginalMessageOriginAuthenticationCheck
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {OriginalMessageOriginAuthenticationCheck} The decoded data structure.
  */
-export function _decode_OriginalMessageOriginAuthenticationCheck(el: _Element): OriginalMessageOriginAuthenticationCheck {
-    if (!_cached_decoder_for_OriginalMessageOriginAuthenticationCheck) {
-        _cached_decoder_for_OriginalMessageOriginAuthenticationCheck = _decode_MessageOriginAuthenticationCheck;
-    }
-    return _cached_decoder_for_OriginalMessageOriginAuthenticationCheck(el);
-}
-
-let _cached_encoder_for_OriginalMessageOriginAuthenticationCheck: $.ASN1Encoder<OriginalMessageOriginAuthenticationCheck> | null = null;
+export const _decode_OriginalMessageOriginAuthenticationCheck: $.ASN1Decoder<OriginalMessageOriginAuthenticationCheck> = _decode_MessageOriginAuthenticationCheck;
 
 /**
  * @summary Encodes a(n) OriginalMessageOriginAuthenticationCheck into an ASN.1 Element.
@@ -53,18 +44,7 @@ let _cached_encoder_for_OriginalMessageOriginAuthenticationCheck: $.ASN1Encoder<
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The OriginalMessageOriginAuthenticationCheck, encoded as an ASN.1 Element.
  */
-export function _encode_OriginalMessageOriginAuthenticationCheck(
-    value: OriginalMessageOriginAuthenticationCheck,
-    elGetter: $.ASN1Encoder<OriginalMessageOriginAuthenticationCheck>
-): _Element {
-    if (!_cached_encoder_for_OriginalMessageOriginAuthenticationCheck) {
-        _cached_encoder_for_OriginalMessageOriginAuthenticationCheck = _encode_MessageOriginAuthenticationCheck;
-    }
-    return _cached_encoder_for_OriginalMessageOriginAuthenticationCheck(
-        value,
-        elGetter
-    );
-}
+export const _encode_OriginalMessageOriginAuthenticationCheck: $.ASN1Encoder<OriginalMessageOriginAuthenticationCheck> = _encode_MessageOriginAuthenticationCheck;
 
 
 /* eslint-enable */

@@ -33,22 +33,13 @@ import {
  */
 export type ResponseTimeout = TimeoutPeriod; // DefinedType
 
-let _cached_decoder_for_ResponseTimeout: $.ASN1Decoder<ResponseTimeout> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ResponseTimeout
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ResponseTimeout} The decoded data structure.
  */
-export function _decode_ResponseTimeout(el: _Element): ResponseTimeout {
-    if (!_cached_decoder_for_ResponseTimeout) {
-        _cached_decoder_for_ResponseTimeout = _decode_TimeoutPeriod;
-    }
-    return _cached_decoder_for_ResponseTimeout(el);
-}
-
-let _cached_encoder_for_ResponseTimeout: $.ASN1Encoder<ResponseTimeout> | null = null;
+export const _decode_ResponseTimeout: $.ASN1Decoder<ResponseTimeout> = _decode_TimeoutPeriod;
 
 /**
  * @summary Encodes a(n) ResponseTimeout into an ASN.1 Element.
@@ -57,15 +48,7 @@ let _cached_encoder_for_ResponseTimeout: $.ASN1Encoder<ResponseTimeout> | null =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ResponseTimeout, encoded as an ASN.1 Element.
  */
-export function _encode_ResponseTimeout(
-    value: ResponseTimeout,
-    elGetter: $.ASN1Encoder<ResponseTimeout>
-): _Element {
-    if (!_cached_encoder_for_ResponseTimeout) {
-        _cached_encoder_for_ResponseTimeout = _encode_TimeoutPeriod;
-    }
-    return _cached_encoder_for_ResponseTimeout(value, elGetter);
-}
+export const _encode_ResponseTimeout: $.ASN1Encoder<ResponseTimeout> = _encode_TimeoutPeriod;
 
 
 /* eslint-enable */

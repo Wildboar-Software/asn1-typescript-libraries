@@ -33,22 +33,13 @@ import {
  */
 export type ReplyRecipientsSubfield = ORDescriptor; // DefinedType
 
-let _cached_decoder_for_ReplyRecipientsSubfield: $.ASN1Decoder<ReplyRecipientsSubfield> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ReplyRecipientsSubfield
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ReplyRecipientsSubfield} The decoded data structure.
  */
-export function _decode_ReplyRecipientsSubfield(el: _Element): ReplyRecipientsSubfield {
-    if (!_cached_decoder_for_ReplyRecipientsSubfield) {
-        _cached_decoder_for_ReplyRecipientsSubfield = _decode_ORDescriptor;
-    }
-    return _cached_decoder_for_ReplyRecipientsSubfield(el);
-}
-
-let _cached_encoder_for_ReplyRecipientsSubfield: $.ASN1Encoder<ReplyRecipientsSubfield> | null = null;
+export const _decode_ReplyRecipientsSubfield: $.ASN1Decoder<ReplyRecipientsSubfield> = _decode_ORDescriptor;
 
 /**
  * @summary Encodes a(n) ReplyRecipientsSubfield into an ASN.1 Element.
@@ -57,15 +48,7 @@ let _cached_encoder_for_ReplyRecipientsSubfield: $.ASN1Encoder<ReplyRecipientsSu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ReplyRecipientsSubfield, encoded as an ASN.1 Element.
  */
-export function _encode_ReplyRecipientsSubfield(
-    value: ReplyRecipientsSubfield,
-    elGetter: $.ASN1Encoder<ReplyRecipientsSubfield>
-): _Element {
-    if (!_cached_encoder_for_ReplyRecipientsSubfield) {
-        _cached_encoder_for_ReplyRecipientsSubfield = _encode_ORDescriptor;
-    }
-    return _cached_encoder_for_ReplyRecipientsSubfield(value, elGetter);
-}
+export const _encode_ReplyRecipientsSubfield: $.ASN1Encoder<ReplyRecipientsSubfield> = _encode_ORDescriptor;
 
 
 /* eslint-enable */

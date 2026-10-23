@@ -33,22 +33,13 @@ import {
  */
 export type PatternType = DataType; // DefinedType
 
-let _cached_decoder_for_PatternType: $.ASN1Decoder<PatternType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) PatternType
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {PatternType} The decoded data structure.
  */
-export function _decode_PatternType(el: _Element): PatternType {
-    if (!_cached_decoder_for_PatternType) {
-        _cached_decoder_for_PatternType = _decode_DataType;
-    }
-    return _cached_decoder_for_PatternType(el);
-}
-
-let _cached_encoder_for_PatternType: $.ASN1Encoder<PatternType> | null = null;
+export const _decode_PatternType: $.ASN1Decoder<PatternType> = _decode_DataType;
 
 /**
  * @summary Encodes a(n) PatternType into an ASN.1 Element.
@@ -57,15 +48,7 @@ let _cached_encoder_for_PatternType: $.ASN1Encoder<PatternType> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PatternType, encoded as an ASN.1 Element.
  */
-export function _encode_PatternType(
-    value: PatternType,
-    elGetter: $.ASN1Encoder<PatternType>
-): _Element {
-    if (!_cached_encoder_for_PatternType) {
-        _cached_encoder_for_PatternType = _encode_DataType;
-    }
-    return _cached_encoder_for_PatternType(value, elGetter);
-}
+export const _encode_PatternType: $.ASN1Encoder<PatternType> = _encode_DataType;
 
 
 /* eslint-enable */

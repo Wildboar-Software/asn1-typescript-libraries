@@ -25,21 +25,13 @@ import { VcOrMapId, _decode_VcOrMapId, _encode_VcOrMapId } from "../CCSDS-SLE-TR
 export
 type MapId = VcOrMapId; // DefinedType
 
-let _cached_decoder_for_MapId: $.ASN1Decoder<MapId> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) MapId
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_MapId (el: _Element): MapId {
-    if (!_cached_decoder_for_MapId) { _cached_decoder_for_MapId = _decode_VcOrMapId; }
-    return _cached_decoder_for_MapId(el);
-}
-
-let _cached_encoder_for_MapId: $.ASN1Encoder<MapId> | null = null;
+export const _decode_MapId: $.ASN1Decoder<MapId> = _decode_VcOrMapId;
 
 /**
  * @summary Encodes a(n) MapId into an ASN.1 Element.
@@ -48,11 +40,7 @@ let _cached_encoder_for_MapId: $.ASN1Encoder<MapId> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MapId, encoded as an ASN.1 Element.
  */
-export
-function _encode_MapId (value: MapId, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MapId) { _cached_encoder_for_MapId = _encode_VcOrMapId; }
-    return _cached_encoder_for_MapId(value, elGetter);
-}
+export const _encode_MapId: $.ASN1Encoder<MapId> = _encode_VcOrMapId;
 
 
 /* eslint-enable */

@@ -30,21 +30,13 @@ import { ProgramInvocationState, _decode_ProgramInvocationState, _encode_Program
 export
 type Resume_Error = ProgramInvocationState; // DefinedType
 
-let _cached_decoder_for_Resume_Error: $.ASN1Decoder<Resume_Error> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) Resume_Error
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_Resume_Error (el: _Element): Resume_Error {
-    if (!_cached_decoder_for_Resume_Error) { _cached_decoder_for_Resume_Error = _decode_ProgramInvocationState; }
-    return _cached_decoder_for_Resume_Error(el);
-}
-
-let _cached_encoder_for_Resume_Error: $.ASN1Encoder<Resume_Error> | null = null;
+export const _decode_Resume_Error: $.ASN1Decoder<Resume_Error> = _decode_ProgramInvocationState;
 
 /**
  * @summary Encodes a(n) Resume_Error into an ASN.1 Element.
@@ -53,11 +45,7 @@ let _cached_encoder_for_Resume_Error: $.ASN1Encoder<Resume_Error> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Resume_Error, encoded as an ASN.1 Element.
  */
-export
-function _encode_Resume_Error (value: Resume_Error, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Resume_Error) { _cached_encoder_for_Resume_Error = _encode_ProgramInvocationState; }
-    return _cached_encoder_for_Resume_Error(value, elGetter);
-}
+export const _encode_Resume_Error: $.ASN1Encoder<Resume_Error> = _encode_ProgramInvocationState;
 
 
 /* eslint-enable */

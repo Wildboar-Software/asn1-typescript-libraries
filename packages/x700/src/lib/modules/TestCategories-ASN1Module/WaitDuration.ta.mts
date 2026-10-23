@@ -33,22 +33,13 @@ import {
  */
 export type WaitDuration = Timespec; // DefinedType
 
-let _cached_decoder_for_WaitDuration: $.ASN1Decoder<WaitDuration> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) WaitDuration
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {WaitDuration} The decoded data structure.
  */
-export function _decode_WaitDuration(el: _Element): WaitDuration {
-    if (!_cached_decoder_for_WaitDuration) {
-        _cached_decoder_for_WaitDuration = _decode_Timespec;
-    }
-    return _cached_decoder_for_WaitDuration(el);
-}
-
-let _cached_encoder_for_WaitDuration: $.ASN1Encoder<WaitDuration> | null = null;
+export const _decode_WaitDuration: $.ASN1Decoder<WaitDuration> = _decode_Timespec;
 
 /**
  * @summary Encodes a(n) WaitDuration into an ASN.1 Element.
@@ -57,15 +48,7 @@ let _cached_encoder_for_WaitDuration: $.ASN1Encoder<WaitDuration> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The WaitDuration, encoded as an ASN.1 Element.
  */
-export function _encode_WaitDuration(
-    value: WaitDuration,
-    elGetter: $.ASN1Encoder<WaitDuration>
-): _Element {
-    if (!_cached_encoder_for_WaitDuration) {
-        _cached_encoder_for_WaitDuration = _encode_Timespec;
-    }
-    return _cached_encoder_for_WaitDuration(value, elGetter);
-}
+export const _encode_WaitDuration: $.ASN1Encoder<WaitDuration> = _encode_Timespec;
 
 
 /* eslint-enable */

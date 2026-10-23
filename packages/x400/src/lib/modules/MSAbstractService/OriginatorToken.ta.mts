@@ -33,22 +33,13 @@ import {
  */
 export type OriginatorToken = MessageToken; // DefinedType
 
-let _cached_decoder_for_OriginatorToken: $.ASN1Decoder<OriginatorToken> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) OriginatorToken
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {OriginatorToken} The decoded data structure.
  */
-export function _decode_OriginatorToken(el: _Element): OriginatorToken {
-    if (!_cached_decoder_for_OriginatorToken) {
-        _cached_decoder_for_OriginatorToken = _decode_MessageToken;
-    }
-    return _cached_decoder_for_OriginatorToken(el);
-}
-
-let _cached_encoder_for_OriginatorToken: $.ASN1Encoder<OriginatorToken> | null = null;
+export const _decode_OriginatorToken: $.ASN1Decoder<OriginatorToken> = _decode_MessageToken;
 
 /**
  * @summary Encodes a(n) OriginatorToken into an ASN.1 Element.
@@ -57,15 +48,7 @@ let _cached_encoder_for_OriginatorToken: $.ASN1Encoder<OriginatorToken> | null =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The OriginatorToken, encoded as an ASN.1 Element.
  */
-export function _encode_OriginatorToken(
-    value: OriginatorToken,
-    elGetter: $.ASN1Encoder<OriginatorToken>
-): _Element {
-    if (!_cached_encoder_for_OriginatorToken) {
-        _cached_encoder_for_OriginatorToken = _encode_MessageToken;
-    }
-    return _cached_encoder_for_OriginatorToken(value, elGetter);
-}
+export const _encode_OriginatorToken: $.ASN1Encoder<OriginatorToken> = _encode_MessageToken;
 
 
 /* eslint-enable */

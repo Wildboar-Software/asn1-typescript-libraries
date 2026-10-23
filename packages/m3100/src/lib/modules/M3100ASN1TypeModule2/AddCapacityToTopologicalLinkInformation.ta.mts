@@ -28,26 +28,13 @@ import {
  */
 export type AddCapacityToTopologicalLinkInformation = RequestedCapacity; // DefinedType
 
-
-let _cached_decoder_for_AddCapacityToTopologicalLinkInformation: $.ASN1Decoder<AddCapacityToTopologicalLinkInformation> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AddCapacityToTopologicalLinkInformation
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {AddCapacityToTopologicalLinkInformation} The decoded data structure.
  */
-export function _decode_AddCapacityToTopologicalLinkInformation(el: _Element): AddCapacityToTopologicalLinkInformation {
-    if (!_cached_decoder_for_AddCapacityToTopologicalLinkInformation) {
-        _cached_decoder_for_AddCapacityToTopologicalLinkInformation = _decode_RequestedCapacity;
-    }
-    return _cached_decoder_for_AddCapacityToTopologicalLinkInformation(el);
-}
-
-
-let _cached_encoder_for_AddCapacityToTopologicalLinkInformation: $.ASN1Encoder<AddCapacityToTopologicalLinkInformation> | null = null;
-
+export const _decode_AddCapacityToTopologicalLinkInformation: $.ASN1Decoder<AddCapacityToTopologicalLinkInformation> = _decode_RequestedCapacity;
 
 /**
  * @summary Encodes a(n) AddCapacityToTopologicalLinkInformation into an ASN.1 Element.
@@ -56,18 +43,7 @@ let _cached_encoder_for_AddCapacityToTopologicalLinkInformation: $.ASN1Encoder<A
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AddCapacityToTopologicalLinkInformation, encoded as an ASN.1 Element.
  */
-export function _encode_AddCapacityToTopologicalLinkInformation(
-    value: AddCapacityToTopologicalLinkInformation,
-    elGetter: $.ASN1Encoder<AddCapacityToTopologicalLinkInformation>
-): _Element {
-    if (!_cached_encoder_for_AddCapacityToTopologicalLinkInformation) {
-        _cached_encoder_for_AddCapacityToTopologicalLinkInformation = _encode_RequestedCapacity;
-    }
-    return _cached_encoder_for_AddCapacityToTopologicalLinkInformation(
-        value,
-        elGetter
-    );
-}
+export const _encode_AddCapacityToTopologicalLinkInformation: $.ASN1Encoder<AddCapacityToTopologicalLinkInformation> = _encode_RequestedCapacity;
 
 
 /* eslint-enable */

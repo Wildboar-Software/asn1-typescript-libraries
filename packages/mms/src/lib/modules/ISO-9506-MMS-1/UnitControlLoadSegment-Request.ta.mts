@@ -29,21 +29,13 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
 export
 type UnitControlLoadSegment_Request = Identifier; // DefinedType
 
-let _cached_decoder_for_UnitControlLoadSegment_Request: $.ASN1Decoder<UnitControlLoadSegment_Request> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) UnitControlLoadSegment_Request
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_UnitControlLoadSegment_Request (el: _Element): UnitControlLoadSegment_Request {
-    if (!_cached_decoder_for_UnitControlLoadSegment_Request) { _cached_decoder_for_UnitControlLoadSegment_Request = _decode_Identifier; }
-    return _cached_decoder_for_UnitControlLoadSegment_Request(el);
-}
-
-let _cached_encoder_for_UnitControlLoadSegment_Request: $.ASN1Encoder<UnitControlLoadSegment_Request> | null = null;
+export const _decode_UnitControlLoadSegment_Request: $.ASN1Decoder<UnitControlLoadSegment_Request> = _decode_Identifier;
 
 /**
  * @summary Encodes a(n) UnitControlLoadSegment_Request into an ASN.1 Element.
@@ -52,11 +44,7 @@ let _cached_encoder_for_UnitControlLoadSegment_Request: $.ASN1Encoder<UnitContro
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UnitControlLoadSegment_Request, encoded as an ASN.1 Element.
  */
-export
-function _encode_UnitControlLoadSegment_Request (value: UnitControlLoadSegment_Request, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UnitControlLoadSegment_Request) { _cached_encoder_for_UnitControlLoadSegment_Request = _encode_Identifier; }
-    return _cached_encoder_for_UnitControlLoadSegment_Request(value, elGetter);
-}
+export const _encode_UnitControlLoadSegment_Request: $.ASN1Encoder<UnitControlLoadSegment_Request> = _encode_Identifier;
 
 
 /* eslint-enable */

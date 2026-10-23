@@ -31,26 +31,13 @@ import {
  */
 export type User_Identity_Pattern = String_Pattern; // DefinedType
 
-
-let _cached_decoder_for_User_Identity_Pattern: $.ASN1Decoder<User_Identity_Pattern> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) User_Identity_Pattern
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {User_Identity_Pattern} The decoded data structure.
  */
-export function _decode_User_Identity_Pattern(el: _Element): User_Identity_Pattern {
-  if (!_cached_decoder_for_User_Identity_Pattern) {
-    _cached_decoder_for_User_Identity_Pattern = _decode_String_Pattern;
-  }
-  return _cached_decoder_for_User_Identity_Pattern(el);
-}
-
-
-let _cached_encoder_for_User_Identity_Pattern: $.ASN1Encoder<User_Identity_Pattern> | null = null;
-
+export const _decode_User_Identity_Pattern: $.ASN1Decoder<User_Identity_Pattern> = _decode_String_Pattern;
 
 /**
  * @summary Encodes a(n) User_Identity_Pattern into an ASN.1 Element.
@@ -59,15 +46,7 @@ let _cached_encoder_for_User_Identity_Pattern: $.ASN1Encoder<User_Identity_Patte
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The User_Identity_Pattern, encoded as an ASN.1 Element.
  */
-export function _encode_User_Identity_Pattern(
-  value: User_Identity_Pattern,
-  elGetter: $.ASN1Encoder<User_Identity_Pattern>
-): _Element {
-  if (!_cached_encoder_for_User_Identity_Pattern) {
-    _cached_encoder_for_User_Identity_Pattern = _encode_String_Pattern;
-  }
-  return _cached_encoder_for_User_Identity_Pattern(value, elGetter);
-}
+export const _encode_User_Identity_Pattern: $.ASN1Encoder<User_Identity_Pattern> = _encode_String_Pattern;
 
 
 /* eslint-enable */

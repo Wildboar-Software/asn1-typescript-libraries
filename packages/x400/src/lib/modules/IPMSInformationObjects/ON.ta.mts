@@ -36,22 +36,13 @@ import {
  */
 export type ON = IPN; // DefinedType
 
-let _cached_decoder_for_ON: $.ASN1Decoder<ON> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ON
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ON} The decoded data structure.
  */
-export function _decode_ON(el: _Element): ON {
-    if (!_cached_decoder_for_ON) {
-        _cached_decoder_for_ON = _decode_IPN;
-    }
-    return _cached_decoder_for_ON(el);
-}
-
-let _cached_encoder_for_ON: $.ASN1Encoder<ON> | null = null;
+export const _decode_ON: $.ASN1Decoder<ON> = _decode_IPN;
 
 /**
  * @summary Encodes a(n) ON into an ASN.1 Element.
@@ -60,12 +51,7 @@ let _cached_encoder_for_ON: $.ASN1Encoder<ON> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ON, encoded as an ASN.1 Element.
  */
-export function _encode_ON(value: ON, elGetter: $.ASN1Encoder<ON>): _Element {
-    if (!_cached_encoder_for_ON) {
-        _cached_encoder_for_ON = _encode_IPN;
-    }
-    return _cached_encoder_for_ON(value, elGetter);
-}
+export const _encode_ON: $.ASN1Encoder<ON> = _encode_IPN;
 
 
 /* eslint-enable */

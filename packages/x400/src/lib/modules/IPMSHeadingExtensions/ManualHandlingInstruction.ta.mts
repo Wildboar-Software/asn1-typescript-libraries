@@ -30,22 +30,13 @@ import {
  */
 export type ManualHandlingInstruction = UniversalOrBMPString; // DefinedType
 
-let _cached_decoder_for_ManualHandlingInstruction: $.ASN1Decoder<ManualHandlingInstruction> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ManualHandlingInstruction
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ManualHandlingInstruction} The decoded data structure.
  */
-export function _decode_ManualHandlingInstruction(el: _Element): ManualHandlingInstruction {
-    if (!_cached_decoder_for_ManualHandlingInstruction) {
-        _cached_decoder_for_ManualHandlingInstruction = _decode_UniversalOrBMPString;
-    }
-    return _cached_decoder_for_ManualHandlingInstruction(el);
-}
-
-let _cached_encoder_for_ManualHandlingInstruction: $.ASN1Encoder<ManualHandlingInstruction> | null = null;
+export const _decode_ManualHandlingInstruction: $.ASN1Decoder<ManualHandlingInstruction> = _decode_UniversalOrBMPString;
 
 /**
  * @summary Encodes a(n) ManualHandlingInstruction into an ASN.1 Element.
@@ -54,15 +45,7 @@ let _cached_encoder_for_ManualHandlingInstruction: $.ASN1Encoder<ManualHandlingI
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ManualHandlingInstruction, encoded as an ASN.1 Element.
  */
-export function _encode_ManualHandlingInstruction(
-    value: ManualHandlingInstruction,
-    elGetter: $.ASN1Encoder<ManualHandlingInstruction>
-): _Element {
-    if (!_cached_encoder_for_ManualHandlingInstruction) {
-        _cached_encoder_for_ManualHandlingInstruction = _encode_UniversalOrBMPString;
-    }
-    return _cached_encoder_for_ManualHandlingInstruction(value, elGetter);
-}
+export const _encode_ManualHandlingInstruction: $.ASN1Encoder<ManualHandlingInstruction> = _encode_UniversalOrBMPString;
 
 
 /* eslint-enable */

@@ -35,26 +35,13 @@ import {
  */
 export type DefinedAs = TextualRepresentation; // DefinedType
 
-
-let _cached_decoder_for_DefinedAs: $.ASN1Decoder<DefinedAs> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) DefinedAs
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {DefinedAs} The decoded data structure.
  */
-export function _decode_DefinedAs(el: _Element): DefinedAs {
-    if (!_cached_decoder_for_DefinedAs) {
-        _cached_decoder_for_DefinedAs = _decode_TextualRepresentation;
-    }
-    return _cached_decoder_for_DefinedAs(el);
-}
-
-
-let _cached_encoder_for_DefinedAs: $.ASN1Encoder<DefinedAs> | null = null;
-
+export const _decode_DefinedAs: $.ASN1Decoder<DefinedAs> = _decode_TextualRepresentation;
 
 /**
  * @summary Encodes a(n) DefinedAs into an ASN.1 Element.
@@ -63,15 +50,7 @@ let _cached_encoder_for_DefinedAs: $.ASN1Encoder<DefinedAs> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DefinedAs, encoded as an ASN.1 Element.
  */
-export function _encode_DefinedAs(
-    value: DefinedAs,
-    elGetter: $.ASN1Encoder<DefinedAs>
-): _Element {
-    if (!_cached_encoder_for_DefinedAs) {
-        _cached_encoder_for_DefinedAs = _encode_TextualRepresentation;
-    }
-    return _cached_encoder_for_DefinedAs(value, elGetter);
-}
+export const _encode_DefinedAs: $.ASN1Encoder<DefinedAs> = _encode_TextualRepresentation;
 
 
 /* eslint-enable */

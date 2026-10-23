@@ -29,21 +29,13 @@ import { ProgramInvocationState, _decode_ProgramInvocationState, _encode_Program
 export
 type Stop_Error = ProgramInvocationState; // DefinedType
 
-let _cached_decoder_for_Stop_Error: $.ASN1Decoder<Stop_Error> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) Stop_Error
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_Stop_Error (el: _Element): Stop_Error {
-    if (!_cached_decoder_for_Stop_Error) { _cached_decoder_for_Stop_Error = _decode_ProgramInvocationState; }
-    return _cached_decoder_for_Stop_Error(el);
-}
-
-let _cached_encoder_for_Stop_Error: $.ASN1Encoder<Stop_Error> | null = null;
+export const _decode_Stop_Error: $.ASN1Decoder<Stop_Error> = _decode_ProgramInvocationState;
 
 /**
  * @summary Encodes a(n) Stop_Error into an ASN.1 Element.
@@ -52,11 +44,7 @@ let _cached_encoder_for_Stop_Error: $.ASN1Encoder<Stop_Error> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Stop_Error, encoded as an ASN.1 Element.
  */
-export
-function _encode_Stop_Error (value: Stop_Error, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Stop_Error) { _cached_encoder_for_Stop_Error = _encode_ProgramInvocationState; }
-    return _cached_encoder_for_Stop_Error(value, elGetter);
-}
+export const _encode_Stop_Error: $.ASN1Encoder<Stop_Error> = _encode_ProgramInvocationState;
 
 
 /* eslint-enable */

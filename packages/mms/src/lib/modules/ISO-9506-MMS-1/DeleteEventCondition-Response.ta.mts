@@ -32,21 +32,13 @@ import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-
 export
 type DeleteEventCondition_Response = Unsigned32; // DefinedType
 
-let _cached_decoder_for_DeleteEventCondition_Response: $.ASN1Decoder<DeleteEventCondition_Response> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) DeleteEventCondition_Response
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_DeleteEventCondition_Response (el: _Element): DeleteEventCondition_Response {
-    if (!_cached_decoder_for_DeleteEventCondition_Response) { _cached_decoder_for_DeleteEventCondition_Response = _decode_Unsigned32; }
-    return _cached_decoder_for_DeleteEventCondition_Response(el);
-}
-
-let _cached_encoder_for_DeleteEventCondition_Response: $.ASN1Encoder<DeleteEventCondition_Response> | null = null;
+export const _decode_DeleteEventCondition_Response: $.ASN1Decoder<DeleteEventCondition_Response> = _decode_Unsigned32;
 
 /**
  * @summary Encodes a(n) DeleteEventCondition_Response into an ASN.1 Element.
@@ -55,11 +47,7 @@ let _cached_encoder_for_DeleteEventCondition_Response: $.ASN1Encoder<DeleteEvent
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DeleteEventCondition_Response, encoded as an ASN.1 Element.
  */
-export
-function _encode_DeleteEventCondition_Response (value: DeleteEventCondition_Response, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DeleteEventCondition_Response) { _cached_encoder_for_DeleteEventCondition_Response = _encode_Unsigned32; }
-    return _cached_encoder_for_DeleteEventCondition_Response(value, elGetter);
-}
+export const _encode_DeleteEventCondition_Response: $.ASN1Encoder<DeleteEventCondition_Response> = _encode_Unsigned32;
 
 
 /* eslint-enable */

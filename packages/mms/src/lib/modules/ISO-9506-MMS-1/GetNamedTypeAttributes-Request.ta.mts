@@ -30,21 +30,13 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
 export
 type GetNamedTypeAttributes_Request = ObjectName; // DefinedType
 
-let _cached_decoder_for_GetNamedTypeAttributes_Request: $.ASN1Decoder<GetNamedTypeAttributes_Request> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) GetNamedTypeAttributes_Request
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_GetNamedTypeAttributes_Request (el: _Element): GetNamedTypeAttributes_Request {
-    if (!_cached_decoder_for_GetNamedTypeAttributes_Request) { _cached_decoder_for_GetNamedTypeAttributes_Request = _decode_ObjectName; }
-    return _cached_decoder_for_GetNamedTypeAttributes_Request(el);
-}
-
-let _cached_encoder_for_GetNamedTypeAttributes_Request: $.ASN1Encoder<GetNamedTypeAttributes_Request> | null = null;
+export const _decode_GetNamedTypeAttributes_Request: $.ASN1Decoder<GetNamedTypeAttributes_Request> = _decode_ObjectName;
 
 /**
  * @summary Encodes a(n) GetNamedTypeAttributes_Request into an ASN.1 Element.
@@ -53,11 +45,7 @@ let _cached_encoder_for_GetNamedTypeAttributes_Request: $.ASN1Encoder<GetNamedTy
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The GetNamedTypeAttributes_Request, encoded as an ASN.1 Element.
  */
-export
-function _encode_GetNamedTypeAttributes_Request (value: GetNamedTypeAttributes_Request, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GetNamedTypeAttributes_Request) { _cached_encoder_for_GetNamedTypeAttributes_Request = _encode_ObjectName; }
-    return _cached_encoder_for_GetNamedTypeAttributes_Request(value, elGetter);
-}
+export const _encode_GetNamedTypeAttributes_Request: $.ASN1Encoder<GetNamedTypeAttributes_Request> = _encode_ObjectName;
 
 
 /* eslint-enable */

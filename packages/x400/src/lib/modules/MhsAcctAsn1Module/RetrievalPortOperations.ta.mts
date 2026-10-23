@@ -30,22 +30,13 @@ import {
  */
 export type RetrievalPortOperations = EventTypeId; // DefinedType
 
-let _cached_decoder_for_RetrievalPortOperations: $.ASN1Decoder<RetrievalPortOperations> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) RetrievalPortOperations
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {RetrievalPortOperations} The decoded data structure.
  */
-export function _decode_RetrievalPortOperations(el: _Element): RetrievalPortOperations {
-    if (!_cached_decoder_for_RetrievalPortOperations) {
-        _cached_decoder_for_RetrievalPortOperations = _decode_EventTypeId;
-    }
-    return _cached_decoder_for_RetrievalPortOperations(el);
-}
-
-let _cached_encoder_for_RetrievalPortOperations: $.ASN1Encoder<RetrievalPortOperations> | null = null;
+export const _decode_RetrievalPortOperations: $.ASN1Decoder<RetrievalPortOperations> = _decode_EventTypeId;
 
 /**
  * @summary Encodes a(n) RetrievalPortOperations into an ASN.1 Element.
@@ -54,15 +45,7 @@ let _cached_encoder_for_RetrievalPortOperations: $.ASN1Encoder<RetrievalPortOper
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RetrievalPortOperations, encoded as an ASN.1 Element.
  */
-export function _encode_RetrievalPortOperations(
-    value: RetrievalPortOperations,
-    elGetter: $.ASN1Encoder<RetrievalPortOperations>
-): _Element {
-    if (!_cached_encoder_for_RetrievalPortOperations) {
-        _cached_encoder_for_RetrievalPortOperations = _encode_EventTypeId;
-    }
-    return _cached_encoder_for_RetrievalPortOperations(value, elGetter);
-}
+export const _encode_RetrievalPortOperations: $.ASN1Encoder<RetrievalPortOperations> = _encode_EventTypeId;
 
 
 /* eslint-enable */

@@ -23,26 +23,13 @@ import {
  */
 export type FiniteFields = FieldID; // DefinedType
 
-
-let _cached_decoder_for_FiniteFields: $.ASN1Decoder<FiniteFields> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) FiniteFields
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {FiniteFields} The decoded data structure.
  */
-export function _decode_FiniteFields(el: _Element): FiniteFields {
-    if (!_cached_decoder_for_FiniteFields) {
-        _cached_decoder_for_FiniteFields = _decode_FieldID;
-    }
-    return _cached_decoder_for_FiniteFields(el);
-}
-
-
-let _cached_encoder_for_FiniteFields: $.ASN1Encoder<FiniteFields> | null = null;
-
+export const _decode_FiniteFields: $.ASN1Decoder<FiniteFields> = _decode_FieldID;
 
 /**
  * @summary Encodes a(n) FiniteFields into an ASN.1 Element.
@@ -51,15 +38,7 @@ let _cached_encoder_for_FiniteFields: $.ASN1Encoder<FiniteFields> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The FiniteFields, encoded as an ASN.1 Element.
  */
-export function _encode_FiniteFields(
-    value: FiniteFields,
-    elGetter: $.ASN1Encoder<FiniteFields>
-): _Element {
-    if (!_cached_encoder_for_FiniteFields) {
-        _cached_encoder_for_FiniteFields = _encode_FieldID;
-    }
-    return _cached_encoder_for_FiniteFields(value, elGetter);
-}
+export const _encode_FiniteFields: $.ASN1Encoder<FiniteFields> = _encode_FieldID;
 
 
 /* eslint-enable */

@@ -29,21 +29,13 @@ import { ExecuteArgument, _decode_ExecuteArgument, _encode_ExecuteArgument } fro
 export
 type IN_ExecuteArgument = ExecuteArgument; // DefinedType
 
-let _cached_decoder_for_IN_ExecuteArgument: $.ASN1Decoder<IN_ExecuteArgument> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) IN_ExecuteArgument
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_IN_ExecuteArgument (el: _Element): IN_ExecuteArgument {
-    if (!_cached_decoder_for_IN_ExecuteArgument) { _cached_decoder_for_IN_ExecuteArgument = _decode_ExecuteArgument; }
-    return _cached_decoder_for_IN_ExecuteArgument(el);
-}
-
-let _cached_encoder_for_IN_ExecuteArgument: $.ASN1Encoder<IN_ExecuteArgument> | null = null;
+export const _decode_IN_ExecuteArgument: $.ASN1Decoder<IN_ExecuteArgument> = _decode_ExecuteArgument;
 
 /**
  * @summary Encodes a(n) IN_ExecuteArgument into an ASN.1 Element.
@@ -52,11 +44,7 @@ let _cached_encoder_for_IN_ExecuteArgument: $.ASN1Encoder<IN_ExecuteArgument> | 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The IN_ExecuteArgument, encoded as an ASN.1 Element.
  */
-export
-function _encode_IN_ExecuteArgument (value: IN_ExecuteArgument, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IN_ExecuteArgument) { _cached_encoder_for_IN_ExecuteArgument = _encode_ExecuteArgument; }
-    return _cached_encoder_for_IN_ExecuteArgument(value, elGetter);
-}
+export const _encode_IN_ExecuteArgument: $.ASN1Encoder<IN_ExecuteArgument> = _encode_ExecuteArgument;
 
 
 /* eslint-enable */

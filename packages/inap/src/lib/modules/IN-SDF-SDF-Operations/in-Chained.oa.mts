@@ -92,7 +92,7 @@ function _encode_InChainedArgument<Argument>(
 ): $.ASN1Encoder<InChainedArgument<Argument>> {
     return (value: InChainedArgument<Argument>, elGetter: $.ASN1Encoder<InChainedArgument<Argument>>): _Element => {
         const components: _Element[] = [
-            _encode_IN_ChainingArguments(value.in_chainedArgument, elGetter),
+            _encode_IN_ChainingArguments(value.in_chainedArgument, elGetter as unknown as $.ASN1Encoder<IN_ChainingArguments>),
         ];
         if (encodeArgument) {
             components.push(
@@ -129,7 +129,7 @@ function _encode_InChainedResult<Result>(
 ): $.ASN1Encoder<InChainedResult<Result>> {
     return (value: InChainedResult<Result>, elGetter: $.ASN1Encoder<InChainedResult<Result>>): _Element => {
         const components: _Element[] = [
-            _encode_IN_ChainingResults(value.in_chainedResult, elGetter),
+            _encode_IN_ChainingResults(value.in_chainedResult, elGetter as unknown as $.ASN1Encoder<IN_ChainingResults>),
         ];
         if (encodeResult) {
             components.push(

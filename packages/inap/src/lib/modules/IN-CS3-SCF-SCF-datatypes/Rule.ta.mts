@@ -20,21 +20,13 @@ import { BasicChargingParameters, _decode_BasicChargingParameters, _encode_Basic
 export
 type Rule = BasicChargingParameters; // DefinedType
 
-let _cached_decoder_for_Rule: $.ASN1Decoder<Rule> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) Rule
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_Rule (el: _Element): Rule {
-    if (!_cached_decoder_for_Rule) { _cached_decoder_for_Rule = _decode_BasicChargingParameters; }
-    return _cached_decoder_for_Rule(el);
-}
-
-let _cached_encoder_for_Rule: $.ASN1Encoder<Rule> | null = null;
+export const _decode_Rule: $.ASN1Decoder<Rule> = _decode_BasicChargingParameters;
 
 /**
  * @summary Encodes a(n) Rule into an ASN.1 Element.
@@ -43,11 +35,7 @@ let _cached_encoder_for_Rule: $.ASN1Encoder<Rule> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Rule, encoded as an ASN.1 Element.
  */
-export
-function _encode_Rule (value: Rule, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Rule) { _cached_encoder_for_Rule = _encode_BasicChargingParameters; }
-    return _cached_encoder_for_Rule(value, elGetter);
-}
+export const _encode_Rule: $.ASN1Encoder<Rule> = _encode_BasicChargingParameters;
 
 
 /* eslint-enable */

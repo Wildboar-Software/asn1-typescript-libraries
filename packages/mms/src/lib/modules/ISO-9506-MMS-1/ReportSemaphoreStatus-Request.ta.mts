@@ -30,21 +30,13 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
 export
 type ReportSemaphoreStatus_Request = ObjectName; // DefinedType
 
-let _cached_decoder_for_ReportSemaphoreStatus_Request: $.ASN1Decoder<ReportSemaphoreStatus_Request> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ReportSemaphoreStatus_Request
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_ReportSemaphoreStatus_Request (el: _Element): ReportSemaphoreStatus_Request {
-    if (!_cached_decoder_for_ReportSemaphoreStatus_Request) { _cached_decoder_for_ReportSemaphoreStatus_Request = _decode_ObjectName; }
-    return _cached_decoder_for_ReportSemaphoreStatus_Request(el);
-}
-
-let _cached_encoder_for_ReportSemaphoreStatus_Request: $.ASN1Encoder<ReportSemaphoreStatus_Request> | null = null;
+export const _decode_ReportSemaphoreStatus_Request: $.ASN1Decoder<ReportSemaphoreStatus_Request> = _decode_ObjectName;
 
 /**
  * @summary Encodes a(n) ReportSemaphoreStatus_Request into an ASN.1 Element.
@@ -53,11 +45,7 @@ let _cached_encoder_for_ReportSemaphoreStatus_Request: $.ASN1Encoder<ReportSemap
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ReportSemaphoreStatus_Request, encoded as an ASN.1 Element.
  */
-export
-function _encode_ReportSemaphoreStatus_Request (value: ReportSemaphoreStatus_Request, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ReportSemaphoreStatus_Request) { _cached_encoder_for_ReportSemaphoreStatus_Request = _encode_ObjectName; }
-    return _cached_encoder_for_ReportSemaphoreStatus_Request(value, elGetter);
-}
+export const _encode_ReportSemaphoreStatus_Request: $.ASN1Encoder<ReportSemaphoreStatus_Request> = _encode_ObjectName;
 
 
 /* eslint-enable */

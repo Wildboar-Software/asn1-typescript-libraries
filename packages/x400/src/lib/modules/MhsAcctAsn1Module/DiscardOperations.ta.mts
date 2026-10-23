@@ -29,22 +29,13 @@ import {
  */
 export type DiscardOperations = EventTypeId; // DefinedType
 
-let _cached_decoder_for_DiscardOperations: $.ASN1Decoder<DiscardOperations> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) DiscardOperations
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {DiscardOperations} The decoded data structure.
  */
-export function _decode_DiscardOperations(el: _Element): DiscardOperations {
-    if (!_cached_decoder_for_DiscardOperations) {
-        _cached_decoder_for_DiscardOperations = _decode_EventTypeId;
-    }
-    return _cached_decoder_for_DiscardOperations(el);
-}
-
-let _cached_encoder_for_DiscardOperations: $.ASN1Encoder<DiscardOperations> | null = null;
+export const _decode_DiscardOperations: $.ASN1Decoder<DiscardOperations> = _decode_EventTypeId;
 
 /**
  * @summary Encodes a(n) DiscardOperations into an ASN.1 Element.
@@ -53,15 +44,7 @@ let _cached_encoder_for_DiscardOperations: $.ASN1Encoder<DiscardOperations> | nu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DiscardOperations, encoded as an ASN.1 Element.
  */
-export function _encode_DiscardOperations(
-    value: DiscardOperations,
-    elGetter: $.ASN1Encoder<DiscardOperations>
-): _Element {
-    if (!_cached_encoder_for_DiscardOperations) {
-        _cached_encoder_for_DiscardOperations = _encode_EventTypeId;
-    }
-    return _cached_encoder_for_DiscardOperations(value, elGetter);
-}
+export const _encode_DiscardOperations: $.ASN1Encoder<DiscardOperations> = _encode_EventTypeId;
 
 
 /* eslint-enable */

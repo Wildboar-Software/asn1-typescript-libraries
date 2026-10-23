@@ -29,22 +29,13 @@ import {
  */
 export type FNExtensionsSubField = ExtensionField; // DefinedType
 
-let _cached_decoder_for_FNExtensionsSubField: $.ASN1Decoder<FNExtensionsSubField> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) FNExtensionsSubField
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {FNExtensionsSubField} The decoded data structure.
  */
-export function _decode_FNExtensionsSubField(el: _Element): FNExtensionsSubField {
-    if (!_cached_decoder_for_FNExtensionsSubField) {
-        _cached_decoder_for_FNExtensionsSubField = _decode_ExtensionField;
-    }
-    return _cached_decoder_for_FNExtensionsSubField(el);
-}
-
-let _cached_encoder_for_FNExtensionsSubField: $.ASN1Encoder<FNExtensionsSubField> | null = null;
+export const _decode_FNExtensionsSubField: $.ASN1Decoder<FNExtensionsSubField> = _decode_ExtensionField;
 
 /**
  * @summary Encodes a(n) FNExtensionsSubField into an ASN.1 Element.
@@ -53,15 +44,7 @@ let _cached_encoder_for_FNExtensionsSubField: $.ASN1Encoder<FNExtensionsSubField
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The FNExtensionsSubField, encoded as an ASN.1 Element.
  */
-export function _encode_FNExtensionsSubField(
-    value: FNExtensionsSubField,
-    elGetter: $.ASN1Encoder<FNExtensionsSubField>
-): _Element {
-    if (!_cached_encoder_for_FNExtensionsSubField) {
-        _cached_encoder_for_FNExtensionsSubField = _encode_ExtensionField;
-    }
-    return _cached_encoder_for_FNExtensionsSubField(value, elGetter);
-}
+export const _encode_FNExtensionsSubField: $.ASN1Encoder<FNExtensionsSubField> = _encode_ExtensionField;
 
 
 /* eslint-enable */

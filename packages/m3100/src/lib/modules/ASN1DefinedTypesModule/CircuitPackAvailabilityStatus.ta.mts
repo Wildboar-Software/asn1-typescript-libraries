@@ -29,26 +29,13 @@ import {
  */
 export type CircuitPackAvailabilityStatus = AvailabilityStatus; // DefinedType
 
-
-let _cached_decoder_for_CircuitPackAvailabilityStatus: $.ASN1Decoder<CircuitPackAvailabilityStatus> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) CircuitPackAvailabilityStatus
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {CircuitPackAvailabilityStatus} The decoded data structure.
  */
-export function _decode_CircuitPackAvailabilityStatus(el: _Element): CircuitPackAvailabilityStatus {
-    if (!_cached_decoder_for_CircuitPackAvailabilityStatus) {
-        _cached_decoder_for_CircuitPackAvailabilityStatus = _decode_AvailabilityStatus;
-    }
-    return _cached_decoder_for_CircuitPackAvailabilityStatus(el);
-}
-
-
-let _cached_encoder_for_CircuitPackAvailabilityStatus: $.ASN1Encoder<CircuitPackAvailabilityStatus> | null = null;
-
+export const _decode_CircuitPackAvailabilityStatus: $.ASN1Decoder<CircuitPackAvailabilityStatus> = _decode_AvailabilityStatus;
 
 /**
  * @summary Encodes a(n) CircuitPackAvailabilityStatus into an ASN.1 Element.
@@ -57,15 +44,7 @@ let _cached_encoder_for_CircuitPackAvailabilityStatus: $.ASN1Encoder<CircuitPack
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CircuitPackAvailabilityStatus, encoded as an ASN.1 Element.
  */
-export function _encode_CircuitPackAvailabilityStatus(
-    value: CircuitPackAvailabilityStatus,
-    elGetter: $.ASN1Encoder<CircuitPackAvailabilityStatus>
-): _Element {
-    if (!_cached_encoder_for_CircuitPackAvailabilityStatus) {
-        _cached_encoder_for_CircuitPackAvailabilityStatus = _encode_AvailabilityStatus;
-    }
-    return _cached_encoder_for_CircuitPackAvailabilityStatus(value, elGetter);
-}
+export const _encode_CircuitPackAvailabilityStatus: $.ASN1Encoder<CircuitPackAvailabilityStatus> = _encode_AvailabilityStatus;
 
 
 /* eslint-enable */

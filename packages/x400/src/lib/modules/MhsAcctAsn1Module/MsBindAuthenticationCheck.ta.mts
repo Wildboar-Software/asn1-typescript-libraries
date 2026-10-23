@@ -29,22 +29,13 @@ import {
  */
 export type MsBindAuthenticationCheck = AuthenticationCheck; // DefinedType
 
-let _cached_decoder_for_MsBindAuthenticationCheck: $.ASN1Decoder<MsBindAuthenticationCheck> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) MsBindAuthenticationCheck
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {MsBindAuthenticationCheck} The decoded data structure.
  */
-export function _decode_MsBindAuthenticationCheck(el: _Element): MsBindAuthenticationCheck {
-    if (!_cached_decoder_for_MsBindAuthenticationCheck) {
-        _cached_decoder_for_MsBindAuthenticationCheck = _decode_AuthenticationCheck;
-    }
-    return _cached_decoder_for_MsBindAuthenticationCheck(el);
-}
-
-let _cached_encoder_for_MsBindAuthenticationCheck: $.ASN1Encoder<MsBindAuthenticationCheck> | null = null;
+export const _decode_MsBindAuthenticationCheck: $.ASN1Decoder<MsBindAuthenticationCheck> = _decode_AuthenticationCheck;
 
 /**
  * @summary Encodes a(n) MsBindAuthenticationCheck into an ASN.1 Element.
@@ -53,15 +44,7 @@ let _cached_encoder_for_MsBindAuthenticationCheck: $.ASN1Encoder<MsBindAuthentic
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MsBindAuthenticationCheck, encoded as an ASN.1 Element.
  */
-export function _encode_MsBindAuthenticationCheck(
-    value: MsBindAuthenticationCheck,
-    elGetter: $.ASN1Encoder<MsBindAuthenticationCheck>
-): _Element {
-    if (!_cached_encoder_for_MsBindAuthenticationCheck) {
-        _cached_encoder_for_MsBindAuthenticationCheck = _encode_AuthenticationCheck;
-    }
-    return _cached_encoder_for_MsBindAuthenticationCheck(value, elGetter);
-}
+export const _encode_MsBindAuthenticationCheck: $.ASN1Encoder<MsBindAuthenticationCheck> = _encode_AuthenticationCheck;
 
 
 /* eslint-enable */

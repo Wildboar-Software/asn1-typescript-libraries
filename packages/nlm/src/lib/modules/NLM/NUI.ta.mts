@@ -33,26 +33,13 @@ import {
  */
 export type NUI = OctetString; // DefinedType
 
-
-let _cached_decoder_for_NUI: $.ASN1Decoder<NUI> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) NUI
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {NUI} The decoded data structure.
  */
-export function _decode_NUI(el: _Element): NUI {
-    if (!_cached_decoder_for_NUI) {
-        _cached_decoder_for_NUI = _decode_OctetString;
-    }
-    return _cached_decoder_for_NUI(el);
-}
-
-
-let _cached_encoder_for_NUI: $.ASN1Encoder<NUI> | null = null;
-
+export const _decode_NUI: $.ASN1Decoder<NUI> = _decode_OctetString;
 
 /**
  * @summary Encodes a(n) NUI into an ASN.1 Element.
@@ -61,12 +48,7 @@ let _cached_encoder_for_NUI: $.ASN1Encoder<NUI> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NUI, encoded as an ASN.1 Element.
  */
-export function _encode_NUI(value: NUI, elGetter: $.ASN1Encoder<NUI>): _Element {
-    if (!_cached_encoder_for_NUI) {
-        _cached_encoder_for_NUI = _encode_OctetString;
-    }
-    return _cached_encoder_for_NUI(value, elGetter);
-}
+export const _encode_NUI: $.ASN1Encoder<NUI> = _encode_OctetString;
 
 
 /* eslint-enable */

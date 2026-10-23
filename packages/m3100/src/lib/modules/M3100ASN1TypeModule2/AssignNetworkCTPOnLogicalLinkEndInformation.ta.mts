@@ -28,28 +28,13 @@ import {
  */
 export type AssignNetworkCTPOnLogicalLinkEndInformation = CTPList; // DefinedType
 
-
-let _cached_decoder_for_AssignNetworkCTPOnLogicalLinkEndInformation: $.ASN1Decoder<AssignNetworkCTPOnLogicalLinkEndInformation> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AssignNetworkCTPOnLogicalLinkEndInformation
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {AssignNetworkCTPOnLogicalLinkEndInformation} The decoded data structure.
  */
-export function _decode_AssignNetworkCTPOnLogicalLinkEndInformation(
-    el: _Element
-): AssignNetworkCTPOnLogicalLinkEndInformation {
-    if (!_cached_decoder_for_AssignNetworkCTPOnLogicalLinkEndInformation) {
-        _cached_decoder_for_AssignNetworkCTPOnLogicalLinkEndInformation = _decode_CTPList;
-    }
-    return _cached_decoder_for_AssignNetworkCTPOnLogicalLinkEndInformation(el);
-}
-
-
-let _cached_encoder_for_AssignNetworkCTPOnLogicalLinkEndInformation: $.ASN1Encoder<AssignNetworkCTPOnLogicalLinkEndInformation> | null = null;
-
+export const _decode_AssignNetworkCTPOnLogicalLinkEndInformation: $.ASN1Decoder<AssignNetworkCTPOnLogicalLinkEndInformation> = _decode_CTPList;
 
 /**
  * @summary Encodes a(n) AssignNetworkCTPOnLogicalLinkEndInformation into an ASN.1 Element.
@@ -58,18 +43,7 @@ let _cached_encoder_for_AssignNetworkCTPOnLogicalLinkEndInformation: $.ASN1Encod
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AssignNetworkCTPOnLogicalLinkEndInformation, encoded as an ASN.1 Element.
  */
-export function _encode_AssignNetworkCTPOnLogicalLinkEndInformation(
-    value: AssignNetworkCTPOnLogicalLinkEndInformation,
-    elGetter: $.ASN1Encoder<AssignNetworkCTPOnLogicalLinkEndInformation>
-): _Element {
-    if (!_cached_encoder_for_AssignNetworkCTPOnLogicalLinkEndInformation) {
-        _cached_encoder_for_AssignNetworkCTPOnLogicalLinkEndInformation = _encode_CTPList;
-    }
-    return _cached_encoder_for_AssignNetworkCTPOnLogicalLinkEndInformation(
-        value,
-        elGetter
-    );
-}
+export const _encode_AssignNetworkCTPOnLogicalLinkEndInformation: $.ASN1Encoder<AssignNetworkCTPOnLogicalLinkEndInformation> = _encode_CTPList;
 
 
 /* eslint-enable */

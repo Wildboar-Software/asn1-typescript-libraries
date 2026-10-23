@@ -31,21 +31,13 @@ import { BiometricCertificate, _decode_BiometricCertificate, _encode_BiometricCe
 export
 type XtsmTemplate = BiometricCertificate; // DefinedType
 
-let _cached_decoder_for_XtsmTemplate: $.ASN1Decoder<XtsmTemplate> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) XtsmTemplate
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_XtsmTemplate (el: _Element): XtsmTemplate {
-    if (!_cached_decoder_for_XtsmTemplate) { _cached_decoder_for_XtsmTemplate = _decode_BiometricCertificate; }
-    return _cached_decoder_for_XtsmTemplate(el);
-}
-
-let _cached_encoder_for_XtsmTemplate: $.ASN1Encoder<XtsmTemplate> | null = null;
+export const _decode_XtsmTemplate: $.ASN1Decoder<XtsmTemplate> = _decode_BiometricCertificate;
 
 /**
  * @summary Encodes a(n) XtsmTemplate into an ASN.1 Element.
@@ -54,11 +46,7 @@ let _cached_encoder_for_XtsmTemplate: $.ASN1Encoder<XtsmTemplate> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The XtsmTemplate, encoded as an ASN.1 Element.
  */
-export
-function _encode_XtsmTemplate (value: XtsmTemplate, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_XtsmTemplate) { _cached_encoder_for_XtsmTemplate = _encode_BiometricCertificate; }
-    return _cached_encoder_for_XtsmTemplate(value, elGetter);
-}
+export const _encode_XtsmTemplate: $.ASN1Encoder<XtsmTemplate> = _encode_BiometricCertificate;
 
 
 /* eslint-enable */

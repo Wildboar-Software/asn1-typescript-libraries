@@ -35,26 +35,13 @@ import {
  */
 export type BioAPI_DB_HANDLE = SignedInt; // DefinedType
 
-
-let _cached_decoder_for_BioAPI_DB_HANDLE: $.ASN1Decoder<BioAPI_DB_HANDLE> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) BioAPI_DB_HANDLE
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {BioAPI_DB_HANDLE} The decoded data structure.
  */
-export function _decode_BioAPI_DB_HANDLE(el: _Element): BioAPI_DB_HANDLE {
-  if (!_cached_decoder_for_BioAPI_DB_HANDLE) {
-    _cached_decoder_for_BioAPI_DB_HANDLE = _decode_SignedInt;
-  }
-  return _cached_decoder_for_BioAPI_DB_HANDLE(el);
-}
-
-
-let _cached_encoder_for_BioAPI_DB_HANDLE: $.ASN1Encoder<BioAPI_DB_HANDLE> | null = null;
-
+export const _decode_BioAPI_DB_HANDLE: $.ASN1Decoder<BioAPI_DB_HANDLE> = _decode_SignedInt;
 
 /**
  * @summary Encodes a(n) BioAPI_DB_HANDLE into an ASN.1 Element.
@@ -63,15 +50,7 @@ let _cached_encoder_for_BioAPI_DB_HANDLE: $.ASN1Encoder<BioAPI_DB_HANDLE> | null
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The BioAPI_DB_HANDLE, encoded as an ASN.1 Element.
  */
-export function _encode_BioAPI_DB_HANDLE(
-  value: BioAPI_DB_HANDLE,
-  elGetter: $.ASN1Encoder<BioAPI_DB_HANDLE>
-): _Element {
-  if (!_cached_encoder_for_BioAPI_DB_HANDLE) {
-    _cached_encoder_for_BioAPI_DB_HANDLE = _encode_SignedInt;
-  }
-  return _cached_encoder_for_BioAPI_DB_HANDLE(value, elGetter);
-}
+export const _encode_BioAPI_DB_HANDLE: $.ASN1Encoder<BioAPI_DB_HANDLE> = _encode_SignedInt;
 
 
 /* eslint-enable */

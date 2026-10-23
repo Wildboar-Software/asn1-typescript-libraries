@@ -34,22 +34,13 @@ import {
  */
 export type WaitingInterval = Timespec; // DefinedType
 
-let _cached_decoder_for_WaitingInterval: $.ASN1Decoder<WaitingInterval> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) WaitingInterval
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {WaitingInterval} The decoded data structure.
  */
-export function _decode_WaitingInterval(el: _Element): WaitingInterval {
-    if (!_cached_decoder_for_WaitingInterval) {
-        _cached_decoder_for_WaitingInterval = _decode_Timespec;
-    }
-    return _cached_decoder_for_WaitingInterval(el);
-}
-
-let _cached_encoder_for_WaitingInterval: $.ASN1Encoder<WaitingInterval> | null = null;
+export const _decode_WaitingInterval: $.ASN1Decoder<WaitingInterval> = _decode_Timespec;
 
 /**
  * @summary Encodes a(n) WaitingInterval into an ASN.1 Element.
@@ -58,15 +49,7 @@ let _cached_encoder_for_WaitingInterval: $.ASN1Encoder<WaitingInterval> | null =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The WaitingInterval, encoded as an ASN.1 Element.
  */
-export function _encode_WaitingInterval(
-    value: WaitingInterval,
-    elGetter: $.ASN1Encoder<WaitingInterval>
-): _Element {
-    if (!_cached_encoder_for_WaitingInterval) {
-        _cached_encoder_for_WaitingInterval = _encode_Timespec;
-    }
-    return _cached_encoder_for_WaitingInterval(value, elGetter);
-}
+export const _encode_WaitingInterval: $.ASN1Encoder<WaitingInterval> = _encode_Timespec;
 
 
 /* eslint-enable */

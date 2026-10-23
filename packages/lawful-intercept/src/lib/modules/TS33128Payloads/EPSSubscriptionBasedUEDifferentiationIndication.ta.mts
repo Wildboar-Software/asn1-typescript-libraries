@@ -20,21 +20,13 @@ import { ExternalASNType, _decode_ExternalASNType, _encode_ExternalASNType } fro
 export
 type EPSSubscriptionBasedUEDifferentiationIndication = ExternalASNType; // DefinedType
 
-let _cached_decoder_for_EPSSubscriptionBasedUEDifferentiationIndication: $.ASN1Decoder<EPSSubscriptionBasedUEDifferentiationIndication> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) EPSSubscriptionBasedUEDifferentiationIndication
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_EPSSubscriptionBasedUEDifferentiationIndication (el: _Element): EPSSubscriptionBasedUEDifferentiationIndication {
-    if (!_cached_decoder_for_EPSSubscriptionBasedUEDifferentiationIndication) { _cached_decoder_for_EPSSubscriptionBasedUEDifferentiationIndication = _decode_ExternalASNType; }
-    return _cached_decoder_for_EPSSubscriptionBasedUEDifferentiationIndication(el);
-}
-
-let _cached_encoder_for_EPSSubscriptionBasedUEDifferentiationIndication: $.ASN1Encoder<EPSSubscriptionBasedUEDifferentiationIndication> | null = null;
+export const _decode_EPSSubscriptionBasedUEDifferentiationIndication: $.ASN1Decoder<EPSSubscriptionBasedUEDifferentiationIndication> = _decode_ExternalASNType;
 
 /**
  * @summary Encodes a(n) EPSSubscriptionBasedUEDifferentiationIndication into an ASN.1 Element.
@@ -43,11 +35,7 @@ let _cached_encoder_for_EPSSubscriptionBasedUEDifferentiationIndication: $.ASN1E
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The EPSSubscriptionBasedUEDifferentiationIndication, encoded as an ASN.1 Element.
  */
-export
-function _encode_EPSSubscriptionBasedUEDifferentiationIndication (value: EPSSubscriptionBasedUEDifferentiationIndication, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EPSSubscriptionBasedUEDifferentiationIndication) { _cached_encoder_for_EPSSubscriptionBasedUEDifferentiationIndication = _encode_ExternalASNType; }
-    return _cached_encoder_for_EPSSubscriptionBasedUEDifferentiationIndication(value, elGetter);
-}
+export const _encode_EPSSubscriptionBasedUEDifferentiationIndication: $.ASN1Encoder<EPSSubscriptionBasedUEDifferentiationIndication> = _encode_ExternalASNType;
 
 
 /* eslint-enable */

@@ -28,26 +28,13 @@ import {
  */
 export type RemoveCapacityFromTopLinkEndInformation = RequestedPointCapacity; // DefinedType
 
-
-let _cached_decoder_for_RemoveCapacityFromTopLinkEndInformation: $.ASN1Decoder<RemoveCapacityFromTopLinkEndInformation> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) RemoveCapacityFromTopLinkEndInformation
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {RemoveCapacityFromTopLinkEndInformation} The decoded data structure.
  */
-export function _decode_RemoveCapacityFromTopLinkEndInformation(el: _Element): RemoveCapacityFromTopLinkEndInformation {
-    if (!_cached_decoder_for_RemoveCapacityFromTopLinkEndInformation) {
-        _cached_decoder_for_RemoveCapacityFromTopLinkEndInformation = _decode_RequestedPointCapacity;
-    }
-    return _cached_decoder_for_RemoveCapacityFromTopLinkEndInformation(el);
-}
-
-
-let _cached_encoder_for_RemoveCapacityFromTopLinkEndInformation: $.ASN1Encoder<RemoveCapacityFromTopLinkEndInformation> | null = null;
-
+export const _decode_RemoveCapacityFromTopLinkEndInformation: $.ASN1Decoder<RemoveCapacityFromTopLinkEndInformation> = _decode_RequestedPointCapacity;
 
 /**
  * @summary Encodes a(n) RemoveCapacityFromTopLinkEndInformation into an ASN.1 Element.
@@ -56,18 +43,7 @@ let _cached_encoder_for_RemoveCapacityFromTopLinkEndInformation: $.ASN1Encoder<R
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RemoveCapacityFromTopLinkEndInformation, encoded as an ASN.1 Element.
  */
-export function _encode_RemoveCapacityFromTopLinkEndInformation(
-    value: RemoveCapacityFromTopLinkEndInformation,
-    elGetter: $.ASN1Encoder<RemoveCapacityFromTopLinkEndInformation>
-): _Element {
-    if (!_cached_encoder_for_RemoveCapacityFromTopLinkEndInformation) {
-        _cached_encoder_for_RemoveCapacityFromTopLinkEndInformation = _encode_RequestedPointCapacity;
-    }
-    return _cached_encoder_for_RemoveCapacityFromTopLinkEndInformation(
-        value,
-        elGetter
-    );
-}
+export const _encode_RemoveCapacityFromTopLinkEndInformation: $.ASN1Encoder<RemoveCapacityFromTopLinkEndInformation> = _encode_RequestedPointCapacity;
 
 
 /* eslint-enable */

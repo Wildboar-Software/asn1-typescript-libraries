@@ -25,21 +25,13 @@ import { _decode_TBCD_STRING, _encode_TBCD_STRING, TBCD_STRING } from "../MAP-Co
 export
 type ASCI_CallReference = TBCD_STRING; // DefinedType
 
-let _cached_decoder_for_ASCI_CallReference: $.ASN1Decoder<ASCI_CallReference> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ASCI_CallReference
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_ASCI_CallReference (el: _Element): ASCI_CallReference {
-    if (!_cached_decoder_for_ASCI_CallReference) { _cached_decoder_for_ASCI_CallReference = _decode_TBCD_STRING; }
-    return _cached_decoder_for_ASCI_CallReference(el);
-}
-
-let _cached_encoder_for_ASCI_CallReference: $.ASN1Encoder<ASCI_CallReference> | null = null;
+export const _decode_ASCI_CallReference: $.ASN1Decoder<ASCI_CallReference> = _decode_TBCD_STRING;
 
 /**
  * @summary Encodes a(n) ASCI_CallReference into an ASN.1 Element.
@@ -48,11 +40,7 @@ let _cached_encoder_for_ASCI_CallReference: $.ASN1Encoder<ASCI_CallReference> | 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ASCI_CallReference, encoded as an ASN.1 Element.
  */
-export
-function _encode_ASCI_CallReference (value: ASCI_CallReference, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ASCI_CallReference) { _cached_encoder_for_ASCI_CallReference = _encode_TBCD_STRING; }
-    return _cached_encoder_for_ASCI_CallReference(value, elGetter);
-}
+export const _encode_ASCI_CallReference: $.ASN1Encoder<ASCI_CallReference> = _encode_TBCD_STRING;
 
 
 /* eslint-enable */

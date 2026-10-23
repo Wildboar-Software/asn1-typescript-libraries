@@ -25,21 +25,13 @@ import { AssociatedCallingDeviceID, _decode_AssociatedCallingDeviceID, _encode_A
 export
 type AssociatedCallingDevice = AssociatedCallingDeviceID; // DefinedType
 
-let _cached_decoder_for_AssociatedCallingDevice: $.ASN1Decoder<AssociatedCallingDevice> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AssociatedCallingDevice
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_AssociatedCallingDevice (el: _Element): AssociatedCallingDevice {
-    if (!_cached_decoder_for_AssociatedCallingDevice) { _cached_decoder_for_AssociatedCallingDevice = _decode_AssociatedCallingDeviceID; }
-    return _cached_decoder_for_AssociatedCallingDevice(el);
-}
-
-let _cached_encoder_for_AssociatedCallingDevice: $.ASN1Encoder<AssociatedCallingDevice> | null = null;
+export const _decode_AssociatedCallingDevice: $.ASN1Decoder<AssociatedCallingDevice> = _decode_AssociatedCallingDeviceID;
 
 /**
  * @summary Encodes a(n) AssociatedCallingDevice into an ASN.1 Element.
@@ -48,11 +40,7 @@ let _cached_encoder_for_AssociatedCallingDevice: $.ASN1Encoder<AssociatedCalling
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AssociatedCallingDevice, encoded as an ASN.1 Element.
  */
-export
-function _encode_AssociatedCallingDevice (value: AssociatedCallingDevice, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AssociatedCallingDevice) { _cached_encoder_for_AssociatedCallingDevice = _encode_AssociatedCallingDeviceID; }
-    return _cached_encoder_for_AssociatedCallingDevice(value, elGetter);
-}
+export const _encode_AssociatedCallingDevice: $.ASN1Encoder<AssociatedCallingDevice> = _encode_AssociatedCallingDeviceID;
 
 
 /* eslint-enable */

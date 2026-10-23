@@ -19,26 +19,13 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  */
 export type MasterKeyAlgorithmIdentifier = AlgorithmIdentifier; // DefinedType
 
-
-let _cached_decoder_for_MasterKeyAlgorithmIdentifier: $.ASN1Decoder<MasterKeyAlgorithmIdentifier> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) MasterKeyAlgorithmIdentifier
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {MasterKeyAlgorithmIdentifier} The decoded data structure.
  */
-export function _decode_MasterKeyAlgorithmIdentifier(el: _Element): MasterKeyAlgorithmIdentifier {
-    if (!_cached_decoder_for_MasterKeyAlgorithmIdentifier) {
-        _cached_decoder_for_MasterKeyAlgorithmIdentifier = _decode_AlgorithmIdentifier;
-    }
-    return _cached_decoder_for_MasterKeyAlgorithmIdentifier(el);
-}
-
-
-let _cached_encoder_for_MasterKeyAlgorithmIdentifier: $.ASN1Encoder<MasterKeyAlgorithmIdentifier> | null = null;
-
+export const _decode_MasterKeyAlgorithmIdentifier: $.ASN1Decoder<MasterKeyAlgorithmIdentifier> = _decode_AlgorithmIdentifier;
 
 /**
  * @summary Encodes a(n) MasterKeyAlgorithmIdentifier into an ASN.1 Element.
@@ -47,15 +34,7 @@ let _cached_encoder_for_MasterKeyAlgorithmIdentifier: $.ASN1Encoder<MasterKeyAlg
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MasterKeyAlgorithmIdentifier, encoded as an ASN.1 Element.
  */
-export function _encode_MasterKeyAlgorithmIdentifier(
-    value: MasterKeyAlgorithmIdentifier,
-    elGetter: $.ASN1Encoder<MasterKeyAlgorithmIdentifier>
-): _Element {
-    if (!_cached_encoder_for_MasterKeyAlgorithmIdentifier) {
-        _cached_encoder_for_MasterKeyAlgorithmIdentifier = _encode_AlgorithmIdentifier;
-    }
-    return _cached_encoder_for_MasterKeyAlgorithmIdentifier(value, elGetter);
-}
+export const _encode_MasterKeyAlgorithmIdentifier: $.ASN1Encoder<MasterKeyAlgorithmIdentifier> = _encode_AlgorithmIdentifier;
 
 
 /* eslint-enable */

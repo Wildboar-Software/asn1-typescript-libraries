@@ -32,15 +32,8 @@ import {
  */
 export type NoInvokeId = InvokeId; // VALUE_SET_TYPE
 
-export function _decode_NoInvokeId(el: _Element): NoInvokeId {
-  return _decode_InvokeId(el);
-}
+export const _decode_NoInvokeId: $.ASN1Decoder<NoInvokeId> = _decode_InvokeId;
 
-export function _encode_NoInvokeId(
-  value: NoInvokeId,
-  elGetter: $.ASN1Encoder<NoInvokeId>
-): _Element {
-  return _encode_InvokeId(value, elGetter);
-}
+export const _encode_NoInvokeId: $.ASN1Encoder<NoInvokeId> = _encode_InvokeId;
 
 /* eslint-enable */

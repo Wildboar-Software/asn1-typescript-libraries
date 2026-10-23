@@ -21,22 +21,13 @@ import {
  */
 export type LocalPostalAttributes = PDSParameter; // DefinedType
 
-let _cached_decoder_for_LocalPostalAttributes: $.ASN1Decoder<LocalPostalAttributes> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) LocalPostalAttributes
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {LocalPostalAttributes} The decoded data structure.
  */
-export function _decode_LocalPostalAttributes(el: _Element): LocalPostalAttributes {
-    if (!_cached_decoder_for_LocalPostalAttributes) {
-        _cached_decoder_for_LocalPostalAttributes = _decode_PDSParameter;
-    }
-    return _cached_decoder_for_LocalPostalAttributes(el);
-}
-
-let _cached_encoder_for_LocalPostalAttributes: $.ASN1Encoder<LocalPostalAttributes> | null = null;
+export const _decode_LocalPostalAttributes: $.ASN1Decoder<LocalPostalAttributes> = _decode_PDSParameter;
 
 /**
  * @summary Encodes a(n) LocalPostalAttributes into an ASN.1 Element.
@@ -45,15 +36,7 @@ let _cached_encoder_for_LocalPostalAttributes: $.ASN1Encoder<LocalPostalAttribut
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LocalPostalAttributes, encoded as an ASN.1 Element.
  */
-export function _encode_LocalPostalAttributes(
-    value: LocalPostalAttributes,
-    elGetter: $.ASN1Encoder<LocalPostalAttributes>
-): _Element {
-    if (!_cached_encoder_for_LocalPostalAttributes) {
-        _cached_encoder_for_LocalPostalAttributes = _encode_PDSParameter;
-    }
-    return _cached_encoder_for_LocalPostalAttributes(value, elGetter);
-}
+export const _encode_LocalPostalAttributes: $.ASN1Encoder<LocalPostalAttributes> = _encode_PDSParameter;
 
 
 /* eslint-enable */

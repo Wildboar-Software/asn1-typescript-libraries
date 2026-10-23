@@ -34,21 +34,13 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
 export
 type DeleteAccessControlList_Request = Identifier; // DefinedType
 
-let _cached_decoder_for_DeleteAccessControlList_Request: $.ASN1Decoder<DeleteAccessControlList_Request> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) DeleteAccessControlList_Request
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_DeleteAccessControlList_Request (el: _Element): DeleteAccessControlList_Request {
-    if (!_cached_decoder_for_DeleteAccessControlList_Request) { _cached_decoder_for_DeleteAccessControlList_Request = _decode_Identifier; }
-    return _cached_decoder_for_DeleteAccessControlList_Request(el);
-}
-
-let _cached_encoder_for_DeleteAccessControlList_Request: $.ASN1Encoder<DeleteAccessControlList_Request> | null = null;
+export const _decode_DeleteAccessControlList_Request: $.ASN1Decoder<DeleteAccessControlList_Request> = _decode_Identifier;
 
 /**
  * @summary Encodes a(n) DeleteAccessControlList_Request into an ASN.1 Element.
@@ -57,11 +49,7 @@ let _cached_encoder_for_DeleteAccessControlList_Request: $.ASN1Encoder<DeleteAcc
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DeleteAccessControlList_Request, encoded as an ASN.1 Element.
  */
-export
-function _encode_DeleteAccessControlList_Request (value: DeleteAccessControlList_Request, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DeleteAccessControlList_Request) { _cached_encoder_for_DeleteAccessControlList_Request = _encode_Identifier; }
-    return _cached_encoder_for_DeleteAccessControlList_Request(value, elGetter);
-}
+export const _encode_DeleteAccessControlList_Request: $.ASN1Encoder<DeleteAccessControlList_Request> = _encode_Identifier;
 
 
 /* eslint-enable */

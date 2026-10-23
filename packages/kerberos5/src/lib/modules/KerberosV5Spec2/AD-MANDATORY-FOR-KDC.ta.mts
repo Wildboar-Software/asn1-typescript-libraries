@@ -32,26 +32,13 @@ import {
  */
 export type AD_MANDATORY_FOR_KDC = AuthorizationData; // DefinedType
 
-
-let _cached_decoder_for_AD_MANDATORY_FOR_KDC: $.ASN1Decoder<AD_MANDATORY_FOR_KDC> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AD_MANDATORY_FOR_KDC
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {AD_MANDATORY_FOR_KDC} The decoded data structure.
  */
-export function _decode_AD_MANDATORY_FOR_KDC(el: _Element): AD_MANDATORY_FOR_KDC {
-  if (!_cached_decoder_for_AD_MANDATORY_FOR_KDC) {
-    _cached_decoder_for_AD_MANDATORY_FOR_KDC = _decode_AuthorizationData;
-  }
-  return _cached_decoder_for_AD_MANDATORY_FOR_KDC(el);
-}
-
-
-let _cached_encoder_for_AD_MANDATORY_FOR_KDC: $.ASN1Encoder<AD_MANDATORY_FOR_KDC> | null = null;
-
+export const _decode_AD_MANDATORY_FOR_KDC: $.ASN1Decoder<AD_MANDATORY_FOR_KDC> = _decode_AuthorizationData;
 
 /**
  * @summary Encodes a(n) AD_MANDATORY_FOR_KDC into an ASN.1 Element.
@@ -60,15 +47,7 @@ let _cached_encoder_for_AD_MANDATORY_FOR_KDC: $.ASN1Encoder<AD_MANDATORY_FOR_KDC
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AD_MANDATORY_FOR_KDC, encoded as an ASN.1 Element.
  */
-export function _encode_AD_MANDATORY_FOR_KDC(
-  value: AD_MANDATORY_FOR_KDC,
-  elGetter: $.ASN1Encoder<AD_MANDATORY_FOR_KDC>
-): _Element {
-  if (!_cached_encoder_for_AD_MANDATORY_FOR_KDC) {
-    _cached_encoder_for_AD_MANDATORY_FOR_KDC = _encode_AuthorizationData;
-  }
-  return _cached_encoder_for_AD_MANDATORY_FOR_KDC(value, elGetter);
-}
+export const _encode_AD_MANDATORY_FOR_KDC: $.ASN1Encoder<AD_MANDATORY_FOR_KDC> = _encode_AuthorizationData;
 
 
 /* eslint-enable */
