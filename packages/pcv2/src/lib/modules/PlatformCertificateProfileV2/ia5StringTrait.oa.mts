@@ -13,7 +13,13 @@ import { type TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
 /**
  * @summary ia5StringTrait
  * @description
- * 
+ *
+ * Trait syntax for an IA5String of length 1..`strmax`.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.19.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

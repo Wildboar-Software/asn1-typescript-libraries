@@ -14,7 +14,22 @@ import { tcg_at_tpmVersion } from "../EKCredentialProfileV2/tcg-at-tpmVersion.va
 /**
  * @summary tpmVersion
  * @description
- * 
+ *
+ * TPM firmware version at the time the certificate was created, usually the
+ * firmware loaded during manufacturing. Carried in the subject alternative name
+ * as a `directoryName`, together with `tpmManufacturer` and `tpmModel`.
+ *
+ * The value is the ASCII encoding of the most significant 32 bits of the
+ * firmware version, `TPM_PT_FIRMWARE_VERSION_1`. Each byte is two uppercase
+ * hexadecimal digits, and the eight characters are appended to `id:`. A version
+ * of 0x00020008 is `id:00020008`. After a field upgrade this value can differ
+ * from the version the TPM currently reports.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.2
+ * and §3.2.9.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

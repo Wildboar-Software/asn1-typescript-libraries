@@ -9,7 +9,14 @@ import { tcg_tr_category } from "../PlatformCertificateProfileV2/tcg-tr-category
 /**
  * @summary tcg_tr_cat_SPDMCertificate
  * @description
- * 
+ *
+ * `{tcg-tr-category 19}`. A `certificateIdentifierTrait` that references a
+ * Security Protocol and Data Model certificate uses this category.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.2.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

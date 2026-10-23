@@ -7,7 +7,15 @@ import { type TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
 /**
  * @summary networkMACTrait
  * @description
- * 
+ *
+ * Trait syntax for a network-interface MAC address, as a `ComponentAddress`.
+ * Category `tcg-tr-cat-networkMAC`. The address text is uppercase hexadecimal
+ * with no delimiter.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.8.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

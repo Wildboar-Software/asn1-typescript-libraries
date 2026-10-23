@@ -19,7 +19,17 @@ import { URIReference, _decode_URIReference, _encode_URIReference } from "../EKC
 /**
  * @summary CommonCriteriaMeasures
  * @description
- * 
+ *
+ * Common Criteria evaluation asserted for the TPM. The protection profile and
+ * the security target may each be named by an object identifier, by a
+ * `URIReference`, or by both. When both are present for the same item, they are
+ * consistent values. The platform certificate profile reuses this structure
+ * inside `CommonCriteriaEvaluation`.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,54 +53,142 @@ export
 class CommonCriteriaMeasures {
     /**
      * @summary `version`.
+     * @description
+     *
+     * Common Criteria version whose syntax this value uses. The profile's
+     * examples are "2.2" and "3.1". Later syntax is defined by Common Criteria,
+     * not by this profile.
+     *
+     * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7,
+     * §3.1.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+     *
      * @public
      * @readonly
      */
     readonly version: IA5String;
     /**
      * @summary `assurancelevel`.
+     * @description
+     *
+     * Evaluation assurance level claimed for the TPM.
+     *
+     * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7,
+     * §3.1.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+     *
      * @public
      * @readonly
      */
     readonly assurancelevel: EvaluationAssuranceLevel;
     /**
      * @summary `evaluationStatus`.
+     * @description
+     *
+     * Whether the evaluation is a design claim, in progress, or complete.
+     *
+     * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7,
+     * §3.1.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+     *
      * @public
      * @readonly
      */
     readonly evaluationStatus: EvaluationStatus;
     /**
      * @summary `plus`.
+     * @description
+     *
+     * Boolean included with the evaluation. Defaults to false. The profile does
+     * not define what true means.
+     *
+     * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7,
+     * §3.1.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+     *
      * @public
      * @readonly
      */
     readonly plus: OPTIONAL<BOOLEAN>;
     /**
      * @summary `strengthOfFunction`.
+     * @description
+     *
+     * Optional strength-of-function claim.
+     *
+     * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7,
+     * §3.1.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+     *
      * @public
      * @readonly
      */
     readonly strengthOfFunction: OPTIONAL<StrengthOfFunction>;
     /**
      * @summary `profileOid`.
+     * @description
+     *
+     * Object identifier of the protection profile. Consistent with `profileUri`
+     * when both are present.
+     *
+     * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7,
+     * §3.1.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+     *
      * @public
      * @readonly
      */
     readonly profileOid: OPTIONAL<OBJECT_IDENTIFIER>;
     /**
      * @summary `profileUri`.
+     * @description
+     *
+     * Document that describes the protection profile, pinned by a hash when a
+     * hash is present. Consistent with `profileOid` when both are present.
+     *
+     * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7,
+     * §3.1.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+     *
      * @public
      * @readonly
      */
     readonly profileUri: OPTIONAL<URIReference>;
     /**
      * @summary `targetOid`.
+     * @description
+     *
+     * Object identifier of the security target. Consistent with `targetUri`
+     * when both are present.
+     *
+     * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7,
+     * §3.1.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+     *
      * @public
      * @readonly
      */
     readonly targetOid: OPTIONAL<OBJECT_IDENTIFIER>;
     /**
      * @summary `targetUri`.
+     * @description
+     *
+     * Document that describes the security target, pinned by a hash when a hash
+     * is present. Consistent with `targetOid` when both are present.
+     *
+     * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7,
+     * §3.1.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+     *
      * @public
      * @readonly
      */

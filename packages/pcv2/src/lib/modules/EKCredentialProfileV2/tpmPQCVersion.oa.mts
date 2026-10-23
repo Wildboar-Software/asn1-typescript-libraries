@@ -11,7 +11,28 @@ import { tcg_at_tpmPQCVersion } from "../EKCredentialProfileV2/tcg-at-tpmPQCVers
 /**
  * @summary tpmPQCVersion
  * @description
- * 
+ *
+ * Minimum firmware version at which this TPM can use its ML-KEM or ML-DSA
+ * endorsement key. The integer is the big-endian concatenation of
+ * `TPM_PT_FIRMWARE_VERSION_1` and `TPM_PT_FIRMWARE_VERSION_2` (64 bits).
+ * `TPM_PT_FIRMWARE_VERSION_2` may be zero when version 1 alone identifies the
+ * firmware.
+ *
+ * Required when a post-manufacturing firmware upgrade is required before the
+ * ML-KEM or ML-DSA endorsement key can be used. Otherwise the attribute is
+ * omitted.
+ *
+ * When present, the integer is greater than the firmware version at
+ * manufacturing and greater than every later firmware that still cannot use
+ * those keys, and it is less than or equal to every firmware that can. A
+ * verifier compares the TPM's current firmware version with this integer to
+ * decide whether post-quantum use is available.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.5
+ * and §3.2.11.3.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

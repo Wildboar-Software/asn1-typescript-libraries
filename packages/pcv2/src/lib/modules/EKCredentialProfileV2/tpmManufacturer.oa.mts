@@ -14,7 +14,21 @@ import { tcg_at_tpmManufacturer } from "../EKCredentialProfileV2/tcg-at-tpmManuf
 /**
  * @summary tpmManufacturer
  * @description
- * 
+ *
+ * TPM manufacturer, carried in the subject alternative name as a
+ * `directoryName`. Required there, together with `tpmModel` and `tpmVersion`.
+ *
+ * The value is the ASCII encoding of the four-byte vendor identifier from the
+ * TCG Vendor ID Registry. Each byte is two uppercase hexadecimal digits, the
+ * four bytes are concatenated, and the eight characters are appended to `id:`.
+ * Vendor identifier 0x12 0x34 0x56 0xEF is `id:123456EF`. The value matches
+ * `TPM2_GetCapability` property `TPM_PT_MANUFACTURER`.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.2
+ * and §3.2.9.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

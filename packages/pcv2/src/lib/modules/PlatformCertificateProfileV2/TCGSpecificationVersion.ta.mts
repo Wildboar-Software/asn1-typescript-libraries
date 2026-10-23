@@ -12,7 +12,17 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary TCGSpecificationVersion
  * @description
- * 
+ *
+ * Major version, minor version, and revision of the platform certificate
+ * profile the certificate claims. When this certificate references another, the
+ * attribute equals that certificate's `tCGCredentialSpecification`. A delta
+ * certificate uses the same value as its base certificate; a different profile
+ * version is a new base or rebase certificate.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §3.3.6 and §2.1.4.3.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,18 +39,42 @@ export
 class TCGSpecificationVersion {
     /**
      * @summary `majorVersion`.
+     * @description
+     *
+     * Major version of the platform certificate profile.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §3.3.6.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */
     readonly majorVersion: INTEGER;
     /**
      * @summary `minorVersion`.
+     * @description
+     *
+     * Minor version of the platform certificate profile.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §3.3.6.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */
     readonly minorVersion: INTEGER;
     /**
      * @summary `revision`.
+     * @description
+     *
+     * Revision of the platform certificate profile.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §3.3.6.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */

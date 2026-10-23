@@ -13,7 +13,14 @@ import { ComponentClassRegistry, _decode_ComponentClassRegistry, _encode_Compone
 /**
  * @summary ComponentClass
  * @description
- * 
+ *
+ * Component type as a registry identifier plus the 4-byte value defined by that
+ * registry.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.5.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +36,28 @@ export
 class ComponentClass {
     /**
      * @summary `componentClassRegistry`.
+     * @description
+     *
+     * Which component class registry defines `componentClassValue`.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.2.5.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */
     readonly componentClassRegistry: ComponentClassRegistry;
     /**
      * @summary `componentClassValue`.
+     * @description
+     *
+     * Four-byte class value assigned by `componentClassRegistry`.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.2.5.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */

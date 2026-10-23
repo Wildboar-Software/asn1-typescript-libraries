@@ -11,7 +11,15 @@ import { CredentialType, _decode_CredentialType, _encode_CredentialType } from "
 /**
  * @summary TCGCredentialType
  * @description
- * 
+ *
+ * Certificate type and encoding. Required. An attribute certificate carries
+ * `tCGCredentialType` in `attributes`. A public-key certificate carries it in
+ * `subjectDirectoryAttributes`.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §3.3.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,6 +34,15 @@ export
 class TCGCredentialType {
     /**
      * @summary `certificateType`.
+     * @description
+     *
+     * One of the six `CredentialType` identifiers: base attribute, base key,
+     * additional attribute, additional key, delta attribute, or delta key.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §3.3.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */

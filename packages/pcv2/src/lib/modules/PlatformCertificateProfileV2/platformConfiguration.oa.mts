@@ -8,7 +8,14 @@ import { tcg_at_platformConfiguration_v3 } from "../PlatformCertificateProfileV2
 /**
  * @summary platformConfiguration
  * @description
- * 
+ *
+ * Attribute that carries `PlatformConfiguration-v3`. Optional. On a public-key
+ * certificate it is placed in `subjectDirectoryAttributes`.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §3.3.19.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

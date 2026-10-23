@@ -12,7 +12,15 @@ import { EntityGeoLocation, _decode_EntityGeoLocation, _encode_EntityGeoLocation
 /**
  * @summary OriginComposition
  * @description
- * 
+ *
+ * Country-of-origin assertion for a product or assembly. The profile's example
+ * of a labeling rule this can capture is the U.S. FTC "Made in USA" rule.
+ * Carried by `countryOfOriginTrait`.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.23.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +36,31 @@ export
 class OriginComposition {
     /**
      * @summary `location`.
+     * @description
+     *
+     * Place of origin. This is the one required component of the trait.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.2.23.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */
     readonly location: EntityGeoLocation;
     /**
      * @summary `hasComponents`.
+     * @description
+     *
+     * Whether the assertion also covers components of the assembly it applies
+     * to. Defaults to true. The profile's example is a graphics card that
+     * includes its own sub-components, while the card itself is a component of
+     * the system.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.2.23.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */

@@ -13,7 +13,15 @@ import { type TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
 /**
  * @summary utf8StringTrait
  * @description
- * 
+ *
+ * Trait syntax for a UTF-8 string of length 1..`strmax`. The profile's
+ * component example uses it for manufacturer, model, and serial, with the
+ * category selecting which of those the string is.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.18.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

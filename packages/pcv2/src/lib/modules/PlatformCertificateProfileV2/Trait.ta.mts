@@ -17,7 +17,18 @@ import { urimax } from "../PlatformCertificateProfileV2/urimax.va.mjs";
 /**
  * @summary Trait
  * @description
- * 
+ *
+ * One assertion in a platform certificate. `traitId` selects the syntax of
+ * `traitValue`, `traitCategory` says what the value means, and `traitRegistry`
+ * names the registry a verifier uses to check the value against the platform.
+ * Each trait in a component or assertion may name a different registry.
+ * `tcg-tr-reg-none` means no registry is used; the issuer then documents the
+ * trait in `description` or `descriptionURI`.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,36 +48,92 @@ export
 class Trait {
     /**
      * @summary `traitId`.
+     * @description
+     *
+     * Identifier of the ASN.1 syntax DER-encoded in `traitValue`.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */
     readonly traitId: OBJECT_IDENTIFIER;
     /**
      * @summary `traitCategory`.
+     * @description
+     *
+     * Category of the information in `traitValue`, for example a component
+     * manufacturer name versus a FIPS assertion. Independent of `traitId`.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */
     readonly traitCategory: OBJECT_IDENTIFIER;
     /**
      * @summary `traitRegistry`.
+     * @description
+     *
+     * Registry a verifier uses to decide whether `traitValue` is valid for the
+     * platform. `tcg-tr-reg-none` means no registry is used.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */
     readonly traitRegistry: OBJECT_IDENTIFIER;
     /**
      * @summary `description`.
+     * @description
+     *
+     * Optional text about this trait, length 1..`strmax`. Required as the place
+     * the issuer documents the trait when `traitRegistry` is `tcg-tr-reg-none`
+     * or another value TCG does not define, unless `descriptionURI` carries
+     * that documentation.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */
     readonly description: OPTIONAL<UTF8String>;
     /**
      * @summary `descriptionURI`.
+     * @description
+     *
+     * Optional URI relevant to this trait, length 1..`urimax`. Required as the
+     * place the issuer documents the trait when `traitRegistry` is
+     * `tcg-tr-reg-none` or another value TCG does not define, unless
+     * `description` carries that documentation.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */
     readonly descriptionURI: OPTIONAL<IA5String>;
     /**
      * @summary `traitValue`.
+     * @description
+     *
+     * DER encoding of the value whose syntax is selected by `traitId`.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */

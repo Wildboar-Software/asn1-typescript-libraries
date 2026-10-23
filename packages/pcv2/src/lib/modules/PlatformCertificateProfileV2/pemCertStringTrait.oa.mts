@@ -13,7 +13,14 @@ import { type TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
 /**
  * @summary pemCertStringTrait
  * @description
- * 
+ *
+ * Trait syntax for a PEM-encoded certificate (RFC 7468) stored as UTF-8, length
+ * 1..`certstrmax`. Category `tcg-tr-cat-PEMCertificate`.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.20.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -8,7 +8,16 @@ import { tcg_at_tpmSpecification } from "../EKCredentialProfileV2/tcg-at-tpmSpec
 /**
  * @summary tpmSpecification
  * @description
- * 
+ *
+ * Attribute that carries `TPMSpecification`, identifying the TCG TPM
+ * specification the TPM was designed to. Optional in the non-critical subject
+ * directory attributes extension.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.3
+ * and §3.2.11.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

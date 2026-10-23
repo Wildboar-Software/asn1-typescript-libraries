@@ -13,7 +13,17 @@ import { Property, _decode_Property, _encode_Property } from "../PlatformCertifi
 /**
  * @summary PlatformConfiguration_v3
  * @description
- * 
+ *
+ * Non-security platform properties: component identities and issuer-defined
+ * name/value properties. The profile names this production
+ * `PlatformConfiguration-v3`. Optional. A delta certificate includes only
+ * components and properties that were added, modified, or removed relative to
+ * the previous certificate.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §3.3.19 and §2.1.4.16.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +39,30 @@ export
 class PlatformConfiguration_v3 {
     /**
      * @summary `platformComponents`.
+     * @description
+     *
+     * Components of the platform. Each entry is a `ComponentIdentifier`
+     * (`ComponentIdentifier-v2` in the profile).
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §3.3.19.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */
     readonly platformComponents: OPTIONAL<ComponentIdentifier[]>;
     /**
      * @summary `platformProperties`.
+     * @description
+     *
+     * Name/value characteristics the issuer considers of interest. In a delta
+     * certificate each `Property` includes `status`.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §3.3.19.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */

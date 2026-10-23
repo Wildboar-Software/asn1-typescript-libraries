@@ -9,7 +9,16 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary TRAIT
  * @description
- * 
+ *
+ * Information object class for a platform-certificate trait, analogous to
+ * `EXTENSION`. `&id` is the `traitId` and `&TraitValueType` is the ASN.1 syntax
+ * DER-encoded in `traitValue`. New traits can be added without changing the
+ * certificate's other ASN.1.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,10 +56,28 @@ interface TRAIT<
     }>;
     /**
      * @summary &id
+     * @description
+     *
+     * Object identifier of this trait syntax. A `Trait` copies it into
+     * `traitId`.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      */
     readonly "&id"?: OBJECT_IDENTIFIER;
     /**
      * @summary &TraitValueType
+     * @description
+     *
+     * ASN.1 type DER-encoded in `traitValue` when `traitId` is this object's
+     * `&id`.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      */
     readonly "&TraitValueType": TraitValueType;
 };

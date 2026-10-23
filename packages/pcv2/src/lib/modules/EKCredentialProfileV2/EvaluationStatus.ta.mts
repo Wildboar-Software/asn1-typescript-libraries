@@ -6,7 +6,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary EvaluationStatus
  * @description
- * 
+ *
+ * Status of the Common Criteria evaluation named by the surrounding measures.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -21,15 +27,45 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 enum _enum_for_EvaluationStatus {
+    /**
+     * The target is designed to meet the claimed evaluation.
+     *
+     * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7,
+     * §3.1.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+     */
     designedToMeet = 0,
+    /**
+     * Evaluation against the stated profile or target is in progress.
+     *
+     * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7,
+     * §3.1.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+     */
     evaluationInProgress = 1,
+    /**
+     * Evaluation against the stated profile or target has completed.
+     *
+     * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7,
+     * §3.1.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+     */
     evaluationCompleted = 2,
 }
 
 /**
  * @summary EvaluationStatus
  * @description
- * 
+ *
+ * Status of the Common Criteria evaluation named by the surrounding measures.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,7 +84,13 @@ type EvaluationStatus = _enum_for_EvaluationStatus;
 /**
  * @summary EvaluationStatus
  * @description
- * 
+ *
+ * Status of the Common Criteria evaluation named by the surrounding measures.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -66,6 +108,14 @@ const EvaluationStatus = _enum_for_EvaluationStatus;
 
 /**
  * @summary EvaluationStatus_designedToMeet
+ * @description
+ *
+ * The target is designed to meet the claimed evaluation.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -74,6 +124,14 @@ const EvaluationStatus_designedToMeet: EvaluationStatus = EvaluationStatus.desig
 
 /**
  * @summary designedToMeet
+ * @description
+ *
+ * The target is designed to meet the claimed evaluation.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -82,6 +140,14 @@ const designedToMeet: EvaluationStatus = EvaluationStatus.designedToMeet; /* SHO
 
 /**
  * @summary EvaluationStatus_evaluationInProgress
+ * @description
+ *
+ * Evaluation against the stated profile or target is in progress.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -90,6 +156,14 @@ const EvaluationStatus_evaluationInProgress: EvaluationStatus = EvaluationStatus
 
 /**
  * @summary evaluationInProgress
+ * @description
+ *
+ * Evaluation against the stated profile or target is in progress.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -98,6 +172,14 @@ const evaluationInProgress: EvaluationStatus = EvaluationStatus.evaluationInProg
 
 /**
  * @summary EvaluationStatus_evaluationCompleted
+ * @description
+ *
+ * Evaluation against the stated profile or target has completed.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -106,6 +188,14 @@ const EvaluationStatus_evaluationCompleted: EvaluationStatus = EvaluationStatus.
 
 /**
  * @summary evaluationCompleted
+ * @description
+ *
+ * Evaluation against the stated profile or target has completed.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * @constant
  * @type {number}
  */

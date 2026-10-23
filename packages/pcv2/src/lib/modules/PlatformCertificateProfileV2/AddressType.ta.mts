@@ -13,7 +13,14 @@ import { tcg_address_wlanmac } from "../PlatformCertificateProfileV2/tcg-address
 /**
  * @summary AddressType
  * @description
- * 
+ *
+ * Kind of component address: `tcg-address-ethernetmac`, `tcg-address-wlanmac`,
+ * or `tcg-address-bluetoothmac`.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.5.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

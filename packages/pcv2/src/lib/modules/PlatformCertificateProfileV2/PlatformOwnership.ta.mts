@@ -10,7 +10,16 @@ import { Trait, _decode_Trait, _encode_Trait } from "../PlatformCertificateProfi
 /**
  * @summary PlatformOwnership
  * @description
- * 
+ *
+ * Owner or user of the platform at the time this certificate was issued. The
+ * sequence includes a trait of category `tcg-tr-cat-platformOwnership` that
+ * identifies that party. Optional. The profile leaves privacy handling of this
+ * field to platform-specific binding specifications.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §3.3.21 and §2.1.4.17.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -10,7 +10,16 @@ import { Trait, _decode_Trait, _encode_Trait } from "../PlatformCertificateProfi
 /**
  * @summary PlatformConfigUri_v3
  * @description
- * 
+ *
+ * Where a verifier obtains reference integrity measurements. The profile names
+ * this production `PlatformConfigUri-v3` and gives `uriTrait` as an example
+ * syntax. A delta certificate may use the attribute to assert changes to the
+ * base certificate's PCR values.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §3.3.20.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

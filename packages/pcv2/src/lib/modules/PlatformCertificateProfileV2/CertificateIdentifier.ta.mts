@@ -12,7 +12,16 @@ import { IssuerSerial, _decode_IssuerSerial, _encode_IssuerSerial } from "@wildb
 /**
  * @summary CertificateIdentifier
  * @description
- * 
+ *
+ * Reference to another certificate, either by a hash of its signature or by
+ * issuer and serial number (RFC 5755 `IssuerSerial`), or both. The profile
+ * recommends this syntax where a verifier needs an interoperable certificate
+ * pointer. Additional certificate-identifier traits may be defined by TCG.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.2.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +37,29 @@ export
 class CertificateIdentifier {
     /**
      * @summary `hashedCertIdentifier`.
+     * @description
+     *
+     * Hash of the referenced certificate's signature.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.2.2.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */
     readonly hashedCertIdentifier: OPTIONAL<HashedCertificateIdentifier>;
     /**
      * @summary `genericCertIdentifier`.
+     * @description
+     *
+     * Issuer distinguished name and serial number of the referenced
+     * certificate, as RFC 5755 `IssuerSerial`.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.2.2 and §3.3.13.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */

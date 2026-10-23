@@ -9,7 +9,15 @@ import { tcg_tr_category } from "../PlatformCertificateProfileV2/tcg-tr-category
 /**
  * @summary tcg_tr_cat_componentFieldReplaceable
  * @description
- * 
+ *
+ * `{tcg-tr-category 14}`. Whether the component is field replaceable. A
+ * `ComponentIdentifier` list should include a trait of this category. The
+ * syntax used in the profile's example is `booleanTrait`.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §3.3.19.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

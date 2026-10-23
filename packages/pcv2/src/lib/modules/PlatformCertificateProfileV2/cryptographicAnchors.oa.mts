@@ -8,7 +8,15 @@ import { tcg_at_cryptographicAnchors } from "../PlatformCertificateProfileV2/tcg
 /**
  * @summary cryptographicAnchors
  * @description
- * 
+ *
+ * Attribute that carries `CryptographicAnchors`. On an attribute certificate
+ * the primary root-of-trust reference is `holder` and further references go
+ * here. On a public-key certificate the primary key is `subjectPublicKeyInfo`.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §3.3.15.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

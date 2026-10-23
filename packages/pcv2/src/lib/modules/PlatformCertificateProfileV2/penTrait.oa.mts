@@ -7,7 +7,15 @@ import { type TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
 /**
  * @summary penTrait
  * @description
- * 
+ *
+ * Trait syntax for an IANA Private Enterprise Number. Category
+ * `tcg-tr-cat-PEN`. Used when `PlatformIdentifier` identifies the manufacturer
+ * by that number.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.10.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

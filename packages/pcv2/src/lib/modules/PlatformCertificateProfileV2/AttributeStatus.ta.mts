@@ -6,7 +6,15 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AttributeStatus
  * @description
- * 
+ *
+ * Whether a component or property was added, modified, or removed relative to
+ * the previous platform certificate. Used as `Property.status`, as
+ * `ComponentIdentifierV11.status`, and as the value of `statusTrait`.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §3.3.19 and §4.2.16.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -21,15 +29,46 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 enum _enum_for_AttributeStatus {
+    /**
+     * The component or property was added relative to the previous certificate.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §3.3.19.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     */
     added = 0,
+    /**
+     * The component or property was modified relative to the previous
+     * certificate.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §3.3.19.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     */
     modified = 1,
+    /**
+     * The component or property was removed relative to the previous
+     * certificate.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §3.3.19.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     */
     removed = 2,
 }
 
 /**
  * @summary AttributeStatus
  * @description
- * 
+ *
+ * Whether a component or property was added, modified, or removed relative to
+ * the previous platform certificate. Used as `Property.status`, as
+ * `ComponentIdentifierV11.status`, and as the value of `statusTrait`.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §3.3.19 and §4.2.16.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,7 +87,15 @@ type AttributeStatus = _enum_for_AttributeStatus;
 /**
  * @summary AttributeStatus
  * @description
- * 
+ *
+ * Whether a component or property was added, modified, or removed relative to
+ * the previous platform certificate. Used as `Property.status`, as
+ * `ComponentIdentifierV11.status`, and as the value of `statusTrait`.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §3.3.19 and §4.2.16.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -66,6 +113,14 @@ const AttributeStatus = _enum_for_AttributeStatus;
 
 /**
  * @summary AttributeStatus_added
+ * @description
+ *
+ * The component or property was added relative to the previous certificate.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §3.3.19.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -74,6 +129,14 @@ const AttributeStatus_added: AttributeStatus = AttributeStatus.added; /* LONG_NA
 
 /**
  * @summary added
+ * @description
+ *
+ * The component or property was added relative to the previous certificate.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §3.3.19.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -82,6 +145,14 @@ const added: AttributeStatus = AttributeStatus.added; /* SHORT_NAMED_ENUMERATED_
 
 /**
  * @summary AttributeStatus_modified
+ * @description
+ *
+ * The component or property was modified relative to the previous certificate.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §3.3.19.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -90,6 +161,14 @@ const AttributeStatus_modified: AttributeStatus = AttributeStatus.modified; /* L
 
 /**
  * @summary modified
+ * @description
+ *
+ * The component or property was modified relative to the previous certificate.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §3.3.19.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -98,6 +177,14 @@ const modified: AttributeStatus = AttributeStatus.modified; /* SHORT_NAMED_ENUME
 
 /**
  * @summary AttributeStatus_removed
+ * @description
+ *
+ * The component or property was removed relative to the previous certificate.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §3.3.19.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -106,6 +193,14 @@ const AttributeStatus_removed: AttributeStatus = AttributeStatus.removed; /* LON
 
 /**
  * @summary removed
+ * @description
+ *
+ * The component or property was removed relative to the previous certificate.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §3.3.19.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * @constant
  * @type {number}
  */

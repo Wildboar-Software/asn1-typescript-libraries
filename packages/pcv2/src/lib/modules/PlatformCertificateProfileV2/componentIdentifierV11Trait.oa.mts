@@ -7,7 +7,16 @@ import { type TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
 /**
  * @summary componentIdentifierV11Trait
  * @description
- * 
+ *
+ * Trait syntax for a version 1.1 `ComponentIdentifier` sequence. Category
+ * `tcg-tr-cat-componentIdentifierV11`. When a `ComponentIdentifier` contains
+ * this trait, it contains no other trait. `componentClass`,
+ * `componentManufacturer`, and `componentSerial` are populated.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.5.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

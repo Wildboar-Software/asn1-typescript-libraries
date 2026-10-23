@@ -9,7 +9,15 @@ import { tcg_tr_category } from "../PlatformCertificateProfileV2/tcg-tr-category
 /**
  * @summary tcg_tr_cat_componentManufacturer
  * @description
- * 
+ *
+ * `{tcg-tr-category 8}`. A `ComponentIdentifier` list that is not a single
+ * `componentIdentifierV11Trait` includes a trait of this category identifying
+ * the component manufacturer.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §3.3.19.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

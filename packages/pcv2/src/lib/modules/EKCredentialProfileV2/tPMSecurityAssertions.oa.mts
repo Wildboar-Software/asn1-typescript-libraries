@@ -8,7 +8,16 @@ import { tcg_at_tpmSecurityAssertions } from "../EKCredentialProfileV2/tcg-at-tp
 /**
  * @summary tPMSecurityAssertions
  * @description
- * 
+ *
+ * Attribute that carries `TPMSecurityAssertions`. Its identifier is
+ * `tcg-at-tpmSecurityAssertions`. Certificates that conform to this version of
+ * the profile should omit it.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1
+ * and §3.2.11.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

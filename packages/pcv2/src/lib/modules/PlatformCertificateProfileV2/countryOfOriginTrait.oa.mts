@@ -7,7 +7,15 @@ import { type TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
 /**
  * @summary countryOfOriginTrait
  * @description
- * 
+ *
+ * Trait syntax for a country-of-origin assertion. Category
+ * `tcg-tr-cat-countryOfOrigin`. `location` is required; `hasComponents` says
+ * whether sub-components of the assembly are included.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.23.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

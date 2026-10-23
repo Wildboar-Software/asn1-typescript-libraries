@@ -10,7 +10,14 @@ import { type TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
 /**
  * @summary booleanTrait
  * @description
- * 
+ *
+ * Trait syntax for a Boolean. The profile's component example uses it with
+ * category `tcg-tr-cat-componentFieldReplaceable`.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

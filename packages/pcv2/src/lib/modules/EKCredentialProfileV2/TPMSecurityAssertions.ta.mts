@@ -20,7 +20,19 @@ import { FIPSLevel, _decode_FIPSLevel, _encode_FIPSLevel } from "../EKCredential
 /**
  * @summary TPMSecurityAssertions
  * @description
- * 
+ *
+ * Security-related assertions about the TPM and about how its endorsement key
+ * was created. Carried, when used, as the `tPMSecurityAssertions` attribute.
+ * Certificates that conform to this version of the endorsement-key profile
+ * should omit this attribute (§3.2.11.1). The syntax is retained so that the
+ * assertions can still be parsed.
+ *
+ * A later profile may append fields and identify that syntax with `version`.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,60 +56,157 @@ export
 class TPMSecurityAssertions {
     /**
      * @summary `version`.
+     * @description
+     *
+     * Which version of this assertion syntax is encoded. Defaults to `v1`.
+     *
+     * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7,
+     * §3.1.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+     *
      * @public
      * @readonly
      */
     readonly version: OPTIONAL<Version>;
     /**
      * @summary `fieldUpgradable`.
+     * @description
+     *
+     * Whether the TPM firmware can be upgraded after manufacturing. Defaults to
+     * false.
+     *
+     * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7,
+     * §3.1.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+     *
      * @public
      * @readonly
      */
     readonly fieldUpgradable: OPTIONAL<BOOLEAN>;
     /**
      * @summary `ekGenerationType`.
+     * @description
+     *
+     * How the endorsement key was created, and whether that endorsement-key
+     * credential can be revoked.
+     *
+     * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7,
+     * §3.1.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+     *
      * @public
      * @readonly
      */
     readonly ekGenerationType: OPTIONAL<EKGenerationType>;
     /**
      * @summary `ekGenerationLocation`.
+     * @description
+     *
+     * Which party generated the endorsement key. The profile names the three
+     * parties and does not describe the generation procedure for each.
+     *
+     * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7,
+     * §3.1.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+     *
      * @public
      * @readonly
      */
     readonly ekGenerationLocation: OPTIONAL<EKGenerationLocation>;
     /**
      * @summary `ekCertificateGenerationLocation`.
+     * @description
+     *
+     * Which party generated the endorsement-key certificate. The profile names
+     * the three parties and does not describe the issuance procedure for each.
+     *
+     * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7,
+     * §3.1.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+     *
      * @public
      * @readonly
      */
     readonly ekCertificateGenerationLocation: OPTIONAL<EKCertificateGenerationLocation>;
     /**
      * @summary `ccInfo`.
+     * @description
+     *
+     * Common Criteria evaluation of the TPM, when the issuer asserts one.
+     *
+     * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7,
+     * §3.1.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+     *
      * @public
      * @readonly
      */
     readonly ccInfo: OPTIONAL<CommonCriteriaMeasures>;
     /**
      * @summary `fipsLevel`.
+     * @description
+     *
+     * FIPS 140 evaluation asserted for the TPM.
+     *
+     * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7,
+     * §3.1.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+     *
      * @public
      * @readonly
      */
     readonly fipsLevel: OPTIONAL<FIPSLevel>;
     /**
      * @summary `iso9000Certified`.
+     * @description
+     *
+     * Whether the issuer asserts ISO 9000 certification. Defaults to false. The
+     * profile does not define certification criteria for this field.
+     *
+     * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7,
+     * §3.1.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+     *
      * @public
      * @readonly
      */
     readonly iso9000Certified: OPTIONAL<BOOLEAN>;
     /**
      * @summary `iso9000Uri`.
+     * @description
+     *
+     * URI, length 1..`urimax`, of a document for the ISO 9000 assertion. The
+     * profile does not define that document.
+     *
+     * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7,
+     * §3.1.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+     *
      * @public
      * @readonly
      */
     readonly iso9000Uri: OPTIONAL<IA5String>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Fields appended by a later version of this syntax. `version` identifies
+     * which syntax was encoded.
+     *
+     * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7,
+     * §3.1.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+     *
      * @public
      * @readonly
      */

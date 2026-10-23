@@ -6,7 +6,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary EKCertificateGenerationLocation
  * @description
- * 
+ *
+ * Party that generated the endorsement-key certificate.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -21,15 +27,45 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 enum _enum_for_EKCertificateGenerationLocation {
+    /**
+     * The TPM manufacturer.
+     *
+     * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7,
+     * §3.1.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+     */
     tpmManufacturer = 0,
+    /**
+     * The platform manufacturer.
+     *
+     * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7,
+     * §3.1.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+     */
     platformManufacturer = 1,
+    /**
+     * The signer of the endorsement-key certificate.
+     *
+     * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7,
+     * §3.1.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+     */
     ekCertSigner = 2,
 }
 
 /**
  * @summary EKCertificateGenerationLocation
  * @description
- * 
+ *
+ * Party that generated the endorsement-key certificate.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,7 +84,13 @@ type EKCertificateGenerationLocation = _enum_for_EKCertificateGenerationLocation
 /**
  * @summary EKCertificateGenerationLocation
  * @description
- * 
+ *
+ * Party that generated the endorsement-key certificate.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -66,6 +108,14 @@ const EKCertificateGenerationLocation = _enum_for_EKCertificateGenerationLocatio
 
 /**
  * @summary EKCertificateGenerationLocation_tpmManufacturer
+ * @description
+ *
+ * The TPM manufacturer.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -74,6 +124,14 @@ const EKCertificateGenerationLocation_tpmManufacturer: EKCertificateGenerationLo
 
 /**
  * @summary tpmManufacturer
+ * @description
+ *
+ * The TPM manufacturer.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -82,6 +140,14 @@ const tpmManufacturer: EKCertificateGenerationLocation = EKCertificateGeneration
 
 /**
  * @summary EKCertificateGenerationLocation_platformManufacturer
+ * @description
+ *
+ * The platform manufacturer.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -90,6 +156,14 @@ const EKCertificateGenerationLocation_platformManufacturer: EKCertificateGenerat
 
 /**
  * @summary platformManufacturer
+ * @description
+ *
+ * The platform manufacturer.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -98,6 +172,14 @@ const platformManufacturer: EKCertificateGenerationLocation = EKCertificateGener
 
 /**
  * @summary EKCertificateGenerationLocation_ekCertSigner
+ * @description
+ *
+ * The signer of the endorsement-key certificate.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -106,6 +188,14 @@ const EKCertificateGenerationLocation_ekCertSigner: EKCertificateGenerationLocat
 
 /**
  * @summary ekCertSigner
+ * @description
+ *
+ * The signer of the endorsement-key certificate.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * @constant
  * @type {number}
  */

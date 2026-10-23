@@ -9,7 +9,14 @@ import { tcg_tr_category } from "../PlatformCertificateProfileV2/tcg-tr-category
 /**
  * @summary tcg_tr_cat_RebasePlatformCertificate
  * @description
- * 
+ *
+ * `{tcg-tr-category 23}`. A trait that references a platform certificate which
+ * itself references an earlier platform certificate uses this category.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §3.3.11 and §4.2.2.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

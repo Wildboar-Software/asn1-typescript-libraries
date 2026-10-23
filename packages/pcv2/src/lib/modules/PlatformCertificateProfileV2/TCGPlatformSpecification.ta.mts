@@ -13,7 +13,17 @@ import { TCGSpecificationVersion, _decode_TCGSpecificationVersion, _encode_TCGSp
 /**
  * @summary TCGPlatformSpecification
  * @description
- * 
+ *
+ * Platform class and the version of the TCG platform-specific specification the
+ * platform implements, for example the PC Client Platform Firmware Profile.
+ * Required on a base certificate. Optional on a delta certificate. A delta
+ * certificate's changes do not invalidate the platform-specification claim of
+ * the base certificate (§2.2.3).
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §3.3.17 and §2.1.4.13.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +39,31 @@ export
 class TCGPlatformSpecification {
     /**
      * @summary `version`.
+     * @description
+     *
+     * Major version, minor version, and revision of the platform-specific
+     * specification.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §3.3.17.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */
     readonly version: TCGSpecificationVersion;
     /**
      * @summary `platformClass`.
+     * @description
+     *
+     * Four-byte platform class. Standardized values are in section 4, Platform
+     * Class, of the Registry of Reserved TPM 2.0 Handles and Localities. This
+     * profile cites that registry and does not list the values.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §3.3.17.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */

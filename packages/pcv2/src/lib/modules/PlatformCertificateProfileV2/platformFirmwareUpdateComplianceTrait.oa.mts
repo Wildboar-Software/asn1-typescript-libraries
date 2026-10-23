@@ -7,7 +7,15 @@ import { type TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
 /**
  * @summary platformFirmwareUpdateComplianceTrait
  * @description
- * 
+ *
+ * Trait syntax for NIST SP 800-147, SP 800-147B, or SP 800-193 firmware-update
+ * compliance. Category `tcg-tr-cat-platformFirmwareUpdateCompliance`. Permitted
+ * in `tBBSecurityAssertions`.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.13.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

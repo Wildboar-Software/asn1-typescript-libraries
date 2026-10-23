@@ -14,7 +14,13 @@ import { AddressType, _decode_AddressType, _encode_AddressType } from "../Platfo
 /**
  * @summary ComponentAddress
  * @description
- * 
+ *
+ * One address of a component. Also the value of `networkMACTrait`.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.5 and §4.2.8.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +36,29 @@ export
 class ComponentAddress {
     /**
      * @summary `addressType`.
+     * @description
+     *
+     * Ethernet, WLAN, or Bluetooth MAC address.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.2.5.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */
     readonly addressType: AddressType;
     /**
      * @summary `addressValue`.
+     * @description
+     *
+     * Address text, length 1..`strmax`. A MAC address is the big-endian
+     * hexadecimal text with no delimiter, using uppercase letters.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.2.5.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */

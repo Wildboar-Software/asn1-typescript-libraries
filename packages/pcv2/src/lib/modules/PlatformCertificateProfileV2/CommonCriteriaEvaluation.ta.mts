@@ -15,7 +15,18 @@ import { CommonCriteriaMeasures, _decode_CommonCriteriaMeasures, _encode_CommonC
 /**
  * @summary CommonCriteriaEvaluation
  * @description
- * 
+ *
+ * Common Criteria evaluation of a target, plus identification of the Common
+ * Criteria certificate. The certificate is identified at least by its number
+ * and by the name of the entity that issued it, for example the scheme. Carried
+ * by `commonCriteriaTrait` with category `tcg-tr-cat-CommonCriteria`. The
+ * profile and the target inside `cCMeasures` may each be an object identifier,
+ * a URI reference, or both; when both are present they are consistent.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.3.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,36 +46,87 @@ export
 class CommonCriteriaEvaluation {
     /**
      * @summary `cCMeasures`.
+     * @description
+     *
+     * Evaluation measures defined by the endorsement-key credential profile:
+     * assurance level, status, and the profile and target identifiers.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.2.3.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */
     readonly cCMeasures: CommonCriteriaMeasures;
     /**
      * @summary `cCCertificateNumber`.
+     * @description
+     *
+     * Number of the Common Criteria certificate, length 1..`strmax`.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.2.3.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */
     readonly cCCertificateNumber: UTF8String;
     /**
      * @summary `cCCertificateAuthority`.
+     * @description
+     *
+     * Name of the entity that issued the Common Criteria certificate, for
+     * example the scheme. Length 1..`strmax`.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.2.3.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */
     readonly cCCertificateAuthority: UTF8String;
     /**
      * @summary `evaluationScheme`.
+     * @description
+     *
+     * Optional evaluation scheme, length 1..`strmax`. The profile does not
+     * define a vocabulary for this string.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.2.3.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */
     readonly evaluationScheme: OPTIONAL<UTF8String>;
     /**
      * @summary `cCCertificateIssuanceDate`.
+     * @description
+     *
+     * Optional issuance date of the Common Criteria certificate.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.2.3.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */
     readonly cCCertificateIssuanceDate: OPTIONAL<GeneralizedTime>;
     /**
      * @summary `cCCertificateExpiryDate`.
+     * @description
+     *
+     * Optional expiry date of the Common Criteria certificate.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.2.3.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */

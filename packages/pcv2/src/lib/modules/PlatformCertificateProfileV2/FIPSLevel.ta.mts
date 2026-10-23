@@ -15,7 +15,15 @@ import { SecurityLevel, _decode_SecurityLevel, _encode_SecurityLevel, _enum_for_
 /**
  * @summary FIPSLevel
  * @description
- * 
+ *
+ * FIPS 140-series classification asserted for the platform. Carried by
+ * `fipsLevelTrait` with category `tcg-tr-cat-FIPSLevel`. The endorsement-key
+ * profile defines a separate `FIPSLevel` whose examples stop at "140-2".
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.6.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,18 +40,44 @@ export
 class FIPSLevel {
     /**
      * @summary `version`.
+     * @description
+     *
+     * FIPS 140 publication. The profile's examples are "140-1", "140-2", and
+     * "140-3". Length 1..`strmax`.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.2.6.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */
     readonly version: IA5String;
     /**
      * @summary `level`.
+     * @description
+     *
+     * Security level within that publication.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.2.6.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */
     readonly level: SecurityLevel;
     /**
      * @summary `plus`.
+     * @description
+     *
+     * Boolean included with the classification. Defaults to false. The profile
+     * does not define what true means.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.2.6.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */

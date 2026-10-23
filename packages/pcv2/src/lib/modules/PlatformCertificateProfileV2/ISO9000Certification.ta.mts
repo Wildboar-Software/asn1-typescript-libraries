@@ -15,7 +15,15 @@ import { urimax } from "../PlatformCertificateProfileV2/urimax.va.mjs";
 /**
  * @summary ISO9000Certification
  * @description
- * 
+ *
+ * ISO 9000 certification assertion. Carried by `iso9000Trait` with category
+ * `tcg-tr-cat-ISO9000`. The profile does not define certification criteria
+ * beyond these two fields.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.7.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +39,29 @@ export
 class ISO9000Certification {
     /**
      * @summary `iso9000Certified`.
+     * @description
+     *
+     * Whether ISO 9000 certification is asserted. Defaults to false.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.2.7.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */
     readonly iso9000Certified: OPTIONAL<BOOLEAN>;
     /**
      * @summary `iso9000Uri`.
+     * @description
+     *
+     * Optional URI related to the certification, length 1..`urimax`. The
+     * profile does not define the document.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.2.7.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */

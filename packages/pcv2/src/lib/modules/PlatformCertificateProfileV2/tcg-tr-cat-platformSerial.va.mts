@@ -9,7 +9,15 @@ import { tcg_tr_category } from "../PlatformCertificateProfileV2/tcg-tr-category
 /**
  * @summary tcg_tr_cat_platformSerial
  * @description
- * 
+ *
+ * `{tcg-tr-category 4}`. When present in `PlatformIdentifier`, the trait holds
+ * the customer-visible platform serial number. The sequence should include it.
+ * Together with the manufacturer and model, it identifies one platform.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §2.1.4.14 and §3.3.16.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

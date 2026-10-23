@@ -6,7 +6,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary EvaluationAssuranceLevel
  * @description
- * 
+ *
+ * Common Criteria evaluation assurance level asserted for the TPM. The profile
+ * does not restate the Common Criteria requirements for each level.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,19 +32,83 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 enum _enum_for_EvaluationAssuranceLevel {
+    /**
+     * Common Criteria evaluation assurance level 1. The profile spells this
+     * enumerator `levell`.
+     *
+     * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7,
+     * §3.1.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+     */
     levell = 1,
+    /**
+     * Common Criteria evaluation assurance level 2.
+     *
+     * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7,
+     * §3.1.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+     */
     level2 = 2,
+    /**
+     * Common Criteria evaluation assurance level 3.
+     *
+     * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7,
+     * §3.1.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+     */
     level3 = 3,
+    /**
+     * Common Criteria evaluation assurance level 4.
+     *
+     * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7,
+     * §3.1.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+     */
     level4 = 4,
+    /**
+     * Common Criteria evaluation assurance level 5.
+     *
+     * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7,
+     * §3.1.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+     */
     level5 = 5,
+    /**
+     * Common Criteria evaluation assurance level 6.
+     *
+     * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7,
+     * §3.1.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+     */
     level6 = 6,
+    /**
+     * Common Criteria evaluation assurance level 7.
+     *
+     * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7,
+     * §3.1.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+     */
     level7 = 7,
 }
 
 /**
  * @summary EvaluationAssuranceLevel
  * @description
- * 
+ *
+ * Common Criteria evaluation assurance level asserted for the TPM. The profile
+ * does not restate the Common Criteria requirements for each level.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -60,7 +131,14 @@ type EvaluationAssuranceLevel = _enum_for_EvaluationAssuranceLevel;
 /**
  * @summary EvaluationAssuranceLevel
  * @description
- * 
+ *
+ * Common Criteria evaluation assurance level asserted for the TPM. The profile
+ * does not restate the Common Criteria requirements for each level.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -82,6 +160,15 @@ const EvaluationAssuranceLevel = _enum_for_EvaluationAssuranceLevel;
 
 /**
  * @summary EvaluationAssuranceLevel_levell
+ * @description
+ *
+ * Common Criteria evaluation assurance level 1. The profile spells this
+ * enumerator `levell`.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -90,6 +177,15 @@ const EvaluationAssuranceLevel_levell: EvaluationAssuranceLevel = EvaluationAssu
 
 /**
  * @summary levell
+ * @description
+ *
+ * Common Criteria evaluation assurance level 1. The profile spells this
+ * enumerator `levell`.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -98,6 +194,14 @@ const levell: EvaluationAssuranceLevel = EvaluationAssuranceLevel.levell; /* SHO
 
 /**
  * @summary EvaluationAssuranceLevel_level2
+ * @description
+ *
+ * Common Criteria evaluation assurance level 2.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -106,6 +210,14 @@ const EvaluationAssuranceLevel_level2: EvaluationAssuranceLevel = EvaluationAssu
 
 /**
  * @summary level2
+ * @description
+ *
+ * Common Criteria evaluation assurance level 2.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -114,6 +226,14 @@ const level2: EvaluationAssuranceLevel = EvaluationAssuranceLevel.level2; /* SHO
 
 /**
  * @summary EvaluationAssuranceLevel_level3
+ * @description
+ *
+ * Common Criteria evaluation assurance level 3.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -122,6 +242,14 @@ const EvaluationAssuranceLevel_level3: EvaluationAssuranceLevel = EvaluationAssu
 
 /**
  * @summary level3
+ * @description
+ *
+ * Common Criteria evaluation assurance level 3.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -130,6 +258,14 @@ const level3: EvaluationAssuranceLevel = EvaluationAssuranceLevel.level3; /* SHO
 
 /**
  * @summary EvaluationAssuranceLevel_level4
+ * @description
+ *
+ * Common Criteria evaluation assurance level 4.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -138,6 +274,14 @@ const EvaluationAssuranceLevel_level4: EvaluationAssuranceLevel = EvaluationAssu
 
 /**
  * @summary level4
+ * @description
+ *
+ * Common Criteria evaluation assurance level 4.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -146,6 +290,14 @@ const level4: EvaluationAssuranceLevel = EvaluationAssuranceLevel.level4; /* SHO
 
 /**
  * @summary EvaluationAssuranceLevel_level5
+ * @description
+ *
+ * Common Criteria evaluation assurance level 5.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -154,6 +306,14 @@ const EvaluationAssuranceLevel_level5: EvaluationAssuranceLevel = EvaluationAssu
 
 /**
  * @summary level5
+ * @description
+ *
+ * Common Criteria evaluation assurance level 5.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -162,6 +322,14 @@ const level5: EvaluationAssuranceLevel = EvaluationAssuranceLevel.level5; /* SHO
 
 /**
  * @summary EvaluationAssuranceLevel_level6
+ * @description
+ *
+ * Common Criteria evaluation assurance level 6.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -170,6 +338,14 @@ const EvaluationAssuranceLevel_level6: EvaluationAssuranceLevel = EvaluationAssu
 
 /**
  * @summary level6
+ * @description
+ *
+ * Common Criteria evaluation assurance level 6.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -178,6 +354,14 @@ const level6: EvaluationAssuranceLevel = EvaluationAssuranceLevel.level6; /* SHO
 
 /**
  * @summary EvaluationAssuranceLevel_level7
+ * @description
+ *
+ * Common Criteria evaluation assurance level 7.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -186,6 +370,14 @@ const EvaluationAssuranceLevel_level7: EvaluationAssuranceLevel = EvaluationAssu
 
 /**
  * @summary level7
+ * @description
+ *
+ * Common Criteria evaluation assurance level 7.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * @constant
  * @type {number}
  */

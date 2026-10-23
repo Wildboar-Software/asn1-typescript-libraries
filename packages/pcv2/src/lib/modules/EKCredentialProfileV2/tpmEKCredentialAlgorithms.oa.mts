@@ -8,7 +8,16 @@ import { tcg_at_tpmEKCredentialAlgorithms } from "../EKCredentialProfileV2/tcg-a
 /**
  * @summary tpmEKCredentialAlgorithms
  * @description
- * 
+ *
+ * Attribute that carries `EKCredentialAlgorithmList` in the subject directory
+ * attributes extension. See that type for when the attribute is required and
+ * which identifiers it contains.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.4
+ * and §3.2.11.2.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

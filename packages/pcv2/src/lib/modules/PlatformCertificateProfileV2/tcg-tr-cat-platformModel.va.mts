@@ -9,7 +9,14 @@ import { tcg_tr_category } from "../PlatformCertificateProfileV2/tcg-tr-category
 /**
  * @summary tcg_tr_cat_platformModel
  * @description
- * 
+ *
+ * `{tcg-tr-category 2}`. `PlatformIdentifier` includes a trait of this
+ * category, and that trait identifies the manufacturer-specific platform model.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §3.3.16.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -8,7 +8,14 @@ import { tcg_at_previousPlatformCertificates } from "../PlatformCertificateProfi
 /**
  * @summary previousPlatformCertificates
  * @description
- * 
+ *
+ * Attribute that carries `PreviousPlatformCertificates`. Present when this
+ * certificate references an earlier one, and required on a delta certificate.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §3.3.11.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

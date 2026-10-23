@@ -9,7 +9,15 @@ import { tcg_registry_componentClass } from "../PlatformCertificateProfileV2/tcg
 /**
  * @summary tcg_registry_componentClass_dmtf
  * @description
- * 
+ *
+ * Component class registry `{tcg-registry-componentClass 3}`, the SMBIOS-based
+ * component class registry cited by the profile. Permitted as
+ * `ComponentClassRegistry`.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.5 and §5.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

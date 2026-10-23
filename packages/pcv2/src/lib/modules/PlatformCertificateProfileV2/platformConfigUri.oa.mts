@@ -8,7 +8,13 @@ import { tcg_at_platformConfigUri_v3 } from "../PlatformCertificateProfileV2/tcg
 /**
  * @summary platformConfigUri
  * @description
- * 
+ *
+ * Attribute that carries `PlatformConfigUri-v3`. Optional.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §3.3.20.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

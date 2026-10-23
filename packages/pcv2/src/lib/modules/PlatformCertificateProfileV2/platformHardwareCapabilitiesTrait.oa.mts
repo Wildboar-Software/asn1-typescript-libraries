@@ -7,7 +7,15 @@ import { type TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
 /**
  * @summary platformHardwareCapabilitiesTrait
  * @description
- * 
+ *
+ * Trait syntax for motherboard security capabilities. Category
+ * `tcg-tr-cat-platformHardwareCapabilities`. Permitted in
+ * `tBBSecurityAssertions`.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.14.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

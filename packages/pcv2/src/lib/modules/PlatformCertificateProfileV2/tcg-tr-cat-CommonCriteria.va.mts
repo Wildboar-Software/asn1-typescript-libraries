@@ -9,7 +9,13 @@ import { tcg_tr_category } from "../PlatformCertificateProfileV2/tcg-tr-category
 /**
  * @summary tcg_tr_cat_CommonCriteria
  * @description
- * 
+ *
+ * `{tcg-tr-category 25}`. A `commonCriteriaTrait` uses this category.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.3.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -7,7 +7,15 @@ import { type TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
 /**
  * @summary rtmTrait
  * @description
- * 
+ *
+ * Trait syntax for which RTM kinds the platform implements. Category
+ * `tcg-tr-cat-RTM`. The value does not select the RTM used at boot. Permitted
+ * in `tBBSecurityAssertions`.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.15.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

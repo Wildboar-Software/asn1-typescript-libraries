@@ -15,7 +15,17 @@ import { strmax } from "../EKCredentialProfileV2/strmax.va.mjs";
 /**
  * @summary TPMSpecification
  * @description
- * 
+ *
+ * TPM family, level, and revision of the TCG TPM specification the TPM
+ * implements. The profile's example of a public TPM 2.0 specification version
+ * 0.99 is family "2.0", level 0, and revision 99. Family is a UTF-8 string; the
+ * defined values are ASCII. Optional in the subject directory attributes
+ * extension (§3.2.11.1).
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.3.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,18 +42,47 @@ export
 class TPMSpecification {
     /**
      * @summary `family`.
+     * @description
+     *
+     * TPM family, for example "2.0". Length 1..`strmax`.
+     *
+     * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7,
+     * §3.1.3.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+     *
      * @public
      * @readonly
      */
     readonly family: UTF8String;
     /**
      * @summary `level`.
+     * @description
+     *
+     * Level of that family. 0 is the level used in the profile's version 0.99
+     * example.
+     *
+     * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7,
+     * §3.1.3.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+     *
      * @public
      * @readonly
      */
     readonly level: INTEGER;
     /**
      * @summary `revision`.
+     * @description
+     *
+     * Revision within that level. 99 is the revision used in the profile's
+     * version 0.99 example.
+     *
+     * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7,
+     * §3.1.3.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+     *
      * @public
      * @readonly
      */

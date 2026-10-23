@@ -16,7 +16,16 @@ import { OpenLocationCode, _decode_OpenLocationCode, _encode_OpenLocationCode } 
 /**
  * @summary EntityGeoLocation
  * @description
- * 
+ *
+ * Geographic location of a supply-chain entity. `countryCode` is required; the
+ * other components are optional. The profile assigns `postalCode` context tag 5
+ * and does not define a component with tag 4. Carried by
+ * `entityGeoLocationTrait`.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.22.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,36 +45,84 @@ export
 class EntityGeoLocation {
     /**
      * @summary `countryCode`.
+     * @description
+     *
+     * ISO 3166 country code, two or three characters.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.2.22.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */
     readonly countryCode: ISO3166CountryCode;
     /**
      * @summary `stateOrProvince`.
+     * @description
+     *
+     * ISO 3166 administrative subdivision, three to six characters.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.2.22.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */
     readonly stateOrProvince: OPTIONAL<ISO3166AdminSubdivisionCode>;
     /**
      * @summary `localityName`.
+     * @description
+     *
+     * Locality, length 1..`strmax`.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.2.22.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */
     readonly localityName: OPTIONAL<UTF8String>;
     /**
      * @summary `streetAddress`.
+     * @description
+     *
+     * Street address, length 1..`strmax`.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.2.22.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */
     readonly streetAddress: OPTIONAL<UTF8String>;
     /**
      * @summary `locationCoords`.
+     * @description
+     *
+     * Open Location Code for the coordinates.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.2.22.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */
     readonly locationCoords: OPTIONAL<OpenLocationCode>;
     /**
      * @summary `postalCode`.
+     * @description
+     *
+     * Postal code, length 1..`strmax`.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.2.22.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */

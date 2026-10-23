@@ -15,7 +15,14 @@ import { SecurityLevel, _decode_SecurityLevel, _encode_SecurityLevel, _enum_for_
 /**
  * @summary FIPSLevel
  * @description
- * 
+ *
+ * FIPS 140 evaluation asserted for the TPM. The platform profile defines a
+ * separate `FIPSLevel` whose version string also allows "140-3".
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,18 +40,47 @@ export
 class FIPSLevel {
     /**
      * @summary `version`.
+     * @description
+     *
+     * FIPS 140 publication whose levels this value uses. The profile's examples
+     * are "140-1" and "140-2".
+     *
+     * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7,
+     * §3.1.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+     *
      * @public
      * @readonly
      */
     readonly version: IA5String;
     /**
      * @summary `level`.
+     * @description
+     *
+     * Security level within that FIPS publication.
+     *
+     * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7,
+     * §3.1.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+     *
      * @public
      * @readonly
      */
     readonly level: SecurityLevel;
     /**
      * @summary `plus`.
+     * @description
+     *
+     * Boolean included with the FIPS assertion. Defaults to false. The profile
+     * does not define what true means.
+     *
+     * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7,
+     * §3.1.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+     *
      * @public
      * @readonly
      */

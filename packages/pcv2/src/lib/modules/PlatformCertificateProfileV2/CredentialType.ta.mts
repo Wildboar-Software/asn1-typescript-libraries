@@ -16,7 +16,24 @@ import { tcg_kp_PlatformKeyCertificate } from "../PlatformCertificateProfileV2/t
 /**
  * @summary CredentialType
  * @description
- * 
+ *
+ * Which platform certificate this is.
+ *
+ * A certificate that does not reference another uses
+ * `tcg-kp-PlatformAttributeCertificate` when it is an attribute certificate and
+ * `tcg-kp-PlatformKeyCertificate` when it is a public-key certificate.
+ *
+ * A certificate that references another uses
+ * `tcg-kp-AdditionalPlatformAttributeCertificate` or
+ * `tcg-kp-AdditionalPlatformKeyCertificate` for those same encodings.
+ *
+ * A delta certificate uses `tcg-kp-DeltaPlatformAttributeCertificate` or
+ * `tcg-kp-DeltaPlatformKeyCertificate`.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §3.3.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

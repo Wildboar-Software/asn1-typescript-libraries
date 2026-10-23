@@ -6,7 +6,19 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SecurityLevel
  * @description
- * 
+ *
+ * FIPS 140 security level selected by `FIPSLevel.version`. The endorsement-key
+ * profile's published examples of that version string are "140-1" and "140-2".
+ * The platform profile's examples are "140-1", "140-2", and "140-3". Neither
+ * profile restates the FIPS requirements for each level.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.6.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -22,16 +34,40 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 enum _enum_for_SecurityLevel {
+    /**
+     * FIPS security level 1.
+     */
     level1 = 1,
+    /**
+     * FIPS security level 2.
+     */
     level2 = 2,
+    /**
+     * FIPS security level 3.
+     */
     level3 = 3,
+    /**
+     * FIPS security level 4.
+     */
     level4 = 4,
 }
 
 /**
  * @summary SecurityLevel
  * @description
- * 
+ *
+ * FIPS 140 security level selected by `FIPSLevel.version`. The endorsement-key
+ * profile's published examples of that version string are "140-1" and "140-2".
+ * The platform profile's examples are "140-1", "140-2", and "140-3". Neither
+ * profile restates the FIPS requirements for each level.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.6.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -51,7 +87,19 @@ type SecurityLevel = _enum_for_SecurityLevel;
 /**
  * @summary SecurityLevel
  * @description
- * 
+ *
+ * FIPS 140 security level selected by `FIPSLevel.version`. The endorsement-key
+ * profile's published examples of that version string are "140-1" and "140-2".
+ * The platform profile's examples are "140-1", "140-2", and "140-3". Neither
+ * profile restates the FIPS requirements for each level.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.6.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -70,6 +118,17 @@ const SecurityLevel = _enum_for_SecurityLevel;
 
 /**
  * @summary SecurityLevel_level1
+ * @description
+ *
+ * FIPS security level 1.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.6.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -78,6 +137,17 @@ const SecurityLevel_level1: SecurityLevel = SecurityLevel.level1; /* LONG_NAMED_
 
 /**
  * @summary level1
+ * @description
+ *
+ * FIPS security level 1.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.6.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -86,6 +156,17 @@ const level1: SecurityLevel = SecurityLevel.level1; /* SHORT_NAMED_ENUMERATED_VA
 
 /**
  * @summary SecurityLevel_level2
+ * @description
+ *
+ * FIPS security level 2.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.6.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -94,6 +175,17 @@ const SecurityLevel_level2: SecurityLevel = SecurityLevel.level2; /* LONG_NAMED_
 
 /**
  * @summary level2
+ * @description
+ *
+ * FIPS security level 2.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.6.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -102,6 +194,17 @@ const level2: SecurityLevel = SecurityLevel.level2; /* SHORT_NAMED_ENUMERATED_VA
 
 /**
  * @summary SecurityLevel_level3
+ * @description
+ *
+ * FIPS security level 3.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.6.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -110,6 +213,17 @@ const SecurityLevel_level3: SecurityLevel = SecurityLevel.level3; /* LONG_NAMED_
 
 /**
  * @summary level3
+ * @description
+ *
+ * FIPS security level 3.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.6.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -118,6 +232,17 @@ const level3: SecurityLevel = SecurityLevel.level3; /* SHORT_NAMED_ENUMERATED_VA
 
 /**
  * @summary SecurityLevel_level4
+ * @description
+ *
+ * FIPS security level 4.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.6.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -126,6 +251,17 @@ const SecurityLevel_level4: SecurityLevel = SecurityLevel.level4; /* LONG_NAMED_
 
 /**
  * @summary level4
+ * @description
+ *
+ * FIPS security level 4.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.6.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * @constant
  * @type {number}
  */

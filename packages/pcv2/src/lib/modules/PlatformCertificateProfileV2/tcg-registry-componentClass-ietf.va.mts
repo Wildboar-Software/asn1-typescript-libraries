@@ -9,7 +9,15 @@ import { tcg_registry_componentClass } from "../PlatformCertificateProfileV2/tcg
 /**
  * @summary tcg_registry_componentClass_ietf
  * @description
- * 
+ *
+ * Component class registry identifier `{tcg-registry-componentClass 2}`.
+ * Section 5 assigns the arc. Section 4.2.5's permitted `ComponentClassRegistry`
+ * values do not include it, and the profile does not describe the registry.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §5.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

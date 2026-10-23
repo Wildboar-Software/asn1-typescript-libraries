@@ -8,7 +8,14 @@ import { tcg_at_tcgCredentialType } from "../PlatformCertificateProfileV2/tcg-at
 /**
  * @summary tCGCredentialType
  * @description
- * 
+ *
+ * Attribute that carries `TCGCredentialType`. Required on every platform
+ * certificate and delta platform certificate.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §3.3.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

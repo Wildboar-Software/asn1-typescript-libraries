@@ -8,7 +8,14 @@ import { tcg_at_tbbSecurityAssertions_v3 } from "../PlatformCertificateProfileV2
 /**
  * @summary tBBSecurityAssertions
  * @description
- * 
+ *
+ * Attribute that carries `TBBSecurityAssertions-v3`. Optional. See that type
+ * for which traits may appear.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §3.3.18.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

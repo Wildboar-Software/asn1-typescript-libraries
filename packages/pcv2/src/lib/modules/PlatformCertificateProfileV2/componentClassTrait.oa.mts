@@ -12,7 +12,15 @@ import { type TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
 /**
  * @summary componentClassTrait
  * @description
- * 
+ *
+ * Trait syntax for a 4-byte component class. The registry named by
+ * `traitRegistry` defines the value. Category `tcg-tr-cat-componentClass` when
+ * the trait identifies a component type.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.4.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -9,7 +9,14 @@ import { tcg_tr_category } from "../PlatformCertificateProfileV2/tcg-tr-category
 /**
  * @summary tcg_tr_cat_RTM
  * @description
- * 
+ *
+ * `{tcg-tr-category 36}`. An `rtmTrait` uses this category. The trait names
+ * which RTM capabilities exist. It does not say which RTM runs at boot.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.15.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -10,7 +10,26 @@ import { Trait, _decode_Trait, _encode_Trait } from "../PlatformCertificateProfi
 /**
  * @summary ComponentIdentifier
  * @description
- * 
+ *
+ * One platform component. The profile calls this production
+ * `ComponentIdentifier-v2`.
+ *
+ * Either the sequence is a single `componentIdentifierV11Trait` and nothing
+ * else, or it is a list of traits and does not contain
+ * `componentIdentifierV11Trait`.
+ *
+ * The list form includes a component class (`tcg-tr-cat-componentClass`),
+ * manufacturer (`tcg-tr-cat-componentManufacturer`), and model
+ * (`tcg-tr-cat-componentModel`). It should include a serial number
+ * (`tcg-tr-cat-componentSerial`) and whether the component is field replaceable
+ * (`tcg-tr-cat-componentFieldReplaceable`). It may include a revision
+ * (`tcg-tr-cat-componentRevision`) and further traits. In a delta certificate
+ * the list includes `tcg-tr-cat-componentStatus`.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §3.3.19.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

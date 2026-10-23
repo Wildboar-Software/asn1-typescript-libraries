@@ -8,7 +8,14 @@ import { tcg_at_tcgPlatformSpecification } from "../PlatformCertificateProfileV2
 /**
  * @summary tCGPlatformSpecification
  * @description
- * 
+ *
+ * Attribute that carries `TCGPlatformSpecification`. Required on a base
+ * certificate and optional on a delta certificate.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §3.3.17.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

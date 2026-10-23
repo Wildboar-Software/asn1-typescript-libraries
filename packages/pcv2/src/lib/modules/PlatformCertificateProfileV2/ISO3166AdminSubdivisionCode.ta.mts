@@ -10,7 +10,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ISO3166AdminSubdivisionCode
  * @description
- * 
+ *
+ * ISO 3166 administrative subdivision code as a printable string of three to
+ * six characters.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.22.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

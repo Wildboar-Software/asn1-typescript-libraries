@@ -14,7 +14,15 @@ import { _decode_AttributeStatus, _encode_AttributeStatus, _enum_for_AttributeSt
 /**
  * @summary Property
  * @description
- * 
+ *
+ * One platform characteristic recorded as a name and a value. In a delta
+ * certificate `status` is present and says whether the property was added,
+ * modified, or removed relative to the base certificate.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §3.3.19.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,18 +39,44 @@ export
 class Property {
     /**
      * @summary `propertyName`.
+     * @description
+     *
+     * Name of the characteristic, length 1..`strmax`. The profile does not
+     * define a registry of names.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §3.3.19.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */
     readonly propertyName: UTF8String;
     /**
      * @summary `propertyValue`.
+     * @description
+     *
+     * Value of the characteristic, length 1..`strmax`.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §3.3.19.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */
     readonly propertyValue: UTF8String;
     /**
      * @summary `status`.
+     * @description
+     *
+     * Whether this property was added, modified, or removed. Present on every
+     * property in a delta certificate.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §3.3.19.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */

@@ -7,7 +7,16 @@ import { type TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
 /**
  * @summary uriTrait
  * @description
- * 
+ *
+ * Trait syntax for a `URIReference` to an external document about the trait's
+ * subject. If either hash component is present, both are present. The profile
+ * names this trait as a syntax for `platformConfigUri`, and permits it in
+ * `tBBSecurityAssertions`.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.17.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

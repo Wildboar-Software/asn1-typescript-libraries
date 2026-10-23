@@ -10,7 +10,22 @@ import { Trait, _decode_Trait, _encode_Trait } from "../PlatformCertificateProfi
 /**
  * @summary PreviousPlatformCertificates
  * @description
- * 
+ *
+ * Platform certificates already issued for this platform, in issuance order.
+ * Included only when the certificate type says this certificate references
+ * another one. A delta certificate's reference reaches the base or rebase
+ * certificate directly or through another delta.
+ *
+ * Category `tcg-tr-cat-PlatformCertificate` marks a base certificate,
+ * `tcg-tr-cat-DeltaPlatformCertificate` a delta certificate, and
+ * `tcg-tr-cat-RebasePlatformCertificate` a certificate that itself references
+ * an earlier one. `certificateIdentifierTrait` is the syntax the profile
+ * recommends.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §3.3.11 and §2.1.4.6.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

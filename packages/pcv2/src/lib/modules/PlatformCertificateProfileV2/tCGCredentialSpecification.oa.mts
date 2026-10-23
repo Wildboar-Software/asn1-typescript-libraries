@@ -8,7 +8,14 @@ import { tcg_at_tcgCredentialSpecification } from "../PlatformCertificateProfile
 /**
  * @summary tCGCredentialSpecification
  * @description
- * 
+ *
+ * Attribute that carries `TCGSpecificationVersion`. Required. On a certificate
+ * that references another, it equals the referenced certificate's value.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §3.3.6.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

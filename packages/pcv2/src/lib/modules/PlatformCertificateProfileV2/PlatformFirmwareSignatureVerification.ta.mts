@@ -9,7 +9,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary PlatformFirmwareSignatureVerification
  * @description
- * 
+ *
+ * How the platform verifies platform-firmware signatures during boot. Carried
+ * by `platformFirmwareSignatureVerificationTrait`.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.12.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -24,6 +31,15 @@ type PlatformFirmwareSignatureVerification = BIT_STRING;
 
 /**
  * @summary PlatformFirmwareSignatureVerification_hardwareSRTM
+ * @description
+ *
+ * An H-CRTM is present and verifies the signature of the next stage of the
+ * initial boot block.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.12.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * @constant
  */
 export
@@ -31,6 +47,15 @@ const PlatformFirmwareSignatureVerification_hardwareSRTM: number = 0; /* LONG_NA
 
 /**
  * @summary hardwareSRTM
+ * @description
+ *
+ * An H-CRTM is present and verifies the signature of the next stage of the
+ * initial boot block.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.12.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * @constant
  */
 export
@@ -38,6 +63,14 @@ const hardwareSRTM: number = PlatformFirmwareSignatureVerification_hardwareSRTM;
 
 /**
  * @summary PlatformFirmwareSignatureVerification_secureBoot
+ * @description
+ *
+ * UEFI Secure Boot is present.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.12.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * @constant
  */
 export
@@ -45,6 +78,14 @@ const PlatformFirmwareSignatureVerification_secureBoot: number = 1; /* LONG_NAME
 
 /**
  * @summary secureBoot
+ * @description
+ *
+ * UEFI Secure Boot is present.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.12.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * @constant
  */
 export

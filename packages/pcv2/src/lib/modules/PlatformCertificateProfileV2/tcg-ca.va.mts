@@ -9,7 +9,14 @@ import { tcg } from "../PlatformCertificateProfileV2/tcg.va.mjs";
 /**
  * @summary tcg_ca
  * @description
- * 
+ *
+ * Arc `{tcg 11}` for CA-related identifiers. This module assigns
+ * `tcg-ca-policy` under it.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §5.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

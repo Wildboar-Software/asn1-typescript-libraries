@@ -14,7 +14,19 @@ import { tcg_registry_componentClass_tcg } from "../PlatformCertificateProfileV2
 /**
  * @summary ComponentClassRegistry
  * @description
- * 
+ *
+ * Registry that assigns `componentClassValue`. The profile permits the TCG
+ * component class registry, the SMBIOS-based DMTF registry, the PCIe registry,
+ * and the storage registry. This module accepts
+ * `tcg-registry-componentClass-disk` (`{tcg-registry-componentClass 5}`) for
+ * the storage alternative, which section 4.2.5 names
+ * `tcg-registry-componentClass-storage` and section 5 also lists as
+ * `tcg-registry-componentClass-disk`.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.5.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

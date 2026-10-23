@@ -10,7 +10,21 @@ import { Trait, _decode_Trait, _encode_Trait } from "../PlatformCertificateProfi
 /**
  * @summary PlatformIdentifier
  * @description
- * 
+ *
+ * Identity of the platform. `subjectAltName` contains an `OtherName` with
+ * type-id `tcg-at-platformIdentifier` and this sequence as the value. The
+ * extension is not critical.
+ *
+ * The sequence includes manufacturer (`tcg-tr-cat-platformManufacturer`), model
+ * (`tcg-tr-cat-platformModel`), and version (`tcg-tr-cat-platformVersion`). It
+ * should include the customer-visible serial number
+ * (`tcg-tr-cat-platformSerial`). It may include the manufacturer's IANA Private
+ * Enterprise Number (`tcg-tr-cat-platformManufacturerIdentifier`).
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §3.3.16.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

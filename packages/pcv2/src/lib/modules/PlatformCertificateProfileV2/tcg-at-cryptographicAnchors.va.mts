@@ -9,7 +9,13 @@ import { tcg_attribute } from "../PlatformCertificateProfileV2/tcg-attribute.va.
 /**
  * @summary tcg_at_cryptographicAnchors
  * @description
- * 
+ *
+ * Attribute identifier `{tcg-attribute 28}` for `CryptographicAnchors`.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §3.3.15 and §5.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -9,7 +9,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary PlatformHardwareCapabilities
  * @description
- * 
+ *
+ * Security capabilities of the motherboard or of components physically attached
+ * to it. Carried by `platformHardwareCapabilitiesTrait`.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.14.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +35,14 @@ type PlatformHardwareCapabilities = BIT_STRING;
 
 /**
  * @summary PlatformHardwareCapabilities_iOMMUSupport
+ * @description
+ *
+ * The platform provides an IOMMU to protect against DMA attacks.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.14.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * @constant
  */
 export
@@ -35,6 +50,14 @@ const PlatformHardwareCapabilities_iOMMUSupport: number = 0; /* LONG_NAMED_BIT *
 
 /**
  * @summary iOMMUSupport
+ * @description
+ *
+ * The platform provides an IOMMU to protect against DMA attacks.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.14.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * @constant
  */
 export
@@ -42,6 +65,14 @@ const iOMMUSupport: number = PlatformHardwareCapabilities_iOMMUSupport; /* SHORT
 
 /**
  * @summary PlatformHardwareCapabilities_trustedExecutionEnvironment
+ * @description
+ *
+ * The platform contains a Trusted Execution Environment.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.14.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * @constant
  */
 export
@@ -49,6 +80,14 @@ const PlatformHardwareCapabilities_trustedExecutionEnvironment: number = 1; /* L
 
 /**
  * @summary trustedExecutionEnvironment
+ * @description
+ *
+ * The platform contains a Trusted Execution Environment.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.14.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * @constant
  */
 export
@@ -56,6 +95,14 @@ const trustedExecutionEnvironment: number = PlatformHardwareCapabilities_trusted
 
 /**
  * @summary PlatformHardwareCapabilities_physicalTamperProtection
+ * @description
+ *
+ * The platform supports physical tamper protection, for example a chassis lock.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.14.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * @constant
  */
 export
@@ -63,6 +110,14 @@ const PlatformHardwareCapabilities_physicalTamperProtection: number = 2; /* LONG
 
 /**
  * @summary physicalTamperProtection
+ * @description
+ *
+ * The platform supports physical tamper protection, for example a chassis lock.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.14.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * @constant
  */
 export
@@ -70,6 +125,15 @@ const physicalTamperProtection: number = PlatformHardwareCapabilities_physicalTa
 
 /**
  * @summary PlatformHardwareCapabilities_physicalTamperDetection
+ * @description
+ *
+ * The platform supports physical tamper detection, for example a chassis
+ * intrusion switch.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.14.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * @constant
  */
 export
@@ -77,6 +141,15 @@ const PlatformHardwareCapabilities_physicalTamperDetection: number = 3; /* LONG_
 
 /**
  * @summary physicalTamperDetection
+ * @description
+ *
+ * The platform supports physical tamper detection, for example a chassis
+ * intrusion switch.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.14.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * @constant
  */
 export
@@ -84,6 +157,15 @@ const physicalTamperDetection: number = PlatformHardwareCapabilities_physicalTam
 
 /**
  * @summary PlatformHardwareCapabilities_firmwareFlashWP
+ * @description
+ *
+ * The platform supports firmware flash write protection, for example from the
+ * chipset or the flash part.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.14.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * @constant
  */
 export
@@ -91,6 +173,15 @@ const PlatformHardwareCapabilities_firmwareFlashWP: number = 4; /* LONG_NAMED_BI
 
 /**
  * @summary firmwareFlashWP
+ * @description
+ *
+ * The platform supports firmware flash write protection, for example from the
+ * chipset or the flash part.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.14.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * @constant
  */
 export
@@ -98,6 +189,14 @@ const firmwareFlashWP: number = PlatformHardwareCapabilities_firmwareFlashWP; /*
 
 /**
  * @summary PlatformHardwareCapabilities_externalDMASupport
+ * @description
+ *
+ * The platform has external ports capable of DMA, for example USB-C or USB 3.0.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.14.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * @constant
  */
 export
@@ -105,6 +204,14 @@ const PlatformHardwareCapabilities_externalDMASupport: number = 5; /* LONG_NAMED
 
 /**
  * @summary externalDMASupport
+ * @description
+ *
+ * The platform has external ports capable of DMA, for example USB-C or USB 3.0.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.14.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * @constant
  */
 export

@@ -16,7 +16,17 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
 /**
  * @summary URIReference
  * @description
- * 
+ *
+ * Reference to an external document, optionally pinned to one version by a
+ * hash. If either `hashAlgorithm` or `hashValue` is present, both are present.
+ * The platform certificate profile reuses this type for `uriTrait` and for
+ * component certificate URIs, with the same both-or-neither hash rule (platform
+ * profile §4.2.3 and §4.2.17).
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,18 +43,47 @@ export
 class URIReference {
     /**
      * @summary `uniformResourceIdentifier`.
+     * @description
+     *
+     * URI of the document, length 1..`urimax`.
+     *
+     * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7,
+     * §3.1.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+     *
      * @public
      * @readonly
      */
     readonly uniformResourceIdentifier: IA5String;
     /**
      * @summary `hashAlgorithm`.
+     * @description
+     *
+     * Hash algorithm used for `hashValue`. Present exactly when `hashValue` is
+     * present.
+     *
+     * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7,
+     * §3.1.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+     *
      * @public
      * @readonly
      */
     readonly hashAlgorithm: OPTIONAL<AlgorithmIdentifier>;
     /**
      * @summary `hashValue`.
+     * @description
+     *
+     * Hash that identifies one version of the document. Present exactly when
+     * `hashAlgorithm` is present.
+     *
+     * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7,
+     * §3.1.1.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+     *
      * @public
      * @readonly
      */

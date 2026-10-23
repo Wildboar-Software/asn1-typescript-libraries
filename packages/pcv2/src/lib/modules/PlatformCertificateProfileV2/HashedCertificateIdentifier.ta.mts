@@ -12,7 +12,19 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
 /**
  * @summary HashedCertificateIdentifier
  * @description
- * 
+ *
+ * Hash of a certificate's signature value. The hash is computed over the
+ * contents of the signature bit string, excluding the tag, length, and
+ * unused-bits count. For an attribute certificate that bit string is
+ * `signatureValue`; for a public-key certificate it is `signature`. The issuer
+ * may use a hash algorithm from RFC 3279, RFC 4055, the SHA-3 PKIX identifiers
+ * cited by the profile, or GB/T 33560-2017. The algorithm `parameters` field is
+ * not used.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.2.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +40,30 @@ export
 class HashedCertificateIdentifier {
     /**
      * @summary `hashAlgorithm`.
+     * @description
+     *
+     * Hash algorithm applied to the certificate signature. Parameters are not
+     * used.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.2.2.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */
     readonly hashAlgorithm: AlgorithmIdentifier;
     /**
      * @summary `hashOverSignatureValue`.
+     * @description
+     *
+     * Hash of the signature bit-string contents, excluding tag, length, and the
+     * unused-bits count.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.2.2.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */

@@ -7,7 +7,14 @@ import { type TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
 /**
  * @summary fipsLevelTrait
  * @description
- * 
+ *
+ * Trait syntax for a FIPS 140-series classification. Category
+ * `tcg-tr-cat-FIPSLevel`. Permitted in `tBBSecurityAssertions`.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.6.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

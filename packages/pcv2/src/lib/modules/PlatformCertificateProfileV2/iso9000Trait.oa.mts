@@ -7,7 +7,14 @@ import { type TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
 /**
  * @summary iso9000Trait
  * @description
- * 
+ *
+ * Trait syntax for an ISO 9000 certification assertion. Category
+ * `tcg-tr-cat-ISO9000`. Permitted in `tBBSecurityAssertions`.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.7.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

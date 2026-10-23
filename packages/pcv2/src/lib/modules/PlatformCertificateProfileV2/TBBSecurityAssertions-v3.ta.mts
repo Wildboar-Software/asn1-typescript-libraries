@@ -10,7 +10,23 @@ import { Trait, _decode_Trait, _encode_Trait } from "../PlatformCertificateProfi
 /**
  * @summary TBBSecurityAssertions_v3
  * @description
- * 
+ *
+ * Security assertions about the platform's roots of trust or trusted building
+ * blocks. The profile names this production `TBBSecurityAssertions-v3`.
+ * Optional. The traits from this profile that may appear are
+ * `commonCriteriaTrait`, `fipsLevelTrait`, `iso9000Trait`,
+ * `platformFirmwareCapabilitiesTrait`,
+ * `platformFirmwareSignatureVerificationTrait`,
+ * `platformFirmwareUpdateComplianceTrait`, `platformHardwareCapabilitiesTrait`,
+ * `rtmTrait`, and `uriTrait`. Any other trait defined in this profile is
+ * excluded. A platform profile may define additional traits and may require
+ * some of these. A delta certificate's changes do not invalidate the TBB
+ * security claims of the base certificate (§2.2.3).
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §3.3.18 and §2.1.4.15.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

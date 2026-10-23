@@ -14,7 +14,18 @@ import { tcg_at_tpmModel } from "../EKCredentialProfileV2/tcg-at-tpmModel.va.mjs
 /**
  * @summary tpmModel
  * @description
- * 
+ *
+ * TPM part number, a manufacturer-specific UTF-8 string of length 1..`strmax`.
+ * Carried in the subject alternative name as a `directoryName`, together with
+ * `tpmManufacturer` and `tpmVersion`. The manufacturer provides a physical or
+ * logical way to retrieve the part number. One such place is the vendor string
+ * from `TPM2_GetCapability` property `TPM_PT_VENDOR_STRING_x`.
+ *
+ * TCG EK Credential Profile for TPM Family 2.0, Level 0, Version 2.7, §3.1.2
+ * and §3.2.9.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG-EK-Credential-Profile-for-TPM-Family-2.0-Level-0-Version-2.7_Pub.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

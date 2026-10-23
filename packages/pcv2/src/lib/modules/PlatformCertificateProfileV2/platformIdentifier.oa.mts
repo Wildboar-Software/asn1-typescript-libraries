@@ -8,7 +8,15 @@ import { tcg_at_platformIdentifier } from "../PlatformCertificateProfileV2/tcg-a
 /**
  * @summary platformIdentifier
  * @description
- * 
+ *
+ * Attribute binding for `PlatformIdentifier`, identifier
+ * `tcg-at-platformIdentifier`. The profile places that same identifier and
+ * value in `subjectAltName` as an `OtherName`.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §3.3.16.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

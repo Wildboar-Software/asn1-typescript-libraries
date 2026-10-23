@@ -10,7 +10,23 @@ import { Trait, _decode_Trait, _encode_Trait } from "../PlatformCertificateProfi
 /**
  * @summary CryptographicAnchors
  * @description
- * 
+ *
+ * Roots of trust other than the one referenced by an attribute certificate's
+ * `holder` or a public-key certificate's `subjectPublicKeyInfo`. The profile
+ * gives that primary reference no special meaning over the entries here. Order
+ * is not significant.
+ *
+ * A certificate trait uses the category for that certificate (§4.2.2). A public
+ * key uses `tcg-tr-cat-PublicKey`. On a base certificate the anchors are
+ * required as the information-model field; this attribute carries the
+ * additional references. On a delta certificate the attribute, when present,
+ * lists only anchors that earlier certificates do not already list, and it does
+ * not change or remove those earlier anchors.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §3.3.15 and §2.1.4.9.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

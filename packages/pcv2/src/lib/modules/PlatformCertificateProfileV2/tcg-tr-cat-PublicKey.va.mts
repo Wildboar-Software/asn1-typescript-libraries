@@ -9,7 +9,16 @@ import { tcg_tr_category } from "../PlatformCertificateProfileV2/tcg-tr-category
 /**
  * @summary tcg_tr_cat_PublicKey
  * @description
- * 
+ *
+ * `{tcg-tr-category 37}`. A trait that references a public key, including a
+ * `publicKeyTrait` in `cryptographicAnchors`, uses this category. Section
+ * 4.2.21 spells the identifier `tcg-tr-cat-publicKey`; section 5 and this
+ * module assign arc 37 as `tcg-tr-cat-PublicKey`.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §3.3.15 and §4.2.21.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

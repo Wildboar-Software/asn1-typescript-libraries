@@ -9,7 +9,15 @@ import { tcg_tr_category } from "../PlatformCertificateProfileV2/tcg-tr-category
 /**
  * @summary tcg_tr_cat_componentLocation
  * @description
- * 
+ *
+ * `{tcg-tr-category 12}`. Location of a component inside the platform assembly
+ * or enclosure, for example which memory slot a module occupies. A trait that
+ * carries a component location uses this category.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.1.1.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

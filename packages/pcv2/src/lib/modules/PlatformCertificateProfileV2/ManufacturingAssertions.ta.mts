@@ -10,7 +10,15 @@ import { Trait, _decode_Trait, _encode_Trait } from "../PlatformCertificateProfi
 /**
  * @summary ManufacturingAssertions
  * @description
- * 
+ *
+ * Manufacturer-specific assertions about manufacturing and supply chain
+ * properties, encoded as traits. Optional. On a delta certificate they describe
+ * processes after the base certificate was issued (§2.2.4.16).
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §3.3.22 and §2.1.4.18.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

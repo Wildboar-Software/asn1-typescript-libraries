@@ -7,7 +7,15 @@ import { type TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
 /**
  * @summary publicKeyTrait
  * @description
- * 
+ *
+ * Trait syntax for a public key as RFC 5280 `SubjectPublicKeyInfo`. Category
+ * `tcg-tr-cat-PublicKey`. Used when `cryptographicAnchors` references a key
+ * rather than a certificate.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.21 and §3.3.15.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

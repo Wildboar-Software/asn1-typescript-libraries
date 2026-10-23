@@ -9,7 +9,14 @@ import { tcg_attribute } from "../PlatformCertificateProfileV2/tcg-attribute.va.
 /**
  * @summary tcg_at_tcgCredentialSpecification
  * @description
- * 
+ *
+ * Attribute identifier `{tcg-attribute 23}` for `TCGSpecificationVersion`, the
+ * platform certificate profile version the certificate claims.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §3.3.6 and §5.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

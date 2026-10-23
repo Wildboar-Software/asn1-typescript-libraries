@@ -20,7 +20,18 @@ import { AttributeStatus, _decode_AttributeStatus, _encode_AttributeStatus, _enu
 /**
  * @summary ComponentIdentifierV11
  * @description
- * 
+ *
+ * Component identity in the shape used by version 1.1 of the platform
+ * certificate profile. Carried by `componentIdentifierV11Trait`, which is then
+ * the only trait in that `ComponentIdentifier`. The trait's category is
+ * `tcg-tr-cat-componentIdentifierV11`. The profile requires `componentClass`,
+ * `componentManufacturer`, and `componentSerial` to be populated when the trait
+ * is used. `componentModel` is also a component of the sequence.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.5.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,66 +56,157 @@ export
 class ComponentIdentifierV11 {
     /**
      * @summary `componentClass`.
+     * @description
+     *
+     * Component type: a registry and the 4-byte value that registry assigns.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.2.5.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */
     readonly componentClass: ComponentClass;
     /**
      * @summary `componentManufacturer`.
+     * @description
+     *
+     * Component manufacturer, length 1..`strmax`.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.2.5.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */
     readonly componentManufacturer: UTF8String;
     /**
      * @summary `componentModel`.
+     * @description
+     *
+     * Component model, length 1..`strmax`.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.2.5.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */
     readonly componentModel: UTF8String;
     /**
      * @summary `componentSerial`.
+     * @description
+     *
+     * Component serial number, length 1..`strmax`. Populated when this value is
+     * used as `componentIdentifierV11Trait`.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.2.5.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */
     readonly componentSerial: OPTIONAL<UTF8String>;
     /**
      * @summary `componentRevision`.
+     * @description
+     *
+     * Optional component revision, length 1..`strmax`.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.2.5.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */
     readonly componentRevision: OPTIONAL<UTF8String>;
     /**
      * @summary `componentManufacturerId`.
+     * @description
+     *
+     * Optional IANA Private Enterprise Number of the component manufacturer.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.2.5.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */
     readonly componentManufacturerId: OPTIONAL<PrivateEnterpriseNumber>;
     /**
      * @summary `fieldReplaceable`.
+     * @description
+     *
+     * Optional indication of whether the component is field replaceable.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.2.5.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */
     readonly fieldReplaceable: OPTIONAL<BOOLEAN>;
     /**
      * @summary `componentAddresses`.
+     * @description
+     *
+     * Optional addresses of the component, for example MAC addresses.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.2.5.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */
     readonly componentAddresses: OPTIONAL<ComponentAddress[]>;
     /**
      * @summary `componentPlatformCert`.
+     * @description
+     *
+     * Optional reference to a certificate for the component.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.2.5.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */
     readonly componentPlatformCert: OPTIONAL<CertificateIdentifier>;
     /**
      * @summary `componentPlatformCertUri`.
+     * @description
+     *
+     * Optional URI reference for the component's platform certificate. A hash,
+     * when present, is paired with its algorithm.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.2.5.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */
     readonly componentPlatformCertUri: OPTIONAL<URIReference>;
     /**
      * @summary `status`.
+     * @description
+     *
+     * Optional added, modified, or removed status relative to the previous
+     * certificate.
+     *
+     * TCG Platform Certificate Profile, Version 2.1, §4.2.5 and §3.3.19.
+     *
+     * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+     *
      * @public
      * @readonly
      */

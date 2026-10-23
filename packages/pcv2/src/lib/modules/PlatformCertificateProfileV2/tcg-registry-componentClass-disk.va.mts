@@ -9,7 +9,16 @@ import { tcg_registry_componentClass } from "../PlatformCertificateProfileV2/tcg
 /**
  * @summary tcg_registry_componentClass_disk
  * @description
- * 
+ *
+ * Component class registry `{tcg-registry-componentClass 5}`. Section 5 lists
+ * this arc as `tcg-registry-componentClass-disk`. `ComponentClassRegistry`
+ * accepts it for the profile's `tcg-registry-componentClass-storage`
+ * alternative, the storage component class registry cited in §4.2.5.
+ *
+ * TCG Platform Certificate Profile, Version 2.1, §4.2.5 and §5.
+ *
+ * @see https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
