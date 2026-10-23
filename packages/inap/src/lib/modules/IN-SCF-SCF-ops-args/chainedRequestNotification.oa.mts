@@ -1,0 +1,29 @@
+/* eslint-disable */
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
+// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
+import { scfChained } from "../IN-SCF-SCF-ops-args/scfChained.oa.mjs";
+// export { scfChained } from "../IN-SCF-SCF-ops-args/scfChained.oa.mjs";
+// export { requestNotification } from "../IN-SCF-SCF-ops-args/requestNotification.oa.mjs";
+
+
+import { requestNotification } from "../IN-SCF-SCF-ops-args/requestNotification.oa.mjs";
+
+/**
+ * @summary chainedRequestNotification
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * chainedRequestNotification OPERATION ::= scfChained{requestNotification}
+ * ```
+ * 
+ * @constant
+ * @type {OPERATION}
+ * @implements {OPERATION}
+ */
+export
+const chainedRequestNotification: OPERATION = scfChained(requestNotification);
+
+/* eslint-enable */

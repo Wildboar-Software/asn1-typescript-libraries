@@ -1,0 +1,331 @@
+-- Module IN-SCF-CUSF-Protocol (Q.1248.7:07/2001)
+-- See also ITU-T Q.1248.7 (07/2001)
+-- See also the index of all ASN.1 assignments needed in this document
+
+IN-SCF-CUSF-Protocol {itu-t recommendation q 1248 modules(1)
+  in-scf-cusf-pkgs-contracts-acs(27) version1(0)} DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+  ros-InformationObjects, tc-Messages, tc-NotationExtensions, common-classes,
+    ssf-scf-classes, scf-cusf-classes, ssf-scf-Protocol, ssf-scf-Operations,
+    scf-cusf-Operations, id-acscfcusfDPSpecific, id-accusfscfDPSpecific,
+    id-acscfcusfGeneric, id-accusfscfGeneric, id-contract-scfcusfDPSpecific,
+    id-contract-cusfscfDPSpecific, id-contract-scfcusfGeneric,
+    id-contract-cusfscfGeneric, id-package-cusfTDPSpecificInvocation,
+    id-package-cusfTDPGenericInvocation,
+    id-package-cusfDPSpecificEventHandling,
+    id-package-cusfGenericEventHandling, id-package-cusfComponentHandling,
+    id-package-cusfSCFInitiation, id-package-cusfContinue,
+    id-package-cusfConnect, id-package-cusfRelease, id-asscfcusfDPSpecific,
+    id-ascusfscfDPSpecific, id-asscfcusfGeneric, id-ascusfscfGeneric
+    FROM IN-object-identifiers {itu-t recommendation q 1248 modules(1)
+      in-object-identifiers(0) version1(0)}
+  CONTRACT, OPERATION-PACKAGE, OPERATION
+    FROM Remote-Operations-Information-Objects ros-InformationObjects
+  TCMessage{}
+    FROM TCAPMessages tc-Messages
+  APPLICATION-CONTEXT, dialogue-abstract-syntax
+    FROM TC-Notation-Extensions tc-NotationExtensions
+  COMMON-BOUNDS
+    FROM IN-common-classes common-classes
+  SCF-SSF-BOUNDS
+    FROM IN-SSF-SCF-Classes ssf-scf-classes
+  SCF-CUSF-BOUNDS, sCFCUSFBoundSet, sCFSSFBoundSetforCUSF,
+    commonBoundSetforCUSF
+    FROM IN-SCF-CUSF-Classes scf-cusf-classes
+  activityTestPackage, uSIHandlingPackage
+    FROM IN-SSF-SCF-pkgs-contracts-acs ssf-scf-Protocol
+  activityTest, reportUTSI, requestReportUTSI, sendSTUI
+    FROM IN-SSF-SCF-ops-args ssf-scf-Operations
+  activationReceivedAndAuthorized, initiateAssociation,
+    associationReleaseRequested, componentReceived, releaseAssociation,
+    requestReportBCUSMEvent, sendComponent, initialAssociationDP,
+    connectAssociation, continueAssociation, eventReportBCUSM
+    FROM IN-SCF-CUSF-Operations scf-cusf-Operations;
+
+-- The following three definitions are local short-hand notation for convenience.
+B1 ::=
+  COMMON-BOUNDS --defined in Q.1248.1(Part 1 of Recommendation Q.1248)
+
+B2 ::= SCF-SSF-BOUNDS --defined in Q.1248.2(Part 2 of Recommendation Q.1248)
+
+B7 ::= SCF-CUSF-BOUNDS --defined in this Recommendation(Q.1248.7)
+
+-- Operation package definition
+-- activityTestPackage   OPERATION-PACKAGE
+-- This package is described in Q.1248.2.
+cusfTDPSpecificInvocationPackage OPERATION-PACKAGE ::=
+{
+  CONSUMER INVOKES
+    {activationReceivedAndAuthorized | componentReceived |
+      associationReleaseRequested}
+  ID                id-package-cusfTDPSpecificInvocation
+}
+
+cusfTDPGenericInvocationPackage OPERATION-PACKAGE ::= {
+  CONSUMER INVOKES  {initialAssociationDP}
+  ID                id-package-cusfTDPGenericInvocation
+}
+
+cusfDPSpecificEventHandlingPackage OPERATION-PACKAGE ::=
+{
+  CONSUMER INVOKES  {requestReportBCUSMEvent}
+  SUPPLIER INVOKES
+    {componentReceived | associationReleaseRequested}
+  ID                id-package-cusfDPSpecificEventHandling
+}
+
+cusfGenericEventHandlingPackage OPERATION-PACKAGE ::=
+{
+  CONSUMER INVOKES  {requestReportBCUSMEvent}
+  SUPPLIER INVOKES  {eventReportBCUSM}
+  ID                id-package-cusfGenericEventHandling
+}
+
+cusfComponentHandlingPackage OPERATION-PACKAGE ::= {
+  CONSUMER INVOKES  {sendComponent}
+  ID                id-package-cusfComponentHandling
+}
+
+cusfSCFInitiationPackage OPERATION-PACKAGE ::= {
+  CONSUMER INVOKES  {initiateAssociation}
+  ID                id-package-cusfSCFInitiation
+}
+
+cusfContinuePackage OPERATION-PACKAGE ::= {
+  CONSUMER INVOKES  {continueAssociation}
+  ID                id-package-cusfContinue
+}
+
+cusfConnectPackage OPERATION-PACKAGE ::= {
+  CONSUMER INVOKES  {connectAssociation}
+  ID                id-package-cusfConnect
+}
+
+cusfReleasePackage OPERATION-PACKAGE ::= {
+  CONSUMER INVOKES  {releaseAssociation}
+  ID                id-package-cusfRelease
+}
+
+-- uSIHandlingPackage OPERATION-PACKAGE
+-- This package is described in Q.1248.2.
+-- Contracts definition
+scfcusfDPSpecificContract CONTRACT ::= {
+  INITIATOR CONSUMER OF
+    {cusfSCFInitiationPackage |
+      activityTestPackage |
+      cusfDPSpecificEventHandlingPackage
+      | cusfComponentHandlingPackage |
+      cusfContinuePackage |
+      cusfConnectPackage |
+      cusfReleasePackage |
+      uSIHandlingPackage}
+  ID                     id-contract-scfcusfDPSpecific
+}
+
+cusfscfDPSpecificContract CONTRACT ::= {
+  INITIATOR CONSUMER OF
+    {cusfTDPSpecificInvocationPackage}
+  RESPONDER CONSUMER OF
+    {activityTestPackage |
+      cusfDPSpecificEventHandlingPackage
+      | cusfComponentHandlingPackage |
+      cusfContinuePackage |
+      cusfConnectPackage |
+      cusfReleasePackage |
+      uSIHandlingPackage}
+  ID                     id-contract-cusfscfDPSpecific
+}
+
+scfcusfGenericContract CONTRACT ::= {
+  INITIATOR CONSUMER OF
+    {cusfSCFInitiationPackage |
+      activityTestPackage |
+      cusfGenericEventHandlingPackage |
+      cusfComponentHandlingPackage |
+      cusfContinuePackage |
+      cusfConnectPackage |
+      cusfReleasePackage |
+      uSIHandlingPackage}
+  ID                     id-contract-scfcusfGeneric
+}
+
+cusfscfGenericContract CONTRACT ::= {
+  INITIATOR CONSUMER OF
+    {cusfTDPGenericInvocationPackage}
+  RESPONDER CONSUMER OF
+    {activityTestPackage |
+      cusfGenericEventHandlingPackage |
+      cusfComponentHandlingPackage |
+      cusfContinuePackage |
+      cusfConnectPackage |
+      cusfReleasePackage |
+      uSIHandlingPackage}
+  ID                     id-contract-cusfscfGeneric
+}
+
+-- Application Contexts definition
+scfcusfDPSpecificAC APPLICATION-CONTEXT ::= {
+  CONTRACT                  scfcusfDPSpecificContract
+  DIALOGUE MODE             structured
+  TERMINATION               basic
+  ABSTRACT SYNTAXES         {dialogue-abstract-syntax | scfcusfDPSpecificAS}
+  APPLICATION CONTEXT NAME  id-acscfcusfDPSpecific
+}
+
+cusf-scfDPSpecificAC APPLICATION-CONTEXT ::= {
+  CONTRACT                  cusfscfDPSpecificContract
+  DIALOGUE MODE             structured
+  TERMINATION               basic
+  ABSTRACT SYNTAXES         {dialogue-abstract-syntax | scfcusfDPSpecificAS}
+  APPLICATION CONTEXT NAME  id-accusfscfDPSpecific
+}
+
+scfcusfGenericAC APPLICATION-CONTEXT ::= {
+  CONTRACT                  scfcusfGenericContract
+  DIALOGUE MODE             structured
+  TERMINATION               basic
+  ABSTRACT SYNTAXES         {dialogue-abstract-syntax | scfcusfGenericAS}
+  APPLICATION CONTEXT NAME  id-acscfcusfGeneric
+}
+
+cusf-scfGenericAC APPLICATION-CONTEXT ::= {
+  CONTRACT                  cusfscfGenericContract
+  DIALOGUE MODE             structured
+  TERMINATION               basic
+  ABSTRACT SYNTAXES         {dialogue-abstract-syntax | scfcusfGenericAS}
+  APPLICATION CONTEXT NAME  id-accusfscfGeneric
+}
+
+-- Abstract Syntax definition
+scfcusfDPSpecificAS ABSTRACT-SYNTAX ::= {
+  SCFCUSFDPSpecificPDUs
+  IDENTIFIED BY  id-asscfcusfDPSpecific
+}
+
+SCFCUSFDPSpecificPDUs ::=
+  TCMessage{{SCFCUSFDPSpecific-Invokable}, {SCFCUSFDPSpecific-Returnable}}
+
+SCFCUSFDPSpecific-Invokable OPERATION ::=
+  {initiateAssociation |
+   activationReceivedAndAuthorized | activityTest |
+   componentReceived |
+   releaseAssociation |
+   requestReportBCUSMEvent |
+   sendComponent |
+   associationReleaseRequested |
+   continueAssociation |
+   connectAssociation |
+   sendSTUI |
+   requestReportUTSI |
+   reportUTSI}
+
+SCFCUSFDPSpecific-Returnable OPERATION ::=
+  {initiateAssociation |
+   activationReceivedAndAuthorized | activityTest |
+   componentReceived |
+   requestReportBCUSMEvent |
+   sendComponent |
+   associationReleaseRequested |
+   continueAssociation |
+   connectAssociation |
+   sendSTUI |
+   requestReportUTSI}
+
+cusfscfDPSpecificAS ABSTRACT-SYNTAX ::= {
+  CUSFSCFDPSpecificPDUs
+  IDENTIFIED BY  id-ascusfscfDPSpecific
+}
+
+CUSFSCFDPSpecificPDUs ::=
+  TCMessage{{CUSFSCFDPSpecific-Invokable}, {CUSFSCFDPSpecific-Returnable}}
+
+CUSFSCFDPSpecific-Invokable OPERATION ::=
+  {activationReceivedAndAuthorized | activityTest |
+   componentReceived |
+   releaseAssociation |
+   requestReportBCUSMEvent |
+   sendComponent |
+   associationReleaseRequested |
+   continueAssociation |
+   connectAssociation |
+   sendSTUI |
+   requestReportUTSI |
+   reportUTSI}
+
+CUSFSCFDPSpecific-Returnable OPERATION ::=
+  {activationReceivedAndAuthorized | activityTest |
+   componentReceived |
+   requestReportBCUSMEvent |
+   sendComponent |
+   associationReleaseRequested |
+   continueAssociation |
+   connectAssociation |
+   sendSTUI |
+   requestReportUTSI}
+
+scfcusfGenericAS ABSTRACT-SYNTAX ::= {
+  SCFCUSFGenericPDUs
+  IDENTIFIED BY  id-asscfcusfGeneric
+}
+
+SCFCUSFGenericPDUs ::=
+  TCMessage{{SCFCUSFGeneric-Invokable}, {SCFCUSFGeneric-Returnable}}
+
+SCFCUSFGeneric-Invokable OPERATION ::=
+  {initiateAssociation |
+   activityTest |
+   eventReportBCUSM | releaseAssociation
+   | requestReportBCUSMEvent |
+   continueAssociation |
+   connectAssociation |
+   sendComponent |
+   sendSTUI |
+   requestReportUTSI |
+   reportUTSI}
+
+SCFCUSFGeneric-Returnable OPERATION ::=
+  {initiateAssociation |
+   activityTest |
+   requestReportBCUSMEvent |
+   continueAssociation |
+   connectAssociation |
+   sendComponent |
+   sendSTUI |
+   requestReportUTSI}
+
+cusfscfGenericAS ABSTRACT-SYNTAX ::= {
+  CUSFSCFGenericPDUs
+  IDENTIFIED BY  id-ascusfscfGeneric
+}
+
+CUSFSCFGenericPDUs ::=
+  TCMessage{{CUSFSCFGeneric-Invokable}, {CUSFSCFGeneric-Returnable}}
+
+CUSFSCFGeneric-Invokable OPERATION ::=
+  {initialAssociationDP |
+   activityTest |
+   eventReportBCUSM | releaseAssociation
+   | requestReportBCUSMEvent |
+   continueAssociation |
+   connectAssociation |
+   sendComponent |
+   sendSTUI |
+   requestReportUTSI |
+   reportUTSI}
+
+CUSFSCFGeneric-Returnable OPERATION ::=
+  {initialAssociationDP |
+   activityTest |
+   requestReportBCUSMEvent |
+   continueAssociation |
+   connectAssociation |
+   sendComponent |
+   sendSTUI |
+   requestReportUTSI}
+
+END
+
+-- Generated by Asnp, the ASN.1 pretty-printer of France Telecom R&D
+

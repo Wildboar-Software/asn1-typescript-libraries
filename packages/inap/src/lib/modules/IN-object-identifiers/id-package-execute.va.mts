@@ -1,0 +1,27 @@
+/* eslint-disable */
+import {
+    ObjectIdentifier as _OID,
+    OBJECT_IDENTIFIER
+} from "@wildboar/asn1";
+import { id_package } from "../IN-object-identifiers/id-package.va.mjs";
+// export { id_package } from "../IN-object-identifiers/id-package.va.mjs";
+
+
+/**
+ * @summary id_package_execute
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * id-package-execute OBJECT IDENTIFIER ::= {id-package execute(4)}
+ * ```
+ * 
+ * @constant
+ */
+export
+const id_package_execute: OBJECT_IDENTIFIER = _OID.fromParts([
+    /* execute */ 4,
+], id_package);
+
+/* eslint-enable */

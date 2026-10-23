@@ -115,8 +115,10 @@ WITH SYNTAX {
   ID &id
 }
 
+-- Extensible, unlike ITU-T X.880, so this matches the directory Code in X.519.
 Code ::= CHOICE {local   INTEGER,
-                 global  OBJECT IDENTIFIER
+                 global  OBJECT IDENTIFIER,
+                 ...
 }
 
 Priority ::= INTEGER(0..MAX)

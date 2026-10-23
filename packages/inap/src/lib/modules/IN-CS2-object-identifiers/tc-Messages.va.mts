@@ -1,0 +1,32 @@
+/* eslint-disable */
+import {
+    ObjectIdentifier as _OID,
+    itu_t,
+    OBJECT_IDENTIFIER
+} from "@wildboar/asn1";
+
+
+
+/**
+ * @summary tc_Messages
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * tc-Messages OBJECT IDENTIFIER ::= {itu-t recommendation q 773 modules(2) messages(1) version2(2)}
+ * ```
+ * 
+ * @constant
+ */
+export
+const tc_Messages: OBJECT_IDENTIFIER = _OID.fromParts([
+    0 /* recommendation */,
+    17 /* q */,
+    773,
+    /* modules */ 2,
+    /* messages */ 1,
+    /* version2 */ 2,
+], itu_t);
+
+/* eslint-enable */

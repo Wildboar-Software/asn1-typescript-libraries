@@ -1,0 +1,73 @@
+/* eslint-disable */
+import {
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { InbandInfo, _decode_InbandInfo, _encode_InbandInfo } from "../IN-CS-1-Datatypes/InbandInfo.ta.mjs";
+// export { InbandInfo, _decode_InbandInfo, _encode_InbandInfo } from "../IN-CS-1-Datatypes/InbandInfo.ta.mjs";
+import { Tone, _decode_Tone, _encode_Tone } from "../IN-CS-1-Datatypes/Tone.ta.mjs";
+// export { Tone, _decode_Tone, _encode_Tone } from "../IN-CS-1-Datatypes/Tone.ta.mjs";
+import { DisplayInformation, _decode_DisplayInformation, _encode_DisplayInformation } from "../IN-CS-1-Datatypes/DisplayInformation.ta.mjs";
+// export { DisplayInformation, _decode_DisplayInformation, _encode_DisplayInformation } from "../IN-CS-1-Datatypes/DisplayInformation.ta.mjs";
+
+
+/**
+ * @summary InformationToSend
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * InformationToSend  ::=  CHOICE {
+ *   inbandInfo          [0]  InbandInfo,
+ *   tone                [1]  Tone,
+ *   displayInformation  [2]  DisplayInformation
+ * }
+ * ```
+ */
+export
+type InformationToSend =
+    { inbandInfo: InbandInfo } /* CHOICE_ALT_ROOT */
+    | { tone: Tone } /* CHOICE_ALT_ROOT */
+    | { displayInformation: DisplayInformation } /* CHOICE_ALT_ROOT */;
+
+let _cached_decoder_for_InformationToSend: $.ASN1Decoder<InformationToSend> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) InformationToSend
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_InformationToSend (el: _Element): InformationToSend {
+    if (!_cached_decoder_for_InformationToSend) { _cached_decoder_for_InformationToSend = $._decode_inextensible_choice<InformationToSend>({
+    "CONTEXT 0": [ "inbandInfo", $._decode_implicit<InbandInfo>(() => _decode_InbandInfo) ],
+    "CONTEXT 1": [ "tone", $._decode_implicit<Tone>(() => _decode_Tone) ],
+    "CONTEXT 2": [ "displayInformation", $._decode_implicit<DisplayInformation>(() => _decode_DisplayInformation) ]
+}); }
+    return _cached_decoder_for_InformationToSend(el);
+}
+
+let _cached_encoder_for_InformationToSend: $.ASN1Encoder<InformationToSend> | null = null;
+
+/**
+ * @summary Encodes a(n) InformationToSend into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The InformationToSend, encoded as an ASN.1 Element.
+ */
+export
+function _encode_InformationToSend (value: InformationToSend, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_InformationToSend) { _cached_encoder_for_InformationToSend = $._encode_choice<InformationToSend>({
+    "inbandInfo": $._encode_implicit(_TagClass.context, 0, () => _encode_InbandInfo, $.BER),
+    "tone": $._encode_implicit(_TagClass.context, 1, () => _encode_Tone, $.BER),
+    "displayInformation": $._encode_implicit(_TagClass.context, 2, () => _encode_DisplayInformation, $.BER),
+}, $.BER); }
+    return _cached_encoder_for_InformationToSend(value, elGetter);
+}
+
+
+/* eslint-enable */
