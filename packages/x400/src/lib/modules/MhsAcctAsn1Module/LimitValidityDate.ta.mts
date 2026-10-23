@@ -29,22 +29,13 @@ import {
  */
 export type LimitValidityDate = Time; // DefinedType
 
-let _cached_decoder_for_LimitValidityDate: $.ASN1Decoder<LimitValidityDate> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) LimitValidityDate
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {LimitValidityDate} The decoded data structure.
  */
-export function _decode_LimitValidityDate(el: _Element): LimitValidityDate {
-    if (!_cached_decoder_for_LimitValidityDate) {
-        _cached_decoder_for_LimitValidityDate = _decode_Time;
-    }
-    return _cached_decoder_for_LimitValidityDate(el);
-}
-
-let _cached_encoder_for_LimitValidityDate: $.ASN1Encoder<LimitValidityDate> | null = null;
+export const _decode_LimitValidityDate: $.ASN1Decoder<LimitValidityDate> = _decode_Time;
 
 /**
  * @summary Encodes a(n) LimitValidityDate into an ASN.1 Element.
@@ -53,15 +44,7 @@ let _cached_encoder_for_LimitValidityDate: $.ASN1Encoder<LimitValidityDate> | nu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LimitValidityDate, encoded as an ASN.1 Element.
  */
-export function _encode_LimitValidityDate(
-    value: LimitValidityDate,
-    elGetter: $.ASN1Encoder<LimitValidityDate>
-): _Element {
-    if (!_cached_encoder_for_LimitValidityDate) {
-        _cached_encoder_for_LimitValidityDate = _encode_Time;
-    }
-    return _cached_encoder_for_LimitValidityDate(value, elGetter);
-}
+export const _encode_LimitValidityDate: $.ASN1Encoder<LimitValidityDate> = _encode_Time;
 
 
 /* eslint-enable */

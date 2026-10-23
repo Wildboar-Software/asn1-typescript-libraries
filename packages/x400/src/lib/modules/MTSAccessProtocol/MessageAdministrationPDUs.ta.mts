@@ -29,22 +29,13 @@ import {
  */
 export type MessageAdministrationPDUs = ROS_SingleAS; // DefinedType
 
-let _cached_decoder_for_MessageAdministrationPDUs: $.ASN1Decoder<MessageAdministrationPDUs> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageAdministrationPDUs
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {MessageAdministrationPDUs} The decoded data structure.
  */
-export function _decode_MessageAdministrationPDUs(el: _Element): MessageAdministrationPDUs {
-    if (!_cached_decoder_for_MessageAdministrationPDUs) {
-        _cached_decoder_for_MessageAdministrationPDUs = _decode_ROS_SingleAS;
-    }
-    return _cached_decoder_for_MessageAdministrationPDUs(el);
-}
-
-let _cached_encoder_for_MessageAdministrationPDUs: $.ASN1Encoder<MessageAdministrationPDUs> | null = null;
+export const _decode_MessageAdministrationPDUs: $.ASN1Decoder<MessageAdministrationPDUs> = _decode_ROS_SingleAS;
 
 /**
  * @summary Encodes a(n) MessageAdministrationPDUs into an ASN.1 Element.
@@ -53,15 +44,7 @@ let _cached_encoder_for_MessageAdministrationPDUs: $.ASN1Encoder<MessageAdminist
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MessageAdministrationPDUs, encoded as an ASN.1 Element.
  */
-export function _encode_MessageAdministrationPDUs(
-    value: MessageAdministrationPDUs,
-    elGetter: $.ASN1Encoder<MessageAdministrationPDUs>
-): _Element {
-    if (!_cached_encoder_for_MessageAdministrationPDUs) {
-        _cached_encoder_for_MessageAdministrationPDUs = _encode_ROS_SingleAS;
-    }
-    return _cached_encoder_for_MessageAdministrationPDUs(value, elGetter);
-}
+export const _encode_MessageAdministrationPDUs: $.ASN1Encoder<MessageAdministrationPDUs> = _encode_ROS_SingleAS;
 
 
 /* eslint-enable */

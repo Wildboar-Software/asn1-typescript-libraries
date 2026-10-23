@@ -20,26 +20,13 @@ import {
  */
 export type DigestEncryptionAlgorithmIdentifier = AlgorithmIdentifier; // DefinedType
 
-
-let _cached_decoder_for_DigestEncryptionAlgorithmIdentifier: $.ASN1Decoder<DigestEncryptionAlgorithmIdentifier> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) DigestEncryptionAlgorithmIdentifier
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {DigestEncryptionAlgorithmIdentifier} The decoded data structure.
  */
-export function _decode_DigestEncryptionAlgorithmIdentifier(el: _Element): DigestEncryptionAlgorithmIdentifier {
-    if (!_cached_decoder_for_DigestEncryptionAlgorithmIdentifier) {
-        _cached_decoder_for_DigestEncryptionAlgorithmIdentifier = _decode_AlgorithmIdentifier;
-    }
-    return _cached_decoder_for_DigestEncryptionAlgorithmIdentifier(el);
-}
-
-
-let _cached_encoder_for_DigestEncryptionAlgorithmIdentifier: $.ASN1Encoder<DigestEncryptionAlgorithmIdentifier> | null = null;
-
+export const _decode_DigestEncryptionAlgorithmIdentifier: $.ASN1Decoder<DigestEncryptionAlgorithmIdentifier> = _decode_AlgorithmIdentifier;
 
 /**
  * @summary Encodes a(n) DigestEncryptionAlgorithmIdentifier into an ASN.1 Element.
@@ -48,18 +35,7 @@ let _cached_encoder_for_DigestEncryptionAlgorithmIdentifier: $.ASN1Encoder<Diges
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DigestEncryptionAlgorithmIdentifier, encoded as an ASN.1 Element.
  */
-export function _encode_DigestEncryptionAlgorithmIdentifier(
-    value: DigestEncryptionAlgorithmIdentifier,
-    elGetter: $.ASN1Encoder<DigestEncryptionAlgorithmIdentifier>
-): _Element {
-    if (!_cached_encoder_for_DigestEncryptionAlgorithmIdentifier) {
-        _cached_encoder_for_DigestEncryptionAlgorithmIdentifier = _encode_AlgorithmIdentifier;
-    }
-    return _cached_encoder_for_DigestEncryptionAlgorithmIdentifier(
-        value,
-        elGetter
-    );
-}
+export const _encode_DigestEncryptionAlgorithmIdentifier: $.ASN1Encoder<DigestEncryptionAlgorithmIdentifier> = _encode_AlgorithmIdentifier;
 
 
 /* eslint-enable */

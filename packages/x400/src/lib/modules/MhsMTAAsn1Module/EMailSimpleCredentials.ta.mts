@@ -29,22 +29,13 @@ import {
  */
 export type EMailSimpleCredentials = Password; // DefinedType
 
-let _cached_decoder_for_EMailSimpleCredentials: $.ASN1Decoder<EMailSimpleCredentials> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) EMailSimpleCredentials
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {EMailSimpleCredentials} The decoded data structure.
  */
-export function _decode_EMailSimpleCredentials(el: _Element): EMailSimpleCredentials {
-    if (!_cached_decoder_for_EMailSimpleCredentials) {
-        _cached_decoder_for_EMailSimpleCredentials = _decode_Password;
-    }
-    return _cached_decoder_for_EMailSimpleCredentials(el);
-}
-
-let _cached_encoder_for_EMailSimpleCredentials: $.ASN1Encoder<EMailSimpleCredentials> | null = null;
+export const _decode_EMailSimpleCredentials: $.ASN1Decoder<EMailSimpleCredentials> = _decode_Password;
 
 /**
  * @summary Encodes a(n) EMailSimpleCredentials into an ASN.1 Element.
@@ -53,15 +44,7 @@ let _cached_encoder_for_EMailSimpleCredentials: $.ASN1Encoder<EMailSimpleCredent
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The EMailSimpleCredentials, encoded as an ASN.1 Element.
  */
-export function _encode_EMailSimpleCredentials(
-    value: EMailSimpleCredentials,
-    elGetter: $.ASN1Encoder<EMailSimpleCredentials>
-): _Element {
-    if (!_cached_encoder_for_EMailSimpleCredentials) {
-        _cached_encoder_for_EMailSimpleCredentials = _encode_Password;
-    }
-    return _cached_encoder_for_EMailSimpleCredentials(value, elGetter);
-}
+export const _encode_EMailSimpleCredentials: $.ASN1Encoder<EMailSimpleCredentials> = _encode_Password;
 
 
 /* eslint-enable */

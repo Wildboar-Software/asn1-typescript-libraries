@@ -24,21 +24,13 @@ import { ShadowingAgreementInfo, _decode_ShadowingAgreementInfo, _encode_Shadowi
 export
 type IN_ShadowingAgreementInfo = ShadowingAgreementInfo; // DefinedType
 
-let _cached_decoder_for_IN_ShadowingAgreementInfo: $.ASN1Decoder<IN_ShadowingAgreementInfo> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) IN_ShadowingAgreementInfo
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_IN_ShadowingAgreementInfo (el: _Element): IN_ShadowingAgreementInfo {
-    if (!_cached_decoder_for_IN_ShadowingAgreementInfo) { _cached_decoder_for_IN_ShadowingAgreementInfo = _decode_ShadowingAgreementInfo; }
-    return _cached_decoder_for_IN_ShadowingAgreementInfo(el);
-}
-
-let _cached_encoder_for_IN_ShadowingAgreementInfo: $.ASN1Encoder<IN_ShadowingAgreementInfo> | null = null;
+export const _decode_IN_ShadowingAgreementInfo: $.ASN1Decoder<IN_ShadowingAgreementInfo> = _decode_ShadowingAgreementInfo;
 
 /**
  * @summary Encodes a(n) IN_ShadowingAgreementInfo into an ASN.1 Element.
@@ -47,11 +39,7 @@ let _cached_encoder_for_IN_ShadowingAgreementInfo: $.ASN1Encoder<IN_ShadowingAgr
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The IN_ShadowingAgreementInfo, encoded as an ASN.1 Element.
  */
-export
-function _encode_IN_ShadowingAgreementInfo (value: IN_ShadowingAgreementInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IN_ShadowingAgreementInfo) { _cached_encoder_for_IN_ShadowingAgreementInfo = _encode_ShadowingAgreementInfo; }
-    return _cached_encoder_for_IN_ShadowingAgreementInfo(value, elGetter);
-}
+export const _encode_IN_ShadowingAgreementInfo: $.ASN1Encoder<IN_ShadowingAgreementInfo> = _encode_ShadowingAgreementInfo;
 
 
 /* eslint-enable */

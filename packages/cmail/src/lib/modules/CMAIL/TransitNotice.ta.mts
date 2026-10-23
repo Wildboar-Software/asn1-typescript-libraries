@@ -36,26 +36,13 @@ import {
  */
 export type TransitNotice = TransitNoticeType; // DefinedType
 
-
-let _cached_decoder_for_TransitNotice: $.ASN1Decoder<TransitNotice> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) TransitNotice
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {TransitNotice} The decoded data structure.
  */
-export function _decode_TransitNotice(el: _Element): TransitNotice {
-  if (!_cached_decoder_for_TransitNotice) {
-    _cached_decoder_for_TransitNotice = _decode_TransitNoticeType;
-  }
-  return _cached_decoder_for_TransitNotice(el);
-}
-
-
-let _cached_encoder_for_TransitNotice: $.ASN1Encoder<TransitNotice> | null = null;
-
+export const _decode_TransitNotice: $.ASN1Decoder<TransitNotice> = _decode_TransitNoticeType;
 
 /**
  * @summary Encodes a(n) TransitNotice into an ASN.1 Element.
@@ -64,15 +51,7 @@ let _cached_encoder_for_TransitNotice: $.ASN1Encoder<TransitNotice> | null = nul
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TransitNotice, encoded as an ASN.1 Element.
  */
-export function _encode_TransitNotice(
-  value: TransitNotice,
-  elGetter: $.ASN1Encoder<TransitNotice>
-): _Element {
-  if (!_cached_encoder_for_TransitNotice) {
-    _cached_encoder_for_TransitNotice = _encode_TransitNoticeType;
-  }
-  return _cached_encoder_for_TransitNotice(value, elGetter);
-}
+export const _encode_TransitNotice: $.ASN1Encoder<TransitNotice> = _encode_TransitNoticeType;
 
 
 /* eslint-enable */

@@ -20,21 +20,13 @@ import { Digits, _decode_Digits, _encode_Digits } from "../IN-CS2-datatypes/Digi
 export
 type CorrelationID = Digits; // DefinedType
 
-let _cached_decoder_for_CorrelationID: $.ASN1Decoder<CorrelationID> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) CorrelationID
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_CorrelationID (el: _Element): CorrelationID {
-    if (!_cached_decoder_for_CorrelationID) { _cached_decoder_for_CorrelationID = _decode_Digits; }
-    return _cached_decoder_for_CorrelationID(el);
-}
-
-let _cached_encoder_for_CorrelationID: $.ASN1Encoder<CorrelationID> | null = null;
+export const _decode_CorrelationID: $.ASN1Decoder<CorrelationID> = _decode_Digits;
 
 /**
  * @summary Encodes a(n) CorrelationID into an ASN.1 Element.
@@ -43,11 +35,7 @@ let _cached_encoder_for_CorrelationID: $.ASN1Encoder<CorrelationID> | null = nul
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CorrelationID, encoded as an ASN.1 Element.
  */
-export
-function _encode_CorrelationID (value: CorrelationID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CorrelationID) { _cached_encoder_for_CorrelationID = _encode_Digits; }
-    return _cached_encoder_for_CorrelationID(value, elGetter);
-}
+export const _encode_CorrelationID: $.ASN1Encoder<CorrelationID> = _encode_Digits;
 
 
 /* eslint-enable */

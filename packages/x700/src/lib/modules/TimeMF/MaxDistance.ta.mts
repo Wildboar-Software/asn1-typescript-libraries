@@ -33,22 +33,13 @@ import {
  */
 export type MaxDistance = TimeInterval; // DefinedType
 
-let _cached_decoder_for_MaxDistance: $.ASN1Decoder<MaxDistance> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) MaxDistance
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {MaxDistance} The decoded data structure.
  */
-export function _decode_MaxDistance(el: _Element): MaxDistance {
-    if (!_cached_decoder_for_MaxDistance) {
-        _cached_decoder_for_MaxDistance = _decode_TimeInterval;
-    }
-    return _cached_decoder_for_MaxDistance(el);
-}
-
-let _cached_encoder_for_MaxDistance: $.ASN1Encoder<MaxDistance> | null = null;
+export const _decode_MaxDistance: $.ASN1Decoder<MaxDistance> = _decode_TimeInterval;
 
 /**
  * @summary Encodes a(n) MaxDistance into an ASN.1 Element.
@@ -57,15 +48,7 @@ let _cached_encoder_for_MaxDistance: $.ASN1Encoder<MaxDistance> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MaxDistance, encoded as an ASN.1 Element.
  */
-export function _encode_MaxDistance(
-    value: MaxDistance,
-    elGetter: $.ASN1Encoder<MaxDistance>
-): _Element {
-    if (!_cached_encoder_for_MaxDistance) {
-        _cached_encoder_for_MaxDistance = _encode_TimeInterval;
-    }
-    return _cached_encoder_for_MaxDistance(value, elGetter);
-}
+export const _encode_MaxDistance: $.ASN1Encoder<MaxDistance> = _encode_TimeInterval;
 
 
 /* eslint-enable */

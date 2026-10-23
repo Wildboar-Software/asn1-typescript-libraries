@@ -20,21 +20,13 @@ import { ExternalASNType, _decode_ExternalASNType, _encode_ExternalASNType } fro
 export
 type EPSProSeAuthorization = ExternalASNType; // DefinedType
 
-let _cached_decoder_for_EPSProSeAuthorization: $.ASN1Decoder<EPSProSeAuthorization> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) EPSProSeAuthorization
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_EPSProSeAuthorization (el: _Element): EPSProSeAuthorization {
-    if (!_cached_decoder_for_EPSProSeAuthorization) { _cached_decoder_for_EPSProSeAuthorization = _decode_ExternalASNType; }
-    return _cached_decoder_for_EPSProSeAuthorization(el);
-}
-
-let _cached_encoder_for_EPSProSeAuthorization: $.ASN1Encoder<EPSProSeAuthorization> | null = null;
+export const _decode_EPSProSeAuthorization: $.ASN1Decoder<EPSProSeAuthorization> = _decode_ExternalASNType;
 
 /**
  * @summary Encodes a(n) EPSProSeAuthorization into an ASN.1 Element.
@@ -43,11 +35,7 @@ let _cached_encoder_for_EPSProSeAuthorization: $.ASN1Encoder<EPSProSeAuthorizati
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The EPSProSeAuthorization, encoded as an ASN.1 Element.
  */
-export
-function _encode_EPSProSeAuthorization (value: EPSProSeAuthorization, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EPSProSeAuthorization) { _cached_encoder_for_EPSProSeAuthorization = _encode_ExternalASNType; }
-    return _cached_encoder_for_EPSProSeAuthorization(value, elGetter);
-}
+export const _encode_EPSProSeAuthorization: $.ASN1Encoder<EPSProSeAuthorization> = _encode_ExternalASNType;
 
 
 /* eslint-enable */

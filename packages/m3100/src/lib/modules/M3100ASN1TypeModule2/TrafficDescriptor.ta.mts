@@ -28,26 +28,13 @@ import {
  */
 export type TrafficDescriptor = ObjectInstance; // DefinedType
 
-
-let _cached_decoder_for_TrafficDescriptor: $.ASN1Decoder<TrafficDescriptor> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) TrafficDescriptor
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {TrafficDescriptor} The decoded data structure.
  */
-export function _decode_TrafficDescriptor(el: _Element): TrafficDescriptor {
-    if (!_cached_decoder_for_TrafficDescriptor) {
-        _cached_decoder_for_TrafficDescriptor = _decode_ObjectInstance;
-    }
-    return _cached_decoder_for_TrafficDescriptor(el);
-}
-
-
-let _cached_encoder_for_TrafficDescriptor: $.ASN1Encoder<TrafficDescriptor> | null = null;
-
+export const _decode_TrafficDescriptor: $.ASN1Decoder<TrafficDescriptor> = _decode_ObjectInstance;
 
 /**
  * @summary Encodes a(n) TrafficDescriptor into an ASN.1 Element.
@@ -56,15 +43,7 @@ let _cached_encoder_for_TrafficDescriptor: $.ASN1Encoder<TrafficDescriptor> | nu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TrafficDescriptor, encoded as an ASN.1 Element.
  */
-export function _encode_TrafficDescriptor(
-    value: TrafficDescriptor,
-    elGetter: $.ASN1Encoder<TrafficDescriptor>
-): _Element {
-    if (!_cached_encoder_for_TrafficDescriptor) {
-        _cached_encoder_for_TrafficDescriptor = _encode_ObjectInstance;
-    }
-    return _cached_encoder_for_TrafficDescriptor(value, elGetter);
-}
+export const _encode_TrafficDescriptor: $.ASN1Encoder<TrafficDescriptor> = _encode_ObjectInstance;
 
 
 /* eslint-enable */

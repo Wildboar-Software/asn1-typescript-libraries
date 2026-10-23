@@ -20,28 +20,13 @@ import {
  */
 export type MessageAuthenticationCodeAlgorithmIdentifier = AlgorithmIdentifier; // DefinedType
 
-
-let _cached_decoder_for_MessageAuthenticationCodeAlgorithmIdentifier: $.ASN1Decoder<MessageAuthenticationCodeAlgorithmIdentifier> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageAuthenticationCodeAlgorithmIdentifier
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {MessageAuthenticationCodeAlgorithmIdentifier} The decoded data structure.
  */
-export function _decode_MessageAuthenticationCodeAlgorithmIdentifier(
-    el: _Element
-): MessageAuthenticationCodeAlgorithmIdentifier {
-    if (!_cached_decoder_for_MessageAuthenticationCodeAlgorithmIdentifier) {
-        _cached_decoder_for_MessageAuthenticationCodeAlgorithmIdentifier = _decode_AlgorithmIdentifier;
-    }
-    return _cached_decoder_for_MessageAuthenticationCodeAlgorithmIdentifier(el);
-}
-
-
-let _cached_encoder_for_MessageAuthenticationCodeAlgorithmIdentifier: $.ASN1Encoder<MessageAuthenticationCodeAlgorithmIdentifier> | null = null;
-
+export const _decode_MessageAuthenticationCodeAlgorithmIdentifier: $.ASN1Decoder<MessageAuthenticationCodeAlgorithmIdentifier> = _decode_AlgorithmIdentifier;
 
 /**
  * @summary Encodes a(n) MessageAuthenticationCodeAlgorithmIdentifier into an ASN.1 Element.
@@ -50,18 +35,7 @@ let _cached_encoder_for_MessageAuthenticationCodeAlgorithmIdentifier: $.ASN1Enco
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MessageAuthenticationCodeAlgorithmIdentifier, encoded as an ASN.1 Element.
  */
-export function _encode_MessageAuthenticationCodeAlgorithmIdentifier(
-    value: MessageAuthenticationCodeAlgorithmIdentifier,
-    elGetter: $.ASN1Encoder<MessageAuthenticationCodeAlgorithmIdentifier>
-): _Element {
-    if (!_cached_encoder_for_MessageAuthenticationCodeAlgorithmIdentifier) {
-        _cached_encoder_for_MessageAuthenticationCodeAlgorithmIdentifier = _encode_AlgorithmIdentifier;
-    }
-    return _cached_encoder_for_MessageAuthenticationCodeAlgorithmIdentifier(
-        value,
-        elGetter
-    );
-}
+export const _encode_MessageAuthenticationCodeAlgorithmIdentifier: $.ASN1Encoder<MessageAuthenticationCodeAlgorithmIdentifier> = _encode_AlgorithmIdentifier;
 
 
 /* eslint-enable */

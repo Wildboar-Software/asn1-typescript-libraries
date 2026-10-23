@@ -24,28 +24,13 @@ import {
  */
 export type UniversalExtensionPhysicalDeliveryAddressComponents = UniversalPDSParameter; // DefinedType
 
-let _cached_decoder_for_UniversalExtensionPhysicalDeliveryAddressComponents: $.ASN1Decoder<UniversalExtensionPhysicalDeliveryAddressComponents> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) UniversalExtensionPhysicalDeliveryAddressComponents
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {UniversalExtensionPhysicalDeliveryAddressComponents} The decoded data structure.
  */
-export function _decode_UniversalExtensionPhysicalDeliveryAddressComponents(
-    el: _Element
-): UniversalExtensionPhysicalDeliveryAddressComponents {
-    if (
-        !_cached_decoder_for_UniversalExtensionPhysicalDeliveryAddressComponents
-    ) {
-        _cached_decoder_for_UniversalExtensionPhysicalDeliveryAddressComponents = _decode_UniversalPDSParameter;
-    }
-    return _cached_decoder_for_UniversalExtensionPhysicalDeliveryAddressComponents(
-        el
-    );
-}
-
-let _cached_encoder_for_UniversalExtensionPhysicalDeliveryAddressComponents: $.ASN1Encoder<UniversalExtensionPhysicalDeliveryAddressComponents> | null = null;
+export const _decode_UniversalExtensionPhysicalDeliveryAddressComponents: $.ASN1Decoder<UniversalExtensionPhysicalDeliveryAddressComponents> = _decode_UniversalPDSParameter;
 
 /**
  * @summary Encodes a(n) UniversalExtensionPhysicalDeliveryAddressComponents into an ASN.1 Element.
@@ -54,20 +39,7 @@ let _cached_encoder_for_UniversalExtensionPhysicalDeliveryAddressComponents: $.A
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UniversalExtensionPhysicalDeliveryAddressComponents, encoded as an ASN.1 Element.
  */
-export function _encode_UniversalExtensionPhysicalDeliveryAddressComponents(
-    value: UniversalExtensionPhysicalDeliveryAddressComponents,
-    elGetter: $.ASN1Encoder<UniversalExtensionPhysicalDeliveryAddressComponents>
-): _Element {
-    if (
-        !_cached_encoder_for_UniversalExtensionPhysicalDeliveryAddressComponents
-    ) {
-        _cached_encoder_for_UniversalExtensionPhysicalDeliveryAddressComponents = _encode_UniversalPDSParameter;
-    }
-    return _cached_encoder_for_UniversalExtensionPhysicalDeliveryAddressComponents(
-        value,
-        elGetter
-    );
-}
+export const _encode_UniversalExtensionPhysicalDeliveryAddressComponents: $.ASN1Encoder<UniversalExtensionPhysicalDeliveryAddressComponents> = _encode_UniversalPDSParameter;
 
 
 /* eslint-enable */

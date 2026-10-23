@@ -30,22 +30,13 @@ import {
  */
 export type OriginallyIntendedRecipientName = ORAddressAndOptionalDirectoryName; // DefinedType
 
-let _cached_decoder_for_OriginallyIntendedRecipientName: $.ASN1Decoder<OriginallyIntendedRecipientName> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) OriginallyIntendedRecipientName
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {OriginallyIntendedRecipientName} The decoded data structure.
  */
-export function _decode_OriginallyIntendedRecipientName(el: _Element): OriginallyIntendedRecipientName {
-    if (!_cached_decoder_for_OriginallyIntendedRecipientName) {
-        _cached_decoder_for_OriginallyIntendedRecipientName = _decode_ORAddressAndOptionalDirectoryName;
-    }
-    return _cached_decoder_for_OriginallyIntendedRecipientName(el);
-}
-
-let _cached_encoder_for_OriginallyIntendedRecipientName: $.ASN1Encoder<OriginallyIntendedRecipientName> | null = null;
+export const _decode_OriginallyIntendedRecipientName: $.ASN1Decoder<OriginallyIntendedRecipientName> = _decode_ORAddressAndOptionalDirectoryName;
 
 /**
  * @summary Encodes a(n) OriginallyIntendedRecipientName into an ASN.1 Element.
@@ -54,15 +45,7 @@ let _cached_encoder_for_OriginallyIntendedRecipientName: $.ASN1Encoder<Originall
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The OriginallyIntendedRecipientName, encoded as an ASN.1 Element.
  */
-export function _encode_OriginallyIntendedRecipientName(
-    value: OriginallyIntendedRecipientName,
-    elGetter: $.ASN1Encoder<OriginallyIntendedRecipientName>
-): _Element {
-    if (!_cached_encoder_for_OriginallyIntendedRecipientName) {
-        _cached_encoder_for_OriginallyIntendedRecipientName = _encode_ORAddressAndOptionalDirectoryName;
-    }
-    return _cached_encoder_for_OriginallyIntendedRecipientName(value, elGetter);
-}
+export const _encode_OriginallyIntendedRecipientName: $.ASN1Encoder<OriginallyIntendedRecipientName> = _encode_ORAddressAndOptionalDirectoryName;
 
 
 /* eslint-enable */

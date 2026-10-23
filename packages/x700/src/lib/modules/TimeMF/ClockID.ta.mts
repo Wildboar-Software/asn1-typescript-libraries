@@ -32,22 +32,13 @@ import {
  */
 export type ClockID = SimpleNameType; // DefinedType
 
-let _cached_decoder_for_ClockID: $.ASN1Decoder<ClockID> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ClockID
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ClockID} The decoded data structure.
  */
-export function _decode_ClockID(el: _Element): ClockID {
-    if (!_cached_decoder_for_ClockID) {
-        _cached_decoder_for_ClockID = _decode_SimpleNameType;
-    }
-    return _cached_decoder_for_ClockID(el);
-}
-
-let _cached_encoder_for_ClockID: $.ASN1Encoder<ClockID> | null = null;
+export const _decode_ClockID: $.ASN1Decoder<ClockID> = _decode_SimpleNameType;
 
 /**
  * @summary Encodes a(n) ClockID into an ASN.1 Element.
@@ -56,15 +47,7 @@ let _cached_encoder_for_ClockID: $.ASN1Encoder<ClockID> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ClockID, encoded as an ASN.1 Element.
  */
-export function _encode_ClockID(
-    value: ClockID,
-    elGetter: $.ASN1Encoder<ClockID>
-): _Element {
-    if (!_cached_encoder_for_ClockID) {
-        _cached_encoder_for_ClockID = _encode_SimpleNameType;
-    }
-    return _cached_encoder_for_ClockID(value, elGetter);
-}
+export const _encode_ClockID: $.ASN1Encoder<ClockID> = _encode_SimpleNameType;
 
 
 /* eslint-enable */

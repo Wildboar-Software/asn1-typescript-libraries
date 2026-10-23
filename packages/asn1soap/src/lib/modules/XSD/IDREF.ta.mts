@@ -27,26 +27,13 @@ import { NCName, _decode_NCName, _encode_NCName } from '../XSD/NCName.ta.mjs';
  */
 export type IDREF = NCName; // DefinedType
 
-
-let _cached_decoder_for_IDREF: $.ASN1Decoder<IDREF> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) IDREF
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {IDREF} The decoded data structure.
  */
-export function _decode_IDREF(el: _Element): IDREF {
-  if (!_cached_decoder_for_IDREF) {
-    _cached_decoder_for_IDREF = _decode_NCName;
-  }
-  return _cached_decoder_for_IDREF(el);
-}
-
-
-let _cached_encoder_for_IDREF: $.ASN1Encoder<IDREF> | null = null;
-
+export const _decode_IDREF: $.ASN1Decoder<IDREF> = _decode_NCName;
 
 /**
  * @summary Encodes a(n) IDREF into an ASN.1 Element.
@@ -55,12 +42,7 @@ let _cached_encoder_for_IDREF: $.ASN1Encoder<IDREF> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The IDREF, encoded as an ASN.1 Element.
  */
-export function _encode_IDREF(value: IDREF, elGetter: $.ASN1Encoder<IDREF>): _Element {
-  if (!_cached_encoder_for_IDREF) {
-    _cached_encoder_for_IDREF = _encode_NCName;
-  }
-  return _cached_encoder_for_IDREF(value, elGetter);
-}
+export const _encode_IDREF: $.ASN1Encoder<IDREF> = _encode_NCName;
 
 
 /* eslint-enable */

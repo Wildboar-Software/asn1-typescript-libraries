@@ -22,21 +22,13 @@ import { type Time, _decode_Time, _encode_Time } from "@wildboar/pki-stub";
 export
 type ExpirationDate = Time; // DefinedType
 
-let _cached_decoder_for_ExpirationDate: $.ASN1Decoder<ExpirationDate> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ExpirationDate
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_ExpirationDate (el: _Element): ExpirationDate {
-    if (!_cached_decoder_for_ExpirationDate) { _cached_decoder_for_ExpirationDate = _decode_Time; }
-    return _cached_decoder_for_ExpirationDate(el);
-}
-
-let _cached_encoder_for_ExpirationDate: $.ASN1Encoder<ExpirationDate> | null = null;
+export const _decode_ExpirationDate: $.ASN1Decoder<ExpirationDate> = _decode_Time;
 
 /**
  * @summary Encodes a(n) ExpirationDate into an ASN.1 Element.
@@ -45,11 +37,7 @@ let _cached_encoder_for_ExpirationDate: $.ASN1Encoder<ExpirationDate> | null = n
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ExpirationDate, encoded as an ASN.1 Element.
  */
-export
-function _encode_ExpirationDate (value: ExpirationDate, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ExpirationDate) { _cached_encoder_for_ExpirationDate = _encode_Time; }
-    return _cached_encoder_for_ExpirationDate(value, elGetter);
-}
+export const _encode_ExpirationDate: $.ASN1Encoder<ExpirationDate> = _encode_Time;
 
 
 /* eslint-enable */

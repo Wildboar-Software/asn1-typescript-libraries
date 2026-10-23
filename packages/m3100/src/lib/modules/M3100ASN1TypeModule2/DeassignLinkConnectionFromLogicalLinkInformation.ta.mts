@@ -28,30 +28,13 @@ import {
  */
 export type DeassignLinkConnectionFromLogicalLinkInformation = LinkConnectionList; // DefinedType
 
-
-let _cached_decoder_for_DeassignLinkConnectionFromLogicalLinkInformation: $.ASN1Decoder<DeassignLinkConnectionFromLogicalLinkInformation> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) DeassignLinkConnectionFromLogicalLinkInformation
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {DeassignLinkConnectionFromLogicalLinkInformation} The decoded data structure.
  */
-export function _decode_DeassignLinkConnectionFromLogicalLinkInformation(
-    el: _Element
-): DeassignLinkConnectionFromLogicalLinkInformation {
-    if (!_cached_decoder_for_DeassignLinkConnectionFromLogicalLinkInformation) {
-        _cached_decoder_for_DeassignLinkConnectionFromLogicalLinkInformation = _decode_LinkConnectionList;
-    }
-    return _cached_decoder_for_DeassignLinkConnectionFromLogicalLinkInformation(
-        el
-    );
-}
-
-
-let _cached_encoder_for_DeassignLinkConnectionFromLogicalLinkInformation: $.ASN1Encoder<DeassignLinkConnectionFromLogicalLinkInformation> | null = null;
-
+export const _decode_DeassignLinkConnectionFromLogicalLinkInformation: $.ASN1Decoder<DeassignLinkConnectionFromLogicalLinkInformation> = _decode_LinkConnectionList;
 
 /**
  * @summary Encodes a(n) DeassignLinkConnectionFromLogicalLinkInformation into an ASN.1 Element.
@@ -60,18 +43,7 @@ let _cached_encoder_for_DeassignLinkConnectionFromLogicalLinkInformation: $.ASN1
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DeassignLinkConnectionFromLogicalLinkInformation, encoded as an ASN.1 Element.
  */
-export function _encode_DeassignLinkConnectionFromLogicalLinkInformation(
-    value: DeassignLinkConnectionFromLogicalLinkInformation,
-    elGetter: $.ASN1Encoder<DeassignLinkConnectionFromLogicalLinkInformation>
-): _Element {
-    if (!_cached_encoder_for_DeassignLinkConnectionFromLogicalLinkInformation) {
-        _cached_encoder_for_DeassignLinkConnectionFromLogicalLinkInformation = _encode_LinkConnectionList;
-    }
-    return _cached_encoder_for_DeassignLinkConnectionFromLogicalLinkInformation(
-        value,
-        elGetter
-    );
-}
+export const _encode_DeassignLinkConnectionFromLogicalLinkInformation: $.ASN1Encoder<DeassignLinkConnectionFromLogicalLinkInformation> = _encode_LinkConnectionList;
 
 
 /* eslint-enable */

@@ -28,26 +28,13 @@ import {
  */
 export type ManagedObjectAccessToTime = StopTime; // DefinedType
 
-
-let _cached_decoder_for_ManagedObjectAccessToTime: $.ASN1Decoder<ManagedObjectAccessToTime> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ManagedObjectAccessToTime
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ManagedObjectAccessToTime} The decoded data structure.
  */
-export function _decode_ManagedObjectAccessToTime(el: _Element): ManagedObjectAccessToTime {
-    if (!_cached_decoder_for_ManagedObjectAccessToTime) {
-        _cached_decoder_for_ManagedObjectAccessToTime = _decode_StopTime;
-    }
-    return _cached_decoder_for_ManagedObjectAccessToTime(el);
-}
-
-
-let _cached_encoder_for_ManagedObjectAccessToTime: $.ASN1Encoder<ManagedObjectAccessToTime> | null = null;
-
+export const _decode_ManagedObjectAccessToTime: $.ASN1Decoder<ManagedObjectAccessToTime> = _decode_StopTime;
 
 /**
  * @summary Encodes a(n) ManagedObjectAccessToTime into an ASN.1 Element.
@@ -56,15 +43,7 @@ let _cached_encoder_for_ManagedObjectAccessToTime: $.ASN1Encoder<ManagedObjectAc
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ManagedObjectAccessToTime, encoded as an ASN.1 Element.
  */
-export function _encode_ManagedObjectAccessToTime(
-    value: ManagedObjectAccessToTime,
-    elGetter: $.ASN1Encoder<ManagedObjectAccessToTime>
-): _Element {
-    if (!_cached_encoder_for_ManagedObjectAccessToTime) {
-        _cached_encoder_for_ManagedObjectAccessToTime = _encode_StopTime;
-    }
-    return _cached_encoder_for_ManagedObjectAccessToTime(value, elGetter);
-}
+export const _encode_ManagedObjectAccessToTime: $.ASN1Encoder<ManagedObjectAccessToTime> = _encode_StopTime;
 
 
 /* eslint-enable */

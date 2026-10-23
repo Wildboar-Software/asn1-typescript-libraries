@@ -29,22 +29,13 @@ import {
  */
 export type IPNOriginatorField = ORDescriptor; // DefinedType
 
-let _cached_decoder_for_IPNOriginatorField: $.ASN1Decoder<IPNOriginatorField> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) IPNOriginatorField
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {IPNOriginatorField} The decoded data structure.
  */
-export function _decode_IPNOriginatorField(el: _Element): IPNOriginatorField {
-    if (!_cached_decoder_for_IPNOriginatorField) {
-        _cached_decoder_for_IPNOriginatorField = _decode_ORDescriptor;
-    }
-    return _cached_decoder_for_IPNOriginatorField(el);
-}
-
-let _cached_encoder_for_IPNOriginatorField: $.ASN1Encoder<IPNOriginatorField> | null = null;
+export const _decode_IPNOriginatorField: $.ASN1Decoder<IPNOriginatorField> = _decode_ORDescriptor;
 
 /**
  * @summary Encodes a(n) IPNOriginatorField into an ASN.1 Element.
@@ -53,15 +44,7 @@ let _cached_encoder_for_IPNOriginatorField: $.ASN1Encoder<IPNOriginatorField> | 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The IPNOriginatorField, encoded as an ASN.1 Element.
  */
-export function _encode_IPNOriginatorField(
-    value: IPNOriginatorField,
-    elGetter: $.ASN1Encoder<IPNOriginatorField>
-): _Element {
-    if (!_cached_encoder_for_IPNOriginatorField) {
-        _cached_encoder_for_IPNOriginatorField = _encode_ORDescriptor;
-    }
-    return _cached_encoder_for_IPNOriginatorField(value, elGetter);
-}
+export const _encode_IPNOriginatorField: $.ASN1Encoder<IPNOriginatorField> = _encode_ORDescriptor;
 
 
 /* eslint-enable */

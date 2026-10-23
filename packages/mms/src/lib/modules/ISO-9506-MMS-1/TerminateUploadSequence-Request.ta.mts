@@ -30,21 +30,13 @@ import { Integer32, _decode_Integer32, _encode_Integer32 } from "../ISO-9506-MMS
 export
 type TerminateUploadSequence_Request = Integer32; // DefinedType
 
-let _cached_decoder_for_TerminateUploadSequence_Request: $.ASN1Decoder<TerminateUploadSequence_Request> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) TerminateUploadSequence_Request
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_TerminateUploadSequence_Request (el: _Element): TerminateUploadSequence_Request {
-    if (!_cached_decoder_for_TerminateUploadSequence_Request) { _cached_decoder_for_TerminateUploadSequence_Request = _decode_Integer32; }
-    return _cached_decoder_for_TerminateUploadSequence_Request(el);
-}
-
-let _cached_encoder_for_TerminateUploadSequence_Request: $.ASN1Encoder<TerminateUploadSequence_Request> | null = null;
+export const _decode_TerminateUploadSequence_Request: $.ASN1Decoder<TerminateUploadSequence_Request> = _decode_Integer32;
 
 /**
  * @summary Encodes a(n) TerminateUploadSequence_Request into an ASN.1 Element.
@@ -53,11 +45,7 @@ let _cached_encoder_for_TerminateUploadSequence_Request: $.ASN1Encoder<Terminate
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TerminateUploadSequence_Request, encoded as an ASN.1 Element.
  */
-export
-function _encode_TerminateUploadSequence_Request (value: TerminateUploadSequence_Request, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TerminateUploadSequence_Request) { _cached_encoder_for_TerminateUploadSequence_Request = _encode_Integer32; }
-    return _cached_encoder_for_TerminateUploadSequence_Request(value, elGetter);
-}
+export const _encode_TerminateUploadSequence_Request: $.ASN1Encoder<TerminateUploadSequence_Request> = _encode_Integer32;
 
 
 /* eslint-enable */

@@ -28,30 +28,13 @@ import {
  */
 export type DeassignNetworkCTPFromLogicalLinkEndInformation = CTPList; // DefinedType
 
-
-let _cached_decoder_for_DeassignNetworkCTPFromLogicalLinkEndInformation: $.ASN1Decoder<DeassignNetworkCTPFromLogicalLinkEndInformation> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) DeassignNetworkCTPFromLogicalLinkEndInformation
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {DeassignNetworkCTPFromLogicalLinkEndInformation} The decoded data structure.
  */
-export function _decode_DeassignNetworkCTPFromLogicalLinkEndInformation(
-    el: _Element
-): DeassignNetworkCTPFromLogicalLinkEndInformation {
-    if (!_cached_decoder_for_DeassignNetworkCTPFromLogicalLinkEndInformation) {
-        _cached_decoder_for_DeassignNetworkCTPFromLogicalLinkEndInformation = _decode_CTPList;
-    }
-    return _cached_decoder_for_DeassignNetworkCTPFromLogicalLinkEndInformation(
-        el
-    );
-}
-
-
-let _cached_encoder_for_DeassignNetworkCTPFromLogicalLinkEndInformation: $.ASN1Encoder<DeassignNetworkCTPFromLogicalLinkEndInformation> | null = null;
-
+export const _decode_DeassignNetworkCTPFromLogicalLinkEndInformation: $.ASN1Decoder<DeassignNetworkCTPFromLogicalLinkEndInformation> = _decode_CTPList;
 
 /**
  * @summary Encodes a(n) DeassignNetworkCTPFromLogicalLinkEndInformation into an ASN.1 Element.
@@ -60,18 +43,7 @@ let _cached_encoder_for_DeassignNetworkCTPFromLogicalLinkEndInformation: $.ASN1E
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DeassignNetworkCTPFromLogicalLinkEndInformation, encoded as an ASN.1 Element.
  */
-export function _encode_DeassignNetworkCTPFromLogicalLinkEndInformation(
-    value: DeassignNetworkCTPFromLogicalLinkEndInformation,
-    elGetter: $.ASN1Encoder<DeassignNetworkCTPFromLogicalLinkEndInformation>
-): _Element {
-    if (!_cached_encoder_for_DeassignNetworkCTPFromLogicalLinkEndInformation) {
-        _cached_encoder_for_DeassignNetworkCTPFromLogicalLinkEndInformation = _encode_CTPList;
-    }
-    return _cached_encoder_for_DeassignNetworkCTPFromLogicalLinkEndInformation(
-        value,
-        elGetter
-    );
-}
+export const _encode_DeassignNetworkCTPFromLogicalLinkEndInformation: $.ASN1Encoder<DeassignNetworkCTPFromLogicalLinkEndInformation> = _encode_CTPList;
 
 
 /* eslint-enable */

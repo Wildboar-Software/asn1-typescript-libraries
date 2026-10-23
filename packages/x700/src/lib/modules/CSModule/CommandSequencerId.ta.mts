@@ -36,22 +36,13 @@ import {
  */
 export type CommandSequencerId = ObjectInstance; // DefinedType
 
-let _cached_decoder_for_CommandSequencerId: $.ASN1Decoder<CommandSequencerId> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) CommandSequencerId
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {CommandSequencerId} The decoded data structure.
  */
-export function _decode_CommandSequencerId(el: _Element): CommandSequencerId {
-    if (!_cached_decoder_for_CommandSequencerId) {
-        _cached_decoder_for_CommandSequencerId = _decode_ObjectInstance;
-    }
-    return _cached_decoder_for_CommandSequencerId(el);
-}
-
-let _cached_encoder_for_CommandSequencerId: $.ASN1Encoder<CommandSequencerId> | null = null;
+export const _decode_CommandSequencerId: $.ASN1Decoder<CommandSequencerId> = _decode_ObjectInstance;
 
 /**
  * @summary Encodes a(n) CommandSequencerId into an ASN.1 Element.
@@ -60,15 +51,7 @@ let _cached_encoder_for_CommandSequencerId: $.ASN1Encoder<CommandSequencerId> | 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CommandSequencerId, encoded as an ASN.1 Element.
  */
-export function _encode_CommandSequencerId(
-    value: CommandSequencerId,
-    elGetter: $.ASN1Encoder<CommandSequencerId>
-): _Element {
-    if (!_cached_encoder_for_CommandSequencerId) {
-        _cached_encoder_for_CommandSequencerId = _encode_ObjectInstance;
-    }
-    return _cached_encoder_for_CommandSequencerId(value, elGetter);
-}
+export const _encode_CommandSequencerId: $.ASN1Encoder<CommandSequencerId> = _encode_ObjectInstance;
 
 
 /* eslint-enable */

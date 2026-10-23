@@ -32,22 +32,13 @@ import {
  */
 export type DetermineViolationStatusRequest = ObjectInstance; // DefinedType
 
-let _cached_decoder_for_DetermineViolationStatusRequest: $.ASN1Decoder<DetermineViolationStatusRequest> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) DetermineViolationStatusRequest
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {DetermineViolationStatusRequest} The decoded data structure.
  */
-export function _decode_DetermineViolationStatusRequest(el: _Element): DetermineViolationStatusRequest {
-    if (!_cached_decoder_for_DetermineViolationStatusRequest) {
-        _cached_decoder_for_DetermineViolationStatusRequest = _decode_ObjectInstance;
-    }
-    return _cached_decoder_for_DetermineViolationStatusRequest(el);
-}
-
-let _cached_encoder_for_DetermineViolationStatusRequest: $.ASN1Encoder<DetermineViolationStatusRequest> | null = null;
+export const _decode_DetermineViolationStatusRequest: $.ASN1Decoder<DetermineViolationStatusRequest> = _decode_ObjectInstance;
 
 /**
  * @summary Encodes a(n) DetermineViolationStatusRequest into an ASN.1 Element.
@@ -56,15 +47,7 @@ let _cached_encoder_for_DetermineViolationStatusRequest: $.ASN1Encoder<Determine
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DetermineViolationStatusRequest, encoded as an ASN.1 Element.
  */
-export function _encode_DetermineViolationStatusRequest(
-    value: DetermineViolationStatusRequest,
-    elGetter: $.ASN1Encoder<DetermineViolationStatusRequest>
-): _Element {
-    if (!_cached_encoder_for_DetermineViolationStatusRequest) {
-        _cached_encoder_for_DetermineViolationStatusRequest = _encode_ObjectInstance;
-    }
-    return _cached_encoder_for_DetermineViolationStatusRequest(value, elGetter);
-}
+export const _encode_DetermineViolationStatusRequest: $.ASN1Encoder<DetermineViolationStatusRequest> = _encode_ObjectInstance;
 
 
 /* eslint-enable */

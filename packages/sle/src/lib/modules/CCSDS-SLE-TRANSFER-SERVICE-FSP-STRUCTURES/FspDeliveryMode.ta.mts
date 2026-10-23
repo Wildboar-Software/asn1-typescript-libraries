@@ -49,8 +49,6 @@ function _decode_FspDeliveryMode (el: _Element): FspDeliveryMode {
     return _decoded;
 }
 
-let _cached_encoder_for_FspDeliveryMode: $.ASN1Encoder<FspDeliveryMode> | null = null;
-
 /**
  * @summary Encodes a(n) FspDeliveryMode into an ASN.1 Element.
  * @function
@@ -58,11 +56,7 @@ let _cached_encoder_for_FspDeliveryMode: $.ASN1Encoder<FspDeliveryMode> | null =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The FspDeliveryMode, encoded as an ASN.1 Element.
  */
-export
-function _encode_FspDeliveryMode (value: FspDeliveryMode, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FspDeliveryMode) { _cached_encoder_for_FspDeliveryMode = _encode_DeliveryMode; }
-    return _cached_encoder_for_FspDeliveryMode(value, elGetter);
-}
+export const _encode_FspDeliveryMode: $.ASN1Encoder<FspDeliveryMode> = _encode_DeliveryMode;
 
 
 /* eslint-enable */

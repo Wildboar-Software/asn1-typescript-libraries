@@ -27,26 +27,13 @@ import { NCName, _decode_NCName, _encode_NCName } from '../XSD/NCName.ta.mjs';
  */
 export type ENTITY = NCName; // DefinedType
 
-
-let _cached_decoder_for_ENTITY: $.ASN1Decoder<ENTITY> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ENTITY
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ENTITY} The decoded data structure.
  */
-export function _decode_ENTITY(el: _Element): ENTITY {
-  if (!_cached_decoder_for_ENTITY) {
-    _cached_decoder_for_ENTITY = _decode_NCName;
-  }
-  return _cached_decoder_for_ENTITY(el);
-}
-
-
-let _cached_encoder_for_ENTITY: $.ASN1Encoder<ENTITY> | null = null;
-
+export const _decode_ENTITY: $.ASN1Decoder<ENTITY> = _decode_NCName;
 
 /**
  * @summary Encodes a(n) ENTITY into an ASN.1 Element.
@@ -55,12 +42,7 @@ let _cached_encoder_for_ENTITY: $.ASN1Encoder<ENTITY> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ENTITY, encoded as an ASN.1 Element.
  */
-export function _encode_ENTITY(value: ENTITY, elGetter: $.ASN1Encoder<ENTITY>): _Element {
-  if (!_cached_encoder_for_ENTITY) {
-    _cached_encoder_for_ENTITY = _encode_NCName;
-  }
-  return _cached_encoder_for_ENTITY(value, elGetter);
-}
+export const _encode_ENTITY: $.ASN1Encoder<ENTITY> = _encode_NCName;
 
 
 /* eslint-enable */

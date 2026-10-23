@@ -29,21 +29,13 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
 export
 type GetProgramInvocationAttributes_Request = Identifier; // DefinedType
 
-let _cached_decoder_for_GetProgramInvocationAttributes_Request: $.ASN1Decoder<GetProgramInvocationAttributes_Request> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) GetProgramInvocationAttributes_Request
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_GetProgramInvocationAttributes_Request (el: _Element): GetProgramInvocationAttributes_Request {
-    if (!_cached_decoder_for_GetProgramInvocationAttributes_Request) { _cached_decoder_for_GetProgramInvocationAttributes_Request = _decode_Identifier; }
-    return _cached_decoder_for_GetProgramInvocationAttributes_Request(el);
-}
-
-let _cached_encoder_for_GetProgramInvocationAttributes_Request: $.ASN1Encoder<GetProgramInvocationAttributes_Request> | null = null;
+export const _decode_GetProgramInvocationAttributes_Request: $.ASN1Decoder<GetProgramInvocationAttributes_Request> = _decode_Identifier;
 
 /**
  * @summary Encodes a(n) GetProgramInvocationAttributes_Request into an ASN.1 Element.
@@ -52,11 +44,7 @@ let _cached_encoder_for_GetProgramInvocationAttributes_Request: $.ASN1Encoder<Ge
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The GetProgramInvocationAttributes_Request, encoded as an ASN.1 Element.
  */
-export
-function _encode_GetProgramInvocationAttributes_Request (value: GetProgramInvocationAttributes_Request, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GetProgramInvocationAttributes_Request) { _cached_encoder_for_GetProgramInvocationAttributes_Request = _encode_Identifier; }
-    return _cached_encoder_for_GetProgramInvocationAttributes_Request(value, elGetter);
-}
+export const _encode_GetProgramInvocationAttributes_Request: $.ASN1Encoder<GetProgramInvocationAttributes_Request> = _encode_Identifier;
 
 
 /* eslint-enable */

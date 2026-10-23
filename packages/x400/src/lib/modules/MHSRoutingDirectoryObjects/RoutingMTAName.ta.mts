@@ -29,22 +29,13 @@ import {
  */
 export type RoutingMTAName = RoutingCollectiveName; // DefinedType
 
-let _cached_decoder_for_RoutingMTAName: $.ASN1Decoder<RoutingMTAName> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) RoutingMTAName
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {RoutingMTAName} The decoded data structure.
  */
-export function _decode_RoutingMTAName(el: _Element): RoutingMTAName {
-    if (!_cached_decoder_for_RoutingMTAName) {
-        _cached_decoder_for_RoutingMTAName = _decode_RoutingCollectiveName;
-    }
-    return _cached_decoder_for_RoutingMTAName(el);
-}
-
-let _cached_encoder_for_RoutingMTAName: $.ASN1Encoder<RoutingMTAName> | null = null;
+export const _decode_RoutingMTAName: $.ASN1Decoder<RoutingMTAName> = _decode_RoutingCollectiveName;
 
 /**
  * @summary Encodes a(n) RoutingMTAName into an ASN.1 Element.
@@ -53,15 +44,7 @@ let _cached_encoder_for_RoutingMTAName: $.ASN1Encoder<RoutingMTAName> | null = n
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RoutingMTAName, encoded as an ASN.1 Element.
  */
-export function _encode_RoutingMTAName(
-    value: RoutingMTAName,
-    elGetter: $.ASN1Encoder<RoutingMTAName>
-): _Element {
-    if (!_cached_encoder_for_RoutingMTAName) {
-        _cached_encoder_for_RoutingMTAName = _encode_RoutingCollectiveName;
-    }
-    return _cached_encoder_for_RoutingMTAName(value, elGetter);
-}
+export const _encode_RoutingMTAName: $.ASN1Encoder<RoutingMTAName> = _encode_RoutingCollectiveName;
 
 
 /* eslint-enable */

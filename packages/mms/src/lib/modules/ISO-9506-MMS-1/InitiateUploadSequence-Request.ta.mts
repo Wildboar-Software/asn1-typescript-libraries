@@ -30,21 +30,13 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
 export
 type InitiateUploadSequence_Request = Identifier; // DefinedType
 
-let _cached_decoder_for_InitiateUploadSequence_Request: $.ASN1Decoder<InitiateUploadSequence_Request> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) InitiateUploadSequence_Request
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_InitiateUploadSequence_Request (el: _Element): InitiateUploadSequence_Request {
-    if (!_cached_decoder_for_InitiateUploadSequence_Request) { _cached_decoder_for_InitiateUploadSequence_Request = _decode_Identifier; }
-    return _cached_decoder_for_InitiateUploadSequence_Request(el);
-}
-
-let _cached_encoder_for_InitiateUploadSequence_Request: $.ASN1Encoder<InitiateUploadSequence_Request> | null = null;
+export const _decode_InitiateUploadSequence_Request: $.ASN1Decoder<InitiateUploadSequence_Request> = _decode_Identifier;
 
 /**
  * @summary Encodes a(n) InitiateUploadSequence_Request into an ASN.1 Element.
@@ -53,11 +45,7 @@ let _cached_encoder_for_InitiateUploadSequence_Request: $.ASN1Encoder<InitiateUp
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The InitiateUploadSequence_Request, encoded as an ASN.1 Element.
  */
-export
-function _encode_InitiateUploadSequence_Request (value: InitiateUploadSequence_Request, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_InitiateUploadSequence_Request) { _cached_encoder_for_InitiateUploadSequence_Request = _encode_Identifier; }
-    return _cached_encoder_for_InitiateUploadSequence_Request(value, elGetter);
-}
+export const _encode_InitiateUploadSequence_Request: $.ASN1Encoder<InitiateUploadSequence_Request> = _encode_Identifier;
 
 
 /* eslint-enable */

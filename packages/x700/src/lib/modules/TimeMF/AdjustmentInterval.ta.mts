@@ -32,22 +32,13 @@ import {
  */
 export type AdjustmentInterval = TimeInterval; // DefinedType
 
-let _cached_decoder_for_AdjustmentInterval: $.ASN1Decoder<AdjustmentInterval> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AdjustmentInterval
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {AdjustmentInterval} The decoded data structure.
  */
-export function _decode_AdjustmentInterval(el: _Element): AdjustmentInterval {
-    if (!_cached_decoder_for_AdjustmentInterval) {
-        _cached_decoder_for_AdjustmentInterval = _decode_TimeInterval;
-    }
-    return _cached_decoder_for_AdjustmentInterval(el);
-}
-
-let _cached_encoder_for_AdjustmentInterval: $.ASN1Encoder<AdjustmentInterval> | null = null;
+export const _decode_AdjustmentInterval: $.ASN1Decoder<AdjustmentInterval> = _decode_TimeInterval;
 
 /**
  * @summary Encodes a(n) AdjustmentInterval into an ASN.1 Element.
@@ -56,15 +47,7 @@ let _cached_encoder_for_AdjustmentInterval: $.ASN1Encoder<AdjustmentInterval> | 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AdjustmentInterval, encoded as an ASN.1 Element.
  */
-export function _encode_AdjustmentInterval(
-    value: AdjustmentInterval,
-    elGetter: $.ASN1Encoder<AdjustmentInterval>
-): _Element {
-    if (!_cached_encoder_for_AdjustmentInterval) {
-        _cached_encoder_for_AdjustmentInterval = _encode_TimeInterval;
-    }
-    return _cached_encoder_for_AdjustmentInterval(value, elGetter);
-}
+export const _encode_AdjustmentInterval: $.ASN1Encoder<AdjustmentInterval> = _encode_TimeInterval;
 
 
 /* eslint-enable */

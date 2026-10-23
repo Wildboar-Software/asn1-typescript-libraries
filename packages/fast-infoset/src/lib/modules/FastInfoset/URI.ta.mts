@@ -33,22 +33,13 @@ import {
  */
 export type URI = NonEmptyOctetString; // DefinedType
 
-let _cached_decoder_for_URI: $.ASN1Decoder<URI> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) URI
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {URI} The decoded data structure.
  */
-export function _decode_URI(el: _Element): URI {
-  if (!_cached_decoder_for_URI) {
-    _cached_decoder_for_URI = _decode_NonEmptyOctetString;
-  }
-  return _cached_decoder_for_URI(el);
-}
-
-let _cached_encoder_for_URI: $.ASN1Encoder<URI> | null = null;
+export const _decode_URI: $.ASN1Decoder<URI> = _decode_NonEmptyOctetString;
 
 /**
  * @summary Encodes a(n) URI into an ASN.1 Element.
@@ -57,12 +48,7 @@ let _cached_encoder_for_URI: $.ASN1Encoder<URI> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The URI, encoded as an ASN.1 Element.
  */
-export function _encode_URI(value: URI, elGetter: $.ASN1Encoder<URI>): _Element {
-  if (!_cached_encoder_for_URI) {
-    _cached_encoder_for_URI = _encode_NonEmptyOctetString;
-  }
-  return _cached_encoder_for_URI(value, elGetter);
-}
+export const _encode_URI: $.ASN1Encoder<URI> = _encode_NonEmptyOctetString;
 
 
 /* eslint-enable */

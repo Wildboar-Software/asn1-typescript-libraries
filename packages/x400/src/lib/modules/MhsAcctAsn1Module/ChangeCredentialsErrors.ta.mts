@@ -30,22 +30,13 @@ import {
  */
 export type ChangeCredentialsErrors = AdministrationError; // DefinedType
 
-let _cached_decoder_for_ChangeCredentialsErrors: $.ASN1Decoder<ChangeCredentialsErrors> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ChangeCredentialsErrors
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ChangeCredentialsErrors} The decoded data structure.
  */
-export function _decode_ChangeCredentialsErrors(el: _Element): ChangeCredentialsErrors {
-    if (!_cached_decoder_for_ChangeCredentialsErrors) {
-        _cached_decoder_for_ChangeCredentialsErrors = _decode_AdministrationError;
-    }
-    return _cached_decoder_for_ChangeCredentialsErrors(el);
-}
-
-let _cached_encoder_for_ChangeCredentialsErrors: $.ASN1Encoder<ChangeCredentialsErrors> | null = null;
+export const _decode_ChangeCredentialsErrors: $.ASN1Decoder<ChangeCredentialsErrors> = _decode_AdministrationError;
 
 /**
  * @summary Encodes a(n) ChangeCredentialsErrors into an ASN.1 Element.
@@ -54,15 +45,7 @@ let _cached_encoder_for_ChangeCredentialsErrors: $.ASN1Encoder<ChangeCredentials
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ChangeCredentialsErrors, encoded as an ASN.1 Element.
  */
-export function _encode_ChangeCredentialsErrors(
-    value: ChangeCredentialsErrors,
-    elGetter: $.ASN1Encoder<ChangeCredentialsErrors>
-): _Element {
-    if (!_cached_encoder_for_ChangeCredentialsErrors) {
-        _cached_encoder_for_ChangeCredentialsErrors = _encode_AdministrationError;
-    }
-    return _cached_encoder_for_ChangeCredentialsErrors(value, elGetter);
-}
+export const _encode_ChangeCredentialsErrors: $.ASN1Encoder<ChangeCredentialsErrors> = _encode_AdministrationError;
 
 
 /* eslint-enable */

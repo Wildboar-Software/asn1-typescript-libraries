@@ -57,8 +57,6 @@ function _decode_CarrierLockStatus (el: _Element): CarrierLockStatus {
     return _decoded;
 }
 
-let _cached_encoder_for_CarrierLockStatus: $.ASN1Encoder<CarrierLockStatus> | null = null;
-
 /**
  * @summary Encodes a(n) CarrierLockStatus into an ASN.1 Element.
  * @function
@@ -66,11 +64,7 @@ let _cached_encoder_for_CarrierLockStatus: $.ASN1Encoder<CarrierLockStatus> | nu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CarrierLockStatus, encoded as an ASN.1 Element.
  */
-export
-function _encode_CarrierLockStatus (value: CarrierLockStatus, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CarrierLockStatus) { _cached_encoder_for_CarrierLockStatus = _encode_LockStatus; }
-    return _cached_encoder_for_CarrierLockStatus(value, elGetter);
-}
+export const _encode_CarrierLockStatus: $.ASN1Encoder<CarrierLockStatus> = _encode_LockStatus;
 
 
 /* eslint-enable */

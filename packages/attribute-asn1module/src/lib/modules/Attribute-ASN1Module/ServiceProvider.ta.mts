@@ -28,21 +28,13 @@ import { ServiceUser, _decode_ServiceUser, _encode_ServiceUser } from "../Attrib
 export
 type ServiceProvider = ServiceUser; // DefinedType
 
-let _cached_decoder_for_ServiceProvider: $.ASN1Decoder<ServiceProvider> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ServiceProvider
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ServiceProvider} The decoded data structure.
  */
-export
-function _decode_ServiceProvider (el: _Element): ServiceProvider {
-    if (!_cached_decoder_for_ServiceProvider) { _cached_decoder_for_ServiceProvider = _decode_ServiceUser; }
-    return _cached_decoder_for_ServiceProvider(el);
-}
-
-let _cached_encoder_for_ServiceProvider: $.ASN1Encoder<ServiceProvider> | null = null;
+export const _decode_ServiceProvider: $.ASN1Decoder<ServiceProvider> = _decode_ServiceUser;
 
 /**
  * @summary Encodes a(n) ServiceProvider into an ASN.1 Element.
@@ -51,11 +43,7 @@ let _cached_encoder_for_ServiceProvider: $.ASN1Encoder<ServiceProvider> | null =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ServiceProvider, encoded as an ASN.1 Element.
  */
-export
-function _encode_ServiceProvider (value: ServiceProvider, elGetter: $.ASN1Encoder<ServiceProvider>): _Element {
-    if (!_cached_encoder_for_ServiceProvider) { _cached_encoder_for_ServiceProvider = _encode_ServiceUser; }
-    return _cached_encoder_for_ServiceProvider(value, elGetter);
-}
+export const _encode_ServiceProvider: $.ASN1Encoder<ServiceProvider> = _encode_ServiceUser;
 
 
 /* eslint-enable */

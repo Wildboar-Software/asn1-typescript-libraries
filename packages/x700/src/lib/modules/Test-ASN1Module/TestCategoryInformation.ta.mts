@@ -36,22 +36,13 @@ import {
  */
 export type TestCategoryInformation = AdditionalInformation; // DefinedType
 
-let _cached_decoder_for_TestCategoryInformation: $.ASN1Decoder<TestCategoryInformation> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) TestCategoryInformation
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {TestCategoryInformation} The decoded data structure.
  */
-export function _decode_TestCategoryInformation(el: _Element): TestCategoryInformation {
-    if (!_cached_decoder_for_TestCategoryInformation) {
-        _cached_decoder_for_TestCategoryInformation = _decode_AdditionalInformation;
-    }
-    return _cached_decoder_for_TestCategoryInformation(el);
-}
-
-let _cached_encoder_for_TestCategoryInformation: $.ASN1Encoder<TestCategoryInformation> | null = null;
+export const _decode_TestCategoryInformation: $.ASN1Decoder<TestCategoryInformation> = _decode_AdditionalInformation;
 
 /**
  * @summary Encodes a(n) TestCategoryInformation into an ASN.1 Element.
@@ -60,15 +51,7 @@ let _cached_encoder_for_TestCategoryInformation: $.ASN1Encoder<TestCategoryInfor
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TestCategoryInformation, encoded as an ASN.1 Element.
  */
-export function _encode_TestCategoryInformation(
-    value: TestCategoryInformation,
-    elGetter: $.ASN1Encoder<TestCategoryInformation>
-): _Element {
-    if (!_cached_encoder_for_TestCategoryInformation) {
-        _cached_encoder_for_TestCategoryInformation = _encode_AdditionalInformation;
-    }
-    return _cached_encoder_for_TestCategoryInformation(value, elGetter);
-}
+export const _encode_TestCategoryInformation: $.ASN1Encoder<TestCategoryInformation> = _encode_AdditionalInformation;
 
 
 /* eslint-enable */

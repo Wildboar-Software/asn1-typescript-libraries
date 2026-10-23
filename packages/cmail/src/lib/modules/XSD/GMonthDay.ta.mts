@@ -28,26 +28,13 @@ import {
  */
 export type GMonthDay = DateTimeType; // DefinedType
 
-
-let _cached_decoder_for_GMonthDay: $.ASN1Decoder<GMonthDay> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) GMonthDay
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {GMonthDay} The decoded data structure.
  */
-export function _decode_GMonthDay(el: _Element): GMonthDay {
-  if (!_cached_decoder_for_GMonthDay) {
-    _cached_decoder_for_GMonthDay = _decode_DateTimeType;
-  }
-  return _cached_decoder_for_GMonthDay(el);
-}
-
-
-let _cached_encoder_for_GMonthDay: $.ASN1Encoder<GMonthDay> | null = null;
-
+export const _decode_GMonthDay: $.ASN1Decoder<GMonthDay> = _decode_DateTimeType;
 
 /**
  * @summary Encodes a(n) GMonthDay into an ASN.1 Element.
@@ -56,15 +43,7 @@ let _cached_encoder_for_GMonthDay: $.ASN1Encoder<GMonthDay> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The GMonthDay, encoded as an ASN.1 Element.
  */
-export function _encode_GMonthDay(
-  value: GMonthDay,
-  elGetter: $.ASN1Encoder<GMonthDay>
-): _Element {
-  if (!_cached_encoder_for_GMonthDay) {
-    _cached_encoder_for_GMonthDay = _encode_DateTimeType;
-  }
-  return _cached_encoder_for_GMonthDay(value, elGetter);
-}
+export const _encode_GMonthDay: $.ASN1Encoder<GMonthDay> = _encode_DateTimeType;
 
 
 /* eslint-enable */

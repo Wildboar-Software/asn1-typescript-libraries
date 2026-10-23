@@ -31,22 +31,13 @@ import {
  */
 export type OriginatorRequestedAlternateRecipient = ORAddressAndOptionalDirectoryName; // DefinedType
 
-let _cached_decoder_for_OriginatorRequestedAlternateRecipient: $.ASN1Decoder<OriginatorRequestedAlternateRecipient> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) OriginatorRequestedAlternateRecipient
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {OriginatorRequestedAlternateRecipient} The decoded data structure.
  */
-export function _decode_OriginatorRequestedAlternateRecipient(el: _Element): OriginatorRequestedAlternateRecipient {
-    if (!_cached_decoder_for_OriginatorRequestedAlternateRecipient) {
-        _cached_decoder_for_OriginatorRequestedAlternateRecipient = _decode_ORAddressAndOptionalDirectoryName;
-    }
-    return _cached_decoder_for_OriginatorRequestedAlternateRecipient(el);
-}
-
-let _cached_encoder_for_OriginatorRequestedAlternateRecipient: $.ASN1Encoder<OriginatorRequestedAlternateRecipient> | null = null;
+export const _decode_OriginatorRequestedAlternateRecipient: $.ASN1Decoder<OriginatorRequestedAlternateRecipient> = _decode_ORAddressAndOptionalDirectoryName;
 
 /**
  * @summary Encodes a(n) OriginatorRequestedAlternateRecipient into an ASN.1 Element.
@@ -55,18 +46,7 @@ let _cached_encoder_for_OriginatorRequestedAlternateRecipient: $.ASN1Encoder<Ori
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The OriginatorRequestedAlternateRecipient, encoded as an ASN.1 Element.
  */
-export function _encode_OriginatorRequestedAlternateRecipient(
-    value: OriginatorRequestedAlternateRecipient,
-    elGetter: $.ASN1Encoder<OriginatorRequestedAlternateRecipient>
-): _Element {
-    if (!_cached_encoder_for_OriginatorRequestedAlternateRecipient) {
-        _cached_encoder_for_OriginatorRequestedAlternateRecipient = _encode_ORAddressAndOptionalDirectoryName;
-    }
-    return _cached_encoder_for_OriginatorRequestedAlternateRecipient(
-        value,
-        elGetter
-    );
-}
+export const _encode_OriginatorRequestedAlternateRecipient: $.ASN1Encoder<OriginatorRequestedAlternateRecipient> = _encode_ORAddressAndOptionalDirectoryName;
 
 
 /* eslint-enable */

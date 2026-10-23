@@ -33,22 +33,13 @@ import {
  */
 export type ControlStatusValue = ControlStatus; // DefinedType
 
-let _cached_decoder_for_ControlStatusValue: $.ASN1Decoder<ControlStatusValue> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ControlStatusValue
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ControlStatusValue} The decoded data structure.
  */
-export function _decode_ControlStatusValue(el: _Element): ControlStatusValue {
-    if (!_cached_decoder_for_ControlStatusValue) {
-        _cached_decoder_for_ControlStatusValue = _decode_ControlStatus;
-    }
-    return _cached_decoder_for_ControlStatusValue(el);
-}
-
-let _cached_encoder_for_ControlStatusValue: $.ASN1Encoder<ControlStatusValue> | null = null;
+export const _decode_ControlStatusValue: $.ASN1Decoder<ControlStatusValue> = _decode_ControlStatus;
 
 /**
  * @summary Encodes a(n) ControlStatusValue into an ASN.1 Element.
@@ -57,15 +48,7 @@ let _cached_encoder_for_ControlStatusValue: $.ASN1Encoder<ControlStatusValue> | 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ControlStatusValue, encoded as an ASN.1 Element.
  */
-export function _encode_ControlStatusValue(
-    value: ControlStatusValue,
-    elGetter: $.ASN1Encoder<ControlStatusValue>
-): _Element {
-    if (!_cached_encoder_for_ControlStatusValue) {
-        _cached_encoder_for_ControlStatusValue = _encode_ControlStatus;
-    }
-    return _cached_encoder_for_ControlStatusValue(value, elGetter);
-}
+export const _encode_ControlStatusValue: $.ASN1Encoder<ControlStatusValue> = _encode_ControlStatus;
 
 
 /* eslint-enable */

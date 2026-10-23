@@ -23,21 +23,13 @@ import { _decode_ReferenceType, _encode_ReferenceType, ReferenceType } from "../
 export
 type IN_ReferenceType = ReferenceType; // DefinedType
 
-let _cached_decoder_for_IN_ReferenceType: $.ASN1Decoder<IN_ReferenceType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) IN_ReferenceType
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_IN_ReferenceType (el: _Element): IN_ReferenceType {
-    if (!_cached_decoder_for_IN_ReferenceType) { _cached_decoder_for_IN_ReferenceType = _decode_ReferenceType; }
-    return _cached_decoder_for_IN_ReferenceType(el);
-}
-
-let _cached_encoder_for_IN_ReferenceType: $.ASN1Encoder<IN_ReferenceType> | null = null;
+export const _decode_IN_ReferenceType: $.ASN1Decoder<IN_ReferenceType> = _decode_ReferenceType;
 
 /**
  * @summary Encodes a(n) IN_ReferenceType into an ASN.1 Element.
@@ -46,11 +38,7 @@ let _cached_encoder_for_IN_ReferenceType: $.ASN1Encoder<IN_ReferenceType> | null
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The IN_ReferenceType, encoded as an ASN.1 Element.
  */
-export
-function _encode_IN_ReferenceType (value: IN_ReferenceType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IN_ReferenceType) { _cached_encoder_for_IN_ReferenceType = _encode_ReferenceType; }
-    return _cached_encoder_for_IN_ReferenceType(value, elGetter);
-}
+export const _encode_IN_ReferenceType: $.ASN1Encoder<IN_ReferenceType> = _encode_ReferenceType;
 
 
 /* eslint-enable */

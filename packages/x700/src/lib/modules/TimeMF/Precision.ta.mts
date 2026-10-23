@@ -33,22 +33,13 @@ import {
  */
 export type Precision = TimeInterval; // DefinedType
 
-let _cached_decoder_for_Precision: $.ASN1Decoder<Precision> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) Precision
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {Precision} The decoded data structure.
  */
-export function _decode_Precision(el: _Element): Precision {
-    if (!_cached_decoder_for_Precision) {
-        _cached_decoder_for_Precision = _decode_TimeInterval;
-    }
-    return _cached_decoder_for_Precision(el);
-}
-
-let _cached_encoder_for_Precision: $.ASN1Encoder<Precision> | null = null;
+export const _decode_Precision: $.ASN1Decoder<Precision> = _decode_TimeInterval;
 
 /**
  * @summary Encodes a(n) Precision into an ASN.1 Element.
@@ -57,15 +48,7 @@ let _cached_encoder_for_Precision: $.ASN1Encoder<Precision> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Precision, encoded as an ASN.1 Element.
  */
-export function _encode_Precision(
-    value: Precision,
-    elGetter: $.ASN1Encoder<Precision>
-): _Element {
-    if (!_cached_encoder_for_Precision) {
-        _cached_encoder_for_Precision = _encode_TimeInterval;
-    }
-    return _cached_encoder_for_Precision(value, elGetter);
-}
+export const _encode_Precision: $.ASN1Encoder<Precision> = _encode_TimeInterval;
 
 
 /* eslint-enable */

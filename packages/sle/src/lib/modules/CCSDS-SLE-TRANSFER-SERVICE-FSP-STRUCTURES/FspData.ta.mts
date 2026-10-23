@@ -26,21 +26,13 @@ import { SpaceLinkDataUnit, _decode_SpaceLinkDataUnit, _encode_SpaceLinkDataUnit
 export
 type FspData = SpaceLinkDataUnit; // DefinedType
 
-let _cached_decoder_for_FspData: $.ASN1Decoder<FspData> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) FspData
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_FspData (el: _Element): FspData {
-    if (!_cached_decoder_for_FspData) { _cached_decoder_for_FspData = _decode_SpaceLinkDataUnit; }
-    return _cached_decoder_for_FspData(el);
-}
-
-let _cached_encoder_for_FspData: $.ASN1Encoder<FspData> | null = null;
+export const _decode_FspData: $.ASN1Decoder<FspData> = _decode_SpaceLinkDataUnit;
 
 /**
  * @summary Encodes a(n) FspData into an ASN.1 Element.
@@ -49,11 +41,7 @@ let _cached_encoder_for_FspData: $.ASN1Encoder<FspData> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The FspData, encoded as an ASN.1 Element.
  */
-export
-function _encode_FspData (value: FspData, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FspData) { _cached_encoder_for_FspData = _encode_SpaceLinkDataUnit; }
-    return _cached_encoder_for_FspData(value, elGetter);
-}
+export const _encode_FspData: $.ASN1Encoder<FspData> = _encode_SpaceLinkDataUnit;
 
 
 /* eslint-enable */

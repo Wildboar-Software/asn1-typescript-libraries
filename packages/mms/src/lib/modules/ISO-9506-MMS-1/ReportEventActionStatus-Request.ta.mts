@@ -31,21 +31,13 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
 export
 type ReportEventActionStatus_Request = ObjectName; // DefinedType
 
-let _cached_decoder_for_ReportEventActionStatus_Request: $.ASN1Decoder<ReportEventActionStatus_Request> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ReportEventActionStatus_Request
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_ReportEventActionStatus_Request (el: _Element): ReportEventActionStatus_Request {
-    if (!_cached_decoder_for_ReportEventActionStatus_Request) { _cached_decoder_for_ReportEventActionStatus_Request = _decode_ObjectName; }
-    return _cached_decoder_for_ReportEventActionStatus_Request(el);
-}
-
-let _cached_encoder_for_ReportEventActionStatus_Request: $.ASN1Encoder<ReportEventActionStatus_Request> | null = null;
+export const _decode_ReportEventActionStatus_Request: $.ASN1Decoder<ReportEventActionStatus_Request> = _decode_ObjectName;
 
 /**
  * @summary Encodes a(n) ReportEventActionStatus_Request into an ASN.1 Element.
@@ -54,11 +46,7 @@ let _cached_encoder_for_ReportEventActionStatus_Request: $.ASN1Encoder<ReportEve
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ReportEventActionStatus_Request, encoded as an ASN.1 Element.
  */
-export
-function _encode_ReportEventActionStatus_Request (value: ReportEventActionStatus_Request, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ReportEventActionStatus_Request) { _cached_encoder_for_ReportEventActionStatus_Request = _encode_ObjectName; }
-    return _cached_encoder_for_ReportEventActionStatus_Request(value, elGetter);
-}
+export const _encode_ReportEventActionStatus_Request: $.ASN1Encoder<ReportEventActionStatus_Request> = _encode_ObjectName;
 
 
 /* eslint-enable */

@@ -23,21 +23,13 @@ import { IntPosShort, _decode_IntPosShort, _encode_IntPosShort } from "../CCSDS-
 export
 type SubcarrierDivisor = IntPosShort; // DefinedType
 
-let _cached_decoder_for_SubcarrierDivisor: $.ASN1Decoder<SubcarrierDivisor> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SubcarrierDivisor
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_SubcarrierDivisor (el: _Element): SubcarrierDivisor {
-    if (!_cached_decoder_for_SubcarrierDivisor) { _cached_decoder_for_SubcarrierDivisor = _decode_IntPosShort; }
-    return _cached_decoder_for_SubcarrierDivisor(el);
-}
-
-let _cached_encoder_for_SubcarrierDivisor: $.ASN1Encoder<SubcarrierDivisor> | null = null;
+export const _decode_SubcarrierDivisor: $.ASN1Decoder<SubcarrierDivisor> = _decode_IntPosShort;
 
 /**
  * @summary Encodes a(n) SubcarrierDivisor into an ASN.1 Element.
@@ -46,11 +38,7 @@ let _cached_encoder_for_SubcarrierDivisor: $.ASN1Encoder<SubcarrierDivisor> | nu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SubcarrierDivisor, encoded as an ASN.1 Element.
  */
-export
-function _encode_SubcarrierDivisor (value: SubcarrierDivisor, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SubcarrierDivisor) { _cached_encoder_for_SubcarrierDivisor = _encode_IntPosShort; }
-    return _cached_encoder_for_SubcarrierDivisor(value, elGetter);
-}
+export const _encode_SubcarrierDivisor: $.ASN1Encoder<SubcarrierDivisor> = _encode_IntPosShort;
 
 
 /* eslint-enable */

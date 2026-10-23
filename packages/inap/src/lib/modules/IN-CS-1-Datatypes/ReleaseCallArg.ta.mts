@@ -20,21 +20,13 @@ import { Cause, _decode_Cause, _encode_Cause } from "../IN-CS-1-Datatypes/Cause.
 export
 type ReleaseCallArg = Cause; // DefinedType
 
-let _cached_decoder_for_ReleaseCallArg: $.ASN1Decoder<ReleaseCallArg> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ReleaseCallArg
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_ReleaseCallArg (el: _Element): ReleaseCallArg {
-    if (!_cached_decoder_for_ReleaseCallArg) { _cached_decoder_for_ReleaseCallArg = _decode_Cause; }
-    return _cached_decoder_for_ReleaseCallArg(el);
-}
-
-let _cached_encoder_for_ReleaseCallArg: $.ASN1Encoder<ReleaseCallArg> | null = null;
+export const _decode_ReleaseCallArg: $.ASN1Decoder<ReleaseCallArg> = _decode_Cause;
 
 /**
  * @summary Encodes a(n) ReleaseCallArg into an ASN.1 Element.
@@ -43,11 +35,7 @@ let _cached_encoder_for_ReleaseCallArg: $.ASN1Encoder<ReleaseCallArg> | null = n
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ReleaseCallArg, encoded as an ASN.1 Element.
  */
-export
-function _encode_ReleaseCallArg (value: ReleaseCallArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ReleaseCallArg) { _cached_encoder_for_ReleaseCallArg = _encode_Cause; }
-    return _cached_encoder_for_ReleaseCallArg(value, elGetter);
-}
+export const _encode_ReleaseCallArg: $.ASN1Encoder<ReleaseCallArg> = _encode_Cause;
 
 
 /* eslint-enable */

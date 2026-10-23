@@ -29,22 +29,13 @@ import {
  */
 export type RecipientField = ORName; // DefinedType
 
-let _cached_decoder_for_RecipientField: $.ASN1Decoder<RecipientField> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) RecipientField
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {RecipientField} The decoded data structure.
  */
-export function _decode_RecipientField(el: _Element): RecipientField {
-    if (!_cached_decoder_for_RecipientField) {
-        _cached_decoder_for_RecipientField = _decode_ORName;
-    }
-    return _cached_decoder_for_RecipientField(el);
-}
-
-let _cached_encoder_for_RecipientField: $.ASN1Encoder<RecipientField> | null = null;
+export const _decode_RecipientField: $.ASN1Decoder<RecipientField> = _decode_ORName;
 
 /**
  * @summary Encodes a(n) RecipientField into an ASN.1 Element.
@@ -53,15 +44,7 @@ let _cached_encoder_for_RecipientField: $.ASN1Encoder<RecipientField> | null = n
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RecipientField, encoded as an ASN.1 Element.
  */
-export function _encode_RecipientField(
-    value: RecipientField,
-    elGetter: $.ASN1Encoder<RecipientField>
-): _Element {
-    if (!_cached_encoder_for_RecipientField) {
-        _cached_encoder_for_RecipientField = _encode_ORName;
-    }
-    return _cached_encoder_for_RecipientField(value, elGetter);
-}
+export const _encode_RecipientField: $.ASN1Encoder<RecipientField> = _encode_ORName;
 
 
 /* eslint-enable */

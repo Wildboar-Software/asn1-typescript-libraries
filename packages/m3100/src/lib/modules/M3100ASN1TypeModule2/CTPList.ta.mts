@@ -28,26 +28,13 @@ import {
  */
 export type CTPList = NWTPList; // DefinedType
 
-
-let _cached_decoder_for_CTPList: $.ASN1Decoder<CTPList> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) CTPList
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {CTPList} The decoded data structure.
  */
-export function _decode_CTPList(el: _Element): CTPList {
-    if (!_cached_decoder_for_CTPList) {
-        _cached_decoder_for_CTPList = _decode_NWTPList;
-    }
-    return _cached_decoder_for_CTPList(el);
-}
-
-
-let _cached_encoder_for_CTPList: $.ASN1Encoder<CTPList> | null = null;
-
+export const _decode_CTPList: $.ASN1Decoder<CTPList> = _decode_NWTPList;
 
 /**
  * @summary Encodes a(n) CTPList into an ASN.1 Element.
@@ -56,15 +43,7 @@ let _cached_encoder_for_CTPList: $.ASN1Encoder<CTPList> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CTPList, encoded as an ASN.1 Element.
  */
-export function _encode_CTPList(
-    value: CTPList,
-    elGetter: $.ASN1Encoder<CTPList>
-): _Element {
-    if (!_cached_encoder_for_CTPList) {
-        _cached_encoder_for_CTPList = _encode_NWTPList;
-    }
-    return _cached_encoder_for_CTPList(value, elGetter);
-}
+export const _encode_CTPList: $.ASN1Encoder<CTPList> = _encode_NWTPList;
 
 
 /* eslint-enable */

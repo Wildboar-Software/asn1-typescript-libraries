@@ -32,21 +32,13 @@ import { Opaque, _decode_Opaque, _encode_Opaque } from "../TSM/Opaque.ta.mjs";
 export
 type ClientKeyExchange = Opaque; // DefinedType
 
-let _cached_decoder_for_ClientKeyExchange: $.ASN1Decoder<ClientKeyExchange> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ClientKeyExchange
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_ClientKeyExchange (el: _Element): ClientKeyExchange {
-    if (!_cached_decoder_for_ClientKeyExchange) { _cached_decoder_for_ClientKeyExchange = _decode_Opaque; }
-    return _cached_decoder_for_ClientKeyExchange(el);
-}
-
-let _cached_encoder_for_ClientKeyExchange: $.ASN1Encoder<ClientKeyExchange> | null = null;
+export const _decode_ClientKeyExchange: $.ASN1Decoder<ClientKeyExchange> = _decode_Opaque;
 
 /**
  * @summary Encodes a(n) ClientKeyExchange into an ASN.1 Element.
@@ -55,11 +47,7 @@ let _cached_encoder_for_ClientKeyExchange: $.ASN1Encoder<ClientKeyExchange> | nu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ClientKeyExchange, encoded as an ASN.1 Element.
  */
-export
-function _encode_ClientKeyExchange (value: ClientKeyExchange, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ClientKeyExchange) { _cached_encoder_for_ClientKeyExchange = _encode_Opaque; }
-    return _cached_encoder_for_ClientKeyExchange(value, elGetter);
-}
+export const _encode_ClientKeyExchange: $.ASN1Encoder<ClientKeyExchange> = _encode_Opaque;
 
 
 /* eslint-enable */

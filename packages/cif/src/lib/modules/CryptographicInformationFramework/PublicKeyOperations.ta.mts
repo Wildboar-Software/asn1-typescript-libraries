@@ -29,21 +29,13 @@ import { Operations, _decode_Operations, _encode_Operations } from "../Cryptogra
 export
 type PublicKeyOperations = Operations; // DefinedType
 
-let _cached_decoder_for_PublicKeyOperations: $.ASN1Decoder<PublicKeyOperations> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) PublicKeyOperations
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_PublicKeyOperations (el: _Element): PublicKeyOperations {
-    if (!_cached_decoder_for_PublicKeyOperations) { _cached_decoder_for_PublicKeyOperations = _decode_Operations; }
-    return _cached_decoder_for_PublicKeyOperations(el);
-}
-
-let _cached_encoder_for_PublicKeyOperations: $.ASN1Encoder<PublicKeyOperations> | null = null;
+export const _decode_PublicKeyOperations: $.ASN1Decoder<PublicKeyOperations> = _decode_Operations;
 
 /**
  * @summary Encodes a(n) PublicKeyOperations into an ASN.1 Element.
@@ -52,11 +44,7 @@ let _cached_encoder_for_PublicKeyOperations: $.ASN1Encoder<PublicKeyOperations> 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PublicKeyOperations, encoded as an ASN.1 Element.
  */
-export
-function _encode_PublicKeyOperations (value: PublicKeyOperations, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PublicKeyOperations) { _cached_encoder_for_PublicKeyOperations = _encode_Operations; }
-    return _cached_encoder_for_PublicKeyOperations(value, elGetter);
-}
+export const _encode_PublicKeyOperations: $.ASN1Encoder<PublicKeyOperations> = _encode_Operations;
 
 
 /* eslint-enable */
