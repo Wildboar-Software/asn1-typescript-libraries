@@ -99,7 +99,7 @@ class Data_Exchange_instance_definition_details {
          * @public
          * @readonly
          */
-        readonly programInvocation: OPTIONAL<Program_Invocation_instance>
+        readonly programInvocation?: OPTIONAL<Program_Invocation_instance>
     ) {}
 
     /**

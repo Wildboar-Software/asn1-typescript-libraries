@@ -37,7 +37,7 @@ export class EventSpecificInformationBCSM_oCalledPartyBusySpecificInfo {
          * @public
          * @readonly
          */
-        readonly busyCause: OPTIONAL<Cause>,
+        readonly busyCause?: OPTIONAL<Cause>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}
 

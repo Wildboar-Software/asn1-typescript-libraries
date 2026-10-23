@@ -57,7 +57,7 @@ class CallAssociatedServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly associateData: OPTIONAL<AssociateData>,
+        readonly associateData?: OPTIONAL<AssociateData>,
         /**
          * @summary `cancelTelephonyTones`.
          * @public
@@ -66,7 +66,7 @@ class CallAssociatedServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly cancelTelephonyTones: OPTIONAL<CancelTelephonyTones>,
+        readonly cancelTelephonyTones?: OPTIONAL<CancelTelephonyTones>,
         /**
          * @summary `changeConnectionInformation`.
          * @public
@@ -75,7 +75,7 @@ class CallAssociatedServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly changeConnectionInformation: OPTIONAL<ChangeConnectionInformation>,
+        readonly changeConnectionInformation?: OPTIONAL<ChangeConnectionInformation>,
         /**
          * @summary `generateDigits`.
          * @public
@@ -84,7 +84,7 @@ class CallAssociatedServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly generateDigits: OPTIONAL<GenerateDigits>,
+        readonly generateDigits?: OPTIONAL<GenerateDigits>,
         /**
          * @summary `generateTelephonyTones`.
          * @public
@@ -93,7 +93,7 @@ class CallAssociatedServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly generateTelephonyTones: OPTIONAL<GenerateTelephonyTones>,
+        readonly generateTelephonyTones?: OPTIONAL<GenerateTelephonyTones>,
         /**
          * @summary `sendUserInformation`.
          * @public
@@ -102,7 +102,7 @@ class CallAssociatedServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly sendUserInformation: OPTIONAL<SendUserInformation>
+        readonly sendUserInformation?: OPTIONAL<SendUserInformation>
     ) {}
 
     /**

@@ -67,7 +67,7 @@ class MakePredictiveCallResult {
          * @public
          * @readonly
          */
-        readonly initiatedCallInfo: OPTIONAL<ConnectionInformation>,
+        readonly initiatedCallInfo?: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `callLinkageData`.
          * @description
@@ -78,7 +78,7 @@ class MakePredictiveCallResult {
          * @public
          * @readonly
          */
-        readonly callLinkageData: OPTIONAL<CallLinkageData>,
+        readonly callLinkageData?: OPTIONAL<CallLinkageData>,
         /**
          * @summary `extensions`.
          * @description
@@ -90,7 +90,7 @@ class MakePredictiveCallResult {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

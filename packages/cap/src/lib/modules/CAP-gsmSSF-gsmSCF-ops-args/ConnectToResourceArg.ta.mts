@@ -61,7 +61,7 @@ class ConnectToResourceArg {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<Extensions>,
+        readonly extensions?: OPTIONAL<Extensions>,
         /**
          * @summary `serviceInteractionIndicatorsTwo`.
          * @description
@@ -74,7 +74,7 @@ class ConnectToResourceArg {
          * @public
          * @readonly
          */
-        readonly serviceInteractionIndicatorsTwo: OPTIONAL<ServiceInteractionIndicatorsTwo>,
+        readonly serviceInteractionIndicatorsTwo?: OPTIONAL<ServiceInteractionIndicatorsTwo>,
         /**
          * @summary `callSegmentID`.
          * @description
@@ -85,7 +85,7 @@ class ConnectToResourceArg {
          * @public
          * @readonly
          */
-        readonly callSegmentID: OPTIONAL<CallSegmentID>,
+        readonly callSegmentID?: OPTIONAL<CallSegmentID>,
         /**
          * @summary Extensions that are not recognized.
          * @public

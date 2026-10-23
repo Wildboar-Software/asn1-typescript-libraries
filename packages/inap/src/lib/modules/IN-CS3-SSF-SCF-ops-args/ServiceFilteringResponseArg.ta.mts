@@ -69,8 +69,8 @@ class ServiceFilteringResponseArg {
     constructor (
         countersValue: CountersValue,
         filteringCriteria: FilteringCriteria,
-        extensions: OPTIONAL<Extensions>,
-        responseCondition: OPTIONAL<ResponseCondition>,
+        extensions?: OPTIONAL<Extensions>,
+        responseCondition?: OPTIONAL<ResponseCondition>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.countersValue = countersValue;

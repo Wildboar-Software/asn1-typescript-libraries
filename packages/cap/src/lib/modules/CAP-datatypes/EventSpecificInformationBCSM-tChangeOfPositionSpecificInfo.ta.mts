@@ -36,8 +36,8 @@ export class EventSpecificInformationBCSM_tChangeOfPositionSpecificInfo {
          * @public
          * @readonly
          */
-        readonly locationInformation: OPTIONAL<LocationInformation>,
-        readonly metDPCriteriaList: OPTIONAL<MetDPCriteriaList>,
+        readonly locationInformation?: OPTIONAL<LocationInformation>,
+        readonly metDPCriteriaList?: OPTIONAL<MetDPCriteriaList>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}
 

@@ -216,16 +216,16 @@ class LocationData {
 
     constructor (
         locationEstimate: GeographicArea,
-        accuracyFulfilmentIndicator: OPTIONAL<AccuracyFulfilmentIndicator>,
-        ageOfLocationEstimate: OPTIONAL<AgeOfLocation>,
-        velocityEstimate: OPTIONAL<VelocityEstimate>,
-        civicAddress: OPTIONAL<CivicAddress>,
-        positioningDataList: OPTIONAL<PositioningMethodAndUsage[]>,
-        gNSSPositioningDataList: OPTIONAL<GNSSPositioningMethodAndUsage[]>,
-        eCGI: OPTIONAL<ECGI>,
-        nCGI: OPTIONAL<NCGI>,
-        altitude: OPTIONAL<Altitude>,
-        barometricPressure: OPTIONAL<BarometricPressure>,
+        accuracyFulfilmentIndicator?: OPTIONAL<AccuracyFulfilmentIndicator>,
+        ageOfLocationEstimate?: OPTIONAL<AgeOfLocation>,
+        velocityEstimate?: OPTIONAL<VelocityEstimate>,
+        civicAddress?: OPTIONAL<CivicAddress>,
+        positioningDataList?: OPTIONAL<PositioningMethodAndUsage[]>,
+        gNSSPositioningDataList?: OPTIONAL<GNSSPositioningMethodAndUsage[]>,
+        eCGI?: OPTIONAL<ECGI>,
+        nCGI?: OPTIONAL<NCGI>,
+        altitude?: OPTIONAL<Altitude>,
+        barometricPressure?: OPTIONAL<BarometricPressure>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.locationEstimate = locationEstimate;

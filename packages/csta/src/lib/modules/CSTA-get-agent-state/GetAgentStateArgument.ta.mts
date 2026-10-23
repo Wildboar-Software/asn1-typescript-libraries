@@ -54,7 +54,7 @@ class GetAgentStateArgument {
          * @public
          * @readonly
          */
-        readonly acdGroup: OPTIONAL<DeviceID>,
+        readonly acdGroup?: OPTIONAL<DeviceID>,
         /**
          * @summary `extensions`.
          * @description
@@ -64,7 +64,7 @@ class GetAgentStateArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

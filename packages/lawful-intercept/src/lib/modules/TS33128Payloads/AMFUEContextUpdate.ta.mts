@@ -100,8 +100,8 @@ class AMFUEContextUpdate {
 
     constructor (
         userIdentifiers: UserIdentifiers,
-        rANUEContextModification: OPTIONAL<RANUEContextModification>,
-        rANDownlinkNASTransport: OPTIONAL<RANDownlinkNASTransport>,
+        rANUEContextModification?: OPTIONAL<RANUEContextModification>,
+        rANDownlinkNASTransport?: OPTIONAL<RANDownlinkNASTransport>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.userIdentifiers = userIdentifiers;

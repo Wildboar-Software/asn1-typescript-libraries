@@ -68,7 +68,7 @@ class ErrorResult {
          * @public
          * @readonly
          */
-        readonly simaResponse: OPTIONAL<OCTET_STRING>
+        readonly simaResponse?: OPTIONAL<OCTET_STRING>
     ) {}
 
     /**

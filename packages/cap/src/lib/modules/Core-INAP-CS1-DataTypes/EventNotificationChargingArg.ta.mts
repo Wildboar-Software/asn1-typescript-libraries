@@ -51,25 +51,25 @@ class EventNotificationChargingArg {
          * @public
          * @readonly
          */
-        readonly eventSpecificInformationCharging: OPTIONAL<EventSpecificInformationCharging>,
+        readonly eventSpecificInformationCharging?: OPTIONAL<EventSpecificInformationCharging>,
         /**
          * @summary `legID`.
          * @public
          * @readonly
          */
-        readonly legID: OPTIONAL<LegID>,
+        readonly legID?: OPTIONAL<LegID>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<ExtensionField[]>,
+        readonly extensions?: OPTIONAL<ExtensionField[]>,
         /**
          * @summary `monitorMode`.
          * @public
          * @readonly
          */
-        readonly monitorMode: OPTIONAL<MonitorMode>
+        readonly monitorMode?: OPTIONAL<MonitorMode>
     ) {}
 
     /**

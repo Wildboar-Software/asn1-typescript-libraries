@@ -190,9 +190,9 @@ class SUCI {
         protectionSchemeID: ProtectionSchemeID,
         homeNetworkPublicKeyID: HomeNetworkPublicKeyID,
         schemeOutput: SchemeOutput,
-        routingIndicatorLength: OPTIONAL<INTEGER>,
-        sUPIType: OPTIONAL<SUPIType>,
-        homeNetworkIdentifier: OPTIONAL<HomeNetworkIdentifier>,
+        routingIndicatorLength?: OPTIONAL<INTEGER>,
+        sUPIType?: OPTIONAL<SUPIType>,
+        homeNetworkIdentifier?: OPTIONAL<HomeNetworkIdentifier>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.mCC = mCC;

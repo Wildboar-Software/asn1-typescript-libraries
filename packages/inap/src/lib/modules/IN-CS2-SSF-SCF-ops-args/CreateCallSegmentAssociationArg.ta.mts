@@ -42,7 +42,7 @@ class CreateCallSegmentAssociationArg {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        extensions: OPTIONAL<ExtensionField[]>,
+        extensions?: OPTIONAL<ExtensionField[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.extensions = extensions;

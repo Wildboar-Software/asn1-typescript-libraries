@@ -181,8 +181,8 @@ class DpSpecificCommonParameters {
         serviceProfileIdentifier: OPTIONAL<ServiceProfileIdentifier>,
         terminalType: OPTIONAL<TerminalType>,
         extensions: ExtensionField[],
-        chargeNumber: OPTIONAL<ChargeNumber>,
-        servingAreaID: OPTIONAL<ServingAreaID>,
+        chargeNumber?: OPTIONAL<ChargeNumber>,
+        servingAreaID?: OPTIONAL<ServingAreaID>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.serviceAddressInformation = serviceAddressInformation;

@@ -127,10 +127,10 @@ class Close {
     constructor (
         referenceId: OPTIONAL<ReferenceId>,
         closeReason: CloseReason,
-        diagnosticInformation: OPTIONAL<InternationalString>,
-        resourceReportFormat: OPTIONAL<ResourceReportId>,
-        resourceReport: OPTIONAL<ResourceReport>,
-        otherInfo: OPTIONAL<OtherInformation>
+        diagnosticInformation?: OPTIONAL<InternationalString>,
+        resourceReportFormat?: OPTIONAL<ResourceReportId>,
+        resourceReport?: OPTIONAL<ResourceReport>,
+        otherInfo?: OPTIONAL<OtherInformation>
     ) {
         this.referenceId = referenceId;
         this.closeReason = closeReason;

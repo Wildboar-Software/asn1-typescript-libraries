@@ -68,7 +68,7 @@ class GSMLocation_utmRefCoordinates {
 
     constructor (
         utmref_string: PrintableString,
-        mapDatum: OPTIONAL<MapDatum>,
+        mapDatum?: OPTIONAL<MapDatum>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.utmref_string = utmref_string;

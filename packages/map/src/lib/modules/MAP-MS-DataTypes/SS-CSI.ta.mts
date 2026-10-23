@@ -56,7 +56,7 @@ class SS_CSI {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `notificationToCSE`.
          * @description
@@ -69,7 +69,7 @@ class SS_CSI {
          * @public
          * @readonly
          */
-        readonly notificationToCSE: OPTIONAL<NULL>,
+        readonly notificationToCSE?: OPTIONAL<NULL>,
         /**
          * @summary `csi_Active`.
          * @description
@@ -82,7 +82,7 @@ class SS_CSI {
          * @public
          * @readonly
          */
-        readonly csi_Active: OPTIONAL<NULL>,
+        readonly csi_Active?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -61,8 +61,8 @@ class AoCInformation {
     readonly aoCCostInformation: OPTIONAL<AoCCostInformation>;
 
     constructor (
-        tariffInformation: OPTIONAL<TariffInformation>,
-        aoCCostInformation: OPTIONAL<AoCCostInformation>
+        tariffInformation?: OPTIONAL<TariffInformation>,
+        aoCCostInformation?: OPTIONAL<AoCCostInformation>
     ) {
         this.tariffInformation = tariffInformation;
         this.aoCCostInformation = aoCCostInformation;

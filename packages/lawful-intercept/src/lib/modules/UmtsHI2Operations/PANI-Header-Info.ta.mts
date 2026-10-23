@@ -109,10 +109,10 @@ class PANI_Header_Info {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        access_Type: OPTIONAL<OCTET_STRING>,
-        access_Class: OPTIONAL<OCTET_STRING>,
-        network_Provided: OPTIONAL<NULL>,
-        pANI_Location: OPTIONAL<PANI_Location>,
+        access_Type?: OPTIONAL<OCTET_STRING>,
+        access_Class?: OPTIONAL<OCTET_STRING>,
+        network_Provided?: OPTIONAL<NULL>,
+        pANI_Location?: OPTIONAL<PANI_Location>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.access_Type = access_Type;

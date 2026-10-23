@@ -45,7 +45,7 @@ class MessageID_text {
          * @public
          * @readonly
          */
-        readonly attributes: OPTIONAL<OCTET_STRING>
+        readonly attributes?: OPTIONAL<OCTET_STRING>
     ) {}
 
     /**

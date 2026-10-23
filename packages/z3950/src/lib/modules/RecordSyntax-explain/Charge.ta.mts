@@ -64,8 +64,8 @@ class Charge {
 
     constructor (
         cost: IntUnit,
-        perWhat: OPTIONAL<Unit>,
-        text: OPTIONAL<HumanString>
+        perWhat?: OPTIONAL<Unit>,
+        text?: OPTIONAL<HumanString>
     ) {
         this.cost = cost;
         this.perWhat = perWhat;

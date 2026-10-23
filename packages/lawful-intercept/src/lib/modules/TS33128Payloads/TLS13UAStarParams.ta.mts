@@ -344,7 +344,7 @@ class TLS13UAStarParams {
         serverApplicationTrafficSecret: OCTET_STRING,
         exporterMasterSecret: OCTET_STRING,
         resumptionMasterSecret: OCTET_STRING,
-        tLSResumptionTickets: OPTIONAL<TLS13NewSessionTicket[]>,
+        tLSResumptionTickets?: OPTIONAL<TLS13NewSessionTicket[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.offeredPSKs = offeredPSKs;

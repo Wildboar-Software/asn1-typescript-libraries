@@ -232,7 +232,7 @@ class GetLogicalDeviceInformationResult {
          * @public
          * @readonly
          */
-        readonly appearanceList: OPTIONAL<IA5String[]>,
+        readonly appearanceList?: OPTIONAL<IA5String[]>,
         /**
          * @summary `otherPhysicalDeviceList`.
          * @description
@@ -243,7 +243,7 @@ class GetLogicalDeviceInformationResult {
          * @public
          * @readonly
          */
-        readonly otherPhysicalDeviceList: OPTIONAL<DeviceID[]>,
+        readonly otherPhysicalDeviceList?: OPTIONAL<DeviceID[]>,
         /**
          * @summary `miscMonitorCaps`.
          * @description
@@ -253,7 +253,7 @@ class GetLogicalDeviceInformationResult {
          * @public
          * @readonly
          */
-        readonly miscMonitorCaps: OPTIONAL<MiscMonitorCaps>,
+        readonly miscMonitorCaps?: OPTIONAL<MiscMonitorCaps>,
         /**
          * @summary `associatedGroupList`.
          * @description
@@ -262,7 +262,7 @@ class GetLogicalDeviceInformationResult {
          * @public
          * @readonly
          */
-        readonly associatedGroupList: OPTIONAL<DeviceID[]>,
+        readonly associatedGroupList?: OPTIONAL<DeviceID[]>,
         /**
          * @summary `maxCallbacks`.
          * @description
@@ -271,7 +271,7 @@ class GetLogicalDeviceInformationResult {
          * @public
          * @readonly
          */
-        readonly maxCallbacks: OPTIONAL<INTEGER>,
+        readonly maxCallbacks?: OPTIONAL<INTEGER>,
         /**
          * @summary `maxAutoAnswerRings`.
          * @description
@@ -280,7 +280,7 @@ class GetLogicalDeviceInformationResult {
          * @public
          * @readonly
          */
-        readonly maxAutoAnswerRings: OPTIONAL<INTEGER>,
+        readonly maxAutoAnswerRings?: OPTIONAL<INTEGER>,
         /**
          * @summary `maxActiveCalls`.
          * @description
@@ -289,7 +289,7 @@ class GetLogicalDeviceInformationResult {
          * @public
          * @readonly
          */
-        readonly maxActiveCalls: OPTIONAL<INTEGER>,
+        readonly maxActiveCalls?: OPTIONAL<INTEGER>,
         /**
          * @summary `maxHeldCalls`.
          * @description
@@ -298,7 +298,7 @@ class GetLogicalDeviceInformationResult {
          * @public
          * @readonly
          */
-        readonly maxHeldCalls: OPTIONAL<INTEGER>,
+        readonly maxHeldCalls?: OPTIONAL<INTEGER>,
         /**
          * @summary `maxFwdSettings`.
          * @description
@@ -308,7 +308,7 @@ class GetLogicalDeviceInformationResult {
          * @public
          * @readonly
          */
-        readonly maxFwdSettings: OPTIONAL<INTEGER>,
+        readonly maxFwdSettings?: OPTIONAL<INTEGER>,
         /**
          * @summary `maxDevicesInConf`.
          * @description
@@ -318,7 +318,7 @@ class GetLogicalDeviceInformationResult {
          * @public
          * @readonly
          */
-        readonly maxDevicesInConf: OPTIONAL<INTEGER>,
+        readonly maxDevicesInConf?: OPTIONAL<INTEGER>,
         /**
          * @summary `transAndConfSetup`.
          * @description
@@ -328,7 +328,7 @@ class GetLogicalDeviceInformationResult {
          * @public
          * @readonly
          */
-        readonly transAndConfSetup: OPTIONAL<TransAndConfSetup>,
+        readonly transAndConfSetup?: OPTIONAL<TransAndConfSetup>,
         /**
          * @summary `deviceOnDeviceMonitorFilter`.
          * @description
@@ -338,7 +338,7 @@ class GetLogicalDeviceInformationResult {
          * @public
          * @readonly
          */
-        readonly deviceOnDeviceMonitorFilter: OPTIONAL<MonitorFilter>,
+        readonly deviceOnDeviceMonitorFilter?: OPTIONAL<MonitorFilter>,
         /**
          * @summary `deviceOnConnectionMonitorFilter`.
          * @description
@@ -348,7 +348,7 @@ class GetLogicalDeviceInformationResult {
          * @public
          * @readonly
          */
-        readonly deviceOnConnectionMonitorFilter: OPTIONAL<MonitorFilter>,
+        readonly deviceOnConnectionMonitorFilter?: OPTIONAL<MonitorFilter>,
         /**
          * @summary `callOnDeviceMonitorFilter`.
          * @description
@@ -358,7 +358,7 @@ class GetLogicalDeviceInformationResult {
          * @public
          * @readonly
          */
-        readonly callOnDeviceMonitorFilter: OPTIONAL<MonitorFilter>,
+        readonly callOnDeviceMonitorFilter?: OPTIONAL<MonitorFilter>,
         /**
          * @summary `callOnConnectionMonitorFilter`.
          * @description
@@ -368,7 +368,7 @@ class GetLogicalDeviceInformationResult {
          * @public
          * @readonly
          */
-        readonly callOnConnectionMonitorFilter: OPTIONAL<MonitorFilter>,
+        readonly callOnConnectionMonitorFilter?: OPTIONAL<MonitorFilter>,
         /**
          * @summary `mediaClassSupport`.
          * @description
@@ -378,7 +378,7 @@ class GetLogicalDeviceInformationResult {
          * @public
          * @readonly
          */
-        readonly mediaClassSupport: OPTIONAL<MonitorMediaClass>,
+        readonly mediaClassSupport?: OPTIONAL<MonitorMediaClass>,
         /**
          * @summary `mediaServiceCapsList`.
          * @description
@@ -388,7 +388,7 @@ class GetLogicalDeviceInformationResult {
          * @public
          * @readonly
          */
-        readonly mediaServiceCapsList: OPTIONAL<MediaServiceCapsList>,
+        readonly mediaServiceCapsList?: OPTIONAL<MediaServiceCapsList>,
         /**
          * @summary `connectionRateList`.
          * @description
@@ -397,7 +397,7 @@ class GetLogicalDeviceInformationResult {
          * @public
          * @readonly
          */
-        readonly connectionRateList: OPTIONAL<ConnectionRateList>,
+        readonly connectionRateList?: OPTIONAL<ConnectionRateList>,
         /**
          * @summary `delayToleranceList`.
          * @description
@@ -406,7 +406,7 @@ class GetLogicalDeviceInformationResult {
          * @public
          * @readonly
          */
-        readonly delayToleranceList: OPTIONAL<DelayToleranceList>,
+        readonly delayToleranceList?: OPTIONAL<DelayToleranceList>,
         /**
          * @summary `numberOfChannels`.
          * @description
@@ -415,7 +415,7 @@ class GetLogicalDeviceInformationResult {
          * @public
          * @readonly
          */
-        readonly numberOfChannels: OPTIONAL<NumberOfChannels>,
+        readonly numberOfChannels?: OPTIONAL<NumberOfChannels>,
         /**
          * @summary `maxChannelBind`.
          * @description
@@ -424,7 +424,7 @@ class GetLogicalDeviceInformationResult {
          * @public
          * @readonly
          */
-        readonly maxChannelBind: OPTIONAL<MaxChannelBind>,
+        readonly maxChannelBind?: OPTIONAL<MaxChannelBind>,
         /**
          * @summary `routeingServList`.
          * @description
@@ -434,7 +434,7 @@ class GetLogicalDeviceInformationResult {
          * @public
          * @readonly
          */
-        readonly routeingServList: OPTIONAL<RouteingServList>,
+        readonly routeingServList?: OPTIONAL<RouteingServList>,
         /**
          * @summary `logDevServList`.
          * @description
@@ -444,7 +444,7 @@ class GetLogicalDeviceInformationResult {
          * @public
          * @readonly
          */
-        readonly logDevServList: OPTIONAL<LogDevServList>,
+        readonly logDevServList?: OPTIONAL<LogDevServList>,
         /**
          * @summary `logDevEvtsList`.
          * @description
@@ -454,7 +454,7 @@ class GetLogicalDeviceInformationResult {
          * @public
          * @readonly
          */
-        readonly logDevEvtsList: OPTIONAL<LogDevEvtsList>,
+        readonly logDevEvtsList?: OPTIONAL<LogDevEvtsList>,
         /**
          * @summary `deviceMaintEvtsList`.
          * @description
@@ -463,7 +463,7 @@ class GetLogicalDeviceInformationResult {
          * @public
          * @readonly
          */
-        readonly deviceMaintEvtsList: OPTIONAL<DeviceMaintEvtsList>,
+        readonly deviceMaintEvtsList?: OPTIONAL<DeviceMaintEvtsList>,
         /**
          * @summary `extensions`.
          * @description
@@ -473,7 +473,7 @@ class GetLogicalDeviceInformationResult {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

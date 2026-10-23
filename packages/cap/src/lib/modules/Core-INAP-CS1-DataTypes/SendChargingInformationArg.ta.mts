@@ -53,7 +53,7 @@ class SendChargingInformationArg {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<ExtensionField[]>
+        readonly extensions?: OPTIONAL<ExtensionField[]>
     ) {}
 
     /**

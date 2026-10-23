@@ -52,7 +52,7 @@ class DataParameters {
          * @public
          * @readonly
          */
-        readonly bit_string: OPTIONAL<INTEGER>,
+        readonly bit_string?: OPTIONAL<INTEGER>,
         /**
          * @summary `integer`.
          * @description
@@ -62,7 +62,7 @@ class DataParameters {
          * @public
          * @readonly
          */
-        readonly integer: OPTIONAL<INTEGER>,
+        readonly integer?: OPTIONAL<INTEGER>,
         /**
          * @summary `unsigned`.
          * @description
@@ -72,31 +72,31 @@ class DataParameters {
          * @public
          * @readonly
          */
-        readonly unsigned: OPTIONAL<INTEGER>,
+        readonly unsigned?: OPTIONAL<INTEGER>,
         /**
          * @summary `floating_point`.
          * @public
          * @readonly
          */
-        readonly floating_point: OPTIONAL<DataParameters_floating_point>,
+        readonly floating_point?: OPTIONAL<DataParameters_floating_point>,
         /**
          * @summary `octet_string`.
          * @public
          * @readonly
          */
-        readonly octet_string: OPTIONAL<INTEGER>,
+        readonly octet_string?: OPTIONAL<INTEGER>,
         /**
          * @summary `visible_string`.
          * @public
          * @readonly
          */
-        readonly visible_string: OPTIONAL<INTEGER>,
+        readonly visible_string?: OPTIONAL<INTEGER>,
         /**
          * @summary `binary_time`.
          * @public
          * @readonly
          */
-        readonly binary_time: OPTIONAL<BOOLEAN>,
+        readonly binary_time?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `bcd`.
          * @description
@@ -106,7 +106,7 @@ class DataParameters {
          * @public
          * @readonly
          */
-        readonly bcd: OPTIONAL<INTEGER>,
+        readonly bcd?: OPTIONAL<INTEGER>,
         /**
          * @summary `mmsString`.
          * @description
@@ -116,7 +116,7 @@ class DataParameters {
          * @public
          * @readonly
          */
-        readonly mmsString: OPTIONAL<INTEGER>
+        readonly mmsString?: OPTIONAL<INTEGER>
     ) {}
 
     /**

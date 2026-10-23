@@ -39,7 +39,7 @@ class MO_ForwardSM_Res {
          * @public
          * @readonly
          */
-        readonly sm_RP_UI: OPTIONAL<SignalInfo>,
+        readonly sm_RP_UI?: OPTIONAL<SignalInfo>,
         /**
          * @summary `extensionContainer`.
          * @description
@@ -49,7 +49,7 @@ class MO_ForwardSM_Res {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

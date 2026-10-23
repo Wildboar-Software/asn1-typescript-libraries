@@ -76,9 +76,9 @@ class CategoryInfo {
 
     constructor (
         category: InternationalString,
-        originalCategory: OPTIONAL<InternationalString>,
-        description: OPTIONAL<HumanString>,
-        asn1Module: OPTIONAL<InternationalString>
+        originalCategory?: OPTIONAL<InternationalString>,
+        description?: OPTIONAL<HumanString>,
+        asn1Module?: OPTIONAL<InternationalString>
     ) {
         this.category = category;
         this.originalCategory = originalCategory;

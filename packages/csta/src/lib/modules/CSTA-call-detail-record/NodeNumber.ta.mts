@@ -44,7 +44,7 @@ class NodeNumber {
          * @public
          * @readonly
          */
-        readonly area0: OPTIONAL<INTEGER>,
+        readonly area0?: OPTIONAL<INTEGER>,
         /**
          * @summary `area1`.
          * @description
@@ -54,7 +54,7 @@ class NodeNumber {
          * @public
          * @readonly
          */
-        readonly area1: OPTIONAL<INTEGER>,
+        readonly area1?: OPTIONAL<INTEGER>,
         /**
          * @summary `area2`.
          * @description
@@ -64,7 +64,7 @@ class NodeNumber {
          * @public
          * @readonly
          */
-        readonly area2: OPTIONAL<INTEGER>
+        readonly area2?: OPTIONAL<INTEGER>
     ) {}
 
     /**

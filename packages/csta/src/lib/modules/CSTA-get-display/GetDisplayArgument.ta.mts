@@ -58,7 +58,7 @@ class GetDisplayArgument {
          * @public
          * @readonly
          */
-        readonly display: OPTIONAL<DisplayID>,
+        readonly display?: OPTIONAL<DisplayID>,
         /**
          * @summary `extensions`.
          * @description
@@ -68,7 +68,7 @@ class GetDisplayArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

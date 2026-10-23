@@ -90,7 +90,7 @@ class NetworkFacilityExtension {
         sourceEntity: EntityType,
         sourceEntityAddress: OPTIONAL<AddressInformation>,
         destinationEntity: EntityType,
-        destinationEntityAddress: OPTIONAL<AddressInformation>
+        destinationEntityAddress?: OPTIONAL<AddressInformation>
     ) {
         this.sourceEntity = sourceEntity;
         this.sourceEntityAddress = sourceEntityAddress;

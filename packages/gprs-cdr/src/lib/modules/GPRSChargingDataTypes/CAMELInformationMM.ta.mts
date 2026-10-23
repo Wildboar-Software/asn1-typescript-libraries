@@ -146,13 +146,13 @@ class CAMELInformationMM {
     readonly fFDAppendIndicator: OPTIONAL<BOOLEAN>;
 
     constructor (
-        sCFAddress: OPTIONAL<OCTET_STRING>,
-        serviceKey: OPTIONAL<INTEGER>,
-        defaultTransactionHandling: OPTIONAL<DefaultTransactionHandling>,
-        numberOfDPEncountered: OPTIONAL<INTEGER>,
-        levelOfCAMELService: OPTIONAL<CAMELInformationMM_levelOfCAMELService>,
-        freeFormatData: OPTIONAL<OCTET_STRING>,
-        fFDAppendIndicator: OPTIONAL<BOOLEAN>
+        sCFAddress?: OPTIONAL<OCTET_STRING>,
+        serviceKey?: OPTIONAL<INTEGER>,
+        defaultTransactionHandling?: OPTIONAL<DefaultTransactionHandling>,
+        numberOfDPEncountered?: OPTIONAL<INTEGER>,
+        levelOfCAMELService?: OPTIONAL<CAMELInformationMM_levelOfCAMELService>,
+        freeFormatData?: OPTIONAL<OCTET_STRING>,
+        fFDAppendIndicator?: OPTIONAL<BOOLEAN>
     ) {
         this.sCFAddress = sCFAddress;
         this.serviceKey = serviceKey;

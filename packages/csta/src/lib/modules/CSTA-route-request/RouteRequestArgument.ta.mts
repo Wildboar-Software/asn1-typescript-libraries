@@ -127,7 +127,7 @@ class RouteRequestArgument {
          * @public
          * @readonly
          */
-        readonly callingDevice: OPTIONAL<CallingDeviceID>,
+        readonly callingDevice?: OPTIONAL<CallingDeviceID>,
         /**
          * @summary `routeingDevice`.
          * @description
@@ -136,7 +136,7 @@ class RouteRequestArgument {
          * @public
          * @readonly
          */
-        readonly routeingDevice: OPTIONAL<SubjectDeviceID>,
+        readonly routeingDevice?: OPTIONAL<SubjectDeviceID>,
         /**
          * @summary `routedCall`.
          * @description
@@ -145,7 +145,7 @@ class RouteRequestArgument {
          * @public
          * @readonly
          */
-        readonly routedCall: OPTIONAL<ConnectionID>,
+        readonly routedCall?: OPTIONAL<ConnectionID>,
         /**
          * @summary `routeSelAlgorithm`.
          * @description
@@ -154,7 +154,7 @@ class RouteRequestArgument {
          * @public
          * @readonly
          */
-        readonly routeSelAlgorithm: OPTIONAL<SelectValue>,
+        readonly routeSelAlgorithm?: OPTIONAL<SelectValue>,
         /**
          * @summary `associatedCallingDevice`.
          * @description
@@ -163,7 +163,7 @@ class RouteRequestArgument {
          * @public
          * @readonly
          */
-        readonly associatedCallingDevice: OPTIONAL<AssociatedCallingDeviceID>,
+        readonly associatedCallingDevice?: OPTIONAL<AssociatedCallingDeviceID>,
         /**
          * @summary `associatedCalledDevice`.
          * @description
@@ -172,7 +172,7 @@ class RouteRequestArgument {
          * @public
          * @readonly
          */
-        readonly associatedCalledDevice: OPTIONAL<AssociatedCalledDeviceID>,
+        readonly associatedCalledDevice?: OPTIONAL<AssociatedCalledDeviceID>,
         /**
          * @summary `priority`.
          * @description
@@ -181,7 +181,7 @@ class RouteRequestArgument {
          * @public
          * @readonly
          */
-        readonly priority: OPTIONAL<BOOLEAN>,
+        readonly priority?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `replyTimeout`.
          * @description
@@ -190,7 +190,7 @@ class RouteRequestArgument {
          * @public
          * @readonly
          */
-        readonly replyTimeout: OPTIONAL<INTEGER>,
+        readonly replyTimeout?: OPTIONAL<INTEGER>,
         /**
          * @summary `correlatorData`.
          * @description
@@ -199,7 +199,7 @@ class RouteRequestArgument {
          * @public
          * @readonly
          */
-        readonly correlatorData: OPTIONAL<CorrelatorData>,
+        readonly correlatorData?: OPTIONAL<CorrelatorData>,
         /**
          * @summary `mediaCallCharacteristics`.
          * @description
@@ -208,7 +208,7 @@ class RouteRequestArgument {
          * @public
          * @readonly
          */
-        readonly mediaCallCharacteristics: OPTIONAL<MediaCallCharacteristics>,
+        readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
         /**
          * @summary `callCharacteristics`.
          * @description
@@ -217,7 +217,7 @@ class RouteRequestArgument {
          * @public
          * @readonly
          */
-        readonly callCharacteristics: OPTIONAL<CallCharacteristics>,
+        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
         /**
          * @summary `routeCallInfo`.
          * @description
@@ -226,7 +226,7 @@ class RouteRequestArgument {
          * @public
          * @readonly
          */
-        readonly routeCallInfo: OPTIONAL<ConnectionInformation>,
+        readonly routeCallInfo?: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `callLinkageData`.
          * @description
@@ -235,7 +235,7 @@ class RouteRequestArgument {
          * @public
          * @readonly
          */
-        readonly callLinkageData: OPTIONAL<CallLinkageData>,
+        readonly callLinkageData?: OPTIONAL<CallLinkageData>,
         /**
          * @summary `subjectOfCall`.
          * @description
@@ -244,7 +244,7 @@ class RouteRequestArgument {
          * @public
          * @readonly
          */
-        readonly subjectOfCall: OPTIONAL<SubjectOfCall>,
+        readonly subjectOfCall?: OPTIONAL<SubjectOfCall>,
         /**
          * @summary `messageInfo`.
          * @description
@@ -253,7 +253,7 @@ class RouteRequestArgument {
          * @public
          * @readonly
          */
-        readonly messageInfo: OPTIONAL<MessageInfo>,
+        readonly messageInfo?: OPTIONAL<MessageInfo>,
         /**
          * @summary `languagePreferences`.
          * @description
@@ -262,7 +262,7 @@ class RouteRequestArgument {
          * @public
          * @readonly
          */
-        readonly languagePreferences: OPTIONAL<LanguagePreferences>,
+        readonly languagePreferences?: OPTIONAL<LanguagePreferences>,
         /**
          * @summary `deviceHistory`.
          * @description
@@ -271,7 +271,7 @@ class RouteRequestArgument {
          * @public
          * @readonly
          */
-        readonly deviceHistory: OPTIONAL<DeviceHistory>,
+        readonly deviceHistory?: OPTIONAL<DeviceHistory>,
         /**
          * @summary `extensions`.
          * @description
@@ -281,7 +281,7 @@ class RouteRequestArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

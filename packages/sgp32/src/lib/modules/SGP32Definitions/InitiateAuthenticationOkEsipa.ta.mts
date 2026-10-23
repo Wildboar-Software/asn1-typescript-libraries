@@ -111,7 +111,7 @@ class InitiateAuthenticationOkEsipa {
          * @public
          * @readonly
          */
-        readonly matchingId: OPTIONAL<UTF8String>,
+        readonly matchingId?: OPTIONAL<UTF8String>,
         /**
          * @summary `ctxParams1`.
          * @description
@@ -123,7 +123,7 @@ class InitiateAuthenticationOkEsipa {
          * @public
          * @readonly
          */
-        readonly ctxParams1: OPTIONAL<CtxParams1>
+        readonly ctxParams1?: OPTIONAL<CtxParams1>
     ) {}
 
     /**

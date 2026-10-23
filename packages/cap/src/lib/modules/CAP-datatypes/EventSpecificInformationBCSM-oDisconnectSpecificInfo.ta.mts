@@ -34,7 +34,7 @@ export class EventSpecificInformationBCSM_oDisconnectSpecificInfo {
          * @public
          * @readonly
          */
-        readonly releaseCause: OPTIONAL<Cause>,
+        readonly releaseCause?: OPTIONAL<Cause>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}
 

@@ -96,8 +96,8 @@ class ChangeOfService {
         basicService: BasicService,
         transparencyInd: OPTIONAL<TransparencyInd>,
         changeTime: OCTET_STRING,
-        rateIndication: OPTIONAL<OCTET_STRING>,
-        fnur: OPTIONAL<Fnur>
+        rateIndication?: OPTIONAL<OCTET_STRING>,
+        fnur?: OPTIONAL<Fnur>
     ) {
         this.basicService = basicService;
         this.transparencyInd = transparencyInd;

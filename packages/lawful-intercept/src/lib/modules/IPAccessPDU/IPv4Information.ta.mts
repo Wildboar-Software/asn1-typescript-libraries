@@ -191,7 +191,7 @@ class IPv4Information {
         headerChecksum: OPTIONAL<OCTET_STRING>,
         source: OCTET_STRING,
         destination: OCTET_STRING,
-        options: OPTIONAL<OCTET_STRING>
+        options?: OPTIONAL<OCTET_STRING>
     ) {
         this.headerLength = headerLength;
         this.typeOfService = typeOfService;

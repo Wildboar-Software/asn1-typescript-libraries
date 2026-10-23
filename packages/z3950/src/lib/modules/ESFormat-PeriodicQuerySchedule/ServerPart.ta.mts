@@ -187,12 +187,12 @@ class ServerPart {
         databaseNames: OPTIONAL<InternationalString[]>,
         actualQuery: Query,
         serverStatedPeriod: Period,
-        expiration: OPTIONAL<GeneralizedTime>,
-        resultSetPackage: OPTIONAL<InternationalString>,
-        lastQueryTime: OPTIONAL<GeneralizedTime>,
-        lastResultNumber: OPTIONAL<INTEGER>,
-        numberSinceModify: OPTIONAL<INTEGER>,
-        additionalSearchInfo: OPTIONAL<OtherInformation>
+        expiration?: OPTIONAL<GeneralizedTime>,
+        resultSetPackage?: OPTIONAL<InternationalString>,
+        lastQueryTime?: OPTIONAL<GeneralizedTime>,
+        lastResultNumber?: OPTIONAL<INTEGER>,
+        numberSinceModify?: OPTIONAL<INTEGER>,
+        additionalSearchInfo?: OPTIONAL<OtherInformation>
     ) {
         this.databaseNames = databaseNames;
         this.actualQuery = actualQuery;

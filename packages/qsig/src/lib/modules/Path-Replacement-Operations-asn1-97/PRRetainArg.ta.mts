@@ -71,7 +71,7 @@ class PRRetainArg {
     constructor (
         callIdentity: CallIdentity,
         rerouteingNumber: PartyNumber,
-        extension: OPTIONAL<PRRetainArg_extension>
+        extension?: OPTIONAL<PRRetainArg_extension>
     ) {
         this.callIdentity = callIdentity;
         this.rerouteingNumber = rerouteingNumber;

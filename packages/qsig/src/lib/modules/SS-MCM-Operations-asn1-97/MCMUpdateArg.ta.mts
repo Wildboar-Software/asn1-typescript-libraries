@@ -101,8 +101,8 @@ class MCMUpdateArg {
         partyInfo: PartyInfo,
         messageType: MessageType,
         updateInfo: UpdateInfo,
-        moreInfoFollows: OPTIONAL<BOOLEAN>,
-        extensions: OPTIONAL<MCMExtensions>,
+        moreInfoFollows?: OPTIONAL<BOOLEAN>,
+        extensions?: OPTIONAL<MCMExtensions>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.partyInfo = partyInfo;

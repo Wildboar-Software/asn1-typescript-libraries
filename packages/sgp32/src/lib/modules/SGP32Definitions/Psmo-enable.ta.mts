@@ -61,7 +61,7 @@ class Psmo_enable {
          * @public
          * @readonly
          */
-        readonly rollbackFlag: OPTIONAL<NULL>
+        readonly rollbackFlag?: OPTIONAL<NULL>
     ) {}
 
     /**

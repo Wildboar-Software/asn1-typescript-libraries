@@ -39,13 +39,13 @@ class NotificationInformation_callReleaseSpecificInfo {
          * @public
          * @readonly
          */
-        readonly releaseCause: OPTIONAL<Cause>,
+        readonly releaseCause?: OPTIONAL<Cause>,
         /**
          * @summary `timeStamp`.
          * @public
          * @readonly
          */
-        readonly timeStamp: OPTIONAL<DateAndTime>,
+        readonly timeStamp?: OPTIONAL<DateAndTime>,
         /**
          * @summary Extensions that are not recognized.
          * @public

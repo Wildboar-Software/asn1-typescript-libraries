@@ -41,8 +41,8 @@ class SMAddressDomain {
     readonly threeGPPIMSI_MCC_MNC: OPTIONAL<OCTET_STRING>;
 
     constructor (
-        sMDomainName: OPTIONAL<GraphicString>,
-        threeGPPIMSI_MCC_MNC: OPTIONAL<OCTET_STRING>
+        sMDomainName?: OPTIONAL<GraphicString>,
+        threeGPPIMSI_MCC_MNC?: OPTIONAL<OCTET_STRING>
     ) {
         this.sMDomainName = sMDomainName;
         this.threeGPPIMSI_MCC_MNC = threeGPPIMSI_MCC_MNC;

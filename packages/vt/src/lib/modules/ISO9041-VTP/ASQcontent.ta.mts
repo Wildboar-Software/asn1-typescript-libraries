@@ -63,7 +63,7 @@ class ASQcontent {
          * @public
          * @readonly
          */
-        readonly implementation: OPTIONAL<ImplementationIdent>,
+        readonly implementation?: OPTIONAL<ImplementationIdent>,
         /**
          * @summary `functional_units`.
          * @description
@@ -74,7 +74,7 @@ class ASQcontent {
          * @public
          * @readonly
          */
-        readonly functional_units: OPTIONAL<FunctionalUnits>,
+        readonly functional_units?: OPTIONAL<FunctionalUnits>,
         /**
          * @summary `profile`.
          * @description
@@ -84,7 +84,7 @@ class ASQcontent {
          * @public
          * @readonly
          */
-        readonly profile: OPTIONAL<Profile>,
+        readonly profile?: OPTIONAL<Profile>,
         /**
          * @summary `protocol_version`.
          * @description
@@ -95,7 +95,7 @@ class ASQcontent {
          * @public
          * @readonly
          */
-        readonly protocol_version: OPTIONAL<ProtocolVersion>,
+        readonly protocol_version?: OPTIONAL<ProtocolVersion>,
         /**
          * @summary `either`.
          * @description
@@ -105,7 +105,7 @@ class ASQcontent {
          * @public
          * @readonly
          */
-        readonly either: OPTIONAL<ASQcontent_either>
+        readonly either?: OPTIONAL<ASQcontent_either>
     ) {}
 
     /**

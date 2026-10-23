@@ -88,7 +88,7 @@ class NormalizedLocationData {
 
     constructor (
         geocodedLocationData: GeocodedLocationData,
-        supplementaryLocationData: OPTIONAL<SupplementaryLocationData>,
+        supplementaryLocationData?: OPTIONAL<SupplementaryLocationData>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.geocodedLocationData = geocodedLocationData;

@@ -76,7 +76,7 @@ class TLS13NewSessionTicket {
         ticketAgeAdd: INTEGER,
         ticketNonce: OCTET_STRING,
         ticket: OCTET_STRING,
-        extensions: OPTIONAL<TLS13Extension[]>,
+        extensions?: OPTIONAL<TLS13Extension[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.ticketLifeTime = ticketLifeTime;

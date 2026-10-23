@@ -163,12 +163,12 @@ class FourGPositioningInfo {
 
     constructor (
         locationData: LocationData,
-        cGI: OPTIONAL<CGI>,
-        sAI: OPTIONAL<SAI>,
-        eSMLCCellInfo: OPTIONAL<ESMLCCellInfo>,
-        gERANPositioningInfo: OPTIONAL<GERANPositioningInfo>,
-        uTRANPositioningInfo: OPTIONAL<UTRANPositioningInfo>,
-        rawMLPResponse: OPTIONAL<RawMLPResponse>,
+        cGI?: OPTIONAL<CGI>,
+        sAI?: OPTIONAL<SAI>,
+        eSMLCCellInfo?: OPTIONAL<ESMLCCellInfo>,
+        gERANPositioningInfo?: OPTIONAL<GERANPositioningInfo>,
+        uTRANPositioningInfo?: OPTIONAL<UTRANPositioningInfo>,
+        rawMLPResponse?: OPTIONAL<RawMLPResponse>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.locationData = locationData;

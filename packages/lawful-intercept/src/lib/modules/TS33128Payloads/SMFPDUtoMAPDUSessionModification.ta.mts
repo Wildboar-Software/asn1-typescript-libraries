@@ -395,12 +395,12 @@ class SMFPDUtoMAPDUSessionModification {
         pDUSessionID: PDUSessionID,
         requestIndication: RequestIndication,
         aTSSSContainer: ATSSSContainer,
-        uEEndpoint: OPTIONAL<UEEndpointAddress>,
-        servingNetwork: OPTIONAL<SMFServingNetwork>,
-        handoverState: OPTIONAL<HandoverState>,
-        gTPTunnelInfo: OPTIONAL<GTPTunnelInfo>,
-        ePSPDNConnectionModification: OPTIONAL<EPSPDNConnectionModification>,
-        alternativeNSSAI: OPTIONAL<AlternativeNSSAIList>,
+        uEEndpoint?: OPTIONAL<UEEndpointAddress>,
+        servingNetwork?: OPTIONAL<SMFServingNetwork>,
+        handoverState?: OPTIONAL<HandoverState>,
+        gTPTunnelInfo?: OPTIONAL<GTPTunnelInfo>,
+        ePSPDNConnectionModification?: OPTIONAL<EPSPDNConnectionModification>,
+        alternativeNSSAI?: OPTIONAL<AlternativeNSSAIList>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.sUPI = sUPI;

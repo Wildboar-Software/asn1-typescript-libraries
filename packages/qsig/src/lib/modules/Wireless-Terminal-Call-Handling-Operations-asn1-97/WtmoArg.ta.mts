@@ -70,9 +70,9 @@ class WtmoArg {
     readonly extension: OPTIONAL<WtmoArg_extension>;
 
     constructor (
-        destinationNumber: OPTIONAL<PartyNumber>,
-        sendingComplete: OPTIONAL<NULL>,
-        extension: OPTIONAL<WtmoArg_extension>
+        destinationNumber?: OPTIONAL<PartyNumber>,
+        sendingComplete?: OPTIONAL<NULL>,
+        extension?: OPTIONAL<WtmoArg_extension>
     ) {
         this.destinationNumber = destinationNumber;
         this.sendingComplete = sendingComplete;

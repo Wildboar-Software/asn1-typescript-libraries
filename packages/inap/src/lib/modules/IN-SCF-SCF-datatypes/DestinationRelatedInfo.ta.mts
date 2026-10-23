@@ -87,13 +87,13 @@ class DestinationRelatedInfo {
     readonly callingPartysCategory: OPTIONAL<CallingPartysCategory>;
 
     constructor (
-        calledPartyNumber: OPTIONAL<DestinationRoutingAddress>,
-        highLayerCompatibility: OPTIONAL<HighLayerCompatibility>,
-        supplementaryServices: OPTIONAL<SupplementaryServices>,
-        preferredLanguage: OPTIONAL<Language>,
-        carrier: OPTIONAL<Carrier>,
-        callingPartyNumber: OPTIONAL<CallingPartyNumber>,
-        callingPartysCategory: OPTIONAL<CallingPartysCategory>
+        calledPartyNumber?: OPTIONAL<DestinationRoutingAddress>,
+        highLayerCompatibility?: OPTIONAL<HighLayerCompatibility>,
+        supplementaryServices?: OPTIONAL<SupplementaryServices>,
+        preferredLanguage?: OPTIONAL<Language>,
+        carrier?: OPTIONAL<Carrier>,
+        callingPartyNumber?: OPTIONAL<CallingPartyNumber>,
+        callingPartysCategory?: OPTIONAL<CallingPartysCategory>
     ) {
         this.calledPartyNumber = calledPartyNumber;
         this.highLayerCompatibility = highLayerCompatibility;

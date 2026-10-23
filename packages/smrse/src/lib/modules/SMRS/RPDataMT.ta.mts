@@ -130,7 +130,7 @@ class RPDataMT {
          * @public
          * @readonly
          */
-        readonly mt_origVMSCAddr: OPTIONAL<SMS_Address>,
+        readonly mt_origVMSCAddr?: OPTIONAL<SMS_Address>,
         /**
          * @summary `mt_tariffClass`.
          * @description
@@ -141,7 +141,7 @@ class RPDataMT {
          * @public
          * @readonly
          */
-        readonly mt_tariffClass: OPTIONAL<SM_TC>,
+        readonly mt_tariffClass?: OPTIONAL<SM_TC>,
         /**
          * @summary Extensions that are not recognized.
          * @description

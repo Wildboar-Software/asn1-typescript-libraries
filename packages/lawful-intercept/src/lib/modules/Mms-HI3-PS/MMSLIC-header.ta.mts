@@ -170,8 +170,8 @@ class MMSLIC_header {
         t_PDU_direction: TPDU_direction,
         mMSVersion: INTEGER,
         transactionID: UTF8String,
-        national_HI3_ASN1parameters: OPTIONAL<National_HI3_ASN1parameters>,
-        ice_type: OPTIONAL<ICE_type>,
+        national_HI3_ASN1parameters?: OPTIONAL<National_HI3_ASN1parameters>,
+        ice_type?: OPTIONAL<ICE_type>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.hi3MmsDomainId = hi3MmsDomainId;

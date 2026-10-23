@@ -231,7 +231,7 @@ class NetworkReachedEvent {
          * @public
          * @readonly
          */
-        readonly servicesPermitted: OPTIONAL<ServicesPermitted>,
+        readonly servicesPermitted?: OPTIONAL<ServicesPermitted>,
         /**
          * @summary `mediaCallCharacteristics`.
          * @description
@@ -241,7 +241,7 @@ class NetworkReachedEvent {
          * @public
          * @readonly
          */
-        readonly mediaCallCharacteristics: OPTIONAL<MediaCallCharacteristics>,
+        readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
         /**
          * @summary `callCharacteristics`.
          * @description
@@ -251,7 +251,7 @@ class NetworkReachedEvent {
          * @public
          * @readonly
          */
-        readonly callCharacteristics: OPTIONAL<CallCharacteristics>,
+        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
         /**
          * @summary `outboundConnectionInfo`.
          * @description
@@ -262,7 +262,7 @@ class NetworkReachedEvent {
          * @public
          * @readonly
          */
-        readonly outboundConnectionInfo: OPTIONAL<ConnectionInformation>,
+        readonly outboundConnectionInfo?: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `networkCallingDevice`.
          * @description
@@ -273,7 +273,7 @@ class NetworkReachedEvent {
          * @public
          * @readonly
          */
-        readonly networkCallingDevice: OPTIONAL<NetworkCallingDeviceID>,
+        readonly networkCallingDevice?: OPTIONAL<NetworkCallingDeviceID>,
         /**
          * @summary `networkCalledDevice`.
          * @description
@@ -284,7 +284,7 @@ class NetworkReachedEvent {
          * @public
          * @readonly
          */
-        readonly networkCalledDevice: OPTIONAL<NetworkCalledDeviceID>,
+        readonly networkCalledDevice?: OPTIONAL<NetworkCalledDeviceID>,
         /**
          * @summary `associatedCallingDevice`.
          * @description
@@ -295,7 +295,7 @@ class NetworkReachedEvent {
          * @public
          * @readonly
          */
-        readonly associatedCallingDevice: OPTIONAL<AssociatedCallingDeviceID>,
+        readonly associatedCallingDevice?: OPTIONAL<AssociatedCallingDeviceID>,
         /**
          * @summary `callLinkageData`.
          * @description
@@ -305,7 +305,7 @@ class NetworkReachedEvent {
          * @public
          * @readonly
          */
-        readonly callLinkageData: OPTIONAL<CallLinkageData>,
+        readonly callLinkageData?: OPTIONAL<CallLinkageData>,
         /**
          * @summary `languagePreferences`.
          * @description
@@ -315,7 +315,7 @@ class NetworkReachedEvent {
          * @public
          * @readonly
          */
-        readonly languagePreferences: OPTIONAL<LanguagePreferences>,
+        readonly languagePreferences?: OPTIONAL<LanguagePreferences>,
         /**
          * @summary `deviceHistory`.
          * @description
@@ -326,7 +326,7 @@ class NetworkReachedEvent {
          * @public
          * @readonly
          */
-        readonly deviceHistory: OPTIONAL<DeviceHistory>,
+        readonly deviceHistory?: OPTIONAL<DeviceHistory>,
         /**
          * @summary `locationInfo`.
          * @description
@@ -336,7 +336,7 @@ class NetworkReachedEvent {
          * @public
          * @readonly
          */
-        readonly locationInfo: OPTIONAL<LocationInfoList>,
+        readonly locationInfo?: OPTIONAL<LocationInfoList>,
         /**
          * @summary `extensions`.
          * @description
@@ -347,7 +347,7 @@ class NetworkReachedEvent {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

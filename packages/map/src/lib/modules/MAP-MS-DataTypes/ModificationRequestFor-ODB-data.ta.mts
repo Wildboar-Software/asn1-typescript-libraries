@@ -43,7 +43,7 @@ class ModificationRequestFor_ODB_data {
          * @public
          * @readonly
          */
-        readonly odb_data: OPTIONAL<ODB_Data>,
+        readonly odb_data?: OPTIONAL<ODB_Data>,
         /**
          * @summary `modifyNotificationToCSE`.
          * @description
@@ -54,13 +54,13 @@ class ModificationRequestFor_ODB_data {
          * @public
          * @readonly
          */
-        readonly modifyNotificationToCSE: OPTIONAL<ModificationInstruction>,
+        readonly modifyNotificationToCSE?: OPTIONAL<ModificationInstruction>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

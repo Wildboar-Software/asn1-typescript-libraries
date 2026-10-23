@@ -182,11 +182,11 @@ class Alarm_Indicator {
         communicationIdentifier: OPTIONAL<CommunicationIdentifier>,
         timeStamp: TimeStamp,
         alarm_information: OCTET_STRING,
-        lawfulInterceptionIdentifier: OPTIONAL<LawfulInterceptionIdentifier>,
-        threeGPP_National_HI1_ASN1parameters: OPTIONAL<ThreeGPP_National_HI1_ASN1parameters>,
-        target_Information: OPTIONAL<Target_Information>,
-        network_Identifier: OPTIONAL<Network_Identifier>,
-        network_Element_Information: OPTIONAL<OCTET_STRING>,
+        lawfulInterceptionIdentifier?: OPTIONAL<LawfulInterceptionIdentifier>,
+        threeGPP_National_HI1_ASN1parameters?: OPTIONAL<ThreeGPP_National_HI1_ASN1parameters>,
+        target_Information?: OPTIONAL<Target_Information>,
+        network_Identifier?: OPTIONAL<Network_Identifier>,
+        network_Element_Information?: OPTIONAL<OCTET_STRING>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.domainID = domainID;

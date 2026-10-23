@@ -235,10 +235,10 @@ class MMSReadReportNonLocalTarget {
         messageID: UTF8String,
         mMSDateTime: Timestamp,
         readStatus: MMSReadStatus,
-        readStatusText: OPTIONAL<MMSReadStatusText>,
-        applicID: OPTIONAL<UTF8String>,
-        replyApplicID: OPTIONAL<UTF8String>,
-        auxApplicInfo: OPTIONAL<UTF8String>,
+        readStatusText?: OPTIONAL<MMSReadStatusText>,
+        applicID?: OPTIONAL<UTF8String>,
+        replyApplicID?: OPTIONAL<UTF8String>,
+        auxApplicInfo?: OPTIONAL<UTF8String>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.version = version;

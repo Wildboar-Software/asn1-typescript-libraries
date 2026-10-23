@@ -236,16 +236,16 @@ class EUTRALocation {
     constructor (
         tAI: TAI,
         eCGI: ECGI,
-        ageOfLocationInfo: OPTIONAL<AgeOfLocation>,
-        uELocationTimestamp: OPTIONAL<Timestamp>,
-        geographicalInformation: OPTIONAL<UTF8String>,
-        geodeticInformation: OPTIONAL<UTF8String>,
-        globalNGENbID: OPTIONAL<GlobalRANNodeID>,
-        cellSiteInformation: OPTIONAL<CellSiteInformation>,
-        globalENbID: OPTIONAL<GlobalRANNodeID>,
-        ignoreTAI: OPTIONAL<BOOLEAN>,
-        ignoreECGI: OPTIONAL<BOOLEAN>,
-        cellRadioRelatedInformation: OPTIONAL<CellRadioRelatedInformation[]>,
+        ageOfLocationInfo?: OPTIONAL<AgeOfLocation>,
+        uELocationTimestamp?: OPTIONAL<Timestamp>,
+        geographicalInformation?: OPTIONAL<UTF8String>,
+        geodeticInformation?: OPTIONAL<UTF8String>,
+        globalNGENbID?: OPTIONAL<GlobalRANNodeID>,
+        cellSiteInformation?: OPTIONAL<CellSiteInformation>,
+        globalENbID?: OPTIONAL<GlobalRANNodeID>,
+        ignoreTAI?: OPTIONAL<BOOLEAN>,
+        ignoreECGI?: OPTIONAL<BOOLEAN>,
+        cellRadioRelatedInformation?: OPTIONAL<CellRadioRelatedInformation[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.tAI = tAI;

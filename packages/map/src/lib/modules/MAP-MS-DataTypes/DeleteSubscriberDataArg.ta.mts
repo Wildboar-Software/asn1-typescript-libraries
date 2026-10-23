@@ -99,7 +99,7 @@ class DeleteSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly basicServiceList: OPTIONAL<BasicServiceList>,
+        readonly basicServiceList?: OPTIONAL<BasicServiceList>,
         /**
          * @summary `ss_List`.
          * @description
@@ -111,7 +111,7 @@ class DeleteSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly ss_List: OPTIONAL<SS_List>,
+        readonly ss_List?: OPTIONAL<SS_List>,
         /**
          * @summary `roamingRestrictionDueToUnsupportedFeature`.
          * @description
@@ -124,7 +124,7 @@ class DeleteSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly roamingRestrictionDueToUnsupportedFeature: OPTIONAL<NULL>,
+        readonly roamingRestrictionDueToUnsupportedFeature?: OPTIONAL<NULL>,
         /**
          * @summary `regionalSubscriptionIdentifier`.
          * @description
@@ -137,7 +137,7 @@ class DeleteSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly regionalSubscriptionIdentifier: OPTIONAL<ZoneCode>,
+        readonly regionalSubscriptionIdentifier?: OPTIONAL<ZoneCode>,
         /**
          * @summary `vbsGroupIndication`.
          * @description
@@ -149,7 +149,7 @@ class DeleteSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly vbsGroupIndication: OPTIONAL<NULL>,
+        readonly vbsGroupIndication?: OPTIONAL<NULL>,
         /**
          * @summary `vgcsGroupIndication`.
          * @description
@@ -160,7 +160,7 @@ class DeleteSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly vgcsGroupIndication: OPTIONAL<NULL>,
+        readonly vgcsGroupIndication?: OPTIONAL<NULL>,
         /**
          * @summary `camelSubscriptionInfoWithdraw`.
          * @description
@@ -172,13 +172,13 @@ class DeleteSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly camelSubscriptionInfoWithdraw: OPTIONAL<NULL>,
+        readonly camelSubscriptionInfoWithdraw?: OPTIONAL<NULL>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `gprsSubscriptionDataWithdraw`.
          * @description
@@ -190,7 +190,7 @@ class DeleteSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly gprsSubscriptionDataWithdraw: OPTIONAL<GPRSSubscriptionDataWithdraw>,
+        readonly gprsSubscriptionDataWithdraw?: OPTIONAL<GPRSSubscriptionDataWithdraw>,
         /**
          * @summary `roamingRestrictedInSgsnDueToUnsuppportedFeature`.
          * @description
@@ -202,7 +202,7 @@ class DeleteSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly roamingRestrictedInSgsnDueToUnsuppportedFeature: OPTIONAL<NULL>,
+        readonly roamingRestrictedInSgsnDueToUnsuppportedFeature?: OPTIONAL<NULL>,
         /**
          * @summary `lsaInformationWithdraw`.
          * @description
@@ -213,7 +213,7 @@ class DeleteSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly lsaInformationWithdraw: OPTIONAL<LSAInformationWithdraw>,
+        readonly lsaInformationWithdraw?: OPTIONAL<LSAInformationWithdraw>,
         /**
          * @summary `gmlc_ListWithdraw`.
          * @description
@@ -225,7 +225,7 @@ class DeleteSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly gmlc_ListWithdraw: OPTIONAL<NULL>,
+        readonly gmlc_ListWithdraw?: OPTIONAL<NULL>,
         /**
          * @summary `istInformationWithdraw`.
          * @description
@@ -236,7 +236,7 @@ class DeleteSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly istInformationWithdraw: OPTIONAL<NULL>,
+        readonly istInformationWithdraw?: OPTIONAL<NULL>,
         /**
          * @summary `specificCSI_Withdraw`.
          * @description
@@ -250,7 +250,7 @@ class DeleteSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly specificCSI_Withdraw: OPTIONAL<SpecificCSI_Withdraw>,
+        readonly specificCSI_Withdraw?: OPTIONAL<SpecificCSI_Withdraw>,
         /**
          * @summary `chargingCharacteristicsWithdraw`.
          * @description
@@ -262,7 +262,7 @@ class DeleteSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly chargingCharacteristicsWithdraw: OPTIONAL<NULL>,
+        readonly chargingCharacteristicsWithdraw?: OPTIONAL<NULL>,
         /**
          * @summary `stn_srWithdraw`.
          * @description
@@ -273,7 +273,7 @@ class DeleteSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly stn_srWithdraw: OPTIONAL<NULL>,
+        readonly stn_srWithdraw?: OPTIONAL<NULL>,
         /**
          * @summary `epsSubscriptionDataWithdraw`.
          * @description
@@ -284,7 +284,7 @@ class DeleteSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly epsSubscriptionDataWithdraw: OPTIONAL<EPS_SubscriptionDataWithdraw>,
+        readonly epsSubscriptionDataWithdraw?: OPTIONAL<EPS_SubscriptionDataWithdraw>,
         /**
          * @summary `apn_oi_replacementWithdraw`.
          * @description
@@ -295,7 +295,7 @@ class DeleteSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly apn_oi_replacementWithdraw: OPTIONAL<NULL>,
+        readonly apn_oi_replacementWithdraw?: OPTIONAL<NULL>,
         /**
          * @summary `csg_SubscriptionDeleted`.
          * @description
@@ -307,7 +307,7 @@ class DeleteSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly csg_SubscriptionDeleted: OPTIONAL<NULL>,
+        readonly csg_SubscriptionDeleted?: OPTIONAL<NULL>,
         /**
          * @summary `subscribedPeriodicTAU_RAU_TimerWithdraw`.
          * @description
@@ -318,7 +318,7 @@ class DeleteSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly subscribedPeriodicTAU_RAU_TimerWithdraw: OPTIONAL<NULL>,
+        readonly subscribedPeriodicTAU_RAU_TimerWithdraw?: OPTIONAL<NULL>,
         /**
          * @summary `subscribedPeriodicLAU_TimerWithdraw`.
          * @description
@@ -329,7 +329,7 @@ class DeleteSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly subscribedPeriodicLAU_TimerWithdraw: OPTIONAL<NULL>,
+        readonly subscribedPeriodicLAU_TimerWithdraw?: OPTIONAL<NULL>,
         /**
          * @summary `subscribed_vsrvccWithdraw`.
          * @description
@@ -340,7 +340,7 @@ class DeleteSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly subscribed_vsrvccWithdraw: OPTIONAL<NULL>,
+        readonly subscribed_vsrvccWithdraw?: OPTIONAL<NULL>,
         /**
          * @summary `vplmn_Csg_SubscriptionDeleted`.
          * @description
@@ -352,7 +352,7 @@ class DeleteSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly vplmn_Csg_SubscriptionDeleted: OPTIONAL<NULL>,
+        readonly vplmn_Csg_SubscriptionDeleted?: OPTIONAL<NULL>,
         /**
          * @summary `additionalMSISDN_Withdraw`.
          * @description
@@ -363,7 +363,7 @@ class DeleteSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly additionalMSISDN_Withdraw: OPTIONAL<NULL>,
+        readonly additionalMSISDN_Withdraw?: OPTIONAL<NULL>,
         /**
          * @summary `cs_to_ps_SRVCC_Withdraw`.
          * @description
@@ -374,13 +374,13 @@ class DeleteSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly cs_to_ps_SRVCC_Withdraw: OPTIONAL<NULL>,
+        readonly cs_to_ps_SRVCC_Withdraw?: OPTIONAL<NULL>,
         /**
          * @summary `imsiGroupIdList_Withdraw`.
          * @public
          * @readonly
          */
-        readonly imsiGroupIdList_Withdraw: OPTIONAL<NULL>,
+        readonly imsiGroupIdList_Withdraw?: OPTIONAL<NULL>,
         /**
          * @summary `userPlaneIntegrityProtectionWithdraw`.
          * @description
@@ -391,7 +391,7 @@ class DeleteSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly userPlaneIntegrityProtectionWithdraw: OPTIONAL<NULL>,
+        readonly userPlaneIntegrityProtectionWithdraw?: OPTIONAL<NULL>,
         /**
          * @summary `dl_Buffering_Suggested_Packet_Count_Withdraw`.
          * @description
@@ -402,7 +402,7 @@ class DeleteSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly dl_Buffering_Suggested_Packet_Count_Withdraw: OPTIONAL<NULL>,
+        readonly dl_Buffering_Suggested_Packet_Count_Withdraw?: OPTIONAL<NULL>,
         /**
          * @summary `ue_UsageTypeWithdraw`.
          * @description
@@ -414,7 +414,7 @@ class DeleteSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly ue_UsageTypeWithdraw: OPTIONAL<NULL>,
+        readonly ue_UsageTypeWithdraw?: OPTIONAL<NULL>,
         /**
          * @summary `reset_idsWithdraw`.
          * @description
@@ -425,7 +425,7 @@ class DeleteSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly reset_idsWithdraw: OPTIONAL<NULL>,
+        readonly reset_idsWithdraw?: OPTIONAL<NULL>,
         /**
          * @summary `iab_OperationWithdraw`.
          * @description
@@ -436,7 +436,7 @@ class DeleteSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly iab_OperationWithdraw: OPTIONAL<NULL>,
+        readonly iab_OperationWithdraw?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @public

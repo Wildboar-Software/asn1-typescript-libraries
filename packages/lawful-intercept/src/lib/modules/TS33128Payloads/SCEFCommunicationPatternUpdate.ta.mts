@@ -259,7 +259,7 @@ class SCEFCommunicationPatternUpdate {
         trafficProfile: OPTIONAL<TrafficProfile>,
         expectedUEMovingTrajectory: OPTIONAL<UMTLocationArea5G[]>,
         sCSASID: SCSASID,
-        validityTime: OPTIONAL<Timestamp>,
+        validityTime?: OPTIONAL<Timestamp>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.mSISDN = mSISDN;

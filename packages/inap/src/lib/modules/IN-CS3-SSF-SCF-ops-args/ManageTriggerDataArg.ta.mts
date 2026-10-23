@@ -81,9 +81,9 @@ class ManageTriggerDataArg {
     constructor (
         actionIndicator: ActionIndicator,
         triggerDataIdentifier: ManageTriggerDataArg_triggerDataIdentifier,
-        registratorIdentifier: OPTIONAL<RegistratorIdentifier>,
-        extensions: OPTIONAL<Extensions>,
-        tDPIdentifier: OPTIONAL<TDPIdentifier>,
+        registratorIdentifier?: OPTIONAL<RegistratorIdentifier>,
+        extensions?: OPTIONAL<Extensions>,
+        tDPIdentifier?: OPTIONAL<TDPIdentifier>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.actionIndicator = actionIndicator;

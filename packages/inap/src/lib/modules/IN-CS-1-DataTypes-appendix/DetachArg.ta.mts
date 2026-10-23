@@ -42,8 +42,8 @@ class DetachArg {
     readonly correlationidentifier: OPTIONAL<CorrelationID>;
 
     constructor (
-        legToBeDetached: OPTIONAL<LegID>,
-        correlationidentifier: OPTIONAL<CorrelationID>
+        legToBeDetached?: OPTIONAL<LegID>,
+        correlationidentifier?: OPTIONAL<CorrelationID>
     ) {
         this.legToBeDetached = legToBeDetached;
         this.correlationidentifier = correlationidentifier;

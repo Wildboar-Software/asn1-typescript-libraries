@@ -72,13 +72,13 @@ class SGSN_Capability {
          * @public
          * @readonly
          */
-        readonly solsaSupportIndicator: OPTIONAL<NULL>,
+        readonly solsaSupportIndicator?: OPTIONAL<NULL>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `superChargerSupportedInServingNetworkEntity`.
          * @description
@@ -92,7 +92,7 @@ class SGSN_Capability {
          * @public
          * @readonly
          */
-        readonly superChargerSupportedInServingNetworkEntity: OPTIONAL<SuperChargerInfo>,
+        readonly superChargerSupportedInServingNetworkEntity?: OPTIONAL<SuperChargerInfo>,
         /**
          * @summary `gprsEnhancementsSupportIndicator`.
          * @description
@@ -105,7 +105,7 @@ class SGSN_Capability {
          * @public
          * @readonly
          */
-        readonly gprsEnhancementsSupportIndicator: OPTIONAL<NULL>,
+        readonly gprsEnhancementsSupportIndicator?: OPTIONAL<NULL>,
         /**
          * @summary `supportedCamelPhases`.
          * @description
@@ -118,7 +118,7 @@ class SGSN_Capability {
          * @public
          * @readonly
          */
-        readonly supportedCamelPhases: OPTIONAL<SupportedCamelPhases>,
+        readonly supportedCamelPhases?: OPTIONAL<SupportedCamelPhases>,
         /**
          * @summary `supportedLCS_CapabilitySets`.
          * @description
@@ -132,7 +132,7 @@ class SGSN_Capability {
          * @public
          * @readonly
          */
-        readonly supportedLCS_CapabilitySets: OPTIONAL<SupportedLCS_CapabilitySets>,
+        readonly supportedLCS_CapabilitySets?: OPTIONAL<SupportedLCS_CapabilitySets>,
         /**
          * @summary `offeredCamel4CSIs`.
          * @description
@@ -144,7 +144,7 @@ class SGSN_Capability {
          * @public
          * @readonly
          */
-        readonly offeredCamel4CSIs: OPTIONAL<OfferedCamel4CSIs>,
+        readonly offeredCamel4CSIs?: OPTIONAL<OfferedCamel4CSIs>,
         /**
          * @summary `smsCallBarringSupportIndicator`.
          * @description
@@ -156,7 +156,7 @@ class SGSN_Capability {
          * @public
          * @readonly
          */
-        readonly smsCallBarringSupportIndicator: OPTIONAL<NULL>,
+        readonly smsCallBarringSupportIndicator?: OPTIONAL<NULL>,
         /**
          * @summary `supportedRAT_TypesIndicator`.
          * @description
@@ -168,7 +168,7 @@ class SGSN_Capability {
          * @public
          * @readonly
          */
-        readonly supportedRAT_TypesIndicator: OPTIONAL<SupportedRAT_Types>,
+        readonly supportedRAT_TypesIndicator?: OPTIONAL<SupportedRAT_Types>,
         /**
          * @summary `supportedFeatures`.
          * @description
@@ -180,7 +180,7 @@ class SGSN_Capability {
          * @public
          * @readonly
          */
-        readonly supportedFeatures: OPTIONAL<SupportedFeatures>,
+        readonly supportedFeatures?: OPTIONAL<SupportedFeatures>,
         /**
          * @summary `t_adsDataRetrieval`.
          * @description
@@ -192,7 +192,7 @@ class SGSN_Capability {
          * @public
          * @readonly
          */
-        readonly t_adsDataRetrieval: OPTIONAL<NULL>,
+        readonly t_adsDataRetrieval?: OPTIONAL<NULL>,
         /**
          * @summary `homogeneousSupportOfIMSVoiceOverPSSessions`.
          * @description
@@ -205,7 +205,7 @@ class SGSN_Capability {
          * @public
          * @readonly
          */
-        readonly homogeneousSupportOfIMSVoiceOverPSSessions: OPTIONAL<BOOLEAN>,
+        readonly homogeneousSupportOfIMSVoiceOverPSSessions?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `cancellationTypeInitialAttach`.
          * @description
@@ -218,7 +218,7 @@ class SGSN_Capability {
          * @public
          * @readonly
          */
-        readonly cancellationTypeInitialAttach: OPTIONAL<NULL>,
+        readonly cancellationTypeInitialAttach?: OPTIONAL<NULL>,
         /**
          * @summary `msisdn_lessOperation_Supported`.
          * @description
@@ -230,7 +230,7 @@ class SGSN_Capability {
          * @public
          * @readonly
          */
-        readonly msisdn_lessOperation_Supported: OPTIONAL<NULL>,
+        readonly msisdn_lessOperation_Supported?: OPTIONAL<NULL>,
         /**
          * @summary `updateofHomogeneousSupportOfIMSVoiceOverPSSessions`.
          * @description
@@ -242,7 +242,7 @@ class SGSN_Capability {
          * @public
          * @readonly
          */
-        readonly updateofHomogeneousSupportOfIMSVoiceOverPSSessions: OPTIONAL<NULL>,
+        readonly updateofHomogeneousSupportOfIMSVoiceOverPSSessions?: OPTIONAL<NULL>,
         /**
          * @summary `reset_ids_Supported`.
          * @description
@@ -254,7 +254,7 @@ class SGSN_Capability {
          * @public
          * @readonly
          */
-        readonly reset_ids_Supported: OPTIONAL<NULL>,
+        readonly reset_ids_Supported?: OPTIONAL<NULL>,
         /**
          * @summary `ext_SupportedFeatures`.
          * @description
@@ -267,7 +267,7 @@ class SGSN_Capability {
          * @public
          * @readonly
          */
-        readonly ext_SupportedFeatures: OPTIONAL<Ext_SupportedFeatures>,
+        readonly ext_SupportedFeatures?: OPTIONAL<Ext_SupportedFeatures>,
         /**
          * @summary Extensions that are not recognized.
          * @public

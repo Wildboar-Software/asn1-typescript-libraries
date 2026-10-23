@@ -55,7 +55,7 @@ class IndAudPropertyParm {
          * @public
          * @readonly
          */
-        readonly propertyParms: OPTIONAL<PropertyParm>,
+        readonly propertyParms?: OPTIONAL<PropertyParm>,
         /**
          * @summary Extensions that are not recognized.
          * @description

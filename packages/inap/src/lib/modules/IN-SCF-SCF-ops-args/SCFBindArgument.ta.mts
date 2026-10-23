@@ -54,8 +54,8 @@ class SCFBindArgument {
 
     constructor (
         agreementID: AgreementID,
-        originatingScfAddress: OPTIONAL<ScfAddress>,
-        credentials: OPTIONAL<Credentials>
+        originatingScfAddress?: OPTIONAL<ScfAddress>,
+        credentials?: OPTIONAL<Credentials>
     ) {
         this.agreementID = agreementID;
         this.originatingScfAddress = originatingScfAddress;

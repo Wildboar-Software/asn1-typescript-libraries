@@ -89,8 +89,8 @@ class F1Information {
         gNBDUName: OPTIONAL<UTF8String>,
         gNBCUName: OPTIONAL<UTF8String>,
         gNBDUServedCells: RANCGI[],
-        extendedGNBDUName: OPTIONAL<UTF8String>,
-        extendedGNBCUName: OPTIONAL<UTF8String>,
+        extendedGNBDUName?: OPTIONAL<UTF8String>,
+        extendedGNBCUName?: OPTIONAL<UTF8String>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.gNBDUID = gNBDUID;

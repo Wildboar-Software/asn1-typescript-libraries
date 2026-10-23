@@ -65,7 +65,7 @@ class MonitorFilter {
          * @public
          * @readonly
          */
-        readonly callControl: OPTIONAL<CallControlEvents>,
+        readonly callControl?: OPTIONAL<CallControlEvents>,
         /**
          * @summary `callAssociated`.
          * @description
@@ -76,7 +76,7 @@ class MonitorFilter {
          * @public
          * @readonly
          */
-        readonly callAssociated: OPTIONAL<CallAssociatedEvents>,
+        readonly callAssociated?: OPTIONAL<CallAssociatedEvents>,
         /**
          * @summary `mediaAttachment`.
          * @description
@@ -87,7 +87,7 @@ class MonitorFilter {
          * @public
          * @readonly
          */
-        readonly mediaAttachment: OPTIONAL<MediaAttachmentEvents>,
+        readonly mediaAttachment?: OPTIONAL<MediaAttachmentEvents>,
         /**
          * @summary `physicalDeviceFeature`.
          * @description
@@ -98,7 +98,7 @@ class MonitorFilter {
          * @public
          * @readonly
          */
-        readonly physicalDeviceFeature: OPTIONAL<PhysicalDeviceFeatureEvents>,
+        readonly physicalDeviceFeature?: OPTIONAL<PhysicalDeviceFeatureEvents>,
         /**
          * @summary `logicalDeviceFeature`.
          * @description
@@ -109,7 +109,7 @@ class MonitorFilter {
          * @public
          * @readonly
          */
-        readonly logicalDeviceFeature: OPTIONAL<LogicalDeviceFeatureEvents>,
+        readonly logicalDeviceFeature?: OPTIONAL<LogicalDeviceFeatureEvents>,
         /**
          * @summary `maintenance`.
          * @description
@@ -120,7 +120,7 @@ class MonitorFilter {
          * @public
          * @readonly
          */
-        readonly maintenance: OPTIONAL<DeviceMaintenanceEvents>,
+        readonly maintenance?: OPTIONAL<DeviceMaintenanceEvents>,
         /**
          * @summary `voiceUnit`.
          * @description
@@ -131,7 +131,7 @@ class MonitorFilter {
          * @public
          * @readonly
          */
-        readonly voiceUnit: OPTIONAL<VoiceUnitEvents>,
+        readonly voiceUnit?: OPTIONAL<VoiceUnitEvents>,
         /**
          * @summary `private_`.
          * @description
@@ -142,7 +142,7 @@ class MonitorFilter {
          * @public
          * @readonly
          */
-        readonly private_: OPTIONAL<VendorSpecEvents>
+        readonly private_?: OPTIONAL<VendorSpecEvents>
     ) {}
 
     /**

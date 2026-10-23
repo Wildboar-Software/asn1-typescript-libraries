@@ -81,8 +81,8 @@ class MWIDeactivateArg {
     constructor (
         servedUserNr: PartyNumber,
         basicService: BasicService,
-        msgCentreId: OPTIONAL<MsgCentreId>,
-        argumentExt: OPTIONAL<MWIDeactivateArg_argumentExt>
+        msgCentreId?: OPTIONAL<MsgCentreId>,
+        argumentExt?: OPTIONAL<MWIDeactivateArg_argumentExt>
     ) {
         this.servedUserNr = servedUserNr;
         this.basicService = basicService;

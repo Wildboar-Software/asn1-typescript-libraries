@@ -153,11 +153,11 @@ class GPRS_parameters {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        pDP_address_allocated_to_the_target: OPTIONAL<DataNodeAddress>,
-        aPN: OPTIONAL<OCTET_STRING>,
-        pDP_type: OPTIONAL<OCTET_STRING>,
-        nSAPI: OPTIONAL<OCTET_STRING>,
-        additionalIPaddress: OPTIONAL<DataNodeAddress>,
+        pDP_address_allocated_to_the_target?: OPTIONAL<DataNodeAddress>,
+        aPN?: OPTIONAL<OCTET_STRING>,
+        pDP_type?: OPTIONAL<OCTET_STRING>,
+        nSAPI?: OPTIONAL<OCTET_STRING>,
+        additionalIPaddress?: OPTIONAL<DataNodeAddress>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.pDP_address_allocated_to_the_target = pDP_address_allocated_to_the_target;

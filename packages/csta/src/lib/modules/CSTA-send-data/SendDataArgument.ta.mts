@@ -109,7 +109,7 @@ class SendDataArgument {
          * @public
          * @readonly
          */
-        readonly ioCause: OPTIONAL<EventCause>,
+        readonly ioCause?: OPTIONAL<EventCause>,
         /**
          * @summary `extensions`.
          * @description
@@ -120,7 +120,7 @@ class SendDataArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

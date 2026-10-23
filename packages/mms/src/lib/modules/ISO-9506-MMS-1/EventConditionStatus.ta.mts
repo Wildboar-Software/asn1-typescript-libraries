@@ -93,7 +93,7 @@ class EventConditionStatus {
          * @public
          * @readonly
          */
-        readonly enabled: OPTIONAL<BOOLEAN>,
+        readonly enabled?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `timeOfLastTransitionToActive`.
          * @description
@@ -105,7 +105,7 @@ class EventConditionStatus {
          * @public
          * @readonly
          */
-        readonly timeOfLastTransitionToActive: OPTIONAL<EventTime>,
+        readonly timeOfLastTransitionToActive?: OPTIONAL<EventTime>,
         /**
          * @summary `timeOfLastTransitionToIdle`.
          * @description
@@ -117,7 +117,7 @@ class EventConditionStatus {
          * @public
          * @readonly
          */
-        readonly timeOfLastTransitionToIdle: OPTIONAL<EventTime>
+        readonly timeOfLastTransitionToIdle?: OPTIONAL<EventTime>
     ) {}
 
     /**

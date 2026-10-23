@@ -55,7 +55,7 @@ class GetAutoWorkModeResult {
          * @public
          * @readonly
          */
-        readonly autoWorkInterval: OPTIONAL<INTEGER>,
+        readonly autoWorkInterval?: OPTIONAL<INTEGER>,
         /**
          * @summary `extensions`.
          * @description
@@ -65,7 +65,7 @@ class GetAutoWorkModeResult {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

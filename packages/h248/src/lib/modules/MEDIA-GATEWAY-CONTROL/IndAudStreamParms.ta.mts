@@ -46,7 +46,7 @@ class IndAudStreamParms {
          * @public
          * @readonly
          */
-        readonly localControlDescriptor: OPTIONAL<IndAudLocalControlDescriptor>,
+        readonly localControlDescriptor?: OPTIONAL<IndAudLocalControlDescriptor>,
         /**
          * @summary `localDescriptor`.
          * @description
@@ -57,7 +57,7 @@ class IndAudStreamParms {
          * @public
          * @readonly
          */
-        readonly localDescriptor: OPTIONAL<IndAudLocalRemoteDescriptor>,
+        readonly localDescriptor?: OPTIONAL<IndAudLocalRemoteDescriptor>,
         /**
          * @summary `remoteDescriptor`.
          * @description
@@ -68,7 +68,7 @@ class IndAudStreamParms {
          * @public
          * @readonly
          */
-        readonly remoteDescriptor: OPTIONAL<IndAudLocalRemoteDescriptor>,
+        readonly remoteDescriptor?: OPTIONAL<IndAudLocalRemoteDescriptor>,
         /**
          * @summary `statisticsDescriptor`.
          * @description
@@ -79,7 +79,7 @@ class IndAudStreamParms {
          * @public
          * @readonly
          */
-        readonly statisticsDescriptor: OPTIONAL<IndAudStatisticsDescriptor>,
+        readonly statisticsDescriptor?: OPTIONAL<IndAudStatisticsDescriptor>,
         /**
          * @summary Extensions that are not recognized.
          * @description

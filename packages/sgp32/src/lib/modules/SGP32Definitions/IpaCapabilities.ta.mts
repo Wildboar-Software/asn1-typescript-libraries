@@ -66,7 +66,7 @@ class IpaCapabilities {
          * @public
          * @readonly
          */
-        readonly ipaSupportedProtocols: OPTIONAL<IpaCapabilities_ipaSupportedProtocols>,
+        readonly ipaSupportedProtocols?: OPTIONAL<IpaCapabilities_ipaSupportedProtocols>,
         /**
          * @summary `eSipaProprietaryProtocolInformation`.
          * @description
@@ -75,7 +75,7 @@ class IpaCapabilities {
          * @public
          * @readonly
          */
-        readonly eSipaProprietaryProtocolInformation: OPTIONAL<VendorSpecificExtension>
+        readonly eSipaProprietaryProtocolInformation?: OPTIONAL<VendorSpecificExtension>
     ) {}
 
     /**

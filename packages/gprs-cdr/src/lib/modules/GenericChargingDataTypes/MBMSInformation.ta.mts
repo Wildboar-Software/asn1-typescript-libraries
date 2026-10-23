@@ -122,19 +122,19 @@ class MBMSInformation {
     readonly mBMSDataTransferStop: OPTIONAL<OCTET_STRING>;
 
     constructor (
-        tMGI: OPTIONAL<OCTET_STRING>,
-        mBMSSessionIdentity: OPTIONAL<OCTET_STRING>,
-        mBMSServiceType: OPTIONAL<MBMSServiceType>,
-        mBMSUserServiceType: OPTIONAL<MBMSUserServiceType>,
-        mBMS2G3GIndicator: OPTIONAL<MBMS2G3GIndicator>,
-        fileRepairSupported: OPTIONAL<BOOLEAN>,
-        rAI: OPTIONAL<OCTET_STRING>,
-        mBMSServiceArea: OPTIONAL<OCTET_STRING>,
-        requiredMBMSBearerCaps: OPTIONAL<OCTET_STRING>,
-        mBMSGWAddress: OPTIONAL<IPAddress>,
-        cNIPMulticastDistribution: OPTIONAL<CNIPMulticastDistribution>,
-        mBMSDataTransferStart: OPTIONAL<OCTET_STRING>,
-        mBMSDataTransferStop: OPTIONAL<OCTET_STRING>
+        tMGI?: OPTIONAL<OCTET_STRING>,
+        mBMSSessionIdentity?: OPTIONAL<OCTET_STRING>,
+        mBMSServiceType?: OPTIONAL<MBMSServiceType>,
+        mBMSUserServiceType?: OPTIONAL<MBMSUserServiceType>,
+        mBMS2G3GIndicator?: OPTIONAL<MBMS2G3GIndicator>,
+        fileRepairSupported?: OPTIONAL<BOOLEAN>,
+        rAI?: OPTIONAL<OCTET_STRING>,
+        mBMSServiceArea?: OPTIONAL<OCTET_STRING>,
+        requiredMBMSBearerCaps?: OPTIONAL<OCTET_STRING>,
+        mBMSGWAddress?: OPTIONAL<IPAddress>,
+        cNIPMulticastDistribution?: OPTIONAL<CNIPMulticastDistribution>,
+        mBMSDataTransferStart?: OPTIONAL<OCTET_STRING>,
+        mBMSDataTransferStop?: OPTIONAL<OCTET_STRING>
     ) {
         this.tMGI = tMGI;
         this.mBMSSessionIdentity = mBMSSessionIdentity;

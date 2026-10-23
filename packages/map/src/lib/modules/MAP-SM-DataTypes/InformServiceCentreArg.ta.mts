@@ -51,7 +51,7 @@ class InformServiceCentreArg {
          * @public
          * @readonly
          */
-        readonly storedMSISDN: OPTIONAL<ISDN_AddressString>,
+        readonly storedMSISDN?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `mw_Status`.
          * @description
@@ -61,7 +61,7 @@ class InformServiceCentreArg {
          * @public
          * @readonly
          */
-        readonly mw_Status: OPTIONAL<MW_Status>,
+        readonly mw_Status?: OPTIONAL<MW_Status>,
         /**
          * @summary `extensionContainer`.
          * @description
@@ -71,7 +71,7 @@ class InformServiceCentreArg {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `absentSubscriberDiagnosticSM`.
          * @description
@@ -81,7 +81,7 @@ class InformServiceCentreArg {
          * @public
          * @readonly
          */
-        readonly absentSubscriberDiagnosticSM: OPTIONAL<AbsentSubscriberDiagnosticSM>,
+        readonly absentSubscriberDiagnosticSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>,
         /**
          * @summary `additionalAbsentSubscriberDiagnosticSM`.
          * @description
@@ -92,7 +92,7 @@ class InformServiceCentreArg {
          * @public
          * @readonly
          */
-        readonly additionalAbsentSubscriberDiagnosticSM: OPTIONAL<AbsentSubscriberDiagnosticSM>,
+        readonly additionalAbsentSubscriberDiagnosticSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>,
         /**
          * @summary `smsf3gppAbsentSubscriberDiagnosticSM`.
          * @description
@@ -102,7 +102,7 @@ class InformServiceCentreArg {
          * @public
          * @readonly
          */
-        readonly smsf3gppAbsentSubscriberDiagnosticSM: OPTIONAL<AbsentSubscriberDiagnosticSM>,
+        readonly smsf3gppAbsentSubscriberDiagnosticSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>,
         /**
          * @summary `smsfNon3gppAbsentSubscriberDiagnosticSM`.
          * @description
@@ -112,7 +112,7 @@ class InformServiceCentreArg {
          * @public
          * @readonly
          */
-        readonly smsfNon3gppAbsentSubscriberDiagnosticSM: OPTIONAL<AbsentSubscriberDiagnosticSM>,
+        readonly smsfNon3gppAbsentSubscriberDiagnosticSM?: OPTIONAL<AbsentSubscriberDiagnosticSM>,
         /**
          * @summary Extensions that are not recognized.
          * @public

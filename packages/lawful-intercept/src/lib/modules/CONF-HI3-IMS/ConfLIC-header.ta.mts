@@ -155,8 +155,8 @@ class ConfLIC_header {
         timeStamp: OPTIONAL<TimeStamp>,
         sequence_number: INTEGER,
         t_PDU_direction: TPDU_direction,
-        national_HI3_ASN1parameters: OPTIONAL<National_HI3_ASN1parameters>,
-        mediaID: OPTIONAL<MediaID>,
+        national_HI3_ASN1parameters?: OPTIONAL<National_HI3_ASN1parameters>,
+        mediaID?: OPTIONAL<MediaID>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.hi3DomainId = hi3DomainId;

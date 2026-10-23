@@ -45,7 +45,7 @@ class StartUnitControl_Error {
          * @public
          * @readonly
          */
-        readonly programInvocationName: OPTIONAL<Identifier>,
+        readonly programInvocationName?: OPTIONAL<Identifier>,
         /**
          * @summary `programInvocationState`.
          * @description
@@ -56,7 +56,7 @@ class StartUnitControl_Error {
          * @public
          * @readonly
          */
-        readonly programInvocationState: OPTIONAL<ProgramInvocationState>
+        readonly programInvocationState?: OPTIONAL<ProgramInvocationState>
     ) {}
 
     /**

@@ -63,7 +63,7 @@ class ResumeCallHandlingArg {
          * @public
          * @readonly
          */
-        readonly callReferenceNumber: OPTIONAL<CallReferenceNumber>,
+        readonly callReferenceNumber?: OPTIONAL<CallReferenceNumber>,
         /**
          * @summary `basicServiceGroup`.
          * @description
@@ -73,7 +73,7 @@ class ResumeCallHandlingArg {
          * @public
          * @readonly
          */
-        readonly basicServiceGroup: OPTIONAL<Ext_BasicServiceCode>,
+        readonly basicServiceGroup?: OPTIONAL<Ext_BasicServiceCode>,
         /**
          * @summary `forwardingData`.
          * @description
@@ -83,7 +83,7 @@ class ResumeCallHandlingArg {
          * @public
          * @readonly
          */
-        readonly forwardingData: OPTIONAL<ForwardingData>,
+        readonly forwardingData?: OPTIONAL<ForwardingData>,
         /**
          * @summary `imsi`.
          * @description
@@ -93,7 +93,7 @@ class ResumeCallHandlingArg {
          * @public
          * @readonly
          */
-        readonly imsi: OPTIONAL<IMSI>,
+        readonly imsi?: OPTIONAL<IMSI>,
         /**
          * @summary `cug_CheckInfo`.
          * @description
@@ -103,7 +103,7 @@ class ResumeCallHandlingArg {
          * @public
          * @readonly
          */
-        readonly cug_CheckInfo: OPTIONAL<CUG_CheckInfo>,
+        readonly cug_CheckInfo?: OPTIONAL<CUG_CheckInfo>,
         /**
          * @summary `o_CSI`.
          * @description
@@ -113,7 +113,7 @@ class ResumeCallHandlingArg {
          * @public
          * @readonly
          */
-        readonly o_CSI: OPTIONAL<O_CSI>,
+        readonly o_CSI?: OPTIONAL<O_CSI>,
         /**
          * @summary `extensionContainer`.
          * @description
@@ -123,7 +123,7 @@ class ResumeCallHandlingArg {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `ccbs_Possible`.
          * @description
@@ -133,7 +133,7 @@ class ResumeCallHandlingArg {
          * @public
          * @readonly
          */
-        readonly ccbs_Possible: OPTIONAL<NULL>,
+        readonly ccbs_Possible?: OPTIONAL<NULL>,
         /**
          * @summary `msisdn`.
          * @description
@@ -143,7 +143,7 @@ class ResumeCallHandlingArg {
          * @public
          * @readonly
          */
-        readonly msisdn: OPTIONAL<ISDN_AddressString>,
+        readonly msisdn?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `uu_Data`.
          * @description
@@ -153,7 +153,7 @@ class ResumeCallHandlingArg {
          * @public
          * @readonly
          */
-        readonly uu_Data: OPTIONAL<UU_Data>,
+        readonly uu_Data?: OPTIONAL<UU_Data>,
         /**
          * @summary `allInformationSent`.
          * @description
@@ -163,7 +163,7 @@ class ResumeCallHandlingArg {
          * @public
          * @readonly
          */
-        readonly allInformationSent: OPTIONAL<NULL>,
+        readonly allInformationSent?: OPTIONAL<NULL>,
         /**
          * @summary `d_csi`.
          * @description
@@ -173,7 +173,7 @@ class ResumeCallHandlingArg {
          * @public
          * @readonly
          */
-        readonly d_csi: OPTIONAL<D_CSI>,
+        readonly d_csi?: OPTIONAL<D_CSI>,
         /**
          * @summary `o_BcsmCamelTDPCriteriaList`.
          * @description
@@ -183,7 +183,7 @@ class ResumeCallHandlingArg {
          * @public
          * @readonly
          */
-        readonly o_BcsmCamelTDPCriteriaList: OPTIONAL<O_BcsmCamelTDPCriteriaList>,
+        readonly o_BcsmCamelTDPCriteriaList?: OPTIONAL<O_BcsmCamelTDPCriteriaList>,
         /**
          * @summary `basicServiceGroup2`.
          * @description
@@ -193,7 +193,7 @@ class ResumeCallHandlingArg {
          * @public
          * @readonly
          */
-        readonly basicServiceGroup2: OPTIONAL<Ext_BasicServiceCode>,
+        readonly basicServiceGroup2?: OPTIONAL<Ext_BasicServiceCode>,
         /**
          * @summary `mtRoamingRetry`.
          * @description
@@ -203,7 +203,7 @@ class ResumeCallHandlingArg {
          * @public
          * @readonly
          */
-        readonly mtRoamingRetry: OPTIONAL<NULL>,
+        readonly mtRoamingRetry?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @public

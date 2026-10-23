@@ -60,7 +60,7 @@ class GetNamedVariableListAttributes_Response_listOfVariable_Item {
          * @public
          * @readonly
          */
-        readonly alternateAccess: OPTIONAL<AlternateAccess>
+        readonly alternateAccess?: OPTIONAL<AlternateAccess>
     ) {}
 
     /**

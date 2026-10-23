@@ -45,13 +45,13 @@ class BackwardServiceInteractionInd {
          * @public
          * @readonly
          */
-        readonly conferenceTreatmentIndicator: OPTIONAL<OCTET_STRING>,
+        readonly conferenceTreatmentIndicator?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `callCompletionTreatmentIndicator`.
          * @public
          * @readonly
          */
-        readonly callCompletionTreatmentIndicator: OPTIONAL<OCTET_STRING>
+        readonly callCompletionTreatmentIndicator?: OPTIONAL<OCTET_STRING>
     ) {
         if (conferenceTreatmentIndicator !== undefined && conferenceTreatmentIndicator.length !== 1) {
             throw new ASN1SizeError("BackwardServiceInteractionInd.conferenceTreatmentIndicator violates SIZE constraint");

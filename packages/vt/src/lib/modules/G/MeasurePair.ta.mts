@@ -53,7 +53,7 @@ class MeasurePair {
          * @public
          * @readonly
          */
-        readonly yValue: OPTIONAL<INTEGER>
+        readonly yValue?: OPTIONAL<INTEGER>
     ) {}
 
     /**

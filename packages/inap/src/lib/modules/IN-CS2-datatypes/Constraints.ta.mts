@@ -57,8 +57,8 @@ class Constraints {
     constructor (
         maximumNumberOfDigits: INTEGER,
         minimumNumberOfDigits: INTEGER,
-        typeOfRequestedInfo: OPTIONAL<InfoType>,
-        numberOfAllowedRetries: OPTIONAL<INTEGER>
+        typeOfRequestedInfo?: OPTIONAL<InfoType>,
+        numberOfAllowedRetries?: OPTIONAL<INTEGER>
     ) {
         this.maximumNumberOfDigits = maximumNumberOfDigits;
         this.minimumNumberOfDigits = minimumNumberOfDigits;

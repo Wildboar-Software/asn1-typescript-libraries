@@ -80,7 +80,7 @@ class UsageRules {
          * @public
          * @readonly
          */
-        readonly noteWell: OPTIONAL<IA5String>
+        readonly noteWell?: OPTIONAL<IA5String>
     ) {}
 
     /**

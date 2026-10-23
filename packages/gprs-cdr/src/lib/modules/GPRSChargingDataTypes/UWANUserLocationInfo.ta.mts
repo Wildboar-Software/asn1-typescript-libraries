@@ -93,13 +93,13 @@ class UWANUserLocationInfo {
 
     constructor (
         uELocalIPAddress: GSNAddress,
-        uDPSourcePort: OPTIONAL<OCTET_STRING>,
-        sSID: OPTIONAL<OCTET_STRING>,
-        bSSID: OPTIONAL<OCTET_STRING>,
-        tCPSourcePort: OPTIONAL<OCTET_STRING>,
-        civicAddressInformation: OPTIONAL<OCTET_STRING>,
-        wLANOperatorId: OPTIONAL<WLANOperatorId>,
-        logicalAccessID: OPTIONAL<OCTET_STRING>
+        uDPSourcePort?: OPTIONAL<OCTET_STRING>,
+        sSID?: OPTIONAL<OCTET_STRING>,
+        bSSID?: OPTIONAL<OCTET_STRING>,
+        tCPSourcePort?: OPTIONAL<OCTET_STRING>,
+        civicAddressInformation?: OPTIONAL<OCTET_STRING>,
+        wLANOperatorId?: OPTIONAL<WLANOperatorId>,
+        logicalAccessID?: OPTIONAL<OCTET_STRING>
     ) {
         this.uELocalIPAddress = uELocalIPAddress;
         this.uDPSourcePort = uDPSourcePort;

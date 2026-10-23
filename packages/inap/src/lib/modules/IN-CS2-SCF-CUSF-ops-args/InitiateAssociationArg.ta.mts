@@ -52,7 +52,7 @@ class InitiateAssociationArg {
 
     constructor (
         calledPartyNumber: CalledPartyNumber,
-        extensions: OPTIONAL<ExtensionField[]>,
+        extensions?: OPTIONAL<ExtensionField[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.calledPartyNumber = calledPartyNumber;

@@ -175,10 +175,10 @@ class ActivityType {
     constructor (
         cctivity: ActivityClassType,
         callRelation: ActivityType_callRelation,
-        direction: OPTIONAL<ActivityType_direction>,
-        scope: OPTIONAL<ActivityType_scope>,
-        cPlaneData: OPTIONAL<BIT_STRING>,
-        sStype: OPTIONAL<SSType>
+        direction?: OPTIONAL<ActivityType_direction>,
+        scope?: OPTIONAL<ActivityType_scope>,
+        cPlaneData?: OPTIONAL<BIT_STRING>,
+        sStype?: OPTIONAL<SSType>
     ) {
         this.cctivity = cctivity;
         this.callRelation = callRelation;

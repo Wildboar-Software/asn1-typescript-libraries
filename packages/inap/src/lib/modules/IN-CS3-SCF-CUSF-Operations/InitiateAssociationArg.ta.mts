@@ -77,10 +77,10 @@ class InitiateAssociationArg {
 
     constructor (
         calledPartyNumber: CalledPartyNumber,
-        extensions: OPTIONAL<Extensions>,
-        uSIServiceIndicator: OPTIONAL<USIServiceIndicator>,
-        uSIInformation: OPTIONAL<USIInformation>,
-        genericNumbers: OPTIONAL<GenericNumbers>,
+        extensions?: OPTIONAL<Extensions>,
+        uSIServiceIndicator?: OPTIONAL<USIServiceIndicator>,
+        uSIInformation?: OPTIONAL<USIInformation>,
+        genericNumbers?: OPTIONAL<GenericNumbers>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.calledPartyNumber = calledPartyNumber;

@@ -61,9 +61,9 @@ class PresenceReportingAreaInfo {
 
     constructor (
         presenceReportingAreaIdentifier: OCTET_STRING,
-        presenceReportingAreaStatus: OPTIONAL<PresenceReportingAreaInfo_presenceReportingAreaStatus>,
-        presenceReportingAreaElementsList: OPTIONAL<OCTET_STRING>,
-        presenceReportingAreaNode: OPTIONAL<PresenceReportingAreaInfo_presenceReportingAreaNode>
+        presenceReportingAreaStatus?: OPTIONAL<PresenceReportingAreaInfo_presenceReportingAreaStatus>,
+        presenceReportingAreaElementsList?: OPTIONAL<OCTET_STRING>,
+        presenceReportingAreaNode?: OPTIONAL<PresenceReportingAreaInfo_presenceReportingAreaNode>
     ) {
         this.presenceReportingAreaIdentifier = presenceReportingAreaIdentifier;
         this.presenceReportingAreaStatus = presenceReportingAreaStatus;

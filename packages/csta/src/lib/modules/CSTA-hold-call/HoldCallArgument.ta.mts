@@ -61,7 +61,7 @@ class HoldCallArgument {
          * @public
          * @readonly
          */
-        readonly connectionReservation: OPTIONAL<BOOLEAN>,
+        readonly connectionReservation?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `extensions`.
          * @description
@@ -72,7 +72,7 @@ class HoldCallArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

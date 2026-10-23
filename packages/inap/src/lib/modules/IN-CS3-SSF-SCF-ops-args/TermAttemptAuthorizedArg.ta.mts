@@ -131,16 +131,16 @@ class TermAttemptAuthorizedArg {
 
     constructor (
         dpSpecificCommonParameters: DpSpecificCommonParameters,
-        calledPartyBusinessGroupID: OPTIONAL<CalledPartyBusinessGroupID>,
-        calledPartySubaddress: OPTIONAL<CalledPartySubaddress>,
-        callingPartyBusinessGroupID: OPTIONAL<CallingPartyBusinessGroupID>,
-        originalCalledPartyID: OPTIONAL<OriginalCalledPartyID>,
-        redirectingPartyID: OPTIONAL<RedirectingPartyID>,
-        redirectionInformation: OPTIONAL<RedirectionInformation>,
-        routeList: OPTIONAL<RouteList>,
-        travellingClassMark: OPTIONAL<TravellingClassMark>,
-        extensions: OPTIONAL<Extensions>,
-        callingPartySubaddress: OPTIONAL<CallingPartySubaddress>,
+        calledPartyBusinessGroupID?: OPTIONAL<CalledPartyBusinessGroupID>,
+        calledPartySubaddress?: OPTIONAL<CalledPartySubaddress>,
+        callingPartyBusinessGroupID?: OPTIONAL<CallingPartyBusinessGroupID>,
+        originalCalledPartyID?: OPTIONAL<OriginalCalledPartyID>,
+        redirectingPartyID?: OPTIONAL<RedirectingPartyID>,
+        redirectionInformation?: OPTIONAL<RedirectionInformation>,
+        routeList?: OPTIONAL<RouteList>,
+        travellingClassMark?: OPTIONAL<TravellingClassMark>,
+        extensions?: OPTIONAL<Extensions>,
+        callingPartySubaddress?: OPTIONAL<CallingPartySubaddress>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.dpSpecificCommonParameters = dpSpecificCommonParameters;

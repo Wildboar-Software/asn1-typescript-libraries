@@ -46,7 +46,7 @@ class GetRegistrationsArg {
          * @public
          * @readonly
          */
-        readonly requestedRegTypes: OPTIONAL<RegistrationTypeList>,
+        readonly requestedRegTypes?: OPTIONAL<RegistrationTypeList>,
         /**
          * @summary `extensions`.
          * @description
@@ -56,7 +56,7 @@ class GetRegistrationsArg {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

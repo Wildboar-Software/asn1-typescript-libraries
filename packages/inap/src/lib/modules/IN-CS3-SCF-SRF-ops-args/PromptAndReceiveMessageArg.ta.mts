@@ -108,8 +108,8 @@ class PromptAndReceiveMessageArg {
         subscriberID: OPTIONAL<GenericNumber>,
         mailBoxID: OPTIONAL<MailBoxID>,
         informationToRecord: InformationToRecord,
-        media: OPTIONAL<Media>,
-        callSegmentID: OPTIONAL<CallSegmentID>,
+        media?: OPTIONAL<Media>,
+        callSegmentID?: OPTIONAL<CallSegmentID>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.disconnectFromIPForbidden = disconnectFromIPForbidden;

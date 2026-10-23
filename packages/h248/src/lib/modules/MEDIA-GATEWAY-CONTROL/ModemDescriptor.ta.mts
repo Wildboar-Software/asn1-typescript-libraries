@@ -68,7 +68,7 @@ class ModemDescriptor {
          * @public
          * @readonly
          */
-        readonly nonStandardData: OPTIONAL<NonStandardData>
+        readonly nonStandardData?: OPTIONAL<NonStandardData>
     ) {}
 
     /**

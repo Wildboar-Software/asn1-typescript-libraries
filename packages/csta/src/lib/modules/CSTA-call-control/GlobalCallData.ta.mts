@@ -76,7 +76,7 @@ class GlobalCallData {
          * @public
          * @readonly
          */
-        readonly callLinkageIDTimestamp: OPTIONAL<TimeInfo>
+        readonly callLinkageIDTimestamp?: OPTIONAL<TimeInfo>
     ) {}
 
     /**

@@ -39,7 +39,7 @@ class GetEimConfigurationDataRequest {
          * @public
          * @readonly
          */
-        readonly searchCriteria: OPTIONAL<GetEimConfigurationDataRequest_searchCriteria>
+        readonly searchCriteria?: OPTIONAL<GetEimConfigurationDataRequest_searchCriteria>
     ) {}
 
     /**

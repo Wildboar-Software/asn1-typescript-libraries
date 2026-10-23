@@ -44,7 +44,7 @@ class CheckIMEI_Res {
          * @public
          * @readonly
          */
-        readonly equipmentStatus: OPTIONAL<EquipmentStatus>,
+        readonly equipmentStatus?: OPTIONAL<EquipmentStatus>,
         /**
          * @summary `bmuef`.
          * @description
@@ -56,13 +56,13 @@ class CheckIMEI_Res {
          * @public
          * @readonly
          */
-        readonly bmuef: OPTIONAL<UESBI_Iu>,
+        readonly bmuef?: OPTIONAL<UESBI_Iu>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

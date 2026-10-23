@@ -53,10 +53,10 @@ class PDUAddress {
     readonly iPV6dynamicPrefixFlag: OPTIONAL<BOOLEAN>;
 
     constructor (
-        pDUIPv4Address: OPTIONAL<IPAddress>,
-        pDUIPv6AddresswithPrefix: OPTIONAL<IPAddress>,
-        iPV4dynamicAddressFlag: OPTIONAL<BOOLEAN>,
-        iPV6dynamicPrefixFlag: OPTIONAL<BOOLEAN>
+        pDUIPv4Address?: OPTIONAL<IPAddress>,
+        pDUIPv6AddresswithPrefix?: OPTIONAL<IPAddress>,
+        iPV4dynamicAddressFlag?: OPTIONAL<BOOLEAN>,
+        iPV6dynamicPrefixFlag?: OPTIONAL<BOOLEAN>
     ) {
         this.pDUIPv4Address = pDUIPv4Address;
         this.pDUIPv6AddresswithPrefix = pDUIPv6AddresswithPrefix;

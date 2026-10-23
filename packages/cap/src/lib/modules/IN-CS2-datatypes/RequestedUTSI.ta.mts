@@ -53,7 +53,7 @@ class RequestedUTSI {
          * @public
          * @readonly
          */
-        readonly legID: OPTIONAL<LegID>
+        readonly legID?: OPTIONAL<LegID>
     ) {}
 
     /**

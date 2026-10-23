@@ -54,13 +54,13 @@ class BCSMEvent {
          * @public
          * @readonly
          */
-        readonly legID: OPTIONAL<LegID>,
+        readonly legID?: OPTIONAL<LegID>,
         /**
          * @summary `dPSpecificCriteria`.
          * @public
          * @readonly
          */
-        readonly dPSpecificCriteria: OPTIONAL<DPSpecificCriteria>
+        readonly dPSpecificCriteria?: OPTIONAL<DPSpecificCriteria>
     ) {}
 
     /**

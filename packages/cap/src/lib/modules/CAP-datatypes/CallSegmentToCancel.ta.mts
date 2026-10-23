@@ -34,7 +34,7 @@ export class CallSegmentToCancel {
          * @public
          * @readonly
          */
-        readonly invokeID: OPTIONAL<InvokeID>,
+        readonly invokeID?: OPTIONAL<InvokeID>,
         /**
          * @summary `callSegmentID`.
          * @description
@@ -45,7 +45,7 @@ export class CallSegmentToCancel {
          * @public
          * @readonly
          */
-        readonly callSegmentID: OPTIONAL<CallSegmentID>,
+        readonly callSegmentID?: OPTIONAL<CallSegmentID>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}
 

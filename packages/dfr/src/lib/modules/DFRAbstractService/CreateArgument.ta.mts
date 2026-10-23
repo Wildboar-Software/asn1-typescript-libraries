@@ -72,7 +72,7 @@ class CreateArgument {
          * @public
          * @readonly
          */
-        readonly object_class: OPTIONAL<DfrObjectClass> /* REPLICATED_COMPONENT */,
+        readonly object_class?: OPTIONAL<DfrObjectClass> /* REPLICATED_COMPONENT */,
         /**
          * @summary `entry`.
          * @description
@@ -82,7 +82,7 @@ class CreateArgument {
          * @public
          * @readonly
          */
-        readonly entry: OPTIONAL<CommonUpdateArguments_entry> /* REPLICATED_COMPONENT */,
+        readonly entry?: OPTIONAL<CommonUpdateArguments_entry> /* REPLICATED_COMPONENT */,
         /**
          * @summary `destination`.
          * @description
@@ -92,7 +92,7 @@ class CreateArgument {
          * @public
          * @readonly
          */
-        readonly destination: OPTIONAL<DfrEntryName> /* REPLICATED_COMPONENT */,
+        readonly destination?: OPTIONAL<DfrEntryName> /* REPLICATED_COMPONENT */,
         /**
          * @summary `position`.
          * @description
@@ -104,7 +104,7 @@ class CreateArgument {
          * @public
          * @readonly
          */
-        readonly position: OPTIONAL<GroupMemberPosition> /* REPLICATED_COMPONENT */,
+        readonly position?: OPTIONAL<GroupMemberPosition> /* REPLICATED_COMPONENT */,
         /**
          * @summary `modifications`.
          * @description
@@ -114,7 +114,7 @@ class CreateArgument {
          * @public
          * @readonly
          */
-        readonly modifications: OPTIONAL<EntryModification[]> /* REPLICATED_COMPONENT */,
+        readonly modifications?: OPTIONAL<EntryModification[]> /* REPLICATED_COMPONENT */,
         /**
          * @summary `selection`.
          * @description
@@ -124,7 +124,7 @@ class CreateArgument {
          * @public
          * @readonly
          */
-        readonly selection: OPTIONAL<EntryInformationSelection> /* REPLICATED_COMPONENT */,
+        readonly selection?: OPTIONAL<EntryInformationSelection> /* REPLICATED_COMPONENT */,
         /**
          * @summary `reference_qos`.
          * @description
@@ -133,7 +133,7 @@ class CreateArgument {
          * @public
          * @readonly
          */
-        readonly reference_qos: OPTIONAL<Requested_QoS_level> /* REPLICATED_COMPONENT */,
+        readonly reference_qos?: OPTIONAL<Requested_QoS_level> /* REPLICATED_COMPONENT */,
         /**
          * @summary `attributes`.
          * @description
@@ -144,7 +144,7 @@ class CreateArgument {
          * @public
          * @readonly
          */
-        readonly attributes: OPTIONAL<Attribute[]>,
+        readonly attributes?: OPTIONAL<Attribute[]>,
         /**
          * @summary `content`.
          * @description
@@ -155,7 +155,7 @@ class CreateArgument {
          * @public
          * @readonly
          */
-        readonly content: OPTIONAL<DfrObjectContent>,
+        readonly content?: OPTIONAL<DfrObjectContent>,
         /**
          * @summary `task_id`.
          * @description
@@ -167,7 +167,7 @@ class CreateArgument {
          * @public
          * @readonly
          */
-        readonly task_id: OPTIONAL<TaskId> /* REPLICATED_COMPONENT */,
+        readonly task_id?: OPTIONAL<TaskId> /* REPLICATED_COMPONENT */,
         /**
          * @summary `reservation`.
          * @description
@@ -179,7 +179,7 @@ class CreateArgument {
          * @public
          * @readonly
          */
-        readonly reservation: OPTIONAL<Reservation> /* REPLICATED_COMPONENT */,
+        readonly reservation?: OPTIONAL<Reservation> /* REPLICATED_COMPONENT */,
         /**
          * @summary `error_handling`.
          * @description
@@ -189,7 +189,7 @@ class CreateArgument {
          * @public
          * @readonly
          */
-        readonly error_handling: OPTIONAL<ErrorHandlingMode> /* REPLICATED_COMPONENT */,
+        readonly error_handling?: OPTIONAL<ErrorHandlingMode> /* REPLICATED_COMPONENT */,
         /**
          * @summary `priority`.
          * @description
@@ -200,7 +200,7 @@ class CreateArgument {
          * @public
          * @readonly
          */
-        readonly priority: OPTIONAL<Priority> /* REPLICATED_COMPONENT */,
+        readonly priority?: OPTIONAL<Priority> /* REPLICATED_COMPONENT */,
         /**
          * @summary `privileges`.
          * @description
@@ -212,7 +212,7 @@ class CreateArgument {
          * @public
          * @readonly
          */
-        readonly privileges: OPTIONAL<Privileges> /* REPLICATED_COMPONENT */
+        readonly privileges?: OPTIONAL<Privileges> /* REPLICATED_COMPONENT */
     ) {
         if (object_class === undefined) {
             throw new _ConstructionError("CreateArgument.object-class shall be present");

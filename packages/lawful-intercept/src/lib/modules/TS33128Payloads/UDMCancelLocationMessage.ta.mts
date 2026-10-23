@@ -190,8 +190,8 @@ class UDMCancelLocationMessage {
         gUAMI: OPTIONAL<GUAMI>,
         pLMNID: OPTIONAL<PLMNID>,
         cancelLocationMethod: UDMCancelLocationMethod,
-        aMFDeregistrationInfo: OPTIONAL<UDMAMFDeregistrationInfo>,
-        deregistrationData: OPTIONAL<UDMDeregistrationData>,
+        aMFDeregistrationInfo?: OPTIONAL<UDMAMFDeregistrationInfo>,
+        deregistrationData?: OPTIONAL<UDMDeregistrationData>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.sUPI = sUPI;

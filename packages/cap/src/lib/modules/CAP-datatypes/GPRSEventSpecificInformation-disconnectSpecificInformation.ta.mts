@@ -24,8 +24,8 @@ import { InitiatingEntity, _enum_for_InitiatingEntity, _decode_InitiatingEntity,
  */
 export class GPRSEventSpecificInformation_disconnectSpecificInformation {
     constructor (
-        readonly initiatingEntity: OPTIONAL<InitiatingEntity>,
-        readonly routeingAreaUpdate: OPTIONAL<NULL>,
+        readonly initiatingEntity?: OPTIONAL<InitiatingEntity>,
+        readonly routeingAreaUpdate?: OPTIONAL<NULL>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}
 

@@ -50,7 +50,7 @@ export class AOCBeforeAnswer {
          * @public
          * @readonly
          */
-        readonly aOCSubsequent: OPTIONAL<AOCSubsequent>,
+        readonly aOCSubsequent?: OPTIONAL<AOCSubsequent>,
     ) {}
 
     public static _from_object (_o: { [_K in keyof (AOCBeforeAnswer)]: (AOCBeforeAnswer)[_K] }): AOCBeforeAnswer {

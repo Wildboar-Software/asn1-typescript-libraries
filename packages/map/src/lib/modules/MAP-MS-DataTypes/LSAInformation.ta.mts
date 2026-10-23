@@ -51,7 +51,7 @@ class LSAInformation {
          * @public
          * @readonly
          */
-        readonly completeDataListIncluded: OPTIONAL<NULL>,
+        readonly completeDataListIncluded?: OPTIONAL<NULL>,
         /**
          * @summary `lsaOnlyAccessIndicator`.
          * @description
@@ -62,7 +62,7 @@ class LSAInformation {
          * @public
          * @readonly
          */
-        readonly lsaOnlyAccessIndicator: OPTIONAL<LSAOnlyAccessIndicator>,
+        readonly lsaOnlyAccessIndicator?: OPTIONAL<LSAOnlyAccessIndicator>,
         /**
          * @summary `lsaDataList`.
          * @description
@@ -73,13 +73,13 @@ class LSAInformation {
          * @public
          * @readonly
          */
-        readonly lsaDataList: OPTIONAL<LSADataList>,
+        readonly lsaDataList?: OPTIONAL<LSADataList>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

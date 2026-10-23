@@ -63,10 +63,10 @@ class LIAppliedDeliveryInformation {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        hI2DeliveryIPAddress: OPTIONAL<IPAddress>,
-        hI2DeliveryPortNumber: OPTIONAL<PortNumber>,
-        hI3DeliveryIPAddress: OPTIONAL<IPAddress>,
-        hI3DeliveryPortNumber: OPTIONAL<PortNumber>,
+        hI2DeliveryIPAddress?: OPTIONAL<IPAddress>,
+        hI2DeliveryPortNumber?: OPTIONAL<PortNumber>,
+        hI3DeliveryIPAddress?: OPTIONAL<IPAddress>,
+        hI3DeliveryPortNumber?: OPTIONAL<PortNumber>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.hI2DeliveryIPAddress = hI2DeliveryIPAddress;

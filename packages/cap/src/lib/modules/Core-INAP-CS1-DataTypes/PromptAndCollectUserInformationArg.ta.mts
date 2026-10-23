@@ -49,19 +49,19 @@ class PromptAndCollectUserInformationArg {
          * @public
          * @readonly
          */
-        readonly disconnectFromIPForbidden: OPTIONAL<BOOLEAN>,
+        readonly disconnectFromIPForbidden?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `informationToSend`.
          * @public
          * @readonly
          */
-        readonly informationToSend: OPTIONAL<InformationToSend>,
+        readonly informationToSend?: OPTIONAL<InformationToSend>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<ExtensionField[]>
+        readonly extensions?: OPTIONAL<ExtensionField[]>
     ) {}
 
     /**

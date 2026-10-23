@@ -60,7 +60,7 @@ class Path_efidOrTagChoice_appTagRef {
          * @public
          * @readonly
          */
-        readonly efidOrPath: OPTIONAL<OCTET_STRING>
+        readonly efidOrPath?: OPTIONAL<OCTET_STRING>
     ) {}
 
     /**

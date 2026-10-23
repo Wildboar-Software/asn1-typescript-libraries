@@ -39,7 +39,7 @@ export class DpSpecificInfoAlt_tServiceChangeSpecificInfo {
          * @public
          * @readonly
          */
-        readonly ext_basicServiceCode: OPTIONAL<Ext_BasicServiceCode>,
+        readonly ext_basicServiceCode?: OPTIONAL<Ext_BasicServiceCode>,
         /**
          * @summary `initiatorOfServiceChange`.
          * @description
@@ -50,7 +50,7 @@ export class DpSpecificInfoAlt_tServiceChangeSpecificInfo {
          * @public
          * @readonly
          */
-        readonly initiatorOfServiceChange: OPTIONAL<InitiatorOfServiceChange>,
+        readonly initiatorOfServiceChange?: OPTIONAL<InitiatorOfServiceChange>,
         /**
          * @summary `natureOfServiceChange`.
          * @description
@@ -60,7 +60,7 @@ export class DpSpecificInfoAlt_tServiceChangeSpecificInfo {
          * @public
          * @readonly
          */
-        readonly natureOfServiceChange: OPTIONAL<NatureOfServiceChange>,
+        readonly natureOfServiceChange?: OPTIONAL<NatureOfServiceChange>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}
 

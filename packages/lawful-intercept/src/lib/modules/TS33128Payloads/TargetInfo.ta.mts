@@ -56,7 +56,7 @@ class TargetInfo {
 
     constructor (
         discoveredEAS: DiscoveredEAS,
-        targetEESInfo: OPTIONAL<EDNConfigurationInfo>,
+        targetEESInfo?: OPTIONAL<EDNConfigurationInfo>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.discoveredEAS = discoveredEAS;

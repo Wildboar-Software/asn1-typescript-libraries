@@ -136,9 +136,9 @@ class CommonCriteriaEvaluation {
         cCMeasures: CommonCriteriaMeasures,
         cCCertificateNumber: UTF8String,
         cCCertificateAuthority: UTF8String,
-        evaluationScheme: OPTIONAL<UTF8String>,
-        cCCertificateIssuanceDate: OPTIONAL<GeneralizedTime>,
-        cCCertificateExpiryDate: OPTIONAL<GeneralizedTime>
+        evaluationScheme?: OPTIONAL<UTF8String>,
+        cCCertificateIssuanceDate?: OPTIONAL<GeneralizedTime>,
+        cCCertificateExpiryDate?: OPTIONAL<GeneralizedTime>
     ) {
         this.cCMeasures = cCMeasures;
         this.cCCertificateNumber = cCCertificateNumber;

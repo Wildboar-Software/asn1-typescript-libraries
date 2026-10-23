@@ -46,7 +46,7 @@ export class CAMEL_FCISMSBillingChargingCharacteristics_fCIBCCCAMELsequence1 {
          * @public
          * @readonly
          */
-        readonly appendFreeFormatData: OPTIONAL<AppendFreeFormatData>,
+        readonly appendFreeFormatData?: OPTIONAL<AppendFreeFormatData>,
     ) {}
 
     public static _from_object (_o: { [_K in keyof (CAMEL_FCISMSBillingChargingCharacteristics_fCIBCCCAMELsequence1)]: (CAMEL_FCISMSBillingChargingCharacteristics_fCIBCCCAMELsequence1)[_K] }): CAMEL_FCISMSBillingChargingCharacteristics_fCIBCCCAMELsequence1 {

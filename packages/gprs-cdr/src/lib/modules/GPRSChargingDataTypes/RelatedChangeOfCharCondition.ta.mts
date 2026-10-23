@@ -131,11 +131,11 @@ class RelatedChangeOfCharCondition {
     constructor (
         changeCondition: ChangeCondition,
         changeTime: OCTET_STRING,
-        userLocationInformation: OPTIONAL<OCTET_STRING>,
-        presenceReportingAreaStatus: OPTIONAL<PresenceReportingAreaStatus>,
-        userCSGInformation: OPTIONAL<UserCSGInformation>,
-        rATType: OPTIONAL<INTEGER>,
-        uWANUserLocationInformation: OPTIONAL<UWANUserLocationInfo>
+        userLocationInformation?: OPTIONAL<OCTET_STRING>,
+        presenceReportingAreaStatus?: OPTIONAL<PresenceReportingAreaStatus>,
+        userCSGInformation?: OPTIONAL<UserCSGInformation>,
+        rATType?: OPTIONAL<INTEGER>,
+        uWANUserLocationInformation?: OPTIONAL<UWANUserLocationInfo>
     ) {
         this.changeCondition = changeCondition;
         this.changeTime = changeTime;

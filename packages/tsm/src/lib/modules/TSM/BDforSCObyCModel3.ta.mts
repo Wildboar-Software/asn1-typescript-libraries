@@ -149,7 +149,7 @@ class BDforSCObyCModel3 {
          * @public
          * @readonly
          */
-        readonly aCforBioOnClient: OPTIONAL<ACBioContentInformation>,
+        readonly aCforBioOnClient?: OPTIONAL<ACBioContentInformation>,
         /**
          * @summary `aCforBioOnTTP`.
          * @description
@@ -161,7 +161,7 @@ class BDforSCObyCModel3 {
          * @public
          * @readonly
          */
-        readonly aCforBioOnTTP: OPTIONAL<ACBioContentInformation>
+        readonly aCforBioOnTTP?: OPTIONAL<ACBioContentInformation>
     ) {}
 
     /**

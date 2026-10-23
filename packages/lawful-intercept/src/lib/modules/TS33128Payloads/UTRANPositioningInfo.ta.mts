@@ -100,9 +100,9 @@ class UTRANPositioningInfo {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        uTRANPositioningData: OPTIONAL<UTRANPositioningData>,
-        uTRANGANSSPositioningData: OPTIONAL<UTRANGANSSPositioningData>,
-        uTRANAdditionalPositioningData: OPTIONAL<UTRANAdditionalPositioningData>,
+        uTRANPositioningData?: OPTIONAL<UTRANPositioningData>,
+        uTRANGANSSPositioningData?: OPTIONAL<UTRANGANSSPositioningData>,
+        uTRANAdditionalPositioningData?: OPTIONAL<UTRANAdditionalPositioningData>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.uTRANPositioningData = uTRANPositioningData;

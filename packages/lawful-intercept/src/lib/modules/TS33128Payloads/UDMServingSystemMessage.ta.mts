@@ -193,8 +193,8 @@ class UDMServingSystemMessage {
         gUMMEI: OPTIONAL<GUMMEI>,
         pLMNID: OPTIONAL<PLMNID>,
         servingSystemMethod: UDMServingSystemMethod,
-        serviceID: OPTIONAL<ServiceID>,
-        roamingIndicator: OPTIONAL<RoamingIndicator>,
+        serviceID?: OPTIONAL<ServiceID>,
+        roamingIndicator?: OPTIONAL<RoamingIndicator>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.sUPI = sUPI;

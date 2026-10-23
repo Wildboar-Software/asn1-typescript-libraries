@@ -95,7 +95,7 @@ class ExternalPrincipalIdentifier {
          * @public
          * @readonly
          */
-        readonly subjectKeyIdentifier: OPTIONAL<OCTET_STRING>,
+        readonly subjectKeyIdentifier?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary Extensions that are not recognized.
          * @public

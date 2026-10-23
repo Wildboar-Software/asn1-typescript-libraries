@@ -49,19 +49,19 @@ class AssistRequestInstructionsArg {
          * @public
          * @readonly
          */
-        readonly iPAvailable: OPTIONAL<IPAvailable>,
+        readonly iPAvailable?: OPTIONAL<IPAvailable>,
         /**
          * @summary `iPSSPCapabilities`.
          * @public
          * @readonly
          */
-        readonly iPSSPCapabilities: OPTIONAL<IPSSPCapabilities>,
+        readonly iPSSPCapabilities?: OPTIONAL<IPSSPCapabilities>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<ExtensionField[]>
+        readonly extensions?: OPTIONAL<ExtensionField[]>
     ) {}
 
     /**

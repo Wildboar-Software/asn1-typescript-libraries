@@ -68,7 +68,7 @@ class TriggerEvent_Request {
          * @public
          * @readonly
          */
-        readonly priority: OPTIONAL<Priority>
+        readonly priority?: OPTIONAL<Priority>
     ) {}
 
     /**

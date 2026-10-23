@@ -70,7 +70,7 @@ class CorpusStatistics {
          * @public
          * @readonly
          */
-        readonly samplesPerIndividualEnrol: OPTIONAL<SamplesPerIndividual>,
+        readonly samplesPerIndividualEnrol?: OPTIONAL<SamplesPerIndividual>,
         /**
          * @summary `samplesPerIndividualProbe`.
          * @description
@@ -80,7 +80,7 @@ class CorpusStatistics {
          * @public
          * @readonly
          */
-        readonly samplesPerIndividualProbe: OPTIONAL<SamplesPerIndividual>
+        readonly samplesPerIndividualProbe?: OPTIONAL<SamplesPerIndividual>
     ) {}
 
     /**

@@ -80,7 +80,7 @@ class PresenceStateEvent {
          * @public
          * @readonly
          */
-        readonly fromTime: OPTIONAL<TimeInfo>,
+        readonly fromTime?: OPTIONAL<TimeInfo>,
         /**
          * @summary `untilTime`.
          * @description
@@ -89,7 +89,7 @@ class PresenceStateEvent {
          * @public
          * @readonly
          */
-        readonly untilTime: OPTIONAL<TimeInfo>,
+        readonly untilTime?: OPTIONAL<TimeInfo>,
         /**
          * @summary `place`.
          * @description
@@ -98,7 +98,7 @@ class PresenceStateEvent {
          * @public
          * @readonly
          */
-        readonly place: OPTIONAL<OCTET_STRING>,
+        readonly place?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `mood`.
          * @description
@@ -107,7 +107,7 @@ class PresenceStateEvent {
          * @public
          * @readonly
          */
-        readonly mood: OPTIONAL<OCTET_STRING>,
+        readonly mood?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `namedPresenceState`.
          * @description
@@ -116,7 +116,7 @@ class PresenceStateEvent {
          * @public
          * @readonly
          */
-        readonly namedPresenceState: OPTIONAL<OCTET_STRING>,
+        readonly namedPresenceState?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `extensions`.
          * @description
@@ -126,7 +126,7 @@ class PresenceStateEvent {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

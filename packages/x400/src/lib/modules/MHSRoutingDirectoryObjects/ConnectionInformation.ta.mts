@@ -48,7 +48,7 @@ export class ConnectionInformation {
          * @public
          * @readonly
          */
-        readonly application_context: OPTIONAL<OBJECT_IDENTIFIER>,
+        readonly application_context?: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `profiles`.
          * @public

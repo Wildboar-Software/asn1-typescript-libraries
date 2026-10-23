@@ -53,7 +53,7 @@ class NameArg_nameSequence {
 
     constructor (
         name: Name,
-        extension: OPTIONAL<NameExtension>
+        extension?: OPTIONAL<NameExtension>
     ) {
         this.name = name;
         this.extension = extension;

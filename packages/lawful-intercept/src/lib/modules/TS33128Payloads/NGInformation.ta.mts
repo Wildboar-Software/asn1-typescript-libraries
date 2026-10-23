@@ -93,7 +93,7 @@ class NGInformation {
         supportedTAList: OPTIONAL<SupportedTAList>,
         extendedRANNodeName: OPTIONAL<RANNodeName>,
         pLMNSupportList: PLMNSupportList,
-        iABSupported: OPTIONAL<BOOLEAN>,
+        iABSupported?: OPTIONAL<BOOLEAN>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.globalRANNodeID = globalRANNodeID;

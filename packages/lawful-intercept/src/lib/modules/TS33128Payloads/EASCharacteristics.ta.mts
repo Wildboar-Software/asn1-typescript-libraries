@@ -142,14 +142,14 @@ class EASCharacteristics {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        eASID: OPTIONAL<EASID>,
-        aSPID: OPTIONAL<UTF8String>,
-        eASType: OPTIONAL<UTF8String>,
-        eASSchedule: OPTIONAL<Daytime>,
-        eASProfile: OPTIONAL<EASProfile>,
-        eASServiceArea: OPTIONAL<Location>,
-        eASServicePermLevel: OPTIONAL<UTF8String>,
-        eASServiceFeatures: OPTIONAL<EASServiceFeatures>,
+        eASID?: OPTIONAL<EASID>,
+        aSPID?: OPTIONAL<UTF8String>,
+        eASType?: OPTIONAL<UTF8String>,
+        eASSchedule?: OPTIONAL<Daytime>,
+        eASProfile?: OPTIONAL<EASProfile>,
+        eASServiceArea?: OPTIONAL<Location>,
+        eASServicePermLevel?: OPTIONAL<UTF8String>,
+        eASServiceFeatures?: OPTIONAL<EASServiceFeatures>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.eASID = eASID;

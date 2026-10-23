@@ -39,7 +39,7 @@ class Parameter {
          * @public
          * @readonly
          */
-        readonly value: OPTIONAL<OCTET_STRING[]>,
+        readonly value?: OPTIONAL<OCTET_STRING[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

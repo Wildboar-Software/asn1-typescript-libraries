@@ -63,7 +63,7 @@ class attributeError_ParameterType_problems_Item {
          * @public
          * @readonly
          */
-        readonly value: OPTIONAL<AttributeValue>
+        readonly value?: OPTIONAL<AttributeValue>
     ) {}
 
     /**

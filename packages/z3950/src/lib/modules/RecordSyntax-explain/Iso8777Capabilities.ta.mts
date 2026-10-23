@@ -55,7 +55,7 @@ class Iso8777Capabilities {
 
     constructor (
         searchKeys: SearchKey[],
-        restrictions: OPTIONAL<HumanString>
+        restrictions?: OPTIONAL<HumanString>
     ) {
         this.searchKeys = searchKeys;
         this.restrictions = restrictions;

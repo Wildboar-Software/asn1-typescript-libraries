@@ -100,7 +100,7 @@ class MIDMailboxAuthArg {
         servedUserName: OPTIONAL<Name>,
         mailBox: OPTIONAL<String>,
         password: String,
-        extensions: OPTIONAL<MIDExtensions>,
+        extensions?: OPTIONAL<MIDExtensions>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.partyInfo = partyInfo;

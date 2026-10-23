@@ -101,8 +101,8 @@ class CollectInformationArg {
         originalCalledPartyID: OPTIONAL<OriginalCalledPartyID>,
         travellingClassMark: OPTIONAL<TravellingClassMark>,
         extensions: ExtensionField[],
-        callingPartyNumber: OPTIONAL<CallingPartyNumber>,
-        dialledDigits: OPTIONAL<CalledPartyNumber>,
+        callingPartyNumber?: OPTIONAL<CallingPartyNumber>,
+        dialledDigits?: OPTIONAL<CalledPartyNumber>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.alertingPattern = alertingPattern;

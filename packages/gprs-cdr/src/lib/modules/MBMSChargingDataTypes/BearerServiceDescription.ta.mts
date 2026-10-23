@@ -167,15 +167,15 @@ class BearerServiceDescription {
     readonly sDP_Type: OPTIONAL<BearerServiceDescription_sDP_Type>;
 
     constructor (
-        sIP_Request_Timestamp: OPTIONAL<OCTET_STRING>,
-        sIP_Response_Timestamp: OPTIONAL<OCTET_STRING>,
-        sDP_Media_Components: OPTIONAL<SDP_Media_Components[]>,
-        mediaInitiatorFlag: OPTIONAL<NULL>,
-        sDP_Session_Description: OPTIONAL<GraphicString[]>,
-        mediaInitiatorParty: OPTIONAL<InvolvedParty>,
-        sIP_Request_Timestamp_Fraction: OPTIONAL<INTEGER>,
-        sIP_Response_Timestamp_Fraction: OPTIONAL<INTEGER>,
-        sDP_Type: OPTIONAL<BearerServiceDescription_sDP_Type>
+        sIP_Request_Timestamp?: OPTIONAL<OCTET_STRING>,
+        sIP_Response_Timestamp?: OPTIONAL<OCTET_STRING>,
+        sDP_Media_Components?: OPTIONAL<SDP_Media_Components[]>,
+        mediaInitiatorFlag?: OPTIONAL<NULL>,
+        sDP_Session_Description?: OPTIONAL<GraphicString[]>,
+        mediaInitiatorParty?: OPTIONAL<InvolvedParty>,
+        sIP_Request_Timestamp_Fraction?: OPTIONAL<INTEGER>,
+        sIP_Response_Timestamp_Fraction?: OPTIONAL<INTEGER>,
+        sDP_Type?: OPTIONAL<BearerServiceDescription_sDP_Type>
     ) {
         this.sIP_Request_Timestamp = sIP_Request_Timestamp;
         this.sIP_Response_Timestamp = sIP_Response_Timestamp;

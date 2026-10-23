@@ -166,7 +166,7 @@ class ASDU {
          * @public
          * @readonly
          */
-        readonly smpMod: OPTIONAL<ASDU_smpMod>,
+        readonly smpMod?: OPTIONAL<ASDU_smpMod>,
         /**
          * @summary `gmidData`.
          * @description
@@ -177,7 +177,7 @@ class ASDU {
          * @public
          * @readonly
          */
-        readonly gmidData: OPTIONAL<GmidData>,
+        readonly gmidData?: OPTIONAL<GmidData>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -59,7 +59,7 @@ class AttributeElement_attributeValue_complex {
 
     constructor (
         list: StringOrNumeric[],
-        semanticAction: OPTIONAL<INTEGER[]>
+        semanticAction?: OPTIONAL<INTEGER[]>
     ) {
         this.list = list;
         this.semanticAction = semanticAction;

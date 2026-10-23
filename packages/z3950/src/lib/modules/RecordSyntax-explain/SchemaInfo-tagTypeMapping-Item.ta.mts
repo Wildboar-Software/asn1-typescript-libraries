@@ -66,8 +66,8 @@ class SchemaInfo_tagTypeMapping_Item {
 
     constructor (
         tagType: INTEGER,
-        tagSet: OPTIONAL<OBJECT_IDENTIFIER>,
-        defaultTagType: OPTIONAL<NULL>
+        tagSet?: OPTIONAL<OBJECT_IDENTIFIER>,
+        defaultTagType?: OPTIONAL<NULL>
     ) {
         this.tagType = tagType;
         this.tagSet = tagSet;

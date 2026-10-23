@@ -76,7 +76,7 @@ class SendIdentificationArg {
          * @public
          * @readonly
          */
-        readonly numberOfRequestedVectors: OPTIONAL<NumberOfRequestedVectors>,
+        readonly numberOfRequestedVectors?: OPTIONAL<NumberOfRequestedVectors>,
         /**
          * @summary `segmentationProhibited`.
          * @description
@@ -89,13 +89,13 @@ class SendIdentificationArg {
          * @public
          * @readonly
          */
-        readonly segmentationProhibited: OPTIONAL<NULL>,
+        readonly segmentationProhibited?: OPTIONAL<NULL>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `msc_Number`.
          * @description
@@ -109,7 +109,7 @@ class SendIdentificationArg {
          * @public
          * @readonly
          */
-        readonly msc_Number: OPTIONAL<ISDN_AddressString>,
+        readonly msc_Number?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `previous_LAI`.
          * @description
@@ -121,7 +121,7 @@ class SendIdentificationArg {
          * @public
          * @readonly
          */
-        readonly previous_LAI: OPTIONAL<LAIFixedLength>,
+        readonly previous_LAI?: OPTIONAL<LAIFixedLength>,
         /**
          * @summary `hopCounter`.
          * @description
@@ -133,7 +133,7 @@ class SendIdentificationArg {
          * @public
          * @readonly
          */
-        readonly hopCounter: OPTIONAL<HopCounter>,
+        readonly hopCounter?: OPTIONAL<HopCounter>,
         /**
          * @summary `mtRoamingForwardingSupported`.
          * @description
@@ -145,7 +145,7 @@ class SendIdentificationArg {
          * @public
          * @readonly
          */
-        readonly mtRoamingForwardingSupported: OPTIONAL<NULL>,
+        readonly mtRoamingForwardingSupported?: OPTIONAL<NULL>,
         /**
          * @summary `newVLR_Number`.
          * @description
@@ -157,7 +157,7 @@ class SendIdentificationArg {
          * @public
          * @readonly
          */
-        readonly newVLR_Number: OPTIONAL<ISDN_AddressString>,
+        readonly newVLR_Number?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `new_lmsi`.
          * @description
@@ -169,7 +169,7 @@ class SendIdentificationArg {
          * @public
          * @readonly
          */
-        readonly new_lmsi: OPTIONAL<LMSI>,
+        readonly new_lmsi?: OPTIONAL<LMSI>,
         /**
          * @summary Extensions that are not recognized.
          * @public

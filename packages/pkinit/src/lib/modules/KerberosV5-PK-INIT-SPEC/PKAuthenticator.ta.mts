@@ -99,7 +99,7 @@ class PKAuthenticator {
          * @public
          * @readonly
          */
-        readonly paChecksum: OPTIONAL<OCTET_STRING>,
+        readonly paChecksum?: OPTIONAL<OCTET_STRING>,
         /**
          * Not defined by RFC 4556. The module comment says this is
          * the `PA_AS_FRESHNESS` padata value received from the KDC,
@@ -109,7 +109,7 @@ class PKAuthenticator {
          * @public
          * @readonly
          */
-        readonly freshnessToken: OPTIONAL<OCTET_STRING>,
+        readonly freshnessToken?: OPTIONAL<OCTET_STRING>,
         /**
          * Not defined by RFC 4556. The module attributes it to
          * MS-PKCA v20230920 section 2.2.3 and says Windows Server
@@ -119,7 +119,7 @@ class PKAuthenticator {
          * @public
          * @readonly
          */
-        readonly paChecksum2: OPTIONAL<PAChecksum2>,
+        readonly paChecksum2?: OPTIONAL<PAChecksum2>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -58,7 +58,7 @@ class LevelPolicyAssistance {
          * @public
          * @readonly
          */
-        readonly assistanceAndInstruction: OPTIONAL<AssistanceAndInstruction>
+        readonly assistanceAndInstruction?: OPTIONAL<AssistanceAndInstruction>
     ) {}
 
     /**

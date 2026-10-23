@@ -70,9 +70,9 @@ class SRFCallGapArg {
     constructor (
         sRFgapCriteria: SRFGapCriteria,
         gapIndicators: GapIndicators,
-        controlType: OPTIONAL<ControlType>,
+        controlType?: OPTIONAL<ControlType>,
         _unrecognizedExtensionsList: _Element[] = [],
-        extensions: OPTIONAL<Extensions>
+        extensions?: OPTIONAL<Extensions>
     ) {
         this.sRFgapCriteria = sRFgapCriteria;
         this.gapIndicators = gapIndicators;

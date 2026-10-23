@@ -169,7 +169,7 @@ class DigitsDialedEvent {
          * @public
          * @readonly
          */
-        readonly servicesPermitted: OPTIONAL<ServicesPermitted>,
+        readonly servicesPermitted?: OPTIONAL<ServicesPermitted>,
         /**
          * @summary `networkCallingDevice`.
          * @description
@@ -181,7 +181,7 @@ class DigitsDialedEvent {
          * @public
          * @readonly
          */
-        readonly networkCallingDevice: OPTIONAL<NetworkCallingDeviceID>,
+        readonly networkCallingDevice?: OPTIONAL<NetworkCallingDeviceID>,
         /**
          * @summary `networkCalledDevice`.
          * @description
@@ -193,7 +193,7 @@ class DigitsDialedEvent {
          * @public
          * @readonly
          */
-        readonly networkCalledDevice: OPTIONAL<NetworkCalledDeviceID>,
+        readonly networkCalledDevice?: OPTIONAL<NetworkCalledDeviceID>,
         /**
          * @summary `associatedCallingDevice`.
          * @description
@@ -204,7 +204,7 @@ class DigitsDialedEvent {
          * @public
          * @readonly
          */
-        readonly associatedCallingDevice: OPTIONAL<AssociatedCallingDeviceID>,
+        readonly associatedCallingDevice?: OPTIONAL<AssociatedCallingDeviceID>,
         /**
          * @summary `associatedCalledDevice`.
          * @description
@@ -215,7 +215,7 @@ class DigitsDialedEvent {
          * @public
          * @readonly
          */
-        readonly associatedCalledDevice: OPTIONAL<AssociatedCalledDeviceID>,
+        readonly associatedCalledDevice?: OPTIONAL<AssociatedCalledDeviceID>,
         /**
          * @summary `dialingConnectionInfo`.
          * @description
@@ -226,7 +226,7 @@ class DigitsDialedEvent {
          * @public
          * @readonly
          */
-        readonly dialingConnectionInfo: OPTIONAL<ConnectionInformation>,
+        readonly dialingConnectionInfo?: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `callCharacteristics`.
          * @description
@@ -237,7 +237,7 @@ class DigitsDialedEvent {
          * @public
          * @readonly
          */
-        readonly callCharacteristics: OPTIONAL<CallCharacteristics>,
+        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
         /**
          * @summary `callLinkageData`.
          * @description
@@ -248,7 +248,7 @@ class DigitsDialedEvent {
          * @public
          * @readonly
          */
-        readonly callLinkageData: OPTIONAL<CallLinkageData>,
+        readonly callLinkageData?: OPTIONAL<CallLinkageData>,
         /**
          * @summary `languagePreferences`.
          * @description
@@ -258,7 +258,7 @@ class DigitsDialedEvent {
          * @public
          * @readonly
          */
-        readonly languagePreferences: OPTIONAL<LanguagePreferences>,
+        readonly languagePreferences?: OPTIONAL<LanguagePreferences>,
         /**
          * @summary `locationInfo`.
          * @description
@@ -269,7 +269,7 @@ class DigitsDialedEvent {
          * @public
          * @readonly
          */
-        readonly locationInfo: OPTIONAL<LocationInfoList>,
+        readonly locationInfo?: OPTIONAL<LocationInfoList>,
         /**
          * @summary `extensions`.
          * @description
@@ -281,7 +281,7 @@ class DigitsDialedEvent {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

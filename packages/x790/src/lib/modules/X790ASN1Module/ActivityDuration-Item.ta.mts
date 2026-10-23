@@ -54,13 +54,13 @@ class ActivityDuration_Item {
          * @public
          * @readonly
          */
-        readonly billable: OPTIONAL<BOOLEAN>,
+        readonly billable?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `type_`.
          * @public
          * @readonly
          */
-        readonly type_: OPTIONAL<ActivityType>,
+        readonly type_?: OPTIONAL<ActivityType>,
         /**
          * @summary Extensions that are not recognized.
          * @public

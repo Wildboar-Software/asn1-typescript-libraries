@@ -70,9 +70,9 @@ class CreateOrRemoveTriggerDataResultArg {
     constructor (
         triggerStatus: TriggerStatus,
         tDPIdentifier: TDPIdentifier,
-        registratorIdentifier: OPTIONAL<RegistratorIdentifier>,
+        registratorIdentifier?: OPTIONAL<RegistratorIdentifier>,
         _unrecognizedExtensionsList: _Element[] = [],
-        extensions: OPTIONAL<Extensions>
+        extensions?: OPTIONAL<Extensions>
     ) {
         this.triggerStatus = triggerStatus;
         this.tDPIdentifier = tDPIdentifier;

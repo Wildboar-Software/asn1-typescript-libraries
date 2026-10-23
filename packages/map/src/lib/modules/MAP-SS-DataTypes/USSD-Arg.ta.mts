@@ -65,7 +65,7 @@ class USSD_Arg {
          * @public
          * @readonly
          */
-        readonly alertingPattern: OPTIONAL<AlertingPattern>,
+        readonly alertingPattern?: OPTIONAL<AlertingPattern>,
         /**
          * @summary `msisdn`.
          * @description
@@ -75,7 +75,7 @@ class USSD_Arg {
          * @public
          * @readonly
          */
-        readonly msisdn: OPTIONAL<ISDN_AddressString>,
+        readonly msisdn?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary Extensions that are not recognized.
          * @public

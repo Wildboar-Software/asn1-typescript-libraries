@@ -41,7 +41,7 @@ class NotificationInformation_callFailureSpecificInfo {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        failureCause: OPTIONAL<Cause>,
+        failureCause?: OPTIONAL<Cause>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.failureCause = failureCause;

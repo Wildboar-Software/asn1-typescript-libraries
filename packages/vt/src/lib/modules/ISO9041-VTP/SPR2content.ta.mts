@@ -55,7 +55,7 @@ class SPR2content {
          * @public
          * @readonly
          */
-        readonly argList: OPTIONAL<ProfileArgumValueList>,
+        readonly argList?: OPTIONAL<ProfileArgumValueList>,
         /**
          * @summary `retList`.
          * @description
@@ -64,7 +64,7 @@ class SPR2content {
          * @public
          * @readonly
          */
-        readonly retList: OPTIONAL<PrintableString[]>
+        readonly retList?: OPTIONAL<PrintableString[]>
     ) {}
 
     /**

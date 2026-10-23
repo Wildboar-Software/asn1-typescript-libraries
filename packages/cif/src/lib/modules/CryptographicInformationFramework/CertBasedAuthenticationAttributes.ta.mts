@@ -58,7 +58,7 @@ class CertBasedAuthenticationAttributes {
          * @public
          * @readonly
          */
-        readonly cioSecurityId: OPTIONAL<INTEGER>,
+        readonly cioSecurityId?: OPTIONAL<INTEGER>,
         /**
          * @summary Extensions that are not recognized.
          * @public

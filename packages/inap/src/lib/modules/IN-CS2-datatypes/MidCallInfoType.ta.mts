@@ -41,7 +41,7 @@ class MidCallInfoType {
 
     constructor (
         iNServiceControlCodeLow: Digits,
-        iNServiceControlCodeHigh: OPTIONAL<Digits>
+        iNServiceControlCodeHigh?: OPTIONAL<Digits>
     ) {
         this.iNServiceControlCodeLow = iNServiceControlCodeLow;
         this.iNServiceControlCodeHigh = iNServiceControlCodeHigh;

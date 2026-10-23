@@ -65,10 +65,10 @@ class APNRateControlParameters {
     readonly rateControlMaxMessageSize: OPTIONAL<INTEGER>;
 
     constructor (
-        additionalExceptionReports: OPTIONAL<AdditionalExceptionReports>,
-        rateControlTimeUnit: OPTIONAL<APNRateControlParameters_rateControlTimeUnit>,
-        rateControlMaxRate: OPTIONAL<INTEGER>,
-        rateControlMaxMessageSize: OPTIONAL<INTEGER>
+        additionalExceptionReports?: OPTIONAL<AdditionalExceptionReports>,
+        rateControlTimeUnit?: OPTIONAL<APNRateControlParameters_rateControlTimeUnit>,
+        rateControlMaxRate?: OPTIONAL<INTEGER>,
+        rateControlMaxMessageSize?: OPTIONAL<INTEGER>
     ) {
         this.additionalExceptionReports = additionalExceptionReports;
         this.rateControlTimeUnit = rateControlTimeUnit;

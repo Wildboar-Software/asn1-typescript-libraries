@@ -61,7 +61,7 @@ class ConnectionList_Item {
          * @public
          * @readonly
          */
-        readonly newConnection: OPTIONAL<ConnectionID>,
+        readonly newConnection?: OPTIONAL<ConnectionID>,
         /**
          * @summary `oldConnection`.
          * @description
@@ -73,7 +73,7 @@ class ConnectionList_Item {
          * @public
          * @readonly
          */
-        readonly oldConnection: OPTIONAL<ConnectionID>,
+        readonly oldConnection?: OPTIONAL<ConnectionID>,
         /**
          * @summary `endpoint`.
          * @description
@@ -85,7 +85,7 @@ class ConnectionList_Item {
          * @public
          * @readonly
          */
-        readonly endpoint: OPTIONAL<ConnectionList_Item_endpoint>,
+        readonly endpoint?: OPTIONAL<ConnectionList_Item_endpoint>,
         /**
          * @summary `associatedNID`.
          * @description
@@ -97,7 +97,7 @@ class ConnectionList_Item {
          * @public
          * @readonly
          */
-        readonly associatedNID: OPTIONAL<ConnectionList_Item_associatedNID>,
+        readonly associatedNID?: OPTIONAL<ConnectionList_Item_associatedNID>,
         /**
          * @summary `resultingConnectionInfo`.
          * @description
@@ -108,7 +108,7 @@ class ConnectionList_Item {
          * @public
          * @readonly
          */
-        readonly resultingConnectionInfo: OPTIONAL<ConnectionInformation>
+        readonly resultingConnectionInfo?: OPTIONAL<ConnectionInformation>
     ) {}
 
     /**

@@ -62,7 +62,7 @@ class ParameterIdents {
          * @public
          * @readonly
          */
-        readonly dimensions: OPTIONAL<NULL>,
+        readonly dimensions?: OPTIONAL<NULL>,
         /**
          * @summary `xParam`.
          * @description
@@ -71,7 +71,7 @@ class ParameterIdents {
          * @public
          * @readonly
          */
-        readonly xParam: OPTIONAL<DimensionParamIdent>,
+        readonly xParam?: OPTIONAL<DimensionParamIdent>,
         /**
          * @summary `yParam`.
          * @description
@@ -80,7 +80,7 @@ class ParameterIdents {
          * @public
          * @readonly
          */
-        readonly yParam: OPTIONAL<DimensionParamIdent>,
+        readonly yParam?: OPTIONAL<DimensionParamIdent>,
         /**
          * @summary `zParam`.
          * @description
@@ -89,7 +89,7 @@ class ParameterIdents {
          * @public
          * @readonly
          */
-        readonly zParam: OPTIONAL<DimensionParamIdent>,
+        readonly zParam?: OPTIONAL<DimensionParamIdent>,
         /**
          * @summary `erasure`.
          * @description
@@ -98,7 +98,7 @@ class ParameterIdents {
          * @public
          * @readonly
          */
-        readonly erasure: OPTIONAL<NULL>,
+        readonly erasure?: OPTIONAL<NULL>,
         /**
          * @summary `repertoire`.
          * @description
@@ -107,7 +107,7 @@ class ParameterIdents {
          * @public
          * @readonly
          */
-        readonly repertoire: OPTIONAL<CompoundRepertoireIdent>,
+        readonly repertoire?: OPTIONAL<CompoundRepertoireIdent>,
         /**
          * @summary `emphasis`.
          * @description
@@ -116,7 +116,7 @@ class ParameterIdents {
          * @public
          * @readonly
          */
-        readonly emphasis: OPTIONAL<CompoundEmphasisIdent>,
+        readonly emphasis?: OPTIONAL<CompoundEmphasisIdent>,
         /**
          * @summary `foreground`.
          * @description
@@ -125,7 +125,7 @@ class ParameterIdents {
          * @public
          * @readonly
          */
-        readonly foreground: OPTIONAL<CompoundColourIdent>,
+        readonly foreground?: OPTIONAL<CompoundColourIdent>,
         /**
          * @summary `background`.
          * @description
@@ -134,7 +134,7 @@ class ParameterIdents {
          * @public
          * @readonly
          */
-        readonly background: OPTIONAL<CompoundColourIdent>,
+        readonly background?: OPTIONAL<CompoundColourIdent>,
         /**
          * @summary `access`.
          * @description
@@ -143,7 +143,7 @@ class ParameterIdents {
          * @public
          * @readonly
          */
-        readonly access: OPTIONAL<NULL>,
+        readonly access?: OPTIONAL<NULL>,
         /**
          * @summary `blockParams`.
          * @description
@@ -152,7 +152,7 @@ class ParameterIdents {
          * @public
          * @readonly
          */
-        readonly blockParams: OPTIONAL<BlockParamIdent>,
+        readonly blockParams?: OPTIONAL<BlockParamIdent>,
         /**
          * @summary `fieldParams`.
          * @description
@@ -161,7 +161,7 @@ class ParameterIdents {
          * @public
          * @readonly
          */
-        readonly fieldParams: OPTIONAL<FieldParamIdent>,
+        readonly fieldParams?: OPTIONAL<FieldParamIdent>,
         /**
          * @summary `rippleCapability`.
          * @description
@@ -170,7 +170,7 @@ class ParameterIdents {
          * @public
          * @readonly
          */
-        readonly rippleCapability: OPTIONAL<NULL>
+        readonly rippleCapability?: OPTIONAL<NULL>
     ) {}
 
     /**

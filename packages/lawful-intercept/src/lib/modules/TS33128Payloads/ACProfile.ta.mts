@@ -123,11 +123,11 @@ class ACProfile {
 
     constructor (
         aCID: ACID,
-        aCType: OPTIONAL<UTF8String>,
-        aCSchedule: OPTIONAL<Daytime>,
-        expACGeoServArea: OPTIONAL<Location>,
-        eASsInfo: OPTIONAL<EASsInfo>,
-        aCServiceContSupport: OPTIONAL<ACRScenarios>,
+        aCType?: OPTIONAL<UTF8String>,
+        aCSchedule?: OPTIONAL<Daytime>,
+        expACGeoServArea?: OPTIONAL<Location>,
+        eASsInfo?: OPTIONAL<EASsInfo>,
+        aCServiceContSupport?: OPTIONAL<ACRScenarios>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.aCID = aCID;

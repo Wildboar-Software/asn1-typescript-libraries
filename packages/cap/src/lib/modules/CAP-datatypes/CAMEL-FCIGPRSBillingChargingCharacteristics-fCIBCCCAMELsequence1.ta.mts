@@ -48,7 +48,7 @@ export class CAMEL_FCIGPRSBillingChargingCharacteristics_fCIBCCCAMELsequence1 {
          * @public
          * @readonly
          */
-        readonly pDPID: OPTIONAL<PDPID>,
+        readonly pDPID?: OPTIONAL<PDPID>,
         /**
          * @summary `appendFreeFormatData`.
          * @description
@@ -60,7 +60,7 @@ export class CAMEL_FCIGPRSBillingChargingCharacteristics_fCIBCCCAMELsequence1 {
          * @public
          * @readonly
          */
-        readonly appendFreeFormatData: OPTIONAL<AppendFreeFormatData>,
+        readonly appendFreeFormatData?: OPTIONAL<AppendFreeFormatData>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}
 

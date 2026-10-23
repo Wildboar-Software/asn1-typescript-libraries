@@ -55,7 +55,7 @@ class LogDevEvtsList {
          * Capability bitmaps for this event category at the logical device;
          * omit if unsupported (ECMA-269 §13.1.2).
          */
-        readonly callControlEvtsList: OPTIONAL<CallControlEvtsList>,
+        readonly callControlEvtsList?: OPTIONAL<CallControlEvtsList>,
         /**
          * @summary `callAssociatedEvtsList`.
          * @public
@@ -64,7 +64,7 @@ class LogDevEvtsList {
          * Capability bitmaps for this event category at the logical device;
          * omit if unsupported (ECMA-269 §13.1.2).
          */
-        readonly callAssociatedEvtsList: OPTIONAL<CallAssociatedEvtsList>,
+        readonly callAssociatedEvtsList?: OPTIONAL<CallAssociatedEvtsList>,
         /**
          * @summary `logicalEvtsList`.
          * @public
@@ -73,7 +73,7 @@ class LogDevEvtsList {
          * Capability bitmaps for this event category at the logical device;
          * omit if unsupported (ECMA-269 §13.1.2).
          */
-        readonly logicalEvtsList: OPTIONAL<LogicalEvtsList>,
+        readonly logicalEvtsList?: OPTIONAL<LogicalEvtsList>,
         /**
          * @summary `mediaEvtsList`.
          * @public
@@ -82,7 +82,7 @@ class LogDevEvtsList {
          * Capability bitmaps for this event category at the logical device;
          * omit if unsupported (ECMA-269 §13.1.2).
          */
-        readonly mediaEvtsList: OPTIONAL<MediaEvtsList>,
+        readonly mediaEvtsList?: OPTIONAL<MediaEvtsList>,
         /**
          * @summary `voiceUnitEvtsList`.
          * @public
@@ -91,7 +91,7 @@ class LogDevEvtsList {
          * Capability bitmaps for this event category at the logical device;
          * omit if unsupported (ECMA-269 §13.1.2).
          */
-        readonly voiceUnitEvtsList: OPTIONAL<VoiceUnitEvtsList>
+        readonly voiceUnitEvtsList?: OPTIONAL<VoiceUnitEvtsList>
     ) {}
 
     /**

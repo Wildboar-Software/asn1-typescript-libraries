@@ -119,7 +119,7 @@ class AlarmSummary {
          * @public
          * @readonly
          */
-        readonly displayEnhancement: OPTIONAL<Nullable<EN_Additional_Detail>>,
+        readonly displayEnhancement?: OPTIONAL<Nullable<EN_Additional_Detail>>,
         /**
          * @summary `timeOfLastTransitionToActive`.
          * @description
@@ -132,7 +132,7 @@ class AlarmSummary {
          * @public
          * @readonly
          */
-        readonly timeOfLastTransitionToActive: OPTIONAL<EventTime>,
+        readonly timeOfLastTransitionToActive?: OPTIONAL<EventTime>,
         /**
          * @summary `timeOfLastTransitionToIdle`.
          * @description
@@ -145,7 +145,7 @@ class AlarmSummary {
          * @public
          * @readonly
          */
-        readonly timeOfLastTransitionToIdle: OPTIONAL<EventTime>
+        readonly timeOfLastTransitionToIdle?: OPTIONAL<EventTime>
     ) {}
 
     /**

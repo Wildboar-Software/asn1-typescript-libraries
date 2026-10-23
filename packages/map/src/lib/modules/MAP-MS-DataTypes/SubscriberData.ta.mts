@@ -68,7 +68,7 @@ class SubscriberData {
          * @public
          * @readonly
          */
-        readonly msisdn: OPTIONAL<ISDN_AddressString>,
+        readonly msisdn?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `category`.
          * @description
@@ -80,7 +80,7 @@ class SubscriberData {
          * @public
          * @readonly
          */
-        readonly category: OPTIONAL<Category>,
+        readonly category?: OPTIONAL<Category>,
         /**
          * @summary `subscriberStatus`.
          * @description
@@ -92,7 +92,7 @@ class SubscriberData {
          * @public
          * @readonly
          */
-        readonly subscriberStatus: OPTIONAL<SubscriberStatus>,
+        readonly subscriberStatus?: OPTIONAL<SubscriberStatus>,
         /**
          * @summary `bearerServiceList`.
          * @description
@@ -105,7 +105,7 @@ class SubscriberData {
          * @public
          * @readonly
          */
-        readonly bearerServiceList: OPTIONAL<BearerServiceList>,
+        readonly bearerServiceList?: OPTIONAL<BearerServiceList>,
         /**
          * @summary `teleserviceList`.
          * @description
@@ -118,7 +118,7 @@ class SubscriberData {
          * @public
          * @readonly
          */
-        readonly teleserviceList: OPTIONAL<TeleserviceList>,
+        readonly teleserviceList?: OPTIONAL<TeleserviceList>,
         /**
          * @summary `provisionedSS`.
          * @description
@@ -130,7 +130,7 @@ class SubscriberData {
          * @public
          * @readonly
          */
-        readonly provisionedSS: OPTIONAL<Ext_SS_InfoList>,
+        readonly provisionedSS?: OPTIONAL<Ext_SS_InfoList>,
         /**
          * @summary `odb_Data`.
          * @description
@@ -142,7 +142,7 @@ class SubscriberData {
          * @public
          * @readonly
          */
-        readonly odb_Data: OPTIONAL<ODB_Data>,
+        readonly odb_Data?: OPTIONAL<ODB_Data>,
         /**
          * @summary `roamingRestrictionDueToUnsupportedFeature`.
          * @description
@@ -155,7 +155,7 @@ class SubscriberData {
          * @public
          * @readonly
          */
-        readonly roamingRestrictionDueToUnsupportedFeature: OPTIONAL<NULL>,
+        readonly roamingRestrictionDueToUnsupportedFeature?: OPTIONAL<NULL>,
         /**
          * @summary `regionalSubscriptionData`.
          * @description
@@ -167,7 +167,7 @@ class SubscriberData {
          * @public
          * @readonly
          */
-        readonly regionalSubscriptionData: OPTIONAL<ZoneCodeList>,
+        readonly regionalSubscriptionData?: OPTIONAL<ZoneCodeList>,
         /**
          * @summary `vbsSubscriptionData`.
          * @description
@@ -179,7 +179,7 @@ class SubscriberData {
          * @public
          * @readonly
          */
-        readonly vbsSubscriptionData: OPTIONAL<VBSDataList>,
+        readonly vbsSubscriptionData?: OPTIONAL<VBSDataList>,
         /**
          * @summary `vgcsSubscriptionData`.
          * @description
@@ -191,7 +191,7 @@ class SubscriberData {
          * @public
          * @readonly
          */
-        readonly vgcsSubscriptionData: OPTIONAL<VGCSDataList>,
+        readonly vgcsSubscriptionData?: OPTIONAL<VGCSDataList>,
         /**
          * @summary `vlrCamelSubscriptionInfo`.
          * @description
@@ -203,7 +203,7 @@ class SubscriberData {
          * @public
          * @readonly
          */
-        readonly vlrCamelSubscriptionInfo: OPTIONAL<VlrCamelSubscriptionInfo>
+        readonly vlrCamelSubscriptionInfo?: OPTIONAL<VlrCamelSubscriptionInfo>
     ) {}
 
     /**

@@ -46,7 +46,7 @@ class LineConDiag_Item {
          * @public
          * @readonly
          */
-        readonly lineProbeValues: OPTIONAL<V59String>,
+        readonly lineProbeValues?: OPTIONAL<V59String>,
         /**
          * @summary `phaseJitter`.
          * @description
@@ -57,7 +57,7 @@ class LineConDiag_Item {
          * @public
          * @readonly
          */
-        readonly phaseJitter: OPTIONAL<V59String>,
+        readonly phaseJitter?: OPTIONAL<V59String>,
         /**
          * @summary `ampJitter`.
          * @description
@@ -68,7 +68,7 @@ class LineConDiag_Item {
          * @public
          * @readonly
          */
-        readonly ampJitter: OPTIONAL<V59String>,
+        readonly ampJitter?: OPTIONAL<V59String>,
         /**
          * @summary `nLD`.
          * @description
@@ -79,7 +79,7 @@ class LineConDiag_Item {
          * @public
          * @readonly
          */
-        readonly nLD: OPTIONAL<V59String>,
+        readonly nLD?: OPTIONAL<V59String>,
         /**
          * @summary Extensions that are not recognized.
          * @public

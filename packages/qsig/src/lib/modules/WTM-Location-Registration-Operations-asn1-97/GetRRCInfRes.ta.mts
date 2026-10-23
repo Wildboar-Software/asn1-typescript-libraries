@@ -69,9 +69,9 @@ class GetRRCInfRes {
     readonly argExtension: OPTIONAL<LrExtension>;
 
     constructor (
-        alternativeId: OPTIONAL<AlternativeId>,
-        rrClass: OPTIONAL<RRClass>,
-        argExtension: OPTIONAL<LrExtension>
+        alternativeId?: OPTIONAL<AlternativeId>,
+        rrClass?: OPTIONAL<RRClass>,
+        argExtension?: OPTIONAL<LrExtension>
     ) {
         this.alternativeId = alternativeId;
         this.rrClass = rrClass;

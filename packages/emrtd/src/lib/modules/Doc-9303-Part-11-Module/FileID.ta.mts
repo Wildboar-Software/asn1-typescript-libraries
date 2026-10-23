@@ -53,7 +53,7 @@ class FileID {
          * @public
          * @readonly
          */
-        readonly sfid: OPTIONAL<OCTET_STRING>
+        readonly sfid?: OPTIONAL<OCTET_STRING>
     ) {
         if (fid.length !== 2) {
             throw new ASN1SizeError("FileID.fid violates SIZE constraint");

@@ -53,7 +53,7 @@ class CSTASecurityData {
          * @public
          * @readonly
          */
-        readonly messageSequenceNumber: OPTIONAL<INTEGER>,
+        readonly messageSequenceNumber?: OPTIONAL<INTEGER>,
         /**
          * @summary `timestamp`.
          * @description
@@ -64,7 +64,7 @@ class CSTASecurityData {
          * @public
          * @readonly
          */
-        readonly timestamp: OPTIONAL<TimeInfo>,
+        readonly timestamp?: OPTIONAL<TimeInfo>,
         /**
          * @summary `securityInfo`.
          * @description
@@ -75,7 +75,7 @@ class CSTASecurityData {
          * @public
          * @readonly
          */
-        readonly securityInfo: OPTIONAL<SecurityInfo>
+        readonly securityInfo?: OPTIONAL<SecurityInfo>
     ) {}
 
     /**

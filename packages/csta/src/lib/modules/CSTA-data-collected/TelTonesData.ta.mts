@@ -64,7 +64,7 @@ class TelTonesData {
          * @public
          * @readonly
          */
-        readonly toneFrequency: OPTIONAL<INTEGER>,
+        readonly toneFrequency?: OPTIONAL<INTEGER>,
         /**
          * @summary `toneDuration`.
          * @description
@@ -75,7 +75,7 @@ class TelTonesData {
          * @public
          * @readonly
          */
-        readonly toneDuration: OPTIONAL<INTEGER>,
+        readonly toneDuration?: OPTIONAL<INTEGER>,
         /**
          * @summary `tonePauseDuration`.
          * @description
@@ -86,7 +86,7 @@ class TelTonesData {
          * @public
          * @readonly
          */
-        readonly tonePauseDuration: OPTIONAL<INTEGER>
+        readonly tonePauseDuration?: OPTIONAL<INTEGER>
     ) {}
 
     /**

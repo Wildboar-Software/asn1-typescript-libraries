@@ -71,13 +71,13 @@ class ActivateServiceFilteringArg {
          * @public
          * @readonly
          */
-        readonly startTime: OPTIONAL<DateAndTime>,
+        readonly startTime?: OPTIONAL<DateAndTime>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<ExtensionField[]>
+        readonly extensions?: OPTIONAL<ExtensionField[]>
     ) {}
 
     /**

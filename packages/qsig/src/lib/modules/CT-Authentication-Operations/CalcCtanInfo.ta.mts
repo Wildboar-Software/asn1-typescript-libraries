@@ -56,7 +56,7 @@ class CalcCtanInfo {
 
     constructor (
         authResponse: AuthResponse,
-        calculationParam: OPTIONAL<CalculationParam>
+        calculationParam?: OPTIONAL<CalculationParam>
     ) {
         this.authResponse = authResponse;
         this.calculationParam = calculationParam;

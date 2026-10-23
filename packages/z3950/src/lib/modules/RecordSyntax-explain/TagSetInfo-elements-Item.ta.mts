@@ -94,9 +94,9 @@ class TagSetInfo_elements_Item {
         elementname: InternationalString,
         nicknames: OPTIONAL<InternationalString[]>,
         elementTag: StringOrNumeric,
-        description: OPTIONAL<HumanString>,
-        dataType: OPTIONAL<PrimitiveDataType>,
-        otherTagInfo: OPTIONAL<OtherInformation>
+        description?: OPTIONAL<HumanString>,
+        dataType?: OPTIONAL<PrimitiveDataType>,
+        otherTagInfo?: OPTIONAL<OtherInformation>
     ) {
         this.elementname = elementname;
         this.nicknames = nicknames;

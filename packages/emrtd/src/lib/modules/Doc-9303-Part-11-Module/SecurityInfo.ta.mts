@@ -54,7 +54,7 @@ class SecurityInfo {
          * @public
          * @readonly
          */
-        readonly optionalData: OPTIONAL<_Element>,
+        readonly optionalData?: OPTIONAL<_Element>,
     ) {}
 
     /**

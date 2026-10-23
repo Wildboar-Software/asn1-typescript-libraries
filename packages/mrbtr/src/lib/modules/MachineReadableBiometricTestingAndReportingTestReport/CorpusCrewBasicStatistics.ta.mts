@@ -134,7 +134,7 @@ class CorpusCrewBasicStatistics {
          * @public
          * @readonly
          */
-        readonly ageDistrMale: OPTIONAL<InfoCumulativeDistribution>,
+        readonly ageDistrMale?: OPTIONAL<InfoCumulativeDistribution>,
         /**
          * @summary `ageDistrFemale`.
          * @description
@@ -145,7 +145,7 @@ class CorpusCrewBasicStatistics {
          * @public
          * @readonly
          */
-        readonly ageDistrFemale: OPTIONAL<InfoCumulativeDistribution>,
+        readonly ageDistrFemale?: OPTIONAL<InfoCumulativeDistribution>,
         /**
          * @summary `elapsDistr`.
          * @description
@@ -156,7 +156,7 @@ class CorpusCrewBasicStatistics {
          * @public
          * @readonly
          */
-        readonly elapsDistr: OPTIONAL<InfoCumulativeDistribution>,
+        readonly elapsDistr?: OPTIONAL<InfoCumulativeDistribution>,
         /**
          * @summary `visitsDayDistr`.
          * @description
@@ -167,7 +167,7 @@ class CorpusCrewBasicStatistics {
          * @public
          * @readonly
          */
-        readonly visitsDayDistr: OPTIONAL<InfoCumulativeDistribution>
+        readonly visitsDayDistr?: OPTIONAL<InfoCumulativeDistribution>
     ) {}
 
     /**

@@ -174,13 +174,13 @@ class MMEUEServiceAccept {
 
     constructor (
         userIdentifiers: UserIdentifiers,
-        serviceType: OPTIONAL<OCTET_STRING>,
-        mTMSI: OPTIONAL<TMSI>,
-        cSFBResponse: OPTIONAL<OCTET_STRING>,
-        uEEPSBearerContextStatus: OPTIONAL<OCTET_STRING>,
-        uERequestType: OPTIONAL<MUSIMUERequestType>,
-        pagingRestriction: OPTIONAL<PagingRestrictionIndicator>,
-        controlPlaneServiceType: OPTIONAL<OCTET_STRING>,
+        serviceType?: OPTIONAL<OCTET_STRING>,
+        mTMSI?: OPTIONAL<TMSI>,
+        cSFBResponse?: OPTIONAL<OCTET_STRING>,
+        uEEPSBearerContextStatus?: OPTIONAL<OCTET_STRING>,
+        uERequestType?: OPTIONAL<MUSIMUERequestType>,
+        pagingRestriction?: OPTIONAL<PagingRestrictionIndicator>,
+        controlPlaneServiceType?: OPTIONAL<OCTET_STRING>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.userIdentifiers = userIdentifiers;

@@ -90,9 +90,9 @@ class MonitorRouteRequestArg {
         correlationID: CorrelationID,
         monitoringCriteria: MonitoringCriteria,
         monitoringTimeout: MonitoringTimeOut,
-        startTime: OPTIONAL<DateAndTime>,
+        startTime?: OPTIONAL<DateAndTime>,
         _unrecognizedExtensionsList: _Element[] = [],
-        extensions: OPTIONAL<Extensions>
+        extensions?: OPTIONAL<Extensions>
     ) {
         this.routeList = routeList;
         this.correlationID = correlationID;

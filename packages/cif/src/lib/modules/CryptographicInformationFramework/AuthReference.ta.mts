@@ -54,7 +54,7 @@ class AuthReference {
          * @public
          * @readonly
          */
-        readonly seIdentifier: OPTIONAL<INTEGER>
+        readonly seIdentifier?: OPTIONAL<INTEGER>
     ) {}
 
     /**

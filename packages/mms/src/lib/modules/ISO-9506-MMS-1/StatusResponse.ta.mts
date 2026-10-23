@@ -86,7 +86,7 @@ class StatusResponse {
          * @public
          * @readonly
          */
-        readonly localDetail: OPTIONAL<BIT_STRING>
+        readonly localDetail?: OPTIONAL<BIT_STRING>
     ) {
         if (localDetail && localDetail.length > 128) {
             throw new ASN1SizeError("StatusResponse.localDetail violates SIZE constraint");

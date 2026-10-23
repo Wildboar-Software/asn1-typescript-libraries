@@ -146,7 +146,7 @@ class PTCPartyDrop {
         pTCDirection: Direction,
         pTCSessionInfo: PTCSessionInfo,
         pTCPartyDrop: PTCTargetInformation,
-        pTCParticipantPresenceStatus: OPTIONAL<PTCParticipantPresenceStatus>,
+        pTCParticipantPresenceStatus?: OPTIONAL<PTCParticipantPresenceStatus>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.pTCTargetInformation = pTCTargetInformation;

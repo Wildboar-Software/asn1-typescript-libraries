@@ -78,10 +78,10 @@ class EventNotificationChargingArg {
 
     constructor (
         eventTypeCharging: EventTypeCharging,
-        eventSpecificInformationCharging: OPTIONAL<EventSpecificInformationCharging>,
-        legID: OPTIONAL<LegID>,
-        extensions: OPTIONAL<Extensions>,
-        monitorMode: OPTIONAL<MonitorMode>,
+        eventSpecificInformationCharging?: OPTIONAL<EventSpecificInformationCharging>,
+        legID?: OPTIONAL<LegID>,
+        extensions?: OPTIONAL<Extensions>,
+        monitorMode?: OPTIONAL<MonitorMode>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.eventTypeCharging = eventTypeCharging;

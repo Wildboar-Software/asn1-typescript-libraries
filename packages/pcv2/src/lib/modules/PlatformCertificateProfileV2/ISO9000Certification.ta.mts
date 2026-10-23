@@ -68,8 +68,8 @@ class ISO9000Certification {
     readonly iso9000Uri: OPTIONAL<IA5String>;
 
     constructor (
-        iso9000Certified: OPTIONAL<BOOLEAN>,
-        iso9000Uri: OPTIONAL<IA5String>
+        iso9000Certified?: OPTIONAL<BOOLEAN>,
+        iso9000Uri?: OPTIONAL<IA5String>
     ) {
         this.iso9000Certified = iso9000Certified;
         this.iso9000Uri = iso9000Uri;

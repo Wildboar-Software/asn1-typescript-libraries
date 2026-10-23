@@ -39,7 +39,7 @@ class PrivateExtension {
 
     constructor (
         extId: OBJECT_IDENTIFIER,
-        extType: OPTIONAL<_Element>
+        extType?: OPTIONAL<_Element>
     ) {
         this.extId = extId;
         this.extType = extType;

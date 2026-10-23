@@ -46,7 +46,7 @@ class ChangedParameters {
 
     constructor (
         changeFlags: ChangedParameters_changeFlags,
-        changeList: OPTIONAL<CAMELModificationParameters>
+        changeList?: OPTIONAL<CAMELModificationParameters>
     ) {
         this.changeFlags = changeFlags;
         this.changeList = changeList;

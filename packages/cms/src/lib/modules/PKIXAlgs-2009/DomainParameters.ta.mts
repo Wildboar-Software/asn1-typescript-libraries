@@ -57,13 +57,13 @@ export class DomainParameters {
          * @public
          * @readonly
          */
-        readonly j: OPTIONAL<INTEGER>,
+        readonly j?: OPTIONAL<INTEGER>,
         /**
          * @summary `validationParams`.
          * @public
          * @readonly
          */
-        readonly validationParams: OPTIONAL<ValidationParams>
+        readonly validationParams?: OPTIONAL<ValidationParams>
     ) {}
 
     /**

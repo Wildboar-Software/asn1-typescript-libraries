@@ -49,7 +49,7 @@ class AFRecordInformation {
 
     constructor (
         aFChargingIdentifier: OCTET_STRING,
-        flows: OPTIONAL<Flows>
+        flows?: OPTIONAL<Flows>
     ) {
         this.aFChargingIdentifier = aFChargingIdentifier;
         this.flows = flows;

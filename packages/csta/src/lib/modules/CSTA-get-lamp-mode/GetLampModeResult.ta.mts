@@ -56,7 +56,7 @@ class GetLampModeResult {
          * @public
          * @readonly
          */
-        readonly lamp: OPTIONAL<LampID>,
+        readonly lamp?: OPTIONAL<LampID>,
         /**
          * @summary `extensions`.
          * @description
@@ -66,7 +66,7 @@ class GetLampModeResult {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

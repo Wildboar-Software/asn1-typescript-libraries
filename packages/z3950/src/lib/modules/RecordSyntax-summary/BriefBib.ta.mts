@@ -190,19 +190,19 @@ class BriefBib {
 
     constructor (
         title: InternationalString,
-        author: OPTIONAL<InternationalString>,
-        callNumber: OPTIONAL<InternationalString>,
-        recordType: OPTIONAL<InternationalString>,
-        bibliographicLevel: OPTIONAL<InternationalString>,
-        format: OPTIONAL<FormatSpec[]>,
-        publicationPlace: OPTIONAL<InternationalString>,
-        publicationDate: OPTIONAL<InternationalString>,
-        targetSystemKey: OPTIONAL<InternationalString>,
-        satisfyingElement: OPTIONAL<InternationalString>,
-        rank: OPTIONAL<INTEGER>,
-        documentId: OPTIONAL<InternationalString>,
-        abstract: OPTIONAL<InternationalString>,
-        otherInfo: OPTIONAL<OtherInformation>
+        author?: OPTIONAL<InternationalString>,
+        callNumber?: OPTIONAL<InternationalString>,
+        recordType?: OPTIONAL<InternationalString>,
+        bibliographicLevel?: OPTIONAL<InternationalString>,
+        format?: OPTIONAL<FormatSpec[]>,
+        publicationPlace?: OPTIONAL<InternationalString>,
+        publicationDate?: OPTIONAL<InternationalString>,
+        targetSystemKey?: OPTIONAL<InternationalString>,
+        satisfyingElement?: OPTIONAL<InternationalString>,
+        rank?: OPTIONAL<INTEGER>,
+        documentId?: OPTIONAL<InternationalString>,
+        abstract?: OPTIONAL<InternationalString>,
+        otherInfo?: OPTIONAL<OtherInformation>
     ) {
         this.title = title;
         this.author = author;

@@ -114,15 +114,15 @@ class EventReportBCUSMArg {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        eventTypeBCUSM: OPTIONAL<EventTypeBCUSM>,
-        eventSpecificInformationBCUSM: OPTIONAL<EventSpecificInformationBCUSM>,
-        miscCallInfo: OPTIONAL<MiscCallInfo>,
-        cUApplicationInd: OPTIONAL<CUApplicationInd>,
-        legID: OPTIONAL<LegID>,
-        extensions: OPTIONAL<Extensions>,
-        componentType: OPTIONAL<ComponentType>,
-        componentCorrelationID: OPTIONAL<ComponentCorrelationID>,
-        component: OPTIONAL<Component>,
+        eventTypeBCUSM?: OPTIONAL<EventTypeBCUSM>,
+        eventSpecificInformationBCUSM?: OPTIONAL<EventSpecificInformationBCUSM>,
+        miscCallInfo?: OPTIONAL<MiscCallInfo>,
+        cUApplicationInd?: OPTIONAL<CUApplicationInd>,
+        legID?: OPTIONAL<LegID>,
+        extensions?: OPTIONAL<Extensions>,
+        componentType?: OPTIONAL<ComponentType>,
+        componentCorrelationID?: OPTIONAL<ComponentCorrelationID>,
+        component?: OPTIONAL<Component>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.eventTypeBCUSM = eventTypeBCUSM;

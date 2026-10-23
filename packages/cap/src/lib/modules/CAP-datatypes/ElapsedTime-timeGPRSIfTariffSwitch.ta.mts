@@ -48,7 +48,7 @@ export class ElapsedTime_timeGPRSIfTariffSwitch {
          * @public
          * @readonly
          */
-        readonly timeGPRSTariffSwitchInterval: OPTIONAL<INTEGER>,
+        readonly timeGPRSTariffSwitchInterval?: OPTIONAL<INTEGER>,
     ) {
         if ((typeof timeGPRSSinceLastTariffSwitch === "bigint" ? (timeGPRSSinceLastTariffSwitch < 0n || timeGPRSSinceLastTariffSwitch > 86400n) : (timeGPRSSinceLastTariffSwitch < 0 || timeGPRSSinceLastTariffSwitch > 86400))) {
             throw new ASN1OverflowError("ElapsedTime_timeGPRSIfTariffSwitch.timeGPRSSinceLastTariffSwitch violates INTEGER constraint");

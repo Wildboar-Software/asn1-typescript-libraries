@@ -57,7 +57,7 @@ class Services_Data_Information {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        i_WLAN_parameters: OPTIONAL<I_WLAN_parameters>,
+        i_WLAN_parameters?: OPTIONAL<I_WLAN_parameters>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.i_WLAN_parameters = i_WLAN_parameters;

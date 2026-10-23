@@ -81,10 +81,10 @@ class RequestReportBCUSMEventArg {
 
     constructor (
         bcusmEvents: BCUSMEvent[],
-        componentTypes: OPTIONAL<ComponentType[]>,
-        componentCorrelationID: OPTIONAL<ComponentCorrelationID>,
-        monitorDuration: OPTIONAL<Duration>,
-        extensions: OPTIONAL<ExtensionField[]>,
+        componentTypes?: OPTIONAL<ComponentType[]>,
+        componentCorrelationID?: OPTIONAL<ComponentCorrelationID>,
+        monitorDuration?: OPTIONAL<Duration>,
+        extensions?: OPTIONAL<ExtensionField[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.bcusmEvents = bcusmEvents;

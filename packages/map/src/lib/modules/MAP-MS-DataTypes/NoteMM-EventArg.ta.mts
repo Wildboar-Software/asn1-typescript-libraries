@@ -99,7 +99,7 @@ class NoteMM_EventArg {
          * @public
          * @readonly
          */
-        readonly locationInformation: OPTIONAL<LocationInformation>,
+        readonly locationInformation?: OPTIONAL<LocationInformation>,
         /**
          * @summary `supportedCAMELPhases`.
          * @description
@@ -111,13 +111,13 @@ class NoteMM_EventArg {
          * @public
          * @readonly
          */
-        readonly supportedCAMELPhases: OPTIONAL<SupportedCamelPhases>,
+        readonly supportedCAMELPhases?: OPTIONAL<SupportedCamelPhases>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `locationInformationGPRS`.
          * @description
@@ -128,7 +128,7 @@ class NoteMM_EventArg {
          * @public
          * @readonly
          */
-        readonly locationInformationGPRS: OPTIONAL<LocationInformationGPRS>,
+        readonly locationInformationGPRS?: OPTIONAL<LocationInformationGPRS>,
         /**
          * @summary `offeredCamel4Functionalities`.
          * @description
@@ -139,7 +139,7 @@ class NoteMM_EventArg {
          * @public
          * @readonly
          */
-        readonly offeredCamel4Functionalities: OPTIONAL<OfferedCamel4Functionalities>,
+        readonly offeredCamel4Functionalities?: OPTIONAL<OfferedCamel4Functionalities>,
         /**
          * @summary Extensions that are not recognized.
          * @public

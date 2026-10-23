@@ -34,13 +34,13 @@ import { PDPInitiationType, _enum_for_PDPInitiationType, _decode_PDPInitiationTy
  */
 export class GPRSEventSpecificInformation_pDPContextEstablishmentSpecificInformation {
     constructor (
-        readonly accessPointName: OPTIONAL<AccessPointName>,
-        readonly endUserAddress: OPTIONAL<EndUserAddress>,
-        readonly qualityOfService: OPTIONAL<QualityOfService>,
-        readonly locationInformationGPRS: OPTIONAL<LocationInformationGPRS>,
-        readonly timeAndTimeZone: OPTIONAL<TimeAndTimezone>,
-        readonly pDPInitiationType: OPTIONAL<PDPInitiationType>,
-        readonly secondaryPDP_context: OPTIONAL<NULL>,
+        readonly accessPointName?: OPTIONAL<AccessPointName>,
+        readonly endUserAddress?: OPTIONAL<EndUserAddress>,
+        readonly qualityOfService?: OPTIONAL<QualityOfService>,
+        readonly locationInformationGPRS?: OPTIONAL<LocationInformationGPRS>,
+        readonly timeAndTimeZone?: OPTIONAL<TimeAndTimezone>,
+        readonly pDPInitiationType?: OPTIONAL<PDPInitiationType>,
+        readonly secondaryPDP_context?: OPTIONAL<NULL>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}
 

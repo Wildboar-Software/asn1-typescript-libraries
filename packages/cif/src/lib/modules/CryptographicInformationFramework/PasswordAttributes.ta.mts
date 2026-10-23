@@ -105,7 +105,7 @@ class PasswordAttributes {
          * @public
          * @readonly
          */
-        readonly maxLength: OPTIONAL<INTEGER>,
+        readonly maxLength?: OPTIONAL<INTEGER>,
         /**
          * @summary `pwdReference`.
          * @description
@@ -114,7 +114,7 @@ class PasswordAttributes {
          * @public
          * @readonly
          */
-        readonly pwdReference: OPTIONAL<Reference>,
+        readonly pwdReference?: OPTIONAL<Reference>,
         /**
          * @summary `padChar`.
          * @description
@@ -124,7 +124,7 @@ class PasswordAttributes {
          * @public
          * @readonly
          */
-        readonly padChar: OPTIONAL<OCTET_STRING>,
+        readonly padChar?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `lastPasswordChange`.
          * @description
@@ -133,7 +133,7 @@ class PasswordAttributes {
          * @public
          * @readonly
          */
-        readonly lastPasswordChange: OPTIONAL<GeneralizedTime>,
+        readonly lastPasswordChange?: OPTIONAL<GeneralizedTime>,
         /**
          * @summary `path`.
          * @description
@@ -143,7 +143,7 @@ class PasswordAttributes {
          * @public
          * @readonly
          */
-        readonly path: OPTIONAL<Path>,
+        readonly path?: OPTIONAL<Path>,
         /**
          * @summary `verifDataHistoryLength`.
          * @description
@@ -152,7 +152,7 @@ class PasswordAttributes {
          * @public
          * @readonly
          */
-        readonly verifDataHistoryLength: OPTIONAL<INTEGER>,
+        readonly verifDataHistoryLength?: OPTIONAL<INTEGER>,
         /**
          * @summary `cioSecurityId`.
          * @description
@@ -161,7 +161,7 @@ class PasswordAttributes {
          * @public
          * @readonly
          */
-        readonly cioSecurityId: OPTIONAL<INTEGER>,
+        readonly cioSecurityId?: OPTIONAL<INTEGER>,
         /**
          * @summary Extensions that are not recognized.
          * @public

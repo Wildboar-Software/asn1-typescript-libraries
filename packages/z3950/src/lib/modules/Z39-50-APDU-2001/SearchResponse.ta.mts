@@ -195,11 +195,11 @@ class SearchResponse {
         numberOfRecordsReturned: INTEGER,
         nextResultSetPosition: INTEGER,
         searchStatus: BOOLEAN,
-        resultSetStatus: OPTIONAL<SearchResponse_resultSetStatus>,
-        presentStatus: OPTIONAL<PresentStatus>,
-        records: OPTIONAL<Records>,
-        additionalSearchInfo: OPTIONAL<OtherInformation>,
-        otherInfo: OPTIONAL<OtherInformation>
+        resultSetStatus?: OPTIONAL<SearchResponse_resultSetStatus>,
+        presentStatus?: OPTIONAL<PresentStatus>,
+        records?: OPTIONAL<Records>,
+        additionalSearchInfo?: OPTIONAL<OtherInformation>,
+        otherInfo?: OPTIONAL<OtherInformation>
     ) {
         this.referenceId = referenceId;
         this.resultCount = resultCount;

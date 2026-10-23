@@ -130,8 +130,8 @@ class NEF5GVNGroupUpdate {
     constructor (
         aFID: AFID,
         gPSI: GPSI,
-        fiveGLanParametersProvision: OPTIONAL<SBIType>,
-        fiveGLanParametersProvisionPatch: OPTIONAL<SBIType>,
+        fiveGLanParametersProvision?: OPTIONAL<SBIType>,
+        fiveGLanParametersProvisionPatch?: OPTIONAL<SBIType>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.aFID = aFID;

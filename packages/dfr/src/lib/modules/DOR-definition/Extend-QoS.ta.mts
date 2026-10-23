@@ -42,13 +42,13 @@ class Extend_QoS {
          * @public
          * @readonly
          */
-        readonly qoS_level: OPTIONAL<Requested_QoS_level>,
+        readonly qoS_level?: OPTIONAL<Requested_QoS_level>,
         /**
          * @summary `usage_of_reference`.
          * @public
          * @readonly
          */
-        readonly usage_of_reference: OPTIONAL<Single_use_of_reference>
+        readonly usage_of_reference?: OPTIONAL<Single_use_of_reference>
     ) {}
 
     /**

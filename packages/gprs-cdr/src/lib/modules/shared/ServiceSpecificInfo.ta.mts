@@ -40,8 +40,8 @@ class ServiceSpecificInfo {
     readonly serviceSpecificType: OPTIONAL<INTEGER>;
 
     constructor (
-        serviceSpecificData: OPTIONAL<GraphicString>,
-        serviceSpecificType: OPTIONAL<INTEGER>
+        serviceSpecificData?: OPTIONAL<GraphicString>,
+        serviceSpecificType?: OPTIONAL<INTEGER>
     ) {
         this.serviceSpecificData = serviceSpecificData;
         this.serviceSpecificType = serviceSpecificType;

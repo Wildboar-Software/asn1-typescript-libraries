@@ -76,7 +76,7 @@ export class CoordinateShadowUpdateResultData implements CommonResultsSeq {
          * @public
          * @readonly
          */
-        readonly lastUpdate: OPTIONAL<Time>,
+        readonly lastUpdate?: OPTIONAL<Time>,
         /**
          * @summary Extensions that are not recognized.
          * @public

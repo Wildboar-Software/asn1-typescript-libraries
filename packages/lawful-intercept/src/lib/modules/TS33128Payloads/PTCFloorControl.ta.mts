@@ -272,12 +272,12 @@ class PTCFloorControl {
         pTCDirection: Direction,
         pTCSessioninfo: PTCSessionInfo,
         pTCFloorActivity: PTCFloorActivity[],
-        pTCFloorSpeakerID: OPTIONAL<PTCTargetInformation>,
-        pTCMaxTBTime: OPTIONAL<INTEGER>,
-        pTCQueuedFloorControl: OPTIONAL<BOOLEAN>,
-        pTCQueuedPosition: OPTIONAL<INTEGER>,
-        pTCTalkBurstPriority: OPTIONAL<PTCTBPriorityLevel>,
-        pTCTalkBurstReason: OPTIONAL<PTCTBReasonCode>,
+        pTCFloorSpeakerID?: OPTIONAL<PTCTargetInformation>,
+        pTCMaxTBTime?: OPTIONAL<INTEGER>,
+        pTCQueuedFloorControl?: OPTIONAL<BOOLEAN>,
+        pTCQueuedPosition?: OPTIONAL<INTEGER>,
+        pTCTalkBurstPriority?: OPTIONAL<PTCTBPriorityLevel>,
+        pTCTalkBurstReason?: OPTIONAL<PTCTBReasonCode>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.pTCTargetInformation = pTCTargetInformation;

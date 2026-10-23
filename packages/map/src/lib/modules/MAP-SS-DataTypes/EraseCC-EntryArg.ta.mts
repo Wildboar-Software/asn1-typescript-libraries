@@ -49,7 +49,7 @@ class EraseCC_EntryArg {
          * @public
          * @readonly
          */
-        readonly ccbs_Index: OPTIONAL<CCBS_Index>,
+        readonly ccbs_Index?: OPTIONAL<CCBS_Index>,
         /**
          * @summary Extensions that are not recognized.
          * @public

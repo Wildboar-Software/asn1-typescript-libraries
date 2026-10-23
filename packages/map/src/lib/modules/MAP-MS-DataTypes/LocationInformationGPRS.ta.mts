@@ -60,7 +60,7 @@ class LocationInformationGPRS {
          * @public
          * @readonly
          */
-        readonly cellGlobalIdOrServiceAreaIdOrLAI: OPTIONAL<CellGlobalIdOrServiceAreaIdOrLAI>,
+        readonly cellGlobalIdOrServiceAreaIdOrLAI?: OPTIONAL<CellGlobalIdOrServiceAreaIdOrLAI>,
         /**
          * @summary `routeingAreaIdentity`.
          * @description
@@ -70,7 +70,7 @@ class LocationInformationGPRS {
          * @public
          * @readonly
          */
-        readonly routeingAreaIdentity: OPTIONAL<RAIdentity>,
+        readonly routeingAreaIdentity?: OPTIONAL<RAIdentity>,
         /**
          * @summary `geographicalInformation`.
          * @description
@@ -81,7 +81,7 @@ class LocationInformationGPRS {
          * @public
          * @readonly
          */
-        readonly geographicalInformation: OPTIONAL<GeographicalInformation>,
+        readonly geographicalInformation?: OPTIONAL<GeographicalInformation>,
         /**
          * @summary `sgsn_Number`.
          * @description
@@ -92,7 +92,7 @@ class LocationInformationGPRS {
          * @public
          * @readonly
          */
-        readonly sgsn_Number: OPTIONAL<ISDN_AddressString>,
+        readonly sgsn_Number?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `selectedLSAIdentity`.
          * @description
@@ -103,13 +103,13 @@ class LocationInformationGPRS {
          * @public
          * @readonly
          */
-        readonly selectedLSAIdentity: OPTIONAL<LSAIdentity>,
+        readonly selectedLSAIdentity?: OPTIONAL<LSAIdentity>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `sai_Present`.
          * @description
@@ -120,7 +120,7 @@ class LocationInformationGPRS {
          * @public
          * @readonly
          */
-        readonly sai_Present: OPTIONAL<NULL>,
+        readonly sai_Present?: OPTIONAL<NULL>,
         /**
          * @summary `geodeticInformation`.
          * @description
@@ -131,7 +131,7 @@ class LocationInformationGPRS {
          * @public
          * @readonly
          */
-        readonly geodeticInformation: OPTIONAL<GeodeticInformation>,
+        readonly geodeticInformation?: OPTIONAL<GeodeticInformation>,
         /**
          * @summary `currentLocationRetrieved`.
          * @description
@@ -142,7 +142,7 @@ class LocationInformationGPRS {
          * @public
          * @readonly
          */
-        readonly currentLocationRetrieved: OPTIONAL<NULL>,
+        readonly currentLocationRetrieved?: OPTIONAL<NULL>,
         /**
          * @summary `ageOfLocationInformation`.
          * @description
@@ -152,7 +152,7 @@ class LocationInformationGPRS {
          * @public
          * @readonly
          */
-        readonly ageOfLocationInformation: OPTIONAL<AgeOfLocationInformation>,
+        readonly ageOfLocationInformation?: OPTIONAL<AgeOfLocationInformation>,
         /**
          * @summary `userCSGInformation`.
          * @description
@@ -163,7 +163,7 @@ class LocationInformationGPRS {
          * @public
          * @readonly
          */
-        readonly userCSGInformation: OPTIONAL<UserCSGInformation>,
+        readonly userCSGInformation?: OPTIONAL<UserCSGInformation>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -101,9 +101,9 @@ class ClientPartToKeep {
     readonly addlBilling: OPTIONAL<ClientPartToKeep_addlBilling>;
 
     constructor (
-        supplDescription: OPTIONAL<EXTERNAL>,
-        contact: OPTIONAL<ClientPartToKeep_contact>,
-        addlBilling: OPTIONAL<ClientPartToKeep_addlBilling>
+        supplDescription?: OPTIONAL<EXTERNAL>,
+        contact?: OPTIONAL<ClientPartToKeep_contact>,
+        addlBilling?: OPTIONAL<ClientPartToKeep_addlBilling>
     ) {
         this.supplDescription = supplDescription;
         this.contact = contact;

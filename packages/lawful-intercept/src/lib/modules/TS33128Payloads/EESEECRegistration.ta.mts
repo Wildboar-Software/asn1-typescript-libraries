@@ -210,14 +210,14 @@ class EESEECRegistration {
     constructor (
         registrationType: RegistrationType,
         eECID: UTF8String,
-        gPSI: OPTIONAL<GPSI>,
-        aCProfiles: OPTIONAL<ACProfiles>,
-        eECServiceContSupport: OPTIONAL<ACRScenarios>,
-        expirationTime: OPTIONAL<Timestamp>,
-        eECContextID: OPTIONAL<UTF8String>,
-        srcEESID: OPTIONAL<UTF8String>,
-        unfulfilledACProfiles: OPTIONAL<UnfulfilledACProfiles>,
-        failureResponse: OPTIONAL<FailureResponse>,
+        gPSI?: OPTIONAL<GPSI>,
+        aCProfiles?: OPTIONAL<ACProfiles>,
+        eECServiceContSupport?: OPTIONAL<ACRScenarios>,
+        expirationTime?: OPTIONAL<Timestamp>,
+        eECContextID?: OPTIONAL<UTF8String>,
+        srcEESID?: OPTIONAL<UTF8String>,
+        unfulfilledACProfiles?: OPTIONAL<UnfulfilledACProfiles>,
+        failureResponse?: OPTIONAL<FailureResponse>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.registrationType = registrationType;

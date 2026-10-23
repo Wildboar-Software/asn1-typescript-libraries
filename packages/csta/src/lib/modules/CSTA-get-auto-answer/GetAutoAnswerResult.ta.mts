@@ -54,7 +54,7 @@ class GetAutoAnswerResult {
          * @public
          * @readonly
          */
-        readonly numberOfRings: OPTIONAL<INTEGER>,
+        readonly numberOfRings?: OPTIONAL<INTEGER>,
         /**
          * @summary `extensions`.
          * @description
@@ -64,7 +64,7 @@ class GetAutoAnswerResult {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

@@ -73,7 +73,7 @@ class LocationInformationReportArgument {
          * @public
          * @readonly
          */
-        readonly locationInfoList: OPTIONAL<LocationInfoList>,
+        readonly locationInfoList?: OPTIONAL<LocationInfoList>,
         /**
          * @summary `extensions`.
          * @description
@@ -84,7 +84,7 @@ class LocationInformationReportArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

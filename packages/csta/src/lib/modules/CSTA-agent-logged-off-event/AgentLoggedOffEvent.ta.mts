@@ -73,7 +73,7 @@ class AgentLoggedOffEvent {
          * @public
          * @readonly
          */
-        readonly agentID: OPTIONAL<AgentID>,
+        readonly agentID?: OPTIONAL<AgentID>,
         /**
          * @summary `acdGroup`.
          * @description
@@ -83,7 +83,7 @@ class AgentLoggedOffEvent {
          * @public
          * @readonly
          */
-        readonly acdGroup: OPTIONAL<DeviceID>,
+        readonly acdGroup?: OPTIONAL<DeviceID>,
         /**
          * @summary `agentPassword`.
          * @description
@@ -92,7 +92,7 @@ class AgentLoggedOffEvent {
          * @public
          * @readonly
          */
-        readonly agentPassword: OPTIONAL<AgentPassword>,
+        readonly agentPassword?: OPTIONAL<AgentPassword>,
         /**
          * @summary `cause`.
          * @description
@@ -101,7 +101,7 @@ class AgentLoggedOffEvent {
          * @public
          * @readonly
          */
-        readonly cause: OPTIONAL<EventCause>,
+        readonly cause?: OPTIONAL<EventCause>,
         /**
          * @summary `extensions`.
          * @description
@@ -111,7 +111,7 @@ class AgentLoggedOffEvent {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

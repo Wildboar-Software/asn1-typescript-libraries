@@ -48,7 +48,7 @@ class MidCallInfoType {
 
     constructor (
         iNServiceControlCodeLow: Digits,
-        iNServiceControlCodeHigh: OPTIONAL<Digits>,
+        iNServiceControlCodeHigh?: OPTIONAL<Digits>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.iNServiceControlCodeLow = iNServiceControlCodeLow;

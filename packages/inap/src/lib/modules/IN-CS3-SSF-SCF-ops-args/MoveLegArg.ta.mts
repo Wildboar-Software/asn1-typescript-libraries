@@ -59,8 +59,8 @@ class MoveLegArg {
 
     constructor (
         legIDToMove: LegID,
-        targetCallSegment: OPTIONAL<CallSegmentID>,
-        extensions: OPTIONAL<Extensions>,
+        targetCallSegment?: OPTIONAL<CallSegmentID>,
+        extensions?: OPTIONAL<Extensions>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.legIDToMove = legIDToMove;

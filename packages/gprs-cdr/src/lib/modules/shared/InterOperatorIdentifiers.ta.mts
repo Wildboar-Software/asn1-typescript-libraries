@@ -39,8 +39,8 @@ class InterOperatorIdentifiers {
     readonly terminatingIOI: OPTIONAL<GraphicString>;
 
     constructor (
-        originatingIOI: OPTIONAL<GraphicString>,
-        terminatingIOI: OPTIONAL<GraphicString>
+        originatingIOI?: OPTIONAL<GraphicString>,
+        terminatingIOI?: OPTIONAL<GraphicString>
     ) {
         this.originatingIOI = originatingIOI;
         this.terminatingIOI = terminatingIOI;

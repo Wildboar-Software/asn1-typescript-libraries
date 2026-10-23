@@ -66,7 +66,7 @@ class SuppServiceUsed {
 
     constructor (
         ssCode: OCTET_STRING,
-        ssTime: OPTIONAL<OCTET_STRING>
+        ssTime?: OPTIONAL<OCTET_STRING>
     ) {
         this.ssCode = ssCode;
         this.ssTime = ssTime;

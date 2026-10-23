@@ -63,7 +63,7 @@ class ReleaseGPRSArg {
          * @public
          * @readonly
          */
-        readonly pDPID: OPTIONAL<PDPID>,
+        readonly pDPID?: OPTIONAL<PDPID>,
         /**
          * @summary Extensions that are not recognized.
          * @public

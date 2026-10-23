@@ -59,8 +59,8 @@ class ServiceAreaInfo {
 
     constructor (
         pLMNIdentity: PLMNID,
-        allowedTACs: OPTIONAL<AllowedTACs>,
-        notAllowedTACs: OPTIONAL<ForbiddenTACs>,
+        allowedTACs?: OPTIONAL<AllowedTACs>,
+        notAllowedTACs?: OPTIONAL<ForbiddenTACs>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.pLMNIdentity = pLMNIdentity;

@@ -49,7 +49,7 @@ class SendGroupCallInfoRes {
          * @public
          * @readonly
          */
-        readonly anchorMSC_Address: OPTIONAL<ISDN_AddressString>,
+        readonly anchorMSC_Address?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `asciCallReference`.
          * @description
@@ -59,7 +59,7 @@ class SendGroupCallInfoRes {
          * @public
          * @readonly
          */
-        readonly asciCallReference: OPTIONAL<ASCI_CallReference>,
+        readonly asciCallReference?: OPTIONAL<ASCI_CallReference>,
         /**
          * @summary `imsi`.
          * @description
@@ -69,7 +69,7 @@ class SendGroupCallInfoRes {
          * @public
          * @readonly
          */
-        readonly imsi: OPTIONAL<IMSI>,
+        readonly imsi?: OPTIONAL<IMSI>,
         /**
          * @summary `additionalInfo`.
          * @description
@@ -79,7 +79,7 @@ class SendGroupCallInfoRes {
          * @public
          * @readonly
          */
-        readonly additionalInfo: OPTIONAL<AdditionalInfo>,
+        readonly additionalInfo?: OPTIONAL<AdditionalInfo>,
         /**
          * @summary `additionalSubscriptions`.
          * @description
@@ -89,7 +89,7 @@ class SendGroupCallInfoRes {
          * @public
          * @readonly
          */
-        readonly additionalSubscriptions: OPTIONAL<AdditionalSubscriptions>,
+        readonly additionalSubscriptions?: OPTIONAL<AdditionalSubscriptions>,
         /**
          * @summary `kc`.
          * @description
@@ -99,7 +99,7 @@ class SendGroupCallInfoRes {
          * @public
          * @readonly
          */
-        readonly kc: OPTIONAL<Kc>,
+        readonly kc?: OPTIONAL<Kc>,
         /**
          * @summary `extensionContainer`.
          * @description
@@ -109,7 +109,7 @@ class SendGroupCallInfoRes {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

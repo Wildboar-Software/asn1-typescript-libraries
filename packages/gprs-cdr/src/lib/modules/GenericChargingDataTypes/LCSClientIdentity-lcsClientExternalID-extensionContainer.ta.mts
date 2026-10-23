@@ -52,8 +52,8 @@ class LCSClientIdentity_lcsClientExternalID_extensionContainer {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        privateExtensionList: OPTIONAL<LCSClientIdentity_lcsClientExternalID_extensionContainer_privateExtensionList_Item[]>,
-        pcs_Extensions: OPTIONAL<LCSClientIdentity_lcsClientExternalID_extensionContainer_pcs_Extensions>,
+        privateExtensionList?: OPTIONAL<LCSClientIdentity_lcsClientExternalID_extensionContainer_privateExtensionList_Item[]>,
+        pcs_Extensions?: OPTIONAL<LCSClientIdentity_lcsClientExternalID_extensionContainer_pcs_Extensions>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.privateExtensionList = privateExtensionList;

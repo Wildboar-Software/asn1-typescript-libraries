@@ -69,8 +69,8 @@ class CtatParamArg {
 
     constructor (
         pisnNumber: PartyNumber,
-        canCompute: OPTIONAL<CanCompute>,
-        dummyExtension: OPTIONAL<DummyExtension>
+        canCompute?: OPTIONAL<CanCompute>,
+        dummyExtension?: OPTIONAL<DummyExtension>
     ) {
         this.pisnNumber = pisnNumber;
         this.canCompute = canCompute;

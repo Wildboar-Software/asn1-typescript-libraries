@@ -53,19 +53,19 @@ class AlarmSummaryInfo {
          * @public
          * @readonly
          */
-        readonly perceivedSeverity: OPTIONAL<PerceivedSeverity>,
+        readonly perceivedSeverity?: OPTIONAL<PerceivedSeverity>,
         /**
          * @summary `alarmStatus`.
          * @public
          * @readonly
          */
-        readonly alarmStatus: OPTIONAL<AlarmStatus>,
+        readonly alarmStatus?: OPTIONAL<AlarmStatus>,
         /**
          * @summary `probableCause`.
          * @public
          * @readonly
          */
-        readonly probableCause: OPTIONAL<ProbableCause>
+        readonly probableCause?: OPTIONAL<ProbableCause>
     ) {}
 
     /**

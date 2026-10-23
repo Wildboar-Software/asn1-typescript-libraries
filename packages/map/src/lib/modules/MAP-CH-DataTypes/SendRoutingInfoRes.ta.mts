@@ -85,7 +85,7 @@ class SendRoutingInfoRes {
          * @public
          * @readonly
          */
-        readonly imsi: OPTIONAL<IMSI>,
+        readonly imsi?: OPTIONAL<IMSI>,
         /**
          * @summary `extendedRoutingInfo`.
          * @description
@@ -95,7 +95,7 @@ class SendRoutingInfoRes {
          * @public
          * @readonly
          */
-        readonly extendedRoutingInfo: OPTIONAL<ExtendedRoutingInfo>,
+        readonly extendedRoutingInfo?: OPTIONAL<ExtendedRoutingInfo>,
         /**
          * @summary `cug_CheckInfo`.
          * @description
@@ -105,7 +105,7 @@ class SendRoutingInfoRes {
          * @public
          * @readonly
          */
-        readonly cug_CheckInfo: OPTIONAL<CUG_CheckInfo>,
+        readonly cug_CheckInfo?: OPTIONAL<CUG_CheckInfo>,
         /**
          * @summary `cugSubscriptionFlag`.
          * @description
@@ -115,7 +115,7 @@ class SendRoutingInfoRes {
          * @public
          * @readonly
          */
-        readonly cugSubscriptionFlag: OPTIONAL<NULL>,
+        readonly cugSubscriptionFlag?: OPTIONAL<NULL>,
         /**
          * @summary `subscriberInfo`.
          * @description
@@ -125,7 +125,7 @@ class SendRoutingInfoRes {
          * @public
          * @readonly
          */
-        readonly subscriberInfo: OPTIONAL<SubscriberInfo>,
+        readonly subscriberInfo?: OPTIONAL<SubscriberInfo>,
         /**
          * @summary `ss_List`.
          * @description
@@ -136,7 +136,7 @@ class SendRoutingInfoRes {
          * @public
          * @readonly
          */
-        readonly ss_List: OPTIONAL<SS_List>,
+        readonly ss_List?: OPTIONAL<SS_List>,
         /**
          * @summary `basicService`.
          * @description
@@ -147,7 +147,7 @@ class SendRoutingInfoRes {
          * @public
          * @readonly
          */
-        readonly basicService: OPTIONAL<Ext_BasicServiceCode>,
+        readonly basicService?: OPTIONAL<Ext_BasicServiceCode>,
         /**
          * @summary `forwardingInterrogationRequired`.
          * @description
@@ -157,7 +157,7 @@ class SendRoutingInfoRes {
          * @public
          * @readonly
          */
-        readonly forwardingInterrogationRequired: OPTIONAL<NULL>,
+        readonly forwardingInterrogationRequired?: OPTIONAL<NULL>,
         /**
          * @summary `vmsc_Address`.
          * @description
@@ -168,7 +168,7 @@ class SendRoutingInfoRes {
          * @public
          * @readonly
          */
-        readonly vmsc_Address: OPTIONAL<ISDN_AddressString>,
+        readonly vmsc_Address?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `extensionContainer`.
          * @description
@@ -178,7 +178,7 @@ class SendRoutingInfoRes {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `naea_PreferredCI`.
          * @description
@@ -189,7 +189,7 @@ class SendRoutingInfoRes {
          * @public
          * @readonly
          */
-        readonly naea_PreferredCI: OPTIONAL<NAEA_PreferredCI>,
+        readonly naea_PreferredCI?: OPTIONAL<NAEA_PreferredCI>,
         /**
          * @summary `ccbs_Indicators`.
          * @description
@@ -199,7 +199,7 @@ class SendRoutingInfoRes {
          * @public
          * @readonly
          */
-        readonly ccbs_Indicators: OPTIONAL<CCBS_Indicators>,
+        readonly ccbs_Indicators?: OPTIONAL<CCBS_Indicators>,
         /**
          * @summary `msisdn`.
          * @description
@@ -210,7 +210,7 @@ class SendRoutingInfoRes {
          * @public
          * @readonly
          */
-        readonly msisdn: OPTIONAL<ISDN_AddressString>,
+        readonly msisdn?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `numberPortabilityStatus`.
          * @description
@@ -220,7 +220,7 @@ class SendRoutingInfoRes {
          * @public
          * @readonly
          */
-        readonly numberPortabilityStatus: OPTIONAL<NumberPortabilityStatus>,
+        readonly numberPortabilityStatus?: OPTIONAL<NumberPortabilityStatus>,
         /**
          * @summary `istAlertTimer`.
          * @description
@@ -230,7 +230,7 @@ class SendRoutingInfoRes {
          * @public
          * @readonly
          */
-        readonly istAlertTimer: OPTIONAL<IST_AlertTimerValue>,
+        readonly istAlertTimer?: OPTIONAL<IST_AlertTimerValue>,
         /**
          * @summary `supportedCamelPhasesInVMSC`.
          * @description
@@ -240,7 +240,7 @@ class SendRoutingInfoRes {
          * @public
          * @readonly
          */
-        readonly supportedCamelPhasesInVMSC: OPTIONAL<SupportedCamelPhases>,
+        readonly supportedCamelPhasesInVMSC?: OPTIONAL<SupportedCamelPhases>,
         /**
          * @summary `offeredCamel4CSIsInVMSC`.
          * @description
@@ -250,7 +250,7 @@ class SendRoutingInfoRes {
          * @public
          * @readonly
          */
-        readonly offeredCamel4CSIsInVMSC: OPTIONAL<OfferedCamel4CSIs>,
+        readonly offeredCamel4CSIsInVMSC?: OPTIONAL<OfferedCamel4CSIs>,
         /**
          * @summary `routingInfo2`.
          * @description
@@ -260,7 +260,7 @@ class SendRoutingInfoRes {
          * @public
          * @readonly
          */
-        readonly routingInfo2: OPTIONAL<RoutingInfo>,
+        readonly routingInfo2?: OPTIONAL<RoutingInfo>,
         /**
          * @summary `ss_List2`.
          * @description
@@ -270,7 +270,7 @@ class SendRoutingInfoRes {
          * @public
          * @readonly
          */
-        readonly ss_List2: OPTIONAL<SS_List>,
+        readonly ss_List2?: OPTIONAL<SS_List>,
         /**
          * @summary `basicService2`.
          * @description
@@ -280,7 +280,7 @@ class SendRoutingInfoRes {
          * @public
          * @readonly
          */
-        readonly basicService2: OPTIONAL<Ext_BasicServiceCode>,
+        readonly basicService2?: OPTIONAL<Ext_BasicServiceCode>,
         /**
          * @summary `allowedServices`.
          * @description
@@ -290,7 +290,7 @@ class SendRoutingInfoRes {
          * @public
          * @readonly
          */
-        readonly allowedServices: OPTIONAL<AllowedServices>,
+        readonly allowedServices?: OPTIONAL<AllowedServices>,
         /**
          * @summary `unavailabilityCause`.
          * @description
@@ -300,7 +300,7 @@ class SendRoutingInfoRes {
          * @public
          * @readonly
          */
-        readonly unavailabilityCause: OPTIONAL<UnavailabilityCause>,
+        readonly unavailabilityCause?: OPTIONAL<UnavailabilityCause>,
         /**
          * @summary `releaseResourcesSupported`.
          * @description
@@ -311,7 +311,7 @@ class SendRoutingInfoRes {
          * @public
          * @readonly
          */
-        readonly releaseResourcesSupported: OPTIONAL<NULL>,
+        readonly releaseResourcesSupported?: OPTIONAL<NULL>,
         /**
          * @summary `gsm_BearerCapability`.
          * @description
@@ -321,7 +321,7 @@ class SendRoutingInfoRes {
          * @public
          * @readonly
          */
-        readonly gsm_BearerCapability: OPTIONAL<ExternalSignalInfo>,
+        readonly gsm_BearerCapability?: OPTIONAL<ExternalSignalInfo>,
         /**
          * @summary Extensions that are not recognized.
          * @public

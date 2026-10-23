@@ -66,8 +66,8 @@ class AuthWtmArg {
 
     constructor (
         wtmUserId: WtmUserId,
-        calcWtatInfo: OPTIONAL<CalcWtatInfo>,
-        dummyExtension: OPTIONAL<DummyExtension>
+        calcWtatInfo?: OPTIONAL<CalcWtatInfo>,
+        dummyExtension?: OPTIONAL<DummyExtension>
     ) {
         this.wtmUserId = wtmUserId;
         this.calcWtatInfo = calcWtatInfo;

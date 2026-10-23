@@ -49,8 +49,8 @@ class AccessLineIdentifier {
     readonly logicalAccessID: OPTIONAL<OCTET_STRING>;
 
     constructor (
-        physicalAccessID: OPTIONAL<UTF8String>,
-        logicalAccessID: OPTIONAL<OCTET_STRING>
+        physicalAccessID?: OPTIONAL<UTF8String>,
+        logicalAccessID?: OPTIONAL<OCTET_STRING>
     ) {
         this.physicalAccessID = physicalAccessID;
         this.logicalAccessID = logicalAccessID;

@@ -75,7 +75,7 @@ class SigParameter {
          * @public
          * @readonly
          */
-        readonly extraInfo: OPTIONAL<SigParameter_extraInfo>,
+        readonly extraInfo?: OPTIONAL<SigParameter_extraInfo>,
         /**
          * @summary Extensions that are not recognized.
          * @description

@@ -125,12 +125,12 @@ class CommunicationFailureInfo {
     readonly sMCause: OPTIONAL<INTEGER>;
 
     constructor (
-        causeType: OPTIONAL<CauseType>,
-        s1APCause: OPTIONAL<INTEGER>,
-        rANAPCause: OPTIONAL<INTEGER>,
-        bSSGPCause: OPTIONAL<INTEGER>,
-        gMMCause: OPTIONAL<INTEGER>,
-        sMCause: OPTIONAL<INTEGER>
+        causeType?: OPTIONAL<CauseType>,
+        s1APCause?: OPTIONAL<INTEGER>,
+        rANAPCause?: OPTIONAL<INTEGER>,
+        bSSGPCause?: OPTIONAL<INTEGER>,
+        gMMCause?: OPTIONAL<INTEGER>,
+        sMCause?: OPTIONAL<INTEGER>
     ) {
         this.causeType = causeType;
         this.s1APCause = s1APCause;

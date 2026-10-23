@@ -233,7 +233,7 @@ class DeliveredEvent {
          * @public
          * @readonly
          */
-        readonly servicesPermitted: OPTIONAL<ServicesPermitted>,
+        readonly servicesPermitted?: OPTIONAL<ServicesPermitted>,
         /**
          * @summary `networkCallingDevice`.
          * @description
@@ -245,7 +245,7 @@ class DeliveredEvent {
          * @public
          * @readonly
          */
-        readonly networkCallingDevice: OPTIONAL<NetworkCallingDeviceID>,
+        readonly networkCallingDevice?: OPTIONAL<NetworkCallingDeviceID>,
         /**
          * @summary `networkCalledDevice`.
          * @description
@@ -257,7 +257,7 @@ class DeliveredEvent {
          * @public
          * @readonly
          */
-        readonly networkCalledDevice: OPTIONAL<NetworkCalledDeviceID>,
+        readonly networkCalledDevice?: OPTIONAL<NetworkCalledDeviceID>,
         /**
          * @summary `associatedCallingDevice`.
          * @description
@@ -269,7 +269,7 @@ class DeliveredEvent {
          * @public
          * @readonly
          */
-        readonly associatedCallingDevice: OPTIONAL<AssociatedCallingDeviceID>,
+        readonly associatedCallingDevice?: OPTIONAL<AssociatedCallingDeviceID>,
         /**
          * @summary `associatedCalledDevice`.
          * @description
@@ -281,7 +281,7 @@ class DeliveredEvent {
          * @public
          * @readonly
          */
-        readonly associatedCalledDevice: OPTIONAL<AssociatedCalledDeviceID>,
+        readonly associatedCalledDevice?: OPTIONAL<AssociatedCalledDeviceID>,
         /**
          * @summary `mediaCallCharacteristics`.
          * @description
@@ -292,7 +292,7 @@ class DeliveredEvent {
          * @public
          * @readonly
          */
-        readonly mediaCallCharacteristics: OPTIONAL<MediaCallCharacteristics>,
+        readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
         /**
          * @summary `callCharacteristics`.
          * @description
@@ -303,7 +303,7 @@ class DeliveredEvent {
          * @public
          * @readonly
          */
-        readonly callCharacteristics: OPTIONAL<CallCharacteristics>,
+        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
         /**
          * @summary `connectionInfo`.
          * @description
@@ -315,7 +315,7 @@ class DeliveredEvent {
          * @public
          * @readonly
          */
-        readonly connectionInfo: OPTIONAL<ConnectionInformation>,
+        readonly connectionInfo?: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `callLinkageData`.
          * @description
@@ -326,7 +326,7 @@ class DeliveredEvent {
          * @public
          * @readonly
          */
-        readonly callLinkageData: OPTIONAL<CallLinkageData>,
+        readonly callLinkageData?: OPTIONAL<CallLinkageData>,
         /**
          * @summary `subjectOfCall`.
          * @description
@@ -336,7 +336,7 @@ class DeliveredEvent {
          * @public
          * @readonly
          */
-        readonly subjectOfCall: OPTIONAL<SubjectOfCall>,
+        readonly subjectOfCall?: OPTIONAL<SubjectOfCall>,
         /**
          * @summary `messageInfo`.
          * @description
@@ -347,7 +347,7 @@ class DeliveredEvent {
          * @public
          * @readonly
          */
-        readonly messageInfo: OPTIONAL<MessageInfo>,
+        readonly messageInfo?: OPTIONAL<MessageInfo>,
         /**
          * @summary `languagePreferences`.
          * @description
@@ -357,7 +357,7 @@ class DeliveredEvent {
          * @public
          * @readonly
          */
-        readonly languagePreferences: OPTIONAL<LanguagePreferences>,
+        readonly languagePreferences?: OPTIONAL<LanguagePreferences>,
         /**
          * @summary `deviceHistory`.
          * @description
@@ -368,7 +368,7 @@ class DeliveredEvent {
          * @public
          * @readonly
          */
-        readonly deviceHistory: OPTIONAL<DeviceHistory>,
+        readonly deviceHistory?: OPTIONAL<DeviceHistory>,
         /**
          * @summary `locationInfo`.
          * @description
@@ -379,7 +379,7 @@ class DeliveredEvent {
          * @public
          * @readonly
          */
-        readonly locationInfo: OPTIONAL<LocationInfoList>,
+        readonly locationInfo?: OPTIONAL<LocationInfoList>,
         /**
          * @summary `extensions`.
          * @description
@@ -391,7 +391,7 @@ class DeliveredEvent {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

@@ -81,7 +81,7 @@ class SecurityFileOrObject {
          * @public
          * @readonly
          */
-        readonly protocol: OPTIONAL<OBJECT_IDENTIFIER>,
+        readonly protocol?: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `cioSecurityId`.
          * @description
@@ -90,7 +90,7 @@ class SecurityFileOrObject {
          * @public
          * @readonly
          */
-        readonly cioSecurityId: OPTIONAL<INTEGER>,
+        readonly cioSecurityId?: OPTIONAL<INTEGER>,
         /**
          * @summary `index`.
          * @description
@@ -99,7 +99,7 @@ class SecurityFileOrObject {
          * @public
          * @readonly
          */
-        readonly index: OPTIONAL<INTEGER>,
+        readonly index?: OPTIONAL<INTEGER>,
         /**
          * @summary `precondition`.
          * @description
@@ -107,7 +107,7 @@ class SecurityFileOrObject {
          * @public
          * @readonly
          */
-        readonly precondition: OPTIONAL<INTEGER>,
+        readonly precondition?: OPTIONAL<INTEGER>,
         /**
          * @summary Extensions that are not recognized.
          * @public

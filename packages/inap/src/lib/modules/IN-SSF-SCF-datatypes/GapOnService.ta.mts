@@ -50,7 +50,7 @@ class GapOnService {
 
     constructor (
         serviceKey: ServiceKey,
-        dpCriteria: OPTIONAL<EventTypeBCSM>,
+        dpCriteria?: OPTIONAL<EventTypeBCSM>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.serviceKey = serviceKey;

@@ -55,7 +55,7 @@ class RequestedUTSI {
     constructor (
         uSIServiceIndicator: USIServiceIndicator,
         uSImonitorMode: USIMonitorMode,
-        legID: OPTIONAL<LegID>
+        legID?: OPTIONAL<LegID>
     ) {
         this.uSIServiceIndicator = uSIServiceIndicator;
         this.uSImonitorMode = uSImonitorMode;

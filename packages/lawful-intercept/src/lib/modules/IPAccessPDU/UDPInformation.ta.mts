@@ -86,10 +86,10 @@ class UDPInformation {
     readonly checkSum: OPTIONAL<OCTET_STRING>;
 
     constructor (
-        sourcePort: OPTIONAL<OCTET_STRING>,
-        destinationPort: OPTIONAL<OCTET_STRING>,
-        length: OPTIONAL<OCTET_STRING>,
-        checkSum: OPTIONAL<OCTET_STRING>
+        sourcePort?: OPTIONAL<OCTET_STRING>,
+        destinationPort?: OPTIONAL<OCTET_STRING>,
+        length?: OPTIONAL<OCTET_STRING>,
+        checkSum?: OPTIONAL<OCTET_STRING>
     ) {
         this.sourcePort = sourcePort;
         this.destinationPort = destinationPort;

@@ -87,7 +87,7 @@ class LocUpdArg {
         wtmUserId: WtmUserId,
         basicService: OPTIONAL<BasicService>,
         visitPINX: PartyNumber,
-        argExtension: OPTIONAL<LrExtension>
+        argExtension?: OPTIONAL<LrExtension>
     ) {
         this.wtmUserId = wtmUserId;
         this.basicService = basicService;

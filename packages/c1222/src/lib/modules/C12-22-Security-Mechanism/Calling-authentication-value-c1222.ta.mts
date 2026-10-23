@@ -41,8 +41,8 @@ class Calling_authentication_value_c1222 {
     readonly iv_element: OPTIONAL<OCTET_STRING>;
 
     constructor (
-        key_id_element: OPTIONAL<OCTET_STRING>,
-        iv_element: OPTIONAL<OCTET_STRING>
+        key_id_element?: OPTIONAL<OCTET_STRING>,
+        iv_element?: OPTIONAL<OCTET_STRING>
     ) {
         if (key_id_element !== undefined && key_id_element.length !== 1) {
             throw new ASN1SizeError("Calling-authentication-value-c1222.key-id-element violates SIZE constraint");

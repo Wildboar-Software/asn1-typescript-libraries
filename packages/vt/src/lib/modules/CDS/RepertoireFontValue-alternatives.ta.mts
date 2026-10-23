@@ -47,7 +47,7 @@ class RepertoireFontValue_alternatives {
          * @public
          * @readonly
          */
-        readonly repertoire: OPTIONAL<RepertoireAssignment>,
+        readonly repertoire?: OPTIONAL<RepertoireAssignment>,
         /**
          * @summary `fontCapability`.
          * @description
@@ -56,7 +56,7 @@ class RepertoireFontValue_alternatives {
          * @public
          * @readonly
          */
-        readonly fontCapability: OPTIONAL<INTEGER>,
+        readonly fontCapability?: OPTIONAL<INTEGER>,
         /**
          * @summary `fontAssignments`.
          * @description
@@ -65,7 +65,7 @@ class RepertoireFontValue_alternatives {
          * @public
          * @readonly
          */
-        readonly fontAssignments: OPTIONAL<FontAssignment[]>
+        readonly fontAssignments?: OPTIONAL<FontAssignment[]>
     ) {}
 
     /**

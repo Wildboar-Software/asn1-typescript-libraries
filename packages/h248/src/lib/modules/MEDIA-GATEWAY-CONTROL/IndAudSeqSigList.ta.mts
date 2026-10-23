@@ -52,7 +52,7 @@ class IndAudSeqSigList {
          * @public
          * @readonly
          */
-        readonly signalList: OPTIONAL<IndAudSignal>
+        readonly signalList?: OPTIONAL<IndAudSignal>
     ) {
             const n = typeof id === "bigint" ? id : BigInt(id);
             if (n < 0n || n > 65535n) {

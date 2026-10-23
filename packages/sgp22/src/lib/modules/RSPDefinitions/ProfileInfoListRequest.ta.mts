@@ -52,7 +52,7 @@ class ProfileInfoListRequest {
          * @public
          * @readonly
          */
-        readonly searchCriteria: OPTIONAL<ProfileInfoListRequest_searchCriteria>,
+        readonly searchCriteria?: OPTIONAL<ProfileInfoListRequest_searchCriteria>,
         /**
          * @summary `tagList`.
          * @description
@@ -65,7 +65,7 @@ class ProfileInfoListRequest {
          * @public
          * @readonly
          */
-        readonly tagList: OPTIONAL<OCTET_STRING>,
+        readonly tagList?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `iotSpecificTagList`.
          * @description
@@ -76,7 +76,7 @@ class ProfileInfoListRequest {
          * @public
          * @readonly
          */
-        readonly iotSpecificTagList: OPTIONAL<OCTET_STRING>
+        readonly iotSpecificTagList?: OPTIONAL<OCTET_STRING>
     ) {}
 
     /**

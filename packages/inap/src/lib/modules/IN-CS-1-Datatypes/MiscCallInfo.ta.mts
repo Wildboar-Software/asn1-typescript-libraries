@@ -44,7 +44,7 @@ class MiscCallInfo {
 
     constructor (
         messageType: MiscCallInfo_messageType,
-        dpAssignment: OPTIONAL<MiscCallInfo_dpAssignment>
+        dpAssignment?: OPTIONAL<MiscCallInfo_dpAssignment>
     ) {
         this.messageType = messageType;
         this.dpAssignment = dpAssignment;

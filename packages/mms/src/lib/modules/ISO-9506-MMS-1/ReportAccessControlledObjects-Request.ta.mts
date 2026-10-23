@@ -72,7 +72,7 @@ class ReportAccessControlledObjects_Request {
          * @public
          * @readonly
          */
-        readonly continueAfter: OPTIONAL<ObjectName>
+        readonly continueAfter?: OPTIONAL<ObjectName>
     ) {}
 
     /**

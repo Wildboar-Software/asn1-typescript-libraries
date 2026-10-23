@@ -58,7 +58,7 @@ class SynthesizeMessageArgument {
          * @public
          * @readonly
          */
-        readonly control: OPTIONAL<ControlData>,
+        readonly control?: OPTIONAL<ControlData>,
         /**
          * @summary `extensions`.
          * @description
@@ -69,7 +69,7 @@ class SynthesizeMessageArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

@@ -61,11 +61,11 @@ class RoamingTrigger {
     readonly maxNbChargingConditions: OPTIONAL<INTEGER>;
 
     constructor (
-        trigger: OPTIONAL<SMFTrigger>,
-        triggerCategory: OPTIONAL<TriggerCategory>,
-        timeLimit: OPTIONAL<INTEGER>,
-        volumeLimit: OPTIONAL<INTEGER>,
-        maxNbChargingConditions: OPTIONAL<INTEGER>
+        trigger?: OPTIONAL<SMFTrigger>,
+        triggerCategory?: OPTIONAL<TriggerCategory>,
+        timeLimit?: OPTIONAL<INTEGER>,
+        volumeLimit?: OPTIONAL<INTEGER>,
+        maxNbChargingConditions?: OPTIONAL<INTEGER>
     ) {
         this.trigger = trigger;
         this.triggerCategory = triggerCategory;

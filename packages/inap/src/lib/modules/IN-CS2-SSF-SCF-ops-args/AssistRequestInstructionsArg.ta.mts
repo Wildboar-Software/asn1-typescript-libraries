@@ -70,9 +70,9 @@ class AssistRequestInstructionsArg {
 
     constructor (
         correlationID: CorrelationID,
-        iPAvailable: OPTIONAL<IPAvailable>,
-        iPSSPCapabilities: OPTIONAL<IPSSPCapabilities>,
-        extensions: OPTIONAL<ExtensionField[]>,
+        iPAvailable?: OPTIONAL<IPAvailable>,
+        iPSSPCapabilities?: OPTIONAL<IPSSPCapabilities>,
+        extensions?: OPTIONAL<ExtensionField[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.correlationID = correlationID;

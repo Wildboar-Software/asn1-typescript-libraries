@@ -63,8 +63,8 @@ class KRBRequest {
 
     constructor (
         service: InternationalString,
-        instance: OPTIONAL<InternationalString>,
-        realm: OPTIONAL<InternationalString>
+        instance?: OPTIONAL<InternationalString>,
+        realm?: OPTIONAL<InternationalString>
     ) {
         this.service = service;
         this.instance = instance;

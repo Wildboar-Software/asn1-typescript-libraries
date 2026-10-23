@@ -75,7 +75,7 @@ class LogotypeImageInfo {
          * @public
          * @readonly
          */
-        readonly resolution: OPTIONAL<LogotypeImageResolution>,
+        readonly resolution?: OPTIONAL<LogotypeImageResolution>,
         /**
          * Language of text in the image, as an
          * [RFC 3066](https://www.rfc-editor.org/rfc/rfc3066) language
@@ -85,7 +85,7 @@ class LogotypeImageInfo {
          * @public
          * @readonly
          */
-        readonly language: OPTIONAL<IA5String>
+        readonly language?: OPTIONAL<IA5String>
     ) {}
 
     /**

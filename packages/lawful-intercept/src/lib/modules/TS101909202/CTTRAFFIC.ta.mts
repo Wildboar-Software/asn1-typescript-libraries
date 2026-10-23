@@ -148,7 +148,7 @@ class CTTRAFFIC {
         correspondentCount: INTEGER,
         iRITransactionNumber: INTEGER,
         trafficPacket: BIT_STRING,
-        cryptoChecksum: OPTIONAL<BIT_STRING>
+        cryptoChecksum?: OPTIONAL<BIT_STRING>
     ) {
         this.version = version;
         this.lIInstanceid = lIInstanceid;

@@ -107,10 +107,10 @@ class MMSParties {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        toAddresses: OPTIONAL<Addresses>,
-        cCAddresses: OPTIONAL<Addresses>,
-        bCCAddresses: OPTIONAL<Addresses>,
-        fromAddresses: OPTIONAL<From>,
+        toAddresses?: OPTIONAL<Addresses>,
+        cCAddresses?: OPTIONAL<Addresses>,
+        bCCAddresses?: OPTIONAL<Addresses>,
+        fromAddresses?: OPTIONAL<From>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.toAddresses = toAddresses;

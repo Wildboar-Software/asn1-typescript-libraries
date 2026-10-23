@@ -131,8 +131,8 @@ class PTCEncryptionInfo {
         cryptoContext: OPTIONAL<UTF8String>,
         key: UTF8String,
         keyEncoding: UTF8String,
-        salt: OPTIONAL<UTF8String>,
-        pTCOther: OPTIONAL<UTF8String>,
+        salt?: OPTIONAL<UTF8String>,
+        pTCOther?: OPTIONAL<UTF8String>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.cipher = cipher;

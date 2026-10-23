@@ -58,7 +58,7 @@ class DigitsData {
          * @public
          * @readonly
          */
-        readonly digitsDuration: OPTIONAL<INTEGER[]>,
+        readonly digitsDuration?: OPTIONAL<INTEGER[]>,
         /**
          * @summary `digitsPauseDuration`.
          * @description
@@ -69,7 +69,7 @@ class DigitsData {
          * @public
          * @readonly
          */
-        readonly digitsPauseDuration: OPTIONAL<INTEGER[]>
+        readonly digitsPauseDuration?: OPTIONAL<INTEGER[]>
     ) {}
 
     /**

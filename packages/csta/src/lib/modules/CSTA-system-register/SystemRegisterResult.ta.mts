@@ -56,7 +56,7 @@ class SystemRegisterResult {
          * @public
          * @readonly
          */
-        readonly actualStatusFilter: OPTIONAL<StatusFilter>,
+        readonly actualStatusFilter?: OPTIONAL<StatusFilter>,
         /**
          * @summary `extensions`.
          * @description
@@ -66,7 +66,7 @@ class SystemRegisterResult {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

@@ -108,7 +108,7 @@ class MakeConnectionArgument {
          * @public
          * @readonly
          */
-        readonly accountCode: OPTIONAL<AccountInfo>,
+        readonly accountCode?: OPTIONAL<AccountInfo>,
         /**
          * @summary `authCode`.
          * @description
@@ -118,7 +118,7 @@ class MakeConnectionArgument {
          * @public
          * @readonly
          */
-        readonly authCode: OPTIONAL<AuthCode>,
+        readonly authCode?: OPTIONAL<AuthCode>,
         /**
          * @summary `autoOriginate`.
          * @description
@@ -129,7 +129,7 @@ class MakeConnectionArgument {
          * @public
          * @readonly
          */
-        readonly autoOriginate: OPTIONAL<AutoOriginate>,
+        readonly autoOriginate?: OPTIONAL<AutoOriginate>,
         /**
          * @summary `correlatorData`.
          * @description
@@ -140,7 +140,7 @@ class MakeConnectionArgument {
          * @public
          * @readonly
          */
-        readonly correlatorData: OPTIONAL<CorrelatorData>,
+        readonly correlatorData?: OPTIONAL<CorrelatorData>,
         /**
          * @summary `callCharacteristics`.
          * @description
@@ -150,7 +150,7 @@ class MakeConnectionArgument {
          * @public
          * @readonly
          */
-        readonly callCharacteristics: OPTIONAL<CallCharacteristics>,
+        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
         /**
          * @summary `mediaCallCharacteristics`.
          * @description
@@ -162,7 +162,7 @@ class MakeConnectionArgument {
          * @public
          * @readonly
          */
-        readonly mediaCallCharacteristics: OPTIONAL<MediaCallCharacteristics>,
+        readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
         /**
          * @summary `connectionInfo`.
          * @description
@@ -173,7 +173,7 @@ class MakeConnectionArgument {
          * @public
          * @readonly
          */
-        readonly connectionInfo: OPTIONAL<ConnectionInformation>,
+        readonly connectionInfo?: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `subjectOfCall`.
          * @description
@@ -183,7 +183,7 @@ class MakeConnectionArgument {
          * @public
          * @readonly
          */
-        readonly subjectOfCall: OPTIONAL<SubjectOfCall>,
+        readonly subjectOfCall?: OPTIONAL<SubjectOfCall>,
         /**
          * @summary `languagePreferences`.
          * @description
@@ -193,7 +193,7 @@ class MakeConnectionArgument {
          * @public
          * @readonly
          */
-        readonly languagePreferences: OPTIONAL<LanguagePreferences>,
+        readonly languagePreferences?: OPTIONAL<LanguagePreferences>,
         /**
          * @summary `reason`.
          * @description
@@ -204,7 +204,7 @@ class MakeConnectionArgument {
          * @public
          * @readonly
          */
-        readonly reason: OPTIONAL<EventCause>,
+        readonly reason?: OPTIONAL<EventCause>,
         /**
          * @summary `maxDevices`.
          * @description
@@ -215,7 +215,7 @@ class MakeConnectionArgument {
          * @public
          * @readonly
          */
-        readonly maxDevices: OPTIONAL<INTEGER>,
+        readonly maxDevices?: OPTIONAL<INTEGER>,
         /**
          * @summary `startTime`.
          * @description
@@ -226,7 +226,7 @@ class MakeConnectionArgument {
          * @public
          * @readonly
          */
-        readonly startTime: OPTIONAL<TimeInfo>,
+        readonly startTime?: OPTIONAL<TimeInfo>,
         /**
          * @summary `duration`.
          * @description
@@ -237,7 +237,7 @@ class MakeConnectionArgument {
          * @public
          * @readonly
          */
-        readonly duration: OPTIONAL<INTEGER>,
+        readonly duration?: OPTIONAL<INTEGER>,
         /**
          * @summary `extensions`.
          * @description
@@ -248,7 +248,7 @@ class MakeConnectionArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

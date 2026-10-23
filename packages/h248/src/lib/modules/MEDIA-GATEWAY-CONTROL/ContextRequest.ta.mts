@@ -61,7 +61,7 @@ class ContextRequest {
          * @public
          * @readonly
          */
-        readonly priority: OPTIONAL<INTEGER>,
+        readonly priority?: OPTIONAL<INTEGER>,
         /**
          * @summary `emergency`.
          * @description
@@ -72,7 +72,7 @@ class ContextRequest {
          * @public
          * @readonly
          */
-        readonly emergency: OPTIONAL<BOOLEAN>,
+        readonly emergency?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `topologyReq`.
          * @description
@@ -86,7 +86,7 @@ class ContextRequest {
          * @public
          * @readonly
          */
-        readonly topologyReq: OPTIONAL<TopologyRequest[]>,
+        readonly topologyReq?: OPTIONAL<TopologyRequest[]>,
         /**
          * @summary `iepscallind`.
          * @description
@@ -98,7 +98,7 @@ class ContextRequest {
          * @public
          * @readonly
          */
-        readonly iepscallind: OPTIONAL<BOOLEAN>,
+        readonly iepscallind?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `contextProp`.
          * @description
@@ -110,7 +110,7 @@ class ContextRequest {
          * @public
          * @readonly
          */
-        readonly contextProp: OPTIONAL<PropertyParm[]>,
+        readonly contextProp?: OPTIONAL<PropertyParm[]>,
         /**
          * @summary `contextList`.
          * @description
@@ -124,7 +124,7 @@ class ContextRequest {
          * @public
          * @readonly
          */
-        readonly contextList: OPTIONAL<ContextIDinList[]>,
+        readonly contextList?: OPTIONAL<ContextIDinList[]>,
         /**
          * @summary Extensions that are not recognized.
          * @description

@@ -212,12 +212,12 @@ class MMEDetach {
         detachDirection: MMEDirection,
         detachType: EPSDetachType,
         iMSI: IMSI,
-        iMEI: OPTIONAL<IMEI>,
-        mSISDN: OPTIONAL<MSISDN>,
-        gUTI: OPTIONAL<GUTI>,
-        cause: OPTIONAL<EMMCause>,
-        location: OPTIONAL<Location>,
-        switchOffIndicator: OPTIONAL<SwitchOffIndicator>,
+        iMEI?: OPTIONAL<IMEI>,
+        mSISDN?: OPTIONAL<MSISDN>,
+        gUTI?: OPTIONAL<GUTI>,
+        cause?: OPTIONAL<EMMCause>,
+        location?: OPTIONAL<Location>,
+        switchOffIndicator?: OPTIONAL<SwitchOffIndicator>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.detachDirection = detachDirection;

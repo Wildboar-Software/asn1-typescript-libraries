@@ -63,7 +63,7 @@ class RoutingInfoForSM_Res {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `ip_sm_gwGuidance`.
          * @description
@@ -73,7 +73,7 @@ class RoutingInfoForSM_Res {
          * @public
          * @readonly
          */
-        readonly ip_sm_gwGuidance: OPTIONAL<IP_SM_GW_Guidance>,
+        readonly ip_sm_gwGuidance?: OPTIONAL<IP_SM_GW_Guidance>,
         /**
          * @summary Extensions that are not recognized.
          * @public

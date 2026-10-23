@@ -54,7 +54,7 @@ class Variable_List_Item_instance {
          * @public
          * @readonly
          */
-        readonly unnamedItem: OPTIONAL<Nullable_Unnamed_Variable_instance>,
+        readonly unnamedItem?: OPTIONAL<Nullable_Unnamed_Variable_instance>,
         /**
          * @summary `namedItem`.
          * @description
@@ -65,7 +65,7 @@ class Variable_List_Item_instance {
          * @public
          * @readonly
          */
-        readonly namedItem: OPTIONAL<Nullable_Named_Variable_instance>,
+        readonly namedItem?: OPTIONAL<Nullable_Named_Variable_instance>,
         /**
          * @summary `alternateAccess`.
          * @description
@@ -76,7 +76,7 @@ class Variable_List_Item_instance {
          * @public
          * @readonly
          */
-        readonly alternateAccess: OPTIONAL<AlternateAccess>
+        readonly alternateAccess?: OPTIONAL<AlternateAccess>
     ) {}
 
     /**

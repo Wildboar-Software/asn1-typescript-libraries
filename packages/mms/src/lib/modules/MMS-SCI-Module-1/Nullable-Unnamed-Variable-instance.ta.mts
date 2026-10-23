@@ -51,7 +51,7 @@ class Nullable_Unnamed_Variable_instance {
          * @public
          * @readonly
          */
-        readonly address: OPTIONAL<Address>,
+        readonly address?: OPTIONAL<Address>,
         /**
          * @summary `accessControl`.
          * @description
@@ -62,7 +62,7 @@ class Nullable_Unnamed_Variable_instance {
          * @public
          * @readonly
          */
-        readonly accessControl: OPTIONAL<Access_Control_List_instance>,
+        readonly accessControl?: OPTIONAL<Access_Control_List_instance>,
         /**
          * @summary `typeDescription`.
          * @description
@@ -73,7 +73,7 @@ class Nullable_Unnamed_Variable_instance {
          * @public
          * @readonly
          */
-        readonly typeDescription: OPTIONAL<TypeDescription>
+        readonly typeDescription?: OPTIONAL<TypeDescription>
     ) {}
 
     /**

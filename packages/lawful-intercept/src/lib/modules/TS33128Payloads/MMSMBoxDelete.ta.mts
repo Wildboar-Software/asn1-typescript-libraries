@@ -150,7 +150,7 @@ class MMSMBoxDelete {
         contentLocationReq: UTF8String[],
         contentLocationConf: OPTIONAL<UTF8String[]>,
         responseStatus: MMSDeleteResponseStatus,
-        responseStatusText: OPTIONAL<UTF8String>,
+        responseStatusText?: OPTIONAL<UTF8String>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.transactionID = transactionID;

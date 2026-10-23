@@ -57,7 +57,7 @@ class T_BCSM_CAMEL_TDP_Criteria {
          * @public
          * @readonly
          */
-        readonly basicServiceCriteria: OPTIONAL<BasicServiceCriteria>,
+        readonly basicServiceCriteria?: OPTIONAL<BasicServiceCriteria>,
         /**
          * @summary `t_CauseValueCriteria`.
          * @description
@@ -69,7 +69,7 @@ class T_BCSM_CAMEL_TDP_Criteria {
          * @public
          * @readonly
          */
-        readonly t_CauseValueCriteria: OPTIONAL<T_CauseValueCriteria>,
+        readonly t_CauseValueCriteria?: OPTIONAL<T_CauseValueCriteria>,
         /**
          * @summary Extensions that are not recognized.
          * @public

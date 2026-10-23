@@ -199,20 +199,20 @@ class ServiceInteractionIndicatorsTwo {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        forwardServiceInteractionInd: OPTIONAL<ForwardServiceInteractionInd>,
-        backwardServiceInteractionInd: OPTIONAL<BackwardServiceInteractionInd>,
-        bothwayThroughConnectionInd: OPTIONAL<BothwayThroughConnectionInd>,
-        suspendTimer: OPTIONAL<SuspendTimer>,
-        connectedNumberTreatmentInd: OPTIONAL<ConnectedNumberTreatmentInd>,
-        suppressCallDiversionNotification: OPTIONAL<BOOLEAN>,
-        suppressCallTransferNotification: OPTIONAL<BOOLEAN>,
-        allowCdINNoPresentationInd: OPTIONAL<BOOLEAN>,
-        userDialogueDurationInd: OPTIONAL<BOOLEAN>,
-        overrideLineRestrictions: OPTIONAL<BOOLEAN>,
-        suppressVPNAPP: OPTIONAL<BOOLEAN>,
-        calledINNumberOverriding: OPTIONAL<BOOLEAN>,
-        redirectServiceTreatmentInd: OPTIONAL<ServiceInteractionIndicatorsTwo_redirectServiceTreatmentInd>,
-        nonCUGCall: OPTIONAL<NULL>,
+        forwardServiceInteractionInd?: OPTIONAL<ForwardServiceInteractionInd>,
+        backwardServiceInteractionInd?: OPTIONAL<BackwardServiceInteractionInd>,
+        bothwayThroughConnectionInd?: OPTIONAL<BothwayThroughConnectionInd>,
+        suspendTimer?: OPTIONAL<SuspendTimer>,
+        connectedNumberTreatmentInd?: OPTIONAL<ConnectedNumberTreatmentInd>,
+        suppressCallDiversionNotification?: OPTIONAL<BOOLEAN>,
+        suppressCallTransferNotification?: OPTIONAL<BOOLEAN>,
+        allowCdINNoPresentationInd?: OPTIONAL<BOOLEAN>,
+        userDialogueDurationInd?: OPTIONAL<BOOLEAN>,
+        overrideLineRestrictions?: OPTIONAL<BOOLEAN>,
+        suppressVPNAPP?: OPTIONAL<BOOLEAN>,
+        calledINNumberOverriding?: OPTIONAL<BOOLEAN>,
+        redirectServiceTreatmentInd?: OPTIONAL<ServiceInteractionIndicatorsTwo_redirectServiceTreatmentInd>,
+        nonCUGCall?: OPTIONAL<NULL>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.forwardServiceInteractionInd = forwardServiceInteractionInd;

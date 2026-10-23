@@ -85,7 +85,7 @@ class Property {
     constructor (
         propertyName: UTF8String,
         propertyValue: UTF8String,
-        status: OPTIONAL<AttributeStatus>
+        status?: OPTIONAL<AttributeStatus>
     ) {
         this.propertyName = propertyName;
         this.propertyValue = propertyValue;

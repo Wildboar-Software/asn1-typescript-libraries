@@ -39,7 +39,7 @@ export class IA5TextParameters {
          * @public
          * @readonly
          */
-        readonly repertoire: OPTIONAL<Repertoire>
+        readonly repertoire?: OPTIONAL<Repertoire>
     ) {}
 
     /**

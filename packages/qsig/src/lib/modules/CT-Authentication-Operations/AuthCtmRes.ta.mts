@@ -59,7 +59,7 @@ class AuthCtmRes {
 
     constructor (
         result: AuthCtmRes_result,
-        dummyExtension: OPTIONAL<DummyExtension>
+        dummyExtension?: OPTIONAL<DummyExtension>
     ) {
         this.result = result;
         this.dummyExtension = dummyExtension;

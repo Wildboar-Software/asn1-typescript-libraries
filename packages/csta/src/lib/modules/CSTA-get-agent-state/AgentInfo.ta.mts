@@ -85,7 +85,7 @@ class AgentInfo {
          * @public
          * @readonly
          */
-        readonly pendingAgentState: OPTIONAL<PendingAgentState>,
+        readonly pendingAgentState?: OPTIONAL<PendingAgentState>,
         /**
          * @summary `agentStateCondition`.
          * @description
@@ -94,7 +94,7 @@ class AgentInfo {
          * @public
          * @readonly
          */
-        readonly agentStateCondition: OPTIONAL<AgentStateCondition>
+        readonly agentStateCondition?: OPTIONAL<AgentStateCondition>
     ) {}
 
     /**

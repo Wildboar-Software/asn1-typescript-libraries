@@ -62,7 +62,7 @@ class ModificationRequestFor_CB_Info {
          * @public
          * @readonly
          */
-        readonly basicService: OPTIONAL<Ext_BasicServiceCode>,
+        readonly basicService?: OPTIONAL<Ext_BasicServiceCode>,
         /**
          * @summary `ss_Status`.
          * @description
@@ -73,7 +73,7 @@ class ModificationRequestFor_CB_Info {
          * @public
          * @readonly
          */
-        readonly ss_Status: OPTIONAL<Ext_SS_Status>,
+        readonly ss_Status?: OPTIONAL<Ext_SS_Status>,
         /**
          * @summary `password`.
          * @description
@@ -83,7 +83,7 @@ class ModificationRequestFor_CB_Info {
          * @public
          * @readonly
          */
-        readonly password: OPTIONAL<Password>,
+        readonly password?: OPTIONAL<Password>,
         /**
          * @summary `wrongPasswordAttemptsCounter`.
          * @description
@@ -94,7 +94,7 @@ class ModificationRequestFor_CB_Info {
          * @public
          * @readonly
          */
-        readonly wrongPasswordAttemptsCounter: OPTIONAL<WrongPasswordAttemptsCounter>,
+        readonly wrongPasswordAttemptsCounter?: OPTIONAL<WrongPasswordAttemptsCounter>,
         /**
          * @summary `modifyNotificationToCSE`.
          * @description
@@ -105,13 +105,13 @@ class ModificationRequestFor_CB_Info {
          * @public
          * @readonly
          */
-        readonly modifyNotificationToCSE: OPTIONAL<ModificationInstruction>,
+        readonly modifyNotificationToCSE?: OPTIONAL<ModificationInstruction>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

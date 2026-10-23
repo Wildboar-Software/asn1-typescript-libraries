@@ -43,7 +43,7 @@ class CCBS_Feature {
          * @public
          * @readonly
          */
-        readonly ccbs_Index: OPTIONAL<CCBS_Index>,
+        readonly ccbs_Index?: OPTIONAL<CCBS_Index>,
         /**
          * @summary `b_subscriberNumber`.
          * @description
@@ -53,7 +53,7 @@ class CCBS_Feature {
          * @public
          * @readonly
          */
-        readonly b_subscriberNumber: OPTIONAL<ISDN_AddressString>,
+        readonly b_subscriberNumber?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `b_subscriberSubaddress`.
          * @description
@@ -63,7 +63,7 @@ class CCBS_Feature {
          * @public
          * @readonly
          */
-        readonly b_subscriberSubaddress: OPTIONAL<ISDN_SubaddressString>,
+        readonly b_subscriberSubaddress?: OPTIONAL<ISDN_SubaddressString>,
         /**
          * @summary `basicServiceGroup`.
          * @description
@@ -73,7 +73,7 @@ class CCBS_Feature {
          * @public
          * @readonly
          */
-        readonly basicServiceGroup: OPTIONAL<BasicServiceCode>,
+        readonly basicServiceGroup?: OPTIONAL<BasicServiceCode>,
         /**
          * @summary Extensions that are not recognized.
          * @public

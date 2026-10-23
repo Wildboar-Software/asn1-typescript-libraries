@@ -60,8 +60,8 @@ class EntityReleasedArg_bCSMFailure {
 
     constructor (
         legID: LegID,
-        reason: OPTIONAL<Reason>,
-        cause: OPTIONAL<Cause>,
+        reason?: OPTIONAL<Reason>,
+        cause?: OPTIONAL<Cause>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.legID = legID;

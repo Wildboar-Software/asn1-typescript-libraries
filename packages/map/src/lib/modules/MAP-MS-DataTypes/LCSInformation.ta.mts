@@ -48,7 +48,7 @@ class LCSInformation {
          * @public
          * @readonly
          */
-        readonly gmlc_List: OPTIONAL<GMLC_List>,
+        readonly gmlc_List?: OPTIONAL<GMLC_List>,
         /**
          * @summary `lcs_PrivacyExceptionList`.
          * @description
@@ -59,7 +59,7 @@ class LCSInformation {
          * @public
          * @readonly
          */
-        readonly lcs_PrivacyExceptionList: OPTIONAL<LCS_PrivacyExceptionList>,
+        readonly lcs_PrivacyExceptionList?: OPTIONAL<LCS_PrivacyExceptionList>,
         /**
          * @summary `molr_List`.
          * @description
@@ -70,7 +70,7 @@ class LCSInformation {
          * @public
          * @readonly
          */
-        readonly molr_List: OPTIONAL<MOLR_List>,
+        readonly molr_List?: OPTIONAL<MOLR_List>,
         /**
          * @summary `add_lcs_PrivacyExceptionList`.
          * @description
@@ -83,7 +83,7 @@ class LCSInformation {
          * @public
          * @readonly
          */
-        readonly add_lcs_PrivacyExceptionList: OPTIONAL<LCS_PrivacyExceptionList>,
+        readonly add_lcs_PrivacyExceptionList?: OPTIONAL<LCS_PrivacyExceptionList>,
         /**
          * @summary Extensions that are not recognized.
          * @public

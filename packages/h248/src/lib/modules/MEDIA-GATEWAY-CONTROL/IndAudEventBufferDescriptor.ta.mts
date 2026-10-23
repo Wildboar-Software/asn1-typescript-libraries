@@ -52,7 +52,7 @@ class IndAudEventBufferDescriptor {
          * @public
          * @readonly
          */
-        readonly streamID: OPTIONAL<StreamID>,
+        readonly streamID?: OPTIONAL<StreamID>,
         /**
          * @summary Extensions that are not recognized.
          * @description

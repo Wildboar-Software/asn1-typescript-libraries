@@ -42,7 +42,7 @@ class scfChained_ArgumentType_Type<ArgumentType> {
 
     constructor (
         chainedArgument: ChainingArgument,
-        argument: OPTIONAL<ArgumentType>
+        argument?: OPTIONAL<ArgumentType>
     ) {
         this.chainedArgument = chainedArgument;
         this.argument = argument;

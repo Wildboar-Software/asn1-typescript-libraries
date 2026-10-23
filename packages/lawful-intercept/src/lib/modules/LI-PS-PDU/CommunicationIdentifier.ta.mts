@@ -144,9 +144,9 @@ class CommunicationIdentifier {
 
     constructor (
         networkIdentifier: NetworkIdentifier,
-        communicationIdentityNumber: OPTIONAL<INTEGER>,
-        deliveryCountryCode: OPTIONAL<PrintableString>,
-        cINExtension: OPTIONAL<UmtsHI2Operations.CorrelationValues>,
+        communicationIdentityNumber?: OPTIONAL<INTEGER>,
+        deliveryCountryCode?: OPTIONAL<PrintableString>,
+        cINExtension?: OPTIONAL<UmtsHI2Operations.CorrelationValues>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.networkIdentifier = networkIdentifier;

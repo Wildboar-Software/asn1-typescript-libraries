@@ -50,7 +50,7 @@ class RoamingNotAllowedParam {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `additionalRoamingNotAllowedCause`.
          * @description
@@ -61,7 +61,7 @@ class RoamingNotAllowedParam {
          * @public
          * @readonly
          */
-        readonly additionalRoamingNotAllowedCause: OPTIONAL<AdditionalRoamingNotAllowedCause>,
+        readonly additionalRoamingNotAllowedCause?: OPTIONAL<AdditionalRoamingNotAllowedCause>,
         /**
          * @summary Extensions that are not recognized.
          * @public

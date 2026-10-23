@@ -80,7 +80,7 @@ class Path {
          * @public
          * @readonly
          */
-        readonly index: OPTIONAL<INTEGER>,
+        readonly index?: OPTIONAL<INTEGER>,
         /**
          * @summary `length`.
          * @description
@@ -89,7 +89,7 @@ class Path {
          * @public
          * @readonly
          */
-        readonly length: OPTIONAL<INTEGER>
+        readonly length?: OPTIONAL<INTEGER>
     ) {
         const indexPresent = index !== undefined;
         const lengthPresent = length !== undefined;

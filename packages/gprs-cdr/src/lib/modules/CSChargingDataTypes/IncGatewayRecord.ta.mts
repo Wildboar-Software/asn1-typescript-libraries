@@ -515,16 +515,16 @@ class IncGatewayRecord {
         causeForTerm: CauseForTerm,
         diagnostics: OPTIONAL<HLRIntResult>,
         callReference: OCTET_STRING,
-        sequenceNumber: OPTIONAL<INTEGER>,
-        recordExtensions: OPTIONAL<ManagementExtension[]>,
-        locationRoutNum: OPTIONAL<OCTET_STRING>,
-        lrnSoInd: OPTIONAL<IncGatewayRecord_lrnSoInd>,
-        lrnQuryStatus: OPTIONAL<IncGatewayRecord_lrnQuryStatus>,
-        jIPPara: OPTIONAL<OCTET_STRING>,
-        jIPSoInd: OPTIONAL<IncGatewayRecord_jIPSoInd>,
-        jIPQuryStatus: OPTIONAL<IncGatewayRecord_jIPQuryStatus>,
-        reasonForServiceChange: OPTIONAL<ReasonForServiceChange>,
-        serviceChangeInitiator: OPTIONAL<BOOLEAN>
+        sequenceNumber?: OPTIONAL<INTEGER>,
+        recordExtensions?: OPTIONAL<ManagementExtension[]>,
+        locationRoutNum?: OPTIONAL<OCTET_STRING>,
+        lrnSoInd?: OPTIONAL<IncGatewayRecord_lrnSoInd>,
+        lrnQuryStatus?: OPTIONAL<IncGatewayRecord_lrnQuryStatus>,
+        jIPPara?: OPTIONAL<OCTET_STRING>,
+        jIPSoInd?: OPTIONAL<IncGatewayRecord_jIPSoInd>,
+        jIPQuryStatus?: OPTIONAL<IncGatewayRecord_jIPQuryStatus>,
+        reasonForServiceChange?: OPTIONAL<ReasonForServiceChange>,
+        serviceChangeInitiator?: OPTIONAL<BOOLEAN>
     ) {
         this.recordType = recordType;
         this.callingNumber = callingNumber;

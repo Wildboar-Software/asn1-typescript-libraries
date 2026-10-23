@@ -58,8 +58,8 @@ class ReleaseCallArg_callSegmentToRelease {
 
     constructor (
         callSegment: INTEGER,
-        releaseCause: OPTIONAL<Cause>,
-        forcedRelease: OPTIONAL<BOOLEAN>,
+        releaseCause?: OPTIONAL<Cause>,
+        forcedRelease?: OPTIONAL<BOOLEAN>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.callSegment = callSegment;

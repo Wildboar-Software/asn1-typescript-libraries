@@ -48,19 +48,19 @@ class PlayAnnouncementArg {
          * @public
          * @readonly
          */
-        readonly disconnectFromIPForbidden: OPTIONAL<BOOLEAN>,
+        readonly disconnectFromIPForbidden?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `requestAnnouncementComplete`.
          * @public
          * @readonly
          */
-        readonly requestAnnouncementComplete: OPTIONAL<BOOLEAN>,
+        readonly requestAnnouncementComplete?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<ExtensionField[]>
+        readonly extensions?: OPTIONAL<ExtensionField[]>
     ) {}
 
     /**

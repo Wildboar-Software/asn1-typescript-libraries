@@ -69,8 +69,8 @@ class MultipleUnitUsage {
 
     constructor (
         ratingGroup: INTEGER,
-        usedUnitContainers: OPTIONAL<UsedUnitContainer[]>,
-        uPFID: OPTIONAL<IA5String>
+        usedUnitContainers?: OPTIONAL<UsedUnitContainer[]>,
+        uPFID?: OPTIONAL<IA5String>
     ) {
         this.ratingGroup = ratingGroup;
         this.usedUnitContainers = usedUnitContainers;

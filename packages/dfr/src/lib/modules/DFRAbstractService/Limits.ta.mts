@@ -44,7 +44,7 @@ class Limits {
          * @public
          * @readonly
          */
-        readonly time_limit: OPTIONAL<INTEGER>,
+        readonly time_limit?: OPTIONAL<INTEGER>,
         /**
          * @summary `count_limit`.
          * @description
@@ -53,7 +53,7 @@ class Limits {
          * @public
          * @readonly
          */
-        readonly count_limit: OPTIONAL<INTEGER>
+        readonly count_limit?: OPTIONAL<INTEGER>
     ) {}
 
     /**

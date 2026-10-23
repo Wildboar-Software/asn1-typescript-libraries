@@ -48,7 +48,7 @@ class PDN_GW_Update {
          * @public
          * @readonly
          */
-        readonly apn: OPTIONAL<APN>,
+        readonly apn?: OPTIONAL<APN>,
         /**
          * @summary `pdn_gw_Identity`.
          * @description
@@ -61,7 +61,7 @@ class PDN_GW_Update {
          * @public
          * @readonly
          */
-        readonly pdn_gw_Identity: OPTIONAL<PDN_GW_Identity>,
+        readonly pdn_gw_Identity?: OPTIONAL<PDN_GW_Identity>,
         /**
          * @summary `contextId`.
          * @description
@@ -73,13 +73,13 @@ class PDN_GW_Update {
          * @public
          * @readonly
          */
-        readonly contextId: OPTIONAL<ContextId>,
+        readonly contextId?: OPTIONAL<ContextId>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

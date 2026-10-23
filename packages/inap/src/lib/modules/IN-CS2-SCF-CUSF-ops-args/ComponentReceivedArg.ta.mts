@@ -80,10 +80,10 @@ class ComponentReceivedArg {
 
     constructor (
         callUnrelatedDpSpecificCommonParameters: CallUnrelatedDpSpecificCommonParameters,
-        componentType: OPTIONAL<ComponentType>,
-        componentCorrelationID: OPTIONAL<ComponentCorrelationID>,
-        extensions: OPTIONAL<ExtensionField[]>,
-        component: OPTIONAL<Component>,
+        componentType?: OPTIONAL<ComponentType>,
+        componentCorrelationID?: OPTIONAL<ComponentCorrelationID>,
+        extensions?: OPTIONAL<ExtensionField[]>,
+        component?: OPTIONAL<Component>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.callUnrelatedDpSpecificCommonParameters = callUnrelatedDpSpecificCommonParameters;

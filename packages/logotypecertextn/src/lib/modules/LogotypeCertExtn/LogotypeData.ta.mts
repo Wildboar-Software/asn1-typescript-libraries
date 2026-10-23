@@ -55,7 +55,7 @@ class LogotypeData {
          * @public
          * @readonly
          */
-        readonly image: OPTIONAL<LogotypeImage[]>,
+        readonly image?: OPTIONAL<LogotypeImage[]>,
         /**
          * Audio-file variants of this logotype. Optional for the
          * certificate and optional for implementations. A client that
@@ -69,7 +69,7 @@ class LogotypeData {
          * @public
          * @readonly
          */
-        readonly audio: OPTIONAL<LogotypeAudio[]>
+        readonly audio?: OPTIONAL<LogotypeAudio[]>
     ) {}
 
     /**

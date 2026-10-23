@@ -88,7 +88,7 @@ class SetForwardingArgument {
          * @public
          * @readonly
          */
-        readonly forwardDN: OPTIONAL<DeviceID>,
+        readonly forwardDN?: OPTIONAL<DeviceID>,
         /**
          * @summary `ringCount`.
          * @description
@@ -98,7 +98,7 @@ class SetForwardingArgument {
          * @public
          * @readonly
          */
-        readonly ringCount: OPTIONAL<INTEGER>,
+        readonly ringCount?: OPTIONAL<INTEGER>,
         /**
          * @summary `ringDuration`.
          * @description
@@ -107,7 +107,7 @@ class SetForwardingArgument {
          * @public
          * @readonly
          */
-        readonly ringDuration: OPTIONAL<INTEGER>,
+        readonly ringDuration?: OPTIONAL<INTEGER>,
         /**
          * @summary `extensions`.
          * @description
@@ -117,7 +117,7 @@ class SetForwardingArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

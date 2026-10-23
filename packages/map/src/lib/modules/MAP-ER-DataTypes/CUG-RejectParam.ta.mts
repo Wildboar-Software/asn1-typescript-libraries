@@ -41,13 +41,13 @@ class CUG_RejectParam {
          * @public
          * @readonly
          */
-        readonly cug_RejectCause: OPTIONAL<CUG_RejectCause>,
+        readonly cug_RejectCause?: OPTIONAL<CUG_RejectCause>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

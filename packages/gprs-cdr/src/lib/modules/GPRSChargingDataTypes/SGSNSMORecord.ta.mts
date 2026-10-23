@@ -661,15 +661,15 @@ class SGSNSMORecord {
         cAMELInformationSMS: OPTIONAL<CAMELInformationSMS>,
         chChSelectionMode: OPTIONAL<ChChSelectionMode>,
         servingNodeType: ServingNodeType,
-        servingNodeAddress: OPTIONAL<GSNAddress>,
-        servingNodeiPv6Address: OPTIONAL<GSNAddress>,
-        mMEName: OPTIONAL<OCTET_STRING>,
-        mMERealm: OPTIONAL<OCTET_STRING>,
-        userLocationInformation: OPTIONAL<OCTET_STRING>,
-        retransmission: OPTIONAL<NULL>,
-        servingNodePLMNIdentifier: OPTIONAL<OCTET_STRING>,
-        userLocationInfoTime: OPTIONAL<OCTET_STRING>,
-        cNOperatorSelectionEnt: OPTIONAL<CNOperatorSelectionEntity>
+        servingNodeAddress?: OPTIONAL<GSNAddress>,
+        servingNodeiPv6Address?: OPTIONAL<GSNAddress>,
+        mMEName?: OPTIONAL<OCTET_STRING>,
+        mMERealm?: OPTIONAL<OCTET_STRING>,
+        userLocationInformation?: OPTIONAL<OCTET_STRING>,
+        retransmission?: OPTIONAL<NULL>,
+        servingNodePLMNIdentifier?: OPTIONAL<OCTET_STRING>,
+        userLocationInfoTime?: OPTIONAL<OCTET_STRING>,
+        cNOperatorSelectionEnt?: OPTIONAL<CNOperatorSelectionEntity>
     ) {
         this.recordType = recordType;
         this.servedIMSI = servedIMSI;

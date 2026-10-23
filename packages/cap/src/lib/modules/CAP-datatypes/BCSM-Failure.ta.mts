@@ -39,7 +39,7 @@ export class BCSM_Failure {
          * @public
          * @readonly
          */
-        readonly legID: OPTIONAL<LegID>,
+        readonly legID?: OPTIONAL<LegID>,
         /**
          * @summary `cause`.
          * @description
@@ -50,7 +50,7 @@ export class BCSM_Failure {
          * @public
          * @readonly
          */
-        readonly cause: OPTIONAL<Cause>,
+        readonly cause?: OPTIONAL<Cause>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}
 

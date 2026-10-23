@@ -72,7 +72,7 @@ class AddressScreened {
     constructor (
         partyNumber: PartyNumber,
         screeninglndicator: ScreeningIndicator,
-        partySubaddress: OPTIONAL<PartySubaddress>
+        partySubaddress?: OPTIONAL<PartySubaddress>
     ) {
         this.partyNumber = partyNumber;
         this.screeninglndicator = screeninglndicator;

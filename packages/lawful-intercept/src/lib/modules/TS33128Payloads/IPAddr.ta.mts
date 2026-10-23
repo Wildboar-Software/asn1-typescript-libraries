@@ -54,8 +54,8 @@ class IPAddr {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        iPv4Addr: OPTIONAL<IPv4Address>,
-        iPv6Addr: OPTIONAL<IPv6Address>,
+        iPv4Addr?: OPTIONAL<IPv4Address>,
+        iPv6Addr?: OPTIONAL<IPv6Address>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.iPv4Addr = iPv4Addr;

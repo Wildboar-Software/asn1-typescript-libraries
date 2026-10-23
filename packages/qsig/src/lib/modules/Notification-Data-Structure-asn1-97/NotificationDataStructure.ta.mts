@@ -54,7 +54,7 @@ class NotificationDataStructure {
 
     constructor (
         notificationValue: Code,
-        notificationArgument: OPTIONAL<_Element>
+        notificationArgument?: OPTIONAL<_Element>
     ) {
         this.notificationValue = notificationValue;
         this.notificationArgument = notificationArgument;

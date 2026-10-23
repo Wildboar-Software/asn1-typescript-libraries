@@ -58,7 +58,7 @@ class X509AttributeCertificateAttributes {
          * @public
          * @readonly
          */
-        readonly issuer: OPTIONAL<GeneralNames>,
+        readonly issuer?: OPTIONAL<GeneralNames>,
         /**
          * @summary `serialNumber`.
          * @description
@@ -66,7 +66,7 @@ class X509AttributeCertificateAttributes {
          * @public
          * @readonly
          */
-        readonly serialNumber: OPTIONAL<CertificateSerialNumber>,
+        readonly serialNumber?: OPTIONAL<CertificateSerialNumber>,
         /**
          * @summary `attrTypes`.
          * @description
@@ -75,7 +75,7 @@ class X509AttributeCertificateAttributes {
          * @public
          * @readonly
          */
-        readonly attrTypes: OPTIONAL<OBJECT_IDENTIFIER[]>,
+        readonly attrTypes?: OPTIONAL<OBJECT_IDENTIFIER[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

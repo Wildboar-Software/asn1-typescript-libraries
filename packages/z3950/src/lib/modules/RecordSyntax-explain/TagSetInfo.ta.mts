@@ -120,8 +120,8 @@ class TagSetInfo {
         commonInfo: OPTIONAL<CommonInfo>,
         tagSet: OBJECT_IDENTIFIER,
         name: InternationalString,
-        description: OPTIONAL<HumanString>,
-        elements: OPTIONAL<TagSetInfo_elements_Item[]>
+        description?: OPTIONAL<HumanString>,
+        elements?: OPTIONAL<TagSetInfo_elements_Item[]>
     ) {
         this.commonInfo = commonInfo;
         this.tagSet = tagSet;

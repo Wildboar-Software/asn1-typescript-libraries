@@ -54,7 +54,7 @@ class CVCertificateAttributes {
          * @public
          * @readonly
          */
-        readonly certificationAuthorityReference: OPTIONAL<OCTET_STRING>,
+        readonly certificationAuthorityReference?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary Extensions that are not recognized.
          * @public

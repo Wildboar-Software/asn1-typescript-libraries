@@ -37,7 +37,7 @@ class EventSpecificInformationBCSM_tDisconnectSpecificInfo {
          * @public
          * @readonly
          */
-        readonly releaseCause: OPTIONAL<Cause>
+        readonly releaseCause?: OPTIONAL<Cause>
     ) {}
 
     /**

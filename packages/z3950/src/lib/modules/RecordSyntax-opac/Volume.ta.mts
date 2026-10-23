@@ -64,9 +64,9 @@ class Volume {
     readonly enumAndChron: OPTIONAL<InternationalString>;
 
     constructor (
-        enumeration: OPTIONAL<InternationalString>,
-        chronology: OPTIONAL<InternationalString>,
-        enumAndChron: OPTIONAL<InternationalString>
+        enumeration?: OPTIONAL<InternationalString>,
+        chronology?: OPTIONAL<InternationalString>,
+        enumAndChron?: OPTIONAL<InternationalString>
     ) {
         this.enumeration = enumeration;
         this.chronology = chronology;

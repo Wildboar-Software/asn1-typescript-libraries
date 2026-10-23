@@ -56,7 +56,7 @@ class Occurrences_values {
 
     constructor (
         start: INTEGER,
-        howMany: OPTIONAL<INTEGER>
+        howMany?: OPTIONAL<INTEGER>
     ) {
         this.start = start;
         this.howMany = howMany;

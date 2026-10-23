@@ -81,7 +81,7 @@ class SetRingerStatusArgument {
          * @public
          * @readonly
          */
-        readonly ringMode: OPTIONAL<RingMode>,
+        readonly ringMode?: OPTIONAL<RingMode>,
         /**
          * @summary `ringPattern`.
          * @description
@@ -91,7 +91,7 @@ class SetRingerStatusArgument {
          * @public
          * @readonly
          */
-        readonly ringPattern: OPTIONAL<INTEGER>,
+        readonly ringPattern?: OPTIONAL<INTEGER>,
         /**
          * @summary `ringVolume`.
          * @description
@@ -102,7 +102,7 @@ class SetRingerStatusArgument {
          * @public
          * @readonly
          */
-        readonly ringVolume: OPTIONAL<Volume>,
+        readonly ringVolume?: OPTIONAL<Volume>,
         /**
          * @summary `extensions`.
          * @description
@@ -112,7 +112,7 @@ class SetRingerStatusArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

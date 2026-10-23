@@ -82,7 +82,7 @@ class StatusReportArg {
         correlationID: OPTIONAL<CorrelationID>,
         resourceID: OPTIONAL<ResourceID>,
         extensions: ExtensionField[],
-        reportCondition: OPTIONAL<ReportCondition>,
+        reportCondition?: OPTIONAL<ReportCondition>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.resourceStatus = resourceStatus;

@@ -63,7 +63,7 @@ class MBMSparameters {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        aPN: OPTIONAL<UTF8String>,
+        aPN?: OPTIONAL<UTF8String>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.aPN = aPN;

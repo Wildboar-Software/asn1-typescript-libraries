@@ -156,13 +156,13 @@ class RelatedChangeOfServiceCondition {
     readonly relatedServiceConditionChange: OPTIONAL<ServiceConditionChange>;
 
     constructor (
-        userLocationInformation: OPTIONAL<OCTET_STRING>,
-        threeGPP2UserLocationInformation: OPTIONAL<OCTET_STRING>,
-        presenceReportingAreaStatus: OPTIONAL<PresenceReportingAreaStatus>,
-        userCSGInformation: OPTIONAL<UserCSGInformation>,
-        rATType: OPTIONAL<INTEGER>,
-        uWANUserLocationInformation: OPTIONAL<UWANUserLocationInfo>,
-        relatedServiceConditionChange: OPTIONAL<ServiceConditionChange>
+        userLocationInformation?: OPTIONAL<OCTET_STRING>,
+        threeGPP2UserLocationInformation?: OPTIONAL<OCTET_STRING>,
+        presenceReportingAreaStatus?: OPTIONAL<PresenceReportingAreaStatus>,
+        userCSGInformation?: OPTIONAL<UserCSGInformation>,
+        rATType?: OPTIONAL<INTEGER>,
+        uWANUserLocationInformation?: OPTIONAL<UWANUserLocationInfo>,
+        relatedServiceConditionChange?: OPTIONAL<ServiceConditionChange>
     ) {
         this.userLocationInformation = userLocationInformation;
         this.threeGPP2UserLocationInformation = threeGPP2UserLocationInformation;

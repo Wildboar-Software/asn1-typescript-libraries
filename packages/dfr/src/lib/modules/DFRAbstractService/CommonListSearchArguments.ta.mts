@@ -49,7 +49,7 @@ class CommonListSearchArguments {
          * @public
          * @readonly
          */
-        readonly continue_: OPTIONAL<BOOLEAN>,
+        readonly continue_?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `limits`.
          * @description
@@ -59,7 +59,7 @@ class CommonListSearchArguments {
          * @public
          * @readonly
          */
-        readonly limits: OPTIONAL<Limits>,
+        readonly limits?: OPTIONAL<Limits>,
         /**
          * @summary `selection`.
          * @description
@@ -70,7 +70,7 @@ class CommonListSearchArguments {
          * @public
          * @readonly
          */
-        readonly selection: OPTIONAL<AttributeSelection>,
+        readonly selection?: OPTIONAL<AttributeSelection>,
         /**
          * @summary `ordering`.
          * @description
@@ -81,7 +81,7 @@ class CommonListSearchArguments {
          * @public
          * @readonly
          */
-        readonly ordering: OPTIONAL<OrderingRule>
+        readonly ordering?: OPTIONAL<OrderingRule>
     ) {}
 
     /**

@@ -86,9 +86,9 @@ class ReAnswerArg {
 
     constructor (
         connectedNumber: PresentedNumberScreened,
-        connectedSubaddress: OPTIONAL<PartySubaddress>,
-        connectedName: OPTIONAL<Name>,
-        argumentExtension: OPTIONAL<ReAnswerArg_argumentExtension>
+        connectedSubaddress?: OPTIONAL<PartySubaddress>,
+        connectedName?: OPTIONAL<Name>,
+        argumentExtension?: OPTIONAL<ReAnswerArg_argumentExtension>
     ) {
         this.connectedNumber = connectedNumber;
         this.connectedSubaddress = connectedSubaddress;

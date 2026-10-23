@@ -48,7 +48,7 @@ class LCS_QoS {
          * @public
          * @readonly
          */
-        readonly horizontal_accuracy: OPTIONAL<Horizontal_Accuracy>,
+        readonly horizontal_accuracy?: OPTIONAL<Horizontal_Accuracy>,
         /**
          * @summary `verticalCoordinateRequest`.
          * @description
@@ -58,7 +58,7 @@ class LCS_QoS {
          * @public
          * @readonly
          */
-        readonly verticalCoordinateRequest: OPTIONAL<NULL>,
+        readonly verticalCoordinateRequest?: OPTIONAL<NULL>,
         /**
          * @summary `vertical_accuracy`.
          * @description
@@ -68,7 +68,7 @@ class LCS_QoS {
          * @public
          * @readonly
          */
-        readonly vertical_accuracy: OPTIONAL<Vertical_Accuracy>,
+        readonly vertical_accuracy?: OPTIONAL<Vertical_Accuracy>,
         /**
          * @summary `responseTime`.
          * @description
@@ -78,7 +78,7 @@ class LCS_QoS {
          * @public
          * @readonly
          */
-        readonly responseTime: OPTIONAL<ResponseTime>,
+        readonly responseTime?: OPTIONAL<ResponseTime>,
         /**
          * @summary `extensionContainer`.
          * @description
@@ -88,7 +88,7 @@ class LCS_QoS {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `velocityRequest`.
          * @description
@@ -98,7 +98,7 @@ class LCS_QoS {
          * @public
          * @readonly
          */
-        readonly velocityRequest: OPTIONAL<NULL>,
+        readonly velocityRequest?: OPTIONAL<NULL>,
         /**
          * @summary `lcs_qos_class`.
          * @description
@@ -109,7 +109,7 @@ class LCS_QoS {
          * @public
          * @readonly
          */
-        readonly lcs_qos_class: OPTIONAL<LCS_QoS_Class>,
+        readonly lcs_qos_class?: OPTIONAL<LCS_QoS_Class>,
         /**
          * @summary Extensions that are not recognized.
          * @public

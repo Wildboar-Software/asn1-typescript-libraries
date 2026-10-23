@@ -74,7 +74,7 @@ class PRProposeArg {
     constructor (
         callIdentity: CallIdentity,
         rerouteingNumber: PartyNumber,
-        extension: OPTIONAL<PRProposeArg_extension>
+        extension?: OPTIONAL<PRProposeArg_extension>
     ) {
         this.callIdentity = callIdentity;
         this.rerouteingNumber = rerouteingNumber;

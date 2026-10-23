@@ -218,13 +218,13 @@ class SupplementaryInfo {
     constructor (
         informationAppliesTo: InformationAppliesTo,
         mediaFormat: INTEGER,
-        mediaAttributes: OPTIONAL<OCTET_STRING>,
-        encryptionKey: OPTIONAL<OCTET_STRING>,
-        sessionName: OPTIONAL<OCTET_STRING>,
-        sessionInfo: OPTIONAL<OCTET_STRING>,
-        copyOfSDPMessage: OPTIONAL<OCTET_STRING>,
-        frameType: OPTIONAL<FrameType>,
-        alternateProtocol: OPTIONAL<AlternateProtocol>,
+        mediaAttributes?: OPTIONAL<OCTET_STRING>,
+        encryptionKey?: OPTIONAL<OCTET_STRING>,
+        sessionName?: OPTIONAL<OCTET_STRING>,
+        sessionInfo?: OPTIONAL<OCTET_STRING>,
+        copyOfSDPMessage?: OPTIONAL<OCTET_STRING>,
+        frameType?: OPTIONAL<FrameType>,
+        alternateProtocol?: OPTIONAL<AlternateProtocol>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.informationAppliesTo = informationAppliesTo;

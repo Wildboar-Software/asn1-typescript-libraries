@@ -150,10 +150,10 @@ class DivertArg {
         callingNumber: PresentedNumberScreened,
         pumIdentity: PumIdentity,
         qSIGInfoElement: PSS1InformationElement,
-        callingUserSub: OPTIONAL<PartySubaddress>,
-        callingUserName: OPTIONAL<Name>,
-        pumUserSub: OPTIONAL<PartySubaddress>,
-        argExtension: OPTIONAL<PumiExtension>
+        callingUserSub?: OPTIONAL<PartySubaddress>,
+        callingUserName?: OPTIONAL<Name>,
+        pumUserSub?: OPTIONAL<PartySubaddress>,
+        argExtension?: OPTIONAL<PumiExtension>
     ) {
         this.hostingAddr = hostingAddr;
         this.callingNumber = callingNumber;

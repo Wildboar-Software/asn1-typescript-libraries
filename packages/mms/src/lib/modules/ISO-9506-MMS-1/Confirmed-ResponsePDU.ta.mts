@@ -73,7 +73,7 @@ class Confirmed_ResponsePDU {
          * @public
          * @readonly
          */
-        readonly service_ext: OPTIONAL<Response_Detail>,
+        readonly service_ext?: OPTIONAL<Response_Detail>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -50,7 +50,7 @@ class VariantValue {
 
     constructor (
         dataType: PrimitiveDataType,
-        values: OPTIONAL<ValueSet>
+        values?: OPTIONAL<ValueSet>
     ) {
         this.dataType = dataType;
         this.values = values;

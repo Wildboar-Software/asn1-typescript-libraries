@@ -75,7 +75,7 @@ class TTPResponseRefOnTTPforCenterModel {
          * @public
          * @readonly
          */
-        readonly aCforBioOnTTP: OPTIONAL<ACBioContentInformation>
+        readonly aCforBioOnTTP?: OPTIONAL<ACBioContentInformation>
     ) {}
 
     /**

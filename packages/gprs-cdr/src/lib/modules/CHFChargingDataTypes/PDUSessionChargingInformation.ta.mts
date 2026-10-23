@@ -309,15 +309,15 @@ class PDUSessionChargingInformation {
         pDUSessionstopTime: OPTIONAL<OCTET_STRING>,
         diagnostics: OPTIONAL<Diagnostics>,
         chargingCharacteristics: OCTET_STRING,
-        chChSelectionMode: OPTIONAL<ChChSelectionMode>,
-        threeGPPPSDataOffStatus: OPTIONAL<ThreeGPPPSDataOffStatus>,
-        rANSecondaryRATUsageReport: OPTIONAL<NGRANSecondaryRATUsageReport[]>,
-        subscribedQoSInformation: OPTIONAL<SubscribedQoSInformation>,
-        authorizedSessionAMBR: OPTIONAL<SessionAMBR>,
-        subscribedSessionAMBR: OPTIONAL<SessionAMBR>,
-        servingCNPLMNID: OPTIONAL<OCTET_STRING>,
-        sUPIunauthenticatedFlag: OPTIONAL<NULL>,
-        dNNSelectionMode: OPTIONAL<DNNSelectionMode>
+        chChSelectionMode?: OPTIONAL<ChChSelectionMode>,
+        threeGPPPSDataOffStatus?: OPTIONAL<ThreeGPPPSDataOffStatus>,
+        rANSecondaryRATUsageReport?: OPTIONAL<NGRANSecondaryRATUsageReport[]>,
+        subscribedQoSInformation?: OPTIONAL<SubscribedQoSInformation>,
+        authorizedSessionAMBR?: OPTIONAL<SessionAMBR>,
+        subscribedSessionAMBR?: OPTIONAL<SessionAMBR>,
+        servingCNPLMNID?: OPTIONAL<OCTET_STRING>,
+        sUPIunauthenticatedFlag?: OPTIONAL<NULL>,
+        dNNSelectionMode?: OPTIONAL<DNNSelectionMode>
     ) {
         this.pDUSessionChargingID = pDUSessionChargingID;
         this.userIdentifier = userIdentifier;

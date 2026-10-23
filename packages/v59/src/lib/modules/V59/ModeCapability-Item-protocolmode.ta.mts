@@ -77,7 +77,7 @@ class ModeCapability_Item_protocolmode {
          * @public
          * @readonly
          */
-        readonly otherProtMode: OPTIONAL<V59String>,
+        readonly otherProtMode?: OPTIONAL<V59String>,
         /**
          * @summary Extensions that are not recognized.
          * @public

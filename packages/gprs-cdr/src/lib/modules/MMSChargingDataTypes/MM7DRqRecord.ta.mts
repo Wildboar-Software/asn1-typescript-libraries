@@ -299,10 +299,10 @@ class MM7DRqRecord {
         mmComponentType: OPTIONAL<MMComponentType>,
         messageSize: INTEGER,
         contentType: OCTET_STRING,
-        priority: OPTIONAL<PriorityType>,
-        recordTimeStamp: OPTIONAL<OCTET_STRING>,
-        localSequenceNumber: OPTIONAL<INTEGER>,
-        recordExtensions: OPTIONAL<ManagementExtension[]>
+        priority?: OPTIONAL<PriorityType>,
+        recordTimeStamp?: OPTIONAL<OCTET_STRING>,
+        localSequenceNumber?: OPTIONAL<INTEGER>,
+        recordExtensions?: OPTIONAL<ManagementExtension[]>
     ) {
         this.recordType = recordType;
         this.recipientMmsRSAddress = recipientMmsRSAddress;

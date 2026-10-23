@@ -66,8 +66,8 @@ class GetRRCInfArg {
 
     constructor (
         wtmUserId: WtmUserId,
-        basicService: OPTIONAL<BasicService>,
-        argExtension: OPTIONAL<LrExtension>
+        basicService?: OPTIONAL<BasicService>,
+        argExtension?: OPTIONAL<LrExtension>
     ) {
         this.wtmUserId = wtmUserId;
         this.basicService = basicService;

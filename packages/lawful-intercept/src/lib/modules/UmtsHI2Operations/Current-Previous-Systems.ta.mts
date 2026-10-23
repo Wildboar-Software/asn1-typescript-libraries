@@ -172,14 +172,14 @@ class Current_Previous_Systems {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        serving_System_Identifier: OPTIONAL<OCTET_STRING>,
-        current_Serving_SGSN_Number: OPTIONAL<OCTET_STRING>,
-        current_Serving_SGSN_Address: OPTIONAL<OCTET_STRING>,
-        current_Serving_S4_SGSN_Address: OPTIONAL<OCTET_STRING>,
-        previous_Serving_System_Identifier: OPTIONAL<OCTET_STRING>,
-        previous_Serving_SGSN_Number: OPTIONAL<OCTET_STRING>,
-        previous_Serving_SGSN_Address: OPTIONAL<OCTET_STRING>,
-        previous_Serving_S4_SGSN_Address: OPTIONAL<OCTET_STRING>,
+        serving_System_Identifier?: OPTIONAL<OCTET_STRING>,
+        current_Serving_SGSN_Number?: OPTIONAL<OCTET_STRING>,
+        current_Serving_SGSN_Address?: OPTIONAL<OCTET_STRING>,
+        current_Serving_S4_SGSN_Address?: OPTIONAL<OCTET_STRING>,
+        previous_Serving_System_Identifier?: OPTIONAL<OCTET_STRING>,
+        previous_Serving_SGSN_Number?: OPTIONAL<OCTET_STRING>,
+        previous_Serving_SGSN_Address?: OPTIONAL<OCTET_STRING>,
+        previous_Serving_S4_SGSN_Address?: OPTIONAL<OCTET_STRING>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.serving_System_Identifier = serving_System_Identifier;

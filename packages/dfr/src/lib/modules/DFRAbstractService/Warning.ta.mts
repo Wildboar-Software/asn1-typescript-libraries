@@ -56,7 +56,7 @@ class Warning {
          * @public
          * @readonly
          */
-        readonly accessl: OPTIONAL<AccessProblem>,
+        readonly accessl?: OPTIONAL<AccessProblem>,
         /**
          * @summary `access2`.
          * @description
@@ -65,7 +65,7 @@ class Warning {
          * @public
          * @readonly
          */
-        readonly access2: OPTIONAL<ReferentAccessProblem>
+        readonly access2?: OPTIONAL<ReferentAccessProblem>
     ) {}
 
     /**

@@ -62,7 +62,7 @@ class OperatorId {
          * @public
          * @readonly
          */
-        readonly gid1: OPTIONAL<OCTET_STRING>,
+        readonly gid1?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `gid2`.
          * @description
@@ -73,7 +73,7 @@ class OperatorId {
          * @public
          * @readonly
          */
-        readonly gid2: OPTIONAL<OCTET_STRING>
+        readonly gid2?: OPTIONAL<OCTET_STRING>
     ) {}
 
     /**

@@ -199,11 +199,11 @@ class TSRequest {
 
     constructor (
         version: INTEGER,
-        negoTokens: OPTIONAL<NegoData>,
-        authInfo: OPTIONAL<OCTET_STRING>,
-        pubKeyAuth: OPTIONAL<OCTET_STRING>,
-        errorCode: OPTIONAL<INTEGER>,
-        clientNonce: OPTIONAL<OCTET_STRING>
+        negoTokens?: OPTIONAL<NegoData>,
+        authInfo?: OPTIONAL<OCTET_STRING>,
+        pubKeyAuth?: OPTIONAL<OCTET_STRING>,
+        errorCode?: OPTIONAL<INTEGER>,
+        clientNonce?: OPTIONAL<OCTET_STRING>
     ) {
         this.version = version;
         this.negoTokens = negoTokens;

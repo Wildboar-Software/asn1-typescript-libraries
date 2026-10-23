@@ -678,11 +678,11 @@ class MMR1RtRecord {
         localSequenceNumber: OPTIONAL<INTEGER>,
         recordExtensions: OPTIONAL<ManagementExtension[]>,
         messageReference: OCTET_STRING,
-        vaspID: OPTIONAL<OCTET_STRING>,
-        vasID: OPTIONAL<OCTET_STRING>,
-        sGSNPLMNIdentifier: OPTIONAL<OCTET_STRING>,
-        rATType: OPTIONAL<INTEGER>,
-        mSTimeZone: OPTIONAL<OCTET_STRING>
+        vaspID?: OPTIONAL<OCTET_STRING>,
+        vasID?: OPTIONAL<OCTET_STRING>,
+        sGSNPLMNIdentifier?: OPTIONAL<OCTET_STRING>,
+        rATType?: OPTIONAL<INTEGER>,
+        mSTimeZone?: OPTIONAL<OCTET_STRING>
     ) {
         this.recordType = recordType;
         this.recipientMmsRSAddress = recipientMmsRSAddress;

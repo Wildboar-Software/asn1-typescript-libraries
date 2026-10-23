@@ -45,7 +45,7 @@ class CompoundColourOffer {
          * @public
          * @readonly
          */
-        readonly colourCapability: OPTIONAL<IntegerOffer>,
+        readonly colourCapability?: OPTIONAL<IntegerOffer>,
         /**
          * @summary `colourValues`.
          * @description
@@ -53,7 +53,7 @@ class CompoundColourOffer {
          * @public
          * @readonly
          */
-        readonly colourValues: OPTIONAL<ColourAssignment[]>
+        readonly colourValues?: OPTIONAL<ColourAssignment[]>
     ) {}
 
     /**

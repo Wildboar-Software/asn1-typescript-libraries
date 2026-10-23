@@ -92,8 +92,8 @@ class DeleteResultSetRequest {
     constructor (
         referenceId: OPTIONAL<ReferenceId>,
         deleteFunction: DeleteResultSetRequest_deleteFunction,
-        resultSetList: OPTIONAL<ResultSetId[]>,
-        otherInfo: OPTIONAL<OtherInformation>
+        resultSetList?: OPTIONAL<ResultSetId[]>,
+        otherInfo?: OPTIONAL<OtherInformation>
     ) {
         this.referenceId = referenceId;
         this.deleteFunction = deleteFunction;

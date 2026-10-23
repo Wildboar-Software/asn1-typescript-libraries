@@ -93,7 +93,7 @@ class VoiceUnitEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly bookmarkReached: OPTIONAL<BookmarkReached>,
+        readonly bookmarkReached?: OPTIONAL<BookmarkReached>,
         /**
          * @summary `completed`.
          * @public
@@ -102,7 +102,7 @@ class VoiceUnitEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly completed: OPTIONAL<Completed>,
+        readonly completed?: OPTIONAL<Completed>,
         /**
          * @summary `dtmfDetected`.
          * @public
@@ -111,7 +111,7 @@ class VoiceUnitEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly dtmfDetected: OPTIONAL<DtmfDetected>,
+        readonly dtmfDetected?: OPTIONAL<DtmfDetected>,
         /**
          * @summary `emptied`.
          * @public
@@ -120,7 +120,7 @@ class VoiceUnitEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly emptied: OPTIONAL<Emptied>,
+        readonly emptied?: OPTIONAL<Emptied>,
         /**
          * @summary `interruptionDetected`.
          * @public
@@ -129,7 +129,7 @@ class VoiceUnitEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly interruptionDetected: OPTIONAL<InterruptionDetected>,
+        readonly interruptionDetected?: OPTIONAL<InterruptionDetected>,
         /**
          * @summary `notRecognized`.
          * @public
@@ -138,7 +138,7 @@ class VoiceUnitEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly notRecognized: OPTIONAL<NotRecognized>,
+        readonly notRecognized?: OPTIONAL<NotRecognized>,
         /**
          * @summary `play`.
          * @public
@@ -147,7 +147,7 @@ class VoiceUnitEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly play: OPTIONAL<Play>,
+        readonly play?: OPTIONAL<Play>,
         /**
          * @summary `record`.
          * @public
@@ -156,7 +156,7 @@ class VoiceUnitEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly record: OPTIONAL<Record>,
+        readonly record?: OPTIONAL<Record>,
         /**
          * @summary `recognized`.
          * @public
@@ -165,7 +165,7 @@ class VoiceUnitEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly recognized: OPTIONAL<Recognized>,
+        readonly recognized?: OPTIONAL<Recognized>,
         /**
          * @summary `review`.
          * @public
@@ -174,7 +174,7 @@ class VoiceUnitEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly review: OPTIONAL<ReviewEvent>,
+        readonly review?: OPTIONAL<ReviewEvent>,
         /**
          * @summary `started`.
          * @public
@@ -183,7 +183,7 @@ class VoiceUnitEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly started: OPTIONAL<Started>,
+        readonly started?: OPTIONAL<Started>,
         /**
          * @summary `silenceTimeoutExpired`.
          * @public
@@ -192,7 +192,7 @@ class VoiceUnitEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly silenceTimeoutExpired: OPTIONAL<SilenceTimeoutExpired>,
+        readonly silenceTimeoutExpired?: OPTIONAL<SilenceTimeoutExpired>,
         /**
          * @summary `speechDetected`.
          * @public
@@ -201,7 +201,7 @@ class VoiceUnitEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly speechDetected: OPTIONAL<SpeechDetected>,
+        readonly speechDetected?: OPTIONAL<SpeechDetected>,
         /**
          * @summary `stop`.
          * @public
@@ -210,7 +210,7 @@ class VoiceUnitEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly stop: OPTIONAL<StopEvent>,
+        readonly stop?: OPTIONAL<StopEvent>,
         /**
          * @summary `suspendPlay`.
          * @public
@@ -219,7 +219,7 @@ class VoiceUnitEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly suspendPlay: OPTIONAL<SuspendPlay>,
+        readonly suspendPlay?: OPTIONAL<SuspendPlay>,
         /**
          * @summary `suspendRecord`.
          * @public
@@ -228,7 +228,7 @@ class VoiceUnitEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly suspendRecord: OPTIONAL<SuspendRecord>,
+        readonly suspendRecord?: OPTIONAL<SuspendRecord>,
         /**
          * @summary `voiceAttribChanged`.
          * @public
@@ -237,7 +237,7 @@ class VoiceUnitEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly voiceAttribChanged: OPTIONAL<VoiceAttribChanged>,
+        readonly voiceAttribChanged?: OPTIONAL<VoiceAttribChanged>,
         /**
          * @summary `voiceErrorOccured`.
          * @public
@@ -246,7 +246,7 @@ class VoiceUnitEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly voiceErrorOccured: OPTIONAL<VoiceErrorOccured>
+        readonly voiceErrorOccured?: OPTIONAL<VoiceErrorOccured>
     ) {}
 
     /**

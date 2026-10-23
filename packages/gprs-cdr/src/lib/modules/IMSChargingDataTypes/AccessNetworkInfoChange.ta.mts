@@ -105,10 +105,10 @@ class AccessNetworkInfoChange {
     readonly cellularNetworkInformation: OPTIONAL<OCTET_STRING>;
 
     constructor (
-        accessNetworkInformation: OPTIONAL<OCTET_STRING>,
-        additionalAccessNetworkInformation: OPTIONAL<OCTET_STRING>,
-        accessChangeTime: OPTIONAL<OCTET_STRING>,
-        cellularNetworkInformation: OPTIONAL<OCTET_STRING>
+        accessNetworkInformation?: OPTIONAL<OCTET_STRING>,
+        additionalAccessNetworkInformation?: OPTIONAL<OCTET_STRING>,
+        accessChangeTime?: OPTIONAL<OCTET_STRING>,
+        cellularNetworkInformation?: OPTIONAL<OCTET_STRING>
     ) {
         this.accessNetworkInformation = accessNetworkInformation;
         this.additionalAccessNetworkInformation = additionalAccessNetworkInformation;

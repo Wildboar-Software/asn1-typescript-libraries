@@ -107,8 +107,8 @@ class AttributeSetInfo {
         commonInfo: OPTIONAL<CommonInfo>,
         attributeSet: AttributeSetId,
         name: InternationalString,
-        attributes: OPTIONAL<AttributeType[]>,
-        description: OPTIONAL<HumanString>
+        attributes?: OPTIONAL<AttributeType[]>,
+        description?: OPTIONAL<HumanString>
     ) {
         this.commonInfo = commonInfo;
         this.attributeSet = attributeSet;

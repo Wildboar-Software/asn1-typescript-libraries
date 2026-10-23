@@ -99,7 +99,7 @@ class LocationType {
 
     constructor (
         locationEstimateType: LocationType_locationEstimateType,
-        deferredLocationEventType: OPTIONAL<LocationType_deferredLocationEventType>,
+        deferredLocationEventType?: OPTIONAL<LocationType_deferredLocationEventType>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.locationEstimateType = locationEstimateType;

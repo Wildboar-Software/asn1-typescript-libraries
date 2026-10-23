@@ -83,7 +83,7 @@ class Provider {
          * @public
          * @readonly
          */
-        readonly contactInformation: OPTIONAL<VisibleString>
+        readonly contactInformation?: OPTIONAL<VisibleString>
     ) {}
 
     /**

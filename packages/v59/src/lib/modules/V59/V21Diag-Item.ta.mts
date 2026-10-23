@@ -68,7 +68,7 @@ class V21Diag_Item {
          * @public
          * @readonly
          */
-        readonly rxLevelEstimate: OPTIONAL<V59String>
+        readonly rxLevelEstimate?: OPTIONAL<V59String>
     ) {}
 
     /**

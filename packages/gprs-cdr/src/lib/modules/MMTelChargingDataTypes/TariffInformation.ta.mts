@@ -57,7 +57,7 @@ class TariffInformation {
     constructor (
         currencyCode: INTEGER,
         scaleFactor: REAL,
-        rateElements: OPTIONAL<RateElements[]>
+        rateElements?: OPTIONAL<RateElements[]>
     ) {
         this.currencyCode = currencyCode;
         this.scaleFactor = scaleFactor;

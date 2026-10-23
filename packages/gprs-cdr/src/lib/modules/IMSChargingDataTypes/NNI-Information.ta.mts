@@ -100,10 +100,10 @@ class NNI_Information {
     readonly neighbourNodeAddress: OPTIONAL<ServedPartyIPAddress>;
 
     constructor (
-        sessionDirection: OPTIONAL<SessionDirection>,
-        nNIType: OPTIONAL<NNIType>,
-        relationshipMode: OPTIONAL<RelationshipMode>,
-        neighbourNodeAddress: OPTIONAL<ServedPartyIPAddress>
+        sessionDirection?: OPTIONAL<SessionDirection>,
+        nNIType?: OPTIONAL<NNIType>,
+        relationshipMode?: OPTIONAL<RelationshipMode>,
+        neighbourNodeAddress?: OPTIONAL<ServedPartyIPAddress>
     ) {
         this.sessionDirection = sessionDirection;
         this.nNIType = nNIType;

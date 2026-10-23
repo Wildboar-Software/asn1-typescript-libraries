@@ -238,7 +238,7 @@ class AMFPositioningInfoTransfer {
         nRPPaMessage: OPTIONAL<OCTET_STRING>,
         lPPMessage: OPTIONAL<OCTET_STRING>,
         lcsCorrelationId: UTF8String,
-        additionalUserIdentifiers: OPTIONAL<UserIdentifiers>,
+        additionalUserIdentifiers?: OPTIONAL<UserIdentifiers>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.sUPI = sUPI;

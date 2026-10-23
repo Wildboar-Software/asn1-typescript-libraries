@@ -98,7 +98,7 @@ class InitialDPSMSArg {
          * @public
          * @readonly
          */
-        readonly destinationSubscriberNumber: OPTIONAL<CalledPartyBCDNumber>,
+        readonly destinationSubscriberNumber?: OPTIONAL<CalledPartyBCDNumber>,
         /**
          * @summary `callingPartyNumber`.
          * @description
@@ -109,7 +109,7 @@ class InitialDPSMSArg {
          * @public
          * @readonly
          */
-        readonly callingPartyNumber: OPTIONAL<SMS_AddressString>,
+        readonly callingPartyNumber?: OPTIONAL<SMS_AddressString>,
         /**
          * @summary `eventTypeSMS`.
          * @description
@@ -120,7 +120,7 @@ class InitialDPSMSArg {
          * @public
          * @readonly
          */
-        readonly eventTypeSMS: OPTIONAL<EventTypeSMS>,
+        readonly eventTypeSMS?: OPTIONAL<EventTypeSMS>,
         /**
          * @summary `iMSI`.
          * @description
@@ -131,7 +131,7 @@ class InitialDPSMSArg {
          * @public
          * @readonly
          */
-        readonly iMSI: OPTIONAL<IMSI>,
+        readonly iMSI?: OPTIONAL<IMSI>,
         /**
          * @summary `locationInformationMSC`.
          * @description
@@ -144,7 +144,7 @@ class InitialDPSMSArg {
          * @public
          * @readonly
          */
-        readonly locationInformationMSC: OPTIONAL<LocationInformation>,
+        readonly locationInformationMSC?: OPTIONAL<LocationInformation>,
         /**
          * @summary `locationInformationGPRS`.
          * @description
@@ -157,7 +157,7 @@ class InitialDPSMSArg {
          * @public
          * @readonly
          */
-        readonly locationInformationGPRS: OPTIONAL<LocationInformationGPRS>,
+        readonly locationInformationGPRS?: OPTIONAL<LocationInformationGPRS>,
         /**
          * @summary `sMSCAddress`.
          * @description
@@ -168,7 +168,7 @@ class InitialDPSMSArg {
          * @public
          * @readonly
          */
-        readonly sMSCAddress: OPTIONAL<ISDN_AddressString>,
+        readonly sMSCAddress?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `timeAndTimezone`.
          * @description
@@ -179,7 +179,7 @@ class InitialDPSMSArg {
          * @public
          * @readonly
          */
-        readonly timeAndTimezone: OPTIONAL<TimeAndTimezone>,
+        readonly timeAndTimezone?: OPTIONAL<TimeAndTimezone>,
         /**
          * @summary `tPShortMessageSpecificInfo`.
          * @description
@@ -190,7 +190,7 @@ class InitialDPSMSArg {
          * @public
          * @readonly
          */
-        readonly tPShortMessageSpecificInfo: OPTIONAL<TPShortMessageSpecificInfo>,
+        readonly tPShortMessageSpecificInfo?: OPTIONAL<TPShortMessageSpecificInfo>,
         /**
          * @summary `tPProtocolIdentifier`.
          * @description
@@ -201,7 +201,7 @@ class InitialDPSMSArg {
          * @public
          * @readonly
          */
-        readonly tPProtocolIdentifier: OPTIONAL<TPProtocolIdentifier>,
+        readonly tPProtocolIdentifier?: OPTIONAL<TPProtocolIdentifier>,
         /**
          * @summary `tPDataCodingScheme`.
          * @description
@@ -213,7 +213,7 @@ class InitialDPSMSArg {
          * @public
          * @readonly
          */
-        readonly tPDataCodingScheme: OPTIONAL<TPDataCodingScheme>,
+        readonly tPDataCodingScheme?: OPTIONAL<TPDataCodingScheme>,
         /**
          * @summary `tPValidityPeriod`.
          * @description
@@ -224,13 +224,13 @@ class InitialDPSMSArg {
          * @public
          * @readonly
          */
-        readonly tPValidityPeriod: OPTIONAL<TPValidityPeriod>,
+        readonly tPValidityPeriod?: OPTIONAL<TPValidityPeriod>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<Extensions>,
+        readonly extensions?: OPTIONAL<Extensions>,
         /**
          * @summary `smsReferenceNumber`.
          * @description
@@ -241,7 +241,7 @@ class InitialDPSMSArg {
          * @public
          * @readonly
          */
-        readonly smsReferenceNumber: OPTIONAL<CallReferenceNumber>,
+        readonly smsReferenceNumber?: OPTIONAL<CallReferenceNumber>,
         /**
          * @summary `mscAddress`.
          * @description
@@ -253,7 +253,7 @@ class InitialDPSMSArg {
          * @public
          * @readonly
          */
-        readonly mscAddress: OPTIONAL<ISDN_AddressString>,
+        readonly mscAddress?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `sgsn_Number`.
          * @description
@@ -265,7 +265,7 @@ class InitialDPSMSArg {
          * @public
          * @readonly
          */
-        readonly sgsn_Number: OPTIONAL<ISDN_AddressString>,
+        readonly sgsn_Number?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `ms_Classmark2`.
          * @description
@@ -276,7 +276,7 @@ class InitialDPSMSArg {
          * @public
          * @readonly
          */
-        readonly ms_Classmark2: OPTIONAL<MS_Classmark2>,
+        readonly ms_Classmark2?: OPTIONAL<MS_Classmark2>,
         /**
          * @summary `gPRSMSClass`.
          * @description
@@ -288,7 +288,7 @@ class InitialDPSMSArg {
          * @public
          * @readonly
          */
-        readonly gPRSMSClass: OPTIONAL<GPRSMSClass>,
+        readonly gPRSMSClass?: OPTIONAL<GPRSMSClass>,
         /**
          * @summary `iMEI`.
          * @description
@@ -300,7 +300,7 @@ class InitialDPSMSArg {
          * @public
          * @readonly
          */
-        readonly iMEI: OPTIONAL<IMEI>,
+        readonly iMEI?: OPTIONAL<IMEI>,
         /**
          * @summary `calledPartyNumber`.
          * @description
@@ -311,7 +311,7 @@ class InitialDPSMSArg {
          * @public
          * @readonly
          */
-        readonly calledPartyNumber: OPTIONAL<ISDN_AddressString>,
+        readonly calledPartyNumber?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary Extensions that are not recognized.
          * @public

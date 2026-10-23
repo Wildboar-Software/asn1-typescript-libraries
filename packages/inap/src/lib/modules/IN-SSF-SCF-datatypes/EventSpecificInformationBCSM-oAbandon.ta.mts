@@ -41,7 +41,7 @@ class EventSpecificInformationBCSM_oAbandon {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        abandonCause: OPTIONAL<Cause>,
+        abandonCause?: OPTIONAL<Cause>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.abandonCause = abandonCause;

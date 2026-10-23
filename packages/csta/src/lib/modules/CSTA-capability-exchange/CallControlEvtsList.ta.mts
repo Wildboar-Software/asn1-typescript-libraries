@@ -93,7 +93,7 @@ class CallControlEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly bridged: OPTIONAL<Bridged>,
+        readonly bridged?: OPTIONAL<Bridged>,
         /**
          * @summary `callCleared`.
          * @public
@@ -102,7 +102,7 @@ class CallControlEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly callCleared: OPTIONAL<CallCleared>,
+        readonly callCleared?: OPTIONAL<CallCleared>,
         /**
          * @summary `conferenced`.
          * @public
@@ -111,7 +111,7 @@ class CallControlEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly conferenced: OPTIONAL<Conferenced>,
+        readonly conferenced?: OPTIONAL<Conferenced>,
         /**
          * @summary `connectionCleared`.
          * @public
@@ -120,7 +120,7 @@ class CallControlEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly connectionCleared: OPTIONAL<ConnectionCleared>,
+        readonly connectionCleared?: OPTIONAL<ConnectionCleared>,
         /**
          * @summary `delivered`.
          * @public
@@ -129,7 +129,7 @@ class CallControlEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly delivered: OPTIONAL<Delivered>,
+        readonly delivered?: OPTIONAL<Delivered>,
         /**
          * @summary `digitsDialed`.
          * @public
@@ -138,7 +138,7 @@ class CallControlEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly digitsDialed: OPTIONAL<DigitsDialed>,
+        readonly digitsDialed?: OPTIONAL<DigitsDialed>,
         /**
          * @summary `diverted`.
          * @public
@@ -147,7 +147,7 @@ class CallControlEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly diverted: OPTIONAL<Diverted>,
+        readonly diverted?: OPTIONAL<Diverted>,
         /**
          * @summary `established`.
          * @public
@@ -156,7 +156,7 @@ class CallControlEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly established: OPTIONAL<Established>,
+        readonly established?: OPTIONAL<Established>,
         /**
          * @summary `failed`.
          * @public
@@ -165,7 +165,7 @@ class CallControlEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly failed: OPTIONAL<Failed>,
+        readonly failed?: OPTIONAL<Failed>,
         /**
          * @summary `held`.
          * @public
@@ -174,7 +174,7 @@ class CallControlEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly held: OPTIONAL<Held>,
+        readonly held?: OPTIONAL<Held>,
         /**
          * @summary `netwCapsChanged`.
          * @public
@@ -183,7 +183,7 @@ class CallControlEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly netwCapsChanged: OPTIONAL<NetwCapsChanged>,
+        readonly netwCapsChanged?: OPTIONAL<NetwCapsChanged>,
         /**
          * @summary `netwReached`.
          * @public
@@ -192,7 +192,7 @@ class CallControlEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly netwReached: OPTIONAL<NetwReached>,
+        readonly netwReached?: OPTIONAL<NetwReached>,
         /**
          * @summary `offered`.
          * @public
@@ -201,7 +201,7 @@ class CallControlEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly offered: OPTIONAL<Offered>,
+        readonly offered?: OPTIONAL<Offered>,
         /**
          * @summary `originated`.
          * @public
@@ -210,7 +210,7 @@ class CallControlEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly originated: OPTIONAL<Originated>,
+        readonly originated?: OPTIONAL<Originated>,
         /**
          * @summary `queued`.
          * @public
@@ -219,7 +219,7 @@ class CallControlEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly queued: OPTIONAL<Queued>,
+        readonly queued?: OPTIONAL<Queued>,
         /**
          * @summary `retrieved`.
          * @public
@@ -228,7 +228,7 @@ class CallControlEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly retrieved: OPTIONAL<Retrieved>,
+        readonly retrieved?: OPTIONAL<Retrieved>,
         /**
          * @summary `serviceInitiated`.
          * @public
@@ -237,7 +237,7 @@ class CallControlEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly serviceInitiated: OPTIONAL<ServiceInitiated>,
+        readonly serviceInitiated?: OPTIONAL<ServiceInitiated>,
         /**
          * @summary `transferred`.
          * @public
@@ -246,7 +246,7 @@ class CallControlEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly transferred: OPTIONAL<Transferred>
+        readonly transferred?: OPTIONAL<Transferred>
     ) {}
 
     /**

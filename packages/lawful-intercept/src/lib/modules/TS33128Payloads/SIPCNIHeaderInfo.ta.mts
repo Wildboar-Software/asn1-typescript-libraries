@@ -90,8 +90,8 @@ class SIPCNIHeaderInfo {
 
     constructor (
         cellularNetworkInformation: SIPCellularNetworkInformation,
-        cellularAccessInfo: OPTIONAL<SIPCellularAccessInfo[]>,
-        cNILocation: OPTIONAL<SIPLocationInfo[]>,
+        cellularAccessInfo?: OPTIONAL<SIPCellularAccessInfo[]>,
+        cNILocation?: OPTIONAL<SIPLocationInfo[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.cellularNetworkInformation = cellularNetworkInformation;

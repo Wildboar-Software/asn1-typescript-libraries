@@ -41,7 +41,7 @@ class EventSpecificInformationBCUSM_componentReceivedSpecificInfo {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        componentReceivedInfo: OPTIONAL<OCTET_STRING>,
+        componentReceivedInfo?: OPTIONAL<OCTET_STRING>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.componentReceivedInfo = componentReceivedInfo;

@@ -54,7 +54,7 @@ class ParameterValues_defaultCOinitialValue {
          * @public
          * @readonly
          */
-        readonly mask: OPTIONAL<BIT_STRING>
+        readonly mask?: OPTIONAL<BIT_STRING>
     ) {}
 
     /**

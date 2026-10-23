@@ -52,7 +52,7 @@ class LocationInformationEPS {
          * @public
          * @readonly
          */
-        readonly e_utranCellGlobalIdentity: OPTIONAL<E_UTRAN_CGI>,
+        readonly e_utranCellGlobalIdentity?: OPTIONAL<E_UTRAN_CGI>,
         /**
          * @summary `trackingAreaIdentity`.
          * @description
@@ -62,13 +62,13 @@ class LocationInformationEPS {
          * @public
          * @readonly
          */
-        readonly trackingAreaIdentity: OPTIONAL<TA_Id>,
+        readonly trackingAreaIdentity?: OPTIONAL<TA_Id>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `geographicalInformation`.
          * @description
@@ -79,7 +79,7 @@ class LocationInformationEPS {
          * @public
          * @readonly
          */
-        readonly geographicalInformation: OPTIONAL<GeographicalInformation>,
+        readonly geographicalInformation?: OPTIONAL<GeographicalInformation>,
         /**
          * @summary `geodeticInformation`.
          * @description
@@ -90,7 +90,7 @@ class LocationInformationEPS {
          * @public
          * @readonly
          */
-        readonly geodeticInformation: OPTIONAL<GeodeticInformation>,
+        readonly geodeticInformation?: OPTIONAL<GeodeticInformation>,
         /**
          * @summary `currentLocationRetrieved`.
          * @description
@@ -101,7 +101,7 @@ class LocationInformationEPS {
          * @public
          * @readonly
          */
-        readonly currentLocationRetrieved: OPTIONAL<NULL>,
+        readonly currentLocationRetrieved?: OPTIONAL<NULL>,
         /**
          * @summary `ageOfLocationInformation`.
          * @description
@@ -111,7 +111,7 @@ class LocationInformationEPS {
          * @public
          * @readonly
          */
-        readonly ageOfLocationInformation: OPTIONAL<AgeOfLocationInformation>,
+        readonly ageOfLocationInformation?: OPTIONAL<AgeOfLocationInformation>,
         /**
          * @summary `mme_Name`.
          * @description
@@ -122,7 +122,7 @@ class LocationInformationEPS {
          * @public
          * @readonly
          */
-        readonly mme_Name: OPTIONAL<DiameterIdentity>,
+        readonly mme_Name?: OPTIONAL<DiameterIdentity>,
         /**
          * @summary Extensions that are not recognized.
          * @public

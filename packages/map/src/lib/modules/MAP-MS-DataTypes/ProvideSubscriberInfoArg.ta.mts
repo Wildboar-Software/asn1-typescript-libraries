@@ -84,7 +84,7 @@ class ProvideSubscriberInfoArg {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `callPriority`.
          * @description
@@ -98,7 +98,7 @@ class ProvideSubscriberInfoArg {
          * @public
          * @readonly
          */
-        readonly callPriority: OPTIONAL<EMLPP_Priority>,
+        readonly callPriority?: OPTIONAL<EMLPP_Priority>,
         /**
          * @summary Extensions that are not recognized.
          * @public

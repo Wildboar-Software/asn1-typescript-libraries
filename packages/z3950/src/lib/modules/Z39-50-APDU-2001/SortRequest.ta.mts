@@ -107,7 +107,7 @@ class SortRequest {
         inputResultSetNames: InternationalString[],
         sortedResultSetName: InternationalString,
         sortSequence: SortKeySpec[],
-        otherInfo: OPTIONAL<OtherInformation>
+        otherInfo?: OPTIONAL<OtherInformation>
     ) {
         this.referenceId = referenceId;
         this.inputResultSetNames = inputResultSetNames;

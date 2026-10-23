@@ -50,7 +50,7 @@ class EimIdInfo {
          * @public
          * @readonly
          */
-        readonly eimIdType: OPTIONAL<EimIdType>
+        readonly eimIdType?: OPTIONAL<EimIdType>
     ) {
         if (this.eimId.length < 1 || this.eimId.length > 128) {
             throw new ASN1SizeError("EimIdInfo.eimId violates SIZE constraint");

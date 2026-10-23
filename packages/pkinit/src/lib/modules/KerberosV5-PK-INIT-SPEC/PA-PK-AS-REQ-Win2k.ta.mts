@@ -56,21 +56,21 @@ class PA_PK_AS_REQ_Win2k {
          * @public
          * @readonly
          */
-        readonly trusted_certifiers: OPTIONAL<TrustedCA[]>,
+        readonly trusted_certifiers?: OPTIONAL<TrustedCA[]>,
         /**
          * Opaque octet string. RFC 4556 does not define what is
          * encoded here.
          * @public
          * @readonly
          */
-        readonly kdc_cert: OPTIONAL<OCTET_STRING>,
+        readonly kdc_cert?: OPTIONAL<OCTET_STRING>,
         /**
          * Opaque octet string. RFC 4556 does not define what is
          * encoded here.
          * @public
          * @readonly
          */
-        readonly encryption_cert: OPTIONAL<OCTET_STRING>,
+        readonly encryption_cert?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary Extensions that are not recognized.
          * @public

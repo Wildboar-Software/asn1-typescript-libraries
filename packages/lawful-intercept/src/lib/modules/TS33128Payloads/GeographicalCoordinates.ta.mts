@@ -87,7 +87,7 @@ class GeographicalCoordinates {
     constructor (
         latitude: UTF8String,
         longitude: UTF8String,
-        mapDatumInformation: OPTIONAL<OGCURN>,
+        mapDatumInformation?: OPTIONAL<OGCURN>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.latitude = latitude;

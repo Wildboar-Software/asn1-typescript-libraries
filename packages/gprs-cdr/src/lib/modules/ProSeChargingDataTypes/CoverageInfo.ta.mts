@@ -79,8 +79,8 @@ class CoverageInfo {
 
     constructor (
         coverageStatus: CoverageStatus,
-        timeStamp: OPTIONAL<OCTET_STRING>,
-        listOfLocation: OPTIONAL<LocationInfo[]>
+        timeStamp?: OPTIONAL<OCTET_STRING>,
+        listOfLocation?: OPTIONAL<LocationInfo[]>
     ) {
         this.coverageStatus = coverageStatus;
         this.timeStamp = timeStamp;

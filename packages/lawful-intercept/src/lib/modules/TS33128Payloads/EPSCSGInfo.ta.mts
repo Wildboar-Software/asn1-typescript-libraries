@@ -62,8 +62,8 @@ class EPSCSGInfo {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        cSGID: OPTIONAL<CSGID>,
-        cSGMembershipStatus: OPTIONAL<CSGMembershipIndication>,
+        cSGID?: OPTIONAL<CSGID>,
+        cSGMembershipStatus?: OPTIONAL<CSGMembershipIndication>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.cSGID = cSGID;

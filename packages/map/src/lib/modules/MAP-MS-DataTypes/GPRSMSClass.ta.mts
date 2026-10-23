@@ -52,7 +52,7 @@ class GPRSMSClass {
          * @public
          * @readonly
          */
-        readonly mSRadioAccessCapability: OPTIONAL<MSRadioAccessCapability>
+        readonly mSRadioAccessCapability?: OPTIONAL<MSRadioAccessCapability>
     ) {}
 
     /**

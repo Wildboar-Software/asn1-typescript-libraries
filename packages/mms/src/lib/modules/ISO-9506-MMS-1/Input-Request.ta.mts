@@ -63,7 +63,7 @@ class Input_Request {
          * @public
          * @readonly
          */
-        readonly echo: OPTIONAL<BOOLEAN>,
+        readonly echo?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `listOfPromptData`.
          * @description
@@ -75,7 +75,7 @@ class Input_Request {
          * @public
          * @readonly
          */
-        readonly listOfPromptData: OPTIONAL<MMSString[]>,
+        readonly listOfPromptData?: OPTIONAL<MMSString[]>,
         /**
          * @summary `inputTimeOut`.
          * @description
@@ -87,7 +87,7 @@ class Input_Request {
          * @public
          * @readonly
          */
-        readonly inputTimeOut: OPTIONAL<Unsigned32>
+        readonly inputTimeOut?: OPTIONAL<Unsigned32>
     ) {}
 
     /**

@@ -52,7 +52,7 @@ class ChargingEvent {
          * @public
          * @readonly
          */
-        readonly legID: OPTIONAL<LegID>
+        readonly legID?: OPTIONAL<LegID>
     ) {}
 
     /**

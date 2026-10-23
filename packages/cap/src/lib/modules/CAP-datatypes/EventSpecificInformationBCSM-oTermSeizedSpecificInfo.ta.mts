@@ -34,7 +34,7 @@ export class EventSpecificInformationBCSM_oTermSeizedSpecificInfo {
          * @public
          * @readonly
          */
-        readonly locationInformation: OPTIONAL<LocationInformation>,
+        readonly locationInformation?: OPTIONAL<LocationInformation>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}
 

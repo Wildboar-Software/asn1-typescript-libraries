@@ -69,8 +69,8 @@ class PlatformConfiguration_v3 {
     readonly platformProperties: OPTIONAL<Property[]>;
 
     constructor (
-        platformComponents: OPTIONAL<ComponentIdentifier[]>,
-        platformProperties: OPTIONAL<Property[]>
+        platformComponents?: OPTIONAL<ComponentIdentifier[]>,
+        platformProperties?: OPTIONAL<Property[]>
     ) {
         this.platformComponents = platformComponents;
         this.platformProperties = platformProperties;

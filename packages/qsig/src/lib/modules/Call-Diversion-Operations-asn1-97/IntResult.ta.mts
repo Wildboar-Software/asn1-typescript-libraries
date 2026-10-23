@@ -110,8 +110,8 @@ class IntResult {
         basicService: BasicService,
         procedure: Procedure,
         divertedToAddress: Address,
-        remoteEnabled: OPTIONAL<BOOLEAN>,
-        extension: OPTIONAL<IntResult_extension>
+        remoteEnabled?: OPTIONAL<BOOLEAN>,
+        extension?: OPTIONAL<IntResult_extension>
     ) {
         this.servedUserNr = servedUserNr;
         this.basicService = basicService;

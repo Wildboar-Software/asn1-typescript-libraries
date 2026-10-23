@@ -45,7 +45,7 @@ export class CAMEL_SCIGPRSBillingChargingCharacteristics {
          * @public
          * @readonly
          */
-        readonly pDPID: OPTIONAL<PDPID>,
+        readonly pDPID?: OPTIONAL<PDPID>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}
 

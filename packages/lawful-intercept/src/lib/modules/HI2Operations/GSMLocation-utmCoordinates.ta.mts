@@ -126,8 +126,8 @@ class GSMLocation_utmCoordinates {
     constructor (
         utm_East: PrintableString,
         utm_North: PrintableString,
-        mapDatum: OPTIONAL<MapDatum>,
-        azimuth: OPTIONAL<INTEGER>,
+        mapDatum?: OPTIONAL<MapDatum>,
+        azimuth?: OPTIONAL<INTEGER>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.utm_East = utm_East;

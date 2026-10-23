@@ -71,8 +71,8 @@ class UEAreaIndication {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        country: OPTIONAL<UTF8String>,
-        internationalAreaIndication: OPTIONAL<BOOLEAN>,
+        country?: OPTIONAL<UTF8String>,
+        internationalAreaIndication?: OPTIONAL<BOOLEAN>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.country = country;

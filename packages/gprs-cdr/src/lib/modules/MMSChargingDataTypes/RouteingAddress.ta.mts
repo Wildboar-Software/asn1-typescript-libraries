@@ -80,8 +80,8 @@ class RouteingAddress {
 
     constructor (
         eMail_address: OCTET_STRING,
-        mSISDN: OPTIONAL<OCTET_STRING>,
-        shortCode: OPTIONAL<OCTET_STRING>
+        mSISDN?: OPTIONAL<OCTET_STRING>,
+        shortCode?: OPTIONAL<OCTET_STRING>
     ) {
         this.eMail_address = eMail_address;
         this.mSISDN = mSISDN;

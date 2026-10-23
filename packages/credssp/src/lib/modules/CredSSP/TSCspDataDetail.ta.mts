@@ -89,10 +89,10 @@ class TSCspDataDetail {
 
     constructor (
         keySpec: INTEGER,
-        cardName: OPTIONAL<OCTET_STRING>,
-        readerName: OPTIONAL<OCTET_STRING>,
-        containerName: OPTIONAL<OCTET_STRING>,
-        cspName: OPTIONAL<OCTET_STRING>
+        cardName?: OPTIONAL<OCTET_STRING>,
+        readerName?: OPTIONAL<OCTET_STRING>,
+        containerName?: OPTIONAL<OCTET_STRING>,
+        cspName?: OPTIONAL<OCTET_STRING>
     ) {
         this.keySpec = keySpec;
         this.cardName = cardName;

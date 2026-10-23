@@ -79,7 +79,7 @@ class DfrBindArgument {
          * @public
          * @readonly
          */
-        readonly retrieve_restrictions: OPTIONAL<Restrictions>,
+        readonly retrieve_restrictions?: OPTIONAL<Restrictions>,
         /**
          * @summary `dfr_configuration_request`.
          * @description
@@ -89,7 +89,7 @@ class DfrBindArgument {
          * @public
          * @readonly
          */
-        readonly dfr_configuration_request: OPTIONAL<BOOLEAN>,
+        readonly dfr_configuration_request?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `bind_security`.
          * @description
@@ -99,13 +99,13 @@ class DfrBindArgument {
          * @public
          * @readonly
          */
-        readonly bind_security: OPTIONAL<BindSecurity>,
+        readonly bind_security?: OPTIONAL<BindSecurity>,
         /**
          * @summary `priority`.
          * @public
          * @readonly
          */
-        readonly priority: OPTIONAL<Priority>,
+        readonly priority?: OPTIONAL<Priority>,
         /**
          * @summary `dor_for_produce_operations`.
          * @description
@@ -115,7 +115,7 @@ class DfrBindArgument {
          * @public
          * @readonly
          */
-        readonly dor_for_produce_operations: OPTIONAL<BOOLEAN>,
+        readonly dor_for_produce_operations?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `dor_for_consume_operations`.
          * @description
@@ -125,7 +125,7 @@ class DfrBindArgument {
          * @public
          * @readonly
          */
-        readonly dor_for_consume_operations: OPTIONAL<BOOLEAN>
+        readonly dor_for_consume_operations?: OPTIONAL<BOOLEAN>
     ) {}
 
     /**

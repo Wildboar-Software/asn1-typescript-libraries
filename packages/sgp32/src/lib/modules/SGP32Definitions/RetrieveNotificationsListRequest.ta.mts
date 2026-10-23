@@ -45,7 +45,7 @@ class RetrieveNotificationsListRequest {
          * @public
          * @readonly
          */
-        readonly searchCriteria: OPTIONAL<RetrieveNotificationsListRequest_searchCriteria>
+        readonly searchCriteria?: OPTIONAL<RetrieveNotificationsListRequest_searchCriteria>
     ) {}
 
     /**

@@ -45,8 +45,8 @@ export class BCSMEvent {
          * @public
          * @readonly
          */
-        readonly legID: OPTIONAL<LegID>,
-        readonly dpSpecificCriteria: OPTIONAL<DpSpecificCriteria>,
+        readonly legID?: OPTIONAL<LegID>,
+        readonly dpSpecificCriteria?: OPTIONAL<DpSpecificCriteria>,
         /**
          * @summary `automaticRearm`.
          * @description
@@ -57,7 +57,7 @@ export class BCSMEvent {
          * @public
          * @readonly
          */
-        readonly automaticRearm: OPTIONAL<NULL>,
+        readonly automaticRearm?: OPTIONAL<NULL>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}
 

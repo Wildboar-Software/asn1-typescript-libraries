@@ -97,7 +97,7 @@ class AnyTimeModificationArg {
          * @public
          * @readonly
          */
-        readonly modificationRequestFor_CF_Info: OPTIONAL<ModificationRequestFor_CF_Info>,
+        readonly modificationRequestFor_CF_Info?: OPTIONAL<ModificationRequestFor_CF_Info>,
         /**
          * @summary `modificationRequestFor_CB_Info`.
          * @description
@@ -108,7 +108,7 @@ class AnyTimeModificationArg {
          * @public
          * @readonly
          */
-        readonly modificationRequestFor_CB_Info: OPTIONAL<ModificationRequestFor_CB_Info>,
+        readonly modificationRequestFor_CB_Info?: OPTIONAL<ModificationRequestFor_CB_Info>,
         /**
          * @summary `modificationRequestFor_CSI`.
          * @description
@@ -119,13 +119,13 @@ class AnyTimeModificationArg {
          * @public
          * @readonly
          */
-        readonly modificationRequestFor_CSI: OPTIONAL<ModificationRequestFor_CSI>,
+        readonly modificationRequestFor_CSI?: OPTIONAL<ModificationRequestFor_CSI>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `longFTN_Supported`.
          * @description
@@ -136,7 +136,7 @@ class AnyTimeModificationArg {
          * @public
          * @readonly
          */
-        readonly longFTN_Supported: OPTIONAL<NULL>,
+        readonly longFTN_Supported?: OPTIONAL<NULL>,
         /**
          * @summary `modificationRequestFor_ODB_data`.
          * @description
@@ -147,7 +147,7 @@ class AnyTimeModificationArg {
          * @public
          * @readonly
          */
-        readonly modificationRequestFor_ODB_data: OPTIONAL<ModificationRequestFor_ODB_data>,
+        readonly modificationRequestFor_ODB_data?: OPTIONAL<ModificationRequestFor_ODB_data>,
         /**
          * @summary `modificationRequestFor_IP_SM_GW_Data`.
          * @description
@@ -158,7 +158,7 @@ class AnyTimeModificationArg {
          * @public
          * @readonly
          */
-        readonly modificationRequestFor_IP_SM_GW_Data: OPTIONAL<ModificationRequestFor_IP_SM_GW_Data>,
+        readonly modificationRequestFor_IP_SM_GW_Data?: OPTIONAL<ModificationRequestFor_IP_SM_GW_Data>,
         /**
          * @summary `activationRequestForUE_reachability`.
          * @description
@@ -169,7 +169,7 @@ class AnyTimeModificationArg {
          * @public
          * @readonly
          */
-        readonly activationRequestForUE_reachability: OPTIONAL<RequestedServingNode>,
+        readonly activationRequestForUE_reachability?: OPTIONAL<RequestedServingNode>,
         /**
          * @summary `modificationRequestFor_CSG`.
          * @description
@@ -180,37 +180,37 @@ class AnyTimeModificationArg {
          * @public
          * @readonly
          */
-        readonly modificationRequestFor_CSG: OPTIONAL<ModificationRequestFor_CSG>,
+        readonly modificationRequestFor_CSG?: OPTIONAL<ModificationRequestFor_CSG>,
         /**
          * @summary `modificationRequestFor_CW_Data`.
          * @public
          * @readonly
          */
-        readonly modificationRequestFor_CW_Data: OPTIONAL<ModificationRequestFor_CW_Info>,
+        readonly modificationRequestFor_CW_Data?: OPTIONAL<ModificationRequestFor_CW_Info>,
         /**
          * @summary `modificationRequestFor_CLIP_Data`.
          * @public
          * @readonly
          */
-        readonly modificationRequestFor_CLIP_Data: OPTIONAL<ModificationRequestFor_CLIP_Info>,
+        readonly modificationRequestFor_CLIP_Data?: OPTIONAL<ModificationRequestFor_CLIP_Info>,
         /**
          * @summary `modificationRequestFor_CLIR_Data`.
          * @public
          * @readonly
          */
-        readonly modificationRequestFor_CLIR_Data: OPTIONAL<ModificationRequestFor_CLIR_Info>,
+        readonly modificationRequestFor_CLIR_Data?: OPTIONAL<ModificationRequestFor_CLIR_Info>,
         /**
          * @summary `modificationRequestFor_HOLD_Data`.
          * @public
          * @readonly
          */
-        readonly modificationRequestFor_HOLD_Data: OPTIONAL<ModificationRequestFor_CH_Info>,
+        readonly modificationRequestFor_HOLD_Data?: OPTIONAL<ModificationRequestFor_CH_Info>,
         /**
          * @summary `modificationRequestFor_ECT_Data`.
          * @public
          * @readonly
          */
-        readonly modificationRequestFor_ECT_Data: OPTIONAL<ModificationRequestFor_ECT_Info>,
+        readonly modificationRequestFor_ECT_Data?: OPTIONAL<ModificationRequestFor_ECT_Info>,
         /**
          * @summary Extensions that are not recognized.
          * @public

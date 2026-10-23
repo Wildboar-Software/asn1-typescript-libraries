@@ -109,7 +109,7 @@ class DefineEventEnrollment_Request {
          * @public
          * @readonly
          */
-        readonly eventActionName: OPTIONAL<ObjectName>,
+        readonly eventActionName?: OPTIONAL<ObjectName>,
         /**
          * @summary `clientApplication`.
          * @description
@@ -121,7 +121,7 @@ class DefineEventEnrollment_Request {
          * @public
          * @readonly
          */
-        readonly clientApplication: OPTIONAL<ApplicationReference>
+        readonly clientApplication?: OPTIONAL<ApplicationReference>
     ) {}
 
     /**

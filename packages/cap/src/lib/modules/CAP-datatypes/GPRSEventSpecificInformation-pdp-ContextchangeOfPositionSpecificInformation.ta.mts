@@ -34,13 +34,13 @@ import { type GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../M
  */
 export class GPRSEventSpecificInformation_pdp_ContextchangeOfPositionSpecificInformation {
     constructor (
-        readonly accessPointName: OPTIONAL<AccessPointName>,
-        readonly chargingID: OPTIONAL<GPRSChargingID>,
-        readonly locationInformationGPRS: OPTIONAL<LocationInformationGPRS>,
-        readonly endUserAddress: OPTIONAL<EndUserAddress>,
-        readonly qualityOfService: OPTIONAL<QualityOfService>,
-        readonly timeAndTimeZone: OPTIONAL<TimeAndTimezone>,
-        readonly gGSNAddress: OPTIONAL<GSN_Address>,
+        readonly accessPointName?: OPTIONAL<AccessPointName>,
+        readonly chargingID?: OPTIONAL<GPRSChargingID>,
+        readonly locationInformationGPRS?: OPTIONAL<LocationInformationGPRS>,
+        readonly endUserAddress?: OPTIONAL<EndUserAddress>,
+        readonly qualityOfService?: OPTIONAL<QualityOfService>,
+        readonly timeAndTimeZone?: OPTIONAL<TimeAndTimezone>,
+        readonly gGSNAddress?: OPTIONAL<GSN_Address>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}
 

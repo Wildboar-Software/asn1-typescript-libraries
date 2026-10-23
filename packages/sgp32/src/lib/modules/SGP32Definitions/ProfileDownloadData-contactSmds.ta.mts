@@ -39,7 +39,7 @@ class ProfileDownloadData_contactSmds {
          * @public
          * @readonly
          */
-        readonly smdsAddress: OPTIONAL<UTF8String>
+        readonly smdsAddress?: OPTIONAL<UTF8String>
     ) {}
 
     /**

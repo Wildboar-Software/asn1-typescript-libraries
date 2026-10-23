@@ -98,12 +98,12 @@ class ProvideUserInformationArg_Type {
 
     constructor (
         constraints: CollectedInfo,
-        typeOfRequestedInfo: OPTIONAL<InfoType>,
-        numberOfAllowedRetries: OPTIONAL<INTEGER>,
-        actions: OPTIONAL<Actions>,
-        preferredLanguage: OPTIONAL<Language>,
-        securityParameters: OPTIONAL<SecurityParameters>,
-        extensions: OPTIONAL<ExtensionField[]>,
+        typeOfRequestedInfo?: OPTIONAL<InfoType>,
+        numberOfAllowedRetries?: OPTIONAL<INTEGER>,
+        actions?: OPTIONAL<Actions>,
+        preferredLanguage?: OPTIONAL<Language>,
+        securityParameters?: OPTIONAL<SecurityParameters>,
+        extensions?: OPTIONAL<ExtensionField[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.constraints = constraints;

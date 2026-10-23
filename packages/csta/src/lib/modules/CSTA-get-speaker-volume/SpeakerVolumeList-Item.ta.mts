@@ -55,7 +55,7 @@ class SpeakerVolumeList_Item {
          * @public
          * @readonly
          */
-        readonly speakerVolAbs: OPTIONAL<VolAbs>
+        readonly speakerVolAbs?: OPTIONAL<VolAbs>
     ) {}
 
     /**

@@ -71,7 +71,7 @@ class AgentReadyEvent {
          * @public
          * @readonly
          */
-        readonly agentID: OPTIONAL<AgentID>,
+        readonly agentID?: OPTIONAL<AgentID>,
         /**
          * @summary `acdGroup`.
          * @description
@@ -81,7 +81,7 @@ class AgentReadyEvent {
          * @public
          * @readonly
          */
-        readonly acdGroup: OPTIONAL<DeviceID>,
+        readonly acdGroup?: OPTIONAL<DeviceID>,
         /**
          * @summary `cause`.
          * @description
@@ -90,7 +90,7 @@ class AgentReadyEvent {
          * @public
          * @readonly
          */
-        readonly cause: OPTIONAL<EventCause>,
+        readonly cause?: OPTIONAL<EventCause>,
         /**
          * @summary `extensions`.
          * @description
@@ -100,7 +100,7 @@ class AgentReadyEvent {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

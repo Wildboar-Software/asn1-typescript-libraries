@@ -49,7 +49,7 @@ class LocationAreaAndCell {
     constructor (
         locationAreaCode: OCTET_STRING,
         cellId: OCTET_STRING,
-        mCC_MNC: OPTIONAL<OCTET_STRING>
+        mCC_MNC?: OPTIONAL<OCTET_STRING>
     ) {
         this.locationAreaCode = locationAreaCode;
         this.cellId = cellId;

@@ -169,7 +169,7 @@ class MMEIdentifierAssociation {
         mSISDN: OPTIONAL<MSISDN>,
         gUTI: GUTI,
         location: Location,
-        tAIList: OPTIONAL<TAIList>,
+        tAIList?: OPTIONAL<TAIList>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.iMSI = iMSI;

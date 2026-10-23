@@ -64,7 +64,7 @@ class DiagFormat_tooMany {
 
     constructor (
         tooManyWhat: DiagFormat_tooMany_tooManyWhat,
-        max: OPTIONAL<INTEGER>
+        max?: OPTIONAL<INTEGER>
     ) {
         this.tooManyWhat = tooManyWhat;
         this.max = max;

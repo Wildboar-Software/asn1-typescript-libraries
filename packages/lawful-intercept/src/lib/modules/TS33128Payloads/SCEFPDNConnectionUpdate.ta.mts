@@ -271,13 +271,13 @@ class SCEFPDNConnectionUpdate {
         mSISDN: OPTIONAL<MSISDN>,
         externalIdentifier: OPTIONAL<NAI>,
         initiator: Initiator,
-        rDSSourcePortNumber: OPTIONAL<RDSPortNumber>,
-        rDSDestinationPortNumber: OPTIONAL<RDSPortNumber>,
-        applicationID: OPTIONAL<ApplicationID>,
-        sCSASID: OPTIONAL<SCSASID>,
-        rDSAction: OPTIONAL<RDSAction>,
-        serializationFormat: OPTIONAL<SerializationFormat>,
-        ePSBearerID: OPTIONAL<EPSBearerID>,
+        rDSSourcePortNumber?: OPTIONAL<RDSPortNumber>,
+        rDSDestinationPortNumber?: OPTIONAL<RDSPortNumber>,
+        applicationID?: OPTIONAL<ApplicationID>,
+        sCSASID?: OPTIONAL<SCSASID>,
+        rDSAction?: OPTIONAL<RDSAction>,
+        serializationFormat?: OPTIONAL<SerializationFormat>,
+        ePSBearerID?: OPTIONAL<EPSBearerID>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.iMSI = iMSI;

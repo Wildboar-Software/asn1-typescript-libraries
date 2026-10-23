@@ -75,7 +75,7 @@ class DNDDeactivateArg {
     constructor (
         basicService: BasicService,
         servedUserNr: PartyNumber,
-        argumentExtension: OPTIONAL<DNDDeactivateArg_argumentExtension>
+        argumentExtension?: OPTIONAL<DNDDeactivateArg_argumentExtension>
     ) {
         this.basicService = basicService;
         this.servedUserNr = servedUserNr;

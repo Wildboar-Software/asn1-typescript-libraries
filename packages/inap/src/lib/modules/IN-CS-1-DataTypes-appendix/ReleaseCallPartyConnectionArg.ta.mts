@@ -52,8 +52,8 @@ class ReleaseCallPartyConnectionArg {
 
     constructor (
         legToBeReleased: LegID,
-        callID: OPTIONAL<CallID>,
-        releaseCause: OPTIONAL<Cause>
+        callID?: OPTIONAL<CallID>,
+        releaseCause?: OPTIONAL<Cause>
     ) {
         this.legToBeReleased = legToBeReleased;
         this.callID = callID;

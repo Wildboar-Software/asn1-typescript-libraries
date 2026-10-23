@@ -76,13 +76,13 @@ class CancelLocationArg {
          * @public
          * @readonly
          */
-        readonly cancellationType: OPTIONAL<CancellationType>,
+        readonly cancellationType?: OPTIONAL<CancellationType>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `typeOfUpdate`.
          * @description
@@ -93,7 +93,7 @@ class CancelLocationArg {
          * @public
          * @readonly
          */
-        readonly typeOfUpdate: OPTIONAL<TypeOfUpdate>,
+        readonly typeOfUpdate?: OPTIONAL<TypeOfUpdate>,
         /**
          * @summary `mtrf_SupportedAndAuthorized`.
          * @description
@@ -105,7 +105,7 @@ class CancelLocationArg {
          * @public
          * @readonly
          */
-        readonly mtrf_SupportedAndAuthorized: OPTIONAL<NULL>,
+        readonly mtrf_SupportedAndAuthorized?: OPTIONAL<NULL>,
         /**
          * @summary `mtrf_SupportedAndNotAuthorized`.
          * @description
@@ -117,7 +117,7 @@ class CancelLocationArg {
          * @public
          * @readonly
          */
-        readonly mtrf_SupportedAndNotAuthorized: OPTIONAL<NULL>,
+        readonly mtrf_SupportedAndNotAuthorized?: OPTIONAL<NULL>,
         /**
          * @summary `newMSC_Number`.
          * @description
@@ -129,7 +129,7 @@ class CancelLocationArg {
          * @public
          * @readonly
          */
-        readonly newMSC_Number: OPTIONAL<ISDN_AddressString>,
+        readonly newMSC_Number?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `newVLR_Number`.
          * @description
@@ -140,7 +140,7 @@ class CancelLocationArg {
          * @public
          * @readonly
          */
-        readonly newVLR_Number: OPTIONAL<ISDN_AddressString>,
+        readonly newVLR_Number?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `new_lmsi`.
          * @description
@@ -153,7 +153,7 @@ class CancelLocationArg {
          * @public
          * @readonly
          */
-        readonly new_lmsi: OPTIONAL<LMSI>,
+        readonly new_lmsi?: OPTIONAL<LMSI>,
         /**
          * @summary `reattach_Required`.
          * @description
@@ -166,7 +166,7 @@ class CancelLocationArg {
          * @public
          * @readonly
          */
-        readonly reattach_Required: OPTIONAL<NULL>,
+        readonly reattach_Required?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @public

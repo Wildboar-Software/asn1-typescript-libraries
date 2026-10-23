@@ -67,7 +67,7 @@ class DeleteArgument {
          * @public
          * @readonly
          */
-        readonly task_id: OPTIONAL<TaskId> /* REPLICATED_COMPONENT */,
+        readonly task_id?: OPTIONAL<TaskId> /* REPLICATED_COMPONENT */,
         /**
          * @summary `reservation`.
          * @description
@@ -76,7 +76,7 @@ class DeleteArgument {
          * @public
          * @readonly
          */
-        readonly reservation: OPTIONAL<Reservation> /* REPLICATED_COMPONENT */,
+        readonly reservation?: OPTIONAL<Reservation> /* REPLICATED_COMPONENT */,
         /**
          * @summary `error_handling`.
          * @description
@@ -86,7 +86,7 @@ class DeleteArgument {
          * @public
          * @readonly
          */
-        readonly error_handling: OPTIONAL<ErrorHandlingMode> /* REPLICATED_COMPONENT */,
+        readonly error_handling?: OPTIONAL<ErrorHandlingMode> /* REPLICATED_COMPONENT */,
         /**
          * @summary `priority`.
          * @description
@@ -97,7 +97,7 @@ class DeleteArgument {
          * @public
          * @readonly
          */
-        readonly priority: OPTIONAL<Priority> /* REPLICATED_COMPONENT */,
+        readonly priority?: OPTIONAL<Priority> /* REPLICATED_COMPONENT */,
         /**
          * @summary `privileges`.
          * @description
@@ -109,7 +109,7 @@ class DeleteArgument {
          * @public
          * @readonly
          */
-        readonly privileges: OPTIONAL<Privileges> /* REPLICATED_COMPONENT */
+        readonly privileges?: OPTIONAL<Privileges> /* REPLICATED_COMPONENT */
     ) {
         if (reservation !== undefined) {
             throw new _ConstructionError("DeleteArgument.reservation shall be absent");

@@ -79,8 +79,8 @@ class smsCommandError_ParameterType {
     constructor (
         failureCause: FailureCause,
         serviceCentreTimeStamp: ServiceCentreTimeStamp,
-        protocolIdentifier: OPTIONAL<ProtocolIdentifier>,
-        userData: OPTIONAL<UserData>
+        protocolIdentifier?: OPTIONAL<ProtocolIdentifier>,
+        userData?: OPTIONAL<UserData>
     ) {
         this.failureCause = failureCause;
         this.serviceCentreTimeStamp = serviceCentreTimeStamp;

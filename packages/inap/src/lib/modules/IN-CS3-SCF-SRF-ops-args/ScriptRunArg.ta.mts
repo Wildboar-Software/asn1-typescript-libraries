@@ -80,10 +80,10 @@ class ScriptRunArg {
 
     constructor (
         uIScriptId: Code,
-        uIScriptSpecificInfo: OPTIONAL<_Element>,
-        extensions: OPTIONAL<Extensions>,
-        disconnectFromIPForbidden: OPTIONAL<BOOLEAN>,
-        callSegmentID: OPTIONAL<CallSegmentID>,
+        uIScriptSpecificInfo?: OPTIONAL<_Element>,
+        extensions?: OPTIONAL<Extensions>,
+        disconnectFromIPForbidden?: OPTIONAL<BOOLEAN>,
+        callSegmentID?: OPTIONAL<CallSegmentID>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.uIScriptId = uIScriptId;

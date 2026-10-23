@@ -193,9 +193,9 @@ class ConferencePartyChange {
         accessingElementId: AccessingElementId,
         eventTime: EventTime,
         callId: CallId,
-        communicating: OPTIONAL<ConferencePartyChange_communicating_Item[]>,
-        removed: OPTIONAL<ConferencePartyChange_removed_Item[]>,
-        joined: OPTIONAL<ConferencePartyChange_joined_Item[]>,
+        communicating?: OPTIONAL<ConferencePartyChange_communicating_Item[]>,
+        removed?: OPTIONAL<ConferencePartyChange_removed_Item[]>,
+        joined?: OPTIONAL<ConferencePartyChange_joined_Item[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.caseId = caseId;

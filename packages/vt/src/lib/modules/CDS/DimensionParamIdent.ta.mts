@@ -49,7 +49,7 @@ class DimensionParamIdent {
          * @public
          * @readonly
          */
-        readonly bound: OPTIONAL<NULL>,
+        readonly bound?: OPTIONAL<NULL>,
         /**
          * @summary `addressing`.
          * @description
@@ -58,7 +58,7 @@ class DimensionParamIdent {
          * @public
          * @readonly
          */
-        readonly addressing: OPTIONAL<NULL>,
+        readonly addressing?: OPTIONAL<NULL>,
         /**
          * @summary `absolute`.
          * @description
@@ -67,7 +67,7 @@ class DimensionParamIdent {
          * @public
          * @readonly
          */
-        readonly absolute: OPTIONAL<NULL>,
+        readonly absolute?: OPTIONAL<NULL>,
         /**
          * @summary `window`.
          * @description
@@ -77,7 +77,7 @@ class DimensionParamIdent {
          * @public
          * @readonly
          */
-        readonly window: OPTIONAL<NULL>
+        readonly window?: OPTIONAL<NULL>
     ) {}
 
     /**

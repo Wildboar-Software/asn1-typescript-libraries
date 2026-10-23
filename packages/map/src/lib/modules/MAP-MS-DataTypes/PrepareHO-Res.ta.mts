@@ -63,7 +63,7 @@ class PrepareHO_Res {
          * @public
          * @readonly
          */
-        readonly handoverNumber: OPTIONAL<ISDN_AddressString>,
+        readonly handoverNumber?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `relocationNumberList`.
          * @description
@@ -75,7 +75,7 @@ class PrepareHO_Res {
          * @public
          * @readonly
          */
-        readonly relocationNumberList: OPTIONAL<RelocationNumberList>,
+        readonly relocationNumberList?: OPTIONAL<RelocationNumberList>,
         /**
          * @summary `an_APDU`.
          * @description
@@ -89,7 +89,7 @@ class PrepareHO_Res {
          * @public
          * @readonly
          */
-        readonly an_APDU: OPTIONAL<AccessNetworkSignalInfo>,
+        readonly an_APDU?: OPTIONAL<AccessNetworkSignalInfo>,
         /**
          * @summary `multicallBearerInfo`.
          * @description
@@ -102,7 +102,7 @@ class PrepareHO_Res {
          * @public
          * @readonly
          */
-        readonly multicallBearerInfo: OPTIONAL<MulticallBearerInfo>,
+        readonly multicallBearerInfo?: OPTIONAL<MulticallBearerInfo>,
         /**
          * @summary `multipleBearerNotSupported`.
          * @description
@@ -114,7 +114,7 @@ class PrepareHO_Res {
          * @public
          * @readonly
          */
-        readonly multipleBearerNotSupported: OPTIONAL<NULL>,
+        readonly multipleBearerNotSupported?: OPTIONAL<NULL>,
         /**
          * @summary `selectedUMTS_Algorithms`.
          * @description
@@ -127,7 +127,7 @@ class PrepareHO_Res {
          * @public
          * @readonly
          */
-        readonly selectedUMTS_Algorithms: OPTIONAL<SelectedUMTS_Algorithms>,
+        readonly selectedUMTS_Algorithms?: OPTIONAL<SelectedUMTS_Algorithms>,
         /**
          * @summary `chosenRadioResourceInformation`.
          * @description
@@ -139,13 +139,13 @@ class PrepareHO_Res {
          * @public
          * @readonly
          */
-        readonly chosenRadioResourceInformation: OPTIONAL<ChosenRadioResourceInformation>,
+        readonly chosenRadioResourceInformation?: OPTIONAL<ChosenRadioResourceInformation>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `iuSelectedCodec`.
          * @description
@@ -158,7 +158,7 @@ class PrepareHO_Res {
          * @public
          * @readonly
          */
-        readonly iuSelectedCodec: OPTIONAL<Codec>,
+        readonly iuSelectedCodec?: OPTIONAL<Codec>,
         /**
          * @summary `iuAvailableCodecsList`.
          * @description
@@ -171,7 +171,7 @@ class PrepareHO_Res {
          * @public
          * @readonly
          */
-        readonly iuAvailableCodecsList: OPTIONAL<CodecList>,
+        readonly iuAvailableCodecsList?: OPTIONAL<CodecList>,
         /**
          * @summary `aoipSelectedCodecTarget`.
          * @description
@@ -183,7 +183,7 @@ class PrepareHO_Res {
          * @public
          * @readonly
          */
-        readonly aoipSelectedCodecTarget: OPTIONAL<AoIPCodec>,
+        readonly aoipSelectedCodecTarget?: OPTIONAL<AoIPCodec>,
         /**
          * @summary `aoipAvailableCodecsListMap`.
          * @description
@@ -195,7 +195,7 @@ class PrepareHO_Res {
          * @public
          * @readonly
          */
-        readonly aoipAvailableCodecsListMap: OPTIONAL<AoIPCodecsList>,
+        readonly aoipAvailableCodecsListMap?: OPTIONAL<AoIPCodecsList>,
         /**
          * @summary Extensions that are not recognized.
          * @public

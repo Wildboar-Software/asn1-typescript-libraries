@@ -50,13 +50,13 @@ class SendAuthenticationInfoRes {
          * @public
          * @readonly
          */
-        readonly authenticationSetList: OPTIONAL<AuthenticationSetList>,
+        readonly authenticationSetList?: OPTIONAL<AuthenticationSetList>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `eps_AuthenticationSetList`.
          * @description
@@ -69,7 +69,7 @@ class SendAuthenticationInfoRes {
          * @public
          * @readonly
          */
-        readonly eps_AuthenticationSetList: OPTIONAL<EPS_AuthenticationSetList>,
+        readonly eps_AuthenticationSetList?: OPTIONAL<EPS_AuthenticationSetList>,
         /**
          * @summary `ueUsageType`.
          * @description
@@ -83,7 +83,7 @@ class SendAuthenticationInfoRes {
          * @public
          * @readonly
          */
-        readonly ueUsageType: OPTIONAL<UE_UsageType>,
+        readonly ueUsageType?: OPTIONAL<UE_UsageType>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -90,11 +90,11 @@ class CommonInfo {
     readonly otherInfo: OPTIONAL<OtherInformation>;
 
     constructor (
-        dateAdded: OPTIONAL<GeneralizedTime>,
-        dateChanged: OPTIONAL<GeneralizedTime>,
-        expiry: OPTIONAL<GeneralizedTime>,
-        humanString_Language: OPTIONAL<LanguageCode>,
-        otherInfo: OPTIONAL<OtherInformation>
+        dateAdded?: OPTIONAL<GeneralizedTime>,
+        dateChanged?: OPTIONAL<GeneralizedTime>,
+        expiry?: OPTIONAL<GeneralizedTime>,
+        humanString_Language?: OPTIONAL<LanguageCode>,
+        otherInfo?: OPTIONAL<OtherInformation>
     ) {
         this.dateAdded = dateAdded;
         this.dateChanged = dateChanged;

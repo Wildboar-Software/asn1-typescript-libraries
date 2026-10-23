@@ -29,7 +29,7 @@ import * as $ from "@wildboar/asn1/functional";
 export class MessageID_text {
     constructor (
         readonly messageContent: IA5String,
-        readonly attributes: OPTIONAL<OCTET_STRING>,
+        readonly attributes?: OPTIONAL<OCTET_STRING>,
     ) {}
 
     public static _from_object (_o: { [_K in keyof (MessageID_text)]: (MessageID_text)[_K] }): MessageID_text {

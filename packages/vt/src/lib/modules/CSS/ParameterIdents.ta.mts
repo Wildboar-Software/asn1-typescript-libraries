@@ -53,7 +53,7 @@ class ParameterIdents {
          * @public
          * @readonly
          */
-        readonly typeIdentifier: OPTIONAL<NULL>,
+        readonly typeIdentifier?: OPTIONAL<NULL>,
         /**
          * @summary `access`.
          * @description
@@ -62,7 +62,7 @@ class ParameterIdents {
          * @public
          * @readonly
          */
-        readonly access: OPTIONAL<NULL>,
+        readonly access?: OPTIONAL<NULL>,
         /**
          * @summary `trigger`.
          * @description
@@ -72,7 +72,7 @@ class ParameterIdents {
          * @public
          * @readonly
          */
-        readonly trigger: OPTIONAL<NULL>,
+        readonly trigger?: OPTIONAL<NULL>,
         /**
          * @summary `size`.
          * @description
@@ -81,7 +81,7 @@ class ParameterIdents {
          * @public
          * @readonly
          */
-        readonly size: OPTIONAL<NULL>,
+        readonly size?: OPTIONAL<NULL>,
         /**
          * @summary `category`.
          * @description
@@ -90,7 +90,7 @@ class ParameterIdents {
          * @public
          * @readonly
          */
-        readonly category: OPTIONAL<NULL>,
+        readonly category?: OPTIONAL<NULL>,
         /**
          * @summary `repertoire`.
          * @description
@@ -99,7 +99,7 @@ class ParameterIdents {
          * @public
          * @readonly
          */
-        readonly repertoire: OPTIONAL<NULL>,
+        readonly repertoire?: OPTIONAL<NULL>,
         /**
          * @summary `priority`.
          * @description
@@ -108,7 +108,7 @@ class ParameterIdents {
          * @public
          * @readonly
          */
-        readonly priority: OPTIONAL<NULL>,
+        readonly priority?: OPTIONAL<NULL>,
         /**
          * @summary `structure`.
          * @description
@@ -117,7 +117,7 @@ class ParameterIdents {
          * @public
          * @readonly
          */
-        readonly structure: OPTIONAL<NULL>,
+        readonly structure?: OPTIONAL<NULL>,
         /**
          * @summary `multiElement`.
          * @description
@@ -127,7 +127,7 @@ class ParameterIdents {
          * @public
          * @readonly
          */
-        readonly multiElement: OPTIONAL<ElementParamIdent[]>
+        readonly multiElement?: OPTIONAL<ElementParamIdent[]>
     ) {}
 
     /**

@@ -72,7 +72,7 @@ class TelephonyTonesGeneratedEvent {
          * @public
          * @readonly
          */
-        readonly toneGenerated: OPTIONAL<TelephonyTone>,
+        readonly toneGenerated?: OPTIONAL<TelephonyTone>,
         /**
          * @summary `toneFrequency`.
          * @description
@@ -81,7 +81,7 @@ class TelephonyTonesGeneratedEvent {
          * @public
          * @readonly
          */
-        readonly toneFrequency: OPTIONAL<INTEGER>,
+        readonly toneFrequency?: OPTIONAL<INTEGER>,
         /**
          * @summary `toneDuration`.
          * @description
@@ -90,7 +90,7 @@ class TelephonyTonesGeneratedEvent {
          * @public
          * @readonly
          */
-        readonly toneDuration: OPTIONAL<INTEGER>,
+        readonly toneDuration?: OPTIONAL<INTEGER>,
         /**
          * @summary `pauseDuration`.
          * @description
@@ -99,7 +99,7 @@ class TelephonyTonesGeneratedEvent {
          * @public
          * @readonly
          */
-        readonly pauseDuration: OPTIONAL<INTEGER>,
+        readonly pauseDuration?: OPTIONAL<INTEGER>,
         /**
          * @summary `connectionInfo`.
          * @description
@@ -108,7 +108,7 @@ class TelephonyTonesGeneratedEvent {
          * @public
          * @readonly
          */
-        readonly connectionInfo: OPTIONAL<ConnectionInformation>,
+        readonly connectionInfo?: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `extensions`.
          * @description
@@ -118,7 +118,7 @@ class TelephonyTonesGeneratedEvent {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

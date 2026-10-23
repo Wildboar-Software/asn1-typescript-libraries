@@ -71,10 +71,10 @@ class TSChangeover {
     constructor (
         newActiveTS: INTEGER,
         newStandbyTS: INTEGER,
-        changeoverTime: OPTIONAL<GeneralizedTime>,
-        authkey: OPTIONAL<OCTET_STRING>,
-        checksum: OPTIONAL<OCTET_STRING>,
-        versionNumber: OPTIONAL<OCTET_STRING>
+        changeoverTime?: OPTIONAL<GeneralizedTime>,
+        authkey?: OPTIONAL<OCTET_STRING>,
+        checksum?: OPTIONAL<OCTET_STRING>,
+        versionNumber?: OPTIONAL<OCTET_STRING>
     ) {
         this.newActiveTS = newActiveTS;
         this.newStandbyTS = newStandbyTS;

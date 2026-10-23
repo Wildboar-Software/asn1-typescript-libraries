@@ -116,8 +116,8 @@ class Messaging_Party_Information {
     constructor (
         party_qualifier: Messaging_Party_Qualifier,
         party_identity: Messaging_Party_Identity,
-        party_validity: OPTIONAL<Messaging_Party_Validity>,
-        copy_qualifier: OPTIONAL<Messaging_Copy_Qualifier>,
+        party_validity?: OPTIONAL<Messaging_Party_Validity>,
+        copy_qualifier?: OPTIONAL<Messaging_Copy_Qualifier>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.party_qualifier = party_qualifier;

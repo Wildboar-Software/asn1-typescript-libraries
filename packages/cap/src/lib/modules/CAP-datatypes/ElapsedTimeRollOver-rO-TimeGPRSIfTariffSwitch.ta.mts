@@ -34,7 +34,7 @@ export class ElapsedTimeRollOver_rO_TimeGPRSIfTariffSwitch {
          * @public
          * @readonly
          */
-        readonly rO_TimeGPRSSinceLastTariffSwitch: OPTIONAL<INTEGER>,
+        readonly rO_TimeGPRSSinceLastTariffSwitch?: OPTIONAL<INTEGER>,
         /**
          * @summary `rO_TimeGPRSTariffSwitchInterval`.
          * @description
@@ -45,7 +45,7 @@ export class ElapsedTimeRollOver_rO_TimeGPRSIfTariffSwitch {
          * @public
          * @readonly
          */
-        readonly rO_TimeGPRSTariffSwitchInterval: OPTIONAL<INTEGER>,
+        readonly rO_TimeGPRSTariffSwitchInterval?: OPTIONAL<INTEGER>,
     ) {
         if (rO_TimeGPRSSinceLastTariffSwitch !== undefined && (typeof rO_TimeGPRSSinceLastTariffSwitch === "bigint" ? (rO_TimeGPRSSinceLastTariffSwitch < 0n || rO_TimeGPRSSinceLastTariffSwitch > 255n) : (rO_TimeGPRSSinceLastTariffSwitch < 0 || rO_TimeGPRSSinceLastTariffSwitch > 255))) {
             throw new ASN1OverflowError("ElapsedTimeRollOver_rO_TimeGPRSIfTariffSwitch.rO_TimeGPRSSinceLastTariffSwitch violates INTEGER constraint");

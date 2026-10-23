@@ -169,14 +169,14 @@ class I_WLANinformation {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        wLANOperatorName: OPTIONAL<OCTET_STRING>,
-        wLANLocationData: OPTIONAL<OCTET_STRING>,
-        wLANLocationInformation: OPTIONAL<OCTET_STRING>,
-        nASIPIPv6Address: OPTIONAL<IPAddress>,
-        wLANMACAddress: OPTIONAL<OCTET_STRING>,
-        sessionAliveTimer: OPTIONAL<SessionAliveTime>,
-        geographicalCoordinates: OPTIONAL<GeographicalCoordinates>,
-        civicAddress: OPTIONAL<CivicAddress>,
+        wLANOperatorName?: OPTIONAL<OCTET_STRING>,
+        wLANLocationData?: OPTIONAL<OCTET_STRING>,
+        wLANLocationInformation?: OPTIONAL<OCTET_STRING>,
+        nASIPIPv6Address?: OPTIONAL<IPAddress>,
+        wLANMACAddress?: OPTIONAL<OCTET_STRING>,
+        sessionAliveTimer?: OPTIONAL<SessionAliveTime>,
+        geographicalCoordinates?: OPTIONAL<GeographicalCoordinates>,
+        civicAddress?: OPTIONAL<CivicAddress>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.wLANOperatorName = wLANOperatorName;

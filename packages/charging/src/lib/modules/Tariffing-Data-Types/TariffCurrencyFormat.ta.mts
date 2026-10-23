@@ -93,8 +93,8 @@ class TariffCurrencyFormat {
     constructor (
         communicationChargeSequenceCurrency: OPTIONAL<CommunicationChargeCurrency[]>,
         tariffControlIndicators: TariffCurrencyFormat_tariffControlIndicators,
-        callAttemptChargeCurrency: OPTIONAL<CurrencyFactorScale>,
-        callSetupChargeCurrency: OPTIONAL<CurrencyFactorScale>
+        callAttemptChargeCurrency?: OPTIONAL<CurrencyFactorScale>,
+        callSetupChargeCurrency?: OPTIONAL<CurrencyFactorScale>
     ) {
         this.communicationChargeSequenceCurrency = communicationChargeSequenceCurrency;
         this.tariffControlIndicators = tariffControlIndicators;

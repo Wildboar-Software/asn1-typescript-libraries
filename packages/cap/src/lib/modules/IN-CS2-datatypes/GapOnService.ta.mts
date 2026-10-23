@@ -44,7 +44,7 @@ class GapOnService {
          * @public
          * @readonly
          */
-        readonly dpCriteria: OPTIONAL<EventTypeBCSM>
+        readonly dpCriteria?: OPTIONAL<EventTypeBCSM>
     ) {}
 
     /**

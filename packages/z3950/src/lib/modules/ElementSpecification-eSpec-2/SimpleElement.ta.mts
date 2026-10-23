@@ -55,7 +55,7 @@ class SimpleElement {
 
     constructor (
         path: TagPath,
-        variantRequest: OPTIONAL<Variant>
+        variantRequest?: OPTIONAL<Variant>
     ) {
         this.path = path;
         this.variantRequest = variantRequest;

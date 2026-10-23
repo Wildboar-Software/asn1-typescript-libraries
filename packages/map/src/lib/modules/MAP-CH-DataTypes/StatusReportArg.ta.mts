@@ -53,7 +53,7 @@ class StatusReportArg {
          * @public
          * @readonly
          */
-        readonly eventReportData: OPTIONAL<EventReportData>,
+        readonly eventReportData?: OPTIONAL<EventReportData>,
         /**
          * @summary `callReportdata`.
          * @description
@@ -63,7 +63,7 @@ class StatusReportArg {
          * @public
          * @readonly
          */
-        readonly callReportdata: OPTIONAL<CallReportData>,
+        readonly callReportdata?: OPTIONAL<CallReportData>,
         /**
          * @summary `extensionContainer`.
          * @description
@@ -73,7 +73,7 @@ class StatusReportArg {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

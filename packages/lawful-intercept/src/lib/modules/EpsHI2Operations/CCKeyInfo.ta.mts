@@ -92,7 +92,7 @@ class CCKeyInfo {
     constructor (
         cCCSID: OCTET_STRING,
         cCDecKey: OCTET_STRING,
-        cCSalt: OPTIONAL<OCTET_STRING>,
+        cCSalt?: OPTIONAL<OCTET_STRING>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.cCCSID = cCCSID;

@@ -46,13 +46,13 @@ class ModificationRequestFor_IP_SM_GW_Data {
          * @public
          * @readonly
          */
-        readonly modifyRegistrationStatus: OPTIONAL<ModificationInstruction>,
+        readonly modifyRegistrationStatus?: OPTIONAL<ModificationInstruction>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `ip_sm_gw_DiameterAddress`.
          * @description
@@ -63,7 +63,7 @@ class ModificationRequestFor_IP_SM_GW_Data {
          * @public
          * @readonly
          */
-        readonly ip_sm_gw_DiameterAddress: OPTIONAL<NetworkNodeDiameterAddress>,
+        readonly ip_sm_gw_DiameterAddress?: OPTIONAL<NetworkNodeDiameterAddress>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -61,7 +61,7 @@ class MAP_RefuseInfo {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `alternativeApplicationContext`.
          * @description
@@ -73,7 +73,7 @@ class MAP_RefuseInfo {
          * @public
          * @readonly
          */
-        readonly alternativeApplicationContext: OPTIONAL<OBJECT_IDENTIFIER>,
+        readonly alternativeApplicationContext?: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary Extensions that are not recognized.
          * @public

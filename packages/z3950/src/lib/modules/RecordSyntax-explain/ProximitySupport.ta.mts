@@ -60,7 +60,7 @@ class ProximitySupport {
 
     constructor (
         anySupport: BOOLEAN,
-        unitsSupported: OPTIONAL<ProximitySupport_unitsSupported_Item[]>
+        unitsSupported?: OPTIONAL<ProximitySupport_unitsSupported_Item[]>
     ) {
         this.anySupport = anySupport;
         this.unitsSupported = unitsSupported;

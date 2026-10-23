@@ -184,13 +184,13 @@ class Location {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        locationInfo: OPTIONAL<LocationInfo>,
-        positioningInfo: OPTIONAL<PositioningInfo>,
-        locationPresenceReport: OPTIONAL<LocationPresenceReport>,
-        fourGPositioningInfo: OPTIONAL<FourGPositioningInfo>,
-        fourGLocationInfo: OPTIONAL<FourGLocationInfo>,
-        iMSLocation: OPTIONAL<IMSLocation>,
-        coarseLocation: OPTIONAL<CoarseLocation>,
+        locationInfo?: OPTIONAL<LocationInfo>,
+        positioningInfo?: OPTIONAL<PositioningInfo>,
+        locationPresenceReport?: OPTIONAL<LocationPresenceReport>,
+        fourGPositioningInfo?: OPTIONAL<FourGPositioningInfo>,
+        fourGLocationInfo?: OPTIONAL<FourGLocationInfo>,
+        iMSLocation?: OPTIONAL<IMSLocation>,
+        coarseLocation?: OPTIONAL<CoarseLocation>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.locationInfo = locationInfo;

@@ -42,7 +42,7 @@ class LoadCRLResponseOk {
          * @public
          * @readonly
          */
-        readonly missingParts: OPTIONAL<INTEGER[]>
+        readonly missingParts?: OPTIONAL<INTEGER[]>
     ) {}
 
     /**

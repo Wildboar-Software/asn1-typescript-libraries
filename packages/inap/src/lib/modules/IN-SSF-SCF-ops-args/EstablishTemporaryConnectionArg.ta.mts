@@ -108,13 +108,13 @@ class EstablishTemporaryConnectionArg {
 
     constructor (
         assistingSSPIPRoutingAddress: AssistingSSPIPRoutingAddress,
-        correlationID: OPTIONAL<CorrelationID>,
-        partyToConnect: OPTIONAL<EstablishTemporaryConnectionArg_partyToConnect>,
-        scfID: OPTIONAL<ScfID>,
-        extensions: OPTIONAL<Extensions>,
-        carrier: OPTIONAL<Carrier>,
-        serviceInteractionIndicators: OPTIONAL<ServiceInteractionIndicators>,
-        serviceInteractionIndicatorsTwo: OPTIONAL<ServiceInteractionIndicatorsTwo>,
+        correlationID?: OPTIONAL<CorrelationID>,
+        partyToConnect?: OPTIONAL<EstablishTemporaryConnectionArg_partyToConnect>,
+        scfID?: OPTIONAL<ScfID>,
+        extensions?: OPTIONAL<Extensions>,
+        carrier?: OPTIONAL<Carrier>,
+        serviceInteractionIndicators?: OPTIONAL<ServiceInteractionIndicators>,
+        serviceInteractionIndicatorsTwo?: OPTIONAL<ServiceInteractionIndicatorsTwo>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.assistingSSPIPRoutingAddress = assistingSSPIPRoutingAddress;

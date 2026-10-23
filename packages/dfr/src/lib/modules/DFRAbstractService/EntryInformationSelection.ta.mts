@@ -55,7 +55,7 @@ class EntryInformationSelection {
          * @public
          * @readonly
          */
-        readonly read_selector: OPTIONAL<EntryInformationSelection_read_selector>,
+        readonly read_selector?: OPTIONAL<EntryInformationSelection_read_selector>,
         /**
          * @summary `attribute_selection`.
          * @description
@@ -64,7 +64,7 @@ class EntryInformationSelection {
          * @public
          * @readonly
          */
-        readonly attribute_selection: OPTIONAL<AttributeSelection>
+        readonly attribute_selection?: OPTIONAL<AttributeSelection>
     ) {}
 
     /**

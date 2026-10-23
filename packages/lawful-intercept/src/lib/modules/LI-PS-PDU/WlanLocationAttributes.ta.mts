@@ -67,7 +67,7 @@ class WlanLocationAttributes {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        wlanAPMACAddress: OPTIONAL<OCTET_STRING>,
+        wlanAPMACAddress?: OPTIONAL<OCTET_STRING>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.wlanAPMACAddress = wlanAPMACAddress;

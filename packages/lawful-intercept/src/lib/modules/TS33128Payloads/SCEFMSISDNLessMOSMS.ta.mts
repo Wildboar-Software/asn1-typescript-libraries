@@ -147,9 +147,9 @@ class SCEFMSISDNLessMOSMS {
         mSISDN: OPTIONAL<MSISDN>,
         externalIdentifie: OPTIONAL<NAI>,
         terminatingSMSParty: SCSASID,
-        sMS: OPTIONAL<SMSTPDUData>,
-        sourcePort: OPTIONAL<PortNumber>,
-        destinationPort: OPTIONAL<PortNumber>,
+        sMS?: OPTIONAL<SMSTPDUData>,
+        sourcePort?: OPTIONAL<PortNumber>,
+        destinationPort?: OPTIONAL<PortNumber>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.iMSI = iMSI;

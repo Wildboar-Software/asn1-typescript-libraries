@@ -66,7 +66,7 @@ class AddressScreened {
     constructor (
         partyNumber: PartyNumber,
         screeningIndicator: ScreeningIndicator,
-        partySubaddress: OPTIONAL<PartySubaddress>
+        partySubaddress?: OPTIONAL<PartySubaddress>
     ) {
         this.partyNumber = partyNumber;
         this.screeningIndicator = screeningIndicator;

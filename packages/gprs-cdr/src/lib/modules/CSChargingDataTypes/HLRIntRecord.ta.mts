@@ -238,9 +238,9 @@ class HLRIntRecord {
         basicService: OPTIONAL<BasicService>,
         routingNumber: RoutingNumber,
         interrogationTime: OCTET_STRING,
-        numberOfForwarding: OPTIONAL<INTEGER>,
-        interrogationResult: OPTIONAL<HLRIntResult>,
-        recordExtensions: OPTIONAL<ManagementExtension[]>
+        numberOfForwarding?: OPTIONAL<INTEGER>,
+        interrogationResult?: OPTIONAL<HLRIntResult>,
+        recordExtensions?: OPTIONAL<ManagementExtension[]>
     ) {
         this.recordType = recordType;
         this.servedIMSI = servedIMSI;

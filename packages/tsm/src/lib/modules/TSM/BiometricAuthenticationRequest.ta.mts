@@ -103,7 +103,7 @@ class BiometricAuthenticationRequest {
          * @public
          * @readonly
          */
-        readonly requestTemplateData: OPTIONAL<XtsmTemplate>
+        readonly requestTemplateData?: OPTIONAL<XtsmTemplate>
     ) {}
 
     /**

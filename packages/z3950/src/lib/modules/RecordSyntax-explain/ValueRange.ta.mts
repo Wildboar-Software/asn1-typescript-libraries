@@ -49,8 +49,8 @@ class ValueRange {
     readonly upper: OPTIONAL<ValueDescription>;
 
     constructor (
-        lower: OPTIONAL<ValueDescription>,
-        upper: OPTIONAL<ValueDescription>
+        lower?: OPTIONAL<ValueDescription>,
+        upper?: OPTIONAL<ValueDescription>
     ) {
         this.lower = lower;
         this.upper = upper;

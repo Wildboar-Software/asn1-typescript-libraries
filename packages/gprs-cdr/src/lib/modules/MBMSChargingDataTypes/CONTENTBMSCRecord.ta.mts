@@ -403,10 +403,10 @@ class CONTENTBMSCRecord {
         recordExtensions: OPTIONAL<ManagementExtension[]>,
         localSequenceNumber: OPTIONAL<INTEGER>,
         recipientAddressList: OCTET_STRING[],
-        bearerServiceDescription: OPTIONAL<BearerServiceDescription>,
-        mbmsInformation: OPTIONAL<MBMSInformation>,
-        serviceContextID: OPTIONAL<UTF8String>,
-        servedpdpPDNType: OPTIONAL<OCTET_STRING>
+        bearerServiceDescription?: OPTIONAL<BearerServiceDescription>,
+        mbmsInformation?: OPTIONAL<MBMSInformation>,
+        serviceContextID?: OPTIONAL<UTF8String>,
+        servedpdpPDNType?: OPTIONAL<OCTET_STRING>
     ) {
         this.recordType = recordType;
         this.contentProviderId = contentProviderId;

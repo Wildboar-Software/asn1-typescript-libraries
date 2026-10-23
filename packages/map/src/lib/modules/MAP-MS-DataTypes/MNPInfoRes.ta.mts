@@ -47,7 +47,7 @@ class MNPInfoRes {
          * @public
          * @readonly
          */
-        readonly routeingNumber: OPTIONAL<RouteingNumber>,
+        readonly routeingNumber?: OPTIONAL<RouteingNumber>,
         /**
          * @summary `imsi`.
          * @description
@@ -58,7 +58,7 @@ class MNPInfoRes {
          * @public
          * @readonly
          */
-        readonly imsi: OPTIONAL<IMSI>,
+        readonly imsi?: OPTIONAL<IMSI>,
         /**
          * @summary `msisdn`.
          * @description
@@ -68,7 +68,7 @@ class MNPInfoRes {
          * @public
          * @readonly
          */
-        readonly msisdn: OPTIONAL<ISDN_AddressString>,
+        readonly msisdn?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `numberPortabilityStatus`.
          * @description
@@ -79,13 +79,13 @@ class MNPInfoRes {
          * @public
          * @readonly
          */
-        readonly numberPortabilityStatus: OPTIONAL<NumberPortabilityStatus>,
+        readonly numberPortabilityStatus?: OPTIONAL<NumberPortabilityStatus>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

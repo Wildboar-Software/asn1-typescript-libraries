@@ -37,7 +37,7 @@ export class BackwardServiceInteractionInd {
          * @public
          * @readonly
          */
-        readonly conferenceTreatmentIndicator: OPTIONAL<OCTET_STRING>,
+        readonly conferenceTreatmentIndicator?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `callCompletionTreatmentIndicator`.
          * @description
@@ -50,7 +50,7 @@ export class BackwardServiceInteractionInd {
          * @public
          * @readonly
          */
-        readonly callCompletionTreatmentIndicator: OPTIONAL<OCTET_STRING>,
+        readonly callCompletionTreatmentIndicator?: OPTIONAL<OCTET_STRING>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {
         if (conferenceTreatmentIndicator !== undefined && conferenceTreatmentIndicator.length !== 1) {

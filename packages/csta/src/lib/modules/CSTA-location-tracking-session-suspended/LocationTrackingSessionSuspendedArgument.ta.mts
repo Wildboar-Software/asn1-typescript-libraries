@@ -69,7 +69,7 @@ class LocationTrackingSessionSuspendedArgument {
          * @public
          * @readonly
          */
-        readonly locReason: OPTIONAL<LocReason>,
+        readonly locReason?: OPTIONAL<LocReason>,
         /**
          * @summary `locationInfoList`.
          * @description
@@ -80,7 +80,7 @@ class LocationTrackingSessionSuspendedArgument {
          * @public
          * @readonly
          */
-        readonly locationInfoList: OPTIONAL<LocationInfoList>,
+        readonly locationInfoList?: OPTIONAL<LocationInfoList>,
         /**
          * @summary `extensions`.
          * @description
@@ -91,7 +91,7 @@ class LocationTrackingSessionSuspendedArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

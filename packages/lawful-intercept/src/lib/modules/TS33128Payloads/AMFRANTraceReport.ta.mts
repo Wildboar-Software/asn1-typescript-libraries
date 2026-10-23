@@ -262,8 +262,8 @@ class AMFRANTraceReport {
         globalRANNodeID: GlobalRANNodeID,
         traceCollectionEntityInfo: OPTIONAL<TraceCollectionEntityInfo>,
         aMFTraceData: XMLType,
-        location: OPTIONAL<Location>,
-        traceActivation: OPTIONAL<TraceActivation>,
+        location?: OPTIONAL<Location>,
+        traceActivation?: OPTIONAL<TraceActivation>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.userIdentifiers = userIdentifiers;

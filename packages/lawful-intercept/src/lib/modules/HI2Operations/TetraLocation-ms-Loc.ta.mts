@@ -102,7 +102,7 @@ class TetraLocation_ms_Loc {
         mcc: INTEGER,
         mnc: INTEGER,
         lai: INTEGER,
-        ci: OPTIONAL<INTEGER>
+        ci?: OPTIONAL<INTEGER>
     ) {
         this.mcc = mcc;
         this.mnc = mnc;

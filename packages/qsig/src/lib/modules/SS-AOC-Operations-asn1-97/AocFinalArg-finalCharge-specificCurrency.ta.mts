@@ -55,7 +55,7 @@ class AocFinalArg_finalCharge_specificCurrency {
 
     constructor (
         recordedCurrency: RecordedCurrency,
-        finalBillingId: OPTIONAL<FinalBillingId>
+        finalBillingId?: OPTIONAL<FinalBillingId>
     ) {
         this.recordedCurrency = recordedCurrency;
         this.finalBillingId = finalBillingId;

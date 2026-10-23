@@ -39,7 +39,7 @@ class EimPackageReceivedWithCid {
          * @public
          * @readonly
          */
-        readonly correlationId: OPTIONAL<EimPackageReceivedWithCid_correlationId>
+        readonly correlationId?: OPTIONAL<EimPackageReceivedWithCid_correlationId>
     ) {}
 
     /**

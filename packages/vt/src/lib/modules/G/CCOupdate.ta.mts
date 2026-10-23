@@ -71,7 +71,7 @@ class CCOupdate {
          * @public
          * @readonly
          */
-        readonly zCoordinate: OPTIONAL<INTEGER>,
+        readonly zCoordinate?: OPTIONAL<INTEGER>,
         /**
          * @summary `entryControlIndex`.
          * @description
@@ -79,7 +79,7 @@ class CCOupdate {
          * @public
          * @readonly
          */
-        readonly entryControlIndex: OPTIONAL<INTEGER>,
+        readonly entryControlIndex?: OPTIONAL<INTEGER>,
         /**
          * @summary `deviceObjectIndex`.
          * @description
@@ -87,7 +87,7 @@ class CCOupdate {
          * @public
          * @readonly
          */
-        readonly deviceObjectIndex: OPTIONAL<INTEGER>,
+        readonly deviceObjectIndex?: OPTIONAL<INTEGER>,
         /**
          * @summary `feprIndex`.
          * @description
@@ -96,7 +96,7 @@ class CCOupdate {
          * @public
          * @readonly
          */
-        readonly feprIndex: OPTIONAL<INTEGER>
+        readonly feprIndex?: OPTIONAL<INTEGER>
     ) {}
 
     /**

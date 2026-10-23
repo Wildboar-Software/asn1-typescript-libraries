@@ -148,11 +148,11 @@ class PumDe_regArg {
     constructor (
         pumUserId: PumDe_regArg_pumUserId,
         basicService: BasicService,
-        hostingAddr: OPTIONAL<PartyNumber>,
-        activatingUserAddr: OPTIONAL<PartyNumber>,
-        serviceOption: OPTIONAL<ServiceOption>,
-        userPin: OPTIONAL<PumDe_regArg_userPin>,
-        argExtension: OPTIONAL<PumrExtension>
+        hostingAddr?: OPTIONAL<PartyNumber>,
+        activatingUserAddr?: OPTIONAL<PartyNumber>,
+        serviceOption?: OPTIONAL<ServiceOption>,
+        userPin?: OPTIONAL<PumDe_regArg_userPin>,
+        argExtension?: OPTIONAL<PumrExtension>
     ) {
         this.pumUserId = pumUserId;
         this.basicService = basicService;

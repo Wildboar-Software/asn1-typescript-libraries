@@ -127,7 +127,7 @@ class EncryptionContainer {
     constructor (
         encryptionType: EncryptionType,
         encryptedPayload: OCTET_STRING,
-        encryptedPayloadType: OPTIONAL<EncryptedPayloadType>,
+        encryptedPayloadType?: OPTIONAL<EncryptedPayloadType>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.encryptionType = encryptionType;

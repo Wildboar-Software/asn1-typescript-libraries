@@ -72,7 +72,7 @@ class PhysDevEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly buttonInformation: OPTIONAL<ButtonInformation>,
+        readonly buttonInformation?: OPTIONAL<ButtonInformation>,
         /**
          * @summary `buttonPress`.
          * @public
@@ -81,7 +81,7 @@ class PhysDevEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly buttonPress: OPTIONAL<ButtonPressEvent>,
+        readonly buttonPress?: OPTIONAL<ButtonPressEvent>,
         /**
          * @summary `displayUpdated`.
          * @public
@@ -90,7 +90,7 @@ class PhysDevEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly displayUpdated: OPTIONAL<DisplayUpdated>,
+        readonly displayUpdated?: OPTIONAL<DisplayUpdated>,
         /**
          * @summary `hookswitch`.
          * @public
@@ -99,7 +99,7 @@ class PhysDevEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly hookswitch: OPTIONAL<Hookswitch>,
+        readonly hookswitch?: OPTIONAL<Hookswitch>,
         /**
          * @summary `lampMode`.
          * @public
@@ -108,7 +108,7 @@ class PhysDevEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly lampMode: OPTIONAL<LampMode>,
+        readonly lampMode?: OPTIONAL<LampMode>,
         /**
          * @summary `messageWaiting`.
          * @public
@@ -117,7 +117,7 @@ class PhysDevEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly messageWaiting: OPTIONAL<MessageWaiting>,
+        readonly messageWaiting?: OPTIONAL<MessageWaiting>,
         /**
          * @summary `microphoneGain`.
          * @public
@@ -126,7 +126,7 @@ class PhysDevEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly microphoneGain: OPTIONAL<MicrophoneGain>,
+        readonly microphoneGain?: OPTIONAL<MicrophoneGain>,
         /**
          * @summary `microphoneMute`.
          * @public
@@ -135,7 +135,7 @@ class PhysDevEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly microphoneMute: OPTIONAL<MicrophoneMute>,
+        readonly microphoneMute?: OPTIONAL<MicrophoneMute>,
         /**
          * @summary `ringerStatus`.
          * @public
@@ -144,7 +144,7 @@ class PhysDevEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly ringerStatus: OPTIONAL<RingerStatus>,
+        readonly ringerStatus?: OPTIONAL<RingerStatus>,
         /**
          * @summary `speakerMute`.
          * @public
@@ -153,7 +153,7 @@ class PhysDevEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly speakerMute: OPTIONAL<SpeakerMute>,
+        readonly speakerMute?: OPTIONAL<SpeakerMute>,
         /**
          * @summary `speakerVolume`.
          * @public
@@ -162,7 +162,7 @@ class PhysDevEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly speakerVolume: OPTIONAL<SpeakerVolume>
+        readonly speakerVolume?: OPTIONAL<SpeakerVolume>
     ) {}
 
     /**

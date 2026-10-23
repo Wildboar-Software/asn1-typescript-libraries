@@ -89,10 +89,10 @@ class SMInterface {
     readonly interfaceType: OPTIONAL<SMInterfaceType>;
 
     constructor (
-        interfaceId: OPTIONAL<GraphicString>,
-        interfaceText: OPTIONAL<GraphicString>,
-        interfacePort: OPTIONAL<GraphicString>,
-        interfaceType: OPTIONAL<SMInterfaceType>
+        interfaceId?: OPTIONAL<GraphicString>,
+        interfaceText?: OPTIONAL<GraphicString>,
+        interfacePort?: OPTIONAL<GraphicString>,
+        interfaceType?: OPTIONAL<SMInterfaceType>
     ) {
         this.interfaceId = interfaceId;
         this.interfaceText = interfaceText;

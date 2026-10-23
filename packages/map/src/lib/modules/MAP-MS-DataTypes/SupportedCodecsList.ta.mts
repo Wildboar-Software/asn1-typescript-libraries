@@ -45,7 +45,7 @@ class SupportedCodecsList {
          * @public
          * @readonly
          */
-        readonly utranCodecList: OPTIONAL<CodecList>,
+        readonly utranCodecList?: OPTIONAL<CodecList>,
         /**
          * @summary `geranCodecList`.
          * @description
@@ -57,13 +57,13 @@ class SupportedCodecsList {
          * @public
          * @readonly
          */
-        readonly geranCodecList: OPTIONAL<CodecList>,
+        readonly geranCodecList?: OPTIONAL<CodecList>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -200,16 +200,16 @@ class UsedUnitContainer {
         serviceIdentifier: OPTIONAL<INTEGER>,
         time: OPTIONAL<INTEGER>,
         triggers: Trigger[],
-        triggerTimeStamp: OPTIONAL<OCTET_STRING>,
-        dataTotalVolume: OPTIONAL<INTEGER>,
-        dataVolumeUplink: OPTIONAL<INTEGER>,
-        dataVolumeDownlink: OPTIONAL<INTEGER>,
-        serviceSpecificUnits: OPTIONAL<INTEGER>,
-        eventTimeStamp: OPTIONAL<OCTET_STRING>,
-        localSequenceNumber: OPTIONAL<INTEGER>,
-        ratingIndicator: OPTIONAL<BOOLEAN>,
-        pDUContainerInformation: OPTIONAL<PDUContainerInformation>,
-        quotaManagementIndicator: OPTIONAL<BOOLEAN>
+        triggerTimeStamp?: OPTIONAL<OCTET_STRING>,
+        dataTotalVolume?: OPTIONAL<INTEGER>,
+        dataVolumeUplink?: OPTIONAL<INTEGER>,
+        dataVolumeDownlink?: OPTIONAL<INTEGER>,
+        serviceSpecificUnits?: OPTIONAL<INTEGER>,
+        eventTimeStamp?: OPTIONAL<OCTET_STRING>,
+        localSequenceNumber?: OPTIONAL<INTEGER>,
+        ratingIndicator?: OPTIONAL<BOOLEAN>,
+        pDUContainerInformation?: OPTIONAL<PDUContainerInformation>,
+        quotaManagementIndicator?: OPTIONAL<BOOLEAN>
     ) {
         this.serviceIdentifier = serviceIdentifier;
         this.time = time;

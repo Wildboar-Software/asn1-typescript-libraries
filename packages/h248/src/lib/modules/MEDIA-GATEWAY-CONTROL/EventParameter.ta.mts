@@ -82,7 +82,7 @@ class EventParameter {
          * @public
          * @readonly
          */
-        readonly extraInfo: OPTIONAL<EventParameter_extraInfo>,
+        readonly extraInfo?: OPTIONAL<EventParameter_extraInfo>,
         /**
          * @summary Extensions that are not recognized.
          * @description

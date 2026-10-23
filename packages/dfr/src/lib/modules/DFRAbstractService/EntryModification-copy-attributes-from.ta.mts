@@ -54,7 +54,7 @@ class EntryModification_copy_attributes_from {
          * @public
          * @readonly
          */
-        readonly attribute_selection: OPTIONAL<AttributeType[]>
+        readonly attribute_selection?: OPTIONAL<AttributeType[]>
     ) {}
 
     /**

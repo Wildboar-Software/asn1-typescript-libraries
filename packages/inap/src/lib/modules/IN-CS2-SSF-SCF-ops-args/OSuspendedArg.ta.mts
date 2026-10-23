@@ -61,8 +61,8 @@ class OSuspendedArg {
 
     constructor (
         dpSpecificCommonParameters: DpSpecificCommonParameters,
-        legID: OPTIONAL<LegID>,
-        extensions: OPTIONAL<ExtensionField[]>,
+        legID?: OPTIONAL<LegID>,
+        extensions?: OPTIONAL<ExtensionField[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.dpSpecificCommonParameters = dpSpecificCommonParameters;

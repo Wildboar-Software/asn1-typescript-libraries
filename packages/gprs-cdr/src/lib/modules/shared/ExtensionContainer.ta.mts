@@ -48,8 +48,8 @@ class ExtensionContainer {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        privateExtensionList: OPTIONAL<PrivateExtension[]>,
-        pcs_Extensions: OPTIONAL<Pcs_Extensions>,
+        privateExtensionList?: OPTIONAL<PrivateExtension[]>,
+        pcs_Extensions?: OPTIONAL<Pcs_Extensions>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.privateExtensionList = privateExtensionList;

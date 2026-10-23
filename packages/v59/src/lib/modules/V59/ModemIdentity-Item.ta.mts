@@ -92,7 +92,7 @@ class ModemIdentity_Item {
          * @public
          * @readonly
          */
-        readonly multimediaMode: OPTIONAL<ModemIdentity_Item_multimediaMode>,
+        readonly multimediaMode?: OPTIONAL<ModemIdentity_Item_multimediaMode>,
         /**
          * @summary Extensions that are not recognized.
          * @public

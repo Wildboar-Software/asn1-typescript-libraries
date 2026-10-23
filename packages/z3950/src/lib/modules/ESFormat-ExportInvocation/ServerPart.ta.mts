@@ -85,10 +85,10 @@ class ServerPart {
     readonly costSoFar: OPTIONAL<IntUnit>;
 
     constructor (
-        estimatedQuantity: OPTIONAL<IntUnit>,
-        quantitySoFar: OPTIONAL<IntUnit>,
-        estimatedCost: OPTIONAL<IntUnit>,
-        costSoFar: OPTIONAL<IntUnit>
+        estimatedQuantity?: OPTIONAL<IntUnit>,
+        quantitySoFar?: OPTIONAL<IntUnit>,
+        estimatedCost?: OPTIONAL<IntUnit>,
+        costSoFar?: OPTIONAL<IntUnit>
     ) {
         this.estimatedQuantity = estimatedQuantity;
         this.quantitySoFar = quantitySoFar;

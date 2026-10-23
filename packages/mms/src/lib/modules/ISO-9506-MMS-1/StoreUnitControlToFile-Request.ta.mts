@@ -69,7 +69,7 @@ class StoreUnitControlToFile_Request {
          * @public
          * @readonly
          */
-        readonly thirdParty: OPTIONAL<ApplicationReference>
+        readonly thirdParty?: OPTIONAL<ApplicationReference>
     ) {}
 
     /**

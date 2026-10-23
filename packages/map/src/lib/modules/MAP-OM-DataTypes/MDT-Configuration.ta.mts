@@ -83,7 +83,7 @@ class MDT_Configuration {
          * @public
          * @readonly
          */
-        readonly areaScope: OPTIONAL<AreaScope>,
+        readonly areaScope?: OPTIONAL<AreaScope>,
         /**
          * @summary `listOfMeasurements`.
          * @description
@@ -93,7 +93,7 @@ class MDT_Configuration {
          * @public
          * @readonly
          */
-        readonly listOfMeasurements: OPTIONAL<ListOfMeasurements>,
+        readonly listOfMeasurements?: OPTIONAL<ListOfMeasurements>,
         /**
          * @summary `reportingTrigger`.
          * @description
@@ -103,7 +103,7 @@ class MDT_Configuration {
          * @public
          * @readonly
          */
-        readonly reportingTrigger: OPTIONAL<ReportingTrigger>,
+        readonly reportingTrigger?: OPTIONAL<ReportingTrigger>,
         /**
          * @summary `reportInterval`.
          * @description
@@ -113,7 +113,7 @@ class MDT_Configuration {
          * @public
          * @readonly
          */
-        readonly reportInterval: OPTIONAL<ReportInterval>,
+        readonly reportInterval?: OPTIONAL<ReportInterval>,
         /**
          * @summary `reportAmount`.
          * @description
@@ -123,7 +123,7 @@ class MDT_Configuration {
          * @public
          * @readonly
          */
-        readonly reportAmount: OPTIONAL<ReportAmount>,
+        readonly reportAmount?: OPTIONAL<ReportAmount>,
         /**
          * @summary `eventThresholdRSRP`.
          * @description
@@ -133,7 +133,7 @@ class MDT_Configuration {
          * @public
          * @readonly
          */
-        readonly eventThresholdRSRP: OPTIONAL<EventThresholdRSRP>,
+        readonly eventThresholdRSRP?: OPTIONAL<EventThresholdRSRP>,
         /**
          * @summary `eventThresholdRSRQ`.
          * @description
@@ -143,7 +143,7 @@ class MDT_Configuration {
          * @public
          * @readonly
          */
-        readonly eventThresholdRSRQ: OPTIONAL<EventThresholdRSRQ>,
+        readonly eventThresholdRSRQ?: OPTIONAL<EventThresholdRSRQ>,
         /**
          * @summary `loggingInterval`.
          * @description
@@ -153,7 +153,7 @@ class MDT_Configuration {
          * @public
          * @readonly
          */
-        readonly loggingInterval: OPTIONAL<LoggingInterval>,
+        readonly loggingInterval?: OPTIONAL<LoggingInterval>,
         /**
          * @summary `loggingDuration`.
          * @description
@@ -163,7 +163,7 @@ class MDT_Configuration {
          * @public
          * @readonly
          */
-        readonly loggingDuration: OPTIONAL<LoggingDuration>,
+        readonly loggingDuration?: OPTIONAL<LoggingDuration>,
         /**
          * @summary `extensionContainer`.
          * @description
@@ -173,7 +173,7 @@ class MDT_Configuration {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `measurementPeriodUMTS`.
          * @description
@@ -183,7 +183,7 @@ class MDT_Configuration {
          * @public
          * @readonly
          */
-        readonly measurementPeriodUMTS: OPTIONAL<PeriodUMTS>,
+        readonly measurementPeriodUMTS?: OPTIONAL<PeriodUMTS>,
         /**
          * @summary `measurementPeriodLTE`.
          * @description
@@ -193,7 +193,7 @@ class MDT_Configuration {
          * @public
          * @readonly
          */
-        readonly measurementPeriodLTE: OPTIONAL<PeriodLTE>,
+        readonly measurementPeriodLTE?: OPTIONAL<PeriodLTE>,
         /**
          * @summary `collectionPeriodRRM_UMTS`.
          * @description
@@ -203,7 +203,7 @@ class MDT_Configuration {
          * @public
          * @readonly
          */
-        readonly collectionPeriodRRM_UMTS: OPTIONAL<PeriodUMTS>,
+        readonly collectionPeriodRRM_UMTS?: OPTIONAL<PeriodUMTS>,
         /**
          * @summary `collectionPeriodRRM_LTE`.
          * @description
@@ -213,7 +213,7 @@ class MDT_Configuration {
          * @public
          * @readonly
          */
-        readonly collectionPeriodRRM_LTE: OPTIONAL<PeriodLTE>,
+        readonly collectionPeriodRRM_LTE?: OPTIONAL<PeriodLTE>,
         /**
          * @summary `positioningMethod`.
          * @description
@@ -223,7 +223,7 @@ class MDT_Configuration {
          * @public
          * @readonly
          */
-        readonly positioningMethod: OPTIONAL<PositioningMethod>,
+        readonly positioningMethod?: OPTIONAL<PositioningMethod>,
         /**
          * @summary `measurementQuantity`.
          * @description
@@ -233,7 +233,7 @@ class MDT_Configuration {
          * @public
          * @readonly
          */
-        readonly measurementQuantity: OPTIONAL<MeasurementQuantity>,
+        readonly measurementQuantity?: OPTIONAL<MeasurementQuantity>,
         /**
          * @summary `eventThreshold1F`.
          * @description
@@ -243,7 +243,7 @@ class MDT_Configuration {
          * @public
          * @readonly
          */
-        readonly eventThreshold1F: OPTIONAL<EventThreshold1F>,
+        readonly eventThreshold1F?: OPTIONAL<EventThreshold1F>,
         /**
          * @summary `eventThreshold1I`.
          * @description
@@ -253,7 +253,7 @@ class MDT_Configuration {
          * @public
          * @readonly
          */
-        readonly eventThreshold1I: OPTIONAL<EventThreshold1I>,
+        readonly eventThreshold1I?: OPTIONAL<EventThreshold1I>,
         /**
          * @summary `mdt_Allowed_PLMN_List`.
          * @description
@@ -263,7 +263,7 @@ class MDT_Configuration {
          * @public
          * @readonly
          */
-        readonly mdt_Allowed_PLMN_List: OPTIONAL<MDT_Allowed_PLMNId_List>,
+        readonly mdt_Allowed_PLMN_List?: OPTIONAL<MDT_Allowed_PLMNId_List>,
         /**
          * @summary Extensions that are not recognized.
          * @public

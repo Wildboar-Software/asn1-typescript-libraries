@@ -94,12 +94,12 @@ class List_Of_Early_SDP_Media_Components {
     readonly sDP_Type: OPTIONAL<SDP_Type>;
 
     constructor (
-        sDP_Offer_Timestamp: OPTIONAL<OCTET_STRING>,
-        sDP_Answer_Timestamp: OPTIONAL<OCTET_STRING>,
-        sDP_Media_Components: OPTIONAL<SDP_Media_Components[]>,
-        mediaInitiatorFlag: OPTIONAL<NULL>,
-        sDP_Session_Description: OPTIONAL<GraphicString[]>,
-        sDP_Type: OPTIONAL<SDP_Type>
+        sDP_Offer_Timestamp?: OPTIONAL<OCTET_STRING>,
+        sDP_Answer_Timestamp?: OPTIONAL<OCTET_STRING>,
+        sDP_Media_Components?: OPTIONAL<SDP_Media_Components[]>,
+        mediaInitiatorFlag?: OPTIONAL<NULL>,
+        sDP_Session_Description?: OPTIONAL<GraphicString[]>,
+        sDP_Type?: OPTIONAL<SDP_Type>
     ) {
         this.sDP_Offer_Timestamp = sDP_Offer_Timestamp;
         this.sDP_Answer_Timestamp = sDP_Answer_Timestamp;

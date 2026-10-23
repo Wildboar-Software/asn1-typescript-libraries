@@ -41,7 +41,7 @@ class EventSpecificInformationBCSM_originationAttemptDenied {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        originationDeniedCause: OPTIONAL<Cause>,
+        originationDeniedCause?: OPTIONAL<Cause>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.originationDeniedCause = originationDeniedCause;

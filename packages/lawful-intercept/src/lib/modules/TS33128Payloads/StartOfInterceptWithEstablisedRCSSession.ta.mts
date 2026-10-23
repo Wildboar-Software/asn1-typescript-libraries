@@ -130,8 +130,8 @@ class StartOfInterceptWithEstablisedRCSSession {
         rCSSessionEndpoints: RCSSessionEndpoints,
         rCSSessionLegs: OPTIONAL<RCSSIPSessionExchange[]>,
         rCSSessionInformation: RCSSessionContext[],
-        location: OPTIONAL<Location>,
-        additionalInstanceLocation: OPTIONAL<AdditionalInstanceLocation[]>,
+        location?: OPTIONAL<Location>,
+        additionalInstanceLocation?: OPTIONAL<AdditionalInstanceLocation[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.rCSTargetIdentities = rCSTargetIdentities;

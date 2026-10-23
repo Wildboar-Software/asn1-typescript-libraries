@@ -48,7 +48,7 @@ class Nullable_Named_Variable_instance {
          * @public
          * @readonly
          */
-        readonly name: OPTIONAL<ObjectName>,
+        readonly name?: OPTIONAL<ObjectName>,
         /**
          * @summary `definition`.
          * @description
@@ -59,7 +59,7 @@ class Nullable_Named_Variable_instance {
          * @public
          * @readonly
          */
-        readonly definition: OPTIONAL<Named_Variable_Definition>
+        readonly definition?: OPTIONAL<Named_Variable_Definition>
     ) {}
 
     /**

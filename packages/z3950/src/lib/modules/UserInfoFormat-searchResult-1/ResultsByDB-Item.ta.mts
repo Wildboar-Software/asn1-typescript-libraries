@@ -75,8 +75,8 @@ class ResultsByDB_Item {
 
     constructor (
         databases: ResultsByDB_Item_databases,
-        count: OPTIONAL<INTEGER>,
-        resultSetName: OPTIONAL<InternationalString>
+        count?: OPTIONAL<INTEGER>,
+        resultSetName?: OPTIONAL<InternationalString>
     ) {
         this.databases = databases;
         this.count = count;

@@ -79,7 +79,7 @@ class MoveCallSegmentsArg {
         targetCallSegmentAssociation: CSAID,
         callSegments: MoveCallSegmentsArg_callSegments_Item[],
         legs: MoveCallSegmentsArg_legs_Item[],
-        extensions: OPTIONAL<Extensions>,
+        extensions?: OPTIONAL<Extensions>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.targetCallSegmentAssociation = targetCallSegmentAssociation;

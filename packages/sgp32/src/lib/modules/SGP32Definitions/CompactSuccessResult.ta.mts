@@ -55,7 +55,7 @@ class CompactSuccessResult {
          * @public
          * @readonly
          */
-        readonly simaResponse: OPTIONAL<OCTET_STRING>
+        readonly simaResponse?: OPTIONAL<OCTET_STRING>
     ) {
         if (this.compactAid.length !== 2) {
             throw new ASN1SizeError("CompactSuccessResult.compactAid violates SIZE constraint");

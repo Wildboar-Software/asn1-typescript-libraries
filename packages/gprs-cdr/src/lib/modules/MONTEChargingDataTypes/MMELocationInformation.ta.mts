@@ -149,14 +149,14 @@ class MMELocationInformation {
     readonly eNodeBID: OPTIONAL<OCTET_STRING>;
 
     constructor (
-        eUTRANCellGlobalIdentity: OPTIONAL<OCTET_STRING>,
-        trackingAreaIdentity: OPTIONAL<OCTET_STRING>,
-        geographicalInformation: OPTIONAL<OCTET_STRING>,
-        geodeticInformation: OPTIONAL<OCTET_STRING>,
-        currentLocationRetrieved: OPTIONAL<CurrentLocationRetrieved>,
-        ageOfLocationInformation: OPTIONAL<INTEGER>,
-        userCSGInformation: OPTIONAL<UserCSGInformation>,
-        eNodeBID: OPTIONAL<OCTET_STRING>
+        eUTRANCellGlobalIdentity?: OPTIONAL<OCTET_STRING>,
+        trackingAreaIdentity?: OPTIONAL<OCTET_STRING>,
+        geographicalInformation?: OPTIONAL<OCTET_STRING>,
+        geodeticInformation?: OPTIONAL<OCTET_STRING>,
+        currentLocationRetrieved?: OPTIONAL<CurrentLocationRetrieved>,
+        ageOfLocationInformation?: OPTIONAL<INTEGER>,
+        userCSGInformation?: OPTIONAL<UserCSGInformation>,
+        eNodeBID?: OPTIONAL<OCTET_STRING>
     ) {
         this.eUTRANCellGlobalIdentity = eUTRANCellGlobalIdentity;
         this.trackingAreaIdentity = trackingAreaIdentity;

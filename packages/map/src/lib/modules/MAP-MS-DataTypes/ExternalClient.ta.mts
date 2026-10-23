@@ -49,7 +49,7 @@ class ExternalClient {
          * @public
          * @readonly
          */
-        readonly gmlc_Restriction: OPTIONAL<GMLC_Restriction>,
+        readonly gmlc_Restriction?: OPTIONAL<GMLC_Restriction>,
         /**
          * @summary `notificationToMSUser`.
          * @description
@@ -61,13 +61,13 @@ class ExternalClient {
          * @public
          * @readonly
          */
-        readonly notificationToMSUser: OPTIONAL<NotificationToMSUser>,
+        readonly notificationToMSUser?: OPTIONAL<NotificationToMSUser>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

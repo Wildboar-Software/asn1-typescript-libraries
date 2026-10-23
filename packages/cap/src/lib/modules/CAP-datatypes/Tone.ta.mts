@@ -38,7 +38,7 @@ export class Tone {
          * @public
          * @readonly
          */
-        readonly duration: OPTIONAL<INTEGER>,
+        readonly duration?: OPTIONAL<INTEGER>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}
 

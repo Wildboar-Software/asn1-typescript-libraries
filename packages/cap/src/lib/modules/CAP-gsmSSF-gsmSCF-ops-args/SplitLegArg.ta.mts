@@ -60,13 +60,13 @@ class SplitLegArg {
          * @public
          * @readonly
          */
-        readonly newCallSegment: OPTIONAL<CallSegmentID>,
+        readonly newCallSegment?: OPTIONAL<CallSegmentID>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<Extensions>,
+        readonly extensions?: OPTIONAL<Extensions>,
         /**
          * @summary Extensions that are not recognized.
          * @public

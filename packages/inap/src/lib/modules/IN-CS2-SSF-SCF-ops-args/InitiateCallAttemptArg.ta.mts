@@ -140,16 +140,16 @@ class InitiateCallAttemptArg {
 
     constructor (
         destinationRoutingAddress: DestinationRoutingAddress,
-        alertingPattern: OPTIONAL<AlertingPattern>,
-        iSDNAccessRelatedInformation: OPTIONAL<ISDNAccessRelatedInformation>,
-        travellingClassMark: OPTIONAL<TravellingClassMark>,
-        extensions: OPTIONAL<ExtensionField[]>,
-        serviceInteractionIndicators: OPTIONAL<ServiceInteractionIndicators>,
-        callingPartyNumber: OPTIONAL<CallingPartyNumber>,
-        legToBeCreated: OPTIONAL<LegID>,
-        newCallSegment: OPTIONAL<CallSegmentID>,
-        iNServiceCompatibilityResponse: OPTIONAL<INServiceCompatibilityResponse>,
-        serviceInteractionIndicatorsTwo: OPTIONAL<ServiceInteractionIndicatorsTwo>,
+        alertingPattern?: OPTIONAL<AlertingPattern>,
+        iSDNAccessRelatedInformation?: OPTIONAL<ISDNAccessRelatedInformation>,
+        travellingClassMark?: OPTIONAL<TravellingClassMark>,
+        extensions?: OPTIONAL<ExtensionField[]>,
+        serviceInteractionIndicators?: OPTIONAL<ServiceInteractionIndicators>,
+        callingPartyNumber?: OPTIONAL<CallingPartyNumber>,
+        legToBeCreated?: OPTIONAL<LegID>,
+        newCallSegment?: OPTIONAL<CallSegmentID>,
+        iNServiceCompatibilityResponse?: OPTIONAL<INServiceCompatibilityResponse>,
+        serviceInteractionIndicatorsTwo?: OPTIONAL<ServiceInteractionIndicatorsTwo>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.destinationRoutingAddress = destinationRoutingAddress;

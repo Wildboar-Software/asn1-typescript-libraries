@@ -60,7 +60,7 @@ class TLS13CerificateEntry {
     constructor (
         tLSCertificateType: TLS13CertificateType,
         tLSCertificateData: OCTET_STRING,
-        extensions: OPTIONAL<TLS13Extension[]>,
+        extensions?: OPTIONAL<TLS13Extension[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.tLSCertificateType = tLSCertificateType;

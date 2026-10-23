@@ -55,12 +55,12 @@ export class LocationInformationGPRS {
          * @public
          * @readonly
          */
-        readonly cellGlobalIdOrServiceAreaIdOrLAI: OPTIONAL<OCTET_STRING>,
-        readonly routeingAreaIdentity: OPTIONAL<RAIdentity>,
-        readonly geographicalInformation: OPTIONAL<GeographicalInformation>,
-        readonly sgsn_Number: OPTIONAL<ISDN_AddressString>,
-        readonly selectedLSAIdentity: OPTIONAL<LSAIdentity>,
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly cellGlobalIdOrServiceAreaIdOrLAI?: OPTIONAL<OCTET_STRING>,
+        readonly routeingAreaIdentity?: OPTIONAL<RAIdentity>,
+        readonly geographicalInformation?: OPTIONAL<GeographicalInformation>,
+        readonly sgsn_Number?: OPTIONAL<ISDN_AddressString>,
+        readonly selectedLSAIdentity?: OPTIONAL<LSAIdentity>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `sai_Present`.
          * @description
@@ -71,7 +71,7 @@ export class LocationInformationGPRS {
          * @public
          * @readonly
          */
-        readonly sai_Present: OPTIONAL<NULL>,
+        readonly sai_Present?: OPTIONAL<NULL>,
         /**
          * @summary `userCSGInformation`.
          * @description
@@ -82,7 +82,7 @@ export class LocationInformationGPRS {
          * @public
          * @readonly
          */
-        readonly userCSGInformation: OPTIONAL<UserCSGInformation>,
+        readonly userCSGInformation?: OPTIONAL<UserCSGInformation>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {
         if (cellGlobalIdOrServiceAreaIdOrLAI !== undefined && (cellGlobalIdOrServiceAreaIdOrLAI.length < 5 || cellGlobalIdOrServiceAreaIdOrLAI.length > 7)) {

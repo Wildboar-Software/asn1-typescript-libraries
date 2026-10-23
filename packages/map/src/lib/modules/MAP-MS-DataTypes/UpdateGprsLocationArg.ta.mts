@@ -113,7 +113,7 @@ class UpdateGprsLocationArg {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `sgsn_Capability`.
          * @description
@@ -125,7 +125,7 @@ class UpdateGprsLocationArg {
          * @public
          * @readonly
          */
-        readonly sgsn_Capability: OPTIONAL<SGSN_Capability>,
+        readonly sgsn_Capability?: OPTIONAL<SGSN_Capability>,
         /**
          * @summary `informPreviousNetworkEntity`.
          * @description
@@ -140,7 +140,7 @@ class UpdateGprsLocationArg {
          * @public
          * @readonly
          */
-        readonly informPreviousNetworkEntity: OPTIONAL<NULL>,
+        readonly informPreviousNetworkEntity?: OPTIONAL<NULL>,
         /**
          * @summary `ps_LCS_NotSupportedByUE`.
          * @description
@@ -152,7 +152,7 @@ class UpdateGprsLocationArg {
          * @public
          * @readonly
          */
-        readonly ps_LCS_NotSupportedByUE: OPTIONAL<NULL>,
+        readonly ps_LCS_NotSupportedByUE?: OPTIONAL<NULL>,
         /**
          * @summary `v_gmlc_Address`.
          * @description
@@ -164,7 +164,7 @@ class UpdateGprsLocationArg {
          * @public
          * @readonly
          */
-        readonly v_gmlc_Address: OPTIONAL<GSN_Address>,
+        readonly v_gmlc_Address?: OPTIONAL<GSN_Address>,
         /**
          * @summary `add_info`.
          * @description
@@ -177,7 +177,7 @@ class UpdateGprsLocationArg {
          * @public
          * @readonly
          */
-        readonly add_info: OPTIONAL<ADD_Info>,
+        readonly add_info?: OPTIONAL<ADD_Info>,
         /**
          * @summary `eps_info`.
          * @description
@@ -189,7 +189,7 @@ class UpdateGprsLocationArg {
          * @public
          * @readonly
          */
-        readonly eps_info: OPTIONAL<EPS_Info>,
+        readonly eps_info?: OPTIONAL<EPS_Info>,
         /**
          * @summary `servingNodeTypeIndicator`.
          * @description
@@ -201,7 +201,7 @@ class UpdateGprsLocationArg {
          * @public
          * @readonly
          */
-        readonly servingNodeTypeIndicator: OPTIONAL<NULL>,
+        readonly servingNodeTypeIndicator?: OPTIONAL<NULL>,
         /**
          * @summary `skipSubscriberDataUpdate`.
          * @description
@@ -215,7 +215,7 @@ class UpdateGprsLocationArg {
          * @public
          * @readonly
          */
-        readonly skipSubscriberDataUpdate: OPTIONAL<NULL>,
+        readonly skipSubscriberDataUpdate?: OPTIONAL<NULL>,
         /**
          * @summary `usedRAT_Type`.
          * @description
@@ -227,7 +227,7 @@ class UpdateGprsLocationArg {
          * @public
          * @readonly
          */
-        readonly usedRAT_Type: OPTIONAL<Used_RAT_Type>,
+        readonly usedRAT_Type?: OPTIONAL<Used_RAT_Type>,
         /**
          * @summary `gprsSubscriptionDataNotNeeded`.
          * @description
@@ -239,7 +239,7 @@ class UpdateGprsLocationArg {
          * @public
          * @readonly
          */
-        readonly gprsSubscriptionDataNotNeeded: OPTIONAL<NULL>,
+        readonly gprsSubscriptionDataNotNeeded?: OPTIONAL<NULL>,
         /**
          * @summary `nodeTypeIndicator`.
          * @description
@@ -251,7 +251,7 @@ class UpdateGprsLocationArg {
          * @public
          * @readonly
          */
-        readonly nodeTypeIndicator: OPTIONAL<NULL>,
+        readonly nodeTypeIndicator?: OPTIONAL<NULL>,
         /**
          * @summary `areaRestricted`.
          * @description
@@ -263,7 +263,7 @@ class UpdateGprsLocationArg {
          * @public
          * @readonly
          */
-        readonly areaRestricted: OPTIONAL<NULL>,
+        readonly areaRestricted?: OPTIONAL<NULL>,
         /**
          * @summary `ue_reachableIndicator`.
          * @description
@@ -275,7 +275,7 @@ class UpdateGprsLocationArg {
          * @public
          * @readonly
          */
-        readonly ue_reachableIndicator: OPTIONAL<NULL>,
+        readonly ue_reachableIndicator?: OPTIONAL<NULL>,
         /**
          * @summary `epsSubscriptionDataNotNeeded`.
          * @description
@@ -287,7 +287,7 @@ class UpdateGprsLocationArg {
          * @public
          * @readonly
          */
-        readonly epsSubscriptionDataNotNeeded: OPTIONAL<NULL>,
+        readonly epsSubscriptionDataNotNeeded?: OPTIONAL<NULL>,
         /**
          * @summary `ue_srvcc_Capability`.
          * @description
@@ -299,7 +299,7 @@ class UpdateGprsLocationArg {
          * @public
          * @readonly
          */
-        readonly ue_srvcc_Capability: OPTIONAL<UE_SRVCC_Capability>,
+        readonly ue_srvcc_Capability?: OPTIONAL<UE_SRVCC_Capability>,
         /**
          * @summary `eplmn_List`.
          * @description
@@ -311,7 +311,7 @@ class UpdateGprsLocationArg {
          * @public
          * @readonly
          */
-        readonly eplmn_List: OPTIONAL<EPLMN_List>,
+        readonly eplmn_List?: OPTIONAL<EPLMN_List>,
         /**
          * @summary `mmeNumberforMTSMS`.
          * @description
@@ -323,7 +323,7 @@ class UpdateGprsLocationArg {
          * @public
          * @readonly
          */
-        readonly mmeNumberforMTSMS: OPTIONAL<ISDN_AddressString>,
+        readonly mmeNumberforMTSMS?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `smsRegisterRequest`.
          * @description
@@ -335,7 +335,7 @@ class UpdateGprsLocationArg {
          * @public
          * @readonly
          */
-        readonly smsRegisterRequest: OPTIONAL<SMSRegisterRequest>,
+        readonly smsRegisterRequest?: OPTIONAL<SMSRegisterRequest>,
         /**
          * @summary `sms_Only`.
          * @description
@@ -347,7 +347,7 @@ class UpdateGprsLocationArg {
          * @public
          * @readonly
          */
-        readonly sms_Only: OPTIONAL<NULL>,
+        readonly sms_Only?: OPTIONAL<NULL>,
         /**
          * @summary `removalofMMERegistrationforSMS`.
          * @description
@@ -359,7 +359,7 @@ class UpdateGprsLocationArg {
          * @public
          * @readonly
          */
-        readonly removalofMMERegistrationforSMS: OPTIONAL<NULL>,
+        readonly removalofMMERegistrationforSMS?: OPTIONAL<NULL>,
         /**
          * @summary `sgsn_Name`.
          * @description
@@ -371,7 +371,7 @@ class UpdateGprsLocationArg {
          * @public
          * @readonly
          */
-        readonly sgsn_Name: OPTIONAL<DiameterIdentity>,
+        readonly sgsn_Name?: OPTIONAL<DiameterIdentity>,
         /**
          * @summary `sgsn_Realm`.
          * @description
@@ -383,7 +383,7 @@ class UpdateGprsLocationArg {
          * @public
          * @readonly
          */
-        readonly sgsn_Realm: OPTIONAL<DiameterIdentity>,
+        readonly sgsn_Realm?: OPTIONAL<DiameterIdentity>,
         /**
          * @summary `lgd_supportIndicator`.
          * @description
@@ -395,7 +395,7 @@ class UpdateGprsLocationArg {
          * @public
          * @readonly
          */
-        readonly lgd_supportIndicator: OPTIONAL<NULL>,
+        readonly lgd_supportIndicator?: OPTIONAL<NULL>,
         /**
          * @summary `adjacentPLMN_List`.
          * @description
@@ -408,7 +408,7 @@ class UpdateGprsLocationArg {
          * @public
          * @readonly
          */
-        readonly adjacentPLMN_List: OPTIONAL<AdjacentPLMN_List>,
+        readonly adjacentPLMN_List?: OPTIONAL<AdjacentPLMN_List>,
         /**
          * @summary Extensions that are not recognized.
          * @public

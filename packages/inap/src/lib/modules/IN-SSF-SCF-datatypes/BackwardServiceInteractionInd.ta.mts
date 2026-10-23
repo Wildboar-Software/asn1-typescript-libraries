@@ -73,10 +73,10 @@ class BackwardServiceInteractionInd {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        conferenceTreatmentIndicator: OPTIONAL<OCTET_STRING>,
-        callCompletionTreatmentIndicator: OPTIONAL<OCTET_STRING>,
-        holdTreatmentIndicator: OPTIONAL<OCTET_STRING>,
-        ectTreatmentIndicator: OPTIONAL<OCTET_STRING>,
+        conferenceTreatmentIndicator?: OPTIONAL<OCTET_STRING>,
+        callCompletionTreatmentIndicator?: OPTIONAL<OCTET_STRING>,
+        holdTreatmentIndicator?: OPTIONAL<OCTET_STRING>,
+        ectTreatmentIndicator?: OPTIONAL<OCTET_STRING>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.conferenceTreatmentIndicator = conferenceTreatmentIndicator;

@@ -79,7 +79,7 @@ class ControlElement_beginDomainDef {
          * @public
          * @readonly
          */
-        readonly loadData: OPTIONAL<LoadData>
+        readonly loadData?: OPTIONAL<LoadData>
     ) {}
 
     /**

@@ -53,7 +53,7 @@ class ChargingEvent {
     constructor (
         eventTypeCharging: EventTypeCharging,
         monitorMode: MonitorMode,
-        legID: OPTIONAL<LegID>
+        legID?: OPTIONAL<LegID>
     ) {
         this.eventTypeCharging = eventTypeCharging;
         this.monitorMode = monitorMode;

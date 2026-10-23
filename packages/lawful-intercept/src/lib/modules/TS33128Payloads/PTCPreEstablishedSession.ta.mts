@@ -201,9 +201,9 @@ class PTCPreEstablishedSession {
         pTCMediaCapability: UTF8String,
         pTCPreEstSessionID: PTCSessionInfo,
         pTCPreEstStatus: PTCPreEstStatus,
-        pTCMediaStreamAvail: OPTIONAL<BOOLEAN>,
-        location: OPTIONAL<Location>,
-        pTCFailureCode: OPTIONAL<PTCFailureCode>,
+        pTCMediaStreamAvail?: OPTIONAL<BOOLEAN>,
+        location?: OPTIONAL<Location>,
+        pTCFailureCode?: OPTIONAL<PTCFailureCode>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.pTCTargetInformation = pTCTargetInformation;

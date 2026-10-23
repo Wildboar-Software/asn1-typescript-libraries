@@ -63,7 +63,7 @@ class NewACSEUserInformationForCSTA {
          * @public
          * @readonly
          */
-        readonly cSTAFunctionsRequiredByApplication: OPTIONAL<CSTAFunctionality>,
+        readonly cSTAFunctionsRequiredByApplication?: OPTIONAL<CSTAFunctionality>,
         /**
          * @summary `cSTAFunctionsThatCanBeSupplied`.
          * @description
@@ -71,14 +71,14 @@ class NewACSEUserInformationForCSTA {
          * @public
          * @readonly
          */
-        readonly cSTAFunctionsThatCanBeSupplied: OPTIONAL<CSTAFunctionality>,
+        readonly cSTAFunctionsThatCanBeSupplied?: OPTIONAL<CSTAFunctionality>,
         /**
          * @summary `cSTAPrivateDataVersionList`.
          * @description Private-data versions for this association.
          * @public
          * @readonly
          */
-        readonly cSTAPrivateDataVersionList: OPTIONAL<CSTAPrivateDataVersionList>
+        readonly cSTAPrivateDataVersionList?: OPTIONAL<CSTAPrivateDataVersionList>
     ) {}
 
     /**

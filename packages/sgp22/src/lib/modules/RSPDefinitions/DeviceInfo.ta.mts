@@ -70,7 +70,7 @@ class DeviceInfo {
          * @public
          * @readonly
          */
-        readonly imei: OPTIONAL<Octet8>
+        readonly imei?: OPTIONAL<Octet8>
     ) {}
 
     /**

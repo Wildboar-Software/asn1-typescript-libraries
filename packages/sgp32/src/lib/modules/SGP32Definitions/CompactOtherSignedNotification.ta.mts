@@ -90,7 +90,7 @@ class CompactOtherSignedNotification {
          * @public
          * @readonly
          */
-        readonly euiccCiPKIdentifierToBeUsed: OPTIONAL<OCTET_STRING>
+        readonly euiccCiPKIdentifierToBeUsed?: OPTIONAL<OCTET_STRING>
     ) {}
 
     /**

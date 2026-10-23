@@ -90,9 +90,9 @@ class PartyInformation_partyIdentity {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        imsi: OPTIONAL<OCTET_STRING>,
-        msISDN: OPTIONAL<OCTET_STRING>,
-        nai: OPTIONAL<OCTET_STRING>,
+        imsi?: OPTIONAL<OCTET_STRING>,
+        msISDN?: OPTIONAL<OCTET_STRING>,
+        nai?: OPTIONAL<OCTET_STRING>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.imsi = imsi;

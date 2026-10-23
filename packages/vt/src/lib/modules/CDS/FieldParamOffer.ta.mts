@@ -55,7 +55,7 @@ class FieldParamOffer {
          * @public
          * @readonly
          */
-        readonly capability: OPTIONAL<FieldParamOffer_capability>,
+        readonly capability?: OPTIONAL<FieldParamOffer_capability>,
         /**
          * @summary `maxFields`.
          * @description
@@ -64,7 +64,7 @@ class FieldParamOffer {
          * @public
          * @readonly
          */
-        readonly maxFields: OPTIONAL<FieldParamOffer_maxFields>,
+        readonly maxFields?: OPTIONAL<FieldParamOffer_maxFields>,
         /**
          * @summary `maxFieldElements`.
          * @description
@@ -73,7 +73,7 @@ class FieldParamOffer {
          * @public
          * @readonly
          */
-        readonly maxFieldElements: OPTIONAL<FieldParamOffer_maxFieldElements>,
+        readonly maxFieldElements?: OPTIONAL<FieldParamOffer_maxFieldElements>,
         /**
          * @summary `accessOutside`.
          * @description
@@ -83,7 +83,7 @@ class FieldParamOffer {
          * @public
          * @readonly
          */
-        readonly accessOutside: OPTIONAL<FieldParamOffer_accessOutside>
+        readonly accessOutside?: OPTIONAL<FieldParamOffer_accessOutside>
     ) {}
 
     /**

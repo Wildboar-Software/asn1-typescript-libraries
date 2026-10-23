@@ -121,9 +121,9 @@ class ACRInitiateReq {
         eASID: OPTIONAL<EASID>,
         aCID: OPTIONAL<ACID>,
         tEASEndpoint: EASEndpoint,
-        sEASEndpoint: OPTIONAL<EASEndpoint>,
-        previousTEASEndpoint: OPTIONAL<EASEndpoint>,
-        routeReq: OPTIONAL<RouteToLocation>,
+        sEASEndpoint?: OPTIONAL<EASEndpoint>,
+        previousTEASEndpoint?: OPTIONAL<EASEndpoint>,
+        routeReq?: OPTIONAL<RouteToLocation>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.eASID = eASID;

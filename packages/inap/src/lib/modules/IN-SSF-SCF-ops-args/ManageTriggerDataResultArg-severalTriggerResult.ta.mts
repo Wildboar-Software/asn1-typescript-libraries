@@ -51,7 +51,7 @@ class ManageTriggerDataResultArg_severalTriggerResult {
 
     constructor (
         results: TriggerResults,
-        extensions: OPTIONAL<Extensions>,
+        extensions?: OPTIONAL<Extensions>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.results = results;

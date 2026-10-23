@@ -91,7 +91,7 @@ class SetLampModeArgument {
          * @public
          * @readonly
          */
-        readonly lampBrightness: OPTIONAL<LampBrightness>,
+        readonly lampBrightness?: OPTIONAL<LampBrightness>,
         /**
          * @summary `lampColor`.
          * @description
@@ -101,7 +101,7 @@ class SetLampModeArgument {
          * @public
          * @readonly
          */
-        readonly lampColor: OPTIONAL<LampColor>,
+        readonly lampColor?: OPTIONAL<LampColor>,
         /**
          * @summary `extensions`.
          * @description
@@ -111,7 +111,7 @@ class SetLampModeArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

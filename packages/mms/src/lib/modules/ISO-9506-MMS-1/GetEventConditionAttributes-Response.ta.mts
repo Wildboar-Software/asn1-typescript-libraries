@@ -94,7 +94,7 @@ class GetEventConditionAttributes_Response {
          * @public
          * @readonly
          */
-        readonly priority: OPTIONAL<Priority>,
+        readonly priority?: OPTIONAL<Priority>,
         /**
          * @summary `severity`.
          * @description
@@ -106,7 +106,7 @@ class GetEventConditionAttributes_Response {
          * @public
          * @readonly
          */
-        readonly severity: OPTIONAL<Unsigned8>,
+        readonly severity?: OPTIONAL<Unsigned8>,
         /**
          * @summary `alarmSummaryReports`.
          * @description
@@ -120,7 +120,7 @@ class GetEventConditionAttributes_Response {
          * @public
          * @readonly
          */
-        readonly alarmSummaryReports: OPTIONAL<BOOLEAN>,
+        readonly alarmSummaryReports?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `monitoredVariable`.
          * @description
@@ -134,7 +134,7 @@ class GetEventConditionAttributes_Response {
          * @public
          * @readonly
          */
-        readonly monitoredVariable: OPTIONAL<GetEventConditionAttributes_Response_monitoredVariable>,
+        readonly monitoredVariable?: OPTIONAL<GetEventConditionAttributes_Response_monitoredVariable>,
         /**
          * @summary `evaluationInterval`.
          * @description
@@ -146,7 +146,7 @@ class GetEventConditionAttributes_Response {
          * @public
          * @readonly
          */
-        readonly evaluationInterval: OPTIONAL<Unsigned32>,
+        readonly evaluationInterval?: OPTIONAL<Unsigned32>,
         /**
          * @summary `accessControlList`.
          * @description
@@ -160,7 +160,7 @@ class GetEventConditionAttributes_Response {
          * @public
          * @readonly
          */
-        readonly accessControlList: OPTIONAL<Identifier>
+        readonly accessControlList?: OPTIONAL<Identifier>
     ) {}
 
     /**

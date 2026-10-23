@@ -60,7 +60,7 @@ class UnitControlUpload_Response {
          * @public
          * @readonly
          */
-        readonly nextElement: OPTIONAL<UnitControlUpload_Response_nextElement>
+        readonly nextElement?: OPTIONAL<UnitControlUpload_Response_nextElement>
     ) {}
 
     /**

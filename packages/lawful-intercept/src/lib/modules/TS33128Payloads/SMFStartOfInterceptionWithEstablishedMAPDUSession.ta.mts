@@ -543,12 +543,12 @@ class SMFStartOfInterceptionWithEstablishedMAPDUSession {
         mAUpgradeIndication: OPTIONAL<SMFMAUpgradeIndication>,
         ePSPDNCnxInfo: OPTIONAL<SMFEPSPDNCnxInfo>,
         mAAcceptedIndication: SMFMAAcceptedIndication,
-        aTSSSContainer: OPTIONAL<ATSSSContainer>,
-        ePS5GSComboInfo: OPTIONAL<EPS5GSComboInfo>,
-        uEEPSPDNConnection: OPTIONAL<UEEPSPDNConnection>,
-        pCCRules: OPTIONAL<PCCRuleSet>,
-        pFDDataForApps: OPTIONAL<PFDDataForApps>,
-        ePSStartOfInterceptionWithEstablishedPDNConnection: OPTIONAL<EPSStartOfInterceptionWithEstablishedPDNConnection>,
+        aTSSSContainer?: OPTIONAL<ATSSSContainer>,
+        ePS5GSComboInfo?: OPTIONAL<EPS5GSComboInfo>,
+        uEEPSPDNConnection?: OPTIONAL<UEEPSPDNConnection>,
+        pCCRules?: OPTIONAL<PCCRuleSet>,
+        pFDDataForApps?: OPTIONAL<PFDDataForApps>,
+        ePSStartOfInterceptionWithEstablishedPDNConnection?: OPTIONAL<EPSStartOfInterceptionWithEstablishedPDNConnection>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.sUPI = sUPI;

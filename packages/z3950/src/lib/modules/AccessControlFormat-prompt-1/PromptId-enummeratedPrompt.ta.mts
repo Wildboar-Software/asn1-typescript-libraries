@@ -61,7 +61,7 @@ class PromptId_enummeratedPrompt {
 
     constructor (
         type_: PromptId_enummeratedPrompt_type,
-        suggestedString: OPTIONAL<InternationalString>
+        suggestedString?: OPTIONAL<InternationalString>
     ) {
         this.type_ = type_;
         this.suggestedString = suggestedString;

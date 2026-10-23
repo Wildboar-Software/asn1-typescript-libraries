@@ -42,7 +42,7 @@ class UU_Data {
          * @public
          * @readonly
          */
-        readonly uuIndicator: OPTIONAL<UUIndicator>,
+        readonly uuIndicator?: OPTIONAL<UUIndicator>,
         /**
          * @summary `uui`.
          * @description
@@ -52,7 +52,7 @@ class UU_Data {
          * @public
          * @readonly
          */
-        readonly uui: OPTIONAL<UUI>,
+        readonly uui?: OPTIONAL<UUI>,
         /**
          * @summary `uusCFInteraction`.
          * @description
@@ -62,7 +62,7 @@ class UU_Data {
          * @public
          * @readonly
          */
-        readonly uusCFInteraction: OPTIONAL<NULL>,
+        readonly uusCFInteraction?: OPTIONAL<NULL>,
         /**
          * @summary `extensionContainer`.
          * @description
@@ -72,7 +72,7 @@ class UU_Data {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

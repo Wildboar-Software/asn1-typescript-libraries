@@ -75,8 +75,8 @@ class GERANPositioningInfo {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        gERANPositioningData: OPTIONAL<GERANPositioningData>,
-        gERANGANSSPositioningData: OPTIONAL<GERANGANSSPositioningData>,
+        gERANPositioningData?: OPTIONAL<GERANPositioningData>,
+        gERANGANSSPositioningData?: OPTIONAL<GERANGANSSPositioningData>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.gERANPositioningData = gERANPositioningData;

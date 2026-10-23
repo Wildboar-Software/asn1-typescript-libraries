@@ -48,7 +48,7 @@ export class TimeIfTariffSwitch {
          * @public
          * @readonly
          */
-        readonly tariffSwitchInterval: OPTIONAL<INTEGER>,
+        readonly tariffSwitchInterval?: OPTIONAL<INTEGER>,
     ) {
         if ((typeof timeSinceTariffSwitch === "bigint" ? (timeSinceTariffSwitch < 0n || timeSinceTariffSwitch > 864000n) : (timeSinceTariffSwitch < 0 || timeSinceTariffSwitch > 864000))) {
             throw new ASN1OverflowError("TimeIfTariffSwitch.timeSinceTariffSwitch violates INTEGER constraint");

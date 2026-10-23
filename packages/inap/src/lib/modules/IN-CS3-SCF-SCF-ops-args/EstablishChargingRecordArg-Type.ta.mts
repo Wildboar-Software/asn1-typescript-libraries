@@ -146,19 +146,19 @@ class EstablishChargingRecordArg_Type {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        userCredit: OPTIONAL<UserCredit>,
-        chargingParameters: OPTIONAL<ChargingParameters>,
-        reportExpected: OPTIONAL<BOOLEAN>,
-        securityParameters: OPTIONAL<SecurityParameters>,
-        extensions: OPTIONAL<Extensions>,
-        consumedCreditAction: OPTIONAL<ConsumedCreditAction>,
-        newChargingParameters: OPTIONAL<ChargingParameters>,
-        reportAddress: OPTIONAL<ReportDestinationInformation>,
-        container: OPTIONAL<FreeContainer>,
-        correlationId: OPTIONAL<CorrelationID>,
-        acksequence: OPTIONAL<INTEGER>,
-        splitcharge: OPTIONAL<ChargingSignallingInformation>,
-        reportCondition: OPTIONAL<ReportConditionEvent>,
+        userCredit?: OPTIONAL<UserCredit>,
+        chargingParameters?: OPTIONAL<ChargingParameters>,
+        reportExpected?: OPTIONAL<BOOLEAN>,
+        securityParameters?: OPTIONAL<SecurityParameters>,
+        extensions?: OPTIONAL<Extensions>,
+        consumedCreditAction?: OPTIONAL<ConsumedCreditAction>,
+        newChargingParameters?: OPTIONAL<ChargingParameters>,
+        reportAddress?: OPTIONAL<ReportDestinationInformation>,
+        container?: OPTIONAL<FreeContainer>,
+        correlationId?: OPTIONAL<CorrelationID>,
+        acksequence?: OPTIONAL<INTEGER>,
+        splitcharge?: OPTIONAL<ChargingSignallingInformation>,
+        reportCondition?: OPTIONAL<ReportConditionEvent>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.userCredit = userCredit;

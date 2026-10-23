@@ -51,7 +51,7 @@ class TraceEventList {
          * @public
          * @readonly
          */
-        readonly msc_s_List: OPTIONAL<MSC_S_EventList>,
+        readonly msc_s_List?: OPTIONAL<MSC_S_EventList>,
         /**
          * @summary `mgw_List`.
          * @description
@@ -61,7 +61,7 @@ class TraceEventList {
          * @public
          * @readonly
          */
-        readonly mgw_List: OPTIONAL<MGW_EventList>,
+        readonly mgw_List?: OPTIONAL<MGW_EventList>,
         /**
          * @summary `sgsn_List`.
          * @description
@@ -71,7 +71,7 @@ class TraceEventList {
          * @public
          * @readonly
          */
-        readonly sgsn_List: OPTIONAL<SGSN_EventList>,
+        readonly sgsn_List?: OPTIONAL<SGSN_EventList>,
         /**
          * @summary `ggsn_List`.
          * @description
@@ -81,7 +81,7 @@ class TraceEventList {
          * @public
          * @readonly
          */
-        readonly ggsn_List: OPTIONAL<GGSN_EventList>,
+        readonly ggsn_List?: OPTIONAL<GGSN_EventList>,
         /**
          * @summary `bmsc_List`.
          * @description
@@ -91,7 +91,7 @@ class TraceEventList {
          * @public
          * @readonly
          */
-        readonly bmsc_List: OPTIONAL<BMSC_EventList>,
+        readonly bmsc_List?: OPTIONAL<BMSC_EventList>,
         /**
          * @summary `mme_List`.
          * @description
@@ -101,7 +101,7 @@ class TraceEventList {
          * @public
          * @readonly
          */
-        readonly mme_List: OPTIONAL<MME_EventList>,
+        readonly mme_List?: OPTIONAL<MME_EventList>,
         /**
          * @summary `sgw_List`.
          * @description
@@ -111,7 +111,7 @@ class TraceEventList {
          * @public
          * @readonly
          */
-        readonly sgw_List: OPTIONAL<SGW_EventList>,
+        readonly sgw_List?: OPTIONAL<SGW_EventList>,
         /**
          * @summary `pgw_List`.
          * @description
@@ -121,7 +121,7 @@ class TraceEventList {
          * @public
          * @readonly
          */
-        readonly pgw_List: OPTIONAL<PGW_EventList>,
+        readonly pgw_List?: OPTIONAL<PGW_EventList>,
         /**
          * @summary Extensions that are not recognized.
          * @public

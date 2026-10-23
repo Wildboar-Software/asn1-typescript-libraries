@@ -54,7 +54,7 @@ class SNRcontent {
          * @public
          * @readonly
          */
-        readonly argValuesList: OPTIONAL<ProfileArgumValueList>
+        readonly argValuesList?: OPTIONAL<ProfileArgumValueList>
     ) {}
 
     /**

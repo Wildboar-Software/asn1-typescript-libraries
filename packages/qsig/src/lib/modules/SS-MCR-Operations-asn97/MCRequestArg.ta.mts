@@ -130,7 +130,7 @@ class MCRequestArg {
         requestingAddress: OPTIONAL<PresentedAddressUnscreened>,
         cooperatingAddress: OPTIONAL<PresentedAddressUnscreened>,
         correlation: Correlation,
-        extensions: OPTIONAL<MCRExtensions>,
+        extensions?: OPTIONAL<MCRExtensions>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.callType = callType;

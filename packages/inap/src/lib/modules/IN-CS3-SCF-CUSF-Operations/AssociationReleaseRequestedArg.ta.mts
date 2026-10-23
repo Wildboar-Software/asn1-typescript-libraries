@@ -87,11 +87,11 @@ class AssociationReleaseRequestedArg {
 
     constructor (
         callUnrelatedDpSpecificCommonParameters: CallUnrelatedDpSpecificCommonParameters,
-        componentType: OPTIONAL<ComponentType>,
-        componentCorrelationID: OPTIONAL<ComponentCorrelationID>,
-        extensions: OPTIONAL<Extensions>,
-        component: OPTIONAL<Component>,
-        legID: OPTIONAL<LegID>,
+        componentType?: OPTIONAL<ComponentType>,
+        componentCorrelationID?: OPTIONAL<ComponentCorrelationID>,
+        extensions?: OPTIONAL<Extensions>,
+        component?: OPTIONAL<Component>,
+        legID?: OPTIONAL<LegID>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.callUnrelatedDpSpecificCommonParameters = callUnrelatedDpSpecificCommonParameters;

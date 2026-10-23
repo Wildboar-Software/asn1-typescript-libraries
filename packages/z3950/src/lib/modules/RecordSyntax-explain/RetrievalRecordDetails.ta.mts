@@ -118,8 +118,8 @@ class RetrievalRecordDetails {
         databaseName: DatabaseName,
         schema: OBJECT_IDENTIFIER,
         recordSyntax: OBJECT_IDENTIFIER,
-        description: OPTIONAL<HumanString>,
-        detailsPerElement: OPTIONAL<PerElementDetails[]>
+        description?: OPTIONAL<HumanString>,
+        detailsPerElement?: OPTIONAL<PerElementDetails[]>
     ) {
         this.commonInfo = commonInfo;
         this.databaseName = databaseName;

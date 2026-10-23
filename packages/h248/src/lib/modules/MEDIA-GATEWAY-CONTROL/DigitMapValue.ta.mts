@@ -106,7 +106,7 @@ class DigitMapValue {
          * @public
          * @readonly
          */
-        readonly durationTimer: OPTIONAL<INTEGER>,
+        readonly durationTimer?: OPTIONAL<INTEGER>,
         /**
          * @summary Extensions that are not recognized.
          * @description

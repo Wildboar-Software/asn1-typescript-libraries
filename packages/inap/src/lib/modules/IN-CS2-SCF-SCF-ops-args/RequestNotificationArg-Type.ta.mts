@@ -44,7 +44,7 @@ class RequestNotificationArg_Type {
 
     constructor (
         requestedNotifications: RequestedNotifications,
-        securityParameters: OPTIONAL<SecurityParameters>
+        securityParameters?: OPTIONAL<SecurityParameters>
     ) {
         this.requestedNotifications = requestedNotifications;
         this.securityParameters = securityParameters;

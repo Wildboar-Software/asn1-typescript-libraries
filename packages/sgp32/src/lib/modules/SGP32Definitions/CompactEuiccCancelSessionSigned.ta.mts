@@ -50,7 +50,7 @@ class CompactEuiccCancelSessionSigned {
          * @public
          * @readonly
          */
-        readonly reason: OPTIONAL<CancelSessionReason>
+        readonly reason?: OPTIONAL<CancelSessionReason>
     ) {}
 
     /**

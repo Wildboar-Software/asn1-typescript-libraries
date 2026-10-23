@@ -210,12 +210,12 @@ class EESEASDiscoverySubscription {
         gPSI: OPTIONAL<GPSI>,
         subscriptionType: SubscriptionType,
         eASEventType: EASEventType,
-        eASDiscoveryFilter: OPTIONAL<EASDiscoveryFilter>,
-        eASDynamicInfoFilter: OPTIONAL<EASDynamicInfoFilter>,
-        eECServiceContSupport: OPTIONAL<ACRScenarios>,
-        expirationTime: OPTIONAL<Timestamp>,
-        subscriptionId: OPTIONAL<UTF8String>,
-        failureResponse: OPTIONAL<FailureResponse>,
+        eASDiscoveryFilter?: OPTIONAL<EASDiscoveryFilter>,
+        eASDynamicInfoFilter?: OPTIONAL<EASDynamicInfoFilter>,
+        eECServiceContSupport?: OPTIONAL<ACRScenarios>,
+        expirationTime?: OPTIONAL<Timestamp>,
+        subscriptionId?: OPTIONAL<UTF8String>,
+        failureResponse?: OPTIONAL<FailureResponse>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.eECID = eECID;

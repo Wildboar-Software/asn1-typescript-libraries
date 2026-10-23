@@ -107,10 +107,10 @@ class SmDeliverParameter {
     constructor (
         protocolIdentifier: ProtocolIdentifier,
         serviceCentreTimeStamp: ServiceCentreTimeStamp,
-        priority: OPTIONAL<BOOLEAN>,
-        moreMessagesToSend: OPTIONAL<BOOLEAN>,
-        statusReportIndication: OPTIONAL<BOOLEAN>,
-        replyPath: OPTIONAL<BOOLEAN>
+        priority?: OPTIONAL<BOOLEAN>,
+        moreMessagesToSend?: OPTIONAL<BOOLEAN>,
+        statusReportIndication?: OPTIONAL<BOOLEAN>,
+        replyPath?: OPTIONAL<BOOLEAN>
     ) {
         this.protocolIdentifier = protocolIdentifier;
         this.serviceCentreTimeStamp = serviceCentreTimeStamp;

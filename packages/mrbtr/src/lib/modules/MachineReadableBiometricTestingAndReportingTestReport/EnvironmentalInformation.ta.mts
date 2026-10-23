@@ -60,7 +60,7 @@ class EnvironmentalInformation {
          * @public
          * @readonly
          */
-        readonly celsiusTemp: OPTIONAL<REAL>,
+        readonly celsiusTemp?: OPTIONAL<REAL>,
         /**
          * @summary `dBNoise`.
          * @description
@@ -70,7 +70,7 @@ class EnvironmentalInformation {
          * @public
          * @readonly
          */
-        readonly dBNoise: OPTIONAL<REAL>,
+        readonly dBNoise?: OPTIONAL<REAL>,
         /**
          * @summary `lightingInfo`.
          * @description
@@ -80,7 +80,7 @@ class EnvironmentalInformation {
          * @public
          * @readonly
          */
-        readonly lightingInfo: OPTIONAL<VisibleString>
+        readonly lightingInfo?: OPTIONAL<VisibleString>
     ) {}
 
     /**

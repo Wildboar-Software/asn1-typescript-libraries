@@ -79,10 +79,10 @@ class ForwardServiceInteractionInd {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        conferenceTreatmentIndicator: OPTIONAL<OCTET_STRING>,
-        callDiversionTreatmentIndicator: OPTIONAL<OCTET_STRING>,
-        callOfferingTreatmentIndicator: OPTIONAL<OCTET_STRING>,
-        callWaitingTreatmentIndicator: OPTIONAL<OCTET_STRING>,
+        conferenceTreatmentIndicator?: OPTIONAL<OCTET_STRING>,
+        callDiversionTreatmentIndicator?: OPTIONAL<OCTET_STRING>,
+        callOfferingTreatmentIndicator?: OPTIONAL<OCTET_STRING>,
+        callWaitingTreatmentIndicator?: OPTIONAL<OCTET_STRING>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.conferenceTreatmentIndicator = conferenceTreatmentIndicator;

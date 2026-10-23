@@ -100,8 +100,8 @@ class EPSDeleteBearerContext {
     constructor (
         cause: EPSBearerDeletionCauseValue,
         ePSBearerID: EPSBearerID,
-        protocolConfigurationOptions: OPTIONAL<PDNProtocolConfigurationOptions>,
-        rANNASCause: OPTIONAL<EPSRANNASCause>,
+        protocolConfigurationOptions?: OPTIONAL<PDNProtocolConfigurationOptions>,
+        rANNASCause?: OPTIONAL<EPSRANNASCause>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.cause = cause;

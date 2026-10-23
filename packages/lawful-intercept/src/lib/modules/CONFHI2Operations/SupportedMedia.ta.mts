@@ -65,8 +65,8 @@ class SupportedMedia {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        confServerSideSDP: OPTIONAL<OCTET_STRING>,
-        confUserSideSDP: OPTIONAL<OCTET_STRING>,
+        confServerSideSDP?: OPTIONAL<OCTET_STRING>,
+        confUserSideSDP?: OPTIONAL<OCTET_STRING>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.confServerSideSDP = confServerSideSDP;

@@ -121,8 +121,8 @@ class UncertaintyEllipse {
         deprecatedSemiMajor: Uncertainty,
         deprecatedSemiMinor: Uncertainty,
         orientationMajor: Orientation,
-        semiMajorSBI: OPTIONAL<UncertaintySBI>,
-        semiMinorSBI: OPTIONAL<UncertaintySBI>,
+        semiMajorSBI?: OPTIONAL<UncertaintySBI>,
+        semiMinorSBI?: OPTIONAL<UncertaintySBI>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.deprecatedSemiMajor = deprecatedSemiMajor;

@@ -56,9 +56,9 @@ class Daytime {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        daysOfWeek: OPTIONAL<Day>,
-        timeOfDayStart: OPTIONAL<Timestamp>,
-        timeOfDayEnd: OPTIONAL<Timestamp>,
+        daysOfWeek?: OPTIONAL<Day>,
+        timeOfDayStart?: OPTIONAL<Timestamp>,
+        timeOfDayEnd?: OPTIONAL<Timestamp>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.daysOfWeek = daysOfWeek;

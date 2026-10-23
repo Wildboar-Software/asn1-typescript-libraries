@@ -40,21 +40,21 @@ class DisplayAttributeList {
          * @public
          * @readonly
          */
-        readonly physicalBaseRowNumber: OPTIONAL<INTEGER>,
+        readonly physicalBaseRowNumber?: OPTIONAL<INTEGER>,
         /**
          * @summary `physicalBaseColumnNumber`.
          * @description Physical display base column.
          * @public
          * @readonly
          */
-        readonly physicalBaseColumnNumber: OPTIONAL<INTEGER>,
+        readonly physicalBaseColumnNumber?: OPTIONAL<INTEGER>,
         /**
          * @summary `offset`.
          * @description Display offset.
          * @public
          * @readonly
          */
-        readonly offset: OPTIONAL<INTEGER>
+        readonly offset?: OPTIONAL<INTEGER>
     ) {}
 
     /**

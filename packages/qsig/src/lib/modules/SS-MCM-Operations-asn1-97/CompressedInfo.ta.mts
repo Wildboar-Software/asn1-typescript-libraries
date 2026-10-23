@@ -73,8 +73,8 @@ class CompressedInfo {
 
     constructor (
         nrOfMessages: NrOfMessages,
-        lastTimeStamp: OPTIONAL<TimeStamp>,
-        highestPriority: OPTIONAL<Priority>
+        lastTimeStamp?: OPTIONAL<TimeStamp>,
+        highestPriority?: OPTIONAL<Priority>
     ) {
         this.nrOfMessages = nrOfMessages;
         this.lastTimeStamp = lastTimeStamp;

@@ -64,7 +64,7 @@ class GetCSTAFeatureResult_supportedEvents {
          * @public
          * @readonly
          */
-        readonly callControlEvtsList: OPTIONAL<CallControlEvtsList>,
+        readonly callControlEvtsList?: OPTIONAL<CallControlEvtsList>,
         /**
          * @summary `callAssociatedEvtsList`.
          * @description
@@ -73,7 +73,7 @@ class GetCSTAFeatureResult_supportedEvents {
          * @public
          * @readonly
          */
-        readonly callAssociatedEvtsList: OPTIONAL<CallAssociatedEvtsList>,
+        readonly callAssociatedEvtsList?: OPTIONAL<CallAssociatedEvtsList>,
         /**
          * @summary `mediaEvtsList`.
          * @description
@@ -82,7 +82,7 @@ class GetCSTAFeatureResult_supportedEvents {
          * @public
          * @readonly
          */
-        readonly mediaEvtsList: OPTIONAL<MediaEvtsList>,
+        readonly mediaEvtsList?: OPTIONAL<MediaEvtsList>,
         /**
          * @summary `physDevEvtsList`.
          * @description
@@ -91,7 +91,7 @@ class GetCSTAFeatureResult_supportedEvents {
          * @public
          * @readonly
          */
-        readonly physDevEvtsList: OPTIONAL<PhysDevEvtsList>,
+        readonly physDevEvtsList?: OPTIONAL<PhysDevEvtsList>,
         /**
          * @summary `logicalEvtsList`.
          * @description
@@ -100,7 +100,7 @@ class GetCSTAFeatureResult_supportedEvents {
          * @public
          * @readonly
          */
-        readonly logicalEvtsList: OPTIONAL<LogicalEvtsList>,
+        readonly logicalEvtsList?: OPTIONAL<LogicalEvtsList>,
         /**
          * @summary `deviceMaintEvtsList`.
          * @description
@@ -109,7 +109,7 @@ class GetCSTAFeatureResult_supportedEvents {
          * @public
          * @readonly
          */
-        readonly deviceMaintEvtsList: OPTIONAL<DeviceMaintEvtsList>,
+        readonly deviceMaintEvtsList?: OPTIONAL<DeviceMaintEvtsList>,
         /**
          * @summary `voiceEvtsList`.
          * @description
@@ -118,7 +118,7 @@ class GetCSTAFeatureResult_supportedEvents {
          * @public
          * @readonly
          */
-        readonly voiceEvtsList: OPTIONAL<VoiceUnitEvtsList>,
+        readonly voiceEvtsList?: OPTIONAL<VoiceUnitEvtsList>,
         /**
          * @summary `vendorSpecificEvtsList`.
          * @description
@@ -127,7 +127,7 @@ class GetCSTAFeatureResult_supportedEvents {
          * @public
          * @readonly
          */
-        readonly vendorSpecificEvtsList: OPTIONAL<VendorSpecificEvtsList>
+        readonly vendorSpecificEvtsList?: OPTIONAL<VendorSpecificEvtsList>
     ) {}
 
     /**

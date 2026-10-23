@@ -46,7 +46,7 @@ export class TransferredVolume_volumeIfTariffSwitch {
          * @public
          * @readonly
          */
-        readonly volumeTariffSwitchInterval: OPTIONAL<INTEGER>,
+        readonly volumeTariffSwitchInterval?: OPTIONAL<INTEGER>,
     ) {
         if ((typeof volumeSinceLastTariffSwitch === "bigint" ? (volumeSinceLastTariffSwitch < 0n || volumeSinceLastTariffSwitch > 4294967295n) : (volumeSinceLastTariffSwitch < 0 || volumeSinceLastTariffSwitch > 4294967295))) {
             throw new ASN1OverflowError("TransferredVolume_volumeIfTariffSwitch.volumeSinceLastTariffSwitch violates INTEGER constraint");

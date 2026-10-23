@@ -72,10 +72,10 @@ class EASEndpoint {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        fQDN: OPTIONAL<FQDN>,
-        iPv4Addresses: OPTIONAL<IPv4Addresses>,
-        iPv6Addresses: OPTIONAL<IPv6Addresses>,
-        uRI: OPTIONAL<UTF8String>,
+        fQDN?: OPTIONAL<FQDN>,
+        iPv4Addresses?: OPTIONAL<IPv4Addresses>,
+        iPv6Addresses?: OPTIONAL<IPv6Addresses>,
+        uRI?: OPTIONAL<UTF8String>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.fQDN = fQDN;

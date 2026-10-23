@@ -105,7 +105,7 @@ class TimestampMapping {
     constructor (
         originalTimestamp: OriginalTimestamp,
         normalizedTimestamp: ILHITimestamp,
-        timeStampQualifier: OPTIONAL<LI_PS_PDU.TimeStampQualifier>,
+        timeStampQualifier?: OPTIONAL<LI_PS_PDU.TimeStampQualifier>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.originalTimestamp = originalTimestamp;

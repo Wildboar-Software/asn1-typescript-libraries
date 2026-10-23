@@ -314,11 +314,11 @@ class MTSMSRecord {
         recordingEntity: OCTET_STRING,
         location: OPTIONAL<LocationAreaAndCell>,
         deliveryTime: OCTET_STRING,
-        smsResult: OPTIONAL<HLRIntResult>,
-        recordExtensions: OPTIONAL<ManagementExtension[]>,
-        systemType: OPTIONAL<SystemType>,
-        cAMELSMSInformation: OPTIONAL<CAMELSMSInformation>,
-        locationExtension: OPTIONAL<BIT_STRING>
+        smsResult?: OPTIONAL<HLRIntResult>,
+        recordExtensions?: OPTIONAL<ManagementExtension[]>,
+        systemType?: OPTIONAL<SystemType>,
+        cAMELSMSInformation?: OPTIONAL<CAMELSMSInformation>,
+        locationExtension?: OPTIONAL<BIT_STRING>
     ) {
         this.recordType = recordType;
         this.serviceCentre = serviceCentre;

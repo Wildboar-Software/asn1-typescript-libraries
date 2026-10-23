@@ -123,16 +123,16 @@ class BISDNParameters {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        aALParameters: OPTIONAL<AALParameters>,
-        additionalATMCellRate: OPTIONAL<AdditionalATMCellRate>,
-        aESACalledParty: OPTIONAL<AESACalledParty>,
-        aESACallingParty: OPTIONAL<AESACallingParty>,
-        alternativeATMTrafficDescriptor: OPTIONAL<AlternativeATMTrafficDescriptor>,
-        aTMCellRate: OPTIONAL<ATMCellRate>,
-        cDVTDescriptor: OPTIONAL<CDVTDescriptor>,
-        cumulativeTransitDelay: OPTIONAL<CumulativeTransitDelay>,
-        endToEndTransitDelay: OPTIONAL<EndToEndTransitDelay>,
-        minAcceptableATMTrafficDescriptor: OPTIONAL<MinAcceptableATMTrafficDescriptor>,
+        aALParameters?: OPTIONAL<AALParameters>,
+        additionalATMCellRate?: OPTIONAL<AdditionalATMCellRate>,
+        aESACalledParty?: OPTIONAL<AESACalledParty>,
+        aESACallingParty?: OPTIONAL<AESACallingParty>,
+        alternativeATMTrafficDescriptor?: OPTIONAL<AlternativeATMTrafficDescriptor>,
+        aTMCellRate?: OPTIONAL<ATMCellRate>,
+        cDVTDescriptor?: OPTIONAL<CDVTDescriptor>,
+        cumulativeTransitDelay?: OPTIONAL<CumulativeTransitDelay>,
+        endToEndTransitDelay?: OPTIONAL<EndToEndTransitDelay>,
+        minAcceptableATMTrafficDescriptor?: OPTIONAL<MinAcceptableATMTrafficDescriptor>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.aALParameters = aALParameters;

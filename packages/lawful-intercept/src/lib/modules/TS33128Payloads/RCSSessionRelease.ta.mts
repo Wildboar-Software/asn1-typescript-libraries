@@ -164,7 +164,7 @@ class RCSSessionRelease {
         rCSSessionType: RCSSessionType,
         sessionDirection: Direction,
         rCSSIPSessionMessage: RCSSIPSessionMessage,
-        location: OPTIONAL<Location>,
+        location?: OPTIONAL<Location>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.rCSTargetIdentities = rCSTargetIdentities;

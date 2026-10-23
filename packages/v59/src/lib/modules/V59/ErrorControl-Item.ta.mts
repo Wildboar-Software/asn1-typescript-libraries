@@ -151,7 +151,7 @@ class ErrorControl_Item {
          * @public
          * @readonly
          */
-        readonly txErrors: OPTIONAL<INTEGER>,
+        readonly txErrors?: OPTIONAL<INTEGER>,
         /**
          * @summary `rxErrors`.
          * @description
@@ -161,7 +161,7 @@ class ErrorControl_Item {
          * @public
          * @readonly
          */
-        readonly rxErrors: OPTIONAL<INTEGER>,
+        readonly rxErrors?: OPTIONAL<INTEGER>,
         /**
          * @summary `txThroughput`.
          * @description
@@ -173,7 +173,7 @@ class ErrorControl_Item {
          * @public
          * @readonly
          */
-        readonly txThroughput: OPTIONAL<INTEGER>,
+        readonly txThroughput?: OPTIONAL<INTEGER>,
         /**
          * @summary `rxThroughput`.
          * @description
@@ -183,7 +183,7 @@ class ErrorControl_Item {
          * @public
          * @readonly
          */
-        readonly rxThroughput: OPTIONAL<INTEGER>,
+        readonly rxThroughput?: OPTIONAL<INTEGER>,
         /**
          * @summary Extensions that are not recognized.
          * @public

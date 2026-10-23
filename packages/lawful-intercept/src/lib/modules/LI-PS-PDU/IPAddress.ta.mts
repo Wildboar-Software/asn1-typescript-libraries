@@ -176,9 +176,9 @@ class IPAddress {
     constructor (
         iP_type: IPAddress_iP_type,
         iP_value: IP_value,
-        iP_assignment: OPTIONAL<IPAddress_iP_assignment>,
-        iPv6PrefixLength: OPTIONAL<INTEGER>,
-        iPv4SubnetMask: OPTIONAL<OCTET_STRING>,
+        iP_assignment?: OPTIONAL<IPAddress_iP_assignment>,
+        iPv6PrefixLength?: OPTIONAL<INTEGER>,
+        iPv4SubnetMask?: OPTIONAL<OCTET_STRING>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.iP_type = iP_type;

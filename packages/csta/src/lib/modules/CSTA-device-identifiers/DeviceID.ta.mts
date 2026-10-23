@@ -83,7 +83,7 @@ class DeviceID {
          * @public
          * @readonly
          */
-        readonly privateNumber: OPTIONAL<NumberDigits>,
+        readonly privateNumber?: OPTIONAL<NumberDigits>,
         /**
          * @summary `privateName`.
          * @description
@@ -94,7 +94,7 @@ class DeviceID {
          * @public
          * @readonly
          */
-        readonly privateName: OPTIONAL<IA5String>,
+        readonly privateName?: OPTIONAL<IA5String>,
         /**
          * @summary `mediaCallCharacteristics`.
          * @description
@@ -105,7 +105,7 @@ class DeviceID {
          * @public
          * @readonly
          */
-        readonly mediaCallCharacteristics: OPTIONAL<MediaCallCharacteristics>
+        readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>
     ) {}
 
     /**

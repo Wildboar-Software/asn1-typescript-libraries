@@ -52,7 +52,7 @@ class Deferredmt_lrData {
          * @public
          * @readonly
          */
-        readonly terminationCause: OPTIONAL<TerminationCause>,
+        readonly terminationCause?: OPTIONAL<TerminationCause>,
         /**
          * @summary `lcsLocationInfo`.
          * @description
@@ -62,7 +62,7 @@ class Deferredmt_lrData {
          * @public
          * @readonly
          */
-        readonly lcsLocationInfo: OPTIONAL<LCSLocationInfo>,
+        readonly lcsLocationInfo?: OPTIONAL<LCSLocationInfo>,
         /**
          * @summary Extensions that are not recognized.
          * @public

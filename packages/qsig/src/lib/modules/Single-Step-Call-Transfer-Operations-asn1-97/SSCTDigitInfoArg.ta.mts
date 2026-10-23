@@ -73,9 +73,9 @@ class SSCTDigitInfoArg {
     readonly argumentExtension: OPTIONAL<SSCTDigitInfoArg_argumentExtension>;
 
     constructor (
-        reroutingNumber: OPTIONAL<PartyNumber>,
-        sendingComplete: OPTIONAL<NULL>,
-        argumentExtension: OPTIONAL<SSCTDigitInfoArg_argumentExtension>
+        reroutingNumber?: OPTIONAL<PartyNumber>,
+        sendingComplete?: OPTIONAL<NULL>,
+        argumentExtension?: OPTIONAL<SSCTDigitInfoArg_argumentExtension>
     ) {
         this.reroutingNumber = reroutingNumber;
         this.sendingComplete = sendingComplete;

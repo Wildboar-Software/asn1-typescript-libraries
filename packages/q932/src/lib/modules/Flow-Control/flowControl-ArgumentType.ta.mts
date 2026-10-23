@@ -91,9 +91,9 @@ class flowControl_ArgumentType {
 
     constructor (
         controlReceiver: flowControl_ArgumentType_controlReceiver,
-        maximumNumberOfMessages: OPTIONAL<INTEGER>,
-        replenishmentParameter: OPTIONAL<INTEGER>,
-        timerT: OPTIONAL<INTEGER>
+        maximumNumberOfMessages?: OPTIONAL<INTEGER>,
+        replenishmentParameter?: OPTIONAL<INTEGER>,
+        timerT?: OPTIONAL<INTEGER>
     ) {
         if (maximumNumberOfMessages !== undefined && !integerInRange(maximumNumberOfMessages, 1n, 255n)) {
             throw new ASN1OverflowError("maximumNumberOfMessages violates INTEGER (1..255)");

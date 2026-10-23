@@ -158,7 +158,7 @@ class RCSRegistration {
         rCSRegistrationType: RCSRegistrationType,
         rCSRegistrationUpdateRequest: IMSPayload,
         rCSRegistrationUpdateResponse: IMSPayload,
-        location: OPTIONAL<Location>,
+        location?: OPTIONAL<Location>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.rCSTargetIdentities = rCSTargetIdentities;

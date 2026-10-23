@@ -210,7 +210,7 @@ class ModeCapability_Item_modulationMode {
          * @public
          * @readonly
          */
-        readonly otherModMode: OPTIONAL<V59String>,
+        readonly otherModMode?: OPTIONAL<V59String>,
         /**
          * @summary Extensions that are not recognized.
          * @public

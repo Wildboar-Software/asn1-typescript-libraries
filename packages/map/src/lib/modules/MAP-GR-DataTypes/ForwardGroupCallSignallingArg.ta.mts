@@ -58,7 +58,7 @@ class ForwardGroupCallSignallingArg {
          * @public
          * @readonly
          */
-        readonly imsi: OPTIONAL<IMSI>,
+        readonly imsi?: OPTIONAL<IMSI>,
         /**
          * @summary `uplinkRequestAck`.
          * @description
@@ -68,7 +68,7 @@ class ForwardGroupCallSignallingArg {
          * @public
          * @readonly
          */
-        readonly uplinkRequestAck: OPTIONAL<NULL>,
+        readonly uplinkRequestAck?: OPTIONAL<NULL>,
         /**
          * @summary `uplinkReleaseIndication`.
          * @description
@@ -78,7 +78,7 @@ class ForwardGroupCallSignallingArg {
          * @public
          * @readonly
          */
-        readonly uplinkReleaseIndication: OPTIONAL<NULL>,
+        readonly uplinkReleaseIndication?: OPTIONAL<NULL>,
         /**
          * @summary `uplinkRejectCommand`.
          * @description
@@ -88,7 +88,7 @@ class ForwardGroupCallSignallingArg {
          * @public
          * @readonly
          */
-        readonly uplinkRejectCommand: OPTIONAL<NULL>,
+        readonly uplinkRejectCommand?: OPTIONAL<NULL>,
         /**
          * @summary `uplinkSeizedCommand`.
          * @description
@@ -98,7 +98,7 @@ class ForwardGroupCallSignallingArg {
          * @public
          * @readonly
          */
-        readonly uplinkSeizedCommand: OPTIONAL<NULL>,
+        readonly uplinkSeizedCommand?: OPTIONAL<NULL>,
         /**
          * @summary `uplinkReleaseCommand`.
          * @description
@@ -109,7 +109,7 @@ class ForwardGroupCallSignallingArg {
          * @public
          * @readonly
          */
-        readonly uplinkReleaseCommand: OPTIONAL<NULL>,
+        readonly uplinkReleaseCommand?: OPTIONAL<NULL>,
         /**
          * @summary `extensionContainer`.
          * @description
@@ -119,7 +119,7 @@ class ForwardGroupCallSignallingArg {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `stateAttributes`.
          * @description
@@ -130,7 +130,7 @@ class ForwardGroupCallSignallingArg {
          * @public
          * @readonly
          */
-        readonly stateAttributes: OPTIONAL<StateAttributes>,
+        readonly stateAttributes?: OPTIONAL<StateAttributes>,
         /**
          * @summary `talkerPriority`.
          * @description
@@ -140,7 +140,7 @@ class ForwardGroupCallSignallingArg {
          * @public
          * @readonly
          */
-        readonly talkerPriority: OPTIONAL<TalkerPriority>,
+        readonly talkerPriority?: OPTIONAL<TalkerPriority>,
         /**
          * @summary `additionalInfo`.
          * @description
@@ -150,7 +150,7 @@ class ForwardGroupCallSignallingArg {
          * @public
          * @readonly
          */
-        readonly additionalInfo: OPTIONAL<AdditionalInfo>,
+        readonly additionalInfo?: OPTIONAL<AdditionalInfo>,
         /**
          * @summary `emergencyModeResetCommandFlag`.
          * @description
@@ -160,7 +160,7 @@ class ForwardGroupCallSignallingArg {
          * @public
          * @readonly
          */
-        readonly emergencyModeResetCommandFlag: OPTIONAL<NULL>,
+        readonly emergencyModeResetCommandFlag?: OPTIONAL<NULL>,
         /**
          * @summary `sm_RP_UI`.
          * @description
@@ -171,7 +171,7 @@ class ForwardGroupCallSignallingArg {
          * @public
          * @readonly
          */
-        readonly sm_RP_UI: OPTIONAL<SignalInfo>,
+        readonly sm_RP_UI?: OPTIONAL<SignalInfo>,
         /**
          * @summary `an_APDU`.
          * @description
@@ -181,7 +181,7 @@ class ForwardGroupCallSignallingArg {
          * @public
          * @readonly
          */
-        readonly an_APDU: OPTIONAL<AccessNetworkSignalInfo>,
+        readonly an_APDU?: OPTIONAL<AccessNetworkSignalInfo>,
         /**
          * @summary Extensions that are not recognized.
          * @public

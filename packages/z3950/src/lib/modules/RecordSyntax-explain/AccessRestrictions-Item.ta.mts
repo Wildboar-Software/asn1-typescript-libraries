@@ -71,8 +71,8 @@ class AccessRestrictions_Item {
 
     constructor (
         accessType: AccessRestrictions_Item_accessType,
-        accessText: OPTIONAL<HumanString>,
-        accessChallenges: OPTIONAL<OBJECT_IDENTIFIER[]>
+        accessText?: OPTIONAL<HumanString>,
+        accessChallenges?: OPTIONAL<OBJECT_IDENTIFIER[]>
     ) {
         this.accessType = accessType;
         this.accessText = accessText;

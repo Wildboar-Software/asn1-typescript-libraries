@@ -55,7 +55,7 @@ class DNDInterrogateRes_status_Item {
 
     constructor (
         basicService: BasicService,
-        dndProtectionLevel: OPTIONAL<DNDProtectionLevel>
+        dndProtectionLevel?: OPTIONAL<DNDProtectionLevel>
     ) {
         this.basicService = basicService;
         this.dndProtectionLevel = dndProtectionLevel;

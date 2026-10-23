@@ -108,7 +108,7 @@ class CallInformationEvent {
          * @public
          * @readonly
          */
-        readonly callingDevice: OPTIONAL<CallingDeviceID>,
+        readonly callingDevice?: OPTIONAL<CallingDeviceID>,
         /**
          * @summary `accountInfo`.
          * @description
@@ -117,7 +117,7 @@ class CallInformationEvent {
          * @public
          * @readonly
          */
-        readonly accountInfo: OPTIONAL<AccountInfo>,
+        readonly accountInfo?: OPTIONAL<AccountInfo>,
         /**
          * @summary `authCode`.
          * @description
@@ -126,7 +126,7 @@ class CallInformationEvent {
          * @public
          * @readonly
          */
-        readonly authCode: OPTIONAL<AuthCode>,
+        readonly authCode?: OPTIONAL<AuthCode>,
         /**
          * @summary `correlatorData`.
          * @description
@@ -135,7 +135,7 @@ class CallInformationEvent {
          * @public
          * @readonly
          */
-        readonly correlatorData: OPTIONAL<CorrelatorData>,
+        readonly correlatorData?: OPTIONAL<CorrelatorData>,
         /**
          * @summary `servicesPermitted`.
          * @description
@@ -144,7 +144,7 @@ class CallInformationEvent {
          * @public
          * @readonly
          */
-        readonly servicesPermitted: OPTIONAL<ServicesPermitted>,
+        readonly servicesPermitted?: OPTIONAL<ServicesPermitted>,
         /**
          * @summary `userData`.
          * @description
@@ -153,7 +153,7 @@ class CallInformationEvent {
          * @public
          * @readonly
          */
-        readonly userData: OPTIONAL<UserData>,
+        readonly userData?: OPTIONAL<UserData>,
         /**
          * @summary `callQualifyingData`.
          * @description
@@ -162,7 +162,7 @@ class CallInformationEvent {
          * @public
          * @readonly
          */
-        readonly callQualifyingData: OPTIONAL<CallQualifyingData>,
+        readonly callQualifyingData?: OPTIONAL<CallQualifyingData>,
         /**
          * @summary `connectionInfo`.
          * @description
@@ -171,7 +171,7 @@ class CallInformationEvent {
          * @public
          * @readonly
          */
-        readonly connectionInfo: OPTIONAL<ConnectionInformation>,
+        readonly connectionInfo?: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `callLinkageDataList`.
          * @description
@@ -180,7 +180,7 @@ class CallInformationEvent {
          * @public
          * @readonly
          */
-        readonly callLinkageDataList: OPTIONAL<CallLinkageDataList>,
+        readonly callLinkageDataList?: OPTIONAL<CallLinkageDataList>,
         /**
          * @summary `callCharacteristics`.
          * @description
@@ -189,7 +189,7 @@ class CallInformationEvent {
          * @public
          * @readonly
          */
-        readonly callCharacteristics: OPTIONAL<CallCharacteristics>,
+        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
         /**
          * @summary `subjectOfCall`.
          * @description
@@ -198,7 +198,7 @@ class CallInformationEvent {
          * @public
          * @readonly
          */
-        readonly subjectOfCall: OPTIONAL<SubjectOfCall>,
+        readonly subjectOfCall?: OPTIONAL<SubjectOfCall>,
         /**
          * @summary `languagePreferences`.
          * @description
@@ -207,7 +207,7 @@ class CallInformationEvent {
          * @public
          * @readonly
          */
-        readonly languagePreferences: OPTIONAL<LanguagePreferences>,
+        readonly languagePreferences?: OPTIONAL<LanguagePreferences>,
         /**
          * @summary `deviceInfo`.
          * @description
@@ -216,7 +216,7 @@ class CallInformationEvent {
          * @public
          * @readonly
          */
-        readonly deviceInfo: OPTIONAL<DeviceID>,
+        readonly deviceInfo?: OPTIONAL<DeviceID>,
         /**
          * @summary `extensions`.
          * @description
@@ -226,7 +226,7 @@ class CallInformationEvent {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

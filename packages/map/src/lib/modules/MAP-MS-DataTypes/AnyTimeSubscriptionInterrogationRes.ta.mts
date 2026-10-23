@@ -68,7 +68,7 @@ class AnyTimeSubscriptionInterrogationRes {
          * @public
          * @readonly
          */
-        readonly callForwardingData: OPTIONAL<CallForwardingData>,
+        readonly callForwardingData?: OPTIONAL<CallForwardingData>,
         /**
          * @summary `callBarringData`.
          * @description
@@ -79,7 +79,7 @@ class AnyTimeSubscriptionInterrogationRes {
          * @public
          * @readonly
          */
-        readonly callBarringData: OPTIONAL<CallBarringData>,
+        readonly callBarringData?: OPTIONAL<CallBarringData>,
         /**
          * @summary `odb_Info`.
          * @description
@@ -90,7 +90,7 @@ class AnyTimeSubscriptionInterrogationRes {
          * @public
          * @readonly
          */
-        readonly odb_Info: OPTIONAL<ODB_Info>,
+        readonly odb_Info?: OPTIONAL<ODB_Info>,
         /**
          * @summary `camel_SubscriptionInfo`.
          * @description
@@ -101,7 +101,7 @@ class AnyTimeSubscriptionInterrogationRes {
          * @public
          * @readonly
          */
-        readonly camel_SubscriptionInfo: OPTIONAL<CAMEL_SubscriptionInfo>,
+        readonly camel_SubscriptionInfo?: OPTIONAL<CAMEL_SubscriptionInfo>,
         /**
          * @summary `supportedVLR_CAMEL_Phases`.
          * @description
@@ -112,7 +112,7 @@ class AnyTimeSubscriptionInterrogationRes {
          * @public
          * @readonly
          */
-        readonly supportedVLR_CAMEL_Phases: OPTIONAL<SupportedCamelPhases>,
+        readonly supportedVLR_CAMEL_Phases?: OPTIONAL<SupportedCamelPhases>,
         /**
          * @summary `supportedSGSN_CAMEL_Phases`.
          * @description
@@ -123,13 +123,13 @@ class AnyTimeSubscriptionInterrogationRes {
          * @public
          * @readonly
          */
-        readonly supportedSGSN_CAMEL_Phases: OPTIONAL<SupportedCamelPhases>,
+        readonly supportedSGSN_CAMEL_Phases?: OPTIONAL<SupportedCamelPhases>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `offeredCamel4CSIsInVLR`.
          * @description
@@ -140,7 +140,7 @@ class AnyTimeSubscriptionInterrogationRes {
          * @public
          * @readonly
          */
-        readonly offeredCamel4CSIsInVLR: OPTIONAL<OfferedCamel4CSIs>,
+        readonly offeredCamel4CSIsInVLR?: OPTIONAL<OfferedCamel4CSIs>,
         /**
          * @summary `offeredCamel4CSIsInSGSN`.
          * @description
@@ -151,13 +151,13 @@ class AnyTimeSubscriptionInterrogationRes {
          * @public
          * @readonly
          */
-        readonly offeredCamel4CSIsInSGSN: OPTIONAL<OfferedCamel4CSIs>,
+        readonly offeredCamel4CSIsInSGSN?: OPTIONAL<OfferedCamel4CSIs>,
         /**
          * @summary `msisdn_BS_List`.
          * @public
          * @readonly
          */
-        readonly msisdn_BS_List: OPTIONAL<MSISDN_BS_List>,
+        readonly msisdn_BS_List?: OPTIONAL<MSISDN_BS_List>,
         /**
          * @summary `csg_SubscriptionDataList`.
          * @description
@@ -167,7 +167,7 @@ class AnyTimeSubscriptionInterrogationRes {
          * @public
          * @readonly
          */
-        readonly csg_SubscriptionDataList: OPTIONAL<CSG_SubscriptionDataList>,
+        readonly csg_SubscriptionDataList?: OPTIONAL<CSG_SubscriptionDataList>,
         /**
          * @summary `cw_Data`.
          * @description
@@ -177,7 +177,7 @@ class AnyTimeSubscriptionInterrogationRes {
          * @public
          * @readonly
          */
-        readonly cw_Data: OPTIONAL<CallWaitingData>,
+        readonly cw_Data?: OPTIONAL<CallWaitingData>,
         /**
          * @summary `ch_Data`.
          * @description
@@ -187,7 +187,7 @@ class AnyTimeSubscriptionInterrogationRes {
          * @public
          * @readonly
          */
-        readonly ch_Data: OPTIONAL<CallHoldData>,
+        readonly ch_Data?: OPTIONAL<CallHoldData>,
         /**
          * @summary `clip_Data`.
          * @description
@@ -198,7 +198,7 @@ class AnyTimeSubscriptionInterrogationRes {
          * @public
          * @readonly
          */
-        readonly clip_Data: OPTIONAL<ClipData>,
+        readonly clip_Data?: OPTIONAL<ClipData>,
         /**
          * @summary `clir_Data`.
          * @description
@@ -209,7 +209,7 @@ class AnyTimeSubscriptionInterrogationRes {
          * @public
          * @readonly
          */
-        readonly clir_Data: OPTIONAL<ClirData>,
+        readonly clir_Data?: OPTIONAL<ClirData>,
         /**
          * @summary `ect_data`.
          * @description
@@ -219,7 +219,7 @@ class AnyTimeSubscriptionInterrogationRes {
          * @public
          * @readonly
          */
-        readonly ect_data: OPTIONAL<EctData>,
+        readonly ect_data?: OPTIONAL<EctData>,
         /**
          * @summary Extensions that are not recognized.
          * @public

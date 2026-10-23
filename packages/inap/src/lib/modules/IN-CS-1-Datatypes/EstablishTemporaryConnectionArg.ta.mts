@@ -101,8 +101,8 @@ class EstablishTemporaryConnectionArg {
         legID: OPTIONAL<LegID>,
         scfID: OPTIONAL<ScfID>,
         extensions: ExtensionField[],
-        carrier: OPTIONAL<Carrier>,
-        serviceInteractionIndicators: OPTIONAL<ServiceInteractionIndicators>,
+        carrier?: OPTIONAL<Carrier>,
+        serviceInteractionIndicators?: OPTIONAL<ServiceInteractionIndicators>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.assistingSSPIPRoutingAddress = assistingSSPIPRoutingAddress;

@@ -50,7 +50,7 @@ export class CAMEL_FCIBillingChargingCharacteristics_fCIBCCCAMELsequence1 {
          * @public
          * @readonly
          */
-        readonly partyToCharge: OPTIONAL<SendingSideID>,
+        readonly partyToCharge?: OPTIONAL<SendingSideID>,
         /**
          * @summary `appendFreeFormatData`.
          * @description
@@ -62,7 +62,7 @@ export class CAMEL_FCIBillingChargingCharacteristics_fCIBCCCAMELsequence1 {
          * @public
          * @readonly
          */
-        readonly appendFreeFormatData: OPTIONAL<AppendFreeFormatData>,
+        readonly appendFreeFormatData?: OPTIONAL<AppendFreeFormatData>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}
 

@@ -67,7 +67,7 @@ class RIOupdate_Item {
          * @public
          * @readonly
          */
-        readonly updates: OPTIONAL<ObjectUpdate[]>
+        readonly updates?: OPTIONAL<ObjectUpdate[]>
     ) {}
 
     /**

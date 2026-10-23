@@ -46,7 +46,7 @@ class CS_Start_Request_controlling {
          * @public
          * @readonly
          */
-        readonly startLocation: OPTIONAL<VisibleString>,
+        readonly startLocation?: OPTIONAL<VisibleString>,
         /**
          * @summary `startCount`.
          * @description
@@ -57,7 +57,7 @@ class CS_Start_Request_controlling {
          * @public
          * @readonly
          */
-        readonly startCount: OPTIONAL<StartCount>
+        readonly startCount?: OPTIONAL<StartCount>
     ) {}
 
     /**

@@ -61,7 +61,7 @@ class LCSClientName {
          * @public
          * @readonly
          */
-        readonly lcs_FormatIndicator: OPTIONAL<LCS_FormatIndicator>,
+        readonly lcs_FormatIndicator?: OPTIONAL<LCS_FormatIndicator>,
         /**
          * @summary Extensions that are not recognized.
          * @public

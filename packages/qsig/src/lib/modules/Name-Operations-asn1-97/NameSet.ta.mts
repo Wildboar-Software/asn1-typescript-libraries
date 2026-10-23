@@ -53,7 +53,7 @@ class NameSet {
 
     constructor (
         nameData: NameData,
-        characterSet: OPTIONAL<CharacterSet>
+        characterSet?: OPTIONAL<CharacterSet>
     ) {
         this.nameData = nameData;
         this.characterSet = characterSet;

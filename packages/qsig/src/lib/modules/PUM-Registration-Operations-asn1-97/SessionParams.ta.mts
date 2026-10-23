@@ -58,8 +58,8 @@ class SessionParams {
     readonly numberOfOutgCalls: OPTIONAL<INTEGER>;
 
     constructor (
-        durationOfSession: OPTIONAL<INTEGER>,
-        numberOfOutgCalls: OPTIONAL<INTEGER>
+        durationOfSession?: OPTIONAL<INTEGER>,
+        numberOfOutgCalls?: OPTIONAL<INTEGER>
     ) {
         this.durationOfSession = durationOfSession;
         this.numberOfOutgCalls = numberOfOutgCalls;

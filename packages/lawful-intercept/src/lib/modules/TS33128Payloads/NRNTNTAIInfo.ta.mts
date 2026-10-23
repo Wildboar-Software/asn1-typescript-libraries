@@ -66,7 +66,7 @@ class NRNTNTAIInfo {
     constructor (
         servingPLMN: PLMNID,
         tACListNRNTN: TAC[],
-        uELocationDerivedNTNTAC: OPTIONAL<TAC>,
+        uELocationDerivedNTNTAC?: OPTIONAL<TAC>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.servingPLMN = servingPLMN;

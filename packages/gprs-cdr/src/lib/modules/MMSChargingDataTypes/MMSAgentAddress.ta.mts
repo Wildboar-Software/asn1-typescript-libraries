@@ -66,7 +66,7 @@ class MMSAgentAddress {
 
     constructor (
         mMSAgentAddressData: MMSAgentAddressData,
-        mMSRecipientType: OPTIONAL<MMSRecipientType[]>
+        mMSRecipientType?: OPTIONAL<MMSRecipientType[]>
     ) {
         this.mMSAgentAddressData = mMSAgentAddressData;
         this.mMSRecipientType = mMSRecipientType;

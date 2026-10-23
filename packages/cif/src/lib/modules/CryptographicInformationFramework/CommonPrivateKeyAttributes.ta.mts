@@ -50,7 +50,7 @@ class CommonPrivateKeyAttributes {
          * @public
          * @readonly
          */
-        readonly name: OPTIONAL<Name>,
+        readonly name?: OPTIONAL<Name>,
         /**
          * @summary `keyIdentifiers`.
          * @description
@@ -60,7 +60,7 @@ class CommonPrivateKeyAttributes {
          * @public
          * @readonly
          */
-        readonly keyIdentifiers: OPTIONAL<CredentialIdentifier[]>,
+        readonly keyIdentifiers?: OPTIONAL<CredentialIdentifier[]>,
         /**
          * @summary `generalName`.
          * @description
@@ -68,7 +68,7 @@ class CommonPrivateKeyAttributes {
          * @public
          * @readonly
          */
-        readonly generalName: OPTIONAL<GeneralNames>,
+        readonly generalName?: OPTIONAL<GeneralNames>,
         /**
          * @summary `keyUsageConstraints`.
          * @description
@@ -77,7 +77,7 @@ class CommonPrivateKeyAttributes {
          * @public
          * @readonly
          */
-        readonly keyUsageConstraints: OPTIONAL<KeyUsageConstraints>,
+        readonly keyUsageConstraints?: OPTIONAL<KeyUsageConstraints>,
         /**
          * @summary Extensions that are not recognized.
          * @public

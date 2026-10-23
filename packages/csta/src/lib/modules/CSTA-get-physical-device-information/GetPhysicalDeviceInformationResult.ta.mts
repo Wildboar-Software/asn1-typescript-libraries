@@ -125,7 +125,7 @@ class GetPhysicalDeviceInformationResult {
          * @public
          * @readonly
          */
-        readonly otherLogicalDeviceList: OPTIONAL<DeviceID[]>,
+        readonly otherLogicalDeviceList?: OPTIONAL<DeviceID[]>,
         /**
          * @summary `deviceModelName`.
          * @description
@@ -134,7 +134,7 @@ class GetPhysicalDeviceInformationResult {
          * @public
          * @readonly
          */
-        readonly deviceModelName: OPTIONAL<IA5String>,
+        readonly deviceModelName?: OPTIONAL<IA5String>,
         /**
          * @summary `deviceOnDeviceMonitorFilter`.
          * @description
@@ -145,7 +145,7 @@ class GetPhysicalDeviceInformationResult {
          * @public
          * @readonly
          */
-        readonly deviceOnDeviceMonitorFilter: OPTIONAL<MonitorFilter>,
+        readonly deviceOnDeviceMonitorFilter?: OPTIONAL<MonitorFilter>,
         /**
          * @summary `deviceOnConnectionMonitorFilter`.
          * @description
@@ -155,7 +155,7 @@ class GetPhysicalDeviceInformationResult {
          * @public
          * @readonly
          */
-        readonly deviceOnConnectionMonitorFilter: OPTIONAL<MonitorFilter>,
+        readonly deviceOnConnectionMonitorFilter?: OPTIONAL<MonitorFilter>,
         /**
          * @summary `callOnDeviceMonitorFilter`.
          * @description
@@ -165,7 +165,7 @@ class GetPhysicalDeviceInformationResult {
          * @public
          * @readonly
          */
-        readonly callOnDeviceMonitorFilter: OPTIONAL<MonitorFilter>,
+        readonly callOnDeviceMonitorFilter?: OPTIONAL<MonitorFilter>,
         /**
          * @summary `callOnConnectionMonitorFilter`.
          * @description
@@ -175,7 +175,7 @@ class GetPhysicalDeviceInformationResult {
          * @public
          * @readonly
          */
-        readonly callOnConnectionMonitorFilter: OPTIONAL<MonitorFilter>,
+        readonly callOnConnectionMonitorFilter?: OPTIONAL<MonitorFilter>,
         /**
          * @summary `maxDisplays`.
          * @description
@@ -184,7 +184,7 @@ class GetPhysicalDeviceInformationResult {
          * @public
          * @readonly
          */
-        readonly maxDisplays: OPTIONAL<INTEGER>,
+        readonly maxDisplays?: OPTIONAL<INTEGER>,
         /**
          * @summary `maxButtons`.
          * @description
@@ -193,7 +193,7 @@ class GetPhysicalDeviceInformationResult {
          * @public
          * @readonly
          */
-        readonly maxButtons: OPTIONAL<INTEGER>,
+        readonly maxButtons?: OPTIONAL<INTEGER>,
         /**
          * @summary `maxLamps`.
          * @description
@@ -202,7 +202,7 @@ class GetPhysicalDeviceInformationResult {
          * @public
          * @readonly
          */
-        readonly maxLamps: OPTIONAL<INTEGER>,
+        readonly maxLamps?: OPTIONAL<INTEGER>,
         /**
          * @summary `maxRingPatterns`.
          * @description
@@ -211,7 +211,7 @@ class GetPhysicalDeviceInformationResult {
          * @public
          * @readonly
          */
-        readonly maxRingPatterns: OPTIONAL<INTEGER>,
+        readonly maxRingPatterns?: OPTIONAL<INTEGER>,
         /**
          * @summary `physDevServList`.
          * @description
@@ -220,7 +220,7 @@ class GetPhysicalDeviceInformationResult {
          * @public
          * @readonly
          */
-        readonly physDevServList: OPTIONAL<PhysDevServList>,
+        readonly physDevServList?: OPTIONAL<PhysDevServList>,
         /**
          * @summary `physDevEvtsList`.
          * @description
@@ -229,7 +229,7 @@ class GetPhysicalDeviceInformationResult {
          * @public
          * @readonly
          */
-        readonly physDevEvtsList: OPTIONAL<PhysDevEvtsList>,
+        readonly physDevEvtsList?: OPTIONAL<PhysDevEvtsList>,
         /**
          * @summary `extensions`.
          * @description
@@ -239,7 +239,7 @@ class GetPhysicalDeviceInformationResult {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

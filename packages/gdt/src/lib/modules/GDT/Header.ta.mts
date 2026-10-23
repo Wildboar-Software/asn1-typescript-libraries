@@ -81,19 +81,19 @@ class Header {
          * @public
          * @readonly
          */
-        readonly enc_info: OPTIONAL<EncryptionInfo>,
+        readonly enc_info?: OPTIONAL<EncryptionInfo>,
         /**
          * @summary `hop_info`.
          * @public
          * @readonly
          */
-        readonly hop_info: OPTIONAL<HopInfo>,
+        readonly hop_info?: OPTIONAL<HopInfo>,
         /**
          * @summary `status`.
          * @public
          * @readonly
          */
-        readonly status: OPTIONAL<ErrorCode>,
+        readonly status?: OPTIONAL<ErrorCode>,
         /**
          * @summary Extensions that are not recognized.
          * @public

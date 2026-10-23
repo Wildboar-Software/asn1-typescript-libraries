@@ -43,7 +43,7 @@ class MidCallInfoType {
          * @public
          * @readonly
          */
-        readonly iNServiceControlCodeHigh: OPTIONAL<Digits>
+        readonly iNServiceControlCodeHigh?: OPTIONAL<Digits>
     ) {}
 
     /**

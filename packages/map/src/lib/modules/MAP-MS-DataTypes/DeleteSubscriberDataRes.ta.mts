@@ -43,13 +43,13 @@ class DeleteSubscriberDataRes {
          * @public
          * @readonly
          */
-        readonly regionalSubscriptionResponse: OPTIONAL<RegionalSubscriptionResponse>,
+        readonly regionalSubscriptionResponse?: OPTIONAL<RegionalSubscriptionResponse>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

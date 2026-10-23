@@ -67,7 +67,7 @@ class StartLocationTrackingSessionResult {
          * @public
          * @readonly
          */
-        readonly pidProfile: OPTIONAL<PIDProfile>,
+        readonly pidProfile?: OPTIONAL<PIDProfile>,
         /**
          * @summary `extensions`.
          * @description
@@ -78,7 +78,7 @@ class StartLocationTrackingSessionResult {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

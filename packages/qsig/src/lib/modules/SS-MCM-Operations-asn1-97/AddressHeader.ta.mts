@@ -67,8 +67,8 @@ class AddressHeader {
 
     constructor (
         originatorNr: PartyNumber,
-        timeStamp: OPTIONAL<TimeStamp>,
-        priority: OPTIONAL<Priority>
+        timeStamp?: OPTIONAL<TimeStamp>,
+        priority?: OPTIONAL<Priority>
     ) {
         this.originatorNr = originatorNr;
         this.timeStamp = timeStamp;

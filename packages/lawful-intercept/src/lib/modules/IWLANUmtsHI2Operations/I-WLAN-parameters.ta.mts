@@ -102,9 +102,9 @@ class I_WLAN_parameters {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        wlan_local_IP_address_of_the_target: OPTIONAL<DataNodeAddress>,
-        w_APN: OPTIONAL<OCTET_STRING>,
-        wlan_remote_IP_address_of_the_target: OPTIONAL<DataNodeAddress>,
+        wlan_local_IP_address_of_the_target?: OPTIONAL<DataNodeAddress>,
+        w_APN?: OPTIONAL<OCTET_STRING>,
+        wlan_remote_IP_address_of_the_target?: OPTIONAL<DataNodeAddress>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.wlan_local_IP_address_of_the_target = wlan_local_IP_address_of_the_target;

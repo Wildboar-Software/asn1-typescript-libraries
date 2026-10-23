@@ -88,7 +88,7 @@ class RouteUsedRequestArgument {
          * @public
          * @readonly
          */
-        readonly callingDevice: OPTIONAL<CallingDeviceID>,
+        readonly callingDevice?: OPTIONAL<CallingDeviceID>,
         /**
          * @summary `domain`.
          * @description
@@ -97,7 +97,7 @@ class RouteUsedRequestArgument {
          * @public
          * @readonly
          */
-        readonly domain: OPTIONAL<BOOLEAN>,
+        readonly domain?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `correlatorData`.
          * @description
@@ -106,7 +106,7 @@ class RouteUsedRequestArgument {
          * @public
          * @readonly
          */
-        readonly correlatorData: OPTIONAL<CorrelatorData>,
+        readonly correlatorData?: OPTIONAL<CorrelatorData>,
         /**
          * @summary `callLinkageData`.
          * @description
@@ -115,7 +115,7 @@ class RouteUsedRequestArgument {
          * @public
          * @readonly
          */
-        readonly callLinkageData: OPTIONAL<CallLinkageData>,
+        readonly callLinkageData?: OPTIONAL<CallLinkageData>,
         /**
          * @summary `extensions`.
          * @description
@@ -125,7 +125,7 @@ class RouteUsedRequestArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

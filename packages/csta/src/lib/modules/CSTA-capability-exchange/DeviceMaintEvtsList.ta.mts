@@ -51,7 +51,7 @@ class DeviceMaintEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly backInService: OPTIONAL<BackInService>,
+        readonly backInService?: OPTIONAL<BackInService>,
         /**
          * @summary `deviceCapsChanged`.
          * @public
@@ -60,7 +60,7 @@ class DeviceMaintEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly deviceCapsChanged: OPTIONAL<DeviceCapsChanged>,
+        readonly deviceCapsChanged?: OPTIONAL<DeviceCapsChanged>,
         /**
          * @summary `outOfService`.
          * @public
@@ -69,7 +69,7 @@ class DeviceMaintEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly outOfService: OPTIONAL<OutOfService>,
+        readonly outOfService?: OPTIONAL<OutOfService>,
         /**
          * @summary `partiallyInService`.
          * @public
@@ -78,7 +78,7 @@ class DeviceMaintEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly partiallyInService: OPTIONAL<PartiallyInService>
+        readonly partiallyInService?: OPTIONAL<PartiallyInService>
     ) {}
 
     /**

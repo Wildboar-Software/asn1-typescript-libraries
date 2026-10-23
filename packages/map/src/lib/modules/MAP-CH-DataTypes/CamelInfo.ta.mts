@@ -53,7 +53,7 @@ class CamelInfo {
          * @public
          * @readonly
          */
-        readonly suppress_T_CSI: OPTIONAL<NULL>,
+        readonly suppress_T_CSI?: OPTIONAL<NULL>,
         /**
          * @summary `extensionContainer`.
          * @description
@@ -63,7 +63,7 @@ class CamelInfo {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `offeredCamel4CSIs`.
          * @description
@@ -73,7 +73,7 @@ class CamelInfo {
          * @public
          * @readonly
          */
-        readonly offeredCamel4CSIs: OPTIONAL<OfferedCamel4CSIs>,
+        readonly offeredCamel4CSIs?: OPTIONAL<OfferedCamel4CSIs>,
         /**
          * @summary Extensions that are not recognized.
          * @public

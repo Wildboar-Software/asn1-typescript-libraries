@@ -107,11 +107,11 @@ class FiveGProSeAuthorizationIndication {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        fiveGProSeDirectDiscovery: OPTIONAL<FiveGProSeAuthorizationIndicator>,
-        fiveGProSeDirectCommunication: OPTIONAL<FiveGProSeAuthorizationIndicator>,
-        fiveGProSeL2UEToNetworkRelay: OPTIONAL<FiveGProSeAuthorizationIndicator>,
-        fiveGProSeL3UEToNetworkRelay: OPTIONAL<FiveGProSeAuthorizationIndicator>,
-        fiveGProSeL2RemoteUE: OPTIONAL<FiveGProSeAuthorizationIndicator>,
+        fiveGProSeDirectDiscovery?: OPTIONAL<FiveGProSeAuthorizationIndicator>,
+        fiveGProSeDirectCommunication?: OPTIONAL<FiveGProSeAuthorizationIndicator>,
+        fiveGProSeL2UEToNetworkRelay?: OPTIONAL<FiveGProSeAuthorizationIndicator>,
+        fiveGProSeL3UEToNetworkRelay?: OPTIONAL<FiveGProSeAuthorizationIndicator>,
+        fiveGProSeL2RemoteUE?: OPTIONAL<FiveGProSeAuthorizationIndicator>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.fiveGProSeDirectDiscovery = fiveGProSeDirectDiscovery;

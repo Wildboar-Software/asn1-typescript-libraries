@@ -61,7 +61,7 @@ class UnitControlUpload_Request {
          * @public
          * @readonly
          */
-        readonly continueAfter: OPTIONAL<UnitControlUpload_Request_continueAfter>
+        readonly continueAfter?: OPTIONAL<UnitControlUpload_Request_continueAfter>
     ) {}
 
     /**

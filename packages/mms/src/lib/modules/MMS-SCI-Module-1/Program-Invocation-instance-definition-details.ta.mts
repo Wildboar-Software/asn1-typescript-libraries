@@ -184,7 +184,7 @@ class Program_Invocation_instance_definition_details {
          * @public
          * @readonly
          */
-        readonly controlled_Program_Invocations: OPTIONAL<Program_Invocation_instance[]>,
+        readonly controlled_Program_Invocations?: OPTIONAL<Program_Invocation_instance[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

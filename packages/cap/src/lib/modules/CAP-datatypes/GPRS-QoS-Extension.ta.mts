@@ -53,7 +53,7 @@ export class GPRS_QoS_Extension {
          * @public
          * @readonly
          */
-        readonly additionalSupplement: OPTIONAL<Ext3_QoS_Subscribed>,
+        readonly additionalSupplement?: OPTIONAL<Ext3_QoS_Subscribed>,
         /**
          * @summary Extensions that are not recognized.
          * @public

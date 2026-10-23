@@ -78,9 +78,9 @@ class EESInfo {
     constructor (
         eESID: EESID,
         eESEndpoint: EESEndpoint,
-        eASIDs: OPTIONAL<EASIDs>,
-        serviceArea: OPTIONAL<Location>,
-        dNAIS: OPTIONAL<DNAIs>,
+        eASIDs?: OPTIONAL<EASIDs>,
+        serviceArea?: OPTIONAL<Location>,
+        dNAIS?: OPTIONAL<DNAIs>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.eESID = eESID;

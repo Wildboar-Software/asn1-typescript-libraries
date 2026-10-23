@@ -65,25 +65,25 @@ class ChargingParameters {
          * @public
          * @readonly
          */
-        readonly initialUnitIncrement: OPTIONAL<INTEGER>,
+        readonly initialUnitIncrement?: OPTIONAL<INTEGER>,
         /**
          * @summary `unitsPerDataInterval`.
          * @public
          * @readonly
          */
-        readonly unitsPerDataInterval: OPTIONAL<INTEGER>,
+        readonly unitsPerDataInterval?: OPTIONAL<INTEGER>,
         /**
          * @summary `segmentsPerDataInterval`.
          * @public
          * @readonly
          */
-        readonly segmentsPerDataInterval: OPTIONAL<INTEGER>,
+        readonly segmentsPerDataInterval?: OPTIONAL<INTEGER>,
         /**
          * @summary `initialTimeInterval`.
          * @public
          * @readonly
          */
-        readonly initialTimeInterval: OPTIONAL<INTEGER>
+        readonly initialTimeInterval?: OPTIONAL<INTEGER>
     ) {}
 
     /**

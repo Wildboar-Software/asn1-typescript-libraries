@@ -120,15 +120,15 @@ class ServiceInteractionIndicatorsTwo {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        forwardServiceInteractionInd: OPTIONAL<ForwardServiceInteractionInd>,
-        backwardServiceInteractionInd: OPTIONAL<BackwardServiceInteractionInd>,
-        bothwayThroughConnectionInd: OPTIONAL<BothwayThroughConnectionInd>,
-        suspendTimer: OPTIONAL<SuspendTimer>,
-        connectedNumberTreatmentInd: OPTIONAL<ConnectedNumberTreatmentInd>,
-        suppressCallDiversionNotification: OPTIONAL<BOOLEAN>,
-        suppressCallTransferNotification: OPTIONAL<BOOLEAN>,
-        allowCdINNoPresentationInd: OPTIONAL<BOOLEAN>,
-        userDialogueDurationInd: OPTIONAL<BOOLEAN>,
+        forwardServiceInteractionInd?: OPTIONAL<ForwardServiceInteractionInd>,
+        backwardServiceInteractionInd?: OPTIONAL<BackwardServiceInteractionInd>,
+        bothwayThroughConnectionInd?: OPTIONAL<BothwayThroughConnectionInd>,
+        suspendTimer?: OPTIONAL<SuspendTimer>,
+        connectedNumberTreatmentInd?: OPTIONAL<ConnectedNumberTreatmentInd>,
+        suppressCallDiversionNotification?: OPTIONAL<BOOLEAN>,
+        suppressCallTransferNotification?: OPTIONAL<BOOLEAN>,
+        allowCdINNoPresentationInd?: OPTIONAL<BOOLEAN>,
+        userDialogueDurationInd?: OPTIONAL<BOOLEAN>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.forwardServiceInteractionInd = forwardServiceInteractionInd;

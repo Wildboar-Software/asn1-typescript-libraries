@@ -84,7 +84,7 @@ class KDCDHKeyInfo {
          * @public
          * @readonly
          */
-        readonly dhKeyExpiration: OPTIONAL<KerberosTime>,
+        readonly dhKeyExpiration?: OPTIONAL<KerberosTime>,
         /**
          * @summary Extensions that are not recognized.
          * @public

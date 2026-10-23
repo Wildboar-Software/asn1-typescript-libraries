@@ -122,7 +122,7 @@ class OriginationAttemptAuthorizedArg {
         callingFacilityGroupMember: OPTIONAL<FacilityGroupMember>,
         travellingClassMark: OPTIONAL<TravellingClassMark>,
         extensions: ExtensionField[],
-        carrier: OPTIONAL<Carrier>,
+        carrier?: OPTIONAL<Carrier>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.dpSpecificCommonParameters = dpSpecificCommonParameters;

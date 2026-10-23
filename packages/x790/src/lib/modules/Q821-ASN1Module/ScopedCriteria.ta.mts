@@ -63,7 +63,7 @@ class ScopedCriteria {
          * @public
          * @readonly
          */
-        readonly criteria: OPTIONAL<CMISFilter>
+        readonly criteria?: OPTIONAL<CMISFilter>
     ) {}
 
     /**

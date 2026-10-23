@@ -122,16 +122,16 @@ class CollectedDigits {
     constructor (
         minimumNbOfDigits: OPTIONAL<INTEGER>,
         maximumNbOfDigits: INTEGER,
-        endOfReplyDigit: OPTIONAL<OCTET_STRING>,
-        cancelDigit: OPTIONAL<OCTET_STRING>,
-        startDigit: OPTIONAL<OCTET_STRING>,
-        firstDigitTimeOut: OPTIONAL<INTEGER>,
-        interDigitTimeOut: OPTIONAL<INTEGER>,
-        errorTreatment: OPTIONAL<ErrorTreatment>,
-        interruptableAnnInd: OPTIONAL<BOOLEAN>,
-        voiceInformation: OPTIONAL<BOOLEAN>,
-        voiceBack: OPTIONAL<BOOLEAN>,
-        detectModem: OPTIONAL<BOOLEAN>,
+        endOfReplyDigit?: OPTIONAL<OCTET_STRING>,
+        cancelDigit?: OPTIONAL<OCTET_STRING>,
+        startDigit?: OPTIONAL<OCTET_STRING>,
+        firstDigitTimeOut?: OPTIONAL<INTEGER>,
+        interDigitTimeOut?: OPTIONAL<INTEGER>,
+        errorTreatment?: OPTIONAL<ErrorTreatment>,
+        interruptableAnnInd?: OPTIONAL<BOOLEAN>,
+        voiceInformation?: OPTIONAL<BOOLEAN>,
+        voiceBack?: OPTIONAL<BOOLEAN>,
+        detectModem?: OPTIONAL<BOOLEAN>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.minimumNbOfDigits = minimumNbOfDigits;

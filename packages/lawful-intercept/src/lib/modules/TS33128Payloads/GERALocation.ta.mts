@@ -229,18 +229,18 @@ class GERALocation {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        locationNumber: OPTIONAL<E164Number>,
-        cGI: OPTIONAL<CGI>,
-        rAI: OPTIONAL<RAI>,
-        sAI: OPTIONAL<SAI>,
-        lAI: OPTIONAL<LAI>,
-        vLRNumber: OPTIONAL<UTF8String>,
-        mSCNumber: OPTIONAL<UTF8String>,
-        ageOfLocationInfo: OPTIONAL<INTEGER>,
-        uELocationTimestamp: OPTIONAL<Timestamp>,
-        geographicalInformation: OPTIONAL<UTF8String>,
-        geodeticInformation: OPTIONAL<UTF8String>,
-        cellSiteInformation: OPTIONAL<CellSiteInformation>,
+        locationNumber?: OPTIONAL<E164Number>,
+        cGI?: OPTIONAL<CGI>,
+        rAI?: OPTIONAL<RAI>,
+        sAI?: OPTIONAL<SAI>,
+        lAI?: OPTIONAL<LAI>,
+        vLRNumber?: OPTIONAL<UTF8String>,
+        mSCNumber?: OPTIONAL<UTF8String>,
+        ageOfLocationInfo?: OPTIONAL<INTEGER>,
+        uELocationTimestamp?: OPTIONAL<Timestamp>,
+        geographicalInformation?: OPTIONAL<UTF8String>,
+        geodeticInformation?: OPTIONAL<UTF8String>,
+        cellSiteInformation?: OPTIONAL<CellSiteInformation>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.locationNumber = locationNumber;

@@ -94,8 +94,8 @@ class Location_info {
     constructor (
         mscNumber: OPTIONAL<OCTET_STRING>,
         location_area: OCTET_STRING,
-        cell_identification: OPTIONAL<OCTET_STRING>,
-        mCC_MNC: OPTIONAL<OCTET_STRING>
+        cell_identification?: OPTIONAL<OCTET_STRING>,
+        mCC_MNC?: OPTIONAL<OCTET_STRING>
     ) {
         this.mscNumber = mscNumber;
         this.location_area = location_area;

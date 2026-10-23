@@ -126,7 +126,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly imsi: OPTIONAL<IMSI>,
+        readonly imsi?: OPTIONAL<IMSI>,
         /**
          * @summary `msisdn`.
          * @description
@@ -139,7 +139,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly msisdn: OPTIONAL<ISDN_AddressString> /* REPLICATED_COMPONENT */,
+        readonly msisdn?: OPTIONAL<ISDN_AddressString> /* REPLICATED_COMPONENT */,
         /**
          * @summary `category`.
          * @description
@@ -151,7 +151,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly category: OPTIONAL<Category> /* REPLICATED_COMPONENT */,
+        readonly category?: OPTIONAL<Category> /* REPLICATED_COMPONENT */,
         /**
          * @summary `subscriberStatus`.
          * @description
@@ -165,7 +165,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly subscriberStatus: OPTIONAL<SubscriberStatus> /* REPLICATED_COMPONENT */,
+        readonly subscriberStatus?: OPTIONAL<SubscriberStatus> /* REPLICATED_COMPONENT */,
         /**
          * @summary `bearerServiceList`.
          * @description
@@ -178,7 +178,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly bearerServiceList: OPTIONAL<BearerServiceList> /* REPLICATED_COMPONENT */,
+        readonly bearerServiceList?: OPTIONAL<BearerServiceList> /* REPLICATED_COMPONENT */,
         /**
          * @summary `teleserviceList`.
          * @description
@@ -191,7 +191,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly teleserviceList: OPTIONAL<TeleserviceList> /* REPLICATED_COMPONENT */,
+        readonly teleserviceList?: OPTIONAL<TeleserviceList> /* REPLICATED_COMPONENT */,
         /**
          * @summary `provisionedSS`.
          * @description
@@ -203,7 +203,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly provisionedSS: OPTIONAL<Ext_SS_InfoList> /* REPLICATED_COMPONENT */,
+        readonly provisionedSS?: OPTIONAL<Ext_SS_InfoList> /* REPLICATED_COMPONENT */,
         /**
          * @summary `odb_Data`.
          * @description
@@ -215,7 +215,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly odb_Data: OPTIONAL<ODB_Data> /* REPLICATED_COMPONENT */,
+        readonly odb_Data?: OPTIONAL<ODB_Data> /* REPLICATED_COMPONENT */,
         /**
          * @summary `roamingRestrictionDueToUnsupportedFeature`.
          * @description
@@ -228,7 +228,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly roamingRestrictionDueToUnsupportedFeature: OPTIONAL<NULL> /* REPLICATED_COMPONENT */,
+        readonly roamingRestrictionDueToUnsupportedFeature?: OPTIONAL<NULL> /* REPLICATED_COMPONENT */,
         /**
          * @summary `regionalSubscriptionData`.
          * @description
@@ -242,7 +242,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly regionalSubscriptionData: OPTIONAL<ZoneCodeList> /* REPLICATED_COMPONENT */,
+        readonly regionalSubscriptionData?: OPTIONAL<ZoneCodeList> /* REPLICATED_COMPONENT */,
         /**
          * @summary `vbsSubscriptionData`.
          * @description
@@ -254,7 +254,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly vbsSubscriptionData: OPTIONAL<VBSDataList> /* REPLICATED_COMPONENT */,
+        readonly vbsSubscriptionData?: OPTIONAL<VBSDataList> /* REPLICATED_COMPONENT */,
         /**
          * @summary `vgcsSubscriptionData`.
          * @description
@@ -266,7 +266,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly vgcsSubscriptionData: OPTIONAL<VGCSDataList> /* REPLICATED_COMPONENT */,
+        readonly vgcsSubscriptionData?: OPTIONAL<VGCSDataList> /* REPLICATED_COMPONENT */,
         /**
          * @summary `vlrCamelSubscriptionInfo`.
          * @description
@@ -278,13 +278,13 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly vlrCamelSubscriptionInfo: OPTIONAL<VlrCamelSubscriptionInfo> /* REPLICATED_COMPONENT */,
+        readonly vlrCamelSubscriptionInfo?: OPTIONAL<VlrCamelSubscriptionInfo> /* REPLICATED_COMPONENT */,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `naea_PreferredCI`.
          * @description
@@ -296,7 +296,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly naea_PreferredCI: OPTIONAL<NAEA_PreferredCI>,
+        readonly naea_PreferredCI?: OPTIONAL<NAEA_PreferredCI>,
         /**
          * @summary `gprsSubscriptionData`.
          * @description
@@ -309,7 +309,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly gprsSubscriptionData: OPTIONAL<GPRSSubscriptionData>,
+        readonly gprsSubscriptionData?: OPTIONAL<GPRSSubscriptionData>,
         /**
          * @summary `roamingRestrictedInSgsnDueToUnsupportedFeature`.
          * @description
@@ -321,7 +321,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly roamingRestrictedInSgsnDueToUnsupportedFeature: OPTIONAL<NULL>,
+        readonly roamingRestrictedInSgsnDueToUnsupportedFeature?: OPTIONAL<NULL>,
         /**
          * @summary `networkAccessMode`.
          * @description
@@ -335,7 +335,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly networkAccessMode: OPTIONAL<NetworkAccessMode>,
+        readonly networkAccessMode?: OPTIONAL<NetworkAccessMode>,
         /**
          * @summary `lsaInformation`.
          * @description
@@ -347,7 +347,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly lsaInformation: OPTIONAL<LSAInformation>,
+        readonly lsaInformation?: OPTIONAL<LSAInformation>,
         /**
          * @summary `lmu_Indicator`.
          * @description
@@ -359,7 +359,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly lmu_Indicator: OPTIONAL<NULL>,
+        readonly lmu_Indicator?: OPTIONAL<NULL>,
         /**
          * @summary `lcsInformation`.
          * @description
@@ -371,7 +371,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly lcsInformation: OPTIONAL<LCSInformation>,
+        readonly lcsInformation?: OPTIONAL<LCSInformation>,
         /**
          * @summary `istAlertTimer`.
          * @description
@@ -383,7 +383,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly istAlertTimer: OPTIONAL<IST_AlertTimerValue>,
+        readonly istAlertTimer?: OPTIONAL<IST_AlertTimerValue>,
         /**
          * @summary `superChargerSupportedInHLR`.
          * @description
@@ -395,7 +395,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly superChargerSupportedInHLR: OPTIONAL<AgeIndicator>,
+        readonly superChargerSupportedInHLR?: OPTIONAL<AgeIndicator>,
         /**
          * @summary `mc_SS_Info`.
          * @description
@@ -407,7 +407,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly mc_SS_Info: OPTIONAL<MC_SS_Info>,
+        readonly mc_SS_Info?: OPTIONAL<MC_SS_Info>,
         /**
          * @summary `cs_AllocationRetentionPriority`.
          * @description
@@ -418,7 +418,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly cs_AllocationRetentionPriority: OPTIONAL<CS_AllocationRetentionPriority>,
+        readonly cs_AllocationRetentionPriority?: OPTIONAL<CS_AllocationRetentionPriority>,
         /**
          * @summary `sgsn_CAMEL_SubscriptionInfo`.
          * @description
@@ -430,7 +430,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly sgsn_CAMEL_SubscriptionInfo: OPTIONAL<SGSN_CAMEL_SubscriptionInfo>,
+        readonly sgsn_CAMEL_SubscriptionInfo?: OPTIONAL<SGSN_CAMEL_SubscriptionInfo>,
         /**
          * @summary `chargingCharacteristics`.
          * @description
@@ -442,7 +442,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly chargingCharacteristics: OPTIONAL<ChargingCharacteristics>,
+        readonly chargingCharacteristics?: OPTIONAL<ChargingCharacteristics>,
         /**
          * @summary `accessRestrictionData`.
          * @description
@@ -455,7 +455,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly accessRestrictionData: OPTIONAL<AccessRestrictionData>,
+        readonly accessRestrictionData?: OPTIONAL<AccessRestrictionData>,
         /**
          * @summary `ics_Indicator`.
          * @description
@@ -467,7 +467,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly ics_Indicator: OPTIONAL<BOOLEAN>,
+        readonly ics_Indicator?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `eps_SubscriptionData`.
          * @description
@@ -480,7 +480,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly eps_SubscriptionData: OPTIONAL<EPS_SubscriptionData>,
+        readonly eps_SubscriptionData?: OPTIONAL<EPS_SubscriptionData>,
         /**
          * @summary `csg_SubscriptionDataList`.
          * @description
@@ -492,7 +492,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly csg_SubscriptionDataList: OPTIONAL<CSG_SubscriptionDataList>,
+        readonly csg_SubscriptionDataList?: OPTIONAL<CSG_SubscriptionDataList>,
         /**
          * @summary `ue_ReachabilityRequestIndicator`.
          * @description
@@ -503,7 +503,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly ue_ReachabilityRequestIndicator: OPTIONAL<NULL>,
+        readonly ue_ReachabilityRequestIndicator?: OPTIONAL<NULL>,
         /**
          * @summary `sgsn_Number`.
          * @description
@@ -516,7 +516,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly sgsn_Number: OPTIONAL<ISDN_AddressString>,
+        readonly sgsn_Number?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `mme_Name`.
          * @description
@@ -530,7 +530,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly mme_Name: OPTIONAL<DiameterIdentity>,
+        readonly mme_Name?: OPTIONAL<DiameterIdentity>,
         /**
          * @summary `subscribedPeriodicRAUTAUtimer`.
          * @description
@@ -542,7 +542,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly subscribedPeriodicRAUTAUtimer: OPTIONAL<SubscribedPeriodicRAUTAUtimer>,
+        readonly subscribedPeriodicRAUTAUtimer?: OPTIONAL<SubscribedPeriodicRAUTAUtimer>,
         /**
          * @summary `vplmnLIPAAllowed`.
          * @description
@@ -554,7 +554,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly vplmnLIPAAllowed: OPTIONAL<NULL>,
+        readonly vplmnLIPAAllowed?: OPTIONAL<NULL>,
         /**
          * @summary `mdtUserConsent`.
          * @description
@@ -565,7 +565,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly mdtUserConsent: OPTIONAL<BOOLEAN>,
+        readonly mdtUserConsent?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `subscribedPeriodicLAUtimer`.
          * @description
@@ -577,7 +577,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly subscribedPeriodicLAUtimer: OPTIONAL<SubscribedPeriodicLAUtimer>,
+        readonly subscribedPeriodicLAUtimer?: OPTIONAL<SubscribedPeriodicLAUtimer>,
         /**
          * @summary `vplmn_Csg_SubscriptionDataList`.
          * @description
@@ -589,7 +589,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly vplmn_Csg_SubscriptionDataList: OPTIONAL<VPLMN_CSG_SubscriptionDataList>,
+        readonly vplmn_Csg_SubscriptionDataList?: OPTIONAL<VPLMN_CSG_SubscriptionDataList>,
         /**
          * @summary `additionalMSISDN`.
          * @description
@@ -602,7 +602,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly additionalMSISDN: OPTIONAL<ISDN_AddressString>,
+        readonly additionalMSISDN?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `psAndSMS_OnlyServiceProvision`.
          * @description
@@ -613,7 +613,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly psAndSMS_OnlyServiceProvision: OPTIONAL<NULL>,
+        readonly psAndSMS_OnlyServiceProvision?: OPTIONAL<NULL>,
         /**
          * @summary `smsInSGSNAllowed`.
          * @description
@@ -624,7 +624,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly smsInSGSNAllowed: OPTIONAL<NULL>,
+        readonly smsInSGSNAllowed?: OPTIONAL<NULL>,
         /**
          * @summary `cs_to_ps_SRVCC_Allowed_Indicator`.
          * @description
@@ -635,7 +635,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly cs_to_ps_SRVCC_Allowed_Indicator: OPTIONAL<NULL>,
+        readonly cs_to_ps_SRVCC_Allowed_Indicator?: OPTIONAL<NULL>,
         /**
          * @summary `pcscf_Restoration_Request`.
          * @description
@@ -646,7 +646,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly pcscf_Restoration_Request: OPTIONAL<NULL>,
+        readonly pcscf_Restoration_Request?: OPTIONAL<NULL>,
         /**
          * @summary `adjacentAccessRestrictionDataList`.
          * @description
@@ -658,7 +658,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly adjacentAccessRestrictionDataList: OPTIONAL<AdjacentAccessRestrictionDataList>,
+        readonly adjacentAccessRestrictionDataList?: OPTIONAL<AdjacentAccessRestrictionDataList>,
         /**
          * @summary `imsi_Group_Id_List`.
          * @description
@@ -669,7 +669,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly imsi_Group_Id_List: OPTIONAL<IMSI_GroupIdList>,
+        readonly imsi_Group_Id_List?: OPTIONAL<IMSI_GroupIdList>,
         /**
          * @summary `ueUsageType`.
          * @description
@@ -682,7 +682,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly ueUsageType: OPTIONAL<UE_UsageType>,
+        readonly ueUsageType?: OPTIONAL<UE_UsageType>,
         /**
          * @summary `userPlaneIntegrityProtectionIndicator`.
          * @description
@@ -694,7 +694,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly userPlaneIntegrityProtectionIndicator: OPTIONAL<NULL>,
+        readonly userPlaneIntegrityProtectionIndicator?: OPTIONAL<NULL>,
         /**
          * @summary `dl_Buffering_Suggested_Packet_Count`.
          * @description
@@ -706,7 +706,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly dl_Buffering_Suggested_Packet_Count: OPTIONAL<DL_Buffering_Suggested_Packet_Count>,
+        readonly dl_Buffering_Suggested_Packet_Count?: OPTIONAL<DL_Buffering_Suggested_Packet_Count>,
         /**
          * @summary `reset_Id_List`.
          * @description
@@ -716,7 +716,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly reset_Id_List: OPTIONAL<Reset_Id_List>,
+        readonly reset_Id_List?: OPTIONAL<Reset_Id_List>,
         /**
          * @summary `eDRX_Cycle_Length_List`.
          * @description
@@ -727,7 +727,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly eDRX_Cycle_Length_List: OPTIONAL<EDRX_Cycle_Length_List>,
+        readonly eDRX_Cycle_Length_List?: OPTIONAL<EDRX_Cycle_Length_List>,
         /**
          * @summary `ext_AccessRestrictionData`.
          * @description
@@ -739,7 +739,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly ext_AccessRestrictionData: OPTIONAL<Ext_AccessRestrictionData>,
+        readonly ext_AccessRestrictionData?: OPTIONAL<Ext_AccessRestrictionData>,
         /**
          * @summary `iab_Operation_Allowed_Indicator`.
          * @description
@@ -750,7 +750,7 @@ class InsertSubscriberDataArg {
          * @public
          * @readonly
          */
-        readonly iab_Operation_Allowed_Indicator: OPTIONAL<NULL>,
+        readonly iab_Operation_Allowed_Indicator?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @public

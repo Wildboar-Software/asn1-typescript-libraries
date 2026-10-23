@@ -65,8 +65,8 @@ class ServerPart {
     readonly numberOfRecords: OPTIONAL<INTEGER>;
 
     constructor (
-        serverSuppliedResultSet: OPTIONAL<InternationalString>,
-        numberOfRecords: OPTIONAL<INTEGER>
+        serverSuppliedResultSet?: OPTIONAL<InternationalString>,
+        numberOfRecords?: OPTIONAL<INTEGER>
     ) {
         this.serverSuppliedResultSet = serverSuppliedResultSet;
         this.numberOfRecords = numberOfRecords;

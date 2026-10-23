@@ -41,7 +41,7 @@ class ServiceInteractionIndicatorsTwo_redirectServiceTreatmentInd {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        redirectReason: OPTIONAL<RedirectReason>,
+        redirectReason?: OPTIONAL<RedirectReason>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.redirectReason = redirectReason;

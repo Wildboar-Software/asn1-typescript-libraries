@@ -54,7 +54,7 @@ class KeypadArg {
 
     constructor (
         keypadString: BMPStringNormal,
-        extension: OPTIONAL<SDExtension>
+        extension?: OPTIONAL<SDExtension>
     ) {
         this.keypadString = keypadString;
         this.extension = extension;

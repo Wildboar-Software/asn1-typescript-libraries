@@ -56,13 +56,13 @@ class CUG_Info {
          * @public
          * @readonly
          */
-        readonly cug_FeatureList: OPTIONAL<CUG_FeatureList>,
+        readonly cug_FeatureList?: OPTIONAL<CUG_FeatureList>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

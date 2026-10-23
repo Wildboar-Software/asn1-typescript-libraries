@@ -74,8 +74,8 @@ class PositioningInfo {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        positionInfo: OPTIONAL<LocationData>,
-        rawMLPResponse: OPTIONAL<RawMLPResponse>,
+        positionInfo?: OPTIONAL<LocationData>,
+        rawMLPResponse?: OPTIONAL<RawMLPResponse>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.positionInfo = positionInfo;

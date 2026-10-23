@@ -48,7 +48,7 @@ class ExplicitPointer {
          * @public
          * @readonly
          */
-        readonly x: OPTIONAL<INTEGER>,
+        readonly x?: OPTIONAL<INTEGER>,
         /**
          * @summary `y`.
          * @description
@@ -57,7 +57,7 @@ class ExplicitPointer {
          * @public
          * @readonly
          */
-        readonly y: OPTIONAL<INTEGER>,
+        readonly y?: OPTIONAL<INTEGER>,
         /**
          * @summary `z`.
          * @description
@@ -66,7 +66,7 @@ class ExplicitPointer {
          * @public
          * @readonly
          */
-        readonly z: OPTIONAL<INTEGER>,
+        readonly z?: OPTIONAL<INTEGER>,
         /**
          * @summary `b`.
          * @description
@@ -75,7 +75,7 @@ class ExplicitPointer {
          * @public
          * @readonly
          */
-        readonly b: OPTIONAL<INTEGER>
+        readonly b?: OPTIONAL<INTEGER>
     ) {}
 
     /**

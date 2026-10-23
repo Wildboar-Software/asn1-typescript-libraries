@@ -180,7 +180,7 @@ class IntegrityCheck {
         checkType: CheckType,
         dataType: OPTIONAL<DataType>,
         checkValue: OCTET_STRING,
-        hashAlgorithm: OPTIONAL<HashAlgorithm>,
+        hashAlgorithm?: OPTIONAL<HashAlgorithm>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.includedSequenceNumbers = includedSequenceNumbers;

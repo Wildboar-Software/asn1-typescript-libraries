@@ -206,10 +206,10 @@ class ServiceInstance {
         callId: CallId,
         relatedCallId: OPTIONAL<CallId>,
         serviceName: VisibleString,
-        firstCallCalling: OPTIONAL<PartyId>,
-        secondCallCalling: OPTIONAL<PartyId>,
-        called: OPTIONAL<PartyId>,
-        calling: OPTIONAL<PartyId>,
+        firstCallCalling?: OPTIONAL<PartyId>,
+        secondCallCalling?: OPTIONAL<PartyId>,
+        called?: OPTIONAL<PartyId>,
+        calling?: OPTIONAL<PartyId>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.caseId = caseId;

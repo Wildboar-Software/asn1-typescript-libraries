@@ -91,7 +91,7 @@ class ForwardAccessSignalling_Arg {
          * @public
          * @readonly
          */
-        readonly integrityProtectionInfo: OPTIONAL<IntegrityProtectionInformation>,
+        readonly integrityProtectionInfo?: OPTIONAL<IntegrityProtectionInformation>,
         /**
          * @summary `encryptionInfo`.
          * @description
@@ -103,7 +103,7 @@ class ForwardAccessSignalling_Arg {
          * @public
          * @readonly
          */
-        readonly encryptionInfo: OPTIONAL<EncryptionInformation>,
+        readonly encryptionInfo?: OPTIONAL<EncryptionInformation>,
         /**
          * @summary `keyStatus`.
          * @description
@@ -115,7 +115,7 @@ class ForwardAccessSignalling_Arg {
          * @public
          * @readonly
          */
-        readonly keyStatus: OPTIONAL<KeyStatus>,
+        readonly keyStatus?: OPTIONAL<KeyStatus>,
         /**
          * @summary `allowedGSM_Algorithms`.
          * @description
@@ -127,7 +127,7 @@ class ForwardAccessSignalling_Arg {
          * @public
          * @readonly
          */
-        readonly allowedGSM_Algorithms: OPTIONAL<AllowedGSM_Algorithms>,
+        readonly allowedGSM_Algorithms?: OPTIONAL<AllowedGSM_Algorithms>,
         /**
          * @summary `allowedUMTS_Algorithms`.
          * @description
@@ -140,7 +140,7 @@ class ForwardAccessSignalling_Arg {
          * @public
          * @readonly
          */
-        readonly allowedUMTS_Algorithms: OPTIONAL<AllowedUMTS_Algorithms>,
+        readonly allowedUMTS_Algorithms?: OPTIONAL<AllowedUMTS_Algorithms>,
         /**
          * @summary `radioResourceInformation`.
          * @description
@@ -152,13 +152,13 @@ class ForwardAccessSignalling_Arg {
          * @public
          * @readonly
          */
-        readonly radioResourceInformation: OPTIONAL<RadioResourceInformation>,
+        readonly radioResourceInformation?: OPTIONAL<RadioResourceInformation>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `radioResourceList`.
          * @description
@@ -171,7 +171,7 @@ class ForwardAccessSignalling_Arg {
          * @public
          * @readonly
          */
-        readonly radioResourceList: OPTIONAL<RadioResourceList>,
+        readonly radioResourceList?: OPTIONAL<RadioResourceList>,
         /**
          * @summary `bssmap_ServiceHandover`.
          * @description
@@ -183,7 +183,7 @@ class ForwardAccessSignalling_Arg {
          * @public
          * @readonly
          */
-        readonly bssmap_ServiceHandover: OPTIONAL<BSSMAP_ServiceHandover>,
+        readonly bssmap_ServiceHandover?: OPTIONAL<BSSMAP_ServiceHandover>,
         /**
          * @summary `ranap_ServiceHandover`.
          * @description
@@ -194,7 +194,7 @@ class ForwardAccessSignalling_Arg {
          * @public
          * @readonly
          */
-        readonly ranap_ServiceHandover: OPTIONAL<RANAP_ServiceHandover>,
+        readonly ranap_ServiceHandover?: OPTIONAL<RANAP_ServiceHandover>,
         /**
          * @summary `bssmap_ServiceHandoverList`.
          * @description
@@ -207,7 +207,7 @@ class ForwardAccessSignalling_Arg {
          * @public
          * @readonly
          */
-        readonly bssmap_ServiceHandoverList: OPTIONAL<BSSMAP_ServiceHandoverList>,
+        readonly bssmap_ServiceHandoverList?: OPTIONAL<BSSMAP_ServiceHandoverList>,
         /**
          * @summary `currentlyUsedCodec`.
          * @description
@@ -221,7 +221,7 @@ class ForwardAccessSignalling_Arg {
          * @public
          * @readonly
          */
-        readonly currentlyUsedCodec: OPTIONAL<Codec>,
+        readonly currentlyUsedCodec?: OPTIONAL<Codec>,
         /**
          * @summary `iuSupportedCodecsList`.
          * @description
@@ -234,7 +234,7 @@ class ForwardAccessSignalling_Arg {
          * @public
          * @readonly
          */
-        readonly iuSupportedCodecsList: OPTIONAL<SupportedCodecsList>,
+        readonly iuSupportedCodecsList?: OPTIONAL<SupportedCodecsList>,
         /**
          * @summary `rab_ConfigurationIndicator`.
          * @description
@@ -247,7 +247,7 @@ class ForwardAccessSignalling_Arg {
          * @public
          * @readonly
          */
-        readonly rab_ConfigurationIndicator: OPTIONAL<NULL>,
+        readonly rab_ConfigurationIndicator?: OPTIONAL<NULL>,
         /**
          * @summary `iuSelectedCodec`.
          * @description
@@ -260,7 +260,7 @@ class ForwardAccessSignalling_Arg {
          * @public
          * @readonly
          */
-        readonly iuSelectedCodec: OPTIONAL<Codec>,
+        readonly iuSelectedCodec?: OPTIONAL<Codec>,
         /**
          * @summary `alternativeChannelType`.
          * @description
@@ -272,7 +272,7 @@ class ForwardAccessSignalling_Arg {
          * @public
          * @readonly
          */
-        readonly alternativeChannelType: OPTIONAL<RadioResourceInformation>,
+        readonly alternativeChannelType?: OPTIONAL<RadioResourceInformation>,
         /**
          * @summary `tracePropagationList`.
          * @description
@@ -283,7 +283,7 @@ class ForwardAccessSignalling_Arg {
          * @public
          * @readonly
          */
-        readonly tracePropagationList: OPTIONAL<TracePropagationList>,
+        readonly tracePropagationList?: OPTIONAL<TracePropagationList>,
         /**
          * @summary `aoipSupportedCodecsListAnchor`.
          * @description
@@ -296,7 +296,7 @@ class ForwardAccessSignalling_Arg {
          * @public
          * @readonly
          */
-        readonly aoipSupportedCodecsListAnchor: OPTIONAL<AoIPCodecsList>,
+        readonly aoipSupportedCodecsListAnchor?: OPTIONAL<AoIPCodecsList>,
         /**
          * @summary `aoipSelectedCodecTarget`.
          * @description
@@ -309,7 +309,7 @@ class ForwardAccessSignalling_Arg {
          * @public
          * @readonly
          */
-        readonly aoipSelectedCodecTarget: OPTIONAL<AoIPCodec>,
+        readonly aoipSelectedCodecTarget?: OPTIONAL<AoIPCodec>,
         /**
          * @summary `uesbi_Iu`.
          * @description
@@ -321,7 +321,7 @@ class ForwardAccessSignalling_Arg {
          * @public
          * @readonly
          */
-        readonly uesbi_Iu: OPTIONAL<UESBI_Iu>,
+        readonly uesbi_Iu?: OPTIONAL<UESBI_Iu>,
         /**
          * @summary `imeisv`.
          * @description
@@ -333,7 +333,7 @@ class ForwardAccessSignalling_Arg {
          * @public
          * @readonly
          */
-        readonly imeisv: OPTIONAL<IMEI>,
+        readonly imeisv?: OPTIONAL<IMEI>,
         /**
          * @summary Extensions that are not recognized.
          * @public

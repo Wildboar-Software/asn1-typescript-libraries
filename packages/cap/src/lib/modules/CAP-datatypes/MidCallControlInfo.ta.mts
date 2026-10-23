@@ -48,7 +48,7 @@ export class MidCallControlInfo {
          * @public
          * @readonly
          */
-        readonly minimumNumberOfDigits: OPTIONAL<INTEGER>,
+        readonly minimumNumberOfDigits?: OPTIONAL<INTEGER>,
         /**
          * @summary `maximumNumberOfDigits`.
          * @description
@@ -59,7 +59,7 @@ export class MidCallControlInfo {
          * @public
          * @readonly
          */
-        readonly maximumNumberOfDigits: OPTIONAL<INTEGER>,
+        readonly maximumNumberOfDigits?: OPTIONAL<INTEGER>,
         /**
          * @summary `endOfReplyDigit`.
          * @description
@@ -70,7 +70,7 @@ export class MidCallControlInfo {
          * @public
          * @readonly
          */
-        readonly endOfReplyDigit: OPTIONAL<OCTET_STRING>,
+        readonly endOfReplyDigit?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `cancelDigit`.
          * @description
@@ -81,7 +81,7 @@ export class MidCallControlInfo {
          * @public
          * @readonly
          */
-        readonly cancelDigit: OPTIONAL<OCTET_STRING>,
+        readonly cancelDigit?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `startDigit`.
          * @description
@@ -92,7 +92,7 @@ export class MidCallControlInfo {
          * @public
          * @readonly
          */
-        readonly startDigit: OPTIONAL<OCTET_STRING>,
+        readonly startDigit?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `interDigitTimeout`.
          * @description
@@ -103,7 +103,7 @@ export class MidCallControlInfo {
          * @public
          * @readonly
          */
-        readonly interDigitTimeout: OPTIONAL<INTEGER>,
+        readonly interDigitTimeout?: OPTIONAL<INTEGER>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {
         if (minimumNumberOfDigits !== undefined && (typeof minimumNumberOfDigits === "bigint" ? (minimumNumberOfDigits < 1n || minimumNumberOfDigits > 30n) : (minimumNumberOfDigits < 1 || minimumNumberOfDigits > 30))) {

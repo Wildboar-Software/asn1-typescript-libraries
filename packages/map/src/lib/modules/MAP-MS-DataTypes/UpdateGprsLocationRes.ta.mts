@@ -55,7 +55,7 @@ class UpdateGprsLocationRes {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `add_Capability`.
          * @description
@@ -67,7 +67,7 @@ class UpdateGprsLocationRes {
          * @public
          * @readonly
          */
-        readonly add_Capability: OPTIONAL<NULL>,
+        readonly add_Capability?: OPTIONAL<NULL>,
         /**
          * @summary `sgsn_mmeSeparationSupported`.
          * @description
@@ -79,7 +79,7 @@ class UpdateGprsLocationRes {
          * @public
          * @readonly
          */
-        readonly sgsn_mmeSeparationSupported: OPTIONAL<NULL>,
+        readonly sgsn_mmeSeparationSupported?: OPTIONAL<NULL>,
         /**
          * @summary `mmeRegisteredforSMS`.
          * @description
@@ -91,7 +91,7 @@ class UpdateGprsLocationRes {
          * @public
          * @readonly
          */
-        readonly mmeRegisteredforSMS: OPTIONAL<NULL>,
+        readonly mmeRegisteredforSMS?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -80,7 +80,7 @@ class MO_ForwardSM_Arg {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `imsi`.
          * @description
@@ -90,7 +90,7 @@ class MO_ForwardSM_Arg {
          * @public
          * @readonly
          */
-        readonly imsi: OPTIONAL<IMSI>,
+        readonly imsi?: OPTIONAL<IMSI>,
         /**
          * @summary `correlationID`.
          * @description
@@ -100,7 +100,7 @@ class MO_ForwardSM_Arg {
          * @public
          * @readonly
          */
-        readonly correlationID: OPTIONAL<CorrelationID>,
+        readonly correlationID?: OPTIONAL<CorrelationID>,
         /**
          * @summary `sm_DeliveryOutcome`.
          * @description
@@ -110,7 +110,7 @@ class MO_ForwardSM_Arg {
          * @public
          * @readonly
          */
-        readonly sm_DeliveryOutcome: OPTIONAL<SM_DeliveryOutcome>,
+        readonly sm_DeliveryOutcome?: OPTIONAL<SM_DeliveryOutcome>,
         /**
          * @summary Extensions that are not recognized.
          * @public

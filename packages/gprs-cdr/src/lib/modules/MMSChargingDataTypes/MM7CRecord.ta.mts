@@ -286,12 +286,12 @@ class MM7CRecord {
         vasID: OCTET_STRING,
         messageID: OCTET_STRING,
         originatorAddress: MMSAgentAddress,
-        serviceCode: OPTIONAL<OCTET_STRING>,
-        requestStatusCode: OPTIONAL<RequestStatusCodeType>,
-        statusText: OPTIONAL<OCTET_STRING>,
-        recordTimeStamp: OPTIONAL<OCTET_STRING>,
-        localSequenceNumber: OPTIONAL<INTEGER>,
-        recordExtensions: OPTIONAL<ManagementExtension[]>
+        serviceCode?: OPTIONAL<OCTET_STRING>,
+        requestStatusCode?: OPTIONAL<RequestStatusCodeType>,
+        statusText?: OPTIONAL<OCTET_STRING>,
+        recordTimeStamp?: OPTIONAL<OCTET_STRING>,
+        localSequenceNumber?: OPTIONAL<INTEGER>,
+        recordExtensions?: OPTIONAL<ManagementExtension[]>
     ) {
         this.recordType = recordType;
         this.originatorMmsRSAddress = originatorMmsRSAddress;

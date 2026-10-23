@@ -157,19 +157,19 @@ class ExecuteArgument_Type {
     constructor (
         object: Name,
         method_id: OBJECT_IDENTIFIER,
-        input_assertions: OPTIONAL<ExecuteArgument_Type_input_assertions_Item[]>,
-        specific_input: OPTIONAL<_Element>,
-        serviceControls: OPTIONAL<ServiceControls> /* REPLICATED_COMPONENT */,
-        securityParameters: OPTIONAL<SecurityParameters> /* REPLICATED_COMPONENT */,
-        requestor: OPTIONAL<DistinguishedName> /* REPLICATED_COMPONENT */,
-        operationProgress: OPTIONAL<OperationProgress> /* REPLICATED_COMPONENT */,
-        aliasedRDNs: OPTIONAL<INTEGER> /* REPLICATED_COMPONENT */,
-        criticalExtensions: OPTIONAL<BIT_STRING> /* REPLICATED_COMPONENT */,
-        referenceType: OPTIONAL<ReferenceType> /* REPLICATED_COMPONENT */,
-        entryOnly: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
-        nameResolveOnMaste: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
-        operationContexts: OPTIONAL<ContextSelection> /* REPLICATED_COMPONENT */,
-        familyGrouping: OPTIONAL<FamilyGrouping> /* REPLICATED_COMPONENT */
+        input_assertions?: OPTIONAL<ExecuteArgument_Type_input_assertions_Item[]>,
+        specific_input?: OPTIONAL<_Element>,
+        serviceControls?: OPTIONAL<ServiceControls> /* REPLICATED_COMPONENT */,
+        securityParameters?: OPTIONAL<SecurityParameters> /* REPLICATED_COMPONENT */,
+        requestor?: OPTIONAL<DistinguishedName> /* REPLICATED_COMPONENT */,
+        operationProgress?: OPTIONAL<OperationProgress> /* REPLICATED_COMPONENT */,
+        aliasedRDNs?: OPTIONAL<INTEGER> /* REPLICATED_COMPONENT */,
+        criticalExtensions?: OPTIONAL<BIT_STRING> /* REPLICATED_COMPONENT */,
+        referenceType?: OPTIONAL<ReferenceType> /* REPLICATED_COMPONENT */,
+        entryOnly?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
+        nameResolveOnMaste?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
+        operationContexts?: OPTIONAL<ContextSelection> /* REPLICATED_COMPONENT */,
+        familyGrouping?: OPTIONAL<FamilyGrouping> /* REPLICATED_COMPONENT */
     ) {
         this.object = object;
         this.method_id = method_id;

@@ -54,8 +54,8 @@ class ValidityPeriodEnh {
     readonly enhancedVP: OPTIONAL<EnhancedVP>;
 
     constructor (
-        singleShotSM: OPTIONAL<BOOLEAN>,
-        enhancedVP: OPTIONAL<EnhancedVP>
+        singleShotSM?: OPTIONAL<BOOLEAN>,
+        enhancedVP?: OPTIONAL<EnhancedVP>
     ) {
         this.singleShotSM = singleShotSM;
         this.enhancedVP = enhancedVP;

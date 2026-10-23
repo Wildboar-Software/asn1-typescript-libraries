@@ -80,7 +80,7 @@ class AlterEventConditionListMonitoring_Request {
          * @public
          * @readonly
          */
-        readonly priorityChange: OPTIONAL<AlterEventConditionListMonitoring_Request_priorityChange>
+        readonly priorityChange?: OPTIONAL<AlterEventConditionListMonitoring_Request_priorityChange>
     ) {}
 
     /**

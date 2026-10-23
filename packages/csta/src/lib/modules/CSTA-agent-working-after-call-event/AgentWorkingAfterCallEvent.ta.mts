@@ -84,7 +84,7 @@ class AgentWorkingAfterCallEvent {
          * @public
          * @readonly
          */
-        readonly agentID: OPTIONAL<AgentID>,
+        readonly agentID?: OPTIONAL<AgentID>,
         /**
          * @summary `acdGroup`.
          * @description
@@ -94,7 +94,7 @@ class AgentWorkingAfterCallEvent {
          * @public
          * @readonly
          */
-        readonly acdGroup: OPTIONAL<DeviceID>,
+        readonly acdGroup?: OPTIONAL<DeviceID>,
         /**
          * @summary `pendingAgentState`.
          * @description
@@ -104,7 +104,7 @@ class AgentWorkingAfterCallEvent {
          * @public
          * @readonly
          */
-        readonly pendingAgentState: OPTIONAL<AgentWorkingAfterCallEvent_pendingAgentState>,
+        readonly pendingAgentState?: OPTIONAL<AgentWorkingAfterCallEvent_pendingAgentState>,
         /**
          * @summary `cause`.
          * @description
@@ -113,7 +113,7 @@ class AgentWorkingAfterCallEvent {
          * @public
          * @readonly
          */
-        readonly cause: OPTIONAL<EventCause>,
+        readonly cause?: OPTIONAL<EventCause>,
         /**
          * @summary `extensions`.
          * @description
@@ -123,7 +123,7 @@ class AgentWorkingAfterCallEvent {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

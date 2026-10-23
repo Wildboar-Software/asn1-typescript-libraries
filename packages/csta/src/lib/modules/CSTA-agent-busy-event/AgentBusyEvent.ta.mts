@@ -79,7 +79,7 @@ class AgentBusyEvent {
          * @public
          * @readonly
          */
-        readonly agentID: OPTIONAL<AgentID>,
+        readonly agentID?: OPTIONAL<AgentID>,
         /**
          * @summary `acdGroup`.
          * @description
@@ -89,7 +89,7 @@ class AgentBusyEvent {
          * @public
          * @readonly
          */
-        readonly acdGroup: OPTIONAL<DeviceID>,
+        readonly acdGroup?: OPTIONAL<DeviceID>,
         /**
          * @summary `pendingAgentState`.
          * @description
@@ -99,7 +99,7 @@ class AgentBusyEvent {
          * @public
          * @readonly
          */
-        readonly pendingAgentState: OPTIONAL<PendingAgentState>,
+        readonly pendingAgentState?: OPTIONAL<PendingAgentState>,
         /**
          * @summary `cause`.
          * @description
@@ -108,7 +108,7 @@ class AgentBusyEvent {
          * @public
          * @readonly
          */
-        readonly cause: OPTIONAL<EventCause>,
+        readonly cause?: OPTIONAL<EventCause>,
         /**
          * @summary `extensions`.
          * @description
@@ -118,7 +118,7 @@ class AgentBusyEvent {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

@@ -77,11 +77,11 @@ class ContactInfo {
     readonly phone: OPTIONAL<InternationalString>;
 
     constructor (
-        name: OPTIONAL<InternationalString>,
-        description: OPTIONAL<HumanString>,
-        address: OPTIONAL<HumanString>,
-        email: OPTIONAL<InternationalString>,
-        phone: OPTIONAL<InternationalString>
+        name?: OPTIONAL<InternationalString>,
+        description?: OPTIONAL<HumanString>,
+        address?: OPTIONAL<HumanString>,
+        email?: OPTIONAL<InternationalString>,
+        phone?: OPTIONAL<InternationalString>
     ) {
         this.name = name;
         this.description = description;

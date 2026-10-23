@@ -53,7 +53,7 @@ class MediaDescriptor {
          * @public
          * @readonly
          */
-        readonly termStateDescr: OPTIONAL<TerminationStateDescriptor>,
+        readonly termStateDescr?: OPTIONAL<TerminationStateDescriptor>,
         /**
          * @summary `streams`.
          * @description
@@ -64,7 +64,7 @@ class MediaDescriptor {
          * @public
          * @readonly
          */
-        readonly streams: OPTIONAL<MediaDescriptor_streams>,
+        readonly streams?: OPTIONAL<MediaDescriptor_streams>,
         /**
          * @summary Extensions that are not recognized.
          * @description

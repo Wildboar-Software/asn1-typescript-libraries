@@ -80,7 +80,7 @@ class IpaEuiccDataRequest {
          * @public
          * @readonly
          */
-        readonly euiccCiPKIdentifierToBeUsed: OPTIONAL<OCTET_STRING>,
+        readonly euiccCiPKIdentifierToBeUsed?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `searchCriteriaNotification`.
          * @description
@@ -89,7 +89,7 @@ class IpaEuiccDataRequest {
          * @public
          * @readonly
          */
-        readonly searchCriteriaNotification: OPTIONAL<IpaEuiccDataRequest_searchCriteriaNotification>,
+        readonly searchCriteriaNotification?: OPTIONAL<IpaEuiccDataRequest_searchCriteriaNotification>,
         /**
          * @summary `searchCriteriaEuiccPackageResult`.
          * @description
@@ -98,7 +98,7 @@ class IpaEuiccDataRequest {
          * @public
          * @readonly
          */
-        readonly searchCriteriaEuiccPackageResult: OPTIONAL<IpaEuiccDataRequest_searchCriteriaEuiccPackageResult>,
+        readonly searchCriteriaEuiccPackageResult?: OPTIONAL<IpaEuiccDataRequest_searchCriteriaEuiccPackageResult>,
         /**
          * @summary `eimTransactionId`.
          * @description
@@ -108,7 +108,7 @@ class IpaEuiccDataRequest {
          * @public
          * @readonly
          */
-        readonly eimTransactionId: OPTIONAL<TransactionId>
+        readonly eimTransactionId?: OPTIONAL<TransactionId>
     ) {}
 
     /**

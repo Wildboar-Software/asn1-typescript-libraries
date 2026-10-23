@@ -51,7 +51,7 @@ class DefaultFaultHandling {
 
     constructor (
         action: DefaultFaultHandling_action,
-        treatment: OPTIONAL<GapTreatment>,
+        treatment?: OPTIONAL<GapTreatment>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.action = action;

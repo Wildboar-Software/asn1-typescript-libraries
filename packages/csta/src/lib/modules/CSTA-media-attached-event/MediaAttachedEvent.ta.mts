@@ -105,7 +105,7 @@ class MediaAttachedEvent {
          * @public
          * @readonly
          */
-        readonly mediaServiceVersion: OPTIONAL<INTEGER>,
+        readonly mediaServiceVersion?: OPTIONAL<INTEGER>,
         /**
          * @summary `mediaServiceInstanceID`.
          * @description
@@ -114,7 +114,7 @@ class MediaAttachedEvent {
          * @public
          * @readonly
          */
-        readonly mediaServiceInstanceID: OPTIONAL<MediaServiceInstanceID>,
+        readonly mediaServiceInstanceID?: OPTIONAL<MediaServiceInstanceID>,
         /**
          * @summary `mediaStreamID`.
          * @description
@@ -123,7 +123,7 @@ class MediaAttachedEvent {
          * @public
          * @readonly
          */
-        readonly mediaStreamID: OPTIONAL<MediaStreamID>,
+        readonly mediaStreamID?: OPTIONAL<MediaStreamID>,
         /**
          * @summary `mediaCallCharacteristics`.
          * @description
@@ -132,7 +132,7 @@ class MediaAttachedEvent {
          * @public
          * @readonly
          */
-        readonly mediaCallCharacteristics: OPTIONAL<MediaCallCharacteristics>,
+        readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
         /**
          * @summary `callCharacteristics`.
          * @description
@@ -141,7 +141,7 @@ class MediaAttachedEvent {
          * @public
          * @readonly
          */
-        readonly callCharacteristics: OPTIONAL<CallCharacteristics>,
+        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
         /**
          * @summary `localConnectionInfo`.
          * @description
@@ -150,7 +150,7 @@ class MediaAttachedEvent {
          * @public
          * @readonly
          */
-        readonly localConnectionInfo: OPTIONAL<LocalConnectionState>,
+        readonly localConnectionInfo?: OPTIONAL<LocalConnectionState>,
         /**
          * @summary `mediaConnectionInfo`.
          * @description
@@ -159,7 +159,7 @@ class MediaAttachedEvent {
          * @public
          * @readonly
          */
-        readonly mediaConnectionInfo: OPTIONAL<ConnectionInformation>,
+        readonly mediaConnectionInfo?: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `extension`.
          * @description
@@ -169,7 +169,7 @@ class MediaAttachedEvent {
          * @public
          * @readonly
          */
-        readonly extension: OPTIONAL<CSTACommonArguments>
+        readonly extension?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

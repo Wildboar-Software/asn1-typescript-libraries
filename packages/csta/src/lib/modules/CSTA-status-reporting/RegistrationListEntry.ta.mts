@@ -74,7 +74,7 @@ class RegistrationListEntry {
          * @public
          * @readonly
          */
-        readonly registrationObject: OPTIONAL<DeviceID>
+        readonly registrationObject?: OPTIONAL<DeviceID>
     ) {}
 
     /**

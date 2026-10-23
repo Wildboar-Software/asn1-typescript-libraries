@@ -76,7 +76,7 @@ class EventReportBCSMArg {
          * @public
          * @readonly
          */
-        readonly eventSpecificInformationBCSM: OPTIONAL<EventSpecificInformationBCSM>,
+        readonly eventSpecificInformationBCSM?: OPTIONAL<EventSpecificInformationBCSM>,
         /**
          * @summary `legID`.
          * @description
@@ -89,7 +89,7 @@ class EventReportBCSMArg {
          * @public
          * @readonly
          */
-        readonly legID: OPTIONAL<ReceivingSideID>,
+        readonly legID?: OPTIONAL<ReceivingSideID>,
         /**
          * @summary `miscCallInfo`.
          * @description
@@ -101,13 +101,13 @@ class EventReportBCSMArg {
          * @public
          * @readonly
          */
-        readonly miscCallInfo: OPTIONAL<MiscCallInfo>,
+        readonly miscCallInfo?: OPTIONAL<MiscCallInfo>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<Extensions>,
+        readonly extensions?: OPTIONAL<Extensions>,
         /**
          * @summary Extensions that are not recognized.
          * @public

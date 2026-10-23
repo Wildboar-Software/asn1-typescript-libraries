@@ -177,14 +177,14 @@ class EESStartOfInterceptionWithRegisteredEEC {
 
     constructor (
         eECID: UTF8String,
-        gPSI: OPTIONAL<GPSI>,
-        aCProfiles: OPTIONAL<ACProfiles>,
-        eECServiceContSupport: OPTIONAL<ACRScenarios>,
-        expirationTime: OPTIONAL<Timestamp>,
-        eECContextID: OPTIONAL<UTF8String>,
-        srcEESID: OPTIONAL<UTF8String>,
-        unfulfilledACProfiles: OPTIONAL<UnfulfilledACProfiles>,
-        timeOfRegistration: OPTIONAL<Timestamp>,
+        gPSI?: OPTIONAL<GPSI>,
+        aCProfiles?: OPTIONAL<ACProfiles>,
+        eECServiceContSupport?: OPTIONAL<ACRScenarios>,
+        expirationTime?: OPTIONAL<Timestamp>,
+        eECContextID?: OPTIONAL<UTF8String>,
+        srcEESID?: OPTIONAL<UTF8String>,
+        unfulfilledACProfiles?: OPTIONAL<UnfulfilledACProfiles>,
+        timeOfRegistration?: OPTIONAL<Timestamp>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.eECID = eECID;

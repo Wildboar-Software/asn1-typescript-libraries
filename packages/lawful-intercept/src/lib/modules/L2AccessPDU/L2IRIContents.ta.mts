@@ -398,19 +398,19 @@ class L2IRIContents {
 
     constructor (
         accessEventType: AccessEventType,
-        internetAccessType: OPTIONAL<InternetAccessType>,
-        targetNetworkID: OPTIONAL<UTF8String>,
-        targetCPEID: OPTIONAL<UTF8String>,
-        targetLocation: OPTIONAL<UTF8String>,
-        nASPortNumber: OPTIONAL<INTEGER>,
-        callBackNumber: OPTIONAL<UTF8String>,
-        startTime: OPTIONAL<GeneralizedTime>,
-        endTime: OPTIONAL<GeneralizedTime>,
-        endReason: OPTIONAL<EndReason>,
-        octetsReceived: OPTIONAL<INTEGER>,
-        octetsTransmitted: OPTIONAL<INTEGER>,
-        rawAAAData: OPTIONAL<OCTET_STRING>,
-        authenticationType: OPTIONAL<AuthenticationType>,
+        internetAccessType?: OPTIONAL<InternetAccessType>,
+        targetNetworkID?: OPTIONAL<UTF8String>,
+        targetCPEID?: OPTIONAL<UTF8String>,
+        targetLocation?: OPTIONAL<UTF8String>,
+        nASPortNumber?: OPTIONAL<INTEGER>,
+        callBackNumber?: OPTIONAL<UTF8String>,
+        startTime?: OPTIONAL<GeneralizedTime>,
+        endTime?: OPTIONAL<GeneralizedTime>,
+        endReason?: OPTIONAL<EndReason>,
+        octetsReceived?: OPTIONAL<INTEGER>,
+        octetsTransmitted?: OPTIONAL<INTEGER>,
+        rawAAAData?: OPTIONAL<OCTET_STRING>,
+        authenticationType?: OPTIONAL<AuthenticationType>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.accessEventType = accessEventType;

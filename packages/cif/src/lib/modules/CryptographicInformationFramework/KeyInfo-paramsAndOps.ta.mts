@@ -51,7 +51,7 @@ class KeyInfo_paramsAndOps<ParameterType, OperationsType> {
          * @public
          * @readonly
          */
-        readonly operations: OPTIONAL<OperationsType>
+        readonly operations?: OPTIONAL<OperationsType>
     ) {}
 
     /**

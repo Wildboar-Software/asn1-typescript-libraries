@@ -91,8 +91,8 @@ class ClientPartToKeep_addlBilling {
 
     constructor (
         paymentMethod: ClientPartToKeep_addlBilling_paymentMethod,
-        customerReference: OPTIONAL<InternationalString>,
-        customerPONumber: OPTIONAL<InternationalString>
+        customerReference?: OPTIONAL<InternationalString>,
+        customerPONumber?: OPTIONAL<InternationalString>
     ) {
         this.paymentMethod = paymentMethod;
         this.customerReference = customerReference;

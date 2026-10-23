@@ -216,14 +216,14 @@ class ComponentIdentifierV11 {
         componentClass: ComponentClass,
         componentManufacturer: UTF8String,
         componentModel: UTF8String,
-        componentSerial: OPTIONAL<UTF8String>,
-        componentRevision: OPTIONAL<UTF8String>,
-        componentManufacturerId: OPTIONAL<PrivateEnterpriseNumber>,
-        fieldReplaceable: OPTIONAL<BOOLEAN>,
-        componentAddresses: OPTIONAL<ComponentAddress[]>,
-        componentPlatformCert: OPTIONAL<CertificateIdentifier>,
-        componentPlatformCertUri: OPTIONAL<URIReference>,
-        status: OPTIONAL<AttributeStatus>
+        componentSerial?: OPTIONAL<UTF8String>,
+        componentRevision?: OPTIONAL<UTF8String>,
+        componentManufacturerId?: OPTIONAL<PrivateEnterpriseNumber>,
+        fieldReplaceable?: OPTIONAL<BOOLEAN>,
+        componentAddresses?: OPTIONAL<ComponentAddress[]>,
+        componentPlatformCert?: OPTIONAL<CertificateIdentifier>,
+        componentPlatformCertUri?: OPTIONAL<URIReference>,
+        status?: OPTIONAL<AttributeStatus>
     ) {
         this.componentClass = componentClass;
         this.componentManufacturer = componentManufacturer;

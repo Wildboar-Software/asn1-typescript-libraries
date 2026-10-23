@@ -78,7 +78,7 @@ class SetAgentStateArgument {
          * @public
          * @readonly
          */
-        readonly agentID: OPTIONAL<AgentID>,
+        readonly agentID?: OPTIONAL<AgentID>,
         /**
          * @summary `password`.
          * @description
@@ -88,7 +88,7 @@ class SetAgentStateArgument {
          * @public
          * @readonly
          */
-        readonly password: OPTIONAL<AgentPassword>,
+        readonly password?: OPTIONAL<AgentPassword>,
         /**
          * @summary `group`.
          * @description
@@ -98,7 +98,7 @@ class SetAgentStateArgument {
          * @public
          * @readonly
          */
-        readonly group: OPTIONAL<DeviceID>,
+        readonly group?: OPTIONAL<DeviceID>,
         /**
          * @summary `extensions`.
          * @description
@@ -108,7 +108,7 @@ class SetAgentStateArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

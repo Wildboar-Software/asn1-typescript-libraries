@@ -214,9 +214,9 @@ class SeparatedLocationReporting {
         gPSI: OPTIONAL<GPSI>,
         gUTI: OPTIONAL<FiveGGUTI>,
         location: Location,
-        non3GPPAccessEndpoint: OPTIONAL<UEEndpointAddress>,
-        rATType: OPTIONAL<RATType>,
-        ePSIdentities: OPTIONAL<EPSSubscriberIDs>,
+        non3GPPAccessEndpoint?: OPTIONAL<UEEndpointAddress>,
+        rATType?: OPTIONAL<RATType>,
+        ePSIdentities?: OPTIONAL<EPSSubscriberIDs>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.sUPI = sUPI;

@@ -98,7 +98,7 @@ class ElementInfo {
         dataType: OPTIONAL<ElementDataType>,
         required: BOOLEAN,
         repeatable: BOOLEAN,
-        description: OPTIONAL<HumanString>
+        description?: OPTIONAL<HumanString>
     ) {
         this.elementName = elementName;
         this.elementTagPath = elementTagPath;

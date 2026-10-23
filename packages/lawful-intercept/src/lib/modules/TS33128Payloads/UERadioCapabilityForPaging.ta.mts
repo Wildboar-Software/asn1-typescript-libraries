@@ -82,9 +82,9 @@ class UERadioCapabilityForPaging {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        uERadioCapabilityForPagingOfNR: OPTIONAL<OCTET_STRING>,
-        uERadioCapabilityForPagingOfEUTRA: OPTIONAL<OCTET_STRING>,
-        uERadioCapabilityForPagingOfNBIoT: OPTIONAL<OCTET_STRING>,
+        uERadioCapabilityForPagingOfNR?: OPTIONAL<OCTET_STRING>,
+        uERadioCapabilityForPagingOfEUTRA?: OPTIONAL<OCTET_STRING>,
+        uERadioCapabilityForPagingOfNBIoT?: OPTIONAL<OCTET_STRING>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.uERadioCapabilityForPagingOfNR = uERadioCapabilityForPagingOfNR;

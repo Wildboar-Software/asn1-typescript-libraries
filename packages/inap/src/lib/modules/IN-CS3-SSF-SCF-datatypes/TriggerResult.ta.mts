@@ -59,7 +59,7 @@ class TriggerResult {
     constructor (
         tDPIdentifer: INTEGER,
         actionPerformed: ActionPerformed,
-        dPName: OPTIONAL<EventTypeBCSM>,
+        dPName?: OPTIONAL<EventTypeBCSM>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.tDPIdentifer = tDPIdentifer;

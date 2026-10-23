@@ -53,7 +53,7 @@ class IoTSpecificInfo {
          * @public
          * @readonly
          */
-        readonly ecallSupported: OPTIONAL<NULL>,
+        readonly ecallSupported?: OPTIONAL<NULL>,
         /**
          * @summary `fallbackSupported`.
          * @description
@@ -62,7 +62,7 @@ class IoTSpecificInfo {
          * @public
          * @readonly
          */
-        readonly fallbackSupported: OPTIONAL<NULL>,
+        readonly fallbackSupported?: OPTIONAL<NULL>,
         /**
          * @summary `fallbackAllowedUpdateSupported`.
          * @description
@@ -71,7 +71,7 @@ class IoTSpecificInfo {
          * @public
          * @readonly
          */
-        readonly fallbackAllowedUpdateSupported: OPTIONAL<NULL>
+        readonly fallbackAllowedUpdateSupported?: OPTIONAL<NULL>
     ) {
         if (this.iotVersion.length < 1) {
             throw new ASN1SizeError("IoTSpecificInfo.iotVersion violates SIZE constraint");

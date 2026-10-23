@@ -155,12 +155,12 @@ class LocationInfo {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        userLocation: OPTIONAL<UserLocation>,
-        currentLoc: OPTIONAL<BOOLEAN>,
-        geoInfo: OPTIONAL<GeographicArea>,
-        rATType: OPTIONAL<RATType>,
-        timeZone: OPTIONAL<TimeZone>,
-        additionalCellIDs: OPTIONAL<CellInformation[]>,
+        userLocation?: OPTIONAL<UserLocation>,
+        currentLoc?: OPTIONAL<BOOLEAN>,
+        geoInfo?: OPTIONAL<GeographicArea>,
+        rATType?: OPTIONAL<RATType>,
+        timeZone?: OPTIONAL<TimeZone>,
+        additionalCellIDs?: OPTIONAL<CellInformation[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.userLocation = userLocation;

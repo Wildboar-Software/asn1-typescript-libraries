@@ -53,8 +53,8 @@ class ProvideUserInformationResultArg_Type {
 
     constructor (
         userInformation: ReceivedInformation,
-        securityParameters: OPTIONAL<SecurityParameters>,
-        extensions: OPTIONAL<ExtensionField[]>
+        securityParameters?: OPTIONAL<SecurityParameters>,
+        extensions?: OPTIONAL<ExtensionField[]>
     ) {
         this.userInformation = userInformation;
         this.securityParameters = securityParameters;

@@ -148,7 +148,7 @@ class ServiceChangeParm {
          * @public
          * @readonly
          */
-        readonly serviceChangeDelay: OPTIONAL<INTEGER>,
+        readonly serviceChangeDelay?: OPTIONAL<INTEGER>,
         /**
          * @summary `serviceChangeMgcId`.
          * @description
@@ -160,7 +160,7 @@ class ServiceChangeParm {
          * @public
          * @readonly
          */
-        readonly serviceChangeMgcId: OPTIONAL<MId>,
+        readonly serviceChangeMgcId?: OPTIONAL<MId>,
         /**
          * @summary `timeStamp`.
          * @description
@@ -174,7 +174,7 @@ class ServiceChangeParm {
          * @public
          * @readonly
          */
-        readonly timeStamp: OPTIONAL<TimeNotation>,
+        readonly timeStamp?: OPTIONAL<TimeNotation>,
         /**
          * @summary `nonStandardData`.
          * @description
@@ -188,7 +188,7 @@ class ServiceChangeParm {
          * @public
          * @readonly
          */
-        readonly nonStandardData: OPTIONAL<NonStandardData>,
+        readonly nonStandardData?: OPTIONAL<NonStandardData>,
         /**
          * @summary `serviceChangeInfo`.
          * @description
@@ -199,7 +199,7 @@ class ServiceChangeParm {
          * @public
          * @readonly
          */
-        readonly serviceChangeInfo: OPTIONAL<AuditDescriptor>,
+        readonly serviceChangeInfo?: OPTIONAL<AuditDescriptor>,
         /**
          * @summary `serviceChangeIncompleteFlag`.
          * @description
@@ -212,7 +212,7 @@ class ServiceChangeParm {
          * @public
          * @readonly
          */
-        readonly serviceChangeIncompleteFlag: OPTIONAL<NULL>,
+        readonly serviceChangeIncompleteFlag?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @description

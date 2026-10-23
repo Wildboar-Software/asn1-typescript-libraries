@@ -47,7 +47,7 @@ class RepertoireFontOffer_alternatives_Item {
          * @public
          * @readonly
          */
-        readonly repertoire: OPTIONAL<RepertoireAssignment>,
+        readonly repertoire?: OPTIONAL<RepertoireAssignment>,
         /**
          * @summary `fontCapability`.
          * @description
@@ -56,7 +56,7 @@ class RepertoireFontOffer_alternatives_Item {
          * @public
          * @readonly
          */
-        readonly fontCapability: OPTIONAL<IntegerOffer>,
+        readonly fontCapability?: OPTIONAL<IntegerOffer>,
         /**
          * @summary `fontAssignments`.
          * @description
@@ -65,7 +65,7 @@ class RepertoireFontOffer_alternatives_Item {
          * @public
          * @readonly
          */
-        readonly fontAssignments: OPTIONAL<FontAssignment[]>
+        readonly fontAssignments?: OPTIONAL<FontAssignment[]>
     ) {}
 
     /**

@@ -68,7 +68,7 @@ class DOupdate_copyFromBuffer {
          * @public
          * @readonly
          */
-        readonly rioName: OPTIONAL<PrintableString>,
+        readonly rioName?: OPTIONAL<PrintableString>,
         /**
          * @summary `recordId`.
          * @description
@@ -78,7 +78,7 @@ class DOupdate_copyFromBuffer {
          * @public
          * @readonly
          */
-        readonly recordId: OPTIONAL<PrintableString>,
+        readonly recordId?: OPTIONAL<PrintableString>,
         /**
          * @summary `rendition`.
          * @description
@@ -87,7 +87,7 @@ class DOupdate_copyFromBuffer {
          * @public
          * @readonly
          */
-        readonly rendition: OPTIONAL<NULL>,
+        readonly rendition?: OPTIONAL<NULL>,
         /**
          * @summary `structure`.
          * @description
@@ -96,7 +96,7 @@ class DOupdate_copyFromBuffer {
          * @public
          * @readonly
          */
-        readonly structure: OPTIONAL<DOupdate_copyFromBuffer_structure>,
+        readonly structure?: OPTIONAL<DOupdate_copyFromBuffer_structure>,
         /**
          * @summary `ripple`.
          * @description
@@ -105,7 +105,7 @@ class DOupdate_copyFromBuffer {
          * @public
          * @readonly
          */
-        readonly ripple: OPTIONAL<NULL>
+        readonly ripple?: OPTIONAL<NULL>
     ) {}
 
     /**

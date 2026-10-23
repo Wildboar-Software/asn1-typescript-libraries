@@ -59,7 +59,7 @@ class RelinquishControl_Request {
          * @public
          * @readonly
          */
-        readonly namedToken: OPTIONAL<Identifier>
+        readonly namedToken?: OPTIONAL<Identifier>
     ) {}
 
     /**

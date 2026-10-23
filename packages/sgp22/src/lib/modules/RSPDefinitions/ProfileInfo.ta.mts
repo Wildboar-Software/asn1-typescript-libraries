@@ -83,7 +83,7 @@ class ProfileInfo {
          * @public
          * @readonly
          */
-        readonly iccid: OPTIONAL<Iccid>,
+        readonly iccid?: OPTIONAL<Iccid>,
         /**
          * @summary `isdpAid`.
          * @description
@@ -94,7 +94,7 @@ class ProfileInfo {
          * @public
          * @readonly
          */
-        readonly isdpAid: OPTIONAL<OctetTo16>,
+        readonly isdpAid?: OPTIONAL<OctetTo16>,
         /**
          * @summary `profileState`.
          * @description
@@ -106,7 +106,7 @@ class ProfileInfo {
          * @public
          * @readonly
          */
-        readonly profileState: OPTIONAL<ProfileState>,
+        readonly profileState?: OPTIONAL<ProfileState>,
         /**
          * @summary `profileNickname`.
          * @description
@@ -118,7 +118,7 @@ class ProfileInfo {
          * @public
          * @readonly
          */
-        readonly profileNickname: OPTIONAL<UTF8String>,
+        readonly profileNickname?: OPTIONAL<UTF8String>,
         /**
          * @summary `serviceProviderName`.
          * @description
@@ -129,7 +129,7 @@ class ProfileInfo {
          * @public
          * @readonly
          */
-        readonly serviceProviderName: OPTIONAL<UTF8String>,
+        readonly serviceProviderName?: OPTIONAL<UTF8String>,
         /**
          * @summary `profileName`.
          * @description
@@ -140,7 +140,7 @@ class ProfileInfo {
          * @public
          * @readonly
          */
-        readonly profileName: OPTIONAL<UTF8String>,
+        readonly profileName?: OPTIONAL<UTF8String>,
         /**
          * @summary `iconType`.
          * @description
@@ -151,7 +151,7 @@ class ProfileInfo {
          * @public
          * @readonly
          */
-        readonly iconType: OPTIONAL<IconType>,
+        readonly iconType?: OPTIONAL<IconType>,
         /**
          * @summary `icon`.
          * @description
@@ -163,7 +163,7 @@ class ProfileInfo {
          * @public
          * @readonly
          */
-        readonly icon: OPTIONAL<OCTET_STRING>,
+        readonly icon?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `profileClass`.
          * @description
@@ -175,7 +175,7 @@ class ProfileInfo {
          * @public
          * @readonly
          */
-        readonly profileClass: OPTIONAL<ProfileClass>,
+        readonly profileClass?: OPTIONAL<ProfileClass>,
         /**
          * @summary `notificationConfigurationInfo`.
          * @description
@@ -186,7 +186,7 @@ class ProfileInfo {
          * @public
          * @readonly
          */
-        readonly notificationConfigurationInfo: OPTIONAL<NotificationConfigurationInformation[]>,
+        readonly notificationConfigurationInfo?: OPTIONAL<NotificationConfigurationInformation[]>,
         /**
          * @summary `profileOwner`.
          * @description
@@ -198,7 +198,7 @@ class ProfileInfo {
          * @public
          * @readonly
          */
-        readonly profileOwner: OPTIONAL<OperatorId>,
+        readonly profileOwner?: OPTIONAL<OperatorId>,
         /**
          * @summary `dpProprietaryData`.
          * @description
@@ -209,7 +209,7 @@ class ProfileInfo {
          * @public
          * @readonly
          */
-        readonly dpProprietaryData: OPTIONAL<DpProprietaryData>,
+        readonly dpProprietaryData?: OPTIONAL<DpProprietaryData>,
         /**
          * @summary `profilePolicyRules`.
          * @description
@@ -220,7 +220,7 @@ class ProfileInfo {
          * @public
          * @readonly
          */
-        readonly profilePolicyRules: OPTIONAL<PprIds>,
+        readonly profilePolicyRules?: OPTIONAL<PprIds>,
         /**
          * @summary `serviceSpecificDataStoredInEuicc`.
          * @description
@@ -231,7 +231,7 @@ class ProfileInfo {
          * @public
          * @readonly
          */
-        readonly serviceSpecificDataStoredInEuicc: OPTIONAL<VendorSpecificExtension>,
+        readonly serviceSpecificDataStoredInEuicc?: OPTIONAL<VendorSpecificExtension>,
         /**
          * @summary `ecallIndication`.
          * @description
@@ -241,7 +241,7 @@ class ProfileInfo {
          * @public
          * @readonly
          */
-        readonly ecallIndication: OPTIONAL<BOOLEAN>,
+        readonly ecallIndication?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `fallbackAttribute`.
          * @description
@@ -252,7 +252,7 @@ class ProfileInfo {
          * @public
          * @readonly
          */
-        readonly fallbackAttribute: OPTIONAL<BOOLEAN>,
+        readonly fallbackAttribute?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `fallbackAllowed`.
          * @description
@@ -262,7 +262,7 @@ class ProfileInfo {
          * @public
          * @readonly
          */
-        readonly fallbackAllowed: OPTIONAL<BOOLEAN>,
+        readonly fallbackAllowed?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `iotSpecificProfileInfo`.
          * @description
@@ -273,7 +273,7 @@ class ProfileInfo {
          * @public
          * @readonly
          */
-        readonly iotSpecificProfileInfo: OPTIONAL<ProfileInfo_iotSpecificProfileInfo>
+        readonly iotSpecificProfileInfo?: OPTIONAL<ProfileInfo_iotSpecificProfileInfo>
     ) {
         if (this.profileNickname !== undefined && (this.profileNickname.length > 64)) {
             throw new ASN1SizeError("ProfileInfo.profileNickname violates SIZE constraint");

@@ -142,8 +142,8 @@ class MediaReport {
         accessingElementId: AccessingElementId,
         eventTime: EventTime,
         callId: CallId,
-        subject: OPTIONAL<SDP>,
-        associate: OPTIONAL<SDP>,
+        subject?: OPTIONAL<SDP>,
+        associate?: OPTIONAL<SDP>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.caseId = caseId;

@@ -51,7 +51,7 @@ class ForwardingFeature {
          * @public
          * @readonly
          */
-        readonly basicService: OPTIONAL<BasicServiceCode>,
+        readonly basicService?: OPTIONAL<BasicServiceCode>,
         /**
          * @summary `ss_Status`.
          * @description
@@ -62,7 +62,7 @@ class ForwardingFeature {
          * @public
          * @readonly
          */
-        readonly ss_Status: OPTIONAL<SS_Status>,
+        readonly ss_Status?: OPTIONAL<SS_Status>,
         /**
          * @summary `forwardedToNumber`.
          * @description
@@ -72,7 +72,7 @@ class ForwardingFeature {
          * @public
          * @readonly
          */
-        readonly forwardedToNumber: OPTIONAL<ISDN_AddressString>,
+        readonly forwardedToNumber?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `forwardedToSubaddress`.
          * @description
@@ -82,7 +82,7 @@ class ForwardingFeature {
          * @public
          * @readonly
          */
-        readonly forwardedToSubaddress: OPTIONAL<ISDN_SubaddressString>,
+        readonly forwardedToSubaddress?: OPTIONAL<ISDN_SubaddressString>,
         /**
          * @summary `forwardingOptions`.
          * @description
@@ -92,7 +92,7 @@ class ForwardingFeature {
          * @public
          * @readonly
          */
-        readonly forwardingOptions: OPTIONAL<ForwardingOptions>,
+        readonly forwardingOptions?: OPTIONAL<ForwardingOptions>,
         /**
          * @summary `noReplyConditionTime`.
          * @description
@@ -102,7 +102,7 @@ class ForwardingFeature {
          * @public
          * @readonly
          */
-        readonly noReplyConditionTime: OPTIONAL<NoReplyConditionTime>,
+        readonly noReplyConditionTime?: OPTIONAL<NoReplyConditionTime>,
         /**
          * @summary `longForwardedToNumber`.
          * @description
@@ -112,7 +112,7 @@ class ForwardingFeature {
          * @public
          * @readonly
          */
-        readonly longForwardedToNumber: OPTIONAL<FTN_AddressString>,
+        readonly longForwardedToNumber?: OPTIONAL<FTN_AddressString>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -88,7 +88,7 @@ class ListResult {
          * @public
          * @readonly
          */
-        readonly warnings: OPTIONAL<Warning[]> /* REPLICATED_COMPONENT */,
+        readonly warnings?: OPTIONAL<Warning[]> /* REPLICATED_COMPONENT */,
         /**
          * @summary `continuation`.
          * @description
@@ -98,7 +98,7 @@ class ListResult {
          * @public
          * @readonly
          */
-        readonly continuation: OPTIONAL<TaskId> /* REPLICATED_COMPONENT */,
+        readonly continuation?: OPTIONAL<TaskId> /* REPLICATED_COMPONENT */,
         /**
          * @summary `start_date_and_time`.
          * @description
@@ -107,7 +107,7 @@ class ListResult {
          * @public
          * @readonly
          */
-        readonly start_date_and_time: OPTIONAL<GeneralizedTime>,
+        readonly start_date_and_time?: OPTIONAL<GeneralizedTime>,
         /**
          * @summary `end_date_and_time`.
          * @description
@@ -116,7 +116,7 @@ class ListResult {
          * @public
          * @readonly
          */
-        readonly end_date_and_time: OPTIONAL<GeneralizedTime>,
+        readonly end_date_and_time?: OPTIONAL<GeneralizedTime>,
         /**
          * @summary `ordering`.
          * @description
@@ -125,7 +125,7 @@ class ListResult {
          * @public
          * @readonly
          */
-        readonly ordering: OPTIONAL<OrderingRule>,
+        readonly ordering?: OPTIONAL<OrderingRule>,
         /**
          * @summary `search_domain`.
          * @description
@@ -134,7 +134,7 @@ class ListResult {
          * @public
          * @readonly
          */
-        readonly search_domain: OPTIONAL<SearchDomain>,
+        readonly search_domain?: OPTIONAL<SearchDomain>,
         /**
          * @summary `search_criteria`.
          * @description
@@ -143,7 +143,7 @@ class ListResult {
          * @public
          * @readonly
          */
-        readonly search_criteria: OPTIONAL<SearchCriteria>
+        readonly search_criteria?: OPTIONAL<SearchCriteria>
     ) {}
 
     /**

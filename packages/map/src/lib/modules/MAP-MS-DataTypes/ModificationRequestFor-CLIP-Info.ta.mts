@@ -45,7 +45,7 @@ class ModificationRequestFor_CLIP_Info {
          * @public
          * @readonly
          */
-        readonly ss_Status: OPTIONAL<Ext_SS_Status>,
+        readonly ss_Status?: OPTIONAL<Ext_SS_Status>,
         /**
          * @summary `overrideCategory`.
          * @description
@@ -55,7 +55,7 @@ class ModificationRequestFor_CLIP_Info {
          * @public
          * @readonly
          */
-        readonly overrideCategory: OPTIONAL<OverrideCategory>,
+        readonly overrideCategory?: OPTIONAL<OverrideCategory>,
         /**
          * @summary `modifyNotificationToCSE`.
          * @description
@@ -66,13 +66,13 @@ class ModificationRequestFor_CLIP_Info {
          * @public
          * @readonly
          */
-        readonly modifyNotificationToCSE: OPTIONAL<ModificationInstruction>,
+        readonly modifyNotificationToCSE?: OPTIONAL<ModificationInstruction>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

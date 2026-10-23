@@ -61,9 +61,9 @@ class TransferSTSIArg_Type {
 
     constructor (
         sSIInfo: SSIInfo,
-        securityParameters: OPTIONAL<SecurityParameters>,
+        securityParameters?: OPTIONAL<SecurityParameters>,
         _unrecognizedExtensionsList: _Element[] = [],
-        extensions: OPTIONAL<Extensions>
+        extensions?: OPTIONAL<Extensions>
     ) {
         this.sSIInfo = sSIInfo;
         this.securityParameters = securityParameters;

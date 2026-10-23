@@ -54,7 +54,7 @@ class VendorSpecificServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly escapeRegister: OPTIONAL<EscapeRegister>,
+        readonly escapeRegister?: OPTIONAL<EscapeRegister>,
         /**
          * @summary `escapeRegisterCancel`.
          * @public
@@ -63,7 +63,7 @@ class VendorSpecificServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly escapeRegisterCancel: OPTIONAL<EscapeRegisterCancel>,
+        readonly escapeRegisterCancel?: OPTIONAL<EscapeRegisterCancel>,
         /**
          * @summary `escapeRegisterAbort`.
          * @public
@@ -72,7 +72,7 @@ class VendorSpecificServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly escapeRegisterAbort: OPTIONAL<EscapeRegisterAbort>,
+        readonly escapeRegisterAbort?: OPTIONAL<EscapeRegisterAbort>,
         /**
          * @summary `escape`.
          * @public
@@ -81,7 +81,7 @@ class VendorSpecificServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly escape: OPTIONAL<Escape>,
+        readonly escape?: OPTIONAL<Escape>,
         /**
          * @summary `privateDataVersionSelection`.
          * @public
@@ -90,7 +90,7 @@ class VendorSpecificServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly privateDataVersionSelection: OPTIONAL<PrivateDataVersionSelection>
+        readonly privateDataVersionSelection?: OPTIONAL<PrivateDataVersionSelection>
     ) {}
 
     /**

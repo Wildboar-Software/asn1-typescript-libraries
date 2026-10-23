@@ -85,8 +85,8 @@ class POCParticipant {
 
     constructor (
         called_party_address: InvolvedParty,
-        participant_access_priority: OPTIONAL<AccessPriority>,
-        user_participating_type: OPTIONAL<ParticipatingType>
+        participant_access_priority?: OPTIONAL<AccessPriority>,
+        user_participating_type?: OPTIONAL<ParticipatingType>
     ) {
         this.called_party_address = called_party_address;
         this.participant_access_priority = participant_access_priority;

@@ -78,8 +78,8 @@ class ProtConfigOptions {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        ueToNetwork: OPTIONAL<OCTET_STRING>,
-        networkToUe: OPTIONAL<OCTET_STRING>,
+        ueToNetwork?: OPTIONAL<OCTET_STRING>,
+        networkToUe?: OPTIONAL<OCTET_STRING>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.ueToNetwork = ueToNetwork;

@@ -57,7 +57,7 @@ class ReportPoolSemaphoreStatus_Request {
          * @public
          * @readonly
          */
-        readonly nameToStartAfter: OPTIONAL<Identifier>
+        readonly nameToStartAfter?: OPTIONAL<Identifier>
     ) {}
 
     /**

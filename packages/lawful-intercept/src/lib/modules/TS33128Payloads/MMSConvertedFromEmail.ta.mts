@@ -272,12 +272,12 @@ class MMSConvertedFromEmail {
         originatingMMSParty: MMSParty,
         messageClass: OPTIONAL<MMSMessageClass>,
         dateTime: Timestamp,
-        expiry: OPTIONAL<MMSExpiry>,
-        deliveryReport: OPTIONAL<BOOLEAN>,
-        priority: OPTIONAL<MMSPriority>,
-        readReport: OPTIONAL<BOOLEAN>,
-        subject: OPTIONAL<MMSSubject>,
-        messageID: OPTIONAL<UTF8String>,
+        expiry?: OPTIONAL<MMSExpiry>,
+        deliveryReport?: OPTIONAL<BOOLEAN>,
+        priority?: OPTIONAL<MMSPriority>,
+        readReport?: OPTIONAL<BOOLEAN>,
+        subject?: OPTIONAL<MMSSubject>,
+        messageID?: OPTIONAL<UTF8String>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.version = version;

@@ -71,7 +71,7 @@ class ReadyForSM_Arg {
          * @public
          * @readonly
          */
-        readonly alertReasonIndicator: OPTIONAL<NULL>,
+        readonly alertReasonIndicator?: OPTIONAL<NULL>,
         /**
          * @summary `extensionContainer`.
          * @description
@@ -81,7 +81,7 @@ class ReadyForSM_Arg {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `additionalAlertReasonIndicator`.
          * @description
@@ -92,7 +92,7 @@ class ReadyForSM_Arg {
          * @public
          * @readonly
          */
-        readonly additionalAlertReasonIndicator: OPTIONAL<NULL>,
+        readonly additionalAlertReasonIndicator?: OPTIONAL<NULL>,
         /**
          * @summary `maximumUeAvailabilityTime`.
          * @description
@@ -102,7 +102,7 @@ class ReadyForSM_Arg {
          * @public
          * @readonly
          */
-        readonly maximumUeAvailabilityTime: OPTIONAL<Time>,
+        readonly maximumUeAvailabilityTime?: OPTIONAL<Time>,
         /**
          * @summary Extensions that are not recognized.
          * @public

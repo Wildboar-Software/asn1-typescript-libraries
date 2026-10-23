@@ -85,7 +85,7 @@ class PrepareSubsequentHO_Arg {
          * @public
          * @readonly
          */
-        readonly targetRNCId: OPTIONAL<RNCId>,
+        readonly targetRNCId?: OPTIONAL<RNCId>,
         /**
          * @summary `an_APDU`.
          * @description
@@ -99,7 +99,7 @@ class PrepareSubsequentHO_Arg {
          * @public
          * @readonly
          */
-        readonly an_APDU: OPTIONAL<AccessNetworkSignalInfo>,
+        readonly an_APDU?: OPTIONAL<AccessNetworkSignalInfo>,
         /**
          * @summary `selectedRab_Id`.
          * @description
@@ -112,13 +112,13 @@ class PrepareSubsequentHO_Arg {
          * @public
          * @readonly
          */
-        readonly selectedRab_Id: OPTIONAL<RAB_Id>,
+        readonly selectedRab_Id?: OPTIONAL<RAB_Id>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `geran_classmark`.
          * @description
@@ -130,7 +130,7 @@ class PrepareSubsequentHO_Arg {
          * @public
          * @readonly
          */
-        readonly geran_classmark: OPTIONAL<GERAN_Classmark>,
+        readonly geran_classmark?: OPTIONAL<GERAN_Classmark>,
         /**
          * @summary `rab_ConfigurationIndicator`.
          * @description
@@ -143,7 +143,7 @@ class PrepareSubsequentHO_Arg {
          * @public
          * @readonly
          */
-        readonly rab_ConfigurationIndicator: OPTIONAL<NULL>,
+        readonly rab_ConfigurationIndicator?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @public

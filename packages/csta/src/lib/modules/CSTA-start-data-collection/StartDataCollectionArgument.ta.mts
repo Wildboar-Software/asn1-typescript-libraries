@@ -68,7 +68,7 @@ class StartDataCollectionArgument {
          * @public
          * @readonly
          */
-        readonly dataCollType: OPTIONAL<DataCollType>,
+        readonly dataCollType?: OPTIONAL<DataCollType>,
         /**
          * @summary `digitsReportingCriteria`.
          * @description
@@ -78,7 +78,7 @@ class StartDataCollectionArgument {
          * @public
          * @readonly
          */
-        readonly digitsReportingCriteria: OPTIONAL<DigitsReportingCriteria>,
+        readonly digitsReportingCriteria?: OPTIONAL<DigitsReportingCriteria>,
         /**
          * @summary `extensions`.
          * @description
@@ -89,7 +89,7 @@ class StartDataCollectionArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

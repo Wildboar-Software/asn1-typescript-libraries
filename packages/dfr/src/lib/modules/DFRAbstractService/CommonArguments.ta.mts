@@ -53,7 +53,7 @@ class CommonArguments {
          * @public
          * @readonly
          */
-        readonly task_id: OPTIONAL<TaskId>,
+        readonly task_id?: OPTIONAL<TaskId>,
         /**
          * @summary `reservation`.
          * @description
@@ -65,7 +65,7 @@ class CommonArguments {
          * @public
          * @readonly
          */
-        readonly reservation: OPTIONAL<Reservation>,
+        readonly reservation?: OPTIONAL<Reservation>,
         /**
          * @summary `error_handling`.
          * @description
@@ -76,7 +76,7 @@ class CommonArguments {
          * @public
          * @readonly
          */
-        readonly error_handling: OPTIONAL<ErrorHandlingMode>,
+        readonly error_handling?: OPTIONAL<ErrorHandlingMode>,
         /**
          * @summary `priority`.
          * @description
@@ -87,7 +87,7 @@ class CommonArguments {
          * @public
          * @readonly
          */
-        readonly priority: OPTIONAL<Priority>,
+        readonly priority?: OPTIONAL<Priority>,
         /**
          * @summary `privileges`.
          * @description
@@ -99,7 +99,7 @@ class CommonArguments {
          * @public
          * @readonly
          */
-        readonly privileges: OPTIONAL<Privileges>
+        readonly privileges?: OPTIONAL<Privileges>
     ) {}
 
     /**

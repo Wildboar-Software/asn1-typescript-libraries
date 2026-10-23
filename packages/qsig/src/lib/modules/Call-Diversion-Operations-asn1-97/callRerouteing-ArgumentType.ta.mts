@@ -233,11 +233,11 @@ class callRerouteing_ArgumentType {
         subscriptionOption: SubscriptionOption,
         callingPartySubaddress: OPTIONAL<PartySubaddress>,
         callingNumber: PresentedNumberScreened,
-        callingName: OPTIONAL<Name>,
-        originalCalledNr: OPTIONAL<PresentedNumberUnscreened>,
-        redirectingName: OPTIONAL<Name>,
-        originalCalledName: OPTIONAL<Name>,
-        extension: OPTIONAL<callRerouteing_ArgumentType_extension>
+        callingName?: OPTIONAL<Name>,
+        originalCalledNr?: OPTIONAL<PresentedNumberUnscreened>,
+        redirectingName?: OPTIONAL<Name>,
+        originalCalledName?: OPTIONAL<Name>,
+        extension?: OPTIONAL<callRerouteing_ArgumentType_extension>
     ) {
         this.rerouteingReason = rerouteingReason;
         this.originalRerouteingReason = originalRerouteingReason;

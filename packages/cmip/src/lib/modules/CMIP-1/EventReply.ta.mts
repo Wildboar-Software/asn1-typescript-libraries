@@ -57,7 +57,7 @@ export class EventReply {
      * @public
      * @readonly
      */
-    readonly eventReplyInfo: OPTIONAL<_Element>
+    readonly eventReplyInfo?: OPTIONAL<_Element>
   ) {}
 
   /**

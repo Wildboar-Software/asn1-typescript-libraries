@@ -185,15 +185,15 @@ class UTRALocation {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        cGI: OPTIONAL<CGI>,
-        sAI: OPTIONAL<SAI>,
-        lAI: OPTIONAL<LAI>,
-        rAI: OPTIONAL<RAI>,
-        ageOfLocationInfo: OPTIONAL<INTEGER>,
-        uELocationTimestamp: OPTIONAL<Timestamp>,
-        geographicalInformation: OPTIONAL<UTF8String>,
-        geodeticInformation: OPTIONAL<UTF8String>,
-        cellSiteInformation: OPTIONAL<CellSiteInformation>,
+        cGI?: OPTIONAL<CGI>,
+        sAI?: OPTIONAL<SAI>,
+        lAI?: OPTIONAL<LAI>,
+        rAI?: OPTIONAL<RAI>,
+        ageOfLocationInfo?: OPTIONAL<INTEGER>,
+        uELocationTimestamp?: OPTIONAL<Timestamp>,
+        geographicalInformation?: OPTIONAL<UTF8String>,
+        geodeticInformation?: OPTIONAL<UTF8String>,
+        cellSiteInformation?: OPTIONAL<CellSiteInformation>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.cGI = cGI;

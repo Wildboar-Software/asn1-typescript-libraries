@@ -119,12 +119,12 @@ class EPS_MIP_SpecificParameters {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        lifetime: OPTIONAL<INTEGER>,
-        homeAddress: OPTIONAL<OCTET_STRING>,
-        careOfAddress: OPTIONAL<OCTET_STRING>,
-        homeAgentAddress: OPTIONAL<OCTET_STRING>,
-        code: OPTIONAL<INTEGER>,
-        foreignDomainAddress: OPTIONAL<OCTET_STRING>,
+        lifetime?: OPTIONAL<INTEGER>,
+        homeAddress?: OPTIONAL<OCTET_STRING>,
+        careOfAddress?: OPTIONAL<OCTET_STRING>,
+        homeAgentAddress?: OPTIONAL<OCTET_STRING>,
+        code?: OPTIONAL<INTEGER>,
+        foreignDomainAddress?: OPTIONAL<OCTET_STRING>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.lifetime = lifetime;

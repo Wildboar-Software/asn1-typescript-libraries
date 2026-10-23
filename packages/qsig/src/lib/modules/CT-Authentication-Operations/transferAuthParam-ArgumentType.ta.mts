@@ -54,7 +54,7 @@ class transferAuthParam_ArgumentType {
 
     constructor (
         info: CtatParamInfo,
-        dummyExtension: OPTIONAL<DummyExtension>
+        dummyExtension?: OPTIONAL<DummyExtension>
     ) {
         this.info = info;
         this.dummyExtension = dummyExtension;

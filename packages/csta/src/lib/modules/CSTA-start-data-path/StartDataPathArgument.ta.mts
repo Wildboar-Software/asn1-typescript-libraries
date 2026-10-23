@@ -97,7 +97,7 @@ class StartDataPathArgument {
          * @public
          * @readonly
          */
-        readonly dataPathDirection: OPTIONAL<DataPathDirection>,
+        readonly dataPathDirection?: OPTIONAL<DataPathDirection>,
         /**
          * @summary `dataPathType`.
          * @description
@@ -108,7 +108,7 @@ class StartDataPathArgument {
          * @public
          * @readonly
          */
-        readonly dataPathType: OPTIONAL<DataPathType>,
+        readonly dataPathType?: OPTIONAL<DataPathType>,
         /**
          * @summary `displayID`.
          * @description
@@ -119,7 +119,7 @@ class StartDataPathArgument {
          * @public
          * @readonly
          */
-        readonly displayID: OPTIONAL<DisplayID>,
+        readonly displayID?: OPTIONAL<DisplayID>,
         /**
          * @summary `numberOfCharactersToCollect`.
          * @description
@@ -129,7 +129,7 @@ class StartDataPathArgument {
          * @public
          * @readonly
          */
-        readonly numberOfCharactersToCollect: OPTIONAL<INTEGER>,
+        readonly numberOfCharactersToCollect?: OPTIONAL<INTEGER>,
         /**
          * @summary `terminationCharacter`.
          * @description
@@ -140,7 +140,7 @@ class StartDataPathArgument {
          * @public
          * @readonly
          */
-        readonly terminationCharacter: OPTIONAL<IA5String>,
+        readonly terminationCharacter?: OPTIONAL<IA5String>,
         /**
          * @summary `timeout`.
          * @description
@@ -151,7 +151,7 @@ class StartDataPathArgument {
          * @public
          * @readonly
          */
-        readonly timeout: OPTIONAL<INTEGER>,
+        readonly timeout?: OPTIONAL<INTEGER>,
         /**
          * @summary `extensions`.
          * @description
@@ -162,7 +162,7 @@ class StartDataPathArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

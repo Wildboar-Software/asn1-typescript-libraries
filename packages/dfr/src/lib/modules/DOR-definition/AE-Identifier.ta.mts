@@ -43,19 +43,19 @@ class AE_Identifier {
          * @public
          * @readonly
          */
-        readonly locational_identifier: OPTIONAL<Locational_identifier>,
+        readonly locational_identifier?: OPTIONAL<Locational_identifier>,
         /**
          * @summary `direct_logical_identifier`.
          * @public
          * @readonly
          */
-        readonly direct_logical_identifier: OPTIONAL<DistinguishedName>,
+        readonly direct_logical_identifier?: OPTIONAL<DistinguishedName>,
         /**
          * @summary `indirect_logical_identifier`.
          * @public
          * @readonly
          */
-        readonly indirect_logical_identifier: OPTIONAL<DistinguishedName>
+        readonly indirect_logical_identifier?: OPTIONAL<DistinguishedName>
     ) {
         if (locational_identifier === undefined && direct_logical_identifier === undefined && indirect_logical_identifier === undefined) {
             throw new _ConstructionError("AE-Identifier shall contain at least one component");

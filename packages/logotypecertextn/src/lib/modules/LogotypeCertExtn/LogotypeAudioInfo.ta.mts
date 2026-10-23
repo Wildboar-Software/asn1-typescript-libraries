@@ -63,7 +63,7 @@ class LogotypeAudioInfo {
          * @public
          * @readonly
          */
-        readonly sampleRate: OPTIONAL<INTEGER>,
+        readonly sampleRate?: OPTIONAL<INTEGER>,
         /**
          * Language of the spoken content, as an
          * [RFC 3066](https://www.rfc-editor.org/rfc/rfc3066) language
@@ -75,7 +75,7 @@ class LogotypeAudioInfo {
          * @public
          * @readonly
          */
-        readonly language: OPTIONAL<IA5String>
+        readonly language?: OPTIONAL<IA5String>
     ) {}
 
     /**

@@ -54,7 +54,7 @@ class UpdateLocationRes {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `add_Capability`.
          * @description
@@ -66,7 +66,7 @@ class UpdateLocationRes {
          * @public
          * @readonly
          */
-        readonly add_Capability: OPTIONAL<NULL>,
+        readonly add_Capability?: OPTIONAL<NULL>,
         /**
          * @summary `pagingArea_Capability`.
          * @description
@@ -79,7 +79,7 @@ class UpdateLocationRes {
          * @public
          * @readonly
          */
-        readonly pagingArea_Capability: OPTIONAL<NULL>,
+        readonly pagingArea_Capability?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -202,7 +202,7 @@ class ListofTalkBurstExchange {
         received_Talk_Burst_Time: OPTIONAL<INTEGER>,
         changeCondition: OPTIONAL<ChangeCondition>,
         changeTime: OCTET_STRING,
-        numberofParticipants: OPTIONAL<INTEGER>
+        numberofParticipants?: OPTIONAL<INTEGER>
     ) {
         this.number_Of_Talk_Bursts = number_Of_Talk_Bursts;
         this.talk_Burst_Volume = talk_Burst_Volume;

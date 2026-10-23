@@ -55,8 +55,8 @@ class ExecuteResult_Type_output_assertions_Item {
 
     constructor (
         type_: _Element,
-        values: OPTIONAL<_Element[]>,
-        valuesWithContext: OPTIONAL<ExecuteResult_Type_output_assertions_Item_valuesWithContext_Item[]>
+        values?: OPTIONAL<_Element[]>,
+        valuesWithContext?: OPTIONAL<ExecuteResult_Type_output_assertions_Item_valuesWithContext_Item[]>
     ) {
         this.type_ = type_;
         this.values = values;

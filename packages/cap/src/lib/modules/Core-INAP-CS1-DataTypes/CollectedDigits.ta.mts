@@ -63,55 +63,55 @@ class CollectedDigits {
          * @public
          * @readonly
          */
-        readonly endOfReplyDigit: OPTIONAL<OCTET_STRING>,
+        readonly endOfReplyDigit?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `cancelDigit`.
          * @public
          * @readonly
          */
-        readonly cancelDigit: OPTIONAL<OCTET_STRING>,
+        readonly cancelDigit?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `startDigit`.
          * @public
          * @readonly
          */
-        readonly startDigit: OPTIONAL<OCTET_STRING>,
+        readonly startDigit?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `firstDigitTimeOut`.
          * @public
          * @readonly
          */
-        readonly firstDigitTimeOut: OPTIONAL<INTEGER>,
+        readonly firstDigitTimeOut?: OPTIONAL<INTEGER>,
         /**
          * @summary `interDigitTimeOut`.
          * @public
          * @readonly
          */
-        readonly interDigitTimeOut: OPTIONAL<INTEGER>,
+        readonly interDigitTimeOut?: OPTIONAL<INTEGER>,
         /**
          * @summary `errortreatment`.
          * @public
          * @readonly
          */
-        readonly errortreatment: OPTIONAL<ErrorTreatment>,
+        readonly errortreatment?: OPTIONAL<ErrorTreatment>,
         /**
          * @summary `interruptableAnnInd`.
          * @public
          * @readonly
          */
-        readonly interruptableAnnInd: OPTIONAL<BOOLEAN>,
+        readonly interruptableAnnInd?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `voiceInformation`.
          * @public
          * @readonly
          */
-        readonly voiceInformation: OPTIONAL<BOOLEAN>,
+        readonly voiceInformation?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `voiceBack`.
          * @public
          * @readonly
          */
-        readonly voiceBack: OPTIONAL<BOOLEAN>
+        readonly voiceBack?: OPTIONAL<BOOLEAN>
     ) {
         if (minimumNbOfDigits !== undefined && (typeof minimumNbOfDigits === "bigint" ? (minimumNbOfDigits < 1n || minimumNbOfDigits > 127n) : (minimumNbOfDigits < 1 || minimumNbOfDigits > 127))) {
             throw new ASN1OverflowError("CollectedDigits.minimumNbOfDigits violates INTEGER constraint");

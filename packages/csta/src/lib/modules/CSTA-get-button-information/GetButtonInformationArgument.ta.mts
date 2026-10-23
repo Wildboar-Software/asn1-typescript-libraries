@@ -58,7 +58,7 @@ class GetButtonInformationArgument {
          * @public
          * @readonly
          */
-        readonly button: OPTIONAL<ButtonID>,
+        readonly button?: OPTIONAL<ButtonID>,
         /**
          * @summary `extensions`.
          * @description
@@ -68,7 +68,7 @@ class GetButtonInformationArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

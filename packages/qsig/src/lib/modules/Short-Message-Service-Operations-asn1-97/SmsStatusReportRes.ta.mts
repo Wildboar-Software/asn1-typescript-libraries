@@ -53,7 +53,7 @@ class SmsStatusReportRes {
 
     constructor (
         smsStatusReportResponseChoice: SmsStatusReportResponseChoice,
-        smsExtension: OPTIONAL<SmsExtension>
+        smsExtension?: OPTIONAL<SmsExtension>
     ) {
         this.smsStatusReportResponseChoice = smsStatusReportResponseChoice;
         this.smsExtension = smsExtension;

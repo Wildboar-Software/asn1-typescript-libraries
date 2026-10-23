@@ -85,7 +85,7 @@ class DOR {
          * @public
          * @readonly
          */
-        readonly quality_of_service: OPTIONAL<Quality_of_Service>,
+        readonly quality_of_service?: OPTIONAL<Quality_of_Service>,
         /**
          * @summary `token`.
          * @description
@@ -95,7 +95,7 @@ class DOR {
          * @public
          * @readonly
          */
-        readonly token: OPTIONAL<Token>
+        readonly token?: OPTIONAL<Token>
     ) {}
 
     /**

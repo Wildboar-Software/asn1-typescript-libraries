@@ -76,11 +76,11 @@ class EstablishChargingRecordArg_Type {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        userCredit: OPTIONAL<UserCredit>,
-        chargingParameters: OPTIONAL<ChargingParameters>,
-        reportExpected: OPTIONAL<BOOLEAN>,
-        securityParameters: OPTIONAL<SecurityParameters>,
-        extensions: OPTIONAL<ExtensionField[]>,
+        userCredit?: OPTIONAL<UserCredit>,
+        chargingParameters?: OPTIONAL<ChargingParameters>,
+        reportExpected?: OPTIONAL<BOOLEAN>,
+        securityParameters?: OPTIONAL<SecurityParameters>,
+        extensions?: OPTIONAL<ExtensionField[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.userCredit = userCredit;

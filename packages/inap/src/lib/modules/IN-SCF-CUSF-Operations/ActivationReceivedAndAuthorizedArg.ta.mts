@@ -78,10 +78,10 @@ class ActivationReceivedAndAuthorizedArg {
 
     constructor (
         callUnrelatedDpSpecificCommonParameters: CallUnrelatedDpSpecificCommonParameters,
-        componentType: OPTIONAL<ComponentType>,
-        componentCorrelationID: OPTIONAL<ComponentCorrelationID>,
-        extensions: OPTIONAL<Extensions>,
-        component: OPTIONAL<Component>,
+        componentType?: OPTIONAL<ComponentType>,
+        componentCorrelationID?: OPTIONAL<ComponentCorrelationID>,
+        extensions?: OPTIONAL<Extensions>,
+        component?: OPTIONAL<Component>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.callUnrelatedDpSpecificCommonParameters = callUnrelatedDpSpecificCommonParameters;

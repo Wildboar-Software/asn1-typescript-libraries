@@ -85,7 +85,7 @@ class DeactivateArgument {
          * @public
          * @readonly
          */
-        readonly grammarName: OPTIONAL<IA5String>,
+        readonly grammarName?: OPTIONAL<IA5String>,
         /**
          * @summary `extensions`.
          * @description
@@ -96,7 +96,7 @@ class DeactivateArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

@@ -37,7 +37,7 @@ class EventSpecificInformationBCSM_tCalledPartyBusySpecificInfo {
          * @public
          * @readonly
          */
-        readonly busyCause: OPTIONAL<Cause>
+        readonly busyCause?: OPTIONAL<Cause>
     ) {}
 
     /**

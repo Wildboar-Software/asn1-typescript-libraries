@@ -186,8 +186,8 @@ class AMFIdentifierAssociation {
         gPSI: OPTIONAL<GPSI>,
         gUTI: FiveGGUTI,
         location: Location,
-        fiveGSTAIList: OPTIONAL<TAIList>,
-        additionalUserIdentifiers: OPTIONAL<UserIdentifiers>,
+        fiveGSTAIList?: OPTIONAL<TAIList>,
+        additionalUserIdentifiers?: OPTIONAL<UserIdentifiers>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.sUPI = sUPI;

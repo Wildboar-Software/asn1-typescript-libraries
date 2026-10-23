@@ -48,7 +48,7 @@ class Restrictions {
          * @public
          * @readonly
          */
-        readonly allowed_document_types: OPTIONAL<OBJECT_IDENTIFIER[]>,
+        readonly allowed_document_types?: OPTIONAL<OBJECT_IDENTIFIER[]>,
         /**
          * @summary `maximum_length`.
          * @description
@@ -58,7 +58,7 @@ class Restrictions {
          * @public
          * @readonly
          */
-        readonly maximum_length: OPTIONAL<INTEGER>
+        readonly maximum_length?: OPTIONAL<INTEGER>
     ) {}
 
     /**

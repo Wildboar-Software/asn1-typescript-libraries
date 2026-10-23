@@ -43,7 +43,7 @@ class CompactEuiccSigned2 {
          * @public
          * @readonly
          */
-        readonly euiccOtpk: OPTIONAL<OCTET_STRING>,
+        readonly euiccOtpk?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `hashCc`.
          * @description
@@ -55,7 +55,7 @@ class CompactEuiccSigned2 {
          * @public
          * @readonly
          */
-        readonly hashCc: OPTIONAL<Octet32>
+        readonly hashCc?: OPTIONAL<Octet32>
     ) {}
 
     /**

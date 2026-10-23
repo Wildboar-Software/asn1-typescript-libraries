@@ -92,10 +92,10 @@ class PumoArg {
     readonly extension: OPTIONAL<PumoArg_extension>;
 
     constructor (
-        destinationNumber: OPTIONAL<PartyNumber>,
-        pumIdentity: OPTIONAL<PumIdentity>,
-        sendingComplete: OPTIONAL<NULL>,
-        extension: OPTIONAL<PumoArg_extension>
+        destinationNumber?: OPTIONAL<PartyNumber>,
+        pumIdentity?: OPTIONAL<PumIdentity>,
+        sendingComplete?: OPTIONAL<NULL>,
+        extension?: OPTIONAL<PumoArg_extension>
     ) {
         this.destinationNumber = destinationNumber;
         this.pumIdentity = pumIdentity;

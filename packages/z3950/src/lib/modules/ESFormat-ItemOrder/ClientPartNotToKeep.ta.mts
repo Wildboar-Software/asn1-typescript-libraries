@@ -71,8 +71,8 @@ class ClientPartNotToKeep {
     readonly itemRequest: OPTIONAL<EXTERNAL>;
 
     constructor (
-        resultSetItem: OPTIONAL<ClientPartNotToKeep_resultSetItem>,
-        itemRequest: OPTIONAL<EXTERNAL>
+        resultSetItem?: OPTIONAL<ClientPartNotToKeep_resultSetItem>,
+        itemRequest?: OPTIONAL<EXTERNAL>
     ) {
         this.resultSetItem = resultSetItem;
         this.itemRequest = itemRequest;

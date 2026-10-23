@@ -65,13 +65,13 @@ class LSAData {
          * @public
          * @readonly
          */
-        readonly lsaActiveModeIndicator: OPTIONAL<NULL>,
+        readonly lsaActiveModeIndicator?: OPTIONAL<NULL>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

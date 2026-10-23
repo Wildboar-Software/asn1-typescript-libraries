@@ -60,8 +60,8 @@ class EntityReleasedArg_cSFailure {
 
     constructor (
         callSegmentID: CallSegmentID,
-        reason: OPTIONAL<Reason>,
-        cause: OPTIONAL<Cause>,
+        reason?: OPTIONAL<Reason>,
+        cause?: OPTIONAL<Cause>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.callSegmentID = callSegmentID;

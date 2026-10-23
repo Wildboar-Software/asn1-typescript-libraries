@@ -72,10 +72,10 @@ class SMSParty {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        sUPI: OPTIONAL<SUPI>,
-        pEI: OPTIONAL<PEI>,
-        gPSI: OPTIONAL<GPSI>,
-        sMSAddress: OPTIONAL<SMSAddress>,
+        sUPI?: OPTIONAL<SUPI>,
+        pEI?: OPTIONAL<PEI>,
+        gPSI?: OPTIONAL<GPSI>,
+        sMSAddress?: OPTIONAL<SMSAddress>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.sUPI = sUPI;

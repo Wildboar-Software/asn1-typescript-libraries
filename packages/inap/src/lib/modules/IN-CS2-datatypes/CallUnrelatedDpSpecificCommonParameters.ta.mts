@@ -73,10 +73,10 @@ class CallUnrelatedDpSpecificCommonParameters {
 
     constructor (
         serviceAddressInformation: ServiceAddressInformation,
-        callingPartyNumber: OPTIONAL<CallingPartyNumber>,
-        locationNumber: OPTIONAL<LocationNumber>,
-        terminalType: OPTIONAL<TerminalType>,
-        extensions: OPTIONAL<ExtensionField[]>
+        callingPartyNumber?: OPTIONAL<CallingPartyNumber>,
+        locationNumber?: OPTIONAL<LocationNumber>,
+        terminalType?: OPTIONAL<TerminalType>,
+        extensions?: OPTIONAL<ExtensionField[]>
     ) {
         this.serviceAddressInformation = serviceAddressInformation;
         this.callingPartyNumber = callingPartyNumber;

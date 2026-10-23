@@ -176,7 +176,7 @@ class TerminationAttempt {
         calling: OPTIONAL<PartyId>,
         called: OPTIONAL<PartyId>,
         reserved0: NULL,
-        redirectedFromInfo: OPTIONAL<RedirectedFromInfo>,
+        redirectedFromInfo?: OPTIONAL<RedirectedFromInfo>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.caseId = caseId;

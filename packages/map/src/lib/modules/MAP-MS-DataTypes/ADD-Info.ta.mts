@@ -59,7 +59,7 @@ class ADD_Info {
          * @public
          * @readonly
          */
-        readonly skipSubscriberDataUpdate: OPTIONAL<NULL>,
+        readonly skipSubscriberDataUpdate?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @public

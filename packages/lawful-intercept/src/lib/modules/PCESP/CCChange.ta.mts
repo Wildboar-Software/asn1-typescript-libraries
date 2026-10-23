@@ -199,7 +199,7 @@ class CCChange {
         subject: OPTIONAL<SDP>,
         associate: OPTIONAL<SDP>,
         flowDirection: FlowDirection,
-        resourceState: OPTIONAL<ResourceState>,
+        resourceState?: OPTIONAL<ResourceState>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.caseId = caseId;

@@ -64,7 +64,7 @@ class LocationTrackingSessionResumedArgument {
          * @public
          * @readonly
          */
-        readonly locReason: OPTIONAL<LocReason>,
+        readonly locReason?: OPTIONAL<LocReason>,
         /**
          * @summary `extensions`.
          * @description
@@ -75,7 +75,7 @@ class LocationTrackingSessionResumedArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

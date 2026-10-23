@@ -128,12 +128,12 @@ class SMDeviceTriggerInformation {
     readonly sMSApplicationPortID: OPTIONAL<INTEGER>;
 
     constructor (
-        mTCIWFAddress: OPTIONAL<NodeAddress>,
-        sMDTReferenceNumber: OPTIONAL<INTEGER>,
-        sMServingNode: OPTIONAL<SMServingNode>,
-        sMDTValidityPeriod: OPTIONAL<INTEGER>,
-        sMDTPriorityIndication: OPTIONAL<SMDTPriorityIndication>,
-        sMSApplicationPortID: OPTIONAL<INTEGER>
+        mTCIWFAddress?: OPTIONAL<NodeAddress>,
+        sMDTReferenceNumber?: OPTIONAL<INTEGER>,
+        sMServingNode?: OPTIONAL<SMServingNode>,
+        sMDTValidityPeriod?: OPTIONAL<INTEGER>,
+        sMDTPriorityIndication?: OPTIONAL<SMDTPriorityIndication>,
+        sMSApplicationPortID?: OPTIONAL<INTEGER>
     ) {
         this.mTCIWFAddress = mTCIWFAddress;
         this.sMDTReferenceNumber = sMDTReferenceNumber;

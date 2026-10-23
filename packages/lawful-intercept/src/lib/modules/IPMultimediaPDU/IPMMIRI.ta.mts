@@ -153,8 +153,8 @@ class IPMMIRI {
     constructor (
         iPMMIRIObjId: RELATIVE_OID,
         iPMMIRIContents: IPIRIContents,
-        targetLocation: OPTIONAL<LI_PS_PDU.Location>,
-        additionalSignalling: OPTIONAL<AdditionalSignalling[]>,
+        targetLocation?: OPTIONAL<LI_PS_PDU.Location>,
+        additionalSignalling?: OPTIONAL<AdditionalSignalling[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.iPMMIRIObjId = iPMMIRIObjId;

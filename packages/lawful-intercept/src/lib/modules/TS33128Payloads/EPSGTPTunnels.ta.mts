@@ -145,13 +145,13 @@ class EPSGTPTunnels {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        controlPlaneSenderFTEID: OPTIONAL<FTEID>,
-        controlPlanePGWS5S8FTEID: OPTIONAL<FTEID>,
-        s1UeNodeBFTEID: OPTIONAL<FTEID>,
-        s5S8SGWFTEID: OPTIONAL<FTEID>,
-        s5S8PGWFTEID: OPTIONAL<FTEID>,
-        s2bUePDGFTEID: OPTIONAL<FTEID>,
-        s2aUePDGFTEID: OPTIONAL<FTEID>,
+        controlPlaneSenderFTEID?: OPTIONAL<FTEID>,
+        controlPlanePGWS5S8FTEID?: OPTIONAL<FTEID>,
+        s1UeNodeBFTEID?: OPTIONAL<FTEID>,
+        s5S8SGWFTEID?: OPTIONAL<FTEID>,
+        s5S8PGWFTEID?: OPTIONAL<FTEID>,
+        s2bUePDGFTEID?: OPTIONAL<FTEID>,
+        s2aUePDGFTEID?: OPTIONAL<FTEID>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.controlPlaneSenderFTEID = controlPlaneSenderFTEID;

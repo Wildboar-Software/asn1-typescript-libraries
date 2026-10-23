@@ -114,7 +114,7 @@ class AttachMediaServiceArgument {
          * @public
          * @readonly
          */
-        readonly requestedConnectionState: OPTIONAL<LocalConnectionState>,
+        readonly requestedConnectionState?: OPTIONAL<LocalConnectionState>,
         /**
          * @summary `extensions`.
          * @description
@@ -124,7 +124,7 @@ class AttachMediaServiceArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

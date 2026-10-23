@@ -40,8 +40,8 @@ class NGRANSecondaryRATUsageReport {
     readonly qosFlowsUsageReports: OPTIONAL<QosFlowsUsageReport[]>;
 
     constructor (
-        nGRANSecondaryRATType: OPTIONAL<OCTET_STRING>,
-        qosFlowsUsageReports: OPTIONAL<QosFlowsUsageReport[]>
+        nGRANSecondaryRATType?: OPTIONAL<OCTET_STRING>,
+        qosFlowsUsageReports?: OPTIONAL<QosFlowsUsageReport[]>
     ) {
         this.nGRANSecondaryRATType = nGRANSecondaryRATType;
         this.qosFlowsUsageReports = qosFlowsUsageReports;

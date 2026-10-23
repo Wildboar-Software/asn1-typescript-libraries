@@ -63,8 +63,8 @@ class AttributeTypeDetails {
 
     constructor (
         attributeType: INTEGER,
-        defaultIfOmitted: OPTIONAL<OmittedAttributeInterpretation>,
-        attributeValues: OPTIONAL<AttributeValue[]>
+        defaultIfOmitted?: OPTIONAL<OmittedAttributeInterpretation>,
+        attributeValues?: OPTIONAL<AttributeValue[]>
     ) {
         this.attributeType = attributeType;
         this.defaultIfOmitted = defaultIfOmitted;

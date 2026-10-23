@@ -76,10 +76,10 @@ class IMSHSSSubscriberRecordChange {
 
     constructor (
         hSSIdentities: HSSIdentities[],
-        iMSProfileData: OPTIONAL<SBIType>,
-        mSISDNs: OPTIONAL<MSISDN[]>,
-        iMEI: OPTIONAL<IMEI>,
-        previousIMEI: OPTIONAL<IMEI>,
+        iMSProfileData?: OPTIONAL<SBIType>,
+        mSISDNs?: OPTIONAL<MSISDN[]>,
+        iMEI?: OPTIONAL<IMEI>,
+        previousIMEI?: OPTIONAL<IMEI>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.hSSIdentities = hSSIdentities;

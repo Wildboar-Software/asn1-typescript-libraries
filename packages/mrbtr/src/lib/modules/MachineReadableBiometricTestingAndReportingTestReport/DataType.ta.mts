@@ -57,7 +57,7 @@ class DataType {
          * @public
          * @readonly
          */
-        readonly purpose: OPTIONAL<Purpose>
+        readonly purpose?: OPTIONAL<Purpose>
     ) {}
 
     /**

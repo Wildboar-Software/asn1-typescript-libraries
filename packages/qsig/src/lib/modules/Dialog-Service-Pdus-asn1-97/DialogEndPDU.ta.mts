@@ -58,7 +58,7 @@ class DialogEndPDU {
 
     constructor (
         destinationDialogId: DestinationDialogId,
-        remoteOperationsPortion: OPTIONAL<RemoteOperationsPortion>
+        remoteOperationsPortion?: OPTIONAL<RemoteOperationsPortion>
     ) {
         this.destinationDialogId = destinationDialogId;
         this.remoteOperationsPortion = remoteOperationsPortion;

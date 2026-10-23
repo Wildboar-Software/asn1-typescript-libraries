@@ -80,8 +80,8 @@ class ConferencePartyChange_removed_Item {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        partyId: OPTIONAL<PartyId[]>,
-        cCCId: OPTIONAL<CCCId>,
+        partyId?: OPTIONAL<PartyId[]>,
+        cCCId?: OPTIONAL<CCCId>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.partyId = partyId;

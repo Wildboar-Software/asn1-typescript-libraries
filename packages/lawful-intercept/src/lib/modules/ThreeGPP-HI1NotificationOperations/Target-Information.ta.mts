@@ -195,16 +195,16 @@ class Target_Information {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        communicationIdentifier: OPTIONAL<CommunicationIdentifier>,
-        network_Identifier: OPTIONAL<Network_Identifier>,
-        broadcastArea: OPTIONAL<OCTET_STRING>,
-        targetType: OPTIONAL<TargetType>,
-        deliveryInformation: OPTIONAL<DeliveryInformation>,
-        liActivatedTime: OPTIONAL<TimeStamp>,
-        liDeactivatedTime: OPTIONAL<TimeStamp>,
-        liModificationTime: OPTIONAL<TimeStamp>,
-        interceptionType: OPTIONAL<InterceptionType>,
-        liSetUpTime: OPTIONAL<TimeStamp>,
+        communicationIdentifier?: OPTIONAL<CommunicationIdentifier>,
+        network_Identifier?: OPTIONAL<Network_Identifier>,
+        broadcastArea?: OPTIONAL<OCTET_STRING>,
+        targetType?: OPTIONAL<TargetType>,
+        deliveryInformation?: OPTIONAL<DeliveryInformation>,
+        liActivatedTime?: OPTIONAL<TimeStamp>,
+        liDeactivatedTime?: OPTIONAL<TimeStamp>,
+        liModificationTime?: OPTIONAL<TimeStamp>,
+        interceptionType?: OPTIONAL<InterceptionType>,
+        liSetUpTime?: OPTIONAL<TimeStamp>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.communicationIdentifier = communicationIdentifier;

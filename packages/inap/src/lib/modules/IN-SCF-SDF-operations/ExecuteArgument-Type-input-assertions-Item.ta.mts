@@ -55,8 +55,8 @@ class ExecuteArgument_Type_input_assertions_Item {
 
     constructor (
         type_: _Element,
-        values: OPTIONAL<_Element[]>,
-        valuesWithContext: OPTIONAL<ExecuteArgument_Type_input_assertions_Item_valuesWithContext_Item[]>
+        values?: OPTIONAL<_Element[]>,
+        valuesWithContext?: OPTIONAL<ExecuteArgument_Type_input_assertions_Item_valuesWithContext_Item[]>
     ) {
         this.type_ = type_;
         this.values = values;

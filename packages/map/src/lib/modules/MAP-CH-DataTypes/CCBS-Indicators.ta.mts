@@ -40,7 +40,7 @@ class CCBS_Indicators {
          * @public
          * @readonly
          */
-        readonly ccbs_Possible: OPTIONAL<NULL>,
+        readonly ccbs_Possible?: OPTIONAL<NULL>,
         /**
          * @summary `keepCCBS_CallIndicator`.
          * @description
@@ -50,7 +50,7 @@ class CCBS_Indicators {
          * @public
          * @readonly
          */
-        readonly keepCCBS_CallIndicator: OPTIONAL<NULL>,
+        readonly keepCCBS_CallIndicator?: OPTIONAL<NULL>,
         /**
          * @summary `extensionContainer`.
          * @description
@@ -60,7 +60,7 @@ class CCBS_Indicators {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

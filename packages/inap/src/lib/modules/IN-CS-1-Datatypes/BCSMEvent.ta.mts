@@ -62,8 +62,8 @@ class BCSMEvent {
     constructor (
         eventTypeBCSM: EventTypeBCSM,
         monitorMode: MonitorMode,
-        legID: OPTIONAL<LegID>,
-        dpSpecificCriteria: OPTIONAL<DpSpecificCriteria>
+        legID?: OPTIONAL<LegID>,
+        dpSpecificCriteria?: OPTIONAL<DpSpecificCriteria>
     ) {
         this.eventTypeBCSM = eventTypeBCSM;
         this.monitorMode = monitorMode;

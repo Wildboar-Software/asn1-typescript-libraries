@@ -132,7 +132,7 @@ class SelectRouteArg {
         scfID: OPTIONAL<ScfID>,
         travellingClassMark: OPTIONAL<TravellingClassMark>,
         extensions: ExtensionField[],
-        carrier: OPTIONAL<Carrier>,
+        carrier?: OPTIONAL<Carrier>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.destinationRoutingAddress = destinationRoutingAddress;

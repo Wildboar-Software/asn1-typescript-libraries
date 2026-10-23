@@ -100,8 +100,8 @@ class InformationAppliesTo {
 
     constructor (
         payloadDirection: LI_PS_PDU.PayloadDirection,
-        cCLinkID: OPTIONAL<INTEGER>,
-        firstPDUNumber: OPTIONAL<INTEGER>,
+        cCLinkID?: OPTIONAL<INTEGER>,
+        firstPDUNumber?: OPTIONAL<INTEGER>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.payloadDirection = payloadDirection;

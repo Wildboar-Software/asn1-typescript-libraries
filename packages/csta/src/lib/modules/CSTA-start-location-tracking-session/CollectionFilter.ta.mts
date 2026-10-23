@@ -47,7 +47,7 @@ class CollectionFilter {
          * @public
          * @readonly
          */
-        readonly horizontalMovement: OPTIONAL<INTEGER>,
+        readonly horizontalMovement?: OPTIONAL<INTEGER>,
         /**
          * @summary `verticalMovement`.
          * @description
@@ -58,7 +58,7 @@ class CollectionFilter {
          * @public
          * @readonly
          */
-        readonly verticalMovement: OPTIONAL<INTEGER>,
+        readonly verticalMovement?: OPTIONAL<INTEGER>,
         /**
          * @summary `civicAdressChange`.
          * @description
@@ -70,7 +70,7 @@ class CollectionFilter {
          * @public
          * @readonly
          */
-        readonly civicAdressChange: OPTIONAL<INTEGER>
+        readonly civicAdressChange?: OPTIONAL<INTEGER>
     ) {}
 
     /**

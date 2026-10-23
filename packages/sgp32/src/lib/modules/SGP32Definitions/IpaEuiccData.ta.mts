@@ -65,7 +65,7 @@ class IpaEuiccData {
          * @public
          * @readonly
          */
-        readonly notificationsList: OPTIONAL<PendingNotificationList>,
+        readonly notificationsList?: OPTIONAL<PendingNotificationList>,
         /**
          * @summary `defaultSmdpAddress`.
          * @description
@@ -76,7 +76,7 @@ class IpaEuiccData {
          * @public
          * @readonly
          */
-        readonly defaultSmdpAddress: OPTIONAL<UTF8String>,
+        readonly defaultSmdpAddress?: OPTIONAL<UTF8String>,
         /**
          * @summary `euiccPackageResultList`.
          * @description
@@ -87,7 +87,7 @@ class IpaEuiccData {
          * @public
          * @readonly
          */
-        readonly euiccPackageResultList: OPTIONAL<EuiccPackageResultList>,
+        readonly euiccPackageResultList?: OPTIONAL<EuiccPackageResultList>,
         /**
          * @summary `euiccInfo1`.
          * @description
@@ -97,7 +97,7 @@ class IpaEuiccData {
          * @public
          * @readonly
          */
-        readonly euiccInfo1: OPTIONAL<EUICCInfo1>,
+        readonly euiccInfo1?: OPTIONAL<EUICCInfo1>,
         /**
          * @summary `euiccInfo2`.
          * @description
@@ -109,7 +109,7 @@ class IpaEuiccData {
          * @public
          * @readonly
          */
-        readonly euiccInfo2: OPTIONAL<EUICCInfo2>,
+        readonly euiccInfo2?: OPTIONAL<EUICCInfo2>,
         /**
          * @summary `rootSmdsAddress`.
          * @description
@@ -120,7 +120,7 @@ class IpaEuiccData {
          * @public
          * @readonly
          */
-        readonly rootSmdsAddress: OPTIONAL<UTF8String>,
+        readonly rootSmdsAddress?: OPTIONAL<UTF8String>,
         /**
          * @summary `associationToken`.
          * @description
@@ -134,7 +134,7 @@ class IpaEuiccData {
          * @public
          * @readonly
          */
-        readonly associationToken: OPTIONAL<INTEGER>,
+        readonly associationToken?: OPTIONAL<INTEGER>,
         /**
          * @summary `eumCertificate`.
          * @description
@@ -146,7 +146,7 @@ class IpaEuiccData {
          * @public
          * @readonly
          */
-        readonly eumCertificate: OPTIONAL<Certificate>,
+        readonly eumCertificate?: OPTIONAL<Certificate>,
         /**
          * @summary `euiccCertificate`.
          * @description
@@ -158,7 +158,7 @@ class IpaEuiccData {
          * @public
          * @readonly
          */
-        readonly euiccCertificate: OPTIONAL<Certificate>,
+        readonly euiccCertificate?: OPTIONAL<Certificate>,
         /**
          * @summary `eimTransactionId`.
          * @description
@@ -167,7 +167,7 @@ class IpaEuiccData {
          * @public
          * @readonly
          */
-        readonly eimTransactionId: OPTIONAL<TransactionId>,
+        readonly eimTransactionId?: OPTIONAL<TransactionId>,
         /**
          * @summary `ipaCapabilities`.
          * @description
@@ -177,7 +177,7 @@ class IpaEuiccData {
          * @public
          * @readonly
          */
-        readonly ipaCapabilities: OPTIONAL<IpaCapabilities>,
+        readonly ipaCapabilities?: OPTIONAL<IpaCapabilities>,
         /**
          * @summary `deviceInfo`.
          * @description
@@ -191,7 +191,7 @@ class IpaEuiccData {
          * @public
          * @readonly
          */
-        readonly deviceInfo: OPTIONAL<DeviceInfo>
+        readonly deviceInfo?: OPTIONAL<DeviceInfo>
     ) {}
 
     /**

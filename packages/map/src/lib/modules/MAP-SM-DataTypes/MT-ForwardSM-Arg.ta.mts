@@ -88,7 +88,7 @@ class MT_ForwardSM_Arg {
          * @public
          * @readonly
          */
-        readonly moreMessagesToSend: OPTIONAL<NULL>,
+        readonly moreMessagesToSend?: OPTIONAL<NULL>,
         /**
          * @summary `extensionContainer`.
          * @description
@@ -98,7 +98,7 @@ class MT_ForwardSM_Arg {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `smDeliveryTimer`.
          * @description
@@ -108,7 +108,7 @@ class MT_ForwardSM_Arg {
          * @public
          * @readonly
          */
-        readonly smDeliveryTimer: OPTIONAL<SM_DeliveryTimerValue>,
+        readonly smDeliveryTimer?: OPTIONAL<SM_DeliveryTimerValue>,
         /**
          * @summary `smDeliveryStartTime`.
          * @description
@@ -118,7 +118,7 @@ class MT_ForwardSM_Arg {
          * @public
          * @readonly
          */
-        readonly smDeliveryStartTime: OPTIONAL<Time>,
+        readonly smDeliveryStartTime?: OPTIONAL<Time>,
         /**
          * @summary `smsOverIP_OnlyIndicator`.
          * @description
@@ -128,7 +128,7 @@ class MT_ForwardSM_Arg {
          * @public
          * @readonly
          */
-        readonly smsOverIP_OnlyIndicator: OPTIONAL<NULL>,
+        readonly smsOverIP_OnlyIndicator?: OPTIONAL<NULL>,
         /**
          * @summary `correlationID`.
          * @description
@@ -138,7 +138,7 @@ class MT_ForwardSM_Arg {
          * @public
          * @readonly
          */
-        readonly correlationID: OPTIONAL<CorrelationID>,
+        readonly correlationID?: OPTIONAL<CorrelationID>,
         /**
          * @summary `maximumRetransmissionTime`.
          * @description
@@ -148,7 +148,7 @@ class MT_ForwardSM_Arg {
          * @public
          * @readonly
          */
-        readonly maximumRetransmissionTime: OPTIONAL<Time>,
+        readonly maximumRetransmissionTime?: OPTIONAL<Time>,
         /**
          * @summary `smsGmscAddress`.
          * @description
@@ -158,7 +158,7 @@ class MT_ForwardSM_Arg {
          * @public
          * @readonly
          */
-        readonly smsGmscAddress: OPTIONAL<ISDN_AddressString>,
+        readonly smsGmscAddress?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `smsGmscDiameterAddress`.
          * @description
@@ -168,7 +168,7 @@ class MT_ForwardSM_Arg {
          * @public
          * @readonly
          */
-        readonly smsGmscDiameterAddress: OPTIONAL<NetworkNodeDiameterAddress>,
+        readonly smsGmscDiameterAddress?: OPTIONAL<NetworkNodeDiameterAddress>,
         /**
          * @summary Extensions that are not recognized.
          * @public

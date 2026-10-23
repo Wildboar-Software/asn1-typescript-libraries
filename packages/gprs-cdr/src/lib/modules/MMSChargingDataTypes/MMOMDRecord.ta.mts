@@ -260,12 +260,12 @@ class MMOMDRecord {
         originatorMmsRSAddress: OPTIONAL<MMSRSAddress>,
         recipientMmsRSAddress: OPTIONAL<MMSRSAddress>,
         messageID: OCTET_STRING,
-        messageSize: OPTIONAL<INTEGER>,
-        mmStatusCode: OPTIONAL<MMStatusCodeType>,
-        statusText: OPTIONAL<OCTET_STRING>,
-        recordTimeStamp: OPTIONAL<OCTET_STRING>,
-        localSequenceNumber: OPTIONAL<INTEGER>,
-        recordExtensions: OPTIONAL<ManagementExtension[]>
+        messageSize?: OPTIONAL<INTEGER>,
+        mmStatusCode?: OPTIONAL<MMStatusCodeType>,
+        statusText?: OPTIONAL<OCTET_STRING>,
+        recordTimeStamp?: OPTIONAL<OCTET_STRING>,
+        localSequenceNumber?: OPTIONAL<INTEGER>,
+        recordExtensions?: OPTIONAL<ManagementExtension[]>
     ) {
         this.recordType = recordType;
         this.originatorMmsRSAddress = originatorMmsRSAddress;

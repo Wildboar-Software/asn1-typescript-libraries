@@ -74,7 +74,7 @@ class DeviceList_Item {
          * @public
          * @readonly
          */
-        readonly deviceCategory: OPTIONAL<DeviceCategory>,
+        readonly deviceCategory?: OPTIONAL<DeviceCategory>,
         /**
          * @summary `namedDeviceTypes`.
          * @description
@@ -83,7 +83,7 @@ class DeviceList_Item {
          * @public
          * @readonly
          */
-        readonly namedDeviceTypes: OPTIONAL<NamedDeviceTypes>,
+        readonly namedDeviceTypes?: OPTIONAL<NamedDeviceTypes>,
         /**
          * @summary `deviceAttributes`.
          * @description
@@ -93,7 +93,7 @@ class DeviceList_Item {
          * @public
          * @readonly
          */
-        readonly deviceAttributes: OPTIONAL<DeviceAttributes>,
+        readonly deviceAttributes?: OPTIONAL<DeviceAttributes>,
         /**
          * @summary `deviceModelName`.
          * @description
@@ -102,7 +102,7 @@ class DeviceList_Item {
          * @public
          * @readonly
          */
-        readonly deviceModelName: OPTIONAL<IA5String>,
+        readonly deviceModelName?: OPTIONAL<IA5String>,
         /**
          * @summary `nidGroup`.
          * @description
@@ -113,7 +113,7 @@ class DeviceList_Item {
          * @public
          * @readonly
          */
-        readonly nidGroup: OPTIONAL<DeviceID>
+        readonly nidGroup?: OPTIONAL<DeviceID>
     ) {}
 
     /**

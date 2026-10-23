@@ -58,9 +58,9 @@ class ReleaseCallArg_allCallSegments {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        releaseCause: OPTIONAL<Cause>,
-        timeToRelease: OPTIONAL<TimerValue>,
-        forcedRelease: OPTIONAL<BOOLEAN>,
+        releaseCause?: OPTIONAL<Cause>,
+        timeToRelease?: OPTIONAL<TimerValue>,
+        forcedRelease?: OPTIONAL<BOOLEAN>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.releaseCause = releaseCause;

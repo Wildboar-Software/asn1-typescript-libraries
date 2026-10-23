@@ -56,7 +56,7 @@ class IndAudTerminationStateDescriptor {
          * @public
          * @readonly
          */
-        readonly eventBufferControl: OPTIONAL<NULL>,
+        readonly eventBufferControl?: OPTIONAL<NULL>,
         /**
          * @summary `serviceState`.
          * @description
@@ -66,7 +66,7 @@ class IndAudTerminationStateDescriptor {
          * @public
          * @readonly
          */
-        readonly serviceState: OPTIONAL<NULL>,
+        readonly serviceState?: OPTIONAL<NULL>,
         /**
          * @summary `serviceStateSel`.
          * @description
@@ -78,7 +78,7 @@ class IndAudTerminationStateDescriptor {
          * @public
          * @readonly
          */
-        readonly serviceStateSel: OPTIONAL<ServiceState>,
+        readonly serviceStateSel?: OPTIONAL<ServiceState>,
         /**
          * @summary Extensions that are not recognized.
          * @description

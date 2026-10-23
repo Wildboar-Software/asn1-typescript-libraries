@@ -105,9 +105,9 @@ class LCSClientIdentity {
     readonly lcsClientInternalID: OPTIONAL<LCSClientIdentity_lcsClientInternalID>;
 
     constructor (
-        lcsClientExternalID: OPTIONAL<LCSClientExternalID>,
-        lcsClientDialedByMS: OPTIONAL<OCTET_STRING>,
-        lcsClientInternalID: OPTIONAL<LCSClientIdentity_lcsClientInternalID>
+        lcsClientExternalID?: OPTIONAL<LCSClientExternalID>,
+        lcsClientDialedByMS?: OPTIONAL<OCTET_STRING>,
+        lcsClientInternalID?: OPTIONAL<LCSClientIdentity_lcsClientInternalID>
     ) {
         this.lcsClientExternalID = lcsClientExternalID;
         this.lcsClientDialedByMS = lcsClientDialedByMS;

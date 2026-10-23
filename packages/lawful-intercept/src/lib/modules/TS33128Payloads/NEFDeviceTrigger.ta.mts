@@ -191,11 +191,11 @@ class NEFDeviceTrigger {
         gPSI: GPSI,
         triggerId: TriggerID,
         aFID: AFID,
-        triggerPayload: OPTIONAL<TriggerPayload>,
-        validityPeriod: OPTIONAL<INTEGER>,
-        priorityDT: OPTIONAL<PriorityDT>,
-        sourcePortId: OPTIONAL<PortNumber>,
-        destinationPortId: OPTIONAL<PortNumber>,
+        triggerPayload?: OPTIONAL<TriggerPayload>,
+        validityPeriod?: OPTIONAL<INTEGER>,
+        priorityDT?: OPTIONAL<PriorityDT>,
+        sourcePortId?: OPTIONAL<PortNumber>,
+        destinationPortId?: OPTIONAL<PortNumber>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.sUPI = sUPI;

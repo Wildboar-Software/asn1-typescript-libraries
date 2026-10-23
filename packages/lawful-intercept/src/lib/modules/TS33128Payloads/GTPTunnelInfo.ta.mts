@@ -66,8 +66,8 @@ class GTPTunnelInfo {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        fiveGSGTPTunnels: OPTIONAL<FiveGSGTPTunnels>,
-        ePSGTPTunnels: OPTIONAL<EPSGTPTunnels>,
+        fiveGSGTPTunnels?: OPTIONAL<FiveGSGTPTunnels>,
+        ePSGTPTunnels?: OPTIONAL<EPSGTPTunnels>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.fiveGSGTPTunnels = fiveGSGTPTunnels;

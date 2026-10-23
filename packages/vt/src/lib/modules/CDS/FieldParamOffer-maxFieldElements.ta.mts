@@ -44,7 +44,7 @@ class FieldParamOffer_maxFieldElements {
          * @public
          * @readonly
          */
-        readonly unbounded: OPTIONAL<NULL>,
+        readonly unbounded?: OPTIONAL<NULL>,
         /**
          * @summary `limit`.
          * @description
@@ -53,7 +53,7 @@ class FieldParamOffer_maxFieldElements {
          * @public
          * @readonly
          */
-        readonly limit: OPTIONAL<IntegerOffer>
+        readonly limit?: OPTIONAL<IntegerOffer>
     ) {}
 
     /**

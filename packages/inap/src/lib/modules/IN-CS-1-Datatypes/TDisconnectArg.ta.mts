@@ -112,7 +112,7 @@ class TDisconnectArg {
         calledFacilityGroupMember: OPTIONAL<FacilityGroupMember>,
         releaseCause: OPTIONAL<Cause>,
         extensions: ExtensionField[],
-        connectTime: OPTIONAL<Integer4>,
+        connectTime?: OPTIONAL<Integer4>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.dpSpecificCommonParameters = dpSpecificCommonParameters;

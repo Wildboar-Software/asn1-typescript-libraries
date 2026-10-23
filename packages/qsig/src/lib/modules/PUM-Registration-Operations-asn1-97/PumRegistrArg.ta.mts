@@ -153,11 +153,11 @@ class PumRegistrArg {
         pumUserId: PumRegistrArg_pumUserId,
         basicService: BasicService,
         hostingAddr: PartyNumber,
-        activatingUserAddr: OPTIONAL<PartyNumber>,
-        serviceOption: OPTIONAL<ServiceOption>,
-        sessionParams: OPTIONAL<SessionParams>,
-        userPin: OPTIONAL<PumRegistrArg_userPin>,
-        argExtension: OPTIONAL<PumrExtension>
+        activatingUserAddr?: OPTIONAL<PartyNumber>,
+        serviceOption?: OPTIONAL<ServiceOption>,
+        sessionParams?: OPTIONAL<SessionParams>,
+        userPin?: OPTIONAL<PumRegistrArg_userPin>,
+        argExtension?: OPTIONAL<PumrExtension>
     ) {
         this.pumUserId = pumUserId;
         this.basicService = basicService;

@@ -89,7 +89,7 @@ class AuthPack {
          * @public
          * @readonly
          */
-        readonly clientPublicValue: OPTIONAL<SubjectPublicKeyInfo>,
+        readonly clientPublicValue?: OPTIONAL<SubjectPublicKeyInfo>,
         /**
          * CMS algorithm identifiers the client supports, most
          * preferred first. Entries name a key-transport algorithm,
@@ -112,7 +112,7 @@ class AuthPack {
          * @public
          * @readonly
          */
-        readonly supportedCMSTypes: OPTIONAL<AlgorithmIdentifier[]>,
+        readonly supportedCMSTypes?: OPTIONAL<AlgorithmIdentifier[]>,
         /**
          * Present when the client is willing to reuse
          * Diffie-Hellman keys, or to let the KDC do so. It must be
@@ -128,7 +128,7 @@ class AuthPack {
          * @public
          * @readonly
          */
-        readonly clientDHNonce: OPTIONAL<DHNonce>,
+        readonly clientDHNonce?: OPTIONAL<DHNonce>,
         /**
          * Key-derivation functions the client offers. RFC 4556 does
          * not define this field. The module attributes it to
@@ -137,7 +137,7 @@ class AuthPack {
          * @public
          * @readonly
          */
-        readonly supportedKDFs: OPTIONAL<KDFAlgorithmId[]>,
+        readonly supportedKDFs?: OPTIONAL<KDFAlgorithmId[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

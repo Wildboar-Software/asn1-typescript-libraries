@@ -107,7 +107,7 @@ class PositioningMethodAndUsage {
         method: PositioningMethod,
         mode: PositioningMode,
         usage: Usage,
-        methodCode: OPTIONAL<MethodCode>,
+        methodCode?: OPTIONAL<MethodCode>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.method = method;

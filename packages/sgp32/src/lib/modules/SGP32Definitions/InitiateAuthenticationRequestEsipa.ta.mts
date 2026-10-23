@@ -61,7 +61,7 @@ class InitiateAuthenticationRequestEsipa {
          * @public
          * @readonly
          */
-        readonly smdpAddress: OPTIONAL<UTF8String>,
+        readonly smdpAddress?: OPTIONAL<UTF8String>,
         /**
          * @summary `euiccInfo1`.
          * @description
@@ -71,7 +71,7 @@ class InitiateAuthenticationRequestEsipa {
          * @public
          * @readonly
          */
-        readonly euiccInfo1: OPTIONAL<EUICCInfo1>,
+        readonly euiccInfo1?: OPTIONAL<EUICCInfo1>,
         /**
          * @summary `eimTransactionId`.
          * @description
@@ -82,7 +82,7 @@ class InitiateAuthenticationRequestEsipa {
          * @public
          * @readonly
          */
-        readonly eimTransactionId: OPTIONAL<TransactionId>
+        readonly eimTransactionId?: OPTIONAL<TransactionId>
     ) {}
 
     /**

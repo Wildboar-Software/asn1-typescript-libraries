@@ -68,7 +68,7 @@ class CallMediaInfoList_Item {
          * @public
          * @readonly
          */
-        readonly mediaServiceVersion: OPTIONAL<INTEGER>,
+        readonly mediaServiceVersion?: OPTIONAL<INTEGER>,
         /**
          * @summary `mediaServiceInstance`.
          * @description
@@ -78,7 +78,7 @@ class CallMediaInfoList_Item {
          * @public
          * @readonly
          */
-        readonly mediaServiceInstance: OPTIONAL<MediaServiceInstanceID>,
+        readonly mediaServiceInstance?: OPTIONAL<MediaServiceInstanceID>,
         /**
          * @summary `mediaStreamID`.
          * @description
@@ -89,7 +89,7 @@ class CallMediaInfoList_Item {
          * @public
          * @readonly
          */
-        readonly mediaStreamID: OPTIONAL<MediaStreamID>,
+        readonly mediaStreamID?: OPTIONAL<MediaStreamID>,
         /**
          * @summary `connectionInformation`.
          * @description
@@ -100,7 +100,7 @@ class CallMediaInfoList_Item {
          * @public
          * @readonly
          */
-        readonly connectionInformation: OPTIONAL<ConnectionInformation>
+        readonly connectionInformation?: OPTIONAL<ConnectionInformation>
     ) {}
 
     /**

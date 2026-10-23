@@ -78,11 +78,11 @@ class ReconnectArg {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        notificationDuration: OPTIONAL<ApplicationTimer>,
-        alertingPattern: OPTIONAL<AlertingPattern>,
-        displayInformation: OPTIONAL<DisplayInformation>,
-        extensions: OPTIONAL<ExtensionField[]>,
-        callSegmentID: OPTIONAL<CallSegmentID>,
+        notificationDuration?: OPTIONAL<ApplicationTimer>,
+        alertingPattern?: OPTIONAL<AlertingPattern>,
+        displayInformation?: OPTIONAL<DisplayInformation>,
+        extensions?: OPTIONAL<ExtensionField[]>,
+        callSegmentID?: OPTIONAL<CallSegmentID>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.notificationDuration = notificationDuration;

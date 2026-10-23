@@ -74,7 +74,7 @@ class MCMailboxFullArg {
     constructor (
         partyInfo: PartyInfo,
         mailboxFullFor: MailboxFullFor,
-        extensions: OPTIONAL<MCMExtensions>,
+        extensions?: OPTIONAL<MCMExtensions>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.partyInfo = partyInfo;

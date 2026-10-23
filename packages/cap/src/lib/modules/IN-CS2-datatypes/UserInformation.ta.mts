@@ -51,7 +51,7 @@ class UserInformation {
          * @public
          * @readonly
          */
-        readonly errorInfo: OPTIONAL<InfoToSend>
+        readonly errorInfo?: OPTIONAL<InfoToSend>
     ) {}
 
     /**

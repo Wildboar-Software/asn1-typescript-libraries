@@ -77,8 +77,8 @@ class EASInfo {
 
     constructor (
         eASID: EASID,
-        expectedSvcKPIs: OPTIONAL<ServiceKPIs>,
-        minimumReqSvcKPIs: OPTIONAL<ServiceKPIs>,
+        expectedSvcKPIs?: OPTIONAL<ServiceKPIs>,
+        minimumReqSvcKPIs?: OPTIONAL<ServiceKPIs>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.eASID = eASID;

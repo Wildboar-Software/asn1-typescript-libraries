@@ -141,18 +141,18 @@ class AuthorizeTerminationArg {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        alertingPattern: OPTIONAL<AlertingPattern>,
-        callingPartyNumber: OPTIONAL<CallingPartyNumber>,
-        destinationNumberRoutingAddress: OPTIONAL<CalledPartyNumber>,
-        displayInformation: OPTIONAL<DisplayInformation>,
-        iSDNAccessRelatedInformation: OPTIONAL<ISDNAccessRelatedInformation>,
-        originalCalledPartyID: OPTIONAL<OriginalCalledPartyID>,
-        travellingClassMark: OPTIONAL<TravellingClassMark>,
-        extensions: OPTIONAL<ExtensionField[]>,
-        iNServiceCompatibilityResponse: OPTIONAL<INServiceCompatibilityResponse>,
-        forwardGVNS: OPTIONAL<ForwardGVNS>,
-        backwardGVNS: OPTIONAL<BackwardGVNS>,
-        legID: OPTIONAL<LegID>,
+        alertingPattern?: OPTIONAL<AlertingPattern>,
+        callingPartyNumber?: OPTIONAL<CallingPartyNumber>,
+        destinationNumberRoutingAddress?: OPTIONAL<CalledPartyNumber>,
+        displayInformation?: OPTIONAL<DisplayInformation>,
+        iSDNAccessRelatedInformation?: OPTIONAL<ISDNAccessRelatedInformation>,
+        originalCalledPartyID?: OPTIONAL<OriginalCalledPartyID>,
+        travellingClassMark?: OPTIONAL<TravellingClassMark>,
+        extensions?: OPTIONAL<ExtensionField[]>,
+        iNServiceCompatibilityResponse?: OPTIONAL<INServiceCompatibilityResponse>,
+        forwardGVNS?: OPTIONAL<ForwardGVNS>,
+        backwardGVNS?: OPTIONAL<BackwardGVNS>,
+        legID?: OPTIONAL<LegID>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.alertingPattern = alertingPattern;

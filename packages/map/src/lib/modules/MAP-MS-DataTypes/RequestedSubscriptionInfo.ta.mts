@@ -61,7 +61,7 @@ class RequestedSubscriptionInfo {
          * @public
          * @readonly
          */
-        readonly requestedSS_Info: OPTIONAL<SS_ForBS_Code>,
+        readonly requestedSS_Info?: OPTIONAL<SS_ForBS_Code>,
         /**
          * @summary `odb`.
          * @description
@@ -73,7 +73,7 @@ class RequestedSubscriptionInfo {
          * @public
          * @readonly
          */
-        readonly odb: OPTIONAL<NULL>,
+        readonly odb?: OPTIONAL<NULL>,
         /**
          * @summary `requestedCAMEL_SubscriptionInfo`.
          * @description
@@ -86,7 +86,7 @@ class RequestedSubscriptionInfo {
          * @public
          * @readonly
          */
-        readonly requestedCAMEL_SubscriptionInfo: OPTIONAL<RequestedCAMEL_SubscriptionInfo>,
+        readonly requestedCAMEL_SubscriptionInfo?: OPTIONAL<RequestedCAMEL_SubscriptionInfo>,
         /**
          * @summary `supportedVLR_CAMEL_Phases`.
          * @description
@@ -98,7 +98,7 @@ class RequestedSubscriptionInfo {
          * @public
          * @readonly
          */
-        readonly supportedVLR_CAMEL_Phases: OPTIONAL<NULL>,
+        readonly supportedVLR_CAMEL_Phases?: OPTIONAL<NULL>,
         /**
          * @summary `supportedSGSN_CAMEL_Phases`.
          * @description
@@ -110,13 +110,13 @@ class RequestedSubscriptionInfo {
          * @public
          * @readonly
          */
-        readonly supportedSGSN_CAMEL_Phases: OPTIONAL<NULL>,
+        readonly supportedSGSN_CAMEL_Phases?: OPTIONAL<NULL>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `additionalRequestedCAMEL_SubscriptionInfo`.
          * @description
@@ -129,7 +129,7 @@ class RequestedSubscriptionInfo {
          * @public
          * @readonly
          */
-        readonly additionalRequestedCAMEL_SubscriptionInfo: OPTIONAL<AdditionalRequestedCAMEL_SubscriptionInfo>,
+        readonly additionalRequestedCAMEL_SubscriptionInfo?: OPTIONAL<AdditionalRequestedCAMEL_SubscriptionInfo>,
         /**
          * @summary `msisdn_BS_List`.
          * @description
@@ -141,7 +141,7 @@ class RequestedSubscriptionInfo {
          * @public
          * @readonly
          */
-        readonly msisdn_BS_List: OPTIONAL<NULL>,
+        readonly msisdn_BS_List?: OPTIONAL<NULL>,
         /**
          * @summary `csg_SubscriptionDataRequested`.
          * @description
@@ -153,7 +153,7 @@ class RequestedSubscriptionInfo {
          * @public
          * @readonly
          */
-        readonly csg_SubscriptionDataRequested: OPTIONAL<NULL>,
+        readonly csg_SubscriptionDataRequested?: OPTIONAL<NULL>,
         /**
          * @summary `cw_Info`.
          * @description
@@ -165,7 +165,7 @@ class RequestedSubscriptionInfo {
          * @public
          * @readonly
          */
-        readonly cw_Info: OPTIONAL<NULL>,
+        readonly cw_Info?: OPTIONAL<NULL>,
         /**
          * @summary `clip_Info`.
          * @description
@@ -177,7 +177,7 @@ class RequestedSubscriptionInfo {
          * @public
          * @readonly
          */
-        readonly clip_Info: OPTIONAL<NULL>,
+        readonly clip_Info?: OPTIONAL<NULL>,
         /**
          * @summary `clir_Info`.
          * @description
@@ -189,7 +189,7 @@ class RequestedSubscriptionInfo {
          * @public
          * @readonly
          */
-        readonly clir_Info: OPTIONAL<NULL>,
+        readonly clir_Info?: OPTIONAL<NULL>,
         /**
          * @summary `hold_Info`.
          * @description
@@ -201,7 +201,7 @@ class RequestedSubscriptionInfo {
          * @public
          * @readonly
          */
-        readonly hold_Info: OPTIONAL<NULL>,
+        readonly hold_Info?: OPTIONAL<NULL>,
         /**
          * @summary `ect_Info`.
          * @description
@@ -213,7 +213,7 @@ class RequestedSubscriptionInfo {
          * @public
          * @readonly
          */
-        readonly ect_Info: OPTIONAL<NULL>,
+        readonly ect_Info?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -65,7 +65,7 @@ class EventReportSMSArg {
          * @public
          * @readonly
          */
-        readonly eventSpecificInformationSMS: OPTIONAL<EventSpecificInformationSMS>,
+        readonly eventSpecificInformationSMS?: OPTIONAL<EventSpecificInformationSMS>,
         /**
          * @summary `miscCallInfo`.
          * @description
@@ -79,13 +79,13 @@ class EventReportSMSArg {
          * @public
          * @readonly
          */
-        readonly miscCallInfo: OPTIONAL<MiscCallInfo>,
+        readonly miscCallInfo?: OPTIONAL<MiscCallInfo>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<Extensions>,
+        readonly extensions?: OPTIONAL<Extensions>,
         /**
          * @summary Extensions that are not recognized.
          * @public

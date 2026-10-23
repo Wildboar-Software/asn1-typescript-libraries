@@ -61,7 +61,7 @@ class PersistentResultSet_esRequest {
 
     constructor (
         toKeep: NULL,
-        notToKeep: OPTIONAL<ClientPartNotToKeep>
+        notToKeep?: OPTIONAL<ClientPartNotToKeep>
     ) {
         this.toKeep = toKeep;
         this.notToKeep = notToKeep;

@@ -45,7 +45,7 @@ class SelectedUMTS_Algorithms {
          * @public
          * @readonly
          */
-        readonly integrityProtectionAlgorithm: OPTIONAL<ChosenIntegrityProtectionAlgorithm>,
+        readonly integrityProtectionAlgorithm?: OPTIONAL<ChosenIntegrityProtectionAlgorithm>,
         /**
          * @summary `encryptionAlgorithm`.
          * @description
@@ -57,13 +57,13 @@ class SelectedUMTS_Algorithms {
          * @public
          * @readonly
          */
-        readonly encryptionAlgorithm: OPTIONAL<ChosenEncryptionAlgorithm>,
+        readonly encryptionAlgorithm?: OPTIONAL<ChosenEncryptionAlgorithm>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

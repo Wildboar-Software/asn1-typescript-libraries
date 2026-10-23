@@ -55,8 +55,8 @@ class DiagnosticFormat_Item {
     readonly message: OPTIONAL<InternationalString>;
 
     constructor (
-        diagnostic: OPTIONAL<DiagnosticFormat_Item_diagnostic>,
-        message: OPTIONAL<InternationalString>
+        diagnostic?: OPTIONAL<DiagnosticFormat_Item_diagnostic>,
+        message?: OPTIONAL<InternationalString>
     ) {
         this.diagnostic = diagnostic;
         this.message = message;

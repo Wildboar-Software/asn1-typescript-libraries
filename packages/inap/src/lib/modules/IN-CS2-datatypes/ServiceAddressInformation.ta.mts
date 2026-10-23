@@ -53,7 +53,7 @@ class ServiceAddressInformation {
     constructor (
         serviceKey: OPTIONAL<ServiceKey>,
         miscCallInfo: MiscCallInfo,
-        triggerType: OPTIONAL<TriggerType>
+        triggerType?: OPTIONAL<TriggerType>
     ) {
         this.serviceKey = serviceKey;
         this.miscCallInfo = miscCallInfo;

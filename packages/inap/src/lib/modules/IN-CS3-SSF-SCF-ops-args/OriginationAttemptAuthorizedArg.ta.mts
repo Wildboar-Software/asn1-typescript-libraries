@@ -140,17 +140,17 @@ class OriginationAttemptAuthorizedArg {
 
     constructor (
         dpSpecificCommonParameters: DpSpecificCommonParameters,
-        dialledDigits: OPTIONAL<CalledPartyNumber>,
-        callingPartyBusinessGroupID: OPTIONAL<CallingPartyBusinessGroupID>,
-        callingPartySubaddress: OPTIONAL<CallingPartySubaddress>,
-        callingFacilityGroup: OPTIONAL<FacilityGroup>,
-        callingFacilityGroupMember: OPTIONAL<FacilityGroupMember>,
-        travellingClassMark: OPTIONAL<TravellingClassMark>,
-        extensions: OPTIONAL<Extensions>,
-        carrier: OPTIONAL<Carrier>,
-        componentType: OPTIONAL<ComponentType>,
-        component: OPTIONAL<Component>,
-        componentCorrelationID: OPTIONAL<ComponentCorrelationID>,
+        dialledDigits?: OPTIONAL<CalledPartyNumber>,
+        callingPartyBusinessGroupID?: OPTIONAL<CallingPartyBusinessGroupID>,
+        callingPartySubaddress?: OPTIONAL<CallingPartySubaddress>,
+        callingFacilityGroup?: OPTIONAL<FacilityGroup>,
+        callingFacilityGroupMember?: OPTIONAL<FacilityGroupMember>,
+        travellingClassMark?: OPTIONAL<TravellingClassMark>,
+        extensions?: OPTIONAL<Extensions>,
+        carrier?: OPTIONAL<Carrier>,
+        componentType?: OPTIONAL<ComponentType>,
+        component?: OPTIONAL<Component>,
+        componentCorrelationID?: OPTIONAL<ComponentCorrelationID>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.dpSpecificCommonParameters = dpSpecificCommonParameters;

@@ -83,7 +83,7 @@ class SearchResult {
          * @public
          * @readonly
          */
-        readonly warnings: OPTIONAL<Warning[]> /* REPLICATED_COMPONENT */,
+        readonly warnings?: OPTIONAL<Warning[]> /* REPLICATED_COMPONENT */,
         /**
          * @summary `continuation`.
          * @description
@@ -93,7 +93,7 @@ class SearchResult {
          * @public
          * @readonly
          */
-        readonly continuation: OPTIONAL<TaskId> /* REPLICATED_COMPONENT */,
+        readonly continuation?: OPTIONAL<TaskId> /* REPLICATED_COMPONENT */,
         /**
          * @summary `removed_entries`.
          * @description
@@ -102,7 +102,7 @@ class SearchResult {
          * @public
          * @readonly
          */
-        readonly removed_entries: OPTIONAL<DfrEntryList>
+        readonly removed_entries?: OPTIONAL<DfrEntryList>
     ) {
         if (warnings !== undefined) {
             throw new _ConstructionError("SearchResult.warnings shall be absent");

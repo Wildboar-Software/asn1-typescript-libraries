@@ -252,8 +252,8 @@ class SearchRequest {
         mediumSetElementSetNames: OPTIONAL<ElementSetNames>,
         preferredRecordSyntax: OPTIONAL<OBJECT_IDENTIFIER>,
         query: Query,
-        additionalSearchInfo: OPTIONAL<OtherInformation>,
-        otherInfo: OPTIONAL<OtherInformation>
+        additionalSearchInfo?: OPTIONAL<OtherInformation>,
+        otherInfo?: OPTIONAL<OtherInformation>
     ) {
         this.referenceId = referenceId;
         this.smallSetUpperBound = smallSetUpperBound;

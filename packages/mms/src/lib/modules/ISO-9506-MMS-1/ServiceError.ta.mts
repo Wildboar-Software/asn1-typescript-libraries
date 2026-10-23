@@ -182,7 +182,7 @@ class ServiceError {
          * @public
          * @readonly
          */
-        readonly additionalCode: OPTIONAL<INTEGER>,
+        readonly additionalCode?: OPTIONAL<INTEGER>,
         /**
          * @summary `additionalDescription`.
          * @description
@@ -193,7 +193,7 @@ class ServiceError {
          * @public
          * @readonly
          */
-        readonly additionalDescription: OPTIONAL<VisibleString>,
+        readonly additionalDescription?: OPTIONAL<VisibleString>,
         /**
          * @summary `serviceSpecificInfo`.
          * @description
@@ -206,7 +206,7 @@ class ServiceError {
          * @public
          * @readonly
          */
-        readonly serviceSpecificInfo: OPTIONAL<ServiceError_serviceSpecificInfo>
+        readonly serviceSpecificInfo?: OPTIONAL<ServiceError_serviceSpecificInfo>
     ) {}
 
     /**

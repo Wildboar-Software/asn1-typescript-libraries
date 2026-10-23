@@ -55,7 +55,7 @@ class DiagFormat_recordSyntax {
 
     constructor (
         unsupportedSyntax: OBJECT_IDENTIFIER,
-        suggestedAlternatives: OPTIONAL<OBJECT_IDENTIFIER[]>
+        suggestedAlternatives?: OPTIONAL<OBJECT_IDENTIFIER[]>
     ) {
         this.unsupportedSyntax = unsupportedSyntax;
         this.suggestedAlternatives = suggestedAlternatives;

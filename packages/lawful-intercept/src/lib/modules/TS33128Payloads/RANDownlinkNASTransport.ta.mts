@@ -224,15 +224,15 @@ class RANDownlinkNASTransport {
     constructor (
         aMFUENGAPID: AMFUENGAPID,
         rANUENGAPID: RANUENGAPID,
-        oldAMF: OPTIONAL<GUAMI>,
-        allowedNSSAI: OPTIONAL<AllowedNSSAI>,
-        mobilityRestrictionList: OPTIONAL<MobilityRestrictionList>,
-        rATFrequencySelectionPriority: OPTIONAL<RATFrequencySelectionPriority>,
-        uEDifferentiationInfo: OPTIONAL<UEDifferentiationInfo>,
-        uERadioCapability: OPTIONAL<UERadioCapability>,
-        uERadioCapabilityID: OPTIONAL<OCTET_STRING>,
-        targetNSSAIInfo: OPTIONAL<TargetNSSAIInfo>,
-        mobileIABAuthorizedIndicator: OPTIONAL<MobileIABAuthorizedIndicator>,
+        oldAMF?: OPTIONAL<GUAMI>,
+        allowedNSSAI?: OPTIONAL<AllowedNSSAI>,
+        mobilityRestrictionList?: OPTIONAL<MobilityRestrictionList>,
+        rATFrequencySelectionPriority?: OPTIONAL<RATFrequencySelectionPriority>,
+        uEDifferentiationInfo?: OPTIONAL<UEDifferentiationInfo>,
+        uERadioCapability?: OPTIONAL<UERadioCapability>,
+        uERadioCapabilityID?: OPTIONAL<OCTET_STRING>,
+        targetNSSAIInfo?: OPTIONAL<TargetNSSAIInfo>,
+        mobileIABAuthorizedIndicator?: OPTIONAL<MobileIABAuthorizedIndicator>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.aMFUENGAPID = aMFUENGAPID;

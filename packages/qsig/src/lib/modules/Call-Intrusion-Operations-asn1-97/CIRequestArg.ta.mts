@@ -59,7 +59,7 @@ class CIRequestArg {
 
     constructor (
         ciCapabilityLevel: CICapabilityLevel,
-        argumentExtension: OPTIONAL<CIRequestArg_argumentExtension>
+        argumentExtension?: OPTIONAL<CIRequestArg_argumentExtension>
     ) {
         this.ciCapabilityLevel = ciCapabilityLevel;
         this.argumentExtension = argumentExtension;

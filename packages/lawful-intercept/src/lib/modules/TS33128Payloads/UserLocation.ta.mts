@@ -147,12 +147,12 @@ class UserLocation {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        eUTRALocation: OPTIONAL<EUTRALocation>,
-        nRLocation: OPTIONAL<NRLocation>,
-        n3GALocation: OPTIONAL<N3GALocation>,
-        uTRALocation: OPTIONAL<UTRALocation>,
-        gERALocation: OPTIONAL<GERALocation>,
-        pLMNLocation: OPTIONAL<PLMNLocation>,
+        eUTRALocation?: OPTIONAL<EUTRALocation>,
+        nRLocation?: OPTIONAL<NRLocation>,
+        n3GALocation?: OPTIONAL<N3GALocation>,
+        uTRALocation?: OPTIONAL<UTRALocation>,
+        gERALocation?: OPTIONAL<GERALocation>,
+        pLMNLocation?: OPTIONAL<PLMNLocation>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.eUTRALocation = eUTRALocation;

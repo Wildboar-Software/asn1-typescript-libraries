@@ -91,7 +91,7 @@ class GetVariableAccessAttributes_Response {
          * @public
          * @readonly
          */
-        readonly accessControlList: OPTIONAL<Identifier>,
+        readonly accessControlList?: OPTIONAL<Identifier>,
         /**
          * @summary `meaning`.
          * @description
@@ -103,7 +103,7 @@ class GetVariableAccessAttributes_Response {
          * @public
          * @readonly
          */
-        readonly meaning: OPTIONAL<VisibleString>
+        readonly meaning?: OPTIONAL<VisibleString>
     ) {}
 
     /**

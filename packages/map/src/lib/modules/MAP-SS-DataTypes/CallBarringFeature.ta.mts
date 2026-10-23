@@ -39,7 +39,7 @@ class CallBarringFeature {
          * @public
          * @readonly
          */
-        readonly basicService: OPTIONAL<BasicServiceCode>,
+        readonly basicService?: OPTIONAL<BasicServiceCode>,
         /**
          * @summary `ss_Status`.
          * @description
@@ -49,7 +49,7 @@ class CallBarringFeature {
          * @public
          * @readonly
          */
-        readonly ss_Status: OPTIONAL<SS_Status>,
+        readonly ss_Status?: OPTIONAL<SS_Status>,
         /**
          * @summary Extensions that are not recognized.
          * @public

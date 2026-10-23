@@ -89,8 +89,8 @@ class PANIHeaderInfo {
 
     constructor (
         accessNetworkInformation: SIPAccessNetworkInformation,
-        accessInfo: OPTIONAL<SIPAccessInfo[]>,
-        pANILocation: OPTIONAL<SIPLocationInfo[]>,
+        accessInfo?: OPTIONAL<SIPAccessInfo[]>,
+        pANILocation?: OPTIONAL<SIPLocationInfo[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.accessNetworkInformation = accessNetworkInformation;

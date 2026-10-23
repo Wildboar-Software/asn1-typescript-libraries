@@ -74,7 +74,7 @@ class ElementRequest_compositeElement {
     constructor (
         elementList: ElementRequest_compositeElement_elementList,
         deliveryTag: TagPath,
-        variantRequest: OPTIONAL<Variant>
+        variantRequest?: OPTIONAL<Variant>
     ) {
         this.elementList = elementList;
         this.deliveryTag = deliveryTag;

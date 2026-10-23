@@ -291,13 +291,13 @@ class SMSMessage {
         terminatingSMSParty: SMSParty,
         direction: Direction,
         linkTransferStatus: SMSTransferStatus,
-        otherMessage: OPTIONAL<SMSOtherMessageIndication>,
-        location: OPTIONAL<Location>,
-        peerNFAddress: OPTIONAL<SMSNFAddress>,
-        peerNFType: OPTIONAL<SMSNFType>,
-        sMSTPDUData: OPTIONAL<SMSTPDUData>,
-        messageType: OPTIONAL<SMSMessageType>,
-        rPMessageReference: OPTIONAL<SMSRPMessageReference>,
+        otherMessage?: OPTIONAL<SMSOtherMessageIndication>,
+        location?: OPTIONAL<Location>,
+        peerNFAddress?: OPTIONAL<SMSNFAddress>,
+        peerNFType?: OPTIONAL<SMSNFType>,
+        sMSTPDUData?: OPTIONAL<SMSTPDUData>,
+        messageType?: OPTIONAL<SMSMessageType>,
+        rPMessageReference?: OPTIONAL<SMSRPMessageReference>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.originatingSMSParty = originatingSMSParty;

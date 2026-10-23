@@ -50,7 +50,7 @@ class CS_AlterEventEnrollment_Request {
          * @public
          * @readonly
          */
-        readonly changeDisplay: OPTIONAL<CS_AlterEventEnrollment_Request_changeDisplay>
+        readonly changeDisplay?: OPTIONAL<CS_AlterEventEnrollment_Request_changeDisplay>
     ) {}
 
     /**

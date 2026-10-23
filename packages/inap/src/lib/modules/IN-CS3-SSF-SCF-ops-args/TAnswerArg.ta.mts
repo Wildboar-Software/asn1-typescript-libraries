@@ -113,14 +113,14 @@ class TAnswerArg {
 
     constructor (
         dpSpecificCommonParameters: DpSpecificCommonParameters,
-        calledPartyBusinessGroupID: OPTIONAL<CalledPartyBusinessGroupID>,
-        calledPartySubaddress: OPTIONAL<CalledPartySubaddress>,
-        calledFacilityGroup: OPTIONAL<FacilityGroup>,
-        calledFacilityGroupMember: OPTIONAL<FacilityGroupMember>,
-        extensions: OPTIONAL<Extensions>,
-        componentType: OPTIONAL<ComponentType>,
-        component: OPTIONAL<Component>,
-        componentCorrelationID: OPTIONAL<ComponentCorrelationID>,
+        calledPartyBusinessGroupID?: OPTIONAL<CalledPartyBusinessGroupID>,
+        calledPartySubaddress?: OPTIONAL<CalledPartySubaddress>,
+        calledFacilityGroup?: OPTIONAL<FacilityGroup>,
+        calledFacilityGroupMember?: OPTIONAL<FacilityGroupMember>,
+        extensions?: OPTIONAL<Extensions>,
+        componentType?: OPTIONAL<ComponentType>,
+        component?: OPTIONAL<Component>,
+        componentCorrelationID?: OPTIONAL<ComponentCorrelationID>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.dpSpecificCommonParameters = dpSpecificCommonParameters;

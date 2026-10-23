@@ -51,25 +51,25 @@ class EventReportBCSMArg {
          * @public
          * @readonly
          */
-        readonly eventSpecificInformationBCSM: OPTIONAL<EventSpecificInformationBCSM>,
+        readonly eventSpecificInformationBCSM?: OPTIONAL<EventSpecificInformationBCSM>,
         /**
          * @summary `legID`.
          * @public
          * @readonly
          */
-        readonly legID: OPTIONAL<LegID>,
+        readonly legID?: OPTIONAL<LegID>,
         /**
          * @summary `miscCallInfo`.
          * @public
          * @readonly
          */
-        readonly miscCallInfo: OPTIONAL<MiscCallInfo>,
+        readonly miscCallInfo?: OPTIONAL<MiscCallInfo>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<ExtensionField[]>
+        readonly extensions?: OPTIONAL<ExtensionField[]>
     ) {}
 
     /**

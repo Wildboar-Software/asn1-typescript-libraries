@@ -92,7 +92,7 @@ class RoutingInfoForSM_Arg {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `gprsSupportIndicator`.
          * @description
@@ -103,7 +103,7 @@ class RoutingInfoForSM_Arg {
          * @public
          * @readonly
          */
-        readonly gprsSupportIndicator: OPTIONAL<NULL>,
+        readonly gprsSupportIndicator?: OPTIONAL<NULL>,
         /**
          * @summary `sm_RP_MTI`.
          * @description
@@ -114,7 +114,7 @@ class RoutingInfoForSM_Arg {
          * @public
          * @readonly
          */
-        readonly sm_RP_MTI: OPTIONAL<SM_RP_MTI>,
+        readonly sm_RP_MTI?: OPTIONAL<SM_RP_MTI>,
         /**
          * @summary `sm_RP_SMEA`.
          * @description
@@ -125,7 +125,7 @@ class RoutingInfoForSM_Arg {
          * @public
          * @readonly
          */
-        readonly sm_RP_SMEA: OPTIONAL<SM_RP_SMEA>,
+        readonly sm_RP_SMEA?: OPTIONAL<SM_RP_SMEA>,
         /**
          * @summary `sm_deliveryNotIntended`.
          * @description
@@ -135,7 +135,7 @@ class RoutingInfoForSM_Arg {
          * @public
          * @readonly
          */
-        readonly sm_deliveryNotIntended: OPTIONAL<SM_DeliveryNotIntended>,
+        readonly sm_deliveryNotIntended?: OPTIONAL<SM_DeliveryNotIntended>,
         /**
          * @summary `ip_sm_gwGuidanceIndicator`.
          * @description
@@ -145,7 +145,7 @@ class RoutingInfoForSM_Arg {
          * @public
          * @readonly
          */
-        readonly ip_sm_gwGuidanceIndicator: OPTIONAL<NULL>,
+        readonly ip_sm_gwGuidanceIndicator?: OPTIONAL<NULL>,
         /**
          * @summary `imsi`.
          * @description
@@ -155,7 +155,7 @@ class RoutingInfoForSM_Arg {
          * @public
          * @readonly
          */
-        readonly imsi: OPTIONAL<IMSI>,
+        readonly imsi?: OPTIONAL<IMSI>,
         /**
          * @summary `t4_Trigger_Indicator`.
          * @description
@@ -165,7 +165,7 @@ class RoutingInfoForSM_Arg {
          * @public
          * @readonly
          */
-        readonly t4_Trigger_Indicator: OPTIONAL<NULL>,
+        readonly t4_Trigger_Indicator?: OPTIONAL<NULL>,
         /**
          * @summary `singleAttemptDelivery`.
          * @description
@@ -175,7 +175,7 @@ class RoutingInfoForSM_Arg {
          * @public
          * @readonly
          */
-        readonly singleAttemptDelivery: OPTIONAL<NULL>,
+        readonly singleAttemptDelivery?: OPTIONAL<NULL>,
         /**
          * @summary `correlationID`.
          * @description
@@ -185,7 +185,7 @@ class RoutingInfoForSM_Arg {
          * @public
          * @readonly
          */
-        readonly correlationID: OPTIONAL<CorrelationID>,
+        readonly correlationID?: OPTIONAL<CorrelationID>,
         /**
          * @summary `smsf_supportIndicator`.
          * @description
@@ -196,7 +196,7 @@ class RoutingInfoForSM_Arg {
          * @public
          * @readonly
          */
-        readonly smsf_supportIndicator: OPTIONAL<NULL>,
+        readonly smsf_supportIndicator?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @public

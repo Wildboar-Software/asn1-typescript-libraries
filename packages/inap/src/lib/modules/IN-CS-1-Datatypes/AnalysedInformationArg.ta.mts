@@ -190,9 +190,9 @@ class AnalysedInformationArg {
         routeList: OPTIONAL<RouteList>,
         travellingClassMark: OPTIONAL<TravellingClassMark>,
         extensions: ExtensionField[],
-        featureCode: OPTIONAL<FeatureCode>,
-        accessCode: OPTIONAL<AccessCode>,
-        carrier: OPTIONAL<Carrier>,
+        featureCode?: OPTIONAL<FeatureCode>,
+        accessCode?: OPTIONAL<AccessCode>,
+        carrier?: OPTIONAL<Carrier>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.dpSpecificCommonParameters = dpSpecificCommonParameters;

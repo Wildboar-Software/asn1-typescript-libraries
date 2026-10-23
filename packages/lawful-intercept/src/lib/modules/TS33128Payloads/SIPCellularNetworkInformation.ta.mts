@@ -65,7 +65,7 @@ class SIPCellularNetworkInformation {
 
     constructor (
         cellularNetworkInfo: UTF8String,
-        servingPLMN: OPTIONAL<PLMNID>,
+        servingPLMN?: OPTIONAL<PLMNID>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.cellularNetworkInfo = cellularNetworkInfo;

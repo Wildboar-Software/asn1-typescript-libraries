@@ -40,8 +40,8 @@ class RoamingChargingProfile {
     readonly partialRecordMethod: OPTIONAL<PartialRecordMethod>;
 
     constructor (
-        roamingTriggers: OPTIONAL<RoamingTrigger[]>,
-        partialRecordMethod: OPTIONAL<PartialRecordMethod>
+        roamingTriggers?: OPTIONAL<RoamingTrigger[]>,
+        partialRecordMethod?: OPTIONAL<PartialRecordMethod>
     ) {
         this.roamingTriggers = roamingTriggers;
         this.partialRecordMethod = partialRecordMethod;

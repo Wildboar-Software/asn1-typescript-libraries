@@ -51,7 +51,7 @@ class RecordInfo {
          * @public
          * @readonly
          */
-        readonly oDRecordLength: OPTIONAL<INTEGER>,
+        readonly oDRecordLength?: OPTIONAL<INTEGER>,
         /**
          * @summary `prKDRecordLength`.
          * @description
@@ -59,7 +59,7 @@ class RecordInfo {
          * @public
          * @readonly
          */
-        readonly prKDRecordLength: OPTIONAL<INTEGER>,
+        readonly prKDRecordLength?: OPTIONAL<INTEGER>,
         /**
          * @summary `puKDRecordLength`.
          * @description
@@ -67,7 +67,7 @@ class RecordInfo {
          * @public
          * @readonly
          */
-        readonly puKDRecordLength: OPTIONAL<INTEGER>,
+        readonly puKDRecordLength?: OPTIONAL<INTEGER>,
         /**
          * @summary `sKDRecordLength`.
          * @description
@@ -75,7 +75,7 @@ class RecordInfo {
          * @public
          * @readonly
          */
-        readonly sKDRecordLength: OPTIONAL<INTEGER>,
+        readonly sKDRecordLength?: OPTIONAL<INTEGER>,
         /**
          * @summary `cDRecordLength`.
          * @description
@@ -83,7 +83,7 @@ class RecordInfo {
          * @public
          * @readonly
          */
-        readonly cDRecordLength: OPTIONAL<INTEGER>,
+        readonly cDRecordLength?: OPTIONAL<INTEGER>,
         /**
          * @summary `dCODRecordLength`.
          * @description
@@ -91,7 +91,7 @@ class RecordInfo {
          * @public
          * @readonly
          */
-        readonly dCODRecordLength: OPTIONAL<INTEGER>,
+        readonly dCODRecordLength?: OPTIONAL<INTEGER>,
         /**
          * @summary `aODRecordLength`.
          * @description
@@ -99,7 +99,7 @@ class RecordInfo {
          * @public
          * @readonly
          */
-        readonly aODRecordLength: OPTIONAL<INTEGER>
+        readonly aODRecordLength?: OPTIONAL<INTEGER>
     ) {
         for (const [name, value] of [
             ["oDRecordLength", oDRecordLength],

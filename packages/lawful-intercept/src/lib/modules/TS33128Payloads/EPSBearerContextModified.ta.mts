@@ -128,10 +128,10 @@ class EPSBearerContextModified {
     constructor (
         ePSBearerID: EPSBearerID,
         cause: EPSBearerModificationCauseValue,
-        gTPTunnelInfo: OPTIONAL<GTPTunnelInfo>,
-        bearerQOS: OPTIONAL<EPSBearerQOS>,
-        protocolConfigurationOptions: OPTIONAL<PDNProtocolConfigurationOptions>,
-        linkedBearerIDs: OPTIONAL<EPSBearerID[]>,
+        gTPTunnelInfo?: OPTIONAL<GTPTunnelInfo>,
+        bearerQOS?: OPTIONAL<EPSBearerQOS>,
+        protocolConfigurationOptions?: OPTIONAL<PDNProtocolConfigurationOptions>,
+        linkedBearerIDs?: OPTIONAL<EPSBearerID[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.ePSBearerID = ePSBearerID;

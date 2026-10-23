@@ -51,7 +51,7 @@ class Usage {
          * @public
          * @readonly
          */
-        readonly keyUsage: OPTIONAL<KeyUsage>,
+        readonly keyUsage?: OPTIONAL<KeyUsage>,
         /**
          * @summary `extKeyUsage`.
          * @description
@@ -59,7 +59,7 @@ class Usage {
          * @public
          * @readonly
          */
-        readonly extKeyUsage: OPTIONAL<OBJECT_IDENTIFIER[]>,
+        readonly extKeyUsage?: OPTIONAL<OBJECT_IDENTIFIER[]>,
         /**
          * @summary Extensions that are not recognized.
          * @public

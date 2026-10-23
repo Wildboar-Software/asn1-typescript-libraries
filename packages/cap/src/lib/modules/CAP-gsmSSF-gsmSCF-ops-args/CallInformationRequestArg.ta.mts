@@ -62,7 +62,7 @@ class CallInformationRequestArg {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<Extensions>,
+        readonly extensions?: OPTIONAL<Extensions>,
         /**
          * @summary `legID`.
          * @description
@@ -74,7 +74,7 @@ class CallInformationRequestArg {
          * @public
          * @readonly
          */
-        readonly legID: OPTIONAL<SendingSideID>,
+        readonly legID?: OPTIONAL<SendingSideID>,
         /**
          * @summary Extensions that are not recognized.
          * @public

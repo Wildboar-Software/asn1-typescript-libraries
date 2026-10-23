@@ -60,7 +60,7 @@ class LampList_Item {
          * @public
          * @readonly
          */
-        readonly lampLabel: OPTIONAL<OCTET_STRING>,
+        readonly lampLabel?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `button`.
          * @description
@@ -69,7 +69,7 @@ class LampList_Item {
          * @public
          * @readonly
          */
-        readonly button: OPTIONAL<ButtonID>,
+        readonly button?: OPTIONAL<ButtonID>,
         /**
          * @summary `lampColor`.
          * @description
@@ -80,7 +80,7 @@ class LampList_Item {
          * @public
          * @readonly
          */
-        readonly lampColor: OPTIONAL<LampColor>
+        readonly lampColor?: OPTIONAL<LampColor>
     ) {}
 
     /**

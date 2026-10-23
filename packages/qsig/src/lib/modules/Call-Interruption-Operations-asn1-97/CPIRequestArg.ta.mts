@@ -57,7 +57,7 @@ class CPIRequestArg {
 
     constructor (
         cpiCapabilityLevel: CPICapabilityLevel,
-        argumentExtension: OPTIONAL<CPIRequestArg_argumentExtension>
+        argumentExtension?: OPTIONAL<CPIRequestArg_argumentExtension>
     ) {
         this.cpiCapabilityLevel = cpiCapabilityLevel;
         this.argumentExtension = argumentExtension;

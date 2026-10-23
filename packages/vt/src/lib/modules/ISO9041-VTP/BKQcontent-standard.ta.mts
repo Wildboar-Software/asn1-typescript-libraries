@@ -44,7 +44,7 @@ class BKQcontent_standard {
          * @public
          * @readonly
          */
-        readonly pointer: OPTIONAL<ExplicitPointer>,
+        readonly pointer?: OPTIONAL<ExplicitPointer>,
         /**
          * @summary `logPointer`.
          * @description
@@ -52,7 +52,7 @@ class BKQcontent_standard {
          * @public
          * @readonly
          */
-        readonly logPointer: OPTIONAL<LogExpPointer>
+        readonly logPointer?: OPTIONAL<LogExpPointer>
     ) {}
 
     /**

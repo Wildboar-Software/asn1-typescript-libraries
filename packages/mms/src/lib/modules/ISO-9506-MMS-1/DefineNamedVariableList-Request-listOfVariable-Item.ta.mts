@@ -58,7 +58,7 @@ class DefineNamedVariableList_Request_listOfVariable_Item {
          * @public
          * @readonly
          */
-        readonly alternateAccess: OPTIONAL<AlternateAccess>
+        readonly alternateAccess?: OPTIONAL<AlternateAccess>
     ) {}
 
     /**

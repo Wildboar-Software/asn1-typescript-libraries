@@ -39,7 +39,7 @@ class TSCheckError {
 
     constructor (
         errorId: TSCheckErrorId,
-        fail: OPTIONAL<_Element>
+        fail?: OPTIONAL<_Element>
     ) {
         this.errorId = errorId;
         this.fail = fail;

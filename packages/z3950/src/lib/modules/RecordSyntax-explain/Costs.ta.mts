@@ -91,12 +91,12 @@ class Costs {
     readonly otherCharges: OPTIONAL<Costs_otherCharges_Item[]>;
 
     constructor (
-        connectCharge: OPTIONAL<Charge>,
-        connectTime: OPTIONAL<Charge>,
-        displayCharge: OPTIONAL<Charge>,
-        searchCharge: OPTIONAL<Charge>,
-        subscriptCharge: OPTIONAL<Charge>,
-        otherCharges: OPTIONAL<Costs_otherCharges_Item[]>
+        connectCharge?: OPTIONAL<Charge>,
+        connectTime?: OPTIONAL<Charge>,
+        displayCharge?: OPTIONAL<Charge>,
+        searchCharge?: OPTIONAL<Charge>,
+        subscriptCharge?: OPTIONAL<Charge>,
+        otherCharges?: OPTIONAL<Costs_otherCharges_Item[]>
     ) {
         this.connectCharge = connectCharge;
         this.connectTime = connectTime;

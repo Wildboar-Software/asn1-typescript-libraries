@@ -44,7 +44,7 @@ class AlgorithmIdentifier {
          * @public
          * @readonly
          */
-        readonly parameters: OPTIONAL<_Element>
+        readonly parameters?: OPTIONAL<_Element>
     ) {}
 
     /**

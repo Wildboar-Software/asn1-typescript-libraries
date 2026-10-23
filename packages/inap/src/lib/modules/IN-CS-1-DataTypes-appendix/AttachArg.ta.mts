@@ -42,8 +42,8 @@ class AttachArg {
     readonly correlationidentifier: OPTIONAL<CorrelationID>;
 
     constructor (
-        newLegID: OPTIONAL<LegID>,
-        correlationidentifier: OPTIONAL<CorrelationID>
+        newLegID?: OPTIONAL<LegID>,
+        correlationidentifier?: OPTIONAL<CorrelationID>
     ) {
         this.newLegID = newLegID;
         this.correlationidentifier = correlationidentifier;

@@ -131,9 +131,9 @@ class SmsCommandArg {
         messageNumber: MessageReference,
         protocolIdentifier: ProtocolIdentifier,
         commandType: CommandType,
-        commandData: OPTIONAL<CommandData>,
-        statusReportRequest: OPTIONAL<BOOLEAN>,
-        smsExtension: OPTIONAL<SmsExtension>
+        commandData?: OPTIONAL<CommandData>,
+        statusReportRequest?: OPTIONAL<BOOLEAN>,
+        smsExtension?: OPTIONAL<SmsExtension>
     ) {
         this.destinationAddress = destinationAddress;
         this.messageReference = messageReference;

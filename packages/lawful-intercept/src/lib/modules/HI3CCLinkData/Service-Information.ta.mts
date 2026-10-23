@@ -108,10 +108,10 @@ class Service_Information {
     readonly teleServiceCode: OPTIONAL<OCTET_STRING>;
 
     constructor (
-        high_layer_capability: OPTIONAL<OCTET_STRING>,
-        tMR: OPTIONAL<OCTET_STRING>,
-        bearerServiceCode: OPTIONAL<OCTET_STRING>,
-        teleServiceCode: OPTIONAL<OCTET_STRING>
+        high_layer_capability?: OPTIONAL<OCTET_STRING>,
+        tMR?: OPTIONAL<OCTET_STRING>,
+        bearerServiceCode?: OPTIONAL<OCTET_STRING>,
+        teleServiceCode?: OPTIONAL<OCTET_STRING>
     ) {
         this.high_layer_capability = high_layer_capability;
         this.tMR = tMR;

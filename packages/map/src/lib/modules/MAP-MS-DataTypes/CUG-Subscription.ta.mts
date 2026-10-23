@@ -79,13 +79,13 @@ class CUG_Subscription {
          * @public
          * @readonly
          */
-        readonly basicServiceGroupList: OPTIONAL<Ext_BasicServiceGroupList>,
+        readonly basicServiceGroupList?: OPTIONAL<Ext_BasicServiceGroupList>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

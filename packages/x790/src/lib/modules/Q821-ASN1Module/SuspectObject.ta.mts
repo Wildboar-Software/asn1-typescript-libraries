@@ -54,7 +54,7 @@ class SuspectObject {
          * @public
          * @readonly
          */
-        readonly failureProbability: OPTIONAL<INTEGER>
+        readonly failureProbability?: OPTIONAL<INTEGER>
     ) {
         if (this.failureProbability !== undefined) {
             const _n = typeof this.failureProbability === "bigint" ? Number(this.failureProbability) : this.failureProbability;

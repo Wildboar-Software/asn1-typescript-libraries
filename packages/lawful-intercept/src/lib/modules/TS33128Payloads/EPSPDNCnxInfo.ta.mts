@@ -56,7 +56,7 @@ class EPSPDNCnxInfo {
 
     constructor (
         pGWS8ControlPlaneFTEID: FTEID,
-        linkedBearerID: OPTIONAL<EPSBearerID>,
+        linkedBearerID?: OPTIONAL<EPSBearerID>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.pGWS8ControlPlaneFTEID = pGWS8ControlPlaneFTEID;

@@ -44,13 +44,13 @@ class ExtensibleCallBarredParam {
          * @public
          * @readonly
          */
-        readonly callBarringCause: OPTIONAL<CallBarringCause>,
+        readonly callBarringCause?: OPTIONAL<CallBarringCause>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `unauthorisedMessageOriginator`.
          * @description
@@ -62,7 +62,7 @@ class ExtensibleCallBarredParam {
          * @public
          * @readonly
          */
-        readonly unauthorisedMessageOriginator: OPTIONAL<NULL>,
+        readonly unauthorisedMessageOriginator?: OPTIONAL<NULL>,
         /**
          * @summary `anonymousCallRejection`.
          * @description
@@ -74,7 +74,7 @@ class ExtensibleCallBarredParam {
          * @public
          * @readonly
          */
-        readonly anonymousCallRejection: OPTIONAL<NULL>,
+        readonly anonymousCallRejection?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @public

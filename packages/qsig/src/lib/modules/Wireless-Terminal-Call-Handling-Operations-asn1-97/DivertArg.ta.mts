@@ -138,10 +138,10 @@ class DivertArg {
         callingNumber: PresentedNumberScreened,
         wtmIdentity: WtmIdentity,
         qSIGInfoElement: PSS1InformationElement,
-        callingUserSub: OPTIONAL<PartySubaddress>,
-        callingName: OPTIONAL<Name>,
-        wtmUserSub: OPTIONAL<PartySubaddress>,
-        argExtension: OPTIONAL<WtmiExtension>
+        callingUserSub?: OPTIONAL<PartySubaddress>,
+        callingName?: OPTIONAL<Name>,
+        wtmUserSub?: OPTIONAL<PartySubaddress>,
+        argExtension?: OPTIONAL<WtmiExtension>
     ) {
         this.visitPINX = visitPINX;
         this.callingNumber = callingNumber;

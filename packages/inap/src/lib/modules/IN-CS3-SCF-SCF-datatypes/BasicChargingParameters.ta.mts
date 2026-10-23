@@ -82,10 +82,10 @@ class BasicChargingParameters {
         unitsPerInterval: INTEGER,
         timePerInterval: INTEGER,
         scalingFactor: INTEGER,
-        initialUnitIncrement: OPTIONAL<INTEGER>,
-        unitsPerDataInterval: OPTIONAL<INTEGER>,
-        segmentsPerDataInterval: OPTIONAL<INTEGER>,
-        initialTimeInterval: OPTIONAL<INTEGER>
+        initialUnitIncrement?: OPTIONAL<INTEGER>,
+        unitsPerDataInterval?: OPTIONAL<INTEGER>,
+        segmentsPerDataInterval?: OPTIONAL<INTEGER>,
+        initialTimeInterval?: OPTIONAL<INTEGER>
     ) {
         this.unitsPerInterval = unitsPerInterval;
         this.timePerInterval = timePerInterval;

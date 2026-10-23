@@ -69,7 +69,7 @@ class PLMNLocation {
 
     constructor (
         pLMNID: PLMNID,
-        nID: OPTIONAL<NID>,
+        nID?: OPTIONAL<NID>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.pLMNID = pLMNID;

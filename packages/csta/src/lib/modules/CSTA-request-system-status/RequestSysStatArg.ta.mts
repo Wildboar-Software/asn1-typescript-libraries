@@ -45,7 +45,7 @@ class RequestSysStatArg {
          * @public
          * @readonly
          */
-        readonly sysStatRegisterID: OPTIONAL<SysStatRegisterID>,
+        readonly sysStatRegisterID?: OPTIONAL<SysStatRegisterID>,
         /**
          * @summary `extensions`.
          * @description
@@ -55,7 +55,7 @@ class RequestSysStatArg {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

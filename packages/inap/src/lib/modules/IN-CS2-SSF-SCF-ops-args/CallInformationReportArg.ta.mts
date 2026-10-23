@@ -78,10 +78,10 @@ class CallInformationReportArg {
 
     constructor (
         requestedInformationList: RequestedInformationList,
-        correlationID: OPTIONAL<CorrelationID>,
-        extensions: OPTIONAL<ExtensionField[]>,
-        legID: OPTIONAL<LegID>,
-        lastEventIndicator: OPTIONAL<BOOLEAN>,
+        correlationID?: OPTIONAL<CorrelationID>,
+        extensions?: OPTIONAL<ExtensionField[]>,
+        legID?: OPTIONAL<LegID>,
+        lastEventIndicator?: OPTIONAL<BOOLEAN>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.requestedInformationList = requestedInformationList;

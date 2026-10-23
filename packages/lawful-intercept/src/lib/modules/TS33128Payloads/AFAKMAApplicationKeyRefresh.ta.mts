@@ -106,7 +106,7 @@ class AFAKMAApplicationKeyRefresh {
         aFID: AFID,
         aKID: NAI,
         kAF: KAF,
-        uaStarParams: OPTIONAL<UAStarParams>,
+        uaStarParams?: OPTIONAL<UAStarParams>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.aFID = aFID;

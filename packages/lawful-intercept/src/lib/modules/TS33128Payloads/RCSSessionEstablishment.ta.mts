@@ -117,7 +117,7 @@ class RCSSessionEstablishment {
         rCSSessionType: RCSSessionType,
         sessionDirection: Direction,
         rCSSessionMessage: RCSSIPSessionMessage,
-        location: OPTIONAL<Location>,
+        location?: OPTIONAL<Location>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.rCSTargetIdentities = rCSTargetIdentities;

@@ -74,7 +74,7 @@ class ContentLocation {
 
     constructor (
         contentLocationURI: OCTET_STRING,
-        statusCount: OPTIONAL<INTEGER>,
+        statusCount?: OPTIONAL<INTEGER>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.contentLocationURI = contentLocationURI;

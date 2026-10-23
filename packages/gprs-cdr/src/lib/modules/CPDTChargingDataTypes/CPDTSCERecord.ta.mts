@@ -569,15 +569,15 @@ class CPDTSCERecord {
         servingPLMNRateControl: OPTIONAL<ServingPLMNRateControl>,
         listOfNIDDsubmission: OPTIONAL<NIDDsubmission[]>,
         causeForRecClosing: CPCauseForRecClosing,
-        diagnostics: OPTIONAL<Diagnostics>,
-        localSequenceNumber: OPTIONAL<INTEGER>,
-        recordSequenceNumber: OPTIONAL<INTEGER>,
-        recordExtensions: OPTIONAL<ManagementExtension[]>,
-        externalIdentifier: OPTIONAL<SubscriptionID>,
-        aPNRateControl: OPTIONAL<APNRateControl>,
-        rATType: OPTIONAL<INTEGER>,
-        servingNodePLMNIdentifier: OPTIONAL<OCTET_STRING>,
-        servedIMEI: OPTIONAL<OCTET_STRING>
+        diagnostics?: OPTIONAL<Diagnostics>,
+        localSequenceNumber?: OPTIONAL<INTEGER>,
+        recordSequenceNumber?: OPTIONAL<INTEGER>,
+        recordExtensions?: OPTIONAL<ManagementExtension[]>,
+        externalIdentifier?: OPTIONAL<SubscriptionID>,
+        aPNRateControl?: OPTIONAL<APNRateControl>,
+        rATType?: OPTIONAL<INTEGER>,
+        servingNodePLMNIdentifier?: OPTIONAL<OCTET_STRING>,
+        servedIMEI?: OPTIONAL<OCTET_STRING>
     ) {
         this.recordType = recordType;
         this.retransmission = retransmission;

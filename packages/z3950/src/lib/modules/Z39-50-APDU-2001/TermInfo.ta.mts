@@ -124,12 +124,12 @@ class TermInfo {
 
     constructor (
         term: Term,
-        displayTerm: OPTIONAL<InternationalString>,
-        suggestedAttributes: OPTIONAL<AttributeList>,
-        alternativeTerm: OPTIONAL<AttributesPlusTerm[]>,
-        globalOccurrences: OPTIONAL<INTEGER>,
-        byAttributes: OPTIONAL<OccurrenceByAttributes>,
-        otherTermInfo: OPTIONAL<OtherInformation>
+        displayTerm?: OPTIONAL<InternationalString>,
+        suggestedAttributes?: OPTIONAL<AttributeList>,
+        alternativeTerm?: OPTIONAL<AttributesPlusTerm[]>,
+        globalOccurrences?: OPTIONAL<INTEGER>,
+        byAttributes?: OPTIONAL<OccurrenceByAttributes>,
+        otherTermInfo?: OPTIONAL<OtherInformation>
     ) {
         this.term = term;
         this.displayTerm = displayTerm;

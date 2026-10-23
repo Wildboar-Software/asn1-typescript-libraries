@@ -94,7 +94,7 @@ class EimConfigurationData {
          * @public
          * @readonly
          */
-        readonly eimFqdn: OPTIONAL<UTF8String>,
+        readonly eimFqdn?: OPTIONAL<UTF8String>,
         /**
          * @summary `eimIdType`.
          * @description
@@ -104,7 +104,7 @@ class EimConfigurationData {
          * @public
          * @readonly
          */
-        readonly eimIdType: OPTIONAL<EimIdType>,
+        readonly eimIdType?: OPTIONAL<EimIdType>,
         /**
          * @summary `counterValue`.
          * @description
@@ -118,7 +118,7 @@ class EimConfigurationData {
          * @public
          * @readonly
          */
-        readonly counterValue: OPTIONAL<INTEGER>,
+        readonly counterValue?: OPTIONAL<INTEGER>,
         /**
          * @summary `associationToken`.
          * @description
@@ -136,7 +136,7 @@ class EimConfigurationData {
          * @public
          * @readonly
          */
-        readonly associationToken: OPTIONAL<INTEGER>,
+        readonly associationToken?: OPTIONAL<INTEGER>,
         /**
          * @summary `eimPublicKeyData`.
          * @description
@@ -147,7 +147,7 @@ class EimConfigurationData {
          * @public
          * @readonly
          */
-        readonly eimPublicKeyData: OPTIONAL<EimConfigurationData_eimPublicKeyData>,
+        readonly eimPublicKeyData?: OPTIONAL<EimConfigurationData_eimPublicKeyData>,
         /**
          * @summary `trustedPublicKeyDataTls`.
          * @description
@@ -159,7 +159,7 @@ class EimConfigurationData {
          * @public
          * @readonly
          */
-        readonly trustedPublicKeyDataTls: OPTIONAL<EimConfigurationData_trustedPublicKeyDataTls>,
+        readonly trustedPublicKeyDataTls?: OPTIONAL<EimConfigurationData_trustedPublicKeyDataTls>,
         /**
          * @summary `eimSupportedProtocol`.
          * @description
@@ -169,7 +169,7 @@ class EimConfigurationData {
          * @public
          * @readonly
          */
-        readonly eimSupportedProtocol: OPTIONAL<EimSupportedProtocol>,
+        readonly eimSupportedProtocol?: OPTIONAL<EimSupportedProtocol>,
         /**
          * @summary `euiccCiPKId`.
          * @description
@@ -182,7 +182,7 @@ class EimConfigurationData {
          * @public
          * @readonly
          */
-        readonly euiccCiPKId: OPTIONAL<SubjectKeyIdentifier>,
+        readonly euiccCiPKId?: OPTIONAL<SubjectKeyIdentifier>,
         /**
          * @summary `indirectProfileDownload`.
          * @description
@@ -193,7 +193,7 @@ class EimConfigurationData {
          * @public
          * @readonly
          */
-        readonly indirectProfileDownload: OPTIONAL<NULL>,
+        readonly indirectProfileDownload?: OPTIONAL<NULL>,
         /**
          * @summary `eSipaProprietaryProtocolInformation`.
          * @description
@@ -202,7 +202,7 @@ class EimConfigurationData {
          * @public
          * @readonly
          */
-        readonly eSipaProprietaryProtocolInformation: OPTIONAL<VendorSpecificExtension>
+        readonly eSipaProprietaryProtocolInformation?: OPTIONAL<VendorSpecificExtension>
     ) {
         if (this.eimId.length < 1 || this.eimId.length > 128) {
             throw new ASN1SizeError("EimConfigurationData.eimId violates SIZE constraint");

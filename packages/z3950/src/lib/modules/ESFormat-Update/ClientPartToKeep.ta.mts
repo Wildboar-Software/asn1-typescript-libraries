@@ -96,8 +96,8 @@ class ClientPartToKeep {
     constructor (
         action: ClientPartToKeep_action,
         databaseName: InternationalString,
-        schema: OPTIONAL<OBJECT_IDENTIFIER>,
-        elementSetName: OPTIONAL<InternationalString>
+        schema?: OPTIONAL<OBJECT_IDENTIFIER>,
+        elementSetName?: OPTIONAL<InternationalString>
     ) {
         this.action = action;
         this.databaseName = databaseName;

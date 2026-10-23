@@ -40,7 +40,7 @@ class IndAudDigitMapDescriptor {
          * @public
          * @readonly
          */
-        readonly digitMapName: OPTIONAL<DigitMapName>
+        readonly digitMapName?: OPTIONAL<DigitMapName>
     ) {}
 
     /**

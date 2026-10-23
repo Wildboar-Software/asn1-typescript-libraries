@@ -132,11 +132,11 @@ class EPSNASTransportInitialInformation {
 
     constructor (
         rANUES1APID: RANUES1APID,
-        relayNodeIndicator: OPTIONAL<BOOLEAN>,
-        bBFTunnelInformation: OPTIONAL<BBFTunnelInformation>,
-        eDTSession: OPTIONAL<BOOLEAN>,
-        iABNodeIndication: OPTIONAL<BOOLEAN>,
-        lTENTNTAIInformation: OPTIONAL<LTENTNTAIInformation>,
+        relayNodeIndicator?: OPTIONAL<BOOLEAN>,
+        bBFTunnelInformation?: OPTIONAL<BBFTunnelInformation>,
+        eDTSession?: OPTIONAL<BOOLEAN>,
+        iABNodeIndication?: OPTIONAL<BOOLEAN>,
+        lTENTNTAIInformation?: OPTIONAL<LTENTNTAIInformation>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.rANUES1APID = rANUES1APID;

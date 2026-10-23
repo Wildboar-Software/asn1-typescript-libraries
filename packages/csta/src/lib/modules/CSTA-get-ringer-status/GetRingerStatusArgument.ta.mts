@@ -57,7 +57,7 @@ class GetRingerStatusArgument {
          * @public
          * @readonly
          */
-        readonly ringer: OPTIONAL<RingerID>,
+        readonly ringer?: OPTIONAL<RingerID>,
         /**
          * @summary `extensions`.
          * @description
@@ -67,7 +67,7 @@ class GetRingerStatusArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

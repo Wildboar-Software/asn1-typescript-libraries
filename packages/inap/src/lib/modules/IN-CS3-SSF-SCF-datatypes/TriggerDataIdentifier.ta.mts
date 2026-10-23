@@ -60,7 +60,7 @@ class TriggerDataIdentifier {
     constructor (
         triggerID: EventTypeBCSM,
         profile: ProfileIdentifier,
-        extensions: OPTIONAL<Extensions>,
+        extensions?: OPTIONAL<Extensions>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.triggerID = triggerID;

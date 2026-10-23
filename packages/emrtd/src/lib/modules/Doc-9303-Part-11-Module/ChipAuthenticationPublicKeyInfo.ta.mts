@@ -68,7 +68,7 @@ class ChipAuthenticationPublicKeyInfo {
          * @public
          * @readonly
          */
-        readonly keyId: OPTIONAL<INTEGER>
+        readonly keyId?: OPTIONAL<INTEGER>
     ) {
         if (!id_PK_DH.isEqualTo(protocol) && !id_PK_ECDH.isEqualTo(protocol)) {
             throw new ASN1Error("ChipAuthenticationPublicKeyInfo.protocol violates permitted OBJECT IDENTIFIER constraint");

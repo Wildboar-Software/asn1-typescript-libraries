@@ -108,14 +108,14 @@ class ContinueWithArgumentArg {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        legID: OPTIONAL<LegID>,
-        alertingPattern: OPTIONAL<AlertingPattern>,
-        genericName: OPTIONAL<GenericName>,
-        iNServiceCompatibilityResponse: OPTIONAL<INServiceCompatibilityResponse>,
-        forwardGVNS: OPTIONAL<ForwardGVNS>,
-        backwardGVNS: OPTIONAL<BackwardGVNS>,
-        extensions: OPTIONAL<ExtensionField[]>,
-        serviceInteractionIndicatorsTwo: OPTIONAL<ServiceInteractionIndicatorsTwo>,
+        legID?: OPTIONAL<LegID>,
+        alertingPattern?: OPTIONAL<AlertingPattern>,
+        genericName?: OPTIONAL<GenericName>,
+        iNServiceCompatibilityResponse?: OPTIONAL<INServiceCompatibilityResponse>,
+        forwardGVNS?: OPTIONAL<ForwardGVNS>,
+        backwardGVNS?: OPTIONAL<BackwardGVNS>,
+        extensions?: OPTIONAL<ExtensionField[]>,
+        serviceInteractionIndicatorsTwo?: OPTIONAL<ServiceInteractionIndicatorsTwo>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.legID = legID;

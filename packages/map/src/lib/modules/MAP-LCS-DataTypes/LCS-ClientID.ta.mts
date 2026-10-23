@@ -58,7 +58,7 @@ class LCS_ClientID {
          * @public
          * @readonly
          */
-        readonly lcsClientExternalID: OPTIONAL<LCSClientExternalID>,
+        readonly lcsClientExternalID?: OPTIONAL<LCSClientExternalID>,
         /**
          * @summary `lcsClientDialedByMS`.
          * @description
@@ -68,7 +68,7 @@ class LCS_ClientID {
          * @public
          * @readonly
          */
-        readonly lcsClientDialedByMS: OPTIONAL<AddressString>,
+        readonly lcsClientDialedByMS?: OPTIONAL<AddressString>,
         /**
          * @summary `lcsClientInternalID`.
          * @description
@@ -78,7 +78,7 @@ class LCS_ClientID {
          * @public
          * @readonly
          */
-        readonly lcsClientInternalID: OPTIONAL<LCSClientInternalID>,
+        readonly lcsClientInternalID?: OPTIONAL<LCSClientInternalID>,
         /**
          * @summary `lcsClientName`.
          * @description
@@ -88,7 +88,7 @@ class LCS_ClientID {
          * @public
          * @readonly
          */
-        readonly lcsClientName: OPTIONAL<LCSClientName>,
+        readonly lcsClientName?: OPTIONAL<LCSClientName>,
         /**
          * @summary `lcsAPN`.
          * @description
@@ -98,7 +98,7 @@ class LCS_ClientID {
          * @public
          * @readonly
          */
-        readonly lcsAPN: OPTIONAL<APN>,
+        readonly lcsAPN?: OPTIONAL<APN>,
         /**
          * @summary `lcsRequestorID`.
          * @description
@@ -108,7 +108,7 @@ class LCS_ClientID {
          * @public
          * @readonly
          */
-        readonly lcsRequestorID: OPTIONAL<LCSRequestorID>,
+        readonly lcsRequestorID?: OPTIONAL<LCSRequestorID>,
         /**
          * @summary Extensions that are not recognized.
          * @public

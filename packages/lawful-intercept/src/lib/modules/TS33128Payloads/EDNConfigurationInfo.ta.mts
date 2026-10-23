@@ -59,7 +59,7 @@ class EDNConfigurationInfo {
     constructor (
         eDNConnectionInfo: EDNConnectionInfo,
         eESsInfo: EESsInfo,
-        lifetime: OPTIONAL<INTEGER>,
+        lifetime?: OPTIONAL<INTEGER>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.eDNConnectionInfo = eDNConnectionInfo;

@@ -87,7 +87,7 @@ class divertingLegInformation1_ArgumentType {
         diversionReason: DiversionReason,
         subscriptionOption: SubscriptionOption,
         nominatedNr: PartyNumber,
-        extension: OPTIONAL<divertingLegInformation1_ArgumentType_extension>
+        extension?: OPTIONAL<divertingLegInformation1_ArgumentType_extension>
     ) {
         this.diversionReason = diversionReason;
         this.subscriptionOption = subscriptionOption;

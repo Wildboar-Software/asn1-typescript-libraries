@@ -90,12 +90,12 @@ class LINotification {
 
     constructor (
         notificationType: LINotificationType,
-        appliedTargetID: OPTIONAL<TargetIdentifier>,
-        appliedDeliveryInformation: OPTIONAL<LIAppliedDeliveryInformation[]>,
-        appliedStartTime: OPTIONAL<Timestamp>,
-        appliedEndTime: OPTIONAL<Timestamp>,
-        appliedTargetIsLocal: OPTIONAL<BOOLEAN>,
-        appliedTargetIsNonLocal: OPTIONAL<BOOLEAN>,
+        appliedTargetID?: OPTIONAL<TargetIdentifier>,
+        appliedDeliveryInformation?: OPTIONAL<LIAppliedDeliveryInformation[]>,
+        appliedStartTime?: OPTIONAL<Timestamp>,
+        appliedEndTime?: OPTIONAL<Timestamp>,
+        appliedTargetIsLocal?: OPTIONAL<BOOLEAN>,
+        appliedTargetIsNonLocal?: OPTIONAL<BOOLEAN>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.notificationType = notificationType;

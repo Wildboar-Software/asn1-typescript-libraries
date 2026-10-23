@@ -48,13 +48,13 @@ class ExtensibleSystemFailureParam {
          * @public
          * @readonly
          */
-        readonly networkResource: OPTIONAL<NetworkResource>,
+        readonly networkResource?: OPTIONAL<NetworkResource>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `additionalNetworkResource`.
          * @description
@@ -65,7 +65,7 @@ class ExtensibleSystemFailureParam {
          * @public
          * @readonly
          */
-        readonly additionalNetworkResource: OPTIONAL<AdditionalNetworkResource>,
+        readonly additionalNetworkResource?: OPTIONAL<AdditionalNetworkResource>,
         /**
          * @summary `failureCauseParam`.
          * @description
@@ -76,7 +76,7 @@ class ExtensibleSystemFailureParam {
          * @public
          * @readonly
          */
-        readonly failureCauseParam: OPTIONAL<FailureCauseParam>,
+        readonly failureCauseParam?: OPTIONAL<FailureCauseParam>,
         /**
          * @summary Extensions that are not recognized.
          * @public

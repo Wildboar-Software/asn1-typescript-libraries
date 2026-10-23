@@ -196,16 +196,16 @@ class ChangeOfProSeCondition {
     readonly vPLMNIdentifier: OPTIONAL<OCTET_STRING>;
 
     constructor (
-        changeConditionTimestamp: OPTIONAL<OCTET_STRING>,
-        coverageStatus: OPTIONAL<CoverageStatus>,
-        uELocation: OPTIONAL<OCTET_STRING>,
-        dataVolume: OPTIONAL<INTEGER>,
-        serviceChangeCondition: OPTIONAL<ChangeOfProSeCondition_serviceChangeCondition>,
-        localSequenceNumber: OPTIONAL<INTEGER>,
-        usageInformationReportSequenceNumber: OPTIONAL<INTEGER>,
-        radioResourcesInd: OPTIONAL<ChangeOfProSeCondition_radioResourcesInd>,
-        radiofrequency: OPTIONAL<OCTET_STRING>,
-        vPLMNIdentifier: OPTIONAL<OCTET_STRING>
+        changeConditionTimestamp?: OPTIONAL<OCTET_STRING>,
+        coverageStatus?: OPTIONAL<CoverageStatus>,
+        uELocation?: OPTIONAL<OCTET_STRING>,
+        dataVolume?: OPTIONAL<INTEGER>,
+        serviceChangeCondition?: OPTIONAL<ChangeOfProSeCondition_serviceChangeCondition>,
+        localSequenceNumber?: OPTIONAL<INTEGER>,
+        usageInformationReportSequenceNumber?: OPTIONAL<INTEGER>,
+        radioResourcesInd?: OPTIONAL<ChangeOfProSeCondition_radioResourcesInd>,
+        radiofrequency?: OPTIONAL<OCTET_STRING>,
+        vPLMNIdentifier?: OPTIONAL<OCTET_STRING>
     ) {
         this.changeConditionTimestamp = changeConditionTimestamp;
         this.coverageStatus = coverageStatus;

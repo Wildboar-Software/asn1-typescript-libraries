@@ -90,7 +90,7 @@ class VoiceUnitServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly activate: OPTIONAL<Activate>,
+        readonly activate?: OPTIONAL<Activate>,
         /**
          * @summary `clear`.
          * @public
@@ -99,7 +99,7 @@ class VoiceUnitServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly clear: OPTIONAL<Clear>,
+        readonly clear?: OPTIONAL<Clear>,
         /**
          * @summary `deactivate`.
          * @public
@@ -108,7 +108,7 @@ class VoiceUnitServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly deactivate: OPTIONAL<Deactivate>,
+        readonly deactivate?: OPTIONAL<Deactivate>,
         /**
          * @summary `concatenateMsg`.
          * @public
@@ -117,7 +117,7 @@ class VoiceUnitServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly concatenateMsg: OPTIONAL<ConcatenateMsg>,
+        readonly concatenateMsg?: OPTIONAL<ConcatenateMsg>,
         /**
          * @summary `deleteMsg`.
          * @public
@@ -126,7 +126,7 @@ class VoiceUnitServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly deleteMsg: OPTIONAL<DeleteMsg>,
+        readonly deleteMsg?: OPTIONAL<DeleteMsg>,
         /**
          * @summary `queue`.
          * @public
@@ -135,7 +135,7 @@ class VoiceUnitServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly queue: OPTIONAL<Queue>,
+        readonly queue?: OPTIONAL<Queue>,
         /**
          * @summary `playMsg`.
          * @public
@@ -144,7 +144,7 @@ class VoiceUnitServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly playMsg: OPTIONAL<PlayMsg>,
+        readonly playMsg?: OPTIONAL<PlayMsg>,
         /**
          * @summary `queryVoiceAttrib`.
          * @public
@@ -153,7 +153,7 @@ class VoiceUnitServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly queryVoiceAttrib: OPTIONAL<QueryVoiceAttrib>,
+        readonly queryVoiceAttrib?: OPTIONAL<QueryVoiceAttrib>,
         /**
          * @summary `recordMsg`.
          * @public
@@ -162,7 +162,7 @@ class VoiceUnitServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly recordMsg: OPTIONAL<RecordMsg>,
+        readonly recordMsg?: OPTIONAL<RecordMsg>,
         /**
          * @summary `reposition`.
          * @public
@@ -171,7 +171,7 @@ class VoiceUnitServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly reposition: OPTIONAL<Reposition>,
+        readonly reposition?: OPTIONAL<Reposition>,
         /**
          * @summary `resume`.
          * @public
@@ -180,7 +180,7 @@ class VoiceUnitServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly resume: OPTIONAL<Resume>,
+        readonly resume?: OPTIONAL<Resume>,
         /**
          * @summary `review`.
          * @public
@@ -189,7 +189,7 @@ class VoiceUnitServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly review: OPTIONAL<Review>,
+        readonly review?: OPTIONAL<Review>,
         /**
          * @summary `start`.
          * @public
@@ -198,7 +198,7 @@ class VoiceUnitServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly start: OPTIONAL<Start>,
+        readonly start?: OPTIONAL<Start>,
         /**
          * @summary `setVoiceAttrib`.
          * @public
@@ -207,7 +207,7 @@ class VoiceUnitServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly setVoiceAttrib: OPTIONAL<SetVoiceAttrib>,
+        readonly setVoiceAttrib?: OPTIONAL<SetVoiceAttrib>,
         /**
          * @summary `stop`.
          * @public
@@ -216,7 +216,7 @@ class VoiceUnitServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly stop: OPTIONAL<Stop>,
+        readonly stop?: OPTIONAL<Stop>,
         /**
          * @summary `suspend`.
          * @public
@@ -225,7 +225,7 @@ class VoiceUnitServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly suspend: OPTIONAL<Suspend>,
+        readonly suspend?: OPTIONAL<Suspend>,
         /**
          * @summary `synthesizeMsg`.
          * @public
@@ -234,7 +234,7 @@ class VoiceUnitServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly synthesizeMsg: OPTIONAL<SynthesizeMsg>
+        readonly synthesizeMsg?: OPTIONAL<SynthesizeMsg>
     ) {}
 
     /**

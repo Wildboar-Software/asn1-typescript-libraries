@@ -53,7 +53,7 @@ class RouteRegisterArgument {
          * @public
          * @readonly
          */
-        readonly routeingDevice: OPTIONAL<DeviceID>,
+        readonly routeingDevice?: OPTIONAL<DeviceID>,
         /**
          * @summary `requestedRouteingMediaClass`.
          * @description
@@ -63,7 +63,7 @@ class RouteRegisterArgument {
          * @public
          * @readonly
          */
-        readonly requestedRouteingMediaClass: OPTIONAL<MediaClass>,
+        readonly requestedRouteingMediaClass?: OPTIONAL<MediaClass>,
         /**
          * @summary `extensions`.
          * @description
@@ -73,7 +73,7 @@ class RouteRegisterArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

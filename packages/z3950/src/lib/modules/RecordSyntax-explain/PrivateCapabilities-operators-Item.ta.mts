@@ -50,7 +50,7 @@ class PrivateCapabilities_operators_Item {
 
     constructor (
         operator: InternationalString,
-        description: OPTIONAL<HumanString>
+        description?: OPTIONAL<HumanString>
     ) {
         this.operator = operator;
         this.description = description;

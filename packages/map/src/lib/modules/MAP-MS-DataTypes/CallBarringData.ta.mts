@@ -52,13 +52,13 @@ class CallBarringData {
          * @public
          * @readonly
          */
-        readonly password: OPTIONAL<Password>,
+        readonly password?: OPTIONAL<Password>,
         /**
          * @summary `wrongPasswordAttemptsCounter`.
          * @public
          * @readonly
          */
-        readonly wrongPasswordAttemptsCounter: OPTIONAL<WrongPasswordAttemptsCounter>,
+        readonly wrongPasswordAttemptsCounter?: OPTIONAL<WrongPasswordAttemptsCounter>,
         /**
          * @summary `notificationToCSE`.
          * @description
@@ -68,13 +68,13 @@ class CallBarringData {
          * @public
          * @readonly
          */
-        readonly notificationToCSE: OPTIONAL<NULL>,
+        readonly notificationToCSE?: OPTIONAL<NULL>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -56,7 +56,7 @@ class TestResultVerify {
          * @public
          * @readonly
          */
-        readonly durationVerify: OPTIONAL<StatisticInformationSet>
+        readonly durationVerify?: OPTIONAL<StatisticInformationSet>
     ) {}
 
     /**

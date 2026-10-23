@@ -69,8 +69,8 @@ class INprofile {
     constructor (
         actionOnProfile: ActionOnProfile,
         tDPIdentifier: TDPIdentifier,
-        dPName: OPTIONAL<EventTypeBCSM>,
-        extensions: OPTIONAL<Extensions>,
+        dPName?: OPTIONAL<EventTypeBCSM>,
+        extensions?: OPTIONAL<Extensions>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.actionOnProfile = actionOnProfile;

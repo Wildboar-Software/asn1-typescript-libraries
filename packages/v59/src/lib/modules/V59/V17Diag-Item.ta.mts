@@ -69,7 +69,7 @@ class V17Diag_Item {
          * @public
          * @readonly
          */
-        readonly rxLevelEstimate: OPTIONAL<V59String>,
+        readonly rxLevelEstimate?: OPTIONAL<V59String>,
         /**
          * @summary Extensions that are not recognized.
          * @public

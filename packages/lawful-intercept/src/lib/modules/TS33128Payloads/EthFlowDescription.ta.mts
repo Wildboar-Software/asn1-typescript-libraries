@@ -103,8 +103,8 @@ class EthFlowDescription {
         fDir: OPTIONAL<FDir>,
         sourceMacAddress: OPTIONAL<MACAddress>,
         vlanTags: VLANTag[],
-        srcMacAddrEnd: OPTIONAL<MACAddress>,
-        destMacAddrEnd: OPTIONAL<MACAddress>,
+        srcMacAddrEnd?: OPTIONAL<MACAddress>,
+        destMacAddrEnd?: OPTIONAL<MACAddress>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.destMacAddress = destMacAddress;

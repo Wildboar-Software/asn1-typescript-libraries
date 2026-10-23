@@ -113,14 +113,14 @@ class EventReportBCSMArg {
 
     constructor (
         eventTypeBCSM: EventTypeBCSM,
-        bcsmEventCorrelationID: OPTIONAL<CorrelationID>,
-        eventSpecificInformationBCSM: OPTIONAL<EventSpecificInformationBCSM>,
-        legID: OPTIONAL<LegID>,
-        miscCallInfo: OPTIONAL<MiscCallInfo>,
-        extensions: OPTIONAL<Extensions>,
-        componentType: OPTIONAL<ComponentType>,
-        component: OPTIONAL<Component>,
-        componentCorrelationID: OPTIONAL<ComponentCorrelationID>,
+        bcsmEventCorrelationID?: OPTIONAL<CorrelationID>,
+        eventSpecificInformationBCSM?: OPTIONAL<EventSpecificInformationBCSM>,
+        legID?: OPTIONAL<LegID>,
+        miscCallInfo?: OPTIONAL<MiscCallInfo>,
+        extensions?: OPTIONAL<Extensions>,
+        componentType?: OPTIONAL<ComponentType>,
+        component?: OPTIONAL<Component>,
+        componentCorrelationID?: OPTIONAL<ComponentCorrelationID>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.eventTypeBCSM = eventTypeBCSM;

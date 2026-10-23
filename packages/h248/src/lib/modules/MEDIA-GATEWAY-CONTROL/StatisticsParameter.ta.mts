@@ -56,7 +56,7 @@ class StatisticsParameter {
          * @public
          * @readonly
          */
-        readonly statValue: OPTIONAL<Value>
+        readonly statValue?: OPTIONAL<Value>
     ) {}
 
     /**

@@ -95,7 +95,7 @@ class GetEventActionAttributes_Response {
          * @public
          * @readonly
          */
-        readonly cs_extension: OPTIONAL<Request_Detail>,
+        readonly cs_extension?: OPTIONAL<Request_Detail>,
         /**
          * @summary `accessControlList`.
          * @description
@@ -109,7 +109,7 @@ class GetEventActionAttributes_Response {
          * @public
          * @readonly
          */
-        readonly accessControlList: OPTIONAL<Identifier>
+        readonly accessControlList?: OPTIONAL<Identifier>
     ) {}
 
     /**

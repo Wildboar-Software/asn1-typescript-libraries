@@ -112,7 +112,7 @@ class MidCallArg {
         callingPartySubaddress: OPTIONAL<CallingPartySubaddress>,
         featureRequestIndicator: OPTIONAL<FeatureRequestIndicator>,
         extensions: ExtensionField[],
-        carrier: OPTIONAL<Carrier>,
+        carrier?: OPTIONAL<Carrier>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.dpSpecificCommonParameters = dpSpecificCommonParameters;

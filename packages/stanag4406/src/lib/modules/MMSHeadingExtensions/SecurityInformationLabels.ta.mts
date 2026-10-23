@@ -80,8 +80,8 @@ class SecurityInformationLabels {
 
     constructor (
         content_security_label: SecurityLabel,
-        heading_security_label: OPTIONAL<SecurityLabel>,
-        body_part_security_labels: OPTIONAL<BodyPartSecurityLabel[]>
+        heading_security_label?: OPTIONAL<SecurityLabel>,
+        body_part_security_labels?: OPTIONAL<BodyPartSecurityLabel[]>
     ) {
         this.content_security_label = content_security_label;
         this.heading_security_label = heading_security_label;

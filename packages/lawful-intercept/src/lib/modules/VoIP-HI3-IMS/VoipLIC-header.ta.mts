@@ -215,11 +215,11 @@ class VoipLIC_header {
         timeStamp: OPTIONAL<TimeStamp>,
         sequence_number: INTEGER,
         t_PDU_direction: TPDU_direction,
-        national_HI3_ASN1parameters: OPTIONAL<National_HI3_ASN1parameters>,
-        ice_type: OPTIONAL<ICE_type>,
-        payload_description: OPTIONAL<Payload_description>,
-        networkIdentifier: OPTIONAL<Network_Identifier>,
-        pTCSessionInfo: OPTIONAL<UTF8String>,
+        national_HI3_ASN1parameters?: OPTIONAL<National_HI3_ASN1parameters>,
+        ice_type?: OPTIONAL<ICE_type>,
+        payload_description?: OPTIONAL<Payload_description>,
+        networkIdentifier?: OPTIONAL<Network_Identifier>,
+        pTCSessionInfo?: OPTIONAL<UTF8String>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.hi3voipDomainId = hi3voipDomainId;

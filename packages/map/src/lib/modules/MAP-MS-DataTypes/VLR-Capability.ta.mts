@@ -62,13 +62,13 @@ class VLR_Capability {
          * @public
          * @readonly
          */
-        readonly supportedCamelPhases: OPTIONAL<SupportedCamelPhases>,
+        readonly supportedCamelPhases?: OPTIONAL<SupportedCamelPhases>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `solsaSupportIndicator`.
          * @description
@@ -81,7 +81,7 @@ class VLR_Capability {
          * @public
          * @readonly
          */
-        readonly solsaSupportIndicator: OPTIONAL<NULL>,
+        readonly solsaSupportIndicator?: OPTIONAL<NULL>,
         /**
          * @summary `istSupportIndicator`.
          * @description
@@ -94,7 +94,7 @@ class VLR_Capability {
          * @public
          * @readonly
          */
-        readonly istSupportIndicator: OPTIONAL<IST_SupportIndicator>,
+        readonly istSupportIndicator?: OPTIONAL<IST_SupportIndicator>,
         /**
          * @summary `superChargerSupportedInServingNetworkEntity`.
          * @description
@@ -108,7 +108,7 @@ class VLR_Capability {
          * @public
          * @readonly
          */
-        readonly superChargerSupportedInServingNetworkEntity: OPTIONAL<SuperChargerInfo>,
+        readonly superChargerSupportedInServingNetworkEntity?: OPTIONAL<SuperChargerInfo>,
         /**
          * @summary `longFTN_Supported`.
          * @description
@@ -120,7 +120,7 @@ class VLR_Capability {
          * @public
          * @readonly
          */
-        readonly longFTN_Supported: OPTIONAL<NULL>,
+        readonly longFTN_Supported?: OPTIONAL<NULL>,
         /**
          * @summary `supportedLCS_CapabilitySets`.
          * @description
@@ -134,7 +134,7 @@ class VLR_Capability {
          * @public
          * @readonly
          */
-        readonly supportedLCS_CapabilitySets: OPTIONAL<SupportedLCS_CapabilitySets>,
+        readonly supportedLCS_CapabilitySets?: OPTIONAL<SupportedLCS_CapabilitySets>,
         /**
          * @summary `offeredCamel4CSIs`.
          * @description
@@ -146,7 +146,7 @@ class VLR_Capability {
          * @public
          * @readonly
          */
-        readonly offeredCamel4CSIs: OPTIONAL<OfferedCamel4CSIs>,
+        readonly offeredCamel4CSIs?: OPTIONAL<OfferedCamel4CSIs>,
         /**
          * @summary `supportedRAT_TypesIndicator`.
          * @description
@@ -158,7 +158,7 @@ class VLR_Capability {
          * @public
          * @readonly
          */
-        readonly supportedRAT_TypesIndicator: OPTIONAL<SupportedRAT_Types>,
+        readonly supportedRAT_TypesIndicator?: OPTIONAL<SupportedRAT_Types>,
         /**
          * @summary `longGroupID_Supported`.
          * @description
@@ -170,7 +170,7 @@ class VLR_Capability {
          * @public
          * @readonly
          */
-        readonly longGroupID_Supported: OPTIONAL<NULL>,
+        readonly longGroupID_Supported?: OPTIONAL<NULL>,
         /**
          * @summary `mtRoamingForwardingSupported`.
          * @description
@@ -182,7 +182,7 @@ class VLR_Capability {
          * @public
          * @readonly
          */
-        readonly mtRoamingForwardingSupported: OPTIONAL<NULL>,
+        readonly mtRoamingForwardingSupported?: OPTIONAL<NULL>,
         /**
          * @summary `msisdn_lessOperation_Supported`.
          * @description
@@ -194,7 +194,7 @@ class VLR_Capability {
          * @public
          * @readonly
          */
-        readonly msisdn_lessOperation_Supported: OPTIONAL<NULL>,
+        readonly msisdn_lessOperation_Supported?: OPTIONAL<NULL>,
         /**
          * @summary `reset_ids_Supported`.
          * @description
@@ -206,7 +206,7 @@ class VLR_Capability {
          * @public
          * @readonly
          */
-        readonly reset_ids_Supported: OPTIONAL<NULL>,
+        readonly reset_ids_Supported?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @public

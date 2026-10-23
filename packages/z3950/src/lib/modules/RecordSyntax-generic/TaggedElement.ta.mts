@@ -115,8 +115,8 @@ class TaggedElement {
         tagValue: StringOrNumeric,
         tagOccurrence: OPTIONAL<INTEGER>,
         content: ElementData,
-        metaData: OPTIONAL<ElementMetaData>,
-        appliedVariant: OPTIONAL<Variant>
+        metaData?: OPTIONAL<ElementMetaData>,
+        appliedVariant?: OPTIONAL<Variant>
     ) {
         this.tagType = tagType;
         this.tagValue = tagValue;

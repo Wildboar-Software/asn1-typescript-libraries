@@ -146,10 +146,10 @@ class CellInformation {
 
     constructor (
         rANCGI: RANCGI,
-        cellSiteinformation: OPTIONAL<CellSiteInformation>,
-        timeOfLocation: OPTIONAL<Timestamp>,
-        cellRadioRelatedInformation: OPTIONAL<CellRadioRelatedInformation>,
-        band: OPTIONAL<RFBand>,
+        cellSiteinformation?: OPTIONAL<CellSiteInformation>,
+        timeOfLocation?: OPTIONAL<Timestamp>,
+        cellRadioRelatedInformation?: OPTIONAL<CellRadioRelatedInformation>,
+        band?: OPTIONAL<RFBand>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.rANCGI = rANCGI;

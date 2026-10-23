@@ -72,7 +72,7 @@ class FileAttributes {
          * @public
          * @readonly
          */
-        readonly lastModified: OPTIONAL<GeneralizedTime>
+        readonly lastModified?: OPTIONAL<GeneralizedTime>
     ) {}
 
     /**

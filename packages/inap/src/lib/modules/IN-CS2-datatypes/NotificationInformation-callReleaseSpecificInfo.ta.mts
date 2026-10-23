@@ -50,8 +50,8 @@ class NotificationInformation_callReleaseSpecificInfo {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        releaseCause: OPTIONAL<Cause>,
-        timeStamp: OPTIONAL<DateAndTime>,
+        releaseCause?: OPTIONAL<Cause>,
+        timeStamp?: OPTIONAL<DateAndTime>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.releaseCause = releaseCause;

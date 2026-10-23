@@ -58,7 +58,7 @@ class ProfileRollbackResponse {
          * @public
          * @readonly
          */
-        readonly eUICCPackageResult: OPTIONAL<EuiccPackageResult>
+        readonly eUICCPackageResult?: OPTIONAL<EuiccPackageResult>
     ) {}
 
     /**

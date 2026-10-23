@@ -74,7 +74,7 @@ class RfChargingDataRequest {
 
     constructor (
         rfChargingData: DiameterChargingData,
-        rfChargingEvent: OPTIONAL<RfChargingEvent>,
+        rfChargingEvent?: OPTIONAL<RfChargingEvent>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.rfChargingData = rfChargingData;

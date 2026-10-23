@@ -62,7 +62,7 @@ class MonitorRouteReportArg {
         routeCounters: RouteCountersValue,
         correlationID: CorrelationID,
         _unrecognizedExtensionsList: _Element[] = [],
-        extensions: OPTIONAL<Extensions>
+        extensions?: OPTIONAL<Extensions>
     ) {
         this.routeCounters = routeCounters;
         this.correlationID = correlationID;

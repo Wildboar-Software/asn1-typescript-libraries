@@ -187,11 +187,11 @@ class MMEUnsuccessfulProcedure {
     constructor (
         failedProcedureType: MMEFailedProcedureType,
         failureCause: MMEFailureCause,
-        iMSI: OPTIONAL<IMSI>,
-        iMEI: OPTIONAL<IMEI>,
-        mSISDN: OPTIONAL<MSISDN>,
-        gUTI: OPTIONAL<GUTI>,
-        location: OPTIONAL<Location>,
+        iMSI?: OPTIONAL<IMSI>,
+        iMEI?: OPTIONAL<IMEI>,
+        mSISDN?: OPTIONAL<MSISDN>,
+        gUTI?: OPTIONAL<GUTI>,
+        location?: OPTIONAL<Location>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.failedProcedureType = failedProcedureType;

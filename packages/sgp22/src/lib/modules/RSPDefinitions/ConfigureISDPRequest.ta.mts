@@ -42,7 +42,7 @@ class ConfigureISDPRequest {
          * @public
          * @readonly
          */
-        readonly dpProprietaryData: OPTIONAL<DpProprietaryData>
+        readonly dpProprietaryData?: OPTIONAL<DpProprietaryData>
     ) {}
 
     /**

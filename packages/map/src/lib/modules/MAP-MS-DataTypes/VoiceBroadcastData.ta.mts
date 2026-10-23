@@ -64,13 +64,13 @@ class VoiceBroadcastData {
          * @public
          * @readonly
          */
-        readonly broadcastInitEntitlement: OPTIONAL<NULL>,
+        readonly broadcastInitEntitlement?: OPTIONAL<NULL>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `longGroupId`.
          * @description
@@ -84,7 +84,7 @@ class VoiceBroadcastData {
          * @public
          * @readonly
          */
-        readonly longGroupId: OPTIONAL<Long_GroupId>,
+        readonly longGroupId?: OPTIONAL<Long_GroupId>,
         /**
          * @summary Extensions that are not recognized.
          * @public

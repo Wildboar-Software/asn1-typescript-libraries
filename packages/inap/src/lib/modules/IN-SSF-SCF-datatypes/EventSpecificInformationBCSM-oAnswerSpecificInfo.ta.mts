@@ -41,7 +41,7 @@ class EventSpecificInformationBCSM_oAnswerSpecificInfo {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        backwardGVNS: OPTIONAL<BackwardGVNS>,
+        backwardGVNS?: OPTIONAL<BackwardGVNS>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.backwardGVNS = backwardGVNS;

@@ -81,9 +81,9 @@ class RecurrenceInfo {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        recurrenceStartDateAndTime: OPTIONAL<TimeStamp>,
-        recurrenceEndDateAndTime: OPTIONAL<TimeStamp>,
-        recurrencePattern: OPTIONAL<UTF8String>,
+        recurrenceStartDateAndTime?: OPTIONAL<TimeStamp>,
+        recurrenceEndDateAndTime?: OPTIONAL<TimeStamp>,
+        recurrencePattern?: OPTIONAL<UTF8String>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.recurrenceStartDateAndTime = recurrenceStartDateAndTime;

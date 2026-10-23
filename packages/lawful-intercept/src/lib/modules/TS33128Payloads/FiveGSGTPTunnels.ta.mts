@@ -80,9 +80,9 @@ class FiveGSGTPTunnels {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        uLNGUUPTunnelInformation: OPTIONAL<FTEID>,
-        additionalULNGUUPTunnelInformation: OPTIONAL<FTEIDList>,
-        dLRANTunnelInformation: OPTIONAL<DLRANTunnelInformation>,
+        uLNGUUPTunnelInformation?: OPTIONAL<FTEID>,
+        additionalULNGUUPTunnelInformation?: OPTIONAL<FTEIDList>,
+        dLRANTunnelInformation?: OPTIONAL<DLRANTunnelInformation>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.uLNGUUPTunnelInformation = uLNGUUPTunnelInformation;

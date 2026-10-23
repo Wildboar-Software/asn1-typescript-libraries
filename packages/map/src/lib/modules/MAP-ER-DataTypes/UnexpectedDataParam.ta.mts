@@ -37,7 +37,7 @@ class UnexpectedDataParam {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `unexpectedSubscriber`.
          * @description
@@ -51,7 +51,7 @@ class UnexpectedDataParam {
          * @public
          * @readonly
          */
-        readonly unexpectedSubscriber: OPTIONAL<NULL>,
+        readonly unexpectedSubscriber?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @public

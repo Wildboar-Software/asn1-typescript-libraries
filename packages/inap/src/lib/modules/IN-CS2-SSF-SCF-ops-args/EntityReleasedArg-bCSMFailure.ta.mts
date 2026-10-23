@@ -53,8 +53,8 @@ class EntityReleasedArg_bCSMFailure {
 
     constructor (
         legID: LegID,
-        reason: OPTIONAL<Reason>,
-        cause: OPTIONAL<Cause>
+        reason?: OPTIONAL<Reason>,
+        cause?: OPTIONAL<Cause>
     ) {
         this.legID = legID;
         this.reason = reason;

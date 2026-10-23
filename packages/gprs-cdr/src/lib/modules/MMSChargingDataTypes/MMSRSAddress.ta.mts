@@ -60,8 +60,8 @@ class MMSRSAddress {
     readonly iPAddress: OPTIONAL<IPAddress>;
 
     constructor (
-        domainName: OPTIONAL<OCTET_STRING>,
-        iPAddress: OPTIONAL<IPAddress>
+        domainName?: OPTIONAL<OCTET_STRING>,
+        iPAddress?: OPTIONAL<IPAddress>
     ) {
         this.domainName = domainName;
         this.iPAddress = iPAddress;

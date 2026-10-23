@@ -65,7 +65,7 @@ class CDRNotificationArgument {
          * @public
          * @readonly
          */
-        readonly cdrReason: OPTIONAL<CDRReason>,
+        readonly cdrReason?: OPTIONAL<CDRReason>,
         /**
          * @summary `extensions`.
          * @description
@@ -76,7 +76,7 @@ class CDRNotificationArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

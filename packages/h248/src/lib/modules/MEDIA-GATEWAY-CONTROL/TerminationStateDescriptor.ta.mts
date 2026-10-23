@@ -61,7 +61,7 @@ class TerminationStateDescriptor {
          * @public
          * @readonly
          */
-        readonly eventBufferControl: OPTIONAL<EventBufferControl>,
+        readonly eventBufferControl?: OPTIONAL<EventBufferControl>,
         /**
          * @summary `serviceState`.
          * @description
@@ -72,7 +72,7 @@ class TerminationStateDescriptor {
          * @public
          * @readonly
          */
-        readonly serviceState: OPTIONAL<ServiceState>,
+        readonly serviceState?: OPTIONAL<ServiceState>,
         /**
          * @summary Extensions that are not recognized.
          * @description

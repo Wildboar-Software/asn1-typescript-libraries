@@ -207,8 +207,8 @@ class STIRSHAKENSignatureValidation {
         rCDTerminalDisplayInfo: OPTIONAL<RCDDisplayInfo>,
         eCNAMTerminalDisplayInfo: OPTIONAL<ECNAMDisplayInfo>,
         sHAKENValidationResult: SHAKENValidationResult,
-        sHAKENFailureStatusCode: OPTIONAL<SHAKENFailureStatusCode>,
-        encapsulatedSIPMessage: OPTIONAL<SIPMessage>,
+        sHAKENFailureStatusCode?: OPTIONAL<SHAKENFailureStatusCode>,
+        encapsulatedSIPMessage?: OPTIONAL<SIPMessage>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.pASSporTs = pASSporTs;

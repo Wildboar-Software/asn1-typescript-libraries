@@ -74,7 +74,7 @@ class PlayMessageArgument {
          * @public
          * @readonly
          */
-        readonly duration: OPTIONAL<INTEGER>,
+        readonly duration?: OPTIONAL<INTEGER>,
         /**
          * @summary `termination`.
          * @description
@@ -84,7 +84,7 @@ class PlayMessageArgument {
          * @public
          * @readonly
          */
-        readonly termination: OPTIONAL<TerminatingConditions>,
+        readonly termination?: OPTIONAL<TerminatingConditions>,
         /**
          * @summary `extensions`.
          * @description
@@ -95,7 +95,7 @@ class PlayMessageArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

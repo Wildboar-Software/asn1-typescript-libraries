@@ -67,7 +67,7 @@ class SendBroadcastDataArgument {
          * @public
          * @readonly
          */
-        readonly dataPathType: OPTIONAL<DataPathType>,
+        readonly dataPathType?: OPTIONAL<DataPathType>,
         /**
          * @summary `displayAttributes`.
          * @description
@@ -78,7 +78,7 @@ class SendBroadcastDataArgument {
          * @public
          * @readonly
          */
-        readonly displayAttributes: OPTIONAL<DisplayAttributeList>,
+        readonly displayAttributes?: OPTIONAL<DisplayAttributeList>,
         /**
          * @summary `extensions`.
          * @description
@@ -89,7 +89,7 @@ class SendBroadcastDataArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

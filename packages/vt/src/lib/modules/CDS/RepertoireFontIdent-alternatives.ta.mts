@@ -46,7 +46,7 @@ class RepertoireFontIdent_alternatives {
          * @public
          * @readonly
          */
-        readonly assignment: OPTIONAL<NULL>,
+        readonly assignment?: OPTIONAL<NULL>,
         /**
          * @summary `fontCapability`.
          * @description
@@ -55,7 +55,7 @@ class RepertoireFontIdent_alternatives {
          * @public
          * @readonly
          */
-        readonly fontCapability: OPTIONAL<NULL>,
+        readonly fontCapability?: OPTIONAL<NULL>,
         /**
          * @summary `fontNames`.
          * @description
@@ -64,7 +64,7 @@ class RepertoireFontIdent_alternatives {
          * @public
          * @readonly
          */
-        readonly fontNames: OPTIONAL<AssignmentIdent[]>
+        readonly fontNames?: OPTIONAL<AssignmentIdent[]>
     ) {}
 
     /**

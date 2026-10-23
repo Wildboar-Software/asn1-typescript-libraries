@@ -58,7 +58,7 @@ class ISDRProprietaryApplicationTemplate {
          * @public
          * @readonly
          */
-        readonly lpaeSupport: OPTIONAL<ISDRProprietaryApplicationTemplate_lpaeSupport>
+        readonly lpaeSupport?: OPTIONAL<ISDRProprietaryApplicationTemplate_lpaeSupport>
     ) {}
 
     /**

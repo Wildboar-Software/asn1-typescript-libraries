@@ -61,7 +61,7 @@ class TAItem {
     constructor (
         tAC: TAC,
         broadcastPLMNList: BroadcastPLMNItem[],
-        rATinformation: OPTIONAL<RATInformation>,
+        rATinformation?: OPTIONAL<RATInformation>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.tAC = tAC;

@@ -85,7 +85,7 @@ class EstablishTemporaryConnectionArg {
          * @public
          * @readonly
          */
-        readonly correlationID: OPTIONAL<CorrelationID>,
+        readonly correlationID?: OPTIONAL<CorrelationID>,
         /**
          * @summary `scfID`.
          * @description
@@ -100,13 +100,13 @@ class EstablishTemporaryConnectionArg {
          * @public
          * @readonly
          */
-        readonly scfID: OPTIONAL<ScfID>,
+        readonly scfID?: OPTIONAL<ScfID>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<Extensions>,
+        readonly extensions?: OPTIONAL<Extensions>,
         /**
          * @summary `carrier`.
          * @description
@@ -118,7 +118,7 @@ class EstablishTemporaryConnectionArg {
          * @public
          * @readonly
          */
-        readonly carrier: OPTIONAL<Carrier>,
+        readonly carrier?: OPTIONAL<Carrier>,
         /**
          * @summary `serviceInteractionIndicatorsTwo`.
          * @description
@@ -129,7 +129,7 @@ class EstablishTemporaryConnectionArg {
          * @public
          * @readonly
          */
-        readonly serviceInteractionIndicatorsTwo: OPTIONAL<ServiceInteractionIndicatorsTwo>,
+        readonly serviceInteractionIndicatorsTwo?: OPTIONAL<ServiceInteractionIndicatorsTwo>,
         /**
          * @summary `callSegmentID`.
          * @description
@@ -140,7 +140,7 @@ class EstablishTemporaryConnectionArg {
          * @public
          * @readonly
          */
-        readonly callSegmentID: OPTIONAL<CallSegmentID>,
+        readonly callSegmentID?: OPTIONAL<CallSegmentID>,
         /**
          * @summary `naOliInfo`.
          * @description
@@ -151,7 +151,7 @@ class EstablishTemporaryConnectionArg {
          * @public
          * @readonly
          */
-        readonly naOliInfo: OPTIONAL<NAOliInfo>,
+        readonly naOliInfo?: OPTIONAL<NAOliInfo>,
         /**
          * @summary `chargeNumber`.
          * @description
@@ -163,7 +163,7 @@ class EstablishTemporaryConnectionArg {
          * @public
          * @readonly
          */
-        readonly chargeNumber: OPTIONAL<ChargeNumber>,
+        readonly chargeNumber?: OPTIONAL<ChargeNumber>,
         /**
          * @summary `originalCalledPartyID`.
          * @description
@@ -174,7 +174,7 @@ class EstablishTemporaryConnectionArg {
          * @public
          * @readonly
          */
-        readonly originalCalledPartyID: OPTIONAL<OriginalCalledPartyID>,
+        readonly originalCalledPartyID?: OPTIONAL<OriginalCalledPartyID>,
         /**
          * @summary `callingPartyNumber`.
          * @description
@@ -185,7 +185,7 @@ class EstablishTemporaryConnectionArg {
          * @public
          * @readonly
          */
-        readonly callingPartyNumber: OPTIONAL<CallingPartyNumber>,
+        readonly callingPartyNumber?: OPTIONAL<CallingPartyNumber>,
         /**
          * @summary Extensions that are not recognized.
          * @public

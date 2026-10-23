@@ -197,12 +197,12 @@ class ConnectArg {
         scfID: OPTIONAL<ScfID>,
         travellingClassMark: OPTIONAL<TravellingClassMark>,
         extensions: ExtensionField[],
-        carrier: OPTIONAL<Carrier>,
-        serviceInteractionIndicators: OPTIONAL<ServiceInteractionIndicators>,
-        callingPartyNumber: OPTIONAL<CallingPartyNumber>,
-        callingPartysCategory: OPTIONAL<CallingPartysCategory>,
-        redirectingPartyID: OPTIONAL<RedirectingPartyID>,
-        redirectionInformation: OPTIONAL<RedirectionInformation>,
+        carrier?: OPTIONAL<Carrier>,
+        serviceInteractionIndicators?: OPTIONAL<ServiceInteractionIndicators>,
+        callingPartyNumber?: OPTIONAL<CallingPartyNumber>,
+        callingPartysCategory?: OPTIONAL<CallingPartysCategory>,
+        redirectingPartyID?: OPTIONAL<RedirectingPartyID>,
+        redirectionInformation?: OPTIONAL<RedirectionInformation>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.destinationRoutingAddress = destinationRoutingAddress;

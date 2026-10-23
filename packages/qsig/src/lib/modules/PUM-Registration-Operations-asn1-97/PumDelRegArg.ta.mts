@@ -106,7 +106,7 @@ class PumDelRegArg {
         basicService: BasicService,
         hostingAddr: PartyNumber,
         serviceOption: ServiceOption,
-        argExtension: OPTIONAL<PumrExtension>
+        argExtension?: OPTIONAL<PumrExtension>
     ) {
         this.pumUserId = pumUserId;
         this.basicService = basicService;

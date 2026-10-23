@@ -216,13 +216,13 @@ class PresentRequest {
         resultSetId: ResultSetId,
         resultSetStartPoint: INTEGER,
         numberOfRecordsRequested: INTEGER,
-        additionalRanges: OPTIONAL<Range[]>,
-        recordComposition: OPTIONAL<PresentRequest_recordComposition>,
-        preferredRecordSyntax: OPTIONAL<OBJECT_IDENTIFIER>,
-        maxSegmentCount: OPTIONAL<INTEGER>,
-        maxRecordSize: OPTIONAL<INTEGER>,
-        maxSegmentSize: OPTIONAL<INTEGER>,
-        otherInfo: OPTIONAL<OtherInformation>
+        additionalRanges?: OPTIONAL<Range[]>,
+        recordComposition?: OPTIONAL<PresentRequest_recordComposition>,
+        preferredRecordSyntax?: OPTIONAL<OBJECT_IDENTIFIER>,
+        maxSegmentCount?: OPTIONAL<INTEGER>,
+        maxRecordSize?: OPTIONAL<INTEGER>,
+        maxSegmentSize?: OPTIONAL<INTEGER>,
+        otherInfo?: OPTIONAL<OtherInformation>
     ) {
         this.referenceId = referenceId;
         this.resultSetId = resultSetId;

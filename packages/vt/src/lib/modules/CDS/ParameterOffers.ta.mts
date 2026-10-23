@@ -74,7 +74,7 @@ class ParameterOffers {
          * @public
          * @readonly
          */
-        readonly dimensionOffer: OPTIONAL<ParameterOffers_dimensionOffer>,
+        readonly dimensionOffer?: OPTIONAL<ParameterOffers_dimensionOffer>,
         /**
          * @summary `xParam`.
          * @description
@@ -83,7 +83,7 @@ class ParameterOffers {
          * @public
          * @readonly
          */
-        readonly xParam: OPTIONAL<DimensionParamOffer>,
+        readonly xParam?: OPTIONAL<DimensionParamOffer>,
         /**
          * @summary `yParam`.
          * @description
@@ -92,7 +92,7 @@ class ParameterOffers {
          * @public
          * @readonly
          */
-        readonly yParam: OPTIONAL<DimensionParamOffer>,
+        readonly yParam?: OPTIONAL<DimensionParamOffer>,
         /**
          * @summary `zParam`.
          * @description
@@ -101,7 +101,7 @@ class ParameterOffers {
          * @public
          * @readonly
          */
-        readonly zParam: OPTIONAL<DimensionParamOffer>,
+        readonly zParam?: OPTIONAL<DimensionParamOffer>,
         /**
          * @summary `erasure`.
          * @description
@@ -111,7 +111,7 @@ class ParameterOffers {
          * @public
          * @readonly
          */
-        readonly erasure: OPTIONAL<ParameterOffers_erasure>,
+        readonly erasure?: OPTIONAL<ParameterOffers_erasure>,
         /**
          * @summary `repertoire`.
          * @description
@@ -121,7 +121,7 @@ class ParameterOffers {
          * @public
          * @readonly
          */
-        readonly repertoire: OPTIONAL<CompoundRepertoireOffer>,
+        readonly repertoire?: OPTIONAL<CompoundRepertoireOffer>,
         /**
          * @summary `emphasis`.
          * @description
@@ -130,7 +130,7 @@ class ParameterOffers {
          * @public
          * @readonly
          */
-        readonly emphasis: OPTIONAL<CompoundEmphasisOffer>,
+        readonly emphasis?: OPTIONAL<CompoundEmphasisOffer>,
         /**
          * @summary `foreground`.
          * @description
@@ -139,7 +139,7 @@ class ParameterOffers {
          * @public
          * @readonly
          */
-        readonly foreground: OPTIONAL<CompoundColourOffer>,
+        readonly foreground?: OPTIONAL<CompoundColourOffer>,
         /**
          * @summary `background`.
          * @description
@@ -148,7 +148,7 @@ class ParameterOffers {
          * @public
          * @readonly
          */
-        readonly background: OPTIONAL<CompoundColourOffer>,
+        readonly background?: OPTIONAL<CompoundColourOffer>,
         /**
          * @summary `access`.
          * @description
@@ -159,7 +159,7 @@ class ParameterOffers {
          * @public
          * @readonly
          */
-        readonly access: OPTIONAL<ParameterOffers_access>,
+        readonly access?: OPTIONAL<ParameterOffers_access>,
         /**
          * @summary `blockParams`.
          * @description
@@ -168,7 +168,7 @@ class ParameterOffers {
          * @public
          * @readonly
          */
-        readonly blockParams: OPTIONAL<BlockParamOffer>,
+        readonly blockParams?: OPTIONAL<BlockParamOffer>,
         /**
          * @summary `fieldParams`.
          * @description
@@ -177,7 +177,7 @@ class ParameterOffers {
          * @public
          * @readonly
          */
-        readonly fieldParams: OPTIONAL<FieldParamOffer>,
+        readonly fieldParams?: OPTIONAL<FieldParamOffer>,
         /**
          * @summary `rippleCapability`.
          * @description
@@ -187,7 +187,7 @@ class ParameterOffers {
          * @public
          * @readonly
          */
-        readonly rippleCapability: OPTIONAL<ParameterOffers_rippleCapability>
+        readonly rippleCapability?: OPTIONAL<ParameterOffers_rippleCapability>
     ) {}
 
     /**

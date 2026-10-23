@@ -41,7 +41,7 @@ class EventSpecificInformationBCSM_oCalledPartyBusySpecificInfo {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        busyCause: OPTIONAL<Cause>,
+        busyCause?: OPTIONAL<Cause>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.busyCause = busyCause;

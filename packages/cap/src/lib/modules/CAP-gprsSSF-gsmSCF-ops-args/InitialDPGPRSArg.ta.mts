@@ -140,7 +140,7 @@ class InitialDPGPRSArg {
          * @public
          * @readonly
          */
-        readonly gPRSMSClass: OPTIONAL<GPRSMSClass>,
+        readonly gPRSMSClass?: OPTIONAL<GPRSMSClass>,
         /**
          * @summary `endUserAddress`.
          * @description
@@ -151,7 +151,7 @@ class InitialDPGPRSArg {
          * @public
          * @readonly
          */
-        readonly endUserAddress: OPTIONAL<EndUserAddress>,
+        readonly endUserAddress?: OPTIONAL<EndUserAddress>,
         /**
          * @summary `qualityOfService`.
          * @description
@@ -165,7 +165,7 @@ class InitialDPGPRSArg {
          * @public
          * @readonly
          */
-        readonly qualityOfService: OPTIONAL<QualityOfService>,
+        readonly qualityOfService?: OPTIONAL<QualityOfService>,
         /**
          * @summary `accessPointName`.
          * @description
@@ -176,7 +176,7 @@ class InitialDPGPRSArg {
          * @public
          * @readonly
          */
-        readonly accessPointName: OPTIONAL<AccessPointName>,
+        readonly accessPointName?: OPTIONAL<AccessPointName>,
         /**
          * @summary `routeingAreaIdentity`.
          * @description
@@ -188,7 +188,7 @@ class InitialDPGPRSArg {
          * @public
          * @readonly
          */
-        readonly routeingAreaIdentity: OPTIONAL<RAIdentity>,
+        readonly routeingAreaIdentity?: OPTIONAL<RAIdentity>,
         /**
          * @summary `chargingID`.
          * @description
@@ -200,7 +200,7 @@ class InitialDPGPRSArg {
          * @public
          * @readonly
          */
-        readonly chargingID: OPTIONAL<GPRSChargingID>,
+        readonly chargingID?: OPTIONAL<GPRSChargingID>,
         /**
          * @summary `sGSNCapabilities`.
          * @description
@@ -211,7 +211,7 @@ class InitialDPGPRSArg {
          * @public
          * @readonly
          */
-        readonly sGSNCapabilities: OPTIONAL<SGSNCapabilities>,
+        readonly sGSNCapabilities?: OPTIONAL<SGSNCapabilities>,
         /**
          * @summary `locationInformationGPRS`.
          * @description
@@ -223,7 +223,7 @@ class InitialDPGPRSArg {
          * @public
          * @readonly
          */
-        readonly locationInformationGPRS: OPTIONAL<LocationInformationGPRS>,
+        readonly locationInformationGPRS?: OPTIONAL<LocationInformationGPRS>,
         /**
          * @summary `pDPInitiationType`.
          * @description
@@ -235,13 +235,13 @@ class InitialDPGPRSArg {
          * @public
          * @readonly
          */
-        readonly pDPInitiationType: OPTIONAL<PDPInitiationType>,
+        readonly pDPInitiationType?: OPTIONAL<PDPInitiationType>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<Extensions>,
+        readonly extensions?: OPTIONAL<Extensions>,
         /**
          * @summary `gGSNAddress`.
          * @description
@@ -253,7 +253,7 @@ class InitialDPGPRSArg {
          * @public
          * @readonly
          */
-        readonly gGSNAddress: OPTIONAL<GSN_Address>,
+        readonly gGSNAddress?: OPTIONAL<GSN_Address>,
         /**
          * @summary `secondaryPDP_context`.
          * @description
@@ -264,7 +264,7 @@ class InitialDPGPRSArg {
          * @public
          * @readonly
          */
-        readonly secondaryPDP_context: OPTIONAL<NULL>,
+        readonly secondaryPDP_context?: OPTIONAL<NULL>,
         /**
          * @summary `iMEI`.
          * @description
@@ -276,7 +276,7 @@ class InitialDPGPRSArg {
          * @public
          * @readonly
          */
-        readonly iMEI: OPTIONAL<IMEI>,
+        readonly iMEI?: OPTIONAL<IMEI>,
         /**
          * @summary Extensions that are not recognized.
          * @public

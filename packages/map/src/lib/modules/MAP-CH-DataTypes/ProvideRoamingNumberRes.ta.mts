@@ -53,7 +53,7 @@ class ProvideRoamingNumberRes {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `releaseResourcesSupported`.
          * @description
@@ -63,7 +63,7 @@ class ProvideRoamingNumberRes {
          * @public
          * @readonly
          */
-        readonly releaseResourcesSupported: OPTIONAL<NULL>,
+        readonly releaseResourcesSupported?: OPTIONAL<NULL>,
         /**
          * @summary `vmsc_Address`.
          * @description
@@ -73,7 +73,7 @@ class ProvideRoamingNumberRes {
          * @public
          * @readonly
          */
-        readonly vmsc_Address: OPTIONAL<ISDN_AddressString>,
+        readonly vmsc_Address?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary Extensions that are not recognized.
          * @public

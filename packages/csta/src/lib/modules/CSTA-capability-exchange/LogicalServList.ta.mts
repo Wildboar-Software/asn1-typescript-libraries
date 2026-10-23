@@ -105,7 +105,7 @@ class LogicalServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly callBackNonCallRel: OPTIONAL<CallBackNonCallRel>,
+        readonly callBackNonCallRel?: OPTIONAL<CallBackNonCallRel>,
         /**
          * @summary `callBackMsgNonCallRel`.
          * @public
@@ -114,7 +114,7 @@ class LogicalServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly callBackMsgNonCallRel: OPTIONAL<CallBackMsgNonCallRel>,
+        readonly callBackMsgNonCallRel?: OPTIONAL<CallBackMsgNonCallRel>,
         /**
          * @summary `cancelCallBack`.
          * @public
@@ -123,7 +123,7 @@ class LogicalServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly cancelCallBack: OPTIONAL<CancelCallBack>,
+        readonly cancelCallBack?: OPTIONAL<CancelCallBack>,
         /**
          * @summary `cancelCallBackMsg`.
          * @public
@@ -132,7 +132,7 @@ class LogicalServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly cancelCallBackMsg: OPTIONAL<CancelCallBackMsg>,
+        readonly cancelCallBackMsg?: OPTIONAL<CancelCallBackMsg>,
         /**
          * @summary `getAgentState`.
          * @public
@@ -141,7 +141,7 @@ class LogicalServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly getAgentState: OPTIONAL<GetAgentState>,
+        readonly getAgentState?: OPTIONAL<GetAgentState>,
         /**
          * @summary `getAutoAnswer`.
          * @public
@@ -150,7 +150,7 @@ class LogicalServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly getAutoAnswer: OPTIONAL<GetAutoAnswer>,
+        readonly getAutoAnswer?: OPTIONAL<GetAutoAnswer>,
         /**
          * @summary `getAutoWorkMode`.
          * @public
@@ -159,7 +159,7 @@ class LogicalServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly getAutoWorkMode: OPTIONAL<GetAutoWorkMode>,
+        readonly getAutoWorkMode?: OPTIONAL<GetAutoWorkMode>,
         /**
          * @summary `getCallerIDStatus`.
          * @public
@@ -168,7 +168,7 @@ class LogicalServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly getCallerIDStatus: OPTIONAL<GetCallerIDStatus>,
+        readonly getCallerIDStatus?: OPTIONAL<GetCallerIDStatus>,
         /**
          * @summary `getCallBack`.
          * @public
@@ -177,7 +177,7 @@ class LogicalServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly getCallBack: OPTIONAL<GetCallBack>,
+        readonly getCallBack?: OPTIONAL<GetCallBack>,
         /**
          * @summary `getDoNotDisturb`.
          * @public
@@ -186,7 +186,7 @@ class LogicalServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly getDoNotDisturb: OPTIONAL<GetDoNotDisturb>,
+        readonly getDoNotDisturb?: OPTIONAL<GetDoNotDisturb>,
         /**
          * @summary `getForwarding`.
          * @public
@@ -195,7 +195,7 @@ class LogicalServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly getForwarding: OPTIONAL<GetForwarding>,
+        readonly getForwarding?: OPTIONAL<GetForwarding>,
         /**
          * @summary `getLastNumberDialed`.
          * @public
@@ -204,7 +204,7 @@ class LogicalServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly getLastNumberDialed: OPTIONAL<GetLastNumberDialed>,
+        readonly getLastNumberDialed?: OPTIONAL<GetLastNumberDialed>,
         /**
          * @summary `getPresenceState`.
          * @public
@@ -213,7 +213,7 @@ class LogicalServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly getPresenceState: OPTIONAL<GetPresenceState>,
+        readonly getPresenceState?: OPTIONAL<GetPresenceState>,
         /**
          * @summary `getRouteingMode`.
          * @public
@@ -222,7 +222,7 @@ class LogicalServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly getRouteingMode: OPTIONAL<GetRouteingMode>,
+        readonly getRouteingMode?: OPTIONAL<GetRouteingMode>,
         /**
          * @summary `setAgentState`.
          * @public
@@ -231,7 +231,7 @@ class LogicalServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly setAgentState: OPTIONAL<SetAgentState>,
+        readonly setAgentState?: OPTIONAL<SetAgentState>,
         /**
          * @summary `setAutoAnswer`.
          * @public
@@ -240,7 +240,7 @@ class LogicalServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly setAutoAnswer: OPTIONAL<SetAutoAnswer>,
+        readonly setAutoAnswer?: OPTIONAL<SetAutoAnswer>,
         /**
          * @summary `setAutoWorkMode`.
          * @public
@@ -249,7 +249,7 @@ class LogicalServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly setAutoWorkMode: OPTIONAL<SetAutoWorkMode>,
+        readonly setAutoWorkMode?: OPTIONAL<SetAutoWorkMode>,
         /**
          * @summary `setCallerIDStatus`.
          * @public
@@ -258,7 +258,7 @@ class LogicalServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly setCallerIDStatus: OPTIONAL<SetCallerIDStatus>,
+        readonly setCallerIDStatus?: OPTIONAL<SetCallerIDStatus>,
         /**
          * @summary `setDoNotDisturb`.
          * @public
@@ -267,7 +267,7 @@ class LogicalServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly setDoNotDisturb: OPTIONAL<SetDoNotDisturb>,
+        readonly setDoNotDisturb?: OPTIONAL<SetDoNotDisturb>,
         /**
          * @summary `setForwarding`.
          * @public
@@ -276,7 +276,7 @@ class LogicalServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly setForwarding: OPTIONAL<SetForwarding>,
+        readonly setForwarding?: OPTIONAL<SetForwarding>,
         /**
          * @summary `setPresenceState`.
          * @public
@@ -285,7 +285,7 @@ class LogicalServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly setPresenceState: OPTIONAL<SetPresenceState>,
+        readonly setPresenceState?: OPTIONAL<SetPresenceState>,
         /**
          * @summary `setRouteingMode`.
          * @public
@@ -294,7 +294,7 @@ class LogicalServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly setRouteingMode: OPTIONAL<SetRouteingMode>
+        readonly setRouteingMode?: OPTIONAL<SetRouteingMode>
     ) {}
 
     /**

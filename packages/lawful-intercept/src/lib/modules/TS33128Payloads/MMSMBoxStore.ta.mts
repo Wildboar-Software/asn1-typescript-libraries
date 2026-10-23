@@ -189,7 +189,7 @@ class MMSMBoxStore {
         flags: OPTIONAL<MMFlags>,
         contentLocationConf: OPTIONAL<UTF8String>,
         storeStatus: MMSStoreStatus,
-        storeStatusText: OPTIONAL<UTF8String>,
+        storeStatusText?: OPTIONAL<UTF8String>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.transactionID = transactionID;

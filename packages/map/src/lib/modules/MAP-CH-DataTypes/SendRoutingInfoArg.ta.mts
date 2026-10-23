@@ -160,7 +160,7 @@ class SendRoutingInfoArg {
          * @public
          * @readonly
          */
-        readonly callReferenceNumber: OPTIONAL<CallReferenceNumber>,
+        readonly callReferenceNumber?: OPTIONAL<CallReferenceNumber>,
         /**
          * @summary `forwardingReason`.
          * @description
@@ -170,7 +170,7 @@ class SendRoutingInfoArg {
          * @public
          * @readonly
          */
-        readonly forwardingReason: OPTIONAL<ForwardingReason>,
+        readonly forwardingReason?: OPTIONAL<ForwardingReason>,
         /**
          * @summary `basicServiceGroup`.
          * @description
@@ -180,7 +180,7 @@ class SendRoutingInfoArg {
          * @public
          * @readonly
          */
-        readonly basicServiceGroup: OPTIONAL<Ext_BasicServiceCode>,
+        readonly basicServiceGroup?: OPTIONAL<Ext_BasicServiceCode>,
         /**
          * @summary `networkSignalInfo`.
          * @description
@@ -191,7 +191,7 @@ class SendRoutingInfoArg {
          * @public
          * @readonly
          */
-        readonly networkSignalInfo: OPTIONAL<ExternalSignalInfo>,
+        readonly networkSignalInfo?: OPTIONAL<ExternalSignalInfo>,
         /**
          * @summary `camelInfo`.
          * @description
@@ -201,7 +201,7 @@ class SendRoutingInfoArg {
          * @public
          * @readonly
          */
-        readonly camelInfo: OPTIONAL<CamelInfo>,
+        readonly camelInfo?: OPTIONAL<CamelInfo>,
         /**
          * @summary `suppressionOfAnnouncement`.
          * @description
@@ -211,7 +211,7 @@ class SendRoutingInfoArg {
          * @public
          * @readonly
          */
-        readonly suppressionOfAnnouncement: OPTIONAL<SuppressionOfAnnouncement>,
+        readonly suppressionOfAnnouncement?: OPTIONAL<SuppressionOfAnnouncement>,
         /**
          * @summary `extensionContainer`.
          * @description
@@ -221,7 +221,7 @@ class SendRoutingInfoArg {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `alertingPattern`.
          * @description
@@ -232,7 +232,7 @@ class SendRoutingInfoArg {
          * @public
          * @readonly
          */
-        readonly alertingPattern: OPTIONAL<AlertingPattern>,
+        readonly alertingPattern?: OPTIONAL<AlertingPattern>,
         /**
          * @summary `ccbs_Call`.
          * @description
@@ -242,7 +242,7 @@ class SendRoutingInfoArg {
          * @public
          * @readonly
          */
-        readonly ccbs_Call: OPTIONAL<NULL>,
+        readonly ccbs_Call?: OPTIONAL<NULL>,
         /**
          * @summary `supportedCCBS_Phase`.
          * @description
@@ -253,7 +253,7 @@ class SendRoutingInfoArg {
          * @public
          * @readonly
          */
-        readonly supportedCCBS_Phase: OPTIONAL<SupportedCCBS_Phase>,
+        readonly supportedCCBS_Phase?: OPTIONAL<SupportedCCBS_Phase>,
         /**
          * @summary `additionalSignalInfo`.
          * @description
@@ -263,7 +263,7 @@ class SendRoutingInfoArg {
          * @public
          * @readonly
          */
-        readonly additionalSignalInfo: OPTIONAL<Ext_ExternalSignalInfo>,
+        readonly additionalSignalInfo?: OPTIONAL<Ext_ExternalSignalInfo>,
         /**
          * @summary `istSupportIndicator`.
          * @description
@@ -273,7 +273,7 @@ class SendRoutingInfoArg {
          * @public
          * @readonly
          */
-        readonly istSupportIndicator: OPTIONAL<IST_SupportIndicator>,
+        readonly istSupportIndicator?: OPTIONAL<IST_SupportIndicator>,
         /**
          * @summary `pre_pagingSupported`.
          * @description
@@ -283,7 +283,7 @@ class SendRoutingInfoArg {
          * @public
          * @readonly
          */
-        readonly pre_pagingSupported: OPTIONAL<NULL>,
+        readonly pre_pagingSupported?: OPTIONAL<NULL>,
         /**
          * @summary `callDiversionTreatmentIndicator`.
          * @description
@@ -295,7 +295,7 @@ class SendRoutingInfoArg {
          * @public
          * @readonly
          */
-        readonly callDiversionTreatmentIndicator: OPTIONAL<CallDiversionTreatmentIndicator>,
+        readonly callDiversionTreatmentIndicator?: OPTIONAL<CallDiversionTreatmentIndicator>,
         /**
          * @summary `longFTN_Supported`.
          * @description
@@ -305,7 +305,7 @@ class SendRoutingInfoArg {
          * @public
          * @readonly
          */
-        readonly longFTN_Supported: OPTIONAL<NULL>,
+        readonly longFTN_Supported?: OPTIONAL<NULL>,
         /**
          * @summary `suppress_VT_CSI`.
          * @description
@@ -315,7 +315,7 @@ class SendRoutingInfoArg {
          * @public
          * @readonly
          */
-        readonly suppress_VT_CSI: OPTIONAL<NULL>,
+        readonly suppress_VT_CSI?: OPTIONAL<NULL>,
         /**
          * @summary `suppressIncomingCallBarring`.
          * @description
@@ -325,7 +325,7 @@ class SendRoutingInfoArg {
          * @public
          * @readonly
          */
-        readonly suppressIncomingCallBarring: OPTIONAL<NULL>,
+        readonly suppressIncomingCallBarring?: OPTIONAL<NULL>,
         /**
          * @summary `gsmSCF_InitiatedCall`.
          * @description
@@ -335,7 +335,7 @@ class SendRoutingInfoArg {
          * @public
          * @readonly
          */
-        readonly gsmSCF_InitiatedCall: OPTIONAL<NULL>,
+        readonly gsmSCF_InitiatedCall?: OPTIONAL<NULL>,
         /**
          * @summary `basicServiceGroup2`.
          * @description
@@ -345,7 +345,7 @@ class SendRoutingInfoArg {
          * @public
          * @readonly
          */
-        readonly basicServiceGroup2: OPTIONAL<Ext_BasicServiceCode>,
+        readonly basicServiceGroup2?: OPTIONAL<Ext_BasicServiceCode>,
         /**
          * @summary `networkSignalInfo2`.
          * @description
@@ -355,7 +355,7 @@ class SendRoutingInfoArg {
          * @public
          * @readonly
          */
-        readonly networkSignalInfo2: OPTIONAL<ExternalSignalInfo>,
+        readonly networkSignalInfo2?: OPTIONAL<ExternalSignalInfo>,
         /**
          * @summary `suppressMTSS`.
          * @description
@@ -365,7 +365,7 @@ class SendRoutingInfoArg {
          * @public
          * @readonly
          */
-        readonly suppressMTSS: OPTIONAL<SuppressMTSS>,
+        readonly suppressMTSS?: OPTIONAL<SuppressMTSS>,
         /**
          * @summary `mtRoamingRetrySupported`.
          * @description
@@ -376,7 +376,7 @@ class SendRoutingInfoArg {
          * @public
          * @readonly
          */
-        readonly mtRoamingRetrySupported: OPTIONAL<NULL>,
+        readonly mtRoamingRetrySupported?: OPTIONAL<NULL>,
         /**
          * @summary `callPriority`.
          * @description
@@ -387,7 +387,7 @@ class SendRoutingInfoArg {
          * @public
          * @readonly
          */
-        readonly callPriority: OPTIONAL<EMLPP_Priority>,
+        readonly callPriority?: OPTIONAL<EMLPP_Priority>,
         /**
          * @summary Extensions that are not recognized.
          * @public

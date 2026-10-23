@@ -68,7 +68,7 @@ class SetLocationInformationArgument {
          * @public
          * @readonly
          */
-        readonly locationInfo: OPTIONAL<LocationInfo>,
+        readonly locationInfo?: OPTIONAL<LocationInfo>,
         /**
          * @summary `replaceMode`.
          * @description
@@ -80,7 +80,7 @@ class SetLocationInformationArgument {
          * @public
          * @readonly
          */
-        readonly replaceMode: OPTIONAL<ReplaceMode>,
+        readonly replaceMode?: OPTIONAL<ReplaceMode>,
         /**
          * @summary `extensions`.
          * @description
@@ -91,7 +91,7 @@ class SetLocationInformationArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

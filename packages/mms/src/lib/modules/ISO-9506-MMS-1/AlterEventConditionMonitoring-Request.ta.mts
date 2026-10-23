@@ -73,7 +73,7 @@ class AlterEventConditionMonitoring_Request {
          * @public
          * @readonly
          */
-        readonly enabled: OPTIONAL<BOOLEAN>,
+        readonly enabled?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `priority`.
          * @description
@@ -85,7 +85,7 @@ class AlterEventConditionMonitoring_Request {
          * @public
          * @readonly
          */
-        readonly priority: OPTIONAL<Priority>,
+        readonly priority?: OPTIONAL<Priority>,
         /**
          * @summary `alarmSummaryReports`.
          * @description
@@ -97,7 +97,7 @@ class AlterEventConditionMonitoring_Request {
          * @public
          * @readonly
          */
-        readonly alarmSummaryReports: OPTIONAL<BOOLEAN>,
+        readonly alarmSummaryReports?: OPTIONAL<BOOLEAN>,
         /**
          * @summary `evaluationInterval`.
          * @description
@@ -110,7 +110,7 @@ class AlterEventConditionMonitoring_Request {
          * @public
          * @readonly
          */
-        readonly evaluationInterval: OPTIONAL<Unsigned32>
+        readonly evaluationInterval?: OPTIONAL<Unsigned32>
     ) {}
 
     /**

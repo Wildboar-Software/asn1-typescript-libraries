@@ -91,7 +91,7 @@ class ParameterOffers {
          * @public
          * @readonly
          */
-        readonly access: OPTIONAL<AccessRuleOffer>,
+        readonly access?: OPTIONAL<AccessRuleOffer>,
         /**
          * @summary `trigger`.
          * @description
@@ -102,7 +102,7 @@ class ParameterOffers {
          * @public
          * @readonly
          */
-        readonly trigger: OPTIONAL<ParameterOffers_trigger>,
+        readonly trigger?: OPTIONAL<ParameterOffers_trigger>,
         /**
          * @summary `size`.
          * @description
@@ -115,7 +115,7 @@ class ParameterOffers {
          * @public
          * @readonly
          */
-        readonly size: OPTIONAL<IntegerOffer>,
+        readonly size?: OPTIONAL<IntegerOffer>,
         /**
          * @summary `category`.
          * @description
@@ -125,7 +125,7 @@ class ParameterOffers {
          * @public
          * @readonly
          */
-        readonly category: OPTIONAL<ParameterOffers_category>,
+        readonly category?: OPTIONAL<ParameterOffers_category>,
         /**
          * @summary `repertoire`.
          * @description
@@ -135,7 +135,7 @@ class ParameterOffers {
          * @public
          * @readonly
          */
-        readonly repertoire: OPTIONAL<RepertoireAssignment[]>,
+        readonly repertoire?: OPTIONAL<RepertoireAssignment[]>,
         /**
          * @summary `priority`.
          * @description
@@ -146,7 +146,7 @@ class ParameterOffers {
          * @public
          * @readonly
          */
-        readonly priority: OPTIONAL<ParameterOffers_priority>,
+        readonly priority?: OPTIONAL<ParameterOffers_priority>,
         /**
          * @summary `structure`.
          * @description
@@ -156,7 +156,7 @@ class ParameterOffers {
          * @public
          * @readonly
          */
-        readonly structure: OPTIONAL<ParameterOffers_structure>,
+        readonly structure?: OPTIONAL<ParameterOffers_structure>,
         /**
          * @summary `multiElement`.
          * @description
@@ -165,7 +165,7 @@ class ParameterOffers {
          * @public
          * @readonly
          */
-        readonly multiElement: OPTIONAL<ElementParamOffer[]>
+        readonly multiElement?: OPTIONAL<ElementParamOffer[]>
     ) {}
 
     /**

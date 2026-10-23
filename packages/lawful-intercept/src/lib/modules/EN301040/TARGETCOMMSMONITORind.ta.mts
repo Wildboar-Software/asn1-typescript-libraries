@@ -165,8 +165,8 @@ class TARGETCOMMSMONITORind {
         targetlocation: LocationType,
         supplementaryTargetaddress: OPTIONAL<AddressType>,
         targetcommsid: CircuitIdType,
-        cotargetaddress: OPTIONAL<AddressType[]>,
-        cotargetcommsid: OPTIONAL<CircuitIdType[]>
+        cotargetaddress?: OPTIONAL<AddressType[]>,
+        cotargetcommsid?: OPTIONAL<CircuitIdType[]>
     ) {
         this.tLIInstanceid = tLIInstanceid;
         this.timestamp = timestamp;

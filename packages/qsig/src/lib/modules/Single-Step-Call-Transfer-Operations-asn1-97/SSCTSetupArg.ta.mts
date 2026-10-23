@@ -70,9 +70,9 @@ class SSCTSetupArg {
     readonly argumentExtension: OPTIONAL<SSCTSetupArg_argumentExtension>;
 
     constructor (
-        transferringAddress: OPTIONAL<PresentedAddressScreened>,
-        transferringName: OPTIONAL<Name>,
-        argumentExtension: OPTIONAL<SSCTSetupArg_argumentExtension>
+        transferringAddress?: OPTIONAL<PresentedAddressScreened>,
+        transferringName?: OPTIONAL<Name>,
+        argumentExtension?: OPTIONAL<SSCTSetupArg_argumentExtension>
     ) {
         this.transferringAddress = transferringAddress;
         this.transferringName = transferringName;

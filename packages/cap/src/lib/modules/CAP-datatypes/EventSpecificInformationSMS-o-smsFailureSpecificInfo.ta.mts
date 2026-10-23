@@ -32,7 +32,7 @@ export class EventSpecificInformationSMS_o_smsFailureSpecificInfo {
          * @public
          * @readonly
          */
-        readonly failureCause: OPTIONAL<MO_SMSCause>,
+        readonly failureCause?: OPTIONAL<MO_SMSCause>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}
 

@@ -47,7 +47,7 @@ class AreaScope {
          * @public
          * @readonly
          */
-        readonly cgi_List: OPTIONAL<CGI_List>,
+        readonly cgi_List?: OPTIONAL<CGI_List>,
         /**
          * @summary `e_utran_cgi_List`.
          * @description
@@ -57,7 +57,7 @@ class AreaScope {
          * @public
          * @readonly
          */
-        readonly e_utran_cgi_List: OPTIONAL<E_UTRAN_CGI_List>,
+        readonly e_utran_cgi_List?: OPTIONAL<E_UTRAN_CGI_List>,
         /**
          * @summary `routingAreaId_List`.
          * @description
@@ -67,7 +67,7 @@ class AreaScope {
          * @public
          * @readonly
          */
-        readonly routingAreaId_List: OPTIONAL<RoutingAreaId_List>,
+        readonly routingAreaId_List?: OPTIONAL<RoutingAreaId_List>,
         /**
          * @summary `locationAreaId_List`.
          * @description
@@ -77,7 +77,7 @@ class AreaScope {
          * @public
          * @readonly
          */
-        readonly locationAreaId_List: OPTIONAL<LocationAreaId_List>,
+        readonly locationAreaId_List?: OPTIONAL<LocationAreaId_List>,
         /**
          * @summary `trackingAreaId_List`.
          * @description
@@ -87,7 +87,7 @@ class AreaScope {
          * @public
          * @readonly
          */
-        readonly trackingAreaId_List: OPTIONAL<TrackingAreaId_List>,
+        readonly trackingAreaId_List?: OPTIONAL<TrackingAreaId_List>,
         /**
          * @summary `extensionContainer`.
          * @description
@@ -97,7 +97,7 @@ class AreaScope {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

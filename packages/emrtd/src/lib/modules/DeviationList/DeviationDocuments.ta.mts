@@ -48,28 +48,28 @@ class DeviationDocuments {
          * @public
          * @readonly
          */
-        readonly documentType: OPTIONAL<PrintableString>,
+        readonly documentType?: OPTIONAL<PrintableString>,
         /**
          * Document Signer certificates whose documents are affected.
          * @summary `dscIdentifier`.
          * @public
          * @readonly
          */
-        readonly dscIdentifier: OPTIONAL<DocumentSignerIdentifier>,
+        readonly dscIdentifier?: OPTIONAL<DocumentSignerIdentifier>,
         /**
          * Issuance dates of the affected documents.
          * @summary `issuingDate`.
          * @public
          * @readonly
          */
-        readonly issuingDate: OPTIONAL<IssuancePeriod>,
+        readonly issuingDate?: OPTIONAL<IssuancePeriod>,
         /**
          * Document numbers of the affected eMRTDs.
          * @summary `documentNumbers`.
          * @public
          * @readonly
          */
-        readonly documentNumbers: OPTIONAL<PrintableString[]>
+        readonly documentNumbers?: OPTIONAL<PrintableString[]>
     ) {
         if (documentType !== undefined && documentType.length !== 2) {
             throw new ASN1SizeError("DeviationDocuments.documentType violates SIZE constraint");

@@ -103,7 +103,7 @@ class MessageBody {
         content_Type: GraphicString,
         content_Disposition: OPTIONAL<GraphicString>,
         content_Length: INTEGER,
-        originator: OPTIONAL<InvolvedParty>
+        originator?: OPTIONAL<InvolvedParty>
     ) {
         this.content_Type = content_Type;
         this.content_Disposition = content_Disposition;

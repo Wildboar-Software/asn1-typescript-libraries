@@ -71,8 +71,8 @@ class ResetTimerArg {
     constructor (
         timerID: OPTIONAL<TimerID>,
         timervalue: TimerValue,
-        extensions: OPTIONAL<ExtensionField[]>,
-        callSegmentID: OPTIONAL<CallSegmentID>,
+        extensions?: OPTIONAL<ExtensionField[]>,
+        callSegmentID?: OPTIONAL<CallSegmentID>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.timerID = timerID;

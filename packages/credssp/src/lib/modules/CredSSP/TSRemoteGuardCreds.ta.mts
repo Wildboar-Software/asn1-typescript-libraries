@@ -66,7 +66,7 @@ class TSRemoteGuardCreds {
 
     constructor (
         logonCred: TSRemoteGuardPackageCred,
-        supplementalCreds: OPTIONAL<TSRemoteGuardPackageCred[]>
+        supplementalCreds?: OPTIONAL<TSRemoteGuardPackageCred[]>
     ) {
         this.logonCred = logonCred;
         this.supplementalCreds = supplementalCreds;

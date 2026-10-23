@@ -47,7 +47,7 @@ class MaybeAddress {
          * @public
          * @readonly
          */
-        readonly address: OPTIONAL<Address>
+        readonly address?: OPTIONAL<Address>
     ) {}
 
     /**

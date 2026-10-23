@@ -126,7 +126,7 @@ class V32Diag_Item {
          * @public
          * @readonly
          */
-        readonly rxLevelEstimate: OPTIONAL<V59String>,
+        readonly rxLevelEstimate?: OPTIONAL<V59String>,
         /**
          * @summary `noiseEstimate`.
          * @description
@@ -136,7 +136,7 @@ class V32Diag_Item {
          * @public
          * @readonly
          */
-        readonly noiseEstimate: OPTIONAL<V59String>,
+        readonly noiseEstimate?: OPTIONAL<V59String>,
         /**
          * @summary `rxSignalQuality`.
          * @description
@@ -148,7 +148,7 @@ class V32Diag_Item {
          * @public
          * @readonly
          */
-        readonly rxSignalQuality: OPTIONAL<V59String>,
+        readonly rxSignalQuality?: OPTIONAL<V59String>,
         /**
          * @summary `nearEchoEstimate`.
          * @description
@@ -159,7 +159,7 @@ class V32Diag_Item {
          * @public
          * @readonly
          */
-        readonly nearEchoEstimate: OPTIONAL<V59String>,
+        readonly nearEchoEstimate?: OPTIONAL<V59String>,
         /**
          * @summary `farEchoEstimate`.
          * @description
@@ -170,7 +170,7 @@ class V32Diag_Item {
          * @public
          * @readonly
          */
-        readonly farEchoEstimate: OPTIONAL<V59String>,
+        readonly farEchoEstimate?: OPTIONAL<V59String>,
         /**
          * @summary `roundTripDelay`.
          * @description
@@ -181,7 +181,7 @@ class V32Diag_Item {
          * @public
          * @readonly
          */
-        readonly roundTripDelay: OPTIONAL<V59String>,
+        readonly roundTripDelay?: OPTIONAL<V59String>,
         /**
          * @summary Extensions that are not recognized.
          * @public

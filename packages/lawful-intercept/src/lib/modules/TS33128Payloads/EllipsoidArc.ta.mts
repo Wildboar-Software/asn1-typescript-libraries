@@ -146,7 +146,7 @@ class EllipsoidArc {
         offsetAngle: Angle,
         includedAngle: Angle,
         confidence: Confidence,
-        uncertaintyRadiusSBI: OPTIONAL<UncertaintySBI>,
+        uncertaintyRadiusSBI?: OPTIONAL<UncertaintySBI>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.point = point;

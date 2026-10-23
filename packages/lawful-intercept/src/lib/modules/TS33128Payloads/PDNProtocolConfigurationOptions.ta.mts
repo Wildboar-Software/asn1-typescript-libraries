@@ -129,12 +129,12 @@ class PDNProtocolConfigurationOptions {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        requestPCO: OPTIONAL<PDNPCO>,
-        requestAPCO: OPTIONAL<PDNPCO>,
-        requestEPCO: OPTIONAL<PDNPCO>,
-        responsePCO: OPTIONAL<PDNPCO>,
-        responseAPCO: OPTIONAL<PDNPCO>,
-        responseEPCO: OPTIONAL<PDNPCO>,
+        requestPCO?: OPTIONAL<PDNPCO>,
+        requestAPCO?: OPTIONAL<PDNPCO>,
+        requestEPCO?: OPTIONAL<PDNPCO>,
+        responsePCO?: OPTIONAL<PDNPCO>,
+        responseAPCO?: OPTIONAL<PDNPCO>,
+        responseEPCO?: OPTIONAL<PDNPCO>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.requestPCO = requestPCO;

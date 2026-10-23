@@ -84,9 +84,9 @@ class ReachabilityConfiguration {
     readonly maximumResponseTime: OPTIONAL<INTEGER>;
 
     constructor (
-        reachabilityType: OPTIONAL<ReachabilityType>,
-        maximumLatency: OPTIONAL<INTEGER>,
-        maximumResponseTime: OPTIONAL<INTEGER>
+        reachabilityType?: OPTIONAL<ReachabilityType>,
+        maximumLatency?: OPTIONAL<INTEGER>,
+        maximumResponseTime?: OPTIONAL<INTEGER>
     ) {
         this.reachabilityType = reachabilityType;
         this.maximumLatency = maximumLatency;

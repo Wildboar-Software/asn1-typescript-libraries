@@ -37,7 +37,7 @@ class BusySubscriberParam {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `ccbs_Possible`.
          * @description
@@ -48,7 +48,7 @@ class BusySubscriberParam {
          * @public
          * @readonly
          */
-        readonly ccbs_Possible: OPTIONAL<NULL>,
+        readonly ccbs_Possible?: OPTIONAL<NULL>,
         /**
          * @summary `ccbs_Busy`.
          * @description
@@ -59,7 +59,7 @@ class BusySubscriberParam {
          * @public
          * @readonly
          */
-        readonly ccbs_Busy: OPTIONAL<NULL>,
+        readonly ccbs_Busy?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @public

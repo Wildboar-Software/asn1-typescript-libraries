@@ -58,8 +58,8 @@ class TariffPulse {
     public readonly tariffSwitchPulse: OPTIONAL<TariffSwitchPulse>;
 
     constructor (
-        currentTariffPulse: OPTIONAL<TariffPulseFormat>,
-        tariffSwitchPulse: OPTIONAL<TariffSwitchPulse>
+        currentTariffPulse?: OPTIONAL<TariffPulseFormat>,
+        tariffSwitchPulse?: OPTIONAL<TariffSwitchPulse>
     ) {
         this.currentTariffPulse = currentTariffPulse;
         this.tariffSwitchPulse = tariffSwitchPulse;

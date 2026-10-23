@@ -60,8 +60,8 @@ class MethodIdentifier {
 
     constructor (
         methodid: OBJECT_IDENTIFIER,
-        inputAttributes: OPTIONAL<MethodIdentifier_inputAttributes>,
-        specific_Input: OPTIONAL<_Element>
+        inputAttributes?: OPTIONAL<MethodIdentifier_inputAttributes>,
+        specific_Input?: OPTIONAL<_Element>
     ) {
         this.methodid = methodid;
         this.inputAttributes = inputAttributes;

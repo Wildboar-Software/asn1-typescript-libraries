@@ -189,10 +189,10 @@ class IRIPayload {
         iRIType: OPTIONAL<IRIType>,
         timeStamp: OPTIONAL<GeneralizedTime>,
         iRIContents: IRIContents,
-        microSecondTimeStamp: OPTIONAL<MicroSecondTimeStamp>,
-        timeStampQualifier: OPTIONAL<TimeStampQualifier>,
-        sessionDirection: OPTIONAL<PayloadDirection>,
-        payloadDirection: OPTIONAL<PayloadDirection>,
+        microSecondTimeStamp?: OPTIONAL<MicroSecondTimeStamp>,
+        timeStampQualifier?: OPTIONAL<TimeStampQualifier>,
+        sessionDirection?: OPTIONAL<PayloadDirection>,
+        payloadDirection?: OPTIONAL<PayloadDirection>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.iRIType = iRIType;

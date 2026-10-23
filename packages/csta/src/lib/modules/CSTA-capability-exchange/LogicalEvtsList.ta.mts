@@ -84,7 +84,7 @@ class LogicalEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly agentBusy: OPTIONAL<AgentBusy>,
+        readonly agentBusy?: OPTIONAL<AgentBusy>,
         /**
          * @summary `agentLoggedOff`.
          * @public
@@ -93,7 +93,7 @@ class LogicalEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly agentLoggedOff: OPTIONAL<AgentLoggedOff>,
+        readonly agentLoggedOff?: OPTIONAL<AgentLoggedOff>,
         /**
          * @summary `agentLoggedOn`.
          * @public
@@ -102,7 +102,7 @@ class LogicalEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly agentLoggedOn: OPTIONAL<AgentLoggedOn>,
+        readonly agentLoggedOn?: OPTIONAL<AgentLoggedOn>,
         /**
          * @summary `agentNotReady`.
          * @public
@@ -111,7 +111,7 @@ class LogicalEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly agentNotReady: OPTIONAL<AgentNotReady>,
+        readonly agentNotReady?: OPTIONAL<AgentNotReady>,
         /**
          * @summary `agentReady`.
          * @public
@@ -120,7 +120,7 @@ class LogicalEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly agentReady: OPTIONAL<AgentReady>,
+        readonly agentReady?: OPTIONAL<AgentReady>,
         /**
          * @summary `agentWorkingAfterCall`.
          * @public
@@ -129,7 +129,7 @@ class LogicalEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly agentWorkingAfterCall: OPTIONAL<AgentWorkingAfterCall>,
+        readonly agentWorkingAfterCall?: OPTIONAL<AgentWorkingAfterCall>,
         /**
          * @summary `autoAnswer`.
          * @public
@@ -138,7 +138,7 @@ class LogicalEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly autoAnswer: OPTIONAL<AutoAnswer>,
+        readonly autoAnswer?: OPTIONAL<AutoAnswer>,
         /**
          * @summary `autoWorkMode`.
          * @public
@@ -147,7 +147,7 @@ class LogicalEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly autoWorkMode: OPTIONAL<AutoWorkMode>,
+        readonly autoWorkMode?: OPTIONAL<AutoWorkMode>,
         /**
          * @summary `callBack`.
          * @public
@@ -156,7 +156,7 @@ class LogicalEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly callBack: OPTIONAL<CallBackEvent>,
+        readonly callBack?: OPTIONAL<CallBackEvent>,
         /**
          * @summary `callBackMessage`.
          * @public
@@ -165,7 +165,7 @@ class LogicalEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly callBackMessage: OPTIONAL<CallBackMessageEvent>,
+        readonly callBackMessage?: OPTIONAL<CallBackMessageEvent>,
         /**
          * @summary `callerIDStatus`.
          * @public
@@ -174,7 +174,7 @@ class LogicalEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly callerIDStatus: OPTIONAL<CallerIDStatus>,
+        readonly callerIDStatus?: OPTIONAL<CallerIDStatus>,
         /**
          * @summary `doNotDisturb`.
          * @public
@@ -183,7 +183,7 @@ class LogicalEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly doNotDisturb: OPTIONAL<DoNotDisturb>,
+        readonly doNotDisturb?: OPTIONAL<DoNotDisturb>,
         /**
          * @summary `forwarding`.
          * @public
@@ -192,7 +192,7 @@ class LogicalEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly forwarding: OPTIONAL<Forwarding>,
+        readonly forwarding?: OPTIONAL<Forwarding>,
         /**
          * @summary `presenceState`.
          * @public
@@ -201,7 +201,7 @@ class LogicalEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly presenceState: OPTIONAL<PresenceStateEvent>,
+        readonly presenceState?: OPTIONAL<PresenceStateEvent>,
         /**
          * @summary `routeingMode`.
          * @public
@@ -210,7 +210,7 @@ class LogicalEvtsList {
          * Capability bitmap for this event; omit if the SF does not support it
          * (ECMA-269 Annex C).
          */
-        readonly routeingMode: OPTIONAL<RouteingMode>
+        readonly routeingMode?: OPTIONAL<RouteingMode>
     ) {}
 
     /**

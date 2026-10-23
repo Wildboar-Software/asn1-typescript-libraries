@@ -57,7 +57,7 @@ class TestResultAcquire {
          * @public
          * @readonly
          */
-        readonly durationAcquire: OPTIONAL<StatisticInformationSet>
+        readonly durationAcquire?: OPTIONAL<StatisticInformationSet>
     ) {}
 
     /**

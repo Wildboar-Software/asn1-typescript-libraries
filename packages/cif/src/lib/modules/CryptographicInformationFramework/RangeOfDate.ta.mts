@@ -45,7 +45,7 @@ class RangeOfDate {
          * @public
          * @readonly
          */
-        readonly startDate: OPTIONAL<GeneralizedTime>,
+        readonly startDate?: OPTIONAL<GeneralizedTime>,
         /**
          * @summary `endDate`.
          * @description
@@ -54,7 +54,7 @@ class RangeOfDate {
          * @public
          * @readonly
          */
-        readonly endDate: OPTIONAL<GeneralizedTime>
+        readonly endDate?: OPTIONAL<GeneralizedTime>
     ) {}
 
     /**

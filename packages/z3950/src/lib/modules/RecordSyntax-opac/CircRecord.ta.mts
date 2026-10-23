@@ -149,9 +149,9 @@ class CircRecord {
         itemId: OPTIONAL<InternationalString>,
         renewable: BOOLEAN,
         onHold: BOOLEAN,
-        enumAndChron: OPTIONAL<InternationalString>,
-        midspine: OPTIONAL<InternationalString>,
-        temporaryLocation: OPTIONAL<InternationalString>
+        enumAndChron?: OPTIONAL<InternationalString>,
+        midspine?: OPTIONAL<InternationalString>,
+        temporaryLocation?: OPTIONAL<InternationalString>
     ) {
         this.availableNow = availableNow;
         this.availablityDate = availablityDate;

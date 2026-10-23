@@ -88,7 +88,7 @@ class SessionConnectionIdentifier {
     constructor (
         callingSSUserReference: T61String,
         commonReference: UTCTime,
-        additionalReferenceInformation: OPTIONAL<T61String>,
+        additionalReferenceInformation?: OPTIONAL<T61String>,
     ) {
         this.callingSSUserReference = callingSSUserReference;
         this.commonReference = commonReference;

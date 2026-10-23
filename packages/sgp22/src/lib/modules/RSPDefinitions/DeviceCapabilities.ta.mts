@@ -58,7 +58,7 @@ class DeviceCapabilities {
          * @public
          * @readonly
          */
-        readonly gsmSupportedRelease: OPTIONAL<VersionType>,
+        readonly gsmSupportedRelease?: OPTIONAL<VersionType>,
         /**
          * @summary `utranSupportedRelease`.
          * @description
@@ -69,7 +69,7 @@ class DeviceCapabilities {
          * @public
          * @readonly
          */
-        readonly utranSupportedRelease: OPTIONAL<VersionType>,
+        readonly utranSupportedRelease?: OPTIONAL<VersionType>,
         /**
          * @summary `cdma2000onexSupportedRelease`.
          * @description
@@ -80,7 +80,7 @@ class DeviceCapabilities {
          * @public
          * @readonly
          */
-        readonly cdma2000onexSupportedRelease: OPTIONAL<VersionType>,
+        readonly cdma2000onexSupportedRelease?: OPTIONAL<VersionType>,
         /**
          * @summary `cdma2000hrpdSupportedRelease`.
          * @description
@@ -91,7 +91,7 @@ class DeviceCapabilities {
          * @public
          * @readonly
          */
-        readonly cdma2000hrpdSupportedRelease: OPTIONAL<VersionType>,
+        readonly cdma2000hrpdSupportedRelease?: OPTIONAL<VersionType>,
         /**
          * @summary `cdma2000ehrpdSupportedRelease`.
          * @description
@@ -102,7 +102,7 @@ class DeviceCapabilities {
          * @public
          * @readonly
          */
-        readonly cdma2000ehrpdSupportedRelease: OPTIONAL<VersionType>,
+        readonly cdma2000ehrpdSupportedRelease?: OPTIONAL<VersionType>,
         /**
          * @summary `eutranEpcSupportedRelease`.
          * @description
@@ -113,7 +113,7 @@ class DeviceCapabilities {
          * @public
          * @readonly
          */
-        readonly eutranEpcSupportedRelease: OPTIONAL<VersionType>,
+        readonly eutranEpcSupportedRelease?: OPTIONAL<VersionType>,
         /**
          * @summary `contactlessSupportedRelease`.
          * @description
@@ -125,7 +125,7 @@ class DeviceCapabilities {
          * @public
          * @readonly
          */
-        readonly contactlessSupportedRelease: OPTIONAL<VersionType>,
+        readonly contactlessSupportedRelease?: OPTIONAL<VersionType>,
         /**
          * @summary `rspCrlSupportedVersion`.
          * @description
@@ -137,7 +137,7 @@ class DeviceCapabilities {
          * @public
          * @readonly
          */
-        readonly rspCrlSupportedVersion: OPTIONAL<VersionType>,
+        readonly rspCrlSupportedVersion?: OPTIONAL<VersionType>,
         /**
          * @summary `nrEpcSupportedRelease`.
          * @description
@@ -149,7 +149,7 @@ class DeviceCapabilities {
          * @public
          * @readonly
          */
-        readonly nrEpcSupportedRelease: OPTIONAL<VersionType>,
+        readonly nrEpcSupportedRelease?: OPTIONAL<VersionType>,
         /**
          * @summary `nr5gcSupportedRelease`.
          * @description
@@ -160,7 +160,7 @@ class DeviceCapabilities {
          * @public
          * @readonly
          */
-        readonly nr5gcSupportedRelease: OPTIONAL<VersionType>,
+        readonly nr5gcSupportedRelease?: OPTIONAL<VersionType>,
         /**
          * @summary `eutran5gcSupportedRelease`.
          * @description
@@ -172,7 +172,7 @@ class DeviceCapabilities {
          * @public
          * @readonly
          */
-        readonly eutran5gcSupportedRelease: OPTIONAL<VersionType>,
+        readonly eutran5gcSupportedRelease?: OPTIONAL<VersionType>,
         /**
          * @summary `lpaSvn`.
          * @description
@@ -184,7 +184,7 @@ class DeviceCapabilities {
          * @public
          * @readonly
          */
-        readonly lpaSvn: OPTIONAL<VersionType>,
+        readonly lpaSvn?: OPTIONAL<VersionType>,
         /**
          * @summary `catSupportedClasses`.
          * @description
@@ -195,7 +195,7 @@ class DeviceCapabilities {
          * @public
          * @readonly
          */
-        readonly catSupportedClasses: OPTIONAL<CatSupportedClasses>,
+        readonly catSupportedClasses?: OPTIONAL<CatSupportedClasses>,
         /**
          * @summary `euiccFormFactorType`.
          * @description
@@ -206,7 +206,7 @@ class DeviceCapabilities {
          * @public
          * @readonly
          */
-        readonly euiccFormFactorType: OPTIONAL<EuiccFormFactorType>,
+        readonly euiccFormFactorType?: OPTIONAL<EuiccFormFactorType>,
         /**
          * @summary `deviceAdditionalFeatureSupport`.
          * @description
@@ -216,7 +216,7 @@ class DeviceCapabilities {
          * @public
          * @readonly
          */
-        readonly deviceAdditionalFeatureSupport: OPTIONAL<DeviceAdditionalFeatureSupport>
+        readonly deviceAdditionalFeatureSupport?: OPTIONAL<DeviceAdditionalFeatureSupport>
     ) {}
 
     /**

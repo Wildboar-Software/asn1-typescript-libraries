@@ -69,7 +69,7 @@ class SmdpSigned2 {
          * @public
          * @readonly
          */
-        readonly bppEuiccOtpk: OPTIONAL<OCTET_STRING>
+        readonly bppEuiccOtpk?: OPTIONAL<OCTET_STRING>
     ) {}
 
     /**

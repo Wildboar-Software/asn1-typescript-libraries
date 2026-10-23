@@ -111,49 +111,49 @@ class APN_Configuration {
          * @public
          * @readonly
          */
-        readonly pdn_gw_Identity: OPTIONAL<PDN_GW_Identity>,
+        readonly pdn_gw_Identity?: OPTIONAL<PDN_GW_Identity>,
         /**
          * @summary `pdn_gw_AllocationType`.
          * @public
          * @readonly
          */
-        readonly pdn_gw_AllocationType: OPTIONAL<PDN_GW_AllocationType>,
+        readonly pdn_gw_AllocationType?: OPTIONAL<PDN_GW_AllocationType>,
         /**
          * @summary `vplmnAddressAllowed`.
          * @public
          * @readonly
          */
-        readonly vplmnAddressAllowed: OPTIONAL<NULL>,
+        readonly vplmnAddressAllowed?: OPTIONAL<NULL>,
         /**
          * @summary `chargingCharacteristics`.
          * @public
          * @readonly
          */
-        readonly chargingCharacteristics: OPTIONAL<ChargingCharacteristics>,
+        readonly chargingCharacteristics?: OPTIONAL<ChargingCharacteristics>,
         /**
          * @summary `ambr`.
          * @public
          * @readonly
          */
-        readonly ambr: OPTIONAL<AMBR>,
+        readonly ambr?: OPTIONAL<AMBR>,
         /**
          * @summary `specificAPNInfoList`.
          * @public
          * @readonly
          */
-        readonly specificAPNInfoList: OPTIONAL<SpecificAPNInfoList>,
+        readonly specificAPNInfoList?: OPTIONAL<SpecificAPNInfoList>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `servedPartyIP_IPv6_Address`.
          * @public
          * @readonly
          */
-        readonly servedPartyIP_IPv6_Address: OPTIONAL<PDP_Address>,
+        readonly servedPartyIP_IPv6_Address?: OPTIONAL<PDP_Address>,
         /**
          * @summary `apn_oi_Replacement`.
          * @description
@@ -164,55 +164,55 @@ class APN_Configuration {
          * @public
          * @readonly
          */
-        readonly apn_oi_Replacement: OPTIONAL<APN_OI_Replacement>,
+        readonly apn_oi_Replacement?: OPTIONAL<APN_OI_Replacement>,
         /**
          * @summary `sipto_Permission`.
          * @public
          * @readonly
          */
-        readonly sipto_Permission: OPTIONAL<SIPTO_Permission>,
+        readonly sipto_Permission?: OPTIONAL<SIPTO_Permission>,
         /**
          * @summary `lipa_Permission`.
          * @public
          * @readonly
          */
-        readonly lipa_Permission: OPTIONAL<LIPA_Permission>,
+        readonly lipa_Permission?: OPTIONAL<LIPA_Permission>,
         /**
          * @summary `restoration_Priority`.
          * @public
          * @readonly
          */
-        readonly restoration_Priority: OPTIONAL<Restoration_Priority>,
+        readonly restoration_Priority?: OPTIONAL<Restoration_Priority>,
         /**
          * @summary `sipto_local_network_Permission`.
          * @public
          * @readonly
          */
-        readonly sipto_local_network_Permission: OPTIONAL<SIPTO_Local_Network_Permission>,
+        readonly sipto_local_network_Permission?: OPTIONAL<SIPTO_Local_Network_Permission>,
         /**
          * @summary `wlan_offloadability`.
          * @public
          * @readonly
          */
-        readonly wlan_offloadability: OPTIONAL<WLAN_Offloadability>,
+        readonly wlan_offloadability?: OPTIONAL<WLAN_Offloadability>,
         /**
          * @summary `non_IP_PDN_Type_Indicator`.
          * @public
          * @readonly
          */
-        readonly non_IP_PDN_Type_Indicator: OPTIONAL<NULL>,
+        readonly non_IP_PDN_Type_Indicator?: OPTIONAL<NULL>,
         /**
          * @summary `nIDD_Mechanism`.
          * @public
          * @readonly
          */
-        readonly nIDD_Mechanism: OPTIONAL<NIDD_Mechanism>,
+        readonly nIDD_Mechanism?: OPTIONAL<NIDD_Mechanism>,
         /**
          * @summary `sCEF_ID`.
          * @public
          * @readonly
          */
-        readonly sCEF_ID: OPTIONAL<FQDN>,
+        readonly sCEF_ID?: OPTIONAL<FQDN>,
         /**
          * @summary `pdn_ConnectionContinuity`.
          * @description
@@ -223,7 +223,7 @@ class APN_Configuration {
          * @public
          * @readonly
          */
-        readonly pdn_ConnectionContinuity: OPTIONAL<PDN_ConnectionContinuity>,
+        readonly pdn_ConnectionContinuity?: OPTIONAL<PDN_ConnectionContinuity>,
         /**
          * @summary Extensions that are not recognized.
          * @public

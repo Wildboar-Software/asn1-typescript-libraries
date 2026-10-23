@@ -76,7 +76,7 @@ class QueueArgument {
          * @public
          * @readonly
          */
-        readonly resource: OPTIONAL<ResourceID>,
+        readonly resource?: OPTIONAL<ResourceID>,
         /**
          * @summary `text`.
          * @description
@@ -86,7 +86,7 @@ class QueueArgument {
          * @public
          * @readonly
          */
-        readonly text: OPTIONAL<IA5String>,
+        readonly text?: OPTIONAL<IA5String>,
         /**
          * @summary `extensions`.
          * @description
@@ -97,7 +97,7 @@ class QueueArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

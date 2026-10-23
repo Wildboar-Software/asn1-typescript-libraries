@@ -91,8 +91,8 @@ class IMAPAAAInformation {
 
     constructor (
         username: UTF8String,
-        password: OPTIONAL<UTF8String>,
-        aAAResult: OPTIONAL<AAAResult>,
+        password?: OPTIONAL<UTF8String>,
+        aAAResult?: OPTIONAL<AAAResult>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.username = username;

@@ -96,11 +96,11 @@ class HitVector {
     readonly serverToken: OPTIONAL<OCTET_STRING>;
 
     constructor (
-        satisfier: OPTIONAL<Term>,
-        offsetIntoElement: OPTIONAL<IntUnit>,
-        length: OPTIONAL<IntUnit>,
-        hitRank: OPTIONAL<INTEGER>,
-        serverToken: OPTIONAL<OCTET_STRING>
+        satisfier?: OPTIONAL<Term>,
+        offsetIntoElement?: OPTIONAL<IntUnit>,
+        length?: OPTIONAL<IntUnit>,
+        hitRank?: OPTIONAL<INTEGER>,
+        serverToken?: OPTIONAL<OCTET_STRING>
     ) {
         this.satisfier = satisfier;
         this.offsetIntoElement = offsetIntoElement;

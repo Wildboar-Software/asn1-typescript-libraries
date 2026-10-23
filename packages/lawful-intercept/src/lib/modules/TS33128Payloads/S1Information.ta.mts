@@ -148,7 +148,7 @@ class S1Information {
         cSGIDList: OPTIONAL<CSGIDList>,
         connectedENGNBList: OPTIONAL<ConnectedENGNBList>,
         mMEServedGUMMEIList: MMEServedGUMMEIList,
-        iABSupported: OPTIONAL<BOOLEAN>,
+        iABSupported?: OPTIONAL<BOOLEAN>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.globalRANNodeID = globalRANNodeID;

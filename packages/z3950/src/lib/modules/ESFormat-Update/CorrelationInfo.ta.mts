@@ -72,8 +72,8 @@ class CorrelationInfo {
     readonly id: OPTIONAL<INTEGER>;
 
     constructor (
-        note: OPTIONAL<InternationalString>,
-        id: OPTIONAL<INTEGER>
+        note?: OPTIONAL<InternationalString>,
+        id?: OPTIONAL<INTEGER>
     ) {
         this.note = note;
         this.id = id;

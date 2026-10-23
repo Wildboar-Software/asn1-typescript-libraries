@@ -66,7 +66,7 @@ class DeviceHistory {
          * @public
          * @readonly
          */
-        readonly eventCause: OPTIONAL<EventCause>,
+        readonly eventCause?: OPTIONAL<EventCause>,
         /**
          * @summary `oldConnectionID`.
          * @description
@@ -75,7 +75,7 @@ class DeviceHistory {
          * @public
          * @readonly
          */
-        readonly oldConnectionID: OPTIONAL<ConnectionID>
+        readonly oldConnectionID?: OPTIONAL<ConnectionID>
     ) {}
 
     /**

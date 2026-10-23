@@ -85,9 +85,9 @@ class MonitoringEventConfigStatus {
     readonly sCEFID: OPTIONAL<OCTET_STRING>;
 
     constructor (
-        serviceResult: OPTIONAL<ServiceResult>,
-        sCEFReferenceID: OPTIONAL<INTEGER>,
-        sCEFID: OPTIONAL<OCTET_STRING>
+        serviceResult?: OPTIONAL<ServiceResult>,
+        sCEFReferenceID?: OPTIONAL<INTEGER>,
+        sCEFID?: OPTIONAL<OCTET_STRING>
     ) {
         this.serviceResult = serviceResult;
         this.sCEFReferenceID = sCEFReferenceID;

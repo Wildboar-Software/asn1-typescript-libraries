@@ -41,7 +41,7 @@ class NotificationInformation_calledNumberSpecificInfo {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        calledNumber: OPTIONAL<CalledPartyNumber>,
+        calledNumber?: OPTIONAL<CalledPartyNumber>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.calledNumber = calledNumber;

@@ -58,7 +58,7 @@ class GetLampInformationArgument {
          * @public
          * @readonly
          */
-        readonly lamp: OPTIONAL<LampID>,
+        readonly lamp?: OPTIONAL<LampID>,
         /**
          * @summary `extensions`.
          * @description
@@ -68,7 +68,7 @@ class GetLampInformationArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

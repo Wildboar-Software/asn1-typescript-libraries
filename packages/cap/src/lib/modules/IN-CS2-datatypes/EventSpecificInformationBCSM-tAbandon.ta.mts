@@ -37,7 +37,7 @@ class EventSpecificInformationBCSM_tAbandon {
          * @public
          * @readonly
          */
-        readonly abandonCause: OPTIONAL<Cause>,
+        readonly abandonCause?: OPTIONAL<Cause>,
         /**
          * @summary Extensions that are not recognized.
          * @public

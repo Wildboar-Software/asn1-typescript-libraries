@@ -440,11 +440,11 @@ class MMSForward {
         contentLocationReq: UTF8String,
         replyCharging: OPTIONAL<MMSReplyCharging>,
         responseStatus: MMSResponseStatus,
-        responseStatusText: OPTIONAL<UTF8String>,
-        messageID: OPTIONAL<UTF8String>,
-        contentLocationConf: OPTIONAL<UTF8String>,
-        storeStatus: OPTIONAL<MMSStoreStatus>,
-        storeStatusText: OPTIONAL<UTF8String>,
+        responseStatusText?: OPTIONAL<UTF8String>,
+        messageID?: OPTIONAL<UTF8String>,
+        contentLocationConf?: OPTIONAL<UTF8String>,
+        storeStatus?: OPTIONAL<MMSStoreStatus>,
+        storeStatusText?: OPTIONAL<UTF8String>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.transactionID = transactionID;

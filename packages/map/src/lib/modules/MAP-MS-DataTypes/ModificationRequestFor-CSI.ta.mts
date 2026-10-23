@@ -60,7 +60,7 @@ class ModificationRequestFor_CSI {
          * @public
          * @readonly
          */
-        readonly modifyNotificationToCSE: OPTIONAL<ModificationInstruction>,
+        readonly modifyNotificationToCSE?: OPTIONAL<ModificationInstruction>,
         /**
          * @summary `modifyCSI_State`.
          * @description
@@ -71,13 +71,13 @@ class ModificationRequestFor_CSI {
          * @public
          * @readonly
          */
-        readonly modifyCSI_State: OPTIONAL<ModificationInstruction>,
+        readonly modifyCSI_State?: OPTIONAL<ModificationInstruction>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `additionalRequestedCAMEL_SubscriptionInfo`.
          * @description
@@ -88,7 +88,7 @@ class ModificationRequestFor_CSI {
          * @public
          * @readonly
          */
-        readonly additionalRequestedCAMEL_SubscriptionInfo: OPTIONAL<AdditionalRequestedCAMEL_SubscriptionInfo>,
+        readonly additionalRequestedCAMEL_SubscriptionInfo?: OPTIONAL<AdditionalRequestedCAMEL_SubscriptionInfo>,
         /**
          * @summary Extensions that are not recognized.
          * @public

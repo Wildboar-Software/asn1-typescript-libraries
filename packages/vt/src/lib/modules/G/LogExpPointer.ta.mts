@@ -45,7 +45,7 @@ class LogExpPointer {
          * @public
          * @readonly
          */
-        readonly kValue: OPTIONAL<INTEGER>,
+        readonly kValue?: OPTIONAL<INTEGER>,
         /**
          * @summary `fValue`.
          * @description
@@ -53,7 +53,7 @@ class LogExpPointer {
          * @public
          * @readonly
          */
-        readonly fValue: OPTIONAL<INTEGER>,
+        readonly fValue?: OPTIONAL<INTEGER>,
         /**
          * @summary `zValue`.
          * @description
@@ -61,7 +61,7 @@ class LogExpPointer {
          * @public
          * @readonly
          */
-        readonly zValue: OPTIONAL<INTEGER>
+        readonly zValue?: OPTIONAL<INTEGER>
     ) {}
 
     /**

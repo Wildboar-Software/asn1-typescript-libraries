@@ -56,8 +56,8 @@ class LCSClientExternalID {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        externalAddress: OPTIONAL<OCTET_STRING>,
-        extensionContainer: OPTIONAL<ExtensionContainer>,
+        externalAddress?: OPTIONAL<OCTET_STRING>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.externalAddress = externalAddress;

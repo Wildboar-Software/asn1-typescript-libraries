@@ -37,7 +37,7 @@ class NotificationInformation_callFailureSpecificInfo {
          * @public
          * @readonly
          */
-        readonly failureCause: OPTIONAL<Cause>,
+        readonly failureCause?: OPTIONAL<Cause>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -56,7 +56,7 @@ class AlterProgramInvocationAttributes_Request {
          * @public
          * @readonly
          */
-        readonly startCount: OPTIONAL<StartCount>
+        readonly startCount?: OPTIONAL<StartCount>
     ) {}
 
     /**

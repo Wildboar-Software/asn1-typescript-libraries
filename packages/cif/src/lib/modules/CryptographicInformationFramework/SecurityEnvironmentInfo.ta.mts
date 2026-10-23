@@ -54,7 +54,7 @@ class SecurityEnvironmentInfo {
          * @public
          * @readonly
          */
-        readonly owner: OPTIONAL<OBJECT_IDENTIFIER>,
+        readonly owner?: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `aid`.
          * @description
@@ -63,7 +63,7 @@ class SecurityEnvironmentInfo {
          * @public
          * @readonly
          */
-        readonly aid: OPTIONAL<OCTET_STRING>,
+        readonly aid?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary Extensions that are not recognized.
          * @public

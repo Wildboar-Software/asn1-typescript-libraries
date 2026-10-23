@@ -68,7 +68,7 @@ class SendMessageResult {
          * @public
          * @readonly
          */
-        readonly mediaCallCharacteristics: OPTIONAL<MediaCallCharacteristics>,
+        readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
         /**
          * @summary `listOfCallLinkageData`.
          * @description
@@ -79,7 +79,7 @@ class SendMessageResult {
          * @public
          * @readonly
          */
-        readonly listOfCallLinkageData: OPTIONAL<CallLinkageDataListItems>,
+        readonly listOfCallLinkageData?: OPTIONAL<CallLinkageDataListItems>,
         /**
          * @summary `extensions`.
          * @description
@@ -91,7 +91,7 @@ class SendMessageResult {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

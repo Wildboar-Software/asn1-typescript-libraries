@@ -231,11 +231,11 @@ class PTCSessionStart {
         pTCServerURI: UTF8String,
         pTCSessionInfo: PTCSessionInfo,
         pTCOriginatingID: PTCTargetInformation,
-        pTCParticipants: OPTIONAL<PTCTargetInformation[]>,
-        pTCParticipantPresenceStatus: OPTIONAL<MultipleParticipantPresenceStatus>,
-        location: OPTIONAL<Location>,
-        pTCHost: OPTIONAL<PTCTargetInformation>,
-        pTCBearerCapability: OPTIONAL<UTF8String>,
+        pTCParticipants?: OPTIONAL<PTCTargetInformation[]>,
+        pTCParticipantPresenceStatus?: OPTIONAL<MultipleParticipantPresenceStatus>,
+        location?: OPTIONAL<Location>,
+        pTCHost?: OPTIONAL<PTCTargetInformation>,
+        pTCBearerCapability?: OPTIONAL<UTF8String>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.pTCTargetInformation = pTCTargetInformation;

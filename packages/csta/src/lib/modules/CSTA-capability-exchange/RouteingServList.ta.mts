@@ -71,7 +71,7 @@ class RouteingServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly routeRegister: OPTIONAL<RouteRegister>,
+        readonly routeRegister?: OPTIONAL<RouteRegister>,
         /**
          * @summary `routeRegisterCancel`.
          * @public
@@ -80,7 +80,7 @@ class RouteingServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly routeRegisterCancel: OPTIONAL<RouteRegisterCancel>,
+        readonly routeRegisterCancel?: OPTIONAL<RouteRegisterCancel>,
         /**
          * @summary `routeRegisterAbort`.
          * @public
@@ -89,7 +89,7 @@ class RouteingServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly routeRegisterAbort: OPTIONAL<RouteRegisterAbort>,
+        readonly routeRegisterAbort?: OPTIONAL<RouteRegisterAbort>,
         /**
          * @summary `reRoute`.
          * @public
@@ -98,7 +98,7 @@ class RouteingServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly reRoute: OPTIONAL<ReRoute>,
+        readonly reRoute?: OPTIONAL<ReRoute>,
         /**
          * @summary `routeEnd`.
          * @public
@@ -107,7 +107,7 @@ class RouteingServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly routeEnd: OPTIONAL<RouteEnd>,
+        readonly routeEnd?: OPTIONAL<RouteEnd>,
         /**
          * @summary `routeReject`.
          * @public
@@ -116,7 +116,7 @@ class RouteingServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly routeReject: OPTIONAL<RouteReject>,
+        readonly routeReject?: OPTIONAL<RouteReject>,
         /**
          * @summary `routeRequest`.
          * @public
@@ -125,7 +125,7 @@ class RouteingServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly routeRequest: OPTIONAL<RouteRequest>,
+        readonly routeRequest?: OPTIONAL<RouteRequest>,
         /**
          * @summary `routeSelect`.
          * @public
@@ -134,7 +134,7 @@ class RouteingServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly routeSelect: OPTIONAL<RouteSelect>,
+        readonly routeSelect?: OPTIONAL<RouteSelect>,
         /**
          * @summary `routeUsed`.
          * @public
@@ -143,7 +143,7 @@ class RouteingServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly routeUsed: OPTIONAL<RouteUsed>
+        readonly routeUsed?: OPTIONAL<RouteUsed>
     ) {}
 
     /**

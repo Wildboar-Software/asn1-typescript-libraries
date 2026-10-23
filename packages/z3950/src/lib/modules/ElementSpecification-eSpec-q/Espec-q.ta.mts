@@ -64,7 +64,7 @@ class Espec_q {
 
     constructor (
         valueRestrictor: ValueRestrictor,
-        elementSelector: OPTIONAL<EXTERNAL>
+        elementSelector?: OPTIONAL<EXTERNAL>
     ) {
         this.valueRestrictor = valueRestrictor;
         this.elementSelector = elementSelector;

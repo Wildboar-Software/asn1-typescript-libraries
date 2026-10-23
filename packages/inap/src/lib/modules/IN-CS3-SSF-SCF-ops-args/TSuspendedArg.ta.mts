@@ -59,8 +59,8 @@ class TSuspendedArg {
 
     constructor (
         dpSpecificCommonParameters: DpSpecificCommonParameters,
-        legID: OPTIONAL<LegID>,
-        extensions: OPTIONAL<Extensions>,
+        legID?: OPTIONAL<LegID>,
+        extensions?: OPTIONAL<Extensions>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.dpSpecificCommonParameters = dpSpecificCommonParameters;

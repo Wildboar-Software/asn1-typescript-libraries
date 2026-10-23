@@ -94,7 +94,7 @@ class Segment {
         referenceId: OPTIONAL<ReferenceId>,
         numberOfRecordsReturned: INTEGER,
         segmentRecords: NamePlusRecord[],
-        otherInfo: OPTIONAL<OtherInformation>
+        otherInfo?: OPTIONAL<OtherInformation>
     ) {
         this.referenceId = referenceId;
         this.numberOfRecordsReturned = numberOfRecordsReturned;

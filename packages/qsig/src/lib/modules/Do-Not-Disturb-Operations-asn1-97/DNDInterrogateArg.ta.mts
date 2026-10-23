@@ -59,7 +59,7 @@ class DNDInterrogateArg {
 
     constructor (
         servedUserNr: PartyNumber,
-        argumentExtension: OPTIONAL<DNDInterrogateArg_argumentExtension>
+        argumentExtension?: OPTIONAL<DNDInterrogateArg_argumentExtension>
     ) {
         this.servedUserNr = servedUserNr;
         this.argumentExtension = argumentExtension;

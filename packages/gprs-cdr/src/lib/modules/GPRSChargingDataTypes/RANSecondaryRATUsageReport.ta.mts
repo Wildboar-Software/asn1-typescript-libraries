@@ -141,8 +141,8 @@ class RANSecondaryRATUsageReport {
         dataVolumeDownlink: INTEGER,
         rANStartTime: OCTET_STRING,
         rANEndTime: OCTET_STRING,
-        secondaryRATType: OPTIONAL<RANSecondaryRATUsageReport_secondaryRATType>,
-        chargingID: OPTIONAL<INTEGER>
+        secondaryRATType?: OPTIONAL<RANSecondaryRATUsageReport_secondaryRATType>,
+        chargingID?: OPTIONAL<INTEGER>
     ) {
         this.dataVolumeUplink = dataVolumeUplink;
         this.dataVolumeDownlink = dataVolumeDownlink;

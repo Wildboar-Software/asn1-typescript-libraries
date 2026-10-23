@@ -115,7 +115,7 @@ class EESEASDiscoveryNotification {
         subscriptionID: UTF8String,
         eventType: EASEventType,
         discoveredEAS: DiscoveredEAS,
-        failureResponse: OPTIONAL<FailureResponse>,
+        failureResponse?: OPTIONAL<FailureResponse>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.subscriptionID = subscriptionID;

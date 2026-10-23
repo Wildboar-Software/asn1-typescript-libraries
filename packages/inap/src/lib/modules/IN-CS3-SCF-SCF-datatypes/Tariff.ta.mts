@@ -59,9 +59,9 @@ class Tariff {
 
     constructor (
         condition: Event,
-        meternum: OPTIONAL<INTEGER>,
-        rule: OPTIONAL<Rule>,
-        resetAfterRCI: OPTIONAL<BOOLEAN>
+        meternum?: OPTIONAL<INTEGER>,
+        rule?: OPTIONAL<Rule>,
+        resetAfterRCI?: OPTIONAL<BOOLEAN>
     ) {
         this.condition = condition;
         this.meternum = meternum;

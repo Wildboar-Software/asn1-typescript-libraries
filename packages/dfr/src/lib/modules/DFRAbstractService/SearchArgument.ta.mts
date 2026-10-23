@@ -89,7 +89,7 @@ class SearchArgument {
          * @public
          * @readonly
          */
-        readonly continue_: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
+        readonly continue_?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
         /**
          * @summary `limits`.
          * @description
@@ -99,7 +99,7 @@ class SearchArgument {
          * @public
          * @readonly
          */
-        readonly limits: OPTIONAL<Limits> /* REPLICATED_COMPONENT */,
+        readonly limits?: OPTIONAL<Limits> /* REPLICATED_COMPONENT */,
         /**
          * @summary `selection`.
          * @description
@@ -110,7 +110,7 @@ class SearchArgument {
          * @public
          * @readonly
          */
-        readonly selection: OPTIONAL<AttributeSelection> /* REPLICATED_COMPONENT */,
+        readonly selection?: OPTIONAL<AttributeSelection> /* REPLICATED_COMPONENT */,
         /**
          * @summary `ordering`.
          * @description
@@ -121,7 +121,7 @@ class SearchArgument {
          * @public
          * @readonly
          */
-        readonly ordering: OPTIONAL<OrderingRule> /* REPLICATED_COMPONENT */,
+        readonly ordering?: OPTIONAL<OrderingRule> /* REPLICATED_COMPONENT */,
         /**
          * @summary `search_domain`.
          * @description
@@ -130,7 +130,7 @@ class SearchArgument {
          * @public
          * @readonly
          */
-        readonly search_domain: OPTIONAL<SearchDomain>,
+        readonly search_domain?: OPTIONAL<SearchDomain>,
         /**
          * @summary `search_criteria`.
          * @description
@@ -139,7 +139,7 @@ class SearchArgument {
          * @public
          * @readonly
          */
-        readonly search_criteria: OPTIONAL<SearchCriteria>,
+        readonly search_criteria?: OPTIONAL<SearchCriteria>,
         /**
          * @summary `task_id`.
          * @description
@@ -151,7 +151,7 @@ class SearchArgument {
          * @public
          * @readonly
          */
-        readonly task_id: OPTIONAL<TaskId> /* REPLICATED_COMPONENT */,
+        readonly task_id?: OPTIONAL<TaskId> /* REPLICATED_COMPONENT */,
         /**
          * @summary `reservation`.
          * @description
@@ -162,7 +162,7 @@ class SearchArgument {
          * @public
          * @readonly
          */
-        readonly reservation: OPTIONAL<Reservation> /* REPLICATED_COMPONENT */,
+        readonly reservation?: OPTIONAL<Reservation> /* REPLICATED_COMPONENT */,
         /**
          * @summary `error_handling`.
          * @description
@@ -171,7 +171,7 @@ class SearchArgument {
          * @public
          * @readonly
          */
-        readonly error_handling: OPTIONAL<ErrorHandlingMode> /* REPLICATED_COMPONENT */,
+        readonly error_handling?: OPTIONAL<ErrorHandlingMode> /* REPLICATED_COMPONENT */,
         /**
          * @summary `priority`.
          * @description
@@ -182,7 +182,7 @@ class SearchArgument {
          * @public
          * @readonly
          */
-        readonly priority: OPTIONAL<Priority> /* REPLICATED_COMPONENT */,
+        readonly priority?: OPTIONAL<Priority> /* REPLICATED_COMPONENT */,
         /**
          * @summary `privileges`.
          * @description
@@ -194,7 +194,7 @@ class SearchArgument {
          * @public
          * @readonly
          */
-        readonly privileges: OPTIONAL<Privileges> /* REPLICATED_COMPONENT */
+        readonly privileges?: OPTIONAL<Privileges> /* REPLICATED_COMPONENT */
     ) {
         if (error_handling !== undefined && !("all_or_nothing" in error_handling)) {
             throw new _ConstructionError("SearchArgument.error-handling shall be absent");

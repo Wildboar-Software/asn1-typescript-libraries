@@ -49,7 +49,7 @@ class Trigger {
 
     constructor (
         tDPIdentifier: INTEGER,
-        dpName: OPTIONAL<EventTypeBCSM>,
+        dpName?: OPTIONAL<EventTypeBCSM>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.tDPIdentifier = tDPIdentifier;

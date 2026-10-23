@@ -54,7 +54,7 @@ class MonitoringServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly changeMonitorFilter: OPTIONAL<ChangeMonitorFilter>,
+        readonly changeMonitorFilter?: OPTIONAL<ChangeMonitorFilter>,
         /**
          * @summary `monitorStart`.
          * @public
@@ -63,7 +63,7 @@ class MonitoringServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly monitorStart: OPTIONAL<MonitorStart>,
+        readonly monitorStart?: OPTIONAL<MonitorStart>,
         /**
          * @summary `monitorStop`.
          * @public
@@ -72,7 +72,7 @@ class MonitoringServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly monitorStop: OPTIONAL<MonitorStop>,
+        readonly monitorStop?: OPTIONAL<MonitorStop>,
         /**
          * @summary `getMonitors`.
          * @public
@@ -81,7 +81,7 @@ class MonitoringServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly getMonitors: OPTIONAL<GetMonitors>,
+        readonly getMonitors?: OPTIONAL<GetMonitors>,
         /**
          * @summary `monitorInfo`.
          * @public
@@ -90,7 +90,7 @@ class MonitoringServList {
          * Capability bitmap for this service; omit if the SF does not support
          * it (ECMA-269 Annex C).
          */
-        readonly monitorInfo: OPTIONAL<MonitorInfo>
+        readonly monitorInfo?: OPTIONAL<MonitorInfo>
     ) {}
 
     /**

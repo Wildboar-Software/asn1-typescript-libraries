@@ -81,8 +81,8 @@ class TargetConnectionMethod {
 
     constructor (
         connectionStatus: BOOLEAN,
-        upstream: OPTIONAL<Upstream>,
-        downstream: OPTIONAL<Downstream>,
+        upstream?: OPTIONAL<Upstream>,
+        downstream?: OPTIONAL<Downstream>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.connectionStatus = connectionStatus;

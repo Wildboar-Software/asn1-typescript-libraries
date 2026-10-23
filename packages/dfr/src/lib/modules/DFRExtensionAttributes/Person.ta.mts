@@ -47,7 +47,7 @@ class Person {
          * @public
          * @readonly
          */
-        readonly surname: OPTIONAL<CharacterData>,
+        readonly surname?: OPTIONAL<CharacterData>,
         /**
          * @summary `givenname`.
          * @description
@@ -56,7 +56,7 @@ class Person {
          * @public
          * @readonly
          */
-        readonly givenname: OPTIONAL<CharacterData>,
+        readonly givenname?: OPTIONAL<CharacterData>,
         /**
          * @summary `initials`.
          * @description
@@ -65,7 +65,7 @@ class Person {
          * @public
          * @readonly
          */
-        readonly initials: OPTIONAL<CharacterData>,
+        readonly initials?: OPTIONAL<CharacterData>,
         /**
          * @summary `title`.
          * @description
@@ -74,7 +74,7 @@ class Person {
          * @public
          * @readonly
          */
-        readonly title: OPTIONAL<CharacterData>,
+        readonly title?: OPTIONAL<CharacterData>,
         /**
          * @summary `organization`.
          * @description
@@ -83,7 +83,7 @@ class Person {
          * @public
          * @readonly
          */
-        readonly organization: OPTIONAL<CharacterData>
+        readonly organization?: OPTIONAL<CharacterData>
     ) {}
 
     /**

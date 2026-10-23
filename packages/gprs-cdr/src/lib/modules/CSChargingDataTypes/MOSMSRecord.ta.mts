@@ -357,12 +357,12 @@ class MOSMSRecord {
         location: OPTIONAL<LocationAreaAndCell>,
         messageReference: OCTET_STRING,
         originationTime: OCTET_STRING,
-        smsResult: OPTIONAL<HLRIntResult>,
-        recordExtensions: OPTIONAL<ManagementExtension[]>,
-        destinationNumber: OPTIONAL<OCTET_STRING>,
-        cAMELSMSInformation: OPTIONAL<CAMELSMSInformation>,
-        systemType: OPTIONAL<SystemType>,
-        locationExtension: OPTIONAL<BIT_STRING>
+        smsResult?: OPTIONAL<HLRIntResult>,
+        recordExtensions?: OPTIONAL<ManagementExtension[]>,
+        destinationNumber?: OPTIONAL<OCTET_STRING>,
+        cAMELSMSInformation?: OPTIONAL<CAMELSMSInformation>,
+        systemType?: OPTIONAL<SystemType>,
+        locationExtension?: OPTIONAL<BIT_STRING>
     ) {
         this.recordType = recordType;
         this.servedIMSI = servedIMSI;

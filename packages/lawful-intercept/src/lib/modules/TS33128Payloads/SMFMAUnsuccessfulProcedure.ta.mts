@@ -372,14 +372,14 @@ class SMFMAUnsuccessfulProcedure {
         gPSI: OPTIONAL<GPSI>,
         pDUSessionID: OPTIONAL<PDUSessionID>,
         accessInfo: AccessInfo[],
-        uEEndpoint: OPTIONAL<UEEndpointAddress[]>,
-        location: OPTIONAL<Location>,
-        dNN: OPTIONAL<DNN>,
-        aMFID: OPTIONAL<AMFID>,
-        hSMFURI: OPTIONAL<HSMFURI>,
-        requestType: OPTIONAL<FiveGSMRequestType>,
-        sMPDUDNRequest: OPTIONAL<SMPDUDNRequest>,
-        alternativeNSSAI: OPTIONAL<AlternativeNSSAIList>,
+        uEEndpoint?: OPTIONAL<UEEndpointAddress[]>,
+        location?: OPTIONAL<Location>,
+        dNN?: OPTIONAL<DNN>,
+        aMFID?: OPTIONAL<AMFID>,
+        hSMFURI?: OPTIONAL<HSMFURI>,
+        requestType?: OPTIONAL<FiveGSMRequestType>,
+        sMPDUDNRequest?: OPTIONAL<SMPDUDNRequest>,
+        alternativeNSSAI?: OPTIONAL<AlternativeNSSAIList>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.failedProcedureType = failedProcedureType;

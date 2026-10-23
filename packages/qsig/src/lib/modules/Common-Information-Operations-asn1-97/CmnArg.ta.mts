@@ -120,12 +120,12 @@ class CmnArg {
     readonly extension: OPTIONAL<CmnArg_extension>;
 
     constructor (
-        featureIdentifier: OPTIONAL<FeatureIdList>,
-        ssDNDOprotectionLevel: OPTIONAL<INTEGER>,
-        ssCIprotectionLevel: OPTIONAL<INTEGER>,
-        equipmentIdentity: OPTIONAL<EquipmentId>,
-        partyCategory: OPTIONAL<PartyCategory>,
-        extension: OPTIONAL<CmnArg_extension>
+        featureIdentifier?: OPTIONAL<FeatureIdList>,
+        ssDNDOprotectionLevel?: OPTIONAL<INTEGER>,
+        ssCIprotectionLevel?: OPTIONAL<INTEGER>,
+        equipmentIdentity?: OPTIONAL<EquipmentId>,
+        partyCategory?: OPTIONAL<PartyCategory>,
+        extension?: OPTIONAL<CmnArg_extension>
     ) {
         this.featureIdentifier = featureIdentifier;
         this.ssDNDOprotectionLevel = ssDNDOprotectionLevel;

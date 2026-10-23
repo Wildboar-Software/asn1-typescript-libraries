@@ -71,8 +71,8 @@ class OAbandonArg {
     constructor (
         dpSpecificCommonParameters: DpSpecificCommonParameters,
         callSegmentID: CallSegmentID,
-        releaseCause: OPTIONAL<Cause>,
-        extensions: OPTIONAL<ExtensionField[]>,
+        releaseCause?: OPTIONAL<Cause>,
+        extensions?: OPTIONAL<ExtensionField[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.dpSpecificCommonParameters = dpSpecificCommonParameters;

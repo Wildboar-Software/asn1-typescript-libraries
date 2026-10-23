@@ -73,7 +73,7 @@ class MonitorStartArgument {
          * @public
          * @readonly
          */
-        readonly requestedMonitorFilter: OPTIONAL<MonitorFilter>,
+        readonly requestedMonitorFilter?: OPTIONAL<MonitorFilter>,
         /**
          * @summary `monitorType`.
          * @description
@@ -82,7 +82,7 @@ class MonitorStartArgument {
          * @public
          * @readonly
          */
-        readonly monitorType: OPTIONAL<MonitorType>,
+        readonly monitorType?: OPTIONAL<MonitorType>,
         /**
          * @summary `requestedMonitorMediaClass`.
          * @description
@@ -92,7 +92,7 @@ class MonitorStartArgument {
          * @public
          * @readonly
          */
-        readonly requestedMonitorMediaClass: OPTIONAL<MonitorMediaClass>,
+        readonly requestedMonitorMediaClass?: OPTIONAL<MonitorMediaClass>,
         /**
          * @summary `extensions`.
          * @description
@@ -102,7 +102,7 @@ class MonitorStartArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

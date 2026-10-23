@@ -49,19 +49,19 @@ class FilteredCallTreatment {
          * @public
          * @readonly
          */
-        readonly informationToSend: OPTIONAL<InformationToSend>,
+        readonly informationToSend?: OPTIONAL<InformationToSend>,
         /**
          * @summary `maximumNumberOfCounters`.
          * @public
          * @readonly
          */
-        readonly maximumNumberOfCounters: OPTIONAL<MaximumNumberOfCounters>,
+        readonly maximumNumberOfCounters?: OPTIONAL<MaximumNumberOfCounters>,
         /**
          * @summary `releaseCause`.
          * @public
          * @readonly
          */
-        readonly releaseCause: OPTIONAL<Cause>
+        readonly releaseCause?: OPTIONAL<Cause>
     ) {}
 
     /**

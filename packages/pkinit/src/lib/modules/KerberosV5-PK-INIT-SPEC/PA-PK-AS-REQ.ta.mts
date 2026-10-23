@@ -115,7 +115,7 @@ class PA_PK_AS_REQ {
          * @public
          * @readonly
          */
-        readonly trustedCertifiers: OPTIONAL<ExternalPrincipalIdentifier[]>,
+        readonly trustedCertifiers?: OPTIONAL<ExternalPrincipalIdentifier[]>,
         /**
          * CMS `SignerIdentifier`
          * ([RFC 3852](https://www.rfc-editor.org/rfc/rfc3852))
@@ -130,7 +130,7 @@ class PA_PK_AS_REQ {
          * @public
          * @readonly
          */
-        readonly kdcPkId: OPTIONAL<OCTET_STRING>,
+        readonly kdcPkId?: OPTIONAL<OCTET_STRING>,
         /**
          * @summary Extensions that are not recognized.
          * @public

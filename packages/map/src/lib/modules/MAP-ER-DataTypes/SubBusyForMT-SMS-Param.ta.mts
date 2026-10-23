@@ -36,7 +36,7 @@ class SubBusyForMT_SMS_Param {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `gprsConnectionSuspended`.
          * @description
@@ -47,7 +47,7 @@ class SubBusyForMT_SMS_Param {
          * @public
          * @readonly
          */
-        readonly gprsConnectionSuspended: OPTIONAL<NULL>,
+        readonly gprsConnectionSuspended?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -74,7 +74,7 @@ class BDforDownloadModel {
          * @public
          * @readonly
          */
-        readonly aCforBioOnClient: OPTIONAL<ACBioContentInformation>
+        readonly aCforBioOnClient?: OPTIONAL<ACBioContentInformation>
     ) {}
 
     /**

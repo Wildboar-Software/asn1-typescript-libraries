@@ -93,9 +93,9 @@ class DiagFormat_attribute {
 
     constructor (
         id: OBJECT_IDENTIFIER,
-        type_: OPTIONAL<INTEGER>,
-        value: OPTIONAL<INTEGER>,
-        term: OPTIONAL<Term>
+        type_?: OPTIONAL<INTEGER>,
+        value?: OPTIONAL<INTEGER>,
+        term?: OPTIONAL<Term>
     ) {
         this.id = id;
         this.type_ = type_;

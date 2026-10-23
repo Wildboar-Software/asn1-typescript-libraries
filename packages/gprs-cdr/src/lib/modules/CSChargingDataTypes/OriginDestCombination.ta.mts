@@ -39,8 +39,8 @@ class OriginDestCombination {
     readonly destination: OPTIONAL<INTEGER>;
 
     constructor (
-        origin: OPTIONAL<INTEGER>,
-        destination: OPTIONAL<INTEGER>
+        origin?: OPTIONAL<INTEGER>,
+        destination?: OPTIONAL<INTEGER>
     ) {
         this.origin = origin;
         this.destination = destination;

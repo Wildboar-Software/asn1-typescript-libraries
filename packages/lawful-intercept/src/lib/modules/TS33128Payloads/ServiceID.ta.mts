@@ -55,8 +55,8 @@ class ServiceID {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        nSSAI: OPTIONAL<NSSAI>,
-        cAGID: OPTIONAL<CAGID[]>,
+        nSSAI?: OPTIONAL<NSSAI>,
+        cAGID?: OPTIONAL<CAGID[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.nSSAI = nSSAI;

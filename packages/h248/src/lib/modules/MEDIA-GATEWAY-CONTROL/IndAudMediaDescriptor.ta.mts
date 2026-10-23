@@ -46,7 +46,7 @@ class IndAudMediaDescriptor {
          * @public
          * @readonly
          */
-        readonly termStateDescr: OPTIONAL<IndAudTerminationStateDescriptor>,
+        readonly termStateDescr?: OPTIONAL<IndAudTerminationStateDescriptor>,
         /**
          * @summary `streams`.
          * @description
@@ -58,7 +58,7 @@ class IndAudMediaDescriptor {
          * @public
          * @readonly
          */
-        readonly streams: OPTIONAL<IndAudMediaDescriptor_streams>,
+        readonly streams?: OPTIONAL<IndAudMediaDescriptor_streams>,
         /**
          * @summary Extensions that are not recognized.
          * @description

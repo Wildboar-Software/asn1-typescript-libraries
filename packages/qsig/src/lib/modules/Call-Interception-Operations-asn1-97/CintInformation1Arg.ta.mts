@@ -74,7 +74,7 @@ class CintInformation1Arg {
     constructor (
         interceptionCause: CintCause,
         interceptedToNumber: PartyNumber,
-        extension: OPTIONAL<CintExtension>
+        extension?: OPTIONAL<CintExtension>
     ) {
         this.interceptionCause = interceptionCause;
         this.interceptedToNumber = interceptedToNumber;

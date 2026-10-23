@@ -49,7 +49,7 @@ class ProcessGroupCallSignallingArg {
          * @public
          * @readonly
          */
-        readonly uplinkRequest: OPTIONAL<NULL>,
+        readonly uplinkRequest?: OPTIONAL<NULL>,
         /**
          * @summary `uplinkReleaseIndication`.
          * @description
@@ -59,7 +59,7 @@ class ProcessGroupCallSignallingArg {
          * @public
          * @readonly
          */
-        readonly uplinkReleaseIndication: OPTIONAL<NULL>,
+        readonly uplinkReleaseIndication?: OPTIONAL<NULL>,
         /**
          * @summary `releaseGroupCall`.
          * @description
@@ -70,7 +70,7 @@ class ProcessGroupCallSignallingArg {
          * @public
          * @readonly
          */
-        readonly releaseGroupCall: OPTIONAL<NULL>,
+        readonly releaseGroupCall?: OPTIONAL<NULL>,
         /**
          * @summary `extensionContainer`.
          * @description
@@ -80,7 +80,7 @@ class ProcessGroupCallSignallingArg {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `talkerPriority`.
          * @description
@@ -90,7 +90,7 @@ class ProcessGroupCallSignallingArg {
          * @public
          * @readonly
          */
-        readonly talkerPriority: OPTIONAL<TalkerPriority>,
+        readonly talkerPriority?: OPTIONAL<TalkerPriority>,
         /**
          * @summary `additionalInfo`.
          * @description
@@ -100,7 +100,7 @@ class ProcessGroupCallSignallingArg {
          * @public
          * @readonly
          */
-        readonly additionalInfo: OPTIONAL<AdditionalInfo>,
+        readonly additionalInfo?: OPTIONAL<AdditionalInfo>,
         /**
          * @summary `emergencyModeResetCommandFlag`.
          * @description
@@ -110,7 +110,7 @@ class ProcessGroupCallSignallingArg {
          * @public
          * @readonly
          */
-        readonly emergencyModeResetCommandFlag: OPTIONAL<NULL>,
+        readonly emergencyModeResetCommandFlag?: OPTIONAL<NULL>,
         /**
          * @summary `an_APDU`.
          * @description
@@ -120,7 +120,7 @@ class ProcessGroupCallSignallingArg {
          * @public
          * @readonly
          */
-        readonly an_APDU: OPTIONAL<AccessNetworkSignalInfo>,
+        readonly an_APDU?: OPTIONAL<AccessNetworkSignalInfo>,
         /**
          * @summary Extensions that are not recognized.
          * @public

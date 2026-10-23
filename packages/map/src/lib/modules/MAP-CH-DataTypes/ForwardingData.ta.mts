@@ -50,7 +50,7 @@ class ForwardingData {
          * @public
          * @readonly
          */
-        readonly forwardedToNumber: OPTIONAL<ISDN_AddressString>,
+        readonly forwardedToNumber?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `forwardedToSubaddress`.
          * @description
@@ -60,7 +60,7 @@ class ForwardingData {
          * @public
          * @readonly
          */
-        readonly forwardedToSubaddress: OPTIONAL<ISDN_SubaddressString>,
+        readonly forwardedToSubaddress?: OPTIONAL<ISDN_SubaddressString>,
         /**
          * @summary `forwardingOptions`.
          * @description
@@ -70,7 +70,7 @@ class ForwardingData {
          * @public
          * @readonly
          */
-        readonly forwardingOptions: OPTIONAL<ForwardingOptions>,
+        readonly forwardingOptions?: OPTIONAL<ForwardingOptions>,
         /**
          * @summary `extensionContainer`.
          * @description
@@ -80,7 +80,7 @@ class ForwardingData {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `longForwardedToNumber`.
          * @description
@@ -90,7 +90,7 @@ class ForwardingData {
          * @public
          * @readonly
          */
-        readonly longForwardedToNumber: OPTIONAL<FTN_AddressString>,
+        readonly longForwardedToNumber?: OPTIONAL<FTN_AddressString>,
         /**
          * @summary Extensions that are not recognized.
          * @public

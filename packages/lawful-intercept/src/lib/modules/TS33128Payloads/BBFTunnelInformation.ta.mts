@@ -64,7 +64,7 @@ class BBFTunnelInformation {
 
     constructor (
         hENBTransportLayerAddress: IPAddr,
-        uDPPortNumber: OPTIONAL<PortNumber>,
+        uDPPortNumber?: OPTIONAL<PortNumber>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.hENBTransportLayerAddress = hENBTransportLayerAddress;

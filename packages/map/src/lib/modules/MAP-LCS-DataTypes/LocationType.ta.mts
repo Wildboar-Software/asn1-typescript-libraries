@@ -49,7 +49,7 @@ class LocationType {
          * @public
          * @readonly
          */
-        readonly deferredLocationEventType: OPTIONAL<DeferredLocationEventType>,
+        readonly deferredLocationEventType?: OPTIONAL<DeferredLocationEventType>,
         /**
          * @summary Extensions that are not recognized.
          * @public

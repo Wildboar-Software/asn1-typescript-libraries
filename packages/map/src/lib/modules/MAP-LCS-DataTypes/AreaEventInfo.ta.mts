@@ -51,7 +51,7 @@ class AreaEventInfo {
          * @public
          * @readonly
          */
-        readonly occurrenceInfo: OPTIONAL<OccurrenceInfo>,
+        readonly occurrenceInfo?: OPTIONAL<OccurrenceInfo>,
         /**
          * @summary `intervalTime`.
          * @description
@@ -61,7 +61,7 @@ class AreaEventInfo {
          * @public
          * @readonly
          */
-        readonly intervalTime: OPTIONAL<IntervalTime>,
+        readonly intervalTime?: OPTIONAL<IntervalTime>,
         /**
          * @summary Extensions that are not recognized.
          * @public

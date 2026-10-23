@@ -183,19 +183,19 @@ class EPCQoSInformation {
 
     constructor (
         qCI: INTEGER,
-        maxRequestedBandwithUL: OPTIONAL<INTEGER>,
-        maxRequestedBandwithDL: OPTIONAL<INTEGER>,
-        guaranteedBitrateUL: OPTIONAL<INTEGER>,
-        guaranteedBitrateDL: OPTIONAL<INTEGER>,
-        aRP: OPTIONAL<INTEGER>,
-        aPNAggregateMaxBitrateUL: OPTIONAL<INTEGER>,
-        aPNAggregateMaxBitrateDL: OPTIONAL<INTEGER>,
-        extendedMaxRequestedBWUL: OPTIONAL<INTEGER>,
-        extendedMaxRequestedBWDL: OPTIONAL<INTEGER>,
-        extendedGBRUL: OPTIONAL<INTEGER>,
-        extendedGBRDL: OPTIONAL<INTEGER>,
-        extendedAPNAMBRUL: OPTIONAL<INTEGER>,
-        extendedAPNAMBRDL: OPTIONAL<INTEGER>
+        maxRequestedBandwithUL?: OPTIONAL<INTEGER>,
+        maxRequestedBandwithDL?: OPTIONAL<INTEGER>,
+        guaranteedBitrateUL?: OPTIONAL<INTEGER>,
+        guaranteedBitrateDL?: OPTIONAL<INTEGER>,
+        aRP?: OPTIONAL<INTEGER>,
+        aPNAggregateMaxBitrateUL?: OPTIONAL<INTEGER>,
+        aPNAggregateMaxBitrateDL?: OPTIONAL<INTEGER>,
+        extendedMaxRequestedBWUL?: OPTIONAL<INTEGER>,
+        extendedMaxRequestedBWDL?: OPTIONAL<INTEGER>,
+        extendedGBRUL?: OPTIONAL<INTEGER>,
+        extendedGBRDL?: OPTIONAL<INTEGER>,
+        extendedAPNAMBRUL?: OPTIONAL<INTEGER>,
+        extendedAPNAMBRDL?: OPTIONAL<INTEGER>
     ) {
         this.qCI = qCI;
         this.maxRequestedBandwithUL = maxRequestedBandwithUL;

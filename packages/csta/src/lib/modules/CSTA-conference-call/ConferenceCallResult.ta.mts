@@ -71,7 +71,7 @@ class ConferenceCallResult {
          * @public
          * @readonly
          */
-        readonly connections: OPTIONAL<ConnectionList>,
+        readonly connections?: OPTIONAL<ConnectionList>,
         /**
          * @summary `conferenceCallInfo`.
          * @description
@@ -82,7 +82,7 @@ class ConferenceCallResult {
          * @public
          * @readonly
          */
-        readonly conferenceCallInfo: OPTIONAL<ConnectionInformation>,
+        readonly conferenceCallInfo?: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `callLinkageDataList`.
          * @description
@@ -93,7 +93,7 @@ class ConferenceCallResult {
          * @public
          * @readonly
          */
-        readonly callLinkageDataList: OPTIONAL<CallLinkageDataList>,
+        readonly callLinkageDataList?: OPTIONAL<CallLinkageDataList>,
         /**
          * @summary `extensions`.
          * @description
@@ -104,7 +104,7 @@ class ConferenceCallResult {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

@@ -74,8 +74,8 @@ class MSCFInformation {
     readonly routeingAddressList: OPTIONAL<MMSAgentAddress[]>;
 
     constructor (
-        billingInformation: OPTIONAL<OCTET_STRING>,
-        routeingAddressList: OPTIONAL<MMSAgentAddress[]>
+        billingInformation?: OPTIONAL<OCTET_STRING>,
+        routeingAddressList?: OPTIONAL<MMSAgentAddress[]>
     ) {
         this.billingInformation = billingInformation;
         this.routeingAddressList = routeingAddressList;

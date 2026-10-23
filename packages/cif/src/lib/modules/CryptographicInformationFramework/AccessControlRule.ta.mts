@@ -69,7 +69,7 @@ class AccessControlRule {
          * @public
          * @readonly
          */
-        readonly communicationMode: OPTIONAL<CommunicationMode>,
+        readonly communicationMode?: OPTIONAL<CommunicationMode>,
         /**
          * @summary `lifeCycleStatus`.
          * @description
@@ -78,7 +78,7 @@ class AccessControlRule {
          * @public
          * @readonly
          */
-        readonly lifeCycleStatus: OPTIONAL<LifeCycleStatus>,
+        readonly lifeCycleStatus?: OPTIONAL<LifeCycleStatus>,
         /**
          * @summary `verifLimitDates`.
          * @description
@@ -88,7 +88,7 @@ class AccessControlRule {
          * @public
          * @readonly
          */
-        readonly verifLimitDates: OPTIONAL<RangeOfDate>,
+        readonly verifLimitDates?: OPTIONAL<RangeOfDate>,
         /**
          * @summary Extensions that are not recognized.
          * @public

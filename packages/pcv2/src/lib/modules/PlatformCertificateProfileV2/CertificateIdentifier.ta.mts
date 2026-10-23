@@ -66,8 +66,8 @@ class CertificateIdentifier {
     readonly genericCertIdentifier: OPTIONAL<IssuerSerial>;
 
     constructor (
-        hashedCertIdentifier: OPTIONAL<HashedCertificateIdentifier>,
-        genericCertIdentifier: OPTIONAL<IssuerSerial>
+        hashedCertIdentifier?: OPTIONAL<HashedCertificateIdentifier>,
+        genericCertIdentifier?: OPTIONAL<IssuerSerial>
     ) {
         this.hashedCertIdentifier = hashedCertIdentifier;
         this.genericCertIdentifier = genericCertIdentifier;

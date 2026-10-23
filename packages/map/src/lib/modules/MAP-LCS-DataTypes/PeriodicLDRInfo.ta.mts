@@ -64,7 +64,7 @@ class PeriodicLDRInfo {
          * @public
          * @readonly
          */
-        readonly reportingOptionMilliseconds: OPTIONAL<ReportingOptionMilliseconds>,
+        readonly reportingOptionMilliseconds?: OPTIONAL<ReportingOptionMilliseconds>,
         /**
          * @summary Extensions that are not recognized.
          * @public

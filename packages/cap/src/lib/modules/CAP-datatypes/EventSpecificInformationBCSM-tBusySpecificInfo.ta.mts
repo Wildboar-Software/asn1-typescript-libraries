@@ -43,7 +43,7 @@ export class EventSpecificInformationBCSM_tBusySpecificInfo {
          * @public
          * @readonly
          */
-        readonly busyCause: OPTIONAL<Cause>,
+        readonly busyCause?: OPTIONAL<Cause>,
         /**
          * @summary `callForwarded`.
          * @description
@@ -54,7 +54,7 @@ export class EventSpecificInformationBCSM_tBusySpecificInfo {
          * @public
          * @readonly
          */
-        readonly callForwarded: OPTIONAL<NULL>,
+        readonly callForwarded?: OPTIONAL<NULL>,
         /**
          * @summary `routeNotPermitted`.
          * @description
@@ -65,7 +65,7 @@ export class EventSpecificInformationBCSM_tBusySpecificInfo {
          * @public
          * @readonly
          */
-        readonly routeNotPermitted: OPTIONAL<NULL>,
+        readonly routeNotPermitted?: OPTIONAL<NULL>,
         /**
          * @summary `forwardingDestinationNumber`.
          * @description
@@ -76,7 +76,7 @@ export class EventSpecificInformationBCSM_tBusySpecificInfo {
          * @public
          * @readonly
          */
-        readonly forwardingDestinationNumber: OPTIONAL<CalledPartyNumber>,
+        readonly forwardingDestinationNumber?: OPTIONAL<CalledPartyNumber>,
         readonly _unrecognizedExtensionsList: _Element[] = [],
     ) {}
 

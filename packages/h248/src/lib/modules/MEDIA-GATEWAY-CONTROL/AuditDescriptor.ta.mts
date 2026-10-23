@@ -65,7 +65,7 @@ class AuditDescriptor {
          * @public
          * @readonly
          */
-        readonly auditToken: OPTIONAL<AuditDescriptor_auditToken>,
+        readonly auditToken?: OPTIONAL<AuditDescriptor_auditToken>,
         /**
          * @summary `auditPropertyToken`.
          * @description
@@ -78,7 +78,7 @@ class AuditDescriptor {
          * @public
          * @readonly
          */
-        readonly auditPropertyToken: OPTIONAL<IndAuditParameter[]>,
+        readonly auditPropertyToken?: OPTIONAL<IndAuditParameter[]>,
         /**
          * @summary Extensions that are not recognized.
          * @description

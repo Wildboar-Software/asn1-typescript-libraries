@@ -74,7 +74,7 @@ class BDforCObyServerModel {
          * @public
          * @readonly
          */
-        readonly aCforBiometrics: OPTIONAL<ACBioContentInformation>
+        readonly aCforBiometrics?: OPTIONAL<ACBioContentInformation>
     ) {}
 
     /**

@@ -195,10 +195,10 @@ class EESACRSubscription {
         subscriptionType: SubscriptionType,
         expirationTime: OPTIONAL<Timestamp>,
         eASIDs: EASIDs,
-        aCIDs: OPTIONAL<ACIDs>,
-        eventIDs: OPTIONAL<ACREventIDs>,
-        subscriptionId: OPTIONAL<UTF8String>,
-        failureResponse: OPTIONAL<FailureResponse>,
+        aCIDs?: OPTIONAL<ACIDs>,
+        eventIDs?: OPTIONAL<ACREventIDs>,
+        subscriptionId?: OPTIONAL<UTF8String>,
+        failureResponse?: OPTIONAL<FailureResponse>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.eECID = eECID;

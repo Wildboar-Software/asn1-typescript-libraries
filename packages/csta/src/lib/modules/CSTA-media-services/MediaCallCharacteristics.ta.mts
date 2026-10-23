@@ -101,7 +101,7 @@ class MediaCallCharacteristics {
          * @public
          * @readonly
          */
-        readonly connectionRate: OPTIONAL<INTEGER>,
+        readonly connectionRate?: OPTIONAL<INTEGER>,
         /**
          * @summary `bitRate`.
          * @description
@@ -112,7 +112,7 @@ class MediaCallCharacteristics {
          * @public
          * @readonly
          */
-        readonly bitRate: OPTIONAL<MediaCallCharacteristics_bitRate>,
+        readonly bitRate?: OPTIONAL<MediaCallCharacteristics_bitRate>,
         /**
          * @summary `delayTolerance`.
          * @description
@@ -124,7 +124,7 @@ class MediaCallCharacteristics {
          * @public
          * @readonly
          */
-        readonly delayTolerance: OPTIONAL<INTEGER>,
+        readonly delayTolerance?: OPTIONAL<INTEGER>,
         /**
          * @summary `switchingSubDomainCCIEType`.
          * @description
@@ -136,7 +136,7 @@ class MediaCallCharacteristics {
          * @public
          * @readonly
          */
-        readonly switchingSubDomainCCIEType: OPTIONAL<MediaCallCharacteristics_switchingSubDomainCCIEType>,
+        readonly switchingSubDomainCCIEType?: OPTIONAL<MediaCallCharacteristics_switchingSubDomainCCIEType>,
         /**
          * @summary `switchingSubDomainInformationElements`.
          * @description
@@ -148,7 +148,7 @@ class MediaCallCharacteristics {
          * @public
          * @readonly
          */
-        readonly switchingSubDomainInformationElements: OPTIONAL<OCTET_STRING>
+        readonly switchingSubDomainInformationElements?: OPTIONAL<OCTET_STRING>
     ) {}
 
     /**

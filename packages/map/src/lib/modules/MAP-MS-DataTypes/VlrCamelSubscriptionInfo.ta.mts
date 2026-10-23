@@ -63,13 +63,13 @@ class VlrCamelSubscriptionInfo {
          * @public
          * @readonly
          */
-        readonly o_CSI: OPTIONAL<O_CSI>,
+        readonly o_CSI?: OPTIONAL<O_CSI>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `ss_CSI`.
          * @description
@@ -81,7 +81,7 @@ class VlrCamelSubscriptionInfo {
          * @public
          * @readonly
          */
-        readonly ss_CSI: OPTIONAL<SS_CSI>,
+        readonly ss_CSI?: OPTIONAL<SS_CSI>,
         /**
          * @summary `o_BcsmCamelTDP_CriteriaList`.
          * @description
@@ -93,7 +93,7 @@ class VlrCamelSubscriptionInfo {
          * @public
          * @readonly
          */
-        readonly o_BcsmCamelTDP_CriteriaList: OPTIONAL<O_BcsmCamelTDPCriteriaList>,
+        readonly o_BcsmCamelTDP_CriteriaList?: OPTIONAL<O_BcsmCamelTDPCriteriaList>,
         /**
          * @summary `tif_CSI`.
          * @description
@@ -105,7 +105,7 @@ class VlrCamelSubscriptionInfo {
          * @public
          * @readonly
          */
-        readonly tif_CSI: OPTIONAL<NULL>,
+        readonly tif_CSI?: OPTIONAL<NULL>,
         /**
          * @summary `m_CSI`.
          * @description
@@ -117,7 +117,7 @@ class VlrCamelSubscriptionInfo {
          * @public
          * @readonly
          */
-        readonly m_CSI: OPTIONAL<M_CSI>,
+        readonly m_CSI?: OPTIONAL<M_CSI>,
         /**
          * @summary `mo_sms_CSI`.
          * @description
@@ -129,7 +129,7 @@ class VlrCamelSubscriptionInfo {
          * @public
          * @readonly
          */
-        readonly mo_sms_CSI: OPTIONAL<SMS_CSI>,
+        readonly mo_sms_CSI?: OPTIONAL<SMS_CSI>,
         /**
          * @summary `vt_CSI`.
          * @description
@@ -141,7 +141,7 @@ class VlrCamelSubscriptionInfo {
          * @public
          * @readonly
          */
-        readonly vt_CSI: OPTIONAL<T_CSI>,
+        readonly vt_CSI?: OPTIONAL<T_CSI>,
         /**
          * @summary `t_BCSM_CAMEL_TDP_CriteriaList`.
          * @description
@@ -153,7 +153,7 @@ class VlrCamelSubscriptionInfo {
          * @public
          * @readonly
          */
-        readonly t_BCSM_CAMEL_TDP_CriteriaList: OPTIONAL<T_BCSM_CAMEL_TDP_CriteriaList>,
+        readonly t_BCSM_CAMEL_TDP_CriteriaList?: OPTIONAL<T_BCSM_CAMEL_TDP_CriteriaList>,
         /**
          * @summary `d_CSI`.
          * @description
@@ -165,7 +165,7 @@ class VlrCamelSubscriptionInfo {
          * @public
          * @readonly
          */
-        readonly d_CSI: OPTIONAL<D_CSI>,
+        readonly d_CSI?: OPTIONAL<D_CSI>,
         /**
          * @summary `mt_sms_CSI`.
          * @description
@@ -177,7 +177,7 @@ class VlrCamelSubscriptionInfo {
          * @public
          * @readonly
          */
-        readonly mt_sms_CSI: OPTIONAL<SMS_CSI>,
+        readonly mt_sms_CSI?: OPTIONAL<SMS_CSI>,
         /**
          * @summary `mt_smsCAMELTDP_CriteriaList`.
          * @description
@@ -189,7 +189,7 @@ class VlrCamelSubscriptionInfo {
          * @public
          * @readonly
          */
-        readonly mt_smsCAMELTDP_CriteriaList: OPTIONAL<MT_smsCAMELTDP_CriteriaList>,
+        readonly mt_smsCAMELTDP_CriteriaList?: OPTIONAL<MT_smsCAMELTDP_CriteriaList>,
         /**
          * @summary Extensions that are not recognized.
          * @public

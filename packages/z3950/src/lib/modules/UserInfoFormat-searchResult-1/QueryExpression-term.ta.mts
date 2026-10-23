@@ -51,7 +51,7 @@ class QueryExpression_term {
 
     constructor (
         queryTerm: Term,
-        termComment: OPTIONAL<InternationalString>
+        termComment?: OPTIONAL<InternationalString>
     ) {
         this.queryTerm = queryTerm;
         this.termComment = termComment;

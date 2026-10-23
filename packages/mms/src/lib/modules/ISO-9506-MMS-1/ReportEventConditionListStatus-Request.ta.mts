@@ -61,7 +61,7 @@ class ReportEventConditionListStatus_Request {
          * @public
          * @readonly
          */
-        readonly continueAfter: OPTIONAL<Identifier>
+        readonly continueAfter?: OPTIONAL<Identifier>
     ) {}
 
     /**

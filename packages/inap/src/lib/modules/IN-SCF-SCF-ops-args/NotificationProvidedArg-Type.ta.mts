@@ -78,10 +78,10 @@ class NotificationProvidedArg_Type {
 
     constructor (
         notification: Notification,
-        notificationInformation: OPTIONAL<NotificationInformation>,
-        securityParameters: OPTIONAL<SecurityParameters>,
-        extensions: OPTIONAL<Extensions>,
-        partyID: OPTIONAL<PartyID>,
+        notificationInformation?: OPTIONAL<NotificationInformation>,
+        securityParameters?: OPTIONAL<SecurityParameters>,
+        extensions?: OPTIONAL<Extensions>,
+        partyID?: OPTIONAL<PartyID>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.notification = notification;

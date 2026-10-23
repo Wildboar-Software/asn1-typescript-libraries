@@ -104,7 +104,7 @@ class PrepareHO_Arg {
          * @public
          * @readonly
          */
-        readonly targetCellId: OPTIONAL<GlobalCellId>,
+        readonly targetCellId?: OPTIONAL<GlobalCellId>,
         /**
          * @summary `ho_NumberNotRequired`.
          * @description
@@ -116,7 +116,7 @@ class PrepareHO_Arg {
          * @public
          * @readonly
          */
-        readonly ho_NumberNotRequired: OPTIONAL<NULL>,
+        readonly ho_NumberNotRequired?: OPTIONAL<NULL>,
         /**
          * @summary `targetRNCId`.
          * @description
@@ -130,7 +130,7 @@ class PrepareHO_Arg {
          * @public
          * @readonly
          */
-        readonly targetRNCId: OPTIONAL<RNCId>,
+        readonly targetRNCId?: OPTIONAL<RNCId>,
         /**
          * @summary `an_APDU`.
          * @description
@@ -144,7 +144,7 @@ class PrepareHO_Arg {
          * @public
          * @readonly
          */
-        readonly an_APDU: OPTIONAL<AccessNetworkSignalInfo>,
+        readonly an_APDU?: OPTIONAL<AccessNetworkSignalInfo>,
         /**
          * @summary `multipleBearerRequested`.
          * @description
@@ -156,7 +156,7 @@ class PrepareHO_Arg {
          * @public
          * @readonly
          */
-        readonly multipleBearerRequested: OPTIONAL<NULL>,
+        readonly multipleBearerRequested?: OPTIONAL<NULL>,
         /**
          * @summary `imsi`.
          * @description
@@ -168,7 +168,7 @@ class PrepareHO_Arg {
          * @public
          * @readonly
          */
-        readonly imsi: OPTIONAL<IMSI>,
+        readonly imsi?: OPTIONAL<IMSI>,
         /**
          * @summary `integrityProtectionInfo`.
          * @description
@@ -180,7 +180,7 @@ class PrepareHO_Arg {
          * @public
          * @readonly
          */
-        readonly integrityProtectionInfo: OPTIONAL<IntegrityProtectionInformation>,
+        readonly integrityProtectionInfo?: OPTIONAL<IntegrityProtectionInformation>,
         /**
          * @summary `encryptionInfo`.
          * @description
@@ -192,7 +192,7 @@ class PrepareHO_Arg {
          * @public
          * @readonly
          */
-        readonly encryptionInfo: OPTIONAL<EncryptionInformation>,
+        readonly encryptionInfo?: OPTIONAL<EncryptionInformation>,
         /**
          * @summary `radioResourceInformation`.
          * @description
@@ -204,7 +204,7 @@ class PrepareHO_Arg {
          * @public
          * @readonly
          */
-        readonly radioResourceInformation: OPTIONAL<RadioResourceInformation>,
+        readonly radioResourceInformation?: OPTIONAL<RadioResourceInformation>,
         /**
          * @summary `allowedGSM_Algorithms`.
          * @description
@@ -216,7 +216,7 @@ class PrepareHO_Arg {
          * @public
          * @readonly
          */
-        readonly allowedGSM_Algorithms: OPTIONAL<AllowedGSM_Algorithms>,
+        readonly allowedGSM_Algorithms?: OPTIONAL<AllowedGSM_Algorithms>,
         /**
          * @summary `allowedUMTS_Algorithms`.
          * @description
@@ -228,7 +228,7 @@ class PrepareHO_Arg {
          * @public
          * @readonly
          */
-        readonly allowedUMTS_Algorithms: OPTIONAL<AllowedUMTS_Algorithms>,
+        readonly allowedUMTS_Algorithms?: OPTIONAL<AllowedUMTS_Algorithms>,
         /**
          * @summary `radioResourceList`.
          * @description
@@ -241,13 +241,13 @@ class PrepareHO_Arg {
          * @public
          * @readonly
          */
-        readonly radioResourceList: OPTIONAL<RadioResourceList>,
+        readonly radioResourceList?: OPTIONAL<RadioResourceList>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `rab_Id`.
          * @description
@@ -259,7 +259,7 @@ class PrepareHO_Arg {
          * @public
          * @readonly
          */
-        readonly rab_Id: OPTIONAL<RAB_Id>,
+        readonly rab_Id?: OPTIONAL<RAB_Id>,
         /**
          * @summary `bssmap_ServiceHandover`.
          * @description
@@ -271,7 +271,7 @@ class PrepareHO_Arg {
          * @public
          * @readonly
          */
-        readonly bssmap_ServiceHandover: OPTIONAL<BSSMAP_ServiceHandover>,
+        readonly bssmap_ServiceHandover?: OPTIONAL<BSSMAP_ServiceHandover>,
         /**
          * @summary `ranap_ServiceHandover`.
          * @description
@@ -283,7 +283,7 @@ class PrepareHO_Arg {
          * @public
          * @readonly
          */
-        readonly ranap_ServiceHandover: OPTIONAL<RANAP_ServiceHandover>,
+        readonly ranap_ServiceHandover?: OPTIONAL<RANAP_ServiceHandover>,
         /**
          * @summary `bssmap_ServiceHandoverList`.
          * @description
@@ -296,7 +296,7 @@ class PrepareHO_Arg {
          * @public
          * @readonly
          */
-        readonly bssmap_ServiceHandoverList: OPTIONAL<BSSMAP_ServiceHandoverList>,
+        readonly bssmap_ServiceHandoverList?: OPTIONAL<BSSMAP_ServiceHandoverList>,
         /**
          * @summary `asciCallReference`.
          * @description
@@ -308,7 +308,7 @@ class PrepareHO_Arg {
          * @public
          * @readonly
          */
-        readonly asciCallReference: OPTIONAL<ASCI_CallReference>,
+        readonly asciCallReference?: OPTIONAL<ASCI_CallReference>,
         /**
          * @summary `geran_classmark`.
          * @description
@@ -320,7 +320,7 @@ class PrepareHO_Arg {
          * @public
          * @readonly
          */
-        readonly geran_classmark: OPTIONAL<GERAN_Classmark>,
+        readonly geran_classmark?: OPTIONAL<GERAN_Classmark>,
         /**
          * @summary `iuCurrentlyUsedCodec`.
          * @description
@@ -332,7 +332,7 @@ class PrepareHO_Arg {
          * @public
          * @readonly
          */
-        readonly iuCurrentlyUsedCodec: OPTIONAL<Codec>,
+        readonly iuCurrentlyUsedCodec?: OPTIONAL<Codec>,
         /**
          * @summary `iuSupportedCodecsList`.
          * @description
@@ -345,7 +345,7 @@ class PrepareHO_Arg {
          * @public
          * @readonly
          */
-        readonly iuSupportedCodecsList: OPTIONAL<SupportedCodecsList>,
+        readonly iuSupportedCodecsList?: OPTIONAL<SupportedCodecsList>,
         /**
          * @summary `rab_ConfigurationIndicator`.
          * @description
@@ -358,7 +358,7 @@ class PrepareHO_Arg {
          * @public
          * @readonly
          */
-        readonly rab_ConfigurationIndicator: OPTIONAL<NULL>,
+        readonly rab_ConfigurationIndicator?: OPTIONAL<NULL>,
         /**
          * @summary `uesbi_Iu`.
          * @description
@@ -370,7 +370,7 @@ class PrepareHO_Arg {
          * @public
          * @readonly
          */
-        readonly uesbi_Iu: OPTIONAL<UESBI_Iu>,
+        readonly uesbi_Iu?: OPTIONAL<UESBI_Iu>,
         /**
          * @summary `imeisv`.
          * @description
@@ -383,7 +383,7 @@ class PrepareHO_Arg {
          * @public
          * @readonly
          */
-        readonly imeisv: OPTIONAL<IMEI>,
+        readonly imeisv?: OPTIONAL<IMEI>,
         /**
          * @summary `alternativeChannelType`.
          * @description
@@ -395,7 +395,7 @@ class PrepareHO_Arg {
          * @public
          * @readonly
          */
-        readonly alternativeChannelType: OPTIONAL<RadioResourceInformation>,
+        readonly alternativeChannelType?: OPTIONAL<RadioResourceInformation>,
         /**
          * @summary `tracePropagationList`.
          * @description
@@ -407,7 +407,7 @@ class PrepareHO_Arg {
          * @public
          * @readonly
          */
-        readonly tracePropagationList: OPTIONAL<TracePropagationList>,
+        readonly tracePropagationList?: OPTIONAL<TracePropagationList>,
         /**
          * @summary `aoipSupportedCodecsListAnchor`.
          * @description
@@ -419,7 +419,7 @@ class PrepareHO_Arg {
          * @public
          * @readonly
          */
-        readonly aoipSupportedCodecsListAnchor: OPTIONAL<AoIPCodecsList>,
+        readonly aoipSupportedCodecsListAnchor?: OPTIONAL<AoIPCodecsList>,
         /**
          * @summary `regionalSubscriptionData`.
          * @description
@@ -431,7 +431,7 @@ class PrepareHO_Arg {
          * @public
          * @readonly
          */
-        readonly regionalSubscriptionData: OPTIONAL<ZoneCodeList>,
+        readonly regionalSubscriptionData?: OPTIONAL<ZoneCodeList>,
         /**
          * @summary `lclsGlobalCallReference`.
          * @description
@@ -445,7 +445,7 @@ class PrepareHO_Arg {
          * @public
          * @readonly
          */
-        readonly lclsGlobalCallReference: OPTIONAL<LCLS_GlobalCallReference>,
+        readonly lclsGlobalCallReference?: OPTIONAL<LCLS_GlobalCallReference>,
         /**
          * @summary `lcls_Negotiation`.
          * @description
@@ -458,7 +458,7 @@ class PrepareHO_Arg {
          * @public
          * @readonly
          */
-        readonly lcls_Negotiation: OPTIONAL<LCLS_Negotiation>,
+        readonly lcls_Negotiation?: OPTIONAL<LCLS_Negotiation>,
         /**
          * @summary `lcls_Configuration_Preference`.
          * @description
@@ -471,7 +471,7 @@ class PrepareHO_Arg {
          * @public
          * @readonly
          */
-        readonly lcls_Configuration_Preference: OPTIONAL<LCLS_ConfigurationPreference>,
+        readonly lcls_Configuration_Preference?: OPTIONAL<LCLS_ConfigurationPreference>,
         /**
          * @summary `csg_SubscriptionDataList`.
          * @description
@@ -483,7 +483,7 @@ class PrepareHO_Arg {
          * @public
          * @readonly
          */
-        readonly csg_SubscriptionDataList: OPTIONAL<CSG_SubscriptionDataList>,
+        readonly csg_SubscriptionDataList?: OPTIONAL<CSG_SubscriptionDataList>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -60,9 +60,9 @@ class TermListDetails_scanInfo {
     readonly increasing: OPTIONAL<BOOLEAN>;
 
     constructor (
-        maxStepSize: OPTIONAL<INTEGER>,
-        collatingSequence: OPTIONAL<HumanString>,
-        increasing: OPTIONAL<BOOLEAN>
+        maxStepSize?: OPTIONAL<INTEGER>,
+        collatingSequence?: OPTIONAL<HumanString>,
+        increasing?: OPTIONAL<BOOLEAN>
     ) {
         this.maxStepSize = maxStepSize;
         this.collatingSequence = collatingSequence;

@@ -61,7 +61,7 @@ class BasicGapCriteria_callingAddressAndService {
     constructor (
         callingAddressValue: Digits,
         serviceKey: ServiceKey,
-        locationNumber: OPTIONAL<LocationNumber>,
+        locationNumber?: OPTIONAL<LocationNumber>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.callingAddressValue = callingAddressValue;

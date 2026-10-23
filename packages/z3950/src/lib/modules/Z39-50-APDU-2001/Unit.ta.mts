@@ -80,10 +80,10 @@ class Unit {
     readonly scaleFactor: OPTIONAL<INTEGER>;
 
     constructor (
-        unitSystem: OPTIONAL<InternationalString>,
-        unitType: OPTIONAL<StringOrNumeric>,
-        unit: OPTIONAL<StringOrNumeric>,
-        scaleFactor: OPTIONAL<INTEGER>
+        unitSystem?: OPTIONAL<InternationalString>,
+        unitType?: OPTIONAL<StringOrNumeric>,
+        unit?: OPTIONAL<StringOrNumeric>,
+        scaleFactor?: OPTIONAL<INTEGER>
     ) {
         this.unitSystem = unitSystem;
         this.unitType = unitType;

@@ -62,7 +62,7 @@ class RouteEndRequestArgument {
          * @public
          * @readonly
          */
-        readonly routeRegisterReqID: OPTIONAL<RouteRegisterReqID>,
+        readonly routeRegisterReqID?: OPTIONAL<RouteRegisterReqID>,
         /**
          * @summary `errorValue`.
          * @description
@@ -71,7 +71,7 @@ class RouteEndRequestArgument {
          * @public
          * @readonly
          */
-        readonly errorValue: OPTIONAL<ErrorValue>,
+        readonly errorValue?: OPTIONAL<ErrorValue>,
         /**
          * @summary `correlatorData`.
          * @description
@@ -81,7 +81,7 @@ class RouteEndRequestArgument {
          * @public
          * @readonly
          */
-        readonly correlatorData: OPTIONAL<CorrelatorData>,
+        readonly correlatorData?: OPTIONAL<CorrelatorData>,
         /**
          * @summary `extensions`.
          * @description
@@ -91,7 +91,7 @@ class RouteEndRequestArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

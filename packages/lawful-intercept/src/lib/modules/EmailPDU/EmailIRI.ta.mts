@@ -439,12 +439,12 @@ class EmailIRI {
         e_mail_Sender: OPTIONAL<UTF8String>,
         e_mail_Recipients: OPTIONAL<E_mail_Address_List>,
         status: E_mail_Status,
-        total_Recipient_Count: OPTIONAL<INTEGER>,
-        message_ID: OPTIONAL<OCTET_STRING>,
-        nationalParameter: OPTIONAL<OCTET_STRING>,
-        national_EM_ASN1parameters: OPTIONAL<National_EM_ASN1parameters>,
-        aAAInformation: OPTIONAL<AAAInformation>,
-        e_mail_Sender_Validity: OPTIONAL<EmailIRI_e_mail_Sender_Validity>,
+        total_Recipient_Count?: OPTIONAL<INTEGER>,
+        message_ID?: OPTIONAL<OCTET_STRING>,
+        nationalParameter?: OPTIONAL<OCTET_STRING>,
+        national_EM_ASN1parameters?: OPTIONAL<National_EM_ASN1parameters>,
+        aAAInformation?: OPTIONAL<AAAInformation>,
+        e_mail_Sender_Validity?: OPTIONAL<EmailIRI_e_mail_Sender_Validity>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.emailIRIObjId = emailIRIObjId;

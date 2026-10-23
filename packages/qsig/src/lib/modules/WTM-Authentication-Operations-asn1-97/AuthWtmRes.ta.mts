@@ -57,7 +57,7 @@ class AuthWtmRes {
 
     constructor (
         autWtmResValue: AuthWtmRes_autWtmResValue,
-        dummyExtension: OPTIONAL<DummyExtension>
+        dummyExtension?: OPTIONAL<DummyExtension>
     ) {
         this.autWtmResValue = autWtmResValue;
         this.dummyExtension = dummyExtension;

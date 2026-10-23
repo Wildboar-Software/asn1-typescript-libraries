@@ -60,7 +60,7 @@ class AocCompleteRes {
 
     constructor (
         chargingOption: ChargingOption,
-        completeResExtension: OPTIONAL<AocCompleteRes_completeResExtension>
+        completeResExtension?: OPTIONAL<AocCompleteRes_completeResExtension>
     ) {
         this.chargingOption = chargingOption;
         this.completeResExtension = completeResExtension;

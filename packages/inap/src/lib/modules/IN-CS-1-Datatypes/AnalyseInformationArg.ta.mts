@@ -137,12 +137,12 @@ class AnalyseInformationArg {
         iSDNAccessRelatedInformation: OPTIONAL<ISDNAccessRelatedInformation>,
         originalCalledPartyID: OPTIONAL<OriginalCalledPartyID>,
         extensions: ExtensionField[],
-        callingPartyNumber: OPTIONAL<CallingPartyNumber>,
-        callingPartysCategory: OPTIONAL<CallingPartysCategory>,
-        calledPartyNumber: OPTIONAL<CalledPartyNumber>,
-        chargeNumber: OPTIONAL<ChargeNumber>,
-        travellingClassMark: OPTIONAL<TravellingClassMark>,
-        carrier: OPTIONAL<Carrier>,
+        callingPartyNumber?: OPTIONAL<CallingPartyNumber>,
+        callingPartysCategory?: OPTIONAL<CallingPartysCategory>,
+        calledPartyNumber?: OPTIONAL<CalledPartyNumber>,
+        chargeNumber?: OPTIONAL<ChargeNumber>,
+        travellingClassMark?: OPTIONAL<TravellingClassMark>,
+        carrier?: OPTIONAL<Carrier>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.destinationRoutingAddress = destinationRoutingAddress;

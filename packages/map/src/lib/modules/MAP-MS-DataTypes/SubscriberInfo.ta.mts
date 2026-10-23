@@ -74,7 +74,7 @@ class SubscriberInfo {
          * @public
          * @readonly
          */
-        readonly locationInformation: OPTIONAL<LocationInformation>,
+        readonly locationInformation?: OPTIONAL<LocationInformation>,
         /**
          * @summary `subscriberState`.
          * @description
@@ -86,13 +86,13 @@ class SubscriberInfo {
          * @public
          * @readonly
          */
-        readonly subscriberState: OPTIONAL<SubscriberState>,
+        readonly subscriberState?: OPTIONAL<SubscriberState>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `locationInformationGPRS`.
          * @description
@@ -104,7 +104,7 @@ class SubscriberInfo {
          * @public
          * @readonly
          */
-        readonly locationInformationGPRS: OPTIONAL<LocationInformationGPRS>,
+        readonly locationInformationGPRS?: OPTIONAL<LocationInformationGPRS>,
         /**
          * @summary `ps_SubscriberState`.
          * @description
@@ -116,7 +116,7 @@ class SubscriberInfo {
          * @public
          * @readonly
          */
-        readonly ps_SubscriberState: OPTIONAL<PS_SubscriberState>,
+        readonly ps_SubscriberState?: OPTIONAL<PS_SubscriberState>,
         /**
          * @summary `imei`.
          * @description
@@ -128,7 +128,7 @@ class SubscriberInfo {
          * @public
          * @readonly
          */
-        readonly imei: OPTIONAL<IMEI>,
+        readonly imei?: OPTIONAL<IMEI>,
         /**
          * @summary `ms_Classmark2`.
          * @description
@@ -141,7 +141,7 @@ class SubscriberInfo {
          * @public
          * @readonly
          */
-        readonly ms_Classmark2: OPTIONAL<MS_Classmark2>,
+        readonly ms_Classmark2?: OPTIONAL<MS_Classmark2>,
         /**
          * @summary `gprs_MS_Class`.
          * @description
@@ -154,7 +154,7 @@ class SubscriberInfo {
          * @public
          * @readonly
          */
-        readonly gprs_MS_Class: OPTIONAL<GPRSMSClass>,
+        readonly gprs_MS_Class?: OPTIONAL<GPRSMSClass>,
         /**
          * @summary `mnpInfoRes`.
          * @description
@@ -166,7 +166,7 @@ class SubscriberInfo {
          * @public
          * @readonly
          */
-        readonly mnpInfoRes: OPTIONAL<MNPInfoRes>,
+        readonly mnpInfoRes?: OPTIONAL<MNPInfoRes>,
         /**
          * @summary `imsVoiceOverPS_SessionsIndication`.
          * @description
@@ -180,7 +180,7 @@ class SubscriberInfo {
          * @public
          * @readonly
          */
-        readonly imsVoiceOverPS_SessionsIndication: OPTIONAL<IMS_VoiceOverPS_SessionsInd>,
+        readonly imsVoiceOverPS_SessionsIndication?: OPTIONAL<IMS_VoiceOverPS_SessionsInd>,
         /**
          * @summary `lastUE_ActivityTime`.
          * @description
@@ -193,7 +193,7 @@ class SubscriberInfo {
          * @public
          * @readonly
          */
-        readonly lastUE_ActivityTime: OPTIONAL<Time>,
+        readonly lastUE_ActivityTime?: OPTIONAL<Time>,
         /**
          * @summary `lastRAT_Type`.
          * @description
@@ -205,7 +205,7 @@ class SubscriberInfo {
          * @public
          * @readonly
          */
-        readonly lastRAT_Type: OPTIONAL<Used_RAT_Type>,
+        readonly lastRAT_Type?: OPTIONAL<Used_RAT_Type>,
         /**
          * @summary `eps_SubscriberState`.
          * @description
@@ -217,7 +217,7 @@ class SubscriberInfo {
          * @public
          * @readonly
          */
-        readonly eps_SubscriberState: OPTIONAL<PS_SubscriberState>,
+        readonly eps_SubscriberState?: OPTIONAL<PS_SubscriberState>,
         /**
          * @summary `locationInformationEPS`.
          * @description
@@ -229,7 +229,7 @@ class SubscriberInfo {
          * @public
          * @readonly
          */
-        readonly locationInformationEPS: OPTIONAL<LocationInformationEPS>,
+        readonly locationInformationEPS?: OPTIONAL<LocationInformationEPS>,
         /**
          * @summary `timeZone`.
          * @description
@@ -243,7 +243,7 @@ class SubscriberInfo {
          * @public
          * @readonly
          */
-        readonly timeZone: OPTIONAL<TimeZone>,
+        readonly timeZone?: OPTIONAL<TimeZone>,
         /**
          * @summary `daylightSavingTime`.
          * @description
@@ -256,7 +256,7 @@ class SubscriberInfo {
          * @public
          * @readonly
          */
-        readonly daylightSavingTime: OPTIONAL<DaylightSavingTime>,
+        readonly daylightSavingTime?: OPTIONAL<DaylightSavingTime>,
         /**
          * @summary `locationInformation5GS`.
          * @description
@@ -269,7 +269,7 @@ class SubscriberInfo {
          * @public
          * @readonly
          */
-        readonly locationInformation5GS: OPTIONAL<LocationInformation5GS>,
+        readonly locationInformation5GS?: OPTIONAL<LocationInformation5GS>,
         /**
          * @summary Extensions that are not recognized.
          * @public

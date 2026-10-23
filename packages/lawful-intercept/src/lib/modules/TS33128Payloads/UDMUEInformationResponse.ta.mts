@@ -123,10 +123,10 @@ class UDMUEInformationResponse {
 
     constructor (
         sUPI: SUPI,
-        tADSInfo: OPTIONAL<UEContextInfo>,
-        fiveGSUserStateInfo: OPTIONAL<FiveGSUserStateInfo>,
-        fiveGSRVCCInfo: OPTIONAL<FiveGSRVCCInfo>,
-        problemDetails: OPTIONAL<UDMProblemDetails>,
+        tADSInfo?: OPTIONAL<UEContextInfo>,
+        fiveGSUserStateInfo?: OPTIONAL<FiveGSUserStateInfo>,
+        fiveGSRVCCInfo?: OPTIONAL<FiveGSRVCCInfo>,
+        problemDetails?: OPTIONAL<UDMProblemDetails>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.sUPI = sUPI;

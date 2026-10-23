@@ -141,12 +141,12 @@ class UEDifferentiationInfo {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        periodicCommunicationIndicator: OPTIONAL<PeriodicCommunicationIndicator>,
-        periodicTime: OPTIONAL<INTEGER>,
-        scheduledCommunicationTime: OPTIONAL<SBIType>,
-        stationaryIndication: OPTIONAL<SBIType>,
-        trafficProfile: OPTIONAL<SBIType>,
-        batteryIndication: OPTIONAL<SBIType>,
+        periodicCommunicationIndicator?: OPTIONAL<PeriodicCommunicationIndicator>,
+        periodicTime?: OPTIONAL<INTEGER>,
+        scheduledCommunicationTime?: OPTIONAL<SBIType>,
+        stationaryIndication?: OPTIONAL<SBIType>,
+        trafficProfile?: OPTIONAL<SBIType>,
+        batteryIndication?: OPTIONAL<SBIType>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.periodicCommunicationIndicator = periodicCommunicationIndicator;

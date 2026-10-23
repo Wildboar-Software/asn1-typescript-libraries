@@ -70,8 +70,8 @@ class AMFEventArea {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        presenceInfo: OPTIONAL<PresenceInfo>,
-        lADNInfo: OPTIONAL<LADNInfo>,
+        presenceInfo?: OPTIONAL<PresenceInfo>,
+        lADNInfo?: OPTIONAL<LADNInfo>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.presenceInfo = presenceInfo;

@@ -52,7 +52,7 @@ class CS_AlterEventConditionMonitoring_Request {
          * @public
          * @readonly
          */
-        readonly changeDisplay: OPTIONAL<CS_AlterEventConditionMonitoring_Request_changeDisplay>
+        readonly changeDisplay?: OPTIONAL<CS_AlterEventConditionMonitoring_Request_changeDisplay>
     ) {}
 
     /**

@@ -46,7 +46,7 @@ class CompoundRepertoireIdent {
          * @public
          * @readonly
          */
-        readonly capability: OPTIONAL<NULL>,
+        readonly capability?: OPTIONAL<NULL>,
         /**
          * @summary `repertoirePositionOffers`.
          * @description
@@ -55,7 +55,7 @@ class CompoundRepertoireIdent {
          * @public
          * @readonly
          */
-        readonly repertoirePositionOffers: OPTIONAL<RepertoireFontIdent[]>
+        readonly repertoirePositionOffers?: OPTIONAL<RepertoireFontIdent[]>
     ) {}
 
     /**

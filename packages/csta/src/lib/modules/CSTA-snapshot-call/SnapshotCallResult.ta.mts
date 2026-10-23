@@ -97,7 +97,7 @@ class SnapshotCallResult {
          * @public
          * @readonly
          */
-        readonly mediaCallCharacteristics: OPTIONAL<MediaCallCharacteristics>,
+        readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
         /**
          * @summary `callCharacteristics`.
          * @description
@@ -106,7 +106,7 @@ class SnapshotCallResult {
          * @public
          * @readonly
          */
-        readonly callCharacteristics: OPTIONAL<CallCharacteristics>,
+        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
         /**
          * @summary `callingDevice`.
          * @description
@@ -115,7 +115,7 @@ class SnapshotCallResult {
          * @public
          * @readonly
          */
-        readonly callingDevice: OPTIONAL<CallingDeviceID>,
+        readonly callingDevice?: OPTIONAL<CallingDeviceID>,
         /**
          * @summary `calledDevice`.
          * @description
@@ -124,7 +124,7 @@ class SnapshotCallResult {
          * @public
          * @readonly
          */
-        readonly calledDevice: OPTIONAL<CalledDeviceID>,
+        readonly calledDevice?: OPTIONAL<CalledDeviceID>,
         /**
          * @summary `associatedCallingDeviceID`.
          * @description
@@ -133,7 +133,7 @@ class SnapshotCallResult {
          * @public
          * @readonly
          */
-        readonly associatedCallingDeviceID: OPTIONAL<AssociatedCallingDeviceID>,
+        readonly associatedCallingDeviceID?: OPTIONAL<AssociatedCallingDeviceID>,
         /**
          * @summary `associatedCalledDeviceID`.
          * @description
@@ -142,7 +142,7 @@ class SnapshotCallResult {
          * @public
          * @readonly
          */
-        readonly associatedCalledDeviceID: OPTIONAL<AssociatedCalledDeviceID>,
+        readonly associatedCalledDeviceID?: OPTIONAL<AssociatedCalledDeviceID>,
         /**
          * @summary `correlatorData`.
          * @description
@@ -151,7 +151,7 @@ class SnapshotCallResult {
          * @public
          * @readonly
          */
-        readonly correlatorData: OPTIONAL<CorrelatorData>,
+        readonly correlatorData?: OPTIONAL<CorrelatorData>,
         /**
          * @summary `callLinkageData`.
          * @description
@@ -160,7 +160,7 @@ class SnapshotCallResult {
          * @public
          * @readonly
          */
-        readonly callLinkageData: OPTIONAL<CallLinkageData>,
+        readonly callLinkageData?: OPTIONAL<CallLinkageData>,
         /**
          * @summary `subjectOfCall`.
          * @description
@@ -169,7 +169,7 @@ class SnapshotCallResult {
          * @public
          * @readonly
          */
-        readonly subjectOfCall: OPTIONAL<SubjectOfCall>,
+        readonly subjectOfCall?: OPTIONAL<SubjectOfCall>,
         /**
          * @summary `messageInfo`.
          * @description
@@ -178,7 +178,7 @@ class SnapshotCallResult {
          * @public
          * @readonly
          */
-        readonly messageInfo: OPTIONAL<MessageInfo>,
+        readonly messageInfo?: OPTIONAL<MessageInfo>,
         /**
          * @summary `languagePreferences`.
          * @description
@@ -187,7 +187,7 @@ class SnapshotCallResult {
          * @public
          * @readonly
          */
-        readonly languagePreferences: OPTIONAL<LanguagePreferences>,
+        readonly languagePreferences?: OPTIONAL<LanguagePreferences>,
         /**
          * @summary `deviceHistory`.
          * @description
@@ -196,7 +196,7 @@ class SnapshotCallResult {
          * @public
          * @readonly
          */
-        readonly deviceHistory: OPTIONAL<DeviceHistory>,
+        readonly deviceHistory?: OPTIONAL<DeviceHistory>,
         /**
          * @summary `extensions`.
          * @description
@@ -206,7 +206,7 @@ class SnapshotCallResult {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

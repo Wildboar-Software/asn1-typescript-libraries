@@ -86,7 +86,7 @@ class RPDataMO {
          * @public
          * @readonly
          */
-        readonly origVMSCAddr: OPTIONAL<SMS_Address>,
+        readonly origVMSCAddr?: OPTIONAL<SMS_Address>,
         /**
          * @summary `moimsi`.
          * @description
@@ -98,7 +98,7 @@ class RPDataMO {
          * @public
          * @readonly
          */
-        readonly moimsi: OPTIONAL<IMSI_Address>,
+        readonly moimsi?: OPTIONAL<IMSI_Address>,
         /**
          * @summary Extensions that are not recognized.
          * @description

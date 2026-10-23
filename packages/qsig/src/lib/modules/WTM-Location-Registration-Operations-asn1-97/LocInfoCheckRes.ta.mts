@@ -56,7 +56,7 @@ class LocInfoCheckRes {
 
     constructor (
         checkResult: CheckResult,
-        argExtension: OPTIONAL<LrExtension>
+        argExtension?: OPTIONAL<LrExtension>
     ) {
         this.checkResult = checkResult;
         this.argExtension = argExtension;

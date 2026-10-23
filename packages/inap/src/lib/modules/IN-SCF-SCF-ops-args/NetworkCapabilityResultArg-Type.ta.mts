@@ -77,11 +77,11 @@ class NetworkCapabilityResultArg_Type {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        bearerCapabilities: OPTIONAL<BearerCapabilities>,
-        highLayerCompatibilities: OPTIONAL<HighLayerCompatibilities>,
-        supplementaryServices: OPTIONAL<SupplementaryServices>,
-        securityParameters: OPTIONAL<SecurityParameters>,
-        extensions: OPTIONAL<Extensions>,
+        bearerCapabilities?: OPTIONAL<BearerCapabilities>,
+        highLayerCompatibilities?: OPTIONAL<HighLayerCompatibilities>,
+        supplementaryServices?: OPTIONAL<SupplementaryServices>,
+        securityParameters?: OPTIONAL<SecurityParameters>,
+        extensions?: OPTIONAL<Extensions>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.bearerCapabilities = bearerCapabilities;

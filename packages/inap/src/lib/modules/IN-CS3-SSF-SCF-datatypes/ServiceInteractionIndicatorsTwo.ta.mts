@@ -164,19 +164,19 @@ class ServiceInteractionIndicatorsTwo {
     readonly redirectServiceTreatmentInd: OPTIONAL<ServiceInteractionIndicatorsTwo_redirectServiceTreatmentInd>;
 
     constructor (
-        forwardServiceInteractionInd: OPTIONAL<ForwardServiceInteractionInd>,
-        backwardServiceInteractionInd: OPTIONAL<BackwardServiceInteractionInd>,
-        bothwayThroughConnectionInd: OPTIONAL<BothwayThroughConnectionInd>,
-        suspendTimer: OPTIONAL<SuspendTimer>,
-        connectedNumberTreatmentInd: OPTIONAL<ConnectedNumberTreatmentInd>,
-        suppressCallDiversionNotification: OPTIONAL<BOOLEAN>,
-        suppressCallTransferNotification: OPTIONAL<BOOLEAN>,
-        allowCdINNoPresentationInd: OPTIONAL<BOOLEAN>,
-        userDialogueDurationInd: OPTIONAL<BOOLEAN>,
-        overrideLineRestrictions: OPTIONAL<BOOLEAN>,
-        suppressVPNAPP: OPTIONAL<BOOLEAN>,
-        calledINNumberOverriding: OPTIONAL<BOOLEAN>,
-        redirectServiceTreatmentInd: OPTIONAL<ServiceInteractionIndicatorsTwo_redirectServiceTreatmentInd>
+        forwardServiceInteractionInd?: OPTIONAL<ForwardServiceInteractionInd>,
+        backwardServiceInteractionInd?: OPTIONAL<BackwardServiceInteractionInd>,
+        bothwayThroughConnectionInd?: OPTIONAL<BothwayThroughConnectionInd>,
+        suspendTimer?: OPTIONAL<SuspendTimer>,
+        connectedNumberTreatmentInd?: OPTIONAL<ConnectedNumberTreatmentInd>,
+        suppressCallDiversionNotification?: OPTIONAL<BOOLEAN>,
+        suppressCallTransferNotification?: OPTIONAL<BOOLEAN>,
+        allowCdINNoPresentationInd?: OPTIONAL<BOOLEAN>,
+        userDialogueDurationInd?: OPTIONAL<BOOLEAN>,
+        overrideLineRestrictions?: OPTIONAL<BOOLEAN>,
+        suppressVPNAPP?: OPTIONAL<BOOLEAN>,
+        calledINNumberOverriding?: OPTIONAL<BOOLEAN>,
+        redirectServiceTreatmentInd?: OPTIONAL<ServiceInteractionIndicatorsTwo_redirectServiceTreatmentInd>
     ) {
         this.forwardServiceInteractionInd = forwardServiceInteractionInd;
         this.backwardServiceInteractionInd = backwardServiceInteractionInd;

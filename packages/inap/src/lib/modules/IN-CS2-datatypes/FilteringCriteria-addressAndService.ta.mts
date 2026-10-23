@@ -61,8 +61,8 @@ class FilteringCriteria_addressAndService {
     constructor (
         calledAddressValue: Digits,
         serviceKey: ServiceKey,
-        callingAddressValue: OPTIONAL<Digits>,
-        locationNumber: OPTIONAL<LocationNumber>
+        callingAddressValue?: OPTIONAL<Digits>,
+        locationNumber?: OPTIONAL<LocationNumber>
     ) {
         this.calledAddressValue = calledAddressValue;
         this.serviceKey = serviceKey;

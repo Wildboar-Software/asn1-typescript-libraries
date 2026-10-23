@@ -155,10 +155,10 @@ class PTCPartyJoin {
         pTCTargetInformation: PTCTargetInformation,
         pTCDirection: Direction,
         pTCSessionInfo: PTCSessionInfo,
-        pTCParticipants: OPTIONAL<PTCTargetInformation[]>,
-        pTCParticipantPresenceStatus: OPTIONAL<MultipleParticipantPresenceStatus>,
-        pTCMediaStreamAvail: OPTIONAL<BOOLEAN>,
-        pTCBearerCapability: OPTIONAL<UTF8String>,
+        pTCParticipants?: OPTIONAL<PTCTargetInformation[]>,
+        pTCParticipantPresenceStatus?: OPTIONAL<MultipleParticipantPresenceStatus>,
+        pTCMediaStreamAvail?: OPTIONAL<BOOLEAN>,
+        pTCBearerCapability?: OPTIONAL<UTF8String>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.pTCTargetInformation = pTCTargetInformation;

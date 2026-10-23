@@ -98,7 +98,7 @@ class interrogateDiversionQ_ArgumentType {
         basicService: OPTIONAL<BasicService>,
         servedUserNr: PartyNumber,
         interrogatingUserNr: PartyNumber,
-        extension: OPTIONAL<interrogateDiversionQ_ArgumentType_extension>
+        extension?: OPTIONAL<interrogateDiversionQ_ArgumentType_extension>
     ) {
         this.procedure = procedure;
         this.basicService = basicService;

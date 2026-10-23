@@ -53,25 +53,25 @@ class CSG_SubscriptionData {
          * @public
          * @readonly
          */
-        readonly expirationDate: OPTIONAL<Time>,
+        readonly expirationDate?: OPTIONAL<Time>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `lipa_AllowedAPNList`.
          * @public
          * @readonly
          */
-        readonly lipa_AllowedAPNList: OPTIONAL<LIPA_AllowedAPNList>,
+        readonly lipa_AllowedAPNList?: OPTIONAL<LIPA_AllowedAPNList>,
         /**
          * @summary `plmn_Id`.
          * @public
          * @readonly
          */
-        readonly plmn_Id: OPTIONAL<PLMN_Id>,
+        readonly plmn_Id?: OPTIONAL<PLMN_Id>,
         /**
          * @summary Extensions that are not recognized.
          * @public

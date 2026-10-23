@@ -69,7 +69,7 @@ class LADNInfo {
 
     constructor (
         lADN: UTF8String,
-        presence: OPTIONAL<PresenceState>,
+        presence?: OPTIONAL<PresenceState>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.lADN = lADN;

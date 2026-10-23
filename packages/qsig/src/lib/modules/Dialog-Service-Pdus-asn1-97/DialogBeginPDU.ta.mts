@@ -60,7 +60,7 @@ class DialogBeginPDU {
 
     constructor (
         originationDialogId: OriginationDialogId,
-        remoteOperationsPortion: OPTIONAL<RemoteOperationsPortion>
+        remoteOperationsPortion?: OPTIONAL<RemoteOperationsPortion>
     ) {
         this.originationDialogId = originationDialogId;
         this.remoteOperationsPortion = remoteOperationsPortion;

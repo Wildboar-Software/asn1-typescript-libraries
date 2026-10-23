@@ -43,7 +43,7 @@ class DeviceAdditionalFeatureSupport {
          * @public
          * @readonly
          */
-        readonly naiSupport: OPTIONAL<VersionType>,
+        readonly naiSupport?: OPTIONAL<VersionType>,
         /**
          * @summary `groupOfDeviceManufacturerOid`.
          * @description
@@ -55,7 +55,7 @@ class DeviceAdditionalFeatureSupport {
          * @public
          * @readonly
          */
-        readonly groupOfDeviceManufacturerOid: OPTIONAL<OBJECT_IDENTIFIER>
+        readonly groupOfDeviceManufacturerOid?: OPTIONAL<OBJECT_IDENTIFIER>
     ) {}
 
     /**

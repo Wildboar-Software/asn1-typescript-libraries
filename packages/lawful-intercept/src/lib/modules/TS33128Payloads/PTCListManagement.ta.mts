@@ -187,12 +187,12 @@ class PTCListManagement {
     constructor (
         pTCTargetInformation: PTCTargetInformation,
         pTCDirection: Direction,
-        pTCListManagementType: OPTIONAL<PTCListManagementType>,
-        pTCListManagementAction: OPTIONAL<PTCListManagementAction>,
-        pTCListManagementFailure: OPTIONAL<PTCListManagementFailure>,
-        pTCContactID: OPTIONAL<PTCTargetInformation>,
-        pTCIDList: OPTIONAL<PTCIDList[]>,
-        pTCHost: OPTIONAL<PTCTargetInformation>,
+        pTCListManagementType?: OPTIONAL<PTCListManagementType>,
+        pTCListManagementAction?: OPTIONAL<PTCListManagementAction>,
+        pTCListManagementFailure?: OPTIONAL<PTCListManagementFailure>,
+        pTCContactID?: OPTIONAL<PTCTargetInformation>,
+        pTCIDList?: OPTIONAL<PTCIDList[]>,
+        pTCHost?: OPTIONAL<PTCTargetInformation>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.pTCTargetInformation = pTCTargetInformation;

@@ -55,7 +55,7 @@ class Correlation {
 
     constructor (
         correlationData: CallIdentity,
-        correlationReason: OPTIONAL<CorrelationReason>
+        correlationReason?: OPTIONAL<CorrelationReason>
     ) {
         this.correlationData = correlationData;
         this.correlationReason = correlationReason;

@@ -88,7 +88,7 @@ class PropertyParm {
          * @public
          * @readonly
          */
-        readonly extraInfo: OPTIONAL<PropertyParm_extraInfo>,
+        readonly extraInfo?: OPTIONAL<PropertyParm_extraInfo>,
         /**
          * @summary Extensions that are not recognized.
          * @description

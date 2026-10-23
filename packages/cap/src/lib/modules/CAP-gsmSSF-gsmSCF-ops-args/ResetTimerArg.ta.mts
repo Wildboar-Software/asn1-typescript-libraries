@@ -69,7 +69,7 @@ class ResetTimerArg {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<Extensions>,
+        readonly extensions?: OPTIONAL<Extensions>,
         /**
          * @summary `callSegmentID`.
          * @description
@@ -80,7 +80,7 @@ class ResetTimerArg {
          * @public
          * @readonly
          */
-        readonly callSegmentID: OPTIONAL<CallSegmentID>,
+        readonly callSegmentID?: OPTIONAL<CallSegmentID>,
         /**
          * @summary Extensions that are not recognized.
          * @public

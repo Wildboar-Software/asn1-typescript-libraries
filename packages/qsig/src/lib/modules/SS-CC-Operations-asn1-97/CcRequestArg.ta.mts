@@ -140,11 +140,11 @@ class CcRequestArg {
         numberA: PresentedNumberUnscreened,
         numberB: PartyNumber,
         service: PSS1InformationElement,
-        subaddrA: OPTIONAL<PartySubaddress>,
-        subaddrB: OPTIONAL<PartySubaddress>,
-        can_retain_service: OPTIONAL<BOOLEAN>,
-        retain_sig_connection: OPTIONAL<BOOLEAN>,
-        extension: OPTIONAL<CcExtension>
+        subaddrA?: OPTIONAL<PartySubaddress>,
+        subaddrB?: OPTIONAL<PartySubaddress>,
+        can_retain_service?: OPTIONAL<BOOLEAN>,
+        retain_sig_connection?: OPTIONAL<BOOLEAN>,
+        extension?: OPTIONAL<CcExtension>
     ) {
         this.numberA = numberA;
         this.numberB = numberB;

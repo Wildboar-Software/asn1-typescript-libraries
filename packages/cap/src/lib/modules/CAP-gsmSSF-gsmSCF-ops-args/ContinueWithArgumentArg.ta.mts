@@ -70,13 +70,13 @@ class ContinueWithArgumentArg {
          * @public
          * @readonly
          */
-        readonly alertingPattern: OPTIONAL<AlertingPattern>,
+        readonly alertingPattern?: OPTIONAL<AlertingPattern>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<Extensions>,
+        readonly extensions?: OPTIONAL<Extensions>,
         /**
          * @summary `serviceInteractionIndicatorsTwo`.
          * @description
@@ -87,7 +87,7 @@ class ContinueWithArgumentArg {
          * @public
          * @readonly
          */
-        readonly serviceInteractionIndicatorsTwo: OPTIONAL<ServiceInteractionIndicatorsTwo>,
+        readonly serviceInteractionIndicatorsTwo?: OPTIONAL<ServiceInteractionIndicatorsTwo>,
         /**
          * @summary `callingPartysCategory`.
          * @description
@@ -98,7 +98,7 @@ class ContinueWithArgumentArg {
          * @public
          * @readonly
          */
-        readonly callingPartysCategory: OPTIONAL<CallingPartysCategory>,
+        readonly callingPartysCategory?: OPTIONAL<CallingPartysCategory>,
         /**
          * @summary `genericNumbers`.
          * @description
@@ -110,7 +110,7 @@ class ContinueWithArgumentArg {
          * @public
          * @readonly
          */
-        readonly genericNumbers: OPTIONAL<GenericNumbers>,
+        readonly genericNumbers?: OPTIONAL<GenericNumbers>,
         /**
          * @summary `cug_Interlock`.
          * @description
@@ -121,7 +121,7 @@ class ContinueWithArgumentArg {
          * @public
          * @readonly
          */
-        readonly cug_Interlock: OPTIONAL<CUG_Interlock>,
+        readonly cug_Interlock?: OPTIONAL<CUG_Interlock>,
         /**
          * @summary `cug_OutgoingAccess`.
          * @description
@@ -132,7 +132,7 @@ class ContinueWithArgumentArg {
          * @public
          * @readonly
          */
-        readonly cug_OutgoingAccess: OPTIONAL<NULL>,
+        readonly cug_OutgoingAccess?: OPTIONAL<NULL>,
         /**
          * @summary `chargeNumber`.
          * @description
@@ -144,7 +144,7 @@ class ContinueWithArgumentArg {
          * @public
          * @readonly
          */
-        readonly chargeNumber: OPTIONAL<ChargeNumber>,
+        readonly chargeNumber?: OPTIONAL<ChargeNumber>,
         /**
          * @summary `carrier`.
          * @description
@@ -156,7 +156,7 @@ class ContinueWithArgumentArg {
          * @public
          * @readonly
          */
-        readonly carrier: OPTIONAL<Carrier>,
+        readonly carrier?: OPTIONAL<Carrier>,
         /**
          * @summary `suppressionOfAnnouncement`.
          * @description
@@ -168,7 +168,7 @@ class ContinueWithArgumentArg {
          * @public
          * @readonly
          */
-        readonly suppressionOfAnnouncement: OPTIONAL<SuppressionOfAnnouncement>,
+        readonly suppressionOfAnnouncement?: OPTIONAL<SuppressionOfAnnouncement>,
         /**
          * @summary `naOliInfo`.
          * @description
@@ -179,7 +179,7 @@ class ContinueWithArgumentArg {
          * @public
          * @readonly
          */
-        readonly naOliInfo: OPTIONAL<NAOliInfo>,
+        readonly naOliInfo?: OPTIONAL<NAOliInfo>,
         /**
          * @summary `bor_InterrogationRequested`.
          * @description
@@ -190,7 +190,7 @@ class ContinueWithArgumentArg {
          * @public
          * @readonly
          */
-        readonly bor_InterrogationRequested: OPTIONAL<NULL>,
+        readonly bor_InterrogationRequested?: OPTIONAL<NULL>,
         /**
          * @summary `suppress_O_CSI`.
          * @description
@@ -201,7 +201,7 @@ class ContinueWithArgumentArg {
          * @public
          * @readonly
          */
-        readonly suppress_O_CSI: OPTIONAL<NULL>,
+        readonly suppress_O_CSI?: OPTIONAL<NULL>,
         /**
          * @summary `continueWithArgumentArgExtension`.
          * @description
@@ -213,7 +213,7 @@ class ContinueWithArgumentArg {
          * @public
          * @readonly
          */
-        readonly continueWithArgumentArgExtension: OPTIONAL<ContinueWithArgumentArgExtension>,
+        readonly continueWithArgumentArgExtension?: OPTIONAL<ContinueWithArgumentArgExtension>,
         /**
          * @summary Extensions that are not recognized.
          * @public

@@ -40,7 +40,7 @@ class ServiceDistanceDependency {
 
     constructor (
         aocService: INTEGER,
-        chargingZone: OPTIONAL<INTEGER>
+        chargingZone?: OPTIONAL<INTEGER>
     ) {
         this.aocService = aocService;
         this.chargingZone = chargingZone;

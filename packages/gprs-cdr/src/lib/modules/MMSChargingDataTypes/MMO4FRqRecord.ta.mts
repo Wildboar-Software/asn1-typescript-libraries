@@ -513,8 +513,8 @@ class MMO4FRqRecord {
         forwardCounter: OPTIONAL<INTEGER>,
         forwardingAddress: OPTIONAL<MMSAgentAddress[]>,
         recordTimeStamp: OCTET_STRING,
-        localSequenceNumber: OPTIONAL<INTEGER>,
-        recordExtensions: OPTIONAL<ManagementExtension[]>
+        localSequenceNumber?: OPTIONAL<INTEGER>,
+        recordExtensions?: OPTIONAL<ManagementExtension[]>
     ) {
         this.recordType = recordType;
         this.originatorMmsRSAddress = originatorMmsRSAddress;

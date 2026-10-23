@@ -102,7 +102,7 @@ class AttachToEventCondition {
          * @public
          * @readonly
          */
-        readonly acceptableDelay: OPTIONAL<Unsigned32>
+        readonly acceptableDelay?: OPTIONAL<Unsigned32>
     ) {}
 
     /**

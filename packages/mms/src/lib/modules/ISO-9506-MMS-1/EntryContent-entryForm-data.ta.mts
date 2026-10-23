@@ -53,7 +53,7 @@ class EntryContent_entryForm_data {
          * @public
          * @readonly
          */
-        readonly event: OPTIONAL<EntryContent_entryForm_data_event>,
+        readonly event?: OPTIONAL<EntryContent_entryForm_data_event>,
         /**
          * @summary `listOfVariables`.
          * @description
@@ -65,7 +65,7 @@ class EntryContent_entryForm_data {
          * @public
          * @readonly
          */
-        readonly listOfVariables: OPTIONAL<Journal_Variable[]>
+        readonly listOfVariables?: OPTIONAL<Journal_Variable[]>
     ) {}
 
     /**

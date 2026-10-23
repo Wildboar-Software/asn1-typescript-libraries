@@ -70,7 +70,7 @@ class LocationInformation {
          * @public
          * @readonly
          */
-        readonly ageOfLocationInformation: OPTIONAL<AgeOfLocationInformation>,
+        readonly ageOfLocationInformation?: OPTIONAL<AgeOfLocationInformation>,
         /**
          * @summary `geographicalInformation`.
          * @description
@@ -82,7 +82,7 @@ class LocationInformation {
          * @public
          * @readonly
          */
-        readonly geographicalInformation: OPTIONAL<GeographicalInformation>,
+        readonly geographicalInformation?: OPTIONAL<GeographicalInformation>,
         /**
          * @summary `vlr_number`.
          * @description
@@ -93,7 +93,7 @@ class LocationInformation {
          * @public
          * @readonly
          */
-        readonly vlr_number: OPTIONAL<ISDN_AddressString>,
+        readonly vlr_number?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `locationNumber`.
          * @description
@@ -104,7 +104,7 @@ class LocationInformation {
          * @public
          * @readonly
          */
-        readonly locationNumber: OPTIONAL<LocationNumber>,
+        readonly locationNumber?: OPTIONAL<LocationNumber>,
         /**
          * @summary `cellGlobalIdOrServiceAreaIdOrLAI`.
          * @description
@@ -117,13 +117,13 @@ class LocationInformation {
          * @public
          * @readonly
          */
-        readonly cellGlobalIdOrServiceAreaIdOrLAI: OPTIONAL<CellGlobalIdOrServiceAreaIdOrLAI>,
+        readonly cellGlobalIdOrServiceAreaIdOrLAI?: OPTIONAL<CellGlobalIdOrServiceAreaIdOrLAI>,
         /**
          * @summary `extensionContainer`.
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `selectedLSA_Id`.
          * @description
@@ -134,7 +134,7 @@ class LocationInformation {
          * @public
          * @readonly
          */
-        readonly selectedLSA_Id: OPTIONAL<LSAIdentity>,
+        readonly selectedLSA_Id?: OPTIONAL<LSAIdentity>,
         /**
          * @summary `msc_Number`.
          * @description
@@ -145,7 +145,7 @@ class LocationInformation {
          * @public
          * @readonly
          */
-        readonly msc_Number: OPTIONAL<ISDN_AddressString>,
+        readonly msc_Number?: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `geodeticInformation`.
          * @description
@@ -157,7 +157,7 @@ class LocationInformation {
          * @public
          * @readonly
          */
-        readonly geodeticInformation: OPTIONAL<GeodeticInformation>,
+        readonly geodeticInformation?: OPTIONAL<GeodeticInformation>,
         /**
          * @summary `currentLocationRetrieved`.
          * @description
@@ -169,7 +169,7 @@ class LocationInformation {
          * @public
          * @readonly
          */
-        readonly currentLocationRetrieved: OPTIONAL<NULL>,
+        readonly currentLocationRetrieved?: OPTIONAL<NULL>,
         /**
          * @summary `sai_Present`.
          * @description
@@ -180,7 +180,7 @@ class LocationInformation {
          * @public
          * @readonly
          */
-        readonly sai_Present: OPTIONAL<NULL>,
+        readonly sai_Present?: OPTIONAL<NULL>,
         /**
          * @summary `locationInformationEPS`.
          * @description
@@ -192,7 +192,7 @@ class LocationInformation {
          * @public
          * @readonly
          */
-        readonly locationInformationEPS: OPTIONAL<LocationInformationEPS>,
+        readonly locationInformationEPS?: OPTIONAL<LocationInformationEPS>,
         /**
          * @summary `userCSGInformation`.
          * @description
@@ -203,7 +203,7 @@ class LocationInformation {
          * @public
          * @readonly
          */
-        readonly userCSGInformation: OPTIONAL<UserCSGInformation>,
+        readonly userCSGInformation?: OPTIONAL<UserCSGInformation>,
         /**
          * @summary Extensions that are not recognized.
          * @public

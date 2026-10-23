@@ -61,8 +61,8 @@ class RequestReportUTSIArg {
 
     constructor (
         requestedUTSIList: RequestedUTSIList,
-        extensions: OPTIONAL<Extensions>,
-        legID: OPTIONAL<LegID>,
+        extensions?: OPTIONAL<Extensions>,
+        legID?: OPTIONAL<LegID>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.requestedUTSIList = requestedUTSIList;

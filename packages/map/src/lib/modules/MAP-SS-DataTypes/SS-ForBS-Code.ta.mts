@@ -52,7 +52,7 @@ class SS_ForBS_Code {
          * @public
          * @readonly
          */
-        readonly basicService: OPTIONAL<BasicServiceCode>,
+        readonly basicService?: OPTIONAL<BasicServiceCode>,
         /**
          * @summary `longFTN_Supported`.
          * @description
@@ -62,7 +62,7 @@ class SS_ForBS_Code {
          * @public
          * @readonly
          */
-        readonly longFTN_Supported: OPTIONAL<NULL>,
+        readonly longFTN_Supported?: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
          * @public

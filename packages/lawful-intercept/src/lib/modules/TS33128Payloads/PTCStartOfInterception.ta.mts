@@ -199,12 +199,12 @@ class PTCStartOfInterception {
         pTCDirection: Direction,
         preEstSessionID: OPTIONAL<PTCSessionInfo>,
         pTCOriginatingID: PTCTargetInformation,
-        pTCSessionInfo: OPTIONAL<PTCSessionInfo>,
-        pTCHost: OPTIONAL<PTCTargetInformation>,
-        pTCParticipants: OPTIONAL<PTCTargetInformation[]>,
-        pTCMediaStreamAvail: OPTIONAL<BOOLEAN>,
-        pTCBearerCapability: OPTIONAL<UTF8String>,
-        location: OPTIONAL<Location>,
+        pTCSessionInfo?: OPTIONAL<PTCSessionInfo>,
+        pTCHost?: OPTIONAL<PTCTargetInformation>,
+        pTCParticipants?: OPTIONAL<PTCTargetInformation[]>,
+        pTCMediaStreamAvail?: OPTIONAL<BOOLEAN>,
+        pTCBearerCapability?: OPTIONAL<UTF8String>,
+        location?: OPTIONAL<Location>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.pTCTargetInformation = pTCTargetInformation;

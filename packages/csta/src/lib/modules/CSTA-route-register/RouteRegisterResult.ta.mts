@@ -62,7 +62,7 @@ class RouteRegisterResult {
          * @public
          * @readonly
          */
-        readonly actualRouteingMediaClass: OPTIONAL<MediaClass>,
+        readonly actualRouteingMediaClass?: OPTIONAL<MediaClass>,
         /**
          * @summary `extensions`.
          * @description
@@ -72,7 +72,7 @@ class RouteRegisterResult {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

@@ -64,7 +64,7 @@ class ResumeArgument {
          * @public
          * @readonly
          */
-        readonly messageToResume: OPTIONAL<MessageID>,
+        readonly messageToResume?: OPTIONAL<MessageID>,
         /**
          * @summary `resource`.
          * @description
@@ -75,7 +75,7 @@ class ResumeArgument {
          * @public
          * @readonly
          */
-        readonly resource: OPTIONAL<ResourceID>,
+        readonly resource?: OPTIONAL<ResourceID>,
         /**
          * @summary `duration`.
          * @description
@@ -85,7 +85,7 @@ class ResumeArgument {
          * @public
          * @readonly
          */
-        readonly duration: OPTIONAL<INTEGER>,
+        readonly duration?: OPTIONAL<INTEGER>,
         /**
          * @summary `extensions`.
          * @description
@@ -96,7 +96,7 @@ class ResumeArgument {
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<CSTACommonArguments>
+        readonly extensions?: OPTIONAL<CSTACommonArguments>
     ) {}
 
     /**

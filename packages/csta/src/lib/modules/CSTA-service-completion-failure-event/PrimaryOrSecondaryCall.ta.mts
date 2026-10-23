@@ -77,7 +77,7 @@ class PrimaryOrSecondaryCall {
          * @public
          * @readonly
          */
-        readonly connectionInfo: OPTIONAL<ConnectionInformation>
+        readonly connectionInfo?: OPTIONAL<ConnectionInformation>
     ) {}
 
     /**

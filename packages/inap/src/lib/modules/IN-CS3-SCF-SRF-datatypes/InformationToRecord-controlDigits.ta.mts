@@ -77,12 +77,12 @@ class InformationToRecord_controlDigits {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        endOfRecordingDigit: OPTIONAL<OCTET_STRING>,
-        cancelDigit: OPTIONAL<OCTET_STRING>,
-        replayDigit: OPTIONAL<OCTET_STRING>,
-        restartRecordingDigit: OPTIONAL<OCTET_STRING>,
-        restartAllowed: OPTIONAL<BOOLEAN>,
-        replayAllowed: OPTIONAL<BOOLEAN>,
+        endOfRecordingDigit?: OPTIONAL<OCTET_STRING>,
+        cancelDigit?: OPTIONAL<OCTET_STRING>,
+        replayDigit?: OPTIONAL<OCTET_STRING>,
+        restartRecordingDigit?: OPTIONAL<OCTET_STRING>,
+        restartAllowed?: OPTIONAL<BOOLEAN>,
+        replayAllowed?: OPTIONAL<BOOLEAN>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.endOfRecordingDigit = endOfRecordingDigit;

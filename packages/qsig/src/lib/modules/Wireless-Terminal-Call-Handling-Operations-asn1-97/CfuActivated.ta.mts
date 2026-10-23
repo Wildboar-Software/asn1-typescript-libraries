@@ -80,8 +80,8 @@ class CfuActivated {
     constructor (
         divToAddress: Address,
         divOptions: SubscriptionOption,
-        wtmName: OPTIONAL<Name>,
-        argExtension: OPTIONAL<WtmiExtension>
+        wtmName?: OPTIONAL<Name>,
+        argExtension?: OPTIONAL<WtmiExtension>
     ) {
         this.divToAddress = divToAddress;
         this.divOptions = divOptions;

@@ -72,8 +72,8 @@ class AocCompleteArg {
 
     constructor (
         chargedUser: PartyNumber,
-        chargingAssociation: OPTIONAL<ChargingAssociation>,
-        completeArgExtension: OPTIONAL<AocCompleteArg_completeArgExtension>
+        chargingAssociation?: OPTIONAL<ChargingAssociation>,
+        completeArgExtension?: OPTIONAL<AocCompleteArg_completeArgExtension>
     ) {
         this.chargedUser = chargedUser;
         this.chargingAssociation = chargingAssociation;

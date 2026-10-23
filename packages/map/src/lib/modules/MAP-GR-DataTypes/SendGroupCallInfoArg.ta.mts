@@ -87,7 +87,7 @@ class SendGroupCallInfoArg {
          * @public
          * @readonly
          */
-        readonly cellId: OPTIONAL<GlobalCellId>,
+        readonly cellId?: OPTIONAL<GlobalCellId>,
         /**
          * @summary `imsi`.
          * @description
@@ -98,7 +98,7 @@ class SendGroupCallInfoArg {
          * @public
          * @readonly
          */
-        readonly imsi: OPTIONAL<IMSI>,
+        readonly imsi?: OPTIONAL<IMSI>,
         /**
          * @summary `tmsi`.
          * @description
@@ -108,7 +108,7 @@ class SendGroupCallInfoArg {
          * @public
          * @readonly
          */
-        readonly tmsi: OPTIONAL<TMSI>,
+        readonly tmsi?: OPTIONAL<TMSI>,
         /**
          * @summary `additionalInfo`.
          * @description
@@ -118,7 +118,7 @@ class SendGroupCallInfoArg {
          * @public
          * @readonly
          */
-        readonly additionalInfo: OPTIONAL<AdditionalInfo>,
+        readonly additionalInfo?: OPTIONAL<AdditionalInfo>,
         /**
          * @summary `talkerPriority`.
          * @description
@@ -128,7 +128,7 @@ class SendGroupCallInfoArg {
          * @public
          * @readonly
          */
-        readonly talkerPriority: OPTIONAL<TalkerPriority>,
+        readonly talkerPriority?: OPTIONAL<TalkerPriority>,
         /**
          * @summary `cksn`.
          * @description
@@ -138,7 +138,7 @@ class SendGroupCallInfoArg {
          * @public
          * @readonly
          */
-        readonly cksn: OPTIONAL<Cksn>,
+        readonly cksn?: OPTIONAL<Cksn>,
         /**
          * @summary `extensionContainer`.
          * @description
@@ -148,7 +148,7 @@ class SendGroupCallInfoArg {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary Extensions that are not recognized.
          * @public

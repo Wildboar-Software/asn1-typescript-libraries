@@ -57,7 +57,7 @@ class AuthenticateClientOkDSEsipa {
          * @public
          * @readonly
          */
-        readonly profileDownloadTrigger: OPTIONAL<ProfileDownloadTriggerRequest>
+        readonly profileDownloadTrigger?: OPTIONAL<ProfileDownloadTriggerRequest>
     ) {}
 
     /**

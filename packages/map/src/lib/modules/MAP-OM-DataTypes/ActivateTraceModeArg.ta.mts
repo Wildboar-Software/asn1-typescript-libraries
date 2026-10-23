@@ -93,7 +93,7 @@ class ActivateTraceModeArg {
          * @public
          * @readonly
          */
-        readonly omc_Id: OPTIONAL<AddressString>,
+        readonly omc_Id?: OPTIONAL<AddressString>,
         /**
          * @summary `extensionContainer`.
          * @description
@@ -103,7 +103,7 @@ class ActivateTraceModeArg {
          * @public
          * @readonly
          */
-        readonly extensionContainer: OPTIONAL<ExtensionContainer>,
+        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `traceReference2`.
          * @description
@@ -115,7 +115,7 @@ class ActivateTraceModeArg {
          * @public
          * @readonly
          */
-        readonly traceReference2: OPTIONAL<TraceReference2>,
+        readonly traceReference2?: OPTIONAL<TraceReference2>,
         /**
          * @summary `traceDepthList`.
          * @description
@@ -126,7 +126,7 @@ class ActivateTraceModeArg {
          * @public
          * @readonly
          */
-        readonly traceDepthList: OPTIONAL<TraceDepthList>,
+        readonly traceDepthList?: OPTIONAL<TraceDepthList>,
         /**
          * @summary `traceNE_TypeList`.
          * @description
@@ -137,7 +137,7 @@ class ActivateTraceModeArg {
          * @public
          * @readonly
          */
-        readonly traceNE_TypeList: OPTIONAL<TraceNE_TypeList>,
+        readonly traceNE_TypeList?: OPTIONAL<TraceNE_TypeList>,
         /**
          * @summary `traceInterfaceList`.
          * @description
@@ -148,7 +148,7 @@ class ActivateTraceModeArg {
          * @public
          * @readonly
          */
-        readonly traceInterfaceList: OPTIONAL<TraceInterfaceList>,
+        readonly traceInterfaceList?: OPTIONAL<TraceInterfaceList>,
         /**
          * @summary `traceEventList`.
          * @description
@@ -159,7 +159,7 @@ class ActivateTraceModeArg {
          * @public
          * @readonly
          */
-        readonly traceEventList: OPTIONAL<TraceEventList>,
+        readonly traceEventList?: OPTIONAL<TraceEventList>,
         /**
          * @summary `traceCollectionEntity`.
          * @description
@@ -169,7 +169,7 @@ class ActivateTraceModeArg {
          * @public
          * @readonly
          */
-        readonly traceCollectionEntity: OPTIONAL<GSN_Address>,
+        readonly traceCollectionEntity?: OPTIONAL<GSN_Address>,
         /**
          * @summary `mdt_Configuration`.
          * @description
@@ -180,7 +180,7 @@ class ActivateTraceModeArg {
          * @public
          * @readonly
          */
-        readonly mdt_Configuration: OPTIONAL<MDT_Configuration>,
+        readonly mdt_Configuration?: OPTIONAL<MDT_Configuration>,
         /**
          * @summary Extensions that are not recognized.
          * @public

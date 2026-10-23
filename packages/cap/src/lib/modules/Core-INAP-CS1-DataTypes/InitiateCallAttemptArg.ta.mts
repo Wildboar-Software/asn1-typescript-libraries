@@ -51,25 +51,25 @@ class InitiateCallAttemptArg {
          * @public
          * @readonly
          */
-        readonly alertingPattern: OPTIONAL<AlertingPattern>,
+        readonly alertingPattern?: OPTIONAL<AlertingPattern>,
         /**
          * @summary `extensions`.
          * @public
          * @readonly
          */
-        readonly extensions: OPTIONAL<ExtensionField[]>,
+        readonly extensions?: OPTIONAL<ExtensionField[]>,
         /**
          * @summary `serviceInteractionIndicators`.
          * @public
          * @readonly
          */
-        readonly serviceInteractionIndicators: OPTIONAL<ServiceInteractionIndicators>,
+        readonly serviceInteractionIndicators?: OPTIONAL<ServiceInteractionIndicators>,
         /**
          * @summary `callingPartyNumber`.
          * @public
          * @readonly
          */
-        readonly callingPartyNumber: OPTIONAL<CallingPartyNumber>
+        readonly callingPartyNumber?: OPTIONAL<CallingPartyNumber>
     ) {}
 
     /**

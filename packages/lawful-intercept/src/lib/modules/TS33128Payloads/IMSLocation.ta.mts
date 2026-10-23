@@ -90,9 +90,9 @@ class IMSLocation {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        pANIHeaderInfo: OPTIONAL<PANIHeaderInfo[]>,
-        geolocationHeaderInfo: OPTIONAL<SIPGeolocationHeaderInfo[]>,
-        cNIHeaderInfo: OPTIONAL<SIPCNIHeaderInfo[]>,
+        pANIHeaderInfo?: OPTIONAL<PANIHeaderInfo[]>,
+        geolocationHeaderInfo?: OPTIONAL<SIPGeolocationHeaderInfo[]>,
+        cNIHeaderInfo?: OPTIONAL<SIPCNIHeaderInfo[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.pANIHeaderInfo = pANIHeaderInfo;

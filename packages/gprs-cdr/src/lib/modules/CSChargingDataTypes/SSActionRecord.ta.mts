@@ -353,8 +353,8 @@ class SSActionRecord {
         ssParameters: OPTIONAL<SSParameters>,
         ssActionResult: OPTIONAL<HLRIntResult>,
         callReference: OCTET_STRING,
-        recordExtensions: OPTIONAL<ManagementExtension[]>,
-        systemType: OPTIONAL<SystemType>
+        recordExtensions?: OPTIONAL<ManagementExtension[]>,
+        systemType?: OPTIONAL<SystemType>
     ) {
         this.recordType = recordType;
         this.servedIMSI = servedIMSI;

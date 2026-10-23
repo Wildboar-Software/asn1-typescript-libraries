@@ -132,12 +132,12 @@ class EPSBearerQOS {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        qCI: OPTIONAL<QCI>,
-        maximumUplinkBitRate: OPTIONAL<BitrateBinKBPS>,
-        maximumDownlinkBitRate: OPTIONAL<BitrateBinKBPS>,
-        guaranteedUplinkBitRate: OPTIONAL<BitrateBinKBPS>,
-        guaranteedDownlinkBitRate: OPTIONAL<BitrateBinKBPS>,
-        priorityLevel: OPTIONAL<EPSQOSPriority>,
+        qCI?: OPTIONAL<QCI>,
+        maximumUplinkBitRate?: OPTIONAL<BitrateBinKBPS>,
+        maximumDownlinkBitRate?: OPTIONAL<BitrateBinKBPS>,
+        guaranteedUplinkBitRate?: OPTIONAL<BitrateBinKBPS>,
+        guaranteedDownlinkBitRate?: OPTIONAL<BitrateBinKBPS>,
+        priorityLevel?: OPTIONAL<EPSQOSPriority>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.qCI = qCI;

@@ -48,7 +48,7 @@ class BlockParamOffer {
          * @public
          * @readonly
          */
-        readonly capability: OPTIONAL<BlockParamOffer_capability>,
+        readonly capability?: OPTIONAL<BlockParamOffer_capability>,
         /**
          * @summary `bound`.
          * @description
@@ -58,7 +58,7 @@ class BlockParamOffer {
          * @public
          * @readonly
          */
-        readonly bound: OPTIONAL<BlockParamOffer_bound>
+        readonly bound?: OPTIONAL<BlockParamOffer_bound>
     ) {}
 
     /**

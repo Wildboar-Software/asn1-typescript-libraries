@@ -39,13 +39,13 @@ class EventSpecificInformationBCSM_tMidCallSpecificInfo {
          * @public
          * @readonly
          */
-        readonly connectTime: OPTIONAL<Integer4>,
+        readonly connectTime?: OPTIONAL<Integer4>,
         /**
          * @summary `tMidCallInfo`.
          * @public
          * @readonly
          */
-        readonly tMidCallInfo: OPTIONAL<MidCallInfo>,
+        readonly tMidCallInfo?: OPTIONAL<MidCallInfo>,
         /**
          * @summary Extensions that are not recognized.
          * @public

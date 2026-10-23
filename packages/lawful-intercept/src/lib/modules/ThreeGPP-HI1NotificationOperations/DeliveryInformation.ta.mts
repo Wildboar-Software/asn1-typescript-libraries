@@ -90,10 +90,10 @@ class DeliveryInformation {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        hi2DeliveryNumber: OPTIONAL<CalledPartyNumber>,
-        hi3DeliveryNumber: OPTIONAL<CalledPartyNumber>,
-        hi2DeliveryIpAddress: OPTIONAL<IPAddress>,
-        hi3DeliveryIpAddress: OPTIONAL<IPAddress>,
+        hi2DeliveryNumber?: OPTIONAL<CalledPartyNumber>,
+        hi3DeliveryNumber?: OPTIONAL<CalledPartyNumber>,
+        hi2DeliveryIpAddress?: OPTIONAL<IPAddress>,
+        hi3DeliveryIpAddress?: OPTIONAL<IPAddress>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.hi2DeliveryNumber = hi2DeliveryNumber;

@@ -120,8 +120,8 @@ class PresentResponse {
         numberOfRecordsReturned: INTEGER,
         nextResultSetPosition: INTEGER,
         presentStatus: PresentStatus,
-        records: OPTIONAL<Records>,
-        otherInfo: OPTIONAL<OtherInformation>
+        records?: OPTIONAL<Records>,
+        otherInfo?: OPTIONAL<OtherInformation>
     ) {
         this.referenceId = referenceId;
         this.numberOfRecordsReturned = numberOfRecordsReturned;

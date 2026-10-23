@@ -86,8 +86,8 @@ class MappingInfo {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        timestampMapping: OPTIONAL<TimestampMapping[]>,
-        locationMapping: OPTIONAL<LocationMapping[]>,
+        timestampMapping?: OPTIONAL<TimestampMapping[]>,
+        locationMapping?: OPTIONAL<LocationMapping[]>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.timestampMapping = timestampMapping;

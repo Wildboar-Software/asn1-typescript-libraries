@@ -63,7 +63,7 @@ class Resume_Request {
          * @public
          * @readonly
          */
-        readonly executionArgument: OPTIONAL<Resume_Request_executionArgument>
+        readonly executionArgument?: OPTIONAL<Resume_Request_executionArgument>
     ) {}
 
     /**

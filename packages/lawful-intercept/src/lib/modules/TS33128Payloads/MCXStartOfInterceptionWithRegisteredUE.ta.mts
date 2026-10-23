@@ -109,7 +109,7 @@ class MCXStartOfInterceptionWithRegisteredUE {
         userOnline: BOOLEAN,
         sIPRegistrationRequest: SIPMessage,
         sIPRegistrationResponse: SIPMessage,
-        location: OPTIONAL<Location>,
+        location?: OPTIONAL<Location>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.mCServiceIdentities = mCServiceIdentities;

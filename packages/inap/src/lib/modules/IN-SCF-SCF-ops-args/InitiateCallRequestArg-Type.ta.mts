@@ -69,10 +69,10 @@ class InitiateCallRequestArg_Type {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        requestedType: OPTIONAL<RequestedType>,
-        destinationRelatedInfo: OPTIONAL<DestinationRelatedInfo[]>,
-        securityParameters: OPTIONAL<SecurityParameters>,
-        extensions: OPTIONAL<Extensions>,
+        requestedType?: OPTIONAL<RequestedType>,
+        destinationRelatedInfo?: OPTIONAL<DestinationRelatedInfo[]>,
+        securityParameters?: OPTIONAL<SecurityParameters>,
+        extensions?: OPTIONAL<Extensions>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.requestedType = requestedType;

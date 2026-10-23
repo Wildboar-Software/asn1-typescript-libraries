@@ -68,8 +68,8 @@ class PANI_Location {
     readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
-        raw_Location: OPTIONAL<OCTET_STRING>,
-        location: OPTIONAL<Location>,
+        raw_Location?: OPTIONAL<OCTET_STRING>,
+        location?: OPTIONAL<Location>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.raw_Location = raw_Location;

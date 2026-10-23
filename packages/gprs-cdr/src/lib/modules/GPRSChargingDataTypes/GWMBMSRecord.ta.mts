@@ -419,14 +419,14 @@ class GWMBMSRecord {
         recordOpeningTime: OCTET_STRING,
         duration: INTEGER,
         causeForRecClosing: CauseForRecClosing,
-        diagnostics: OPTIONAL<Diagnostics>,
-        recordSequenceNumber: OPTIONAL<INTEGER>,
-        nodeID: OPTIONAL<IA5String>,
-        recordExtensions: OPTIONAL<ManagementExtension[]>,
-        localSequenceNumber: OPTIONAL<INTEGER>,
-        mbmsInformation: OPTIONAL<MBMSInformation>,
-        commonTeid: OPTIONAL<OCTET_STRING>,
-        iPMulticastSourceAddress: OPTIONAL<PDPAddress>
+        diagnostics?: OPTIONAL<Diagnostics>,
+        recordSequenceNumber?: OPTIONAL<INTEGER>,
+        nodeID?: OPTIONAL<IA5String>,
+        recordExtensions?: OPTIONAL<ManagementExtension[]>,
+        localSequenceNumber?: OPTIONAL<INTEGER>,
+        mbmsInformation?: OPTIONAL<MBMSInformation>,
+        commonTeid?: OPTIONAL<OCTET_STRING>,
+        iPMulticastSourceAddress?: OPTIONAL<PDPAddress>
     ) {
         this.recordType = recordType;
         this.mbmsGWAddress = mbmsGWAddress;

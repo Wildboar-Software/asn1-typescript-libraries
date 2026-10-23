@@ -561,7 +561,7 @@ class PFEDRecord {
         proximityCancellationTimestamp: OPTIONAL<OCTET_STRING>,
         reasonforCancellation: OPTIONAL<ReasonforCancellation>,
         causeForRecClosing: ProSeCauseForRecClosing,
-        proximityRequestRenewalInfoBlockList: OPTIONAL<ProximityRequestRenewalInfoBlock[]>
+        proximityRequestRenewalInfoBlockList?: OPTIONAL<ProximityRequestRenewalInfoBlock[]>
     ) {
         this.recordType = recordType;
         this.retransmission = retransmission;

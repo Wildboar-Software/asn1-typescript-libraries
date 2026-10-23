@@ -59,8 +59,8 @@ class ConnectAssociationArg {
 
     constructor (
         address: CalledPartyNumber,
-        extensions: OPTIONAL<Extensions>,
-        genericNumbers: OPTIONAL<GenericNumbers>,
+        extensions?: OPTIONAL<Extensions>,
+        genericNumbers?: OPTIONAL<GenericNumbers>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.address = address;

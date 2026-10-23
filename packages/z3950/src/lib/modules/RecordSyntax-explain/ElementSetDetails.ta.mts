@@ -124,8 +124,8 @@ class ElementSetDetails {
         elementSetName: ElementSetName,
         recordSyntax: OBJECT_IDENTIFIER,
         schema: OBJECT_IDENTIFIER,
-        description: OPTIONAL<HumanString>,
-        detailsPerElement: OPTIONAL<PerElementDetails[]>
+        description?: OPTIONAL<HumanString>,
+        detailsPerElement?: OPTIONAL<PerElementDetails[]>
     ) {
         this.commonInfo = commonInfo;
         this.databaseName = databaseName;

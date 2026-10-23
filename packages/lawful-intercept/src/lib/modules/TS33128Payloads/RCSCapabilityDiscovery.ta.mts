@@ -150,7 +150,7 @@ class RCSCapabilityDiscovery {
         rCSTargetContactIdentities: OPTIONAL<RCSIdentity[]>,
         sIPMessage: IMSPayload,
         direction: Direction,
-        location: OPTIONAL<Location>,
+        location?: OPTIONAL<Location>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.rCSTargetIdentities = rCSTargetIdentities;
