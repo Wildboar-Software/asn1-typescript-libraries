@@ -13,7 +13,22 @@ import { Status, _decode_Status, _encode_Status, _enum_for_Status } from "../IMS
 /**
  * @summary ApplicationServersInformation
  * @description
- * 
+ *
+ * Application servers addressed during the session, and the called party
+ * address when an AS determined it (clause 6.3.1.2). On an S-CSCF CDR the
+ * status records a 4xx, a 5xx, or a timeout from that AS. A transit
+ * network that provides IMS application services uses the same group
+ * (clause 6.1.3.14).
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 6.3.1.2.
+ *
+ * This is a grouped CDR field containing the fields: "Application Server
+ * Involved", "Application Provided Called Parties" and "Status".
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.5.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,18 +45,41 @@ export
 class ApplicationServersInformation {
     /**
      * @summary `applicationServersInvolved`.
+     * @description
+     *
+     * Holds the ASs (if any) identified by the SIP URLs.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.6.
+     *
+     * 3GPP TS 32.260 V20.1.0 clause 6.3.1.2.
+     *
      * @public
      * @readonly
      */
     readonly applicationServersInvolved: OPTIONAL<NodeAddress>;
     /**
      * @summary `applicationProvidedCalledParties`.
+     * @description
+     *
+     * Holds a list of the Called party address(es), if the address(es) are
+     * determined by an AS (SIP URL, E.164…).
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.4.
+     *
+     * 3GPP TS 32.260 V20.1.0 clause 6.3.1.2.
+     *
      * @public
      * @readonly
      */
     readonly applicationProvidedCalledParties: OPTIONAL<InvolvedParty[]>;
     /**
      * @summary `sTatus`.
+     * @description
+     *
+     * Abnormal status of an application server when that AS returns a SIP 4xx
+     * or 5xx, or times out, toward the S-CSCF during the session (clause
+     * 6.1.3.3).
+     *
      * @public
      * @readonly
      */

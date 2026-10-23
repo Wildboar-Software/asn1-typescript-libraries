@@ -21,7 +21,25 @@ enum _enum_for_UnauthorizedLCSClient_Diagnostic {
 /**
  * @summary UnauthorizedLCSClient_Diagnostic
  * @description
- * 
+ *
+ * Detailed cause for an unauthorized LCS client, carried as the
+ * `unauthorizedLCSClientCause` alternative of `Diagnostics`.
+ * TS 32.271 does not define this enumeration. Clause 4.1 notes
+ * that the MSC and the SGSN also take part in LCS charging, and
+ * that this is described in TS 32.250 and TS 32.251.
+ *
+ * After the H-GMLC has performed the privacy check on the MT-LR
+ * response, it processes the LCS-HGMT-CDR (clause 5.2.3.2). The
+ * scenarios in clause 5.2.3 assume the LCS client has no privacy
+ * override capability. TS 32.271 does not say that this
+ * enumeration records the result of that check.
+ *
+ * On an LCS-GMO-CDR, a location-service failure is User Error
+ * (category C).
+ *
+ * 3GPP TS 32.271 V12.1.0 clauses 4.1, 5.2.3.0, 5.2.3.2, and
+ * 6.1.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

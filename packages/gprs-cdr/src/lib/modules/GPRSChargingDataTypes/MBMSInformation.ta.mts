@@ -19,6 +19,11 @@ import { MBMSInformation_cNIPMulticastDistribution, _decode_MBMSInformation_cNIP
  * @summary MBMSInformation
  * @description
  * 
+ * MBMS bearer information for the bearer context being charged (tables
+ * 6.1.10.1, 6.1.11.1, and 6.1.12.1). TS 32.251 states that the contents
+ * are defined in TS 32.273 and does not reproduce them.
+ * 
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

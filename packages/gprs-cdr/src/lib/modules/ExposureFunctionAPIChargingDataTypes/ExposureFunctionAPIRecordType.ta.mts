@@ -10,7 +10,13 @@ import { EASCERecord, _decode_EASCERecord, _encode_EASCERecord } from "../Exposu
 /**
  * @summary ExposureFunctionAPIRecordType
  * @description
- * 
+ *
+ * Exposure function API CDR. The only alternative is the
+ * EA-SCE-CDR, `eASCERecord`, with context tag 120. That tag is
+ * the `RecordType` value `eASCERecord`.
+ *
+ * 3GPP TS 32.254 V20.0.0 clause 6.1.3.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -12,7 +12,27 @@ import { StoreStatus, _decode_StoreStatus, _encode_StoreStatus } from "../MMSCha
 /**
  * @summary MMBoxStorageInformation
  * @description
- * 
+ *
+ * This field includes following storage information elements for the MMBox
+ * containing the MM State, MM Flags, Store Status, Store Status Text and
+ * Stored Message Reference. MM State; This field contains the state of the
+ * MM. MM Flags: This field contains the keyword flags of the MM. Store
+ * Status: This field contains an appropriate status value of the stored MM,
+ * e.g. stored, error-transient-mailbox-full,… Store Status Text; This field
+ * includes a more detailed technical description of the store status at the
+ * point in time when the CDR is generated. Stored Message Reference; A
+ * reference of the newly stored MM.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.24.
+ *
+ * MMBox storage parameters for an MM. Present on an O1S-CDR only when the
+ * MMS R/S supports MMBox and the originator User Agent requested that the
+ * submitted MM be stored. Present on an F-CDR under the same condition for
+ * the forwarding User Agent. On a Bx1S-CDR the store-status text is
+ * present only when the store status is present. MM flags have no default.
+ *
+ * 3GPP TS 32.270 V19.0.0 clauses 6.1.1.1, 6.1.3.1, and 6.1.4.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,30 +50,74 @@ export
 class MMBoxStorageInformation {
     /**
      * @summary `mmState`.
+     * @description
+     *
+     * MM State; This field contains the state of the MM.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.24.
+     *
      * @public
      * @readonly
      */
     readonly mmState: MMState;
     /**
      * @summary `mmFlag`.
+     * @description
+     *
+     * MM Flags: This field contains the keyword flags of the MM.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.24.
+     *
      * @public
      * @readonly
      */
     readonly mmFlag: OCTET_STRING;
     /**
      * @summary `storeStatus`.
+     * @description
+     *
+     * Status of the request to store the MM, as received in MM1_store.RES.
+     * Category OC on the Bx1S-CDR.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.4.1.
+     *
      * @public
      * @readonly
      */
     readonly storeStatus: StoreStatus;
     /**
      * @summary `storeStatusText`.
+     * @description
+     *
+     * Store Status Text; This field includes a more detailed technical
+     * description of the store status at the point in time when the CDR is
+     * generated.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.24.
+     *
+     * More detailed description of the store status at the time the CDR is
+     * generated. On a Bx1S-CDR it is present only when the store status is
+     * present.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.4.1.
+     *
      * @public
      * @readonly
      */
     readonly storeStatusText: OCTET_STRING;
     /**
      * @summary `storedMessageReference`.
+     * @description
+     *
+     * Stored Message Reference; A reference of the newly stored MM.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.24.
+     *
+     * Reference of the newly stored MM, suitable for a later retrieve or MMBox
+     * delete.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.4.1.
+     *
      * @public
      * @readonly
      */

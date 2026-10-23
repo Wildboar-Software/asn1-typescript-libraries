@@ -19,7 +19,19 @@ import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExt
 /**
  * @summary HLRIntRecord
  * @description
- * 
+ *
+ * HLR interrogation CDR. When enabled, one record is created for each
+ * interrogation of a mobile subscriber, either in the HLR or in the
+ * interrogating MSC. `routingNumber` carries the MSRN or forwarding number
+ * when the interrogation succeeds. `basicService` is present only for
+ * teleservice 21 (SMS-MT). `interrogationResult` is present when the request
+ * is unsuccessful. `numberOfForwarding` is present when ISUP supplies the
+ * forwarding count.
+ *
+ * Categories are M, C, OM, and OC as in TS 32.240 clause 5.4.
+ *
+ * 3GPP TS 32.250 V19.0.0 clause 6.1.3.10.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,67 +48,183 @@ import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExt
  *    recordExtensions      [9] IMPLICIT SET  OF
  *       ManagementExtension OPTIONAL}
  * ```
- * 
  * @class
  */
 export
 class HLRIntRecord {
     /**
      * @summary `recordType`.
+     * @description
+     *
+     * 2G and 3G mandatory. HLR interrogation.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.10.
+     *
+     * The field identifies the type of the record e.g. mobile originated,
+     * mobile terminated etc.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.72.
+     *
      * @public
      * @readonly
      */
     readonly recordType: RecordType;
     /**
      * @summary `servedIMSI`.
+     * @description
+     *
+     * 2G and 3G conditional. The IMSI of the party being interrogated, if
+     * successful.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.10.
+     *
+     * This fields contains the international mobile subscriber identity (IMSI)
+     * of the served party. The term "served" party is used to describe the
+     * mobile subscriber involved in the transaction recorded e.g. the calling
+     * subscriber in case of an MOC record. The structure of the IMSI is defined
+     * in TS 23.003 [200].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.79.
+     *
      * @public
      * @readonly
      */
     readonly servedIMSI: OCTET_STRING;
     /**
      * @summary `servedMSISDN`.
+     * @description
+     *
+     * 2G and 3G mandatory. The MSISDN of the subscriber being interrogated.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.10.
+     *
+     * This fields contains the mobile station ISDN number (MSISDN) of the
+     * served party. The term "served" party is used to describe the mobile
+     * subscriber involved in the transaction recorded e.g. the called
+     * subscriber in case of an MTC record. In case of multi-numbering the
+     * MSISDN stored in a MOC record will be the primary MSISDN of the calling
+     * party. The structure of the MSISDN is defined in TS 23.003 [200].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.80.
+     *
      * @public
      * @readonly
      */
     readonly servedMSISDN: OCTET_STRING;
     /**
      * @summary `recordingEntity`.
+     * @description
+     *
+     * 2G and 3G mandatory. The E.164 Number of the HLR / MSC.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.10.
+     *
+     * This field contains the E.164 [308] number assigned to the entity (MSC,
+     * VLR, HLR etc.) that produced the record. For further details concerning
+     * the structure of MSC and location register numbers see TS 23.003 [200].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.73.
+     *
      * @public
      * @readonly
      */
     readonly recordingEntity: OCTET_STRING;
     /**
      * @summary `basicService`.
+     * @description
+     *
+     * 2G and 3G operator-provisionable conditional. Only for teleservice 21
+     * (SMS-MT).
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.10.
+     *
      * @public
      * @readonly
      */
     readonly basicService: OPTIONAL<BasicService>;
     /**
      * @summary `routingNumber`.
+     * @description
+     *
+     * 2G and 3G conditional. Routing number (MSRN, forwarding number) provided
+     * by the HLR if the interrogation was successful.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.10.
+     *
+     * The routing number field of the HLR interrogation record contains either
+     * a mobile station roaming number or, in case of call forwarding, a
+     * forwarded-to number.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.76.
+     *
      * @public
      * @readonly
      */
     readonly routingNumber: RoutingNumber;
     /**
      * @summary `interrogationTime`.
+     * @description
+     *
+     * 2G and 3G mandatory. Time at which the interrogation was invoked.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.10.
+     *
      * @public
      * @readonly
      */
     readonly interrogationTime: OCTET_STRING;
     /**
      * @summary `numberOfForwarding`.
+     * @description
+     *
+     * 2G and 3G conditional. The number of times the call has been forwarded if
+     * provided by ISUP.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.10.
+     *
+     * This field, if provided via ISUP signalling, contains the number of times
+     * a call has been forwarded prior to the interrogation of the HLR and is
+     * defined in TS 29.002 [214].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.62.
+     *
      * @public
      * @readonly
      */
     readonly numberOfForwarding: OPTIONAL<INTEGER>;
     /**
      * @summary `interrogationResult`.
+     * @description
+     *
+     * 2G and 3G conditional. The result of the interrogation request if
+     * unsuccessful.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.10.
+     *
+     * This field contains the result of the HLR interrogation attempt as
+     * defined in the MAP (TS 29.002 [214]). NOTE: This field is only provided
+     * if the attempted interrogation was unsuccessful.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.32.
+     *
      * @public
      * @readonly
      */
     readonly interrogationResult: OPTIONAL<HLRIntResult>;
     /**
      * @summary `recordExtensions`.
+     * @description
+     *
+     * 2G and 3G operator-provisionable conditional. A set of network/
+     * manufacturer specific extensions to the record, when available.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.10.
+     *
+     * The field enables network operators and/ or manufacturers to add their
+     * own extensions to the standard record definitions.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.71.
+     *
      * @public
      * @readonly
      */
@@ -145,7 +273,7 @@ class HLRIntRecord {
     /**
      * @summary Restructures an object into a HLRIntRecord
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `HLRIntRecord`.
      * 
      * @public
@@ -164,9 +292,9 @@ class HLRIntRecord {
 /**
  * @summary The Leading Root Component Types of HLRIntRecord
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -186,9 +314,9 @@ const _root_component_type_list_1_spec_for_HLRIntRecord: $.ComponentSpec[] = [
 /**
  * @summary The Trailing Root Component Types of HLRIntRecord
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -199,9 +327,9 @@ const _root_component_type_list_2_spec_for_HLRIntRecord: $.ComponentSpec[] = [
 /**
  * @summary The Extension Addition Component Types of HLRIntRecord
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * @constant
  */
 export

@@ -14,7 +14,15 @@ import { RangeClass, _decode_RangeClass, _encode_RangeClass, _enum_for_RangeClas
 /**
  * @summary ProximityRequestRenewalInfoBlock
  * @description
- * 
+ *
+ * One Proximity Request Renewal captured in a PF-ED-CDR. A renewal updates the
+ * already open CDR for the initial request with a new UE location, time window,
+ * and range class. The block is table 6.1.3.3.2.
+ *
+ * 3GPP TS 32.277 V19.2.0 clauses 5.2.1.3 and 6.1.3.3.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.27.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,24 +39,53 @@ export
 class ProximityRequestRenewalInfoBlock {
     /**
      * @summary `proSeRequestTimestamp`.
+     * @description
+     *
+     * Category Oc. Time the proximity renewal request was received from the UE.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.3.2.
+     *
      * @public
      * @readonly
      */
     readonly proSeRequestTimestamp: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `timeWindow`.
+     * @description
+     *
+     * Category Oc. Time interval, in minutes, during which this proximity
+     * renewal request is valid.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.3.2.
+     *
      * @public
      * @readonly
      */
     readonly timeWindow: OPTIONAL<INTEGER>;
     /**
      * @summary `rangeClass`.
+     * @description
+     *
+     * Category Oc. Range class of this proximity renewal request.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.3.2.
+     *
      * @public
      * @readonly
      */
     readonly rangeClass: OPTIONAL<RangeClass>;
     /**
      * @summary `uELocation`.
+     * @description
+     *
+     * Category Oc. UE location, at the best known accuracy, when this renewal
+     * was received. A Cell ID or geo-location coordinates are examples.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.40 sets UE Location to the 28-bit
+     * cell identity of the ECGI, taken from the UE's lower layers.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.3.2.
+     *
      * @public
      * @readonly
      */

@@ -39,7 +39,21 @@ import { ASRecord_threeGPPPSDataOffStatus, _decode_ASRecord_threeGPPPSDataOffSta
 /**
  * @summary ASRecord
  * @description
- * 
+ *
+ * SIP application server CDR (clause 6.1.3.9). The AS supports session and
+ * event charging (clause 6.3.2). Acting as a B2BUA, it may keep the
+ * received ICID or allocate another. If it keeps the same ICID, the
+ * operator may select one charging session for both dialogs
+ * (OneChargingSession, clause 5.1.7). Outgoing Session ID and the initial
+ * ICID are not used for that option. The AS also records service-specific
+ * data, access transfer (clause 5.1.11), 3GPP PS Data Off status, the TAD
+ * identifier, an alternate charged party, and the VLR number and MSC
+ * address when they arrive in a User-Data-Answer (clause 6.3.1.1).
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 6.1.3.9.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -136,396 +150,1125 @@ export
 class ASRecord {
     /**
      * @summary `recordType`.
+     * @description
+     *
+     * Identifies the type of record. The parameter is derived from the
+     * Node-Functionality AVP, defined in TS 32.299 [40].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.42.
+     *
+     * Category M in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly recordType: RecordType;
     /**
      * @summary `retransmission`.
+     * @description
+     *
+     * This parameter, when present, indicates that information from
+     * retransmitted Diameter ACRs has been used in this CDR.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.44.
+     *
+     * Category OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly retransmission: OPTIONAL<NULL>;
     /**
      * @summary `sIP_Method`.
+     * @description
+     *
+     * Specifies the SIP-method for which the CDR is generated. Only available in
+     * session unrelated cases.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.61.
+     *
+     * Category OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly sIP_Method: OPTIONAL<GraphicString>;
     /**
      * @summary `role_of_Node`.
+     * @description
+     *
+     * The field indicates whether the IMS node (except MRFC) is serving the
+     * Originating or the Terminating party. The role can be: Originating (IMS
+     * node serving the calling party); Terminating (IMS node serving the called
+     * party).
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.45.
+     *
+     * Category OM in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly role_of_Node: OPTIONAL<Role_of_Node>;
     /**
      * @summary `nodeAddress`.
+     * @description
+     *
+     * This item holds the address of the node providing the information for the
+     * CDR. This may either be the IP address or the FQDN of the IMS node
+     * generating the accounting data. This parameter corresponds to the
+     * Origin-Host AVP.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.32.
+     *
+     * Category OM in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly nodeAddress: OPTIONAL<NodeAddress>;
     /**
      * @summary `session_Id`.
+     * @description
+     *
+     * The Session identification. For a SIP session the Session-ID contains the
+     * SIP CALL ID as defined in the Session Initiation Protocol RFC 3261 [401].
+     * When the AS acts as a B2BUA, this is the incoming dialog's Call-ID,
+     * except under OneChargingSession, where it holds either dialog's
+     * Call-ID from session setup (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.59.
+     *
+     * Category OM in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly session_Id: OPTIONAL<GraphicString>;
     /**
      * @summary `list_Of_Calling_Party_Address`.
+     * @description
+     *
+     * The address or addresses (Public User ID or Public Service ID) of the
+     * party requesting a service or initiating a session. This field may hold
+     * the SIP URI (according to RFC 3261 [401]), the Tel URI (according to RFC
+     * 3966 402]) or both the SIP URI and the Tel URI of the calling party. The
+     * address is obtained from the P-Asserted-Identity header of a non-REGISTER
+     * SIP request, either initiating a dialog or a standalone transaction.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.24.
+     *
+     * Category OM in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly list_Of_Calling_Party_Address: OPTIONAL<InvolvedParty[]>;
     /**
      * @summary `called_Party_Address`.
+     * @description
+     *
+     * In the context of an end-to-end SIP transaction (except for SIP REGISTER
+     * and SIP SUBSCRIBE transactions) this field holds the address of the party
+     * (Public User ID or Public Service ID) to whom the SIP transaction is
+     * posted. The Called Party Address shall be populated with the SIP URI
+     * (according to RFC3261 [401]) or Tel URI (according to RFC3966 [402])
+     * contained in the outgoing Request-URI of the request (e.g. after ENUM
+     * query or after AS interaction). Called Party Address could also be
+     * populated with an URN (according to RFC5031 [407]) for an emergency SIP
+     * session. For a registration procedure this field holds the party (Public
+     * User ID) to be registered. In this case, the Called Party Address field is
+     * obtained from the "To" SIP header of the SIP request. For a subscription
+     * procedure this field holds the address of the resource for which the
+     * originator wants to receive notifications of change of states. In this
+     * case, the Called Party Address field is obtained from the outgoing
+     * Request-URI of the SIP request.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.9.
+     *
+     * Category OM in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly called_Party_Address: OPTIONAL<InvolvedParty>;
     /**
      * @summary `privateUserID`.
+     * @description
+     *
+     * Holds the used Network Access Identifier of the served party according to
+     * RFC 2486 [405]. This parameter corresponds to the User-Name AVP.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.36.
+     *
+     * Category OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly privateUserID: OPTIONAL<GraphicString>;
     /**
      * @summary `serviceRequestTimeStamp`.
+     * @description
+     *
+     * This field contains the time stamp which indicates the time at which the
+     * service was requested. This parameter corresponds to SIP Request
+     * Timestamp. Present with Charging Data Request [Start] and Charging Data
+     * Request [Event]. Category OM in the AS CDR (3GPP TS 32.260 V20.1.0
+     * clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly serviceRequestTimeStamp: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `serviceDeliveryStartTimeStamp`.
+     * @description
+     *
+     * Time of successful session set-up, of a session-unrelated
+     * delivery, or of an unsuccessful session or session-unrelated
+     * request. It corresponds to the SIP response timestamp. On a
+     * partial CDR it is left unchanged (3GPP TS 32.260 V20.1.0
+     * clause 6.1.3).
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.55.
+     *
+     * Category OM in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly serviceDeliveryStartTimeStamp: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `serviceDeliveryEndTimeStamp`.
+     * @description
+     *
+     * This field records the time at which the service delivery was terminated.
+     * It is Present only in SIP session related case. The content of this field
+     * corresponds to the SIP-Request-Timestamp AVP of a received ACR[Stop]
+     * message indicating a session termination.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.54.
+     *
+     * Category OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly serviceDeliveryEndTimeStamp: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `recordOpeningTime`.
+     * @description
+     *
+     * A time stamp reflecting the time the CCF opened this record. Present only
+     * in SIP session related case.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.40.
+     *
+     * Category OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly recordOpeningTime: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `recordClosureTime`.
+     * @description
+     *
+     * A Time stamp reflecting the time the CCF closed the record.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.38.
+     *
+     * Category OM in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly recordClosureTime: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `interOperatorIdentifiers`.
+     * @description
+     *
+     * This list holds the identification of the pair of originating network and
+     * terminating network if exchanged via SIP signalling, as recorded in the
+     * Inter Operator Identifier (IOI) AVP as described in TS 32.299 [50]. It may
+     * occur several times in one CDR. For further information on the IOI
+     * exchange via SIP signalling please refer to TS 24.229 [210].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.26.
+     *
+     * Category OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly interOperatorIdentifiers: OPTIONAL<InterOperatorIdentifiers>;
     /**
      * @summary `localRecordSequenceNumber`.
+     * @description
+     *
+     * This field includes a unique record number created by this node. The
+     * number is allocated sequentially for each partial CDR (or whole CDR)
+     * including all CDR types. The number is unique within the CCF. The field
+     * can be used e.g. to identify missing records in post processing system.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.29.
+     *
+     * Category OM in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly localRecordSequenceNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `recordSequenceNumber`.
+     * @description
+     *
+     * This field contains a running sequence number employed to link the partial
+     * records generated by the CCF for a particular session (characterised with
+     * the same Charging ID and GGSN address pair). The Record Sequence Number is
+     * not present if the record is the only one produced in the CCF for a
+     * session. The Record Sequence Number starts from one (1).
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.41.
+     *
+     * Category OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly recordSequenceNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `causeForRecordClosing`.
+     * @description
+     *
+     * This field contains a reason for the release of the CDR including the
+     * following: normal release: end of session; partial record generation: time
+     * (duration) limit, maximum number of changes in charging conditions (e.g.
+     * maximum number in 'List of Message Bodies' exceeded) or service change
+     * (e.g. change in media components, Access Transfer); abnormal termination;
+     * management intervention (request due to O&M reasons); CCF initiated record
+     * closure. A more detailed reason may be found in the Service Reason Return
+     * Code field.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.11.
+     *
+     * Category OM in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly causeForRecordClosing: OPTIONAL<CauseForRecordClosing>;
     /**
      * @summary `incomplete_CDR_Indication`.
+     * @description
+     *
+     * This field provides additional diagnostics when the CCF detects missing
+     * ACRs.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.21.
+     *
+     * Category OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly incomplete_CDR_Indication: OPTIONAL<Incomplete_CDR_Indication>;
     /**
      * @summary `iMS_Charging_Identifier`.
+     * @description
+     *
+     * This parameter holds the IMS charging identifier (ICID) as generated by
+     * the IMS node for the SIP session/transaction. The value of the ICID
+     * parameter is identical with the 'icid-value' parameter defined in TS
+     * 24.229 [210]. The 'icid-value' is a mandatory part of the
+     * P-Charging-Vector and coded as a text-based UTF-8 charset (as are all SIP
+     * messages). For further information regarding the composition and usage of
+     * the P-Charging-Vector refer to TS 32.260 [20], TS 24.229 [210] and RFC
+     * 7315 [404]. The ICID value is globally unique across all 3GPP IMS networks
+     * for a time period of at least one month, implying that neither the node
+     * that generated this ICID nor any other IMS node reuse this value before
+     * the uniqueness period expires. The one month minimum uniqueness period
+     * counts from the time of release of the ICID, i.e. the ICID value no longer
+     * being used. This can be achieved by using node specific information, e.g.
+     * high-granularity time information and/or topology/location information.
+     * The exact method how to achieve the uniqueness requirement is an
+     * implementation issue. At each SIP session unrelated method, both initial
+     * and subsequent (e.g., REGISTER, NOTIFY, MESSAGE etc.), a new, session
+     * unrelated ICID is generated at the first IMS network element that
+     * processes the method.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.19.
+     *
+     * Category OM in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly iMS_Charging_Identifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `list_Of_SDP_Media_Components`.
+     * @description
+     *
+     * This is a grouped field which may occur several times in one CDR and the
+     * content should be filled as described in TS 32.260 [20] clause 5.1.3. The
+     * field is present only in a SIP session related case. The List of SDP Media
+     * Components contains the following elements: SIP Request Timestamp; SIP
+     * Response Timestamp; SDP Media Components; Media Initiator flag; SDP
+     * Session Description. Media Initiator Party. The Media Initiator Party is
+     * only used for PoC charging. These field elements are described in the
+     * appropriate subclause.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.28.
+     *
+     * Category OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly list_Of_SDP_Media_Components: OPTIONAL<Media_Components_List[]>;
     /**
      * @summary `gGSNaddress`.
+     * @description
+     *
+     * This parameter holds the control plane IP address of the GGSN, PGW, or
+     * SMF that handles one or more media component(s) of a IMS session.
+     * Category OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly gGSNaddress: OPTIONAL<NodeAddress>;
     /**
      * @summary `serviceReasonReturnCode`.
+     * @description
+     *
+     * Provides the returned cause code for the service request (both successful
+     * and failure). This parameter corresponds to the Cause-Code AVP.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.57.
+     *
+     * Category OM in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly serviceReasonReturnCode: OPTIONAL<UTF8String>;
     /**
      * @summary `list_Of_Message_Bodies`.
+     * @description
+     *
+     * This grouped field comprising several sub-fields describing the data that
+     * may be conveyed end-to-end in the body of a SIP MESSAGE. Since several
+     * message bodies may be exchanged via SIP-signalling, this grouped field may
+     * occur several times. The List of Message Bodies contains the following
+     * elements: Content Type; Content Disposition; Content Length; Originator.
+     * They are described in the appropriate subclause. Message bodies with the
+     * "Content-Type" field set to application/sdp and the "Content-Disposition"
+     * field set to session are not included in the "Message Bodies" field.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.27.
+     *
+     * Category OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly list_Of_Message_Bodies: OPTIONAL<MessageBody[]>;
     /**
      * @summary `recordExtensions`.
+     * @description
+     *
+     * A set of operator/manufacturer specific extensions to the record,
+     * conditioned upon existence of an extension.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.39.
+     *
+     * Category OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly recordExtensions: OPTIONAL<ManagementExtension[]>;
     /**
      * @summary `expiresInformation`.
+     * @description
+     *
+     * This field indicates the validity time of either the SIP message or its
+     * content, depending on the SIP method. Category OC in the AS CDR (3GPP TS
+     * 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly expiresInformation: OPTIONAL<INTEGER>;
     /**
      * @summary `event`.
+     * @description
+     *
+     * The Event parameter holds the content of the "Event" header defined in RFC
+     * 3265 [403],
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.15.
+     *
+     * Category OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly event: OPTIONAL<UTF8String>;
     /**
      * @summary `accessNetworkInformation`.
+     * @description
+     *
+     * Holds the content of one of the SIP P-header "P-Access-Network-Info". In
+     * SIP, as per RFC 7315 [404], the content of the "P-Access-Network-Info"
+     * header is known as the access-net-spec. When multiple access-net-spec
+     * values are transported in a single P-Access-Network-Info header in
+     * comma-separated format, then only one access-net-spec value is included.
+     * For access types and access classes associated to 3GPP accesses: For GERAN
+     * access, the cgi-3gpp field contains the CGI; For UTRAN access, the
+     * utran-cell-id-3gpp field contains the LAI and CI, and the utran-sai-3gpp
+     * field contains the SAI; For E-UTRAN access, the utran-cell-id-3gpp field
+     * contains the TAI and ECGI; For NR access, the utran-cell-id-3gpp field
+     * contains the TAI and NCI. The SIP "P-Access-Network-Info" header syntax is
+     * specified in TS 24.229 [210] clause 7.2A.4. For access types and access
+     * classes associated to trusted WLAN access: the i-wlan-node-id field
+     * contains the BSSID, and when available, the operator-specific-GI field
+     * contains the Geographical Identifier. For access types and access classes
+     * associated to untrusted WLAN access, the i-wlan-node-id field contains the
+     * BSSID, and UE local IP address, ePDG IP Address, and TCP source port, UDP
+     * source port are contained in corresponding dedicated fields.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.2.
+     *
+     * Category OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly accessNetworkInformation: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `serviceContextID`.
+     * @description
+     *
+     * This field contains the Service Context Id from Diameter Accounting, if
+     * Diameter Accounting was used and the field included. It identifies the
+     * service, sub-system or domain and release that the CDR is applicable to.
+     * The contents are described in TS 32.299 [50].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.1.2.
+     *
+     * Category OM in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly serviceContextID: OPTIONAL<UTF8String>;
     /**
      * @summary `list_of_subscription_ID`.
+     * @description
+     *
+     * Holds the public user identities of the served user Category OM in the
+     * AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly list_of_subscription_ID: OPTIONAL<SubscriptionID[]>;
     /**
      * @summary `list_Of_Early_SDP_Media_Components`.
+     * @description
+     *
+     * This is a grouped field which may occur several times in one CDR. This
+     * field describes session, media parameters and timestamps related to media
+     * components set to active according to SDP signalling exchanged during a
+     * SIP session establishment and before the final successful or unsuccessful
+     * SIP ANSWER to the initial SIP INVITE message is received. Once a media
+     * component has been set to active, subsequent status changes shall also be
+     * registered. This field applies only to SIP session related cases, but it
+     * may be present both in event CDRs (unsuccessful session establishment) and
+     * session CDRs (successful session establishment). The List of Early SDP
+     * Media Components contains the following elements: SDP Offer Timestamp; SDP
+     * Answer Timestamp; SDP Media Components; Media Initiator flag; SDP Session
+     * Description. These fields are described in the appropriate subclause.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.25.
+     *
+     * Category OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly list_Of_Early_SDP_Media_Components: OPTIONAL<Early_Media_Components_List[]>;
     /**
      * @summary `iMSCommunicationServiceIdentifier`.
+     * @description
+     *
+     * This parameter holds the IMS Communication Service Identifier (ICSI) as
+     * contained in the P-Asserted-Service header of a SIP request to identify an
+     * IMS Communication Service as defined in TS 24.229 [210].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.20.
+     *
+     * Category OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly iMSCommunicationServiceIdentifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `numberPortabilityRouting`.
+     * @description
+     *
+     * This item holds information on number portability routing, received by
+     * S-CSCF during ENUM/DNS processes. The parameter corresponds to the
+     * NumberPortabilityRoutingInformation AVP.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.33.
+     *
+     * Category OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly numberPortabilityRouting: OPTIONAL<GraphicString>;
     /**
      * @summary `carrierSelectRouting`.
+     * @description
+     *
+     * This item holds information on carrier select routing, received by S-CSCF
+     * during ENUM/DNS processes. The parameter corresponds to the
+     * CarrierSelectRoutingInformation AVP.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.10.
+     *
+     * Category OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly carrierSelectRouting: OPTIONAL<GraphicString>;
     /**
      * @summary `sessionPriority`.
+     * @description
+     *
+     * This field contains the priority level of the session. The value of the
+     * parameter is derived from Resource-Priority header field and the rules for
+     * the translation depend on operator policy described in TS 24.229[210].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.60.
+     *
+     * Category OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly sessionPriority: OPTIONAL<SessionPriority>;
     /**
      * @summary `serviceRequestTimeStampFraction`.
+     * @description
+     *
+     * This parameter contains the milliseconds fraction in relation to the
+     * Service Request Time Stamp. Category OM in the AS CDR (3GPP TS 32.260
+     * V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly serviceRequestTimeStampFraction: OPTIONAL<INTEGER>;
     /**
      * @summary `serviceDeliveryStartTimeStampFraction`.
+     * @description
+     *
+     * This parameter contains the milliseconds fraction in relation to Service
+     * Delivery Start Time Stamp.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.55A.
+     *
+     * Category OM in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly serviceDeliveryStartTimeStampFraction: OPTIONAL<INTEGER>;
     /**
      * @summary `serviceDeliveryEndTimeStampFraction`.
+     * @description
+     *
+     * This parameter contains the milliseconds fraction in relation to Service
+     * Delivery End Time Stamp.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.54A.
+     *
+     * Category OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly serviceDeliveryEndTimeStampFraction: OPTIONAL<INTEGER>;
     /**
      * @summary `list_of_Requested_Party_Address`.
+     * @description
+     *
+     * This field is a list of Requested Party Address. This field is only
+     * present if different from the Called Party Address parameter. Category
+     * OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly list_of_Requested_Party_Address: OPTIONAL<InvolvedParty[]>;
     /**
      * @summary `online_charging_flag`.
+     * @description
+     *
+     * This field indicates the Online Charging Request was sent based on the
+     * provided ECF address from the SIP P-header
+     * "P-Charging-Function-Addresses". The parameter corresponds to the
+     * Online-Charging-Flag AVP. NOTE: No proof that online charging action has
+     * been taken
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.34.
+     *
+     * Category OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly online_charging_flag: OPTIONAL<NULL>;
     /**
      * @summary `realTimeTariffInformation`.
+     * @description
+     *
+     * This is a field containing the real time tariff information that may be
+     * exchanged in the SIP transaction, encoded in a XML body as described in
+     * the TS 29.658 [225]. The RTTI information may be captured in the charging
+     * information and it is operator configurable as whether it is used in its
+     * original XML format or mapped on a detailed structure of parameters. The
+     * RTTI information XML schema in XML format is given in the TS 29.658 [225].
+     * The Tariff Information structure of parameters is provided in the TS
+     * 32.280 [40]. The Real Time Tariff Information contains one of the
+     * following elements: Tariff XML; Tariff Information. These field elements
+     * are described in the appropriate subclause.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.37.
+     *
+     * Category OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly realTimeTariffInformation: OPTIONAL<RealTimeTariffInformation[]>;
     /**
      * @summary `nNI_Information`.
+     * @description
+     *
+     * This grouped field holds information about the NNI used for
+     * interconnection and roaming on the loopback routing path. It is present
+     * only if RAVEL "VPLMN routing" is applied. Category OC in the AS CDR
+     * (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly nNI_Information: OPTIONAL<NNI_Information>;
     /**
      * @summary `userLocationInformation`.
+     * @description
+     *
+     * This field contains the User Location Information using PCC mechanisms as
+     * specified in TS 23.203 [203] and TS 23.503 [246] or the location retrieval
+     * via Sh interface by AS as specified in TS 29.328 [242].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.69A.
+     *
+     * Category OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly userLocationInformation: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `mSTimeZone`.
+     * @description
+     *
+     * This field contains the 'Time Zone' IE provided as part of the NetLoc
+     * enhancement for an ICS user as specified in TS 23.292 [229].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.31a.
+     *
+     * Category OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly mSTimeZone: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `fromAddress`.
+     * @description
+     *
+     * This field holds the information from the SIP From Header.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.16A.
+     *
+     * Category OM in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly fromAddress: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `transit_IOI_Lists`.
+     * @description
+     *
+     * This parameter holds the Transit-IOI List of the P-Charging-Vector header,
+     * as recorded in the Transit-IOI-List AVP as defined in TS 32.299 [50].
+     * Multiple occurrences of this field, shall be in chronological order, i.e.
+     * the value in the SIP request is listed first. If only a value for the SIP
+     * response is available, the Transit IOI List for the SIP request shall be
+     * included with the value "unknown". For further information on the Transit
+     * IOI exchange via SIP signalling please refer to TS 24.229 [210].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.68B.
+     *
+     * Category OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly transit_IOI_Lists: OPTIONAL<GraphicString[]>;
     /**
      * @summary `iMSVisitedNetworkIdentifier`.
+     * @description
+     *
+     * Holds the SIP P-header "P-Visited-Network-ID". with the value according to
+     * 3GPP TS 24.229 [210].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.20B.
+     *
+     * Category OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly iMSVisitedNetworkIdentifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `listOfReasonHeader`.
+     * @description
+     *
+     * This parameter contains the content of the Reason-header in the SIP BYE
+     * and SIP CANCEL, and may contain multiple entries if there are multiple
+     * Reason-headers within a SIP BYE or SIP CANCEL
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.28A.
+     *
+     * Category OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly listOfReasonHeader: OPTIONAL<GraphicString[]>;
     /**
      * @summary `additionalAccessNetworkInformation`.
+     * @description
+     *
+     * Holds the content of an additional SIP P-header "P-Access-Network-Info"
+     * when it is available. In SIP, as per RFC 7315 [404], the content of the
+     * "P-Access-Network-Info" header is known as the access-net-spec. When
+     * multiple access-net-spec values are transported in a single
+     * P-Access-Network-Info header in comma-separated format, then only one
+     * access-net-spec value is included.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.2A.
+     *
+     * Category OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly additionalAccessNetworkInformation: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `instanceId`.
+     * @description
+     *
+     * An Instance Id is defined as a URN generated by the device that uniquely
+     * identifies a specific device amongst all other devices. The Instance Id is
+     * transported in the sip.instance feature tag in the Contact header of a SIP
+     * request associated with the served user.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.21Aa.
+     *
+     * Category OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly instanceId: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `subscriberEquipmentNumber`.
+     * @description
+     *
+     * The Subscriber Equipment Number field contains the identification of the
+     * User Equipment (UE) accessing the 3GPP system.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.1.7.
+     *
+     * Category OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly subscriberEquipmentNumber: OPTIONAL<SubscriberEquipmentNumber>;
     /**
      * @summary `list_Of_AccessNetworkInfoChange`.
+     * @description
+     *
+     * This group field may occur several times in the CDR and each occurrence
+     * holds information on subsequent changes in one or two SIP P-header(s)
+     * "P-Access-Network-Info" together with the time the location was acquired.
+     * Each element of the list may include the following fields: Access Network
+     * Information; Additional Access Network Information; Access ChangeTime.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.21Ca.
+     *
+     * Category OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly list_Of_AccessNetworkInfoChange: OPTIONAL<AccessNetworkInfoChange[]>;
     /**
      * @summary `listOfCalledIdentityChanges`.
+     * @description
+     *
+     * This field holds the set of terminating identity address changes after IMS
+     * session establishment and the associated time stamp for each. These
+     * addresses are obtained from the From SIP header field of a SIP UPDATE
+     * request or SIP RE-INVITE request.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.23A.
+     *
+     * Category OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly listOfCalledIdentityChanges: OPTIONAL<CalledIdentityChange[]>;
     /**
      * @summary `cellularNetworkInformation`.
+     * @description
+     *
+     * Holds the content of one SIP header "Cellular-Network-Info". As per TS
+     * 24.229 [210], a User Agent (UA) supporting one or more cellular radio
+     * access technology (e.g. E-UTRAN) but using a non-cellular IP-CAN to access
+     * the IM CN subsystem can use this header field to relay information to its
+     * service provider about the radio cell identity of the cellular radio
+     * access network on which the UE most recently camped.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.11A.
+     *
+     * Category OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly cellularNetworkInformation: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `serviceSpecificInfo`.
+     * @description
+     *
+     * This grouped field holds the sub-fields "service specific data" and
+     * "service specific type" if and as provided by an Application Server or
+     * PCEF only for pre-defined PCC rules or TDF only for pre-defined ADC rules.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.1.4.
+     *
+     * Category OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly serviceSpecificInfo: OPTIONAL<ServiceSpecificInfo[]>;
     /**
      * @summary `requested_Party_Address`.
+     * @description
+     *
+     * This field holds the address of the party (Public User ID or Public
+     * Service ID) to whom the SIP transaction was originally posted. The
+     * Requested Party Address shall be populated with the SIP URI or Tel URI
+     * (according to RFC 3261 [401] and RFC 3966 [402] respectively) contained in
+     * the incoming Request-URI of the request. Requested Party Address could
+     * also be populated with an URN (according to RFC5031 [407]) for an
+     * emergency SIP session. This field is only present if different from the
+     * Called Party Address parameter.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.43.
+     *
+     * Category OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly requested_Party_Address: OPTIONAL<InvolvedParty>;
     /**
      * @summary `list_Of_Called_Asserted_Identity`.
+     * @description
+     *
+     * This field holds the address or addresses (SIP URI and/or Tel URI
+     * according to RFC 3261 [401] and RFC 3966 [402] respectively) of the party
+     * (Public User ID or Public Service ID) of the finally asserted called
+     * party. These address/addresses are obtained from the P-Asserted-Identity
+     * SIP header field of the 2xx responses corresponding to a SIP request
+     * either initiating a dialog or a standalone transaction. This field shall
+     * be present when the P-Asserted-Identity SIP header field is available in
+     * the SIP 2xx response. In case no P-Asserted-Identity is known, this list
+     * shall include one item (of type SIP URI) with the value "unknown".
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.23.
+     *
+     * Category OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly list_Of_Called_Asserted_Identity: OPTIONAL<InvolvedParty[]>;
     /**
      * @summary `alternateChargedPartyAddress`.
+     * @description
+     *
+     * Holds the address of an alternate charged party determined by an AS at IMS
+     * session initiation.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.3.
+     *
+     * Category OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly alternateChargedPartyAddress: OPTIONAL<UTF8String>;
     /**
      * @summary `outgoingSessionId`.
+     * @description
+     *
+     * When the AS acts as a B2BUA, the SIP Call-ID of the outgoing
+     * dialog (RFC 3261). Not used for OneChargingSession (3GPP
+     * TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.35A.
+     *
+     * Category OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly outgoingSessionId: OPTIONAL<GraphicString>;
     /**
      * @summary `initialIMS_Charging_Identifier`.
+     * @description
+     *
+     * This parameter holds the Initial IMS charging identifier (ICID) as
+     * generated by the IMS node for the initial SIP session created for IMS
+     * service continuity.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.21A.
+     *
+     * Category OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly initialIMS_Charging_Identifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `list_Of_AccessTransferInformation`.
+     * @description
+     *
+     * This grouped field may occur several times in the CDR and each occurrence
+     * holds information on a particular access transfer. The field is present
+     * only if access transfer procedure has been performed for IMS service
+     * continuity. Each element of the list represents an access transfer and may
+     * include the following fields: Access Transfer Type; Inter-UE Transfer;
+     * Access Network Information; Additional Access Network Information;
+     * Subscriber Equipment Number; Instance Id; Related IMS Charging Identifier;
+     * Related IMS Charging Identifier Generation Node; Access Transfer Time.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.21D.
+     *
+     * Category OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly list_Of_AccessTransferInformation: OPTIONAL<AccessTransferInformation[]>;
     /**
      * @summary `tADS_Identifier`.
+     * @description
+     *
+     * This field indicates the type of access network (CS or PS) through which
+     * the session shall be terminated. Category OC in the AS CDR (3GPP TS
+     * 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly tADS_Identifier: OPTIONAL<TADIdentifier>;
     /**
      * @summary `vlr_Number`.
+     * @description
+     *
+     * This field contains the Recommendation E.164 [308] number assigned to the
+     * VLR that produced the record. For further details concerning the structure
+     * of VLR numbers see TS 23.003 [200].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.70.
+     *
+     * Category OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly vlr_Number: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `msc_Address`.
+     * @description
+     *
+     * This field contains the Recommendation E.164 [308] number assigned to the
+     * MSC that produced the record. For further details concerning the structure
+     * of MSC numbers see TS 23.003 [200].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.31aA.
+     *
+     * Category OC in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly msc_Address: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `threeGPPPSDataOffStatus`.
+     * @description
+     *
+     * This field holds the 3GPP PS Data Off Status associated with the
+     * registration, as defined in TS 23.228 [201], when available. Category OC
+     * in the AS CDR (3GPP TS 32.260 V20.1.0 clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly threeGPPPSDataOffStatus: OPTIONAL<ASRecord_threeGPPPSDataOffStatus>;
     /**
      * @summary `fEIdentifierList`.
+     * @description
+     *
+     * This parameter corresponds to FE Identifier List of the
+     * P-Charging-Vector defined in TS 24.229 [204]. This element contains one
+     * or more IM CN subsystem functional entity addresses and/or AS and
+     * application identifiers where the IM CN subsystem functional entity does
+     * create charging information for the related CDR of this IM CN subsystem
+     * functional entity. Category OC in the AS CDR (3GPP TS 32.260 V20.1.0
+     * clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */

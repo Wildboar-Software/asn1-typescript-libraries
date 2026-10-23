@@ -11,7 +11,20 @@ import { SCSMOT4Record_externalIdentifier_subscriptionIDType, _decode_SCSMOT4Rec
 /**
  * @summary SCSMOT4Record_externalIdentifier
  * @description
- * 
+ *
+ * External identifier of the sender of a mobile-originated short message in
+ * MSISDN-less MO-SMS via T4, if available. The MTC-IWF retrieves it from the
+ * HSS using the UE's IMSI and the application port identifier, and returns it
+ * to the SMS-SC with the delivery indication (clause 5.2.2.6.2).
+ *
+ * `subscriptionIDData` is the identifier. TS 32.274 does not define
+ * `subscriptionIDType`. The names match the Subscription-Id-Type values of
+ * IETF RFC 4006 (end-user E.164, IMSI, SIP URI, NAI, and private). TS 32.274
+ * does not state that this field uses those values; it references RFC 4006 for
+ * the refund procedure.
+ *
+ * 3GPP TS 32.274 V19.1.0 table 6.1.3.6.1 and clause 5.2.2.6.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +45,24 @@ export
 class SCSMOT4Record_externalIdentifier {
     /**
      * @summary `subscriptionIDType`.
+     * @description
+     *
+     * Kind of external identifier. TS 32.274 does not define the codes. See
+     * `SCSMOT4Record_externalIdentifier_subscriptionIDType`.
+     *
      * @public
      * @readonly
      */
     readonly subscriptionIDType: SCSMOT4Record_externalIdentifier_subscriptionIDType;
     /**
      * @summary `subscriptionIDData`.
+     * @description
+     *
+     * The external identifier associated with the sender of the
+     * mobile-originated short message.
+     *
+     * 3GPP TS 32.274 V19.1.0 table 6.1.3.6.1.
+     *
      * @public
      * @readonly
      */

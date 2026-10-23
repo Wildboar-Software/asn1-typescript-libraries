@@ -13,7 +13,15 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary RadioParameterSetInfo
  * @description
- * 
+ *
+ * One radio parameter set configured in the UE for ProSe Direct Communication,
+ * and the time it became active. The parameters are those defined in TS 24.333.
+ * A set that becomes active is added to every open group PF-DC-CDR when the
+ * ProSe Function receives it in a usage information report. TS 32.277 does not
+ * define the layout of `params`.
+ *
+ * 3GPP TS 32.277 V19.2.0 clauses 5.1.2.3, 5.2.3.1.2, 6.1.3.4, and 6.3.1.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +36,25 @@ export
 class RadioParameterSetInfo {
     /**
      * @summary `timeStamp`.
+     * @description
+     *
+     * Time this radio parameter set became active on the UE.
+     *
+     * 3GPP TS 32.277 V19.2.0 clause 6.1.3.4.
+     *
      * @public
      * @readonly
      */
     readonly timeStamp: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `params`.
+     * @description
+     *
+     * The configured radio parameter set. TS 32.277 does not define this octet
+     * string; the parameters are specified in TS 24.333.
+     *
+     * 3GPP TS 32.277 V19.2.0 clauses 5.1.2.3 and 6.3.1.2.
+     *
      * @public
      * @readonly
      */

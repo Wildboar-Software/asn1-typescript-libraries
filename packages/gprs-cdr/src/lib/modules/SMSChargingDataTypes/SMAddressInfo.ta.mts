@@ -13,7 +13,21 @@ import { SMAddressDomain, _decode_SMAddressDomain, _encode_SMAddressDomain } fro
 /**
  * @summary SMAddressInfo
  * @description
- * 
+ *
+ * An originator or recipient address other than, or in addition to, an IMSI or
+ * MSISDN. TS 32.274's examples are an E.164 number, an email address, a short
+ * code, an external identifier, and a long or short code of an SCS/AS. The
+ * containing field may occur more than once.
+ *
+ * `sMAddressType` selects the kind of address and `sMAddressData` is the
+ * address. TS 32.274 does not describe `sMAddressDomain`.
+ *
+ * A short code here is what an end user dials to reach an application
+ * service. The application identity is carried in `SMInterface`. Several
+ * short numbers may map to one application (note 3 of table 6.3.1.2.1).
+ *
+ * 3GPP TS 32.274 V19.1.0 tables 6.1.3.3.1 and 6.3.1.2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,18 +43,37 @@ export
 class SMAddressInfo {
     /**
      * @summary `sMAddressType`.
+     * @description
+     *
+     * Kind of address in `sMAddressData`. TS 32.274 does not define the
+     * enumerated values; see `SMAddressType`.
+     *
+     * 3GPP TS 32.274 V19.1.0 table 6.3.1.2.1.
+     *
      * @public
      * @readonly
      */
     readonly sMAddressType: OPTIONAL<SMAddressType>;
     /**
      * @summary `sMAddressData`.
+     * @description
+     *
+     * The address: an E.164 number, email address, short code, external
+     * identifier, or long or short code of an SCS/AS, among the forms TS
+     * 32.274 names.
+     *
+     * 3GPP TS 32.274 V19.1.0 tables 6.1.3.3.1 and 6.3.1.2.1.
+     *
      * @public
      * @readonly
      */
     readonly sMAddressData: OPTIONAL<GraphicString>;
     /**
      * @summary `sMAddressDomain`.
+     * @description
+     *
+     * TS 32.274 does not describe this component.
+     *
      * @public
      * @readonly
      */

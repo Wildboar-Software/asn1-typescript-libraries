@@ -10,6 +10,13 @@ import { MMSAgentAddress, _decode_MMSAgentAddress, _encode_MMSAgentAddress } fro
  * @summary MMSAgentAddresses
  * @description
  * 
+ * Set of MMS User Agent addresses. CDR fields that carry more than one
+ * address, such as a recipient list or the forwarding-address list, use
+ * this shape. Multiple recipient addresses are allowed when the MM is not
+ * a reply-MM.
+ *
+ * 3GPP TS 32.270 V19.0.0 clause 6.1.1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

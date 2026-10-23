@@ -12,6 +12,11 @@ import { GSNAddress, _decode_GSNAddress, _encode_GSNAddress } from "../GPRSCharg
  * @summary SCSASAddress
  * @description
  * 
+ * Address of the SCS/AS used for SGi point-to-point tunnelling of a Non-IP
+ * PDN connection (tables 6.1.3.1 and 6.3.1.2.1).
+ * 
+ * 3GPP TS 32.251 V19.0.0.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -16,7 +16,17 @@ import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExt
 /**
  * @summary LocUpdateHLRRecord
  * @description
- * 
+ *
+ * HLR location-update CDR. When enabled, the HLR produces one for each
+ * location registration or location update it receives, including updates
+ * from subscribers roaming in a foreign PLMN. `oldLocation` and
+ * `newLocation` each carry the VMSC and VLR E.164 numbers. `updateResult` is
+ * present when the update is unsuccessful.
+ *
+ * Categories are M, C, OM, and OC as in TS 32.240 clause 5.4.
+ *
+ * 3GPP TS 32.250 V19.0.0 clause 6.1.3.12.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,48 +48,130 @@ export
 class LocUpdateHLRRecord {
     /**
      * @summary `recordType`.
+     * @description
+     *
+     * 2G and 3G mandatory. Location update.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.12.
+     *
+     * The field identifies the type of the record e.g. mobile originated,
+     * mobile terminated etc.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.72.
+     *
      * @public
      * @readonly
      */
     readonly recordType: RecordType;
     /**
      * @summary `servedIMSI`.
+     * @description
+     *
+     * 2G and 3G mandatory. IMSI of the served MS.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.12.
+     *
+     * This fields contains the international mobile subscriber identity (IMSI)
+     * of the served party. The term "served" party is used to describe the
+     * mobile subscriber involved in the transaction recorded e.g. the calling
+     * subscriber in case of an MOC record. The structure of the IMSI is defined
+     * in TS 23.003 [200].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.79.
+     *
      * @public
      * @readonly
      */
     readonly servedIMSI: OCTET_STRING;
     /**
      * @summary `recordingEntity`.
+     * @description
+     *
+     * 2G and 3G mandatory. The E.164 Number of the HLR.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.12.
+     *
+     * This field contains the E.164 [308] number assigned to the entity (MSC,
+     * VLR, HLR etc.) that produced the record. For further details concerning
+     * the structure of MSC and location register numbers see TS 23.003 [200].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.73.
+     *
      * @public
      * @readonly
      */
     readonly recordingEntity: OCTET_STRING;
     /**
      * @summary `oldLocation`.
+     * @description
+     *
+     * Previous VMSC and VLR E.164 numbers. Operator-provisionable
+     * conditional. The table writes the category twice, once for each
+     * number.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.12.
+     *
      * @public
      * @readonly
      */
     readonly oldLocation: OPTIONAL<Visited_Location_info>;
     /**
      * @summary `newLocation`.
+     * @description
+     *
+     * New VMSC and VLR E.164 numbers. Both are mandatory. The table
+     * writes the category twice, once for each number.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.12.
+     *
      * @public
      * @readonly
      */
     readonly newLocation: Visited_Location_info;
     /**
      * @summary `updateTime`.
+     * @description
+     *
+     * 2G and 3G mandatory. Time at which the update was invoked.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.12.
+     *
      * @public
      * @readonly
      */
     readonly updateTime: OCTET_STRING;
     /**
      * @summary `updateResult`.
+     * @description
+     *
+     * 2G and 3G conditional. The result of the location update if unsuccessful.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.12.
+     *
+     * This field contains the result of the location update request as defined
+     * in the MAP (TS 29.002 [214]). Note that this field is only provided if
+     * the attempted update was unsuccessful.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.93.
+     *
      * @public
      * @readonly
      */
     readonly updateResult: OPTIONAL<HLRIntResult>;
     /**
      * @summary `recordExtensions`.
+     * @description
+     *
+     * 2G and 3G operator-provisionable conditional. A set of network/
+     * manufacturer specific extensions to the record, when available.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.12.
+     *
+     * The field enables network operators and/ or manufacturers to add their
+     * own extensions to the standard record definitions.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.71.
+     *
      * @public
      * @readonly
      */
@@ -118,7 +210,7 @@ class LocUpdateHLRRecord {
     /**
      * @summary Restructures an object into a LocUpdateHLRRecord
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `LocUpdateHLRRecord`.
      * 
      * @public
@@ -137,9 +229,9 @@ class LocUpdateHLRRecord {
 /**
  * @summary The Leading Root Component Types of LocUpdateHLRRecord
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -157,9 +249,9 @@ const _root_component_type_list_1_spec_for_LocUpdateHLRRecord: $.ComponentSpec[]
 /**
  * @summary The Trailing Root Component Types of LocUpdateHLRRecord
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -170,9 +262,9 @@ const _root_component_type_list_2_spec_for_LocUpdateHLRRecord: $.ComponentSpec[]
 /**
  * @summary The Extension Addition Component Types of LocUpdateHLRRecord
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * @constant
  */
 export

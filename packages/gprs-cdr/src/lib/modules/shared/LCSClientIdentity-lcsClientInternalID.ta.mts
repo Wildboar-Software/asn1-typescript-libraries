@@ -18,7 +18,16 @@ enum _enum_for_LCSClientIdentity_lcsClientInternalID {
 /**
  * @summary LCSClientIdentity_lcsClientInternalID
  * @description
- * 
+ *
+ * Client internal ID inside `LCSClientIdentity`. TS 32.271 does
+ * not define these values. The GMLC CDRs carry the whole identity
+ * as further identification of the LCS client, if available
+ * (category C). Online charging carries it as LCS Client ID
+ * (category Oc).
+ *
+ * 3GPP TS 32.271 V12.1.0 tables 6.1.3.1.1, 6.1.3.2.1.1,
+ * 6.1.3.2.2.1, 6.1.3.2.3.1, 6.1.3.3.1, and 6.3.1.2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -13,7 +13,21 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary RouteingAddress
  * @description
- * 
+ *
+ * The field contains a recipient address for routeing of a multimedia
+ * message. For a complete description of the routeing address, refer to TS
+ * 29.140 [218].
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.49.
+ *
+ * Recipient address for which routing of the MM is requested in
+ * MM4_forward.REQ. Category M on the O4FRq-CDR table, which allows more
+ * than one such address. The O4FRq record in this module does not include
+ * that component. The address is an email address, an MSISDN, or a short
+ * code.
+ *
+ * 3GPP TS 32.270 V19.0.0 clause 6.1.1.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,18 +43,36 @@ export
 class RouteingAddress {
     /**
      * @summary `eMail_address`.
+     * @description
+     *
+     * Email form of the recipient address for which routing is requested.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.1.2.
+     *
      * @public
      * @readonly
      */
     readonly eMail_address: OCTET_STRING;
     /**
      * @summary `mSISDN`.
+     * @description
+     *
+     * MSISDN form of the recipient address for which routing is requested.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.1.2.
+     *
      * @public
      * @readonly
      */
     readonly mSISDN: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `shortCode`.
+     * @description
+     *
+     * Short-code form of the recipient address for which routing is requested.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.1.2.
+     *
      * @public
      * @readonly
      */

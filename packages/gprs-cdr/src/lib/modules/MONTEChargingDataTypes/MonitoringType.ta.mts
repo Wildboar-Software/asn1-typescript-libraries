@@ -6,7 +6,22 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary MonitoringType
  * @description
- * 
+ *
+ * Which Monitoring Event is configured or reported. TS 32.278
+ * describes loss of connectivity, UE reachability, location
+ * reporting, communication failure, availability after DDN
+ * failure, and the number of UEs in a geographic area. It does
+ * not describe `changeOfIMSIIMEISVAssociation` or
+ * `roamingStatus`.
+ *
+ * Fields that apply only to some of these values are noted on
+ * `MECORecord` and `MonitoringEventReportData`. Maximum Number
+ * of Reports is not used for availability after DDN failure.
+ * The monitored user is not used for the number of UEs in a
+ * geographic area.
+ *
+ * 3GPP TS 32.278 V19.0.0 clauses 5.1, 6.1.3.2 and 6.1.3.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,7 +53,22 @@ enum _enum_for_MonitoringType {
 /**
  * @summary MonitoringType
  * @description
- * 
+ *
+ * Which Monitoring Event is configured or reported. TS 32.278
+ * describes loss of connectivity, UE reachability, location
+ * reporting, communication failure, availability after DDN
+ * failure, and the number of UEs in a geographic area. It does
+ * not describe `changeOfIMSIIMEISVAssociation` or
+ * `roamingStatus`.
+ *
+ * Fields that apply only to some of these values are noted on
+ * `MECORecord` and `MonitoringEventReportData`. Maximum Number
+ * of Reports is not used for availability after DDN failure.
+ * The monitored user is not used for the number of UEs in a
+ * geographic area.
+ *
+ * 3GPP TS 32.278 V19.0.0 clauses 5.1, 6.1.3.2 and 6.1.3.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -61,7 +91,22 @@ type MonitoringType = _enum_for_MonitoringType;
 /**
  * @summary MonitoringType
  * @description
- * 
+ *
+ * Which Monitoring Event is configured or reported. TS 32.278
+ * describes loss of connectivity, UE reachability, location
+ * reporting, communication failure, availability after DDN
+ * failure, and the number of UEs in a geographic area. It does
+ * not describe `changeOfIMSIIMEISVAssociation` or
+ * `roamingStatus`.
+ *
+ * Fields that apply only to some of these values are noted on
+ * `MECORecord` and `MonitoringEventReportData`. Maximum Number
+ * of Reports is not used for availability after DDN failure.
+ * The monitored user is not used for the number of UEs in a
+ * geographic area.
+ *
+ * 3GPP TS 32.278 V19.0.0 clauses 5.1, 6.1.3.2 and 6.1.3.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -83,6 +128,15 @@ const MonitoringType = _enum_for_MonitoringType;
 
 /**
  * @summary MonitoringType_lossOfConnectivity
+ * @description
+ *
+ * Loss of connectivity. Configuration may include
+ * `maximumDetectionTime`: the longest period without
+ * communication after which the UE is treated as unreachable.
+ * `monitoredUser` applies.
+ *
+ * 3GPP TS 32.278 V19.0.0 clauses 5.1 and 6.1.3.2.
+ *
  * @constant
  * @type {number}
  */
@@ -91,6 +145,11 @@ const MonitoringType_lossOfConnectivity: MonitoringType = MonitoringType.lossOfC
 
 /**
  * @summary lossOfConnectivity
+ * @description
+ *
+ * Loss of connectivity. See
+ * {@link MonitoringType_lossOfConnectivity}.
+ *
  * @constant
  * @type {number}
  */
@@ -99,6 +158,14 @@ const lossOfConnectivity: MonitoringType = MonitoringType.lossOfConnectivity; /*
 
 /**
  * @summary MonitoringType_ueReachability
+ * @description
+ *
+ * UE reachability. Configuration carries
+ * `ReachabilityConfiguration`. A report may carry
+ * `reachabilityInformation`. `monitoredUser` applies.
+ *
+ * 3GPP TS 32.278 V19.0.0 clauses 5.1, 6.1.3.2 and 6.1.3.3.
+ *
  * @constant
  * @type {number}
  */
@@ -107,6 +174,10 @@ const MonitoringType_ueReachability: MonitoringType = MonitoringType.ueReachabil
 
 /**
  * @summary ueReachability
+ * @description
+ *
+ * UE reachability. See {@link MonitoringType_ueReachability}.
+ *
  * @constant
  * @type {number}
  */
@@ -115,6 +186,14 @@ const ueReachability: MonitoringType = MonitoringType.ueReachability; /* SHORT_N
 
 /**
  * @summary MonitoringType_locationReporting
+ * @description
+ *
+ * Location reporting. Configuration may include `locationType`
+ * and `accuracy`. A report may carry `reportedLocation`.
+ * `monitoredUser` applies.
+ *
+ * 3GPP TS 32.278 V19.0.0 clauses 5.1, 6.1.3.2 and 6.1.3.3.
+ *
  * @constant
  * @type {number}
  */
@@ -123,6 +202,11 @@ const MonitoringType_locationReporting: MonitoringType = MonitoringType.location
 
 /**
  * @summary locationReporting
+ * @description
+ *
+ * Location reporting. See
+ * {@link MonitoringType_locationReporting}.
+ *
  * @constant
  * @type {number}
  */
@@ -131,6 +215,11 @@ const locationReporting: MonitoringType = MonitoringType.locationReporting; /* S
 
 /**
  * @summary MonitoringType_changeOfIMSIIMEISVAssociation
+ * @description
+ *
+ * Present in the abstract syntax. TS 32.278 V19.0.0 does not
+ * describe this Monitoring Event.
+ *
  * @constant
  * @type {number}
  */
@@ -139,6 +228,11 @@ const MonitoringType_changeOfIMSIIMEISVAssociation: MonitoringType = MonitoringT
 
 /**
  * @summary changeOfIMSIIMEISVAssociation
+ * @description
+ *
+ * See {@link MonitoringType_changeOfIMSIIMEISVAssociation}.
+ * TS 32.278 V19.0.0 does not describe this value.
+ *
  * @constant
  * @type {number}
  */
@@ -147,6 +241,11 @@ const changeOfIMSIIMEISVAssociation: MonitoringType = MonitoringType.changeOfIMS
 
 /**
  * @summary MonitoringType_roamingStatus
+ * @description
+ *
+ * Present in the abstract syntax. TS 32.278 V19.0.0 does not
+ * describe this Monitoring Event.
+ *
  * @constant
  * @type {number}
  */
@@ -155,6 +254,11 @@ const MonitoringType_roamingStatus: MonitoringType = MonitoringType.roamingStatu
 
 /**
  * @summary roamingStatus
+ * @description
+ *
+ * See {@link MonitoringType_roamingStatus}. TS 32.278 V19.0.0
+ * does not describe this value.
+ *
  * @constant
  * @type {number}
  */
@@ -163,6 +267,14 @@ const roamingStatus: MonitoringType = MonitoringType.roamingStatus; /* SHORT_NAM
 
 /**
  * @summary MonitoringType_communicationFailure
+ * @description
+ *
+ * Communication failure. A report may carry
+ * `communicationFailureInformation`, including the RAN or NAS
+ * cause. `monitoredUser` applies.
+ *
+ * 3GPP TS 32.278 V19.0.0 clauses 5.1 and 6.1.3.3.
+ *
  * @constant
  * @type {number}
  */
@@ -171,6 +283,11 @@ const MonitoringType_communicationFailure: MonitoringType = MonitoringType.commu
 
 /**
  * @summary communicationFailure
+ * @description
+ *
+ * Communication failure. See
+ * {@link MonitoringType_communicationFailure}.
+ *
  * @constant
  * @type {number}
  */
@@ -179,6 +296,14 @@ const communicationFailure: MonitoringType = MonitoringType.communicationFailure
 
 /**
  * @summary MonitoringType_availabilityAfterDDNFailure
+ * @description
+ *
+ * Availability after DDN failure. `maximumNumberofReports` does
+ * not apply. `monitoredUser` applies. TS 32.278 does not define
+ * any further field for this event.
+ *
+ * 3GPP TS 32.278 V19.0.0 clause 6.1.3.2.
+ *
  * @constant
  * @type {number}
  */
@@ -187,6 +312,11 @@ const MonitoringType_availabilityAfterDDNFailure: MonitoringType = MonitoringTyp
 
 /**
  * @summary availabilityAfterDDNFailure
+ * @description
+ *
+ * Availability after DDN failure. See
+ * {@link MonitoringType_availabilityAfterDDNFailure}.
+ *
  * @constant
  * @type {number}
  */
@@ -195,6 +325,16 @@ const availabilityAfterDDNFailure: MonitoringType = MonitoringType.availabilityA
 
 /**
  * @summary MonitoringType_numberOfUEPerLocation
+ * @description
+ *
+ * Number of UEs present in a geographic area. Configuration
+ * carries `listofLocations` and may carry `locationType`. A
+ * report carries `listOfNumberOfUEPerLocationReport`. The
+ * monitored-user identity is not used.
+ *
+ * 3GPP TS 32.278 V19.0.0 clauses 5.1, 6.1.3.2, 6.1.3.3 and
+ * 6.3.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -203,6 +343,11 @@ const MonitoringType_numberOfUEPerLocation: MonitoringType = MonitoringType.numb
 
 /**
  * @summary numberOfUEPerLocation
+ * @description
+ *
+ * Number of UEs present in a geographic area. See
+ * {@link MonitoringType_numberOfUEPerLocation}.
+ *
  * @constant
  * @type {number}
  */

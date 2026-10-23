@@ -28,6 +28,23 @@ import { APNRateControl, _decode_APNRateControl, _encode_APNRateControl } from "
  * @summary ChangeOfCharCondition
  * @description
  * 
+ * One container in a List of Traffic Data Volumes. The SGSN, S-GW, ePDG,
+ * TWAG and, when charging per IP-CAN session is active, the P-GW and the
+ * IP-Edge [PCEF] add a container when a charging condition is met and then
+ * start a new count (clauses 5.2.3.1, 5.2.3.3, 5.2.3.8, 5.2.3.10,
+ * 5.2.3.11, and annex D). Uplink and downlink octets are counted
+ * separately and reflect data delivered to and from the user (clause
+ * 5.1.1). The first container of a bearer holds the volume since the
+ * bearer was opened; later containers hold the volume accrued since the
+ * previous container closed. On CDR closure, changeCondition is omitted,
+ * except when closure is due to the maximum number of charging-condition
+ * changes, in which case the original condition is present. Table 6.1.3.2
+ * is the field handling used in a PGW-CDR when charging per IP-CAN session
+ * is active. In the S-GW, ePDG, TWAG, and IP-Edge the containers are per
+ * QCI/ARP or per QoS.
+ * 
+ * 3GPP TS 32.251 V19.0.0.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -63,132 +80,382 @@ export
 class ChangeOfCharCondition {
     /**
      * @summary `qosRequested`.
+     * @description
+     *
+     * QoS captured in this traffic-volume container. List of Traffic Data
+     * Volumes includes the initial and subsequently changed QoS (tables
+     * 6.1.1.1 and 6.1.2.1). TS 32.251 does not further define how the
+     * requested profile is distinguished from the negotiated profile.
+     *
      * @public
      * @readonly
      */
     readonly qosRequested: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `qosNegotiated`.
+     * @description
+     *
+     * QoS captured in this traffic-volume container. For an MBMS bearer the
+     * volume list shall include the required bearer capabilities (QoS
+     * Negotiated) (tables 6.1.10.1, 6.1.11.1, and 6.1.12.1). For an IP-CAN
+     * bearer the list includes the initial and subsequently changed QoS
+     * (tables 6.1.1.1 and 6.1.2.1).
+     *
      * @public
      * @readonly
      */
     readonly qosNegotiated: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `dataVolumeGPRSUplink`.
+     * @description
+     *
+     * This field includes the number of octets transmitted during the use of
+     * the packet data services in the uplink direction.
+     *
+     * PGW-CDR traffic-volume container field category OC (3GPP TS 32.251
+     * V19.0.0 table 6.1.3.2).
+     *
      * @public
      * @readonly
      */
     readonly dataVolumeGPRSUplink: OPTIONAL<INTEGER>;
     /**
      * @summary `dataVolumeGPRSDownlink`.
+     * @description
+     *
+     * This field includes the number of octets transmitted during the use of
+     * the packet data services in the downlink direction.
+     *
+     * PGW-CDR traffic-volume container field category OC (3GPP TS 32.251
+     * V19.0.0 table 6.1.3.2).
+     *
      * @public
      * @readonly
      */
     readonly dataVolumeGPRSDownlink: OPTIONAL<INTEGER>;
     /**
      * @summary `changeCondition`.
+     * @description
+     *
+     * Reason this volume container was closed. Present for the
+     * charging-condition triggers in clause 5.2.3. Omitted when the container
+     * is added because the CDR is closing, except when closure is due to the
+     * maximum number of charging-condition changes, in which case the original
+     * condition is kept (clauses 5.2.3.3.1, 5.2.3.8.1, 5.2.3.10.2, and
+     * 5.2.3.11.1).
+     *
+     * PGW-CDR traffic-volume container field category M (3GPP TS 32.251
+     * V19.0.0 table 6.1.3.2).
+     *
      * @public
      * @readonly
      */
     readonly changeCondition: ChangeCondition;
     /**
      * @summary `changeTime`.
+     * @description
+     *
+     * This field is a time stamp, which defines the moment when the volume
+     * container is closed.
+     *
+     * PGW-CDR traffic-volume container field category M (3GPP TS 32.251
+     * V19.0.0 table 6.1.3.2).
+     *
      * @public
      * @readonly
      */
     readonly changeTime: OCTET_STRING;
     /**
      * @summary `userLocationInformation`.
+     * @description
+     *
+     * This field contains the User Location Information as described in TS
+     * 29.060 [215] for GTP case (e.g. CGI, SAI, RAI), TS 29.274 [223] for eGTP
+     * case (e.g. CGI, SAI, RAI TAI and ECGI) and TS 29.275 [224] for PMIP case.
+     * The field is provided by the SGSN/MME and transferred to the S-GW/P-GW/TDF
+     * during the IP-CAN bearer activation/modification and/or TDF session
+     * establishment/modification.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.75.
+     *
+     * PGW-CDR traffic-volume container field category OC (3GPP TS 32.251
+     * V19.0.0 table 6.1.3.2).
+     *
      * @public
      * @readonly
      */
     readonly userLocationInformation: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `ePCQoSInformation`.
+     * @description
+     *
+     * This field contains the APN-AMBR for the IP-CAN session. It is used in the
+     * PGW-CDR only when charging per IP-CAN session is active.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.13B.
+     *
+     * That description is the session-level QoS Information. In this
+     * traffic-volume container, table 6.1.3.2 defines the component as the
+     * authorized bearer QoS:
+     *
+     * This field contains the authorized QoS for the IP-CAN bearer. First
+     * container for each QCI/ARP pair includes this field. In following
+     * containers this field is present if previous change condition is "QoS
+     * change". This field includes: QCI and ARP. For GBR QCI values, this
+     * field also includes GBR for the downlink and uplink direction. If the
+     * MBR is different than the GBR, then this field also includes the MBR for
+     * the downlink and uplink direction. This field does not include the
+     * APN-AMBR, which is contained in a separate field in the CDR for the
+     * IP-CAN session.
+     *
+     * PGW-CDR traffic-volume container field category OC (3GPP TS 32.251
+     * V19.0.0 table 6.1.3.2).
+     *
      * @public
      * @readonly
      */
     readonly ePCQoSInformation: OPTIONAL<EPCQoSInformation>;
     /**
      * @summary `chargingID`.
+     * @description
+     *
+     * This field is a charging identifier, which can be used together with P-GW
+     * address to identify all records produced in SGSN(s), S-GW and P-GW
+     * involved in a single IP-CAN bearer. Charging ID is generated by P-GW at
+     * IP-CAN bearer activation and transferred to bearer requesting SGSN/S-GW.
+     * At inter-SGSN/S-GW change the charging ID is transferred to the new
+     * SGSN/S-GW as part of each active IP-CAN bearer. In case of PMIP-based
+     * connectivity, the Charging Id is generated per PDN connection. Different
+     * P-GWs allocate the charging ID independently of each other and may
+     * allocate the same numbers. The CGF and/or BS may check the uniqueness of
+     * each charging ID together with the P-GWs address and optionally (if still
+     * ambiguous) with the record opening time stamp.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.9.
+     *
+     * PGW-CDR traffic-volume container field category OC (3GPP TS 32.251
+     * V19.0.0 table 6.1.3.2).
+     *
      * @public
      * @readonly
      */
     readonly chargingID: OPTIONAL<INTEGER>;
     /**
      * @summary `presenceReportingAreaStatus`.
+     * @description
+     *
+     * This field contains the status of the UE presence in Presence Reporting
+     * Area. This field is not applicable to multiple PRA(s).
+     *
+     * PGW-CDR traffic-volume container field category OC (3GPP TS 32.251
+     * V19.0.0 table 6.1.3.2).
+     *
      * @public
      * @readonly
      */
     readonly presenceReportingAreaStatus: OPTIONAL<PresenceReportingAreaStatus>;
     /**
      * @summary `userCSGInformation`.
+     * @description
+     *
+     * This field contains the "User CSG Information" status of the user
+     * accessing a CSG cell: it comprises CSG ID within the PLMN, Access mode and
+     * indication on CSG membership for the user when hybrid access applies, as
+     * defined in TS 29.060 [215] for GPRS case, and in TS 29.274 [223] for EPC
+     * case.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.74.
+     *
+     * User CSG information in force for this container: CSG ID, access mode,
+     * and, for a hybrid cell, the CSG membership indication. When the change
+     * condition is user CSG information change and the user enters a CSG cell
+     * or a hybrid cell, these elements are present. When the user leaves, they
+     * are omitted unless the user is entering another CSG cell or hybrid cell
+     * (clause 5.2.3.3.1).
+     *
      * @public
      * @readonly
      */
     readonly userCSGInformation: OPTIONAL<UserCSGInformation>;
     /**
      * @summary `diagnostics`.
+     * @description
+     *
+     * This field includes a more detailed technical reason for the releases of
+     * the connection. The diagnostics may also be extended to include
+     * manufacturer and network specific information.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.11.
+     *
+     * PGW-CDR traffic-volume container field category OM (3GPP TS 32.251
+     * V19.0.0 table 6.1.3.2).
+     *
      * @public
      * @readonly
      */
     readonly diagnostics: OPTIONAL<Diagnostics>;
     /**
      * @summary `enhancedDiagnostics`.
+     * @description
+     *
+     * This field includes a more detailed technical reason with a set of causes
+     * for the release of the connection and may contain the following: RAN/NAS
+     * cause from TS 29.274 [223]; NOTE: The Enhanced Diagnostics is defined to
+     * allow extensions to other types of release causes in the future.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.13Aa.
+     *
+     * PGW-CDR traffic-volume container field category OC (3GPP TS 32.251
+     * V19.0.0 table 6.1.3.2).
+     *
      * @public
      * @readonly
      */
     readonly enhancedDiagnostics: OPTIONAL<EnhancedDiagnostics>;
     /**
      * @summary `rATType`.
+     * @description
+     *
+     * Holds the value of RAT Type, as provided to S-GW and P-GW, specified in TS
+     * 29.061 [216] and also provided to the TDF as specified in TS 29.212 [220].
+     * The field is provided by the SGSN/MME and transferred to the S-GW/P-GW
+     * during the IP-CAN bearer activation/modification and transferred to the
+     * TDF during the TDF session establishment/modification.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.47.
+     *
+     * PGW-CDR traffic-volume container field category OC (3GPP TS 32.251
+     * V19.0.0 table 6.1.3.2).
+     *
      * @public
      * @readonly
      */
     readonly rATType: OPTIONAL<INTEGER>;
     /**
      * @summary `accessAvailabilityChangeReason`.
+     * @description
+     *
+     * This field indicates the reason why the availability of an access is
+     * changed by the PCEF, i.e. RAN rule indication or Access usable/unusable as
+     * defined in TS 29.212 [220].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.0aA.
+     *
+     * PGW-CDR traffic-volume container field category OC (3GPP TS 32.251
+     * V19.0.0 table 6.1.3.2).
+     *
      * @public
      * @readonly
      */
     readonly accessAvailabilityChangeReason: OPTIONAL<INTEGER>;
     /**
      * @summary `uWANUserLocationInformation`.
+     * @description
+     *
+     * This field contains the UE location in an Untrusted Wireless Access
+     * Network (UWAN) which includes the UE local IP address and optionally
+     * either UDP source port number (if NAT is detected) or TCP source port
+     * number. It may also include WLAN location information the ePDG may have
+     * received from the 3GPP AAA server about the UE, as TWAN Identifier defined
+     * in TS 29.274 [223].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.77.
+     *
+     * PGW-CDR traffic-volume container field category OC (3GPP TS 32.251
+     * V19.0.0 table 6.1.3.2).
+     *
      * @public
      * @readonly
      */
     readonly uWANUserLocationInformation: OPTIONAL<UWANUserLocationInfo>;
     /**
      * @summary `relatedChangeOfCharCondition`.
+     * @description
+     *
+     * This field indicates the change condition associated with an alternate
+     * access of a multi-access PDN connection that indirectly caused closure
+     * of the container. This field includes optional supplemental information
+     * associated with the change event (e.g., user location information).
+     *
+     * PGW-CDR traffic-volume container field category OC (3GPP TS 32.251
+     * V19.0.0 table 6.1.3.2).
+     *
      * @public
      * @readonly
      */
     readonly relatedChangeOfCharCondition: OPTIONAL<RelatedChangeOfCharCondition>;
     /**
      * @summary `cPCIoTEPSOptimisationIndicator`.
+     * @description
+     *
+     * Whether Control Plane CIoT EPS Optimisation was used for the traffic in
+     * this container (Control Plane NAS PDU via S11-U between S-GW and MME)
+     * rather than the user plane via S1-U. A change in the user plane to the
+     * UE closes the open volume containers and opens a new one (clause
+     * 5.2.3.3.1 and table 6.1.2.1).
+     *
      * @public
      * @readonly
      */
     readonly cPCIoTEPSOptimisationIndicator: OPTIONAL<BOOLEAN>;
     /**
      * @summary `servingPLMNRateControl`.
+     * @description
+     *
+     * This field contains the Serving PLMN Rate Control as specified in TS
+     * 23.401 [245], which is used during the record for the PDN connection to
+     * the PGW.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.68A.
+     *
+     * PGW-CDR traffic-volume container field category OC (3GPP TS 32.251
+     * V19.0.0 table 6.1.3.2).
+     *
      * @public
      * @readonly
      */
     readonly servingPLMNRateControl: OPTIONAL<ServingPLMNRateControl>;
     /**
      * @summary `threeGPPPSDataOffStatus`.
+     * @description
+     *
+     * This field contains the status of the UE’s 3GPP PS Data off Status.
+     *
+     * PGW-CDR traffic-volume container field category OC (3GPP TS 32.251
+     * V19.0.0 table 6.1.3.2).
+     *
      * @public
      * @readonly
      */
     readonly threeGPPPSDataOffStatus: OPTIONAL<ThreeGPPPSDataOffStatus>;
     /**
      * @summary `listOfPresenceReportingAreaInformation`.
+     * @description
+     *
+     * This field contains a list of Presence Reporting Area Identifier(s) for
+     * the UE PDN connection, and the Presence Reporting Area(s) status (UE
+     * presence or not, inactive), differentiated between PCRF and OCS
+     * subscription.
+     *
+     * PGW-CDR traffic-volume container field category OC (3GPP TS 32.251
+     * V19.0.0 table 6.1.3.2).
+     *
      * @public
      * @readonly
      */
     readonly listOfPresenceReportingAreaInformation: OPTIONAL<PresenceReportingAreaInfo[]>;
     /**
      * @summary `aPNRateControl`.
+     * @description
+     *
+     * This field contains the APN Rate Control as specified in TS 23.401 [245],
+     * which is used during the record for the PDN connection to the PGW.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.1A.
+     *
+     * PGW-CDR traffic-volume container field category OC (3GPP TS 32.251
+     * V19.0.0 table 6.1.3.2).
+     *
      * @public
      * @readonly
      */

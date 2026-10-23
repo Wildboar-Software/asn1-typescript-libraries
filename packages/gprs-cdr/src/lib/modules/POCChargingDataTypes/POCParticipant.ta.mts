@@ -13,7 +13,15 @@ import { _decode_ParticipatingType, _encode_ParticipatingType, _enum_for_Partici
 /**
  * @summary POCParticipant
  * @description
- * 
+ *
+ * One party in `POCInformation.listofParticipants`. On the
+ * initial charging request the list is the invited parties. On
+ * an interim or update request it is the parties attached to
+ * the session at that time.
+ *
+ * 3GPP TS 32.272 V19.0.0 clause 6.3.1.2.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.3.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,18 +37,47 @@ export
 class POCParticipant {
     /**
      * @summary `called_party_address`.
+     * @description
+     *
+     * Address of this participant: Public User ID, SIP URL, E.164,
+     * or another form given for the participant. This is not the
+     * called-party address on the PPF-CDR or CPF-CDR, which is
+     * the destination of the SIP transaction.
+     *
+     * 3GPP TS 32.272 V19.0.0 clause 6.3.1.2.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.3.1.
+     *
      * @public
      * @readonly
      */
     readonly called_party_address: InvolvedParty;
     /**
      * @summary `participant_access_priority`.
+     * @description
+     *
+     * Category OC. User priority level of this participant in the
+     * PoC session. See `AccessPriority`. TS 32.272 does not
+     * define how the four levels are applied.
+     *
+     * 3GPP TS 32.272 V19.0.0 clause 6.3.1.2.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.3.5.
+     *
      * @public
      * @readonly
      */
     readonly participant_access_priority: OPTIONAL<AccessPriority>;
     /**
      * @summary `user_participating_type`.
+     * @description
+     *
+     * Category OC. Normal, network PoC Box, or UE PoC Box. The
+     * initial participant list carries this; the interim and
+     * update description names address and access priority only.
+     * See `ParticipatingType`.
+     *
+     * 3GPP TS 32.272 V19.0.0 clause 6.3.1.2.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.3.14.
+     *
      * @public
      * @readonly
      */

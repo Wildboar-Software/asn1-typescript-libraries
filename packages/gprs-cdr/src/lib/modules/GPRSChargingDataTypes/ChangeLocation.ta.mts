@@ -14,6 +14,15 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ChangeLocation
  * @description
  * 
+ * One entry in the M-CDR Change of Location list. The first container is
+ * captured when the MM context is created. Each later Routing Area change
+ * adds a container (clause 5.2.3.2.1). Table 6.1.4.1 describes the list as
+ * changes of Routing Area Code, including MCC and MNC, each with a time
+ * stamp, and says the list is not required if partial records are
+ * generated when the location changes.
+ * 
+ * 3GPP TS 32.251 V19.0.0.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,30 +40,58 @@ export
 class ChangeLocation {
     /**
      * @summary `locationAreaCode`.
+     * @description
+     *
+     * Location Area Code captured for this mobility change. Table 6.1.4.1
+     * records the location area at record opening on the M-CDR itself, and the
+     * Change of Location list records later routing-area changes.
+     *
      * @public
      * @readonly
      */
     readonly locationAreaCode: OCTET_STRING;
     /**
      * @summary `routingAreaCode`.
+     * @description
+     *
+     * Routing Area, including MCC and MNC, in force when this container was
+     * captured (table 6.1.4.1 and clause 5.2.3.2.1).
+     *
      * @public
      * @readonly
      */
     readonly routingAreaCode: OCTET_STRING;
     /**
      * @summary `cellId`.
+     * @description
+     *
+     * For GSM, the Cell Identifier is defined as the Cell Id, reference 24.008
+     * [208], and for UMTS it is defined as the Service Area Code in TS 25.413
+     * [212].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.6.
+     *
      * @public
      * @readonly
      */
     readonly cellId: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `changeTime`.
+     * @description
+     *
+     * Time stamp of this Routing Area change (clause 5.2.3.2.1).
+     *
      * @public
      * @readonly
      */
     readonly changeTime: OCTET_STRING;
     /**
      * @summary `mCC_MNC`.
+     * @description
+     *
+     * MCC and MNC of the routing area captured in this container. Table
+     * 6.1.4.1 includes MCC and MNC with each Routing Area change.
+     *
      * @public
      * @readonly
      */

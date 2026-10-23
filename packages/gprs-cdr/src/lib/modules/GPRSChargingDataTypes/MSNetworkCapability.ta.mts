@@ -11,7 +11,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary MSNetworkCapability
  * @description
- * 
+ *
+ * This MS Network Capability field contains the MS network capability value
+ * of the MS network capability information element of the served MS on PDP
+ * context activation or on GPRS attachment as defined in TS 24.008 [208].
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.33.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -13,7 +13,27 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AccessNetworkInfoChange
  * @description
- * 
+ *
+ * A later change of P-Access-Network-Info or Cellular-Network-Info, with
+ * the time the new location was acquired (clause 5.1.13). The opening
+ * values stay in the top-level access-network fields. The CDF appends this
+ * list when it receives Charging Data Request [Interim] or [Stop]. If the
+ * operator must capture the location at release and it is not yet known
+ * when BYE arrives, the node delays [Stop] until the 200 OK to that BYE
+ * (clause 5.1.4).
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 5.1.13.
+ *
+ * This group field may occur several times in the CDR and each occurrence
+ * holds information on subsequent changes in one or two SIP P-header(s)
+ * "P-Access-Network-Info" together with the time the location was acquired.
+ * Each element of the list may include the following fields: Access Network
+ * Information; Additional Access Network Information; Access ChangeTime.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.21Ca.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,24 +50,55 @@ export
 class AccessNetworkInfoChange {
     /**
      * @summary `accessNetworkInformation`.
+     * @description
+     *
+     * P-Access-Network-Info value after it changed from the value stored when
+     * the CDR was opened (clause 5.1.13). The CDF records the change on
+     * Charging Data Request [Interim] or [Stop].
+     *
      * @public
      * @readonly
      */
     readonly accessNetworkInformation: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `additionalAccessNetworkInformation`.
+     * @description
+     *
+     * The other P-Access-Network-Info header, network-provided
+     * or UE-provided, after that header changed (3GPP TS 32.260
+     * V20.1.0 clause 5.1.9.3 and clause 5.1.13).
+     *
      * @public
      * @readonly
      */
     readonly additionalAccessNetworkInformation: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `accessChangeTime`.
+     * @description
+     *
+     * Time at which the changed user location was acquired (clause 6.1.3.3).
+     *
+     * 3GPP TS 32.260 V20.1.0.
+     *
      * @public
      * @readonly
      */
     readonly accessChangeTime: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `cellularNetworkInformation`.
+     * @description
+     *
+     * Holds the content of one SIP header "Cellular-Network-Info". As per TS
+     * 24.229 [210], a User Agent (UA) supporting one or more cellular radio
+     * access technology (e.g. E-UTRAN) but using a non-cellular IP-CAN to access
+     * the IM CN subsystem can use this header field to relay information to its
+     * service provider about the radio cell identity of the cellular radio
+     * access network on which the UE most recently camped.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.11A.
+     *
+     * 3GPP TS 32.260 V20.1.0 clause 5.1.13.
+     *
      * @public
      * @readonly
      */

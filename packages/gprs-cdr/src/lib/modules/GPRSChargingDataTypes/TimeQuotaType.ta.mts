@@ -6,7 +6,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary TimeQuotaType
  * @description
- * 
+ *
+ * Time Quota Type identifies the mechanism by which time based usage should
+ * be reported - as defined in TS 32.299 [50].
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,7 +31,12 @@ enum _enum_for_TimeQuotaType {
 /**
  * @summary TimeQuotaType
  * @description
- * 
+ *
+ * Time Quota Type identifies the mechanism by which time based usage should
+ * be reported - as defined in TS 32.299 [50].
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,7 +53,12 @@ type TimeQuotaType = _enum_for_TimeQuotaType;
 /**
  * @summary TimeQuotaType
  * @description
- * 
+ *
+ * Time Quota Type identifies the mechanism by which time based usage should
+ * be reported - as defined in TS 32.299 [50].
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

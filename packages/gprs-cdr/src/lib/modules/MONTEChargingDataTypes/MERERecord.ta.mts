@@ -20,7 +20,29 @@ import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExt
 /**
  * @summary MERERecord
  * @description
- * 
+ *
+ * Monitoring Event Report CDR (ME-RE-CDR). If charging is
+ * enabled, a record is produced for a set of Monitoring Event
+ * reports sent by the MECN. Normally the record holds one report.
+ * A burst of reports in a short interval may be treated as one
+ * charging event. The CDF may then emit one CDR for the burst or
+ * one CDR per report; which one is implementation specific.
+ *
+ * The chargeable event is a report sent. That includes a
+ * standalone report and immediate reporting in the configuration
+ * answer. It is sent to the CDF as Charging Data Request[Event].
+ *
+ * Table 6.1.3.3.1 also lists Record Opening Time (category OC).
+ * This SET does not include it. That table lists Local Record
+ * Sequence Number twice; the SET contains it once.
+ *
+ * Field categories follow TS 32.240 clause 5.4, as applied by
+ * clause 6.1.3.1. Clause 3.1 defines M, C, OM and OC. This table
+ * also prints Oc.
+ *
+ * 3GPP TS 32.278 V19.0.0 clauses 5.1, 5.2.1, 5.2.2, 5.2.3 and
+ * 6.1.3.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,48 +65,107 @@ export
 class MERERecord {
     /**
      * @summary `recordType`.
+     * @description
+     *
+     * Category M. Monitoring Event Report. Set this to
+     * `RecordType_mERERecord` (104). On Rf the corresponding
+     * information element is Monitoring Event Functionality.
+     *
+     * 3GPP TS 32.278 V19.0.0 clauses 6.1.3.3, 6.3.1.2 and 6.4.
+     *
      * @public
      * @readonly
      */
     readonly recordType: RecordType;
     /**
      * @summary `retransmission`.
+     * @description
+     *
+     * Category Oc. Present when information from retransmitted
+     * Accounting Requests has been used in this CDR.
+     *
+     * 3GPP TS 32.278 V19.0.0 clause 6.1.3.3.
+     *
      * @public
      * @readonly
      */
     readonly retransmission: OPTIONAL<NULL>;
     /**
      * @summary `serviceContextID`.
+     * @description
+     *
+     * Category OM. Indicates that the CDR applies to the Monitoring
+     * Event service. Bound to Service-Context-Id.
+     *
+     * 3GPP TS 32.278 V19.0.0 clauses 6.1.3.3 and 6.4.
+     *
      * @public
      * @readonly
      */
     readonly serviceContextID: OPTIONAL<UTF8String>;
     /**
      * @summary `nodeID`.
+     * @description
+     *
+     * Category OM. Name of the recording entity. Bound to Node-ID.
+     * The recording MECN is an MME, an SGSN, or an IWK-SCEF.
+     *
+     * 3GPP TS 32.278 V19.0.0 clauses 4.2, 6.1.3.3 and 6.4.
+     *
      * @public
      * @readonly
      */
     readonly nodeID: OPTIONAL<IA5String>;
     /**
      * @summary `recordTimeStamp`.
+     * @description
+     *
+     * Category OM. Date and time when the CDR was produced.
+     * TS 32.278 does not define the nine-octet encoding.
+     *
+     * 3GPP TS 32.278 V19.0.0 clause 6.1.3.3.
+     *
      * @public
      * @readonly
      */
     readonly recordTimeStamp: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `localRecordSequenceNumber`.
+     * @description
+     *
+     * Category OM. Consecutive record number created by this node.
+     * Allocated sequentially across all CDR types.
+     *
+     * 3GPP TS 32.278 V19.0.0 clause 6.1.3.3.
+     *
      * @public
      * @readonly
      */
     readonly localRecordSequenceNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `listofMonitoringEventReportData`.
+     * @description
+     *
+     * Category OM. Charging information for the reports in this
+     * CDR, one `MonitoringEventReportData` per report. On Rf,
+     * Monitoring Event Report Data (category Oc) is repeated for
+     * each report and is sent only for reporting.
+     *
+     * 3GPP TS 32.278 V19.0.0 clauses 6.1.3.3, 6.3.1.2 and 6.3.3.
+     *
      * @public
      * @readonly
      */
     readonly listofMonitoringEventReportData: OPTIONAL<MonitoringEventReportData[]>;
     /**
      * @summary `recordExtensions`.
+     * @description
+     *
+     * Category OC. Operator or manufacturer extensions to the
+     * record. Present when an extension exists.
+     *
+     * 3GPP TS 32.278 V19.0.0 clause 6.1.3.3.
+     *
      * @public
      * @readonly
      */

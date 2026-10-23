@@ -13,7 +13,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary TransmissionMedium
  * @description
- * 
+ *
+ * Bearer service of the PSTN leg on an MGCF CDR (clause 6.1.3.7). TS
+ * 32.260 does not define tMR or tMU.
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 6.1.3.7.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +35,22 @@ export
 class TransmissionMedium {
     /**
      * @summary `tMR`.
+     * @description
+     *
+     * Part of the bearer service used on the PSTN leg of an MGCF CDR (clause
+     * 6.1.3.7). TS 32.260 does not define tMR.
+     *
      * @public
      * @readonly
      */
     readonly tMR: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `tMU`.
+     * @description
+     *
+     * Part of the bearer service used on the PSTN leg of an MGCF CDR (clause
+     * 6.1.3.7). TS 32.260 does not define tMU.
+     *
      * @public
      * @readonly
      */

@@ -26,7 +26,34 @@ import { MSCFInformation, _decode_MSCFInformation, _encode_MSCFInformation } fro
 /**
  * @summary MM7SRecord
  * @description
- * 
+ *
+ * MM7 Submission record (MM7S-CDR).
+ *
+ * If enabled, an MM7 Submission MM7S-CDR shall be produced in the MMS R/S
+ * for each MM submitted in an MM7_submit.REQ by a VASP to the MMS R/S if
+ * and when the MMS R/S responds with an MM7_submit.RES. The operator can
+ * configure whether this CDR, if enabled, shall only be created for
+ * MM7_submit.RES indicating acceptance of the submitted MM, or also for
+ * the unsuccessful submissions.
+ *
+ * Produced for a VASP transaction on MM7. Unless otherwise stated,
+ * parameters are copied from the corresponding MM7 message (clause
+ * 6.1.5.0). The VASP may supply service codes that are passed through to
+ * billing, and may indicate which party is expected to be charged (clause
+ * 5.1.4).
+ *
+ * MMS offline charging is event based. One chargeable event produces one
+ * CDR. From the 3GPP specifications that CDR is visible in the files the
+ * MMS R/S sends across Bm (clause 5.2.1).
+ *
+ * Field categories follow the charging data configuration in TS 32.240
+ * clause 5.4, which clause 6.1.0 applies to this table. M is always
+ * present. C is present when the conditions stated for that field are met.
+ * OM and OC are included only when the operator has provisioned them; OC
+ * also requires those conditions.
+ *
+ * 3GPP TS 32.270 V19.0.0 clause 6.1.5.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -71,180 +98,565 @@ export
 class MM7SRecord {
     /**
      * @summary `recordType`.
+     * @description
+     *
+     * The field identifies the type of the record, see TS 32.250 [10].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.42.
+     *
+     * Category M. MM7 Submission record.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.1.
+     *
      * @public
      * @readonly
      */
     readonly recordType: RecordType;
     /**
      * @summary `originatorMmsRSAddress`.
+     * @description
+     *
+     * Category M. IP address or domain name of Originator MMS R/S.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.1.
+     *
      * @public
      * @readonly
      */
     readonly originatorMmsRSAddress: MMSRSAddress;
     /**
      * @summary `linkedID`.
+     * @description
+     *
+     * This field identifies a correspondence to a previous valid message
+     * delivered to the VASP.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.15.
+     *
+     * Category C. This field is present in the CDR only if the MM defines a
+     * correspondence to a previous message that was delivered by the MMS R/S.
+     * The MM identification provided by the Originator MMS R/S.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.1.
+     *
      * @public
      * @readonly
      */
     readonly linkedID: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `vaspID`.
+     * @description
+     *
+     * This field specifies the identification of the originating application as
+     * defined in TS 23.140 [206].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.62.
+     *
+     * Category M. Identifier of the VASP for this MMS R/S.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.1.
+     *
      * @public
      * @readonly
      */
     readonly vaspID: OCTET_STRING;
     /**
      * @summary `vasID`.
+     * @description
+     *
+     * This field specifies the identification of the VASP as defined in TS
+     * 23.140 [206].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.61.
+     *
+     * Category M. Identifier of the originating application.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.1.
+     *
      * @public
      * @readonly
      */
     readonly vasID: OCTET_STRING;
     /**
      * @summary `messageID`.
+     * @description
+     *
+     * This field specifies the MM Message ID of the MM as defined in TS 23.140
+     * [206]. The concrete syntax of this MM Message ID is given by the body of
+     * the field introduced by the string "X-Mms-Message-ID:" in the concrete
+     * syntax of the message MM4_Forward. REQ. All CDRs pertaining to the same MM
+     * shall employ the same value of this parameter, i.e. the value initially
+     * assigned by the originator MMS Relay/Server upon submission of the MM by
+     * the Originator MMS User Agent.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.20.
+     *
+     * Category M. The MM identification provided by the Originator MMS R/S.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.1.
+     *
      * @public
      * @readonly
      */
     readonly messageID: OCTET_STRING;
     /**
      * @summary `originatorAddress`.
+     * @description
+     *
+     * This field contains an originator MMS User Agent address. The MMS supports
+     * the use of E-Mail addresses (RFC 822 [400]) or MSISDN (E.164 [308]).
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.30.
+     *
+     * Category M. The address of the MM Originator.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.1.
+     *
      * @public
      * @readonly
      */
     readonly originatorAddress: MMSAgentAddress;
     /**
      * @summary `recipientAddresses`.
+     * @description
+     *
+     * Category M. The address(es) of the Recipient MMS User Agent(s) of the
+     * MM. Multiple addresses are possible if the MM is not a reply MM.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.1.
+     *
      * @public
      * @readonly
      */
     readonly recipientAddresses: MMSAgentAddress[];
     /**
      * @summary `serviceCode`.
+     * @description
+     *
+     * This field contains charging information provided by the VASP to the MMS
+     * R/S for use by the billing system to properly bill the user for the
+     * service being supplied. The usage of the "service code" is, in the
+     * release, open to any usage envisioned by the operators, service providers
+     * or MMS Relay/Server vendors. In this release only the format, but not the
+     * content of the "service code" field is defined.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.53.
+     *
+     * Category OC. Charging related information that is used directly for
+     * billing purposes.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.1.
+     *
      * @public
      * @readonly
      */
     readonly serviceCode: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `contentType`.
+     * @description
+     *
+     * The Content Type of the MM as defined in TS 23.140 [206].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.7.
+     *
+     * Category M. The content type of the MM content.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.1.
+     *
      * @public
      * @readonly
      */
     readonly contentType: OCTET_STRING;
     /**
      * @summary `mmComponentType`.
+     * @description
+     *
+     * Category OM. The list of media components with volume size.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.1.
+     *
      * @public
      * @readonly
      */
     readonly mmComponentType: OPTIONAL<MMComponentType>;
     /**
      * @summary `messageSize`.
+     * @description
+     *
+     * This field contains the number of octets of the MM that is calculated as
+     * specified in TS 23.140 [206].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.23.
+     *
+     * Category M. The total size of the MM content.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.1.
+     *
      * @public
      * @readonly
      */
     readonly messageSize: INTEGER;
     /**
      * @summary `messageClass`.
+     * @description
+     *
+     * A class of messages such as personal, advertisement, information service
+     * etc. For more information see TS 23.140 [206].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.18.
+     *
+     * Category OC. The class selection such as personal, advertisement,
+     * information service if specified in the MM7_submit_REQ.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.1.
+     *
      * @public
      * @readonly
      */
     readonly messageClass: OPTIONAL<MessageClass>;
     /**
      * @summary `chargeInformation`.
+     * @description
+     *
+     * This field consists of two parts, the charged party and the charge type.
+     * The Charged Party is an indication on which party is expected to be
+     * charged for an MM e.g. the sending, receiving, both parties or neither.
+     * This indicator is only applicable to MM7 CDRs (for VASP-originated MMs).
+     * It may be provided by the VASP when submitting an MM. The Charge Type
+     * indicates the type of subscription (i.e. postpaid or prepaid). This
+     * indicator is derived from the subscription parameters and only applicable
+     * to MM1 CDRs. The Charged Parties are as follows: Both: This indicates both
+     * the sending and the receiving parties are expected to be charged ('shared'
+     * charging model); Neither: This indicates neither the sending nor the
+     * receiving parties are expected to be charged ('free of charge' charging
+     * model). The Charge types are as follows:
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.6.
+     *
+     * Category OM. The charged party indication and charge type e.g. the
+     * sending, receiving, both parties, third party or neither.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.1.
+     *
      * @public
      * @readonly
      */
     readonly chargeInformation: OPTIONAL<ChargeInformation>;
     /**
      * @summary `submissionTime`.
+     * @description
+     *
+     * The submission time field contains the time stamps relevant for the
+     * submission of the MM. The time-stamp includes a minimum of date, hour,
+     * minute and second.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.56.
+     *
+     * Category OC. The time at which the MM was submitted from the VASP if
+     * specified in the MM7_submit_REQ.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.1.
+     *
      * @public
      * @readonly
      */
     readonly submissionTime: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `timeOfExpiry`.
+     * @description
+     *
+     * This field contains the desired date or the number of seconds to expiry of
+     * the MM, if specified by the originator MMS User Agent.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.57.
+     *
+     * Category OC. The desired date of expiry or duration of time prior to
+     * expiry for the MM if specified by the VASP.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.1.
+     *
      * @public
      * @readonly
      */
     readonly timeOfExpiry: OPTIONAL<WaitTime>;
     /**
      * @summary `earliestTimeOfDelivery`.
+     * @description
+     *
+     * This field contains either the earliest time to deliver message or the
+     * number of seconds to wait before delivering the message.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.10.
+     *
+     * Category C. This field contains either the earliest time to deliver the
+     * MM or the number of seconds to wait before delivering the MM if
+     * specified by the VASP.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.1.
+     *
      * @public
      * @readonly
      */
     readonly earliestTimeOfDelivery: OPTIONAL<WaitTime>;
     /**
      * @summary `deliveryReportRequested`.
+     * @description
+     *
+     * This is an indication of type Boolean whether (value TRUE) or not (value
+     * FALSE) the originator/forwarding MMS User Agent has requested a delivery
+     * report in the MM1_submit. REQ/MM1_forward. REQ.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.8.
+     *
+     * Category OM. This field indicates whether a delivery report has been
+     * requested by the VASP or not.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.1.
+     *
      * @public
      * @readonly
      */
     readonly deliveryReportRequested: OPTIONAL<BOOLEAN>;
     /**
      * @summary `readReplyRequested`.
+     * @description
+     *
+     * A Boolean value indicating whether the originator MMS User Agent has
+     * requested a read-reply report (value TRUE) or not (value FALSE).
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.35.
+     *
+     * Category OM. A request for read-reply report as specified in the
+     * MM7_submit.REQ.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.1.
+     *
      * @public
      * @readonly
      */
     readonly readReplyRequested: OPTIONAL<BOOLEAN>;
     /**
      * @summary `replyCharging`.
+     * @description
+     *
+     * This field indicates whether the originator of the MM is willing to take
+     * over the charge for the sending of a reply-MM to their submitted MM from
+     * the recipient(s). In this case the originator MMS Relay/Server marks the
+     * MM as no charge (reply-charged). In the Originator MM1 Submission CDR
+     * (O1S-CDR) this parameter indicates whether the originator MMS User Agent
+     * has requested reply-charging (value TRUE) or not (value FALSE). In the
+     * Recipient MM1 Notification Request record (R1NRq -CDR) it indicates
+     * whether a reply to this particular original MM is free of charge (value
+     * TRUE) or not (value FALSE). In the MM7 Submission CDR (7S-CDR) this
+     * parameter indicates whether the originator MMS VASP has requested
+     * reply-charging (value TRUE) or not (value FALSE).
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.43.
+     *
+     * Category OC. A request for reply-charging if specified by the VASP.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.1.
+     *
      * @public
      * @readonly
      */
     readonly replyCharging: OPTIONAL<BOOLEAN>;
     /**
      * @summary `replyDeadline`.
+     * @description
+     *
+     * In the Originator MM1 Submission CDR (O1S-CDR), in case of reply-charging,
+     * this field indicates the latest time of submission of replies granted to
+     * the recipient(s) as specified by the originator MMS User Agent. In the
+     * Recipient MM1 Notification Request CDR (R1NRq-CDR), in case of
+     * reply-charging, this field indicates the latest time of submission of a
+     * reply granted to the recipient as specified in the MM1_notification. REQ.
+     * In the MM7 Submission CDR (7S-CDR), in case of reply-charging, this field
+     * indicates the latest time of submission of replies granted to the
+     * recipient(s) as specified by the originator MMS VASP.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.46.
+     *
+     * Category OC. In case of reply-charging the latest time of submission of
+     * replies granted to the recipient(s) as specified by the VASP.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.1.
+     *
      * @public
      * @readonly
      */
     readonly replyDeadline: OPTIONAL<WaitTime>;
     /**
      * @summary `replyChargingSize`.
+     * @description
+     *
+     * In the Originator MM1 Submission CDR (O1S-CDR), in case of reply-charging,
+     * this field indicates the maximum size for reply-MM(s) granted to the
+     * recipient(s) as specified by the originator MMS User Agent. In the
+     * Recipient MM1 Notification Request CDR (R1NRq-CDR), in case of
+     * reply-charging, this field indicates the maximum size of a reply-MM
+     * granted to the recipient as specified in the MM1_notification. REQ. In the
+     * MM7 Submission CDR (7S-CDR), in case of reply-charging, this field
+     * indicates the maximum size for reply-MM(s) granted to the recipient(s) as
+     * specified by the originator MMS VASP.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.45.
+     *
+     * Category OC. In case of reply-charging the maximum size for reply-MM(s)
+     * granted to the recipient(s) as specified by the VASP.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.1.
+     *
      * @public
      * @readonly
      */
     readonly replyChargingSize: OPTIONAL<INTEGER>;
     /**
      * @summary `priority`.
+     * @description
+     *
+     * The priority (importance) of the message, see TS 23.140 [206].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.32.
+     *
+     * Category OC. The priority (importance) of the message if specified by
+     * the VASP.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.1.
+     *
      * @public
      * @readonly
      */
     readonly priority: OPTIONAL<PriorityType>;
     /**
      * @summary `messageDistributionIndicator`.
+     * @description
+     *
+     * This is an indication of type Boolean whether (value TRUE) or not (value
+     * FALSE) the VASP has indicated the content of the MM is intended for
+     * redistribution.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.19.
+     *
+     * Category OC. This field is present if specified in the MM7_submit.REQ /
+     * If set to "false" the VASP has indicated that content of the MM is not
+     * intended for redistribution. / If set to "true" the VASP has indicated
+     * that content of the MM can be redistributed.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.1.
+     *
      * @public
      * @readonly
      */
     readonly messageDistributionIndicator: OPTIONAL<BOOLEAN>;
     /**
      * @summary `requestStatusCode`.
+     * @description
+     *
+     * The status of the MM as reflected in the corresponding MM4 message (e.g.
+     * error service denied, error network problem, error unsupported message,
+     * etc.). For further details see TS 23.140 [206].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.48.
+     *
+     * Category OM. The status code of the associated MM7_submit_REQ.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.1.
+     *
      * @public
      * @readonly
      */
     readonly requestStatusCode: OPTIONAL<RequestStatusCodeType>;
     /**
      * @summary `statusText`.
+     * @description
+     *
+     * This field includes a more detailed technical status of the message at the
+     * point in time when the CDR is generated.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.55.
+     *
+     * Category OC. This field includes a more detailed technical status of the
+     * message at the point in time when the CDR is generated. This field is
+     * only present if the MM submission is rejected.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.1.
+     *
      * @public
      * @readonly
      */
     readonly statusText: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `recordTimeStamp`.
+     * @description
+     *
+     * This field indicates the date and time when the CDR was produced.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.41.
+     *
+     * Category OM. Time of generation of the CDR.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.1.
+     *
      * @public
      * @readonly
      */
     readonly recordTimeStamp: OCTET_STRING;
     /**
      * @summary `localSequenceNumber`.
+     * @description
+     *
+     * This field includes a unique record number created by this node. The
+     * number is allocated sequentially including all CDR types. The number is
+     * unique within one node, which is identified either by field Node ID or by
+     * record-dependent MMS Relay/Server. The field can be used e.g. to identify
+     * missing records in post processing system.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.16.
+     *
+     * Category OM. Consecutive record number created by this node. The number
+     * is allocated sequentially including all CDR types.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.1.
+     *
      * @public
      * @readonly
      */
     readonly localSequenceNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `recordExtensions`.
+     * @description
+     *
+     * The field enables network operators and/or manufacturers to add their own
+     * extensions to the standard record definitions.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.40.
+     *
+     * Category OC. A set of network/manufacturer specific extensions to the
+     * record. Conditioned upon the existence of an extension.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.1.
+     *
      * @public
      * @readonly
      */
     readonly recordExtensions: OPTIONAL<ManagementExtension[]>;
     /**
      * @summary `mscfInformation`.
+     * @description
+     *
+     * This is a grouped field comprising several the following sub-fields
+     * associated with the invocation of the MSCF for advanced addressing:
+     * Billing Information; Routeing address List. These field elements are
+     * described in the appropriate subclause.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.29.
+     *
+     * Category OC. A set of parameters provided by the MSCF when interacting
+     * with the MMS R/S via the MM10 interface prior to the MM7_submit.RES.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.1.
+     *
      * @public
      * @readonly
      */

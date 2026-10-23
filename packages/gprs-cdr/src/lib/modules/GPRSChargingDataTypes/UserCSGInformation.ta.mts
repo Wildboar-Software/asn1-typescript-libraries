@@ -14,7 +14,23 @@ import { _decode_CSGAccessMode, _encode_CSGAccessMode, _enum_for_CSGAccessMode, 
 /**
  * @summary UserCSGInformation
  * @description
+ *
+ * This field contains the "User CSG Information" status of the user
+ * accessing a CSG cell: it comprises CSG ID within the PLMN, Access mode and
+ * indication on CSG membership for the user when hybrid access applies, as
+ * defined in TS 29.060 [215] for GPRS case, and in TS 29.274 [223] for EPC
+ * case.
+ *
+ * On a user CSG information change, entry to a CSG cell or a hybrid cell
+ * reports the CSG ID, the access mode, and, for hybrid, the membership
+ * indication. Leaving such a cell reports the change without them, unless
+ * the user is entering another CSG cell or hybrid cell (clause 5.2.3.3.1).
  * 
+ *
+ * 3GPP TS 32.251 V19.0.0.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.74.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,18 +46,35 @@ export
 class UserCSGInformation {
     /**
      * @summary `cSGId`.
+     * @description
+     *
+     * Identity of the CSG cell or hybrid cell through which the UE is taking
+     * service (clause 5.1.2).
+     *
      * @public
      * @readonly
      */
     readonly cSGId: OCTET_STRING;
     /**
      * @summary `cSGAccessMode`.
+     * @description
+     *
+     * Access mode of that CSG cell, reported with the CSG ID (clause 5.1.2).
+     *
      * @public
      * @readonly
      */
     readonly cSGAccessMode: CSGAccessMode;
     /**
      * @summary `cSGMembershipIndication`.
+     * @description
+     *
+     * Included for a hybrid cell (clause 5.1.2). On a user CSG information
+     * change the whole user CSG information, including this indication, is
+     * present when the user enters a CSG cell or a hybrid cell, and omitted
+     * when the user leaves such a cell without entering another (clause
+     * 5.2.3.3.1).
+     *
      * @public
      * @readonly
      */

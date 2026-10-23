@@ -13,7 +13,15 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary RateElement
  * @description
- * 
+ *
+ * One element of a tariff mapped from real-time tariff information. TS
+ * 32.260 does not define these components; the mapping is in TS 32.280
+ * (clause 5.2.2.1.17).
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 5.1.5.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,24 +38,44 @@ export
 class RateElement {
     /**
      * @summary `unitType`.
+     * @description
+     *
+     * Unit of a mapped tariff rate. TS 32.260 does not define this component;
+     * see TS 32.280 (clause 5.2.2.1.17).
+     *
      * @public
      * @readonly
      */
     readonly unitType: INTEGER;
     /**
      * @summary `unitValue`.
+     * @description
+     *
+     * Value of a mapped tariff rate unit. TS 32.260 does not define this
+     * component; see TS 32.280 (clause 5.2.2.1.17).
+     *
      * @public
      * @readonly
      */
     readonly unitValue: REAL;
     /**
      * @summary `unitCost`.
+     * @description
+     *
+     * Cost of a mapped tariff rate unit. TS 32.260 does not define this
+     * component; see TS 32.280 (clause 5.2.2.1.17).
+     *
      * @public
      * @readonly
      */
     readonly unitCost: REAL;
     /**
      * @summary `unitQuotaThreshold`.
+     * @description
+     *
+     * Quota threshold of a mapped tariff rate unit. TS 32.260 does not define
+     * this component; see TS 32.280 (clause 5.2.2.1.17).
+     *
      * @public
      * @readonly
      */

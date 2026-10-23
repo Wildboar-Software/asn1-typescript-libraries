@@ -11,7 +11,19 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary TrunkGroupID
  * @description
- * 
+ *
+ * PSTN trunk at the MGCF: the incoming trunk group on an incoming call, or
+ * the outgoing trunk group on an outgoing call (clause 6.1.3.7).
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 6.1.3.7.
+ *
+ * Contains the outgoing trunk group ID for an outgoing session/call or the
+ * incoming trunk group ID for an incoming session/call.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.69.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

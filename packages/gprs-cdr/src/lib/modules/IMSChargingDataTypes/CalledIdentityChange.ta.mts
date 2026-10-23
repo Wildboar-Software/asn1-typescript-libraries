@@ -13,7 +13,23 @@ import { InvolvedParty, _decode_InvolvedParty, _encode_InvolvedParty } from "../
 /**
  * @summary CalledIdentityChange
  * @description
- * 
+ *
+ * One change of the terminating identity after the session is established,
+ * with the time of the SIP UPDATE or SIP RE-INVITE that carried it (clause
+ * 6.3.1.2). Populated by the S-CSCF, P-CSCF, E-CSCF, AS, TF, TRF, and
+ * ATCF.
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 6.3.1.2.
+ *
+ * This field holds the set of terminating identity address changes after IMS
+ * session establishment and the associated time stamp for each. These
+ * addresses are obtained from the From SIP header field of a SIP UPDATE
+ * request or SIP RE-INVITE request.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.23A.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +44,23 @@ export
 class CalledIdentityChange {
     /**
      * @summary `calledIdentity`.
+     * @description
+     *
+     * Terminating identity received in a SIP UPDATE or SIP RE-INVITE after the
+     * session was established (clause 6.3.1.2). Taken from the From header of
+     * that request.
+     *
      * @public
      * @readonly
      */
     readonly calledIdentity: OPTIONAL<InvolvedParty>;
     /**
      * @summary `changeTime`.
+     * @description
+     *
+     * Time of the SIP UPDATE or SIP RE-INVITE that carried the changed
+     * terminating identity (clause 6.3.1.2).
+     *
      * @public
      * @readonly
      */

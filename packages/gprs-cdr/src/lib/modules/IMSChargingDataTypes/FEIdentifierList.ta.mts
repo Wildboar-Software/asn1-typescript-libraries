@@ -10,7 +10,25 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary FEIdentifierList
  * @description
- * 
+ *
+ * One or more IM CN subsystem functional entity addresses, and/or an AS
+ * address with the application identifier of the application that AS
+ * executed. An address is included when that entity creates charging
+ * information for its CDR. An AS that hosts several applications repeats
+ * its address, once per application (clause 5.1.2.8, citing TS 32.240).
+ * Values received in SIP requests shall be ignored. The SIP encoding is
+ * the FE-Identifier header defined in TS 24.229.
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 5.1.2.8.
+ *
+ * This parameter holds the FE Identifier List of the P-Charging-Vector
+ * header, as received in the FE-Identifier-List AVP as defined in TS 32.299
+ * [50].
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.16aA.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

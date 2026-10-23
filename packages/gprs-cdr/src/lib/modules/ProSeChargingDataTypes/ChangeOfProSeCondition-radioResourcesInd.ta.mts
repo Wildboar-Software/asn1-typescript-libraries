@@ -9,7 +9,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ChangeOfProSeCondition_radioResourcesInd
  * @description
- * 
+ *
+ * Which radio resources were used for the ProSe Direct Communication in this
+ * container. Same values as `RadioResourcesIndicator`.
+ *
+ * 3GPP TS 32.277 V19.2.0 table 6.1.3.4.2 and clause 6.3.1.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -24,6 +29,13 @@ type ChangeOfProSeCondition_radioResourcesInd = INTEGER;
 
 /**
  * @summary ChangeOfProSeCondition_radioResourcesInd_operatorProvided
+ * @description
+ *
+ * Operator-provided radio resources. Clause 5.1.2.3 describes these as the
+ * resources used while the UE is in E-UTRAN coverage. Integer value 1.
+ *
+ * 3GPP TS 32.277 V19.2.0 clause 5.1.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -32,6 +44,13 @@ const ChangeOfProSeCondition_radioResourcesInd_operatorProvided: ChangeOfProSeCo
 
 /**
  * @summary ChangeOfProSeCondition_radioResourcesInd_operatorProvided
+ * @description
+ *
+ * Operator-provided radio resources. Clause 5.1.2.3 describes these as the
+ * resources used while the UE is in E-UTRAN coverage. Integer value 1.
+ *
+ * 3GPP TS 32.277 V19.2.0 clause 5.1.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -40,6 +59,12 @@ const operatorProvided: ChangeOfProSeCondition_radioResourcesInd = ChangeOfProSe
 
 /**
  * @summary ChangeOfProSeCondition_radioResourcesInd_configured
+ * @description
+ *
+ * Configured radio resources. Integer value 2.
+ *
+ * 3GPP TS 32.277 V19.2.0 clause 5.1.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -48,6 +73,12 @@ const ChangeOfProSeCondition_radioResourcesInd_configured: ChangeOfProSeConditio
 
 /**
  * @summary ChangeOfProSeCondition_radioResourcesInd_configured
+ * @description
+ *
+ * Configured radio resources. Integer value 2.
+ *
+ * 3GPP TS 32.277 V19.2.0 clause 5.1.2.3.
+ *
  * @constant
  * @type {number}
  */

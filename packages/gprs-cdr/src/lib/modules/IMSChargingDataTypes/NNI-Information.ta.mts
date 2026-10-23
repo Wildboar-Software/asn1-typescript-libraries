@@ -14,7 +14,16 @@ import { ServedPartyIPAddress, _decode_ServedPartyIPAddress, _encode_ServedParty
 /**
  * @summary NNI_Information
  * @description
- * 
+ *
+ * The network-to-network interface used for interconnection or roaming
+ * (clause 6.3.1.2). It may occur more than once, for example when transit
+ * routing is collocated with the IBCF. Populated by the P-CSCF, S-CSCF,
+ * BGCF, AS, IBCF, ATCF, TF, and TRF.
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 6.3.1.2.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,24 +40,60 @@ export
 class NNI_Information {
     /**
      * @summary `sessionDirection`.
+     * @description
+     *
+     * This field indicates whether the NNI is used for an inbound or outbound
+     * service request on the control plane in case of interconnection and
+     * roaming.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.58B.
+     *
+     * 3GPP TS 32.260 V20.1.0 clause 6.3.1.2.
+     *
      * @public
      * @readonly
      */
     readonly sessionDirection: OPTIONAL<SessionDirection>;
     /**
      * @summary `nNIType`.
+     * @description
+     *
+     * This field indicates whether the type of used NNI is non-roaming,
+     * roaming with loopback routing, or roaming without loopback routing. 3GPP
+     * TS 32.260 V20.1.0.
+     *
      * @public
      * @readonly
      */
     readonly nNIType: OPTIONAL<NNIType>;
     /**
      * @summary `relationshipMode`.
+     * @description
+     *
+     * This field indicates whether the other functional entity (e.g. contact
+     * point of the neighbouring network) is regarded as part of the same trust
+     * domain.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.42A.
+     *
+     * 3GPP TS 32.260 V20.1.0 clause 6.3.1.2.
+     *
      * @public
      * @readonly
      */
     readonly relationshipMode: OPTIONAL<RelationshipMode>;
     /**
      * @summary `neighbourNodeAddress`.
+     * @description
+     *
+     * This field holds the control plane IP address of the neighbouring network
+     * contact point that handles the service request in case of interconnection
+     * and roaming.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.31A.
+     *
+     * 3GPP TS 32.260 V20.1.0 clause 6.3.1.2.
+     *
      * @public
      * @readonly
      */

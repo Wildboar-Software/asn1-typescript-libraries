@@ -6,7 +6,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary APNSelectionMode
  * @description
- * 
+ *
+ * This field indicates how the SGSN/MME selected the APN to be used. The
+ * values and their meaning are as specified in TS 29.060 [215] for GTP case
+ * and in TS 29.274 [223] for eGTP case.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,7 +34,13 @@ enum _enum_for_APNSelectionMode {
 /**
  * @summary APNSelectionMode
  * @description
- * 
+ *
+ * This field indicates how the SGSN/MME selected the APN to be used. The
+ * values and their meaning are as specified in TS 29.060 [215] for GTP case
+ * and in TS 29.274 [223] for eGTP case.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -46,7 +58,13 @@ type APNSelectionMode = _enum_for_APNSelectionMode;
 /**
  * @summary APNSelectionMode
  * @description
- * 
+ *
+ * This field indicates how the SGSN/MME selected the APN to be used. The
+ * values and their meaning are as specified in TS 29.060 [215] for GTP case
+ * and in TS 29.274 [223] for eGTP case.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

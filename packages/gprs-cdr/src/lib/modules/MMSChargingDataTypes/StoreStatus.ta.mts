@@ -10,6 +10,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary StoreStatus
  * @description
  * 
+ * Status of a request to store an MM, as received in MM1_store.RES.
+ * Category OC on the Bx1S-CDR. TS 32.270 does not define the individual
+ * error values. The MMBox storage description gives "stored" and a
+ * transient mailbox-full error as examples.
+ *
+ * 3GPP TS 32.270 V19.0.0 clause 6.1.4.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

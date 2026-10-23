@@ -19,7 +19,20 @@ import { AoCInformation, _decode_AoCInformation, _encode_AoCInformation } from "
 /**
  * @summary SupplService
  * @description
- * 
+ *
+ * One supplementary service inside `MMTelInformation`. The same AS
+ * may report several services together, so the enclosing sequence
+ * holds one entry per service that is active in parallel.
+ *
+ * `serviceType` selects the service. The other fields are used as
+ * that service requires: CDIV uses `serviceMode`,
+ * `numberOfDiversions` and the forwarding party; CONF uses
+ * `serviceId`, `changeTime`, `numberOfParticipants` and
+ * `participantActionType`; ECT and FA also use the associated
+ * party; CUG uses `cUGInformation`; AoC uses `aoCInformation`.
+ *
+ * 3GPP TS 32.275 V19.0.0 clause 6.3.1.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,60 +56,170 @@ export
 class SupplService {
     /**
      * @summary `serviceType`.
+     * @description
+     *
+     * Which MMTel supplementary service this entry records. The value
+     * determines which of the optional fields apply and whether
+     * offline, online or converged charging is used. Obtained from
+     * the MMTel-SService-Type AVP. Values 1024 and above are reserved
+     * for network or manufacturer variants.
+     *
+     * 3GPP TS 32.275 V19.0.0 clause 6.3.1.2.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.5.6.
+     *
      * @public
      * @readonly
      */
     readonly serviceType: ServiceType;
     /**
      * @summary `serviceMode`.
+     * @description
+     *
+     * Behaviour of `serviceType` when the service has more than one.
+     * CDIV: CFU, CFB, CFNR, CFNRc, CFNL or communication deflection.
+     * CB: ACR, ICB or OCB. ECT: blind or consultative transfer.
+     * CONF: three-party. AoC: at set-up, during the communication,
+     * or at the end. Obtained from the Service-Mode AVP. Values
+     * 1024 and above are reserved for network or manufacturer
+     * variants.
+     *
+     * 3GPP TS 32.275 V19.0.0 clause 6.3.1.2.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.5.5.
+     *
      * @public
      * @readonly
      */
     readonly serviceMode: OPTIONAL<ServiceMode>;
     /**
      * @summary `numberOfDiversions`.
+     * @description
+     *
+     * How many diversions have been applied for CDIV. Every diversion
+     * type is counted. When a diverted-to user diverts again, that
+     * user becomes the diverting user of the next leg and is charged
+     * for it.
+     *
+     * 3GPP TS 32.275 V19.0.0 clauses 5.1.1.7 and 6.3.1.2.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.5.3.
+     *
      * @public
      * @readonly
      */
     readonly numberOfDiversions: OPTIONAL<INTEGER>;
     /**
      * @summary `associated_Party_Address`.
+     * @description
+     *
+     * Extra party identity needed to charge the service. For CDIV this
+     * is the forwarding party (the diverting user; in the CFNR flow,
+     * user B). For ECT it is the transferor. For flexible alerting
+     * it is the Pilot Identity the call was placed to. For
+     * three-party it is the initiator. Obtained from the
+     * Associated-Party-Address AVP.
+     *
+     * 3GPP TS 32.275 V19.0.0 clause 6.3.1.2.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.5.1.
+     *
      * @public
      * @readonly
      */
     readonly associated_Party_Address: OPTIONAL<InvolvedParty>;
     /**
      * @summary `serviceId`.
+     * @description
+     *
+     * Conference identity for CONF. The CONF AS allocates a conference
+     * URI when the conference is created; this field holds that
+     * conference ID. Converged charging calls the same element
+     * Conference Id. For an MRFC the field identifies the service
+     * the MRFC is hosting.
+     *
+     * 3GPP TS 32.275 V19.0.0 clauses 5.2.2.1.11.1 and 6.3.1.2.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.56.
+     *
      * @public
      * @readonly
      */
     readonly serviceId: OPTIONAL<GraphicString>;
     /**
      * @summary `changeTime`.
+     * @description
+     *
+     * Time of the CONF action in `participantActionType`, and the
+     * timestamp for the CONF parameters in this entry. When the
+     * action is CREATE, this is the start of the conference. When
+     * the action is QUIT and `numberOfParticipants` is 0, this is
+     * the end of the conference.
+     *
+     * Clause 6.3.1.2 gives the category operator conditional. In
+     * this module the component is present on every `SupplService`.
+     *
+     * 3GPP TS 32.275 V19.0.0 clause 6.3.1.2.
+     *
      * @public
      * @readonly
      */
     readonly changeTime: OCTET_STRING;
     /**
      * @summary `numberOfParticipants`.
+     * @description
+     *
+     * How many parties are attached to the conference at
+     * `changeTime`. Charging of the conference owner may be based
+     * on this count. Under online session charging with unit
+     * reservation the AS requests new units when the count changes
+     * because a user joins, is invited, or leaves.
+     *
+     * 3GPP TS 32.275 V19.0.0 clauses 5.1.1.11, 5.3.2.1.4 and 6.3.1.2.
+     *
      * @public
      * @readonly
      */
     readonly numberOfParticipants: OPTIONAL<INTEGER>;
     /**
      * @summary `participantActionType`.
+     * @description
+     *
+     * What the participant did in the conference at `changeTime`:
+     * create, join, be invited, or quit. Obtained from the
+     * Participants-Action-Type AVP. The charging information names
+     * the invited-into-conference action INVITE_CONF.
+     *
+     * 3GPP TS 32.275 V19.0.0 clause 6.3.1.2.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.5.4.
+     *
      * @public
      * @readonly
      */
     readonly participantActionType: OPTIONAL<ParticipantActionType>;
     /**
      * @summary `cUGInformation`.
+     * @description
+     *
+     * CUG interlock code conveyed by the network. It identifies the
+     * CUG communication. The AS includes it when the subscriber's
+     * CUG profile allows the communication. If the checks result in
+     * non-CUG behaviour, such as outgoing access or an incoming call
+     * from a non-member, the code is omitted and non-CUG charging
+     * applies.
+     *
+     * 3GPP TS 32.275 V19.0.0 clauses 5.2.2.1.17 and 6.3.1.2.
+     *
      * @public
      * @readonly
      */
     readonly cUGInformation: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `aoCInformation`.
+     * @description
+     *
+     * Advice of Charge information conveyed to the CDF, as defined in
+     * TS 32.280. More than one entry may be present, for example
+     * when AoC at communication set-up is sent more than once.
+     *
+     * 3GPP TS 32.275 V19.0.0 clauses 5.1.1.21 and 6.3.1.2.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.3A.
+     *
      * @public
      * @readonly
      */

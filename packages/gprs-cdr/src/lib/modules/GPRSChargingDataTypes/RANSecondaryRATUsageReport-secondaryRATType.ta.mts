@@ -10,6 +10,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary RANSecondaryRATUsageReport_secondaryRATType
  * @description
  * 
+ * Radio access used as the secondary RAT for this usage report, for
+ * example NR (clause 5.2.1.11).
+ * 
+ * 3GPP TS 32.251 V19.0.0.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

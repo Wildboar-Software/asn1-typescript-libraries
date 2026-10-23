@@ -1,6 +1,17 @@
 /**
  * @description
  *
+ * ProSe offline CDRs produced by the ProSe Function, and the
+ * parameters they carry.
+ *
+ * `PFDDRecord` is the Direct Discovery CDR. `PFEDRecord` is the
+ * EPC-level Discovery CDR. `PFDCRecord` is the Direct Communication
+ * CDR. Clause 6.3.2.1 leaves the ASN.1 syntax and encoding to
+ * TS 32.298; that syntax is clause 5.1.4.7 of TS 32.298 V20.1.0.
+ *
+ * 3GPP TS 32.277 V19.2.0 clauses 6.1.3 and 6.3.2.1.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.
+ *
  * ASN.1 module `ProSeChargingDataTypes`.
  *
  * Identical assignments that also appear in other charging modules

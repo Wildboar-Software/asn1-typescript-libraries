@@ -11,7 +11,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary RoamingNumber
  * @description
- * 
+ *
+ * The roaming number field contains the mobile station roaming number as
+ * defined in TS 23.003 [200] and coded according to TS 29.002 [214].
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.75.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

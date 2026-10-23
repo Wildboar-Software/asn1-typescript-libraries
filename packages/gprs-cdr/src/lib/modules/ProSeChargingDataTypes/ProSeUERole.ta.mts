@@ -6,7 +6,15 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ProSeUERole
  * @description
- * 
+ *
+ * Role of the UE in the ProSe service this CDR records. Direct Discovery uses
+ * Announcing UE, Monitoring UE, Discoverer UE, and Discoveree UE. EPC-level
+ * Discovery uses the requestor UE and the requested UE.
+ *
+ * The ASN.1 spelling `annoucingUE` omits an `n`. It is the Announcing UE.
+ *
+ * 3GPP TS 32.277 V19.2.0 clauses 5.1.2.1, 6.1.3.2, 6.1.3.3, and 6.3.1.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,7 +42,15 @@ enum _enum_for_ProSeUERole {
 /**
  * @summary ProSeUERole
  * @description
- * 
+ *
+ * Role of the UE in the ProSe service this CDR records. Direct Discovery uses
+ * Announcing UE, Monitoring UE, Discoverer UE, and Discoveree UE. EPC-level
+ * Discovery uses the requestor UE and the requested UE.
+ *
+ * The ASN.1 spelling `annoucingUE` omits an `n`. It is the Announcing UE.
+ *
+ * 3GPP TS 32.277 V19.2.0 clauses 5.1.2.1, 6.1.3.2, 6.1.3.3, and 6.3.1.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -55,7 +71,15 @@ type ProSeUERole = _enum_for_ProSeUERole;
 /**
  * @summary ProSeUERole
  * @description
- * 
+ *
+ * Role of the UE in the ProSe service this CDR records. Direct Discovery uses
+ * Announcing UE, Monitoring UE, Discoverer UE, and Discoveree UE. EPC-level
+ * Discovery uses the requestor UE and the requested UE.
+ *
+ * The ASN.1 spelling `annoucingUE` omits an `n`. It is the Announcing UE.
+ *
+ * 3GPP TS 32.277 V19.2.0 clauses 5.1.2.1, 6.1.3.2, 6.1.3.3, and 6.3.1.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -75,6 +99,13 @@ const ProSeUERole = _enum_for_ProSeUERole;
 
 /**
  * @summary ProSeUERole_annoucingUE
+ * @description
+ *
+ * Announcing UE in Direct Discovery Model A, open or restricted. The ASN.1 name
+ * is spelled `annoucingUE`.
+ *
+ * 3GPP TS 32.277 V19.2.0 clauses 5.1.2.1 and 6.1.3.2.
+ *
  * @constant
  * @type {number}
  */
@@ -83,6 +114,10 @@ const ProSeUERole_annoucingUE: ProSeUERole = ProSeUERole.annoucingUE; /* LONG_NA
 
 /**
  * @summary annoucingUE
+ * @description
+ *
+ * Announcing UE. See `ProSeUERole_annoucingUE`.
+ *
  * @constant
  * @type {number}
  */
@@ -91,6 +126,12 @@ const annoucingUE: ProSeUERole = ProSeUERole.annoucingUE; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary ProSeUERole_monitoringUE
+ * @description
+ *
+ * Monitoring UE in Direct Discovery Model A, open or restricted.
+ *
+ * 3GPP TS 32.277 V19.2.0 clauses 5.1.2.1 and 6.1.3.2.
+ *
  * @constant
  * @type {number}
  */
@@ -99,6 +140,10 @@ const ProSeUERole_monitoringUE: ProSeUERole = ProSeUERole.monitoringUE; /* LONG_
 
 /**
  * @summary monitoringUE
+ * @description
+ *
+ * Monitoring UE. See `ProSeUERole_monitoringUE`.
+ *
  * @constant
  * @type {number}
  */
@@ -107,6 +152,12 @@ const monitoringUE: ProSeUERole = ProSeUERole.monitoringUE; /* SHORT_NAMED_ENUME
 
 /**
  * @summary ProSeUERole_requestorUE
+ * @description
+ *
+ * UE that initiates an EPC-level ProSe discovery proximity request.
+ *
+ * 3GPP TS 32.277 V19.2.0 clause 6.1.3.3.
+ *
  * @constant
  * @type {number}
  */
@@ -115,6 +166,10 @@ const ProSeUERole_requestorUE: ProSeUERole = ProSeUERole.requestorUE; /* LONG_NA
 
 /**
  * @summary requestorUE
+ * @description
+ *
+ * Requestor UE. See `ProSeUERole_requestorUE`.
+ *
  * @constant
  * @type {number}
  */
@@ -123,6 +178,12 @@ const requestorUE: ProSeUERole = ProSeUERole.requestorUE; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary ProSeUERole_requestedUE
+ * @description
+ *
+ * UE targeted by an EPC-level proximity request.
+ *
+ * 3GPP TS 32.277 V19.2.0 clause 6.1.3.3.
+ *
  * @constant
  * @type {number}
  */
@@ -131,6 +192,10 @@ const ProSeUERole_requestedUE: ProSeUERole = ProSeUERole.requestedUE; /* LONG_NA
 
 /**
  * @summary requestedUE
+ * @description
+ *
+ * Requested UE. See `ProSeUERole_requestedUE`.
+ *
  * @constant
  * @type {number}
  */
@@ -139,6 +204,13 @@ const requestedUE: ProSeUERole = ProSeUERole.requestedUE; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary ProSeUERole_discovererUE
+ * @description
+ *
+ * Discoverer UE in Model B restricted Direct Discovery. It sends the discovery
+ * query and the match report.
+ *
+ * 3GPP TS 32.277 V19.2.0 clauses 5.2.1.2 and 5.2.2.1.5.
+ *
  * @constant
  * @type {number}
  */
@@ -147,6 +219,10 @@ const ProSeUERole_discovererUE: ProSeUERole = ProSeUERole.discovererUE; /* LONG_
 
 /**
  * @summary discovererUE
+ * @description
+ *
+ * Discoverer UE. See `ProSeUERole_discovererUE`.
+ *
  * @constant
  * @type {number}
  */
@@ -155,6 +231,13 @@ const discovererUE: ProSeUERole = ProSeUERole.discovererUE; /* SHORT_NAMED_ENUME
 
 /**
  * @summary ProSeUERole_discovereeUE
+ * @description
+ *
+ * Discoveree UE in Model B restricted Direct Discovery. It sends the discovery
+ * response.
+ *
+ * 3GPP TS 32.277 V19.2.0 clauses 5.2.1.2 and 5.2.2.1.5.
+ *
  * @constant
  * @type {number}
  */
@@ -163,6 +246,10 @@ const ProSeUERole_discovereeUE: ProSeUERole = ProSeUERole.discovereeUE; /* LONG_
 
 /**
  * @summary discovereeUE
+ * @description
+ *
+ * Discoveree UE. See `ProSeUERole_discovereeUE`.
+ *
  * @constant
  * @type {number}
  */

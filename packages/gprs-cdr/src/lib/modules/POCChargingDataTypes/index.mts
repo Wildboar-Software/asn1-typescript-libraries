@@ -1,7 +1,15 @@
 /**
  * @description
  *
- * ASN.1 module `POCChargingDataTypes`.
+ * ASN.1 module `POCChargingDataTypes`: Push-to-talk over Cellular
+ * (PoC) charging data records.
+ *
+ * 3GPP TS 32.272 V19.0.0 specifies offline and online PoC charging,
+ * when a participating PoC function CDR (PPF-CDR) or a controlling
+ * PoC function CDR (CPF-CDR) is produced, and what the PoC fields
+ * mean. 3GPP TS 32.298 V20.1.0 clause 5.1.4.3 specifies the ASN.1
+ * and the detailed parameter descriptions. The CDF transfers the
+ * CDR files to the billing domain on Bt.
  *
  * Identical assignments that also appear in other charging modules
  * are re-exported from `shared`.

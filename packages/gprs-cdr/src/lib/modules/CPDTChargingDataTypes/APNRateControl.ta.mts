@@ -11,7 +11,20 @@ import { APNRateControlParameters, _decode_APNRateControlParameters, _encode_APN
 /**
  * @summary APNRateControl
  * @description
- * 
+ *
+ * APN Rate Control enforced in the SCEF for the PDN connection, as
+ * specified in TS 29.128. It is a field of the CPDT-SCE-CDR. A change
+ * closes that CDR, and a new one is opened if the PDN connection stays
+ * active. Table 6.3.2.1 allows the Rf information element only from
+ * the SCEF.
+ *
+ * TS 32.253 does not define `aPNRateControlUplink` or
+ * `aPNRateControlDownlink`.
+ *
+ * 3GPP TS 32.253 V19.0.0 clause 5.2.1, table 6.1.3.2.1, and
+ * table 6.3.2.1.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

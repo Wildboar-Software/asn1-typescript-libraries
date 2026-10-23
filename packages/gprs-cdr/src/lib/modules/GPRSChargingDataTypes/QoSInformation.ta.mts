@@ -12,6 +12,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary QoSInformation
  * @description
  * 
+ * APN-AMBR uplink and downlink for the IP-CAN session (table 6.1.3.1).
+ * Applicable only when charging per IP-CAN session is active. It is not
+ * the per-bearer EPC QoS, which is carried in the traffic-volume and
+ * service-data containers and does not include the APN-AMBR (table
+ * 6.1.3.2).
+ * 
+ * 3GPP TS 32.251 V19.0.0.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

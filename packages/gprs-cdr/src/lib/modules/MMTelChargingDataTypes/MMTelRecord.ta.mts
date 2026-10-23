@@ -34,7 +34,25 @@ import { MMTelRecord_threeGPPPSDataOffStatus, _decode_MMTelRecord_threeGPPPSData
 /**
  * @summary MMTelRecord
  * @description
- * 
+ *
+ * This subclause contains the description of each of the CDR fields needed
+ * to support the charging of MMTel services as specified in TS 32.275 [35].
+ *
+ * On the Bi interface the MMTel AS CDR is the IMS AS CDR of TS 32.260,
+ * plus `mMTelInformation`. The CDF opens the CDR on Charging Data
+ * Request [Start], updates it on [Interim], closes it on [Stop], and
+ * creates it on [Event]. Which of those requests the MMTel AS sends
+ * depends on the supplementary service (clause 5.2.2).
+ *
+ * Charging data from the MMTel AS and from other IMS nodes that handle
+ * the same session are correlated by the IMS Charging Identifier. When
+ * the AS acts as a B2BUA and preserves that identifier between dialogs,
+ * the OneChargingSession option of TS 32.260 may be applied.
+ * Subscription-based charging is out of scope.
+ *
+ * 3GPP TS 32.275 V19.0.0 clauses 5.0, 5.1.0, 6.1.3.1 and 6.1.3.2.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.5.0.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -125,48 +143,126 @@ export
 class MMTelRecord {
     /**
      * @summary `recordType`.
+     * @description
+     *
+     * Identifies the type of record. The parameter is derived from the
+     * Node-Functionality AVP, defined in TS 32.299 [40].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.42.
+     *
      * @public
      * @readonly
      */
     readonly recordType: RecordType;
     /**
      * @summary `retransmission`.
+     * @description
+     *
+     * This parameter, when present, indicates that information from
+     * retransmitted Diameter ACRs has been used in this CDR.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.44.
+     *
      * @public
      * @readonly
      */
     readonly retransmission: OPTIONAL<NULL>;
     /**
      * @summary `sIP_Method`.
+     * @description
+     *
+     * Specifies the SIP-method for which the CDR is generated. Only available in
+     * session unrelated cases.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.61.
+     *
      * @public
      * @readonly
      */
     readonly sIP_Method: OPTIONAL<GraphicString>;
     /**
      * @summary `role_of_Node`.
+     * @description
+     *
+     * The field indicates whether the IMS node (except MRFC) is serving the
+     * Originating or the Terminating party. The role can be: Originating (IMS
+     * node serving the calling party); Terminating (IMS node serving the called
+     * party).
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.45.
+     *
      * @public
      * @readonly
      */
     readonly role_of_Node: OPTIONAL<MMTelRecord_role_of_Node>;
     /**
      * @summary `nodeAddress`.
+     * @description
+     *
+     * This item holds the address of the node providing the information for the
+     * CDR. This may either be the IP address or the FQDN of the IMS node
+     * generating the accounting data. This parameter corresponds to the
+     * Origin-Host AVP.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.32.
+     *
      * @public
      * @readonly
      */
     readonly nodeAddress: OPTIONAL<NodeAddress>;
     /**
      * @summary `session_Id`.
+     * @description
+     *
+     * The Session identification. For a SIP session the Session-ID contains the
+     * SIP CALL ID as defined in the Session Initiation Protocol RFC 3261 [401].
+     * When the AS acts as B2BUA, the incoming Session-ID leg is covered.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.59.
+     *
      * @public
      * @readonly
      */
     readonly session_Id: OPTIONAL<GraphicString>;
     /**
      * @summary `list_Of_Calling_Party_Address`.
+     * @description
+     *
+     * The address or addresses (Public User ID or Public Service ID) of the
+     * party requesting a service or initiating a session. This field may hold
+     * the SIP URI (according to RFC 3261 [401]), the Tel URI (according to RFC
+     * 3966 402]) or both the SIP URI and the Tel URI of the calling party. The
+     * address is obtained from the P-Asserted-Identity header of a non-REGISTER
+     * SIP request, either initiating a dialog or a standalone transaction.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.24.
+     *
      * @public
      * @readonly
      */
     readonly list_Of_Calling_Party_Address: OPTIONAL<InvolvedParty[]>;
     /**
      * @summary `called_Party_Address`.
+     * @description
+     *
+     * In the context of an end-to-end SIP transaction (except for SIP REGISTER
+     * and SIP SUBSCRIBE transactions) this field holds the address of the party
+     * (Public User ID or Public Service ID) to whom the SIP transaction is
+     * posted. The Called Party Address shall be populated with the SIP URI
+     * (according to RFC3261 [401]) or Tel URI (according to RFC3966 [402])
+     * contained in the outgoing Request-URI of the request (e.g. after ENUM
+     * query or after AS interaction). Called Party Address could also be
+     * populated with an URN (according to RFC5031 [407]) for an emergency SIP
+     * session. For a registration procedure this field holds the party (Public
+     * User ID) to be registered. In this case, the Called Party Address field is
+     * obtained from the "To" SIP header of the SIP request. For a subscription
+     * procedure this field holds the address of the resource for which the
+     * originator wants to receive notifications of change of states. In this
+     * case, the Called Party Address field is obtained from the outgoing
+     * Request-URI of the SIP request.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.9.
+     *
      * @public
      * @readonly
      */
@@ -179,66 +275,182 @@ class MMTelRecord {
     readonly serviceRequestTimeStamp: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `serviceDeliveryStartTimeStamp`.
+     * @description
+     *
+     * This field holds the time stamp reflecting either: The content of this
+     * field corresponds to the SIP-Response-Timestamp AVP. For partial CDRs this
+     * field remains unchanged.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.55.
+     *
      * @public
      * @readonly
      */
     readonly serviceDeliveryStartTimeStamp: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `serviceDeliveryEndTimeStamp`.
+     * @description
+     *
+     * This field records the time at which the service delivery was terminated.
+     * It is Present only in SIP session related case. The content of this field
+     * corresponds to the SIP-Request-Timestamp AVP of a received ACR[Stop]
+     * message indicating a session termination.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.54.
+     *
      * @public
      * @readonly
      */
     readonly serviceDeliveryEndTimeStamp: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `recordOpeningTime`.
+     * @description
+     *
+     * A time stamp reflecting the time the CCF opened this record. Present only
+     * in SIP session related case.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.40.
+     *
      * @public
      * @readonly
      */
     readonly recordOpeningTime: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `recordClosureTime`.
+     * @description
+     *
+     * A Time stamp reflecting the time the CCF closed the record.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.38.
+     *
      * @public
      * @readonly
      */
     readonly recordClosureTime: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `interOperatorIdentifiers`.
+     * @description
+     *
+     * This list holds the identification of the pair of originating network and
+     * terminating network if exchanged via SIP signalling, as recorded in the
+     * Inter Operator Identifier (IOI) AVP as described in TS 32.299 [50]. It may
+     * occur several times in one CDR. For further information on the IOI
+     * exchange via SIP signalling please refer to TS 24.229 [210].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.26.
+     *
      * @public
      * @readonly
      */
     readonly interOperatorIdentifiers: OPTIONAL<InterOperatorIdentifiers[]>;
     /**
      * @summary `localRecordSequenceNumber`.
+     * @description
+     *
+     * This field includes a unique record number created by this node. The
+     * number is allocated sequentially for each partial CDR (or whole CDR)
+     * including all CDR types. The number is unique within the CCF. The field
+     * can be used e.g. to identify missing records in post processing system.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.29.
+     *
      * @public
      * @readonly
      */
     readonly localRecordSequenceNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `recordSequenceNumber`.
+     * @description
+     *
+     * This field contains a running sequence number employed to link the partial
+     * records generated by the CCF for a particular session (characterised with
+     * the same Charging ID and GGSN address pair). The Record Sequence Number is
+     * not present if the record is the only one produced in the CCF for a
+     * session. The Record Sequence Number starts from one (1).
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.41.
+     *
      * @public
      * @readonly
      */
     readonly recordSequenceNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `causeForRecordClosing`.
+     * @description
+     *
+     * This field contains a reason for the release of the CDR including the
+     * following: normal release: end of session; partial record generation: time
+     * (duration) limit, maximum number of changes in charging conditions (e.g.
+     * maximum number in 'List of Message Bodies' exceeded) or service change
+     * (e.g. change in media components, Access Transfer); abnormal termination;
+     * management intervention (request due to O&M reasons); CCF initiated record
+     * closure. A more detailed reason may be found in the Service Reason Return
+     * Code field.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.11.
+     *
      * @public
      * @readonly
      */
     readonly causeForRecordClosing: OPTIONAL<MMTelRecord_causeForRecordClosing>;
     /**
      * @summary `incomplete_CDR_Indication`.
+     * @description
+     *
+     * This field provides additional diagnostics when the CCF detects missing
+     * ACRs.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.21.
+     *
      * @public
      * @readonly
      */
     readonly incomplete_CDR_Indication: OPTIONAL<Incomplete_CDR_Indication>;
     /**
      * @summary `iMS_Charging_Identifier`.
+     * @description
+     *
+     * This parameter holds the IMS charging identifier (ICID) as generated by
+     * the IMS node for the SIP session/transaction. The value of the ICID
+     * parameter is identical with the 'icid-value' parameter defined in TS
+     * 24.229 [210]. The 'icid-value' is a mandatory part of the
+     * P-Charging-Vector and coded as a text-based UTF-8 charset (as are all SIP
+     * messages). For further information regarding the composition and usage of
+     * the P-Charging-Vector refer to TS 32.260 [20], TS 24.229 [210] and RFC
+     * 7315 [404]. The ICID value is globally unique across all 3GPP IMS networks
+     * for a time period of at least one month, implying that neither the node
+     * that generated this ICID nor any other IMS node reuse this value before
+     * the uniqueness period expires. The one month minimum uniqueness period
+     * counts from the time of release of the ICID, i.e. the ICID value no longer
+     * being used. This can be achieved by using node specific information, e.g.
+     * high-granularity time information and/or topology/location information.
+     * The exact method how to achieve the uniqueness requirement is an
+     * implementation issue. At each SIP session unrelated method, both initial
+     * and subsequent (e.g., REGISTER, NOTIFY, MESSAGE etc.), a new, session
+     * unrelated ICID is generated at the first IMS network element that
+     * processes the method.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.19.
+     *
      * @public
      * @readonly
      */
     readonly iMS_Charging_Identifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `list_Of_SDP_Media_Components`.
+     * @description
+     *
+     * This is a grouped field which may occur several times in one CDR and the
+     * content should be filled as described in TS 32.260 [20] clause 5.1.3. The
+     * field is present only in a SIP session related case. The List of SDP Media
+     * Components contains the following elements: SIP Request Timestamp; SIP
+     * Response Timestamp; SDP Media Components; Media Initiator flag; SDP
+     * Session Description. Media Initiator Party. The Media Initiator Party is
+     * only used for PoC charging. These field elements are described in the
+     * appropriate subclause.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.28.
+     *
      * @public
      * @readonly
      */
@@ -251,18 +463,45 @@ class MMTelRecord {
     readonly gGSNaddress: OPTIONAL<NodeAddress>;
     /**
      * @summary `serviceReasonReturnCode`.
+     * @description
+     *
+     * Provides the returned cause code for the service request (both successful
+     * and failure). This parameter corresponds to the Cause-Code AVP.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.57.
+     *
      * @public
      * @readonly
      */
     readonly serviceReasonReturnCode: OPTIONAL<UTF8String>;
     /**
      * @summary `list_Of_Message_Bodies`.
+     * @description
+     *
+     * This grouped field comprising several sub-fields describing the data that
+     * may be conveyed end-to-end in the body of a SIP MESSAGE. Since several
+     * message bodies may be exchanged via SIP-signalling, this grouped field may
+     * occur several times. The List of Message Bodies contains the following
+     * elements: Content Type; Content Disposition; Content Length; Originator.
+     * They are described in the appropriate subclause. Message bodies with the
+     * "Content-Type" field set to application/sdp and the "Content-Disposition"
+     * field set to session are not included in the "Message Bodies" field.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.27.
+     *
      * @public
      * @readonly
      */
     readonly list_Of_Message_Bodies: OPTIONAL<List_Of_Message_Bodies[]>;
     /**
      * @summary `recordExtensions`.
+     * @description
+     *
+     * A set of operator/manufacturer specific extensions to the record,
+     * conditioned upon existence of an extension.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.39.
+     *
      * @public
      * @readonly
      */
@@ -275,18 +514,57 @@ class MMTelRecord {
     readonly expiresInformation: OPTIONAL<INTEGER>;
     /**
      * @summary `event`.
+     * @description
+     *
+     * The Event parameter holds the content of the "Event" header defined in RFC
+     * 3265 [403],
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.15.
+     *
      * @public
      * @readonly
      */
     readonly event: OPTIONAL<UTF8String>;
     /**
      * @summary `accessNetworkInformation`.
+     * @description
+     *
+     * Holds the content of one of the SIP P-header "P-Access-Network-Info". In
+     * SIP, as per RFC 7315 [404], the content of the "P-Access-Network-Info"
+     * header is known as the access-net-spec. When multiple access-net-spec
+     * values are transported in a single P-Access-Network-Info header in
+     * comma-separated format, then only one access-net-spec value is included.
+     * For access types and access classes associated to 3GPP accesses: For GERAN
+     * access, the cgi-3gpp field contains the CGI; For UTRAN access, the
+     * utran-cell-id-3gpp field contains the LAI and CI, and the utran-sai-3gpp
+     * field contains the SAI; For E-UTRAN access, the utran-cell-id-3gpp field
+     * contains the TAI and ECGI; For NR access, the utran-cell-id-3gpp field
+     * contains the TAI and NCI. The SIP "P-Access-Network-Info" header syntax is
+     * specified in TS 24.229 [210] clause 7.2A.4. For access types and access
+     * classes associated to trusted WLAN access: the i-wlan-node-id field
+     * contains the BSSID, and when available, the operator-specific-GI field
+     * contains the Geographical Identifier. For access types and access classes
+     * associated to untrusted WLAN access, the i-wlan-node-id field contains the
+     * BSSID, and UE local IP address, ePDG IP Address, and TCP source port, UDP
+     * source port are contained in corresponding dedicated fields.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.2.
+     *
      * @public
      * @readonly
      */
     readonly accessNetworkInformation: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `serviceContextID`.
+     * @description
+     *
+     * This field contains the Service Context Id from Diameter Accounting, if
+     * Diameter Accounting was used and the field included. It identifies the
+     * service, sub-system or domain and release that the CDR is applicable to.
+     * The contents are described in TS 32.299 [50].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.1.2.
+     *
      * @public
      * @readonly
      */
@@ -299,30 +577,79 @@ class MMTelRecord {
     readonly list_of_subscription_ID: OPTIONAL<SubscriptionID[]>;
     /**
      * @summary `list_Of_Early_SDP_Media_Components`.
+     * @description
+     *
+     * This is a grouped field which may occur several times in one CDR. This
+     * field describes session, media parameters and timestamps related to media
+     * components set to active according to SDP signalling exchanged during a
+     * SIP session establishment and before the final successful or unsuccessful
+     * SIP ANSWER to the initial SIP INVITE message is received. Once a media
+     * component has been set to active, subsequent status changes shall also be
+     * registered. This field applies only to SIP session related cases, but it
+     * may be present both in event CDRs (unsuccessful session establishment) and
+     * session CDRs (successful session establishment). The List of Early SDP
+     * Media Components contains the following elements: SDP Offer Timestamp; SDP
+     * Answer Timestamp; SDP Media Components; Media Initiator flag; SDP Session
+     * Description. These fields are described in the appropriate subclause.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.25.
+     *
      * @public
      * @readonly
      */
     readonly list_Of_Early_SDP_Media_Components: OPTIONAL<List_Of_Early_SDP_Media_Components[]>;
     /**
      * @summary `iMSCommunicationServiceIdentifier`.
+     * @description
+     *
+     * This parameter holds the IMS Communication Service Identifier (ICSI) as
+     * contained in the P-Asserted-Service header of a SIP request to identify an
+     * IMS Communication Service as defined in TS 24.229 [210].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.20.
+     *
      * @public
      * @readonly
      */
     readonly iMSCommunicationServiceIdentifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `numberPortabilityRouting`.
+     * @description
+     *
+     * This item holds information on number portability routing, received by
+     * S-CSCF during ENUM/DNS processes. The parameter corresponds to the
+     * NumberPortabilityRoutingInformation AVP.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.33.
+     *
      * @public
      * @readonly
      */
     readonly numberPortabilityRouting: OPTIONAL<GraphicString>;
     /**
      * @summary `carrierSelectRouting`.
+     * @description
+     *
+     * This item holds information on carrier select routing, received by S-CSCF
+     * during ENUM/DNS processes. The parameter corresponds to the
+     * CarrierSelectRoutingInformation AVP.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.10.
+     *
      * @public
      * @readonly
      */
     readonly carrierSelectRouting: OPTIONAL<GraphicString>;
     /**
      * @summary `sessionPriority`.
+     * @description
+     *
+     * This field contains the priority level of the session. The value of the
+     * parameter is derived from Resource-Priority header field and the rules for
+     * the translation depend on operator policy described in TS 24.229[210].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.60.
+     *
      * @public
      * @readonly
      */
@@ -335,90 +662,239 @@ class MMTelRecord {
     readonly serviceRequestTimeStampFraction: OPTIONAL<INTEGER>;
     /**
      * @summary `serviceDeliveryStartTimeStampFraction`.
+     * @description
+     *
+     * This parameter contains the milliseconds fraction in relation to Service
+     * Delivery Start Time Stamp.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.55A.
+     *
      * @public
      * @readonly
      */
     readonly serviceDeliveryStartTimeStampFraction: OPTIONAL<INTEGER>;
     /**
      * @summary `serviceDeliveryEndTimeStampFraction`.
+     * @description
+     *
+     * This parameter contains the milliseconds fraction in relation to Service
+     * Delivery End Time Stamp.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.54A.
+     *
      * @public
      * @readonly
      */
     readonly serviceDeliveryEndTimeStampFraction: OPTIONAL<INTEGER>;
     /**
      * @summary `online_charging_flag`.
+     * @description
+     *
+     * This field indicates the Online Charging Request was sent based on the
+     * provided ECF address from the SIP P-header
+     * "P-Charging-Function-Addresses". The parameter corresponds to the
+     * Online-Charging-Flag AVP. NOTE: No proof that online charging action has
+     * been taken
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.34.
+     *
      * @public
      * @readonly
      */
     readonly online_charging_flag: OPTIONAL<NULL>;
     /**
      * @summary `realTimeTariffInformation`.
+     * @description
+     *
+     * This is a field containing the real time tariff information that may be
+     * exchanged in the SIP transaction, encoded in a XML body as described in
+     * the TS 29.658 [225]. The RTTI information may be captured in the charging
+     * information and it is operator configurable as whether it is used in its
+     * original XML format or mapped on a detailed structure of parameters. The
+     * RTTI information XML schema in XML format is given in the TS 29.658 [225].
+     * The Tariff Information structure of parameters is provided in the TS
+     * 32.280 [40]. The Real Time Tariff Information contains one of the
+     * following elements: Tariff XML; Tariff Information. These field elements
+     * are described in the appropriate subclause.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.37.
+     *
      * @public
      * @readonly
      */
     readonly realTimeTariffInformation: OPTIONAL<RealTimeTariffInformation[]>;
     /**
      * @summary `transit_IOI_Lists`.
+     * @description
+     *
+     * This parameter holds the Transit-IOI List of the P-Charging-Vector header,
+     * as recorded in the Transit-IOI-List AVP as defined in TS 32.299 [50].
+     * Multiple occurrences of this field, shall be in chronological order, i.e.
+     * the value in the SIP request is listed first. If only a value for the SIP
+     * response is available, the Transit IOI List for the SIP request shall be
+     * included with the value "unknown". For further information on the Transit
+     * IOI exchange via SIP signalling please refer to TS 24.229 [210].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.68B.
+     *
      * @public
      * @readonly
      */
     readonly transit_IOI_Lists: OPTIONAL<GraphicString[]>;
     /**
      * @summary `iMSVisitedNetworkIdentifier`.
+     * @description
+     *
+     * Holds the SIP P-header "P-Visited-Network-ID". with the value according to
+     * 3GPP TS 24.229 [210].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.20B.
+     *
      * @public
      * @readonly
      */
     readonly iMSVisitedNetworkIdentifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `listOfReasonHeader`.
+     * @description
+     *
+     * This parameter contains the content of the Reason-header in the SIP BYE
+     * and SIP CANCEL, and may contain multiple entries if there are multiple
+     * Reason-headers within a SIP BYE or SIP CANCEL
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.28A.
+     *
      * @public
      * @readonly
      */
     readonly listOfReasonHeader: OPTIONAL<GraphicString[]>;
     /**
      * @summary `additionalAccessNetworkInformation`.
+     * @description
+     *
+     * Holds the content of an additional SIP P-header "P-Access-Network-Info"
+     * when it is available. In SIP, as per RFC 7315 [404], the content of the
+     * "P-Access-Network-Info" header is known as the access-net-spec. When
+     * multiple access-net-spec values are transported in a single
+     * P-Access-Network-Info header in comma-separated format, then only one
+     * access-net-spec value is included.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.2A.
+     *
      * @public
      * @readonly
      */
     readonly additionalAccessNetworkInformation: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `instanceId`.
+     * @description
+     *
+     * An Instance Id is defined as a URN generated by the device that uniquely
+     * identifies a specific device amongst all other devices. The Instance Id is
+     * transported in the sip.instance feature tag in the Contact header of a SIP
+     * request associated with the served user.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.21Aa.
+     *
      * @public
      * @readonly
      */
     readonly instanceId: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `subscriberEquipmentNumber`.
+     * @description
+     *
+     * The Subscriber Equipment Number field contains the identification of the
+     * User Equipment (UE) accessing the 3GPP system.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.1.7.
+     *
      * @public
      * @readonly
      */
     readonly subscriberEquipmentNumber: OPTIONAL<SubscriberEquipmentNumber>;
     /**
      * @summary `cellularNetworkInformation`.
+     * @description
+     *
+     * Holds the content of one SIP header "Cellular-Network-Info". As per TS
+     * 24.299 [210], a User Agent (UA) supporting one or more cellular radio
+     * access technology (e.g. E-UTRAN) but using a non-cellular IP-CAN to access
+     * the IM CN subsystem can use this header field to relay information to its
+     * service provider about the radio cell identity of the cellular radio
+     * access network on which the UE most recently camped.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.11A.
+     *
      * @public
      * @readonly
      */
     readonly cellularNetworkInformation: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `requested_Party_Address`.
+     * @description
+     *
+     * This field holds the address of the party (Public User ID or Public
+     * Service ID) to whom the SIP transaction was originally posted. The
+     * Requested Party Address shall be populated with the SIP URI or Tel URI
+     * (according to RFC 3261 [401] and RFC 3966 [402] respectively) contained in
+     * the incoming Request-URI of the request. Requested Party Address could
+     * also be populated with an URN (according to RFC5031 [407]) for an
+     * emergency SIP session. This field is only present if different from the
+     * Called Party Address parameter.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.43.
+     *
      * @public
      * @readonly
      */
     readonly requested_Party_Address: OPTIONAL<InvolvedParty>;
     /**
      * @summary `list_Of_Called_Asserted_Identity`.
+     * @description
+     *
+     * This field holds the address or addresses (SIP URI and/or Tel URI
+     * according to RFC 3261 [401] and RFC 3966 [402] respectively) of the party
+     * (Public User ID or Public Service ID) of the finally asserted called
+     * party. These address/addresses are obtained from the P-Asserted-Identity
+     * SIP header field of the 2xx responses corresponding to a SIP request
+     * either initiating a dialog or a standalone transaction. This field shall
+     * be present when the P-Asserted-Identity SIP header field is available in
+     * the SIP 2xx response. In case no P-Asserted-Identity is known, this list
+     * shall include one item (of type SIP URI) with the value "unknown".
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.23.
+     *
      * @public
      * @readonly
      */
     readonly list_Of_Called_Asserted_Identity: OPTIONAL<InvolvedParty[]>;
     /**
      * @summary `outgoingSessionId`.
+     * @description
+     *
+     * For a SIP session the Session-ID contains the SIP CALL ID as defined in
+     * the Session Initiation Protocol RFC 3261 [401]. When the AS acts as B2BUA,
+     * the outgoing session is identified by the Outgoing Session ID which
+     * contains the SIP CALL ID.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.35A.
+     *
      * @public
      * @readonly
      */
     readonly outgoingSessionId: OPTIONAL<GraphicString>;
     /**
      * @summary `mMTelInformation`.
+     * @description
+     *
+     * Supplementary services that occurred in this AS. Operator
+     * conditional on the MMTel CDR. Several services handled by the
+     * same AS may be reported together. The service parameters are
+     * defined in TS 32.275 clause 6.3.1.2.
+     *
+     * 3GPP TS 32.275 V19.0.0 clauses 6.1.3.3 and 6.3.1.2.
+     *
      * @public
      * @readonly
      */

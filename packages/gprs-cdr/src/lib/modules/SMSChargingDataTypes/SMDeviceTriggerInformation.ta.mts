@@ -14,7 +14,19 @@ import { SMDTPriorityIndication, _decode_SMDTPriorityIndication, _encode_SMDTPri
 /**
  * @summary SMDeviceTriggerInformation
  * @description
- * 
+ *
+ * Information about a device trigger submitted to the SMS-SC. On an SC-DVT-T4
+ * CDR this is the submission itself. On an SC-SMT CDR it is the information
+ * related to that submission, and the table lists the reference number and the
+ * application port identifier (table 6.1.3.4.1).
+ *
+ * Table 6.1.3.5.1 also has an SM Old DT Reference Number, required when the
+ * trigger indicator is replace or recall. This sequence has only one
+ * reference-number component. TS 32.274 does not say which of the two
+ * information elements that component carries.
+ *
+ * 3GPP TS 32.274 V19.1.0 tables 6.1.3.5.1 and 6.3.1.2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,36 +45,83 @@ export
 class SMDeviceTriggerInformation {
     /**
      * @summary `mTCIWFAddress`.
+     * @description
+     *
+     * MTC-IWF that originated the device trigger (table 6.3.1.2.1). On
+     * SC-DVT-T4, the MTC-IWF from which the trigger was received. On SC-SMO-T4
+     * the MTC-IWF address used for the mobile-originated transfer is a
+     * separate field of `SCSMOT4Record`, not this one.
+     *
+     * 3GPP TS 32.274 V19.1.0 tables 6.1.3.5.1 and 6.3.1.2.1.
+     *
      * @public
      * @readonly
      */
     readonly mTCIWFAddress: OPTIONAL<NodeAddress>;
     /**
      * @summary `sMDTReferenceNumber`.
+     * @description
+     *
+     * Reference number of the device-trigger request, if available. Table
+     * 6.1.3.5.1 also defines an old reference number for the trigger being
+     * replaced or recalled, required when the indicator is replace or recall.
+     * This sequence has a single reference-number component, and TS 32.274
+     * does not say which information element it holds.
+     *
+     * 3GPP TS 32.274 V19.1.0 table 6.1.3.5.1.
+     *
      * @public
      * @readonly
      */
     readonly sMDTReferenceNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `sMServingNode`.
+     * @description
+     *
+     * SGSN, MME, or MSC serving the UE, as received from the MTC-IWF, if
+     * available.
+     *
+     * 3GPP TS 32.274 V19.1.0 table 6.3.1.2.1.
+     *
      * @public
      * @readonly
      */
     readonly sMServingNode: OPTIONAL<SMServingNode>;
     /**
      * @summary `sMDTValidityPeriod`.
+     * @description
+     *
+     * Validity period of the device-trigger request, if available. TS 32.274
+     * does not state the unit.
+     *
+     * 3GPP TS 32.274 V19.1.0 table 6.1.3.5.1.
+     *
      * @public
      * @readonly
      */
     readonly sMDTValidityPeriod: OPTIONAL<INTEGER>;
     /**
      * @summary `sMDTPriorityIndication`.
+     * @description
+     *
+     * Priority of the device-trigger request, if available.
+     *
+     * 3GPP TS 32.274 V19.1.0 table 6.1.3.5.1.
+     *
      * @public
      * @readonly
      */
     readonly sMDTPriorityIndication: OPTIONAL<SMDTPriorityIndication>;
     /**
      * @summary `sMSApplicationPortID`.
+     * @description
+     *
+     * Application port identifier of the triggering application, if available.
+     * The port identifier of a MSISDN-less mobile-originated message is the
+     * separate field on `SCSMOT4Record`.
+     *
+     * 3GPP TS 32.274 V19.1.0 tables 6.1.3.4.1 and 6.1.3.5.1.
+     *
      * @public
      * @readonly
      */

@@ -7,6 +7,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary MMSRecipientType
  * @description
  * 
+ * Role of one address on a multi-recipient MM: To (`tO`), Cc (`cC`), or
+ * Bcc (`bCC`). TS 32.270 does not define this indication.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +32,9 @@ enum _enum_for_MMSRecipientType {
  * @summary MMSRecipientType
  * @description
  * 
+ * Role of one address on a multi-recipient MM: To (`tO`), Cc (`cC`), or
+ * Bcc (`bCC`). TS 32.270 does not define this indication.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,6 +53,9 @@ type MMSRecipientType = _enum_for_MMSRecipientType;
  * @summary MMSRecipientType
  * @description
  * 
+ * Role of one address on a multi-recipient MM: To (`tO`), Cc (`cC`), or
+ * Bcc (`bCC`). TS 32.270 does not define this indication.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

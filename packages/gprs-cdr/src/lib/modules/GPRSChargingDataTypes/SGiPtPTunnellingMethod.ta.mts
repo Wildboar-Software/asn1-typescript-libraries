@@ -6,7 +6,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SGiPtPTunnellingMethod
  * @description
- * 
+ *
+ * This field indicates whether SGi PtP tunnelling method is based on UDP/IP
+ * or other methods for a non-IP PDN type PDN connection.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.68B.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,7 +31,12 @@ enum _enum_for_SGiPtPTunnellingMethod {
 /**
  * @summary SGiPtPTunnellingMethod
  * @description
- * 
+ *
+ * This field indicates whether SGi PtP tunnelling method is based on UDP/IP
+ * or other methods for a non-IP PDN type PDN connection.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.68B.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,7 +53,12 @@ type SGiPtPTunnellingMethod = _enum_for_SGiPtPTunnellingMethod;
 /**
  * @summary SGiPtPTunnellingMethod
  * @description
- * 
+ *
+ * This field indicates whether SGi PtP tunnelling method is based on UDP/IP
+ * or other methods for a non-IP PDN type PDN connection.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.68B.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

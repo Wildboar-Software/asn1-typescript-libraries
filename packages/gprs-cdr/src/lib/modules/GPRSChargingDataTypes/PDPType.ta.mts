@@ -11,7 +11,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary PDPType
  * @description
- * 
+ *
+ * This field defines the PDP type, e.g. IP, or PPP as per TS 29.060 [215].
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.41.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

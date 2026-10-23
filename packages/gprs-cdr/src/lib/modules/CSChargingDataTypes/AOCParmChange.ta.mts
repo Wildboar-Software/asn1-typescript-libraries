@@ -13,7 +13,14 @@ import { AOCParameters, _decode_AOCParameters, _encode_AOCParameters } from "../
 /**
  * @summary AOCParmChange
  * @description
- * 
+ *
+ * One change of AoC parameters during a call, for example at a tariff
+ * switch-over, with the time the new set was applied. The CDR list is
+ * present only when AoC parameters were sent. A change of AoC parameters can
+ * close a partial record (`aocParmChange`).
+ *
+ * 3GPP TS 32.250 V19.0.0 clauses 5.1.3.6 and 6.1.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -54,7 +61,7 @@ class AOCParmChange {
     /**
      * @summary Restructures an object into a AOCParmChange
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `AOCParmChange`.
      * 
      * @public
@@ -73,9 +80,9 @@ class AOCParmChange {
 /**
  * @summary The Leading Root Component Types of AOCParmChange
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -87,9 +94,9 @@ const _root_component_type_list_1_spec_for_AOCParmChange: $.ComponentSpec[] = [
 /**
  * @summary The Trailing Root Component Types of AOCParmChange
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -100,9 +107,9 @@ const _root_component_type_list_2_spec_for_AOCParmChange: $.ComponentSpec[] = [
 /**
  * @summary The Extension Addition Component Types of AOCParmChange
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * @constant
  */
 export

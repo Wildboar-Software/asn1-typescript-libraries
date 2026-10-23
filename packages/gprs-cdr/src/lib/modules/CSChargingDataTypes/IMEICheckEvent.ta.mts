@@ -9,7 +9,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary IMEICheckEvent
  * @description
- * 
+ *
+ * This field identifies the type of event that caused the IMEI check to take
+ * place: Mobile originating call attempt; Mobile terminating call attempt;
+ * Mobile originating SMS; Mobile terminating SMS; Supplementary service
+ * actions performed by the subscriber; Location update.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.33.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

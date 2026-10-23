@@ -20,7 +20,30 @@ import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExt
 /**
  * @summary MM7RRecord
  * @description
- * 
+ *
+ * MM7 Replace record (MM7R-CDR).
+ *
+ * If enabled, an MM7 Replace MM7R-CDR shall be produced in the MMS R/S if
+ * and when the MMS R/S has sent an MM7_replace.RES to the MMS VASP.
+ *
+ * Produced for a VASP transaction on MM7. Unless otherwise stated,
+ * parameters are copied from the corresponding MM7 message (clause
+ * 6.1.5.0). The VASP may supply service codes that are passed through to
+ * billing, and may indicate which party is expected to be charged (clause
+ * 5.1.4).
+ *
+ * MMS offline charging is event based. One chargeable event produces one
+ * CDR. From the 3GPP specifications that CDR is visible in the files the
+ * MMS R/S sends across Bm (clause 5.2.1).
+ *
+ * Field categories follow the charging data configuration in TS 32.240
+ * clause 5.4, which clause 6.1.0 applies to this table. M is always
+ * present. C is present when the conditions stated for that field are met.
+ * OM and OC are included only when the operator has provisioned them; OC
+ * also requires those conditions.
+ *
+ * 3GPP TS 32.270 V19.0.0 clause 6.1.5.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -50,96 +73,287 @@ export
 class MM7RRecord {
     /**
      * @summary `recordType`.
+     * @description
+     *
+     * The field identifies the type of the record, see TS 32.250 [10].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.42.
+     *
+     * Category M. MM7 Replace record.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.5.
+     *
      * @public
      * @readonly
      */
     readonly recordType: RecordType;
     /**
      * @summary `originatorMmsRSAddress`.
+     * @description
+     *
+     * Category M. IP address or domain name of the Recipient MMS R/S.
+     * The table names this parameter "Recipient MMS Relay/Server Address".
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.5.
+     *
      * @public
      * @readonly
      */
     readonly originatorMmsRSAddress: MMSRSAddress;
     /**
      * @summary `vaspID`.
+     * @description
+     *
+     * This field specifies the identification of the originating application as
+     * defined in TS 23.140 [206].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.62.
+     *
+     * Category M. Identifier of the VASP for this MMS R/S.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.5.
+     *
      * @public
      * @readonly
      */
     readonly vaspID: OCTET_STRING;
     /**
      * @summary `vasID`.
+     * @description
+     *
+     * This field specifies the identification of the VASP as defined in TS
+     * 23.140 [206].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.61.
+     *
+     * Category M. Identifier of the originating application.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.5.
+     *
      * @public
      * @readonly
      */
     readonly vasID: OCTET_STRING;
     /**
      * @summary `messageID`.
+     * @description
+     *
+     * This field specifies the MM Message ID of the MM as defined in TS 23.140
+     * [206]. The concrete syntax of this MM Message ID is given by the body of
+     * the field introduced by the string "X-Mms-Message-ID:" in the concrete
+     * syntax of the message MM4_Forward. REQ. All CDRs pertaining to the same MM
+     * shall employ the same value of this parameter, i.e. the value initially
+     * assigned by the originator MMS Relay/Server upon submission of the MM by
+     * the Originator MMS User Agent.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.20.
+     *
+     * Category M. The MM identification provided by the Originator MMS R/S.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.5.
+     *
      * @public
      * @readonly
      */
     readonly messageID: OCTET_STRING;
     /**
      * @summary `originatorAddress`.
+     * @description
+     *
+     * This field contains an originator MMS User Agent address. The MMS supports
+     * the use of E-Mail addresses (RFC 822 [400]) or MSISDN (E.164 [308]).
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.30.
+     *
+     * Category M. The address of the MM Originator.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.5.
+     *
      * @public
      * @readonly
      */
     readonly originatorAddress: MMSAgentAddress;
     /**
      * @summary `serviceCode`.
+     * @description
+     *
+     * This field contains charging information provided by the VASP to the MMS
+     * R/S for use by the billing system to properly bill the user for the
+     * service being supplied. The usage of the "service code" is, in the
+     * release, open to any usage envisioned by the operators, service providers
+     * or MMS Relay/Server vendors. In this release only the format, but not the
+     * content of the "service code" field is defined.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.53.
+     *
+     * Category OC. Charging related information that is used directly for
+     * billing purposes.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.5.
+     *
      * @public
      * @readonly
      */
     readonly serviceCode: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `contentType`.
+     * @description
+     *
+     * The Content Type of the MM as defined in TS 23.140 [206].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.7.
+     *
+     * Category M. The content type of the MM content.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.5.
+     *
      * @public
      * @readonly
      */
     readonly contentType: OCTET_STRING;
     /**
      * @summary `submissionTime`.
+     * @description
+     *
+     * The submission time field contains the time stamps relevant for the
+     * submission of the MM. The time-stamp includes a minimum of date, hour,
+     * minute and second.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.56.
+     *
+     * Category OC. The time at which the MM was submitted from the VASP if
+     * specified in the MM7_replace_REQ.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.5.
+     *
      * @public
      * @readonly
      */
     readonly submissionTime: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `timeOfExpiry`.
+     * @description
+     *
+     * This field contains the desired date or the number of seconds to expiry of
+     * the MM, if specified by the originator MMS User Agent.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.57.
+     *
+     * Category OC. The desired date of expiry or duration of time prior to
+     * expiry for the MM if specified by the VASP.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.5.
+     *
      * @public
      * @readonly
      */
     readonly timeOfExpiry: OPTIONAL<WaitTime>;
     /**
      * @summary `earliestTimeOfDelivery`.
+     * @description
+     *
+     * This field contains either the earliest time to deliver message or the
+     * number of seconds to wait before delivering the message.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.10.
+     *
+     * Category OC. This field contains either the earliest time to deliver the
+     * MM or the number of seconds to wait before delivering the MM if
+     * specified by the VASP.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.5.
+     *
      * @public
      * @readonly
      */
     readonly earliestTimeOfDelivery: OPTIONAL<WaitTime>;
     /**
      * @summary `requestStatusCode`.
+     * @description
+     *
+     * The status of the MM as reflected in the corresponding MM4 message (e.g.
+     * error service denied, error network problem, error unsupported message,
+     * etc.). For further details see TS 23.140 [206].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.48.
+     *
+     * Category OM. The status code of associated MM7_replace.REQ.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.5.
+     *
      * @public
      * @readonly
      */
     readonly requestStatusCode: OPTIONAL<RequestStatusCodeType>;
     /**
      * @summary `statusText`.
+     * @description
+     *
+     * This field includes a more detailed technical status of the message at the
+     * point in time when the CDR is generated.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.55.
+     *
+     * Category OC. This field includes the status text as received in the
+     * MM7_replace.RES corresponding to the Request Status Code. Present only
+     * if provided in the MM7_replace.RES.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.5.
+     *
      * @public
      * @readonly
      */
     readonly statusText: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `recordTimeStamp`.
+     * @description
+     *
+     * This field indicates the date and time when the CDR was produced.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.41.
+     *
+     * Category OM. Time of generation of the CDR.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.5.
+     *
      * @public
      * @readonly
      */
     readonly recordTimeStamp: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `localSequenceNumber`.
+     * @description
+     *
+     * This field includes a unique record number created by this node. The
+     * number is allocated sequentially including all CDR types. The number is
+     * unique within one node, which is identified either by field Node ID or by
+     * record-dependent MMS Relay/Server. The field can be used e.g. to identify
+     * missing records in post processing system.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.16.
+     *
+     * Category OM. Record number.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.5.
+     *
      * @public
      * @readonly
      */
     readonly localSequenceNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `recordExtensions`.
+     * @description
+     *
+     * The field enables network operators and/or manufacturers to add their own
+     * extensions to the standard record definitions.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.40.
+     *
+     * Category OC. A set of network/manufacturer specific extensions to the
+     * record.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.5.5.
+     *
      * @public
      * @readonly
      */

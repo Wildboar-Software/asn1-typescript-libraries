@@ -16,7 +16,32 @@ import { SDP_Type, _decode_SDP_Type, _encode_SDP_Type, _enum_for_SDP_Type } from
 /**
  * @summary Early_Media_Components_List
  * @description
- * 
+ *
+ * SDP for media set active before the final answer to the initial INVITE
+ * (clause 6.3.1.2). Do not include this field when no media was set active
+ * before that answer. It may appear on a session CDR or on an event CDR.
+ * Once a component is active, later status changes are recorded here too.
+ * The offer/answer rules of clause 5.1.3 still apply.
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 5.1.3.
+ *
+ * This is a grouped field which may occur several times in one CDR. This
+ * field describes session, media parameters and timestamps related to media
+ * components set to active according to SDP signalling exchanged during a
+ * SIP session establishment and before the final successful or unsuccessful
+ * SIP ANSWER to the initial SIP INVITE message is received. Once a media
+ * component has been set to active, subsequent status changes shall also be
+ * registered. This field applies only to SIP session related cases, but it
+ * may be present both in event CDRs (unsuccessful session establishment) and
+ * session CDRs (successful session establishment). The List of Early SDP
+ * Media Components contains the following elements: SDP Offer Timestamp; SDP
+ * Answer Timestamp; SDP Media Components; Media Initiator flag; SDP Session
+ * Description. These fields are described in the appropriate subclause.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.25.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,36 +62,69 @@ export
 class Early_Media_Components_List {
     /**
      * @summary `sDP_Offer_Timestamp`.
+     * @description
+     *
+     * This parameter contains the time of the SIP request which conveys the
+     * SDP offer.
+     *
      * @public
      * @readonly
      */
     readonly sDP_Offer_Timestamp: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `sDP_Answer_Timestamp`.
+     * @description
+     *
+     * This parameter contains the time of the response to the SIP request
+     * which conveys the SDP answer.
+     *
      * @public
      * @readonly
      */
     readonly sDP_Answer_Timestamp: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `sDP_Media_Components`.
+     * @description
+     *
+     * This is a grouped field comprising several sub-fields associated with
+     * one media component. Since several media components may exist for a
+     * session in parallel these sub-fields may occur several times..
+     *
      * @public
      * @readonly
      */
     readonly sDP_Media_Components: OPTIONAL<SDP_Media_Component[]>;
     /**
      * @summary `mediaInitiatorFlag`.
+     * @description
+     *
+     * This field indicates if the called party has requested the session
+     * modification and it is present only if the initiator was the called
+     * party.
+     *
      * @public
      * @readonly
      */
     readonly mediaInitiatorFlag: OPTIONAL<NULL>;
     /**
      * @summary `sDP_Session_Description`.
+     * @description
+     *
+     * Session-level SDP lines (i=, c=, b=, k=, a=, and similar) for media set
+     * active before the final answer to the initial INVITE (clause 6.3.1.2).
+     * Absent when no media was set active before that answer..
+     *
      * @public
      * @readonly
      */
     readonly sDP_Session_Description: OPTIONAL<GraphicString[]>;
     /**
      * @summary `sDP_Type`.
+     * @description
+     *
+     * This parameter indicates if the SDP media component is an SDP offer or
+     * SDP answer.
+     *
      * @public
      * @readonly
      */

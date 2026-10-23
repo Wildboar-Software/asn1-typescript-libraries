@@ -14,7 +14,20 @@ import { ISMSMTRecord, _decode_ISMSMTRecord, _encode_ISMSMTRecord } from "../SMS
 /**
  * @summary SMSRecordType
  * @description
- * 
+ *
+ * One SMS CDR, the record the CDF creates for a single Charging Data Request
+ * [event] (clause 6.1.3.2).
+ *
+ * - `sCSMORecord` (context tag 93): SC-SMO, SMS-SC originated.
+ * - `sCSMTRecord` (context tag 94): SC-SMT, SMS-SC terminated.
+ * - `sCDVTT4Record` (context tag 110): SC-DVT-T4, device trigger over T4.
+ * - `sCSMOT4Record` (context tag 111): SC-SMO-T4, MSISDN-less MO-SMS via T4.
+ *   The ASN.1 types this alternative as `SCSMTRecord`.
+ * - `iSMSMORecord` (context tag 112): ISM-SMO, IP-SM-GW originated.
+ * - `iSMSMTRecord` (context tag 113): ISM-SMT, IP-SM-GW terminated.
+ *
+ * 3GPP TS 32.274 V19.1.0 clause 6.1.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

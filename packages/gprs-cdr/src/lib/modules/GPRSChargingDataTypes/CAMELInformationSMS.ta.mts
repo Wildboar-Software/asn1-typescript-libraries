@@ -15,7 +15,40 @@ import { _decode_DefaultTransactionHandling, _encode_DefaultTransactionHandling,
 /**
  * @summary CAMELInformationSMS
  * @description
+ *
+ * This field includes following CAMEL information elements for PDP context
+ * (S-CDR), Attach/Detach session (M-CDR), Mobile originated SMS (S-SMO-CDR)
+ * and Mobile terminated SMS (S-SMT-CDR) if corresponding CAMEL service is
+ * activated. CAMEL Access Point Name NI (S-CDR): This field contains the
+ * network identifier part of APN before modification by the CSE. CAMEL
+ * Access Point Name OI (S-CDR): This field contains the operator identifier
+ * part of APN before modification by the CSE. CAMEL Calling Party Number
+ * (S-SMO-CDR, S-SMT-CDR): This field contains the Calling Party Number
+ * modified by the CAMEL service. CAMEL Destination Subscriber Number
+ * (S-SMO-CDR): This field contains the short message Destination Number
+ * modified by the CAMEL service. CAMEL SMSC Address (S-SMO-CDR): This field
+ * contains the SMSC address modified by the CAMEL service. SCF address
+ * (S-CDR, M-CDR, S-SMO-CDR, S-SMT-CDR): This field identifies the CAMEL
+ * server serving the subscriber. Address is defined in HLR as part of CAMEL
+ * subscription information. Service key (S-CDR, M-CDR, S-SMO-CDR,
+ * S-SMT-CDR): This field identifies the CAMEL service logic applied. Service
+ * key is defined in HLR as part of CAMEL subscription information. Default
+ * Transaction/SMS Handling (S-CDR, M-CDR, S-SMO-CDR, S-SMT-CDR): This field
+ * indicates whether or not a CAMEL encountered default GPRS- or
+ * SMS-handling. This field shall be present only if default call handling
+ * has been applied. Parameter is defined in HLR as part of CAMEL
+ * subscription information.
+ *
+ * PS-domain online charging in the SGSN may use CAMEL. That function is
+ * specified in TS 23.078 and TS 29.078 and is outside the scope of TS
+ * 32.251 (clause 5.3.1.0). The CDR still carries this information when the
+ * CAMEL service is activated.
  * 
+ *
+ * 3GPP TS 32.251 V19.0.0.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -54,12 +87,26 @@ class CAMELInformationSMS {
     readonly defaultSMSHandling: OPTIONAL<DefaultTransactionHandling>;
     /**
      * @summary `cAMELCallingPartyNumber`.
+     * @description
+     *
+     * CAMEL Calling Party Number (S-SMO-CDR, S-SMT-CDR): This field contains the
+     * Calling Party Number modified by the CAMEL service.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.4.
+     *
      * @public
      * @readonly
      */
     readonly cAMELCallingPartyNumber: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `cAMELDestinationSubscriberNumber`.
+     * @description
+     *
+     * CAMEL Destination Subscriber Number (S-SMO-CDR): This field contains the
+     * short message Destination Number modified by the CAMEL service.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.4.
+     *
      * @public
      * @readonly
      */

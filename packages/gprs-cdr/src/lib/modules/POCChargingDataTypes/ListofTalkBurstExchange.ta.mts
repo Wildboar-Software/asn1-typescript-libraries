@@ -14,7 +14,40 @@ import { _decode_ChangeCondition, _encode_ChangeCondition, _enum_for_ChangeCondi
 /**
  * @summary ListofTalkBurstExchange
  * @description
- * 
+ *
+ * One offline-charging container in the list of talk-burst
+ * exchanges. The list records each change of charging condition
+ * for the PoC session, and each change is time stamped.
+ * Conditions categorize charging, for example per tariff period
+ * or by the number of participants.
+ *
+ * For a participating PoC function the counts, volumes, and
+ * durations are what the charged party sent or received. For a
+ * controlling PoC function they cover the whole session.
+ *
+ * A talk burst is the media recorded, transported, and played
+ * from the moment the PoC Client may send until that permission
+ * is released. Sending and receiving may be charged as a count,
+ * a duration, or a volume, and those units are reported
+ * separately. When the count is used, only a TBCP Talk Burst
+ * Granted that the PoC Client received in answer to a Talk Burst
+ * Request is eligible. A granted message can be lost: timer T11
+ * then expires and the client requests again, so several granted
+ * messages may go out unsuccessfully and those are not charged.
+ * The PoC Server counts one talk burst when it receives the
+ * first RTP packet of that burst, or when it receives TBCP Talk
+ * Burst Release, whether or not the client sent RTP while it
+ * held the floor.
+ *
+ * Online, the same three measurements use the service-specific
+ * unit (count), the time unit (duration), and the volume unit.
+ * Unused reserved talk-burst units are released at PoC session
+ * termination or on an inactivity timer. This container itself
+ * is offline only.
+ *
+ * 3GPP TS 32.272 V19.0.0 clauses 3.1, 5.1.1, 5.3.1, and 6.3.1.2.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.3.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,54 +69,125 @@ export
 class ListofTalkBurstExchange {
     /**
      * @summary `number_Of_Talk_Bursts`.
+     * @description
+     *
+     * Number of talk bursts sent by the charged party, or, on a
+     * controlling PoC function CDR, sent in the whole session.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.3.3.
+     *
      * @public
      * @readonly
      */
     readonly number_Of_Talk_Bursts: OPTIONAL<INTEGER>;
     /**
      * @summary `talk_Burst_Volume`.
+     * @description
+     *
+     * Total data volume of talk bursts sent by the charged party,
+     * or, on a controlling PoC function CDR, sent in the whole
+     * session.
+     *
+     * 3GPP TS 32.272 V19.0.0 clause 6.3.1.2.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.3.3.
+     *
      * @public
      * @readonly
      */
     readonly talk_Burst_Volume: OPTIONAL<INTEGER>;
     /**
      * @summary `talk_Bursts_Time`.
+     * @description
+     *
+     * Total duration of talk bursts sent by the charged party,
+     * or, on a controlling PoC function CDR, sent in the whole
+     * session.
+     *
+     * 3GPP TS 32.272 V19.0.0 clause 6.3.1.2.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.3.3.
+     *
      * @public
      * @readonly
      */
     readonly talk_Bursts_Time: OPTIONAL<INTEGER>;
     /**
      * @summary `number_Of_Received_Talk_Bursts`.
+     * @description
+     *
+     * Number of talk bursts received by the charged party, or, on
+     * a controlling PoC function CDR, received in the whole
+     * session.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.3.3.
+     *
      * @public
      * @readonly
      */
     readonly number_Of_Received_Talk_Bursts: OPTIONAL<INTEGER>;
     /**
      * @summary `received_Talk_Burst_Volume`.
+     * @description
+     *
+     * Total data volume of talk bursts received by the charged
+     * party, or, on a controlling PoC function CDR, received in
+     * the whole session.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.3.3.
+     *
      * @public
      * @readonly
      */
     readonly received_Talk_Burst_Volume: OPTIONAL<INTEGER>;
     /**
      * @summary `received_Talk_Burst_Time`.
+     * @description
+     *
+     * Total duration of talk bursts received by the charged
+     * party, or, on a controlling PoC function CDR, received in
+     * the whole session.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.3.3.
+     *
      * @public
      * @readonly
      */
     readonly received_Talk_Burst_Time: OPTIONAL<INTEGER>;
     /**
      * @summary `changeCondition`.
+     * @description
+     *
+     * Why this container was closed and a new one added. See
+     * `ChangeCondition`.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.3.3.
+     *
      * @public
      * @readonly
      */
     readonly changeCondition: OPTIONAL<ChangeCondition>;
     /**
      * @summary `changeTime`.
+     * @description
+     *
+     * Time at which this container was closed, or at which the
+     * CDR was closed.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.3.3.
+     *
      * @public
      * @readonly
      */
     readonly changeTime: OCTET_STRING;
     /**
      * @summary `numberofParticipants`.
+     * @description
+     *
+     * Number of attached participants involved in the talk-burst
+     * exchange recorded in this container. This is not
+     * `POCInformation.numberofParticipants`.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.3.3.
+     *
      * @public
      * @readonly
      */

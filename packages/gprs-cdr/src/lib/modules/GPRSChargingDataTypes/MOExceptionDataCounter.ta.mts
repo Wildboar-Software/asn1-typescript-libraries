@@ -15,6 +15,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary MOExceptionDataCounter
  * @description
  * 
+ * MO exception data counter value, with the time at which the counter
+ * increased from 0 to 1, as defined in TS 29.274 (tables 6.1.2.1 and
+ * 6.1.3.1). Receipt of the counter closes the SGW-CDR or PGW-CDR. A new
+ * CDR is opened if the IP-CAN bearer is still active (clauses 5.2.1.1 and
+ * 5.2.3.3.2).
+ * 
+ * 3GPP TS 32.251 V19.0.0.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

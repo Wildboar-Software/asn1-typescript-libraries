@@ -6,7 +6,22 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ParticipatingType
  * @description
- * 
+ *
+ * How the user takes part in the PoC session: normal, network
+ * PoC Box, or UE PoC Box. Traffic-based charging distinguishes
+ * the three.
+ *
+ * Online, inviting a PoC Box during the session is a change of
+ * participating type. The OCS may arm
+ * `CHANGE_IN_USER_PARTICIPATING_TYPE`; the PoC Server then sends
+ * Reserve Units Request [update] with the new rating group.
+ *
+ * TS 32.272 does not define how a network PoC Box differs from a
+ * UE PoC Box. It refers to OMA-AD-POC.
+ *
+ * 3GPP TS 32.272 V19.0.0 clauses 5.1.1, 5.3.2.6, and 6.3.1.2.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.3.14.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,7 +43,22 @@ enum _enum_for_ParticipatingType {
 /**
  * @summary ParticipatingType
  * @description
- * 
+ *
+ * How the user takes part in the PoC session: normal, network
+ * PoC Box, or UE PoC Box. Traffic-based charging distinguishes
+ * the three.
+ *
+ * Online, inviting a PoC Box during the session is a change of
+ * participating type. The OCS may arm
+ * `CHANGE_IN_USER_PARTICIPATING_TYPE`; the PoC Server then sends
+ * Reserve Units Request [update] with the new rating group.
+ *
+ * TS 32.272 does not define how a network PoC Box differs from a
+ * UE PoC Box. It refers to OMA-AD-POC.
+ *
+ * 3GPP TS 32.272 V19.0.0 clauses 5.1.1, 5.3.2.6, and 6.3.1.2.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.3.14.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -46,7 +76,22 @@ type ParticipatingType = _enum_for_ParticipatingType;
 /**
  * @summary ParticipatingType
  * @description
- * 
+ *
+ * How the user takes part in the PoC session: normal, network
+ * PoC Box, or UE PoC Box. Traffic-based charging distinguishes
+ * the three.
+ *
+ * Online, inviting a PoC Box during the session is a change of
+ * participating type. The OCS may arm
+ * `CHANGE_IN_USER_PARTICIPATING_TYPE`; the PoC Server then sends
+ * Reserve Units Request [update] with the new rating group.
+ *
+ * TS 32.272 does not define how a network PoC Box differs from a
+ * UE PoC Box. It refers to OMA-AD-POC.
+ *
+ * 3GPP TS 32.272 V19.0.0 clauses 5.1.1, 5.3.2.6, and 6.3.1.2.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.3.14.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

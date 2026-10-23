@@ -6,7 +6,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SCSMOT4Record_externalIdentifier_subscriptionIDType
  * @description
- * 
+ *
+ * Kind of external identifier on an SC-SMO-T4 CDR. TS 32.274 does not define
+ * these codes. The names match Subscription-Id-Type in IETF RFC 4006, which TS
+ * 32.274 cites for the refund procedure and does not cite for this field.
+ *
+ * 3GPP TS 32.274 V19.1.0 table 6.1.3.6.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,7 +39,13 @@ enum _enum_for_SCSMOT4Record_externalIdentifier_subscriptionIDType {
 /**
  * @summary SCSMOT4Record_externalIdentifier_subscriptionIDType
  * @description
- * 
+ *
+ * Kind of external identifier on an SC-SMO-T4 CDR. TS 32.274 does not define
+ * these codes. The names match Subscription-Id-Type in IETF RFC 4006, which TS
+ * 32.274 cites for the refund procedure and does not cite for this field.
+ *
+ * 3GPP TS 32.274 V19.1.0 table 6.1.3.6.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -54,7 +66,13 @@ type SCSMOT4Record_externalIdentifier_subscriptionIDType = _enum_for_SCSMOT4Reco
 /**
  * @summary SCSMOT4Record_externalIdentifier_subscriptionIDType
  * @description
- * 
+ *
+ * Kind of external identifier on an SC-SMO-T4 CDR. TS 32.274 does not define
+ * these codes. The names match Subscription-Id-Type in IETF RFC 4006, which TS
+ * 32.274 cites for the refund procedure and does not cite for this field.
+ *
+ * 3GPP TS 32.274 V19.1.0 table 6.1.3.6.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -74,6 +92,11 @@ const SCSMOT4Record_externalIdentifier_subscriptionIDType = _enum_for_SCSMOT4Rec
 
 /**
  * @summary SCSMOT4Record_externalIdentifier_subscriptionIDType_eND_USER_E164
+ * @description
+ *
+ * End-user E.164. TS 32.274 does not define this code. The name matches
+ * Subscription-Id-Type in IETF RFC 4006.
+ *
  * @constant
  * @type {number}
  */
@@ -90,6 +113,11 @@ const eND_USER_E164: SCSMOT4Record_externalIdentifier_subscriptionIDType = SCSMO
 
 /**
  * @summary SCSMOT4Record_externalIdentifier_subscriptionIDType_eND_USER_IMSI
+ * @description
+ *
+ * End-user IMSI. TS 32.274 does not define this code. The name matches
+ * Subscription-Id-Type in IETF RFC 4006.
+ *
  * @constant
  * @type {number}
  */
@@ -106,6 +134,11 @@ const eND_USER_IMSI: SCSMOT4Record_externalIdentifier_subscriptionIDType = SCSMO
 
 /**
  * @summary SCSMOT4Record_externalIdentifier_subscriptionIDType_eND_USER_SIP_URI
+ * @description
+ *
+ * End-user SIP URI. TS 32.274 does not define this code. The name matches
+ * Subscription-Id-Type in IETF RFC 4006.
+ *
  * @constant
  * @type {number}
  */
@@ -122,6 +155,11 @@ const eND_USER_SIP_URI: SCSMOT4Record_externalIdentifier_subscriptionIDType = SC
 
 /**
  * @summary SCSMOT4Record_externalIdentifier_subscriptionIDType_eND_USER_NAI
+ * @description
+ *
+ * End-user NAI. TS 32.274 does not define this code. The name matches
+ * Subscription-Id-Type in IETF RFC 4006.
+ *
  * @constant
  * @type {number}
  */
@@ -138,6 +176,11 @@ const eND_USER_NAI: SCSMOT4Record_externalIdentifier_subscriptionIDType = SCSMOT
 
 /**
  * @summary SCSMOT4Record_externalIdentifier_subscriptionIDType_eND_USER_PRIVATE
+ * @description
+ *
+ * End-user private identifier. TS 32.274 does not define this code. The name
+ * matches Subscription-Id-Type in IETF RFC 4006.
+ *
  * @constant
  * @type {number}
  */

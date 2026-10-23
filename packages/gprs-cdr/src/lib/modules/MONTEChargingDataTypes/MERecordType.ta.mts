@@ -11,7 +11,14 @@ import { MERERecord, _decode_MERERecord, _encode_MERERecord } from "../MONTEChar
 /**
  * @summary MERecordType
  * @description
- * 
+ *
+ * Choice of Monitoring Event CDR. `mECORecord`, context tag 103,
+ * is the configuration-request CDR. `mERERecord`, context tag
+ * 104, is the report CDR. Those tags are the `RecordType` values
+ * `RecordType_mECORecord` and `RecordType_mERERecord`.
+ *
+ * 3GPP TS 32.278 V19.0.0 clauses 6.1.3.1, 6.1.3.2 and 6.1.3.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

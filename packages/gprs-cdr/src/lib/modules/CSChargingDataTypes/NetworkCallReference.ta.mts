@@ -11,7 +11,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary NetworkCallReference
  * @description
- * 
+ *
+ * Whenever CAMEL is applied, this field is used for correlation of call
+ * records outputted from the originating MSC (when applicable), the GMSC and
+ * the terminating MSC, and a network optional call record from the gsmSCF.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.59.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

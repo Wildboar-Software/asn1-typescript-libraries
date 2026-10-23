@@ -12,7 +12,23 @@ import { ReachabilityType, _decode_ReachabilityType, _encode_ReachabilityType, _
 /**
  * @summary ReachabilityConfiguration
  * @description
- * 
+ *
+ * UE-reachability configuration on an ME-CO-CDR. Category Oc.
+ * It includes reachability type, maximum latency, and maximum
+ * response time, and applies only to UE reachability. Sent on
+ * Rf for configuration only. Bound to
+ * UE-Reachability-Configuration.
+ *
+ * Clause 5.1 also requires the MECN to collect, when applicable
+ * to the event, the maximum delay acceptable for downlink data,
+ * the time the UE stays reachable so the SCS/AS can deliver
+ * that data, and how many packets the serving gateway buffers
+ * while the UE is not reachable. This sequence has no component
+ * for that packet count. TS 32.278 does not say which integer
+ * is the delay and which is the reachable time.
+ *
+ * 3GPP TS 32.278 V19.0.0 clauses 5.1, 6.1.3.2, 6.3.3 and 6.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,18 +44,40 @@ export
 class ReachabilityConfiguration {
     /**
      * @summary `reachabilityType`.
+     * @description
+     *
+     * Reachability type, for example SMS or data.
+     *
+     * 3GPP TS 32.278 V19.0.0 clauses 5.1 and 6.1.3.2.
+     *
      * @public
      * @readonly
      */
     readonly reachabilityType: OPTIONAL<ReachabilityType>;
     /**
      * @summary `maximumLatency`.
+     * @description
+     *
+     * Named by TS 32.278 as part of the UE-reachability
+     * configuration. The specification does not define this
+     * integer.
+     *
+     * 3GPP TS 32.278 V19.0.0 clause 6.1.3.2.
+     *
      * @public
      * @readonly
      */
     readonly maximumLatency: OPTIONAL<INTEGER>;
     /**
      * @summary `maximumResponseTime`.
+     * @description
+     *
+     * Named by TS 32.278 as part of the UE-reachability
+     * configuration. The specification does not define this
+     * integer.
+     *
+     * 3GPP TS 32.278 V19.0.0 clause 6.1.3.2.
+     *
      * @public
      * @readonly
      */

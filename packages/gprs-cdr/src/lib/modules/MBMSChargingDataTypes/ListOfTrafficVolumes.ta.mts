@@ -15,7 +15,26 @@ import { ChangeCondition, _decode_ChangeCondition, _encode_ChangeCondition, _enu
 /**
  * @summary ListOfTrafficVolumes
  * @description
- * 
+ *
+ * One entry in the list of traffic data volumes on an S-BMSC-CDR or
+ * a C-BMSC-CDR. Each entry is a time-stamped change of charging
+ * conditions, such as a tariff period, and carries the QoS and the
+ * data volume that apply to that change.
+ *
+ * MBMS charging counts downlink volume only. The list shall not
+ * count uplink volume.
+ *
+ * On an S-BMSC-CDR, a container is added on tariff time change, and
+ * may be added on MBMS Session Start, MBMS Session Stop, or MBMS UE
+ * context modification. Every active container is added when the
+ * CDR closes. The start time of a new container is the later of the
+ * first Session Start Response, MBMS UE context activation, and
+ * closure of the last partial CDR. On a C-BMSC-CDR, containers are
+ * added on tariff time change and when the CDR closes.
+ *
+ * 3GPP TS 32.273 V19.0.0 clauses 5.2.3.1.2 and 5.2.3.2.2, and
+ * tables 6.1.3.1.1 and 6.1.3.2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,42 +54,111 @@ export
 class ListOfTrafficVolumes {
     /**
      * @summary `qosRequested`.
+     * @description
+     *
+     * QoS requested for this container. The CDR tables include the
+     * initial QoS and later QoS in the volume list and do not define
+     * this component separately. The detailed syntax is in
+     * TS 32.298.
+     *
+     * 3GPP TS 32.273 V19.0.0 tables 6.1.3.1.1 and 6.1.3.2.1, and
+     * clause 6.3.2.1.
+     *
      * @public
      * @readonly
      */
     readonly qosRequested: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `qosNegotiated`.
+     * @description
+     *
+     * QoS negotiated for this container. The CDR tables include the
+     * initial QoS and later QoS in the volume list and do not define
+     * this component separately. The detailed syntax is in
+     * TS 32.298.
+     *
+     * 3GPP TS 32.273 V19.0.0 tables 6.1.3.1.1 and 6.1.3.2.1, and
+     * clause 6.3.2.1.
+     *
      * @public
      * @readonly
      */
     readonly qosNegotiated: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `dataVolumeMBMSUplink`.
+     * @description
+     *
+     * Uplink volume for this container. MBMS charging counts
+     * downlink volume. The list of traffic data volumes shall not
+     * count uplink volume.
+     *
+     * 3GPP TS 32.273 V19.0.0 clauses 5.2.3.1.2 and 5.2.3.2.2, and
+     * tables 6.1.3.1.1 and 6.1.3.2.1.
+     *
      * @public
      * @readonly
      */
     readonly dataVolumeMBMSUplink: OPTIONAL<INTEGER>;
     /**
      * @summary `dataVolumeMBMSDownlink`.
+     * @description
+     *
+     * Downlink volume for this container. Volume for the MBMS bearer
+     * context is counted in the downlink direction.
+     *
+     * 3GPP TS 32.273 V19.0.0 clauses 5.2.3.1.1 and 5.2.3.2.1.
+     *
      * @public
      * @readonly
      */
     readonly dataVolumeMBMSDownlink: INTEGER;
     /**
      * @summary `changeCondition`.
+     * @description
+     *
+     * Reason this volume container was closed. TS 32.273 does not
+     * define the enumerated values; the detailed CDR syntax is in
+     * TS 32.298.
+     *
+     * On an S-BMSC-CDR, a container is added on tariff time change,
+     * and may be added on MBMS Session Start, MBMS Session Stop, or
+     * MBMS UE context modification. Every active container is added
+     * when the CDR closes. On a C-BMSC-CDR, containers are added on
+     * tariff time change and when the CDR closes.
+     *
+     * 3GPP TS 32.273 V19.0.0 clauses 5.2.3.1.2, 5.2.3.2.2, and
+     * 6.3.2.1.
+     *
      * @public
      * @readonly
      */
     readonly changeCondition: ChangeCondition;
     /**
      * @summary `changeTime`.
+     * @description
+     *
+     * Time stamp of this charging-condition change. On an S-BMSC-CDR,
+     * the start time of the new container is the later of the first
+     * Session Start Response, MBMS UE context activation, and closure
+     * of the last partial CDR. TS 32.273 states no separate rule for
+     * the C-BMSC-CDR.
+     *
+     * 3GPP TS 32.273 V19.0.0 clause 5.2.3.1.2 and tables 6.1.3.1.1
+     * and 6.1.3.2.1.
+     *
      * @public
      * @readonly
      */
     readonly changeTime: OCTET_STRING;
     /**
      * @summary `failureHandlingContinue`.
+     * @description
+     *
+     * TS 32.273 does not describe this component. The detailed MBMS
+     * CDR syntax is specified in TS 32.298.
+     *
+     * 3GPP TS 32.273 V19.0.0 clause 6.3.2.1.
+     *
      * @public
      * @readonly
      */

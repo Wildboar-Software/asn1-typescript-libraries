@@ -11,7 +11,15 @@ import { SubscriptionIDType, _decode_SubscriptionIDType, _encode_SubscriptionIDT
 /**
  * @summary SubscriptionID
  * @description
- * 
+ *
+ * This field identifies the charged party. The contents are coded in a
+ * similar fashion as for the Subscription-Id AVP in TS 32.299 [50] if
+ * applicable. This field may hold the 5G Subscription Permanent Identifier
+ * (SUPI) of the served party (e.g., IMSI, NAI, GLI, GCI) as specified in TS
+ * 29.571 [249], if applicable.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.1.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

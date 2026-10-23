@@ -12,7 +12,14 @@ import { EPSLocationInfo, _decode_EPSLocationInfo, _encode_EPSLocationInfo } fro
 /**
  * @summary NumberOfUEPerLocationReport
  * @description
- * 
+ *
+ * One location and the number of UEs the MME or SGSN found
+ * there. Category Oc. Applicable to the number of UEs at a
+ * given geographic location. Repeated for each reported
+ * location. Bound to Number-Of-UE-Per-Location-Report.
+ *
+ * 3GPP TS 32.278 V19.0.0 clauses 6.1.3.3, 6.3.1.2 and 6.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +34,27 @@ export
 class NumberOfUEPerLocationReport {
     /**
      * @summary `ePSLocationInformation`.
+     * @description
+     *
+     * The location at which the UEs were counted. TS 32.278
+     * describes these locations as cells, eNodeBs, and/or RAIs
+     * or TAIs.
+     *
+     * 3GPP TS 32.278 V19.0.0 clauses 5.1 and 6.3.1.2.
+     *
      * @public
      * @readonly
      */
     readonly ePSLocationInformation: OPTIONAL<EPSLocationInfo>;
     /**
      * @summary `uECount`.
+     * @description
+     *
+     * Number of UEs the MME or SGSN found at
+     * `ePSLocationInformation`.
+     *
+     * 3GPP TS 32.278 V19.0.0 clause 6.3.1.2.
+     *
      * @public
      * @readonly
      */

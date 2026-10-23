@@ -10,7 +10,17 @@ import { MMTelRecord, _decode_MMTelRecord, _encode_MMTelRecord } from "../MMTelC
 /**
  * @summary MMTelServiceRecord
  * @description
- * 
+ *
+ * This subclause contains the description of each of the CDR fields needed
+ * to support the charging of MMTel services as specified in TS 32.275 [35].
+ *
+ * The only alternative is the MMTel AS CDR: the IMS AS CDR of
+ * TS 32.260 extended with the supplementary services executed in
+ * the MMTel AS.
+ *
+ * 3GPP TS 32.275 V19.0.0 clause 6.1.3.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.5.0.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

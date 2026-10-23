@@ -24,7 +24,33 @@ import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExt
 /**
  * @summary MMBx1VRecord
  * @description
- * 
+ *
+ * MMBox MM1 View record (Bx1V-CDR).
+ *
+ * If enabled, an MMBox MM1 View Bx1V-CDR shall be produced in the MMS R/S
+ * if and when the MMS R/S has sent an MM1_mmbox_view.RES to the MMS User
+ * Agent.
+ *
+ * Table 5.2.3.3.1 associates trigger M3 with this record. The MMBox
+ * chargeable events are triggered by the MMS R/S response, not by receipt
+ * of the request (clause 5.1.3).
+ *
+ * Produced for MMBox management. The MMBox is the persistent network-based
+ * store of MMs, an extension of MM1 that lets a User Agent store,
+ * retrieve, and delete incoming and submitted MMs (clause 5.1.3).
+ *
+ * MMS offline charging is event based. One chargeable event produces one
+ * CDR. From the 3GPP specifications that CDR is visible in the files the
+ * MMS R/S sends across Bm (clause 5.2.1).
+ *
+ * Field categories follow the charging data configuration in TS 32.240
+ * clause 5.4, which clause 6.1.0 applies to this table. M is always
+ * present. C is present when the conditions stated for that field are met.
+ * OM and OC are included only when the operator has provisioned them; OC
+ * also requires those conditions.
+ *
+ * 3GPP TS 32.270 V19.0.0 clause 6.1.4.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -59,126 +85,377 @@ export
 class MMBx1VRecord {
     /**
      * @summary `recordType`.
+     * @description
+     *
+     * The field identifies the type of the record, see TS 32.250 [10].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.42.
+     *
+     * Category M. MMBox MM1 View record.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.4.2.
+     *
      * @public
      * @readonly
      */
     readonly recordType: RecordType;
     /**
      * @summary `mmsRelayAddress`.
+     * @description
+     *
+     * Category M. An address of the MMS R/S.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.4.2.
+     *
      * @public
      * @readonly
      */
     readonly mmsRelayAddress: IPAddress;
     /**
      * @summary `managingAddress`.
+     * @description
+     *
+     * This field contains the managing MMS User Agent address i.e. the MMS User
+     * Agent that sends and receives transactions related to the MMBox
+     * management. The MMS supports the use of E-Mail addresses (RFC 822) [400],
+     * MSISDN (E.164[308]) or IP address.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.17.
+     *
+     * Category M. The address of the managing MMS User Agent (i.e., of the MMS
+     * User Agent that has sent the MM1_mmbox_view.REQ).
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.4.2.
+     *
      * @public
      * @readonly
      */
     readonly managingAddress: MMSAgentAddress;
     /**
      * @summary `accessCorrelation`.
+     * @description
+     *
+     * If the parameter is provided and is not an empty string, it is a unique
+     * identifier delivered by the used access network domain of the originator
+     * or recipient MMS User Agent. It may be used for correlation of the MMS
+     * CDRs with the corresponding MSC server CDRs in CS domain or GSN CDRs in PS
+     * domain. It is an empty string if the parameter is not delivered by the
+     * access network.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.2.
+     *
+     * Category OM. A unique identifier delivered by the used access network
+     * domain of the originator MMS User Agent.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.4.2.
+     *
      * @public
      * @readonly
      */
     readonly accessCorrelation: OPTIONAL<AccessCorrelation>;
     /**
      * @summary `attributesList`.
+     * @description
+     *
+     * This field contains a list of information element names that are used in
+     * the MM1_mmbox_view. REQ, which request corresponding information elements
+     * from the MMs to be conveyed in the MM1_mmbox_view. RES. The list of known
+     * information element names are those currently defined for the
+     * MM1_retrieve. RES and MM1_notification. REQ. In the absence of the
+     * Attributes list information element, the MMS Relay/Server shall, by
+     * default and if available, select these information elements from each
+     * viewed MM: Message ID, Date and time, Sender address, Subject, Message
+     * size, MM State, and MM Flags.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.4.
+     *
+     * Category OM. A list of information elements that are to be returned as a
+     * group for each MM to be listed in the MM1_mmbox_view.RES. If absent, the
+     * default list (i.e. Message ID, Date and time, Sender address, Subject,
+     * Message size, MM State, and MM Flags) shall apply.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.4.2.
+     *
      * @public
      * @readonly
      */
     readonly attributesList: OPTIONAL<AttributesList>;
     /**
      * @summary `messageSelection`.
+     * @description
+     *
+     * Messages which are to be viewed may be selected by a list of Message
+     * References or by a selection based on MM State and/or MM Flags keywords.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.22.
+     *
+     * Category OM. A list of MM State or MM Flags keywords (e.g. new or draft)
+     * or a list of Message Reference by which MMs within the MMBox can be
+     * selected. If both are absent, a listing of all MMs currently stored
+     * within the MMBox shall be selected.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.4.2.
+     *
      * @public
      * @readonly
      */
     readonly messageSelection: OPTIONAL<INTEGER>;
     /**
      * @summary `start`.
+     * @description
+     *
+     * This field contains a number that may be used in the MM1_mmbox_view. REQ
+     * to index the first MM to be viewed, relative to the selected set of MMs,
+     * allowing partial views to be requested.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.54.
+     *
+     * Category OM. A number, indicating the index of the first MM of those
+     * selected to have information elements returned in the response. If this
+     * is absent, the first item selected is returned.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.4.2.
+     *
      * @public
      * @readonly
      */
     readonly start: OPTIONAL<INTEGER>;
     /**
      * @summary `limit`.
+     * @description
+     *
+     * This field contains a number that may be provided in the MM1_mmbox_view.
+     * REQ to specify a limit for the number of MMs the information elements to
+     * which shall be returned in the MM1_mmbox_view. RES.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.14.
+     *
+     * Category OM. A number indicating the maximum number of selected MMs to
+     * their information elements returned in the response. If this is absent,
+     * information elements from all remaining MMs are returned.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.4.2.
+     *
      * @public
      * @readonly
      */
     readonly limit: OPTIONAL<INTEGER>;
     /**
      * @summary `totalsRequested`.
+     * @description
+     *
+     * This is an indication that the Managing User Agent has requested the
+     * current total number of messages and/or size contained by the MMBox.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.59.
+     *
+     * Category OM. This field indicates whether the current total number of
+     * messages and/or size contained by the MMBox has been requested by the
+     * managing MMS User Agent.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.4.2.
+     *
      * @public
      * @readonly
      */
     readonly totalsRequested: OPTIONAL<BOOLEAN>;
     /**
      * @summary `quotasRequested`.
+     * @description
+     *
+     * This is an indication that the Managing User Agent has requested the
+     * current message and/or size quotas.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.34.
+     *
+     * Category OM. This field indicates whether the current message and/or
+     * size quotas (i.e. the maximum number of messages allowed and/or the
+     * maximum size allowed) has been requested by the managing MMS User Agent.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.4.2.
+     *
      * @public
      * @readonly
      */
     readonly quotasRequested: OPTIONAL<BOOLEAN>;
     /**
      * @summary `mmListing`.
+     * @description
+     *
+     * This field contains a list of information elements from the MMs returned
+     * within the MM1_mmbox_view. RES. The listing shall consist of the following
+     * information elements, separately grouped for each MM returned in the list:
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.27.
+     *
+     * Category OM. The requested listing of the selected MMs, which shall be
+     * one or more groups of information elements, one for each MM listed. Each
+     * MM group shall include: a Message Reference, and may include additional
+     * information elements as well. If absent, no MMs were found or selected.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.4.2.
+     *
      * @public
      * @readonly
      */
     readonly mmListing: OPTIONAL<AttributesList>;
     /**
      * @summary `requestStatusCode`.
+     * @description
+     *
+     * The status of the MM as reflected in the corresponding MM4 message (e.g.
+     * error service denied, error network problem, error unsupported message,
+     * etc.). For further details see TS 23.140 [206].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.48.
+     *
+     * Category OM. The status code of the request to view the MM as received
+     * in the MM1_view.RES.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.4.2.
+     *
      * @public
      * @readonly
      */
     readonly requestStatusCode: OPTIONAL<RequestStatusCodeType>;
     /**
      * @summary `statusText`.
+     * @description
+     *
+     * This field includes a more detailed technical status of the message at the
+     * point in time when the CDR is generated.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.55.
+     *
+     * Category OC. This field includes the status text as received in the
+     * MM1_view.RES corresponding to the Request Status Code. Present only if
+     * provided in the MM1_view.RES.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.4.2.
+     *
      * @public
      * @readonly
      */
     readonly statusText: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `totals`.
+     * @description
+     *
+     * The total number of messages and/or octets for the MMBox, identified with
+     * Messages or Octets.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.58.
+     *
+     * Category OC. The total number of messages and/or octets for the MMBox,
+     * identified with Messages or Octets, respectively, depending upon the
+     * presence of Totals in the request.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.4.2.
+     *
      * @public
      * @readonly
      */
     readonly totals: OPTIONAL<Totals>;
     /**
      * @summary `quotas`.
+     * @description
+     *
+     * The quotas of the MMBox in messages and/or octets identified with Messages
+     * or Octets.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.33.
+     *
+     * Category OC. The quotas of the MMBox in messages and/or octets
+     * identified with Messages or Octets, respectively, depending upon the
+     * presence of Quotas in the request.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.4.2.
+     *
      * @public
      * @readonly
      */
     readonly quotas: OPTIONAL<Quotas>;
     /**
      * @summary `sequenceNumber`.
+     * @description
+     *
+     * Category OM. Record number.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.4.2.
+     *
      * @public
      * @readonly
      */
     readonly sequenceNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `timeStamp`.
+     * @description
+     *
+     * Category OM. Time of generation of the CDR.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.4.2.
+     *
      * @public
      * @readonly
      */
     readonly timeStamp: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `recordExtensions`.
+     * @description
+     *
+     * The field enables network operators and/or manufacturers to add their own
+     * extensions to the standard record definitions.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.40.
+     *
+     * Category OC. A set of network/manufacturer specific extensions to the
+     * record.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.4.2.
+     *
      * @public
      * @readonly
      */
     readonly recordExtensions: OPTIONAL<ManagementExtension[]>;
     /**
      * @summary `sGSNPLMNIdentifier`.
+     * @description
+     *
+     * Category OC. If present this parameter holds the SGSN PLMN Identifier
+     * (MCC and MNC) used during this record.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.4.2.
+     *
      * @public
      * @readonly
      */
     readonly sGSNPLMNIdentifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `rATType`.
+     * @description
+     *
+     * Category OC. The radio access technology used during this record.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.4.2.
+     *
      * @public
      * @readonly
      */
     readonly rATType: OPTIONAL<INTEGER>;
     /**
      * @summary `mSTimeZone`.
+     * @description
+     *
+     * This field contains the 'Time Zone' IE provided for the MMS User Agent as
+     * specified in TS 29.060 [215].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.28A.
+     *
+     * Category OC. This field contains the MS Time Zone the MMS User Agent is
+     * currently located, if available.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.4.2.
+     *
      * @public
      * @readonly
      */

@@ -15,6 +15,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EventBasedChargingInformation
  * @description
  * 
+ * Event counts and their time stamps for a service data flow or detected
+ * application, categorised by rating group or by rating group and service
+ * id (clause 5.1.2). The first event that matches the service data flow
+ * template or ADC rule starts the count, and each later event increments
+ * it and is time stamped (clauses 5.2.1.3 and 5.2.1.9).
+ * 
+ * 3GPP TS 32.251 V19.0.0.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,6 +44,14 @@ class EventBasedChargingInformation {
     readonly numberOfEvents: INTEGER;
     /**
      * @summary `eventTimeStamps`.
+     * @description
+     *
+     * These fields contain the event time stamps relevant for each of the
+     * individual record types. All time-stamps include a minimum of date, hour,
+     * minute and second.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.14.
+     *
      * @public
      * @readonly
      */

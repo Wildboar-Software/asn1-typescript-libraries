@@ -6,7 +6,16 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary TADIdentifier
  * @description
- * 
+ *
+ * This field indicates the type of access network (CS or PS) through which
+ * the session shall be terminated.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.66B.
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 6.3.1.2.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,7 +35,16 @@ enum _enum_for_TADIdentifier {
 /**
  * @summary TADIdentifier
  * @description
- * 
+ *
+ * This field indicates the type of access network (CS or PS) through which
+ * the session shall be terminated.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.66B.
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 6.3.1.2.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,7 +61,16 @@ type TADIdentifier = _enum_for_TADIdentifier;
 /**
  * @summary TADIdentifier
  * @description
- * 
+ *
+ * This field indicates the type of access network (CS or PS) through which
+ * the session shall be terminated.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.66B.
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 6.3.1.2.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -59,6 +86,11 @@ const TADIdentifier = _enum_for_TADIdentifier;
 
 /**
  * @summary TADIdentifier_cS
+ * @description
+ *
+ * Terminate the session through the circuit-switched access network
+ * (clause 6.3.1.2).
+ *
  * @constant
  * @type {number}
  */
@@ -67,6 +99,11 @@ const TADIdentifier_cS: TADIdentifier = TADIdentifier.cS; /* LONG_NAMED_ENUMERAT
 
 /**
  * @summary cS
+ * @description
+ *
+ * Terminate the session through the circuit-switched access network
+ * (clause 6.3.1.2).
+ *
  * @constant
  * @type {number}
  */
@@ -75,6 +112,11 @@ const cS: TADIdentifier = TADIdentifier.cS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TADIdentifier_pS
+ * @description
+ *
+ * Terminate the session through the packet-switched access network (clause
+ * 6.3.1.2).
+ *
  * @constant
  * @type {number}
  */
@@ -83,6 +125,11 @@ const TADIdentifier_pS: TADIdentifier = TADIdentifier.pS; /* LONG_NAMED_ENUMERAT
 
 /**
  * @summary pS
+ * @description
+ *
+ * Terminate the session through the packet-switched access network (clause
+ * 6.3.1.2).
+ *
  * @constant
  * @type {number}
  */

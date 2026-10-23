@@ -15,7 +15,16 @@ import { Fnur, _decode_Fnur, _encode_Fnur, _enum_for_Fnur } from "../CSChargingD
 /**
  * @summary ChangeOfService
  * @description
- * 
+ *
+ * One change of basic service during a connection, time-stamped. A change of
+ * basic service can close a partial record (`serviceChange`). Service Change
+ * and UDI/RDI Fallback can also swap an established call between multimedia
+ * and speech, or fall back at set-up when end-to-end multimedia is not
+ * possible (clause 5.1.3.15). That clause's editor's note says more charging
+ * detail is still needed.
+ *
+ * 3GPP TS 32.250 V19.0.0 clauses 5.1.3.6, 5.1.3.15, and 6.1.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,6 +48,15 @@ class ChangeOfService {
     readonly basicService: BasicService;
     /**
      * @summary `transparencyInd`.
+     * @description
+     *
+     * This field indicates whether the basic service was employed in
+     * transparent or non-transparent mode. It should also be noted that this
+     * field is only relevant for those services which may be operated in both
+     * transparent and non-transparent modes.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.92.
+     *
      * @public
      * @readonly
      */
@@ -51,6 +69,18 @@ class ChangeOfService {
     readonly changeTime: OCTET_STRING;
     /**
      * @summary `rateIndication`.
+     * @description
+     *
+     * This parameter specifies the rate adaptation that was used for the
+     * connection. The field is constructed from the information in the
+     * parameters "rate adaptation" and "other rate adaptation" signalled
+     * between the MS/UE and the network, see TS 24.008 [208]. The format of
+     * this field is a single octet with the following format: Bits 0-1: the
+     * Rate Adaptation field as defined in TS 24.008 [208]; Bits 2-3: the Other
+     * Rate Adaptation field as defined in TS 24.008 [208]; Bits 4-7: not used.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.69.
+     *
      * @public
      * @readonly
      */
@@ -86,7 +116,7 @@ class ChangeOfService {
     /**
      * @summary Restructures an object into a ChangeOfService
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `ChangeOfService`.
      * 
      * @public
@@ -117,9 +147,9 @@ class ChangeOfService {
 /**
  * @summary The Leading Root Component Types of ChangeOfService
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -134,9 +164,9 @@ const _root_component_type_list_1_spec_for_ChangeOfService: $.ComponentSpec[] = 
 /**
  * @summary The Trailing Root Component Types of ChangeOfService
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -147,9 +177,9 @@ const _root_component_type_list_2_spec_for_ChangeOfService: $.ComponentSpec[] = 
 /**
  * @summary The Extension Addition Component Types of ChangeOfService
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * @constant
  */
 export

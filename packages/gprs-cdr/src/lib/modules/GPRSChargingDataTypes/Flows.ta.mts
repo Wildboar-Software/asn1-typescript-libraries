@@ -13,6 +13,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Flows
  * @description
  * 
+ * Media flows identified for an application function record. TS 32.251
+ * says the PCC rule carries application function record information so the
+ * measurement can be correlated with application level reports (clause
+ * 5.2.1.3) and refers the field structure to TS 32.298 (table 6.1.3.3).
+ * 
+ * 3GPP TS 32.251 V19.0.0.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

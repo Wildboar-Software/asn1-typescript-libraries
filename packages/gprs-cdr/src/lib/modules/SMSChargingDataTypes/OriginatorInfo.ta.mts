@@ -14,7 +14,15 @@ import { SMInterface, _decode_SMInterface, _encode_SMInterface } from "../SMSCha
 /**
  * @summary OriginatorInfo
  * @description
- * 
+ *
+ * Originator of a short message or of a device trigger. Which components apply
+ * depends on the CDR; see tables 6.1.3.3.1 through 6.1.3.8.1. Online charging
+ * splits the same information: addresses are MMS Originator Address, and the
+ * SCCP address, received address, interface, and protocol identifier are SMS
+ * Information (tables 6.3.1.1.1 and 6.3.1.2.1).
+ *
+ * 3GPP TS 32.274 V19.1.0 clause 6.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,42 +42,107 @@ export
 class OriginatorInfo {
     /**
      * @summary `originatorIMSI`.
+     * @description
+     *
+     * IMSI of the subscriber who sent the short message, for a
+     * mobile-originated message, if available (SC-SMO). On SC-SMT it is the
+     * originator's IMSI, if available. On SC-SMO-T4 it is the IMSI of the
+     * MSISDN-less UE, if available. SC-DVT-T4 does not use it; that originator
+     * is the SCS address in `originatorOtherAddress`.
+     *
+     * 3GPP TS 32.274 V19.1.0 tables 6.1.3.3.1, 6.1.3.4.1, and 6.1.3.6.1.
+     *
      * @public
      * @readonly
      */
     readonly originatorIMSI: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `originatorMSISDN`.
+     * @description
+     *
+     * Primary MSISDN of the subscriber sending the message, if available
+     * (SC-SMO). On SC-SMT, the originator's MSISDN, if available. Not listed
+     * for SC-SMO-T4 or SC-DVT-T4.
+     *
+     * 3GPP TS 32.274 V19.1.0 tables 6.1.3.3.1 and 6.1.3.4.1.
+     *
      * @public
      * @readonly
      */
     readonly originatorMSISDN: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `originatorOtherAddress`.
+     * @description
+     *
+     * Originator address when it is not an IMSI or MSISDN, if available: for
+     * example an email address or a short code. Several addresses may be
+     * carried (SC-SMO). On SC-SMT a short code is the example, and a device
+     * trigger carries the SME address of the Service Capability Server (TS
+     * 29.337). SC-DVT-T4 uses that same SCS SME address. Online charging puts
+     * the same role in MMS Originator Address, typically an E.164 number or a
+     * short code, repeated when both an IMSI and an E.164 number are known.
+     *
+     * 3GPP TS 32.274 V19.1.0 tables 6.1.3.3.1, 6.1.3.4.1, and 6.1.3.5.1.
+     *
      * @public
      * @readonly
      */
     readonly originatorOtherAddress: OPTIONAL<SMAddressInfo>;
     /**
      * @summary `originatorSCCPAddress`.
+     * @description
+     *
+     * SCCP calling address used to receive the short message at the SMS node,
+     * when applicable. Present only when SMS over IP is not the inward
+     * connection.
+     *
+     * 3GPP TS 32.274 V19.1.0 table 6.3.1.2.1.
+     *
      * @public
      * @readonly
      */
     readonly originatorSCCPAddress: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `originatorReceivedAddress`.
+     * @description
+     *
+     * Original, unmodified originator address as the SMS node received it,
+     * when the node has since manipulated the address (for example a
+     * number-plan correction). Typically an E.164 number or a short code.
+     * Several addresses may be carried, for example an IMSI and an E.164
+     * number.
+     *
+     * 3GPP TS 32.274 V19.1.0 table 6.3.1.2.1.
+     *
      * @public
      * @readonly
      */
     readonly originatorReceivedAddress: OPTIONAL<SMAddressInfo>;
     /**
      * @summary `sMOriginatorInterface`.
+     * @description
+     *
+     * Interface on which the SMS node received the short message. For
+     * application-to-person or application-to-application messaging this
+     * identifies the sending application. Absent when the short message is a
+     * device trigger (SC-SMT).
+     *
+     * 3GPP TS 32.274 V19.1.0 tables 6.1.3.4.1 and 6.3.1.2.1.
+     *
      * @public
      * @readonly
      */
     readonly sMOriginatorInterface: OPTIONAL<SMInterface>;
     /**
      * @summary `sMOriginatorProtocolID`.
+     * @description
+     *
+     * TP-PROTOCOL-ID (TP-PID) of TS 23.040, the protocol the originator used.
+     * Relates to the originator when charging mobile-originated SMS, as cited
+     * from TS 32.240.
+     *
+     * 3GPP TS 32.274 V19.1.0 table 6.3.1.2.1.
+     *
      * @public
      * @readonly
      */

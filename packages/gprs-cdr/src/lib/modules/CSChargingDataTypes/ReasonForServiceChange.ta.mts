@@ -6,7 +6,18 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ReasonForServiceChange
  * @description
- * 
+ *
+ * Type of Service Change and UDI/RDI Fallback. Service-Change lets the users
+ * swap an established call between multimedia and speech. Fallback selects
+ * the one available service when end-to-end CS multimedia is not possible,
+ * or when the network cannot signal the feature (clause 5.1.3.15). The
+ * clause's editor's note says more charging detail is needed. The CDR field
+ * is operator-provisionable conditional and applies to 3G. The enumerated
+ * values are specified in TS 32.298 as subscriber initiated, network
+ * initiated, call setup fallback, and call setup change order.
+ *
+ * 3GPP TS 32.250 V19.0.0 clauses 5.1.3.15 and 6.1.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,7 +41,18 @@ enum _enum_for_ReasonForServiceChange {
 /**
  * @summary ReasonForServiceChange
  * @description
- * 
+ *
+ * Type of Service Change and UDI/RDI Fallback. Service-Change lets the users
+ * swap an established call between multimedia and speech. Fallback selects
+ * the one available service when end-to-end CS multimedia is not possible,
+ * or when the network cannot signal the feature (clause 5.1.3.15). The
+ * clause's editor's note says more charging detail is needed. The CDR field
+ * is operator-provisionable conditional and applies to 3G. The enumerated
+ * values are specified in TS 32.298 as subscriber initiated, network
+ * initiated, call setup fallback, and call setup change order.
+ *
+ * 3GPP TS 32.250 V19.0.0 clauses 5.1.3.15 and 6.1.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,7 +71,18 @@ type ReasonForServiceChange = _enum_for_ReasonForServiceChange;
 /**
  * @summary ReasonForServiceChange
  * @description
- * 
+ *
+ * Type of Service Change and UDI/RDI Fallback. Service-Change lets the users
+ * swap an established call between multimedia and speech. Fallback selects
+ * the one available service when end-to-end CS multimedia is not possible,
+ * or when the network cannot signal the feature (clause 5.1.3.15). The
+ * clause's editor's note says more charging detail is needed. The CDR field
+ * is operator-provisionable conditional and applies to 3G. The enumerated
+ * values are specified in TS 32.298 as subscriber initiated, network
+ * initiated, call setup fallback, and call setup change order.
+ *
+ * 3GPP TS 32.250 V19.0.0 clauses 5.1.3.15 and 6.1.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -67,6 +100,12 @@ const ReasonForServiceChange = _enum_for_ReasonForServiceChange;
 
 /**
  * @summary ReasonForServiceChange_msubInitiated
+ * @description
+ *
+ * The subscriber requested the service change. TS 32.250 does not define
+ * this value beyond the service-change and fallback behaviour in clause
+ * 5.1.3.15. 3GPP TS 32.250 V19.0.0 clause 5.1.3.15.
+ *
  * @constant
  * @type {number}
  */
@@ -75,6 +114,12 @@ const ReasonForServiceChange_msubInitiated: ReasonForServiceChange = ReasonForSe
 
 /**
  * @summary msubInitiated
+ * @description
+ *
+ * The subscriber requested the service change. TS 32.250 does not define
+ * this value beyond the service-change and fallback behaviour in clause
+ * 5.1.3.15. 3GPP TS 32.250 V19.0.0 clause 5.1.3.15.
+ *
  * @constant
  * @type {number}
  */
@@ -83,6 +128,11 @@ const msubInitiated: ReasonForServiceChange = ReasonForServiceChange.msubInitiat
 
 /**
  * @summary ReasonForServiceChange_mscInitiated
+ * @description
+ *
+ * The network performed the service change. TS 32.250 does not define this
+ * value beyond clause 5.1.3.15. 3GPP TS 32.250 V19.0.0 clause 5.1.3.15.
+ *
  * @constant
  * @type {number}
  */
@@ -91,6 +141,11 @@ const ReasonForServiceChange_mscInitiated: ReasonForServiceChange = ReasonForSer
 
 /**
  * @summary mscInitiated
+ * @description
+ *
+ * The network performed the service change. TS 32.250 does not define this
+ * value beyond clause 5.1.3.15. 3GPP TS 32.250 V19.0.0 clause 5.1.3.15.
+ *
  * @constant
  * @type {number}
  */
@@ -99,6 +154,13 @@ const mscInitiated: ReasonForServiceChange = ReasonForServiceChange.mscInitiated
 
 /**
  * @summary ReasonForServiceChange_callSetupFallBack
+ * @description
+ *
+ * Fallback at call set-up. Clause 5.1.3.15 describes fallback as selection
+ * of the one available service when end-to-end CS multimedia is not
+ * possible, or when the feature cannot be signalled. 3GPP TS 32.250 V19.0.0
+ * clause 5.1.3.15.
+ *
  * @constant
  * @type {number}
  */
@@ -107,6 +169,13 @@ const ReasonForServiceChange_callSetupFallBack: ReasonForServiceChange = ReasonF
 
 /**
  * @summary callSetupFallBack
+ * @description
+ *
+ * Fallback at call set-up. Clause 5.1.3.15 describes fallback as selection
+ * of the one available service when end-to-end CS multimedia is not
+ * possible, or when the feature cannot be signalled. 3GPP TS 32.250 V19.0.0
+ * clause 5.1.3.15.
+ *
  * @constant
  * @type {number}
  */
@@ -115,6 +184,12 @@ const callSetupFallBack: ReasonForServiceChange = ReasonForServiceChange.callSet
 
 /**
  * @summary ReasonForServiceChange_callSetupChangeOrder
+ * @description
+ *
+ * Change of service order at call set-up. TS 32.250 does not define this
+ * value further. Clause 5.1.3.15's editor's note says more charging detail
+ * is needed. 3GPP TS 32.250 V19.0.0 clause 5.1.3.15.
+ *
  * @constant
  * @type {number}
  */
@@ -123,6 +198,12 @@ const ReasonForServiceChange_callSetupChangeOrder: ReasonForServiceChange = Reas
 
 /**
  * @summary callSetupChangeOrder
+ * @description
+ *
+ * Change of service order at call set-up. TS 32.250 does not define this
+ * value further. Clause 5.1.3.15's editor's note says more charging detail
+ * is needed. 3GPP TS 32.250 V19.0.0 clause 5.1.3.15.
+ *
  * @constant
  * @type {number}
  */

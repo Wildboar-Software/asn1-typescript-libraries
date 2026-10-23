@@ -6,7 +6,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary NBIFOMSupport
  * @description
- * 
+ *
+ * This field indicates that NBIFOM was requested by the UE, supported and
+ * accepted by the network for the IP-CAN session or if NBIFOM is not
+ * supported for the IP-CAN session as defined in TS 29.212 [220].
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.29C.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,7 +32,13 @@ enum _enum_for_NBIFOMSupport {
 /**
  * @summary NBIFOMSupport
  * @description
- * 
+ *
+ * This field indicates that NBIFOM was requested by the UE, supported and
+ * accepted by the network for the IP-CAN session or if NBIFOM is not
+ * supported for the IP-CAN session as defined in TS 29.212 [220].
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.29C.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,7 +55,13 @@ type NBIFOMSupport = _enum_for_NBIFOMSupport;
 /**
  * @summary NBIFOMSupport
  * @description
- * 
+ *
+ * This field indicates that NBIFOM was requested by the UE, supported and
+ * accepted by the network for the IP-CAN session or if NBIFOM is not
+ * supported for the IP-CAN session as defined in TS 29.212 [220].
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.29C.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

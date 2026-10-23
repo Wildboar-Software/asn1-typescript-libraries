@@ -12,6 +12,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AccessPointNameOI
  * @description
  * 
+ * Operator-identifier part of the APN (table 6.1.1.1).
+ * 
+ * 3GPP TS 32.251 V19.0.0.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

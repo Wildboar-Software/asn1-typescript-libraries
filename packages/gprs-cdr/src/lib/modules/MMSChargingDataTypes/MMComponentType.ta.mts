@@ -13,6 +13,12 @@ import { MediaComponent, _decode_MediaComponent, _encode_MediaComponent } from "
  * @summary MMComponentType
  * @description
  * 
+ * MM component list: the media components of the MM and their volume
+ * sizes, plus a subject component. TS 32.270 does not further define the
+ * subject component. Category OM on the records that carry the list.
+ *
+ * 3GPP TS 32.270 V19.0.0 clause 6.1.1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +34,24 @@ export
 class MMComponentType {
     /**
      * @summary `subject`.
+     * @description
+     *
+     * Subject component of the MM. TS 32.270 does not define its type or size.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.1.1.
+     *
      * @public
      * @readonly
      */
     readonly subject: SubjectComponent;
     /**
      * @summary `media`.
+     * @description
+     *
+     * Media components of the MM, each with its volume size.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.1.1.
+     *
      * @public
      * @readonly
      */

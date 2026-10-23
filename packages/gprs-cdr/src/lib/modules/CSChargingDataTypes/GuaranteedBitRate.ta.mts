@@ -6,7 +6,20 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary GuaranteedBitRate
  * @description
- * 
+ *
+ * This field contains the Guaranteed Bit Rate based on the FNUR for
+ * transparent and Wanted AIUR for non-transparent CS data services based on
+ * the described mapping in TS 27.001 [213]. The Guaranteed Bit Rate may be
+ * used to facilitate admission control based on available resources, and for
+ * resource allocation within UMTS. The bit-rate of the UMTS bearer service
+ * shall guarantee to the user or applications refer TS 22.002 [102].
+ * Operator may choose any of the possible values less or equal to wanted
+ * AIUR (Air Interface User Rate). (If WAIUR is less or equal to 14,4 kbit/s
+ * then Guaranteed Bit Rate and Maximum Bit Rate shall be set to 14,4
+ * kbit/s).
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.29.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,7 +49,20 @@ enum _enum_for_GuaranteedBitRate {
 /**
  * @summary GuaranteedBitRate
  * @description
- * 
+ *
+ * This field contains the Guaranteed Bit Rate based on the FNUR for
+ * transparent and Wanted AIUR for non-transparent CS data services based on
+ * the described mapping in TS 27.001 [213]. The Guaranteed Bit Rate may be
+ * used to facilitate admission control based on available resources, and for
+ * resource allocation within UMTS. The bit-rate of the UMTS bearer service
+ * shall guarantee to the user or applications refer TS 22.002 [102].
+ * Operator may choose any of the possible values less or equal to wanted
+ * AIUR (Air Interface User Rate). (If WAIUR is less or equal to 14,4 kbit/s
+ * then Guaranteed Bit Rate and Maximum Bit Rate shall be set to 14,4
+ * kbit/s).
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.29.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -58,7 +84,20 @@ type GuaranteedBitRate = _enum_for_GuaranteedBitRate;
 /**
  * @summary GuaranteedBitRate
  * @description
- * 
+ *
+ * This field contains the Guaranteed Bit Rate based on the FNUR for
+ * transparent and Wanted AIUR for non-transparent CS data services based on
+ * the described mapping in TS 27.001 [213]. The Guaranteed Bit Rate may be
+ * used to facilitate admission control based on available resources, and for
+ * resource allocation within UMTS. The bit-rate of the UMTS bearer service
+ * shall guarantee to the user or applications refer TS 22.002 [102].
+ * Operator may choose any of the possible values less or equal to wanted
+ * AIUR (Air Interface User Rate). (If WAIUR is less or equal to 14,4 kbit/s
+ * then Guaranteed Bit Rate and Maximum Bit Rate shall be set to 14,4
+ * kbit/s).
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.29.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

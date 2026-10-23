@@ -9,7 +9,20 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary RequestStatusCodeType
  * @description
- * 
+ *
+ * The status of the MM as reflected in the corresponding MM4 message (e.g.
+ * error service denied, error network problem, error unsupported message,
+ * etc.). For further details see TS 23.140 [206].
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.48.
+ *
+ * Status of the MM1, MM4, or MM7 request that produced the CDR. The record
+ * field states which message the code is copied from. The named values
+ * include a normal release and the failures called out for an MM4 status,
+ * such as service denied, a network problem, and an unsupported message.
+ *
+ * 3GPP TS 32.270 V19.0.0 clause 6.1.1.0.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -19,7 +19,23 @@ import { List_Of_SDP_Media_Components_sDP_Type, _decode_List_Of_SDP_Media_Compon
 /**
  * @summary List_Of_SDP_Media_Components
  * @description
- * 
+ *
+ * One media component on a SIP-session-related PoC CDR. The
+ * list may occur several times. Media parameters are negotiated
+ * at session establishment for an on-demand session, and between
+ * the PoC Client and the home PoC Server before the session when
+ * a pre-established session is used. Adding or removing a media
+ * type during the session is a separate chargeable event.
+ *
+ * The CDR-level service timestamps are the [start] and [stop]
+ * times. The timestamps in this entry are the interim ones,
+ * usually a re-INVITE and its 200 OK.
+ *
+ * Categories below are from the PPF-CDR and CPF-CDR tables,
+ * which give the same categories for these sub-fields.
+ *
+ * 3GPP TS 32.272 V19.0.0 clauses 5.1.1, 5.1.2, and 6.1.3.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,54 +61,125 @@ export
 class List_Of_SDP_Media_Components {
     /**
      * @summary `sIP_Request_Timestamp`.
+     * @description
+     *
+     * Category OM. Time of the SIP request, usually a re-INVITE.
+     * Corresponds to SIP-Request-Timestamp in an interim Charging
+     * Data Request. Not the CDR-level service request time.
+     *
+     * 3GPP TS 32.272 V19.0.0 clause 6.1.3.3.
+     *
      * @public
      * @readonly
      */
     readonly sIP_Request_Timestamp: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `sIP_Response_Timestamp`.
+     * @description
+     *
+     * Category OM. Time of the response to that SIP request,
+     * usually a 200 OK. Corresponds to SIP-Response-Timestamp in
+     * an interim Charging Data Request.
+     *
+     * 3GPP TS 32.272 V19.0.0 clause 6.1.3.3.
+     *
      * @public
      * @readonly
      */
     readonly sIP_Response_Timestamp: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `sDP_Media_Components`.
+     * @description
+     *
+     * Category OM. Sub-fields of one media component. Several
+     * media components may exist in parallel in the session.
+     * Corresponds to SDP-Media-Component. Each component's media
+     * name and media description are the SDP data for that media.
+     *
+     * 3GPP TS 32.272 V19.0.0 clause 6.1.3.3.
+     *
      * @public
      * @readonly
      */
     readonly sDP_Media_Components: OPTIONAL<SDP_Media_Components[]>;
     /**
      * @summary `mediaInitiatorFlag`.
+     * @description
+     *
+     * Category OC. Present only when the called party requested
+     * the session modification.
+     *
+     * 3GPP TS 32.272 V19.0.0 clause 6.1.3.3.
+     *
      * @public
      * @readonly
      */
     readonly mediaInitiatorFlag: OPTIONAL<NULL>;
     /**
      * @summary `sDP_Session_Description`.
+     * @description
+     *
+     * Category OC. Session-level part of the SDP exchanged between
+     * the user agents, when the SIP transaction carried it.
+     * Corresponds to SDP-Session-Description.
+     *
+     * 3GPP TS 32.272 V19.0.0 clause 6.1.3.3.
+     *
      * @public
      * @readonly
      */
     readonly sDP_Session_Description: OPTIONAL<GraphicString[]>;
     /**
      * @summary `mediaInitiatorParty`.
+     * @description
+     *
+     * Category OC. SIP URI or TEL URI of the party (Public User ID
+     * or Public Service ID) that initiated the media action, such
+     * as adding or removing the media.
+     *
+     * 3GPP TS 32.272 V19.0.0 clause 6.1.3.3.
+     *
      * @public
      * @readonly
      */
     readonly mediaInitiatorParty: OPTIONAL<InvolvedParty>;
     /**
      * @summary `sIP_Request_Timestamp_Fraction`.
+     * @description
+     *
+     * Milliseconds fraction of the SIP request timestamp. TS 32.272
+     * does not describe this sub-field; the definition is in
+     * TS 32.298.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.63.
+     *
      * @public
      * @readonly
      */
     readonly sIP_Request_Timestamp_Fraction: OPTIONAL<INTEGER>;
     /**
      * @summary `sIP_Response_Timestamp_Fraction`.
+     * @description
+     *
+     * Milliseconds fraction of the SIP response timestamp.
+     * TS 32.272 does not describe this sub-field; the definition
+     * is in TS 32.298.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.65.
+     *
      * @public
      * @readonly
      */
     readonly sIP_Response_Timestamp_Fraction: OPTIONAL<INTEGER>;
     /**
      * @summary `sDP_Type`.
+     * @description
+     *
+     * Whether this SDP is the offer or the answer. TS 32.272 does
+     * not define the two values; it only requires the media
+     * negotiation to be charged. See
+     * `List_Of_SDP_Media_Components_sDP_Type`.
+     *
      * @public
      * @readonly
      */

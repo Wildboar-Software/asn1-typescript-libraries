@@ -20,7 +20,18 @@ import { NumberOfUEPerLocationReport, _decode_NumberOfUEPerLocationReport, _enco
 /**
  * @summary MonitoringEventReportData
  * @description
- * 
+ *
+ * One Monitoring Event report inside an ME-RE-CDR. Category OM as
+ * a member of List of Monitoring Event Report Data. On Rf the
+ * container is category Oc and is repeated once per report.
+ * Normally one report is captured; a burst may place several in
+ * the same CDR.
+ *
+ * The per-report categories below are from table 6.1.3.3.2.
+ * Clause 3.1 defines M, C, OM and OC. That table also prints Oc.
+ *
+ * 3GPP TS 32.278 V19.0.0 clauses 5.2.2, 5.2.3, 6.1.3.3 and 6.3.1.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -46,66 +57,154 @@ export
 class MonitoringEventReportData {
     /**
      * @summary `eventTimestamp`.
+     * @description
+     *
+     * Category OM. Time of the event that triggered charging
+     * information for this report. TS 32.278 does not define the
+     * nine-octet encoding.
+     *
+     * 3GPP TS 32.278 V19.0.0 clause 6.1.3.3.
+     *
      * @public
      * @readonly
      */
     readonly eventTimestamp: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `sCEFReferenceID`.
+     * @description
+     *
+     * Category M. Identifier created by the SCEF for the
+     * Monitoring Request. Together with `sCEFID` it is globally
+     * unique.
+     *
+     * 3GPP TS 32.278 V19.0.0 clause 6.1.3.3.
+     *
      * @public
      * @readonly
      */
     readonly sCEFReferenceID: OPTIONAL<INTEGER>;
     /**
      * @summary `sCEFID`.
+     * @description
+     *
+     * Category M. SCEF to which the Monitoring Indication is sent.
+     * TS 32.278 does not define the octet encoding.
+     *
+     * 3GPP TS 32.278 V19.0.0 clause 6.1.3.3.
+     *
      * @public
      * @readonly
      */
     readonly sCEFID: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `monitoringEventReportNumber`.
+     * @description
+     *
+     * Category M. Which report this is for the specific request
+     * from this MECN. The number increases monotonically and
+     * starts at 1 for each unique request.
+     *
+     * 3GPP TS 32.278 V19.0.0 clauses 5.1 and 6.1.3.3.
+     *
      * @public
      * @readonly
      */
     readonly monitoringEventReportNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `chargeablePartyIdentifier`.
+     * @description
+     *
+     * Category Oc. When present, the entity towards which the
+     * involved 3GPP network elements perform accounting. Collected
+     * only when it was provided to the MECN. Bound to
+     * Charged-Party.
+     *
+     * 3GPP TS 32.278 V19.0.0 clauses 5.1, 6.1.3.3 and 6.4.
+     *
      * @public
      * @readonly
      */
     readonly chargeablePartyIdentifier: OPTIONAL<UTF8String>;
     /**
      * @summary `monitoredUser`.
+     * @description
+     *
+     * Category Oc. User that is monitored. Applicable to loss of
+     * connectivity, UE reachability, location reporting,
+     * communication failure, and availability after DDN failure.
+     * Not used for the number of UEs in a geographic area.
+     * TS 32.278 does not define the octet encoding.
+     *
+     * 3GPP TS 32.278 V19.0.0 clauses 6.1.3.3 and 6.3.1.1.
+     *
      * @public
      * @readonly
      */
     readonly monitoredUser: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `monitoringType`.
+     * @description
+     *
+     * Category Oc. The Monitoring Event being reported.
+     *
+     * 3GPP TS 32.278 V19.0.0 clause 6.1.3.3.
+     *
      * @public
      * @readonly
      */
     readonly monitoringType: OPTIONAL<MonitoringType>;
     /**
      * @summary `reachabilityInformation`.
+     * @description
+     *
+     * Category Oc. Reachability status of the UE. Applicable to
+     * UE reachability. The ASN.1 type is `ReachabilityType`.
+     *
+     * 3GPP TS 32.278 V19.0.0 clauses 5.1 and 6.1.3.3.
+     *
      * @public
      * @readonly
      */
     readonly reachabilityInformation: OPTIONAL<ReachabilityType>;
     /**
      * @summary `reportedLocation`.
+     * @description
+     *
+     * Category Oc. Reported 3GPP location of the user. Applicable
+     * to location reporting. Bound to EPS-Location-information.
+     *
+     * 3GPP TS 32.278 V19.0.0 clauses 5.1, 6.1.3.3 and 6.4.
+     *
      * @public
      * @readonly
      */
     readonly reportedLocation: OPTIONAL<EPSLocationInfo>;
     /**
      * @summary `communicationFailureInformation`.
+     * @description
+     *
+     * Category Oc. Reported reason for the communication failure.
+     * Applicable to communication failure. Clause 5.1 requires
+     * the RAN or NAS cause code. More than one
+     * `CommunicationFailureInfo` may be present.
+     *
+     * 3GPP TS 32.278 V19.0.0 clauses 5.1 and 6.1.3.3.
+     *
      * @public
      * @readonly
      */
     readonly communicationFailureInformation: OPTIONAL<CommunicationFailureInfo[]>;
     /**
      * @summary `listOfNumberOfUEPerLocationReport`.
+     * @description
+     *
+     * Category Oc. For each location, that location and the number
+     * of UEs the MME or SGSN found there. Applicable to the
+     * number of UEs at a given geographic location. On Rf the
+     * per-location element is repeated.
+     *
+     * 3GPP TS 32.278 V19.0.0 clauses 6.1.3.3 and 6.3.1.2.
+     *
      * @public
      * @readonly
      */

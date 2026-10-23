@@ -9,7 +9,28 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CauseForTerm
  * @description
- * 
+ *
+ * On a partial record, this is either `partialRecord` or
+ * `partialRecordCallReestablishment`. The final record carries the true
+ * cause, such as `normalRelease`. A failed re-establishment uses
+ * `abnormalRelease` ("stable call abnormal termination"). LCS records use
+ * the location-service values and may put a more detailed cause in
+ * `diagnostics`.
+ *
+ * 3GPP TS 32.250 V19.0.0 clauses 5.1.3.6, 5.1.3.9, and 6.1.3.20.
+ *
+ * This field contains a generalised reason for the release of the connection
+ * including the following: normal release; CAMEL initiated call release;
+ * partial record generation; partial record call re-establishment;
+ * unsuccessful call attempt; abnormal termination during the stable phase;
+ * unauthorized network originating a location service request; unauthorized
+ * client requesting a location service; position method failure at a
+ * location service execution; unknown or unreachable LCS client at a
+ * location service request. A more detailed reason may be found in the
+ * diagnostics field.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.13.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,6 +52,13 @@ type CauseForTerm = INTEGER;
 
 /**
  * @summary CauseForTerm_normalRelease
+ * @description
+ *
+ * Normal release of the connection. On a sequence of partial records, only
+ * the final record carries this true cause. Earlier records use
+ * `partialRecord` or `partialRecordCallReestablishment`. 3GPP TS 32.250
+ * V19.0.0 clause 5.1.3.6.
+ *
  * @constant
  * @type {number}
  */
@@ -39,6 +67,13 @@ const CauseForTerm_normalRelease: CauseForTerm = 0; /* LONG_NAMED_INTEGER_VALUE 
 
 /**
  * @summary CauseForTerm_normalRelease
+ * @description
+ *
+ * Normal release of the connection. On a sequence of partial records, only
+ * the final record carries this true cause. Earlier records use
+ * `partialRecord` or `partialRecordCallReestablishment`. 3GPP TS 32.250
+ * V19.0.0 clause 5.1.3.6.
+ *
  * @constant
  * @type {number}
  */
@@ -47,6 +82,13 @@ const normalRelease: CauseForTerm = CauseForTerm_normalRelease; /* SHORT_NAMED_I
 
 /**
  * @summary CauseForTerm_partialRecord
+ * @description
+ *
+ * A further partial record was opened for the same connection. The final
+ * partial record does not use this value; it carries the true termination
+ * cause. Partial records share the call reference and increase the sequence
+ * number. 3GPP TS 32.250 V19.0.0 clause 5.1.3.6.
+ *
  * @constant
  * @type {number}
  */
@@ -55,6 +97,13 @@ const CauseForTerm_partialRecord: CauseForTerm = 1; /* LONG_NAMED_INTEGER_VALUE 
 
 /**
  * @summary CauseForTerm_partialRecord
+ * @description
+ *
+ * A further partial record was opened for the same connection. The final
+ * partial record does not use this value; it carries the true termination
+ * cause. Partial records share the call reference and increase the sequence
+ * number. 3GPP TS 32.250 V19.0.0 clause 5.1.3.6.
+ *
  * @constant
  * @type {number}
  */
@@ -63,6 +112,15 @@ const partialRecord: CauseForTerm = CauseForTerm_partialRecord; /* SHORT_NAMED_I
 
 /**
  * @summary CauseForTerm_partialRecordCallReestablishment
+ * @description
+ *
+ * The call was closed because the radio link failed and the MS then
+ * re-established it. Chargeable duration runs from answer to the MSC
+ * server's detection of the failure. The next partial record's seizure time
+ * and answer time are both the time the new traffic channel is allocated.
+ * These partial records are not contiguous. If re-establishment fails, this
+ * value is not used. 3GPP TS 32.250 V19.0.0 clauses 5.1.3.6 and 5.1.3.9.
+ *
  * @constant
  * @type {number}
  */
@@ -71,6 +129,15 @@ const CauseForTerm_partialRecordCallReestablishment: CauseForTerm = 2; /* LONG_N
 
 /**
  * @summary CauseForTerm_partialRecordCallReestablishment
+ * @description
+ *
+ * The call was closed because the radio link failed and the MS then
+ * re-established it. Chargeable duration runs from answer to the MSC
+ * server's detection of the failure. The next partial record's seizure time
+ * and answer time are both the time the new traffic channel is allocated.
+ * These partial records are not contiguous. If re-establishment fails, this
+ * value is not used. 3GPP TS 32.250 V19.0.0 clauses 5.1.3.6 and 5.1.3.9.
+ *
  * @constant
  * @type {number}
  */
@@ -79,6 +146,13 @@ const partialRecordCallReestablishment: CauseForTerm = CauseForTerm_partialRecor
 
 /**
  * @summary CauseForTerm_unsuccessfulCallAttempt
+ * @description
+ *
+ * Unsuccessful call attempt. An unsuccessful attempt is also recorded when
+ * partial records are generated for a CAMEL FollowOn call that has already
+ * reached answer at least once. 3GPP TS 32.250 V19.0.0 clauses 5.1.1 and
+ * 6.1.3.1.
+ *
  * @constant
  * @type {number}
  */
@@ -87,6 +161,13 @@ const CauseForTerm_unsuccessfulCallAttempt: CauseForTerm = 3; /* LONG_NAMED_INTE
 
 /**
  * @summary CauseForTerm_unsuccessfulCallAttempt
+ * @description
+ *
+ * Unsuccessful call attempt. An unsuccessful attempt is also recorded when
+ * partial records are generated for a CAMEL FollowOn call that has already
+ * reached answer at least once. 3GPP TS 32.250 V19.0.0 clauses 5.1.1 and
+ * 6.1.3.1.
+ *
  * @constant
  * @type {number}
  */
@@ -95,6 +176,14 @@ const unsuccessfulCallAttempt: CauseForTerm = CauseForTerm_unsuccessfulCallAttem
 
 /**
  * @summary CauseForTerm_abnormalRelease
+ * @description
+ *
+ * Abnormal release. Clause 5.1.3.9 says that if call re-establishment fails,
+ * the MOC or MTC is closed with cause "stable call abnormal termination" and
+ * the chargeable duration runs from answer to detection of the radio-link
+ * failure. This is the abnormal-release value of `CauseForTerm`. 3GPP TS
+ * 32.250 V19.0.0 clause 5.1.3.9.
+ *
  * @constant
  * @type {number}
  */
@@ -103,6 +192,14 @@ const CauseForTerm_abnormalRelease: CauseForTerm = 4; /* LONG_NAMED_INTEGER_VALU
 
 /**
  * @summary CauseForTerm_abnormalRelease
+ * @description
+ *
+ * Abnormal release. Clause 5.1.3.9 says that if call re-establishment fails,
+ * the MOC or MTC is closed with cause "stable call abnormal termination" and
+ * the chargeable duration runs from answer to detection of the radio-link
+ * failure. This is the abnormal-release value of `CauseForTerm`. 3GPP TS
+ * 32.250 V19.0.0 clause 5.1.3.9.
+ *
  * @constant
  * @type {number}
  */
@@ -111,6 +208,12 @@ const abnormalRelease: CauseForTerm = CauseForTerm_abnormalRelease; /* SHORT_NAM
 
 /**
  * @summary CauseForTerm_cAMELInitCallRelease
+ * @description
+ *
+ * Call released by CAMEL. TS 32.250 names CAMEL as a source of call handling
+ * and of partial records, and does not give this value a separate generation
+ * rule. 3GPP TS 32.250 V19.0.0 clause 5.1.3.2.
+ *
  * @constant
  * @type {number}
  */
@@ -119,6 +222,12 @@ const CauseForTerm_cAMELInitCallRelease: CauseForTerm = 5; /* LONG_NAMED_INTEGER
 
 /**
  * @summary CauseForTerm_cAMELInitCallRelease
+ * @description
+ *
+ * Call released by CAMEL. TS 32.250 names CAMEL as a source of call handling
+ * and of partial records, and does not give this value a separate generation
+ * rule. 3GPP TS 32.250 V19.0.0 clause 5.1.3.2.
+ *
  * @constant
  * @type {number}
  */
@@ -127,6 +236,13 @@ const cAMELInitCallRelease: CauseForTerm = CauseForTerm_cAMELInitCallRelease; /*
 
 /**
  * @summary CauseForTerm_unauthorizedRequestingNetwork
+ * @description
+ *
+ * The location request ended because the requesting network was not
+ * authorized. On an LCS CDR, `causeForTerm` is the reason the location
+ * service ended and `diagnostics` may carry a more detailed cause. 3GPP TS
+ * 32.250 V19.0.0 clauses 6.1.3.20, 6.1.3.21, and 6.1.3.22.
+ *
  * @constant
  * @type {number}
  */
@@ -135,6 +251,13 @@ const CauseForTerm_unauthorizedRequestingNetwork: CauseForTerm = 52; /* LONG_NAM
 
 /**
  * @summary CauseForTerm_unauthorizedRequestingNetwork
+ * @description
+ *
+ * The location request ended because the requesting network was not
+ * authorized. On an LCS CDR, `causeForTerm` is the reason the location
+ * service ended and `diagnostics` may carry a more detailed cause. 3GPP TS
+ * 32.250 V19.0.0 clauses 6.1.3.20, 6.1.3.21, and 6.1.3.22.
+ *
  * @constant
  * @type {number}
  */
@@ -143,6 +266,12 @@ const unauthorizedRequestingNetwork: CauseForTerm = CauseForTerm_unauthorizedReq
 
 /**
  * @summary CauseForTerm_unauthorizedLCSClient
+ * @description
+ *
+ * The location request ended because the LCS client was not authorized. On
+ * an LCS CDR, `diagnostics` may carry a more detailed cause. 3GPP TS 32.250
+ * V19.0.0 clauses 6.1.3.20, 6.1.3.21, and 6.1.3.22.
+ *
  * @constant
  * @type {number}
  */
@@ -151,6 +280,12 @@ const CauseForTerm_unauthorizedLCSClient: CauseForTerm = 53; /* LONG_NAMED_INTEG
 
 /**
  * @summary CauseForTerm_unauthorizedLCSClient
+ * @description
+ *
+ * The location request ended because the LCS client was not authorized. On
+ * an LCS CDR, `diagnostics` may carry a more detailed cause. 3GPP TS 32.250
+ * V19.0.0 clauses 6.1.3.20, 6.1.3.21, and 6.1.3.22.
+ *
  * @constant
  * @type {number}
  */
@@ -159,6 +294,13 @@ const unauthorizedLCSClient: CauseForTerm = CauseForTerm_unauthorizedLCSClient; 
 
 /**
  * @summary CauseForTerm_positionMethodFailure
+ * @description
+ *
+ * The location request ended because the positioning method failed. On an
+ * LCS CDR, `lcsCause` is the radio-interface result when a failure or
+ * partial success is known, and `diagnostics` may carry a more detailed
+ * cause. 3GPP TS 32.250 V19.0.0 clauses 6.1.3.20, 6.1.3.21, and 6.1.3.22.
+ *
  * @constant
  * @type {number}
  */
@@ -167,6 +309,13 @@ const CauseForTerm_positionMethodFailure: CauseForTerm = 54; /* LONG_NAMED_INTEG
 
 /**
  * @summary CauseForTerm_positionMethodFailure
+ * @description
+ *
+ * The location request ended because the positioning method failed. On an
+ * LCS CDR, `lcsCause` is the radio-interface result when a failure or
+ * partial success is known, and `diagnostics` may carry a more detailed
+ * cause. 3GPP TS 32.250 V19.0.0 clauses 6.1.3.20, 6.1.3.21, and 6.1.3.22.
+ *
  * @constant
  * @type {number}
  */
@@ -175,6 +324,12 @@ const positionMethodFailure: CauseForTerm = CauseForTerm_positionMethodFailure; 
 
 /**
  * @summary CauseForTerm_unknownOrUnreachableLCSClient
+ * @description
+ *
+ * The location request ended because the LCS client was unknown or
+ * unreachable. On an LCS CDR, `diagnostics` may carry a more detailed cause.
+ * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.20, 6.1.3.21, and 6.1.3.22.
+ *
  * @constant
  * @type {number}
  */
@@ -183,6 +338,12 @@ const CauseForTerm_unknownOrUnreachableLCSClient: CauseForTerm = 58; /* LONG_NAM
 
 /**
  * @summary CauseForTerm_unknownOrUnreachableLCSClient
+ * @description
+ *
+ * The location request ended because the LCS client was unknown or
+ * unreachable. On an LCS CDR, `diagnostics` may carry a more detailed cause.
+ * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.20, 6.1.3.21, and 6.1.3.22.
+ *
  * @constant
  * @type {number}
  */

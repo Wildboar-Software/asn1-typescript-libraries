@@ -14,7 +14,17 @@ import { LocationInfo, _decode_LocationInfo, _encode_LocationInfo } from "../Pro
 /**
  * @summary CoverageInfo
  * @description
- * 
+ *
+ * One coverage-status change for ProSe Direct Communication, with the time of
+ * the change. While the UE is in E-UTRAN coverage, `listOfLocation` also
+ * carries each ECGI change and its timestamp. On receipt of a usage information
+ * report these containers are added to every open group PF-DC-CDR, if the UE
+ * was configured to include them.
+ *
+ * 3GPP TS 32.277 V19.2.0 clauses 5.2.3.1.2, 6.1.3.4, and 6.3.1.2.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.6B.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,18 +41,37 @@ export
 class CoverageInfo {
     /**
      * @summary `coverageStatus`.
+     * @description
+     *
+     * Whether the UE is served by E-UTRAN after this change.
+     *
+     * 3GPP TS 32.277 V19.2.0 clause 6.3.1.2.
+     *
      * @public
      * @readonly
      */
     readonly coverageStatus: CoverageStatus;
     /**
      * @summary `timeStamp`.
+     * @description
+     *
+     * Time the coverage status changed to `coverageStatus`.
+     *
+     * 3GPP TS 32.277 V19.2.0 clause 6.3.1.2.
+     *
      * @public
      * @readonly
      */
     readonly timeStamp: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `listOfLocation`.
+     * @description
+     *
+     * ECGI changes, and the time of each change, recorded while the UE is in
+     * E-UTRAN coverage. Omitted for an out-of-coverage period.
+     *
+     * 3GPP TS 32.277 V19.2.0 clauses 5.1.2.3 and 6.1.3.4.
+     *
      * @public
      * @readonly
      */

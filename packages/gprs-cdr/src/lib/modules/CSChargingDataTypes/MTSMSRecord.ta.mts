@@ -19,7 +19,25 @@ import { CAMELSMSInformation, _decode_CAMELSMSInformation, _encode_CAMELSMSInfor
 /**
  * @summary MTSMSRecord
  * @description
- * 
+ *
+ * Mobile-terminated short-message CDR. When enabled, the terminating MSC
+ * produces one for each short message received by a mobile subscriber.
+ * `deliveryTime` is when the MSC sent the message to the MS.
+ *
+ * SMS over SGs uses the same E-UTRAN location split as SMS-MO: 16 least
+ * significant cell-identity bits in the location, the tracking area code in
+ * the location area, and the 12 most significant bits in
+ * `locationExtension`. `systemType` is `unknown` for E-UTRAN, and it is
+ * omitted for a GSM air interface. `msClassmark` is mandatory in 2G and
+ * conditional in 3G and for SMS over SGs.
+ *
+ * `cAMELSMSInformation` is present only if CAMEL is applied. Where this MSC
+ * is also the gateway MSC, an SMS-MT gateway CDR is generated as well.
+ *
+ * Categories are M, C, OM, and OC as in TS 32.240 clause 5.4.
+ *
+ * 3GPP TS 32.250 V19.0.0 clauses 5.1.3.16 and 6.1.3.14.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,91 +58,247 @@ import { CAMELSMSInformation, _decode_CAMELSMSInformation, _encode_CAMELSMSInfor
  *    cAMELSMSInformation   [12] IMPLICIT CAMELSMSInformation OPTIONAL,
  *    locationExtension     [13] IMPLICIT BIT STRING ( SIZE( 12 ) ) OPTIONAL}
  * ```
- * 
  * @class
  */
 export
 class MTSMSRecord {
     /**
      * @summary `recordType`.
+     * @description
+     *
+     * 2G, 3G, and SMS over SGs mandatory. SMS-Mobile Terminated.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.14.
+     *
+     * The field identifies the type of the record e.g. mobile originated,
+     * mobile terminated etc.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.72.
+     *
      * @public
      * @readonly
      */
     readonly recordType: RecordType;
     /**
      * @summary `serviceCentre`.
+     * @description
+     *
+     * 2G, 3G, and SMS over SGs mandatory. The E.164 address of the SMS centre.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.14.
+     *
      * @public
      * @readonly
      */
     readonly serviceCentre: OCTET_STRING;
     /**
      * @summary `servedIMSI`.
+     * @description
+     *
+     * 2G, 3G, and SMS over SGs mandatory. The IMSI of the receiving party.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.14.
+     *
+     * This fields contains the international mobile subscriber identity (IMSI)
+     * of the served party. The term "served" party is used to describe the
+     * mobile subscriber involved in the transaction recorded e.g. the calling
+     * subscriber in case of an MOC record. The structure of the IMSI is defined
+     * in TS 23.003 [200].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.79.
+     *
      * @public
      * @readonly
      */
     readonly servedIMSI: OCTET_STRING;
     /**
      * @summary `servedIMEI`.
+     * @description
+     *
+     * 2G, 3G, and SMS over SGs operator-provisionable conditional. The IMEI of
+     * the receiving party, if available.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.14.
+     *
+     * This fields contains the international mobile equipment identity (IMEI)
+     * or IMEISV of the equipment served. The term "served" equipment is used to
+     * describe the ME involved in the transaction recorded e.g. the called ME
+     * in case of an MTC record. The structure of the IMEI, IMEISV is specified
+     * in TS 23.003 [200] and the encoding defined in TS 29.274 [223].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.78.
+     *
      * @public
      * @readonly
      */
     readonly servedIMEI: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `servedMSISDN`.
+     * @description
+     *
+     * 2G, 3G, and SMS over SGs operator-provisionable mandatory. The MSISDN of
+     * the receiving party.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.14.
+     *
+     * This fields contains the mobile station ISDN number (MSISDN) of the
+     * served party. The term "served" party is used to describe the mobile
+     * subscriber involved in the transaction recorded e.g. the called
+     * subscriber in case of an MTC record. In case of multi-numbering the
+     * MSISDN stored in a MOC record will be the primary MSISDN of the calling
+     * party. The structure of the MSISDN is defined in TS 23.003 [200].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.80.
+     *
      * @public
      * @readonly
      */
     readonly servedMSISDN: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `msClassmark`.
+     * @description
+     *
+     * 2G mandatory, 3G conditional, SMS over SGs conditional. The mobile
+     * station classmark.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.14.
+     *
      * @public
      * @readonly
      */
     readonly msClassmark: OCTET_STRING;
     /**
      * @summary `recordingEntity`.
+     * @description
+     *
+     * 2G, 3G, and SMS over SGs mandatory. The E.164 number of the visited MSC.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.14.
+     *
+     * This field contains the E.164 [308] number assigned to the entity (MSC,
+     * VLR, HLR etc.) that produced the record. For further details concerning
+     * the structure of MSC and location register numbers see TS 23.003 [200].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.73.
+     *
      * @public
      * @readonly
      */
     readonly recordingEntity: OCTET_STRING;
     /**
      * @summary `location`.
+     * @description
+     *
+     * 2G, 3G, and SMS over SGs operator-provisionable mandatory. The Location
+     * Area Code and Cell Identity /Service Area Code and MCC+MNC to which the
+     * message was delivered. The Cell Identity contains the 16 least
+     * significant bits and the Tracking Area Code is placed in the Location
+     * Area Code filed if E-UTRAN is used to deliver the SMS.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.14.
+     *
      * @public
      * @readonly
      */
     readonly location: OPTIONAL<LocationAreaAndCell>;
     /**
      * @summary `deliveryTime`.
+     * @description
+     *
+     * 2G, 3G, and SMS over SGs mandatory. Delivery time: time at which message
+     * was sent to the MS by the MSC.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.14.
+     *
      * @public
      * @readonly
      */
     readonly deliveryTime: OCTET_STRING;
     /**
      * @summary `smsResult`.
+     * @description
+     *
+     * 2G, 3G, and SMS over SGs conditional. The result of the attempted
+     * delivery if unsuccessful.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.14.
+     *
      * @public
      * @readonly
      */
     readonly smsResult: OPTIONAL<HLRIntResult>;
     /**
      * @summary `recordExtensions`.
+     * @description
+     *
+     * 2G, 3G, and SMS over SGs operator-provisionable conditional. A set of
+     * network/ manufacturer specific extensions to the record, when available.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.14.
+     *
+     * The field enables network operators and/ or manufacturers to add their
+     * own extensions to the standard record definitions.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.71.
+     *
      * @public
      * @readonly
      */
     readonly recordExtensions: OPTIONAL<ManagementExtension[]>;
     /**
      * @summary `systemType`.
+     * @description
+     *
+     * 2G conditional, 3G mandatory, SMS over SGs mandatory. This field is
+     * present when either the UTRAN or GERAN air-interface is used. It is
+     * omitted when the service is provided by a GSM air interface. The field
+     * shall be set to "unknown" for SMS delivery using E-UTRAN.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.14.
+     *
+     * This field indicates the use of GERAN, UTRAN (or a value of unknown).
+     * This field is present when either the UTRAN or GERAN air-interface is
+     * used on call set-up. For an open CDR in a 2G NE (responsible for the
+     * CDR), the field is not present (even if the call is handed off to a 3G
+     * air interface). For a CDR in a 3G NE (responsible for the CDR), the value
+     * unknown shall be used after handover.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.91.
+     *
      * @public
      * @readonly
      */
     readonly systemType: OPTIONAL<SystemType>;
     /**
      * @summary `cAMELSMSInformation`.
+     * @description
+     *
+     * 2G, 3G, and SMS over SGs conditional. Set of CAMEL information IEs. Each
+     * of these IEs contains information related to CAMEL call leg related for
+     * the SMS. Shall be present only if CAMEL is applied.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.14.
+     *
      * @public
      * @readonly
      */
     readonly cAMELSMSInformation: OPTIONAL<CAMELSMSInformation>;
     /**
      * @summary `locationExtension`.
+     * @description
+     *
+     * 2G not applicable, 3G not applicable, SMS over SGs operator-provisionable
+     * mandatory. The 12 most significant bits of the E-UTRAN Cell Identity are
+     * included if E-UTRAN is used to deliver the SMS.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.14.
+     *
+     * The Location Extension field contains the 12 most significant bits from
+     * the Cell Identity field. This is used when SMS over SGs (defined in TS
+     * 36.413 [226]) is applied and the access is E-UTRAN.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.46.
+     *
      * @public
      * @readonly
      */
@@ -187,7 +361,7 @@ class MTSMSRecord {
     /**
      * @summary Restructures an object into a MTSMSRecord
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `MTSMSRecord`.
      * 
      * @public
@@ -212,9 +386,9 @@ class MTSMSRecord {
 /**
  * @summary The Leading Root Component Types of MTSMSRecord
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -238,9 +412,9 @@ const _root_component_type_list_1_spec_for_MTSMSRecord: $.ComponentSpec[] = [
 /**
  * @summary The Trailing Root Component Types of MTSMSRecord
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -251,9 +425,9 @@ const _root_component_type_list_2_spec_for_MTSMSRecord: $.ComponentSpec[] = [
 /**
  * @summary The Extension Addition Component Types of MTSMSRecord
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * @constant
  */
 export

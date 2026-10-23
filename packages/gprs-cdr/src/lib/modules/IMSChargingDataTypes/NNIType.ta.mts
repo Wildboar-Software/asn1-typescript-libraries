@@ -6,7 +6,19 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary NNIType
  * @description
- * 
+ *
+ * This field indicates whether the type of used NNI is non-roaming, roaming
+ * with loopback routing, or roaming without loopback routing. The loopback
+ * indication is either sent by the S-CSCF in forward direction within the
+ * initial SIP request or sent by TRF in backward direction and received by
+ * the ATCF, AS and P-CSCF in the final SIP response.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.31B.
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 6.1.3.10.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,7 +40,19 @@ enum _enum_for_NNIType {
 /**
  * @summary NNIType
  * @description
- * 
+ *
+ * This field indicates whether the type of used NNI is non-roaming, roaming
+ * with loopback routing, or roaming without loopback routing. The loopback
+ * indication is either sent by the S-CSCF in forward direction within the
+ * initial SIP request or sent by TRF in backward direction and received by
+ * the ATCF, AS and P-CSCF in the final SIP response.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.31B.
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 6.1.3.10.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -46,7 +70,19 @@ type NNIType = _enum_for_NNIType;
 /**
  * @summary NNIType
  * @description
- * 
+ *
+ * This field indicates whether the type of used NNI is non-roaming, roaming
+ * with loopback routing, or roaming without loopback routing. The loopback
+ * indication is either sent by the S-CSCF in forward direction within the
+ * initial SIP request or sent by TRF in backward direction and received by
+ * the ATCF, AS and P-CSCF in the final SIP response.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.31B.
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 6.1.3.10.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -63,6 +99,10 @@ const NNIType = _enum_for_NNIType;
 
 /**
  * @summary NNIType_non_roaming
+ * @description
+ *
+ * The NNI is not a roaming interface (clause 6.1.3.10).
+ *
  * @constant
  * @type {number}
  */
@@ -71,6 +111,10 @@ const NNIType_non_roaming: NNIType = NNIType.non_roaming; /* LONG_NAMED_ENUMERAT
 
 /**
  * @summary non_roaming
+ * @description
+ *
+ * The NNI is not a roaming interface (clause 6.1.3.10).
+ *
  * @constant
  * @type {number}
  */
@@ -79,6 +123,10 @@ const non_roaming: NNIType = NNIType.non_roaming; /* SHORT_NAMED_ENUMERATED_VALU
 
 /**
  * @summary NNIType_roaming_without_loopback
+ * @description
+ *
+ * Roaming NNI without loopback routing (clause 6.1.3.10).
+ *
  * @constant
  * @type {number}
  */
@@ -87,6 +135,10 @@ const NNIType_roaming_without_loopback: NNIType = NNIType.roaming_without_loopba
 
 /**
  * @summary roaming_without_loopback
+ * @description
+ *
+ * Roaming NNI without loopback routing (clause 6.1.3.10).
+ *
  * @constant
  * @type {number}
  */
@@ -95,6 +147,11 @@ const roaming_without_loopback: NNIType = NNIType.roaming_without_loopback; /* S
 
 /**
  * @summary NNIType_roaming_with_loopback
+ * @description
+ *
+ * Roaming NNI with loopback. The TRF inserts the loopback indication on
+ * the response (clause 5.1.2.7).
+ *
  * @constant
  * @type {number}
  */
@@ -103,6 +160,11 @@ const NNIType_roaming_with_loopback: NNIType = NNIType.roaming_with_loopback; /*
 
 /**
  * @summary roaming_with_loopback
+ * @description
+ *
+ * Roaming NNI with loopback. The TRF inserts the loopback indication on
+ * the response (clause 5.1.2.7).
+ *
  * @constant
  * @type {number}
  */

@@ -14,6 +14,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SubjectComponent
  * @description
  * 
+ * Subject component carried with the MM component list. TS 32.270 does not
+ * define `subjectType` or `subjectSize`.
+ *
+ * 3GPP TS 32.270 V19.0.0 clause 6.1.1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +33,24 @@ export
 class SubjectComponent {
     /**
      * @summary `subjectType`.
+     * @description
+     *
+     * Type of the subject component. TS 32.270 does not define it.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.1.1.
+     *
      * @public
      * @readonly
      */
     readonly subjectType: OCTET_STRING;
     /**
      * @summary `subjectSize`.
+     * @description
+     *
+     * Size of the subject component. TS 32.270 does not define it.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.1.1.
+     *
      * @public
      * @readonly
      */

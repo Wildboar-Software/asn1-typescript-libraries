@@ -12,6 +12,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SCFAddress
  * @description
  * 
+ * Address of the CAMEL gsmSCF. TS 32.251 places CAMEL online charging
+ * outside its scope (clause 5.3.1.0).
+ * 
+ * 3GPP TS 32.251 V19.0.0.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

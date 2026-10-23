@@ -11,7 +11,20 @@ import { TariffInformation, _decode_TariffInformation, _encode_TariffInformation
 /**
  * @summary RealTimeTariffInformation
  * @description
- * 
+ *
+ * This is a field containing the real time tariff information that may be
+ * exchanged in the SIP transaction, encoded in a XML body as described in
+ * the TS 29.658 [225]. The RTTI information may be captured in the charging
+ * information and it is operator configurable as whether it is used in its
+ * original XML format or mapped on a detailed structure of parameters. The
+ * RTTI information XML schema in XML format is given in the TS 29.658 [225].
+ * The Tariff Information structure of parameters is provided in the TS
+ * 32.280 [40]. The Real Time Tariff Information contains one of the
+ * following elements: Tariff XML; Tariff Information. These field elements
+ * are described in the appropriate subclause.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.37.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

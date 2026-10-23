@@ -14,6 +14,12 @@ import { _decode_APNRateControlParameters_rateControlTimeUnit, _encode_APNRateCo
  * @summary APNRateControlParameters
  * @description
  * 
+ * Parameters of an APN Rate Control enforced by the P-GW (table 6.1.3.1).
+ * TS 32.251 does not define the individual components beyond identifying
+ * the APN Rate Control as a charging condition.
+ * 
+ * 3GPP TS 32.251 V19.0.0.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

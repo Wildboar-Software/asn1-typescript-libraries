@@ -12,7 +12,23 @@ import { MMSRecipientType, _decode_MMSRecipientType, _encode_MMSRecipientType } 
 /**
  * @summary MMSAgentAddress
  * @description
- * 
+ *
+ * This field contains a forwarding MMS User Agent address. The MMS supports
+ * the use of E-Mail addresses (RFC 822 [400]), MSISDN (E.164[308]) or IP
+ * addresses.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.12.
+ *
+ * Address of an MMS User Agent. The same type is used for the originator,
+ * the recipient, the sender, and the forwarding user agent, depending on
+ * the CDR field. The coded alternatives are an email address, an MSISDN,
+ * or a short code. `mMSRecipientType`, when present, says whether the
+ * address is a To, Cc, or Bcc recipient. Clause 6.4.2 describes an MMS
+ * address other than SUPI or GPSI as, for example, an email address or a
+ * short code.
+ *
+ * 3GPP TS 32.270 V19.0.0 clauses 6.1.1.1 and 6.4.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +44,21 @@ export
 class MMSAgentAddress {
     /**
      * @summary `mMSAgentAddressData`.
+     * @description
+     *
+     * The User Agent address: an email address, an MSISDN, or a short code.
+     *
+     * 3GPP TS 32.270 V19.0.0 clauses 6.3.2 and 6.4.2.
      * @public
      * @readonly
      */
     readonly mMSAgentAddressData: MMSAgentAddressData;
     /**
      * @summary `mMSRecipientType`.
+     * @description
+     *
+     * To, Cc, or Bcc role of this address. Absent when the role is not
+     * indicated. TS 32.270 does not define the indication.
      * @public
      * @readonly
      */

@@ -6,7 +6,23 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ChangeCondition
  * @description
- * 
+ *
+ * Why a talk-burst exchange container was closed and a new
+ * container added.
+ *
+ * Charging conditions categorize charging, for example per
+ * tariff period or by the number of participants. An interim
+ * report is also sent for a session modification (a change in
+ * media) or a usage threshold (volume, duration, or the number
+ * of charging-condition changes). Interim CDRs are also governed
+ * by configurable timers at the PoC Server.
+ *
+ * TS 32.272 does not define each enumerated value. The value
+ * comments below use only the clause text that matches the name.
+ *
+ * 3GPP TS 32.272 V19.0.0 clauses 5.2.1, 6.1.3.2.1, and 6.3.1.2.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.3.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,7 +50,23 @@ enum _enum_for_ChangeCondition {
 /**
  * @summary ChangeCondition
  * @description
- * 
+ *
+ * Why a talk-burst exchange container was closed and a new
+ * container added.
+ *
+ * Charging conditions categorize charging, for example per
+ * tariff period or by the number of participants. An interim
+ * report is also sent for a session modification (a change in
+ * media) or a usage threshold (volume, duration, or the number
+ * of charging-condition changes). Interim CDRs are also governed
+ * by configurable timers at the PoC Server.
+ *
+ * TS 32.272 does not define each enumerated value. The value
+ * comments below use only the clause text that matches the name.
+ *
+ * 3GPP TS 32.272 V19.0.0 clauses 5.2.1, 6.1.3.2.1, and 6.3.1.2.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.3.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -55,7 +87,23 @@ type ChangeCondition = _enum_for_ChangeCondition;
 /**
  * @summary ChangeCondition
  * @description
- * 
+ *
+ * Why a talk-burst exchange container was closed and a new
+ * container added.
+ *
+ * Charging conditions categorize charging, for example per
+ * tariff period or by the number of participants. An interim
+ * report is also sent for a session modification (a change in
+ * media) or a usage threshold (volume, duration, or the number
+ * of charging-condition changes). Interim CDRs are also governed
+ * by configurable timers at the PoC Server.
+ *
+ * TS 32.272 does not define each enumerated value. The value
+ * comments below use only the clause text that matches the name.
+ *
+ * 3GPP TS 32.272 V19.0.0 clauses 5.2.1, 6.1.3.2.1, and 6.3.1.2.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.3.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -75,6 +123,12 @@ const ChangeCondition = _enum_for_ChangeCondition;
 
 /**
  * @summary ChangeCondition_serviceChange
+ * @description
+ *
+ * Session modification, for example a change in media.
+ *
+ * 3GPP TS 32.272 V19.0.0 clause 6.1.3.2.1.
+ *
  * @constant
  * @type {number}
  */
@@ -91,6 +145,13 @@ const serviceChange: ChangeCondition = ChangeCondition.serviceChange; /* SHORT_N
 
 /**
  * @summary ChangeCondition_volumeLimit
+ * @description
+ *
+ * Volume usage threshold. Talk-burst volume is one of the three
+ * units a talk burst can be metered in.
+ *
+ * 3GPP TS 32.272 V19.0.0 clauses 5.1.1 and 6.1.3.2.1.
+ *
  * @constant
  * @type {number}
  */
@@ -107,6 +168,13 @@ const volumeLimit: ChangeCondition = ChangeCondition.volumeLimit; /* SHORT_NAMED
 
 /**
  * @summary ChangeCondition_timeLimit
+ * @description
+ *
+ * Duration usage threshold. Interim CDRs are also governed by
+ * configurable timers at the PoC Server.
+ *
+ * 3GPP TS 32.272 V19.0.0 clauses 5.2.1 and 6.1.3.2.1.
+ *
  * @constant
  * @type {number}
  */
@@ -123,6 +191,14 @@ const timeLimit: ChangeCondition = ChangeCondition.timeLimit; /* SHORT_NAMED_ENU
 
 /**
  * @summary ChangeCondition_numberofTalkBurstLimit
+ * @description
+ *
+ * TS 32.272 does not define this value on its own. Talk bursts
+ * may be metered as a count, and a usage threshold can close the
+ * container.
+ *
+ * 3GPP TS 32.272 V19.0.0 clauses 5.1.1 and 6.1.3.2.1.
+ *
  * @constant
  * @type {number}
  */
@@ -139,6 +215,12 @@ const numberofTalkBurstLimit: ChangeCondition = ChangeCondition.numberofTalkBurs
 
 /**
  * @summary ChangeCondition_numberofActiveParticipants
+ * @description
+ *
+ * Charging categorized by the number of participants.
+ *
+ * 3GPP TS 32.272 V19.0.0 clauses 5.1.3 and 6.3.1.2.
+ *
  * @constant
  * @type {number}
  */
@@ -155,6 +237,12 @@ const numberofActiveParticipants: ChangeCondition = ChangeCondition.numberofActi
 
 /**
  * @summary ChangeCondition_tariffTime
+ * @description
+ *
+ * Charging categorized per tariff period.
+ *
+ * 3GPP TS 32.272 V19.0.0 clause 6.3.1.2.
+ *
  * @constant
  * @type {number}
  */

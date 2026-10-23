@@ -19,7 +19,30 @@ import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExt
 /**
  * @summary ICSregisterRecord
  * @description
- * 
+ *
+ * ICS registration CDR. When generation is enabled, the MSC server enhanced
+ * for ICS creates one each time it registers, re-registers, or de-registers
+ * a subscriber towards the IMS. `servedMSISDN` is the IMS user's E.164
+ * identity. The MSC generates the ICID and includes it for correlation. On a
+ * REGISTER it also generates the inter-operator identifier that identifies
+ * the networks involved (clause 5.1.3.19).
+ *
+ * `interOperatorIdentifiers` is the originating and terminating IOI pair
+ * from the P-Charging-Vector, and it may occur several times.
+ * `transit_IOI_Lists` is the Transit-IOI list from that header and may also
+ * occur several times. `privateUserID` is the IMS private user identity
+ * reserved for IMS registrations. The table also describes a public user
+ * identity in the same field; this component is a single graphic string.
+ *
+ * `newLocation` follows the VLR location-update layout, including the
+ * E-UTRAN split of the cell identity. `locationExtension` holds the 12 most
+ * significant bits of the E-UTRAN cell identity when the update is from
+ * E-UTRAN.
+ *
+ * Categories are M, C, OM, and OC as in TS 32.240 clause 5.4.
+ *
+ * 3GPP TS 32.250 V19.0.0 clauses 5.1.3.19, 5.2.1.29, and 6.1.3.31.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,85 +64,223 @@ import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExt
  *    recordExtensions           [12] IMPLICIT SET  OF
  *       ManagementExtension OPTIONAL}
  * ```
- * 
  * @class
  */
 export
 class ICSregisterRecord {
     /**
      * @summary `recordType`.
+     * @description
+     *
+     * 2G and 3G mandatory. ICS register.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.31.
+     *
+     * The field identifies the type of the record e.g. mobile originated,
+     * mobile terminated etc.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.72.
+     *
      * @public
      * @readonly
      */
     readonly recordType: RecordType;
     /**
      * @summary `servedIMSI`.
+     * @description
+     *
+     * 2G and 3G mandatory. IMSI of the served MS.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.31.
+     *
+     * This fields contains the international mobile subscriber identity (IMSI)
+     * of the served party. The term "served" party is used to describe the
+     * mobile subscriber involved in the transaction recorded e.g. the calling
+     * subscriber in case of an MOC record. The structure of the IMSI is defined
+     * in TS 23.003 [200].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.79.
+     *
      * @public
      * @readonly
      */
     readonly servedIMSI: OCTET_STRING;
     /**
      * @summary `servedMSISDN`.
+     * @description
+     *
+     * 2G and 3G operator-provisionable mandatory. IMS user E.164 identities.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.31.
+     *
+     * This fields contains the mobile station ISDN number (MSISDN) of the
+     * served party. The term "served" party is used to describe the mobile
+     * subscriber involved in the transaction recorded e.g. the called
+     * subscriber in case of an MTC record. In case of multi-numbering the
+     * MSISDN stored in a MOC record will be the primary MSISDN of the calling
+     * party. The structure of the MSISDN is defined in TS 23.003 [200].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.80.
+     *
      * @public
      * @readonly
      */
     readonly servedMSISDN: OCTET_STRING;
     /**
      * @summary `privateUserID`.
+     * @description
+     *
+     * 2G and 3G operator-provisionable mandatory. This field contains the IMS
+     * Private User Identity and Public User Identity specifically reserved for
+     * IMS registrations.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.31.
+     *
      * @public
      * @readonly
      */
     readonly privateUserID: OPTIONAL<GraphicString>;
     /**
      * @summary `recordingEntity`.
+     * @description
+     *
+     * 2G and 3G mandatory. The E.164 number of the entity (ICS-MSC) generating
+     * the record.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.31.
+     *
+     * This field contains the E.164 [308] number assigned to the entity (MSC,
+     * VLR, HLR etc.) that produced the record. For further details concerning
+     * the structure of MSC and location register numbers see TS 23.003 [200].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.73.
+     *
      * @public
      * @readonly
      */
     readonly recordingEntity: OCTET_STRING;
     /**
      * @summary `newLocation`.
+     * @description
+     *
+     * 2G M M OM, 3G M M OM. MSC E.164 Number Location Area Code Cell
+     * Identification or Service Area Code and MCC+MNC The Cell Identity
+     * contains the 16 least significant bits and the Tracking Area Code is
+     * placed in the Location Area Code field if E-UTRAN location update.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.31.
+     *
      * @public
      * @readonly
      */
     readonly newLocation: Location_info;
     /**
      * @summary `locationExtension`.
+     * @description
+     *
+     * 2G and 3G operator-provisionable conditional. The 12 most significant
+     * bits of the E-UTRAN Cell Identity are included if E-UTRAN location
+     * update.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.31.
+     *
+     * The Location Extension field contains the 12 most significant bits from
+     * the Cell Identity field. This is used when SMS over SGs (defined in TS
+     * 36.413 [226]) is applied and the access is E-UTRAN.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.46.
+     *
      * @public
      * @readonly
      */
     readonly locationExtension: OPTIONAL<BIT_STRING>;
     /**
      * @summary `updateTime`.
+     * @description
+     *
+     * 2G and 3G mandatory. Time at which the update was invoked.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.31.
+     *
      * @public
      * @readonly
      */
     readonly updateTime: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `iMS_Charging_Identifier`.
+     * @description
+     *
+     * 2G and 3G operator-provisionable mandatory. This parameter holds the IMS
+     * charging identifier (ICID) as generated by the enhanced MSC server with
+     * SIP interface.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.31.
+     *
      * @public
      * @readonly
      */
     readonly iMS_Charging_Identifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `interOperatorIdentifiers`.
+     * @description
+     *
+     * 2G and 3G operator-provisionable conditional. Holds the identification of
+     * the home network (originating and terminating) if exchanged via SIP
+     * signalling, as recorded in the P-Charging-Vector header. This grouped
+     * field may occur several times in one CDR.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.31.
+     *
      * @public
      * @readonly
      */
     readonly interOperatorIdentifiers: OPTIONAL<InterOperatorIdentifiers[]>;
     /**
      * @summary `transit_IOI_Lists`.
+     * @description
+     *
+     * 2G and 3G operator-provisionable conditional. This parameter corresponds
+     * to Transit-IOI List of the P-Charging-Vector defined in TS 24.229 [221].
+     * This field may occur several times in one CDR.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.31.
+     *
      * @public
      * @readonly
      */
     readonly transit_IOI_Lists: OPTIONAL<GraphicString[]>;
     /**
      * @summary `updateResult`.
+     * @description
+     *
+     * 2G and 3G conditional. The result of the location update if unsuccessful.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.31.
+     *
+     * This field contains the result of the location update request as defined
+     * in the MAP (TS 29.002 [214]). Note that this field is only provided if
+     * the attempted update was unsuccessful.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.93.
+     *
      * @public
      * @readonly
      */
     readonly updateResult: OPTIONAL<HLRIntResult>;
     /**
      * @summary `recordExtensions`.
+     * @description
+     *
+     * 2G and 3G operator-provisionable conditional. A set of network/
+     * manufacturer specific extensions to the record, when available.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.31.
+     *
+     * The field enables network operators and/ or manufacturers to add their
+     * own extensions to the standard record definitions.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.71.
+     *
      * @public
      * @readonly
      */
@@ -174,7 +335,7 @@ class ICSregisterRecord {
     /**
      * @summary Restructures an object into a ICSregisterRecord
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `ICSregisterRecord`.
      * 
      * @public
@@ -193,9 +354,9 @@ class ICSregisterRecord {
 /**
  * @summary The Leading Root Component Types of ICSregisterRecord
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -218,9 +379,9 @@ const _root_component_type_list_1_spec_for_ICSregisterRecord: $.ComponentSpec[] 
 /**
  * @summary The Trailing Root Component Types of ICSregisterRecord
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -231,9 +392,9 @@ const _root_component_type_list_2_spec_for_ICSregisterRecord: $.ComponentSpec[] 
 /**
  * @summary The Extension Addition Component Types of ICSregisterRecord
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * @constant
  */
 export

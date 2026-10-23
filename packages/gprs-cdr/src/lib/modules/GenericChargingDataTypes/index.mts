@@ -1,6 +1,9 @@
 /**
  * @description
  *
+ * Generic CDR parameters are specified in 3GPP TS 32.298 V20.1.0 clause
+ * 5.1.1.
+ *
  * ASN.1 module `GenericChargingDataTypes`.
  *
  * Identical assignments that also appear in other charging modules

@@ -11,7 +11,12 @@ import { SubscriberEquipmentType, _decode_SubscriberEquipmentType, _encode_Subsc
 /**
  * @summary SubscriberEquipmentNumber
  * @description
- * 
+ *
+ * The Subscriber Equipment Number field contains the identification of the
+ * User Equipment (UE) accessing the 3GPP system.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.1.7.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

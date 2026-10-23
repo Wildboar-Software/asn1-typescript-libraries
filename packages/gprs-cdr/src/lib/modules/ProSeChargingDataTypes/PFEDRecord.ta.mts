@@ -25,7 +25,28 @@ import { ProximityRequestRenewalInfoBlock, _decode_ProximityRequestRenewalInfoBl
 /**
  * @summary PFEDRecord
  * @description
- * 
+ *
+ * ProSe Function EPC-level Discovery CDR (PF-ED-CDR). When enabled, the ProSe
+ * Function produces one record for each EPC-level discovery request for a
+ * specific user received from a ProSe-enabled UE. Renewal requests for that
+ * user are written into the same CDR as the initial request.
+ *
+ * A Proximity Request opens the CDR and captures the requestor's EPC ProSe user
+ * ID, the application-layer user IDs, the application ID, the time window, the
+ * range class, and the UE location. A Proximity Request Renewal updates that
+ * CDR. A Proximity Request Reject closes it and records the reject cause. A
+ * Proximity Request Cancellation closes it and records whether a proximity
+ * alert was sent.
+ *
+ * EPC-level Discovery is not supported in 5GS.
+ *
+ * Field categories follow TS 32.240 clause 5.4 and are copied from table
+ * 6.1.3.3.1.
+ *
+ * 3GPP TS 32.277 V19.2.0 clauses 5.1.1, 5.1.2.2, 5.2.1.1, 5.2.1.3, and 6.1.3.3.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.0.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -70,180 +91,441 @@ export
 class PFEDRecord {
     /**
      * @summary `recordType`.
+     * @description
+     *
+     * Category M. ProSe Function EPC-level Discovery record. Set this to
+     * `pFEDRecord`.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.3.1.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.30.
+     *
      * @public
      * @readonly
      */
     readonly recordType: RecordType;
     /**
      * @summary `retransmission`.
+     * @description
+     *
+     * Category Oc. Present when information from retransmitted Accounting
+     * Requests was used in this CDR.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.3.1.
+     *
      * @public
      * @readonly
      */
     readonly retransmission: OPTIONAL<NULL>;
     /**
      * @summary `serviceContextID`.
+     * @description
+     *
+     * Service Context Id from Diameter Accounting, present when Diameter
+     * Accounting was used and the accounting message included it. It identifies
+     * the service, subsystem, or domain, and the release, that the CDR applies
+     * to. The contents are described in TS 32.299.
+     *
+     * Table 6.1.3.3.1 does not list this field.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.1.2.
+     *
      * @public
      * @readonly
      */
     readonly serviceContextID: OPTIONAL<UTF8String>;
     /**
      * @summary `servedIMSI`.
+     * @description
+     *
+     * Category C. IMSI of the served party, the mobile subscriber using
+     * EPC-level Discovery.
+     *
+     * 3GPP TS 32.277 V19.2.0 clauses 5.1.2.2 and table 6.1.3.3.1.
+     *
      * @public
      * @readonly
      */
     readonly servedIMSI: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `proSeFunctionIPAddress`.
+     * @description
+     *
+     * Category Oc. IP address of the ProSe Function.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.3.1.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.18.
+     *
      * @public
      * @readonly
      */
     readonly proSeFunctionIPAddress: OPTIONAL<IPAddress>;
     /**
      * @summary `chargingCharacteristics`.
+     * @description
+     *
+     * Category M. The Charging Characteristics applied to the ProSe EPC-level
+     * discovery. The HSS supplies them to the HPLMN ProSe Function with the
+     * subscription. The ProSe Function uses the profile to choose online or
+     * offline charging. The VPLMN and local PLMN ProSe Functions only support
+     * offline charging for the UE, and do not need Charging Characteristics. If
+     * the HSS supplies none, the ProSe Function applies a pre-configured
+     * default: home default behaviour when a subscriber of its PLMN uses ProSe
+     * in the HPLMN, or roaming default behaviour when that subscriber uses
+     * ProSe in another PLMN. Different parameters may be configured for
+     * different ProSe services. Examples are in TS 32.251 annex A.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.3.1 and annex A.1.
+     *
      * @public
      * @readonly
      */
     readonly chargingCharacteristics: OCTET_STRING;
     /**
      * @summary `chChSelectionMode`.
+     * @description
+     *
+     * Category OM. How the Charging Characteristics were selected. Annex A
+     * names the home default and roaming default behaviours used when the HSS
+     * does not supply Charging Characteristics. The value comes from the shared
+     * `ChChSelectionMode` enumeration; TS 32.277 does not define those values.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.3.1 and annex A.1.
+     *
      * @public
      * @readonly
      */
     readonly chChSelectionMode: OPTIONAL<ChChSelectionMode>;
     /**
      * @summary `recordExtensions`.
+     * @description
+     *
+     * Category Oc. Network operator or manufacturer specific extensions to the
+     * record. Present when such an extension exists.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.3.1.
+     *
      * @public
      * @readonly
      */
     readonly recordExtensions: OPTIONAL<ManagementExtension[]>;
     /**
      * @summary `proSeRequestTimestamp`.
+     * @description
+     *
+     * Category Oc. Time the first ProSe proximity request was received from the
+     * UE. Each renewal has its own timestamp in
+     * `proximityRequestRenewalInfoBlockList`.
+     *
+     * 3GPP TS 32.277 V19.2.0 clauses 5.1.2.2 and table 6.1.3.3.1.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.22.
+     *
      * @public
      * @readonly
      */
     readonly proSeRequestTimestamp: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `roleofUE`.
+     * @description
+     *
+     * Category Oc. Role of the UE using ProSe. For EPC-level Discovery the
+     * roles are requestor UE and requested UE.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.3.1.
+     *
      * @public
      * @readonly
      */
     readonly roleofUE: OPTIONAL<ProSeUERole>;
     /**
      * @summary `pCThreeEPCControlProtocolCause`.
+     * @description
+     *
+     * Category Oc. Reason the ProSe Function rejected a Proximity Request from
+     * the UE. A Proximity Request Reject closes the CDR and captures this
+     * cause. TS 32.277 does not list the integer values.
+     *
+     * 3GPP TS 32.277 V19.2.0 clauses 5.2.1.3 and table 6.1.3.3.1.
+     *
      * @public
      * @readonly
      */
     readonly pCThreeEPCControlProtocolCause: OPTIONAL<INTEGER>;
     /**
      * @summary `proseFunctionPLMNIdentifier`.
+     * @description
+     *
+     * Category OC. PLMN identity of the ProSe Function.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.3.1.
+     *
      * @public
      * @readonly
      */
     readonly proseFunctionPLMNIdentifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `proseFunctionId`.
+     * @description
+     *
+     * Category Oc. FQDN that identifies the ProSe Function.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.3.1.
+     *
      * @public
      * @readonly
      */
     readonly proseFunctionId: OPTIONAL<UTF8String>;
     /**
      * @summary `recordOpeningTime`.
+     * @description
+     *
+     * Table 6.1.3.3.1 does not describe this field.
+     *
+     * 3GPP TS 32.277 V19.2.0 clause 6.1.3.3.
+     *
      * @public
      * @readonly
      */
     readonly recordOpeningTime: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `recordClosureTime`.
+     * @description
+     *
+     * Table 6.1.3.3.1 does not describe this field.
+     *
+     * 3GPP TS 32.277 V19.2.0 clause 6.1.3.3.
+     *
      * @public
      * @readonly
      */
     readonly recordClosureTime: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `applicationID`.
+     * @description
+     *
+     * Category Oc. Globally unique identifier of a specific 3rd party
+     * application. Captured when the Proximity Request opens the CDR.
+     *
+     * 3GPP TS 32.277 V19.2.0 clauses 5.2.1.3 and table 6.1.3.3.1.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.3.
+     *
      * @public
      * @readonly
      */
     readonly applicationID: OPTIONAL<UTF8String>;
     /**
      * @summary `requestorApplicationLayerUserID`.
+     * @description
+     *
+     * Category Oc. User identifier assigned in the 3rd party application for
+     * the user who initiated the EPC-level ProSe discovery request. Captured
+     * when the Proximity Request opens the CDR.
+     *
+     * 3GPP TS 32.277 V19.2.0 clauses 5.2.1.3 and table 6.1.3.3.1.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.33.
+     *
      * @public
      * @readonly
      */
     readonly requestorApplicationLayerUserID: OPTIONAL<UTF8String>;
     /**
      * @summary `wLANLinkLayerID`.
+     * @description
+     *
+     * Category Oc. WLAN link layer ID. Clause 5.1.2.2 collects WLAN direct
+     * communication assistance information, and its timestamps, when that
+     * assistance applies. TS 32.277 does not further define this identifier.
+     *
+     * 3GPP TS 32.277 V19.2.0 clauses 5.1.2.2 and table 6.1.3.3.1.
+     *
      * @public
      * @readonly
      */
     readonly wLANLinkLayerID: OPTIONAL<UTF8String>;
     /**
      * @summary `requestorEPCProSeUserID`.
+     * @description
+     *
+     * Category Oc. Identifier the ProSe Function generated for the UE that
+     * initiated the EPC-level ProSe discovery request. Captured when the
+     * Proximity Request opens the CDR.
+     *
+     * 3GPP TS 32.277 V19.2.0 clauses 5.2.1.3 and table 6.1.3.3.1.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.34.
+     *
      * @public
      * @readonly
      */
     readonly requestorEPCProSeUserID: OPTIONAL<UTF8String>;
     /**
      * @summary `requestedApplicationLayerUserID`.
+     * @description
+     *
+     * Category Oc. User identifier assigned in the 3rd party application for
+     * the user targeted by the proximity request.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.3.1.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.31.
+     *
      * @public
      * @readonly
      */
     readonly requestedApplicationLayerUserID: OPTIONAL<UTF8String>;
     /**
      * @summary `requestedPLMNIdentifier`.
+     * @description
+     *
+     * Category Oc. PLMN identifier of the user targeted by the proximity
+     * request.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.3.1.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.32.
+     *
      * @public
      * @readonly
      */
     readonly requestedPLMNIdentifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `timeWindow`.
+     * @description
+     *
+     * Category Oc. Time interval, in minutes, during which the first proximity
+     * request is valid. This is the duration of EPC-level Discovery authorized
+     * for the UE. A renewal carries its own window in
+     * `proximityRequestRenewalInfoBlockList`.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.39 limits a time window to 1-1440
+     * minutes.
+     *
+     * 3GPP TS 32.277 V19.2.0 clauses 5.1.2.2 and table 6.1.3.3.1.
+     *
      * @public
      * @readonly
      */
     readonly timeWindow: OPTIONAL<INTEGER>;
     /**
      * @summary `rangeClass`.
+     * @description
+     *
+     * Category Oc. Range class of the first proximity request: the discovery
+     * range authorized for the UE, for example a geographic limit. A renewal
+     * carries its own range class in `proximityRequestRenewalInfoBlockList`.
+     *
+     * 3GPP TS 32.277 V19.2.0 clauses 5.1.2.2 and table 6.1.3.3.1.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.28.
+     *
      * @public
      * @readonly
      */
     readonly rangeClass: OPTIONAL<RangeClass>;
     /**
      * @summary `uELocation`.
+     * @description
+     *
+     * Category Oc. UE location, at the best known accuracy, when the first
+     * proximity request was received. A Cell ID or geo-location coordinates are
+     * examples.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.40 sets UE Location to the 28-bit
+     * cell identity of the ECGI, taken from the UE's lower layers.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.3.1.
+     *
      * @public
      * @readonly
      */
     readonly uELocation: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `proximityAlertIndication`.
+     * @description
+     *
+     * Category Oc. Whether a proximity alert was sent before the proximity
+     * request was cancelled. Recorded when a Proximity Request Cancellation
+     * closes the CDR.
+     *
+     * 3GPP TS 32.277 V19.2.0 clauses 5.2.1.3 and table 6.1.3.3.1.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.24.
+     *
      * @public
      * @readonly
      */
     readonly proximityAlertIndication: OPTIONAL<ProximityAlertIndication>;
     /**
      * @summary `proximityAlertTimestamp`.
+     * @description
+     *
+     * Category Oc. Time a proximity alert was sent, indicating that the two UEs
+     * are in proximity.
+     *
+     * 3GPP TS 32.277 V19.2.0 clauses 5.1.2.2 and table 6.1.3.3.1.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.25.
+     *
      * @public
      * @readonly
      */
     readonly proximityAlertTimestamp: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `proximityCancellationTimestamp`.
+     * @description
+     *
+     * Category Oc. Time cancellation of the proximity request was requested.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.3.1.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.26.
+     *
      * @public
      * @readonly
      */
     readonly proximityCancellationTimestamp: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `reasonforCancellation`.
+     * @description
+     *
+     * Category Oc. Why the EPC-level discovery request was cancelled: proximity
+     * alerted, time expired with no renewal, or the requestor cancelled it.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.3.1.
+     *
      * @public
      * @readonly
      */
     readonly reasonforCancellation: OPTIONAL<ReasonforCancellation>;
     /**
      * @summary `causeForRecClosing`.
+     * @description
+     *
+     * Category M. Reason this ProSe Function released the record.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.3.1.
+     *
      * @public
      * @readonly
      */
     readonly causeForRecClosing: ProSeCauseForRecClosing;
     /**
      * @summary `proximityRequestRenewalInfoBlockList`.
+     * @description
+     *
+     * Category Oc. One block for each Proximity Request Renewal captured in
+     * this CDR. A renewal updates the open CDR for the initial request with a
+     * new UE location, time window, and range class. Each block is table
+     * 6.1.3.3.2.
+     *
+     * 3GPP TS 32.277 V19.2.0 clauses 5.2.1.3 and 6.1.3.3.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.27.
+     *
      * @public
      * @readonly
      */

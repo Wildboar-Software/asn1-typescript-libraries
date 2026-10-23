@@ -13,7 +13,22 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Location_info
  * @description
- * 
+ *
+ * Location on a VLR location update and on an ICS registration. `mscNumber`
+ * is the VMSC E.164 number. On an E-UTRAN update over SGs, the new location
+ * uses the recording entity as that number. `location_area` is the location
+ * area code, or the tracking area code for E-UTRAN. `cell_identification` is
+ * the cell identity or service area code; for E-UTRAN it is the 16 least
+ * significant bits of the E-UTRAN cell identity. `mCC_MNC` is the MCC and
+ * MNC. The 12 most significant bits of an E-UTRAN cell identity are
+ * `locationExtension` on the CDR, not in this sequence.
+ *
+ * Old location is absent for a registration. The VLR table gives the
+ * old-location categories as "C C" in 2G and 3G and "- C" for a location
+ * update over SGs, without saying which component each code applies to.
+ *
+ * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.11 and 6.1.3.31.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -23,31 +38,54 @@ import * as $ from "@wildboar/asn1/functional";
  *    cell-identification   [3] IMPLICIT OCTET STRING ( SIZE( 2 ) ) OPTIONAL,
  *    mCC-MNC               [4] IMPLICIT OCTET STRING ( SIZE( 3 ) ) OPTIONAL}
  * ```
- * 
  * @class
  */
 export
 class Location_info {
     /**
      * @summary `mscNumber`.
+     * @description
+     *
+     * VMSC E.164 number. On an E-UTRAN location update over SGs, the new
+     * location uses the recording entity. 3GPP TS 32.250 V19.0.0 clause
+     * 6.1.3.11.
+     *
      * @public
      * @readonly
      */
     readonly mscNumber: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `location_area`.
+     * @description
+     *
+     * Location area code. For an E-UTRAN location update or SMS delivery, the
+     * tracking area code is placed here. 3GPP TS 32.250 V19.0.0 clauses
+     * 6.1.3.11 and 6.1.3.13.
+     *
      * @public
      * @readonly
      */
     readonly location_area: OCTET_STRING;
     /**
      * @summary `cell_identification`.
+     * @description
+     *
+     * Cell identity or service area code. For E-UTRAN this is the 16 least
+     * significant bits of the E-UTRAN cell identity. The 12 most significant
+     * bits are `locationExtension` on the CDR. 3GPP TS 32.250 V19.0.0 clauses
+     * 6.1.3.11 and 6.1.3.13.
+     *
      * @public
      * @readonly
      */
     readonly cell_identification: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `mCC_MNC`.
+     * @description
+     *
+     * MCC and MNC of the location, carried with the location area and cell
+     * identity. 3GPP TS 32.250 V19.0.0 clause 6.1.3.11.
+     *
      * @public
      * @readonly
      */
@@ -81,7 +119,7 @@ class Location_info {
     /**
      * @summary Restructures an object into a Location_info
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `Location_info`.
      * 
      * @public
@@ -100,9 +138,9 @@ class Location_info {
 /**
  * @summary The Leading Root Component Types of Location_info
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -116,9 +154,9 @@ const _root_component_type_list_1_spec_for_Location_info: $.ComponentSpec[] = [
 /**
  * @summary The Trailing Root Component Types of Location_info
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -129,9 +167,9 @@ const _root_component_type_list_2_spec_for_Location_info: $.ComponentSpec[] = [
 /**
  * @summary The Extension Addition Component Types of Location_info
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * @constant
  */
 export

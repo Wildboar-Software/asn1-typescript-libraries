@@ -12,7 +12,19 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AOCParameters
  * @description
- * 
+ *
+ * Advice of Charge parameters sent to the MS on call set-up. The CDR field
+ * is present only when AoC parameters were sent. Information-level AoC only
+ * displays the charge. Charging-level AoC releases the call immediately if
+ * the MSC server does not receive the MS's approval.
+ *
+ * The parameters can depend on the basic service, supplementary service,
+ * network-specific service, MS power class, radio channel, transparency
+ * mode, and call type (clause 5.1.3.1). TS 32.250 does not define `e1`
+ * through `e7`. It cites TS 22.024 and TS 22.086 for the AoC service.
+ *
+ * 3GPP TS 32.250 V19.0.0 clauses 5.1.3.1 and 6.1.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -94,7 +106,7 @@ class AOCParameters {
     /**
      * @summary Restructures an object into a AOCParameters
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `AOCParameters`.
      * 
      * @public
@@ -113,9 +125,9 @@ class AOCParameters {
 /**
  * @summary The Leading Root Component Types of AOCParameters
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -132,9 +144,9 @@ const _root_component_type_list_1_spec_for_AOCParameters: $.ComponentSpec[] = [
 /**
  * @summary The Trailing Root Component Types of AOCParameters
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -145,9 +157,9 @@ const _root_component_type_list_2_spec_for_AOCParameters: $.ComponentSpec[] = [
 /**
  * @summary The Extension Addition Component Types of AOCParameters
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * @constant
  */
 export

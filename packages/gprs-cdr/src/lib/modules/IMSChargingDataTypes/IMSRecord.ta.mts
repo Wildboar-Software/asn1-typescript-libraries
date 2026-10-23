@@ -21,7 +21,23 @@ import { ATCFRecord, _decode_ATCFRecord, _encode_ATCFRecord } from "../IMSChargi
 /**
  * @summary IMSRecord
  * @description
- * 
+ *
+ * Offline IMS CDR produced by the CDF from Charging Data Requests sent by
+ * an IMS node, and delivered at the Bi interface (clause 6.1.3.1). A
+ * session CDR opens on Charging Data Request [Start], may be written as a
+ * partial CDR on [Interim], and closes on [Stop]. Registration,
+ * de-registration, other session-unrelated SIP procedures, and
+ * unsuccessful session attempts use Charging Data Request [Event] (clause
+ * 6.1.3.2). The I-CSCF and the BGCF are not required to stay on the path
+ * after the first INVITE, so they send only [Event] (clause 5.1.4 and
+ * clause 6.3.2). IMS charging is duration based: the IMS node does not
+ * receive volume from the access network (clause 5.1.14). Clause 6.3.4.1
+ * places the ASN.1 syntax of these parameters in TS 32.298.
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 6.1.3.1.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

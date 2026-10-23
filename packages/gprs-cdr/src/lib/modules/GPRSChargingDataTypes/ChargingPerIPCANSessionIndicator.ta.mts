@@ -7,6 +7,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ChargingPerIPCANSessionIndicator
  * @description
  * 
+ * Whether charging per IP-CAN session is active in the P-GW (tables
+ * 6.1.3.1 and 6.3.1.2.1). If the field is absent, charging per IP-CAN
+ * session is not active. When it is active, one PGW-CDR covers the
+ * session: List of Traffic Data Volumes for every bearer, and List of
+ * Service Data for FBC. chargingID then holds the Charging Id of the EPS
+ * default bearer and is the same as the PDN connection Charging Id.
+ * 
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,6 +35,15 @@ enum _enum_for_ChargingPerIPCANSessionIndicator {
  * @summary ChargingPerIPCANSessionIndicator
  * @description
  * 
+ * Whether charging per IP-CAN session is active in the P-GW (tables
+ * 6.1.3.1 and 6.3.1.2.1). If the field is absent, charging per IP-CAN
+ * session is not active. When it is active, one PGW-CDR covers the
+ * session: List of Traffic Data Volumes for every bearer, and List of
+ * Service Data for FBC. chargingID then holds the Charging Id of the EPS
+ * default bearer and is the same as the PDN connection Charging Id.
+ * 
+ * 3GPP TS 32.251 V19.0.0.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,6 +60,15 @@ type ChargingPerIPCANSessionIndicator = _enum_for_ChargingPerIPCANSessionIndicat
 /**
  * @summary ChargingPerIPCANSessionIndicator
  * @description
+ * 
+ * Whether charging per IP-CAN session is active in the P-GW (tables
+ * 6.1.3.1 and 6.3.1.2.1). If the field is absent, charging per IP-CAN
+ * session is not active. When it is active, one PGW-CDR covers the
+ * session: List of Traffic Data Volumes for every bearer, and List of
+ * Service Data for FBC. chargingID then holds the Charging Id of the EPS
+ * default bearer and is the same as the PDN connection Charging Id.
+ * 
+ * 3GPP TS 32.251 V19.0.0.
  * 
  * ### ASN.1 Definition:
  * 

@@ -20,7 +20,24 @@ import { PartialRecordType, _decode_PartialRecordType, _encode_PartialRecordType
 /**
  * @summary MTRFRecord
  * @description
- * 
+ *
+ * Mobile Terminating Roaming Forwarding CDR. When generation is enabled, the
+ * old MSC/VLR from which the call is rerouted creates one record for each
+ * call rerouted to a new MSC after a successful retrieval of routeing
+ * information. This completes the CDR set along the path and avoids charging
+ * the call twice. The new MSC/VLR charges the call as an ordinary
+ * terminating call.
+ *
+ * `roamingNumber` is the MSRN the old VMSC uses to route to the new VMSC.
+ * When the new MSC/VLR is in another PLMN, the old MSC/VLR also produces a
+ * roaming CDR, even if the new MSC/VLR is in the HPLMN. The same behaviour
+ * applies to roaming forwarding for CS fallback (clause 5.1.3.18).
+ *
+ * The table has a 3G category only. Categories are M, C, OM, and OC as in TS
+ * 32.240 clause 5.4.
+ *
+ * 3GPP TS 32.250 V19.0.0 clauses 5.1.3.18 and 6.1.3.30.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,127 +64,365 @@ import { PartialRecordType, _decode_PartialRecordType, _encode_PartialRecordType
  *       ManagementExtension OPTIONAL,
  *    partialRecordType   [19] IMPLICIT PartialRecordType OPTIONAL}
  * ```
- * 
  * @class
  */
 export
 class MTRFRecord {
     /**
      * @summary `recordType`.
+     * @description
+     *
+     * 3G mandatory. Mobile Terminating Roaming Forwarding.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.30.
+     *
+     * The field identifies the type of the record e.g. mobile originated,
+     * mobile terminated etc.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.72.
+     *
      * @public
      * @readonly
      */
     readonly recordType: RecordType;
     /**
      * @summary `servedIMSI`.
+     * @description
+     *
+     * 3G mandatory. IMSI of the called party.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.30.
+     *
+     * This fields contains the international mobile subscriber identity (IMSI)
+     * of the served party. The term "served" party is used to describe the
+     * mobile subscriber involved in the transaction recorded e.g. the calling
+     * subscriber in case of an MOC record. The structure of the IMSI is defined
+     * in TS 23.003 [200].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.79.
+     *
      * @public
      * @readonly
      */
     readonly servedIMSI: OCTET_STRING;
     /**
      * @summary `servedIMEI`.
+     * @description
+     *
+     * 3G conditional. IMEI of the called ME, if available.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.30.
+     *
+     * This fields contains the international mobile equipment identity (IMEI)
+     * or IMEISV of the equipment served. The term "served" equipment is used to
+     * describe the ME involved in the transaction recorded e.g. the called ME
+     * in case of an MTC record. The structure of the IMEI, IMEISV is specified
+     * in TS 23.003 [200] and the encoding defined in TS 29.274 [223].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.78.
+     *
      * @public
      * @readonly
      */
     readonly servedIMEI: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `servedMSISDN`.
+     * @description
+     *
+     * 3G operator-provisionable mandatory. The MSISDN of the called party.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.30.
+     *
+     * This fields contains the mobile station ISDN number (MSISDN) of the
+     * served party. The term "served" party is used to describe the mobile
+     * subscriber involved in the transaction recorded e.g. the called
+     * subscriber in case of an MTC record. In case of multi-numbering the
+     * MSISDN stored in a MOC record will be the primary MSISDN of the calling
+     * party. The structure of the MSISDN is defined in TS 23.003 [200].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.80.
+     *
      * @public
      * @readonly
      */
     readonly servedMSISDN: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `callingNumber`.
+     * @description
+     *
+     * 3G conditional. The number of the calling party if available.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.30.
+     *
      * @public
      * @readonly
      */
     readonly callingNumber: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `roamingNumber`.
+     * @description
+     *
+     * 3G mandatory. The Mobile Station Roaming Number employed by the VMSC for
+     * routing to the new VMSC.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.30.
+     *
+     * The roaming number field contains the mobile station roaming number as
+     * defined in TS 23.003 [200] and coded according to TS 29.002 [214].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.75.
+     *
      * @public
      * @readonly
      */
     readonly roamingNumber: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `recordingEntity`.
+     * @description
+     *
+     * 3G mandatory. The E.164 number of the VMSC (i.e Old VMSC the call is
+     * re-routed from).
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.30.
+     *
+     * This field contains the E.164 [308] number assigned to the entity (MSC,
+     * VLR, HLR etc.) that produced the record. For further details concerning
+     * the structure of MSC and location register numbers see TS 23.003 [200].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.73.
+     *
      * @public
      * @readonly
      */
     readonly recordingEntity: OCTET_STRING;
     /**
      * @summary `mscIncomingTKGP`.
+     * @description
+     *
+     * 3G operator-provisionable mandatory. The VMSC trunk group on which the
+     * call originated.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.30.
+     *
      * @public
      * @readonly
      */
     readonly mscIncomingTKGP: OPTIONAL<TrunkGroup>;
     /**
      * @summary `mscOutgoingTKGP`.
+     * @description
+     *
+     * 3G operator-provisionable conditional. The trunk group on which the call
+     * left the VMSC.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.30.
+     *
      * @public
      * @readonly
      */
     readonly mscOutgoingTKGP: OPTIONAL<TrunkGroup>;
     /**
      * @summary `basicService`.
+     * @description
+     *
+     * 3G mandatory. teleservice employed.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.30.
+     *
      * @public
      * @readonly
      */
     readonly basicService: OPTIONAL<BasicService>;
     /**
      * @summary `seizureTime`.
+     * @description
+     *
+     * 3G conditional. Time of incoming trunk seizure.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.30.
+     *
      * @public
      * @readonly
      */
     readonly seizureTime: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `answerTime`.
+     * @description
+     *
+     * 3G conditional. Time of answer for successful calls.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.30.
+     *
      * @public
      * @readonly
      */
     readonly answerTime: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `releaseTime`.
+     * @description
+     *
+     * 3G operator-provisionable mandatory. Time of outgoing trunk release.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.30.
+     *
      * @public
      * @readonly
      */
     readonly releaseTime: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `callDuration`.
+     * @description
+     *
+     * 3G mandatory. The chargeable duration of the connection if successful,
+     * the holding time of the incoming trunk for call attempts if unsuccessful.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.30.
+     *
+     * This field contains the relevant call duration in seconds. For incomplete
+     * calls (call attempts) the relevant duration is the call holding time from
+     * the seizure to the release of the traffic channel. For complete
+     * (answered) calls this is the chargeable duration from answer to release
+     * of the traffic channel. For partial records this is the duration of the
+     * individual partial record and not the cumulative duration of the call. It
+     * should be noted that the time stamps may be expressed in terms of tenths
+     * of seconds or even milliseconds and, as a result, the calculation of the
+     * call duration may result in the rounding or truncation of the measured
+     * duration to a whole number of seconds. Whether or not rounding or
+     * truncation is to be used is considered to be outside the scope of the
+     * present document subject to the following restrictions: If CAMEL is
+     * invoked for the call and a control relationship is existing, the call
+     * might continue after a RELEASE or a DISCONNECT from the called party side
+     * received by the gsmSSF. The call duration of the incoming leg is stored
+     * in the main body of the call record. For each outgoing leg the call
+     * duration is stored in the respective 'CAMELInformation' module. If a call
+     * leg does not reach answer status and attempt charging is enabled a
+     * 'CAMELInformation' module containing the holding time is generated.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.4.
+     *
      * @public
      * @readonly
      */
     readonly callDuration: INTEGER;
     /**
      * @summary `causeForTerm`.
+     * @description
+     *
+     * 3G mandatory. The reason for the release of the call.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.30.
+     *
+     * This field contains a generalised reason for the release of the
+     * connection including the following: normal release; CAMEL initiated call
+     * release; partial record generation; partial record call re-establishment;
+     * unsuccessful call attempt; abnormal termination during the stable phase;
+     * unauthorized network originating a location service request; unauthorized
+     * client requesting a location service; position method failure at a
+     * location service execution; unknown or unreachable LCS client at a
+     * location service request. A more detailed reason may be found in the
+     * diagnostics field.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.13.
+     *
      * @public
      * @readonly
      */
     readonly causeForTerm: CauseForTerm;
     /**
      * @summary `diagnostics`.
+     * @description
+     *
+     * 3G operator-provisionable mandatory. A more detailed reason for the
+     * release of the connection.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.30.
+     *
+     * This field includes a more detailed technical reason for the release of
+     * the connection and may contain one of the following: a MAP error from TS
+     * 29.002 [214]; a Cause from TS 24.008 [208]; a Cause from TS 29.078 [217];
+     * a Cause from ITU-T Recommendation Q.767 [309]; a LCS diagnostics
+     * according TS 29.002 [214]. The diagnostics may also be extended to
+     * include manufacturer and network specific information.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.18.
+     *
      * @public
      * @readonly
      */
     readonly diagnostics: OPTIONAL<HLRIntResult>;
     /**
      * @summary `callReference`.
+     * @description
+     *
+     * 3G mandatory. A local identifier distinguishing between transactions at
+     * the same MS.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.30.
+     *
+     * This field uniquely identifies a call or transaction on one side of the
+     * interface (i.e. 'A' or 'B' side) and is derived from the transaction
+     * identifier of TS 24.008 [208]. It is also used to identify all partial
+     * records and transactions belonging to the same connection. For the
+     * avoidance of doubt, there is no global call reference defined within GSM
+     * and the call reference field cannot be used to combine, for example, the
+     * MOC and MTC records of a mobiletomobile connection.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.5.
+     *
      * @public
      * @readonly
      */
     readonly callReference: OCTET_STRING;
     /**
      * @summary `sequenceNumber`.
+     * @description
+     *
+     * 3G conditional. Partial record sequence number, only present in case of
+     * partial records.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.30.
+     *
+     * This field contains a running sequence number employed to link the
+     * partial records generated for a particular connection.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.77.
+     *
      * @public
      * @readonly
      */
     readonly sequenceNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `recordExtensions`.
+     * @description
+     *
+     * 3G operator-provisionable conditional. A set of network/ manufacturer
+     * specific extensions to the record, when available.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.30.
+     *
+     * The field enables network operators and/ or manufacturers to add their
+     * own extensions to the standard record definitions.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.71.
+     *
      * @public
      * @readonly
      */
     readonly recordExtensions: OPTIONAL<ManagementExtension[]>;
     /**
      * @summary `partialRecordType`.
+     * @description
+     *
+     * 3G operator-provisionable conditional. Indicates the event (time limit,
+     * etc.) that caused the generation of a partial record.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.30.
+     *
+     * This field indicates the event that caused the generation of a partial
+     * record.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.64.
+     *
      * @public
      * @readonly
      */
@@ -245,7 +500,7 @@ class MTRFRecord {
     /**
      * @summary Restructures an object into a MTRFRecord
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `MTRFRecord`.
      * 
      * @public
@@ -270,9 +525,9 @@ class MTRFRecord {
 /**
  * @summary The Leading Root Component Types of MTRFRecord
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -302,9 +557,9 @@ const _root_component_type_list_1_spec_for_MTRFRecord: $.ComponentSpec[] = [
 /**
  * @summary The Trailing Root Component Types of MTRFRecord
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -315,9 +570,9 @@ const _root_component_type_list_2_spec_for_MTRFRecord: $.ComponentSpec[] = [
 /**
  * @summary The Extension Addition Component Types of MTRFRecord
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * @constant
  */
 export

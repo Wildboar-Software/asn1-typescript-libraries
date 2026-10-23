@@ -14,6 +14,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary MediaComponent
  * @description
  * 
+ * One media component of an MM. `mediaSize` is the volume size of that
+ * component. TS 32.270 does not further define `mediaType`.
+ *
+ * 3GPP TS 32.270 V19.0.0 clause 6.1.1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +33,24 @@ export
 class MediaComponent {
     /**
      * @summary `mediaType`.
+     * @description
+     *
+     * Type of this media component. TS 32.270 does not define the values.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.1.1.
+     *
      * @public
      * @readonly
      */
     readonly mediaType: OCTET_STRING;
     /**
      * @summary `mediaSize`.
+     * @description
+     *
+     * Volume size of this media component.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.1.1.
+     *
      * @public
      * @readonly
      */

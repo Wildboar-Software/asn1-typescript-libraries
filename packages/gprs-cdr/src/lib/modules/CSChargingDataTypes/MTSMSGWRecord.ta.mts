@@ -15,7 +15,18 @@ import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExt
 /**
  * @summary MTSMSGWRecord
  * @description
- * 
+ *
+ * SMS-MT gateway CDR. When enabled, the gateway MSC produces one for each
+ * short message sent to a mobile subscriber. Where the gateway MSC is also
+ * the terminating MSC, an SMS-MT CDR is generated as well.
+ *
+ * `eventTime` is when the gateway received the message. `smsResult` is
+ * present when delivery is unsuccessful.
+ *
+ * Categories are M, C, OM, and OC as in TS 32.240 clause 5.4.
+ *
+ * 3GPP TS 32.250 V19.0.0 clause 6.1.3.16.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,55 +41,139 @@ import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExt
  *    recordExtensions   [7] IMPLICIT SET  OF
  *       ManagementExtension OPTIONAL}
  * ```
- * 
  * @class
  */
 export
 class MTSMSGWRecord {
     /**
      * @summary `recordType`.
+     * @description
+     *
+     * 2G and 3G mandatory. SMS-MT gateway record.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.16.
+     *
+     * The field identifies the type of the record e.g. mobile originated,
+     * mobile terminated etc.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.72.
+     *
      * @public
      * @readonly
      */
     readonly recordType: RecordType;
     /**
      * @summary `serviceCentre`.
+     * @description
+     *
+     * 2G and 3G mandatory. The E.164 address of the SMS service centre.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.16.
+     *
      * @public
      * @readonly
      */
     readonly serviceCentre: OCTET_STRING;
     /**
      * @summary `servedIMSI`.
+     * @description
+     *
+     * 2G and 3G mandatory. The IMSI of the receiving party.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.16.
+     *
+     * This fields contains the international mobile subscriber identity (IMSI)
+     * of the served party. The term "served" party is used to describe the
+     * mobile subscriber involved in the transaction recorded e.g. the calling
+     * subscriber in case of an MOC record. The structure of the IMSI is defined
+     * in TS 23.003 [200].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.79.
+     *
      * @public
      * @readonly
      */
     readonly servedIMSI: OCTET_STRING;
     /**
      * @summary `servedMSISDN`.
+     * @description
+     *
+     * 2G and 3G operator-provisionable mandatory. The MSISDN of the receiving
+     * party.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.16.
+     *
+     * This fields contains the mobile station ISDN number (MSISDN) of the
+     * served party. The term "served" party is used to describe the mobile
+     * subscriber involved in the transaction recorded e.g. the called
+     * subscriber in case of an MTC record. In case of multi-numbering the
+     * MSISDN stored in a MOC record will be the primary MSISDN of the calling
+     * party. The structure of the MSISDN is defined in TS 23.003 [200].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.80.
+     *
      * @public
      * @readonly
      */
     readonly servedMSISDN: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `recordingEntity`.
+     * @description
+     *
+     * 2G and 3G mandatory. The E.164 number of the visited MSC.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.16.
+     *
+     * This field contains the E.164 [308] number assigned to the entity (MSC,
+     * VLR, HLR etc.) that produced the record. For further details concerning
+     * the structure of MSC and location register numbers see TS 23.003 [200].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.73.
+     *
      * @public
      * @readonly
      */
     readonly recordingEntity: OCTET_STRING;
     /**
      * @summary `eventTime`.
+     * @description
+     *
+     * 2G and 3G mandatory. The time at which the message was received by the
+     * gateway.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.16.
+     *
      * @public
      * @readonly
      */
     readonly eventTime: OCTET_STRING;
     /**
      * @summary `smsResult`.
+     * @description
+     *
+     * 2G and 3G conditional. The result of the attempted delivery if
+     * unsuccessful.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.16.
+     *
      * @public
      * @readonly
      */
     readonly smsResult: OPTIONAL<HLRIntResult>;
     /**
      * @summary `recordExtensions`.
+     * @description
+     *
+     * 2G and 3G operator-provisionable conditional. A set of network/
+     * manufacturer specific extensions to the record, when available.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.16.
+     *
+     * The field enables network operators and/ or manufacturers to add their
+     * own extensions to the standard record definitions.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.71.
+     *
      * @public
      * @readonly
      */
@@ -123,7 +218,7 @@ class MTSMSGWRecord {
     /**
      * @summary Restructures an object into a MTSMSGWRecord
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `MTSMSGWRecord`.
      * 
      * @public
@@ -142,9 +237,9 @@ class MTSMSGWRecord {
 /**
  * @summary The Leading Root Component Types of MTSMSGWRecord
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -162,9 +257,9 @@ const _root_component_type_list_1_spec_for_MTSMSGWRecord: $.ComponentSpec[] = [
 /**
  * @summary The Trailing Root Component Types of MTSMSGWRecord
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -175,9 +270,9 @@ const _root_component_type_list_2_spec_for_MTSMSGWRecord: $.ComponentSpec[] = [
 /**
  * @summary The Extension Addition Component Types of MTSMSGWRecord
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * @constant
  */
 export

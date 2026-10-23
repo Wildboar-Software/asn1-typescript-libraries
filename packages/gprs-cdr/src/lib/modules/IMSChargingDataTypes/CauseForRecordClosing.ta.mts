@@ -6,7 +6,27 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CauseForRecordClosing
  * @description
- * 
+ *
+ * Why the CDF closed this CDR (clause 6.1.3.3). A session CDR closes on
+ * Charging Data Request [Stop], and a partial CDR may be closed earlier on
+ * [Interim] (clause 6.1.3.2). TS 32.260 does not assign these enumerated
+ * values; the cause names follow the CDR parameter in TS 32.298.
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 6.1.3.3.
+ *
+ * This field contains a reason for the release of the CDR including the
+ * following: normal release: end of session; partial record generation: time
+ * (duration) limit, maximum number of changes in charging conditions (e.g.
+ * maximum number in 'List of Message Bodies' exceeded) or service change
+ * (e.g. change in media components, Access Transfer); abnormal termination;
+ * management intervention (request due to O&M reasons); CCF initiated record
+ * closure. A more detailed reason may be found in the Service Reason Return
+ * Code field.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.11.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,7 +52,27 @@ enum _enum_for_CauseForRecordClosing {
 /**
  * @summary CauseForRecordClosing
  * @description
- * 
+ *
+ * Why the CDF closed this CDR (clause 6.1.3.3). A session CDR closes on
+ * Charging Data Request [Stop], and a partial CDR may be closed earlier on
+ * [Interim] (clause 6.1.3.2). TS 32.260 does not assign these enumerated
+ * values; the cause names follow the CDR parameter in TS 32.298.
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 6.1.3.3.
+ *
+ * This field contains a reason for the release of the CDR including the
+ * following: normal release: end of session; partial record generation: time
+ * (duration) limit, maximum number of changes in charging conditions (e.g.
+ * maximum number in 'List of Message Bodies' exceeded) or service change
+ * (e.g. change in media components, Access Transfer); abnormal termination;
+ * management intervention (request due to O&M reasons); CCF initiated record
+ * closure. A more detailed reason may be found in the Service Reason Return
+ * Code field.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.11.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -52,7 +92,27 @@ type CauseForRecordClosing = _enum_for_CauseForRecordClosing;
 /**
  * @summary CauseForRecordClosing
  * @description
- * 
+ *
+ * Why the CDF closed this CDR (clause 6.1.3.3). A session CDR closes on
+ * Charging Data Request [Stop], and a partial CDR may be closed earlier on
+ * [Interim] (clause 6.1.3.2). TS 32.260 does not assign these enumerated
+ * values; the cause names follow the CDR parameter in TS 32.298.
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 6.1.3.3.
+ *
+ * This field contains a reason for the release of the CDR including the
+ * following: normal release: end of session; partial record generation: time
+ * (duration) limit, maximum number of changes in charging conditions (e.g.
+ * maximum number in 'List of Message Bodies' exceeded) or service change
+ * (e.g. change in media components, Access Transfer); abnormal termination;
+ * management intervention (request due to O&M reasons); CCF initiated record
+ * closure. A more detailed reason may be found in the Service Reason Return
+ * Code field.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.11.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -71,6 +131,12 @@ const CauseForRecordClosing = _enum_for_CauseForRecordClosing;
 
 /**
  * @summary CauseForRecordClosing_serviceDeliveryEndSuccessfully
+ * @description
+ *
+ * The CDR was closed because service delivery ended. TS 32.260 clause
+ * 6.1.3.3 does not name this value; it matches the normal release cause in
+ * TS 32.298.
+ *
  * @constant
  * @type {number}
  */
@@ -79,6 +145,12 @@ const CauseForRecordClosing_serviceDeliveryEndSuccessfully: CauseForRecordClosin
 
 /**
  * @summary serviceDeliveryEndSuccessfully
+ * @description
+ *
+ * The CDR was closed because service delivery ended. TS 32.260 clause
+ * 6.1.3.3 does not name this value; it matches the normal release cause in
+ * TS 32.298.
+ *
  * @constant
  * @type {number}
  */
@@ -87,6 +159,11 @@ const serviceDeliveryEndSuccessfully: CauseForRecordClosing = CauseForRecordClos
 
 /**
  * @summary CauseForRecordClosing_unSuccessfulServiceDelivery
+ * @description
+ *
+ * Service delivery did not succeed. TS 32.260 does not name this value; it
+ * matches the unsuccessful cause in TS 32.298.
+ *
  * @constant
  * @type {number}
  */
@@ -95,6 +172,11 @@ const CauseForRecordClosing_unSuccessfulServiceDelivery: CauseForRecordClosing =
 
 /**
  * @summary unSuccessfulServiceDelivery
+ * @description
+ *
+ * Service delivery did not succeed. TS 32.260 does not name this value; it
+ * matches the unsuccessful cause in TS 32.298.
+ *
  * @constant
  * @type {number}
  */
@@ -103,6 +185,12 @@ const unSuccessfulServiceDelivery: CauseForRecordClosing = CauseForRecordClosing
 
 /**
  * @summary CauseForRecordClosing_timeLimit
+ * @description
+ *
+ * The CDR was closed because a time limit, or the maximum number of
+ * charging-condition changes, was reached. TS 32.260 does not name this
+ * value.
+ *
  * @constant
  * @type {number}
  */
@@ -111,6 +199,12 @@ const CauseForRecordClosing_timeLimit: CauseForRecordClosing = CauseForRecordClo
 
 /**
  * @summary timeLimit
+ * @description
+ *
+ * The CDR was closed because a time limit, or the maximum number of
+ * charging-condition changes, was reached. TS 32.260 does not name this
+ * value.
+ *
  * @constant
  * @type {number}
  */
@@ -119,6 +213,13 @@ const timeLimit: CauseForRecordClosing = CauseForRecordClosing.timeLimit; /* SHO
 
 /**
  * @summary CauseForRecordClosing_serviceChange
+ * @description
+ *
+ * The CDR was closed because the service changed, for example the media
+ * components or an access transfer. TS 32.260 does not name this value.
+ *
+ * 3GPP TS 32.260 V20.1.0.
+ *
  * @constant
  * @type {number}
  */
@@ -127,6 +228,13 @@ const CauseForRecordClosing_serviceChange: CauseForRecordClosing = CauseForRecor
 
 /**
  * @summary serviceChange
+ * @description
+ *
+ * The CDR was closed because the service changed, for example the media
+ * components or an access transfer. TS 32.260 does not name this value.
+ *
+ * 3GPP TS 32.260 V20.1.0.
+ *
  * @constant
  * @type {number}
  */
@@ -135,6 +243,11 @@ const serviceChange: CauseForRecordClosing = CauseForRecordClosing.serviceChange
 
 /**
  * @summary CauseForRecordClosing_managementIntervention
+ * @description
+ *
+ * The CDR was closed by O&M. TS 32.260 clause 6.1.3.3 does not name this
+ * value.
+ *
  * @constant
  * @type {number}
  */
@@ -143,6 +256,11 @@ const CauseForRecordClosing_managementIntervention: CauseForRecordClosing = Caus
 
 /**
  * @summary managementIntervention
+ * @description
+ *
+ * The CDR was closed by O&M. TS 32.260 clause 6.1.3.3 does not name this
+ * value.
+ *
  * @constant
  * @type {number}
  */

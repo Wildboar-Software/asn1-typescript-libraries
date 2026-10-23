@@ -9,7 +9,16 @@ import { MMSAgentAddress, _decode_MMSAgentAddress, _encode_MMSAgentAddress } fro
 /**
  * @summary RouteingAddressList
  * @description
- * 
+ *
+ * This field contains a list of routeing addresses.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.50.
+ *
+ * List of routeing addresses carried in MSCF information. Each element is
+ * an `MMSAgentAddress`. TS 32.270 does not list the elements of the list.
+ *
+ * 3GPP TS 32.270 V19.0.0 clause 6.1.1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

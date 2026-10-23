@@ -24,7 +24,23 @@ import { ReasonForServiceChange, _decode_ReasonForServiceChange, _encode_ReasonF
 /**
  * @summary OutGatewayRecord
  * @description
- * 
+ *
+ * Outgoing gateway CDR. When generation is enabled, the GMSC creates one for
+ * each outgoing call attempt towards another network. It is used to settle
+ * accounts with that network. Production does not depend on MOC generation:
+ * a co-located GMSC and originating MSC still produce the gateway record.
+ *
+ * Call duration is the accountable duration from answer to release of the
+ * outgoing trunk, or the outgoing-trunk holding time for an unsuccessful
+ * attempt.
+ *
+ * Table 6.1.3.7 also lists partial record type. This SET does not contain
+ * that component.
+ *
+ * Categories are M, C, OM, and OC as in TS 32.240 clause 5.4.
+ *
+ * 3GPP TS 32.250 V19.0.0 clauses 5.1.2.2.4 and 6.1.3.7.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -77,151 +93,403 @@ import { ReasonForServiceChange, _decode_ReasonForServiceChange, _encode_ReasonF
  *    reasonForServiceChange   [22] IMPLICIT ReasonForServiceChange OPTIONAL,
  *    serviceChangeInitiator   [23] IMPLICIT BOOLEAN OPTIONAL}
  * ```
- * 
  * @class
  */
 export
 class OutGatewayRecord {
     /**
      * @summary `recordType`.
+     * @description
+     *
+     * 2G and 3G mandatory. Outgoing gateway record.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.7.
+     *
+     * The field identifies the type of the record e.g. mobile originated,
+     * mobile terminated etc.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.72.
+     *
      * @public
      * @readonly
      */
     readonly recordType: RecordType;
     /**
      * @summary `callingNumber`.
+     * @description
+     *
+     * 2G and 3G conditional. The number of the calling party if available at
+     * this node.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.7.
+     *
      * @public
      * @readonly
      */
     readonly callingNumber: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `calledNumber`.
+     * @description
+     *
+     * 2G and 3G mandatory. The address of the called party as seen by the GMSC.
+     * This is the number employed by the GMSC for routing.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.7.
+     *
      * @public
      * @readonly
      */
     readonly calledNumber: OCTET_STRING;
     /**
      * @summary `recordingEntity`.
+     * @description
+     *
+     * 2G and 3G mandatory. The E.164 number of the GMSC.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.7.
+     *
+     * This field contains the E.164 [308] number assigned to the entity (MSC,
+     * VLR, HLR etc.) that produced the record. For further details concerning
+     * the structure of MSC and location register numbers see TS 23.003 [200].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.73.
+     *
      * @public
      * @readonly
      */
     readonly recordingEntity: OCTET_STRING;
     /**
      * @summary `mscIncomingTKGP`.
+     * @description
+     *
+     * 2G operator-provisionable mandatory, 3G operator-provisionable
+     * conditional. The incoming GMSC trunk group on which the call originated.
+     * If available in 3G, this parameter shall be supplied.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.7.
+     *
      * @public
      * @readonly
      */
     readonly mscIncomingTKGP: OPTIONAL<TrunkGroup>;
     /**
      * @summary `mscOutgoingTKGP`.
+     * @description
+     *
+     * 2G and 3G mandatory. The trunk group on which the call left the GMSC.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.7.
+     *
      * @public
      * @readonly
      */
     readonly mscOutgoingTKGP: OPTIONAL<TrunkGroup>;
     /**
      * @summary `seizureTime`.
+     * @description
+     *
+     * 2G and 3G mandatory. Time of outgoing trunk seizure.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.7.
+     *
      * @public
      * @readonly
      */
     readonly seizureTime: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `answerTime`.
+     * @description
+     *
+     * 2G and 3G conditional. Time of answer (successful calls only).
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.7.
+     *
      * @public
      * @readonly
      */
     readonly answerTime: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `releaseTime`.
+     * @description
+     *
+     * 2G and 3G operator-provisionable mandatory. Time of outgoing trunk
+     * release.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.7.
+     *
      * @public
      * @readonly
      */
     readonly releaseTime: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `callDuration`.
+     * @description
+     *
+     * 2G and 3G mandatory. The accountable duration (answer -> release of
+     * outgoing trunk) of the connection if successful, the call holding time of
+     * the outgoing trunk for call attempts.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.7.
+     *
+     * This field contains the relevant call duration in seconds. For incomplete
+     * calls (call attempts) the relevant duration is the call holding time from
+     * the seizure to the release of the traffic channel. For complete
+     * (answered) calls this is the chargeable duration from answer to release
+     * of the traffic channel. For partial records this is the duration of the
+     * individual partial record and not the cumulative duration of the call. It
+     * should be noted that the time stamps may be expressed in terms of tenths
+     * of seconds or even milliseconds and, as a result, the calculation of the
+     * call duration may result in the rounding or truncation of the measured
+     * duration to a whole number of seconds. Whether or not rounding or
+     * truncation is to be used is considered to be outside the scope of the
+     * present document subject to the following restrictions: If CAMEL is
+     * invoked for the call and a control relationship is existing, the call
+     * might continue after a RELEASE or a DISCONNECT from the called party side
+     * received by the gsmSSF. The call duration of the incoming leg is stored
+     * in the main body of the call record. For each outgoing leg the call
+     * duration is stored in the respective 'CAMELInformation' module. If a call
+     * leg does not reach answer status and attempt charging is enabled a
+     * 'CAMELInformation' module containing the holding time is generated.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.4.
+     *
      * @public
      * @readonly
      */
     readonly callDuration: INTEGER;
     /**
      * @summary `dataVolume`.
+     * @description
+     *
+     * 2G conditional, 3G not applicable. If applicable and known at the GMSC.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.7.
+     *
+     * This field includes the number of 64 octet segments transmitted during
+     * the use of data services if known.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.15.
+     *
      * @public
      * @readonly
      */
     readonly dataVolume: OPTIONAL<INTEGER>;
     /**
      * @summary `causeForTerm`.
+     * @description
+     *
+     * 2G and 3G mandatory. The reason for the release of the connection.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.7.
+     *
+     * This field contains a generalised reason for the release of the
+     * connection including the following: normal release; CAMEL initiated call
+     * release; partial record generation; partial record call re-establishment;
+     * unsuccessful call attempt; abnormal termination during the stable phase;
+     * unauthorized network originating a location service request; unauthorized
+     * client requesting a location service; position method failure at a
+     * location service execution; unknown or unreachable LCS client at a
+     * location service request. A more detailed reason may be found in the
+     * diagnostics field.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.13.
+     *
      * @public
      * @readonly
      */
     readonly causeForTerm: CauseForTerm;
     /**
      * @summary `diagnostics`.
+     * @description
+     *
+     * 2G and 3G operator-provisionable mandatory. A more detailed reason for
+     * the release of the connection.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.7.
+     *
+     * This field includes a more detailed technical reason for the release of
+     * the connection and may contain one of the following: a MAP error from TS
+     * 29.002 [214]; a Cause from TS 24.008 [208]; a Cause from TS 29.078 [217];
+     * a Cause from ITU-T Recommendation Q.767 [309]; a LCS diagnostics
+     * according TS 29.002 [214]. The diagnostics may also be extended to
+     * include manufacturer and network specific information.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.18.
+     *
      * @public
      * @readonly
      */
     readonly diagnostics: OPTIONAL<HLRIntResult>;
     /**
      * @summary `callReference`.
+     * @description
+     *
+     * 2G and 3G mandatory. A local identifier distinguishing between
+     * transactions.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.7.
+     *
+     * This field uniquely identifies a call or transaction on one side of the
+     * interface (i.e. 'A' or 'B' side) and is derived from the transaction
+     * identifier of TS 24.008 [208]. It is also used to identify all partial
+     * records and transactions belonging to the same connection. For the
+     * avoidance of doubt, there is no global call reference defined within GSM
+     * and the call reference field cannot be used to combine, for example, the
+     * MOC and MTC records of a mobiletomobile connection.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.5.
+     *
      * @public
      * @readonly
      */
     readonly callReference: OCTET_STRING;
     /**
      * @summary `sequenceNumber`.
+     * @description
+     *
+     * 2G and 3G conditional. Partial record sequence number, if applicable.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.7.
+     *
+     * This field contains a running sequence number employed to link the
+     * partial records generated for a particular connection.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.77.
+     *
      * @public
      * @readonly
      */
     readonly sequenceNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `recordExtensions`.
+     * @description
+     *
+     * 2G and 3G operator-provisionable conditional. A set of network/
+     * manufacturer specific extensions to the record, when available.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.7.
+     *
+     * The field enables network operators and/ or manufacturers to add their
+     * own extensions to the standard record definitions.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.71.
+     *
      * @public
      * @readonly
      */
     readonly recordExtensions: OPTIONAL<ManagementExtension[]>;
     /**
      * @summary `locationRoutNum`.
+     * @description
+     *
+     * 2G not applicable, 3G operator-provisionable conditional. Location
+     * Routing Number for Number Portability feature.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.7.
+     *
      * @public
      * @readonly
      */
     readonly locationRoutNum: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `lrnSoInd`.
+     * @description
+     *
+     * 2G not applicable, 3G operator-provisionable conditional. LRN Source
+     * Indicator tells the source of the LRN.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.7.
+     *
      * @public
      * @readonly
      */
     readonly lrnSoInd: OPTIONAL<OutGatewayRecord_lrnSoInd>;
     /**
      * @summary `lrnQuryStatus`.
+     * @description
+     *
+     * 2G not applicable, 3G operator-provisionable conditional. Status of
+     * Number Portability query.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.7.
+     *
      * @public
      * @readonly
      */
     readonly lrnQuryStatus: OPTIONAL<OutGatewayRecord_lrnQuryStatus>;
     /**
      * @summary `jIPPara`.
+     * @description
+     *
+     * 2G not applicable, 3G operator-provisionable conditional. Jurisdiction
+     * Information Parameter.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.7.
+     *
      * @public
      * @readonly
      */
     readonly jIPPara: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `jIPSoInd`.
+     * @description
+     *
+     * 2G not applicable, 3G operator-provisionable conditional. JIP Source
+     * Indicator tells the source of the JIP.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.7.
+     *
      * @public
      * @readonly
      */
     readonly jIPSoInd: OPTIONAL<OutGatewayRecord_jIPSoInd>;
     /**
      * @summary `jIPQuryStatus`.
+     * @description
+     *
+     * 2G not applicable, 3G operator-provisionable conditional. Status of
+     * Number Portability query.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.7.
+     *
      * @public
      * @readonly
      */
     readonly jIPQuryStatus: OPTIONAL<OutGatewayRecord_jIPQuryStatus>;
     /**
      * @summary `reasonForServiceChange`.
+     * @description
+     *
+     * 2G not applicable, 3G operator-provisionable conditional. Indicates the
+     * type of service change and fallback.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.7.
+     *
+     * This field contains the type of service change requested by the
+     * subscriber or performed by the network. Possible values include:
+     * subscriber initiated; network initiated; call setup fallback; call setup
+     * change order. For further details see TS 23.172 [207].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.70.
+     *
      * @public
      * @readonly
      */
     readonly reasonForServiceChange: OPTIONAL<ReasonForServiceChange>;
     /**
      * @summary `serviceChangeInitiator`.
+     * @description
+     *
+     * 2G not applicable, 3G operator-provisionable conditional. Indicates the
+     * service change initiator.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.7.
+     *
+     * This field indicates that the owner of this CDR is the initiator of the
+     * service change.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.82.
+     *
      * @public
      * @readonly
      */
@@ -304,7 +572,7 @@ class OutGatewayRecord {
     /**
      * @summary Restructures an object into a OutGatewayRecord
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `OutGatewayRecord`.
      * 
      * @public
@@ -329,9 +597,9 @@ class OutGatewayRecord {
 /**
  * @summary The Leading Root Component Types of OutGatewayRecord
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -365,9 +633,9 @@ const _root_component_type_list_1_spec_for_OutGatewayRecord: $.ComponentSpec[] =
 /**
  * @summary The Trailing Root Component Types of OutGatewayRecord
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -378,9 +646,9 @@ const _root_component_type_list_2_spec_for_OutGatewayRecord: $.ComponentSpec[] =
 /**
  * @summary The Extension Addition Component Types of OutGatewayRecord
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * @constant
  */
 export

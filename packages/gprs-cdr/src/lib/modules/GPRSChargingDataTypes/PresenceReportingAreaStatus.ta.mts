@@ -6,7 +6,17 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary PresenceReportingAreaStatus
  * @description
- * 
+ *
+ * Presence Reporting Area Status contains the status of the UE presence
+ * (i.e. indication on whether the UE is inside or outside) in the Presence
+ * Reporting Area(s) identified by "Presence Reporting Area identifier(s)"
+ * contained in PGW-CDR main level. This is included in the service data
+ * container when the initial status is reported after opening of PGW-CDR, or
+ * if previous container's change condition is "Presence in Presence
+ * Reporting Area Change". This field is not applicable in multiple PRA(s).
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,7 +40,17 @@ enum _enum_for_PresenceReportingAreaStatus {
 /**
  * @summary PresenceReportingAreaStatus
  * @description
- * 
+ *
+ * Presence Reporting Area Status contains the status of the UE presence
+ * (i.e. indication on whether the UE is inside or outside) in the Presence
+ * Reporting Area(s) identified by "Presence Reporting Area identifier(s)"
+ * contained in PGW-CDR main level. This is included in the service data
+ * container when the initial status is reported after opening of PGW-CDR, or
+ * if previous container's change condition is "Presence in Presence
+ * Reporting Area Change". This field is not applicable in multiple PRA(s).
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,7 +69,17 @@ type PresenceReportingAreaStatus = _enum_for_PresenceReportingAreaStatus;
 /**
  * @summary PresenceReportingAreaStatus
  * @description
- * 
+ *
+ * Presence Reporting Area Status contains the status of the UE presence
+ * (i.e. indication on whether the UE is inside or outside) in the Presence
+ * Reporting Area(s) identified by "Presence Reporting Area identifier(s)"
+ * contained in PGW-CDR main level. This is included in the service data
+ * container when the initial status is reported after opening of PGW-CDR, or
+ * if previous container's change condition is "Presence in Presence
+ * Reporting Area Change". This field is not applicable in multiple PRA(s).
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

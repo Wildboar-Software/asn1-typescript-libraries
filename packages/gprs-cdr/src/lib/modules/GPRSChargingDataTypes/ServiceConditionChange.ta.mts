@@ -9,7 +9,22 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ServiceConditionChange
  * @description
- * 
+ *
+ * Service Condition Change defines the reason for closing the service data
+ * container (see TS 32.251 [11]), such as tariff time change, IP-CAN bearer
+ * modification (e.g. QoS change, S-GW change, user location change, user CSG
+ * information change), access change of service data flow, indirect service
+ * condition change, service usage thresholds, service idled out, termination
+ * or failure handling procedure. When one of the "CGI/SAI, ECGI or TAI or
+ * RAI Change" are reported as user location change, the dedicated value in
+ * service Condition Change is set instead of the generic "user location
+ * change" value. This field is specified as bitmask for support of multiple
+ * change trigger (e.g. S-GW and QoS change). This field is derived from
+ * Change-Condition AVP at Service-Data-Container AVP level defined in TS
+ * 32.299 [50] when received on Rf.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

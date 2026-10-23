@@ -10,7 +10,22 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ListOfReasonHeader
  * @description
- * 
+ *
+ * SIP Reason headers from the BYE or CANCEL that ended the service (clause
+ * 6.3.1.2). Several Reason headers may be present. The operator decides,
+ * per parameter, whether a BYE or CANCEL from outside the trust domain is
+ * reliable.
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 6.3.1.2.
+ *
+ * This parameter contains the content of the Reason-header in the SIP BYE
+ * and SIP CANCEL, and may contain multiple entries if there are multiple
+ * Reason-headers within a SIP BYE or SIP CANCEL
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.28A.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -16,6 +16,16 @@ import { ChangeCondition, _decode_ChangeCondition, _encode_ChangeCondition, _enu
  * @summary ChangeOfMBMSCondition
  * @description
  * 
+ * Downlink volume container for an MBMS bearer context in an S-MB-CDR,
+ * G-MB-CDR, or MBMS-GW-CDR. A container is added on tariff time change and
+ * on CDR closure (clauses 5.2.3.7 and 5.2.3.7A). The first container holds
+ * the volume since the record was opened; later containers hold the volume
+ * since the previous container closed. The list shall include the required
+ * bearer capabilities (QoS Negotiated) (tables 6.1.10.1, 6.1.11.1, and
+ * 6.1.12.1).
+ * 
+ * 3GPP TS 32.251 V19.0.0.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,42 +45,82 @@ export
 class ChangeOfMBMSCondition {
     /**
      * @summary `qosRequested`.
+     * @description
+     *
+     * QoS captured for this MBMS volume container. The volume list shall
+     * include the required bearer capabilities (tables 6.1.10.1, 6.1.11.1, and
+     * 6.1.12.1). TS 32.251 does not further define this component.
+     *
      * @public
      * @readonly
      */
     readonly qosRequested: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `qosNegotiated`.
+     * @description
+     *
+     * Negotiated QoS, the required MBMS bearer capabilities, included in the
+     * volume list (tables 6.1.10.1, 6.1.11.1, and 6.1.12.1).
+     *
      * @public
      * @readonly
      */
     readonly qosNegotiated: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `dataVolumeMBMSUplink`.
+     * @description
+     *
+     * Uplink octet count for this MBMS container. Clause 5.2.3.7 describes the
+     * MBMS volume list as a downlink count. TS 32.251 does not give a separate
+     * uplink rule.
+     *
      * @public
      * @readonly
      */
     readonly dataVolumeMBMSUplink: OPTIONAL<INTEGER>;
     /**
      * @summary `dataVolumeMBMSDownlink`.
+     * @description
+     *
+     * Downlink octet count for this MBMS bearer context since the previous
+     * container closed, or since the record opened for the first container
+     * (clauses 5.2.3.7 and 5.2.3.7A).
+     *
      * @public
      * @readonly
      */
     readonly dataVolumeMBMSDownlink: INTEGER;
     /**
      * @summary `changeCondition`.
+     * @description
+     *
+     * Reason this MBMS volume container was closed. The supported addition
+     * triggers are tariff time change and CDR closure (tables 5.2.3.7.2.1 and
+     * 5.2.3.7A.2.1).
+     *
      * @public
      * @readonly
      */
     readonly changeCondition: ChangeCondition;
     /**
      * @summary `changeTime`.
+     * @description
+     *
+     * Time stamp at which this MBMS volume container was closed (clauses
+     * 5.2.3.7 and 5.2.3.7A).
+     *
      * @public
      * @readonly
      */
     readonly changeTime: OCTET_STRING;
     /**
      * @summary `failureHandlingContinue`.
+     * @description
+     *
+     * TS 32.251 does not define this component for the MBMS volume container.
+     * Failure handling in clause 5.3.1.4 applies to the P-GW and the TDF, not
+     * to MBMS bearer-context charging.
+     *
      * @public
      * @readonly
      */

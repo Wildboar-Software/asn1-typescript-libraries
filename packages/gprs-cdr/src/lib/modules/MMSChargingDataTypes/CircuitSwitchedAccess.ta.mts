@@ -14,6 +14,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CircuitSwitchedAccess
  * @description
  * 
+ * Circuit-switched form of an MMS access correlation, so the MMS CDR can
+ * be correlated with the MSC server CDR. TS 32.270 does not further define
+ * `mSCIdentifier` or `callReferenceNumber`.
+ *
+ * 3GPP TS 32.270 V19.0.0 clause 6.1.1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +34,27 @@ export
 class CircuitSwitchedAccess {
     /**
      * @summary `mSCIdentifier`.
+     * @description
+     *
+     * MSC serving the circuit-switched access. TS 32.270 does not further
+     * define this component; it is part of the access correlation used to
+     * match the MMS CDR with the MSC server CDR.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.1.1.
+     *
      * @public
      * @readonly
      */
     readonly mSCIdentifier: OCTET_STRING;
     /**
      * @summary `callReferenceNumber`.
+     * @description
+     *
+     * Call reference for that circuit-switched access. TS 32.270 does not
+     * further define this component.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.1.1.
+     *
      * @public
      * @readonly
      */

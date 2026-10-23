@@ -12,7 +12,14 @@ import { _decode_AdditionalChgInfo_chargeIndicator, _encode_AdditionalChgInfo_ch
 /**
  * @summary AdditionalChgInfo
  * @description
- * 
+ *
+ * Charge indicator and additional charging parameters, included when they
+ * are available. Under CAMEL CPH the same information is recorded per
+ * outgoing leg. This module keeps the component on the parent CDR rather
+ * than inside `CAMELInformation` (clause 5.1.3.14).
+ *
+ * 3GPP TS 32.250 V19.0.0 clause 6.1.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +36,22 @@ export
 class AdditionalChgInfo {
     /**
      * @summary `chargeIndicator`.
+     * @description
+     *
+     * Charge or no-charge indicator, included when available. 3GPP TS 32.250
+     * V19.0.0 clause 6.1.3.1.
+     *
      * @public
      * @readonly
      */
     readonly chargeIndicator: OPTIONAL<AdditionalChgInfo_chargeIndicator>;
     /**
      * @summary `chargeParameters`.
+     * @description
+     *
+     * Additional charging parameters, included when available. TS 32.250 does
+     * not define their contents. 3GPP TS 32.250 V19.0.0 clause 6.1.3.1.
+     *
      * @public
      * @readonly
      */
@@ -51,7 +68,7 @@ class AdditionalChgInfo {
     /**
      * @summary Restructures an object into a AdditionalChgInfo
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `AdditionalChgInfo`.
      * 
      * @public
@@ -70,9 +87,9 @@ class AdditionalChgInfo {
 /**
  * @summary The Leading Root Component Types of AdditionalChgInfo
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -84,9 +101,9 @@ const _root_component_type_list_1_spec_for_AdditionalChgInfo: $.ComponentSpec[] 
 /**
  * @summary The Trailing Root Component Types of AdditionalChgInfo
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -97,9 +114,9 @@ const _root_component_type_list_2_spec_for_AdditionalChgInfo: $.ComponentSpec[] 
 /**
  * @summary The Extension Addition Component Types of AdditionalChgInfo
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * @constant
  */
 export

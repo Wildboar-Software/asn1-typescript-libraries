@@ -6,7 +6,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Accuracy
  * @description
- * 
+ *
+ * Desired accuracy of the location requested for location
+ * reporting. Category Oc on the ME-CO-CDR. TS 32.278 allows
+ * cell level (CGI/ECGI), eNB, and TA/RA level. It does not
+ * describe `pRA`.
+ *
+ * 3GPP TS 32.278 V19.0.0 clauses 5.1 and 6.1.3.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,7 +37,14 @@ enum _enum_for_Accuracy {
 /**
  * @summary Accuracy
  * @description
- * 
+ *
+ * Desired accuracy of the location requested for location
+ * reporting. Category Oc on the ME-CO-CDR. TS 32.278 allows
+ * cell level (CGI/ECGI), eNB, and TA/RA level. It does not
+ * describe `pRA`.
+ *
+ * 3GPP TS 32.278 V19.0.0 clauses 5.1 and 6.1.3.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,7 +63,14 @@ type Accuracy = _enum_for_Accuracy;
 /**
  * @summary Accuracy
  * @description
- * 
+ *
+ * Desired accuracy of the location requested for location
+ * reporting. Category Oc on the ME-CO-CDR. TS 32.278 allows
+ * cell level (CGI/ECGI), eNB, and TA/RA level. It does not
+ * describe `pRA`.
+ *
+ * 3GPP TS 32.278 V19.0.0 clauses 5.1 and 6.1.3.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -67,6 +88,12 @@ const Accuracy = _enum_for_Accuracy;
 
 /**
  * @summary Accuracy_cGIECGI
+ * @description
+ *
+ * Cell level: CGI or ECGI.
+ *
+ * 3GPP TS 32.278 V19.0.0 clause 6.1.3.2.
+ *
  * @constant
  * @type {number}
  */
@@ -75,6 +102,10 @@ const Accuracy_cGIECGI: Accuracy = Accuracy.cGIECGI; /* LONG_NAMED_ENUMERATED_VA
 
 /**
  * @summary cGIECGI
+ * @description
+ *
+ * Cell level (CGI/ECGI). See {@link Accuracy_cGIECGI}.
+ *
  * @constant
  * @type {number}
  */
@@ -83,6 +114,12 @@ const cGIECGI: Accuracy = Accuracy.cGIECGI; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Accuracy_eNB
+ * @description
+ *
+ * eNodeB level.
+ *
+ * 3GPP TS 32.278 V19.0.0 clause 6.1.3.2.
+ *
  * @constant
  * @type {number}
  */
@@ -91,6 +128,10 @@ const Accuracy_eNB: Accuracy = Accuracy.eNB; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary eNB
+ * @description
+ *
+ * eNodeB level. See {@link Accuracy_eNB}.
+ *
  * @constant
  * @type {number}
  */
@@ -99,6 +140,13 @@ const eNB: Accuracy = Accuracy.eNB; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Accuracy_lATARA
+ * @description
+ *
+ * TA/RA level, as named in TS 32.278. The specification does not
+ * mention a location-area granularity for this value.
+ *
+ * 3GPP TS 32.278 V19.0.0 clause 6.1.3.2.
+ *
  * @constant
  * @type {number}
  */
@@ -107,6 +155,10 @@ const Accuracy_lATARA: Accuracy = Accuracy.lATARA; /* LONG_NAMED_ENUMERATED_VALU
 
 /**
  * @summary lATARA
+ * @description
+ *
+ * TA/RA level. See {@link Accuracy_lATARA}.
+ *
  * @constant
  * @type {number}
  */
@@ -115,6 +167,11 @@ const lATARA: Accuracy = Accuracy.lATARA; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Accuracy_pRA
+ * @description
+ *
+ * Present in the abstract syntax. TS 32.278 V19.0.0 does not
+ * describe this accuracy.
+ *
  * @constant
  * @type {number}
  */
@@ -123,6 +180,11 @@ const Accuracy_pRA: Accuracy = Accuracy.pRA; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pRA
+ * @description
+ *
+ * See {@link Accuracy_pRA}. TS 32.278 V19.0.0 does not describe
+ * this value.
+ *
  * @constant
  * @type {number}
  */

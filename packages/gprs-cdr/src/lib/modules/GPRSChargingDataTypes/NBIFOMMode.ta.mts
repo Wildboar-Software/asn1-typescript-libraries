@@ -6,7 +6,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary NBIFOMMode
  * @description
- * 
+ *
+ * This field indicates the NBIFOM mode selected by PCRF for a multi-access
+ * PDN connection, i.e. UE initiated or Network initiated as defined in TS
+ * 29.212 [220].
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.29B.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,7 +32,13 @@ enum _enum_for_NBIFOMMode {
 /**
  * @summary NBIFOMMode
  * @description
- * 
+ *
+ * This field indicates the NBIFOM mode selected by PCRF for a multi-access
+ * PDN connection, i.e. UE initiated or Network initiated as defined in TS
+ * 29.212 [220].
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.29B.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,7 +55,13 @@ type NBIFOMMode = _enum_for_NBIFOMMode;
 /**
  * @summary NBIFOMMode
  * @description
- * 
+ *
+ * This field indicates the NBIFOM mode selected by PCRF for a multi-access
+ * PDN connection, i.e. UE initiated or Network initiated as defined in TS
+ * 29.212 [220].
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.29B.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

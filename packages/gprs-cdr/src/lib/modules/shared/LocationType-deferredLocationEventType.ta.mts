@@ -11,7 +11,15 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary LocationType_deferredLocationEventType
  * @description
- * 
+ *
+ * Optional deferred-event indication inside `LocationType`.
+ * TS 32.271 does not define this bit string or its named bits.
+ * On an MT-LR, Location Type is the type of location information
+ * being requested.
+ *
+ * 3GPP TS 32.271 V12.1.0 clauses 6.1.3.2.1, 6.1.3.2.2, 6.1.3.2.3,
+ * and 6.3.1.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

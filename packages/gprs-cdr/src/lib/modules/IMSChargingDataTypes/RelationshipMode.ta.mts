@@ -6,7 +6,21 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary RelationshipMode
  * @description
- * 
+ *
+ * Whether the neighbouring network's contact point is inside the same
+ * trust domain (clause 6.1.3.10). The IBCF uses trust to decide whether
+ * real-time tariff information is accepted (clause 5.1.5).
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 6.1.3.10.
+ *
+ * This field indicates whether the other functional entity (e.g. contact
+ * point of the neighbouring network) is regarded as part of the same trust
+ * domain.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.42A.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,7 +40,21 @@ enum _enum_for_RelationshipMode {
 /**
  * @summary RelationshipMode
  * @description
- * 
+ *
+ * Whether the neighbouring network's contact point is inside the same
+ * trust domain (clause 6.1.3.10). The IBCF uses trust to decide whether
+ * real-time tariff information is accepted (clause 5.1.5).
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 6.1.3.10.
+ *
+ * This field indicates whether the other functional entity (e.g. contact
+ * point of the neighbouring network) is regarded as part of the same trust
+ * domain.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.42A.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,7 +71,21 @@ type RelationshipMode = _enum_for_RelationshipMode;
 /**
  * @summary RelationshipMode
  * @description
- * 
+ *
+ * Whether the neighbouring network's contact point is inside the same
+ * trust domain (clause 6.1.3.10). The IBCF uses trust to decide whether
+ * real-time tariff information is accepted (clause 5.1.5).
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 6.1.3.10.
+ *
+ * This field indicates whether the other functional entity (e.g. contact
+ * point of the neighbouring network) is regarded as part of the same trust
+ * domain.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.42A.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -59,6 +101,10 @@ const RelationshipMode = _enum_for_RelationshipMode;
 
 /**
  * @summary RelationshipMode_trusted
+ * @description
+ *
+ * The neighbour is inside the same trust domain (clause 6.1.3.10).
+ *
  * @constant
  * @type {number}
  */
@@ -67,6 +113,10 @@ const RelationshipMode_trusted: RelationshipMode = RelationshipMode.trusted; /* 
 
 /**
  * @summary trusted
+ * @description
+ *
+ * The neighbour is inside the same trust domain (clause 6.1.3.10).
+ *
  * @constant
  * @type {number}
  */
@@ -75,6 +125,12 @@ const trusted: RelationshipMode = RelationshipMode.trusted; /* SHORT_NAMED_ENUME
 
 /**
  * @summary RelationshipMode_non_trusted
+ * @description
+ *
+ * The neighbour is outside the trust domain (clause 6.1.3.10). The IBCF
+ * discards real-time tariff information from an untrusted network (clause
+ * 5.1.5).
+ *
  * @constant
  * @type {number}
  */
@@ -83,6 +139,12 @@ const RelationshipMode_non_trusted: RelationshipMode = RelationshipMode.non_trus
 
 /**
  * @summary non_trusted
+ * @description
+ *
+ * The neighbour is outside the trust domain (clause 6.1.3.10). The IBCF
+ * discards real-time tariff information from an untrusted network (clause
+ * 5.1.5).
+ *
  * @constant
  * @type {number}
  */

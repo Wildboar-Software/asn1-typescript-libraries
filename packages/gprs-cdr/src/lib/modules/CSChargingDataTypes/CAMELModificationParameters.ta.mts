@@ -15,7 +15,6 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CAMELModificationParameters
  * @description
- * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,13 +27,18 @@ import * as $ from "@wildboar/asn1/functional";
  *    redirectingPartyNumber      [4] IMPLICIT OCTET STRING OPTIONAL,
  *    redirectionCounter          [5] IMPLICIT INTEGER ( 1 .. 5 ) OPTIONAL}
  * ```
- * 
  * @class
  */
 export
 class CAMELModificationParameters {
     /**
      * @summary `callingPartyNumber`.
+     * @description
+     *
+     * This field contains Calling Party Number modified by CAMEL service.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.7.
+     *
      * @public
      * @readonly
      */
@@ -96,9 +100,9 @@ class CAMELModificationParameters {
     /**
      * @summary Restructures an object into a CAMELModificationParameters
      * @description
-     * 
-     * This takes an `object` and converts it to a `CAMELModificationParameters`.
-     * 
+     *
+     * This takes an `object` and converts it to a
+     * `CAMELModificationParameters`.
      * @public
      * @static
      * @method
@@ -115,9 +119,9 @@ class CAMELModificationParameters {
 /**
  * @summary The Leading Root Component Types of CAMELModificationParameters
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -133,9 +137,9 @@ const _root_component_type_list_1_spec_for_CAMELModificationParameters: $.Compon
 /**
  * @summary The Trailing Root Component Types of CAMELModificationParameters
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -146,9 +150,9 @@ const _root_component_type_list_2_spec_for_CAMELModificationParameters: $.Compon
 /**
  * @summary The Extension Addition Component Types of CAMELModificationParameters
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * @constant
  */
 export

@@ -13,7 +13,16 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary LCSClientExternalID
  * @description
- * 
+ *
+ * Client external ID inside `LCSClientIdentity`. On the GMLC CDRs
+ * and in online LCS Information, TS 32.271 treats LCS Client
+ * Identity / LCS Client ID as one field: further identification of
+ * the LCS client that invoked the location request, if available.
+ * It does not define `externalAddress` or `extensionContainer`.
+ *
+ * 3GPP TS 32.271 V12.1.0 tables 6.1.3.1.1, 6.1.3.2.1.1,
+ * 6.1.3.2.2.1, 6.1.3.2.3.1, 6.1.3.3.1, and 6.3.1.2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

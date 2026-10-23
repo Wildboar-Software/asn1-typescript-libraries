@@ -13,7 +13,24 @@ import { PresenceReportingAreaInfo_presenceReportingAreaNode, _decode_PresenceRe
 /**
  * @summary PresenceReportingAreaInfo
  * @description
+ *
+ * This field contains the Presence Reporting Area Information: Presence
+ * Reporting Area identifier(s) and the indication on whether the UE is
+ * inside or outside the Presence Reporting Area(s), as described in TS
+ * 29.274 [223].
+ *
+ * Single-PRA charging is not supported; non-support is determined by the
+ * release in the Service-Context-Id (clause 5.1.4.1). The OCS may
+ * subscribe to a list of PRA identifiers, and to the elements of
+ * UE-dedicated PRAs. The initial status, and later whether the UE enters
+ * or leaves each area, are reported for offline charging by the S-GW and
+ * the P-GW (clause 5.1.4.2).
  * 
+ *
+ * 3GPP TS 32.251 V19.0.0.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.43A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

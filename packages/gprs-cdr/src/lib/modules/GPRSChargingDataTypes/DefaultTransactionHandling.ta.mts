@@ -16,6 +16,14 @@ enum _enum_for_DefaultTransactionHandling {
  * @summary DefaultTransactionHandling
  * @description
  * 
+ * CAMEL default handling for a PDP, MM, or SMS dialogue. Clause 5.3.1.0
+ * says PS-domain online charging in the SGSN uses CAMEL, as specified in
+ * TS 23.078 and TS 29.078, and that this is outside the scope of TS
+ * 32.251. The CDR still carries the CAMEL information when CAMEL is
+ * activated (tables 6.1.1.1, 6.1.4.1, 6.1.5.1, and 6.1.6.1).
+ * 
+ * 3GPP TS 32.251 V19.0.0.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

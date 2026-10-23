@@ -11,7 +11,18 @@ import { SupplService, _decode_SupplService, _encode_SupplService } from "../MMT
 /**
  * @summary MMTelInformation
  * @description
- * 
+ *
+ * MMTel-specific charging information. On Rf and Ro it is carried
+ * in Service Information and is operator mandatory there. On the
+ * Bi CDR it is the MMTel information field, operator conditional,
+ * listing the supplementary services that occurred in the same AS.
+ *
+ * A Charging Data Request may be dedicated to one service or may
+ * combine services that the same AS handles, including the basic
+ * MMTel session.
+ *
+ * 3GPP TS 32.275 V19.0.0 clauses 6.1.3.3, 6.3.1.1 and 6.3.1.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,6 +37,15 @@ export
 class MMTelInformation {
     /**
      * @summary `listOfSupplServices`.
+     * @description
+     *
+     * Supplementary services active in parallel. Each element is one
+     * service with its own type, mode and service-specific parameters.
+     * The grouped Supplementary Service field is operator mandatory
+     * inside MMTel Information and may occur once per service.
+     *
+     * 3GPP TS 32.275 V19.0.0 clause 6.3.1.2.
+     *
      * @public
      * @readonly
      */

@@ -12,7 +12,22 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary EPCQoSInformation
  * @description
- * 
+ *
+ * This field contains the APN-AMBR for the IP-CAN session. It is used in the
+ * PGW-CDR only when charging per IP-CAN session is active.
+ *
+ * In a traffic-volume container and in a service-data container, tables
+ * 6.1.3.2 and 6.1.3.3 define this field as the authorized bearer QoS: QCI
+ * and ARP, and for a GBR QCI the GBR and, when different, the MBR. Table
+ * 6.1.3.3 also includes the MBR for a non-GBR QCI. Those container fields
+ * do not include the APN-AMBR. The APN-AMBR is a separate field on the
+ * PGW-CDR, present only when charging per IP-CAN session is active (table
+ * 6.1.3.1).
+ *
+ * 3GPP TS 32.251 V19.0.0.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.13B.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,48 +54,92 @@ export
 class EPCQoSInformation {
     /**
      * @summary `qCI`.
+     * @description
+     *
+     * QCI of the authorized bearer QoS in a traffic-volume or service-data
+     * container (tables 6.1.3.2 and 6.1.3.3).
+     *
      * @public
      * @readonly
      */
     readonly qCI: INTEGER;
     /**
      * @summary `maxRequestedBandwithUL`.
+     * @description
+     *
+     * Uplink MBR of the bearer QoS. Included for a GBR QCI when the MBR
+     * differs from the GBR (tables 6.1.3.2 and 6.1.3.3). A service-data
+     * container also includes the MBR for a non-GBR QCI (table 6.1.3.3).
+     *
      * @public
      * @readonly
      */
     readonly maxRequestedBandwithUL: OPTIONAL<INTEGER>;
     /**
      * @summary `maxRequestedBandwithDL`.
+     * @description
+     *
+     * Downlink MBR of the bearer QoS. Included for a GBR QCI when the MBR
+     * differs from the GBR (tables 6.1.3.2 and 6.1.3.3). A service-data
+     * container also includes the MBR for a non-GBR QCI (table 6.1.3.3).
+     *
      * @public
      * @readonly
      */
     readonly maxRequestedBandwithDL: OPTIONAL<INTEGER>;
     /**
      * @summary `guaranteedBitrateUL`.
+     * @description
+     *
+     * Uplink GBR, included for a GBR QCI (tables 6.1.3.2 and 6.1.3.3).
+     *
      * @public
      * @readonly
      */
     readonly guaranteedBitrateUL: OPTIONAL<INTEGER>;
     /**
      * @summary `guaranteedBitrateDL`.
+     * @description
+     *
+     * Downlink GBR, included for a GBR QCI (tables 6.1.3.2 and 6.1.3.3).
+     *
      * @public
      * @readonly
      */
     readonly guaranteedBitrateDL: OPTIONAL<INTEGER>;
     /**
      * @summary `aRP`.
+     * @description
+     *
+     * ARP of the authorized bearer QoS in a traffic-volume or service-data
+     * container (tables 6.1.3.2 and 6.1.3.3).
+     *
      * @public
      * @readonly
      */
     readonly aRP: OPTIONAL<INTEGER>;
     /**
      * @summary `aPNAggregateMaxBitrateUL`.
+     * @description
+     *
+     * Uplink APN-AMBR for the IP-CAN session. Used on the PGW-CDR when
+     * charging per IP-CAN session is active, and not included in a
+     * traffic-volume or service-data container (tables 6.1.3.1, 6.1.3.2, and
+     * 6.1.3.3).
+     *
      * @public
      * @readonly
      */
     readonly aPNAggregateMaxBitrateUL: OPTIONAL<INTEGER>;
     /**
      * @summary `aPNAggregateMaxBitrateDL`.
+     * @description
+     *
+     * Downlink APN-AMBR for the IP-CAN session. Used on the PGW-CDR when
+     * charging per IP-CAN session is active, and not included in a
+     * traffic-volume or service-data container (tables 6.1.3.1, 6.1.3.2, and
+     * 6.1.3.3).
+     *
      * @public
      * @readonly
      */

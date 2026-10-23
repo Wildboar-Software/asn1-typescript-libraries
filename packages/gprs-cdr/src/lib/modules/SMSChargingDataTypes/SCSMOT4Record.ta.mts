@@ -25,7 +25,19 @@ import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExt
 /**
  * @summary SCSMOT4Record
  * @description
- * 
+ *
+ * SC-SMO-T4 CDR: SMS originated via T4. A MSISDN-less UE sends small data to
+ * an SCS/AS. The SMS-SC does not store and forward; it passes the payload to
+ * the MTC-IWF and charges on the delivery response (clauses 5.1.4 and
+ * 5.2.2.6). A CDR is also produced when submission fails in the SMS-SC or in
+ * the MTC-IWF (clauses 5.2.2.6.3.1 and 5.2.2.6.3.2).
+ *
+ * The `sCSMOT4Record` alternative of `SMSRecordType` is typed as
+ * `SCSMTRecord` in this module's ASN.1. The SC-SMO-T4 content is this
+ * type.
+ *
+ * 3GPP TS 32.274 V19.1.0 clause 6.1.3.6, table 6.1.3.6.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -69,138 +81,298 @@ export
 class SCSMOT4Record {
     /**
      * @summary `recordType`.
+     * @description
+     *
+     * SMS originated via T4.
+     *
+     * 3GPP TS 32.274 V19.1.0 table 6.1.3.6.1.
+     *
      * @public
      * @readonly
      */
     readonly recordType: RecordType;
     /**
      * @summary `sMSNodeAddress`.
+     * @description
+     *
+     * Address, for example E.164, of the SMS-SC that sent the Charging Data
+     * Request used to produce this record (SMSC Address).
+     *
+     * 3GPP TS 32.274 V19.1.0 table 6.1.3.6.1.
+     *
      * @public
      * @readonly
      */
     readonly sMSNodeAddress: OCTET_STRING;
     /**
      * @summary `originatorInfo`.
+     * @description
+     *
+     * Originator of the short message. The IMSI, if available, is that of the
+     * MSISDN-less UE. The SCCP calling address is included when it was used to
+     * receive the message. The protocol identifier is the TP-PID of TS 23.040.
+     *
+     * 3GPP TS 32.274 V19.1.0 table 6.1.3.6.1.
+     *
      * @public
      * @readonly
      */
     readonly originatorInfo: OPTIONAL<OriginatorInfo>;
     /**
      * @summary `recipientInfo`.
+     * @description
+     *
+     * Recipient of the short message. The other address is the SME address of
+     * the SCS/AS, as received by the SMS-SC.
+     *
+     * 3GPP TS 32.274 V19.1.0 table 6.1.3.6.1.
+     *
      * @public
      * @readonly
      */
     readonly recipientInfo: OPTIONAL<RecipientInfo>;
     /**
      * @summary `servedIMEI`.
+     * @description
+     *
+     * IMEI or IMEISV of the UE, if available.
+     *
+     * 3GPP TS 32.274 V19.1.0 table 6.1.3.6.1.
+     *
      * @public
      * @readonly
      */
     readonly servedIMEI: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `eventtimestamp`.
+     * @description
+     *
+     * When the submitted short message arrived at the SMS-SC.
+     *
+     * 3GPP TS 32.274 V19.1.0 table 6.1.3.6.1.
+     *
      * @public
      * @readonly
      */
     readonly eventtimestamp: OCTET_STRING;
     /**
      * @summary `messageReference`.
+     * @description
+     *
+     * Identity of the short message in the SMS node, for the entity that
+     * submitted it. This is the TP-Message-Reference (TP-MR) of TS 23.040.
+     *
+     * 3GPP TS 32.274 V19.1.0 table 6.1.3.6.1.
+     *
      * @public
      * @readonly
      */
     readonly messageReference: OCTET_STRING;
     /**
      * @summary `messageSize`.
+     * @description
+     *
+     * Length of the user-data part of the short message: TP-User-Data-Length
+     * (TP-UDL) in TS 23.040.
+     *
+     * 3GPP TS 32.274 V19.1.0 table 6.1.3.6.1.
+     *
      * @public
      * @readonly
      */
     readonly messageSize: OPTIONAL<INTEGER>;
     /**
      * @summary `messageClass`.
+     * @description
+     *
+     * Message class, used as defined in TS 32.270. Which value is selected for
+     * a transaction is implementation dependent. TS 32.274 does not define the
+     * enumerated values.
+     *
+     * 3GPP TS 32.274 V19.1.0 table 6.1.3.6.1.
+     *
      * @public
      * @readonly
      */
     readonly messageClass: OPTIONAL<MessageClass>;
     /**
      * @summary `sMdeliveryReportRequested`.
+     * @description
+     *
+     * Whether the originator requested a delivery report, from
+     * TP-Status-Report-Request (TP-SRR) in TS 23.040.
+     *
+     * 3GPP TS 32.274 V19.1.0 table 6.1.3.6.1.
+     *
      * @public
      * @readonly
      */
     readonly sMdeliveryReportRequested: OPTIONAL<BOOLEAN>;
     /**
      * @summary `sMDataCodingScheme`.
+     * @description
+     *
+     * Data coding scheme used within the short message, taken from the TP-DCS
+     * header.
+     *
+     * 3GPP TS 32.274 V19.1.0 table 6.1.3.6.1.
+     *
      * @public
      * @readonly
      */
     readonly sMDataCodingScheme: OPTIONAL<INTEGER>;
     /**
      * @summary `sMMessageType`.
+     * @description
+     *
+     * The message that triggered this charging information. On this CDR it
+     * indicates MO-SMS via T4 submission. TS 32.274 does not say which
+     * `SMMessageType` value that is.
+     *
+     * 3GPP TS 32.274 V19.1.0 table 6.1.3.6.1.
+     *
      * @public
      * @readonly
      */
     readonly sMMessageType: OPTIONAL<SMMessageType>;
     /**
      * @summary `sMReplyPathRequested`.
+     * @description
+     *
+     * Indication that a reply to the original short message shall follow the
+     * same path, as identified by the TP-Reply-Path (TP-RP) flag.
+     *
+     * 3GPP TS 32.274 V19.1.0 table 6.1.3.6.1.
+     *
      * @public
      * @readonly
      */
     readonly sMReplyPathRequested: OPTIONAL<NULL>;
     /**
      * @summary `sMUserDataHeader`.
+     * @description
+     *
+     * User-data header extracted from the user data of the short message.
+     * TP-UDH is specified in TS 23.040.
+     *
+     * 3GPP TS 32.274 V19.1.0 table 6.1.3.6.1.
+     *
      * @public
      * @readonly
      */
     readonly sMUserDataHeader: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `userLocationInfo`.
+     * @description
+     *
+     * Location of the subscriber during the SMS transaction, if available.
+     *
+     * 3GPP TS 32.274 V19.1.0 table 6.1.3.6.1.
+     *
      * @public
      * @readonly
      */
     readonly userLocationInfo: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `rATType`.
+     * @description
+     *
+     * Radio access technology used for the SMS transaction, if available.
+     *
+     * 3GPP TS 32.274 V19.1.0 table 6.1.3.6.1.
+     *
      * @public
      * @readonly
      */
     readonly rATType: OPTIONAL<INTEGER>;
     /**
      * @summary `uETimeZone`.
+     * @description
+     *
+     * Offset between universal time and local time, in steps of 15 minutes, of
+     * where the UE currently resides, if available.
+     *
+     * 3GPP TS 32.274 V19.1.0 table 6.1.3.6.1.
+     *
      * @public
      * @readonly
      */
     readonly uETimeZone: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `sMSResult`.
+     * @description
+     *
+     * Result of the attempted short-message submission, if unsuccessful.
+     *
+     * 3GPP TS 32.274 V19.1.0 table 6.1.3.6.1.
+     *
      * @public
      * @readonly
      */
     readonly sMSResult: OPTIONAL<SMSResult>;
     /**
      * @summary `mTCIWFAddress`.
+     * @description
+     *
+     * MTC-IWF address the SMS-SC used to transfer this mobile-originated
+     * message toward the SCS/AS. The address is pre-configured in the SMS-SC
+     * for that SCS/AS (clause 5.2.2.6.2).
+     *
+     * 3GPP TS 32.274 V19.1.0 table 6.1.3.6.1.
+     *
      * @public
      * @readonly
      */
     readonly mTCIWFAddress: OPTIONAL<NodeAddress>;
     /**
      * @summary `sMSApplicationPortID`.
+     * @description
+     *
+     * Application port identifier of the mobile-originated message. The
+     * MTC-IWF uses it, with the IMSI, to retrieve the external identifier from
+     * the HSS (clause 5.2.2.6.2).
+     *
+     * 3GPP TS 32.274 V19.1.0 table 6.1.3.6.1.
+     *
      * @public
      * @readonly
      */
     readonly sMSApplicationPortID: OPTIONAL<INTEGER>;
     /**
      * @summary `externalIdentifier`.
+     * @description
+     *
+     * External identifier of the sender, if available. The MTC-IWF returns it
+     * with the delivery indication (clause 5.2.2.6.2).
+     *
+     * 3GPP TS 32.274 V19.1.0 table 6.1.3.6.1.
+     *
      * @public
      * @readonly
      */
     readonly externalIdentifier: OPTIONAL<SCSMOT4Record_externalIdentifier>;
     /**
      * @summary `localSequenceNumber`.
+     * @description
+     *
+     * TS 32.274 V19.1.0 clause 6.1.3 does not list this field. TS 32.298
+     * clause 5.1.4.6.2 describes it as a unique record number created by this
+     * node. The number is allocated sequentially across CDR types, is unique
+     * within the CDF, and can be used to detect missing records.
+     *
      * @public
      * @readonly
      */
     readonly localSequenceNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `recordExtensions`.
+     * @description
+     *
+     * Network- or manufacturer-specific extensions to the record, when
+     * available.
+     *
+     * 3GPP TS 32.274 V19.1.0 table 6.1.3.6.1.
+     *
      * @public
      * @readonly
      */

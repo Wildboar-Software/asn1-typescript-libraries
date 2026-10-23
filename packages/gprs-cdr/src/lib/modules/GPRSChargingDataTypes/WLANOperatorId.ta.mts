@@ -14,6 +14,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary WLANOperatorId
  * @description
  * 
+ * Operator of the WLAN access point included in UWAN or TWAN user
+ * location. TS 32.251 describes that location as SSID and, when available,
+ * BSSID, plus the local IP address and optional source port (table
+ * 6.1.3.1). It does not define this operator-id component separately.
+ * 
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -19,7 +19,17 @@ enum _enum_for_LocationType_locationEstimateType {
 /**
  * @summary LocationType_locationEstimateType
  * @description
- * 
+ *
+ * Requested kind of location information inside `LocationType`.
+ * On an MT-LR this is what Location Type records: the type of
+ * location information being requested (category M on
+ * LCS-RGMT-CDR, LCS-HGMT-CDR, and LCS-VGMT-CDR; category Oc in
+ * online LCS Information). TS 32.271 does not define the
+ * enumerated values.
+ *
+ * 3GPP TS 32.271 V12.1.0 clauses 6.1.3.2.1, 6.1.3.2.2, 6.1.3.2.3,
+ * and 6.3.1.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

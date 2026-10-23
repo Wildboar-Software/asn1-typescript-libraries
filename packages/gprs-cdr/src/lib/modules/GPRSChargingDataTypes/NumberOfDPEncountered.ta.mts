@@ -10,6 +10,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary NumberOfDPEncountered
  * @description
  * 
+ * Count of CAMEL detection points encountered for this PDP or MM dialogue.
+ * TS 32.251 places CAMEL online charging outside its scope (clause
+ * 5.3.1.0) and only requires the SGSN to include the CAMEL information set
+ * when CAMEL is activated.
+ * 
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

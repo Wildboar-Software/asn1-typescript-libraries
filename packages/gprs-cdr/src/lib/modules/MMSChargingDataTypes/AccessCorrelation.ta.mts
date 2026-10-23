@@ -11,7 +11,23 @@ import { PacketSwitchedAccess, _decode_PacketSwitchedAccess, _encode_PacketSwitc
 /**
  * @summary AccessCorrelation
  * @description
- * 
+ *
+ * If the parameter is provided and is not an empty string, it is a unique
+ * identifier delivered by the used access network domain of the originator
+ * or recipient MMS User Agent. It may be used for correlation of the MMS
+ * CDRs with the corresponding MSC server CDRs in CS domain or GSN CDRs in PS
+ * domain. It is an empty string if the parameter is not delivered by the
+ * access network.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.2.
+ *
+ * A unique identifier delivered by the access network domain of the
+ * originator or recipient MMS User Agent. This choice is the
+ * circuit-switched or packet-switched form of that identifier. It may be
+ * an empty string when the access network does not deliver one.
+ *
+ * 3GPP TS 32.270 V19.0.0 clause 6.1.1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

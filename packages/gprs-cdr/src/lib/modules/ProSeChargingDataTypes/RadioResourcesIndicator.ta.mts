@@ -9,7 +9,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary RadioResourcesIndicator
  * @description
- * 
+ *
+ * Which radio resources carried this ProSe Direct Communication:
+ * operator-provided resources or configured resources. The UE reports the
+ * indicator with transmitted and received volume when configured to do so.
+ *
+ * 3GPP TS 32.277 V19.2.0 clauses 5.1.2.3, 5.1.2.4, and table 6.1.3.4.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -23,6 +29,13 @@ type RadioResourcesIndicator = INTEGER;
 
 /**
  * @summary RadioResourcesIndicator_operatorProvided
+ * @description
+ *
+ * Operator-provided radio resources. Clause 5.1.2.3 describes these as the
+ * resources used while the UE is in E-UTRAN coverage. Integer value 1.
+ *
+ * 3GPP TS 32.277 V19.2.0 clause 5.1.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -31,6 +44,13 @@ const RadioResourcesIndicator_operatorProvided: RadioResourcesIndicator = 1; /* 
 
 /**
  * @summary RadioResourcesIndicator_operatorProvided
+ * @description
+ *
+ * Operator-provided radio resources. Clause 5.1.2.3 describes these as the
+ * resources used while the UE is in E-UTRAN coverage. Integer value 1.
+ *
+ * 3GPP TS 32.277 V19.2.0 clause 5.1.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -39,6 +59,12 @@ const operatorProvided: RadioResourcesIndicator = RadioResourcesIndicator_operat
 
 /**
  * @summary RadioResourcesIndicator_configured
+ * @description
+ *
+ * Configured radio resources. Integer value 2.
+ *
+ * 3GPP TS 32.277 V19.2.0 clause 5.1.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -47,6 +73,12 @@ const RadioResourcesIndicator_configured: RadioResourcesIndicator = 2; /* LONG_N
 
 /**
  * @summary RadioResourcesIndicator_configured
+ * @description
+ *
+ * Configured radio resources. Integer value 2.
+ *
+ * 3GPP TS 32.277 V19.2.0 clause 5.1.2.3.
+ *
  * @constant
  * @type {number}
  */

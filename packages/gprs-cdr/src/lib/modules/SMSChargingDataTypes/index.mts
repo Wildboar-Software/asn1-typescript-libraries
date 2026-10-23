@@ -1,6 +1,21 @@
 /**
  * @description
  *
+ * Offline SMS charging data records for the SMS-SC and the IP-SM-GW,
+ * from
+ * [3GPP TS 32.274 V19.1.0](https://www.3gpp.org/DynaReport/32274.htm).
+ *
+ * The SMS-SC produces the SC-SMO, SC-SMT, SC-SMO-T4, and SC-DVT-T4
+ * CDRs. The IP-SM-GW produces the ISM-SMO and ISM-SMT CDRs
+ * (clause 6.1.3.1). The CDF creates one CDR for each Charging Data
+ * Request [event] (clause 6.1.3.2). Abstract syntax and encoding are
+ * specified in TS 32.298 (clause 6.3.2.1); this module is that syntax.
+ *
+ * An SMS node here is an SMS router, an IP-SM-GW, an SMS-SC, an SMSF,
+ * or a combination of those (clause 3.1). The offline architecture of
+ * clause 4.2 applies to the SMS-SC and the IP-SM-GW. Converged
+ * charging for the SMSF is a separate CDR, described in clause 6.2a.
+ *
  * ASN.1 module `SMSChargingDataTypes`.
  *
  * Identical assignments that also appear in other charging modules

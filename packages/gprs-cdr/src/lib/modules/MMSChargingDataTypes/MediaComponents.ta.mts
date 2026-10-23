@@ -10,6 +10,11 @@ import { MediaComponent, _decode_MediaComponent, _encode_MediaComponent } from "
  * @summary MediaComponents
  * @description
  * 
+ * The media components of an MM, each with its volume size. This is the
+ * media part of an MM component list.
+ *
+ * 3GPP TS 32.270 V19.0.0 clause 6.1.1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

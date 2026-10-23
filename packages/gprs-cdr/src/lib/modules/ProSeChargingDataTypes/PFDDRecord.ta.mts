@@ -24,7 +24,39 @@ import { PC5RadioTechnology, _decode_PC5RadioTechnology, _encode_PC5RadioTechnol
 /**
  * @summary PFDDRecord
  * @description
- * 
+ *
+ * ProSe Function Direct Discovery CDR (PF-DD-CDR). When collection is enabled,
+ * the ProSe Function makes this charging data available for a direct discovery
+ * request. Each chargeable event produces a record.
+ *
+ * Those events are a Monitor Request at the Monitoring UE's HPLMN ProSe
+ * Function or at the ProSe Function that provides the Discovery Filter; an
+ * Announce Request at the Announcing UE's HPLMN, at its VPLMN when roaming, or
+ * at another PLMN for inter-PLMN transmission; a discovery query at the
+ * Discoverer UE's HPLMN, VPLMN, or other PLMN; a discovery response at the
+ * Discoveree UE's HPLMN, VPLMN, or other PLMN; a Match Report Request at the
+ * Monitoring, Discoverer, or Announcing UE's HPLMN; and Match Report Info at
+ * the Announcing UE's VPLMN when roaming.
+ *
+ * HPLMN, VPLMN, and local PLMN ProSe Functions collect the events, and
+ * inter-operator charging is supported. Local PLMN collection does not apply to
+ * WLAN-based ProSe Direct Discovery. Charging Data Request[Event] is sent after
+ * a successful Discovery Response, Announce Authorization acknowledgement,
+ * Monitor response, or Match Report acknowledgement.
+ *
+ * The HPLMN can collect online and offline charging for open Model A and for
+ * restricted Model A and Model B. The VPLMN collects offline charging for
+ * Announce. The VPLMN and local PLMN collect offline charging for Monitor and
+ * Match.
+ *
+ * Field categories follow TS 32.240 clause 5.4 and are copied from table
+ * 6.1.3.2.1.
+ *
+ * 3GPP TS 32.277 V19.2.0 clauses 5.1.1, 5.1.2.1, 5.2.1.2, 5.2.2.1.1, and
+ * 6.1.3.2.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.0.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -69,186 +101,454 @@ export
 class PFDDRecord {
     /**
      * @summary `recordType`.
+     * @description
+     *
+     * Category M. ProSe Direct Discovery record. Set this to `pFDDRecord`.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.2.1.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.30.
+     *
      * @public
      * @readonly
      */
     readonly recordType: RecordType;
     /**
      * @summary `retransmission`.
+     * @description
+     *
+     * Category Oc. Present when information from retransmitted Accounting
+     * Requests was used in this CDR.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.2.1.
+     *
      * @public
      * @readonly
      */
     readonly retransmission: OPTIONAL<NULL>;
     /**
      * @summary `serviceContextID`.
+     * @description
+     *
+     * Service Context Id from Diameter Accounting, present when Diameter
+     * Accounting was used and the accounting message included it. It identifies
+     * the service, subsystem, or domain, and the release, that the CDR applies
+     * to. The contents are described in TS 32.299.
+     *
+     * Table 6.1.3.2.1 does not list this field.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.1.2.
+     *
      * @public
      * @readonly
      */
     readonly serviceContextID: OPTIONAL<UTF8String>;
     /**
      * @summary `servedIMSI`.
+     * @description
+     *
+     * Category C. IMSI of the served party, the mobile subscriber using ProSe
+     * Direct Discovery.
+     *
+     * 3GPP TS 32.277 V19.2.0 clauses 5.1.2.1 and table 6.1.3.2.1.
+     *
      * @public
      * @readonly
      */
     readonly servedIMSI: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `proSeFunctionIPAddress`.
+     * @description
+     *
+     * Category Oc. IP address of the ProSe Function.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.2.1.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.18.
+     *
      * @public
      * @readonly
      */
     readonly proSeFunctionIPAddress: OPTIONAL<IPAddress>;
     /**
      * @summary `chargingCharacteristics`.
+     * @description
+     *
+     * Category M. The Charging Characteristics applied to the ProSe direct
+     * discovery. The HSS supplies them to the HPLMN ProSe Function with the
+     * subscription. The ProSe Function uses the profile to choose online or
+     * offline charging. The VPLMN and local PLMN ProSe Functions only support
+     * offline charging for the UE, and do not need Charging Characteristics. If
+     * the HSS supplies none, the ProSe Function applies a pre-configured
+     * default: home default behaviour when a subscriber of its PLMN uses ProSe
+     * in the HPLMN, or roaming default behaviour when that subscriber uses
+     * ProSe in another PLMN. Different parameters may be configured for
+     * different ProSe services. Examples are in TS 32.251 annex A.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.2.1 and annex A.1.
+     *
      * @public
      * @readonly
      */
     readonly chargingCharacteristics: OCTET_STRING;
     /**
      * @summary `chChSelectionMode`.
+     * @description
+     *
+     * Category OM. How the Charging Characteristics were selected. Annex A
+     * names the home default and roaming default behaviours used when the HSS
+     * does not supply Charging Characteristics. The value comes from the shared
+     * `ChChSelectionMode` enumeration; TS 32.277 does not define those values.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.2.1 and annex A.1.
+     *
      * @public
      * @readonly
      */
     readonly chChSelectionMode: OPTIONAL<ChChSelectionMode>;
     /**
      * @summary `recordExtensions`.
+     * @description
+     *
+     * Category Oc. Network operator or manufacturer specific extensions to the
+     * record. Present when such an extension exists.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.2.1.
+     *
      * @public
      * @readonly
      */
     readonly recordExtensions: OPTIONAL<ManagementExtension[]>;
     /**
      * @summary `proSeRequestTimestamp`.
+     * @description
+     *
+     * Category Oc. Time the ProSe Request was received from the UE.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.2.1.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.22.
+     *
      * @public
      * @readonly
      */
     readonly proSeRequestTimestamp: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `roleofUE`.
+     * @description
+     *
+     * Category Oc. Role of the UE using ProSe. For Direct Discovery the roles
+     * are Announcing UE, Monitoring UE, Discoveree UE, and Discoverer UE.
+     *
+     * 3GPP TS 32.277 V19.2.0 clauses 5.1.2.1 and table 6.1.3.2.1.
+     *
      * @public
      * @readonly
      */
     readonly roleofUE: OPTIONAL<ProSeUERole>;
     /**
      * @summary `pCThreeControlProtocolCause`.
+     * @description
+     *
+     * Category Oc. Reason the ProSe Function rejected a DISCOVERY_REQUEST or
+     * Match_Report from the UE on PC3. TS 32.277 does not list the integer
+     * values.
+     *
+     * 3GPP TS 32.277 V19.2.0 clauses 6.1.3.2 and 6.3.1.2.
+     *
      * @public
      * @readonly
      */
     readonly pCThreeControlProtocolCause: OPTIONAL<INTEGER>;
     /**
      * @summary `roleofProSeFunction`.
+     * @description
+     *
+     * Category OM. PLMN in which this ProSe Function resides: HPLMN, VPLMN, or
+     * local PLMN.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.2.1 and clause 6.3.1.2.
+     *
      * @public
      * @readonly
      */
     readonly roleofProSeFunction: OPTIONAL<ProSeFunctionRole>;
     /**
      * @summary `proSeApplicationID`.
+     * @description
+     *
+     * Category Oc. Identity used for ProSe Direct Discovery, identifying
+     * application-related information for the ProSe-enabled UE. On the CDR
+     * generated for the announcing UE in a match report, this holds the ProSe
+     * application ID name.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.2.1, including the table note, and
+     * clause 6.3.1.2.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.15.
+     *
      * @public
      * @readonly
      */
     readonly proSeApplicationID: OPTIONAL<UTF8String>;
     /**
      * @summary `proSeEventType`.
+     * @description
+     *
+     * Category Oc. Event that triggered delivery of the charging message, for
+     * example open announcing, open monitoring, open match report, or
+     * restricted announcing.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.2.1.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.16.
+     *
      * @public
      * @readonly
      */
     readonly proSeEventType: OPTIONAL<ProSeEventType>;
     /**
      * @summary `nodeID`.
+     * @description
+     *
+     * Category Oc. Identifier of the ProSe Function. The FQDN of that ProSe
+     * Function is `proseFunctionId`. TS 32.298 also describes Node ID as an
+     * operator-configurable identifier of the node that generated the CDR,
+     * which may or may not be the DNS host name.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.2.1.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.7.12, applied under clause 5.1.4.7.
+     *
      * @public
      * @readonly
      */
     readonly nodeID: OPTIONAL<IA5String>;
     /**
      * @summary `proseFunctionId`.
+     * @description
+     *
+     * Category Oc. FQDN that identifies the ProSe Function.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.2.1.
+     *
      * @public
      * @readonly
      */
     readonly proseFunctionId: OPTIONAL<UTF8String>;
     /**
      * @summary `announcingUEHPLMNIdentifier`.
+     * @description
+     *
+     * Category OM. PLMN identity of the Announcing UE's HPLMN. In a monitor or
+     * match report this is the HPLMN of the UE that was requested to be
+     * monitored.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.2.1 and clause 6.3.1.2.
+     *
      * @public
      * @readonly
      */
     readonly announcingUEHPLMNIdentifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `announcingUEVPLMNIdentifier`.
+     * @description
+     *
+     * Category OC. PLMN identity of the Announcing UE's VPLMN. In a match
+     * report this corresponds to the Monitored PLMN ID of TS 23.303 clause
+     * 5.3.4, and it is the same identifier as the Announcing UE HPLMN when the
+     * UE is not roaming.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.2.1 and clause 6.3.1.2.
+     *
      * @public
      * @readonly
      */
     readonly announcingUEVPLMNIdentifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `monitoringUEHPLMNIdentifier`.
+     * @description
+     *
+     * Category OC. PLMN identity of the Monitoring UE's HPLMN.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.2.1.
+     *
      * @public
      * @readonly
      */
     readonly monitoringUEHPLMNIdentifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `monitoringUEVPLMNIdentifier`.
+     * @description
+     *
+     * Category OC. PLMN identity of the Monitoring UE's VPLMN.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.2.1.
+     *
      * @public
      * @readonly
      */
     readonly monitoringUEVPLMNIdentifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `monitoredPLMNIdentifier`.
+     * @description
+     *
+     * Category OC. Monitored PLMN ID from the Match Report request, as defined
+     * in TS 23.303 clause 5.3.4. It is the Announcing UE VPLMN Identifier when
+     * the announcing UE is roaming, and the Announcing UE HPLMN Identifier when
+     * it is not.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.2.1.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.8.
+     *
      * @public
      * @readonly
      */
     readonly monitoredPLMNIdentifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `applicationID`.
+     * @description
+     *
+     * Category Oc. Globally unique identifier of a specific 3rd party
+     * application.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.2.1.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.3.
+     *
      * @public
      * @readonly
      */
     readonly applicationID: OPTIONAL<UTF8String>;
     /**
      * @summary `directDiscoveryModel`.
+     * @description
+     *
+     * Category Oc. Direct Discovery model the UE used, for example Model A or
+     * Model B. Open discovery is Model A. Restricted discovery is Model A or
+     * Model B.
+     *
+     * 3GPP TS 32.277 V19.2.0 clauses 5.1.1, 5.1.2.1, and table 6.1.3.2.1.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.5.
+     *
      * @public
      * @readonly
      */
     readonly directDiscoveryModel: OPTIONAL<UTF8String>;
     /**
      * @summary `validityPeriod`.
+     * @description
+     *
+     * Category Oc. Time interval during which the user is authorized to use
+     * ProSe Direct Discovery, for example announcing, monitoring, or match
+     * reporting. For an Announcing UE this is the validity period of the
+     * allocated ProSe Application Code. For a Monitoring UE this is the maximum
+     * validity period of the Discovery Filters.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.41 gives the interval as a duration
+     * in minutes.
+     *
+     * 3GPP TS 32.277 V19.2.0 clauses 5.1.2.1 and table 6.1.3.2.1.
+     *
      * @public
      * @readonly
      */
     readonly validityPeriod: OPTIONAL<INTEGER>;
     /**
      * @summary `monitoringUEIdentifier`.
+     * @description
+     *
+     * Category Oc. Identifier of the party that initiated the monitor or match
+     * report. It is an IMSI and corresponds to the UE Identifier in the monitor
+     * or match report request defined in TS 23.303.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.2.1.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.10.
+     *
      * @public
      * @readonly
      */
     readonly monitoringUEIdentifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `discovererUEHPLMNIdentifier`.
+     * @description
+     *
+     * Category OM. PLMN identity of the Discoverer UE's HPLMN.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.2.1.
+     *
      * @public
      * @readonly
      */
     readonly discovererUEHPLMNIdentifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `discovererUEVPLMNIdentifier`.
+     * @description
+     *
+     * Category OC. PLMN identity of the Discoverer UE's VPLMN.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.2.1.
+     *
      * @public
      * @readonly
      */
     readonly discovererUEVPLMNIdentifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `discovereeUEHPLMNIdentifier`.
+     * @description
+     *
+     * Category OC. PLMN identity of the Discoveree UE's HPLMN.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.2.1.
+     *
      * @public
      * @readonly
      */
     readonly discovereeUEHPLMNIdentifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `discovereeUEVPLMNIdentifier`.
+     * @description
+     *
+     * Category OC. PLMN identity of the Discoveree UE's VPLMN.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.2.1.
+     *
      * @public
      * @readonly
      */
     readonly discovereeUEVPLMNIdentifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `announcingPLMNID`.
+     * @description
+     *
+     * Category OC. PLMN identity of the serving PLMN that signalled the carrier
+     * frequency, when that serving PLMN is neither the HPLMN nor the VPLMN, if
+     * it is available.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.2.1.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.0A.
+     *
      * @public
      * @readonly
      */
     readonly announcingPLMNID: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `pc5RadioTechnology`.
+     * @description
+     *
+     * Category OM. PC5 radio technology the UE used for this ProSe Direct
+     * Discovery: E-UTRA, WLAN, or both. When this field is absent, the
+     * technology is E-UTRA. Local PLMN charging does not apply to WLAN-based
+     * Direct Discovery.
+     *
+     * 3GPP TS 32.277 V19.2.0 clauses 5.1.2.1 and table 6.1.3.2.1.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.14A.
+     *
      * @public
      * @readonly
      */

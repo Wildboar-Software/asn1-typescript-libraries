@@ -1,10 +1,18 @@
 /**
  * @description
  *
+ * Circuit-switched domain charging records: when each CDR is
+ * produced, which fields it carries, and the 2G, 3G, SMS-over-SGs,
+ * and SRVCC categories.
+ *
+ * 3GPP TS 32.250 V19.0.0 clauses 5 and 6. Encoding of the
+ * parameters is specified in 3GPP TS 32.298.
+ *
  * ASN.1 module `CSChargingDataTypes`.
  *
  * Identical assignments that also appear in other charging modules
  * are re-exported from `shared`.
+ *
  */
 export * from "./AOCParameters.ta.mjs";
 export * from "./AOCParmChange.ta.mjs";

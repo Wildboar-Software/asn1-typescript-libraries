@@ -6,7 +6,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary TransparencyInd
  * @description
- * 
+ *
+ * This field indicates whether the basic service was employed in transparent
+ * or non-transparent mode. It should also be noted that this field is only
+ * relevant for those services which may be operated in both transparent and
+ * non-transparent modes.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.92.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,7 +33,14 @@ enum _enum_for_TransparencyInd {
 /**
  * @summary TransparencyInd
  * @description
- * 
+ *
+ * This field indicates whether the basic service was employed in transparent
+ * or non-transparent mode. It should also be noted that this field is only
+ * relevant for those services which may be operated in both transparent and
+ * non-transparent modes.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.92.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,7 +57,14 @@ type TransparencyInd = _enum_for_TransparencyInd;
 /**
  * @summary TransparencyInd
  * @description
- * 
+ *
+ * This field indicates whether the basic service was employed in transparent
+ * or non-transparent mode. It should also be noted that this field is only
+ * relevant for those services which may be operated in both transparent and
+ * non-transparent modes.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.92.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

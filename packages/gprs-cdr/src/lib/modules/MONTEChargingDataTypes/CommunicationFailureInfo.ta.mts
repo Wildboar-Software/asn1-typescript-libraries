@@ -12,7 +12,16 @@ import { _decode_CauseType, _encode_CauseType, _enum_for_CauseType, CauseType } 
 /**
  * @summary CommunicationFailureInfo
  * @description
- * 
+ *
+ * One reported reason for a communication failure with the UE.
+ * Applicable to the communication-failure Monitoring Event.
+ * Category Oc, and a report may contain more than one.
+ * Clause 5.1 requires the RAN or NAS cause code. TS 32.278
+ * does not assign these integers to those layers. Bound to
+ * Communication-Failure-Information.
+ *
+ * 3GPP TS 32.278 V19.0.0 clauses 5.1, 6.1.3.3 and 6.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,36 +40,85 @@ export
 class CommunicationFailureInfo {
     /**
      * @summary `causeType`.
+     * @description
+     *
+     * Which family of cause is reported. `nAS` matches the NAS
+     * cause required by clause 5.1. TS 32.278 does not describe
+     * the other `CauseType` values, and does not say which
+     * value is the RAN cause.
+     *
+     * 3GPP TS 32.278 V19.0.0 clause 5.1.
+     *
      * @public
      * @readonly
      */
     readonly causeType: OPTIONAL<CauseType>;
     /**
      * @summary `s1APCause`.
+     * @description
+     *
+     * Cause code on a communication-failure report. TS 32.278
+     * does not define the integer. Clause 5.1 requires a RAN or
+     * NAS cause.
+     *
+     * 3GPP TS 32.278 V19.0.0 clause 5.1.
+     *
      * @public
      * @readonly
      */
     readonly s1APCause: OPTIONAL<INTEGER>;
     /**
      * @summary `rANAPCause`.
+     * @description
+     *
+     * Cause code on a communication-failure report. TS 32.278
+     * does not define the integer. Clause 5.1 requires a RAN or
+     * NAS cause.
+     *
+     * 3GPP TS 32.278 V19.0.0 clause 5.1.
+     *
      * @public
      * @readonly
      */
     readonly rANAPCause: OPTIONAL<INTEGER>;
     /**
      * @summary `bSSGPCause`.
+     * @description
+     *
+     * Cause code on a communication-failure report. TS 32.278
+     * does not define the integer. Clause 5.1 requires a RAN or
+     * NAS cause.
+     *
+     * 3GPP TS 32.278 V19.0.0 clause 5.1.
+     *
      * @public
      * @readonly
      */
     readonly bSSGPCause: OPTIONAL<INTEGER>;
     /**
      * @summary `gMMCause`.
+     * @description
+     *
+     * Cause code on a communication-failure report. TS 32.278
+     * does not define the integer. Clause 5.1 requires a RAN or
+     * NAS cause.
+     *
+     * 3GPP TS 32.278 V19.0.0 clause 5.1.
+     *
      * @public
      * @readonly
      */
     readonly gMMCause: OPTIONAL<INTEGER>;
     /**
      * @summary `sMCause`.
+     * @description
+     *
+     * Cause code on a communication-failure report. TS 32.278
+     * does not define the integer. Clause 5.1 requires a RAN or
+     * NAS cause.
+     *
+     * 3GPP TS 32.278 V19.0.0 clause 5.1.
+     *
      * @public
      * @readonly
      */

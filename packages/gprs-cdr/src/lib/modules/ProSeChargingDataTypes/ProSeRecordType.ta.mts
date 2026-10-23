@@ -12,7 +12,14 @@ import { PFDCRecord, _decode_PFDCRecord, _encode_PFDCRecord } from "../ProSeChar
 /**
  * @summary ProSeRecordType
  * @description
- * 
+ *
+ * The three ProSe CDRs on the Bx interface. `pFDDRecord` is the ProSe Function
+ * Direct Discovery CDR. `pFEDRecord` is the ProSe Function EPC-level Discovery
+ * CDR. `pFDCRecord` is the ProSe Function Direct Communication CDR. The context
+ * tags are the `RecordType` values 100, 101, and 102.
+ *
+ * 3GPP TS 32.277 V19.2.0 clause 6.1.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

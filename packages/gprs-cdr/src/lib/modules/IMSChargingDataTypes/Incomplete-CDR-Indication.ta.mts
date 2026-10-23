@@ -11,7 +11,20 @@ import { _decode_ACRInterimLost, _encode_ACRInterimLost, _enum_for_ACRInterimLos
 /**
  * @summary Incomplete_CDR_Indication
  * @description
- * 
+ *
+ * Diagnostics added when the CDF detects missing Charging Data Requests
+ * (clause 6.1.3.2 and clause 6.1.3.3). [Start] opens a session CDR,
+ * [Interim] may produce a partial CDR, and [Stop] closes it.
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 6.1.3.2.
+ *
+ * This field provides additional diagnostics when the CCF detects missing
+ * ACRs.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.21.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,18 +40,37 @@ export
 class Incomplete_CDR_Indication {
     /**
      * @summary `aCRStartLost`.
+     * @description
+     *
+     * The CDF did not receive the Charging Data Request [Start] that opens a
+     * session CDR (clause 6.1.3.2). TS 32.260 describes this group as
+     * diagnostics for missing Charging Data Requests and does not define the
+     * flag separately.
+     *
      * @public
      * @readonly
      */
     readonly aCRStartLost: BOOLEAN;
     /**
      * @summary `aCRInterimLost`.
+     * @description
+     *
+     * Whether Charging Data Request [Interim] messages, which produce partial
+     * CDRs, were lost. The values are no, yes, and unknown. TS 32.260 does not
+     * define those three values (clause 6.1.3.2).
+     *
      * @public
      * @readonly
      */
     readonly aCRInterimLost: ACRInterimLost;
     /**
      * @summary `aCRStopLost`.
+     * @description
+     *
+     * The CDF did not receive the Charging Data Request [Stop] that closes a
+     * session CDR (clause 6.1.3.2). TS 32.260 does not define this flag
+     * separately from the grouped indication.
+     *
      * @public
      * @readonly
      */

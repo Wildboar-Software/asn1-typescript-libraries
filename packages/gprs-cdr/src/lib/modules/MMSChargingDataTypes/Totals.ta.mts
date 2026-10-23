@@ -12,7 +12,19 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Totals
  * @description
- * 
+ *
+ * The total number of messages and/or octets for the MMBox, identified with
+ * Messages or Octets.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.58.
+ *
+ * Current total number of messages, octets, or both, in the MMBox.
+ * Category OC on a Bx1V-CDR, and present according to what the managing
+ * User Agent requested in Totals. `numberOfMessages` is the message total
+ * and `numberOfOctets` is the size total.
+ *
+ * 3GPP TS 32.270 V19.0.0 clause 6.1.4.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +39,26 @@ export
 class Totals {
     /**
      * @summary `numberOfMessages`.
+     * @description
+     *
+     * Total number of messages in the MMBox, present when the view request
+     * asked for the message total.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.4.2.
+     *
      * @public
      * @readonly
      */
     readonly numberOfMessages: OPTIONAL<INTEGER>;
     /**
      * @summary `numberOfOctets`.
+     * @description
+     *
+     * Total size of the MMBox in octets, present when the view request asked
+     * for the size total.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.4.2.
+     *
      * @public
      * @readonly
      */

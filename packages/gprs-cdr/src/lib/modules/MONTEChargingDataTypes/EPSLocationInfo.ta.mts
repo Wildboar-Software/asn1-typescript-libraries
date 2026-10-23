@@ -12,7 +12,21 @@ import { SGSNLocationInformation, _decode_SGSNLocationInformation, _encode_SGSNL
 /**
  * @summary EPSLocationInfo
  * @description
- * 
+ *
+ * 3GPP location used as a configured area or as a reported
+ * location. `mMELocationInformation` is the MME form and
+ * `sGSNLocationInformation` is the SGSN form. A reported
+ * location is bound to EPS-Location-information. An entry in
+ * the configured list of locations is bound to
+ * Number-Of-UE-Per-Location-Configuration.
+ *
+ * TS 32.278 describes these locations as cells (CGI/ECGI),
+ * eNodeBs, and/or RAIs or TAIs. It does not define the octet
+ * encoding. Clause 6.3.2.1 defers the formal parameter
+ * definition to TS 32.298.
+ *
+ * 3GPP TS 32.278 V19.0.0 clauses 5.1, 6.1.3.2, 6.1.3.3 and 6.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +41,26 @@ export
 class EPSLocationInfo {
     /**
      * @summary `mMELocationInformation`.
+     * @description
+     *
+     * Location from an MME. The parts TS 32.278 names are the
+     * cell (ECGI), the eNodeB, and the TAI.
+     *
+     * 3GPP TS 32.278 V19.0.0 clauses 4.2 and 5.1.
+     *
      * @public
      * @readonly
      */
     readonly mMELocationInformation: OPTIONAL<MMELocationInformation>;
     /**
      * @summary `sGSNLocationInformation`.
+     * @description
+     *
+     * Location from an SGSN. The parts TS 32.278 names are the
+     * cell (CGI) and the RAI.
+     *
+     * 3GPP TS 32.278 V19.0.0 clauses 4.2 and 5.1.
+     *
      * @public
      * @readonly
      */

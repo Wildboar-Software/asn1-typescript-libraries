@@ -17,7 +17,15 @@ import { ServiceConditionChange, _decode_ServiceConditionChange, _encode_Service
 /**
  * @summary RelatedChangeOfServiceCondition
  * @description
- * 
+ *
+ * Related Change of Service Condition indicates the reason a related
+ * container was closed when the current container is indirectly closed and
+ * the supplemental information for the event. This information is applicable
+ * when charging per IP-CAN session is active for a multi-access PDN
+ * connection.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,6 +45,20 @@ export
 class RelatedChangeOfServiceCondition {
     /**
      * @summary `userLocationInformation`.
+     * @description
+     *
+     * User location information contains the user location (e.g. CGI/SAI,
+     * ECGI/TAI or RAI) where the UE was located during the service data
+     * container recording interval. This is included in the service data
+     * container only if previous container's change condition is "user location
+     * change" or one of the "CGI/SAI, ECGI or TAI or RAI Change". Note the user
+     * location information in PGW-CDR/TDF-CDR main level contains the location
+     * where the UE was when PGW-CDR/TDF-CDR was opened, and the "Last user
+     * location information" in PGW-CDR main level contains the location where
+     * the UE was when PGW-CDR is closed.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+     *
      * @public
      * @readonly
      */
@@ -49,30 +71,85 @@ class RelatedChangeOfServiceCondition {
     readonly threeGPP2UserLocationInformation: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `presenceReportingAreaStatus`.
+     * @description
+     *
+     * Presence Reporting Area Status contains the status of the UE presence
+     * (i.e. indication on whether the UE is inside or outside) in the Presence
+     * Reporting Area(s) identified by "Presence Reporting Area identifier(s)"
+     * contained in PGW-CDR main level. This is included in the service data
+     * container when the initial status is reported after opening of PGW-CDR, or
+     * if previous container's change condition is "Presence in Presence
+     * Reporting Area Change". This field is not applicable in multiple PRA(s).
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+     *
      * @public
      * @readonly
      */
     readonly presenceReportingAreaStatus: OPTIONAL<PresenceReportingAreaStatus>;
     /**
      * @summary `userCSGInformation`.
+     * @description
+     *
+     * User CSG information contains the status of the user accessing a CSG cell
+     * (CSG ID within the PLMN, Access mode and indication on CSG membership)
+     * during the service data container recording interval. This is included in
+     * the service data container only if previous container's change condition
+     * is "user CSG information change". Note the "user CSG information" in
+     * PGW-CDR main level contains the "user CSG information" when PGW-CDR was
+     * opened.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+     *
      * @public
      * @readonly
      */
     readonly userCSGInformation: OPTIONAL<UserCSGInformation>;
     /**
      * @summary `rATType`.
+     * @description
+     *
+     * Holds the value of RAT Type, as provided to S-GW and P-GW, specified in TS
+     * 29.061 [216] and also provided to the TDF as specified in TS 29.212 [220].
+     * The field is provided by the SGSN/MME and transferred to the S-GW/P-GW
+     * during the IP-CAN bearer activation/modification and transferred to the
+     * TDF during the TDF session establishment/modification.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.47.
+     *
      * @public
      * @readonly
      */
     readonly rATType: OPTIONAL<INTEGER>;
     /**
      * @summary `uWANUserLocationInformation`.
+     * @description
+     *
+     * UWAN User Location Information contains the Untrusted Wireless Access
+     * Network (UWAN) user location during the service data container recording
+     * interval. This is included in the service data container only if previous
+     * container's change condition is "user location change". Note the user
+     * location information in PGW-CDR main level contains the location where the
+     * UE was when PGW-CDR was opened.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+     *
      * @public
      * @readonly
      */
     readonly uWANUserLocationInformation: OPTIONAL<UWANUserLocationInfo>;
     /**
      * @summary `relatedServiceConditionChange`.
+     * @description
+     *
+     * Related Change of Service Condition indicates the reason a related
+     * container was closed when the current container is indirectly closed and
+     * the supplemental information for the event. This information is applicable
+     * when charging per IP-CAN session is active for a multi-access PDN
+     * connection.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+     *
      * @public
      * @readonly
      */

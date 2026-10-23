@@ -17,7 +17,26 @@ import { POCEventType, _decode_POCEventType, _encode_POCEventType, _enum_for_POC
 /**
  * @summary POCInformation
  * @description
- * 
+ *
+ * PoC-specific charging parameters. They are carried in Service
+ * Information and stored in the PoC Information field of the CDR.
+ *
+ * On a participating CDR this is the session type and the
+ * participant's accumulated sent and received talk bursts. On a
+ * controlling CDR it is the session type, the number and list of
+ * participants, and the talk bursts accumulated for the session.
+ *
+ * TS 32.272 also defines PoC Server Role (participating or
+ * controlling) and PoC User Role inside this structure. Neither
+ * is a field here. The server role is which `POCRecord`
+ * alternative carries the CDR. PoC User Role is only described
+ * as a list of role information, with the details left to
+ * OMA-AD-POC.
+ *
+ * Field categories are those of TS 32.240 clause 5.4.
+ *
+ * 3GPP TS 32.272 V19.0.0 clauses 6.1.3.3 and 6.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,54 +60,162 @@ export
 class POCInformation {
     /**
      * @summary `pOCSessionType`.
+     * @description
+     *
+     * Category OM. Type of PoC session. TS 32.272 points at
+     * appendix C.5.1 of OMA-CP-POC for the type, and requires
+     * charging to distinguish 1-1, ad-hoc group, pre-arranged
+     * group, and chat group. See `POCSessionType`.
+     *
+     * 3GPP TS 32.272 V19.0.0 clauses 5.1.1 and 6.3.1.2.
+     *
      * @public
      * @readonly
      */
     readonly pOCSessionType: OPTIONAL<POCSessionType>;
     /**
      * @summary `numberofParticipants`.
+     * @description
+     *
+     * Category OM. In the initial charging request, the number of
+     * invited parties. In an interim or update request, the number
+     * of parties attached to the session when that request is sent.
+     * TS 32.298 also describes it as the number of active
+     * participants in the PoC session.
+     *
+     * Both the controlling and the participating server can charge
+     * on this count when the controlling server provides it, as
+     * defined by OMA PoC User Plane. Online, the OCS may arm
+     * `CHANGE_IN_PARTICIPANTS_NMB` or
+     * `CHANGE_IN_THRSHLD_OF_PARTICIPANTS_NMB`. The initial unit
+     * reservation uses the pre-defined group size, or, for an
+     * ad-hoc session, the number of parties invited at the start.
+     *
+     * The per-container count on `ListofTalkBurstExchange` is the
+     * number of attached participants in that talk-burst
+     * container, which is not this field.
+     *
+     * 3GPP TS 32.272 V19.0.0 clauses 5.1.3, 5.3.2.5, and 6.3.1.2.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.3.4.
+     *
      * @public
      * @readonly
      */
     readonly numberofParticipants: OPTIONAL<INTEGER>;
     /**
      * @summary `listofParticipants`.
+     * @description
+     *
+     * Category OC. In the initial charging request, the invited
+     * parties: address, access priority, and participating type.
+     * In an interim or update request, the parties attached at
+     * that time: address and access priority. TS 32.272 does not
+     * mention participating type on the interim or update list.
+     *
+     * 3GPP TS 32.272 V19.0.0 clause 6.3.1.2.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.3.6.
+     *
      * @public
      * @readonly
      */
     readonly listofParticipants: OPTIONAL<POCParticipant[]>;
     /**
      * @summary `listofTalkBurstExchange`.
+     * @description
+     *
+     * Category OC. Offline charging only. Each entry is one
+     * time-stamped change of charging condition, with the sent
+     * and received talk-burst count, bearer volume, and summed
+     * duration. See `ListofTalkBurstExchange`.
+     *
+     * 3GPP TS 32.272 V19.0.0 clause 6.3.1.2.
+     *
      * @public
      * @readonly
      */
     readonly listofTalkBurstExchange: OPTIONAL<ListofTalkBurstExchange[]>;
     /**
      * @summary `pOCControllingAddress`.
+     * @description
+     *
+     * Category OC. PoC Server performing the controlling function.
+     * Included only when this report is from a participating PoC
+     * Server. It may be taken from the Contact header of the SIP
+     * message received from the controlling function.
+     *
+     * 3GPP TS 32.272 V19.0.0 clause 6.3.1.2.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.3.7.
+     *
      * @public
      * @readonly
      */
     readonly pOCControllingAddress: OPTIONAL<UTF8String>;
     /**
      * @summary `pOCGroupName`.
+     * @description
+     *
+     * Category OC. Pre-arranged group. Included when the session
+     * is a pre-arranged group session. A PoC group is a predefined
+     * set of PoC users identified by a SIP URI.
+     *
+     * The value may be taken from the P-Asserted-Identity header
+     * of the SIP message received from the controlling function,
+     * or from the Request-URI sent by the PoC user.
+     *
+     * 3GPP TS 32.272 V19.0.0 clauses 3.1 and 6.3.1.2.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.3.9.
+     *
      * @public
      * @readonly
      */
     readonly pOCGroupName: OPTIONAL<UTF8String>;
     /**
      * @summary `pOCSessionId`.
+     * @description
+     *
+     * Category OC. End-to-end PoC session identity. It may be
+     * absent from the initial charging interactions for the
+     * session.
+     *
+     * Clause 3.1 defines it as the SIP URI the PoC Client receives
+     * during session establishment, in the Contact header, or in
+     * the TBCP connect message when a pre-established session is
+     * used, or in both.
+     *
+     * 3GPP TS 32.272 V19.0.0 clauses 3.1 and 6.3.1.2.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.3.10.
+     *
      * @public
      * @readonly
      */
     readonly pOCSessionId: OPTIONAL<UTF8String>;
     /**
      * @summary `pOCSessionInitiationType`.
+     * @description
+     *
+     * Category OC. How the PoC session was initiated. Used only
+     * for the served parties. Charging distinguishes on-demand
+     * establishment from a pre-established session, for both 1-1
+     * and group sessions. See `POCSessionInitType`.
+     *
+     * 3GPP TS 32.272 V19.0.0 clauses 5.1.1 and 6.3.1.2.
+     *
      * @public
      * @readonly
      */
     readonly pOCSessionInitiationType: OPTIONAL<POCSessionInitType>;
     /**
      * @summary `pOCEventType`.
+     * @description
+     *
+     * Category OC. Session-unrelated PoC charging event. See
+     * `POCEventType` and clause 5.1.2. Event CDRs are generated
+     * for early session establishment and for instant personal
+     * alert delivery.
+     *
+     * 3GPP TS 32.272 V19.0.0 clauses 5.2.1 and 6.3.1.2.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.3.8.
+     *
      * @public
      * @readonly
      */

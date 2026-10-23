@@ -6,7 +6,21 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary APINetworkServiceNode
  * @description
- * 
+ *
+ * Network element that triggers an API notification toward the
+ * SCEF, as defined in TS 23.682. Category Oc on the EA-SCE-CDR.
+ * Table 6.1.3.2.1 gives SGSN and RCAF as examples.
+ *
+ * The values are `mME` (MME), `sGSN` (SGSN), `hSS` (HSS),
+ * `pCRF` (PCRF), `pFDF` (PFDF), `bMSC` (BM-SC), `cCSCF` (CSCF)
+ * and `rCAF` (RCAF). SGSN is the Serving GPRS Support Node and
+ * RCAF is the RAN Congestion Awareness Function (clause 3.3).
+ * TS 32.254 does not state which T8 procedure uses which value.
+ *
+ * 3GPP TS 32.254 V20.0.0 clause 3.3, table 6.1.3.2.1 and
+ * clause 6.3.1.2.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.5.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,7 +52,21 @@ enum _enum_for_APINetworkServiceNode {
 /**
  * @summary APINetworkServiceNode
  * @description
- * 
+ *
+ * Network element that triggers an API notification toward the
+ * SCEF, as defined in TS 23.682. Category Oc on the EA-SCE-CDR.
+ * Table 6.1.3.2.1 gives SGSN and RCAF as examples.
+ *
+ * The values are `mME` (MME), `sGSN` (SGSN), `hSS` (HSS),
+ * `pCRF` (PCRF), `pFDF` (PFDF), `bMSC` (BM-SC), `cCSCF` (CSCF)
+ * and `rCAF` (RCAF). SGSN is the Serving GPRS Support Node and
+ * RCAF is the RAN Congestion Awareness Function (clause 3.3).
+ * TS 32.254 does not state which T8 procedure uses which value.
+ *
+ * 3GPP TS 32.254 V20.0.0 clause 3.3, table 6.1.3.2.1 and
+ * clause 6.3.1.2.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.5.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -61,7 +89,21 @@ type APINetworkServiceNode = _enum_for_APINetworkServiceNode;
 /**
  * @summary APINetworkServiceNode
  * @description
- * 
+ *
+ * Network element that triggers an API notification toward the
+ * SCEF, as defined in TS 23.682. Category Oc on the EA-SCE-CDR.
+ * Table 6.1.3.2.1 gives SGSN and RCAF as examples.
+ *
+ * The values are `mME` (MME), `sGSN` (SGSN), `hSS` (HSS),
+ * `pCRF` (PCRF), `pFDF` (PFDF), `bMSC` (BM-SC), `cCSCF` (CSCF)
+ * and `rCAF` (RCAF). SGSN is the Serving GPRS Support Node and
+ * RCAF is the RAN Congestion Awareness Function (clause 3.3).
+ * TS 32.254 does not state which T8 procedure uses which value.
+ *
+ * 3GPP TS 32.254 V20.0.0 clause 3.3, table 6.1.3.2.1 and
+ * clause 6.3.1.2.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.5.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -83,6 +125,13 @@ const APINetworkServiceNode = _enum_for_APINetworkServiceNode;
 
 /**
  * @summary APINetworkServiceNode_mME
+ * @description
+ *
+ * MME. TS 32.254 does not state which T8 procedure this value
+ * covers.
+ *
+ * 3GPP TS 32.254 V20.0.0 clause 6.3.1.2.
+ *
  * @constant
  * @type {number}
  */
@@ -91,6 +140,10 @@ const APINetworkServiceNode_mME: APINetworkServiceNode = APINetworkServiceNode.m
 
 /**
  * @summary mME
+ * @description
+ *
+ * MME. See {@link APINetworkServiceNode_mME}.
+ *
  * @constant
  * @type {number}
  */
@@ -99,6 +152,14 @@ const mME: APINetworkServiceNode = APINetworkServiceNode.mME; /* SHORT_NAMED_ENU
 
 /**
  * @summary APINetworkServiceNode_sGSN
+ * @description
+ *
+ * SGSN (Serving GPRS Support Node). The CDR table gives the SGSN
+ * as an example of a node that triggers an API notification.
+ * TS 32.254 does not state which T8 procedure this value covers.
+ *
+ * 3GPP TS 32.254 V20.0.0 clause 3.3 and table 6.1.3.2.1.
+ *
  * @constant
  * @type {number}
  */
@@ -107,6 +168,10 @@ const APINetworkServiceNode_sGSN: APINetworkServiceNode = APINetworkServiceNode.
 
 /**
  * @summary sGSN
+ * @description
+ *
+ * SGSN. See {@link APINetworkServiceNode_sGSN}.
+ *
  * @constant
  * @type {number}
  */
@@ -115,6 +180,13 @@ const sGSN: APINetworkServiceNode = APINetworkServiceNode.sGSN; /* SHORT_NAMED_E
 
 /**
  * @summary APINetworkServiceNode_hSS
+ * @description
+ *
+ * HSS. TS 32.254 does not state which T8 procedure this value
+ * covers.
+ *
+ * 3GPP TS 32.254 V20.0.0 clause 6.3.1.2.
+ *
  * @constant
  * @type {number}
  */
@@ -123,6 +195,10 @@ const APINetworkServiceNode_hSS: APINetworkServiceNode = APINetworkServiceNode.h
 
 /**
  * @summary hSS
+ * @description
+ *
+ * HSS. See {@link APINetworkServiceNode_hSS}.
+ *
  * @constant
  * @type {number}
  */
@@ -131,6 +207,13 @@ const hSS: APINetworkServiceNode = APINetworkServiceNode.hSS; /* SHORT_NAMED_ENU
 
 /**
  * @summary APINetworkServiceNode_pCRF
+ * @description
+ *
+ * PCRF. TS 32.254 does not state which T8 procedure this value
+ * covers.
+ *
+ * 3GPP TS 32.254 V20.0.0 clause 6.3.1.2.
+ *
  * @constant
  * @type {number}
  */
@@ -139,6 +222,10 @@ const APINetworkServiceNode_pCRF: APINetworkServiceNode = APINetworkServiceNode.
 
 /**
  * @summary pCRF
+ * @description
+ *
+ * PCRF. See {@link APINetworkServiceNode_pCRF}.
+ *
  * @constant
  * @type {number}
  */
@@ -147,6 +234,13 @@ const pCRF: APINetworkServiceNode = APINetworkServiceNode.pCRF; /* SHORT_NAMED_E
 
 /**
  * @summary APINetworkServiceNode_pFDF
+ * @description
+ *
+ * PFDF. TS 32.254 does not state which T8 procedure this value
+ * covers.
+ *
+ * 3GPP TS 32.254 V20.0.0 clause 6.3.1.2.
+ *
  * @constant
  * @type {number}
  */
@@ -155,6 +249,10 @@ const APINetworkServiceNode_pFDF: APINetworkServiceNode = APINetworkServiceNode.
 
 /**
  * @summary pFDF
+ * @description
+ *
+ * PFDF. See {@link APINetworkServiceNode_pFDF}.
+ *
  * @constant
  * @type {number}
  */
@@ -163,6 +261,13 @@ const pFDF: APINetworkServiceNode = APINetworkServiceNode.pFDF; /* SHORT_NAMED_E
 
 /**
  * @summary APINetworkServiceNode_bMSC
+ * @description
+ *
+ * BM-SC. TS 32.254 does not state which T8 procedure this value
+ * covers.
+ *
+ * 3GPP TS 32.254 V20.0.0 clause 6.3.1.2.
+ *
  * @constant
  * @type {number}
  */
@@ -171,6 +276,10 @@ const APINetworkServiceNode_bMSC: APINetworkServiceNode = APINetworkServiceNode.
 
 /**
  * @summary bMSC
+ * @description
+ *
+ * BM-SC. See {@link APINetworkServiceNode_bMSC}.
+ *
  * @constant
  * @type {number}
  */
@@ -179,6 +288,13 @@ const bMSC: APINetworkServiceNode = APINetworkServiceNode.bMSC; /* SHORT_NAMED_E
 
 /**
  * @summary APINetworkServiceNode_cCSCF
+ * @description
+ *
+ * CSCF. TS 32.254 does not state which T8 procedure this value
+ * covers.
+ *
+ * 3GPP TS 32.254 V20.0.0 clause 6.3.1.2.
+ *
  * @constant
  * @type {number}
  */
@@ -187,6 +303,10 @@ const APINetworkServiceNode_cCSCF: APINetworkServiceNode = APINetworkServiceNode
 
 /**
  * @summary cCSCF
+ * @description
+ *
+ * CSCF. See {@link APINetworkServiceNode_cCSCF}.
+ *
  * @constant
  * @type {number}
  */
@@ -195,6 +315,15 @@ const cCSCF: APINetworkServiceNode = APINetworkServiceNode.cCSCF; /* SHORT_NAMED
 
 /**
  * @summary APINetworkServiceNode_rCAF
+ * @description
+ *
+ * RCAF (RAN Congestion Awareness Function). The CDR table gives
+ * the RCAF as an example of a node that triggers an API
+ * notification. TS 32.254 does not state which T8 procedure this
+ * value covers.
+ *
+ * 3GPP TS 32.254 V20.0.0 clause 3.3 and table 6.1.3.2.1.
+ *
  * @constant
  * @type {number}
  */
@@ -203,6 +332,10 @@ const APINetworkServiceNode_rCAF: APINetworkServiceNode = APINetworkServiceNode.
 
 /**
  * @summary rCAF
+ * @description
+ *
+ * RCAF. See {@link APINetworkServiceNode_rCAF}.
+ *
  * @constant
  * @type {number}
  */

@@ -12,7 +12,30 @@ import { _decode_ChargeType, _encode_ChargeType, _enum_for_ChargeType, ChargeTyp
 /**
  * @summary ChargeInformation
  * @description
- * 
+ *
+ * This field consists of two parts, the charged party and the charge type.
+ * The Charged Party is an indication on which party is expected to be
+ * charged for an MM e.g. the sending, receiving, both parties or neither.
+ * This indicator is only applicable to MM7 CDRs (for VASP-originated MMs).
+ * It may be provided by the VASP when submitting an MM. The Charge Type
+ * indicates the type of subscription (i.e. postpaid or prepaid). This
+ * indicator is derived from the subscription parameters and only applicable
+ * to MM1 CDRs. The Charged Parties are as follows: Both: This indicates both
+ * the sending and the receiving parties are expected to be charged ('shared'
+ * charging model); Neither: This indicates neither the sending nor the
+ * receiving parties are expected to be charged ('free of charge' charging
+ * model). The Charge types are as follows:
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.6.
+ *
+ * Charged-party indication and charge type for an MM. On an MM7 submission
+ * the examples are the sending party, the receiving party, both parties, a
+ * third party, or neither. The charged-party indication applies to
+ * VASP-originated MMs: the VASP may say which party is expected to be
+ * charged. Category OM on the O1S-CDR, the F-CDR, and the MM7S-CDR.
+ *
+ * 3GPP TS 32.270 V19.0.0 clauses 5.1.4, 6.1.1.1, 6.1.3.1, and 6.1.5.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +50,26 @@ export
 class ChargeInformation {
     /**
      * @summary `chargedparty`.
+     * @description
+     *
+     * Which party is expected to be charged. On an MM7 CDR the VASP may supply
+     * it. The values are the sending party, the receiving party, both,
+     * neither, or not specified by the VASP.
+     *
+     * 3GPP TS 32.270 V19.0.0 clauses 5.1.4 and 6.1.5.1.
      * @public
      * @readonly
      */
     readonly chargedparty: OPTIONAL<ChargedParty>;
     /**
      * @summary `chargetype`.
+     * @description
+     *
+     * Charge type that accompanies the charged party. TS 32.270 does not
+     * define the values. In this type they are `postpaid` and `pre-paid`.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.1.1.
+     *
      * @public
      * @readonly
      */

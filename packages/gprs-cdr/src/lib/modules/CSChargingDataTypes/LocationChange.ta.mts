@@ -13,7 +13,13 @@ import { LocationAreaAndCell, _decode_LocationAreaAndCell, _encode_LocationAreaA
 /**
  * @summary LocationChange
  * @description
- * 
+ *
+ * One change of location during a connection. Each entry is time-stamped.
+ * The location is the LAC, SAC, or cell identity, together with MCC and MNC.
+ * A location change can close a partial record (`locationChange`).
+ *
+ * 3GPP TS 32.250 V19.0.0 clauses 5.1.3.6 and 6.1.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +34,22 @@ export
 class LocationChange {
     /**
      * @summary `location`.
+     * @description
+     *
+     * Location after the change: cell or SAC, location area, and MCC+MNC. 3GPP
+     * TS 32.250 V19.0.0 clause 6.1.3.1.
+     *
      * @public
      * @readonly
      */
     readonly location: LocationAreaAndCell;
     /**
      * @summary `changeTime`.
+     * @description
+     *
+     * Time of this location change. A location change can close a partial
+     * record. 3GPP TS 32.250 V19.0.0 clauses 5.1.3.6 and 6.1.3.1.
+     *
      * @public
      * @readonly
      */
@@ -54,7 +70,7 @@ class LocationChange {
     /**
      * @summary Restructures an object into a LocationChange
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `LocationChange`.
      * 
      * @public
@@ -73,9 +89,9 @@ class LocationChange {
 /**
  * @summary The Leading Root Component Types of LocationChange
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -87,9 +103,9 @@ const _root_component_type_list_1_spec_for_LocationChange: $.ComponentSpec[] = [
 /**
  * @summary The Trailing Root Component Types of LocationChange
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -100,9 +116,9 @@ const _root_component_type_list_2_spec_for_LocationChange: $.ComponentSpec[] = [
 /**
  * @summary The Extension Addition Component Types of LocationChange
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * @constant
  */
 export

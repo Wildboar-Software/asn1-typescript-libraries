@@ -1,6 +1,8 @@
 /**
  * @description
  *
+ * CHF CDR parameters are specified in 3GPP TS 32.298 V20.1.0 clause 5.1.5.
+ *
  * ASN.1 module `CHFChargingDataTypes`.
  *
  * Identical assignments that also appear in other charging modules

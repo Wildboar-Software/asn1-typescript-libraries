@@ -7,6 +7,15 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ChargedParty
  * @description
  * 
+ * Party expected to be charged for an MM when a VASP supplies the
+ * indication. `sender` is the sending party, `recipient` the receiving
+ * party, `both` both parties, and `neither` neither party.
+ * `notspecifiedbyVASP` means the VASP did not specify a party. Clause
+ * 5.1.4 also allows a third party; that party's address is not a value of
+ * this enumeration.
+ *
+ * 3GPP TS 32.270 V19.0.0 clauses 5.1.4 and 6.1.5.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +42,15 @@ enum _enum_for_ChargedParty {
  * @summary ChargedParty
  * @description
  * 
+ * Party expected to be charged for an MM when a VASP supplies the
+ * indication. `sender` is the sending party, `recipient` the receiving
+ * party, `both` both parties, and `neither` neither party.
+ * `notspecifiedbyVASP` means the VASP did not specify a party. Clause
+ * 5.1.4 also allows a third party; that party's address is not a value of
+ * this enumeration.
+ *
+ * 3GPP TS 32.270 V19.0.0 clauses 5.1.4 and 6.1.5.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -53,6 +71,15 @@ type ChargedParty = _enum_for_ChargedParty;
  * @summary ChargedParty
  * @description
  * 
+ * Party expected to be charged for an MM when a VASP supplies the
+ * indication. `sender` is the sending party, `recipient` the receiving
+ * party, `both` both parties, and `neither` neither party.
+ * `notspecifiedbyVASP` means the VASP did not specify a party. Clause
+ * 5.1.4 also allows a third party; that party's address is not a value of
+ * this enumeration.
+ *
+ * 3GPP TS 32.270 V19.0.0 clauses 5.1.4 and 6.1.5.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -71,6 +98,12 @@ const ChargedParty = _enum_for_ChargedParty;
 
 /**
  * @summary ChargedParty_sender
+ * @description
+ *
+ * The sending party is expected to be charged.
+ *
+ * 3GPP TS 32.270 V19.0.0 clause 6.1.5.1.
+ *
  * @constant
  * @type {number}
  */
@@ -79,6 +112,12 @@ const ChargedParty_sender: ChargedParty = ChargedParty.sender; /* LONG_NAMED_ENU
 
 /**
  * @summary sender
+ * @description
+ *
+ * The sending party is expected to be charged.
+ *
+ * 3GPP TS 32.270 V19.0.0 clause 6.1.5.1.
+ *
  * @constant
  * @type {number}
  */
@@ -87,6 +126,12 @@ const sender: ChargedParty = ChargedParty.sender; /* SHORT_NAMED_ENUMERATED_VALU
 
 /**
  * @summary ChargedParty_recipient
+ * @description
+ *
+ * The receiving party is expected to be charged.
+ *
+ * 3GPP TS 32.270 V19.0.0 clause 6.1.5.1.
+ *
  * @constant
  * @type {number}
  */
@@ -95,6 +140,12 @@ const ChargedParty_recipient: ChargedParty = ChargedParty.recipient; /* LONG_NAM
 
 /**
  * @summary recipient
+ * @description
+ *
+ * The receiving party is expected to be charged.
+ *
+ * 3GPP TS 32.270 V19.0.0 clause 6.1.5.1.
+ *
  * @constant
  * @type {number}
  */
@@ -103,6 +154,12 @@ const recipient: ChargedParty = ChargedParty.recipient; /* SHORT_NAMED_ENUMERATE
 
 /**
  * @summary ChargedParty_both
+ * @description
+ *
+ * Both the sending and the receiving parties are expected to be charged.
+ *
+ * 3GPP TS 32.270 V19.0.0 clause 6.1.5.1.
+ *
  * @constant
  * @type {number}
  */
@@ -111,6 +168,12 @@ const ChargedParty_both: ChargedParty = ChargedParty.both; /* LONG_NAMED_ENUMERA
 
 /**
  * @summary both
+ * @description
+ *
+ * Both the sending and the receiving parties are expected to be charged.
+ *
+ * 3GPP TS 32.270 V19.0.0 clause 6.1.5.1.
+ *
  * @constant
  * @type {number}
  */
@@ -119,6 +182,12 @@ const both: ChargedParty = ChargedParty.both; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChargedParty_neither
+ * @description
+ *
+ * Neither the sending nor the receiving party is expected to be charged.
+ *
+ * 3GPP TS 32.270 V19.0.0 clause 6.1.5.1.
+ *
  * @constant
  * @type {number}
  */
@@ -127,6 +196,12 @@ const ChargedParty_neither: ChargedParty = ChargedParty.neither; /* LONG_NAMED_E
 
 /**
  * @summary neither
+ * @description
+ *
+ * Neither the sending nor the receiving party is expected to be charged.
+ *
+ * 3GPP TS 32.270 V19.0.0 clause 6.1.5.1.
+ *
  * @constant
  * @type {number}
  */
@@ -135,6 +210,12 @@ const neither: ChargedParty = ChargedParty.neither; /* SHORT_NAMED_ENUMERATED_VA
 
 /**
  * @summary ChargedParty_notspecifiedbyVASP
+ * @description
+ *
+ * The VASP did not specify which party is expected to be charged.
+ *
+ * 3GPP TS 32.270 V19.0.0 clause 5.1.4.
+ *
  * @constant
  * @type {number}
  */
@@ -143,6 +224,12 @@ const ChargedParty_notspecifiedbyVASP: ChargedParty = ChargedParty.notspecifiedb
 
 /**
  * @summary notspecifiedbyVASP
+ * @description
+ *
+ * The VASP did not specify which party is expected to be charged.
+ *
+ * 3GPP TS 32.270 V19.0.0 clause 5.1.4.
+ *
  * @constant
  * @type {number}
  */

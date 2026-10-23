@@ -6,7 +6,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SMDeviceTriggerIndicator
  * @description
- * 
+ *
+ * What the MTC-IWF asked the SMS-SC to do with a device trigger: request,
+ * replace, or recall (table 6.1.3.5.1 and table 6.3.1.2.1). Carried on the
+ * SC-DVT-T4 CDR. The prose names those three actions and does not describe
+ * `notDeviceTrigger`.
+ *
+ * 3GPP TS 32.274 V19.1.0 clause 5.1.4 and table 6.1.3.5.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,7 +37,14 @@ enum _enum_for_SMDeviceTriggerIndicator {
 /**
  * @summary SMDeviceTriggerIndicator
  * @description
- * 
+ *
+ * What the MTC-IWF asked the SMS-SC to do with a device trigger: request,
+ * replace, or recall (table 6.1.3.5.1 and table 6.3.1.2.1). Carried on the
+ * SC-DVT-T4 CDR. The prose names those three actions and does not describe
+ * `notDeviceTrigger`.
+ *
+ * 3GPP TS 32.274 V19.1.0 clause 5.1.4 and table 6.1.3.5.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,7 +63,14 @@ type SMDeviceTriggerIndicator = _enum_for_SMDeviceTriggerIndicator;
 /**
  * @summary SMDeviceTriggerIndicator
  * @description
- * 
+ *
+ * What the MTC-IWF asked the SMS-SC to do with a device trigger: request,
+ * replace, or recall (table 6.1.3.5.1 and table 6.3.1.2.1). Carried on the
+ * SC-DVT-T4 CDR. The prose names those three actions and does not describe
+ * `notDeviceTrigger`.
+ *
+ * 3GPP TS 32.274 V19.1.0 clause 5.1.4 and table 6.1.3.5.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -67,6 +88,11 @@ const SMDeviceTriggerIndicator = _enum_for_SMDeviceTriggerIndicator;
 
 /**
  * @summary SMDeviceTriggerIndicator_notDeviceTrigger
+ * @description
+ *
+ * Not a device trigger. TS 32.274's prose only names request, replace, and
+ * recall, and does not describe this value.
+ *
  * @constant
  * @type {number}
  */
@@ -83,6 +109,11 @@ const notDeviceTrigger: SMDeviceTriggerIndicator = SMDeviceTriggerIndicator.notD
 
 /**
  * @summary SMDeviceTriggerIndicator_deviceTriggerRequest
+ * @description
+ *
+ * A Device Trigger Request from the MTC-IWF over T4, to be delivered to a UE
+ * (clause 5.2.2.4.1).
+ *
  * @constant
  * @type {number}
  */
@@ -99,6 +130,13 @@ const deviceTriggerRequest: SMDeviceTriggerIndicator = SMDeviceTriggerIndicator.
 
 /**
  * @summary SMDeviceTriggerIndicator_deviceTriggerReplace
+ * @description
+ *
+ * Replace a pending trigger identified by the external identifier or MSISDN,
+ * the SCS identifier, and the old reference number (clause 5.2.2.4.4). If none
+ * is pending, the replace fails. A successful replace is then delivered as in
+ * clause 5.2.2.4.2.
+ *
  * @constant
  * @type {number}
  */
@@ -115,6 +153,13 @@ const deviceTriggerReplace: SMDeviceTriggerIndicator = SMDeviceTriggerIndicator.
 
 /**
  * @summary SMDeviceTriggerIndicator_deviceTriggerRecall
+ * @description
+ *
+ * Recall deletes the pending trigger identified by the external identifier or
+ * MSISDN, the SCS identifier, and the old reference number (clause 5.2.2.4.5).
+ * Online charging reports a failure when nothing is pending (clause
+ * 5.3.2.11.5).
+ *
  * @constant
  * @type {number}
  */

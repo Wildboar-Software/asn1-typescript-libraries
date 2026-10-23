@@ -26,7 +26,39 @@ import { APNRateControl, _decode_APNRateControl, _encode_APNRateControl } from "
 /**
  * @summary CPDTSNNRecord
  * @description
- * 
+ *
+ * Serving-network Control Plane data transfer CDR (CPDT-SNN-CDR). If
+ * enabled, one record is produced for each PDN connection at the
+ * IWK-SCEF or the MME. MME support is optional.
+ *
+ * IWK-SCEF: opened at PDN connection creation and on mobility to this
+ * IWK-SCEF (PLMN change). A NIDD submission container is added on NIDD
+ * submit-response receipt or on NIDD submit-response sending. Closed on
+ * PDN connection release (termination, PLMN change, or abnormal
+ * release) or for a partial-record reason: data volume limit, time
+ * limit, maximum number of NIDD submissions, MME change, Serving PLMN
+ * Rate Control change, RAT type change, or management intervention.
+ *
+ * MME: opened on PDN connection creation and on mobility to this MME.
+ * A NIDD submission container is added on NIDD submit-response receipt,
+ * NIDD delivery to the UE, NIDD submission timeout, or an error on NIDD
+ * delivery from the UE. Closed on PDN connection release (termination,
+ * MME change, or abnormal release) or for a partial-record reason: data
+ * volume limit, time limit, maximum number of NIDD submissions, Serving
+ * PLMN Rate Control change, RAT type change, or management intervention.
+ *
+ * Partial-record thresholds are the Charging Characteristics profile
+ * (Annex A). If the PDN connection stays active, a further record is
+ * opened with an incremented record sequence number.
+ *
+ * Inter-RAT mobility between NB-IoT and another RAT is not supported
+ * in this release. Table 6.1.3.3.1 does not list External Identifier or
+ * APN Rate Control; both are present in this ASN.1 type. APN Rate
+ * Control is SCEF-only on the Rf Charging Data Request (table 6.3.2.1).
+ *
+ * 3GPP TS 32.253 V19.0.0 clauses 5.2.3.3, 5.2.3.4, and 6.1.3.3.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -67,156 +99,472 @@ export
 class CPDTSNNRecord {
     /**
      * @summary `recordType`.
+     * @description
+     *
+     * Identifies this record as an IWK-SCEF or MME serving-network
+     * Control Plane data transfer CDR. The value is `cPDTSNNRecord`
+     * (106).
+     *
+     * 3GPP TS 32.253 V19.0.0 table 6.1.3.3.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.18.
+     *
      * @public
      * @readonly
      */
     readonly recordType: RecordType;
     /**
      * @summary `retransmission`.
+     * @description
+     *
+     * When present, information from retransmitted Accounting Requests
+     * has been used in this CDR.
+     *
+     * 3GPP TS 32.253 V19.0.0 table 6.1.3.3.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.19.
+     *
      * @public
      * @readonly
      */
     readonly retransmission: OPTIONAL<NULL>;
     /**
      * @summary `servedIMSI`.
+     * @description
+     *
+     * IMSI of the served party, if available. Clause 5.1 requires the
+     * charging information to identify the subscriber by IMSI. The
+     * structure of the IMSI is defined in TS 23.003.
+     *
+     * 3GPP TS 32.253 V19.0.0 clause 5.1 and table 6.1.3.3.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.21.
+     *
      * @public
      * @readonly
      */
     readonly servedIMSI: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `servedMSISDN`.
+     * @description
+     *
+     * Primary MSISDN of the subscriber, if available. In case of
+     * multi-numbering the MSISDN stored is the primary MSISDN. On Rf
+     * this is carried as a Subscription-Id, together with the IMSI.
+     *
+     * 3GPP TS 32.253 V19.0.0 table 6.1.3.3.1 and table 6.4.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.22.
+     *
      * @public
      * @readonly
      */
     readonly servedMSISDN: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `chargingID`.
+     * @description
+     *
+     * Charging identifier of this PDN connection, used to correlate the
+     * CDRs produced by the SCEF, the IWK-SCEF, and the MME. Every PDN
+     * connection is assigned one. The SCEF generates it when the PDN
+     * connection is created and forwards it to the MME and, in roaming,
+     * to the IWK-SCEF. Together with the SCEF identity it identifies the
+     * PDN connection. It is transferred to the new MME when the MME
+     * changes. Different SCEFs allocate values independently and may
+     * reuse the same numbers.
+     *
+     * 3GPP TS 32.253 V19.0.0 clause 5.1, clause 5.2.1, and
+     * table 6.1.3.3.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.7.
+     *
      * @public
      * @readonly
      */
     readonly chargingID: INTEGER;
     /**
      * @summary `serviceContextID`.
+     * @description
+     *
+     * Indicates that the CDR applies to the Control Plane data transfer
+     * service. Taken from the Diameter Service-Context-Id when Rf
+     * accounting was used and the AVP was included. The contents are
+     * described in TS 32.299.
+     *
+     * 3GPP TS 32.253 V19.0.0 table 6.1.3.3.1 and table 6.4.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.1.2.
+     *
      * @public
      * @readonly
      */
     readonly serviceContextID: OPTIONAL<UTF8String>;
     /**
      * @summary `nodeID`.
+     * @description
+     *
+     * Name of the recording entity. Operator configurable. It may or may
+     * not be the DNS host name of the node. On Rf this is the Node-Id.
+     *
+     * 3GPP TS 32.253 V19.0.0 table 6.1.3.3.1 and table 6.4.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.13.
+     *
      * @public
      * @readonly
      */
     readonly nodeID: OPTIONAL<IA5String>;
     /**
      * @summary `recordOpeningTime`.
+     * @description
+     *
+     * Time stamp when the CDF opened this record: at PDN connection
+     * start for this IWK-SCEF or MME, or when a subsequent partial
+     * record was opened. There is no separate record-opening-reason
+     * field. A missing record sequence number, or a sequence number of
+     * one, means the PDN connection to the SCEF was activated for this
+     * serving node.
+     *
+     * 3GPP TS 32.253 V19.0.0 table 6.1.3.3.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.16.
+     *
      * @public
      * @readonly
      */
     readonly recordOpeningTime: OCTET_STRING;
     /**
      * @summary `duration`.
+     * @description
+     *
+     * Duration of this record in the serving-network node (IWK-SCEF or
+     * MME), in seconds, from record opening to record closure. For a
+     * partial record this is the duration of that partial record, not
+     * the cumulative PDN-connection duration. Clause 5.1 counts
+     * PDN-connection usage as the interval from activation to
+     * deactivation.
+     *
+     * A fraction of a second may be rounded or truncated. A duration of
+     * zero seconds is accepted when the transferred data volume is
+     * greater than zero. The same rounding or truncation method applies
+     * to both single and partial records.
+     *
+     * 3GPP TS 32.253 V19.0.0 clause 5.1 and table 6.1.3.3.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.9.
+     *
      * @public
      * @readonly
      */
     readonly duration: INTEGER;
     /**
      * @summary `accessPointNameNI`.
+     * @description
+     *
+     * Logical name of the access point connected to the external packet
+     * data network: the network-identifier part of the APN, written in
+     * dot notation. The format is specified in TS 23.003. MME selection
+     * of the APN for SCEF-based non-IP delivery is specified in
+     * TS 23.682. Clause 5.1 uses the APN, together with the SCEF
+     * address, as the destination of the PDN connection. On Rf this is
+     * the Called-Station-Id.
+     *
+     * 3GPP TS 32.253 V19.0.0 clause 5.1, table 6.1.3.3.1, and
+     * table 6.4.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.2.
+     *
      * @public
      * @readonly
      */
     readonly accessPointNameNI: OPTIONAL<IA5String>;
     /**
      * @summary `sCEFID`.
+     * @description
+     *
+     * Diameter identity of the SCEF serving this PDN connection.
+     * Table 6.1.3.3.1 lists the field as mandatory. With `chargingID`
+     * it identifies the PDN connection across CPCN records, including
+     * correlation of
+     * a VPLMN IWK-SCEF CDR with the HPLMN SCEF CDR. On Rf this is the
+     * SCEF-Id inside CPDT-Information.
+     *
+     * 3GPP TS 32.253 V19.0.0 clause 5.2.1, table 6.1.3.3.1,
+     * clause 6.3.1.2, and table 6.4.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.20.
+     *
      * @public
      * @readonly
      */
     readonly sCEFID: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `chargingCharacteristics`.
+     * @description
+     *
+     * Charging Characteristics applied to the PDN connection. The HSS
+     * supplies them to the MME with the subscription. On a non-IP PDN
+     * connection to an APN with the "Invoke SCEF Selection" indicator,
+     * the MME forwards them to the SCEF and, in roaming, to the
+     * IWK-SCEF. A subscriber may have them on the subscription and/or
+     * on subscribed APNs. A CPCN may apply the HSS value or ignore it
+     * and apply a pre-provisioned default.
+     *
+     * The value is a 16-bit string. Each bit, when set to 1, selects an
+     * operator-defined behaviour configured in the CPCN. The format is
+     * specified in TS 32.298. Behaviours are not standardised. Annex A
+     * gives as an example, for both the CPDT-SCE-CDR and this CDR:
+     * activate or deactivate CDRs, a time limit, a data volume limit,
+     * and a maximum number of NIDD submissions. A CDF/CGF address may
+     * also be included. Those thresholds are the partial-record
+     * triggers. Separate values per profile can be defined for data
+     * volume limit, time limit, and maximum number of NIDD submissions
+     * (clause 5.2.2.1).
+     *
+     * 3GPP TS 32.253 V19.0.0 clause 5.2.2.1, table 6.1.3.3.1, and
+     * Annex A.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.5.
+     *
      * @public
      * @readonly
      */
     readonly chargingCharacteristics: OCTET_STRING;
     /**
      * @summary `chChSelectionMode`.
+     * @description
+     *
+     * How the Charging Characteristics applied to this record were
+     * selected. Annex A allows the network to apply the value from the
+     * HSS, the home default when the MME is in the HPLMN, or the roaming
+     * default when the MME is in the VPLMN. TS 32.298 further limits the
+     * values: the MME may use home default, roaming default, APN
+     * specific, or subscription specific; the SCEF and IWK-SCEF may use
+     * home default, roaming default, or serving-node supplied.
+     *
+     * 3GPP TS 32.253 V19.0.0 table 6.1.3.3.1 and Annex A.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.6.
+     *
      * @public
      * @readonly
      */
     readonly chChSelectionMode: OPTIONAL<ChChSelectionMode>;
     /**
      * @summary `servingNodeIdentity`.
+     * @description
+     *
+     * Diameter identity of the MME connected during this record.
+     * Table 6.1.3.3.1 lists the field as mandatory. On Rf this is
+     * Serving-Node-Identity inside
+     * CPDT-Information.
+     *
+     * 3GPP TS 32.253 V19.0.0 table 6.1.3.3.1, clause 6.3.1.2, and
+     * table 6.4.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.23.
+     *
      * @public
      * @readonly
      */
     readonly servingNodeIdentity: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `servingPLMNRateControl`.
+     * @description
+     *
+     * Serving PLMN Rate Control used by the MME during this record.
+     * Clause 5.1 charges radio usage per NIDD submission under the
+     * authorized Serving PLMN and APN rate controls. A change of this
+     * value closes the CDR; a new one is opened if the PDN connection
+     * is still active. TS 32.298 specifies the contents by reference to
+     * TS 29.128. TS 32.253 does not define the two integer components.
+     *
+     * 3GPP TS 32.253 V19.0.0 clause 5.1, clause 5.2.1, and
+     * table 6.1.3.3.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.25.
+     *
      * @public
      * @readonly
      */
     readonly servingPLMNRateControl: OPTIONAL<ServingPLMNRateControl>;
     /**
      * @summary `listOfNIDDsubmission`.
+     * @description
+     *
+     * NIDD submission containers for this PDN connection. Each container
+     * is time stamped and holds the volume submitted, the submission
+     * result, and the reason it was added. See `NIDDsubmission`.
+     *
+     * The IWK-SCEF adds a container on receipt of a NIDD submit
+     * response or on sending of a NIDD submit response
+     * (clause 5.2.3.3.2). The MME adds one on receipt of a NIDD submit
+     * response, on NIDD delivery to the UE, on NIDD submission timeout,
+     * or on an error receiving NIDD delivery from the UE
+     * (clause 5.2.3.4.2).
+     *
+     * 3GPP TS 32.253 V19.0.0 clauses 5.2.3.3.2 and 5.2.3.4.2,
+     * table 6.1.3.3.1, and clause 6.1.3.4.
+     *
      * @public
      * @readonly
      */
     readonly listOfNIDDsubmission: OPTIONAL<NIDDsubmission[]>;
     /**
      * @summary `causeForRecClosing`.
+     * @description
+     *
+     * Reason this serving-network node released the record. See
+     * `CPCauseForRecClosing`. On Rf it is taken from the PS-Information
+     * Change-Condition AVP. `diagnostics` may give a more detailed
+     * reason for PDN connection release when a single cause applies.
+     *
+     * 3GPP TS 32.253 V19.0.0 clauses 5.2.3.3.3 and 5.2.3.4.3,
+     * table 6.1.3.3.1, and table 6.4.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.4.
+     *
      * @public
      * @readonly
      */
     readonly causeForRecClosing: CPCauseForRecClosing;
     /**
      * @summary `diagnostics`.
+     * @description
+     *
+     * More detailed reason for release of the PDN connection, when a
+     * single cause applies. Complements `causeForRecClosing`. The
+     * diagnostics may also carry manufacturer-specific and
+     * network-specific information. On Rf this is the Diagnostics AVP.
+     * TS 32.253 does not define the choice alternatives.
+     *
+     * 3GPP TS 32.253 V19.0.0 table 6.1.3.3.1, clause 6.3.1.1, and
+     * table 6.4.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.8.
+     *
      * @public
      * @readonly
      */
     readonly diagnostics: OPTIONAL<Diagnostics>;
     /**
      * @summary `localSequenceNumber`.
+     * @description
+     *
+     * Consecutive record number created by this node. Allocated
+     * sequentially across all CDR types, so post-processing can detect
+     * missing records. Unique within the node identified by `nodeID` or
+     * by the MME identity. Table 6.4.1 does not bind this field to an
+     * Rf AVP.
+     *
+     * 3GPP TS 32.253 V19.0.0 table 6.1.3.3.1 and table 6.4.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.12.
+     *
      * @public
      * @readonly
      */
     readonly localSequenceNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `recordSequenceNumber`.
+     * @description
+     *
+     * Partial-record sequence number for one PDN connection in this
+     * IWK-SCEF or MME, identified by the same Charging Id and SCEF Id.
+     * Present only for partial records. Starts at one. Absent when this
+     * node produced only one record for the connection. When a partial
+     * record is closed and the PDN connection stays active, the next
+     * record uses the next sequence number. Table 6.4.1 does not bind
+     * this field to an Rf AVP.
+     *
+     * 3GPP TS 32.253 V19.0.0 clauses 5.2.3.3.3 and 5.2.3.4.3, and
+     * table 6.1.3.3.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.17.
+     *
      * @public
      * @readonly
      */
     readonly recordSequenceNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `recordExtensions`.
+     * @description
+     *
+     * Network-operator or manufacturer extensions to the record, present
+     * only when such an extension exists. Each element is a management
+     * extension as defined in ITU-T X.721. TS 32.253 does not define
+     * any extension.
+     *
+     * 3GPP TS 32.253 V19.0.0 table 6.1.3.3.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.15.
+     *
      * @public
      * @readonly
      */
     readonly recordExtensions: OPTIONAL<ManagementExtension[]>;
     /**
      * @summary `externalIdentifier`.
+     * @description
+     *
+     * External identifier of the served party associated with the IMSI,
+     * if available, as specified in TS 23.003. Table 6.1.3.3.1 does not
+     * list this field on the CPDT-SNN-CDR. It is present on the Rf CPDT
+     * Information for the MME, IWK-SCEF, and SCEF (table 6.3.2.1) and in
+     * this ASN.1 type.
+     *
+     * 3GPP TS 32.253 V19.0.0 clause 6.3.1.2 and table 6.3.2.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.10.
+     *
      * @public
      * @readonly
      */
     readonly externalIdentifier: OPTIONAL<SubscriptionID>;
     /**
      * @summary `aPNRateControl`.
+     * @description
+     *
+     * APN Rate Control enforced in the SCEF. Table 6.1.3.3.1 does not
+     * list this field on the CPDT-SNN-CDR, and table 6.3.2.1 does not
+     * allow it on the MME or IWK-SCEF Charging Data Request. An APN Rate
+     * Control change closes only the SCEF CDR (clause 5.2.1). The field
+     * is present in this ASN.1 type. TS 32.298 specifies the contents
+     * by reference to TS 29.128.
+     *
+     * 3GPP TS 32.253 V19.0.0 clause 5.2.1 and table 6.3.2.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.3.
+     *
      * @public
      * @readonly
      */
     readonly aPNRateControl: OPTIONAL<APNRateControl>;
     /**
      * @summary `rATType`.
+     * @description
+     *
+     * Radio Access Technology (RAT) type currently used by the UE, as
+     * defined in TS 29.061, when available. Clause 5.1 collects radio
+     * usage per NIDD submission per RAT type. A RAT-type change closes
+     * the CDR. Inter-RAT mobility between NB-IoT and another RAT is not
+     * supported in this release. On Rf this is 3GPP-RAT-Type.
+     *
+     * 3GPP TS 32.253 V19.0.0 clause 5.1, clauses 5.2.3.3.3 and 5.2.3.4.3,
+     * and table 6.1.3.3.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.14.
+     *
      * @public
      * @readonly
      */
     readonly rATType: OPTIONAL<INTEGER>;
     /**
      * @summary `servingNodePLMNIdentifier`.
+     * @description
+     *
+     * PLMN identifier (MCC and MNC) serving the UE during this record.
+     * Clause 5.1 collects the location as HPLMN or VPLMN, plus optional
+     * higher-accuracy location information, which this field does not
+     * carry. On Rf this is 3GPP-SGSN-MCC-MNC. A PLMN change releases the
+     * IWK-SCEF CDR; the MME closure table does not list PLMN change.
+     *
+     * 3GPP TS 32.253 V19.0.0 clause 5.1, clause 5.2.3.3.3, and
+     * table 6.1.3.3.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.24.
+     *
      * @public
      * @readonly
      */
     readonly servingNodePLMNIdentifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `servedIMEI`.
+     * @description
+     *
+     * IMEI or IMEISV of the ME, if available. Clause 5.1 collects the
+     * subscriber equipment number (IMEISV) used for the PDN connection.
+     * On Rf this is User-Equipment-Info.
+     *
+     * 3GPP TS 32.253 V19.0.0 clause 5.1, table 6.1.3.3.1, and
+     * table 6.4.1.
+     *
      * @public
      * @readonly
      */

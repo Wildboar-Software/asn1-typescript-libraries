@@ -6,7 +6,15 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ASRecord_threeGPPPSDataOffStatus
  * @description
- * 
+ *
+ * 3GPP PS Data Off status of the registration, when the AS has it, as
+ * defined in TS 23.228 (clause 6.1.3.9 and clause 6.3.1.1). TS 32.260 does
+ * not further define active and inactive.
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 6.1.3.9.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,7 +35,15 @@ enum _enum_for_ASRecord_threeGPPPSDataOffStatus {
 /**
  * @summary ASRecord_threeGPPPSDataOffStatus
  * @description
- * 
+ *
+ * 3GPP PS Data Off status of the registration, when the AS has it, as
+ * defined in TS 23.228 (clause 6.1.3.9 and clause 6.3.1.1). TS 32.260 does
+ * not further define active and inactive.
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 6.1.3.9.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,7 +61,15 @@ type ASRecord_threeGPPPSDataOffStatus = _enum_for_ASRecord_threeGPPPSDataOffStat
 /**
  * @summary ASRecord_threeGPPPSDataOffStatus
  * @description
- * 
+ *
+ * 3GPP PS Data Off status of the registration, when the AS has it, as
+ * defined in TS 23.228 (clause 6.1.3.9 and clause 6.3.1.1). TS 32.260 does
+ * not further define active and inactive.
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 6.1.3.9.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -62,6 +86,11 @@ const ASRecord_threeGPPPSDataOffStatus = _enum_for_ASRecord_threeGPPPSDataOffSta
 
 /**
  * @summary ASRecord_threeGPPPSDataOffStatus_active
+ * @description
+ *
+ * 3GPP PS Data Off is active for the registration, as defined in TS 23.228
+ * (clause 6.1.3.9). TS 32.260 does not further define this value..
+ *
  * @constant
  * @type {number}
  */
@@ -70,6 +99,11 @@ const ASRecord_threeGPPPSDataOffStatus_active: ASRecord_threeGPPPSDataOffStatus 
 
 /**
  * @summary active
+ * @description
+ *
+ * 3GPP PS Data Off is active for the registration, as defined in TS 23.228
+ * (clause 6.1.3.9). TS 32.260 does not further define this value..
+ *
  * @constant
  * @type {number}
  */
@@ -78,6 +112,13 @@ const active: ASRecord_threeGPPPSDataOffStatus = ASRecord_threeGPPPSDataOffStatu
 
 /**
  * @summary ASRecord_threeGPPPSDataOffStatus_inactive
+ * @description
+ *
+ * 3GPP PS Data Off is inactive for the registration, as defined in TS
+ * 23.228 (clause 6.1.3.9). TS 32.260 does not further define this value.
+ *
+ * 3GPP TS 32.260 V20.1.0.
+ *
  * @constant
  * @type {number}
  */
@@ -86,6 +127,13 @@ const ASRecord_threeGPPPSDataOffStatus_inactive: ASRecord_threeGPPPSDataOffStatu
 
 /**
  * @summary inactive
+ * @description
+ *
+ * 3GPP PS Data Off is inactive for the registration, as defined in TS
+ * 23.228 (clause 6.1.3.9). TS 32.260 does not further define this value.
+ *
+ * 3GPP TS 32.260 V20.1.0.
+ *
  * @constant
  * @type {number}
  */

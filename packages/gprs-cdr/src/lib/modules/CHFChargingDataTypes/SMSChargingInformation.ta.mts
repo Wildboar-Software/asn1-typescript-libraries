@@ -24,7 +24,11 @@ import { SMdeliveryReportRequested, _decode_SMdeliveryReportRequested, _encode_S
 /**
  * @summary SMSChargingInformation
  * @description
- * 
+ *
+ * This field holds the SMS specific information described in TS 32.274 [34].
+ *
+ * 3GPP TS 32.298 V20.1.0 table 5.1.5.0.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -94,12 +98,25 @@ class SMSChargingInformation {
     readonly recipientInfos: OPTIONAL<RecipientInfos[]>;
     /**
      * @summary `userEquipmentInfo`.
+     * @description
+     *
+     * This field contains the identification of User Equipment (UE) accessing
+     * the 3GPP 5GS, i.e. PEI as specified in clause 6.4 TS 23.003 [200].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.5.1.18.
+     *
      * @public
      * @readonly
      */
     readonly userEquipmentInfo: OPTIONAL<SubscriberEquipmentNumber>;
     /**
      * @summary `userLocationInformation`.
+     * @description
+     *
+     * This field contains the User Location as described in TS 29.571 [249].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.5.1.15.
+     *
      * @public
      * @readonly
      */
@@ -112,6 +129,15 @@ class SMSChargingInformation {
     readonly uETimeZone: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `rATType`.
+     * @description
+     *
+     * This field contains the Radio Access Technology (RAT) type used, as
+     * provided to CHF, it's based on the RatType specified in TS 29.571 [249]
+     * with 3GPP RAT Type specified in TS 29.061 [216] added for backwards
+     * compatibility.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.5.1.17.
+     *
      * @public
      * @readonly
      */

@@ -10,7 +10,23 @@ import { ChargingRecord, _decode_ChargingRecord, _encode_ChargingRecord } from "
 /**
  * @summary CHFRecord
  * @description
- * 
+ *
+ * If enabled, CHF records shall be produced for chargeable events, with or
+ * without quota management. A CHF-CDR shall be opened when the CHF receives
+ * Charging Data Request [Initial]. As an alternative to the default CHF
+ * behaviour, the "Individual Partial record" mechanism can be used based on
+ * Operator's policy configured in the CHF. In this case a new CDR shall be
+ * opened for each Charging Data Request [Initial, Update, Termination],
+ * charging information shall be added and the CDR shall then be closed. The
+ * Sequence Number will be incremented for each Charging Data Request
+ * [Initial, Update, Termination] received by the CHF. The generic fields in
+ * the record are specified in table 5.1.5.0.1. The NF specific parts will be
+ * concatenated to this e.g. the PDU Session Information, PDU Container
+ * Information and Roaming QBC Information are concatenated for the SMF.
+ * Table 5.1.5.0.1: CHF record (CHF-CDR)
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.5.0.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

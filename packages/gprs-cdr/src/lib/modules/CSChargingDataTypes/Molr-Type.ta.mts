@@ -26,7 +26,12 @@ enum _enum_for_Molr_Type {
 /**
  * @summary Molr_Type
  * @description
- * 
+ *
+ * The MOLR-Type identifier refers to the type of MO-LR that was invoked as
+ * defined in TS 24.080 [209].
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.56.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

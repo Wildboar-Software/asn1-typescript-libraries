@@ -13,7 +13,27 @@ import { _decode_LocationType_deferredLocationEventType, _encode_LocationType_de
 /**
  * @summary LocationType
  * @description
- * 
+ *
+ * Type of location information being requested. Category M on the
+ * mobile-terminated GMLC CDRs: LCS-RGMT-CDR, LCS-HGMT-CDR, and
+ * LCS-VGMT-CDR. The LCS-GMO-CDR and LCS-GNI-CDR tables in this
+ * specification do not contain Location Type.
+ *
+ * For online charging of an MT-LR, Location Type in LCS
+ * Information (category Oc) carries the same information. MT-LR
+ * is an external LCS client asking for the location of a target
+ * UE. The R-GMLC, H-GMLC, and V-GMLC each produce their own CDR
+ * for that request.
+ *
+ * TS 32.298 takes the location type defined in TS 29.002.
+ * TS 32.271 does not define `locationEstimateType` or
+ * `deferredLocationEventType`.
+ *
+ * 3GPP TS 32.271 V12.1.0 clauses 5.2.3.2, 6.1.3.2.1, 6.1.3.2.2,
+ * 6.1.3.2.3, and 6.3.1.2.
+ * 3GPP TS 32.298 V20.1.0 clauses 5.1.2.1.48, 5.1.2.2.29, and
+ * 5.1.4.2.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,12 +61,31 @@ export
 class LocationType {
     /**
      * @summary `locationEstimateType`.
+     * @description
+     *
+     * Requested kind of location information. TS 32.271 assigns
+     * that role to Location Type as a whole and does not define
+     * these values.
+     *
+     * 3GPP TS 32.271 V12.1.0 clauses 6.1.3.2.1, 6.1.3.2.2,
+     * 6.1.3.2.3, and 6.3.1.2.
+     *
      * @public
      * @readonly
      */
     readonly locationEstimateType: LocationType_locationEstimateType;
     /**
      * @summary `deferredLocationEventType`.
+     * @description
+     *
+     * Optional deferred-event indication on a location type.
+     * TS 32.271 does not define this component or its named bits.
+     * On an MT-LR, Location Type is the type of location
+     * information being requested.
+     *
+     * 3GPP TS 32.271 V12.1.0 clauses 6.1.3.2.1, 6.1.3.2.2,
+     * 6.1.3.2.3, and 6.3.1.2.
+     *
      * @public
      * @readonly
      */

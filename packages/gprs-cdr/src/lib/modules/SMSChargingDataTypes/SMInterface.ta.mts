@@ -12,7 +12,21 @@ import { SMInterfaceType, _decode_SMInterfaceType, _encode_SMInterfaceType, _enu
 /**
  * @summary SMInterface
  * @description
- * 
+ *
+ * Interface on which the SMS node received the short message (the previous
+ * hop) or on which it is to deliver the message (the next hop). For
+ * person-to-application, application-to-person, or application-to-application
+ * messaging this identifies the application (clause 5.1.1). That identity is
+ * distinct from a short number in the address fields (note 3 of table
+ * 6.3.1.2.1).
+ *
+ * TS 32.274 does not say which of `interfaceId`, `interfaceText`, and
+ * `interfacePort` carries the application identity. For a device trigger on an
+ * SC-SMT CDR, neither the originator interface nor the destination interface
+ * is present (table 6.1.3.4.1).
+ *
+ * 3GPP TS 32.274 V19.1.0 table 6.3.1.2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,24 +43,46 @@ export
 class SMInterface {
     /**
      * @summary `interfaceId`.
+     * @description
+     *
+     * TS 32.274 says the interface identifies the application for application
+     * messaging, and does not say which component holds that identity.
+     *
      * @public
      * @readonly
      */
     readonly interfaceId: OPTIONAL<GraphicString>;
     /**
      * @summary `interfaceText`.
+     * @description
+     *
+     * TS 32.274 does not describe this component.
+     *
      * @public
      * @readonly
      */
     readonly interfaceText: OPTIONAL<GraphicString>;
     /**
      * @summary `interfacePort`.
+     * @description
+     *
+     * TS 32.274 does not describe this component. The application port
+     * identifier of a device trigger or of MSISDN-less MO-SMS via T4 is
+     * `sMSApplicationPortID`, not this field.
+     *
      * @public
      * @readonly
      */
     readonly interfacePort: OPTIONAL<GraphicString>;
     /**
      * @summary `interfaceType`.
+     * @description
+     *
+     * Role of this interface. See `SMInterfaceType`. Clause 5.1.1 names the
+     * scenarios and does not define the enumerated values.
+     *
+     * 3GPP TS 32.274 V19.1.0 clause 5.1.1.
+     *
      * @public
      * @readonly
      */

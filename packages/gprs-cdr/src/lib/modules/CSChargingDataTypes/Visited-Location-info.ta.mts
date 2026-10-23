@@ -13,7 +13,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Visited_Location_info
  * @description
- * 
+ *
+ * VMSC and VLR numbers on an HLR location update. Both are mandatory on the
+ * new location. Both are operator-provisionable conditional on the old
+ * location. The table writes the categories as two codes because the two
+ * numbers are separate components.
+ *
+ * 3GPP TS 32.250 V19.0.0 clause 6.1.3.12.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -21,19 +28,30 @@ import * as $ from "@wildboar/asn1/functional";
  *    mscNumber   [1] IMPLICIT OCTET STRING ( SIZE( 1 .. 20 ) ) ( SIZE( 1 .. 9 ) ),
  *    vlrNumber   [2] IMPLICIT OCTET STRING ( SIZE( 1 .. 20 ) ) ( SIZE( 1 .. 9 ) )}
  * ```
- * 
  * @class
  */
 export
 class Visited_Location_info {
     /**
      * @summary `mscNumber`.
+     * @description
+     *
+     * VMSC E.164 number. Mandatory on the new location and
+     * operator-provisionable conditional on the old location. 3GPP TS 32.250
+     * V19.0.0 clause 6.1.3.12.
+     *
      * @public
      * @readonly
      */
     readonly mscNumber: OCTET_STRING;
     /**
      * @summary `vlrNumber`.
+     * @description
+     *
+     * VLR E.164 number. Mandatory on the new location and
+     * operator-provisionable conditional on the old location. 3GPP TS 32.250
+     * V19.0.0 clause 6.1.3.12.
+     *
      * @public
      * @readonly
      */
@@ -57,7 +75,7 @@ class Visited_Location_info {
     /**
      * @summary Restructures an object into a Visited_Location_info
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `Visited_Location_info`.
      * 
      * @public
@@ -76,9 +94,9 @@ class Visited_Location_info {
 /**
  * @summary The Leading Root Component Types of Visited_Location_info
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -90,9 +108,9 @@ const _root_component_type_list_1_spec_for_Visited_Location_info: $.ComponentSpe
 /**
  * @summary The Trailing Root Component Types of Visited_Location_info
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -103,9 +121,9 @@ const _root_component_type_list_2_spec_for_Visited_Location_info: $.ComponentSpe
 /**
  * @summary The Extension Addition Component Types of Visited_Location_info
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * @constant
  */
 export

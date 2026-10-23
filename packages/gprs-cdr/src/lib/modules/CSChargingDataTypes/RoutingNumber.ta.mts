@@ -12,7 +12,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary RoutingNumber
  * @description
- * 
+ *
+ * The routing number field of the HLR interrogation record contains either a
+ * mobile station roaming number or, in case of call forwarding, a
+ * forwarded-to number.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.76.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

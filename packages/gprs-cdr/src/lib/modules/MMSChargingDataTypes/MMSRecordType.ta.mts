@@ -43,6 +43,39 @@ import { MM7RRsRecord, _decode_MM7RRsRecord, _encode_MM7RRsRecord } from "../MMS
  * @summary MMSRecordType
  * @description
  * 
+ * Offline MMS CDRs produced by an MMS Relay/Server. Each alternative is
+ * one event-based record. One chargeable event produces one CDR, and the
+ * CDR is visible in the files sent across Bm.
+ *
+ * Originator MMS R/S (clause 6.1.1). MM1 records are produced whether or
+ * not this R/S is also the recipient. MM4 records are produced only when
+ * the two R/Ss are distinct. `mMO1SRecord` is MM1 submission.
+ * `mMO4FRqRecord` and `mMO4FRsRecord` are the MM4 forward request and
+ * response. `mMO4DRecord` and `mMO1DRecord` are delivery reports.
+ * `mMO4RRecord` and `mMO1RRecord` are read-reply reports. `mMOMDRecord` is
+ * deletion of the MM after submission.
+ *
+ * Recipient MMS R/S (clause 6.1.2), with the same MM1 and MM4 distinction.
+ * `mMR4FRecord` is the MM4 forward. `mMR1NRqRecord` and `mMR1NRsRecord`
+ * are the notification request and response. `mMR1RtRqRecord` is
+ * retrieval. `mMR1ARecord` is the acknowledgement. `mMR4DRqRecord` and
+ * `mMR4DRsRecord` are the MM4 delivery-report request and response.
+ * `mMR1RRRecord` is the read-reply from the recipient User Agent.
+ * `mMR4RRqRecord` and `mMR4RRsRecord` are the MM4 read-reply request and
+ * response. `mMRMDRecord` is deletion at the recipient R/S.
+ *
+ * `mMFRecord` is the MM1 forward (clause 6.1.3). `mMBx1URecord`,
+ * `mMBx1SRecord`, `mMBx1VRecord`, and `mMBx1DRecord` are MMBox upload,
+ * store, view, and delete (clause 6.1.4). The `mM7*` alternatives are VASP
+ * transactions on MM7 (clause 6.1.5).
+ *
+ * TS 32.270 also specifies an R1C-CDR for recipient MM1 cancellation, an
+ * MM7EC-CDR, and an MM7ER-CDR. This choice has no alternative for those
+ * three records. Tables 5.1.4.2 and 5.2.3.4.1 both list the VASP events,
+ * in different orders; the generation rule on each record identifies it.
+ *
+ * 3GPP TS 32.270 V19.0.0 clauses 5.2.3 and 6.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

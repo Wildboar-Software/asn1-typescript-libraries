@@ -17,7 +17,20 @@ import { _decode_ChangeOfProSeCondition_radioResourcesInd, _encode_ChangeOfProSe
 /**
  * @summary ChangeOfProSeCondition
  * @description
- * 
+ *
+ * One closed transmission or reception container in a PF-DC-CDR. The ProSe
+ * Function adds a container when a charging condition changes and the UE
+ * included that information in the usage information report. Examples of a
+ * change are a new cell, leaving E-UTRAN coverage, and returning to coverage.
+ * The condition categorizes the volume, for example volume per coverage-status
+ * period.
+ *
+ * `dataVolume` is transmitted volume when the container is in
+ * `listOfTransmissionData`, and received volume when it is in
+ * `listOfReceptionData`.
+ *
+ * 3GPP TS 32.277 V19.2.0 clauses 5.2.3.1.2 and 6.1.3.4. Table 6.1.3.4.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,60 +58,138 @@ export
 class ChangeOfProSeCondition {
     /**
      * @summary `changeConditionTimestamp`.
+     * @description
+     *
+     * Category Oc. Time the container was closed and reported because a ProSe
+     * charging condition changed.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.4.2.
+     *
      * @public
      * @readonly
      */
     readonly changeConditionTimestamp: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `coverageStatus`.
+     * @description
+     *
+     * Category Oc. Whether the UE is served by E-UTRAN for the volume in this
+     * container: in coverage or out of coverage.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.4.2.
+     *
      * @public
      * @readonly
      */
     readonly coverageStatus: OPTIONAL<CoverageStatus>;
     /**
      * @summary `uELocation`.
+     * @description
+     *
+     * Category Oc. Location of the UE when the container was closed, for
+     * example the ECGI.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.40 sets UE Location to the 28-bit
+     * cell identity of the ECGI, taken from the UE's lower layers.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.4.2.
+     *
      * @public
      * @readonly
      */
     readonly uELocation: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `dataVolume`.
+     * @description
+     *
+     * Category Oc. Amount of data the UE transmitted, when this container is in
+     * `listOfTransmissionData`. Amount of data the UE received, when it is in
+     * `listOfReceptionData`. Clause 5.1.2.4 also has the UE collect data
+     * relayed by a ProSe UE-to-Network Relay; table 6.1.3.4.2 gives that volume
+     * no separate field.
+     *
+     * 3GPP TS 32.277 V19.2.0 clauses 5.1.2.4 and table 6.1.3.4.2.
+     *
      * @public
      * @readonly
      */
     readonly dataVolume: OPTIONAL<INTEGER>;
     /**
      * @summary `serviceChangeCondition`.
+     * @description
+     *
+     * Category Oc. ProSe-specific reason the container was closed. Table
+     * 6.1.3.4.2 gives a cell change, going out of coverage, and coming back to
+     * coverage as examples.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.4.2.
+     *
      * @public
      * @readonly
      */
     readonly serviceChangeCondition: OPTIONAL<ChangeOfProSeCondition_serviceChangeCondition>;
     /**
      * @summary `localSequenceNumber`.
+     * @description
+     *
+     * Category Oc. Sequence number of this Direct Communication data container.
+     * It increases by 1 each time a container is closed.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.4.2.
+     *
      * @public
      * @readonly
      */
     readonly localSequenceNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `usageInformationReportSequenceNumber`.
+     * @description
+     *
+     * Category Oc. Sequence number of the usage information report that
+     * generated this container. The UE puts a sequence number on the report for
+     * every collection period.
+     *
+     * 3GPP TS 32.277 V19.2.0 clauses 5.1.2.3 and table 6.1.3.4.2.
+     *
      * @public
      * @readonly
      */
     readonly usageInformationReportSequenceNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `radioResourcesInd`.
+     * @description
+     *
+     * Category Oc. Whether this direct communication used operator-provided
+     * radio resources or configured radio resources. Clause 5.1.2.3 describes
+     * operator-provided resources as those used in E-UTRAN coverage.
+     *
+     * 3GPP TS 32.277 V19.2.0 clauses 5.1.2.3 and table 6.1.3.4.2.
+     *
      * @public
      * @readonly
      */
     readonly radioResourcesInd: OPTIONAL<ChangeOfProSeCondition_radioResourcesInd>;
     /**
      * @summary `radiofrequency`.
+     * @description
+     *
+     * Category Oc. Radio frequency used for this ProSe direct communication. TS
+     * 32.277 does not define the octet-string layout.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.4.2.
+     *
      * @public
      * @readonly
      */
     readonly radiofrequency: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `vPLMNIdentifier`.
+     * @description
+     *
+     * Category Oc. Identifier of the PLMN the UE is visiting.
+     *
+     * 3GPP TS 32.277 V19.2.0 table 6.1.3.4.2.
+     *
      * @public
      * @readonly
      */

@@ -13,7 +13,6 @@ import { UnauthorizedLCSClient_Diagnostic, _decode_UnauthorizedLCSClient_Diagnos
 /**
  * @summary SSActionResult
  * @description
- * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

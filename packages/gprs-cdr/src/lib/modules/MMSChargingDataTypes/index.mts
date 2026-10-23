@@ -1,10 +1,28 @@
 /**
  * @description
  *
- * ASN.1 module `MMSChargingDataTypes`.
+ * Offline charging records for the Multimedia Messaging Service. An MMS
+ * Relay/Server produces one CDR for each chargeable MM transaction on MM1,
+ * MM4, or MM7. Charging is event based, and each chargeable event
+ * produces one CDR. The records are visible in the CDR files the
+ * Relay/Server sends to the billing domain on Bm.
  *
- * Identical assignments that also appear in other charging modules
- * are re-exported from `shared`.
+ * The records cover submission, retrieval, forwarding, delivery reports,
+ * read-reply reports, deletion, MMBox upload, store, view, and delete, and
+ * VASP transactions. Online charging of submission and retrieval uses
+ * Debit / Reserve Units on Ro (clauses 5.3 and 6.2). Converged-charging
+ * CHF CDR contents are specified in clause 6.1.7. The formal ASN.1 of
+ * these CDR parameters is specified in TS 32.298.
+ *
+ * Field categories in the record tables follow TS 32.240 clause 5.4, as
+ * applied by clause 6.1.0. M is always present. C is present when the
+ * field's conditions are met. OM and OC are included only when the
+ * operator provisions them; OC also requires those conditions.
+ *
+ * Assignments that are identical in other charging modules are re-exported
+ * from `shared`.
+ *
+ * 3GPP TS 32.270 V19.0.0 clauses 5.1, 5.2, and 6.1.
  */
 export * from "./AccessCorrelation.ta.mjs";
 export * from "./AttributesList.ta.mjs";

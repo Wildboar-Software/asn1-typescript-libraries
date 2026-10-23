@@ -52,7 +52,37 @@ import { ReasonForServiceChange, _decode_ReasonForServiceChange, _encode_ReasonF
 /**
  * @summary MOCallRecord
  * @description
- * 
+ *
+ * Mobile-originated call CDR. When MOC generation is enabled, the
+ * originating MSC creates one record for each outgoing call attempt (clause
+ * 6.1.3.1), including each emergency call attempt (clause 6.1.3.2). The
+ * forwarding MSC creates one for the forwarded leg (clauses 5.1.3.4 and
+ * 6.1.3.3).
+ *
+ * An MSC that provides CAMEL Call Party Handling uses this record instead of
+ * the ordinary MOC or forwarding record, even when the individual call uses
+ * no CPH operation. The incoming leg stays in the main body. Each outgoing
+ * leg of the same call segment is one `cAMELCallLegInformation` element. A
+ * further leg in a new call segment is another CDR of this type (clauses
+ * 5.1.3.14 and 6.1.3.23 to 6.1.3.26). A gsmSCF-initiated call has no
+ * incoming leg, so the main body does not carry leg information. The CDR
+ * closes when the last leg leaves the call segment.
+ *
+ * Partial records of one connection share `callReference` and a running
+ * `sequenceNumber`. Opening a new partial record sets the previous record's
+ * `causeForTerm` to `partialRecord`. A radio-link failure followed by
+ * successful re-establishment uses `partialRecordCallReestablishment`
+ * instead, and the time spent re-establishing is excluded from the
+ * chargeable duration (clauses 5.1.3.6 and 5.1.3.9).
+ *
+ * Field categories follow TS 32.240 clause 5.4, as cited by clause 6.1.3.0.
+ * M is mandatory, C conditional, OM operator-provisionable mandatory, and OC
+ * operator-provisionable conditional. A dash means the parameter does not
+ * apply to that access.
+ *
+ * 3GPP TS 32.250 V19.0.0 clauses 5.1.3.4, 5.1.3.6, 5.1.3.9, 5.1.3.14,
+ * 6.1.3.1, 6.1.3.2, 6.1.3.3, 6.1.3.23, 6.1.3.24, 6.1.3.25, and 6.1.3.26.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -169,475 +199,1574 @@ import { ReasonForServiceChange, _decode_ReasonForServiceChange, _encode_ReasonF
  *    iMS-Charging-Identifier   [76] IMPLICIT OCTET STRING OPTIONAL,
  *    privateUserID             [77] IMPLICIT GraphicString OPTIONAL}
  * ```
- * 
  * @class
  */
 export
 class MOCallRecord {
     /**
      * @summary `recordType`.
+     * @description
+     *
+     * 2G and 3G mandatory. Mobile originated.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1, 6.1.3.2, 6.1.3.3, 6.1.3.23,
+     * 6.1.3.24, 6.1.3.25, and 6.1.3.26.
+     *
+     * The field identifies the type of the record e.g. mobile originated,
+     * mobile terminated etc.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.72.
+     *
      * @public
      * @readonly
      */
     readonly recordType: RecordType;
     /**
      * @summary `servedIMSI`.
+     * @description
+     *
+     * MOC: 2G and 3G mandatory. IMSI of the calling party.
+     *
+     * emergency MOC: 2G and 3G conditional. IMSI of the calling party in case
+     * of an emergency call with a SIM card.
+     *
+     * forwarding MOC: 2G and 3G mandatory. IMSI of the forwarding party.
+     *
+     * CPH MOC: 2G and 3G mandatory. IMSI of the calling party.
+     *
+     * CPH new call segment: 2G and 3G mandatory. IMSI of the served party
+     * ('calling party' in case of MOC, 'forwarding party' in case of call
+     * forwarding respectively 'called party' in case of MTC).
+     *
+     * CPH forwarding: 2G and 3G mandatory. IMSI of the forwarding party.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1, 6.1.3.2, 6.1.3.3, 6.1.3.23,
+     * 6.1.3.25, and 6.1.3.26.
+     *
+     * This fields contains the international mobile subscriber identity (IMSI)
+     * of the served party. The term "served" party is used to describe the
+     * mobile subscriber involved in the transaction recorded e.g. the calling
+     * subscriber in case of an MOC record. The structure of the IMSI is defined
+     * in TS 23.003 [200].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.79.
+     *
      * @public
      * @readonly
      */
     readonly servedIMSI: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `servedIMEI`.
+     * @description
+     *
+     * MOC: 2G and 3G conditional. IMEI of the calling ME, if available.
+     *
+     * emergency MOC: 2G and 3G conditional. IMEI of the calling mobile
+     * equipment if available.
+     *
+     * CPH MOC: 2G and 3G conditional. IMEI of the calling ME, if available.
+     *
+     * CPH new call segment: 2G and 3G conditional. IMEI of the served ME, if
+     * available ('calling party' in case of MOC, 'forwarding party' in case of
+     * call forwarding respectively 'called party' in case of MTC).
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1, 6.1.3.2, 6.1.3.23, and 6.1.3.25.
+     *
+     * This fields contains the international mobile equipment identity (IMEI)
+     * or IMEISV of the equipment served. The term "served" equipment is used to
+     * describe the ME involved in the transaction recorded e.g. the called ME
+     * in case of an MTC record. The structure of the IMEI, IMEISV is specified
+     * in TS 23.003 [200] and the encoding defined in TS 29.274 [223].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.78.
+     *
      * @public
      * @readonly
      */
     readonly servedIMEI: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `servedMSISDN`.
+     * @description
+     *
+     * MOC: 2G and 3G operator-provisionable mandatory. The primary MSISDN of
+     * the calling party.
+     *
+     * emergency MOC: 2G and 3G operator-provisionable conditional. The primary
+     * MSISDN of the calling party, if supplied by the UE.
+     *
+     * forwarding MOC: 2G and 3G operator-provisionable mandatory. The MSISDN of
+     * the forwarding party.
+     *
+     * CPH MOC: 2G and 3G operator-provisionable mandatory. The primary MSISDN
+     * of the calling party.
+     *
+     * gsmSCF-initiated CPH: 2G and 3G operator-provisionable mandatory. The
+     * number of the initiating party. "Calling Party Number" as received in the
+     * ICA operation.
+     *
+     * CPH new call segment: 2G and 3G operator-provisionable mandatory. The
+     * MSISDN of the served party ('calling party' in case of MOC, 'forwarding
+     * party' in case of call forwarding respectively 'called party' in case of
+     * MTC).
+     *
+     * CPH forwarding: 2G and 3G operator-provisionable mandatory. The MSISDN of
+     * the forwarding party.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1, 6.1.3.2, 6.1.3.3, 6.1.3.23,
+     * 6.1.3.24, 6.1.3.25, and 6.1.3.26.
+     *
+     * This fields contains the mobile station ISDN number (MSISDN) of the
+     * served party. The term "served" party is used to describe the mobile
+     * subscriber involved in the transaction recorded e.g. the called
+     * subscriber in case of an MTC record. In case of multi-numbering the
+     * MSISDN stored in a MOC record will be the primary MSISDN of the calling
+     * party. The structure of the MSISDN is defined in TS 23.003 [200].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.80.
+     *
      * @public
      * @readonly
      */
     readonly servedMSISDN: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `callingNumber`.
+     * @description
+     *
+     * 2G and 3G operator-provisionable conditional. The address of the calling
+     * party.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.3 and 6.1.3.26.
+     *
      * @public
      * @readonly
      */
     readonly callingNumber: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `calledNumber`.
+     * @description
+     *
+     * MOC: 2G and 3G mandatory. The address of the called party i.e. the number
+     * dialled by the calling subscriber.
+     *
+     * forwarding MOC: 2G and 3G mandatory. The address of the "forwarded-to"
+     * party.
+     *
+     * CPH MOC: 2G and 3G mandatory. The address of the called party i.e. the
+     * number dialled by the calling subscriber.
+     *
+     * gsmSCF-initiated CPH, CPH new call segment: 2G and 3G mandatory. The
+     * address of the called party.
+     *
+     * CPH forwarding: 2G and 3G mandatory. The address of the "forwarded-to"
+     * party.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1, 6.1.3.3, 6.1.3.23, 6.1.3.24,
+     * 6.1.3.25, and 6.1.3.26.
+     *
      * @public
      * @readonly
      */
     readonly calledNumber: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `translatedNumber`.
+     * @description
+     *
+     * 2G and 3G operator-provisionable conditional. The called number after
+     * digit translation within the MSC (if applicable).
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1, 6.1.3.2, and 6.1.3.3.
+     *
      * @public
      * @readonly
      */
     readonly translatedNumber: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `connectedNumber`.
+     * @description
+     *
+     * 2G and 3G operator-provisionable conditional. The number of the connected
+     * party if different to the Called Number.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1 and 6.1.3.3.
+     *
      * @public
      * @readonly
      */
     readonly connectedNumber: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `roamingNumber`.
+     * @description
+     *
+     * 2G and 3G operator-provisionable conditional. The Mobile Station Roaming
+     * Number employed to route this connection, if applicable.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1 and 6.1.3.3.
+     *
+     * The roaming number field contains the mobile station roaming number as
+     * defined in TS 23.003 [200] and coded according to TS 29.002 [214].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.75.
+     *
      * @public
      * @readonly
      */
     readonly roamingNumber: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `recordingEntity`.
+     * @description
+     *
+     * MOC, emergency MOC: 2G and 3G mandatory. The E.164 number of the visited
+     * MSC producing the record.
+     *
+     * forwarding MOC: 2G and 3G mandatory. The E.164 number of the forwarding
+     * MSC.
+     *
+     * CPH MOC, gsmSCF-initiated CPH, CPH new call segment: 2G and 3G mandatory.
+     * The E.164 number of the visited MSC producing the record.
+     *
+     * CPH forwarding: 2G and 3G mandatory. The E.164 number of the forwarding
+     * MSC.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1, 6.1.3.2, 6.1.3.3, 6.1.3.23,
+     * 6.1.3.24, 6.1.3.25, and 6.1.3.26.
+     *
+     * This field contains the E.164 [308] number assigned to the entity (MSC,
+     * VLR, HLR etc.) that produced the record. For further details concerning
+     * the structure of MSC and location register numbers see TS 23.003 [200].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.73.
+     *
      * @public
      * @readonly
      */
     readonly recordingEntity: OCTET_STRING;
     /**
      * @summary `mscIncomingTKGP`.
+     * @description
+     *
+     * MOC, emergency MOC: 2G operator-provisionable mandatory, 3G
+     * operator-provisionable conditional. The MSC trunk group on which the call
+     * originated , usually from the BSS. If available in 3G, this parameter
+     * shall be supplied.
+     *
+     * forwarding MOC: 2G and 3G operator-provisionable mandatory. The MSC trunk
+     * group on which the call originated at the forwarding MSC.
+     *
+     * CPH MOC: 2G operator-provisionable mandatory, 3G operator-provisionable
+     * conditional. The MSC trunk group on which the call originated, usually
+     * from the BSS. If available in 3G, this parameter shall be supplied.
+     *
+     * CPH forwarding: 2G and 3G operator-provisionable mandatory. The MSC trunk
+     * group on which the call originated at the forwarding MSC.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1, 6.1.3.2, 6.1.3.3, 6.1.3.23, and
+     * 6.1.3.26.
+     *
      * @public
      * @readonly
      */
     readonly mscIncomingTKGP: OPTIONAL<TrunkGroup>;
     /**
      * @summary `mscOutgoingTKGP`.
+     * @description
+     *
+     * MOC, emergency MOC: 2G operator-provisionable mandatory, 3G
+     * operator-provisionable conditional. The trunk group on which the call
+     * left the MSC. If available in 3G, this parameter shall be supplied.
+     *
+     * forwarding MOC: 2G and 3G operator-provisionable mandatory. The trunk
+     * group on which the call left the forwarding MSC.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1, 6.1.3.2, and 6.1.3.3.
+     *
      * @public
      * @readonly
      */
     readonly mscOutgoingTKGP: OPTIONAL<TrunkGroup>;
     /**
      * @summary `location`.
+     * @description
+     *
+     * MOC: 2G and 3G mandatory. The identity of the cell or the SAC at the time
+     * of CDR creation, including the location area code and MCC+MNC.
+     *
+     * emergency MOC: 2G and 3G mandatory. The identity of the cell or the SAC
+     * in which the call originated including the location area code and
+     * MCC+MNC.
+     *
+     * CPH MOC: 2G and 3G mandatory. The identity of the cell or the SAC and
+     * MCC+MNC at the time of CDR creation, including the location area code.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1, 6.1.3.2, and 6.1.3.23.
+     *
      * @public
      * @readonly
      */
     readonly location: OPTIONAL<LocationAreaAndCell>;
     /**
      * @summary `changeOfLocation`.
+     * @description
+     *
+     * 2G and 3G operator-provisionable conditional. A list of changes in
+     * Location Area Code / Service Area Code / Cell Id and MCC+MNC. Each
+     * time-stamped.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1, 6.1.3.2, and 6.1.3.23.
+     *
      * @public
      * @readonly
      */
     readonly changeOfLocation: OPTIONAL<LocationChange[]>;
     /**
      * @summary `basicService`.
+     * @description
+     *
+     * MOC: 2G and 3G mandatory. Bearer or teleservice employed.
+     *
+     * emergency MOC: 2G and 3G mandatory. Teleservice 'emergency call'.
+     *
+     * forwarding MOC: 2G and 3G conditional. Bearer or teleservice employed,
+     * not always available e.g. in case of call forwarding unconditional.
+     *
+     * CPH MOC, gsmSCF-initiated CPH, CPH new call segment: 2G and 3G mandatory.
+     * Bearer or teleservice employed. 'speech' in case of CAMEL CPH calls.
+     *
+     * CPH forwarding: 2G and 3G conditional. 'speech' in case of CAMEL CPH, not
+     * always available e.g. in case of call forwarding unconditional.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1, 6.1.3.2, 6.1.3.3, 6.1.3.23,
+     * 6.1.3.24, 6.1.3.25, and 6.1.3.26.
+     *
      * @public
      * @readonly
      */
     readonly basicService: OPTIONAL<BasicService>;
     /**
      * @summary `transparencyIndicator`.
+     * @description
+     *
+     * 2G and 3G conditional. Indicates whether the basic service was used in
+     * transparent or non-transparent mode. This parameter is provided only for
+     * those basic services which may be employed in both transparent and
+     * non-transparent mode.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1 and 6.1.3.3.
+     *
+     * This field indicates whether the basic service was employed in
+     * transparent or non-transparent mode. It should also be noted that this
+     * field is only relevant for those services which may be operated in both
+     * transparent and non-transparent modes.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.92.
+     *
      * @public
      * @readonly
      */
     readonly transparencyIndicator: OPTIONAL<TransparencyInd>;
     /**
      * @summary `changeOfService`.
+     * @description
+     *
+     * 2G and 3G operator-provisionable conditional. A list of changes of basic
+     * service during a connection each time-stamped.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1 and 6.1.3.3.
+     *
      * @public
      * @readonly
      */
     readonly changeOfService: OPTIONAL<ChangeOfService[]>;
     /**
      * @summary `supplServicesUsed`.
+     * @description
+     *
+     * MOC: 2G and 3G conditional. Supplementary services invoked as a result of
+     * this connection. This field shall be present when one or more
+     * supplementary services have been invoked.
+     *
+     * forwarding MOC: 2G and 3G conditional. Supplementary services invoked as
+     * a result of this connection, if this information is available to the
+     * forwarding node. This field shall be present when one or more
+     * supplementary services have been invoked.
+     *
+     * CPH MOC, CPH new call segment: 2G and 3G conditional. Supplementary
+     * services invoked as a result of this connection. This field shall be
+     * present when one or more supplementary services have been invoked.
+     *
+     * CPH forwarding: 2G and 3G conditional. Supplementary services invoked as
+     * a result of this connection, if this information is available to the
+     * forwarding node. This field shall be present when one or more
+     * supplementary services have been invoked.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1, 6.1.3.3, 6.1.3.23, 6.1.3.25, and
+     * 6.1.3.26.
+     *
      * @public
      * @readonly
      */
     readonly supplServicesUsed: OPTIONAL<SuppServiceUsed[]>;
     /**
      * @summary `aocParameters`.
+     * @description
+     *
+     * 2G and 3G operator-provisionable conditional. The charge advice
+     * parameters sent to the MS on call set-up. This field shall be supplied
+     * only when AoC parameters have been sent.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1, 6.1.3.2, and 6.1.3.23.
+     *
      * @public
      * @readonly
      */
     readonly aocParameters: OPTIONAL<AOCParameters>;
     /**
      * @summary `changeOfAOCParms`.
+     * @description
+     *
+     * 2G and 3G operator-provisionable conditional. New AOC parameters sent to
+     * the MS e.g. as a result of a tariff switch over, including the time at
+     * which the new set was applied. This field shall be supplied only when AoC
+     * parameters have been sent.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1, 6.1.3.2, and 6.1.3.23.
+     *
      * @public
      * @readonly
      */
     readonly changeOfAOCParms: OPTIONAL<AOCParmChange[]>;
     /**
      * @summary `msClassmark`.
+     * @description
+     *
+     * 2G and 3G mandatory. The mobile station classmark employed on call
+     * set-up.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1, 6.1.3.2, and 6.1.3.23.
+     *
      * @public
      * @readonly
      */
     readonly msClassmark: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `changeOfClassmark`.
+     * @description
+     *
+     * 2G and 3G operator-provisionable conditional. A list of changes to the
+     * classmark during the connection each time-stamped.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1, 6.1.3.2, and 6.1.3.23.
+     *
      * @public
      * @readonly
      */
     readonly changeOfClassmark: OPTIONAL<ChangeOfClassmark>;
     /**
      * @summary `seizureTime`.
+     * @description
+     *
+     * 2G and 3G conditional. Time of incoming traffic channel seizure (for
+     * unsuccessful call attempts).
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1, 6.1.3.3, 6.1.3.23, and 6.1.3.26.
+     *
      * @public
      * @readonly
      */
     readonly seizureTime: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `answerTime`.
+     * @description
+     *
+     * 2G and 3G conditional. Time of answer (for successful calls).
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1, 6.1.3.3, 6.1.3.23, and 6.1.3.26.
+     *
      * @public
      * @readonly
      */
     readonly answerTime: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `releaseTime`.
+     * @description
+     *
+     * MOC, forwarding MOC: 2G and 3G operator-provisionable mandatory. Time of
+     * traffic channel release. This field contains the MS Time Zone.
+     *
+     * CPH MOC: 2G and 3G operator-provisionable mandatory. Time of traffic
+     * channel release for the incoming leg.
+     *
+     * CPH forwarding: 2G and 3G operator-provisionable mandatory. Time of
+     * traffic channel release.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1, 6.1.3.3, 6.1.3.23, and 6.1.3.26.
+     *
      * @public
      * @readonly
      */
     readonly releaseTime: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `callDuration`.
+     * @description
+     *
+     * MOC, emergency MOC: 2G and 3G mandatory. The chargeable duration of the
+     * connection for successful calls, the holding time for call attempts.
+     *
+     * forwarding MOC: 2G and 3G mandatory. The chargeable duration of the
+     * connection for successful calls, the holding time of call attempts.
+     *
+     * CPH MOC: 2G and 3G conditional. The chargeable duration of the connection
+     * of the incoming leg for successful calls, the holding time of the
+     * incoming leg for call attempts.
+     *
+     * CPH forwarding: 2G and 3G conditional. The chargeable duration of the
+     * connection for successful calls, the holding time of call attempts.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1, 6.1.3.2, 6.1.3.3, 6.1.3.23, and
+     * 6.1.3.26.
+     *
+     * This field contains the relevant call duration in seconds. For incomplete
+     * calls (call attempts) the relevant duration is the call holding time from
+     * the seizure to the release of the traffic channel. For complete
+     * (answered) calls this is the chargeable duration from answer to release
+     * of the traffic channel. For partial records this is the duration of the
+     * individual partial record and not the cumulative duration of the call. It
+     * should be noted that the time stamps may be expressed in terms of tenths
+     * of seconds or even milliseconds and, as a result, the calculation of the
+     * call duration may result in the rounding or truncation of the measured
+     * duration to a whole number of seconds. Whether or not rounding or
+     * truncation is to be used is considered to be outside the scope of the
+     * present document subject to the following restrictions: If CAMEL is
+     * invoked for the call and a control relationship is existing, the call
+     * might continue after a RELEASE or a DISCONNECT from the called party side
+     * received by the gsmSSF. The call duration of the incoming leg is stored
+     * in the main body of the call record. For each outgoing leg the call
+     * duration is stored in the respective 'CAMELInformation' module. If a call
+     * leg does not reach answer status and attempt charging is enabled a
+     * 'CAMELInformation' module containing the holding time is generated.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.4.
+     *
      * @public
      * @readonly
      */
     readonly callDuration: INTEGER;
     /**
      * @summary `dataVolume`.
+     * @description
+     *
+     * 2G conditional, 3G not applicable. The number of data segments
+     * transmitted if available at the MSC.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1 and 6.1.3.3.
+     *
+     * This field includes the number of 64 octet segments transmitted during
+     * the use of data services if known.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.15.
+     *
      * @public
      * @readonly
      */
     readonly dataVolume: OPTIONAL<INTEGER>;
     /**
      * @summary `radioChanRequested`.
+     * @description
+     *
+     * 2G operator-provisionable mandatory, 3G not applicable. The type of radio
+     * traffic channel (full / half etc.) requested by the MS.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1, 6.1.3.2, and 6.1.3.23.
+     *
      * @public
      * @readonly
      */
     readonly radioChanRequested: OPTIONAL<RadioChanRequested>;
     /**
      * @summary `radioChanUsed`.
+     * @description
+     *
+     * MOC: 2G mandatory, 3G not applicable. The type of radio channel actually
+     * used (full or half rate).
+     *
+     * emergency MOC: 2G mandatory, 3G not applicable. The type of radio channel
+     * used (full or half rate).
+     *
+     * CPH MOC: 2G mandatory, 3G not applicable. The type of radio channel
+     * actually used (full or half rate).
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1, 6.1.3.2, and 6.1.3.23.
+     *
      * @public
      * @readonly
      */
     readonly radioChanUsed: OPTIONAL<TrafficChannel>;
     /**
      * @summary `changeOfRadioChan`.
+     * @description
+     *
+     * 2G operator-provisionable conditional, 3G not applicable. A list of
+     * changes each time stamped.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1, 6.1.3.2, and 6.1.3.23.
+     *
      * @public
      * @readonly
      */
     readonly changeOfRadioChan: OPTIONAL<ChangeOfRadioChannel>;
     /**
      * @summary `causeForTerm`.
+     * @description
+     *
+     * 2G and 3G mandatory. The reason for the release of the connection.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1, 6.1.3.2, 6.1.3.3, 6.1.3.23,
+     * 6.1.3.24, 6.1.3.25, and 6.1.3.26.
+     *
+     * This field contains a generalised reason for the release of the
+     * connection including the following: normal release; CAMEL initiated call
+     * release; partial record generation; partial record call re-establishment;
+     * unsuccessful call attempt; abnormal termination during the stable phase;
+     * unauthorized network originating a location service request; unauthorized
+     * client requesting a location service; position method failure at a
+     * location service execution; unknown or unreachable LCS client at a
+     * location service request. A more detailed reason may be found in the
+     * diagnostics field.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.13.
+     *
      * @public
      * @readonly
      */
     readonly causeForTerm: CauseForTerm;
     /**
      * @summary `diagnostics`.
+     * @description
+     *
+     * 2G and 3G operator-provisionable mandatory. A more detailed reason for
+     * the release of the connection.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1, 6.1.3.2, 6.1.3.3, 6.1.3.23,
+     * 6.1.3.24, 6.1.3.25, and 6.1.3.26.
+     *
+     * This field includes a more detailed technical reason for the release of
+     * the connection and may contain one of the following: a MAP error from TS
+     * 29.002 [214]; a Cause from TS 24.008 [208]; a Cause from TS 29.078 [217];
+     * a Cause from ITU-T Recommendation Q.767 [309]; a LCS diagnostics
+     * according TS 29.002 [214]. The diagnostics may also be extended to
+     * include manufacturer and network specific information.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.18.
+     *
      * @public
      * @readonly
      */
     readonly diagnostics: OPTIONAL<HLRIntResult>;
     /**
      * @summary `callReference`.
+     * @description
+     *
+     * 2G and 3G mandatory. A local identifier distinguishing between
+     * transactions on the same MS.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1, 6.1.3.2, 6.1.3.3, 6.1.3.23,
+     * 6.1.3.24, 6.1.3.25, and 6.1.3.26.
+     *
+     * This field uniquely identifies a call or transaction on one side of the
+     * interface (i.e. 'A' or 'B' side) and is derived from the transaction
+     * identifier of TS 24.008 [208]. It is also used to identify all partial
+     * records and transactions belonging to the same connection. For the
+     * avoidance of doubt, there is no global call reference defined within GSM
+     * and the call reference field cannot be used to combine, for example, the
+     * MOC and MTC records of a mobiletomobile connection.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.5.
+     *
      * @public
      * @readonly
      */
     readonly callReference: OCTET_STRING;
     /**
      * @summary `sequenceNumber`.
+     * @description
+     *
+     * 2G and 3G conditional. Partial record sequence number, only present in
+     * case of partial records.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1, 6.1.3.2, 6.1.3.3, 6.1.3.23,
+     * 6.1.3.24, 6.1.3.25, and 6.1.3.26.
+     *
+     * This field contains a running sequence number employed to link the
+     * partial records generated for a particular connection.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.77.
+     *
      * @public
      * @readonly
      */
     readonly sequenceNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `additionalChgInfo`.
+     * @description
+     *
+     * MOC: 2G and 3G operator-provisionable conditional. Charge/no charge
+     * indicator and additional charging parameters, when available.
+     *
+     * forwarding MOC: 2G operator-provisionable conditional, 3G optional.
+     * Charge/no charge indicator and additional charging parameters, when
+     * available.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1 and 6.1.3.3.
+     *
+     * This field consists of two parts, a charge indicator and additional
+     * charging parameters. The charge indicator is derived from the information
+     * contained within the ISUP "backward call indicator" and may be used to
+     * store a charge indicator (charge/no charge) received from another network
+     * node. The additional charging parameters are non-standard and intended to
+     * permit the inclusion of further charging information received from
+     * Intelligent Network and/or Value Added Service nodes.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.1.
+     *
      * @public
      * @readonly
      */
     readonly additionalChgInfo: OPTIONAL<AdditionalChgInfo>;
     /**
      * @summary `recordExtensions`.
+     * @description
+     *
+     * 2G and 3G operator-provisionable conditional. A set of network /
+     * manufacturer specific extensions to the record, when available.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1, 6.1.3.2, 6.1.3.3, 6.1.3.23,
+     * 6.1.3.24, 6.1.3.25, and 6.1.3.26.
+     *
+     * The field enables network operators and/ or manufacturers to add their
+     * own extensions to the standard record definitions.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.71.
+     *
      * @public
      * @readonly
      */
     readonly recordExtensions: OPTIONAL<ManagementExtension[]>;
     /**
      * @summary `gsm_SCFAddress`.
+     * @description
+     *
+     * MOC, forwarding MOC: 2G and 3G conditional. Identifies the CAMEL server
+     * serving the subscriber. Shall be present only if CAMEL is applied.
+     *
+     * CPH MOC: 2G and 3G mandatory. Identifies the CAMEL server serving the
+     * subscriber.
+     *
+     * gsmSCF-initiated CPH: 2G and 3G conditional. Identifies the CAMEL server
+     * serving the subscriber (network call reference).
+     *
+     * CPH new call segment, CPH forwarding: 2G and 3G conditional. Identifies
+     * the CAMEL server serving the subscriber.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1, 6.1.3.3, 6.1.3.23, 6.1.3.24,
+     * 6.1.3.25, and 6.1.3.26.
+     *
+     * This field identifies the CAMEL server serving the subscriber. Address is
+     * defined in HLR as part of CAMEL subscription information.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.28.
+     *
      * @public
      * @readonly
      */
     readonly gsm_SCFAddress: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `serviceKey`.
+     * @description
+     *
+     * MOC, forwarding MOC: 2G and 3G conditional. The CAMEL service logic to be
+     * applied. Shall be present only if CAMEL is applied.
+     *
+     * CPH MOC, CPH new call segment, CPH forwarding: 2G and 3G conditional. The
+     * CAMEL service logic to be applied.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1, 6.1.3.3, 6.1.3.23, 6.1.3.25, and
+     * 6.1.3.26.
+     *
+     * This field identifies the CAMEL service logic applied. Service key is
+     * defined in HLR as part of CAMEL subscription information.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.83.
+     *
      * @public
      * @readonly
      */
     readonly serviceKey: OPTIONAL<INTEGER>;
     /**
      * @summary `networkCallReference`.
+     * @description
+     *
+     * MOC, forwarding MOC: 2G and 3G conditional. An identifier to correlate
+     * transactions on the same call taking place in different network nodes,
+     * shall be present if CAMEL is applied.
+     *
+     * CPH MOC, gsmSCF-initiated CPH, CPH new call segment: 2G and 3G mandatory.
+     * An identifier to correlate transactions on the same call taking place in
+     * different network nodes.
+     *
+     * CPH forwarding: 2G and 3G conditional. An identifier to correlate
+     * transactions on the same call taking place in different network nodes.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1, 6.1.3.3, 6.1.3.23, 6.1.3.24,
+     * 6.1.3.25, and 6.1.3.26.
+     *
+     * Whenever CAMEL is applied, this field is used for correlation of call
+     * records outputted from the originating MSC (when applicable), the GMSC
+     * and the terminating MSC, and a network optional call record from the
+     * gsmSCF.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.59.
+     *
      * @public
      * @readonly
      */
     readonly networkCallReference: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `mSCAddress`.
+     * @description
+     *
+     * MOC, forwarding MOC: 2G and 3G conditional. This field contains the E.164
+     * number assigned to the MSC that generated the network call reference.
+     * Shall be present only if CAMEL is applied.
+     *
+     * CPH MOC: 2G and 3G mandatory. This field contains the E.164 number
+     * assigned to the MSC that generated the network call reference.
+     *
+     * gsmSCF-initiated CPH: 2G and 3G mandatory. This field contains the E.164
+     * number assigned to the MSC that generated the record.
+     *
+     * CPH new call segment: 2G and 3G mandatory. This field contains the E.164
+     * number assigned to the MSC that generated the network call reference.
+     *
+     * CPH forwarding: 2G and 3G conditional. This field contains the E.164
+     * number assigned to the MSC that generated the network call reference.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1, 6.1.3.3, 6.1.3.23, 6.1.3.24,
+     * 6.1.3.25, and 6.1.3.26.
+     *
+     * This field contains the Recommendation E.164 [308] number assigned to the
+     * MSC that produced the record. For further details concerning the
+     * structure of MSC numbers see TS 23.003 [200].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.57.
+     *
      * @public
      * @readonly
      */
     readonly mSCAddress: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `cAMELInitCFIndicator`.
+     * @description
+     *
+     * forwarding MOC: 2G and 3G conditional. Indicates that the CAMEL server
+     * initiated call forwarding. Shall be present only if CAMEL is applied.
+     *
+     * CPH forwarding: 2G and 3G operator-provisionable conditional. Indicates
+     * that the CAMEL server initiated call forwarding. Not available in case of
+     * gsm call forwarding.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.3 and 6.1.3.26.
+     *
      * @public
      * @readonly
      */
     readonly cAMELInitCFIndicator: OPTIONAL<CAMELInitCFIndicator>;
     /**
      * @summary `defaultCallHandling`.
+     * @description
+     *
+     * 2G and 3G operator-provisionable conditional. Indicates whether or not a
+     * CAMEL call encountered default call handling. This field shall be present
+     * only if default call handling has been applied.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1, 6.1.3.3, 6.1.3.23, 6.1.3.25, and
+     * 6.1.3.26.
+     *
      * @public
      * @readonly
      */
     readonly defaultCallHandling: OPTIONAL<DefaultCallHandling>;
     /**
      * @summary `hSCSDChanRequested`.
+     * @description
+     *
+     * 2G conditional, 3G not applicable. The maximum number of HSCSD channels
+     * requested as received from the MS at call set-up. Shall only be present
+     * for HSCSD connections.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.1.
+     *
      * @public
      * @readonly
      */
     readonly hSCSDChanRequested: OPTIONAL<INTEGER>;
     /**
      * @summary `hSCSDChanAllocated`.
+     * @description
+     *
+     * 2G conditional, 3G not applicable. The number of HSCSD channels allocated
+     * to the MS at call set-up. Shall only be present for HSCSD connections.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.1.
+     *
      * @public
      * @readonly
      */
     readonly hSCSDChanAllocated: OPTIONAL<INTEGER>;
     /**
      * @summary `changeOfHSCSDParms`.
+     * @description
+     *
+     * 2G conditional, 3G not applicable. A list of network or user initiated
+     * changes of number of HSCSD channels during a connection each
+     * time-stamped. Shall only be present in case of an HSCSD call, if the
+     * basic HSCSD parameters are modified due the user or network initiated
+     * modification procedure.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.1.
+     *
      * @public
      * @readonly
      */
     readonly changeOfHSCSDParms: OPTIONAL<HSCSDParmsChange[]>;
     /**
      * @summary `fnur`.
+     * @description
+     *
+     * 2G and 3G operator-provisionable conditional. Indicates the user data
+     * rate applied for the connection in the fixed network. Shall only be
+     * present for 2G HSCSD connections and for UMTS data connections.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1 and 6.1.3.3.
+     *
      * @public
      * @readonly
      */
     readonly fnur: OPTIONAL<Fnur>;
     /**
      * @summary `aiurRequested`.
+     * @description
+     *
+     * 2G conditional, 3G not applicable. The total Air Interface User Rate
+     * Requested by the MS at call set-up. Shall only be present for
+     * non-transparent HSCSD connections.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.1.
+     *
      * @public
      * @readonly
      */
     readonly aiurRequested: OPTIONAL<AiurRequested>;
     /**
      * @summary `chanCodingsAcceptable`.
+     * @description
+     *
+     * 2G conditional, 3G not applicable. A list of the traffic channels codings
+     * accepted by the MS. Shall only be present for HSCSD connections.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.1.
+     *
      * @public
      * @readonly
      */
     readonly chanCodingsAcceptable: OPTIONAL<ChannelCoding[]>;
     /**
      * @summary `chanCodingUsed`.
+     * @description
+     *
+     * 2G conditional, 3G not applicable. The traffic channels codings
+     * negotiated between the MS and the network at call set-up. Shall only be
+     * present for HSCSD connections.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.1.
+     *
      * @public
      * @readonly
      */
     readonly chanCodingUsed: OPTIONAL<ChannelCoding>;
     /**
      * @summary `speechVersionSupported`.
+     * @description
+     *
+     * 2G operator-provisionable mandatory, 3G not applicable. Speech version
+     * supported by the MS with highest priority indicated by MS.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1 and 6.1.3.23.
+     *
      * @public
      * @readonly
      */
     readonly speechVersionSupported: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `speechVersionUsed`.
+     * @description
+     *
+     * 2G operator-provisionable mandatory, 3G not applicable. Speech version
+     * used for that call.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1 and 6.1.3.23.
+     *
      * @public
      * @readonly
      */
     readonly speechVersionUsed: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `numberOfDPEncountered`.
+     * @description
+     *
+     * MOC, forwarding MOC: 2G and 3G operator-provisionable conditional. Number
+     * that counts how often armed detection points (TDP and EDP) were
+     * encountered. Shall be present only if CAMEL is applied.
+     *
+     * CPH MOC: 2G and 3G operator-provisionable mandatory. Number that counts
+     * how often armed detection points (TDP and EDP) were encountered. Sum of
+     * all DPs encountered in this call.
+     *
+     * gsmSCF-initiated CPH, CPH new call segment, CPH forwarding: 2G and 3G
+     * operator-provisionable conditional. Number that counts how often armed
+     * detection points (TDP and EDP) were encountered. Sum of all DPs
+     * encountered in this call.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1, 6.1.3.3, 6.1.3.23, 6.1.3.24,
+     * 6.1.3.25, and 6.1.3.26.
+     *
+     * This field indicates how often CAMEL armed detection points (TDP and EDP)
+     * were encountered and is a measure of signalling between serving network
+     * and CAMEL service and complements 'Level of CAMEL service' field.
+     * Detection points from all applied CAMEL services for a single call leg
+     * and processed in the same gsmSSF shall be counted together.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.61.
+     *
      * @public
      * @readonly
      */
     readonly numberOfDPEncountered: OPTIONAL<INTEGER>;
     /**
      * @summary `levelOfCAMELService`.
+     * @description
+     *
+     * MOC: 2G and 3G operator-provisionable conditional. Indicator for the
+     * complexity of the CAMEL feature used. Shall be present only if CAMEL is
+     * applied.
+     *
+     * forwarding MOC: 2G and 3G operator-provisionable conditional. Indicator
+     * of the complexity of the CAMEL feature used. Shall be present only if
+     * CAMEL is applied.
+     *
+     * CPH MOC: 2G and 3G operator-provisionable mandatory. Indicator for the
+     * complexity of the CAMEL feature used.
+     *
+     * gsmSCF-initiated CPH, CPH new call segment: 2G and 3G
+     * operator-provisionable conditional. Indicator for the complexity of the
+     * CAMEL feature used.
+     *
+     * CPH forwarding: 2G and 3G operator-provisionable conditional. Indicator
+     * of the complexity of the CAMEL feature used.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1, 6.1.3.3, 6.1.3.23, 6.1.3.24,
+     * 6.1.3.25, and 6.1.3.26.
+     *
+     * This field describes briefly the complexity of CAMEL invocation:
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.43.
+     *
      * @public
      * @readonly
      */
     readonly levelOfCAMELService: OPTIONAL<MOCallRecord_levelOfCAMELService>;
     /**
      * @summary `freeFormatData`.
+     * @description
+     *
+     * MOC, forwarding MOC: 2G and 3G conditional. This field contains data sent
+     * by the gsmSCF in the Furnish Charging Information (FCI) message(s). The
+     * data can be sent either in one FCI message or several FCI messages with
+     * append indicator. Shall be present only if CAMEL is applied.
+     *
+     * CPH MOC, CPH forwarding: 2G and 3G conditional. This field contains data
+     * sent by the gsmSCF in the Furnish Charging Information (FCI) message(s).
+     * The data can be sent either in one FCI message or several FCI messages
+     * with append indicator.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1, 6.1.3.3, 6.1.3.23, and 6.1.3.26.
+     *
+     * This field contains charging information sent by the gsmSCF in the
+     * Furnish Charging Information (FCI) messages as defined in TS 29.078
+     * [217]. The data can be sent either in one FCI message or several FCI
+     * messages with append indicator. This data is transferred transparently in
+     * the CAMEL clauses of the relevant call records. 'Free format data' sent
+     * to the legID=1 is always stored in the top level of the respective
+     * record. 'Free format data' sent to the legID >1 is stored in the
+     * appropriate CAMEL call leg information field. If the FCI is received more
+     * than once during one continuing incoming/outgoing CAMEL call leg, the
+     * append indicator defines whether the FCI information is appended to
+     * previous FCI and stored in the relevant record or the information of the
+     * last FCI received is stored in the relevant record (the previous FCI
+     * information shall be overwritten). In the event of partial output the
+     * currently valid 'Free format data' is stored in the partial record.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.26.
+     *
      * @public
      * @readonly
      */
     readonly freeFormatData: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `cAMELCallLegInformation`.
+     * @description
+     *
+     * MOC, forwarding MOC: 2G and 3G conditional. Set of CAMEL information IEs.
+     * Each of these IEs contains information related to one outgoing CAMEL call
+     * leg. Shall be present only if CAMEL is applied.
+     *
+     * CPH MOC, gsmSCF-initiated CPH, CPH new call segment, CPH forwarding: 2G
+     * and 3G conditional. Set of CAMEL information IEs. Each of these IEs
+     * contains information related to one outgoing CAMEL call leg.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1, 6.1.3.3, 6.1.3.23, 6.1.3.24,
+     * 6.1.3.25, and 6.1.3.26.
+     *
+     * This field contains a set of CAMEL information IEs according to the
+     * number of outgoing CAMEL call legs.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.8.
+     *
      * @public
      * @readonly
      */
     readonly cAMELCallLegInformation: OPTIONAL<CAMELInformation[]>;
     /**
      * @summary `freeFormatDataAppend`.
+     * @description
+     *
+     * MOC, forwarding MOC: 2G and 3G conditional. Indicator if free format data
+     * from this CDR is to be appended to free format data in previous partial
+     * CDR. Shall be present only if CAMEL is applied.
+     *
+     * CPH MOC: 2G and 3G conditional. Indicator if free format data from this
+     * CDR is to be appended to free format data in previous partial CDR. Shall
+     * be present only if CAMEL id applied.
+     *
+     * CPH forwarding: 2G and 3G conditional. Indicator if free format data from
+     * this CDR is to be appended to free format data in previous partial CDR.
+     * Shall be present only if CAMEL is applied.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1, 6.1.3.3, 6.1.3.23, and 6.1.3.26.
+     *
+     * This field contains an indicator whether free format data is to be
+     * appended to free format data stored in previous partial CDR. This field
+     * is needed in CDR post-processing to sort out valid free format data for
+     * that call leg from sequence of partial records. Creation of partial
+     * records is independent on received FCIs and thus valid free format data
+     * may be divided to different partial records. If field is missing then
+     * free format data in this CDR replaces all received free format data in
+     * previous CDRs. Append indicator is not needed in the first partial
+     * record. In following partial records indicator shall get value true if
+     * all FCIs received during that partial record have append indicator. If
+     * one or more of the received FCIs for that call leg during the partial
+     * record do not have append indicator then this field shall be missing.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.27.
+     *
      * @public
      * @readonly
      */
     readonly freeFormatDataAppend: OPTIONAL<BOOLEAN>;
     /**
      * @summary `defaultCallHandling_2`.
+     * @description
+     *
+     * 2G and 3G operator-provisionable conditional. Indicates whether or not a
+     * CAMEL call encountered default call handling for 2nd service such as
+     * dialled service. This field shall be present only if default call
+     * handling has been applied.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1 and 6.1.3.3.
+     *
      * @public
      * @readonly
      */
     readonly defaultCallHandling_2: OPTIONAL<DefaultCallHandling>;
     /**
      * @summary `gsm_SCFAddress_2`.
+     * @description
+     *
+     * 2G and 3G conditional. Identifies the CAMEL server serving the subscriber
+     * for 2nd service such as dialled service. Shall be present only if CAMEL
+     * is applied for 2nd service.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1 and 6.1.3.3.
+     *
      * @public
      * @readonly
      */
     readonly gsm_SCFAddress_2: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `serviceKey_2`.
+     * @description
+     *
+     * 2G and 3G conditional. The CAMEL service logic to be applied for 2nd
+     * service such as dialled service. Shall be present only if CAMEL is
+     * applied for 2nd service.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1 and 6.1.3.3.
+     *
      * @public
      * @readonly
      */
     readonly serviceKey_2: OPTIONAL<INTEGER>;
     /**
      * @summary `freeFormatData_2`.
+     * @description
+     *
+     * 2G and 3G conditional. This field contains data sent by the gsmSCF in the
+     * FCI message(s) for 2nd service such as dialled service. The data can be
+     * sent either in one FCI message or several FCI messages with append
+     * indicator. Shall be present only if CAMEL is applied for 2nd service.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1 and 6.1.3.3.
+     *
      * @public
      * @readonly
      */
     readonly freeFormatData_2: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `freeFormatDataAppend_2`.
+     * @description
+     *
+     * 2G and 3G conditional. Indicator if free format data for 2nd service from
+     * this CDR is to be appended to free format data in previous partial CDR.
+     * Shall be present only if CAMEL is applied for 2nd service.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1 and 6.1.3.3.
+     *
      * @public
      * @readonly
      */
     readonly freeFormatDataAppend_2: OPTIONAL<BOOLEAN>;
     /**
      * @summary `systemType`.
+     * @description
+     *
+     * MOC, emergency MOC: 2G not applicable, 3G mandatory. This field indicates
+     * the use of GERAN, UTRAN (or a value of unknown). This field is present
+     * when either the UTRAN or GERAN air-interface is used on call set-up. For
+     * an open CDR in a 2G NE (responsible for the CDR), the field is not
+     * present (even if the call is handed off to a 3G air interface). For a CDR
+     * in a 3G NE (responsible for the CDR), the value unknown shall be used
+     * after handover.
+     *
+     * CPH MOC: 2G not applicable, 3G mandatory. This field indicates the use of
+     * GERAN, UTRAN (or a value of unknown) of the incoming leg. This field is
+     * present when either the UTRAN or GERAN air-interface is used on call
+     * set-up. For an open CDR in a 2G NE (responsible for the CDR), the field
+     * is not present (even if the call is handed off to a 3G air interface).For
+     * a CDR in a 3G NE (responsible for the CDR), the value unknown shall be
+     * used after handover.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1, 6.1.3.2, and 6.1.3.23.
+     *
+     * This field indicates the use of GERAN, UTRAN (or a value of unknown).
+     * This field is present when either the UTRAN or GERAN air-interface is
+     * used on call set-up. For an open CDR in a 2G NE (responsible for the
+     * CDR), the field is not present (even if the call is handed off to a 3G
+     * air interface). For a CDR in a 3G NE (responsible for the CDR), the value
+     * unknown shall be used after handover.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.91.
+     *
      * @public
      * @readonly
      */
     readonly systemType: OPTIONAL<SystemType>;
     /**
      * @summary `rateIndication`.
+     * @description
+     *
+     * MOC: 2G and 3G operator-provisionable conditional. Present if "rate
+     * adaption" parameters for the basic service were signalled between the
+     * MS/UE and the network, see 3GPP TS 24.008 [208].
+     *
+     * forwarding MOC: 2G and 3G operator-provisionable conditional. Present if
+     * "rate adaption" parameters for the basic service were signalled between
+     * the MS/UE and the network, see 3GPP TS 24.008 [208]. May not always be
+     * available in this CDR type.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1 and 6.1.3.3.
+     *
+     * This parameter specifies the rate adaptation that was used for the
+     * connection. The field is constructed from the information in the
+     * parameters "rate adaptation" and "other rate adaptation" signalled
+     * between the MS/UE and the network, see TS 24.008 [208]. The format of
+     * this field is a single octet with the following format: Bits 0-1: the
+     * Rate Adaptation field as defined in TS 24.008 [208]; Bits 2-3: the Other
+     * Rate Adaptation field as defined in TS 24.008 [208]; Bits 4-7: not used.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.69.
+     *
      * @public
      * @readonly
      */
     readonly rateIndication: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `locationRoutNum`.
+     * @description
+     *
+     * 2G not applicable, 3G operator-provisionable conditional. Location
+     * Routing Number for Number Portability feature.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1 and 6.1.3.3.
+     *
      * @public
      * @readonly
      */
     readonly locationRoutNum: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `lrnSoInd`.
+     * @description
+     *
+     * 2G not applicable, 3G operator-provisionable conditional. LRN Source
+     * Indicator tells the source of the LRN.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1 and 6.1.3.3.
+     *
      * @public
      * @readonly
      */
     readonly lrnSoInd: OPTIONAL<MOCallRecord_lrnSoInd>;
     /**
      * @summary `lrnQuryStatus`.
+     * @description
+     *
+     * 2G not applicable, 3G operator-provisionable conditional. Status of
+     * Number Portability query.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1 and 6.1.3.3.
+     *
      * @public
      * @readonly
      */
     readonly lrnQuryStatus: OPTIONAL<MOCallRecord_lrnQuryStatus>;
     /**
      * @summary `jIPPara`.
+     * @description
+     *
+     * 2G not applicable, 3G operator-provisionable conditional. Jurisdiction
+     * Information Parameter.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1 and 6.1.3.3.
+     *
      * @public
      * @readonly
      */
     readonly jIPPara: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `jIPSoInd`.
+     * @description
+     *
+     * 2G not applicable, 3G operator-provisionable conditional. JIP Source
+     * Indicator tells the source of the JIP.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1 and 6.1.3.3.
+     *
      * @public
      * @readonly
      */
     readonly jIPSoInd: OPTIONAL<MOCallRecord_jIPSoInd>;
     /**
      * @summary `jIPQuryStatus`.
+     * @description
+     *
+     * 2G not applicable, 3G operator-provisionable conditional. Status of
+     * Number Portability query.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1 and 6.1.3.3.
+     *
      * @public
      * @readonly
      */
     readonly jIPQuryStatus: OPTIONAL<MOCallRecord_jIPQuryStatus>;
     /**
      * @summary `partialRecordType`.
+     * @description
+     *
+     * MOC: 2G and 3G operator-provisionable conditional. Indicates the event
+     * (time limit etc.) that caused the generation of a partial record.
+     *
+     * emergency MOC, forwarding MOC, CPH MOC, gsmSCF-initiated CPH, CPH new
+     * call segment, CPH forwarding: 2G not applicable, 3G
+     * operator-provisionable conditional. Indicates the event (time limit etc.)
+     * that caused the generation of a partial record.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1, 6.1.3.2, 6.1.3.3, 6.1.3.23,
+     * 6.1.3.24, 6.1.3.25, and 6.1.3.26.
+     *
+     * This field indicates the event that caused the generation of a partial
+     * record.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.64.
+     *
      * @public
      * @readonly
      */
     readonly partialRecordType: OPTIONAL<PartialRecordType>;
     /**
      * @summary `guaranteedBitRate`.
+     * @description
+     *
+     * 2G not applicable, 3G operator-provisionable conditional. Describes the
+     * bit-rate the UMTS bearer service shall guarantee to the user or
+     * application. Guaranteed Bit Rate may be used to facilitate admission
+     * control based on available resources, and for resource allocation within
+     * UMTS. Shall only be present for UMTS data connections.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.1.
+     *
+     * This field contains the Guaranteed Bit Rate based on the FNUR for
+     * transparent and Wanted AIUR for non-transparent CS data services based on
+     * the described mapping in TS 27.001 [213]. The Guaranteed Bit Rate may be
+     * used to facilitate admission control based on available resources, and
+     * for resource allocation within UMTS. The bit-rate of the UMTS bearer
+     * service shall guarantee to the user or applications refer TS 22.002
+     * [102]. Operator may choose any of the possible values less or equal to
+     * wanted AIUR (Air Interface User Rate). (If WAIUR is less or equal to 14,4
+     * kbit/s then Guaranteed Bit Rate and Maximum Bit Rate shall be set to 14,4
+     * kbit/s).
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.29.
+     *
      * @public
      * @readonly
      */
     readonly guaranteedBitRate: OPTIONAL<GuaranteedBitRate>;
     /**
      * @summary `maximumBitRate`.
+     * @description
+     *
+     * 2G not applicable, 3G operator-provisionable conditional. Maximum Bit
+     * Rate can be used to make code reservations in the downlink of the radio
+     * interface. Its purpose is: 1) to limit the delivered bit-rate to
+     * applications or external networks with such limitations, 2) to allow
+     * maximum wanted user bit-rate to be defined for applications able to
+     * operate with different rates (e.g. applications with adapting codecs).
+     * Shall only be present for UMTS data connections.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.1.
+     *
+     * This field contains the Maximum Bit Rate based on the FNUR (Fixed Network
+     * User Rate) for transparent and WAIUR(Wanted Air Interface User Rate) for
+     * non-transparent CS data services based on the described mapping in TS
+     * 27.001 [213]. The parameter can be used to make code reservations in the
+     * downlink of the radio interface for the UMTS bearer service (BS20 and
+     * BS30) refer TS 22.002 [102]. Its purpose is: Maximum bit rate is set to
+     * the highest value WAIUR (If WAIUR is less or equal to 14.4 kbit/s then
+     * Guaranteed Bit Rate and Maximum Bit Rate shall be set to 14.4 kbit/s).
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.51.
+     *
      * @public
      * @readonly
      */
     readonly maximumBitRate: OPTIONAL<MaximumBitRate>;
     /**
      * @summary `redial`.
+     * @description
+     *
+     * 2G and 3G operator-provisionable conditional. Indicates to the network
+     * that a call is the result of a redial attempt to switch from speech to
+     * multimedia or vice-versa.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.1 and 6.1.3.23.
+     *
      * @public
      * @readonly
      */
     readonly redial: OPTIONAL<BOOLEAN>;
     /**
      * @summary `reasonForServiceChange`.
+     * @description
+     *
+     * 2G not applicable, 3G operator-provisionable conditional. Indicates the
+     * type of service change and fallback.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.1.
+     *
+     * This field contains the type of service change requested by the
+     * subscriber or performed by the network. Possible values include:
+     * subscriber initiated; network initiated; call setup fallback; call setup
+     * change order. For further details see TS 23.172 [207].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.70.
+     *
      * @public
      * @readonly
      */
     readonly reasonForServiceChange: OPTIONAL<ReasonForServiceChange>;
     /**
      * @summary `serviceChangeInitiator`.
+     * @description
+     *
+     * 2G not applicable, 3G operator-provisionable conditional. Indicates the
+     * service change initiator.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.1.
+     *
+     * This field indicates that the owner of this CDR is the initiator of the
+     * service change.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.82.
+     *
      * @public
      * @readonly
      */
     readonly serviceChangeInitiator: OPTIONAL<BOOLEAN>;
     /**
      * @summary `iCSI2ActiveFlag`.
+     * @description
+     *
+     * 2G and 3G conditional. This field indicates that the MSC is IMS
+     * registered on the UE's behalf during the session for service
+     * centralization in the IMS.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.1.
+     *
      * @public
      * @readonly
      */
     readonly iCSI2ActiveFlag: OPTIONAL<NULL>;
     /**
      * @summary `iMS_Charging_Identifier`.
+     * @description
+     *
+     * 2G and 3G operator-provisionable mandatory. This parameter holds the IMS
+     * charging identifier (ICID) as generated by the enhanced MSC server with
+     * SIP interface.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.1.
+     *
      * @public
      * @readonly
      */
     readonly iMS_Charging_Identifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `privateUserID`.
+     * @description
+     *
+     * 2G and 3G operator-provisionable mandatory. This field contains the IMS
+     * Private User Identity and Public User Identity specifically reserved for
+     * IMS registrations.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.1.
+     *
      * @public
      * @readonly
      */
@@ -873,7 +2002,7 @@ class MOCallRecord {
     /**
      * @summary Restructures an object into a MOCallRecord
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `MOCallRecord`.
      * 
      * @public
@@ -976,9 +2105,9 @@ class MOCallRecord {
 /**
  * @summary The Leading Root Component Types of MOCallRecord
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -1066,9 +2195,9 @@ const _root_component_type_list_1_spec_for_MOCallRecord: $.ComponentSpec[] = [
 /**
  * @summary The Trailing Root Component Types of MOCallRecord
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -1079,9 +2208,9 @@ const _root_component_type_list_2_spec_for_MOCallRecord: $.ComponentSpec[] = [
 /**
  * @summary The Extension Addition Component Types of MOCallRecord
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * @constant
  */
 export

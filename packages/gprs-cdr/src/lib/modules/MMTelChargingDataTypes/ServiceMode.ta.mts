@@ -9,7 +9,34 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ServiceMode
  * @description
- * 
+ *
+ * Behaviour of a `ServiceType` when that service has more than one.
+ *
+ * Communication diversion: unconditional (`cFunCond`), busy
+ * (`cFbusy`), no reply (`cFnoReply`), not logged-in
+ * (`cFnotLogged`), deflection (`deflection`), or not reachable
+ * (`notReach`). Clause 6.3.1.2 also lists communication forwarding
+ * on user determined busy (CFUDB). This INTEGER has no named value
+ * for CFUDB.
+ *
+ * Communication barring: incoming (`iCBarring`), outgoing
+ * (`oCBarring`), or anonymous rejection (`aCRejection`).
+ *
+ * Explicit communication transfer: blind (`eCTBlind`) or
+ * consultative (`eCTConsultative`). The assured-transfer scenario
+ * has no separate value.
+ *
+ * Conference: three-party (`threePTY`).
+ *
+ * Advice of Charge: at set-up (`aoC_S`), during the communication
+ * (`aoC_D`), or at the end (`aoC_E`).
+ *
+ * Values 1024 and above are reserved for network or manufacturer
+ * variants.
+ *
+ * 3GPP TS 32.275 V19.0.0 clauses 5.1.1 and 6.3.1.2.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.5.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,6 +63,17 @@ type ServiceMode = INTEGER;
 
 /**
  * @summary ServiceMode_cFunCond
+ * @description
+ *
+ * Communication Forwarding Unconditional (CFU) for CDIV. The
+ * diverting user's AS diverts the communication without first
+ * alerting that user. Charging Data Request [Start] is sent when
+ * the diverted-to user answers. Online charging sends Reserve
+ * Units [Initial] when CFU is detected, before the diverted
+ * INVITE, and discards announcements toward the served party.
+ *
+ * 3GPP TS 32.275 V19.0.0 clauses 5.1.1.7, 5.2.2.1.7 and 5.3.2.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -43,7 +81,12 @@ export
 const ServiceMode_cFunCond: ServiceMode = 0; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary ServiceMode_cFunCond
+ * @summary cFunCond
+ * @description
+ *
+ * Communication Forwarding Unconditional (CFU). See
+ * {@link ServiceMode_cFunCond}.
+ *
  * @constant
  * @type {number}
  */
@@ -52,6 +95,15 @@ const cFunCond: ServiceMode = ServiceMode_cFunCond; /* SHORT_NAMED_INTEGER_VALUE
 
 /**
  * @summary ServiceMode_cFbusy
+ * @description
+ *
+ * Communication Forwarding Busy (CFB) for CDIV. The same charging
+ * point as the other diversion modes: Charging Data Request
+ * [Start] when the diverted-to user answers. The no-reply flow is
+ * the template for CFU, deflection, CFB and not-logged-in.
+ *
+ * 3GPP TS 32.275 V19.0.0 clauses 5.1.1.7 and 5.2.2.1.7.1.
+ *
  * @constant
  * @type {number}
  */
@@ -59,7 +111,12 @@ export
 const ServiceMode_cFbusy: ServiceMode = 1; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary ServiceMode_cFbusy
+ * @summary cFbusy
+ * @description
+ *
+ * Communication Forwarding Busy (CFB). See
+ * {@link ServiceMode_cFbusy}.
+ *
  * @constant
  * @type {number}
  */
@@ -68,6 +125,17 @@ const cFbusy: ServiceMode = ServiceMode_cFbusy; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceMode_cFnoReply
+ * @description
+ *
+ * Communication Forwarding No Reply (CFNR) for CDIV. After 180
+ * Ringing the AS starts a non-reply timer. On expiry it releases
+ * the diverting user and forwards the communication. Charging
+ * Data Request [Start] or [Event] is sent on the final response
+ * from the diverted-to user, with this mode and the diverting
+ * user as the associated party. [Stop] closes the CDR on release.
+ *
+ * 3GPP TS 32.275 V19.0.0 clause 5.2.2.1.7.
+ *
  * @constant
  * @type {number}
  */
@@ -75,7 +143,12 @@ export
 const ServiceMode_cFnoReply: ServiceMode = 2; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary ServiceMode_cFnoReply
+ * @summary cFnoReply
+ * @description
+ *
+ * Communication Forwarding No Reply (CFNR). See
+ * {@link ServiceMode_cFnoReply}.
+ *
  * @constant
  * @type {number}
  */
@@ -84,6 +157,14 @@ const cFnoReply: ServiceMode = ServiceMode_cFnoReply; /* SHORT_NAMED_INTEGER_VAL
 
 /**
  * @summary ServiceMode_cFnotLogged
+ * @description
+ *
+ * Communication Forwarding on Not Logged-in (CFNL) for CDIV.
+ * Charging Data Request [Start] is sent when the diverted-to user
+ * answers, as for the other call-forwarding modes.
+ *
+ * 3GPP TS 32.275 V19.0.0 clauses 5.1.1.7 and 5.2.2.1.7.1.
+ *
  * @constant
  * @type {number}
  */
@@ -91,7 +172,12 @@ export
 const ServiceMode_cFnotLogged: ServiceMode = 3; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary ServiceMode_cFnotLogged
+ * @summary cFnotLogged
+ * @description
+ *
+ * Communication Forwarding on Not Logged-in (CFNL). See
+ * {@link ServiceMode_cFnotLogged}.
+ *
  * @constant
  * @type {number}
  */
@@ -100,6 +186,15 @@ const cFnotLogged: ServiceMode = ServiceMode_cFnotLogged; /* SHORT_NAMED_INTEGER
 
 /**
  * @summary ServiceMode_deflection
+ * @description
+ *
+ * Communication Deflection (CD) for CDIV. The diverting user
+ * deflects an incoming communication. Charging Data Request
+ * [Start] is sent when the diverted-to user answers, as for the
+ * other call-forwarding modes.
+ *
+ * 3GPP TS 32.275 V19.0.0 clauses 5.1.1.7 and 5.2.2.1.7.1.
+ *
  * @constant
  * @type {number}
  */
@@ -107,7 +202,11 @@ export
 const ServiceMode_deflection: ServiceMode = 4; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary ServiceMode_deflection
+ * @summary deflection
+ * @description
+ *
+ * Communication Deflection (CD). See {@link ServiceMode_deflection}.
+ *
  * @constant
  * @type {number}
  */
@@ -116,6 +215,15 @@ const deflection: ServiceMode = ServiceMode_deflection; /* SHORT_NAMED_INTEGER_V
 
 /**
  * @summary ServiceMode_notReach
+ * @description
+ *
+ * Communication Forwarding on Subscriber Not Reachable (CFNRc)
+ * for CDIV. Clause 6.3.1.2 lists CFNRc among the CDIV modes.
+ * TS 32.275 does not give CFNRc its own message flow; the no-reply
+ * flow is the stated basis for the other forwarding modes.
+ *
+ * 3GPP TS 32.275 V19.0.0 clauses 5.1.1.7 and 6.3.1.2.
+ *
  * @constant
  * @type {number}
  */
@@ -123,7 +231,12 @@ export
 const ServiceMode_notReach: ServiceMode = 5; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary ServiceMode_notReach
+ * @summary notReach
+ * @description
+ *
+ * Communication Forwarding on Subscriber Not Reachable (CFNRc).
+ * See {@link ServiceMode_notReach}.
+ *
  * @constant
  * @type {number}
  */
@@ -132,6 +245,15 @@ const notReach: ServiceMode = ServiceMode_notReach; /* SHORT_NAMED_INTEGER_VALUE
 
 /**
  * @summary ServiceMode_iCBarring
+ * @description
+ *
+ * Incoming Communications Barring (ICB). Rejects incoming
+ * communications that meet provisioned or configured conditions,
+ * on behalf of the terminating user. CB is reported with Charging
+ * Data Request [Event] only.
+ *
+ * 3GPP TS 32.275 V19.0.0 clauses 5.1.1.6 and 6.3.1.3.
+ *
  * @constant
  * @type {number}
  */
@@ -139,7 +261,12 @@ export
 const ServiceMode_iCBarring: ServiceMode = 6; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary ServiceMode_iCBarring
+ * @summary iCBarring
+ * @description
+ *
+ * Incoming Communications Barring (ICB). See
+ * {@link ServiceMode_iCBarring}.
+ *
  * @constant
  * @type {number}
  */
@@ -148,6 +275,18 @@ const iCBarring: ServiceMode = ServiceMode_iCBarring; /* SHORT_NAMED_INTEGER_VAL
 
 /**
  * @summary ServiceMode_oCBarring
+ * @description
+ *
+ * Outgoing Communication Barring (OCB). Rejects outgoing
+ * communications that meet provisioned or configured conditions,
+ * on behalf of the originating user. CB is reported with Charging
+ * Data Request [Event] only. Clauses 6.3.1.2 and 6.4.2.2 write
+ * the third CB mode as "OC, B" and "OC, or B". Clause 5.1.1.6
+ * and the abbreviation OCB identify that mode as outgoing
+ * communication barring, which is this value.
+ *
+ * 3GPP TS 32.275 V19.0.0 clauses 5.1.1.6, 6.3.1.2 and 6.4.2.2.
+ *
  * @constant
  * @type {number}
  */
@@ -155,7 +294,12 @@ export
 const ServiceMode_oCBarring: ServiceMode = 7; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary ServiceMode_oCBarring
+ * @summary oCBarring
+ * @description
+ *
+ * Outgoing Communication Barring (OCB). See
+ * {@link ServiceMode_oCBarring}.
+ *
  * @constant
  * @type {number}
  */
@@ -164,6 +308,15 @@ const oCBarring: ServiceMode = ServiceMode_oCBarring; /* SHORT_NAMED_INTEGER_VAL
 
 /**
  * @summary ServiceMode_aCRejection
+ * @description
+ *
+ * Anonymous Communication Rejection (ACR). A particular case of
+ * incoming barring that rejects communications from an anonymous
+ * originator, on behalf of the terminating user. CB is reported
+ * with Charging Data Request [Event] only.
+ *
+ * 3GPP TS 32.275 V19.0.0 clauses 5.1.1.6 and 6.3.1.2.
+ *
  * @constant
  * @type {number}
  */
@@ -171,7 +324,12 @@ export
 const ServiceMode_aCRejection: ServiceMode = 8; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary ServiceMode_aCRejection
+ * @summary aCRejection
+ * @description
+ *
+ * Anonymous Communication Rejection (ACR). See
+ * {@link ServiceMode_aCRejection}.
+ *
  * @constant
  * @type {number}
  */
@@ -180,6 +338,17 @@ const aCRejection: ServiceMode = ServiceMode_aCRejection; /* SHORT_NAMED_INTEGER
 
 /**
  * @summary ServiceMode_eCTBlind
+ * @description
+ *
+ * Blind explicit communication transfer. The transferor sends
+ * REFER without first establishing a communication to the
+ * transfer target. Charging Data Request [Start] is sent, for
+ * both the transferor and the transferee, on the final response
+ * to the INVITE toward the target. Online charging sends Reserve
+ * Units [Initial] on that REFER.
+ *
+ * 3GPP TS 32.275 V19.0.0 clauses 5.2.2.1.9.1 and 5.3.2.1.5.1.
+ *
  * @constant
  * @type {number}
  */
@@ -187,7 +356,12 @@ export
 const ServiceMode_eCTBlind: ServiceMode = 9; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary ServiceMode_eCTBlind
+ * @summary eCTBlind
+ * @description
+ *
+ * Blind explicit communication transfer. See
+ * {@link ServiceMode_eCTBlind}.
+ *
  * @constant
  * @type {number}
  */
@@ -196,6 +370,18 @@ const eCTBlind: ServiceMode = ServiceMode_eCTBlind; /* SHORT_NAMED_INTEGER_VALUE
 
 /**
  * @summary ServiceMode_eCTConsultative
+ * @description
+ *
+ * Consultative explicit communication transfer. After holding the
+ * transferee, the transferor establishes a communication to the
+ * target, holds the target, then sends REFER. Charging Data
+ * Request [Start] is sent at the same steps as blind transfer:
+ * on the final response to the INVITE toward the target, for both
+ * the transferor and the transferee. Online charging uses the
+ * same Reserve Units steps as blind transfer.
+ *
+ * 3GPP TS 32.275 V19.0.0 clauses 5.2.2.1.9.1 and 5.3.2.1.5.1.
+ *
  * @constant
  * @type {number}
  */
@@ -203,7 +389,12 @@ export
 const ServiceMode_eCTConsultative: ServiceMode = 10; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary ServiceMode_eCTConsultative
+ * @summary eCTConsultative
+ * @description
+ *
+ * Consultative explicit communication transfer. See
+ * {@link ServiceMode_eCTConsultative}.
+ *
  * @constant
  * @type {number}
  */
@@ -212,6 +403,20 @@ const eCTConsultative: ServiceMode = ServiceMode_eCTConsultative; /* SHORT_NAMED
 
 /**
  * @summary ServiceMode_threePTY
+ * @description
+ *
+ * Three-party (3PTY), a CONF mode. The initiator holds one party,
+ * calls a third party, then has the CONF AS join both into one
+ * session. `associated_Party_Address` is the initiator. Offline
+ * charging sends [Start], [Interim] or [Event] when the 3PTY is
+ * established, and [Stop] or [Event] on release. Online charging
+ * sends Reserve Units [Initial] for CONF (3PTY). Event charging
+ * with unit reservation then sends [Terminate] once creation
+ * succeeds. Session charging continues with [Update].
+ *
+ * 3GPP TS 32.275 V19.0.0 clauses 5.2.2.1.11.5, 5.3.2.1.4.6 and
+ * 6.3.1.2.
+ *
  * @constant
  * @type {number}
  */
@@ -219,7 +424,11 @@ export
 const ServiceMode_threePTY: ServiceMode = 11; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary ServiceMode_threePTY
+ * @summary threePTY
+ * @description
+ *
+ * Three-party (3PTY). See {@link ServiceMode_threePTY}.
+ *
  * @constant
  * @type {number}
  */
@@ -228,6 +437,14 @@ const threePTY: ServiceMode = ServiceMode_threePTY; /* SHORT_NAMED_INTEGER_VALUE
 
 /**
  * @summary ServiceMode_aoC_S
+ * @description
+ *
+ * Advice of Charge at communication set-up time (AoC-S). The
+ * information flows between the AoC AS and the CDF are specified
+ * in TS 32.280. `aoCInformation` may contain more than one report.
+ *
+ * 3GPP TS 32.275 V19.0.0 clauses 5.1.1.21 and 6.3.1.2.
+ *
  * @constant
  * @type {number}
  */
@@ -235,7 +452,12 @@ export
 const ServiceMode_aoC_S: ServiceMode = 12; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary ServiceMode_aoC_S
+ * @summary aoC_S
+ * @description
+ *
+ * Advice of Charge at communication set-up time (AoC-S). See
+ * {@link ServiceMode_aoC_S}.
+ *
  * @constant
  * @type {number}
  */
@@ -244,6 +466,14 @@ const aoC_S: ServiceMode = ServiceMode_aoC_S; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceMode_aoC_D
+ * @description
+ *
+ * Advice of Charge during the communication (AoC-D). The
+ * information flows between the AoC AS and the CDF are specified
+ * in TS 32.280.
+ *
+ * 3GPP TS 32.275 V19.0.0 clauses 5.1.1.21 and 6.3.1.2.
+ *
  * @constant
  * @type {number}
  */
@@ -251,7 +481,12 @@ export
 const ServiceMode_aoC_D: ServiceMode = 13; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary ServiceMode_aoC_D
+ * @summary aoC_D
+ * @description
+ *
+ * Advice of Charge during the communication (AoC-D). See
+ * {@link ServiceMode_aoC_D}.
+ *
  * @constant
  * @type {number}
  */
@@ -260,6 +495,14 @@ const aoC_D: ServiceMode = ServiceMode_aoC_D; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceMode_aoC_E
+ * @description
+ *
+ * Advice of Charge at the end of the communication (AoC-E). The
+ * information flows between the AoC AS and the CDF are specified
+ * in TS 32.280.
+ *
+ * 3GPP TS 32.275 V19.0.0 clauses 5.1.1.21 and 6.3.1.2.
+ *
  * @constant
  * @type {number}
  */
@@ -267,7 +510,12 @@ export
 const ServiceMode_aoC_E: ServiceMode = 14; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary ServiceMode_aoC_E
+ * @summary aoC_E
+ * @description
+ *
+ * Advice of Charge at the end of the communication (AoC-E). See
+ * {@link ServiceMode_aoC_E}.
+ *
  * @constant
  * @type {number}
  */

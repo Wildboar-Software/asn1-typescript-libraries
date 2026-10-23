@@ -14,6 +14,12 @@ import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../MMSChargingD
  * @summary PacketSwitchedAccess
  * @description
  * 
+ * Packet-switched form of an MMS access correlation, so the MMS CDR can be
+ * correlated with the GSN CDR. TS 32.270 does not further define
+ * `gSNAddress` or `chargingID`.
+ *
+ * 3GPP TS 32.270 V19.0.0 clause 6.1.1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +34,27 @@ export
 class PacketSwitchedAccess {
     /**
      * @summary `gSNAddress`.
+     * @description
+     *
+     * GSN address for the packet-switched access. TS 32.270 does not further
+     * define this component; it is part of the access correlation used to
+     * match the MMS CDR with the GSN CDR.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.1.1.
+     *
      * @public
      * @readonly
      */
     readonly gSNAddress: IPAddress;
     /**
      * @summary `chargingID`.
+     * @description
+     *
+     * Charging identifier for that packet-switched access. TS 32.270 does not
+     * further define this component.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.1.1.
+     *
      * @public
      * @readonly
      */

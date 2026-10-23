@@ -14,7 +14,12 @@ import { UsedUnitContainer, _decode_UsedUnitContainer, _encode_UsedUnitContainer
 /**
  * @summary MultipleUnitUsage
  * @description
- * 
+ *
+ * One container in the CHF-CDR list of multiple unit usage. The list applies
+ * to CHF-CDR and holds one or more containers.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.5.1.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +36,26 @@ export
 class MultipleUnitUsage {
     /**
      * @summary `ratingGroup`.
+     * @description
+     *
+     * The field identifies the rating group. The parameter corresponds to the
+     * Charging Key as specified in TS 23.503 [246].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.5.1.7.
+     *
      * @public
      * @readonly
      */
     readonly ratingGroup: INTEGER;
     /**
      * @summary `usedUnitContainers`.
+     * @description
+     *
+     * This list applicable in CHF-CDR includes one or more containers. Each
+     * container includes the following fields:
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.5.1.14.
+     *
      * @public
      * @readonly
      */

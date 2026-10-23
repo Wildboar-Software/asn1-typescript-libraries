@@ -9,7 +9,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary TermCAMELRecord_levelOfCAMELService
  * @description
- * 
+ *
+ * Complexity of the CAMEL feature used on a terminating CAMEL attempt.
+ * Operator-provisionable conditional. TS 32.250 does not define the named
+ * bits `basic`, `callDurationSupervision`, and `onlineCharging`.
+ *
+ * 3GPP TS 32.250 V19.0.0 clause 6.1.3.18.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

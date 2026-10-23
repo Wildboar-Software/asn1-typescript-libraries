@@ -6,7 +6,22 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ProSeCauseForRecClosing
  * @description
- * 
+ *
+ * Why the ProSe Function released the CDR. On a PF-ED-CDR this is the reason
+ * the record was released. On a PF-DC-CDR this is the reason the record was
+ * closed.
+ *
+ * `proximityAlerted`, `timeExpiredWithNoRrenewal`, and `requestorCancellation`
+ * are the EPC-level discovery cancellation reasons. `timeLimited` and
+ * `maxNumberOfReports` are the conditions on which the ProSe Function stops a
+ * session-based Direct Communication charging session. TS 32.277 does not
+ * define `abnormalRelease`.
+ *
+ * 3GPP TS 32.277 V19.2.0 clauses 5.2.1.3, 5.2.2.3.1.2, 5.2.3.1.3, and 6.1.3.3.
+ * Tables 6.1.3.3.1 and 6.1.3.4.1.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,7 +49,22 @@ enum _enum_for_ProSeCauseForRecClosing {
 /**
  * @summary ProSeCauseForRecClosing
  * @description
- * 
+ *
+ * Why the ProSe Function released the CDR. On a PF-ED-CDR this is the reason
+ * the record was released. On a PF-DC-CDR this is the reason the record was
+ * closed.
+ *
+ * `proximityAlerted`, `timeExpiredWithNoRrenewal`, and `requestorCancellation`
+ * are the EPC-level discovery cancellation reasons. `timeLimited` and
+ * `maxNumberOfReports` are the conditions on which the ProSe Function stops a
+ * session-based Direct Communication charging session. TS 32.277 does not
+ * define `abnormalRelease`.
+ *
+ * 3GPP TS 32.277 V19.2.0 clauses 5.2.1.3, 5.2.2.3.1.2, 5.2.3.1.3, and 6.1.3.3.
+ * Tables 6.1.3.3.1 and 6.1.3.4.1.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -55,7 +85,22 @@ type ProSeCauseForRecClosing = _enum_for_ProSeCauseForRecClosing;
 /**
  * @summary ProSeCauseForRecClosing
  * @description
- * 
+ *
+ * Why the ProSe Function released the CDR. On a PF-ED-CDR this is the reason
+ * the record was released. On a PF-DC-CDR this is the reason the record was
+ * closed.
+ *
+ * `proximityAlerted`, `timeExpiredWithNoRrenewal`, and `requestorCancellation`
+ * are the EPC-level discovery cancellation reasons. `timeLimited` and
+ * `maxNumberOfReports` are the conditions on which the ProSe Function stops a
+ * session-based Direct Communication charging session. TS 32.277 does not
+ * define `abnormalRelease`.
+ *
+ * 3GPP TS 32.277 V19.2.0 clauses 5.2.1.3, 5.2.2.3.1.2, 5.2.3.1.3, and 6.1.3.3.
+ * Tables 6.1.3.3.1 and 6.1.3.4.1.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -75,6 +120,15 @@ const ProSeCauseForRecClosing = _enum_for_ProSeCauseForRecClosing;
 
 /**
  * @summary ProSeCauseForRecClosing_proximityAlerted
+ * @description
+ *
+ * EPC-level discovery ended because the UEs were alerted that they are in
+ * proximity. TS 32.298 maps this to Change-Condition "Proximity Alerted".
+ *
+ * 3GPP TS 32.277 V19.2.0 clause 6.1.3.3.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.4.
+ *
  * @constant
  * @type {number}
  */
@@ -83,6 +137,10 @@ const ProSeCauseForRecClosing_proximityAlerted: ProSeCauseForRecClosing = ProSeC
 
 /**
  * @summary proximityAlerted
+ * @description
+ *
+ * Proximity alerted. See `ProSeCauseForRecClosing_proximityAlerted`.
+ *
  * @constant
  * @type {number}
  */
@@ -91,6 +149,13 @@ const proximityAlerted: ProSeCauseForRecClosing = ProSeCauseForRecClosing.proxim
 
 /**
  * @summary ProSeCauseForRecClosing_timeExpiredWithNoRrenewal
+ * @description
+ *
+ * EPC-level discovery ended because the time window expired and was not
+ * renewed. The ASN.1 name spells renewal as `Rrenewal`.
+ *
+ * 3GPP TS 32.277 V19.2.0 clause 6.1.3.3.
+ *
  * @constant
  * @type {number}
  */
@@ -99,6 +164,11 @@ const ProSeCauseForRecClosing_timeExpiredWithNoRrenewal: ProSeCauseForRecClosing
 
 /**
  * @summary timeExpiredWithNoRrenewal
+ * @description
+ *
+ * Time expired with no renewal. See
+ * `ProSeCauseForRecClosing_timeExpiredWithNoRrenewal`.
+ *
  * @constant
  * @type {number}
  */
@@ -107,6 +177,15 @@ const timeExpiredWithNoRrenewal: ProSeCauseForRecClosing = ProSeCauseForRecClosi
 
 /**
  * @summary ProSeCauseForRecClosing_requestorCancellation
+ * @description
+ *
+ * The requestor cancelled the EPC-level discovery request. TS 32.298 maps this
+ * to Change-Condition "Requestor Cancellation".
+ *
+ * 3GPP TS 32.277 V19.2.0 clause 6.1.3.3.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.4.
+ *
  * @constant
  * @type {number}
  */
@@ -115,6 +194,10 @@ const ProSeCauseForRecClosing_requestorCancellation: ProSeCauseForRecClosing = P
 
 /**
  * @summary requestorCancellation
+ * @description
+ *
+ * Requestor cancellation. See `ProSeCauseForRecClosing_requestorCancellation`.
+ *
  * @constant
  * @type {number}
  */
@@ -123,6 +206,17 @@ const requestorCancellation: ProSeCauseForRecClosing = ProSeCauseForRecClosing.r
 
 /**
  * @summary ProSeCauseForRecClosing_timeLimited
+ * @description
+ *
+ * The ProSe Function closed a session-based Direct Communication charging
+ * session because the operator-configured maximum time limit was reached. A
+ * later usage report for the same group opens another PF-DC-CDR. TS 32.298 maps
+ * this to Change-Condition "Time Limit".
+ *
+ * 3GPP TS 32.277 V19.2.0 clauses 5.2.2.3.1.2 and 5.2.3.1.3.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.4.
+ *
  * @constant
  * @type {number}
  */
@@ -131,6 +225,10 @@ const ProSeCauseForRecClosing_timeLimited: ProSeCauseForRecClosing = ProSeCauseF
 
 /**
  * @summary timeLimited
+ * @description
+ *
+ * Operator time limit reached. See `ProSeCauseForRecClosing_timeLimited`.
+ *
  * @constant
  * @type {number}
  */
@@ -139,6 +237,16 @@ const timeLimited: ProSeCauseForRecClosing = ProSeCauseForRecClosing.timeLimited
 
 /**
  * @summary ProSeCauseForRecClosing_maxNumberOfReports
+ * @description
+ *
+ * The ProSe Function closed a session-based Direct Communication charging
+ * session because the operator-configured maximum number of reports was
+ * reached. TS 32.298 maps this to Change-Condition "Max Number of reports".
+ *
+ * 3GPP TS 32.277 V19.2.0 clauses 5.2.2.3.1.2 and 5.2.3.1.3.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.4.
+ *
  * @constant
  * @type {number}
  */
@@ -147,6 +255,11 @@ const ProSeCauseForRecClosing_maxNumberOfReports: ProSeCauseForRecClosing = ProS
 
 /**
  * @summary maxNumberOfReports
+ * @description
+ *
+ * Operator report limit reached. See
+ * `ProSeCauseForRecClosing_maxNumberOfReports`.
+ *
  * @constant
  * @type {number}
  */
@@ -155,6 +268,13 @@ const maxNumberOfReports: ProSeCauseForRecClosing = ProSeCauseForRecClosing.maxN
 
 /**
  * @summary ProSeCauseForRecClosing_abnormalRelease
+ * @description
+ *
+ * TS 32.277 does not define this cause. TS 32.298 maps it to Change-Condition
+ * "Abnormal Release".
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.4.
+ *
  * @constant
  * @type {number}
  */
@@ -163,6 +283,10 @@ const ProSeCauseForRecClosing_abnormalRelease: ProSeCauseForRecClosing = ProSeCa
 
 /**
  * @summary abnormalRelease
+ * @description
+ *
+ * Abnormal release. See `ProSeCauseForRecClosing_abnormalRelease`.
+ *
  * @constant
  * @type {number}
  */

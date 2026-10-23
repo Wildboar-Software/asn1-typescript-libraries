@@ -13,7 +13,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SMServingNode
  * @description
- * 
+ *
+ * Serving node of the UE for a device trigger, as received from the MTC-IWF
+ * over T4: an SGSN, an MME, or an MSC (TS 29.337). TS 32.274 does not describe
+ * the components separately. The ASN.1 also has an IP-SM-GW number and name,
+ * which that prose does not mention.
+ *
+ * 3GPP TS 32.274 V19.1.0 table 6.3.1.2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,54 +42,92 @@ export
 class SMServingNode {
     /**
      * @summary `sGSNName`.
+     * @description
+     *
+     * Name of the SGSN.
+     *
      * @public
      * @readonly
      */
     readonly sGSNName: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `sGSNRealm`.
+     * @description
+     *
+     * Realm of the SGSN.
+     *
      * @public
      * @readonly
      */
     readonly sGSNRealm: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `sGSNNumber`.
+     * @description
+     *
+     * Number of the SGSN.
+     *
      * @public
      * @readonly
      */
     readonly sGSNNumber: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `mMEName`.
+     * @description
+     *
+     * Name of the MME.
+     *
      * @public
      * @readonly
      */
     readonly mMEName: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `mMERealm`.
+     * @description
+     *
+     * Realm of the MME.
+     *
      * @public
      * @readonly
      */
     readonly mMERealm: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `mMENumberForMTSMS`.
+     * @description
+     *
+     * MME number for mobile-terminated SMS.
+     *
      * @public
      * @readonly
      */
     readonly mMENumberForMTSMS: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `mSCNumber`.
+     * @description
+     *
+     * Number of the MSC.
+     *
      * @public
      * @readonly
      */
     readonly mSCNumber: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `iPSMGWNumber`.
+     * @description
+     *
+     * IP-SM-GW number. Present in the ASN.1. The TS 32.274 description of this
+     * group names SGSN, MME, and MSC only.
+     *
      * @public
      * @readonly
      */
     readonly iPSMGWNumber: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `iPSMGWName`.
+     * @description
+     *
+     * IP-SM-GW name. Present in the ASN.1. The TS 32.274 description of this
+     * group names SGSN, MME, and MSC only.
+     *
      * @public
      * @readonly
      */

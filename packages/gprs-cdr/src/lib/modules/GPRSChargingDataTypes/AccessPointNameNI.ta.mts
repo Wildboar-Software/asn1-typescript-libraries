@@ -12,6 +12,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AccessPointNameNI
  * @description
  * 
+ * Network-identifier part of the APN, the logical name of the access point
+ * to the external packet data network (table 6.1.1.1). The APN is the
+ * accuracy to which charging information identifies the destination
+ * network (clause 5.1.2). In an IPE-CDR it reflects the NSWO APN when the
+ * served user is a 3GPP UE (table D.4.1.2.1.1).
+ * 
+ * 3GPP TS 32.251 V19.0.0.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

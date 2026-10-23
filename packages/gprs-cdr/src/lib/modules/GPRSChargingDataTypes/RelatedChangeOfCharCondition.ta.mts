@@ -19,6 +19,13 @@ import { UWANUserLocationInfo, _decode_UWANUserLocationInfo, _encode_UWANUserLoc
  * @summary RelatedChangeOfCharCondition
  * @description
  * 
+ * Change condition on an alternate access of a multi-access PDN connection
+ * that indirectly caused this traffic-volume container to close, with
+ * optional supplemental information such as user location (table 6.1.3.2).
+ * Used when NBIFOM is accepted for the IP-CAN session.
+ * 
+ * 3GPP TS 32.251 V19.0.0.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -50,6 +57,17 @@ class RelatedChangeOfCharCondition {
     readonly changeTime: OCTET_STRING;
     /**
      * @summary `userLocationInformation`.
+     * @description
+     *
+     * This field contains the User Location Information as described in TS
+     * 29.060 [215] for GTP case (e.g. CGI, SAI, RAI), TS 29.274 [223] for eGTP
+     * case (e.g. CGI, SAI, RAI TAI and ECGI) and TS 29.275 [224] for PMIP case.
+     * The field is provided by the SGSN/MME and transferred to the S-GW/P-GW/TDF
+     * during the IP-CAN bearer activation/modification and/or TDF session
+     * establishment/modification.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.75.
+     *
      * @public
      * @readonly
      */
@@ -62,18 +80,49 @@ class RelatedChangeOfCharCondition {
     readonly presenceReportingAreaStatus: OPTIONAL<PresenceReportingAreaStatus>;
     /**
      * @summary `userCSGInformation`.
+     * @description
+     *
+     * This field contains the "User CSG Information" status of the user
+     * accessing a CSG cell: it comprises CSG ID within the PLMN, Access mode and
+     * indication on CSG membership for the user when hybrid access applies, as
+     * defined in TS 29.060 [215] for GPRS case, and in TS 29.274 [223] for EPC
+     * case.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.74.
+     *
      * @public
      * @readonly
      */
     readonly userCSGInformation: OPTIONAL<UserCSGInformation>;
     /**
      * @summary `rATType`.
+     * @description
+     *
+     * Holds the value of RAT Type, as provided to S-GW and P-GW, specified in TS
+     * 29.061 [216] and also provided to the TDF as specified in TS 29.212 [220].
+     * The field is provided by the SGSN/MME and transferred to the S-GW/P-GW
+     * during the IP-CAN bearer activation/modification and transferred to the
+     * TDF during the TDF session establishment/modification.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.47.
+     *
      * @public
      * @readonly
      */
     readonly rATType: OPTIONAL<INTEGER>;
     /**
      * @summary `uWANUserLocationInformation`.
+     * @description
+     *
+     * This field contains the UE location in an Untrusted Wireless Access
+     * Network (UWAN) which includes the UE local IP address and optionally
+     * either UDP source port number (if NAT is detected) or TCP source port
+     * number. It may also include WLAN location information the ePDG may have
+     * received from the 3GPP AAA server about the UE, as TWAN Identifier defined
+     * in TS 29.274 [223].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.77.
+     *
      * @public
      * @readonly
      */

@@ -6,7 +6,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary MMStatusCodeType
  * @description
- * 
+ *
+ * This field contains an appropriate status value of the delivered MM (e.g.
+ * retrieved, rejected, etc.).
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.28.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,7 +43,12 @@ enum _enum_for_MMStatusCodeType {
 /**
  * @summary MMStatusCodeType
  * @description
- * 
+ *
+ * This field contains an appropriate status value of the delivered MM (e.g.
+ * retrieved, rejected, etc.).
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.28.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -61,7 +71,12 @@ type MMStatusCodeType = _enum_for_MMStatusCodeType;
 /**
  * @summary MMStatusCodeType
  * @description
- * 
+ *
+ * This field contains an appropriate status value of the delivered MM (e.g.
+ * retrieved, rejected, etc.).
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.28.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

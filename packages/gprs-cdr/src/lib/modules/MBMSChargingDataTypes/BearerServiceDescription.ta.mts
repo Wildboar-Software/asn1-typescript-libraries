@@ -19,7 +19,16 @@ import { BearerServiceDescription_sDP_Type, _decode_BearerServiceDescription_sDP
 /**
  * @summary BearerServiceDescription
  * @description
- * 
+ *
+ * Session portion of the SDP exchanged between the BM-SC and the UE
+ * during notification. Category OC on the S-BMSC-CDR and the
+ * C-BMSC-CDR. Carried in IMS Information. TS 32.273 defines the SDP
+ * session description and the SDP media components by reference to
+ * TS 32.260, and does not define the other components.
+ *
+ * 3GPP TS 32.273 V19.0.0 tables 6.1.3.1.1 and 6.1.3.2.1,
+ * clause 6.3.1.1, and table 6.4.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,54 +54,113 @@ export
 class BearerServiceDescription {
     /**
      * @summary `sIP_Request_Timestamp`.
+     * @description
+     *
+     * TS 32.273 does not describe this component. The bearer SDP is
+     * IMS Information, which clause 6.3.1.1 specifies by reference
+     * to TS 32.260.
+     *
      * @public
      * @readonly
      */
     readonly sIP_Request_Timestamp: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `sIP_Response_Timestamp`.
+     * @description
+     *
+     * TS 32.273 does not describe this component. The bearer SDP is
+     * IMS Information, which clause 6.3.1.1 specifies by reference
+     * to TS 32.260.
+     *
      * @public
      * @readonly
      */
     readonly sIP_Response_Timestamp: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `sDP_Media_Components`.
+     * @description
+     *
+     * Media lines from the bearer SDP. Bound from
+     * SDP-Media-Component. Used as defined in TS 32.260.
+     *
+     * 3GPP TS 32.273 V19.0.0 clause 6.3.1.1 and table 6.4.1.
+     *
      * @public
      * @readonly
      */
     readonly sDP_Media_Components: OPTIONAL<SDP_Media_Components[]>;
     /**
      * @summary `mediaInitiatorFlag`.
+     * @description
+     *
+     * TS 32.273 does not describe this component. The bearer SDP is
+     * IMS Information, which clause 6.3.1.1 specifies by reference
+     * to TS 32.260.
+     *
      * @public
      * @readonly
      */
     readonly mediaInitiatorFlag: OPTIONAL<NULL>;
     /**
      * @summary `sDP_Session_Description`.
+     * @description
+     *
+     * Session portion of the SDP exchanged during notification.
+     * Bound from SDP-Session-Description. Used as defined in
+     * TS 32.260.
+     *
+     * 3GPP TS 32.273 V19.0.0 tables 6.1.3.1.1 and 6.1.3.2.1,
+     * clause 6.3.1.1, and table 6.4.1.
+     *
      * @public
      * @readonly
      */
     readonly sDP_Session_Description: OPTIONAL<GraphicString[]>;
     /**
      * @summary `mediaInitiatorParty`.
+     * @description
+     *
+     * TS 32.273 does not describe this component. The bearer SDP is
+     * IMS Information, which clause 6.3.1.1 specifies by reference
+     * to TS 32.260.
+     *
      * @public
      * @readonly
      */
     readonly mediaInitiatorParty: OPTIONAL<InvolvedParty>;
     /**
      * @summary `sIP_Request_Timestamp_Fraction`.
+     * @description
+     *
+     * TS 32.273 does not describe this component. The bearer SDP is
+     * IMS Information, which clause 6.3.1.1 specifies by reference
+     * to TS 32.260.
+     *
      * @public
      * @readonly
      */
     readonly sIP_Request_Timestamp_Fraction: OPTIONAL<INTEGER>;
     /**
      * @summary `sIP_Response_Timestamp_Fraction`.
+     * @description
+     *
+     * TS 32.273 does not describe this component. The bearer SDP is
+     * IMS Information, which clause 6.3.1.1 specifies by reference
+     * to TS 32.260.
+     *
      * @public
      * @readonly
      */
     readonly sIP_Response_Timestamp_Fraction: OPTIONAL<INTEGER>;
     /**
      * @summary `sDP_Type`.
+     * @description
+     *
+     * Whether this SDP is the offer or the answer. TS 32.273 does
+     * not define the value. See `BearerServiceDescription_sDP_Type`.
+     *
+     * 3GPP TS 32.273 V19.0.0 clause 6.3.1.1.
+     *
      * @public
      * @readonly
      */

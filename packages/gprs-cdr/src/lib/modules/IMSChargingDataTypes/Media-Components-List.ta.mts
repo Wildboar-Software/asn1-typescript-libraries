@@ -19,7 +19,30 @@ import { SDP_Type, _decode_SDP_Type, _encode_SDP_Type, _enum_for_SDP_Type } from
 /**
  * @summary Media_Components_List
  * @description
- * 
+ *
+ * One SDP offer or one SDP answer (clause 5.1.3). Either party may send
+ * the offer; the media initiator flag is present only when the called
+ * party sent the first offer of that negotiation. For the first
+ * negotiation the answer defines the media in use and shall be recorded
+ * when session setup succeeds; the offer may be recorded as well. On an
+ * unsuccessful setup the offer may be recorded if it is available. A later
+ * re-negotiation adds further occurrences.
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 5.1.3.
+ *
+ * This is a grouped field which may occur several times in one CDR and the
+ * content should be filled as described in TS 32.260 [20] clause 5.1.3. The
+ * field is present only in a SIP session related case. The List of SDP Media
+ * Components contains the following elements: SIP Request Timestamp; SIP
+ * Response Timestamp; SDP Media Components; Media Initiator flag; SDP
+ * Session Description. Media Initiator Party. The Media Initiator Party is
+ * only used for PoC charging. These field elements are described in the
+ * appropriate subclause.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.28.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,54 +66,120 @@ export
 class Media_Components_List {
     /**
      * @summary `sIP_Request_Timestamp`.
+     * @description
+     *
+     * This parameter contains the time of the SIP request (usually a
+     * (RE-)INVITE). This parameter corresponds to SIP Request Timestamp in the
+     * Charging Data Request [Interim].
+     *
      * @public
      * @readonly
      */
     readonly sIP_Request_Timestamp: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `sIP_Response_Timestamp`.
+     * @description
+     *
+     * This parameter contains appropriately the time of SIP 200 OK
+     * acknowledging an SIP INVITE or of SIP ACK including an SDP answer. This
+     * parameter corresponds to SIP Response Timestamp in Charging Data Request
+     * [Interim].
+     *
      * @public
      * @readonly
      */
     readonly sIP_Response_Timestamp: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `sDP_Media_Components`.
+     * @description
+     *
+     * This is a grouped field comprising several sub-fields associated with
+     * one media component. Since several media components may exist for a
+     * session in parallel these sub-fields may occur several times..
+     *
      * @public
      * @readonly
      */
     readonly sDP_Media_Components: OPTIONAL<SDP_Media_Component[]>;
     /**
      * @summary `mediaInitiatorFlag`.
+     * @description
+     *
+     * This field indicates if the called party has requested the session
+     * modification and it is present only if the initiator was the called party.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.30.
+     *
+     * 3GPP TS 32.260 V20.1.0 clause 5.1.3.
+     *
      * @public
      * @readonly
      */
     readonly mediaInitiatorFlag: OPTIONAL<NULL>;
     /**
      * @summary `sDP_Session_Description`.
+     * @description
+     *
+     * Session-level portion of the SDP exchanged between the user agents in
+     * this negotiation (clause 5.1.3). Each occurrence of the list is either
+     * an offer or an answer.
+     *
      * @public
      * @readonly
      */
     readonly sDP_Session_Description: OPTIONAL<GraphicString[]>;
     /**
      * @summary `mediaInitiatorParty`.
+     * @description
+     *
+     * This field indicates initiating party who has requested the session
+     * modification in PoC charging.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.31.
+     *
+     * 3GPP TS 32.260 V20.1.0 clause 5.1.3.
+     *
      * @public
      * @readonly
      */
     readonly mediaInitiatorParty: OPTIONAL<InvolvedParty>;
     /**
      * @summary `sIP_Request_Timestamp_Fraction`.
+     * @description
+     *
+     * This parameter contains the milliseconds fraction in relation to the SIP
+     * Request Timestamp.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.63.
+     *
+     * 3GPP TS 32.260 V20.1.0 clause 5.1.3.
+     *
      * @public
      * @readonly
      */
     readonly sIP_Request_Timestamp_Fraction: OPTIONAL<INTEGER>;
     /**
      * @summary `sIP_Response_Timestamp_Fraction`.
+     * @description
+     *
+     * This parameter contains the milliseconds fraction in relation to the SIP
+     * Response Timestamp.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.65.
+     *
+     * 3GPP TS 32.260 V20.1.0 clause 5.1.3.
+     *
      * @public
      * @readonly
      */
     readonly sIP_Response_Timestamp_Fraction: OPTIONAL<INTEGER>;
     /**
      * @summary `sDP_Type`.
+     * @description
+     *
+     * This parameter indicates if the SDP media component is an SDP offer or
+     * SDP answer.
+     *
      * @public
      * @readonly
      */

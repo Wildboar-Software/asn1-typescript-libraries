@@ -14,7 +14,19 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary PSFurnishChargingInformation
  * @description
- * 
+ *
+ * This field includes following information elements for IP-CAN bearer
+ * (PGW-CDR), for TDF session (TDF-CDR), or for the IP-CAN session (IPE-CDR):
+ * This field contains charging information sent by the OCS in the Diameter
+ * Credit-Control Credit-Control-Answer messages as defined in TS 32.251
+ * [11]. The data can be sent either in one Diameter Credit-Control
+ * Credit-Control-Answer message or several Diameter Credit-Control
+ * Credit-Control-Answer messages with append indicator. This data is
+ * transferred transparently in the PS Furnish Charging Information field of
+ * the relevant call records.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.45.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +41,12 @@ export
 class PSFurnishChargingInformation {
     /**
      * @summary `pSFreeFormatData`.
+     * @description
+     *
+     * PS Free Format Data
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.45.
+     *
      * @public
      * @readonly
      */

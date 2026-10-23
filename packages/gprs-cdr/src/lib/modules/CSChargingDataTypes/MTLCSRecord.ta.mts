@@ -24,7 +24,22 @@ import { CauseForTerm, _decode_CauseForTerm, _encode_CauseForTerm } from "../CSC
 /**
  * @summary MTLCSRecord
  * @description
- * 
+ *
+ * Mobile-terminated location-request CDR. When enabled, the visited MSC
+ * produces one for each terminated location request. Clause 5.1.3.12 says it
+ * is generated when the MSC receives the RANAP Location Report from the RNC.
+ * At least one of `servedIMSI`, `servedMSISDN`, and `servedIMEI` shall be
+ * present. `location` (LAC, CI, and MCC+MNC at the time the request is
+ * received) applies to 2G only.
+ *
+ * `causeForTerm` is why the location service ended. `diagnostics` and
+ * `lcsCause` carry a more detailed failure or partial success when one is
+ * known. `measureDuration` is how long the request was processed.
+ *
+ * Categories are M, C, OM, and OC as in TS 32.240 clause 5.4.
+ *
+ * 3GPP TS 32.250 V19.0.0 clauses 5.1.3.12 and 6.1.3.20.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -59,145 +74,457 @@ import { CauseForTerm, _decode_CauseForTerm, _encode_CauseForTerm } from "../CSC
  *    causeForTerm           [21] IMPLICIT CauseForTerm,
  *    servedIMEI             [22] IMPLICIT OCTET STRING ( SIZE( 8 ) ) OPTIONAL}
  * ```
- * 
  * @class
  */
 export
 class MTLCSRecord {
     /**
      * @summary `recordType`.
+     * @description
+     *
+     * 2G and 3G mandatory. LCS-MT record.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.20.
+     *
+     * The field identifies the type of the record e.g. mobile originated,
+     * mobile terminated etc.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.72.
+     *
      * @public
      * @readonly
      */
     readonly recordType: RecordType;
     /**
      * @summary `recordingEntity`.
+     * @description
+     *
+     * 2G and 3G mandatory. The E.164 number of the visited MSC producing the
+     * record.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.20.
+     *
+     * This field contains the E.164 [308] number assigned to the entity (MSC,
+     * VLR, HLR etc.) that produced the record. For further details concerning
+     * the structure of MSC and location register numbers see TS 23.003 [200].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.73.
+     *
      * @public
      * @readonly
      */
     readonly recordingEntity: OCTET_STRING;
     /**
      * @summary `lcsClientType`.
+     * @description
+     *
+     * 2G and 3G mandatory. The type of the LCS client that invoked the LR.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.20.
+     *
+     * This field contains the type of the LCS Client as defined in TS 29.002
+     * [214].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.40.
+     *
      * @public
      * @readonly
      */
     readonly lcsClientType: LCSClientType;
     /**
      * @summary `lcsClientIdentity`.
+     * @description
+     *
+     * 2G and 3G mandatory. Further identification of the LCS client .
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.20.
+     *
+     * This field contains further information on the LCS Client identity:
+     * Client External ID; Client Dialled by MS ID; Client Internal ID.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.39.
+     *
      * @public
      * @readonly
      */
     readonly lcsClientIdentity: LCSClientIdentity;
     /**
      * @summary `servedIMSI`.
+     * @description
+     *
+     * 2G and 3G conditional. The IMSI of the subscriber the LR is invoked for,
+     * if available. See NOTE.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.20.
+     *
+     * This fields contains the international mobile subscriber identity (IMSI)
+     * of the served party. The term "served" party is used to describe the
+     * mobile subscriber involved in the transaction recorded e.g. the calling
+     * subscriber in case of an MOC record. The structure of the IMSI is defined
+     * in TS 23.003 [200].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.79.
+     *
      * @public
      * @readonly
      */
     readonly servedIMSI: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `servedMSISDN`.
+     * @description
+     *
+     * 2G and 3G conditional. The MSISDN of the subscriber the LR is invoked
+     * for, if available. See NOTE.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.20.
+     *
+     * This fields contains the mobile station ISDN number (MSISDN) of the
+     * served party. The term "served" party is used to describe the mobile
+     * subscriber involved in the transaction recorded e.g. the called
+     * subscriber in case of an MTC record. In case of multi-numbering the
+     * MSISDN stored in a MOC record will be the primary MSISDN of the calling
+     * party. The structure of the MSISDN is defined in TS 23.003 [200].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.80.
+     *
      * @public
      * @readonly
      */
     readonly servedMSISDN: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `locationType`.
+     * @description
+     *
+     * 2G and 3G mandatory. The type of the location request.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.20.
+     *
+     * This field contains the type of the location as defined in TS 29.002
+     * [214].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.48.
+     *
      * @public
      * @readonly
      */
     readonly locationType: LocationType;
     /**
      * @summary `lcsQos`.
+     * @description
+     *
+     * 2G and 3G conditional. QoS of the LR, if available.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.20.
+     *
+     * This information element defines the Quality of Service for a location
+     * request as defined in TS 49.031 [227].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.42.
+     *
      * @public
      * @readonly
      */
     readonly lcsQos: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `lcsPriority`.
+     * @description
+     *
+     * 2G and 3G conditional. Priority of the LR, if available.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.20.
+     *
+     * This parameter gives the priority of the location request as defined in
+     * TS 49.031 [227]
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.41.
+     *
      * @public
      * @readonly
      */
     readonly lcsPriority: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `mlc_Number`.
+     * @description
+     *
+     * 2G and 3G mandatory. The E.164 address of the requesting GMLC.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.20.
+     *
+     * This parameter refers to the ISDN (E.164[308]) number of an MLC.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.54.
+     *
      * @public
      * @readonly
      */
     readonly mlc_Number: OCTET_STRING;
     /**
      * @summary `eventTimeStamp`.
+     * @description
+     *
+     * 2G and 3G mandatory. The time at which the LR was received by the MSC.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.20.
+     *
+     * These fields contain the event time stamps relevant for each of the
+     * individual record types. The call records may contain three significant
+     * call handling time stamps: the time at which the resource in question was
+     * seized (Seizure time); the time at which the call was answered or at
+     * which charging commences (Answer time); the time at which the resource
+     * was released (Release time). For both Mobile Originated and Mobile
+     * Terminated calls, the Seizure time is the time at which the traffic
+     * channel is allocated i.e. the time at which the ASSIGN COMMAND message is
+     * sent to the MS. For Mobile Originated calls the Answer time is the time
+     * at which the CONNECT message is sent to the calling party. For Mobile
+     * Terminated calls the time at which the CONNECT message is received from
+     * the called party. However, if the subscriber has subscribed to the advice
+     * of charge charging level service, then the answer time shall be derived
+     * from the time at which the FACILITY message is received from the MS
+     * containing the acknowledgement of receipt of the AOC parameters.
+     * Similarly, if the AOC parameters are changed during the call then the
+     * change time recorded for a subscriber with AOC charging level is the
+     * receipt of the FACILITY message from the MS. For a subscriber with AOC
+     * information level the change time recorded is the time at which the
+     * FACILITY is sent to the MS. Finally, in case of call re-establishment the
+     * answer time is the time at which the new traffic channel is allocated by
+     * the MSC i.e. when the ASSIGN COMMAND is sent to the MS.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.24.
+     *
      * @public
      * @readonly
      */
     readonly eventTimeStamp: OCTET_STRING;
     /**
      * @summary `measureDuration`.
+     * @description
+     *
+     * 2G and 3G operator-provisionable mandatory. The duration of proceeding
+     * the location request .
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.20.
+     *
+     * This field contains the duration for the section of the location
+     * measurement corresponding to the location request and the location report
+     * messages.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.52.
+     *
      * @public
      * @readonly
      */
     readonly measureDuration: OPTIONAL<INTEGER>;
     /**
      * @summary `notificationToMSUser`.
+     * @description
+     *
+     * 2G and 3G conditional. The privacy notification to MS user that was
+     * applicable when the LR was invoked, if available.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.20.
+     *
+     * This field contains the privacy notification to MS user that was
+     * applicable when the LR was invoked as defined in TS 29.002 [214].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.60.
+     *
      * @public
      * @readonly
      */
     readonly notificationToMSUser: OPTIONAL<MTLCSRecord_notificationToMSUser>;
     /**
      * @summary `privacyOverride`.
+     * @description
+     *
+     * 2G and 3G conditional. This parameter indicates if MS privacy was
+     * overridden by the LCS client, if available.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.20.
+     *
+     * This parameter indicates if MS privacy is overridden by the LCS client
+     * when the GMLC and VMSC/SGSN for an MTLR are in the same country as
+     * defined in TS 29.002 [214].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.67.
+     *
      * @public
      * @readonly
      */
     readonly privacyOverride: OPTIONAL<NULL>;
     /**
      * @summary `location`.
+     * @description
+     *
+     * 2G operator-provisionable mandatory, 3G not applicable. The LAC and CI
+     * and MCC+MNC when the LR is received.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.20.
+     *
      * @public
      * @readonly
      */
     readonly location: OPTIONAL<LocationAreaAndCell>;
     /**
      * @summary `locationEstimate`.
+     * @description
+     *
+     * 2G and 3G operator-provisionable conditional. The location estimate for
+     * the subscriber if contained in geographic position and the LR was
+     * successful.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.20.
+     *
+     * The Location Estimate field is providing an estimate of a geographic
+     * location of a target MS according to TS 29.002 [214].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.45.
+     *
      * @public
      * @readonly
      */
     readonly locationEstimate: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `positioningData`.
+     * @description
+     *
+     * 2G and 3G conditional. The positioning method used or attempted, if
+     * available.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.20.
+     *
+     * This information element is providing positioning data associated with a
+     * successful or unsuccessful location attempt for a target MS according TS
+     * 49.031 [227].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.65 and clause 5.1.2.1.66.
+     *
      * @public
      * @readonly
      */
     readonly positioningData: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `lcsCause`.
+     * @description
+     *
+     * 2G and 3G operator-provisionable conditional. The result of the LR if any
+     * failure or partial success happened as known at the radio interface.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.20.
+     *
+     * The LCS Cause parameter provides the reason for an unsuccessful location
+     * request according TS 49.031 [227].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.38.
+     *
      * @public
      * @readonly
      */
     readonly lcsCause: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `diagnostics`.
+     * @description
+     *
+     * 2G and 3G conditional. A more detailed information about the Cause for
+     * Termination if any failure or partial success happened.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.20.
+     *
+     * This field includes a more detailed technical reason for the release of
+     * the connection and may contain one of the following: a MAP error from TS
+     * 29.002 [214]; a Cause from TS 24.008 [208]; a Cause from TS 29.078 [217];
+     * a Cause from ITU-T Recommendation Q.767 [309]; a LCS diagnostics
+     * according TS 29.002 [214]. The diagnostics may also be extended to
+     * include manufacturer and network specific information.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.18.
+     *
      * @public
      * @readonly
      */
     readonly diagnostics: OPTIONAL<HLRIntResult>;
     /**
      * @summary `systemType`.
+     * @description
+     *
+     * 2G not applicable, 3G mandatory. This field indicates the use of GERAN or
+     * UTRAN at the time of the LCS request. This field is present when either
+     * the UTRAN or GERAN air-interface is used on call set-up.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.20.
+     *
+     * This field indicates the use of GERAN, UTRAN (or a value of unknown).
+     * This field is present when either the UTRAN or GERAN air-interface is
+     * used on call set-up. For an open CDR in a 2G NE (responsible for the
+     * CDR), the field is not present (even if the call is handed off to a 3G
+     * air interface). For a CDR in a 3G NE (responsible for the CDR), the value
+     * unknown shall be used after handover.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.91.
+     *
      * @public
      * @readonly
      */
     readonly systemType: OPTIONAL<SystemType>;
     /**
      * @summary `recordExtensions`.
+     * @description
+     *
+     * 2G and 3G operator-provisionable conditional. A set of network/
+     * manufacturer specific extensions to the record.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.20.
+     *
+     * The field enables network operators and/ or manufacturers to add their
+     * own extensions to the standard record definitions.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.71.
+     *
      * @public
      * @readonly
      */
     readonly recordExtensions: OPTIONAL<ManagementExtension[]>;
     /**
      * @summary `causeForTerm`.
+     * @description
+     *
+     * 2G and 3G mandatory. The reason for the termination of the location
+     * service.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.20.
+     *
+     * This field contains a generalised reason for the release of the
+     * connection including the following: normal release; CAMEL initiated call
+     * release; partial record generation; partial record call re-establishment;
+     * unsuccessful call attempt; abnormal termination during the stable phase;
+     * unauthorized network originating a location service request; unauthorized
+     * client requesting a location service; position method failure at a
+     * location service execution; unknown or unreachable LCS client at a
+     * location service request. A more detailed reason may be found in the
+     * diagnostics field.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.13.
+     *
      * @public
      * @readonly
      */
     readonly causeForTerm: CauseForTerm;
     /**
      * @summary `servedIMEI`.
+     * @description
+     *
+     * 2G and 3G conditional. The IMEI of the susbcriber the LR is invoked for,
+     * if available. See NOTE.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.20.
+     *
+     * This fields contains the international mobile equipment identity (IMEI)
+     * or IMEISV of the equipment served. The term "served" equipment is used to
+     * describe the ME involved in the transaction recorded e.g. the called ME
+     * in case of an MTC record. The structure of the IMEI, IMEISV is specified
+     * in TS 23.003 [200] and the encoding defined in TS 29.274 [223].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.78.
+     *
      * @public
      * @readonly
      */
@@ -290,7 +617,7 @@ class MTLCSRecord {
     /**
      * @summary Restructures an object into a MTLCSRecord
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `MTLCSRecord`.
      * 
      * @public
@@ -327,9 +654,9 @@ class MTLCSRecord {
 /**
  * @summary The Leading Root Component Types of MTLCSRecord
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -362,9 +689,9 @@ const _root_component_type_list_1_spec_for_MTLCSRecord: $.ComponentSpec[] = [
 /**
  * @summary The Trailing Root Component Types of MTLCSRecord
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -375,9 +702,9 @@ const _root_component_type_list_2_spec_for_MTLCSRecord: $.ComponentSpec[] = [
 /**
  * @summary The Extension Addition Component Types of MTLCSRecord
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * @constant
  */
 export

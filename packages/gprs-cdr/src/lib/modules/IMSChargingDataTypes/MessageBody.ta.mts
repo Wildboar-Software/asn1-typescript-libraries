@@ -13,7 +13,27 @@ import { InvolvedParty, _decode_InvolvedParty, _encode_InvolvedParty } from "../
 /**
  * @summary MessageBody
  * @description
- * 
+ *
+ * One body conveyed end to end in SIP (clause 6.3.1.2). Several bodies may
+ * be present. A body with Content-Type application/sdp and
+ * Content-Disposition session is session SDP and is recorded in the SDP
+ * media components instead.
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 6.3.1.2.
+ *
+ * This grouped field comprising several sub-fields describing the data that
+ * may be conveyed end-to-end in the body of a SIP MESSAGE. Since several
+ * message bodies may be exchanged via SIP-signalling, this grouped field may
+ * occur several times. The List of Message Bodies contains the following
+ * elements: Content Type; Content Disposition; Content Length; Originator.
+ * They are described in the appropriate subclause. Message bodies with the
+ * "Content-Type" field set to application/sdp and the "Content-Disposition"
+ * field set to session are not included in the "Message Bodies" field.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.27.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,24 +50,50 @@ export
 class MessageBody {
     /**
      * @summary `content_Type`.
+     * @description
+     *
+     * MIME type of the body, for example application/zip, image/gif, or
+     * audio/mpeg (clause 6.1.3.3). Bodies with Content-Type application/sdp
+     * and Content-Disposition session are SDP and are not repeated here. 3GPP
+     * TS 32.260 V20.1.0.
+     *
      * @public
      * @readonly
      */
     readonly content_Type: GraphicString;
     /**
      * @summary `content_Disposition`.
+     * @description
+     *
+     * Content-Disposition of the body. The value render means the body should
+     * be displayed or otherwise rendered to the user. Other values include
+     * session, inline, icon, alert, and attachment (clause 6.1.3.9).
+     *
      * @public
      * @readonly
      */
     readonly content_Disposition: OPTIONAL<GraphicString>;
     /**
      * @summary `content_Length`.
+     * @description
+     *
+     * Size of the message body in bytes (clause 6.1.3.3).
+     *
      * @public
      * @readonly
      */
     readonly content_Length: INTEGER;
     /**
      * @summary `originator`.
+     * @description
+     *
+     * This sub-field of the "List of Message Bodies" indicates the originating
+     * party of the message body.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.35.
+     *
+     * 3GPP TS 32.260 V20.1.0 clause 6.3.1.2.
+     *
      * @public
      * @readonly
      */

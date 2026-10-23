@@ -6,7 +6,16 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ServingNodeType
  * @description
- * 
+ *
+ * These fields contain one or several serving node types in control plane of
+ * S-GW or P-GW, which have been connected during the record. The serving
+ * node types listed here map to the serving node addresses listed in the
+ * field "Serving node Address" in sequence. For Originated and Terminated
+ * SMS CDRs, this field contains the Node Type which generates the CDRs, i.e.
+ * SGSN or MME.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.68.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,7 +45,16 @@ enum _enum_for_ServingNodeType {
 /**
  * @summary ServingNodeType
  * @description
- * 
+ *
+ * These fields contain one or several serving node types in control plane of
+ * S-GW or P-GW, which have been connected during the record. The serving
+ * node types listed here map to the serving node addresses listed in the
+ * field "Serving node Address" in sequence. For Originated and Terminated
+ * SMS CDRs, this field contains the Node Type which generates the CDRs, i.e.
+ * SGSN or MME.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.68.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -58,7 +76,16 @@ type ServingNodeType = _enum_for_ServingNodeType;
 /**
  * @summary ServingNodeType
  * @description
- * 
+ *
+ * These fields contain one or several serving node types in control plane of
+ * S-GW or P-GW, which have been connected during the record. The serving
+ * node types listed here map to the serving node addresses listed in the
+ * field "Serving node Address" in sequence. For Originated and Terminated
+ * SMS CDRs, this field contains the Node Type which generates the CDRs, i.e.
+ * SGSN or MME.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.68.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

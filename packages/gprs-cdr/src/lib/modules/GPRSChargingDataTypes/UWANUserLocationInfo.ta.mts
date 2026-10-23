@@ -14,7 +14,16 @@ import { WLANOperatorId, _decode_WLANOperatorId, _encode_WLANOperatorId } from "
 /**
  * @summary UWANUserLocationInfo
  * @description
- * 
+ *
+ * This field contains the UE location in an Untrusted Wireless Access
+ * Network (UWAN) which includes the UE local IP address and optionally
+ * either UDP source port number (if NAT is detected) or TCP source port
+ * number. It may also include WLAN location information the ePDG may have
+ * received from the 3GPP AAA server about the UE, as TWAN Identifier defined
+ * in TS 29.274 [223].
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.77.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

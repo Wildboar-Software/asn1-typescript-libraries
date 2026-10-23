@@ -11,7 +11,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CAMELAccessPointNameOI
  * @description
- * 
+ *
+ * CAMEL Access Point Name OI (S-CDR): This field contains the operator
+ * identifier part of APN before modification by the CSE.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

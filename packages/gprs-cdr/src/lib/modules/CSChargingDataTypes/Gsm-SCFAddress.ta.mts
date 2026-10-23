@@ -11,7 +11,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Gsm_SCFAddress
  * @description
- * 
+ *
+ * This field identifies the CAMEL server serving the subscriber. Address is
+ * defined in HLR as part of CAMEL subscription information.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.28.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -9,7 +9,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ChangeOfProSeCondition_serviceChangeCondition
  * @description
- * 
+ *
+ * ProSe-specific reason this transmission or reception data container was
+ * closed. Same bits as `ServiceChangeCondition`. Table 6.1.3.4.2 gives a cell
+ * change, going out of coverage, and coming back to coverage as examples.
+ *
+ * 3GPP TS 32.277 V19.2.0 table 6.1.3.4.2 and clause 6.3.1.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,6 +31,13 @@ type ChangeOfProSeCondition_serviceChangeCondition = BIT_STRING;
 
 /**
  * @summary ChangeOfProSeCondition_serviceChangeCondition_pLMNchange
+ * @description
+ *
+ * PLMN change. Table 6.1.3.4.2's examples of a container closure do not name a
+ * PLMN change; this bit is the ASN.1 name for that condition.
+ *
+ * 3GPP TS 32.277 V19.2.0 table 6.1.3.4.2.
+ *
  * @constant
  */
 export
@@ -32,6 +45,11 @@ const ChangeOfProSeCondition_serviceChangeCondition_pLMNchange: number = 0; /* L
 
 /**
  * @summary pLMNchange
+ * @description
+ *
+ * PLMN change. Table 6.1.3.4.2's examples of a container closure do not name a
+ * PLMN change; this bit is the ASN.1 name for that condition.
+ *
  * @constant
  */
 export
@@ -39,6 +57,13 @@ const pLMNchange: number = ChangeOfProSeCondition_serviceChangeCondition_pLMNcha
 
 /**
  * @summary ChangeOfProSeCondition_serviceChangeCondition_coverageStatusChange
+ * @description
+ *
+ * The UE's E-UTRAN coverage status changed. Table 6.1.3.4.2 gives going out of
+ * coverage and coming back to coverage as reasons for closing the container.
+ *
+ * 3GPP TS 32.277 V19.2.0 table 6.1.3.4.2.
+ *
  * @constant
  */
 export
@@ -46,6 +71,11 @@ const ChangeOfProSeCondition_serviceChangeCondition_coverageStatusChange: number
 
 /**
  * @summary coverageStatusChange
+ * @description
+ *
+ * The UE's E-UTRAN coverage status changed. Table 6.1.3.4.2 gives going out of
+ * coverage and coming back to coverage as reasons for closing the container.
+ *
  * @constant
  */
 export
@@ -53,6 +83,13 @@ const coverageStatusChange: number = ChangeOfProSeCondition_serviceChangeConditi
 
 /**
  * @summary ChangeOfProSeCondition_serviceChangeCondition_locationChange
+ * @description
+ *
+ * The UE's location changed. Table 6.1.3.4.2 gives a cell change as a reason
+ * for closing the container.
+ *
+ * 3GPP TS 32.277 V19.2.0 table 6.1.3.4.2.
+ *
  * @constant
  */
 export
@@ -60,6 +97,11 @@ const ChangeOfProSeCondition_serviceChangeCondition_locationChange: number = 2; 
 
 /**
  * @summary locationChange
+ * @description
+ *
+ * The UE's location changed. Table 6.1.3.4.2 gives a cell change as a reason
+ * for closing the container.
+ *
  * @constant
  */
 export

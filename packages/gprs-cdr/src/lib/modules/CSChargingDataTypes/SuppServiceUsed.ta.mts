@@ -13,7 +13,19 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SuppServiceUsed
  * @description
- * 
+ *
+ * One supplementary service invoked as a result of the connection. The list
+ * is present when one or more supplementary services were invoked.
+ * Call-related invocation may be recorded here, in an `SSActionRecord`, or
+ * in both, as the billing domain configures (clause 5.1.3.3).
+ *
+ * On a multi-party call, each MOC or MTC of the conference originator
+ * includes the multi-party service code. Call hold may be recorded here as
+ * well. The time the call is held is not recorded (clause 5.1.3.5). TS
+ * 32.250 does not define the coding of `ssCode`.
+ *
+ * 3GPP TS 32.250 V19.0.0 clauses 5.1.3.3, 5.1.3.5, and 6.1.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +40,25 @@ export
 class SuppServiceUsed {
     /**
      * @summary `ssCode`.
+     * @description
+     *
+     * Supplementary service invoked for this connection. TS 32.250 does not
+     * define the octet coding. On a conference, the originator's call records
+     * include the multi-party service code. 3GPP TS 32.250 V19.0.0 clauses
+     * 5.1.3.5 and 6.1.3.1.
+     *
      * @public
      * @readonly
      */
     readonly ssCode: OCTET_STRING;
     /**
      * @summary `ssTime`.
+     * @description
+     *
+     * Time associated with this supplementary-service invocation. TS 32.250
+     * does not say when the timestamp is omitted. Call-hold duration is not
+     * recorded. 3GPP TS 32.250 V19.0.0 clause 5.1.3.5.
+     *
      * @public
      * @readonly
      */
@@ -57,7 +82,7 @@ class SuppServiceUsed {
     /**
      * @summary Restructures an object into a SuppServiceUsed
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `SuppServiceUsed`.
      * 
      * @public
@@ -76,9 +101,9 @@ class SuppServiceUsed {
 /**
  * @summary The Leading Root Component Types of SuppServiceUsed
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -90,9 +115,9 @@ const _root_component_type_list_1_spec_for_SuppServiceUsed: $.ComponentSpec[] = 
 /**
  * @summary The Trailing Root Component Types of SuppServiceUsed
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -103,9 +128,9 @@ const _root_component_type_list_2_spec_for_SuppServiceUsed: $.ComponentSpec[] = 
 /**
  * @summary The Extension Addition Component Types of SuppServiceUsed
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * @constant
  */
 export

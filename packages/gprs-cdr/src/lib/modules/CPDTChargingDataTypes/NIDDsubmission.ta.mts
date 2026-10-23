@@ -14,7 +14,22 @@ import { _decode_NIDDsubmission_serviceChangeCondition, _encode_NIDDsubmission_s
 /**
  * @summary NIDDsubmission
  * @description
- * 
+ *
+ * One Non-IP Data Delivery (NIDD) submission charged against a PDN
+ * connection. These containers form `listOfNIDDsubmission` in a
+ * CPDT-SCE-CDR or CPDT-SNN-CDR. Each container is time stamped and
+ * holds the octets submitted, the result, and why the container was
+ * added.
+ *
+ * The SCEF adds a container on NIDD submit-response receipt, on NIDD
+ * submit-response sending, or on submission timeout. The IWK-SCEF adds
+ * one on response receipt or response sending. The MME adds one on
+ * response receipt, delivery to the UE, submission timeout, or an error
+ * on delivery from the UE. All fields are optional in table 6.1.3.4.1.
+ *
+ * 3GPP TS 32.253 V19.0.0 clauses 5.2.3.2.2, 5.2.3.3.2, and 5.2.3.4.2,
+ * and clause 6.1.3.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,36 +53,91 @@ export
 class NIDDsubmission {
     /**
      * @summary `submissionTimestamp`.
+     * @description
+     *
+     * Time stamp when the NIDD submission was submitted to the CPCN.
+     * TS 32.253 does not define the nine-octet layout. Table 6.4.1
+     * binds this field to the Submission-Timestamp AVP.
+     *
+     * 3GPP TS 32.253 V19.0.0 table 6.1.3.4.1 and table 6.4.1.
+     *
      * @public
      * @readonly
      */
     readonly submissionTimestamp: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `eventTimestamp`.
+     * @description
+     *
+     * Time stamp of the event that caused the CPCN to generate charging
+     * information for this NIDD submission. TS 32.253 does not define
+     * the nine-octet layout. Table 6.4.1 binds this field to the
+     * Event-Timestamp AVP.
+     *
+     * 3GPP TS 32.253 V19.0.0 table 6.1.3.4.1 and table 6.4.1.
+     *
      * @public
      * @readonly
      */
     readonly eventTimestamp: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `dataVolumeGPRSUplink`.
+     * @description
+     *
+     * Number of octets transmitted during this NIDD submission in the
+     * uplink direction. Clause 5.1 requires the MO and MT volumes per
+     * NIDD submission. Table 6.4.1 binds uplink volume to the
+     * Accounting-Output-Octets AVP.
+     *
+     * 3GPP TS 32.253 V19.0.0 clause 5.1, table 6.1.3.4.1, and
+     * table 6.4.1.
+     *
      * @public
      * @readonly
      */
     readonly dataVolumeGPRSUplink: OPTIONAL<INTEGER>;
     /**
      * @summary `dataVolumeGPRSDownlink`.
+     * @description
+     *
+     * Number of octets transmitted during this NIDD submission in the
+     * downlink direction. Table 6.4.1 binds downlink volume to the
+     * Accounting-Input-Octets AVP.
+     *
+     * 3GPP TS 32.253 V19.0.0 table 6.1.3.4.1 and table 6.4.1.
+     *
      * @public
      * @readonly
      */
     readonly dataVolumeGPRSDownlink: OPTIONAL<INTEGER>;
     /**
      * @summary `submissionResultCode`.
+     * @description
+     *
+     * Result of the NIDD submission. TS 32.253 does not define the
+     * integer values. Table 6.4.1 binds this field to the Result-Code
+     * AVP. See `SubmissionResultCode`.
+     *
+     * 3GPP TS 32.253 V19.0.0 table 6.1.3.4.1 and table 6.4.1.
+     *
      * @public
      * @readonly
      */
     readonly submissionResultCode: OPTIONAL<INTEGER>;
     /**
      * @summary `serviceChangeCondition`.
+     * @description
+     *
+     * Why this container was added: NIDD submit-response receipt,
+     * submit-response sending, delivery to the UE, delivery from the UE
+     * error, or submission timeout. Which of those a node records
+     * depends on the CPCN. See `ServiceChangeCondition`. Table 6.4.1
+     * binds this field to the Change-Condition AVP of the NIDD
+     * submission, which is separate from the Change-Condition that
+     * closes the CDR.
+     *
+     * 3GPP TS 32.253 V19.0.0 table 6.1.3.4.1 and table 6.4.1.
+     *
      * @public
      * @readonly
      */

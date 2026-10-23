@@ -24,7 +24,36 @@ import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExt
 /**
  * @summary EASCERecord
  * @description
- * 
+ *
+ * Exposure function API CDR (EA-SCE-CDR) from the SCEF. It
+ * collects offline charging information for one northbound API
+ * invocation or notification on T8.
+ *
+ * A single record is generated for each such event (clause
+ * 5.2.3.2.1). Table 6.1.3.2.1 states that an exposure function
+ * API record shall be produced for each API invocation to the
+ * SCEF. Clause 5.2.1 also makes expiry of an operator-configured
+ * time limit, expiry of an operator-configured invocation limit,
+ * and management intervention chargeable events.
+ *
+ * The report to the CDF is Charging Data Request[Event]. Table
+ * 6.3.2.1 allows only the Event operation type. T8 creation,
+ * update and termination are separate events (table 5.2.2.1.1).
+ *
+ * Annex A allows charging characteristics, pre-provisioned on
+ * the SCEF, to activate or deactivate this CDR and to set a time
+ * limit, a data volume limit and a maximum number of API
+ * invocations. Per API, the operator also configures the
+ * charging method and whether message content is reported.
+ *
+ * `startTime` and `stopTime` are in this SET. Table 6.1.3.2.1
+ * and TS 32.298 clause 5.1.2.5 do not describe them.
+ *
+ * 3GPP TS 32.254 V20.0.0 clauses 5.2.1, 5.2.2.1, 5.2.3.2,
+ * 6.1.3.2 and 6.3.2, and annex A.
+ *
+ * @see https://www.3gpp.org/DynaReport/32254.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -59,126 +88,368 @@ export
 class EASCERecord {
     /**
      * @summary `recordType`.
+     * @description
+     *
+     * Category M. SCEF exposure function API record. Set this to
+     * `eASCERecord` (120).
+     *
+     * On Rf, Record Type is bound to Node Functionality
+     * (Node-Functionality), which identifies the type of record
+     * (tables 6.3.1.1.1 and 6.4.1).
+     *
+     * 3GPP TS 32.254 V20.0.0 table 6.1.3.2.1 and clause 6.4.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.5.14.
+     *
      * @public
      * @readonly
      */
     readonly recordType: RecordType;
     /**
      * @summary `retransmission`.
+     * @description
+     *
+     * Category Oc. Present when information from retransmitted
+     * Accounting Requests has been used in this CDR. The value is
+     * NULL. TS 32.298 describes those requests as Diameter ACRs.
+     *
+     * 3GPP TS 32.254 V20.0.0 table 6.1.3.2.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.5.15.
+     *
      * @public
      * @readonly
      */
     readonly retransmission: OPTIONAL<NULL>;
     /**
      * @summary `serviceContextID`.
+     * @description
+     *
+     * Category OM. Indicates that the CDR applies to the exposure
+     * function API service. Bound to Service-Context-Id
+     * (table 6.4.1).
+     *
+     * When Diameter accounting supplied the value, it is the
+     * Service Context Id: the service, subsystem or domain, and
+     * the release. The AVP contents are specified in TS 32.299.
+     *
+     * On the Charging Data Request, Operation Token (category OM)
+     * identifies the Exposure Function API domain service. Table
+     * 6.4.1 does not map Operation Token onto this field. It
+     * binds Service Context Id to Service-Context-Id.
+     *
+     * 3GPP TS 32.254 V20.0.0 clauses 6.1.1.2 and 6.1.3.2 and
+     * table 6.4.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.1.2.
+     *
      * @public
      * @readonly
      */
     readonly serviceContextID: OPTIONAL<UTF8String>;
     /**
      * @summary `nodeId`.
+     * @description
+     *
+     * Category OMM, as printed in table 6.1.3.2.1. Name of the
+     * recording entity. One to 20 IA5 characters. This
+     * specification does not define the category OMM.
+     *
+     * 3GPP TS 32.254 V20.0.0 table 6.1.3.2.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.5.12.
+     *
      * @public
      * @readonly
      */
     readonly nodeId: OPTIONAL<IA5String>;
     /**
      * @summary `sCEFID`.
+     * @description
+     *
+     * Category M. Identity of the SCEF used for this API
+     * invocation. The parameter definition calls it the Diameter
+     * identity of that SCEF. In the Exposure Function API
+     * Information the same element is category Oc. Bound to the
+     * SCEF-ID AVP (table 6.4.1).
+     *
+     * TS 32.254 does not specify how that identity is packed into
+     * this octet string.
+     *
+     * 3GPP TS 32.254 V20.0.0 tables 6.1.3.2.1, 6.3.1.2.1 and 6.4.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.5.17.
+     *
      * @public
      * @readonly
      */
     readonly sCEFID: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `sCEFAddress`.
+     * @description
+     *
+     * Category Oc. IP address of the SCEF. A charging event
+     * reported to the CDF includes this address (clause 5.2.2.1).
+     * Bound to the SCEF-Address AVP (table 6.4.1).
+     *
+     * 3GPP TS 32.254 V20.0.0 clause 5.2.2.1 and table 6.1.3.2.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.5.16.
+     *
      * @public
      * @readonly
      */
     readonly sCEFAddress: OPTIONAL<IPAddress>;
     /**
      * @summary `aPIIdentifier`.
+     * @description
+     *
+     * Category M. Identity of the API for this invocation. In the
+     * Exposure Function API Information the same element is
+     * category OM. Bound to the API-Identifier AVP (table 6.4.1).
+     *
+     * Charging behaviour, including whether message content is
+     * reported, is configured per API (annex A). TS 32.254 does
+     * not specify the octet contents of the identifier.
+     *
+     * 3GPP TS 32.254 V20.0.0 tables 6.1.3.2.1, 6.3.1.2.1 and 6.4.1,
+     * and annex A.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.5.4.
+     *
      * @public
      * @readonly
      */
     readonly aPIIdentifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `tLTRI`.
+     * @description
+     *
+     * Category Oc. T8 Long Term Transaction Reference ID. It
+     * identifies the T8 transaction between the SCEF and the
+     * SCS/AS, and both store it for the duration of the
+     * transaction (clause 5.2.1).
+     *
+     * The information element is the reference for a long-term T8
+     * transaction, for example NIDD configuration, a group
+     * message request, or Monitoring Event configuration. Bound
+     * to the TLTRI AVP (table 6.4.1).
+     *
+     * 3GPP TS 32.254 V20.0.0 clauses 5.2.1 and 6.3.1.2 and
+     * table 6.1.3.2.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.5.19.
+     *
      * @public
      * @readonly
      */
     readonly tLTRI: OPTIONAL<INTEGER>;
     /**
      * @summary `sCSASAddress`.
+     * @description
+     *
+     * Category M. Address of the SCS/AS. The CDR table describes
+     * it as the IP address of the SCS/AS. The information element
+     * (category OM) is the IP address of the SCS/AS that invokes
+     * the API over T8. Bound to the SCS/AS-Address AVP
+     * (table 6.4.1).
+     *
+     * `SCSASAddress` also carries `sCSRealm`. TS 32.254 and
+     * TS 32.298 clause 5.1.2.5.18 describe the IP address only.
+     *
+     * The SCS Identifier identifies the subscriber (clause 5.2.1
+     * and table 6.3.1.1.1). This field is the SCS/AS address.
+     *
+     * 3GPP TS 32.254 V20.0.0 clauses 5.2.1 and 6.3.1.2 and
+     * tables 6.1.3.2.1 and 6.4.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.5.18.
+     *
      * @public
      * @readonly
      */
     readonly sCSASAddress: OPTIONAL<SCSASAddress>;
     /**
      * @summary `eventTimestamp`.
+     * @description
+     *
+     * Category M. Time stamp of the event reported for generation
+     * of charging information from the SCEF for the northbound
+     * exposure function API. Clause 5.1.0 requires a timestamp of
+     * the invocation or notification. Bound to Event-Timestamp
+     * (table 6.4.1).
+     *
+     * The value is nine octets. TS 32.254 does not define the
+     * octet layout.
+     *
+     * 3GPP TS 32.254 V20.0.0 clauses 5.1.0 and 6.1.3.2 and
+     * table 6.4.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.5.9.
+     *
      * @public
      * @readonly
      */
     readonly eventTimestamp: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `aPIInvocationTimestamp`.
+     * @description
+     *
+     * Time stamp when the API invocation request is submitted to
+     * the SCEF from the SCS/AS. The category cell in table
+     * 6.1.3.2.1 is empty. The information element is category Oc.
+     * Bound to API-Invocation-Timestamp (table 6.4.1).
+     *
+     * The value is nine octets. TS 32.254 does not define the
+     * octet layout.
+     *
+     * 3GPP TS 32.254 V20.0.0 tables 6.1.3.2.1, 6.3.1.2.1 and 6.4.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.5.5.
+     *
      * @public
      * @readonly
      */
     readonly aPIInvocationTimestamp: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `aPIDirection`.
+     * @description
+     *
+     * Category Oc. Invocation or notification. See `APIDirection`.
+     * Bound to API-Direction (table 6.4.1).
+     *
+     * 3GPP TS 32.254 V20.0.0 table 6.1.3.2.1 and clause 6.3.1.2.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.5.3.
+     *
      * @public
      * @readonly
      */
     readonly aPIDirection: OPTIONAL<APIDirection>;
     /**
      * @summary `aPINetworkServiceNode`.
+     * @description
+     *
+     * Category Oc. Network element that triggers the API
+     * notification, as defined in TS 23.682. The table gives SGSN
+     * and RCAF as examples. See `APINetworkServiceNode`. Bound to
+     * API-Network-Service-Node (table 6.4.1).
+     *
+     * 3GPP TS 32.254 V20.0.0 table 6.1.3.2.1 and clause 6.3.1.2.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.5.6.
+     *
      * @public
      * @readonly
      */
     readonly aPINetworkServiceNode: OPTIONAL<APINetworkServiceNode>;
     /**
      * @summary `aPIContent`.
+     * @description
+     *
+     * Category Oc. API content used in the T8 transaction for the
+     * invocation request, if available. The table gives location
+     * and Monitoring Type as examples. Clause 5.1.0 requires
+     * northbound API related information, for example location,
+     * to be collected.
+     *
+     * Whether message content is reported is part of the per-API
+     * charging configuration (annex A). Bound to API-Content
+     * (table 6.4.1). TS 32.254 does not define the string format.
+     *
+     * 3GPP TS 32.254 V20.0.0 clauses 5.1.0 and 6.1.3.2,
+     * table 6.4.1 and annex A.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.5.2.
+     *
      * @public
      * @readonly
      */
     readonly aPIContent: OPTIONAL<UTF8String>;
     /**
      * @summary `aPISize`.
+     * @description
+     *
+     * Category Oc. Size of the API payload. Bound to API-Size
+     * (table 6.4.1). TS 32.254 does not state the unit.
+     *
+     * 3GPP TS 32.254 V20.0.0 table 6.1.3.2.1 and table 6.4.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.5.8.
+     *
      * @public
      * @readonly
      */
     readonly aPISize: OPTIONAL<INTEGER>;
     /**
      * @summary `aPIresultCode`.
+     * @description
+     *
+     * Category Oc. Result of the API invocation. Bound to
+     * API-Result-Code (table 6.4.1). TS 32.254 does not define
+     * the code values.
+     *
+     * 3GPP TS 32.254 V20.0.0 table 6.1.3.2.1 and table 6.4.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.5.7.
+     *
      * @public
      * @readonly
      */
     readonly aPIresultCode: OPTIONAL<INTEGER>;
     /**
      * @summary `externalIdentifier`.
+     * @description
+     *
+     * Category Oc. External identifier of the served party
+     * associated to the IMSI, the MSISDN, or an External Group
+     * ID, if available. This is the served party. The API invoker
+     * is identified by the SCS Identifier (clause 5.2.1). Bound
+     * to External-Identifier (table 6.4.1).
+     *
+     * The value is a `SubscriptionID`. TS 32.254 does not say
+     * which `subscriptionIDType` corresponds to the MSISDN, the
+     * IMSI, or the External Group ID.
+     *
+     * 3GPP TS 32.254 V20.0.0 table 6.1.3.2.1, clause 6.3.1.2 and
+     * table 6.4.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.5.10.
+     *
      * @public
      * @readonly
      */
     readonly externalIdentifier: OPTIONAL<SubscriptionID>;
     /**
      * @summary `localRecordSequenceNumber`.
+     * @description
+     *
+     * Category OM. Consecutive record number created by this
+     * node. The number is allocated sequentially across all CDR
+     * types. The range is 0 to 4294967295.
+     *
+     * 3GPP TS 32.254 V20.0.0 table 6.1.3.2.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.5.11.
+     *
      * @public
      * @readonly
      */
     readonly localRecordSequenceNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `recordExtensions`.
+     * @description
+     *
+     * Category Oc. Network operator or manufacturer specific
+     * extensions. Present when an extension exists.
+     *
+     * 3GPP TS 32.254 V20.0.0 table 6.1.3.2.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.5.13.
+     *
      * @public
      * @readonly
      */
     readonly recordExtensions: OPTIONAL<ManagementExtension[]>;
     /**
      * @summary `startTime`.
+     * @description
+     *
+     * Nine-octet timestamp included in this SET. Table 6.1.3.2.1
+     * and TS 32.298 clause 5.1.2.5 do not describe it.
+     *
      * @public
      * @readonly
      */
     readonly startTime: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `stopTime`.
+     * @description
+     *
+     * Nine-octet timestamp included in this SET. Table 6.1.3.2.1
+     * and TS 32.298 clause 5.1.2.5 do not describe it.
+     *
      * @public
      * @readonly
      */

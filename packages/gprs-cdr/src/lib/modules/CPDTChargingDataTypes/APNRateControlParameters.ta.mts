@@ -13,7 +13,15 @@ import { APNRateControlParameters_rateControlTimeUnit, _decode_APNRateControlPar
 /**
  * @summary APNRateControlParameters
  * @description
- * 
+ *
+ * Uplink or downlink parameter set inside `APNRateControl`. TS 32.253
+ * requires the SCEF CDR to record the APN Rate Control enforced for
+ * the PDN connection, and does not define these components. TS 32.298
+ * specifies the structure by reference to TS 29.128.
+ *
+ * 3GPP TS 32.253 V19.0.0 table 6.1.3.2.1.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

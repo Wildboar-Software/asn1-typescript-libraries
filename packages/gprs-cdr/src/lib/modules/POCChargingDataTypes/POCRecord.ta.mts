@@ -11,7 +11,41 @@ import { CPFRecord, _decode_CPFRecord, _encode_CPFRecord } from "../POCChargingD
 /**
  * @summary POCRecord
  * @description
- * 
+ *
+ * PoC CDR on the Bt interface. `pPFRecord` is the participating
+ * PoC function CDR; `cPFRecord` is the controlling PoC function
+ * CDR. The PoC Server generates both and the CDF transfers them
+ * to the billing domain.
+ *
+ * There is one controlling PoC function in a session, and one or
+ * more participating PoC functions. Online charging treats the
+ * two roles as independent reports. A PoC Server may perform
+ * both roles at once; the role is chosen at session set-up and
+ * lasts for the session. For a 1-1 or ad-hoc session the inviting
+ * user's server is controlling. For a chat or pre-arranged group,
+ * the server that hosts the group identity is controlling.
+ *
+ * Session CDRs (1-1 and 1-to-many group sessions) are opened on
+ * Charging Data Request [start], may be partial on [interim], and
+ * are closed on [stop]. An unsuccessful session set-up may be
+ * reported with [event]. Each session-unrelated procedure
+ * (clause 5.1.2) produces one CDR from one [event]; partial CDRs
+ * are not used for those.
+ *
+ * Charging is service-based. The charged party is the session
+ * owner, a participant, or both. The owner is metered by the
+ * controlling function and need not be in the session. A
+ * participant is metered by the participating function. Usage is
+ * reported separately for session participation (time, independent
+ * of talk bursts), talk bursts sent, and talk bursts received.
+ * Offline, the PoC Server's configuration decides who is charged;
+ * online, the OCS decides. Talk-burst usage in the CDR is duration,
+ * volume, and count; the billing domain rates them.
+ *
+ * 3GPP TS 32.272 V19.0.0 clauses 4.1.1.2, 4.3, 5.1.1, 5.2.1,
+ * 5.2.3, 6.1.3.2, and 6.1.3.3.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.3.0.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

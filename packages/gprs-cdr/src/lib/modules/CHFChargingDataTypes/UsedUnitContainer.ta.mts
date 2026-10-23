@@ -17,7 +17,12 @@ import { PDUContainerInformation, _decode_PDUContainerInformation, _encode_PDUCo
 /**
  * @summary UsedUnitContainer
  * @description
- * 
+ *
+ * This list applicable in CHF-CDR includes one or more containers. Each
+ * container includes the following fields:
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.5.1.14.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,24 +49,51 @@ export
 class UsedUnitContainer {
     /**
      * @summary `serviceIdentifier`.
+     * @description
+     *
+     * This field holds the Service Identifier.
+     *
+     * 3GPP TS 32.298 V20.1.0 table 5.1.5.0.1.
+     *
      * @public
      * @readonly
      */
     readonly serviceIdentifier: OPTIONAL<INTEGER>;
     /**
      * @summary `time`.
+     * @description
+     *
+     * Time includes the duration of a time based service.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.5.1.14.
+     *
      * @public
      * @readonly
      */
     readonly time: OPTIONAL<INTEGER>;
     /**
      * @summary `triggers`.
+     * @description
+     *
+     * Triggers includes the reason for charging information reporting or closing
+     * for the used unit container, the 5G data connectivity specific triggers
+     * are described in TS 32.255 [15].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.5.1.14.
+     *
      * @public
      * @readonly
      */
     readonly triggers: Trigger[];
     /**
      * @summary `triggerTimeStamp`.
+     * @description
+     *
+     * Trigger Time Stamp is the date and time of the charging information
+     * reporting or closing for the used unit container.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.5.1.14.
+     *
      * @public
      * @readonly
      */
@@ -86,36 +118,79 @@ class UsedUnitContainer {
     readonly dataVolumeDownlink: OPTIONAL<INTEGER>;
     /**
      * @summary `serviceSpecificUnits`.
+     * @description
+     *
+     * Service Specific Units includes the number of units, specific for the
+     * service, used during the service.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.5.1.14.
+     *
      * @public
      * @readonly
      */
     readonly serviceSpecificUnits: OPTIONAL<INTEGER>;
     /**
      * @summary `eventTimeStamp`.
+     * @description
+     *
+     * Event Time Stamp defines the moment when the event was reported in the
+     * Service Specific Units when event based charging applies.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.5.1.14.
+     *
      * @public
      * @readonly
      */
     readonly eventTimeStamp: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `localSequenceNumber`.
+     * @description
+     *
+     * Local Sequence Number is the sequence number for the used unit containers,
+     * i.e. the order in which charging information was reported or used unit
+     * container was closed.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.5.1.14.
+     *
      * @public
      * @readonly
      */
     readonly localSequenceNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `ratingIndicator`.
+     * @description
+     *
+     * Rating Indicator indicates if the units have been rated or not.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.5.1.14.
+     *
      * @public
      * @readonly
      */
     readonly ratingIndicator: OPTIONAL<BOOLEAN>;
     /**
      * @summary `pDUContainerInformation`.
+     * @description
+     *
+     * PDU Container Information is the 5G data connectivity specific information
+     * described in TS 32.255 [15].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.5.1.14.
+     *
      * @public
      * @readonly
      */
     readonly pDUContainerInformation: OPTIONAL<PDUContainerInformation>;
     /**
      * @summary `quotaManagementIndicator`.
+     * @description
+     *
+     * Quota management Indicator holds an indicator on whether the reported used
+     * units are with or without quota management control. If the field is not
+     * present, it indicates the used unit is without quota management applied.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.5.1.14.
+     *
      * @public
      * @readonly
      */

@@ -22,7 +22,26 @@ enum _enum_for_PositionMethodFailure_Diagnostic {
 /**
  * @summary PositionMethodFailure_Diagnostic
  * @description
- * 
+ *
+ * Detailed cause of a position-method failure, carried as the
+ * `positionMethodFailureCause` alternative of `Diagnostics`.
+ * TS 32.271 does not define this enumeration. Clause 4.1 notes
+ * that the MSC and the SGSN also take part in LCS charging, and
+ * that this is described in TS 32.250 and TS 32.251.
+ *
+ * A positioning method estimates the target mobile's geographical
+ * location. Clause 3.1 cites radio cell coverage, GPS and Assisted
+ * GPS (time of arrival), and OTDOA or E-OTD (time difference of
+ * arrival), and points to TS 25.305 and TS 43.059.
+ *
+ * The GMLC records the method used or attempted as Positioning
+ * Data on the LCS-GMO-CDR (category C). In online LCS Information,
+ * Positioning Data (category Oc) is the method attempted for an
+ * MO-LR, if available. A location-service failure on the
+ * LCS-GMO-CDR is User Error (category C).
+ *
+ * 3GPP TS 32.271 V12.1.0 clauses 3.1, 4.1, 6.1.3.1, and 6.3.1.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

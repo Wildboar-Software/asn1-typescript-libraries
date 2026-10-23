@@ -14,7 +14,12 @@ import { RoamingChargingProfile, _decode_RoamingChargingProfile, _encode_Roaming
 /**
  * @summary RoamingQBCInformation
  * @description
- * 
+ *
+ * This field holds the roaming 5G data connectivity specific information
+ * described in TS 32.255 [15]
+ *
+ * 3GPP TS 32.298 V20.1.0 table 5.1.5.0.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

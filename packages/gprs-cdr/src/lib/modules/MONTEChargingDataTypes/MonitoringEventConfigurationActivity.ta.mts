@@ -6,7 +6,19 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary MonitoringEventConfigurationActivity
  * @description
- * 
+ *
+ * Configuration action requested for a Monitoring Event.
+ * Category M on the ME-CO-CDR. On Rf the category is Oc and the
+ * information element is sent for configuration only.
+ *
+ * The values are the chargeable configuration events:
+ * `create` is a request received from the HSS or SCEF,
+ * `transfer` is a request transferred from another MECN,
+ * `update` is an update received from the HSS or SCEF, and
+ * `delete` is a deletion received from the HSS or SCEF.
+ *
+ * 3GPP TS 32.278 V19.0.0 clauses 5.1, 5.2.1, 6.1.3.2 and 6.3.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,7 +42,19 @@ enum _enum_for_MonitoringEventConfigurationActivity {
 /**
  * @summary MonitoringEventConfigurationActivity
  * @description
- * 
+ *
+ * Configuration action requested for a Monitoring Event.
+ * Category M on the ME-CO-CDR. On Rf the category is Oc and the
+ * information element is sent for configuration only.
+ *
+ * The values are the chargeable configuration events:
+ * `create` is a request received from the HSS or SCEF,
+ * `transfer` is a request transferred from another MECN,
+ * `update` is an update received from the HSS or SCEF, and
+ * `delete` is a deletion received from the HSS or SCEF.
+ *
+ * 3GPP TS 32.278 V19.0.0 clauses 5.1, 5.2.1, 6.1.3.2 and 6.3.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,7 +73,19 @@ type MonitoringEventConfigurationActivity = _enum_for_MonitoringEventConfigurati
 /**
  * @summary MonitoringEventConfigurationActivity
  * @description
- * 
+ *
+ * Configuration action requested for a Monitoring Event.
+ * Category M on the ME-CO-CDR. On Rf the category is Oc and the
+ * information element is sent for configuration only.
+ *
+ * The values are the chargeable configuration events:
+ * `create` is a request received from the HSS or SCEF,
+ * `transfer` is a request transferred from another MECN,
+ * `update` is an update received from the HSS or SCEF, and
+ * `delete` is a deletion received from the HSS or SCEF.
+ *
+ * 3GPP TS 32.278 V19.0.0 clauses 5.1, 5.2.1, 6.1.3.2 and 6.3.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -67,6 +103,13 @@ const MonitoringEventConfigurationActivity = _enum_for_MonitoringEventConfigurat
 
 /**
  * @summary MonitoringEventConfigurationActivity_create
+ * @description
+ *
+ * New Monitoring Event configuration request received from the
+ * HSS or SCEF.
+ *
+ * 3GPP TS 32.278 V19.0.0 clause 5.2.1.
+ *
  * @constant
  * @type {number}
  */
@@ -75,6 +118,11 @@ const MonitoringEventConfigurationActivity_create: MonitoringEventConfigurationA
 
 /**
  * @summary create
+ * @description
+ *
+ * Request received from the HSS or SCEF. See
+ * {@link MonitoringEventConfigurationActivity_create}.
+ *
  * @constant
  * @type {number}
  */
@@ -83,6 +131,13 @@ const create: MonitoringEventConfigurationActivity = MonitoringEventConfiguratio
 
 /**
  * @summary MonitoringEventConfigurationActivity_transfer
+ * @description
+ *
+ * Monitoring Event configuration request transferred from
+ * another MECN.
+ *
+ * 3GPP TS 32.278 V19.0.0 clause 5.2.1.
+ *
  * @constant
  * @type {number}
  */
@@ -91,6 +146,11 @@ const MonitoringEventConfigurationActivity_transfer: MonitoringEventConfiguratio
 
 /**
  * @summary transfer
+ * @description
+ *
+ * Request transferred from another MECN. See
+ * {@link MonitoringEventConfigurationActivity_transfer}.
+ *
  * @constant
  * @type {number}
  */
@@ -99,6 +159,13 @@ const transfer: MonitoringEventConfigurationActivity = MonitoringEventConfigurat
 
 /**
  * @summary MonitoringEventConfigurationActivity_update
+ * @description
+ *
+ * Monitoring Event configuration request update received from
+ * the HSS or SCEF.
+ *
+ * 3GPP TS 32.278 V19.0.0 clause 5.2.1.
+ *
  * @constant
  * @type {number}
  */
@@ -107,6 +174,11 @@ const MonitoringEventConfigurationActivity_update: MonitoringEventConfigurationA
 
 /**
  * @summary update
+ * @description
+ *
+ * Update received from the HSS or SCEF. See
+ * {@link MonitoringEventConfigurationActivity_update}.
+ *
  * @constant
  * @type {number}
  */
@@ -115,6 +187,13 @@ const update: MonitoringEventConfigurationActivity = MonitoringEventConfiguratio
 
 /**
  * @summary MonitoringEventConfigurationActivity_delete_
+ * @description
+ *
+ * Deletion of a Monitoring Event configuration request,
+ * received from the HSS or SCEF.
+ *
+ * 3GPP TS 32.278 V19.0.0 clause 5.2.1.
+ *
  * @constant
  * @type {number}
  */
@@ -123,6 +202,11 @@ const MonitoringEventConfigurationActivity_delete_: MonitoringEventConfiguration
 
 /**
  * @summary delete_
+ * @description
+ *
+ * Deletion received from the HSS or SCEF. See
+ * {@link MonitoringEventConfigurationActivity_delete_}.
+ *
  * @constant
  * @type {number}
  */

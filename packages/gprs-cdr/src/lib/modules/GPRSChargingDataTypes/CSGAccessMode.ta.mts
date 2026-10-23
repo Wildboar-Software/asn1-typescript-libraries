@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CSGAccessMode
  * @description
  * 
+ * Access mode of the CSG cell the UE is using, reported with the CSG ID
+ * (clause 5.1.2). A hybrid cell also carries the CSG membership indication
+ * (clause 5.2.3.3.1).
+ * 
+ * 3GPP TS 32.251 V19.0.0.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,6 +33,12 @@ enum _enum_for_CSGAccessMode {
  * @summary CSGAccessMode
  * @description
  * 
+ * Access mode of the CSG cell the UE is using, reported with the CSG ID
+ * (clause 5.1.2). A hybrid cell also carries the CSG membership indication
+ * (clause 5.2.3.3.1).
+ * 
+ * 3GPP TS 32.251 V19.0.0.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,6 +55,12 @@ type CSGAccessMode = _enum_for_CSGAccessMode;
 /**
  * @summary CSGAccessMode
  * @description
+ * 
+ * Access mode of the CSG cell the UE is using, reported with the CSG ID
+ * (clause 5.1.2). A hybrid cell also carries the CSG membership indication
+ * (clause 5.2.3.3.1).
+ * 
+ * 3GPP TS 32.251 V19.0.0.
  * 
  * ### ASN.1 Definition:
  * 

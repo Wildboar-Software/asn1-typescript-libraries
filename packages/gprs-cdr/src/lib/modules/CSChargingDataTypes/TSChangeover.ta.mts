@@ -87,7 +87,7 @@ class TSChangeover {
     /**
      * @summary Restructures an object into a TSChangeover
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `TSChangeover`.
      * 
      * @public
@@ -106,9 +106,9 @@ class TSChangeover {
 /**
  * @summary The Leading Root Component Types of TSChangeover
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -124,9 +124,9 @@ const _root_component_type_list_1_spec_for_TSChangeover: $.ComponentSpec[] = [
 /**
  * @summary The Trailing Root Component Types of TSChangeover
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -137,9 +137,9 @@ const _root_component_type_list_2_spec_for_TSChangeover: $.ComponentSpec[] = [
 /**
  * @summary The Extension Addition Component Types of TSChangeover
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * @constant
  */
 export

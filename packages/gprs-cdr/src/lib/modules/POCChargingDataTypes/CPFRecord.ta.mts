@@ -27,7 +27,39 @@ import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExt
 /**
  * @summary CPFRecord
  * @description
- * 
+ *
+ * Controlling PoC function CDR (CPF-CDR). One PoC Server performs
+ * this function for the session: RTP media distribution, talk
+ * burst control, participation policy for group sessions, and
+ * the participant information. It reports charging for the
+ * session owner, who does not have to be in the session (a
+ * pre-arranged group is the example given).
+ *
+ * For a 1-1 or ad-hoc session the inviting user's server is
+ * controlling. For a chat or pre-arranged group, the server that
+ * hosts the group identity is controlling. The first CPF-CDR
+ * sequence starts at session establishment; further sequences are
+ * possible as participants are added. A mid-session SIP INVITE or
+ * SIP BYE that this server decides is chargeable produces
+ * Charging Data Request [interim].
+ *
+ * Opening, partial closure, and final closure follow Charging
+ * Data Request [start], [interim], and [stop], as for a
+ * participating CDR. Online, controlling and participating
+ * reports are independent.
+ *
+ * PoC Information here is the session type, the number and list
+ * of participants, and the talk bursts accumulated for the
+ * session. GGSN address and user location are included only when
+ * the charged party is participating.
+ *
+ * Field categories are those of TS 32.240 clause 5.4, applied
+ * by clause 6.1.3.1.
+ *
+ * 3GPP TS 32.272 V19.0.0 clauses 3.1, 4.1.1.2, 4.3, 5.1.1,
+ * 5.2.2.1.1, 5.2.2.1.5, 6.1.3.2, and 6.1.3.3.2.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -70,162 +102,411 @@ export
 class CPFRecord {
     /**
      * @summary `recordType`.
+     * @description
+     *
+     * Category M. Identifies the PoC service record. Set this to
+     * `RecordType_cPFRecord` (81).
+     *
+     * 3GPP TS 32.272 V19.0.0 clause 6.1.3.3.2.
+     *
      * @public
      * @readonly
      */
     readonly recordType: RecordType;
     /**
      * @summary `retransmission`.
+     * @description
+     *
+     * Category OC. Present when information from retransmitted
+     * Diameter Charging Data Requests was used in this CDR.
+     *
+     * 3GPP TS 32.272 V19.0.0 clause 6.1.3.3.2.
+     *
      * @public
      * @readonly
      */
     readonly retransmission: OPTIONAL<NULL>;
     /**
      * @summary `sIP_Method`.
+     * @description
+     *
+     * Category OC. SIP method for which this CDR was generated.
+     * Present only for a session-unrelated procedure. Corresponds
+     * to Event-Type.
+     *
+     * 3GPP TS 32.272 V19.0.0 clause 6.1.3.3.2.
+     *
      * @public
      * @readonly
      */
     readonly sIP_Method: OPTIONAL<GraphicString>;
     /**
      * @summary `nodeAddress`.
+     * @description
+     *
+     * Category OM. Address of the node that supplied this CDR: the
+     * IP address or the FQDN of the IMS node that generated the
+     * accounting data. Corresponds to Origin-Host.
+     *
+     * 3GPP TS 32.272 V19.0.0 clause 6.1.3.3.2.
+     *
      * @public
      * @readonly
      */
     readonly nodeAddress: OPTIONAL<NodeAddress>;
     /**
      * @summary `session_Id`.
+     * @description
+     *
+     * Category OM. Session identification. For a SIP session this
+     * is the SIP Call-ID defined in RFC 3261. Corresponds to
+     * User-Session-ID. This is the SIP dialogue, not the
+     * end-to-end PoC session identity in `POCInformation`.
+     *
+     * 3GPP TS 32.272 V19.0.0 clause 6.1.3.3.2.
+     *
      * @public
      * @readonly
      */
     readonly session_Id: OPTIONAL<GraphicString>;
     /**
      * @summary `calling_Party_Address`.
+     * @description
+     *
+     * Category OM. Public User ID of the party that requested the
+     * service or initiated the session. Either a SIP URI
+     * (RFC 3261) or a TEL URI (RFC 3966). Corresponds to
+     * Calling-Party-Address.
+     *
+     * 3GPP TS 32.272 V19.0.0 clause 6.1.3.3.2.
+     *
      * @public
      * @readonly
      */
     readonly calling_Party_Address: OPTIONAL<InvolvedParty>;
     /**
      * @summary `called_Party_Address`.
+     * @description
+     *
+     * Category OM. Public User ID to which this end-to-end SIP
+     * transaction is posted. Corresponds to Called-Party-Address.
+     *
+     * The same name inside `POCParticipant` is the address of one
+     * invited or attached participant (Public User ID, SIP URL,
+     * E.164, and so on), which is a different field.
+     *
+     * 3GPP TS 32.272 V19.0.0 clauses 6.1.3.3.2 and 6.3.1.2.
+     *
      * @public
      * @readonly
      */
     readonly called_Party_Address: OPTIONAL<InvolvedParty>;
     /**
      * @summary `servedParty`.
+     * @description
+     *
+     * Category OM in PoC Information, and offline charging only.
+     * Identity of the party this charging information relates to.
+     * The CDR ASN.1 places it on the record rather than inside
+     * `POCInformation`. PoC session initiation type is used only
+     * for this party.
+     *
+     * 3GPP TS 32.272 V19.0.0 clause 6.3.1.2.
+     *
      * @public
      * @readonly
      */
     readonly servedParty: OPTIONAL<GraphicString>;
     /**
      * @summary `serviceRequestTimeStamp`.
+     * @description
+     *
+     * Category OM. Time at which the service was requested.
+     * Corresponds to SIP-Request-Timestamp in Charging Data
+     * Request [start].
+     *
+     * The interim SIP request time is a different field, on
+     * `List_Of_SDP_Media_Components`.
+     *
+     * 3GPP TS 32.272 V19.0.0 clause 6.1.3.3.2.
+     *
      * @public
      * @readonly
      */
     readonly serviceRequestTimeStamp: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `serviceDeliveryStartTimeStamp`.
+     * @description
+     *
+     * Category OM. Time of successful session set-up, a delivery
+     * unrelated service, an unsuccessful session set-up, or an
+     * unsuccessful session unrelated request. Corresponds to
+     * SIP-Response-Timestamp in Charging Data Request [start].
+     *
+     * 3GPP TS 32.272 V19.0.0 clause 6.1.3.3.2.
+     *
      * @public
      * @readonly
      */
     readonly serviceDeliveryStartTimeStamp: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `serviceDeliveryEndTimeStamp`.
+     * @description
+     *
+     * Category OC. Time at which service delivery ended. Present
+     * only for a SIP-session-related CDR. Corresponds to
+     * SIP-Request-Timestamp in Charging Data Request [stop].
+     *
+     * 3GPP TS 32.272 V19.0.0 clause 6.1.3.3.2.
+     *
      * @public
      * @readonly
      */
     readonly serviceDeliveryEndTimeStamp: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `recordOpeningTime`.
+     * @description
+     *
+     * Category OC. Time at which the CDF opened this record.
+     * Present only for a SIP-session-related CDR.
+     *
+     * 3GPP TS 32.272 V19.0.0 clause 6.1.3.3.2.
+     *
      * @public
      * @readonly
      */
     readonly recordOpeningTime: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `recordClosureTime`.
+     * @description
+     *
+     * Category OM. Time at which the CDF closed this record.
+     *
+     * 3GPP TS 32.272 V19.0.0 clause 6.1.3.3.2.
+     *
      * @public
      * @readonly
      */
     readonly recordClosureTime: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `interOperatorIdentifiers`.
+     * @description
+     *
+     * Category OC. Home-network identification, originating and
+     * terminating, when it was exchanged in SIP signalling, as
+     * recorded in Inter-Operator-Identifier. The grouped value
+     * carries Originating-IOI and Terminating-IOI.
+     *
+     * 3GPP TS 32.272 V19.0.0 clause 6.1.3.3.2.
+     *
      * @public
      * @readonly
      */
     readonly interOperatorIdentifiers: OPTIONAL<InterOperatorIdentifiers>;
     /**
      * @summary `localRecordSequenceNumber`.
+     * @description
+     *
+     * Category OM. Unique record number created by this node. The
+     * CDF allocates it sequentially for every partial or whole
+     * CDR, across CDR types. It is unique within the CDF.
+     *
+     * 3GPP TS 32.272 V19.0.0 clause 6.1.3.3.2.
+     *
      * @public
      * @readonly
      */
     readonly localRecordSequenceNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `recordSequenceNumber`.
+     * @description
+     *
+     * Category OC. Running sequence number that links the partial
+     * records the CDF generated for one session.
+     *
+     * 3GPP TS 32.272 V19.0.0 clause 6.1.3.3.2.
+     *
      * @public
      * @readonly
      */
     readonly recordSequenceNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `causeForRecordClosing`.
+     * @description
+     *
+     * Category OM. Reason the CDF released this CDR. See
+     * `CauseForRecordClosing`. Partial records follow Charging
+     * Data Request [interim]; the final session CDR follows [stop].
+     *
+     * 3GPP TS 32.272 V19.0.0 clauses 6.1.3.2.1 and 6.1.3.3.2.
+     *
      * @public
      * @readonly
      */
     readonly causeForRecordClosing: OPTIONAL<CauseForRecordClosing>;
     /**
      * @summary `incomplete_CDR_Indication`.
+     * @description
+     *
+     * Category OC. Extra diagnostics when the CDF detects missing
+     * Charging Data Requests.
+     *
+     * 3GPP TS 32.272 V19.0.0 clause 6.1.3.3.2.
+     *
      * @public
      * @readonly
      */
     readonly incomplete_CDR_Indication: OPTIONAL<Incomplete_CDR_Indication>;
     /**
      * @summary `iMS_Charging_Identifier`.
+     * @description
+     *
+     * Category OM. IMS charging identifier (ICID) generated by the
+     * IMS node for the SIP session. Corresponds to
+     * IMS-Charging-Identifier (ICID).
+     *
+     * 3GPP TS 32.272 V19.0.0 clause 6.1.3.3.2.
+     *
      * @public
      * @readonly
      */
     readonly iMS_Charging_Identifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `list_Of_SDP_Media_Components`.
+     * @description
+     *
+     * Category OC. One entry per media component. Present only on
+     * a SIP-session-related CDR, and it may be repeated. Each
+     * entry holds the interim SIP request and response times, the
+     * SDP media lines, who initiated the media action, and the
+     * session-level SDP. See `List_Of_SDP_Media_Components`.
+     *
+     * 3GPP TS 32.272 V19.0.0 clause 6.1.3.3.2.
+     *
      * @public
      * @readonly
      */
     readonly list_Of_SDP_Media_Components: OPTIONAL<List_Of_SDP_Media_Components[]>;
     /**
      * @summary `gGSNaddress`.
+     * @description
+     *
+     * Category OC. Control-plane IP address of the GGSN that
+     * handles one or more media components of the IMS session.
+     * Corresponds to the P-Charging-Vector header. On the
+     * controlling PoC Server, include this only when the charged
+     * party is participating in the session. In Service
+     * Information this is PS Information, used as defined in
+     * TS 32.251.
+     *
+     * 3GPP TS 32.272 V19.0.0 clauses 6.1.3.3.2 and 6.3.1.1.
+     *
      * @public
      * @readonly
      */
     readonly gGSNaddress: OPTIONAL<NodeAddress>;
     /**
      * @summary `serviceReasonReturnCode`.
+     * @description
+     *
+     * Category is not stated under this name. TS 32.298 defines
+     * this as the returned cause code of the service request,
+     * both success and failure, corresponding to the Cause-Code
+     * AVP.
+     *
+     * The CPF-CDR table instead lists a Service Delivery Failure
+     * Reason: the SIP error code taken from the SIP method, and
+     * omitted when delivery succeeds. TS 32.272 does not say
+     * whether that table row is this field.
+     *
+     * 3GPP TS 32.272 V19.0.0 clause 6.1.3.3.2.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.57.
+     *
      * @public
      * @readonly
      */
     readonly serviceReasonReturnCode: OPTIONAL<UTF8String>;
     /**
      * @summary `list_Of_Message_Bodies`.
+     * @description
+     *
+     * Category OC. Data conveyed end-to-end in a SIP message body.
+     * Repeated when several bodies were exchanged. Each body has
+     * a content type (for example `application/zip`, `image/gif`,
+     * `audio/mpeg`), a content disposition (`session`, `render`,
+     * `inline`, `icon`, `alert`, `attachment`, and so on), a
+     * content length in bytes, and an originator taken from
+     * P-Asserted-Identity. `render` means the body part should be
+     * displayed or otherwise rendered to the user.
+     *
+     * 3GPP TS 32.272 V19.0.0 clause 6.1.3.3.2.
+     *
      * @public
      * @readonly
      */
     readonly list_Of_Message_Bodies: OPTIONAL<List_Of_Message_Bodies[]>;
     /**
      * @summary `userLocationInfo`.
+     * @description
+     *
+     * Category OC. Location of the charged party, to the level
+     * that was made available to the PoC Server. Omit this when
+     * no location information is available. On the controlling
+     * PoC Server, include it only when the charged party is
+     * participating in the session.
+     *
+     * Coded as the 3GPP-User-Location-Info RADIUS VSA defined in
+     * TS 29.061. In Service Information it is PS Information,
+     * used as defined in TS 32.251.
+     *
+     * 3GPP TS 32.272 V19.0.0 clauses 6.1.3.3.2 and 6.3.1.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.3.13.
+     *
      * @public
      * @readonly
      */
     readonly userLocationInfo: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `poCInformation`.
+     * @description
+     *
+     * Category OC. PoC-specific parameters for the session: the
+     * session type, the number and list of participants, and the
+     * talk bursts accumulated during the session. See
+     * `POCInformation`.
+     *
+     * 3GPP TS 32.272 V19.0.0 clauses 6.1.3.3.2 and 6.3.1.2.
+     *
      * @public
      * @readonly
      */
     readonly poCInformation: OPTIONAL<POCInformation>;
     /**
      * @summary `recordExtensions`.
+     * @description
+     *
+     * Category OC. Operator or manufacturer extensions to the
+     * record. Present when such an extension exists.
+     *
+     * 3GPP TS 32.272 V19.0.0 clause 6.1.3.3.2.
+     *
      * @public
      * @readonly
      */
     readonly recordExtensions: OPTIONAL<ManagementExtension[]>;
     /**
      * @summary `serviceContextID`.
+     * @description
+     *
+     * Category OM. Context information the CDR belongs to. This
+     * is the Service-Context-Id from Diameter accounting, when
+     * that accounting was used and the field was included. It
+     * identifies the service, subsystem or domain, and the
+     * release. The contents are described in TS 32.299.
+     *
+     * 3GPP TS 32.272 V19.0.0 clause 6.1.3.3.2.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.1.2.
+     *
      * @public
      * @readonly
      */

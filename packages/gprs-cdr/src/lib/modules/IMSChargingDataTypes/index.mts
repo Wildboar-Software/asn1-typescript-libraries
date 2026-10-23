@@ -1,6 +1,15 @@
 /**
  * @description
  *
+ * IMS offline CDRs. How each record is produced, which node fills
+ * a field, and how ICID, IOI, and access-network identifiers
+ * correlate charging data are specified in 3GPP TS 32.260 V20.1.0
+ * clause 5.1 and clause 6.1.3. The ASN.1 syntax is specified in
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1, which TS 32.260
+ * clause 6.3.4.1 refers to for encoding at the Bi interface.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ASN.1 module `IMSChargingDataTypes`.
  *
  * Identical assignments that also appear in other charging modules

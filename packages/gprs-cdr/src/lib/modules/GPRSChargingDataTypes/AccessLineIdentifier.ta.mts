@@ -13,7 +13,16 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AccessLineIdentifier
  * @description
- * 
+ *
+ * This field contains the Access line id (physical and logical circuit ID)
+ * serving the 3GPP UE or fixed user (i.e. Fixed device or RG). This field
+ * contains the Access line id (physical and logical circuit ID): serving the
+ * 3GPP UE or fixed device, behind the RG when in bridge mode or in routed
+ * mode without NAT, or of the RG when in routed mode with NAT; of the access
+ * point to which the UE is attached, in trusted or untrusted WLAN.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.0A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

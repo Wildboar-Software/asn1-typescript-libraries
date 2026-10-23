@@ -1,6 +1,15 @@
 /**
  * @description
  *
+ * MMTel CDR parameters are specified in 3GPP TS 32.298 clause
+ * 5.1.4.5. Offline, online and converged charging for those
+ * parameters is specified in
+ * [3GPP TS 32.275 V19.0.0](https://www.3gpp.org/DynaReport/32275.htm).
+ *
+ * Charging is performed at the MMTel application server and extends
+ * IMS charging in TS 32.260. The MMTel-specific content is
+ * `MMTelInformation`, carried on the CDR as `mMTelInformation`.
+ *
  * ASN.1 module `MMTelChargingDataTypes`.
  *
  * Identical assignments that also appear in other charging modules

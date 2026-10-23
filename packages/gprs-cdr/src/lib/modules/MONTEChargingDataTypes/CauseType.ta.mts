@@ -6,7 +6,16 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CauseType
  * @description
- * 
+ *
+ * Family of cause carried in `CommunicationFailureInfo`.
+ * Clause 5.1 requires a RAN or NAS cause on a
+ * communication-failure report. Only `nAS` is named there.
+ * TS 32.278 does not describe radio network, transport,
+ * protocol, or miscellaneous, and does not say which value
+ * is the RAN cause.
+ *
+ * 3GPP TS 32.278 V19.0.0 clause 5.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,7 +41,16 @@ enum _enum_for_CauseType {
 /**
  * @summary CauseType
  * @description
- * 
+ *
+ * Family of cause carried in `CommunicationFailureInfo`.
+ * Clause 5.1 requires a RAN or NAS cause on a
+ * communication-failure report. Only `nAS` is named there.
+ * TS 32.278 does not describe radio network, transport,
+ * protocol, or miscellaneous, and does not say which value
+ * is the RAN cause.
+ *
+ * 3GPP TS 32.278 V19.0.0 clause 5.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -52,7 +70,16 @@ type CauseType = _enum_for_CauseType;
 /**
  * @summary CauseType
  * @description
- * 
+ *
+ * Family of cause carried in `CommunicationFailureInfo`.
+ * Clause 5.1 requires a RAN or NAS cause on a
+ * communication-failure report. Only `nAS` is named there.
+ * TS 32.278 does not describe radio network, transport,
+ * protocol, or miscellaneous, and does not say which value
+ * is the RAN cause.
+ *
+ * 3GPP TS 32.278 V19.0.0 clause 5.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -71,6 +98,12 @@ const CauseType = _enum_for_CauseType;
 
 /**
  * @summary CauseType_radioNetworkLayer
+ * @description
+ *
+ * Present in the abstract syntax. TS 32.278 V19.0.0 does not
+ * describe this cause family, and does not identify it as the
+ * RAN cause required by clause 5.1.
+ *
  * @constant
  * @type {number}
  */
@@ -79,6 +112,10 @@ const CauseType_radioNetworkLayer: CauseType = CauseType.radioNetworkLayer; /* L
 
 /**
  * @summary radioNetworkLayer
+ * @description
+ *
+ * See {@link CauseType_radioNetworkLayer}.
+ *
  * @constant
  * @type {number}
  */
@@ -87,6 +124,11 @@ const radioNetworkLayer: CauseType = CauseType.radioNetworkLayer; /* SHORT_NAMED
 
 /**
  * @summary CauseType_transportLayer
+ * @description
+ *
+ * Present in the abstract syntax. TS 32.278 V19.0.0 does not
+ * describe this cause family.
+ *
  * @constant
  * @type {number}
  */
@@ -95,6 +137,10 @@ const CauseType_transportLayer: CauseType = CauseType.transportLayer; /* LONG_NA
 
 /**
  * @summary transportLayer
+ * @description
+ *
+ * See {@link CauseType_transportLayer}.
+ *
  * @constant
  * @type {number}
  */
@@ -103,6 +149,13 @@ const transportLayer: CauseType = CauseType.transportLayer; /* SHORT_NAMED_ENUME
 
 /**
  * @summary CauseType_nAS
+ * @description
+ *
+ * NAS cause. Clause 5.1 requires a RAN or NAS cause code for
+ * a communication failure with the UE.
+ *
+ * 3GPP TS 32.278 V19.0.0 clause 5.1.
+ *
  * @constant
  * @type {number}
  */
@@ -111,6 +164,10 @@ const CauseType_nAS: CauseType = CauseType.nAS; /* LONG_NAMED_ENUMERATED_VALUE *
 
 /**
  * @summary nAS
+ * @description
+ *
+ * NAS cause. See {@link CauseType_nAS}.
+ *
  * @constant
  * @type {number}
  */
@@ -119,6 +176,11 @@ const nAS: CauseType = CauseType.nAS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseType_protocol
+ * @description
+ *
+ * Present in the abstract syntax. TS 32.278 V19.0.0 does not
+ * describe this cause family.
+ *
  * @constant
  * @type {number}
  */
@@ -127,6 +189,10 @@ const CauseType_protocol: CauseType = CauseType.protocol; /* LONG_NAMED_ENUMERAT
 
 /**
  * @summary protocol
+ * @description
+ *
+ * See {@link CauseType_protocol}.
+ *
  * @constant
  * @type {number}
  */
@@ -135,6 +201,11 @@ const protocol: CauseType = CauseType.protocol; /* SHORT_NAMED_ENUMERATED_VALUE 
 
 /**
  * @summary CauseType_miscellaneous
+ * @description
+ *
+ * Present in the abstract syntax. TS 32.278 V19.0.0 does not
+ * describe this cause family.
+ *
  * @constant
  * @type {number}
  */
@@ -143,6 +214,10 @@ const CauseType_miscellaneous: CauseType = CauseType.miscellaneous; /* LONG_NAME
 
 /**
  * @summary miscellaneous
+ * @description
+ *
+ * See {@link CauseType_miscellaneous}.
+ *
  * @constant
  * @type {number}
  */

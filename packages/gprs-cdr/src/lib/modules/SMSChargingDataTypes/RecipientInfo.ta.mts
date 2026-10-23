@@ -14,7 +14,23 @@ import { SMInterface, _decode_SMInterface, _encode_SMInterface } from "../SMSCha
 /**
  * @summary RecipientInfo
  * @description
- * 
+ *
+ * Recipient of a short message, or of the short message a device trigger will
+ * deliver. Each occurrence is a different recipient. Several occurrences are
+ * allowed when several recipients share one charged event and every other
+ * charging field is identical. That multi-destination case is SMS and Internet
+ * electronic mail interworking (TS 23.040 clause 3.8; note 1 of table
+ * 6.3.1.2.1). SC-SMO and ISM-SMO carry a sequence of recipients; the other
+ * CDRs carry one.
+ *
+ * On a delivery report this identifies the recipient of the report, which
+ * shall correspond to the originator of the message that triggered the report
+ * (note 2 of table 6.3.1.2.1). Implementations differ in the originator
+ * address shown to the user for a delivery report; the charging event is
+ * expected to contain the information presented to that user.
+ *
+ * 3GPP TS 32.274 V19.1.0 table 6.3.1.2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,42 +50,103 @@ export
 class RecipientInfo {
     /**
      * @summary `recipientIMSI`.
+     * @description
+     *
+     * IMSI of the recipient as the SMS node received it, if available
+     * (SC-SMO). On SC-SMT, the IMSI of the subscriber the short message was
+     * delivered to, for a mobile-terminating message. On SC-DVT-T4, the IMSI
+     * from the User Identifier sent by the MTC-IWF (TS 29.337).
+     *
+     * 3GPP TS 32.274 V19.1.0 tables 6.1.3.3.1, 6.1.3.4.1, and 6.1.3.5.1.
+     *
      * @public
      * @readonly
      */
     readonly recipientIMSI: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `recipientMSISDN`.
+     * @description
+     *
+     * MSISDN of the recipient as the SMS node received it, if available. On
+     * SC-SMT, the primary MSISDN of the subscriber the short message was
+     * delivered to. On SC-DVT-T4, the MSISDN from the MTC-IWF User Identifier,
+     * if available.
+     *
+     * 3GPP TS 32.274 V19.1.0 tables 6.1.3.3.1, 6.1.3.4.1, and 6.1.3.5.1.
+     *
      * @public
      * @readonly
      */
     readonly recipientMSISDN: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `recipientOtherAddress`.
+     * @description
+     *
+     * Recipient address other than IMSI and MSISDN, if available: for example
+     * email, a short code, or, for a device trigger, an external identifier.
+     * Several addresses may be carried. On SC-DVT-T4 this is the external
+     * identifier from the MTC-IWF User Identifier. On SC-SMO-T4 it is the SME
+     * address of the SCS/AS. Online charging also allows a long or short code
+     * of the SCS/AS.
+     *
+     * 3GPP TS 32.274 V19.1.0 tables 6.1.3.3.1, 6.1.3.5.1, and 6.1.3.6.1.
+     *
      * @public
      * @readonly
      */
     readonly recipientOtherAddress: OPTIONAL<SMAddressInfo>;
     /**
      * @summary `recipientSCCPAddress`.
+     * @description
+     *
+     * SCCP called address the SMS node uses to deliver the short message
+     * onward. Present only when SMS over IP is not the outward connection.
+     *
+     * 3GPP TS 32.274 V19.1.0 table 6.3.1.2.1.
+     *
      * @public
      * @readonly
      */
     readonly recipientSCCPAddress: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `recipientReceivedAddress`.
+     * @description
+     *
+     * Original, unmodified recipient address as the SMS node received it, when
+     * the node has since manipulated the address (for example a number-plan
+     * correction). Typically an E.164 number or a short code.
+     *
+     * 3GPP TS 32.274 V19.1.0 table 6.3.1.2.1.
+     *
      * @public
      * @readonly
      */
     readonly recipientReceivedAddress: OPTIONAL<SMAddressInfo>;
     /**
      * @summary `sMDestinationInterface`.
+     * @description
+     *
+     * Interface on which the short message is to be delivered, the next hop.
+     * For person-to-application or application-to-application messaging this
+     * identifies the application. Absent when the short message is a device
+     * trigger (SC-SMT).
+     *
+     * 3GPP TS 32.274 V19.1.0 tables 6.1.3.4.1 and 6.3.1.2.1.
+     *
      * @public
      * @readonly
      */
     readonly sMDestinationInterface: OPTIONAL<SMInterface>;
     /**
      * @summary `sMRecipientProtocolID`.
+     * @description
+     *
+     * TP-PROTOCOL-ID (TP-PID) of TS 23.040. Relates to the recipient when
+     * charging mobile-terminating SMS. For a device trigger it holds the
+     * Device Triggering Short Message code (table 6.1.3.4.1).
+     *
+     * 3GPP TS 32.274 V19.1.0 tables 6.1.3.4.1 and 6.3.1.2.1.
+     *
      * @public
      * @readonly
      */

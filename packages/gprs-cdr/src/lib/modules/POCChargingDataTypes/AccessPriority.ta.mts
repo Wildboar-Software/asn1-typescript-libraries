@@ -6,7 +6,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AccessPriority
  * @description
- * 
+ *
+ * User priority level of one participant in the PoC session.
+ * TS 32.272 does not define how pre-emptive, high, normal, and
+ * low are applied.
+ *
+ * 3GPP TS 32.272 V19.0.0 clause 6.3.1.2.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.3.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,7 +37,14 @@ enum _enum_for_AccessPriority {
 /**
  * @summary AccessPriority
  * @description
- * 
+ *
+ * User priority level of one participant in the PoC session.
+ * TS 32.272 does not define how pre-emptive, high, normal, and
+ * low are applied.
+ *
+ * 3GPP TS 32.272 V19.0.0 clause 6.3.1.2.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.3.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,7 +63,14 @@ type AccessPriority = _enum_for_AccessPriority;
 /**
  * @summary AccessPriority
  * @description
- * 
+ *
+ * User priority level of one participant in the PoC session.
+ * TS 32.272 does not define how pre-emptive, high, normal, and
+ * low are applied.
+ *
+ * 3GPP TS 32.272 V19.0.0 clause 6.3.1.2.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.3.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

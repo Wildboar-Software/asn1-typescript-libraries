@@ -6,7 +6,22 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AccessTransferType
  * @description
- * 
+ *
+ * Access technologies of an IMS service-continuity transfer: PS to CS, CS
+ * to PS, PS to PS, or CS to CS (clause 5.1.11). Reported by the AS in
+ * offline and online charging and by the ATCF in offline charging,
+ * together with the inter-UE indication, the UE identity, and the
+ * access-network information available at the transfer.
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 5.1.11.
+ *
+ * This field indicates the type of access transfer performed for IMS service
+ * continuity, for instance PS-to-PS in case of SRVCC.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.2aA.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,7 +45,22 @@ enum _enum_for_AccessTransferType {
 /**
  * @summary AccessTransferType
  * @description
- * 
+ *
+ * Access technologies of an IMS service-continuity transfer: PS to CS, CS
+ * to PS, PS to PS, or CS to CS (clause 5.1.11). Reported by the AS in
+ * offline and online charging and by the ATCF in offline charging,
+ * together with the inter-UE indication, the UE identity, and the
+ * access-network information available at the transfer.
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 5.1.11.
+ *
+ * This field indicates the type of access transfer performed for IMS service
+ * continuity, for instance PS-to-PS in case of SRVCC.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.2aA.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,7 +79,22 @@ type AccessTransferType = _enum_for_AccessTransferType;
 /**
  * @summary AccessTransferType
  * @description
- * 
+ *
+ * Access technologies of an IMS service-continuity transfer: PS to CS, CS
+ * to PS, PS to PS, or CS to CS (clause 5.1.11). Reported by the AS in
+ * offline and online charging and by the ATCF in offline charging,
+ * together with the inter-UE indication, the UE identity, and the
+ * access-network information available at the transfer.
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 5.1.11.
+ *
+ * This field indicates the type of access transfer performed for IMS service
+ * continuity, for instance PS-to-PS in case of SRVCC.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.2aA.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -67,6 +112,11 @@ const AccessTransferType = _enum_for_AccessTransferType;
 
 /**
  * @summary AccessTransferType_pSToCS
+ * @description
+ *
+ * Packet-switched to circuit-switched access transfer (clause 5.1.11).
+ * Requested Party Address may then hold the STN-SR..
+ *
  * @constant
  * @type {number}
  */
@@ -75,6 +125,11 @@ const AccessTransferType_pSToCS: AccessTransferType = AccessTransferType.pSToCS;
 
 /**
  * @summary pSToCS
+ * @description
+ *
+ * Packet-switched to circuit-switched access transfer (clause 5.1.11).
+ * Requested Party Address may then hold the STN-SR..
+ *
  * @constant
  * @type {number}
  */
@@ -83,6 +138,11 @@ const pSToCS: AccessTransferType = AccessTransferType.pSToCS; /* SHORT_NAMED_ENU
 
 /**
  * @summary AccessTransferType_cSToPS
+ * @description
+ *
+ * Circuit-switched to packet-switched access transfer (clause 5.1.11).
+ * Requested Party Address may then hold the STI-SR..
+ *
  * @constant
  * @type {number}
  */
@@ -91,6 +151,11 @@ const AccessTransferType_cSToPS: AccessTransferType = AccessTransferType.cSToPS;
 
 /**
  * @summary cSToPS
+ * @description
+ *
+ * Circuit-switched to packet-switched access transfer (clause 5.1.11).
+ * Requested Party Address may then hold the STI-SR..
+ *
  * @constant
  * @type {number}
  */
@@ -99,6 +164,11 @@ const cSToPS: AccessTransferType = AccessTransferType.cSToPS; /* SHORT_NAMED_ENU
 
 /**
  * @summary AccessTransferType_pSToPS
+ * @description
+ *
+ * Packet-switched to packet-switched access transfer (clause 5.1.11). 3GPP
+ * TS 32.260 V20.1.0.
+ *
  * @constant
  * @type {number}
  */
@@ -107,6 +177,11 @@ const AccessTransferType_pSToPS: AccessTransferType = AccessTransferType.pSToPS;
 
 /**
  * @summary pSToPS
+ * @description
+ *
+ * Packet-switched to packet-switched access transfer (clause 5.1.11). 3GPP
+ * TS 32.260 V20.1.0.
+ *
  * @constant
  * @type {number}
  */
@@ -115,6 +190,12 @@ const pSToPS: AccessTransferType = AccessTransferType.pSToPS; /* SHORT_NAMED_ENU
 
 /**
  * @summary AccessTransferType_cSToCS
+ * @description
+ *
+ * Circuit-switched to circuit-switched access transfer (clause 5.1.11).
+ *
+ * 3GPP TS 32.260 V20.1.0.
+ *
  * @constant
  * @type {number}
  */
@@ -123,6 +204,12 @@ const AccessTransferType_cSToCS: AccessTransferType = AccessTransferType.cSToCS;
 
 /**
  * @summary cSToCS
+ * @description
+ *
+ * Circuit-switched to circuit-switched access transfer (clause 5.1.11).
+ *
+ * 3GPP TS 32.260 V20.1.0.
+ *
  * @constant
  * @type {number}
  */

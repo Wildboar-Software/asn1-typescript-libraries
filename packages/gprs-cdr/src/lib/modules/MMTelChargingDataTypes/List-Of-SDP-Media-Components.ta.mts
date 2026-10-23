@@ -19,7 +19,18 @@ import { SDP_Type, _decode_SDP_Type, _encode_SDP_Type, _enum_for_SDP_Type } from
 /**
  * @summary List_Of_SDP_Media_Components
  * @description
- * 
+ *
+ * This is a grouped field which may occur several times in one CDR and the
+ * content should be filled as described in TS 32.260 [20] clause 5.1.3. The
+ * field is present only in a SIP session related case. The List of SDP Media
+ * Components contains the following elements: SIP Request Timestamp; SIP
+ * Response Timestamp; SDP Media Components; Media Initiator flag; SDP
+ * Session Description. Media Initiator Party. The Media Initiator Party is
+ * only used for PoC charging. These field elements are described in the
+ * appropriate subclause.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.28.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,12 +54,24 @@ export
 class List_Of_SDP_Media_Components {
     /**
      * @summary `sIP_Request_Timestamp`.
+     * @description
+     *
+     * SIP Request Timestamp;
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.28.
+     *
      * @public
      * @readonly
      */
     readonly sIP_Request_Timestamp: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `sIP_Response_Timestamp`.
+     * @description
+     *
+     * SIP Response Timestamp;
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.28.
+     *
      * @public
      * @readonly
      */
@@ -61,6 +84,13 @@ class List_Of_SDP_Media_Components {
     readonly sDP_Media_Components: OPTIONAL<SDP_Media_Components[]>;
     /**
      * @summary `mediaInitiatorFlag`.
+     * @description
+     *
+     * This field indicates if the called party has requested the session
+     * modification and it is present only if the initiator was the called party.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.30.
+     *
      * @public
      * @readonly
      */
@@ -73,18 +103,39 @@ class List_Of_SDP_Media_Components {
     readonly sDP_Session_Description: OPTIONAL<GraphicString[]>;
     /**
      * @summary `mediaInitiatorParty`.
+     * @description
+     *
+     * This field indicates initiating party who has requested the session
+     * modification in PoC charging.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.31.
+     *
      * @public
      * @readonly
      */
     readonly mediaInitiatorParty: OPTIONAL<InvolvedParty>;
     /**
      * @summary `sIP_Request_Timestamp_Fraction`.
+     * @description
+     *
+     * This parameter contains the milliseconds fraction in relation to the SIP
+     * Request Timestamp.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.63.
+     *
      * @public
      * @readonly
      */
     readonly sIP_Request_Timestamp_Fraction: OPTIONAL<INTEGER>;
     /**
      * @summary `sIP_Response_Timestamp_Fraction`.
+     * @description
+     *
+     * This parameter contains the milliseconds fraction in relation to the SIP
+     * Response Timestamp.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.65.
+     *
      * @public
      * @readonly
      */

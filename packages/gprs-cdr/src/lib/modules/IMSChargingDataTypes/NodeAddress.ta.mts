@@ -11,7 +11,22 @@ import { ServedPartyIPAddress, _decode_ServedPartyIPAddress, _encode_ServedParty
 /**
  * @summary NodeAddress
  * @description
- * 
+ *
+ * Address of the IMS node that provided the charging information: an IP
+ * address or an FQDN (clause 6.1.3.3). This is the node that generated the
+ * accounting data, not the served party.
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 6.3.1.2.
+ *
+ * This item holds the address of the node providing the information for the
+ * CDR. This may either be the IP address or the FQDN of the IMS node
+ * generating the accounting data. This parameter corresponds to the
+ * Origin-Host AVP.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.32.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

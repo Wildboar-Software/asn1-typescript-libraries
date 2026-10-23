@@ -6,7 +6,15 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CurrentLocationRetrieved
  * @description
- * 
+ *
+ * Flag on MME and SGSN location information. The only value is
+ * `activeLocationRetrieval`. TS 32.278 does not define this
+ * type. Whether a configuration request asks for the current
+ * location or the last known location is `LocationType` on
+ * `MECORecord`.
+ *
+ * 3GPP TS 32.278 V19.0.0 clauses 6.1.3.2 and 6.3.2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -24,7 +32,15 @@ enum _enum_for_CurrentLocationRetrieved {
 /**
  * @summary CurrentLocationRetrieved
  * @description
- * 
+ *
+ * Flag on MME and SGSN location information. The only value is
+ * `activeLocationRetrieval`. TS 32.278 does not define this
+ * type. Whether a configuration request asks for the current
+ * location or the last known location is `LocationType` on
+ * `MECORecord`.
+ *
+ * 3GPP TS 32.278 V19.0.0 clauses 6.1.3.2 and 6.3.2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,7 +56,15 @@ type CurrentLocationRetrieved = _enum_for_CurrentLocationRetrieved;
 /**
  * @summary CurrentLocationRetrieved
  * @description
- * 
+ *
+ * Flag on MME and SGSN location information. The only value is
+ * `activeLocationRetrieval`. TS 32.278 does not define this
+ * type. Whether a configuration request asks for the current
+ * location or the last known location is `LocationType` on
+ * `MECORecord`.
+ *
+ * 3GPP TS 32.278 V19.0.0 clauses 6.1.3.2 and 6.3.2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -55,6 +79,11 @@ const CurrentLocationRetrieved = _enum_for_CurrentLocationRetrieved;
 
 /**
  * @summary CurrentLocationRetrieved_activeLocationRetrieval
+ * @description
+ *
+ * The only enumerated value. TS 32.278 V19.0.0 does not define
+ * what active location retrieval means.
+ *
  * @constant
  * @type {number}
  */
@@ -63,6 +92,10 @@ const CurrentLocationRetrieved_activeLocationRetrieval: CurrentLocationRetrieved
 
 /**
  * @summary activeLocationRetrieval
+ * @description
+ *
+ * See {@link CurrentLocationRetrieved_activeLocationRetrieval}.
+ *
  * @constant
  * @type {number}
  */

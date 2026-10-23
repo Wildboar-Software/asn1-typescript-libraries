@@ -10,7 +10,21 @@ import { IPTextRepresentedAddress, _decode_IPTextRepresentedAddress, _encode_IPT
 /**
  * @summary ServedPartyIPAddress
  * @description
- * 
+ *
+ * IP address of the calling or called party, depending on whether the
+ * P-CSCF is in contact with the calling or the called side (clause
+ * 6.3.1.2). Only the P-CSCF CDR carries this field.
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 6.3.1.2.
+ *
+ * This field contains the IP address of either the calling or called party,
+ * depending on whether the P-CSCF is in touch with the calling or called
+ * network.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.53.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

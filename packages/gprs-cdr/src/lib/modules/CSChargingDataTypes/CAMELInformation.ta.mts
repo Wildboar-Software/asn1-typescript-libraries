@@ -19,7 +19,32 @@ import { HLRIntResult, _decode_HLRIntResult, _encode_HLRIntResult } from "../CSC
 /**
  * @summary CAMELInformation
  * @description
- * 
+ *
+ * One outgoing CAMEL call leg, or one user interaction, inside
+ * `cAMELCallLegInformation`. CAMEL CPH records one of these for each
+ * outgoing leg of the call segment. A leg that moves to another call segment
+ * is closed here and opened in the other segment's CDR. User interactions
+ * such as announcements are recorded the same way, as their own element.
+ *
+ * A value that is identical to the main body of the CDR need not be
+ * repeated. An omitted component means the main-body value still applies, so
+ * the element can be empty or absent.
+ *
+ * Clause 5.1.3.14 also names translated number, additional charging
+ * information, the second CAMEL service's default call handling, gsmSCF
+ * address, and service key, and the LRN and JIP parameters, as leg fields.
+ * In this module those components stay on the parent CDR. The second FCI
+ * parameters are `freeFormatData_2` and `freeFormatDataAppend_2`. The
+ * clause's editor's note says those two parameters still need clarification
+ * in the CDR tables. The leg tables leave the 2G and 3G categories of these
+ * components blank.
+ *
+ * The leg closes when it is released or moved. `causeForTerm` and
+ * `diagnostics` then say why it disappeared from this call segment.
+ * `callDuration` is the time between this leg's answer and release.
+ *
+ * 3GPP TS 32.250 V19.0.0 clauses 5.1.3.14 and 6.1.3.23.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,109 +68,321 @@ import { HLRIntResult, _decode_HLRIntResult, _encode_HLRIntResult } from "../CSC
  *    freeFormatData-2         [16] IMPLICIT OCTET STRING ( SIZE( 1 .. 160 ) ) OPTIONAL,
  *    freeFormatDataAppend-2   [17] IMPLICIT BOOLEAN OPTIONAL}
  * ```
- * 
  * @class
  */
 export
 class CAMELInformation {
     /**
      * @summary `cAMELDestinationNumber`.
+     * @description
+     *
+     * CPH MOC: Destination modified by camel service.
+     *
+     * gsmSCF-initiated CPH, CPH new call segment: Destination as received in
+     * the ICA operation.
+     *
+     * CPH forwarding: Destination modified by CAMEL service.
+     *
+     * CPH terminating CAMEL: Destination as received in the ICA operation or
+     * overwritten by TDP3.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.23, 6.1.3.24, 6.1.3.25, 6.1.3.26,
+     * and 6.1.3.27.
+     *
      * @public
      * @readonly
      */
     readonly cAMELDestinationNumber: OPTIONAL<OCTET_STRING[]>;
     /**
      * @summary `connectedNumber`.
+     * @description
+     *
+     * Number of connected party if different from 'CAMEL Destination Number'.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.23, 6.1.3.24, 6.1.3.25, 6.1.3.26,
+     * and 6.1.3.27.
+     *
      * @public
      * @readonly
      */
     readonly connectedNumber: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `roamingNumber`.
+     * @description
+     *
+     * CPH MOC, gsmSCF-initiated CPH, CPH new call segment, CPH forwarding: MSRN
+     * to route this leg (if applicable).
+     *
+     * CPH terminating CAMEL: MSRN or B-party (if applicable).
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.23, 6.1.3.24, 6.1.3.25, 6.1.3.26,
+     * and 6.1.3.27.
+     *
+     * The roaming number field contains the mobile station roaming number as
+     * defined in TS 23.003 [200] and coded according to TS 29.002 [214].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.75.
+     *
      * @public
      * @readonly
      */
     readonly roamingNumber: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `mscOutgoingTKGP`.
+     * @description
+     *
+     * Trunk on which the leg leaves the MSC.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.23, 6.1.3.24, 6.1.3.25, 6.1.3.26,
+     * and 6.1.3.27.
+     *
      * @public
      * @readonly
      */
     readonly mscOutgoingTKGP: OPTIONAL<TrunkGroup>;
     /**
      * @summary `seizureTime`.
+     * @description
+     *
+     * Time of traffic channel seizure for this leg.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.23, 6.1.3.24, 6.1.3.25, 6.1.3.26,
+     * and 6.1.3.27.
+     *
      * @public
      * @readonly
      */
     readonly seizureTime: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `answerTime`.
+     * @description
+     *
+     * Time when the answer message is received for this leg.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.23, 6.1.3.24, 6.1.3.25, 6.1.3.26,
+     * and 6.1.3.27.
+     *
      * @public
      * @readonly
      */
     readonly answerTime: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `releaseTime`.
+     * @description
+     *
+     * Time when the leg is released or moved into another call segment.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.23, 6.1.3.24, 6.1.3.25, 6.1.3.26,
+     * and 6.1.3.27.
+     *
      * @public
      * @readonly
      */
     readonly releaseTime: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `callDuration`.
+     * @description
+     *
+     * Time between answer and release timestamp of this leg.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.23, 6.1.3.24, 6.1.3.25, 6.1.3.26,
+     * and 6.1.3.27.
+     *
+     * This field contains the relevant call duration in seconds. For incomplete
+     * calls (call attempts) the relevant duration is the call holding time from
+     * the seizure to the release of the traffic channel. For complete
+     * (answered) calls this is the chargeable duration from answer to release
+     * of the traffic channel. For partial records this is the duration of the
+     * individual partial record and not the cumulative duration of the call. It
+     * should be noted that the time stamps may be expressed in terms of tenths
+     * of seconds or even milliseconds and, as a result, the calculation of the
+     * call duration may result in the rounding or truncation of the measured
+     * duration to a whole number of seconds. Whether or not rounding or
+     * truncation is to be used is considered to be outside the scope of the
+     * present document subject to the following restrictions: If CAMEL is
+     * invoked for the call and a control relationship is existing, the call
+     * might continue after a RELEASE or a DISCONNECT from the called party side
+     * received by the gsmSSF. The call duration of the incoming leg is stored
+     * in the main body of the call record. For each outgoing leg the call
+     * duration is stored in the respective 'CAMELInformation' module. If a call
+     * leg does not reach answer status and attempt charging is enabled a
+     * 'CAMELInformation' module containing the holding time is generated.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.4.
+     *
      * @public
      * @readonly
      */
     readonly callDuration: OPTIONAL<INTEGER>;
     /**
      * @summary `dataVolume`.
+     * @description
+     *
+     * The CAMEL CPH leg tables do not list data volume on the outgoing leg. The
+     * parent CDR records the number of data segments when the MSC knows it.
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.23 and 6.1.3.1.
+     *
+     * This field includes the number of 64 octet segments transmitted during
+     * the use of data services if known.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.15.
+     *
      * @public
      * @readonly
      */
     readonly dataVolume: OPTIONAL<INTEGER>;
     /**
      * @summary `cAMELInitCFIndicator`.
+     * @description
+     *
+     * Indicates that the CAMEL server initiated call forwarding.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.27.
+     *
      * @public
      * @readonly
      */
     readonly cAMELInitCFIndicator: OPTIONAL<CAMELInitCFIndicator>;
     /**
      * @summary `causeForTerm`.
+     * @description
+     *
+     * The reason for disappearing of the leg in this call segment.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.23, 6.1.3.24, 6.1.3.25, 6.1.3.26,
+     * and 6.1.3.27.
+     *
+     * This field contains a generalised reason for the release of the
+     * connection including the following: normal release; CAMEL initiated call
+     * release; partial record generation; partial record call re-establishment;
+     * unsuccessful call attempt; abnormal termination during the stable phase;
+     * unauthorized network originating a location service request; unauthorized
+     * client requesting a location service; position method failure at a
+     * location service execution; unknown or unreachable LCS client at a
+     * location service request. A more detailed reason may be found in the
+     * diagnostics field.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.13.
+     *
      * @public
      * @readonly
      */
     readonly causeForTerm: OPTIONAL<CauseForTerm>;
     /**
      * @summary `cAMELModification`.
+     * @description
+     *
+     * Parameters CAMEL modified on this outgoing leg. Clause 5.1.3.2 says
+     * CAMEL-modified parameters are recorded for one call leg, including the
+     * effect of every CAMEL service on that leg. 3GPP TS 32.250 V19.0.0 clauses
+     * 5.1.3.2 and 5.1.3.14.
+     *
      * @public
      * @readonly
      */
     readonly cAMELModification: OPTIONAL<ChangedParameters>;
     /**
      * @summary `freeFormatData`.
+     * @description
+     *
+     * If received in the FCI message from SCF.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.23, 6.1.3.24, 6.1.3.25, 6.1.3.26,
+     * and 6.1.3.27.
+     *
+     * This field contains charging information sent by the gsmSCF in the
+     * Furnish Charging Information (FCI) messages as defined in TS 29.078
+     * [217]. The data can be sent either in one FCI message or several FCI
+     * messages with append indicator. This data is transferred transparently in
+     * the CAMEL clauses of the relevant call records. 'Free format data' sent
+     * to the legID=1 is always stored in the top level of the respective
+     * record. 'Free format data' sent to the legID >1 is stored in the
+     * appropriate CAMEL call leg information field. If the FCI is received more
+     * than once during one continuing incoming/outgoing CAMEL call leg, the
+     * append indicator defines whether the FCI information is appended to
+     * previous FCI and stored in the relevant record or the information of the
+     * last FCI received is stored in the relevant record (the previous FCI
+     * information shall be overwritten). In the event of partial output the
+     * currently valid 'Free format data' is stored in the partial record.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.26.
+     *
      * @public
      * @readonly
      */
     readonly freeFormatData: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `diagnostics`.
+     * @description
+     *
+     * Detailed reason for disappearing of the leg in this call segment.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.23, 6.1.3.24, 6.1.3.25, 6.1.3.26,
+     * and 6.1.3.27.
+     *
+     * This field includes a more detailed technical reason for the release of
+     * the connection and may contain one of the following: a MAP error from TS
+     * 29.002 [214]; a Cause from TS 24.008 [208]; a Cause from TS 29.078 [217];
+     * a Cause from ITU-T Recommendation Q.767 [309]; a LCS diagnostics
+     * according TS 29.002 [214]. The diagnostics may also be extended to
+     * include manufacturer and network specific information.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.18.
+     *
      * @public
      * @readonly
      */
     readonly diagnostics: OPTIONAL<HLRIntResult>;
     /**
      * @summary `freeFormatDataAppend`.
+     * @description
+     *
+     * If received in the FCI message from SCF.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.23, 6.1.3.24, 6.1.3.25, 6.1.3.26,
+     * and 6.1.3.27.
+     *
+     * This field contains an indicator whether free format data is to be
+     * appended to free format data stored in previous partial CDR. This field
+     * is needed in CDR post-processing to sort out valid free format data for
+     * that call leg from sequence of partial records. Creation of partial
+     * records is independent on received FCIs and thus valid free format data
+     * may be divided to different partial records. If field is missing then
+     * free format data in this CDR replaces all received free format data in
+     * previous CDRs. Append indicator is not needed in the first partial
+     * record. In following partial records indicator shall get value true if
+     * all FCIs received during that partial record have append indicator. If
+     * one or more of the received FCIs for that call leg during the partial
+     * record do not have append indicator then this field shall be missing.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.27.
+     *
      * @public
      * @readonly
      */
     readonly freeFormatDataAppend: OPTIONAL<BOOLEAN>;
     /**
      * @summary `freeFormatData_2`.
+     * @description
+     *
+     * If provided in the FCI message for a 2nd service.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.23, 6.1.3.24, 6.1.3.25, 6.1.3.26,
+     * and 6.1.3.27.
+     *
      * @public
      * @readonly
      */
     readonly freeFormatData_2: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `freeFormatDataAppend_2`.
+     * @description
+     *
+     * If provided in the FCI message for a 2nd service.
+     *
+     * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.23, 6.1.3.24, 6.1.3.25, 6.1.3.26,
+     * and 6.1.3.27.
+     *
      * @public
      * @readonly
      */
@@ -221,7 +458,7 @@ class CAMELInformation {
     /**
      * @summary Restructures an object into a CAMELInformation
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `CAMELInformation`.
      * 
      * @public
@@ -246,9 +483,9 @@ class CAMELInformation {
 /**
  * @summary The Leading Root Component Types of CAMELInformation
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -275,9 +512,9 @@ const _root_component_type_list_1_spec_for_CAMELInformation: $.ComponentSpec[] =
 /**
  * @summary The Trailing Root Component Types of CAMELInformation
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -288,9 +525,9 @@ const _root_component_type_list_2_spec_for_CAMELInformation: $.ComponentSpec[] =
 /**
  * @summary The Extension Addition Component Types of CAMELInformation
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * @constant
  */
 export

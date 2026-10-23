@@ -14,7 +14,77 @@ import { LCSGNIRecord, _decode_LCSGNIRecord, _encode_LCSGNIRecord } from "../LCS
 /**
  * @summary LCSRecord
  * @description
- * 
+ *
+ * Offline charging data record produced by a Gateway Mobile
+ * Location Centre (GMLC). The GMLC collects it so that a network
+ * requesting location information may be charged by the network
+ * that provides the location. The GMLC collects:
+ *
+ * - the subscriber to be located, and the entity that requested
+ *   the location;
+ * - the GMLC or PLMN serving the LCS client;
+ * - the location QoS that was requested and the QoS delivered;
+ * - the date and time the LCS client requested the procedure;
+ * - the location service types the client is allowed to use for
+ *   that UE;
+ * - use of continuous or periodic tracking;
+ * - location-based service information beyond the location
+ *   resource data above.
+ *
+ * The alternative is the GMLC role and the request type:
+ *
+ * - `lCSGMORecord`: mobile originated location request. The UE
+ *   obtains its own location, or has it sent to another LCS
+ *   client. The R-GMLC, H-GMLC, and V-GMLC are the same, because
+ *   no privacy check is performed. The CDR is processed when the
+ *   GMLC acknowledges the MAP Subscriber Location Report.
+ * - `lCSRGMTRecord`: mobile terminated location request at the
+ *   requesting GMLC. An external LCS client asks for the location
+ *   of a target UE. The CDR is processed when the H-GMLC sends
+ *   the location service response to the R-GMLC.
+ * - `lCSHGMTRecord`: the same MT-LR, at the home GMLC. The CDR is
+ *   processed after the H-GMLC privacy check, when the V-GMLC
+ *   sends the location service response.
+ * - `lCSVGMTRecord`: the same MT-LR, at the visited GMLC. The CDR
+ *   is processed when the MSC or SGSN acknowledges the MAP
+ *   Provider Subscriber Location Report.
+ * - `lCSGNIRecord`: network induced location request, positioning
+ *   the UE for an emergency call. The CDR is processed when the
+ *   GMLC transfers the location to the LCS client.
+ *
+ * A record is produced when that CDR type is enabled, for a
+ * request performed via that GMLC.
+ *
+ * The charging trigger function, charging data function, and
+ * charging gateway function all reside in the GMLC. The GMLC
+ * transfers CDR files to the billing domain on Bl, the LCS form
+ * of Bx. Fully qualified partial CDRs are mandatory on Bl;
+ * reduced partial CDRs are optional. The first partial CDR is a
+ * fully qualified partial CDR. A vendor that implements a separate
+ * CDF and CGF should keep those interfaces aligned with Rf and Ga
+ * (TS 32.299 and TS 32.295).
+ *
+ * Field categories in clause 6.1.0:
+ *
+ * - **M** — always present in the CDR.
+ * - **C** — present when the conditions stated for that field are
+ *   met.
+ * - **Om** — operator provisionable. When provisioned to be
+ *   present, it is always included.
+ * - **Oc** — operator provisionable. When provisioned to be
+ *   present, it is included when its conditions are met.
+ *
+ * A vendor has to be able to supply every parameter. An operator
+ * may suppress Om and Oc parameters that it does not need.
+ *
+ * Online charging of the same location requests uses Debit /
+ * Reserve Units on Ro (clause 5.3). For an MO-LR the party to
+ * charge is the UE.
+ *
+ * 3GPP TS 32.271 V12.1.0 clauses 4.2, 5.1, 5.2.3, 5.2.5, 5.3,
+ * and 6.1.0.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.2.0.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

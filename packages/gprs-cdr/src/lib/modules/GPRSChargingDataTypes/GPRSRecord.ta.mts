@@ -25,7 +25,23 @@ import { TWAGRecord, _decode_TWAGRecord, _encode_TWAGRecord } from "../GPRSCharg
 /**
  * @summary GPRSRecord
  * @description
- * 
+ *
+ * Choice of the PS-domain CDRs in clause 5.2.1.0. The SGSN produces the
+ * S-CDR, M-CDR, S-SMO-CDR, S-SMT-CDR, LCS-MO-CDR, LCS-MT-CDR, LCS-NI-CDR,
+ * and S-MB-CDR. The MME also produces the S-SMO-CDR and S-SMT-CDR. The
+ * S-GW produces the SGW-CDR, the ePDG the ePDG-CDR, the TWAG the TWAG-CDR,
+ * the P-GW the PGW-CDR and the G-MB-CDR, the MBMS GW the MBMS-GW-CDR, and
+ * the TDF the TDF-CDR. Annex D adds the IPE-CDR from the IP-Edge [PCEF].
+ * The PCN uses Charging Characteristics to activate CDR generation and to
+ * set the time, volume, and charging-condition limits (clause 5.2.3.0).
+ * Charging Characteristics are not used for MBMS CDRs. Field categories
+ * and the triggers that open, extend, and close each CDR are in clauses
+ * 5.2.3 and 6.1. Full parameter definitions are in TS 32.298.
+ *
+ * 3GPP TS 32.251 V19.0.0.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

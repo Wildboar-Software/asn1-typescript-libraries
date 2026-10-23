@@ -14,7 +14,12 @@ import { UserCSGInformation_cSGAccessMode, _decode_UserCSGInformation_cSGAccessM
 /**
  * @summary UserCSGInformation
  * @description
- * 
+ *
+ * Carried inside MME and SGSN location information. TS 32.278
+ * V19.0.0 does not describe closed subscriber group
+ * information. Clause 6.3.2.1 defers formal CDR parameter
+ * definitions to TS 32.298.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,18 +37,33 @@ export
 class UserCSGInformation {
     /**
      * @summary `cSGId`.
+     * @description
+     *
+     * TS 32.278 V19.0.0 does not describe this component.
+     * Clause 6.3.2.1 defers the formal definition to TS 32.298.
+     *
      * @public
      * @readonly
      */
     readonly cSGId: OCTET_STRING;
     /**
      * @summary `cSGAccessMode`.
+     * @description
+     *
+     * TS 32.278 V19.0.0 does not describe this component.
+     * Clause 6.3.2.1 defers the formal definition to TS 32.298.
+     *
      * @public
      * @readonly
      */
     readonly cSGAccessMode: UserCSGInformation_cSGAccessMode;
     /**
      * @summary `cSGMembershipIndication`.
+     * @description
+     *
+     * TS 32.278 V19.0.0 does not describe this component.
+     * Clause 6.3.2.1 defers the formal definition to TS 32.298.
+     *
      * @public
      * @readonly
      */

@@ -18,7 +18,30 @@ import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExt
 /**
  * @summary LCSGMORecord
  * @description
- * 
+ *
+ * LCS GMLC Mobile Originated CDR (LCS-GMO-CDR). When this CDR type
+ * is enabled, the GMLC produces one for each mobile originated
+ * location request (MO-LR) performed via the GMLC.
+ *
+ * MO-LR lets the UE obtain its own geographical location, or have
+ * that location transferred to another LCS client. The R-GMLC,
+ * H-GMLC, and V-GMLC are the same, because no privacy checking is
+ * performed. The record trigger is "LCS GMLC Mobile Originated"
+ * (LCS-GMO). The GMLC processes the CDR when it acknowledges the
+ * MAP Subscriber Location Report.
+ *
+ * For online charging of the same request, the UE is the party to
+ * charge. The GMLC uses Debit / Reserve Units on Ro, either as
+ * immediate event charging or as event charging with unit
+ * reservation, according to the service and the operator's policy.
+ *
+ * Categories: **M** always present; **C** present when the field's
+ * conditions are met; **Om** and **Oc** are the operator
+ * provisionable forms of those two. Clause 6.1.0 defines them.
+ *
+ * 3GPP TS 32.271 V12.1.0 clauses 5.2.3.1, 5.3.2.1, and 6.1.3.1.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.2.0.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -46,84 +69,222 @@ export
 class LCSGMORecord {
     /**
      * @summary `recordType`.
+     * @description
+     *
+     * Category M. LCS GMLC Mobile Originated Record. Set this to
+     * `lCSGMORecord`.
+     *
+     * 3GPP TS 32.271 V12.1.0 clause 6.1.3.1.
+     *
      * @public
      * @readonly
      */
     readonly recordType: RecordType;
     /**
      * @summary `recordingEntity`.
+     * @description
+     *
+     * Category M. The E.164 address of this GMLC.
+     *
+     * 3GPP TS 32.271 V12.1.0 clause 6.1.3.1.
+     *
      * @public
      * @readonly
      */
     readonly recordingEntity: OCTET_STRING;
     /**
      * @summary `lcsClientType`.
+     * @description
+     *
+     * Category C. The type of the LCS client that invoked the
+     * location request, if it is available. The values are those
+     * defined for the LCS client type in TS 29.002.
+     *
+     * 3GPP TS 32.271 V12.1.0 clause 6.1.3.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.2.3.
+     *
      * @public
      * @readonly
      */
     readonly lcsClientType: OPTIONAL<LCSClientType>;
     /**
      * @summary `lcsClientIdentity`.
+     * @description
+     *
+     * Category C. Further identification of the LCS client, if
+     * available. TS 32.298 carries the LCS client identity from
+     * TS 29.002: external ID, number dialled by the MS, and
+     * internal ID.
+     *
+     * For online charging, the LCS Client ID information element
+     * (category Oc in LCS Information) holds the ID of the LCS
+     * client that invoked the location request, if available.
+     *
+     * 3GPP TS 32.271 V12.1.0 clauses 6.1.3.1 and 6.3.1.2.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.2.2.
+     *
      * @public
      * @readonly
      */
     readonly lcsClientIdentity: OPTIONAL<LCSClientIdentity>;
     /**
      * @summary `servedIMSI`.
+     * @description
+     *
+     * Category M. The IMSI of the subscriber that requests the
+     * location. The structure of the IMSI is defined in TS 23.003.
+     *
+     * 3GPP TS 32.271 V12.1.0 clause 6.1.3.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.79.
+     *
      * @public
      * @readonly
      */
     readonly servedIMSI: OCTET_STRING;
     /**
      * @summary `servedMSISDN`.
+     * @description
+     *
+     * Category Om. The primary MSISDN of the subscriber that
+     * requests the location. The structure of the MSISDN is defined
+     * in TS 23.003.
+     *
+     * 3GPP TS 32.271 V12.1.0 clause 6.1.3.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.80.
+     *
      * @public
      * @readonly
      */
     readonly servedMSISDN: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `servingEntity`.
+     * @description
+     *
+     * Category C. The E.164 address of the serving MSC for a
+     * CS-MO-LR, or of the serving SGSN for a PS-MO-LR.
+     *
+     * 3GPP TS 32.271 V12.1.0 clause 6.1.3.1.
+     *
      * @public
      * @readonly
      */
     readonly servingEntity: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `locationEstimate`.
+     * @description
+     *
+     * Category Oc. The location estimate for the subscriber when
+     * the location request succeeded and the estimate is carried as
+     * a geographic position. A location estimate is the geographic
+     * location of a UE or a valid mobile equipment, expressed in
+     * latitude and longitude.
+     *
+     * For online charging of a successful MO-LR, the Location
+     * Estimate information element (category Oc) carries the
+     * location of the MS in universal coordinates and the accuracy
+     * of the estimate. TS 32.298 encodes the estimate as the
+     * geographic location of the target MS defined in TS 29.002.
+     *
+     * 3GPP TS 32.271 V12.1.0 clauses 3.1, 6.1.3.1, and 6.3.1.2.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.2.5.
+     *
      * @public
      * @readonly
      */
     readonly locationEstimate: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `positioningData`.
+     * @description
+     *
+     * Category C. The positioning method used or attempted, if
+     * available. TS 32.298 carries the positioning data associated
+     * with a successful or unsuccessful location attempt for the
+     * target MS, as defined in TS 49.031.
+     *
+     * For online charging of an MO-LR, the Positioning Data
+     * information element (category Oc) indicates the positioning
+     * method that was attempted, if available.
+     *
+     * 3GPP TS 32.271 V12.1.0 clauses 6.1.3.1 and 6.3.1.2.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.2.7.
+     *
      * @public
      * @readonly
      */
     readonly positioningData: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `userError`.
+     * @description
+     *
+     * Category C. The location-service error, if the request failed.
+     * TS 32.298 sends this from the responder when the location
+     * request has failed or cannot proceed, using one of the
+     * TS 29.002 values: system failure, data missing, unexpected
+     * data value, facility not supported, unidentified subscriber,
+     * illegal subscriber, illegal equipment, absent subscriber
+     * (diagnostic information may also be provided), unauthorised
+     * requesting network, unauthorised LCS client with detailed
+     * reason, or position method failure with detailed reason.
+     *
+     * 3GPP TS 32.271 V12.1.0 clause 6.1.3.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.2.13.
+     *
      * @public
      * @readonly
      */
     readonly userError: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `providerError`.
+     * @description
+     *
+     * Category Oc. The protocol-related error, if the request
+     * failed. The values are those defined in TS 29.002.
+     *
+     * 3GPP TS 32.271 V12.1.0 clause 6.1.3.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.2.8.
+     *
      * @public
      * @readonly
      */
     readonly providerError: OPTIONAL<INTEGER>;
     /**
      * @summary `recordTimeStamp`.
+     * @description
+     *
+     * Category Om. Time at which this CDR was generated.
+     *
+     * 3GPP TS 32.271 V12.1.0 clause 6.1.3.1.
+     *
      * @public
      * @readonly
      */
     readonly recordTimeStamp: OCTET_STRING;
     /**
      * @summary `localSequenceNumber`.
+     * @description
+     *
+     * Category Om. Consecutive record number created by this node.
+     * The number is allocated sequentially across all CDR types
+     * produced by the node, so a gap identifies a missing record.
+     *
+     * 3GPP TS 32.271 V12.1.0 clause 6.1.3.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.26.
+     *
      * @public
      * @readonly
      */
     readonly localSequenceNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `recordExtensions`.
+     * @description
+     *
+     * Category Oc. A set of network- or manufacturer-specific
+     * extensions to the record. Present when an extension exists.
+     * TS 32.298 encodes the set as X.721 management extensions.
+     *
+     * 3GPP TS 32.271 V12.1.0 clause 6.1.3.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.48.
+     *
      * @public
      * @readonly
      */

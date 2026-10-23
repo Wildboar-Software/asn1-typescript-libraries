@@ -7,6 +7,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ChargeType
  * @description
  * 
+ * TS 32.270 names a charge type beside the charged party and does not
+ * define these values. `postpaid` is 0 and `pre-paid` is 1.
+ *
+ * 3GPP TS 32.270 V19.0.0 clause 6.1.1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,6 +32,11 @@ enum _enum_for_ChargeType {
  * @summary ChargeType
  * @description
  * 
+ * TS 32.270 names a charge type beside the charged party and does not
+ * define these values. `postpaid` is 0 and `pre-paid` is 1.
+ *
+ * 3GPP TS 32.270 V19.0.0 clause 6.1.1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,6 +54,11 @@ type ChargeType = _enum_for_ChargeType;
  * @summary ChargeType
  * @description
  * 
+ * TS 32.270 names a charge type beside the charged party and does not
+ * define these values. `postpaid` is 0 and `pre-paid` is 1.
+ *
+ * 3GPP TS 32.270 V19.0.0 clause 6.1.1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -59,6 +74,13 @@ const ChargeType = _enum_for_ChargeType;
 
 /**
  * @summary ChargeType_postpaid
+ * @description
+ *
+ * Postpaid subscription. TS 32.270 names a charge type and does not define
+ * this value.
+ *
+ * 3GPP TS 32.270 V19.0.0 clause 6.1.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -67,6 +89,13 @@ const ChargeType_postpaid: ChargeType = ChargeType.postpaid; /* LONG_NAMED_ENUME
 
 /**
  * @summary postpaid
+ * @description
+ *
+ * Postpaid subscription. TS 32.270 names a charge type and does not define
+ * this value.
+ *
+ * 3GPP TS 32.270 V19.0.0 clause 6.1.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -75,6 +104,13 @@ const postpaid: ChargeType = ChargeType.postpaid; /* SHORT_NAMED_ENUMERATED_VALU
 
 /**
  * @summary ChargeType_pre_paid
+ * @description
+ *
+ * Prepaid subscription. TS 32.270 names a charge type and does not define
+ * this value.
+ *
+ * 3GPP TS 32.270 V19.0.0 clause 6.1.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -83,6 +119,13 @@ const ChargeType_pre_paid: ChargeType = ChargeType.pre_paid; /* LONG_NAMED_ENUME
 
 /**
  * @summary pre_paid
+ * @description
+ *
+ * Prepaid subscription. TS 32.270 names a charge type and does not define
+ * this value.
+ *
+ * 3GPP TS 32.270 V19.0.0 clause 6.1.1.1.
+ *
  * @constant
  * @type {number}
  */

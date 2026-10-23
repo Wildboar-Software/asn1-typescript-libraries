@@ -6,7 +6,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ReasonforCancellation
  * @description
- * 
+ *
+ * Why an EPC-level discovery request was cancelled: a proximity alert was sent,
+ * the time window expired with no renewal, or the requestor cancelled it.
+ * Recorded in the PF-ED-CDR when the request is cancelled.
+ *
+ * 3GPP TS 32.277 V19.2.0 clauses 5.2.1.3 and 6.1.3.3. Table 6.1.3.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,7 +34,13 @@ enum _enum_for_ReasonforCancellation {
 /**
  * @summary ReasonforCancellation
  * @description
- * 
+ *
+ * Why an EPC-level discovery request was cancelled: a proximity alert was sent,
+ * the time window expired with no renewal, or the requestor cancelled it.
+ * Recorded in the PF-ED-CDR when the request is cancelled.
+ *
+ * 3GPP TS 32.277 V19.2.0 clauses 5.2.1.3 and 6.1.3.3. Table 6.1.3.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -46,7 +58,13 @@ type ReasonforCancellation = _enum_for_ReasonforCancellation;
 /**
  * @summary ReasonforCancellation
  * @description
- * 
+ *
+ * Why an EPC-level discovery request was cancelled: a proximity alert was sent,
+ * the time window expired with no renewal, or the requestor cancelled it.
+ * Recorded in the PF-ED-CDR when the request is cancelled.
+ *
+ * 3GPP TS 32.277 V19.2.0 clauses 5.2.1.3 and 6.1.3.3. Table 6.1.3.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -63,6 +81,13 @@ const ReasonforCancellation = _enum_for_ReasonforCancellation;
 
 /**
  * @summary ReasonforCancellation_proximityAlerted
+ * @description
+ *
+ * The request was cancelled because the UEs were alerted that they are in
+ * proximity.
+ *
+ * 3GPP TS 32.277 V19.2.0 clause 6.1.3.3.
+ *
  * @constant
  * @type {number}
  */
@@ -71,6 +96,11 @@ const ReasonforCancellation_proximityAlerted: ReasonforCancellation = ReasonforC
 
 /**
  * @summary proximityAlerted
+ * @description
+ *
+ * Cancelled because proximity was alerted. See
+ * `ReasonforCancellation_proximityAlerted`.
+ *
  * @constant
  * @type {number}
  */
@@ -79,6 +109,13 @@ const proximityAlerted: ReasonforCancellation = ReasonforCancellation.proximityA
 
 /**
  * @summary ReasonforCancellation_timeExpiredWithNoRrenewal
+ * @description
+ *
+ * The proximity request's time window expired and the UE did not renew it. The
+ * ASN.1 name spells renewal as `Rrenewal`.
+ *
+ * 3GPP TS 32.277 V19.2.0 clause 6.1.3.3.
+ *
  * @constant
  * @type {number}
  */
@@ -87,6 +124,11 @@ const ReasonforCancellation_timeExpiredWithNoRrenewal: ReasonforCancellation = R
 
 /**
  * @summary timeExpiredWithNoRrenewal
+ * @description
+ *
+ * Time expired with no renewal. See
+ * `ReasonforCancellation_timeExpiredWithNoRrenewal`.
+ *
  * @constant
  * @type {number}
  */
@@ -95,6 +137,12 @@ const timeExpiredWithNoRrenewal: ReasonforCancellation = ReasonforCancellation.t
 
 /**
  * @summary ReasonforCancellation_requestorCancellation
+ * @description
+ *
+ * The requestor UE cancelled the proximity request.
+ *
+ * 3GPP TS 32.277 V19.2.0 clause 6.1.3.3.
+ *
  * @constant
  * @type {number}
  */
@@ -103,6 +151,11 @@ const ReasonforCancellation_requestorCancellation: ReasonforCancellation = Reaso
 
 /**
  * @summary requestorCancellation
+ * @description
+ *
+ * Requestor cancelled the request. See
+ * `ReasonforCancellation_requestorCancellation`.
+ *
  * @constant
  * @type {number}
  */

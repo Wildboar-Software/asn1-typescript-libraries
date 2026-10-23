@@ -12,7 +12,20 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Quotas
  * @description
- * 
+ *
+ * The quotas of the MMBox in messages and/or octets identified with Messages
+ * or Octets
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.33.
+ *
+ * MMBox quota in messages, octets, or both: the maximum number of messages
+ * allowed, the maximum size allowed, or both. Category OC on a Bx1V-CDR,
+ * and present according to what the managing User Agent requested in
+ * Quotas. `numberOfMessages` is the message quota and `numberOfOctets` is
+ * the size quota.
+ *
+ * 3GPP TS 32.270 V19.0.0 clause 6.1.4.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +40,26 @@ export
 class Quotas {
     /**
      * @summary `numberOfMessages`.
+     * @description
+     *
+     * Maximum number of messages the MMBox may hold, present when the view
+     * request asked for the message quota.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.4.2.
+     *
      * @public
      * @readonly
      */
     readonly numberOfMessages: OPTIONAL<INTEGER>;
     /**
      * @summary `numberOfOctets`.
+     * @description
+     *
+     * Maximum size of the MMBox in octets, present when the view request asked
+     * for the size quota.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.4.2.
+     *
      * @public
      * @readonly
      */

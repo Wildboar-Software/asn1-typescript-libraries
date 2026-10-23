@@ -33,7 +33,30 @@ import { PresenceReportingAreaInfo, _decode_PresenceReportingAreaInfo, _encode_P
 /**
  * @summary ChangeOfServiceCondition
  * @description
- * 
+ *
+ * One container in a List of Service Data of a PGW-CDR, TDF-CDR, or
+ * IPE-CDR. It counts volume, elapsed time, and/or events for one rating
+ * group, one rating group and service id, or, when sponsored connectivity
+ * reporting is active, one rating group, sponsor identity, and application
+ * service provider identity (clauses 5.2.1.3 and 5.2.1.9). A container
+ * opens when matching traffic is detected and no active container exists,
+ * and closes when the last matching service data flow or application
+ * ends. Containers are also closed on bearer or session modification,
+ * tariff time change, failure handling, usage limits or quota events, and
+ * CDR closure (tables 5.2.3.4.1.1, 5.2.3.9.2.1, and 5.2.3.10.2.2).
+ * `serviceConditionChange` is omitted when the container is added because
+ * of CDR closure, except when closure is due to the maximum number of
+ * charging-condition changes. Only completed time envelopes are added;
+ * those triggers do not apply to envelope reporting, and an incomplete
+ * envelope is carried into the next partial CDR (clause 5.2.3.4.1). Table
+ * 6.1.3.3 is the field handling when charging per IP-CAN session is
+ * active. Where that table only refers to TS 32.298, the field description
+ * is left to that specification.
+ *
+ * 3GPP TS 32.251 V19.0.0.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -86,222 +109,643 @@ export
 class ChangeOfServiceCondition {
     /**
      * @summary `ratingGroup`.
+     * @description
+     *
+     * Rating Group is the identifier of rating group. This field is mandatory.
+     * The parameter corresponds to the Charging Key as specified in TS 23.203
+     * [203].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+     *
+     * PGW-CDR service-data container field category M (3GPP TS 32.251 V19.0.0
+     * table 6.1.3.3).
+     *
      * @public
      * @readonly
      */
     readonly ratingGroup: INTEGER;
     /**
      * @summary `chargingRuleBaseName`.
+     * @description
+     *
+     * Charging Rule Base Name is the reference to group of PCC rules predefined
+     * at the PCEF. This field is included if any of the PCC rules, which usage
+     * is reported within this service data container, was activated by using the
+     * Charging Rule Base Name as specified in TS 29.212 [220]. In case multiple
+     * Charging Rule Base Names activate PCC rules, which usage is reported
+     * within this service data container, the P-GW/IPE-CDR shall include only
+     * one occurrence to the service data container.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+     *
+     * PGW-CDR service-data container field category OC (3GPP TS 32.251 V19.0.0
+     * table 6.1.3.3).
+     *
      * @public
      * @readonly
      */
     readonly chargingRuleBaseName: OPTIONAL<IA5String>;
     /**
      * @summary `resultCode`.
+     * @description
+     *
+     * Result Code contains the result code after the interconnection with the
+     * OCS. This field may be added to the service data container if online and
+     * offline charging are both used for same rating group. The result code in
+     * service data container is the value of the Result-Code AVP received within
+     * last CCA message in corresponding MSCC AVP to this service data container.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+     *
+     * PGW-CDR service-data container field category OC (3GPP TS 32.251 V19.0.0
+     * table 6.1.3.3).
+     *
      * @public
      * @readonly
      */
     readonly resultCode: OPTIONAL<INTEGER>;
     /**
      * @summary `localSequenceNumber`.
+     * @description
+     *
+     * Local Sequence Number is a service data container sequence number. It
+     * starts from 1 and is increased by 1 for each service date container
+     * generated within the lifetime of this IP-CAN bearer/TDF session.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+     *
+     * PGW-CDR service-data container field category OC (3GPP TS 32.251 V19.0.0
+     * table 6.1.3.3).
+     *
      * @public
      * @readonly
      */
     readonly localSequenceNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `timeOfFirstUsage`.
+     * @description
+     *
+     * Time of First Usage is the time stamp for the first IP packet to be
+     * transmitted and mapped to the current service data container. For envelope
+     * reporting controlled by the Time Quota Mechanism, this indicates the time
+     * stamp for the first IP packet to be transmitted that causes an envelope to
+     * be opened - see TS 32.299 [50].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+     *
+     * PGW-CDR service-data container field category OC (3GPP TS 32.251 V19.0.0
+     * table 6.1.3.3).
+     *
      * @public
      * @readonly
      */
     readonly timeOfFirstUsage: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `timeOfLastUsage`.
+     * @description
+     *
+     * Time of Last Usage is the time stamp for the last IP packet to be
+     * transmitted and mapped to the current service data container. For envelope
+     * reporting, controlled by the Time Quota Mechanism, this indicates the time
+     * stamp for an envelope to be closed - see TS 32.299 [50] for conditions for
+     * envelope closure.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+     *
+     * PGW-CDR service-data container field category OC (3GPP TS 32.251 V19.0.0
+     * table 6.1.3.3).
+     *
      * @public
      * @readonly
      */
     readonly timeOfLastUsage: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `timeUsage`.
+     * @description
+     *
+     * Time Usage contains the effective used time within the service data
+     * container recording interval.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+     *
+     * PGW-CDR service-data container field category OC (3GPP TS 32.251 V19.0.0
+     * table 6.1.3.3).
+     *
      * @public
      * @readonly
      */
     readonly timeUsage: OPTIONAL<INTEGER>;
     /**
      * @summary `serviceConditionChange`.
+     * @description
+     *
+     * Service Condition Change defines the reason for closing the service data
+     * container (see TS 32.251 [11]), such as tariff time change, IP-CAN bearer
+     * modification (e.g. QoS change, S-GW change, user location change, user CSG
+     * information change), access change of service data flow, indirect service
+     * condition change, service usage thresholds, service idled out, termination
+     * or failure handling procedure. When one of the "CGI/SAI, ECGI or TAI or
+     * RAI Change" are reported as user location change, the dedicated value in
+     * service Condition Change is set instead of the generic "user location
+     * change" value. This field is specified as bitmask for support of multiple
+     * change trigger (e.g. S-GW and QoS change). This field is derived from
+     * Change-Condition AVP at Service-Data-Container AVP level defined in TS
+     * 32.299 [50] when received on Rf.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+     *
+     * Reason this service-data container was closed. Table 6.1.3.3 points at
+     * "clause 5.3.2.X" for the permitted values; that is not a clause number
+     * in this specification. The recording triggers are in tables 5.2.3.4.1.1,
+     * 5.2.3.9.2.1, and 5.2.3.10.2.2. The field is omitted when the container
+     * is added because the CDR is closing, except when closure is due to the
+     * maximum number of charging-condition changes, in which case the original
+     * condition is kept (clause 5.2.3.4.1).
+     *
+     * PGW-CDR service-data container field category M (3GPP TS 32.251 V19.0.0
+     * table 6.1.3.3).
+     *
      * @public
      * @readonly
      */
     readonly serviceConditionChange: ServiceConditionChange;
     /**
      * @summary `qoSInformationNeg`.
+     * @description
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+     *
+     * This field contains the authorized QoS for the IP-CAN bearer that is
+     * first reported for the Rating Group or Rating Group Service Identifier
+     * in the container. If traffic from multiple bearers is included in the
+     * report for the container, only one field is included. This field
+     * includes: QCI and ARP. For non-GBR QCI values, this field also includes
+     * the MBR for the downlink and uplink direction. For GBR QCI values, this
+     * field also includes GBR for the downlink and uplink direction. If the
+     * MBR is different than the GBR, then this field also includes the MBR for
+     * the downlink and uplink direction. This field does not include the
+     * APN-AMBR, which is contained in a separate field in the CDR for the
+     * IP-CAN session.
+     *
+     * PGW-CDR service-data container field category OC (3GPP TS 32.251 V19.0.0
+     * table 6.1.3.3).
+     *
      * @public
      * @readonly
      */
     readonly qoSInformationNeg: OPTIONAL<EPCQoSInformation>;
     /**
      * @summary `servingNodeAddress`.
+     * @description
+     *
+     * Serving Node Address contains the valid serving node (e.g. SGSN/S-GW)
+     * control plane IP address during the service data container recording
+     * interval.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+     *
+     * PGW-CDR service-data container field category OC (3GPP TS 32.251 V19.0.0
+     * table 6.1.3.3).
+     *
      * @public
      * @readonly
      */
     readonly servingNodeAddress: OPTIONAL<GSNAddress>;
     /**
      * @summary `datavolumeFBCUplink`.
+     * @description
+     *
+     * Data Volume Uplink.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+     *
+     * PGW-CDR service-data container field category OC (3GPP TS 32.251 V19.0.0
+     * table 6.1.3.3).
+     *
      * @public
      * @readonly
      */
     readonly datavolumeFBCUplink: OPTIONAL<INTEGER>;
     /**
      * @summary `datavolumeFBCDownlink`.
+     * @description
+     *
+     * Data Volume Downlink.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+     *
+     * PGW-CDR service-data container field category OC (3GPP TS 32.251 V19.0.0
+     * table 6.1.3.3).
+     *
      * @public
      * @readonly
      */
     readonly datavolumeFBCDownlink: OPTIONAL<INTEGER>;
     /**
      * @summary `timeOfReport`.
+     * @description
+     *
+     * Report Time.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+     *
+     * PGW-CDR service-data container field category M (3GPP TS 32.251 V19.0.0
+     * table 6.1.3.3).
+     *
      * @public
      * @readonly
      */
     readonly timeOfReport: OCTET_STRING;
     /**
      * @summary `failureHandlingContinue`.
+     * @description
+     *
+     * Present when the P-GW or TDF has triggered the Failure-Handling
+     * procedure. The List of Service Data indicates the scenario (Continue or
+     * Retry&Terminate or Terminate, for a new or ongoing session) and the
+     * instant the failure action is triggered (tables 6.1.3.1 and 6.1.14.1,
+     * clause 5.3.1.4, and annex B). If the user is only online charged,
+     * Failure Handling Continue opens a new PGW-CDR or TDF-CDR.
+     *
      * @public
      * @readonly
      */
     readonly failureHandlingContinue: OPTIONAL<BOOLEAN>;
     /**
      * @summary `serviceIdentifier`.
+     * @description
+     *
+     * Service Identifier is an identifier for a service. The service identifier
+     * may designate an end user service, a part of an end user service or an
+     * arbitrarily formed group thereof. This field is only included if reporting
+     * is per combination of the rating group and service id.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+     *
+     * PGW-CDR service-data container field category OC (3GPP TS 32.251 V19.0.0
+     * table 6.1.3.3).
+     *
      * @public
      * @readonly
      */
     readonly serviceIdentifier: OPTIONAL<INTEGER>;
     /**
      * @summary `pSFurnishChargingInformation`.
+     * @description
+     *
+     * PS Furnish Charging Information.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+     *
+     * PGW-CDR service-data container field category OC (3GPP TS 32.251 V19.0.0
+     * table 6.1.3.3).
+     *
      * @public
      * @readonly
      */
     readonly pSFurnishChargingInformation: OPTIONAL<PSFurnishChargingInformation>;
     /**
      * @summary `aFRecordInformation`.
+     * @description
+     *
+     * AF-Record-Information.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+     *
+     * PGW-CDR service-data container field category OC (3GPP TS 32.251 V19.0.0
+     * table 6.1.3.3).
+     *
      * @public
      * @readonly
      */
     readonly aFRecordInformation: OPTIONAL<AFRecordInformation[]>;
     /**
      * @summary `userLocationInformation`.
+     * @description
+     *
+     * user location information.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+     *
+     * PGW-CDR service-data container field category OC (3GPP TS 32.251 V19.0.0
+     * table 6.1.3.3).
+     *
      * @public
      * @readonly
      */
     readonly userLocationInformation: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `eventBasedChargingInformation`.
+     * @description
+     *
+     * PGW-CDR service-data container field category OC (3GPP TS 32.251 V19.0.0
+     * table 6.1.3.3).
+     *
      * @public
      * @readonly
      */
     readonly eventBasedChargingInformation: OPTIONAL<EventBasedChargingInformation>;
     /**
      * @summary `timeQuotaMechanism`.
+     * @description
+     *
+     * PGW-CDR service-data container field category OC (3GPP TS 32.251 V19.0.0
+     * table 6.1.3.3).
+     *
      * @public
      * @readonly
      */
     readonly timeQuotaMechanism: OPTIONAL<TimeQuotaMechanism>;
     /**
      * @summary `serviceSpecificInfo`.
+     * @description
+     *
+     * Service Specific Info holds service specific data for a pre-defined PCC or
+     * a predefined ADC rule that is used for enhanced packet filtering.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+     *
+     * PGW-CDR service-data container field category OC (3GPP TS 32.251 V19.0.0
+     * table 6.1.3.3).
+     *
      * @public
      * @readonly
      */
     readonly serviceSpecificInfo: OPTIONAL<ServiceSpecificInfo[]>;
     /**
      * @summary `threeGPP2UserLocationInformation`.
+     * @description
+     *
+     * 3GPP2 User Location Information.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+     *
+     * PGW-CDR service-data container field category OC (3GPP TS 32.251 V19.0.0
+     * table 6.1.3.3).
+     *
      * @public
      * @readonly
      */
     readonly threeGPP2UserLocationInformation: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `sponsorIdentity`.
+     * @description
+     *
+     * Sponsor Identity identifies the sponsor willing to pay for the operator's
+     * charge for connectivity.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+     *
+     * PGW-CDR service-data container field category OC (3GPP TS 32.251 V19.0.0
+     * table 6.1.3.3).
+     *
      * @public
      * @readonly
      */
     readonly sponsorIdentity: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `applicationServiceProviderIdentity`.
+     * @description
+     *
+     * Application service provider identity used when sponsored connectivity
+     * reporting is active. Together with the rating group and the sponsor
+     * identity it identifies the reporting level for the service data flow
+     * (clause 5.2.1.3). A PCC rule may carry this identity for offline
+     * charging.
+     *
+     * PGW-CDR service-data container field category OC (3GPP TS 32.251 V19.0.0
+     * table 6.1.3.3).
+     *
      * @public
      * @readonly
      */
     readonly applicationServiceProviderIdentity: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `aDCRuleBaseName`.
+     * @description
+     *
+     * Name of a pre-defined group of ADC rules. Used for TDF application based
+     * charging (table 6.3.1.2.1). Table 6.1.3.3 says this field is not
+     * applicable to the PGW-CDR.
+     *
+     * PGW-CDR service-data container field category OC (3GPP TS 32.251 V19.0.0
+     * table 6.1.3.3).
+     *
      * @public
      * @readonly
      */
     readonly aDCRuleBaseName: OPTIONAL<IA5String>;
     /**
      * @summary `presenceReportingAreaStatus`.
+     * @description
+     *
+     * Presence Reporting Area Status contains the status of the UE presence
+     * (i.e. indication on whether the UE is inside or outside) in the Presence
+     * Reporting Area(s) identified by "Presence Reporting Area identifier(s)"
+     * contained in PGW-CDR main level. This is included in the service data
+     * container when the initial status is reported after opening of PGW-CDR, or
+     * if previous container's change condition is "Presence in Presence
+     * Reporting Area Change". This field is not applicable in multiple PRA(s).
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+     *
+     * PGW-CDR service-data container field category OC (3GPP TS 32.251 V19.0.0
+     * table 6.1.3.3).
+     *
      * @public
      * @readonly
      */
     readonly presenceReportingAreaStatus: OPTIONAL<PresenceReportingAreaStatus>;
     /**
      * @summary `userCSGInformation`.
+     * @description
+     *
+     * User CSG information contains the status of the user accessing a CSG cell
+     * (CSG ID within the PLMN, Access mode and indication on CSG membership)
+     * during the service data container recording interval. This is included in
+     * the service data container only if previous container's change condition
+     * is "user CSG information change". Note the "user CSG information" in
+     * PGW-CDR main level contains the "user CSG information" when PGW-CDR was
+     * opened.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+     *
+     * User CSG information captured with this service-data container. On a
+     * user CSG information change, entry to a CSG cell or a hybrid cell
+     * includes the CSG ID, access mode, and, for hybrid, the membership
+     * indication. Leaving such a cell omits them unless the user is entering
+     * another one (clause 5.2.3.4.1).
+     *
      * @public
      * @readonly
      */
     readonly userCSGInformation: OPTIONAL<UserCSGInformation>;
     /**
      * @summary `rATType`.
+     * @description
+     *
+     * Holds the value of RAT Type, as provided to S-GW and P-GW, specified in TS
+     * 29.061 [216] and also provided to the TDF as specified in TS 29.212 [220].
+     * The field is provided by the SGSN/MME and transferred to the S-GW/P-GW
+     * during the IP-CAN bearer activation/modification and transferred to the
+     * TDF during the TDF session establishment/modification.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.47.
+     *
+     * PGW-CDR service-data container field category OC (3GPP TS 32.251 V19.0.0
+     * table 6.1.3.3).
+     *
      * @public
      * @readonly
      */
     readonly rATType: OPTIONAL<INTEGER>;
     /**
      * @summary `uWANUserLocationInformation`.
+     * @description
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+     *
+     * This field contains the UE location in an Untrusted Wireless Access
+     * Network (UWAN) which includes the UE local IP address and optionally UDP
+     * or TCP source port number (if NAT is detected) as defined in TS 29.274
+     * [210]. It may also include WLAN location information the ePDG may have
+     * received from the 3GPP AAA server about the UE as "WLAN location
+     * information" defined in TS 29.274 [210].
+     *
+     * PGW-CDR service-data container field category OC (3GPP TS 32.251 V19.0.0
+     * table 6.1.3.3).
+     *
      * @public
      * @readonly
      */
     readonly uWANUserLocationInformation: OPTIONAL<UWANUserLocationInfo>;
     /**
      * @summary `relatedChangeOfServiceCondition`.
+     * @description
+     *
+     * Related Change of Service Condition indicates the reason a related
+     * container was closed when the current container is indirectly closed and
+     * the supplemental information for the event. This information is applicable
+     * when charging per IP-CAN session is active for a multi-access PDN
+     * connection.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+     *
+     * PGW-CDR service-data container field category OC (3GPP TS 32.251 V19.0.0
+     * table 6.1.3.3).
+     *
      * @public
      * @readonly
      */
     readonly relatedChangeOfServiceCondition: OPTIONAL<RelatedChangeOfServiceCondition>;
     /**
      * @summary `servingPLMNRateControl`.
+     * @description
+     *
+     * This field contains the Serving PLMN Rate Control as specified in TS
+     * 23.401 [245], which is used during the record for the PDN connection to
+     * the PGW.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.68A.
+     *
+     * PGW-CDR service-data container field category OC (3GPP TS 32.251 V19.0.0
+     * table 6.1.3.3).
+     *
      * @public
      * @readonly
      */
     readonly servingPLMNRateControl: OPTIONAL<ServingPLMNRateControl>;
     /**
      * @summary `aPNRateControl`.
+     * @description
+     *
+     * This field contains the APN Rate Control as specified in TS 23.401 [245],
+     * which is used during the record for the PDN connection to the PGW.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.1A.
+     *
+     * PGW-CDR service-data container field category OC (3GPP TS 32.251 V19.0.0
+     * table 6.1.3.3).
+     *
      * @public
      * @readonly
      */
     readonly aPNRateControl: OPTIONAL<APNRateControl>;
     /**
      * @summary `threeGPPPSDataOffStatus`.
+     * @description
+     *
+     * This field contains the status of the UE’s 3GPP PS Data Off Status.
+     *
+     * PGW-CDR service-data container field category OC (3GPP TS 32.251 V19.0.0
+     * table 6.1.3.3).
+     *
      * @public
      * @readonly
      */
     readonly threeGPPPSDataOffStatus: OPTIONAL<ThreeGPPPSDataOffStatus>;
     /**
      * @summary `trafficSteeringPolicyIDDownlink`.
+     * @description
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+     *
+     * This field contains the traffic steering policy identifier in the
+     * downlink direction.
+     *
+     * PGW-CDR service-data container field category OC (3GPP TS 32.251 V19.0.0
+     * table 6.1.3.3).
+     *
      * @public
      * @readonly
      */
     readonly trafficSteeringPolicyIDDownlink: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `trafficSteeringPolicyIDUplink`.
+     * @description
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+     *
+     * This field contains the traffic steering policy identifier in the uplink
+     * direction.
+     *
+     * PGW-CDR service-data container field category OC (3GPP TS 32.251 V19.0.0
+     * table 6.1.3.3).
+     *
      * @public
      * @readonly
      */
     readonly trafficSteeringPolicyIDUplink: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `tWANUserLocationInformation`.
+     * @description
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+     *
+     * Table 6.1.3.3 does not list TWAN User Location Information on the
+     * service-data container. On the CDR tables that do include it, the field
+     * is the UE location in a Trusted WLAN Access Network, if available: the
+     * TWAN identifier for S2a GTP (TS 29.274), or the Access Network
+     * Identifier Option IE for S2a PMIP (TS 29.275).
+     *
      * @public
      * @readonly
      */
     readonly tWANUserLocationInformation: OPTIONAL<TWANUserLocationInfo>;
     /**
      * @summary `listOfPresenceReportingAreaInformation`.
+     * @description
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+     *
+     * This field contains a list of Presence Reporting Area Identifier(s) for
+     * the UE PDN connection, and the Presence Reporting Area(s) status (UE
+     * presence or not, inactive), differentiated between PCRF and OCS
+     * subscription.
+     *
+     * PGW-CDR service-data container field category OC (3GPP TS 32.251 V19.0.0
+     * table 6.1.3.3).
+     *
      * @public
      * @readonly
      */

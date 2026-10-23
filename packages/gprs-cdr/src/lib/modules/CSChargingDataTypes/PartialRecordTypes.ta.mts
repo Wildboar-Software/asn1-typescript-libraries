@@ -9,7 +9,12 @@ import { PartialRecordType, _decode_PartialRecordType, _encode_PartialRecordType
 /**
  * @summary PartialRecordTypes
  * @description
- * 
+ *
+ * This field indicates the event that caused the generation of a partial
+ * record.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.64.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

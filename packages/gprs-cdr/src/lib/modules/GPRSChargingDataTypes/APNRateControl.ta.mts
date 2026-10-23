@@ -11,7 +11,18 @@ import { APNRateControlParameters, _decode_APNRateControlParameters, _encode_APN
 /**
  * @summary APNRateControl
  * @description
- * 
+ *
+ * This field contains the APN Rate Control as specified in TS 23.401 [245],
+ * which is used during the record for the PDN connection to the PGW.
+ *
+ * A change of APN Rate Control closes the open traffic-volume containers
+ * and, where FBC applies, the service-data containers (clauses 5.2.3.3 and
+ * 5.2.3.4).
+ *
+ * 3GPP TS 32.251 V19.0.0.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.1A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,12 +37,24 @@ export
 class APNRateControl {
     /**
      * @summary `aPNRateControlUplink`.
+     * @description
+     *
+     * Uplink APN Rate Control enforced in the P-GW (tables 6.1.3.1 and
+     * 6.1.3.2). A change of APN Rate Control closes the open volume containers
+     * (clauses 5.2.3.3 and 5.2.3.4).
+     *
      * @public
      * @readonly
      */
     readonly aPNRateControlUplink: OPTIONAL<APNRateControlParameters>;
     /**
      * @summary `aPNRateControlDownlink`.
+     * @description
+     *
+     * Downlink APN Rate Control enforced in the P-GW (tables 6.1.3.1 and
+     * 6.1.3.2). A change of APN Rate Control closes the open volume containers
+     * (clauses 5.2.3.3 and 5.2.3.4).
+     *
      * @public
      * @readonly
      */

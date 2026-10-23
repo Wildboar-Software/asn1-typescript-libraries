@@ -20,7 +20,28 @@ import { SystemType, _decode_SystemType, _encode_SystemType, _enum_for_SystemTyp
 /**
  * @summary SSActionRecord
  * @description
- * 
+ *
+ * Supplementary-service action CDR, produced in the MSC or HLR that performs
+ * the action. Non-call-related subscriber-controlled input, such as
+ * registration of call forwarding, is recorded here. Call-related actions,
+ * such as invocation of CLIP, CLIR, or AoC, may be recorded here or in-line
+ * in the MOC or MTC, depending on billing-domain configuration.
+ *
+ * Each action applies to one or more basic-service groups. Omit
+ * `basicServices` when the action applies to all basic services. USSD
+ * actions may also be recorded here. Because USSD is non-standard,
+ * `supplService`, `ssAction`, or the basic service may be absent.
+ *
+ * Call hold and multi-party invocation are examples that produce this record
+ * when separate SS-action recording is configured (clause 5.1.3.5). An
+ * action that affects a whole conference may be recorded here or on the
+ * common-equipment record.
+ *
+ * `systemType` is omitted when a GSM air interface provides the service.
+ * Categories are M, C, OM, and OC as in TS 32.240 clause 5.4.
+ *
+ * 3GPP TS 32.250 V19.0.0 clauses 5.1.3.3, 5.1.3.5, and 6.1.3.9.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,103 +65,274 @@ import { SystemType, _decode_SystemType, _encode_SystemType, _enum_for_SystemTyp
  *       ManagementExtension OPTIONAL,
  *    systemType         [15] IMPLICIT SystemType OPTIONAL}
  * ```
- * 
  * @class
  */
 export
 class SSActionRecord {
     /**
      * @summary `recordType`.
+     * @description
+     *
+     * 2G and 3G mandatory. Supplementary service action.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.9.
+     *
+     * The field identifies the type of the record e.g. mobile originated,
+     * mobile terminated etc.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.72.
+     *
      * @public
      * @readonly
      */
     readonly recordType: RecordType;
     /**
      * @summary `servedIMSI`.
+     * @description
+     *
+     * 2G and 3G mandatory. The IMSI of the MS performing the action.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.9.
+     *
+     * This fields contains the international mobile subscriber identity (IMSI)
+     * of the served party. The term "served" party is used to describe the
+     * mobile subscriber involved in the transaction recorded e.g. the calling
+     * subscriber in case of an MOC record. The structure of the IMSI is defined
+     * in TS 23.003 [200].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.79.
+     *
      * @public
      * @readonly
      */
     readonly servedIMSI: OCTET_STRING;
     /**
      * @summary `servedIMEI`.
+     * @description
+     *
+     * 2G and 3G operator-provisionable conditional. The IMEI of the ME
+     * performing the action.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.9.
+     *
+     * This fields contains the international mobile equipment identity (IMEI)
+     * or IMEISV of the equipment served. The term "served" equipment is used to
+     * describe the ME involved in the transaction recorded e.g. the called ME
+     * in case of an MTC record. The structure of the IMEI, IMEISV is specified
+     * in TS 23.003 [200] and the encoding defined in TS 29.274 [223].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.78.
+     *
      * @public
      * @readonly
      */
     readonly servedIMEI: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `servedMSISDN`.
+     * @description
+     *
+     * 2G and 3G operator-provisionable mandatory. The primary MSISDN of the
+     * party performing the action.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.9.
+     *
+     * This fields contains the mobile station ISDN number (MSISDN) of the
+     * served party. The term "served" party is used to describe the mobile
+     * subscriber involved in the transaction recorded e.g. the called
+     * subscriber in case of an MTC record. In case of multi-numbering the
+     * MSISDN stored in a MOC record will be the primary MSISDN of the calling
+     * party. The structure of the MSISDN is defined in TS 23.003 [200].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.80.
+     *
      * @public
      * @readonly
      */
     readonly servedMSISDN: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `msClassmark`.
+     * @description
+     *
+     * 2G and 3G mandatory. The mobile station classmark.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.9.
+     *
      * @public
      * @readonly
      */
     readonly msClassmark: OCTET_STRING;
     /**
      * @summary `recordingEntity`.
+     * @description
+     *
+     * 2G and 3G mandatory. The E.164 number of the visited MSC / HLR.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.9.
+     *
+     * This field contains the E.164 [308] number assigned to the entity (MSC,
+     * VLR, HLR etc.) that produced the record. For further details concerning
+     * the structure of MSC and location register numbers see TS 23.003 [200].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.73.
+     *
      * @public
      * @readonly
      */
     readonly recordingEntity: OCTET_STRING;
     /**
      * @summary `location`.
+     * @description
+     *
+     * 2G and 3G operator-provisionable mandatory. The identity of the cell or
+     * the SAC, including the location area code and MCC+MNC, from which the
+     * request originated.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.9.
+     *
      * @public
      * @readonly
      */
     readonly location: OPTIONAL<LocationAreaAndCell>;
     /**
      * @summary `basicServices`.
+     * @description
+     *
+     * 2G and 3G conditional. The basic service group(s) to which the
+     * supplementary service applies. This field is not provided if the action
+     * applies to all basic services.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.9.
+     *
      * @public
      * @readonly
      */
     readonly basicServices: OPTIONAL<BasicService[]>;
     /**
      * @summary `supplService`.
+     * @description
+     *
+     * 2G and 3G conditional. The supplementary service or group of
+     * supplementary services for which the request was made. May not be
+     * available in case of USSD.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.9.
+     *
      * @public
      * @readonly
      */
     readonly supplService: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `ssAction`.
+     * @description
+     *
+     * 2G and 3G conditional. Activation, deactivation, interrogation etc. May
+     * not be available in case of USSD.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.9.
+     *
      * @public
      * @readonly
      */
     readonly ssAction: OPTIONAL<SSActionType>;
     /**
      * @summary `ssActionTime`.
+     * @description
+     *
+     * 2G and 3G mandatory. The time at which the action was requested.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.9.
+     *
      * @public
      * @readonly
      */
     readonly ssActionTime: OCTET_STRING;
     /**
      * @summary `ssParameters`.
+     * @description
+     *
+     * 2G and 3G conditional. Service dependent parameters or unstructured
+     * supplementary service data, if defined for the SS action recorded in this
+     * CDR.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.9.
+     *
      * @public
      * @readonly
      */
     readonly ssParameters: OPTIONAL<SSParameters>;
     /**
      * @summary `ssActionResult`.
+     * @description
+     *
+     * 2G and 3G conditional. Result of the requested transaction if
+     * unsuccessful.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.9.
+     *
      * @public
      * @readonly
      */
     readonly ssActionResult: OPTIONAL<HLRIntResult>;
     /**
      * @summary `callReference`.
+     * @description
+     *
+     * 2G and 3G mandatory. A local identifier distinguishing between
+     * transactions at the same MS.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.9.
+     *
+     * This field uniquely identifies a call or transaction on one side of the
+     * interface (i.e. 'A' or 'B' side) and is derived from the transaction
+     * identifier of TS 24.008 [208]. It is also used to identify all partial
+     * records and transactions belonging to the same connection. For the
+     * avoidance of doubt, there is no global call reference defined within GSM
+     * and the call reference field cannot be used to combine, for example, the
+     * MOC and MTC records of a mobiletomobile connection.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.5.
+     *
      * @public
      * @readonly
      */
     readonly callReference: OCTET_STRING;
     /**
      * @summary `recordExtensions`.
+     * @description
+     *
+     * 2G and 3G operator-provisionable conditional. A set of network/
+     * manufacturer specific extensions to the record, when available.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.9.
+     *
+     * The field enables network operators and/ or manufacturers to add their
+     * own extensions to the standard record definitions.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.71.
+     *
      * @public
      * @readonly
      */
     readonly recordExtensions: OPTIONAL<ManagementExtension[]>;
     /**
      * @summary `systemType`.
+     * @description
+     *
+     * 2G not applicable, 3G mandatory. This field is present when either the
+     * UTRAN or GERAN air-interface is used. It is omitted when the service is
+     * provided by a GSM air interface.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.9.
+     *
+     * This field indicates the use of GERAN, UTRAN (or a value of unknown).
+     * This field is present when either the UTRAN or GERAN air-interface is
+     * used on call set-up. For an open CDR in a 2G NE (responsible for the
+     * CDR), the field is not present (even if the call is handed off to a 3G
+     * air interface). For a CDR in a 3G NE (responsible for the CDR), the value
+     * unknown shall be used after handover.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.91.
+     *
      * @public
      * @readonly
      */
@@ -207,7 +399,7 @@ class SSActionRecord {
     /**
      * @summary Restructures an object into a SSActionRecord
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `SSActionRecord`.
      * 
      * @public
@@ -238,9 +430,9 @@ class SSActionRecord {
 /**
  * @summary The Leading Root Component Types of SSActionRecord
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -266,9 +458,9 @@ const _root_component_type_list_1_spec_for_SSActionRecord: $.ComponentSpec[] = [
 /**
  * @summary The Trailing Root Component Types of SSActionRecord
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -279,9 +471,9 @@ const _root_component_type_list_2_spec_for_SSActionRecord: $.ComponentSpec[] = [
 /**
  * @summary The Extension Addition Component Types of SSActionRecord
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * @constant
  */
 export

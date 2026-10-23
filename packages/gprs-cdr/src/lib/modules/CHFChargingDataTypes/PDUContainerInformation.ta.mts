@@ -19,7 +19,12 @@ import { ThreeGPPPSDataOffStatus, _decode_ThreeGPPPSDataOffStatus, _encode_Three
 /**
  * @summary PDUContainerInformation
  * @description
- * 
+ *
+ * This field holds the 5G data connectivity specific information described
+ * in TS 32.255 [15].
+ *
+ * 3GPP TS 32.298 V20.1.0 table 5.1.5.0.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -76,6 +81,12 @@ class PDUContainerInformation {
     readonly qoSInformation: OPTIONAL<FiveGQoSInformation>;
     /**
      * @summary `userLocationInformation`.
+     * @description
+     *
+     * This field contains the User Location as described in TS 29.571 [249].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.5.1.15.
+     *
      * @public
      * @readonly
      */
@@ -88,6 +99,15 @@ class PDUContainerInformation {
     readonly presenceReportingAreaInfo: OPTIONAL<PresenceReportingAreaInfo>;
     /**
      * @summary `rATType`.
+     * @description
+     *
+     * This field contains the Radio Access Technology (RAT) type used, as
+     * provided to CHF, it's based on the RatType specified in TS 29.571 [249]
+     * with 3GPP RAT Type specified in TS 29.061 [216] added for backwards
+     * compatibility.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.5.1.17.
+     *
      * @public
      * @readonly
      */

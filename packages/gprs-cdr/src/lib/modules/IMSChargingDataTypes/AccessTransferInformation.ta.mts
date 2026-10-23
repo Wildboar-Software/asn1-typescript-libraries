@@ -16,7 +16,29 @@ import { SubscriberEquipmentNumber, _decode_SubscriberEquipmentNumber, _encode_S
 /**
  * @summary AccessTransferInformation
  * @description
- * 
+ *
+ * One access transfer performed by an AS or an ATCF for IMS service
+ * continuity (clause 5.1.11 and clause 5.1.13). The AS and the ATCF send
+ * it with Access Network Information, Additional Access Network
+ * Information, and Cellular Network Information. Requested Party Address
+ * on the CDR then holds the transfer address when one is available: the
+ * original target, the STN-SR for PS to CS, or the STI-SR for CS to PS.
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 5.1.11.
+ *
+ * This grouped field may occur several times in the CDR and each occurrence
+ * holds information on a particular access transfer. The field is present
+ * only if access transfer procedure has been performed for IMS service
+ * continuity. Each element of the list represents an access transfer and may
+ * include the following fields: Access Transfer Type; Inter-UE Transfer;
+ * Access Network Information; Additional Access Network Information;
+ * Subscriber Equipment Number; Instance Id; Related IMS Charging Identifier;
+ * Related IMS Charging Identifier Generation Node; Access Transfer Time.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.21D.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,60 +61,123 @@ export
 class AccessTransferInformation {
     /**
      * @summary `accessTransferType`.
+     * @description
+     *
+     * Access technologies of this transfer: PS to CS, CS to PS, PS to PS, or
+     * CS to CS (clause 5.1.11). Present only when a transfer occurred..
+     *
      * @public
      * @readonly
      */
     readonly accessTransferType: OPTIONAL<AccessTransferType>;
     /**
      * @summary `accessNetworkInformation`.
+     * @description
+     *
+     * P-Access-Network-Info available along this access transfer
+     * (3GPP TS 32.260 V20.1.0 clause 5.1.11 and clause 5.1.13).
+     *
      * @public
      * @readonly
      */
     readonly accessNetworkInformation: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `additionalAccessNetworkInformation`.
+     * @description
+     *
+     * The other P-Access-Network-Info header available along this
+     * access transfer (3GPP TS 32.260 V20.1.0 clause 5.1.11).
+     *
      * @public
      * @readonly
      */
     readonly additionalAccessNetworkInformation: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `inter_UE_Transfer`.
+     * @description
+     *
+     * Present when the SCC AS performed an inter-UE access transfer, as
+     * defined in TS 24.337 (clause 5.1.11). Absent when the transfer was not
+     * between two UEs.
+     *
      * @public
      * @readonly
      */
     readonly inter_UE_Transfer: OPTIONAL<NULL>;
     /**
      * @summary `relatedICID`.
+     * @description
+     *
+     * ICID of the other access leg, used to correlate source and target legs
+     * when the user is roaming. During SRVCC the Enhanced MSC server or the
+     * P-CSCF generates an ICID for the target access leg. The SCC AS and the
+     * ATCF put the source-leg ICID here. When OneChargingSession applies, the
+     * original ICID stays on the CDR and this field instead holds the
+     * target-leg ICID (clause 5.1.2.2A).
+     *
      * @public
      * @readonly
      */
     readonly relatedICID: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `relatedICIDGenerationNode`.
+     * @description
+     *
+     * Identifier of the server that generated the Related ICID (clause
+     * 6.3.1.2). Populated by the P-CSCF, the AS, and the ATCF..
+     *
      * @public
      * @readonly
      */
     readonly relatedICIDGenerationNode: OPTIONAL<NodeAddress>;
     /**
      * @summary `accessTransferTime`.
+     * @description
+     *
+     * Time at which this session transfer was performed (clause 6.1.3.9). 3GPP
+     * TS 32.260 V20.1.0.
+     *
      * @public
      * @readonly
      */
     readonly accessTransferTime: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `subscriberEquipmentNumber`.
+     * @description
+     *
+     * Identification of the UE after the transfer, for example the IMEI
+     * (clause 5.1.6 and clause 5.1.11).
+     *
      * @public
      * @readonly
      */
     readonly subscriberEquipmentNumber: OPTIONAL<SubscriberEquipmentNumber>;
     /**
      * @summary `instanceId`.
+     * @description
+     *
+     * URN from the sip.instance feature tag of the Contact header, identifying
+     * the device after the transfer (clause 5.1.6).
+     *
      * @public
      * @readonly
      */
     readonly instanceId: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `cellularNetworkInformation`.
+     * @description
+     *
+     * Holds the content of one SIP header "Cellular-Network-Info". As per TS
+     * 24.229 [210], a User Agent (UA) supporting one or more cellular radio
+     * access technology (e.g. E-UTRAN) but using a non-cellular IP-CAN to access
+     * the IM CN subsystem can use this header field to relay information to its
+     * service provider about the radio cell identity of the cellular radio
+     * access network on which the UE most recently camped.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.11A.
+     *
+     * 3GPP TS 32.260 V20.1.0 clause 5.1.11.
+     *
      * @public
      * @readonly
      */

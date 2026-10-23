@@ -9,7 +9,16 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary MOCallRecord_levelOfCAMELService
  * @description
- * 
+ *
+ * Complexity of the CAMEL feature used on an MOC. Present only if CAMEL is
+ * applied. On a CPH MOC the category is operator-provisionable mandatory
+ * rather than operator-provisionable conditional. Clause 5.1.3.2 says this
+ * indicator covers one call leg, including every CAMEL service on that leg.
+ * TS 32.250 does not define the named bits `basic`,
+ * `callDurationSupervision`, and `onlineCharging`.
+ *
+ * 3GPP TS 32.250 V19.0.0 clauses 5.1.3.2 and 6.1.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

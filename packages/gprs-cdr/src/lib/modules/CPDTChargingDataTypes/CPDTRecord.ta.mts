@@ -11,7 +11,16 @@ import { CPDTSNNRecord, _decode_CPDTSNNRecord, _encode_CPDTSNNRecord } from "../
 /**
  * @summary CPDTRecord
  * @description
- * 
+ *
+ * CP data transfer CDR on the Bcp interface. `cPDTSCERecord` (record
+ * type 105) is the SCEF record, produced for each PDN connection to the
+ * SCEF. `cPDTSNNRecord` (record type 106) is the serving-network record,
+ * produced for each PDN connection at the IWK-SCEF or, when enabled, at
+ * the MME. MME support is optional.
+ *
+ * 3GPP TS 32.253 V19.0.0 clause 6.1.3.1.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

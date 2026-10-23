@@ -13,7 +13,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary LocationInfo
  * @description
- * 
+ *
+ * One location change recorded while the UE is in E-UTRAN coverage during ProSe
+ * Direct Communication.
+ *
+ * 3GPP TS 32.277 V19.2.0 clauses 5.1.2.3 and 6.1.3.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +33,27 @@ export
 class LocationInfo {
     /**
      * @summary `uELocation`.
+     * @description
+     *
+     * UE location after the change, for example the ECGI.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.40 sets UE Location to the 28-bit
+     * cell identity of the ECGI, taken from the UE's lower layers.
+     *
+     * 3GPP TS 32.277 V19.2.0 clause 6.1.3.4.
+     *
      * @public
      * @readonly
      */
     readonly uELocation: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `timeStamp`.
+     * @description
+     *
+     * Time of this location change.
+     *
+     * 3GPP TS 32.277 V19.2.0 clause 5.1.2.3.
+     *
      * @public
      * @readonly
      */

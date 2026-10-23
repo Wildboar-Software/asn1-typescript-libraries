@@ -9,7 +9,31 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CPCauseForRecClosing
  * @description
- * 
+ *
+ * Reason the CPCN closed this CDR. When Rf is used, table 6.4.1 binds
+ * it to the PS-Information Change-Condition AVP. `Diagnostics` may
+ * carry one more detailed cause for release of the PDN connection.
+ *
+ * PDN connection release is normal termination or abnormal release on
+ * every CPCN. On the IWK-SCEF it also includes PLMN change. On the MME
+ * it also includes MME change.
+ *
+ * A partial-record reason also closes the CDR. If the PDN connection
+ * stays active, another CDR is opened with the next record sequence
+ * number. Thresholds come from the Charging Characteristics profile
+ * (Annex A). Partial reasons on the SCEF, IWK-SCEF, and MME are data
+ * volume limit, time limit, maximum number of NIDD submissions,
+ * Serving PLMN Rate Control change, RAT type change, and management
+ * intervention. The SCEF and the IWK-SCEF also use MME change. The
+ * SCEF also uses APN Rate Control change and PLMN change.
+ *
+ * Inter-RAT mobility between NB-IoT and another RAT is not supported
+ * in this release.
+ *
+ * 3GPP TS 32.253 V19.0.0 clauses 5.2.1, 5.2.3.2.3, 5.2.3.3.3, and
+ * 5.2.3.4.3.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,6 +56,15 @@ type CPCauseForRecClosing = INTEGER;
 
 /**
  * @summary CPCauseForRecClosing_normalRelease
+ * @description
+ *
+ * Termination of the PDN connection. Closes the CDR on the SCEF, the
+ * IWK-SCEF, and the MME. Corresponds to "Normal Release" in the
+ * Change-Condition AVP.
+ *
+ * 3GPP TS 32.253 V19.0.0 clauses 5.2.3.2.3, 5.2.3.3.3, and 5.2.3.4.3.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.4.
+ *
  * @constant
  * @type {number}
  */
@@ -40,6 +73,15 @@ const CPCauseForRecClosing_normalRelease: CPCauseForRecClosing = 0; /* LONG_NAME
 
 /**
  * @summary CPCauseForRecClosing_normalRelease
+ * @description
+ *
+ * Termination of the PDN connection. Closes the CDR on the SCEF, the
+ * IWK-SCEF, and the MME. Corresponds to "Normal Release" in the
+ * Change-Condition AVP.
+ *
+ * 3GPP TS 32.253 V19.0.0 clauses 5.2.3.2.3, 5.2.3.3.3, and 5.2.3.4.3.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.4.
+ *
  * @constant
  * @type {number}
  */
@@ -48,6 +90,15 @@ const normalRelease: CPCauseForRecClosing = CPCauseForRecClosing_normalRelease; 
 
 /**
  * @summary CPCauseForRecClosing_abnormalRelease
+ * @description
+ *
+ * Abnormal release of the PDN connection. Closes the CDR on the SCEF,
+ * the IWK-SCEF, and the MME. Corresponds to "Abnormal Release" in the
+ * Change-Condition AVP.
+ *
+ * 3GPP TS 32.253 V19.0.0 clauses 5.2.3.2.3, 5.2.3.3.3, and 5.2.3.4.3.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.4.
+ *
  * @constant
  * @type {number}
  */
@@ -56,6 +107,15 @@ const CPCauseForRecClosing_abnormalRelease: CPCauseForRecClosing = 1; /* LONG_NA
 
 /**
  * @summary CPCauseForRecClosing_abnormalRelease
+ * @description
+ *
+ * Abnormal release of the PDN connection. Closes the CDR on the SCEF,
+ * the IWK-SCEF, and the MME. Corresponds to "Abnormal Release" in the
+ * Change-Condition AVP.
+ *
+ * 3GPP TS 32.253 V19.0.0 clauses 5.2.3.2.3, 5.2.3.3.3, and 5.2.3.4.3.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.4.
+ *
  * @constant
  * @type {number}
  */
@@ -64,6 +124,16 @@ const abnormalRelease: CPCauseForRecClosing = CPCauseForRecClosing_abnormalRelea
 
 /**
  * @summary CPCauseForRecClosing_volumeLimit
+ * @description
+ *
+ * Operator-configured data volume limit per PDN connection.
+ * Partial-record reason on the SCEF, the IWK-SCEF, and the MME. A new
+ * CDR is opened if the PDN connection stays active. Corresponds to
+ * "Volume Limit" in the Change-Condition AVP.
+ *
+ * 3GPP TS 32.253 V19.0.0 clause 5.2.1 and Annex A.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.4.
+ *
  * @constant
  * @type {number}
  */
@@ -72,6 +142,16 @@ const CPCauseForRecClosing_volumeLimit: CPCauseForRecClosing = 2; /* LONG_NAMED_
 
 /**
  * @summary CPCauseForRecClosing_volumeLimit
+ * @description
+ *
+ * Operator-configured data volume limit per PDN connection.
+ * Partial-record reason on the SCEF, the IWK-SCEF, and the MME. A new
+ * CDR is opened if the PDN connection stays active. Corresponds to
+ * "Volume Limit" in the Change-Condition AVP.
+ *
+ * 3GPP TS 32.253 V19.0.0 clause 5.2.1 and Annex A.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.4.
+ *
  * @constant
  * @type {number}
  */
@@ -80,6 +160,16 @@ const volumeLimit: CPCauseForRecClosing = CPCauseForRecClosing_volumeLimit; /* S
 
 /**
  * @summary CPCauseForRecClosing_timeLimit
+ * @description
+ *
+ * Operator-configured time limit per PDN connection. Partial-record
+ * reason on the SCEF, the IWK-SCEF, and the MME. A new CDR is opened
+ * if the PDN connection stays active. Corresponds to "Time Limit" in
+ * the Change-Condition AVP.
+ *
+ * 3GPP TS 32.253 V19.0.0 clause 5.2.1 and Annex A.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.4.
+ *
  * @constant
  * @type {number}
  */
@@ -88,6 +178,16 @@ const CPCauseForRecClosing_timeLimit: CPCauseForRecClosing = 3; /* LONG_NAMED_IN
 
 /**
  * @summary CPCauseForRecClosing_timeLimit
+ * @description
+ *
+ * Operator-configured time limit per PDN connection. Partial-record
+ * reason on the SCEF, the IWK-SCEF, and the MME. A new CDR is opened
+ * if the PDN connection stays active. Corresponds to "Time Limit" in
+ * the Change-Condition AVP.
+ *
+ * 3GPP TS 32.253 V19.0.0 clause 5.2.1 and Annex A.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.4.
+ *
  * @constant
  * @type {number}
  */
@@ -96,6 +196,17 @@ const timeLimit: CPCauseForRecClosing = CPCauseForRecClosing_timeLimit; /* SHORT
 
 /**
  * @summary CPCauseForRecClosing_maxNIDDsubmissions
+ * @description
+ *
+ * Operator-configured maximum number of NIDD submissions per PDN
+ * connection. Partial-record reason on the SCEF, the IWK-SCEF, and
+ * the MME. A new CDR is opened if the PDN connection stays active.
+ * Corresponds to "Maximum number of NIDD submissions" in the
+ * Change-Condition AVP.
+ *
+ * 3GPP TS 32.253 V19.0.0 clause 5.2.1 and Annex A.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.4.
+ *
  * @constant
  * @type {number}
  */
@@ -104,6 +215,17 @@ const CPCauseForRecClosing_maxNIDDsubmissions: CPCauseForRecClosing = 4; /* LONG
 
 /**
  * @summary CPCauseForRecClosing_maxNIDDsubmissions
+ * @description
+ *
+ * Operator-configured maximum number of NIDD submissions per PDN
+ * connection. Partial-record reason on the SCEF, the IWK-SCEF, and
+ * the MME. A new CDR is opened if the PDN connection stays active.
+ * Corresponds to "Maximum number of NIDD submissions" in the
+ * Change-Condition AVP.
+ *
+ * 3GPP TS 32.253 V19.0.0 clause 5.2.1 and Annex A.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.4.
+ *
  * @constant
  * @type {number}
  */
@@ -112,6 +234,18 @@ const maxNIDDsubmissions: CPCauseForRecClosing = CPCauseForRecClosing_maxNIDDsub
 
 /**
  * @summary CPCauseForRecClosing_servingNodeChange
+ * @description
+ *
+ * MME change. Partial-record reason on the SCEF and the IWK-SCEF; a
+ * new CDR is opened there if the PDN connection stays active. On the
+ * MME, MME change is a PDN-connection release, and the new MME creates
+ * the CDR. Corresponds to "Serving Node Change" in the
+ * Change-Condition AVP.
+ *
+ * 3GPP TS 32.253 V19.0.0 clause 5.2.1, clause 5.2.3.2.3, clause
+ * 5.2.3.3.3, and clause 5.2.3.4.3.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.4.
+ *
  * @constant
  * @type {number}
  */
@@ -120,6 +254,18 @@ const CPCauseForRecClosing_servingNodeChange: CPCauseForRecClosing = 5; /* LONG_
 
 /**
  * @summary CPCauseForRecClosing_servingNodeChange
+ * @description
+ *
+ * MME change. Partial-record reason on the SCEF and the IWK-SCEF; a
+ * new CDR is opened there if the PDN connection stays active. On the
+ * MME, MME change is a PDN-connection release, and the new MME creates
+ * the CDR. Corresponds to "Serving Node Change" in the
+ * Change-Condition AVP.
+ *
+ * 3GPP TS 32.253 V19.0.0 clause 5.2.1, clause 5.2.3.2.3, clause
+ * 5.2.3.3.3, and clause 5.2.3.4.3.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.4.
+ *
  * @constant
  * @type {number}
  */
@@ -128,6 +274,18 @@ const servingNodeChange: CPCauseForRecClosing = CPCauseForRecClosing_servingNode
 
 /**
  * @summary CPCauseForRecClosing_pLMNChange
+ * @description
+ *
+ * PLMN change. Partial-record reason on the SCEF; a new SCEF CDR is
+ * opened if the PDN connection stays active. PDN-connection release
+ * on the IWK-SCEF, which opens its CDR on mobility to the new
+ * IWK-SCEF. Not a listed MME closure reason. Corresponds to "PLMN
+ * Change" in the Change-Condition AVP.
+ *
+ * 3GPP TS 32.253 V19.0.0 clause 5.2.1, clause 5.2.3.2.3, and
+ * clause 5.2.3.3.3.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.4.
+ *
  * @constant
  * @type {number}
  */
@@ -136,6 +294,18 @@ const CPCauseForRecClosing_pLMNChange: CPCauseForRecClosing = 6; /* LONG_NAMED_I
 
 /**
  * @summary CPCauseForRecClosing_pLMNChange
+ * @description
+ *
+ * PLMN change. Partial-record reason on the SCEF; a new SCEF CDR is
+ * opened if the PDN connection stays active. PDN-connection release
+ * on the IWK-SCEF, which opens its CDR on mobility to the new
+ * IWK-SCEF. Not a listed MME closure reason. Corresponds to "PLMN
+ * Change" in the Change-Condition AVP.
+ *
+ * 3GPP TS 32.253 V19.0.0 clause 5.2.1, clause 5.2.3.2.3, and
+ * clause 5.2.3.3.3.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.4.
+ *
  * @constant
  * @type {number}
  */
@@ -144,6 +314,16 @@ const pLMNChange: CPCauseForRecClosing = CPCauseForRecClosing_pLMNChange; /* SHO
 
 /**
  * @summary CPCauseForRecClosing_servingPLMNRateControlChange
+ * @description
+ *
+ * Serving PLMN Rate Control change. Partial-record reason on the
+ * SCEF, the IWK-SCEF, and the MME. A new CDR is opened if the PDN
+ * connection stays active. Corresponds to "Serving PLMN Rate Control
+ * Change" in the Change-Condition AVP.
+ *
+ * 3GPP TS 32.253 V19.0.0 clause 5.2.1.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.4.
+ *
  * @constant
  * @type {number}
  */
@@ -152,6 +332,16 @@ const CPCauseForRecClosing_servingPLMNRateControlChange: CPCauseForRecClosing = 
 
 /**
  * @summary CPCauseForRecClosing_servingPLMNRateControlChange
+ * @description
+ *
+ * Serving PLMN Rate Control change. Partial-record reason on the
+ * SCEF, the IWK-SCEF, and the MME. A new CDR is opened if the PDN
+ * connection stays active. Corresponds to "Serving PLMN Rate Control
+ * Change" in the Change-Condition AVP.
+ *
+ * 3GPP TS 32.253 V19.0.0 clause 5.2.1.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.4.
+ *
  * @constant
  * @type {number}
  */
@@ -160,6 +350,15 @@ const servingPLMNRateControlChange: CPCauseForRecClosing = CPCauseForRecClosing_
 
 /**
  * @summary CPCauseForRecClosing_aPNRateControlChange
+ * @description
+ *
+ * APN Rate Control change. SCEF only. Closes the SCEF CDR, and a new
+ * one is opened if the PDN connection stays active. Corresponds to
+ * "APN Rate Control Change" in the Change-Condition AVP.
+ *
+ * 3GPP TS 32.253 V19.0.0 clause 5.2.1 and clause 5.2.3.2.3.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.4.
+ *
  * @constant
  * @type {number}
  */
@@ -168,6 +367,15 @@ const CPCauseForRecClosing_aPNRateControlChange: CPCauseForRecClosing = 8; /* LO
 
 /**
  * @summary CPCauseForRecClosing_aPNRateControlChange
+ * @description
+ *
+ * APN Rate Control change. SCEF only. Closes the SCEF CDR, and a new
+ * one is opened if the PDN connection stays active. Corresponds to
+ * "APN Rate Control Change" in the Change-Condition AVP.
+ *
+ * 3GPP TS 32.253 V19.0.0 clause 5.2.1 and clause 5.2.3.2.3.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.4.
+ *
  * @constant
  * @type {number}
  */
@@ -176,6 +384,17 @@ const aPNRateControlChange: CPCauseForRecClosing = CPCauseForRecClosing_aPNRateC
 
 /**
  * @summary CPCauseForRecClosing_rATTypeChange
+ * @description
+ *
+ * RAT type change. Partial-record reason on the SCEF, the IWK-SCEF,
+ * and the MME. A new CDR is opened if the PDN connection stays
+ * active. Inter-RAT mobility between NB-IoT and another RAT is not
+ * supported in this release. Corresponds to "RAT Change" in the
+ * Change-Condition AVP.
+ *
+ * 3GPP TS 32.253 V19.0.0 clause 5.2.1.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.4.
+ *
  * @constant
  * @type {number}
  */
@@ -184,6 +403,17 @@ const CPCauseForRecClosing_rATTypeChange: CPCauseForRecClosing = 9; /* LONG_NAME
 
 /**
  * @summary CPCauseForRecClosing_rATTypeChange
+ * @description
+ *
+ * RAT type change. Partial-record reason on the SCEF, the IWK-SCEF,
+ * and the MME. A new CDR is opened if the PDN connection stays
+ * active. Inter-RAT mobility between NB-IoT and another RAT is not
+ * supported in this release. Corresponds to "RAT Change" in the
+ * Change-Condition AVP.
+ *
+ * 3GPP TS 32.253 V19.0.0 clause 5.2.1.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.4.
+ *
  * @constant
  * @type {number}
  */
@@ -192,6 +422,16 @@ const rATTypeChange: CPCauseForRecClosing = CPCauseForRecClosing_rATTypeChange; 
 
 /**
  * @summary CPCauseForRecClosing_managementIntervention
+ * @description
+ *
+ * Management intervention. Partial-record reason on the SCEF, the
+ * IWK-SCEF, and the MME. Clause 5.2.1 also allows management
+ * intervention to force a chargeable event. Corresponds to
+ * "Management Intervention" in the Change-Condition AVP.
+ *
+ * 3GPP TS 32.253 V19.0.0 clause 5.2.1.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.4.
+ *
  * @constant
  * @type {number}
  */
@@ -200,6 +440,16 @@ const CPCauseForRecClosing_managementIntervention: CPCauseForRecClosing = 10; /*
 
 /**
  * @summary CPCauseForRecClosing_managementIntervention
+ * @description
+ *
+ * Management intervention. Partial-record reason on the SCEF, the
+ * IWK-SCEF, and the MME. Clause 5.2.1 also allows management
+ * intervention to force a chargeable event. Corresponds to
+ * "Management Intervention" in the Change-Condition AVP.
+ *
+ * 3GPP TS 32.253 V19.0.0 clause 5.2.1.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.4.4.
+ *
  * @constant
  * @type {number}
  */

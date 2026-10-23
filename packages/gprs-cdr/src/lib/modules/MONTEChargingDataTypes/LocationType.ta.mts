@@ -6,7 +6,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary LocationType
  * @description
- * 
+ *
+ * Whether the configuration request asks for the current location
+ * or the last known location. Category Oc. Applicable to
+ * location reporting and to the number of UEs in a geographic
+ * area. Sent on Rf for configuration only.
+ *
+ * 3GPP TS 32.278 V19.0.0 clauses 5.1, 6.1.3.2 and 6.3.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,7 +33,14 @@ enum _enum_for_LocationType {
 /**
  * @summary LocationType
  * @description
- * 
+ *
+ * Whether the configuration request asks for the current location
+ * or the last known location. Category Oc. Applicable to
+ * location reporting and to the number of UEs in a geographic
+ * area. Sent on Rf for configuration only.
+ *
+ * 3GPP TS 32.278 V19.0.0 clauses 5.1, 6.1.3.2 and 6.3.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,7 +57,14 @@ type LocationType = _enum_for_LocationType;
 /**
  * @summary LocationType
  * @description
- * 
+ *
+ * Whether the configuration request asks for the current location
+ * or the last known location. Category Oc. Applicable to
+ * location reporting and to the number of UEs in a geographic
+ * area. Sent on Rf for configuration only.
+ *
+ * 3GPP TS 32.278 V19.0.0 clauses 5.1, 6.1.3.2 and 6.3.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -59,6 +80,12 @@ const LocationType = _enum_for_LocationType;
 
 /**
  * @summary LocationType_currentLocation
+ * @description
+ *
+ * The request is for the current location.
+ *
+ * 3GPP TS 32.278 V19.0.0 clause 6.1.3.2.
+ *
  * @constant
  * @type {number}
  */
@@ -67,6 +94,10 @@ const LocationType_currentLocation: LocationType = LocationType.currentLocation;
 
 /**
  * @summary currentLocation
+ * @description
+ *
+ * Current location. See {@link LocationType_currentLocation}.
+ *
  * @constant
  * @type {number}
  */
@@ -75,6 +106,12 @@ const currentLocation: LocationType = LocationType.currentLocation; /* SHORT_NAM
 
 /**
  * @summary LocationType_lastKnownLocation
+ * @description
+ *
+ * The request is for the last known location.
+ *
+ * 3GPP TS 32.278 V19.0.0 clause 6.1.3.2.
+ *
  * @constant
  * @type {number}
  */
@@ -83,6 +120,11 @@ const LocationType_lastKnownLocation: LocationType = LocationType.lastKnownLocat
 
 /**
  * @summary lastKnownLocation
+ * @description
+ *
+ * Last known location. See
+ * {@link LocationType_lastKnownLocation}.
+ *
  * @constant
  * @type {number}
  */

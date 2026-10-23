@@ -26,7 +26,23 @@ import { SMSChargingInformation, _decode_SMSChargingInformation, _encode_SMSChar
 /**
  * @summary ChargingRecord
  * @description
- * 
+ *
+ * If enabled, CHF records shall be produced for chargeable events, with or
+ * without quota management. A CHF-CDR shall be opened when the CHF receives
+ * Charging Data Request [Initial]. As an alternative to the default CHF
+ * behaviour, the "Individual Partial record" mechanism can be used based on
+ * Operator's policy configured in the CHF. In this case a new CDR shall be
+ * opened for each Charging Data Request [Initial, Update, Termination],
+ * charging information shall be added and the CDR shall then be closed. The
+ * Sequence Number will be incremented for each Charging Data Request
+ * [Initial, Update, Termination] received by the CHF. The generic fields in
+ * the record are specified in table 5.1.5.0.1. The NF specific parts will be
+ * concatenated to this e.g. the PDU Session Information, PDU Container
+ * Information and Roaming QBC Information are concatenated for the SMF.
+ * Table 5.1.5.0.1: CHF record (CHF-CDR)
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.5.0.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -60,24 +76,55 @@ export
 class ChargingRecord {
     /**
      * @summary `recordType`.
+     * @description
+     *
+     * The field identifies the type of the record i.e. CHF-CDR.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.5.1.10.
+     *
      * @public
      * @readonly
      */
     readonly recordType: RecordType;
     /**
      * @summary `recordingNetworkFunctionID`.
+     * @description
+     *
+     * This field contains the UUID of the Network Function Instance ID assigned
+     * to the instance that produced the record. For further details see TS
+     * 23.003 [200].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.5.1.11.
+     *
      * @public
      * @readonly
      */
     readonly recordingNetworkFunctionID: IA5String;
     /**
      * @summary `subscriberIdentifier`.
+     * @description
+     *
+     * This field contains the 5G Subscription Permanent Identifier (SUPI) of the
+     * served party, if available. For further details see TS 23.003 [200].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.5.1.13.
+     *
      * @public
      * @readonly
      */
     readonly subscriberIdentifier: OPTIONAL<SubscriptionID>;
     /**
      * @summary `nFunctionConsumerInformation`.
+     * @description
+     *
+     * This field contains the information about the NF that used the charging
+     * service. It includes the following fields: NF Functionality includes the
+     * functionality provided by the NF. NF Name contains the UUID of the NF. NF
+     * Address contains the IP-address and/or FQDN of the NF NF PLMN ID holds the
+     * PLMN id of the NF For further details see TS 23.003 [200].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.5.1.6.
+     *
      * @public
      * @readonly
      */
@@ -90,30 +137,74 @@ class ChargingRecord {
     readonly triggers: OPTIONAL<Trigger[]>;
     /**
      * @summary `listOfMultipleUnitUsage`.
+     * @description
+     *
+     * This list applicable in CHF-CDR and includes one or more containers. Each
+     * container includes the following fields:
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.5.1.4.
+     *
      * @public
      * @readonly
      */
     readonly listOfMultipleUnitUsage: OPTIONAL<MultipleUnitUsage[]>;
     /**
      * @summary `recordOpeningTime`.
+     * @description
+     *
+     * This field contains the time stamp when the request Charging Data Request
+     * [Initial] is received in the CHF from the NF or Charging Data Request
+     * [Update] in the case of a partial record.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.5.1.8.
+     *
      * @public
      * @readonly
      */
     readonly recordOpeningTime: OCTET_STRING;
     /**
      * @summary `duration`.
+     * @description
+     *
+     * This field contains the relevant duration in seconds from Record Opening
+     * Time to record closure. For partial records this is the duration of the
+     * individual partial record and not the cumulative duration. It should be
+     * noted that the internal time measurements may be expressed in terms of
+     * tenths of seconds or even milliseconds and, as a result, the calculation
+     * of the duration may result in the rounding or truncation of the measured
+     * duration to a whole number of seconds. Whether or not rounding/truncation
+     * is to be used is considered outside the scope of the present document,
+     * however it is subject to the following restrictions:
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.5.1.3.
+     *
      * @public
      * @readonly
      */
     readonly duration: INTEGER;
     /**
      * @summary `recordSequenceNumber`.
+     * @description
+     *
+     * This field contains a running sequence number employed to link the partial
+     * records generated in the CHF.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.5.1.9.
+     *
      * @public
      * @readonly
      */
     readonly recordSequenceNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `causeForRecClosing`.
+     * @description
+     *
+     * This field contains a reason for the close of the CDR, in CHF case
+     * reception of either Charging Data Request [Termination] or Charging Data
+     * Request [Update] in the case of an individual partial record.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.5.1.2.
+     *
      * @public
      * @readonly
      */
@@ -126,42 +217,98 @@ class ChargingRecord {
     readonly diagnostics: OPTIONAL<Diagnostics>;
     /**
      * @summary `localRecordSequenceNumber`.
+     * @description
+     *
+     * This field includes a unique record number created by this network
+     * function. The number is allocated sequentially for each partial CDR (or
+     * whole CDR) including all CDR types. The number is unique within one
+     * network function, which is identified by field Recording Network Function
+     * ID. The field can be used to identify missing records in post processing
+     * system.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.5.1.5.
+     *
      * @public
      * @readonly
      */
     readonly localRecordSequenceNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `recordExtensions`.
+     * @description
+     *
+     * This field enables network operators and/or manufacturers to add their own
+     * recommended extensions to the standard record definitions. This field
+     * contains a set of "management extensions" as defined in X.721 [305]. This
+     * is conditioned upon the existence of an extension. This field may contain
+     * the specific information for converged charging (e.g. with quota
+     * management).
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.5.1.12.
+     *
      * @public
      * @readonly
      */
     readonly recordExtensions: OPTIONAL<ManagementExtension[]>;
     /**
      * @summary `pDUSessionChargingInformation`.
+     * @description
+     *
+     * This field holds the 5G data connectivity specific information described
+     * in TS 32.255 [15]
+     *
+     * 3GPP TS 32.298 V20.1.0 table 5.1.5.0.1.
+     *
      * @public
      * @readonly
      */
     readonly pDUSessionChargingInformation: OPTIONAL<PDUSessionChargingInformation>;
     /**
      * @summary `roamingQBCInformation`.
+     * @description
+     *
+     * This field holds the roaming 5G data connectivity specific information
+     * described in TS 32.255 [15]
+     *
+     * 3GPP TS 32.298 V20.1.0 table 5.1.5.0.1.
+     *
      * @public
      * @readonly
      */
     readonly roamingQBCInformation: OPTIONAL<RoamingQBCInformation>;
     /**
      * @summary `sMSChargingInformation`.
+     * @description
+     *
+     * This field holds the SMS specific information described in TS 32.274 [34].
+     *
+     * 3GPP TS 32.298 V20.1.0 table 5.1.5.0.1.
+     *
      * @public
      * @readonly
      */
     readonly sMSChargingInformation: OPTIONAL<SMSChargingInformation>;
     /**
      * @summary `chargingSessionIdentifier`.
+     * @description
+     *
+     * This field holds the Session Identifier described in TS 32.290 [57].
+     *
+     * 3GPP TS 32.298 V20.1.0 table 5.1.5.0.1.
+     *
      * @public
      * @readonly
      */
     readonly chargingSessionIdentifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `serviceSpecificationInformation`.
+     * @description
+     *
+     * This field contains the Service Specification Information, e.g. the
+     * service specific document ('middle tier' TS) and 3GPP release the service
+     * specific document is based upon.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.5.1.16.
+     *
      * @public
      * @readonly
      */

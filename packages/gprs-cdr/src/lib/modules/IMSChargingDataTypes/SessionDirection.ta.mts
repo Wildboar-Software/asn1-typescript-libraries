@@ -6,7 +6,17 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SessionDirection
  * @description
- * 
+ *
+ * This field indicates whether the NNI is used for an inbound or outbound
+ * service request on the control plane in case of interconnection and
+ * roaming.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.58B.
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 6.1.3.10.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,7 +36,17 @@ enum _enum_for_SessionDirection {
 /**
  * @summary SessionDirection
  * @description
- * 
+ *
+ * This field indicates whether the NNI is used for an inbound or outbound
+ * service request on the control plane in case of interconnection and
+ * roaming.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.58B.
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 6.1.3.10.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,7 +63,17 @@ type SessionDirection = _enum_for_SessionDirection;
 /**
  * @summary SessionDirection
  * @description
- * 
+ *
+ * This field indicates whether the NNI is used for an inbound or outbound
+ * service request on the control plane in case of interconnection and
+ * roaming.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.58B.
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 6.1.3.10.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -59,6 +89,10 @@ const SessionDirection = _enum_for_SessionDirection;
 
 /**
  * @summary SessionDirection_inbound
+ * @description
+ *
+ * The NNI carries an inbound service request (clause 6.1.3.10).
+ *
  * @constant
  * @type {number}
  */
@@ -67,6 +101,10 @@ const SessionDirection_inbound: SessionDirection = SessionDirection.inbound; /* 
 
 /**
  * @summary inbound
+ * @description
+ *
+ * The NNI carries an inbound service request (clause 6.1.3.10).
+ *
  * @constant
  * @type {number}
  */
@@ -75,6 +113,10 @@ const inbound: SessionDirection = SessionDirection.inbound; /* SHORT_NAMED_ENUME
 
 /**
  * @summary SessionDirection_outbound
+ * @description
+ *
+ * The NNI carries an outbound service request (clause 6.1.3.10).
+ *
  * @constant
  * @type {number}
  */
@@ -83,6 +125,10 @@ const SessionDirection_outbound: SessionDirection = SessionDirection.outbound; /
 
 /**
  * @summary outbound
+ * @description
+ *
+ * The NNI carries an outbound service request (clause 6.1.3.10).
+ *
  * @constant
  * @type {number}
  */

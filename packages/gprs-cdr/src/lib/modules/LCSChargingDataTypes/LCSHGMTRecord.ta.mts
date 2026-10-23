@@ -20,7 +20,21 @@ import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../LCSChargingD
 /**
  * @summary LCSHGMTRecord
  * @description
- * 
+ *
+ * LCS Home GMLC Mobile Terminated CDR (LCS-HGMT-CDR). When this
+ * CDR type is enabled, the H-GMLC produces one for each mobile
+ * terminated location request (MT-LR) performed via the H-GMLC.
+ *
+ * The H-GMLC processes this CDR after its privacy check, when the
+ * V-GMLC sends the location service response.
+ *
+ * Categories: **M** always present; **C** present when the field's
+ * conditions are met; **Om** and **Oc** are the operator
+ * provisionable forms of those two. Clause 6.1.0 defines them.
+ *
+ * 3GPP TS 32.271 V12.1.0 clauses 5.2.3.2 and 6.1.3.2.2.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.2.0.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,90 +63,227 @@ export
 class LCSHGMTRecord {
     /**
      * @summary `recordType`.
+     * @description
+     *
+     * Category M. LCS Home GMLC Mobile Terminated Record. Set this
+     * to `lCSHGMTRecord`.
+     *
+     * 3GPP TS 32.271 V12.1.0 clause 6.1.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly recordType: RecordType;
     /**
      * @summary `recordingEntity`.
+     * @description
+     *
+     * Category M. The E.164 address of this GMLC.
+     *
+     * 3GPP TS 32.271 V12.1.0 clause 6.1.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly recordingEntity: OCTET_STRING;
     /**
      * @summary `lcsClientType`.
+     * @description
+     *
+     * Category C. The type of the LCS client that invoked the
+     * location request, if it is available. The values are those
+     * defined for the LCS client type in TS 29.002.
+     *
+     * 3GPP TS 32.271 V12.1.0 clause 6.1.3.2.2.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.2.3.
+     *
      * @public
      * @readonly
      */
     readonly lcsClientType: OPTIONAL<LCSClientType>;
     /**
      * @summary `lcsClientIdentity`.
+     * @description
+     *
+     * Category C. Further identification of the LCS client, if
+     * available. TS 32.298 carries the LCS client identity from
+     * TS 29.002: external ID, number dialled by the MS, and
+     * internal ID.
+     *
+     * For online charging, the LCS Client ID information element
+     * (category Oc in LCS Information) holds the ID of the LCS
+     * client that invoked the location request, if available.
+     *
+     * 3GPP TS 32.271 V12.1.0 clauses 6.1.3.2.2 and 6.3.1.2.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.2.2.
+     *
      * @public
      * @readonly
      */
     readonly lcsClientIdentity: OPTIONAL<LCSClientIdentity>;
     /**
      * @summary `targetIMSI`.
+     * @description
+     *
+     * Category M. The IMSI of the targeted LCS subscriber. The
+     * structure of the IMSI is defined in TS 23.003.
+     *
+     * 3GPP TS 32.271 V12.1.0 clause 6.1.3.2.2.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.2.11.
+     *
      * @public
      * @readonly
      */
     readonly targetIMSI: OCTET_STRING;
     /**
      * @summary `targetMSISDN`.
+     * @description
+     *
+     * Category Om. The primary MSISDN of the targeted subscriber.
+     * Where the subscriber has multiple MSISDNs, TS 32.298 stores
+     * the primary MSISDN of the requesting party. The structure of
+     * the MSISDN is defined in TS 23.003.
+     *
+     * 3GPP TS 32.271 V12.1.0 clause 6.1.3.2.2.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.2.12.
+     *
      * @public
      * @readonly
      */
     readonly targetMSISDN: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `locationType`.
+     * @description
+     *
+     * Category M. The type of location information being requested,
+     * using the location type defined in TS 29.002.
+     *
+     * For online charging of an MT-LR, the Location Type
+     * information element (category Oc) carries the same
+     * information.
+     *
+     * 3GPP TS 32.271 V12.1.0 clauses 6.1.3.2.2 and 6.3.1.2.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.2.6.
+     *
      * @public
      * @readonly
      */
     readonly locationType: LocationType;
     /**
      * @summary `lCSPriority`.
+     * @description
+     *
+     * Category C. Priority of the location request, if available.
+     * TS 32.298 takes the priority defined in TS 49.031.
+     *
+     * 3GPP TS 32.271 V12.1.0 clause 6.1.3.2.2.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.2.4.
+     *
      * @public
      * @readonly
      */
     readonly lCSPriority: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `resultCode`.
+     * @description
+     *
+     * Category Om. Indicates the result of the location request or
+     * of an individual positioning. TS 32.298 takes the result
+     * code defined in the OMA Mobile Location Protocol.
+     *
+     * 3GPP TS 32.271 V12.1.0 clause 6.1.3.2.2.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.2.10.
+     *
      * @public
      * @readonly
      */
     readonly resultCode: OPTIONAL<INTEGER>;
     /**
      * @summary `recordTimeStamp`.
+     * @description
+     *
+     * Category Om. Time at which this CDR was generated.
+     *
+     * 3GPP TS 32.271 V12.1.0 clause 6.1.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly recordTimeStamp: OCTET_STRING;
     /**
      * @summary `localSequenceNumber`.
+     * @description
+     *
+     * Category Om. Consecutive record number created by this node.
+     * The number is allocated sequentially across all CDR types
+     * produced by the node, so a gap identifies a missing record.
+     *
+     * 3GPP TS 32.271 V12.1.0 clause 6.1.3.2.2.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.26.
+     *
      * @public
      * @readonly
      */
     readonly localSequenceNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `recordExtensions`.
+     * @description
+     *
+     * Category Oc. A set of network- or manufacturer-specific
+     * extensions to the record. Present when an extension exists.
+     * TS 32.298 encodes the set as X.721 management extensions.
+     *
+     * 3GPP TS 32.271 V12.1.0 clause 6.1.3.2.2.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.48.
+     *
      * @public
      * @readonly
      */
     readonly recordExtensions: OPTIONAL<ManagementExtension[]>;
     /**
      * @summary `requestingGMLCIdentity`.
+     * @description
+     *
+     * Category C. IP address of the requesting GMLC (R-GMLC)
+     * involved in the location request, if available.
+     *
+     * 3GPP TS 32.271 V12.1.0 clause 6.1.3.2.2.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.2.9.
+     *
      * @public
      * @readonly
      */
     readonly requestingGMLCIdentity: OPTIONAL<IPAddress>;
     /**
      * @summary `visitedGMLCIdentity`.
+     * @description
+     *
+     * Category C. IP address of the visited GMLC (V-GMLC) involved
+     * in the location request, if available.
+     *
+     * 3GPP TS 32.271 V12.1.0 clause 6.1.3.2.2.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.2.14.
+     *
      * @public
      * @readonly
      */
     readonly visitedGMLCIdentity: OPTIONAL<IPAddress>;
     /**
      * @summary `servingNetworkIdentity`.
+     * @description
+     *
+     * Category Oc. MCC and MNC of the serving network used during
+     * this record, if available.
+     *
+     * TS 32.298 describes the value as the PLMN identifier (MCC
+     * and MNC) of the SGSN used during the location request. If
+     * the SGSN changes during the transaction, only the SGSN in
+     * use at the start is included. MCC and MNC are coded as for
+     * the Routing Area Identity in TS 29.060.
+     *
+     * 3GPP TS 32.271 V12.1.0 clause 6.1.3.2.2.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.1.1.
+     *
      * @public
      * @readonly
      */

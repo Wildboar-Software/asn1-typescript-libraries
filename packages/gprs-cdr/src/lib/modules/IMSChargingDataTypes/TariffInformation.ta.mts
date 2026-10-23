@@ -13,7 +13,22 @@ import { RateElement, _decode_RateElement, _encode_RateElement } from "../IMSCha
 /**
  * @summary TariffInformation
  * @description
- * 
+ *
+ * Real-time tariff mapped out of the RTTI XML body. Clause 5.2.2.1.17 says
+ * that mapping is specified in TS 32.280. TS 32.260 does not define
+ * currency, scale, or rate elements.
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 5.1.5.
+ *
+ * This field holds the tariff mapped in the Tariff Information structure.
+ * The corresponding structure of the Tariff Information can be found in the
+ * TS 32.299 [50]. The formatting from real time tariff information to Tariff
+ * Information structure is described in TS 32 280 [40].
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.67.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,18 +45,34 @@ export
 class TariffInformation {
     /**
      * @summary `currencyCode`.
+     * @description
+     *
+     * Currency of the mapped real-time tariff. Clause 5.2.2.1.17 says the
+     * mapping from the RTTI XML body onto this structure is specified in TS
+     * 32.280. TS 32.260 does not define this component..
+     *
      * @public
      * @readonly
      */
     readonly currencyCode: INTEGER;
     /**
      * @summary `scaleFactor`.
+     * @description
+     *
+     * Scale factor of the mapped tariff. TS 32.260 does not define it; the
+     * RTTI mapping is in TS 32.280 (clause 5.2.2.1.17).
+     *
      * @public
      * @readonly
      */
     readonly scaleFactor: REAL;
     /**
      * @summary `rateElements`.
+     * @description
+     *
+     * Rate elements of the mapped tariff. TS 32.260 does not define them; the
+     * RTTI mapping is in TS 32.280 (clause 5.2.2.1.17).
+     *
      * @public
      * @readonly
      */

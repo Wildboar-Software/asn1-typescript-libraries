@@ -9,7 +9,26 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CONTENTBMSCRecord_causeForRecClosing
  * @description
- * 
+ *
+ * Reason the C-BMSC-CDR was released. Mandatory. Bound from the
+ * Change-Condition AVP. `diagnostics` may carry a more detailed
+ * reason for release of the MBMS bearer.
+ *
+ * The record closes on service deactivation (MBMS Session Stop,
+ * termination of the MBMS user service, or any abnormal release)
+ * and on Charging Data Request [Stop]. OAM&P partial-record reasons
+ * are data volume limit, time (duration) limit, a change in the
+ * list of downstream nodes, management intervention, the MBMS
+ * service area, and the access indicator. Thresholds are defined
+ * per charging-characteristics profile. Service area and access
+ * indicator have no named value in this INTEGER.
+ *
+ * `maxChangeCond` is in this INTEGER but is not a C-BMSC-CDR
+ * closure trigger. Clause 5.2.3.1.3 lists it for the S-BMSC-CDR.
+ *
+ * 3GPP TS 32.273 V19.0.0 clause 5.2.3.2.3, table 6.1.3.2.1, and
+ * table 6.4.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +48,15 @@ type CONTENTBMSCRecord_causeForRecClosing = INTEGER;
 
 /**
  * @summary CONTENTBMSCRecord_causeForRecClosing_normalRelease
+ * @description
+ *
+ * Service deactivation other than abnormal release. Clause 5.2.3.2.3
+ * lists MBMS Session Stop and termination of the MBMS user service.
+ * For an S-BMSC-CDR, clause 5.2.3.1.3 lists UE-initiated
+ * deactivation and termination of the MBMS user service.
+ *
+ * 3GPP TS 32.273 V19.0.0 clauses 5.2.3.1.3 and 5.2.3.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -37,6 +65,15 @@ const CONTENTBMSCRecord_causeForRecClosing_normalRelease: CONTENTBMSCRecord_caus
 
 /**
  * @summary CONTENTBMSCRecord_causeForRecClosing_normalRelease
+ * @description
+ *
+ * Service deactivation other than abnormal release. Clause 5.2.3.2.3
+ * lists MBMS Session Stop and termination of the MBMS user service.
+ * For an S-BMSC-CDR, clause 5.2.3.1.3 lists UE-initiated
+ * deactivation and termination of the MBMS user service.
+ *
+ * 3GPP TS 32.273 V19.0.0 clauses 5.2.3.1.3 and 5.2.3.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -45,6 +82,14 @@ const normalRelease: CONTENTBMSCRecord_causeForRecClosing = CONTENTBMSCRecord_ca
 
 /**
  * @summary CONTENTBMSCRecord_causeForRecClosing_abnormalRelease
+ * @description
+ *
+ * Any abnormal release of the MBMS service in the BM-SC. Listed
+ * under service deactivation for both the S-BMSC-CDR and the
+ * C-BMSC-CDR.
+ *
+ * 3GPP TS 32.273 V19.0.0 clauses 5.2.3.1.3 and 5.2.3.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -53,6 +98,14 @@ const CONTENTBMSCRecord_causeForRecClosing_abnormalRelease: CONTENTBMSCRecord_ca
 
 /**
  * @summary CONTENTBMSCRecord_causeForRecClosing_abnormalRelease
+ * @description
+ *
+ * Any abnormal release of the MBMS service in the BM-SC. Listed
+ * under service deactivation for both the S-BMSC-CDR and the
+ * C-BMSC-CDR.
+ *
+ * 3GPP TS 32.273 V19.0.0 clauses 5.2.3.1.3 and 5.2.3.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -61,6 +114,14 @@ const abnormalRelease: CONTENTBMSCRecord_causeForRecClosing = CONTENTBMSCRecord_
 
 /**
  * @summary CONTENTBMSCRecord_causeForRecClosing_volumeLimit
+ * @description
+ *
+ * Partial-record closure because the data volume limit was reached.
+ * The limit is an OAM&P parameter of the charging-characteristics
+ * profile.
+ *
+ * 3GPP TS 32.273 V19.0.0 clauses 5.2.3.1.3 and 5.2.3.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -69,6 +130,14 @@ const CONTENTBMSCRecord_causeForRecClosing_volumeLimit: CONTENTBMSCRecord_causeF
 
 /**
  * @summary CONTENTBMSCRecord_causeForRecClosing_volumeLimit
+ * @description
+ *
+ * Partial-record closure because the data volume limit was reached.
+ * The limit is an OAM&P parameter of the charging-characteristics
+ * profile.
+ *
+ * 3GPP TS 32.273 V19.0.0 clauses 5.2.3.1.3 and 5.2.3.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -77,6 +146,14 @@ const volumeLimit: CONTENTBMSCRecord_causeForRecClosing = CONTENTBMSCRecord_caus
 
 /**
  * @summary CONTENTBMSCRecord_causeForRecClosing_timeLimit
+ * @description
+ *
+ * Partial-record closure because the time (duration) limit was
+ * reached. The limit is an OAM&P parameter of the
+ * charging-characteristics profile.
+ *
+ * 3GPP TS 32.273 V19.0.0 clauses 5.2.3.1.3 and 5.2.3.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -85,6 +162,14 @@ const CONTENTBMSCRecord_causeForRecClosing_timeLimit: CONTENTBMSCRecord_causeFor
 
 /**
  * @summary CONTENTBMSCRecord_causeForRecClosing_timeLimit
+ * @description
+ *
+ * Partial-record closure because the time (duration) limit was
+ * reached. The limit is an OAM&P parameter of the
+ * charging-characteristics profile.
+ *
+ * 3GPP TS 32.273 V19.0.0 clauses 5.2.3.1.3 and 5.2.3.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -93,6 +178,14 @@ const timeLimit: CONTENTBMSCRecord_causeForRecClosing = CONTENTBMSCRecord_causeF
 
 /**
  * @summary CONTENTBMSCRecord_causeForRecClosing_maxChangeCond
+ * @description
+ *
+ * Partial-record closure because the maximum number of
+ * charging-condition changes was reached. Listed for the
+ * S-BMSC-CDR. Not listed for the C-BMSC-CDR.
+ *
+ * 3GPP TS 32.273 V19.0.0 clause 5.2.3.1.3.
+ *
  * @constant
  * @type {number}
  */
@@ -101,6 +194,14 @@ const CONTENTBMSCRecord_causeForRecClosing_maxChangeCond: CONTENTBMSCRecord_caus
 
 /**
  * @summary CONTENTBMSCRecord_causeForRecClosing_maxChangeCond
+ * @description
+ *
+ * Partial-record closure because the maximum number of
+ * charging-condition changes was reached. Listed for the
+ * S-BMSC-CDR. Not listed for the C-BMSC-CDR.
+ *
+ * 3GPP TS 32.273 V19.0.0 clause 5.2.3.1.3.
+ *
  * @constant
  * @type {number}
  */
@@ -109,6 +210,13 @@ const maxChangeCond: CONTENTBMSCRecord_causeForRecClosing = CONTENTBMSCRecord_ca
 
 /**
  * @summary CONTENTBMSCRecord_causeForRecClosing_managementIntervention
+ * @description
+ *
+ * Partial-record closure on management intervention. The trigger
+ * is an OAM&P reason on both the S-BMSC-CDR and the C-BMSC-CDR.
+ *
+ * 3GPP TS 32.273 V19.0.0 clauses 5.2.3.1.3 and 5.2.3.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -117,6 +225,13 @@ const CONTENTBMSCRecord_causeForRecClosing_managementIntervention: CONTENTBMSCRe
 
 /**
  * @summary CONTENTBMSCRecord_causeForRecClosing_managementIntervention
+ * @description
+ *
+ * Partial-record closure on management intervention. The trigger
+ * is an OAM&P reason on both the S-BMSC-CDR and the C-BMSC-CDR.
+ *
+ * 3GPP TS 32.273 V19.0.0 clauses 5.2.3.1.3 and 5.2.3.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -125,6 +240,15 @@ const managementIntervention: CONTENTBMSCRecord_causeForRecClosing = CONTENTBMSC
 
 /**
  * @summary CONTENTBMSCRecord_causeForRecClosing_listofDownstreamNodeChange
+ * @description
+ *
+ * Partial-record closure because the list of downstream nodes
+ * changed. Charging information on a C-BMSC-CDR can change as
+ * packet-switched nodes register and deregister to the MBMS bearer
+ * context. Not listed as an S-BMSC-CDR closure trigger.
+ *
+ * 3GPP TS 32.273 V19.0.0 clauses 5.2.3.2.1 and 5.2.3.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -133,6 +257,15 @@ const CONTENTBMSCRecord_causeForRecClosing_listofDownstreamNodeChange: CONTENTBM
 
 /**
  * @summary CONTENTBMSCRecord_causeForRecClosing_listofDownstreamNodeChange
+ * @description
+ *
+ * Partial-record closure because the list of downstream nodes
+ * changed. Charging information on a C-BMSC-CDR can change as
+ * packet-switched nodes register and deregister to the MBMS bearer
+ * context. Not listed as an S-BMSC-CDR closure trigger.
+ *
+ * 3GPP TS 32.273 V19.0.0 clauses 5.2.3.2.1 and 5.2.3.2.3.
+ *
  * @constant
  * @type {number}
  */

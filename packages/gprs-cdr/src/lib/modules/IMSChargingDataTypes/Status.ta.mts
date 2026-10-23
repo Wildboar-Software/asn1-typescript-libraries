@@ -6,7 +6,16 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Status
  * @description
- * 
+ *
+ * Holds the abnormal status information of specific ASs (if any) when AS(s)
+ * respond 4xx/5xx or time out to S-CSCF during an IMS session.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.66A.
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 6.1.3.3.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,7 +37,16 @@ enum _enum_for_Status {
 /**
  * @summary Status
  * @description
- * 
+ *
+ * Holds the abnormal status information of specific ASs (if any) when AS(s)
+ * respond 4xx/5xx or time out to S-CSCF during an IMS session.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.66A.
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 6.1.3.3.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -46,7 +64,16 @@ type Status = _enum_for_Status;
 /**
  * @summary Status
  * @description
- * 
+ *
+ * Holds the abnormal status information of specific ASs (if any) when AS(s)
+ * respond 4xx/5xx or time out to S-CSCF during an IMS session.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.66A.
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 6.1.3.3.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -63,6 +90,11 @@ const Status = _enum_for_Status;
 
 /**
  * @summary Status_fourxx
+ * @description
+ *
+ * The application server answered the S-CSCF with a SIP 4xx (clause
+ * 6.1.3.3).
+ *
  * @constant
  * @type {number}
  */
@@ -71,6 +103,11 @@ const Status_fourxx: Status = Status.fourxx; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fourxx
+ * @description
+ *
+ * The application server answered the S-CSCF with a SIP 4xx (clause
+ * 6.1.3.3).
+ *
  * @constant
  * @type {number}
  */
@@ -79,6 +116,11 @@ const fourxx: Status = Status.fourxx; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Status_fivexx
+ * @description
+ *
+ * The application server answered the S-CSCF with a SIP 5xx (clause
+ * 6.1.3.3).
+ *
  * @constant
  * @type {number}
  */
@@ -87,6 +129,11 @@ const Status_fivexx: Status = Status.fivexx; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fivexx
+ * @description
+ *
+ * The application server answered the S-CSCF with a SIP 5xx (clause
+ * 6.1.3.3).
+ *
  * @constant
  * @type {number}
  */
@@ -95,6 +142,12 @@ const fivexx: Status = Status.fivexx; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Status_time_out
+ * @description
+ *
+ * The application server timed out toward the S-CSCF (clause 6.1.3.3).
+ *
+ * 3GPP TS 32.260 V20.1.0.
+ *
  * @constant
  * @type {number}
  */
@@ -103,6 +156,12 @@ const Status_time_out: Status = Status.time_out; /* LONG_NAMED_ENUMERATED_VALUE 
 
 /**
  * @summary time_out
+ * @description
+ *
+ * The application server timed out toward the S-CSCF (clause 6.1.3.3).
+ *
+ * 3GPP TS 32.260 V20.1.0.
+ *
  * @constant
  * @type {number}
  */

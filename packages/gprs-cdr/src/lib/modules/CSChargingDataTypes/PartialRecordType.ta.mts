@@ -6,7 +6,25 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary PartialRecordType
  * @description
- * 
+ *
+ * Event that caused this partial record. Clause 5.1.3.6 also closes partial
+ * records for radio-link failure followed by call re-establishment, and for
+ * CAMEL CPH operations on call legs. Re-establishment is recorded in
+ * `causeForTerm` as `partialRecordCallReestablishment`, not as a value of
+ * this type. The clause does not assign a value here to CAMEL CPH
+ * operations.
+ *
+ * Every partial record of one connection carries the same call reference and
+ * the next sequence number. The previous record's `causeForTerm` is
+ * `partialRecord`. The last record carries the true termination cause.
+ * Timestamps belong to the partial record, not to the whole connection: the
+ * end of one record coincides with the start of the next, except across a
+ * re-establishment. A partial record may repeat the unchanged fields, or it
+ * may contain only the fields that identify the original record and the
+ * fields that changed.
+ *
+ * 3GPP TS 32.250 V19.0.0 clauses 5.1.3.6 and 5.1.3.9.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,7 +56,25 @@ enum _enum_for_PartialRecordType {
 /**
  * @summary PartialRecordType
  * @description
- * 
+ *
+ * Event that caused this partial record. Clause 5.1.3.6 also closes partial
+ * records for radio-link failure followed by call re-establishment, and for
+ * CAMEL CPH operations on call legs. Re-establishment is recorded in
+ * `causeForTerm` as `partialRecordCallReestablishment`, not as a value of
+ * this type. The clause does not assign a value here to CAMEL CPH
+ * operations.
+ *
+ * Every partial record of one connection carries the same call reference and
+ * the next sequence number. The previous record's `causeForTerm` is
+ * `partialRecord`. The last record carries the true termination cause.
+ * Timestamps belong to the partial record, not to the whole connection: the
+ * end of one record coincides with the start of the next, except across a
+ * re-establishment. A partial record may repeat the unchanged fields, or it
+ * may contain only the fields that identify the original record and the
+ * fields that changed.
+ *
+ * 3GPP TS 32.250 V19.0.0 clauses 5.1.3.6 and 5.1.3.9.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -61,7 +97,25 @@ type PartialRecordType = _enum_for_PartialRecordType;
 /**
  * @summary PartialRecordType
  * @description
- * 
+ *
+ * Event that caused this partial record. Clause 5.1.3.6 also closes partial
+ * records for radio-link failure followed by call re-establishment, and for
+ * CAMEL CPH operations on call legs. Re-establishment is recorded in
+ * `causeForTerm` as `partialRecordCallReestablishment`, not as a value of
+ * this type. The clause does not assign a value here to CAMEL CPH
+ * operations.
+ *
+ * Every partial record of one connection carries the same call reference and
+ * the next sequence number. The previous record's `causeForTerm` is
+ * `partialRecord`. The last record carries the true termination cause.
+ * Timestamps belong to the partial record, not to the whole connection: the
+ * end of one record coincides with the start of the next, except across a
+ * re-establishment. A partial record may repeat the unchanged fields, or it
+ * may contain only the fields that identify the original record and the
+ * fields that changed.
+ *
+ * 3GPP TS 32.250 V19.0.0 clauses 5.1.3.6 and 5.1.3.9.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -83,6 +137,12 @@ const PartialRecordType = _enum_for_PartialRecordType;
 
 /**
  * @summary PartialRecordType_timeLimit
+ * @description
+ *
+ * Expiry of the partial-record timer. Operators generate partial records on
+ * a timer so that a long call cannot stay unbilled, and so that loss of one
+ * CDR loses only that interval. 3GPP TS 32.250 V19.0.0 clause 5.1.3.6.
+ *
  * @constant
  * @type {number}
  */
@@ -91,6 +151,12 @@ const PartialRecordType_timeLimit: PartialRecordType = PartialRecordType.timeLim
 
 /**
  * @summary timeLimit
+ * @description
+ *
+ * Expiry of the partial-record timer. Operators generate partial records on
+ * a timer so that a long call cannot stay unbilled, and so that loss of one
+ * CDR loses only that interval. 3GPP TS 32.250 V19.0.0 clause 5.1.3.6.
+ *
  * @constant
  * @type {number}
  */
@@ -99,6 +165,11 @@ const timeLimit: PartialRecordType = PartialRecordType.timeLimit; /* SHORT_NAMED
 
 /**
  * @summary PartialRecordType_serviceChange
+ * @description
+ *
+ * Change of basic service during the connection. 3GPP TS 32.250 V19.0.0
+ * clause 5.1.3.6.
+ *
  * @constant
  * @type {number}
  */
@@ -107,6 +178,11 @@ const PartialRecordType_serviceChange: PartialRecordType = PartialRecordType.ser
 
 /**
  * @summary serviceChange
+ * @description
+ *
+ * Change of basic service during the connection. 3GPP TS 32.250 V19.0.0
+ * clause 5.1.3.6.
+ *
  * @constant
  * @type {number}
  */
@@ -115,6 +191,12 @@ const serviceChange: PartialRecordType = PartialRecordType.serviceChange; /* SHO
 
 /**
  * @summary PartialRecordType_locationChange
+ * @description
+ *
+ * Change of location during the connection: MCC, MNC, and location area, or
+ * the cell identity, or the service area code for UMTS. 3GPP TS 32.250
+ * V19.0.0 clause 5.1.3.6.
+ *
  * @constant
  * @type {number}
  */
@@ -123,6 +205,12 @@ const PartialRecordType_locationChange: PartialRecordType = PartialRecordType.lo
 
 /**
  * @summary locationChange
+ * @description
+ *
+ * Change of location during the connection: MCC, MNC, and location area, or
+ * the cell identity, or the service area code for UMTS. 3GPP TS 32.250
+ * V19.0.0 clause 5.1.3.6.
+ *
  * @constant
  * @type {number}
  */
@@ -131,6 +219,11 @@ const locationChange: PartialRecordType = PartialRecordType.locationChange; /* S
 
 /**
  * @summary PartialRecordType_classmarkChange
+ * @description
+ *
+ * Change of MS classmark during the connection. 3GPP TS 32.250 V19.0.0
+ * clause 5.1.3.6.
+ *
  * @constant
  * @type {number}
  */
@@ -139,6 +232,11 @@ const PartialRecordType_classmarkChange: PartialRecordType = PartialRecordType.c
 
 /**
  * @summary classmarkChange
+ * @description
+ *
+ * Change of MS classmark during the connection. 3GPP TS 32.250 V19.0.0
+ * clause 5.1.3.6.
+ *
  * @constant
  * @type {number}
  */
@@ -147,6 +245,11 @@ const classmarkChange: PartialRecordType = PartialRecordType.classmarkChange; /*
 
 /**
  * @summary PartialRecordType_aocParmChange
+ * @description
+ *
+ * Change of AoC parameters during the call. 3GPP TS 32.250 V19.0.0 clause
+ * 5.1.3.6.
+ *
  * @constant
  * @type {number}
  */
@@ -155,6 +258,11 @@ const PartialRecordType_aocParmChange: PartialRecordType = PartialRecordType.aoc
 
 /**
  * @summary aocParmChange
+ * @description
+ *
+ * Change of AoC parameters during the call. 3GPP TS 32.250 V19.0.0 clause
+ * 5.1.3.6.
+ *
  * @constant
  * @type {number}
  */
@@ -163,6 +271,12 @@ const aocParmChange: PartialRecordType = PartialRecordType.aocParmChange; /* SHO
 
 /**
  * @summary PartialRecordType_radioChannelChange
+ * @description
+ *
+ * Change of radio channel type, full rate or half rate, during the call. The
+ * CDR tables mark the radio-channel fields as not applicable to 3G. 3GPP TS
+ * 32.250 V19.0.0 clauses 5.1.3.6 and 6.1.3.1.
+ *
  * @constant
  * @type {number}
  */
@@ -171,6 +285,12 @@ const PartialRecordType_radioChannelChange: PartialRecordType = PartialRecordTyp
 
 /**
  * @summary radioChannelChange
+ * @description
+ *
+ * Change of radio channel type, full rate or half rate, during the call. The
+ * CDR tables mark the radio-channel fields as not applicable to 3G. 3GPP TS
+ * 32.250 V19.0.0 clauses 5.1.3.6 and 6.1.3.1.
+ *
  * @constant
  * @type {number}
  */
@@ -179,6 +299,11 @@ const radioChannelChange: PartialRecordType = PartialRecordType.radioChannelChan
 
 /**
  * @summary PartialRecordType_hSCSDParmChange
+ * @description
+ *
+ * Change of HSCSD parameters during the call. Clause 5.1.3.6 limits this
+ * trigger to GSM. 3GPP TS 32.250 V19.0.0 clause 5.1.3.6.
+ *
  * @constant
  * @type {number}
  */
@@ -187,6 +312,11 @@ const PartialRecordType_hSCSDParmChange: PartialRecordType = PartialRecordType.h
 
 /**
  * @summary hSCSDParmChange
+ * @description
+ *
+ * Change of HSCSD parameters during the call. Clause 5.1.3.6 limits this
+ * trigger to GSM. 3GPP TS 32.250 V19.0.0 clause 5.1.3.6.
+ *
  * @constant
  * @type {number}
  */
@@ -195,6 +325,11 @@ const hSCSDParmChange: PartialRecordType = PartialRecordType.hSCSDParmChange; /*
 
 /**
  * @summary PartialRecordType_changeOfCAMELDestination
+ * @description
+ *
+ * Change of the CAMEL destination, whether CAMEL controlled the change or
+ * initiated it. 3GPP TS 32.250 V19.0.0 clause 5.1.3.6.
+ *
  * @constant
  * @type {number}
  */
@@ -203,6 +338,11 @@ const PartialRecordType_changeOfCAMELDestination: PartialRecordType = PartialRec
 
 /**
  * @summary changeOfCAMELDestination
+ * @description
+ *
+ * Change of the CAMEL destination, whether CAMEL controlled the change or
+ * initiated it. 3GPP TS 32.250 V19.0.0 clause 5.1.3.6.
+ *
  * @constant
  * @type {number}
  */

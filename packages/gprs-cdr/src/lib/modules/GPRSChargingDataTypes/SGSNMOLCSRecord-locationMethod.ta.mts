@@ -19,7 +19,12 @@ enum _enum_for_SGSNMOLCSRecord_locationMethod {
 /**
  * @summary SGSNMOLCSRecord_locationMethod
  * @description
- * 
+ *
+ * The Location Method identifier refers to the argument of LCS-MOLR that was
+ * invoked as defined in TS 24.080 [209].
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.28.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

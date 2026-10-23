@@ -6,7 +6,15 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CAMELInitCFIndicator
  * @description
- * 
+ *
+ * Whether the CAMEL server initiated call forwarding. On a forwarding MOC
+ * the field is conditional and present only if CAMEL is applied. On a CPH
+ * forwarding record it is operator-provisionable conditional, and it is not
+ * available for GSM call forwarding. The CPH terminating-CAMEL leg tables
+ * record it on the outgoing leg.
+ *
+ * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.3 and 6.1.3.27.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,7 +34,15 @@ enum _enum_for_CAMELInitCFIndicator {
 /**
  * @summary CAMELInitCFIndicator
  * @description
- * 
+ *
+ * Whether the CAMEL server initiated call forwarding. On a forwarding MOC
+ * the field is conditional and present only if CAMEL is applied. On a CPH
+ * forwarding record it is operator-provisionable conditional, and it is not
+ * available for GSM call forwarding. The CPH terminating-CAMEL leg tables
+ * record it on the outgoing leg.
+ *
+ * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.3 and 6.1.3.27.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,7 +59,15 @@ type CAMELInitCFIndicator = _enum_for_CAMELInitCFIndicator;
 /**
  * @summary CAMELInitCFIndicator
  * @description
- * 
+ *
+ * Whether the CAMEL server initiated call forwarding. On a forwarding MOC
+ * the field is conditional and present only if CAMEL is applied. On a CPH
+ * forwarding record it is operator-provisionable conditional, and it is not
+ * available for GSM call forwarding. The CPH terminating-CAMEL leg tables
+ * record it on the outgoing leg.
+ *
+ * 3GPP TS 32.250 V19.0.0 clauses 6.1.3.3 and 6.1.3.27.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -59,6 +83,11 @@ const CAMELInitCFIndicator = _enum_for_CAMELInitCFIndicator;
 
 /**
  * @summary CAMELInitCFIndicator_noCAMELCallForwarding
+ * @description
+ *
+ * Call forwarding was not initiated by the CAMEL server. 3GPP TS 32.250
+ * V19.0.0 clause 6.1.3.3.
+ *
  * @constant
  * @type {number}
  */
@@ -67,6 +96,11 @@ const CAMELInitCFIndicator_noCAMELCallForwarding: CAMELInitCFIndicator = CAMELIn
 
 /**
  * @summary noCAMELCallForwarding
+ * @description
+ *
+ * Call forwarding was not initiated by the CAMEL server. 3GPP TS 32.250
+ * V19.0.0 clause 6.1.3.3.
+ *
  * @constant
  * @type {number}
  */
@@ -75,6 +109,12 @@ const noCAMELCallForwarding: CAMELInitCFIndicator = CAMELInitCFIndicator.noCAMEL
 
 /**
  * @summary CAMELInitCFIndicator_cAMELCallForwarding
+ * @description
+ *
+ * The CAMEL server initiated call forwarding. On a non-CPH forwarding MOC
+ * this field is present only if CAMEL is applied. 3GPP TS 32.250 V19.0.0
+ * clauses 6.1.3.3 and 6.1.3.26.
+ *
  * @constant
  * @type {number}
  */
@@ -83,6 +123,12 @@ const CAMELInitCFIndicator_cAMELCallForwarding: CAMELInitCFIndicator = CAMELInit
 
 /**
  * @summary cAMELCallForwarding
+ * @description
+ *
+ * The CAMEL server initiated call forwarding. On a non-CPH forwarding MOC
+ * this field is present only if CAMEL is applied. 3GPP TS 32.250 V19.0.0
+ * clauses 6.1.3.3 and 6.1.3.26.
+ *
  * @constant
  * @type {number}
  */

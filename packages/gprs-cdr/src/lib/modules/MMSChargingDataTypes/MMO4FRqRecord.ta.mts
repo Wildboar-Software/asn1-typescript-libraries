@@ -23,7 +23,45 @@ import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExt
 /**
  * @summary MMO4FRqRecord
  * @description
- * 
+ *
+ * Originator MM4 Forward Request record (O4FRq-CDR).
+ *
+ * If enabled, an Originator MM4 Forward Request O4FRq-CDR shall be
+ * produced in the Originator MMS R/S if and when the Originator MMS R/S
+ * has sent an MM4_forward.REQ to the Recipient MMS R/S, regardless of
+ * whether or not an MM4_forward.RES is received from the recipient. That
+ * is, the CDR is created upon completion of transmission of the
+ * MM4_forward.REQ.
+ *
+ * The MM4_forward.REQ may be generated as a reaction to an incoming
+ * MM1_forward.REQ. In this case, the Originator address field specifies
+ * the address of the originator MMS User Agent of the original MM, whereas
+ * the address of the forwarding MMS User Agent is contained in the
+ * Forwarding address field.
+ *
+ * Table 5.2.3.2.1 associates trigger O2 with this record. It is produced
+ * only when the Originator and Recipient MMS R/Ss are distinct.
+ *
+ * Produced in the Originator MMS R/S. An MM4 record is produced only when
+ * that R/S is not also the Recipient MMS R/S. An MM1 record is produced
+ * either way. Unless otherwise stated, parameters are copied from the
+ * corresponding MM1 or MM4 message (clause 6.1.1.0).
+ *
+ * MMS offline charging is event based. One chargeable event produces one
+ * CDR. From the 3GPP specifications that CDR is visible in the files the
+ * MMS R/S sends across Bm (clause 5.2.1).
+ *
+ * Field categories follow the charging data configuration in TS 32.240
+ * clause 5.4, which clause 6.1.0 applies to this table. M is always
+ * present. C is present when the conditions stated for that field are met.
+ * OM and OC are included only when the operator has provisioned them; OC
+ * also requires those conditions.
+ *
+ * This type does not include every category M or C parameter from the
+ * table: Recipient address for routing (category M).
+ *
+ * 3GPP TS 32.270 V19.0.0 clause 6.1.1.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -62,138 +100,392 @@ export
 class MMO4FRqRecord {
     /**
      * @summary `recordType`.
+     * @description
+     *
+     * The field identifies the type of the record, see TS 32.250 [10].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.42.
+     *
+     * Category M. Originator MM4 Forward Request record.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.1.2.
+     *
      * @public
      * @readonly
      */
     readonly recordType: RecordType;
     /**
      * @summary `originatorMmsRSAddress`.
+     * @description
+     *
+     * Category M. IP address or domain name of the Originator MMS R/S.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.1.2.
+     *
      * @public
      * @readonly
      */
     readonly originatorMmsRSAddress: MMSRSAddress;
     /**
      * @summary `recipientMmsRSAddress`.
+     * @description
+     *
+     * Category M. IP address or domain name of the Recipient MMS R/S.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.1.2.
+     *
      * @public
      * @readonly
      */
     readonly recipientMmsRSAddress: MMSRSAddress;
     /**
      * @summary `messageID`.
+     * @description
+     *
+     * This field specifies the MM Message ID of the MM as defined in TS 23.140
+     * [206]. The concrete syntax of this MM Message ID is given by the body of
+     * the field introduced by the string "X-Mms-Message-ID:" in the concrete
+     * syntax of the message MM4_Forward. REQ. All CDRs pertaining to the same MM
+     * shall employ the same value of this parameter, i.e. the value initially
+     * assigned by the originator MMS Relay/Server upon submission of the MM by
+     * the Originator MMS User Agent.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.20.
+     *
+     * Category M. The MM identification provided by the Originator MMS R/S.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.1.2.
+     *
      * @public
      * @readonly
      */
     readonly messageID: OCTET_STRING;
     /**
      * @summary `mms3GPPVersion`.
+     * @description
+     *
+     * Category OM. The MMS version of the Originator MMS R/S.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.1.2.
+     *
      * @public
      * @readonly
      */
     readonly mms3GPPVersion: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `originatorAddress`.
+     * @description
+     *
+     * This field contains an originator MMS User Agent address. The MMS supports
+     * the use of E-Mail addresses (RFC 822 [400]) or MSISDN (E.164 [308]).
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.30.
+     *
+     * Category M. The address of the originator MMS User Agent of the MM. (If
+     * the MM4_forward.REQ is generated as a reaction to an incoming
+     * MM1_forward.REQ, this is the address of the originator MMS User Agent of
+     * the original MM.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.1.2.
+     *
      * @public
      * @readonly
      */
     readonly originatorAddress: MMSAgentAddress;
     /**
      * @summary `recipientAddresses`.
+     * @description
+     *
+     * Category M. The address(es) of the Recipient MMS User Agent(s) of the MM
+     * as specified in the MM4_forward.REQ that triggered the CDR.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.1.2.
+     *
      * @public
      * @readonly
      */
     readonly recipientAddresses: MMSAgentAddress[];
     /**
      * @summary `contentType`.
+     * @description
+     *
+     * The Content Type of the MM as defined in TS 23.140 [206].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.7.
+     *
+     * Category M. The content type of the MM content.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.1.2.
+     *
      * @public
      * @readonly
      */
     readonly contentType: OCTET_STRING;
     /**
      * @summary `mmComponentType`.
+     * @description
+     *
+     * Category OM. The list of media components with volume size.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.1.2.
+     *
      * @public
      * @readonly
      */
     readonly mmComponentType: OPTIONAL<MMComponentType>;
     /**
      * @summary `messageSize`.
+     * @description
+     *
+     * This field contains the number of octets of the MM that is calculated as
+     * specified in TS 23.140 [206].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.23.
+     *
+     * Category M. The total size of the MM content.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.1.2.
+     *
      * @public
      * @readonly
      */
     readonly messageSize: INTEGER;
     /**
      * @summary `messageClass`.
+     * @description
+     *
+     * A class of messages such as personal, advertisement, information service
+     * etc. For more information see TS 23.140 [206].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.18.
+     *
+     * Category C. The class of the MM (e.g., personal, advertisement,
+     * information service) if specified by the Originator MMS User Agent.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.1.2.
+     *
      * @public
      * @readonly
      */
     readonly messageClass: OPTIONAL<MessageClass>;
     /**
      * @summary `submissionTime`.
+     * @description
+     *
+     * The submission time field contains the time stamps relevant for the
+     * submission of the MM. The time-stamp includes a minimum of date, hour,
+     * minute and second.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.56.
+     *
+     * Category M. The time at which the MM was submitted or forwarded as
+     * specified in the corresponding MM1_submit.REQ or MM1_forwarding.REQ.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.1.2.
+     *
      * @public
      * @readonly
      */
     readonly submissionTime: OCTET_STRING;
     /**
      * @summary `timeOfExpiry`.
+     * @description
+     *
+     * This field contains the desired date or the number of seconds to expiry of
+     * the MM, if specified by the originator MMS User Agent.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.57.
+     *
+     * Category C. The desired date of expiry or duration of time prior to
+     * expiry for the MM if specified by the originator MMS User Agent.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.1.2.
+     *
      * @public
      * @readonly
      */
     readonly timeOfExpiry: OPTIONAL<WaitTime>;
     /**
      * @summary `deliveryReportRequested`.
+     * @description
+     *
+     * This is an indication of type Boolean whether (value TRUE) or not (value
+     * FALSE) the originator/forwarding MMS User Agent has requested a delivery
+     * report in the MM1_submit. REQ/MM1_forward. REQ.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.8.
+     *
+     * Category M. This field indicates whether a delivery report has been
+     * requested by the originator MMS User Agent or not.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.1.2.
+     *
      * @public
      * @readonly
      */
     readonly deliveryReportRequested: BOOLEAN;
     /**
      * @summary `priority`.
+     * @description
+     *
+     * The priority (importance) of the message, see TS 23.140 [206].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.32.
+     *
+     * Category C. The priority (importance) of the message if specified by the
+     * originator MMS User Agent.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.1.2.
+     *
      * @public
      * @readonly
      */
     readonly priority: OPTIONAL<PriorityType>;
     /**
      * @summary `senderVisibility`.
+     * @description
+     *
+     * This Boolean value indicates whether the originator MMS User Agent has
+     * requested her address to be hidden from the recipient (value TRUE) or not
+     * (value FALSE).
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.52.
+     *
+     * Category M. A request to show or hide the sender's identity when the
+     * message is delivered to the MM recipient if the Originator MMS User
+     * Agent has requested her address to be hidden from the recipient.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.1.2.
+     *
      * @public
      * @readonly
      */
     readonly senderVisibility: BOOLEAN;
     /**
      * @summary `readReplyRequested`.
+     * @description
+     *
+     * A Boolean value indicating whether the originator MMS User Agent has
+     * requested a read-reply report (value TRUE) or not (value FALSE).
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.35.
+     *
+     * Category M. A request for read-reply report if the originator MMS User
+     * Agent has requested a read-reply report for the MM.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.1.2.
+     *
      * @public
      * @readonly
      */
     readonly readReplyRequested: BOOLEAN;
     /**
      * @summary `acknowledgementRequest`.
+     * @description
+     *
+     * This Boolean value indicates whether (value TRUE) or not (value FALSE) a
+     * response has been requested in a request at the MM4 reference point.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.3.
+     *
+     * Category M. Request for MM4_forward.RES.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.1.2.
+     *
      * @public
      * @readonly
      */
     readonly acknowledgementRequest: BOOLEAN;
     /**
      * @summary `forwardCounter`.
+     * @description
+     *
+     * A Counter indicating the number of times the particular MM was forwarded
+     * as defined in TS 23.140 [206].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.11.
+     *
+     * Category C. A counter indicating the number of times the particular MM
+     * was forwarded.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.1.2.
+     *
      * @public
      * @readonly
      */
     readonly forwardCounter: OPTIONAL<INTEGER>;
     /**
      * @summary `forwardingAddress`.
+     * @description
+     *
+     * This field contains a forwarding MMS User Agent address. The MMS supports
+     * the use of E-Mail addresses (RFC 822 [400]), MSISDN (E.164[308]) or IP
+     * addresses.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.12.
+     *
+     * Category C. The address(es) of the forwarding MMS User Agent(s).
+     * Multiple addresses are possible. In the multiple address case this is a
+     * sequential list of the address(es) of the forwarding MMS User Agents who
+     * forwarded the same MM.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.1.2.
+     *
      * @public
      * @readonly
      */
     readonly forwardingAddress: OPTIONAL<MMSAgentAddress[]>;
     /**
      * @summary `recordTimeStamp`.
+     * @description
+     *
+     * This field indicates the date and time when the CDR was produced.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.41.
+     *
+     * Category M. Time of generation of the CDR.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.1.2.
+     *
      * @public
      * @readonly
      */
     readonly recordTimeStamp: OCTET_STRING;
     /**
      * @summary `localSequenceNumber`.
+     * @description
+     *
+     * This field includes a unique record number created by this node. The
+     * number is allocated sequentially including all CDR types. The number is
+     * unique within one node, which is identified either by field Node ID or by
+     * record-dependent MMS Relay/Server. The field can be used e.g. to identify
+     * missing records in post processing system.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.16.
+     *
+     * Category OM. Consecutive record number created by this node. The number
+     * is allocated sequentially including all CDR types.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.1.2.
+     *
      * @public
      * @readonly
      */
     readonly localSequenceNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `recordExtensions`.
+     * @description
+     *
+     * The field enables network operators and/or manufacturers to add their own
+     * extensions to the standard record definitions.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.40.
+     *
+     * Category OC. A set of network/manufacturer specific extensions to the
+     * record. Conditioned upon the existence of an extension.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.1.2.
+     *
      * @public
      * @readonly
      */

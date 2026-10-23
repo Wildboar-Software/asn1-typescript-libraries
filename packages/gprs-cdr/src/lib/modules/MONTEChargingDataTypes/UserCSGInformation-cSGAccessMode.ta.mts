@@ -6,7 +6,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary UserCSGInformation_cSGAccessMode
  * @description
- * 
+ *
+ * Access mode inside `UserCSGInformation`. TS 32.278 V19.0.0
+ * does not describe closed subscriber group access modes.
+ * Clause 6.3.2.1 defers the formal definition to TS 32.298.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,7 +31,11 @@ enum _enum_for_UserCSGInformation_cSGAccessMode {
 /**
  * @summary UserCSGInformation_cSGAccessMode
  * @description
- * 
+ *
+ * Access mode inside `UserCSGInformation`. TS 32.278 V19.0.0
+ * does not describe closed subscriber group access modes.
+ * Clause 6.3.2.1 defers the formal definition to TS 32.298.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,7 +53,11 @@ type UserCSGInformation_cSGAccessMode = _enum_for_UserCSGInformation_cSGAccessMo
 /**
  * @summary UserCSGInformation_cSGAccessMode
  * @description
- * 
+ *
+ * Access mode inside `UserCSGInformation`. TS 32.278 V19.0.0
+ * does not describe closed subscriber group access modes.
+ * Clause 6.3.2.1 defers the formal definition to TS 32.298.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -62,6 +74,10 @@ const UserCSGInformation_cSGAccessMode = _enum_for_UserCSGInformation_cSGAccessM
 
 /**
  * @summary UserCSGInformation_cSGAccessMode_closedMode
+ * @description
+ *
+ * TS 32.278 V19.0.0 does not describe this access mode.
+ *
  * @constant
  * @type {number}
  */
@@ -70,6 +86,10 @@ const UserCSGInformation_cSGAccessMode_closedMode: UserCSGInformation_cSGAccessM
 
 /**
  * @summary closedMode
+ * @description
+ *
+ * See {@link UserCSGInformation_cSGAccessMode_closedMode}.
+ *
  * @constant
  * @type {number}
  */
@@ -78,6 +98,10 @@ const closedMode: UserCSGInformation_cSGAccessMode = UserCSGInformation_cSGAcces
 
 /**
  * @summary UserCSGInformation_cSGAccessMode_hybridMode
+ * @description
+ *
+ * TS 32.278 V19.0.0 does not describe this access mode.
+ *
  * @constant
  * @type {number}
  */
@@ -86,6 +110,10 @@ const UserCSGInformation_cSGAccessMode_hybridMode: UserCSGInformation_cSGAccessM
 
 /**
  * @summary hybridMode
+ * @description
+ *
+ * See {@link UserCSGInformation_cSGAccessMode_hybridMode}.
+ *
  * @constant
  * @type {number}
  */

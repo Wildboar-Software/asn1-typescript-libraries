@@ -12,7 +12,15 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ServiceResult
  * @description
- * 
+ *
+ * Result inside `MonitoringEventConfigStatus`. TS 32.278
+ * requires a specific value when handling of the requested
+ * Monitoring Event action fails. It does not define `vendorId`
+ * or `serviceResultCode`. Clause 6.3.2.1 defers the formal
+ * parameter definition to TS 32.298.
+ *
+ * 3GPP TS 32.278 V19.0.0 clauses 6.3.1.2 and 6.3.2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +35,27 @@ export
 class ServiceResult {
     /**
      * @summary `vendorId`.
+     * @description
+     *
+     * Not defined in TS 32.278 V19.0.0. Formal parameter
+     * definitions are deferred to TS 32.298.
+     *
+     * 3GPP TS 32.278 V19.0.0 clause 6.3.2.1.
+     *
      * @public
      * @readonly
      */
     readonly vendorId: OPTIONAL<INTEGER>;
     /**
      * @summary `serviceResultCode`.
+     * @description
+     *
+     * Not defined in TS 32.278 V19.0.0. A failed configuration
+     * request uses a specific value for the error; this
+     * specification does not say which integer that is.
+     *
+     * 3GPP TS 32.278 V19.0.0 clauses 6.3.1.2 and 6.3.2.1.
+     *
      * @public
      * @readonly
      */

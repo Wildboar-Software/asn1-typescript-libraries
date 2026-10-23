@@ -13,7 +13,20 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ISUPCause
  * @description
- * 
+ *
+ * Why the call was released, when the MGCF releases the session via ISUP
+ * (clause 6.1.3.7 and clause 6.3.1.1). TS 32.260 does not define the
+ * location, value, and diagnostics components.
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 6.1.3.7.
+ *
+ * When session is released via ISUP, this field indicates the reason the
+ * call was released.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.21C.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,18 +42,34 @@ export
 class ISUPCause {
     /**
      * @summary `iSUPCauseLocation`.
+     * @description
+     *
+     * Location component of the cause, when the MGCF releases the session via
+     * ISUP (clause 6.1.3.7). TS 32.260 does not define the location, value,
+     * and diagnostics split.
+     *
      * @public
      * @readonly
      */
     readonly iSUPCauseLocation: OPTIONAL<INTEGER>;
     /**
      * @summary `iSUPCauseValue`.
+     * @description
+     *
+     * Cause value, when the MGCF releases the session via ISUP (clause
+     * 6.1.3.7). TS 32.260 does not define this component..
+     *
      * @public
      * @readonly
      */
     readonly iSUPCauseValue: OPTIONAL<INTEGER>;
     /**
      * @summary `iSUPCauseDiagnostics`.
+     * @description
+     *
+     * Diagnostics, when the MGCF releases the session via ISUP (clause
+     * 6.1.3.7). TS 32.260 does not define this component..
+     *
      * @public
      * @readonly
      */

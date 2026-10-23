@@ -18,7 +18,24 @@ import { MBMSInformation_cNIPMulticastDistribution, _decode_MBMSInformation_cNIP
 /**
  * @summary MBMSInformation
  * @description
- * 
+ *
+ * MBMS-specific charging parameters carried in Service Information.
+ * The same information is category OM on the S-BMSC-CDR, the
+ * C-BMSC-CDR, and the online Debit / Reserve Units request. This
+ * ASN.1 is the CDR encoding. Charging-event parameters are
+ * specified in TS 32.299.
+ *
+ * Table 6.3.1.2.1 also lists MBMS Access Indicator, MBMS Charged
+ * Party, and Recipient Address. Access Indicator is not a component
+ * of this SET; a change of access indicator closes a partial
+ * C-BMSC-CDR (clause 5.2.3.2.3). Charged Party is bound to the CDR
+ * record type (table 6.4.1). Recipient Address is
+ * `recipientAddressList` on `CONTENTBMSCRecord`.
+ *
+ * Field categories follow TS 32.240 clause 5.4.
+ *
+ * 3GPP TS 32.273 V19.0.0 clauses 6.2.1.2.1, 6.3.1, and 6.3.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -53,78 +70,222 @@ export
 class MBMSInformation {
     /**
      * @summary `tMGI`.
+     * @description
+     *
+     * Temporary Mobile Group Identifier. Category OM. Used as
+     * defined in TS 29.061.
+     *
+     * 3GPP TS 32.273 V19.0.0 clause 3.3 and table 6.3.1.2.1.
+     *
      * @public
      * @readonly
      */
     readonly tMGI: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `mBMSSessionIdentity`.
+     * @description
+     *
+     * With `tMGI`, identifies one transmission of a specific MBMS
+     * session. Category OC. Used as defined in TS 29.061.
+     *
+     * 3GPP TS 32.273 V19.0.0 table 6.3.1.2.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.4.6.
+     *
      * @public
      * @readonly
      */
     readonly mBMSSessionIdentity: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `mBMSServiceType`.
+     * @description
+     *
+     * Bearer service type: multicast or broadcast. Category OM. Used
+     * as defined in TS 29.061.
+     *
+     * For GPRS, user-service content is charged to the receiving
+     * subscriber for either type. Bearer transport for broadcast is
+     * charged to the content provider. For multicast it is charged
+     * to the content provider and/or the receiving subscriber.
+     * Session duration and session volume apply to both types.
+     * Duration and volume while a subscriber is registered apply
+     * to multicast.
+     *
+     * For EPS, tables 5.1.1A.1 and 5.1.1A.2 cover broadcast and
+     * enhanced broadcast. Transport is charged to the content
+     * provider. The measurements are session duration, session
+     * volume, and data-transfer time. This enumeration contains
+     * multicast and broadcast. TS 32.273 does not say how enhanced
+     * broadcast is encoded in it.
+     *
+     * 3GPP TS 32.273 V19.0.0 tables 5.1.1.1, 5.1.1.2, 5.1.1A.1,
+     * 5.1.1A.2, and 6.3.1.2.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.4.5.
+     *
      * @public
      * @readonly
      */
     readonly mBMSServiceType: OPTIONAL<MBMSInformation_mBMSServiceType>;
     /**
      * @summary `mBMSUserServiceType`.
+     * @description
+     *
+     * Type of MBMS user service being delivered. Category OC.
+     * Available only in the BM-SC. Clause 5.1.1 also names carousel
+     * service, which is out of scope of this release; this
+     * enumeration has download and streaming only.
+     *
+     * Online credit-control depends on this type, the bearer type,
+     * and whether delivery notification is required (table 5.3.1).
+     * Streaming over multicast uses session charging with unit
+     * reservation (SCUR). The other streaming and download rows are
+     * operator configurable among immediate event charging (IEC),
+     * SCUR, and event charging with unit reservation (ECUR).
+     *
+     * 3GPP TS 32.273 V19.0.0 clause 5.1.1, table 5.3.1, and
+     * table 6.3.1.2.1.
+     *
      * @public
      * @readonly
      */
     readonly mBMSUserServiceType: OPTIONAL<MBMSInformation_mBMSUserServiceType>;
     /**
      * @summary `mBMS2G3GIndicator`.
+     * @description
+     *
+     * Category OC. Used as defined in TS 29.061. TS 32.273 does not
+     * define the enumerated values.
+     *
+     * 3GPP TS 32.273 V19.0.0 table 6.3.1.2.1.
+     *
      * @public
      * @readonly
      */
     readonly mBMS2G3GIndicator: OPTIONAL<MBMSInformation_mBMS2G3GIndicator>;
     /**
      * @summary `fileRepairSupported`.
+     * @description
+     *
+     * Whether the MBMS user service supports point-to-point file
+     * repair. Category OC. Available only in the BM-SC.
+     *
+     * 3GPP TS 32.273 V19.0.0 table 6.3.1.2.1.
+     *
      * @public
      * @readonly
      */
     readonly fileRepairSupported: OPTIONAL<BOOLEAN>;
     /**
      * @summary `rAI`.
+     * @description
+     *
+     * Category OC. Used as defined in TS 29.061. Available only in
+     * the BM-SC. TS 32.273 does not define the encoding.
+     *
+     * 3GPP TS 32.273 V19.0.0 table 6.3.1.2.1.
+     *
      * @public
      * @readonly
      */
     readonly rAI: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `mBMSServiceArea`.
+     * @description
+     *
+     * Area over which the MBMS bearer service has to be distributed.
+     * Category OC. Used as defined in TS 29.061. Bearer charging may
+     * be based on the service area. A change of MBMS service area
+     * closes a partial C-BMSC-CDR; that trigger has no named
+     * cause-for-closing value.
+     *
+     * 3GPP TS 32.273 V19.0.0 clauses 5.1.1 and 5.2.3.2.3, and
+     * table 6.3.1.2.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.4.4.
+     *
      * @public
      * @readonly
      */
     readonly mBMSServiceArea: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `requiredMBMSBearerCaps`.
+     * @description
+     *
+     * Category OC. Used as defined in TS 29.061. TS 32.273 does not
+     * define the contents.
+     *
+     * 3GPP TS 32.273 V19.0.0 table 6.3.1.2.1.
+     *
      * @public
      * @readonly
      */
     readonly requiredMBMSBearerCaps: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `mBMSGWAddress`.
+     * @description
+     *
+     * IP address of the MBMS GW that generated the Charging Id, when
+     * the MBMS GW is stand-alone. Category OC.
+     *
+     * 3GPP TS 32.273 V19.0.0 table 6.3.1.2.1.
+     *
      * @public
      * @readonly
      */
     readonly mBMSGWAddress: OPTIONAL<IPAddress>;
     /**
      * @summary `cNIPMulticastDistribution`.
+     * @description
+     *
+     * Category OC. Used as defined in TS 29.061. TS 32.273 does not
+     * define the enumerated values.
+     *
+     * 3GPP TS 32.273 V19.0.0 table 6.3.1.2.1.
+     *
      * @public
      * @readonly
      */
     readonly cNIPMulticastDistribution: OPTIONAL<MBMSInformation_cNIPMulticastDistribution>;
     /**
      * @summary `mBMSDataTransferStart`.
+     * @description
+     *
+     * Absolute time stamp of the start of data delivery. Category OC.
+     * For EPS, bearer charging may use the interval from this time to
+     * `mBMSDataTransferStop`. That measurement applies to broadcast
+     * and to enhanced broadcast.
+     *
+     * The value is seconds, relative to 00:00:00 on 1 January 1900
+     * (continuous time, without leap seconds, from a common time
+     * reference), at which radio resources were set up. The first 32
+     * bits are the integer part. The last 32 bits are the fraction,
+     * in units of 1/2^32 second. Valid only for E-UTRAN.
+     *
+     * 3GPP TS 32.273 V19.0.0 clause 5.1.1A, table 5.1.1A.2, and
+     * table 6.3.1.2.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.4.2A.
+     *
      * @public
      * @readonly
      */
     readonly mBMSDataTransferStart: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `mBMSDataTransferStop`.
+     * @description
+     *
+     * Absolute time stamp of the end of data delivery. Category OC.
+     * For EPS, bearer charging may use the interval from
+     * `mBMSDataTransferStart` to this time. That measurement applies
+     * to broadcast and to enhanced broadcast.
+     *
+     * The value is seconds, relative to 00:00:00 on 1 January 1900
+     * (continuous time, without leap seconds, from a common time
+     * reference), at which radio resources were released. The first
+     * 32 bits are the integer part. The last 32 bits are the
+     * fraction, in units of 1/2^32 second. Valid only for E-UTRAN.
+     *
+     * 3GPP TS 32.273 V19.0.0 clause 5.1.1A, table 5.1.1A.2, and
+     * table 6.3.1.2.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.4.2B.
+     *
      * @public
      * @readonly
      */

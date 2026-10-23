@@ -11,7 +11,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AccessAvailabilityChangeReason
  * @description
- * 
+ *
+ * This field indicates the reason why the availability of an access is
+ * changed by the PCEF, i.e. RAN rule indication or Access usable/unusable as
+ * defined in TS 29.212 [220].
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.0aA.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

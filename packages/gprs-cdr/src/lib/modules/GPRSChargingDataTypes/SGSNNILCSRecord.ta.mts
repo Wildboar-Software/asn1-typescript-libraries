@@ -25,7 +25,17 @@ import { CNOperatorSelectionEntity, _decode_CNOperatorSelectionEntity, _encode_C
 /**
  * @summary SGSNNILCSRecord
  * @description
- * 
+ *
+ * LCS-NI-CDR. Produced by the SGSN for each network-induced location
+ * request performed via the SGSN (clause 5.2.3.6 and table 6.1.9.1). If
+ * Charging Characteristics activate CDR generation, the SGSN creates the
+ * record when it receives the RANAP Location Report from the RNC.
+ * Service-specific LCS charging is specified in TS 32.271.
+ *
+ * 3GPP TS 32.251 V19.0.0.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -67,168 +77,473 @@ export
 class SGSNNILCSRecord {
     /**
      * @summary `recordType`.
+     * @description
+     *
+     * The field identifies the type of the record e.g. S-CDR, SGW-CDR, PGW-CDR,
+     * M-CDR, S-SMO-CDR, TDF-CDR, IPE-CDR and S-SMT-CDR.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.51.
+     *
+     * LCS-NI-CDR field category M (3GPP TS 32.251 V19.0.0 table 6.1.9.1).
+     *
      * @public
      * @readonly
      */
     readonly recordType: RecordType;
     /**
      * @summary `recordingEntity`.
+     * @description
+     *
+     * The E.164 number of the SGSN.
+     *
+     * LCS-NI-CDR field category M (3GPP TS 32.251 V19.0.0 table 6.1.9.1).
+     *
      * @public
      * @readonly
      */
     readonly recordingEntity: OCTET_STRING;
     /**
      * @summary `lcsClientType`.
+     * @description
+     *
+     * This field contains the type of the LCS Client as defined in TS 29.002
+     * [214].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.21.
+     *
+     * LCS-NI-CDR field category C (3GPP TS 32.251 V19.0.0 table 6.1.9.1).
+     *
      * @public
      * @readonly
      */
     readonly lcsClientType: OPTIONAL<LCSClientType>;
     /**
      * @summary `lcsClientIdentity`.
+     * @description
+     *
+     * This field contains further information on the LCS Client identity: Client
+     * External ID; Client Dialled by MS ID; Client Internal ID.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.20.
+     *
+     * LCS-NI-CDR field category C (3GPP TS 32.251 V19.0.0 table 6.1.9.1).
+     *
      * @public
      * @readonly
      */
     readonly lcsClientIdentity: OPTIONAL<LCSClientIdentity>;
     /**
      * @summary `servedIMSI`.
+     * @description
+     *
+     * This field contains the International Mobile Subscriber Identity (IMSI) of
+     * the served party. The term "served" party is used to describe the mobile
+     * subscriber involved in the transaction recorded e.g. the calling
+     * subscriber in case of a mobile initiated PDP context. The structure of the
+     * IMSI is defined in TS 23.003 [200].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.60.
+     *
+     * LCS-NI-CDR field category C (3GPP TS 32.251 V19.0.0 table 6.1.9.1).
+     *
      * @public
      * @readonly
      */
     readonly servedIMSI: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `servedMSISDN`.
+     * @description
+     *
+     * This field contains the Mobile Station (MS) ISDN number (MSISDN) of the
+     * served party. The term "served" party is used to describe the mobile
+     * subscriber involved in the transaction recorded. In case of
+     * multi-numbering the MSISDN stored in a CDR will be the primary MSISDN of
+     * the calling party. The structure of the MSISDN is defined in TS 23.003
+     * [200].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.62.
+     *
+     * LCS-NI-CDR field category C (3GPP TS 32.251 V19.0.0 table 6.1.9.1).
+     *
      * @public
      * @readonly
      */
     readonly servedMSISDN: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `sgsnAddress`.
+     * @description
+     *
+     * These fields contain one or several IP addresses of SGSN. The IP address
+     * of the SGSN can be either control plane address or user plane address. The
+     * S-CDR fields contain single address of current SGSN. The M-CDR fields only
+     * contain the address of the current SGSN. If both an IPv4 and an IPv6
+     * address of the SGSN are available, the SGSNs shall include the IPv4
+     * address in the CDR.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.69.
+     *
+     * LCS-NI-CDR field category OM (3GPP TS 32.251 V19.0.0 table 6.1.9.1).
+     *
      * @public
      * @readonly
      */
     readonly sgsnAddress: OPTIONAL<GSNAddress>;
     /**
      * @summary `servedIMEI`.
+     * @description
+     *
+     * This field contains the International Mobile Equipment Identity (IMEI) of
+     * the equipment served, if available. The term "served" equipment is used to
+     * describe the ME involved in the transaction recorded e.g. the called ME in
+     * the case of a network initiated PDP context. The structure of the IMEI is
+     * specified in TS 23.003 [200] and the encoding defined in TS 29.274 [223].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.58.
+     *
+     * LCS-NI-CDR field category OC (3GPP TS 32.251 V19.0.0 table 6.1.9.1).
+     *
      * @public
      * @readonly
      */
     readonly servedIMEI: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `lcsQos`.
+     * @description
+     *
+     * This information element defines the Quality of Service for a location
+     * request as defined in TS 49.031 [227].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.23.
+     *
+     * LCS-NI-CDR field category C (3GPP TS 32.251 V19.0.0 table 6.1.9.1).
+     *
      * @public
      * @readonly
      */
     readonly lcsQos: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `lcsPriority`.
+     * @description
+     *
+     * This parameter gives the priority of the location request as defined in TS
+     * 49.031 [227].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.22.
+     *
+     * LCS-NI-CDR field category C (3GPP TS 32.251 V19.0.0 table 6.1.9.1).
+     *
      * @public
      * @readonly
      */
     readonly lcsPriority: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `mlcNumber`.
+     * @description
+     *
+     * This parameter refers to the ISDN (ITU-T Rec. E.164 [308]) number of a
+     * GMLC.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.32.
+     *
+     * LCS-NI-CDR field category C (3GPP TS 32.251 V19.0.0 table 6.1.9.1).
+     *
      * @public
      * @readonly
      */
     readonly mlcNumber: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `eventTimeStamp`.
+     * @description
+     *
+     * These fields contain the event time stamps relevant for each of the
+     * individual record types. All time-stamps include a minimum of date, hour,
+     * minute and second.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.14.
+     *
+     * LCS-NI-CDR field category M (3GPP TS 32.251 V19.0.0 table 6.1.9.1).
+     *
      * @public
      * @readonly
      */
     readonly eventTimeStamp: OCTET_STRING;
     /**
      * @summary `measurementDuration`.
+     * @description
+     *
+     * This field contains the duration for the section of the location
+     * measurement corresponding to the Perform_Location_Request and
+     * Perform_Location_Response by the SGSN.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.30.
+     *
+     * LCS-NI-CDR field category OM (3GPP TS 32.251 V19.0.0 table 6.1.9.1).
+     *
      * @public
      * @readonly
      */
     readonly measurementDuration: OPTIONAL<INTEGER>;
     /**
      * @summary `location`.
+     * @description
+     *
+     * The LAC and CI when the LR is received.
+     *
+     * LCS-NI-CDR field category OM (3GPP TS 32.251 V19.0.0 table 6.1.9.1).
+     *
      * @public
      * @readonly
      */
     readonly location: OPTIONAL<LocationAreaAndCell>;
     /**
      * @summary `routingArea`.
+     * @description
+     *
+     * The Routing Area Code from which the LCS originated.
+     *
+     * LCS-NI-CDR field category OM (3GPP TS 32.251 V19.0.0 table 6.1.9.1).
+     *
      * @public
      * @readonly
      */
     readonly routingArea: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `locationEstimate`.
+     * @description
+     *
+     * The Location Estimate field is providing an estimate of a geographic
+     * location of a target MS according to TS 29.002 [214].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.27.
+     *
+     * LCS-NI-CDR field category OC (3GPP TS 32.251 V19.0.0 table 6.1.9.1).
+     *
      * @public
      * @readonly
      */
     readonly locationEstimate: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `positioningData`.
+     * @description
+     *
+     * This information element is providing positioning data associated with a
+     * successful or unsuccessful location attempt for a target MS according TS
+     * 49.031 [227].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.43.
+     *
+     * LCS-NI-CDR field category C (3GPP TS 32.251 V19.0.0 table 6.1.9.1).
+     *
      * @public
      * @readonly
      */
     readonly positioningData: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `lcsCause`.
+     * @description
+     *
+     * The LCS Cause parameter provides the reason for an unsuccessful location
+     * request according TS 49.031 [227].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.19.
+     *
+     * LCS-NI-CDR field category OC (3GPP TS 32.251 V19.0.0 table 6.1.9.1).
+     *
      * @public
      * @readonly
      */
     readonly lcsCause: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `diagnostics`.
+     * @description
+     *
+     * This field includes a more detailed technical reason for the releases of
+     * the connection. The diagnostics may also be extended to include
+     * manufacturer and network specific information.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.11.
+     *
+     * LCS-NI-CDR field category C (3GPP TS 32.251 V19.0.0 table 6.1.9.1).
+     *
      * @public
      * @readonly
      */
     readonly diagnostics: OPTIONAL<Diagnostics>;
     /**
      * @summary `nodeID`.
+     * @description
+     *
+     * This field contains an optional, operator configurable, identifier string
+     * for the node that had generated the CDR. The Node ID may or may not be the
+     * DNS host name of the node.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.36.
+     *
+     * LCS-NI-CDR field category OM (3GPP TS 32.251 V19.0.0 table 6.1.9.1).
+     *
      * @public
      * @readonly
      */
     readonly nodeID: OPTIONAL<IA5String>;
     /**
      * @summary `localSequenceNumber`.
+     * @description
+     *
+     * This field includes a unique record number created by this node. The
+     * number is allocated sequentially for each partial CDR (or whole CDR)
+     * including all CDR types. The number is unique within one node, which is
+     * identified either by field Node ID or by record-dependent node address
+     * (SGSN address, S-/P-GW address, TDF address, IP-Edge Address, Recording
+     * Entity). The field can be used e.g. to identify missing records in post
+     * processing system.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.26.
+     *
+     * LCS-NI-CDR field category OM (3GPP TS 32.251 V19.0.0 table 6.1.9.1).
+     *
      * @public
      * @readonly
      */
     readonly localSequenceNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `chargingCharacteristics`.
+     * @description
+     *
+     * The Charging Characteristics field allows the operator to apply different
+     * kind of charging methods in the CDRs. A subscriber may have Charging
+     * Characteristics assigned to his subscription. These characteristics can be
+     * supplied by the HLR/HSS according to the rules specified in Annex A of TS
+     * 32.251 [11]. Charging Characteristics used by IP-Edge [PCEF] or TDF in
+     * Convergent Fixed-Mobile Operator scenario are always configured in IP-Edge
+     * [PCEF] or TDF respectively, as described in annex D of TS 32.251 [11].
+     * This information can be used by the PCNs/ IP-Edge [PCEF] to activate
+     * charging generation and e.g. control the closure of the CDR or the traffic
+     * volume containers (see clause 5.1.2.2.25) and applied charging
+     * characteristics is included in CDRs transmitted to nodes handling the CDRs
+     * via the Ga reference point. It can also be used in nodes handling the CDRs
+     * (e.g., the CGF or the billing system) to influence the CDR processing
+     * priority and routing. These functions are accomplished by specifying the
+     * charging characteristics as sets of charging profiles and the expected
+     * behaviour associated with each profile. The interpretations of the
+     * profiles and their associated behaviours can be different for each PLMN
+     * operator and are not subject to standardisation. In the present document
+     * only the charging characteristic formats and selection modes are
+     * specified.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.7.
+     *
+     * LCS-NI-CDR field category M (3GPP TS 32.251 V19.0.0 table 6.1.9.1).
+     *
      * @public
      * @readonly
      */
     readonly chargingCharacteristics: OCTET_STRING;
     /**
      * @summary `chChSelectionMode`.
+     * @description
+     *
+     * This field indicates the charging characteristic type that the PCNs
+     * applied to the CDR. In the SGSN the allowed values are: Home default;
+     * Visiting default; Roaming default; APN specific; Subscription specific. In
+     * the S-GW/P-GW/TDF the allowed values are: Home default; Visiting default;
+     * Roaming default; Serving node supplied. NOTE: The value 'Serving Node
+     * Supplied' is used if the CC what was received from e.g. S-GW is used i.e.
+     * the one what comes during bearer activation. Further details are provided
+     * in TS 32.251 [11] Annex A. In the IP-Edge [PCEF] and TDF in Convergent
+     * Fixed-Mobile Operator scenario, the allowed values are: Home default;
+     * Visiting default; Fixed default; Further details are provided in TS 32.251
+     * [11] Annex D.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.8.
+     *
+     * LCS-NI-CDR field category OM (3GPP TS 32.251 V19.0.0 table 6.1.9.1).
+     *
      * @public
      * @readonly
      */
     readonly chChSelectionMode: OPTIONAL<ChChSelectionMode>;
     /**
      * @summary `rATType`.
+     * @description
+     *
+     * Holds the value of RAT Type, as provided to S-GW and P-GW, specified in TS
+     * 29.061 [216] and also provided to the TDF as specified in TS 29.212 [220].
+     * The field is provided by the SGSN/MME and transferred to the S-GW/P-GW
+     * during the IP-CAN bearer activation/modification and transferred to the
+     * TDF during the TDF session establishment/modification.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.47.
+     *
+     * LCS-NI-CDR field category OC (3GPP TS 32.251 V19.0.0 table 6.1.9.1).
+     *
      * @public
      * @readonly
      */
     readonly rATType: OPTIONAL<INTEGER>;
     /**
      * @summary `recordExtensions`.
+     * @description
+     *
+     * This field enables network operators and/or manufacturers to add their own
+     * recommended extensions to the standard record definitions. This field
+     * contains a set of "management extensions" as defined in X.721 [305]. This
+     * is conditioned upon the existence of an extension.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.48.
+     *
+     * LCS-NI-CDR field category OC (3GPP TS 32.251 V19.0.0 table 6.1.9.1).
+     *
      * @public
      * @readonly
      */
     readonly recordExtensions: OPTIONAL<ManagementExtension[]>;
     /**
      * @summary `causeForRecClosing`.
+     * @description
+     *
+     * This field contains a reason for the release of the CDR. In case of Rf
+     * interface is used, it is derived from Change-Condition AVP at
+     * PS-information AVP level defined in TS 32.299 [40], when received. The
+     * following is included: VoLTE bearer abnormal release: It corresponds to
+     * "VoLTE Bearer Abnormal Release" in Change-Condition AVP. A more detailed
+     * reason may be found in the diagnostics field or Enhanced Diagnostics
+     * field.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.5.
+     *
+     * LCS-NI-CDR field category M (3GPP TS 32.251 V19.0.0 table 6.1.9.1).
+     *
      * @public
      * @readonly
      */
     readonly causeForRecClosing: CauseForRecClosing;
     /**
      * @summary `servingNodePLMNIdentifier`.
+     * @description
+     *
+     * This field contains the PLMN Identifier (Mobile Country Code and Mobile
+     * Network Code) serving the UE. The MCC and MNC are coded as described for
+     * 'Routing Area Identity' in TS 29.060 [75].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.67.
+     *
+     * LCS-NI-CDR field category Oc (3GPP TS 32.251 V19.0.0 table 6.1.9.1).
+     *
      * @public
      * @readonly
      */
     readonly servingNodePLMNIdentifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `cNOperatorSelectionEnt`.
+     * @description
+     *
+     * This field indicates whether the Serving Network identified by the
+     * "Serving Node PLMN Identifier” has been selected by the UE or by the
+     * network, as defined in TS 29.060 [203] for GPRS, and in TS 29.274 [210]
+     * for EPC, if available.
+     *
+     * LCS-NI-CDR field category OC (3GPP TS 32.251 V19.0.0 table 6.1.9.1).
+     *
      * @public
      * @readonly
      */

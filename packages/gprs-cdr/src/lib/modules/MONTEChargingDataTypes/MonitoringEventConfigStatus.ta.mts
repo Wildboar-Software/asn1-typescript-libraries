@@ -14,7 +14,20 @@ import { ServiceResult, _decode_ServiceResult, _encode_ServiceResult } from "../
 /**
  * @summary MonitoringEventConfigStatus
  * @description
- * 
+ *
+ * Whether a Monitoring Event configuration request succeeded.
+ * Category M on the ME-CO-CDR. On Rf the category is Oc: when
+ * the request did not succeed, a specific value indicates the
+ * error from handling the requested action. Sent for
+ * configuration only. Bound to Monitoring-Event-Config-Status.
+ *
+ * The sequence also carries an SCEF reference ID and an SCEF
+ * Id. TS 32.278 does not describe those two components of the
+ * status. The request identity on `MECORecord` is that same
+ * pair.
+ *
+ * 3GPP TS 32.278 V19.0.0 clauses 5.1, 6.1.3.2, 6.3.1.2 and 6.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,18 +43,42 @@ export
 class MonitoringEventConfigStatus {
     /**
      * @summary `serviceResult`.
+     * @description
+     *
+     * Outcome of the requested configuration action. TS 32.278
+     * says that a failed request uses a specific value for the
+     * error, and does not define the `ServiceResult` integers.
+     *
+     * 3GPP TS 32.278 V19.0.0 clause 6.3.1.2.
+     *
      * @public
      * @readonly
      */
     readonly serviceResult: OPTIONAL<ServiceResult>;
     /**
      * @summary `sCEFReferenceID`.
+     * @description
+     *
+     * TS 32.278 does not describe this component of the config
+     * status. On the CDR, SCEF Reference ID is the identifier
+     * the SCEF assigned to the Monitoring Request.
+     *
+     * 3GPP TS 32.278 V19.0.0 clauses 6.1.3.2 and 6.3.2.1.
+     *
      * @public
      * @readonly
      */
     readonly sCEFReferenceID: OPTIONAL<INTEGER>;
     /**
      * @summary `sCEFID`.
+     * @description
+     *
+     * TS 32.278 does not describe this component of the config
+     * status. On the CDR, SCEF Id is the SCEF to which the
+     * Monitoring Indication is sent.
+     *
+     * 3GPP TS 32.278 V19.0.0 clauses 6.1.3.2 and 6.3.2.1.
+     *
      * @public
      * @readonly
      */

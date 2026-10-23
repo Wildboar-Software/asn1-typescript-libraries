@@ -11,7 +11,20 @@ import { CONTENTBMSCRecord, _decode_CONTENTBMSCRecord, _encode_CONTENTBMSCRecord
 /**
  * @summary MBMSRecord
  * @description
- * 
+ *
+ * Offline charging record for the BM-SC.
+ *
+ * `sUBBMSCRecord` is the subscriber BM-SC CDR (S-BMSC-CDR): one
+ * record per MBMS bearer service per receiving subscriber.
+ * `cONTENTBMSCRecord` is the content-provider BM-SC CDR
+ * (C-BMSC-CDR): one record per MBMS bearer service. The MBMS
+ * Charged Party information element, which indicates whether the
+ * content provider or the receiving subscriber is charged, is bound
+ * to the record type. It is available only in the BM-SC, and only
+ * for offline charging.
+ *
+ * 3GPP TS 32.273 V19.0.0 clauses 5.2.3 and 6.1.3, and table 6.4.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -13,7 +13,14 @@ import { RateElements, _decode_RateElements, _encode_RateElements } from "../MMT
 /**
  * @summary TariffInformation
  * @description
- * 
+ *
+ * This field holds the tariff mapped in the Tariff Information structure.
+ * The corresponding structure of the Tariff Information can be found in the
+ * TS 32.299 [50]. The formatting from real time tariff information to Tariff
+ * Information structure is described in TS 32 280 [40].
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.67.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

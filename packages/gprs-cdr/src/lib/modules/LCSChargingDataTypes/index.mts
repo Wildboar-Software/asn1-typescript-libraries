@@ -1,7 +1,13 @@
 /**
  * @description
  *
- * ASN.1 module `LCSChargingDataTypes`.
+ * ASN.1 module `LCSChargingDataTypes`: Gateway Mobile Location
+ * Centre (GMLC) charging data records for location services.
+ *
+ * 3GPP TS 32.271 V12.1.0 specifies when each record is produced and
+ * what each field means. 3GPP TS 32.298 V20.1.0 clause 5.1.4.2
+ * specifies the ASN.1 and the encoding. The GMLC transfers CDR
+ * files to the billing domain on Bl, as specified in TS 32.297.
  *
  * Identical assignments that also appear in other charging modules
  * are re-exported from `shared`.

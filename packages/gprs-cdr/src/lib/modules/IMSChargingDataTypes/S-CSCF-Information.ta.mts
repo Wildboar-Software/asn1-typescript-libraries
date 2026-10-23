@@ -12,7 +12,23 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary S_CSCF_Information
  * @description
- * 
+ *
+ * Serving CSCF information from the I-CSCF: capabilities on a
+ * registration, or the S-CSCF address when a session is established
+ * (clause 6.1.3.5). This is the Server Capabilities element of clause
+ * 6.3.1.2, taken from TS 29.229.
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 6.1.3.5.
+ *
+ * This field contains Information related to the serving CSCF, e.g. the
+ * S-CSCF capabilities upon registration event or the S-CSCF address upon the
+ * session establishment event. This field is derived from the
+ * Server-Capabilities AVP if present in the ACR received from the I-CSCF.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.66.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,18 +46,37 @@ export
 class S_CSCF_Information {
     /**
      * @summary `mandatoryCapabilities`.
+     * @description
+     *
+     * Mandatory capabilities of the serving CSCF, reported by the I-CSCF on a
+     * registration. Clause 6.1.3.5 describes the group as the S-CSCF
+     * capabilities on registration or the S-CSCF address on session
+     * establishment, and does not define this list separately..
+     *
      * @public
      * @readonly
      */
     readonly mandatoryCapabilities: OPTIONAL<GraphicString[]>;
     /**
      * @summary `optionalCapabilities`.
+     * @description
+     *
+     * Optional capabilities of the serving CSCF, reported by the I-CSCF on a
+     * registration (clause 6.1.3.5). TS 32.260 does not define this list
+     * separately from S-CSCF Information.
+     *
      * @public
      * @readonly
      */
     readonly optionalCapabilities: OPTIONAL<GraphicString[]>;
     /**
      * @summary `serverName`.
+     * @description
+     *
+     * S-CSCF address reported by the I-CSCF when a session is established
+     * (clause 6.1.3.5). TS 32.260 does not define this component separately
+     * from S-CSCF Information.
+     *
      * @public
      * @readonly
      */

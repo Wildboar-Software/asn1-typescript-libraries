@@ -1,6 +1,15 @@
 /**
  * @description
  *
+ * Control Plane (CP) data transfer charging for Non-IP Data Delivery
+ * (NIDD) using SCEF procedures, from 3GPP TS 32.253 V19.0.0.
+ *
+ * Offline charging may be produced by the SCEF (`CPDTSCERecord`), the
+ * IWK-SCEF, and, optionally, the MME (both use `CPDTSNNRecord`). Online
+ * charging is not specified. Charging principles and CDR triggers are
+ * in clause 5; CDR contents are in clause 6.1.3. The ASN.1 syntax and
+ * the common parameter definitions are in 3GPP TS 32.298.
+ *
  * ASN.1 module `CPDTChargingDataTypes`.
  *
  * Identical assignments that also appear in other charging modules

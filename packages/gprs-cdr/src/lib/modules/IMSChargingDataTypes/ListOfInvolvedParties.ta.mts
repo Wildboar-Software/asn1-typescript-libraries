@@ -9,7 +9,16 @@ import { InvolvedParty, _decode_InvolvedParty, _encode_InvolvedParty } from "../
 /**
  * @summary ListOfInvolvedParties
  * @description
- * 
+ *
+ * Addresses of IMS parties. Each element is a SIP URI, a Tel URI, a URN,
+ * or an ISDN E.164 number, used for the calling party, the called party,
+ * requested parties, asserted identities, or associated URIs (clause
+ * 6.1.3.3).
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 6.1.3.3.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

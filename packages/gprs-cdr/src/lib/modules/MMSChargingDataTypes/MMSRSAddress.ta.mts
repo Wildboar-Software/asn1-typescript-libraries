@@ -12,7 +12,14 @@ import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../MMSChargingD
 /**
  * @summary MMSRSAddress
  * @description
- * 
+ *
+ * IP address or domain name of an MMS Relay/Server. Which Relay/Server
+ * depends on the CDR field: originator, recipient, or forwarding. The
+ * tables allow either form. `domainName` is the domain name and
+ * `iPAddress` is the IP address.
+ *
+ * 3GPP TS 32.270 V19.0.0 clause 6.1.1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +34,26 @@ export
 class MMSRSAddress {
     /**
      * @summary `domainName`.
+     * @description
+     *
+     * Domain name of the MMS Relay/Server. The CDR tables allow either a
+     * domain name or an IP address.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.1.1.
+     *
      * @public
      * @readonly
      */
     readonly domainName: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `iPAddress`.
+     * @description
+     *
+     * IP address of the MMS Relay/Server. The CDR tables allow either a domain
+     * name or an IP address.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.1.1.
+     *
      * @public
      * @readonly
      */

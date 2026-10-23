@@ -32,7 +32,36 @@ import { ICSregisterRecord, _decode_ICSregisterRecord, _encode_ICSregisterRecord
 /**
  * @summary CSRecord
  * @description
- * 
+ *
+ * Choice of every CS-domain CDR the MSC server, GMSC server, or location
+ * register can produce. Generation of each alternative is separately
+ * enabled. The CGF forwards the records to the billing domain on the Bc
+ * reference point.
+ *
+ * `moCallRecord` is an outgoing call, an emergency call, a forwarded leg, or
+ * a CAMEL CPH variant of those. `mtCallRecord` is an incoming call at the
+ * terminating MSC. `roamingRecord` is a call redirected to a subscriber
+ * roaming outside the HPLMN, and is also produced by the old MSC/VLR when
+ * MTRF reroutes into another PLMN. `incGatewayRecord` and `outGatewayRecord`
+ * settle traffic with other networks and are produced even when the gateway
+ * and the serving MSC are co-located. `transitRecord` is produced only when
+ * this MSC produces neither an MOC nor an MTC for the attempt.
+ *
+ * `ssActionRecord` is a supplementary-service action. `hlrIntRecord` is an
+ * HLR interrogation. `locUpdateVLRRecord` and `locUpdateHLRRecord` are
+ * location updates. `moSMSRecord`, `mtSMSRecord`, `moSMSIWRecord`, and
+ * `mtSMSGWRecord` are point-to-point short messages. `commonEquipRecord` is
+ * shared equipment such as a conference bridge. `termCAMELRecord` is a
+ * terminating CAMEL attempt. `mtLCSRecord`, `moLCSRecord`, and `niLCSRecord`
+ * are location requests. `mSCsRVCCRecord` is an IMS to CS voice or emergency
+ * transfer. `mMTRFRecord` is the old MSC/VLR's record of an MTRF reroute.
+ * `iCSRegisterRecord` is an ICS registration towards IMS.
+ *
+ * `recTypeExtensions` is the network-specific extension alternative. Online
+ * CS charging is CAMEL, outside the 32-series CDR definitions (clause 5.3).
+ *
+ * 3GPP TS 32.250 V19.0.0 clauses 5.2.3 and 6.1.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

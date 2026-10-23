@@ -16,7 +16,15 @@ import { NodeAddress, _decode_NodeAddress, _encode_NodeAddress } from "../CHFCha
 /**
  * @summary NetworkFunctionInformation
  * @description
- * 
+ *
+ * This field contains the information about the NF that used the charging
+ * service. It includes the following fields: NF Functionality includes the
+ * functionality provided by the NF. NF Name contains the UUID of the NF. NF
+ * Address contains the IP-address and/or FQDN of the NF NF PLMN ID holds the
+ * PLMN id of the NF For further details see TS 23.003 [200].
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.5.1.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

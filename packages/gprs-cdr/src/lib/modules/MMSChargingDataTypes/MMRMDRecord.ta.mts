@@ -18,7 +18,58 @@ import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExt
 /**
  * @summary MMRMDRecord
  * @description
- * 
+ *
+ * Recipient MM Deletion record (RMD-CDR).
+ *
+ * If enabled, a Recipient MM Deletion RMD-CDR shall be produced in the
+ * Recipient MMS R/S if and when:
+ *
+ * 1) the Recipient MMS R/S decides to abandon processing of the MM at any
+ * point after receiving the corresponding MM4_forward.REQ; or
+ *
+ * 2) the Recipient MMS R/S decides to delete the MM because of expiry of
+ * storage time, which may either be indicated in the submit request or
+ * governed by operator procedure(e.g. after successful MM delivery); or
+ *
+ * 3) The Recipient MMS R/S decides to delete the MM prior to the expiry of
+ * storage time because it received a request to delete a deferred MM (i.e.
+ * MM for that retrieval has been deferred) from the recipient MMS User
+ * Agent in the corresponding MM1_delete.REQ and before an MM1_cancel.REQ,
+ * if any, is sent to the recipient MMS User Agent.
+ *
+ * Abandoning the processing of the MM implies that there remains no
+ * knowledge of the MM in the Recipient MMS R/S.
+ *
+ * The status code indicates the precise reason for abandoning or deleting
+ * the MM with respect to the MMS transactions specified in TS 23.140
+ * [201].
+ *
+ * A special case is where the Recipient MMS R/S is also the Forwarding MMS
+ * R/S. In this case only the Originator MM Deletion CDR specified in
+ * clause 6.1.1.8 is required.
+ *
+ * Table 5.2.3.1.1 associates trigger C10 with this record in the combined
+ * case. Table 5.2.3.2.2 associates both trigger R12 and "anytime after R2"
+ * with it. When the Recipient MMS R/S is also the forwarding MMS R/S, only
+ * the OMD-CDR in clause 6.1.1.8 is required.
+ *
+ * Produced in the Recipient MMS R/S. An MM4 record is produced only when
+ * that R/S is not also the Originator MMS R/S. An MM1 record is produced
+ * either way. Unless otherwise stated, parameters are copied from the
+ * corresponding MM1 or MM4 message (clause 6.1.2.0).
+ *
+ * MMS offline charging is event based. One chargeable event produces one
+ * CDR. From the 3GPP specifications that CDR is visible in the files the
+ * MMS R/S sends across Bm (clause 5.2.1).
+ *
+ * Field categories follow the charging data configuration in TS 32.240
+ * clause 5.4, which clause 6.1.0 applies to this table. M is always
+ * present. C is present when the conditions stated for that field are met.
+ * OM and OC are included only when the operator has provisioned them; OC
+ * also requires those conditions.
+ *
+ * 3GPP TS 32.270 V19.0.0 clause 6.1.2.12.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,60 +93,170 @@ export
 class MMRMDRecord {
     /**
      * @summary `recordType`.
+     * @description
+     *
+     * The field identifies the type of the record, see TS 32.250 [10].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.42.
+     *
+     * Category M. Recipient MM Deletion record.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.2.12.
+     *
      * @public
      * @readonly
      */
     readonly recordType: RecordType;
     /**
      * @summary `originatorMmsRSAddress`.
+     * @description
+     *
+     * Category M. IP address or domain name of the Originator MMS R/S.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.2.12.
+     *
      * @public
      * @readonly
      */
     readonly originatorMmsRSAddress: MMSRSAddress;
     /**
      * @summary `recipientMmsRSAddress`.
+     * @description
+     *
+     * Category OM. IP address or domain name of the Recipient MMS R/S.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.2.12.
+     *
      * @public
      * @readonly
      */
     readonly recipientMmsRSAddress: OPTIONAL<MMSRSAddress>;
     /**
      * @summary `messageID`.
+     * @description
+     *
+     * This field specifies the MM Message ID of the MM as defined in TS 23.140
+     * [206]. The concrete syntax of this MM Message ID is given by the body of
+     * the field introduced by the string "X-Mms-Message-ID:" in the concrete
+     * syntax of the message MM4_Forward. REQ. All CDRs pertaining to the same MM
+     * shall employ the same value of this parameter, i.e. the value initially
+     * assigned by the originator MMS Relay/Server upon submission of the MM by
+     * the Originator MMS User Agent.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.20.
+     *
+     * Category M. The MM identification provided by the Originator MMS R/S.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.2.12.
+     *
      * @public
      * @readonly
      */
     readonly messageID: OCTET_STRING;
     /**
      * @summary `messageSize`.
+     * @description
+     *
+     * This field contains the number of octets of the MM that is calculated as
+     * specified in TS 23.140 [206].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.23.
+     *
+     * Category OM. The total size of the MM content.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.2.12.
+     *
      * @public
      * @readonly
      */
     readonly messageSize: INTEGER;
     /**
      * @summary `mmStatusCode`.
+     * @description
+     *
+     * This field contains an appropriate status value of the delivered MM (e.g.
+     * retrieved, rejected, etc.).
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.28.
+     *
+     * Category OM. The status code of the MM at the time when the CDR is
+     * generated.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.2.12.
+     *
      * @public
      * @readonly
      */
     readonly mmStatusCode: OPTIONAL<MMStatusCodeType>;
     /**
      * @summary `statusText`.
+     * @description
+     *
+     * This field includes a more detailed technical status of the message at the
+     * point in time when the CDR is generated.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.55.
+     *
+     * Category OM. This field includes a more detailed technical status of
+     * delivering the message.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.2.12.
+     *
      * @public
      * @readonly
      */
     readonly statusText: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `recordTimeStamp`.
+     * @description
+     *
+     * This field indicates the date and time when the CDR was produced.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.41.
+     *
+     * Category OM. Time of generation of the CDR.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.2.12.
+     *
      * @public
      * @readonly
      */
     readonly recordTimeStamp: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `localSequenceNumber`.
+     * @description
+     *
+     * This field includes a unique record number created by this node. The
+     * number is allocated sequentially including all CDR types. The number is
+     * unique within one node, which is identified either by field Node ID or by
+     * record-dependent MMS Relay/Server. The field can be used e.g. to identify
+     * missing records in post processing system.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.16.
+     *
+     * Category OM. Consecutive record number created by this node. The number
+     * is allocated sequentially including all CDR types.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.2.12.
+     *
      * @public
      * @readonly
      */
     readonly localSequenceNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `recordExtensions`.
+     * @description
+     *
+     * The field enables network operators and/or manufacturers to add their own
+     * extensions to the standard record definitions.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.40.
+     *
+     * Category OC. A set of network/manufacturer specific extensions to the
+     * record. Conditioned upon the existence of an extension.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.2.12.
+     *
      * @public
      * @readonly
      */

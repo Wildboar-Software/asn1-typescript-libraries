@@ -21,7 +21,22 @@ import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExt
 /**
  * @summary SCDVTT4Record
  * @description
- * 
+ *
+ * SC-DVT-T4 CDR: device trigger over T4. The CDF creates it when the SMS-SC
+ * reports reception of a Device Trigger Request from the MTC-IWF, including
+ * replace and recall (clauses 5.2.2.4.1, 5.2.2.4.4, and 5.2.2.4.5). Delivery
+ * of that trigger toward the UE is an SC-SMT CDR (clause 5.2.2.4.2). The
+ * delivery report the SMS-SC then sends to the MTC-IWF is not itself a
+ * charging event (clause 5.2.2.4.3).
+ *
+ * A replace applies only while a trigger identified by the external identifier
+ * or MSISDN, the SCS identifier, and the old reference number is still
+ * pending; otherwise the replace fails. A recall deletes that pending trigger.
+ * Online charging reports a recall as a failure when nothing is pending
+ * (clause 5.3.2.11.5).
+ *
+ * 3GPP TS 32.274 V19.1.0 clause 6.1.3.5, table 6.1.3.5.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,60 +60,130 @@ export
 class SCDVTT4Record {
     /**
      * @summary `recordType`.
+     * @description
+     *
+     * Device trigger over T4.
+     *
+     * 3GPP TS 32.274 V19.1.0 table 6.1.3.5.1.
+     *
      * @public
      * @readonly
      */
     readonly recordType: RecordType;
     /**
      * @summary `sMSNodeAddress`.
+     * @description
+     *
+     * Address, for example E.164, of the SMS-SC that sent the Charging Data
+     * Request used to produce this record (SMSC Address).
+     *
+     * 3GPP TS 32.274 V19.1.0 table 6.1.3.5.1.
+     *
      * @public
      * @readonly
      */
     readonly sMSNodeAddress: OCTET_STRING;
     /**
      * @summary `eventtimestamp`.
+     * @description
+     *
+     * When the Device Trigger request arrived at the SMS-SC.
+     *
+     * 3GPP TS 32.274 V19.1.0 table 6.1.3.5.1.
+     *
      * @public
      * @readonly
      */
     readonly eventtimestamp: OCTET_STRING;
     /**
      * @summary `originatorInfo`.
+     * @description
+     *
+     * Originator of the device trigger. The other address is the SME address
+     * of the Service Capability Server requesting the trigger (TS 29.337).
+     *
+     * 3GPP TS 32.274 V19.1.0 table 6.1.3.5.1.
+     *
      * @public
      * @readonly
      */
     readonly originatorInfo: OPTIONAL<OriginatorInfo>;
     /**
      * @summary `recipientInfo`.
+     * @description
+     *
+     * Recipient of the short message to be delivered. The IMSI, and if
+     * available the MSISDN and the external identifier, are those received in
+     * the User Identifier from the MTC-IWF (TS 29.337).
+     *
+     * 3GPP TS 32.274 V19.1.0 table 6.1.3.5.1.
+     *
      * @public
      * @readonly
      */
     readonly recipientInfo: OPTIONAL<RecipientInfo>;
     /**
      * @summary `sMDeviceTriggerIndicator`.
+     * @description
+     *
+     * Whether this submission is a trigger, a replace, or a recall.
+     *
+     * 3GPP TS 32.274 V19.1.0 table 6.1.3.5.1.
+     *
      * @public
      * @readonly
      */
     readonly sMDeviceTriggerIndicator: OPTIONAL<SMDeviceTriggerIndicator>;
     /**
      * @summary `sMDeviceTriggerInformation`.
+     * @description
+     *
+     * The device-trigger submission: MTC-IWF address, reference number,
+     * serving node, validity period, priority, and application port
+     * identifier, where available. The old reference number is required for
+     * replace and recall; see `SMDeviceTriggerInformation`.
+     *
+     * 3GPP TS 32.274 V19.1.0 table 6.1.3.5.1.
+     *
      * @public
      * @readonly
      */
     readonly sMDeviceTriggerInformation: OPTIONAL<SMDeviceTriggerInformation>;
     /**
      * @summary `sMSResult`.
+     * @description
+     *
+     * Result of the Device Trigger request at the SMS-SC. Mandatory in this
+     * table, which names the field Result.
+     *
+     * 3GPP TS 32.274 V19.1.0 table 6.1.3.5.1.
+     *
      * @public
      * @readonly
      */
     readonly sMSResult: OPTIONAL<SMSResult>;
     /**
      * @summary `localSequenceNumber`.
+     * @description
+     *
+     * TS 32.274 V19.1.0 clause 6.1.3 does not list this field. TS 32.298
+     * clause 5.1.4.6.2 describes it as a unique record number created by this
+     * node. The number is allocated sequentially across CDR types, is unique
+     * within the CDF, and can be used to detect missing records.
+     *
      * @public
      * @readonly
      */
     readonly localSequenceNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `recordExtensions`.
+     * @description
+     *
+     * Network- or manufacturer-specific extensions to the record, when
+     * available.
+     *
+     * 3GPP TS 32.274 V19.1.0 table 6.1.3.5.1.
+     *
      * @public
      * @readonly
      */

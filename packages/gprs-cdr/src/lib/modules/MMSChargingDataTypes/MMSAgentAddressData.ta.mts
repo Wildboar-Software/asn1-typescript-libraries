@@ -13,6 +13,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary MMSAgentAddressData
  * @description
  * 
+ * Address of an MMS User Agent: `eMail_address`, `mSISDN`, or `shortCode`.
+ * Clause 6.3.2 describes an originator or recipient address as a public
+ * user identity such as a SIP URI or an E.164 number. Clause 6.4.2 also
+ * allows an email address or a short code when the address is neither a
+ * SUPI nor a GPSI.
+ *
+ * 3GPP TS 32.270 V19.0.0 clauses 6.3.2 and 6.4.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

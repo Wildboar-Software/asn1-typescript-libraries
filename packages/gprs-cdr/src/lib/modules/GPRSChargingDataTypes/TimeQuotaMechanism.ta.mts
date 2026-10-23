@@ -13,6 +13,14 @@ import { TimeQuotaType, _decode_TimeQuotaType, _encode_TimeQuotaType, _enum_for_
  * @summary TimeQuotaMechanism
  * @description
  * 
+ * Included in a List of Service Data container (table 6.1.3.3). That table
+ * refers the definition to TS 32.298. Clause 5.2.3.4.1 describes
+ * time-envelope reporting, whose completed envelopes are added to the
+ * PGW-CDR and whose completion rules are in TS 32.299, but it does not
+ * define this type's quota type or base interval.
+ * 
+ * 3GPP TS 32.251 V19.0.0.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

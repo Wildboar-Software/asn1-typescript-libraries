@@ -6,7 +6,18 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary POCSessionType
  * @description
- * 
+ *
+ * Type of the PoC session. Charging distinguishes the four
+ * values below. TS 32.272 points at appendix C.5.1 of
+ * OMA-CP-POC for the formal type and defines the four session
+ * kinds in clauses 3.1 and 5.1.1.
+ *
+ * For a 1-1 or ad-hoc session, the inviting user's PoC Server
+ * performs the controlling function. For a chat or pre-arranged
+ * group, the server that hosts the group identity does.
+ *
+ * 3GPP TS 32.272 V19.0.0 clauses 3.1, 4.1.1.2, 5.1.1, and 6.3.1.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,7 +41,18 @@ enum _enum_for_POCSessionType {
 /**
  * @summary POCSessionType
  * @description
- * 
+ *
+ * Type of the PoC session. Charging distinguishes the four
+ * values below. TS 32.272 points at appendix C.5.1 of
+ * OMA-CP-POC for the formal type and defines the four session
+ * kinds in clauses 3.1 and 5.1.1.
+ *
+ * For a 1-1 or ad-hoc session, the inviting user's PoC Server
+ * performs the controlling function. For a chat or pre-arranged
+ * group, the server that hosts the group identity does.
+ *
+ * 3GPP TS 32.272 V19.0.0 clauses 3.1, 4.1.1.2, 5.1.1, and 6.3.1.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,7 +71,18 @@ type POCSessionType = _enum_for_POCSessionType;
 /**
  * @summary POCSessionType
  * @description
- * 
+ *
+ * Type of the PoC session. Charging distinguishes the four
+ * values below. TS 32.272 points at appendix C.5.1 of
+ * OMA-CP-POC for the formal type and defines the four session
+ * kinds in clauses 3.1 and 5.1.1.
+ *
+ * For a 1-1 or ad-hoc session, the inviting user's PoC Server
+ * performs the controlling function. For a chat or pre-arranged
+ * group, the server that hosts the group identity does.
+ *
+ * 3GPP TS 32.272 V19.0.0 clauses 3.1, 4.1.1.2, 5.1.1, and 6.3.1.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -67,6 +100,13 @@ const POCSessionType = _enum_for_POCSessionType;
 
 /**
  * @summary POCSessionType_one_to_one_session
+ * @description
+ *
+ * A PoC session between two PoC users. The inviting user's PoC
+ * Server performs the controlling function.
+ *
+ * 3GPP TS 32.272 V19.0.0 clauses 3.1 and 4.1.1.2.
+ *
  * @constant
  * @type {number}
  */
@@ -83,6 +123,16 @@ const one_to_one_session: POCSessionType = POCSessionType.one_to_one_session; /*
 
 /**
  * @summary POCSessionType_chat_group_session
+ * @description
+ *
+ * Session to a chat PoC group. The group is persistent and each
+ * member joins individually; opening the session does not invite
+ * the other members. Members may join and leave. If the group is
+ * restricted, only members may join. The PoC Server that hosts
+ * the group identity performs the controlling function.
+ *
+ * 3GPP TS 32.272 V19.0.0 clauses 3.1 and 4.1.1.2.
+ *
  * @constant
  * @type {number}
  */
@@ -99,6 +149,16 @@ const chat_group_session: POCSessionType = POCSessionType.chat_group_session; /*
 
 /**
  * @summary POCSessionType_pre_arranged_group_session
+ * @description
+ *
+ * Persistent session identity with a set of members. Opening the
+ * session invites every member. The session owner does not have
+ * to take part. The PoC Server that hosts the group identity
+ * performs the controlling function, and the CDR's group name is
+ * included for this session type.
+ *
+ * 3GPP TS 32.272 V19.0.0 clauses 3.1, 4.1.1.2, 5.1.1, and 6.3.1.2.
+ *
  * @constant
  * @type {number}
  */
@@ -115,6 +175,16 @@ const pre_arranged_group_session: POCSessionType = POCSessionType.pre_arranged_g
 
 /**
  * @summary POCSessionType_ad_hoc_group_session
+ * @description
+ *
+ * Session with several PoC users that does not use a
+ * pre-arranged or chat group, and does not require the group to
+ * exist beforehand. The inviting user's PoC Server performs the
+ * controlling function. The initial online quota uses the number
+ * of parties invited at the start.
+ *
+ * 3GPP TS 32.272 V19.0.0 clauses 3.1, 4.1.1.2, and 5.3.2.5.
+ *
  * @constant
  * @type {number}
  */

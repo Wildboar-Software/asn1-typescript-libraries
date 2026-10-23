@@ -14,7 +14,17 @@ import { UserCSGInformation, _decode_UserCSGInformation, _encode_UserCSGInformat
 /**
  * @summary MMELocationInformation
  * @description
- * 
+ *
+ * Location information from an MME, which is one of the MECNs.
+ * TS 32.278 uses cell (CGI/ECGI), eNodeB, and TAI granularity
+ * for Monitoring Event location. It does not define these octet
+ * strings. It also does not describe geographical information,
+ * geodetic information, age of location, or closed subscriber
+ * group information. Clause 6.3.2.1 defers the formal parameter
+ * definition to TS 32.298.
+ *
+ * 3GPP TS 32.278 V19.0.0 clauses 4.2, 5.1, 6.1.3.2 and 6.3.2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,48 +45,104 @@ export
 class MMELocationInformation {
     /**
      * @summary `eUTRANCellGlobalIdentity`.
+     * @description
+     *
+     * Cell identity at ECGI granularity. Cell level (CGI/ECGI)
+     * is one accuracy TS 32.278 allows, and a cell is one area
+     * element used when counting UEs. The octet encoding is not
+     * defined in TS 32.278.
+     *
+     * 3GPP TS 32.278 V19.0.0 clauses 5.1 and 6.1.3.2.
+     *
      * @public
      * @readonly
      */
     readonly eUTRANCellGlobalIdentity: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `trackingAreaIdentity`.
+     * @description
+     *
+     * Tracking area identity (TAI). A TAI is an area element
+     * used when counting UEs, and TA/RA is an accuracy allowed
+     * for location reporting. The octet encoding is not defined
+     * in TS 32.278.
+     *
+     * 3GPP TS 32.278 V19.0.0 clauses 5.1 and 6.1.3.2.
+     *
      * @public
      * @readonly
      */
     readonly trackingAreaIdentity: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `geographicalInformation`.
+     * @description
+     *
+     * TS 32.278 V19.0.0 does not describe this component.
+     * Clause 6.3.2.1 defers the formal definition to TS 32.298.
+     *
      * @public
      * @readonly
      */
     readonly geographicalInformation: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `geodeticInformation`.
+     * @description
+     *
+     * TS 32.278 V19.0.0 does not describe this component.
+     * Clause 6.3.2.1 defers the formal definition to TS 32.298.
+     *
      * @public
      * @readonly
      */
     readonly geodeticInformation: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `currentLocationRetrieved`.
+     * @description
+     *
+     * See `CurrentLocationRetrieved`. TS 32.278 does not define
+     * it. Whether the configuration request asked for the
+     * current location or the last known location is
+     * `LocationType` on `MECORecord`.
+     *
+     * 3GPP TS 32.278 V19.0.0 clauses 6.1.3.2 and 6.3.2.1.
+     *
      * @public
      * @readonly
      */
     readonly currentLocationRetrieved: OPTIONAL<CurrentLocationRetrieved>;
     /**
      * @summary `ageOfLocationInformation`.
+     * @description
+     *
+     * TS 32.278 V19.0.0 does not describe this component.
+     * Clause 6.3.2.1 defers the formal definition to TS 32.298.
+     *
      * @public
      * @readonly
      */
     readonly ageOfLocationInformation: OPTIONAL<INTEGER>;
     /**
      * @summary `userCSGInformation`.
+     * @description
+     *
+     * TS 32.278 V19.0.0 does not describe closed subscriber
+     * group information. Clause 6.3.2.1 defers the formal
+     * definition to TS 32.298.
+     *
      * @public
      * @readonly
      */
     readonly userCSGInformation: OPTIONAL<UserCSGInformation>;
     /**
      * @summary `eNodeBID`.
+     * @description
+     *
+     * eNodeB identity. An eNodeB is both an accuracy level for
+     * location reporting and an area element used when counting
+     * UEs. The octet encoding is not defined in TS 32.278.
+     *
+     * 3GPP TS 32.278 V19.0.0 clauses 5.1 and 6.1.3.2.
+     *
      * @public
      * @readonly
      */

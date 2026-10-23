@@ -12,7 +12,23 @@ import { MMSAgentAddress, _decode_MMSAgentAddress, _encode_MMSAgentAddress } fro
 /**
  * @summary MSCFInformation
  * @description
- * 
+ *
+ * This is a grouped field comprising several the following sub-fields
+ * associated with the invocation of the MSCF for advanced addressing:
+ * Billing Information; Routeing address List. These field elements are
+ * described in the appropriate subclause.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.29.
+ *
+ * Parameters the MSCF supplies when it interacts with the MMS R/S over
+ * MM10 before the response that closes the transaction. That response is
+ * MM1_submit.RES on an O1S-CDR, MM1_notification.REQ on an R1NRq-CDR, and
+ * MM7_submit.RES on an MM7S-CDR. Category OC. Clause 5.1 collects this
+ * information in scenarios that involve the MSCF. TS 32.270 does not
+ * further define billing information.
+ *
+ * 3GPP TS 32.270 V19.0.0 clauses 5.1, 6.1.1.1, 6.1.2.2, and 6.1.5.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +44,30 @@ export
 class MSCFInformation {
     /**
      * @summary `billingInformation`.
+     * @description
+     *
+     * Billing information supplied by the MSCF over MM10. TS 32.270 does not
+     * define its contents.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.1.1.
+     *
      * @public
      * @readonly
      */
     readonly billingInformation: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `routeingAddressList`.
+     * @description
+     *
+     * This field contains a list of routeing addresses.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.50.
+     *
+     * Routeing addresses supplied by the MSCF over MM10. Each element is an
+     * MMS User Agent address.
+     *
+     * 3GPP TS 32.270 V19.0.0 clause 6.1.1.1.
+     *
      * @public
      * @readonly
      */

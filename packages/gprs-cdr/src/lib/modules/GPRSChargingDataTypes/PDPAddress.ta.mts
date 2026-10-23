@@ -11,6 +11,16 @@ import { GSNAddress, _decode_GSNAddress, _encode_GSNAddress } from "../GPRSCharg
  * @summary PDPAddress
  * @description
  * 
+ * IP address allocated to the PDP context or PDN connection: an IPv4
+ * address when the type is IPv4, or an IPv6 prefix when the type is IPv6
+ * or IPv4v6 (table 6.1.1.1). For IPv4v6 the IPv4 address is carried as the
+ * address extension. Absent when the type is PPP and dynamic address
+ * assignment is used, and absent for a Non-IP PDN connection unless the
+ * P-GW assigned an address. An IPv6 prefix length of 64 bits need not be
+ * indicated.
+ * 
+ * 3GPP TS 32.251 V19.0.0.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

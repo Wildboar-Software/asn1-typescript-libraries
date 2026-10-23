@@ -12,7 +12,20 @@ import { AoCCostInformation, _decode_AoCCostInformation, _encode_AoCCostInformat
 /**
  * @summary AoCInformation
  * @description
- * 
+ *
+ * AoC information is the AoC related Charging information transferred to the
+ * CDF, as defined in TS 32.280 [21].
+ *
+ * One Advice of Charge report for the MMTel AoC service. The modes
+ * are AoC at set-up, during the communication, and at the end.
+ * TS 32.275 allows the enclosing sequence to repeat, for example
+ * when AoC at set-up is sent more than once. The information flows
+ * between the AoC AS and the CDF are specified in TS 32.280.
+ * Table 5.0.1 of TS 32.275 marks AoC for offline charging only.
+ *
+ * 3GPP TS 32.275 V19.0.0 clauses 5.1.1.21 and 6.3.1.2.
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.3A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,6 +40,15 @@ export
 class AoCInformation {
     /**
      * @summary `tariffInformation`.
+     * @description
+     *
+     * This field holds the tariff mapped in the Tariff Information structure.
+     * The corresponding structure of the Tariff Information can be found in the
+     * TS 32.299 [50]. The formatting from real time tariff information to Tariff
+     * Information structure is described in TS 32 280 [40].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.67.
+     *
      * @public
      * @readonly
      */

@@ -6,7 +6,18 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary MaximumBitRate
  * @description
- * 
+ *
+ * This field contains the Maximum Bit Rate based on the FNUR (Fixed Network
+ * User Rate) for transparent and WAIUR(Wanted Air Interface User Rate) for
+ * non-transparent CS data services based on the described mapping in TS
+ * 27.001 [213]. The parameter can be used to make code reservations in the
+ * downlink of the radio interface for the UMTS bearer service (BS20 and
+ * BS30) refer TS 22.002 [102]. Its purpose is: Maximum bit rate is set to
+ * the highest value WAIUR (If WAIUR is less or equal to 14.4 kbit/s then
+ * Guaranteed Bit Rate and Maximum Bit Rate shall be set to 14.4 kbit/s).
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.51.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,7 +45,18 @@ enum _enum_for_MaximumBitRate {
 /**
  * @summary MaximumBitRate
  * @description
- * 
+ *
+ * This field contains the Maximum Bit Rate based on the FNUR (Fixed Network
+ * User Rate) for transparent and WAIUR(Wanted Air Interface User Rate) for
+ * non-transparent CS data services based on the described mapping in TS
+ * 27.001 [213]. The parameter can be used to make code reservations in the
+ * downlink of the radio interface for the UMTS bearer service (BS20 and
+ * BS30) refer TS 22.002 [102]. Its purpose is: Maximum bit rate is set to
+ * the highest value WAIUR (If WAIUR is less or equal to 14.4 kbit/s then
+ * Guaranteed Bit Rate and Maximum Bit Rate shall be set to 14.4 kbit/s).
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.51.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -55,7 +77,18 @@ type MaximumBitRate = _enum_for_MaximumBitRate;
 /**
  * @summary MaximumBitRate
  * @description
- * 
+ *
+ * This field contains the Maximum Bit Rate based on the FNUR (Fixed Network
+ * User Rate) for transparent and WAIUR(Wanted Air Interface User Rate) for
+ * non-transparent CS data services based on the described mapping in TS
+ * 27.001 [213]. The parameter can be used to make code reservations in the
+ * downlink of the radio interface for the UMTS bearer service (BS20 and
+ * BS30) refer TS 22.002 [102]. Its purpose is: Maximum bit rate is set to
+ * the highest value WAIUR (If WAIUR is less or equal to 14.4 kbit/s then
+ * Guaranteed Bit Rate and Maximum Bit Rate shall be set to 14.4 kbit/s).
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.51.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

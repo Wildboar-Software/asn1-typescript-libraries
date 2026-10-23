@@ -12,7 +12,22 @@ import { AoCCostInformation, _decode_AoCCostInformation, _encode_AoCCostInformat
 /**
  * @summary AoCInformation
  * @description
- * 
+ *
+ * Advice of Charge information associated with the IMS session. TS 32.260
+ * points the AoC service at TS 32.280 and does not define this structure.
+ * During a charging session the CHF or OCS may also ask the IMS-GWF or an
+ * AS to play an announcement (clause 5.1.12); that request is not an AoC
+ * CDR field.
+ *
+ * 3GPP TS 32.260 V20.1.0 clause 6.2.1.
+ *
+ * AoC information is the AoC related Charging information transferred to the
+ * CDF, as defined in TS 32.280 [21].
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.3A.
+ *
+ * @see https://www.3gpp.org/DynaReport/32260.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +42,28 @@ export
 class AoCInformation {
     /**
      * @summary `tariffInformation`.
+     * @description
+     *
+     * This field holds the tariff mapped in the Tariff Information structure.
+     * The corresponding structure of the Tariff Information can be found in the
+     * TS 32.299 [50]. The formatting from real time tariff information to Tariff
+     * Information structure is described in TS 32 280 [40].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.67.
+     *
+     * 3GPP TS 32.260 V20.1.0 clause 6.2.1.
+     *
      * @public
      * @readonly
      */
     readonly tariffInformation: OPTIONAL<TariffInformation>;
     /**
      * @summary `aoCCostInformation`.
+     * @description
+     *
+     * Advice of Charge cost transferred toward the CDF. AoC is defined in TS
+     * 32.280. TS 32.260 does not define this component..
+     *
      * @public
      * @readonly
      */

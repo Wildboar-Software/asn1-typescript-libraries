@@ -10,7 +10,13 @@ import { SMFTrigger, _decode_SMFTrigger, _encode_SMFTrigger } from "../CHFChargi
 /**
  * @summary Trigger
  * @description
- * 
+ *
+ * Triggers includes the reason for charging information reporting or closing
+ * for the used unit container, the 5G data connectivity specific triggers
+ * are described in TS 32.255 [15].
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.5.1.14.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

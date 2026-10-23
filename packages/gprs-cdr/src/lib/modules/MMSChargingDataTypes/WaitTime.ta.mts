@@ -13,6 +13,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary WaitTime
  * @description
  * 
+ * Either an absolute time (`http_date`) or a duration (`delta_seconds`).
+ * Time of expiry is a desired expiry date or a duration before expiry.
+ * Earliest time of delivery is the earliest time to deliver the MM, or the
+ * number of seconds to wait before delivering it.
+ *
+ * 3GPP TS 32.270 V19.0.0 clause 6.1.1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

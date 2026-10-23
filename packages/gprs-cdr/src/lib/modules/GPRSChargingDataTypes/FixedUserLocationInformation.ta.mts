@@ -12,7 +12,14 @@ import { AccessLineIdentifier, _decode_AccessLineIdentifier, _encode_AccessLineI
 /**
  * @summary FixedUserLocationInformation
  * @description
- * 
+ *
+ * This field contains the UE location in a fixed broadband access network.
+ * The location of the subscriber may include Access line id (physical and
+ * logical circuit ID) defined in ETSI TS 283 034 [314], SSID and BSSID of
+ * the Access Point, defined in IEEE Std 802.11-2012 [408].
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.15A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,6 +47,17 @@ class FixedUserLocationInformation {
     readonly bSSID: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `accessLineIdentifier`.
+     * @description
+     *
+     * This field contains the Access line id (physical and logical circuit ID)
+     * serving the 3GPP UE or fixed user (i.e. Fixed device or RG). This field
+     * contains the Access line id (physical and logical circuit ID): serving the
+     * 3GPP UE or fixed device, behind the RG when in bridge mode or in routed
+     * mode without NAT, or of the RG when in routed mode with NAT; of the access
+     * point to which the UE is attached, in trusted or untrusted WLAN.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.0A.
+     *
      * @public
      * @readonly
      */

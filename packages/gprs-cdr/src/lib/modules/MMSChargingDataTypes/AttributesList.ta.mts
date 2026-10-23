@@ -15,7 +15,25 @@ import { MMState, _decode_MMState, _encode_MMState, _enum_for_MMState } from "..
 /**
  * @summary AttributesList
  * @description
- * 
+ *
+ * This field contains a list of information element names that are used in
+ * the MM1_mmbox_view. REQ, which request corresponding information elements
+ * from the MMs to be conveyed in the MM1_mmbox_view. RES. The list of known
+ * information element names are those currently defined for the
+ * MM1_retrieve. RES and MM1_notification. REQ. In the absence of the
+ * Attributes list information element, the MMS Relay/Server shall, by
+ * default and if available, select these information elements from each
+ * viewed MM: Message ID, Date and time, Sender address, Subject, Message
+ * size, MM State, and MM Flags.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.4.
+ *
+ * On a Bx1V-CDR, the information elements to return for each listed MM. If
+ * the list is absent, the default is Message ID, date and time, sender
+ * address, subject, message size, MM state, and MM flags. Category OM.
+ *
+ * 3GPP TS 32.270 V19.0.0 clause 6.1.4.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,6 +53,18 @@ export
 class AttributesList {
     /**
      * @summary `messageID`.
+     * @description
+     *
+     * This field specifies the MM Message ID of the MM as defined in TS 23.140
+     * [206]. The concrete syntax of this MM Message ID is given by the body of
+     * the field introduced by the string "X-Mms-Message-ID:" in the concrete
+     * syntax of the message MM4_Forward. REQ. All CDRs pertaining to the same MM
+     * shall employ the same value of this parameter, i.e. the value initially
+     * assigned by the originator MMS Relay/Server upon submission of the MM by
+     * the Originator MMS User Agent.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.20.
+     *
      * @public
      * @readonly
      */
@@ -47,6 +77,15 @@ class AttributesList {
     readonly dateAndTime: OCTET_STRING;
     /**
      * @summary `senderAddress`.
+     * @description
+     *
+     * The address of the MMS User Agent as used in the
+     * MM1_notification_REQ/MM1_retrieve. RES. This parameter is present in the
+     * CDR even if address hiding was requested, resulting in the sender address
+     * is not being included in the above messages.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.51.
+     *
      * @public
      * @readonly
      */
@@ -59,6 +98,13 @@ class AttributesList {
     readonly subject: OCTET_STRING;
     /**
      * @summary `messageSize`.
+     * @description
+     *
+     * This field contains the number of octets of the MM that is calculated as
+     * specified in TS 23.140 [206].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.4.1.23.
+     *
      * @public
      * @readonly
      */

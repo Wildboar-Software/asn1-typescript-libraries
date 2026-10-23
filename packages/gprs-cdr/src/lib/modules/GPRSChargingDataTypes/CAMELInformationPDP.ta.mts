@@ -18,7 +18,40 @@ import { _decode_CAMELInformationPDP_levelOfCAMELService, _encode_CAMELInformati
 /**
  * @summary CAMELInformationPDP
  * @description
+ *
+ * This field includes following CAMEL information elements for PDP context
+ * (S-CDR), Attach/Detach session (M-CDR), Mobile originated SMS (S-SMO-CDR)
+ * and Mobile terminated SMS (S-SMT-CDR) if corresponding CAMEL service is
+ * activated. CAMEL Access Point Name NI (S-CDR): This field contains the
+ * network identifier part of APN before modification by the CSE. CAMEL
+ * Access Point Name OI (S-CDR): This field contains the operator identifier
+ * part of APN before modification by the CSE. CAMEL Calling Party Number
+ * (S-SMO-CDR, S-SMT-CDR): This field contains the Calling Party Number
+ * modified by the CAMEL service. CAMEL Destination Subscriber Number
+ * (S-SMO-CDR): This field contains the short message Destination Number
+ * modified by the CAMEL service. CAMEL SMSC Address (S-SMO-CDR): This field
+ * contains the SMSC address modified by the CAMEL service. SCF address
+ * (S-CDR, M-CDR, S-SMO-CDR, S-SMT-CDR): This field identifies the CAMEL
+ * server serving the subscriber. Address is defined in HLR as part of CAMEL
+ * subscription information. Service key (S-CDR, M-CDR, S-SMO-CDR,
+ * S-SMT-CDR): This field identifies the CAMEL service logic applied. Service
+ * key is defined in HLR as part of CAMEL subscription information. Default
+ * Transaction/SMS Handling (S-CDR, M-CDR, S-SMO-CDR, S-SMT-CDR): This field
+ * indicates whether or not a CAMEL encountered default GPRS- or
+ * SMS-handling. This field shall be present only if default call handling
+ * has been applied. Parameter is defined in HLR as part of CAMEL
+ * subscription information.
+ *
+ * PS-domain online charging in the SGSN may use CAMEL. That function is
+ * specified in TS 23.078 and TS 29.078 and is outside the scope of TS
+ * 32.251 (clause 5.3.1.0). The CDR still carries this information when the
+ * CAMEL service is activated.
  * 
+ *
+ * 3GPP TS 32.251 V19.0.0.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -61,12 +94,26 @@ class CAMELInformationPDP {
     readonly defaultTransactionHandling: OPTIONAL<DefaultTransactionHandling>;
     /**
      * @summary `cAMELAccessPointNameNI`.
+     * @description
+     *
+     * CAMEL Access Point Name NI (S-CDR): This field contains the network
+     * identifier part of APN before modification by the CSE.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.4.
+     *
      * @public
      * @readonly
      */
     readonly cAMELAccessPointNameNI: OPTIONAL<IA5String>;
     /**
      * @summary `cAMELAccessPointNameOI`.
+     * @description
+     *
+     * CAMEL Access Point Name OI (S-CDR): This field contains the operator
+     * identifier part of APN before modification by the CSE.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.4.
+     *
      * @public
      * @readonly
      */
@@ -79,6 +126,19 @@ class CAMELInformationPDP {
     readonly numberOfDPEncountered: OPTIONAL<INTEGER>;
     /**
      * @summary `levelOfCAMELService`.
+     * @description
+     *
+     * Level of CAMEL services (S-CDR, M-CDR): This field describes briefly the
+     * complexity of CAMEL invocation. Categories are the same as in circuit
+     * switched services and measure of resource usage in VPLMN requested by
+     * HPLMN. "Basic" means that CAMEL feature is invoked during the PDP context
+     * activation phase only (e.g. to modify APN_NI/APN_OI). "Call duration
+     * supervision" means that PDP context duration or volume supervision is
+     * applied in the gprsSSF of the VPLMN (Apply Charging message is received
+     * from the gsmSCF).
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.4.
+     *
      * @public
      * @readonly
      */
@@ -91,6 +151,24 @@ class CAMELInformationPDP {
     readonly freeFormatData: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `fFDAppendIndicator`.
+     * @description
+     *
+     * FFD Append Indicator (S-CDR, M-CDR): This field contains an indicator
+     * whether CAMEL free format data is to be appended to free format data
+     * stored in previous partial CDR. This field is needed in CDR post
+     * processing to sort out valid free format data for that call leg from
+     * sequence of partial records. Creation of partial records is independent of
+     * received FCIs and thus valid free format data may be divided to different
+     * partial records. If field is missing then free format data in this CDR
+     * replaces all received free format data in previous CDRs. Append indicator
+     * is not needed in the first partial record. In following partial records
+     * indicator shall get value true if all FCIs received during that partial
+     * record have append indicator. If one or more of the received FCIs for that
+     * call leg during the partial record do not have append indicator then this
+     * field shall be missing.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.4.
+     *
      * @public
      * @readonly
      */

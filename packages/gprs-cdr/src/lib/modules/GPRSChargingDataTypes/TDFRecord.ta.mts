@@ -33,7 +33,34 @@ import { FixedUserLocationInformation, _decode_FixedUserLocationInformation, _en
 /**
  * @summary TDFRecord
  * @description
- * 
+ *
+ * TDF-CDR. Application-based charging data collected by the TDF for one
+ * TDF session (clause 5.2.3.9 and table 6.1.14.1). Volumes, elapsed time,
+ * or events are counted per rating group or per rating group and service
+ * id. If the Charging Characteristics profile activates CDR generation,
+ * the TDF opens the record at TDF session establishment. An application
+ * container opens when application traffic is detected and no matching
+ * container exists, and closes when that traffic ends. Online and offline
+ * charging may run independently, or in tight interworking where the OCS
+ * re-authorisation triggers, carried in the Offline-Charging AVP, take
+ * precedence over the TDF default configuration. List of Service Data
+ * containers are added on TDF session modification, tariff time change,
+ * failure handling, an application traffic report, and CDR closure (table
+ * 5.2.3.9.2.1). The change condition is omitted on CDR closure except when
+ * closure is due to the maximum number of charging-condition changes.
+ * Envelope reporting adds only completed envelopes. The TDF closes the CDR
+ * when the session ends (PCRF termination or abnormal release) or for a
+ * partial-record reason (volume limit, time limit, maximum number of
+ * charging-condition changes, management intervention, MS time zone
+ * change, PLMN change, or RAT change). If the session remains active, the
+ * next TDF-CDR uses an incremented sequence number. For the convergent
+ * fixed-mobile case, annex D clause D.4.1.2.2 says clause 6.1.14 applies
+ * with a set of fields not applicable to that TDF-CDR.
+ *
+ * 3GPP TS 32.251 V19.0.0.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -99,288 +126,846 @@ export
 class TDFRecord {
     /**
      * @summary `recordType`.
+     * @description
+     *
+     * The field identifies the type of the record e.g. S-CDR, SGW-CDR, PGW-CDR,
+     * M-CDR, S-SMO-CDR, TDF-CDR, IPE-CDR and S-SMT-CDR.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.51.
+     *
+     * TDF-CDR field category M (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly recordType: RecordType;
     /**
      * @summary `servedIMSI`.
+     * @description
+     *
+     * This field contains the International Mobile Subscriber Identity (IMSI) of
+     * the served party. The term "served" party is used to describe the mobile
+     * subscriber involved in the transaction recorded e.g. the calling
+     * subscriber in case of a mobile initiated PDP context. The structure of the
+     * IMSI is defined in TS 23.003 [200].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.60.
+     *
+     * TDF-CDR field category C (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly servedIMSI: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `p_GWAddress`.
+     * @description
+     *
+     * These field is the serving P-GW IP Address for the Control Plane. If both
+     * an IPv4 and an IPv6 address of the P-GW is available, the P-GW shall
+     * include the IPv4 address in the CDR.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.38.
+     *
+     * TDF-CDR field category M (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly p_GWAddress: GSNAddress;
     /**
      * @summary `servingNodeAddress`.
+     * @description
+     *
+     * These fields contain one or several control plane IP addresses of SGSN,
+     * MME, ePDG, HSGW, TWAG or S-GW, which have been connected during the
+     * record. If both an IPv4 and an IPv6 address of the
+     * SGSN/S-GW/MME/ePDG/HSGW/TWAG are available, the S-GW/P-GW/TDF shall
+     * include the IPv4 address in the CDR.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.66.
+     *
+     * TDF-CDR field category M (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly servingNodeAddress: GSNAddress[];
     /**
      * @summary `accessPointNameNI`.
+     * @description
+     *
+     * The logical name of the connected access point to the external packet
+     * data network (network identifier part of APN).
+     *
+     * TDF-CDR field category OM (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly accessPointNameNI: OPTIONAL<IA5String>;
     /**
      * @summary `pdpPDNType`.
+     * @description
+     *
+     * PDP/PDN type, i.e. IPv4, IPv6, IPv4v6 , or PDP type PPP.
+     *
+     * TDF-CDR field category OM (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly pdpPDNType: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `servedPDPPDNAddress`.
+     * @description
+     *
+     * IP address allocated for the PDP context PDN connection, i.e. IPv4
+     * address when PDP/PDN Type is IPv4 or IPv6 prefix when PDP/PDN Type is
+     * IPv6 or IPv4v6. This parameter shall be present except when both the PDP
+     * type is PPP and dynamic IP-CAN bearer address assignment is used.
+     *
+     * TDF-CDR field category OC (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly servedPDPPDNAddress: OPTIONAL<PDPAddress>;
     /**
      * @summary `dynamicAddressFlag`.
+     * @description
+     *
+     * This field indicates that PDN address has been dynamically allocated for
+     * that particular IP-CAN bearer (PDN connection). This field is missing if
+     * address is static. Dynamic address allocation might be relevant for
+     * charging e.g. as one resource offered and possible owned by network
+     * operator.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.13.
+     *
+     * TDF-CDR field category OC (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly dynamicAddressFlag: OPTIONAL<BOOLEAN>;
     /**
      * @summary `recordOpeningTime`.
+     * @description
+     *
+     * This field contains the time stamp when the MS is attached to a SGSN
+     * (M-CDR) or IP-CAN bearer is activated in SGSN/S-GW/P-GW (S-CDR, SGW-CDR,
+     * PGW-CDR) or TDF session is established, or IP-CAN session is established
+     * (IPE-CDR), or record opening time on subsequent partial records (see TS
+     * 32.250 [4] for exact format). Record opening reason does not have a
+     * separate field. For SGW/PGW/TDF/IPE -CDRs and M-CDR it can be derived from
+     * the field "Sequence number"; i.e. either a missing field or a value one
+     * (1) means activation of IP-CAN bearer (SGW/PGW-CDR) or GPRS attachment
+     * (M-CDR) or TDF session establishment (TDF-CDR), or IP-CAN session
+     * establishment (IPE-CDR). For the S-CDR the field "SGSN change" also needs
+     * to be taken into account.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.49.
+     *
+     * TDF-CDR field category M (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly recordOpeningTime: OCTET_STRING;
     /**
      * @summary `duration`.
+     * @description
+     *
+     * This field contains the relevant duration in seconds for IP-CAN bearer
+     * (S-CDR, SGW-CDR, PGW-CDR), IP-CAN session (IPE-CDR), and attachment
+     * (M-CDR). In case of TDF-CDR, this field contains the relevant duration in
+     * seconds for TDF session. It is the duration from Record Opening Time to
+     * record closure. For partial records this is the duration of the individual
+     * partial record and not the cumulative duration. It should be noted that
+     * the internal time measurements may be expressed in terms of tenths of
+     * seconds or even milliseconds and, as a result, the calculation of the
+     * duration may result in the rounding or truncation of the measured duration
+     * to a whole number of seconds. Whether or not rounding or truncation is to
+     * be used is considered to be outside the scope of the present document
+     * subject to the following restrictions:
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.12.
+     *
+     * TDF-CDR field category M (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly duration: INTEGER;
     /**
      * @summary `causeForRecClosing`.
+     * @description
+     *
+     * This field contains a reason for the release of the CDR. In case of Rf
+     * interface is used, it is derived from Change-Condition AVP at
+     * PS-information AVP level defined in TS 32.299 [40], when received. The
+     * following is included: VoLTE bearer abnormal release: It corresponds to
+     * "VoLTE Bearer Abnormal Release" in Change-Condition AVP. A more detailed
+     * reason may be found in the diagnostics field or Enhanced Diagnostics
+     * field.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.5.
+     *
+     * TDF-CDR field category M (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly causeForRecClosing: CauseForRecClosing;
     /**
      * @summary `diagnostics`.
+     * @description
+     *
+     * This field includes a more detailed technical reason for the releases of
+     * the connection. The diagnostics may also be extended to include
+     * manufacturer and network specific information.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.11.
+     *
+     * TDF-CDR field category OM (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly diagnostics: OPTIONAL<Diagnostics>;
     /**
      * @summary `recordSequenceNumber`.
+     * @description
+     *
+     * This field contains a running sequence number employed to link the partial
+     * records generated in the SGSN/SGW/PGW for a particular MM context or
+     * IP-CAN bearer, or IP-CAN session, or TDF session (characterised with the
+     * same Charging ID and PGW address pair). For M-CDR or S-CDR the sequence
+     * number always restarts from one (1) after an inter-SGSN routing area
+     * update, see field "SGSN change". The Record Sequence Number is missing if
+     * the record is the only one produced in the SGSN/SGW/PGW/TDF/IP-Edge (e.g.
+     * inter-SGSN routing area update can result to two M-CDR or two S-CDRs
+     * without sequence number and field "SGSN change" present in the second
+     * record).
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.50.
+     *
+     * TDF-CDR field category C (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly recordSequenceNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `nodeID`.
+     * @description
+     *
+     * This field contains an optional, operator configurable, identifier string
+     * for the node that had generated the CDR. The Node ID may or may not be the
+     * DNS host name of the node.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.36.
+     *
+     * TDF-CDR field category OM (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly nodeID: OPTIONAL<IA5String>;
     /**
      * @summary `recordExtensions`.
+     * @description
+     *
+     * This field enables network operators and/or manufacturers to add their own
+     * recommended extensions to the standard record definitions. This field
+     * contains a set of "management extensions" as defined in X.721 [305]. This
+     * is conditioned upon the existence of an extension.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.48.
+     *
+     * TDF-CDR field category OC (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly recordExtensions: OPTIONAL<ManagementExtension[]>;
     /**
      * @summary `localSequenceNumber`.
+     * @description
+     *
+     * This field includes a unique record number created by this node. The
+     * number is allocated sequentially for each partial CDR (or whole CDR)
+     * including all CDR types. The number is unique within one node, which is
+     * identified either by field Node ID or by record-dependent node address
+     * (SGSN address, S-/P-GW address, TDF address, IP-Edge Address, Recording
+     * Entity). The field can be used e.g. to identify missing records in post
+     * processing system.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.26.
+     *
+     * TDF-CDR field category OM (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly localSequenceNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `apnSelectionMode`.
+     * @description
+     *
+     * This field indicates how the SGSN/MME selected the APN to be used. The
+     * values and their meaning are as specified in TS 29.060 [215] for GTP case
+     * and in TS 29.274 [223] for eGTP case.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.2.
+     *
+     * TDF-CDR field category OM (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly apnSelectionMode: OPTIONAL<APNSelectionMode>;
     /**
      * @summary `servedMSISDN`.
+     * @description
+     *
+     * This field contains the Mobile Station (MS) ISDN number (MSISDN) of the
+     * served party. The term "served" party is used to describe the mobile
+     * subscriber involved in the transaction recorded. In case of
+     * multi-numbering the MSISDN stored in a CDR will be the primary MSISDN of
+     * the calling party. The structure of the MSISDN is defined in TS 23.003
+     * [200].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.62.
+     *
+     * TDF-CDR field category OC (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly servedMSISDN: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `chargingCharacteristics`.
+     * @description
+     *
+     * The Charging Characteristics field allows the operator to apply different
+     * kind of charging methods in the CDRs. A subscriber may have Charging
+     * Characteristics assigned to his subscription. These characteristics can be
+     * supplied by the HLR/HSS according to the rules specified in Annex A of TS
+     * 32.251 [11]. Charging Characteristics used by IP-Edge [PCEF] or TDF in
+     * Convergent Fixed-Mobile Operator scenario are always configured in IP-Edge
+     * [PCEF] or TDF respectively, as described in annex D of TS 32.251 [11].
+     * This information can be used by the PCNs/ IP-Edge [PCEF] to activate
+     * charging generation and e.g. control the closure of the CDR or the traffic
+     * volume containers (see clause 5.1.2.2.25) and applied charging
+     * characteristics is included in CDRs transmitted to nodes handling the CDRs
+     * via the Ga reference point. It can also be used in nodes handling the CDRs
+     * (e.g., the CGF or the billing system) to influence the CDR processing
+     * priority and routing. These functions are accomplished by specifying the
+     * charging characteristics as sets of charging profiles and the expected
+     * behaviour associated with each profile. The interpretations of the
+     * profiles and their associated behaviours can be different for each PLMN
+     * operator and are not subject to standardisation. In the present document
+     * only the charging characteristic formats and selection modes are
+     * specified.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.7.
+     *
+     * TDF-CDR field category M (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly chargingCharacteristics: OCTET_STRING;
     /**
      * @summary `chChSelectionMode`.
+     * @description
+     *
+     * This field indicates the charging characteristic type that the PCNs
+     * applied to the CDR. In the SGSN the allowed values are: Home default;
+     * Visiting default; Roaming default; APN specific; Subscription specific. In
+     * the S-GW/P-GW/TDF the allowed values are: Home default; Visiting default;
+     * Roaming default; Serving node supplied. NOTE: The value 'Serving Node
+     * Supplied' is used if the CC what was received from e.g. S-GW is used i.e.
+     * the one what comes during bearer activation. Further details are provided
+     * in TS 32.251 [11] Annex A. In the IP-Edge [PCEF] and TDF in Convergent
+     * Fixed-Mobile Operator scenario, the allowed values are: Home default;
+     * Visiting default; Fixed default; Further details are provided in TS 32.251
+     * [11] Annex D.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.8.
+     *
+     * TDF-CDR field category OM (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly chChSelectionMode: OPTIONAL<ChChSelectionMode>;
     /**
      * @summary `servingNodePLMNIdentifier`.
+     * @description
+     *
+     * This field contains the PLMN Identifier (Mobile Country Code and Mobile
+     * Network Code) serving the UE. The MCC and MNC are coded as described for
+     * 'Routing Area Identity' in TS 29.060 [75].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.67.
+     *
+     * TDF-CDR field category OM (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly servingNodePLMNIdentifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `pSFurnishChargingInformation`.
+     * @description
+     *
+     * This field includes following information elements for IP-CAN bearer
+     * (PGW-CDR), for TDF session (TDF-CDR), or for the IP-CAN session (IPE-CDR):
+     * This field contains charging information sent by the OCS in the Diameter
+     * Credit-Control Credit-Control-Answer messages as defined in TS 32.251
+     * [11]. The data can be sent either in one Diameter Credit-Control
+     * Credit-Control-Answer message or several Diameter Credit-Control
+     * Credit-Control-Answer messages with append indicator. This data is
+     * transferred transparently in the PS Furnish Charging Information field of
+     * the relevant call records.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.45.
+     *
+     * TDF-CDR field category OC (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly pSFurnishChargingInformation: OPTIONAL<PSFurnishChargingInformation>;
     /**
      * @summary `servedIMEI`.
+     * @description
+     *
+     * This field contains the International Mobile Equipment Identity (IMEI) of
+     * the equipment served, if available. The term "served" equipment is used to
+     * describe the ME involved in the transaction recorded e.g. the called ME in
+     * the case of a network initiated PDP context. The structure of the IMEI is
+     * specified in TS 23.003 [200] and the encoding defined in TS 29.274 [223].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.58.
+     *
+     * TDF-CDR field category OC (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly servedIMEI: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `rATType`.
+     * @description
+     *
+     * Holds the value of RAT Type, as provided to S-GW and P-GW, specified in TS
+     * 29.061 [216] and also provided to the TDF as specified in TS 29.212 [220].
+     * The field is provided by the SGSN/MME and transferred to the S-GW/P-GW
+     * during the IP-CAN bearer activation/modification and transferred to the
+     * TDF during the TDF session establishment/modification.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.47.
+     *
+     * TDF-CDR field category OC (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly rATType: OPTIONAL<INTEGER>;
     /**
      * @summary `mSTimeZone`.
+     * @description
+     *
+     * This field contains the 'Time Zone' IE provided by the SGSN/MME and
+     * transferred to the S-GW/P-GW/TDF during the IP-CAN bearer
+     * activation/modification procedure as specified in TS 29.060 [215] and in
+     * TS 29.212 [220].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.34.
+     *
+     * TDF-CDR field category OC (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly mSTimeZone: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `userLocationInformation`.
+     * @description
+     *
+     * This field contains the User Location Information as described in TS
+     * 29.060 [215] for GTP case (e.g. CGI, SAI, RAI), TS 29.274 [223] for eGTP
+     * case (e.g. CGI, SAI, RAI TAI and ECGI) and TS 29.275 [224] for PMIP case.
+     * The field is provided by the SGSN/MME and transferred to the S-GW/P-GW/TDF
+     * during the IP-CAN bearer activation/modification and/or TDF session
+     * establishment/modification.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.75.
+     *
+     * TDF-CDR field category OC (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly userLocationInformation: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `listOfServiceData`.
+     * @description
+     *
+     * This list includes one or more service data containers. Depending on the
+     * reporting level of PCC/ADC rules, one service data container either
+     * includes charging data for one rating group or for one rating group and
+     * service id combination. Each service data container may include the
+     * following fields: AF-Record-Information. Charging Rule Base Name. ADC Rule
+     * Base Name. Data Volume Downlink. Data Volume Uplink. Event Based Charging
+     * Information. Local Sequence Number. PS Furnish Charging Information. EPC
+     * Qos Information. Rating Group. Report Time. Result Code. Service Condition
+     * Change. Service Identifier. Service Specific Info. Serving Node Address.
+     * Time of First Usage. Time of Last Usage. Time Quota Mechanism. Time Usage.
+     * user location information. 3GPP2 User Location Information. UWAN User
+     * Location Information. TWAN User Location Information. Sponsor Identity.
+     * Application Service Provider Identity. Presence Reporting Area Status.
+     * List of Presence Reporting Area Information. User CSG Information. RAT
+     * Type. Serving PLMN Rate Control. APN Rate Control. Related Change of
+     * Service Condition. Traffic Steering Policy Identifier Downlink. Traffic
+     * Steering Policy Identifier Uplink. VoLTE Information. Rating Group is the
+     * identifier of rating group. This field is mandatory. The parameter
+     * corresponds to the Charging Key as specified in TS 23.203 [203]. Charging
+     * Rule Base Name is the reference to group of PCC rules predefined at the
+     * PCEF.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.24.
+     *
+     * TDF-CDR field category OM (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly listOfServiceData: OPTIONAL<ChangeOfServiceCondition[]>;
     /**
      * @summary `servingNodeType`.
+     * @description
+     *
+     * These fields contain one or several serving node types in control plane of
+     * S-GW or P-GW, which have been connected during the record. The serving
+     * node types listed here map to the serving node addresses listed in the
+     * field "Serving node Address" in sequence. For Originated and Terminated
+     * SMS CDRs, this field contains the Node Type which generates the CDRs, i.e.
+     * SGSN or MME.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.68.
+     *
+     * TDF-CDR field category M (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly servingNodeType: ServingNodeType[];
     /**
      * @summary `servedMNNAI`.
+     * @description
+     *
+     * Mobile Node Identifier in NAI format (based on IMSI), if available.
+     *
+     * TDF-CDR field category OC (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly servedMNNAI: OPTIONAL<SubscriptionID>;
     /**
      * @summary `p_GWPLMNIdentifier`.
+     * @description
+     *
+     * PLMN identifier (MCC MNC) of the P-GW.
+     *
+     * TDF-CDR field category Oc (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly p_GWPLMNIdentifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `startTime`.
+     * @description
+     *
+     * This field contains the time when the IP-CAN session starts at the
+     * S-GW/P-GW/IP-Edge or TDF session starts at TDF, available in the CDR for
+     * the first bearer in an IP-CAN session in case of S-GW/P-GW/IP-Edge or,
+     * alternatively, available in the CDR for the TDF session start.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.72.
+     *
+     * TDF-CDR field category OC (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly startTime: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `stopTime`.
+     * @description
+     *
+     * This field contains the time when the IP-CAN session is terminated at the
+     * S-GW/P-GW/IP-Edge or TDF session terminated at the TDF, available in the
+     * CDR for the last bearer in an IP-CAN session in case of S-GW/P-GW/IP-Edge
+     * or, alternatively, available in the CDR for the TDF session stop.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.73.
+     *
+     * TDF-CDR field category OC (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly stopTime: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `served3gpp2MEID`.
+     * @description
+     *
+     * MEID of the served party's terminal equipment for 3GPP2 access.
+     *
+     * TDF-CDR field category OC (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly served3gpp2MEID: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `pDNConnectionChargingID`.
+     * @description
+     *
+     * This field defines the PDN connection (IP-CAN session) Charging identifier
+     * to identify different records belonging to same PDN connection. For a PDN
+     * connection that is limited to use one single access at a time this field
+     * includes Charging Id of first IP-CAN bearer activated. Together with P-GW
+     * address this uniquely identifies the PDN connection. For application based
+     * charging by the TDF: In case of GTP based connectivity, an "EPS default
+     * bearer Charging Identifier" In case of PMIP based connectivity, an "unique
+     * Charging Id" is assigned by the P-GW and transferred to the TDF via the
+     * PCRF for the TDF session.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.40.
+     *
+     * TDF-CDR field category M (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly pDNConnectionChargingID: INTEGER;
     /**
      * @summary `userCSGInformation`.
+     * @description
+     *
+     * This field contains the "User CSG Information" status of the user
+     * accessing a CSG cell: it comprises CSG ID within the PLMN, Access mode and
+     * indication on CSG membership for the user when hybrid access applies, as
+     * defined in TS 29.060 [215] for GPRS case, and in TS 29.274 [223] for EPC
+     * case.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.74.
+     *
+     * TDF-CDR field category OC (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly userCSGInformation: OPTIONAL<UserCSGInformation>;
     /**
      * @summary `threeGPP2UserLocationInformation`.
+     * @description
+     *
+     * This field contains the User Location Information of the MS as defined
+     * in TS 29.212 [216] for 3GPP2 access, if available.
+     *
+     * TDF-CDR field category OC (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly threeGPP2UserLocationInformation: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `servedPDPPDNAddressExt`.
+     * @description
+     *
+     * This field holds IPv4 address of the served IMSI, if available, when
+     * PDP/PDN type is IPv4v6.
+     *
+     * TDF-CDR field category OC (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly servedPDPPDNAddressExt: OPTIONAL<PDPAddress>;
     /**
      * @summary `dynamicAddressFlagExt`.
+     * @description
+     *
+     * This field indicates that the IPv4 address has been dynamically allocated
+     * for that particular IP-CAN bearer (PDN connection) of PDN type IPv4v6, and
+     * the dynamic IPv6 prefix is indicated in Dynamic Address Flag. This field
+     * is missing if IPv4 address is static. Dynamic address allocation might be
+     * relevant for charging e.g. as one resource offered and possible owned by
+     * network operator.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.13A.
+     *
+     * TDF-CDR field category OC (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly dynamicAddressFlagExt: OPTIONAL<BOOLEAN>;
     /**
      * @summary `servingNodeiPv6Address`.
+     * @description
+     *
+     * List of SGSN/S-GW/TWAG control plane IPv6 addresses, in case of IPv4v6
+     * dual stack, used during this record.
+     *
+     * TDF-CDR field category OC (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly servingNodeiPv6Address: OPTIONAL<GSNAddress[]>;
     /**
      * @summary `p_GWiPv6AddressUsed`.
+     * @description
+     *
+     * The control plane IPv6 address, in case of IPv4v6 dual stack, of the
+     * P-GW used.
+     *
+     * TDF-CDR field category OC (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly p_GWiPv6AddressUsed: OPTIONAL<GSNAddress>;
     /**
      * @summary `tWANUserLocationInformation`.
+     * @description
+     *
+     * This field holds the UE location in a Trusted WLAN Access Network (defined
+     * as TWAN Identifier in TS 29.274 [223]).
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.73A.
+     *
+     * TDF-CDR field category OC (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly tWANUserLocationInformation: OPTIONAL<TWANUserLocationInfo>;
     /**
      * @summary `retransmission`.
+     * @description
+     *
+     * This parameter, when present, indicates that information from
+     * retransmitted Diameter ACRs has been used in this CDR.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.52A.
+     *
+     * TDF-CDR field category OC (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly retransmission: OPTIONAL<NULL>;
     /**
      * @summary `tDFAddress`.
+     * @description
+     *
+     * This field is the serving TDF IP Address for the Control Plane. If both an
+     * IPv4 and an IPv6 addresses of the TDF are available, the TDF shall include
+     * the IPv4 address in the CDR. It contains the TDF-IP-Address as described
+     * in TS 29.212 [220].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.73aA.
+     *
+     * TDF-CDR field category M (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly tDFAddress: GSNAddress;
     /**
      * @summary `tDFiPv6AddressUsed`.
+     * @description
+     *
+     * The control plane IPv6 address, in case of IPv4v6 dual stack, of the TDF
+     * used.
+     *
+     * TDF-CDR field category OC (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly tDFiPv6AddressUsed: OPTIONAL<GSNAddress>;
     /**
      * @summary `tDFPLMNIdentifier`.
+     * @description
+     *
+     * PLMN identifier (MCC MNC) of the TDF.
+     *
+     * TDF-CDR field category Oc (3GPP TS 32.251 V19.0.0 table 6.1.14.1).
+     *
      * @public
      * @readonly
      */
     readonly tDFPLMNIdentifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `servedFixedSubsID`.
+     * @description
+     *
+     * This field contains the subscriber identity, as defined in Broadband Forum
+     * TR 134 [601], used by the Fixed User (i.e. Fixed Device or RG) for
+     * Subscriber IP session in fixed broadband access network.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.57A.
+     *
+     * TDF-CDR field category C (3GPP TS 32.251 V19.0.0 table D.4.1.2.2.2).
+     *
      * @public
      * @readonly
      */
     readonly servedFixedSubsID: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `accessLineIdentifier`.
+     * @description
+     *
+     * This field contains the Access line id (physical and logical circuit ID)
+     * serving the 3GPP UE or fixed user (i.e. Fixed device or RG). This field
+     * contains the Access line id (physical and logical circuit ID): serving the
+     * 3GPP UE or fixed device, behind the RG when in bridge mode or in routed
+     * mode without NAT, or of the RG when in routed mode with NAT; of the access
+     * point to which the UE is attached, in trusted or untrusted WLAN.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.0A.
+     *
+     * TDF-CDR field category OC (3GPP TS 32.251 V19.0.0 table D.4.1.2.2.2).
+     *
      * @public
      * @readonly
      */
     readonly accessLineIdentifier: OPTIONAL<AccessLineIdentifier>;
     /**
      * @summary `fixedUserLocationInformation`.
+     * @description
+     *
+     * This field contains the UE location in a fixed broadband access network.
+     * The location of the subscriber may include Access line id (physical and
+     * logical circuit ID) defined in ETSI TS 283 034 [314], SSID and BSSID of
+     * the Access Point, defined in IEEE Std 802.11-2012 [408].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.15A.
+     *
+     * TDF-CDR field category OC (3GPP TS 32.251 V19.0.0 table D.4.1.2.2.2).
+     *
      * @public
      * @readonly
      */

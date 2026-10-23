@@ -12,7 +12,19 @@ import { WLANOperatorId, _decode_WLANOperatorId, _encode_WLANOperatorId } from "
 /**
  * @summary TWANUserLocationInfo
  * @description
+ *
+ * This field holds the UE location in a Trusted WLAN Access Network (defined
+ * as TWAN Identifier in TS 29.274 [223]).
+ *
+ * Where a CDR content table includes this field, it is the UE location in
+ * a Trusted WLAN Access Network if available: the TWAN identifier for S2a
+ * GTP (TS 29.274), or the Access Network Identifier Option IE for S2a PMIP
+ * (TS 29.275).
  * 
+ * 3GPP TS 32.251 V19.0.0.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.2.73A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -26,7 +26,30 @@ import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExt
 /**
  * @summary MECORecord
  * @description
- * 
+ *
+ * Monitoring Event Configuration Request CDR (ME-CO-CDR). If
+ * charging is enabled, one record is produced for each
+ * configuration request received at the MECN. A renewal is a
+ * separate record from the original request. A single CDR is
+ * generated for each such event.
+ *
+ * The chargeable events are a request received from the HSS or
+ * SCEF, a request transferred from another MECN, an update, and a
+ * deletion. Each is sent to the CDF as Charging Data
+ * Request[Event].
+ *
+ * Table 6.1.3.2.1 also lists Record Opening Time (category OC),
+ * the time the CDF opened the record. This SET does not include
+ * it. That table lists Local Record Sequence Number twice; the
+ * SET contains it once.
+ *
+ * Field categories follow TS 32.240 clause 5.4, as applied by
+ * clause 6.1.3.1. Clause 3.1 defines M, C, OM and OC. This table
+ * also prints Oc.
+ *
+ * 3GPP TS 32.278 V19.0.0 clauses 5.1, 5.2.1, 5.2.2, 5.2.3 and
+ * 6.1.3.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -63,132 +86,326 @@ export
 class MECORecord {
     /**
      * @summary `recordType`.
+     * @description
+     *
+     * Category M. Monitoring Event Configuration Request. Set this
+     * to `RecordType_mECORecord` (103). On Rf the corresponding
+     * information element is Monitoring Event Functionality, which
+     * distinguishes configuration from reporting.
+     *
+     * 3GPP TS 32.278 V19.0.0 clauses 6.1.3.2, 6.3.1.2 and 6.4.
+     *
      * @public
      * @readonly
      */
     readonly recordType: RecordType;
     /**
      * @summary `retransmission`.
+     * @description
+     *
+     * Category Oc. Present when information from retransmitted
+     * Accounting Requests has been used in this CDR.
+     *
+     * 3GPP TS 32.278 V19.0.0 clause 6.1.3.2.
+     *
      * @public
      * @readonly
      */
     readonly retransmission: OPTIONAL<NULL>;
     /**
      * @summary `serviceContextID`.
+     * @description
+     *
+     * Category OM. Indicates that the CDR applies to the Monitoring
+     * Event service. Bound to Service-Context-Id. The Rf Operation
+     * Token likewise identifies the Monitoring Event Services.
+     *
+     * 3GPP TS 32.278 V19.0.0 clauses 6.1.1.2, 6.1.3.2 and 6.4.
+     *
      * @public
      * @readonly
      */
     readonly serviceContextID: OPTIONAL<UTF8String>;
     /**
      * @summary `nodeID`.
+     * @description
+     *
+     * Category OM. Name of the recording entity. Bound to Node-ID.
+     * The recording MECN is an MME, an SGSN, or an IWK-SCEF.
+     *
+     * 3GPP TS 32.278 V19.0.0 clauses 4.2, 6.1.3.2, 6.3.1.1 and 6.4.
+     *
      * @public
      * @readonly
      */
     readonly nodeID: OPTIONAL<IA5String>;
     /**
      * @summary `recordTimeStamp`.
+     * @description
+     *
+     * Category OM. Date and time when the CDR was produced.
+     * TS 32.278 does not define the nine-octet encoding.
+     *
+     * 3GPP TS 32.278 V19.0.0 clause 6.1.3.2.
+     *
      * @public
      * @readonly
      */
     readonly recordTimeStamp: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `eventTimestamp`.
+     * @description
+     *
+     * Category OM. Time of the event that triggered charging
+     * information for this configuration request. Clause 5.1
+     * requires the time the request was received. The same
+     * parameter on a report is the report time instead.
+     * TS 32.278 does not define the nine-octet encoding.
+     *
+     * 3GPP TS 32.278 V19.0.0 clauses 5.1 and 6.1.3.2.
+     *
      * @public
      * @readonly
      */
     readonly eventTimestamp: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `monitoringEventConfigurationActivity`.
+     * @description
+     *
+     * Category M. Action requested: create, transfer, update, or
+     * delete. These are the chargeable configuration events in
+     * clause 5.2.1. On Rf the category is Oc, and the information
+     * element is sent for configuration only.
+     *
+     * 3GPP TS 32.278 V19.0.0 clauses 5.1, 5.2.1, 6.1.3.2 and 6.3.3.
+     *
      * @public
      * @readonly
      */
     readonly monitoringEventConfigurationActivity: OPTIONAL<MonitoringEventConfigurationActivity>;
     /**
      * @summary `sCEFReferenceID`.
+     * @description
+     *
+     * Category M. Identifier created by the SCEF for this
+     * Monitoring Request. Together with `sCEFID` it is globally
+     * unique. On Rf the category is Oc. See `SCEFReferenceID`.
+     *
+     * 3GPP TS 32.278 V19.0.0 clauses 5.1, 6.1.3.2 and 6.3.1.2.
+     *
      * @public
      * @readonly
      */
     readonly sCEFReferenceID: OPTIONAL<INTEGER>;
     /**
      * @summary `sCEFID`.
+     * @description
+     *
+     * Category M. SCEF to which the Monitoring Indication is sent.
+     * Together with `sCEFReferenceID` it identifies the request.
+     * On Rf the category is Oc. TS 32.278 does not define the
+     * octet encoding.
+     *
+     * 3GPP TS 32.278 V19.0.0 clauses 6.1.3.2 and 6.3.1.2.
+     *
      * @public
      * @readonly
      */
     readonly sCEFID: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `monitoringType`.
+     * @description
+     *
+     * Category M. Which Monitoring Event is requested. On a report
+     * the same parameter identifies the event being reported, at
+     * category Oc. See `MonitoringType`.
+     *
+     * 3GPP TS 32.278 V19.0.0 clauses 6.1.3.2 and 6.1.3.3.
+     *
      * @public
      * @readonly
      */
     readonly monitoringType: OPTIONAL<MonitoringType>;
     /**
      * @summary `maximumNumberofReports`.
+     * @description
+     *
+     * Category Oc. When present, how many event reports may be
+     * generated before the Monitoring Event expires. One means a
+     * single report, equivalent to a one-time Monitoring Request.
+     * Not applicable to availability after DDN failure. Sent on
+     * Rf for configuration only.
+     *
+     * 3GPP TS 32.278 V19.0.0 clauses 5.1, 6.1.3.2 and 6.3.3.
+     *
      * @public
      * @readonly
      */
     readonly maximumNumberofReports: OPTIONAL<INTEGER>;
     /**
      * @summary `monitoringDuration`.
+     * @description
+     *
+     * Category Oc. When present, the absolute time at which this
+     * Monitoring Event request expires. Sent on Rf for
+     * configuration only. TS 32.278 does not define the
+     * nine-octet encoding.
+     *
+     * 3GPP TS 32.278 V19.0.0 clauses 5.1, 6.1.3.2 and 6.3.3.
+     *
      * @public
      * @readonly
      */
     readonly monitoringDuration: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `chargeablePartyIdentifier`.
+     * @description
+     *
+     * Category Oc. When present, the entity towards which the
+     * involved 3GPP network elements perform accounting. Collected
+     * only when it was provided to the MECN. Bound to
+     * Charged-Party.
+     *
+     * 3GPP TS 32.278 V19.0.0 clauses 5.1, 6.1.3.2 and 6.4.
+     *
      * @public
      * @readonly
      */
     readonly chargeablePartyIdentifier: OPTIONAL<UTF8String>;
     /**
      * @summary `monitoredUser`.
+     * @description
+     *
+     * Category Oc. User that is monitored. Applicable to loss of
+     * connectivity, UE reachability, location reporting,
+     * communication failure, and availability after DDN failure.
+     * On Rf, Subscriber Identifier carries this identity (for
+     * example the IMSI) and is not used for the number of UEs in
+     * a geographic area. Bound to Subscription-Id. TS 32.278 does
+     * not define the octet encoding.
+     *
+     * 3GPP TS 32.278 V19.0.0 clauses 5.1, 6.1.3.2 and 6.3.1.1.
+     *
      * @public
      * @readonly
      */
     readonly monitoredUser: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `maximumDetectionTime`.
+     * @description
+     *
+     * Category Oc. When present, the longest period without any
+     * communication with the UE after which the SCEF is told that
+     * the UE is considered unreachable. Applicable only to loss
+     * of connectivity. The value is on the order of one minute to
+     * several hours. TS 32.278 does not state the unit. Sent on
+     * Rf for configuration only.
+     *
+     * 3GPP TS 32.278 V19.0.0 clauses 5.1, 6.1.3.2 and 6.3.3.
+     *
      * @public
      * @readonly
      */
     readonly maximumDetectionTime: OPTIONAL<INTEGER>;
     /**
      * @summary `localRecordSequenceNumber`.
+     * @description
+     *
+     * Category OM. Consecutive record number created by this node.
+     * Allocated sequentially across all CDR types.
+     *
+     * 3GPP TS 32.278 V19.0.0 clause 6.1.3.2.
+     *
      * @public
      * @readonly
      */
     readonly localRecordSequenceNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `reachabilityConfiguration`.
+     * @description
+     *
+     * Category Oc. UE-reachability configuration: reachability
+     * type, maximum latency, and maximum response time.
+     * Applicable to UE reachability. Sent on Rf for configuration
+     * only.
+     *
+     * 3GPP TS 32.278 V19.0.0 clauses 6.1.3.2 and 6.3.3.
+     *
      * @public
      * @readonly
      */
     readonly reachabilityConfiguration: OPTIONAL<ReachabilityConfiguration>;
     /**
      * @summary `locationType`.
+     * @description
+     *
+     * Category Oc. Current location, or last known location.
+     * Applicable to location reporting and to the number of UEs
+     * in a geographic area. Sent on Rf for configuration only.
+     *
+     * 3GPP TS 32.278 V19.0.0 clauses 5.1, 6.1.3.2 and 6.3.3.
+     *
      * @public
      * @readonly
      */
     readonly locationType: OPTIONAL<LocationType>;
     /**
      * @summary `accuracy`.
+     * @description
+     *
+     * Category Oc. Desired accuracy of the requested location.
+     * Applicable to location reporting. TS 32.278 allows cell
+     * level (CGI/ECGI), eNB, or TA/RA level. Sent on Rf for
+     * configuration only.
+     *
+     * 3GPP TS 32.278 V19.0.0 clauses 5.1, 6.1.3.2 and 6.3.3.
+     *
      * @public
      * @readonly
      */
     readonly accuracy: OPTIONAL<Accuracy>;
     /**
      * @summary `listofLocations`.
+     * @description
+     *
+     * Category Oc. Cells, eNodeBs, and/or RAIs or TAIs used to
+     * determine how many UEs are in the area. Applicable to the
+     * number of UEs in a geographic area. On Rf each entry is a
+     * separate Location information element, bound to
+     * Number-Of-UE-Per-Location-Configuration, and sent for
+     * configuration only.
+     *
+     * 3GPP TS 32.278 V19.0.0 clauses 5.1, 6.1.3.2, 6.3.1.2 and 6.4.
+     *
      * @public
      * @readonly
      */
     readonly listofLocations: OPTIONAL<EPSLocationInfo[]>;
     /**
      * @summary `monitoringEventConfigStatus`.
+     * @description
+     *
+     * Category M. Whether the configuration request succeeded.
+     * When it did not, the Rf information element (category Oc)
+     * carries a value for the error that occurred while handling
+     * the requested action. Sent on Rf for configuration only.
+     *
+     * 3GPP TS 32.278 V19.0.0 clauses 5.1, 6.1.3.2, 6.3.1.2 and
+     * 6.3.3.
+     *
      * @public
      * @readonly
      */
     readonly monitoringEventConfigStatus: OPTIONAL<MonitoringEventConfigStatus>;
     /**
      * @summary `recordExtensions`.
+     * @description
+     *
+     * Category OC. Operator or manufacturer extensions to the
+     * record. Present when an extension exists.
+     *
+     * 3GPP TS 32.278 V19.0.0 clause 6.1.3.2.
+     *
      * @public
      * @readonly
      */

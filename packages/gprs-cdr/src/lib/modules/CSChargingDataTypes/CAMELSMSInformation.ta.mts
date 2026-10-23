@@ -15,7 +15,22 @@ import { _decode_CAMELSMSInformation_defaultSMSHandling, _encode_CAMELSMSInforma
 /**
  * @summary CAMELSMSInformation
  * @description
- * 
+ *
+ * This field contains following CAMEL information for mobile originated and
+ * terminated SMS: Default SMS handling: This field indicates whether or not
+ * a CAMEL encounters default SMS handling. This field shall be present only
+ * if default SMS handling has been applied. Free format data: See clause
+ * 5.1.2.1.26. Calling Party Number: This field contains Calling Party Number
+ * modified by CAMEL service. CAMEL modified Service Centre: This field
+ * contains SMS-C address modified by CAMEL service. NOTE: 1: This field is
+ * only applicable for originated SMS. CAMEL Destination Subscriber Number
+ * This field contains short message Destination Number modified by CAMEL
+ * service. NOTE: 2: This field is only applicable for originated SMS. SMS
+ * Reference Number: This field contains the SMS Reference Number assigned to
+ * the Short Message by the MSC.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.12.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,43 +47,85 @@ import { _decode_CAMELSMSInformation_defaultSMSHandling, _encode_CAMELSMSInforma
  *    cAMELSMSCAddress              [7] IMPLICIT OCTET STRING ( SIZE( 1 .. 20 ) ) OPTIONAL,
  *    smsReferenceNumber            [8] IMPLICIT OCTET STRING ( SIZE( 1 .. 8 ) ) OPTIONAL}
  * ```
- * 
  * @class
  */
 export
 class CAMELSMSInformation {
     /**
      * @summary `gsm_SCFAddress`.
+     * @description
+     *
+     * This field identifies the CAMEL server serving the subscriber. Address is
+     * defined in HLR as part of CAMEL subscription information.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.28.
+     *
      * @public
      * @readonly
      */
     readonly gsm_SCFAddress: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `serviceKey`.
+     * @description
+     *
+     * This field identifies the CAMEL service logic applied. Service key is
+     * defined in HLR as part of CAMEL subscription information.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.83.
+     *
      * @public
      * @readonly
      */
     readonly serviceKey: OPTIONAL<INTEGER>;
     /**
      * @summary `defaultSMSHandling`.
+     * @description
+     *
+     * Default SMS handling: This field indicates whether or not a CAMEL
+     * encounters default SMS handling. This field shall be present only if
+     * default SMS handling has been applied.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.12.
+     *
      * @public
      * @readonly
      */
     readonly defaultSMSHandling: OPTIONAL<CAMELSMSInformation_defaultSMSHandling>;
     /**
      * @summary `freeFormatData`.
+     * @description
+     *
+     * Free format data: See clause 5.1.2.1.26.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.12.
+     *
      * @public
      * @readonly
      */
     readonly freeFormatData: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `callingPartyNumber`.
+     * @description
+     *
+     * Calling Party Number: This field contains Calling Party Number modified
+     * by CAMEL service.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.12.
+     *
      * @public
      * @readonly
      */
     readonly callingPartyNumber: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `destinationSubscriberNumber`.
+     * @description
+     *
+     * This field contains Destination/Called Subscriber Number modified by
+     * CAMEL service. If not modified then this field may contain original
+     * Destination Number also when CAMEL is not active.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.17.
+     *
      * @public
      * @readonly
      */
@@ -81,6 +138,13 @@ class CAMELSMSInformation {
     readonly cAMELSMSCAddress: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `smsReferenceNumber`.
+     * @description
+     *
+     * SMS Reference Number: This field contains the SMS Reference Number
+     * assigned to the Short Message by the MSC.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.12.
+     *
      * @public
      * @readonly
      */
@@ -125,7 +189,7 @@ class CAMELSMSInformation {
     /**
      * @summary Restructures an object into a CAMELSMSInformation
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `CAMELSMSInformation`.
      * 
      * @public
@@ -150,9 +214,9 @@ class CAMELSMSInformation {
 /**
  * @summary The Leading Root Component Types of CAMELSMSInformation
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -170,9 +234,9 @@ const _root_component_type_list_1_spec_for_CAMELSMSInformation: $.ComponentSpec[
 /**
  * @summary The Trailing Root Component Types of CAMELSMSInformation
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -183,9 +247,9 @@ const _root_component_type_list_2_spec_for_CAMELSMSInformation: $.ComponentSpec[
 /**
  * @summary The Extension Addition Component Types of CAMELSMSInformation
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * @constant
  */
 export

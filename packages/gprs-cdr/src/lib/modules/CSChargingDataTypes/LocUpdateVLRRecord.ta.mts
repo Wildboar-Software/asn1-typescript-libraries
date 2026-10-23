@@ -17,7 +17,28 @@ import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExt
 /**
  * @summary LocUpdateVLRRecord
  * @description
- * 
+ *
+ * VLR location-update CDR. When enabled, the VLR produces one for each
+ * location registration or location update it receives. `oldLocation` is
+ * absent for a registration. On an E-UTRAN location update over SGs,
+ * `newLocation` carries the recording entity as the MSC number, the tracking
+ * area code in the location-area field, and the 16 least significant bits of
+ * the E-UTRAN cell identity as the cell identity. The 12 most significant
+ * bits are `locationExtension`. `msClassmark` is then the default classmark
+ * 1 value 0x7F.
+ *
+ * SMS over SGs and CS fallback are specified in TS 23.272. Call charging
+ * after CS fallback follows GSM and UMTS procedures (clause 5.1.3.16).
+ *
+ * The table gives two or three category codes for the old and new location
+ * because those fields have several components. This module does not say
+ * which code belongs to which component beyond the description in clause
+ * 6.1.3.11.
+ *
+ * Categories are M, C, OM, and OC as in TS 32.240 clause 5.4.
+ *
+ * 3GPP TS 32.250 V19.0.0 clauses 5.1.3.16 and 6.1.3.11.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,73 +56,202 @@ import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExt
  *       ManagementExtension OPTIONAL,
  *    locationExtension   [10] IMPLICIT BIT STRING ( SIZE( 12 ) ) OPTIONAL}
  * ```
- * 
  * @class
  */
 export
 class LocUpdateVLRRecord {
     /**
      * @summary `recordType`.
+     * @description
+     *
+     * 2G, 3G, and Loc Upd over SGs mandatory. Location update.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.11.
+     *
+     * The field identifies the type of the record e.g. mobile originated,
+     * mobile terminated etc.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.72.
+     *
      * @public
      * @readonly
      */
     readonly recordType: RecordType;
     /**
      * @summary `servedIMSI`.
+     * @description
+     *
+     * 2G, 3G, and Loc Upd over SGs mandatory. IMSI of the served MS.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.11.
+     *
+     * This fields contains the international mobile subscriber identity (IMSI)
+     * of the served party. The term "served" party is used to describe the
+     * mobile subscriber involved in the transaction recorded e.g. the calling
+     * subscriber in case of an MOC record. The structure of the IMSI is defined
+     * in TS 23.003 [200].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.79.
+     *
      * @public
      * @readonly
      */
     readonly servedIMSI: OCTET_STRING;
     /**
      * @summary `servedMSISDN`.
+     * @description
+     *
+     * 2G, 3G, and Loc Upd over SGs operator-provisionable mandatory. The
+     * primary MSISDN of the party performing the location update.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.11.
+     *
+     * This fields contains the mobile station ISDN number (MSISDN) of the
+     * served party. The term "served" party is used to describe the mobile
+     * subscriber involved in the transaction recorded e.g. the called
+     * subscriber in case of an MTC record. In case of multi-numbering the
+     * MSISDN stored in a MOC record will be the primary MSISDN of the calling
+     * party. The structure of the MSISDN is defined in TS 23.003 [200].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.80.
+     *
      * @public
      * @readonly
      */
     readonly servedMSISDN: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `recordingEntity`.
+     * @description
+     *
+     * 2G, 3G, and Loc Upd over SGs mandatory. The E.164 number of the entity
+     * (VLR or MSC/VLR) generating the record.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.11.
+     *
+     * This field contains the E.164 [308] number assigned to the entity (MSC,
+     * VLR, HLR etc.) that produced the record. For further details concerning
+     * the structure of MSC and location register numbers see TS 23.003 [200].
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.73.
+     *
      * @public
      * @readonly
      */
     readonly recordingEntity: OCTET_STRING;
     /**
      * @summary `oldLocation`.
+     * @description
+     *
+     * Absent for a registration. Otherwise the previous VMSC E.164
+     * number, location area, and MCC+MNC. The table writes two
+     * category codes for 2G and 3G and "- C" for a location update
+     * over SGs, and does not say which component each code applies to.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.11.
+     *
      * @public
      * @readonly
      */
     readonly oldLocation: OPTIONAL<Location_info>;
     /**
      * @summary `newLocation`.
+     * @description
+     *
+     * VMSC E.164 number, location area code, cell identity or service
+     * area code, and MCC+MNC. On an E-UTRAN location update over SGs
+     * the MSC number is the recording entity, the tracking area code
+     * is placed in the location area, and the cell identity holds the
+     * 16 least significant bits of the E-UTRAN cell identity. The
+     * table writes three category codes (mandatory, mandatory,
+     * operator-provisionable mandatory) and does not say which
+     * component each code applies to.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.11.
+     *
      * @public
      * @readonly
      */
     readonly newLocation: Location_info;
     /**
      * @summary `msClassmark`.
+     * @description
+     *
+     * 2G, 3G, and location update over SGs: mandatory. On an E-UTRAN
+     * location update over SGs this is default classmark 1, value
+     * 0x7F.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.11.
+     *
      * @public
      * @readonly
      */
     readonly msClassmark: OCTET_STRING;
     /**
      * @summary `updateTime`.
+     * @description
+     *
+     * 2G, 3G, and Loc Upd over SGs mandatory. Time at which the update was
+     * invoked.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.11.
+     *
      * @public
      * @readonly
      */
     readonly updateTime: OCTET_STRING;
     /**
      * @summary `updateResult`.
+     * @description
+     *
+     * 2G, 3G, and Loc Upd over SGs conditional. The result of the location
+     * update if unsuccessful.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.11.
+     *
+     * This field contains the result of the location update request as defined
+     * in the MAP (TS 29.002 [214]). Note that this field is only provided if
+     * the attempted update was unsuccessful.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.93.
+     *
      * @public
      * @readonly
      */
     readonly updateResult: OPTIONAL<HLRIntResult>;
     /**
      * @summary `recordExtensions`.
+     * @description
+     *
+     * 2G, 3G, and Loc Upd over SGs operator-provisionable conditional. A set of
+     * network/ manufacturer specific extensions to the record, when available.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.11.
+     *
+     * The field enables network operators and/ or manufacturers to add their
+     * own extensions to the standard record definitions.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.71.
+     *
      * @public
      * @readonly
      */
     readonly recordExtensions: OPTIONAL<ManagementExtension[]>;
     /**
      * @summary `locationExtension`.
+     * @description
+     *
+     * 2G not applicable, 3G not applicable, Loc Upd over SGs
+     * operator-provisionable mandatory. The 12 most significant bits of the
+     * E-UTRAN Cell Identity are included if E-UTRAN location update.
+     *
+     * 3GPP TS 32.250 V19.0.0 clause 6.1.3.11.
+     *
+     * The Location Extension field contains the 12 most significant bits from
+     * the Cell Identity field. This is used when SMS over SGs (defined in TS
+     * 36.413 [226]) is applied and the access is E-UTRAN.
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.2.1.46.
+     *
      * @public
      * @readonly
      */
@@ -152,7 +302,7 @@ class LocUpdateVLRRecord {
     /**
      * @summary Restructures an object into a LocUpdateVLRRecord
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `LocUpdateVLRRecord`.
      * 
      * @public
@@ -171,9 +321,9 @@ class LocUpdateVLRRecord {
 /**
  * @summary The Leading Root Component Types of LocUpdateVLRRecord
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -194,9 +344,9 @@ const _root_component_type_list_1_spec_for_LocUpdateVLRRecord: $.ComponentSpec[]
 /**
  * @summary The Trailing Root Component Types of LocUpdateVLRRecord
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -207,9 +357,9 @@ const _root_component_type_list_2_spec_for_LocUpdateVLRRecord: $.ComponentSpec[]
 /**
  * @summary The Extension Addition Component Types of LocUpdateVLRRecord
  * @description
- * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * @constant
  */
 export

@@ -14,7 +14,33 @@ import { LCSClientIdentity_lcsClientInternalID, _decode_LCSClientIdentity_lcsCli
 /**
  * @summary LCSClientIdentity
  * @description
- * 
+ *
+ * Further identification of the LCS client, present when that
+ * identification is available (category C). The GMLC writes it on
+ * LCS-GMO-CDR, LCS-RGMT-CDR, LCS-HGMT-CDR, LCS-VGMT-CDR, and
+ * LCS-GNI-CDR. Clause 5.1 requires the GMLC to collect the identity
+ * of the entity requesting the location.
+ *
+ * For online charging, LCS Client ID in LCS Information (category
+ * Oc) holds the ID of the LCS client that invoked the location
+ * request, if available.
+ *
+ * MO-LR: the UE obtains its own location, or has it sent to another
+ * LCS client. MT-LR: an external LCS client asks for the target
+ * UE's location. NI-LR: positioning for an emergency call. Clause
+ * 3.1 defines an LCS client; see `LCSClientType`.
+ *
+ * In the CS and PS domains, TS 32.298 describes the client external
+ * ID, the ID dialled by the MS, and the client internal ID. In the
+ * LCS domain it is the identity defined in TS 29.002. TS 32.271
+ * does not describe those components separately.
+ *
+ * 3GPP TS 32.271 V12.1.0 clause 5.1, clauses 5.2.3.1 to 5.2.3.3,
+ * tables 6.1.3.1.1, 6.1.3.2.1.1, 6.1.3.2.2.1, 6.1.3.2.3.1, and
+ * 6.1.3.3.1, and table 6.3.1.2.1.
+ * 3GPP TS 32.298 V20.1.0 clauses 5.1.2.1.39, 5.1.2.2.20, and
+ * 5.1.4.2.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,18 +62,43 @@ export
 class LCSClientIdentity {
     /**
      * @summary `lcsClientExternalID`.
+     * @description
+     *
+     * Client external ID. TS 32.271 does not describe this
+     * component separately from LCS Client Identity. See
+     * `LCSClientExternalID`.
+     *
+     * 3GPP TS 32.298 V20.1.0 clauses 5.1.2.1.39, 5.1.2.2.20, and
+     * 5.1.4.2.2.
+     *
      * @public
      * @readonly
      */
     readonly lcsClientExternalID: OPTIONAL<LCSClientExternalID>;
     /**
      * @summary `lcsClientDialedByMS`.
+     * @description
+     *
+     * Client dialled by the MS. TS 32.271 does not describe this
+     * component separately from LCS Client Identity.
+     *
+     * 3GPP TS 32.298 V20.1.0 clauses 5.1.2.1.39, 5.1.2.2.20, and
+     * 5.1.4.2.2.
+     *
      * @public
      * @readonly
      */
     readonly lcsClientDialedByMS: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `lcsClientInternalID`.
+     * @description
+     *
+     * Client internal ID. TS 32.271 does not define the enumerated
+     * values. See `LCSClientIdentity_lcsClientInternalID`.
+     *
+     * 3GPP TS 32.298 V20.1.0 clauses 5.1.2.1.39, 5.1.2.2.20, and
+     * 5.1.4.2.2.
+     *
      * @public
      * @readonly
      */

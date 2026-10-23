@@ -26,7 +26,32 @@ import { MBMSInformation, _decode_MBMSInformation, _encode_MBMSInformation } fro
 /**
  * @summary CONTENTBMSCRecord
  * @description
- * 
+ *
+ * Content-provider BM-SC CDR (C-BMSC-CDR). The BM-SC produces one
+ * record per MBMS bearer service. The record opens at MBMS Session
+ * Start, when the BM-SC sends Charging Data Request [Start]. Volume
+ * is counted in the downlink direction. Some contents change as
+ * packet-switched nodes register and deregister to the bearer
+ * context.
+ *
+ * For GPRS, Charging Data Request [Start] is mandatory on the first
+ * Session Start Response from any GGSN, and [Stop] is mandatory on
+ * the first Session Stop Response from any GGSN (table 5.2.1.2).
+ * For EPS, [Start] is mandatory on the first Session Start Response
+ * from any MBMS GW, and [Stop] is mandatory on the first Session
+ * Stop Response from any MBMS GW (table 5.2.1.3). When the bearer
+ * is established for a Group Communication Service, the Group
+ * Communication Service Application Server is the content provider.
+ * Online charging of content providers is not supported.
+ *
+ * Traffic-volume containers are added on the triggers in clause
+ * 5.2.3.2.2. The record closes on the triggers in clause 5.2.3.2.3.
+ * Field categories follow TS 32.240 clause 5.4, as applied by
+ * clause 6.1.3.0.
+ *
+ * 3GPP TS 32.273 V19.0.0 clauses 5.1.1A, 5.2.1, 5.2.3.2, and 5.3.1,
+ * and table 6.1.3.2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -69,114 +94,294 @@ export
 class CONTENTBMSCRecord {
     /**
      * @summary `recordType`.
+     * @description
+     *
+     * Identifies this record as a C-BM-SC record. Mandatory. The
+     * MBMS Charged Party information element is bound to the record
+     * type.
+     *
+     * 3GPP TS 32.273 V19.0.0 table 6.1.3.2.1 and table 6.4.1.
+     *
      * @public
      * @readonly
      */
     readonly recordType: RecordType;
     /**
      * @summary `contentProviderId`.
+     * @description
+     *
+     * Identity of the content provider. Mandatory. May be taken from
+     * the Subscription-Id of the accounting request, and is bound
+     * from that AVP. When the bearer is established for a Group
+     * Communication Service, the Group Communication Service
+     * Application Server is the content provider.
+     *
+     * 3GPP TS 32.273 V19.0.0 clause 5.1.1A, table 6.1.3.2.1, and
+     * table 6.4.1.
+     *
      * @public
      * @readonly
      */
     readonly contentProviderId: GraphicString;
     /**
      * @summary `listofDownstreamNodes`.
+     * @description
+     *
+     * Control-plane IP addresses of the GGSNs or MBMS GWs used by the
+     * MBMS bearer service. Mandatory. Bound from GGSN-Address. When
+     * the BM-SC deregisters a multicast session that has already
+     * started, it sends De-registration Request to every GGSN in
+     * this list.
+     *
+     * 3GPP TS 32.273 V19.0.0 clause 5.2.2.2.3, table 6.1.3.2.1, and
+     * table 6.4.1.
+     *
      * @public
      * @readonly
      */
     readonly listofDownstreamNodes: IPAddress[];
     /**
      * @summary `accessPointNameNI`.
+     * @description
+     *
+     * Network-identifier part of the APN: the logical name of the
+     * access point connected to the external packet data network.
+     * Category OC. Present only for multicast. Bound from
+     * Called-Station-Id.
+     *
+     * 3GPP TS 32.273 V19.0.0 table 6.1.3.2.1 and table 6.4.1.
+     *
      * @public
      * @readonly
      */
     readonly accessPointNameNI: OPTIONAL<IA5String>;
     /**
      * @summary `servedPDPAddress`.
+     * @description
+     *
+     * IP multicast address used to transmit the MBMS user service
+     * (IPv4 or IPv6), if available. Category OM. With
+     * `servedpdpPDNType`, it represents the MBMS bearer service.
+     *
+     * 3GPP TS 32.273 V19.0.0 table 6.1.3.2.1 and the note to
+     * table 6.3.1.1.1.
+     *
      * @public
      * @readonly
      */
     readonly servedPDPAddress: OPTIONAL<PDPAddress>;
     /**
      * @summary `listOfTrafficVolumes`.
+     * @description
+     *
+     * Changes in charging conditions for this MBMS bearer service,
+     * including MBMS UE context modifications. Each change is time
+     * stamped. Conditions categorize volume, for example per tariff
+     * period. Initial QoS, later QoS, and the matching data volumes
+     * are included. Category OM.
+     *
+     * MBMS charging counts downlink volume only. This list shall not
+     * count uplink volume.
+     *
+     * On tariff time change, every active container is added. On CDR
+     * closure, every active container is added.
+     *
+     * 3GPP TS 32.273 V19.0.0 clause 5.2.3.2.2 and table 6.1.3.2.1.
+     *
      * @public
      * @readonly
      */
     readonly listOfTrafficVolumes: OPTIONAL<ListOfTrafficVolumes[]>;
     /**
      * @summary `recordOpeningTime`.
+     * @description
+     *
+     * Time at which the MBMS bearer context was activated (MBMS
+     * Session Start), or the opening time of a subsequent partial
+     * record. Mandatory. Generated at the CDF.
+     *
+     * 3GPP TS 32.273 V19.0.0 table 6.1.3.2.1 and the note to
+     * table 6.4.1.
+     *
      * @public
      * @readonly
      */
     readonly recordOpeningTime: OCTET_STRING;
     /**
      * @summary `duration`.
+     * @description
+     *
+     * Duration of this record. Mandatory. Generated at the CDF.
+     *
+     * 3GPP TS 32.273 V19.0.0 table 6.1.3.2.1 and the note to
+     * table 6.4.1.
+     *
      * @public
      * @readonly
      */
     readonly duration: INTEGER;
     /**
      * @summary `causeForRecClosing`.
+     * @description
+     *
+     * Reason the record was released. Mandatory. See
+     * `CONTENTBMSCRecord_causeForRecClosing`. Bound from
+     * Change-Condition. A more detailed reason may be in
+     * `diagnostics`.
+     *
+     * 3GPP TS 32.273 V19.0.0 clause 5.2.3.2.3, table 6.1.3.2.1, and
+     * table 6.4.1.
+     *
      * @public
      * @readonly
      */
     readonly causeForRecClosing: CONTENTBMSCRecord_causeForRecClosing;
     /**
      * @summary `diagnostics`.
+     * @description
+     *
+     * More detailed reason for release of the connection. Category
+     * OM. In the service information it complements Change-Condition
+     * and gives a more detailed reason for release of the MBMS
+     * bearer. Bound from the Diagnostics AVP.
+     *
+     * 3GPP TS 32.273 V19.0.0 table 6.1.3.2.1, clause 6.3.1.1, and
+     * table 6.4.1.
+     *
      * @public
      * @readonly
      */
     readonly diagnostics: OPTIONAL<Diagnostics>;
     /**
      * @summary `recordSequenceNumber`.
+     * @description
+     *
+     * Partial-record sequence number. Conditional: present only when
+     * the record is a partial record. Generated at the CDF.
+     *
+     * 3GPP TS 32.273 V19.0.0 table 6.1.3.2.1 and the note to
+     * table 6.4.1.
+     *
      * @public
      * @readonly
      */
     readonly recordSequenceNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `nodeID`.
+     * @description
+     *
+     * Name of the recording entity. Category OM. Bound from Node-Id.
+     * The service-information definition of Node Id is in TS 32.251.
+     *
+     * 3GPP TS 32.273 V19.0.0 table 6.1.3.2.1, clause 6.3.1.1, and
+     * table 6.4.1.
+     *
      * @public
      * @readonly
      */
     readonly nodeID: OPTIONAL<IA5String>;
     /**
      * @summary `recordExtensions`.
+     * @description
+     *
+     * Network-operator or manufacturer extensions to the record.
+     * Category OC. Present when an extension exists.
+     *
+     * 3GPP TS 32.273 V19.0.0 table 6.1.3.2.1.
+     *
      * @public
      * @readonly
      */
     readonly recordExtensions: OPTIONAL<ManagementExtension[]>;
     /**
      * @summary `localSequenceNumber`.
+     * @description
+     *
+     * Consecutive record number created by this node. Allocated
+     * sequentially across all CDR types. Category OM. Generated at
+     * the CDF.
+     *
+     * 3GPP TS 32.273 V19.0.0 table 6.1.3.2.1 and the note to
+     * table 6.4.1.
+     *
      * @public
      * @readonly
      */
     readonly localSequenceNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `recipientAddressList`.
+     * @description
+     *
+     * Addresses of the recipients registered to receive the bearer
+     * service, one per recipient. Category OC. Bound from Recipient
+     * Address (MSISDN). Applies to multicast. Does not apply to
+     * broadcast.
+     *
+     * 3GPP TS 32.273 V19.0.0 table 6.1.3.2.1, clause 6.3.1.2, and
+     * table 6.4.1.
+     *
      * @public
      * @readonly
      */
     readonly recipientAddressList: OCTET_STRING[];
     /**
      * @summary `bearerServiceDescription`.
+     * @description
+     *
+     * Session portion of the SDP exchanged between the BM-SC and the
+     * UE during notification. Category OC. Carried in IMS
+     * Information. The SDP session description and SDP media
+     * components are specified in TS 32.260.
+     *
+     * 3GPP TS 32.273 V19.0.0 table 6.1.3.2.1, clause 6.3.1.1, and
+     * table 6.4.1.
+     *
      * @public
      * @readonly
      */
     readonly bearerServiceDescription: OPTIONAL<BearerServiceDescription>;
     /**
      * @summary `mbmsInformation`.
+     * @description
+     *
+     * MBMS-specific parameters. Category OM. The structure is defined
+     * in clause 6.3.1.2.
+     *
+     * 3GPP TS 32.273 V19.0.0 table 6.1.3.2.1 and clause 6.3.1.2.
+     *
      * @public
      * @readonly
      */
     readonly mbmsInformation: OPTIONAL<MBMSInformation>;
     /**
      * @summary `serviceContextID`.
+     * @description
+     *
+     * Context to which this CDR belongs. Category OM. In the common
+     * CDR syntax this is the Diameter service context: the service,
+     * subsystem or domain, and the release the CDR applies to. The
+     * contents are described in TS 32.299.
+     *
+     * 3GPP TS 32.273 V19.0.0 table 6.1.3.2.1.
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.1.2.
+     *
      * @public
      * @readonly
      */
     readonly serviceContextID: OPTIONAL<UTF8String>;
     /**
      * @summary `servedpdpPDNType`.
+     * @description
+     *
+     * PDN type of the MBMS bearer service: IPv4 or IPv6. Category OM.
+     * Bound from 3GPP-PDP-Type. With `servedPDPAddress`, it
+     * represents the MBMS bearer service, that is the IP multicast
+     * address. The service-information field is used as defined in
+     * TS 32.251.
+     *
+     * 3GPP TS 32.273 V19.0.0 table 6.1.3.2.1, the note to
+     * table 6.3.1.1.1, and table 6.4.1.
+     *
      * @public
      * @readonly
      */

@@ -12,7 +12,15 @@ import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../ProSeChargin
 /**
  * @summary TransmitterInfo
  * @description
- * 
+ *
+ * One transmitter the UE detected for a ProSe Direct Communication group. A
+ * transmitter is added to the PF-DC-CDR of the group that has usage to report,
+ * when the ProSe Function receives it in a usage information report.
+ *
+ * 3GPP TS 32.277 V19.2.0 clauses 5.2.3.1.2, 6.1.3.4, and 6.3.1.2.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.4.7.7A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +35,26 @@ export
 class TransmitterInfo {
     /**
      * @summary `sourceIPaddress`.
+     * @description
+     *
+     * Source IP address of the transmitter.
+     *
+     * 3GPP TS 32.277 V19.2.0 clauses 5.1.2.3 and 6.3.1.2.
+     *
      * @public
      * @readonly
      */
     readonly sourceIPaddress: IPAddress;
     /**
      * @summary `proSeUEID`.
+     * @description
+     *
+     * ProSe UE ID of the transmitter. This is a link-layer identifier assigned
+     * by the EPS that uniquely represents that UE in ProSe Direct
+     * Communication.
+     *
+     * 3GPP TS 32.277 V19.2.0 clauses 6.1.3.4 and 6.3.1.2.
+     *
      * @public
      * @readonly
      */

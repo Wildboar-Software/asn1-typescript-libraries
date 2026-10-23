@@ -16,7 +16,22 @@ import { SDP_Type, _decode_SDP_Type, _encode_SDP_Type, _enum_for_SDP_Type } from
 /**
  * @summary List_Of_Early_SDP_Media_Components
  * @description
- * 
+ *
+ * This is a grouped field which may occur several times in one CDR. This
+ * field describes session, media parameters and timestamps related to media
+ * components set to active according to SDP signalling exchanged during a
+ * SIP session establishment and before the final successful or unsuccessful
+ * SIP ANSWER to the initial SIP INVITE message is received. Once a media
+ * component has been set to active, subsequent status changes shall also be
+ * registered. This field applies only to SIP session related cases, but it
+ * may be present both in event CDRs (unsuccessful session establishment) and
+ * session CDRs (successful session establishment). The List of Early SDP
+ * Media Components contains the following elements: SDP Offer Timestamp; SDP
+ * Answer Timestamp; SDP Media Components; Media Initiator flag; SDP Session
+ * Description. These fields are described in the appropriate subclause.
+ *
+ * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.25.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -55,6 +70,12 @@ class List_Of_Early_SDP_Media_Components {
     readonly sDP_Media_Components: OPTIONAL<SDP_Media_Components[]>;
     /**
      * @summary `mediaInitiatorFlag`.
+     * @description
+     *
+     * Media Initiator flag;
+     *
+     * 3GPP TS 32.298 V20.1.0 clause 5.1.3.1.25.
+     *
      * @public
      * @readonly
      */

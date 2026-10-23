@@ -1,6 +1,14 @@
 /**
  * @description
  *
+ * PS-domain (GPRS/EPC) CDR parameters are specified in 3GPP TS 32.298
+ * V20.1.0 clause 5.1.2.2.
+ * 
+ * When each CDR is opened, what is added to it, and when it is closed,
+ * together with the field categories on the Bp interface, are specified in
+ * 3GPP TS 32.251 V19.0.0 clauses 5.2.3 and 6.1. Annex A defines Charging
+ * Characteristics. Annex D defines the IPE-CDR for fixed broadband access.
+ *
  * ASN.1 module `GPRSChargingDataTypes`.
  *
  * Identical assignments that also appear in other charging modules
