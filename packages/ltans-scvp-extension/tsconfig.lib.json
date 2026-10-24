@@ -1,6 +1,7 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
+    "erasableSyntaxOnly": true,
     "rootDir": "src",
     "outDir": "dist",
     "tsBuildInfoFile": "../../dist/packages/ltans-scvp-extension/tsconfig.lib.tsbuildinfo",
