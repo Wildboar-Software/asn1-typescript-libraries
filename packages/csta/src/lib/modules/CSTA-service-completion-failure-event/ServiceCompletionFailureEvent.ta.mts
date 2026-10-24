@@ -5,7 +5,7 @@ import {
     type OPTIONAL,
     SEQUENCE,
     SET,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { PrimaryOrSecondaryCall, _decode_PrimaryOrSecondaryCall, _encode_PrimaryOrSecondaryCall } from "../CSTA-service-completion-failure-event/PrimaryOrSecondaryCall.ta.mjs";

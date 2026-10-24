@@ -5,7 +5,7 @@ import {
     type OPTIONAL,
     SEQUENCE,
     SET,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { DisplayList, _decode_DisplayList, _encode_DisplayList } from "../CSTA-get-display/DisplayList.ta.mjs";

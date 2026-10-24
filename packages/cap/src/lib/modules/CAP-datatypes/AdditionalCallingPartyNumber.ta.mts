@@ -1,5 +1,5 @@
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import { type Digits, _decode_Digits, _encode_Digits } from "./Digits.ta.mjs";

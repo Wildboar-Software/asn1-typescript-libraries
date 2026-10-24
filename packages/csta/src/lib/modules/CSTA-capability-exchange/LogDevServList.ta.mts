@@ -5,7 +5,7 @@ import {
     type OPTIONAL,
     SEQUENCE,
     SET,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { CallControlServList, _decode_CallControlServList, _encode_CallControlServList } from "../CSTA-capability-exchange/CallControlServList.ta.mjs";

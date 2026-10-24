@@ -5,7 +5,7 @@ import {
     type OPTIONAL,
     SEQUENCE,
     SET,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { CallObject, _decode_CallObject, _encode_CallObject } from "../CSTA-start-data-collection/CallObject.ta.mjs";

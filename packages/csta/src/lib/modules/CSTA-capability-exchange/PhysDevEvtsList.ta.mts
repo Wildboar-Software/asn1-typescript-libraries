@@ -5,7 +5,7 @@ import {
     type OPTIONAL,
     SEQUENCE,
     SET,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { ButtonInformation, _decode_ButtonInformation, _encode_ButtonInformation } from "../CSTA-capability-exchange/ButtonInformation.ta.mjs";

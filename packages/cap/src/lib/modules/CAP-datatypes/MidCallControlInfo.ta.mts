@@ -2,7 +2,7 @@ import {
     type OPTIONAL,
     type INTEGER,
     type OCTET_STRING,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1SizeError,
     ASN1OverflowError,
     ASN1TagClass as _TagClass,

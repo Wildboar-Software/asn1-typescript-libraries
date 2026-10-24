@@ -3,7 +3,7 @@ import {
     type INTEGER,
     type OBJECT_IDENTIFIER,
     type OPTIONAL,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1Error,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";

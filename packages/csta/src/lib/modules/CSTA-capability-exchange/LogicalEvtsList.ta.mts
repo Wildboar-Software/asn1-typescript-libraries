@@ -5,7 +5,7 @@ import {
     type OPTIONAL,
     SEQUENCE,
     SET,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { AgentBusy, _decode_AgentBusy, _encode_AgentBusy } from "../CSTA-capability-exchange/AgentBusy.ta.mjs";

@@ -5,7 +5,7 @@ import {
     type OPTIONAL,
     SEQUENCE,
     SET,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { Activate, _decode_Activate, _encode_Activate } from "../CSTA-capability-exchange/Activate.ta.mjs";

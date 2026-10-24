@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     type IA5String,
 } from "@wildboar/asn1";

@@ -5,7 +5,7 @@ import {
     type OPTIONAL,
     SEQUENCE,
     SET,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { AttachMediaService, _decode_AttachMediaService, _encode_AttachMediaService } from "../CSTA-capability-exchange/AttachMediaService.ta.mjs";

@@ -6,7 +6,7 @@ import {
     SEQUENCE,
     SET,
     type IA5String,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { ThreadLinkageID, _decode_ThreadLinkageID, _encode_ThreadLinkageID } from "../CSTA-call-control/ThreadLinkageID.ta.mjs";

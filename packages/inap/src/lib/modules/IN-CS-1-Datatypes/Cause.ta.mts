@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     type OCTET_STRING,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1SizeError,
 } from "@wildboar/asn1";
 import { maxCauseLength } from "./maxCauseLength.va.mjs";

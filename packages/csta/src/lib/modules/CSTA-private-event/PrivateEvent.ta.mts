@@ -5,7 +5,7 @@ import {
     type OPTIONAL,
     SEQUENCE,
     SET,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { CSTASecurityData, _decode_CSTASecurityData, _encode_CSTASecurityData } from "../CSTA-security/CSTASecurityData.ta.mjs";

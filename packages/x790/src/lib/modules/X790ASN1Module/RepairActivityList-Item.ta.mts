@@ -5,7 +5,7 @@ import {
     SET,
     GraphicString,
     GeneralizedTime,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";

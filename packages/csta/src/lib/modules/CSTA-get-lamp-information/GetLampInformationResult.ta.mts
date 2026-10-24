@@ -5,7 +5,7 @@ import {
     type OPTIONAL,
     SEQUENCE,
     SET,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { LampList, _decode_LampList, _encode_LampList } from "../CSTA-get-lamp-information/LampList.ta.mjs";

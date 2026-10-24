@@ -6,7 +6,7 @@ import {
     SEQUENCE,
     SET,
     type IA5String,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 

@@ -5,7 +5,7 @@ import {
     type OPTIONAL,
     SEQUENCE,
     SET,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { SpeakerVolumeList, _decode_SpeakerVolumeList, _encode_SpeakerVolumeList } from "../CSTA-get-speaker-volume/SpeakerVolumeList.ta.mjs";

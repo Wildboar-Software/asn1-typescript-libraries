@@ -4,7 +4,7 @@ import {
     type BOOLEAN,
     type OBJECT_IDENTIFIER,
     type IA5String,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,

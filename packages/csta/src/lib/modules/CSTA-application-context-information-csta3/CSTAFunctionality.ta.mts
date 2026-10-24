@@ -5,7 +5,7 @@ import {
     type OPTIONAL,
     SEQUENCE,
     SET,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { SwitchingFunctionServicesC2, _decode_SwitchingFunctionServicesC2, _encode_SwitchingFunctionServicesC2 } from "../CSTA-application-context-information-csta3/SwitchingFunctionServicesC2.ta.mjs";

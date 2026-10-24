@@ -5,7 +5,7 @@ import {
     type OPTIONAL,
     SEQUENCE,
     SET,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { RingerStatusList, _decode_RingerStatusList, _encode_RingerStatusList } from "../CSTA-get-ringer-status/RingerStatusList.ta.mjs";

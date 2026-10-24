@@ -5,7 +5,7 @@ import {
     type OPTIONAL,
     SEQUENCE,
     SET,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { ChangeSystemStatusFilter, _decode_ChangeSystemStatusFilter, _encode_ChangeSystemStatusFilter } from "../CSTA-capability-exchange/ChangeSystemStatusFilter.ta.mjs";
