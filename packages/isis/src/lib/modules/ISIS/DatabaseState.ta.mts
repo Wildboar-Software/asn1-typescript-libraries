@@ -148,10 +148,22 @@ export const waiting: DatabaseState =
   DatabaseState.waiting; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_DatabaseState = $._decodeEnumerated;
+export function _decode_DatabaseState(el: _Element): DatabaseState {
+  const enumerated = $._decodeEnumerated(el);
+  switch (enumerated) {
+    case DatabaseState.off: return DatabaseState.off;
+    case DatabaseState.on: return DatabaseState.on;
+    case DatabaseState.waiting: return DatabaseState.waiting;
+    default:
+      throw new _ConstructionError(
+        'Invalid ENUMERATED value ' + enumerated + ' for DatabaseState.',
+        el,
+      );
+  }
+}
 
 
-export const _encode_DatabaseState = $._encodeEnumerated;
+export const _encode_DatabaseState: $.ASN1Encoder<DatabaseState> = $._encodeEnumerated as $.ASN1Encoder<DatabaseState>;
 
 
 /* eslint-enable */

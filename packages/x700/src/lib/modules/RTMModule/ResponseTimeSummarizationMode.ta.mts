@@ -136,10 +136,21 @@ export const responseTimePerBit: ResponseTimeSummarizationMode =
     ResponseTimeSummarizationMode.responseTimePerBit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_ResponseTimeSummarizationMode = $._decodeEnumerated;
+export function _decode_ResponseTimeSummarizationMode(el: _Element): ResponseTimeSummarizationMode {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ResponseTimeSummarizationMode.rawResponseTime: return ResponseTimeSummarizationMode.rawResponseTime;
+        case ResponseTimeSummarizationMode.responseTimePerBit: return ResponseTimeSummarizationMode.responseTimePerBit;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ResponseTimeSummarizationMode.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_ResponseTimeSummarizationMode = $._encodeEnumerated;
+export const _encode_ResponseTimeSummarizationMode: $.ASN1Encoder<ResponseTimeSummarizationMode> = $._encodeEnumerated as $.ASN1Encoder<ResponseTimeSummarizationMode>;
 
 
 /* eslint-enable */

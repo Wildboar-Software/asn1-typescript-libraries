@@ -125,10 +125,23 @@ export const on: IPMEntryType =
     IPMEntryType.on; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_IPMEntryType = $._decodeEnumerated;
+export function _decode_IPMEntryType(el: _Element): IPMEntryType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case IPMEntryType.ipm: return IPMEntryType.ipm;
+        case IPMEntryType.rn: return IPMEntryType.rn;
+        case IPMEntryType.nrn: return IPMEntryType.nrn;
+        case IPMEntryType.on: return IPMEntryType.on;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for IPMEntryType.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_IPMEntryType = $._encodeEnumerated;
+export const _encode_IPMEntryType: $.ASN1Encoder<IPMEntryType> = $._encodeEnumerated as $.ASN1Encoder<IPMEntryType>;
 
 
 /* eslint-enable */

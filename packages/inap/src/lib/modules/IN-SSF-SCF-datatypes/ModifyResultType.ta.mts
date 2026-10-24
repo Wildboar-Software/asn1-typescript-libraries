@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -87,9 +88,20 @@ export
 const modifyReject: ModifyResultType = ModifyResultType.modifyReject; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_ModifyResultType: $.ASN1Decoder<ModifyResultType> = $._decodeEnumerated;
+function _decode_ModifyResultType(el: _Element): ModifyResultType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ModifyResultType.modifyAcknowledge: return ModifyResultType.modifyAcknowledge;
+        case ModifyResultType.modifyReject: return ModifyResultType.modifyReject;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for ModifyResultType.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_ModifyResultType: $.ASN1Encoder<ModifyResultType> = $._encodeEnumerated;
+const _encode_ModifyResultType: $.ASN1Encoder<ModifyResultType> = $._encodeEnumerated as $.ASN1Encoder<ModifyResultType>;
 
 /* eslint-enable */

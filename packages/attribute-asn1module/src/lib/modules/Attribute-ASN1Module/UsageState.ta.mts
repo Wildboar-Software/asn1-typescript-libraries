@@ -156,10 +156,22 @@ export
 const busy: UsageState = UsageState.busy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_UsageState = $._decodeEnumerated;
+export function _decode_UsageState(el: _Element): UsageState {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case UsageState.idle: return UsageState.idle;
+        case UsageState.active: return UsageState.active;
+        case UsageState.busy: return UsageState.busy;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for UsageState.",
+                el,
+            );
+    }
+}
 
 
-export const _encode_UsageState = $._encodeEnumerated;
+export const _encode_UsageState: $.ASN1Encoder<UsageState> = $._encodeEnumerated as $.ASN1Encoder<UsageState>;
 
 
 /* eslint-enable */

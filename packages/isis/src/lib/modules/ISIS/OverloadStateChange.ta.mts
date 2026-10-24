@@ -119,10 +119,21 @@ export const waiting: OverloadStateChange =
   OverloadStateChange.waiting; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_OverloadStateChange = $._decodeEnumerated;
+export function _decode_OverloadStateChange(el: _Element): OverloadStateChange {
+  const enumerated = $._decodeEnumerated(el);
+  switch (enumerated) {
+    case OverloadStateChange.on: return OverloadStateChange.on;
+    case OverloadStateChange.waiting: return OverloadStateChange.waiting;
+    default:
+      throw new _ConstructionError(
+        'Invalid ENUMERATED value ' + enumerated + ' for OverloadStateChange.',
+        el,
+      );
+  }
+}
 
 
-export const _encode_OverloadStateChange = $._encodeEnumerated;
+export const _encode_OverloadStateChange: $.ASN1Encoder<OverloadStateChange> = $._encodeEnumerated as $.ASN1Encoder<OverloadStateChange>;
 
 
 /* eslint-enable */

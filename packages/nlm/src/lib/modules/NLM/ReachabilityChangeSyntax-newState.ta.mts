@@ -146,7 +146,18 @@ let _cached_decoder_for_ReachabilityChangeSyntax_newState: $.ASN1Decoder<Reachab
 export function _decode_ReachabilityChangeSyntax_newState(el: _Element): ReachabilityChangeSyntax_newState {
     if (!_cached_decoder_for_ReachabilityChangeSyntax_newState) {
         _cached_decoder_for_ReachabilityChangeSyntax_newState =
-            $._decodeEnumerated;
+            function (el: _Element): ReachabilityChangeSyntax_newState {
+                const enumerated = $._decodeEnumerated(el);
+                switch (enumerated) {
+                    case ReachabilityChangeSyntax_newState.down: return ReachabilityChangeSyntax_newState.down;
+                    case ReachabilityChangeSyntax_newState.up: return ReachabilityChangeSyntax_newState.up;
+                    default:
+                        throw new _ConstructionError(
+                            'Invalid ENUMERATED value ' + enumerated + ' for ReachabilityChangeSyntax_newState.',
+                            el,
+                        );
+                }
+            };
     }
     return _cached_decoder_for_ReachabilityChangeSyntax_newState(el);
 }
@@ -168,7 +179,7 @@ export function _encode_ReachabilityChangeSyntax_newState(
 ): _Element {
     if (!_cached_encoder_for_ReachabilityChangeSyntax_newState) {
         _cached_encoder_for_ReachabilityChangeSyntax_newState =
-            $._encodeEnumerated;
+            $._encodeEnumerated as $.ASN1Encoder<ReachabilityChangeSyntax_newState>;
     }
     return _cached_encoder_for_ReachabilityChangeSyntax_newState(
         value,

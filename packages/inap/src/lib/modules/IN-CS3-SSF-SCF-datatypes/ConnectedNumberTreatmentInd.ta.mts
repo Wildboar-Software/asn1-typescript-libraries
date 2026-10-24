@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -124,9 +125,22 @@ export
 const presentCalledINNumberRestricted: ConnectedNumberTreatmentInd = ConnectedNumberTreatmentInd.presentCalledINNumberRestricted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_ConnectedNumberTreatmentInd: $.ASN1Decoder<ConnectedNumberTreatmentInd> = $._decodeEnumerated;
+function _decode_ConnectedNumberTreatmentInd(el: _Element): ConnectedNumberTreatmentInd {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ConnectedNumberTreatmentInd.noINImpact: return ConnectedNumberTreatmentInd.noINImpact;
+        case ConnectedNumberTreatmentInd.presentationRestricted: return ConnectedNumberTreatmentInd.presentationRestricted;
+        case ConnectedNumberTreatmentInd.presentCalledINNumber: return ConnectedNumberTreatmentInd.presentCalledINNumber;
+        case ConnectedNumberTreatmentInd.presentCalledINNumberRestricted: return ConnectedNumberTreatmentInd.presentCalledINNumberRestricted;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for ConnectedNumberTreatmentInd.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_ConnectedNumberTreatmentInd: $.ASN1Encoder<ConnectedNumberTreatmentInd> = $._encodeEnumerated;
+const _encode_ConnectedNumberTreatmentInd: $.ASN1Encoder<ConnectedNumberTreatmentInd> = $._encodeEnumerated as $.ASN1Encoder<ConnectedNumberTreatmentInd>;
 
 /* eslint-enable */

@@ -153,7 +153,20 @@ const Compression_Item_v42bisCompressionActive_both: Compression_Item_v42bisComp
  */
 export
 const both: Compression_Item_v42bisCompressionActive = Compression_Item_v42bisCompressionActive.both; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_Compression_Item_v42bisCompressionActive = $._decodeEnumerated;
-export const _encode_Compression_Item_v42bisCompressionActive = $._encodeEnumerated;
+export function _decode_Compression_Item_v42bisCompressionActive(el: _Element): Compression_Item_v42bisCompressionActive {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case Compression_Item_v42bisCompressionActive.none: return Compression_Item_v42bisCompressionActive.none;
+        case Compression_Item_v42bisCompressionActive.initOnly: return Compression_Item_v42bisCompressionActive.initOnly;
+        case Compression_Item_v42bisCompressionActive.respOnly: return Compression_Item_v42bisCompressionActive.respOnly;
+        case Compression_Item_v42bisCompressionActive.both: return Compression_Item_v42bisCompressionActive.both;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for Compression_Item_v42bisCompressionActive.",
+                el,
+            );
+    }
+}
+export const _encode_Compression_Item_v42bisCompressionActive: $.ASN1Encoder<Compression_Item_v42bisCompressionActive> = $._encodeEnumerated as $.ASN1Encoder<Compression_Item_v42bisCompressionActive>;
 
 /* eslint-enable */

@@ -145,8 +145,20 @@ const AccessProblem_externally_located_object: AccessProblem = AccessProblem.ext
  */
 export
 const externally_located_object: AccessProblem = AccessProblem.externally_located_object; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_AccessProblem = $._decodeEnumerated;
-export const _encode_AccessProblem = $._encodeEnumerated;
+export function _decode_AccessProblem(el: _Element): AccessProblem {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case AccessProblem.inappropriate_object_class: return AccessProblem.inappropriate_object_class;
+        case AccessProblem.reserved_by_a_user: return AccessProblem.reserved_by_a_user;
+        case AccessProblem.externally_located_object: return AccessProblem.externally_located_object;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for AccessProblem.",
+                el,
+            );
+    }
+}
+export const _encode_AccessProblem: $.ASN1Encoder<AccessProblem> = $._encodeEnumerated as $.ASN1Encoder<AccessProblem>;
 
 
 /* eslint-enable */

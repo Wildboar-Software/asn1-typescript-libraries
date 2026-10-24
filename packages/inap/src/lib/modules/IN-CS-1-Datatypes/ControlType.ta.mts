@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -110,9 +111,21 @@ export
 const destinationOverload: ControlType = ControlType.destinationOverload; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_ControlType: $.ASN1Decoder<ControlType> = $._decodeEnumerated;
+function _decode_ControlType(el: _Element): ControlType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ControlType.sCPOverloaded: return ControlType.sCPOverloaded;
+        case ControlType.manuallyInitiated: return ControlType.manuallyInitiated;
+        case ControlType.destinationOverload: return ControlType.destinationOverload;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for ControlType.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_ControlType: $.ASN1Encoder<ControlType> = $._encodeEnumerated;
+const _encode_ControlType: $.ASN1Encoder<ControlType> = $._encodeEnumerated as $.ASN1Encoder<ControlType>;
 
 /* eslint-enable */

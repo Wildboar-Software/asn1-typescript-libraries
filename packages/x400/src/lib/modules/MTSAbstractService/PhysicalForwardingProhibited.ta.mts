@@ -98,10 +98,21 @@ export const physical_forwarding_prohibited: PhysicalForwardingProhibited =
     PhysicalForwardingProhibited.physical_forwarding_prohibited; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_PhysicalForwardingProhibited = $._decodeEnumerated;
+export function _decode_PhysicalForwardingProhibited(el: _Element): PhysicalForwardingProhibited {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case PhysicalForwardingProhibited.physical_forwarding_allowed: return PhysicalForwardingProhibited.physical_forwarding_allowed;
+        case PhysicalForwardingProhibited.physical_forwarding_prohibited: return PhysicalForwardingProhibited.physical_forwarding_prohibited;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for PhysicalForwardingProhibited.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_PhysicalForwardingProhibited = $._encodeEnumerated;
+export const _encode_PhysicalForwardingProhibited: $.ASN1Encoder<PhysicalForwardingProhibited> = $._encodeEnumerated as $.ASN1Encoder<PhysicalForwardingProhibited>;
 
 
 /* eslint-enable */

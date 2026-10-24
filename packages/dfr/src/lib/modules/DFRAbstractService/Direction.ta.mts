@@ -122,8 +122,19 @@ const Direction_descending: Direction = Direction.descending; /* LONG_NAMED_ENUM
  */
 export
 const descending: Direction = Direction.descending; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_Direction = $._decodeEnumerated;
-export const _encode_Direction = $._encodeEnumerated;
+export function _decode_Direction(el: _Element): Direction {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case Direction.ascending: return Direction.ascending;
+        case Direction.descending: return Direction.descending;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for Direction.",
+                el,
+            );
+    }
+}
+export const _encode_Direction: $.ASN1Encoder<Direction> = $._encodeEnumerated as $.ASN1Encoder<Direction>;
 
 
 /* eslint-enable */

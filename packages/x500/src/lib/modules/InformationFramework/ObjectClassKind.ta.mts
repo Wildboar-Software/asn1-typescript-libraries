@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element } from "@wildboar/asn1";
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -116,10 +116,22 @@ export const auxiliary: ObjectClassKind =
     ObjectClassKind.auxiliary; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_ObjectClassKind = $._decodeEnumerated;
+export function _decode_ObjectClassKind(el: _Element): ObjectClassKind {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ObjectClassKind.abstract: return ObjectClassKind.abstract;
+        case ObjectClassKind.structural: return ObjectClassKind.structural;
+        case ObjectClassKind.auxiliary: return ObjectClassKind.auxiliary;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for ObjectClassKind.",
+                el,
+            );
+    }
+}
 
 
-export const _encode_ObjectClassKind = $._encodeEnumerated;
+export const _encode_ObjectClassKind: $.ASN1Encoder<ObjectClassKind> = $._encodeEnumerated as $.ASN1Encoder<ObjectClassKind>;
 
 
 /* eslint-enable */

@@ -156,10 +156,22 @@ export
 const high: StrengthOfFunction = StrengthOfFunction.high; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_StrengthOfFunction = $._decodeEnumerated;
+export function _decode_StrengthOfFunction(el: _Element): StrengthOfFunction {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case StrengthOfFunction.basic: return StrengthOfFunction.basic;
+        case StrengthOfFunction.medium: return StrengthOfFunction.medium;
+        case StrengthOfFunction.high: return StrengthOfFunction.high;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for StrengthOfFunction.",
+                el,
+            );
+    }
+}
 
 
-export const _encode_StrengthOfFunction = $._encodeEnumerated;
+export const _encode_StrengthOfFunction: $.ASN1Encoder<StrengthOfFunction> = $._encodeEnumerated as $.ASN1Encoder<StrengthOfFunction>;
 
 
 /* eslint-enable */

@@ -129,10 +129,21 @@ export
 const halt: LogFullAction = LogFullAction.halt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_LogFullAction = $._decodeEnumerated;
+export function _decode_LogFullAction(el: _Element): LogFullAction {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case LogFullAction.wrap: return LogFullAction.wrap;
+        case LogFullAction.halt: return LogFullAction.halt;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for LogFullAction.",
+                el,
+            );
+    }
+}
 
 
-export const _encode_LogFullAction = $._encodeEnumerated;
+export const _encode_LogFullAction: $.ASN1Encoder<LogFullAction> = $._encodeEnumerated as $.ASN1Encoder<LogFullAction>;
 
 
 /* eslint-enable */

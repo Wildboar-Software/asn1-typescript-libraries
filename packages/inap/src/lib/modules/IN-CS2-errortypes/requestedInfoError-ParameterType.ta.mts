@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -96,9 +97,20 @@ export
 const requestedInfoNotAvailable: requestedInfoError_ParameterType = requestedInfoError_ParameterType.requestedInfoNotAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_requestedInfoError_ParameterType: $.ASN1Decoder<requestedInfoError_ParameterType> = $._decodeEnumerated;
+function _decode_requestedInfoError_ParameterType(el: _Element): requestedInfoError_ParameterType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case requestedInfoError_ParameterType.unknownRequestedInfo: return requestedInfoError_ParameterType.unknownRequestedInfo;
+        case requestedInfoError_ParameterType.requestedInfoNotAvailable: return requestedInfoError_ParameterType.requestedInfoNotAvailable;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for requestedInfoError_ParameterType.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_requestedInfoError_ParameterType: $.ASN1Encoder<requestedInfoError_ParameterType> = $._encodeEnumerated;
+const _encode_requestedInfoError_ParameterType: $.ASN1Encoder<requestedInfoError_ParameterType> = $._encodeEnumerated as $.ASN1Encoder<requestedInfoError_ParameterType>;
 
 /* eslint-enable */

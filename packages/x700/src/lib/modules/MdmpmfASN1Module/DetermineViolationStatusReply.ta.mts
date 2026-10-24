@@ -195,10 +195,23 @@ export const non_member: DetermineViolationStatusReply =
     DetermineViolationStatusReply.non_member; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_DetermineViolationStatusReply = $._decodeEnumerated;
+export function _decode_DetermineViolationStatusReply(el: _Element): DetermineViolationStatusReply {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case DetermineViolationStatusReply.unknown: return DetermineViolationStatusReply.unknown;
+        case DetermineViolationStatusReply.no_violation: return DetermineViolationStatusReply.no_violation;
+        case DetermineViolationStatusReply.violation_detected: return DetermineViolationStatusReply.violation_detected;
+        case DetermineViolationStatusReply.non_member: return DetermineViolationStatusReply.non_member;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for DetermineViolationStatusReply.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_DetermineViolationStatusReply = $._encodeEnumerated;
+export const _encode_DetermineViolationStatusReply: $.ASN1Encoder<DetermineViolationStatusReply> = $._encodeEnumerated as $.ASN1Encoder<DetermineViolationStatusReply>;
 
 
 /* eslint-enable */

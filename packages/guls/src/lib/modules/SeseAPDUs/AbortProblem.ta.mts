@@ -198,12 +198,26 @@ export const mistypedErrorParameter: AbortProblem =
 
 
 
-export const _decode_AbortProblem = $._decodeEnumerated;
+export function _decode_AbortProblem(el: _Element): AbortProblem {
+  const enumerated = $._decodeEnumerated(el);
+  switch (enumerated) {
+    case AbortProblem.unrecognizedInvocationId: return AbortProblem.unrecognizedInvocationId;
+    case AbortProblem.abortUnexpected: return AbortProblem.abortUnexpected;
+    case AbortProblem.unrecognizedError: return AbortProblem.unrecognizedError;
+    case AbortProblem.unexpectedError: return AbortProblem.unexpectedError;
+    case AbortProblem.mistypedErrorParameter: return AbortProblem.mistypedErrorParameter;
+    default:
+      throw new _ConstructionError(
+        'Invalid ENUMERATED value ' + enumerated + ' for AbortProblem.',
+        el,
+      );
+  }
+}
 
 
 
 
-export const _encode_AbortProblem = $._encodeEnumerated;
+export const _encode_AbortProblem: $.ASN1Encoder<AbortProblem> = $._encodeEnumerated as $.ASN1Encoder<AbortProblem>;
 
 
 /* eslint-enable */

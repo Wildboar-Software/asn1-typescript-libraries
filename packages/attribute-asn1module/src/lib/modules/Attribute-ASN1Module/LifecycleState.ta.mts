@@ -152,10 +152,22 @@ export
 const pendingRemoval: LifecycleState = LifecycleState.pendingRemoval; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_LifecycleState = $._decodeEnumerated;
+export function _decode_LifecycleState(el: _Element): LifecycleState {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case LifecycleState.planned: return LifecycleState.planned;
+        case LifecycleState.installed: return LifecycleState.installed;
+        case LifecycleState.pendingRemoval: return LifecycleState.pendingRemoval;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for LifecycleState.",
+                el,
+            );
+    }
+}
 
 
-export const _encode_LifecycleState = $._encodeEnumerated;
+export const _encode_LifecycleState: $.ASN1Encoder<LifecycleState> = $._encodeEnumerated as $.ASN1Encoder<LifecycleState>;
 
 
 /* eslint-enable */

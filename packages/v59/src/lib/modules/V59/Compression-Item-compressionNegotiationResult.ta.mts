@@ -205,7 +205,22 @@ const Compression_Item_compressionNegotiationResult_other: Compression_Item_comp
  */
 export
 const other: Compression_Item_compressionNegotiationResult = Compression_Item_compressionNegotiationResult.other; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_Compression_Item_compressionNegotiationResult = $._decodeEnumerated;
-export const _encode_Compression_Item_compressionNegotiationResult = $._encodeEnumerated;
+export function _decode_Compression_Item_compressionNegotiationResult(el: _Element): Compression_Item_compressionNegotiationResult {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case Compression_Item_compressionNegotiationResult.none: return Compression_Item_compressionNegotiationResult.none;
+        case Compression_Item_compressionNegotiationResult.v42bisOnly: return Compression_Item_compressionNegotiationResult.v42bisOnly;
+        case Compression_Item_compressionNegotiationResult.v42bisBoth: return Compression_Item_compressionNegotiationResult.v42bisBoth;
+        case Compression_Item_compressionNegotiationResult.v44Both: return Compression_Item_compressionNegotiationResult.v44Both;
+        case Compression_Item_compressionNegotiationResult.v44Only: return Compression_Item_compressionNegotiationResult.v44Only;
+        case Compression_Item_compressionNegotiationResult.other: return Compression_Item_compressionNegotiationResult.other;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for Compression_Item_compressionNegotiationResult.",
+                el,
+            );
+    }
+}
+export const _encode_Compression_Item_compressionNegotiationResult: $.ASN1Encoder<Compression_Item_compressionNegotiationResult> = $._encodeEnumerated as $.ASN1Encoder<Compression_Item_compressionNegotiationResult>;
 
 /* eslint-enable */

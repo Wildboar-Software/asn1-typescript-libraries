@@ -105,12 +105,23 @@ export const sample: Purpose =
 
 
 
-export const _decode_Purpose = $._decodeEnumerated;
+export function _decode_Purpose(el: _Element): Purpose {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case Purpose.reference: return Purpose.reference;
+        case Purpose.sample: return Purpose.sample;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for Purpose.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_Purpose = $._encodeEnumerated;
+export const _encode_Purpose: $.ASN1Encoder<Purpose> = $._encodeEnumerated as $.ASN1Encoder<Purpose>;
 
 
 /* eslint-enable */

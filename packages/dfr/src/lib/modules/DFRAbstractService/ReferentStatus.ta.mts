@@ -122,8 +122,19 @@ const ReferentStatus_changed_since_produce: ReferentStatus = ReferentStatus.chan
  */
 export
 const changed_since_produce: ReferentStatus = ReferentStatus.changed_since_produce; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_ReferentStatus = $._decodeEnumerated;
-export const _encode_ReferentStatus = $._encodeEnumerated;
+export function _decode_ReferentStatus(el: _Element): ReferentStatus {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ReferentStatus.not_changed_since_produce: return ReferentStatus.not_changed_since_produce;
+        case ReferentStatus.changed_since_produce: return ReferentStatus.changed_since_produce;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for ReferentStatus.",
+                el,
+            );
+    }
+}
+export const _encode_ReferentStatus: $.ASN1Encoder<ReferentStatus> = $._encodeEnumerated as $.ASN1Encoder<ReferentStatus>;
 
 
 /* eslint-enable */

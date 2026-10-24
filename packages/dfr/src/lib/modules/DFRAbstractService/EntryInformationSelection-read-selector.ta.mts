@@ -233,8 +233,25 @@ const EntryInformationSelection_read_selector_attr_and_dor_to_entire_object: Ent
  */
 export
 const attr_and_dor_to_entire_object: EntryInformationSelection_read_selector = EntryInformationSelection_read_selector.attr_and_dor_to_entire_object; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_EntryInformationSelection_read_selector = $._decodeEnumerated;
-export const _encode_EntryInformationSelection_read_selector = $._encodeEnumerated;
+export function _decode_EntryInformationSelection_read_selector(el: _Element): EntryInformationSelection_read_selector {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case EntryInformationSelection_read_selector.attributes_only: return EntryInformationSelection_read_selector.attributes_only;
+        case EntryInformationSelection_read_selector.attributes_and_content: return EntryInformationSelection_read_selector.attributes_and_content;
+        case EntryInformationSelection_read_selector.content_only: return EntryInformationSelection_read_selector.content_only;
+        case EntryInformationSelection_read_selector.dor_to_attr_only: return EntryInformationSelection_read_selector.dor_to_attr_only;
+        case EntryInformationSelection_read_selector.attr_and_dor_to_content: return EntryInformationSelection_read_selector.attr_and_dor_to_content;
+        case EntryInformationSelection_read_selector.dor_to_content_only: return EntryInformationSelection_read_selector.dor_to_content_only;
+        case EntryInformationSelection_read_selector.dor_to_entire_object: return EntryInformationSelection_read_selector.dor_to_entire_object;
+        case EntryInformationSelection_read_selector.attr_and_dor_to_entire_object: return EntryInformationSelection_read_selector.attr_and_dor_to_entire_object;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for EntryInformationSelection_read_selector.",
+                el,
+            );
+    }
+}
+export const _encode_EntryInformationSelection_read_selector: $.ASN1Encoder<EntryInformationSelection_read_selector> = $._encodeEnumerated as $.ASN1Encoder<EntryInformationSelection_read_selector>;
 
 
 /* eslint-enable */

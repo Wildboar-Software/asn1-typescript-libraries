@@ -200,10 +200,24 @@ export const noAcknowledgement: IntermediateResponse =
     IntermediateResponse.noAcknowledgement; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_IntermediateResponse = $._decodeEnumerated;
+export function _decode_IntermediateResponse(el: _Element): IntermediateResponse {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case IntermediateResponse.inProgress: return IntermediateResponse.inProgress;
+        case IntermediateResponse.delayedMeasurement: return IntermediateResponse.delayedMeasurement;
+        case IntermediateResponse.interruptedMeasurement: return IntermediateResponse.interruptedMeasurement;
+        case IntermediateResponse.repeatLater: return IntermediateResponse.repeatLater;
+        case IntermediateResponse.noAcknowledgement: return IntermediateResponse.noAcknowledgement;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for IntermediateResponse.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_IntermediateResponse = $._encodeEnumerated;
+export const _encode_IntermediateResponse: $.ASN1Encoder<IntermediateResponse> = $._encodeEnumerated as $.ASN1Encoder<IntermediateResponse>;
 
 
 /* eslint-enable */

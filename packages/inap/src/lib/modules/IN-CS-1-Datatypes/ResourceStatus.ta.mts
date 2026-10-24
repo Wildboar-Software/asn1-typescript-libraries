@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -84,9 +85,20 @@ export
 const idle: ResourceStatus = ResourceStatus.idle; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_ResourceStatus: $.ASN1Decoder<ResourceStatus> = $._decodeEnumerated;
+function _decode_ResourceStatus(el: _Element): ResourceStatus {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ResourceStatus.busy: return ResourceStatus.busy;
+        case ResourceStatus.idle: return ResourceStatus.idle;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for ResourceStatus.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_ResourceStatus: $.ASN1Encoder<ResourceStatus> = $._encodeEnumerated;
+const _encode_ResourceStatus: $.ASN1Encoder<ResourceStatus> = $._encodeEnumerated as $.ASN1Encoder<ResourceStatus>;
 
 /* eslint-enable */

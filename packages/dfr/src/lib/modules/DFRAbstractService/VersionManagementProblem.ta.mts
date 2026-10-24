@@ -121,8 +121,19 @@ const VersionManagementProblem_belongs_to_another_conceptual_document: VersionMa
  */
 export
 const belongs_to_another_conceptual_document: VersionManagementProblem = VersionManagementProblem.belongs_to_another_conceptual_document; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_VersionManagementProblem = $._decodeEnumerated;
-export const _encode_VersionManagementProblem = $._encodeEnumerated;
+export function _decode_VersionManagementProblem(el: _Element): VersionManagementProblem {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case VersionManagementProblem.inappropriate_object_class: return VersionManagementProblem.inappropriate_object_class;
+        case VersionManagementProblem.belongs_to_another_conceptual_document: return VersionManagementProblem.belongs_to_another_conceptual_document;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for VersionManagementProblem.",
+                el,
+            );
+    }
+}
+export const _encode_VersionManagementProblem: $.ASN1Encoder<VersionManagementProblem> = $._encodeEnumerated as $.ASN1Encoder<VersionManagementProblem>;
 
 
 /* eslint-enable */

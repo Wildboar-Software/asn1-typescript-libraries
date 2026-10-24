@@ -142,12 +142,25 @@ export const noConnect: ConfiguredConnectivity =
 
 
 
-export const _decode_ConfiguredConnectivity = $._decodeEnumerated;
+export function _decode_ConfiguredConnectivity(el: _Element): ConfiguredConnectivity {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ConfiguredConnectivity.sourceConnect: return ConfiguredConnectivity.sourceConnect;
+        case ConfiguredConnectivity.sinkConnect: return ConfiguredConnectivity.sinkConnect;
+        case ConfiguredConnectivity.bidirectionalConnect: return ConfiguredConnectivity.bidirectionalConnect;
+        case ConfiguredConnectivity.noConnect: return ConfiguredConnectivity.noConnect;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ConfiguredConnectivity.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_ConfiguredConnectivity = $._encodeEnumerated;
+export const _encode_ConfiguredConnectivity: $.ASN1Encoder<ConfiguredConnectivity> = $._encodeEnumerated as $.ASN1Encoder<ConfiguredConnectivity>;
 
 
 /* eslint-enable */

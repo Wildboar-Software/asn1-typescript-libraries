@@ -137,12 +137,25 @@ export const nalmTimedInhibit: ArcState =
 
 
 
-export const _decode_ArcState = $._decodeEnumerated;
+export function _decode_ArcState(el: _Element): ArcState {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ArcState.alm: return ArcState.alm;
+        case ArcState.nalm: return ArcState.nalm;
+        case ArcState.nalmQualifiedInhibit: return ArcState.nalmQualifiedInhibit;
+        case ArcState.nalmTimedInhibit: return ArcState.nalmTimedInhibit;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ArcState.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_ArcState = $._encodeEnumerated;
+export const _encode_ArcState: $.ASN1Encoder<ArcState> = $._encodeEnumerated as $.ASN1Encoder<ArcState>;
 
 
 /* eslint-enable */

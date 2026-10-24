@@ -253,10 +253,25 @@ export
 const cleared: PerceivedSeverity = PerceivedSeverity.cleared; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_PerceivedSeverity = $._decodeEnumerated;
+export function _decode_PerceivedSeverity(el: _Element): PerceivedSeverity {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case PerceivedSeverity.indeterminate: return PerceivedSeverity.indeterminate;
+        case PerceivedSeverity.critical: return PerceivedSeverity.critical;
+        case PerceivedSeverity.major: return PerceivedSeverity.major;
+        case PerceivedSeverity.minor: return PerceivedSeverity.minor;
+        case PerceivedSeverity.warning: return PerceivedSeverity.warning;
+        case PerceivedSeverity.cleared: return PerceivedSeverity.cleared;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for PerceivedSeverity.",
+                el,
+            );
+    }
+}
 
 
-export const _encode_PerceivedSeverity = $._encodeEnumerated;
+export const _encode_PerceivedSeverity: $.ASN1Encoder<PerceivedSeverity> = $._encodeEnumerated as $.ASN1Encoder<PerceivedSeverity>;
 
 
 /* eslint-enable */

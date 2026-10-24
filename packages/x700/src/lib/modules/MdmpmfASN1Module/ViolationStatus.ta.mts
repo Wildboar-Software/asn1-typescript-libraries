@@ -162,10 +162,22 @@ export const violation_detected: ViolationStatus =
     ViolationStatus.violation_detected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_ViolationStatus = $._decodeEnumerated;
+export function _decode_ViolationStatus(el: _Element): ViolationStatus {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ViolationStatus.unknown: return ViolationStatus.unknown;
+        case ViolationStatus.no_violation: return ViolationStatus.no_violation;
+        case ViolationStatus.violation_detected: return ViolationStatus.violation_detected;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ViolationStatus.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_ViolationStatus = $._encodeEnumerated;
+export const _encode_ViolationStatus: $.ASN1Encoder<ViolationStatus> = $._encodeEnumerated as $.ASN1Encoder<ViolationStatus>;
 
 
 /* eslint-enable */

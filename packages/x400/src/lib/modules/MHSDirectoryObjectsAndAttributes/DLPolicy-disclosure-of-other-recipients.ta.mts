@@ -118,7 +118,19 @@ let _cached_decoder_for_DLPolicy_disclosure_of_other_recipients: $.ASN1Decoder<D
 export function _decode_DLPolicy_disclosure_of_other_recipients(el: _Element): DLPolicy_disclosure_of_other_recipients {
     if (!_cached_decoder_for_DLPolicy_disclosure_of_other_recipients) {
         _cached_decoder_for_DLPolicy_disclosure_of_other_recipients =
-            $._decodeEnumerated;
+            function (el: _Element): DLPolicy_disclosure_of_other_recipients {
+                const enumerated = $._decodeEnumerated(el);
+                switch (enumerated) {
+                    case DLPolicy_disclosure_of_other_recipients.unchanged: return DLPolicy_disclosure_of_other_recipients.unchanged;
+                    case DLPolicy_disclosure_of_other_recipients.disclosure_of_other_recipients_prohibited: return DLPolicy_disclosure_of_other_recipients.disclosure_of_other_recipients_prohibited;
+                    case DLPolicy_disclosure_of_other_recipients.disclosure_of_other_recipients_allowed: return DLPolicy_disclosure_of_other_recipients.disclosure_of_other_recipients_allowed;
+                    default:
+                        throw new _ConstructionError(
+                            'Invalid ENUMERATED value ' + enumerated + ' for DLPolicy_disclosure_of_other_recipients.',
+                            el,
+                        );
+                }
+            };
     }
     return _cached_decoder_for_DLPolicy_disclosure_of_other_recipients(el);
 }
@@ -138,7 +150,7 @@ export function _encode_DLPolicy_disclosure_of_other_recipients(
 ): _Element {
     if (!_cached_encoder_for_DLPolicy_disclosure_of_other_recipients) {
         _cached_encoder_for_DLPolicy_disclosure_of_other_recipients =
-            $._encodeEnumerated;
+            $._encodeEnumerated as $.ASN1Encoder<DLPolicy_disclosure_of_other_recipients>;
     }
     return _cached_encoder_for_DLPolicy_disclosure_of_other_recipients(
         value,

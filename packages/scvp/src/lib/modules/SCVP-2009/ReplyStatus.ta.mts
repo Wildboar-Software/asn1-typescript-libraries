@@ -328,10 +328,28 @@ export const wantBackUnsatisfied: ReplyStatus =
   ReplyStatus.wantBackUnsatisfied; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_ReplyStatus = $._decodeEnumerated;
+export function _decode_ReplyStatus(el: _Element): ReplyStatus {
+  const enumerated = $._decodeEnumerated(el);
+  switch (enumerated) {
+    case ReplyStatus.success: return ReplyStatus.success;
+    case ReplyStatus.malformedPKC: return ReplyStatus.malformedPKC;
+    case ReplyStatus.malformedAC: return ReplyStatus.malformedAC;
+    case ReplyStatus.unavailableValidationTime: return ReplyStatus.unavailableValidationTime;
+    case ReplyStatus.referenceCertHashFail: return ReplyStatus.referenceCertHashFail;
+    case ReplyStatus.certPathConstructFail: return ReplyStatus.certPathConstructFail;
+    case ReplyStatus.certPathNotValid: return ReplyStatus.certPathNotValid;
+    case ReplyStatus.certPathNotValidNow: return ReplyStatus.certPathNotValidNow;
+    case ReplyStatus.wantBackUnsatisfied: return ReplyStatus.wantBackUnsatisfied;
+    default:
+      throw new _ConstructionError(
+        'Invalid ENUMERATED value ' + enumerated + ' for ReplyStatus.',
+        el,
+      );
+  }
+}
 
 
-export const _encode_ReplyStatus = $._encodeEnumerated;
+export const _encode_ReplyStatus: $.ASN1Encoder<ReplyStatus> = $._encodeEnumerated as $.ASN1Encoder<ReplyStatus>;
 
 
 /* eslint-enable */

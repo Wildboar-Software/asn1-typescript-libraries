@@ -117,12 +117,24 @@ export const timeout: InvokeProtectionError =
 
 
 
-export const _decode_InvokeProtectionError = $._decodeEnumerated;
+export function _decode_InvokeProtectionError(el: _Element): InvokeProtectionError {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case InvokeProtectionError.preempted: return InvokeProtectionError.preempted;
+        case InvokeProtectionError.failure: return InvokeProtectionError.failure;
+        case InvokeProtectionError.timeout: return InvokeProtectionError.timeout;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for InvokeProtectionError.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_InvokeProtectionError = $._encodeEnumerated;
+export const _encode_InvokeProtectionError: $.ASN1Encoder<InvokeProtectionError> = $._encodeEnumerated as $.ASN1Encoder<InvokeProtectionError>;
 
 
 /* eslint-enable */

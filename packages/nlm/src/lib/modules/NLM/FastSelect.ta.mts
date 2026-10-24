@@ -210,12 +210,25 @@ export const noFastSelect: FastSelect =
 
 
 
-export const _decode_FastSelect = $._decodeEnumerated;
+export function _decode_FastSelect(el: _Element): FastSelect {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case FastSelect.notSpecified: return FastSelect.notSpecified;
+        case FastSelect.fastSelect: return FastSelect.fastSelect;
+        case FastSelect.fastSelectWithRestrictedResponse: return FastSelect.fastSelectWithRestrictedResponse;
+        case FastSelect.noFastSelect: return FastSelect.noFastSelect;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for FastSelect.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_FastSelect = $._encodeEnumerated;
+export const _encode_FastSelect: $.ASN1Encoder<FastSelect> = $._encodeEnumerated as $.ASN1Encoder<FastSelect>;
 
 
 /* eslint-enable */

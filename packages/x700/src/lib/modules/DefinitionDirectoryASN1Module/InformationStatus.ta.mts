@@ -141,10 +141,22 @@ export const preliminary: InformationStatus =
     InformationStatus.preliminary; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_InformationStatus = $._decodeEnumerated;
+export function _decode_InformationStatus(el: _Element): InformationStatus {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case InformationStatus.active: return InformationStatus.active;
+        case InformationStatus.deleted: return InformationStatus.deleted;
+        case InformationStatus.preliminary: return InformationStatus.preliminary;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for InformationStatus.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_InformationStatus = $._encodeEnumerated;
+export const _encode_InformationStatus: $.ASN1Encoder<InformationStatus> = $._encodeEnumerated as $.ASN1Encoder<InformationStatus>;
 
 
 /* eslint-enable */

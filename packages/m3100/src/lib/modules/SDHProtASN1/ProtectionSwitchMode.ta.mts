@@ -98,12 +98,23 @@ export const unidirectional: ProtectionSwitchMode =
 
 
 
-export const _decode_ProtectionSwitchMode = $._decodeEnumerated;
+export function _decode_ProtectionSwitchMode(el: _Element): ProtectionSwitchMode {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ProtectionSwitchMode.bidirectional: return ProtectionSwitchMode.bidirectional;
+        case ProtectionSwitchMode.unidirectional: return ProtectionSwitchMode.unidirectional;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ProtectionSwitchMode.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_ProtectionSwitchMode = $._encodeEnumerated;
+export const _encode_ProtectionSwitchMode: $.ASN1Encoder<ProtectionSwitchMode> = $._encodeEnumerated as $.ASN1Encoder<ProtectionSwitchMode>;
 
 
 /* eslint-enable */

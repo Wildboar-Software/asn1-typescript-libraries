@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -124,9 +125,22 @@ export
 const interacting: LegStatus = LegStatus.interacting; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_LegStatus: $.ASN1Decoder<LegStatus> = $._decodeEnumerated;
+function _decode_LegStatus(el: _Element): LegStatus {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case LegStatus.connected: return LegStatus.connected;
+        case LegStatus.unconnected: return LegStatus.unconnected;
+        case LegStatus.pending: return LegStatus.pending;
+        case LegStatus.interacting: return LegStatus.interacting;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for LegStatus.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_LegStatus: $.ASN1Encoder<LegStatus> = $._encodeEnumerated;
+const _encode_LegStatus: $.ASN1Encoder<LegStatus> = $._encodeEnumerated as $.ASN1Encoder<LegStatus>;
 
 /* eslint-enable */

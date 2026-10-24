@@ -172,7 +172,20 @@ let _cached_decoder_for_ServiceProviderErrorResponseReason: $.ASN1Decoder<Servic
 export function _decode_ServiceProviderErrorResponseReason(el: _Element): ServiceProviderErrorResponseReason {
     if (!_cached_decoder_for_ServiceProviderErrorResponseReason) {
         _cached_decoder_for_ServiceProviderErrorResponseReason =
-            $._decodeEnumerated;
+            function (el: _Element): ServiceProviderErrorResponseReason {
+                const enumerated = $._decodeEnumerated(el);
+                switch (enumerated) {
+                    case ServiceProviderErrorResponseReason.insufficientResources: return ServiceProviderErrorResponseReason.insufficientResources;
+                    case ServiceProviderErrorResponseReason.providerDoesNotExist: return ServiceProviderErrorResponseReason.providerDoesNotExist;
+                    case ServiceProviderErrorResponseReason.providerNotAvailable: return ServiceProviderErrorResponseReason.providerNotAvailable;
+                    case ServiceProviderErrorResponseReason.requiredServiceNotAvailable: return ServiceProviderErrorResponseReason.requiredServiceNotAvailable;
+                    default:
+                        throw new _ConstructionError(
+                            'Invalid ENUMERATED value ' + enumerated + ' for ServiceProviderErrorResponseReason.',
+                            el,
+                        );
+                }
+            };
     }
     return _cached_decoder_for_ServiceProviderErrorResponseReason(el);
 }
@@ -192,7 +205,7 @@ export function _encode_ServiceProviderErrorResponseReason(
 ): _Element {
     if (!_cached_encoder_for_ServiceProviderErrorResponseReason) {
         _cached_encoder_for_ServiceProviderErrorResponseReason =
-            $._encodeEnumerated;
+            $._encodeEnumerated as $.ASN1Encoder<ServiceProviderErrorResponseReason>;
     }
     return _cached_encoder_for_ServiceProviderErrorResponseReason(
         value,

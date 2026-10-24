@@ -186,7 +186,19 @@ let _cached_decoder_for_InvalidAccessControlFilter_errorId: $.ASN1Decoder<Invali
 export function _decode_InvalidAccessControlFilter_errorId(el: _Element): InvalidAccessControlFilter_errorId {
     if (!_cached_decoder_for_InvalidAccessControlFilter_errorId) {
         _cached_decoder_for_InvalidAccessControlFilter_errorId =
-            $._decodeEnumerated;
+            function (el: _Element): InvalidAccessControlFilter_errorId {
+                const enumerated = $._decodeEnumerated(el);
+                switch (enumerated) {
+                    case InvalidAccessControlFilter_errorId.duplicateId: return InvalidAccessControlFilter_errorId.duplicateId;
+                    case InvalidAccessControlFilter_errorId.heterogeneousId: return InvalidAccessControlFilter_errorId.heterogeneousId;
+                    case InvalidAccessControlFilter_errorId.invalidId: return InvalidAccessControlFilter_errorId.invalidId;
+                    default:
+                        throw new _ConstructionError(
+                            'Invalid ENUMERATED value ' + enumerated + ' for InvalidAccessControlFilter_errorId.',
+                            el,
+                        );
+                }
+            };
     }
     return _cached_decoder_for_InvalidAccessControlFilter_errorId(el);
 }
@@ -206,7 +218,7 @@ export function _encode_InvalidAccessControlFilter_errorId(
 ): _Element {
     if (!_cached_encoder_for_InvalidAccessControlFilter_errorId) {
         _cached_encoder_for_InvalidAccessControlFilter_errorId =
-            $._encodeEnumerated;
+            $._encodeEnumerated as $.ASN1Encoder<InvalidAccessControlFilter_errorId>;
     }
     return _cached_encoder_for_InvalidAccessControlFilter_errorId(
         value,

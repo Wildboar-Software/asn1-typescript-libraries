@@ -282,10 +282,25 @@ export const enabled: Induced =
     Induced.enabled; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_Induced = $._decodeEnumerated;
+export function _decode_Induced(el: _Element): Induced {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case Induced.start: return Induced.start;
+        case Induced.suspend: return Induced.suspend;
+        case Induced.resume: return Induced.resume;
+        case Induced.delete_: return Induced.delete_;
+        case Induced.disabled: return Induced.disabled;
+        case Induced.enabled: return Induced.enabled;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for Induced.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_Induced = $._encodeEnumerated;
+export const _encode_Induced: $.ASN1Encoder<Induced> = $._encodeEnumerated as $.ASN1Encoder<Induced>;
 
 
 /* eslint-enable */

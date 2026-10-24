@@ -128,10 +128,21 @@ export const resume: SuspendResumeChoice =
     SuspendResumeChoice.resume; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_SuspendResumeChoice = $._decodeEnumerated;
+export function _decode_SuspendResumeChoice(el: _Element): SuspendResumeChoice {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case SuspendResumeChoice.suspend: return SuspendResumeChoice.suspend;
+        case SuspendResumeChoice.resume: return SuspendResumeChoice.resume;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for SuspendResumeChoice.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_SuspendResumeChoice = $._encodeEnumerated;
+export const _encode_SuspendResumeChoice: $.ASN1Encoder<SuspendResumeChoice> = $._encodeEnumerated as $.ASN1Encoder<SuspendResumeChoice>;
 
 
 /* eslint-enable */

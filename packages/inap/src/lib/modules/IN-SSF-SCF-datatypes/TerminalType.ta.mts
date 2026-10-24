@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -158,9 +159,24 @@ export
 const spare: TerminalType = TerminalType.spare; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_TerminalType: $.ASN1Decoder<TerminalType> = $._decodeEnumerated;
+function _decode_TerminalType(el: _Element): TerminalType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case TerminalType.unknown: return TerminalType.unknown;
+        case TerminalType.dialPulse: return TerminalType.dialPulse;
+        case TerminalType.dtmf: return TerminalType.dtmf;
+        case TerminalType.isdn: return TerminalType.isdn;
+        case TerminalType.isdnNoDtmf: return TerminalType.isdnNoDtmf;
+        case TerminalType.spare: return TerminalType.spare;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for TerminalType.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_TerminalType: $.ASN1Encoder<TerminalType> = $._encodeEnumerated;
+const _encode_TerminalType: $.ASN1Encoder<TerminalType> = $._encodeEnumerated as $.ASN1Encoder<TerminalType>;
 
 /* eslint-enable */

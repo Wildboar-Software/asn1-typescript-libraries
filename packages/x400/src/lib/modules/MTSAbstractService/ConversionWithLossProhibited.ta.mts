@@ -99,10 +99,21 @@ export const conversion_with_loss_prohibited: ConversionWithLossProhibited =
     ConversionWithLossProhibited.conversion_with_loss_prohibited; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_ConversionWithLossProhibited = $._decodeEnumerated;
+export function _decode_ConversionWithLossProhibited(el: _Element): ConversionWithLossProhibited {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ConversionWithLossProhibited.conversion_with_loss_allowed: return ConversionWithLossProhibited.conversion_with_loss_allowed;
+        case ConversionWithLossProhibited.conversion_with_loss_prohibited: return ConversionWithLossProhibited.conversion_with_loss_prohibited;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ConversionWithLossProhibited.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_ConversionWithLossProhibited = $._encodeEnumerated;
+export const _encode_ConversionWithLossProhibited: $.ASN1Encoder<ConversionWithLossProhibited> = $._encodeEnumerated as $.ASN1Encoder<ConversionWithLossProhibited>;
 
 
 /* eslint-enable */

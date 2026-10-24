@@ -226,8 +226,22 @@ const AccessRights_owner: AccessRights = AccessRights.owner; /* LONG_NAMED_ENUME
  */
 export
 const owner: AccessRights = AccessRights.owner; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_AccessRights = $._decodeEnumerated;
-export const _encode_AccessRights = $._encodeEnumerated;
+export function _decode_AccessRights(el: _Element): AccessRights {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case AccessRights.read: return AccessRights.read;
+        case AccessRights.extended_read: return AccessRights.extended_read;
+        case AccessRights.read_modify: return AccessRights.read_modify;
+        case AccessRights.read_modify_delete: return AccessRights.read_modify_delete;
+        case AccessRights.owner: return AccessRights.owner;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for AccessRights.",
+                el,
+            );
+    }
+}
+export const _encode_AccessRights: $.ASN1Encoder<AccessRights> = $._encodeEnumerated as $.ASN1Encoder<AccessRights>;
 
 
 /* eslint-enable */

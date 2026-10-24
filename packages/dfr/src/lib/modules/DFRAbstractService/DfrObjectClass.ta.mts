@@ -214,8 +214,22 @@ const DfrObjectClass_dfr_search_result_list: DfrObjectClass = DfrObjectClass.dfr
  */
 export
 const dfr_search_result_list: DfrObjectClass = DfrObjectClass.dfr_search_result_list; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_DfrObjectClass = $._decodeEnumerated;
-export const _encode_DfrObjectClass = $._encodeEnumerated;
+export function _decode_DfrObjectClass(el: _Element): DfrObjectClass {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case DfrObjectClass.dfr_document: return DfrObjectClass.dfr_document;
+        case DfrObjectClass.dfr_root_group: return DfrObjectClass.dfr_root_group;
+        case DfrObjectClass.dfr_proper_group: return DfrObjectClass.dfr_proper_group;
+        case DfrObjectClass.dfr_reference: return DfrObjectClass.dfr_reference;
+        case DfrObjectClass.dfr_search_result_list: return DfrObjectClass.dfr_search_result_list;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for DfrObjectClass.",
+                el,
+            );
+    }
+}
+export const _encode_DfrObjectClass: $.ASN1Encoder<DfrObjectClass> = $._encodeEnumerated as $.ASN1Encoder<DfrObjectClass>;
 
 
 /* eslint-enable */

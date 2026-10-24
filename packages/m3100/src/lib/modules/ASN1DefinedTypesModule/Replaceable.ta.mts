@@ -117,12 +117,24 @@ export const notapplicable: Replaceable =
 
 
 
-export const _decode_Replaceable = $._decodeEnumerated;
+export function _decode_Replaceable(el: _Element): Replaceable {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case Replaceable.yes: return Replaceable.yes;
+        case Replaceable.no: return Replaceable.no;
+        case Replaceable.notapplicable: return Replaceable.notapplicable;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for Replaceable.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_Replaceable = $._encodeEnumerated;
+export const _encode_Replaceable: $.ASN1Encoder<Replaceable> = $._encodeEnumerated as $.ASN1Encoder<Replaceable>;
 
 
 /* eslint-enable */

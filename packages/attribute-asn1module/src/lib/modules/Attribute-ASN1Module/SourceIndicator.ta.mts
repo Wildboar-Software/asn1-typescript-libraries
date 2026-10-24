@@ -160,10 +160,22 @@ export
 const unknown: SourceIndicator = SourceIndicator.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_SourceIndicator = $._decodeEnumerated;
+export function _decode_SourceIndicator(el: _Element): SourceIndicator {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case SourceIndicator.resourceOperation: return SourceIndicator.resourceOperation;
+        case SourceIndicator.managementOperation: return SourceIndicator.managementOperation;
+        case SourceIndicator.unknown: return SourceIndicator.unknown;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for SourceIndicator.",
+                el,
+            );
+    }
+}
 
 
-export const _encode_SourceIndicator = $._encodeEnumerated;
+export const _encode_SourceIndicator: $.ASN1Encoder<SourceIndicator> = $._encodeEnumerated as $.ASN1Encoder<SourceIndicator>;
 
 
 /* eslint-enable */

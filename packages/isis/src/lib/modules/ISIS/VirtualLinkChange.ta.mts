@@ -122,10 +122,21 @@ export const created: VirtualLinkChange =
   VirtualLinkChange.created; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_VirtualLinkChange = $._decodeEnumerated;
+export function _decode_VirtualLinkChange(el: _Element): VirtualLinkChange {
+  const enumerated = $._decodeEnumerated(el);
+  switch (enumerated) {
+    case VirtualLinkChange.deleted: return VirtualLinkChange.deleted;
+    case VirtualLinkChange.created: return VirtualLinkChange.created;
+    default:
+      throw new _ConstructionError(
+        'Invalid ENUMERATED value ' + enumerated + ' for VirtualLinkChange.',
+        el,
+      );
+  }
+}
 
 
-export const _encode_VirtualLinkChange = $._encodeEnumerated;
+export const _encode_VirtualLinkChange: $.ASN1Encoder<VirtualLinkChange> = $._encodeEnumerated as $.ASN1Encoder<VirtualLinkChange>;
 
 
 /* eslint-enable */

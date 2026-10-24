@@ -195,7 +195,18 @@ export const derefAlways: SearchRequest_derefAliases =
  * @returns {SearchRequest_derefAliases} The decoded data structure.
  */
 export function _decode_SearchRequest_derefAliases(el: _Element): SearchRequest_derefAliases {
-  return $._decodeEnumerated(el);
+  const enumerated = $._decodeEnumerated(el);
+  switch (enumerated) {
+    case SearchRequest_derefAliases.neverDerefAliases: return SearchRequest_derefAliases.neverDerefAliases;
+    case SearchRequest_derefAliases.derefInSearching: return SearchRequest_derefAliases.derefInSearching;
+    case SearchRequest_derefAliases.derefFindingBaseObj: return SearchRequest_derefAliases.derefFindingBaseObj;
+    case SearchRequest_derefAliases.derefAlways: return SearchRequest_derefAliases.derefAlways;
+    default:
+      throw new _ConstructionError(
+        'Invalid ENUMERATED value ' + enumerated + ' for SearchRequest_derefAliases.',
+        el,
+      );
+  }
 }
 
 
@@ -210,7 +221,7 @@ export function _encode_SearchRequest_derefAliases(
   value: SearchRequest_derefAliases,
   elGetter: $.ASN1Encoder<SearchRequest_derefAliases>
 ): _Element {
-  return $._encodeEnumerated(value, elGetter);
+  return $._encodeEnumerated(value, elGetter as $.ASN1Encoder<number>);
 }
 
 

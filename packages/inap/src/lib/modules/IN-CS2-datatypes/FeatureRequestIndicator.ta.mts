@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -138,9 +139,23 @@ export
 const sparen: FeatureRequestIndicator = FeatureRequestIndicator.sparen; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_FeatureRequestIndicator: $.ASN1Decoder<FeatureRequestIndicator> = $._decodeEnumerated;
+function _decode_FeatureRequestIndicator(el: _Element): FeatureRequestIndicator {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case FeatureRequestIndicator.hold: return FeatureRequestIndicator.hold;
+        case FeatureRequestIndicator.retrieve: return FeatureRequestIndicator.retrieve;
+        case FeatureRequestIndicator.featureActivation: return FeatureRequestIndicator.featureActivation;
+        case FeatureRequestIndicator.spare1: return FeatureRequestIndicator.spare1;
+        case FeatureRequestIndicator.sparen: return FeatureRequestIndicator.sparen;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for FeatureRequestIndicator.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_FeatureRequestIndicator: $.ASN1Encoder<FeatureRequestIndicator> = $._encodeEnumerated;
+const _encode_FeatureRequestIndicator: $.ASN1Encoder<FeatureRequestIndicator> = $._encodeEnumerated as $.ASN1Encoder<FeatureRequestIndicator>;
 
 /* eslint-enable */

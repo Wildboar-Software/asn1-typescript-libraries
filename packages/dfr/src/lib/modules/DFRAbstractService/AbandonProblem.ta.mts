@@ -145,8 +145,20 @@ const AbandonProblem_cannot_abandon: AbandonProblem = AbandonProblem.cannot_aban
  */
 export
 const cannot_abandon: AbandonProblem = AbandonProblem.cannot_abandon; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_AbandonProblem = $._decodeEnumerated;
-export const _encode_AbandonProblem = $._encodeEnumerated;
+export function _decode_AbandonProblem(el: _Element): AbandonProblem {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case AbandonProblem.no_such_operation: return AbandonProblem.no_such_operation;
+        case AbandonProblem.too_late: return AbandonProblem.too_late;
+        case AbandonProblem.cannot_abandon: return AbandonProblem.cannot_abandon;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for AbandonProblem.",
+                el,
+            );
+    }
+}
+export const _encode_AbandonProblem: $.ASN1Encoder<AbandonProblem> = $._encodeEnumerated as $.ASN1Encoder<AbandonProblem>;
 
 
 /* eslint-enable */

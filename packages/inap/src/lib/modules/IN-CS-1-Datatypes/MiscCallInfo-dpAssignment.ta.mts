@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -116,9 +117,21 @@ export
 const officeBased: MiscCallInfo_dpAssignment = MiscCallInfo_dpAssignment.officeBased; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_MiscCallInfo_dpAssignment: $.ASN1Decoder<MiscCallInfo_dpAssignment> = $._decodeEnumerated;
+function _decode_MiscCallInfo_dpAssignment(el: _Element): MiscCallInfo_dpAssignment {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case MiscCallInfo_dpAssignment.individualLine: return MiscCallInfo_dpAssignment.individualLine;
+        case MiscCallInfo_dpAssignment.groupBased: return MiscCallInfo_dpAssignment.groupBased;
+        case MiscCallInfo_dpAssignment.officeBased: return MiscCallInfo_dpAssignment.officeBased;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for MiscCallInfo_dpAssignment.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_MiscCallInfo_dpAssignment: $.ASN1Encoder<MiscCallInfo_dpAssignment> = $._encodeEnumerated;
+const _encode_MiscCallInfo_dpAssignment: $.ASN1Encoder<MiscCallInfo_dpAssignment> = $._encodeEnumerated as $.ASN1Encoder<MiscCallInfo_dpAssignment>;
 
 /* eslint-enable */

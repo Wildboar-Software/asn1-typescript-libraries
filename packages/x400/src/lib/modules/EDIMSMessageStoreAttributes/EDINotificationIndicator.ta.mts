@@ -132,10 +132,23 @@ export const fn_sent: EDINotificationIndicator =
     EDINotificationIndicator.fn_sent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_EDINotificationIndicator = $._decodeEnumerated;
+export function _decode_EDINotificationIndicator(el: _Element): EDINotificationIndicator {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case EDINotificationIndicator.no_notification_sent: return EDINotificationIndicator.no_notification_sent;
+        case EDINotificationIndicator.pn_sent: return EDINotificationIndicator.pn_sent;
+        case EDINotificationIndicator.nn_sent: return EDINotificationIndicator.nn_sent;
+        case EDINotificationIndicator.fn_sent: return EDINotificationIndicator.fn_sent;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for EDINotificationIndicator.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_EDINotificationIndicator = $._encodeEnumerated;
+export const _encode_EDINotificationIndicator: $.ASN1Encoder<EDINotificationIndicator> = $._encodeEnumerated as $.ASN1Encoder<EDINotificationIndicator>;
 
 
 /* eslint-enable */

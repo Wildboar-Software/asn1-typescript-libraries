@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -101,9 +102,21 @@ export
 const iA5String: InfoType = InfoType.iA5String; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_InfoType: $.ASN1Decoder<InfoType> = $._decodeEnumerated;
+function _decode_InfoType(el: _Element): InfoType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case InfoType.numericString: return InfoType.numericString;
+        case InfoType.characterString: return InfoType.characterString;
+        case InfoType.iA5String: return InfoType.iA5String;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for InfoType.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_InfoType: $.ASN1Encoder<InfoType> = $._encodeEnumerated;
+const _encode_InfoType: $.ASN1Encoder<InfoType> = $._encodeEnumerated as $.ASN1Encoder<InfoType>;
 
 /* eslint-enable */

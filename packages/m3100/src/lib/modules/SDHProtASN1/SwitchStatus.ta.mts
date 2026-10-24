@@ -117,12 +117,24 @@ export const operateFailed: SwitchStatus =
 
 
 
-export const _decode_SwitchStatus = $._decodeEnumerated;
+export function _decode_SwitchStatus(el: _Element): SwitchStatus {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case SwitchStatus.pending: return SwitchStatus.pending;
+        case SwitchStatus.completed: return SwitchStatus.completed;
+        case SwitchStatus.operateFailed: return SwitchStatus.operateFailed;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for SwitchStatus.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_SwitchStatus = $._encodeEnumerated;
+export const _encode_SwitchStatus: $.ASN1Encoder<SwitchStatus> = $._encodeEnumerated as $.ASN1Encoder<SwitchStatus>;
 
 
 /* eslint-enable */

@@ -161,10 +161,22 @@ export const atomic: ResponseSync =
     ResponseSync.atomic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_ResponseSync = $._decodeEnumerated;
+export function _decode_ResponseSync(el: _Element): ResponseSync {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ResponseSync.singleCast: return ResponseSync.singleCast;
+        case ResponseSync.bestEffort: return ResponseSync.bestEffort;
+        case ResponseSync.atomic: return ResponseSync.atomic;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ResponseSync.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_ResponseSync = $._encodeEnumerated;
+export const _encode_ResponseSync: $.ASN1Encoder<ResponseSync> = $._encodeEnumerated as $.ASN1Encoder<ResponseSync>;
 
 
 /* eslint-enable */

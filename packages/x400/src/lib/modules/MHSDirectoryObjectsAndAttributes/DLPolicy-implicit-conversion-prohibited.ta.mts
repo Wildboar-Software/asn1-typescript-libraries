@@ -118,7 +118,19 @@ let _cached_decoder_for_DLPolicy_implicit_conversion_prohibited: $.ASN1Decoder<D
 export function _decode_DLPolicy_implicit_conversion_prohibited(el: _Element): DLPolicy_implicit_conversion_prohibited {
     if (!_cached_decoder_for_DLPolicy_implicit_conversion_prohibited) {
         _cached_decoder_for_DLPolicy_implicit_conversion_prohibited =
-            $._decodeEnumerated;
+            function (el: _Element): DLPolicy_implicit_conversion_prohibited {
+                const enumerated = $._decodeEnumerated(el);
+                switch (enumerated) {
+                    case DLPolicy_implicit_conversion_prohibited.unchanged: return DLPolicy_implicit_conversion_prohibited.unchanged;
+                    case DLPolicy_implicit_conversion_prohibited.implicit_conversion_allowed: return DLPolicy_implicit_conversion_prohibited.implicit_conversion_allowed;
+                    case DLPolicy_implicit_conversion_prohibited.implicit_conversion_prohibited: return DLPolicy_implicit_conversion_prohibited.implicit_conversion_prohibited;
+                    default:
+                        throw new _ConstructionError(
+                            'Invalid ENUMERATED value ' + enumerated + ' for DLPolicy_implicit_conversion_prohibited.',
+                            el,
+                        );
+                }
+            };
     }
     return _cached_decoder_for_DLPolicy_implicit_conversion_prohibited(el);
 }
@@ -138,7 +150,7 @@ export function _encode_DLPolicy_implicit_conversion_prohibited(
 ): _Element {
     if (!_cached_encoder_for_DLPolicy_implicit_conversion_prohibited) {
         _cached_encoder_for_DLPolicy_implicit_conversion_prohibited =
-            $._encodeEnumerated;
+            $._encodeEnumerated as $.ASN1Encoder<DLPolicy_implicit_conversion_prohibited>;
     }
     return _cached_encoder_for_DLPolicy_implicit_conversion_prohibited(
         value,

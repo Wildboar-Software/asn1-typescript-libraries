@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -138,9 +139,23 @@ export
 const rReject: ComponentType = ComponentType.rReject; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_ComponentType: $.ASN1Decoder<ComponentType> = $._decodeEnumerated;
+function _decode_ComponentType(el: _Element): ComponentType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ComponentType.any_: return ComponentType.any_;
+        case ComponentType.invoke: return ComponentType.invoke;
+        case ComponentType.rResult: return ComponentType.rResult;
+        case ComponentType.rError: return ComponentType.rError;
+        case ComponentType.rReject: return ComponentType.rReject;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for ComponentType.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_ComponentType: $.ASN1Encoder<ComponentType> = $._encodeEnumerated;
+const _encode_ComponentType: $.ASN1Encoder<ComponentType> = $._encodeEnumerated as $.ASN1Encoder<ComponentType>;
 
 /* eslint-enable */

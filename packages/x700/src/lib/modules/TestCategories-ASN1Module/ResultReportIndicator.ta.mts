@@ -122,10 +122,21 @@ export const noResultReportForPassedSequences: ResultReportIndicator =
     ResultReportIndicator.noResultReportForPassedSequences; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_ResultReportIndicator = $._decodeEnumerated;
+export function _decode_ResultReportIndicator(el: _Element): ResultReportIndicator {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ResultReportIndicator.resultReportForPassedSequences: return ResultReportIndicator.resultReportForPassedSequences;
+        case ResultReportIndicator.noResultReportForPassedSequences: return ResultReportIndicator.noResultReportForPassedSequences;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ResultReportIndicator.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_ResultReportIndicator = $._encodeEnumerated;
+export const _encode_ResultReportIndicator: $.ASN1Encoder<ResultReportIndicator> = $._encodeEnumerated as $.ASN1Encoder<ResultReportIndicator>;
 
 
 /* eslint-enable */

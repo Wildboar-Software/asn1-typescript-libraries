@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element } from "@wildboar/asn1";
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -83,10 +83,20 @@ export const pagingAbandoned: AbandonedProblem =
     AbandonedProblem.pagingAbandoned; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_AbandonedProblem = $._decodeEnumerated;
+export function _decode_AbandonedProblem(el: _Element): AbandonedProblem {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case AbandonedProblem.pagingAbandoned: return AbandonedProblem.pagingAbandoned;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for AbandonedProblem.",
+                el,
+            );
+    }
+}
 
 
-export const _encode_AbandonedProblem = $._encodeEnumerated;
+export const _encode_AbandonedProblem: $.ASN1Encoder<AbandonedProblem> = $._encodeEnumerated as $.ASN1Encoder<AbandonedProblem>;
 
 
 /* eslint-enable */

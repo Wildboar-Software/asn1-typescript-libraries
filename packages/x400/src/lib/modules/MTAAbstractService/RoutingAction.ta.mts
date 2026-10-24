@@ -91,10 +91,21 @@ export const rerouted: RoutingAction =
     RoutingAction.rerouted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_RoutingAction = $._decodeEnumerated;
+export function _decode_RoutingAction(el: _Element): RoutingAction {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case RoutingAction.relayed: return RoutingAction.relayed;
+        case RoutingAction.rerouted: return RoutingAction.rerouted;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for RoutingAction.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_RoutingAction = $._encodeEnumerated;
+export const _encode_RoutingAction: $.ASN1Encoder<RoutingAction> = $._encodeEnumerated as $.ASN1Encoder<RoutingAction>;
 
 
 /* eslint-enable */

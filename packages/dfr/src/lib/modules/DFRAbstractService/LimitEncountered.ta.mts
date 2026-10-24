@@ -148,8 +148,20 @@ const LimitEncountered_length_exceeded: LimitEncountered = LimitEncountered.leng
  */
 export
 const length_exceeded: LimitEncountered = LimitEncountered.length_exceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_LimitEncountered = $._decodeEnumerated;
-export const _encode_LimitEncountered = $._encodeEnumerated;
+export function _decode_LimitEncountered(el: _Element): LimitEncountered {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case LimitEncountered.time_limit: return LimitEncountered.time_limit;
+        case LimitEncountered.count_limit: return LimitEncountered.count_limit;
+        case LimitEncountered.length_exceeded: return LimitEncountered.length_exceeded;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for LimitEncountered.",
+                el,
+            );
+    }
+}
+export const _encode_LimitEncountered: $.ASN1Encoder<LimitEncountered> = $._encodeEnumerated as $.ASN1Encoder<LimitEncountered>;
 
 
 /* eslint-enable */

@@ -109,7 +109,18 @@ let _cached_decoder_for_RecipientReassignmentProhibited: $.ASN1Decoder<Recipient
 export function _decode_RecipientReassignmentProhibited(el: _Element): RecipientReassignmentProhibited {
     if (!_cached_decoder_for_RecipientReassignmentProhibited) {
         _cached_decoder_for_RecipientReassignmentProhibited =
-            $._decodeEnumerated;
+            function (el: _Element): RecipientReassignmentProhibited {
+                const enumerated = $._decodeEnumerated(el);
+                switch (enumerated) {
+                    case RecipientReassignmentProhibited.recipient_reassignment_allowed: return RecipientReassignmentProhibited.recipient_reassignment_allowed;
+                    case RecipientReassignmentProhibited.recipient_reassignment_prohibited: return RecipientReassignmentProhibited.recipient_reassignment_prohibited;
+                    default:
+                        throw new _ConstructionError(
+                            'Invalid ENUMERATED value ' + enumerated + ' for RecipientReassignmentProhibited.',
+                            el,
+                        );
+                }
+            };
     }
     return _cached_decoder_for_RecipientReassignmentProhibited(el);
 }
@@ -129,7 +140,7 @@ export function _encode_RecipientReassignmentProhibited(
 ): _Element {
     if (!_cached_encoder_for_RecipientReassignmentProhibited) {
         _cached_encoder_for_RecipientReassignmentProhibited =
-            $._encodeEnumerated;
+            $._encodeEnumerated as $.ASN1Encoder<RecipientReassignmentProhibited>;
     }
     return _cached_encoder_for_RecipientReassignmentProhibited(value, elGetter);
 }

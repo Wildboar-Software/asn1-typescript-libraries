@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -641,9 +642,51 @@ export
 const tModifyResult: EventTypeBCSM = EventTypeBCSM.tModifyResult; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_EventTypeBCSM: $.ASN1Decoder<EventTypeBCSM> = $._decodeEnumerated;
+function _decode_EventTypeBCSM(el: _Element): EventTypeBCSM {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case EventTypeBCSM.origAttemptAuthorized: return EventTypeBCSM.origAttemptAuthorized;
+        case EventTypeBCSM.collectedInfo: return EventTypeBCSM.collectedInfo;
+        case EventTypeBCSM.analysedInformation: return EventTypeBCSM.analysedInformation;
+        case EventTypeBCSM.routeSelectFailure: return EventTypeBCSM.routeSelectFailure;
+        case EventTypeBCSM.oCalledPartyBusy: return EventTypeBCSM.oCalledPartyBusy;
+        case EventTypeBCSM.oNoAnswer: return EventTypeBCSM.oNoAnswer;
+        case EventTypeBCSM.oAnswer: return EventTypeBCSM.oAnswer;
+        case EventTypeBCSM.oMidCall: return EventTypeBCSM.oMidCall;
+        case EventTypeBCSM.oDisconnect: return EventTypeBCSM.oDisconnect;
+        case EventTypeBCSM.oAbandon: return EventTypeBCSM.oAbandon;
+        case EventTypeBCSM.termAttemptAuthorized: return EventTypeBCSM.termAttemptAuthorized;
+        case EventTypeBCSM.tBusy: return EventTypeBCSM.tBusy;
+        case EventTypeBCSM.tNoAnswer: return EventTypeBCSM.tNoAnswer;
+        case EventTypeBCSM.tAnswer: return EventTypeBCSM.tAnswer;
+        case EventTypeBCSM.tMidCall: return EventTypeBCSM.tMidCall;
+        case EventTypeBCSM.tDisconnect: return EventTypeBCSM.tDisconnect;
+        case EventTypeBCSM.tAbandon: return EventTypeBCSM.tAbandon;
+        case EventTypeBCSM.oTermSeized: return EventTypeBCSM.oTermSeized;
+        case EventTypeBCSM.oSuspend: return EventTypeBCSM.oSuspend;
+        case EventTypeBCSM.tSuspend: return EventTypeBCSM.tSuspend;
+        case EventTypeBCSM.origAttempt: return EventTypeBCSM.origAttempt;
+        case EventTypeBCSM.termAttempt: return EventTypeBCSM.termAttempt;
+        case EventTypeBCSM.oReAnswer: return EventTypeBCSM.oReAnswer;
+        case EventTypeBCSM.tReAnswer: return EventTypeBCSM.tReAnswer;
+        case EventTypeBCSM.facilitySelectedAndAvailable: return EventTypeBCSM.facilitySelectedAndAvailable;
+        case EventTypeBCSM.callAccepted: return EventTypeBCSM.callAccepted;
+        case EventTypeBCSM.authorizeRouteFailure: return EventTypeBCSM.authorizeRouteFailure;
+        case EventTypeBCSM.originationAttemptDenied: return EventTypeBCSM.originationAttemptDenied;
+        case EventTypeBCSM.terminationAttemptDenied: return EventTypeBCSM.terminationAttemptDenied;
+        case EventTypeBCSM.oModifyRequest: return EventTypeBCSM.oModifyRequest;
+        case EventTypeBCSM.oModifyResult: return EventTypeBCSM.oModifyResult;
+        case EventTypeBCSM.tModifyRequest: return EventTypeBCSM.tModifyRequest;
+        case EventTypeBCSM.tModifyResult: return EventTypeBCSM.tModifyResult;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for EventTypeBCSM.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_EventTypeBCSM: $.ASN1Encoder<EventTypeBCSM> = $._encodeEnumerated;
+const _encode_EventTypeBCSM: $.ASN1Encoder<EventTypeBCSM> = $._encodeEnumerated as $.ASN1Encoder<EventTypeBCSM>;
 
 /* eslint-enable */

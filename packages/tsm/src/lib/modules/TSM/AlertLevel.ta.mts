@@ -118,8 +118,19 @@ const AlertLevel_fatal: AlertLevel = AlertLevel.fatal; /* LONG_NAMED_ENUMERATED_
  */
 export
 const fatal: AlertLevel = AlertLevel.fatal; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_AlertLevel = $._decodeEnumerated;
-export const _encode_AlertLevel = $._encodeEnumerated;
+export function _decode_AlertLevel(el: _Element): AlertLevel {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case AlertLevel.warning: return AlertLevel.warning;
+        case AlertLevel.fatal: return AlertLevel.fatal;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for AlertLevel.",
+                el,
+            );
+    }
+}
+export const _encode_AlertLevel: $.ASN1Encoder<AlertLevel> = $._encodeEnumerated as $.ASN1Encoder<AlertLevel>;
 
 
 /* eslint-enable */

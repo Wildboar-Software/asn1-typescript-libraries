@@ -141,12 +141,24 @@ export const gET_REPLACE: PropertyList_getReplace =
 
 
 
-export const _decode_PropertyList_getReplace = $._decodeEnumerated;
+export function _decode_PropertyList_getReplace(el: _Element): PropertyList_getReplace {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case PropertyList_getReplace.gET: return PropertyList_getReplace.gET;
+        case PropertyList_getReplace.rEPLACE: return PropertyList_getReplace.rEPLACE;
+        case PropertyList_getReplace.gET_REPLACE: return PropertyList_getReplace.gET_REPLACE;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for PropertyList_getReplace.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_PropertyList_getReplace = $._encodeEnumerated;
+export const _encode_PropertyList_getReplace: $.ASN1Encoder<PropertyList_getReplace> = $._encodeEnumerated as $.ASN1Encoder<PropertyList_getReplace>;
 
 
 /* eslint-enable */

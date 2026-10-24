@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -425,9 +426,39 @@ export
 const tModifyRequest: TriggerType = TriggerType.tModifyRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_TriggerType: $.ASN1Decoder<TriggerType> = $._decodeEnumerated;
+function _decode_TriggerType(el: _Element): TriggerType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case TriggerType.featureActivation: return TriggerType.featureActivation;
+        case TriggerType.verticalServiceCode: return TriggerType.verticalServiceCode;
+        case TriggerType.customizedAccess: return TriggerType.customizedAccess;
+        case TriggerType.customizedIntercom: return TriggerType.customizedIntercom;
+        case TriggerType.emergencyService: return TriggerType.emergencyService;
+        case TriggerType.aFR: return TriggerType.aFR;
+        case TriggerType.sharedIOTrunk: return TriggerType.sharedIOTrunk;
+        case TriggerType.offHookDelay: return TriggerType.offHookDelay;
+        case TriggerType.channelSetupPRI: return TriggerType.channelSetupPRI;
+        case TriggerType.tNoAnswer: return TriggerType.tNoAnswer;
+        case TriggerType.tBusy: return TriggerType.tBusy;
+        case TriggerType.oCalledPartyBusy: return TriggerType.oCalledPartyBusy;
+        case TriggerType.oNoAnswer: return TriggerType.oNoAnswer;
+        case TriggerType.originationAttemptAuthorized: return TriggerType.originationAttemptAuthorized;
+        case TriggerType.oAnswer: return TriggerType.oAnswer;
+        case TriggerType.oDisconnect: return TriggerType.oDisconnect;
+        case TriggerType.termAttemptAuthorized: return TriggerType.termAttemptAuthorized;
+        case TriggerType.tAnswer: return TriggerType.tAnswer;
+        case TriggerType.tDisconnect: return TriggerType.tDisconnect;
+        case TriggerType.oModifyRequest: return TriggerType.oModifyRequest;
+        case TriggerType.tModifyRequest: return TriggerType.tModifyRequest;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for TriggerType.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_TriggerType: $.ASN1Encoder<TriggerType> = $._encodeEnumerated;
+const _encode_TriggerType: $.ASN1Encoder<TriggerType> = $._encodeEnumerated as $.ASN1Encoder<TriggerType>;
 
 /* eslint-enable */

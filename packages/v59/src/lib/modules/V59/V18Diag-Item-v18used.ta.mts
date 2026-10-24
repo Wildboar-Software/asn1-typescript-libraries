@@ -424,7 +424,32 @@ const V18Diag_Item_v18used_bellLo: V18Diag_Item_v18used = V18Diag_Item_v18used.b
  */
 export
 const bellLo: V18Diag_Item_v18used = V18Diag_Item_v18used.bellLo; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_V18Diag_Item_v18used = $._decodeEnumerated;
-export const _encode_V18Diag_Item_v18used = $._encodeEnumerated;
+export function _decode_V18Diag_Item_v18used(el: _Element): V18Diag_Item_v18used {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case V18Diag_Item_v18used.none: return V18Diag_Item_v18used.none;
+        case V18Diag_Item_v18used.v18_V21Hi: return V18Diag_Item_v18used.v18_V21Hi;
+        case V18Diag_Item_v18used.v18_V21Lo: return V18Diag_Item_v18used.v18_V21Lo;
+        case V18Diag_Item_v18used.v18_V61C: return V18Diag_Item_v18used.v18_V61C;
+        case V18Diag_Item_v18used.v18_V61A: return V18Diag_Item_v18used.v18_V61A;
+        case V18Diag_Item_v18used.v21Hi: return V18Diag_Item_v18used.v21Hi;
+        case V18Diag_Item_v18used.v21Lo: return V18Diag_Item_v18used.v21Lo;
+        case V18Diag_Item_v18used.dTMF: return V18Diag_Item_v18used.dTMF;
+        case V18Diag_Item_v18used.eDT: return V18Diag_Item_v18used.eDT;
+        case V18Diag_Item_v18used.baudot45: return V18Diag_Item_v18used.baudot45;
+        case V18Diag_Item_v18used.baudot47: return V18Diag_Item_v18used.baudot47;
+        case V18Diag_Item_v18used.baudot50: return V18Diag_Item_v18used.baudot50;
+        case V18Diag_Item_v18used.v23Hi: return V18Diag_Item_v18used.v23Hi;
+        case V18Diag_Item_v18used.v23Lo: return V18Diag_Item_v18used.v23Lo;
+        case V18Diag_Item_v18used.bellHi: return V18Diag_Item_v18used.bellHi;
+        case V18Diag_Item_v18used.bellLo: return V18Diag_Item_v18used.bellLo;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for V18Diag_Item_v18used.",
+                el,
+            );
+    }
+}
+export const _encode_V18Diag_Item_v18used: $.ASN1Encoder<V18Diag_Item_v18used> = $._encodeEnumerated as $.ASN1Encoder<V18Diag_Item_v18used>;
 
 /* eslint-enable */

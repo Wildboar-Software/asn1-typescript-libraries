@@ -189,10 +189,24 @@ export const dA: CircuitType =
   CircuitType.dA; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_CircuitType = $._decodeEnumerated;
+export function _decode_CircuitType(el: _Element): CircuitType {
+  const enumerated = $._decodeEnumerated(el);
+  switch (enumerated) {
+    case CircuitType.broadcast: return CircuitType.broadcast;
+    case CircuitType.ptToPt: return CircuitType.ptToPt;
+    case CircuitType.staticIn: return CircuitType.staticIn;
+    case CircuitType.staticOut: return CircuitType.staticOut;
+    case CircuitType.dA: return CircuitType.dA;
+    default:
+      throw new _ConstructionError(
+        'Invalid ENUMERATED value ' + enumerated + ' for CircuitType.',
+        el,
+      );
+  }
+}
 
 
-export const _encode_CircuitType = $._encodeEnumerated;
+export const _encode_CircuitType: $.ASN1Encoder<CircuitType> = $._encodeEnumerated as $.ASN1Encoder<CircuitType>;
 
 
 /* eslint-enable */

@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -181,9 +182,25 @@ export
 const callCompletionOnBusySubscriber: InvokableService = InvokableService.callCompletionOnBusySubscriber; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_InvokableService: $.ASN1Decoder<InvokableService> = $._decodeEnumerated;
+function _decode_InvokableService(el: _Element): InvokableService {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case InvokableService.callingLineIdentificationRestriction: return InvokableService.callingLineIdentificationRestriction;
+        case InvokableService.connectedLineIdentificationRestriction: return InvokableService.connectedLineIdentificationRestriction;
+        case InvokableService.callWaiting: return InvokableService.callWaiting;
+        case InvokableService.callHold: return InvokableService.callHold;
+        case InvokableService.reverseCharging: return InvokableService.reverseCharging;
+        case InvokableService.explicitCallTransfer: return InvokableService.explicitCallTransfer;
+        case InvokableService.callCompletionOnBusySubscriber: return InvokableService.callCompletionOnBusySubscriber;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for InvokableService.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_InvokableService: $.ASN1Encoder<InvokableService> = $._encodeEnumerated;
+const _encode_InvokableService: $.ASN1Encoder<InvokableService> = $._encodeEnumerated as $.ASN1Encoder<InvokableService>;
 
 /* eslint-enable */

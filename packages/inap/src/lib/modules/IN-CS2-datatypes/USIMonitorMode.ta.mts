@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -84,9 +85,20 @@ export
 const monitoringInactive: USIMonitorMode = USIMonitorMode.monitoringInactive; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_USIMonitorMode: $.ASN1Decoder<USIMonitorMode> = $._decodeEnumerated;
+function _decode_USIMonitorMode(el: _Element): USIMonitorMode {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case USIMonitorMode.monitoringActive: return USIMonitorMode.monitoringActive;
+        case USIMonitorMode.monitoringInactive: return USIMonitorMode.monitoringInactive;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for USIMonitorMode.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_USIMonitorMode: $.ASN1Encoder<USIMonitorMode> = $._encodeEnumerated;
+const _encode_USIMonitorMode: $.ASN1Encoder<USIMonitorMode> = $._encodeEnumerated as $.ASN1Encoder<USIMonitorMode>;
 
 /* eslint-enable */

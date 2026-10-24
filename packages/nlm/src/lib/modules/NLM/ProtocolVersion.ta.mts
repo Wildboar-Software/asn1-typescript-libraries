@@ -204,12 +204,25 @@ export const x2588: ProtocolVersion =
 
 
 
-export const _decode_ProtocolVersion = $._decodeEnumerated;
+export function _decode_ProtocolVersion(el: _Element): ProtocolVersion {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ProtocolVersion.iSO8208V1: return ProtocolVersion.iSO8208V1;
+        case ProtocolVersion.iSO8208V2: return ProtocolVersion.iSO8208V2;
+        case ProtocolVersion.x2584: return ProtocolVersion.x2584;
+        case ProtocolVersion.x2588: return ProtocolVersion.x2588;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ProtocolVersion.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_ProtocolVersion = $._encodeEnumerated;
+export const _encode_ProtocolVersion: $.ASN1Encoder<ProtocolVersion> = $._encodeEnumerated as $.ASN1Encoder<ProtocolVersion>;
 
 
 /* eslint-enable */

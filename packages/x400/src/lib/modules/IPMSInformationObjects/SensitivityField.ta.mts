@@ -113,10 +113,22 @@ export const company_confidential: SensitivityField =
     SensitivityField.company_confidential; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_SensitivityField = $._decodeEnumerated;
+export function _decode_SensitivityField(el: _Element): SensitivityField {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case SensitivityField.personal: return SensitivityField.personal;
+        case SensitivityField.private_: return SensitivityField.private_;
+        case SensitivityField.company_confidential: return SensitivityField.company_confidential;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for SensitivityField.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_SensitivityField = $._encodeEnumerated;
+export const _encode_SensitivityField: $.ASN1Encoder<SensitivityField> = $._encodeEnumerated as $.ASN1Encoder<SensitivityField>;
 
 
 /* eslint-enable */

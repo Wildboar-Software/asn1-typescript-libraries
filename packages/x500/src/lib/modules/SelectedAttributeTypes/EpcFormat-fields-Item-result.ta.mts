@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element } from "@wildboar/asn1";
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -129,10 +129,22 @@ export const alpha7bits: EpcFormat_fields_Item_result =
     EpcFormat_fields_Item_result.alpha7bits; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_EpcFormat_fields_Item_result = $._decodeEnumerated;
+export function _decode_EpcFormat_fields_Item_result(el: _Element): EpcFormat_fields_Item_result {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case EpcFormat_fields_Item_result.numericPad: return EpcFormat_fields_Item_result.numericPad;
+        case EpcFormat_fields_Item_result.numeric: return EpcFormat_fields_Item_result.numeric;
+        case EpcFormat_fields_Item_result.alpha7bits: return EpcFormat_fields_Item_result.alpha7bits;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for EpcFormat_fields_Item_result.",
+                el,
+            );
+    }
+}
 
 
-export const _encode_EpcFormat_fields_Item_result = $._encodeEnumerated;
+export const _encode_EpcFormat_fields_Item_result: $.ASN1Encoder<EpcFormat_fields_Item_result> = $._encodeEnumerated as $.ASN1Encoder<EpcFormat_fields_Item_result>;
 
 
 /* eslint-enable */

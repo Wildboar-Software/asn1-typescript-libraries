@@ -165,10 +165,23 @@ export const extractDSP: MappingType =
   MappingType.extractDSP; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_MappingType = $._decodeEnumerated;
+export function _decode_MappingType(el: _Element): MappingType {
+  const enumerated = $._decodeEnumerated(el);
+  switch (enumerated) {
+    case MappingType.none: return MappingType.none;
+    case MappingType.explicit: return MappingType.explicit;
+    case MappingType.extractIDI: return MappingType.extractIDI;
+    case MappingType.extractDSP: return MappingType.extractDSP;
+    default:
+      throw new _ConstructionError(
+        'Invalid ENUMERATED value ' + enumerated + ' for MappingType.',
+        el,
+      );
+  }
+}
 
 
-export const _encode_MappingType = $._encodeEnumerated;
+export const _encode_MappingType: $.ASN1Encoder<MappingType> = $._encodeEnumerated as $.ASN1Encoder<MappingType>;
 
 
 /* eslint-enable */

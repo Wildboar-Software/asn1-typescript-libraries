@@ -734,8 +734,48 @@ const AlertDescription_unsupported_biometrics: AlertDescription = AlertDescripti
  */
 export
 const unsupported_biometrics: AlertDescription = AlertDescription.unsupported_biometrics; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_AlertDescription = $._decodeEnumerated;
-export const _encode_AlertDescription = $._encodeEnumerated;
+export function _decode_AlertDescription(el: _Element): AlertDescription {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case AlertDescription.close_notify: return AlertDescription.close_notify;
+        case AlertDescription.unexpected_message: return AlertDescription.unexpected_message;
+        case AlertDescription.bad_record_mac: return AlertDescription.bad_record_mac;
+        case AlertDescription.decryption_failed: return AlertDescription.decryption_failed;
+        case AlertDescription.record_overflow: return AlertDescription.record_overflow;
+        case AlertDescription.decompression_failure: return AlertDescription.decompression_failure;
+        case AlertDescription.handshake_failure: return AlertDescription.handshake_failure;
+        case AlertDescription.bad_certificate: return AlertDescription.bad_certificate;
+        case AlertDescription.unsupported_certificate: return AlertDescription.unsupported_certificate;
+        case AlertDescription.certificate_revoked: return AlertDescription.certificate_revoked;
+        case AlertDescription.certificate_expired: return AlertDescription.certificate_expired;
+        case AlertDescription.certificate_unknown: return AlertDescription.certificate_unknown;
+        case AlertDescription.illegal_parameter: return AlertDescription.illegal_parameter;
+        case AlertDescription.unknown_ca: return AlertDescription.unknown_ca;
+        case AlertDescription.access_denied: return AlertDescription.access_denied;
+        case AlertDescription.decode_error: return AlertDescription.decode_error;
+        case AlertDescription.decrypt_error: return AlertDescription.decrypt_error;
+        case AlertDescription.export_restriction: return AlertDescription.export_restriction;
+        case AlertDescription.protocol_version: return AlertDescription.protocol_version;
+        case AlertDescription.insufficient_security: return AlertDescription.insufficient_security;
+        case AlertDescription.internal_error: return AlertDescription.internal_error;
+        case AlertDescription.user_canceled: return AlertDescription.user_canceled;
+        case AlertDescription.no_renegotiation: return AlertDescription.no_renegotiation;
+        case AlertDescription.unsupported_extension: return AlertDescription.unsupported_extension;
+        case AlertDescription.certificate_unobtainable: return AlertDescription.certificate_unobtainable;
+        case AlertDescription.unrecognized_name: return AlertDescription.unrecognized_name;
+        case AlertDescription.bad_certificate_status_response: return AlertDescription.bad_certificate_status_response;
+        case AlertDescription.bad_certificate_hash_value: return AlertDescription.bad_certificate_hash_value;
+        case AlertDescription.unacceptable_model: return AlertDescription.unacceptable_model;
+        case AlertDescription.unacceptable_biometrics: return AlertDescription.unacceptable_biometrics;
+        case AlertDescription.unsupported_biometrics: return AlertDescription.unsupported_biometrics;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for AlertDescription.",
+                el,
+            );
+    }
+}
+export const _encode_AlertDescription: $.ASN1Encoder<AlertDescription> = $._encodeEnumerated as $.ASN1Encoder<AlertDescription>;
 
 
 /* eslint-enable */

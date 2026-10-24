@@ -124,8 +124,19 @@ const VersionConstraint_version_unambiguity: VersionConstraint = VersionConstrai
  */
 export
 const version_unambiguity: VersionConstraint = VersionConstraint.version_unambiguity; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_VersionConstraint = $._decodeEnumerated;
-export const _encode_VersionConstraint = $._encodeEnumerated;
+export function _decode_VersionConstraint(el: _Element): VersionConstraint {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case VersionConstraint.no_version_constraint: return VersionConstraint.no_version_constraint;
+        case VersionConstraint.version_unambiguity: return VersionConstraint.version_unambiguity;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for VersionConstraint.",
+                el,
+            );
+    }
+}
+export const _encode_VersionConstraint: $.ASN1Encoder<VersionConstraint> = $._encodeEnumerated as $.ASN1Encoder<VersionConstraint>;
 
 
 /* eslint-enable */

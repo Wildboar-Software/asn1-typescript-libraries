@@ -156,10 +156,22 @@ export
 const moreSevere: TrendIndication = TrendIndication.moreSevere; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_TrendIndication = $._decodeEnumerated;
+export function _decode_TrendIndication(el: _Element): TrendIndication {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case TrendIndication.lessSevere: return TrendIndication.lessSevere;
+        case TrendIndication.noChange: return TrendIndication.noChange;
+        case TrendIndication.moreSevere: return TrendIndication.moreSevere;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for TrendIndication.",
+                el,
+            );
+    }
+}
 
 
-export const _encode_TrendIndication = $._encodeEnumerated;
+export const _encode_TrendIndication: $.ASN1Encoder<TrendIndication> = $._encodeEnumerated as $.ASN1Encoder<TrendIndication>;
 
 
 /* eslint-enable */

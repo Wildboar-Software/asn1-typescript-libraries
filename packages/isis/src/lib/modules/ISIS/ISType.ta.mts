@@ -119,10 +119,21 @@ export const level2IS: ISType =
   ISType.level2IS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_ISType = $._decodeEnumerated;
+export function _decode_ISType(el: _Element): ISType {
+  const enumerated = $._decodeEnumerated(el);
+  switch (enumerated) {
+    case ISType.level1IS: return ISType.level1IS;
+    case ISType.level2IS: return ISType.level2IS;
+    default:
+      throw new _ConstructionError(
+        'Invalid ENUMERATED value ' + enumerated + ' for ISType.',
+        el,
+      );
+  }
+}
 
 
-export const _encode_ISType = $._encodeEnumerated;
+export const _encode_ISType: $.ASN1Encoder<ISType> = $._encodeEnumerated as $.ASN1Encoder<ISType>;
 
 
 /* eslint-enable */

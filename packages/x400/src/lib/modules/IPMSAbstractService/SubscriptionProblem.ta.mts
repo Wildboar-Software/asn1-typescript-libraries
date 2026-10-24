@@ -94,10 +94,21 @@ export const mts_eos_not_subscribed: SubscriptionProblem =
     SubscriptionProblem.mts_eos_not_subscribed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_SubscriptionProblem = $._decodeEnumerated;
+export function _decode_SubscriptionProblem(el: _Element): SubscriptionProblem {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case SubscriptionProblem.ipms_eos_not_subscribed: return SubscriptionProblem.ipms_eos_not_subscribed;
+        case SubscriptionProblem.mts_eos_not_subscribed: return SubscriptionProblem.mts_eos_not_subscribed;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for SubscriptionProblem.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_SubscriptionProblem = $._encodeEnumerated;
+export const _encode_SubscriptionProblem: $.ASN1Encoder<SubscriptionProblem> = $._encodeEnumerated as $.ASN1Encoder<SubscriptionProblem>;
 
 
 /* eslint-enable */

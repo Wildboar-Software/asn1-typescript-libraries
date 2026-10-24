@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -84,9 +85,20 @@ export
 const bestEffort: InteractionStrategy = InteractionStrategy.bestEffort; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_InteractionStrategy: $.ASN1Decoder<InteractionStrategy> = $._decodeEnumerated;
+function _decode_InteractionStrategy(el: _Element): InteractionStrategy {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case InteractionStrategy.stopOnError: return InteractionStrategy.stopOnError;
+        case InteractionStrategy.bestEffort: return InteractionStrategy.bestEffort;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for InteractionStrategy.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_InteractionStrategy: $.ASN1Encoder<InteractionStrategy> = $._encodeEnumerated;
+const _encode_InteractionStrategy: $.ASN1Encoder<InteractionStrategy> = $._encodeEnumerated as $.ASN1Encoder<InteractionStrategy>;
 
 /* eslint-enable */

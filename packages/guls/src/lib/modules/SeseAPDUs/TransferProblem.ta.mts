@@ -198,12 +198,26 @@ export const alternatingSequenceError: TransferProblem =
 
 
 
-export const _decode_TransferProblem = $._decodeEnumerated;
+export function _decode_TransferProblem(el: _Element): TransferProblem {
+  const enumerated = $._decodeEnumerated(el);
+  switch (enumerated) {
+    case TransferProblem.duplicateInvocationId: return TransferProblem.duplicateInvocationId;
+    case TransferProblem.unrecognizedSecurityExchange: return TransferProblem.unrecognizedSecurityExchange;
+    case TransferProblem.mistypedItem: return TransferProblem.mistypedItem;
+    case TransferProblem.inappropriateInvocationId: return TransferProblem.inappropriateInvocationId;
+    case TransferProblem.alternatingSequenceError: return TransferProblem.alternatingSequenceError;
+    default:
+      throw new _ConstructionError(
+        'Invalid ENUMERATED value ' + enumerated + ' for TransferProblem.',
+        el,
+      );
+  }
+}
 
 
 
 
-export const _encode_TransferProblem = $._encodeEnumerated;
+export const _encode_TransferProblem: $.ASN1Encoder<TransferProblem> = $._encodeEnumerated as $.ASN1Encoder<TransferProblem>;
 
 
 /* eslint-enable */

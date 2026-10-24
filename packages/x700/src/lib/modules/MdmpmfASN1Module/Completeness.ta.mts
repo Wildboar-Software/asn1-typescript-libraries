@@ -166,10 +166,22 @@ export const knownNotComplete: Completeness =
     Completeness.knownNotComplete; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_Completeness = $._decodeEnumerated;
+export function _decode_Completeness(el: _Element): Completeness {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case Completeness.completenessUnknown: return Completeness.completenessUnknown;
+        case Completeness.knownComplete: return Completeness.knownComplete;
+        case Completeness.knownNotComplete: return Completeness.knownNotComplete;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for Completeness.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_Completeness = $._encodeEnumerated;
+export const _encode_Completeness: $.ASN1Encoder<Completeness> = $._encodeEnumerated as $.ASN1Encoder<Completeness>;
 
 
 /* eslint-enable */

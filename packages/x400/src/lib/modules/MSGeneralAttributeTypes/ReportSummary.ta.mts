@@ -218,10 +218,27 @@ export const non_delivery_report_from_intended_recipient: ReportSummary =
     ReportSummary.non_delivery_report_from_intended_recipient; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_ReportSummary = $._decodeEnumerated;
+export function _decode_ReportSummary(el: _Element): ReportSummary {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ReportSummary.no_report_requested: return ReportSummary.no_report_requested;
+        case ReportSummary.no_report_received: return ReportSummary.no_report_received;
+        case ReportSummary.report_outstanding: return ReportSummary.report_outstanding;
+        case ReportSummary.delivery_cancelled: return ReportSummary.delivery_cancelled;
+        case ReportSummary.delivery_report_from_another_recipient: return ReportSummary.delivery_report_from_another_recipient;
+        case ReportSummary.non_delivery_report_from_another_recipient: return ReportSummary.non_delivery_report_from_another_recipient;
+        case ReportSummary.delivery_report_from_intended_recipient: return ReportSummary.delivery_report_from_intended_recipient;
+        case ReportSummary.non_delivery_report_from_intended_recipient: return ReportSummary.non_delivery_report_from_intended_recipient;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ReportSummary.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_ReportSummary = $._encodeEnumerated;
+export const _encode_ReportSummary: $.ASN1Encoder<ReportSummary> = $._encodeEnumerated as $.ASN1Encoder<ReportSummary>;
 
 
 /* eslint-enable */

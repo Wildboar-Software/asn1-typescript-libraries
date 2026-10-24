@@ -190,7 +190,20 @@ let _cached_decoder_for_IntermediateResourceBoundaryTestOutcome: $.ASN1Decoder<I
 export function _decode_IntermediateResourceBoundaryTestOutcome(el: _Element): IntermediateResourceBoundaryTestOutcome {
     if (!_cached_decoder_for_IntermediateResourceBoundaryTestOutcome) {
         _cached_decoder_for_IntermediateResourceBoundaryTestOutcome =
-            $._decodeEnumerated;
+            function (el: _Element): IntermediateResourceBoundaryTestOutcome {
+                const enumerated = $._decodeEnumerated(el);
+                switch (enumerated) {
+                    case IntermediateResourceBoundaryTestOutcome.passed: return IntermediateResourceBoundaryTestOutcome.passed;
+                    case IntermediateResourceBoundaryTestOutcome.unexpected: return IntermediateResourceBoundaryTestOutcome.unexpected;
+                    case IntermediateResourceBoundaryTestOutcome.wrongSignalReceived: return IntermediateResourceBoundaryTestOutcome.wrongSignalReceived;
+                    case IntermediateResourceBoundaryTestOutcome.waitDurationTimerExpired: return IntermediateResourceBoundaryTestOutcome.waitDurationTimerExpired;
+                    default:
+                        throw new _ConstructionError(
+                            'Invalid ENUMERATED value ' + enumerated + ' for IntermediateResourceBoundaryTestOutcome.',
+                            el,
+                        );
+                }
+            };
     }
     return _cached_decoder_for_IntermediateResourceBoundaryTestOutcome(el);
 }
@@ -210,7 +223,7 @@ export function _encode_IntermediateResourceBoundaryTestOutcome(
 ): _Element {
     if (!_cached_encoder_for_IntermediateResourceBoundaryTestOutcome) {
         _cached_encoder_for_IntermediateResourceBoundaryTestOutcome =
-            $._encodeEnumerated;
+            $._encodeEnumerated as $.ASN1Encoder<IntermediateResourceBoundaryTestOutcome>;
     }
     return _cached_encoder_for_IntermediateResourceBoundaryTestOutcome(
         value,

@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -101,9 +102,21 @@ export
 const any_: ForwardingCondition = ForwardingCondition.any_; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_ForwardingCondition: $.ASN1Decoder<ForwardingCondition> = $._decodeEnumerated;
+function _decode_ForwardingCondition(el: _Element): ForwardingCondition {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ForwardingCondition.busy: return ForwardingCondition.busy;
+        case ForwardingCondition.noanswer: return ForwardingCondition.noanswer;
+        case ForwardingCondition.any_: return ForwardingCondition.any_;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for ForwardingCondition.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_ForwardingCondition: $.ASN1Encoder<ForwardingCondition> = $._encodeEnumerated;
+const _encode_ForwardingCondition: $.ASN1Encoder<ForwardingCondition> = $._encodeEnumerated as $.ASN1Encoder<ForwardingCondition>;
 
 /* eslint-enable */

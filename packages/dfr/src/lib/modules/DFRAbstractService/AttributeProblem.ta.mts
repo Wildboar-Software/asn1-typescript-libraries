@@ -331,8 +331,27 @@ const AttributeProblem_unsupported_document_type: AttributeProblem = AttributePr
  */
 export
 const unsupported_document_type: AttributeProblem = AttributeProblem.unsupported_document_type; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_AttributeProblem = $._decodeEnumerated;
-export const _encode_AttributeProblem = $._encodeEnumerated;
+export function _decode_AttributeProblem(el: _Element): AttributeProblem {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case AttributeProblem.no_such_attribute: return AttributeProblem.no_such_attribute;
+        case AttributeProblem.invalid_attribute_syntax: return AttributeProblem.invalid_attribute_syntax;
+        case AttributeProblem.undefined_attribute_type: return AttributeProblem.undefined_attribute_type;
+        case AttributeProblem.inappropriate_matching: return AttributeProblem.inappropriate_matching;
+        case AttributeProblem.constraint_violation: return AttributeProblem.constraint_violation;
+        case AttributeProblem.attribute_or_value_already_exists: return AttributeProblem.attribute_or_value_already_exists;
+        case AttributeProblem.illegal_modification: return AttributeProblem.illegal_modification;
+        case AttributeProblem.inconsistent_with_other_attributes: return AttributeProblem.inconsistent_with_other_attributes;
+        case AttributeProblem.undefined_for_this_object_class: return AttributeProblem.undefined_for_this_object_class;
+        case AttributeProblem.unsupported_document_type: return AttributeProblem.unsupported_document_type;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for AttributeProblem.",
+                el,
+            );
+    }
+}
+export const _encode_AttributeProblem: $.ASN1Encoder<AttributeProblem> = $._encodeEnumerated as $.ASN1Encoder<AttributeProblem>;
 
 
 /* eslint-enable */

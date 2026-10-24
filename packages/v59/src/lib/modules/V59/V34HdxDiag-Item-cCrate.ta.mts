@@ -155,7 +155,20 @@ const V34HdxDiag_Item_cCrate_t24R12: V34HdxDiag_Item_cCrate = V34HdxDiag_Item_cC
  */
 export
 const t24R12: V34HdxDiag_Item_cCrate = V34HdxDiag_Item_cCrate.t24R12; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_V34HdxDiag_Item_cCrate = $._decodeEnumerated;
-export const _encode_V34HdxDiag_Item_cCrate = $._encodeEnumerated;
+export function _decode_V34HdxDiag_Item_cCrate(el: _Element): V34HdxDiag_Item_cCrate {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case V34HdxDiag_Item_cCrate.t12R12: return V34HdxDiag_Item_cCrate.t12R12;
+        case V34HdxDiag_Item_cCrate.t24R24: return V34HdxDiag_Item_cCrate.t24R24;
+        case V34HdxDiag_Item_cCrate.t12R24: return V34HdxDiag_Item_cCrate.t12R24;
+        case V34HdxDiag_Item_cCrate.t24R12: return V34HdxDiag_Item_cCrate.t24R12;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for V34HdxDiag_Item_cCrate.",
+                el,
+            );
+    }
+}
+export const _encode_V34HdxDiag_Item_cCrate: $.ASN1Encoder<V34HdxDiag_Item_cCrate> = $._encodeEnumerated as $.ASN1Encoder<V34HdxDiag_Item_cCrate>;
 
 /* eslint-enable */

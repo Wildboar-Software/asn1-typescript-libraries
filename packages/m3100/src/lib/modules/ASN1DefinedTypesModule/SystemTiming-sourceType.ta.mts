@@ -117,12 +117,24 @@ export const slavedTimingTerminationSignal: SystemTiming_sourceType =
 
 
 
-export const _decode_SystemTiming_sourceType = $._decodeEnumerated;
+export function _decode_SystemTiming_sourceType(el: _Element): SystemTiming_sourceType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case SystemTiming_sourceType.internalTimingSource: return SystemTiming_sourceType.internalTimingSource;
+        case SystemTiming_sourceType.remoteTimingSource: return SystemTiming_sourceType.remoteTimingSource;
+        case SystemTiming_sourceType.slavedTimingTerminationSignal: return SystemTiming_sourceType.slavedTimingTerminationSignal;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for SystemTiming_sourceType.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_SystemTiming_sourceType = $._encodeEnumerated;
+export const _encode_SystemTiming_sourceType: $.ASN1Encoder<SystemTiming_sourceType> = $._encodeEnumerated as $.ASN1Encoder<SystemTiming_sourceType>;
 
 
 /* eslint-enable */

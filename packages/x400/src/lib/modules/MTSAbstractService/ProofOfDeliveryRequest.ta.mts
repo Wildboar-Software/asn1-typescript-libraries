@@ -98,10 +98,21 @@ export const proof_of_delivery_requested: ProofOfDeliveryRequest =
     ProofOfDeliveryRequest.proof_of_delivery_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_ProofOfDeliveryRequest = $._decodeEnumerated;
+export function _decode_ProofOfDeliveryRequest(el: _Element): ProofOfDeliveryRequest {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ProofOfDeliveryRequest.proof_of_delivery_not_requested: return ProofOfDeliveryRequest.proof_of_delivery_not_requested;
+        case ProofOfDeliveryRequest.proof_of_delivery_requested: return ProofOfDeliveryRequest.proof_of_delivery_requested;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ProofOfDeliveryRequest.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_ProofOfDeliveryRequest = $._encodeEnumerated;
+export const _encode_ProofOfDeliveryRequest: $.ASN1Encoder<ProofOfDeliveryRequest> = $._encodeEnumerated as $.ASN1Encoder<ProofOfDeliveryRequest>;
 
 
 /* eslint-enable */

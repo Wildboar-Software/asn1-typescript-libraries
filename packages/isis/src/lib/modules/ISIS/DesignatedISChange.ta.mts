@@ -119,10 +119,21 @@ export const elected: DesignatedISChange =
   DesignatedISChange.elected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_DesignatedISChange = $._decodeEnumerated;
+export function _decode_DesignatedISChange(el: _Element): DesignatedISChange {
+  const enumerated = $._decodeEnumerated(el);
+  switch (enumerated) {
+    case DesignatedISChange.resigned: return DesignatedISChange.resigned;
+    case DesignatedISChange.elected: return DesignatedISChange.elected;
+    default:
+      throw new _ConstructionError(
+        'Invalid ENUMERATED value ' + enumerated + ' for DesignatedISChange.',
+        el,
+      );
+  }
+}
 
 
-export const _encode_DesignatedISChange = $._encodeEnumerated;
+export const _encode_DesignatedISChange: $.ASN1Encoder<DesignatedISChange> = $._encodeEnumerated as $.ASN1Encoder<DesignatedISChange>;
 
 
 /* eslint-enable */

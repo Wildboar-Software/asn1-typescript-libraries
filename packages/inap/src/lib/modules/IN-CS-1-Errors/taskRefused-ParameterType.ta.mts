@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -116,9 +117,21 @@ export
 const congestion: taskRefused_ParameterType = taskRefused_ParameterType.congestion; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_taskRefused_ParameterType: $.ASN1Decoder<taskRefused_ParameterType> = $._decodeEnumerated;
+function _decode_taskRefused_ParameterType(el: _Element): taskRefused_ParameterType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case taskRefused_ParameterType.generic: return taskRefused_ParameterType.generic;
+        case taskRefused_ParameterType.unobtainable: return taskRefused_ParameterType.unobtainable;
+        case taskRefused_ParameterType.congestion: return taskRefused_ParameterType.congestion;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for taskRefused_ParameterType.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_taskRefused_ParameterType: $.ASN1Encoder<taskRefused_ParameterType> = $._encodeEnumerated;
+const _encode_taskRefused_ParameterType: $.ASN1Encoder<taskRefused_ParameterType> = $._encodeEnumerated as $.ASN1Encoder<taskRefused_ParameterType>;
 
 /* eslint-enable */

@@ -117,12 +117,24 @@ export const bidirectional: ProtectionDirection =
 
 
 
-export const _decode_ProtectionDirection = $._decodeEnumerated;
+export function _decode_ProtectionDirection(el: _Element): ProtectionDirection {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ProtectionDirection.transmit: return ProtectionDirection.transmit;
+        case ProtectionDirection.receive: return ProtectionDirection.receive;
+        case ProtectionDirection.bidirectional: return ProtectionDirection.bidirectional;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ProtectionDirection.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_ProtectionDirection = $._encodeEnumerated;
+export const _encode_ProtectionDirection: $.ASN1Encoder<ProtectionDirection> = $._encodeEnumerated as $.ASN1Encoder<ProtectionDirection>;
 
 
 /* eslint-enable */

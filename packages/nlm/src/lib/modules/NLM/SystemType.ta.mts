@@ -143,12 +143,23 @@ export const iS: SystemType = SystemType.iS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
-export const _decode_SystemType = $._decodeEnumerated;
+export function _decode_SystemType(el: _Element): SystemType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case SystemType.eS: return SystemType.eS;
+        case SystemType.iS: return SystemType.iS;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for SystemType.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_SystemType = $._encodeEnumerated;
+export const _encode_SystemType: $.ASN1Encoder<SystemType> = $._encodeEnumerated as $.ASN1Encoder<SystemType>;
 
 
 /* eslint-enable */

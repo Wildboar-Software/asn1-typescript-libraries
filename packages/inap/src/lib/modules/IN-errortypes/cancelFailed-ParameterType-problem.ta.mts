@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -116,9 +117,21 @@ export
 const operationNotCancellable: cancelFailed_ParameterType_problem = cancelFailed_ParameterType_problem.operationNotCancellable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_cancelFailed_ParameterType_problem: $.ASN1Decoder<cancelFailed_ParameterType_problem> = $._decodeEnumerated;
+function _decode_cancelFailed_ParameterType_problem(el: _Element): cancelFailed_ParameterType_problem {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case cancelFailed_ParameterType_problem.unknownOperation: return cancelFailed_ParameterType_problem.unknownOperation;
+        case cancelFailed_ParameterType_problem.tooLate: return cancelFailed_ParameterType_problem.tooLate;
+        case cancelFailed_ParameterType_problem.operationNotCancellable: return cancelFailed_ParameterType_problem.operationNotCancellable;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for cancelFailed_ParameterType_problem.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_cancelFailed_ParameterType_problem: $.ASN1Encoder<cancelFailed_ParameterType_problem> = $._encodeEnumerated;
+const _encode_cancelFailed_ParameterType_problem: $.ASN1Encoder<cancelFailed_ParameterType_problem> = $._encodeEnumerated as $.ASN1Encoder<cancelFailed_ParameterType_problem>;
 
 /* eslint-enable */

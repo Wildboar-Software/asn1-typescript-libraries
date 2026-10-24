@@ -98,12 +98,23 @@ export const timeout: ReleaseProtectionError =
 
 
 
-export const _decode_ReleaseProtectionError = $._decodeEnumerated;
+export function _decode_ReleaseProtectionError(el: _Element): ReleaseProtectionError {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ReleaseProtectionError.failure: return ReleaseProtectionError.failure;
+        case ReleaseProtectionError.timeout: return ReleaseProtectionError.timeout;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ReleaseProtectionError.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_ReleaseProtectionError = $._encodeEnumerated;
+export const _encode_ReleaseProtectionError: $.ASN1Encoder<ReleaseProtectionError> = $._encodeEnumerated as $.ASN1Encoder<ReleaseProtectionError>;
 
 
 /* eslint-enable */

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element } from "@wildboar/asn1";
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -108,10 +108,22 @@ export const both: Knowledge_knowledgeType =
     Knowledge_knowledgeType.both; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_Knowledge_knowledgeType = $._decodeEnumerated;
+export function _decode_Knowledge_knowledgeType(el: _Element): Knowledge_knowledgeType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case Knowledge_knowledgeType.master: return Knowledge_knowledgeType.master;
+        case Knowledge_knowledgeType.shadow: return Knowledge_knowledgeType.shadow;
+        case Knowledge_knowledgeType.both: return Knowledge_knowledgeType.both;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for Knowledge_knowledgeType.",
+                el,
+            );
+    }
+}
 
 
-export const _encode_Knowledge_knowledgeType = $._encodeEnumerated;
+export const _encode_Knowledge_knowledgeType: $.ASN1Encoder<Knowledge_knowledgeType> = $._encodeEnumerated as $.ASN1Encoder<Knowledge_knowledgeType>;
 
 
 /* eslint-enable */

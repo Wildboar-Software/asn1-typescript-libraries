@@ -136,12 +136,23 @@ export const outgoing: Direction =
 
 
 
-export const _decode_Direction = $._decodeEnumerated;
+export function _decode_Direction(el: _Element): Direction {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case Direction.incoming: return Direction.incoming;
+        case Direction.outgoing: return Direction.outgoing;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for Direction.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_Direction = $._encodeEnumerated;
+export const _encode_Direction: $.ASN1Encoder<Direction> = $._encodeEnumerated as $.ASN1Encoder<Direction>;
 
 
 /* eslint-enable */

@@ -96,10 +96,21 @@ export const dl_expansion_prohibited: DLExpansionProhibited =
     DLExpansionProhibited.dl_expansion_prohibited; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_DLExpansionProhibited = $._decodeEnumerated;
+export function _decode_DLExpansionProhibited(el: _Element): DLExpansionProhibited {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case DLExpansionProhibited.dl_expansion_allowed: return DLExpansionProhibited.dl_expansion_allowed;
+        case DLExpansionProhibited.dl_expansion_prohibited: return DLExpansionProhibited.dl_expansion_prohibited;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for DLExpansionProhibited.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_DLExpansionProhibited = $._encodeEnumerated;
+export const _encode_DLExpansionProhibited: $.ASN1Encoder<DLExpansionProhibited> = $._encodeEnumerated as $.ASN1Encoder<DLExpansionProhibited>;
 
 
 /* eslint-enable */

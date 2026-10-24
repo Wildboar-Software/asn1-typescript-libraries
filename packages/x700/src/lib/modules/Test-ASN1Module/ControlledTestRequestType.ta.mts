@@ -139,10 +139,21 @@ export const related: ControlledTestRequestType =
     ControlledTestRequestType.related; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_ControlledTestRequestType = $._decodeEnumerated;
+export function _decode_ControlledTestRequestType(el: _Element): ControlledTestRequestType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ControlledTestRequestType.independent: return ControlledTestRequestType.independent;
+        case ControlledTestRequestType.related: return ControlledTestRequestType.related;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ControlledTestRequestType.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_ControlledTestRequestType = $._encodeEnumerated;
+export const _encode_ControlledTestRequestType: $.ASN1Encoder<ControlledTestRequestType> = $._encodeEnumerated as $.ASN1Encoder<ControlledTestRequestType>;
 
 
 /* eslint-enable */

@@ -199,8 +199,22 @@ const ReservationProblem_reservation_not_changed: ReservationProblem = Reservati
  */
 export
 const reservation_not_changed: ReservationProblem = ReservationProblem.reservation_not_changed; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_ReservationProblem = $._decodeEnumerated;
-export const _encode_ReservationProblem = $._encodeEnumerated;
+export function _decode_ReservationProblem(el: _Element): ReservationProblem {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ReservationProblem.cannot_reserve: return ReservationProblem.cannot_reserve;
+        case ReservationProblem.already_reserved: return ReservationProblem.already_reserved;
+        case ReservationProblem.not_yet_reserved: return ReservationProblem.not_yet_reserved;
+        case ReservationProblem.cannot_unreserve: return ReservationProblem.cannot_unreserve;
+        case ReservationProblem.reservation_not_changed: return ReservationProblem.reservation_not_changed;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for ReservationProblem.",
+                el,
+            );
+    }
+}
+export const _encode_ReservationProblem: $.ASN1Encoder<ReservationProblem> = $._encodeEnumerated as $.ASN1Encoder<ReservationProblem>;
 
 
 /* eslint-enable */

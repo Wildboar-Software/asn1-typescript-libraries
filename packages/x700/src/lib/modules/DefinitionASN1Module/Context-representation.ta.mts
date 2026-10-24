@@ -195,12 +195,26 @@ export const sPECIFIC_ERROR: Context_representation =
 
 
 
-export const _decode_Context_representation = $._decodeEnumerated;
+export function _decode_Context_representation(el: _Element): Context_representation {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case Context_representation.aCTION_INFO: return Context_representation.aCTION_INFO;
+        case Context_representation.aCTION_REPLY: return Context_representation.aCTION_REPLY;
+        case Context_representation.eVENT_INFO: return Context_representation.eVENT_INFO;
+        case Context_representation.eVENT_REPLY: return Context_representation.eVENT_REPLY;
+        case Context_representation.sPECIFIC_ERROR: return Context_representation.sPECIFIC_ERROR;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for Context_representation.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_Context_representation = $._encodeEnumerated;
+export const _encode_Context_representation: $.ASN1Encoder<Context_representation> = $._encodeEnumerated as $.ASN1Encoder<Context_representation>;
 
 
 /* eslint-enable */

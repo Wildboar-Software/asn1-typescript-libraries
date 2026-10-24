@@ -261,10 +261,25 @@ export const associatedObjectNotAvailable: TONotCreated_reason =
     TONotCreated_reason.associatedObjectNotAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_TONotCreated_reason = $._decodeEnumerated;
+export function _decode_TONotCreated_reason(el: _Element): TONotCreated_reason {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case TONotCreated_reason.invalidTOclass: return TONotCreated_reason.invalidTOclass;
+        case TONotCreated_reason.duplicateTOInstance: return TONotCreated_reason.duplicateTOInstance;
+        case TONotCreated_reason.invalidMORTClass: return TONotCreated_reason.invalidMORTClass;
+        case TONotCreated_reason.invalidAssociatedObjectClass: return TONotCreated_reason.invalidAssociatedObjectClass;
+        case TONotCreated_reason.mORTNotAvailable: return TONotCreated_reason.mORTNotAvailable;
+        case TONotCreated_reason.associatedObjectNotAvailable: return TONotCreated_reason.associatedObjectNotAvailable;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for TONotCreated_reason.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_TONotCreated_reason = $._encodeEnumerated;
+export const _encode_TONotCreated_reason: $.ASN1Encoder<TONotCreated_reason> = $._encodeEnumerated as $.ASN1Encoder<TONotCreated_reason>;
 
 
 /* eslint-enable */

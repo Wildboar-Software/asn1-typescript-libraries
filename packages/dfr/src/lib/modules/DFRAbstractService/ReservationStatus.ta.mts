@@ -124,8 +124,19 @@ const ReservationStatus_committed: ReservationStatus = ReservationStatus.committ
  */
 export
 const committed: ReservationStatus = ReservationStatus.committed; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_ReservationStatus = $._decodeEnumerated;
-export const _encode_ReservationStatus = $._encodeEnumerated;
+export function _decode_ReservationStatus(el: _Element): ReservationStatus {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ReservationStatus.uncommitted: return ReservationStatus.uncommitted;
+        case ReservationStatus.committed: return ReservationStatus.committed;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for ReservationStatus.",
+                el,
+            );
+    }
+}
+export const _encode_ReservationStatus: $.ASN1Encoder<ReservationStatus> = $._encodeEnumerated as $.ASN1Encoder<ReservationStatus>;
 
 
 /* eslint-enable */

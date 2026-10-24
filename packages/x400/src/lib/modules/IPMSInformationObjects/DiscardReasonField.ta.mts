@@ -131,10 +131,23 @@ export const not_used: DiscardReasonField =
     DiscardReasonField.not_used; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_DiscardReasonField = $._decodeEnumerated;
+export function _decode_DiscardReasonField(el: _Element): DiscardReasonField {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case DiscardReasonField.ipm_expired: return DiscardReasonField.ipm_expired;
+        case DiscardReasonField.ipm_obsoleted: return DiscardReasonField.ipm_obsoleted;
+        case DiscardReasonField.user_subscription_terminated: return DiscardReasonField.user_subscription_terminated;
+        case DiscardReasonField.not_used: return DiscardReasonField.not_used;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for DiscardReasonField.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_DiscardReasonField = $._encodeEnumerated;
+export const _encode_DiscardReasonField: $.ASN1Encoder<DiscardReasonField> = $._encodeEnumerated as $.ASN1Encoder<DiscardReasonField>;
 
 
 /* eslint-enable */
