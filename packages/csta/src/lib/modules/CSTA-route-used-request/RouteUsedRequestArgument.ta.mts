@@ -2,8 +2,8 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
+    type OPTIONAL,
+    type BOOLEAN,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -39,12 +39,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * RouteUsedRequestArgument ::= SEQUENCE
  * {    crossRefIdentifier        RouteingCrossRefID,
- *     routeRegisterReqID        [0] IMPLICIT RouteRegisterReqID        OPTIONAL,
+ *     routeRegisterReqID        [0] IMPLICIT RouteRegisterReqID        type OPTIONAL,
  *     routeUsed            CalledDeviceID,
- *     callingDevice            CallingDeviceID                OPTIONAL,
- *     domain                BOOLEAN                    OPTIONAL,
- *     correlatorData            [1] IMPLICIT CorrelatorData        OPTIONAL,
- *     callLinkageData            [2] IMPLICIT CallLinkageData        OPTIONAL,
+ *     callingDevice            CallingDeviceID                type OPTIONAL,
+ *     domain                BOOLEAN                    type OPTIONAL,
+ *     correlatorData            [1] IMPLICIT CorrelatorData        type OPTIONAL,
+ *     callLinkageData            [2] IMPLICIT CallLinkageData        type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 

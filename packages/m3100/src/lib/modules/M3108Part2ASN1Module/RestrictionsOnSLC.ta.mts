@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     GraphicString,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,

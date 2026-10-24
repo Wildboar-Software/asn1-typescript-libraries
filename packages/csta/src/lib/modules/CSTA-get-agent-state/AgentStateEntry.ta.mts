@@ -2,8 +2,8 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
+    type OPTIONAL,
+    type BOOLEAN,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -29,7 +29,7 @@ import { AgentInfo, _decode_AgentInfo, _encode_AgentInfo } from "../CSTA-get-age
  * 
  * ```asn1
  * AgentStateEntry ::= SEQUENCE
- * {    agentID                AgentID                    OPTIONAL,
+ * {    agentID                AgentID                    type OPTIONAL,
  *     loggedOn            BOOLEAN,
  *     agentInfo            SEQUENCE OF AgentInfo             OPTIONAL }
  * ```

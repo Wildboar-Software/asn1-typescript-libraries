@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    RELATIVE_OID,
+    type RELATIVE_OID,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";

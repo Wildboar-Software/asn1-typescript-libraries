@@ -2,9 +2,9 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BIT_STRING,
-    INTEGER,
-    OPTIONAL,
+    type BIT_STRING,
+    type INTEGER,
+    type OPTIONAL,
     UTCTime,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";

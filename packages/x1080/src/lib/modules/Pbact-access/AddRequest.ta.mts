@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    OBJECT_IDENTIFIER,
+    type OPTIONAL,
+    type INTEGER,
+    type OBJECT_IDENTIFIER,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -57,7 +57,7 @@ import {
  *   COMPONENTS OF CommonReqComp,
  *   object    [1] DistinguishedName,
  *   attr      [2] SEQUENCE SIZE (1..MAX) OF Attribute {{SupportedAttributes}}
- *                    OPTIONAL,
+ *                    type OPTIONAL,
  *   ... }
  * ```
  *

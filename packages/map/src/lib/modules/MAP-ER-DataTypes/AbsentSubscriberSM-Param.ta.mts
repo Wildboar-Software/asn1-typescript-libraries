@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -23,19 +23,19 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * 
  * ```asn1
  * AbsentSubscriberSM-Param ::= SEQUENCE {
- *     absentSubscriberDiagnosticSM    AbsentSubscriberDiagnosticSM    OPTIONAL,
+ *     absentSubscriberDiagnosticSM    AbsentSubscriberDiagnosticSM    type OPTIONAL,
  *     -- AbsentSubscriberDiagnosticSM can be either for non-GPRS 
  *     -- or for GPRS
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     additionalAbsentSubscriberDiagnosticSM     [0]    AbsentSubscriberDiagnosticSM    OPTIONAL,
+ *     additionalAbsentSubscriberDiagnosticSM     [0]    AbsentSubscriberDiagnosticSM    type OPTIONAL,
  *     -- if received, additionalAbsentSubscriberDiagnosticSM 
  *     -- is for GPRS and absentSubscriberDiagnosticSM is 
  *     -- for non-GPRS
- *     imsi    [1] IMSI    OPTIONAL,
+ *     imsi    [1] IMSI    type OPTIONAL,
  *     -- when sent from HLR to IP-SM-GW, IMSI shall be present if UNRI is not set 
  *     -- to indicate that the absent condition is met for CS and PS but not for IMS. 
- *     requestedRetransmissionTime    [2] Time    OPTIONAL,
+ *     requestedRetransmissionTime    [2] Time    type OPTIONAL,
  *     userIdentifierAlert    [3] IMSI    OPTIONAL }
  * ```
  * 

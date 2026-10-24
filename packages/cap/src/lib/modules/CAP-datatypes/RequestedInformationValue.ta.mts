@@ -1,5 +1,5 @@
 import {
-    INTEGER,
+    type INTEGER,
     ASN1Element as _Element,
     ASN1OverflowError,
     ASN1TagClass as _TagClass,

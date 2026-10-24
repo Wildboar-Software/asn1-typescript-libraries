@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -20,8 +20,8 @@ import { ChosenSpeechVersion, _decode_ChosenSpeechVersion, _encode_ChosenSpeechV
  * 
  * ```asn1
  * ChosenRadioResourceInformation ::= SEQUENCE {
- *     chosenChannelInfo    [0] ChosenChannelInfo    OPTIONAL,
- *     chosenSpeechVersion    [1] ChosenSpeechVersion    OPTIONAL,
+ *     chosenChannelInfo    [0] ChosenChannelInfo    type OPTIONAL,
+ *     chosenSpeechVersion    [1] ChosenSpeechVersion    type OPTIONAL,
  *     ...}
  * ```
  * 

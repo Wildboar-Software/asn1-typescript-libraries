@@ -21,7 +21,7 @@ import { InitiateCallRequestArg_Type, _decode_InitiateCallRequestArg_Type, _enco
  *     {SEQUENCE {requestedType           [0]  RequestedType OPTIONAL,
  *                destinationRelatedInfo
  *                  [1]  SEQUENCE SIZE (1..2) OF DestinationRelatedInfo
- *                    OPTIONAL,
+ *                    type OPTIONAL,
  *                securityParameters      [2]  SecurityParameters OPTIONAL,
  *                extensions              [3]  Extensions OPTIONAL,
  *                ...}}

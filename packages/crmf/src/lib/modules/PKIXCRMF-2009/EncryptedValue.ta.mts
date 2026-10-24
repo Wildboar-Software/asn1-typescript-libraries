@@ -2,9 +2,9 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BIT_STRING,
-    OCTET_STRING,
-    OPTIONAL,
+    type BIT_STRING,
+    type OCTET_STRING,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -34,11 +34,11 @@ import {
  *     -- the intended algorithm for which the value will be used
  *     symmAlg       [1] AlgorithmIdentifier{ALGORITHM, {...}}  OPTIONAL,
  *     -- the symmetric algorithm used to encrypt the value
- *     encSymmKey    [2] BIT STRING           OPTIONAL,
+ *     encSymmKey    [2] BIT STRING           type OPTIONAL,
  *     -- the (encrypted) symmetric key used to encrypt the value
  *     keyAlg        [3] AlgorithmIdentifier{ALGORITHM, {...}}  OPTIONAL,
  *     -- algorithm used to encrypt the symmetric key
- *     valueHint     [4] OCTET STRING         OPTIONAL,
+ *     valueHint     [4] OCTET STRING         type OPTIONAL,
  *     -- a brief description or identifier of the encValue content
  *     -- (may be meaningful only to the sending entity, and used only
  *     -- if EncryptedValue might be re-examined by the sending entity

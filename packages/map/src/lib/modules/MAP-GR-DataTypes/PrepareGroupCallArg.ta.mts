@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -34,16 +34,16 @@ import { Ext_TeleserviceCode, _decode_Ext_TeleserviceCode, _encode_Ext_Teleservi
  *     asciCallReference    ASCI-CallReference,
  *     codec-Info    CODEC-Info,
  *     cipheringAlgorithm    CipheringAlgorithm,
- *     groupKeyNumber-Vk-Id    [0] GroupKeyNumber    OPTIONAL,
- *     groupKey    [1] Kc    OPTIONAL, 
+ *     groupKeyNumber-Vk-Id    [0] GroupKeyNumber    type OPTIONAL,
+ *     groupKey    [1] Kc    type OPTIONAL, 
  *     -- this parameter shall not be sent and shall be discarded if received
- *     priority    [2] EMLPP-Priority    OPTIONAL,
- *     uplinkFree    [3] NULL    OPTIONAL,
- *     extensionContainer    [4] ExtensionContainer    OPTIONAL,
+ *     priority    [2] EMLPP-Priority    type OPTIONAL,
+ *     uplinkFree    [3] NULL    type OPTIONAL,
+ *     extensionContainer    [4] ExtensionContainer    type OPTIONAL,
  *     ...,
- *     vstk    [5] VSTK    OPTIONAL,
- *     vstk-rand    [6] VSTK-RAND    OPTIONAL,
- *     talkerChannelParameter    [7] NULL    OPTIONAL,
+ *     vstk    [5] VSTK    type OPTIONAL,
+ *     vstk-rand    [6] VSTK-RAND    type OPTIONAL,
+ *     talkerChannelParameter    [7] NULL    type OPTIONAL,
  *     uplinkReplyIndicator    [8] NULL    OPTIONAL}
  * ```
  * 

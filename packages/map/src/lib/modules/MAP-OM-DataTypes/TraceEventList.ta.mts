@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -26,14 +26,14 @@ import { SGW_EventList, _decode_SGW_EventList, _encode_SGW_EventList } from "../
  * 
  * ```asn1
  * TraceEventList ::= SEQUENCE {
- *     msc-s-List    [0] MSC-S-EventList    OPTIONAL,
- *     mgw-List    [1] MGW-EventList    OPTIONAL,
- *     sgsn-List    [2] SGSN-EventList    OPTIONAL,
- *     ggsn-List    [3] GGSN-EventList    OPTIONAL,
- *     bmsc-List    [4] BMSC-EventList    OPTIONAL,
+ *     msc-s-List    [0] MSC-S-EventList    type OPTIONAL,
+ *     mgw-List    [1] MGW-EventList    type OPTIONAL,
+ *     sgsn-List    [2] SGSN-EventList    type OPTIONAL,
+ *     ggsn-List    [3] GGSN-EventList    type OPTIONAL,
+ *     bmsc-List    [4] BMSC-EventList    type OPTIONAL,
  *     ...,
- *     mme-List    [5] MME-EventList    OPTIONAL,
- *     sgw-List    [6] SGW-EventList    OPTIONAL,
+ *     mme-List    [5] MME-EventList    type OPTIONAL,
+ *     sgw-List    [6] SGW-EventList    type OPTIONAL,
  *     pgw-List    [7] PGW-EventList    OPTIONAL}
  * ```
  * 

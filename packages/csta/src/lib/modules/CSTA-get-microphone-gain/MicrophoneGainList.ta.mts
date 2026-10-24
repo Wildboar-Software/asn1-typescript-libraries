@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import * as $ from "@wildboar/asn1/functional";
-import { OPTIONAL, SEQUENCE, ASN1Element as _Element } from "@wildboar/asn1";
+import type { OPTIONAL, SEQUENCE, ASN1Element as _Element } from "@wildboar/asn1";
 import { MicrophoneGainList_Item, _decode_MicrophoneGainList_Item, _encode_MicrophoneGainList_Item } from "../CSTA-get-microphone-gain/MicrophoneGainList-Item.ta.mjs";
 
 

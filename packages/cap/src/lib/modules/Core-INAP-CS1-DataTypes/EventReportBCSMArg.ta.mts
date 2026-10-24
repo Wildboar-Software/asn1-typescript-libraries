@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -27,8 +27,8 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  * ```asn1
  * EventReportBCSMArg ::= SEQUENCE {
  *      eventTypeBCSM     [0] EventTypeBCSM,
- *      eventSpecificInformationBCSM     [2] EventSpecificInformationBCSM     OPTIONAL,
- *      legID     [3] LegID     OPTIONAL,
+ *      eventSpecificInformationBCSM     [2] EventSpecificInformationBCSM     type OPTIONAL,
+ *      legID     [3] LegID     type OPTIONAL,
  *      miscCallInfo     [4] MiscCallInfo     DEFAULT {messageType request},
  *      extensions     [5] SEQUENCE SIZE(1..numOfExtensions) OF ExtensionField     OPTIONAL
  * --  ...

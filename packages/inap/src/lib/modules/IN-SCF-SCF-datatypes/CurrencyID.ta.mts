@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    PrintableString,
+    type PrintableString,
     ASN1Element as _Element,
     ASN1SizeError,
 } from "@wildboar/asn1";

@@ -2,8 +2,8 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
+    type OPTIONAL,
+    type BOOLEAN,
     SEQUENCE,
     SET,
     ASN1Element as _Element,

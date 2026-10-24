@@ -1,4 +1,4 @@
-import { OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { type OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { AttributeUsage_directoryOperation } from "../InformationFramework/AttributeUsage.ta.mjs";
 

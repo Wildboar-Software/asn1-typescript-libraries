@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -24,8 +24,8 @@ import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Cod
  * Ext-ForwardingInfoFor-CSE ::= SEQUENCE {
  *     ss-Code    [0]    SS-Code,
  *     forwardingFeatureList    [1]    Ext-ForwFeatureList,
- *     notificationToCSE    [2]    NULL    OPTIONAL,
- *     extensionContainer    [3]    ExtensionContainer    OPTIONAL,
+ *     notificationToCSE    [2]    NULL    type OPTIONAL,
+ *     extensionContainer    [3]    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 

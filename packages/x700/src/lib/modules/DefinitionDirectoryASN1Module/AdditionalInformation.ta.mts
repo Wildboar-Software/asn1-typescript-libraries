@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     GraphicString,
     GeneralizedTime,
     ASN1Element as _Element,

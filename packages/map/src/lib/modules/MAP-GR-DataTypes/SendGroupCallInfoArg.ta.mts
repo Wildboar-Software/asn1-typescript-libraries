@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -32,13 +32,13 @@ import { Ext_TeleserviceCode, _decode_Ext_TeleserviceCode, _encode_Ext_Teleservi
  *     requestedInfo    RequestedInfo,
  *     groupId    Long-GroupId, 
  *     teleservice    Ext-TeleserviceCode,
- *     cellId    [0] GlobalCellId    OPTIONAL,
- *     imsi    [1] IMSI    OPTIONAL,
- *     tmsi    [2] TMSI    OPTIONAL,
- *     additionalInfo    [3] AdditionalInfo    OPTIONAL,
- *     talkerPriority    [4] TalkerPriority    OPTIONAL,
- *     cksn    [5] Cksn    OPTIONAL,
- *     extensionContainer    [6] ExtensionContainer    OPTIONAL,
+ *     cellId    [0] GlobalCellId    type OPTIONAL,
+ *     imsi    [1] IMSI    type OPTIONAL,
+ *     tmsi    [2] TMSI    type OPTIONAL,
+ *     additionalInfo    [3] AdditionalInfo    type OPTIONAL,
+ *     talkerPriority    [4] TalkerPriority    type OPTIONAL,
+ *     cksn    [5] Cksn    type OPTIONAL,
+ *     extensionContainer    [6] ExtensionContainer    type OPTIONAL,
  *     ... }
  * ```
  * 

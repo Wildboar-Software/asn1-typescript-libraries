@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -60,23 +60,23 @@ import { VoiceErrorOccured, _decode_VoiceErrorOccured, _encode_VoiceErrorOccured
  * 
  * ```asn1
  * VoiceUnitEvtsList ::= SEQUENCE
- * {     bookmarkReached            [ 7] IMPLICIT BookmarkReached            OPTIONAL,
- *     completed            [ 8] IMPLICIT Completed                OPTIONAL,
- *     dtmfDetected            [ 9] IMPLICIT DtmfDetected            OPTIONAL,
- *     emptied                [10] IMPLICIT Emptied                OPTIONAL,
- *     interruptionDetected        [11] IMPLICIT InterruptionDetected        OPTIONAL,
- *     notRecognized            [12] IMPLICIT NotRecognized            OPTIONAL,
- *     play                 [ 0] IMPLICIT Play                 OPTIONAL,
- *     record                 [ 1] IMPLICIT Record                 OPTIONAL,
- *     recognized            [13] IMPLICIT Recognized            OPTIONAL,
- *     review                 [ 2] IMPLICIT ReviewEvent             OPTIONAL,
- *     started                [14] IMPLICIT Started                OPTIONAL,
- *     silenceTimeoutExpired        [15] IMPLICIT SilenceTimeoutExpired        OPTIONAL,
- *     speechDetected            [16] IMPLICIT SpeechDetected            OPTIONAL,
- *     stop                 [ 3] IMPLICIT StopEvent             OPTIONAL,
- *     suspendPlay             [ 4] IMPLICIT SuspendPlay             OPTIONAL,
- *     suspendRecord             [ 5] IMPLICIT SuspendRecord             OPTIONAL,
- *     voiceAttribChanged         [ 6] IMPLICIT VoiceAttribChanged        OPTIONAL,
+ * {     bookmarkReached            [ 7] IMPLICIT BookmarkReached            type OPTIONAL,
+ *     completed            [ 8] IMPLICIT Completed                type OPTIONAL,
+ *     dtmfDetected            [ 9] IMPLICIT DtmfDetected            type OPTIONAL,
+ *     emptied                [10] IMPLICIT Emptied                type OPTIONAL,
+ *     interruptionDetected        [11] IMPLICIT InterruptionDetected        type OPTIONAL,
+ *     notRecognized            [12] IMPLICIT NotRecognized            type OPTIONAL,
+ *     play                 [ 0] IMPLICIT Play                 type OPTIONAL,
+ *     record                 [ 1] IMPLICIT Record                 type OPTIONAL,
+ *     recognized            [13] IMPLICIT Recognized            type OPTIONAL,
+ *     review                 [ 2] IMPLICIT ReviewEvent             type OPTIONAL,
+ *     started                [14] IMPLICIT Started                type OPTIONAL,
+ *     silenceTimeoutExpired        [15] IMPLICIT SilenceTimeoutExpired        type OPTIONAL,
+ *     speechDetected            [16] IMPLICIT SpeechDetected            type OPTIONAL,
+ *     stop                 [ 3] IMPLICIT StopEvent             type OPTIONAL,
+ *     suspendPlay             [ 4] IMPLICIT SuspendPlay             type OPTIONAL,
+ *     suspendRecord             [ 5] IMPLICIT SuspendRecord             type OPTIONAL,
+ *     voiceAttribChanged         [ 6] IMPLICIT VoiceAttribChanged        type OPTIONAL,
  *     voiceErrorOccured        [17] IMPLICIT VoiceErrorOccured            OPTIONAL }
  * ```
  * 

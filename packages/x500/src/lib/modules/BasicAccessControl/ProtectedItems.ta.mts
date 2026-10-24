@@ -2,10 +2,10 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
+    type INTEGER,
     NULL,
-    OPTIONAL,
-    OBJECT_IDENTIFIER,
+    type OPTIONAL,
+    type OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -64,22 +64,22 @@ import {
  *   entry                          [0]  NULL OPTIONAL,
  *   allUserAttributeTypes          [1]  NULL OPTIONAL,
  *   attributeType                  [2]  SET SIZE (1..MAX) OF AttributeType
- *                                         OPTIONAL,
+ *                                         type OPTIONAL,
  *   allAttributeValues             [3]  SET SIZE (1..MAX) OF AttributeType
- *                                         OPTIONAL,
+ *                                         type OPTIONAL,
  *   allUserAttributeTypesAndValues [4]  NULL OPTIONAL,
  *   attributeValue                 [5]  SET SIZE (1..MAX) OF AttributeTypeAndValue
- *                                         OPTIONAL,
+ *                                         type OPTIONAL,
  *   selfValue                      [6]  SET SIZE (1..MAX) OF AttributeType
- *                                         OPTIONAL,
+ *                                         type OPTIONAL,
  *   rangeOfValues                  [7]  Filter OPTIONAL,
  *   maxValueCount                  [8]  SET SIZE (1..MAX) OF MaxValueCount
- *                                         OPTIONAL,
+ *                                         type OPTIONAL,
  *   maxImmSub                      [9]  INTEGER OPTIONAL,
  *   restrictedBy                   [10] SET SIZE (1..MAX) OF RestrictedValue
- *                                         OPTIONAL,
+ *                                         type OPTIONAL,
  *   contexts                       [11] SET SIZE (1..MAX) OF ContextAssertion
- *                                         OPTIONAL,
+ *                                         type OPTIONAL,
  *   classes                        [12] Refinement OPTIONAL,
  *   entryMethods                   [30] SET OF OBJECT IDENTIFIER OPTIONAL,
  *   ... }

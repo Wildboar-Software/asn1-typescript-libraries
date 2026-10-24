@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
+    type OPTIONAL,
+    type INTEGER,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -31,8 +31,8 @@ import { type PDPID, _decode_PDPID, _encode_PDPID } from "../CAP-datatypes/PDPID
  * ```asn1
  * ApplyChargingGPRSArg ::= SEQUENCE { 
  *     chargingCharacteristics        [0] ChargingCharacteristics,
- *     tariffSwitchInterval        [1] INTEGER (1..86400)            OPTIONAL,
- *     pDPID                [2] PDPID                    OPTIONAL,
+ *     tariffSwitchInterval        [1] INTEGER (1..86400)            type OPTIONAL,
+ *     pDPID                [2] PDPID                    type OPTIONAL,
  *     ...
  *     }
  * ```

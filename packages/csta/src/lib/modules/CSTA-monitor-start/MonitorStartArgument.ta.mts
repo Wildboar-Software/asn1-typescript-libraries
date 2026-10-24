@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -44,9 +44,9 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * MonitorStartArgument ::= SEQUENCE
  * {     monitorObject             MonitorObject,
- *     requestedMonitorFilter         [0] IMPLICIT MonitorFilter     OPTIONAL,
- *     monitorType             MonitorType             OPTIONAL,
- *     requestedMonitorMediaClass     [1] IMPLICIT MonitorMediaClass     OPTIONAL,
+ *     requestedMonitorFilter         [0] IMPLICIT MonitorFilter     type OPTIONAL,
+ *     monitorType             MonitorType             type OPTIONAL,
+ *     requestedMonitorMediaClass     [1] IMPLICIT MonitorMediaClass     type OPTIONAL,
  *     extensions             CSTACommonArguments         OPTIONAL }
  * ```
  * 

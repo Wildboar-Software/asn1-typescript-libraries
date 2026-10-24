@@ -32,7 +32,7 @@ import {
  *
  * ```asn1
  * ERROR ::= CLASS {
- *   &ParameterType          OPTIONAL,
+ *   &ParameterType          type OPTIONAL,
  *   &parameterTypeOptional  BOOLEAN OPTIONAL,
  *   &ErrorPriority          Priority OPTIONAL,
  *   &errorCode              Code UNIQUE OPTIONAL

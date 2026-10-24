@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
+    type BOOLEAN,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";

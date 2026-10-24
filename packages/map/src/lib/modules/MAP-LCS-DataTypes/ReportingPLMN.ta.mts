@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -21,8 +21,8 @@ import { RAN_Technology, _decode_RAN_Technology, _encode_RAN_Technology, _enum_f
  * ```asn1
  * ReportingPLMN ::= SEQUENCE {
  *     plmn-Id        [0] PLMN-Id,
- *     ran-Technology        [1] RAN-Technology    OPTIONAL,
- *     ran-PeriodicLocationSupport    [2] NULL        OPTIONAL,
+ *     ran-Technology        [1] RAN-Technology    type OPTIONAL,
+ *     ran-PeriodicLocationSupport    [2] NULL        type OPTIONAL,
  *     ...}
  * ```
  * 

@@ -28,7 +28,7 @@ import { AttributeValueChangeDefinition_Item, _decode_AttributeValueChangeDefini
  *     SEQUENCE {attributeId        CMIP-ATTRIBUTE.&id({AttributeSet}),
  *               oldAttributeValue
  *                 [1]  CMIP-ATTRIBUTE.&Value({AttributeSet}{@.attributeId})
- *                   OPTIONAL,
+ *                   type OPTIONAL,
  *               newAttributeValue
  *                 [2]  CMIP-ATTRIBUTE.&Value({AttributeSet}{@.attributeId})
  *     }

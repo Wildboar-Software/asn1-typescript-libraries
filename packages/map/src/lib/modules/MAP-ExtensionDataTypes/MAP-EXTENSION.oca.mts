@@ -18,7 +18,7 @@ import * as $ from "@wildboar/asn1/functional";
  * 
  * ```asn1
  * MAP-EXTENSION ::= CLASS {
- *     &ExtensionType    OPTIONAL,
+ *     &ExtensionType    type OPTIONAL,
  *     &extensionId    OBJECT IDENTIFIER }
  * ```
  * 

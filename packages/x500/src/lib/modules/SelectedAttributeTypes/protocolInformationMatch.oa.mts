@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OCTET_STRING } from "@wildboar/asn1";
+import { type OCTET_STRING } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { id_mr_protocolInformationMatch } from "../SelectedAttributeTypes/id-mr-protocolInformationMatch.va.mjs";

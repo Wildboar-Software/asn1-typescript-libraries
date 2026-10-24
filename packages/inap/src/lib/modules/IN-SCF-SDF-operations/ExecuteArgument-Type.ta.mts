@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
-    BOOLEAN,
-    INTEGER,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
+    type BIT_STRING,
+    type BOOLEAN,
+    type INTEGER,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";

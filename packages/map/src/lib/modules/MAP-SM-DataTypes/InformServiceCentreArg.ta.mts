@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -23,17 +23,17 @@ import { MW_Status, _decode_MW_Status, _encode_MW_Status } from "../MAP-SM-DataT
  * 
  * ```asn1
  * InformServiceCentreArg ::= SEQUENCE {
- *     storedMSISDN    ISDN-AddressString    OPTIONAL,
- *     mw-Status    MW-Status    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     storedMSISDN    ISDN-AddressString    type OPTIONAL,
+ *     mw-Status    MW-Status    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ... ,
- *     absentSubscriberDiagnosticSM    AbsentSubscriberDiagnosticSM    OPTIONAL,
- *     additionalAbsentSubscriberDiagnosticSM    [0]    AbsentSubscriberDiagnosticSM    OPTIONAL,
+ *     absentSubscriberDiagnosticSM    AbsentSubscriberDiagnosticSM    type OPTIONAL,
+ *     additionalAbsentSubscriberDiagnosticSM    [0]    AbsentSubscriberDiagnosticSM    type OPTIONAL,
  *     -- additionalAbsentSubscriberDiagnosticSM may be present only if 
  *     -- absentSubscriberDiagnosticSM is present.
  *     -- if included, additionalAbsentSubscriberDiagnosticSM is for GPRS and
  *     -- absentSubscriberDiagnosticSM is for non-GPRS
- *     smsf3gppAbsentSubscriberDiagnosticSM    [1] AbsentSubscriberDiagnosticSM    OPTIONAL,
+ *     smsf3gppAbsentSubscriberDiagnosticSM    [1] AbsentSubscriberDiagnosticSM    type OPTIONAL,
  *     smsfNon3gppAbsentSubscriberDiagnosticSM    [2] AbsentSubscriberDiagnosticSM    OPTIONAL }
  * ```
  * 

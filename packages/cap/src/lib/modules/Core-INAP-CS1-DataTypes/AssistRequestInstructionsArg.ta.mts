@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -26,8 +26,8 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  * ```asn1
  * AssistRequestInstructionsArg ::= SEQUENCE {
  *      correlationID     [0] CorrelationID,
- *      iPAvailable     [1] IPAvailable     OPTIONAL,
- *      iPSSPCapabilities     [2] IPSSPCapabilities     OPTIONAL,
+ *      iPAvailable     [1] IPAvailable     type OPTIONAL,
+ *      iPSSPCapabilities     [2] IPSSPCapabilities     type OPTIONAL,
  *      extensions     [3] SEQUENCE SIZE(1..numOfExtensions) OF ExtensionField     OPTIONAL
  * --  ...
  *      }

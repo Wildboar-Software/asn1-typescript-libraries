@@ -2,9 +2,9 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING,
-    OPTIONAL,
-    UTF8String,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type UTF8String,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DDO, _decode_DDO, _encode_DDO } from "../PKCS-15/DDO.ta.mjs";

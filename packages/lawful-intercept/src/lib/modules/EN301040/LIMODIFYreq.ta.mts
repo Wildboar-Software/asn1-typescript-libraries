@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    INTEGER,
+    type INTEGER,
     UTCTime,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,

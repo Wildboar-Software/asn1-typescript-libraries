@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    OBJECT_IDENTIFIER,
-    VisibleString,
+    type BOOLEAN,
+    type INTEGER,
+    type BIT_STRING,
+    type OCTET_STRING,
+    type OBJECT_IDENTIFIER,
+    type VisibleString,
     GeneralizedTime,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,

@@ -2,10 +2,10 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
+    type OPTIONAL,
+    type INTEGER,
     SEQUENCE,
-    IA5String,
+    type IA5String,
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import { DisplayList_Item, _decode_DisplayList_Item, _encode_DisplayList_Item } from "../CSTA-get-display/DisplayList-Item.ta.mjs";
@@ -28,11 +28,11 @@ import { DisplayList_Item, _decode_DisplayList_Item, _encode_DisplayList_Item } 
  * {    displayID            DisplayID,
  *     logicalRows            INTEGER,
  *     logicalColumns            INTEGER,
- *     physicalRows            [0] IMPLICIT INTEGER             OPTIONAL,
- *     physicalColumns            [1] IMPLICIT INTEGER             OPTIONAL,
- *     physicalBaseRowNumber        [2] IMPLICIT INTEGER             OPTIONAL,
- *     physicalBaseColumnNumber    [3] IMPLICIT INTEGER             OPTIONAL,
- *     characterSet            CharacterSet                OPTIONAL,
+ *     physicalRows            [0] IMPLICIT INTEGER             type OPTIONAL,
+ *     physicalColumns            [1] IMPLICIT INTEGER             type OPTIONAL,
+ *     physicalBaseRowNumber        [2] IMPLICIT INTEGER             type OPTIONAL,
+ *     physicalBaseColumnNumber    [3] IMPLICIT INTEGER             type OPTIONAL,
+ *     characterSet            CharacterSet                type OPTIONAL,
  *     contentsOfDisplay        IA5String }
  * ```
  */

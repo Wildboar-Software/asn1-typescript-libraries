@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -21,9 +21,9 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * 
  * ```asn1
  * CamelRoutingInfo ::= SEQUENCE {
- *     forwardingData    ForwardingData    OPTIONAL,
+ *     forwardingData    ForwardingData    type OPTIONAL,
  *     gmscCamelSubscriptionInfo    [0] GmscCamelSubscriptionInfo,
- *     extensionContainer    [1] ExtensionContainer    OPTIONAL,
+ *     extensionContainer    [1] ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 

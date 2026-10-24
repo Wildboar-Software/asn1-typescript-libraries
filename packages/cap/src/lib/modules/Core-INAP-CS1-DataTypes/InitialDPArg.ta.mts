@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -40,22 +40,22 @@ import { RedirectionInformation, _decode_RedirectionInformation, _encode_Redirec
  * ```asn1
  * InitialDPArg ::= SEQUENCE {
  *      serviceKey     [0] ServiceKey,
- *      calledPartyNumber     [2] CalledPartyNumber     OPTIONAL,
- *      callingPartyNumber     [3] CallingPartyNumber     OPTIONAL,
- *      callingPartysCategory     [5] CallingPartysCategory     OPTIONAL,
- *      cGEncountered     [7] CGEncountered     OPTIONAL,
- *      iPSSPCapabilities     [8] IPSSPCapabilities     OPTIONAL,
- *      iPAvailable     [9] IPAvailable     OPTIONAL,
- *      locationNumber     [10] LocationNumber     OPTIONAL,
- *      originalCalledPartyID     [12] OriginalCalledPartyID     OPTIONAL,
- *      extensions     [15] SEQUENCE SIZE(1..numOfExtensions) OF ExtensionField     OPTIONAL,
- *      highLayerCompatibility     [23] HighLayerCompatibility     OPTIONAL,
- *      serviceInteractionIndicators     [24] ServiceInteractionIndicators     OPTIONAL,
- *      additionalCallingPartyNumber     [25] AdditionalCallingPartyNumber     OPTIONAL,
- *      forwardCallIndicators     [26] ForwardCallIndicators     OPTIONAL,
- *      bearerCapability     [27] BearerCapability     OPTIONAL,
- *      eventTypeBCSM     [28] EventTypeBCSM     OPTIONAL,
- *      redirectingPartyID     [29] RedirectingPartyID     OPTIONAL,
+ *      calledPartyNumber     [2] CalledPartyNumber     type OPTIONAL,
+ *      callingPartyNumber     [3] CallingPartyNumber     type OPTIONAL,
+ *      callingPartysCategory     [5] CallingPartysCategory     type OPTIONAL,
+ *      cGEncountered     [7] CGEncountered     type OPTIONAL,
+ *      iPSSPCapabilities     [8] IPSSPCapabilities     type OPTIONAL,
+ *      iPAvailable     [9] IPAvailable     type OPTIONAL,
+ *      locationNumber     [10] LocationNumber     type OPTIONAL,
+ *      originalCalledPartyID     [12] OriginalCalledPartyID     type OPTIONAL,
+ *      extensions     [15] SEQUENCE SIZE(1..numOfExtensions) OF ExtensionField     type OPTIONAL,
+ *      highLayerCompatibility     [23] HighLayerCompatibility     type OPTIONAL,
+ *      serviceInteractionIndicators     [24] ServiceInteractionIndicators     type OPTIONAL,
+ *      additionalCallingPartyNumber     [25] AdditionalCallingPartyNumber     type OPTIONAL,
+ *      forwardCallIndicators     [26] ForwardCallIndicators     type OPTIONAL,
+ *      bearerCapability     [27] BearerCapability     type OPTIONAL,
+ *      eventTypeBCSM     [28] EventTypeBCSM     type OPTIONAL,
+ *      redirectingPartyID     [29] RedirectingPartyID     type OPTIONAL,
  *      redirectionInformation     [30] RedirectionInformation     OPTIONAL
  * --  ...
  *      }

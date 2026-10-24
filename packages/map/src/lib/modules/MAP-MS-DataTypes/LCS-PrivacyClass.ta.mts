@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -30,21 +30,21 @@ import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Cod
  * LCS-PrivacyClass ::= SEQUENCE {
  *     ss-Code    SS-Code,
  *     ss-Status    Ext-SS-Status,
- *     notificationToMSUser    [0] NotificationToMSUser    OPTIONAL,
+ *     notificationToMSUser    [0] NotificationToMSUser    type OPTIONAL,
  *     -- notificationToMSUser may be sent only for SS-codes callSessionRelated
  *     -- and callSessionUnrelated. If not received for SS-codes callSessionRelated
  *     -- and callSessionUnrelated,
  *     -- the default values according to 3GPP TS 23.271 shall be assumed.
- *     externalClientList    [1] ExternalClientList    OPTIONAL,
+ *     externalClientList    [1] ExternalClientList    type OPTIONAL,
  *     -- externalClientList may be sent only for SS-code callSessionUnrelated to a
  *     -- visited node that does not support LCS Release 4 or later versions.
  *     -- externalClientList may be sent only for SS-codes callSessionUnrelated and
  *     -- callSessionRelated to a visited node that supports LCS Release 4 or later versions.
- *     plmnClientList    [2] PLMNClientList    OPTIONAL,
+ *     plmnClientList    [2] PLMNClientList    type OPTIONAL,
  *     -- plmnClientList may be sent only for SS-code plmnoperator.
- *     extensionContainer    [3] ExtensionContainer    OPTIONAL,
+ *     extensionContainer    [3] ExtensionContainer    type OPTIONAL,
  *     ...,
- *     ext-externalClientList    [4] Ext-ExternalClientList    OPTIONAL,
+ *     ext-externalClientList    [4] Ext-ExternalClientList    type OPTIONAL,
  *     -- Ext-externalClientList may be sent only if the visited node supports LCS Release 4 or
  *     -- later versions, the user did specify more than 5 clients, and White Book SCCP is used.
  *     serviceTypeList    [5]    ServiceTypeList    OPTIONAL

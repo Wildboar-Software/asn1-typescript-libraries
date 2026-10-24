@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import * as $ from "@wildboar/asn1/functional";
-import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
+import { type BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 
 
 

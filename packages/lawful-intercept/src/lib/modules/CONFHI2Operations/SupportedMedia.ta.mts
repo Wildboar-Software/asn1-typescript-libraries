@@ -2,7 +2,7 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING,
+    type OCTET_STRING,
     OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -23,10 +23,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ```asn1
  * SupportedMedia ::= SEQUENCE
  * {
- *         confServerSideSDP        [1] OCTET STRING     OPTIONAL,  -- include SDP information
+ *         confServerSideSDP        [1] OCTET STRING     type OPTIONAL,  -- include SDP information
  *             -- describing Conf Server Side characteristics.
  * 
- *         confUserSideSDP            [2] OCTET STRING     OPTIONAL,  -- include SDP information
+ *         confUserSideSDP            [2] OCTET STRING     type OPTIONAL,  -- include SDP information
  *             -- describing Conf User Side characteristics
  * 
  *     ...

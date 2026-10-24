@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -44,14 +44,14 @@ import { CallCharacteristics, _decode_CallCharacteristics, _encode_CallCharacter
  * ```asn1
  * AssociateDataArgument ::= SEQUENCE
  * {    existingCall            ConnectionID,
- *     accountCode            [0] IMPLICIT AccountInfo        OPTIONAL,
- *     authCode            [1] IMPLICIT AuthCode            OPTIONAL,
- *     correlatorData            [2] IMPLICIT CorrelatorData        OPTIONAL,
- *     callQualifyingData        [3] IMPLICIT CallQualifyingData        OPTIONAL,
- *     callCharacteristics        [4] IMPLICIT CallCharacteristics    OPTIONAL,
- *     subjectOfCall            [5] IMPLICIT SubjectOfCall        OPTIONAL,
- *     languagePreferences        [6] IMPLICIT LanguagePreferences    OPTIONAL,
- *     deviceInfo            [7] IMPLICIT DeviceID            OPTIONAL,
+ *     accountCode            [0] IMPLICIT AccountInfo        type OPTIONAL,
+ *     authCode            [1] IMPLICIT AuthCode            type OPTIONAL,
+ *     correlatorData            [2] IMPLICIT CorrelatorData        type OPTIONAL,
+ *     callQualifyingData        [3] IMPLICIT CallQualifyingData        type OPTIONAL,
+ *     callCharacteristics        [4] IMPLICIT CallCharacteristics    type OPTIONAL,
+ *     subjectOfCall            [5] IMPLICIT SubjectOfCall        type OPTIONAL,
+ *     languagePreferences        [6] IMPLICIT LanguagePreferences    type OPTIONAL,
+ *     deviceInfo            [7] IMPLICIT DeviceID            type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 

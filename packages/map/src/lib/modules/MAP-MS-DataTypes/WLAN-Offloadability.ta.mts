@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -21,9 +21,9 @@ import { WLAN_Offloadability_Indication, _decode_WLAN_Offloadability_Indication,
  * 
  * ```asn1
  * WLAN-Offloadability ::= SEQUENCE {
- *     wlan-offloadability-EUTRAN    [0] WLAN-Offloadability-Indication     OPTIONAL,
- *     wlan-offloadability-UTRAN    [1] WLAN-Offloadability-Indication    OPTIONAL,
- *     extensionContainer    [2] ExtensionContainer    OPTIONAL,
+ *     wlan-offloadability-EUTRAN    [0] WLAN-Offloadability-Indication     type OPTIONAL,
+ *     wlan-offloadability-UTRAN    [1] WLAN-Offloadability-Indication    type OPTIONAL,
+ *     extensionContainer    [2] ExtensionContainer    type OPTIONAL,
  *     ... }
  * ```
  * 

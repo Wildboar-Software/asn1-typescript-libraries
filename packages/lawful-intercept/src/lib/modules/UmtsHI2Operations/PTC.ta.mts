@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    INTEGER,
-    OPTIONAL,
-    UTF8String,
+    type BOOLEAN,
+    type INTEGER,
+    type OPTIONAL,
+    type UTF8String,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError
@@ -77,20 +77,20 @@ import { TalkburstControlSetting, _decode_TalkburstControlSetting, _encode_Talkb
  * ```asn1
  * PTC ::= SEQUENCE {
  *     abandonCause                [1] UTF8String OPTIONAL,
- *     accessPolicyFailure        [2] UTF8String    OPTIONAL,
+ *     accessPolicyFailure        [2] UTF8String    type OPTIONAL,
  *     accessPolicyType            [3] AccessPolicyType OPTIONAL,
  *     alertIndicator                [5] AlertIndicator OPTIONAL,
  *     associatePresenceStatus    [6] AssociatePresenceStatus OPTIONAL,
  *     bearer-capability            [7] UTF8String OPTIONAL,
  *         -- identifies the Bearer capability information element (value part)
- *     broadcastIndicator            [8] BOOLEAN    OPTIONAL,
+ *     broadcastIndicator            [8] BOOLEAN    type OPTIONAL,
  *     -- default False, true indicates this is a braodcast to a group
  *     contactID                      [9] UTF8String OPTIONAL,
  *     emergency                     [10] Emergency OPTIONAL,
  *     emergencyGroupState        [11] EmergencyGroupState OPTIONAL,
  *     timeStamp                    [12] TimeStamp,
  *     pTCType                        [13] PTCType OPTIONAL,
- *     failureCode                    [14] UTF8String    OPTIONAL,
+ *     failureCode                    [14] UTF8String    type OPTIONAL,
  *     floorActivity                [15] FloorActivity OPTIONAL,
  *     floorSpeakerID                [16] PTCAddress OPTIONAL,
  *     groupAdSender                [17] UTF8String OPTIONAL,
@@ -143,7 +143,7 @@ import { TalkburstControlSetting, _decode_TalkburstControlSetting, _encode_Talkb
  *     registrationOutcome        [58] RegistrationOutcome OPTIONAL,
  *     retrieveID                    [59] UTF8String OPTIONAL,
  *     rTPSetting                    [60] RTPSetting OPTIONAL,
- *     talkBurstPriority            [61] Priority-Level    OPTIONAL,
+ *     talkBurstPriority            [61] Priority-Level    type OPTIONAL,
  *     talkBurstReason                [62] Talk-burst-reason-code OPTIONAL,
  *     -- Talk-burst-reason-code Defined according to the rules and procedures
  *     -- in (OMA-PoC-AD [97])

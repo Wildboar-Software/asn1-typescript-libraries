@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    EXTERNAL,
-    OPTIONAL,
+    type EXTERNAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";

@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -32,9 +32,9 @@ import { PartiallyInService, _decode_PartiallyInService, _encode_PartiallyInServ
  * 
  * ```asn1
  * DeviceMaintEvtsList ::= SEQUENCE
- * {     backInService             [0] IMPLICIT     BackInService         OPTIONAL,
- *     deviceCapsChanged         [1] IMPLICIT     DeviceCapsChanged     OPTIONAL,
- *     outOfService             [2] IMPLICIT     OutOfService         OPTIONAL,
+ * {     backInService             [0] IMPLICIT     BackInService         type OPTIONAL,
+ *     deviceCapsChanged         [1] IMPLICIT     DeviceCapsChanged     type OPTIONAL,
+ *     outOfService             [2] IMPLICIT     OutOfService         type OPTIONAL,
  *     partiallyInService        [3] IMPLICIT    PartiallyInService    OPTIONAL }
  * ```
  * 

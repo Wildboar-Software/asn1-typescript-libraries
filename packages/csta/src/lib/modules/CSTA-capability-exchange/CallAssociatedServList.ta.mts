@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -36,11 +36,11 @@ import { SendUserInformation, _decode_SendUserInformation, _encode_SendUserInfor
  * 
  * ```asn1
  * CallAssociatedServList ::= SEQUENCE
- * {     associateData             [0] IMPLICIT     AssociateData             OPTIONAL,
- *     cancelTelephonyTones         [1] IMPLICIT     CancelTelephonyTones         OPTIONAL,
- *     changeConnectionInformation    [5] IMPLICIT     ChangeConnectionInformation    OPTIONAL,
- *     generateDigits             [2] IMPLICIT     GenerateDigits             OPTIONAL,
- *     generateTelephonyTones         [3] IMPLICIT     GenerateTelephonyTones         OPTIONAL,
+ * {     associateData             [0] IMPLICIT     AssociateData             type OPTIONAL,
+ *     cancelTelephonyTones         [1] IMPLICIT     CancelTelephonyTones         type OPTIONAL,
+ *     changeConnectionInformation    [5] IMPLICIT     ChangeConnectionInformation    type OPTIONAL,
+ *     generateDigits             [2] IMPLICIT     GenerateDigits             type OPTIONAL,
+ *     generateTelephonyTones         [3] IMPLICIT     GenerateTelephonyTones         type OPTIONAL,
  *     sendUserInformation         [4] IMPLICIT     SendUserInformation         OPTIONAL }
  * ```
  * 

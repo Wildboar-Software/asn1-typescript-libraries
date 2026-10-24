@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -31,7 +31,7 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  *     signalInfo    SignalInfo,
  *     -- Information about the internal structure is given in
  *     -- clause 7.6.9.
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     -- extensionContainer must not be used in version 2
  *     ...}
  * ```

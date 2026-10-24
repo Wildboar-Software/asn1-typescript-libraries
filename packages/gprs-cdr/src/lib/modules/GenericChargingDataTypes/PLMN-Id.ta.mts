@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
+    type OCTET_STRING,
     ASN1Element as _Element,
     ASN1SizeError
 } from "@wildboar/asn1";

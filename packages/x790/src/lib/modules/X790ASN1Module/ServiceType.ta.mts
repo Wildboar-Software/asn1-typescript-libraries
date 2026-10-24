@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OBJECT_IDENTIFIER,
-    PrintableString,
+    type INTEGER,
+    type OBJECT_IDENTIFIER,
+    type PrintableString,
     ASN1Element as _Element,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";

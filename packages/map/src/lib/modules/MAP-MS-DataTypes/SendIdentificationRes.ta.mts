@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -26,15 +26,15 @@ import { CurrentSecurityContext, _decode_CurrentSecurityContext, _encode_Current
  * 
  * ```asn1
  * SendIdentificationRes ::= [3] SEQUENCE {
- *     imsi    IMSI    OPTIONAL,
+ *     imsi    IMSI    type OPTIONAL,
  *     -- IMSI shall be present in the first (or only) service response of a dialogue.
  *     -- If multiple service requests are present in a dialogue then IMSI
  *     -- shall not be present in any service response other than the first one.
- *     authenticationSetList    AuthenticationSetList    OPTIONAL,
- *     currentSecurityContext    [2]CurrentSecurityContext    OPTIONAL,
- *     extensionContainer    [3] ExtensionContainer    OPTIONAL,
+ *     authenticationSetList    AuthenticationSetList    type OPTIONAL,
+ *     currentSecurityContext    [2]CurrentSecurityContext    type OPTIONAL,
+ *     extensionContainer    [3] ExtensionContainer    type OPTIONAL,
  *     ...,
- *     lastUsedLtePLMN-Id    [4] PLMN-Id    OPTIONAL,
+ *     lastUsedLtePLMN-Id    [4] PLMN-Id    type OPTIONAL,
  *     mtCallPendingFlag    [5]    NULL    OPTIONAL }
  * ```
  * 

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OBJECT_IDENTIFIER,
+    type INTEGER,
+    type OBJECT_IDENTIFIER,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -46,16 +46,16 @@ import {
  * ```asn1
  * INTERACTIVE-OPERATION ::= CLASS {
  *   &id                INTEGER (0..MAX),
- *   &content-req       CONTENT-TYPE.&id          OPTIONAL,
- *   &content-rsp       CONTENT-TYPE.&id          OPTIONAL,
- *   &content-err       CONTENT-TYPE.&id          OPTIONAL,
+ *   &content-req       CONTENT-TYPE.&id          type OPTIONAL,
+ *   &content-rsp       CONTENT-TYPE.&id          type OPTIONAL,
+ *   &content-err       CONTENT-TYPE.&id          type OPTIONAL,
  *   &sessionType       SessionType,
  *   &requirements      Requirements              DEFAULT none,
- *   &Voice-options                               OPTIONAL,
- *   &Video-options                               OPTIONAL,
+ *   &Voice-options                               type OPTIONAL,
+ *   &Video-options                               type OPTIONAL,
  *   &Request,
- *   &Response                                    OPTIONAL,
- *   &Error                                       OPTIONAL,
+ *   &Response                                    type OPTIONAL,
+ *   &Error                                       type OPTIONAL,
  *   &exchangeMode      ExchangeMode              DEFAULT async }
  * WITH SYNTAX {
  *   OPERATION-ID       &id

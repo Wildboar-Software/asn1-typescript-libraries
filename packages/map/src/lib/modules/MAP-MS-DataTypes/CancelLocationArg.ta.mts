@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -34,15 +34,15 @@ import { TypeOfUpdate, _decode_TypeOfUpdate, _encode_TypeOfUpdate, _enum_for_Typ
  * ```asn1
  * CancelLocationArg ::= [3] SEQUENCE {
  *     identity    Identity,
- *     cancellationType    CancellationType    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     cancellationType    CancellationType    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     typeOfUpdate    [0] TypeOfUpdate    OPTIONAL,
- *     mtrf-SupportedAndAuthorized    [1] NULL    OPTIONAL,
- *     mtrf-SupportedAndNotAuthorized    [2] NULL    OPTIONAL,
- *     newMSC-Number    [3] ISDN-AddressString    OPTIONAL,
- *     newVLR-Number    [4] ISDN-AddressString    OPTIONAL,
- *     new-lmsi    [5] LMSI    OPTIONAL,
+ *     typeOfUpdate    [0] TypeOfUpdate    type OPTIONAL,
+ *     mtrf-SupportedAndAuthorized    [1] NULL    type OPTIONAL,
+ *     mtrf-SupportedAndNotAuthorized    [2] NULL    type OPTIONAL,
+ *     newMSC-Number    [3] ISDN-AddressString    type OPTIONAL,
+ *     newVLR-Number    [4] ISDN-AddressString    type OPTIONAL,
+ *     new-lmsi    [5] LMSI    type OPTIONAL,
  *     reattach-Required    [6] NULL    OPTIONAL
  *     }
  * ```

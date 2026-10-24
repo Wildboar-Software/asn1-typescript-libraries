@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -25,10 +25,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * ```asn1
  * UpdateGprsLocationRes ::= SEQUENCE {
  *     hlr-Number    ISDN-AddressString,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     add-Capability    NULL    OPTIONAL,
- *     sgsn-mmeSeparationSupported    [0] NULL    OPTIONAL,
+ *     add-Capability    NULL    type OPTIONAL,
+ *     sgsn-mmeSeparationSupported    [0] NULL    type OPTIONAL,
  *     mmeRegisteredforSMS    [1] NULL    OPTIONAL }
  * ```
  * 

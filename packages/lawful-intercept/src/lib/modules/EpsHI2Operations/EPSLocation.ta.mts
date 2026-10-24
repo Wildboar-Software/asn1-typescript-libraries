@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    OPTIONAL,
+    type OCTET_STRING,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
@@ -38,12 +38,12 @@ import { EPSLocation_uELocationTimestamp, _decode_EPSLocation_uELocationTimestam
  *         -- see 3GPP TS 29.274 [46] parameters coding rules defined for EPS-GTPV2-SpecificParameters.
  *     gsmLocation            [2] GSMLocation OPTIONAL,
  *      umtsLocation        [3] UMTSLocation OPTIONAL,
- *     olduserLocationInfo    [4] OCTET STRING (SIZE (1..39))    OPTIONAL,
+ *     olduserLocationInfo    [4] OCTET STRING (SIZE (1..39))    type OPTIONAL,
  *         -- coded in the same way as userLocationInfo
- *     lastVisitedTAI        [5] OCTET STRING (SIZE (1..5))    OPTIONAL,
+ *     lastVisitedTAI        [5] OCTET STRING (SIZE (1..5))    type OPTIONAL,
  *         -- the Tracking Area Identity is coded in accordance with the TAI field in 3GPP TS 29.274
  *         -- [46].
- *     tAIlist                [6] OCTET STRING (SIZE (7..97))    OPTIONAL,
+ *     tAIlist                [6] OCTET STRING (SIZE (7..97))    type OPTIONAL,
  *        -- the TAI List is coded acording to 3GPP TS 24.301 [47], without the TAI list IEI
  *     ...,
  *     threeGPP2Bsid        [7] OCTET STRING (SIZE (1..12)) OPTIONAL,

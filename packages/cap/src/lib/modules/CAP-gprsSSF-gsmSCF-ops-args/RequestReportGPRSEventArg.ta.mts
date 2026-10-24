@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -28,7 +28,7 @@ import { type PDPID, _decode_PDPID, _encode_PDPID } from "../CAP-datatypes/PDPID
  * ```asn1
  * RequestReportGPRSEventArg {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *     gPRSEvent                [0] SEQUENCE SIZE (1..bound.&numOfGPRSEvents) OF GPRSEvent,
- *     pDPID                [1]    PDPID                    OPTIONAL,
+ *     pDPID                [1]    PDPID                    type OPTIONAL,
  *     ...
  *     }
  * ```

@@ -2,8 +2,8 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OPTIONAL,
+    type INTEGER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -29,7 +29,7 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * Accuracy ::= SEQUENCE {
- *     seconds        INTEGER           OPTIONAL,
+ *     seconds        INTEGER           type OPTIONAL,
  *     millis     [0] INTEGER  (1..999) OPTIONAL,
  *     micros     [1] INTEGER  (1..999) OPTIONAL  }
  * ```

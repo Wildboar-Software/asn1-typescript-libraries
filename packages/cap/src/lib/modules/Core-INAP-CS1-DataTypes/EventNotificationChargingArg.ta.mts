@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -27,9 +27,9 @@ import { MonitorMode, _enum_for_MonitorMode, MonitorMode_notifyAndContinue /* IM
  * ```asn1
  * EventNotificationChargingArg ::= SEQUENCE {
  *      eventTypeCharging     [0] EventTypeCharging,
- *      eventSpecificInformationCharging     [1] EventSpecificInformationCharging     OPTIONAL,
- *      legID     [2] LegID     OPTIONAL,
- *      extensions     [3] SEQUENCE SIZE(1..numOfExtensions) OF ExtensionField     OPTIONAL,
+ *      eventSpecificInformationCharging     [1] EventSpecificInformationCharging     type OPTIONAL,
+ *      legID     [2] LegID     type OPTIONAL,
+ *      extensions     [3] SEQUENCE SIZE(1..numOfExtensions) OF ExtensionField     type OPTIONAL,
  *      monitorMode     [30] MonitorMode     DEFAULT notifyAndContinue
  * --  ...
  *      }

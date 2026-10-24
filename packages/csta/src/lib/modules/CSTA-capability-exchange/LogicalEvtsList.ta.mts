@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -54,20 +54,20 @@ import { RouteingMode, _decode_RouteingMode, _encode_RouteingMode } from "../CST
  * 
  * ```asn1
  * LogicalEvtsList ::= SEQUENCE
- * {     agentBusy             [ 0] IMPLICIT     AgentBusy             OPTIONAL,
- *     agentLoggedOff             [ 1] IMPLICIT     AgentLoggedOff             OPTIONAL,
- *     agentLoggedOn             [ 2] IMPLICIT     AgentLoggedOn             OPTIONAL,
- *     agentNotReady             [ 3] IMPLICIT     AgentNotReady             OPTIONAL,
- *     agentReady             [ 4] IMPLICIT     AgentReady             OPTIONAL,
- *     agentWorkingAfterCall         [ 5] IMPLICIT     AgentWorkingAfterCall         OPTIONAL,
- *     autoAnswer             [ 6] IMPLICIT     AutoAnswer             OPTIONAL,
- *     autoWorkMode             [ 7] IMPLICIT     AutoWorkMode             OPTIONAL,
- *     callBack             [ 8] IMPLICIT     CallBackEvent             OPTIONAL,
- *     callBackMessage         [ 9] IMPLICIT     CallBackMessageEvent         OPTIONAL,
- *     callerIDStatus             [10] IMPLICIT     CallerIDStatus             OPTIONAL,
- *     doNotDisturb             [11] IMPLICIT     DoNotDisturb             OPTIONAL,
- *     forwarding             [12] IMPLICIT     Forwarding             OPTIONAL,
- *     presenceState            [14] IMPLICIT     PresenceStateEvent        OPTIONAL,
+ * {     agentBusy             [ 0] IMPLICIT     AgentBusy             type OPTIONAL,
+ *     agentLoggedOff             [ 1] IMPLICIT     AgentLoggedOff             type OPTIONAL,
+ *     agentLoggedOn             [ 2] IMPLICIT     AgentLoggedOn             type OPTIONAL,
+ *     agentNotReady             [ 3] IMPLICIT     AgentNotReady             type OPTIONAL,
+ *     agentReady             [ 4] IMPLICIT     AgentReady             type OPTIONAL,
+ *     agentWorkingAfterCall         [ 5] IMPLICIT     AgentWorkingAfterCall         type OPTIONAL,
+ *     autoAnswer             [ 6] IMPLICIT     AutoAnswer             type OPTIONAL,
+ *     autoWorkMode             [ 7] IMPLICIT     AutoWorkMode             type OPTIONAL,
+ *     callBack             [ 8] IMPLICIT     CallBackEvent             type OPTIONAL,
+ *     callBackMessage         [ 9] IMPLICIT     CallBackMessageEvent         type OPTIONAL,
+ *     callerIDStatus             [10] IMPLICIT     CallerIDStatus             type OPTIONAL,
+ *     doNotDisturb             [11] IMPLICIT     DoNotDisturb             type OPTIONAL,
+ *     forwarding             [12] IMPLICIT     Forwarding             type OPTIONAL,
+ *     presenceState            [14] IMPLICIT     PresenceStateEvent        type OPTIONAL,
  *     routeingMode             [13] IMPLICIT     RouteingMode             OPTIONAL }
  * ```
  * 

@@ -2,8 +2,8 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 /**
@@ -27,9 +27,9 @@ import * as $ from "@wildboar/asn1/functional";
  * DITContentRule ::= SEQUENCE {
  *   structuralObjectClass       OBJECT-CLASS.&id,
  *   auxiliaries                 SET SIZE (1..MAX) OF OBJECT-CLASS.&id OPTIONAL,
- *   mandatory              [1]  SET SIZE (1..MAX) OF ATTRIBUTE.&id    OPTIONAL,
- *   optional               [2]  SET SIZE (1..MAX) OF ATTRIBUTE.&id    OPTIONAL,
- *   precluded              [3]  SET SIZE (1..MAX) OF ATTRIBUTE.&id    OPTIONAL,
+ *   mandatory              [1]  SET SIZE (1..MAX) OF ATTRIBUTE.&id    type OPTIONAL,
+ *   optional               [2]  SET SIZE (1..MAX) OF ATTRIBUTE.&id    type OPTIONAL,
+ *   precluded              [3]  SET SIZE (1..MAX) OF ATTRIBUTE.&id    type OPTIONAL,
  *   ... }
  * ```
  *

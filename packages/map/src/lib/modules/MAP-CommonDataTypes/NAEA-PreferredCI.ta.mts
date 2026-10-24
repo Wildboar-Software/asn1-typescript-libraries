@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -25,7 +25,7 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * ```asn1
  * NAEA-PreferredCI ::= SEQUENCE {
  *     naea-PreferredCIC    [0] NAEA-CIC,
- *     extensionContainer    [1] ExtensionContainer    OPTIONAL,
+ *     extensionContainer    [1] ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 

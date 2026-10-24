@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    EXTERNAL,
-    EMBEDDED_PDV,
+    type EXTERNAL,
+    type EMBEDDED_PDV,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,

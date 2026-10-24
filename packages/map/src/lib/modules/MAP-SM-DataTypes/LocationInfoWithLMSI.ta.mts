@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -27,25 +27,25 @@ import { Additional_Number, _decode_Additional_Number, _encode_Additional_Number
  * ```asn1
  * LocationInfoWithLMSI ::= SEQUENCE {
  *     networkNode-Number    [1] ISDN-AddressString,
- *     lmsi    LMSI    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     lmsi    LMSI    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     gprsNodeIndicator    [5]    NULL    OPTIONAL,
+ *     gprsNodeIndicator    [5]    NULL    type OPTIONAL,
  *     -- gprsNodeIndicator is set only if the SGSN number is sent as the 
  *     -- Network Node Number
- *     additional-Number    [6] Additional-Number    OPTIONAL,
- *     networkNodeDiameterAddress    [7] NetworkNodeDiameterAddress    OPTIONAL,
- *     additionalNetworkNodeDiameterAddress    [8] NetworkNodeDiameterAddress    OPTIONAL,
- *     thirdNumber    [9] Additional-Number    OPTIONAL,
- *     thirdNetworkNodeDiameterAddress    [10] NetworkNodeDiameterAddress    OPTIONAL,
- *     imsNodeIndicator    [11] NULL    OPTIONAL, 
+ *     additional-Number    [6] Additional-Number    type OPTIONAL,
+ *     networkNodeDiameterAddress    [7] NetworkNodeDiameterAddress    type OPTIONAL,
+ *     additionalNetworkNodeDiameterAddress    [8] NetworkNodeDiameterAddress    type OPTIONAL,
+ *     thirdNumber    [9] Additional-Number    type OPTIONAL,
+ *     thirdNetworkNodeDiameterAddress    [10] NetworkNodeDiameterAddress    type OPTIONAL,
+ *     imsNodeIndicator    [11] NULL    type OPTIONAL, 
  *     -- gprsNodeIndicator and imsNodeIndicator shall not both be present.
  *     -- additionalNumber and thirdNumber shall not both contain the same type of number. 
- *     smsf-3gpp-Number    [12]    ISDN-AddressString    OPTIONAL,
- *     smsf-3gpp-DiameterAddress    [13]    NetworkNodeDiameterAddress    OPTIONAL,
- *     smsf-non-3gpp-Number    [14]    ISDN-AddressString    OPTIONAL,
- *     smsf-non-3gpp-DiameterAddress    [15]    NetworkNodeDiameterAddress    OPTIONAL,
- *     smsf-3gpp-address-indicator    [16]    NULL    OPTIONAL,
+ *     smsf-3gpp-Number    [12]    ISDN-AddressString    type OPTIONAL,
+ *     smsf-3gpp-DiameterAddress    [13]    NetworkNodeDiameterAddress    type OPTIONAL,
+ *     smsf-non-3gpp-Number    [14]    ISDN-AddressString    type OPTIONAL,
+ *     smsf-non-3gpp-DiameterAddress    [15]    NetworkNodeDiameterAddress    type OPTIONAL,
+ *     smsf-3gpp-address-indicator    [16]    NULL    type OPTIONAL,
  *     smsf-non-3gpp-address-indicator    [17]    NULL    OPTIONAL
  *     --
  *     -- If smsf-supportIndicator was not included in the request, in RoutingInfoForSM-Arg, 

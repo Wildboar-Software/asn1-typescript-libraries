@@ -2,8 +2,8 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
+    type OPTIONAL,
+    type INTEGER,
     SEQUENCE,
     ASN1Element as _Element
 } from "@wildboar/asn1";
@@ -26,9 +26,9 @@ import { RingerStatusList_Item, _decode_RingerStatusList_Item, _encode_RingerSta
  * RingerStatusList  ::=  SEQUENCE OF SEQUENCE
  * {    ringer                 RingerID,
  *     ringMode             RingMode,
- *     ringCount             [0] IMPLICIT INTEGER (0..1000)         OPTIONAL,
- *     ringDuration            [3] IMPLICIT INTEGER            OPTIONAL,
- *     ringPattern             [1] IMPLICIT INTEGER             OPTIONAL,
+ *     ringCount             [0] IMPLICIT INTEGER (0..1000)         type OPTIONAL,
+ *     ringDuration            [3] IMPLICIT INTEGER            type OPTIONAL,
+ *     ringPattern             [1] IMPLICIT INTEGER             type OPTIONAL,
  *     ringVolAbs             [2] IMPLICIT INTEGER (0..100)         OPTIONAL }
  * ```
  */

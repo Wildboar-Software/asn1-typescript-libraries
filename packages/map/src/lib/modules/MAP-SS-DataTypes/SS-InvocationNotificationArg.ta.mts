@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -32,10 +32,10 @@ import { SS_EventSpecification, _decode_SS_EventSpecification, _encode_SS_EventS
  *     -- multiPTY    SS-Code ::= '01010001'B
  *     -- cd    SS-Code ::= '00100100'B
  *     -- ccbs    SS-Code ::= '01000100'B
- *     ss-EventSpecification    [3] SS-EventSpecification    OPTIONAL,
- *     extensionContainer    [4] ExtensionContainer    OPTIONAL,
+ *     ss-EventSpecification    [3] SS-EventSpecification    type OPTIONAL,
+ *     extensionContainer    [4] ExtensionContainer    type OPTIONAL,
  *     ...,
- *     b-subscriberNumber    [5]    ISDN-AddressString    OPTIONAL,
+ *     b-subscriberNumber    [5]    ISDN-AddressString    type OPTIONAL,
  *     ccbs-RequestState    [6]    CCBS-RequestState    OPTIONAL
  *     }
  * ```

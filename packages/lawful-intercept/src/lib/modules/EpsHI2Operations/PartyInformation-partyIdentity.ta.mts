@@ -2,9 +2,9 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING,
-    OPTIONAL,
-    UTF8String,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type UTF8String,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -41,18 +41,18 @@ import * as $ from "@wildboar/asn1/functional";
  *     -- E164 address of the node in international format. Coded in the same format as
  *     -- the calling party number  parameter of the ISUP (parameter part:[29])
  * 
- *     sip-uri                    [8] OCTET STRING     OPTIONAL,
+ *     sip-uri                    [8] OCTET STRING     type OPTIONAL,
  *     -- See [26]
  * 
  *     ...,
- *     tel-uri                    [9] OCTET STRING     OPTIONAL,
+ *     tel-uri                    [9] OCTET STRING     type OPTIONAL,
  *     -- See [67]
- *     nai                          [10] OCTET STRING    OPTIONAL,
+ *     nai                          [10] OCTET STRING    type OPTIONAL,
  *     -- NAI of the target, encoded in the same format as defined by [EPS stage 3 specs]
- *     x-3GPP-Asserted-Identity [11] OCTET STRING     OPTIONAL,
+ *     x-3GPP-Asserted-Identity [11] OCTET STRING     type OPTIONAL,
  *     -- X-3GPP-Asserted-Identity header (3GPP TS 24.109 [79]) of the target, used in
  *     -- some XCAP transactions as a complement information to SIP URI or Tel URI.
- *     xUI                        [12] OCTET STRING     OPTIONAL,
+ *     xUI                        [12] OCTET STRING     type OPTIONAL,
  *     -- XCAP User Identifier (XUI)is a string, valid as a path element in an XCAP URI, that is
  *     -- may be associated with each user served by a XCAP resource server. Defined in IETF RFC
  *     -- 4825[80] as a complement information to SIP URI or Tel URI

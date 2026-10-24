@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -20,8 +20,8 @@ import { SIP_URI, _decode_SIP_URI, _encode_SIP_URI } from "../MAP-SM-DataTypes/S
  * 
  * ```asn1
  * CorrelationID ::= SEQUENCE {
- *     hlr-id    [0] HLR-Id    OPTIONAL,
- *     sip-uri-A    [1] SIP-URI    OPTIONAL,
+ *     hlr-id    [0] HLR-Id    type OPTIONAL,
+ *     sip-uri-A    [1] SIP-URI    type OPTIONAL,
  *     sip-uri-B    [2] SIP-URI}
  * ```
  * 

@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    OBJECT_IDENTIFIER,
+    type OPTIONAL,
+    type BOOLEAN,
+    type OBJECT_IDENTIFIER,
     SEQUENCE,
     SET,
     FALSE,

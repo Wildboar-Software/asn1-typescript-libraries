@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -32,7 +32,7 @@ import { CSTAPrivateData, _decode_CSTAPrivateData, _encode_CSTAPrivateData } fro
  * 
  * ```asn1
  * PrivateEvent ::= SEQUENCE
- * {    security            CSTASecurityData            OPTIONAL,
+ * {    security            CSTASecurityData            type OPTIONAL,
  *     privateData            CSTAPrivateData}
  * ```
  * 

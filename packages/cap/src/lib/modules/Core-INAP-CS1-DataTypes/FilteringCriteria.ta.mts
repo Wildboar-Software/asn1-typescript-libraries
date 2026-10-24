@@ -26,7 +26,7 @@ import { FilteringCriteria_addressAndService, _decode_FilteringCriteria_addressA
  *      addressAndService     [30] SEQUENCE {
  *           calledAddressValue     [0] Digits,
  *           serviceKey     [1] ServiceKey,
- *           callingAddressValue     [2] Digits     OPTIONAL,
+ *           callingAddressValue     [2] Digits     type OPTIONAL,
  *           locationNumber     [3] LocationNumber     OPTIONAL
  *           }
  *      }

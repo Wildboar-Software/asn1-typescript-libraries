@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -23,7 +23,7 @@ import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Cod
  * ```asn1
  * SS-ForBS-Code ::= SEQUENCE {
  *     ss-Code    SS-Code,
- *     basicService    BasicServiceCode    OPTIONAL,
+ *     basicService    BasicServiceCode    type OPTIONAL,
  *     ...,
  *     longFTN-Supported    [4]    NULL    OPTIONAL }
  * ```

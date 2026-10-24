@@ -2,8 +2,8 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
+    type OPTIONAL,
+    type INTEGER,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -33,8 +33,8 @@ import { SecurityInfo, _decode_SecurityInfo, _encode_SecurityInfo } from "../CST
  * 
  * ```asn1
  * CSTASecurityData ::= SEQUENCE
- * {     messageSequenceNumber    [0] IMPLICIT INTEGER                 OPTIONAL,
- *     timestamp         TimeInfo                     OPTIONAL,
+ * {     messageSequenceNumber    [0] IMPLICIT INTEGER                 type OPTIONAL,
+ *     timestamp         TimeInfo                     type OPTIONAL,
  *     securityInfo         SecurityInfo                     OPTIONAL }
  * ```
  * 

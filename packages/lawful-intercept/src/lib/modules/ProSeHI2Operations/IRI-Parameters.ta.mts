@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -42,7 +42,7 @@ import { National_HI2_ASN1parameters, _decode_National_HI2_ASN1parameters, _enco
  *     networkIdentifier                [3] Network-Identifier,
  *     proseEventData                    [4] ProSeEventData,
  *     national-Parameters                [5] National-Parameters OPTIONAL,
- *     national-HI2-ASN1parameters        [6]    National-HI2-ASN1parameters    OPTIONAL,
+ *     national-HI2-ASN1parameters        [6]    National-HI2-ASN1parameters    type OPTIONAL,
  * ...
  * }
  * ```

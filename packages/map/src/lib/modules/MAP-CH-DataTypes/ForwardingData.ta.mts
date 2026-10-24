@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -24,13 +24,13 @@ import { ForwardingOptions, _decode_ForwardingOptions, _encode_ForwardingOptions
  * 
  * ```asn1
  * ForwardingData ::= SEQUENCE {
- *     forwardedToNumber    [5] ISDN-AddressString    OPTIONAL,
+ *     forwardedToNumber    [5] ISDN-AddressString    type OPTIONAL,
  *     -- When this datatype is sent from an HLR which supports CAMEL Phase 2
  *     -- to a GMSC which supports CAMEL Phase 2 the GMSC shall not check the
  *     -- format of the number
- *     forwardedToSubaddress    [4] ISDN-SubaddressString    OPTIONAL,
- *     forwardingOptions    [6] ForwardingOptions    OPTIONAL,
- *     extensionContainer    [7] ExtensionContainer    OPTIONAL,
+ *     forwardedToSubaddress    [4] ISDN-SubaddressString    type OPTIONAL,
+ *     forwardingOptions    [6] ForwardingOptions    type OPTIONAL,
+ *     extensionContainer    [7] ExtensionContainer    type OPTIONAL,
  *     ...,
  *     longForwardedToNumber    [8] FTN-AddressString    OPTIONAL}
  * ```

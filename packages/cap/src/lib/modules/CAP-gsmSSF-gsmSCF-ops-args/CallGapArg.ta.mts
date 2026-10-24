@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -32,9 +32,9 @@ import { type GapTreatment, _decode_GapTreatment, _encode_GapTreatment } from ".
  * CallGapArg {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *     gapCriteria                [0] GapCriteria {bound},
  *     gapIndicators            [1] GapIndicators,
- *     controlType                [2] ControlType                OPTIONAL,
- *     gapTreatment            [3] GapTreatment {bound}            OPTIONAL,
- *     extensions                [4] Extensions {bound}            OPTIONAL,
+ *     controlType                [2] ControlType                type OPTIONAL,
+ *     gapTreatment            [3] GapTreatment {bound}            type OPTIONAL,
+ *     extensions                [4] Extensions {bound}            type OPTIONAL,
  *     ...
  *     }
  * ```

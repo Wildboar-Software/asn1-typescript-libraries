@@ -42,7 +42,7 @@ import {
  *     -- of -1 is to be used if certReqId is not specified in the
  *     -- corresponding request)
  *     status              PKIStatusInfo,
- *     certifiedKeyPair    CertifiedKeyPair    OPTIONAL,
+ *     certifiedKeyPair    CertifiedKeyPair    type OPTIONAL,
  *     rspInfo             OCTET STRING        OPTIONAL
  *     -- analogous to the id-regInfo-utf8Pairs string defined
  *     -- for regInfo in CertReqMsg [RFC4211]

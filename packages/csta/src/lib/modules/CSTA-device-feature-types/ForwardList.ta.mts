@@ -2,9 +2,9 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
+    type OPTIONAL,
+    type BOOLEAN,
+    type INTEGER,
     SEQUENCE,
     ASN1Element as _Element
 } from "@wildboar/asn1";
@@ -26,11 +26,11 @@ import { ForwardList_Item, _decode_ForwardList_Item, _encode_ForwardList_Item } 
  * 
  * ```asn1
  * ForwardList  ::=  SEQUENCE OF SEQUENCE
- * {     forwardingType             ForwardingType             OPTIONAL,
+ * {     forwardingType             ForwardingType             type OPTIONAL,
  *     forwardStatus             BOOLEAN,
- *     forwardDN             DeviceID             OPTIONAL,
- *     forwardDefault             ForwardDefault             OPTIONAL,
- *     ringDuration            [0] IMPLICIT INTEGER        OPTIONAL,
+ *     forwardDN             DeviceID             type OPTIONAL,
+ *     forwardDefault             ForwardDefault             type OPTIONAL,
+ *     ringDuration            [0] IMPLICIT INTEGER        type OPTIONAL,
  *     ringCount             INTEGER (1..100)         OPTIONAL }
  * ```
  */

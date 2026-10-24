@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -22,9 +22,9 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * ```asn1
  * ProvideRoamingNumberRes ::= SEQUENCE {
  *     roamingNumber    ISDN-AddressString,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     releaseResourcesSupported    NULL    OPTIONAL,
+ *     releaseResourcesSupported    NULL    type OPTIONAL,
  *     vmsc-Address    ISDN-AddressString    OPTIONAL }
  * ```
  * 

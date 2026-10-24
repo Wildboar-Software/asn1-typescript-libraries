@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -28,8 +28,8 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  * CallGapArg ::= SEQUENCE {
  *      gapCriteria     [0] GapCriteria,
  *      gapIndicators     [1] GapIndicators,
- *      controlType     [2] ControlType     OPTIONAL,
- *      gapTreatment     [3] GapTreatment     OPTIONAL,
+ *      controlType     [2] ControlType     type OPTIONAL,
+ *      gapTreatment     [3] GapTreatment     type OPTIONAL,
  *      extensions     [4] SEQUENCE SIZE(1..numOfExtensions) OF ExtensionField     OPTIONAL
  * --  ...
  *      }

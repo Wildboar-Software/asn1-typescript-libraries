@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -30,7 +30,7 @@ import { leg2 } from "../Core-INAP-CS1-DataTypes/leg2.va.mjs";
  * ```asn1
  * CallInformationRequestArg {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *     requestedInformationTypeList    [0] RequestedInformationTypeList,
- *     extensions                [2] Extensions {bound}            OPTIONAL,
+ *     extensions                [2] Extensions {bound}            type OPTIONAL,
  *     legID                [3] SendingSideID DEFAULT sendingSideID:leg2,
  *     ...
  *     }

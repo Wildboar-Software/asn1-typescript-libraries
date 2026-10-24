@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -35,10 +35,10 @@ import { VoiceUnitEvtsList, _decode_VoiceUnitEvtsList, _encode_VoiceUnitEvtsList
  * 
  * ```asn1
  * LogDevEvtsList ::= SEQUENCE
- * {     callControlEvtsList         [0] IMPLICIT CallControlEvtsList         OPTIONAL,
- *     callAssociatedEvtsList         [1] IMPLICIT CallAssociatedEvtsList         OPTIONAL,
- *     logicalEvtsList         [2] IMPLICIT LogicalEvtsList             OPTIONAL,
- *     mediaEvtsList             [3] IMPLICIT MediaEvtsList             OPTIONAL,
+ * {     callControlEvtsList         [0] IMPLICIT CallControlEvtsList         type OPTIONAL,
+ *     callAssociatedEvtsList         [1] IMPLICIT CallAssociatedEvtsList         type OPTIONAL,
+ *     logicalEvtsList         [2] IMPLICIT LogicalEvtsList             type OPTIONAL,
+ *     mediaEvtsList             [3] IMPLICIT MediaEvtsList             type OPTIONAL,
  *     voiceUnitEvtsList         [4] IMPLICIT VoiceUnitEvtsList             OPTIONAL }
  * ```
  * 

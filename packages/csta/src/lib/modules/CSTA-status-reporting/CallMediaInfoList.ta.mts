@@ -2,8 +2,8 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
+    type OPTIONAL,
+    type INTEGER,
     SEQUENCE,
     ASN1Element as _Element
 } from "@wildboar/asn1";
@@ -24,9 +24,9 @@ import { CallMediaInfoList_Item, _decode_CallMediaInfoList_Item, _encode_CallMed
  * ```asn1
  * CallMediaInfoList  ::=  SEQUENCE OF SEQUENCE
  * {     mediaServiceType         [0] IMPLICIT MediaServiceType,
- *     mediaServiceVersion         [1] IMPLICIT INTEGER             OPTIONAL,
- *     mediaServiceInstance         [2] IMPLICIT MediaServiceInstanceID    OPTIONAL,
- *     mediaStreamID             [3] IMPLICIT MediaStreamID         OPTIONAL,
+ *     mediaServiceVersion         [1] IMPLICIT INTEGER             type OPTIONAL,
+ *     mediaServiceInstance         [2] IMPLICIT MediaServiceInstanceID    type OPTIONAL,
+ *     mediaStreamID             [3] IMPLICIT MediaStreamID         type OPTIONAL,
  *     connectionInformation         [4] IMPLICIT ConnectionInformation     OPTIONAL }
  * ```
  */

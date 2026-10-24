@@ -2,8 +2,8 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
+    type OPTIONAL,
+    type INTEGER,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -34,8 +34,8 @@ import {
  * ```asn1
  * TelTonesData ::= SEQUENCE
  * {    toneDetected            ToneDetected,
- *     toneFrequency            [0] IMPLICIT INTEGER            OPTIONAL,
- *     toneDuration            [1] IMPLICIT INTEGER            OPTIONAL,
+ *     toneFrequency            [0] IMPLICIT INTEGER            type OPTIONAL,
+ *     toneDuration            [1] IMPLICIT INTEGER            type OPTIONAL,
  *     tonePauseDuration        [2] IMPLICIT INTEGER            OPTIONAL }
  * ```
  * 

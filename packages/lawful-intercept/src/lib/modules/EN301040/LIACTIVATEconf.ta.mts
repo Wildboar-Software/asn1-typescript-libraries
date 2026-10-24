@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    INTEGER,
-    OPTIONAL,
+    type BOOLEAN,
+    type INTEGER,
+    type OPTIONAL,
     UTCTime,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass

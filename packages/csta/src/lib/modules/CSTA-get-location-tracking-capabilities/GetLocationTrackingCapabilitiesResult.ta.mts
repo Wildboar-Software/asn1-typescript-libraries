@@ -2,9 +2,9 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
+    type OPTIONAL,
+    type BOOLEAN,
+    type INTEGER,
     ENUMERATED,
     SEQUENCE,
     SET,

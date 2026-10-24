@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -24,10 +24,10 @@ import { PDN_GW_Identity, _decode_PDN_GW_Identity, _encode_PDN_GW_Identity } fro
  * 
  * ```asn1
  * PDN-GW-Update ::= SEQUENCE{
- *     apn    [0] APN    OPTIONAL,
- *     pdn-gw-Identity    [1] PDN-GW-Identity    OPTIONAL,
- *     contextId    [2] ContextId                     OPTIONAL,
- *     extensionContainer    [3] ExtensionContainer    OPTIONAL,
+ *     apn    [0] APN    type OPTIONAL,
+ *     pdn-gw-Identity    [1] PDN-GW-Identity    type OPTIONAL,
+ *     contextId    [2] ContextId                     type OPTIONAL,
+ *     extensionContainer    [3] ExtensionContainer    type OPTIONAL,
  *     ... }
  * ```
  * 

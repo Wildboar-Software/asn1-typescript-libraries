@@ -2,11 +2,11 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
+    type OPTIONAL,
+    type INTEGER,
     SEQUENCE,
     SET,
-    IA5String,
+    type IA5String,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -32,9 +32,9 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * StartDataPathResult ::= SEQUENCE
  * {    ioCrossRefID            IOCrossRefID,
- *     numberOfCharactersToCollect    [0] IMPLICIT INTEGER            OPTIONAL,
- *     terminationCharacter        IA5String(SIZE(1..1))            OPTIONAL,
- *     timeout                [1] IMPLICIT INTEGER            OPTIONAL,
+ *     numberOfCharactersToCollect    [0] IMPLICIT INTEGER            type OPTIONAL,
+ *     terminationCharacter        IA5String(SIZE(1..1))            type OPTIONAL,
+ *     timeout                [1] IMPLICIT INTEGER            type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 

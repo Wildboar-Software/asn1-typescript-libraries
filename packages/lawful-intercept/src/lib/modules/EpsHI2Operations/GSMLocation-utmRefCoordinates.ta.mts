@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    PrintableString,
+    type OPTIONAL,
+    type PrintableString,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError

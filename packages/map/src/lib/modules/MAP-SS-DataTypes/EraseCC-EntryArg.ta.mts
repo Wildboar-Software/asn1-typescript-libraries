@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -21,7 +21,7 @@ import { CCBS_Index, _decode_CCBS_Index, _encode_CCBS_Index } from "../MAP-SS-Da
  * ```asn1
  * EraseCC-EntryArg ::= SEQUENCE {
  *     ss-Code    [0]    SS-Code,
- *     ccbs-Index    [1]    CCBS-Index    OPTIONAL,
+ *     ccbs-Index    [1]    CCBS-Index    type OPTIONAL,
  *     ...}
  * ```
  * 

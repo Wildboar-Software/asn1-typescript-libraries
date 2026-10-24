@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -38,23 +38,23 @@ import { Used_RAT_Type, _decode_Used_RAT_Type, _encode_Used_RAT_Type, _enum_for_
  * 
  * ```asn1
  * SubscriberInfo ::= SEQUENCE {
- *     locationInformation    [0] LocationInformation    OPTIONAL,
- *     subscriberState    [1] SubscriberState    OPTIONAL,
- *     extensionContainer    [2] ExtensionContainer    OPTIONAL,
+ *     locationInformation    [0] LocationInformation    type OPTIONAL,
+ *     subscriberState    [1] SubscriberState    type OPTIONAL,
+ *     extensionContainer    [2] ExtensionContainer    type OPTIONAL,
  *     ... ,
- *     locationInformationGPRS    [3] LocationInformationGPRS    OPTIONAL,
- *     ps-SubscriberState    [4] PS-SubscriberState    OPTIONAL,
- *     imei    [5] IMEI    OPTIONAL,
- *     ms-Classmark2    [6] MS-Classmark2    OPTIONAL,
- *     gprs-MS-Class    [7] GPRSMSClass    OPTIONAL,
- *     mnpInfoRes    [8] MNPInfoRes    OPTIONAL,
- *     imsVoiceOverPS-SessionsIndication    [9] IMS-VoiceOverPS-SessionsInd    OPTIONAL,
- *     lastUE-ActivityTime    [10] Time    OPTIONAL,
- *     lastRAT-Type    [11] Used-RAT-Type    OPTIONAL,
- *     eps-SubscriberState    [12] PS-SubscriberState    OPTIONAL,
- *     locationInformationEPS    [13] LocationInformationEPS    OPTIONAL,
- *     timeZone    [14] TimeZone    OPTIONAL,
- *     daylightSavingTime    [15] DaylightSavingTime    OPTIONAL,
+ *     locationInformationGPRS    [3] LocationInformationGPRS    type OPTIONAL,
+ *     ps-SubscriberState    [4] PS-SubscriberState    type OPTIONAL,
+ *     imei    [5] IMEI    type OPTIONAL,
+ *     ms-Classmark2    [6] MS-Classmark2    type OPTIONAL,
+ *     gprs-MS-Class    [7] GPRSMSClass    type OPTIONAL,
+ *     mnpInfoRes    [8] MNPInfoRes    type OPTIONAL,
+ *     imsVoiceOverPS-SessionsIndication    [9] IMS-VoiceOverPS-SessionsInd    type OPTIONAL,
+ *     lastUE-ActivityTime    [10] Time    type OPTIONAL,
+ *     lastRAT-Type    [11] Used-RAT-Type    type OPTIONAL,
+ *     eps-SubscriberState    [12] PS-SubscriberState    type OPTIONAL,
+ *     locationInformationEPS    [13] LocationInformationEPS    type OPTIONAL,
+ *     timeZone    [14] TimeZone    type OPTIONAL,
+ *     daylightSavingTime    [15] DaylightSavingTime    type OPTIONAL,
  *     locationInformation5GS    [16] LocationInformation5GS    OPTIONAL }
  * ```
  * 

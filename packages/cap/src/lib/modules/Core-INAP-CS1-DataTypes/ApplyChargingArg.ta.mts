@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
+    type OPTIONAL,
+    type BOOLEAN,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -27,7 +27,7 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  * ApplyChargingArg ::= SEQUENCE {
  *      aChBillingChargingCharacteristics     [0] AChBillingChargingCharacteristics,
  *      sendCalculationToSCPIndication     [1] BOOLEAN     DEFAULT FALSE,
- *      partyToCharge     [2] LegID     OPTIONAL,
+ *      partyToCharge     [2] LegID     type OPTIONAL,
  *      extensions     [3] SEQUENCE SIZE(1..numOfExtensions) OF ExtensionField     OPTIONAL
  * --  ...
  *      }

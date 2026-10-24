@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -25,9 +25,9 @@ import { SS_CamelData, _decode_SS_CamelData, _encode_SS_CamelData } from "../MAP
  * ```asn1
  * SS-CSI ::= SEQUENCE {
  *     ss-CamelData    SS-CamelData,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     notificationToCSE    [0]    NULL    OPTIONAL,
+ *     notificationToCSE    [0]    NULL    type OPTIONAL,
  *     csi-Active    [1]    NULL    OPTIONAL
  * --    notificationToCSE and csi-Active shall not be present when SS-CSI is sent to VLR.
  * --    They may only be included in ATSI/ATM ack/NSDC message.

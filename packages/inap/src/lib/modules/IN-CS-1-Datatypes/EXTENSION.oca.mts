@@ -15,7 +15,7 @@ import { Criticality } from "../IN-CS-1-Datatypes/Criticality.ta.mjs";
  * ```asn1
  * EXTENSION ::= CLASS {
  *   &id           ExtensionType UNIQUE,
- *   &Type         OPTIONAL,
+ *   &Type         type OPTIONAL,
  *   &absent       &Type OPTIONAL,
  *   &criticality  Criticality DEFAULT ignored
  * }

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -26,12 +26,12 @@ import { AlertReason, _decode_AlertReason, _encode_AlertReason, _enum_for_AlertR
  * ReadyForSM-Arg ::= SEQUENCE {
  *     imsi    [0] IMSI,
  *     alertReason    AlertReason,
- *     alertReasonIndicator    NULL    OPTIONAL,
+ *     alertReasonIndicator    NULL    type OPTIONAL,
  *     -- alertReasonIndicator is set only when the alertReason 
  *     -- sent to HLR is for GPRS
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     additionalAlertReasonIndicator    [1] NULL    OPTIONAL,
+ *     additionalAlertReasonIndicator    [1] NULL    type OPTIONAL,
  *     -- additionalAlertReasonIndicator is set only when the alertReason
  *     -- sent to HLR is for IP-SM-GW
  *     maximumUeAvailabilityTime    Time    OPTIONAL }

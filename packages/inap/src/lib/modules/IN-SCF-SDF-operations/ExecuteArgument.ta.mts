@@ -29,7 +29,7 @@ import { ExecuteArgument_Type, _decode_ExecuteArgument_Type, _encode_ExecuteArgu
  *                                SET OF
  *                                  METHOD.&InputAttributes.&Type
  *                                    ({SupportedMethods}{@method-id, @.type})
- *                                  OPTIONAL,
+ *                                  type OPTIONAL,
  *                              valuesWithContext
  *                                [0]  SET OF
  *                                       SEQUENCE {value
@@ -39,13 +39,13 @@ import { ExecuteArgument_Type, _decode_ExecuteArgument_Type, _encode_ExecuteArgu
  *                                                          ({SupportedMethods}
  *                                                             {@method-id, @...
  *                                                                     type})
- *                                                     OPTIONAL,
+ *                                                     type OPTIONAL,
  *                                                 contextList
  *                                                   [1]  SET OF Context
  *                                       } OPTIONAL} OPTIONAL,
  *           specific-input
  *             [3]  METHOD.&SpecificInput({SupportedMethods}{@method-id})
- *               OPTIONAL,
+ *               type OPTIONAL,
  *           COMPONENTS OF CommonArguments}}
  * ```
  */

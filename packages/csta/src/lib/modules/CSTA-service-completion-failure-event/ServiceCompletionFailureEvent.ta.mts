@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -42,10 +42,10 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * ServiceCompletionFailureEvent ::= SEQUENCE
  * {    primaryCall            PrimaryOrSecondaryCall,
- *     secondaryCall            [0] IMPLICIT PrimaryOrSecondaryCall    OPTIONAL,
- *     otherDevsPrimaryCallList    [1] IMPLICIT SEQUENCE OF OtherCall    OPTIONAL,
- *     otherDevsSecondaryCallList    [2] IMPLICIT SEQUENCE OF OtherCall    OPTIONAL,
- *     mediaCallCharacteristics    [3] IMPLICIT MediaCallCharacteristics     OPTIONAL,
+ *     secondaryCall            [0] IMPLICIT PrimaryOrSecondaryCall    type OPTIONAL,
+ *     otherDevsPrimaryCallList    [1] IMPLICIT SEQUENCE OF OtherCall    type OPTIONAL,
+ *     otherDevsSecondaryCallList    [2] IMPLICIT SEQUENCE OF OtherCall    type OPTIONAL,
+ *     mediaCallCharacteristics    [3] IMPLICIT MediaCallCharacteristics     type OPTIONAL,
  *     cause                EventCause,
  *     extensions             CSTACommonArguments             OPTIONAL }
  * ```

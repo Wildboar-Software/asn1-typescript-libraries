@@ -2,9 +2,9 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
+    type OPTIONAL,
+    type BOOLEAN,
+    type INTEGER,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -37,11 +37,11 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * SetForwardingArgument ::= SEQUENCE
  * {    device                 DeviceID,
- *     forwardingType             ForwardingType                OPTIONAL,
+ *     forwardingType             ForwardingType                type OPTIONAL,
  *     activateForward            BOOLEAN,
- *     forwardDN             DeviceID                OPTIONAL,
- *     ringCount             INTEGER (1..100)            OPTIONAL,
- *     ringDuration            [3] IMPLICIT INTEGER            OPTIONAL,
+ *     forwardDN             DeviceID                type OPTIONAL,
+ *     ringCount             INTEGER (1..100)            type OPTIONAL,
+ *     ringDuration            [3] IMPLICIT INTEGER            type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 

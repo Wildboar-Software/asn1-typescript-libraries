@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -43,8 +43,8 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * {    device                 DeviceID,
  *     lamp                 LampID,
  *     lampMode            LampMode,
- *     lampBrightness            LampBrightness                OPTIONAL,
- *     lampColor            LampColor                OPTIONAL,
+ *     lampBrightness            LampBrightness                type OPTIONAL,
+ *     lampColor            LampColor                type OPTIONAL,
  *     extensions             CSTACommonArguments            OPTIONAL }
  * ```
  * 

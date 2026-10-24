@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -23,7 +23,7 @@ import { IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta
  * ```asn1
  * ADD-Info ::= SEQUENCE {
  *     imeisv    [0] IMEI,
- *     skipSubscriberDataUpdate    [1] NULL    OPTIONAL,
+ *     skipSubscriberDataUpdate    [1] NULL    type OPTIONAL,
  *     -- The skipSubscriberDataUpdate parameter in the UpdateLocationArg and the ADD-Info
  *     -- structures carry the same semantic.
  *     ...}

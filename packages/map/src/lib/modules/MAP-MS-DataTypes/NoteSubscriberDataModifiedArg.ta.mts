@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -39,19 +39,19 @@ import { ServingNode, _decode_ServingNode, _encode_ServingNode } from "../MAP-MS
  * NoteSubscriberDataModifiedArg ::= SEQUENCE {
  *     imsi    IMSI,
  *     msisdn    ISDN-AddressString,
- *     forwardingInfoFor-CSE    [0] Ext-ForwardingInfoFor-CSE    OPTIONAL,
- *     callBarringInfoFor-CSE    [1] Ext-CallBarringInfoFor-CSE    OPTIONAL,
- *     odb-Info    [2] ODB-Info    OPTIONAL,
- *     camel-SubscriptionInfo    [3] CAMEL-SubscriptionInfo    OPTIONAL,
- *     allInformationSent    [4] NULL    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     forwardingInfoFor-CSE    [0] Ext-ForwardingInfoFor-CSE    type OPTIONAL,
+ *     callBarringInfoFor-CSE    [1] Ext-CallBarringInfoFor-CSE    type OPTIONAL,
+ *     odb-Info    [2] ODB-Info    type OPTIONAL,
+ *     camel-SubscriptionInfo    [3] CAMEL-SubscriptionInfo    type OPTIONAL,
+ *     allInformationSent    [4] NULL    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     ue-reachable    [5] ServingNode    OPTIONAL,
- *     csg-SubscriptionDataList    [6] CSG-SubscriptionDataList    OPTIONAL,
- *     cw-Data    [7]    CallWaitingData    OPTIONAL,
- *     ch-Data    [8]    CallHoldData    OPTIONAL,
- *     clip-Data    [9] ClipData    OPTIONAL,
- *     clir-Data    [10]    ClirData    OPTIONAL,
+ *     ue-reachable    [5] ServingNode    type OPTIONAL,
+ *     csg-SubscriptionDataList    [6] CSG-SubscriptionDataList    type OPTIONAL,
+ *     cw-Data    [7]    CallWaitingData    type OPTIONAL,
+ *     ch-Data    [8]    CallHoldData    type OPTIONAL,
+ *     clip-Data    [9] ClipData    type OPTIONAL,
+ *     clir-Data    [10]    ClirData    type OPTIONAL,
  *     ect-data    [11] EctData    OPTIONAL }
  * ```
  * 

@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     GraphicString,
-    IA5String,
-    INTEGER,
-    OCTET_STRING,
-    OPTIONAL,
-    UTF8String,
+    type IA5String,
+    type INTEGER,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type UTF8String,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError,

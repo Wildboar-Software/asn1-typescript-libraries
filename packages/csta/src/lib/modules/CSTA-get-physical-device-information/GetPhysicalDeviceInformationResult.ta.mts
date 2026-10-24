@@ -2,12 +2,12 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
+    type OPTIONAL,
+    type BOOLEAN,
+    type INTEGER,
     SEQUENCE,
     SET,
-    IA5String,
+    type IA5String,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -54,21 +54,21 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * GetPhysicalDeviceInformationResult ::= SEQUENCE
  * {     deviceCategory                 [ 0] IMPLICIT DeviceCategory         DEFAULT station,
- *     groupDeviceAttributes             [ 1] IMPLICIT GroupDeviceAttributes     OPTIONAL,
- *     namedDeviceTypes             [ 2] IMPLICIT NamedDeviceTypes         OPTIONAL,
+ *     groupDeviceAttributes             [ 1] IMPLICIT GroupDeviceAttributes     type OPTIONAL,
+ *     namedDeviceTypes             [ 2] IMPLICIT NamedDeviceTypes         type OPTIONAL,
  *     hasLogicalElement             BOOLEAN,
- *     otherLogicalDeviceList             [ 3] IMPLICIT SEQUENCE OF DeviceID     OPTIONAL,
- *     deviceModelName             [ 4] IMPLICIT IA5String (SIZE(0..64))    OPTIONAL,
- *     deviceOnDeviceMonitorFilter         [ 5] IMPLICIT MonitorFilter         OPTIONAL,
- *     deviceOnConnectionMonitorFilter     [ 6] IMPLICIT MonitorFilter         OPTIONAL,
- *     callOnDeviceMonitorFilter         [ 7] IMPLICIT MonitorFilter         OPTIONAL,
- *     callOnConnectionMonitorFilter         [ 8] IMPLICIT MonitorFilter         OPTIONAL,
- *     maxDisplays                 [ 9] IMPLICIT INTEGER             OPTIONAL,
- *     maxButtons                 [10] IMPLICIT INTEGER             OPTIONAL,
- *     maxLamps                 [11] IMPLICIT INTEGER             OPTIONAL,
- *     maxRingPatterns             [12] IMPLICIT INTEGER             OPTIONAL,
- *     physDevServList             [13] IMPLICIT PhysDevServList         OPTIONAL,
- *     physDevEvtsList             [14] IMPLICIT PhysDevEvtsList         OPTIONAL,
+ *     otherLogicalDeviceList             [ 3] IMPLICIT SEQUENCE OF DeviceID     type OPTIONAL,
+ *     deviceModelName             [ 4] IMPLICIT IA5String (SIZE(0..64))    type OPTIONAL,
+ *     deviceOnDeviceMonitorFilter         [ 5] IMPLICIT MonitorFilter         type OPTIONAL,
+ *     deviceOnConnectionMonitorFilter     [ 6] IMPLICIT MonitorFilter         type OPTIONAL,
+ *     callOnDeviceMonitorFilter         [ 7] IMPLICIT MonitorFilter         type OPTIONAL,
+ *     callOnConnectionMonitorFilter         [ 8] IMPLICIT MonitorFilter         type OPTIONAL,
+ *     maxDisplays                 [ 9] IMPLICIT INTEGER             type OPTIONAL,
+ *     maxButtons                 [10] IMPLICIT INTEGER             type OPTIONAL,
+ *     maxLamps                 [11] IMPLICIT INTEGER             type OPTIONAL,
+ *     maxRingPatterns             [12] IMPLICIT INTEGER             type OPTIONAL,
+ *     physDevServList             [13] IMPLICIT PhysDevServList         type OPTIONAL,
+ *     physDevEvtsList             [14] IMPLICIT PhysDevEvtsList         type OPTIONAL,
  *     extensions                 CSTACommonArguments             OPTIONAL }
  * ```
  * 

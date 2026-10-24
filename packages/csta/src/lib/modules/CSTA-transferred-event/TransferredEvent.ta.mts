@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -63,22 +63,22 @@ import { CallLinkageDataList, _decode_CallLinkageDataList, _encode_CallLinkageDa
  * ```asn1
  * TransferredEvent ::= SEQUENCE
  * {    primaryOldCall            ConnectionID,
- *     secondaryOldCall        [ 0] IMPLICIT ConnectionID        OPTIONAL,
+ *     secondaryOldCall        [ 0] IMPLICIT ConnectionID        type OPTIONAL,
  *     transferringDevice        SubjectDeviceID,
  *     transferredToDevice        SubjectDeviceID,
  *     transferredConnections        [ 1] IMPLICIT ConnectionList,
- *     localConnectionInfo        LocalConnectionState            OPTIONAL,
- *     correlatorData            [ 2] IMPLICIT CorrelatorData        OPTIONAL,
- *     userData            UserData                OPTIONAL,
- *     chargingInfo            [ 3] IMPLICIT ChargingInfo        OPTIONAL,
+ *     localConnectionInfo        LocalConnectionState            type OPTIONAL,
+ *     correlatorData            [ 2] IMPLICIT CorrelatorData        type OPTIONAL,
+ *     userData            UserData                type OPTIONAL,
+ *     chargingInfo            [ 3] IMPLICIT ChargingInfo        type OPTIONAL,
  *     cause                EventCause,
- *     servicesPermitted        [ 4] IMPLICIT ServicesPermitted        OPTIONAL,
- *     mediaCallCharacteristics    [ 5] IMPLICIT MediaCallCharacteristics    OPTIONAL,
- *     callCharacteristics        [ 6] IMPLICIT CallCharacteristics    OPTIONAL,
- *     callLinkageDataList        [ 7] IMPLICIT CallLinkageDataList    OPTIONAL,
- *     languagePreferences        [ 8] IMPLICIT LanguagePreferences    OPTIONAL,
- *     deviceHistory            [ 9] IMPLICIT DeviceHistory        OPTIONAL,
- *     locationInfo            [10] IMPLICIT LocationInfoList        OPTIONAL,
+ *     servicesPermitted        [ 4] IMPLICIT ServicesPermitted        type OPTIONAL,
+ *     mediaCallCharacteristics    [ 5] IMPLICIT MediaCallCharacteristics    type OPTIONAL,
+ *     callCharacteristics        [ 6] IMPLICIT CallCharacteristics    type OPTIONAL,
+ *     callLinkageDataList        [ 7] IMPLICIT CallLinkageDataList    type OPTIONAL,
+ *     languagePreferences        [ 8] IMPLICIT LanguagePreferences    type OPTIONAL,
+ *     deviceHistory            [ 9] IMPLICIT DeviceHistory        type OPTIONAL,
+ *     locationInfo            [10] IMPLICIT LocationInfoList        type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 

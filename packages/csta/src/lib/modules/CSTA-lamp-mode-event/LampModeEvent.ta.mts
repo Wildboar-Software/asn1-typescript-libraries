@@ -2,8 +2,8 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    OCTET_STRING,
+    type OPTIONAL,
+    type OCTET_STRING,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -47,10 +47,10 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * LampModeEvent ::= SEQUENCE
  * {    device                SubjectDeviceID,
  *     lamp                LampID,
- *     lampLabel            OCTET STRING                OPTIONAL,
+ *     lampLabel            OCTET STRING                type OPTIONAL,
  *     lampMode            LampMode,
- *     lampBrightness            LampBrightness                OPTIONAL,
- *     lampColor            LampColor                OPTIONAL,
+ *     lampBrightness            LampBrightness                type OPTIONAL,
+ *     lampColor            LampColor                type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 

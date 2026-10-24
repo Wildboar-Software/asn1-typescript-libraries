@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -27,11 +27,11 @@ import { O_CauseValueCriteria, _decode_O_CauseValueCriteria, _encode_O_CauseValu
  * ```asn1
  * O-BcsmCamelTDP-Criteria ::= SEQUENCE {
  *     o-BcsmTriggerDetectionPoint    O-BcsmTriggerDetectionPoint,    
- *     destinationNumberCriteria    [0] DestinationNumberCriteria    OPTIONAL,
- *     basicServiceCriteria    [1] BasicServiceCriteria    OPTIONAL,
- *     callTypeCriteria    [2] CallTypeCriteria    OPTIONAL,
+ *     destinationNumberCriteria    [0] DestinationNumberCriteria    type OPTIONAL,
+ *     basicServiceCriteria    [1] BasicServiceCriteria    type OPTIONAL,
+ *     callTypeCriteria    [2] CallTypeCriteria    type OPTIONAL,
  *     ...,
- *     o-CauseValueCriteria    [3] O-CauseValueCriteria    OPTIONAL,
+ *     o-CauseValueCriteria    [3] O-CauseValueCriteria    type OPTIONAL,
  *     extensionContainer    [4] ExtensionContainer    OPTIONAL }
  * ```
  * 

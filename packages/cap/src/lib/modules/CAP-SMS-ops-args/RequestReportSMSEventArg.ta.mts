@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -28,7 +28,7 @@ import { SMSEvent, _decode_SMSEvent, _encode_SMSEvent } from "../CAP-datatypes/S
  * ```asn1
  * RequestReportSMSEventArg {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *     sMSEvents                [0] SEQUENCE SIZE (1..bound.&numOfSMSEvents) OF SMSEvent,
- *     extensions                [10] Extensions {bound}            OPTIONAL,
+ *     extensions                [10] Extensions {bound}            type OPTIONAL,
  *     ...
  *     }
  * ```

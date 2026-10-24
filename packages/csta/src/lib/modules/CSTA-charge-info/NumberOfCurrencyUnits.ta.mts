@@ -2,8 +2,8 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    INTEGER,
-    OCTET_STRING,
+    type INTEGER,
+    type OCTET_STRING,
     ENUMERATED,
     SEQUENCE,
     SET,

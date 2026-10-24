@@ -13,7 +13,7 @@ import { Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
  * ```asn1
  * UISCRIPT ::= CLASS {
  *   &SpecificInfo  OPTIONAL,
- *   &Result        OPTIONAL,
+ *   &Result        type OPTIONAL,
  *   &id            Code
  * }
  * WITH SYNTAX {

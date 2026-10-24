@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -24,12 +24,12 @@ import { T_CSI, _decode_T_CSI, _encode_T_CSI } from "../MAP-MS-DataTypes/T-CSI.t
  * 
  * ```asn1
  * GmscCamelSubscriptionInfo ::= SEQUENCE {
- *     t-CSI    [0] T-CSI    OPTIONAL,
- *     o-CSI    [1] O-CSI    OPTIONAL,
- *     extensionContainer    [2] ExtensionContainer    OPTIONAL,
+ *     t-CSI    [0] T-CSI    type OPTIONAL,
+ *     o-CSI    [1] O-CSI    type OPTIONAL,
+ *     extensionContainer    [2] ExtensionContainer    type OPTIONAL,
  *     ...,
- *     o-BcsmCamelTDP-CriteriaList    [3] O-BcsmCamelTDPCriteriaList    OPTIONAL,
- *     t-BCSM-CAMEL-TDP-CriteriaList    [4]    T-BCSM-CAMEL-TDP-CriteriaList    OPTIONAL,
+ *     o-BcsmCamelTDP-CriteriaList    [3] O-BcsmCamelTDPCriteriaList    type OPTIONAL,
+ *     t-BCSM-CAMEL-TDP-CriteriaList    [4]    T-BCSM-CAMEL-TDP-CriteriaList    type OPTIONAL,
  *     d-csi    [5]    D-CSI    OPTIONAL}
  * ```
  * 

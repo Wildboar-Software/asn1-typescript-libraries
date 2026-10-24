@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
+    type OBJECT_IDENTIFIER,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -31,7 +31,7 @@ import {
  * RequestContent ::= SEQUENCE {
  *   contentType       INTERACTIVE-OPERATION.&content-req,
  *   content           SEQUENCE {
- *     invokId           INTEGER (0..MAX)                       OPTIONAL,
+ *     invokId           INTEGER (0..MAX)                       type OPTIONAL,
  *     sessionType       INTERACTIVE-OPERATION.&sessionType,
  *     sessionId         INTEGER (0..MAX),
  *     requirement   [0] INTERACTIVE-OPERATION.&requirements    DEFAULT none,

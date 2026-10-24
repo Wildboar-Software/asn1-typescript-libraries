@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -24,10 +24,10 @@ import { Password, _decode_Password, _encode_Password } from "../MAP-SS-DataType
  * ```asn1
  * CallBarringData ::= SEQUENCE {
  *     callBarringFeatureList    Ext-CallBarFeatureList,
- *     password    Password    OPTIONAL,
- *     wrongPasswordAttemptsCounter    WrongPasswordAttemptsCounter    OPTIONAL,
- *     notificationToCSE    NULL    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     password    Password    type OPTIONAL,
+ *     wrongPasswordAttemptsCounter    WrongPasswordAttemptsCounter    type OPTIONAL,
+ *     notificationToCSE    NULL    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 

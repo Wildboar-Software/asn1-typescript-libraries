@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { BOOLEAN, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { type BOOLEAN, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -18,7 +18,7 @@ import * as $ from "@wildboar/asn1/functional";
  * CONTEXT ::= CLASS {
  *   &Type,
  *   &defaultValue   &Type OPTIONAL,
- *   &Assertion      OPTIONAL,
+ *   &Assertion      type OPTIONAL,
  *   &absentMatch    BOOLEAN DEFAULT TRUE,
  *   &id             OBJECT IDENTIFIER UNIQUE }
  * WITH SYNTAX {

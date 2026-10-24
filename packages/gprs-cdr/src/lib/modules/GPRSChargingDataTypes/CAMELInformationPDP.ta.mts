@@ -2,11 +2,11 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN,
-    IA5String,
-    INTEGER,
-    OCTET_STRING,
-    OPTIONAL,
+    type BOOLEAN,
+    type IA5String,
+    type INTEGER,
+    type OCTET_STRING,
+    type OPTIONAL,
     ASN1SizeError,
     ASN1OverflowError
 } from "@wildboar/asn1";

@@ -2,9 +2,9 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    IA5String,
-    INTEGER,
-    OPTIONAL,
+    type IA5String,
+    type INTEGER,
+    type OPTIONAL,
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";

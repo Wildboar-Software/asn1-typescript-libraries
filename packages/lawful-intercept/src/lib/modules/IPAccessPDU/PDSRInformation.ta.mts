@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     GeneralizedTime,
-    INTEGER,
+    type INTEGER,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";

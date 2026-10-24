@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -34,10 +34,10 @@ import { ServiceCompletionFailure, _decode_ServiceCompletionFailure, _encode_Ser
  * 
  * ```asn1
  * CallAssociatedEvtsList ::= SEQUENCE
- * {     callInformation         [0] IMPLICIT     CallInformation         OPTIONAL,
- *     charging             [1] IMPLICIT     Charging             OPTIONAL,
- *     digitsGenerated         [2] IMPLICIT     DigitsGenerated         OPTIONAL,
- *     telephonyTonesGenerated     [3] IMPLICIT     TelephonyTonesGenerated     OPTIONAL,
+ * {     callInformation         [0] IMPLICIT     CallInformation         type OPTIONAL,
+ *     charging             [1] IMPLICIT     Charging             type OPTIONAL,
+ *     digitsGenerated         [2] IMPLICIT     DigitsGenerated         type OPTIONAL,
+ *     telephonyTonesGenerated     [3] IMPLICIT     TelephonyTonesGenerated     type OPTIONAL,
  *     serviceCompletionFailure     [4] IMPLICIT     ServiceCompletionFailure     OPTIONAL }
  * ```
  * 

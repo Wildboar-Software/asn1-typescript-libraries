@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -24,19 +24,19 @@ import { RequestedNodes, _decode_RequestedNodes, _encode_RequestedNodes } from "
  * 
  * ```asn1
  * RequestedInfo ::= SEQUENCE {
- *     locationInformation    [0] NULL    OPTIONAL,
- *     subscriberState    [1] NULL    OPTIONAL,
- *     extensionContainer    [2] ExtensionContainer    OPTIONAL,
+ *     locationInformation    [0] NULL    type OPTIONAL,
+ *     subscriberState    [1] NULL    type OPTIONAL,
+ *     extensionContainer    [2] ExtensionContainer    type OPTIONAL,
  *     ..., 
- *     currentLocation    [3] NULL    OPTIONAL,
- *     requestedDomain    [4] DomainType    OPTIONAL,
- *     imei    [6] NULL    OPTIONAL,
- *     ms-classmark    [5] NULL    OPTIONAL,
- *     mnpRequestedInfo    [7] NULL    OPTIONAL,
- *     locationInformationEPS-Supported    [11] NULL    OPTIONAL,
- *     t-adsData    [8] NULL    OPTIONAL,
- *     requestedNodes    [9] RequestedNodes    OPTIONAL,
- *     servingNodeIndication    [10] NULL    OPTIONAL,
+ *     currentLocation    [3] NULL    type OPTIONAL,
+ *     requestedDomain    [4] DomainType    type OPTIONAL,
+ *     imei    [6] NULL    type OPTIONAL,
+ *     ms-classmark    [5] NULL    type OPTIONAL,
+ *     mnpRequestedInfo    [7] NULL    type OPTIONAL,
+ *     locationInformationEPS-Supported    [11] NULL    type OPTIONAL,
+ *     t-adsData    [8] NULL    type OPTIONAL,
+ *     requestedNodes    [9] RequestedNodes    type OPTIONAL,
+ *     servingNodeIndication    [10] NULL    type OPTIONAL,
  *     localTimeZoneRequest    [12] NULL    OPTIONAL
  *  }
  * ```

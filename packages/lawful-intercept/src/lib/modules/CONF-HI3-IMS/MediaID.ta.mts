@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    OPTIONAL,
+    type OCTET_STRING,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -27,10 +27,10 @@ import { ConfPartyInformation, _decode_ConfPartyInformation, _encode_ConfPartyIn
  * ```asn1
  * MediaID ::= SEQUENCE
  * {
- *         sourceUserID    [1] ConfPartyInformation    OPTIONAL,  -- include SDP information
+ *         sourceUserID    [1] ConfPartyInformation    type OPTIONAL,  -- include SDP information
  *             -- describing Conf Server Side characteristics.
  * 
- *         streamID        [2] OCTET STRING     OPTIONAL,  -- include streamID from SDP information.
+ *         streamID        [2] OCTET STRING     type OPTIONAL,  -- include streamID from SDP information.
  * 
  *     ...
  * }

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
+    type OPTIONAL,
+    type BOOLEAN,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -27,7 +27,7 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  * PromptAndCollectUserInformationArg ::= SEQUENCE {
  *      collectedInfo     [0] CollectedInfo,
  *      disconnectFromIPForbidden     [1] BOOLEAN     DEFAULT TRUE,
- *      informationToSend      [2] InformationToSend     OPTIONAL,
+ *      informationToSend      [2] InformationToSend     type OPTIONAL,
  *      extensions     [3] SEQUENCE SIZE(1..numOfExtensions) OF ExtensionField     OPTIONAL
  * --  ...
  *      }

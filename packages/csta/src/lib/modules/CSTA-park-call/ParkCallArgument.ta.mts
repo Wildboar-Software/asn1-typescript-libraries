@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -38,9 +38,9 @@ import { CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "
  * ParkCallArgument ::= SEQUENCE
  * {     parking                ConnectionID,
  *     parkTo                DeviceID,
- *     correlatorData             CorrelatorData                 OPTIONAL, 
- *     subjectOfCall            [0] IMPLICIT SubjectOfCall        OPTIONAL,
- *     languagePreferences        [1] IMPLICIT LanguagePreferences    OPTIONAL,
+ *     correlatorData             CorrelatorData                 type OPTIONAL, 
+ *     subjectOfCall            [0] IMPLICIT SubjectOfCall        type OPTIONAL,
+ *     languagePreferences        [1] IMPLICIT LanguagePreferences    type OPTIONAL,
  *     extensions             CSTACommonArguments             OPTIONAL }
  * ```
  * 

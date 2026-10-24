@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -22,26 +22,26 @@ import { TraceDepthExtension, _decode_TraceDepthExtension, _encode_TraceDepthExt
  * 
  * ```asn1
  * TraceDepthList ::= SEQUENCE {
- *     msc-s-TraceDepth    [0] TraceDepth    OPTIONAL,
- *     mgw-TraceDepth    [1] TraceDepth    OPTIONAL,
- *     sgsn-TraceDepth    [2] TraceDepth    OPTIONAL,
- *     ggsn-TraceDepth    [3] TraceDepth    OPTIONAL,
- *     rnc-TraceDepth    [4] TraceDepth    OPTIONAL,
- *     bmsc-TraceDepth    [5] TraceDepth    OPTIONAL,
+ *     msc-s-TraceDepth    [0] TraceDepth    type OPTIONAL,
+ *     mgw-TraceDepth    [1] TraceDepth    type OPTIONAL,
+ *     sgsn-TraceDepth    [2] TraceDepth    type OPTIONAL,
+ *     ggsn-TraceDepth    [3] TraceDepth    type OPTIONAL,
+ *     rnc-TraceDepth    [4] TraceDepth    type OPTIONAL,
+ *     bmsc-TraceDepth    [5] TraceDepth    type OPTIONAL,
  *     ... ,
- *     mme-TraceDepth    [6] TraceDepth    OPTIONAL,
- *     sgw-TraceDepth    [7] TraceDepth    OPTIONAL,
- *     pgw-TraceDepth    [8] TraceDepth    OPTIONAL,
- *     eNB-TraceDepth    [9] TraceDepth    OPTIONAL,
- *     msc-s-TraceDepthExtension    [10] TraceDepthExtension    OPTIONAL,
- *     mgw-TraceDepthExtension    [11] TraceDepthExtension    OPTIONAL,
- *     sgsn-TraceDepthExtension    [12] TraceDepthExtension    OPTIONAL,
- *     ggsn-TraceDepthExtension    [13] TraceDepthExtension    OPTIONAL,
- *     rnc-TraceDepthExtension    [14] TraceDepthExtension    OPTIONAL,
- *     bmsc-TraceDepthExtension    [15] TraceDepthExtension    OPTIONAL,
- *     mme-TraceDepthExtension    [16] TraceDepthExtension    OPTIONAL,
- *     sgw-TraceDepthExtension    [17] TraceDepthExtension    OPTIONAL,
- *     pgw-TraceDepthExtension    [18] TraceDepthExtension    OPTIONAL,
+ *     mme-TraceDepth    [6] TraceDepth    type OPTIONAL,
+ *     sgw-TraceDepth    [7] TraceDepth    type OPTIONAL,
+ *     pgw-TraceDepth    [8] TraceDepth    type OPTIONAL,
+ *     eNB-TraceDepth    [9] TraceDepth    type OPTIONAL,
+ *     msc-s-TraceDepthExtension    [10] TraceDepthExtension    type OPTIONAL,
+ *     mgw-TraceDepthExtension    [11] TraceDepthExtension    type OPTIONAL,
+ *     sgsn-TraceDepthExtension    [12] TraceDepthExtension    type OPTIONAL,
+ *     ggsn-TraceDepthExtension    [13] TraceDepthExtension    type OPTIONAL,
+ *     rnc-TraceDepthExtension    [14] TraceDepthExtension    type OPTIONAL,
+ *     bmsc-TraceDepthExtension    [15] TraceDepthExtension    type OPTIONAL,
+ *     mme-TraceDepthExtension    [16] TraceDepthExtension    type OPTIONAL,
+ *     sgw-TraceDepthExtension    [17] TraceDepthExtension    type OPTIONAL,
+ *     pgw-TraceDepthExtension    [18] TraceDepthExtension    type OPTIONAL,
  *     eNB-TraceDepthExtension    [19] TraceDepthExtension    OPTIONAL }
  * ```
  * 

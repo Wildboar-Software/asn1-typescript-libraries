@@ -2,8 +2,8 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
+    type OPTIONAL,
+    type BOOLEAN,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -38,9 +38,9 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * MonitorStartResult ::= SEQUENCE
  * {     crossRefIdentifier         MonitorCrossRefID,
- *     actualmonitorFilter         [0] IMPLICIT MonitorFilter     OPTIONAL,
- *     actualMonitorMediaClass     [1] IMPLICIT MonitorMediaClass     OPTIONAL,
- *     monitorExistingCalls         BOOLEAN             OPTIONAL,
+ *     actualmonitorFilter         [0] IMPLICIT MonitorFilter     type OPTIONAL,
+ *     actualMonitorMediaClass     [1] IMPLICIT MonitorMediaClass     type OPTIONAL,
+ *     monitorExistingCalls         BOOLEAN             type OPTIONAL,
  *     extensions             CSTACommonArguments         OPTIONAL }
  * ```
  * 

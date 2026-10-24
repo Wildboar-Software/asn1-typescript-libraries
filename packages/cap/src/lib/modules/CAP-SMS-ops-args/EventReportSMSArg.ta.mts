@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -30,9 +30,9 @@ import { MiscCallInfo, _decode_MiscCallInfo, _encode_MiscCallInfo } from "../IN-
  * ```asn1
  * EventReportSMSArg {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *     eventTypeSMS            [0] EventTypeSMS,
- *     eventSpecificInformationSMS        [1] EventSpecificInformationSMS        OPTIONAL,
+ *     eventSpecificInformationSMS        [1] EventSpecificInformationSMS        type OPTIONAL,
  *     miscCallInfo            [2] MiscCallInfo DEFAULT {messageType request},
- *     extensions                [10] Extensions {bound}            OPTIONAL,
+ *     extensions                [10] Extensions {bound}            type OPTIONAL,
  *     ...
  *     }
  * ```

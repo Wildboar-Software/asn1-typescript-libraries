@@ -2,11 +2,11 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
+    type OPTIONAL,
+    type INTEGER,
     SEQUENCE,
     SET,
-    IA5String,
+    type IA5String,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -35,9 +35,9 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * DigitsGeneratedEvent ::= SEQUENCE
  * {    connection            ConnectionID,
  *     digitGeneratedList        IA5String,
- *     digitDurationList        [0] IMPLICIT SEQUENCE OF INTEGER    OPTIONAL,
- *     pauseDurationList        [1] IMPLICIT SEQUENCE OF INTEGER    OPTIONAL,
- *     connectionInfo            ConnectionInformation            OPTIONAL,
+ *     digitDurationList        [0] IMPLICIT SEQUENCE OF INTEGER    type OPTIONAL,
+ *     pauseDurationList        [1] IMPLICIT SEQUENCE OF INTEGER    type OPTIONAL,
+ *     connectionInfo            ConnectionInformation            type OPTIONAL,
  *     extensions             CSTACommonArguments             OPTIONAL }
  * ```
  * 

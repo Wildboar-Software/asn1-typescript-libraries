@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OCTET_STRING,
-    OPTIONAL,
-    RELATIVE_OID,
-    UTF8String,
+    type INTEGER,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type RELATIVE_OID,
+    type UTF8String,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError,

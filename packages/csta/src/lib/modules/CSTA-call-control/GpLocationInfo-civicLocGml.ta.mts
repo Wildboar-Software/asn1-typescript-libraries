@@ -2,8 +2,8 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    OCTET_STRING,
+    type OPTIONAL,
+    type OCTET_STRING,
     SEQUENCE,
     SET,
     ASN1Element as _Element,

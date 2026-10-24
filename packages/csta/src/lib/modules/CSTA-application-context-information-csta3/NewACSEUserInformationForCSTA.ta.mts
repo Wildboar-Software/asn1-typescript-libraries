@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -39,8 +39,8 @@ import { CSTAPrivateDataVersionList, _decode_CSTAPrivateDataVersionList, _encode
  * --    For CSTA Phase III (and later), implementations should use CSTA Capability Exchange Services
  * --    to determine the Services and Events supported by a switching function.
  * --
- *     cSTAFunctionsRequiredByApplication    [0] IMPLICIT CSTAFunctionality            OPTIONAL,
- *     cSTAFunctionsThatCanBeSupplied            [1] IMPLICIT CSTAFunctionality            OPTIONAL,
+ *     cSTAFunctionsRequiredByApplication    [0] IMPLICIT CSTAFunctionality            type OPTIONAL,
+ *     cSTAFunctionsThatCanBeSupplied            [1] IMPLICIT CSTAFunctionality            type OPTIONAL,
  *     cSTAPrivateDataVersionList            [2] IMPLICIT CSTAPrivateDataVersionList            OPTIONAL }
  * ```
  * 

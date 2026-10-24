@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    OPTIONAL,
+    type OCTET_STRING,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -23,10 +23,10 @@ import { MechTypeList, _decode_MechTypeList, _encode_MechTypeList } from "../Spn
  *                             accept-completed    (0),
  *                             accept-incomplete   (1),
  *                             reject              (2),
- *                             request-mic         (3) }          OPTIONAL,
- *     supportedMech  [1] MechType                                OPTIONAL,
- *     responseToken  [2] OCTET STRING                            OPTIONAL,
- *     mechListMIC    [3] OCTET STRING                            OPTIONAL,
+ *                             request-mic         (3) }          type OPTIONAL,
+ *     supportedMech  [1] MechType                                type OPTIONAL,
+ *     responseToken  [2] OCTET STRING                            type OPTIONAL,
+ *     mechListMIC    [3] OCTET STRING                            type OPTIONAL,
  *     -- [MS-SPNG] Late Fallback Mechanism
  *     mechTypes      [4] MechTypeList                            OPTIONAL
  * }

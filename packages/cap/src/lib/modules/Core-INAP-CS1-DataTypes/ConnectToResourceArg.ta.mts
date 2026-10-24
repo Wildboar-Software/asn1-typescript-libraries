@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -28,7 +28,7 @@ import { ServiceInteractionIndicators, _decode_ServiceInteractionIndicators, _en
  *           ipRoutingAddress     [0] IPRoutingAddress,
  *           none     [3] NULL
  *           },
- *      extensions     [4] SEQUENCE SIZE(1..numOfExtensions) OF ExtensionField     OPTIONAL,
+ *      extensions     [4] SEQUENCE SIZE(1..numOfExtensions) OF ExtensionField     type OPTIONAL,
  *      serviceInteractionIndicators     [30] ServiceInteractionIndicators     OPTIONAL
  * --  ...
  *      }

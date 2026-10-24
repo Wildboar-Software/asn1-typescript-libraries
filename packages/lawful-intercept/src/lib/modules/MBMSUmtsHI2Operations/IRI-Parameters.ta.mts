@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
@@ -76,11 +76,11 @@ import { National_HI2_ASN1parameters, _decode_National_HI2_ASN1parameters, _enco
  * 
  *     national-Parameters        [6] National-Parameters OPTIONAL,
  *     networkIdentifier        [7] Network-Identifier OPTIONAL,
- *     mBMSevent                [8] MBMSEvent    OPTIONAL,
+ *     mBMSevent                [8] MBMSEvent    type OPTIONAL,
  *     correlationNumber        [9] CorrelationNumber OPTIONAL,
  *     mbmsInformation            [10] MBMSinformation OPTIONAL,
- *     visitedPLMNID            [11] VisitedPLMNID     OPTIONAL,
- *     national-HI2-ASN1parameters    [12]    National-HI2-ASN1parameters    OPTIONAL,
+ *     visitedPLMNID            [11] VisitedPLMNID     type OPTIONAL,
+ *     national-HI2-ASN1parameters    [12]    National-HI2-ASN1parameters    type OPTIONAL,
  * ...
  * }
  * ```

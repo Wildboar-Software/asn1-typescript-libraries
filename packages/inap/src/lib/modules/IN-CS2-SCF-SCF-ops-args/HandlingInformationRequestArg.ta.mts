@@ -48,7 +48,7 @@ import { HandlingInformationRequestArg_Type, _decode_HandlingInformationRequestA
  *                extensions
  *                  [18]  SEQUENCE OF
  *                          ExtensionField
- *                    OPTIONAL,
+ *                    type OPTIONAL,
  *                ...}}
  * ```
  */

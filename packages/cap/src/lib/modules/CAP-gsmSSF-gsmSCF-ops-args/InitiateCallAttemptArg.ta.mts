@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
@@ -33,13 +33,13 @@ import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressStr
  * ```asn1
  * InitiateCallAttemptArg {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *     destinationRoutingAddress        [0]    DestinationRoutingAddress {bound},
- *     extensions                [4]    Extensions {bound}            OPTIONAL,
- *     legToBeCreated            [5]    LegID                    OPTIONAL,
- *     newCallSegment            [6]    CallSegmentID {bound}            OPTIONAL,
- *     callingPartyNumber            [30] CallingPartyNumber {bound}        OPTIONAL,
- *     callReferenceNumber            [51] CallReferenceNumber            OPTIONAL,
- *     gsmSCFAddress            [52] ISDN-AddressString            OPTIONAL,
- *     suppress-T-CSI            [53] NULL                    OPTIONAL,
+ *     extensions                [4]    Extensions {bound}            type OPTIONAL,
+ *     legToBeCreated            [5]    LegID                    type OPTIONAL,
+ *     newCallSegment            [6]    CallSegmentID {bound}            type OPTIONAL,
+ *     callingPartyNumber            [30] CallingPartyNumber {bound}        type OPTIONAL,
+ *     callReferenceNumber            [51] CallReferenceNumber            type OPTIONAL,
+ *     gsmSCFAddress            [52] ISDN-AddressString            type OPTIONAL,
+ *     suppress-T-CSI            [53] NULL                    type OPTIONAL,
  *     ...
  *     }
  * ```

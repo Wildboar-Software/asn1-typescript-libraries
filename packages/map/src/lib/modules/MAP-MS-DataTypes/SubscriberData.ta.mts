@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -33,21 +33,21 @@ import { ZoneCodeList, _decode_ZoneCodeList, _encode_ZoneCodeList } from "../MAP
  * 
  * ```asn1
  * SubscriberData ::= SEQUENCE {
- *     msisdn    [1] ISDN-AddressString    OPTIONAL,
- *     category    [2] Category    OPTIONAL,
- *     subscriberStatus    [3] SubscriberStatus    OPTIONAL,
- *     bearerServiceList    [4] BearerServiceList    OPTIONAL,
+ *     msisdn    [1] ISDN-AddressString    type OPTIONAL,
+ *     category    [2] Category    type OPTIONAL,
+ *     subscriberStatus    [3] SubscriberStatus    type OPTIONAL,
+ *     bearerServiceList    [4] BearerServiceList    type OPTIONAL,
  *     -- The exception handling for reception of unsupported / not allocated
  *     -- bearerServiceCodes is defined in clause 8.8.1
- *     teleserviceList    [6] TeleserviceList    OPTIONAL,
+ *     teleserviceList    [6] TeleserviceList    type OPTIONAL,
  *     -- The exception handling for reception of unsupported / not allocated
  *     -- teleserviceCodes is defined in clause 8.8.1
- *     provisionedSS    [7] Ext-SS-InfoList    OPTIONAL,
- *     odb-Data    [8] ODB-Data    OPTIONAL,
- *     roamingRestrictionDueToUnsupportedFeature  [9] NULL    OPTIONAL,
- *     regionalSubscriptionData    [10] ZoneCodeList    OPTIONAL,
- *     vbsSubscriptionData    [11] VBSDataList    OPTIONAL,
- *     vgcsSubscriptionData    [12] VGCSDataList    OPTIONAL,
+ *     provisionedSS    [7] Ext-SS-InfoList    type OPTIONAL,
+ *     odb-Data    [8] ODB-Data    type OPTIONAL,
+ *     roamingRestrictionDueToUnsupportedFeature  [9] NULL    type OPTIONAL,
+ *     regionalSubscriptionData    [10] ZoneCodeList    type OPTIONAL,
+ *     vbsSubscriptionData    [11] VBSDataList    type OPTIONAL,
+ *     vgcsSubscriptionData    [12] VGCSDataList    type OPTIONAL,
  *     vlrCamelSubscriptionInfo    [13] VlrCamelSubscriptionInfo    OPTIONAL
  *     }
  * ```

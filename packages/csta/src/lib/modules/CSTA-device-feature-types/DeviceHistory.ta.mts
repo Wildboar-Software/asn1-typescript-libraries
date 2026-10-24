@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -39,7 +39,7 @@ import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CST
  * ```asn1
  * DeviceHistory ::= SEQUENCE
  * {    oldDeviceID            DeviceID,
- *     eventCause            [1] IMPLICIT    EventCause        OPTIONAL,
+ *     eventCause            [1] IMPLICIT    EventCause        type OPTIONAL,
  *     oldConnectionID            [2] IMPLICIT    ConnectionID        OPTIONAL }
  * ```
  * 

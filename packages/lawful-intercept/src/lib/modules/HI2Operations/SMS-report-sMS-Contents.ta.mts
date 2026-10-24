@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    OPTIONAL,
+    type OCTET_STRING,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
@@ -57,7 +57,7 @@ import { SMS_report_sMS_Contents_enhancedContent, _decode_SMS_report_sMS_Content
  *         undefined(2),
  *         ...
  *     }
- *     OPTIONAL,
+ *     type OPTIONAL,
  *     other-message        [3] ENUMERATED
  *     {
  *         -- In case of terminating call, indicates if the server will send other SMS.
@@ -66,7 +66,7 @@ import { SMS_report_sMS_Contents_enhancedContent, _decode_SMS_report_sMS_Content
  *         undefined(2),
  *         ...
  *     }
- *     OPTIONAL,
+ *     type OPTIONAL,
  *     content                [4] OCTET STRING (SIZE (1..270)) OPTIONAL,
  *     -- Encoded in the format defined for the SMS mobile.
  *     -- The content and enhancedContent fields are mutually exclusive.

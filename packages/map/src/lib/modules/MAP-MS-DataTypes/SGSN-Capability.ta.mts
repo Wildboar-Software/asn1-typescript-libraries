@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
+    type BOOLEAN,
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -33,24 +33,24 @@ import { SupportedRAT_Types, _decode_SupportedRAT_Types, _encode_SupportedRAT_Ty
  * 
  * ```asn1
  * SGSN-Capability ::= SEQUENCE{
- *     solsaSupportIndicator    NULL    OPTIONAL,
- *     extensionContainer    [1] ExtensionContainer    OPTIONAL,
+ *     solsaSupportIndicator    NULL    type OPTIONAL,
+ *     extensionContainer    [1] ExtensionContainer    type OPTIONAL,
  *     ... ,
  *     superChargerSupportedInServingNetworkEntity    [2] SuperChargerInfo    OPTIONAL ,
- *     gprsEnhancementsSupportIndicator    [3] NULL    OPTIONAL,
- *     supportedCamelPhases     [4] SupportedCamelPhases    OPTIONAL,
- *     supportedLCS-CapabilitySets    [5]  SupportedLCS-CapabilitySets    OPTIONAL,
- *     offeredCamel4CSIs    [6] OfferedCamel4CSIs    OPTIONAL,
- *     smsCallBarringSupportIndicator    [7]    NULL    OPTIONAL,    supportedRAT-TypesIndicator    [8]    SupportedRAT-Types    OPTIONAL,
- *     supportedFeatures    [9] SupportedFeatures    OPTIONAL,
- *     t-adsDataRetrieval    [10] NULL    OPTIONAL,
- *     homogeneousSupportOfIMSVoiceOverPSSessions [11] BOOLEAN    OPTIONAL,
+ *     gprsEnhancementsSupportIndicator    [3] NULL    type OPTIONAL,
+ *     supportedCamelPhases     [4] SupportedCamelPhases    type OPTIONAL,
+ *     supportedLCS-CapabilitySets    [5]  SupportedLCS-CapabilitySets    type OPTIONAL,
+ *     offeredCamel4CSIs    [6] OfferedCamel4CSIs    type OPTIONAL,
+ *     smsCallBarringSupportIndicator    [7]    NULL    type OPTIONAL,    supportedRAT-TypesIndicator    [8]    SupportedRAT-Types    type OPTIONAL,
+ *     supportedFeatures    [9] SupportedFeatures    type OPTIONAL,
+ *     t-adsDataRetrieval    [10] NULL    type OPTIONAL,
+ *     homogeneousSupportOfIMSVoiceOverPSSessions [11] BOOLEAN    type OPTIONAL,
  *     --    "true" indicates homogeneous support, "false" indicates homogeneous non-support
  *     --    in the complete SGSN or MME area
- *     cancellationTypeInitialAttach    [12]    NULL    OPTIONAL,
- *     msisdn-lessOperation-Supported    [14]    NULL    OPTIONAL,
- *     updateofHomogeneousSupportOfIMSVoiceOverPSSessions [15] NULL    OPTIONAL,
- *     reset-ids-Supported    [16]    NULL    OPTIONAL,
+ *     cancellationTypeInitialAttach    [12]    NULL    type OPTIONAL,
+ *     msisdn-lessOperation-Supported    [14]    NULL    type OPTIONAL,
+ *     updateofHomogeneousSupportOfIMSVoiceOverPSSessions [15] NULL    type OPTIONAL,
+ *     reset-ids-Supported    [16]    NULL    type OPTIONAL,
  *     ext-SupportedFeatures    [17]    Ext-SupportedFeatures    OPTIONAL
  *     }
  * ```

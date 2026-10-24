@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    PrintableString,
-    TeletexString,
-    GeneralString,
-    UniversalString,
-    BMPString,
+    type PrintableString,
+    type TeletexString,
+    type GeneralString,
+    type UniversalString,
+    type BMPString,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,

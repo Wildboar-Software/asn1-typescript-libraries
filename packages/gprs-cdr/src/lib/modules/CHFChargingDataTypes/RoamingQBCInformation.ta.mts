@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    IA5String,
-    OPTIONAL,
+    type IA5String,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError

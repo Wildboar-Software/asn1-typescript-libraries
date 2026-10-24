@@ -2,9 +2,9 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN,
-    OPTIONAL,
-    UTF8String,
+    type BOOLEAN,
+    type OPTIONAL,
+    type UTF8String,
     VisibleString
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -30,14 +30,14 @@ import * as $ from "@wildboar/asn1/functional";
  *     -- The set of URIs defined in [RFC3261] and related SIP RFCs.
  *     privacy-setting        [1] BOOLEAN,
  *     -- Default FALSE, send TRUE if privacy is used.
- *     privacy-alias        [2] VisibleString    OPTIONAL,
+ *     privacy-alias        [2] VisibleString    type OPTIONAL,
  *     -- if privacy is used, the PTC Server creates an anonymous PTC Address of the form
  *     -- <sip:anonymous@anonymous.invalid>. In addition to  anonymity, the anonymous PTC
  *     -- Addresses SHALL be unique within a PTC Session. In case more than one anonymous
  *     -- PTC Addresses are used in the same PTC Session, for the second Anonymous PTC
  *     -- Session and thereafter, the PTC Server SHOULD use the form
  *     -- sip:anonymous-n@anonymous.invalid where n is an integer number.
- *     nickname             [3] UTF8String     OPTIONAL,
+ *     nickname             [3] UTF8String     type OPTIONAL,
  * ...
  * }
  * ```

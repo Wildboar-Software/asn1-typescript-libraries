@@ -4,7 +4,7 @@ import * as $ from "@wildboar/asn1/functional";
 import {
     SEQUENCE,
     SET,
-    IA5String,
+    type IA5String,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1ConstructionError as _ConstructionError

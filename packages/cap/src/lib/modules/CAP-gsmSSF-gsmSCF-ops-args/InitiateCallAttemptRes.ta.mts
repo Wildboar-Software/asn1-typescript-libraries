@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
@@ -28,9 +28,9 @@ import { OfferedCamel4Functionalities, _decode_OfferedCamel4Functionalities, _en
  * 
  * ```asn1
  * InitiateCallAttemptRes {PARAMETERS-BOUND : bound} ::= SEQUENCE {
- *     supportedCamelPhases        [0] SupportedCamelPhases            OPTIONAL,
- *     offeredCamel4Functionalities    [1] OfferedCamel4Functionalities        OPTIONAL,
- *     extensions                [2]    Extensions {bound}            OPTIONAL,
+ *     supportedCamelPhases        [0] SupportedCamelPhases            type OPTIONAL,
+ *     offeredCamel4Functionalities    [1] OfferedCamel4Functionalities        type OPTIONAL,
+ *     extensions                [2]    Extensions {bound}            type OPTIONAL,
  *     ...,
  *     releaseCallArgExtensionAllowed    [3]    NULL                    OPTIONAL
  *     }

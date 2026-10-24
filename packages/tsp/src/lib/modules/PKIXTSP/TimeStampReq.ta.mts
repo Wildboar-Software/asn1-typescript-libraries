@@ -2,9 +2,9 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN,
-    OCTET_STRING,
-    OPTIONAL,
+    type BOOLEAN,
+    type OCTET_STRING,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -49,8 +49,8 @@ import {
  *     messageImprint           MessageImprint,
  *     --a hash algorithm OID and the hash value of the data to be
  *     --time-stamped
- *     reqPolicy                TSAPolicyId                OPTIONAL,
- *     nonce                    INTEGER                    OPTIONAL,
+ *     reqPolicy                TSAPolicyId                type OPTIONAL,
+ *     nonce                    INTEGER                    type OPTIONAL,
  *     certReq                  BOOLEAN                    DEFAULT FALSE,
  *     extensions               [0] IMPLICIT Extensions    OPTIONAL  }
  * ```

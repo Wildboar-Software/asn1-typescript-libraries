@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -29,7 +29,7 @@ import { T_BcsmTriggerDetectionPoint, _decode_T_BcsmTriggerDetectionPoint, _enco
  *     serviceKey    ServiceKey,
  *     gsmSCF-Address    [0] ISDN-AddressString,
  *     defaultCallHandling    [1] DefaultCallHandling,
- *     extensionContainer    [2] ExtensionContainer    OPTIONAL,
+ *     extensionContainer    [2] ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 

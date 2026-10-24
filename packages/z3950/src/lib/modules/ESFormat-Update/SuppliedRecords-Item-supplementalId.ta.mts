@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    EXTERNAL,
+    type EXTERNAL,
     GeneralizedTime,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass

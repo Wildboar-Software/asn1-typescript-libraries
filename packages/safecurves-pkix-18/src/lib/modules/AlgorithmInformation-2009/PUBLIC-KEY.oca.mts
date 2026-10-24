@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
+    type OBJECT_IDENTIFIER,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -31,8 +31,8 @@ import { KeyUsage } from "@wildboar/x500/CertificateExtensions";
  * ```asn1
  * PUBLIC-KEY ::= CLASS {
  * &id                OBJECT IDENTIFIER UNIQUE,
- * &KeyValue        OPTIONAL,
- * &Params        OPTIONAL,
+ * &KeyValue        type OPTIONAL,
+ * &Params        type OPTIONAL,
  * &paramPresence    ParamOptions DEFAULT absent,
  * &keyUsage        KeyUsage OPTIONAL,
  * &PrivateKey        OPTIONAL

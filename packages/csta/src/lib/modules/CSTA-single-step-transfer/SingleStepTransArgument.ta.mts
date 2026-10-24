@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -55,14 +55,14 @@ import { UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-fea
  * SingleStepTransArgument ::= SEQUENCE
  * {    activeCall             ConnectionID,
  *     transferredTo             DeviceID,
- *     accountCode             [0] IMPLICIT AccountInfo         OPTIONAL,
- *     authCode             [1] IMPLICIT AuthCode             OPTIONAL,
- *     correlatorData             [2] IMPLICIT CorrelatorData         OPTIONAL,
- *     userData             UserData                 OPTIONAL,
- *     callCharacteristics        [3] IMPLICIT CallCharacteristics    OPTIONAL,
- *     subjectOfCall            [4] IMPLICIT SubjectOfCall        OPTIONAL,
- *     languagePreferences        [5] IMPLICIT LanguagePreferences    OPTIONAL,
- *     reason                [6] IMPLICIT EventCause            OPTIONAL,
+ *     accountCode             [0] IMPLICIT AccountInfo         type OPTIONAL,
+ *     authCode             [1] IMPLICIT AuthCode             type OPTIONAL,
+ *     correlatorData             [2] IMPLICIT CorrelatorData         type OPTIONAL,
+ *     userData             UserData                 type OPTIONAL,
+ *     callCharacteristics        [3] IMPLICIT CallCharacteristics    type OPTIONAL,
+ *     subjectOfCall            [4] IMPLICIT SubjectOfCall        type OPTIONAL,
+ *     languagePreferences        [5] IMPLICIT LanguagePreferences    type OPTIONAL,
+ *     reason                [6] IMPLICIT EventCause            type OPTIONAL,
  *     extensions             CSTACommonArguments             OPTIONAL }
  * ```
  * 

@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OCTET_STRING,
-    OBJECT_IDENTIFIER,
+    type INTEGER,
+    type OCTET_STRING,
+    type OBJECT_IDENTIFIER,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
+    type OPTIONAL,
+    type BOOLEAN,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -34,8 +34,8 @@ import { type InformationToSend, _decode_InformationToSend, _encode_InformationT
  *     informationToSend            [0] InformationToSend {bound},
  *     disconnectFromIPForbidden        [1] BOOLEAN DEFAULT TRUE,
  *     requestAnnouncementCompleteNotification    [2] BOOLEAN DEFAULT TRUE,
- *     extensions                [3] Extensions {bound}            OPTIONAL,
- *     callSegmentID            [5] CallSegmentID {bound}            OPTIONAL,
+ *     extensions                [3] Extensions {bound}            type OPTIONAL,
+ *     callSegmentID            [5] CallSegmentID {bound}            type OPTIONAL,
  *     requestAnnouncementStartedNotification    [51] BOOLEAN DEFAULT FALSE,
  *     ...
  *     }

@@ -42,7 +42,7 @@ import {
  *   normal-mode-parameters
  *     [0] IMPLICIT SEQUENCE {presentation-context-identifier-list
  *                              [0] IMPLICIT Presentation-context-identifier-list
- *                                OPTIONAL,
+ *                                type OPTIONAL,
  *                            user-data
  *                              User-data OPTIONAL}
  *   --  Shall be used for normal mode only.

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -23,14 +23,14 @@ import { AoIPCodec, _decode_AoIPCodec, _encode_AoIPCodec } from "../MAP-MS-DataT
  * ```asn1
  * AoIPCodecsList ::= SEQUENCE {
  *     codec1    [1] AoIPCodec,
- *     codec2    [2] AoIPCodec    OPTIONAL,
- *     codec3    [3] AoIPCodec    OPTIONAL,
- *     codec4    [4] AoIPCodec    OPTIONAL,
- *     codec5    [5] AoIPCodec    OPTIONAL,
- *     codec6    [6] AoIPCodec    OPTIONAL,
- *     codec7    [7] AoIPCodec    OPTIONAL,
- *     codec8    [8] AoIPCodec    OPTIONAL,
- *     extensionContainer    [9] ExtensionContainer    OPTIONAL,
+ *     codec2    [2] AoIPCodec    type OPTIONAL,
+ *     codec3    [3] AoIPCodec    type OPTIONAL,
+ *     codec4    [4] AoIPCodec    type OPTIONAL,
+ *     codec5    [5] AoIPCodec    type OPTIONAL,
+ *     codec6    [6] AoIPCodec    type OPTIONAL,
+ *     codec7    [7] AoIPCodec    type OPTIONAL,
+ *     codec8    [8] AoIPCodec    type OPTIONAL,
+ *     extensionContainer    [9] ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 

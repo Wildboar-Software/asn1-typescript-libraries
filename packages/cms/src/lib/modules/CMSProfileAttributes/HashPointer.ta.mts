@@ -2,7 +2,7 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -27,7 +27,7 @@ import {
  *
  * ```asn1
  * HashPointer ::= SEQUENCE {
- * hash        DigestedData     OPTIONAL,
+ * hash        DigestedData     type OPTIONAL,
  * pointers    Pointers    OPTIONAL
  * } ((WITH COMPONENTS {...,hash PRESENT}) |
  *    (WITH COMPONENTS {...,pointers PRESENT}))

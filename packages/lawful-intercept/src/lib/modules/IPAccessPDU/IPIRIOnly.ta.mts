@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OPTIONAL,
-    RELATIVE_OID,
+    type INTEGER,
+    type OPTIONAL,
+    type RELATIVE_OID,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";

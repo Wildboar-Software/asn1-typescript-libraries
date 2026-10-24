@@ -26,7 +26,7 @@ import { EstablishChargingRecordArg_Type, _decode_EstablishChargingRecordArg_Typ
  *                     extensions
  *                       [4]  SEQUENCE OF
  *                              ExtensionField
- *                         OPTIONAL,
+ *                         type OPTIONAL,
  *                     ...}}
  * ```
  */

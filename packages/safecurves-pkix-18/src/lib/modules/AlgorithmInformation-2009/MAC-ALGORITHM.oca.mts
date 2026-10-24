@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    OBJECT_IDENTIFIER,
+    type BOOLEAN,
+    type OBJECT_IDENTIFIER,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -29,7 +29,7 @@ import { type SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs
  * ```asn1
  * MAC-ALGORITHM ::= CLASS {
  * &id                OBJECT IDENTIFIER UNIQUE,
- * &Params        OPTIONAL,
+ * &Params        type OPTIONAL,
  * &paramPresence    ParamOptions DEFAULT absent,
  * &keyed        BOOLEAN,
  * &smimeCaps        SMIME-CAPS OPTIONAL

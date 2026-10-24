@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -36,8 +36,8 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * SendMessageResult ::= SEQUENCE
  * {     connectionList             ConnectionListItems,
- *     mediaCallCharacteristics    MediaCallCharacteristics            OPTIONAL,
- *     listOfCallLinkageData         [1] IMPLICIT CallLinkageDataListItems        OPTIONAL,
+ *     mediaCallCharacteristics    MediaCallCharacteristics            type OPTIONAL,
+ *     listOfCallLinkageData         [1] IMPLICIT CallLinkageDataListItems        type OPTIONAL,
  *     extensions             CSTACommonArguments                 OPTIONAL }
  * ```
  * 

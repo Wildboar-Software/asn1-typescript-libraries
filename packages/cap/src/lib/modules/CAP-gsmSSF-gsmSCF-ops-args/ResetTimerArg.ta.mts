@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -31,8 +31,8 @@ import { type TimerValue, _decode_TimerValue, _encode_TimerValue } from "../CAP-
  * ResetTimerArg {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *     timerID                [0] TimerID    DEFAULT tssf,
  *     timervalue                [1] TimerValue,
- *     extensions                [2] Extensions {bound}            OPTIONAL,
- *     callSegmentID            [3]    CallSegmentID {bound}            OPTIONAL,
+ *     extensions                [2] Extensions {bound}            type OPTIONAL,
+ *     callSegmentID            [3]    CallSegmentID {bound}            type OPTIONAL,
  *     ...
  *     }
  * ```

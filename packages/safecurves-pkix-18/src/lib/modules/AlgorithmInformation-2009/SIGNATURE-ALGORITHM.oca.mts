@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
+    type OBJECT_IDENTIFIER,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -31,8 +31,8 @@ import { type SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs
  * ```asn1
  * SIGNATURE-ALGORITHM ::= CLASS {
  * &id             OBJECT IDENTIFIER UNIQUE,
- * &Value          OPTIONAL,
- * &Params         OPTIONAL,
+ * &Value          type OPTIONAL,
+ * &Params         type OPTIONAL,
  * &paramPresence  ParamOptions DEFAULT absent,
  * &HashSet        DIGEST-ALGORITHM OPTIONAL,
  * &PublicKeySet   PUBLIC-KEY OPTIONAL,

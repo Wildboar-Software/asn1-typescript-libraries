@@ -2,8 +2,8 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
+    type OPTIONAL,
+    type BOOLEAN,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -62,17 +62,17 @@ import { UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-fea
  * ConsultationCallArgument ::= SEQUENCE
  * {     existingCall             [ 0] IMPLICIT ConnectionID,
  *     consultedDevice         [ 1] DeviceID,
- *     connectionReservation         [ 2] IMPLICIT BOOLEAN                 OPTIONAL,
- *     accountCode             [ 3] IMPLICIT AccountInfo             OPTIONAL,
- *     authCode             [ 4] IMPLICIT AuthCode                 OPTIONAL,
- *     correlatorData             [ 5] IMPLICIT CorrelatorData             OPTIONAL,
- *     userData             [ 6] IMPLICIT UserData                 OPTIONAL,
- *     callCharacteristics         [ 7] IMPLICIT CallCharacteristics         OPTIONAL,
- *     mediaCallCharacteristics     [ 8] IMPLICIT MediaCallCharacteristics         OPTIONAL,
- *     callingConnectionInfo         [ 9] IMPLICIT ConnectionInformation         OPTIONAL,
+ *     connectionReservation         [ 2] IMPLICIT BOOLEAN                 type OPTIONAL,
+ *     accountCode             [ 3] IMPLICIT AccountInfo             type OPTIONAL,
+ *     authCode             [ 4] IMPLICIT AuthCode                 type OPTIONAL,
+ *     correlatorData             [ 5] IMPLICIT CorrelatorData             type OPTIONAL,
+ *     userData             [ 6] IMPLICIT UserData                 type OPTIONAL,
+ *     callCharacteristics         [ 7] IMPLICIT CallCharacteristics         type OPTIONAL,
+ *     mediaCallCharacteristics     [ 8] IMPLICIT MediaCallCharacteristics         type OPTIONAL,
+ *     callingConnectionInfo         [ 9] IMPLICIT ConnectionInformation         type OPTIONAL,
  *     consultOptions             [10] IMPLICIT ConsultOptions             DEFAULT unrestricted,
- *     subjectOfCall            [11] IMPLICIT SubjectOfCall            OPTIONAL,
- *     languagePreferences        [12] IMPLICIT LanguagePreferences        OPTIONAL,
+ *     subjectOfCall            [11] IMPLICIT SubjectOfCall            type OPTIONAL,
+ *     languagePreferences        [12] IMPLICIT LanguagePreferences        type OPTIONAL,
  *     extensions             CSTACommonArguments                 OPTIONAL }
  * ```
  * 

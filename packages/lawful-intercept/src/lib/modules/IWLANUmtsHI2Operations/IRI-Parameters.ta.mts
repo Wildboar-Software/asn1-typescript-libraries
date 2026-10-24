@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
-    OCTET_STRING,
-    OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type OCTET_STRING,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
@@ -77,13 +77,13 @@ import { PacketDataHeaderInformation, _decode_PacketDataHeaderInformation, _enco
  * 
  *     national-Parameters        [6] National-Parameters OPTIONAL,
  *     networkIdentifier        [7] Network-Identifier OPTIONAL,
- *     i-WLANevent                [8] I-WLANEvent    OPTIONAL,
+ *     i-WLANevent                [8] I-WLANEvent    type OPTIONAL,
  *     correlationNumber        [9] CorrelationNumber OPTIONAL,
- *     i-WLANOperationErrorCode[10] I-WLANOperationErrorCode     OPTIONAL,
+ *     i-WLANOperationErrorCode[10] I-WLANOperationErrorCode     type OPTIONAL,
  *     
  *     i-wLANinformation        [11] I-WLANinformation OPTIONAL,
- *     visitedPLMNID            [12] VisitedPLMNID     OPTIONAL,
- *     national-HI2-ASN1parameters    [255]    National-HI2-ASN1parameters    OPTIONAL,
+ *     visitedPLMNID            [12] VisitedPLMNID     type OPTIONAL,
+ *     national-HI2-ASN1parameters    [255]    National-HI2-ASN1parameters    type OPTIONAL,
  * ...,
  *     nSAPI                    [13] OCTET STRING (SIZE (1)) OPTIONAL,
  *     -- Include either Octet 2 of the NSAPI IE of 3GPP TS 24.008 [9]

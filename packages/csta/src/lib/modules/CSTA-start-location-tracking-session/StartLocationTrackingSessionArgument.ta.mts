@@ -2,8 +2,8 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
+    type OPTIONAL,
+    type INTEGER,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -47,13 +47,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * StartLocationTrackingSessionArgument ::= SEQUENCE
  * {    locDevice            DeviceID,
- *     collectionType            [0] IMPLICIT CollectionType        OPTIONAL,
- *     collectionInterval        [1] IMPLICIT INTEGER            OPTIONAL,
- *     maxCollections            [2] IMPLICIT INTEGER            OPTIONAL,
- *     collectionFilter        [3] IMPLICIT CollectionFilter        OPTIONAL,
- *     reportingType            [4] IMPLICIT ReportingType        OPTIONAL,
- *     reportingInterval        [5] IMPLICIT INTEGER            OPTIONAL,
- *     reportingCount            [6] IMPLICIT INTEGER            OPTIONAL,
+ *     collectionType            [0] IMPLICIT CollectionType        type OPTIONAL,
+ *     collectionInterval        [1] IMPLICIT INTEGER            type OPTIONAL,
+ *     maxCollections            [2] IMPLICIT INTEGER            type OPTIONAL,
+ *     collectionFilter        [3] IMPLICIT CollectionFilter        type OPTIONAL,
+ *     reportingType            [4] IMPLICIT ReportingType        type OPTIONAL,
+ *     reportingInterval        [5] IMPLICIT INTEGER            type OPTIONAL,
+ *     reportingCount            [6] IMPLICIT INTEGER            type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 

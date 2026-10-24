@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -21,7 +21,7 @@ import { SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataT
  * ```asn1
  * EraseCC-EntryRes ::= SEQUENCE {
  *     ss-Code    [0]    SS-Code,
- *     ss-Status    [1] SS-Status    OPTIONAL,
+ *     ss-Status    [1] SS-Status    type OPTIONAL,
  *     ...}
  * ```
  * 

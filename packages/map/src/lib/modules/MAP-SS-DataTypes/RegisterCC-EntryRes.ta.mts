@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -19,7 +19,7 @@ import { CCBS_Feature, _decode_CCBS_Feature, _encode_CCBS_Feature } from "../MAP
  * 
  * ```asn1
  * RegisterCC-EntryRes ::= SEQUENCE {
- *     ccbs-Feature    [0] CCBS-Feature    OPTIONAL,
+ *     ccbs-Feature    [0] CCBS-Feature    type OPTIONAL,
  *     ...}
  * ```
  * 

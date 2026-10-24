@@ -2,8 +2,8 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
+    type OPTIONAL,
+    type INTEGER,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -42,11 +42,11 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * RecordMessageArgument ::= SEQUENCE
  * {    callToBeRecorded        ConnectionID,
- *     resource            [2] IMPLICIT ResourceID            OPTIONAL,
- *     samplingRate            [0] IMPLICIT INTEGER            OPTIONAL,
- *     encodingAlgorithm        EncodingAlgorithm            OPTIONAL,
- *     maxDuration            [1] IMPLICIT INTEGER            OPTIONAL,
- *     termination            TerminatingConditions            OPTIONAL,
+ *     resource            [2] IMPLICIT ResourceID            type OPTIONAL,
+ *     samplingRate            [0] IMPLICIT INTEGER            type OPTIONAL,
+ *     encodingAlgorithm        EncodingAlgorithm            type OPTIONAL,
+ *     maxDuration            [1] IMPLICIT INTEGER            type OPTIONAL,
+ *     termination            TerminatingConditions            type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 

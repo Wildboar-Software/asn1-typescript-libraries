@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -31,18 +31,18 @@ import { T_CSI, _decode_T_CSI, _encode_T_CSI } from "../MAP-MS-DataTypes/T-CSI.t
  * 
  * ```asn1
  * VlrCamelSubscriptionInfo ::= SEQUENCE {
- *     o-CSI    [0] O-CSI    OPTIONAL,
- *     extensionContainer    [1] ExtensionContainer    OPTIONAL,
+ *     o-CSI    [0] O-CSI    type OPTIONAL,
+ *     extensionContainer    [1] ExtensionContainer    type OPTIONAL,
  *     ...,
- *     ss-CSI    [2] SS-CSI    OPTIONAL,
- *     o-BcsmCamelTDP-CriteriaList    [4] O-BcsmCamelTDPCriteriaList    OPTIONAL,
- *     tif-CSI    [3] NULL    OPTIONAL,
- *     m-CSI    [5] M-CSI    OPTIONAL,
- *     mo-sms-CSI    [6] SMS-CSI    OPTIONAL,
- *     vt-CSI    [7] T-CSI    OPTIONAL,
- *     t-BCSM-CAMEL-TDP-CriteriaList    [8] T-BCSM-CAMEL-TDP-CriteriaList    OPTIONAL,
- *     d-CSI    [9] D-CSI    OPTIONAL,
- *     mt-sms-CSI    [10] SMS-CSI    OPTIONAL,
+ *     ss-CSI    [2] SS-CSI    type OPTIONAL,
+ *     o-BcsmCamelTDP-CriteriaList    [4] O-BcsmCamelTDPCriteriaList    type OPTIONAL,
+ *     tif-CSI    [3] NULL    type OPTIONAL,
+ *     m-CSI    [5] M-CSI    type OPTIONAL,
+ *     mo-sms-CSI    [6] SMS-CSI    type OPTIONAL,
+ *     vt-CSI    [7] T-CSI    type OPTIONAL,
+ *     t-BCSM-CAMEL-TDP-CriteriaList    [8] T-BCSM-CAMEL-TDP-CriteriaList    type OPTIONAL,
+ *     d-CSI    [9] D-CSI    type OPTIONAL,
+ *     mt-sms-CSI    [10] SMS-CSI    type OPTIONAL,
  *     mt-smsCAMELTDP-CriteriaList    [11]    MT-smsCAMELTDP-CriteriaList    OPTIONAL
  *     }
  * ```

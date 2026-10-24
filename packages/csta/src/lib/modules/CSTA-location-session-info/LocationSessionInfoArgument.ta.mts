@@ -2,9 +2,9 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
+    type OPTIONAL,
+    type BOOLEAN,
+    type INTEGER,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -32,8 +32,8 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * 
  * ```asn1
  * LocationSessionInfoArgument ::= SEQUENCE
- * {    serviceCrossRefID        ServiceCrossRefID            OPTIONAL,
- *     segmentID            INTEGER                    OPTIONAL,
+ * {    serviceCrossRefID        ServiceCrossRefID            type OPTIONAL,
+ *     segmentID            INTEGER                    type OPTIONAL,
  *     lastSegment            BOOLEAN,
  *     locationSessionInfoList        LocationSessionInfoList,
  *     extensions            CSTACommonArguments            OPTIONAL }

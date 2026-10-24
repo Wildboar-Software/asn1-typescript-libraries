@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -23,7 +23,7 @@ import { QoS_Class_Identifier, _decode_QoS_Class_Identifier, _encode_QoS_Class_I
  * EPS-QoS-Subscribed ::= SEQUENCE {
  *     qos-Class-Identifier    [0] QoS-Class-Identifier,
  *     allocation-Retention-Priority    [1] Allocation-Retention-Priority,
- *     extensionContainer    [2] ExtensionContainer    OPTIONAL,
+ *     extensionContainer    [2] ExtensionContainer    type OPTIONAL,
  *     ... }
  * ```
  * 

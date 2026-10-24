@@ -2,8 +2,8 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
+    type OPTIONAL,
+    type INTEGER,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -48,10 +48,10 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * AttachMediaServiceArgument ::= SEQUENCE
  * {    connection             ConnectionID,
  *     mediaServiceType         MediaServiceType,
- *     mediaServiceVersion        INTEGER                    OPTIONAL,
- *     mediaServiceInstanceID         MediaServiceInstanceID            OPTIONAL,
+ *     mediaServiceVersion        INTEGER                    type OPTIONAL,
+ *     mediaServiceInstanceID         MediaServiceInstanceID            type OPTIONAL,
  *     connectionMode            ConnectionMode,
- *     requestedConnectionState    LocalConnectionState            OPTIONAL,
+ *     requestedConnectionState    LocalConnectionState            type OPTIONAL,
  *     extensions             CSTACommonArguments             OPTIONAL }
  * ```
  * 

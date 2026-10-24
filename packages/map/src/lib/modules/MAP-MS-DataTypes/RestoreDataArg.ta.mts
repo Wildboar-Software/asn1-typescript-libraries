@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -29,10 +29,10 @@ import { VLR_Capability, _decode_VLR_Capability, _encode_VLR_Capability } from "
  * ```asn1
  * RestoreDataArg ::= SEQUENCE {
  *     imsi    IMSI,
- *     lmsi    LMSI    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     lmsi    LMSI    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ... ,
- *     vlr-Capability    [6] VLR-Capability    OPTIONAL,
+ *     vlr-Capability    [6] VLR-Capability    type OPTIONAL,
  *     restorationIndicator    [7]    NULL    OPTIONAL 
  *  }
  * ```

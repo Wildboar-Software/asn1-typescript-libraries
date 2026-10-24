@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -27,7 +27,7 @@ import { type Extensions, _decode_Extensions, _encode_Extensions } from "../CAP-
  * 
  * ```asn1
  * CollectInformationArg {PARAMETERS-BOUND : bound} ::= SEQUENCE {
- *     extensions                    [0]    Extensions {bound}    OPTIONAL,
+ *     extensions                    [0]    Extensions {bound}    type OPTIONAL,
  *     ...
  *     }
  * ```

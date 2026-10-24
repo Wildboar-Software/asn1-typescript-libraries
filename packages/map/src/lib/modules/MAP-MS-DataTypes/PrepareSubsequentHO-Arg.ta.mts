@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -28,14 +28,14 @@ import { RNCId, _decode_RNCId, _encode_RNCId } from "../MAP-MS-DataTypes/RNCId.t
  * 
  * ```asn1
  * PrepareSubsequentHO-Arg ::= [3] SEQUENCE {
- *     targetCellId    [0] GlobalCellId    OPTIONAL,
+ *     targetCellId    [0] GlobalCellId    type OPTIONAL,
  *     targetMSC-Number    [1] ISDN-AddressString,
- *     targetRNCId    [2] RNCId    OPTIONAL,
- *     an-APDU    [3]    AccessNetworkSignalInfo    OPTIONAL,
- *     selectedRab-Id    [4]    RAB-Id    OPTIONAL,
- *     extensionContainer    [5]    ExtensionContainer    OPTIONAL,
+ *     targetRNCId    [2] RNCId    type OPTIONAL,
+ *     an-APDU    [3]    AccessNetworkSignalInfo    type OPTIONAL,
+ *     selectedRab-Id    [4]    RAB-Id    type OPTIONAL,
+ *     extensionContainer    [5]    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     geran-classmark    [6] GERAN-Classmark    OPTIONAL,
+ *     geran-classmark    [6] GERAN-Classmark    type OPTIONAL,
  *     rab-ConfigurationIndicator    [7] NULL    OPTIONAL }
  * ```
  * 

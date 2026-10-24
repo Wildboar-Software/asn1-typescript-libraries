@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OCTET_STRING,
+    type OCTET_STRING,
     ENUMERATED,
     SEQUENCE,
     SET,

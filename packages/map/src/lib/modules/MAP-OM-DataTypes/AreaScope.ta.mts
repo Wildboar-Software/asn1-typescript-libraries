@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -24,12 +24,12 @@ import { TrackingAreaId_List, _decode_TrackingAreaId_List, _encode_TrackingAreaI
  * 
  * ```asn1
  * AreaScope ::= SEQUENCE {
- *     cgi-List    [0] CGI-List    OPTIONAL,
- *     e-utran-cgi-List    [1] E-UTRAN-CGI-List    OPTIONAL,
- *     routingAreaId-List    [2] RoutingAreaId-List    OPTIONAL,
- *     locationAreaId-List    [3] LocationAreaId-List    OPTIONAL,
- *     trackingAreaId-List    [4] TrackingAreaId-List    OPTIONAL,
- *     extensionContainer    [5] ExtensionContainer    OPTIONAL,
+ *     cgi-List    [0] CGI-List    type OPTIONAL,
+ *     e-utran-cgi-List    [1] E-UTRAN-CGI-List    type OPTIONAL,
+ *     routingAreaId-List    [2] RoutingAreaId-List    type OPTIONAL,
+ *     locationAreaId-List    [3] LocationAreaId-List    type OPTIONAL,
+ *     trackingAreaId-List    [4] TrackingAreaId-List    type OPTIONAL,
+ *     extensionContainer    [5] ExtensionContainer    type OPTIONAL,
  *     ... }
  * ```
  * 

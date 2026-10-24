@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -39,9 +39,9 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * RouteRejectArgument ::= SEQUENCE
  * {    crossRefIdentifier        RouteingCrossRefID,
- *     routeRegisterReqID        [0] IMPLICIT RouteRegisterReqID     OPTIONAL,
- *     rejectCause            [1] IMPLICIT RejectCause        OPTIONAL,
- *     correlatorData            [2] IMPLICIT CorrelatorData        OPTIONAL,
+ *     routeRegisterReqID        [0] IMPLICIT RouteRegisterReqID     type OPTIONAL,
+ *     rejectCause            [1] IMPLICIT RejectCause        type OPTIONAL,
+ *     correlatorData            [2] IMPLICIT CorrelatorData        type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 

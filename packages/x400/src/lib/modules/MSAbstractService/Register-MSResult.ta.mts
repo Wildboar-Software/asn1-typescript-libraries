@@ -32,7 +32,7 @@ import {
  *   registered-information
  *     SET {auto-action-registrations
  *            [0]  SET SIZE (1..ub-auto-registrations) OF AutoActionRegistration
- *              OPTIONAL,
+ *              type OPTIONAL,
  *          list-attribute-defaults
  *            [1]  SET SIZE (1..ub-default-registrations) OF
  *                   X413ATTRIBUTE.&id({AttributeTable}) OPTIONAL,

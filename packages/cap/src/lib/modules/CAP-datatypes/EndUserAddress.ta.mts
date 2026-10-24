@@ -1,6 +1,6 @@
 import {
-    OPTIONAL,
-    OCTET_STRING,
+    type OPTIONAL,
+    type OCTET_STRING,
     ASN1Element as _Element,
     ASN1SizeError,
     ASN1TagClass as _TagClass,

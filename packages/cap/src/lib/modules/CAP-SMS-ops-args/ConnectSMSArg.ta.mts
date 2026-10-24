@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -30,10 +30,10 @@ import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressStr
  * 
  * ```asn1
  * ConnectSMSArg {PARAMETERS-BOUND : bound} ::= SEQUENCE {
- *     callingPartysNumber            [0] SMS-AddressString            OPTIONAL,
- *     destinationSubscriberNumber        [1] CalledPartyBCDNumber {bound}        OPTIONAL,
- *     sMSCAddress                [2] ISDN-AddressString            OPTIONAL,
- *     extensions                [10] Extensions {bound}            OPTIONAL,
+ *     callingPartysNumber            [0] SMS-AddressString            type OPTIONAL,
+ *     destinationSubscriberNumber        [1] CalledPartyBCDNumber {bound}        type OPTIONAL,
+ *     sMSCAddress                [2] ISDN-AddressString            type OPTIONAL,
+ *     extensions                [10] Extensions {bound}            type OPTIONAL,
  *     ...
  *     }
  * ```

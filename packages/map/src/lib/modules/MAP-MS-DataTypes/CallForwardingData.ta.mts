@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -22,8 +22,8 @@ import { Ext_ForwFeatureList, _decode_Ext_ForwFeatureList, _encode_Ext_ForwFeatu
  * ```asn1
  * CallForwardingData ::= SEQUENCE {
  *     forwardingFeatureList    Ext-ForwFeatureList,
- *     notificationToCSE    NULL    OPTIONAL,
- *     extensionContainer    [0] ExtensionContainer    OPTIONAL,
+ *     notificationToCSE    NULL    type OPTIONAL,
+ *     extensionContainer    [0] ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 

@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -33,8 +33,8 @@ import {
  *
  * ```asn1
  * UserClasses ::= SEQUENCE {
- *   allUsers   [0]  NULL                                      OPTIONAL,
- *   thisEntry  [1]  NULL                                      OPTIONAL,
+ *   allUsers   [0]  NULL                                      type OPTIONAL,
+ *   thisEntry  [1]  NULL                                      type OPTIONAL,
  *   name       [2]  SET SIZE (1..MAX) OF NameAndOptionalUID   OPTIONAL,
  *   userGroup  [3]  SET SIZE (1..MAX) OF NameAndOptionalUID   OPTIONAL,
  *                   -- dn component shall be the name of an

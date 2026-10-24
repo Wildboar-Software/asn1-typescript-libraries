@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -27,10 +27,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * ```asn1
  * UpdateVcsgLocationArg ::= SEQUENCE {
  *     imsi    IMSI,
- *     msisdn    [2] ISDN-AddressString    OPTIONAL,
- *     vlr-Number    [0] ISDN-AddressString    OPTIONAL,
- *     sgsn-Number    [1] ISDN-AddressString    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     msisdn    [2] ISDN-AddressString    type OPTIONAL,
+ *     vlr-Number    [0] ISDN-AddressString    type OPTIONAL,
+ *     sgsn-Number    [1] ISDN-AddressString    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ... }
  * ```
  * 

@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OCTET_STRING,
-    OPTIONAL,
-    RELATIVE_OID,
+    type INTEGER,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type RELATIVE_OID,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError

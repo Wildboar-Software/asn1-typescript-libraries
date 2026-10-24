@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -39,22 +39,22 @@ import { VelocityEstimate, _decode_VelocityEstimate, _encode_VelocityEstimate } 
  * ```asn1
  * ProvideSubscriberLocation-Res ::= SEQUENCE {
  *     locationEstimate    Ext-GeographicalInformation,
- *     ageOfLocationEstimate    [0] AgeOfLocationInformation    OPTIONAL,
- *     extensionContainer    [1] ExtensionContainer    OPTIONAL,
+ *     ageOfLocationEstimate    [0] AgeOfLocationInformation    type OPTIONAL,
+ *     extensionContainer    [1] ExtensionContainer    type OPTIONAL,
  *     ... ,
- *     add-LocationEstimate    [2] Add-GeographicalInformation    OPTIONAL,
- *     deferredmt-lrResponseIndicator    [3] NULL    OPTIONAL,
- *     geranPositioningData    [4] PositioningDataInformation    OPTIONAL,
- *     utranPositioningData    [5] UtranPositioningDataInfo    OPTIONAL,
- *     cellIdOrSai    [6] CellGlobalIdOrServiceAreaIdOrLAI    OPTIONAL,
- *     sai-Present    [7] NULL    OPTIONAL,
- *     accuracyFulfilmentIndicator    [8] AccuracyFulfilmentIndicator    OPTIONAL,
- *     velocityEstimate    [9] VelocityEstimate    OPTIONAL,
- *     mo-lrShortCircuitIndicator    [10] NULL    OPTIONAL,
- *     geranGANSSpositioningData    [11] GeranGANSSpositioningData    OPTIONAL,
- *     utranGANSSpositioningData    [12] UtranGANSSpositioningData    OPTIONAL,    targetServingNodeForHandover    [13] ServingNodeAddress    OPTIONAL,
- *     utranAdditionalPositioningData    [14] UtranAdditionalPositioningData    OPTIONAL,
- *     utranBaroPressureMeas    [15] UtranBaroPressureMeas    OPTIONAL,
+ *     add-LocationEstimate    [2] Add-GeographicalInformation    type OPTIONAL,
+ *     deferredmt-lrResponseIndicator    [3] NULL    type OPTIONAL,
+ *     geranPositioningData    [4] PositioningDataInformation    type OPTIONAL,
+ *     utranPositioningData    [5] UtranPositioningDataInfo    type OPTIONAL,
+ *     cellIdOrSai    [6] CellGlobalIdOrServiceAreaIdOrLAI    type OPTIONAL,
+ *     sai-Present    [7] NULL    type OPTIONAL,
+ *     accuracyFulfilmentIndicator    [8] AccuracyFulfilmentIndicator    type OPTIONAL,
+ *     velocityEstimate    [9] VelocityEstimate    type OPTIONAL,
+ *     mo-lrShortCircuitIndicator    [10] NULL    type OPTIONAL,
+ *     geranGANSSpositioningData    [11] GeranGANSSpositioningData    type OPTIONAL,
+ *     utranGANSSpositioningData    [12] UtranGANSSpositioningData    type OPTIONAL,    targetServingNodeForHandover    [13] ServingNodeAddress    type OPTIONAL,
+ *     utranAdditionalPositioningData    [14] UtranAdditionalPositioningData    type OPTIONAL,
+ *     utranBaroPressureMeas    [15] UtranBaroPressureMeas    type OPTIONAL,
  *     utranCivicAddress    [16] UtranCivicAddress    OPTIONAL }
  * ```
  * 

@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -52,17 +52,17 @@ import { LocationSessionInfo, _decode_LocationSessionInfo, _encode_LocationSessi
  * 
  * ```asn1
  * LocationServicesServList ::= SEQUENCE
- * {    getLocationInformation            [ 0] IMPLICIT GetLocationInformation        OPTIONAL,
- *     setLocationInformation            [ 1] IMPLICIT SetLocationInformation        OPTIONAL,
- *     locationTrackingSessionResumed        [ 2] IMPLICIT LocationTrackingSessionResumed    OPTIONAL,
- *     locationTrackingSessionSuspended    [ 3] IMPLICIT LocationTrackingSessionSuspended    OPTIONAL,
- *     resumeLocationTrackingSession        [ 4] IMPLICIT ResumeLocationTrackingSession    OPTIONAL,
- *     locationInformationReport        [ 5] IMPLICIT LocationInformationReport        OPTIONAL,
- *     startLocationTrackingSession        [ 6] IMPLICIT StartLocationTrackingSession    OPTIONAL,
- *     stopLocationTrackingSession        [ 7] IMPLICIT StopLocationTrackingSession    OPTIONAL,
- *     suspendLocationTrackingSession        [ 8] IMPLICIT SuspendLocationTrackingSession    OPTIONAL,
- *     getLocationTrackingCapabilities        [ 9] IMPLICIT GetLocationTrackingCapabilities    OPTIONAL,
- *     getLocationTrackingSessions        [10] IMPLICIT GetLocationTrackingSessions    OPTIONAL,
+ * {    getLocationInformation            [ 0] IMPLICIT GetLocationInformation        type OPTIONAL,
+ *     setLocationInformation            [ 1] IMPLICIT SetLocationInformation        type OPTIONAL,
+ *     locationTrackingSessionResumed        [ 2] IMPLICIT LocationTrackingSessionResumed    type OPTIONAL,
+ *     locationTrackingSessionSuspended    [ 3] IMPLICIT LocationTrackingSessionSuspended    type OPTIONAL,
+ *     resumeLocationTrackingSession        [ 4] IMPLICIT ResumeLocationTrackingSession    type OPTIONAL,
+ *     locationInformationReport        [ 5] IMPLICIT LocationInformationReport        type OPTIONAL,
+ *     startLocationTrackingSession        [ 6] IMPLICIT StartLocationTrackingSession    type OPTIONAL,
+ *     stopLocationTrackingSession        [ 7] IMPLICIT StopLocationTrackingSession    type OPTIONAL,
+ *     suspendLocationTrackingSession        [ 8] IMPLICIT SuspendLocationTrackingSession    type OPTIONAL,
+ *     getLocationTrackingCapabilities        [ 9] IMPLICIT GetLocationTrackingCapabilities    type OPTIONAL,
+ *     getLocationTrackingSessions        [10] IMPLICIT GetLocationTrackingSessions    type OPTIONAL,
  *     locationSessionInfo            [11] IMPLICIT LocationSessionInfo        OPTIONAL }
  * ```
  * 

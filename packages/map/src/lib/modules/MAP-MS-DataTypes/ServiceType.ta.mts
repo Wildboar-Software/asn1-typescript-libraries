@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -27,11 +27,11 @@ import { NotificationToMSUser, _decode_NotificationToMSUser, _encode_Notificatio
  * ```asn1
  * ServiceType ::= SEQUENCE {
  *     serviceTypeIdentity    LCSServiceTypeID,
- *     gmlc-Restriction    [0] GMLC-Restriction    OPTIONAL,
- *     notificationToMSUser    [1] NotificationToMSUser    OPTIONAL,
+ *     gmlc-Restriction    [0] GMLC-Restriction    type OPTIONAL,
+ *     notificationToMSUser    [1] NotificationToMSUser    type OPTIONAL,
  *     -- If notificationToMSUser is not received, the default value according to 
  *     -- 3GPP TS 23.271 shall be assumed.
- *     extensionContainer    [2] ExtensionContainer    OPTIONAL,
+ *     extensionContainer    [2] ExtensionContainer    type OPTIONAL,
  *     ... }
  * ```
  * 

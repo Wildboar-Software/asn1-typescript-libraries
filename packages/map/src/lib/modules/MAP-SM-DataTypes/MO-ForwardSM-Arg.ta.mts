@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -28,10 +28,10 @@ import { SM_RP_OA, _decode_SM_RP_OA, _encode_SM_RP_OA } from "../MAP-SM-DataType
  *     sm-RP-DA    SM-RP-DA,
  *     sm-RP-OA    SM-RP-OA,
  *     sm-RP-UI    SignalInfo,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ... ,
- *     imsi    IMSI    OPTIONAL,
- *     correlationID    [0] CorrelationID    OPTIONAL,
+ *     imsi    IMSI    type OPTIONAL,
+ *     correlationID    [0] CorrelationID    type OPTIONAL,
  *     sm-DeliveryOutcome    [1] SM-DeliveryOutcome    OPTIONAL
  *  }
  * ```

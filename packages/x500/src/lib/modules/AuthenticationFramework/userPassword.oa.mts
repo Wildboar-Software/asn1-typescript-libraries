@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OCTET_STRING } from "@wildboar/asn1";
+import { type OCTET_STRING } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { id_at_userPassword } from "../AuthenticationFramework/id-at-userPassword.va.mjs";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OBJECT_IDENTIFIER,
+    type INTEGER,
+    type OBJECT_IDENTIFIER,
     SEQUENCE,
     SET,
     ASN1Element as _Element,

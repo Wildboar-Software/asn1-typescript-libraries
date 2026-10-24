@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    OPTIONAL,
+    type OCTET_STRING,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
@@ -26,11 +26,11 @@ import { DataNodeAddress, _decode_DataNodeAddress, _encode_DataNodeAddress } fro
  * I-WLAN-parameters ::= SEQUENCE
  * {
  *     wlan-local-IP-address-of-the-target     [1] DataNodeAddress OPTIONAL,
- *     w-APN                                     [2] OCTET STRING (SIZE(1..100))    OPTIONAL,
+ *     w-APN                                     [2] OCTET STRING (SIZE(1..100))    type OPTIONAL,
  *     -- The Access Point Name (APN) is coded in accordance with
  *         -- 3GPP TS 24.008 [9] without the APN IEI (only the last 100 octets are used).
  *         -- Octets are coded according to 3GPP TS 23.003 [25].
- *     wlan-remote-IP-address-of-the-target     [3] DataNodeAddress     OPTIONAL,
+ *     wlan-remote-IP-address-of-the-target     [3] DataNodeAddress     type OPTIONAL,
  *     ...
  * }
  * ```

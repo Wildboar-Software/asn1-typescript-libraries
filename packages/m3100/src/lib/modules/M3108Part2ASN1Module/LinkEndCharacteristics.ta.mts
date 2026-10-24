@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
+    type BOOLEAN,
     GraphicString,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,

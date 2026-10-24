@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -24,8 +24,8 @@ import { PrivateExtensionList, _decode_PrivateExtensionList, _encode_PrivateExte
  * 
  * ```asn1
  * ExtensionContainer ::= SEQUENCE {
- *     privateExtensionList    [0]PrivateExtensionList    OPTIONAL, 
- *     pcs-Extensions    [1]PCS-Extensions    OPTIONAL,
+ *     privateExtensionList    [0]PrivateExtensionList    type OPTIONAL, 
+ *     pcs-Extensions    [1]PCS-Extensions    type OPTIONAL,
  *     ...}
  * ```
  * 

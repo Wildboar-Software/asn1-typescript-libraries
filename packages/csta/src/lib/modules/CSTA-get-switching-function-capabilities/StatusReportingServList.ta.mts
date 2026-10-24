@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -29,8 +29,8 @@ import { SystemStatusServList, _decode_SystemStatusServList, _encode_SystemStatu
  * 
  * ```asn1
  * StatusReportingServList ::= SEQUENCE
- * {     monitoringServices             [ 0] IMPLICIT     MonitoringServList         OPTIONAL,
- *     snapshotServices             [ 1] IMPLICIT     SnapshotServList         OPTIONAL,
+ * {     monitoringServices             [ 0] IMPLICIT     MonitoringServList         type OPTIONAL,
+ *     snapshotServices             [ 1] IMPLICIT     SnapshotServList         type OPTIONAL,
  *     systemServices                 [ 2] IMPLICIT     SystemStatusServList         OPTIONAL }
  * ```
  * 

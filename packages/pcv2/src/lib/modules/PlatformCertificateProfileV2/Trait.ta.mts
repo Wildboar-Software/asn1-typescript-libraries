@@ -3,10 +3,10 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError,
-    IA5String,
-    OBJECT_IDENTIFIER,
-    OCTET_STRING,
-    OPTIONAL,
+    type IA5String,
+    type OBJECT_IDENTIFIER,
+    type OCTET_STRING,
+    type OPTIONAL,
     UTF8String
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";

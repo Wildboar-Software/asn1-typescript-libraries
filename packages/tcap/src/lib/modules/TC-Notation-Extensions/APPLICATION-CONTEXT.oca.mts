@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    OBJECT_IDENTIFIER,
+    type BOOLEAN,
+    type OBJECT_IDENTIFIER,
     ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,

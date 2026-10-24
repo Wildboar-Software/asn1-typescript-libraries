@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OBJECT_IDENTIFIER,
+    type OPTIONAL,
+    type OBJECT_IDENTIFIER,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -36,7 +36,7 @@ import {
  *   scheme         SOFTWARE-SCHEME.&id({SoftwareSchemes}),
  *   schemeName     SOFTWARE-SCHEME.&name ({SoftwareSchemes}{@.scheme}) OPTIONAL,
  *   manufacturerId SOFTWARE-SCHEME.&Manufacturer ({SoftwareSchemes}{@.scheme})
- *                    OPTIONAL,
+ *                    type OPTIONAL,
  *   software       SOFTWARE-SCHEME.&Software ({SoftwareSchemes}{@.scheme})}
  * ```
  *

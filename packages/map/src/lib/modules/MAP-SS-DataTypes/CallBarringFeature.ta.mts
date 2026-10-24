@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -20,8 +20,8 @@ import { SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataT
  * 
  * ```asn1
  * CallBarringFeature ::= SEQUENCE {
- *     basicService    BasicServiceCode    OPTIONAL,
- *     ss-Status    [4] SS-Status    OPTIONAL,
+ *     basicService    BasicServiceCode    type OPTIONAL,
+ *     ss-Status    [4] SS-Status    type OPTIONAL,
  *     ...}
  * ```
  * 

@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -68,27 +68,27 @@ import { SetRouteingMode, _decode_SetRouteingMode, _encode_SetRouteingMode } fro
  * 
  * ```asn1
  * LogicalServList ::= SEQUENCE
- * {     callBackNonCallRel         [ 0] IMPLICIT     CallBackNonCallRel         OPTIONAL,
- *     callBackMsgNonCallRel         [ 1] IMPLICIT     CallBackMsgNonCallRel         OPTIONAL,
- *     cancelCallBack             [ 2] IMPLICIT     CancelCallBack             OPTIONAL,
- *     cancelCallBackMsg         [ 3] IMPLICIT     CancelCallBackMsg         OPTIONAL,
- *     getAgentState             [ 4] IMPLICIT     GetAgentState             OPTIONAL,
- *     getAutoAnswer             [ 5] IMPLICIT     GetAutoAnswer             OPTIONAL,
- *     getAutoWorkMode         [ 6] IMPLICIT     GetAutoWorkMode         OPTIONAL,
- *     getCallerIDStatus         [ 7] IMPLICIT     GetCallerIDStatus         OPTIONAL,
- *     getCallBack            [19] IMPLICIT    GetCallBack            OPTIONAL,
- *     getDoNotDisturb         [ 8] IMPLICIT     GetDoNotDisturb         OPTIONAL,
- *     getForwarding             [ 9] IMPLICIT     GetForwarding             OPTIONAL,
- *     getLastNumberDialed         [10] IMPLICIT     GetLastNumberDialed         OPTIONAL,
- *     getPresenceState        [20] IMPLICIT     GetPresenceState        OPTIONAL,
- *     getRouteingMode         [11] IMPLICIT     GetRouteingMode         OPTIONAL,
- *     setAgentState             [12] IMPLICIT     SetAgentState             OPTIONAL,
- *     setAutoAnswer             [13] IMPLICIT     SetAutoAnswer             OPTIONAL,
- *     setAutoWorkMode         [14] IMPLICIT     SetAutoWorkMode         OPTIONAL,
- *     setCallerIDStatus         [15] IMPLICIT     SetCallerIDStatus         OPTIONAL,
- *     setDoNotDisturb         [16] IMPLICIT     SetDoNotDisturb         OPTIONAL,
- *     setForwarding             [17] IMPLICIT     SetForwarding             OPTIONAL,
- *     setPresenceState        [21] IMPLICIT     SetPresenceState        OPTIONAL,
+ * {     callBackNonCallRel         [ 0] IMPLICIT     CallBackNonCallRel         type OPTIONAL,
+ *     callBackMsgNonCallRel         [ 1] IMPLICIT     CallBackMsgNonCallRel         type OPTIONAL,
+ *     cancelCallBack             [ 2] IMPLICIT     CancelCallBack             type OPTIONAL,
+ *     cancelCallBackMsg         [ 3] IMPLICIT     CancelCallBackMsg         type OPTIONAL,
+ *     getAgentState             [ 4] IMPLICIT     GetAgentState             type OPTIONAL,
+ *     getAutoAnswer             [ 5] IMPLICIT     GetAutoAnswer             type OPTIONAL,
+ *     getAutoWorkMode         [ 6] IMPLICIT     GetAutoWorkMode         type OPTIONAL,
+ *     getCallerIDStatus         [ 7] IMPLICIT     GetCallerIDStatus         type OPTIONAL,
+ *     getCallBack            [19] IMPLICIT    GetCallBack            type OPTIONAL,
+ *     getDoNotDisturb         [ 8] IMPLICIT     GetDoNotDisturb         type OPTIONAL,
+ *     getForwarding             [ 9] IMPLICIT     GetForwarding             type OPTIONAL,
+ *     getLastNumberDialed         [10] IMPLICIT     GetLastNumberDialed         type OPTIONAL,
+ *     getPresenceState        [20] IMPLICIT     GetPresenceState        type OPTIONAL,
+ *     getRouteingMode         [11] IMPLICIT     GetRouteingMode         type OPTIONAL,
+ *     setAgentState             [12] IMPLICIT     SetAgentState             type OPTIONAL,
+ *     setAutoAnswer             [13] IMPLICIT     SetAutoAnswer             type OPTIONAL,
+ *     setAutoWorkMode         [14] IMPLICIT     SetAutoWorkMode         type OPTIONAL,
+ *     setCallerIDStatus         [15] IMPLICIT     SetCallerIDStatus         type OPTIONAL,
+ *     setDoNotDisturb         [16] IMPLICIT     SetDoNotDisturb         type OPTIONAL,
+ *     setForwarding             [17] IMPLICIT     SetForwarding             type OPTIONAL,
+ *     setPresenceState        [21] IMPLICIT     SetPresenceState        type OPTIONAL,
  *     setRouteingMode         [18] IMPLICIT     SetRouteingMode         OPTIONAL }
  * ```
  * 

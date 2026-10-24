@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OCTET_STRING,
+    type OCTET_STRING,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";

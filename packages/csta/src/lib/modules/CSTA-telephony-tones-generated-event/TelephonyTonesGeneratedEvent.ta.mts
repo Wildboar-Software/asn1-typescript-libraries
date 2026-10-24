@@ -2,8 +2,8 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
+    type OPTIONAL,
+    type INTEGER,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -41,11 +41,11 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * TelephonyTonesGeneratedEvent ::= SEQUENCE
  * {    connection            ConnectionID,
- *     toneGenerated            TelephonyTone            OPTIONAL,
- *     toneFrequency            [0] IMPLICIT INTEGER        OPTIONAL,
- *     toneDuration            [1] IMPLICIT INTEGER        OPTIONAL,
- *     pauseDuration            [2] IMPLICIT INTEGER        OPTIONAL,
- *     connectionInfo            ConnectionInformation        OPTIONAL,
+ *     toneGenerated            TelephonyTone            type OPTIONAL,
+ *     toneFrequency            [0] IMPLICIT INTEGER        type OPTIONAL,
+ *     toneDuration            [1] IMPLICIT INTEGER        type OPTIONAL,
+ *     pauseDuration            [2] IMPLICIT INTEGER        type OPTIONAL,
+ *     connectionInfo            ConnectionInformation        type OPTIONAL,
  *     extensions             CSTACommonArguments         OPTIONAL }
  * ```
  * 

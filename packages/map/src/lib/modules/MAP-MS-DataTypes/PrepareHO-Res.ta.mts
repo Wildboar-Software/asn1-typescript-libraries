@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -32,18 +32,18 @@ import { SelectedUMTS_Algorithms, _decode_SelectedUMTS_Algorithms, _encode_Selec
  * 
  * ```asn1
  * PrepareHO-Res ::= [3] SEQUENCE {
- *     handoverNumber    [0] ISDN-AddressString    OPTIONAL,
- *     relocationNumberList    [1]    RelocationNumberList    OPTIONAL,
- *     an-APDU    [2]    AccessNetworkSignalInfo    OPTIONAL,
- *     multicallBearerInfo    [3]    MulticallBearerInfo    OPTIONAL,
- *     multipleBearerNotSupported    NULL    OPTIONAL,
- *     selectedUMTS-Algorithms    [5]    SelectedUMTS-Algorithms    OPTIONAL,
- *     chosenRadioResourceInformation    [6] ChosenRadioResourceInformation    OPTIONAL,
- *     extensionContainer    [4]    ExtensionContainer    OPTIONAL,
+ *     handoverNumber    [0] ISDN-AddressString    type OPTIONAL,
+ *     relocationNumberList    [1]    RelocationNumberList    type OPTIONAL,
+ *     an-APDU    [2]    AccessNetworkSignalInfo    type OPTIONAL,
+ *     multicallBearerInfo    [3]    MulticallBearerInfo    type OPTIONAL,
+ *     multipleBearerNotSupported    NULL    type OPTIONAL,
+ *     selectedUMTS-Algorithms    [5]    SelectedUMTS-Algorithms    type OPTIONAL,
+ *     chosenRadioResourceInformation    [6] ChosenRadioResourceInformation    type OPTIONAL,
+ *     extensionContainer    [4]    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     iuSelectedCodec    [7] Codec    OPTIONAL,
- *     iuAvailableCodecsList    [8] CodecList    OPTIONAL,
- *     aoipSelectedCodecTarget    [9] AoIPCodec    OPTIONAL,
+ *     iuSelectedCodec    [7] Codec    type OPTIONAL,
+ *     iuAvailableCodecsList    [8] CodecList    type OPTIONAL,
+ *     aoipSelectedCodecTarget    [9] AoIPCodec    type OPTIONAL,
  *     aoipAvailableCodecsListMap    [10] AoIPCodecsList    OPTIONAL }
  * ```
  * 

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -21,8 +21,8 @@ import { SLR_Arg_PCS_Extensions, _decode_SLR_Arg_PCS_Extensions, _encode_SLR_Arg
  * 
  * ```asn1
  * SLR-ArgExtensionContainer ::= SEQUENCE {
- *     privateExtensionList    [0]PrivateExtensionList    OPTIONAL, 
- *     slr-Arg-PCS-Extensions    [1]SLR-Arg-PCS-Extensions    OPTIONAL,
+ *     privateExtensionList    [0]PrivateExtensionList    type OPTIONAL, 
+ *     slr-Arg-PCS-Extensions    [1]SLR-Arg-PCS-Extensions    type OPTIONAL,
  *     ...}
  * ```
  * 

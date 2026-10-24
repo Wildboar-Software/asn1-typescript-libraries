@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    OPTIONAL,
+    type OCTET_STRING,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -32,12 +32,12 @@ import { CivicAddress, _decode_CivicAddress, _encode_CivicAddress } from "../Umt
  * ```asn1
  * I-WLANinformation ::= SEQUENCE
  * {
- *     wLANOperatorName                     [1] OCTET STRING         OPTIONAL,
- *     wLANLocationData                    [2] OCTET STRING        OPTIONAL,
- *     wLANLocationInformation             [3] OCTET STRING        OPTIONAL,
- *     nASIPIPv6Address                    [4]    IPAddress            OPTIONAL,
- *     wLANMACAddress                        [5]    OCTET STRING        OPTIONAL,
- *     sessionAliveTimer                    [6]    SessionAliveTime    OPTIONAL,
+ *     wLANOperatorName                     [1] OCTET STRING         type OPTIONAL,
+ *     wLANLocationData                    [2] OCTET STRING        type OPTIONAL,
+ *     wLANLocationInformation             [3] OCTET STRING        type OPTIONAL,
+ *     nASIPIPv6Address                    [4]    IPAddress            type OPTIONAL,
+ *     wLANMACAddress                        [5]    OCTET STRING        type OPTIONAL,
+ *     sessionAliveTimer                    [6]    SessionAliveTime    type OPTIONAL,
  *     ...,
  * --These parameters are defined in 3GPP TS 29.234.
  *       geographicalCoordinates             [7] GeographicalCoordinates OPTIONAL,

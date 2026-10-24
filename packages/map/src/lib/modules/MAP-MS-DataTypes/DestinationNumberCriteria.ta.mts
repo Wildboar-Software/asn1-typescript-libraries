@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -24,8 +24,8 @@ import { MatchType, _decode_MatchType, _encode_MatchType, _enum_for_MatchType } 
  * ```asn1
  * DestinationNumberCriteria ::= SEQUENCE {
  *     matchType    [0] MatchType,
- *     destinationNumberList    [1] DestinationNumberList    OPTIONAL,
- *     destinationNumberLengthList    [2] DestinationNumberLengthList    OPTIONAL,
+ *     destinationNumberList    [1] DestinationNumberList    type OPTIONAL,
+ *     destinationNumberLengthList    [2] DestinationNumberLengthList    type OPTIONAL,
  *     -- one or both of destinationNumberList and destinationNumberLengthList 
  *     -- shall be present
  *     ...}

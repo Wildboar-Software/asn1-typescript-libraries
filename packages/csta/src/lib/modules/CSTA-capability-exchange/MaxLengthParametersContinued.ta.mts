@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    INTEGER,
+    type INTEGER,
     SEQUENCE,
     SET,
     ASN1Element as _Element,

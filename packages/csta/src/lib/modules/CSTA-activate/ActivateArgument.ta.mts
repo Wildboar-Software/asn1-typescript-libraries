@@ -2,10 +2,10 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
-    IA5String,
+    type IA5String,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -32,9 +32,9 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * ActivateArgument ::= SEQUENCE
  * {    overConnection    ConnectionID,
- *     resource            [0] IMPLICIT ResourceID            OPTIONAL,
+ *     resource            [0] IMPLICIT ResourceID            type OPTIONAL,
  *     ruleName            [1] IMPLICIT IA5String,
- *     grammarName            [2] IMPLICIT IA5String            OPTIONAL,
+ *     grammarName            [2] IMPLICIT IA5String            type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 

@@ -33,7 +33,7 @@ import { HandlingInformationResultArg_Type, _decode_HandlingInformationResultArg
  *                extensions
  *                  [11]  SEQUENCE OF
  *                          ExtensionField
- *                    OPTIONAL,
+ *                    type OPTIONAL,
  *                ...}}
  * ```
  */

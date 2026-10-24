@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    INTEGER,
+    type INTEGER,
     NULL,
     GraphicString,
     ASN1Element as _Element,

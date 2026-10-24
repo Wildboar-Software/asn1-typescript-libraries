@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -24,7 +24,7 @@ import { PDN_GW_Identity, _decode_PDN_GW_Identity, _encode_PDN_GW_Identity } fro
  * SpecificAPNInfo ::= SEQUENCE {
  *     apn    [0] APN,
  *     pdn-gw-Identity    [1] PDN-GW-Identity,
- *     extensionContainer    [2] ExtensionContainer    OPTIONAL,
+ *     extensionContainer    [2] ExtensionContainer    type OPTIONAL,
  *     ... }
  * ```
  * 

@@ -2,9 +2,9 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
+    type INTEGER,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -90,21 +90,21 @@ import {
  * ```asn1
  * SearchRule ::= SEQUENCE {
  *   COMPONENTS OF SearchRuleId,
- *   serviceType           [1]  OBJECT IDENTIFIER                          OPTIONAL,
- *   userClass             [2]  INTEGER                                    OPTIONAL,
+ *   serviceType           [1]  OBJECT IDENTIFIER                          type OPTIONAL,
+ *   userClass             [2]  INTEGER                                    type OPTIONAL,
  *   inputAttributeTypes   [3]  SEQUENCE SIZE (0..MAX) OF RequestAttribute OPTIONAL,
  *   attributeCombination  [4]  AttributeCombination                       DEFAULT and:{},
  *   outputAttributeTypes  [5]  SEQUENCE SIZE (1..MAX) OF ResultAttribute  OPTIONAL,
- *   defaultControls       [6]  ControlOptions                             OPTIONAL,
- *   mandatoryControls     [7]  ControlOptions                             OPTIONAL,
- *   searchRuleControls    [8]  ControlOptions                             OPTIONAL,
- *   familyGrouping        [9]  FamilyGrouping                             OPTIONAL,
- *   familyReturn          [10] FamilyReturn                               OPTIONAL,
- *   relaxation            [11] RelaxationPolicy                           OPTIONAL,
- *   additionalControl     [12] SEQUENCE SIZE (1..MAX) OF AttributeType    OPTIONAL,
+ *   defaultControls       [6]  ControlOptions                             type OPTIONAL,
+ *   mandatoryControls     [7]  ControlOptions                             type OPTIONAL,
+ *   searchRuleControls    [8]  ControlOptions                             type OPTIONAL,
+ *   familyGrouping        [9]  FamilyGrouping                             type OPTIONAL,
+ *   familyReturn          [10] FamilyReturn                               type OPTIONAL,
+ *   relaxation            [11] RelaxationPolicy                           type OPTIONAL,
+ *   additionalControl     [12] SEQUENCE SIZE (1..MAX) OF AttributeType    type OPTIONAL,
  *   allowedSubset         [13] AllowedSubset                              DEFAULT '111'B,
- *   imposedSubset         [14] ImposedSubset                              OPTIONAL,
- *   entryLimit            [15] EntryLimit                                 OPTIONAL,
+ *   imposedSubset         [14] ImposedSubset                              type OPTIONAL,
+ *   entryLimit            [15] EntryLimit                                 type OPTIONAL,
  *   ... }
  * ```
  *

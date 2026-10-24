@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -22,9 +22,9 @@ import { TraceReference2, _decode_TraceReference2, _encode_TraceReference2 } fro
  * 
  * ```asn1
  * DeactivateTraceModeArg ::= SEQUENCE {
- *     imsi    [0] IMSI    OPTIONAL,
+ *     imsi    [0] IMSI    type OPTIONAL,
  *     traceReference    [1] TraceReference,
- *     extensionContainer    [2] ExtensionContainer    OPTIONAL,
+ *     extensionContainer    [2] ExtensionContainer    type OPTIONAL,
  *     ...,
  *     traceReference2    [3] TraceReference2    OPTIONAL
  *     }

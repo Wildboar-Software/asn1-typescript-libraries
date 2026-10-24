@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -25,13 +25,13 @@ import { ReportingPLMNList, _decode_ReportingPLMNList, _encode_ReportingPLMNList
  * 
  * ```asn1
  * SubscriberLocationReport-Res ::= SEQUENCE {
- *     extensionContainer    ExtensionContainer    OPTIONAL, 
+ *     extensionContainer    ExtensionContainer    type OPTIONAL, 
  *     ..., 
- *     na-ESRK    [0] ISDN-AddressString    OPTIONAL,
- *     na-ESRD    [1] ISDN-AddressString    OPTIONAL,
- *     h-gmlc-Address    [2]    GSN-Address    OPTIONAL,
- *     mo-lrShortCircuitIndicator    [3] NULL    OPTIONAL,
- *     reportingPLMNList    [4] ReportingPLMNList    OPTIONAL,
+ *     na-ESRK    [0] ISDN-AddressString    type OPTIONAL,
+ *     na-ESRD    [1] ISDN-AddressString    type OPTIONAL,
+ *     h-gmlc-Address    [2]    GSN-Address    type OPTIONAL,
+ *     mo-lrShortCircuitIndicator    [3] NULL    type OPTIONAL,
+ *     reportingPLMNList    [4] ReportingPLMNList    type OPTIONAL,
  *     lcs-ReferenceNumber    [5]    LCS-ReferenceNumber    OPTIONAL }
  * ```
  * 

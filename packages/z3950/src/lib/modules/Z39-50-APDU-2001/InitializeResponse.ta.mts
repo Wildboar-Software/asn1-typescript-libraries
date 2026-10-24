@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    EXTERNAL,
-    INTEGER,
-    OPTIONAL,
+    type BOOLEAN,
+    type EXTERNAL,
+    type INTEGER,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";

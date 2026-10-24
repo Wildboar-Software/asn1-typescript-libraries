@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -38,16 +38,16 @@ import { ServiceInteractionIndicatorsTwo, _decode_ServiceInteractionIndicatorsTw
  * ```asn1
  * EstablishTemporaryConnectionArg {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *     assistingSSPIPRoutingAddress    [0] AssistingSSPIPRoutingAddress {bound},
- *     correlationID            [1] CorrelationID {bound}            OPTIONAL,
- *     scfID                [3] ScfID {bound}                OPTIONAL,
- *     extensions                [4] Extensions {bound}            OPTIONAL,
- *     carrier                [5] Carrier {bound}                OPTIONAL,
- *     serviceInteractionIndicatorsTwo    [6] ServiceInteractionIndicatorsTwo        OPTIONAL,
- *     callSegmentID            [7]    CallSegmentID {bound}            OPTIONAL,
- *     naOliInfo                [50] NAOliInfo                OPTIONAL,
- *     chargeNumber            [51] ChargeNumber {bound}            OPTIONAL,
+ *     correlationID            [1] CorrelationID {bound}            type OPTIONAL,
+ *     scfID                [3] ScfID {bound}                type OPTIONAL,
+ *     extensions                [4] Extensions {bound}            type OPTIONAL,
+ *     carrier                [5] Carrier {bound}                type OPTIONAL,
+ *     serviceInteractionIndicatorsTwo    [6] ServiceInteractionIndicatorsTwo        type OPTIONAL,
+ *     callSegmentID            [7]    CallSegmentID {bound}            type OPTIONAL,
+ *     naOliInfo                [50] NAOliInfo                type OPTIONAL,
+ *     chargeNumber            [51] ChargeNumber {bound}            type OPTIONAL,
  *     ...,
- *     originalCalledPartyID        [52] OriginalCalledPartyID {bound}        OPTIONAL,
+ *     originalCalledPartyID        [52] OriginalCalledPartyID {bound}        type OPTIONAL,
  *     callingPartyNumber            [53] CallingPartyNumber {bound}        OPTIONAL
  *     }
  * ```

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -22,8 +22,8 @@ import { RegionalSubscriptionResponse, _decode_RegionalSubscriptionResponse, _en
  * 
  * ```asn1
  * DeleteSubscriberDataRes ::= SEQUENCE {
- *     regionalSubscriptionResponse    [0] RegionalSubscriptionResponse    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     regionalSubscriptionResponse    [0] RegionalSubscriptionResponse    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 

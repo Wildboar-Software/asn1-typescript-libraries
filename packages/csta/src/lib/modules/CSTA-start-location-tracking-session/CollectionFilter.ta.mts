@@ -2,8 +2,8 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
+    type OPTIONAL,
+    type INTEGER,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -27,8 +27,8 @@ import {
  * 
  * ```asn1
  * CollectionFilter ::= SEQUENCE
- * {    horizontalMovement        [0] IMPLICIT INTEGER            OPTIONAL,
- *     verticalMovement        [1] IMPLICIT INTEGER            OPTIONAL,
+ * {    horizontalMovement        [0] IMPLICIT INTEGER            type OPTIONAL,
+ *     verticalMovement        [1] IMPLICIT INTEGER            type OPTIONAL,
  *     civicAdressChange        [2] IMPLICIT INTEGER            OPTIONAL }
  * ```
  * 

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -36,20 +36,20 @@ import { VLR_Capability, _decode_VLR_Capability, _encode_VLR_Capability } from "
  *     imsi    IMSI,
  *     msc-Number    [1] ISDN-AddressString,
  *     vlr-Number    ISDN-AddressString,
- *     lmsi    [10] LMSI    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     lmsi    [10] LMSI    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ... ,
- *     vlr-Capability    [6] VLR-Capability    OPTIONAL,
- *     informPreviousNetworkEntity    [11]    NULL    OPTIONAL,
- *     cs-LCS-NotSupportedByUE    [12]    NULL    OPTIONAL,
- *     v-gmlc-Address    [2]    GSN-Address    OPTIONAL,
- *     add-info    [13] ADD-Info    OPTIONAL,
- *     pagingArea    [14] PagingArea    OPTIONAL,
- *     skipSubscriberDataUpdate    [15] NULL    OPTIONAL, 
+ *     vlr-Capability    [6] VLR-Capability    type OPTIONAL,
+ *     informPreviousNetworkEntity    [11]    NULL    type OPTIONAL,
+ *     cs-LCS-NotSupportedByUE    [12]    NULL    type OPTIONAL,
+ *     v-gmlc-Address    [2]    GSN-Address    type OPTIONAL,
+ *     add-info    [13] ADD-Info    type OPTIONAL,
+ *     pagingArea    [14] PagingArea    type OPTIONAL,
+ *     skipSubscriberDataUpdate    [15] NULL    type OPTIONAL, 
  *     -- The skipSubscriberDataUpdate parameter in the UpdateLocationArg and the ADD-Info
  *     -- structures carry the same semantic.
- *     restorationIndicator    [16]    NULL    OPTIONAL,
- *     eplmn-List    [3] EPLMN-List    OPTIONAL,
+ *     restorationIndicator    [16]    NULL    type OPTIONAL,
+ *     eplmn-List    [3] EPLMN-List    type OPTIONAL,
  *     mme-DiameterAddress    [4] NetworkNodeDiameterAddress    OPTIONAL
  *     }
  * ```

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -21,8 +21,8 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * 
  * ```asn1
  * CUG-RejectParam ::= SEQUENCE {
- *     cug-RejectCause    CUG-RejectCause    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     cug-RejectCause    CUG-RejectCause    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 

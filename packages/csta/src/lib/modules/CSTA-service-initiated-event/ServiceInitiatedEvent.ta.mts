@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -70,22 +70,22 @@ import { CallLinkageData, _decode_CallLinkageData, _encode_CallLinkageData } fro
  * ServiceInitiatedEvent ::= SEQUENCE
  * {    initiatedConnection        ConnectionID,
  *     initiatingDevice        SubjectDeviceID,
- *     calledDevice            CalledDeviceID                OPTIONAL,
- *     localConnectionInfo        LocalConnectionState            OPTIONAL,
- *     correlatorData            [ 0] IMPLICIT CorrelatorData        OPTIONAL,
+ *     calledDevice            CalledDeviceID                type OPTIONAL,
+ *     localConnectionInfo        LocalConnectionState            type OPTIONAL,
+ *     correlatorData            [ 0] IMPLICIT CorrelatorData        type OPTIONAL,
  *     cause                EventCause,
- *     servicesPermitted        [ 1] IMPLICIT ServicesPermitted        OPTIONAL,
- *     mediaCallCharacteristics    [ 2] IMPLICIT MediaCallCharacteristics    OPTIONAL,
- *     callCharacteristics        [ 3] IMPLICIT CallCharacteristics    OPTIONAL,
- *     initiatedConnectionInfo        [ 4] IMPLICIT ConnectionInformation    OPTIONAL,
- *     networkCallingDevice        NetworkCallingDeviceID            OPTIONAL,
- *     networkCalledDevice        NetworkCalledDeviceID            OPTIONAL,
- *     associatedCallingDevice    AssociatedCallingDeviceID            OPTIONAL,
- *     callLinkageData            [ 5] IMPLICIT CallLinkageData        OPTIONAL,
- *     subjectOfCall            [ 7] IMPLICIT SubjectOfCall        OPTIONAL,
- *     messageInfo            [ 8] IMPLICIT MessageInfo        OPTIONAL,
- *     languagePreferences        [ 9] IMPLICIT LanguagePreferences    OPTIONAL,
- *     locationInfo            [10] IMPLICIT LocationInfoList        OPTIONAL,
+ *     servicesPermitted        [ 1] IMPLICIT ServicesPermitted        type OPTIONAL,
+ *     mediaCallCharacteristics    [ 2] IMPLICIT MediaCallCharacteristics    type OPTIONAL,
+ *     callCharacteristics        [ 3] IMPLICIT CallCharacteristics    type OPTIONAL,
+ *     initiatedConnectionInfo        [ 4] IMPLICIT ConnectionInformation    type OPTIONAL,
+ *     networkCallingDevice        NetworkCallingDeviceID            type OPTIONAL,
+ *     networkCalledDevice        NetworkCalledDeviceID            type OPTIONAL,
+ *     associatedCallingDevice    AssociatedCallingDeviceID            type OPTIONAL,
+ *     callLinkageData            [ 5] IMPLICIT CallLinkageData        type OPTIONAL,
+ *     subjectOfCall            [ 7] IMPLICIT SubjectOfCall        type OPTIONAL,
+ *     messageInfo            [ 8] IMPLICIT MessageInfo        type OPTIONAL,
+ *     languagePreferences        [ 9] IMPLICIT LanguagePreferences    type OPTIONAL,
+ *     locationInfo            [10] IMPLICIT LocationInfoList        type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 

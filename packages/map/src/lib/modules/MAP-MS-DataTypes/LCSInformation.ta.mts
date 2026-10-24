@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -26,9 +26,9 @@ import { MOLR_List, _decode_MOLR_List, _encode_MOLR_List } from "../MAP-MS-DataT
  * 
  * ```asn1
  * LCSInformation ::= SEQUENCE {
- *     gmlc-List    [0]    GMLC-List    OPTIONAL,
- *     lcs-PrivacyExceptionList    [1]    LCS-PrivacyExceptionList    OPTIONAL,
- *     molr-List    [2]    MOLR-List    OPTIONAL,
+ *     gmlc-List    [0]    GMLC-List    type OPTIONAL,
+ *     lcs-PrivacyExceptionList    [1]    LCS-PrivacyExceptionList    type OPTIONAL,
+ *     molr-List    [2]    MOLR-List    type OPTIONAL,
  *     ...,
  *     add-lcs-PrivacyExceptionList    [3]    LCS-PrivacyExceptionList    OPTIONAL }
  * ```

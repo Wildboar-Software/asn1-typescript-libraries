@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
-    NumericString,
+    type BIT_STRING,
+    type NumericString,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError

@@ -2,10 +2,10 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
-    IA5String,
+    type IA5String,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -31,7 +31,7 @@ import { TimeInfo, _decode_TimeInfo, _encode_TimeInfo } from "../CSTA-security/T
  * 
  * ```asn1
  * GlobalCallData ::= SEQUENCE 
- * {    globalCallSwitchingSubDomainName        IA5String (SIZE(1..64))        OPTIONAL, 
+ * {    globalCallSwitchingSubDomainName        IA5String (SIZE(1..64))        type OPTIONAL, 
  *     globalCallLinkageID                GlobalCallLinkageID, 
  *     callLinkageIDTimestamp                TimeInfo            OPTIONAL }
  * ```

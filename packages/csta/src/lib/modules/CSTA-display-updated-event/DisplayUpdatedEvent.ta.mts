@@ -2,11 +2,11 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
+    type OPTIONAL,
+    type INTEGER,
     SEQUENCE,
     SET,
-    IA5String,
+    type IA5String,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -43,14 +43,14 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * DisplayUpdatedEvent ::= SEQUENCE
  * {    device                SubjectDeviceID,
- *     displayID            DisplayID                OPTIONAL,
+ *     displayID            DisplayID                type OPTIONAL,
  *     logicalRows            INTEGER,
  *     logicalColumns            INTEGER,
- *     physicalRows            [0] IMPLICIT INTEGER             OPTIONAL,
- *     physicalColumns            [1] IMPLICIT INTEGER             OPTIONAL,
- *     physicalBaseRowNumber        [2] IMPLICIT INTEGER             OPTIONAL,
- *     physicalBaseColumnNumber    [3] IMPLICIT INTEGER             OPTIONAL,
- *     characterSet            CharacterSet                OPTIONAL,
+ *     physicalRows            [0] IMPLICIT INTEGER             type OPTIONAL,
+ *     physicalColumns            [1] IMPLICIT INTEGER             type OPTIONAL,
+ *     physicalBaseRowNumber        [2] IMPLICIT INTEGER             type OPTIONAL,
+ *     physicalBaseColumnNumber    [3] IMPLICIT INTEGER             type OPTIONAL,
+ *     characterSet            CharacterSet                type OPTIONAL,
  *     contentsOfDisplay        IA5String,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```

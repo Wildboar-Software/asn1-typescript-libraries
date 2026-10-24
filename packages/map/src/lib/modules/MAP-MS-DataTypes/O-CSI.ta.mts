@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -25,10 +25,10 @@ import { O_BcsmCamelTDPDataList, _decode_O_BcsmCamelTDPDataList, _encode_O_BcsmC
  * ```asn1
  * O-CSI ::= SEQUENCE {
  *     o-BcsmCamelTDPDataList    O-BcsmCamelTDPDataList,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     camelCapabilityHandling    [0] CamelCapabilityHandling    OPTIONAL,
- *     notificationToCSE    [1]    NULL    OPTIONAL,
+ *     camelCapabilityHandling    [0] CamelCapabilityHandling    type OPTIONAL,
+ *     notificationToCSE    [1]    NULL    type OPTIONAL,
  *     csiActive    [2]    NULL    OPTIONAL}
  * ```
  * 

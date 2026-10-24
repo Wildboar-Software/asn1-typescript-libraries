@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    OPTIONAL,
+    type OCTET_STRING,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -57,7 +57,7 @@ import { ExternalPrincipalIdentifier, _decode_ExternalPrincipalIdentifier, _enco
  *             -- hints to guide its selection of an appropriate
  *             -- certificate chain to return to the client.
  *     kdcPkId                 [2] IMPLICIT OCTET STRING
- *                                 OPTIONAL,
+ *                                 type OPTIONAL,
  *             -- Contains a CMS type SignerIdentifier encoded
  *             -- according to [RFC3852].
  *             -- Identifies, if present, a particular KDC

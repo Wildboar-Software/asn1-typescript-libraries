@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -44,15 +44,15 @@ import { RegistrationInfo, _decode_RegistrationInfo, _encode_RegistrationInfo } 
  * 
  * ```asn1
  * SystemStatusServList ::= SEQUENCE
- * {     changeSystemStatusFilter     [ 0] IMPLICIT ChangeSystemStatusFilter        OPTIONAL,
- *     systemRegister             [ 1] IMPLICIT SystemRegister             OPTIONAL,
- *     systemStatusRegisterAbort     [ 2] IMPLICIT SystemStatusRegisterAbort     OPTIONAL,
- *     systemStatusRegisterCancel     [ 3] IMPLICIT SystemStatusRegisterCancel     OPTIONAL,
- *     requestSystemStatus         [ 4] IMPLICIT RequestSystemStatus         OPTIONAL,
- *     systemStatus             [ 5] IMPLICIT SystemStatus             OPTIONAL,
- *     swFunctionCapsChanged         [ 6] IMPLICIT SwFunctionCapsChanged         OPTIONAL,
- *     swFunctionDevicesChanged     [ 7] IMPLICIT SwFunctionDevicesChanged         OPTIONAL,
- *     getRegistrations        [ 8] IMPLICIT GetRegistrations            OPTIONAL,
+ * {     changeSystemStatusFilter     [ 0] IMPLICIT ChangeSystemStatusFilter        type OPTIONAL,
+ *     systemRegister             [ 1] IMPLICIT SystemRegister             type OPTIONAL,
+ *     systemStatusRegisterAbort     [ 2] IMPLICIT SystemStatusRegisterAbort     type OPTIONAL,
+ *     systemStatusRegisterCancel     [ 3] IMPLICIT SystemStatusRegisterCancel     type OPTIONAL,
+ *     requestSystemStatus         [ 4] IMPLICIT RequestSystemStatus         type OPTIONAL,
+ *     systemStatus             [ 5] IMPLICIT SystemStatus             type OPTIONAL,
+ *     swFunctionCapsChanged         [ 6] IMPLICIT SwFunctionCapsChanged         type OPTIONAL,
+ *     swFunctionDevicesChanged     [ 7] IMPLICIT SwFunctionDevicesChanged         type OPTIONAL,
+ *     getRegistrations        [ 8] IMPLICIT GetRegistrations            type OPTIONAL,
  *     registrationInfo        [ 9] IMPLICIT RegistrationInfo            OPTIONAL }
  * ```
  * 

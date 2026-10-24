@@ -2,7 +2,7 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING,
+    type OCTET_STRING,
     OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -21,10 +21,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ```asn1
  * IMSIdentity ::= SEQUENCE
  * {
- *         sip-uri                    [1] OCTET STRING     OPTIONAL,
+ *         sip-uri                    [1] OCTET STRING     type OPTIONAL,
  *             -- See [REF 26 of 33.108]
  * 
- *         tel-uri                    [2] OCTET STRING     OPTIONAL,
+ *         tel-uri                    [2] OCTET STRING     type OPTIONAL,
  *             -- See [REF 67 of 33.108]
  * 
  *     ...

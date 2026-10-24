@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -21,10 +21,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * 
  * ```asn1
  * UU-Data ::= SEQUENCE {
- *     uuIndicator    [0] UUIndicator    OPTIONAL,
- *     uui    [1] UUI    OPTIONAL,
- *     uusCFInteraction    [2] NULL    OPTIONAL,
- *     extensionContainer    [3] ExtensionContainer    OPTIONAL,
+ *     uuIndicator    [0] UUIndicator    type OPTIONAL,
+ *     uui    [1] UUI    type OPTIONAL,
+ *     uusCFInteraction    [2] NULL    type OPTIONAL,
+ *     extensionContainer    [3] ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 

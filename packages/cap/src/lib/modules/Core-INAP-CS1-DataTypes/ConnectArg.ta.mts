@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -35,17 +35,17 @@ import { RedirectionInformation, _decode_RedirectionInformation, _encode_Redirec
  * ```asn1
  * ConnectArg ::= SEQUENCE {
  *      destinationRoutingAddress     [0] DestinationRoutingAddress,
- *      alertingPattern     [1] AlertingPattern     OPTIONAL,
- *      correlationID     [2] CorrelationID     OPTIONAL,
- *      cutAndPaste     [3] CutAndPaste     OPTIONAL,
- *      originalCalledPartyID     [6] OriginalCalledPartyID     OPTIONAL,
- *      routeList     [7] RouteList     OPTIONAL,
- *      scfID     [8] ScfID     OPTIONAL,
- *      extensions     [10] SEQUENCE SIZE(1..numOfExtensions) OF ExtensionField     OPTIONAL,
- *      serviceInteractionIndicators     [26] ServiceInteractionIndicators     OPTIONAL,
- *      callingPartyNumber     [27] CallingPartyNumber     OPTIONAL,
- *      callingPartysCategory     [28] CallingPartysCategory     OPTIONAL,
- *      redirectingPartyID     [29] RedirectingPartyID     OPTIONAL,
+ *      alertingPattern     [1] AlertingPattern     type OPTIONAL,
+ *      correlationID     [2] CorrelationID     type OPTIONAL,
+ *      cutAndPaste     [3] CutAndPaste     type OPTIONAL,
+ *      originalCalledPartyID     [6] OriginalCalledPartyID     type OPTIONAL,
+ *      routeList     [7] RouteList     type OPTIONAL,
+ *      scfID     [8] ScfID     type OPTIONAL,
+ *      extensions     [10] SEQUENCE SIZE(1..numOfExtensions) OF ExtensionField     type OPTIONAL,
+ *      serviceInteractionIndicators     [26] ServiceInteractionIndicators     type OPTIONAL,
+ *      callingPartyNumber     [27] CallingPartyNumber     type OPTIONAL,
+ *      callingPartysCategory     [28] CallingPartysCategory     type OPTIONAL,
+ *      redirectingPartyID     [29] RedirectingPartyID     type OPTIONAL,
  *      redirectionInformation     [30] RedirectionInformation     OPTIONAL
  * --  ...
  *      }

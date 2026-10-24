@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -30,16 +30,16 @@ import { SS_List, _decode_SS_List, _encode_SS_List } from "../MAP-SS-DataTypes/S
  * 
  * ```asn1
  * InsertSubscriberDataRes ::= SEQUENCE {
- *     teleserviceList    [1] TeleserviceList    OPTIONAL,
- *     bearerServiceList    [2] BearerServiceList    OPTIONAL,
- *     ss-List    [3] SS-List    OPTIONAL,
- *     odb-GeneralData    [4] ODB-GeneralData    OPTIONAL,
- *     regionalSubscriptionResponse    [5] RegionalSubscriptionResponse    OPTIONAL,
- *     supportedCamelPhases    [6] SupportedCamelPhases    OPTIONAL,
- *     extensionContainer    [7] ExtensionContainer    OPTIONAL,
+ *     teleserviceList    [1] TeleserviceList    type OPTIONAL,
+ *     bearerServiceList    [2] BearerServiceList    type OPTIONAL,
+ *     ss-List    [3] SS-List    type OPTIONAL,
+ *     odb-GeneralData    [4] ODB-GeneralData    type OPTIONAL,
+ *     regionalSubscriptionResponse    [5] RegionalSubscriptionResponse    type OPTIONAL,
+ *     supportedCamelPhases    [6] SupportedCamelPhases    type OPTIONAL,
+ *     extensionContainer    [7] ExtensionContainer    type OPTIONAL,
  *     ... ,
- *     offeredCamel4CSIs    [8] OfferedCamel4CSIs    OPTIONAL,
- *     supportedFeatures    [9] SupportedFeatures    OPTIONAL,
+ *     offeredCamel4CSIs    [8] OfferedCamel4CSIs    type OPTIONAL,
+ *     supportedFeatures    [9] SupportedFeatures    type OPTIONAL,
  *     ext-SupportedFeatures    [10] Ext-SupportedFeatures    OPTIONAL }
  * ```
  * 

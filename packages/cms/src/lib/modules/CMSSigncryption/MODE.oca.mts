@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { type OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -14,7 +14,7 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * MODE ::= CLASS {
- * &Type    OPTIONAL,
+ * &Type    type OPTIONAL,
  * &id    OBJECT IDENTIFIER UNIQUE
  * }
  * WITH SYNTAX { [WITH SYNTAX &Type] ID &id}

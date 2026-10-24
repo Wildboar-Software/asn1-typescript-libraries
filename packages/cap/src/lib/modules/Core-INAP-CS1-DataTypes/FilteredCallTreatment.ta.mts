@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -26,8 +26,8 @@ import { Cause, _decode_Cause, _encode_Cause } from "../Core-INAP-CS1-DataTypes/
  * ```asn1
  * FilteredCallTreatment ::= SEQUENCE {
  *      sFBillingChargingCharacteristics     [0] SFBillingChargingCharacteristics,
- *      informationToSend     [1] InformationToSend     OPTIONAL,
- *      maximumNumberOfCounters     [2] MaximumNumberOfCounters     OPTIONAL,
+ *      informationToSend     [1] InformationToSend     type OPTIONAL,
+ *      maximumNumberOfCounters     [2] MaximumNumberOfCounters     type OPTIONAL,
  *      releaseCause     [3] Cause     OPTIONAL
  *      }
  * ```

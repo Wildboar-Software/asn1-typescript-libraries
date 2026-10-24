@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    EXTERNAL,
+    type OPTIONAL,
+    type EXTERNAL,
     GraphicString,
     TRUE_BIT,
     ASN1Element as _Element,

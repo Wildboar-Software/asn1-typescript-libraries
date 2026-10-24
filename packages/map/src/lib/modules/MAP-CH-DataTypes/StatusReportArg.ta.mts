@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -23,9 +23,9 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * ```asn1
  * StatusReportArg ::= SEQUENCE{
  *     imsi    [0]    IMSI,
- *     eventReportData    [1]    EventReportData    OPTIONAL,
- *     callReportdata    [2]    CallReportData    OPTIONAL,
- *     extensionContainer    [3]    ExtensionContainer    OPTIONAL,
+ *     eventReportData    [1]    EventReportData    type OPTIONAL,
+ *     callReportdata    [2]    CallReportData    type OPTIONAL,
+ *     extensionContainer    [3]    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 

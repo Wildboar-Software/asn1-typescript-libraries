@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -25,13 +25,13 @@ import { Kc, _decode_Kc, _encode_Kc } from "../MAP-MS-DataTypes/Kc.ta.mjs";
  * 
  * ```asn1
  * SendGroupCallInfoRes ::= SEQUENCE {
- *     anchorMSC-Address    [0] ISDN-AddressString    OPTIONAL,
- *     asciCallReference    [1] ASCI-CallReference    OPTIONAL,
- *     imsi    [2] IMSI    OPTIONAL,
- *     additionalInfo    [3] AdditionalInfo    OPTIONAL,
- *     additionalSubscriptions    [4] AdditionalSubscriptions    OPTIONAL,
- *     kc    [5] Kc    OPTIONAL,
- *     extensionContainer    [6] ExtensionContainer    OPTIONAL,
+ *     anchorMSC-Address    [0] ISDN-AddressString    type OPTIONAL,
+ *     asciCallReference    [1] ASCI-CallReference    type OPTIONAL,
+ *     imsi    [2] IMSI    type OPTIONAL,
+ *     additionalInfo    [3] AdditionalInfo    type OPTIONAL,
+ *     additionalSubscriptions    [4] AdditionalSubscriptions    type OPTIONAL,
+ *     kc    [5] Kc    type OPTIONAL,
+ *     extensionContainer    [6] ExtensionContainer    type OPTIONAL,
  *     ... }
  * ```
  * 

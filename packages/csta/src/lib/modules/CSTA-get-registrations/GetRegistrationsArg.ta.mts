@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -28,7 +28,7 @@ import { RegistrationTypeList, _decode_RegistrationTypeList, _encode_Registratio
  * 
  * ```asn1
  * GetRegistrationsArg ::= SEQUENCE
- * {     requestedRegTypes         RegistrationTypeList        OPTIONAL,
+ * {     requestedRegTypes         RegistrationTypeList        type OPTIONAL,
  *     extensions             CSTACommonArguments         OPTIONAL }
  * ```
  * 

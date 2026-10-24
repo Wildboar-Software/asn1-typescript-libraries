@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -24,9 +24,9 @@ import { BandwidthExt, _decode_BandwidthExt, _encode_BandwidthExt } from "../MAP
  * AMBR ::= SEQUENCE {
  *     max-RequestedBandwidth-UL    [0] Bandwidth,
  *     max-RequestedBandwidth-DL    [1] Bandwidth,
- *     extensionContainer    [2] ExtensionContainer    OPTIONAL,
+ *     extensionContainer    [2] ExtensionContainer    type OPTIONAL,
  *     ...,
- *     extended-Max-RequestedBandwidth-UL    [3] BandwidthExt    OPTIONAL,
+ *     extended-Max-RequestedBandwidth-UL    [3] BandwidthExt    type OPTIONAL,
  *     extended-Max-RequestedBandwidth-DL    [4] BandwidthExt    OPTIONAL
  *     -- extended-Max-RequestedBandwidth-UL/DL shall be populated according to the 
  *     -- description of the corresponding parameters in 3GPP TS 29.272 [144]

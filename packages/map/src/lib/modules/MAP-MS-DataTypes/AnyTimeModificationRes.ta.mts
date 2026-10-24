@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -30,16 +30,16 @@ import { ODB_Info, _decode_ODB_Info, _encode_ODB_Info } from "../MAP-MS-DataType
  * 
  * ```asn1
  * AnyTimeModificationRes ::= SEQUENCE {
- *     ss-InfoFor-CSE    [0]    Ext-SS-InfoFor-CSE    OPTIONAL,
- *     camel-SubscriptionInfo    [1]    CAMEL-SubscriptionInfo    OPTIONAL,
- *     extensionContainer    [2]    ExtensionContainer    OPTIONAL,
+ *     ss-InfoFor-CSE    [0]    Ext-SS-InfoFor-CSE    type OPTIONAL,
+ *     camel-SubscriptionInfo    [1]    CAMEL-SubscriptionInfo    type OPTIONAL,
+ *     extensionContainer    [2]    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     odb-Info    [3]    ODB-Info    OPTIONAL,
- *     cw-Data    [4]    CallWaitingData    OPTIONAL,
- *     ch-Data    [5]    CallHoldData    OPTIONAL,
- *     clip-Data    [6] ClipData    OPTIONAL,
- *     clir-Data    [7]    ClirData    OPTIONAL,
- *     ect-data    [8] EctData    OPTIONAL,
+ *     odb-Info    [3]    ODB-Info    type OPTIONAL,
+ *     cw-Data    [4]    CallWaitingData    type OPTIONAL,
+ *     ch-Data    [5]    CallHoldData    type OPTIONAL,
+ *     clip-Data    [6] ClipData    type OPTIONAL,
+ *     clir-Data    [7]    ClirData    type OPTIONAL,
+ *     ect-data    [8] EctData    type OPTIONAL,
  *     serviceCentreAddress    [9] AddressString    OPTIONAL
  *  }
  * ```

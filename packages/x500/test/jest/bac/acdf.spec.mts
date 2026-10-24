@@ -3,7 +3,7 @@ import bacACDF, {
 } from "../../../src/lib/bac/bacACDF.mjs";
 import {
     TRUE_BIT,
-    OBJECT_IDENTIFIER,
+    type OBJECT_IDENTIFIER,
     FALSE_BIT,
     ObjectIdentifier,
     DERElement,

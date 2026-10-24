@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OCTET_STRING,
-    OPTIONAL,
+    type INTEGER,
+    type OCTET_STRING,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError,
@@ -29,20 +29,20 @@ import { EPSLocation, _decode_EPSLocation, _encode_EPSLocation } from "../EpsHI2
  * ```asn1
  * EPS-PMIP-SpecificParameters ::= SEQUENCE
  * {
- *     lifetime                              [1]  INTEGER (0..65535)                 OPTIONAL,
- *     accessTechnologyType                  [2]  OCTET STRING (SIZE (4))            OPTIONAL,
- *     aPN                                   [3]  OCTET STRING (SIZE (1..100))       OPTIONAL,
- *     iPv6HomeNetworkPrefix                 [4]  OCTET STRING (SIZE (20))           OPTIONAL,
- *     protConfigurationOption               [5]  OCTET STRING                       OPTIONAL,
- *     handoverIndication                    [6]  OCTET STRING (SIZE (4))            OPTIONAL,
- *     status                                [7]  INTEGER (0..255)                   OPTIONAL,
- *     revocationTrigger                     [8]  INTEGER (0..255)                   OPTIONAL,
- *     iPv4HomeAddress                       [9]  OCTET STRING (SIZE (4))            OPTIONAL,
- *     iPv6careOfAddress                     [10] OCTET STRING                       OPTIONAL,
- *     iPv4careOfAddress                     [11] OCTET STRING                       OPTIONAL,
+ *     lifetime                              [1]  INTEGER (0..65535)                 type OPTIONAL,
+ *     accessTechnologyType                  [2]  OCTET STRING (SIZE (4))            type OPTIONAL,
+ *     aPN                                   [3]  OCTET STRING (SIZE (1..100))       type OPTIONAL,
+ *     iPv6HomeNetworkPrefix                 [4]  OCTET STRING (SIZE (20))           type OPTIONAL,
+ *     protConfigurationOption               [5]  OCTET STRING                       type OPTIONAL,
+ *     handoverIndication                    [6]  OCTET STRING (SIZE (4))            type OPTIONAL,
+ *     status                                [7]  INTEGER (0..255)                   type OPTIONAL,
+ *     revocationTrigger                     [8]  INTEGER (0..255)                   type OPTIONAL,
+ *     iPv4HomeAddress                       [9]  OCTET STRING (SIZE (4))            type OPTIONAL,
+ *     iPv6careOfAddress                     [10] OCTET STRING                       type OPTIONAL,
+ *     iPv4careOfAddress                     [11] OCTET STRING                       type OPTIONAL,
  *     ...,
- *     servingNetwork                        [12] OCTET STRING (SIZE (3))            OPTIONAL,
- *     dHCPv4AddressAllocationInd            [13] OCTET STRING (SIZE (1))            OPTIONAL,
+ *     servingNetwork                        [12] OCTET STRING (SIZE (3))            type OPTIONAL,
+ *     dHCPv4AddressAllocationInd            [13] OCTET STRING (SIZE (1))            type OPTIONAL,
  *     ePSlocationOfTheTarget                [14] EPSLocation                        OPTIONAL
  * 
  *     -- parameters coded according to 3GPP TS 29.275 [48] and RFCs specifically

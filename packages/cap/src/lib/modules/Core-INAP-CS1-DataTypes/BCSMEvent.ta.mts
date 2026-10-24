@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -27,7 +27,7 @@ import { DPSpecificCriteria, _decode_DPSpecificCriteria, _encode_DPSpecificCrite
  * BCSMEvent ::= SEQUENCE {
  *      eventTypeBCSM     [0] EventTypeBCSM,
  *      monitorMode     [1] MonitorMode,
- *      legID     [2] LegID     OPTIONAL,
+ *      legID     [2] LegID     type OPTIONAL,
  *      dPSpecificCriteria     [30] DPSpecificCriteria     OPTIONAL
  *      }
  * ```

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -28,8 +28,8 @@ import { LegID, _decode_LegID, _encode_LegID } from "../Core-INAP-CS1-DataTypes/
  * ```asn1
  * SplitLegArg {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *     legToBeSplit            [0]    LegID,
- *     newCallSegment            [1]    CallSegmentID {bound}            OPTIONAL,
- *     extensions                [2]    Extensions {bound}            OPTIONAL,
+ *     newCallSegment            [1]    CallSegmentID {bound}            type OPTIONAL,
+ *     extensions                [2]    Extensions {bound}            type OPTIONAL,
  *     ...
  *     }
  * ```

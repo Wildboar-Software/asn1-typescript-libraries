@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -26,8 +26,8 @@ import { IntraCUG_Options, _decode_IntraCUG_Options, _encode_IntraCUG_Options, _
  *     cug-Index    CUG-Index,
  *     cug-Interlock    CUG-Interlock,
  *     intraCUG-Options    IntraCUG-Options,
- *     basicServiceGroupList    Ext-BasicServiceGroupList    OPTIONAL,
- *     extensionContainer    [0] ExtensionContainer    OPTIONAL,
+ *     basicServiceGroupList    Ext-BasicServiceGroupList    type OPTIONAL,
+ *     extensionContainer    [0] ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 

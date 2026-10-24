@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -38,12 +38,12 @@ import { SuspendDataCollection, _decode_SuspendDataCollection, _encode_SuspendDa
  * 
  * ```asn1
  * DataCollectionServList ::= SEQUENCE
- * {     dataCollected             [ 0] IMPLICIT     DataCollected             OPTIONAL,
- *     dataCollectionResumed         [ 1] IMPLICIT     DataCollectionResumed         OPTIONAL,
- *     dataCollectionSuspended     [ 2] IMPLICIT     DataCollectionSuspended     OPTIONAL,
- *     resumeDataCollection         [ 3] IMPLICIT     ResumeDataCollection         OPTIONAL,
- *     startDataCollection         [ 4] IMPLICIT     StartDataCollection         OPTIONAL,
- *     stopDataCollection         [ 5] IMPLICIT     StopDataCollection         OPTIONAL,
+ * {     dataCollected             [ 0] IMPLICIT     DataCollected             type OPTIONAL,
+ *     dataCollectionResumed         [ 1] IMPLICIT     DataCollectionResumed         type OPTIONAL,
+ *     dataCollectionSuspended     [ 2] IMPLICIT     DataCollectionSuspended     type OPTIONAL,
+ *     resumeDataCollection         [ 3] IMPLICIT     ResumeDataCollection         type OPTIONAL,
+ *     startDataCollection         [ 4] IMPLICIT     StartDataCollection         type OPTIONAL,
+ *     stopDataCollection         [ 5] IMPLICIT     StopDataCollection         type OPTIONAL,
  *     suspendDataCollection         [ 6] IMPLICIT     SuspendDataCollection         OPTIONAL }
  * ```
  * 

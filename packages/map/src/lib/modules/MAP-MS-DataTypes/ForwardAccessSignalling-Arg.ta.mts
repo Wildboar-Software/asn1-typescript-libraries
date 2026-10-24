@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -40,27 +40,27 @@ import { TracePropagationList, _decode_TracePropagationList, _encode_TracePropag
  * ```asn1
  * ForwardAccessSignalling-Arg ::= [3] SEQUENCE {
  *     an-APDU    AccessNetworkSignalInfo,
- *     integrityProtectionInfo    [0] IntegrityProtectionInformation    OPTIONAL,
- *     encryptionInfo    [1] EncryptionInformation    OPTIONAL,
- *     keyStatus    [2]    KeyStatus    OPTIONAL,
- *     allowedGSM-Algorithms    [4]    AllowedGSM-Algorithms    OPTIONAL,
- *     allowedUMTS-Algorithms    [5]    AllowedUMTS-Algorithms    OPTIONAL,
- *     radioResourceInformation    [6] RadioResourceInformation    OPTIONAL,
- *     extensionContainer    [3]    ExtensionContainer    OPTIONAL,
+ *     integrityProtectionInfo    [0] IntegrityProtectionInformation    type OPTIONAL,
+ *     encryptionInfo    [1] EncryptionInformation    type OPTIONAL,
+ *     keyStatus    [2]    KeyStatus    type OPTIONAL,
+ *     allowedGSM-Algorithms    [4]    AllowedGSM-Algorithms    type OPTIONAL,
+ *     allowedUMTS-Algorithms    [5]    AllowedUMTS-Algorithms    type OPTIONAL,
+ *     radioResourceInformation    [6] RadioResourceInformation    type OPTIONAL,
+ *     extensionContainer    [3]    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     radioResourceList    [7]    RadioResourceList    OPTIONAL,
- *     bssmap-ServiceHandover    [9]    BSSMAP-ServiceHandover    OPTIONAL,
- *     ranap-ServiceHandover    [8]    RANAP-ServiceHandover    OPTIONAL,
- *     bssmap-ServiceHandoverList    [10]    BSSMAP-ServiceHandoverList    OPTIONAL,
- *     currentlyUsedCodec    [11] Codec    OPTIONAL,
- *     iuSupportedCodecsList    [12] SupportedCodecsList    OPTIONAL,
- *     rab-ConfigurationIndicator    [13] NULL    OPTIONAL,
- *     iuSelectedCodec    [14]    Codec    OPTIONAL,
- *     alternativeChannelType    [15]    RadioResourceInformation    OPTIONAL,
- *     tracePropagationList    [17]    TracePropagationList    OPTIONAL,
- *     aoipSupportedCodecsListAnchor    [18] AoIPCodecsList    OPTIONAL,
- *     aoipSelectedCodecTarget    [19] AoIPCodec    OPTIONAL,
- *     uesbi-Iu    [20]    UESBI-Iu    OPTIONAL,
+ *     radioResourceList    [7]    RadioResourceList    type OPTIONAL,
+ *     bssmap-ServiceHandover    [9]    BSSMAP-ServiceHandover    type OPTIONAL,
+ *     ranap-ServiceHandover    [8]    RANAP-ServiceHandover    type OPTIONAL,
+ *     bssmap-ServiceHandoverList    [10]    BSSMAP-ServiceHandoverList    type OPTIONAL,
+ *     currentlyUsedCodec    [11] Codec    type OPTIONAL,
+ *     iuSupportedCodecsList    [12] SupportedCodecsList    type OPTIONAL,
+ *     rab-ConfigurationIndicator    [13] NULL    type OPTIONAL,
+ *     iuSelectedCodec    [14]    Codec    type OPTIONAL,
+ *     alternativeChannelType    [15]    RadioResourceInformation    type OPTIONAL,
+ *     tracePropagationList    [17]    TracePropagationList    type OPTIONAL,
+ *     aoipSupportedCodecsListAnchor    [18] AoIPCodecsList    type OPTIONAL,
+ *     aoipSelectedCodecTarget    [19] AoIPCodec    type OPTIONAL,
+ *     uesbi-Iu    [20]    UESBI-Iu    type OPTIONAL,
  *     imeisv    [21]    IMEI    OPTIONAL }
  * ```
  * 

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -23,9 +23,9 @@ import { CodecList, _decode_CodecList, _encode_CodecList } from "../MAP-MS-DataT
  * 
  * ```asn1
  * SupportedCodecsList ::= SEQUENCE {
- *     utranCodecList    [0] CodecList    OPTIONAL,
- *     geranCodecList    [1] CodecList    OPTIONAL,
- *     extensionContainer    [2] ExtensionContainer    OPTIONAL,
+ *     utranCodecList    [0] CodecList    type OPTIONAL,
+ *     geranCodecList    [1] CodecList    type OPTIONAL,
+ *     extensionContainer    [2] ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 

@@ -2,10 +2,10 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
-    IA5String,
+    type IA5String,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -44,10 +44,10 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * DtmfDetectedEvent ::= SEQUENCE
  * {    overConnection            ConnectionID,
- *     resource            [0] IMPLICIT ResourceID            OPTIONAL,
+ *     resource            [0] IMPLICIT ResourceID            type OPTIONAL,
  *     dtmfChar            IA5String,
- *     cause                EventCause                OPTIONAL,
- *     servicesPermitted        ServicesPermitted            OPTIONAL,
+ *     cause                EventCause                type OPTIONAL,
+ *     servicesPermitted        ServicesPermitted            type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 

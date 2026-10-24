@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    EXTERNAL,
+    type BOOLEAN,
+    type EXTERNAL,
     GeneralizedTime,
-    INTEGER,
+    type INTEGER,
     NULL,
-    OBJECT_IDENTIFIER,
-    OCTET_STRING,
+    type OBJECT_IDENTIFIER,
+    type OCTET_STRING,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";

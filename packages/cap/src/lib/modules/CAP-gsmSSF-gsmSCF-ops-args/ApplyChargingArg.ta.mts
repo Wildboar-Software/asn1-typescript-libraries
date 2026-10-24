@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -32,7 +32,7 @@ import { leg1 } from "../Core-INAP-CS1-DataTypes/leg1.va.mjs";
  * ApplyChargingArg {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *     aChBillingChargingCharacteristics    [0] AChBillingChargingCharacteristics {bound},
  *     partyToCharge            [2] SendingSideID DEFAULT sendingSideID : leg1,
- *     extensions                [3] Extensions {bound}            OPTIONAL,
+ *     extensions                [3] Extensions {bound}            type OPTIONAL,
  *     aChChargingAddress            [50] AChChargingAddress {bound}
  *                         DEFAULT legID:sendingSideID:leg1,
  *     ...

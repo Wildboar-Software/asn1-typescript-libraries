@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -40,31 +40,31 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * GetCSTAFeatureResult ::= SEQUENCE
  * {    supportedServices SEQUENCE 
- *     {    capExchangeServList         [ 0] CapExchangeServList    OPTIONAL,
- *         systemStatServList         [ 1] SystemStatusServList     OPTIONAL,
- *         monitoringServList         [ 2] MonitoringServList     OPTIONAL,
- *         snapshotServList          [ 3] SnapshotServList         OPTIONAL,
- *         callControlServList         [ 4] CallControlServList     OPTIONAL,
- *         callAssociatedServList         [ 5] CallAssociatedServList     OPTIONAL,
- *         mediaServList            [ 6] MediaServList         OPTIONAL,
- *         routeingServList        [ 7] RouteingServList         OPTIONAL,
- *         physDevServList            [ 8] PhysDevServList        OPTIONAL,
- *         logicalServList            [ 9] LogicalServList         OPTIONAL,
- *         iOServicesServList        [10] IOServicesServList     OPTIONAL,
- *         dataCollectionServList        [11] DataCollectionServList     OPTIONAL,
- *         voiceServList            [12] VoiceUnitServList         OPTIONAL,
- *         cDRServList            [13] CDRServList         OPTIONAL,
- *         vendorSpecificServList        [14] VendorSpecificServList     OPTIONAL,
+ *     {    capExchangeServList         [ 0] CapExchangeServList    type OPTIONAL,
+ *         systemStatServList         [ 1] SystemStatusServList     type OPTIONAL,
+ *         monitoringServList         [ 2] MonitoringServList     type OPTIONAL,
+ *         snapshotServList          [ 3] SnapshotServList         type OPTIONAL,
+ *         callControlServList         [ 4] CallControlServList     type OPTIONAL,
+ *         callAssociatedServList         [ 5] CallAssociatedServList     type OPTIONAL,
+ *         mediaServList            [ 6] MediaServList         type OPTIONAL,
+ *         routeingServList        [ 7] RouteingServList         type OPTIONAL,
+ *         physDevServList            [ 8] PhysDevServList        type OPTIONAL,
+ *         logicalServList            [ 9] LogicalServList         type OPTIONAL,
+ *         iOServicesServList        [10] IOServicesServList     type OPTIONAL,
+ *         dataCollectionServList        [11] DataCollectionServList     type OPTIONAL,
+ *         voiceServList            [12] VoiceUnitServList         type OPTIONAL,
+ *         cDRServList            [13] CDRServList         type OPTIONAL,
+ *         vendorSpecificServList        [14] VendorSpecificServList     type OPTIONAL,
  *         locationServicesServList    [15] LocationServicesServList     OPTIONAL },
  *     supportedEvents SEQUENCE 
- *     {    callControlEvtsList        [0] CallControlEvtsList     OPTIONAL,
- *         callAssociatedEvtsList        [1] CallAssociatedEvtsList     OPTIONAL,
- *         mediaEvtsList            [2] MediaEvtsList         OPTIONAL,
- *         physDevEvtsList            [3] PhysDevEvtsList         OPTIONAL,
- *         logicalEvtsList            [4] LogicalEvtsList         OPTIONAL,
- *         deviceMaintEvtsList        [5] DeviceMaintEvtsList     OPTIONAL,
- *         voiceEvtsList            [6] VoiceUnitEvtsList         OPTIONAL,
- *         vendorSpecificEvtsList        [7] VendorSpecificEvtsList     OPTIONAL }    OPTIONAL,
+ *     {    callControlEvtsList        [0] CallControlEvtsList     type OPTIONAL,
+ *         callAssociatedEvtsList        [1] CallAssociatedEvtsList     type OPTIONAL,
+ *         mediaEvtsList            [2] MediaEvtsList         type OPTIONAL,
+ *         physDevEvtsList            [3] PhysDevEvtsList         type OPTIONAL,
+ *         logicalEvtsList            [4] LogicalEvtsList         type OPTIONAL,
+ *         deviceMaintEvtsList        [5] DeviceMaintEvtsList     type OPTIONAL,
+ *         voiceEvtsList            [6] VoiceUnitEvtsList         type OPTIONAL,
+ *         vendorSpecificEvtsList        [7] VendorSpecificEvtsList     OPTIONAL }    type OPTIONAL,
  *     extensions                CSTACommonArguments                OPTIONAL }
  * ```
  * 

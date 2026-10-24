@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -49,12 +49,12 @@ import { UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-fea
  * {    activeCall             ConnectionID,
  *     deviceToJoin             DeviceID,
  *     participationType         ParticipationType             DEFAULT active,
- *     accountCode             [0] IMPLICIT AccountInfo         OPTIONAL,
- *     authCode             [1] IMPLICIT AuthCode             OPTIONAL,
- *     correlatorData             [2] IMPLICIT CorrelatorData         OPTIONAL,
- *     userData             UserData                 OPTIONAL,
- *     subjectOfCall            [3] IMPLICIT SubjectOfCall        OPTIONAL,
- *     languagePreferences        [4] IMPLICIT LanguagePreferences    OPTIONAL,
+ *     accountCode             [0] IMPLICIT AccountInfo         type OPTIONAL,
+ *     authCode             [1] IMPLICIT AuthCode             type OPTIONAL,
+ *     correlatorData             [2] IMPLICIT CorrelatorData         type OPTIONAL,
+ *     userData             UserData                 type OPTIONAL,
+ *     subjectOfCall            [3] IMPLICIT SubjectOfCall        type OPTIONAL,
+ *     languagePreferences        [4] IMPLICIT LanguagePreferences    type OPTIONAL,
  *     extensions             CSTACommonArguments             OPTIONAL }
  * ```
  * 

@@ -2,8 +2,8 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
     TRUE_BIT,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -80,7 +80,7 @@ import {
  *     non-aead   [3] SEQUENCE {
  *       encr       [0] SEQUENCE SIZE (1..MAX) OF
  *         algo           AlgorithmIdentifier{{SupportedSymmetricKeyAlgorithms}}
- *                          OPTIONAL,
+ *                          type OPTIONAL,
  *       icvAlgID   [1] SEQUENCE SIZE (1..MAX) OF
  *         algo           AlgorithmIdentifier{{SupportedIcvAlgorithms}} },
  *     ... },

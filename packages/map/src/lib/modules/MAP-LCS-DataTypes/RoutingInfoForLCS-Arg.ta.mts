@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -24,7 +24,7 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * RoutingInfoForLCS-Arg ::= SEQUENCE {
  *     mlcNumber    [0] ISDN-AddressString,
  *     targetMS    [1] SubscriberIdentity,
- *     extensionContainer    [2] ExtensionContainer    OPTIONAL,
+ *     extensionContainer    [2] ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 

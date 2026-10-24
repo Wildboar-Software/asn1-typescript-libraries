@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -23,10 +23,10 @@ import { AdditionalInfo, _decode_AdditionalInfo, _encode_AdditionalInfo } from "
  * 
  * ```asn1
  * SendGroupCallEndSignalArg ::= SEQUENCE {
- *     imsi    IMSI    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     imsi    IMSI    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     talkerPriority    [0]TalkerPriority    OPTIONAL,
+ *     talkerPriority    [0]TalkerPriority    type OPTIONAL,
  *     additionalInfo    [1]AdditionalInfo    OPTIONAL }
  * ```
  * 

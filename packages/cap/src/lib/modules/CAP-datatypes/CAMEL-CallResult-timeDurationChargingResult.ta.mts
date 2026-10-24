@@ -1,6 +1,6 @@
 import {
-    OPTIONAL,
-    BOOLEAN,
+    type OPTIONAL,
+    type BOOLEAN,
     NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,

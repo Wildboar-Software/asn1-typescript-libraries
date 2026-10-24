@@ -2,8 +2,8 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
+    type OPTIONAL,
+    type BOOLEAN,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -31,8 +31,8 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * GetDoNotDisturbResult ::= SEQUENCE
  * {    doNotDisturbOn            BOOLEAN,
- *     callOrigination            CallOrigination                OPTIONAL,
- *     callingDeviceList        SEQUENCE OF DeviceID            OPTIONAL,
+ *     callOrigination            CallOrigination                type OPTIONAL,
+ *     callingDeviceList        SEQUENCE OF DeviceID            type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 

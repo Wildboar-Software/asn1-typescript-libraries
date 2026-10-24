@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -23,10 +23,10 @@ import { CliRestrictionOption, _decode_CliRestrictionOption, _encode_CliRestrict
  * 
  * ```asn1
  * ModificationRequestFor-CLIR-Info ::= SEQUENCE {
- *     ss-Status    [0]    Ext-SS-Status    OPTIONAL,
- *     cliRestrictionOption    [1]  CliRestrictionOption    OPTIONAL,
- *     modifyNotificationToCSE    [2]    ModificationInstruction    OPTIONAL,
- *     extensionContainer    [3]    ExtensionContainer    OPTIONAL,
+ *     ss-Status    [0]    Ext-SS-Status    type OPTIONAL,
+ *     cliRestrictionOption    [1]  CliRestrictionOption    type OPTIONAL,
+ *     modifyNotificationToCSE    [2]    ModificationInstruction    type OPTIONAL,
+ *     extensionContainer    [3]    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 

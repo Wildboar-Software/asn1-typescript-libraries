@@ -2,12 +2,12 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
+    type OPTIONAL,
+    type INTEGER,
     ENUMERATED,
     SEQUENCE,
     SET,
-    IA5String,
+    type IA5String,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -45,7 +45,7 @@ import {
  *     {    transmit             (0),
  *         receive             (1),
  *         transmitAndReceive         (2),
- *         none                 (3) }         OPTIONAL,
+ *         none                 (3) }         type OPTIONAL,
  *     numberOfChannels         INTEGER         DEFAULT    1,
  *     mediaSessionInformation        IA5String        OPTIONAL      }
  * ```

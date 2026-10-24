@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -25,10 +25,10 @@ import { PDP_Address, _decode_PDP_Address, _encode_PDP_Address } from "../MAP-MS
  * 
  * ```asn1
  * PDN-GW-Identity ::= SEQUENCE {
- *     pdn-gw-ipv4-Address    [0] PDP-Address    OPTIONAL,
- *     pdn-gw-ipv6-Address    [1] PDP-Address    OPTIONAL,
- *     pdn-gw-name    [2] FQDN    OPTIONAL,
- *     extensionContainer    [3] ExtensionContainer    OPTIONAL,
+ *     pdn-gw-ipv4-Address    [0] PDP-Address    type OPTIONAL,
+ *     pdn-gw-ipv6-Address    [1] PDP-Address    type OPTIONAL,
+ *     pdn-gw-name    [2] FQDN    type OPTIONAL,
+ *     extensionContainer    [3] ExtensionContainer    type OPTIONAL,
  *     ... }
  * ```
  * 

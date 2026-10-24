@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    OPTIONAL,
+    type OCTET_STRING,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
@@ -44,21 +44,21 @@ import { Location_uELocationTimestamp, _decode_Location_uELocationTimestamp, _en
  *     e164-Number         [1] OCTET STRING (SIZE (1..25)) OPTIONAL,
  *         -- Coded in the same format as the ISUP location number (parameter
  *         -- field) of the ISUP (see EN 300 356 [30]).
- *     globalCellID        [2] GlobalCellID    OPTIONAL,
+ *     globalCellID        [2] GlobalCellID    type OPTIONAL,
  *         --see MAP format (see [4])
- *     rAI                    [4] Rai        OPTIONAL,
+ *     rAI                    [4] Rai        type OPTIONAL,
  *         -- the Routeing Area Identifier in the current  SGSN is coded in accordance with the
  *         --  10.5.5.15 of document [9] without the Routing Area Identification IEI
  *         -- (only the last 6 octets are used)
  *     gsmLocation            [5] GSMLocation OPTIONAL,
  *      umtsLocation        [6] UMTSLocation OPTIONAL,
- *     sAI                    [7] Sai    OPTIONAL,
+ *     sAI                    [7] Sai    type OPTIONAL,
  *         -- format:    PLMN-ID    3 octets (no. 1 - 3)
  *         --            LAC        2 octets (no. 4 - 5)
  *         --            SAC        2 octets (no. 6 - 7)
  *         --            (according to 3GPP TS 25.413 [62])
  *     ...,
- *     oldRAI                [8] Rai        OPTIONAL,
+ *     oldRAI                [8] Rai        type OPTIONAL,
  *         -- the Routeing Area Identifier in the old SGSN is coded in accordance with the
  *         --  10.5.5.15 of document [9] without the Routing Area Identification IEI
  *         -- (only the last 6 octets are used).

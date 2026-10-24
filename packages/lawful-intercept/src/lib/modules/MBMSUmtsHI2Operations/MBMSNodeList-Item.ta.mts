@@ -24,8 +24,8 @@ import { MBMSNodeList_Item_mBMSNODELIST, _decode_MBMSNodeList_Item_mBMSNODELIST,
  * MBMSNodeList-Item ::= SEQUENCE {
  *     mBMSNODELIST    [1]    SEQUENCE
  *     {
- *         mbmsnodeIPAdress    [1]      IPAddress     OPTIONAL,
- *         mbmsnodeName        [2]        UTF8String    OPTIONAL,
+ *         mbmsnodeIPAdress    [1]      IPAddress     type OPTIONAL,
+ *         mbmsnodeName        [2]        UTF8String    type OPTIONAL,
  *         ...
  *     }
  *     ,

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -23,14 +23,14 @@ import { AdditionalInfo, _decode_AdditionalInfo, _encode_AdditionalInfo } from "
  * 
  * ```asn1
  * ProcessGroupCallSignallingArg ::= SEQUENCE {
- *     uplinkRequest    [0] NULL    OPTIONAL,
- *     uplinkReleaseIndication    [1] NULL    OPTIONAL,
- *     releaseGroupCall    [2] NULL    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     uplinkRequest    [0] NULL    type OPTIONAL,
+ *     uplinkReleaseIndication    [1] NULL    type OPTIONAL,
+ *     releaseGroupCall    [2] NULL    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     talkerPriority    [3] TalkerPriority    OPTIONAL,
- *     additionalInfo    [4] AdditionalInfo    OPTIONAL,
- *     emergencyModeResetCommandFlag    [5] NULL    OPTIONAL,
+ *     talkerPriority    [3] TalkerPriority    type OPTIONAL,
+ *     additionalInfo    [4] AdditionalInfo    type OPTIONAL,
+ *     emergencyModeResetCommandFlag    [5] NULL    type OPTIONAL,
  *     an-APDU    [6] AccessNetworkSignalInfo    OPTIONAL }
  * ```
  * 

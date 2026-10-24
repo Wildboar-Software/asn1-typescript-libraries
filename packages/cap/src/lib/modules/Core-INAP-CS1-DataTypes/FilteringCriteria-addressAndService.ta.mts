@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -26,7 +26,7 @@ import { LocationNumber, _decode_LocationNumber, _encode_LocationNumber } from "
  * FilteringCriteria-addressAndService ::= SEQUENCE {
  *     calledAddressValue     [0] Digits,
  *     serviceKey     [1] ServiceKey,
- *     callingAddressValue     [2] Digits     OPTIONAL,
+ *     callingAddressValue     [2] Digits     type OPTIONAL,
  *     locationNumber     [3] LocationNumber     OPTIONAL
  * }
  * ```

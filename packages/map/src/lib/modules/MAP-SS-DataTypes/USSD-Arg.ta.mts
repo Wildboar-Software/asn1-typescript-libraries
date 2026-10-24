@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -25,7 +25,7 @@ import { USSD_String, _decode_USSD_String, _encode_USSD_String } from "../MAP-SS
  *     ussd-DataCodingScheme    USSD-DataCodingScheme,
  *     ussd-String    USSD-String,
  *     ... ,
- *     alertingPattern    AlertingPattern    OPTIONAL,
+ *     alertingPattern    AlertingPattern    type OPTIONAL,
  *     msisdn    [0] ISDN-AddressString    OPTIONAL }
  * ```
  * 

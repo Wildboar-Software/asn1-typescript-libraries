@@ -2,8 +2,8 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING,
-    OPTIONAL,
+    type OCTET_STRING,
+    type OPTIONAL,
     UTF8String
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -24,10 +24,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ```asn1
  * GcseGroupCharacteristics ::= SEQUENCE
  * {
- *         characteristicsEncoding    [1] UTF8String     OPTIONAL, -- Specifies the encoding format of
+ *         characteristicsEncoding    [1] UTF8String     type OPTIONAL, -- Specifies the encoding format of
  *             -- the contents included within the parameter characteristics.
  * 
- *         characteristics            [2] OCTET STRING     OPTIONAL,
+ *         characteristics            [2] OCTET STRING     type OPTIONAL,
  *     ...
  * }
  * ```

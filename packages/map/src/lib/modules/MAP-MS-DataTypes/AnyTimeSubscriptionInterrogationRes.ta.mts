@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -34,22 +34,22 @@ import { SupportedCamelPhases, _decode_SupportedCamelPhases, _encode_SupportedCa
  * 
  * ```asn1
  * AnyTimeSubscriptionInterrogationRes ::= SEQUENCE {
- *     callForwardingData    [1] CallForwardingData    OPTIONAL,
- *     callBarringData    [2] CallBarringData    OPTIONAL,
- *     odb-Info    [3] ODB-Info    OPTIONAL,
- *     camel-SubscriptionInfo    [4] CAMEL-SubscriptionInfo    OPTIONAL,
- *     supportedVLR-CAMEL-Phases    [5] SupportedCamelPhases    OPTIONAL,
- *     supportedSGSN-CAMEL-Phases    [6] SupportedCamelPhases    OPTIONAL,
- *     extensionContainer    [7] ExtensionContainer    OPTIONAL,
+ *     callForwardingData    [1] CallForwardingData    type OPTIONAL,
+ *     callBarringData    [2] CallBarringData    type OPTIONAL,
+ *     odb-Info    [3] ODB-Info    type OPTIONAL,
+ *     camel-SubscriptionInfo    [4] CAMEL-SubscriptionInfo    type OPTIONAL,
+ *     supportedVLR-CAMEL-Phases    [5] SupportedCamelPhases    type OPTIONAL,
+ *     supportedSGSN-CAMEL-Phases    [6] SupportedCamelPhases    type OPTIONAL,
+ *     extensionContainer    [7] ExtensionContainer    type OPTIONAL,
  *     ... ,
- *     offeredCamel4CSIsInVLR    [8] OfferedCamel4CSIs    OPTIONAL,
- *     offeredCamel4CSIsInSGSN    [9] OfferedCamel4CSIs    OPTIONAL,
- *     msisdn-BS-List    [10] MSISDN-BS-List    OPTIONAL,
- *     csg-SubscriptionDataList    [11] CSG-SubscriptionDataList    OPTIONAL, 
- *     cw-Data    [12]    CallWaitingData    OPTIONAL,
- *     ch-Data    [13]    CallHoldData    OPTIONAL,
- *     clip-Data    [14] ClipData    OPTIONAL,
- *     clir-Data    [15]    ClirData    OPTIONAL,
+ *     offeredCamel4CSIsInVLR    [8] OfferedCamel4CSIs    type OPTIONAL,
+ *     offeredCamel4CSIsInSGSN    [9] OfferedCamel4CSIs    type OPTIONAL,
+ *     msisdn-BS-List    [10] MSISDN-BS-List    type OPTIONAL,
+ *     csg-SubscriptionDataList    [11] CSG-SubscriptionDataList    type OPTIONAL, 
+ *     cw-Data    [12]    CallWaitingData    type OPTIONAL,
+ *     ch-Data    [13]    CallHoldData    type OPTIONAL,
+ *     clip-Data    [14] ClipData    type OPTIONAL,
+ *     clir-Data    [15]    ClirData    type OPTIONAL,
  *     ect-data    [16] EctData    OPTIONAL }
  * ```
  * 

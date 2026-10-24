@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -26,11 +26,11 @@ import { EPS_DataList, _decode_EPS_DataList, _encode_EPS_DataList } from "../MAP
  * ```asn1
  * APN-ConfigurationProfile ::= SEQUENCE {
  *     defaultContext    ContextId,
- *     completeDataListIncluded    NULL    OPTIONAL,
+ *     completeDataListIncluded    NULL    type OPTIONAL,
  *     -- If segmentation is used, completeDataListIncluded may only be present in the
  *     -- first segment of APN-ConfigurationProfile.
  *     epsDataList    [1]    EPS-DataList,
- *     extensionContainer    [2]    ExtensionContainer    OPTIONAL,
+ *     extensionContainer    [2]    ExtensionContainer    type OPTIONAL,
  *     ... ,
  *     additionalDefaultContext    [3]    ContextId    OPTIONAL
  *     --    for details see the 3GPP TS 29.272 [144].

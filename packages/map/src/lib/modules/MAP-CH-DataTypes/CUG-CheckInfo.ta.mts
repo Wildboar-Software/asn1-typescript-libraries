@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -22,8 +22,8 @@ import { CUG_Interlock, _decode_CUG_Interlock, _encode_CUG_Interlock } from "../
  * ```asn1
  * CUG-CheckInfo ::= SEQUENCE {
  *     cug-Interlock    CUG-Interlock,
- *     cug-OutgoingAccess    NULL    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     cug-OutgoingAccess    NULL    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { type OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type DIGEST_ALGORITHM } from "../AlgorithmInformation-2009/DIGEST-ALGORITHM.oca.mjs";
 import { ParamOptions } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
@@ -19,8 +19,8 @@ import { type SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs
  * ```asn1
  * SIGNATURE-ALGORITHM ::= CLASS {
  * &id             OBJECT IDENTIFIER UNIQUE,
- * &Value          OPTIONAL,
- * &Params         OPTIONAL,
+ * &Value          type OPTIONAL,
+ * &Params         type OPTIONAL,
  * &paramPresence  ParamOptions DEFAULT absent,
  * &HashSet        DIGEST-ALGORITHM OPTIONAL,
  * &PublicKeySet   PUBLIC-KEY OPTIONAL,

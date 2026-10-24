@@ -36,7 +36,7 @@ import {
  * ```asn1
  * Challenge ::= SEQUENCE {
  *     owf                 AlgorithmIdentifier{DIGEST-ALGORITHM, {...}}
- *                             OPTIONAL,
+ *                             type OPTIONAL,
  *     -- MUST be present in the first Challenge; MAY be omitted in
  *     -- any subsequent Challenge in POPODecKeyChallContent (if
  *     -- omitted, then the owf used in the immediately preceding

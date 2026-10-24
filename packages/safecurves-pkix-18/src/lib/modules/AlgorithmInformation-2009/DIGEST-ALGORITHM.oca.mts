@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
+    type OBJECT_IDENTIFIER,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -29,7 +29,7 @@ import { ParamOptions, _enum_for_ParamOptions, _decode_ParamOptions, _encode_Par
  * ```asn1
  * DIGEST-ALGORITHM ::= CLASS {
  * &id                OBJECT IDENTIFIER UNIQUE,
- * &Params        OPTIONAL,
+ * &Params        type OPTIONAL,
  * &paramPresence    ParamOptions DEFAULT absent
  * } WITH SYNTAX {
  * IDENTIFIER &id

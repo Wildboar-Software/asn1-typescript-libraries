@@ -3,9 +3,9 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     GeneralizedTime,
-    INTEGER,
-    OCTET_STRING,
-    OPTIONAL,
+    type INTEGER,
+    type OCTET_STRING,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Path, _decode_Path, _encode_Path } from "../PKCS-15/Path.ta.mjs";

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -36,7 +36,7 @@ import {
  * ```asn1
  * TargetSelect ::= SEQUENCE {
  *   objOper   ObjectOperations OPTIONAL,
- *   attrSel   AttributeSel     OPTIONAL,
+ *   attrSel   AttributeSel     type OPTIONAL,
  *   ... }
  *   (WITH COMPONENTS {..., objOper  PRESENT } |
  *    WITH COMPONENTS {..., attrSel  PRESENT } )

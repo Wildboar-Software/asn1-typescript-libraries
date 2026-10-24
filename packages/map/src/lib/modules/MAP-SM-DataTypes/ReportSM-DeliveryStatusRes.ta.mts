@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -21,8 +21,8 @@ import { SMServingNodeAddressList, _decode_SMServingNodeAddressList, _encode_SMS
  * 
  * ```asn1
  * ReportSM-DeliveryStatusRes ::= SEQUENCE {
- *     storedMSISDN    ISDN-AddressString    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     storedMSISDN    ISDN-AddressString    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...,
  *     registeredSMServingNodes    [0] SMServingNodeAddressList    OPTIONAL
  * }

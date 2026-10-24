@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -33,11 +33,11 @@ import { SupportedCamelPhases, _decode_SupportedCamelPhases, _encode_SupportedCa
  *     eventMet    [0]    MM-Code,
  *     imsi    [1]    IMSI,
  *     msisdn    [2]    ISDN-AddressString,
- *     locationInformation    [3]    LocationInformation    OPTIONAL,
- *     supportedCAMELPhases    [5]    SupportedCamelPhases    OPTIONAL,
- *     extensionContainer    [6]    ExtensionContainer    OPTIONAL,
+ *     locationInformation    [3]    LocationInformation    type OPTIONAL,
+ *     supportedCAMELPhases    [5]    SupportedCamelPhases    type OPTIONAL,
+ *     extensionContainer    [6]    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     locationInformationGPRS    [7]    LocationInformationGPRS    OPTIONAL,
+ *     locationInformationGPRS    [7]    LocationInformationGPRS    type OPTIONAL,
  *     offeredCamel4Functionalities    [8] OfferedCamel4Functionalities    OPTIONAL
  * }
  * ```

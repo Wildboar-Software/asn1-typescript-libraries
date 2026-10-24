@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    OPTIONAL,
-    UTF8String,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type UTF8String,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
@@ -68,7 +68,7 @@ import { PartyInformation_partyIdentity_party_Validity, _decode_PartyInformation
  *         -- The party identity is added by the operator, e.g. the roaming number
  *         ...
  *     }
- *     OPTIONAL,
+ *     type OPTIONAL,
  *     alphanumeric    [11] UTF8String OPTIONAL
  *     -- see clause A.3.3 on usage of this parameter
  * }

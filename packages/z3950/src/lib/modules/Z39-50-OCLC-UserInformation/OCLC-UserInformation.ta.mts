@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    OPTIONAL,
-    VisibleString,
+    type BOOLEAN,
+    type OPTIONAL,
+    type VisibleString,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";

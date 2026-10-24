@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -40,8 +40,8 @@ import { ProvidedBy, _decode_ProvidedBy, _encode_ProvidedBy } from "../CSTA-call
  * ```asn1
  * GeoPriv ::= SEQUENCE                                    -- Conforming RFC 4119
  * {    gpLocationInfo            GpLocationInfoList,
- *     usageRules            [0] IMPLICIT UsageRules                OPTIONAL,
- *     method                [1] IMPLICIT Method                OPTIONAL,
+ *     usageRules            [0] IMPLICIT UsageRules                type OPTIONAL,
+ *     method                [1] IMPLICIT Method                type OPTIONAL,
  *     providedBy            [2] IMPLICIT ProvidedBy             OPTIONAL }
  * ```
  * 

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -22,8 +22,8 @@ import { OccurrenceInfo, _decode_OccurrenceInfo, _encode_OccurrenceInfo, _enum_f
  * ```asn1
  * AreaEventInfo ::= SEQUENCE {
  *     areaDefinition    [0]    AreaDefinition,
- *     occurrenceInfo    [1]    OccurrenceInfo    OPTIONAL,
- *     intervalTime    [2]    IntervalTime    OPTIONAL,
+ *     occurrenceInfo    [1]    OccurrenceInfo    type OPTIONAL,
+ *     intervalTime    [2]    IntervalTime    type OPTIONAL,
  *     ...}
  * ```
  * 

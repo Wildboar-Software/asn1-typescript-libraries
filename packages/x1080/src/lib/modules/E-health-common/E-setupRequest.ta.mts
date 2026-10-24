@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    UTF8String,
+    type OPTIONAL,
+    type INTEGER,
+    type UTF8String,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -70,7 +70,7 @@ import {
  *   operations       SET SIZE (1..MAX) OF
  *     INTERACTIVE-OPERATION.&id ({SupportedOperationTypes}),
  *   first            INTERACTIVE-OPERATION.&id ({SupportedOperationTypes})
- *                      OPTIONAL,
+ *                      type OPTIONAL,
  *   ... }
  * ```
  *

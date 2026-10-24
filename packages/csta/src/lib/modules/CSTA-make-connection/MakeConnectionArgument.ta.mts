@@ -2,8 +2,8 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
+    type OPTIONAL,
+    type INTEGER,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -65,19 +65,19 @@ import { CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "
  * ```asn1
  * MakeConnectionArgument ::= SEQUENCE
  * {     initiatingDevice         DeviceID,
- *     accountCode             [ 0] IMPLICIT AccountInfo             OPTIONAL,
- *     authCode             [ 1] IMPLICIT AuthCode                 OPTIONAL,
+ *     accountCode             [ 0] IMPLICIT AccountInfo             type OPTIONAL,
+ *     authCode             [ 1] IMPLICIT AuthCode                 type OPTIONAL,
  *     autoOriginate             [ 2] IMPLICIT AutoOriginate             DEFAULT prompt,
- *     correlatorData             [ 3] IMPLICIT CorrelatorData             OPTIONAL,
- *     callCharacteristics         [ 4] IMPLICIT CallCharacteristics         OPTIONAL,
- *     mediaCallCharacteristics     [ 5] IMPLICIT MediaCallCharacteristics         OPTIONAL,
- *     connectionInfo            [ 6] IMPLICIT ConnectionInformation        OPTIONAL,
- *     subjectOfCall            [ 7] IMPLICIT SubjectOfCall            OPTIONAL,
- *     languagePreferences        [ 8] IMPLICIT LanguagePreferences        OPTIONAL,
- *     reason                [ 9] IMPLICIT EventCause            OPTIONAL,
- *     maxDevices            [10] IMPLICIT INTEGER                OPTIONAL,
- *     startTime            [11] IMPLICIT TimeInfo                OPTIONAL,
- *     duration            [12] IMPLICIT INTEGER                OPTIONAL,
+ *     correlatorData             [ 3] IMPLICIT CorrelatorData             type OPTIONAL,
+ *     callCharacteristics         [ 4] IMPLICIT CallCharacteristics         type OPTIONAL,
+ *     mediaCallCharacteristics     [ 5] IMPLICIT MediaCallCharacteristics         type OPTIONAL,
+ *     connectionInfo            [ 6] IMPLICIT ConnectionInformation        type OPTIONAL,
+ *     subjectOfCall            [ 7] IMPLICIT SubjectOfCall            type OPTIONAL,
+ *     languagePreferences        [ 8] IMPLICIT LanguagePreferences        type OPTIONAL,
+ *     reason                [ 9] IMPLICIT EventCause            type OPTIONAL,
+ *     maxDevices            [10] IMPLICIT INTEGER                type OPTIONAL,
+ *     startTime            [11] IMPLICIT TimeInfo                type OPTIONAL,
+ *     duration            [12] IMPLICIT INTEGER                type OPTIONAL,
  *     extensions             CSTACommonArguments                 OPTIONAL }
  * ```
  * 

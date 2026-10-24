@@ -2,7 +2,7 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -49,11 +49,11 @@ import {
  *
  * ```asn1
  * CertificateListAssertion ::= SEQUENCE {
- *   issuer                       Name                   OPTIONAL,
- *   minCRLNumber            [0]  CRLNumber              OPTIONAL,
- *   maxCRLNumber            [1]  CRLNumber              OPTIONAL,
- *   reasonFlags                  ReasonFlags            OPTIONAL,
- *   dateAndTime                  Time                   OPTIONAL,
+ *   issuer                       Name                   type OPTIONAL,
+ *   minCRLNumber            [0]  CRLNumber              type OPTIONAL,
+ *   maxCRLNumber            [1]  CRLNumber              type OPTIONAL,
+ *   reasonFlags                  ReasonFlags            type OPTIONAL,
+ *   dateAndTime                  Time                   type OPTIONAL,
  *   distributionPoint       [2]  DistributionPointName  OPTIONAL,
  *   authorityKeyIdentifier  [3]  AuthorityKeyIdentifier OPTIONAL,
  *   ... }

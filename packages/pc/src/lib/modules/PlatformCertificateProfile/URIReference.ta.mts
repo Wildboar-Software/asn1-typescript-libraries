@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BIT_STRING,
-    IA5String,
+    type OPTIONAL,
+    type BIT_STRING,
+    type IA5String,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,

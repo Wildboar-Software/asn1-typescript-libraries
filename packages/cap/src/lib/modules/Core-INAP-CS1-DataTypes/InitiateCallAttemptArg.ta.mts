@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -27,9 +27,9 @@ import { CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNum
  * ```asn1
  * InitiateCallAttemptArg ::= SEQUENCE {
  *      destinationRoutingAddress     [0] DestinationRoutingAddress,
- *      alertingPattern     [1] AlertingPattern     OPTIONAL,
- *      extensions     [4] SEQUENCE SIZE(1..numOfExtensions) OF ExtensionField     OPTIONAL,
- *      serviceInteractionIndicators     [29] ServiceInteractionIndicators     OPTIONAL,
+ *      alertingPattern     [1] AlertingPattern     type OPTIONAL,
+ *      extensions     [4] SEQUENCE SIZE(1..numOfExtensions) OF ExtensionField     type OPTIONAL,
+ *      serviceInteractionIndicators     [29] ServiceInteractionIndicators     type OPTIONAL,
  *      callingPartyNumber     [30] CallingPartyNumber     OPTIONAL
  * --  ...
  *      }

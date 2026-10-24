@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -20,8 +20,8 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * 
  * ```asn1
  * PositionMethodFailure-Param ::= SEQUENCE {
- *     positionMethodFailure-Diagnostic    [0] PositionMethodFailure-Diagnostic    OPTIONAL,
- *     extensionContainer    [1] ExtensionContainer    OPTIONAL,
+ *     positionMethodFailure-Diagnostic    [0] PositionMethodFailure-Diagnostic    type OPTIONAL,
+ *     extensionContainer    [1] ExtensionContainer    type OPTIONAL,
  *     ... }
  * ```
  * 

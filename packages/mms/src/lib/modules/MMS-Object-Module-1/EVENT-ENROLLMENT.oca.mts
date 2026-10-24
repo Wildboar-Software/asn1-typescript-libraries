@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    INTEGER,
+    type BOOLEAN,
+    type INTEGER,
     NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,

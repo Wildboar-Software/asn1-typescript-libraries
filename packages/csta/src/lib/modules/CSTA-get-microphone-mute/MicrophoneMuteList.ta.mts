@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import * as $ from "@wildboar/asn1/functional";
-import { BOOLEAN, SEQUENCE, ASN1Element as _Element } from "@wildboar/asn1";
+import { type BOOLEAN, SEQUENCE, ASN1Element as _Element } from "@wildboar/asn1";
 import { MicrophoneMuteList_Item, _decode_MicrophoneMuteList_Item, _encode_MicrophoneMuteList_Item } from "../CSTA-get-microphone-mute/MicrophoneMuteList-Item.ta.mjs";
 
 

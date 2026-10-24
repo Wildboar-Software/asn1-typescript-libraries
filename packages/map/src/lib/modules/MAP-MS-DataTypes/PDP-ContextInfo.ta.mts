@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -39,43 +39,43 @@ import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../
  * ```asn1
  * PDP-ContextInfo ::= SEQUENCE {
  *     pdp-ContextIdentifier    [0] ContextId,
- *     pdp-ContextActive    [1] NULL    OPTIONAL,
+ *     pdp-ContextActive    [1] NULL    type OPTIONAL,
  *     pdp-Type    [2] PDP-Type,
- *     pdp-Address    [3] PDP-Address    OPTIONAL,
- *     apn-Subscribed    [4] APN    OPTIONAL,
- *     apn-InUse    [5] APN    OPTIONAL,
- *     nsapi    [6] NSAPI    OPTIONAL,
- *     transactionId    [7] TransactionId    OPTIONAL,
- *     teid-ForGnAndGp    [8] TEID    OPTIONAL,
- *     teid-ForIu    [9] TEID    OPTIONAL,
- *     ggsn-Address    [10] GSN-Address    OPTIONAL,
- *     qos-Subscribed    [11] Ext-QoS-Subscribed    OPTIONAL,
- *     qos-Requested    [12] Ext-QoS-Subscribed    OPTIONAL,
- *     qos-Negotiated    [13] Ext-QoS-Subscribed    OPTIONAL,
- *     chargingId    [14] GPRSChargingID    OPTIONAL,
- *     chargingCharacteristics    [15] ChargingCharacteristics    OPTIONAL,
- *     rnc-Address    [16] GSN-Address    OPTIONAL,
- *     extensionContainer    [17] ExtensionContainer    OPTIONAL,
+ *     pdp-Address    [3] PDP-Address    type OPTIONAL,
+ *     apn-Subscribed    [4] APN    type OPTIONAL,
+ *     apn-InUse    [5] APN    type OPTIONAL,
+ *     nsapi    [6] NSAPI    type OPTIONAL,
+ *     transactionId    [7] TransactionId    type OPTIONAL,
+ *     teid-ForGnAndGp    [8] TEID    type OPTIONAL,
+ *     teid-ForIu    [9] TEID    type OPTIONAL,
+ *     ggsn-Address    [10] GSN-Address    type OPTIONAL,
+ *     qos-Subscribed    [11] Ext-QoS-Subscribed    type OPTIONAL,
+ *     qos-Requested    [12] Ext-QoS-Subscribed    type OPTIONAL,
+ *     qos-Negotiated    [13] Ext-QoS-Subscribed    type OPTIONAL,
+ *     chargingId    [14] GPRSChargingID    type OPTIONAL,
+ *     chargingCharacteristics    [15] ChargingCharacteristics    type OPTIONAL,
+ *     rnc-Address    [16] GSN-Address    type OPTIONAL,
+ *     extensionContainer    [17] ExtensionContainer    type OPTIONAL,
  *     ...,
- *     qos2-Subscribed    [18] Ext2-QoS-Subscribed    OPTIONAL,
+ *     qos2-Subscribed    [18] Ext2-QoS-Subscribed    type OPTIONAL,
  *     -- qos2-Subscribed may be present only if qos-Subscribed is present.
- *     qos2-Requested    [19] Ext2-QoS-Subscribed    OPTIONAL,
+ *     qos2-Requested    [19] Ext2-QoS-Subscribed    type OPTIONAL,
  *     -- qos2-Requested may be present only if qos-Requested is present.
- *     qos2-Negotiated    [20] Ext2-QoS-Subscribed    OPTIONAL,
+ *     qos2-Negotiated    [20] Ext2-QoS-Subscribed    type OPTIONAL,
  *     -- qos2-Negotiated may be present only if qos-Negotiated is present.
- *     qos3-Subscribed    [21] Ext3-QoS-Subscribed    OPTIONAL,
+ *     qos3-Subscribed    [21] Ext3-QoS-Subscribed    type OPTIONAL,
  *     -- qos3-Subscribed may be present only if qos2-Subscribed is present.
- *     qos3-Requested    [22] Ext3-QoS-Subscribed    OPTIONAL,
+ *     qos3-Requested    [22] Ext3-QoS-Subscribed    type OPTIONAL,
  *     -- qos3-Requested may be present only if qos2-Requested is present.
- *     qos3-Negotiated    [23] Ext3-QoS-Subscribed    OPTIONAL,
+ *     qos3-Negotiated    [23] Ext3-QoS-Subscribed    type OPTIONAL,
  *     -- qos3-Negotiated may be present only if qos2-Negotiated is present.
- *     qos4-Subscribed    [25] Ext4-QoS-Subscribed    OPTIONAL,
+ *     qos4-Subscribed    [25] Ext4-QoS-Subscribed    type OPTIONAL,
  *     -- qos4-Subscribed may be present only if qos3-Subscribed is present.
- *     qos4-Requested    [26] Ext4-QoS-Subscribed    OPTIONAL,
+ *     qos4-Requested    [26] Ext4-QoS-Subscribed    type OPTIONAL,
  *     -- qos4-Requested may be present only if qos3-Requested is present.
- *     qos4-Negotiated    [27] Ext4-QoS-Subscribed    OPTIONAL,
+ *     qos4-Negotiated    [27] Ext4-QoS-Subscribed    type OPTIONAL,
  *     -- qos4-Negotiated may be present only if qos3-Negotiated is present. 
- *     ext-pdp-Type    [28] Ext-PDP-Type    OPTIONAL,
+ *     ext-pdp-Type    [28] Ext-PDP-Type    type OPTIONAL,
  *     -- contains the value IPv4v6 defined in 3GPP TS 29.060 [105], if the PDP can be
  *     -- accessed by dual-stack UEs.
  *     ext-pdp-Address    [29] PDP-Address    OPTIONAL

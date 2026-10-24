@@ -2,11 +2,11 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
+    type OPTIONAL,
+    type INTEGER,
     SEQUENCE,
     SET,
-    IA5String,
+    type IA5String,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -28,8 +28,8 @@ import {
  * 
  * ```asn1
  * DigitsReportingCriteria ::= SEQUENCE
- * {    numChars            [0] IMPLICIT INTEGER             OPTIONAL,
- *     flushChar            IA5String (SIZE(1..1))            OPTIONAL,
+ * {    numChars            [0] IMPLICIT INTEGER             type OPTIONAL,
+ *     flushChar            IA5String (SIZE(1..1))            type OPTIONAL,
  *     timeout                [1] IMPLICIT INTEGER             OPTIONAL }
  * ```
  * 

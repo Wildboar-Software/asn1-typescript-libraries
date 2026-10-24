@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -28,8 +28,8 @@ import { Long_GroupId, _decode_Long_GroupId, _encode_Long_GroupId } from "../MAP
  * VoiceBroadcastData ::= SEQUENCE {
  *     groupid    GroupId, 
  *     -- groupId shall be filled with six TBCD fillers (1111)if the longGroupId is present
- *     broadcastInitEntitlement    NULL    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     broadcastInitEntitlement    NULL    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...,
  *     longGroupId    [0] Long-GroupId    OPTIONAL }
  * ```

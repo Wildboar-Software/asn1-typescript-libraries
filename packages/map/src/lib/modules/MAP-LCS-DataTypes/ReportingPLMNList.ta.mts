@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -20,7 +20,7 @@ import { PLMNList, _decode_PLMNList, _encode_PLMNList } from "../MAP-LCS-DataTyp
  * 
  * ```asn1
  * ReportingPLMNList ::= SEQUENCE {
- *     plmn-ListPrioritized    [0] NULL        OPTIONAL,
+ *     plmn-ListPrioritized    [0] NULL        type OPTIONAL,
  *     plmn-List        [1] PLMNList,
  *     ...}
  * ```

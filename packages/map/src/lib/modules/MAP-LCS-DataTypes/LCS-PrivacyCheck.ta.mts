@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -20,7 +20,7 @@ import { PrivacyCheckRelatedAction, _decode_PrivacyCheckRelatedAction, _encode_P
  * ```asn1
  * LCS-PrivacyCheck ::= SEQUENCE {
  *     callSessionUnrelated    [0] PrivacyCheckRelatedAction,
- *     callSessionRelated    [1] PrivacyCheckRelatedAction    OPTIONAL,
+ *     callSessionRelated    [1] PrivacyCheckRelatedAction    type OPTIONAL,
  *     ...}
  * ```
  * 

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -23,8 +23,8 @@ import { ModificationInstruction, _decode_ModificationInstruction, _encode_Modif
  * 
  * ```asn1
  * ModificationRequestFor-IP-SM-GW-Data ::= SEQUENCE {
- *     modifyRegistrationStatus    [0]    ModificationInstruction    OPTIONAL,
- *     extensionContainer    [1]    ExtensionContainer    OPTIONAL,
+ *     modifyRegistrationStatus    [0]    ModificationInstruction    type OPTIONAL,
+ *     extensionContainer    [1]    ExtensionContainer    type OPTIONAL,
  *     ...,
  *     ip-sm-gw-DiameterAddress    [2]    NetworkNodeDiameterAddress    OPTIONAL
  *     -- ip-sm-gw-DiameterAddress may be present when ModificationInstruction is "activate"

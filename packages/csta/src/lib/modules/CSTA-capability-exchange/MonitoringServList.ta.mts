@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -34,10 +34,10 @@ import { MonitorInfo, _decode_MonitorInfo, _encode_MonitorInfo } from "../CSTA-c
  * 
  * ```asn1
  * MonitoringServList ::= SEQUENCE
- * {     changeMonitorFilter         [ 0] IMPLICIT ChangeMonitorFilter         OPTIONAL,
- *     monitorStart             [ 1] IMPLICIT MonitorStart             OPTIONAL,
- *     monitorStop             [ 2] IMPLICIT MonitorStop             OPTIONAL,
- *     getMonitors            [ 3] IMPLICIT GetMonitors            OPTIONAL,
+ * {     changeMonitorFilter         [ 0] IMPLICIT ChangeMonitorFilter         type OPTIONAL,
+ *     monitorStart             [ 1] IMPLICIT MonitorStart             type OPTIONAL,
+ *     monitorStop             [ 2] IMPLICIT MonitorStop             type OPTIONAL,
+ *     getMonitors            [ 3] IMPLICIT GetMonitors            type OPTIONAL,
  *     monitorInfo            [ 4] IMPLICIT MonitorInfo            OPTIONAL }
  * ```
  * 

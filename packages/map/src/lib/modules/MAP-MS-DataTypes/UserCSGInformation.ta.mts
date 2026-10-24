@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    OPTIONAL,
+    type OCTET_STRING,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -24,9 +24,9 @@ import { CSG_Id, _decode_CSG_Id, _encode_CSG_Id } from "../MAP-MS-DataTypes/CSG-
  * ```asn1
  * UserCSGInformation ::= SEQUENCE {
  *     csg-Id    [0] CSG-Id,
- *     extensionContainer    [1] ExtensionContainer    OPTIONAL,
+ *     extensionContainer    [1] ExtensionContainer    type OPTIONAL,
  *     ...,
- *     accessMode    [2] OCTET STRING (SIZE(1))    OPTIONAL,
+ *     accessMode    [2] OCTET STRING (SIZE(1))    type OPTIONAL,
  *     cmi    [3] OCTET STRING (SIZE(1))    OPTIONAL }
  * ```
  * 

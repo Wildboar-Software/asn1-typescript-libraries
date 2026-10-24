@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { BOOLEAN, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { type BOOLEAN, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ParamOptions } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
 import { type SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs";
@@ -18,7 +18,7 @@ import { type SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs
  * ```asn1
  * MAC-ALGORITHM ::= CLASS {
  * &id                OBJECT IDENTIFIER UNIQUE,
- * &Params        OPTIONAL,
+ * &Params        type OPTIONAL,
  * &paramPresence    ParamOptions DEFAULT absent,
  * &keyed        BOOLEAN,
  * &smimeCaps        SMIME-CAPS OPTIONAL

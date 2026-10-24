@@ -63,11 +63,11 @@ import {
  *     requestorName          [2] GeneralName OPTIONAL,
  *     responderName          [3] GeneralName OPTIONAL,
  *     requestExtensions      [4] Extensions{{RequestExtensions}}
- *                                     OPTIONAL,
+ *                                     type OPTIONAL,
  *     signatureAlg           [5] AlgorithmIdentifier
  *                                     {SIGNATURE-ALGORITHM,
  *                                         {SignatureAlgorithms}}
- *                                     OPTIONAL,
+ *                                     type OPTIONAL,
  *     hashAlg                [6] OBJECT IDENTIFIER OPTIONAL,
  *     requestorText          [7] UTF8String (SIZE (1..256)) OPTIONAL
  * }

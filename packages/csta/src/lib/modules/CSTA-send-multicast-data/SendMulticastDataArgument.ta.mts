@@ -2,8 +2,8 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    OCTET_STRING,
+    type OPTIONAL,
+    type OCTET_STRING,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -32,8 +32,8 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * SendMulticastDataArgument ::= SEQUENCE
  * {    ioCrossRefIDList        SEQUENCE OF IOCrossRefID,
- *     ioData                OCTET STRING                OPTIONAL,
- *     displayAttributes        DisplayAttributeList            OPTIONAL,
+ *     ioData                OCTET STRING                type OPTIONAL,
+ *     displayAttributes        DisplayAttributeList            type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 

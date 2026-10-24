@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -21,10 +21,10 @@ import { IST_AlertTimerValue, _decode_IST_AlertTimerValue, _encode_IST_AlertTime
  * 
  * ```asn1
  * IST-AlertRes ::= SEQUENCE{
- *     istAlertTimer    [0]    IST-AlertTimerValue    OPTIONAL,
- *     istInformationWithdraw    [1]    NULL    OPTIONAL,
- *     callTerminationIndicator    [2]    CallTerminationIndicator    OPTIONAL,
- *     extensionContainer    [3]    ExtensionContainer    OPTIONAL,
+ *     istAlertTimer    [0]    IST-AlertTimerValue    type OPTIONAL,
+ *     istInformationWithdraw    [1]    NULL    type OPTIONAL,
+ *     callTerminationIndicator    [2]    CallTerminationIndicator    type OPTIONAL,
+ *     extensionContainer    [3]    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 

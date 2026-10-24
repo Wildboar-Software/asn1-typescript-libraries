@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -28,17 +28,17 @@ import { Additional_Number, _decode_Additional_Number, _encode_Additional_Number
  * LCSLocationInfo ::= SEQUENCE {
  *     networkNode-Number    ISDN-AddressString,
  *     -- NetworkNode-number can be msc-number, sgsn-number or a dummy value of "0"
- *     lmsi    [0] LMSI    OPTIONAL,
- *     extensionContainer    [1] ExtensionContainer    OPTIONAL,
+ *     lmsi    [0] LMSI    type OPTIONAL,
+ *     extensionContainer    [1] ExtensionContainer    type OPTIONAL,
  *     ... ,
- *     gprsNodeIndicator    [2] NULL    OPTIONAL,
+ *     gprsNodeIndicator    [2] NULL    type OPTIONAL,
  *     -- gprsNodeIndicator is set only if the SGSN number is sent as the Network Node Number
- *     additional-Number    [3] Additional-Number    OPTIONAL,
- *     supportedLCS-CapabilitySets    [4]    SupportedLCS-CapabilitySets    OPTIONAL,
- *     additional-LCS-CapabilitySets    [5]    SupportedLCS-CapabilitySets    OPTIONAL,
- *     mme-Name    [6]    DiameterIdentity    OPTIONAL,
- *     aaa-Server-Name    [8]    DiameterIdentity    OPTIONAL,
- *     sgsn-Name    [9]    DiameterIdentity    OPTIONAL,
+ *     additional-Number    [3] Additional-Number    type OPTIONAL,
+ *     supportedLCS-CapabilitySets    [4]    SupportedLCS-CapabilitySets    type OPTIONAL,
+ *     additional-LCS-CapabilitySets    [5]    SupportedLCS-CapabilitySets    type OPTIONAL,
+ *     mme-Name    [6]    DiameterIdentity    type OPTIONAL,
+ *     aaa-Server-Name    [8]    DiameterIdentity    type OPTIONAL,
+ *     sgsn-Name    [9]    DiameterIdentity    type OPTIONAL,
  *     sgsn-Realm    [10]    DiameterIdentity    OPTIONAL
  *     }
  * ```

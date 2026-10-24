@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { BOOLEAN, OBJECT_IDENTIFIER, UTF8String } from "@wildboar/asn1";
+import { type BOOLEAN, OBJECT_IDENTIFIER, UTF8String } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AttributeUsage } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
@@ -23,7 +23,7 @@ import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mj
  * ```asn1
  * ATTRIBUTE ::= CLASS {
  *   &derivation               ATTRIBUTE OPTIONAL,
- *   &Type                     OPTIONAL, -- either &Type or &derivation required
+ *   &Type                     type OPTIONAL, -- either &Type or &derivation required
  *   &equality-match           MATCHING-RULE OPTIONAL,
  *   &ordering-match           MATCHING-RULE OPTIONAL,
  *   &substrings-match         MATCHING-RULE OPTIONAL,

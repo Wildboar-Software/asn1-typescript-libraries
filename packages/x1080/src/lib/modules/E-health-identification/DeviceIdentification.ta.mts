@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OBJECT_IDENTIFIER,
+    type OPTIONAL,
+    type OBJECT_IDENTIFIER,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -42,7 +42,7 @@ import {
  *   scheme         DEVICE-SCHEME.&id({DeviceSchemes}),
  *   schemeName     DEVICE-SCHEME.&name ({DeviceSchemes}{@.scheme}) OPTIONAL,
  *   manufacturerId DEVICE-SCHEME.&Manufacturer ({DeviceSchemes}{@.scheme})
- *                    OPTIONAL,
+ *                    type OPTIONAL,
  *   device         DEVICE-SCHEME.&Device ({DeviceSchemes}{@.scheme}),
  *   formats        DEVICE-SCHEME.&supportedFormats ({DeviceSchemes}{@.scheme})}
  * ```

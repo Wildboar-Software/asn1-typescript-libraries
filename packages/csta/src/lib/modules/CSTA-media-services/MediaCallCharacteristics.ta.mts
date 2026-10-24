@@ -2,9 +2,9 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
-    OCTET_STRING,
+    type OPTIONAL,
+    type INTEGER,
+    type OCTET_STRING,
     ENUMERATED,
     SEQUENCE,
     SET,
@@ -58,21 +58,21 @@ import {
  * ```asn1
  * MediaCallCharacteristics ::= SEQUENCE
  * {     mediaClass                 MediaClass,
- *     connectionRate                 [0] IMPLICIT INTEGER             OPTIONAL,
+ *     connectionRate                 [0] IMPLICIT INTEGER             type OPTIONAL,
  *                                                 -- value 0 indicates that
  *                                                 -- the connection rate is
  *                                                 -- unknown
  *     bitRate                 [1] IMPLICIT ENUMERATED
  *                         {     constant     (0),
  *                             variable     (1) }         DEFAULT constant,
- *     delayTolerance                 [2] IMPLICIT INTEGER             OPTIONAL,
+ *     delayTolerance                 [2] IMPLICIT INTEGER             type OPTIONAL,
  *     switchingSubDomainCCIEType         [3] IMPLICIT ENUMERATED 
  *                         {    isdn         (0),
  *                             atm         (1),
  *                             isoEthernet     (2),
  *                             rsvp         (3),
  *                             other         (4),
- *                             sip        (5) }        OPTIONAL,
+ *                             sip        (5) }        type OPTIONAL,
  *     switchingSubDomainInformationElements     OCTET STRING                 OPTIONAL }
  * ```
  * 

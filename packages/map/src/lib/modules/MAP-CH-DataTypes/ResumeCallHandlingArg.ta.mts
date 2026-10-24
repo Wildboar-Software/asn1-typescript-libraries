@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -30,21 +30,21 @@ import { O_CSI, _decode_O_CSI, _encode_O_CSI } from "../MAP-MS-DataTypes/O-CSI.t
  * 
  * ```asn1
  * ResumeCallHandlingArg ::= SEQUENCE {
- *     callReferenceNumber    [0] CallReferenceNumber    OPTIONAL,
- *     basicServiceGroup    [1] Ext-BasicServiceCode    OPTIONAL,
- *     forwardingData    [2] ForwardingData    OPTIONAL,
- *     imsi    [3] IMSI    OPTIONAL,
- *     cug-CheckInfo    [4] CUG-CheckInfo    OPTIONAL,
- *     o-CSI    [5] O-CSI    OPTIONAL,
- *     extensionContainer    [7] ExtensionContainer    OPTIONAL,
- *     ccbs-Possible    [8]    NULL    OPTIONAL,
- *     msisdn    [9]    ISDN-AddressString    OPTIONAL,
- *     uu-Data    [10] UU-Data    OPTIONAL,
- *     allInformationSent    [11] NULL    OPTIONAL,
+ *     callReferenceNumber    [0] CallReferenceNumber    type OPTIONAL,
+ *     basicServiceGroup    [1] Ext-BasicServiceCode    type OPTIONAL,
+ *     forwardingData    [2] ForwardingData    type OPTIONAL,
+ *     imsi    [3] IMSI    type OPTIONAL,
+ *     cug-CheckInfo    [4] CUG-CheckInfo    type OPTIONAL,
+ *     o-CSI    [5] O-CSI    type OPTIONAL,
+ *     extensionContainer    [7] ExtensionContainer    type OPTIONAL,
+ *     ccbs-Possible    [8]    NULL    type OPTIONAL,
+ *     msisdn    [9]    ISDN-AddressString    type OPTIONAL,
+ *     uu-Data    [10] UU-Data    type OPTIONAL,
+ *     allInformationSent    [11] NULL    type OPTIONAL,
  *     ...,
- *     d-csi    [12]    D-CSI    OPTIONAL,
- *     o-BcsmCamelTDPCriteriaList    [13]    O-BcsmCamelTDPCriteriaList    OPTIONAL,
- *     basicServiceGroup2    [14] Ext-BasicServiceCode    OPTIONAL,
+ *     d-csi    [12]    D-CSI    type OPTIONAL,
+ *     o-BcsmCamelTDPCriteriaList    [13]    O-BcsmCamelTDPCriteriaList    type OPTIONAL,
+ *     basicServiceGroup2    [14] Ext-BasicServiceCode    type OPTIONAL,
  *     mtRoamingRetry    [15] NULL    OPTIONAL
  *     }
  * ```

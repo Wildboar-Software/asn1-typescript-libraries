@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
     GraphicString,
-    PrintableString,
-    GeneralString,
+    type PrintableString,
+    type GeneralString,
     T61String,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,

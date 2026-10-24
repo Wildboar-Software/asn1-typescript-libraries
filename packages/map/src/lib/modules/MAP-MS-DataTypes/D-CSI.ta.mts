@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -30,11 +30,11 @@ import { DP_AnalysedInfoCriteriaList, _decode_DP_AnalysedInfoCriteriaList, _enco
  * 
  * ```asn1
  * D-CSI ::= SEQUENCE {
- *     dp-AnalysedInfoCriteriaList    [0] DP-AnalysedInfoCriteriaList    OPTIONAL,
- *     camelCapabilityHandling    [1] CamelCapabilityHandling    OPTIONAL,
- *     extensionContainer    [2] ExtensionContainer    OPTIONAL,
- *     notificationToCSE    [3]    NULL    OPTIONAL,
- *     csi-Active    [4]    NULL    OPTIONAL,
+ *     dp-AnalysedInfoCriteriaList    [0] DP-AnalysedInfoCriteriaList    type OPTIONAL,
+ *     camelCapabilityHandling    [1] CamelCapabilityHandling    type OPTIONAL,
+ *     extensionContainer    [2] ExtensionContainer    type OPTIONAL,
+ *     notificationToCSE    [3]    NULL    type OPTIONAL,
+ *     csi-Active    [4]    NULL    type OPTIONAL,
  *     ...}
  * ```
  * 

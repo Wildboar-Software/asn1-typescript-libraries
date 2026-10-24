@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -37,8 +37,8 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * SetVoiceAttributeArgument ::= SEQUENCE
  * {    connection            ConnectionID,
  *     attributeToSet            AttributeToSet,
- *     message                MessageID                OPTIONAL,
- *     resource            [0] IMPLICIT ResourceID            OPTIONAL,
+ *     message                MessageID                type OPTIONAL,
+ *     resource            [0] IMPLICIT ResourceID            type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 

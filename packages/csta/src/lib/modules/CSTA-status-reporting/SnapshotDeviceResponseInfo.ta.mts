@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -38,11 +38,11 @@ import { CallLinkageData, _decode_CallLinkageData, _encode_CallLinkageData } fro
  * ```asn1
  * SnapshotDeviceResponseInfo ::= SEQUENCE
  * {    connectionIdentifier        ConnectionID,
- *     endpointDevice            [3] IMPLICIT SubjectDeviceID         OPTIONAL,
+ *     endpointDevice            [3] IMPLICIT SubjectDeviceID         type OPTIONAL,
  *     localCallState            CallState,
- *     servicesPermitted         [0] IMPLICIT ServicesPermitted         OPTIONAL,
- *     mediaServiceInfoList         [1] IMPLICIT DeviceMediaInfoList     OPTIONAL,
- *     mediaCallCharacteristics    [2] IMPLICIT MediaCallCharacteristics     OPTIONAL,
+ *     servicesPermitted         [0] IMPLICIT ServicesPermitted         type OPTIONAL,
+ *     mediaServiceInfoList         [1] IMPLICIT DeviceMediaInfoList     type OPTIONAL,
+ *     mediaCallCharacteristics    [2] IMPLICIT MediaCallCharacteristics     type OPTIONAL,
  *     callLinkageData         [4] IMPLICIT CallLinkageData         OPTIONAL }
  * ```
  * 

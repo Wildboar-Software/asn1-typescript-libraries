@@ -46,7 +46,7 @@ import {
  *          --  security exchange -- }) DEFAULT noInvocationId,
  *   itemIdentifier
  *     SECURITY-EXCHANGE.&SE-Items.&itemId({ValidSEs.&SE-Items})
- *       OPTIONAL,
+ *       type OPTIONAL,
  *   --  This component will only be present
  *   --  when the Abort is generated subsequent
  *   --  to receipt of a SETransfer APDU.

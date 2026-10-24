@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { BOOLEAN } from "@wildboar/asn1";
+import { type BOOLEAN } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { bitString } from "../SelectedAttributeTypes/bitString.oa.mjs";

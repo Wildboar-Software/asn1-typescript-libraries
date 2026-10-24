@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -30,18 +30,18 @@ import { TraceType, _decode_TraceType, _encode_TraceType } from "../MAP-OM-DataT
  * 
  * ```asn1
  * ActivateTraceModeArg ::= SEQUENCE {
- *     imsi    [0] IMSI    OPTIONAL,
+ *     imsi    [0] IMSI    type OPTIONAL,
  *     traceReference    [1] TraceReference,
  *     traceType    [2] TraceType,
- *     omc-Id    [3] AddressString    OPTIONAL,
- *     extensionContainer    [4] ExtensionContainer    OPTIONAL,
+ *     omc-Id    [3] AddressString    type OPTIONAL,
+ *     extensionContainer    [4] ExtensionContainer    type OPTIONAL,
  *     ...,
- *     traceReference2    [5] TraceReference2    OPTIONAL,
- *     traceDepthList    [6] TraceDepthList    OPTIONAL,
- *     traceNE-TypeList    [7] TraceNE-TypeList    OPTIONAL,
- *     traceInterfaceList    [8] TraceInterfaceList    OPTIONAL,
- *     traceEventList    [9] TraceEventList    OPTIONAL,
- *     traceCollectionEntity    [10] GSN-Address    OPTIONAL,
+ *     traceReference2    [5] TraceReference2    type OPTIONAL,
+ *     traceDepthList    [6] TraceDepthList    type OPTIONAL,
+ *     traceNE-TypeList    [7] TraceNE-TypeList    type OPTIONAL,
+ *     traceInterfaceList    [8] TraceInterfaceList    type OPTIONAL,
+ *     traceEventList    [9] TraceEventList    type OPTIONAL,
+ *     traceCollectionEntity    [10] GSN-Address    type OPTIONAL,
  *     mdt-Configuration    [11] MDT-Configuration    OPTIONAL
  *     }
  * ```

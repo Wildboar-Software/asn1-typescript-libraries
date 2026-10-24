@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -30,7 +30,7 @@ import { Integer4, _decode_Integer4, _encode_Integer4 } from "../Core-INAP-CS1-D
  * 
  * ```asn1
  * CAP-GPRS-ReferenceNumber ::= SEQUENCE {
- *     destinationReference        [0] Integer4                OPTIONAL,
+ *     destinationReference        [0] Integer4                type OPTIONAL,
  *     originationReference        [1] Integer4                OPTIONAL
  *     }
  * ```

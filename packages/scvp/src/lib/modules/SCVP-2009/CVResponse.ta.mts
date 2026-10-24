@@ -71,7 +71,7 @@ import {
  *     respNonce              [5] OCTET STRING OPTIONAL,
  *     serverContextInfo      [6] OCTET STRING OPTIONAL,
  *     cvResponseExtensions   [7] Extensions{{CVResponseExtensions}}
- *                                     OPTIONAL,
+ *                                     type OPTIONAL,
  *     requestorText          [8] UTF8String (SIZE (1..256)) OPTIONAL
  * }
  * ```

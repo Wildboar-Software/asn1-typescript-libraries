@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -30,7 +30,7 @@ import { type LegOrCallSegment, _decode_LegOrCallSegment, _encode_LegOrCallSegme
  * PlayToneArg {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *     legOrCallSegment            [0] LegOrCallSegment {bound},
  *     bursts                [1] Burst,
- *     extensions                [2] Extensions {bound}            OPTIONAL,
+ *     extensions                [2] Extensions {bound}            type OPTIONAL,
  *     ...
  *     }
  * ```

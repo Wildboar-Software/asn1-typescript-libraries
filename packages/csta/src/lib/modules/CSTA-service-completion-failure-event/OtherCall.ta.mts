@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -33,7 +33,7 @@ import { ConnectionInformation, _decode_ConnectionInformation, _encode_Connectio
  * OtherCall ::= SEQUENCE
  * {    deviceID             DeviceID,
  *     connectionID            ConnectionID,
- *     localConnectionState        LocalConnectionState            OPTIONAL,
+ *     localConnectionState        LocalConnectionState            type OPTIONAL,
  *     connectionInfo            ConnectionInformation            OPTIONAL }
  * ```
  * 

@@ -2,10 +2,10 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
-    IA5String,
+    type IA5String,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1ConstructionError as _ConstructionError
@@ -33,21 +33,21 @@ import { GpLocationInfo_civicLocGml, _decode_GpLocationInfo_civicLocGml, _encode
  *                                     -- http://www.opengeospatial.org/standards/gml#downloads
  *         civicLoc SEQUENCE
  *         {    country        IA5String (SIZE(0..2)),                   -- must conform the ISO 3166 country code
- *             a1        [ 0] IMPLICIT IA5String    OPTIONAL,              -- NationalSubdivisions
- *             a2        [ 1] IMPLICIT IA5String    OPTIONAL,              -- CountryOrParishOrDistrict
- *             a3        [ 2] IMPLICIT IA5String    OPTIONAL,              -- City
- *             a4        [ 3] IMPLICIT IA5String    OPTIONAL,              -- CityDivision
- *             a5        [ 4] IMPLICIT IA5String    OPTIONAL,              -- NeighborhoodOrBlock
- *             a6        [ 5] IMPLICIT IA5String    OPTIONAL,              -- Street
- *             prd        [ 6] IMPLICIT IA5String    OPTIONAL,              -- LeadingStreetDirection
- *             pod        [ 7] IMPLICIT IA5String    OPTIONAL,              -- TrailingStreetSuffix
- *             sts        [ 8] IMPLICIT IA5String    OPTIONAL,              -- StreetSuffix
- *             hno        [ 9] IMPLICIT IA5String    OPTIONAL,              -- HouseNumber
- *             hns        [10] IMPLICIT IA5String    OPTIONAL,              -- HouseNumberSuffix
- *             lmk        [11] IMPLICIT IA5String    OPTIONAL,              -- LandmarkVanity
- *             loc        [12] IMPLICIT IA5String    OPTIONAL,              -- AdditionalLocationInformation
- *             flr        [13] IMPLICIT IA5String    OPTIONAL,              -- Floor
- *             nam        [14] IMPLICIT IA5String    OPTIONAL,              -- ResidenceOrOfficeName
+ *             a1        [ 0] IMPLICIT IA5String    type OPTIONAL,              -- NationalSubdivisions
+ *             a2        [ 1] IMPLICIT IA5String    type OPTIONAL,              -- CountryOrParishOrDistrict
+ *             a3        [ 2] IMPLICIT IA5String    type OPTIONAL,              -- City
+ *             a4        [ 3] IMPLICIT IA5String    type OPTIONAL,              -- CityDivision
+ *             a5        [ 4] IMPLICIT IA5String    type OPTIONAL,              -- NeighborhoodOrBlock
+ *             a6        [ 5] IMPLICIT IA5String    type OPTIONAL,              -- Street
+ *             prd        [ 6] IMPLICIT IA5String    type OPTIONAL,              -- LeadingStreetDirection
+ *             pod        [ 7] IMPLICIT IA5String    type OPTIONAL,              -- TrailingStreetSuffix
+ *             sts        [ 8] IMPLICIT IA5String    type OPTIONAL,              -- StreetSuffix
+ *             hno        [ 9] IMPLICIT IA5String    type OPTIONAL,              -- HouseNumber
+ *             hns        [10] IMPLICIT IA5String    type OPTIONAL,              -- HouseNumberSuffix
+ *             lmk        [11] IMPLICIT IA5String    type OPTIONAL,              -- LandmarkVanity
+ *             loc        [12] IMPLICIT IA5String    type OPTIONAL,              -- AdditionalLocationInformation
+ *             flr        [13] IMPLICIT IA5String    type OPTIONAL,              -- Floor
+ *             nam        [14] IMPLICIT IA5String    type OPTIONAL,              -- ResidenceOrOfficeName
  *             pc        [15] IMPLICIT IA5String    OPTIONAL } OPTIONAL    -- PostalCode
  *     }
  * }

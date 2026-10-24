@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -32,52 +32,52 @@ import { SMServingNodeAddressList, _decode_SMServingNodeAddressList, _encode_SMS
  *     serviceCentreAddress    AddressString,
  *     sm-DeliveryOutcome    SM-DeliveryOutcome,
  *     absentSubscriberDiagnosticSM    [0] AbsentSubscriberDiagnosticSM
- *         OPTIONAL,
- *     extensionContainer    [1] ExtensionContainer    OPTIONAL,
+ *         type OPTIONAL,
+ *     extensionContainer    [1] ExtensionContainer    type OPTIONAL,
  *     ...,
- *     gprsSupportIndicator    [2]    NULL    OPTIONAL,
+ *     gprsSupportIndicator    [2]    NULL    type OPTIONAL,
  *     -- gprsSupportIndicator is set only if the SMS-GMSC supports 
  *     -- handling of two delivery outcomes
- *     deliveryOutcomeIndicator    [3]    NULL    OPTIONAL,
+ *     deliveryOutcomeIndicator    [3]    NULL    type OPTIONAL,
  *     -- DeliveryOutcomeIndicator is set when the SM-DeliveryOutcome
  *     -- is for GPRS
- *     additionalSM-DeliveryOutcome    [4]    SM-DeliveryOutcome    OPTIONAL,
+ *     additionalSM-DeliveryOutcome    [4]    SM-DeliveryOutcome    type OPTIONAL,
  *     -- If received, additionalSM-DeliveryOutcome is for GPRS
  *     -- If DeliveryOutcomeIndicator is set, then AdditionalSM-DeliveryOutcome shall be absent
  *     additionalAbsentSubscriberDiagnosticSM    [5]    AbsentSubscriberDiagnosticSM OPTIONAL,
  *     -- If received additionalAbsentSubscriberDiagnosticSM is for GPRS
  *     -- If DeliveryOutcomeIndicator is set, then AdditionalAbsentSubscriberDiagnosticSM 
  *     -- shall be absent
- *     ip-sm-gw-Indicator    [6]    NULL    OPTIONAL,
+ *     ip-sm-gw-Indicator    [6]    NULL    type OPTIONAL,
  *     -- the ip-sm-gw indicator indicates by its presence that sm-deliveryOutcome
  *     -- is for delivery via IMS
  *     -- If present, deliveryOutcomeIndicator shall be absent.
- *     ip-sm-gw-sm-deliveryOutcome    [7]    SM-DeliveryOutcome    OPTIONAL, 
+ *     ip-sm-gw-sm-deliveryOutcome    [7]    SM-DeliveryOutcome    type OPTIONAL, 
  *     -- If received ip-sm-gw-sm-deliveryOutcome is for delivery via IMS
  *     -- If ip-sm-gw-Indicator is set, then ip-sm-gw-sm-deliveryOutcome shall be absent
- *     ip-sm-gw-absentSubscriberDiagnosticSM    [8]    AbsentSubscriberDiagnosticSM    OPTIONAL,
+ *     ip-sm-gw-absentSubscriberDiagnosticSM    [8]    AbsentSubscriberDiagnosticSM    type OPTIONAL,
  *     -- If received ip-sm-gw-sm-absentSubscriberDiagnosticSM is for delivery via IMS
  *     -- If ip-sm-gw-Indicator is set, then ip-sm-gw-sm-absentSubscriberDiagnosticSM 
  *     -- shall be absent
- *     imsi    [9] IMSI    OPTIONAL,
- *     singleAttemptDelivery    [10] NULL    OPTIONAL,
- *     correlationID    [11]    CorrelationID    OPTIONAL,
- *     smsf-3gpp-deliveryOutcomeIndicator    [12]    NULL    OPTIONAL,
+ *     imsi    [9] IMSI    type OPTIONAL,
+ *     singleAttemptDelivery    [10] NULL    type OPTIONAL,
+ *     correlationID    [11]    CorrelationID    type OPTIONAL,
+ *     smsf-3gpp-deliveryOutcomeIndicator    [12]    NULL    type OPTIONAL,
  *     -- smsf-3gpp-deliveryOutcome is set when the SM-DeliveryOutcome
  *     -- is for 3GPP-SMSF
- *     smsf-3gpp-deliveryOutcome    [13]    SM-DeliveryOutcome    OPTIONAL,
+ *     smsf-3gpp-deliveryOutcome    [13]    SM-DeliveryOutcome    type OPTIONAL,
  *     -- If smsf-3gpp-deliveryOutcomeIndicator is set, then smsf-3gpp-deliveryOutcome
  *     -- shall be absent
- *     smsf-3gpp-absentSubscriberDiagSM    [14]    AbsentSubscriberDiagnosticSM    OPTIONAL,
+ *     smsf-3gpp-absentSubscriberDiagSM    [14]    AbsentSubscriberDiagnosticSM    type OPTIONAL,
  *     -- If smsf-3gpp-deliveryOutcomeIndicator is set, then
  *     -- smsf-3gpp-absentSubscriberDiagSM shall be absent
- *     smsf-non-3gpp-deliveryOutcomeIndicator    [15]    NULL    OPTIONAL,
+ *     smsf-non-3gpp-deliveryOutcomeIndicator    [15]    NULL    type OPTIONAL,
  *     -- smsf-non-3gpp-deliveryOutcomeIndicator is set when the SM-DeliveryOutcome
  *     -- is for non-3GPP-SMSF
- *     smsf-non-3gpp-deliveryOutcome    [16]    SM-DeliveryOutcome    OPTIONAL,
+ *     smsf-non-3gpp-deliveryOutcome    [16]    SM-DeliveryOutcome    type OPTIONAL,
  *     -- If smsf-non-3gpp-deliveryOutcomeIndicator is set, then smsf-non-3gpp-deliveryOutcome
  *     -- shall be absent
- *     smsf-non-3gpp-absentSubscriberDiagSM    [17]    AbsentSubscriberDiagnosticSM    OPTIONAL,
+ *     smsf-non-3gpp-absentSubscriberDiagSM    [17]    AbsentSubscriberDiagnosticSM    type OPTIONAL,
  *     -- If smsf-non-3gpp-deliveryOutcomeIndicator is set, then
  *     -- smsf-non-3gpp-absentSubscriberDiagSM shall be absent
  *     failedSMServingNodes    [18]    SMServingNodeAddressList    OPTIONAL

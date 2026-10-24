@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -46,16 +46,16 @@ import { SpeakerVolume, _decode_SpeakerVolume, _encode_SpeakerVolume } from "../
  * 
  * ```asn1
  * PhysDevEvtsList ::= SEQUENCE
- * {     buttonInformation         [ 0] IMPLICIT     ButtonInformation         OPTIONAL,
- *     buttonPress             [ 1] IMPLICIT     ButtonPressEvent         OPTIONAL,
- *     displayUpdated             [ 2] IMPLICIT     DisplayUpdated             OPTIONAL,
- *     hookswitch             [ 3] IMPLICIT     Hookswitch             OPTIONAL,
- *     lampMode             [ 4] IMPLICIT     LampMode             OPTIONAL,
- *     messageWaiting             [ 5] IMPLICIT     MessageWaiting             OPTIONAL,
- *     microphoneGain             [ 6] IMPLICIT     MicrophoneGain             OPTIONAL,
- *     microphoneMute             [ 7] IMPLICIT     MicrophoneMute             OPTIONAL,
- *     ringerStatus             [ 8] IMPLICIT     RingerStatus             OPTIONAL,
- *     speakerMute             [ 9] IMPLICIT     SpeakerMute             OPTIONAL,
+ * {     buttonInformation         [ 0] IMPLICIT     ButtonInformation         type OPTIONAL,
+ *     buttonPress             [ 1] IMPLICIT     ButtonPressEvent         type OPTIONAL,
+ *     displayUpdated             [ 2] IMPLICIT     DisplayUpdated             type OPTIONAL,
+ *     hookswitch             [ 3] IMPLICIT     Hookswitch             type OPTIONAL,
+ *     lampMode             [ 4] IMPLICIT     LampMode             type OPTIONAL,
+ *     messageWaiting             [ 5] IMPLICIT     MessageWaiting             type OPTIONAL,
+ *     microphoneGain             [ 6] IMPLICIT     MicrophoneGain             type OPTIONAL,
+ *     microphoneMute             [ 7] IMPLICIT     MicrophoneMute             type OPTIONAL,
+ *     ringerStatus             [ 8] IMPLICIT     RingerStatus             type OPTIONAL,
+ *     speakerMute             [ 9] IMPLICIT     SpeakerMute             type OPTIONAL,
  *     speakerVolume             [10] IMPLICIT     SpeakerVolume             OPTIONAL }
  * ```
  * 

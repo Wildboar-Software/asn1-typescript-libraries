@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -31,15 +31,15 @@ import { RequestingNodeType, _decode_RequestingNodeType, _encode_RequestingNodeT
  * SendAuthenticationInfoArg ::= SEQUENCE {
  *     imsi    [0] IMSI,
  *     numberOfRequestedVectors    NumberOfRequestedVectors,
- *     segmentationProhibited    NULL    OPTIONAL,
- *     immediateResponsePreferred    [1] NULL    OPTIONAL,
- *     re-synchronisationInfo    Re-synchronisationInfo    OPTIONAL,
- *     extensionContainer    [2] ExtensionContainer    OPTIONAL,
+ *     segmentationProhibited    NULL    type OPTIONAL,
+ *     immediateResponsePreferred    [1] NULL    type OPTIONAL,
+ *     re-synchronisationInfo    Re-synchronisationInfo    type OPTIONAL,
+ *     extensionContainer    [2] ExtensionContainer    type OPTIONAL,
  *     ...,
- *     requestingNodeType    [3] RequestingNodeType    OPTIONAL,
- *     requestingPLMN-Id    [4] PLMN-Id    OPTIONAL,
- *     numberOfRequestedAdditional-Vectors    [5] NumberOfRequestedVectors    OPTIONAL,
- *     additionalVectorsAreForEPS    [6] NULL    OPTIONAL,
+ *     requestingNodeType    [3] RequestingNodeType    type OPTIONAL,
+ *     requestingPLMN-Id    [4] PLMN-Id    type OPTIONAL,
+ *     numberOfRequestedAdditional-Vectors    [5] NumberOfRequestedVectors    type OPTIONAL,
+ *     additionalVectorsAreForEPS    [6] NULL    type OPTIONAL,
  *     ueUsageTypeRequestIndication    [7] NULL    OPTIONAL }
  * ```
  * 

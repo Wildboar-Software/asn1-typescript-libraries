@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OBJECT_IDENTIFIER,
-    EXTERNAL,
+    type OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type EXTERNAL,
     TRUE_BIT,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
@@ -12,7 +12,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-    BIT_STRING,
+    type BIT_STRING,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {

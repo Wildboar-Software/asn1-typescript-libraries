@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
@@ -37,19 +37,19 @@ import { ContinueWithArgumentArgExtension, _decode_ContinueWithArgumentArgExtens
  * 
  * ```asn1
  * ContinueWithArgumentArg {PARAMETERS-BOUND : bound} ::= SEQUENCE {
- *     alertingPattern            [1] AlertingPattern                OPTIONAL,
- *     extensions                [6] Extensions {bound}            OPTIONAL,
- *     serviceInteractionIndicatorsTwo    [7] ServiceInteractionIndicatorsTwo        OPTIONAL,
- *     callingPartysCategory        [12] CallingPartysCategory            OPTIONAL,
- *     genericNumbers            [16] GenericNumbers {bound}            OPTIONAL,
- *     cug-Interlock            [17] CUG-Interlock                OPTIONAL,
- *     cug-OutgoingAccess            [18] NULL                    OPTIONAL,
- *     chargeNumber            [50] ChargeNumber {bound}            OPTIONAL,
- *     carrier                [52] Carrier {bound}            OPTIONAL,
- *     suppressionOfAnnouncement        [55] SuppressionOfAnnouncement        OPTIONAL,
- *     naOliInfo                [56] NAOliInfo                OPTIONAL,
- *     bor-InterrogationRequested        [57] NULL                    OPTIONAL,
- *     suppress-O-CSI            [58] NULL                    OPTIONAL,
+ *     alertingPattern            [1] AlertingPattern                type OPTIONAL,
+ *     extensions                [6] Extensions {bound}            type OPTIONAL,
+ *     serviceInteractionIndicatorsTwo    [7] ServiceInteractionIndicatorsTwo        type OPTIONAL,
+ *     callingPartysCategory        [12] CallingPartysCategory            type OPTIONAL,
+ *     genericNumbers            [16] GenericNumbers {bound}            type OPTIONAL,
+ *     cug-Interlock            [17] CUG-Interlock                type OPTIONAL,
+ *     cug-OutgoingAccess            [18] NULL                    type OPTIONAL,
+ *     chargeNumber            [50] ChargeNumber {bound}            type OPTIONAL,
+ *     carrier                [52] Carrier {bound}            type OPTIONAL,
+ *     suppressionOfAnnouncement        [55] SuppressionOfAnnouncement        type OPTIONAL,
+ *     naOliInfo                [56] NAOliInfo                type OPTIONAL,
+ *     bor-InterrogationRequested        [57] NULL                    type OPTIONAL,
+ *     suppress-O-CSI            [58] NULL                    type OPTIONAL,
  *     continueWithArgumentArgExtension    [59] ContinueWithArgumentArgExtension {bound} OPTIONAL,
  *     ...
  *     }

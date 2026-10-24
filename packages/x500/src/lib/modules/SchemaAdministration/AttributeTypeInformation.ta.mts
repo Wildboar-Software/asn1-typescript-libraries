@@ -2,9 +2,9 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
+    type BOOLEAN,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -35,10 +35,10 @@ import {
  *
  * ```asn1
  * AttributeTypeInformation ::= SEQUENCE {
- *   derivation       [0]  ATTRIBUTE.&id             OPTIONAL,
- *   equalityMatch    [1]  MATCHING-RULE.&id         OPTIONAL,
- *   orderingMatch    [2]  MATCHING-RULE.&id         OPTIONAL,
- *   substringsMatch  [3]  MATCHING-RULE.&id         OPTIONAL,
+ *   derivation       [0]  ATTRIBUTE.&id             type OPTIONAL,
+ *   equalityMatch    [1]  MATCHING-RULE.&id         type OPTIONAL,
+ *   orderingMatch    [2]  MATCHING-RULE.&id         type OPTIONAL,
+ *   substringsMatch  [3]  MATCHING-RULE.&id         type OPTIONAL,
  *   attributeSyntax  [4]  UnboundedDirectoryString  OPTIONAL,
  *   multi-valued     [5]  BOOLEAN                   DEFAULT TRUE,
  *   collective       [6]  BOOLEAN                   DEFAULT FALSE,

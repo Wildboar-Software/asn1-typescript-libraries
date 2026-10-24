@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -25,10 +25,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * 
  * ```asn1
  * ExtensibleSystemFailureParam ::= SEQUENCE {
- *     networkResource    NetworkResource    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     networkResource    NetworkResource    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     additionalNetworkResource    [0] AdditionalNetworkResource    OPTIONAL,
+ *     additionalNetworkResource    [0] AdditionalNetworkResource    type OPTIONAL,
  *     failureCauseParam    [1] FailureCauseParam    OPTIONAL }
  * ```
  * 

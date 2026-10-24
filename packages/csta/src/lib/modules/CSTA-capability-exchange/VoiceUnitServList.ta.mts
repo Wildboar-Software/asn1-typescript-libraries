@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -58,22 +58,22 @@ import { SynthesizeMsg, _decode_SynthesizeMsg, _encode_SynthesizeMsg } from "../
  * 
  * ```asn1
  * VoiceUnitServList ::= SEQUENCE
- * {     activate            [12] IMPLICIT Activate            OPTIONAL,
- *     clear                [13] IMPLICIT Clear            OPTIONAL,
- *     deactivate            [14] IMPLICIT Deactivate        OPTIONAL,
- *     concatenateMsg             [ 0] IMPLICIT ConcatenateMsg         OPTIONAL,
- *     deleteMsg             [ 1] IMPLICIT DeleteMsg         OPTIONAL,
- *     queue                [15] IMPLICIT Queue            OPTIONAL,
- *     playMsg             [ 2] IMPLICIT PlayMsg             OPTIONAL,
- *     queryVoiceAttrib         [ 3] IMPLICIT QueryVoiceAttrib         OPTIONAL,
- *     recordMsg             [ 4] IMPLICIT RecordMsg         OPTIONAL,
- *     reposition             [ 5] IMPLICIT Reposition         OPTIONAL,
- *     resume                 [ 6] IMPLICIT Resume             OPTIONAL,
- *     review                 [ 7] IMPLICIT Review             OPTIONAL,
- *     start                [16] IMPLICIT Start            OPTIONAL,
- *     setVoiceAttrib             [ 8] IMPLICIT SetVoiceAttrib         OPTIONAL,
- *     stop                 [ 9] IMPLICIT Stop             OPTIONAL,
- *     suspend             [10] IMPLICIT Suspend             OPTIONAL,
+ * {     activate            [12] IMPLICIT Activate            type OPTIONAL,
+ *     clear                [13] IMPLICIT Clear            type OPTIONAL,
+ *     deactivate            [14] IMPLICIT Deactivate        type OPTIONAL,
+ *     concatenateMsg             [ 0] IMPLICIT ConcatenateMsg         type OPTIONAL,
+ *     deleteMsg             [ 1] IMPLICIT DeleteMsg         type OPTIONAL,
+ *     queue                [15] IMPLICIT Queue            type OPTIONAL,
+ *     playMsg             [ 2] IMPLICIT PlayMsg             type OPTIONAL,
+ *     queryVoiceAttrib         [ 3] IMPLICIT QueryVoiceAttrib         type OPTIONAL,
+ *     recordMsg             [ 4] IMPLICIT RecordMsg         type OPTIONAL,
+ *     reposition             [ 5] IMPLICIT Reposition         type OPTIONAL,
+ *     resume                 [ 6] IMPLICIT Resume             type OPTIONAL,
+ *     review                 [ 7] IMPLICIT Review             type OPTIONAL,
+ *     start                [16] IMPLICIT Start            type OPTIONAL,
+ *     setVoiceAttrib             [ 8] IMPLICIT SetVoiceAttrib         type OPTIONAL,
+ *     stop                 [ 9] IMPLICIT Stop             type OPTIONAL,
+ *     suspend             [10] IMPLICIT Suspend             type OPTIONAL,
  *     synthesizeMsg             [11] IMPLICIT SynthesizeMsg         OPTIONAL }
  * ```
  * 

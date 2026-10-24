@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -50,18 +50,18 @@ import { SuspendDataPath, _decode_SuspendDataPath, _encode_SuspendDataPath } fro
  * 
  * ```asn1
  * IOServicesServList ::= SEQUENCE
- * {     ioRegister             [ 0] IMPLICIT     IoRegister         OPTIONAL,
- *     ioRegisterAbort         [ 1] IMPLICIT     IoRegisterAbort     OPTIONAL,
- *     ioRegisterCancel         [ 2] IMPLICIT     IoRegisterCancel     OPTIONAL,
- *     dataPathResumed         [ 3] IMPLICIT     DataPathResumed     OPTIONAL,
- *     dataPathSuspended         [ 4] IMPLICIT     DataPathSuspended     OPTIONAL,
- *     fastData             [ 5] IMPLICIT     FastData         OPTIONAL,
- *     resumeDataPath             [ 6] IMPLICIT     ResumeDataPath         OPTIONAL,
- *     sendBroadcastData         [ 7] IMPLICIT     SendBroadcastData     OPTIONAL,
- *     sendData             [ 8] IMPLICIT     SendData         OPTIONAL,
- *     sendMulticastData         [ 9] IMPLICIT     SendMulticastData     OPTIONAL,
- *     startDataPath             [10] IMPLICIT     StartDataPath         OPTIONAL,
- *     stopDataPath             [11] IMPLICIT     StopDataPath         OPTIONAL,
+ * {     ioRegister             [ 0] IMPLICIT     IoRegister         type OPTIONAL,
+ *     ioRegisterAbort         [ 1] IMPLICIT     IoRegisterAbort     type OPTIONAL,
+ *     ioRegisterCancel         [ 2] IMPLICIT     IoRegisterCancel     type OPTIONAL,
+ *     dataPathResumed         [ 3] IMPLICIT     DataPathResumed     type OPTIONAL,
+ *     dataPathSuspended         [ 4] IMPLICIT     DataPathSuspended     type OPTIONAL,
+ *     fastData             [ 5] IMPLICIT     FastData         type OPTIONAL,
+ *     resumeDataPath             [ 6] IMPLICIT     ResumeDataPath         type OPTIONAL,
+ *     sendBroadcastData         [ 7] IMPLICIT     SendBroadcastData     type OPTIONAL,
+ *     sendData             [ 8] IMPLICIT     SendData         type OPTIONAL,
+ *     sendMulticastData         [ 9] IMPLICIT     SendMulticastData     type OPTIONAL,
+ *     startDataPath             [10] IMPLICIT     StartDataPath         type OPTIONAL,
+ *     stopDataPath             [11] IMPLICIT     StopDataPath         type OPTIONAL,
  *     suspendDataPath         [12] IMPLICIT     SuspendDataPath     OPTIONAL }
  * ```
  * 

@@ -2,7 +2,7 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -40,7 +40,7 @@ import {
  * ```asn1
  * PKIStatusInfo ::= SEQUENCE {
  *     status        PKIStatus,
- *     statusString  PKIFreeText     OPTIONAL,
+ *     statusString  PKIFreeText     type OPTIONAL,
  *     failInfo      PKIFailureInfo  OPTIONAL  }
  * ```
  *

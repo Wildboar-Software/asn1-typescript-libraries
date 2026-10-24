@@ -28,7 +28,7 @@ import { ExecuteResult_Type, _decode_ExecuteResult_Type, _encode_ExecuteResult_T
  *                                SET OF
  *                                  METHOD.&OutputAttributes.&Type
  *                                    ({SupportedMethods}{@method-id, @.type})
- *                                  OPTIONAL,
+ *                                  type OPTIONAL,
  *                              valuesWithContext
  *                                [0]  SET OF
  *                                       SEQUENCE {value
@@ -38,13 +38,13 @@ import { ExecuteResult_Type, _decode_ExecuteResult_Type, _encode_ExecuteResult_T
  *                                                          ({SupportedMethods}
  *                                                             {@method-id, @...
  *                                                                     type})
- *                                                     OPTIONAL,
+ *                                                     type OPTIONAL,
  *                                                 contextList
  *                                                   [1]  SET OF Context
  *                                       } OPTIONAL} OPTIONAL,
  *           specific-output
  *             [3]  METHOD.&SpecificOutput({SupportedMethods}{@method-id})
- *               OPTIONAL,
+ *               type OPTIONAL,
  *           COMPONENTS OF CommonResults}}
  * ```
  */

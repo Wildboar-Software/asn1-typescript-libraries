@@ -92,7 +92,7 @@ import {
  *     hashAlgorithms          SEQUENCE SIZE (1..MAX) OF
  *                                 OBJECT IDENTIFIER,
  *     serverPublicKeys        SEQUENCE OF KeyAgreePublicKey
- *                                 OPTIONAL,
+ *                                 type OPTIONAL,
  *     clockSkew               INTEGER DEFAULT 10,
  *     requestNonce            OCTET STRING OPTIONAL
  * }

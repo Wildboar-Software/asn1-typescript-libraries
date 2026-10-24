@@ -2,8 +2,8 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -30,8 +30,8 @@ import {
  * ObjectClassInformation ::= SEQUENCE {
  *   subclassOf        SET SIZE (1..MAX) OF OBJECT-CLASS.&id OPTIONAL,
  *   kind              ObjectClassKind                       DEFAULT structural,
- *   mandatories  [3]  SET SIZE (1..MAX) OF ATTRIBUTE.&id    OPTIONAL,
- *   optionals    [4]  SET SIZE (1..MAX) OF ATTRIBUTE.&id    OPTIONAL,
+ *   mandatories  [3]  SET SIZE (1..MAX) OF ATTRIBUTE.&id    type OPTIONAL,
+ *   optionals    [4]  SET SIZE (1..MAX) OF ATTRIBUTE.&id    type OPTIONAL,
  *   ... }
  * ```
  *

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -24,11 +24,11 @@ import { GPRSDataList, _decode_GPRSDataList, _encode_GPRSDataList } from "../MAP
  * 
  * ```asn1
  * GPRSSubscriptionData ::= SEQUENCE {
- *     completeDataListIncluded    NULL    OPTIONAL,
+ *     completeDataListIncluded    NULL    type OPTIONAL,
  *     -- If segmentation is used, completeDataListIncluded may only be present in the
  *     -- first segment of GPRSSubscriptionData.
  *     gprsDataList    [1]    GPRSDataList,
- *     extensionContainer    [2] ExtensionContainer    OPTIONAL,
+ *     extensionContainer    [2] ExtensionContainer    type OPTIONAL,
  *     ...,
  *     apn-oi-Replacement    [3]    APN-OI-Replacement    OPTIONAL
  *     -- this apn-oi-Replacement refers to the UE level apn-oi-Replacement.

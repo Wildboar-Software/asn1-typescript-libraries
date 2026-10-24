@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -30,7 +30,7 @@ import { type SendingSideID, _decode_SendingSideID, _encode_SendingSideID } from
  * SendChargingInformationArg {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *     sCIBillingChargingCharacteristics    [0] SCIBillingChargingCharacteristics {bound},
  *     partyToCharge            [1] SendingSideID,
- *     extensions                [2] Extensions {bound}            OPTIONAL,
+ *     extensions                [2] Extensions {bound}            type OPTIONAL,
  *     ...
  *     }
  * ```

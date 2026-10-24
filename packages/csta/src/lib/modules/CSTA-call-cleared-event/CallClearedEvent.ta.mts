@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -52,14 +52,14 @@ import { CallLinkageData, _decode_CallLinkageData, _encode_CallLinkageData } fro
  * ```asn1
  * CallClearedEvent ::= SEQUENCE
  * {     clearedCall             ConnectionID,
- *     correlatorData             [1] IMPLICIT CorrelatorData         OPTIONAL,
- *     userData             UserData                 OPTIONAL,
+ *     correlatorData             [1] IMPLICIT CorrelatorData         type OPTIONAL,
+ *     userData             UserData                 type OPTIONAL,
  *     cause                 EventCause,
- *     mediaCallCharacteristics     [2] IMPLICIT MediaCallCharacteristics     OPTIONAL,
- *     callCharacteristics         [3] IMPLICIT CallCharacteristics     OPTIONAL,
- *     callLinkageData         [4] IMPLICIT CallLinkageData         OPTIONAL,
- *     languagePreferences        [5] IMPLICIT LanguagePreferences    OPTIONAL,
- *     locationInfo            [6] IMPLICIT LocationInfoList        OPTIONAL,
+ *     mediaCallCharacteristics     [2] IMPLICIT MediaCallCharacteristics     type OPTIONAL,
+ *     callCharacteristics         [3] IMPLICIT CallCharacteristics     type OPTIONAL,
+ *     callLinkageData         [4] IMPLICIT CallLinkageData         type OPTIONAL,
+ *     languagePreferences        [5] IMPLICIT LanguagePreferences    type OPTIONAL,
+ *     locationInfo            [6] IMPLICIT LocationInfoList        type OPTIONAL,
  *     extensions             CSTACommonArguments             OPTIONAL }
  * ```
  * 

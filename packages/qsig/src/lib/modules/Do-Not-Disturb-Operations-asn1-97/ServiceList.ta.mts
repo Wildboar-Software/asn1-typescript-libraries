@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
+    type BIT_STRING,
     ASN1Element as _Element,
     ASN1SizeError,
 } from "@wildboar/asn1";

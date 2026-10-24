@@ -2,8 +2,8 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
+    type OPTIONAL,
+    type INTEGER,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -47,11 +47,11 @@ import { MessageID, _decode_MessageID, _encode_MessageID } from "../CSTA-device-
  * ReviewEvent ::= SEQUENCE
  * {    connection            ConnectionID,
  *     message                MessageID,
- *     resource            [2] IMPLICIT ResourceID            OPTIONAL,
- *     length                [0] IMPLICIT INTEGER            OPTIONAL,
- *     currentPosition             [1] IMPLICIT INTEGER            OPTIONAL,
- *     cause                EventCause                OPTIONAL,
- *     servicesPermitted        ServicesPermitted            OPTIONAL,
+ *     resource            [2] IMPLICIT ResourceID            type OPTIONAL,
+ *     length                [0] IMPLICIT INTEGER            type OPTIONAL,
+ *     currentPosition             [1] IMPLICIT INTEGER            type OPTIONAL,
+ *     cause                EventCause                type OPTIONAL,
+ *     servicesPermitted        ServicesPermitted            type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 

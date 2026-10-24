@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    INTEGER,
+    type BOOLEAN,
+    type INTEGER,
     UTCTime,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,

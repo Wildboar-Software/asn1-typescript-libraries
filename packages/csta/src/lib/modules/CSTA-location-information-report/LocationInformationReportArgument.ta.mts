@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -34,7 +34,7 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * LocationInformationReportArgument ::= SEQUENCE
  * {    locCrossRefID            LocCrossRefID,
  *     device                DeviceID,
- *     locationInfoList        LocationInfoList            OPTIONAL,
+ *     locationInfoList        LocationInfoList            type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 

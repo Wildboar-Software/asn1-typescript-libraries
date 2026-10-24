@@ -30,9 +30,9 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * ```asn1
  * RegistrantContactDetails ::= SEQUENCE {
- *     familyNameOrOrganization     UTF8String    OPTIONAL,
- *     givenName            UTF8String    OPTIONAL,
- *     e-mailAddress            UTF8String    OPTIONAL,
+ *     familyNameOrOrganization     UTF8String    type OPTIONAL,
+ *     givenName            UTF8String    type OPTIONAL,
+ *     e-mailAddress            UTF8String    type OPTIONAL,
  *     phone                IA5String     OPTIONAL / * Starting with "+" * /,
  *     fax                IA5String     OPTIONAL / * Starting with "+" * /,
  *     postalAddress            SEQUENCE OF UTF8String OPTIONAL

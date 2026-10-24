@@ -2,11 +2,11 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
+    type OPTIONAL,
+    type BOOLEAN,
     SEQUENCE,
     SET,
-    IA5String,
+    type IA5String,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -39,9 +39,9 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ButtonInformationEvent ::= SEQUENCE
  * {    device                SubjectDeviceID,
  *     button                ButtonID,
- *     buttonLabel            IA5String (SIZE(0..64))            OPTIONAL,
- *     buttonAssociatedNumber        DeviceID                OPTIONAL,
- *     buttonPressIndicator        BOOLEAN                    OPTIONAL,
+ *     buttonLabel            IA5String (SIZE(0..64))            type OPTIONAL,
+ *     buttonAssociatedNumber        DeviceID                type OPTIONAL,
+ *     buttonPressIndicator        BOOLEAN                    type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -23,8 +23,8 @@ import { CliRestrictionOption, _decode_CliRestrictionOption, _encode_CliRestrict
  * ```asn1
  * ClirData ::= SEQUENCE {
  *     ss-Status    [1] Ext-SS-Status,
- *     cliRestrictionOption    [2] CliRestrictionOption    OPTIONAL,
- *     notificationToCSE    [3] NULL    OPTIONAL,
+ *     cliRestrictionOption    [2] CliRestrictionOption    type OPTIONAL,
+ *     notificationToCSE    [3] NULL    type OPTIONAL,
  *     ... }
  * ```
  * 

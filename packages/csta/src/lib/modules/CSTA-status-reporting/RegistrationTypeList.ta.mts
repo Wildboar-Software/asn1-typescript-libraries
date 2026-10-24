@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import * as $ from "@wildboar/asn1/functional";
-import { SEQUENCE, ASN1Element as _Element } from "@wildboar/asn1";
+import { type SEQUENCE, ASN1Element as _Element } from "@wildboar/asn1";
 import { RegistrationType, _decode_RegistrationType, _encode_RegistrationType } from "../CSTA-status-reporting/RegistrationType.ta.mjs";
 
 

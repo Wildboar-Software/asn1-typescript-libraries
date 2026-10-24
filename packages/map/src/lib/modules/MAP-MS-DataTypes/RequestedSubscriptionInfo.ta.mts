@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -26,22 +26,22 @@ import { SS_ForBS_Code, _decode_SS_ForBS_Code, _encode_SS_ForBS_Code } from "../
  * 
  * ```asn1
  * RequestedSubscriptionInfo ::= SEQUENCE {
- *     requestedSS-Info    [1] SS-ForBS-Code    OPTIONAL,
- *     odb    [2] NULL    OPTIONAL,
- *     requestedCAMEL-SubscriptionInfo    [3] RequestedCAMEL-SubscriptionInfo    OPTIONAL,
- *     supportedVLR-CAMEL-Phases    [4] NULL    OPTIONAL,
- *     supportedSGSN-CAMEL-Phases    [5] NULL    OPTIONAL,
- *     extensionContainer    [6] ExtensionContainer    OPTIONAL,
+ *     requestedSS-Info    [1] SS-ForBS-Code    type OPTIONAL,
+ *     odb    [2] NULL    type OPTIONAL,
+ *     requestedCAMEL-SubscriptionInfo    [3] RequestedCAMEL-SubscriptionInfo    type OPTIONAL,
+ *     supportedVLR-CAMEL-Phases    [4] NULL    type OPTIONAL,
+ *     supportedSGSN-CAMEL-Phases    [5] NULL    type OPTIONAL,
+ *     extensionContainer    [6] ExtensionContainer    type OPTIONAL,
  *     ...,
  *     additionalRequestedCAMEL-SubscriptionInfo
  *     [7] AdditionalRequestedCAMEL-SubscriptionInfo
- *         OPTIONAL,
- *     msisdn-BS-List    [8] NULL    OPTIONAL,
- *     csg-SubscriptionDataRequested    [9] NULL    OPTIONAL,
- *     cw-Info    [10]    NULL    OPTIONAL,
- *     clip-Info    [11] NULL    OPTIONAL,
- *     clir-Info    [12] NULL    OPTIONAL,
- *     hold-Info    [13] NULL    OPTIONAL,
+ *         type OPTIONAL,
+ *     msisdn-BS-List    [8] NULL    type OPTIONAL,
+ *     csg-SubscriptionDataRequested    [9] NULL    type OPTIONAL,
+ *     cw-Info    [10]    NULL    type OPTIONAL,
+ *     clip-Info    [11] NULL    type OPTIONAL,
+ *     clir-Info    [12] NULL    type OPTIONAL,
+ *     hold-Info    [13] NULL    type OPTIONAL,
  *     ect-Info    [14] NULL    OPTIONAL }
  * ```
  * 

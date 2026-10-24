@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -25,7 +25,7 @@ import { SS_EventList, _decode_SS_EventList, _encode_SS_EventList } from "../MAP
  * SS-CamelData ::= SEQUENCE {
  *     ss-EventList    SS-EventList,
  *     gsmSCF-Address    ISDN-AddressString,
- *     extensionContainer    [0] ExtensionContainer    OPTIONAL, 
+ *     extensionContainer    [0] ExtensionContainer    type OPTIONAL, 
  *     ...}
  * ```
  * 

@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -27,9 +27,9 @@ import { MonitorFilter, _decode_MonitorFilter, _encode_MonitorFilter } from "../
  * 
  * ```asn1
  * MonitorFilterItems ::= SEQUENCE
- * {     deviceOnDeviceMonitorFilter         [0] IMPLICIT     MonitorFilter             OPTIONAL,
- *     deviceOnConnectionMonitorFilter     [1] IMPLICIT     MonitorFilter             OPTIONAL,
- *     callOnDeviceMonitorFilter         [2] IMPLICIT     MonitorFilter             OPTIONAL,
+ * {     deviceOnDeviceMonitorFilter         [0] IMPLICIT     MonitorFilter             type OPTIONAL,
+ *     deviceOnConnectionMonitorFilter     [1] IMPLICIT     MonitorFilter             type OPTIONAL,
+ *     callOnDeviceMonitorFilter         [2] IMPLICIT     MonitorFilter             type OPTIONAL,
  *     callOnConnectionMonitorFilter         [3] IMPLICIT     MonitorFilter             OPTIONAL }
  * ```
  * 

@@ -2,9 +2,9 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
+    type OPTIONAL,
+    type BOOLEAN,
+    type INTEGER,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -33,7 +33,7 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * MonitorInfoArgument ::= SEQUENCE
  * {     serviceCrossRefID        ServiceCrossRefID,
- *     segmentID            INTEGER                OPTIONAL,
+ *     segmentID            INTEGER                type OPTIONAL,
  *     lastSegment            BOOLEAN,
  *     monitorList            MonitorList,
  *     extensions             CSTACommonArguments         OPTIONAL }

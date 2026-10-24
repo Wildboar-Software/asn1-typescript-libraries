@@ -2,8 +2,8 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BIT_STRING,
-    OPTIONAL,
+    type BIT_STRING,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -27,8 +27,8 @@ import {
  * ```asn1
  * OOBCertHash ::= SEQUENCE {
  *     hashAlg     [0] AlgorithmIdentifier{DIGEST-ALGORITHM, {...}}
- *                         OPTIONAL,
- *     certId      [1] CertId                  OPTIONAL,
+ *                         type OPTIONAL,
+ *     certId      [1] CertId                  type OPTIONAL,
  *     hashVal         BIT STRING
  *     -- hashVal is calculated over the DER encoding of the
  *     -- self-signed certificate with the identifier certID.

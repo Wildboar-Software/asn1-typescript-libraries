@@ -2,8 +2,8 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OPTIONAL,
+    type INTEGER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -50,16 +50,16 @@ import {
  *
  * ```asn1
  * CertTemplate ::= SEQUENCE {
- *     version      [0] Version               OPTIONAL,
- *     serialNumber [1] INTEGER               OPTIONAL,
+ *     version      [0] Version               type OPTIONAL,
+ *     serialNumber [1] INTEGER               type OPTIONAL,
  *     signingAlg   [2] AlgorithmIdentifier{SIGNATURE-ALGORITHM,
  *                         {SignatureAlgorithms}}   OPTIONAL,
- *     issuer       [3] Name                  OPTIONAL,
- *     validity     [4] OptionalValidity      OPTIONAL,
- *     subject      [5] Name                  OPTIONAL,
+ *     issuer       [3] Name                  type OPTIONAL,
+ *     validity     [4] OptionalValidity      type OPTIONAL,
+ *     subject      [5] Name                  type OPTIONAL,
  *     publicKey    [6] SubjectPublicKeyInfo  OPTIONAL,
- *     issuerUID    [7] UniqueIdentifier      OPTIONAL,
- *     subjectUID   [8] UniqueIdentifier      OPTIONAL,
+ *     issuerUID    [7] UniqueIdentifier      type OPTIONAL,
+ *     subjectUID   [8] UniqueIdentifier      type OPTIONAL,
  *     extensions   [9] Extensions{{CertExtensions}}  OPTIONAL }
  * ```
  *

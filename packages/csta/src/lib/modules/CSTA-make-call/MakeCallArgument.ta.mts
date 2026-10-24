@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -65,17 +65,17 @@ import { UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-fea
  * MakeCallArgument ::= SEQUENCE
  * {     callingDevice             DeviceID,
  *     calledDirectoryNumber         DeviceID,
- *     accountCode             [0] IMPLICIT AccountInfo         OPTIONAL,
- *     authCode             [1] IMPLICIT AuthCode             OPTIONAL,
+ *     accountCode             [0] IMPLICIT AccountInfo         type OPTIONAL,
+ *     authCode             [1] IMPLICIT AuthCode             type OPTIONAL,
  *     autoOriginate             [3] IMPLICIT AutoOriginate         DEFAULT prompt,
- *     correlatorData             [2] IMPLICIT CorrelatorData         OPTIONAL,
- *     userData             UserData                 OPTIONAL,
- *     callCharacteristics         CallCharacteristics             OPTIONAL,
- *     mediaCallCharacteristics     [4] IMPLICIT MediaCallCharacteristics     OPTIONAL,
- *     callingConnectionInfo         [5] IMPLICIT ConnectionInformation     OPTIONAL,
- *     subjectOfCall            [6] IMPLICIT SubjectOfCall        OPTIONAL,
- *     languagePreferences        [7] IMPLICIT LanguagePreferences    OPTIONAL,
- *     reason                [8] IMPLICIT EventCause            OPTIONAL,
+ *     correlatorData             [2] IMPLICIT CorrelatorData         type OPTIONAL,
+ *     userData             UserData                 type OPTIONAL,
+ *     callCharacteristics         CallCharacteristics             type OPTIONAL,
+ *     mediaCallCharacteristics     [4] IMPLICIT MediaCallCharacteristics     type OPTIONAL,
+ *     callingConnectionInfo         [5] IMPLICIT ConnectionInformation     type OPTIONAL,
+ *     subjectOfCall            [6] IMPLICIT SubjectOfCall        type OPTIONAL,
+ *     languagePreferences        [7] IMPLICIT LanguagePreferences    type OPTIONAL,
+ *     reason                [8] IMPLICIT EventCause            type OPTIONAL,
  *     extensions             CSTACommonArguments             OPTIONAL }
  * ```
  * 

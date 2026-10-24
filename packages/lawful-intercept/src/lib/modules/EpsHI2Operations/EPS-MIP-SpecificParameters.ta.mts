@@ -2,9 +2,9 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OCTET_STRING,
-    OPTIONAL,
+    type INTEGER,
+    type OCTET_STRING,
+    type OPTIONAL,
     ASN1OverflowError,
     ASN1SizeError
 } from "@wildboar/asn1";
@@ -27,12 +27,12 @@ import * as $ from "@wildboar/asn1/functional";
  * ```asn1
  * EPS-MIP-SpecificParameters ::= SEQUENCE
  * {
- *     lifetime                              [1]   INTEGER (0.. 65535)               OPTIONAL,
- *     homeAddress                           [2]   OCTET STRING (SIZE (4))           OPTIONAL,
- *     careOfAddress                         [3]   OCTET STRING (SIZE (4))           OPTIONAL,
- *     homeAgentAddress                      [4]   OCTET STRING (SIZE (4))           OPTIONAL,
- *     code                                  [5]   INTEGER (0..255)                  OPTIONAL,
- *     foreignDomainAddress                  [7]   OCTET STRING (SIZE (4))           OPTIONAL,
+ *     lifetime                              [1]   INTEGER (0.. 65535)               type OPTIONAL,
+ *     homeAddress                           [2]   OCTET STRING (SIZE (4))           type OPTIONAL,
+ *     careOfAddress                         [3]   OCTET STRING (SIZE (4))           type OPTIONAL,
+ *     homeAgentAddress                      [4]   OCTET STRING (SIZE (4))           type OPTIONAL,
+ *     code                                  [5]   INTEGER (0..255)                  type OPTIONAL,
+ *     foreignDomainAddress                  [7]   OCTET STRING (SIZE (4))           type OPTIONAL,
  *     ...
  *     -- parameters coded according to 3GPP TS 29.279 [63] and RFCs specifically
  *     -- referenced in it.

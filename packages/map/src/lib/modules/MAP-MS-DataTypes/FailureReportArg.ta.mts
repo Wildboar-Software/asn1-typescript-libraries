@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -26,8 +26,8 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * FailureReportArg ::= SEQUENCE {
  *     imsi    [0] IMSI,
  *     ggsn-Number    [1] ISDN-AddressString    ,
- *     ggsn-Address    [2] GSN-Address    OPTIONAL,
- *     extensionContainer    [3] ExtensionContainer    OPTIONAL,
+ *     ggsn-Address    [2] GSN-Address    type OPTIONAL,
+ *     extensionContainer    [3] ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -26,19 +26,19 @@ import { AdditionalInfo, _decode_AdditionalInfo, _encode_AdditionalInfo } from "
  * 
  * ```asn1
  * ForwardGroupCallSignallingArg ::= SEQUENCE {
- *     imsi    IMSI    OPTIONAL,
- *     uplinkRequestAck    [0] NULL    OPTIONAL,
- *     uplinkReleaseIndication    [1] NULL    OPTIONAL,
- *     uplinkRejectCommand    [2] NULL    OPTIONAL,
- *     uplinkSeizedCommand    [3] NULL    OPTIONAL,
- *     uplinkReleaseCommand    [4] NULL    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     imsi    IMSI    type OPTIONAL,
+ *     uplinkRequestAck    [0] NULL    type OPTIONAL,
+ *     uplinkReleaseIndication    [1] NULL    type OPTIONAL,
+ *     uplinkRejectCommand    [2] NULL    type OPTIONAL,
+ *     uplinkSeizedCommand    [3] NULL    type OPTIONAL,
+ *     uplinkReleaseCommand    [4] NULL    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ..., 
- *     stateAttributes    [5] StateAttributes    OPTIONAL,
- *     talkerPriority    [6] TalkerPriority    OPTIONAL,
- *     additionalInfo    [7] AdditionalInfo    OPTIONAL,
- *     emergencyModeResetCommandFlag    [8] NULL    OPTIONAL,
- *     sm-RP-UI    [9] SignalInfo    OPTIONAL,
+ *     stateAttributes    [5] StateAttributes    type OPTIONAL,
+ *     talkerPriority    [6] TalkerPriority    type OPTIONAL,
+ *     additionalInfo    [7] AdditionalInfo    type OPTIONAL,
+ *     emergencyModeResetCommandFlag    [8] NULL    type OPTIONAL,
+ *     sm-RP-UI    [9] SignalInfo    type OPTIONAL,
  *     an-APDU    [10] AccessNetworkSignalInfo    OPTIONAL
  *  }
  * ```

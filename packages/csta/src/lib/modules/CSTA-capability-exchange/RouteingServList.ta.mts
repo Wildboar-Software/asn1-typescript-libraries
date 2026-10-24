@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -47,14 +47,14 @@ import { RouteUsed, _decode_RouteUsed, _encode_RouteUsed } from "../CSTA-capabil
  * 
  * ```asn1
  * RouteingServList ::= SEQUENCE
- * {     routeRegister             [ 0] IMPLICIT     RouteRegister         OPTIONAL,
- *     routeRegisterCancel         [ 1] IMPLICIT     RouteRegisterCancel     OPTIONAL,
- *     routeRegisterAbort         [ 2] IMPLICIT     RouteRegisterAbort     OPTIONAL,
- *     reRoute             [ 3] IMPLICIT     ReRoute         OPTIONAL,
- *     routeEnd             [ 4] IMPLICIT     RouteEnd         OPTIONAL,
- *     routeReject             [ 5] IMPLICIT     RouteReject         OPTIONAL,
- *     routeRequest             [ 6] IMPLICIT     RouteRequest         OPTIONAL,
- *     routeSelect             [ 7] IMPLICIT     RouteSelect         OPTIONAL,
+ * {     routeRegister             [ 0] IMPLICIT     RouteRegister         type OPTIONAL,
+ *     routeRegisterCancel         [ 1] IMPLICIT     RouteRegisterCancel     type OPTIONAL,
+ *     routeRegisterAbort         [ 2] IMPLICIT     RouteRegisterAbort     type OPTIONAL,
+ *     reRoute             [ 3] IMPLICIT     ReRoute         type OPTIONAL,
+ *     routeEnd             [ 4] IMPLICIT     RouteEnd         type OPTIONAL,
+ *     routeReject             [ 5] IMPLICIT     RouteReject         type OPTIONAL,
+ *     routeRequest             [ 6] IMPLICIT     RouteRequest         type OPTIONAL,
+ *     routeSelect             [ 7] IMPLICIT     RouteSelect         type OPTIONAL,
  *     routeUsed             [ 8] IMPLICIT     RouteUsed         OPTIONAL }
  * ```
  * 

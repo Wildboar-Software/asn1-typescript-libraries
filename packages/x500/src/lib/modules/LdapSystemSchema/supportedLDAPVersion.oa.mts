@@ -7,6 +7,7 @@ import {
 } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { id_lat_supportedLDAPVersion } from "../LdapSystemSchema/id-lat-supportedLDAPVersion.va.mjs";
 import { integer } from "../SelectedAttributeTypes/integer.oa.mjs";
+
 /**
  * @summary supportedLDAPVersion
  * @description

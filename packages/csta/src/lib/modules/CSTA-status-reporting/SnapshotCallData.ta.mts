@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import * as $ from "@wildboar/asn1/functional";
-import { SEQUENCE, ASN1Element as _Element, ASN1TagClass as _TagClass } from "@wildboar/asn1";
+import { type SEQUENCE, ASN1Element as _Element, ASN1TagClass as _TagClass } from "@wildboar/asn1";
 import { SnapshotCallResponseInfo, _decode_SnapshotCallResponseInfo, _encode_SnapshotCallResponseInfo } from "../CSTA-status-reporting/SnapshotCallResponseInfo.ta.mjs";
 
 

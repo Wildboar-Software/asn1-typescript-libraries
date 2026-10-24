@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -32,16 +32,16 @@ import { UserCSGInformation, _decode_UserCSGInformation, _encode_UserCSGInformat
  * ```asn1
  * LocationInformationGPRS ::= SEQUENCE {
  *     cellGlobalIdOrServiceAreaIdOrLAI    [0] CellGlobalIdOrServiceAreaIdOrLAI OPTIONAL,
- *     routeingAreaIdentity    [1] RAIdentity    OPTIONAL,
- *     geographicalInformation    [2] GeographicalInformation    OPTIONAL,
- *     sgsn-Number    [3] ISDN-AddressString    OPTIONAL,
- *     selectedLSAIdentity    [4] LSAIdentity    OPTIONAL,
- *     extensionContainer    [5] ExtensionContainer    OPTIONAL,
+ *     routeingAreaIdentity    [1] RAIdentity    type OPTIONAL,
+ *     geographicalInformation    [2] GeographicalInformation    type OPTIONAL,
+ *     sgsn-Number    [3] ISDN-AddressString    type OPTIONAL,
+ *     selectedLSAIdentity    [4] LSAIdentity    type OPTIONAL,
+ *     extensionContainer    [5] ExtensionContainer    type OPTIONAL,
  *     ...,
- *     sai-Present    [6] NULL    OPTIONAL,
- *     geodeticInformation    [7] GeodeticInformation    OPTIONAL,
- *     currentLocationRetrieved    [8] NULL    OPTIONAL,
- *     ageOfLocationInformation    [9] AgeOfLocationInformation    OPTIONAL,
+ *     sai-Present    [6] NULL    type OPTIONAL,
+ *     geodeticInformation    [7] GeodeticInformation    type OPTIONAL,
+ *     currentLocationRetrieved    [8] NULL    type OPTIONAL,
+ *     ageOfLocationInformation    [9] AgeOfLocationInformation    type OPTIONAL,
  *     userCSGInformation    [10] UserCSGInformation    OPTIONAL }
  * ```
  * 

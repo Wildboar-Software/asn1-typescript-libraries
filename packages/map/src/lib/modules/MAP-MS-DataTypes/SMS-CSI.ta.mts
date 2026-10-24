@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -28,11 +28,11 @@ import { SMS_CAMEL_TDP_DataList, _decode_SMS_CAMEL_TDP_DataList, _encode_SMS_CAM
  * 
  * ```asn1
  * SMS-CSI ::= SEQUENCE {
- *     sms-CAMEL-TDP-DataList    [0] SMS-CAMEL-TDP-DataList    OPTIONAL,
- *     camelCapabilityHandling    [1] CamelCapabilityHandling    OPTIONAL,
- *     extensionContainer    [2] ExtensionContainer    OPTIONAL,
- *     notificationToCSE    [3] NULL    OPTIONAL,
- *     csi-Active    [4] NULL    OPTIONAL,
+ *     sms-CAMEL-TDP-DataList    [0] SMS-CAMEL-TDP-DataList    type OPTIONAL,
+ *     camelCapabilityHandling    [1] CamelCapabilityHandling    type OPTIONAL,
+ *     extensionContainer    [2] ExtensionContainer    type OPTIONAL,
+ *     notificationToCSE    [3] NULL    type OPTIONAL,
+ *     csi-Active    [4] NULL    type OPTIONAL,
  *     ...}
  * ```
  * 

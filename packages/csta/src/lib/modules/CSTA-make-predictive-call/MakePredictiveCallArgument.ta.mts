@@ -2,8 +2,8 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
+    type OPTIONAL,
+    type INTEGER,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -62,18 +62,18 @@ import { UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-fea
  * MakePredictiveCallArgument ::= SEQUENCE
  * {     callingDevice             DeviceID,
  *     calledDirectoryNumber         DeviceID,
- *     signallingDetection         [ 0] IMPLICIT SignallingDetection         OPTIONAL,
- *     destinationDetection         [ 1] IMPLICIT DestinationDetection        OPTIONAL,
- *     defaultAction             [ 2] IMPLICIT DefaultAction             OPTIONAL,
- *     accountCode             [ 3] IMPLICIT AccountInfo             OPTIONAL,
- *     authCode             [ 4] IMPLICIT AuthCode                 OPTIONAL,
+ *     signallingDetection         [ 0] IMPLICIT SignallingDetection         type OPTIONAL,
+ *     destinationDetection         [ 1] IMPLICIT DestinationDetection        type OPTIONAL,
+ *     defaultAction             [ 2] IMPLICIT DefaultAction             type OPTIONAL,
+ *     accountCode             [ 3] IMPLICIT AccountInfo             type OPTIONAL,
+ *     authCode             [ 4] IMPLICIT AuthCode                 type OPTIONAL,
  *     autoOriginate             [ 5] IMPLICIT AutoOriginate             DEFAULT prompt,
- *     alertTime             [ 6] IMPLICIT INTEGER                 OPTIONAL,
- *     correlatorData             [ 7] IMPLICIT CorrelatorData             OPTIONAL,
- *     callCharacteristics         [ 8] IMPLICIT CallCharacteristics         OPTIONAL,
- *     userData             UserData                     OPTIONAL, 
- *     subjectOfCall            [ 9] IMPLICIT SubjectOfCall            OPTIONAL,
- *     languagePreferences        [10] IMPLICIT LanguagePreferences        OPTIONAL,
+ *     alertTime             [ 6] IMPLICIT INTEGER                 type OPTIONAL,
+ *     correlatorData             [ 7] IMPLICIT CorrelatorData             type OPTIONAL,
+ *     callCharacteristics         [ 8] IMPLICIT CallCharacteristics         type OPTIONAL,
+ *     userData             UserData                     type OPTIONAL, 
+ *     subjectOfCall            [ 9] IMPLICIT SubjectOfCall            type OPTIONAL,
+ *     languagePreferences        [10] IMPLICIT LanguagePreferences        type OPTIONAL,
  *     extensions             CSTACommonArguments                 OPTIONAL }
  * ```
  * 

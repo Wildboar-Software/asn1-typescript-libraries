@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -22,9 +22,9 @@ import { PermittedIntegrityProtectionAlgorithms, _decode_PermittedIntegrityProte
  * 
  * ```asn1
  * AllowedUMTS-Algorithms ::= SEQUENCE {
- *     integrityProtectionAlgorithms    [0]    PermittedIntegrityProtectionAlgorithms    OPTIONAL,
- *     encryptionAlgorithms    [1]    PermittedEncryptionAlgorithms    OPTIONAL,
- *     extensionContainer    [2]    ExtensionContainer    OPTIONAL,
+ *     integrityProtectionAlgorithms    [0]    PermittedIntegrityProtectionAlgorithms    type OPTIONAL,
+ *     encryptionAlgorithms    [1]    PermittedEncryptionAlgorithms    type OPTIONAL,
+ *     extensionContainer    [2]    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 

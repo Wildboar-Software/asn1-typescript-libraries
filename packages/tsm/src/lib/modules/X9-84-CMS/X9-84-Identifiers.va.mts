@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OBJECT_IDENTIFIER,
+    type OBJECT_IDENTIFIER,
     ObjectIdentifier as _OID,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";

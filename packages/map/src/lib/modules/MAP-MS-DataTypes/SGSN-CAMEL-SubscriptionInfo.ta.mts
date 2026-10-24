@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -25,12 +25,12 @@ import { SMS_CSI, _decode_SMS_CSI, _encode_SMS_CSI } from "../MAP-MS-DataTypes/S
  * 
  * ```asn1
  * SGSN-CAMEL-SubscriptionInfo ::= SEQUENCE {
- *     gprs-CSI    [0]    GPRS-CSI    OPTIONAL,
- *     mo-sms-CSI    [1]    SMS-CSI    OPTIONAL,
- *     extensionContainer    [2]    ExtensionContainer    OPTIONAL,
+ *     gprs-CSI    [0]    GPRS-CSI    type OPTIONAL,
+ *     mo-sms-CSI    [1]    SMS-CSI    type OPTIONAL,
+ *     extensionContainer    [2]    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     mt-sms-CSI    [3]    SMS-CSI    OPTIONAL,
- *     mt-smsCAMELTDP-CriteriaList    [4]    MT-smsCAMELTDP-CriteriaList    OPTIONAL,
+ *     mt-sms-CSI    [3]    SMS-CSI    type OPTIONAL,
+ *     mt-smsCAMELTDP-CriteriaList    [4]    MT-smsCAMELTDP-CriteriaList    type OPTIONAL,
  *     mg-csi    [5]    MG-CSI    OPTIONAL
  *     }
  * ```

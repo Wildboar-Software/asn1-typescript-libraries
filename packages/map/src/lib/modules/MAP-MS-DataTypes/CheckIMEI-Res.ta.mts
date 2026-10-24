@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -23,9 +23,9 @@ import { UESBI_Iu, _decode_UESBI_Iu, _encode_UESBI_Iu } from "../MAP-MS-DataType
  * 
  * ```asn1
  * CheckIMEI-Res ::= SEQUENCE {
- *     equipmentStatus    EquipmentStatus    OPTIONAL,
- *     bmuef    UESBI-Iu    OPTIONAL,
- *     extensionContainer    [0] ExtensionContainer    OPTIONAL,
+ *     equipmentStatus    EquipmentStatus    type OPTIONAL,
+ *     bmuef    UESBI-Iu    type OPTIONAL,
+ *     extensionContainer    [0] ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 

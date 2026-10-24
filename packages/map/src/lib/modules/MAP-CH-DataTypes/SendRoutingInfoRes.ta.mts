@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -38,34 +38,34 @@ import { SS_List, _decode_SS_List, _encode_SS_List } from "../MAP-SS-DataTypes/S
  * 
  * ```asn1
  * SendRoutingInfoRes ::= [3] SEQUENCE {
- *     imsi    [9] IMSI    OPTIONAL,
+ *     imsi    [9] IMSI    type OPTIONAL,
  *     -- IMSI must be present if SendRoutingInfoRes is not segmented.
  *     -- If the TC-Result-NL segmentation option is taken the IMSI must be
  *     -- present in one segmented transmission of SendRoutingInfoRes.
- *     extendedRoutingInfo    ExtendedRoutingInfo    OPTIONAL,
- *     cug-CheckInfo    [3] CUG-CheckInfo    OPTIONAL,
- *     cugSubscriptionFlag    [6] NULL    OPTIONAL,
- *     subscriberInfo    [7] SubscriberInfo    OPTIONAL,
- *     ss-List    [1] SS-List    OPTIONAL,
- *     basicService    [5] Ext-BasicServiceCode    OPTIONAL,
- *     forwardingInterrogationRequired    [4] NULL    OPTIONAL,
- *     vmsc-Address    [2] ISDN-AddressString    OPTIONAL,
- *     extensionContainer    [0] ExtensionContainer    OPTIONAL,
+ *     extendedRoutingInfo    ExtendedRoutingInfo    type OPTIONAL,
+ *     cug-CheckInfo    [3] CUG-CheckInfo    type OPTIONAL,
+ *     cugSubscriptionFlag    [6] NULL    type OPTIONAL,
+ *     subscriberInfo    [7] SubscriberInfo    type OPTIONAL,
+ *     ss-List    [1] SS-List    type OPTIONAL,
+ *     basicService    [5] Ext-BasicServiceCode    type OPTIONAL,
+ *     forwardingInterrogationRequired    [4] NULL    type OPTIONAL,
+ *     vmsc-Address    [2] ISDN-AddressString    type OPTIONAL,
+ *     extensionContainer    [0] ExtensionContainer    type OPTIONAL,
  *     ... ,
- *     naea-PreferredCI    [10] NAEA-PreferredCI    OPTIONAL,
+ *     naea-PreferredCI    [10] NAEA-PreferredCI    type OPTIONAL,
  *     -- naea-PreferredCI is included at the discretion of the HLR operator.
- *     ccbs-Indicators    [11] CCBS-Indicators    OPTIONAL,
- *     msisdn    [12] ISDN-AddressString    OPTIONAL,
- *     numberPortabilityStatus    [13] NumberPortabilityStatus    OPTIONAL,
- *     istAlertTimer    [14] IST-AlertTimerValue    OPTIONAL,
- *     supportedCamelPhasesInVMSC    [15]    SupportedCamelPhases    OPTIONAL,
- *     offeredCamel4CSIsInVMSC    [16] OfferedCamel4CSIs    OPTIONAL,
- *     routingInfo2    [17] RoutingInfo    OPTIONAL,
- *     ss-List2    [18] SS-List    OPTIONAL,
- *     basicService2    [19] Ext-BasicServiceCode    OPTIONAL,
- *     allowedServices    [20] AllowedServices    OPTIONAL,
- *     unavailabilityCause    [21] UnavailabilityCause    OPTIONAL,
- *     releaseResourcesSupported    [22] NULL    OPTIONAL,
+ *     ccbs-Indicators    [11] CCBS-Indicators    type OPTIONAL,
+ *     msisdn    [12] ISDN-AddressString    type OPTIONAL,
+ *     numberPortabilityStatus    [13] NumberPortabilityStatus    type OPTIONAL,
+ *     istAlertTimer    [14] IST-AlertTimerValue    type OPTIONAL,
+ *     supportedCamelPhasesInVMSC    [15]    SupportedCamelPhases    type OPTIONAL,
+ *     offeredCamel4CSIsInVMSC    [16] OfferedCamel4CSIs    type OPTIONAL,
+ *     routingInfo2    [17] RoutingInfo    type OPTIONAL,
+ *     ss-List2    [18] SS-List    type OPTIONAL,
+ *     basicService2    [19] Ext-BasicServiceCode    type OPTIONAL,
+ *     allowedServices    [20] AllowedServices    type OPTIONAL,
+ *     unavailabilityCause    [21] UnavailabilityCause    type OPTIONAL,
+ *     releaseResourcesSupported    [22] NULL    type OPTIONAL,
  *     gsm-BearerCapability    [23] ExternalSignalInfo    OPTIONAL
  *     }
  * ```

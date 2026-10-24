@@ -17,7 +17,7 @@ import { ContextProfile } from "../ServiceAdministration/ContextProfile.ta.mjs";
  *   &attributeType         ATTRIBUTE.&id,
  *   &outputValues          CHOICE {
  *     selectedValues         SEQUENCE OF ATTRIBUTE.&Type,
- *     matchedValuesOnly      NULL }                      OPTIONAL,
+ *     matchedValuesOnly      NULL }                      type OPTIONAL,
  *   &contexts              ContextProfile                  OPTIONAL }
  * WITH SYNTAX {
  *   ATTRIBUTE TYPE        &attributeType

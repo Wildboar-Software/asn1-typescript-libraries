@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -24,10 +24,10 @@ import { LIPA_AllowedAPNList, _decode_LIPA_AllowedAPNList, _encode_LIPA_AllowedA
  * ```asn1
  * CSG-SubscriptionData ::= SEQUENCE {
  *     csg-Id    CSG-Id,
- *     expirationDate    Time    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     expirationDate    Time    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     lipa-AllowedAPNList    [0] LIPA-AllowedAPNList    OPTIONAL,
+ *     lipa-AllowedAPNList    [0] LIPA-AllowedAPNList    type OPTIONAL,
  *     plmn-Id    [1] PLMN-Id    OPTIONAL
  * }
  * ```

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -24,12 +24,12 @@ import { Vertical_Accuracy, _decode_Vertical_Accuracy, _encode_Vertical_Accuracy
  * 
  * ```asn1
  * LCS-QoS ::= SEQUENCE {
- *     horizontal-accuracy    [0] Horizontal-Accuracy    OPTIONAL,
- *     verticalCoordinateRequest    [1] NULL    OPTIONAL,
- *     vertical-accuracy    [2] Vertical-Accuracy    OPTIONAL,    responseTime    [3] ResponseTime    OPTIONAL,
- *     extensionContainer    [4] ExtensionContainer    OPTIONAL,
+ *     horizontal-accuracy    [0] Horizontal-Accuracy    type OPTIONAL,
+ *     verticalCoordinateRequest    [1] NULL    type OPTIONAL,
+ *     vertical-accuracy    [2] Vertical-Accuracy    type OPTIONAL,    responseTime    [3] ResponseTime    type OPTIONAL,
+ *     extensionContainer    [4] ExtensionContainer    type OPTIONAL,
  *     ...,
- *     velocityRequest    [5] NULL    OPTIONAL,
+ *     velocityRequest    [5] NULL    type OPTIONAL,
  *     lcs-qos-class    [6] LCS-QoS-Class    OPTIONAL
  * }
  * ```

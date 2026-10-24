@@ -41,7 +41,7 @@ import {
  * ```asn1
  * CertifiedKeyPair ::= SEQUENCE {
  *     certOrEncCert       CertOrEncCert,
- *     privateKey      [0] EncryptedValue      OPTIONAL,
+ *     privateKey      [0] EncryptedValue      type OPTIONAL,
  *     -- see [RFC4211] for comment on encoding
  *     publicationInfo [1] PKIPublicationInfo  OPTIONAL }
  * ```

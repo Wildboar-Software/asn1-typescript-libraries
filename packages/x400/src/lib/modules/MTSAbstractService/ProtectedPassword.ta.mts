@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BIT_STRING,
+    type OPTIONAL,
+    type BIT_STRING,
     UTCTime,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,

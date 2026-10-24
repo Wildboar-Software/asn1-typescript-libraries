@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -22,9 +22,9 @@ import { ODB_Data, _decode_ODB_Data, _encode_ODB_Data } from "../MAP-MS-DataType
  * 
  * ```asn1
  * ModificationRequestFor-ODB-data ::= SEQUENCE {
- *     odb-data    [0]    ODB-Data    OPTIONAL,
- *     modifyNotificationToCSE    [1]    ModificationInstruction    OPTIONAL,
- *     extensionContainer    [2]    ExtensionContainer    OPTIONAL,
+ *     odb-data    [0]    ODB-Data    type OPTIONAL,
+ *     modifyNotificationToCSE    [1]    ModificationInstruction    type OPTIONAL,
+ *     extensionContainer    [2]    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -22,8 +22,8 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * 
  * ```asn1
  * MAP-OpenInfo ::= SEQUENCE {
- *     destinationReference    [0] AddressString    OPTIONAL,
- *     originationReference    [1] AddressString    OPTIONAL,
+ *     destinationReference    [0] AddressString    type OPTIONAL,
+ *     originationReference    [1] AddressString    type OPTIONAL,
  *     ...,
  *     extensionContainer    ExtensionContainer    OPTIONAL
  *     -- extensionContainer must not be used in version 2

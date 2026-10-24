@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -27,9 +27,9 @@ import { RequestedInfo, _decode_RequestedInfo, _encode_RequestedInfo } from "../
  * ```asn1
  * ProvideSubscriberInfoArg ::= SEQUENCE {
  *     imsi    [0] IMSI,
- *     lmsi    [1] LMSI    OPTIONAL,
+ *     lmsi    [1] LMSI    type OPTIONAL,
  *     requestedInfo    [2] RequestedInfo,
- *     extensionContainer    [3] ExtensionContainer    OPTIONAL,
+ *     extensionContainer    [3] ExtensionContainer    type OPTIONAL,
  *     ...,
  *     callPriority    [4]    EMLPP-Priority    OPTIONAL
  *     }

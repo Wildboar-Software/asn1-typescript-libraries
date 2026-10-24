@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -60,10 +60,10 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  *     joiningDevice             DeviceID,
  *     autoOriginate             [0] IMPLICIT     AutoOriginate         DEFAULT prompt,
  *     participationType         [1] IMPLICIT     ParticipationType     DEFAULT active,
- *     accountCode             [2] IMPLICIT     AccountInfo         OPTIONAL,
- *     authCode             [3] IMPLICIT     AuthCode         OPTIONAL,
- *     correlatorData             [4] IMPLICIT     CorrelatorData         OPTIONAL,
- *     userData             UserData                 OPTIONAL,
+ *     accountCode             [2] IMPLICIT     AccountInfo         type OPTIONAL,
+ *     authCode             [3] IMPLICIT     AuthCode         type OPTIONAL,
+ *     correlatorData             [4] IMPLICIT     CorrelatorData         type OPTIONAL,
+ *     userData             UserData                 type OPTIONAL,
  *     extensions             CSTACommonArguments             OPTIONAL }
  * ```
  * 

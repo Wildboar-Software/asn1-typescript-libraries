@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    UTF8String,
+    type OPTIONAL,
+    type UTF8String,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -34,15 +34,15 @@ import { MBMSNodeList, _decode_MBMSNodeList, _encode_MBMSNodeList } from "../MBM
  * ```asn1
  * MBMSinformation ::= SEQUENCE
  * {
- *     mbmsServiceName                     [1] UTF8String        OPTIONAL,
- *     mbms-join-time                      [2] UTF8String        OPTIONAL,
+ *     mbmsServiceName                     [1] UTF8String        type OPTIONAL,
+ *     mbms-join-time                      [2] UTF8String        type OPTIONAL,
  *     mbms-Mode                              [3] ENUMERATED            
  *     {
  *         multicast    (0),
  *         broadcast    (1),
  *     ...
  *     } OPTIONAL,
- *     mbmsIPIPv6Address                    [4]    IPAddress            OPTIONAL,
+ *     mbmsIPIPv6Address                    [4]    IPAddress            type OPTIONAL,
  *     mbmsLeavingReason                    [5]    ENUMERATED            
  *     {
  *         uEinitiatedRequested    (0),
@@ -55,12 +55,12 @@ import { MBMSNodeList, _decode_MBMSNodeList, _encode_MBMSNodeList } from "../MBM
  *         subscriptionExpired        (1),
  *     ...
  *     } OPTIONAL,
- *     mBMSapn                             [7] UTF8String                        OPTIONAL,    
+ *     mBMSapn                             [7] UTF8String                        type OPTIONAL,    
  *     -- The Access Point Name (APN) is coded in accordance with
  *         -- 3GPP TS 24.008 [9] without the APN IEI (only the last 100 octets are used).
  *         -- Octets are coded according to 3GPP TS 23.003 [25].
- *     mbmsSerSubscriberList                [8] MBMSSerSubscriberList            OPTIONAL,
- *     mbmsNodeList                        [9] MBMSNodeList                    OPTIONAL,
+ *     mbmsSerSubscriberList                [8] MBMSSerSubscriberList            type OPTIONAL,
+ *     mbmsNodeList                        [9] MBMSNodeList                    type OPTIONAL,
  * 
  * ...
  * 

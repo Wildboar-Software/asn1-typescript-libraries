@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
+    type OPTIONAL,
+    type BOOLEAN,
+    type INTEGER,
     ENUMERATED,
     SEQUENCE,
     SET,
-    IA5String,
+    type IA5String,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -64,30 +64,30 @@ import { MessageID, _decode_MessageID, _encode_MessageID } from "../CSTA-device-
  * ```asn1
  * VoiceAttributesChangeEvent ::= SEQUENCE
  * {    connection            ConnectionID,
- *     resource            [ 4] IMPLICIT ResourceID        OPTIONAL,
+ *     resource            [ 4] IMPLICIT ResourceID        type OPTIONAL,
  *     message                MessageID,
- *     playVolume            [ 0] Volume                OPTIONAL,
- *     recordingGain            [ 1] IMPLICIT INTEGER (0 .. 100)    OPTIONAL,
- *     speed                [ 2] IMPLICIT INTEGER             OPTIONAL,
- *     currentPosition            [ 3] IMPLICIT INTEGER            OPTIONAL,
- *     grammars            [ 5] IMPLICIT IA5String            OPTIONAL,
- *     language            [ 6] IMPLICIT IA5String            OPTIONAL,
+ *     playVolume            [ 0] Volume                type OPTIONAL,
+ *     recordingGain            [ 1] IMPLICIT INTEGER (0 .. 100)    type OPTIONAL,
+ *     speed                [ 2] IMPLICIT INTEGER             type OPTIONAL,
+ *     currentPosition            [ 3] IMPLICIT INTEGER            type OPTIONAL,
+ *     grammars            [ 5] IMPLICIT IA5String            type OPTIONAL,
+ *     language            [ 6] IMPLICIT IA5String            type OPTIONAL,
  *     mode                [ 7] IMPLICIT ENUMERATED
  *                     {    automatic    (0),
  *                         single        (1),
- *                         multiple    (2) }        OPTIONAL,
- *     retainAudio            [ 8] IMPLICIT BOOLEAN            OPTIONAL,
- *     silenceTimeout            [ 9] IMPLICIT INTEGER            OPTIONAL,
- *     maxTimeout            [10] IMPLICIT INTEGER            OPTIONAL,
- *     babbleTimeout            [11] IMPLICIT INTEGER            OPTIONAL,
- *     endSilence            [12] IMPLICIT INTEGER            OPTIONAL,
- *     rejectionThreshold        [13] IMPLICIT INTEGER            OPTIONAL,
- *     autoInterruptible        [14] IMPLICIT BOOLEAN            OPTIONAL,
- *     innerXML            [15] IMPLICIT IA5String            OPTIONAL,
- *     interDigitTimeout        [16] IMPLICIT INTEGER            OPTIONAL,
- *     preflush            [17] IMPLICIT BOOLEAN            OPTIONAL,
- *     cause                EventCause                OPTIONAL,
- *     servicesPermitted        ServicesPermitted            OPTIONAL,
+ *                         multiple    (2) }        type OPTIONAL,
+ *     retainAudio            [ 8] IMPLICIT BOOLEAN            type OPTIONAL,
+ *     silenceTimeout            [ 9] IMPLICIT INTEGER            type OPTIONAL,
+ *     maxTimeout            [10] IMPLICIT INTEGER            type OPTIONAL,
+ *     babbleTimeout            [11] IMPLICIT INTEGER            type OPTIONAL,
+ *     endSilence            [12] IMPLICIT INTEGER            type OPTIONAL,
+ *     rejectionThreshold        [13] IMPLICIT INTEGER            type OPTIONAL,
+ *     autoInterruptible        [14] IMPLICIT BOOLEAN            type OPTIONAL,
+ *     innerXML            [15] IMPLICIT IA5String            type OPTIONAL,
+ *     interDigitTimeout        [16] IMPLICIT INTEGER            type OPTIONAL,
+ *     preflush            [17] IMPLICIT BOOLEAN            type OPTIONAL,
+ *     cause                EventCause                type OPTIONAL,
+ *     servicesPermitted        ServicesPermitted            type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 

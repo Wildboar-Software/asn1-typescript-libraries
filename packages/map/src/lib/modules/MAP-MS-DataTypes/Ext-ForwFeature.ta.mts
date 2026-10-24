@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -31,16 +31,16 @@ import { Ext_NoRepCondTime, _decode_Ext_NoRepCondTime, _encode_Ext_NoRepCondTime
  * 
  * ```asn1
  * Ext-ForwFeature ::= SEQUENCE {
- *     basicService    Ext-BasicServiceCode    OPTIONAL,
+ *     basicService    Ext-BasicServiceCode    type OPTIONAL,
  *     ss-Status    [4] Ext-SS-Status,
- *     forwardedToNumber    [5] ISDN-AddressString    OPTIONAL,
+ *     forwardedToNumber    [5] ISDN-AddressString    type OPTIONAL,
  *     -- When this data type is sent from an HLR which supports CAMEL Phase 2
  *     -- to a VLR that supports CAMEL Phase 2 the VLR shall not check the
  *     -- format of the number
- *     forwardedToSubaddress    [8] ISDN-SubaddressString    OPTIONAL,
- *     forwardingOptions    [6] Ext-ForwOptions    OPTIONAL,
- *     noReplyConditionTime    [7] Ext-NoRepCondTime    OPTIONAL,
- *     extensionContainer    [9] ExtensionContainer    OPTIONAL,
+ *     forwardedToSubaddress    [8] ISDN-SubaddressString    type OPTIONAL,
+ *     forwardingOptions    [6] Ext-ForwOptions    type OPTIONAL,
+ *     noReplyConditionTime    [7] Ext-NoRepCondTime    type OPTIONAL,
+ *     extensionContainer    [9] ExtensionContainer    type OPTIONAL,
  *     ...,
  *     longForwardedToNumber    [10] FTN-AddressString    OPTIONAL }
  * ```

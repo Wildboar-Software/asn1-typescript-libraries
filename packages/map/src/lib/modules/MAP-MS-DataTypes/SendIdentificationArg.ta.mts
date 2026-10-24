@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -31,18 +31,18 @@ import { NumberOfRequestedVectors, _decode_NumberOfRequestedVectors, _encode_Num
  * ```asn1
  * SendIdentificationArg ::= SEQUENCE {
  *     tmsi    TMSI,
- *     numberOfRequestedVectors    NumberOfRequestedVectors    OPTIONAL,
+ *     numberOfRequestedVectors    NumberOfRequestedVectors    type OPTIONAL,
  *     -- within a dialogue numberOfRequestedVectors shall be present in 
  *     -- the first service request and shall not be present in subsequent service requests. 
  *     -- If received in a subsequent service request it shall be discarded. 
- *     segmentationProhibited    NULL    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     segmentationProhibited    NULL    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     msc-Number    ISDN-AddressString    OPTIONAL,
- *     previous-LAI    [0] LAIFixedLength    OPTIONAL,
- *     hopCounter    [1] HopCounter    OPTIONAL,
- *     mtRoamingForwardingSupported    [2] NULL    OPTIONAL,
- *     newVLR-Number    [3] ISDN-AddressString    OPTIONAL,
+ *     msc-Number    ISDN-AddressString    type OPTIONAL,
+ *     previous-LAI    [0] LAIFixedLength    type OPTIONAL,
+ *     hopCounter    [1] HopCounter    type OPTIONAL,
+ *     mtRoamingForwardingSupported    [2] NULL    type OPTIONAL,
+ *     newVLR-Number    [3] ISDN-AddressString    type OPTIONAL,
  *     new-lmsi    [4] LMSI    OPTIONAL }
  * ```
  * 

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -22,10 +22,10 @@ import { CCBS_Index, _decode_CCBS_Index, _encode_CCBS_Index } from "../MAP-SS-Da
  * 
  * ```asn1
  * CCBS-Feature ::= SEQUENCE {
- *     ccbs-Index    [0] CCBS-Index    OPTIONAL,
- *     b-subscriberNumber    [1] ISDN-AddressString    OPTIONAL,
- *     b-subscriberSubaddress    [2] ISDN-SubaddressString    OPTIONAL,
- *     basicServiceGroup    [3] BasicServiceCode    OPTIONAL,
+ *     ccbs-Index    [0] CCBS-Index    type OPTIONAL,
+ *     b-subscriberNumber    [1] ISDN-AddressString    type OPTIONAL,
+ *     b-subscriberSubaddress    [2] ISDN-SubaddressString    type OPTIONAL,
+ *     basicServiceGroup    [3] BasicServiceCode    type OPTIONAL,
  *     ...}
  * ```
  * 

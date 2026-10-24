@@ -2,7 +2,7 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
     UTF8String
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -19,7 +19,7 @@ import * as $ from "@wildboar/asn1/functional";
  * MMSElementDescriptor ::= SEQUENCE
  * {
  *     reference [1] UTF8String,
- *     parameter [2] UTF8String     OPTIONAL,
+ *     parameter [2] UTF8String     type OPTIONAL,
  *     value     [3] UTF8String     OPTIONAL
  * }
  * ```

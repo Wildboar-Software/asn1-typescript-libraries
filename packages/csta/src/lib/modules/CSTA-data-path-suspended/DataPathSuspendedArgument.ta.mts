@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -31,7 +31,7 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * DataPathSuspendedArgument ::= SEQUENCE
  * {    ioCrossRefID            IOCrossRefID,
- *     ioReqRegisterID            IORegisterReqID                OPTIONAL,
+ *     ioReqRegisterID            IORegisterReqID                type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 

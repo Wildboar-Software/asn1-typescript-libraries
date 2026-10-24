@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -29,7 +29,7 @@ import { type PDPID, _decode_PDPID, _encode_PDPID } from "../CAP-datatypes/PDPID
  * ```asn1
  * ReleaseGPRSArg {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *     gprsCause                [0] GPRSCause {bound},
- *     pDPID                [1]    PDPID                    OPTIONAL,
+ *     pDPID                [1]    PDPID                    type OPTIONAL,
  *     ...
  *     }
  * ```

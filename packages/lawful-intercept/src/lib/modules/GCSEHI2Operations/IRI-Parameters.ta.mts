@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -67,17 +67,17 @@ import { EPSLocation, _decode_EPSLocation, _encode_EPSLocation } from "../EpsHI2
  *     networkIdentifier        [5] Network-Identifier,
  *     gcseEvent                [6] GcseEvent,    
  *     correlation                [7] GcseCorrelation OPTIONAL,
- *     targetConnectionMethod    [8] TargetConnectionMethod      OPTIONAL,
- *     gcseGroupMembers        [9] GcseGroup      OPTIONAL,
- *     gcseGroupParticipants    [10] GcseGroup    OPTIONAL,
- *     gcseGroupID                [11] GcseGroupID    OPTIONAL,
- *     gcseGroupCharacteristics[12] GcseGroupCharacteristics    OPTIONAL,
- *     reservedTMGI            [13] ReservedTMGI    OPTIONAL,
- *     tMGIReservationDuration    [14] TMGIReservationDuration    OPTIONAL,
- *     visitedNetworkID        [15] VisitedNetworkID     OPTIONAL,
- *     addedUserID                [16] GcsePartyIdentity    OPTIONAL,
- *     droppedUserID            [17] GcsePartyIdentity    OPTIONAL,
- *     reasonForCommsEnd        [18] Reason    OPTIONAL,
+ *     targetConnectionMethod    [8] TargetConnectionMethod      type OPTIONAL,
+ *     gcseGroupMembers        [9] GcseGroup      type OPTIONAL,
+ *     gcseGroupParticipants    [10] GcseGroup    type OPTIONAL,
+ *     gcseGroupID                [11] GcseGroupID    type OPTIONAL,
+ *     gcseGroupCharacteristics[12] GcseGroupCharacteristics    type OPTIONAL,
+ *     reservedTMGI            [13] ReservedTMGI    type OPTIONAL,
+ *     tMGIReservationDuration    [14] TMGIReservationDuration    type OPTIONAL,
+ *     visitedNetworkID        [15] VisitedNetworkID     type OPTIONAL,
+ *     addedUserID                [16] GcsePartyIdentity    type OPTIONAL,
+ *     droppedUserID            [17] GcsePartyIdentity    type OPTIONAL,
+ *     reasonForCommsEnd        [18] Reason    type OPTIONAL,
  *     gcseLocationOfTheTarget    [19] EPSLocation OPTIONAL,
  *     
  * 

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -25,9 +25,9 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * ```asn1
  * SendRoutingInfoForGprsArg ::= SEQUENCE {
  *     imsi    [0] IMSI,
- *     ggsn-Address    [1] GSN-Address    OPTIONAL, 
+ *     ggsn-Address    [1] GSN-Address    type OPTIONAL, 
  *     ggsn-Number    [2]    ISDN-AddressString,
- *     extensionContainer    [3] ExtensionContainer    OPTIONAL,
+ *     extensionContainer    [3] ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 

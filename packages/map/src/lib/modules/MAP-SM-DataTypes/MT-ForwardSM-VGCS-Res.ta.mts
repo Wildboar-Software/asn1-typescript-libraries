@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -24,10 +24,10 @@ import { DispatcherList, _decode_DispatcherList, _encode_DispatcherList } from "
  * 
  * ```asn1
  * MT-ForwardSM-VGCS-Res ::= SEQUENCE {
- *     sm-RP-UI    [0] SignalInfo    OPTIONAL,
- *     dispatcherList    [1] DispatcherList    OPTIONAL,
- *     ongoingCall    NULL    OPTIONAL,
- *     extensionContainer    [2] ExtensionContainer    OPTIONAL,
+ *     sm-RP-UI    [0] SignalInfo    type OPTIONAL,
+ *     dispatcherList    [1] DispatcherList    type OPTIONAL,
+ *     ongoingCall    NULL    type OPTIONAL,
+ *     extensionContainer    [2] ExtensionContainer    type OPTIONAL,
  *     ...,
  *     additionalDispatcherList    [3] AdditionalDispatcherList    OPTIONAL }
  * ```

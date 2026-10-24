@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -28,11 +28,11 @@ import { GPRS_CamelTDPDataList, _decode_GPRS_CamelTDPDataList, _encode_GPRS_Came
  * 
  * ```asn1
  * GPRS-CSI ::= SEQUENCE {
- *     gprs-CamelTDPDataList    [0] GPRS-CamelTDPDataList    OPTIONAL,
- *     camelCapabilityHandling    [1] CamelCapabilityHandling    OPTIONAL,
- *     extensionContainer    [2] ExtensionContainer    OPTIONAL,
- *     notificationToCSE    [3]    NULL    OPTIONAL,
- *     csi-Active    [4]    NULL    OPTIONAL,
+ *     gprs-CamelTDPDataList    [0] GPRS-CamelTDPDataList    type OPTIONAL,
+ *     camelCapabilityHandling    [1] CamelCapabilityHandling    type OPTIONAL,
+ *     extensionContainer    [2] ExtensionContainer    type OPTIONAL,
+ *     notificationToCSE    [3]    NULL    type OPTIONAL,
+ *     csi-Active    [4]    NULL    type OPTIONAL,
  *     ...}
  * ```
  * 

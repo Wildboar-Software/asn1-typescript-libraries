@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    INTEGER,
+    type INTEGER,
     SEQUENCE,
     SET,
     GeneralizedTime,

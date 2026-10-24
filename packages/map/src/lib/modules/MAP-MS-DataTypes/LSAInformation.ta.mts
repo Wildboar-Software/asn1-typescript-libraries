@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -26,13 +26,13 @@ import { LSAOnlyAccessIndicator, _decode_LSAOnlyAccessIndicator, _encode_LSAOnly
  * 
  * ```asn1
  * LSAInformation ::= SEQUENCE {
- *     completeDataListIncluded    NULL    OPTIONAL,
+ *     completeDataListIncluded    NULL    type OPTIONAL,
  * 
  *     -- If segmentation is used, completeDataListIncluded may only be present in the
  *     -- first segment.
- *     lsaOnlyAccessIndicator    [1]    LSAOnlyAccessIndicator    OPTIONAL,
- *     lsaDataList    [2]    LSADataList    OPTIONAL,
- *     extensionContainer    [3] ExtensionContainer    OPTIONAL,
+ *     lsaOnlyAccessIndicator    [1]    LSAOnlyAccessIndicator    type OPTIONAL,
+ *     lsaDataList    [2]    LSADataList    type OPTIONAL,
+ *     extensionContainer    [3] ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 

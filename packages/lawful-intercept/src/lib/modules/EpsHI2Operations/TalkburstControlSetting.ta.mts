@@ -3,9 +3,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    UTF8String,
-    VisibleString,
+    type INTEGER,
+    type UTF8String,
+    type VisibleString,
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";

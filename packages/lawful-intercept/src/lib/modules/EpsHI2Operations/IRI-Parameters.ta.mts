@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
-    OCTET_STRING,
-    OPTIONAL,
-    PrintableString,
-    UTF8String,
+    type OBJECT_IDENTIFIER,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type PrintableString,
+    type UTF8String,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
@@ -170,8 +170,8 @@ import { National_HI2_ASN1parameters, _decode_National_HI2_ASN1parameters, _enco
  *     sMSTerminatingAddress     [28] DataNodeAddress OPTIONAL,
  *     iMSevent                [29] IMSevent OPTIONAL,
  *     sIPMessage                [30] OCTET STRING  OPTIONAL,
- *     servingSGSN-number        [31] OCTET STRING (SIZE (1..20))    OPTIONAL,
- *     servingSGSN-address        [32] OCTET STRING (SIZE (5..17))     OPTIONAL,
+ *     servingSGSN-number        [31] OCTET STRING (SIZE (1..20))    type OPTIONAL,
+ *     servingSGSN-address        [32] OCTET STRING (SIZE (5..17))     type OPTIONAL,
  *                                 -- Octets are coded according to 3GPP TS 23.003 [25]
  *     ...,
  *              -- Tag            [33] was taken into use by ETSI module in TS 101 671v2.13.1
@@ -185,10 +185,10 @@ import { National_HI2_ASN1parameters, _decode_National_HI2_ASN1parameters, _enco
  *          -- contains parameters to be used in case of DSMIP based intercepted messages
  *     ePS-MIP-SpecificParameters     [39] EPS-MIP-SpecificParameters OPTIONAL,
  *          -- contains parameters to be used in case of MIP based intercepted messages
- *     servingNodeAddress             [40] OCTET STRING               OPTIONAL,
+ *     servingNodeAddress             [40] OCTET STRING               type OPTIONAL,
  *          -- this parameter is kept for backward compatibility only and should not be used
  *          -- as it has been superseeded by parameter visitedNetworkId
- *     visitedNetworkId               [41] UTF8String                 OPTIONAL,
+ *     visitedNetworkId               [41] UTF8String                 type OPTIONAL,
  *          -- contains the visited network identifier inside the Serving System Update for
  *          -- non 3GPP access and IMS, coded according to [53] and 3GPP TS 29.229 [96]
  * 
@@ -206,7 +206,7 @@ import { National_HI2_ASN1parameters, _decode_National_HI2_ASN1parameters, _enco
  *     -- Coded according to 3GPP TS 29.060 [17]; The upper 4 octets shall carry the ULI Timestamp
  *     -- value; The lower 4 octets are undefined and shall be ignored by the receiver
  * 
- *     packetDataHeaderInformation           [49] PacketDataHeaderInformation    OPTIONAL,
+ *     packetDataHeaderInformation           [49] PacketDataHeaderInformation    type OPTIONAL,
  *     mediaSecFailureIndication          [50] MediaSecFailureIndication OPTIONAL,
  *     csgIdentity            [51] OCTET STRING (SIZE (4)) OPTIONAL,  -- Octets are coded
  *       -- according to 3GPP TS 23.003 [25].  The 27 bits specified in TS 23.003 shall be encoded as.
@@ -219,16 +219,16 @@ import { National_HI2_ASN1parameters, _decode_National_HI2_ASN1parameters, _enco
  *     heNBiPAddress        [53] IPAddress  OPTIONAL,
  *     heNBLocation            [54] HeNBLocation  OPTIONAL,
  *     tunnelProtocol        [55] TunnelProtocol  OPTIONAL,
- *     pANI-Header-Info        [56] SEQUENCE OF PANI-Header-Info        OPTIONAL,
+ *     pANI-Header-Info        [56] SEQUENCE OF PANI-Header-Info        type OPTIONAL,
  *     -- information extracted from P-Access-Network-Info headers of SIP message;
  *     -- described in TS 24.229 7.2A.4 [76]
- *     imsVoIP                 [57] IMS-VoIP-Correlation                    OPTIONAL,
+ *     imsVoIP                 [57] IMS-VoIP-Correlation                    type OPTIONAL,
  *     xCAPmessage            [58] OCTET STRING OPTIONAL,
  *     -- The HTTP message (HTPP header and any XCAP body) of any of the target's IMS supplementary
  *     -- service setting management or manipulation XCAP messages occuring through the Ut interface
  *     -- defined in the 3GPP TS 24 623 [77].
  *     logicalFunctionInformation    [59] DataNodeIdentifier OPTIONAL,
- *     ccUnavailableReason        [60] PrintableString    OPTIONAL,
+ *     ccUnavailableReason        [60] PrintableString    type OPTIONAL,
  *     carrierSpecificData                    [61] OCTET STRING OPTIONAL,
  *     -- Copy of raw data specified by the CSP or his vendor related to HSS.
  *     current-previous-systems            [62] Current-Previous-Systems OPTIONAL,
@@ -258,7 +258,7 @@ import { National_HI2_ASN1parameters, _decode_National_HI2_ASN1parameters, _enco
  *     otherIdentities                    [73] SEQUENCE OF PartyInformation OPTIONAL,
  *     deregistrationReason               [74] DeregistrationReason OPTIONAL,
  *     requesting-Node-Identifier         [75] OCTET STRING OPTIONAL,
- *     roamingIndication                  [76] VoIPRoamingIndication     OPTIONAL,
+ *     roamingIndication                  [76] VoIPRoamingIndication     type OPTIONAL,
  *     -- used for IMS events in the VPLMN.
  *     cSREvent                        [77]    CSREvent OPTIONAL,
  *     ptc                                [78]    PTC OPTIONAL,  -- PTC Events

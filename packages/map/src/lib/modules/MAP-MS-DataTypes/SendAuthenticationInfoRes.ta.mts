@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -26,10 +26,10 @@ import { UE_UsageType, _decode_UE_UsageType, _encode_UE_UsageType } from "../MAP
  * 
  * ```asn1
  * SendAuthenticationInfoRes ::= [3] SEQUENCE {
- *     authenticationSetList    AuthenticationSetList    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     authenticationSetList    AuthenticationSetList    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     eps-AuthenticationSetList    [2] EPS-AuthenticationSetList    OPTIONAL,
+ *     eps-AuthenticationSetList    [2] EPS-AuthenticationSetList    type OPTIONAL,
  *     ueUsageType    [3] UE-UsageType    OPTIONAL }
  * ```
  * 

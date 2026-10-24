@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -20,7 +20,7 @@ import { ForwardingFeatureList, _decode_ForwardingFeatureList, _encode_Forwardin
  * 
  * ```asn1
  * ForwardingInfo ::= SEQUENCE {
- *     ss-Code    SS-Code    OPTIONAL,
+ *     ss-Code    SS-Code    type OPTIONAL,
  *     forwardingFeatureList    ForwardingFeatureList,
  *     ...}
  * ```

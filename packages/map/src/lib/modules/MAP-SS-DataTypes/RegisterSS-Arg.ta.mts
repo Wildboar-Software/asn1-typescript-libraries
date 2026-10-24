@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -27,13 +27,13 @@ import { NoReplyConditionTime, _decode_NoReplyConditionTime, _encode_NoReplyCond
  * ```asn1
  * RegisterSS-Arg ::= SEQUENCE {
  *     ss-Code    SS-Code,
- *     basicService    BasicServiceCode    OPTIONAL,
- *     forwardedToNumber    [4] AddressString    OPTIONAL,
- *     forwardedToSubaddress    [6] ISDN-SubaddressString    OPTIONAL,
- *     noReplyConditionTime    [5] NoReplyConditionTime    OPTIONAL,
+ *     basicService    BasicServiceCode    type OPTIONAL,
+ *     forwardedToNumber    [4] AddressString    type OPTIONAL,
+ *     forwardedToSubaddress    [6] ISDN-SubaddressString    type OPTIONAL,
+ *     noReplyConditionTime    [5] NoReplyConditionTime    type OPTIONAL,
  *     ...,
- *     defaultPriority    [7] EMLPP-Priority    OPTIONAL,
- *     nbrUser    [8] MC-Bearers    OPTIONAL,
+ *     defaultPriority    [7] EMLPP-Priority    type OPTIONAL,
+ *     nbrUser    [8] MC-Bearers    type OPTIONAL,
  *     longFTN-Supported    [9]    NULL    OPTIONAL }
  * ```
  * 

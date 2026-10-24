@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -27,9 +27,9 @@ import { ServiceInteractionIndicators, _decode_ServiceInteractionIndicators, _en
  * ```asn1
  * EstablishTemporaryConnectionArg ::= SEQUENCE {
  *      assistingSSPIPRoutingAddress     [0] AssistingSSPIPRoutingAddress,
- *      correlationID     [1] CorrelationID     OPTIONAL,
- *      scfID     [3] ScfID     OPTIONAL,
- *      extensions     [4] SEQUENCE SIZE(1..numOfExtensions) OF ExtensionField     OPTIONAL,
+ *      correlationID     [1] CorrelationID     type OPTIONAL,
+ *      scfID     [3] ScfID     type OPTIONAL,
+ *      extensions     [4] SEQUENCE SIZE(1..numOfExtensions) OF ExtensionField     type OPTIONAL,
  *      serviceInteractionIndicators     [30] ServiceInteractionIndicators     OPTIONAL
  * --  ...
  *      }

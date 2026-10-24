@@ -2,8 +2,8 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
+    type OPTIONAL,
+    type INTEGER,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -42,9 +42,9 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * SetRingerStatusArgument ::= SEQUENCE
  * {    device                 DeviceID,
  *     ringer                RingerID,
- *     ringMode             RingMode                OPTIONAL,
- *     ringPattern             [1] IMPLICIT INTEGER             OPTIONAL,
- *     ringVolume             [2] Volume                 OPTIONAL,
+ *     ringMode             RingMode                type OPTIONAL,
+ *     ringPattern             [1] IMPLICIT INTEGER             type OPTIONAL,
+ *     ringVolume             [2] Volume                 type OPTIONAL,
  *     extensions             CSTACommonArguments             OPTIONAL }
  * ```
  * 

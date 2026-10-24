@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    OPTIONAL,
+    type BOOLEAN,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -26,8 +26,8 @@ import { Downstream, _decode_Downstream, _encode_Downstream } from "../GCSEHI2Op
  * TargetConnectionMethod ::= SEQUENCE
  * {
  *         connectionStatus [1] BOOLEAN, -- True indicates connected, false indicates not connected.
- *         upstream         [2] Upstream     OPTIONAL, -- Specifies the encoding format of
- *         downstream         [3] Downstream     OPTIONAL, -- Specifies the encoding format of
+ *         upstream         [2] Upstream     type OPTIONAL, -- Specifies the encoding format of
+ *         downstream         [3] Downstream     type OPTIONAL, -- Specifies the encoding format of
  *            -- upstream and downstream parameters are omitted if connectionStatus indicates false.
  *     ...
  * }

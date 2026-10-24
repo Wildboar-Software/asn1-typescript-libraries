@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -37,19 +37,19 @@ import { UserCSGInformation, _decode_UserCSGInformation, _encode_UserCSGInformat
  * 
  * ```asn1
  * LocationInformation ::= SEQUENCE {
- *     ageOfLocationInformation    AgeOfLocationInformation    OPTIONAL,
- *     geographicalInformation    [0] GeographicalInformation    OPTIONAL,
- *     vlr-number    [1] ISDN-AddressString    OPTIONAL,
- *     locationNumber    [2] LocationNumber    OPTIONAL,
- *     cellGlobalIdOrServiceAreaIdOrLAI    [3] CellGlobalIdOrServiceAreaIdOrLAI    OPTIONAL,
- *     extensionContainer    [4] ExtensionContainer    OPTIONAL,
+ *     ageOfLocationInformation    AgeOfLocationInformation    type OPTIONAL,
+ *     geographicalInformation    [0] GeographicalInformation    type OPTIONAL,
+ *     vlr-number    [1] ISDN-AddressString    type OPTIONAL,
+ *     locationNumber    [2] LocationNumber    type OPTIONAL,
+ *     cellGlobalIdOrServiceAreaIdOrLAI    [3] CellGlobalIdOrServiceAreaIdOrLAI    type OPTIONAL,
+ *     extensionContainer    [4] ExtensionContainer    type OPTIONAL,
  *     ... ,
- *     selectedLSA-Id    [5] LSAIdentity    OPTIONAL,
- *     msc-Number    [6] ISDN-AddressString    OPTIONAL,
- *     geodeticInformation    [7] GeodeticInformation    OPTIONAL, 
- *     currentLocationRetrieved    [8] NULL    OPTIONAL,
- *     sai-Present    [9] NULL    OPTIONAL,
- *     locationInformationEPS    [10] LocationInformationEPS    OPTIONAL,
+ *     selectedLSA-Id    [5] LSAIdentity    type OPTIONAL,
+ *     msc-Number    [6] ISDN-AddressString    type OPTIONAL,
+ *     geodeticInformation    [7] GeodeticInformation    type OPTIONAL, 
+ *     currentLocationRetrieved    [8] NULL    type OPTIONAL,
+ *     sai-Present    [9] NULL    type OPTIONAL,
+ *     locationInformationEPS    [10] LocationInformationEPS    type OPTIONAL,
  *     userCSGInformation    [11] UserCSGInformation    OPTIONAL }
  * ```
  * 

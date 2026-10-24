@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    EMBEDDED_PDV,
+    type OCTET_STRING,
+    type EMBEDDED_PDV,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,

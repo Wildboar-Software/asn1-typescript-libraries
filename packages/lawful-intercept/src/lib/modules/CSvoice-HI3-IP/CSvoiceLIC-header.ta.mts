@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
+    type INTEGER,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError
@@ -45,7 +45,7 @@ import { Payload_description, _decode_Payload_description, _encode_Payload_descr
  *     lIID                        [1] LawfulInterceptionIdentifier OPTIONAL,
  *     communicationIdentifier        [2]    CommunicationIdentifier,
  *         -- contents same as the contents of similar field sent in the linked IRI messages
- *     ccLID                        [3]    CC-Link-Identifier    OPTIONAL,
+ *     ccLID                        [3]    CC-Link-Identifier    type OPTIONAL,
  *         -- Included only if the linked IRI messages have the similar field. When included,
  *         -- the content is same as the content of similar field sent in the linked IRI messages.
  *     timeStamp                    [4]    TimeStamp OPTIONAL,

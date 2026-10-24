@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -22,7 +22,7 @@ import { SM_DeliveryTimerValue, _decode_SM_DeliveryTimerValue, _encode_SM_Delive
  * IP-SM-GW-Guidance ::= SEQUENCE {
  *     minimumDeliveryTimeValue    SM-DeliveryTimerValue,
  *     recommendedDeliveryTimeValue    SM-DeliveryTimerValue,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -24,11 +24,11 @@ import { LCSLocationInfo, _decode_LCSLocationInfo, _encode_LCSLocationInfo } fro
  * RoutingInfoForLCS-Res ::= SEQUENCE {
  *     targetMS    [0] SubscriberIdentity,
  *     lcsLocationInfo    [1] LCSLocationInfo,
- *     extensionContainer    [2] ExtensionContainer    OPTIONAL,
+ *     extensionContainer    [2] ExtensionContainer    type OPTIONAL,
  *     ...,
- *     v-gmlc-Address    [3]    GSN-Address    OPTIONAL,
- *     h-gmlc-Address    [4]    GSN-Address    OPTIONAL,
- *     ppr-Address    [5]    GSN-Address    OPTIONAL,
+ *     v-gmlc-Address    [3]    GSN-Address    type OPTIONAL,
+ *     h-gmlc-Address    [4]    GSN-Address    type OPTIONAL,
+ *     ppr-Address    [5]    GSN-Address    type OPTIONAL,
  *     additional-v-gmlc-Address    [6]    GSN-Address    OPTIONAL }
  * ```
  * 

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER,
+    type INTEGER,
     ASN1OverflowError,
     ASN1SizeError
 } from "@wildboar/asn1";

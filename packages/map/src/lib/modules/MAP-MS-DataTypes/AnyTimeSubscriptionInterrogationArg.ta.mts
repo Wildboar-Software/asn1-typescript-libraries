@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -30,8 +30,8 @@ import { RequestedSubscriptionInfo, _decode_RequestedSubscriptionInfo, _encode_R
  *     subscriberIdentity    [0] SubscriberIdentity,
  *     requestedSubscriptionInfo    [1] RequestedSubscriptionInfo,
  *     gsmSCF-Address    [2] ISDN-AddressString,
- *     extensionContainer    [3] ExtensionContainer    OPTIONAL,
- *     longFTN-Supported    [4]    NULL    OPTIONAL,
+ *     extensionContainer    [3] ExtensionContainer    type OPTIONAL,
+ *     longFTN-Supported    [4]    NULL    type OPTIONAL,
  *     ...}
  * ```
  * 

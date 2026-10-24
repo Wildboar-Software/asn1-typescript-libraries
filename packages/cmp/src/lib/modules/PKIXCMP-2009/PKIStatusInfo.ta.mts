@@ -40,7 +40,7 @@ import {
  * ```asn1
  * PKIStatusInfo ::= SEQUENCE {
  *     status        PKIStatus,
- *     statusString  PKIFreeText     OPTIONAL,
+ *     statusString  PKIFreeText     type OPTIONAL,
  *     failInfo      PKIFailureInfo  OPTIONAL }
  * ```
  *

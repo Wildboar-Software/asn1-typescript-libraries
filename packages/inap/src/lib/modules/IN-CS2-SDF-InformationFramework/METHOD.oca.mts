@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
+    type OBJECT_IDENTIFIER,
     PrintableString
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -17,9 +17,9 @@ import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
  * ```asn1
  * METHOD ::= CLASS {
  *   &InputAttributes   ATTRIBUTE OPTIONAL,
- *   &SpecificInput     OPTIONAL,
+ *   &SpecificInput     type OPTIONAL,
  *   &OutputAttributes  ATTRIBUTE OPTIONAL,
- *   &SpecificOutput    OPTIONAL,
+ *   &SpecificOutput    type OPTIONAL,
  *   &description       PrintableString OPTIONAL,
  *   &id                OBJECT IDENTIFIER UNIQUE
  * }

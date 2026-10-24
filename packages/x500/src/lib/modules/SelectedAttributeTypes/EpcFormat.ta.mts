@@ -2,9 +2,9 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OPTIONAL,
-    UTF8String,
+    type INTEGER,
+    type OPTIONAL,
+    type UTF8String,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -32,8 +32,8 @@ import {
  *       numericPad     (0),
  *       numeric        (1),
  *       alpha7bits     (2) } DEFAULT numericPad },
- *   digitShift  [0] INTEGER                        OPTIONAL,
- *   checkCalc   [1] INTEGER                        OPTIONAL,
+ *   digitShift  [0] INTEGER                        type OPTIONAL,
+ *   checkCalc   [1] INTEGER                        type OPTIONAL,
  *   urnPrefix       UTF8String                     OPTIONAL }
  * ```
  *

@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -46,9 +46,9 @@ import {
  * 
  * ```asn1
  * AgentInfo ::= SEQUENCE
- * {    acdGroup            DeviceID                OPTIONAL,
+ * {    acdGroup            DeviceID                type OPTIONAL,
  *     agentState            AgentState,
- *     pendingAgentState        [0] IMPLICIT PendingAgentState        OPTIONAL,
+ *     pendingAgentState        [0] IMPLICIT PendingAgentState        type OPTIONAL,
  *     agentStateCondition        [1] IMPLICIT AgentStateCondition    OPTIONAL }
  * ```
  * 

@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -34,9 +34,9 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * GroupPickupCallArgument ::= SEQUENCE
  * {     newDestination             DeviceID,
- *     pickGroup             DeviceID             OPTIONAL,
- *     correlatorData             CorrelatorData             OPTIONAL,
- *     userData             UserData             OPTIONAL,
+ *     pickGroup             DeviceID             type OPTIONAL,
+ *     correlatorData             CorrelatorData             type OPTIONAL,
+ *     userData             UserData             type OPTIONAL,
  *     extensions             CSTACommonArguments         OPTIONAL }
  * ```
  * 

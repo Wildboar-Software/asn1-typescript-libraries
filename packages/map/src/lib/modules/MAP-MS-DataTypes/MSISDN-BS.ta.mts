@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -22,8 +22,8 @@ import { BasicServiceList, _decode_BasicServiceList, _encode_BasicServiceList } 
  * ```asn1
  * MSISDN-BS ::= SEQUENCE {
  *     msisdn    ISDN-AddressString,    
- *     basicServiceList    [0]    BasicServiceList    OPTIONAL,
- *     extensionContainer    [1]    ExtensionContainer    OPTIONAL,
+ *     basicServiceList    [0]    BasicServiceList    type OPTIONAL,
+ *     extensionContainer    [1]    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 

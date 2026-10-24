@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OBJECT_IDENTIFIER, ObjectIdentifier as _OID } from "@wildboar/asn1";
+import { type OBJECT_IDENTIFIER, ObjectIdentifier as _OID } from "@wildboar/asn1";
 
 /**
  * @summary bhsmpsid

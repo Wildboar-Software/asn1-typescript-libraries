@@ -5,8 +5,8 @@ import {
 } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 /* eslint-disable */
 import {
-    BOOLEAN,
-    OPTIONAL,
+    type BOOLEAN,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";

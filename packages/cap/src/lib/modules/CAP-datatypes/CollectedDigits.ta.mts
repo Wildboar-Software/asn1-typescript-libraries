@@ -1,8 +1,8 @@
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    OCTET_STRING,
+    type OPTIONAL,
+    type BOOLEAN,
+    type INTEGER,
+    type OCTET_STRING,
     ASN1Element as _Element,
     ASN1SizeError,
     ASN1OverflowError,

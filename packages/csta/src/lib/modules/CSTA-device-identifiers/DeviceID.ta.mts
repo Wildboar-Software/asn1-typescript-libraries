@@ -2,10 +2,10 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
-    IA5String,
+    type IA5String,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -50,8 +50,8 @@ import { MediaCallCharacteristics, _decode_MediaCallCharacteristics, _encode_Med
  *         implicitPrivate         [ 4] IMPLICIT     NumberDigits,
  *         explicitPrivate         [ 5] PrivateTON,
  *         other                 [ 6] IMPLICIT     OtherPlan },
- *     privateNumber            [ 0] NumberDigits            OPTIONAL,
- *     privateName            [ 1] IA5String                OPTIONAL,
+ *     privateNumber            [ 0] NumberDigits            type OPTIONAL,
+ *     privateName            [ 1] IA5String                type OPTIONAL,
  *     mediaCallCharacteristics     MediaCallCharacteristics         OPTIONAL }
  * ```
  * 

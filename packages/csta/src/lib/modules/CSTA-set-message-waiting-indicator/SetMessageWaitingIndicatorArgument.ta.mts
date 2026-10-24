@@ -2,8 +2,8 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
+    type OPTIONAL,
+    type BOOLEAN,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -30,7 +30,7 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * SetMessageWaitingIndicatorArgument ::= SEQUENCE
  * {    device                DeviceID,
  *     messageWaitingOn        BOOLEAN,
- *     deviceForMessage        DeviceID                OPTIONAL,
+ *     deviceForMessage        DeviceID                type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 

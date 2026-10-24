@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -27,13 +27,13 @@ import { GeographicalInformation, _decode_GeographicalInformation, _encode_Geogr
  * 
  * ```asn1
  * LocationInformationEPS ::= SEQUENCE {
- *     e-utranCellGlobalIdentity    [0] E-UTRAN-CGI    OPTIONAL,
- *     trackingAreaIdentity    [1] TA-Id    OPTIONAL,
- *     extensionContainer    [2] ExtensionContainer    OPTIONAL,
- *     geographicalInformation    [3] GeographicalInformation    OPTIONAL,
- *     geodeticInformation    [4] GeodeticInformation    OPTIONAL,
- *     currentLocationRetrieved    [5] NULL    OPTIONAL,
- *     ageOfLocationInformation    [6] AgeOfLocationInformation    OPTIONAL,
+ *     e-utranCellGlobalIdentity    [0] E-UTRAN-CGI    type OPTIONAL,
+ *     trackingAreaIdentity    [1] TA-Id    type OPTIONAL,
+ *     extensionContainer    [2] ExtensionContainer    type OPTIONAL,
+ *     geographicalInformation    [3] GeographicalInformation    type OPTIONAL,
+ *     geodeticInformation    [4] GeodeticInformation    type OPTIONAL,
+ *     currentLocationRetrieved    [5] NULL    type OPTIONAL,
+ *     ageOfLocationInformation    [6] AgeOfLocationInformation    type OPTIONAL,
  *     ...,
  *     mme-Name    [7] DiameterIdentity    OPTIONAL }
  * ```

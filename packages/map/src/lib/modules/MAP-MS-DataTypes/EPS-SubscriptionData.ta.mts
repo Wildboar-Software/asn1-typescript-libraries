@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -28,16 +28,16 @@ import { RFSP_ID, _decode_RFSP_ID, _encode_RFSP_ID } from "../MAP-MS-DataTypes/R
  * 
  * ```asn1
  * EPS-SubscriptionData ::= SEQUENCE {
- *     apn-oi-Replacement    [0]    APN-OI-Replacement    OPTIONAL,
+ *     apn-oi-Replacement    [0]    APN-OI-Replacement    type OPTIONAL,
  *     -- this apn-oi-Replacement refers to the UE level apn-oi-Replacement.
- *     rfsp-id    [2]    RFSP-ID    OPTIONAL,
- *     ambr    [3]    AMBR    OPTIONAL,
- *     apn-ConfigurationProfile    [4]    APN-ConfigurationProfile    OPTIONAL,
- *     stn-sr    [6]    ISDN-AddressString    OPTIONAL,
- *     extensionContainer    [5]    ExtensionContainer    OPTIONAL,
+ *     rfsp-id    [2]    RFSP-ID    type OPTIONAL,
+ *     ambr    [3]    AMBR    type OPTIONAL,
+ *     apn-ConfigurationProfile    [4]    APN-ConfigurationProfile    type OPTIONAL,
+ *     stn-sr    [6]    ISDN-AddressString    type OPTIONAL,
+ *     extensionContainer    [5]    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     mps-CSPriority    [7]    NULL    OPTIONAL,
- *     mps-EPSPriority    [8]    NULL    OPTIONAL,
+ *     mps-CSPriority    [7]    NULL    type OPTIONAL,
+ *     mps-EPSPriority    [8]    NULL    type OPTIONAL,
  *     subscribed-vsrvcc    [9]    NULL    OPTIONAL }
  * ```
  * 

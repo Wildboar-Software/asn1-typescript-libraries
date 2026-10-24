@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -41,11 +41,11 @@ import { SwitchingFunctionDevices, _decode_SwitchingFunctionDevices, _encode_Swi
  * 
  * ```asn1
  * CapExchangeServList ::= SEQUENCE
- * {     getCSTAFeatures            [5] IMPLICIT GetCSTAFeatures            OPTIONAL,
- *     getLogicalDeviceInformation     [0] IMPLICIT GetLogicalDeviceInformation     OPTIONAL,
- *     getPhysicalDeviceInformation     [1] IMPLICIT GetPhysicalDeviceInformation     OPTIONAL,
- *     getSwitchingFunctionCaps    [4] IMPLICIT GetSwitchingFunctionCapabilities    OPTIONAL,
- *     getSwitchingFunctionDevices     [2] IMPLICIT GetSwitchingFunctionDevices     OPTIONAL,
+ * {     getCSTAFeatures            [5] IMPLICIT GetCSTAFeatures            type OPTIONAL,
+ *     getLogicalDeviceInformation     [0] IMPLICIT GetLogicalDeviceInformation     type OPTIONAL,
+ *     getPhysicalDeviceInformation     [1] IMPLICIT GetPhysicalDeviceInformation     type OPTIONAL,
+ *     getSwitchingFunctionCaps    [4] IMPLICIT GetSwitchingFunctionCapabilities    type OPTIONAL,
+ *     getSwitchingFunctionDevices     [2] IMPLICIT GetSwitchingFunctionDevices     type OPTIONAL,
  *     switchingFunctionDevices     [3] IMPLICIT SwitchingFunctionDevices         OPTIONAL }
  * ```
  * 

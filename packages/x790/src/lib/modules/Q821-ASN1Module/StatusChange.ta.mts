@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -28,7 +28,7 @@ import {
  *               oldStatusValue
  *                 [1]  Q821-ATTRIBUTE.&Type
  *                        ({SupportedStatusAttributes}{@.statusAttributeID})
- *                   OPTIONAL,
+ *                   type OPTIONAL,
  *               newStatusValue
  *                 [2]  Q821-ATTRIBUTE.&Type
  *                        ({SupportedStatusAttributes}{@.statusAttributeID})

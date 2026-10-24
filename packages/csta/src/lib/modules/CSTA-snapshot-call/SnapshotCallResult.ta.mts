@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -59,18 +59,18 @@ import { CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "
  * {    crossRefIDorSnapshotData CHOICE
  *     {    serviceCrossRefID     [0] IMPLICIT ServiceCrossRefID,
  *         snapshotData         SnapshotCallData },
- *     mediaCallCharacteristics     MediaCallCharacteristics         OPTIONAL,
- *     callCharacteristics         CallCharacteristics             OPTIONAL,
- *     callingDevice             CallingDeviceID             OPTIONAL,
- *     calledDevice             CalledDeviceID                 OPTIONAL,
- *     associatedCallingDeviceID     AssociatedCallingDeviceID         OPTIONAL,
- *     associatedCalledDeviceID     AssociatedCalledDeviceID         OPTIONAL,
- *     correlatorData             [1] IMPLICIT CorrelatorData         OPTIONAL,
- *     callLinkageData         [2] IMPLICIT CallLinkageData         OPTIONAL,
- *     subjectOfCall            [3] IMPLICIT    SubjectOfCall        OPTIONAL,
- *     messageInfo            [4] IMPLICIT    MessageInfo        OPTIONAL,
- *     languagePreferences        [5] IMPLICIT    LanguagePreferences    OPTIONAL,
- *     deviceHistory            [6] IMPLICIT    DeviceHistory        OPTIONAL,
+ *     mediaCallCharacteristics     MediaCallCharacteristics         type OPTIONAL,
+ *     callCharacteristics         CallCharacteristics             type OPTIONAL,
+ *     callingDevice             CallingDeviceID             type OPTIONAL,
+ *     calledDevice             CalledDeviceID                 type OPTIONAL,
+ *     associatedCallingDeviceID     AssociatedCallingDeviceID         type OPTIONAL,
+ *     associatedCalledDeviceID     AssociatedCalledDeviceID         type OPTIONAL,
+ *     correlatorData             [1] IMPLICIT CorrelatorData         type OPTIONAL,
+ *     callLinkageData         [2] IMPLICIT CallLinkageData         type OPTIONAL,
+ *     subjectOfCall            [3] IMPLICIT    SubjectOfCall        type OPTIONAL,
+ *     messageInfo            [4] IMPLICIT    MessageInfo        type OPTIONAL,
+ *     languagePreferences        [5] IMPLICIT    LanguagePreferences    type OPTIONAL,
+ *     deviceHistory            [6] IMPLICIT    DeviceHistory        type OPTIONAL,
  *     extensions             CSTACommonArguments             OPTIONAL }
  * ```
  * 

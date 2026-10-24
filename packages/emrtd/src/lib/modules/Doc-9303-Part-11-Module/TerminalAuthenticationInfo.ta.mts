@@ -4,7 +4,7 @@ import {
     ASN1Element as _Element,
     ASN1Error,
     ASN1TagClass as _TagClass,
-    INTEGER,
+    type INTEGER,
     OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";

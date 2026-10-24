@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -24,8 +24,8 @@ import { LSAIdentity, _decode_LSAIdentity, _encode_LSAIdentity } from "../MAP-MS
  * LSAData ::= SEQUENCE {
  *     lsaIdentity    [0] LSAIdentity,
  *     lsaAttributes    [1] LSAAttributes,
- *     lsaActiveModeIndicator    [2] NULL    OPTIONAL,
- *     extensionContainer    [3] ExtensionContainer    OPTIONAL,
+ *     lsaActiveModeIndicator    [2] NULL    type OPTIONAL,
+ *     extensionContainer    [3] ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 

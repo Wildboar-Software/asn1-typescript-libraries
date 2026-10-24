@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -38,7 +38,7 @@ import { KDFAlgorithmId, _decode_KDFAlgorithmId, _encode_KDFAlgorithmId } from "
  *             -- This field is present only if the client wishes
  *             -- to use the Diffie-Hellman key agreement method.
  *     supportedCMSTypes       [2] SEQUENCE OF AlgorithmIdentifier
- *                                 OPTIONAL,
+ *                                 type OPTIONAL,
  *             -- Type AlgorithmIdentifier is defined in
  *             -- [RFC3280].
  *             -- List of CMS algorithm [RFC3370] identifiers

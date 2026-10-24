@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ASN1SizeError,
-    UTF8String,
+    type UTF8String,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -37,25 +37,25 @@ import { ReportInterval, _decode_ReportInterval, _encode_ReportInterval, _enum_f
  * ```asn1
  * MDT-Configuration ::= SEQUENCE {
  *     jobType    JobType,
- *     areaScope    AreaScope    OPTIONAL,
- *     listOfMeasurements    ListOfMeasurements    OPTIONAL,
- *     reportingTrigger    [0] ReportingTrigger    OPTIONAL,
- *     reportInterval    ReportInterval    OPTIONAL,
- *     reportAmount    [1] ReportAmount    OPTIONAL,
- *     eventThresholdRSRP    EventThresholdRSRP    OPTIONAL,
- *     eventThresholdRSRQ    [2] EventThresholdRSRQ    OPTIONAL,
- *     loggingInterval    [3] LoggingInterval    OPTIONAL,
- *     loggingDuration    [4] LoggingDuration    OPTIONAL,
- *     extensionContainer    [5] ExtensionContainer    OPTIONAL,
+ *     areaScope    AreaScope    type OPTIONAL,
+ *     listOfMeasurements    ListOfMeasurements    type OPTIONAL,
+ *     reportingTrigger    [0] ReportingTrigger    type OPTIONAL,
+ *     reportInterval    ReportInterval    type OPTIONAL,
+ *     reportAmount    [1] ReportAmount    type OPTIONAL,
+ *     eventThresholdRSRP    EventThresholdRSRP    type OPTIONAL,
+ *     eventThresholdRSRQ    [2] EventThresholdRSRQ    type OPTIONAL,
+ *     loggingInterval    [3] LoggingInterval    type OPTIONAL,
+ *     loggingDuration    [4] LoggingDuration    type OPTIONAL,
+ *     extensionContainer    [5] ExtensionContainer    type OPTIONAL,
  *     ...,
- *     measurementPeriodUMTS    [6] PeriodUMTS    OPTIONAL,
- *     measurementPeriodLTE    [7] PeriodLTE    OPTIONAL,
- *     collectionPeriodRRM-UMTS    [8] PeriodUMTS    OPTIONAL,
- *     collectionPeriodRRM-LTE    [9] PeriodLTE    OPTIONAL,
- *     positioningMethod    [10] PositioningMethod    OPTIONAL,
- *     measurementQuantity    [11] MeasurementQuantity    OPTIONAL,
- *     eventThreshold1F    [12] EventThreshold1F    OPTIONAL,
- *     eventThreshold1I    [13] EventThreshold1I    OPTIONAL,
+ *     measurementPeriodUMTS    [6] PeriodUMTS    type OPTIONAL,
+ *     measurementPeriodLTE    [7] PeriodLTE    type OPTIONAL,
+ *     collectionPeriodRRM-UMTS    [8] PeriodUMTS    type OPTIONAL,
+ *     collectionPeriodRRM-LTE    [9] PeriodLTE    type OPTIONAL,
+ *     positioningMethod    [10] PositioningMethod    type OPTIONAL,
+ *     measurementQuantity    [11] MeasurementQuantity    type OPTIONAL,
+ *     eventThreshold1F    [12] EventThreshold1F    type OPTIONAL,
+ *     eventThreshold1I    [13] EventThreshold1I    type OPTIONAL,
  *     mdt-Allowed-PLMN-List    [14] MDT-Allowed-PLMNId-List    OPTIONAL }
  * ```
  * 

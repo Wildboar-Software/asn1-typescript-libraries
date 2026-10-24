@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -41,25 +41,25 @@ import { SupportedGADShapes, _decode_SupportedGADShapes, _encode_SupportedGADSha
  * ProvideSubscriberLocation-Arg ::= SEQUENCE {
  *     locationType    LocationType,
  *     mlc-Number    ISDN-AddressString,
- *     lcs-ClientID    [0] LCS-ClientID    OPTIONAL,
- *     privacyOverride    [1] NULL    OPTIONAL,
- *     imsi    [2] IMSI    OPTIONAL,
- *     msisdn    [3] ISDN-AddressString    OPTIONAL,
- *     lmsi    [4] LMSI    OPTIONAL,
- *     imei    [5] IMEI    OPTIONAL,
- *     lcs-Priority    [6] LCS-Priority    OPTIONAL,
- *     lcs-QoS    [7] LCS-QoS    OPTIONAL,
- *     extensionContainer    [8] ExtensionContainer    OPTIONAL,
+ *     lcs-ClientID    [0] LCS-ClientID    type OPTIONAL,
+ *     privacyOverride    [1] NULL    type OPTIONAL,
+ *     imsi    [2] IMSI    type OPTIONAL,
+ *     msisdn    [3] ISDN-AddressString    type OPTIONAL,
+ *     lmsi    [4] LMSI    type OPTIONAL,
+ *     imei    [5] IMEI    type OPTIONAL,
+ *     lcs-Priority    [6] LCS-Priority    type OPTIONAL,
+ *     lcs-QoS    [7] LCS-QoS    type OPTIONAL,
+ *     extensionContainer    [8] ExtensionContainer    type OPTIONAL,
  *     ... ,
- *     supportedGADShapes    [9]    SupportedGADShapes    OPTIONAL,
- *     lcs-ReferenceNumber    [10]    LCS-ReferenceNumber    OPTIONAL,
- *     lcsServiceTypeID    [11]    LCSServiceTypeID    OPTIONAL,
- *     lcsCodeword    [12]    LCSCodeword    OPTIONAL,
- *     lcs-PrivacyCheck    [13]    LCS-PrivacyCheck    OPTIONAL,
- *     areaEventInfo    [14]    AreaEventInfo    OPTIONAL,
- *     h-gmlc-Address    [15]    GSN-Address    OPTIONAL,
- *     mo-lrShortCircuitIndicator    [16] NULL    OPTIONAL,
- *     periodicLDRInfo    [17] PeriodicLDRInfo    OPTIONAL,
+ *     supportedGADShapes    [9]    SupportedGADShapes    type OPTIONAL,
+ *     lcs-ReferenceNumber    [10]    LCS-ReferenceNumber    type OPTIONAL,
+ *     lcsServiceTypeID    [11]    LCSServiceTypeID    type OPTIONAL,
+ *     lcsCodeword    [12]    LCSCodeword    type OPTIONAL,
+ *     lcs-PrivacyCheck    [13]    LCS-PrivacyCheck    type OPTIONAL,
+ *     areaEventInfo    [14]    AreaEventInfo    type OPTIONAL,
+ *     h-gmlc-Address    [15]    GSN-Address    type OPTIONAL,
+ *     mo-lrShortCircuitIndicator    [16] NULL    type OPTIONAL,
+ *     periodicLDRInfo    [17] PeriodicLDRInfo    type OPTIONAL,
  *     reportingPLMNList    [18] ReportingPLMNList    OPTIONAL }
  * ```
  * 

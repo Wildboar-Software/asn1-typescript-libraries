@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -23,10 +23,10 @@ import { OverrideCategory, _decode_OverrideCategory, _encode_OverrideCategory, _
  * 
  * ```asn1
  * ModificationRequestFor-CLIP-Info ::= SEQUENCE {
- *     ss-Status    [0]    Ext-SS-Status    OPTIONAL,
- *     overrideCategory    [1]  OverrideCategory    OPTIONAL,
- *     modifyNotificationToCSE    [2]    ModificationInstruction    OPTIONAL,
- *     extensionContainer    [3]    ExtensionContainer    OPTIONAL,
+ *     ss-Status    [0]    Ext-SS-Status    type OPTIONAL,
+ *     overrideCategory    [1]  OverrideCategory    type OPTIONAL,
+ *     modifyNotificationToCSE    [2]    ModificationInstruction    type OPTIONAL,
+ *     extensionContainer    [3]    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 

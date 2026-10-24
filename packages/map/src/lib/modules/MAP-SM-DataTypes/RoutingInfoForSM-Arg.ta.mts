@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
+    type BOOLEAN,
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -32,19 +32,19 @@ import { SM_RP_SMEA, _decode_SM_RP_SMEA, _encode_SM_RP_SMEA } from "../MAP-SM-Da
  *     msisdn    [0] ISDN-AddressString,
  *     sm-RP-PRI    [1] BOOLEAN,
  *     serviceCentreAddress    [2] AddressString,
- *     extensionContainer    [6] ExtensionContainer    OPTIONAL,
+ *     extensionContainer    [6] ExtensionContainer    type OPTIONAL,
  *     ... ,
- *     gprsSupportIndicator    [7]    NULL    OPTIONAL,
+ *     gprsSupportIndicator    [7]    NULL    type OPTIONAL,
  *     -- gprsSupportIndicator is set only if the SMS-GMSC supports
  *     -- receiving of two numbers from the HLR
- *     sm-RP-MTI    [8] SM-RP-MTI    OPTIONAL,
- *     sm-RP-SMEA    [9] SM-RP-SMEA    OPTIONAL,
- *     sm-deliveryNotIntended    [10] SM-DeliveryNotIntended    OPTIONAL,
- *     ip-sm-gwGuidanceIndicator    [11] NULL    OPTIONAL,
- *     imsi    [12] IMSI    OPTIONAL,
- *     t4-Trigger-Indicator    [14] NULL    OPTIONAL,
- *     singleAttemptDelivery    [13]    NULL    OPTIONAL,
- *     correlationID    [15] CorrelationID    OPTIONAL,
+ *     sm-RP-MTI    [8] SM-RP-MTI    type OPTIONAL,
+ *     sm-RP-SMEA    [9] SM-RP-SMEA    type OPTIONAL,
+ *     sm-deliveryNotIntended    [10] SM-DeliveryNotIntended    type OPTIONAL,
+ *     ip-sm-gwGuidanceIndicator    [11] NULL    type OPTIONAL,
+ *     imsi    [12] IMSI    type OPTIONAL,
+ *     t4-Trigger-Indicator    [14] NULL    type OPTIONAL,
+ *     singleAttemptDelivery    [13]    NULL    type OPTIONAL,
+ *     correlationID    [15] CorrelationID    type OPTIONAL,
  *     smsf-supportIndicator    [16] NULL    OPTIONAL }
  * ```
  * 

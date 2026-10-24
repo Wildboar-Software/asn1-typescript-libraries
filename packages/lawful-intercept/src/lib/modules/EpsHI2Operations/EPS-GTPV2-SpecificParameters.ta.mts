@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
     NULL,
-    OCTET_STRING,
-    OPTIONAL,
+    type OCTET_STRING,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
@@ -35,68 +35,68 @@ import { RemoteUeContextDisconnected, _decode_RemoteUeContextDisconnected, _enco
  * ```asn1
  * EPS-GTPV2-SpecificParameters ::= SEQUENCE
  * {
- *     pDNAddressAllocation                 [1]   OCTET STRING                       OPTIONAL,
- *     aPN                                  [2]   OCTET STRING (SIZE (1..100))       OPTIONAL,
- *     protConfigOptions                    [3]   ProtConfigOptions                  OPTIONAL,
- *     attachType                           [4]   OCTET STRING (SIZE (1))            OPTIONAL,
+ *     pDNAddressAllocation                 [1]   OCTET STRING                       type OPTIONAL,
+ *     aPN                                  [2]   OCTET STRING (SIZE (1..100))       type OPTIONAL,
+ *     protConfigOptions                    [3]   ProtConfigOptions                  type OPTIONAL,
+ *     attachType                           [4]   OCTET STRING (SIZE (1))            type OPTIONAL,
  *     -- coded according to TS 24.301 [47]
- *     ePSBearerIdentity                    [5]   OCTET STRING                       OPTIONAL,
- *     detachType                           [6]   OCTET STRING (SIZE (1))            OPTIONAL,
+ *     ePSBearerIdentity                    [5]   OCTET STRING                       type OPTIONAL,
+ *     detachType                           [6]   OCTET STRING (SIZE (1))            type OPTIONAL,
  *     -- coded according to TS 24.301 [47], includes switch off indicator
- *     rATType                              [7]   OCTET STRING (SIZE (1))            OPTIONAL,
- *     failedBearerActivationReason         [8]   OCTET STRING (SIZE (1))            OPTIONAL,
- *     ePSBearerQoS                         [9]   OCTET STRING                       OPTIONAL,
- *     bearerActivationType                 [10]  TypeOfBearer                       OPTIONAL,
- *     aPN-AMBR                             [11]  OCTET STRING                       OPTIONAL,
+ *     rATType                              [7]   OCTET STRING (SIZE (1))            type OPTIONAL,
+ *     failedBearerActivationReason         [8]   OCTET STRING (SIZE (1))            type OPTIONAL,
+ *     ePSBearerQoS                         [9]   OCTET STRING                       type OPTIONAL,
+ *     bearerActivationType                 [10]  TypeOfBearer                       type OPTIONAL,
+ *     aPN-AMBR                             [11]  OCTET STRING                       type OPTIONAL,
  *     -- see 3GPP TS 29.274 [46] parameters coding rules defined for EPS-GTPV2-SpecificParameters.
- *     procedureTransactionId               [12]  OCTET STRING                       OPTIONAL,
- *     linkedEPSBearerId                    [13]  OCTET STRING                       OPTIONAL,
+ *     procedureTransactionId               [12]  OCTET STRING                       type OPTIONAL,
+ *     linkedEPSBearerId                    [13]  OCTET STRING                       type OPTIONAL,
  *     --The Linked EPS Bearer Identity shall be included and coded according to 3GPP TS 29.274 [46].
- *     tFT                                  [14]  OCTET STRING                       OPTIONAL,
+ *     tFT                                  [14]  OCTET STRING                       type OPTIONAL,
  *     -- Only octets 3 onwards of TFT IE from 3GPP TS 24.008 [9] shall be included.
- *     handoverIndication                   [15]  NULL                               OPTIONAL,
- *     failedBearerModReason                [16]  OCTET STRING (SIZE (1))            OPTIONAL,
- *     trafficAggregateDescription          [17]  OCTET STRING                       OPTIONAL,
- *     failedTAUReason                      [18]  OCTET STRING (SIZE (1))            OPTIONAL,
+ *     handoverIndication                   [15]  NULL                               type OPTIONAL,
+ *     failedBearerModReason                [16]  OCTET STRING (SIZE (1))            type OPTIONAL,
+ *     trafficAggregateDescription          [17]  OCTET STRING                       type OPTIONAL,
+ *     failedTAUReason                      [18]  OCTET STRING (SIZE (1))            type OPTIONAL,
  *     -- coded according to TS 24.301 [47]
- *     failedEUTRANAttachReason             [19]  OCTET STRING (SIZE (1))            OPTIONAL,
+ *     failedEUTRANAttachReason             [19]  OCTET STRING (SIZE (1))            type OPTIONAL,
  *     -- coded according to TS 24.301 [47]
- *     servingMMEaddress                    [20]  OCTET STRING                       OPTIONAL,
+ *     servingMMEaddress                    [20]  OCTET STRING                       type OPTIONAL,
  *     -- Contains the data fields from the Diameter Origin-Host and Origin-Realm AVPs
  *     -- as received in the HSS from the MME according to the TS 29.272 [59].
  *     -- Only the data fields from the Diameter AVPs are provided concatenated
  *     -- with a semicolon to populate this field.
- *     bearerDeactivationType               [21]  TypeOfBearer                       OPTIONAL,
- *     bearerDeactivationCause              [22]  OCTET STRING (SIZE (1))            OPTIONAL,
- *     ePSlocationOfTheTarget               [23]  EPSLocation                        OPTIONAL,
+ *     bearerDeactivationType               [21]  TypeOfBearer                       type OPTIONAL,
+ *     bearerDeactivationCause              [22]  OCTET STRING (SIZE (1))            type OPTIONAL,
+ *     ePSlocationOfTheTarget               [23]  EPSLocation                        type OPTIONAL,
  *       -- the use of ePSLocationOfTheTarget is mutually exclusive with the use of locationOfTheTarget
  *       -- ePSlocationOfTheTarget allows using the coding of the parameter according to SAE stage 3.
  *       -- location of the target
  *       -- or cell site location
  *     ...,
- *     pDNType                              [24]   OCTET STRING (SIZE (1))           OPTIONAL,
+ *     pDNType                              [24]   OCTET STRING (SIZE (1))           type OPTIONAL,
  *     -- coded according to TS 24.301 [47]
  * 
- *     requestType                          [25]  OCTET STRING (SIZE (1))            OPTIONAL,
+ *     requestType                          [25]  OCTET STRING (SIZE (1))            type OPTIONAL,
  *       -- coded according to TS 24.301 [47]
- *     uEReqPDNConnFailReason               [26]  OCTET STRING (SIZE (1))            OPTIONAL,
+ *     uEReqPDNConnFailReason               [26]  OCTET STRING (SIZE (1))            type OPTIONAL,
  *       -- coded according to TS 24.301 [47]
- *     extendedHandoverIndication             [27]  OCTET STRING (SIZE (1))               OPTIONAL,
+ *     extendedHandoverIndication             [27]  OCTET STRING (SIZE (1))               type OPTIONAL,
  *     -- This parameter with value 1 indicates handover based on the flags in the TS 29.274 [46].
  *     -- Otherwise set to the value 0.
  *     -- The use of extendedHandoverIndication and handoverIndication parameters is
  *     -- mutually exclusive and depends on the actual ASN.1 encoding method.
  * 
- *     uLITimestamp                         [28]  OCTET STRING (SIZE (8))            OPTIONAL,
+ *     uLITimestamp                         [28]  OCTET STRING (SIZE (8))            type OPTIONAL,
  *     -- The upper 4 octets shall carry the ULI Timestamp value; The lower 4 octets are undefined
  *     -- and shall be ignored by the receiver
  * 
- *     uELocalIPAddress                     [29]  OCTET STRING                       OPTIONAL,
- *     uEUdpPort                            [30]  OCTET STRING (SIZE (2))            OPTIONAL,
- *     tWANIdentifier                       [31]  OCTET STRING                       OPTIONAL,
- *     tWANIdentifierTimestamp              [32]  OCTET STRING (SIZE (4))            OPTIONAL,
- *     proSeRemoteUeContextConnected        [33]  RemoteUeContextConnected           OPTIONAL,
- *     proSeRemoteUeContextDisconnected     [34]  RemoteUeContextDisconnected        OPTIONAL,
+ *     uELocalIPAddress                     [29]  OCTET STRING                       type OPTIONAL,
+ *     uEUdpPort                            [30]  OCTET STRING (SIZE (2))            type OPTIONAL,
+ *     tWANIdentifier                       [31]  OCTET STRING                       type OPTIONAL,
+ *     tWANIdentifierTimestamp              [32]  OCTET STRING (SIZE (4))            type OPTIONAL,
+ *     proSeRemoteUeContextConnected        [33]  RemoteUeContextConnected           type OPTIONAL,
+ *     proSeRemoteUeContextDisconnected     [34]  RemoteUeContextDisconnected        type OPTIONAL,
  *     secondaryRATUsageIndication          [35]  NULL                               OPTIONAL
  *     }
  * ```

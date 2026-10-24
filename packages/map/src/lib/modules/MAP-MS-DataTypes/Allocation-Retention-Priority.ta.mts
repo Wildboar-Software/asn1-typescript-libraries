@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    INTEGER,
-    OPTIONAL,
+    type BOOLEAN,
+    type INTEGER,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -23,9 +23,9 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * ```asn1
  * Allocation-Retention-Priority ::= SEQUENCE {
  *     priority-level    [0] INTEGER,
- *     pre-emption-capability    [1] BOOLEAN    OPTIONAL,
- *     pre-emption-vulnerability    [2] BOOLEAN    OPTIONAL,
- *     extensionContainer    [3] ExtensionContainer    OPTIONAL,
+ *     pre-emption-capability    [1] BOOLEAN    type OPTIONAL,
+ *     pre-emption-vulnerability    [2] BOOLEAN    type OPTIONAL,
+ *     extensionContainer    [3] ExtensionContainer    type OPTIONAL,
  *     ... }
  * ```
  * 

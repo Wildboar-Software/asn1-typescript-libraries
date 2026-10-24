@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -33,29 +33,29 @@ import { T_CSI, _decode_T_CSI, _encode_T_CSI } from "../MAP-MS-DataTypes/T-CSI.t
  * 
  * ```asn1
  * CAMEL-SubscriptionInfo ::= SEQUENCE {
- *     o-CSI    [0]    O-CSI    OPTIONAL,
- *     o-BcsmCamelTDP-CriteriaList    [1]    O-BcsmCamelTDPCriteriaList    OPTIONAL, 
- *     d-CSI    [2]    D-CSI    OPTIONAL,
- *     t-CSI    [3]    T-CSI    OPTIONAL,
- *     t-BCSM-CAMEL-TDP-CriteriaList    [4]    T-BCSM-CAMEL-TDP-CriteriaList    OPTIONAL,
- *     vt-CSI    [5]    T-CSI    OPTIONAL,
- *     vt-BCSM-CAMEL-TDP-CriteriaList    [6]    T-BCSM-CAMEL-TDP-CriteriaList    OPTIONAL,
- *     tif-CSI    [7]    NULL    OPTIONAL,
- *     tif-CSI-NotificationToCSE    [8]    NULL    OPTIONAL,
- *     gprs-CSI    [9]    GPRS-CSI    OPTIONAL,
- *     mo-sms-CSI    [10]    SMS-CSI    OPTIONAL,
- *     ss-CSI    [11]    SS-CSI    OPTIONAL,
- *     m-CSI    [12]    M-CSI    OPTIONAL,
- *     extensionContainer    [13]    ExtensionContainer    OPTIONAL,
+ *     o-CSI    [0]    O-CSI    type OPTIONAL,
+ *     o-BcsmCamelTDP-CriteriaList    [1]    O-BcsmCamelTDPCriteriaList    type OPTIONAL, 
+ *     d-CSI    [2]    D-CSI    type OPTIONAL,
+ *     t-CSI    [3]    T-CSI    type OPTIONAL,
+ *     t-BCSM-CAMEL-TDP-CriteriaList    [4]    T-BCSM-CAMEL-TDP-CriteriaList    type OPTIONAL,
+ *     vt-CSI    [5]    T-CSI    type OPTIONAL,
+ *     vt-BCSM-CAMEL-TDP-CriteriaList    [6]    T-BCSM-CAMEL-TDP-CriteriaList    type OPTIONAL,
+ *     tif-CSI    [7]    NULL    type OPTIONAL,
+ *     tif-CSI-NotificationToCSE    [8]    NULL    type OPTIONAL,
+ *     gprs-CSI    [9]    GPRS-CSI    type OPTIONAL,
+ *     mo-sms-CSI    [10]    SMS-CSI    type OPTIONAL,
+ *     ss-CSI    [11]    SS-CSI    type OPTIONAL,
+ *     m-CSI    [12]    M-CSI    type OPTIONAL,
+ *     extensionContainer    [13]    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     specificCSIDeletedList    [14]    SpecificCSI-Withdraw    OPTIONAL,
- *     mt-sms-CSI    [15]    SMS-CSI    OPTIONAL,
- *     mt-smsCAMELTDP-CriteriaList    [16]    MT-smsCAMELTDP-CriteriaList    OPTIONAL,
- *     mg-csi    [17]    MG-CSI    OPTIONAL,
- *     o-IM-CSI    [18] O-CSI    OPTIONAL,
- *     o-IM-BcsmCamelTDP-CriteriaList    [19] O-BcsmCamelTDPCriteriaList    OPTIONAL,
- *     d-IM-CSI    [20] D-CSI    OPTIONAL,
- *     vt-IM-CSI    [21] T-CSI    OPTIONAL,
+ *     specificCSIDeletedList    [14]    SpecificCSI-Withdraw    type OPTIONAL,
+ *     mt-sms-CSI    [15]    SMS-CSI    type OPTIONAL,
+ *     mt-smsCAMELTDP-CriteriaList    [16]    MT-smsCAMELTDP-CriteriaList    type OPTIONAL,
+ *     mg-csi    [17]    MG-CSI    type OPTIONAL,
+ *     o-IM-CSI    [18] O-CSI    type OPTIONAL,
+ *     o-IM-BcsmCamelTDP-CriteriaList    [19] O-BcsmCamelTDPCriteriaList    type OPTIONAL,
+ *     d-IM-CSI    [20] D-CSI    type OPTIONAL,
+ *     vt-IM-CSI    [21] T-CSI    type OPTIONAL,
  *     vt-IM-BCSM-CAMEL-TDP-CriteriaList    [22]    T-BCSM-CAMEL-TDP-CriteriaList    OPTIONAL
  *     }
  * ```

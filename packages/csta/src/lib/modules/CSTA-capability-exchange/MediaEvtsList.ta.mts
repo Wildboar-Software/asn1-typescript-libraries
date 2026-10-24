@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -28,7 +28,7 @@ import { MediaDetached, _decode_MediaDetached, _encode_MediaDetached } from "../
  * 
  * ```asn1
  * MediaEvtsList ::= SEQUENCE
- * {     mediaAttached             [0] IMPLICIT     MediaAttached         OPTIONAL,
+ * {     mediaAttached             [0] IMPLICIT     MediaAttached         type OPTIONAL,
  *     mediaDetached             [1] IMPLICIT     MediaDetached         OPTIONAL }
  * ```
  * 

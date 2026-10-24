@@ -33,10 +33,10 @@ import {
  *
  * ```asn1
  * OPERATION ::= CLASS {
- *   &ArgumentType          OPTIONAL,
+ *   &ArgumentType          type OPTIONAL,
  *   &argumentTypeOptional  BOOLEAN OPTIONAL,
  *   &returnResult          BOOLEAN DEFAULT TRUE,
- *   &ResultType            OPTIONAL,
+ *   &ResultType            type OPTIONAL,
  *   &resultTypeOptional    BOOLEAN OPTIONAL,
  *   &Errors                ERROR OPTIONAL,
  *   &Linked                OPERATION OPTIONAL,

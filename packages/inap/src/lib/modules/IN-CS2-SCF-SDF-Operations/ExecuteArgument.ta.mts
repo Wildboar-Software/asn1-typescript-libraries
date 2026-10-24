@@ -37,13 +37,13 @@ import { ExecuteArgument_Type, _decode_ExecuteArgument_Type, _encode_ExecuteArgu
  *                                                            &Type
  *                                                          ({SupportedMethods}
  *                                                             {@method-id})
- *                                                     OPTIONAL,
+ *                                                     type OPTIONAL,
  *                                                 contextList
  *                                                   [1]  SET OF Context
  *                                       } OPTIONAL} OPTIONAL,
  *           specific-input
  *             [3]  METHOD.&SpecificInput({SupportedMethods}{@method-id})
- *               OPTIONAL,
+ *               type OPTIONAL,
  *           COMPONENTS OF CommonArguments}}
  * ```
  */

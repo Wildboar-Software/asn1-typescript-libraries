@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -29,7 +29,7 @@ import { type Extensions, _decode_Extensions, _encode_Extensions } from "../CAP-
  * RequestReportBCSMEventArg {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *     bcsmEvents                [0] SEQUENCE SIZE(1..bound.&numOfBCSMEvents) OF
  *                         BCSMEvent {bound},
- *     extensions                [2] Extensions {bound}            OPTIONAL,
+ *     extensions                [2] Extensions {bound}            type OPTIONAL,
  *     ...
  *     }
  * ```

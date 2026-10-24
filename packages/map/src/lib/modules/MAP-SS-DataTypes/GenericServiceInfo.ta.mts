@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -25,13 +25,13 @@ import { SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataT
  * ```asn1
  * GenericServiceInfo ::= SEQUENCE {
  *     ss-Status    SS-Status,
- *     cliRestrictionOption    CliRestrictionOption    OPTIONAL,
+ *     cliRestrictionOption    CliRestrictionOption    type OPTIONAL,
  *     ...,
- *     maximumEntitledPriority    [0] EMLPP-Priority    OPTIONAL,
- *     defaultPriority    [1] EMLPP-Priority    OPTIONAL,
- *     ccbs-FeatureList    [2] CCBS-FeatureList    OPTIONAL,
- *     nbrSB    [3] MaxMC-Bearers    OPTIONAL,
- *     nbrUser    [4] MC-Bearers    OPTIONAL,
+ *     maximumEntitledPriority    [0] EMLPP-Priority    type OPTIONAL,
+ *     defaultPriority    [1] EMLPP-Priority    type OPTIONAL,
+ *     ccbs-FeatureList    [2] CCBS-FeatureList    type OPTIONAL,
+ *     nbrSB    [3] MaxMC-Bearers    type OPTIONAL,
+ *     nbrUser    [4] MC-Bearers    type OPTIONAL,
  *     nbrSN    [5] MC-Bearers    OPTIONAL }
  * ```
  * 

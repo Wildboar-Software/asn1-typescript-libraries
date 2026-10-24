@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -24,8 +24,8 @@ import { CUG_SubscriptionList, _decode_CUG_SubscriptionList, _encode_CUG_Subscri
  * ```asn1
  * CUG-Info ::= SEQUENCE {
  *     cug-SubscriptionList    CUG-SubscriptionList,
- *     cug-FeatureList    CUG-FeatureList    OPTIONAL,
- *     extensionContainer    [0] ExtensionContainer    OPTIONAL,
+ *     cug-FeatureList    CUG-FeatureList    type OPTIONAL,
+ *     extensionContainer    [0] ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 

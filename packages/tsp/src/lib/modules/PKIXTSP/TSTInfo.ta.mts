@@ -2,10 +2,10 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN,
+    type BOOLEAN,
     GeneralizedTime,
-    OCTET_STRING,
-    OPTIONAL,
+    type OCTET_STRING,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -66,12 +66,12 @@ import {
  *     -- Time-Stamping users MUST be ready to accommodate integers
  *     -- up to 160 bits.
  *     genTime                      GeneralizedTime,
- *     accuracy                     Accuracy                 OPTIONAL,
+ *     accuracy                     Accuracy                 type OPTIONAL,
  *     ordering                     BOOLEAN             DEFAULT FALSE,
- *     nonce                        INTEGER                  OPTIONAL,
+ *     nonce                        INTEGER                  type OPTIONAL,
  *     -- MUST be present if the similar field was present
  *     -- in TimeStampReq.  In that case it MUST have the same value.
- *     tsa                          [0] GeneralName          OPTIONAL,
+ *     tsa                          [0] GeneralName          type OPTIONAL,
  *     extensions                   [1] IMPLICIT Extensions  OPTIONAL   }
  * ```
  *

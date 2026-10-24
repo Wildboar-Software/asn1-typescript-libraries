@@ -2,9 +2,9 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
+    type OPTIONAL,
+    type BOOLEAN,
+    type INTEGER,
     SEQUENCE,
     ASN1Element as _Element
 } from "@wildboar/asn1";
@@ -29,9 +29,9 @@ import { MediaServiceCapsList_Item, _decode_MediaServiceCapsList_Item, _encode_M
  * ```asn1
  * MediaServiceCapsList  ::=  SEQUENCE OF SEQUENCE
  * {     mediaServiceType             MediaServiceType,
- *     mediaServiceVersion             INTEGER             OPTIONAL,
- *     mediaServiceInstance             MediaServiceInstanceID         OPTIONAL,
- *     connectionMode                 ConnectionModeBMap         OPTIONAL,
+ *     mediaServiceVersion             INTEGER             type OPTIONAL,
+ *     mediaServiceInstance             MediaServiceInstanceID         type OPTIONAL,
+ *     connectionMode                 ConnectionModeBMap         type OPTIONAL,
  *     mediaStreamIDSupported             BOOLEAN }
  * ```
  */

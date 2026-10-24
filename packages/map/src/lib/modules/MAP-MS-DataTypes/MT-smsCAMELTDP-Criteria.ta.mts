@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -21,7 +21,7 @@ import { TPDU_TypeCriterion, _decode_TPDU_TypeCriterion, _encode_TPDU_TypeCriter
  * ```asn1
  * MT-smsCAMELTDP-Criteria ::= SEQUENCE {
  *     sms-TriggerDetectionPoint    SMS-TriggerDetectionPoint,
- *     tpdu-TypeCriterion    [0]    TPDU-TypeCriterion    OPTIONAL,
+ *     tpdu-TypeCriterion    [0]    TPDU-TypeCriterion    type OPTIONAL,
  *     ... }
  * ```
  * 

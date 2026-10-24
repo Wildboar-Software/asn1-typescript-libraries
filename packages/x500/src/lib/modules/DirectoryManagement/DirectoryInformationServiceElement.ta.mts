@@ -2,7 +2,7 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -36,7 +36,7 @@ import {
  *   operationType
  *     BIT STRING {read(0), compare(1), abandon(2), list(3), search(4),
  *                 addEntry(5), removeEntry(6), modifyEntry(7), modifyDN(8)}
- *       OPTIONAL,
+ *       type OPTIONAL,
  *   attributeType   AttributeType OPTIONAL,
  *   attributeValue  [0]  AttributeValue OPTIONAL
  * }

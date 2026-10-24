@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -29,15 +29,15 @@ import { SmsGmsc_Alert_Event, _decode_SmsGmsc_Alert_Event, _encode_SmsGmsc_Alert
  *     msisdn    ISDN-AddressString,
  *     serviceCentreAddress    AddressString,
  *     ...,
- *     imsi    IMSI    OPTIONAL,
- *     correlationID    CorrelationID    OPTIONAL,
- *     maximumUeAvailabilityTime    [0] Time    OPTIONAL,
- *     smsGmscAlertEvent    [1] SmsGmsc-Alert-Event    OPTIONAL,
- *     smsGmscDiameterAddress    [2] NetworkNodeDiameterAddress    OPTIONAL,
- *     newSGSNNumber    [3] ISDN-AddressString    OPTIONAL,
- *     newSGSNDiameterAddress    [4] NetworkNodeDiameterAddress    OPTIONAL,
- *     newMMENumber    [5] ISDN-AddressString    OPTIONAL,
- *     newMMEDiameterAddress    [6] NetworkNodeDiameterAddress    OPTIONAL,
+ *     imsi    IMSI    type OPTIONAL,
+ *     correlationID    CorrelationID    type OPTIONAL,
+ *     maximumUeAvailabilityTime    [0] Time    type OPTIONAL,
+ *     smsGmscAlertEvent    [1] SmsGmsc-Alert-Event    type OPTIONAL,
+ *     smsGmscDiameterAddress    [2] NetworkNodeDiameterAddress    type OPTIONAL,
+ *     newSGSNNumber    [3] ISDN-AddressString    type OPTIONAL,
+ *     newSGSNDiameterAddress    [4] NetworkNodeDiameterAddress    type OPTIONAL,
+ *     newMMENumber    [5] ISDN-AddressString    type OPTIONAL,
+ *     newMMEDiameterAddress    [6] NetworkNodeDiameterAddress    type OPTIONAL,
  *     newMSCNumber    [7] ISDN-AddressString    OPTIONAL }
  * ```
  * 

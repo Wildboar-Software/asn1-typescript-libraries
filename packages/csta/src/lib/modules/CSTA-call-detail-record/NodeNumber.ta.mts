@@ -2,8 +2,8 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
+    type OPTIONAL,
+    type INTEGER,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -25,8 +25,8 @@ import {
  * 
  * ```asn1
  * NodeNumber ::= SEQUENCE
- * {     area0                 [ 0] IMPLICIT     INTEGER             OPTIONAL,
- *     area1                 [ 1] IMPLICIT     INTEGER             OPTIONAL,
+ * {     area0                 [ 0] IMPLICIT     INTEGER             type OPTIONAL,
+ *     area1                 [ 1] IMPLICIT     INTEGER             type OPTIONAL,
  *     area2                 [ 2] IMPLICIT     INTEGER             OPTIONAL }
  * ```
  * 

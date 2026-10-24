@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -31,7 +31,7 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  *      filteringCharacteristics     [1] FilteringCharacteristics,
  *      filteringTimeOut     [2] FilteringTimeOut,
  *      filteringCriteria     [3] FilteringCriteria,
- *      startTime     [4] DateAndTime     OPTIONAL,
+ *      startTime     [4] DateAndTime     type OPTIONAL,
  *      extensions     [5] SEQUENCE SIZE(1..numOfExtensions) OF ExtensionField     OPTIONAL
  * --  ...
  *      }

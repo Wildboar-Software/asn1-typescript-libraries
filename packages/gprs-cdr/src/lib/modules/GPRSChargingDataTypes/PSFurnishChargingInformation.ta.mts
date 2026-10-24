@@ -2,9 +2,9 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN,
-    OCTET_STRING,
-    OPTIONAL,
+    type BOOLEAN,
+    type OCTET_STRING,
+    type OPTIONAL,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";

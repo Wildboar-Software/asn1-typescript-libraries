@@ -2,7 +2,7 @@
 import {
     joint_iso_itu_t,
     ObjectIdentifier as _OID,
-    OBJECT_IDENTIFIER,
+    type OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
 
 

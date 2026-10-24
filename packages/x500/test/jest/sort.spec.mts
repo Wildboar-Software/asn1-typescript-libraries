@@ -1,7 +1,7 @@
 import {
     ASN1Element,
     ObjectIdentifier,
-    OBJECT_IDENTIFIER,
+    type OBJECT_IDENTIFIER,
     DERElement,
     ASN1TagClass,
     ASN1Construction,

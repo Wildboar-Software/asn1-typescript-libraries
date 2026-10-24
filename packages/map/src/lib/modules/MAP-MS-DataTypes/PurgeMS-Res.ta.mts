@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -23,9 +23,9 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * 
  * ```asn1
  * PurgeMS-Res ::= SEQUENCE {
- *     freezeTMSI    [0]    NULL    OPTIONAL,
- *     freezeP-TMSI    [1]    NULL    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     freezeTMSI    [0]    NULL    type OPTIONAL,
+ *     freezeP-TMSI    [1]    NULL    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...,
  *     freezeM-TMSI    [2]    NULL    OPTIONAL }
  * ```

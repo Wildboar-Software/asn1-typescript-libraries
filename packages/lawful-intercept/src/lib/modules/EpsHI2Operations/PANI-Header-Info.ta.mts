@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
     NULL,
-    OCTET_STRING,
-    OPTIONAL,
+    type OCTET_STRING,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -31,13 +31,13 @@ import { PANI_Location, _decode_PANI_Location, _encode_PANI_Location } from "../
  * ```asn1
  * PANI-Header-Info ::= SEQUENCE
  * {
- *     access-Type         [1] OCTET STRING         OPTIONAL,
+ *     access-Type         [1] OCTET STRING         type OPTIONAL,
  *     -- ASCII chain '3GPP-UTRAN-TDD', '3GPP-E-UTRAN-TDD',... : see TS 24.229 7.2A.4 [76]
- *     access-Class          [2] OCTET STRING        OPTIONAL,
+ *     access-Class          [2] OCTET STRING        type OPTIONAL,
  *     -- ASCII chain '3GPP-UTRAN', '3GPP-E-UTRAN',... : see TS 24.229 7.2A.4 [76]
- *     network-Provided    [3] NULL                OPTIONAL,
+ *     network-Provided    [3] NULL                type OPTIONAL,
  *     -- present if provided by the network
- *     pANI-Location        [4] PANI-Location         OPTIONAL,
+ *     pANI-Location        [4] PANI-Location         type OPTIONAL,
  *     ...
  * }
  * ```

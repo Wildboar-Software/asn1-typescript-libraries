@@ -2,8 +2,8 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
+    type OPTIONAL,
+    type INTEGER,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -31,9 +31,9 @@ import { DisplayID, _decode_DisplayID, _encode_DisplayID } from "../CSTA-physica
  * 
  * ```asn1
  * DisplayAttribute ::= SEQUENCE
- * {    displayID            DisplayID                 OPTIONAL,
- *     physicalBaseRowNumber        [0] IMPLICIT INTEGER            OPTIONAL,
- *     physicalBaseColumnNumber    [1] IMPLICIT INTEGER            OPTIONAL,
+ * {    displayID            DisplayID                 type OPTIONAL,
+ *     physicalBaseRowNumber        [0] IMPLICIT INTEGER            type OPTIONAL,
+ *     physicalBaseColumnNumber    [1] IMPLICIT INTEGER            type OPTIONAL,
  *     offset                [2] IMPLICIT INTEGER            OPTIONAL }
  * ```
  * 

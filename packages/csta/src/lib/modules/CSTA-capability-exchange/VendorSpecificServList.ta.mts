@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -34,10 +34,10 @@ import { PrivateDataVersionSelection, _decode_PrivateDataVersionSelection, _enco
  * 
  * ```asn1
  * VendorSpecificServList ::= SEQUENCE
- * {     escapeRegister             [ 0] IMPLICIT     EscapeRegister             OPTIONAL,
- *     escapeRegisterCancel         [ 1] IMPLICIT     EscapeRegisterCancel         OPTIONAL,
- *     escapeRegisterAbort         [ 2] IMPLICIT     EscapeRegisterAbort         OPTIONAL,
- *     escape                 [ 3] IMPLICIT     Escape                 OPTIONAL,
+ * {     escapeRegister             [ 0] IMPLICIT     EscapeRegister             type OPTIONAL,
+ *     escapeRegisterCancel         [ 1] IMPLICIT     EscapeRegisterCancel         type OPTIONAL,
+ *     escapeRegisterAbort         [ 2] IMPLICIT     EscapeRegisterAbort         type OPTIONAL,
+ *     escape                 [ 3] IMPLICIT     Escape                 type OPTIONAL,
  *     privateDataVersionSelection     [ 4] IMPLICIT     PrivateDataVersionSelection     OPTIONAL }
  * ```
  * 

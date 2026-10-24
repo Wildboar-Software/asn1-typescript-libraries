@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -32,9 +32,9 @@ import { ConnectToResourceArg_resourceAddress, _decode_ConnectToResourceArg_reso
  *     ipRoutingAddress            [0] IPRoutingAddress {bound},
  *     none                [3] NULL
  *     },
- *     extensions                [4] Extensions {bound}            OPTIONAL,
- *     serviceInteractionIndicatorsTwo    [7] ServiceInteractionIndicatorsTwo        OPTIONAL,
- *     callSegmentID            [50] CallSegmentID {bound}            OPTIONAL,
+ *     extensions                [4] Extensions {bound}            type OPTIONAL,
+ *     serviceInteractionIndicatorsTwo    [7] ServiceInteractionIndicatorsTwo        type OPTIONAL,
+ *     callSegmentID            [50] CallSegmentID {bound}            type OPTIONAL,
  *     ...
  *     }
  * ```

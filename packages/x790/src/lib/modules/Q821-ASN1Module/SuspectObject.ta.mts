@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    OBJECT_IDENTIFIER,
+    type OPTIONAL,
+    type INTEGER,
+    type OBJECT_IDENTIFIER,
     SEQUENCE,
     SET,
     ASN1Element as _Element,

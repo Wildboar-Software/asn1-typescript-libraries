@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -31,15 +31,15 @@ import { SelectedUMTS_Algorithms, _decode_SelectedUMTS_Algorithms, _encode_Selec
  * ```asn1
  * ProcessAccessSignalling-Arg ::= [3] SEQUENCE {
  *     an-APDU    AccessNetworkSignalInfo,
- *     selectedUMTS-Algorithms    [1]    SelectedUMTS-Algorithms    OPTIONAL,
- *     selectedGSM-Algorithm    [2]    SelectedGSM-Algorithm    OPTIONAL,
+ *     selectedUMTS-Algorithms    [1]    SelectedUMTS-Algorithms    type OPTIONAL,
+ *     selectedGSM-Algorithm    [2]    SelectedGSM-Algorithm    type OPTIONAL,
  *     chosenRadioResourceInformation    [3] ChosenRadioResourceInformation OPTIONAL,
- *     selectedRab-Id    [4] RAB-Id    OPTIONAL,
- *     extensionContainer    [0]    ExtensionContainer    OPTIONAL,
+ *     selectedRab-Id    [4] RAB-Id    type OPTIONAL,
+ *     extensionContainer    [0]    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     iUSelectedCodec    [5] Codec    OPTIONAL,
- *     iuAvailableCodecsList    [6] CodecList    OPTIONAL,
- *     aoipSelectedCodecTarget    [7] AoIPCodec    OPTIONAL,
+ *     iUSelectedCodec    [5] Codec    type OPTIONAL,
+ *     iuAvailableCodecsList    [6] CodecList    type OPTIONAL,
+ *     aoipSelectedCodecTarget    [7] AoIPCodec    type OPTIONAL,
  *     aoipAvailableCodecsListMap    [8] AoIPCodecsList    OPTIONAL }
  * ```
  * 

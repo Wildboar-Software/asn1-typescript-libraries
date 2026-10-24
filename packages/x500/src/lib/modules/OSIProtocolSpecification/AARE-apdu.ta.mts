@@ -2,7 +2,7 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
     TRUE_BIT,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -70,10 +70,10 @@ import {
  *   application-context-name             [1]  Application-context-name,
  *   result                               [2]  Associate-result(accepted),
  *   result-source-diagnostic             [3]  Associate-source-diagnostic,
- *   responding-AP-title                  [4]  Name                          OPTIONAL,
- *   responding-AE-qualifier              [5]  RelativeDistinguishedName     OPTIONAL,
- *   responding-AP-invocation-identifier  [6]  AP-invocation-identifier      OPTIONAL,
- *   responding-AE-invocation-identifier  [7]  AE-invocation-identifier      OPTIONAL,
+ *   responding-AP-title                  [4]  Name                          type OPTIONAL,
+ *   responding-AE-qualifier              [5]  RelativeDistinguishedName     type OPTIONAL,
+ *   responding-AP-invocation-identifier  [6]  AP-invocation-identifier      type OPTIONAL,
+ *   responding-AE-invocation-identifier  [7]  AE-invocation-identifier      type OPTIONAL,
  *   implementation-information           [29] IMPLICIT Implementation-data  OPTIONAL,
  *   user-information                     [30] IMPLICIT
  *                                         Association-informationBindRes{{Protocols}}}

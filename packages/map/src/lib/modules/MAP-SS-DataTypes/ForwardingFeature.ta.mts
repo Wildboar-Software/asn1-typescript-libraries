@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -27,12 +27,12 @@ import { SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataT
  * 
  * ```asn1
  * ForwardingFeature ::= SEQUENCE {
- *     basicService    BasicServiceCode    OPTIONAL,
- *     ss-Status    [4] SS-Status    OPTIONAL,
- *     forwardedToNumber    [5] ISDN-AddressString    OPTIONAL,
- *     forwardedToSubaddress    [8] ISDN-SubaddressString    OPTIONAL,
- *     forwardingOptions    [6] ForwardingOptions    OPTIONAL,
- *     noReplyConditionTime    [7] NoReplyConditionTime    OPTIONAL,
+ *     basicService    BasicServiceCode    type OPTIONAL,
+ *     ss-Status    [4] SS-Status    type OPTIONAL,
+ *     forwardedToNumber    [5] ISDN-AddressString    type OPTIONAL,
+ *     forwardedToSubaddress    [8] ISDN-SubaddressString    type OPTIONAL,
+ *     forwardingOptions    [6] ForwardingOptions    type OPTIONAL,
+ *     noReplyConditionTime    [7] NoReplyConditionTime    type OPTIONAL,
  *     ...,
  *     longForwardedToNumber    [9] FTN-AddressString    OPTIONAL }
  * ```

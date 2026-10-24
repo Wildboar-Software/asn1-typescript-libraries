@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    OPTIONAL,
+    type BOOLEAN,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -28,12 +28,12 @@ import { RAND, _decode_RAND, _encode_RAND } from "../MAP-MS-DataTypes/RAND.ta.mj
  * AuthenticationFailureReportArg ::= SEQUENCE {
  *     imsi    IMSI,
  *     failureCause    FailureCause,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ... ,
- *     re-attempt    BOOLEAN    OPTIONAL,
- *     accessType    AccessType    OPTIONAL,
- *     rand    RAND    OPTIONAL,
- *     vlr-Number    [0] ISDN-AddressString    OPTIONAL,
+ *     re-attempt    BOOLEAN    type OPTIONAL,
+ *     accessType    AccessType    type OPTIONAL,
+ *     rand    RAND    type OPTIONAL,
+ *     vlr-Number    [0] ISDN-AddressString    type OPTIONAL,
  *     sgsn-Number    [1] ISDN-AddressString    OPTIONAL }
  * ```
  * 

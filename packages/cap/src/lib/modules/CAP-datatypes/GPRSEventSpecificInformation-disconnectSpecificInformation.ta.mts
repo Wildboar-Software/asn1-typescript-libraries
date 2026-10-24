@@ -1,5 +1,5 @@
 import {
-    OPTIONAL,
+    type OPTIONAL,
     NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,

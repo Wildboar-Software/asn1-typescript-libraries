@@ -67,27 +67,27 @@ import {
  *     -- identifies the sender
  *     recipient           GeneralName,
  *     -- identifies the intended recipient
- *     messageTime     [0] GeneralizedTime         OPTIONAL,
+ *     messageTime     [0] GeneralizedTime         type OPTIONAL,
  *     -- time of production of this message (used when sender
  *     -- believes that the transport will be "suitable"; i.e.,
  *     -- that the time will still be meaningful upon receipt)
  *     protectionAlg   [1] AlgorithmIdentifier{ALGORITHM, {...}}
- *                             OPTIONAL,
+ *                             type OPTIONAL,
  *     -- algorithm used for calculation of protection bits
- *     senderKID       [2] KeyIdentifier           OPTIONAL,
- *     recipKID        [3] KeyIdentifier           OPTIONAL,
+ *     senderKID       [2] KeyIdentifier           type OPTIONAL,
+ *     recipKID        [3] KeyIdentifier           type OPTIONAL,
  *     -- to identify specific keys used for protection
- *     transactionID   [4] OCTET STRING            OPTIONAL,
+ *     transactionID   [4] OCTET STRING            type OPTIONAL,
  *     -- identifies the transaction; i.e., this will be the same in
  *     -- corresponding request, response, certConf, and PKIConf
  *     -- messages
- *     senderNonce     [5] OCTET STRING            OPTIONAL,
- *     recipNonce      [6] OCTET STRING            OPTIONAL,
+ *     senderNonce     [5] OCTET STRING            type OPTIONAL,
+ *     recipNonce      [6] OCTET STRING            type OPTIONAL,
  *     -- nonces used to provide replay protection, senderNonce
  *     -- is inserted by the creator of this message; recipNonce
  *     -- is a nonce previously inserted in a related message by
  *     -- the intended recipient of this message
- *     freeText        [7] PKIFreeText             OPTIONAL,
+ *     freeText        [7] PKIFreeText             type OPTIONAL,
  *     -- this may be used to indicate context-specific instructions
  *     -- (this field is intended for human consumption)
  *     generalInfo     [8] SEQUENCE SIZE (1..MAX) OF

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
+    type OPTIONAL,
+    type BOOLEAN,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -33,9 +33,9 @@ import { QualityOfService, _decode_QualityOfService, _encode_QualityOfService } 
  * ```asn1
  * ApplyChargingReportGPRSArg ::= SEQUENCE {
  *     chargingResult            [0] ChargingResult,
- *     qualityOfService            [1] QualityOfService            OPTIONAL,
+ *     qualityOfService            [1] QualityOfService            type OPTIONAL,
  *     active                [2] BOOLEAN DEFAULT TRUE,
- *     pDPID                [3] PDPID                    OPTIONAL,
+ *     pDPID                [3] PDPID                    type OPTIONAL,
  *     ...,
  *     chargingRollOver            [4]    ChargingRollOver            OPTIONAL
  *     }

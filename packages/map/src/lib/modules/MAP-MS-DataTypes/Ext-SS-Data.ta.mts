@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -27,9 +27,9 @@ import { SS_SubscriptionOption, _decode_SS_SubscriptionOption, _encode_SS_Subscr
  * Ext-SS-Data ::= SEQUENCE {
  *     ss-Code    SS-Code,
  *     ss-Status    [4] Ext-SS-Status,
- *     ss-SubscriptionOption    SS-SubscriptionOption    OPTIONAL,
- *     basicServiceGroupList    Ext-BasicServiceGroupList    OPTIONAL,
- *     extensionContainer    [5] ExtensionContainer    OPTIONAL,
+ *     ss-SubscriptionOption    SS-SubscriptionOption    type OPTIONAL,
+ *     basicServiceGroupList    Ext-BasicServiceGroupList    type OPTIONAL,
+ *     extensionContainer    [5] ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 

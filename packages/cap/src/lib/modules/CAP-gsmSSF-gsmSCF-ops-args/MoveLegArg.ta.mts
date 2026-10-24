@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -27,7 +27,7 @@ import { LegID, _decode_LegID, _encode_LegID } from "../Core-INAP-CS1-DataTypes/
  * ```asn1
  * MoveLegArg {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *     legIDToMove                [0]    LegID,
- *     extensions                [2]    Extensions {bound}            OPTIONAL,
+ *     extensions                [2]    Extensions {bound}            type OPTIONAL,
  *     ...
  *     }
  * ```

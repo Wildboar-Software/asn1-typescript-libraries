@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -23,8 +23,8 @@ import { TerminationCause, _decode_TerminationCause, _encode_TerminationCause, _
  * ```asn1
  * Deferredmt-lrData ::= SEQUENCE {
  *     deferredLocationEventType    DeferredLocationEventType,
- *     terminationCause    [0] TerminationCause    OPTIONAL,
- *     lcsLocationInfo    [1] LCSLocationInfo    OPTIONAL,
+ *     terminationCause    [0] TerminationCause    type OPTIONAL,
+ *     lcsLocationInfo    [1] LCSLocationInfo    type OPTIONAL,
  *     ...}
  * ```
  * 

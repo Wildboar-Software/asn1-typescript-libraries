@@ -2,9 +2,9 @@
 import {
     ASN1ConstructionError,
     ASN1SizeError,
-    BIT_STRING,
-    IA5String,
-    OPTIONAL,
+    type BIT_STRING,
+    type IA5String,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";

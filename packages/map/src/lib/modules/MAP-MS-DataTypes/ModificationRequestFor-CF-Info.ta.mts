@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -28,13 +28,13 @@ import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Cod
  * ```asn1
  * ModificationRequestFor-CF-Info ::= SEQUENCE {
  *     ss-Code    [0]    SS-Code,
- *     basicService    [1]    Ext-BasicServiceCode    OPTIONAL,
- *     ss-Status    [2]    Ext-SS-Status    OPTIONAL,
- *     forwardedToNumber    [3]    AddressString    OPTIONAL,
- *     forwardedToSubaddress    [4]    ISDN-SubaddressString    OPTIONAL,
- *     noReplyConditionTime    [5]    Ext-NoRepCondTime    OPTIONAL,
- *     modifyNotificationToCSE    [6]    ModificationInstruction    OPTIONAL,
- *     extensionContainer    [7]    ExtensionContainer    OPTIONAL,
+ *     basicService    [1]    Ext-BasicServiceCode    type OPTIONAL,
+ *     ss-Status    [2]    Ext-SS-Status    type OPTIONAL,
+ *     forwardedToNumber    [3]    AddressString    type OPTIONAL,
+ *     forwardedToSubaddress    [4]    ISDN-SubaddressString    type OPTIONAL,
+ *     noReplyConditionTime    [5]    Ext-NoRepCondTime    type OPTIONAL,
+ *     modifyNotificationToCSE    [6]    ModificationInstruction    type OPTIONAL,
+ *     extensionContainer    [7]    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 

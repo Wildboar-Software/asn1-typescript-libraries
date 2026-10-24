@@ -20,9 +20,9 @@ import * as $ from "@wildboar/asn1/functional";
  * 
  * ```asn1
  * StateAttributes ::= SEQUENCE {
- *     downlinkAttached    [5] NULL    OPTIONAL,
- *     uplinkAttached    [6] NULL    OPTIONAL,
- *     dualCommunication    [7] NULL    OPTIONAL,
+ *     downlinkAttached    [5] NULL    type OPTIONAL,
+ *     uplinkAttached    [6] NULL    type OPTIONAL,
+ *     dualCommunication    [7] NULL    type OPTIONAL,
  *     callOriginator    [8] NULL    OPTIONAL }
  * ```
  * 

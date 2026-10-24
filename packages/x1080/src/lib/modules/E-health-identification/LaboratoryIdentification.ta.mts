@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OBJECT_IDENTIFIER,
+    type OPTIONAL,
+    type OBJECT_IDENTIFIER,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -35,7 +35,7 @@ import {
  * LaboratoryIdentification ::= SEQUENCE {
  *   scheme         LABORATORY-SCHEME.&id ({LaboratorySchemes}),
  *   schemeName     LABORATORY-SCHEME.&name ({LaboratorySchemes}{@.scheme})
- *                  OPTIONAL,
+ *                  type OPTIONAL,
  *   qualifications LABORATORY-SCHEME.&Qualifications
  *                  ({LaboratorySchemes}{@.scheme}) OPTIONAL}
  * ```

@@ -37,7 +37,7 @@ import {
  * ```asn1
  * CertRepMessage ::= SEQUENCE {
  *     caPubs       [1] SEQUENCE SIZE (1..MAX) OF CMPCertificate
- *                 OPTIONAL,
+ *                 type OPTIONAL,
  *     response         SEQUENCE OF CertResponse }
  * ```
  *

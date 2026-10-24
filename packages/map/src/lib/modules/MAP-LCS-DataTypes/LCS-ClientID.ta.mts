@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -25,12 +25,12 @@ import { APN, _decode_APN, _encode_APN } from "../MAP-MS-DataTypes/APN.ta.mjs";
  * ```asn1
  * LCS-ClientID ::= SEQUENCE {
  *     lcsClientType    [0] LCSClientType,
- *     lcsClientExternalID    [1] LCSClientExternalID    OPTIONAL,
- *     lcsClientDialedByMS    [2] AddressString    OPTIONAL,
- *     lcsClientInternalID    [3] LCSClientInternalID    OPTIONAL,
- *     lcsClientName    [4] LCSClientName    OPTIONAL,
+ *     lcsClientExternalID    [1] LCSClientExternalID    type OPTIONAL,
+ *     lcsClientDialedByMS    [2] AddressString    type OPTIONAL,
+ *     lcsClientInternalID    [3] LCSClientInternalID    type OPTIONAL,
+ *     lcsClientName    [4] LCSClientName    type OPTIONAL,
  *     ...,
- *     lcsAPN    [5] APN    OPTIONAL,
+ *     lcsAPN    [5] APN    type OPTIONAL,
  *     lcsRequestorID    [6] LCSRequestorID    OPTIONAL }
  * ```
  * 

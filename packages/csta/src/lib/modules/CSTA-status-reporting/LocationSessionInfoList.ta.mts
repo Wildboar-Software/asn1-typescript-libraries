@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import * as $ from "@wildboar/asn1/functional";
-import { SEQUENCE, ASN1Element as _Element } from "@wildboar/asn1";
+import { type SEQUENCE, ASN1Element as _Element } from "@wildboar/asn1";
 import { LocationSessionListEntry, _decode_LocationSessionListEntry, _encode_LocationSessionListEntry } from "../CSTA-status-reporting/LocationSessionListEntry.ta.mjs";
 
 

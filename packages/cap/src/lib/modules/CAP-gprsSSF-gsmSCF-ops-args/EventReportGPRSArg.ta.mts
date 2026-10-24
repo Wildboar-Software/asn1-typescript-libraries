@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -31,7 +31,7 @@ import { MiscCallInfo, _decode_MiscCallInfo, _encode_MiscCallInfo } from "../IN-
  * EventReportGPRSArg {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *     gPRSEventType            [0] GPRSEventType,
  *     miscGPRSInfo            [1] MiscCallInfo DEFAULT {messageType request},
- *     gPRSEventSpecificInformation    [2]    GPRSEventSpecificInformation {bound}    OPTIONAL,
+ *     gPRSEventSpecificInformation    [2]    GPRSEventSpecificInformation {bound}    type OPTIONAL,
  *     pDPID                [3]    PDPID OPTIONAL,
  *     ...
  *     }

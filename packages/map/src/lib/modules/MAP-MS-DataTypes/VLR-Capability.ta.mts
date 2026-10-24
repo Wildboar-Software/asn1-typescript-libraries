@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -29,19 +29,19 @@ import { SupportedRAT_Types, _decode_SupportedRAT_Types, _encode_SupportedRAT_Ty
  * 
  * ```asn1
  * VLR-Capability ::= SEQUENCE{
- *     supportedCamelPhases     [0] SupportedCamelPhases    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     supportedCamelPhases     [0] SupportedCamelPhases    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ... ,
- *     solsaSupportIndicator    [2] NULL    OPTIONAL,
- *     istSupportIndicator    [1] IST-SupportIndicator    OPTIONAL,
- *     superChargerSupportedInServingNetworkEntity    [3] SuperChargerInfo    OPTIONAL,
- *     longFTN-Supported    [4]    NULL    OPTIONAL,
- *     supportedLCS-CapabilitySets    [5]    SupportedLCS-CapabilitySets    OPTIONAL,
- *     offeredCamel4CSIs    [6] OfferedCamel4CSIs    OPTIONAL,
- *     supportedRAT-TypesIndicator    [7]    SupportedRAT-Types    OPTIONAL,
- *     longGroupID-Supported    [8]    NULL    OPTIONAL,
- *     mtRoamingForwardingSupported    [9]    NULL    OPTIONAL,
- *     msisdn-lessOperation-Supported    [10]    NULL    OPTIONAL,
+ *     solsaSupportIndicator    [2] NULL    type OPTIONAL,
+ *     istSupportIndicator    [1] IST-SupportIndicator    type OPTIONAL,
+ *     superChargerSupportedInServingNetworkEntity    [3] SuperChargerInfo    type OPTIONAL,
+ *     longFTN-Supported    [4]    NULL    type OPTIONAL,
+ *     supportedLCS-CapabilitySets    [5]    SupportedLCS-CapabilitySets    type OPTIONAL,
+ *     offeredCamel4CSIs    [6] OfferedCamel4CSIs    type OPTIONAL,
+ *     supportedRAT-TypesIndicator    [7]    SupportedRAT-Types    type OPTIONAL,
+ *     longGroupID-Supported    [8]    NULL    type OPTIONAL,
+ *     mtRoamingForwardingSupported    [9]    NULL    type OPTIONAL,
+ *     msisdn-lessOperation-Supported    [10]    NULL    type OPTIONAL,
  *     reset-ids-Supported    [11]    NULL    OPTIONAL }
  * ```
  * 

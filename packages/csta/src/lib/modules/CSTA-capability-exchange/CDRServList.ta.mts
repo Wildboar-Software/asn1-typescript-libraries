@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -34,10 +34,10 @@ import { StopCDRTransmission, _decode_StopCDRTransmission, _encode_StopCDRTransm
  * 
  * ```asn1
  * CDRServList ::= SEQUENCE
- * {     cdrNotification         [ 0] IMPLICIT     CdrNotification         OPTIONAL,
- *     cdrReport             [ 1] IMPLICIT     CdrReport             OPTIONAL,
- *     sendStoredCDRs             [ 2] IMPLICIT     SendStoredCDRs             OPTIONAL,
- *     startCDRTransmission         [ 3] IMPLICIT     StartCDRTransmission         OPTIONAL,
+ * {     cdrNotification         [ 0] IMPLICIT     CdrNotification         type OPTIONAL,
+ *     cdrReport             [ 1] IMPLICIT     CdrReport             type OPTIONAL,
+ *     sendStoredCDRs             [ 2] IMPLICIT     SendStoredCDRs             type OPTIONAL,
+ *     startCDRTransmission         [ 3] IMPLICIT     StartCDRTransmission         type OPTIONAL,
  *     stopCDRTransmission         [ 4] IMPLICIT     StopCDRTransmission         OPTIONAL }
  * ```
  * 

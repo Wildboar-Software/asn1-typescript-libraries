@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -27,8 +27,8 @@ import { type Extensions, _decode_Extensions, _encode_Extensions } from "../CAP-
  * 
  * ```asn1
  * DisconnectForwardConnectionWithArgumentArg {PARAMETERS-BOUND : bound} ::= SEQUENCE {
- *     callSegmentID            [1] CallSegmentID {bound}            OPTIONAL,
- *     extensions                [2] Extensions {bound}            OPTIONAL,
+ *     callSegmentID            [1] CallSegmentID {bound}            type OPTIONAL,
+ *     extensions                [2] Extensions {bound}            type OPTIONAL,
  *     ...
  *     }
  * ```

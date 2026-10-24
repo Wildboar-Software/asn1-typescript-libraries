@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    REAL,
+    type REAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,

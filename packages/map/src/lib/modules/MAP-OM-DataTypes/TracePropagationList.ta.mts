@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -30,21 +30,21 @@ import { TraceType, _decode_TraceType, _encode_TraceType } from "../MAP-OM-DataT
  * 
  * ```asn1
  * TracePropagationList ::= SEQUENCE {
- *     traceReference    [0] TraceReference    OPTIONAL,
- *     traceType    [1] TraceType    OPTIONAL,
- *     traceReference2    [2] TraceReference2    OPTIONAL,
+ *     traceReference    [0] TraceReference    type OPTIONAL,
+ *     traceType    [1] TraceType    type OPTIONAL,
+ *     traceReference2    [2] TraceReference2    type OPTIONAL,
  *     traceRecordingSessionReference    [3] TraceRecordingSessionReference OPTIONAL,
- *     rnc-TraceDepth    [4] TraceDepth    OPTIONAL,
- *     rnc-InterfaceList    [5] RNC-InterfaceList    OPTIONAL,
- *     msc-s-TraceDepth    [6] TraceDepth    OPTIONAL,
- *     msc-s-InterfaceList    [7] MSC-S-InterfaceList    OPTIONAL,
- *     msc-s-EventList    [8] MSC-S-EventList    OPTIONAL,
- *     mgw-TraceDepth    [9] TraceDepth    OPTIONAL,
- *     mgw-InterfaceList    [10] MGW-InterfaceList    OPTIONAL,
- *     mgw-EventList    [11] MGW-EventList    OPTIONAL,
+ *     rnc-TraceDepth    [4] TraceDepth    type OPTIONAL,
+ *     rnc-InterfaceList    [5] RNC-InterfaceList    type OPTIONAL,
+ *     msc-s-TraceDepth    [6] TraceDepth    type OPTIONAL,
+ *     msc-s-InterfaceList    [7] MSC-S-InterfaceList    type OPTIONAL,
+ *     msc-s-EventList    [8] MSC-S-EventList    type OPTIONAL,
+ *     mgw-TraceDepth    [9] TraceDepth    type OPTIONAL,
+ *     mgw-InterfaceList    [10] MGW-InterfaceList    type OPTIONAL,
+ *     mgw-EventList    [11] MGW-EventList    type OPTIONAL,
  *     ...,
- *     rnc-TraceDepthExtension    [12] TraceDepthExtension    OPTIONAL,
- *     msc-s-TraceDepthExtension    [13] TraceDepthExtension    OPTIONAL,
+ *     rnc-TraceDepthExtension    [12] TraceDepthExtension    type OPTIONAL,
+ *     msc-s-TraceDepthExtension    [13] TraceDepthExtension    type OPTIONAL,
  *     mgw-TraceDepthExtension    [14] TraceDepthExtension    OPTIONAL
  * }
  * ```

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -22,7 +22,7 @@ import { Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../
  * ```asn1
  * CallHoldData ::= SEQUENCE {
  *     ss-Status    [1] Ext-SS-Status,
- *     notificationToCSE    [2] NULL    OPTIONAL,
+ *     notificationToCSE    [2] NULL    type OPTIONAL,
  *     ... }
  * ```
  * 

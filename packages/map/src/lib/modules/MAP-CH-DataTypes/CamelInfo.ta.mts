@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -23,8 +23,8 @@ import { SupportedCamelPhases, _decode_SupportedCamelPhases, _encode_SupportedCa
  * ```asn1
  * CamelInfo ::= SEQUENCE {
  *     supportedCamelPhases    SupportedCamelPhases,
- *     suppress-T-CSI    NULL    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     suppress-T-CSI    NULL    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ... ,
  *     offeredCamel4CSIs    [0] OfferedCamel4CSIs    OPTIONAL }
  * ```

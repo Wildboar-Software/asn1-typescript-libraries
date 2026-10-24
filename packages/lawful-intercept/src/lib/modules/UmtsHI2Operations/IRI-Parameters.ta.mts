@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
-    OCTET_STRING,
-    OPTIONAL,
-    PrintableString,
+    type OBJECT_IDENTIFIER,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type PrintableString,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
@@ -159,9 +159,9 @@ import { National_HI2_ASN1parameters, _decode_National_HI2_ASN1parameters, _enco
  *     sMSTerminatingAddress     [28] DataNodeAddress OPTIONAL,
  *     iMSevent                [29] IMSevent OPTIONAL,
  *     sIPMessage                [30] OCTET STRING  OPTIONAL,
- *     servingSGSN-number        [31] OCTET STRING (SIZE (1..20))    OPTIONAL,
+ *     servingSGSN-number        [31] OCTET STRING (SIZE (1..20))    type OPTIONAL,
  *                                -- Coded according to 3GPP TS 29.002 [4] and 3GPP TS 23.003 25].
- *     servingSGSN-address        [32] OCTET STRING (SIZE (5..17))     OPTIONAL,
+ *     servingSGSN-address        [32] OCTET STRING (SIZE (5..17))     type OPTIONAL,
  *     -- Octets are coded according to 3GPP TS 23.003 [25]
  *     ...,
  *              -- Tag            [33] was taken into use by ETSI module in TS 101 671v2.13.1
@@ -180,17 +180,17 @@ import { National_HI2_ASN1parameters, _decode_National_HI2_ASN1parameters, _enco
  *     -- Coded according to 3GPP TS 29.060 [17]; The upper 4  octets shall carry the ULI Timestamp
  *     -- value; The lower 4 octets are undefined and shall be ignored by the receiver
  * 
- *     packetDataHeaderInformation         [43] PacketDataHeaderInformation    OPTIONAL,
+ *     packetDataHeaderInformation         [43] PacketDataHeaderInformation    type OPTIONAL,
  *     mediaSecFailureIndication       [44] MediaSecFailureIndication OPTIONAL,
- *     pANI-Header-Info        [45] SEQUENCE OF PANI-Header-Info        OPTIONAL,
+ *     pANI-Header-Info        [45] SEQUENCE OF PANI-Header-Info        type OPTIONAL,
  *     -- information extracted from P-Access-Network-Info headers of SIP message;
  *     -- described in TS 24.229 7.2A.4 [76]
- *     imsVoIP                    [46] IMS-VoIP-Correlation    OPTIONAL,
+ *     imsVoIP                    [46] IMS-VoIP-Correlation    type OPTIONAL,
  *     xCAPmessage                [47] OCTET STRING OPTIONAL,
  *     -- The entire HTTP contents of any of the target's IMS supplementary service setting
  *     -- management or manipulation XCAP messages, mainly made through the Ut
  *     -- interface defined in the 3GPP TS 24 623 [77].
- *     ccUnavailableReason        [48] PrintableString    OPTIONAL,
+ *     ccUnavailableReason        [48] PrintableString    type OPTIONAL,
  *     carrierSpecificData                    [49] OCTET STRING OPTIONAL,
  *     -- Copy of raw data specified by the CSP or his vendor related to HSS.
  *     current-Previous-Systems            [50] Current-Previous-Systems OPTIONAL,

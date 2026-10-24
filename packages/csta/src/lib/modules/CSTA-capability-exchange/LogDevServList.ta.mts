@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -41,13 +41,13 @@ import { LocationServicesServList, _decode_LocationServicesServList, _encode_Loc
  * 
  * ```asn1
  * LogDevServList ::= SEQUENCE
- * {    callControlServList         [0] IMPLICIT CallControlServList         OPTIONAL,
- *     callAssociatedServList         [1] IMPLICIT CallAssociatedServList         OPTIONAL,
- *     logicalServList         [2] IMPLICIT LogicalServList             OPTIONAL,
- *     mediaServList             [3] IMPLICIT MediaServList             OPTIONAL,
- *     iOServicesServList         [4] IMPLICIT IOServicesServList         OPTIONAL,
- *     dataCollectionServList         [5] IMPLICIT DataCollectionServList         OPTIONAL,
- *     voiceUnitServList         [6] IMPLICIT VoiceUnitServList             OPTIONAL,
+ * {    callControlServList         [0] IMPLICIT CallControlServList         type OPTIONAL,
+ *     callAssociatedServList         [1] IMPLICIT CallAssociatedServList         type OPTIONAL,
+ *     logicalServList         [2] IMPLICIT LogicalServList             type OPTIONAL,
+ *     mediaServList             [3] IMPLICIT MediaServList             type OPTIONAL,
+ *     iOServicesServList         [4] IMPLICIT IOServicesServList         type OPTIONAL,
+ *     dataCollectionServList         [5] IMPLICIT DataCollectionServList         type OPTIONAL,
+ *     voiceUnitServList         [6] IMPLICIT VoiceUnitServList             type OPTIONAL,
  *     locationServicesServList    [7] IMPLICIT LocationServicesServList        OPTIONAL }
  * ```
  * 

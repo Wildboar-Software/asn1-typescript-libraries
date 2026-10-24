@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -23,7 +23,7 @@ import { ServiceIndicator, _decode_ServiceIndicator, _encode_ServiceIndicator } 
  * CCBS-Data ::= SEQUENCE {
  *     ccbs-Feature    [0]    CCBS-Feature,
  *     translatedB-Number    [1]    ISDN-AddressString,
- *     serviceIndicator    [2]    ServiceIndicator    OPTIONAL,
+ *     serviceIndicator    [2]    ServiceIndicator    type OPTIONAL,
  *     callInfo    [3]    ExternalSignalInfo,
  *     networkSignalInfo    [4]    ExternalSignalInfo,
  *     ...}

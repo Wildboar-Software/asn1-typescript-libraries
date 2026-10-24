@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OPTIONAL,
+    type INTEGER,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError
@@ -27,9 +27,9 @@ import { TPDU_direction, _decode_TPDU_direction, _encode_TPDU_direction, _enum_f
  * ```asn1
  * PacketDataHeaderMapped ::= SEQUENCE
  * {
- *     sourceIPAddress            [1] IPAddress    OPTIONAL,
+ *     sourceIPAddress            [1] IPAddress    type OPTIONAL,
  *     sourcePortNumber        [2] INTEGER (0..65535) OPTIONAL,    
- *     destinationIPAddress    [3] IPAddress    OPTIONAL,
+ *     destinationIPAddress    [3] IPAddress    type OPTIONAL,
  *     destinationPortNumber    [4] INTEGER (0..65535) OPTIONAL,
  *     transportProtocol        [5] INTEGER  OPTIONAL,
  *     -- For IPv4, report the "Protocol" field and for IPv6 report "Next Header" field.

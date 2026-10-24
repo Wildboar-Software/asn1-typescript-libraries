@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
@@ -36,21 +36,21 @@ import { UU_Data, _decode_UU_Data, _encode_UU_Data } from "../MAP-CH-DataTypes/U
  * 
  * ```asn1
  * InitialDPArgExtension {PARAMETERS-BOUND : bound} ::= SEQUENCE {
- *     gmscAddress                [0] ISDN-AddressString            OPTIONAL,
- *     forwardingDestinationNumber        [1] CalledPartyNumber {bound}        OPTIONAL,
- *     ms-Classmark2            [2] MS-Classmark2                OPTIONAL,
- *     iMEI                [3] IMEI                    OPTIONAL,
- *     supportedCamelPhases        [4] SupportedCamelPhases            OPTIONAL,
- *     offeredCamel4Functionalities    [5] OfferedCamel4Functionalities        OPTIONAL,
- *     bearerCapability2            [6] BearerCapability {bound}        OPTIONAL,
- *     ext-basicServiceCode2        [7] Ext-BasicServiceCode            OPTIONAL,
- *     highLayerCompatibility2        [8] HighLayerCompatibility            OPTIONAL,
- *     lowLayerCompatibility        [9] LowLayerCompatibility {bound}        OPTIONAL,
- *     lowLayerCompatibility2        [10] LowLayerCompatibility {bound}        OPTIONAL,
+ *     gmscAddress                [0] ISDN-AddressString            type OPTIONAL,
+ *     forwardingDestinationNumber        [1] CalledPartyNumber {bound}        type OPTIONAL,
+ *     ms-Classmark2            [2] MS-Classmark2                type OPTIONAL,
+ *     iMEI                [3] IMEI                    type OPTIONAL,
+ *     supportedCamelPhases        [4] SupportedCamelPhases            type OPTIONAL,
+ *     offeredCamel4Functionalities    [5] OfferedCamel4Functionalities        type OPTIONAL,
+ *     bearerCapability2            [6] BearerCapability {bound}        type OPTIONAL,
+ *     ext-basicServiceCode2        [7] Ext-BasicServiceCode            type OPTIONAL,
+ *     highLayerCompatibility2        [8] HighLayerCompatibility            type OPTIONAL,
+ *     lowLayerCompatibility        [9] LowLayerCompatibility {bound}        type OPTIONAL,
+ *     lowLayerCompatibility2        [10] LowLayerCompatibility {bound}        type OPTIONAL,
  *     ...,
- *     enhancedDialledServicesAllowed    [11] NULL                    OPTIONAL,
- *     uu-Data                [12] UU-Data                OPTIONAL,
- *     collectInformationAllowed        [13] NULL                    OPTIONAL,
+ *     enhancedDialledServicesAllowed    [11] NULL                    type OPTIONAL,
+ *     uu-Data                [12] UU-Data                type OPTIONAL,
+ *     collectInformationAllowed        [13] NULL                    type OPTIONAL,
  *     releaseCallArgExtensionAllowed    [14] NULL                    OPTIONAL
  * }
  * ```

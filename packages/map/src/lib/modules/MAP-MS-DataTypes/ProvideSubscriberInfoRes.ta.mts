@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -24,7 +24,7 @@ import { SubscriberInfo, _decode_SubscriberInfo, _encode_SubscriberInfo } from "
  * ```asn1
  * ProvideSubscriberInfoRes ::= SEQUENCE {
  *     subscriberInfo    SubscriberInfo,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 

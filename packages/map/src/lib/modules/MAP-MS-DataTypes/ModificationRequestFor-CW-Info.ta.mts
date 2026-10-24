@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -23,10 +23,10 @@ import { ModificationInstruction, _decode_ModificationInstruction, _encode_Modif
  * 
  * ```asn1
  * ModificationRequestFor-CW-Info ::= SEQUENCE {
- *     basicService    [0]    Ext-BasicServiceCode    OPTIONAL,
- *     ss-Status    [1]    Ext-SS-Status    OPTIONAL,
- *     modifyNotificationToCSE    [2]    ModificationInstruction    OPTIONAL,
- *     extensionContainer    [3]    ExtensionContainer    OPTIONAL,
+ *     basicService    [0]    Ext-BasicServiceCode    type OPTIONAL,
+ *     ss-Status    [1]    Ext-SS-Status    type OPTIONAL,
+ *     modifyNotificationToCSE    [2]    ModificationInstruction    type OPTIONAL,
+ *     extensionContainer    [3]    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 

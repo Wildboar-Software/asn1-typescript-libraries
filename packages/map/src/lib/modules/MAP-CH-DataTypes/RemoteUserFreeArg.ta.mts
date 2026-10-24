@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -29,9 +29,9 @@ import { CCBS_Feature, _decode_CCBS_Feature, _encode_CCBS_Feature } from "../MAP
  *     callInfo    [1]    ExternalSignalInfo,
  *     ccbs-Feature    [2]    CCBS-Feature,
  *     translatedB-Number    [3]    ISDN-AddressString,
- *     replaceB-Number    [4]    NULL    OPTIONAL,
- *     alertingPattern    [5]    AlertingPattern    OPTIONAL,
- *     extensionContainer    [6]    ExtensionContainer    OPTIONAL,
+ *     replaceB-Number    [4]    NULL    type OPTIONAL,
+ *     alertingPattern    [5]    AlertingPattern    type OPTIONAL,
+ *     extensionContainer    [6]    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 

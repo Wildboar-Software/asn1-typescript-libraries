@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import * as $ from "@wildboar/asn1/functional";
-import { OPTIONAL, SEQUENCE, ASN1Element as _Element } from "@wildboar/asn1";
+import type { OPTIONAL, SEQUENCE, ASN1Element as _Element } from "@wildboar/asn1";
 import { LampList_Item, _decode_LampList_Item, _encode_LampList_Item } from "../CSTA-get-lamp-information/LampList-Item.ta.mjs";
 
 
@@ -20,8 +20,8 @@ import { LampList_Item, _decode_LampList_Item, _encode_LampList_Item } from "../
  * ```asn1
  * LampList  ::=  SEQUENCE OF SEQUENCE
  * {    lamp                LampID,
- *     lampLabel            [0] IMPLICIT OCTET STRING        OPTIONAL,
- *     button                [1] IMPLICIT ButtonID            OPTIONAL,
+ *     lampLabel            [0] IMPLICIT OCTET STRING        type OPTIONAL,
+ *     button                [1] IMPLICIT ButtonID            type OPTIONAL,
  *     lampColor            LampColor                OPTIONAL }
  * ```
  */

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -29,7 +29,7 @@ import { RequestedInfo, _decode_RequestedInfo, _encode_RequestedInfo } from "../
  *     subscriberIdentity    [0] SubscriberIdentity,
  *     requestedInfo    [1] RequestedInfo,
  *     gsmSCF-Address    [3] ISDN-AddressString,
- *     extensionContainer    [2] ExtensionContainer    OPTIONAL,
+ *     extensionContainer    [2] ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 

@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -68,18 +68,18 @@ import { CallLinkageData, _decode_CallLinkageData, _encode_CallLinkageData } fro
  *     networkInterfaceUsed         SubjectDeviceID,
  *     calledDevice             CalledDeviceID,
  *     progressIndicator         ProgressIndicator,
- *     localConnectionInfo         LocalConnectionState             OPTIONAL,
- *     correlatorData             CorrelatorData                 OPTIONAL,
- *     userData             UserData                 OPTIONAL,
- *     networkCapability         [0] IMPLICIT NetworkCapability         OPTIONAL,
+ *     localConnectionInfo         LocalConnectionState             type OPTIONAL,
+ *     correlatorData             CorrelatorData                 type OPTIONAL,
+ *     userData             UserData                 type OPTIONAL,
+ *     networkCapability         [0] IMPLICIT NetworkCapability         type OPTIONAL,
  *     cause                 EventCause,
- *     servicesPermitted         [1] IMPLICIT ServicesPermitted         OPTIONAL,
- *     mediaCallCharacteristics     [2] IMPLICIT MediaCallCharacteristics     OPTIONAL,
- *     callCharacteristics         [3] IMPLICIT CallCharacteristics     OPTIONAL,
- *     outboundConnectionInfo         [4] IMPLICIT ConnectionInformation     OPTIONAL,
- *     callLinkageData         [5] IMPLICIT CallLinkageData         OPTIONAL,
- *     languagePreferences        [6] IMPLICIT LanguagePreferences    OPTIONAL,
- *     locationInfo            [7] IMPLICIT LocationInfoList        OPTIONAL,
+ *     servicesPermitted         [1] IMPLICIT ServicesPermitted         type OPTIONAL,
+ *     mediaCallCharacteristics     [2] IMPLICIT MediaCallCharacteristics     type OPTIONAL,
+ *     callCharacteristics         [3] IMPLICIT CallCharacteristics     type OPTIONAL,
+ *     outboundConnectionInfo         [4] IMPLICIT ConnectionInformation     type OPTIONAL,
+ *     callLinkageData         [5] IMPLICIT CallLinkageData         type OPTIONAL,
+ *     languagePreferences        [6] IMPLICIT LanguagePreferences    type OPTIONAL,
+ *     locationInfo            [7] IMPLICIT LocationInfoList        type OPTIONAL,
  *     extensions             CSTACommonArguments             OPTIONAL }
  * ```
  * 

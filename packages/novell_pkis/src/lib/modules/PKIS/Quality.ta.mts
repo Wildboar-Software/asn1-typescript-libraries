@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
     ASN1SizeError,
-    BOOLEAN,
-    INTEGER,
+    type BOOLEAN,
+    type INTEGER,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass

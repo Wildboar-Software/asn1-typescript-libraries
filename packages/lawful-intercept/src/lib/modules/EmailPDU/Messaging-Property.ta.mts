@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
     GeneralizedTime,
-    OCTET_STRING,
-    UTF8String,
+    type OCTET_STRING,
+    type UTF8String,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -20,8 +20,8 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * 
  * ```asn1
  * MO-ForwardSM-Res ::= SEQUENCE {
- *     sm-RP-UI    SignalInfo    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     sm-RP-UI    SignalInfo    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 

@@ -27,7 +27,7 @@ import { MessageID_variableMessage, _decode_MessageID_variableMessage, _encode_M
  *                             ,
  *                    attributes
  *                      [1]  OCTET STRING
- *                              OPTIONAL,
+ *                              type OPTIONAL,
  *                    ...},
  *   elementaryMessageIDs
  *     [29]  SEQUENCE OF Integer4,

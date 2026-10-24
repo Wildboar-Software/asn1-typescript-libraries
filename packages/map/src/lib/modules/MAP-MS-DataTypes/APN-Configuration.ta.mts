@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -44,27 +44,27 @@ import { WLAN_Offloadability, _decode_WLAN_Offloadability, _encode_WLAN_Offloada
  * APN-Configuration ::= SEQUENCE {
  *     contextId    [0] ContextId,
  *     pdn-Type    [1] PDN-Type,
- *     servedPartyIP-IPv4-Address    [2] PDP-Address    OPTIONAL,
+ *     servedPartyIP-IPv4-Address    [2] PDP-Address    type OPTIONAL,
  *     apn    [3] APN,
  *     eps-qos-Subscribed    [4] EPS-QoS-Subscribed,
- *     pdn-gw-Identity    [5] PDN-GW-Identity    OPTIONAL,
- *     pdn-gw-AllocationType    [6] PDN-GW-AllocationType    OPTIONAL,
- *     vplmnAddressAllowed    [7] NULL    OPTIONAL,
- *     chargingCharacteristics    [8] ChargingCharacteristics    OPTIONAL,
- *     ambr    [9] AMBR    OPTIONAL,
- *     specificAPNInfoList    [10] SpecificAPNInfoList    OPTIONAL,    extensionContainer    [11] ExtensionContainer    OPTIONAL, 
- *     servedPartyIP-IPv6-Address    [12] PDP-Address    OPTIONAL,
+ *     pdn-gw-Identity    [5] PDN-GW-Identity    type OPTIONAL,
+ *     pdn-gw-AllocationType    [6] PDN-GW-AllocationType    type OPTIONAL,
+ *     vplmnAddressAllowed    [7] NULL    type OPTIONAL,
+ *     chargingCharacteristics    [8] ChargingCharacteristics    type OPTIONAL,
+ *     ambr    [9] AMBR    type OPTIONAL,
+ *     specificAPNInfoList    [10] SpecificAPNInfoList    type OPTIONAL,    extensionContainer    [11] ExtensionContainer    type OPTIONAL, 
+ *     servedPartyIP-IPv6-Address    [12] PDP-Address    type OPTIONAL,
  *     ...,
- *     apn-oi-Replacement    [13] APN-OI-Replacement    OPTIONAL,
+ *     apn-oi-Replacement    [13] APN-OI-Replacement    type OPTIONAL,
  *     -- this apn-oi-Replacement refers to the APN level apn-oi-Replacement.
- *     sipto-Permission    [14] SIPTO-Permission    OPTIONAL,
- *     lipa-Permission    [15] LIPA-Permission    OPTIONAL,
- *     restoration-Priority    [16] Restoration-Priority    OPTIONAL,
- *     sipto-local-network-Permission    [17] SIPTO-Local-Network-Permission    OPTIONAL,
- *     wlan-offloadability    [18] WLAN-Offloadability    OPTIONAL,
- *     non-IP-PDN-Type-Indicator    [19]    NULL    OPTIONAL,
- *     nIDD-Mechanism    [20]    NIDD-Mechanism    OPTIONAL,
- *     sCEF-ID    [21]    FQDN    OPTIONAL,
+ *     sipto-Permission    [14] SIPTO-Permission    type OPTIONAL,
+ *     lipa-Permission    [15] LIPA-Permission    type OPTIONAL,
+ *     restoration-Priority    [16] Restoration-Priority    type OPTIONAL,
+ *     sipto-local-network-Permission    [17] SIPTO-Local-Network-Permission    type OPTIONAL,
+ *     wlan-offloadability    [18] WLAN-Offloadability    type OPTIONAL,
+ *     non-IP-PDN-Type-Indicator    [19]    NULL    type OPTIONAL,
+ *     nIDD-Mechanism    [20]    NIDD-Mechanism    type OPTIONAL,
+ *     sCEF-ID    [21]    FQDN    type OPTIONAL,
  *     pdn-ConnectionContinuity    [22]    PDN-ConnectionContinuity    OPTIONAL
  *     -- absence of pdn-ConnectionContinuity indicates that the handling is left to
  *     -- local VPLMN policy

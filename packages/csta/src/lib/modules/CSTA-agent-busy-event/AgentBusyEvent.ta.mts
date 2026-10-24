@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -50,10 +50,10 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * AgentBusyEvent ::= SEQUENCE
  * {    agentDevice             SubjectDeviceID,
- *     agentID                AgentID                    OPTIONAL,
- *     acdGroup            DeviceID                OPTIONAL,
- *     pendingAgentState        [2] IMPLICIT PendingAgentState        OPTIONAL,
- *     cause                [3] IMPLICIT EventCause            OPTIONAL,
+ *     agentID                AgentID                    type OPTIONAL,
+ *     acdGroup            DeviceID                type OPTIONAL,
+ *     pendingAgentState        [2] IMPLICIT PendingAgentState        type OPTIONAL,
+ *     cause                [3] IMPLICIT EventCause            type OPTIONAL,
  *     extensions             CSTACommonArguments            OPTIONAL }
  * ```
  * 

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -27,7 +27,7 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * MAP-RefuseInfo ::= SEQUENCE {
  *     reason    Reason,
  *     ...,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     -- extensionContainer must not be used in version 2
  *     alternativeApplicationContext    OBJECT IDENTIFIER    OPTIONAL
  *     -- alternativeApplicationContext must not be used in version 2

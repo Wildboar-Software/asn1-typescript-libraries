@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -25,9 +25,9 @@ import { RequestedCAMEL_SubscriptionInfo, _decode_RequestedCAMEL_SubscriptionInf
  * ```asn1
  * ModificationRequestFor-CSI ::= SEQUENCE {
  *     requestedCamel-SubscriptionInfo    [0]    RequestedCAMEL-SubscriptionInfo,
- *     modifyNotificationToCSE    [1]    ModificationInstruction    OPTIONAL,
- *     modifyCSI-State    [2]    ModificationInstruction    OPTIONAL,
- *     extensionContainer    [3]    ExtensionContainer    OPTIONAL,
+ *     modifyNotificationToCSE    [1]    ModificationInstruction    type OPTIONAL,
+ *     modifyCSI-State    [2]    ModificationInstruction    type OPTIONAL,
+ *     extensionContainer    [3]    ExtensionContainer    type OPTIONAL,
  *     ...,
  *     additionalRequestedCAMEL-SubscriptionInfo
  *     [4] AdditionalRequestedCAMEL-SubscriptionInfo

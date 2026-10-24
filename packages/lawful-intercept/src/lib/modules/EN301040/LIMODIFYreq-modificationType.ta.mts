@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
+    type BOOLEAN,
     UTCTime,
-    VisibleString,
+    type VisibleString,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";

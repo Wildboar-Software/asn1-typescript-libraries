@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -31,7 +31,7 @@ import { type IPSSPCapabilities, _decode_IPSSPCapabilities, _encode_IPSSPCapabil
  * AssistRequestInstructionsArg {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *     correlationID            [0] CorrelationID {bound},
  *     iPSSPCapabilities            [2] IPSSPCapabilities {bound},
- *     extensions                [3] Extensions {bound}            OPTIONAL,
+ *     extensions                [3] Extensions {bound}            type OPTIONAL,
  *     ...
  *     }
  * ```

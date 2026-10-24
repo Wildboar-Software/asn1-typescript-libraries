@@ -2,8 +2,8 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    OCTET_STRING,
+    type OPTIONAL,
+    type OCTET_STRING,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -34,11 +34,11 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * SetPresenceStateArgument ::= SEQUENCE
  * {    device                 DeviceID,
  *     requestedPresenceState         PresenceState,
- *     fromTime            [0] IMPLICIT TimeInfo            OPTIONAL,
- *     untilTime            [1] IMPLICIT TimeInfo            OPTIONAL,
- *     place                [2] IMPLICIT OCTET STRING        OPTIONAL,
- *     mood                [3] IMPLICIT OCTET STRING        OPTIONAL,
- *     namedPresenceState         [4] IMPLICIT OCTET STRING        OPTIONAL,
+ *     fromTime            [0] IMPLICIT TimeInfo            type OPTIONAL,
+ *     untilTime            [1] IMPLICIT TimeInfo            type OPTIONAL,
+ *     place                [2] IMPLICIT OCTET STRING        type OPTIONAL,
+ *     mood                [3] IMPLICIT OCTET STRING        type OPTIONAL,
+ *     namedPresenceState         [4] IMPLICIT OCTET STRING        type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 

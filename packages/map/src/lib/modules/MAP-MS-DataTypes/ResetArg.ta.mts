@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -29,12 +29,12 @@ import { SendingNode_Number, _decode_SendingNode_Number, _encode_SendingNode_Num
  * ```asn1
  * ResetArg ::= SEQUENCE {
  *     sendingNodenumber    SendingNode-Number,
- *     hlr-List    HLR-List    OPTIONAL,
+ *     hlr-List    HLR-List    type OPTIONAL,
  *     -- The hlr-List parameter shall only be applicable for a restart of the HSS/HLR.
- *     extensionContainer    [0] ExtensionContainer    OPTIONAL,
+ *     extensionContainer    [0] ExtensionContainer    type OPTIONAL,
  *     ...,
- *     reset-Id-List    [1]    Reset-Id-List    OPTIONAL,
- *     subscriptionData    [2]    InsertSubscriberDataArg    OPTIONAL,
+ *     reset-Id-List    [1]    Reset-Id-List    type OPTIONAL,
+ *     subscriptionData    [2]    InsertSubscriberDataArg    type OPTIONAL,
  *     subscriptionDataDeletion    [3]    DeleteSubscriberDataArg    OPTIONAL}
  * ```
  * 

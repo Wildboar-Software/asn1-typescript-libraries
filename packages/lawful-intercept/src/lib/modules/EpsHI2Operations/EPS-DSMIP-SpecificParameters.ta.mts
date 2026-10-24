@@ -2,9 +2,9 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OCTET_STRING,
-    OPTIONAL,
+    type INTEGER,
+    type OCTET_STRING,
+    type OPTIONAL,
     ASN1OverflowError,
     ASN1SizeError
 } from "@wildboar/asn1";
@@ -27,16 +27,16 @@ import * as $ from "@wildboar/asn1/functional";
  * ```asn1
  * EPS-DSMIP-SpecificParameters ::= SEQUENCE
  * {
- *     lifetime                              [1]   INTEGER (0..65535)                OPTIONAL,
- *     requestedIPv6HomePrefix               [2]   OCTET STRING (SIZE (25))          OPTIONAL,
+ *     lifetime                              [1]   INTEGER (0..65535)                type OPTIONAL,
+ *     requestedIPv6HomePrefix               [2]   OCTET STRING (SIZE (25))          type OPTIONAL,
  *     -- coded according to RFC 5026
- *     homeAddress                           [3]   OCTET STRING (SIZE (8))           OPTIONAL,
- *     iPv4careOfAddress                     [4]   OCTET STRING (SIZE (8))           OPTIONAL,
- *     iPv6careOfAddress                     [5]   OCTET STRING (SIZE(16))           OPTIONAL,
- *     aPN                                   [6]   OCTET STRING (SIZE (1..100))      OPTIONAL,
- *     status                                [7]   INTEGER (0..255)                  OPTIONAL,
- *     hSS-AAA-address                       [8]   OCTET STRING                      OPTIONAL,
- *     targetPDN-GW-Address                  [9]   OCTET STRING                      OPTIONAL,
+ *     homeAddress                           [3]   OCTET STRING (SIZE (8))           type OPTIONAL,
+ *     iPv4careOfAddress                     [4]   OCTET STRING (SIZE (8))           type OPTIONAL,
+ *     iPv6careOfAddress                     [5]   OCTET STRING (SIZE(16))           type OPTIONAL,
+ *     aPN                                   [6]   OCTET STRING (SIZE (1..100))      type OPTIONAL,
+ *     status                                [7]   INTEGER (0..255)                  type OPTIONAL,
+ *     hSS-AAA-address                       [8]   OCTET STRING                      type OPTIONAL,
+ *     targetPDN-GW-Address                  [9]   OCTET STRING                      type OPTIONAL,
  *     ...
  *     -- parameters coded according to 3GPP TS 24.303 [49] and RFCs specifically
  *     -- referenced in it.

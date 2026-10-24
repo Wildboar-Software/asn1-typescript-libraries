@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OBJECT_IDENTIFIER,
+    type OPTIONAL,
+    type OBJECT_IDENTIFIER,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -36,7 +36,7 @@ import {
  *     [0]  BIT STRING {auto-action-registrations(0), list-attribute-defaults(1),
  *                      fetch-attribute-defaults(2), ua-registrations(3),
  *                      submission-defaults(4), message-group-registrations(5)}
- *       OPTIONAL,
+ *       type OPTIONAL,
  *   extended-registrations   [1]  SET OF MS-EXTENSION.&id OPTIONAL,
  *   restrict-message-groups  [2]  MessageGroupsRestriction OPTIONAL
  * }

@@ -29,12 +29,12 @@ import { ExecuteArgument_Type, _decode_ExecuteArgument_Type, _encode_ExecuteArgu
  *                                SET OF
  *                                  METHOD.&InputAttributes.&Type
  *                                    ({SupportedMethods}{@method-id, @.type})
- *                                  OPTIONAL,
+ *                                  type OPTIONAL,
  *                              valuesWithContext
  *                                [0]  SET OF
  *                                       METHOD.&InputAttributes.&Type
  *                                         ({SupportedMethods}{@method-id, @.type})
- *                                  OPTIONAL,
+ *                                  type OPTIONAL,
  *                              contextList        [1]  SET OF Context} OPTIONAL,
  *           --EDITOR: there is no way (at the moment) in ASN.1
  *           --to reference a component through a SET OF or SEQUENCE OF type.
@@ -42,7 +42,7 @@ import { ExecuteArgument_Type, _decode_ExecuteArgument_Type, _encode_ExecuteArgu
  *           --Align the descriptive text/comments accordingly.
  *           specific-input
  *             [3]  METHOD.&SpecificInput({SupportedMethods}{@method-id})
- *               OPTIONAL,
+ *               type OPTIONAL,
  *           COMPONENTS OF CommonArguments}}
  * ```
  */

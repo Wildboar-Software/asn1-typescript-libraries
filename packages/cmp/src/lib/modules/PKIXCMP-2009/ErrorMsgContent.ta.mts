@@ -36,7 +36,7 @@ import {
  * ```asn1
  * ErrorMsgContent ::= SEQUENCE {
  *     pKIStatusInfo          PKIStatusInfo,
- *     errorCode              INTEGER           OPTIONAL,
+ *     errorCode              INTEGER           type OPTIONAL,
  *     -- implementation-specific error codes
  *     errorDetails           PKIFreeText       OPTIONAL
  *     -- implementation-specific error details

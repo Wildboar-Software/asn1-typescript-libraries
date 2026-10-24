@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -33,18 +33,18 @@ import { Used_RAT_Type, _decode_Used_RAT_Type, _encode_Used_RAT_Type, _enum_for_
  * 
  * ```asn1
  * LocationInformation5GS ::= SEQUENCE {
- *     nrCellGlobalIdentity    [0] NR-CGI    OPTIONAL,
- *     e-utranCellGlobalIdentity    [1] E-UTRAN-CGI    OPTIONAL,
- *     geographicalInformation    [2] GeographicalInformation    OPTIONAL,
- *     geodeticInformation    [3] GeodeticInformation    OPTIONAL,
- *     amf-address    [4] FQDN    OPTIONAL,
- *     trackingAreaIdentity    [5] TA-Id    OPTIONAL,
- *     currentLocationRetrieved    [6] NULL    OPTIONAL,
- *     ageOfLocationInformation    [7] AgeOfLocationInformation    OPTIONAL,
- *     vplmnId    [8] PLMN-Id    OPTIONAL,
- *     localtimeZone    [9] TimeZone    OPTIONAL,
- *     rat-Type    [10] Used-RAT-Type    OPTIONAL,
- *     extensionContainer    [11] ExtensionContainer    OPTIONAL,
+ *     nrCellGlobalIdentity    [0] NR-CGI    type OPTIONAL,
+ *     e-utranCellGlobalIdentity    [1] E-UTRAN-CGI    type OPTIONAL,
+ *     geographicalInformation    [2] GeographicalInformation    type OPTIONAL,
+ *     geodeticInformation    [3] GeodeticInformation    type OPTIONAL,
+ *     amf-address    [4] FQDN    type OPTIONAL,
+ *     trackingAreaIdentity    [5] TA-Id    type OPTIONAL,
+ *     currentLocationRetrieved    [6] NULL    type OPTIONAL,
+ *     ageOfLocationInformation    [7] AgeOfLocationInformation    type OPTIONAL,
+ *     vplmnId    [8] PLMN-Id    type OPTIONAL,
+ *     localtimeZone    [9] TimeZone    type OPTIONAL,
+ *     rat-Type    [10] Used-RAT-Type    type OPTIONAL,
+ *     extensionContainer    [11] ExtensionContainer    type OPTIONAL,
  *     ...,
  *     nrTrackingAreaIdentity    [12] NR-TA-Id    OPTIONAL
  *     }

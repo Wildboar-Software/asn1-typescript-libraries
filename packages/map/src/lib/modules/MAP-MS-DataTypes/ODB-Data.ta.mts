@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -24,8 +24,8 @@ import { ODB_HPLMN_Data, _decode_ODB_HPLMN_Data, _encode_ODB_HPLMN_Data } from "
  * ```asn1
  * ODB-Data ::= SEQUENCE {
  *     odb-GeneralData    ODB-GeneralData,
- *     odb-HPLMN-Data    ODB-HPLMN-Data    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     odb-HPLMN-Data    ODB-HPLMN-Data    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 

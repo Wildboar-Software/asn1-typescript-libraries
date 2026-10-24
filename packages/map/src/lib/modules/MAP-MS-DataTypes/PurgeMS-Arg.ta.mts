@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -30,12 +30,12 @@ import { LocationInformationGPRS, _decode_LocationInformationGPRS, _encode_Locat
  * ```asn1
  * PurgeMS-Arg ::= [3] SEQUENCE {
  *     imsi    IMSI,
- *     vlr-Number    [0] ISDN-AddressString    OPTIONAL,
- *     sgsn-Number    [1]    ISDN-AddressString    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     vlr-Number    [0] ISDN-AddressString    type OPTIONAL,
+ *     sgsn-Number    [1]    ISDN-AddressString    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     locationInformation    [2] LocationInformation    OPTIONAL,
- *     locationInformationGPRS    [3] LocationInformationGPRS    OPTIONAL,
+ *     locationInformation    [2] LocationInformation    type OPTIONAL,
+ *     locationInformationGPRS    [3] LocationInformationGPRS    type OPTIONAL,
  *     locationInformationEPS    [4] LocationInformationEPS    OPTIONAL }
  * ```
  * 

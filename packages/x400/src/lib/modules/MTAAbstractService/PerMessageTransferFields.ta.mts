@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -87,7 +87,7 @@ import {
  *   deferred-delivery-time              [0]  DeferredDeliveryTime OPTIONAL,
  *   per-domain-bilateral-information
  *     [1]  SEQUENCE SIZE (1..ub-transfers) OF PerDomainBilateralInformation
- *       OPTIONAL,
+ *       type OPTIONAL,
  *   trace-information                   TraceInformation,
  *   extensions
  *     [3]  SET OF ExtensionField{{MessageTransferExtensions}} DEFAULT {}

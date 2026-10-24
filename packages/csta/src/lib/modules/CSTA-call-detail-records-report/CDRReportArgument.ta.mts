@@ -2,9 +2,9 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
+    type OPTIONAL,
+    type BOOLEAN,
+    type INTEGER,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -36,7 +36,7 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * {    cdrCrossRefID            CDRCrossRefID,           --corrected 06/2001
  *     numberOfRecordsSent        INTEGER (1..128),
  *     cdrInfo                CDRInfo,
- *     lastStoredCDRReportSent        BOOLEAN                    OPTIONAL,
+ *     lastStoredCDRReportSent        BOOLEAN                    type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 

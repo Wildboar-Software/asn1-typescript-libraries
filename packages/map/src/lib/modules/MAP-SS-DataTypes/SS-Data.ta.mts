@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -24,12 +24,12 @@ import { SS_SubscriptionOption, _decode_SS_SubscriptionOption, _encode_SS_Subscr
  * 
  * ```asn1
  * SS-Data ::= SEQUENCE {
- *     ss-Code    SS-Code    OPTIONAL,
- *     ss-Status    [4] SS-Status    OPTIONAL,
- *     ss-SubscriptionOption    SS-SubscriptionOption    OPTIONAL,
- *     basicServiceGroupList    BasicServiceGroupList    OPTIONAL,
+ *     ss-Code    SS-Code    type OPTIONAL,
+ *     ss-Status    [4] SS-Status    type OPTIONAL,
+ *     ss-SubscriptionOption    SS-SubscriptionOption    type OPTIONAL,
+ *     basicServiceGroupList    BasicServiceGroupList    type OPTIONAL,
  *     ...,
- *     defaultPriority    EMLPP-Priority    OPTIONAL,
+ *     defaultPriority    EMLPP-Priority    type OPTIONAL,
  *     nbrUser    [5] MC-Bearers    OPTIONAL
  *     }
  * ```

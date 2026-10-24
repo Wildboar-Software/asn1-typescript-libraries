@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -22,8 +22,8 @@ import { UESBI_IuB, _decode_UESBI_IuB, _encode_UESBI_IuB } from "../MAP-MS-DataT
  * 
  * ```asn1
  * UESBI-Iu ::= SEQUENCE {
- *     uesbi-IuA    [0] UESBI-IuA    OPTIONAL,
- *     uesbi-IuB    [1] UESBI-IuB    OPTIONAL,
+ *     uesbi-IuA    [0] UESBI-IuA    type OPTIONAL,
+ *     uesbi-IuB    [1] UESBI-IuB    type OPTIONAL,
  *     ...}
  * ```
  * 

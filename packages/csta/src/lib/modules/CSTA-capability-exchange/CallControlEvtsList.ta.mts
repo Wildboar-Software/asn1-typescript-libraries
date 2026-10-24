@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -60,23 +60,23 @@ import { Transferred, _decode_Transferred, _encode_Transferred } from "../CSTA-c
  * 
  * ```asn1
  * CallControlEvtsList ::= SEQUENCE
- * {     bridged             [ 0] IMPLICIT     Bridged         OPTIONAL,
- *     callCleared             [ 1] IMPLICIT     CallCleared         OPTIONAL,
- *     conferenced             [ 2] IMPLICIT     Conferenced         OPTIONAL,
- *     connectionCleared         [ 3] IMPLICIT     ConnectionCleared     OPTIONAL,
- *     delivered             [ 4] IMPLICIT     Delivered         OPTIONAL,
- *     digitsDialed             [ 5] IMPLICIT     DigitsDialed         OPTIONAL,
- *     diverted             [ 6] IMPLICIT     Diverted         OPTIONAL,
- *     established             [ 7] IMPLICIT     Established         OPTIONAL,
- *     failed                 [ 8] IMPLICIT     Failed             OPTIONAL,
- *     held                 [ 9] IMPLICIT     Held             OPTIONAL,
- *     netwCapsChanged         [10] IMPLICIT     NetwCapsChanged     OPTIONAL,
- *     netwReached             [11] IMPLICIT     NetwReached         OPTIONAL,
- *     offered             [12] IMPLICIT     Offered         OPTIONAL,
- *     originated             [13] IMPLICIT     Originated         OPTIONAL,
- *     queued                 [14] IMPLICIT     Queued             OPTIONAL,
- *     retrieved             [15] IMPLICIT     Retrieved         OPTIONAL,
- *     serviceInitiated         [16] IMPLICIT     ServiceInitiated     OPTIONAL,
+ * {     bridged             [ 0] IMPLICIT     Bridged         type OPTIONAL,
+ *     callCleared             [ 1] IMPLICIT     CallCleared         type OPTIONAL,
+ *     conferenced             [ 2] IMPLICIT     Conferenced         type OPTIONAL,
+ *     connectionCleared         [ 3] IMPLICIT     ConnectionCleared     type OPTIONAL,
+ *     delivered             [ 4] IMPLICIT     Delivered         type OPTIONAL,
+ *     digitsDialed             [ 5] IMPLICIT     DigitsDialed         type OPTIONAL,
+ *     diverted             [ 6] IMPLICIT     Diverted         type OPTIONAL,
+ *     established             [ 7] IMPLICIT     Established         type OPTIONAL,
+ *     failed                 [ 8] IMPLICIT     Failed             type OPTIONAL,
+ *     held                 [ 9] IMPLICIT     Held             type OPTIONAL,
+ *     netwCapsChanged         [10] IMPLICIT     NetwCapsChanged     type OPTIONAL,
+ *     netwReached             [11] IMPLICIT     NetwReached         type OPTIONAL,
+ *     offered             [12] IMPLICIT     Offered         type OPTIONAL,
+ *     originated             [13] IMPLICIT     Originated         type OPTIONAL,
+ *     queued                 [14] IMPLICIT     Queued             type OPTIONAL,
+ *     retrieved             [15] IMPLICIT     Retrieved         type OPTIONAL,
+ *     serviceInitiated         [16] IMPLICIT     ServiceInitiated     type OPTIONAL,
  *     transferred             [17] IMPLICIT     Transferred         OPTIONAL }
  * ```
  * 

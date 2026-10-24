@@ -2,8 +2,8 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN,
-    INTEGER,
+    type BOOLEAN,
+    type INTEGER,
     UTF8String
 } from "@wildboar/asn1";
 import { ASN1SizeError } from "@wildboar/asn1";

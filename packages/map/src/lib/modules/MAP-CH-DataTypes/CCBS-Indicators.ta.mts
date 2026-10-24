@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -20,9 +20,9 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * 
  * ```asn1
  * CCBS-Indicators ::= SEQUENCE {
- *     ccbs-Possible    [0]    NULL    OPTIONAL,
- *     keepCCBS-CallIndicator    [1]    NULL    OPTIONAL,
- *     extensionContainer    [2]    ExtensionContainer    OPTIONAL,
+ *     ccbs-Possible    [0]    NULL    type OPTIONAL,
+ *     keepCCBS-CallIndicator    [1]    NULL    type OPTIONAL,
+ *     extensionContainer    [2]    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 

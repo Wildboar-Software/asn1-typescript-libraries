@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -24,11 +24,11 @@ import { RouteingNumber, _decode_RouteingNumber, _encode_RouteingNumber } from "
  * 
  * ```asn1
  * MNPInfoRes ::= SEQUENCE {
- *     routeingNumber    [0] RouteingNumber    OPTIONAL,
- *     imsi    [1] IMSI    OPTIONAL,
- *     msisdn    [2] ISDN-AddressString    OPTIONAL,
- *     numberPortabilityStatus    [3] NumberPortabilityStatus    OPTIONAL,
- *     extensionContainer    [4] ExtensionContainer    OPTIONAL,
+ *     routeingNumber    [0] RouteingNumber    type OPTIONAL,
+ *     imsi    [1] IMSI    type OPTIONAL,
+ *     msisdn    [2] ISDN-AddressString    type OPTIONAL,
+ *     numberPortabilityStatus    [3] NumberPortabilityStatus    type OPTIONAL,
+ *     extensionContainer    [4] ExtensionContainer    type OPTIONAL,
  *     ... }
  * ```
  * 

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
@@ -27,10 +27,10 @@ import { type LegOrCallSegment, _decode_LegOrCallSegment, _encode_LegOrCallSegme
  * 
  * ```asn1
  * ContinueWithArgumentArgExtension {PARAMETERS-BOUND : bound} ::= SEQUENCE {
- *     suppress-D-CSI            [0]    NULL                    OPTIONAL,
- *     suppress-N-CSI            [1]    NULL                    OPTIONAL,
- *     suppressOutgoingCallBarring        [2]    NULL                    OPTIONAL,
- *     legOrCallSegment            [3]    LegOrCallSegment {bound}        OPTIONAL,
+ *     suppress-D-CSI            [0]    NULL                    type OPTIONAL,
+ *     suppress-N-CSI            [1]    NULL                    type OPTIONAL,
+ *     suppressOutgoingCallBarring        [2]    NULL                    type OPTIONAL,
+ *     legOrCallSegment            [3]    LegOrCallSegment {bound}        type OPTIONAL,
  *     ...
  *     }
  * ```

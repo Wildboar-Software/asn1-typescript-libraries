@@ -41,7 +41,7 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  *               SET {bind-problem               [0]  BindProblem,
  *                    supplementary-information
  *                      [1]  GeneralString(SIZE (1..ub-supplementary-info-length))
- *                        OPTIONAL,
+ *                        type OPTIONAL,
  *                    bind-extension-errors
  *                      [2]  SET SIZE (1..ub-extensions) OF OBJECT IDENTIFIER
  *                        OPTIONAL}}

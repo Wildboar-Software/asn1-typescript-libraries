@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -24,7 +24,7 @@ import { LocationInfoWithLMSI, _decode_LocationInfoWithLMSI, _encode_LocationInf
  * RoutingInfoForSM-Res ::= SEQUENCE {
  *     imsi    IMSI,
  *     locationInfoWithLMSI    [0] LocationInfoWithLMSI,
- *     extensionContainer    [4] ExtensionContainer    OPTIONAL,
+ *     extensionContainer    [4] ExtensionContainer    type OPTIONAL,
  *     ...,
  *     ip-sm-gwGuidance    [5] IP-SM-GW-Guidance    OPTIONAL }
  * ```

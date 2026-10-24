@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -21,7 +21,7 @@ import { Ext_CwFeatureList, _decode_Ext_CwFeatureList, _encode_Ext_CwFeatureList
  * ```asn1
  * CallWaitingData ::= SEQUENCE {
  *     cwFeatureList    [1] Ext-CwFeatureList,
- *     notificationToCSE    [2] NULL    OPTIONAL,
+ *     notificationToCSE    [2] NULL    type OPTIONAL,
  *     ... }
  * ```
  * 

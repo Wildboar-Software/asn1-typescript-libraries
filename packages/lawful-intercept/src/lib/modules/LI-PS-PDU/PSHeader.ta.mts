@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     GeneralizedTime,
-    INTEGER,
-    OBJECT_IDENTIFIER,
-    OCTET_STRING,
-    OPTIONAL,
-    PrintableString,
+    type INTEGER,
+    type OBJECT_IDENTIFIER,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type PrintableString,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError,

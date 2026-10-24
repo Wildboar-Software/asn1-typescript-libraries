@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
+    type OBJECT_IDENTIFIER,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -33,7 +33,7 @@ import {
  * ```asn1
  * LABORATORY-SCHEME ::= CLASS {
  *   &id        OBJECT IDENTIFIER UNIQUE,
- *   &name        SchemeName    OPTIONAL,
+ *   &name        SchemeName    type OPTIONAL,
  *   &Qualifications }
  * WITH SYNTAX {
  *   SCHEME [NAME &name] IDENTIFIED BY &id WITH &Qualifications }

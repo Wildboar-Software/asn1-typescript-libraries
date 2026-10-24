@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
+    type OPTIONAL,
+    type INTEGER,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -25,8 +25,8 @@ import { MessageID, _decode_MessageID, _encode_MessageID } from "../Core-INAP-CS
  * ```asn1
  * InbandInfo ::= SEQUENCE {
  *      messageID     [0] MessageID,
- *      numberOfRepetitions     [1] INTEGER (1..127)          OPTIONAL,
- *      duration     [2] INTEGER (0..32767)          OPTIONAL,
+ *      numberOfRepetitions     [1] INTEGER (1..127)          type OPTIONAL,
+ *      duration     [2] INTEGER (0..32767)          type OPTIONAL,
  *      interval     [3] INTEGER (0..32767)          OPTIONAL
  *      }
  * ```

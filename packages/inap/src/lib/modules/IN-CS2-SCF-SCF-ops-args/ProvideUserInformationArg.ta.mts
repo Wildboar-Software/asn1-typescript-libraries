@@ -20,7 +20,7 @@ import { ProvideUserInformationArg_Type, _decode_ProvideUserInformationArg_Type,
  *   OPTIONALLY-PROTECTED
  *     {SEQUENCE {constraints             [0]  CollectedInfo,
  *                --    infoToSend            [1] InformationToSend {bound},
- *                --    errorInfo            [2] InformationToSend {bound}    OPTIONAL,
+ *                --    errorInfo            [2] InformationToSend {bound}    type OPTIONAL,
  *                typeOfRequestedInfo     [3]  InfoType DEFAULT numericString,
  *                numberOfAllowedRetries  [4]  INTEGER(0..127) DEFAULT 0,
  *                actions                 [5]  Actions OPTIONAL,

@@ -36,7 +36,7 @@ import { ExecuteResult_Type, _decode_ExecuteResult_Type, _encode_ExecuteResult_T
  *                                                            &Type
  *                                                          ({SupportedMethods}
  *                                                             {@method-id})
- *                                                     OPTIONAL,
+ *                                                     type OPTIONAL,
  *                                                 contextList
  *                                                   [1]  SET OF Context
  *                                       } OPTIONAL} OPTIONAL,

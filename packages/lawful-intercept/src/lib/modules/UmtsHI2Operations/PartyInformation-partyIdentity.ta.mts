@@ -2,8 +2,8 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING,
-    OPTIONAL,
+    type OCTET_STRING,
+    type OPTIONAL,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -41,13 +41,13 @@ import * as $ from "@wildboar/asn1/functional";
  *     -- E164 address of the node in international format. Coded in the same format as
  *     -- the calling party number  parameter of the ISUP (parameter part:[29])
  *
- *     sip-uri                    [8] OCTET STRING     OPTIONAL,
+ *     sip-uri                    [8] OCTET STRING     type OPTIONAL,
  *     -- See [26]
  *
  *     ...,
- *     tel-uri                    [9] OCTET STRING     OPTIONAL,
+ *     tel-uri                    [9] OCTET STRING     type OPTIONAL,
  *     -- See [67]
- *     x-3GPP-Asserted-Identity [10] OCTET STRING     OPTIONAL,
+ *     x-3GPP-Asserted-Identity [10] OCTET STRING     type OPTIONAL,
  *     -- X-3GPP-Asserted-Identity header (3GPP TS 24.109 [79]) of the target, used in
  *     -- some XCAP transactions. This information complement SIP URI or Tel URI of the target.
  *     xUI                        [11] OCTET STRING     OPTIONAL

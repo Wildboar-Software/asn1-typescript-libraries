@@ -2,9 +2,9 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER,
-    OCTET_STRING,
-    OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type OCTET_STRING,
+    type OPTIONAL,
     ASN1Error,
     ASN1SizeError
 } from "@wildboar/asn1";

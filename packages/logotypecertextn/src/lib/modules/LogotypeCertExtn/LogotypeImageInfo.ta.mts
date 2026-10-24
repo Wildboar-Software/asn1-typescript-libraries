@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    IA5String,
-    INTEGER,
-    OPTIONAL,
+    type IA5String,
+    type INTEGER,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";

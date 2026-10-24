@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -22,10 +22,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * 
  * ```asn1
  * ExtensibleCallBarredParam ::= SEQUENCE {
- *     callBarringCause    CallBarringCause    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     callBarringCause    CallBarringCause    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ... ,
- *     unauthorisedMessageOriginator    [1] NULL    OPTIONAL,
+ *     unauthorisedMessageOriginator    [1] NULL    type OPTIONAL,
  *     anonymousCallRejection    [2] NULL    OPTIONAL }
  * ```
  * 

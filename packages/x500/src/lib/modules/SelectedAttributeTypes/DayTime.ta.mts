@@ -2,8 +2,8 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OPTIONAL,
+    type INTEGER,
+    type OPTIONAL,
     type TIME_OF_DAY,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";

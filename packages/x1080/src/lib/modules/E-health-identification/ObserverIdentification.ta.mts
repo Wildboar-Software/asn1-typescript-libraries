@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OBJECT_IDENTIFIER,
+    type OPTIONAL,
+    type OBJECT_IDENTIFIER,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -35,7 +35,7 @@ import {
  * ObserverIdentification ::= SEQUENCE {
  *   scheme      MEDICAL-STAFF-SCHEME.&id ({MedicalStaffSchemes}),
  *   schemeName  MEDICAL-STAFF-SCHEME.&name ({MedicalStaffSchemes}{@.scheme})
- *               OPTIONAL,
+ *               type OPTIONAL,
  *   observerId  MEDICAL-STAFF-SCHEME.&Observer ({MedicalStaffSchemes}{@.scheme})}
  * ```
  *

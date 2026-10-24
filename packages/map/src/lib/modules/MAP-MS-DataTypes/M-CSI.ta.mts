@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -28,9 +28,9 @@ import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../MAP-MS-Da
  *     mobilityTriggers    MobilityTriggers,
  *     serviceKey    ServiceKey,
  *     gsmSCF-Address    [0]    ISDN-AddressString,
- *     extensionContainer    [1]    ExtensionContainer    OPTIONAL,
- *     notificationToCSE    [2] NULL    OPTIONAL,
- *     csi-Active    [3] NULL    OPTIONAL,
+ *     extensionContainer    [1]    ExtensionContainer    type OPTIONAL,
+ *     notificationToCSE    [2] NULL    type OPTIONAL,
+ *     csi-Active    [3] NULL    type OPTIONAL,
  *     ...}
  * ```
  * 

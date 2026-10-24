@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
+    type OPTIONAL,
     SEQUENCE,
     SET,
     ASN1Element as _Element,
@@ -53,14 +53,14 @@ import { UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-fea
  * DeflectCallArgument ::= SEQUENCE
  * {     callToBeDiverted         ConnectionID,
  *     newDestination             DeviceID,
- *     addNewDestinationsList        DeviceIDList                OPTIONAL,
+ *     addNewDestinationsList        DeviceIDList                type OPTIONAL,
  *                               -- List of additional new Destinations
- *     correlatorData             CorrelatorData                 OPTIONAL,
- *     userData             UserData                 OPTIONAL,
- *     callCharacteristics        [0] IMPLICIT CallCharacteristics    OPTIONAL,
- *     subjectOfCall            [1] IMPLICIT SubjectOfCall        OPTIONAL,
- *     languagePreferences        [2] IMPLICIT LanguagePreferences    OPTIONAL,
- *     reason                [3] IMPLICIT EventCause            OPTIONAL,
+ *     correlatorData             CorrelatorData                 type OPTIONAL,
+ *     userData             UserData                 type OPTIONAL,
+ *     callCharacteristics        [0] IMPLICIT CallCharacteristics    type OPTIONAL,
+ *     subjectOfCall            [1] IMPLICIT SubjectOfCall        type OPTIONAL,
+ *     languagePreferences        [2] IMPLICIT LanguagePreferences    type OPTIONAL,
+ *     reason                [3] IMPLICIT EventCause            type OPTIONAL,
  *     extensions             CSTACommonArguments             OPTIONAL }
  * ```
  * 

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -37,7 +37,7 @@ import {
  * CreateSpecification ::= SEQUENCE {
  *   createModifier
  *     BIT STRING {withReferenceObject(0), withAutomaticInstanceNaming(1)}
- *       OPTIONAL,
+ *       type OPTIONAL,
  *   parameter       TemplateList OPTIONAL
  * }
  * ```

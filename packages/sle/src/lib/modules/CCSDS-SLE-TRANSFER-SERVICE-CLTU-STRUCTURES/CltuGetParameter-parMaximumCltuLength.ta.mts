@@ -3,7 +3,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
+    type INTEGER,
     ASN1Error,
     ASN1OverflowError
 } from "@wildboar/asn1";

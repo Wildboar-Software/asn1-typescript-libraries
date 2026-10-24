@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     NULL,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -32,15 +32,15 @@ import { SM_RP_OA, _decode_SM_RP_OA, _encode_SM_RP_OA } from "../MAP-SM-DataType
  *     sm-RP-DA    SM-RP-DA,
  *     sm-RP-OA    SM-RP-OA,
  *     sm-RP-UI    SignalInfo,
- *     moreMessagesToSend    NULL    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     moreMessagesToSend    NULL    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     smDeliveryTimer    SM-DeliveryTimerValue    OPTIONAL,
- *     smDeliveryStartTime    Time    OPTIONAL,
- *     smsOverIP-OnlyIndicator    [0] NULL    OPTIONAL,
- *     correlationID    [1] CorrelationID    OPTIONAL,
- *     maximumRetransmissionTime    [2] Time    OPTIONAL,
- *     smsGmscAddress    [3] ISDN-AddressString    OPTIONAL,
+ *     smDeliveryTimer    SM-DeliveryTimerValue    type OPTIONAL,
+ *     smDeliveryStartTime    Time    type OPTIONAL,
+ *     smsOverIP-OnlyIndicator    [0] NULL    type OPTIONAL,
+ *     correlationID    [1] CorrelationID    type OPTIONAL,
+ *     maximumRetransmissionTime    [2] Time    type OPTIONAL,
+ *     smsGmscAddress    [3] ISDN-AddressString    type OPTIONAL,
  *     smsGmscDiameterAddress    [4] NetworkNodeDiameterAddress    OPTIONAL }
  * ```
  * 

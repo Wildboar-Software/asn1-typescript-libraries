@@ -29,7 +29,7 @@ import {
  * ```asn1
  * EXTENSION ::= CLASS {
  *   &id           ExtensionType UNIQUE,
- *   &Type         OPTIONAL,
+ *   &Type         type OPTIONAL,
  *   &absent       &Type OPTIONAL,
  *   &recommended  Criticality DEFAULT {}
  * }
