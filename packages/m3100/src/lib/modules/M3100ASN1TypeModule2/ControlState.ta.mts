@@ -98,12 +98,23 @@ export const open: ControlState =
 
 
 
-export const _decode_ControlState = $._decodeEnumerated;
+export function _decode_ControlState(el: _Element): ControlState {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ControlState.closed: return ControlState.closed;
+        case ControlState.open: return ControlState.open;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ControlState.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_ControlState = $._encodeEnumerated;
+export const _encode_ControlState: $.ASN1Encoder<ControlState> = $._encodeEnumerated as $.ASN1Encoder<ControlState>;
 
 
 /* eslint-enable */

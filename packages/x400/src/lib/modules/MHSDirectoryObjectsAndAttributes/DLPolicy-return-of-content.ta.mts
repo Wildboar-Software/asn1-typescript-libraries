@@ -108,10 +108,22 @@ export const content_return_requested: DLPolicy_return_of_content =
     DLPolicy_return_of_content.content_return_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_DLPolicy_return_of_content = $._decodeEnumerated;
+export function _decode_DLPolicy_return_of_content(el: _Element): DLPolicy_return_of_content {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case DLPolicy_return_of_content.unchanged: return DLPolicy_return_of_content.unchanged;
+        case DLPolicy_return_of_content.content_return_not_requested: return DLPolicy_return_of_content.content_return_not_requested;
+        case DLPolicy_return_of_content.content_return_requested: return DLPolicy_return_of_content.content_return_requested;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for DLPolicy_return_of_content.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_DLPolicy_return_of_content = $._encodeEnumerated;
+export const _encode_DLPolicy_return_of_content: $.ASN1Encoder<DLPolicy_return_of_content> = $._encodeEnumerated as $.ASN1Encoder<DLPolicy_return_of_content>;
 
 
 /* eslint-enable */

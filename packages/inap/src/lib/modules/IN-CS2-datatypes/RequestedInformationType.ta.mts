@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -141,9 +142,23 @@ export
 const releaseCause: RequestedInformationType = RequestedInformationType.releaseCause; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_RequestedInformationType: $.ASN1Decoder<RequestedInformationType> = $._decodeEnumerated;
+function _decode_RequestedInformationType(el: _Element): RequestedInformationType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case RequestedInformationType.callAttemptElapsedTime: return RequestedInformationType.callAttemptElapsedTime;
+        case RequestedInformationType.callStopTime: return RequestedInformationType.callStopTime;
+        case RequestedInformationType.callConnectedElapsedTime: return RequestedInformationType.callConnectedElapsedTime;
+        case RequestedInformationType.calledAddress: return RequestedInformationType.calledAddress;
+        case RequestedInformationType.releaseCause: return RequestedInformationType.releaseCause;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for RequestedInformationType.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_RequestedInformationType: $.ASN1Encoder<RequestedInformationType> = $._encodeEnumerated;
+const _encode_RequestedInformationType: $.ASN1Encoder<RequestedInformationType> = $._encodeEnumerated as $.ASN1Encoder<RequestedInformationType>;
 
 /* eslint-enable */

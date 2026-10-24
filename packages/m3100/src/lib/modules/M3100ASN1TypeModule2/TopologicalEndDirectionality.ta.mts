@@ -139,12 +139,25 @@ export const bidirectional: TopologicalEndDirectionality =
 
 
 
-export const _decode_TopologicalEndDirectionality = $._decodeEnumerated;
+export function _decode_TopologicalEndDirectionality(el: _Element): TopologicalEndDirectionality {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case TopologicalEndDirectionality.undefined: return TopologicalEndDirectionality.undefined;
+        case TopologicalEndDirectionality.sink: return TopologicalEndDirectionality.sink;
+        case TopologicalEndDirectionality.source: return TopologicalEndDirectionality.source;
+        case TopologicalEndDirectionality.bidirectional: return TopologicalEndDirectionality.bidirectional;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for TopologicalEndDirectionality.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_TopologicalEndDirectionality = $._encodeEnumerated;
+export const _encode_TopologicalEndDirectionality: $.ASN1Encoder<TopologicalEndDirectionality> = $._encodeEnumerated as $.ASN1Encoder<TopologicalEndDirectionality>;
 
 
 /* eslint-enable */

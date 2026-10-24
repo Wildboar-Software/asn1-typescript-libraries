@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element } from "@wildboar/asn1";
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -135,10 +135,22 @@ export const fullOuterJoin: SearchArgumentData_joinType =
     SearchArgumentData_joinType.fullOuterJoin; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_SearchArgumentData_joinType = $._decodeEnumerated;
+export function _decode_SearchArgumentData_joinType(el: _Element): SearchArgumentData_joinType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case SearchArgumentData_joinType.innerJoin: return SearchArgumentData_joinType.innerJoin;
+        case SearchArgumentData_joinType.leftOuterJoin: return SearchArgumentData_joinType.leftOuterJoin;
+        case SearchArgumentData_joinType.fullOuterJoin: return SearchArgumentData_joinType.fullOuterJoin;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for SearchArgumentData_joinType.",
+                el,
+            );
+    }
+}
 
 
-export const _encode_SearchArgumentData_joinType = $._encodeEnumerated;
+export const _encode_SearchArgumentData_joinType: $.ASN1Encoder<SearchArgumentData_joinType> = $._encodeEnumerated as $.ASN1Encoder<SearchArgumentData_joinType>;
 
 
 /* eslint-enable */

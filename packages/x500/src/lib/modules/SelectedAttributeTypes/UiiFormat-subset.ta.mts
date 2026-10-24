@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element } from "@wildboar/asn1";
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -114,10 +114,22 @@ export const wholeSubtree: UiiFormat_subset =
     UiiFormat_subset.wholeSubtree; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_UiiFormat_subset = $._decodeEnumerated;
+export function _decode_UiiFormat_subset(el: _Element): UiiFormat_subset {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case UiiFormat_subset.baseObject: return UiiFormat_subset.baseObject;
+        case UiiFormat_subset.oneLevel: return UiiFormat_subset.oneLevel;
+        case UiiFormat_subset.wholeSubtree: return UiiFormat_subset.wholeSubtree;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for UiiFormat_subset.",
+                el,
+            );
+    }
+}
 
 
-export const _encode_UiiFormat_subset = $._encodeEnumerated;
+export const _encode_UiiFormat_subset: $.ASN1Encoder<UiiFormat_subset> = $._encodeEnumerated as $.ASN1Encoder<UiiFormat_subset>;
 
 
 /* eslint-enable */

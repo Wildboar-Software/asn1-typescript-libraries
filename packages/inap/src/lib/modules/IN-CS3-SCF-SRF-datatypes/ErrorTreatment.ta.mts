@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -101,9 +102,21 @@ export
 const repeatPrompt: ErrorTreatment = ErrorTreatment.repeatPrompt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_ErrorTreatment: $.ASN1Decoder<ErrorTreatment> = $._decodeEnumerated;
+function _decode_ErrorTreatment(el: _Element): ErrorTreatment {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ErrorTreatment.reportErrorToScf: return ErrorTreatment.reportErrorToScf;
+        case ErrorTreatment.help: return ErrorTreatment.help;
+        case ErrorTreatment.repeatPrompt: return ErrorTreatment.repeatPrompt;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for ErrorTreatment.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_ErrorTreatment: $.ASN1Encoder<ErrorTreatment> = $._encodeEnumerated;
+const _encode_ErrorTreatment: $.ASN1Encoder<ErrorTreatment> = $._encodeEnumerated as $.ASN1Encoder<ErrorTreatment>;
 
 /* eslint-enable */

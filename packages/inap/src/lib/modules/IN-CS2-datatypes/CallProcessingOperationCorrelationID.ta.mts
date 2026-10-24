@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -175,9 +176,25 @@ export
 const fACility: CallProcessingOperationCorrelationID = CallProcessingOperationCorrelationID.fACility; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_CallProcessingOperationCorrelationID: $.ASN1Decoder<CallProcessingOperationCorrelationID> = $._decodeEnumerated;
+function _decode_CallProcessingOperationCorrelationID(el: _Element): CallProcessingOperationCorrelationID {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case CallProcessingOperationCorrelationID.aLERTing: return CallProcessingOperationCorrelationID.aLERTing;
+        case CallProcessingOperationCorrelationID.sETUP: return CallProcessingOperationCorrelationID.sETUP;
+        case CallProcessingOperationCorrelationID.cONNect: return CallProcessingOperationCorrelationID.cONNect;
+        case CallProcessingOperationCorrelationID.dISConnect: return CallProcessingOperationCorrelationID.dISConnect;
+        case CallProcessingOperationCorrelationID.rELease: return CallProcessingOperationCorrelationID.rELease;
+        case CallProcessingOperationCorrelationID.rELeaseCOMPlete: return CallProcessingOperationCorrelationID.rELeaseCOMPlete;
+        case CallProcessingOperationCorrelationID.fACility: return CallProcessingOperationCorrelationID.fACility;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for CallProcessingOperationCorrelationID.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_CallProcessingOperationCorrelationID: $.ASN1Encoder<CallProcessingOperationCorrelationID> = $._encodeEnumerated;
+const _encode_CallProcessingOperationCorrelationID: $.ASN1Encoder<CallProcessingOperationCorrelationID> = $._encodeEnumerated as $.ASN1Encoder<CallProcessingOperationCorrelationID>;
 
 /* eslint-enable */

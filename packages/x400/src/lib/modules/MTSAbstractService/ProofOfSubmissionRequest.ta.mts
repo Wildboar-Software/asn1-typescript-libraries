@@ -102,10 +102,21 @@ export const proof_of_submission_requested: ProofOfSubmissionRequest =
     ProofOfSubmissionRequest.proof_of_submission_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_ProofOfSubmissionRequest = $._decodeEnumerated;
+export function _decode_ProofOfSubmissionRequest(el: _Element): ProofOfSubmissionRequest {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ProofOfSubmissionRequest.proof_of_submission_not_requested: return ProofOfSubmissionRequest.proof_of_submission_not_requested;
+        case ProofOfSubmissionRequest.proof_of_submission_requested: return ProofOfSubmissionRequest.proof_of_submission_requested;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ProofOfSubmissionRequest.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_ProofOfSubmissionRequest = $._encodeEnumerated;
+export const _encode_ProofOfSubmissionRequest: $.ASN1Encoder<ProofOfSubmissionRequest> = $._encodeEnumerated as $.ASN1Encoder<ProofOfSubmissionRequest>;
 
 
 /* eslint-enable */

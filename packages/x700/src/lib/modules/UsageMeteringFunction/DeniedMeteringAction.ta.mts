@@ -180,12 +180,24 @@ export const canNotResume: DeniedMeteringAction =
 
 
 
-export const _decode_DeniedMeteringAction = $._decodeEnumerated;
+export function _decode_DeniedMeteringAction(el: _Element): DeniedMeteringAction {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case DeniedMeteringAction.canNotStart: return DeniedMeteringAction.canNotStart;
+        case DeniedMeteringAction.canNotSuspend: return DeniedMeteringAction.canNotSuspend;
+        case DeniedMeteringAction.canNotResume: return DeniedMeteringAction.canNotResume;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for DeniedMeteringAction.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_DeniedMeteringAction = $._encodeEnumerated;
+export const _encode_DeniedMeteringAction: $.ASN1Encoder<DeniedMeteringAction> = $._encodeEnumerated as $.ASN1Encoder<DeniedMeteringAction>;
 
 
 /* eslint-enable */

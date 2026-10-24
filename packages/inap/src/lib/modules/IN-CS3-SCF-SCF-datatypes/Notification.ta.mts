@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -212,9 +213,27 @@ export
 const answeredCall: Notification = Notification.answeredCall; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_Notification: $.ASN1Decoder<Notification> = $._decodeEnumerated;
+function _decode_Notification(el: _Element): Notification {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case Notification.userAbandon: return Notification.userAbandon;
+        case Notification.callFailure: return Notification.callFailure;
+        case Notification.noReply: return Notification.noReply;
+        case Notification.callRelease: return Notification.callRelease;
+        case Notification.ssInvocation: return Notification.ssInvocation;
+        case Notification.creditLimitReached: return Notification.creditLimitReached;
+        case Notification.callDuration: return Notification.callDuration;
+        case Notification.calledNumber: return Notification.calledNumber;
+        case Notification.answeredCall: return Notification.answeredCall;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for Notification.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_Notification: $.ASN1Encoder<Notification> = $._encodeEnumerated;
+const _encode_Notification: $.ASN1Encoder<Notification> = $._encodeEnumerated as $.ASN1Encoder<Notification>;
 
 /* eslint-enable */

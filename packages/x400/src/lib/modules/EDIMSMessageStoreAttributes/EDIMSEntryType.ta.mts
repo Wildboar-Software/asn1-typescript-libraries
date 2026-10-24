@@ -125,10 +125,23 @@ export const fn: EDIMSEntryType =
     EDIMSEntryType.fn; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_EDIMSEntryType = $._decodeEnumerated;
+export function _decode_EDIMSEntryType(el: _Element): EDIMSEntryType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case EDIMSEntryType.edim: return EDIMSEntryType.edim;
+        case EDIMSEntryType.pn: return EDIMSEntryType.pn;
+        case EDIMSEntryType.nn: return EDIMSEntryType.nn;
+        case EDIMSEntryType.fn: return EDIMSEntryType.fn;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for EDIMSEntryType.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_EDIMSEntryType = $._encodeEnumerated;
+export const _encode_EDIMSEntryType: $.ASN1Encoder<EDIMSEntryType> = $._encodeEnumerated as $.ASN1Encoder<EDIMSEntryType>;
 
 
 /* eslint-enable */

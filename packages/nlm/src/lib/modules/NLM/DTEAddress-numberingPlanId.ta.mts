@@ -167,12 +167,24 @@ export const e164: DTEAddress_numberingPlanId =
 
 
 
-export const _decode_DTEAddress_numberingPlanId = $._decodeEnumerated;
+export function _decode_DTEAddress_numberingPlanId(el: _Element): DTEAddress_numberingPlanId {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case DTEAddress_numberingPlanId.unknown: return DTEAddress_numberingPlanId.unknown;
+        case DTEAddress_numberingPlanId.x121: return DTEAddress_numberingPlanId.x121;
+        case DTEAddress_numberingPlanId.e164: return DTEAddress_numberingPlanId.e164;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for DTEAddress_numberingPlanId.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_DTEAddress_numberingPlanId = $._encodeEnumerated;
+export const _encode_DTEAddress_numberingPlanId: $.ASN1Encoder<DTEAddress_numberingPlanId> = $._encodeEnumerated as $.ASN1Encoder<DTEAddress_numberingPlanId>;
 
 
 /* eslint-enable */

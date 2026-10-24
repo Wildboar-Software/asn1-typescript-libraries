@@ -159,10 +159,22 @@ export const non_member: MembershipStatus =
     MembershipStatus.non_member; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_MembershipStatus = $._decodeEnumerated;
+export function _decode_MembershipStatus(el: _Element): MembershipStatus {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case MembershipStatus.unknown: return MembershipStatus.unknown;
+        case MembershipStatus.member: return MembershipStatus.member;
+        case MembershipStatus.non_member: return MembershipStatus.non_member;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for MembershipStatus.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_MembershipStatus = $._encodeEnumerated;
+export const _encode_MembershipStatus: $.ASN1Encoder<MembershipStatus> = $._encodeEnumerated as $.ASN1Encoder<MembershipStatus>;
 
 
 /* eslint-enable */

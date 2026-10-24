@@ -184,10 +184,23 @@ export const alarmCondition: LeapIndication =
     LeapIndication.alarmCondition; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_LeapIndication = $._decodeEnumerated;
+export function _decode_LeapIndication(el: _Element): LeapIndication {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case LeapIndication.noWarning: return LeapIndication.noWarning;
+        case LeapIndication.minuteHas61Seconds: return LeapIndication.minuteHas61Seconds;
+        case LeapIndication.minuteHas59Seconds: return LeapIndication.minuteHas59Seconds;
+        case LeapIndication.alarmCondition: return LeapIndication.alarmCondition;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for LeapIndication.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_LeapIndication = $._encodeEnumerated;
+export const _encode_LeapIndication: $.ASN1Encoder<LeapIndication> = $._encodeEnumerated as $.ASN1Encoder<LeapIndication>;
 
 
 /* eslint-enable */

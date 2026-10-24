@@ -110,10 +110,22 @@ export const high: ImportanceField =
     ImportanceField.high; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_ImportanceField = $._decodeEnumerated;
+export function _decode_ImportanceField(el: _Element): ImportanceField {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ImportanceField.low: return ImportanceField.low;
+        case ImportanceField.normal: return ImportanceField.normal;
+        case ImportanceField.high: return ImportanceField.high;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ImportanceField.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_ImportanceField = $._encodeEnumerated;
+export const _encode_ImportanceField: $.ASN1Encoder<ImportanceField> = $._encodeEnumerated as $.ASN1Encoder<ImportanceField>;
 
 
 /* eslint-enable */

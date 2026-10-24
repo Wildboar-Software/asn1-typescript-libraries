@@ -209,8 +209,22 @@ const ReservationLevel_read_only2: ReservationLevel = ReservationLevel.read_only
  */
 export
 const read_only2: ReservationLevel = ReservationLevel.read_only2; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_ReservationLevel = $._decodeEnumerated;
-export const _encode_ReservationLevel = $._encodeEnumerated;
+export function _decode_ReservationLevel(el: _Element): ReservationLevel {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ReservationLevel.unreserved: return ReservationLevel.unreserved;
+        case ReservationLevel.exclusive_write: return ReservationLevel.exclusive_write;
+        case ReservationLevel.exclusive_access: return ReservationLevel.exclusive_access;
+        case ReservationLevel.read_only1: return ReservationLevel.read_only1;
+        case ReservationLevel.read_only2: return ReservationLevel.read_only2;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for ReservationLevel.",
+                el,
+            );
+    }
+}
+export const _encode_ReservationLevel: $.ASN1Encoder<ReservationLevel> = $._encodeEnumerated as $.ASN1Encoder<ReservationLevel>;
 
 
 /* eslint-enable */

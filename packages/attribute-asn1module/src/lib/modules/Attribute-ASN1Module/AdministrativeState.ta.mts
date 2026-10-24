@@ -158,10 +158,22 @@ export
 const shuttingDown: AdministrativeState = AdministrativeState.shuttingDown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_AdministrativeState = $._decodeEnumerated;
+export function _decode_AdministrativeState(el: _Element): AdministrativeState {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case AdministrativeState.locked: return AdministrativeState.locked;
+        case AdministrativeState.unlocked: return AdministrativeState.unlocked;
+        case AdministrativeState.shuttingDown: return AdministrativeState.shuttingDown;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for AdministrativeState.",
+                el,
+            );
+    }
+}
 
 
-export const _encode_AdministrativeState = $._encodeEnumerated;
+export const _encode_AdministrativeState: $.ASN1Encoder<AdministrativeState> = $._encodeEnumerated as $.ASN1Encoder<AdministrativeState>;
 
 
 /* eslint-enable */

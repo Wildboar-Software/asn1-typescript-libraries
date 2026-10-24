@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -121,9 +122,22 @@ export
 const unknownTrigger: TriggerStatus = TriggerStatus.unknownTrigger; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_TriggerStatus: $.ASN1Decoder<TriggerStatus> = $._decodeEnumerated;
+function _decode_TriggerStatus(el: _Element): TriggerStatus {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case TriggerStatus.created: return TriggerStatus.created;
+        case TriggerStatus.alreadyExist: return TriggerStatus.alreadyExist;
+        case TriggerStatus.deleted: return TriggerStatus.deleted;
+        case TriggerStatus.unknownTrigger: return TriggerStatus.unknownTrigger;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for TriggerStatus.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_TriggerStatus: $.ASN1Encoder<TriggerStatus> = $._encodeEnumerated;
+const _encode_TriggerStatus: $.ASN1Encoder<TriggerStatus> = $._encodeEnumerated as $.ASN1Encoder<TriggerStatus>;
 
 /* eslint-enable */

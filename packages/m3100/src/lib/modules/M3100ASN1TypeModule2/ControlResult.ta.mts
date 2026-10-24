@@ -142,12 +142,25 @@ export const fail_ReasonUnknown: ControlResult =
 
 
 
-export const _decode_ControlResult = $._decodeEnumerated;
+export function _decode_ControlResult(el: _Element): ControlResult {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ControlResult.complete: return ControlResult.complete;
+        case ControlResult.alreadyInCondition: return ControlResult.alreadyInCondition;
+        case ControlResult.fail_InvalidControlActionType: return ControlResult.fail_InvalidControlActionType;
+        case ControlResult.fail_ReasonUnknown: return ControlResult.fail_ReasonUnknown;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ControlResult.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_ControlResult = $._encodeEnumerated;
+export const _encode_ControlResult: $.ASN1Encoder<ControlResult> = $._encodeEnumerated as $.ASN1Encoder<ControlResult>;
 
 
 /* eslint-enable */

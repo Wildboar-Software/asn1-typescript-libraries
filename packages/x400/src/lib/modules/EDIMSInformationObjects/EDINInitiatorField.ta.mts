@@ -111,10 +111,22 @@ export const internal_ms: EDINInitiatorField =
     EDINInitiatorField.internal_ms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_EDINInitiatorField = $._decodeEnumerated;
+export function _decode_EDINInitiatorField(el: _Element): EDINInitiatorField {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case EDINInitiatorField.internal_ua: return EDINInitiatorField.internal_ua;
+        case EDINInitiatorField.external_ua: return EDINInitiatorField.external_ua;
+        case EDINInitiatorField.internal_ms: return EDINInitiatorField.internal_ms;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for EDINInitiatorField.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_EDINInitiatorField = $._encodeEnumerated;
+export const _encode_EDINInitiatorField: $.ASN1Encoder<EDINInitiatorField> = $._encodeEnumerated as $.ASN1Encoder<EDINInitiatorField>;
 
 
 /* eslint-enable */

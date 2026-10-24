@@ -229,8 +229,23 @@ const UpdateProblem_reference_loop_detected: UpdateProblem = UpdateProblem.refer
  */
 export
 const reference_loop_detected: UpdateProblem = UpdateProblem.reference_loop_detected; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_UpdateProblem = $._decodeEnumerated;
-export const _encode_UpdateProblem = $._encodeEnumerated;
+export function _decode_UpdateProblem(el: _Element): UpdateProblem {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case UpdateProblem.inappropriate_object_class: return UpdateProblem.inappropriate_object_class;
+        case UpdateProblem.insufficient_access_rights: return UpdateProblem.insufficient_access_rights;
+        case UpdateProblem.reserved_by_a_user: return UpdateProblem.reserved_by_a_user;
+        case UpdateProblem.illegal_content_modification: return UpdateProblem.illegal_content_modification;
+        case UpdateProblem.group_membership_criteria_violation: return UpdateProblem.group_membership_criteria_violation;
+        case UpdateProblem.reference_loop_detected: return UpdateProblem.reference_loop_detected;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for UpdateProblem.",
+                el,
+            );
+    }
+}
+export const _encode_UpdateProblem: $.ASN1Encoder<UpdateProblem> = $._encodeEnumerated as $.ASN1Encoder<UpdateProblem>;
 
 
 /* eslint-enable */

@@ -120,12 +120,24 @@ export const resourceFailed: AutoSwitchReason =
 
 
 
-export const _decode_AutoSwitchReason = $._decodeEnumerated;
+export function _decode_AutoSwitchReason(el: _Element): AutoSwitchReason {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case AutoSwitchReason.waitToRestore: return AutoSwitchReason.waitToRestore;
+        case AutoSwitchReason.resourceDegrade: return AutoSwitchReason.resourceDegrade;
+        case AutoSwitchReason.resourceFailed: return AutoSwitchReason.resourceFailed;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for AutoSwitchReason.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_AutoSwitchReason = $._encodeEnumerated;
+export const _encode_AutoSwitchReason: $.ASN1Encoder<AutoSwitchReason> = $._encodeEnumerated as $.ASN1Encoder<AutoSwitchReason>;
 
 
 /* eslint-enable */

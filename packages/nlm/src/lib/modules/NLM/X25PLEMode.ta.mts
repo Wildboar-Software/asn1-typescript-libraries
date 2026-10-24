@@ -170,12 +170,24 @@ export const dTEasDCE: X25PLEMode =
 
 
 
-export const _decode_X25PLEMode = $._decodeEnumerated;
+export function _decode_X25PLEMode(el: _Element): X25PLEMode {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case X25PLEMode.dTE: return X25PLEMode.dTE;
+        case X25PLEMode.dCE: return X25PLEMode.dCE;
+        case X25PLEMode.dTEasDCE: return X25PLEMode.dTEasDCE;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for X25PLEMode.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_X25PLEMode = $._encodeEnumerated;
+export const _encode_X25PLEMode: $.ASN1Encoder<X25PLEMode> = $._encodeEnumerated as $.ASN1Encoder<X25PLEMode>;
 
 
 /* eslint-enable */

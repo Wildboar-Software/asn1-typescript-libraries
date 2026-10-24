@@ -216,10 +216,23 @@ export const denyWithFalseResponse: DenialResponse =
     DenialResponse.denyWithFalseResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_DenialResponse = $._decodeEnumerated;
+export function _decode_DenialResponse(el: _Element): DenialResponse {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case DenialResponse.denyWithResponse: return DenialResponse.denyWithResponse;
+        case DenialResponse.denyWithoutResponse: return DenialResponse.denyWithoutResponse;
+        case DenialResponse.abortAssociation: return DenialResponse.abortAssociation;
+        case DenialResponse.denyWithFalseResponse: return DenialResponse.denyWithFalseResponse;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for DenialResponse.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_DenialResponse = $._encodeEnumerated;
+export const _encode_DenialResponse: $.ASN1Encoder<DenialResponse> = $._encodeEnumerated as $.ASN1Encoder<DenialResponse>;
 
 
 /* eslint-enable */

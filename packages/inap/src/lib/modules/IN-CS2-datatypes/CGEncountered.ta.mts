@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -104,9 +105,21 @@ export
 const scpOverload: CGEncountered = CGEncountered.scpOverload; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_CGEncountered: $.ASN1Decoder<CGEncountered> = $._decodeEnumerated;
+function _decode_CGEncountered(el: _Element): CGEncountered {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case CGEncountered.noCGencountered: return CGEncountered.noCGencountered;
+        case CGEncountered.manualCGencountered: return CGEncountered.manualCGencountered;
+        case CGEncountered.scpOverload: return CGEncountered.scpOverload;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for CGEncountered.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_CGEncountered: $.ASN1Encoder<CGEncountered> = $._encodeEnumerated;
+const _encode_CGEncountered: $.ASN1Encoder<CGEncountered> = $._encodeEnumerated as $.ASN1Encoder<CGEncountered>;
 
 /* eslint-enable */

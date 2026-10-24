@@ -151,8 +151,20 @@ const Priority_high: Priority = Priority.high; /* LONG_NAMED_ENUMERATED_VALUE */
  */
 export
 const high: Priority = Priority.high; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_Priority = $._decodeEnumerated;
-export const _encode_Priority = $._encodeEnumerated;
+export function _decode_Priority(el: _Element): Priority {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case Priority.low: return Priority.low;
+        case Priority.medium: return Priority.medium;
+        case Priority.high: return Priority.high;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for Priority.",
+                el,
+            );
+    }
+}
+export const _encode_Priority: $.ASN1Encoder<Priority> = $._encodeEnumerated as $.ASN1Encoder<Priority>;
 
 
 /* eslint-enable */

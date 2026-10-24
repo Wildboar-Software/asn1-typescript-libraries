@@ -165,10 +165,23 @@ export const level1and2: AdjacencyUsage =
   AdjacencyUsage.level1and2; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_AdjacencyUsage = $._decodeEnumerated;
+export function _decode_AdjacencyUsage(el: _Element): AdjacencyUsage {
+  const enumerated = $._decodeEnumerated(el);
+  switch (enumerated) {
+    case AdjacencyUsage.undefined: return AdjacencyUsage.undefined;
+    case AdjacencyUsage.level1: return AdjacencyUsage.level1;
+    case AdjacencyUsage.level2: return AdjacencyUsage.level2;
+    case AdjacencyUsage.level1and2: return AdjacencyUsage.level1and2;
+    default:
+      throw new _ConstructionError(
+        'Invalid ENUMERATED value ' + enumerated + ' for AdjacencyUsage.',
+        el,
+      );
+  }
+}
 
 
-export const _encode_AdjacencyUsage = $._encodeEnumerated;
+export const _encode_AdjacencyUsage: $.ASN1Encoder<AdjacencyUsage> = $._encodeEnumerated as $.ASN1Encoder<AdjacencyUsage>;
 
 
 /* eslint-enable */

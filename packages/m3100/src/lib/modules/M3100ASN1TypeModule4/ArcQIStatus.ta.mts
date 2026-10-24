@@ -120,12 +120,24 @@ export const nalmCountDown: ArcQIStatus =
 
 
 
-export const _decode_ArcQIStatus = $._decodeEnumerated;
+export function _decode_ArcQIStatus(el: _Element): ArcQIStatus {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ArcQIStatus.notApplicable: return ArcQIStatus.notApplicable;
+        case ArcQIStatus.nalmNotReported: return ArcQIStatus.nalmNotReported;
+        case ArcQIStatus.nalmCountDown: return ArcQIStatus.nalmCountDown;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ArcQIStatus.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_ArcQIStatus = $._encodeEnumerated;
+export const _encode_ArcQIStatus: $.ASN1Encoder<ArcQIStatus> = $._encodeEnumerated as $.ASN1Encoder<ArcQIStatus>;
 
 
 /* eslint-enable */

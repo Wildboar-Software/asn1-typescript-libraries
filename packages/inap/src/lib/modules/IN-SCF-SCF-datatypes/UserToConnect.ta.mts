@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -118,9 +119,22 @@ export
 const previous: UserToConnect = UserToConnect.previous; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_UserToConnect: $.ASN1Decoder<UserToConnect> = $._decodeEnumerated;
+function _decode_UserToConnect(el: _Element): UserToConnect {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case UserToConnect.first: return UserToConnect.first;
+        case UserToConnect.nofirst: return UserToConnect.nofirst;
+        case UserToConnect.newone: return UserToConnect.newone;
+        case UserToConnect.previous: return UserToConnect.previous;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for UserToConnect.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_UserToConnect: $.ASN1Encoder<UserToConnect> = $._encodeEnumerated;
+const _encode_UserToConnect: $.ASN1Encoder<UserToConnect> = $._encodeEnumerated as $.ASN1Encoder<UserToConnect>;
 
 /* eslint-enable */

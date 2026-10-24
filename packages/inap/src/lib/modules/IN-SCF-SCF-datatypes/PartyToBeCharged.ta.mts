@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -84,9 +85,20 @@ export
 const terminating: PartyToBeCharged = PartyToBeCharged.terminating; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_PartyToBeCharged: $.ASN1Decoder<PartyToBeCharged> = $._decodeEnumerated;
+function _decode_PartyToBeCharged(el: _Element): PartyToBeCharged {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case PartyToBeCharged.orignating: return PartyToBeCharged.orignating;
+        case PartyToBeCharged.terminating: return PartyToBeCharged.terminating;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for PartyToBeCharged.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_PartyToBeCharged: $.ASN1Encoder<PartyToBeCharged> = $._encodeEnumerated;
+const _encode_PartyToBeCharged: $.ASN1Encoder<PartyToBeCharged> = $._encodeEnumerated as $.ASN1Encoder<PartyToBeCharged>;
 
 /* eslint-enable */

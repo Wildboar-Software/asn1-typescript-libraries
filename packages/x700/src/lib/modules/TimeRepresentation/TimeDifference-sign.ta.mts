@@ -109,10 +109,21 @@ export const negative: TimeDifference_sign =
     TimeDifference_sign.negative; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_TimeDifference_sign = $._decodeEnumerated;
+export function _decode_TimeDifference_sign(el: _Element): TimeDifference_sign {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case TimeDifference_sign.positive: return TimeDifference_sign.positive;
+        case TimeDifference_sign.negative: return TimeDifference_sign.negative;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for TimeDifference_sign.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_TimeDifference_sign = $._encodeEnumerated;
+export const _encode_TimeDifference_sign: $.ASN1Encoder<TimeDifference_sign> = $._encodeEnumerated as $.ASN1Encoder<TimeDifference_sign>;
 
 
 /* eslint-enable */

@@ -177,8 +177,21 @@ const NameProblem_inappropriate_object_class: NameProblem = NameProblem.inapprop
  */
 export
 const inappropriate_object_class: NameProblem = NameProblem.inappropriate_object_class; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_NameProblem = $._decodeEnumerated;
-export const _encode_NameProblem = $._encodeEnumerated;
+export function _decode_NameProblem(el: _Element): NameProblem {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case NameProblem.invalid_upi: return NameProblem.invalid_upi;
+        case NameProblem.invalid_path_name: return NameProblem.invalid_path_name;
+        case NameProblem.ambiguous_path_name: return NameProblem.ambiguous_path_name;
+        case NameProblem.inappropriate_object_class: return NameProblem.inappropriate_object_class;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for NameProblem.",
+                el,
+            );
+    }
+}
+export const _encode_NameProblem: $.ASN1Encoder<NameProblem> = $._encodeEnumerated as $.ASN1Encoder<NameProblem>;
 
 
 /* eslint-enable */

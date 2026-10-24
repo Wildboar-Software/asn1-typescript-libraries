@@ -159,10 +159,22 @@ export
 const removed: AttributeStatus = AttributeStatus.removed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_AttributeStatus = $._decodeEnumerated;
+export function _decode_AttributeStatus(el: _Element): AttributeStatus {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case AttributeStatus.added: return AttributeStatus.added;
+        case AttributeStatus.modified: return AttributeStatus.modified;
+        case AttributeStatus.removed: return AttributeStatus.removed;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for AttributeStatus.",
+                el,
+            );
+    }
+}
 
 
-export const _encode_AttributeStatus = $._encodeEnumerated;
+export const _encode_AttributeStatus: $.ASN1Encoder<AttributeStatus> = $._encodeEnumerated as $.ASN1Encoder<AttributeStatus>;
 
 
 /* eslint-enable */

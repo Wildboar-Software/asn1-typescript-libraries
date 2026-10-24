@@ -117,12 +117,24 @@ export const twoway: CircuitDirectionality =
 
 
 
-export const _decode_CircuitDirectionality = $._decodeEnumerated;
+export function _decode_CircuitDirectionality(el: _Element): CircuitDirectionality {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case CircuitDirectionality.onewayOut: return CircuitDirectionality.onewayOut;
+        case CircuitDirectionality.onewayIn: return CircuitDirectionality.onewayIn;
+        case CircuitDirectionality.twoway: return CircuitDirectionality.twoway;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for CircuitDirectionality.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_CircuitDirectionality = $._encodeEnumerated;
+export const _encode_CircuitDirectionality: $.ASN1Encoder<CircuitDirectionality> = $._encodeEnumerated as $.ASN1Encoder<CircuitDirectionality>;
 
 
 /* eslint-enable */

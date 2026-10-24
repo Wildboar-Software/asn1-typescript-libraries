@@ -275,8 +275,25 @@ const ServiceProblem_function_set_violation: ServiceProblem = ServiceProblem.fun
  */
 export
 const function_set_violation: ServiceProblem = ServiceProblem.function_set_violation; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_ServiceProblem = $._decodeEnumerated;
-export const _encode_ServiceProblem = $._encodeEnumerated;
+export function _decode_ServiceProblem(el: _Element): ServiceProblem {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ServiceProblem.server_busy: return ServiceProblem.server_busy;
+        case ServiceProblem.server_unavailable: return ServiceProblem.server_unavailable;
+        case ServiceProblem.operation_too_complex: return ServiceProblem.operation_too_complex;
+        case ServiceProblem.resource_limit_exceeded: return ServiceProblem.resource_limit_exceeded;
+        case ServiceProblem.maximum_length_exceeded: return ServiceProblem.maximum_length_exceeded;
+        case ServiceProblem.cannot_continue: return ServiceProblem.cannot_continue;
+        case ServiceProblem.unclassified_server_error: return ServiceProblem.unclassified_server_error;
+        case ServiceProblem.function_set_violation: return ServiceProblem.function_set_violation;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for ServiceProblem.",
+                el,
+            );
+    }
+}
+export const _encode_ServiceProblem: $.ASN1Encoder<ServiceProblem> = $._encodeEnumerated as $.ASN1Encoder<ServiceProblem>;
 
 
 /* eslint-enable */

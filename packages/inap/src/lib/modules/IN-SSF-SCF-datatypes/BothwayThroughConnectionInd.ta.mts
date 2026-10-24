@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -87,9 +88,20 @@ export
 const bothwayPathNotRequired: BothwayThroughConnectionInd = BothwayThroughConnectionInd.bothwayPathNotRequired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_BothwayThroughConnectionInd: $.ASN1Decoder<BothwayThroughConnectionInd> = $._decodeEnumerated;
+function _decode_BothwayThroughConnectionInd(el: _Element): BothwayThroughConnectionInd {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case BothwayThroughConnectionInd.bothwayPathRequired: return BothwayThroughConnectionInd.bothwayPathRequired;
+        case BothwayThroughConnectionInd.bothwayPathNotRequired: return BothwayThroughConnectionInd.bothwayPathNotRequired;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for BothwayThroughConnectionInd.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_BothwayThroughConnectionInd: $.ASN1Encoder<BothwayThroughConnectionInd> = $._encodeEnumerated;
+const _encode_BothwayThroughConnectionInd: $.ASN1Encoder<BothwayThroughConnectionInd> = $._encodeEnumerated as $.ASN1Encoder<BothwayThroughConnectionInd>;
 
 /* eslint-enable */

@@ -117,12 +117,24 @@ export const endBLoopedBack: LoopbackControl_status =
 
 
 
-export const _decode_LoopbackControl_status = $._decodeEnumerated;
+export function _decode_LoopbackControl_status(el: _Element): LoopbackControl_status {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case LoopbackControl_status.noLoopback: return LoopbackControl_status.noLoopback;
+        case LoopbackControl_status.endALoopedBack: return LoopbackControl_status.endALoopedBack;
+        case LoopbackControl_status.endBLoopedBack: return LoopbackControl_status.endBLoopedBack;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for LoopbackControl_status.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_LoopbackControl_status = $._encodeEnumerated;
+export const _encode_LoopbackControl_status: $.ASN1Encoder<LoopbackControl_status> = $._encodeEnumerated as $.ASN1Encoder<LoopbackControl_status>;
 
 
 /* eslint-enable */

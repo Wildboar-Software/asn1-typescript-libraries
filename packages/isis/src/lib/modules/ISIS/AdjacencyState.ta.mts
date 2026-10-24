@@ -166,10 +166,23 @@ export const down: AdjacencyState =
   AdjacencyState.down; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_AdjacencyState = $._decodeEnumerated;
+export function _decode_AdjacencyState(el: _Element): AdjacencyState {
+  const enumerated = $._decodeEnumerated(el);
+  switch (enumerated) {
+    case AdjacencyState.initializing: return AdjacencyState.initializing;
+    case AdjacencyState.up: return AdjacencyState.up;
+    case AdjacencyState.failed: return AdjacencyState.failed;
+    case AdjacencyState.down: return AdjacencyState.down;
+    default:
+      throw new _ConstructionError(
+        'Invalid ENUMERATED value ' + enumerated + ' for AdjacencyState.',
+        el,
+      );
+  }
+}
 
 
-export const _encode_AdjacencyState = $._encodeEnumerated;
+export const _encode_AdjacencyState: $.ASN1Encoder<AdjacencyState> = $._encodeEnumerated as $.ASN1Encoder<AdjacencyState>;
 
 
 /* eslint-enable */

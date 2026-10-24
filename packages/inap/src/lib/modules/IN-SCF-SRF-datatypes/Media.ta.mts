@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -101,9 +102,21 @@ export
 const faxGroup4: Media = Media.faxGroup4; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_Media: $.ASN1Decoder<Media> = $._decodeEnumerated;
+function _decode_Media(el: _Element): Media {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case Media.voiceMail: return Media.voiceMail;
+        case Media.faxGroup3: return Media.faxGroup3;
+        case Media.faxGroup4: return Media.faxGroup4;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for Media.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_Media: $.ASN1Encoder<Media> = $._encodeEnumerated;
+const _encode_Media: $.ASN1Encoder<Media> = $._encodeEnumerated as $.ASN1Encoder<Media>;
 
 /* eslint-enable */

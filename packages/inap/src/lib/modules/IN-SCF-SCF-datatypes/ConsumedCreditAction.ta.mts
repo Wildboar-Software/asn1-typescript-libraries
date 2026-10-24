@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -101,9 +102,21 @@ export
 const tone: ConsumedCreditAction = ConsumedCreditAction.tone; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_ConsumedCreditAction: $.ASN1Decoder<ConsumedCreditAction> = $._decodeEnumerated;
+function _decode_ConsumedCreditAction(el: _Element): ConsumedCreditAction {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ConsumedCreditAction.disconnect: return ConsumedCreditAction.disconnect;
+        case ConsumedCreditAction.message: return ConsumedCreditAction.message;
+        case ConsumedCreditAction.tone: return ConsumedCreditAction.tone;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for ConsumedCreditAction.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_ConsumedCreditAction: $.ASN1Encoder<ConsumedCreditAction> = $._encodeEnumerated;
+const _encode_ConsumedCreditAction: $.ASN1Encoder<ConsumedCreditAction> = $._encodeEnumerated as $.ASN1Encoder<ConsumedCreditAction>;
 
 /* eslint-enable */

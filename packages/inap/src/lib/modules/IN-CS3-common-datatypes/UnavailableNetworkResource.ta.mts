@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -161,9 +162,24 @@ export
 const screening: UnavailableNetworkResource = UnavailableNetworkResource.screening; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_UnavailableNetworkResource: $.ASN1Decoder<UnavailableNetworkResource> = $._decodeEnumerated;
+function _decode_UnavailableNetworkResource(el: _Element): UnavailableNetworkResource {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case UnavailableNetworkResource.unavailableResources: return UnavailableNetworkResource.unavailableResources;
+        case UnavailableNetworkResource.componentFailure: return UnavailableNetworkResource.componentFailure;
+        case UnavailableNetworkResource.basicCallProcessingException: return UnavailableNetworkResource.basicCallProcessingException;
+        case UnavailableNetworkResource.resourceStatusFailure: return UnavailableNetworkResource.resourceStatusFailure;
+        case UnavailableNetworkResource.endUserFailure: return UnavailableNetworkResource.endUserFailure;
+        case UnavailableNetworkResource.screening: return UnavailableNetworkResource.screening;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for UnavailableNetworkResource.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_UnavailableNetworkResource: $.ASN1Encoder<UnavailableNetworkResource> = $._encodeEnumerated;
+const _encode_UnavailableNetworkResource: $.ASN1Encoder<UnavailableNetworkResource> = $._encodeEnumerated as $.ASN1Encoder<UnavailableNetworkResource>;
 
 /* eslint-enable */

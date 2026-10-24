@@ -91,10 +91,21 @@ export const automatic: AcknowledgmentModeField =
     AcknowledgmentModeField.automatic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_AcknowledgmentModeField = $._decodeEnumerated;
+export function _decode_AcknowledgmentModeField(el: _Element): AcknowledgmentModeField {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case AcknowledgmentModeField.manual: return AcknowledgmentModeField.manual;
+        case AcknowledgmentModeField.automatic: return AcknowledgmentModeField.automatic;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for AcknowledgmentModeField.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_AcknowledgmentModeField = $._encodeEnumerated;
+export const _encode_AcknowledgmentModeField: $.ASN1Encoder<AcknowledgmentModeField> = $._encodeEnumerated as $.ASN1Encoder<AcknowledgmentModeField>;
 
 
 /* eslint-enable */

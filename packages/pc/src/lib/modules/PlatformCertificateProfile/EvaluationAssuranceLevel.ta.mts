@@ -271,10 +271,26 @@ export
 const level7: EvaluationAssuranceLevel = EvaluationAssuranceLevel.level7; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_EvaluationAssuranceLevel = $._decodeEnumerated;
+export function _decode_EvaluationAssuranceLevel(el: _Element): EvaluationAssuranceLevel {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case EvaluationAssuranceLevel.level1: return EvaluationAssuranceLevel.level1;
+        case EvaluationAssuranceLevel.level2: return EvaluationAssuranceLevel.level2;
+        case EvaluationAssuranceLevel.level3: return EvaluationAssuranceLevel.level3;
+        case EvaluationAssuranceLevel.level4: return EvaluationAssuranceLevel.level4;
+        case EvaluationAssuranceLevel.level5: return EvaluationAssuranceLevel.level5;
+        case EvaluationAssuranceLevel.level6: return EvaluationAssuranceLevel.level6;
+        case EvaluationAssuranceLevel.level7: return EvaluationAssuranceLevel.level7;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for EvaluationAssuranceLevel.",
+                el,
+            );
+    }
+}
 
 
-export const _encode_EvaluationAssuranceLevel = $._encodeEnumerated;
+export const _encode_EvaluationAssuranceLevel: $.ASN1Encoder<EvaluationAssuranceLevel> = $._encodeEnumerated as $.ASN1Encoder<EvaluationAssuranceLevel>;
 
 
 /* eslint-enable */

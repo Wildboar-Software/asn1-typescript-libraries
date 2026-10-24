@@ -91,10 +91,21 @@ export const ia5: Repertoire =
     Repertoire.ia5; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_Repertoire = $._decodeEnumerated;
+export function _decode_Repertoire(el: _Element): Repertoire {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case Repertoire.ita2: return Repertoire.ita2;
+        case Repertoire.ia5: return Repertoire.ia5;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for Repertoire.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_Repertoire = $._encodeEnumerated;
+export const _encode_Repertoire: $.ASN1Encoder<Repertoire> = $._encodeEnumerated as $.ASN1Encoder<Repertoire>;
 
 
 /* eslint-enable */

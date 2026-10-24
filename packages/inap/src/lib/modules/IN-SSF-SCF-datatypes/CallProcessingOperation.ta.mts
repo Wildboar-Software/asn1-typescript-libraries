@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -175,9 +176,25 @@ export
 const fACility: CallProcessingOperation = CallProcessingOperation.fACility; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_CallProcessingOperation: $.ASN1Decoder<CallProcessingOperation> = $._decodeEnumerated;
+function _decode_CallProcessingOperation(el: _Element): CallProcessingOperation {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case CallProcessingOperation.aLERTing: return CallProcessingOperation.aLERTing;
+        case CallProcessingOperation.sETUP: return CallProcessingOperation.sETUP;
+        case CallProcessingOperation.cONNect: return CallProcessingOperation.cONNect;
+        case CallProcessingOperation.dISConnect: return CallProcessingOperation.dISConnect;
+        case CallProcessingOperation.rELease: return CallProcessingOperation.rELease;
+        case CallProcessingOperation.rELeaseCOMPlete: return CallProcessingOperation.rELeaseCOMPlete;
+        case CallProcessingOperation.fACility: return CallProcessingOperation.fACility;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for CallProcessingOperation.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_CallProcessingOperation: $.ASN1Encoder<CallProcessingOperation> = $._encodeEnumerated;
+const _encode_CallProcessingOperation: $.ASN1Encoder<CallProcessingOperation> = $._encodeEnumerated as $.ASN1Encoder<CallProcessingOperation>;
 
 /* eslint-enable */

@@ -134,10 +134,21 @@ export const truncate: TerminateValidationInfo =
     TerminateValidationInfo.truncate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_TerminateValidationInfo = $._decodeEnumerated;
+export function _decode_TerminateValidationInfo(el: _Element): TerminateValidationInfo {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case TerminateValidationInfo.cancel: return TerminateValidationInfo.cancel;
+        case TerminateValidationInfo.truncate: return TerminateValidationInfo.truncate;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for TerminateValidationInfo.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_TerminateValidationInfo = $._encodeEnumerated;
+export const _encode_TerminateValidationInfo: $.ASN1Encoder<TerminateValidationInfo> = $._encodeEnumerated as $.ASN1Encoder<TerminateValidationInfo>;
 
 
 /* eslint-enable */

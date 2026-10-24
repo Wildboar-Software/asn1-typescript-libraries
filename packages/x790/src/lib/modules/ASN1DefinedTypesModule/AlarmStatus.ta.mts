@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -135,7 +136,23 @@ export const AlarmStatus_activePending: AlarmStatus = AlarmStatus.activePending;
  */
 export const activePending: AlarmStatus = AlarmStatus.activePending;
 
-export const _decode_AlarmStatus = $._decodeEnumerated;
-export const _encode_AlarmStatus = $._encodeEnumerated;
+export function _decode_AlarmStatus(el: _Element): AlarmStatus {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case AlarmStatus.cleared: return AlarmStatus.cleared;
+        case AlarmStatus.activeReportable_Indeterminate: return AlarmStatus.activeReportable_Indeterminate;
+        case AlarmStatus.activeReportable_Warning: return AlarmStatus.activeReportable_Warning;
+        case AlarmStatus.activeReportable_Minor: return AlarmStatus.activeReportable_Minor;
+        case AlarmStatus.activeReportable_Major: return AlarmStatus.activeReportable_Major;
+        case AlarmStatus.activeReportable_Critical: return AlarmStatus.activeReportable_Critical;
+        case AlarmStatus.activePending: return AlarmStatus.activePending;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for AlarmStatus.",
+                el,
+            );
+    }
+}
+export const _encode_AlarmStatus: $.ASN1Encoder<AlarmStatus> = $._encodeEnumerated as $.ASN1Encoder<AlarmStatus>;
 
 /* eslint-enable */

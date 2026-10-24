@@ -129,10 +129,21 @@ export
 const enabled: OperationalState = OperationalState.enabled; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_OperationalState = $._decodeEnumerated;
+export function _decode_OperationalState(el: _Element): OperationalState {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case OperationalState.disabled: return OperationalState.disabled;
+        case OperationalState.enabled: return OperationalState.enabled;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for OperationalState.",
+                el,
+            );
+    }
+}
 
 
-export const _encode_OperationalState = $._encodeEnumerated;
+export const _encode_OperationalState: $.ASN1Encoder<OperationalState> = $._encodeEnumerated as $.ASN1Encoder<OperationalState>;
 
 
 /* eslint-enable */

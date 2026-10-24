@@ -154,8 +154,20 @@ const FunctionSetType_full_set: FunctionSetType = FunctionSetType.full_set; /* L
  */
 export
 const full_set: FunctionSetType = FunctionSetType.full_set; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_FunctionSetType = $._decodeEnumerated;
-export const _encode_FunctionSetType = $._encodeEnumerated;
+export function _decode_FunctionSetType(el: _Element): FunctionSetType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case FunctionSetType.flat_store: return FunctionSetType.flat_store;
+        case FunctionSetType.pre_defined_store: return FunctionSetType.pre_defined_store;
+        case FunctionSetType.full_set: return FunctionSetType.full_set;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for FunctionSetType.",
+                el,
+            );
+    }
+}
+export const _encode_FunctionSetType: $.ASN1Encoder<FunctionSetType> = $._encodeEnumerated as $.ASN1Encoder<FunctionSetType>;
 
 
 /* eslint-enable */

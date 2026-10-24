@@ -191,8 +191,22 @@ const SecurityProblem_already_active: SecurityProblem = SecurityProblem.already_
  */
 export
 const already_active: SecurityProblem = SecurityProblem.already_active; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_SecurityProblem = $._decodeEnumerated;
-export const _encode_SecurityProblem = $._encodeEnumerated;
+export function _decode_SecurityProblem(el: _Element): SecurityProblem {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case SecurityProblem.inappropriate_authentication: return SecurityProblem.inappropriate_authentication;
+        case SecurityProblem.invalid_creds: return SecurityProblem.invalid_creds;
+        case SecurityProblem.invalid_privilege: return SecurityProblem.invalid_privilege;
+        case SecurityProblem.invalid_pac: return SecurityProblem.invalid_pac;
+        case SecurityProblem.already_active: return SecurityProblem.already_active;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for SecurityProblem.",
+                el,
+            );
+    }
+}
+export const _encode_SecurityProblem: $.ASN1Encoder<SecurityProblem> = $._encodeEnumerated as $.ASN1Encoder<SecurityProblem>;
 
 
 /* eslint-enable */

@@ -199,7 +199,22 @@ let _cached_decoder_for_InformationTransferCapabilities: $.ASN1Decoder<Informati
 export function _decode_InformationTransferCapabilities(el: _Element): InformationTransferCapabilities {
     if (!_cached_decoder_for_InformationTransferCapabilities) {
         _cached_decoder_for_InformationTransferCapabilities =
-            $._decodeEnumerated;
+            function (el: _Element): InformationTransferCapabilities {
+                const enumerated = $._decodeEnumerated(el);
+                switch (enumerated) {
+                    case InformationTransferCapabilities.speech: return InformationTransferCapabilities.speech;
+                    case InformationTransferCapabilities.audio3pt1: return InformationTransferCapabilities.audio3pt1;
+                    case InformationTransferCapabilities.audio7: return InformationTransferCapabilities.audio7;
+                    case InformationTransferCapabilities.audioComb: return InformationTransferCapabilities.audioComb;
+                    case InformationTransferCapabilities.digitalRestricted56: return InformationTransferCapabilities.digitalRestricted56;
+                    case InformationTransferCapabilities.digitalUnrestricted64: return InformationTransferCapabilities.digitalUnrestricted64;
+                    default:
+                        throw new _ConstructionError(
+                            'Invalid ENUMERATED value ' + enumerated + ' for InformationTransferCapabilities.',
+                            el,
+                        );
+                }
+            };
     }
     return _cached_decoder_for_InformationTransferCapabilities(el);
 }
@@ -221,7 +236,7 @@ export function _encode_InformationTransferCapabilities(
 ): _Element {
     if (!_cached_encoder_for_InformationTransferCapabilities) {
         _cached_encoder_for_InformationTransferCapabilities =
-            $._encodeEnumerated;
+            $._encodeEnumerated as $.ASN1Encoder<InformationTransferCapabilities>;
     }
     return _cached_encoder_for_InformationTransferCapabilities(value, elGetter);
 }

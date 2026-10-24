@@ -101,7 +101,17 @@ export const Priority_urgent: Priority = _enum_for_Priority.urgent; /* LONG_NAME
  * @returns {Priority} The decoded data structure.
  */
  export function _decode_Priority (el: _Element): Priority {
-    return $._decodeEnumerated(el);
+        const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case _enum_for_Priority.normal: return _enum_for_Priority.normal;
+        case _enum_for_Priority.non_urgent: return _enum_for_Priority.non_urgent;
+        case _enum_for_Priority.urgent: return _enum_for_Priority.urgent;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for Priority.',
+                el,
+            );
+    }
 }
 
 /**

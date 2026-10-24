@@ -169,10 +169,22 @@ export const individualTimeStamping: TimeStampReportMode =
     TimeStampReportMode.individualTimeStamping; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_TimeStampReportMode = $._decodeEnumerated;
+export function _decode_TimeStampReportMode(el: _Element): TimeStampReportMode {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case TimeStampReportMode.timeStampingOff: return TimeStampReportMode.timeStampingOff;
+        case TimeStampReportMode.globalTimeStampOnly: return TimeStampReportMode.globalTimeStampOnly;
+        case TimeStampReportMode.individualTimeStamping: return TimeStampReportMode.individualTimeStamping;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for TimeStampReportMode.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_TimeStampReportMode = $._encodeEnumerated;
+export const _encode_TimeStampReportMode: $.ASN1Encoder<TimeStampReportMode> = $._encodeEnumerated as $.ASN1Encoder<TimeStampReportMode>;
 
 
 /* eslint-enable */

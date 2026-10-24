@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -84,9 +85,20 @@ export
 const playandcollect: Actions = Actions.playandcollect; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_Actions: $.ASN1Decoder<Actions> = $._decodeEnumerated;
+function _decode_Actions(el: _Element): Actions {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case Actions.play: return Actions.play;
+        case Actions.playandcollect: return Actions.playandcollect;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for Actions.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_Actions: $.ASN1Encoder<Actions> = $._encodeEnumerated;
+const _encode_Actions: $.ASN1Encoder<Actions> = $._encodeEnumerated as $.ASN1Encoder<Actions>;
 
 /* eslint-enable */

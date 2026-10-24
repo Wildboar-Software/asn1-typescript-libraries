@@ -198,10 +198,22 @@ export const attribute: DenialGranularity =
     DenialGranularity.attribute; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_DenialGranularity = $._decodeEnumerated;
+export function _decode_DenialGranularity(el: _Element): DenialGranularity {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case DenialGranularity.request: return DenialGranularity.request;
+        case DenialGranularity.object: return DenialGranularity.object;
+        case DenialGranularity.attribute: return DenialGranularity.attribute;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for DenialGranularity.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_DenialGranularity = $._encodeEnumerated;
+export const _encode_DenialGranularity: $.ASN1Encoder<DenialGranularity> = $._encodeEnumerated as $.ASN1Encoder<DenialGranularity>;
 
 
 /* eslint-enable */

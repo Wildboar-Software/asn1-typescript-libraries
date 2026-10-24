@@ -174,8 +174,21 @@ const InterServerAccessProblem_referent_store_security_problem: InterServerAcces
  */
 export
 const referent_store_security_problem: InterServerAccessProblem = InterServerAccessProblem.referent_store_security_problem; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_InterServerAccessProblem = $._decodeEnumerated;
-export const _encode_InterServerAccessProblem = $._encodeEnumerated;
+export function _decode_InterServerAccessProblem(el: _Element): InterServerAccessProblem {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case InterServerAccessProblem.referent_store_not_found: return InterServerAccessProblem.referent_store_not_found;
+        case InterServerAccessProblem.referent_store_unreachable: return InterServerAccessProblem.referent_store_unreachable;
+        case InterServerAccessProblem.referent_store_unavailable: return InterServerAccessProblem.referent_store_unavailable;
+        case InterServerAccessProblem.referent_store_security_problem: return InterServerAccessProblem.referent_store_security_problem;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for InterServerAccessProblem.",
+                el,
+            );
+    }
+}
+export const _encode_InterServerAccessProblem: $.ASN1Encoder<InterServerAccessProblem> = $._encodeEnumerated as $.ASN1Encoder<InterServerAccessProblem>;
 
 
 /* eslint-enable */

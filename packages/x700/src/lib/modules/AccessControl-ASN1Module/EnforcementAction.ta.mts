@@ -259,10 +259,24 @@ export const allow: EnforcementAction =
     EnforcementAction.allow; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_EnforcementAction = $._decodeEnumerated;
+export function _decode_EnforcementAction(el: _Element): EnforcementAction {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case EnforcementAction.denyWithResponse: return EnforcementAction.denyWithResponse;
+        case EnforcementAction.denyWithoutResponse: return EnforcementAction.denyWithoutResponse;
+        case EnforcementAction.abortAssociation: return EnforcementAction.abortAssociation;
+        case EnforcementAction.denyWithFalseResponse: return EnforcementAction.denyWithFalseResponse;
+        case EnforcementAction.allow: return EnforcementAction.allow;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for EnforcementAction.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_EnforcementAction = $._encodeEnumerated;
+export const _encode_EnforcementAction: $.ASN1Encoder<EnforcementAction> = $._encodeEnumerated as $.ASN1Encoder<EnforcementAction>;
 
 
 /* eslint-enable */

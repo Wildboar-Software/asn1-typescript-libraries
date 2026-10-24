@@ -251,10 +251,25 @@ export
 const virtual: MeasurementRootType = MeasurementRootType.virtual; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_MeasurementRootType = $._decodeEnumerated;
+export function _decode_MeasurementRootType(el: _Element): MeasurementRootType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case MeasurementRootType.static_: return MeasurementRootType.static_;
+        case MeasurementRootType.dynamic: return MeasurementRootType.dynamic;
+        case MeasurementRootType.nonHost: return MeasurementRootType.nonHost;
+        case MeasurementRootType.hybrid: return MeasurementRootType.hybrid;
+        case MeasurementRootType.physical: return MeasurementRootType.physical;
+        case MeasurementRootType.virtual: return MeasurementRootType.virtual;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for MeasurementRootType.",
+                el,
+            );
+    }
+}
 
 
-export const _encode_MeasurementRootType = $._encodeEnumerated;
+export const _encode_MeasurementRootType: $.ASN1Encoder<MeasurementRootType> = $._encodeEnumerated as $.ASN1Encoder<MeasurementRootType>;
 
 
 /* eslint-enable */

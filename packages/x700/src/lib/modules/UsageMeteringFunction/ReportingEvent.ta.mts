@@ -314,10 +314,26 @@ export const interruption: ReportingEvent =
     ReportingEvent.interruption; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_ReportingEvent = $._decodeEnumerated;
+export function _decode_ReportingEvent(el: _Element): ReportingEvent {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ReportingEvent.registration: return ReportingEvent.registration;
+        case ReportingEvent.request: return ReportingEvent.request;
+        case ReportingEvent.accept: return ReportingEvent.accept;
+        case ReportingEvent.complete: return ReportingEvent.complete;
+        case ReportingEvent.corresponding: return ReportingEvent.corresponding;
+        case ReportingEvent.bulk: return ReportingEvent.bulk;
+        case ReportingEvent.interruption: return ReportingEvent.interruption;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ReportingEvent.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_ReportingEvent = $._encodeEnumerated;
+export const _encode_ReportingEvent: $.ASN1Encoder<ReportingEvent> = $._encodeEnumerated as $.ASN1Encoder<ReportingEvent>;
 
 
 /* eslint-enable */

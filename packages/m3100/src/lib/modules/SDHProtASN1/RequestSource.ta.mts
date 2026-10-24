@@ -98,12 +98,23 @@ export const remote: RequestSource =
 
 
 
-export const _decode_RequestSource = $._decodeEnumerated;
+export function _decode_RequestSource(el: _Element): RequestSource {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case RequestSource.local: return RequestSource.local;
+        case RequestSource.remote: return RequestSource.remote;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for RequestSource.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_RequestSource = $._encodeEnumerated;
+export const _encode_RequestSource: $.ASN1Encoder<RequestSource> = $._encodeEnumerated as $.ASN1Encoder<RequestSource>;
 
 
 /* eslint-enable */

@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -136,9 +137,22 @@ export
 const failure: Event_event = Event_event.failure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_Event_event: $.ASN1Decoder<Event_event> = $._decodeEnumerated;
+function _decode_Event_event(el: _Element): Event_event {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case Event_event.now: return Event_event.now;
+        case Event_event.answer: return Event_event.answer;
+        case Event_event.user_interaction: return Event_event.user_interaction;
+        case Event_event.failure: return Event_event.failure;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for Event_event.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_Event_event: $.ASN1Encoder<Event_event> = $._encodeEnumerated;
+const _encode_Event_event: $.ASN1Encoder<Event_event> = $._encodeEnumerated as $.ASN1Encoder<Event_event>;
 
 /* eslint-enable */

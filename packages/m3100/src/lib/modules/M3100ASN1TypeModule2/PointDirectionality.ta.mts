@@ -117,12 +117,24 @@ export const bidirectional: PointDirectionality =
 
 
 
-export const _decode_PointDirectionality = $._decodeEnumerated;
+export function _decode_PointDirectionality(el: _Element): PointDirectionality {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case PointDirectionality.sink: return PointDirectionality.sink;
+        case PointDirectionality.source: return PointDirectionality.source;
+        case PointDirectionality.bidirectional: return PointDirectionality.bidirectional;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for PointDirectionality.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_PointDirectionality = $._encodeEnumerated;
+export const _encode_PointDirectionality: $.ASN1Encoder<PointDirectionality> = $._encodeEnumerated as $.ASN1Encoder<PointDirectionality>;
 
 
 /* eslint-enable */

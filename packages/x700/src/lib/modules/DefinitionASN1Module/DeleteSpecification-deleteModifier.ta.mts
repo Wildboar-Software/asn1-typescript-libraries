@@ -133,7 +133,18 @@ let _cached_decoder_for_DeleteSpecification_deleteModifier: $.ASN1Decoder<Delete
 export function _decode_DeleteSpecification_deleteModifier(el: _Element): DeleteSpecification_deleteModifier {
     if (!_cached_decoder_for_DeleteSpecification_deleteModifier) {
         _cached_decoder_for_DeleteSpecification_deleteModifier =
-            $._decodeEnumerated;
+            function (el: _Element): DeleteSpecification_deleteModifier {
+                const enumerated = $._decodeEnumerated(el);
+                switch (enumerated) {
+                    case DeleteSpecification_deleteModifier.onlyIfNoContainedObjects: return DeleteSpecification_deleteModifier.onlyIfNoContainedObjects;
+                    case DeleteSpecification_deleteModifier.deletesContainedObjects: return DeleteSpecification_deleteModifier.deletesContainedObjects;
+                    default:
+                        throw new _ConstructionError(
+                            'Invalid ENUMERATED value ' + enumerated + ' for DeleteSpecification_deleteModifier.',
+                            el,
+                        );
+                }
+            };
     }
     return _cached_decoder_for_DeleteSpecification_deleteModifier(el);
 }
@@ -155,7 +166,7 @@ export function _encode_DeleteSpecification_deleteModifier(
 ): _Element {
     if (!_cached_encoder_for_DeleteSpecification_deleteModifier) {
         _cached_encoder_for_DeleteSpecification_deleteModifier =
-            $._encodeEnumerated;
+            $._encodeEnumerated as $.ASN1Encoder<DeleteSpecification_deleteModifier>;
     }
     return _cached_encoder_for_DeleteSpecification_deleteModifier(
         value,

@@ -118,7 +118,19 @@ let _cached_decoder_for_DLPolicy_conversion_with_loss_prohibited: $.ASN1Decoder<
 export function _decode_DLPolicy_conversion_with_loss_prohibited(el: _Element): DLPolicy_conversion_with_loss_prohibited {
     if (!_cached_decoder_for_DLPolicy_conversion_with_loss_prohibited) {
         _cached_decoder_for_DLPolicy_conversion_with_loss_prohibited =
-            $._decodeEnumerated;
+            function (el: _Element): DLPolicy_conversion_with_loss_prohibited {
+                const enumerated = $._decodeEnumerated(el);
+                switch (enumerated) {
+                    case DLPolicy_conversion_with_loss_prohibited.unchanged: return DLPolicy_conversion_with_loss_prohibited.unchanged;
+                    case DLPolicy_conversion_with_loss_prohibited.conversion_with_loss_allowed: return DLPolicy_conversion_with_loss_prohibited.conversion_with_loss_allowed;
+                    case DLPolicy_conversion_with_loss_prohibited.conversion_with_loss_prohibited: return DLPolicy_conversion_with_loss_prohibited.conversion_with_loss_prohibited;
+                    default:
+                        throw new _ConstructionError(
+                            'Invalid ENUMERATED value ' + enumerated + ' for DLPolicy_conversion_with_loss_prohibited.',
+                            el,
+                        );
+                }
+            };
     }
     return _cached_decoder_for_DLPolicy_conversion_with_loss_prohibited(el);
 }
@@ -138,7 +150,7 @@ export function _encode_DLPolicy_conversion_with_loss_prohibited(
 ): _Element {
     if (!_cached_encoder_for_DLPolicy_conversion_with_loss_prohibited) {
         _cached_encoder_for_DLPolicy_conversion_with_loss_prohibited =
-            $._encodeEnumerated;
+            $._encodeEnumerated as $.ASN1Encoder<DLPolicy_conversion_with_loss_prohibited>;
     }
     return _cached_encoder_for_DLPolicy_conversion_with_loss_prohibited(
         value,

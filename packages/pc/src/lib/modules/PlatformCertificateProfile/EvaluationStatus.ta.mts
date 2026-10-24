@@ -156,10 +156,22 @@ export
 const evaluationCompleted: EvaluationStatus = EvaluationStatus.evaluationCompleted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_EvaluationStatus = $._decodeEnumerated;
+export function _decode_EvaluationStatus(el: _Element): EvaluationStatus {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case EvaluationStatus.designedToMeet: return EvaluationStatus.designedToMeet;
+        case EvaluationStatus.evaluationInProgress: return EvaluationStatus.evaluationInProgress;
+        case EvaluationStatus.evaluationCompleted: return EvaluationStatus.evaluationCompleted;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for EvaluationStatus.",
+                el,
+            );
+    }
+}
 
 
-export const _encode_EvaluationStatus = $._encodeEnumerated;
+export const _encode_EvaluationStatus: $.ASN1Encoder<EvaluationStatus> = $._encodeEnumerated as $.ASN1Encoder<EvaluationStatus>;
 
 
 /* eslint-enable */

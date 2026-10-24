@@ -104,12 +104,23 @@ export const colon: ProtectionGroupType =
 
 
 
-export const _decode_ProtectionGroupType = $._decodeEnumerated;
+export function _decode_ProtectionGroupType(el: _Element): ProtectionGroupType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ProtectionGroupType.plus: return ProtectionGroupType.plus;
+        case ProtectionGroupType.colon: return ProtectionGroupType.colon;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ProtectionGroupType.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_ProtectionGroupType = $._encodeEnumerated;
+export const _encode_ProtectionGroupType: $.ASN1Encoder<ProtectionGroupType> = $._encodeEnumerated as $.ASN1Encoder<ProtectionGroupType>;
 
 
 /* eslint-enable */

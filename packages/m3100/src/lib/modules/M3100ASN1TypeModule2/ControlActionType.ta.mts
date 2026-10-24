@@ -142,12 +142,25 @@ export const openMomentarily: ControlActionType =
 
 
 
-export const _decode_ControlActionType = $._decodeEnumerated;
+export function _decode_ControlActionType(el: _Element): ControlActionType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ControlActionType.closeContinuously: return ControlActionType.closeContinuously;
+        case ControlActionType.openContinuously: return ControlActionType.openContinuously;
+        case ControlActionType.closeMomentarily: return ControlActionType.closeMomentarily;
+        case ControlActionType.openMomentarily: return ControlActionType.openMomentarily;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ControlActionType.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_ControlActionType = $._encodeEnumerated;
+export const _encode_ControlActionType: $.ASN1Encoder<ControlActionType> = $._encodeEnumerated as $.ASN1Encoder<ControlActionType>;
 
 
 /* eslint-enable */

@@ -186,12 +186,27 @@ export const tup: SignallingCapabilities =
 
 
 
-export const _decode_SignallingCapabilities = $._decodeEnumerated;
+export function _decode_SignallingCapabilities(el: _Element): SignallingCapabilities {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case SignallingCapabilities.isup: return SignallingCapabilities.isup;
+        case SignallingCapabilities.isup92: return SignallingCapabilities.isup92;
+        case SignallingCapabilities.itu_tNo5: return SignallingCapabilities.itu_tNo5;
+        case SignallingCapabilities.r2: return SignallingCapabilities.r2;
+        case SignallingCapabilities.itu_tNo6: return SignallingCapabilities.itu_tNo6;
+        case SignallingCapabilities.tup: return SignallingCapabilities.tup;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for SignallingCapabilities.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_SignallingCapabilities = $._encodeEnumerated;
+export const _encode_SignallingCapabilities: $.ASN1Encoder<SignallingCapabilities> = $._encodeEnumerated as $.ASN1Encoder<SignallingCapabilities>;
 
 
 /* eslint-enable */

@@ -240,8 +240,23 @@ const ReferentAccessProblem_reference_content_empty: ReferentAccessProblem = Ref
  */
 export
 const reference_content_empty: ReferentAccessProblem = ReferentAccessProblem.reference_content_empty; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_ReferentAccessProblem = $._decodeEnumerated;
-export const _encode_ReferentAccessProblem = $._encodeEnumerated;
+export function _decode_ReferentAccessProblem(el: _Element): ReferentAccessProblem {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ReferentAccessProblem.inappropriate_object_class: return ReferentAccessProblem.inappropriate_object_class;
+        case ReferentAccessProblem.insufficient_access_rights: return ReferentAccessProblem.insufficient_access_rights;
+        case ReferentAccessProblem.reserved_by_a_user: return ReferentAccessProblem.reserved_by_a_user;
+        case ReferentAccessProblem.referent_no_longer_exists: return ReferentAccessProblem.referent_no_longer_exists;
+        case ReferentAccessProblem.referent_modified: return ReferentAccessProblem.referent_modified;
+        case ReferentAccessProblem.reference_content_empty: return ReferentAccessProblem.reference_content_empty;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for ReferentAccessProblem.",
+                el,
+            );
+    }
+}
+export const _encode_ReferentAccessProblem: $.ASN1Encoder<ReferentAccessProblem> = $._encodeEnumerated as $.ASN1Encoder<ReferentAccessProblem>;
 
 
 /* eslint-enable */

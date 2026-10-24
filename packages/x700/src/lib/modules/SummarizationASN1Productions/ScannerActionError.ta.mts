@@ -198,10 +198,23 @@ export const scanTerminated: ScannerActionError =
     ScannerActionError.scanTerminated; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_ScannerActionError = $._decodeEnumerated;
+export function _decode_ScannerActionError(el: _Element): ScannerActionError {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ScannerActionError.unspecified: return ScannerActionError.unspecified;
+        case ScannerActionError.administrativeStateLocked: return ScannerActionError.administrativeStateLocked;
+        case ScannerActionError.administrativeStateShuttingDown: return ScannerActionError.administrativeStateShuttingDown;
+        case ScannerActionError.scanTerminated: return ScannerActionError.scanTerminated;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ScannerActionError.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_ScannerActionError = $._encodeEnumerated;
+export const _encode_ScannerActionError: $.ASN1Encoder<ScannerActionError> = $._encodeEnumerated as $.ASN1Encoder<ScannerActionError>;
 
 
 /* eslint-enable */

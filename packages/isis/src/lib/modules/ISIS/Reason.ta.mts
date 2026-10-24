@@ -338,10 +338,30 @@ export const wrongSystemType: Reason =
   Reason.wrongSystemType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_Reason = $._decodeEnumerated;
+export function _decode_Reason(el: _Element): Reason {
+  const enumerated = $._decodeEnumerated(el);
+  switch (enumerated) {
+    case Reason.holdingTimerExpired: return Reason.holdingTimerExpired;
+    case Reason.checksumError: return Reason.checksumError;
+    case Reason.oneWayConnectivity: return Reason.oneWayConnectivity;
+    case Reason.callRejected: return Reason.callRejected;
+    case Reason.reserveTimerExpired: return Reason.reserveTimerExpired;
+    case Reason.circuitDisabled: return Reason.circuitDisabled;
+    case Reason.versionSkew: return Reason.versionSkew;
+    case Reason.areaMismatch: return Reason.areaMismatch;
+    case Reason.maximumBroadcastIntermediateSystemsExceeded: return Reason.maximumBroadcastIntermediateSystemsExceeded;
+    case Reason.maximumBroadcastEndSystemsExceeded: return Reason.maximumBroadcastEndSystemsExceeded;
+    case Reason.wrongSystemType: return Reason.wrongSystemType;
+    default:
+      throw new _ConstructionError(
+        'Invalid ENUMERATED value ' + enumerated + ' for Reason.',
+        el,
+      );
+  }
+}
 
 
-export const _encode_Reason = $._encodeEnumerated;
+export const _encode_Reason: $.ASN1Encoder<Reason> = $._encodeEnumerated as $.ASN1Encoder<Reason>;
 
 
 /* eslint-enable */

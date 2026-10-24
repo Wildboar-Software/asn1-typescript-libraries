@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element } from "@wildboar/asn1";
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -282,12 +282,27 @@ export const unauthorized: OCSPResponseStatus =
 
 
 
-export const _decode_OCSPResponseStatus = $._decodeEnumerated;
+export function _decode_OCSPResponseStatus(el: _Element): OCSPResponseStatus {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case OCSPResponseStatus.successful: return OCSPResponseStatus.successful;
+        case OCSPResponseStatus.malformedRequest: return OCSPResponseStatus.malformedRequest;
+        case OCSPResponseStatus.internalError: return OCSPResponseStatus.internalError;
+        case OCSPResponseStatus.tryLater: return OCSPResponseStatus.tryLater;
+        case OCSPResponseStatus.sigRequired: return OCSPResponseStatus.sigRequired;
+        case OCSPResponseStatus.unauthorized: return OCSPResponseStatus.unauthorized;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for OCSPResponseStatus.",
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_OCSPResponseStatus = $._encodeEnumerated;
+export const _encode_OCSPResponseStatus: $.ASN1Encoder<OCSPResponseStatus> = $._encodeEnumerated as $.ASN1Encoder<OCSPResponseStatus>;
 
 
 /* eslint-enable */

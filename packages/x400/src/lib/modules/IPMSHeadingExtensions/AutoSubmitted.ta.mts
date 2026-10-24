@@ -111,10 +111,22 @@ export const auto_replied: AutoSubmitted =
     AutoSubmitted.auto_replied; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_AutoSubmitted = $._decodeEnumerated;
+export function _decode_AutoSubmitted(el: _Element): AutoSubmitted {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case AutoSubmitted.not_auto_submitted: return AutoSubmitted.not_auto_submitted;
+        case AutoSubmitted.auto_generated: return AutoSubmitted.auto_generated;
+        case AutoSubmitted.auto_replied: return AutoSubmitted.auto_replied;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for AutoSubmitted.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_AutoSubmitted = $._encodeEnumerated;
+export const _encode_AutoSubmitted: $.ASN1Encoder<AutoSubmitted> = $._encodeEnumerated as $.ASN1Encoder<AutoSubmitted>;
 
 
 /* eslint-enable */

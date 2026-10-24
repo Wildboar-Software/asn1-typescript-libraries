@@ -141,12 +141,24 @@ export const aDD_REMOVE: PropertyList_addRemove =
 
 
 
-export const _decode_PropertyList_addRemove = $._decodeEnumerated;
+export function _decode_PropertyList_addRemove(el: _Element): PropertyList_addRemove {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case PropertyList_addRemove.aDD: return PropertyList_addRemove.aDD;
+        case PropertyList_addRemove.rEMOVE: return PropertyList_addRemove.rEMOVE;
+        case PropertyList_addRemove.aDD_REMOVE: return PropertyList_addRemove.aDD_REMOVE;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for PropertyList_addRemove.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_PropertyList_addRemove = $._encodeEnumerated;
+export const _encode_PropertyList_addRemove: $.ASN1Encoder<PropertyList_addRemove> = $._encodeEnumerated as $.ASN1Encoder<PropertyList_addRemove>;
 
 
 /* eslint-enable */

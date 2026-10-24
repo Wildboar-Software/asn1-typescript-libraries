@@ -158,12 +158,26 @@ export const warning: AlarmSeverityCode =
 
 
 
-export const _decode_AlarmSeverityCode = $._decodeEnumerated;
+export function _decode_AlarmSeverityCode(el: _Element): AlarmSeverityCode {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case AlarmSeverityCode.non_alarmed: return AlarmSeverityCode.non_alarmed;
+        case AlarmSeverityCode.minor: return AlarmSeverityCode.minor;
+        case AlarmSeverityCode.major: return AlarmSeverityCode.major;
+        case AlarmSeverityCode.critical: return AlarmSeverityCode.critical;
+        case AlarmSeverityCode.warning: return AlarmSeverityCode.warning;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for AlarmSeverityCode.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_AlarmSeverityCode = $._encodeEnumerated;
+export const _encode_AlarmSeverityCode: $.ASN1Encoder<AlarmSeverityCode> = $._encodeEnumerated as $.ASN1Encoder<AlarmSeverityCode>;
 
 
 /* eslint-enable */

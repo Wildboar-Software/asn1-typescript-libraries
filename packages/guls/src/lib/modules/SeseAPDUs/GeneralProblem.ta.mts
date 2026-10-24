@@ -93,12 +93,22 @@ export const invalidAPDU: GeneralProblem =
 
 
 
-export const _decode_GeneralProblem = $._decodeEnumerated;
+export function _decode_GeneralProblem(el: _Element): GeneralProblem {
+  const enumerated = $._decodeEnumerated(el);
+  switch (enumerated) {
+    case GeneralProblem.invalidAPDU: return GeneralProblem.invalidAPDU;
+    default:
+      throw new _ConstructionError(
+        'Invalid ENUMERATED value ' + enumerated + ' for GeneralProblem.',
+        el,
+      );
+  }
+}
 
 
 
 
-export const _encode_GeneralProblem = $._encodeEnumerated;
+export const _encode_GeneralProblem: $.ASN1Encoder<GeneralProblem> = $._encodeEnumerated as $.ASN1Encoder<GeneralProblem>;
 
 
 /* eslint-enable */

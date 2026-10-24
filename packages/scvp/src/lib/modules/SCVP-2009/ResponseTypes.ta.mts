@@ -151,10 +151,22 @@ export const cached_and_non_cached: ResponseTypes =
   ResponseTypes.cached_and_non_cached; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_ResponseTypes = $._decodeEnumerated;
+export function _decode_ResponseTypes(el: _Element): ResponseTypes {
+  const enumerated = $._decodeEnumerated(el);
+  switch (enumerated) {
+    case ResponseTypes.cached_only: return ResponseTypes.cached_only;
+    case ResponseTypes.non_cached_only: return ResponseTypes.non_cached_only;
+    case ResponseTypes.cached_and_non_cached: return ResponseTypes.cached_and_non_cached;
+    default:
+      throw new _ConstructionError(
+        'Invalid ENUMERATED value ' + enumerated + ' for ResponseTypes.',
+        el,
+      );
+  }
+}
 
 
-export const _encode_ResponseTypes = $._encodeEnumerated;
+export const _encode_ResponseTypes: $.ASN1Encoder<ResponseTypes> = $._encodeEnumerated as $.ASN1Encoder<ResponseTypes>;
 
 
 /* eslint-enable */

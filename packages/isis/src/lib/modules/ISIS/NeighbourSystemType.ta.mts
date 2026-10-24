@@ -188,10 +188,24 @@ export const l2IntermediateSystem: NeighbourSystemType =
   NeighbourSystemType.l2IntermediateSystem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_NeighbourSystemType = $._decodeEnumerated;
+export function _decode_NeighbourSystemType(el: _Element): NeighbourSystemType {
+  const enumerated = $._decodeEnumerated(el);
+  switch (enumerated) {
+    case NeighbourSystemType.unknown: return NeighbourSystemType.unknown;
+    case NeighbourSystemType.endSystem: return NeighbourSystemType.endSystem;
+    case NeighbourSystemType.intermediateSystem: return NeighbourSystemType.intermediateSystem;
+    case NeighbourSystemType.l1IntermediateSystem: return NeighbourSystemType.l1IntermediateSystem;
+    case NeighbourSystemType.l2IntermediateSystem: return NeighbourSystemType.l2IntermediateSystem;
+    default:
+      throw new _ConstructionError(
+        'Invalid ENUMERATED value ' + enumerated + ' for NeighbourSystemType.',
+        el,
+      );
+  }
+}
 
 
-export const _encode_NeighbourSystemType = $._encodeEnumerated;
+export const _encode_NeighbourSystemType: $.ASN1Encoder<NeighbourSystemType> = $._encodeEnumerated as $.ASN1Encoder<NeighbourSystemType>;
 
 
 /* eslint-enable */

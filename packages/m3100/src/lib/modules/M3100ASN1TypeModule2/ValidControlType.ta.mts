@@ -117,12 +117,24 @@ export const both: ValidControlType =
 
 
 
-export const _decode_ValidControlType = $._decodeEnumerated;
+export function _decode_ValidControlType(el: _Element): ValidControlType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ValidControlType.momentaryOnly: return ValidControlType.momentaryOnly;
+        case ValidControlType.continuousOnly: return ValidControlType.continuousOnly;
+        case ValidControlType.both: return ValidControlType.both;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ValidControlType.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_ValidControlType = $._encodeEnumerated;
+export const _encode_ValidControlType: $.ASN1Encoder<ValidControlType> = $._encodeEnumerated as $.ASN1Encoder<ValidControlType>;
 
 
 /* eslint-enable */

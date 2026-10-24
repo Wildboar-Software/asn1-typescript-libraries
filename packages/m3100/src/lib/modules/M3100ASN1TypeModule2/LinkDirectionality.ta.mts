@@ -120,12 +120,24 @@ export const undefined: LinkDirectionality =
 
 
 
-export const _decode_LinkDirectionality = $._decodeEnumerated;
+export function _decode_LinkDirectionality(el: _Element): LinkDirectionality {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case LinkDirectionality.unidirectional: return LinkDirectionality.unidirectional;
+        case LinkDirectionality.bidirectional: return LinkDirectionality.bidirectional;
+        case LinkDirectionality.undefined: return LinkDirectionality.undefined;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for LinkDirectionality.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_LinkDirectionality = $._encodeEnumerated;
+export const _encode_LinkDirectionality: $.ASN1Encoder<LinkDirectionality> = $._encodeEnumerated as $.ASN1Encoder<LinkDirectionality>;
 
 
 /* eslint-enable */

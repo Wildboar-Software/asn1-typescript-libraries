@@ -121,8 +121,20 @@ const Altered_value_undefined: Altered_value = Altered_value.undefined; /* LONG_
  */
 export
 const undefined: Altered_value = Altered_value.undefined; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_Altered_value = $._decodeEnumerated;
-export const _encode_Altered_value = $._encodeEnumerated;
+export function _decode_Altered_value(el: _Element): Altered_value {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case Altered_value.value_not_altered: return Altered_value.value_not_altered;
+        case Altered_value.value_altered: return Altered_value.value_altered;
+        case Altered_value.undefined: return Altered_value.undefined;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for Altered_value.",
+                el,
+            );
+    }
+}
+export const _encode_Altered_value: $.ASN1Encoder<Altered_value> = $._encodeEnumerated as $.ASN1Encoder<Altered_value>;
 
 
 /* eslint-enable */

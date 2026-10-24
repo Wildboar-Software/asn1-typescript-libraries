@@ -132,7 +132,19 @@ const V8Diag_Item_v8Result_v8NoNegAuto: V8Diag_Item_v8Result = V8Diag_Item_v8Res
  */
 export
 const v8NoNegAuto: V8Diag_Item_v8Result = V8Diag_Item_v8Result.v8NoNegAuto; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_V8Diag_Item_v8Result = $._decodeEnumerated;
-export const _encode_V8Diag_Item_v8Result = $._encodeEnumerated;
+export function _decode_V8Diag_Item_v8Result(el: _Element): V8Diag_Item_v8Result {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case V8Diag_Item_v8Result.v8ComNeg: return V8Diag_Item_v8Result.v8ComNeg;
+        case V8Diag_Item_v8Result.v8NoComNeg: return V8Diag_Item_v8Result.v8NoComNeg;
+        case V8Diag_Item_v8Result.v8NoNegAuto: return V8Diag_Item_v8Result.v8NoNegAuto;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for V8Diag_Item_v8Result.",
+                el,
+            );
+    }
+}
+export const _encode_V8Diag_Item_v8Result: $.ASN1Encoder<V8Diag_Item_v8Result> = $._encodeEnumerated as $.ASN1Encoder<V8Diag_Item_v8Result>;
 
 /* eslint-enable */

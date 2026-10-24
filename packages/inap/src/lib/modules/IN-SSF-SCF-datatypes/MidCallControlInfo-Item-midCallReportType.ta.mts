@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -96,9 +97,20 @@ export
 const inAnyState: MidCallControlInfo_Item_midCallReportType = MidCallControlInfo_Item_midCallReportType.inAnyState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_MidCallControlInfo_Item_midCallReportType: $.ASN1Decoder<MidCallControlInfo_Item_midCallReportType> = $._decodeEnumerated;
+function _decode_MidCallControlInfo_Item_midCallReportType(el: _Element): MidCallControlInfo_Item_midCallReportType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case MidCallControlInfo_Item_midCallReportType.inMonitoringState: return MidCallControlInfo_Item_midCallReportType.inMonitoringState;
+        case MidCallControlInfo_Item_midCallReportType.inAnyState: return MidCallControlInfo_Item_midCallReportType.inAnyState;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for MidCallControlInfo_Item_midCallReportType.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_MidCallControlInfo_Item_midCallReportType: $.ASN1Encoder<MidCallControlInfo_Item_midCallReportType> = $._encodeEnumerated;
+const _encode_MidCallControlInfo_Item_midCallReportType: $.ASN1Encoder<MidCallControlInfo_Item_midCallReportType> = $._encodeEnumerated as $.ASN1Encoder<MidCallControlInfo_Item_midCallReportType>;
 
 /* eslint-enable */

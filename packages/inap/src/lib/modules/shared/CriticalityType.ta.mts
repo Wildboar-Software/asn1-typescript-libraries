@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -84,9 +85,20 @@ export
 const abort: CriticalityType = CriticalityType.abort; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_CriticalityType: $.ASN1Decoder<CriticalityType> = $._decodeEnumerated;
+function _decode_CriticalityType(el: _Element): CriticalityType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case CriticalityType.ignore: return CriticalityType.ignore;
+        case CriticalityType.abort: return CriticalityType.abort;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for CriticalityType.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_CriticalityType: $.ASN1Encoder<CriticalityType> = $._encodeEnumerated;
+const _encode_CriticalityType: $.ASN1Encoder<CriticalityType> = $._encodeEnumerated as $.ASN1Encoder<CriticalityType>;
 
 /* eslint-enable */

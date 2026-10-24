@@ -113,10 +113,21 @@ export const percentErrorSecond: ErrorRatioReportType =
     ErrorRatioReportType.percentErrorSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_ErrorRatioReportType = $._decodeEnumerated;
+export function _decode_ErrorRatioReportType(el: _Element): ErrorRatioReportType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ErrorRatioReportType.errorBitNumber: return ErrorRatioReportType.errorBitNumber;
+        case ErrorRatioReportType.percentErrorSecond: return ErrorRatioReportType.percentErrorSecond;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ErrorRatioReportType.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_ErrorRatioReportType = $._encodeEnumerated;
+export const _encode_ErrorRatioReportType: $.ASN1Encoder<ErrorRatioReportType> = $._encodeEnumerated as $.ASN1Encoder<ErrorRatioReportType>;
 
 
 /* eslint-enable */

@@ -119,10 +119,21 @@ export const counterOverflow: FailedCase =
     FailedCase.counterOverflow; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_FailedCase = $._decodeEnumerated;
+export function _decode_FailedCase(el: _Element): FailedCase {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case FailedCase.lineDisconnected: return FailedCase.lineDisconnected;
+        case FailedCase.counterOverflow: return FailedCase.counterOverflow;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for FailedCase.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_FailedCase = $._encodeEnumerated;
+export const _encode_FailedCase: $.ASN1Encoder<FailedCase> = $._encodeEnumerated as $.ASN1Encoder<FailedCase>;
 
 
 /* eslint-enable */

@@ -184,10 +184,23 @@ export
 const level4: SecurityLevel = SecurityLevel.level4; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_SecurityLevel = $._decodeEnumerated;
+export function _decode_SecurityLevel(el: _Element): SecurityLevel {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case SecurityLevel.level1: return SecurityLevel.level1;
+        case SecurityLevel.level2: return SecurityLevel.level2;
+        case SecurityLevel.level3: return SecurityLevel.level3;
+        case SecurityLevel.level4: return SecurityLevel.level4;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for SecurityLevel.",
+                el,
+            );
+    }
+}
 
 
-export const _encode_SecurityLevel = $._encodeEnumerated;
+export const _encode_SecurityLevel: $.ASN1Encoder<SecurityLevel> = $._encodeEnumerated as $.ASN1Encoder<SecurityLevel>;
 
 
 /* eslint-enable */

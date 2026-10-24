@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -104,9 +105,21 @@ export
 const canceled: ReportCondition = ReportCondition.canceled; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_ReportCondition: $.ASN1Decoder<ReportCondition> = $._decodeEnumerated;
+function _decode_ReportCondition(el: _Element): ReportCondition {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ReportCondition.statusReport: return ReportCondition.statusReport;
+        case ReportCondition.timerExpired: return ReportCondition.timerExpired;
+        case ReportCondition.canceled: return ReportCondition.canceled;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for ReportCondition.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_ReportCondition: $.ASN1Encoder<ReportCondition> = $._encodeEnumerated;
+const _encode_ReportCondition: $.ASN1Encoder<ReportCondition> = $._encodeEnumerated as $.ASN1Encoder<ReportCondition>;
 
 /* eslint-enable */

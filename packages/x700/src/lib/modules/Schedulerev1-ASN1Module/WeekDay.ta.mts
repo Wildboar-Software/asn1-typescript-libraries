@@ -214,12 +214,28 @@ export const saturday: WeekDay =
 
 
 
-export const _decode_WeekDay = $._decodeEnumerated;
+export function _decode_WeekDay(el: _Element): WeekDay {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case WeekDay.sunday: return WeekDay.sunday;
+        case WeekDay.monday: return WeekDay.monday;
+        case WeekDay.tuesday: return WeekDay.tuesday;
+        case WeekDay.wednesday: return WeekDay.wednesday;
+        case WeekDay.thursday: return WeekDay.thursday;
+        case WeekDay.friday: return WeekDay.friday;
+        case WeekDay.saturday: return WeekDay.saturday;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for WeekDay.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_WeekDay = $._encodeEnumerated;
+export const _encode_WeekDay: $.ASN1Encoder<WeekDay> = $._encodeEnumerated as $.ASN1Encoder<WeekDay>;
 
 
 /* eslint-enable */
