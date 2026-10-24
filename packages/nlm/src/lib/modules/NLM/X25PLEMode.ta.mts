@@ -29,11 +29,13 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_X25PLEMode {
-    dTE = 0,
-    dCE = 1,
-    dTEasDCE = 2,
-}
+export const _enum_for_X25PLEMode = {
+    dTE: 0,
+    dCE: 1,
+    dTEasDCE: 2,
+} as const;
+
+export type _enum_for_X25PLEMode = (typeof _enum_for_X25PLEMode)[keyof typeof _enum_for_X25PLEMode];
 
 
 /**

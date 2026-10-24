@@ -21,38 +21,40 @@ import * as $ from '@wildboar/asn1/functional';
  * 9; Annex A treats them as distinct. ITU-T Rec. T.38 (11/2015)
  * §7.3.2, Table 4.
  */
-export enum _enum_for_Type_of_msg_t30_data {
+export const _enum_for_Type_of_msg_t30_data = {
   /** V.21 Channel 2. */
-  v21 = 0,
+  v21: 0,
   /** V.27 ter 2400 bit/s. */
-  v27_2400 = 1,
+  v27_2400: 1,
   /** V.27 ter 4800 bit/s. */
-  v27_4800 = 2,
+  v27_4800: 2,
   /** V.29 7200 bit/s. */
-  v29_7200 = 3,
+  v29_7200: 3,
   /** V.29 9600 bit/s. */
-  v29_9600 = 4,
+  v29_9600: 4,
   /** V.17 7200 bit/s. */
-  v17_7200 = 5,
+  v17_7200: 5,
   /** V.17 9600 bit/s. */
-  v17_9600 = 6,
+  v17_9600: 6,
   /** V.17 12 000 bit/s. */
-  v17_12000 = 7,
+  v17_12000: 7,
   /** V.17 14 400 bit/s. */
-  v17_14400 = 8,
+  v17_14400: 8,
   /** V.8 control-signal data. */
-  v8 = 9,
+  v8: 9,
   /** V.34 primary-channel rate (`v34rate` Field-Type). */
-  v34_pri_rate = 9,
+  v34_pri_rate: 9,
   /** V.34 control channel at 1200 bit/s. */
-  v34_CC_1200 = 9,
+  v34_CC_1200: 9,
   /** V.34 primary channel (ECM image). */
-  v34_pri_ch = 9,
+  v34_pri_ch: 9,
   /** V.33 12 000 bit/s. */
-  v33_12000 = 9,
+  v33_12000: 9,
   /** V.33 14 400 bit/s. */
-  v33_14400 = 9,
-}
+  v33_14400: 9,
+} as const;
+
+export type _enum_for_Type_of_msg_t30_data = (typeof _enum_for_Type_of_msg_t30_data)[keyof typeof _enum_for_Type_of_msg_t30_data];
 
 
 /**

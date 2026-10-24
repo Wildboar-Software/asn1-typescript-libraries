@@ -32,12 +32,14 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_FastSelect {
-    notSpecified = 0,
-    fastSelect = 1,
-    fastSelectWithRestrictedResponse = 2,
-    noFastSelect = 3,
-}
+export const _enum_for_FastSelect = {
+    notSpecified: 0,
+    fastSelect: 1,
+    fastSelectWithRestrictedResponse: 2,
+    noFastSelect: 3,
+} as const;
+
+export type _enum_for_FastSelect = (typeof _enum_for_FastSelect)[keyof typeof _enum_for_FastSelect];
 
 
 /**

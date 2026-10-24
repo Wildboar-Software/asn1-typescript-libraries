@@ -30,11 +30,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @enum {number}
  */
 export
-enum _enum_for_AdministrativeState {
-    locked = 0,
-    unlocked = 1,
-    shuttingDown = 2,
-}
+const _enum_for_AdministrativeState = {
+    locked: 0,
+    unlocked: 1,
+    shuttingDown: 2,
+} as const;
+
+export
+type _enum_for_AdministrativeState = (typeof _enum_for_AdministrativeState)[keyof typeof _enum_for_AdministrativeState];
 
 /**
  * @summary AdministrativeState

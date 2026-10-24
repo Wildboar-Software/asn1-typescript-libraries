@@ -12,11 +12,13 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 
-export enum _enum_for_SearchRequest_scope {
-  baseObject = 0,
-  singleLevel = 1,
-  wholeSubtree = 2,
-}
+export const _enum_for_SearchRequest_scope = {
+  baseObject: 0,
+  singleLevel: 1,
+  wholeSubtree: 2,
+} as const;
+
+export type _enum_for_SearchRequest_scope = (typeof _enum_for_SearchRequest_scope)[keyof typeof _enum_for_SearchRequest_scope];
 
 /**
  * @summary SearchRequest_scope

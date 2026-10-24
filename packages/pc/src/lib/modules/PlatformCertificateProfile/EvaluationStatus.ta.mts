@@ -32,11 +32,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @enum {number}
  */
 export
-enum _enum_for_EvaluationStatus {
-    designedToMeet = 0,
-    evaluationInProgress = 1,
-    evaluationCompleted = 2,
-}
+const _enum_for_EvaluationStatus = {
+    designedToMeet: 0,
+    evaluationInProgress: 1,
+    evaluationCompleted: 2,
+} as const;
+
+export
+type _enum_for_EvaluationStatus = (typeof _enum_for_EvaluationStatus)[keyof typeof _enum_for_EvaluationStatus];
 
 /**
  * @summary EvaluationStatus

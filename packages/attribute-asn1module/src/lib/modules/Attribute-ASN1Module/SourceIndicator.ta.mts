@@ -32,11 +32,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @enum {number}
  */
 export
-enum _enum_for_SourceIndicator {
-    resourceOperation = 0,
-    managementOperation = 1,
-    unknown = 2,
-}
+const _enum_for_SourceIndicator = {
+    resourceOperation: 0,
+    managementOperation: 1,
+    unknown: 2,
+} as const;
+
+export
+type _enum_for_SourceIndicator = (typeof _enum_for_SourceIndicator)[keyof typeof _enum_for_SourceIndicator];
 
 /**
  * @summary SourceIndicator

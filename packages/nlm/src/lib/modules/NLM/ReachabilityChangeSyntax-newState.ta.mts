@@ -28,10 +28,12 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_ReachabilityChangeSyntax_newState {
-    down = 0,
-    up = 1,
-}
+export const _enum_for_ReachabilityChangeSyntax_newState = {
+    down: 0,
+    up: 1,
+} as const;
+
+export type _enum_for_ReachabilityChangeSyntax_newState = (typeof _enum_for_ReachabilityChangeSyntax_newState)[keyof typeof _enum_for_ReachabilityChangeSyntax_newState];
 
 
 /**

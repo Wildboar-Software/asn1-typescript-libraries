@@ -28,12 +28,15 @@ import * as $ from "@wildboar/asn1/functional";
  * @enum {number}
  */
 export
-enum _enum_for_V34HdxDiag_Item_cCrate {
-    t12R12 = 0,
-    t24R24 = 1,
-    t12R24 = 2,
-    t24R12 = 3,
-}
+const _enum_for_V34HdxDiag_Item_cCrate = {
+    t12R12: 0,
+    t24R24: 1,
+    t12R24: 2,
+    t24R12: 3,
+} as const;
+
+export
+type _enum_for_V34HdxDiag_Item_cCrate = (typeof _enum_for_V34HdxDiag_Item_cCrate)[keyof typeof _enum_for_V34HdxDiag_Item_cCrate];
 
 /**
  * @summary V34HdxDiag_Item_cCrate

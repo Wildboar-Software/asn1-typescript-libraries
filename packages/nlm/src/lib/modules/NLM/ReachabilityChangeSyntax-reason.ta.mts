@@ -29,10 +29,12 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_ReachabilityChangeSyntax_reason {
-    holdingTimerExpired = 0,
-    circuitDisabled = 1,
-}
+export const _enum_for_ReachabilityChangeSyntax_reason = {
+    holdingTimerExpired: 0,
+    circuitDisabled: 1,
+} as const;
+
+export type _enum_for_ReachabilityChangeSyntax_reason = (typeof _enum_for_ReachabilityChangeSyntax_reason)[keyof typeof _enum_for_ReachabilityChangeSyntax_reason];
 
 
 /**

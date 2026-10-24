@@ -30,10 +30,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @enum {number}
  */
 export
-enum _enum_for_LogFullAction {
-    wrap = 0,
-    halt = 1,
-}
+const _enum_for_LogFullAction = {
+    wrap: 0,
+    halt: 1,
+} as const;
+
+export
+type _enum_for_LogFullAction = (typeof _enum_for_LogFullAction)[keyof typeof _enum_for_LogFullAction];
 
 /**
  * @summary LogFullAction

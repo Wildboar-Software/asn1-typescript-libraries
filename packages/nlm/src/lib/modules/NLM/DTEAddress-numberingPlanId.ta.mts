@@ -28,11 +28,13 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_DTEAddress_numberingPlanId {
-    unknown = 0,
-    x121 = 1,
-    e164 = 2,
-}
+export const _enum_for_DTEAddress_numberingPlanId = {
+    unknown: 0,
+    x121: 1,
+    e164: 2,
+} as const;
+
+export type _enum_for_DTEAddress_numberingPlanId = (typeof _enum_for_DTEAddress_numberingPlanId)[keyof typeof _enum_for_DTEAddress_numberingPlanId];
 
 
 /**

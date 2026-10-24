@@ -30,10 +30,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @enum {number}
  */
 export
-enum _enum_for_OperationalState {
-    disabled = 0,
-    enabled = 1,
-}
+const _enum_for_OperationalState = {
+    disabled: 0,
+    enabled: 1,
+} as const;
+
+export
+type _enum_for_OperationalState = (typeof _enum_for_OperationalState)[keyof typeof _enum_for_OperationalState];
 
 /**
  * @summary OperationalState

@@ -13,11 +13,14 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 
 export
-enum _enum_for_ErrorControl_Item_protocolNegotiation {
-    disabled = 0,
-    lapm = 1,
-    v42annexA = 2,
-}
+const _enum_for_ErrorControl_Item_protocolNegotiation = {
+    disabled: 0,
+    lapm: 1,
+    v42annexA: 2,
+} as const;
+
+export
+type _enum_for_ErrorControl_Item_protocolNegotiation = (typeof _enum_for_ErrorControl_Item_protocolNegotiation)[keyof typeof _enum_for_ErrorControl_Item_protocolNegotiation];
 
 /**
  * @summary ErrorControl_Item_protocolNegotiation

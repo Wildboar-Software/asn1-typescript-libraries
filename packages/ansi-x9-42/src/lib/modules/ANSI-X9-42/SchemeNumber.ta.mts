@@ -12,16 +12,18 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * @enum {number}
  */
-export enum _enum_for_SchemeNumber {
-    dhStatic_sha1 = 0,
-    dhEphem_sha1 = 1,
-    dhOneFlow_sha1 = 2,
-    dhHybrid1_sha1 = 3,
-    dhHybrid2_sha1 = 4,
-    dhHybridOneFlow_sha1 = 5,
-    mqv2_sha1 = 6,
-    mqv1_sha1 = 7,
-}
+export const _enum_for_SchemeNumber = {
+    dhStatic_sha1: 0,
+    dhEphem_sha1: 1,
+    dhOneFlow_sha1: 2,
+    dhHybrid1_sha1: 3,
+    dhHybrid2_sha1: 4,
+    dhHybridOneFlow_sha1: 5,
+    mqv2_sha1: 6,
+    mqv1_sha1: 7,
+} as const;
+
+export type _enum_for_SchemeNumber = (typeof _enum_for_SchemeNumber)[keyof typeof _enum_for_SchemeNumber];
 
 
 /**

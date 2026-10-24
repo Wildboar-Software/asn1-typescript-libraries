@@ -28,12 +28,15 @@ import * as $ from "@wildboar/asn1/functional";
  * @enum {number}
  */
 export
-enum _enum_for_Compression_Item_v42bisCompressionActive {
-    none = 0,
-    initOnly = 1,
-    respOnly = 2,
-    both = 3,
-}
+const _enum_for_Compression_Item_v42bisCompressionActive = {
+    none: 0,
+    initOnly: 1,
+    respOnly: 2,
+    both: 3,
+} as const;
+
+export
+type _enum_for_Compression_Item_v42bisCompressionActive = (typeof _enum_for_Compression_Item_v42bisCompressionActive)[keyof typeof _enum_for_Compression_Item_v42bisCompressionActive];
 
 /**
  * @summary Compression_Item_v42bisCompressionActive
