@@ -35,30 +35,36 @@ import {
  *
  */
 export class TransitedEncoding {
+  /**
+   * @summary `tr_type`.
+   * @description
+   *
+   * Registered encoding type for `contents` ([RFC 4120 §5.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.3),
+   * [RFC 4120 §7.5.5](https://datatracker.ietf.org/doc/html/rfc4120#section-7.5.5)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly tr_type: Int32;
+  /**
+   * @summary `contents`.
+   * @description
+   *
+   * Encoded list of transited realms ([RFC 4120 §5.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.3),
+   * [RFC 4120 §3.3.3.2](https://datatracker.ietf.org/doc/html/rfc4120#section-3.3.3.2)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly contents: OCTET_STRING;
+
   constructor(
-    /**
-     * @summary `tr_type`.
-     * @description
-     *
-     * Registered encoding type for `contents` ([RFC 4120 §5.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.3),
-     * [RFC 4120 §7.5.5](https://datatracker.ietf.org/doc/html/rfc4120#section-7.5.5)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly tr_type: Int32,
-    /**
-     * @summary `contents`.
-     * @description
-     *
-     * Encoded list of transited realms ([RFC 4120 §5.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.3),
-     * [RFC 4120 §3.3.3.2](https://datatracker.ietf.org/doc/html/rfc4120#section-3.3.3.2)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly contents: OCTET_STRING
-  ) {}
+    tr_type: Int32,
+    contents: OCTET_STRING
+  ) {
+    this.tr_type = tr_type;
+    this.contents = contents;
+  }
 
   /**
    * @summary Restructures an object into a TransitedEncoding

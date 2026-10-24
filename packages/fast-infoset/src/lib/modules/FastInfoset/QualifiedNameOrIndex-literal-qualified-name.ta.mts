@@ -38,35 +38,43 @@ import {
  *
  */
 export class QualifiedNameOrIndex_literal_qualified_name {
+  /**
+   * @summary `prefix`.
+   * @description Prefix of the qualified name (PREFIX
+   * category). Absent if the name is unprefixed. Shall be
+   * absent if `namespace-name` is absent. ITU-T Rec. X.891
+   * (05/2005) §7.16.6, §7.16.7.3 a.
+   * @public
+   * @readonly
+   */
+  public readonly prefix: OPTIONAL<IdentifyingStringOrIndex>;
+  /**
+   * @summary `namespace_name`.
+   * @description Namespace name (NAMESPACE NAME category).
+   * Absent if the name has no namespace. ITU-T Rec. X.891
+   * (05/2005) §7.16.6, §7.16.7.3 b.
+   * @public
+   * @readonly
+   */
+  public readonly namespace_name: OPTIONAL<IdentifyingStringOrIndex>;
+  /**
+   * @summary `local_name`.
+   * @description Local name (LOCAL NAME category). ITU-T Rec.
+   * X.891 (05/2005) §7.16.7.3 c.
+   * @public
+   * @readonly
+   */
+  public readonly local_name: IdentifyingStringOrIndex;
+
   constructor(
-    /**
-     * @summary `prefix`.
-     * @description Prefix of the qualified name (PREFIX
-     * category). Absent if the name is unprefixed. Shall be
-     * absent if `namespace-name` is absent. ITU-T Rec. X.891
-     * (05/2005) §7.16.6, §7.16.7.3 a.
-     * @public
-     * @readonly
-     */
-    readonly prefix: OPTIONAL<IdentifyingStringOrIndex>,
-    /**
-     * @summary `namespace_name`.
-     * @description Namespace name (NAMESPACE NAME category).
-     * Absent if the name has no namespace. ITU-T Rec. X.891
-     * (05/2005) §7.16.6, §7.16.7.3 b.
-     * @public
-     * @readonly
-     */
-    readonly namespace_name: OPTIONAL<IdentifyingStringOrIndex>,
-    /**
-     * @summary `local_name`.
-     * @description Local name (LOCAL NAME category). ITU-T Rec.
-     * X.891 (05/2005) §7.16.7.3 c.
-     * @public
-     * @readonly
-     */
-    readonly local_name: IdentifyingStringOrIndex
-  ) {}
+    prefix: OPTIONAL<IdentifyingStringOrIndex>,
+    namespace_name: OPTIONAL<IdentifyingStringOrIndex>,
+    local_name: IdentifyingStringOrIndex
+  ) {
+    this.prefix = prefix;
+    this.namespace_name = namespace_name;
+    this.local_name = local_name;
+  }
 
   /**
    * @summary Restructures an object into a QualifiedNameOrIndex_literal_qualified_name

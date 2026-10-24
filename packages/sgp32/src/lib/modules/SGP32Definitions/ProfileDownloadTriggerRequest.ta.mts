@@ -34,35 +34,41 @@ import { type TransactionId, _decode_TransactionId, _encode_TransactionId } from
  */
 export
 class ProfileDownloadTriggerRequest {
+    /**
+     * @summary `profileDownloadData`.
+     * @description
+     * Activation Code, a request to contact the default SM-DP+ address already in
+     * the IoT Device, or a request to contact an SM-DS. Absent only for the empty
+     * trigger described on this type: the IPA has eimDownloadDataHandling and the
+     * eIM wants ESipa.InitiateAuthentication. contactSmds with smdsAddress absent
+     * uses the SM-DS address in the IoT Device; with smdsAddress present it uses
+     * the address from the eIM. That contact retrieves the SM-DP+ address and
+     * EventID over ES11 as defined in SGP.22 section 3.6.2, or over ESipa and
+     * ES11' as defined in SGP.32 section 3.9.2.2. SGP.32 v1.2, section 2.11.1.3.
+     * @public
+     * @readonly
+     */
+    public readonly profileDownloadData?: OPTIONAL<ProfileDownloadData>;
+    /**
+     * @summary `eimTransactionId`.
+     * @description
+     * Optional correlator. It may link this request to a ProfileInstallationResult
+     * in a direct Profile download, or identify the IoT Device in an indirect
+     * Profile download. When the eIM includes it, the IPA returns the same value
+     * in ProfileDownloadTriggerResult. SGP.32 v1.2, sections 2.11.1.3 and
+     * 2.11.2.3.
+     * @public
+     * @readonly
+     */
+    public readonly eimTransactionId?: OPTIONAL<TransactionId>;
+
     constructor (
-        /**
-         * @summary `profileDownloadData`.
-         * @description
-         * Activation Code, a request to contact the default SM-DP+ address already in
-         * the IoT Device, or a request to contact an SM-DS. Absent only for the empty
-         * trigger described on this type: the IPA has eimDownloadDataHandling and the
-         * eIM wants ESipa.InitiateAuthentication. contactSmds with smdsAddress absent
-         * uses the SM-DS address in the IoT Device; with smdsAddress present it uses
-         * the address from the eIM. That contact retrieves the SM-DP+ address and
-         * EventID over ES11 as defined in SGP.22 section 3.6.2, or over ESipa and
-         * ES11' as defined in SGP.32 section 3.9.2.2. SGP.32 v1.2, section 2.11.1.3.
-         * @public
-         * @readonly
-         */
-        readonly profileDownloadData?: OPTIONAL<ProfileDownloadData>,
-        /**
-         * @summary `eimTransactionId`.
-         * @description
-         * Optional correlator. It may link this request to a ProfileInstallationResult
-         * in a direct Profile download, or identify the IoT Device in an indirect
-         * Profile download. When the eIM includes it, the IPA returns the same value
-         * in ProfileDownloadTriggerResult. SGP.32 v1.2, sections 2.11.1.3 and
-         * 2.11.2.3.
-         * @public
-         * @readonly
-         */
-        readonly eimTransactionId?: OPTIONAL<TransactionId>
-    ) {}
+        profileDownloadData?: OPTIONAL<ProfileDownloadData>,
+        eimTransactionId?: OPTIONAL<TransactionId>
+    ) {
+        this.profileDownloadData = profileDownloadData;
+        this.eimTransactionId = eimTransactionId;
+    }
 
     /**
      * @summary Restructures an object into a ProfileDownloadTriggerRequest

@@ -32,21 +32,25 @@ import { PrivateEnterpriseNumber, _decode_PrivateEnterpriseNumber, _encode_Priva
  */
 export
 class ManufacturerId {
+    /**
+     * @summary `manufacturerIdentifier`.
+     * @description
+     *
+     * IANA Private Enterprise Number OID of the manufacturer.
+     * Assigned numbers:
+     * http://www.iana.org/assignments/enterprise-numbers/enterprise-numbers
+     * §3.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly manufacturerIdentifier: PrivateEnterpriseNumber;
+
     constructor (
-        /**
-         * @summary `manufacturerIdentifier`.
-         * @description
-         *
-         * IANA Private Enterprise Number OID of the manufacturer.
-         * Assigned numbers:
-         * http://www.iana.org/assignments/enterprise-numbers/enterprise-numbers
-         * §3.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly manufacturerIdentifier: PrivateEnterpriseNumber
-    ) {}
+        manufacturerIdentifier: PrivateEnterpriseNumber
+    ) {
+        this.manufacturerIdentifier = manufacturerIdentifier;
+    }
 
     /**
      * @summary Restructures an object into a ManufacturerId

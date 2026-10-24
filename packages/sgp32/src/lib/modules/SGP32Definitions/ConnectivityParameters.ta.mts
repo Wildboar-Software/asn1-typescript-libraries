@@ -33,21 +33,25 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class ConnectivityParameters {
+    /**
+     * @summary `httpParams`.
+     * @description
+     *
+     * Connectivity parameters for HTTP, also used for CoAP. The format is
+     * identical to Table 95 of SGP.02. Present when those parameters are
+     * available; otherwise the response is parametersNotAvailable.
+     *
+     * SGP.32 v1.2, section 5.9.24.
+     * @public
+     * @readonly
+     */
+    public readonly httpParams?: OPTIONAL<OCTET_STRING>;
+
     constructor (
-        /**
-         * @summary `httpParams`.
-         * @description
-         *
-         * Connectivity parameters for HTTP, also used for CoAP. The format is
-         * identical to Table 95 of SGP.02. Present when those parameters are
-         * available; otherwise the response is parametersNotAvailable.
-         *
-         * SGP.32 v1.2, section 5.9.24.
-         * @public
-         * @readonly
-         */
-        readonly httpParams?: OPTIONAL<OCTET_STRING>
-    ) {}
+        httpParams?: OPTIONAL<OCTET_STRING>
+    ) {
+        this.httpParams = httpParams;
+    }
 
     /**
      * @summary Restructures an object into a ConnectivityParameters

@@ -39,26 +39,34 @@ import { Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Param
  */
 export
 class EncryptionInfo {
+    /**
+     * @summary `enc_type`.
+     * @public
+     * @readonly
+     */
+    public readonly enc_type: OCTET_STRING;
+    /**
+     * @summary `params`.
+     * @public
+     * @readonly
+     */
+    public readonly params?: OPTIONAL<Parameters>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `enc_type`.
-         * @public
-         * @readonly
-         */
-        readonly enc_type: OCTET_STRING,
-        /**
-         * @summary `params`.
-         * @public
-         * @readonly
-         */
-        readonly params?: OPTIONAL<Parameters>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        enc_type: OCTET_STRING,
+        params?: OPTIONAL<Parameters>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.enc_type = enc_type;
+        this.params = params;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a EncryptionInfo

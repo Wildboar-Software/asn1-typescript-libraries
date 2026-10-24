@@ -28,18 +28,22 @@ import { type SubjectKeyIdentifier, _decode_SubjectKeyIdentifier, _encode_Subjec
  */
 export
 class GetCertsRequest {
+    /**
+     * @summary `euiccCiPKId`.
+     * @description
+     * CI Public Key Identifier used to choose among multiple EUM certificates and
+     * eUICC certificates. Absent: the first entry of `euiccCiPKIdListForSigning`
+     * in eUICCInfo1 or eUICCInfo2 is used. SGP.32 v1.2, section 5.9.10.
+     * @public
+     * @readonly
+     */
+    public readonly euiccCiPKId?: OPTIONAL<SubjectKeyIdentifier>;
+
     constructor (
-        /**
-         * @summary `euiccCiPKId`.
-         * @description
-         * CI Public Key Identifier used to choose among multiple EUM certificates and
-         * eUICC certificates. Absent: the first entry of `euiccCiPKIdListForSigning`
-         * in eUICCInfo1 or eUICCInfo2 is used. SGP.32 v1.2, section 5.9.10.
-         * @public
-         * @readonly
-         */
-        readonly euiccCiPKId?: OPTIONAL<SubjectKeyIdentifier>
-    ) {}
+        euiccCiPKId?: OPTIONAL<SubjectKeyIdentifier>
+    ) {
+        this.euiccCiPKId = euiccCiPKId;
+    }
 
     /**
      * @summary Restructures an object into a GetCertsRequest

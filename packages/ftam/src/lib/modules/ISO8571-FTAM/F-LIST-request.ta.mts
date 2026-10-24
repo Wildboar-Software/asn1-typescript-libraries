@@ -64,78 +64,92 @@ import {
  *
  */
 export class F_LIST_request {
+  /**
+   * @summary `attribute_value_asset_tions`.
+   * @description
+   *
+   * Match criteria for objects to list. Absent from ISO
+   * 8571:1988 Parts 1–4. ASN.1 name is
+   * `attribute-value-asset-tions`.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly attribute_value_asset_tions: Attribute_Value_Assertions;
+  /**
+   * @summary `scope`.
+   * @description
+   *
+   * How far the match applies. Absent from ISO 8571:1988
+   * Parts 1–4.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly scope: Scope;
+  /**
+   * @summary `access_passwords`.
+   * @description
+   *
+   * Passwords for the requested actions. Same role as ISO
+   * 8571-3:1988 §13.7; only if the security group was
+   * negotiated.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly access_passwords: OPTIONAL<Access_Passwords>;
+  /**
+   * @summary `path_access_passwords`.
+   * @description
+   *
+   * Per-path-element passwords. Absent from ISO 8571:1988.
+   * ASN.1 on F-SELECT-request: send only when
+   * limited-filestore-management, object-manipulation, or
+   * group-manipulation is available.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly path_access_passwords: OPTIONAL<Path_Access_Passwords>;
+  /**
+   * @summary `attribute_names`.
+   * @description
+   *
+   * Attribute names to return. Same role as F-READ-ATTRIB
+   * (ISO 8571-3:1988 §16.1.2.2).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly attribute_names: Attribute_Names;
+  /**
+   * @summary `attribute_extension_names`.
+   * @description
+   *
+   * Attribute-extension names to return. Absent from ISO
+   * 8571:1988 Parts 1–4.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly attribute_extension_names?: OPTIONAL<Attribute_Extension_Names>;
+
   constructor(
-    /**
-     * @summary `attribute_value_asset_tions`.
-     * @description
-     *
-     * Match criteria for objects to list. Absent from ISO
-     * 8571:1988 Parts 1–4. ASN.1 name is
-     * `attribute-value-asset-tions`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly attribute_value_asset_tions: Attribute_Value_Assertions,
-    /**
-     * @summary `scope`.
-     * @description
-     *
-     * How far the match applies. Absent from ISO 8571:1988
-     * Parts 1–4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly scope: Scope,
-    /**
-     * @summary `access_passwords`.
-     * @description
-     *
-     * Passwords for the requested actions. Same role as ISO
-     * 8571-3:1988 §13.7; only if the security group was
-     * negotiated.
-     *
-     * @public
-     * @readonly
-     */
-    readonly access_passwords: OPTIONAL<Access_Passwords>,
-    /**
-     * @summary `path_access_passwords`.
-     * @description
-     *
-     * Per-path-element passwords. Absent from ISO 8571:1988.
-     * ASN.1 on F-SELECT-request: send only when
-     * limited-filestore-management, object-manipulation, or
-     * group-manipulation is available.
-     *
-     * @public
-     * @readonly
-     */
-    readonly path_access_passwords: OPTIONAL<Path_Access_Passwords>,
-    /**
-     * @summary `attribute_names`.
-     * @description
-     *
-     * Attribute names to return. Same role as F-READ-ATTRIB
-     * (ISO 8571-3:1988 §16.1.2.2).
-     *
-     * @public
-     * @readonly
-     */
-    readonly attribute_names: Attribute_Names,
-    /**
-     * @summary `attribute_extension_names`.
-     * @description
-     *
-     * Attribute-extension names to return. Absent from ISO
-     * 8571:1988 Parts 1–4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly attribute_extension_names?: OPTIONAL<Attribute_Extension_Names>
-  ) {}
+    attribute_value_asset_tions: Attribute_Value_Assertions,
+    scope: Scope,
+    access_passwords: OPTIONAL<Access_Passwords>,
+    path_access_passwords: OPTIONAL<Path_Access_Passwords>,
+    attribute_names: Attribute_Names,
+    attribute_extension_names?: OPTIONAL<Attribute_Extension_Names>
+  ) {
+    this.attribute_value_asset_tions = attribute_value_asset_tions;
+    this.scope = scope;
+    this.access_passwords = access_passwords;
+    this.path_access_passwords = path_access_passwords;
+    this.attribute_names = attribute_names;
+    this.attribute_extension_names = attribute_extension_names;
+  }
 
   /**
    * @summary Restructures an object into a F_LIST_request

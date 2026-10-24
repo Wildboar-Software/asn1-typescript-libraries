@@ -26,31 +26,37 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class SchemeIdentifier {
+    /**
+     * @summary `scheme`.
+     * @description
+     *
+     * A `Schemes` OID (`dhStatic`, `dhEphem`, …, or a named-scheme
+     * OID). ANS X9.42-2003 §A.4.9.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly scheme: OBJECT_IDENTIFIER;
+    /**
+     * @summary `parameters`.
+     * @description
+     *
+     * For the eight parameterized schemes, `SchemeParameters` (hash
+     * algorithm). Named schemes omit this; their parameters are
+     * well-known. ANS X9.42-2003 §A.4.9.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly parameters?: OPTIONAL<_Element>;
+
     constructor(
-        /**
-         * @summary `scheme`.
-         * @description
-         *
-         * A `Schemes` OID (`dhStatic`, `dhEphem`, …, or a named-scheme
-         * OID). ANS X9.42-2003 §A.4.9.
-         *
-         * @public
-         * @readonly
-         */
-        readonly scheme: OBJECT_IDENTIFIER,
-        /**
-         * @summary `parameters`.
-         * @description
-         *
-         * For the eight parameterized schemes, `SchemeParameters` (hash
-         * algorithm). Named schemes omit this; their parameters are
-         * well-known. ANS X9.42-2003 §A.4.9.
-         *
-         * @public
-         * @readonly
-         */
-        readonly parameters?: OPTIONAL<_Element>
-    ) {}
+        scheme: OBJECT_IDENTIFIER,
+        parameters?: OPTIONAL<_Element>
+    ) {
+        this.scheme = scheme;
+        this.parameters = parameters;
+    }
 
     /**
      * @summary Restructures an object into a SchemeIdentifier

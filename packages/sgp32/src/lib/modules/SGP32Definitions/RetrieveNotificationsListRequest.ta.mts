@@ -35,18 +35,22 @@ import { RetrieveNotificationsListRequest_searchCriteria, _decode_RetrieveNotifi
  */
 export
 class RetrieveNotificationsListRequest {
+    /**
+     * @summary `searchCriteria`.
+     * @description
+     * Optional filter. Omitted, the eUICC returns every stored Notification.
+     * seqNumber, a profile-management bit mask, and euiccPackageResults are
+     * defined on the choice. SGP.32 v1.2, section 5.9.11.
+     * @public
+     * @readonly
+     */
+    public readonly searchCriteria?: OPTIONAL<RetrieveNotificationsListRequest_searchCriteria>;
+
     constructor (
-        /**
-         * @summary `searchCriteria`.
-         * @description
-         * Optional filter. Omitted, the eUICC returns every stored Notification.
-         * seqNumber, a profile-management bit mask, and euiccPackageResults are
-         * defined on the choice. SGP.32 v1.2, section 5.9.11.
-         * @public
-         * @readonly
-         */
-        readonly searchCriteria?: OPTIONAL<RetrieveNotificationsListRequest_searchCriteria>
-    ) {}
+        searchCriteria?: OPTIONAL<RetrieveNotificationsListRequest_searchCriteria>
+    ) {
+        this.searchCriteria = searchCriteria;
+    }
 
     /**
      * @summary Restructures an object into a RetrieveNotificationsListRequest

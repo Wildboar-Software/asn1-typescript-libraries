@@ -32,21 +32,27 @@ import { LogotypeImageInfo, _decode_LogotypeImageInfo, _encode_LogotypeImageInfo
  */
 export
 class LogotypeImage {
+    /**
+     * How to fetch and authenticate this image file.
+     * @public
+     * @readonly
+     */
+    public readonly imageDetails: LogotypeDetails;
+    /**
+     * Pixel size, color, and language, used to choose among image
+     * variants. Absent when the issuer supplies none.
+     * @public
+     * @readonly
+     */
+    public readonly imageInfo?: OPTIONAL<LogotypeImageInfo>;
+
     constructor (
-        /**
-         * How to fetch and authenticate this image file.
-         * @public
-         * @readonly
-         */
-        readonly imageDetails: LogotypeDetails,
-        /**
-         * Pixel size, color, and language, used to choose among image
-         * variants. Absent when the issuer supplies none.
-         * @public
-         * @readonly
-         */
-        readonly imageInfo?: OPTIONAL<LogotypeImageInfo>
-    ) {}
+        imageDetails: LogotypeDetails,
+        imageInfo?: OPTIONAL<LogotypeImageInfo>
+    ) {
+        this.imageDetails = imageDetails;
+        this.imageInfo = imageInfo;
+    }
 
     /**
      * @summary Restructures an object into a LogotypeImage

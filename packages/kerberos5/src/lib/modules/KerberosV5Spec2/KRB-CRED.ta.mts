@@ -43,50 +43,60 @@ import {
  *
  */
 export class KRB_CRED {
+  /**
+   * @summary `pvno`.
+   * @description
+   *
+   * Protocol version 5 ([RFC 4120 §5.8.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.8.1)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly pvno: INTEGER;
+  /**
+   * @summary `msg_type`.
+   * @description
+   *
+   * `KRB_CRED` (22) ([RFC 4120 §5.8.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.8.1)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly msg_type: INTEGER;
+  /**
+   * @summary `tickets`.
+   * @description
+   *
+   * Tickets for the intended recipient; paired with
+   * `KrbCredInfo` entries in `enc-part` ([RFC 4120 §5.8.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.8.1)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly tickets: Ticket[];
+  /**
+   * @summary `enc_part`.
+   * @description
+   *
+   * Encrypted `EncKrbCredPart` under the shared session key,
+   * key usage 14 ([RFC 4120 §5.8.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.8.1)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly enc_part: EncryptedData;
+
   constructor(
-    /**
-     * @summary `pvno`.
-     * @description
-     *
-     * Protocol version 5 ([RFC 4120 §5.8.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.8.1)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly pvno: INTEGER,
-    /**
-     * @summary `msg_type`.
-     * @description
-     *
-     * `KRB_CRED` (22) ([RFC 4120 §5.8.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.8.1)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly msg_type: INTEGER,
-    /**
-     * @summary `tickets`.
-     * @description
-     *
-     * Tickets for the intended recipient; paired with
-     * `KrbCredInfo` entries in `enc-part` ([RFC 4120 §5.8.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.8.1)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly tickets: Ticket[],
-    /**
-     * @summary `enc_part`.
-     * @description
-     *
-     * Encrypted `EncKrbCredPart` under the shared session key,
-     * key usage 14 ([RFC 4120 §5.8.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.8.1)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly enc_part: EncryptedData
-  ) {}
+    pvno: INTEGER,
+    msg_type: INTEGER,
+    tickets: Ticket[],
+    enc_part: EncryptedData
+  ) {
+    this.pvno = pvno;
+    this.msg_type = msg_type;
+    this.tickets = tickets;
+    this.enc_part = enc_part;
+  }
 
   /**
    * @summary Restructures an object into a KRB_CRED

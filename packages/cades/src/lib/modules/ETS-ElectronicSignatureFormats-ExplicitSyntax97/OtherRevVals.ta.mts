@@ -31,30 +31,36 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class OtherRevVals {
+    /**
+     * @summary `otherRevValType`.
+     * @description
+     *
+     * Object identifier selecting the syntax of
+     * `otherRevVals`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly otherRevValType: OBJECT_IDENTIFIER;
+    /**
+     * @summary `otherRevVals`.
+     * @description
+     *
+     * Revocation values whose syntax is defined by
+     * `otherRevValType`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly otherRevVals: _Element[];
+
     constructor (
-        /**
-         * @summary `otherRevValType`.
-         * @description
-         *
-         * Object identifier selecting the syntax of
-         * `otherRevVals`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly otherRevValType: OBJECT_IDENTIFIER,
-        /**
-         * @summary `otherRevVals`.
-         * @description
-         *
-         * Revocation values whose syntax is defined by
-         * `otherRevValType`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly otherRevVals: _Element[]
-    ) {}
+        otherRevValType: OBJECT_IDENTIFIER,
+        otherRevVals: _Element[]
+    ) {
+        this.otherRevValType = otherRevValType;
+        this.otherRevVals = otherRevVals;
+    }
 
     /**
      * @summary Restructures an object into a OtherRevVals

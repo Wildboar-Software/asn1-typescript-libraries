@@ -36,59 +36,71 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  */
 export
 class ASN1SharedInfo {
+    /**
+     * @summary `keyInfo`.
+     * @description
+     *
+     * Symmetric algorithm for which the derived key will be used. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly keyInfo: AlgorithmIdentifier;
+    /**
+     * @summary `entityUInfo`.
+     * @description
+     *
+     * Additional information about the initiator (e.g. X.501 name or public key).
+     * [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly entityUInfo?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `entityVInfo`.
+     * @description
+     *
+     * Additional information about the responder. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly entityVInfo?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `suppPubInfo`.
+     * @description
+     *
+     * Additional public information known to both parties. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly suppPubInfo?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `suppPrivInfo`.
+     * @description
+     *
+     * Additional private information known to both parties. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly suppPrivInfo?: OPTIONAL<OCTET_STRING>;
+
     constructor (
-        /**
-         * @summary `keyInfo`.
-         * @description
-         *
-         * Symmetric algorithm for which the derived key will be used. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly keyInfo: AlgorithmIdentifier,
-        /**
-         * @summary `entityUInfo`.
-         * @description
-         *
-         * Additional information about the initiator (e.g. X.501 name or public key).
-         * [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly entityUInfo?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `entityVInfo`.
-         * @description
-         *
-         * Additional information about the responder. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly entityVInfo?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `suppPubInfo`.
-         * @description
-         *
-         * Additional public information known to both parties. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly suppPubInfo?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `suppPrivInfo`.
-         * @description
-         *
-         * Additional private information known to both parties. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly suppPrivInfo?: OPTIONAL<OCTET_STRING>
-    ) {}
+        keyInfo: AlgorithmIdentifier,
+        entityUInfo?: OPTIONAL<OCTET_STRING>,
+        entityVInfo?: OPTIONAL<OCTET_STRING>,
+        suppPubInfo?: OPTIONAL<OCTET_STRING>,
+        suppPrivInfo?: OPTIONAL<OCTET_STRING>
+    ) {
+        this.keyInfo = keyInfo;
+        this.entityUInfo = entityUInfo;
+        this.entityVInfo = entityVInfo;
+        this.suppPubInfo = suppPubInfo;
+        this.suppPrivInfo = suppPrivInfo;
+    }
 
     /**
      * @summary Restructures an object into a ASN1SharedInfo

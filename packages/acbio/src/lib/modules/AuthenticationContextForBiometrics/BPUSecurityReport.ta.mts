@@ -42,26 +42,34 @@ import {
  *
  */
 export class BPUSecurityReport {
+    /**
+     * @summary `cryptoModuleSecurityInformation`.
+     * @public
+     * @readonly
+     */
+    public readonly cryptoModuleSecurityInformation?: OPTIONAL<CryptoModuleSecurityInformation>;
+    /**
+     * @summary `biometricProcessSecurityInformation`.
+     * @public
+     * @readonly
+     */
+    public readonly biometricProcessSecurityInformation?: OPTIONAL<BiometricProcessSecurityInformation>;
+    /**
+     * @summary `securityEvaluationExtensionInformation`.
+     * @public
+     * @readonly
+     */
+    public readonly securityEvaluationExtensionInformation?: OPTIONAL<SecurityEvaluationExtensionInformation>;
+
     constructor(
-        /**
-         * @summary `cryptoModuleSecurityInformation`.
-         * @public
-         * @readonly
-         */
-        readonly cryptoModuleSecurityInformation?: OPTIONAL<CryptoModuleSecurityInformation>,
-        /**
-         * @summary `biometricProcessSecurityInformation`.
-         * @public
-         * @readonly
-         */
-        readonly biometricProcessSecurityInformation?: OPTIONAL<BiometricProcessSecurityInformation>,
-        /**
-         * @summary `securityEvaluationExtensionInformation`.
-         * @public
-         * @readonly
-         */
-        readonly securityEvaluationExtensionInformation?: OPTIONAL<SecurityEvaluationExtensionInformation>
-    ) {}
+        cryptoModuleSecurityInformation?: OPTIONAL<CryptoModuleSecurityInformation>,
+        biometricProcessSecurityInformation?: OPTIONAL<BiometricProcessSecurityInformation>,
+        securityEvaluationExtensionInformation?: OPTIONAL<SecurityEvaluationExtensionInformation>
+    ) {
+        this.cryptoModuleSecurityInformation = cryptoModuleSecurityInformation;
+        this.biometricProcessSecurityInformation = biometricProcessSecurityInformation;
+        this.securityEvaluationExtensionInformation = securityEvaluationExtensionInformation;
+    }
 
     /**
      * @summary Restructures an object into a BPUSecurityReport

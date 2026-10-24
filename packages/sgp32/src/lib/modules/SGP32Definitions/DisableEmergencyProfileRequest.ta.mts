@@ -32,24 +32,28 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class DisableEmergencyProfileRequest {
+    /**
+     * @summary `refreshFlag`.
+     * @description
+     *
+     * Whether REFRESH is required. When clear, the eUICC disables the Emergency
+     * Profile and enables the previous Profile immediately, and may return catBusy
+     * if a proactive session is open. When set, the eUICC marks those Profile
+     * state changes, returns ok, and sends REFRESH in eUICC Profile State Change
+     * mode or UICC Reset mode per ETSI TS 102 223. A Terminal Response reporting a
+     * temporary or permanent problem leaves both Profiles unchanged.
+     *
+     * SGP.32 v1.2, section 5.9.23.
+     * @public
+     * @readonly
+     */
+    public readonly refreshFlag: BOOLEAN;
+
     constructor (
-        /**
-         * @summary `refreshFlag`.
-         * @description
-         *
-         * Whether REFRESH is required. When clear, the eUICC disables the Emergency
-         * Profile and enables the previous Profile immediately, and may return catBusy
-         * if a proactive session is open. When set, the eUICC marks those Profile
-         * state changes, returns ok, and sends REFRESH in eUICC Profile State Change
-         * mode or UICC Reset mode per ETSI TS 102 223. A Terminal Response reporting a
-         * temporary or permanent problem leaves both Profiles unchanged.
-         *
-         * SGP.32 v1.2, section 5.9.23.
-         * @public
-         * @readonly
-         */
-        readonly refreshFlag: BOOLEAN
-    ) {}
+        refreshFlag: BOOLEAN
+    ) {
+        this.refreshFlag = refreshFlag;
+    }
 
     /**
      * @summary Restructures an object into a DisableEmergencyProfileRequest

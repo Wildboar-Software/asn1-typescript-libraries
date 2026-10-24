@@ -43,56 +43,66 @@ import { type Certificate, _decode_Certificate, _encode_Certificate } from "@wil
  */
 export
 class CompactAuthenticateResponseOk {
+    /**
+     * @summary `signedData`.
+     * @description
+     *
+     * Either the full EuiccSigned1 or CompactEuiccSigned1. The compact alternative
+     * carries extCardResource from euiccInfo2 and may omit ctxParams1 when the eIM
+     * already sent it.
+     *
+     * SGP.32 v1.2, section 5.14.3.
+     * @public
+     * @readonly
+     */
+    public readonly signedData: CompactAuthenticateResponseOk_signedData;
+    /**
+     * @summary `euiccSignature1`.
+     * @description
+     *
+     * eUICC signature (tag '5F37') on the full EuiccSigned1.
+     *
+     * SGP.32 v1.2, section 5.14.3.
+     * @public
+     * @readonly
+     */
+    public readonly euiccSignature1: OCTET_STRING;
+    /**
+     * @summary `euiccCertificate`.
+     * @description
+     *
+     * eUICC certificate CERT.EUICC.ECDSA. Omitted in the compact form when the eIM
+     * can restore it from data it already holds.
+     *
+     * SGP.32 v1.2, section 5.14.3.
+     * @public
+     * @readonly
+     */
+    public readonly euiccCertificate?: OPTIONAL<Certificate>;
+    /**
+     * @summary `eumCertificate`.
+     * @description
+     *
+     * EUM certificate CERT.EUM.ECDSA. Omitted in the compact form when the eIM can
+     * restore it from data it already holds.
+     *
+     * SGP.32 v1.2, section 5.14.3.
+     * @public
+     * @readonly
+     */
+    public readonly eumCertificate?: OPTIONAL<Certificate>;
+
     constructor (
-        /**
-         * @summary `signedData`.
-         * @description
-         *
-         * Either the full EuiccSigned1 or CompactEuiccSigned1. The compact alternative
-         * carries extCardResource from euiccInfo2 and may omit ctxParams1 when the eIM
-         * already sent it.
-         *
-         * SGP.32 v1.2, section 5.14.3.
-         * @public
-         * @readonly
-         */
-        readonly signedData: CompactAuthenticateResponseOk_signedData,
-        /**
-         * @summary `euiccSignature1`.
-         * @description
-         *
-         * eUICC signature (tag '5F37') on the full EuiccSigned1.
-         *
-         * SGP.32 v1.2, section 5.14.3.
-         * @public
-         * @readonly
-         */
-        readonly euiccSignature1: OCTET_STRING,
-        /**
-         * @summary `euiccCertificate`.
-         * @description
-         *
-         * eUICC certificate CERT.EUICC.ECDSA. Omitted in the compact form when the eIM
-         * can restore it from data it already holds.
-         *
-         * SGP.32 v1.2, section 5.14.3.
-         * @public
-         * @readonly
-         */
-        readonly euiccCertificate?: OPTIONAL<Certificate>,
-        /**
-         * @summary `eumCertificate`.
-         * @description
-         *
-         * EUM certificate CERT.EUM.ECDSA. Omitted in the compact form when the eIM can
-         * restore it from data it already holds.
-         *
-         * SGP.32 v1.2, section 5.14.3.
-         * @public
-         * @readonly
-         */
-        readonly eumCertificate?: OPTIONAL<Certificate>
-    ) {}
+        signedData: CompactAuthenticateResponseOk_signedData,
+        euiccSignature1: OCTET_STRING,
+        euiccCertificate?: OPTIONAL<Certificate>,
+        eumCertificate?: OPTIONAL<Certificate>
+    ) {
+        this.signedData = signedData;
+        this.euiccSignature1 = euiccSignature1;
+        this.euiccCertificate = euiccCertificate;
+        this.eumCertificate = eumCertificate;
+    }
 
     /**
      * @summary Restructures an object into a CompactAuthenticateResponseOk

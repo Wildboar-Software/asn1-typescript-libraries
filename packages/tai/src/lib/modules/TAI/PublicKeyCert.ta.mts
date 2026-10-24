@@ -35,38 +35,46 @@ import { KeyUsage, _decode_KeyUsage, _encode_KeyUsage } from "@wildboar/x500/Cer
  */
 export
 class PublicKeyCert {
+    /**
+     * @summary `pkcIssuer`.
+     * @description
+     *
+     * Issuer of the associated PKC. X.1089 §11.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pkcIssuer: Name;
+    /**
+     * @summary `pkcSerialNumber`.
+     * @description
+     *
+     * Serial number of the associated PKC. X.1089 §11.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pkcSerialNumber: CertificateSerialNumber;
+    /**
+     * @summary `pkcUsage`.
+     * @description
+     *
+     * Key usage of the associated PKC. X.1089 §11.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pkcUsage: KeyUsage;
+
     constructor (
-        /**
-         * @summary `pkcIssuer`.
-         * @description
-         *
-         * Issuer of the associated PKC. X.1089 §11.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly pkcIssuer: Name,
-        /**
-         * @summary `pkcSerialNumber`.
-         * @description
-         *
-         * Serial number of the associated PKC. X.1089 §11.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly pkcSerialNumber: CertificateSerialNumber,
-        /**
-         * @summary `pkcUsage`.
-         * @description
-         *
-         * Key usage of the associated PKC. X.1089 §11.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly pkcUsage: KeyUsage
-    ) {}
+        pkcIssuer: Name,
+        pkcSerialNumber: CertificateSerialNumber,
+        pkcUsage: KeyUsage
+    ) {
+        this.pkcIssuer = pkcIssuer;
+        this.pkcSerialNumber = pkcSerialNumber;
+        this.pkcUsage = pkcUsage;
+    }
 
     /**
      * @summary Restructures an object into a PublicKeyCert

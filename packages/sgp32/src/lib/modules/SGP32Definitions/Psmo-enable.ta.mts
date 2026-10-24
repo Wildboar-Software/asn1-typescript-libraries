@@ -36,33 +36,39 @@ import { type Iccid, _decode_Iccid, _encode_Iccid } from "@wildboar/sgp22/RSPDef
  */
 export
 class Psmo_enable {
+    /**
+     * @summary `iccid`.
+     * @description
+     * ICCID of the Profile to enable, as defined in SGP.22. SGP.32 v1.2, section
+     * 2.11.1.1. The Profile is installed and disabled. An unknown ICCID yields
+     * iccidOrAidNotFound(1). A Profile that is still enabled yields
+     * profileNotInDisabledState(2). An Emergency Profile with ecallIndication TRUE
+     * yields undefinedError(127). When rollback is granted and no Profile is
+     * enabled or marked to be disabled, the result is rollbackNotAvailable(20).
+     * SGP.32 v1.2, section 3.4.1.
+     * @public
+     * @readonly
+     */
+    public readonly iccid: Iccid;
+    /**
+     * @summary `rollbackFlag`.
+     * @description
+     * Present when the eIM grants the Rollback Mechanism for this enable. The IPA
+     * may call ES10b.ProfileRollback if the newly enabled Profile fails to provide
+     * connectivity. The eUICC records the grant together with the Profile that is
+     * to be disabled. SGP.32 v1.2, sections 2.11.1.1 and 3.4.1.
+     * @public
+     * @readonly
+     */
+    public readonly rollbackFlag?: OPTIONAL<NULL>;
+
     constructor (
-        /**
-         * @summary `iccid`.
-         * @description
-         * ICCID of the Profile to enable, as defined in SGP.22. SGP.32 v1.2, section
-         * 2.11.1.1. The Profile is installed and disabled. An unknown ICCID yields
-         * iccidOrAidNotFound(1). A Profile that is still enabled yields
-         * profileNotInDisabledState(2). An Emergency Profile with ecallIndication TRUE
-         * yields undefinedError(127). When rollback is granted and no Profile is
-         * enabled or marked to be disabled, the result is rollbackNotAvailable(20).
-         * SGP.32 v1.2, section 3.4.1.
-         * @public
-         * @readonly
-         */
-        readonly iccid: Iccid,
-        /**
-         * @summary `rollbackFlag`.
-         * @description
-         * Present when the eIM grants the Rollback Mechanism for this enable. The IPA
-         * may call ES10b.ProfileRollback if the newly enabled Profile fails to provide
-         * connectivity. The eUICC records the grant together with the Profile that is
-         * to be disabled. SGP.32 v1.2, sections 2.11.1.1 and 3.4.1.
-         * @public
-         * @readonly
-         */
-        readonly rollbackFlag?: OPTIONAL<NULL>
-    ) {}
+        iccid: Iccid,
+        rollbackFlag?: OPTIONAL<NULL>
+    ) {
+        this.iccid = iccid;
+        this.rollbackFlag = rollbackFlag;
+    }
 
     /**
      * @summary Restructures an object into a Psmo_enable

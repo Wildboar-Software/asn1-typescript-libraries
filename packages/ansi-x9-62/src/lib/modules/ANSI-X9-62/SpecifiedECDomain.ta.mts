@@ -54,89 +54,107 @@ import {
  *
  */
 export class SpecifiedECDomain {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * `ecdpVer1`, `ecdpVer2`, or `ecdpVer3`. Not in ANSI
+     * X9.62-1998 (that edition used `ecpVer1` only). Versions
+     * 2 and 3 require `curve.seed`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: SpecifiedECDomainVersion;
+    /**
+     * @summary `fieldID`.
+     * @description
+     *
+     * Underlying field Fq. Same role as `ECParameters.fieldID`
+     * in ANSI X9.62-1998 §6.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly fieldID: FieldID;
+    /**
+     * @summary `curve`.
+     * @description
+     *
+     * Coefficients `a`, `b` and optional SEED. SEED shall be
+     * present when `version` is `ecdpVer2` or `ecdpVer3`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly curve: Curve;
+    /**
+     * @summary `base`.
+     * @description
+     *
+     * Base point G of prime order n.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly base: ECPoint;
+    /**
+     * @summary `order`.
+     * @description
+     *
+     * Prime order n of G.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly order: INTEGER;
+    /**
+     * @summary `cofactor`.
+     * @description
+     *
+     * `h = #E(Fq) / n`. Optional, as in ANSI X9.62-1998 §6.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cofactor?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `hash`.
+     * @description
+     *
+     * Hash used when generating the curve. Not in ANSI
+     * X9.62-1998 `ECParameters`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly hash?: OPTIONAL<HashAlgorithm>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * `ecdpVer1`, `ecdpVer2`, or `ecdpVer3`. Not in ANSI
-         * X9.62-1998 (that edition used `ecpVer1` only). Versions
-         * 2 and 3 require `curve.seed`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: SpecifiedECDomainVersion,
-        /**
-         * @summary `fieldID`.
-         * @description
-         *
-         * Underlying field Fq. Same role as `ECParameters.fieldID`
-         * in ANSI X9.62-1998 §6.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly fieldID: FieldID,
-        /**
-         * @summary `curve`.
-         * @description
-         *
-         * Coefficients `a`, `b` and optional SEED. SEED shall be
-         * present when `version` is `ecdpVer2` or `ecdpVer3`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly curve: Curve,
-        /**
-         * @summary `base`.
-         * @description
-         *
-         * Base point G of prime order n.
-         *
-         * @public
-         * @readonly
-         */
-        readonly base: ECPoint,
-        /**
-         * @summary `order`.
-         * @description
-         *
-         * Prime order n of G.
-         *
-         * @public
-         * @readonly
-         */
-        readonly order: INTEGER,
-        /**
-         * @summary `cofactor`.
-         * @description
-         *
-         * `h = #E(Fq) / n`. Optional, as in ANSI X9.62-1998 §6.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly cofactor?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `hash`.
-         * @description
-         *
-         * Hash used when generating the curve. Not in ANSI
-         * X9.62-1998 `ECParameters`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly hash?: OPTIONAL<HashAlgorithm>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        version: SpecifiedECDomainVersion,
+        fieldID: FieldID,
+        curve: Curve,
+        base: ECPoint,
+        order: INTEGER,
+        cofactor?: OPTIONAL<INTEGER>,
+        hash?: OPTIONAL<HashAlgorithm>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.version = version;
+        this.fieldID = fieldID;
+        this.curve = curve;
+        this.base = base;
+        this.order = order;
+        this.cofactor = cofactor;
+        this.hash = hash;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SpecifiedECDomain

@@ -31,20 +31,26 @@ import {
  *
  */
 export class BPUCertificateReferrerInformation {
+    /**
+     * @summary `bpuCertificateReferrer`.
+     * @public
+     * @readonly
+     */
+    public readonly bpuCertificateReferrer: URI;
+    /**
+     * @summary `crlsReferrer`.
+     * @public
+     * @readonly
+     */
+    public readonly crlsReferrer?: OPTIONAL<URI>;
+
     constructor(
-        /**
-         * @summary `bpuCertificateReferrer`.
-         * @public
-         * @readonly
-         */
-        readonly bpuCertificateReferrer: URI,
-        /**
-         * @summary `crlsReferrer`.
-         * @public
-         * @readonly
-         */
-        readonly crlsReferrer?: OPTIONAL<URI>
-    ) {}
+        bpuCertificateReferrer: URI,
+        crlsReferrer?: OPTIONAL<URI>
+    ) {
+        this.bpuCertificateReferrer = bpuCertificateReferrer;
+        this.crlsReferrer = crlsReferrer;
+    }
 
     /**
      * @summary Restructures an object into a BPUCertificateReferrerInformation

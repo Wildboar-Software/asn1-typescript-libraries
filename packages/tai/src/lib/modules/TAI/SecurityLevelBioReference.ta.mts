@@ -37,32 +37,38 @@ import { SecurityLevelBioRef, _decode_SecurityLevelBioRef, _encode_SecurityLevel
  */
 export
 class SecurityLevelBioReference {
+    /**
+     * @summary `securityLevelNum`.
+     * @description
+     *
+     * Identifier for this security level. Distinct among
+     * `bioSecLevelReference` attributes in one BPC. X.1089
+     * records a security level as 1 (lowest) to 100
+     * (highest). X.1089 §3.2.12, §9.3–9.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly securityLevelNum: INTEGER;
+    /**
+     * @summary `securityLevelBioRef`.
+     * @description
+     *
+     * Modality policy and biometric parameters for this
+     * level. X.1089 §9.4, §9.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly securityLevelBioRef: SecurityLevelBioRef;
+
     constructor (
-        /**
-         * @summary `securityLevelNum`.
-         * @description
-         *
-         * Identifier for this security level. Distinct among
-         * `bioSecLevelReference` attributes in one BPC. X.1089
-         * records a security level as 1 (lowest) to 100
-         * (highest). X.1089 §3.2.12, §9.3–9.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly securityLevelNum: INTEGER,
-        /**
-         * @summary `securityLevelBioRef`.
-         * @description
-         *
-         * Modality policy and biometric parameters for this
-         * level. X.1089 §9.4, §9.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly securityLevelBioRef: SecurityLevelBioRef
-    ) {}
+        securityLevelNum: INTEGER,
+        securityLevelBioRef: SecurityLevelBioRef
+    ) {
+        this.securityLevelNum = securityLevelNum;
+        this.securityLevelBioRef = securityLevelBioRef;
+    }
 
     /**
      * @summary Restructures an object into a SecurityLevelBioReference

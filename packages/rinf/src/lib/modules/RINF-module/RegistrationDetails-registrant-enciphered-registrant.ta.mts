@@ -37,30 +37,36 @@ import {
  *
  */
 export class RegistrationDetails_registrant_enciphered_registrant {
+  /**
+   * @summary `algorithmIdentifier`.
+   * @description
+   *
+   * Encipherment algorithm, from X.509
+   * `AuthenticationFramework` `SupportedAlgorithms`.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly algorithmIdentifier: AlgorithmIdentifier;
+  /**
+   * @summary `enciphered`.
+   * @description
+   *
+   * Ciphertext of EXTENDED-XER
+   * `RegistrantContactDetails` (XER: BASE64).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly enciphered: OCTET_STRING;
+
   constructor(
-    /**
-     * @summary `algorithmIdentifier`.
-     * @description
-     *
-     * Encipherment algorithm, from X.509
-     * `AuthenticationFramework` `SupportedAlgorithms`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly algorithmIdentifier: AlgorithmIdentifier,
-    /**
-     * @summary `enciphered`.
-     * @description
-     *
-     * Ciphertext of EXTENDED-XER
-     * `RegistrantContactDetails` (XER: BASE64).
-     *
-     * @public
-     * @readonly
-     */
-    readonly enciphered: OCTET_STRING
-  ) {}
+    algorithmIdentifier: AlgorithmIdentifier,
+    enciphered: OCTET_STRING
+  ) {
+    this.algorithmIdentifier = algorithmIdentifier;
+    this.enciphered = enciphered;
+  }
 
   /**
    * @summary Restructures an object into a RegistrationDetails_registrant_enciphered_registrant

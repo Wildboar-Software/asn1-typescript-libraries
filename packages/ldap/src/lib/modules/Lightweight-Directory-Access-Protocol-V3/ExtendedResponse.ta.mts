@@ -71,77 +71,93 @@ import {
  *
  */
 export class ExtendedResponse implements LDAPResult {
+  /**
+   * @summary `resultCode`.
+   * @description
+   *
+   * See LDAPResult. Unrecognized extended request → `protocolError`.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly resultCode: LDAPResult_resultCode; /* REPLICATED_COMPONENT */
+  /**
+   * @summary `matchedDN`.
+   * @description
+   *
+   * Last entry used finding the target, or empty.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly matchedDN: LDAPDN; /* REPLICATED_COMPONENT */
+  /**
+   * @summary `diagnosticMessage`.
+   * @description
+   *
+   * Optional diagnostic; empty if none. Not standardized.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly diagnosticMessage: LDAPString; /* REPLICATED_COMPONENT */
+  /**
+   * @summary `referral`.
+   * @description
+   *
+   * Present iff `resultCode` is `referral`.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly referral?: OPTIONAL<Referral>; /* REPLICATED_COMPONENT */
+  /**
+   * @summary `responseName`.
+   * @description
+   *
+   * Optional even when the spec assigns an OID; absent if the server
+   * cannot determine it. Unsolicited Notice of Disconnection is
+   * `1.3.6.1.4.1.1466.20036`.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly responseName?: OPTIONAL<LDAPOID>;
+  /**
+   * @summary `responseValue`.
+   * @description
+   *
+   * Opaque; may contain NULs. Absent if none (including Notice of
+   * Disconnection and StartTLS).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly responseValue?: OPTIONAL<OCTET_STRING>;
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  public readonly _unrecognizedExtensionsList: _Element[];
+
   constructor(
-    /**
-     * @summary `resultCode`.
-     * @description
-     *
-     * See LDAPResult. Unrecognized extended request → `protocolError`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly resultCode: LDAPResult_resultCode /* REPLICATED_COMPONENT */,
-    /**
-     * @summary `matchedDN`.
-     * @description
-     *
-     * Last entry used finding the target, or empty.
-     *
-     * @public
-     * @readonly
-     */
-    readonly matchedDN: LDAPDN /* REPLICATED_COMPONENT */,
-    /**
-     * @summary `diagnosticMessage`.
-     * @description
-     *
-     * Optional diagnostic; empty if none. Not standardized.
-     *
-     * @public
-     * @readonly
-     */
-    readonly diagnosticMessage: LDAPString /* REPLICATED_COMPONENT */,
-    /**
-     * @summary `referral`.
-     * @description
-     *
-     * Present iff `resultCode` is `referral`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly referral?: OPTIONAL<Referral> /* REPLICATED_COMPONENT */,
-    /**
-     * @summary `responseName`.
-     * @description
-     *
-     * Optional even when the spec assigns an OID; absent if the server
-     * cannot determine it. Unsolicited Notice of Disconnection is
-     * `1.3.6.1.4.1.1466.20036`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly responseName?: OPTIONAL<LDAPOID>,
-    /**
-     * @summary `responseValue`.
-     * @description
-     *
-     * Opaque; may contain NULs. Absent if none (including Notice of
-     * Disconnection and StartTLS).
-     *
-     * @public
-     * @readonly
-     */
-    readonly responseValue?: OPTIONAL<OCTET_STRING>,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = []
-  ) {}
+    resultCode: LDAPResult_resultCode,
+    matchedDN: LDAPDN,
+    diagnosticMessage: LDAPString,
+    referral?: OPTIONAL<Referral>,
+    responseName?: OPTIONAL<LDAPOID>,
+    responseValue?: OPTIONAL<OCTET_STRING>,
+    _unrecognizedExtensionsList: _Element[] = []
+  ) {
+    this.resultCode = resultCode;
+    this.matchedDN = matchedDN;
+    this.diagnosticMessage = diagnosticMessage;
+    this.referral = referral;
+    this.responseName = responseName;
+    this.responseValue = responseValue;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+  }
 
   /**
    * @summary Restructures an object into a ExtendedResponse

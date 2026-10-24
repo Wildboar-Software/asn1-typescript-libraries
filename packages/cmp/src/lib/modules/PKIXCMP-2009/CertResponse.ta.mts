@@ -51,54 +51,64 @@ import {
  *
  */
 export class CertResponse {
+  /**
+   * @summary `certReqId`.
+   * @description
+   *
+   * Matches this response to the corresponding request (`-1` if not
+   * originally specified in the request)
+   * ([RFC 4210 §5.3.4](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.4) / ASN.1 comments).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly certReqId: INTEGER;
+  /**
+   * @summary `status`.
+   * @description
+   *
+   * Status for this certificate request (`PKIStatusInfo`)
+   * ([RFC 4210 §5.3.4](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.4)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly status: PKIStatusInfo;
+  /**
+   * @summary `certifiedKeyPair`.
+   * @description
+   *
+   * Optional issued certificate and/or encrypted private key
+   * (`CertifiedKeyPair`). Absent on failure or `waiting`
+   * ([RFC 4210 §5.3.4](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.4)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly certifiedKeyPair?: OPTIONAL<CertifiedKeyPair>;
+  /**
+   * @summary `rspInfo`.
+   * @description
+   *
+   * Optional response info analogous to CRMF `id-regInfo-utf8Pairs`
+   * ([RFC 4210 §5.3.4](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.4)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly rspInfo?: OPTIONAL<OCTET_STRING>;
+
   constructor(
-    /**
-     * @summary `certReqId`.
-     * @description
-     *
-     * Matches this response to the corresponding request (`-1` if not
-     * originally specified in the request)
-     * ([RFC 4210 §5.3.4](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.4) / ASN.1 comments).
-     *
-     * @public
-     * @readonly
-     */
-    readonly certReqId: INTEGER,
-    /**
-     * @summary `status`.
-     * @description
-     *
-     * Status for this certificate request (`PKIStatusInfo`)
-     * ([RFC 4210 §5.3.4](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.4)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly status: PKIStatusInfo,
-    /**
-     * @summary `certifiedKeyPair`.
-     * @description
-     *
-     * Optional issued certificate and/or encrypted private key
-     * (`CertifiedKeyPair`). Absent on failure or `waiting`
-     * ([RFC 4210 §5.3.4](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.4)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly certifiedKeyPair?: OPTIONAL<CertifiedKeyPair>,
-    /**
-     * @summary `rspInfo`.
-     * @description
-     *
-     * Optional response info analogous to CRMF `id-regInfo-utf8Pairs`
-     * ([RFC 4210 §5.3.4](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.4)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly rspInfo?: OPTIONAL<OCTET_STRING>
-  ) {}
+    certReqId: INTEGER,
+    status: PKIStatusInfo,
+    certifiedKeyPair?: OPTIONAL<CertifiedKeyPair>,
+    rspInfo?: OPTIONAL<OCTET_STRING>
+  ) {
+    this.certReqId = certReqId;
+    this.status = status;
+    this.certifiedKeyPair = certifiedKeyPair;
+    this.rspInfo = rspInfo;
+  }
 
   /**
    * @summary Restructures an object into a CertResponse

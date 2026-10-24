@@ -37,38 +37,46 @@ import {
  *
  */
 export class Bitstring_Pattern {
+  /**
+   * @summary `equality_comparision`.
+   * @description
+   *
+   * Whether `no-value-available` and equals match.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly equality_comparision: Equality_Comparision;
+  /**
+   * @summary `match_bitstring`.
+   * @description
+   *
+   * Bit values used in the match.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly match_bitstring: BIT_STRING;
+  /**
+   * @summary `significance_bitstring`.
+   * @description
+   *
+   * Significance of corresponding bits in `match-bitstring`.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly significance_bitstring: BIT_STRING;
+
   constructor(
-    /**
-     * @summary `equality_comparision`.
-     * @description
-     *
-     * Whether `no-value-available` and equals match.
-     *
-     * @public
-     * @readonly
-     */
-    readonly equality_comparision: Equality_Comparision,
-    /**
-     * @summary `match_bitstring`.
-     * @description
-     *
-     * Bit values used in the match.
-     *
-     * @public
-     * @readonly
-     */
-    readonly match_bitstring: BIT_STRING,
-    /**
-     * @summary `significance_bitstring`.
-     * @description
-     *
-     * Significance of corresponding bits in `match-bitstring`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly significance_bitstring: BIT_STRING
-  ) {}
+    equality_comparision: Equality_Comparision,
+    match_bitstring: BIT_STRING,
+    significance_bitstring: BIT_STRING
+  ) {
+    this.equality_comparision = equality_comparision;
+    this.match_bitstring = match_bitstring;
+    this.significance_bitstring = significance_bitstring;
+  }
 
   /**
    * @summary Restructures an object into a Bitstring_Pattern

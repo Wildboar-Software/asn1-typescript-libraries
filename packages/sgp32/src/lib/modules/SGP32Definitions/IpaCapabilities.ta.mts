@@ -48,35 +48,43 @@ import { type VendorSpecificExtension, _decode_VendorSpecificExtension, _encode_
  */
 export
 class IpaCapabilities {
+    /**
+     * @summary `ipaFeatures`.
+     * @description
+     * Required. Each bit set to 1 is a Profile-download or compact-ESipa feature
+     * this IPA supports. SGP.32 v1.2, section 4.1.
+     * @public
+     * @readonly
+     */
+    public readonly ipaFeatures: IpaCapabilities_ipaFeatures;
+    /**
+     * @summary `ipaSupportedProtocols`.
+     * @description
+     * Present when the IPA advertises eIM Package transfer. Each bit set to 1 is a
+     * supported retrieval or injection transport. SGP.32 v1.2, section 4.1.
+     * @public
+     * @readonly
+     */
+    public readonly ipaSupportedProtocols?: OPTIONAL<IpaCapabilities_ipaSupportedProtocols>;
+    /**
+     * @summary `eSipaProprietaryProtocolInformation`.
+     * @description
+     * SGP.32 v1.2 section 4.1 does not define this component. Annex C does not
+     * further define it.
+     * @public
+     * @readonly
+     */
+    public readonly eSipaProprietaryProtocolInformation?: OPTIONAL<VendorSpecificExtension>;
+
     constructor (
-        /**
-         * @summary `ipaFeatures`.
-         * @description
-         * Required. Each bit set to 1 is a Profile-download or compact-ESipa feature
-         * this IPA supports. SGP.32 v1.2, section 4.1.
-         * @public
-         * @readonly
-         */
-        readonly ipaFeatures: IpaCapabilities_ipaFeatures,
-        /**
-         * @summary `ipaSupportedProtocols`.
-         * @description
-         * Present when the IPA advertises eIM Package transfer. Each bit set to 1 is a
-         * supported retrieval or injection transport. SGP.32 v1.2, section 4.1.
-         * @public
-         * @readonly
-         */
-        readonly ipaSupportedProtocols?: OPTIONAL<IpaCapabilities_ipaSupportedProtocols>,
-        /**
-         * @summary `eSipaProprietaryProtocolInformation`.
-         * @description
-         * SGP.32 v1.2 section 4.1 does not define this component. Annex C does not
-         * further define it.
-         * @public
-         * @readonly
-         */
-        readonly eSipaProprietaryProtocolInformation?: OPTIONAL<VendorSpecificExtension>
-    ) {}
+        ipaFeatures: IpaCapabilities_ipaFeatures,
+        ipaSupportedProtocols?: OPTIONAL<IpaCapabilities_ipaSupportedProtocols>,
+        eSipaProprietaryProtocolInformation?: OPTIONAL<VendorSpecificExtension>
+    ) {
+        this.ipaFeatures = ipaFeatures;
+        this.ipaSupportedProtocols = ipaSupportedProtocols;
+        this.eSipaProprietaryProtocolInformation = eSipaProprietaryProtocolInformation;
+    }
 
     /**
      * @summary Restructures an object into a IpaCapabilities

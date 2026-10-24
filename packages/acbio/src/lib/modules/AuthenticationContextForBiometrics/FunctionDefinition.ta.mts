@@ -47,44 +47,58 @@ import {
  *
  */
 export class FunctionDefinition {
+    /**
+     * @summary `subprocessName`.
+     * @public
+     * @readonly
+     */
+    public readonly subprocessName: SubprocessName;
+    /**
+     * @summary `subprocessIndex`.
+     * @public
+     * @readonly
+     */
+    public readonly subprocessIndex: SubprocessIndex;
+    /**
+     * @summary `inputIndex1`.
+     * @public
+     * @readonly
+     */
+    public readonly inputIndex1: OPTIONAL<IOIndex>;
+    /**
+     * @summary `inputIndex2`.
+     * @public
+     * @readonly
+     */
+    public readonly inputIndex2: OPTIONAL<IOIndex>;
+    /**
+     * @summary `outputIndex`.
+     * @public
+     * @readonly
+     */
+    public readonly outputIndex: IOIndex;
+    /**
+     * @summary `functionDescription`.
+     * @public
+     * @readonly
+     */
+    public readonly functionDescription?: OPTIONAL<OCTET_STRING>;
+
     constructor(
-        /**
-         * @summary `subprocessName`.
-         * @public
-         * @readonly
-         */
-        readonly subprocessName: SubprocessName,
-        /**
-         * @summary `subprocessIndex`.
-         * @public
-         * @readonly
-         */
-        readonly subprocessIndex: SubprocessIndex,
-        /**
-         * @summary `inputIndex1`.
-         * @public
-         * @readonly
-         */
-        readonly inputIndex1: OPTIONAL<IOIndex>,
-        /**
-         * @summary `inputIndex2`.
-         * @public
-         * @readonly
-         */
-        readonly inputIndex2: OPTIONAL<IOIndex>,
-        /**
-         * @summary `outputIndex`.
-         * @public
-         * @readonly
-         */
-        readonly outputIndex: IOIndex,
-        /**
-         * @summary `functionDescription`.
-         * @public
-         * @readonly
-         */
-        readonly functionDescription?: OPTIONAL<OCTET_STRING>
-    ) {}
+        subprocessName: SubprocessName,
+        subprocessIndex: SubprocessIndex,
+        inputIndex1: OPTIONAL<IOIndex>,
+        inputIndex2: OPTIONAL<IOIndex>,
+        outputIndex: IOIndex,
+        functionDescription?: OPTIONAL<OCTET_STRING>
+    ) {
+        this.subprocessName = subprocessName;
+        this.subprocessIndex = subprocessIndex;
+        this.inputIndex1 = inputIndex1;
+        this.inputIndex2 = inputIndex2;
+        this.outputIndex = outputIndex;
+        this.functionDescription = functionDescription;
+    }
 
     /**
      * @summary Restructures an object into a FunctionDefinition

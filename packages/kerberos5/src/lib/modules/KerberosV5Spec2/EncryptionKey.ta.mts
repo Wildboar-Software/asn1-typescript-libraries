@@ -34,30 +34,36 @@ import {
  *
  */
 export class EncryptionKey {
+  /**
+   * @summary `keytype`.
+   * @description
+   *
+   * Despite the name, specifies an encryption type for
+   * `keyvalue` ([RFC 4120 §5.2.9](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.9)). Sharing one number across
+   * distinct cryptosystems is deprecated.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly keytype: Int32;
+  /**
+   * @summary `keyvalue`.
+   * @description
+   *
+   * The key itself as OCTET STRING ([RFC 4120 §5.2.9](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.9)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly keyvalue: OCTET_STRING;
+
   constructor(
-    /**
-     * @summary `keytype`.
-     * @description
-     *
-     * Despite the name, specifies an encryption type for
-     * `keyvalue` ([RFC 4120 §5.2.9](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.9)). Sharing one number across
-     * distinct cryptosystems is deprecated.
-     *
-     * @public
-     * @readonly
-     */
-    readonly keytype: Int32,
-    /**
-     * @summary `keyvalue`.
-     * @description
-     *
-     * The key itself as OCTET STRING ([RFC 4120 §5.2.9](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.9)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly keyvalue: OCTET_STRING
-  ) {}
+    keytype: Int32,
+    keyvalue: OCTET_STRING
+  ) {
+    this.keytype = keytype;
+    this.keyvalue = keyvalue;
+  }
 
   /**
    * @summary Restructures an object into a EncryptionKey

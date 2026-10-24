@@ -29,30 +29,36 @@ import { ObservedValue, _decode_ObservedValue, _encode_ObservedValue } from "../
  */
 export
 class ThresholdLevelInd_up {
+    /**
+     * @summary `high`.
+     * @description
+     *
+     * High comparison level of the pair that was crossed upward. ITU-T Rec.
+     * X.721 (02/92) §14.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly high: ObservedValue;
+    /**
+     * @summary `low`.
+     * @description
+     *
+     * Low comparison level of that pair, if used. ITU-T Rec. X.721 (02/92)
+     * §14.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly low?: OPTIONAL<ObservedValue>;
+
     constructor (
-        /**
-         * @summary `high`.
-         * @description
-         *
-         * High comparison level of the pair that was crossed upward. ITU-T Rec.
-         * X.721 (02/92) §14.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly high: ObservedValue,
-        /**
-         * @summary `low`.
-         * @description
-         *
-         * Low comparison level of that pair, if used. ITU-T Rec. X.721 (02/92)
-         * §14.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly low?: OPTIONAL<ObservedValue>
-    ) {}
+        high: ObservedValue,
+        low?: OPTIONAL<ObservedValue>
+    ) {
+        this.high = high;
+        this.low = low;
+    }
 
     /**
      * @summary Restructures an object into a ThresholdLevelInd_up

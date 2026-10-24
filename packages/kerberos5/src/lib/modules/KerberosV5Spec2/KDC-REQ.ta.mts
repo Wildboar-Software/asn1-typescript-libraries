@@ -46,54 +46,64 @@ import {
  *
  */
 export class KDC_REQ {
+  /**
+   * @summary `pvno`.
+   * @description
+   *
+   * Protocol version number; this document specifies 5
+   * ([RFC 4120 §5.4.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.1), [RFC 4120 §5.2.4](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.4)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly pvno: INTEGER;
+  /**
+   * @summary `msg_type`.
+   * @description
+   *
+   * Message type: 10 (`KRB_AS_REQ`) or 12 (`KRB_TGS_REQ`)
+   * ([RFC 4120 §5.4.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.1)). Usually matches the APPLICATION tag.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly msg_type: INTEGER;
+  /**
+   * @summary `padata`.
+   * @description
+   *
+   * Pre-authentication / extension data. `KRB_TGS_REQ` MUST
+   * contain `PA-TGS-REQ`. Sequence MUST NOT be empty when
+   * present ([RFC 4120 §5.4.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.1), [RFC 4120 §5.2.7](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.7)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly padata: OPTIONAL<PA_DATA[]>;
+  /**
+   * @summary `req_body`.
+   * @description
+   *
+   * Remainder of the request. Checksums over the request are
+   * computed over the encoding of this `KDC-REQ-BODY`
+   * ([RFC 4120 §5.4.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.1)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly req_body: KDC_REQ_BODY;
+
   constructor(
-    /**
-     * @summary `pvno`.
-     * @description
-     *
-     * Protocol version number; this document specifies 5
-     * ([RFC 4120 §5.4.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.1), [RFC 4120 §5.2.4](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.4)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly pvno: INTEGER,
-    /**
-     * @summary `msg_type`.
-     * @description
-     *
-     * Message type: 10 (`KRB_AS_REQ`) or 12 (`KRB_TGS_REQ`)
-     * ([RFC 4120 §5.4.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.1)). Usually matches the APPLICATION tag.
-     *
-     * @public
-     * @readonly
-     */
-    readonly msg_type: INTEGER,
-    /**
-     * @summary `padata`.
-     * @description
-     *
-     * Pre-authentication / extension data. `KRB_TGS_REQ` MUST
-     * contain `PA-TGS-REQ`. Sequence MUST NOT be empty when
-     * present ([RFC 4120 §5.4.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.1), [RFC 4120 §5.2.7](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.7)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly padata: OPTIONAL<PA_DATA[]>,
-    /**
-     * @summary `req_body`.
-     * @description
-     *
-     * Remainder of the request. Checksums over the request are
-     * computed over the encoding of this `KDC-REQ-BODY`
-     * ([RFC 4120 §5.4.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.1)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly req_body: KDC_REQ_BODY
-  ) {}
+    pvno: INTEGER,
+    msg_type: INTEGER,
+    padata: OPTIONAL<PA_DATA[]>,
+    req_body: KDC_REQ_BODY
+  ) {
+    this.pvno = pvno;
+    this.msg_type = msg_type;
+    this.padata = padata;
+    this.req_body = req_body;
+  }
 
   /**
    * @summary Restructures an object into a KDC_REQ

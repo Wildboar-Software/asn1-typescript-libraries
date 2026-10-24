@@ -42,31 +42,37 @@ import {
  *
  */
 export class F_TERMINATE_response {
+  /**
+   * @summary `shared_ASE_information`.
+   * @description
+   *
+   * `EXTERNAL` carrying other ASE information bound to this
+   * primitive. ISO 8571-3:1988 §13.10, §14.2.2.1.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>;
+  /**
+   * @summary `charging`.
+   * @description
+   *
+   * Costs of this FTAM regime against the F-INITIALIZE account,
+   * excluding nested select accounts. Present iff `account` was
+   * given on F-INITIALIZE. ISO 8571-3:1988 §13.4, §14.2.2.2.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly charging?: OPTIONAL<Charging>;
+
   constructor(
-    /**
-     * @summary `shared_ASE_information`.
-     * @description
-     *
-     * `EXTERNAL` carrying other ASE information bound to this
-     * primitive. ISO 8571-3:1988 §13.10, §14.2.2.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
-    /**
-     * @summary `charging`.
-     * @description
-     *
-     * Costs of this FTAM regime against the F-INITIALIZE account,
-     * excluding nested select accounts. Present iff `account` was
-     * given on F-INITIALIZE. ISO 8571-3:1988 §13.4, §14.2.2.2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly charging?: OPTIONAL<Charging>
-  ) {}
+    shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
+    charging?: OPTIONAL<Charging>
+  ) {
+    this.shared_ASE_information = shared_ASE_information;
+    this.charging = charging;
+  }
 
   /**
    * @summary Restructures an object into a F_TERMINATE_response

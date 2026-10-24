@@ -38,26 +38,34 @@ import {
  *
  */
 export class UserInformation {
+    /**
+     * @summary `userIdentifier`.
+     * @public
+     * @readonly
+     */
+    public readonly userIdentifier: OCTET_STRING;
+    /**
+     * @summary `userName`.
+     * @public
+     * @readonly
+     */
+    public readonly userName: Name;
+    /**
+     * @summary `userUniqueIdentifier`.
+     * @public
+     * @readonly
+     */
+    public readonly userUniqueIdentifier?: OPTIONAL<UniqueIdentifier>;
+
     constructor(
-        /**
-         * @summary `userIdentifier`.
-         * @public
-         * @readonly
-         */
-        readonly userIdentifier: OCTET_STRING,
-        /**
-         * @summary `userName`.
-         * @public
-         * @readonly
-         */
-        readonly userName: Name,
-        /**
-         * @summary `userUniqueIdentifier`.
-         * @public
-         * @readonly
-         */
-        readonly userUniqueIdentifier?: OPTIONAL<UniqueIdentifier>
-    ) {}
+        userIdentifier: OCTET_STRING,
+        userName: Name,
+        userUniqueIdentifier?: OPTIONAL<UniqueIdentifier>
+    ) {
+        this.userIdentifier = userIdentifier;
+        this.userName = userName;
+        this.userUniqueIdentifier = userUniqueIdentifier;
+    }
 
     /**
      * @summary Restructures an object into a UserInformation

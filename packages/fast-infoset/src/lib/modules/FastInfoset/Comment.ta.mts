@@ -33,16 +33,20 @@ import {
  *
  */
 export class Comment {
+  /**
+   * @summary `content`.
+   * @description [content]; OTHER STRING category. At most
+   * 2³² characters. ITU-T Rec. X.891 (05/2005) §7.8.4–§7.8.5.
+   * @public
+   * @readonly
+   */
+  public readonly content: NonIdentifyingStringOrIndex;
+
   constructor(
-    /**
-     * @summary `content`.
-     * @description [content]; OTHER STRING category. At most
-     * 2³² characters. ITU-T Rec. X.891 (05/2005) §7.8.4–§7.8.5.
-     * @public
-     * @readonly
-     */
-    readonly content: NonIdentifyingStringOrIndex
-  ) {}
+    content: NonIdentifyingStringOrIndex
+  ) {
+    this.content = content;
+  }
 
   /**
    * @summary Restructures an object into a Comment

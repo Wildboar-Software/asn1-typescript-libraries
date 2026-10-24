@@ -28,18 +28,22 @@ import { OcspResponsesID, _decode_OcspResponsesID, _encode_OcspResponsesID } fro
  */
 export
 class OcspListID {
+    /**
+     * @summary `ocspResponses`.
+     * @description
+     *
+     * Identifiers of the OCSP responses used.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ocspResponses: OcspResponsesID[];
+
     constructor (
-        /**
-         * @summary `ocspResponses`.
-         * @description
-         *
-         * Identifiers of the OCSP responses used.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ocspResponses: OcspResponsesID[]
-    ) {}
+        ocspResponses: OcspResponsesID[]
+    ) {
+        this.ocspResponses = ocspResponses;
+    }
 
     /**
      * @summary Restructures an object into a OcspListID

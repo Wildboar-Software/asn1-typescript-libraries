@@ -48,53 +48,63 @@ import {
  *
  */
 export class Ticket {
+  /**
+   * @summary `tkt_vno`.
+   * @description
+   *
+   * Ticket format version; this document describes version 5
+   * ([RFC 4120 §5.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.3)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly tkt_vno: INTEGER;
+  /**
+   * @summary `realm`.
+   * @description
+   *
+   * Realm that issued the ticket; also the realm of the server
+   * principal. A KDC only issues tickets for servers in its
+   * realm, so these match ([RFC 4120 §5.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.3)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly realm: Realm;
+  /**
+   * @summary `sname`.
+   * @description
+   *
+   * Server principal name components, including service instance
+   * ([RFC 4120 §5.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.3)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly sname: PrincipalName;
+  /**
+   * @summary `enc_part`.
+   * @description
+   *
+   * Encrypted encoding of `EncTicketPart`, under the server's
+   * secret key, key usage 2 ([RFC 4120 §5.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.3)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly enc_part: EncryptedData;
+
   constructor(
-    /**
-     * @summary `tkt_vno`.
-     * @description
-     *
-     * Ticket format version; this document describes version 5
-     * ([RFC 4120 §5.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.3)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly tkt_vno: INTEGER,
-    /**
-     * @summary `realm`.
-     * @description
-     *
-     * Realm that issued the ticket; also the realm of the server
-     * principal. A KDC only issues tickets for servers in its
-     * realm, so these match ([RFC 4120 §5.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.3)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly realm: Realm,
-    /**
-     * @summary `sname`.
-     * @description
-     *
-     * Server principal name components, including service instance
-     * ([RFC 4120 §5.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.3)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly sname: PrincipalName,
-    /**
-     * @summary `enc_part`.
-     * @description
-     *
-     * Encrypted encoding of `EncTicketPart`, under the server's
-     * secret key, key usage 2 ([RFC 4120 §5.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.3)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly enc_part: EncryptedData
-  ) {}
+    tkt_vno: INTEGER,
+    realm: Realm,
+    sname: PrincipalName,
+    enc_part: EncryptedData
+  ) {
+    this.tkt_vno = tkt_vno;
+    this.realm = realm;
+    this.sname = sname;
+    this.enc_part = enc_part;
+  }
 
   /**
    * @summary Restructures an object into a Ticket

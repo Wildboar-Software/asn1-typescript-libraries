@@ -55,53 +55,63 @@ import {
  *
  */
 export class AD_KDCIssued {
+  /**
+   * @summary `ad_checksum`.
+   * @description
+   *
+   * Checksum over the DER encoding of `elements`, keyed with the
+   * session key. Checksum type is the mandatory type for the
+   * session-key encryption type; key usage 19 ([RFC 4120 §5.2.6.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.6.2)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly ad_checksum: Checksum;
+  /**
+   * @summary `i_realm`.
+   * @description
+   *
+   * Realm of the issuing principal if different from the KDC
+   * itself ([RFC 4120 §5.2.6.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.6.2)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly i_realm: OPTIONAL<Realm>;
+  /**
+   * @summary `i_sname`.
+   * @description
+   *
+   * Name of the issuing principal if different from the KDC
+   * itself ([RFC 4120 §5.2.6.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.6.2)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly i_sname: OPTIONAL<PrincipalName>;
+  /**
+   * @summary `elements`.
+   * @description
+   *
+   * Authorization data elements issued by the KDC
+   * ([RFC 4120 §5.2.6.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.6.2)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly elements: AuthorizationData;
+
   constructor(
-    /**
-     * @summary `ad_checksum`.
-     * @description
-     *
-     * Checksum over the DER encoding of `elements`, keyed with the
-     * session key. Checksum type is the mandatory type for the
-     * session-key encryption type; key usage 19 ([RFC 4120 §5.2.6.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.6.2)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly ad_checksum: Checksum,
-    /**
-     * @summary `i_realm`.
-     * @description
-     *
-     * Realm of the issuing principal if different from the KDC
-     * itself ([RFC 4120 §5.2.6.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.6.2)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly i_realm: OPTIONAL<Realm>,
-    /**
-     * @summary `i_sname`.
-     * @description
-     *
-     * Name of the issuing principal if different from the KDC
-     * itself ([RFC 4120 §5.2.6.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.6.2)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly i_sname: OPTIONAL<PrincipalName>,
-    /**
-     * @summary `elements`.
-     * @description
-     *
-     * Authorization data elements issued by the KDC
-     * ([RFC 4120 §5.2.6.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.6.2)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly elements: AuthorizationData
-  ) {}
+    ad_checksum: Checksum,
+    i_realm: OPTIONAL<Realm>,
+    i_sname: OPTIONAL<PrincipalName>,
+    elements: AuthorizationData
+  ) {
+    this.ad_checksum = ad_checksum;
+    this.i_realm = i_realm;
+    this.i_sname = i_sname;
+    this.elements = elements;
+  }
 
   /**
    * @summary Restructures an object into a AD_KDCIssued

@@ -38,32 +38,38 @@ import { type EuiccSignPIR, _decode_EuiccSignPIR, _encode_EuiccSignPIR } from "@
  */
 export
 class CompactProfileInstallationResult {
+    /**
+     * @summary `compactProfileInstallationResultData`.
+     * @description
+     *
+     * Reduced installation-result body: SM-DP+ Transaction ID, sequence number,
+     * iccidPresent, and either a compact success or an ErrorResult.
+     *
+     * SGP.32 v1.2, section 5.14.7.
+     * @public
+     * @readonly
+     */
+    public readonly compactProfileInstallationResultData: CompactProfileInstallationResultData;
+    /**
+     * @summary `euiccSignPIR`.
+     * @description
+     *
+     * eUICC signature of the Profile Installation Result, kept unchanged from the
+     * full ProfileInstallationResult.
+     *
+     * SGP.32 v1.2, section 5.14.7.
+     * @public
+     * @readonly
+     */
+    public readonly euiccSignPIR: EuiccSignPIR;
+
     constructor (
-        /**
-         * @summary `compactProfileInstallationResultData`.
-         * @description
-         *
-         * Reduced installation-result body: SM-DP+ Transaction ID, sequence number,
-         * iccidPresent, and either a compact success or an ErrorResult.
-         *
-         * SGP.32 v1.2, section 5.14.7.
-         * @public
-         * @readonly
-         */
-        readonly compactProfileInstallationResultData: CompactProfileInstallationResultData,
-        /**
-         * @summary `euiccSignPIR`.
-         * @description
-         *
-         * eUICC signature of the Profile Installation Result, kept unchanged from the
-         * full ProfileInstallationResult.
-         *
-         * SGP.32 v1.2, section 5.14.7.
-         * @public
-         * @readonly
-         */
-        readonly euiccSignPIR: EuiccSignPIR
-    ) {}
+        compactProfileInstallationResultData: CompactProfileInstallationResultData,
+        euiccSignPIR: EuiccSignPIR
+    ) {
+        this.compactProfileInstallationResultData = compactProfileInstallationResultData;
+        this.euiccSignPIR = euiccSignPIR;
+    }
 
     /**
      * @summary Restructures an object into a CompactProfileInstallationResult

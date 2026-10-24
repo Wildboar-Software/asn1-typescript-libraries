@@ -42,32 +42,42 @@ import {
  *
  */
 export class BPUIOExecutionInformation {
+    /**
+     * @summary `dataType`.
+     * @public
+     * @readonly
+     */
+    public readonly dataType: DataType;
+    /**
+     * @summary `bpuIOIndex`.
+     * @public
+     * @readonly
+     */
+    public readonly bpuIOIndex: IOIndex;
+    /**
+     * @summary `subprocessIOIndex`.
+     * @public
+     * @readonly
+     */
+    public readonly subprocessIOIndex: IOIndex;
+    /**
+     * @summary `hash`.
+     * @public
+     * @readonly
+     */
+    public readonly hash: Hash;
+
     constructor(
-        /**
-         * @summary `dataType`.
-         * @public
-         * @readonly
-         */
-        readonly dataType: DataType,
-        /**
-         * @summary `bpuIOIndex`.
-         * @public
-         * @readonly
-         */
-        readonly bpuIOIndex: IOIndex,
-        /**
-         * @summary `subprocessIOIndex`.
-         * @public
-         * @readonly
-         */
-        readonly subprocessIOIndex: IOIndex,
-        /**
-         * @summary `hash`.
-         * @public
-         * @readonly
-         */
-        readonly hash: Hash
-    ) {}
+        dataType: DataType,
+        bpuIOIndex: IOIndex,
+        subprocessIOIndex: IOIndex,
+        hash: Hash
+    ) {
+        this.dataType = dataType;
+        this.bpuIOIndex = bpuIOIndex;
+        this.subprocessIOIndex = subprocessIOIndex;
+        this.hash = hash;
+    }
 
     /**
      * @summary Restructures an object into a BPUIOExecutionInformation

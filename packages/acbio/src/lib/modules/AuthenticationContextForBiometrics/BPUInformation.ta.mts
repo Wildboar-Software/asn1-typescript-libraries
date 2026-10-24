@@ -36,20 +36,26 @@ import {
  *
  */
 export class BPUInformation {
+    /**
+     * @summary `bpuCertificateReferrerInformation`.
+     * @public
+     * @readonly
+     */
+    public readonly bpuCertificateReferrerInformation: OPTIONAL<BPUCertificateReferrerInformation>;
+    /**
+     * @summary `bpuReportInformation`.
+     * @public
+     * @readonly
+     */
+    public readonly bpuReportInformation: BPUReportInformation;
+
     constructor(
-        /**
-         * @summary `bpuCertificateReferrerInformation`.
-         * @public
-         * @readonly
-         */
-        readonly bpuCertificateReferrerInformation: OPTIONAL<BPUCertificateReferrerInformation>,
-        /**
-         * @summary `bpuReportInformation`.
-         * @public
-         * @readonly
-         */
-        readonly bpuReportInformation: BPUReportInformation
-    ) {}
+        bpuCertificateReferrerInformation: OPTIONAL<BPUCertificateReferrerInformation>,
+        bpuReportInformation: BPUReportInformation
+    ) {
+        this.bpuCertificateReferrerInformation = bpuCertificateReferrerInformation;
+        this.bpuReportInformation = bpuReportInformation;
+    }
 
     /**
      * @summary Restructures an object into a BPUInformation

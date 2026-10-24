@@ -33,32 +33,38 @@ import { CompactEuiccCancelSessionSigned, _decode_CompactEuiccCancelSessionSigne
  */
 export
 class CompactCancelSessionResponseOk {
+    /**
+     * @summary `compactEuiccCancelSessionSigned`.
+     * @description
+     *
+     * Compact euiccCancelSessionSigned. It carries the CancelSessionReason and
+     * omits the Transaction ID, which the eIM restores.
+     *
+     * SGP.32 v1.2, section 5.14.8.
+     * @public
+     * @readonly
+     */
+    public readonly compactEuiccCancelSessionSigned: CompactEuiccCancelSessionSigned;
+    /**
+     * @summary `euiccCancelSessionSignature`.
+     * @description
+     *
+     * eUICC signature (tag '5F37') on the full euiccCancelSessionSigned, computed
+     * with SK.EUICC.ECDSA for the CI public key from common mutual authentication.
+     *
+     * SGP.32 v1.2, sections 3.2.3.3 and 5.14.8.
+     * @public
+     * @readonly
+     */
+    public readonly euiccCancelSessionSignature: OCTET_STRING;
+
     constructor (
-        /**
-         * @summary `compactEuiccCancelSessionSigned`.
-         * @description
-         *
-         * Compact euiccCancelSessionSigned. It carries the CancelSessionReason and
-         * omits the Transaction ID, which the eIM restores.
-         *
-         * SGP.32 v1.2, section 5.14.8.
-         * @public
-         * @readonly
-         */
-        readonly compactEuiccCancelSessionSigned: CompactEuiccCancelSessionSigned,
-        /**
-         * @summary `euiccCancelSessionSignature`.
-         * @description
-         *
-         * eUICC signature (tag '5F37') on the full euiccCancelSessionSigned, computed
-         * with SK.EUICC.ECDSA for the CI public key from common mutual authentication.
-         *
-         * SGP.32 v1.2, sections 3.2.3.3 and 5.14.8.
-         * @public
-         * @readonly
-         */
-        readonly euiccCancelSessionSignature: OCTET_STRING
-    ) {}
+        compactEuiccCancelSessionSigned: CompactEuiccCancelSessionSigned,
+        euiccCancelSessionSignature: OCTET_STRING
+    ) {
+        this.compactEuiccCancelSessionSigned = compactEuiccCancelSessionSigned;
+        this.euiccCancelSessionSignature = euiccCancelSessionSignature;
+    }
 
     /**
      * @summary Restructures an object into a CompactCancelSessionResponseOk

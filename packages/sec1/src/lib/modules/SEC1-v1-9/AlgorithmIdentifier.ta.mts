@@ -32,29 +32,35 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class AlgorithmIdentifier {
+    /**
+     * @summary `algorithm`.
+     * @description
+     *
+     * Algorithm OID drawn from the governing information object set. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly algorithm: OBJECT_IDENTIFIER;
+    /**
+     * @summary `parameters`.
+     * @description
+     *
+     * Type selected by `algorithm`. Omit when constrained to `NULL`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.2,
+     * §C.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly parameters?: OPTIONAL<_Element>;
+
     constructor (
-        /**
-         * @summary `algorithm`.
-         * @description
-         *
-         * Algorithm OID drawn from the governing information object set. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly algorithm: OBJECT_IDENTIFIER,
-        /**
-         * @summary `parameters`.
-         * @description
-         *
-         * Type selected by `algorithm`. Omit when constrained to `NULL`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.2,
-         * §C.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly parameters?: OPTIONAL<_Element>
-    ) {}
+        algorithm: OBJECT_IDENTIFIER,
+        parameters?: OPTIONAL<_Element>
+    ) {
+        this.algorithm = algorithm;
+        this.parameters = parameters;
+    }
 
     /**
      * @summary Restructures an object into a AlgorithmIdentifier

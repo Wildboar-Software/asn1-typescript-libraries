@@ -68,195 +68,232 @@ import { ProfileInfo_iotSpecificProfileInfo, _decode_ProfileInfo_iotSpecificProf
  */
 export
 class ProfileInfo {
+    /**
+     * @summary `iccid`.
+     * @description
+     * Identifies the Profile. Included in the default listProfileInfo response
+     * (tag '5A') when that command has no tag list. SGP.32 v1.2, sections 4.4 and
+     * 2.11.1.1.
+     * @public
+     * @readonly
+     */
+    public readonly iccid?: OPTIONAL<Iccid>;
+    /**
+     * @summary `isdpAid`.
+     * @description
+     * AID of the ISD-P that contains the Profile. Included in the default
+     * listProfileInfo response (tag '4F') when that command has no tag list.
+     * SGP.32 v1.2, sections 4.4 and 2.11.1.1.
+     * @public
+     * @readonly
+     */
+    public readonly isdpAid?: OPTIONAL<OctetTo16>;
+    /**
+     * @summary `profileState`.
+     * @description
+     * Enabled or Disabled state of the Profile. Included in the default
+     * listProfileInfo response (tag '9F70') when that command has no tag list.
+     * SGP.32 v1.2, sections 4.4, 5.13.4, and 2.11.1.1.
+     * @public
+     * @readonly
+     */
+    public readonly profileState?: OPTIONAL<ProfileState>;
+    /**
+     * @summary `profileNickname`.
+     * @description
+     * SGP.32 v1.2 section 4.4 includes this field in ProfileInfo and does not
+     * further define it.
+     * @public
+     * @readonly
+     */
+    public readonly profileNickname?: OPTIONAL<UTF8String>;
+    /**
+     * @summary `serviceProviderName`.
+     * @description
+     * Included in the default listProfileInfo response (tag '91') when that
+     * command has no tag list. SGP.32 v1.2, sections 4.4 and 2.11.1.1. SGP.32 v1.2
+     * does not further define the value beyond that default.
+     * @public
+     * @readonly
+     */
+    public readonly serviceProviderName?: OPTIONAL<UTF8String>;
+    /**
+     * @summary `profileName`.
+     * @description
+     * Included in the default listProfileInfo response (tag '92') when that
+     * command has no tag list. SGP.32 v1.2, sections 4.4 and 2.11.1.1. SGP.32 v1.2
+     * does not further define the value beyond that default.
+     * @public
+     * @readonly
+     */
+    public readonly profileName?: OPTIONAL<UTF8String>;
+    /**
+     * @summary `iconType`.
+     * @description
+     * SGP.32 v1.2 section 4.4 includes icon type and does not further define it.
+     * It is outside the default listProfileInfo tag list in section 2.11.1.1.
+     * @public
+     * @readonly
+     */
+    public readonly iconType?: OPTIONAL<IconType>;
+    /**
+     * @summary `icon`.
+     * @description
+     * Section 4.4 points at a condition in ES10b.GetProfilesInfo. Section 5.9.14
+     * bases that function on SGP.22 section 5.7.15 and does not state the
+     * condition. SGP.22 v3.1 section 5.7.15 returns the icon when tag '94' is
+     * requested and the object is stored, and does not state a further condition.
+     * It is outside the default listProfileInfo tag list in SGP.32 v1.2 section
+     * 2.11.1.1.
+     * @public
+     * @readonly
+     */
+    public readonly icon?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `profileClass`.
+     * @description
+     * Included in the default listProfileInfo response (tag '95') when that
+     * command has no tag list. SGP.32 v1.2, sections 4.4 and 2.11.1.1. SGP.32 v1.2
+     * does not further define the class values.
+     * @public
+     * @readonly
+     */
+    public readonly profileClass?: OPTIONAL<ProfileClass>;
+    /**
+     * @summary `notificationConfigurationInfo`.
+     * @description
+     * The eUICC generates one OtherSignedNotification for each entry configured
+     * here when a marked Profile is successfully enabled, disabled, or deleted,
+     * including after rollback, fallback, and return from fallback. SGP.32 v1.2,
+     * sections 3.3.1, 5.9.16, 5.9.20, and 5.9.21.
+     * @public
+     * @readonly
+     */
+    public readonly notificationConfigurationInfo?: OPTIONAL<NotificationConfigurationInformation[]>;
+    /**
+     * @summary `profileOwner`.
+     * @description
+     * Profile Owner stored with the Profile. SGP.32 v1.2 section 4.4 includes the
+     * field. Presence rules are those of ES8+.StoreMetadata, which SGP.32 section
+     * 5.5 processes as defined in SGP.22 section 5.5.
+     * @public
+     * @readonly
+     */
+    public readonly profileOwner?: OPTIONAL<OperatorId>;
+    /**
+     * @summary `dpProprietaryData`.
+     * @description
+     * SGP.32 v1.2 section 4.4 includes SM-DP+ proprietary data and does not
+     * further define it.
+     * @public
+     * @readonly
+     */
+    public readonly dpProprietaryData?: OPTIONAL<DpProprietaryData>;
+    /**
+     * @summary `profilePolicyRules`.
+     * @description
+     * Profile Policy Rules stored with the Profile. SGP.32 v1.2 section 4.4
+     * includes the field. The rules for when they are stored are those of
+     * ES8+.StoreMetadata, which SGP.32 section 5.5 processes as defined in SGP.22
+     * section 5.5.
+     * @public
+     * @readonly
+     */
+    public readonly profilePolicyRules?: OPTIONAL<PprIds>;
+    /**
+     * @summary `serviceSpecificDataStoredInEuicc`.
+     * @description
+     * Vendor-specific data the eUICC stored from ES8+.StoreMetadata. SGP.32 v1.2
+     * section 4.4 includes the field. SGP.32 section 5.5 processes that command as
+     * defined in SGP.22 section 5.5.
+     * @public
+     * @readonly
+     */
+    public readonly serviceSpecificDataStoredInEuicc?: OPTIONAL<VendorSpecificExtension>;
+    /**
+     * @summary `ecallIndication`.
+     * @description
+     * TRUE marks an Emergency Profile whose enabling and disabling may use
+     * ES10b.EnableEmergencyProfile and ES10b.DisableEmergencyProfile. An absent
+     * value is treated as FALSE. At most one Profile on the eUICC has this value
+     * TRUE. Included in the default listProfileInfo response (tag '9F7B') when
+     * that command has no tag list. SGP.32 v1.2, sections 4.4 and 2.11.1.1.
+     * @public
+     * @readonly
+     */
+    public readonly ecallIndication?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `fallbackAttribute`.
+     * @description
+     * TRUE marks the Fallback Profile, which ES10b.ExecuteFallbackMechanism may
+     * enable. An absent value is treated as FALSE, and that Profile cannot be
+     * enabled by the Fallback Mechanism. At most one Profile has this value TRUE.
+     * It can be set only when fallbackAllowed is TRUE. Included in the default
+     * listProfileInfo response (tag '9F26') when that command has no tag list.
+     * SGP.32 v1.2, sections 4.4 and 2.11.1.1.
+     * @public
+     * @readonly
+     */
+    public readonly fallbackAttribute?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `fallbackAllowed`.
+     * @description
+     * TRUE authorises the eIM to set the Fallback Attribute. The Profile Owner
+     * chooses this at Profile generation. Included in the default listProfileInfo
+     * response (tag '9F67') when that command has no tag list. SGP.32 v1.2,
+     * sections 4.4 and 2.11.1.1.
+     * @public
+     * @readonly
+     */
+    public readonly fallbackAllowed?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `iotSpecificProfileInfo`.
+     * @description
+     * SGP.32 v1.2 does not further define this field. Annex C ProfileInfo ends at
+     * fallbackAllowed.
+     * @public
+     * @readonly
+     */
+    public readonly iotSpecificProfileInfo?: OPTIONAL<ProfileInfo_iotSpecificProfileInfo>;
+
     constructor (
-        /**
-         * @summary `iccid`.
-         * @description
-         * Identifies the Profile. Included in the default listProfileInfo response
-         * (tag '5A') when that command has no tag list. SGP.32 v1.2, sections 4.4 and
-         * 2.11.1.1.
-         * @public
-         * @readonly
-         */
-        readonly iccid?: OPTIONAL<Iccid>,
-        /**
-         * @summary `isdpAid`.
-         * @description
-         * AID of the ISD-P that contains the Profile. Included in the default
-         * listProfileInfo response (tag '4F') when that command has no tag list.
-         * SGP.32 v1.2, sections 4.4 and 2.11.1.1.
-         * @public
-         * @readonly
-         */
-        readonly isdpAid?: OPTIONAL<OctetTo16>,
-        /**
-         * @summary `profileState`.
-         * @description
-         * Enabled or Disabled state of the Profile. Included in the default
-         * listProfileInfo response (tag '9F70') when that command has no tag list.
-         * SGP.32 v1.2, sections 4.4, 5.13.4, and 2.11.1.1.
-         * @public
-         * @readonly
-         */
-        readonly profileState?: OPTIONAL<ProfileState>,
-        /**
-         * @summary `profileNickname`.
-         * @description
-         * SGP.32 v1.2 section 4.4 includes this field in ProfileInfo and does not
-         * further define it.
-         * @public
-         * @readonly
-         */
-        readonly profileNickname?: OPTIONAL<UTF8String>,
-        /**
-         * @summary `serviceProviderName`.
-         * @description
-         * Included in the default listProfileInfo response (tag '91') when that
-         * command has no tag list. SGP.32 v1.2, sections 4.4 and 2.11.1.1. SGP.32 v1.2
-         * does not further define the value beyond that default.
-         * @public
-         * @readonly
-         */
-        readonly serviceProviderName?: OPTIONAL<UTF8String>,
-        /**
-         * @summary `profileName`.
-         * @description
-         * Included in the default listProfileInfo response (tag '92') when that
-         * command has no tag list. SGP.32 v1.2, sections 4.4 and 2.11.1.1. SGP.32 v1.2
-         * does not further define the value beyond that default.
-         * @public
-         * @readonly
-         */
-        readonly profileName?: OPTIONAL<UTF8String>,
-        /**
-         * @summary `iconType`.
-         * @description
-         * SGP.32 v1.2 section 4.4 includes icon type and does not further define it.
-         * It is outside the default listProfileInfo tag list in section 2.11.1.1.
-         * @public
-         * @readonly
-         */
-        readonly iconType?: OPTIONAL<IconType>,
-        /**
-         * @summary `icon`.
-         * @description
-         * Section 4.4 points at a condition in ES10b.GetProfilesInfo. Section 5.9.14
-         * bases that function on SGP.22 section 5.7.15 and does not state the
-         * condition. SGP.22 v3.1 section 5.7.15 returns the icon when tag '94' is
-         * requested and the object is stored, and does not state a further condition.
-         * It is outside the default listProfileInfo tag list in SGP.32 v1.2 section
-         * 2.11.1.1.
-         * @public
-         * @readonly
-         */
-        readonly icon?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `profileClass`.
-         * @description
-         * Included in the default listProfileInfo response (tag '95') when that
-         * command has no tag list. SGP.32 v1.2, sections 4.4 and 2.11.1.1. SGP.32 v1.2
-         * does not further define the class values.
-         * @public
-         * @readonly
-         */
-        readonly profileClass?: OPTIONAL<ProfileClass>,
-        /**
-         * @summary `notificationConfigurationInfo`.
-         * @description
-         * The eUICC generates one OtherSignedNotification for each entry configured
-         * here when a marked Profile is successfully enabled, disabled, or deleted,
-         * including after rollback, fallback, and return from fallback. SGP.32 v1.2,
-         * sections 3.3.1, 5.9.16, 5.9.20, and 5.9.21.
-         * @public
-         * @readonly
-         */
-        readonly notificationConfigurationInfo?: OPTIONAL<NotificationConfigurationInformation[]>,
-        /**
-         * @summary `profileOwner`.
-         * @description
-         * Profile Owner stored with the Profile. SGP.32 v1.2 section 4.4 includes the
-         * field. Presence rules are those of ES8+.StoreMetadata, which SGP.32 section
-         * 5.5 processes as defined in SGP.22 section 5.5.
-         * @public
-         * @readonly
-         */
-        readonly profileOwner?: OPTIONAL<OperatorId>,
-        /**
-         * @summary `dpProprietaryData`.
-         * @description
-         * SGP.32 v1.2 section 4.4 includes SM-DP+ proprietary data and does not
-         * further define it.
-         * @public
-         * @readonly
-         */
-        readonly dpProprietaryData?: OPTIONAL<DpProprietaryData>,
-        /**
-         * @summary `profilePolicyRules`.
-         * @description
-         * Profile Policy Rules stored with the Profile. SGP.32 v1.2 section 4.4
-         * includes the field. The rules for when they are stored are those of
-         * ES8+.StoreMetadata, which SGP.32 section 5.5 processes as defined in SGP.22
-         * section 5.5.
-         * @public
-         * @readonly
-         */
-        readonly profilePolicyRules?: OPTIONAL<PprIds>,
-        /**
-         * @summary `serviceSpecificDataStoredInEuicc`.
-         * @description
-         * Vendor-specific data the eUICC stored from ES8+.StoreMetadata. SGP.32 v1.2
-         * section 4.4 includes the field. SGP.32 section 5.5 processes that command as
-         * defined in SGP.22 section 5.5.
-         * @public
-         * @readonly
-         */
-        readonly serviceSpecificDataStoredInEuicc?: OPTIONAL<VendorSpecificExtension>,
-        /**
-         * @summary `ecallIndication`.
-         * @description
-         * TRUE marks an Emergency Profile whose enabling and disabling may use
-         * ES10b.EnableEmergencyProfile and ES10b.DisableEmergencyProfile. An absent
-         * value is treated as FALSE. At most one Profile on the eUICC has this value
-         * TRUE. Included in the default listProfileInfo response (tag '9F7B') when
-         * that command has no tag list. SGP.32 v1.2, sections 4.4 and 2.11.1.1.
-         * @public
-         * @readonly
-         */
-        readonly ecallIndication?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `fallbackAttribute`.
-         * @description
-         * TRUE marks the Fallback Profile, which ES10b.ExecuteFallbackMechanism may
-         * enable. An absent value is treated as FALSE, and that Profile cannot be
-         * enabled by the Fallback Mechanism. At most one Profile has this value TRUE.
-         * It can be set only when fallbackAllowed is TRUE. Included in the default
-         * listProfileInfo response (tag '9F26') when that command has no tag list.
-         * SGP.32 v1.2, sections 4.4 and 2.11.1.1.
-         * @public
-         * @readonly
-         */
-        readonly fallbackAttribute?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `fallbackAllowed`.
-         * @description
-         * TRUE authorises the eIM to set the Fallback Attribute. The Profile Owner
-         * chooses this at Profile generation. Included in the default listProfileInfo
-         * response (tag '9F67') when that command has no tag list. SGP.32 v1.2,
-         * sections 4.4 and 2.11.1.1.
-         * @public
-         * @readonly
-         */
-        readonly fallbackAllowed?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `iotSpecificProfileInfo`.
-         * @description
-         * SGP.32 v1.2 does not further define this field. Annex C ProfileInfo ends at
-         * fallbackAllowed.
-         * @public
-         * @readonly
-         */
-        readonly iotSpecificProfileInfo?: OPTIONAL<ProfileInfo_iotSpecificProfileInfo>
+        iccid?: OPTIONAL<Iccid>,
+        isdpAid?: OPTIONAL<OctetTo16>,
+        profileState?: OPTIONAL<ProfileState>,
+        profileNickname?: OPTIONAL<UTF8String>,
+        serviceProviderName?: OPTIONAL<UTF8String>,
+        profileName?: OPTIONAL<UTF8String>,
+        iconType?: OPTIONAL<IconType>,
+        icon?: OPTIONAL<OCTET_STRING>,
+        profileClass?: OPTIONAL<ProfileClass>,
+        notificationConfigurationInfo?: OPTIONAL<NotificationConfigurationInformation[]>,
+        profileOwner?: OPTIONAL<OperatorId>,
+        dpProprietaryData?: OPTIONAL<DpProprietaryData>,
+        profilePolicyRules?: OPTIONAL<PprIds>,
+        serviceSpecificDataStoredInEuicc?: OPTIONAL<VendorSpecificExtension>,
+        ecallIndication?: OPTIONAL<BOOLEAN>,
+        fallbackAttribute?: OPTIONAL<BOOLEAN>,
+        fallbackAllowed?: OPTIONAL<BOOLEAN>,
+        iotSpecificProfileInfo?: OPTIONAL<ProfileInfo_iotSpecificProfileInfo>
     ) {
+        this.iccid = iccid;
+        this.isdpAid = isdpAid;
+        this.profileState = profileState;
+        this.profileNickname = profileNickname;
+        this.serviceProviderName = serviceProviderName;
+        this.profileName = profileName;
+        this.iconType = iconType;
+        this.icon = icon;
+        this.profileClass = profileClass;
+        this.notificationConfigurationInfo = notificationConfigurationInfo;
+        this.profileOwner = profileOwner;
+        this.dpProprietaryData = dpProprietaryData;
+        this.profilePolicyRules = profilePolicyRules;
+        this.serviceSpecificDataStoredInEuicc = serviceSpecificDataStoredInEuicc;
+        this.ecallIndication = ecallIndication;
+        this.fallbackAttribute = fallbackAttribute;
+        this.fallbackAllowed = fallbackAllowed;
+        this.iotSpecificProfileInfo = iotSpecificProfileInfo;
         if (this.profileNickname !== undefined && this.profileNickname.length > 64) {
             throw new ASN1SizeError("ProfileInfo.profileNickname violates SIZE constraint");
         }

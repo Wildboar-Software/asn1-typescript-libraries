@@ -40,44 +40,52 @@ import {
  */
 export
 class URIReference {
+    /**
+     * @summary `uniformResourceIdentifier`.
+     * @description
+     *
+     * Location of the referenced document. Bounded by `urimax`.
+     * §3.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly uniformResourceIdentifier: IA5String;
+    /**
+     * @summary `hashAlgorithm`.
+     * @description
+     *
+     * Hash algorithm of `hashValue`, as RFC 5280
+     * `AlgorithmIdentifier`. MUST be present iff `hashValue`
+     * is. Because these are hashing algorithms, `parameters`
+     * SHOULD NOT be used. §3.1.1, §3.1.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly hashAlgorithm?: OPTIONAL<AlgorithmIdentifier>;
+    /**
+     * @summary `hashValue`.
+     * @description
+     *
+     * Digest of the referenced document. MUST be present iff
+     * `hashAlgorithm` is. Pins a specific version of the
+     * document. §3.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly hashValue?: OPTIONAL<BIT_STRING>;
+
     constructor (
-        /**
-         * @summary `uniformResourceIdentifier`.
-         * @description
-         *
-         * Location of the referenced document. Bounded by `urimax`.
-         * §3.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly uniformResourceIdentifier: IA5String,
-        /**
-         * @summary `hashAlgorithm`.
-         * @description
-         *
-         * Hash algorithm of `hashValue`, as RFC 5280
-         * `AlgorithmIdentifier`. MUST be present iff `hashValue`
-         * is. Because these are hashing algorithms, `parameters`
-         * SHOULD NOT be used. §3.1.1, §3.1.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly hashAlgorithm?: OPTIONAL<AlgorithmIdentifier>,
-        /**
-         * @summary `hashValue`.
-         * @description
-         *
-         * Digest of the referenced document. MUST be present iff
-         * `hashAlgorithm` is. Pins a specific version of the
-         * document. §3.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly hashValue?: OPTIONAL<BIT_STRING>
-    ) {}
+        uniformResourceIdentifier: IA5String,
+        hashAlgorithm?: OPTIONAL<AlgorithmIdentifier>,
+        hashValue?: OPTIONAL<BIT_STRING>
+    ) {
+        this.uniformResourceIdentifier = uniformResourceIdentifier;
+        this.hashAlgorithm = hashAlgorithm;
+        this.hashValue = hashValue;
+    }
 
     /**
      * @summary Restructures an object into a URIReference

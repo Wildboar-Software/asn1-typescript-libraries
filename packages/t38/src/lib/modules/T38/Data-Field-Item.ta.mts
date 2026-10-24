@@ -37,29 +37,35 @@ import {
  *
  */
 export class Data_Field_Item {
+  /**
+   * @summary `field_type`.
+   * @description What `field-data` holds, or a delimiter with
+   * no data (FCS result, HDLC energy drop, end of message).
+   * ITU-T Rec. T.38 (11/2015) §7.4, Table 5.
+   * @public
+   * @readonly
+   */
+  public readonly field_type: Data_Field_Item_field_type;
+  /**
+   * @summary `field_data`.
+   * @description Payload octets, SIZE(1..65535). Omitted for
+   * FCS and `*-sig-end` types that have no data. First PSTN bit
+   * is the MSB of the first octet. For `hdlc-data`: one HDLC
+   * frame from the address octet up to but not including FCS,
+   * bit stuffing removed. ITU-T Rec. T.38 (11/2015) §7.1.2,
+   * §7.4.
+   * @public
+   * @readonly
+   */
+  public readonly field_data?: OPTIONAL<OCTET_STRING>;
+
   constructor(
-    /**
-     * @summary `field_type`.
-     * @description What `field-data` holds, or a delimiter with
-     * no data (FCS result, HDLC energy drop, end of message).
-     * ITU-T Rec. T.38 (11/2015) §7.4, Table 5.
-     * @public
-     * @readonly
-     */
-    readonly field_type: Data_Field_Item_field_type,
-    /**
-     * @summary `field_data`.
-     * @description Payload octets, SIZE(1..65535). Omitted for
-     * FCS and `*-sig-end` types that have no data. First PSTN bit
-     * is the MSB of the first octet. For `hdlc-data`: one HDLC
-     * frame from the address octet up to but not including FCS,
-     * bit stuffing removed. ITU-T Rec. T.38 (11/2015) §7.1.2,
-     * §7.4.
-     * @public
-     * @readonly
-     */
-    readonly field_data?: OPTIONAL<OCTET_STRING>
-  ) {}
+    field_type: Data_Field_Item_field_type,
+    field_data?: OPTIONAL<OCTET_STRING>
+  ) {
+    this.field_type = field_type;
+    this.field_data = field_data;
+  }
 
   /**
    * @summary Restructures an object into a Data_Field_Item

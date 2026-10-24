@@ -36,39 +36,47 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class Psmo_configureImmediateEnable {
+    /**
+     * @summary `immediateEnableFlag`.
+     * @description
+     * Present to activate immediate Profile enabling when it is inactive. Absent
+     * to deactivate it when it is active. Any other combination leaves the current
+     * activation state unchanged. SGP.32 v1.2, sections 2.11.1.1 and 3.4.4.
+     * @public
+     * @readonly
+     */
+    public readonly immediateEnableFlag?: OPTIONAL<NULL>;
+    /**
+     * @summary `defaultSmdpOid`.
+     * @description
+     * Default SM-DP+ object identifier stored for immediate Profile enabling when
+     * this field is present. It may be sent with or without immediateEnableFlag.
+     * SGP.32 v1.2, sections 2.11.1.1 and 3.4.4.
+     * @public
+     * @readonly
+     */
+    public readonly defaultSmdpOid?: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary `defaultSmdpAddress`.
+     * @description
+     * Default SM-DP+ address stored for immediate Profile enabling when this field
+     * is present. It may be sent with or without immediateEnableFlag. Once stored,
+     * GetEuiccConfiguredAddresses returns it as the default SM-DP+ address. SGP.32
+     * v1.2, sections 2.11.1.1 and 3.4.4.
+     * @public
+     * @readonly
+     */
+    public readonly defaultSmdpAddress?: OPTIONAL<UTF8String>;
+
     constructor (
-        /**
-         * @summary `immediateEnableFlag`.
-         * @description
-         * Present to activate immediate Profile enabling when it is inactive. Absent
-         * to deactivate it when it is active. Any other combination leaves the current
-         * activation state unchanged. SGP.32 v1.2, sections 2.11.1.1 and 3.4.4.
-         * @public
-         * @readonly
-         */
-        readonly immediateEnableFlag?: OPTIONAL<NULL>,
-        /**
-         * @summary `defaultSmdpOid`.
-         * @description
-         * Default SM-DP+ object identifier stored for immediate Profile enabling when
-         * this field is present. It may be sent with or without immediateEnableFlag.
-         * SGP.32 v1.2, sections 2.11.1.1 and 3.4.4.
-         * @public
-         * @readonly
-         */
-        readonly defaultSmdpOid?: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary `defaultSmdpAddress`.
-         * @description
-         * Default SM-DP+ address stored for immediate Profile enabling when this field
-         * is present. It may be sent with or without immediateEnableFlag. Once stored,
-         * GetEuiccConfiguredAddresses returns it as the default SM-DP+ address. SGP.32
-         * v1.2, sections 2.11.1.1 and 3.4.4.
-         * @public
-         * @readonly
-         */
-        readonly defaultSmdpAddress?: OPTIONAL<UTF8String>
-    ) {}
+        immediateEnableFlag?: OPTIONAL<NULL>,
+        defaultSmdpOid?: OPTIONAL<OBJECT_IDENTIFIER>,
+        defaultSmdpAddress?: OPTIONAL<UTF8String>
+    ) {
+        this.immediateEnableFlag = immediateEnableFlag;
+        this.defaultSmdpOid = defaultSmdpOid;
+        this.defaultSmdpAddress = defaultSmdpAddress;
+    }
 
     /**
      * @summary Restructures an object into a Psmo_configureImmediateEnable

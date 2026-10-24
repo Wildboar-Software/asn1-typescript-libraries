@@ -34,28 +34,34 @@ import {
  *
  */
 export class Object_Identifier_Pattern {
+  /**
+   * @summary `equality_comparision`.
+   * @description
+   *
+   * Whether `no-value-available` and equals match.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly equality_comparision: Equality_Comparision;
+  /**
+   * @summary `object_identifier_value`.
+   * @description
+   *
+   * Test object identifier.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly object_identifier_value: OBJECT_IDENTIFIER;
+
   constructor(
-    /**
-     * @summary `equality_comparision`.
-     * @description
-     *
-     * Whether `no-value-available` and equals match.
-     *
-     * @public
-     * @readonly
-     */
-    readonly equality_comparision: Equality_Comparision,
-    /**
-     * @summary `object_identifier_value`.
-     * @description
-     *
-     * Test object identifier.
-     *
-     * @public
-     * @readonly
-     */
-    readonly object_identifier_value: OBJECT_IDENTIFIER
-  ) {}
+    equality_comparision: Equality_Comparision,
+    object_identifier_value: OBJECT_IDENTIFIER
+  ) {
+    this.equality_comparision = equality_comparision;
+    this.object_identifier_value = object_identifier_value;
+  }
 
   /**
    * @summary Restructures an object into a Object_Identifier_Pattern

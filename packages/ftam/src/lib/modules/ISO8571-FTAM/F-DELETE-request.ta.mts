@@ -37,18 +37,22 @@ import {
  *
  */
 export class F_DELETE_request {
+  /**
+   * @summary `shared_ASE_information`.
+   * @description
+   *
+   * ISO 8571-3:1988 §15.4.2.2 / §13.10.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>;
+
   constructor(
-    /**
-     * @summary `shared_ASE_information`.
-     * @description
-     *
-     * ISO 8571-3:1988 §15.4.2.2 / §13.10.
-     *
-     * @public
-     * @readonly
-     */
-    readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>
-  ) {}
+    shared_ASE_information?: OPTIONAL<Shared_ASE_Information>
+  ) {
+    this.shared_ASE_information = shared_ASE_information;
+  }
 
   /**
    * @summary Restructures an object into a F_DELETE_request

@@ -60,71 +60,83 @@ import {
  *
  */
 export class ResponseData {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * Version of the response syntax; MUST be `v1`(0)
+     * ([RFC 6960 §4.2.2.3](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.2.3)).
+     * DEFAULT `v1` when absent.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: OPTIONAL<Version>;
+    /**
+     * @summary `responderID`.
+     * @description
+     *
+     * Name of the responder or hash of the responder's public key.
+     * MUST correspond to the certificate used to sign the
+     * response so clients can find that certificate
+     * ([RFC 6960 §4.2.2.3](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.2.3)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly responderID: ResponderID;
+    /**
+     * @summary `producedAt`.
+     * @description
+     *
+     * Time at which the OCSP responder signed this response
+     * ([RFC 6960 §2.4](https://datatracker.ietf.org/doc/html/rfc6960#section-2.4),
+     * [§4.2.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.2.1)).
+     * GeneralizedTime format as in [RFC 5280](https://datatracker.ietf.org/doc/html/rfc5280)
+     * §4.1.2.5.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly producedAt: GeneralizedTime;
+    /**
+     * @summary `responses`.
+     * @description
+     *
+     * Per-certificate status responses
+     * ([RFC 6960 §4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1),
+     * [§4.2.2.3](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.2.3)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly responses: SingleResponse[];
+    /**
+     * @summary `responseExtensions`.
+     * @description
+     *
+     * Optional extensions on the response as a whole (e.g. nonce,
+     * extended revoked definition). See
+     * [RFC 6960 §4.4](https://datatracker.ietf.org/doc/html/rfc6960#section-4.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly responseExtensions?: OPTIONAL<Extensions>;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * Version of the response syntax; MUST be `v1`(0)
-         * ([RFC 6960 §4.2.2.3](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.2.3)).
-         * DEFAULT `v1` when absent.
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: OPTIONAL<Version>,
-        /**
-         * @summary `responderID`.
-         * @description
-         *
-         * Name of the responder or hash of the responder's public key.
-         * MUST correspond to the certificate used to sign the
-         * response so clients can find that certificate
-         * ([RFC 6960 §4.2.2.3](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.2.3)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly responderID: ResponderID,
-        /**
-         * @summary `producedAt`.
-         * @description
-         *
-         * Time at which the OCSP responder signed this response
-         * ([RFC 6960 §2.4](https://datatracker.ietf.org/doc/html/rfc6960#section-2.4),
-         * [§4.2.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.2.1)).
-         * GeneralizedTime format as in [RFC 5280](https://datatracker.ietf.org/doc/html/rfc5280)
-         * §4.1.2.5.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly producedAt: GeneralizedTime,
-        /**
-         * @summary `responses`.
-         * @description
-         *
-         * Per-certificate status responses
-         * ([RFC 6960 §4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1),
-         * [§4.2.2.3](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.2.3)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly responses: SingleResponse[],
-        /**
-         * @summary `responseExtensions`.
-         * @description
-         *
-         * Optional extensions on the response as a whole (e.g. nonce,
-         * extended revoked definition). See
-         * [RFC 6960 §4.4](https://datatracker.ietf.org/doc/html/rfc6960#section-4.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly responseExtensions?: OPTIONAL<Extensions>
-    ) {}
+        version: OPTIONAL<Version>,
+        responderID: ResponderID,
+        producedAt: GeneralizedTime,
+        responses: SingleResponse[],
+        responseExtensions?: OPTIONAL<Extensions>
+    ) {
+        this.version = version;
+        this.responderID = responderID;
+        this.producedAt = producedAt;
+        this.responses = responses;
+        this.responseExtensions = responseExtensions;
+    }
 
     /**
      * @summary Restructures an object into a ResponseData

@@ -34,25 +34,29 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class ImmediateEnableRequest {
+    /**
+     * @summary `refreshFlag`.
+     * @description
+     * When false, the eUICC closes logical channels of the currently enabled
+     * Profile, resets PIN status, disables that Profile, enables the downloaded
+     * Profile, clears any Profile Rollback authorisation, selects the MF, and
+     * returns `ok`. When true, it marks the current Profile to be disabled and the
+     * downloaded Profile to be enabled, clears Rollback authorisation, returns
+     * `ok`, and sends REFRESH in "eUICC Profile State Change" mode when the IoT
+     * Device supports it, otherwise in "UICC Reset" mode (ETSI TS 102 223). A
+     * Terminal Response of "temporary problem with executing command" or
+     * "permanent problem with executing command" leaves both Profiles unchanged.
+     * SGP.32 v1.2, section 5.9.15.
+     * @public
+     * @readonly
+     */
+    public readonly refreshFlag: BOOLEAN;
+
     constructor (
-        /**
-         * @summary `refreshFlag`.
-         * @description
-         * When false, the eUICC closes logical channels of the currently enabled
-         * Profile, resets PIN status, disables that Profile, enables the downloaded
-         * Profile, clears any Profile Rollback authorisation, selects the MF, and
-         * returns `ok`. When true, it marks the current Profile to be disabled and the
-         * downloaded Profile to be enabled, clears Rollback authorisation, returns
-         * `ok`, and sends REFRESH in "eUICC Profile State Change" mode when the IoT
-         * Device supports it, otherwise in "UICC Reset" mode (ETSI TS 102 223). A
-         * Terminal Response of "temporary problem with executing command" or
-         * "permanent problem with executing command" leaves both Profiles unchanged.
-         * SGP.32 v1.2, section 5.9.15.
-         * @public
-         * @readonly
-         */
-        readonly refreshFlag: BOOLEAN
-    ) {}
+        refreshFlag: BOOLEAN
+    ) {
+        this.refreshFlag = refreshFlag;
+    }
 
     /**
      * @summary Restructures an object into a ImmediateEnableRequest

@@ -47,32 +47,42 @@ import {
  *
  */
 export class BPUIOStaticInformation {
+    /**
+     * @summary `biometricType`.
+     * @public
+     * @readonly
+     */
+    public readonly biometricType: OPTIONAL<BiometricType>;
+    /**
+     * @summary `biometricSubtype`.
+     * @public
+     * @readonly
+     */
+    public readonly biometricSubtype: OPTIONAL<BiometricSubtype>;
+    /**
+     * @summary `dataType`.
+     * @public
+     * @readonly
+     */
+    public readonly dataType: DataType;
+    /**
+     * @summary `subprocessIOIndex`.
+     * @public
+     * @readonly
+     */
+    public readonly subprocessIOIndex: IOIndex;
+
     constructor(
-        /**
-         * @summary `biometricType`.
-         * @public
-         * @readonly
-         */
-        readonly biometricType: OPTIONAL<BiometricType>,
-        /**
-         * @summary `biometricSubtype`.
-         * @public
-         * @readonly
-         */
-        readonly biometricSubtype: OPTIONAL<BiometricSubtype>,
-        /**
-         * @summary `dataType`.
-         * @public
-         * @readonly
-         */
-        readonly dataType: DataType,
-        /**
-         * @summary `subprocessIOIndex`.
-         * @public
-         * @readonly
-         */
-        readonly subprocessIOIndex: IOIndex
-    ) {}
+        biometricType: OPTIONAL<BiometricType>,
+        biometricSubtype: OPTIONAL<BiometricSubtype>,
+        dataType: DataType,
+        subprocessIOIndex: IOIndex
+    ) {
+        this.biometricType = biometricType;
+        this.biometricSubtype = biometricSubtype;
+        this.dataType = dataType;
+        this.subprocessIOIndex = subprocessIOIndex;
+    }
 
     /**
      * @summary Restructures an object into a BPUIOStaticInformation

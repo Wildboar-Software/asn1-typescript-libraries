@@ -36,33 +36,39 @@ import { EimPackageResult, _decode_EimPackageResult, _encode_EimPackageResult } 
  */
 export
 class ProvideEimPackageResult {
+    /**
+     * @summary `eidValue`.
+     * @description
+     * EID of the eUICC. Required when the eIM cannot identify the eUICC from the
+     * underlying transport or from eimTransactionId. Optional when it can. A
+     * CompactOtherSignedNotification inside the result does not need an EID
+     * (section 5.14.7). An invalid EID format yields invalidEid (subject 8.1.1,
+     * reason 2.1; format in SGP.02 section 2.2.2). An unknown EID yields
+     * eidNotFound (8.1.1, reason 3.9). A missing EID, when the eIM cannot identify
+     * the eUICC, yields missingEid (8.1.1, reason 2.2). SGP.32 v1.2, section
+     * 5.14.6, Table 19.
+     * @public
+     * @readonly
+     */
+    public readonly eidValue: OPTIONAL<Octet16>;
+    /**
+     * @summary `eimPackageResult`.
+     * @description
+     * The eIM Package Result defined in section 6.3.2.7. Mandatory. When the eIM
+     * Package contained eimTransactionId, the IPA returns that same value inside
+     * this result. SGP.32 v1.2, sections 5.14.6 and 6.3.2.7.
+     * @public
+     * @readonly
+     */
+    public readonly eimPackageResult: EimPackageResult;
+
     constructor (
-        /**
-         * @summary `eidValue`.
-         * @description
-         * EID of the eUICC. Required when the eIM cannot identify the eUICC from the
-         * underlying transport or from eimTransactionId. Optional when it can. A
-         * CompactOtherSignedNotification inside the result does not need an EID
-         * (section 5.14.7). An invalid EID format yields invalidEid (subject 8.1.1,
-         * reason 2.1; format in SGP.02 section 2.2.2). An unknown EID yields
-         * eidNotFound (8.1.1, reason 3.9). A missing EID, when the eIM cannot identify
-         * the eUICC, yields missingEid (8.1.1, reason 2.2). SGP.32 v1.2, section
-         * 5.14.6, Table 19.
-         * @public
-         * @readonly
-         */
-        readonly eidValue: OPTIONAL<Octet16>,
-        /**
-         * @summary `eimPackageResult`.
-         * @description
-         * The eIM Package Result defined in section 6.3.2.7. Mandatory. When the eIM
-         * Package contained eimTransactionId, the IPA returns that same value inside
-         * this result. SGP.32 v1.2, sections 5.14.6 and 6.3.2.7.
-         * @public
-         * @readonly
-         */
-        readonly eimPackageResult: EimPackageResult
-    ) {}
+        eidValue: OPTIONAL<Octet16>,
+        eimPackageResult: EimPackageResult
+    ) {
+        this.eidValue = eidValue;
+        this.eimPackageResult = eimPackageResult;
+    }
 
     /**
      * @summary Restructures an object into a ProvideEimPackageResult

@@ -36,20 +36,26 @@ import {
  *
  */
 export class BPUSubprocessInformation {
+    /**
+     * @summary `functionDefinition`.
+     * @public
+     * @readonly
+     */
+    public readonly functionDefinition: FunctionDefinition;
+    /**
+     * @summary `qualityEvaluation`.
+     * @public
+     * @readonly
+     */
+    public readonly qualityEvaluation?: OPTIONAL<QualityEvaluation>;
+
     constructor(
-        /**
-         * @summary `functionDefinition`.
-         * @public
-         * @readonly
-         */
-        readonly functionDefinition: FunctionDefinition,
-        /**
-         * @summary `qualityEvaluation`.
-         * @public
-         * @readonly
-         */
-        readonly qualityEvaluation?: OPTIONAL<QualityEvaluation>
-    ) {}
+        functionDefinition: FunctionDefinition,
+        qualityEvaluation?: OPTIONAL<QualityEvaluation>
+    ) {
+        this.functionDefinition = functionDefinition;
+        this.qualityEvaluation = qualityEvaluation;
+    }
 
     /**
      * @summary Restructures an object into a BPUSubprocessInformation

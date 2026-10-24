@@ -28,20 +28,24 @@ import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59Strin
  */
 export
 class V8bisDiag_Item_cLR {
+    /**
+     * @summary `cLRSequence`.
+     * @description
+     *
+     * CLR sequence transmitted or received. Hex `dataSequence` (§6.2.2):
+     * first bit in time is the LSB of each hex word; omit start/stop/fill
+     * bits and CRCs; `;` delimits N-bit words. Tag-ID `0807`. ITU-T Rec.
+     * V.59 (11/2000) §6.8.2.
+     * @public
+     * @readonly
+     */
+    public readonly cLRSequence: V59String;
+
     constructor (
-        /**
-         * @summary `cLRSequence`.
-         * @description
-         *
-         * CLR sequence transmitted or received. Hex `dataSequence` (§6.2.2):
-         * first bit in time is the LSB of each hex word; omit start/stop/fill
-         * bits and CRCs; `;` delimits N-bit words. Tag-ID `0807`. ITU-T Rec.
-         * V.59 (11/2000) §6.8.2.
-         * @public
-         * @readonly
-         */
-        readonly cLRSequence: V59String
-    ) {}
+        cLRSequence: V59String
+    ) {
+        this.cLRSequence = cLRSequence;
+    }
 
     /**
      * @summary Restructures an object into a V8bisDiag_Item_cLR

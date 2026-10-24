@@ -47,27 +47,33 @@ import {
  *
  */
 export class EncodedCharacterString {
+  /**
+   * @summary `encoding_format`.
+   * @description How `octets` maps to characters: UTF-8,
+   * UTF-16BE, a restricted-alphabet index, or an encoding-
+   * algorithm index. ITU-T Rec. X.891 (05/2005) §7.17.2–
+   * §7.17.7.
+   * @public
+   * @readonly
+   */
+  public readonly encoding_format: EncodedCharacterString_encoding_format;
+  /**
+   * @summary `octets`.
+   * @description Encoding of the character string as
+   * specified by `encoding-format`. ITU-T Rec. X.891
+   * (05/2005) §7.17.3.
+   * @public
+   * @readonly
+   */
+  public readonly octets: NonEmptyOctetString;
+
   constructor(
-    /**
-     * @summary `encoding_format`.
-     * @description How `octets` maps to characters: UTF-8,
-     * UTF-16BE, a restricted-alphabet index, or an encoding-
-     * algorithm index. ITU-T Rec. X.891 (05/2005) §7.17.2–
-     * §7.17.7.
-     * @public
-     * @readonly
-     */
-    readonly encoding_format: EncodedCharacterString_encoding_format,
-    /**
-     * @summary `octets`.
-     * @description Encoding of the character string as
-     * specified by `encoding-format`. ITU-T Rec. X.891
-     * (05/2005) §7.17.3.
-     * @public
-     * @readonly
-     */
-    readonly octets: NonEmptyOctetString
-  ) {}
+    encoding_format: EncodedCharacterString_encoding_format,
+    octets: NonEmptyOctetString
+  ) {
+    this.encoding_format = encoding_format;
+    this.octets = octets;
+  }
 
   /**
    * @summary Restructures an object into a EncodedCharacterString

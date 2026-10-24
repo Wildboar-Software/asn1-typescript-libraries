@@ -69,75 +69,89 @@ import {
  *
  */
 export class F_LINK_response {
+  /**
+   * @summary `state_result`.
+   * @description
+   *
+   * Whether the regime change succeeded. ISO 8571-3:1988
+   * §13.1. Default `success`.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly state_result: OPTIONAL<State_Result>;
+  /**
+   * @summary `action_result`.
+   * @description
+   *
+   * Success, transient error, or permanent error. ISO
+   * 8571-3:1988 §13.2. Default `success`.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly action_result: OPTIONAL<Action_Result>;
+  /**
+   * @summary `initial_attributes`.
+   * @description
+   *
+   * Initial Create-Attributes: kernel, storage, security, and
+   * private groups from ISO 8571-2:1988 §12. Same role
+   * as F-CREATE (ISO 8571-3:1988 §15.3.2.4).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly initial_attributes: Create_Attributes;
+  /**
+   * @summary `target_Object`.
+   * @description
+   *
+   * Pathname of the object the link refers to. Absent from
+   * ISO 8571:1988 Parts 1–4. ASN.1 name is `target-Object`.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly target_Object: Pathname_Attribute;
+  /**
+   * @summary `shared_ASE_information`.
+   * @description
+   *
+   * Other ASE information on this primitive. ISO 8571-3:1988
+   * §13.10.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>;
+  /**
+   * @summary `diagnostic`.
+   * @description
+   *
+   * Detail accompanying `action-result`. ISO 8571-3:1988
+   * §13.13.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly diagnostic?: OPTIONAL<Diagnostic>;
+
   constructor(
-    /**
-     * @summary `state_result`.
-     * @description
-     *
-     * Whether the regime change succeeded. ISO 8571-3:1988
-     * §13.1. Default `success`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly state_result: OPTIONAL<State_Result>,
-    /**
-     * @summary `action_result`.
-     * @description
-     *
-     * Success, transient error, or permanent error. ISO
-     * 8571-3:1988 §13.2. Default `success`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly action_result: OPTIONAL<Action_Result>,
-    /**
-     * @summary `initial_attributes`.
-     * @description
-     *
-     * Initial Create-Attributes: kernel, storage, security, and
-     * private groups from ISO 8571-2:1988 §12. Same role
-     * as F-CREATE (ISO 8571-3:1988 §15.3.2.4).
-     *
-     * @public
-     * @readonly
-     */
-    readonly initial_attributes: Create_Attributes,
-    /**
-     * @summary `target_Object`.
-     * @description
-     *
-     * Pathname of the object the link refers to. Absent from
-     * ISO 8571:1988 Parts 1–4. ASN.1 name is `target-Object`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly target_Object: Pathname_Attribute,
-    /**
-     * @summary `shared_ASE_information`.
-     * @description
-     *
-     * Other ASE information on this primitive. ISO 8571-3:1988
-     * §13.10.
-     *
-     * @public
-     * @readonly
-     */
-    readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
-    /**
-     * @summary `diagnostic`.
-     * @description
-     *
-     * Detail accompanying `action-result`. ISO 8571-3:1988
-     * §13.13.
-     *
-     * @public
-     * @readonly
-     */
-    readonly diagnostic?: OPTIONAL<Diagnostic>
-  ) {}
+    state_result: OPTIONAL<State_Result>,
+    action_result: OPTIONAL<Action_Result>,
+    initial_attributes: Create_Attributes,
+    target_Object: Pathname_Attribute,
+    shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
+    diagnostic?: OPTIONAL<Diagnostic>
+  ) {
+    this.state_result = state_result;
+    this.action_result = action_result;
+    this.initial_attributes = initial_attributes;
+    this.target_Object = target_Object;
+    this.shared_ASE_information = shared_ASE_information;
+    this.diagnostic = diagnostic;
+  }
 
   /**
    * @summary Restructures an object into a F_LINK_response

@@ -43,74 +43,88 @@ import { IMSI_Address, _decode_IMSI_Address, _encode_IMSI_Address } from "../SMR
  */
 export
 class RPDataMO {
+    /**
+     * @summary `mo_message_reference`.
+     * @description
+     *
+     * Correlates this relay with `RPAck` or `RPError`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mo_message_reference: RP_MR;
+    /**
+     * @summary `mo_originating_address`.
+     * @description
+     *
+     * Originating address of the mobile-originated short message.
+     * The report does not add a format constraint for this
+     * component.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mo_originating_address: SMS_Address;
+    /**
+     * @summary `mo_user_data`.
+     * @description
+     *
+     * The SMS transfer-layer PDU being relayed (clause 3.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mo_user_data: RP_UD;
+    /**
+     * @summary `origVMSCAddr`.
+     * @description
+     *
+     * Originating mobile station's VMSC address. Optional Nokia
+     * component. Clause 3.2 has no such field.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly origVMSCAddr?: OPTIONAL<SMS_Address>;
+    /**
+     * @summary `moimsi`.
+     * @description
+     *
+     * Originating mobile station's IMSI. Optional Nokia
+     * component. The Nokia profile limits `IMSI-Address` to 1..8
+     * octets; this module does not enforce that size.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly moimsi?: OPTIONAL<IMSI_Address>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions after the root components. The Nokia
+     * profile leaves the sequence open.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `mo_message_reference`.
-         * @description
-         *
-         * Correlates this relay with `RPAck` or `RPError`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mo_message_reference: RP_MR,
-        /**
-         * @summary `mo_originating_address`.
-         * @description
-         *
-         * Originating address of the mobile-originated short message.
-         * The report does not add a format constraint for this
-         * component.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mo_originating_address: SMS_Address,
-        /**
-         * @summary `mo_user_data`.
-         * @description
-         *
-         * The SMS transfer-layer PDU being relayed (clause 3.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mo_user_data: RP_UD,
-        /**
-         * @summary `origVMSCAddr`.
-         * @description
-         *
-         * Originating mobile station's VMSC address. Optional Nokia
-         * component. Clause 3.2 has no such field.
-         *
-         * @public
-         * @readonly
-         */
-        readonly origVMSCAddr?: OPTIONAL<SMS_Address>,
-        /**
-         * @summary `moimsi`.
-         * @description
-         *
-         * Originating mobile station's IMSI. Optional Nokia
-         * component. The Nokia profile limits `IMSI-Address` to 1..8
-         * octets; this module does not enforce that size.
-         *
-         * @public
-         * @readonly
-         */
-        readonly moimsi?: OPTIONAL<IMSI_Address>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions after the root components. The Nokia
-         * profile leaves the sequence open.
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        mo_message_reference: RP_MR,
+        mo_originating_address: SMS_Address,
+        mo_user_data: RP_UD,
+        origVMSCAddr?: OPTIONAL<SMS_Address>,
+        moimsi?: OPTIONAL<IMSI_Address>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.mo_message_reference = mo_message_reference;
+        this.mo_originating_address = mo_originating_address;
+        this.mo_user_data = mo_user_data;
+        this.origVMSCAddr = origVMSCAddr;
+        this.moimsi = moimsi;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a RPDataMO

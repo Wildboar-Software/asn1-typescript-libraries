@@ -32,19 +32,23 @@ import { CredentialType, _decode_CredentialType, _encode_CredentialType } from "
  */
 export
 class TCGCredentialType {
+    /**
+     * @summary `certificateType`.
+     * @description
+     *
+     * `tcg-kp-PlatformAttributeCertificate` or
+     * `tcg-kp-DeltaPlatformAttributeCertificate`. §3.1.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certificateType: CredentialType;
+
     constructor (
-        /**
-         * @summary `certificateType`.
-         * @description
-         *
-         * `tcg-kp-PlatformAttributeCertificate` or
-         * `tcg-kp-DeltaPlatformAttributeCertificate`. §3.1.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly certificateType: CredentialType
-    ) {}
+        certificateType: CredentialType
+    ) {
+        this.certificateType = certificateType;
+    }
 
     /**
      * @summary Restructures an object into a TCGCredentialType

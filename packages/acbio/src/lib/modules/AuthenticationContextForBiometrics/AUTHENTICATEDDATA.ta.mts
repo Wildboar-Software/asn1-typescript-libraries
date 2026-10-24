@@ -60,62 +60,82 @@ import {
  *
  */
 export class AUTHENTICATEDDATA<EncapsulatedContentInfo> {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: CMSVersion;
+    /**
+     * @summary `originatorInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly originatorInfo: OPTIONAL<OriginatorInfo>;
+    /**
+     * @summary `recipientInfos`.
+     * @public
+     * @readonly
+     */
+    public readonly recipientInfos: RecipientInfos;
+    /**
+     * @summary `macAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly macAlgorithm: MessageAuthenticationCodeAlgorithm;
+    /**
+     * @summary `digestAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly digestAlgorithm: OPTIONAL<DigestAlgorithmIdentifier>;
+    /**
+     * @summary `encapContentInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly encapContentInfo: EncapsulatedContentInfo;
+    /**
+     * @summary `authAttrs`.
+     * @public
+     * @readonly
+     */
+    public readonly authAttrs: OPTIONAL<AuthAttributes>;
+    /**
+     * @summary `mac`.
+     * @public
+     * @readonly
+     */
+    public readonly mac: MessageAuthenticationCode;
+    /**
+     * @summary `unauthAttrs`.
+     * @public
+     * @readonly
+     */
+    public readonly unauthAttrs?: OPTIONAL<UnauthAttributes>;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: CMSVersion,
-        /**
-         * @summary `originatorInfo`.
-         * @public
-         * @readonly
-         */
-        readonly originatorInfo: OPTIONAL<OriginatorInfo>,
-        /**
-         * @summary `recipientInfos`.
-         * @public
-         * @readonly
-         */
-        readonly recipientInfos: RecipientInfos,
-        /**
-         * @summary `macAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly macAlgorithm: MessageAuthenticationCodeAlgorithm,
-        /**
-         * @summary `digestAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly digestAlgorithm: OPTIONAL<DigestAlgorithmIdentifier>,
-        /**
-         * @summary `encapContentInfo`.
-         * @public
-         * @readonly
-         */
-        readonly encapContentInfo: EncapsulatedContentInfo,
-        /**
-         * @summary `authAttrs`.
-         * @public
-         * @readonly
-         */
-        readonly authAttrs: OPTIONAL<AuthAttributes>,
-        /**
-         * @summary `mac`.
-         * @public
-         * @readonly
-         */
-        readonly mac: MessageAuthenticationCode,
-        /**
-         * @summary `unauthAttrs`.
-         * @public
-         * @readonly
-         */
-        readonly unauthAttrs?: OPTIONAL<UnauthAttributes>
-    ) {}
+        version: CMSVersion,
+        originatorInfo: OPTIONAL<OriginatorInfo>,
+        recipientInfos: RecipientInfos,
+        macAlgorithm: MessageAuthenticationCodeAlgorithm,
+        digestAlgorithm: OPTIONAL<DigestAlgorithmIdentifier>,
+        encapContentInfo: EncapsulatedContentInfo,
+        authAttrs: OPTIONAL<AuthAttributes>,
+        mac: MessageAuthenticationCode,
+        unauthAttrs?: OPTIONAL<UnauthAttributes>
+    ) {
+        this.version = version;
+        this.originatorInfo = originatorInfo;
+        this.recipientInfos = recipientInfos;
+        this.macAlgorithm = macAlgorithm;
+        this.digestAlgorithm = digestAlgorithm;
+        this.encapContentInfo = encapContentInfo;
+        this.authAttrs = authAttrs;
+        this.mac = mac;
+        this.unauthAttrs = unauthAttrs;
+    }
 
     /**
      * @summary Restructures an object into a AUTHENTICATEDDATA

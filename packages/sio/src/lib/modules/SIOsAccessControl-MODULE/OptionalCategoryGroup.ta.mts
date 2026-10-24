@@ -38,29 +38,35 @@ import {
  *
  */
 export class OptionalCategoryGroup {
+    /**
+     * @summary `operation`.
+     * @description
+     *
+     * `onlyOne` — exactly one of `categoryGroup`; `oneOrMore` —
+     * at least one; `all` — every member. X.841 §6.2.2.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly operation: Operation;
+    /**
+     * @summary `categoryGroup`.
+     * @description
+     *
+     * Candidate categories (SIZE 1..MAX). X.841 §6.2.2.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly categoryGroup: CategoryGroup;
+
     constructor(
-        /**
-         * @summary `operation`.
-         * @description
-         *
-         * `onlyOne` — exactly one of `categoryGroup`; `oneOrMore` —
-         * at least one; `all` — every member. X.841 §6.2.2.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly operation: Operation,
-        /**
-         * @summary `categoryGroup`.
-         * @description
-         *
-         * Candidate categories (SIZE 1..MAX). X.841 §6.2.2.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly categoryGroup: CategoryGroup
-    ) {}
+        operation: Operation,
+        categoryGroup: CategoryGroup
+    ) {
+        this.operation = operation;
+        this.categoryGroup = categoryGroup;
+    }
 
     /**
      * @summary Restructures an object into a OptionalCategoryGroup

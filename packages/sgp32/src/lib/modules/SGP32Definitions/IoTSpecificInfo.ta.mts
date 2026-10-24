@@ -35,44 +35,53 @@ import { type VersionType, _decode_VersionType, _encode_VersionType } from "@wil
  */
 export
 class IoTSpecificInfo {
+    /**
+     * @summary `iotVersion`.
+     * @description
+     * SGP.32 version or versions the eUICC supports. At least one version SHALL be
+     * present. SGP.32 v1.2, section 5.9.2.
+     * @public
+     * @readonly
+     */
+    public readonly iotVersion: VersionType[];
+    /**
+     * @summary `ecallSupported`.
+     * @description
+     * SHALL be present. When it is present, the eUICC supports the Emergency
+     * Mechanism. SGP.32 v1.2, section 5.9.2.
+     * @public
+     * @readonly
+     */
+    public readonly ecallSupported?: OPTIONAL<NULL>;
+    /**
+     * @summary `fallbackSupported`.
+     * @description
+     * SHALL be present when the eUICC supports the Fallback Mechanism. SGP.32
+     * v1.2, section 5.9.2.
+     * @public
+     * @readonly
+     */
+    public readonly fallbackSupported?: OPTIONAL<NULL>;
+    /**
+     * @summary `fallbackAllowedUpdateSupported`.
+     * @description
+     * SGP.32 v1.2 section 5.9.2 does not define this component. Annex C does not
+     * further define it.
+     * @public
+     * @readonly
+     */
+    public readonly fallbackAllowedUpdateSupported?: OPTIONAL<NULL>;
+
     constructor (
-        /**
-         * @summary `iotVersion`.
-         * @description
-         * SGP.32 version or versions the eUICC supports. At least one version SHALL be
-         * present. SGP.32 v1.2, section 5.9.2.
-         * @public
-         * @readonly
-         */
-        readonly iotVersion: VersionType[],
-        /**
-         * @summary `ecallSupported`.
-         * @description
-         * SHALL be present. When it is present, the eUICC supports the Emergency
-         * Mechanism. SGP.32 v1.2, section 5.9.2.
-         * @public
-         * @readonly
-         */
-        readonly ecallSupported?: OPTIONAL<NULL>,
-        /**
-         * @summary `fallbackSupported`.
-         * @description
-         * SHALL be present when the eUICC supports the Fallback Mechanism. SGP.32
-         * v1.2, section 5.9.2.
-         * @public
-         * @readonly
-         */
-        readonly fallbackSupported?: OPTIONAL<NULL>,
-        /**
-         * @summary `fallbackAllowedUpdateSupported`.
-         * @description
-         * SGP.32 v1.2 section 5.9.2 does not define this component. Annex C does not
-         * further define it.
-         * @public
-         * @readonly
-         */
-        readonly fallbackAllowedUpdateSupported?: OPTIONAL<NULL>
+        iotVersion: VersionType[],
+        ecallSupported?: OPTIONAL<NULL>,
+        fallbackSupported?: OPTIONAL<NULL>,
+        fallbackAllowedUpdateSupported?: OPTIONAL<NULL>
     ) {
+        this.iotVersion = iotVersion;
+        this.ecallSupported = ecallSupported;
+        this.fallbackSupported = fallbackSupported;
+        this.fallbackAllowedUpdateSupported = fallbackAllowedUpdateSupported;
         if (this.iotVersion.length < 1) {
             throw new ASN1SizeError("IoTSpecificInfo.iotVersion violates SIZE constraint");
         }

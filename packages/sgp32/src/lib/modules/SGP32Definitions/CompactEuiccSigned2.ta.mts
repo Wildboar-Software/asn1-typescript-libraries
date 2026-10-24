@@ -32,31 +32,37 @@ import { type Octet32, _decode_Octet32, _encode_Octet32 } from "@wildboar/sgp22/
  */
 export
 class CompactEuiccSigned2 {
+    /**
+     * @summary `euiccOtpk`.
+     * @description
+     *
+     * otPK.EUICC.ECKA (tag '5F49'). Present unless the eUICC chose bppEuiccOtpk.
+     *
+     * SGP.32 v1.2, section 5.14.2.
+     * @public
+     * @readonly
+     */
+    public readonly euiccOtpk?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `hashCc`.
+     * @description
+     *
+     * Hash of the confirmation code, included when the eIM has not already
+     * received that hash.
+     *
+     * SGP.32 v1.2, section 5.14.2.
+     * @public
+     * @readonly
+     */
+    public readonly hashCc?: OPTIONAL<Octet32>;
+
     constructor (
-        /**
-         * @summary `euiccOtpk`.
-         * @description
-         *
-         * otPK.EUICC.ECKA (tag '5F49'). Present unless the eUICC chose bppEuiccOtpk.
-         *
-         * SGP.32 v1.2, section 5.14.2.
-         * @public
-         * @readonly
-         */
-        readonly euiccOtpk?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `hashCc`.
-         * @description
-         *
-         * Hash of the confirmation code, included when the eIM has not already
-         * received that hash.
-         *
-         * SGP.32 v1.2, section 5.14.2.
-         * @public
-         * @readonly
-         */
-        readonly hashCc?: OPTIONAL<Octet32>
-    ) {}
+        euiccOtpk?: OPTIONAL<OCTET_STRING>,
+        hashCc?: OPTIONAL<Octet32>
+    ) {
+        this.euiccOtpk = euiccOtpk;
+        this.hashCc = hashCc;
+    }
 
     /**
      * @summary Restructures an object into a CompactEuiccSigned2

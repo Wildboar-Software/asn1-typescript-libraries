@@ -33,28 +33,34 @@ import { _decode_ProfileDownloadTriggerResult_profileDownloadTriggerResultData_p
  */
 export
 class ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownloadError {
+    /**
+     * @summary `profileDownloadErrorReason`.
+     * @description
+     * ecallActive(104) when the Emergency Profile is enabled. The only other named
+     * value is undefinedError(127). SGP.32 v1.2, section 2.11.2.3.
+     * @public
+     * @readonly
+     */
+    public readonly profileDownloadErrorReason: ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownloadError_profileDownloadErrorReason;
+    /**
+     * @summary `errorResponse`.
+     * @description
+     * When present, the error response of an ES10b function or of an ES9+ function
+     * with ASN.1 binding that the IPA hit during the download. SGP.32 v1.2 says
+     * the error response of an ES9+ function with JSON binding is for further
+     * study. SGP.32 v1.2, section 2.11.2.3.
+     * @public
+     * @readonly
+     */
+    public readonly errorResponse?: OPTIONAL<OCTET_STRING>;
+
     constructor (
-        /**
-         * @summary `profileDownloadErrorReason`.
-         * @description
-         * ecallActive(104) when the Emergency Profile is enabled. The only other named
-         * value is undefinedError(127). SGP.32 v1.2, section 2.11.2.3.
-         * @public
-         * @readonly
-         */
-        readonly profileDownloadErrorReason: ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownloadError_profileDownloadErrorReason,
-        /**
-         * @summary `errorResponse`.
-         * @description
-         * When present, the error response of an ES10b function or of an ES9+ function
-         * with ASN.1 binding that the IPA hit during the download. SGP.32 v1.2 says
-         * the error response of an ES9+ function with JSON binding is for further
-         * study. SGP.32 v1.2, section 2.11.2.3.
-         * @public
-         * @readonly
-         */
-        readonly errorResponse?: OPTIONAL<OCTET_STRING>
-    ) {}
+        profileDownloadErrorReason: ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownloadError_profileDownloadErrorReason,
+        errorResponse?: OPTIONAL<OCTET_STRING>
+    ) {
+        this.profileDownloadErrorReason = profileDownloadErrorReason;
+        this.errorResponse = errorResponse;
+    }
 
     /**
      * @summary Restructures an object into a ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownloadError

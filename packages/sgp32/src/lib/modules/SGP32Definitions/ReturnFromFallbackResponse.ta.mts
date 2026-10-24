@@ -35,17 +35,21 @@ import { _decode_ReturnFromFallbackResponse_returnFromFallbackResult, _encode_Re
  */
 export
 class ReturnFromFallbackResponse {
+    /**
+     * @summary `returnFromFallbackResult`.
+     * @description
+     * ok, catBusy, fallbackNotAvailable, commandError, or undefinedError, as
+     * defined for ES10b.ReturnFromFallback. SGP.32 v1.2, section 5.9.21.
+     * @public
+     * @readonly
+     */
+    public readonly returnFromFallbackResult: ReturnFromFallbackResponse_returnFromFallbackResult;
+
     constructor (
-        /**
-         * @summary `returnFromFallbackResult`.
-         * @description
-         * ok, catBusy, fallbackNotAvailable, commandError, or undefinedError, as
-         * defined for ES10b.ReturnFromFallback. SGP.32 v1.2, section 5.9.21.
-         * @public
-         * @readonly
-         */
-        readonly returnFromFallbackResult: ReturnFromFallbackResponse_returnFromFallbackResult
-    ) {}
+        returnFromFallbackResult: ReturnFromFallbackResponse_returnFromFallbackResult
+    ) {
+        this.returnFromFallbackResult = returnFromFallbackResult;
+    }
 
     /**
      * @summary Restructures an object into a ReturnFromFallbackResponse

@@ -38,34 +38,40 @@ import { type EuiccSignPIR, _decode_EuiccSignPIR, _encode_EuiccSignPIR } from "@
  */
 export
 class ProfileInstallationResult {
+    /**
+     * @summary `profileInstallationResultData`.
+     * @description
+     * Signed installation report. From SGP.22 v3.1 section 2.5.6: notification
+     * metadata (sequence number, profile management operation, recipient address,
+     * and ICCID), the transaction identifier from Profile Download and
+     * Installation, the final installation status, and the SM-DP+ OID from
+     * CERT.DPpb.SIG. The notification address is the serverAddress from
+     * ES10b.AuthenticateServer. ICCID is omitted when the error occurred before
+     * the eUICC knew the ICCID. The signature covers this object, tag 'BF27'.
+     * @public
+     * @readonly
+     */
+    public readonly profileInstallationResultData: ProfileInstallationResultData;
+    /**
+     * @summary `euiccSignPIR`.
+     * @description
+     * eUICC signature over profileInstallationResultData (tag 'BF27'). From SGP.22
+     * v3.1 section 2.5.6: computed as defined in SGP.22 section 2.6.9 using
+     * SK.EUICC.SIG selected during Profile Download and Installation. SGP.32 v1.2
+     * section 5.14.7 says an IPA with minimizeEsipaBytes keeps this signature
+     * unchanged when re-encoding to the compact form.
+     * @public
+     * @readonly
+     */
+    public readonly euiccSignPIR: EuiccSignPIR;
+
     constructor (
-        /**
-         * @summary `profileInstallationResultData`.
-         * @description
-         * Signed installation report. From SGP.22 v3.1 section 2.5.6: notification
-         * metadata (sequence number, profile management operation, recipient address,
-         * and ICCID), the transaction identifier from Profile Download and
-         * Installation, the final installation status, and the SM-DP+ OID from
-         * CERT.DPpb.SIG. The notification address is the serverAddress from
-         * ES10b.AuthenticateServer. ICCID is omitted when the error occurred before
-         * the eUICC knew the ICCID. The signature covers this object, tag 'BF27'.
-         * @public
-         * @readonly
-         */
-        readonly profileInstallationResultData: ProfileInstallationResultData,
-        /**
-         * @summary `euiccSignPIR`.
-         * @description
-         * eUICC signature over profileInstallationResultData (tag 'BF27'). From SGP.22
-         * v3.1 section 2.5.6: computed as defined in SGP.22 section 2.6.9 using
-         * SK.EUICC.SIG selected during Profile Download and Installation. SGP.32 v1.2
-         * section 5.14.7 says an IPA with minimizeEsipaBytes keeps this signature
-         * unchanged when re-encoding to the compact form.
-         * @public
-         * @readonly
-         */
-        readonly euiccSignPIR: EuiccSignPIR
-    ) {}
+        profileInstallationResultData: ProfileInstallationResultData,
+        euiccSignPIR: EuiccSignPIR
+    ) {
+        this.profileInstallationResultData = profileInstallationResultData;
+        this.euiccSignPIR = euiccSignPIR;
+    }
 
     /**
      * @summary Restructures an object into a ProfileInstallationResult

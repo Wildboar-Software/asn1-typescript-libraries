@@ -51,38 +51,50 @@ import {
  *
  */
 export class ACBioContentInformation {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: OPTIONAL<Version>;
+    /**
+     * @summary `bpuInformation`.
+     * @public
+     * @readonly
+     */
+    public readonly bpuInformation: BPUInformation;
+    /**
+     * @summary `controlValue`.
+     * @public
+     * @readonly
+     */
+    public readonly controlValue: OCTET_STRING;
+    /**
+     * @summary `biometricProcess`.
+     * @public
+     * @readonly
+     */
+    public readonly biometricProcess: BiometricProcess;
+    /**
+     * @summary `brtCertificateInformation`.
+     * @public
+     * @readonly
+     */
+    public readonly brtCertificateInformation?: OPTIONAL<BRTCertificateInformation>;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: OPTIONAL<Version>,
-        /**
-         * @summary `bpuInformation`.
-         * @public
-         * @readonly
-         */
-        readonly bpuInformation: BPUInformation,
-        /**
-         * @summary `controlValue`.
-         * @public
-         * @readonly
-         */
-        readonly controlValue: OCTET_STRING,
-        /**
-         * @summary `biometricProcess`.
-         * @public
-         * @readonly
-         */
-        readonly biometricProcess: BiometricProcess,
-        /**
-         * @summary `brtCertificateInformation`.
-         * @public
-         * @readonly
-         */
-        readonly brtCertificateInformation?: OPTIONAL<BRTCertificateInformation>
-    ) {}
+        version: OPTIONAL<Version>,
+        bpuInformation: BPUInformation,
+        controlValue: OCTET_STRING,
+        biometricProcess: BiometricProcess,
+        brtCertificateInformation?: OPTIONAL<BRTCertificateInformation>
+    ) {
+        this.version = version;
+        this.bpuInformation = bpuInformation;
+        this.controlValue = controlValue;
+        this.biometricProcess = biometricProcess;
+        this.brtCertificateInformation = brtCertificateInformation;
+    }
 
     /**
      * @summary Restructures an object into a ACBioContentInformation

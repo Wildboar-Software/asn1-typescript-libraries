@@ -60,42 +60,50 @@ import { SMS_Address_address_value, _decode_SMS_Address_address_value, _encode_S
  */
 export
 class SMS_Address {
+    /**
+     * @summary `address_type`.
+     * @description
+     *
+     * Unknown, international, national, network-specific, or
+     * short number. Named values are on
+     * `SMS-Address-address-type`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly address_type: SMS_Address_address_type;
+    /**
+     * @summary `numbering_plan`.
+     * @description
+     *
+     * Numbering plan of `address-value`. Values 2, 5, 6, and 7
+     * are not assigned in clause 3.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly numbering_plan: SMS_Address_numbering_plan;
+    /**
+     * @summary `address_value`.
+     * @description
+     *
+     * The digits. Clause 3.2 defines only the semi-octet
+     * alternative.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly address_value: SMS_Address_address_value;
+
     constructor (
-        /**
-         * @summary `address_type`.
-         * @description
-         *
-         * Unknown, international, national, network-specific, or
-         * short number. Named values are on
-         * `SMS-Address-address-type`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly address_type: SMS_Address_address_type,
-        /**
-         * @summary `numbering_plan`.
-         * @description
-         *
-         * Numbering plan of `address-value`. Values 2, 5, 6, and 7
-         * are not assigned in clause 3.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly numbering_plan: SMS_Address_numbering_plan,
-        /**
-         * @summary `address_value`.
-         * @description
-         *
-         * The digits. Clause 3.2 defines only the semi-octet
-         * alternative.
-         *
-         * @public
-         * @readonly
-         */
-        readonly address_value: SMS_Address_address_value
-    ) {}
+        address_type: SMS_Address_address_type,
+        numbering_plan: SMS_Address_numbering_plan,
+        address_value: SMS_Address_address_value
+    ) {
+        this.address_type = address_type;
+        this.numbering_plan = numbering_plan;
+        this.address_value = address_value;
+    }
 
     /**
      * @summary Restructures an object into a SMS_Address

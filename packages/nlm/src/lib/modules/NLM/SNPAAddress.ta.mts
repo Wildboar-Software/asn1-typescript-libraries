@@ -34,32 +34,38 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class SNPAAddress {
+    /**
+     * @summary `type_`.
+     * @description
+     *
+     * SNPA encoding kind: `sNPADTEAddress` or `sNPAMACAddress`.
+     * ITU-T Rec. X.283 (12/97)
+     * [§6.1.2](https://www.itu.int/rec/T-REC-X.283-199712-I).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly type_: OBJECT_IDENTIFIER;
+    /**
+     * @summary `address`.
+     * @description
+     *
+     * SNPA value in the encoding identified by `type`.
+     * ITU-T Rec. X.283 (12/97)
+     * [§6.1.2](https://www.itu.int/rec/T-REC-X.283-199712-I).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly address: OCTET_STRING;
+
     constructor(
-        /**
-         * @summary `type_`.
-         * @description
-         *
-         * SNPA encoding kind: `sNPADTEAddress` or `sNPAMACAddress`.
-         * ITU-T Rec. X.283 (12/97)
-         * [§6.1.2](https://www.itu.int/rec/T-REC-X.283-199712-I).
-         *
-         * @public
-         * @readonly
-         */
-        readonly type_: OBJECT_IDENTIFIER,
-        /**
-         * @summary `address`.
-         * @description
-         *
-         * SNPA value in the encoding identified by `type`.
-         * ITU-T Rec. X.283 (12/97)
-         * [§6.1.2](https://www.itu.int/rec/T-REC-X.283-199712-I).
-         *
-         * @public
-         * @readonly
-         */
-        readonly address: OCTET_STRING
-    ) {}
+        type_: OBJECT_IDENTIFIER,
+        address: OCTET_STRING
+    ) {
+        this.type_ = type_;
+        this.address = address;
+    }
 
     /**
      * @summary Restructures an object into a SNPAAddress

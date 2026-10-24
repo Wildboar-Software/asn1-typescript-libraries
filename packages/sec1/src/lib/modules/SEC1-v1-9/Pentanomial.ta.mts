@@ -36,38 +36,46 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class Pentanomial {
+    /**
+     * @summary `k1`.
+     * @description
+     *
+     * `k1 > 0`. Lowest middle exponent.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly k1: INTEGER;
+    /**
+     * @summary `k2`.
+     * @description
+     *
+     * `k2 > k1`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly k2: INTEGER;
+    /**
+     * @summary `k3`.
+     * @description
+     *
+     * `k3 > k2`. Highest middle exponent below m.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly k3: INTEGER;
+
     constructor (
-        /**
-         * @summary `k1`.
-         * @description
-         *
-         * `k1 > 0`. Lowest middle exponent.
-         *
-         * @public
-         * @readonly
-         */
-        readonly k1: INTEGER,
-        /**
-         * @summary `k2`.
-         * @description
-         *
-         * `k2 > k1`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly k2: INTEGER,
-        /**
-         * @summary `k3`.
-         * @description
-         *
-         * `k3 > k2`. Highest middle exponent below m.
-         *
-         * @public
-         * @readonly
-         */
-        readonly k3: INTEGER
-    ) {}
+        k1: INTEGER,
+        k2: INTEGER,
+        k3: INTEGER
+    ) {
+        this.k1 = k1;
+        this.k2 = k2;
+        this.k3 = k3;
+    }
 
     /**
      * @summary Restructures an object into a Pentanomial

@@ -37,31 +37,37 @@ import { _decode_Connect_fail, _encode_Connect_fail, Connect_fail } from "../SMR
  */
 export
 class SMR_Bind_Failure {
+    /**
+     * @summary `connect_fail_reason`.
+     * @description
+     *
+     * Why the responder rejected the association. Values 0 to 4
+     * are clause 3.2; `inv-SC-addr` (5) is a Nokia addition.
+     * See `Connect-fail`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly connect_fail_reason: Connect_fail;
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions after `connect-fail-reason`. The Nokia
+     * profile leaves the sequence open.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `connect_fail_reason`.
-         * @description
-         *
-         * Why the responder rejected the association. Values 0 to 4
-         * are clause 3.2; `inv-SC-addr` (5) is a Nokia addition.
-         * See `Connect-fail`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly connect_fail_reason: Connect_fail,
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions after `connect-fail-reason`. The Nokia
-         * profile leaves the sequence open.
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        connect_fail_reason: Connect_fail,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.connect_fail_reason = connect_fail_reason;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SMR_Bind_Failure

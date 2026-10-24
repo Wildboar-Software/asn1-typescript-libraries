@@ -37,32 +37,38 @@ import {
  *
  */
 export class PDUOtherErrorSyntax {
+    /**
+     * @summary `errorCode`.
+     * @description
+     *
+     * Error code (0..255). Meaning is not further specified in X.283.
+     * ITU-T Rec. X.283 (12/97)
+     * [§6.2](https://www.itu.int/rec/T-REC-X.283-199712-I).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly errorCode: INTEGER;
+    /**
+     * @summary `header`.
+     * @description
+     *
+     * Header of the PDU in error.
+     * ITU-T Rec. X.283 (12/97)
+     * [§6.2](https://www.itu.int/rec/T-REC-X.283-199712-I).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly header: PDUHeader;
+
     constructor(
-        /**
-         * @summary `errorCode`.
-         * @description
-         *
-         * Error code (0..255). Meaning is not further specified in X.283.
-         * ITU-T Rec. X.283 (12/97)
-         * [§6.2](https://www.itu.int/rec/T-REC-X.283-199712-I).
-         *
-         * @public
-         * @readonly
-         */
-        readonly errorCode: INTEGER,
-        /**
-         * @summary `header`.
-         * @description
-         *
-         * Header of the PDU in error.
-         * ITU-T Rec. X.283 (12/97)
-         * [§6.2](https://www.itu.int/rec/T-REC-X.283-199712-I).
-         *
-         * @public
-         * @readonly
-         */
-        readonly header: PDUHeader
-    ) {}
+        errorCode: INTEGER,
+        header: PDUHeader
+    ) {
+        this.errorCode = errorCode;
+        this.header = header;
+    }
 
     /**
      * @summary Restructures an object into a PDUOtherErrorSyntax

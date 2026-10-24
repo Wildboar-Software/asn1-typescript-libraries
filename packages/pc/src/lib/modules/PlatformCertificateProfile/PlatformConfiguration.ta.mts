@@ -41,55 +41,65 @@ import { Properties, _decode_Properties, _encode_Properties } from "../PlatformC
  */
 export
 class PlatformConfiguration {
+    /**
+     * @summary `componentIdentifiers`.
+     * @description
+     *
+     * Components that constitute the platform. The issuer MUST
+     * include class, manufacturer, and model for each; serial,
+     * revision, manufacturer IANA PEN, FRU flag, addresses,
+     * and component Platform Certificate are optional. §3.1.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly componentIdentifiers?: OPTIONAL<ComponentIdentifier[]>;
+    /**
+     * @summary `componentIdentifiersUri`.
+     * @description
+     *
+     * URI where the component-identifier list may be obtained.
+     * §3.1.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly componentIdentifiersUri?: OPTIONAL<URIReference>;
+    /**
+     * @summary `platformProperties`.
+     * @description
+     *
+     * Issuer-chosen characteristics of interest to the consumer.
+     * This profile does not prescribe which names or values to
+     * include. §3.1.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly platformProperties?: OPTIONAL<Properties[]>;
+    /**
+     * @summary `platformPropertiesUri`.
+     * @description
+     *
+     * URI where the issuer MAY publish the `propertyName` list
+     * and its semantics. §3.1.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly platformPropertiesUri?: OPTIONAL<URIReference>;
+
     constructor (
-        /**
-         * @summary `componentIdentifiers`.
-         * @description
-         *
-         * Components that constitute the platform. The issuer MUST
-         * include class, manufacturer, and model for each; serial,
-         * revision, manufacturer IANA PEN, FRU flag, addresses,
-         * and component Platform Certificate are optional. §3.1.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly componentIdentifiers?: OPTIONAL<ComponentIdentifier[]>,
-        /**
-         * @summary `componentIdentifiersUri`.
-         * @description
-         *
-         * URI where the component-identifier list may be obtained.
-         * §3.1.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly componentIdentifiersUri?: OPTIONAL<URIReference>,
-        /**
-         * @summary `platformProperties`.
-         * @description
-         *
-         * Issuer-chosen characteristics of interest to the consumer.
-         * This profile does not prescribe which names or values to
-         * include. §3.1.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly platformProperties?: OPTIONAL<Properties[]>,
-        /**
-         * @summary `platformPropertiesUri`.
-         * @description
-         *
-         * URI where the issuer MAY publish the `propertyName` list
-         * and its semantics. §3.1.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly platformPropertiesUri?: OPTIONAL<URIReference>
-    ) {}
+        componentIdentifiers?: OPTIONAL<ComponentIdentifier[]>,
+        componentIdentifiersUri?: OPTIONAL<URIReference>,
+        platformProperties?: OPTIONAL<Properties[]>,
+        platformPropertiesUri?: OPTIONAL<URIReference>
+    ) {
+        this.componentIdentifiers = componentIdentifiers;
+        this.componentIdentifiersUri = componentIdentifiersUri;
+        this.platformProperties = platformProperties;
+        this.platformPropertiesUri = platformPropertiesUri;
+    }
 
     /**
      * @summary Restructures an object into a PlatformConfiguration

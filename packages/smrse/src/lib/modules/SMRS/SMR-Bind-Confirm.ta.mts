@@ -38,19 +38,23 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class SMR_Bind_Confirm {
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions. The Nokia profile leaves the sequence
+     * open; the root is empty.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions. The Nokia profile leaves the sequence
-         * open; the root is empty.
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SMR_Bind_Confirm

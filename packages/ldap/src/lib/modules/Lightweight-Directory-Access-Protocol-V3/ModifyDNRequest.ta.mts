@@ -45,58 +45,70 @@ import {
  *
  */
 export class ModifyDNRequest {
+  /**
+   * @summary `entry`.
+   * @description
+   *
+   * DN of the entry to rename/move. May have subordinates. No alias
+   * deref.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly entry: LDAPDN;
+  /**
+   * @summary `newrdn`.
+   * @description
+   *
+   * New RDN. When moving without renaming, supply the old RDN.
+   * New AVA values are added to the entry.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly newrdn: RelativeLDAPDN;
+  /**
+   * @summary `deleteoldrdn`.
+   * @description
+   *
+   * TRUE: drop old-RDN attribute values (that are not also in
+   * `newrdn`). FALSE: keep them as non-distinguished values.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly deleteoldrdn: BOOLEAN;
+  /**
+   * @summary `newSuperior`.
+   * @description
+   *
+   * If present, existing object that becomes the new parent. MUST
+   * exist. No alias deref.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly newSuperior?: OPTIONAL<LDAPDN>;
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  public readonly _unrecognizedExtensionsList: _Element[];
+
   constructor(
-    /**
-     * @summary `entry`.
-     * @description
-     *
-     * DN of the entry to rename/move. May have subordinates. No alias
-     * deref.
-     *
-     * @public
-     * @readonly
-     */
-    readonly entry: LDAPDN,
-    /**
-     * @summary `newrdn`.
-     * @description
-     *
-     * New RDN. When moving without renaming, supply the old RDN.
-     * New AVA values are added to the entry.
-     *
-     * @public
-     * @readonly
-     */
-    readonly newrdn: RelativeLDAPDN,
-    /**
-     * @summary `deleteoldrdn`.
-     * @description
-     *
-     * TRUE: drop old-RDN attribute values (that are not also in
-     * `newrdn`). FALSE: keep them as non-distinguished values.
-     *
-     * @public
-     * @readonly
-     */
-    readonly deleteoldrdn: BOOLEAN,
-    /**
-     * @summary `newSuperior`.
-     * @description
-     *
-     * If present, existing object that becomes the new parent. MUST
-     * exist. No alias deref.
-     *
-     * @public
-     * @readonly
-     */
-    readonly newSuperior?: OPTIONAL<LDAPDN>,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = []
-  ) {}
+    entry: LDAPDN,
+    newrdn: RelativeLDAPDN,
+    deleteoldrdn: BOOLEAN,
+    newSuperior?: OPTIONAL<LDAPDN>,
+    _unrecognizedExtensionsList: _Element[] = []
+  ) {
+    this.entry = entry;
+    this.newrdn = newrdn;
+    this.deleteoldrdn = deleteoldrdn;
+    this.newSuperior = newSuperior;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+  }
 
   /**
    * @summary Restructures an object into a ModifyDNRequest

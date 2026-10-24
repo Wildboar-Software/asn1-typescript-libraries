@@ -52,58 +52,70 @@ import {
  *
  */
 export class MatchingRuleAssertion {
+  /**
+   * @summary `matchingRule`.
+   * @description
+   *
+   * Rule id; omit to use the attribute's EQUALITY rule (`type_`
+   * required then).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly matchingRule: OPTIONAL<MatchingRuleId>;
+  /**
+   * @summary `type_`.
+   * @description
+   *
+   * Attribute to match; omit to apply the rule to all supporting
+   * attributes. At least one of `matchingRule` / `type_` must be
+   * usable as above.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly type_: OPTIONAL<AttributeDescription>;
+  /**
+   * @summary `matchValue`.
+   * @description
+   *
+   * Encoded in the matching rule's assertion syntax.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly matchValue: AssertionValue;
+  /**
+   * @summary `dnAttributes`.
+   * @description
+   *
+   * DEFAULT FALSE. TRUE: also apply against AttributeValueAssertions
+   * in the entry's DN.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly dnAttributes?: OPTIONAL<BOOLEAN>;
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  public readonly _unrecognizedExtensionsList: _Element[];
+
   constructor(
-    /**
-     * @summary `matchingRule`.
-     * @description
-     *
-     * Rule id; omit to use the attribute's EQUALITY rule (`type_`
-     * required then).
-     *
-     * @public
-     * @readonly
-     */
-    readonly matchingRule: OPTIONAL<MatchingRuleId>,
-    /**
-     * @summary `type_`.
-     * @description
-     *
-     * Attribute to match; omit to apply the rule to all supporting
-     * attributes. At least one of `matchingRule` / `type_` must be
-     * usable as above.
-     *
-     * @public
-     * @readonly
-     */
-    readonly type_: OPTIONAL<AttributeDescription>,
-    /**
-     * @summary `matchValue`.
-     * @description
-     *
-     * Encoded in the matching rule's assertion syntax.
-     *
-     * @public
-     * @readonly
-     */
-    readonly matchValue: AssertionValue,
-    /**
-     * @summary `dnAttributes`.
-     * @description
-     *
-     * DEFAULT FALSE. TRUE: also apply against AttributeValueAssertions
-     * in the entry's DN.
-     *
-     * @public
-     * @readonly
-     */
-    readonly dnAttributes?: OPTIONAL<BOOLEAN>,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = []
-  ) {}
+    matchingRule: OPTIONAL<MatchingRuleId>,
+    type_: OPTIONAL<AttributeDescription>,
+    matchValue: AssertionValue,
+    dnAttributes?: OPTIONAL<BOOLEAN>,
+    _unrecognizedExtensionsList: _Element[] = []
+  ) {
+    this.matchingRule = matchingRule;
+    this.type_ = type_;
+    this.matchValue = matchValue;
+    this.dnAttributes = dnAttributes;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+  }
 
   /**
    * @summary Restructures an object into a MatchingRuleAssertion

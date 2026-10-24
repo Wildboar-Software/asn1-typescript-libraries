@@ -39,28 +39,34 @@ import {
  *
  */
 export class AE_title {
+  /**
+   * @summary `ap`.
+   * @description
+   *
+   * Application-process title (ISO 8650).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly ap: AP_title;
+  /**
+   * @summary `ae`.
+   * @description
+   *
+   * Application-entity qualifier (ISO 8650).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly ae: AE_qualifier;
+
   constructor(
-    /**
-     * @summary `ap`.
-     * @description
-     *
-     * Application-process title (ISO 8650).
-     *
-     * @public
-     * @readonly
-     */
-    readonly ap: AP_title,
-    /**
-     * @summary `ae`.
-     * @description
-     *
-     * Application-entity qualifier (ISO 8650).
-     *
-     * @public
-     * @readonly
-     */
-    readonly ae: AE_qualifier
-  ) {}
+    ap: AP_title,
+    ae: AE_qualifier
+  ) {
+    this.ap = ap;
+    this.ae = ae;
+  }
 
   /**
    * @summary Restructures an object into a AE_title

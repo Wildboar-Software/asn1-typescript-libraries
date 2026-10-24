@@ -34,31 +34,37 @@ import { CompactEuiccSigned2, _decode_CompactEuiccSigned2, _encode_CompactEuiccS
  */
 export
 class CompactPrepareDownloadResponseOk {
+    /**
+     * @summary `compactEuiccSigned2`.
+     * @description
+     *
+     * Compact EuiccSigned2: otPK.EUICC.ECKA unless bppEuiccOtpk was chosen, and
+     * the confirmation-code hash when the eIM has not already received it.
+     *
+     * SGP.32 v1.2, section 5.14.2.
+     * @public
+     * @readonly
+     */
+    public readonly compactEuiccSigned2: CompactEuiccSigned2;
+    /**
+     * @summary `euiccSignature2`.
+     * @description
+     *
+     * eUICC signature (tag '5F37') on the full EuiccSigned2.
+     *
+     * SGP.32 v1.2, section 5.14.2.
+     * @public
+     * @readonly
+     */
+    public readonly euiccSignature2: OCTET_STRING;
+
     constructor (
-        /**
-         * @summary `compactEuiccSigned2`.
-         * @description
-         *
-         * Compact EuiccSigned2: otPK.EUICC.ECKA unless bppEuiccOtpk was chosen, and
-         * the confirmation-code hash when the eIM has not already received it.
-         *
-         * SGP.32 v1.2, section 5.14.2.
-         * @public
-         * @readonly
-         */
-        readonly compactEuiccSigned2: CompactEuiccSigned2,
-        /**
-         * @summary `euiccSignature2`.
-         * @description
-         *
-         * eUICC signature (tag '5F37') on the full EuiccSigned2.
-         *
-         * SGP.32 v1.2, section 5.14.2.
-         * @public
-         * @readonly
-         */
-        readonly euiccSignature2: OCTET_STRING
-    ) {}
+        compactEuiccSigned2: CompactEuiccSigned2,
+        euiccSignature2: OCTET_STRING
+    ) {
+        this.compactEuiccSigned2 = compactEuiccSigned2;
+        this.euiccSignature2 = euiccSignature2;
+    }
 
     /**
      * @summary Restructures an object into a CompactPrepareDownloadResponseOk

@@ -35,18 +35,22 @@ import { _decode_ExecuteFallbackMechanismResponse_executeFallbackMechanismResult
  */
 export
 class ExecuteFallbackMechanismResponse {
+    /**
+     * @summary `executeFallbackMechanismResult`.
+     * @description
+     * Outcome of enabling the Fallback Profile and disabling the previously
+     * enabled Profile (SGP.32 v1.2, section 5.9.20). SGP.32 v1.2 does not further
+     * define undefinedError(127).
+     * @public
+     * @readonly
+     */
+    public readonly executeFallbackMechanismResult: ExecuteFallbackMechanismResponse_executeFallbackMechanismResult;
+
     constructor (
-        /**
-         * @summary `executeFallbackMechanismResult`.
-         * @description
-         * Outcome of enabling the Fallback Profile and disabling the previously
-         * enabled Profile (SGP.32 v1.2, section 5.9.20). SGP.32 v1.2 does not further
-         * define undefinedError(127).
-         * @public
-         * @readonly
-         */
-        readonly executeFallbackMechanismResult: ExecuteFallbackMechanismResponse_executeFallbackMechanismResult
-    ) {}
+        executeFallbackMechanismResult: ExecuteFallbackMechanismResponse_executeFallbackMechanismResult
+    ) {
+        this.executeFallbackMechanismResult = executeFallbackMechanismResult;
+    }
 
     /**
      * @summary Restructures an object into a ExecuteFallbackMechanismResponse

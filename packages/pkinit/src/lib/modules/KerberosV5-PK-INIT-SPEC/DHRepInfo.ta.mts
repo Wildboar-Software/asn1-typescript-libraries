@@ -71,58 +71,68 @@ import { KDFAlgorithmId, _decode_KDFAlgorithmId, _encode_KDFAlgorithmId } from "
  */
 export
 class DHRepInfo {
+    /**
+     * CMS `ContentInfo` with `contentType` `id-signedData`
+     * (`1.2.840.113549.1.7.2`) and content `SignedData`.
+     * `eContentType` is {@link id_pkinit_DHKeyData}. `eContent`
+     * is the DER encoding of {@link KDCDHKeyInfo}. One
+     * `signerInfo` signs that value. The signed attribute
+     * `content-type` must be present and equal
+     * `id-pkinit-DHKeyData`.
+     *
+     * `certificates` should be enough for the client to build a
+     * path from the KDC certificate to a trust anchor it
+     * accepts, using `trustedCertifiers` as a hint, and must
+     * not contain root CA certificates. The field may be empty
+     * when the key named by {@link PA_PK_AS_REQ.kdcPkId} signed
+     * this value. The KDC must be able to include such a set
+     * when configured to do so.
+     *
+     * [RFC 4556, section 3.2.3.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.3.1).
+     * @public
+     * @readonly
+     */
+    public readonly dhSignedData: ContentInfo;
+    /**
+     * Present if and only if
+     * {@link KDCDHKeyInfo.dhKeyExpiration} is present. When the
+     * KDC reuses Diffie-Hellman keys this must be at least as
+     * long as the key that encrypts the AS-REP, and it is
+     * concatenated into the reply-key seed. See the type
+     * description.
+     *
+     * [RFC 4556, section 3.2.3.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.3.1).
+     * @public
+     * @readonly
+     */
+    public readonly serverDHNonce?: OPTIONAL<DHNonce>;
+    /**
+     * Key-derivation function the KDC selected. RFC 4556 does
+     * not define this field and its reply-key calculation does
+     * not use it. The module says RFC 8636 added the field.
+     * This module does not include that specification's rules.
+     * @public
+     * @readonly
+     */
+    public readonly kdf?: OPTIONAL<KDFAlgorithmId>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * CMS `ContentInfo` with `contentType` `id-signedData`
-         * (`1.2.840.113549.1.7.2`) and content `SignedData`.
-         * `eContentType` is {@link id_pkinit_DHKeyData}. `eContent`
-         * is the DER encoding of {@link KDCDHKeyInfo}. One
-         * `signerInfo` signs that value. The signed attribute
-         * `content-type` must be present and equal
-         * `id-pkinit-DHKeyData`.
-         *
-         * `certificates` should be enough for the client to build a
-         * path from the KDC certificate to a trust anchor it
-         * accepts, using `trustedCertifiers` as a hint, and must
-         * not contain root CA certificates. The field may be empty
-         * when the key named by {@link PA_PK_AS_REQ.kdcPkId} signed
-         * this value. The KDC must be able to include such a set
-         * when configured to do so.
-         *
-         * [RFC 4556, section 3.2.3.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.3.1).
-         * @public
-         * @readonly
-         */
-        readonly dhSignedData: ContentInfo,
-        /**
-         * Present if and only if
-         * {@link KDCDHKeyInfo.dhKeyExpiration} is present. When the
-         * KDC reuses Diffie-Hellman keys this must be at least as
-         * long as the key that encrypts the AS-REP, and it is
-         * concatenated into the reply-key seed. See the type
-         * description.
-         *
-         * [RFC 4556, section 3.2.3.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.3.1).
-         * @public
-         * @readonly
-         */
-        readonly serverDHNonce?: OPTIONAL<DHNonce>,
-        /**
-         * Key-derivation function the KDC selected. RFC 4556 does
-         * not define this field and its reply-key calculation does
-         * not use it. The module says RFC 8636 added the field.
-         * This module does not include that specification's rules.
-         * @public
-         * @readonly
-         */
-        readonly kdf?: OPTIONAL<KDFAlgorithmId>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        dhSignedData: ContentInfo,
+        serverDHNonce?: OPTIONAL<DHNonce>,
+        kdf?: OPTIONAL<KDFAlgorithmId>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.dhSignedData = dhSignedData;
+        this.serverDHNonce = serverDHNonce;
+        this.kdf = kdf;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a DHRepInfo

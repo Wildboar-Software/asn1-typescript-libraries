@@ -41,35 +41,43 @@ import {
  *
  */
 export class AttributeValueAssertion {
+  /**
+   * @summary `attributeDesc`.
+   * @description
+   *
+   * Attribute type (and options) whose values are asserted.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly attributeDesc: AttributeDescription;
+  /**
+   * @summary `assertionValue`.
+   * @description
+   *
+   * Encoded in the matching rule's assertion syntax, which may differ
+   * from the attribute value syntax.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly assertionValue: AssertionValue;
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  public readonly _unrecognizedExtensionsList: _Element[];
+
   constructor(
-    /**
-     * @summary `attributeDesc`.
-     * @description
-     *
-     * Attribute type (and options) whose values are asserted.
-     *
-     * @public
-     * @readonly
-     */
-    readonly attributeDesc: AttributeDescription,
-    /**
-     * @summary `assertionValue`.
-     * @description
-     *
-     * Encoded in the matching rule's assertion syntax, which may differ
-     * from the attribute value syntax.
-     *
-     * @public
-     * @readonly
-     */
-    readonly assertionValue: AssertionValue,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = []
-  ) {}
+    attributeDesc: AttributeDescription,
+    assertionValue: AssertionValue,
+    _unrecognizedExtensionsList: _Element[] = []
+  ) {
+    this.attributeDesc = attributeDesc;
+    this.assertionValue = assertionValue;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+  }
 
   /**
    * @summary Restructures an object into a AttributeValueAssertion

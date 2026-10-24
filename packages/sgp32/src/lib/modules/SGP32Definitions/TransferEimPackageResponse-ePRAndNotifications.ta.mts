@@ -33,28 +33,34 @@ import { PendingNotificationList, _decode_PendingNotificationList, _encode_Pendi
  */
 export
 class TransferEimPackageResponse_ePRAndNotifications {
+    /**
+     * @summary `euiccPackageResult`.
+     * @description
+     * Signed result of the eUICC Package the IPA just loaded. Sent together with
+     * notificationList. SGP.32 v1.2, sections 5.14.4 and 6.3.3.1.
+     * @public
+     * @readonly
+     */
+    public readonly euiccPackageResult: EuiccPackageResult;
+    /**
+     * @summary `notificationList`.
+     * @description
+     * Pending Notifications retrieved with ES10b.RetrieveNotificationsList after a
+     * package that contained PSMOs. Empty lists are omitted: the IPA includes the
+     * list when retrieval is non-empty. Compact form is preferred when the IPA has
+     * minimizeEsipaBytes. SGP.32 v1.2, sections 5.14.4 and 5.14.7.
+     * @public
+     * @readonly
+     */
+    public readonly notificationList: PendingNotificationList;
+
     constructor (
-        /**
-         * @summary `euiccPackageResult`.
-         * @description
-         * Signed result of the eUICC Package the IPA just loaded. Sent together with
-         * notificationList. SGP.32 v1.2, sections 5.14.4 and 6.3.3.1.
-         * @public
-         * @readonly
-         */
-        readonly euiccPackageResult: EuiccPackageResult,
-        /**
-         * @summary `notificationList`.
-         * @description
-         * Pending Notifications retrieved with ES10b.RetrieveNotificationsList after a
-         * package that contained PSMOs. Empty lists are omitted: the IPA includes the
-         * list when retrieval is non-empty. Compact form is preferred when the IPA has
-         * minimizeEsipaBytes. SGP.32 v1.2, sections 5.14.4 and 5.14.7.
-         * @public
-         * @readonly
-         */
-        readonly notificationList: PendingNotificationList
-    ) {}
+        euiccPackageResult: EuiccPackageResult,
+        notificationList: PendingNotificationList
+    ) {
+        this.euiccPackageResult = euiccPackageResult;
+        this.notificationList = notificationList;
+    }
 
     /**
      * @summary Restructures an object into a TransferEimPackageResponse_ePRAndNotifications

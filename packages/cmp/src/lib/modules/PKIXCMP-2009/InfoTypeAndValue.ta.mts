@@ -33,30 +33,36 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class InfoTypeAndValue {
+  /**
+   * @summary `infoType`.
+   * @description
+   *
+   * OID identifying the information type (e.g., id-it values in
+   * [RFC 4210 §5.3.19](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.19)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly infoType: OBJECT_IDENTIFIER;
+  /**
+   * @summary `infoValue`.
+   * @description
+   *
+   * Value defined by `infoType`; may be absent for some types
+   * ([RFC 4210 §5.3.19](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.19)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly infoValue: _Element;
+
   constructor(
-    /**
-     * @summary `infoType`.
-     * @description
-     *
-     * OID identifying the information type (e.g., id-it values in
-     * [RFC 4210 §5.3.19](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.19)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly infoType: OBJECT_IDENTIFIER,
-    /**
-     * @summary `infoValue`.
-     * @description
-     *
-     * Value defined by `infoType`; may be absent for some types
-     * ([RFC 4210 §5.3.19](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.19)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly infoValue: _Element
-  ) {}
+    infoType: OBJECT_IDENTIFIER,
+    infoValue: _Element
+  ) {
+    this.infoType = infoType;
+    this.infoValue = infoValue;
+  }
 
   /**
    * @summary Restructures an object into a InfoTypeAndValue

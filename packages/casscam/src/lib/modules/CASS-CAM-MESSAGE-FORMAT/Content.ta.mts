@@ -41,82 +41,96 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class Content {
+    /**
+     * @summary `cHK`.
+     * @description
+     *
+     * Common hash key (CHK), 20 octets.
+     * `CHK = SHA1[RANDCHK||CASS_Info]` (§8.3). HMAC
+     * key for RCASAnnounce/RCASRenewal. The CAM must
+     * obtain a new CHK via KeyResponse if virgin,
+     * CASS-zone move, or CHK mismatch (§7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cHK: OCTET_STRING;
+    /**
+     * @summary `iHK`.
+     * @description
+     *
+     * Individual hash key (IHK), 20 octets.
+     * `IHK = SHA1[RANDIHK||CASS_IP||Key_Paring_ID]`
+     * (§8.3). HMAC key for CAMRegConfirm (§7.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly iHK: OCTET_STRING;
+    /**
+     * @summary `rAND_AC_1`.
+     * @description
+     *
+     * First of three RAND_AC values, 16 octets,
+     * unique among the three (§8.3). With pre-shared
+     * Ki, used to produce Kc (COMP128-4 /
+     * GSM-MILENAGE recommended) for MEK and ICCIEK
+     * generation (Figure 4, §7.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rAND_AC_1: OCTET_STRING;
+    /**
+     * @summary `rAND_AC_2`.
+     * @description
+     *
+     * Second RAND_AC value, 16 octets, unique among
+     * the three (§8.3). See `rAND_AC_1`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rAND_AC_2: OCTET_STRING;
+    /**
+     * @summary `rAND_AC_3`.
+     * @description
+     *
+     * Third RAND_AC value, 16 octets, unique among
+     * the three (§8.3). See `rAND_AC_1`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rAND_AC_3: OCTET_STRING;
+    /**
+     * @summary `kPK`.
+     * @description
+     *
+     * Key pairing key (KPK), 20 octets. The AC
+     * generates it if KeyPairingID is valid
+     * (§3.2.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly kPK: OCTET_STRING;
+
     constructor (
-        /**
-         * @summary `cHK`.
-         * @description
-         *
-         * Common hash key (CHK), 20 octets.
-         * `CHK = SHA1[RANDCHK||CASS_Info]` (§8.3). HMAC
-         * key for RCASAnnounce/RCASRenewal. The CAM must
-         * obtain a new CHK via KeyResponse if virgin,
-         * CASS-zone move, or CHK mismatch (§7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cHK: OCTET_STRING,
-        /**
-         * @summary `iHK`.
-         * @description
-         *
-         * Individual hash key (IHK), 20 octets.
-         * `IHK = SHA1[RANDIHK||CASS_IP||Key_Paring_ID]`
-         * (§8.3). HMAC key for CAMRegConfirm (§7.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly iHK: OCTET_STRING,
-        /**
-         * @summary `rAND_AC_1`.
-         * @description
-         *
-         * First of three RAND_AC values, 16 octets,
-         * unique among the three (§8.3). With pre-shared
-         * Ki, used to produce Kc (COMP128-4 /
-         * GSM-MILENAGE recommended) for MEK and ICCIEK
-         * generation (Figure 4, §7.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly rAND_AC_1: OCTET_STRING,
-        /**
-         * @summary `rAND_AC_2`.
-         * @description
-         *
-         * Second RAND_AC value, 16 octets, unique among
-         * the three (§8.3). See `rAND_AC_1`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly rAND_AC_2: OCTET_STRING,
-        /**
-         * @summary `rAND_AC_3`.
-         * @description
-         *
-         * Third RAND_AC value, 16 octets, unique among
-         * the three (§8.3). See `rAND_AC_1`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly rAND_AC_3: OCTET_STRING,
-        /**
-         * @summary `kPK`.
-         * @description
-         *
-         * Key pairing key (KPK), 20 octets. The AC
-         * generates it if KeyPairingID is valid
-         * (§3.2.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly kPK: OCTET_STRING
-    ) {}
+        cHK: OCTET_STRING,
+        iHK: OCTET_STRING,
+        rAND_AC_1: OCTET_STRING,
+        rAND_AC_2: OCTET_STRING,
+        rAND_AC_3: OCTET_STRING,
+        kPK: OCTET_STRING
+    ) {
+        this.cHK = cHK;
+        this.iHK = iHK;
+        this.rAND_AC_1 = rAND_AC_1;
+        this.rAND_AC_2 = rAND_AC_2;
+        this.rAND_AC_3 = rAND_AC_3;
+        this.kPK = kPK;
+    }
 
     /**
      * @summary Restructures an object into a Content

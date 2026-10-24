@@ -42,46 +42,53 @@ import { HashAlgAndValue, _decode_HashAlgAndValue, _encode_HashAlgAndValue } fro
  */
 export
 class LogotypeDetails {
+    /**
+     * MIME media type of the file, optionally with parameters.
+     * Clients accept `image/jpeg` and `image/gif`. Animated images
+     * should not be used. Clients that support audio accept
+     * `audio/mpeg`. Other media types are permitted. A client that
+     * cannot present the type ignores the logotype.
+     *
+     * [RFC 3709, section 4.1](https://www.rfc-editor.org/rfc/rfc3709#section-4.1)
+     * and [section 6](https://www.rfc-editor.org/rfc/rfc3709#section-6).
+     * @public
+     * @readonly
+     */
+    public readonly mediaType: IA5String;
+    /**
+     * One-way hashes of the entire referenced file. One of them is
+     * SHA-1. Further algorithms may be included. The client
+     * computes one of these hashes over the fetched bytes and
+     * discards the file on mismatch.
+     *
+     * [RFC 3709, section 4.1](https://www.rfc-editor.org/rfc/rfc3709#section-4.1).
+     * @public
+     * @readonly
+     */
+    public readonly logotypeHash: HashAlgAndValue[];
+    /**
+     * Replicas of this same file. If one URI fails, try another in
+     * the sequence. Every URI uses the `http` or `ftp` scheme, and
+     * at least one uses `http`. Clients retrieve the file with
+     * HTTP/1.1, and may use FTP. Clients should cache the result.
+     * Fetching can reveal to observers of that host that this
+     * certificate is in use.
+     *
+     * [RFC 3709, section 4.1](https://www.rfc-editor.org/rfc/rfc3709#section-4.1)
+     * and [section 7](https://www.rfc-editor.org/rfc/rfc3709#section-7).
+     * @public
+     * @readonly
+     */
+    public readonly logotypeURI: IA5String[];
+
     constructor (
-        /**
-         * MIME media type of the file, optionally with parameters.
-         * Clients accept `image/jpeg` and `image/gif`. Animated images
-         * should not be used. Clients that support audio accept
-         * `audio/mpeg`. Other media types are permitted. A client that
-         * cannot present the type ignores the logotype.
-         *
-         * [RFC 3709, section 4.1](https://www.rfc-editor.org/rfc/rfc3709#section-4.1)
-         * and [section 6](https://www.rfc-editor.org/rfc/rfc3709#section-6).
-         * @public
-         * @readonly
-         */
-        readonly mediaType: IA5String,
-        /**
-         * One-way hashes of the entire referenced file. One of them is
-         * SHA-1. Further algorithms may be included. The client
-         * computes one of these hashes over the fetched bytes and
-         * discards the file on mismatch.
-         *
-         * [RFC 3709, section 4.1](https://www.rfc-editor.org/rfc/rfc3709#section-4.1).
-         * @public
-         * @readonly
-         */
-        readonly logotypeHash: HashAlgAndValue[],
-        /**
-         * Replicas of this same file. If one URI fails, try another in
-         * the sequence. Every URI uses the `http` or `ftp` scheme, and
-         * at least one uses `http`. Clients retrieve the file with
-         * HTTP/1.1, and may use FTP. Clients should cache the result.
-         * Fetching can reveal to observers of that host that this
-         * certificate is in use.
-         *
-         * [RFC 3709, section 4.1](https://www.rfc-editor.org/rfc/rfc3709#section-4.1)
-         * and [section 7](https://www.rfc-editor.org/rfc/rfc3709#section-7).
-         * @public
-         * @readonly
-         */
-        readonly logotypeURI: IA5String[]
+        mediaType: IA5String,
+        logotypeHash: HashAlgAndValue[],
+        logotypeURI: IA5String[]
     ) {
+        this.mediaType = mediaType;
+        this.logotypeHash = logotypeHash;
+        this.logotypeURI = logotypeURI;
         if (logotypeHash.length < 1) {
             throw new ASN1SizeError("LogotypeDetails.logotypeHash violates SIZE constraint");
         }

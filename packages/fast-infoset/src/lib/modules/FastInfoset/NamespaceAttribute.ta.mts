@@ -44,27 +44,33 @@ import {
  *
  */
 export class NamespaceAttribute {
+  /**
+   * @summary `prefix`.
+   * @description Absent for a default namespace declaration;
+   * otherwise [local name] of the `xmlns:` attribute (PREFIX
+   * category). ITU-T Rec. X.891 (05/2005) §7.12.5.
+   * @public
+   * @readonly
+   */
+  public readonly prefix?: OPTIONAL<IdentifyingStringOrIndex>;
+  /**
+   * @summary `namespace_name`.
+   * @description [normalized value] of the declaration
+   * (NAMESPACE NAME category). Absent if that value is empty
+   * (undeclare the default namespace). ITU-T Rec. X.891
+   * (05/2005) §7.12.6.
+   * @public
+   * @readonly
+   */
+  public readonly namespace_name?: OPTIONAL<IdentifyingStringOrIndex>;
+
   constructor(
-    /**
-     * @summary `prefix`.
-     * @description Absent for a default namespace declaration;
-     * otherwise [local name] of the `xmlns:` attribute (PREFIX
-     * category). ITU-T Rec. X.891 (05/2005) §7.12.5.
-     * @public
-     * @readonly
-     */
-    readonly prefix?: OPTIONAL<IdentifyingStringOrIndex>,
-    /**
-     * @summary `namespace_name`.
-     * @description [normalized value] of the declaration
-     * (NAMESPACE NAME category). Absent if that value is empty
-     * (undeclare the default namespace). ITU-T Rec. X.891
-     * (05/2005) §7.12.6.
-     * @public
-     * @readonly
-     */
-    readonly namespace_name?: OPTIONAL<IdentifyingStringOrIndex>
-  ) {}
+    prefix?: OPTIONAL<IdentifyingStringOrIndex>,
+    namespace_name?: OPTIONAL<IdentifyingStringOrIndex>
+  ) {
+    this.prefix = prefix;
+    this.namespace_name = namespace_name;
+  }
 
   /**
    * @summary Restructures an object into a NamespaceAttribute

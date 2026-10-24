@@ -35,20 +35,26 @@ import {
  *
  */
 export class BPUReportContentInformation {
+    /**
+     * @summary `bpuFunctionReport`.
+     * @public
+     * @readonly
+     */
+    public readonly bpuFunctionReport: BPUFunctionReport;
+    /**
+     * @summary `bpuSecurityReport`.
+     * @public
+     * @readonly
+     */
+    public readonly bpuSecurityReport: BPUSecurityReport;
+
     constructor(
-        /**
-         * @summary `bpuFunctionReport`.
-         * @public
-         * @readonly
-         */
-        readonly bpuFunctionReport: BPUFunctionReport,
-        /**
-         * @summary `bpuSecurityReport`.
-         * @public
-         * @readonly
-         */
-        readonly bpuSecurityReport: BPUSecurityReport
-    ) {}
+        bpuFunctionReport: BPUFunctionReport,
+        bpuSecurityReport: BPUSecurityReport
+    ) {
+        this.bpuFunctionReport = bpuFunctionReport;
+        this.bpuSecurityReport = bpuSecurityReport;
+    }
 
     /**
      * @summary Restructures an object into a BPUReportContentInformation

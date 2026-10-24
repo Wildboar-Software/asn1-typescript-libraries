@@ -31,29 +31,35 @@ import {
  *
  */
 export class EquivalentPolicy {
+    /**
+     * @summary `securityPolicyId`.
+     * @description
+     *
+     * OID of the equivalent policy. X.841 §6.2.2.8.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly securityPolicyId: OBJECT_IDENTIFIER;
+    /**
+     * @summary `securityPolicyName`.
+     * @description
+     *
+     * Display name of that policy. SIZE 1..256
+     * (`ubObjectIdNameLength`). X.841 §6.2.2.8.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly securityPolicyName?: OPTIONAL<SecurityPolicyName>;
+
     constructor(
-        /**
-         * @summary `securityPolicyId`.
-         * @description
-         *
-         * OID of the equivalent policy. X.841 §6.2.2.8.
-         *
-         * @public
-         * @readonly
-         */
-        readonly securityPolicyId: OBJECT_IDENTIFIER,
-        /**
-         * @summary `securityPolicyName`.
-         * @description
-         *
-         * Display name of that policy. SIZE 1..256
-         * (`ubObjectIdNameLength`). X.841 §6.2.2.8.
-         *
-         * @public
-         * @readonly
-         */
-        readonly securityPolicyName?: OPTIONAL<SecurityPolicyName>
-    ) {}
+        securityPolicyId: OBJECT_IDENTIFIER,
+        securityPolicyName?: OPTIONAL<SecurityPolicyName>
+    ) {
+        this.securityPolicyId = securityPolicyId;
+        this.securityPolicyName = securityPolicyName;
+    }
 
     /**
      * @summary Restructures an object into a EquivalentPolicy

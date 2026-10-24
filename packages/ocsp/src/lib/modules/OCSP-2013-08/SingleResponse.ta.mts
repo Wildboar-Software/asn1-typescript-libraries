@@ -50,75 +50,87 @@ import {
  *
  */
 export class SingleResponse {
+    /**
+     * @summary `certID`.
+     * @description
+     *
+     * Identifier of the certificate for which revocation status is
+     * provided
+     * ([RFC 6960 §4.2.2.3](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.2.3)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certID: CertID;
+    /**
+     * @summary `certStatus`.
+     * @description
+     *
+     * Revocation status: `good`, `revoked`, or `unknown`
+     * ([RFC 6960 §2.2](https://datatracker.ietf.org/doc/html/rfc6960#section-2.2),
+     * [§4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certStatus: CertStatus;
+    /**
+     * @summary `thisUpdate`.
+     * @description
+     *
+     * Most recent time at which the status being indicated is
+     * known by the responder to have been correct
+     * ([RFC 6960 §2.4](https://datatracker.ietf.org/doc/html/rfc6960#section-2.4)).
+     * With `nextUpdate`, defines a recommended validity interval
+     * (§4.2.2.1). Responses whose `thisUpdate` is later than the
+     * local system time SHOULD be considered unreliable.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly thisUpdate: GeneralizedTime;
+    /**
+     * @summary `nextUpdate`.
+     * @description
+     *
+     * Time at or before which newer information will be available
+     * about the status of the certificate
+     * ([RFC 6960 §2.4](https://datatracker.ietf.org/doc/html/rfc6960#section-2.4)).
+     * If not set, the responder indicates that newer revocation
+     * information is available all the time (§4.2.2.1). Responses
+     * whose `nextUpdate` is earlier than the local system time
+     * SHOULD be considered unreliable.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly nextUpdate?: OPTIONAL<GeneralizedTime>;
+    /**
+     * @summary `singleExtensions`.
+     * @description
+     *
+     * Optional extensions for this single response (e.g. CRL
+     * references, archive cutoff, CRL entry extensions). See
+     * [RFC 6960 §4.4](https://datatracker.ietf.org/doc/html/rfc6960#section-4.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly singleExtensions?: OPTIONAL<Extensions>;
+
     constructor(
-        /**
-         * @summary `certID`.
-         * @description
-         *
-         * Identifier of the certificate for which revocation status is
-         * provided
-         * ([RFC 6960 §4.2.2.3](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.2.3)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly certID: CertID,
-        /**
-         * @summary `certStatus`.
-         * @description
-         *
-         * Revocation status: `good`, `revoked`, or `unknown`
-         * ([RFC 6960 §2.2](https://datatracker.ietf.org/doc/html/rfc6960#section-2.2),
-         * [§4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly certStatus: CertStatus,
-        /**
-         * @summary `thisUpdate`.
-         * @description
-         *
-         * Most recent time at which the status being indicated is
-         * known by the responder to have been correct
-         * ([RFC 6960 §2.4](https://datatracker.ietf.org/doc/html/rfc6960#section-2.4)).
-         * With `nextUpdate`, defines a recommended validity interval
-         * (§4.2.2.1). Responses whose `thisUpdate` is later than the
-         * local system time SHOULD be considered unreliable.
-         *
-         * @public
-         * @readonly
-         */
-        readonly thisUpdate: GeneralizedTime,
-        /**
-         * @summary `nextUpdate`.
-         * @description
-         *
-         * Time at or before which newer information will be available
-         * about the status of the certificate
-         * ([RFC 6960 §2.4](https://datatracker.ietf.org/doc/html/rfc6960#section-2.4)).
-         * If not set, the responder indicates that newer revocation
-         * information is available all the time (§4.2.2.1). Responses
-         * whose `nextUpdate` is earlier than the local system time
-         * SHOULD be considered unreliable.
-         *
-         * @public
-         * @readonly
-         */
-        readonly nextUpdate?: OPTIONAL<GeneralizedTime>,
-        /**
-         * @summary `singleExtensions`.
-         * @description
-         *
-         * Optional extensions for this single response (e.g. CRL
-         * references, archive cutoff, CRL entry extensions). See
-         * [RFC 6960 §4.4](https://datatracker.ietf.org/doc/html/rfc6960#section-4.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly singleExtensions?: OPTIONAL<Extensions>
-    ) {}
+        certID: CertID,
+        certStatus: CertStatus,
+        thisUpdate: GeneralizedTime,
+        nextUpdate?: OPTIONAL<GeneralizedTime>,
+        singleExtensions?: OPTIONAL<Extensions>
+    ) {
+        this.certID = certID;
+        this.certStatus = certStatus;
+        this.thisUpdate = thisUpdate;
+        this.nextUpdate = nextUpdate;
+        this.singleExtensions = singleExtensions;
+    }
 
     /**
      * @summary Restructures an object into a SingleResponse

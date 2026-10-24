@@ -50,48 +50,57 @@ import { KerberosTime, _decode_KerberosTime, _encode_KerberosTime } from "@wildb
  */
 export
 class KDCDHKeyInfo {
+    /**
+     * KDC Diffie-Hellman public value, a bit string encoded as
+     * in [RFC 3279](https://www.rfc-editor.org/rfc/rfc3279).
+     * Must not be used after `dhKeyExpiration` when that field
+     * is present.
+     *
+     * [RFC 4556, section 3.2.3.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.3.1).
+     * @public
+     * @readonly
+     */
+    public readonly subjectPublicKey: BIT_STRING;
+    /**
+     * {@link PKAuthenticator.nonce} from the request when
+     * Diffie-Hellman keys are not reused, and 0 when they are.
+     *
+     * [RFC 4556, section 3.2.3.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.3.1).
+     * @public
+     * @readonly
+     */
+    public readonly nonce: INTEGER;
+    /**
+     * Expiration of the KDC's Diffie-Hellman key pair. Present
+     * if and only if those keys are reused. After this time
+     * RFC 4556 treats the signature over the DH reply as
+     * invalid, and {@link DHRepInfo.serverDHNonce} must be
+     * present. If this field is omitted, `serverDHNonce` must
+     * be omitted too. The KDC should not reuse keys unless the
+     * request included {@link AuthPack.clientDHNonce}.
+     *
+     * [RFC 4556, section 3.2.3.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.3.1).
+     * @public
+     * @readonly
+     */
+    public readonly dhKeyExpiration?: OPTIONAL<KerberosTime>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * KDC Diffie-Hellman public value, a bit string encoded as
-         * in [RFC 3279](https://www.rfc-editor.org/rfc/rfc3279).
-         * Must not be used after `dhKeyExpiration` when that field
-         * is present.
-         *
-         * [RFC 4556, section 3.2.3.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.3.1).
-         * @public
-         * @readonly
-         */
-        readonly subjectPublicKey: BIT_STRING,
-        /**
-         * {@link PKAuthenticator.nonce} from the request when
-         * Diffie-Hellman keys are not reused, and 0 when they are.
-         *
-         * [RFC 4556, section 3.2.3.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.3.1).
-         * @public
-         * @readonly
-         */
-        readonly nonce: INTEGER,
-        /**
-         * Expiration of the KDC's Diffie-Hellman key pair. Present
-         * if and only if those keys are reused. After this time
-         * RFC 4556 treats the signature over the DH reply as
-         * invalid, and {@link DHRepInfo.serverDHNonce} must be
-         * present. If this field is omitted, `serverDHNonce` must
-         * be omitted too. The KDC should not reuse keys unless the
-         * request included {@link AuthPack.clientDHNonce}.
-         *
-         * [RFC 4556, section 3.2.3.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.3.1).
-         * @public
-         * @readonly
-         */
-        readonly dhKeyExpiration?: OPTIONAL<KerberosTime>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
+        subjectPublicKey: BIT_STRING,
+        nonce: INTEGER,
+        dhKeyExpiration?: OPTIONAL<KerberosTime>,
+        _unrecognizedExtensionsList: _Element[] = []
     ) {
+        this.subjectPublicKey = subjectPublicKey;
+        this.nonce = nonce;
+        this.dhKeyExpiration = dhKeyExpiration;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
         const nonceNumber = typeof this.nonce === "bigint" ? Number(this.nonce) : this.nonce;
         if (nonceNumber < 0 || nonceNumber > 4294967295) {
             throw new ASN1OverflowError("KDCDHKeyInfo.nonce violates INTEGER range");

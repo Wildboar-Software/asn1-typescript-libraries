@@ -63,62 +63,74 @@ import {
  *
  */
 export class F_CREATE_response {
+  /**
+   * @summary `state_result`.
+   * @description
+   *
+   * Select regime established for an existing or newly created
+   * file, or select failed. Default `success`.
+   * ISO 8571-3:1988 §15.3.2.1.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly state_result: OPTIONAL<State_Result>;
+  /**
+   * @summary `action_result`.
+   * @description
+   *
+   * Whether create succeeded. May succeed while select fails.
+   * Default `success`. ISO 8571-3:1988 §15.3.2.2.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly action_result: OPTIONAL<Action_Result>;
+  /**
+   * @summary `initial_attributes`.
+   * @description
+   *
+   * Associated values; responder reports local modification of
+   * filename or permitted-actions. ISO 8571-3:1988 §15.3.2.4.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly initial_attributes: Create_Attributes;
+  /**
+   * @summary `shared_ASE_information`.
+   * @description
+   *
+   * ISO 8571-3:1988 §15.3.2.9 / §13.10.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>;
+  /**
+   * @summary `diagnostic`.
+   * @description
+   *
+   * ISO 8571-3:1988 §15.3.2.11 / §13.13.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly diagnostic?: OPTIONAL<Diagnostic>;
+
   constructor(
-    /**
-     * @summary `state_result`.
-     * @description
-     *
-     * Select regime established for an existing or newly created
-     * file, or select failed. Default `success`.
-     * ISO 8571-3:1988 §15.3.2.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly state_result: OPTIONAL<State_Result>,
-    /**
-     * @summary `action_result`.
-     * @description
-     *
-     * Whether create succeeded. May succeed while select fails.
-     * Default `success`. ISO 8571-3:1988 §15.3.2.2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly action_result: OPTIONAL<Action_Result>,
-    /**
-     * @summary `initial_attributes`.
-     * @description
-     *
-     * Associated values; responder reports local modification of
-     * filename or permitted-actions. ISO 8571-3:1988 §15.3.2.4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly initial_attributes: Create_Attributes,
-    /**
-     * @summary `shared_ASE_information`.
-     * @description
-     *
-     * ISO 8571-3:1988 §15.3.2.9 / §13.10.
-     *
-     * @public
-     * @readonly
-     */
-    readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
-    /**
-     * @summary `diagnostic`.
-     * @description
-     *
-     * ISO 8571-3:1988 §15.3.2.11 / §13.13.
-     *
-     * @public
-     * @readonly
-     */
-    readonly diagnostic?: OPTIONAL<Diagnostic>
-  ) {}
+    state_result: OPTIONAL<State_Result>,
+    action_result: OPTIONAL<Action_Result>,
+    initial_attributes: Create_Attributes,
+    shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
+    diagnostic?: OPTIONAL<Diagnostic>
+  ) {
+    this.state_result = state_result;
+    this.action_result = action_result;
+    this.initial_attributes = initial_attributes;
+    this.shared_ASE_information = shared_ASE_information;
+    this.diagnostic = diagnostic;
+  }
 
   /**
    * @summary Restructures an object into a F_CREATE_response

@@ -35,20 +35,24 @@ import {
  *
  */
 export class F_CHANGE_ATTRIB_request {
+  /**
+   * @summary `attributes`.
+   * @description
+   *
+   * Names and new values for kernel or negotiated-group attributes
+   * that ISO 8571-2:1988 §12 permits to change. Unnamed attributes
+   * are neither changed nor returned. ISO 8571-3:1988 §16.2.2.2.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly attributes: Change_Attributes;
+
   constructor(
-    /**
-     * @summary `attributes`.
-     * @description
-     *
-     * Names and new values for kernel or negotiated-group attributes
-     * that ISO 8571-2:1988 §12 permits to change. Unnamed attributes
-     * are neither changed nor returned. ISO 8571-3:1988 §16.2.2.2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly attributes: Change_Attributes
-  ) {}
+    attributes: Change_Attributes
+  ) {
+    this.attributes = attributes;
+  }
 
   /**
    * @summary Restructures an object into a F_CHANGE_ATTRIB_request

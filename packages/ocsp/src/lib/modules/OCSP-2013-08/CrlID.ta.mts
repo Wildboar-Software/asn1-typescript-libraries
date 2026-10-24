@@ -32,41 +32,49 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class CrlID {
+    /**
+     * @summary `crlUrl`.
+     * @description
+     *
+     * URL at which the CRL is available
+     * ([RFC 6960 §4.4.2](https://datatracker.ietf.org/doc/html/rfc6960#section-4.4.2)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly crlUrl?: OPTIONAL<IA5String>;
+    /**
+     * @summary `crlNum`.
+     * @description
+     *
+     * Value of the CRL number extension of the relevant CRL
+     * ([RFC 6960 §4.4.2](https://datatracker.ietf.org/doc/html/rfc6960#section-4.4.2)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly crlNum?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `crlTime`.
+     * @description
+     *
+     * Time at which the relevant CRL was issued
+     * ([RFC 6960 §4.4.2](https://datatracker.ietf.org/doc/html/rfc6960#section-4.4.2)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly crlTime?: OPTIONAL<GeneralizedTime>;
+
     constructor(
-        /**
-         * @summary `crlUrl`.
-         * @description
-         *
-         * URL at which the CRL is available
-         * ([RFC 6960 §4.4.2](https://datatracker.ietf.org/doc/html/rfc6960#section-4.4.2)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly crlUrl?: OPTIONAL<IA5String>,
-        /**
-         * @summary `crlNum`.
-         * @description
-         *
-         * Value of the CRL number extension of the relevant CRL
-         * ([RFC 6960 §4.4.2](https://datatracker.ietf.org/doc/html/rfc6960#section-4.4.2)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly crlNum?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `crlTime`.
-         * @description
-         *
-         * Time at which the relevant CRL was issued
-         * ([RFC 6960 §4.4.2](https://datatracker.ietf.org/doc/html/rfc6960#section-4.4.2)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly crlTime?: OPTIONAL<GeneralizedTime>
-    ) {}
+        crlUrl?: OPTIONAL<IA5String>,
+        crlNum?: OPTIONAL<INTEGER>,
+        crlTime?: OPTIONAL<GeneralizedTime>
+    ) {
+        this.crlUrl = crlUrl;
+        this.crlNum = crlNum;
+        this.crlTime = crlTime;
+    }
 
     /**
      * @summary Restructures an object into a CrlID

@@ -31,30 +31,36 @@ import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59Strin
  */
 export
 class V8bisDiag_Item_cR {
+    /**
+     * @summary `cRtype`.
+     * @description
+     *
+     * CR type transmitted or received (Table 8/V.59). Tag-ID `0804`. ITU-T
+     * Rec. V.59 (11/2000) §6.8.2.
+     * @public
+     * @readonly
+     */
+    public readonly cRtype: V8bisSignalType;
+    /**
+     * @summary `cRSequence`.
+     * @description
+     *
+     * CR sequence transmitted or received. Hex `dataSequence` (§6.2.2):
+     * first bit in time is the LSB of each hex word; omit start/stop/fill
+     * bits and CRCs; `;` delimits N-bit words. Tag-ID `0805`. ITU-T Rec.
+     * V.59 (11/2000) §6.8.2.
+     * @public
+     * @readonly
+     */
+    public readonly cRSequence: V59String;
+
     constructor (
-        /**
-         * @summary `cRtype`.
-         * @description
-         *
-         * CR type transmitted or received (Table 8/V.59). Tag-ID `0804`. ITU-T
-         * Rec. V.59 (11/2000) §6.8.2.
-         * @public
-         * @readonly
-         */
-        readonly cRtype: V8bisSignalType,
-        /**
-         * @summary `cRSequence`.
-         * @description
-         *
-         * CR sequence transmitted or received. Hex `dataSequence` (§6.2.2):
-         * first bit in time is the LSB of each hex word; omit start/stop/fill
-         * bits and CRCs; `;` delimits N-bit words. Tag-ID `0805`. ITU-T Rec.
-         * V.59 (11/2000) §6.8.2.
-         * @public
-         * @readonly
-         */
-        readonly cRSequence: V59String
-    ) {}
+        cRtype: V8bisSignalType,
+        cRSequence: V59String
+    ) {
+        this.cRtype = cRtype;
+        this.cRSequence = cRSequence;
+    }
 
     /**
      * @summary Restructures an object into a V8bisDiag_Item_cR

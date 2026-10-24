@@ -25,20 +25,26 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class EncapsulatedContentInfoACBio {
+    /**
+     * @summary `eContentType`.
+     * @public
+     * @readonly
+     */
+    public readonly eContentType: _Element; /* COULD_NOT_RESOLVE_OBJECT_CLASS_DEF */
+    /**
+     * @summary `eContent`.
+     * @public
+     * @readonly
+     */
+    public readonly eContent: _Element; /* COULD_NOT_RESOLVE_OBJECT_CLASS_DEF */
+
     constructor(
-        /**
-         * @summary `eContentType`.
-         * @public
-         * @readonly
-         */
-        readonly eContentType: _Element /* COULD_NOT_RESOLVE_OBJECT_CLASS_DEF */,
-        /**
-         * @summary `eContent`.
-         * @public
-         * @readonly
-         */
-        readonly eContent: _Element /* COULD_NOT_RESOLVE_OBJECT_CLASS_DEF */
-    ) {}
+        eContentType: _Element,
+        eContent: _Element
+    ) {
+        this.eContentType = eContentType;
+        this.eContent = eContent;
+    }
 
     /**
      * @summary Restructures an object into a EncapsulatedContentInfoACBio

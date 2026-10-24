@@ -31,20 +31,26 @@ import { InnerContextToken, _decode_InnerContextToken, _encode_InnerContextToken
  */
 export
 class InitialContextToken {
+    /**
+     * @summary `thisMech`.
+     * @public
+     * @readonly
+     */
+    public readonly thisMech: MechType;
+    /**
+     * @summary `innerContextToken`.
+     * @public
+     * @readonly
+     */
+    public readonly innerContextToken: InnerContextToken;
+
     constructor (
-        /**
-         * @summary `thisMech`.
-         * @public
-         * @readonly
-         */
-        readonly thisMech: MechType,
-        /**
-         * @summary `innerContextToken`.
-         * @public
-         * @readonly
-         */
-        readonly innerContextToken: InnerContextToken
-    ) {}
+        thisMech: MechType,
+        innerContextToken: InnerContextToken
+    ) {
+        this.thisMech = thisMech;
+        this.innerContextToken = innerContextToken;
+    }
 
     /**
      * @summary Restructures an object into a InitialContextToken

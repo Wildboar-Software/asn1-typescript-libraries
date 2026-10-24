@@ -35,38 +35,46 @@ import { MessageAuthenticationCode, _decode_MessageAuthenticationCode, _encode_M
  */
 export
 class ECIESParameters {
+    /**
+     * @summary `kdf`.
+     * @description
+     *
+     * KDF of §3.6 used to expand the ECDH shared secret. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §5.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly kdf?: OPTIONAL<KeyDerivationFunction>;
+    /**
+     * @summary `sym`.
+     * @description
+     *
+     * Symmetric cipher of §3.8. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §5.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sym?: OPTIONAL<SymmetricEncryption>;
+    /**
+     * @summary `mac`.
+     * @description
+     *
+     * MAC of §3.7. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §5.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mac?: OPTIONAL<MessageAuthenticationCode>;
+
     constructor (
-        /**
-         * @summary `kdf`.
-         * @description
-         *
-         * KDF of §3.6 used to expand the ECDH shared secret. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §5.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly kdf?: OPTIONAL<KeyDerivationFunction>,
-        /**
-         * @summary `sym`.
-         * @description
-         *
-         * Symmetric cipher of §3.8. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §5.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sym?: OPTIONAL<SymmetricEncryption>,
-        /**
-         * @summary `mac`.
-         * @description
-         *
-         * MAC of §3.7. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §5.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mac?: OPTIONAL<MessageAuthenticationCode>
-    ) {}
+        kdf?: OPTIONAL<KeyDerivationFunction>,
+        sym?: OPTIONAL<SymmetricEncryption>,
+        mac?: OPTIONAL<MessageAuthenticationCode>
+    ) {
+        this.kdf = kdf;
+        this.sym = sym;
+        this.mac = mac;
+    }
 
     /**
      * @summary Restructures an object into a ECIESParameters

@@ -38,21 +38,25 @@ import { _decode_DisableEmergencyProfileResponse_disableEmergencyProfileResult, 
  */
 export
 class DisableEmergencyProfileResponse {
+    /**
+     * @summary `disableEmergencyProfileResult`.
+     * @description
+     *
+     * ok on success, profileNotInEnabledState when the Emergency Profile is not
+     * enabled, catBusy when a proactive session is left open, or ecallNotAvailable
+     * when emergency is unsupported or no Emergency Profile exists.
+     *
+     * SGP.32 v1.2, section 5.9.23.
+     * @public
+     * @readonly
+     */
+    public readonly disableEmergencyProfileResult: DisableEmergencyProfileResponse_disableEmergencyProfileResult;
+
     constructor (
-        /**
-         * @summary `disableEmergencyProfileResult`.
-         * @description
-         *
-         * ok on success, profileNotInEnabledState when the Emergency Profile is not
-         * enabled, catBusy when a proactive session is left open, or ecallNotAvailable
-         * when emergency is unsupported or no Emergency Profile exists.
-         *
-         * SGP.32 v1.2, section 5.9.23.
-         * @public
-         * @readonly
-         */
-        readonly disableEmergencyProfileResult: DisableEmergencyProfileResponse_disableEmergencyProfileResult
-    ) {}
+        disableEmergencyProfileResult: DisableEmergencyProfileResponse_disableEmergencyProfileResult
+    ) {
+        this.disableEmergencyProfileResult = disableEmergencyProfileResult;
+    }
 
     /**
      * @summary Restructures an object into a DisableEmergencyProfileResponse

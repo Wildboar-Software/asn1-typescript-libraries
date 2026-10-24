@@ -33,32 +33,38 @@ import { AuthenticateServerResponse, _decode_AuthenticateServerResponse, _encode
  */
 export
 class AuthenticateClientRequest {
+    /**
+     * @summary `transactionId`.
+     * @description
+     *
+     * Transaction ID that correlates this call with the preceding
+     * ES9+.InitiateAuthentication. SGP.32 v1.2 section 5.6.1 defines the request
+     * as identical to SGP.22 section 5.6.3, where the SM-DP+ delivers that
+     * Transaction ID. Clarified from SGP.22 v3.1, section 5.6.3.
+     * @public
+     * @readonly
+     */
+    public readonly transactionId: TransactionId;
+    /**
+     * @summary `authenticateServerResponse`.
+     * @description
+     *
+     * Response from ES10b.AuthenticateServer, carried to the SM-DP+ so it can
+     * authenticate the eUICC.
+     *
+     * SGP.32 v1.2, section 5.6.1.
+     * @public
+     * @readonly
+     */
+    public readonly authenticateServerResponse: AuthenticateServerResponse;
+
     constructor (
-        /**
-         * @summary `transactionId`.
-         * @description
-         *
-         * Transaction ID that correlates this call with the preceding
-         * ES9+.InitiateAuthentication. SGP.32 v1.2 section 5.6.1 defines the request
-         * as identical to SGP.22 section 5.6.3, where the SM-DP+ delivers that
-         * Transaction ID. Clarified from SGP.22 v3.1, section 5.6.3.
-         * @public
-         * @readonly
-         */
-        readonly transactionId: TransactionId,
-        /**
-         * @summary `authenticateServerResponse`.
-         * @description
-         *
-         * Response from ES10b.AuthenticateServer, carried to the SM-DP+ so it can
-         * authenticate the eUICC.
-         *
-         * SGP.32 v1.2, section 5.6.1.
-         * @public
-         * @readonly
-         */
-        readonly authenticateServerResponse: AuthenticateServerResponse
-    ) {}
+        transactionId: TransactionId,
+        authenticateServerResponse: AuthenticateServerResponse
+    ) {
+        this.transactionId = transactionId;
+        this.authenticateServerResponse = authenticateServerResponse;
+    }
 
     /**
      * @summary Restructures an object into a AuthenticateClientRequest

@@ -46,18 +46,22 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class EnableEmergencyProfileRequest {
+    /**
+     * @summary `refreshFlag`.
+     * @description
+     * When set, the Profile swap is finished by a REFRESH proactive command. When
+     * clear, the eUICC disables the current Profile and enables the Emergency
+     * Profile inside this command (SGP.32 v1.2, section 5.9.22).
+     * @public
+     * @readonly
+     */
+    public readonly refreshFlag: BOOLEAN;
+
     constructor (
-        /**
-         * @summary `refreshFlag`.
-         * @description
-         * When set, the Profile swap is finished by a REFRESH proactive command. When
-         * clear, the eUICC disables the current Profile and enables the Emergency
-         * Profile inside this command (SGP.32 v1.2, section 5.9.22).
-         * @public
-         * @readonly
-         */
-        readonly refreshFlag: BOOLEAN
-    ) {}
+        refreshFlag: BOOLEAN
+    ) {
+        this.refreshFlag = refreshFlag;
+    }
 
     /**
      * @summary Restructures an object into a EnableEmergencyProfileRequest

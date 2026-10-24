@@ -31,29 +31,35 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class CommitmentTypeQualifier {
+    /**
+     * @summary `commitmentQualifierId`.
+     * @description
+     *
+     * Selects the syntax of `qualifier`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly commitmentQualifierId: OBJECT_IDENTIFIER;
+    /**
+     * @summary `qualifier`.
+     * @description
+     *
+     * Qualifier value. Syntax and semantics are outside the
+     * scope of this specification.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly qualifier?: OPTIONAL<_Element>;
+
     constructor (
-        /**
-         * @summary `commitmentQualifierId`.
-         * @description
-         *
-         * Selects the syntax of `qualifier`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly commitmentQualifierId: OBJECT_IDENTIFIER,
-        /**
-         * @summary `qualifier`.
-         * @description
-         *
-         * Qualifier value. Syntax and semantics are outside the
-         * scope of this specification.
-         *
-         * @public
-         * @readonly
-         */
-        readonly qualifier?: OPTIONAL<_Element>
-    ) {}
+        commitmentQualifierId: OBJECT_IDENTIFIER,
+        qualifier?: OPTIONAL<_Element>
+    ) {
+        this.commitmentQualifierId = commitmentQualifierId;
+        this.qualifier = qualifier;
+    }
 
     /**
      * @summary Restructures an object into a CommitmentTypeQualifier

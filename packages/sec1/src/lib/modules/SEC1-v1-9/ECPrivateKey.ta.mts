@@ -38,51 +38,61 @@ import { ECDomainParameters, _decode_ECDomainParameters, _encode_ECDomainParamet
  */
 export
 class ECPrivateKey {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * Shall be `ecPrivkeyVer1` (1). [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: ECPrivateKey_version;
+    /**
+     * @summary `privateKey`.
+     * @description
+     *
+     * Unsigned integer d encoded as `ceil(log2 n / 8)` octets per §2.3.7. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf)
+     * §C.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly privateKey: OCTET_STRING;
+    /**
+     * @summary `parameters`.
+     * @description
+     *
+     * Domain parameters for this key. Omit or use `implicitCA` if they are known by
+     * other means. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly parameters?: OPTIONAL<ECDomainParameters>;
+    /**
+     * @summary `publicKey`.
+     * @description
+     *
+     * Q = dG, encoded as in `SubjectPublicKeyInfo` (BIT STRING holding the
+     * `ECPoint`). Useful for MQV. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly publicKey?: OPTIONAL<BIT_STRING>;
+
     constructor (
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * Shall be `ecPrivkeyVer1` (1). [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: ECPrivateKey_version,
-        /**
-         * @summary `privateKey`.
-         * @description
-         *
-         * Unsigned integer d encoded as `ceil(log2 n / 8)` octets per §2.3.7. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf)
-         * §C.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly privateKey: OCTET_STRING,
-        /**
-         * @summary `parameters`.
-         * @description
-         *
-         * Domain parameters for this key. Omit or use `implicitCA` if they are known by
-         * other means. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly parameters?: OPTIONAL<ECDomainParameters>,
-        /**
-         * @summary `publicKey`.
-         * @description
-         *
-         * Q = dG, encoded as in `SubjectPublicKeyInfo` (BIT STRING holding the
-         * `ECPoint`). Useful for MQV. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly publicKey?: OPTIONAL<BIT_STRING>
-    ) {}
+        version: ECPrivateKey_version,
+        privateKey: OCTET_STRING,
+        parameters?: OPTIONAL<ECDomainParameters>,
+        publicKey?: OPTIONAL<BIT_STRING>
+    ) {
+        this.version = version;
+        this.privateKey = privateKey;
+        this.parameters = parameters;
+        this.publicKey = publicKey;
+    }
 
     /**
      * @summary Restructures an object into a ECPrivateKey

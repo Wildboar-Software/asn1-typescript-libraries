@@ -27,31 +27,37 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class AlgorithmIdentifier {
+    /**
+     * @summary `algorithm`.
+     * @description
+     *
+     * OID unique in `IOSet`. Selects the matching object and thus
+     * the type of `parameters`. ANS X9.42-2003 §A.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly algorithm: OBJECT_IDENTIFIER;
+    /**
+     * @summary `parameters`.
+     * @description
+     *
+     * Type from the matching `IOSet` object; omit if that object
+     * has no PARMS. For `id-sha1`, NULL. ANS X9.42-2003 §A.2.2,
+     * §A.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly parameters?: OPTIONAL<_Element>;
+
     constructor(
-        /**
-         * @summary `algorithm`.
-         * @description
-         *
-         * OID unique in `IOSet`. Selects the matching object and thus
-         * the type of `parameters`. ANS X9.42-2003 §A.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly algorithm: OBJECT_IDENTIFIER,
-        /**
-         * @summary `parameters`.
-         * @description
-         *
-         * Type from the matching `IOSet` object; omit if that object
-         * has no PARMS. For `id-sha1`, NULL. ANS X9.42-2003 §A.2.2,
-         * §A.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly parameters?: OPTIONAL<_Element>
-    ) {}
+        algorithm: OBJECT_IDENTIFIER,
+        parameters?: OPTIONAL<_Element>
+    ) {
+        this.algorithm = algorithm;
+        this.parameters = parameters;
+    }
 
     /**
      * @summary Restructures an object into a AlgorithmIdentifier

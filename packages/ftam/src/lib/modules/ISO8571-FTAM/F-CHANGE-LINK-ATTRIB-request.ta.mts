@@ -35,19 +35,23 @@ import {
  *
  */
 export class F_CHANGE_LINK_ATTRIB_request {
+  /**
+   * @summary `attributes`.
+   * @description
+   *
+   * New attribute values. Same role as F-CHANGE-ATTRIB (ISO
+   * 8571-3:1988 §16.2 / §13.5).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly attributes: Change_Attributes;
+
   constructor(
-    /**
-     * @summary `attributes`.
-     * @description
-     *
-     * New attribute values. Same role as F-CHANGE-ATTRIB (ISO
-     * 8571-3:1988 §16.2 / §13.5).
-     *
-     * @public
-     * @readonly
-     */
-    readonly attributes: Change_Attributes
-  ) {}
+    attributes: Change_Attributes
+  ) {
+    this.attributes = attributes;
+  }
 
   /**
    * @summary Restructures an object into a F_CHANGE_LINK_ATTRIB_request

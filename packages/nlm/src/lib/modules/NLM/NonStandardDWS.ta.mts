@@ -41,45 +41,53 @@ import {
  *
  */
 export class NonStandardDWS {
+    /**
+     * @summary `subscription`.
+     * @description
+     *
+     * `true` if the X.2 non-standard default window sizes facility is
+     * subscribed.
+     * ITU-T Rec. X.283 (12/97)
+     * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subscription: BOOLEAN;
+    /**
+     * @summary `supportedWindowSizes`.
+     * @description
+     *
+     * Window sizes this PLE supports under the facility.
+     * ITU-T Rec. X.283 (12/97)
+     * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly supportedWindowSizes?: OPTIONAL<INTEGER[]>;
+    /**
+     * @summary `selectedWindowSizes`.
+     * @description
+     *
+     * Selected default window sizes (incoming/outgoing).
+     * ITU-T Rec. X.283 (12/97)
+     * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly selectedWindowSizes?: OPTIONAL<BidirectionalValues>;
+
     constructor(
-        /**
-         * @summary `subscription`.
-         * @description
-         *
-         * `true` if the X.2 non-standard default window sizes facility is
-         * subscribed.
-         * ITU-T Rec. X.283 (12/97)
-         * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
-         *
-         * @public
-         * @readonly
-         */
-        readonly subscription: BOOLEAN,
-        /**
-         * @summary `supportedWindowSizes`.
-         * @description
-         *
-         * Window sizes this PLE supports under the facility.
-         * ITU-T Rec. X.283 (12/97)
-         * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
-         *
-         * @public
-         * @readonly
-         */
-        readonly supportedWindowSizes?: OPTIONAL<INTEGER[]>,
-        /**
-         * @summary `selectedWindowSizes`.
-         * @description
-         *
-         * Selected default window sizes (incoming/outgoing).
-         * ITU-T Rec. X.283 (12/97)
-         * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
-         *
-         * @public
-         * @readonly
-         */
-        readonly selectedWindowSizes?: OPTIONAL<BidirectionalValues>
-    ) {}
+        subscription: BOOLEAN,
+        supportedWindowSizes?: OPTIONAL<INTEGER[]>,
+        selectedWindowSizes?: OPTIONAL<BidirectionalValues>
+    ) {
+        this.subscription = subscription;
+        this.supportedWindowSizes = supportedWindowSizes;
+        this.selectedWindowSizes = selectedWindowSizes;
+    }
 
     /**
      * @summary Restructures an object into a NonStandardDWS

@@ -105,166 +105,194 @@ import {
  *
  */
 export class F_INITIALIZE_response {
+  /**
+   * @summary `state_result`.
+   * @description
+   *
+   * Whether the FTAM regime was established. Values `success` or
+   * `failure`. ISO 8571-3:1988 §13.1, §14.1.2.1.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly state_result: OPTIONAL<State_Result>;
+  /**
+   * @summary `action_result`.
+   * @description
+   *
+   * Summary of `diagnostic`; never less severe than the worst
+   * diagnostic. IFS: success / transient error / permanent
+   * error; EFS: success / permanent error. ISO 8571-3:1988
+   * §13.2, §14.1.2.2.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly action_result: OPTIONAL<Action_Result>;
+  /**
+   * @summary `protocol_Version`.
+   * @description
+   *
+   * Versions this responder supports; bit 0 is `version-1`.
+   * Trailing unused bits are omitted. Default `{version-1}`.
+   * ISO 8571-4:1988 §8.1.1, line 47.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly protocol_Version: OPTIONAL<Protocol_Version>;
+  /**
+   * @summary `implementation_information`.
+   * @description
+   *
+   * Implementor convenience; not used for negotiation and not
+   * subject to conformance test. ISO 8571-4:1988 lines 50–52.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly implementation_information: OPTIONAL<Implementation_Information>;
+  /**
+   * @summary `presentation_tontext_management`.
+   * @description
+   *
+   * Whether Presentation context-management FU is used during
+   * open/recover. Responder may refuse even if available, but
+   * must not indicate use if the initiator did not. ASN.1 name
+   * `presentation-tontext-management` is a typo for
+   * `presentation-context-management`. ISO 8571-3:1988
+   * §14.1.2.9.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly presentation_tontext_management: OPTIONAL<BOOLEAN>;
+  /**
+   * @summary `service_class`.
+   * @description
+   *
+   * Single service class the responder accepts. Default
+   * `{transfer-class}`. ISO 8571-3:1988 §8.2, §10.1,
+   * §14.1.2.11.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly service_class: OPTIONAL<Service_Class>;
+  /**
+   * @summary `functional_units`.
+   * @description
+   *
+   * Optional FUs excluding Kernel that will be available on the
+   * association. Recovery/restart only in IFS. ISO 8571-3:1988
+   * §14.1.2.12.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly functional_units: Functional_Units;
+  /**
+   * @summary `attribute_groups`.
+   * @description
+   *
+   * Optional attribute groups accepted (`storage`, `security`,
+   * `private`). May be a reduction of the initiator's proposal.
+   * Default `{}`. ISO 8571-3:1988 §14.1.2.13.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly attribute_groups: OPTIONAL<Attribute_Groups>;
+  /**
+   * @summary `shared_ASE_information`.
+   * @description
+   *
+   * `EXTERNAL` carrying other ASE information (e.g. CCR) bound
+   * to this primitive. Meaning is application-context-defined.
+   * ISO 8571-3:1988 §13.10, §14.1.2.14.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly shared_ASE_information: OPTIONAL<Shared_ASE_Information>;
+  /**
+   * @summary `ftam_quality_of_Service`.
+   * @description
+   *
+   * Error susceptibility agreed for the regime. ISO 8571-3:1988
+   * §10.2, §14.1.2.15.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly ftam_quality_of_Service: FTAM_Quality_of_Service;
+  /**
+   * @summary `contents_type_list`.
+   * @description
+   *
+   * Document-type and/or abstract-syntax names the responder
+   * will support (reduced from the initiator's list). Used to
+   * build the presentation-context definition result list.
+   * ISO 8571-3:1988 §14.1.2.17.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly contents_type_list?: OPTIONAL<Contents_Type_List>;
+  /**
+   * @summary `diagnostic`.
+   * @description
+   *
+   * Detailed failure information amplifying `action-result`.
+   * ISO 8571-3:1988 §13.13, §14.1.2.21.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly diagnostic?: OPTIONAL<Diagnostic>;
+  /**
+   * @summary `checkpoint_window`.
+   * @description
+   *
+   * Max unacked checkpoints per direction when this entity is
+   * sender. IFS only if recovery/restart selected; stated
+   * independently (no negotiation). Default 1. ISO 8571-3:1988
+   * §14.1.2.22.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly checkpoint_window?: OPTIONAL<INTEGER>;
+
   constructor(
-    /**
-     * @summary `state_result`.
-     * @description
-     *
-     * Whether the FTAM regime was established. Values `success` or
-     * `failure`. ISO 8571-3:1988 §13.1, §14.1.2.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly state_result: OPTIONAL<State_Result>,
-    /**
-     * @summary `action_result`.
-     * @description
-     *
-     * Summary of `diagnostic`; never less severe than the worst
-     * diagnostic. IFS: success / transient error / permanent
-     * error; EFS: success / permanent error. ISO 8571-3:1988
-     * §13.2, §14.1.2.2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly action_result: OPTIONAL<Action_Result>,
-    /**
-     * @summary `protocol_Version`.
-     * @description
-     *
-     * Versions this responder supports; bit 0 is `version-1`.
-     * Trailing unused bits are omitted. Default `{version-1}`.
-     * ISO 8571-4:1988 §8.1.1, line 47.
-     *
-     * @public
-     * @readonly
-     */
-    readonly protocol_Version: OPTIONAL<Protocol_Version>,
-    /**
-     * @summary `implementation_information`.
-     * @description
-     *
-     * Implementor convenience; not used for negotiation and not
-     * subject to conformance test. ISO 8571-4:1988 lines 50–52.
-     *
-     * @public
-     * @readonly
-     */
-    readonly implementation_information: OPTIONAL<Implementation_Information>,
-    /**
-     * @summary `presentation_tontext_management`.
-     * @description
-     *
-     * Whether Presentation context-management FU is used during
-     * open/recover. Responder may refuse even if available, but
-     * must not indicate use if the initiator did not. ASN.1 name
-     * `presentation-tontext-management` is a typo for
-     * `presentation-context-management`. ISO 8571-3:1988
-     * §14.1.2.9.
-     *
-     * @public
-     * @readonly
-     */
-    readonly presentation_tontext_management: OPTIONAL<BOOLEAN>,
-    /**
-     * @summary `service_class`.
-     * @description
-     *
-     * Single service class the responder accepts. Default
-     * `{transfer-class}`. ISO 8571-3:1988 §8.2, §10.1,
-     * §14.1.2.11.
-     *
-     * @public
-     * @readonly
-     */
-    readonly service_class: OPTIONAL<Service_Class>,
-    /**
-     * @summary `functional_units`.
-     * @description
-     *
-     * Optional FUs excluding Kernel that will be available on the
-     * association. Recovery/restart only in IFS. ISO 8571-3:1988
-     * §14.1.2.12.
-     *
-     * @public
-     * @readonly
-     */
-    readonly functional_units: Functional_Units,
-    /**
-     * @summary `attribute_groups`.
-     * @description
-     *
-     * Optional attribute groups accepted (`storage`, `security`,
-     * `private`). May be a reduction of the initiator's proposal.
-     * Default `{}`. ISO 8571-3:1988 §14.1.2.13.
-     *
-     * @public
-     * @readonly
-     */
-    readonly attribute_groups: OPTIONAL<Attribute_Groups>,
-    /**
-     * @summary `shared_ASE_information`.
-     * @description
-     *
-     * `EXTERNAL` carrying other ASE information (e.g. CCR) bound
-     * to this primitive. Meaning is application-context-defined.
-     * ISO 8571-3:1988 §13.10, §14.1.2.14.
-     *
-     * @public
-     * @readonly
-     */
-    readonly shared_ASE_information: OPTIONAL<Shared_ASE_Information>,
-    /**
-     * @summary `ftam_quality_of_Service`.
-     * @description
-     *
-     * Error susceptibility agreed for the regime. ISO 8571-3:1988
-     * §10.2, §14.1.2.15.
-     *
-     * @public
-     * @readonly
-     */
-    readonly ftam_quality_of_Service: FTAM_Quality_of_Service,
-    /**
-     * @summary `contents_type_list`.
-     * @description
-     *
-     * Document-type and/or abstract-syntax names the responder
-     * will support (reduced from the initiator's list). Used to
-     * build the presentation-context definition result list.
-     * ISO 8571-3:1988 §14.1.2.17.
-     *
-     * @public
-     * @readonly
-     */
-    readonly contents_type_list?: OPTIONAL<Contents_Type_List>,
-    /**
-     * @summary `diagnostic`.
-     * @description
-     *
-     * Detailed failure information amplifying `action-result`.
-     * ISO 8571-3:1988 §13.13, §14.1.2.21.
-     *
-     * @public
-     * @readonly
-     */
-    readonly diagnostic?: OPTIONAL<Diagnostic>,
-    /**
-     * @summary `checkpoint_window`.
-     * @description
-     *
-     * Max unacked checkpoints per direction when this entity is
-     * sender. IFS only if recovery/restart selected; stated
-     * independently (no negotiation). Default 1. ISO 8571-3:1988
-     * §14.1.2.22.
-     *
-     * @public
-     * @readonly
-     */
-    readonly checkpoint_window?: OPTIONAL<INTEGER>
-  ) {}
+    state_result: OPTIONAL<State_Result>,
+    action_result: OPTIONAL<Action_Result>,
+    protocol_Version: OPTIONAL<Protocol_Version>,
+    implementation_information: OPTIONAL<Implementation_Information>,
+    presentation_tontext_management: OPTIONAL<BOOLEAN>,
+    service_class: OPTIONAL<Service_Class>,
+    functional_units: Functional_Units,
+    attribute_groups: OPTIONAL<Attribute_Groups>,
+    shared_ASE_information: OPTIONAL<Shared_ASE_Information>,
+    ftam_quality_of_Service: FTAM_Quality_of_Service,
+    contents_type_list?: OPTIONAL<Contents_Type_List>,
+    diagnostic?: OPTIONAL<Diagnostic>,
+    checkpoint_window?: OPTIONAL<INTEGER>
+  ) {
+    this.state_result = state_result;
+    this.action_result = action_result;
+    this.protocol_Version = protocol_Version;
+    this.implementation_information = implementation_information;
+    this.presentation_tontext_management = presentation_tontext_management;
+    this.service_class = service_class;
+    this.functional_units = functional_units;
+    this.attribute_groups = attribute_groups;
+    this.shared_ASE_information = shared_ASE_information;
+    this.ftam_quality_of_Service = ftam_quality_of_Service;
+    this.contents_type_list = contents_type_list;
+    this.diagnostic = diagnostic;
+    this.checkpoint_window = checkpoint_window;
+  }
 
   /**
    * @summary Restructures an object into a F_INITIALIZE_response

@@ -30,17 +30,21 @@ import { GetEimConfigurationDataRequest_searchCriteria, _decode_GetEimConfigurat
  */
 export
 class GetEimConfigurationDataRequest {
+    /**
+     * @summary `searchCriteria`.
+     * @description
+     * Optional filter. Omit it to receive every stored eIM Configuration Data
+     * entry. SGP.32 v1.2, section 5.9.18.
+     * @public
+     * @readonly
+     */
+    public readonly searchCriteria?: OPTIONAL<GetEimConfigurationDataRequest_searchCriteria>;
+
     constructor (
-        /**
-         * @summary `searchCriteria`.
-         * @description
-         * Optional filter. Omit it to receive every stored eIM Configuration Data
-         * entry. SGP.32 v1.2, section 5.9.18.
-         * @public
-         * @readonly
-         */
-        readonly searchCriteria?: OPTIONAL<GetEimConfigurationDataRequest_searchCriteria>
-    ) {}
+        searchCriteria?: OPTIONAL<GetEimConfigurationDataRequest_searchCriteria>
+    ) {
+        this.searchCriteria = searchCriteria;
+    }
 
     /**
      * @summary Restructures an object into a GetEimConfigurationDataRequest

@@ -30,30 +30,36 @@ import { ObservedValue, _decode_ObservedValue, _encode_ObservedValue } from "../
  */
 export
 class NotifyThreshold {
+    /**
+     * @summary `threshold`.
+     * @description
+     *
+     * Gauge value at which a notification may be generated. Same type as
+     * the related gauge. ITU-T Rec. X.721 (02/92) §9.3.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly threshold: ObservedValue;
+    /**
+     * @summary `notifyOnOff`.
+     * @description
+     *
+     * Whether crossing this value generates the defined notification. ITU-T
+     * Rec. X.721 (02/92) §9.3.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly notifyOnOff: BOOLEAN;
+
     constructor (
-        /**
-         * @summary `threshold`.
-         * @description
-         *
-         * Gauge value at which a notification may be generated. Same type as
-         * the related gauge. ITU-T Rec. X.721 (02/92) §9.3.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly threshold: ObservedValue,
-        /**
-         * @summary `notifyOnOff`.
-         * @description
-         *
-         * Whether crossing this value generates the defined notification. ITU-T
-         * Rec. X.721 (02/92) §9.3.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly notifyOnOff: BOOLEAN
-    ) {}
+        threshold: ObservedValue,
+        notifyOnOff: BOOLEAN
+    ) {
+        this.threshold = threshold;
+        this.notifyOnOff = notifyOnOff;
+    }
 
     /**
      * @summary Restructures an object into a NotifyThreshold

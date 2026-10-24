@@ -37,69 +37,81 @@ import {
  *
  */
 export class OtherInfo {
+    /**
+     * @summary `keyInfo`.
+     * @description
+     *
+     * Algorithm the keying data is for (e.g. TDEA) plus a 32-bit
+     * `Counter` starting at `00000001` hex. Incremented each hash
+     * block of the ASN.1 KDF. ANS X9.42-2003 §7.7.1 item 3.1,
+     * §A.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly keyInfo: AlgorithmIdentifier;
+    /**
+     * @summary `partyUInfo`.
+     * @description
+     *
+     * Public information contributed by the initiator. Contents
+     * are defined by the using protocol. ANS X9.42-2003 §7.7.1
+     * item 3.2, §A.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly partyUInfo?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `partyVInfo`.
+     * @description
+     *
+     * Public information contributed by the responder. Contents
+     * are defined by the using protocol. ANS X9.42-2003 §7.7.1
+     * item 3.3, §A.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly partyVInfo?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `suppPubInfo`.
+     * @description
+     *
+     * Additional mutually-known public information. Distinct values
+     * distinguish KDF invocations that share `ZZ`. Syntax is a
+     * protocol matter. ANS X9.42-2003 §7.7, §A.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly suppPubInfo?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `suppPrivInfo`.
+     * @description
+     *
+     * Additional mutually-known private information (e.g. a shared
+     * secret from another channel). May include `ZZ`. Syntax is a
+     * protocol matter. ANS X9.42-2003 §7.7.1 item 3.4, §A.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly suppPrivInfo?: OPTIONAL<OCTET_STRING>;
+
     constructor(
-        /**
-         * @summary `keyInfo`.
-         * @description
-         *
-         * Algorithm the keying data is for (e.g. TDEA) plus a 32-bit
-         * `Counter` starting at `00000001` hex. Incremented each hash
-         * block of the ASN.1 KDF. ANS X9.42-2003 §7.7.1 item 3.1,
-         * §A.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly keyInfo: AlgorithmIdentifier,
-        /**
-         * @summary `partyUInfo`.
-         * @description
-         *
-         * Public information contributed by the initiator. Contents
-         * are defined by the using protocol. ANS X9.42-2003 §7.7.1
-         * item 3.2, §A.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly partyUInfo?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `partyVInfo`.
-         * @description
-         *
-         * Public information contributed by the responder. Contents
-         * are defined by the using protocol. ANS X9.42-2003 §7.7.1
-         * item 3.3, §A.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly partyVInfo?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `suppPubInfo`.
-         * @description
-         *
-         * Additional mutually-known public information. Distinct values
-         * distinguish KDF invocations that share `ZZ`. Syntax is a
-         * protocol matter. ANS X9.42-2003 §7.7, §A.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly suppPubInfo?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `suppPrivInfo`.
-         * @description
-         *
-         * Additional mutually-known private information (e.g. a shared
-         * secret from another channel). May include `ZZ`. Syntax is a
-         * protocol matter. ANS X9.42-2003 §7.7.1 item 3.4, §A.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly suppPrivInfo?: OPTIONAL<OCTET_STRING>
-    ) {}
+        keyInfo: AlgorithmIdentifier,
+        partyUInfo?: OPTIONAL<OCTET_STRING>,
+        partyVInfo?: OPTIONAL<OCTET_STRING>,
+        suppPubInfo?: OPTIONAL<OCTET_STRING>,
+        suppPrivInfo?: OPTIONAL<OCTET_STRING>
+    ) {
+        this.keyInfo = keyInfo;
+        this.partyUInfo = partyUInfo;
+        this.partyVInfo = partyVInfo;
+        this.suppPubInfo = suppPubInfo;
+        this.suppPrivInfo = suppPrivInfo;
+    }
 
     /**
      * @summary Restructures an object into a OtherInfo

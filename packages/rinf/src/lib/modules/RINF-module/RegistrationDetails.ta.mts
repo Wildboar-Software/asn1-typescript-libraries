@@ -47,31 +47,37 @@ import {
  *
  */
 export class RegistrationDetails {
+  /**
+   * @summary `registrationDate`.
+   * @description
+   *
+   * Calendar date of this registration (`TIME` with
+   * `Basic=Date Date=YMD`, not a time of day).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly registrationDate: TIME;
+  /**
+   * @summary `registrant`.
+   * @description
+   *
+   * Contact details in the clear
+   * (`non_enciphered`) or enciphered
+   * (`enciphered_registrant`). See D.2.4–D.2.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly registrant: RegistrationDetails_registrant;
+
   constructor(
-    /**
-     * @summary `registrationDate`.
-     * @description
-     *
-     * Calendar date of this registration (`TIME` with
-     * `Basic=Date Date=YMD`, not a time of day).
-     *
-     * @public
-     * @readonly
-     */
-    readonly registrationDate: TIME,
-    /**
-     * @summary `registrant`.
-     * @description
-     *
-     * Contact details in the clear
-     * (`non_enciphered`) or enciphered
-     * (`enciphered_registrant`). See D.2.4–D.2.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly registrant: RegistrationDetails_registrant
-  ) {}
+    registrationDate: TIME,
+    registrant: RegistrationDetails_registrant
+  ) {
+    this.registrationDate = registrationDate;
+    this.registrant = registrant;
+  }
 
   /**
    * @summary Restructures an object into a RegistrationDetails

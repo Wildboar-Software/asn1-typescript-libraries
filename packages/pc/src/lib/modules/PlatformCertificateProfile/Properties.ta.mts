@@ -35,42 +35,50 @@ import { AttributeStatus, _enum_for_AttributeStatus, _decode_AttributeStatus, _e
  */
 export
 class Properties {
+    /**
+     * @summary `propertyName`.
+     * @description
+     *
+     * Property name chosen by the issuer. Bounded by `strmax`.
+     * §3.1.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly propertyName: UTF8String;
+    /**
+     * @summary `propertyValue`.
+     * @description
+     *
+     * Property value chosen by the issuer. Bounded by `strmax`.
+     * §3.1.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly propertyValue: UTF8String;
+    /**
+     * @summary `status`.
+     * @description
+     *
+     * Whether this property was added, modified, or removed
+     * relative to the base certificate. MUST be used only in
+     * Delta Platform Certificates. §3.1.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly status?: OPTIONAL<AttributeStatus>;
+
     constructor (
-        /**
-         * @summary `propertyName`.
-         * @description
-         *
-         * Property name chosen by the issuer. Bounded by `strmax`.
-         * §3.1.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly propertyName: UTF8String,
-        /**
-         * @summary `propertyValue`.
-         * @description
-         *
-         * Property value chosen by the issuer. Bounded by `strmax`.
-         * §3.1.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly propertyValue: UTF8String,
-        /**
-         * @summary `status`.
-         * @description
-         *
-         * Whether this property was added, modified, or removed
-         * relative to the base certificate. MUST be used only in
-         * Delta Platform Certificates. §3.1.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly status?: OPTIONAL<AttributeStatus>
-    ) {}
+        propertyName: UTF8String,
+        propertyValue: UTF8String,
+        status?: OPTIONAL<AttributeStatus>
+    ) {
+        this.propertyName = propertyName;
+        this.propertyValue = propertyValue;
+        this.status = status;
+    }
 
     /**
      * @summary Restructures an object into a Properties

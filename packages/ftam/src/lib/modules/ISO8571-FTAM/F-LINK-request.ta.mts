@@ -85,109 +85,129 @@ import {
  *
  */
 export class F_LINK_request {
+  /**
+   * @summary `initial_attributes`.
+   * @description
+   *
+   * Initial Create-Attributes: kernel, storage, security, and
+   * private groups from ISO 8571-2:1988 §12. Same role
+   * as F-CREATE (ISO 8571-3:1988 §15.3.2.4).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly initial_attributes: Create_Attributes;
+  /**
+   * @summary `target_object`.
+   * @description
+   *
+   * Pathname of the object the link refers to. Absent from
+   * ISO 8571:1988 Parts 1–4.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly target_object: Pathname_Attribute;
+  /**
+   * @summary `create_password`.
+   * @description
+   *
+   * Password to create in this filestore. ISO 8571-3:1988
+   * §15.3.2.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly create_password: OPTIONAL<Password>;
+  /**
+   * @summary `requested_access`.
+   * @description
+   *
+   * Actions required for this (group) selection. ISO
+   * 8571-3:1988 §13.6.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly requested_access: Access_Request;
+  /**
+   * @summary `access_passwords`.
+   * @description
+   *
+   * Passwords for the requested actions. Same role as ISO
+   * 8571-3:1988 §13.7; only if the security group was
+   * negotiated.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly access_passwords?: OPTIONAL<Access_Passwords>;
+  /**
+   * @summary `path_access_passwords`.
+   * @description
+   *
+   * Per-path-element passwords. Absent from ISO 8571:1988.
+   * ASN.1 on F-SELECT-request: send only when
+   * limited-filestore-management, object-manipulation, or
+   * group-manipulation is available.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly path_access_passwords?: OPTIONAL<Path_Access_Passwords>;
+  /**
+   * @summary `concurrency_control`.
+   * @description
+   *
+   * Locks relative to other users. ISO 8571-3:1988 §13.8.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly concurrency_control?: OPTIONAL<Concurrency_Control>;
+  /**
+   * @summary `shared_ASE_information`.
+   * @description
+   *
+   * Other ASE information on this primitive. ISO 8571-3:1988
+   * §13.10.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>;
+  /**
+   * @summary `account`.
+   * @description
+   *
+   * Account to charge for the regime. ISO 8571-3:1988 §13.3.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly account?: OPTIONAL<Account>;
+
   constructor(
-    /**
-     * @summary `initial_attributes`.
-     * @description
-     *
-     * Initial Create-Attributes: kernel, storage, security, and
-     * private groups from ISO 8571-2:1988 §12. Same role
-     * as F-CREATE (ISO 8571-3:1988 §15.3.2.4).
-     *
-     * @public
-     * @readonly
-     */
-    readonly initial_attributes: Create_Attributes,
-    /**
-     * @summary `target_object`.
-     * @description
-     *
-     * Pathname of the object the link refers to. Absent from
-     * ISO 8571:1988 Parts 1–4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly target_object: Pathname_Attribute,
-    /**
-     * @summary `create_password`.
-     * @description
-     *
-     * Password to create in this filestore. ISO 8571-3:1988
-     * §15.3.2.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly create_password: OPTIONAL<Password>,
-    /**
-     * @summary `requested_access`.
-     * @description
-     *
-     * Actions required for this (group) selection. ISO
-     * 8571-3:1988 §13.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly requested_access: Access_Request,
-    /**
-     * @summary `access_passwords`.
-     * @description
-     *
-     * Passwords for the requested actions. Same role as ISO
-     * 8571-3:1988 §13.7; only if the security group was
-     * negotiated.
-     *
-     * @public
-     * @readonly
-     */
-    readonly access_passwords?: OPTIONAL<Access_Passwords>,
-    /**
-     * @summary `path_access_passwords`.
-     * @description
-     *
-     * Per-path-element passwords. Absent from ISO 8571:1988.
-     * ASN.1 on F-SELECT-request: send only when
-     * limited-filestore-management, object-manipulation, or
-     * group-manipulation is available.
-     *
-     * @public
-     * @readonly
-     */
-    readonly path_access_passwords?: OPTIONAL<Path_Access_Passwords>,
-    /**
-     * @summary `concurrency_control`.
-     * @description
-     *
-     * Locks relative to other users. ISO 8571-3:1988 §13.8.
-     *
-     * @public
-     * @readonly
-     */
-    readonly concurrency_control?: OPTIONAL<Concurrency_Control>,
-    /**
-     * @summary `shared_ASE_information`.
-     * @description
-     *
-     * Other ASE information on this primitive. ISO 8571-3:1988
-     * §13.10.
-     *
-     * @public
-     * @readonly
-     */
-    readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
-    /**
-     * @summary `account`.
-     * @description
-     *
-     * Account to charge for the regime. ISO 8571-3:1988 §13.3.
-     *
-     * @public
-     * @readonly
-     */
-    readonly account?: OPTIONAL<Account>
-  ) {}
+    initial_attributes: Create_Attributes,
+    target_object: Pathname_Attribute,
+    create_password: OPTIONAL<Password>,
+    requested_access: Access_Request,
+    access_passwords?: OPTIONAL<Access_Passwords>,
+    path_access_passwords?: OPTIONAL<Path_Access_Passwords>,
+    concurrency_control?: OPTIONAL<Concurrency_Control>,
+    shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
+    account?: OPTIONAL<Account>
+  ) {
+    this.initial_attributes = initial_attributes;
+    this.target_object = target_object;
+    this.create_password = create_password;
+    this.requested_access = requested_access;
+    this.access_passwords = access_passwords;
+    this.path_access_passwords = path_access_passwords;
+    this.concurrency_control = concurrency_control;
+    this.shared_ASE_information = shared_ASE_information;
+    this.account = account;
+  }
 
   /**
    * @summary Restructures an object into a F_LINK_request

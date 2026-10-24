@@ -28,22 +28,26 @@ import { EimConfigurationData, _decode_EimConfigurationData, _encode_EimConfigur
  */
 export
 class GetEimConfigurationDataResponse {
+    /**
+     * @summary `eimConfigurationDataList`.
+     * @description
+     * Stored eIM Configuration Data, filtered by `searchCriteria` when that was
+     * present. Each entry SHALL include `eimId`, `eimFqdn` when present,
+     * `eimIdType`, `trustedPublicKeyDataTls` when present, `eimSupportedProtocol`,
+     * `euiccCiPKId` when present, and `associationToken` when configured. The
+     * eUICC MAY also include either `eimPublicKey` or `eimCertificate`. The eUICC
+     * SHALL NOT include `counterValue`. The list is empty when nothing is stored
+     * or nothing matches. SGP.32 v1.2, section 5.9.18.
+     * @public
+     * @readonly
+     */
+    public readonly eimConfigurationDataList: EimConfigurationData[];
+
     constructor (
-        /**
-         * @summary `eimConfigurationDataList`.
-         * @description
-         * Stored eIM Configuration Data, filtered by `searchCriteria` when that was
-         * present. Each entry SHALL include `eimId`, `eimFqdn` when present,
-         * `eimIdType`, `trustedPublicKeyDataTls` when present, `eimSupportedProtocol`,
-         * `euiccCiPKId` when present, and `associationToken` when configured. The
-         * eUICC MAY also include either `eimPublicKey` or `eimCertificate`. The eUICC
-         * SHALL NOT include `counterValue`. The list is empty when nothing is stored
-         * or nothing matches. SGP.32 v1.2, section 5.9.18.
-         * @public
-         * @readonly
-         */
-        readonly eimConfigurationDataList: EimConfigurationData[]
-    ) {}
+        eimConfigurationDataList: EimConfigurationData[]
+    ) {
+        this.eimConfigurationDataList = eimConfigurationDataList;
+    }
 
     /**
      * @summary Restructures an object into a GetEimConfigurationDataResponse

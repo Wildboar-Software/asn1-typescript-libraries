@@ -46,40 +46,48 @@ import {
  *
  */
 export class PKIStatusInfo {
+  /**
+   * @summary `status`.
+   * @description
+   *
+   * Primary status code (`PKIStatus`) ([RFC 4210 §5.2.3](https://datatracker.ietf.org/doc/html/rfc4210#section-5.2.3)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly status: PKIStatus;
+  /**
+   * @summary `statusString`.
+   * @description
+   *
+   * Optional free-text status detail (`PKIFreeText`)
+   * ([RFC 4210 §5.2.3](https://datatracker.ietf.org/doc/html/rfc4210#section-5.2.3)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly statusString?: OPTIONAL<PKIFreeText>;
+  /**
+   * @summary `failInfo`.
+   * @description
+   *
+   * Optional failure bits (`PKIFailureInfo`) for more detail on
+   * failure cases ([RFC 4210 §5.2.3](https://datatracker.ietf.org/doc/html/rfc4210#section-5.2.3)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly failInfo?: OPTIONAL<PKIFailureInfo>;
+
   constructor(
-    /**
-     * @summary `status`.
-     * @description
-     *
-     * Primary status code (`PKIStatus`) ([RFC 4210 §5.2.3](https://datatracker.ietf.org/doc/html/rfc4210#section-5.2.3)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly status: PKIStatus,
-    /**
-     * @summary `statusString`.
-     * @description
-     *
-     * Optional free-text status detail (`PKIFreeText`)
-     * ([RFC 4210 §5.2.3](https://datatracker.ietf.org/doc/html/rfc4210#section-5.2.3)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly statusString?: OPTIONAL<PKIFreeText>,
-    /**
-     * @summary `failInfo`.
-     * @description
-     *
-     * Optional failure bits (`PKIFailureInfo`) for more detail on
-     * failure cases ([RFC 4210 §5.2.3](https://datatracker.ietf.org/doc/html/rfc4210#section-5.2.3)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly failInfo?: OPTIONAL<PKIFailureInfo>
-  ) {}
+    status: PKIStatus,
+    statusString?: OPTIONAL<PKIFreeText>,
+    failInfo?: OPTIONAL<PKIFailureInfo>
+  ) {
+    this.status = status;
+    this.statusString = statusString;
+    this.failInfo = failInfo;
+  }
 
   /**
    * @summary Restructures an object into a PKIStatusInfo

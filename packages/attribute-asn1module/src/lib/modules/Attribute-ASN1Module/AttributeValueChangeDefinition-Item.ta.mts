@@ -28,40 +28,48 @@ import { AttributeId, _decode_AttributeId, _encode_AttributeId } from "@wildboar
  */
 export
 class AttributeValueChangeDefinition_Item {
+    /**
+     * @summary `attributeId`.
+     * @description
+     *
+     * `CMIP-ATTRIBUTE.&id` from `AttributeSet`. ITU-T Rec. X.721 (02/92)
+     * Cor.4 §14.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly attributeId: AttributeId;
+    /**
+     * @summary `oldAttributeValue`.
+     * @description
+     *
+     * Value before the change, if known. Absent e.g. when a set-valued
+     * member is added. ITU-T Rec. X.721 (02/92) §10.7.1.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly oldAttributeValue: OPTIONAL<_Element>;
+    /**
+     * @summary `newAttributeValue`.
+     * @description
+     *
+     * Value after the change. ITU-T Rec. X.721 (02/92) §10.7.1.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly newAttributeValue: _Element;
+
     constructor (
-        /**
-         * @summary `attributeId`.
-         * @description
-         *
-         * `CMIP-ATTRIBUTE.&id` from `AttributeSet`. ITU-T Rec. X.721 (02/92)
-         * Cor.4 §14.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly attributeId: AttributeId,
-        /**
-         * @summary `oldAttributeValue`.
-         * @description
-         *
-         * Value before the change, if known. Absent e.g. when a set-valued
-         * member is added. ITU-T Rec. X.721 (02/92) §10.7.1.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly oldAttributeValue: OPTIONAL<_Element>,
-        /**
-         * @summary `newAttributeValue`.
-         * @description
-         *
-         * Value after the change. ITU-T Rec. X.721 (02/92) §10.7.1.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly newAttributeValue: _Element
-    ) {}
+        attributeId: AttributeId,
+        oldAttributeValue: OPTIONAL<_Element>,
+        newAttributeValue: _Element
+    ) {
+        this.attributeId = attributeId;
+        this.oldAttributeValue = oldAttributeValue;
+        this.newAttributeValue = newAttributeValue;
+    }
 
     /**
      * @summary Restructures an object into a AttributeValueChangeDefinition_Item

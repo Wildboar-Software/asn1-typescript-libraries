@@ -32,42 +32,50 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class CounterThreshold_Item {
+    /**
+     * @summary `comparisonLevel`.
+     * @description
+     *
+     * Counter value that triggers the defined notification. Non-negative.
+     * ITU-T Rec. X.721 (02/92) §9.3.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly comparisonLevel: INTEGER;
+    /**
+     * @summary `offsetValue`.
+     * @description
+     *
+     * Added to `comparisonLevel` immediately after a trigger when non-zero,
+     * so the next trigger is one interval later. Non-negative. ITU-T Rec.
+     * X.721 (02/92) §9.3.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly offsetValue: INTEGER;
+    /**
+     * @summary `notificationOnOff`.
+     * @description
+     *
+     * Whether reaching this level emits the related notification. ITU-T
+     * Rec. X.721 (02/92) §9.3.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly notificationOnOff: BOOLEAN;
+
     constructor (
-        /**
-         * @summary `comparisonLevel`.
-         * @description
-         *
-         * Counter value that triggers the defined notification. Non-negative.
-         * ITU-T Rec. X.721 (02/92) §9.3.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly comparisonLevel: INTEGER,
-        /**
-         * @summary `offsetValue`.
-         * @description
-         *
-         * Added to `comparisonLevel` immediately after a trigger when non-zero,
-         * so the next trigger is one interval later. Non-negative. ITU-T Rec.
-         * X.721 (02/92) §9.3.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly offsetValue: INTEGER,
-        /**
-         * @summary `notificationOnOff`.
-         * @description
-         *
-         * Whether reaching this level emits the related notification. ITU-T
-         * Rec. X.721 (02/92) §9.3.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly notificationOnOff: BOOLEAN
-    ) {}
+        comparisonLevel: INTEGER,
+        offsetValue: INTEGER,
+        notificationOnOff: BOOLEAN
+    ) {
+        this.comparisonLevel = comparisonLevel;
+        this.offsetValue = offsetValue;
+        this.notificationOnOff = notificationOnOff;
+    }
 
     /**
      * @summary Restructures an object into a CounterThreshold_Item

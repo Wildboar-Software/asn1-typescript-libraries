@@ -27,29 +27,35 @@ import { Time24, _decode_Time24, _encode_Time24 } from "../Attribute-ASN1Module/
  */
 export
 class IntervalsOfDay_Item {
+    /**
+     * @summary `intervalStart`.
+     * @description
+     *
+     * Inclusive start (beginning of this minute). ITU-T Rec. X.721 (02/92)
+     * §14.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly intervalStart: Time24;
+    /**
+     * @summary `intervalEnd`.
+     * @description
+     *
+     * Inclusive end (end of this minute). ITU-T Rec. X.721 (02/92) §14.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly intervalEnd: Time24;
+
     constructor (
-        /**
-         * @summary `intervalStart`.
-         * @description
-         *
-         * Inclusive start (beginning of this minute). ITU-T Rec. X.721 (02/92)
-         * §14.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly intervalStart: Time24,
-        /**
-         * @summary `intervalEnd`.
-         * @description
-         *
-         * Inclusive end (end of this minute). ITU-T Rec. X.721 (02/92) §14.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly intervalEnd: Time24
-    ) {}
+        intervalStart: Time24,
+        intervalEnd: Time24
+    ) {
+        this.intervalStart = intervalStart;
+        this.intervalEnd = intervalEnd;
+    }
 
     /**
      * @summary Restructures an object into a IntervalsOfDay_Item

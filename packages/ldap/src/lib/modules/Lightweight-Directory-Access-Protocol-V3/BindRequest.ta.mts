@@ -44,46 +44,56 @@ import {
  *
  */
 export class BindRequest {
+  /**
+   * @summary `version`.
+   * @description
+   *
+   * LDAP message-layer version; this spec is 3. Range 1..127.
+   * Unsupported version → BindResponse `protocolError`.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly version: INTEGER;
+  /**
+   * @summary `name`.
+   * @description
+   *
+   * DN to bind as, or empty for anonymous (RFC 4513 §5.1) or SASL.
+   * Server SHALL NOT alias-dereference when locating this object.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly name: LDAPDN;
+  /**
+   * @summary `authentication`.
+   * @description
+   *
+   * Extensible CHOICE. Unsupported choice → `authMethodNotSupported`.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly authentication: AuthenticationChoice;
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  public readonly _unrecognizedExtensionsList: _Element[];
+
   constructor(
-    /**
-     * @summary `version`.
-     * @description
-     *
-     * LDAP message-layer version; this spec is 3. Range 1..127.
-     * Unsupported version → BindResponse `protocolError`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly version: INTEGER,
-    /**
-     * @summary `name`.
-     * @description
-     *
-     * DN to bind as, or empty for anonymous (RFC 4513 §5.1) or SASL.
-     * Server SHALL NOT alias-dereference when locating this object.
-     *
-     * @public
-     * @readonly
-     */
-    readonly name: LDAPDN,
-    /**
-     * @summary `authentication`.
-     * @description
-     *
-     * Extensible CHOICE. Unsupported choice → `authMethodNotSupported`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly authentication: AuthenticationChoice,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = []
-  ) {}
+    version: INTEGER,
+    name: LDAPDN,
+    authentication: AuthenticationChoice,
+    _unrecognizedExtensionsList: _Element[] = []
+  ) {
+    this.version = version;
+    this.name = name;
+    this.authentication = authentication;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+  }
 
   /**
    * @summary Restructures an object into a BindRequest

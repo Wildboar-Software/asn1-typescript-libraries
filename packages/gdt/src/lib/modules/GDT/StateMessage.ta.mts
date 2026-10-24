@@ -29,32 +29,42 @@ import { Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Param
  */
 export
 class StateMessage {
+    /**
+     * @summary `stmch_id`.
+     * @public
+     * @readonly
+     */
+    public readonly stmch_id: OCTET_STRING;
+    /**
+     * @summary `state_action`.
+     * @public
+     * @readonly
+     */
+    public readonly state_action: StateAction;
+    /**
+     * @summary `params`.
+     * @public
+     * @readonly
+     */
+    public readonly params?: OPTIONAL<Parameters>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `stmch_id`.
-         * @public
-         * @readonly
-         */
-        readonly stmch_id: OCTET_STRING,
-        /**
-         * @summary `state_action`.
-         * @public
-         * @readonly
-         */
-        readonly state_action: StateAction,
-        /**
-         * @summary `params`.
-         * @public
-         * @readonly
-         */
-        readonly params?: OPTIONAL<Parameters>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        stmch_id: OCTET_STRING,
+        state_action: StateAction,
+        params?: OPTIONAL<Parameters>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.stmch_id = stmch_id;
+        this.state_action = state_action;
+        this.params = params;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a StateMessage

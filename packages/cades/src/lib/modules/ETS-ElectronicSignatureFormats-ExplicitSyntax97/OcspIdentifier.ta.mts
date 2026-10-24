@@ -32,29 +32,35 @@ import { ResponderID, _decode_ResponderID, _encode_ResponderID } from "@wildboar
  */
 export
 class OcspIdentifier {
+    /**
+     * @summary `ocspResponderID`.
+     * @description
+     *
+     * OCSP `ResponderID` as in the response data.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ocspResponderID: ResponderID;
+    /**
+     * @summary `producedAt`.
+     * @description
+     *
+     * Time of issue; shall match `producedAt` in the OCSP
+     * response.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly producedAt: GeneralizedTime;
+
     constructor (
-        /**
-         * @summary `ocspResponderID`.
-         * @description
-         *
-         * OCSP `ResponderID` as in the response data.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ocspResponderID: ResponderID,
-        /**
-         * @summary `producedAt`.
-         * @description
-         *
-         * Time of issue; shall match `producedAt` in the OCSP
-         * response.
-         *
-         * @public
-         * @readonly
-         */
-        readonly producedAt: GeneralizedTime
-    ) {}
+        ocspResponderID: ResponderID,
+        producedAt: GeneralizedTime
+    ) {
+        this.ocspResponderID = ocspResponderID;
+        this.producedAt = producedAt;
+    }
 
     /**
      * @summary Restructures an object into a OcspIdentifier

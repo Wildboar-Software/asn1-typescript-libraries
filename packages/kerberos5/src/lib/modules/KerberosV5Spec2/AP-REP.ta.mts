@@ -37,39 +37,47 @@ import {
  *
  */
 export class AP_REP {
+  /**
+   * @summary `pvno`.
+   * @description
+   *
+   * Protocol version 5 ([RFC 4120 §5.5.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.2)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly pvno: INTEGER;
+  /**
+   * @summary `msg_type`.
+   * @description
+   *
+   * `KRB_AP_REP` (15) ([RFC 4120 §5.5.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.2)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly msg_type: INTEGER;
+  /**
+   * @summary `enc_part`.
+   * @description
+   *
+   * Encrypted `EncAPRepPart` under the ticket session key,
+   * key usage 12 ([RFC 4120 §5.5.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.2)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly enc_part: EncryptedData;
+
   constructor(
-    /**
-     * @summary `pvno`.
-     * @description
-     *
-     * Protocol version 5 ([RFC 4120 §5.5.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.2)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly pvno: INTEGER,
-    /**
-     * @summary `msg_type`.
-     * @description
-     *
-     * `KRB_AP_REP` (15) ([RFC 4120 §5.5.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.2)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly msg_type: INTEGER,
-    /**
-     * @summary `enc_part`.
-     * @description
-     *
-     * Encrypted `EncAPRepPart` under the ticket session key,
-     * key usage 12 ([RFC 4120 §5.5.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.2)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly enc_part: EncryptedData
-  ) {}
+    pvno: INTEGER,
+    msg_type: INTEGER,
+    enc_part: EncryptedData
+  ) {
+    this.pvno = pvno;
+    this.msg_type = msg_type;
+    this.enc_part = enc_part;
+  }
 
   /**
    * @summary Restructures an object into a AP_REP

@@ -39,39 +39,47 @@ import { OtherRevVals, _decode_OtherRevVals, _encode_OtherRevVals } from "../ETS
  */
 export
 class RevocationValues {
+    /**
+     * @summary `crlVals`.
+     * @description
+     *
+     * X.509 CRLs (`CertificateList`) used in validation.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly crlVals?: OPTIONAL<CertificateList[]>;
+    /**
+     * @summary `ocspVals`.
+     * @description
+     *
+     * OCSP `BasicOCSPResponse` values used in validation.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ocspVals?: OPTIONAL<BasicOCSPResponse[]>;
+    /**
+     * @summary `otherRevVals`.
+     * @description
+     *
+     * Other revocation values. Syntax is identified by
+     * `otherRevValType` and is otherwise out of scope.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly otherRevVals?: OPTIONAL<OtherRevVals>;
+
     constructor (
-        /**
-         * @summary `crlVals`.
-         * @description
-         *
-         * X.509 CRLs (`CertificateList`) used in validation.
-         *
-         * @public
-         * @readonly
-         */
-        readonly crlVals?: OPTIONAL<CertificateList[]>,
-        /**
-         * @summary `ocspVals`.
-         * @description
-         *
-         * OCSP `BasicOCSPResponse` values used in validation.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ocspVals?: OPTIONAL<BasicOCSPResponse[]>,
-        /**
-         * @summary `otherRevVals`.
-         * @description
-         *
-         * Other revocation values. Syntax is identified by
-         * `otherRevValType` and is otherwise out of scope.
-         *
-         * @public
-         * @readonly
-         */
-        readonly otherRevVals?: OPTIONAL<OtherRevVals>
-    ) {}
+        crlVals?: OPTIONAL<CertificateList[]>,
+        ocspVals?: OPTIONAL<BasicOCSPResponse[]>,
+        otherRevVals?: OPTIONAL<OtherRevVals>
+    ) {
+        this.crlVals = crlVals;
+        this.ocspVals = ocspVals;
+        this.otherRevVals = otherRevVals;
+    }
 
     /**
      * @summary Restructures an object into a RevocationValues

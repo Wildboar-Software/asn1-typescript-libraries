@@ -45,64 +45,76 @@ import {
  *
  */
 export class F_TRANSFER_END_request {
+  /**
+   * @summary `shared_ASE_information`.
+   * @description
+   *
+   * Other ASE information bound to this primitive
+   * (ISO 8571-3:1988 §13.10).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>;
+  /**
+   * @summary `request_type`.
+   * @description
+   *
+   * Direction of the BDT (read or write). Not in ISO 8571:1988
+   * Parts 1–4. Module comment: conditional on consecutive or
+   * concurrent access.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly request_type?: OPTIONAL<Request_Type>;
+  /**
+   * @summary `transfer_number`.
+   * @description
+   *
+   * Not in ISO 8571:1988 Parts 1–4. Module comment: conditional on
+   * consecutive or concurrent access.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly transfer_number?: OPTIONAL<INTEGER>;
+  /**
+   * @summary `last_transfer_end_read_response`.
+   * @description
+   *
+   * Not in ISO 8571:1988 Parts 1–4. Module comment: conditional on
+   * consecutive or concurrent access.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly last_transfer_end_read_response?: OPTIONAL<INTEGER>;
+  /**
+   * @summary `last_transfer_end_write_response`.
+   * @description
+   *
+   * Not in ISO 8571:1988 Parts 1–4. Module comment: conditional on
+   * consecutive or concurrent access.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly last_transfer_end_write_response?: OPTIONAL<INTEGER>;
+
   constructor(
-    /**
-     * @summary `shared_ASE_information`.
-     * @description
-     *
-     * Other ASE information bound to this primitive
-     * (ISO 8571-3:1988 §13.10).
-     *
-     * @public
-     * @readonly
-     */
-    readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
-    /**
-     * @summary `request_type`.
-     * @description
-     *
-     * Direction of the BDT (read or write). Not in ISO 8571:1988
-     * Parts 1–4. Module comment: conditional on consecutive or
-     * concurrent access.
-     *
-     * @public
-     * @readonly
-     */
-    readonly request_type?: OPTIONAL<Request_Type>,
-    /**
-     * @summary `transfer_number`.
-     * @description
-     *
-     * Not in ISO 8571:1988 Parts 1–4. Module comment: conditional on
-     * consecutive or concurrent access.
-     *
-     * @public
-     * @readonly
-     */
-    readonly transfer_number?: OPTIONAL<INTEGER>,
-    /**
-     * @summary `last_transfer_end_read_response`.
-     * @description
-     *
-     * Not in ISO 8571:1988 Parts 1–4. Module comment: conditional on
-     * consecutive or concurrent access.
-     *
-     * @public
-     * @readonly
-     */
-    readonly last_transfer_end_read_response?: OPTIONAL<INTEGER>,
-    /**
-     * @summary `last_transfer_end_write_response`.
-     * @description
-     *
-     * Not in ISO 8571:1988 Parts 1–4. Module comment: conditional on
-     * consecutive or concurrent access.
-     *
-     * @public
-     * @readonly
-     */
-    readonly last_transfer_end_write_response?: OPTIONAL<INTEGER>
-  ) {}
+    shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
+    request_type?: OPTIONAL<Request_Type>,
+    transfer_number?: OPTIONAL<INTEGER>,
+    last_transfer_end_read_response?: OPTIONAL<INTEGER>,
+    last_transfer_end_write_response?: OPTIONAL<INTEGER>
+  ) {
+    this.shared_ASE_information = shared_ASE_information;
+    this.request_type = request_type;
+    this.transfer_number = transfer_number;
+    this.last_transfer_end_read_response = last_transfer_end_read_response;
+    this.last_transfer_end_write_response = last_transfer_end_write_response;
+  }
 
   /**
    * @summary Restructures an object into a F_TRANSFER_END_request

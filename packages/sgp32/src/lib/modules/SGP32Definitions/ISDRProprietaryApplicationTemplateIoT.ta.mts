@@ -36,17 +36,21 @@ import { ISDRProprietaryApplicationTemplateIoT_euiccConfiguration, _decode_ISDRP
  */
 export
 class ISDRProprietaryApplicationTemplateIoT {
+    /**
+     * @summary `euiccConfiguration`.
+     * @description
+     * eUICC capability bits returned at ISD-R selection. The eUICC sets
+     * `ipaeSupported` when it supports IPAe. SGP.32 v1.2, section 3.8.4.
+     * @public
+     * @readonly
+     */
+    public readonly euiccConfiguration: ISDRProprietaryApplicationTemplateIoT_euiccConfiguration;
+
     constructor (
-        /**
-         * @summary `euiccConfiguration`.
-         * @description
-         * eUICC capability bits returned at ISD-R selection. The eUICC sets
-         * `ipaeSupported` when it supports IPAe. SGP.32 v1.2, section 3.8.4.
-         * @public
-         * @readonly
-         */
-        readonly euiccConfiguration: ISDRProprietaryApplicationTemplateIoT_euiccConfiguration
-    ) {}
+        euiccConfiguration: ISDRProprietaryApplicationTemplateIoT_euiccConfiguration
+    ) {
+        this.euiccConfiguration = euiccConfiguration;
+    }
 
     /**
      * @summary Restructures an object into a ISDRProprietaryApplicationTemplateIoT

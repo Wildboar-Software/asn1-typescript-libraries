@@ -35,22 +35,26 @@ import { type Iccid, _decode_Iccid, _encode_Iccid } from "@wildboar/sgp22/RSPDef
  */
 export
 class Psmo_delete {
+    /**
+     * @summary `iccid`.
+     * @description
+     * ICCID of the Profile to delete, as defined in SGP.22. SGP.32 v1.2, section
+     * 2.11.1.1. An unknown ICCID yields iccidOrAidNotFound(1). Enabled while not
+     * marked to be disabled, or disabled while marked to be enabled, yields
+     * profileNotInDisabledState(2). A Profile referenced by the Rollback Mechanism
+     * yields rollbackNotAvailable(20). When the Fallback Profile is enabled and
+     * this ICCID is the Profile that ES10b.ExecuteFallbackMechanism disabled, the
+     * result is returnFallbackProfile(21). SGP.32 v1.2, section 3.4.3.
+     * @public
+     * @readonly
+     */
+    public readonly iccid: Iccid;
+
     constructor (
-        /**
-         * @summary `iccid`.
-         * @description
-         * ICCID of the Profile to delete, as defined in SGP.22. SGP.32 v1.2, section
-         * 2.11.1.1. An unknown ICCID yields iccidOrAidNotFound(1). Enabled while not
-         * marked to be disabled, or disabled while marked to be enabled, yields
-         * profileNotInDisabledState(2). A Profile referenced by the Rollback Mechanism
-         * yields rollbackNotAvailable(20). When the Fallback Profile is enabled and
-         * this ICCID is the Profile that ES10b.ExecuteFallbackMechanism disabled, the
-         * result is returnFallbackProfile(21). SGP.32 v1.2, section 3.4.3.
-         * @public
-         * @readonly
-         */
-        readonly iccid: Iccid
-    ) {}
+        iccid: Iccid
+    ) {
+        this.iccid = iccid;
+    }
 
     /**
      * @summary Restructures an object into a Psmo_delete

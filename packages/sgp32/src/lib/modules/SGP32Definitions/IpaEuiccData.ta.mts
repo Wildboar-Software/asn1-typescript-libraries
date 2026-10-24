@@ -51,148 +51,174 @@ import { DeviceInfo, _decode_DeviceInfo, _encode_DeviceInfo } from "@wildboar/sg
  */
 export
 class IpaEuiccData {
+    /**
+     * @summary `notificationsList`.
+     * @description
+     * Tag `'A0'`. Returned when that tag was requested. With no
+     * `searchCriteriaNotification`, include every Notification stored in the
+     * eUICC. With `seqNumber`, include the Notification with that sequence number
+     * when one is stored. With `profileManagementOperation`, include every
+     * Notification of a type whose bit is 1. An IPA with `minimizeEsipaBytes`
+     * SHOULD use the compact form from section 5.14.7 for each Notification.
+     * SGP.32 v1.2, sections 2.11.1.2 and 2.11.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly notificationsList?: OPTIONAL<PendingNotificationList>;
+    /**
+     * @summary `defaultSmdpAddress`.
+     * @description
+     * Tag `'81'`. Default SM-DP+ address, as defined in SGP.22. SGP.22 v3.1
+     * section 1.5 defines a Default SM-DP+ as an SM-DP+ contacted by a
+     * pre-provisioned address on the eUICC. Include this when `'81'` was requested
+     * and the IPA supports the item. SGP.32 v1.2, section 2.11.1.2.
+     * @public
+     * @readonly
+     */
+    public readonly defaultSmdpAddress?: OPTIONAL<UTF8String>;
+    /**
+     * @summary `euiccPackageResultList`.
+     * @description
+     * Tag `'A2'`. Returned when that tag was requested. With no
+     * `searchCriteriaEuiccPackageResult`, include every eUICC Package Result
+     * stored in the eUICC. With `seqNumber`, include the result with that sequence
+     * number when one is stored. SGP.32 v1.2, section 2.11.1.2.
+     * @public
+     * @readonly
+     */
+    public readonly euiccPackageResultList?: OPTIONAL<EuiccPackageResultList>;
+    /**
+     * @summary `euiccInfo1`.
+     * @description
+     * Tag `'BF20'`, from ES10b.GetEUICCInfo. An IPA with `minimizeEsipaBytes`
+     * SHALL support returning it. Include it when `'BF20'` was requested and the
+     * IPA supports the item. SGP.32 v1.2, sections 2.11.1.2 and 5.9.2.
+     * @public
+     * @readonly
+     */
+    public readonly euiccInfo1?: OPTIONAL<EUICCInfo1>;
+    /**
+     * @summary `euiccInfo2`.
+     * @description
+     * Tag `'BF22'`. SGP.32 section 5.9.2 replaces the SGP.22 EUICCInfo2 and
+     * extends it for IoT. Within that object, `iotSpecificInfo` SHALL be present
+     * and `ipaMode` is mandatory for SGP.32. An IPA with `minimizeEsipaBytes`
+     * SHALL support returning `euiccInfo2`. Include it when `'BF22'` was requested
+     * and the IPA supports the item. SGP.32 v1.2, sections 2.11.1.2 and 5.9.2.
+     * @public
+     * @readonly
+     */
+    public readonly euiccInfo2?: OPTIONAL<EUICCInfo2>;
+    /**
+     * @summary `rootSmdsAddress`.
+     * @description
+     * Tag `'83'`. Root SM-DS address, as defined in SGP.22. SGP.22 v3.1 section
+     * 1.5 defines a Root SM-DS as a central access point for finding Events from
+     * one or more SM-DP+ entities. Include this when `'83'` was requested and the
+     * IPA supports the item. SGP.32 v1.2, section 2.11.1.2.
+     * @public
+     * @readonly
+     */
+    public readonly rootSmdsAddress?: OPTIONAL<UTF8String>;
+    /**
+     * @summary `associationToken`.
+     * @description
+     * Tag `'84'`. The eUICC's association token for this eIM, when one is
+     * configured. The token is one global counter per eUICC: it starts at zero,
+     * the first issued value is 1, and it advances on each request. No mechanism,
+     * including eUICC Memory Reset, resets it. If this tag was requested and no
+     * token is configured for the eIM, this object SHALL be absent. The IPA SHALL
+     * support providing a configured token. SGP.32 v1.2, sections 2.11.1 and
+     * 2.11.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly associationToken?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `eumCertificate`.
+     * @description
+     * Tag `'A5'`. EUM certificate, as defined in SGP.22, chosen with
+     * `euiccCiPKIdentifierToBeUsed` or, when that is absent, the first
+     * `euiccCiPKIdListForSigning` entry. An IPA with `minimizeEsipaBytes` SHALL
+     * support returning it. Include it when `'A5'` was requested and the IPA
+     * supports the item. SGP.32 v1.2, sections 2.11.1.2 and 5.9.10.
+     * @public
+     * @readonly
+     */
+    public readonly eumCertificate?: OPTIONAL<Certificate>;
+    /**
+     * @summary `euiccCertificate`.
+     * @description
+     * Tag `'A6'`. eUICC certificate, as defined in SGP.22, chosen with the same CI
+     * Public Key Identifier rules as `eumCertificate`. An IPA with
+     * `minimizeEsipaBytes` SHALL support returning it. Include it when `'A6'` was
+     * requested and the IPA supports the item. SGP.32 v1.2, sections 2.11.1.2 and
+     * 5.9.10.
+     * @public
+     * @readonly
+     */
+    public readonly euiccCertificate?: OPTIONAL<Certificate>;
+    /**
+     * @summary `eimTransactionId`.
+     * @description
+     * Tag `'87'`. Present when the request included `eimTransactionId`. The IPA
+     * SHALL return the same value. SGP.32 v1.2, section 2.11.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly eimTransactionId?: OPTIONAL<TransactionId>;
+    /**
+     * @summary `ipaCapabilities`.
+     * @description
+     * Tag `'A8'`. IPA Capabilities from section 4.1. The IPA SHALL support
+     * providing them. Include them when `'A8'` was requested. SGP.32 v1.2,
+     * sections 2.11.1.2 and 4.1.
+     * @public
+     * @readonly
+     */
+    public readonly ipaCapabilities?: OPTIONAL<IpaCapabilities>;
+    /**
+     * @summary `deviceInfo`.
+     * @description
+     * Tag `'A9'`. Device Information as defined in SGP.22 section 4.2. SGP.22 v3.1
+     * section 4.2 says the SM-DP+ uses it for a Device eligibility check. It
+     * includes the TAC, every device capability the Device supports, an optional
+     * IMEI, optional preferred languages, Device Test Mode, and conditional LPA
+     * RSP capabilities. An IPA with `eimCtxParams1Generation` SHALL support
+     * returning it. Include it when `'A9'` was requested and the IPA supports the
+     * item. SGP.32 v1.2, sections 2.11.1.2 and 4.1.
+     * @public
+     * @readonly
+     */
+    public readonly deviceInfo?: OPTIONAL<DeviceInfo>;
+
     constructor (
-        /**
-         * @summary `notificationsList`.
-         * @description
-         * Tag `'A0'`. Returned when that tag was requested. With no
-         * `searchCriteriaNotification`, include every Notification stored in the
-         * eUICC. With `seqNumber`, include the Notification with that sequence number
-         * when one is stored. With `profileManagementOperation`, include every
-         * Notification of a type whose bit is 1. An IPA with `minimizeEsipaBytes`
-         * SHOULD use the compact form from section 5.14.7 for each Notification.
-         * SGP.32 v1.2, sections 2.11.1.2 and 2.11.2.2.
-         * @public
-         * @readonly
-         */
-        readonly notificationsList?: OPTIONAL<PendingNotificationList>,
-        /**
-         * @summary `defaultSmdpAddress`.
-         * @description
-         * Tag `'81'`. Default SM-DP+ address, as defined in SGP.22. SGP.22 v3.1
-         * section 1.5 defines a Default SM-DP+ as an SM-DP+ contacted by a
-         * pre-provisioned address on the eUICC. Include this when `'81'` was requested
-         * and the IPA supports the item. SGP.32 v1.2, section 2.11.1.2.
-         * @public
-         * @readonly
-         */
-        readonly defaultSmdpAddress?: OPTIONAL<UTF8String>,
-        /**
-         * @summary `euiccPackageResultList`.
-         * @description
-         * Tag `'A2'`. Returned when that tag was requested. With no
-         * `searchCriteriaEuiccPackageResult`, include every eUICC Package Result
-         * stored in the eUICC. With `seqNumber`, include the result with that sequence
-         * number when one is stored. SGP.32 v1.2, section 2.11.1.2.
-         * @public
-         * @readonly
-         */
-        readonly euiccPackageResultList?: OPTIONAL<EuiccPackageResultList>,
-        /**
-         * @summary `euiccInfo1`.
-         * @description
-         * Tag `'BF20'`, from ES10b.GetEUICCInfo. An IPA with `minimizeEsipaBytes`
-         * SHALL support returning it. Include it when `'BF20'` was requested and the
-         * IPA supports the item. SGP.32 v1.2, sections 2.11.1.2 and 5.9.2.
-         * @public
-         * @readonly
-         */
-        readonly euiccInfo1?: OPTIONAL<EUICCInfo1>,
-        /**
-         * @summary `euiccInfo2`.
-         * @description
-         * Tag `'BF22'`. SGP.32 section 5.9.2 replaces the SGP.22 EUICCInfo2 and
-         * extends it for IoT. Within that object, `iotSpecificInfo` SHALL be present
-         * and `ipaMode` is mandatory for SGP.32. An IPA with `minimizeEsipaBytes`
-         * SHALL support returning `euiccInfo2`. Include it when `'BF22'` was requested
-         * and the IPA supports the item. SGP.32 v1.2, sections 2.11.1.2 and 5.9.2.
-         * @public
-         * @readonly
-         */
-        readonly euiccInfo2?: OPTIONAL<EUICCInfo2>,
-        /**
-         * @summary `rootSmdsAddress`.
-         * @description
-         * Tag `'83'`. Root SM-DS address, as defined in SGP.22. SGP.22 v3.1 section
-         * 1.5 defines a Root SM-DS as a central access point for finding Events from
-         * one or more SM-DP+ entities. Include this when `'83'` was requested and the
-         * IPA supports the item. SGP.32 v1.2, section 2.11.1.2.
-         * @public
-         * @readonly
-         */
-        readonly rootSmdsAddress?: OPTIONAL<UTF8String>,
-        /**
-         * @summary `associationToken`.
-         * @description
-         * Tag `'84'`. The eUICC's association token for this eIM, when one is
-         * configured. The token is one global counter per eUICC: it starts at zero,
-         * the first issued value is 1, and it advances on each request. No mechanism,
-         * including eUICC Memory Reset, resets it. If this tag was requested and no
-         * token is configured for the eIM, this object SHALL be absent. The IPA SHALL
-         * support providing a configured token. SGP.32 v1.2, sections 2.11.1 and
-         * 2.11.2.2.
-         * @public
-         * @readonly
-         */
-        readonly associationToken?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `eumCertificate`.
-         * @description
-         * Tag `'A5'`. EUM certificate, as defined in SGP.22, chosen with
-         * `euiccCiPKIdentifierToBeUsed` or, when that is absent, the first
-         * `euiccCiPKIdListForSigning` entry. An IPA with `minimizeEsipaBytes` SHALL
-         * support returning it. Include it when `'A5'` was requested and the IPA
-         * supports the item. SGP.32 v1.2, sections 2.11.1.2 and 5.9.10.
-         * @public
-         * @readonly
-         */
-        readonly eumCertificate?: OPTIONAL<Certificate>,
-        /**
-         * @summary `euiccCertificate`.
-         * @description
-         * Tag `'A6'`. eUICC certificate, as defined in SGP.22, chosen with the same CI
-         * Public Key Identifier rules as `eumCertificate`. An IPA with
-         * `minimizeEsipaBytes` SHALL support returning it. Include it when `'A6'` was
-         * requested and the IPA supports the item. SGP.32 v1.2, sections 2.11.1.2 and
-         * 5.9.10.
-         * @public
-         * @readonly
-         */
-        readonly euiccCertificate?: OPTIONAL<Certificate>,
-        /**
-         * @summary `eimTransactionId`.
-         * @description
-         * Tag `'87'`. Present when the request included `eimTransactionId`. The IPA
-         * SHALL return the same value. SGP.32 v1.2, section 2.11.2.2.
-         * @public
-         * @readonly
-         */
-        readonly eimTransactionId?: OPTIONAL<TransactionId>,
-        /**
-         * @summary `ipaCapabilities`.
-         * @description
-         * Tag `'A8'`. IPA Capabilities from section 4.1. The IPA SHALL support
-         * providing them. Include them when `'A8'` was requested. SGP.32 v1.2,
-         * sections 2.11.1.2 and 4.1.
-         * @public
-         * @readonly
-         */
-        readonly ipaCapabilities?: OPTIONAL<IpaCapabilities>,
-        /**
-         * @summary `deviceInfo`.
-         * @description
-         * Tag `'A9'`. Device Information as defined in SGP.22 section 4.2. SGP.22 v3.1
-         * section 4.2 says the SM-DP+ uses it for a Device eligibility check. It
-         * includes the TAC, every device capability the Device supports, an optional
-         * IMEI, optional preferred languages, Device Test Mode, and conditional LPA
-         * RSP capabilities. An IPA with `eimCtxParams1Generation` SHALL support
-         * returning it. Include it when `'A9'` was requested and the IPA supports the
-         * item. SGP.32 v1.2, sections 2.11.1.2 and 4.1.
-         * @public
-         * @readonly
-         */
-        readonly deviceInfo?: OPTIONAL<DeviceInfo>
-    ) {}
+        notificationsList?: OPTIONAL<PendingNotificationList>,
+        defaultSmdpAddress?: OPTIONAL<UTF8String>,
+        euiccPackageResultList?: OPTIONAL<EuiccPackageResultList>,
+        euiccInfo1?: OPTIONAL<EUICCInfo1>,
+        euiccInfo2?: OPTIONAL<EUICCInfo2>,
+        rootSmdsAddress?: OPTIONAL<UTF8String>,
+        associationToken?: OPTIONAL<INTEGER>,
+        eumCertificate?: OPTIONAL<Certificate>,
+        euiccCertificate?: OPTIONAL<Certificate>,
+        eimTransactionId?: OPTIONAL<TransactionId>,
+        ipaCapabilities?: OPTIONAL<IpaCapabilities>,
+        deviceInfo?: OPTIONAL<DeviceInfo>
+    ) {
+        this.notificationsList = notificationsList;
+        this.defaultSmdpAddress = defaultSmdpAddress;
+        this.euiccPackageResultList = euiccPackageResultList;
+        this.euiccInfo1 = euiccInfo1;
+        this.euiccInfo2 = euiccInfo2;
+        this.rootSmdsAddress = rootSmdsAddress;
+        this.associationToken = associationToken;
+        this.eumCertificate = eumCertificate;
+        this.euiccCertificate = euiccCertificate;
+        this.eimTransactionId = eimTransactionId;
+        this.ipaCapabilities = ipaCapabilities;
+        this.deviceInfo = deviceInfo;
+    }
 
     /**
      * @summary Restructures an object into a IpaEuiccData

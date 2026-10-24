@@ -33,31 +33,37 @@ import { BPUReportInformation, _decode_BPUReportInformation, _encode_BPUReportIn
  */
 export
 class BDCReportContentInformation {
+    /**
+     * @summary `bdcPKCInformation`.
+     * @description
+     *
+     * Device X.509 public-key certificate, or a URI pointing
+     * to it. X.1089 §10.3, §10.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly bdcPKCInformation: BdcPKCInformation;
+    /**
+     * @summary `bdcReportInformation`.
+     * @description
+     *
+     * ACBio certified report of BPU processing (and security
+     * levels used), or a URI referring to it. X.1089 §7,
+     * §10.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly bdcReportInformation: BPUReportInformation;
+
     constructor (
-        /**
-         * @summary `bdcPKCInformation`.
-         * @description
-         *
-         * Device X.509 public-key certificate, or a URI pointing
-         * to it. X.1089 §10.3, §10.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly bdcPKCInformation: BdcPKCInformation,
-        /**
-         * @summary `bdcReportInformation`.
-         * @description
-         *
-         * ACBio certified report of BPU processing (and security
-         * levels used), or a URI referring to it. X.1089 §7,
-         * §10.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly bdcReportInformation: BPUReportInformation
-    ) {}
+        bdcPKCInformation: BdcPKCInformation,
+        bdcReportInformation: BPUReportInformation
+    ) {
+        this.bdcPKCInformation = bdcPKCInformation;
+        this.bdcReportInformation = bdcReportInformation;
+    }
 
     /**
      * @summary Restructures an object into a BDCReportContentInformation

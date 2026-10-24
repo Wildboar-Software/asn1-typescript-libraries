@@ -29,18 +29,22 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class ProfileDownloadData_contactSmds {
+    /**
+     * @summary `smdsAddress`.
+     * @description
+     * Present when the eIM specifies the SM-DS address. Absent when the IPA uses
+     * the SM-DS address available in the IoT Device. SGP.32 v1.2, section
+     * 2.11.1.3.
+     * @public
+     * @readonly
+     */
+    public readonly smdsAddress?: OPTIONAL<UTF8String>;
+
     constructor (
-        /**
-         * @summary `smdsAddress`.
-         * @description
-         * Present when the eIM specifies the SM-DS address. Absent when the IPA uses
-         * the SM-DS address available in the IoT Device. SGP.32 v1.2, section
-         * 2.11.1.3.
-         * @public
-         * @readonly
-         */
-        readonly smdsAddress?: OPTIONAL<UTF8String>
-    ) {}
+        smdsAddress?: OPTIONAL<UTF8String>
+    ) {
+        this.smdsAddress = smdsAddress;
+    }
 
     /**
      * @summary Restructures an object into a ProfileDownloadData_contactSmds

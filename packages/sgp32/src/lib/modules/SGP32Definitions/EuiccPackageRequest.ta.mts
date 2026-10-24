@@ -43,31 +43,37 @@ import { EuiccPackageSigned, _decode_EuiccPackageSigned, _encode_EuiccPackageSig
  */
 export
 class EuiccPackageRequest {
+    /**
+     * @summary `euiccPackageSigned`.
+     * @description
+     * The bytes the eIM signs, concatenated with the association token, and the
+     * bytes the eUICC verifies (SGP.32 v1.2, sections 2.11.1.1 and 5.9.1).
+     * Contains the issuing eimId, the target EID, the replay counter, an optional
+     * transaction identifier, and either PSMOs or eCOs.
+     * @public
+     * @readonly
+     */
+    public readonly euiccPackageSigned: EuiccPackageSigned;
+    /**
+     * @summary `eimSignature`.
+     * @description
+     * eIM signature, tag '5F37', over euiccPackageSigned concatenated with the
+     * associationToken data object (SGP.32 v1.2, section 2.11.1.1). When no token
+     * is configured, that object is the value zero, '84 01 00'. An invalid
+     * signature produces euiccPackageErrorUnsigned and, when a token is
+     * configured, includes that token (section 5.9.1).
+     * @public
+     * @readonly
+     */
+    public readonly eimSignature: OCTET_STRING;
+
     constructor (
-        /**
-         * @summary `euiccPackageSigned`.
-         * @description
-         * The bytes the eIM signs, concatenated with the association token, and the
-         * bytes the eUICC verifies (SGP.32 v1.2, sections 2.11.1.1 and 5.9.1).
-         * Contains the issuing eimId, the target EID, the replay counter, an optional
-         * transaction identifier, and either PSMOs or eCOs.
-         * @public
-         * @readonly
-         */
-        readonly euiccPackageSigned: EuiccPackageSigned,
-        /**
-         * @summary `eimSignature`.
-         * @description
-         * eIM signature, tag '5F37', over euiccPackageSigned concatenated with the
-         * associationToken data object (SGP.32 v1.2, section 2.11.1.1). When no token
-         * is configured, that object is the value zero, '84 01 00'. An invalid
-         * signature produces euiccPackageErrorUnsigned and, when a token is
-         * configured, includes that token (section 5.9.1).
-         * @public
-         * @readonly
-         */
-        readonly eimSignature: OCTET_STRING
-    ) {}
+        euiccPackageSigned: EuiccPackageSigned,
+        eimSignature: OCTET_STRING
+    ) {
+        this.euiccPackageSigned = euiccPackageSigned;
+        this.eimSignature = eimSignature;
+    }
 
     /**
      * @summary Restructures an object into a EuiccPackageRequest

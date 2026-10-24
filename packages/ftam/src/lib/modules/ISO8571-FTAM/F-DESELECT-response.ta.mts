@@ -57,51 +57,61 @@ import {
  *
  */
 export class F_DESELECT_response {
+  /**
+   * @summary `action_result`.
+   * @description
+   *
+   * Selection terminates whatever the value. Default `success`.
+   * ISO 8571-3:1988 §15.2.2.1.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly action_result?: OPTIONAL<Action_Result>;
+  /**
+   * @summary `charging`.
+   * @description
+   *
+   * Present iff `account` was on the PDU that established
+   * selection (ASN.1). Charges only against an overriding account
+   * set at selection. ISO 8571-3:1988 §15.2.2.2.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly charging?: OPTIONAL<Charging>;
+  /**
+   * @summary `shared_ASE_information`.
+   * @description
+   *
+   * ISO 8571-3:1988 §15.2.2.3 / §13.10.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>;
+  /**
+   * @summary `diagnostic`.
+   * @description
+   *
+   * ISO 8571-3:1988 §15.2.2.4 / §13.13.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly diagnostic?: OPTIONAL<Diagnostic>;
+
   constructor(
-    /**
-     * @summary `action_result`.
-     * @description
-     *
-     * Selection terminates whatever the value. Default `success`.
-     * ISO 8571-3:1988 §15.2.2.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly action_result?: OPTIONAL<Action_Result>,
-    /**
-     * @summary `charging`.
-     * @description
-     *
-     * Present iff `account` was on the PDU that established
-     * selection (ASN.1). Charges only against an overriding account
-     * set at selection. ISO 8571-3:1988 §15.2.2.2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly charging?: OPTIONAL<Charging>,
-    /**
-     * @summary `shared_ASE_information`.
-     * @description
-     *
-     * ISO 8571-3:1988 §15.2.2.3 / §13.10.
-     *
-     * @public
-     * @readonly
-     */
-    readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
-    /**
-     * @summary `diagnostic`.
-     * @description
-     *
-     * ISO 8571-3:1988 §15.2.2.4 / §13.13.
-     *
-     * @public
-     * @readonly
-     */
-    readonly diagnostic?: OPTIONAL<Diagnostic>
-  ) {}
+    action_result?: OPTIONAL<Action_Result>,
+    charging?: OPTIONAL<Charging>,
+    shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
+    diagnostic?: OPTIONAL<Diagnostic>
+  ) {
+    this.action_result = action_result;
+    this.charging = charging;
+    this.shared_ASE_information = shared_ASE_information;
+    this.diagnostic = diagnostic;
+  }
 
   /**
    * @summary Restructures an object into a F_DESELECT_response

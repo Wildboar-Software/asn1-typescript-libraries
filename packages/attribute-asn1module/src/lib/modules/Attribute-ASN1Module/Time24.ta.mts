@@ -31,28 +31,34 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class Time24 {
+    /**
+     * @summary `hour`.
+     * @description
+     *
+     * 0..23. ITU-T Rec. X.721 (02/92) §14.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly hour: INTEGER;
+    /**
+     * @summary `minute`.
+     * @description
+     *
+     * 0..59. ITU-T Rec. X.721 (02/92) §14.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly minute: INTEGER;
+
     constructor (
-        /**
-         * @summary `hour`.
-         * @description
-         *
-         * 0..23. ITU-T Rec. X.721 (02/92) §14.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly hour: INTEGER,
-        /**
-         * @summary `minute`.
-         * @description
-         *
-         * 0..59. ITU-T Rec. X.721 (02/92) §14.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly minute: INTEGER
-    ) {}
+        hour: INTEGER,
+        minute: INTEGER
+    ) {
+        this.hour = hour;
+        this.minute = minute;
+    }
 
     /**
      * @summary Restructures an object into a Time24

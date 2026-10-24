@@ -38,20 +38,26 @@ import {
  *
  */
 export class DataType {
+    /**
+     * @summary `processedLevel`.
+     * @public
+     * @readonly
+     */
+    public readonly processedLevel: ProcessedLevel;
+    /**
+     * @summary `purpose`.
+     * @public
+     * @readonly
+     */
+    public readonly purpose?: OPTIONAL<Purpose>;
+
     constructor(
-        /**
-         * @summary `processedLevel`.
-         * @public
-         * @readonly
-         */
-        readonly processedLevel: ProcessedLevel,
-        /**
-         * @summary `purpose`.
-         * @public
-         * @readonly
-         */
-        readonly purpose?: OPTIONAL<Purpose>
-    ) {}
+        processedLevel: ProcessedLevel,
+        purpose?: OPTIONAL<Purpose>
+    ) {
+        this.processedLevel = processedLevel;
+        this.purpose = purpose;
+    }
 
     /**
      * @summary Restructures an object into a DataType

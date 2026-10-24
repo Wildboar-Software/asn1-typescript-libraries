@@ -43,31 +43,37 @@ import {
  *
  */
 export class CertRepMessage {
+  /**
+   * @summary `caPubs`.
+   * @description
+   *
+   * Optional CA certificates. If PKI message protection is shared
+   * secret information, certificates here MAY be directly trusted as
+   * root CA certificates by the initiator ([RFC 4210 §5.3.2](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.2),
+   * [RFC 4210 §5.3.4](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.4)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly caPubs: OPTIONAL<CMPCertificate[]>;
+  /**
+   * @summary `response`.
+   * @description
+   *
+   * One `CertResponse` per certificate requested ([RFC 4210 §5.3.4](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.4)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly response: CertResponse[];
+
   constructor(
-    /**
-     * @summary `caPubs`.
-     * @description
-     *
-     * Optional CA certificates. If PKI message protection is shared
-     * secret information, certificates here MAY be directly trusted as
-     * root CA certificates by the initiator ([RFC 4210 §5.3.2](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.2),
-     * [RFC 4210 §5.3.4](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.4)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly caPubs: OPTIONAL<CMPCertificate[]>,
-    /**
-     * @summary `response`.
-     * @description
-     *
-     * One `CertResponse` per certificate requested ([RFC 4210 §5.3.4](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.4)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly response: CertResponse[]
-  ) {}
+    caPubs: OPTIONAL<CMPCertificate[]>,
+    response: CertResponse[]
+  ) {
+    this.caPubs = caPubs;
+    this.response = response;
+  }
 
   /**
    * @summary Restructures an object into a CertRepMessage

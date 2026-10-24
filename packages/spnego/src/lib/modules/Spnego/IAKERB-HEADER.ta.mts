@@ -36,32 +36,42 @@ import { HeaderFlags, _decode_HeaderFlags, _encode_HeaderFlags } from "../Spnego
  */
 export
 class IAKERB_HEADER {
+    /**
+     * @summary `target_realm`.
+     * @public
+     * @readonly
+     */
+    public readonly target_realm: UTF8String;
+    /**
+     * @summary `cookie`.
+     * @public
+     * @readonly
+     */
+    public readonly cookie?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `header_flags`.
+     * @public
+     * @readonly
+     */
+    public readonly header_flags?: OPTIONAL<HeaderFlags>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `target_realm`.
-         * @public
-         * @readonly
-         */
-        readonly target_realm: UTF8String,
-        /**
-         * @summary `cookie`.
-         * @public
-         * @readonly
-         */
-        readonly cookie?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `header_flags`.
-         * @public
-         * @readonly
-         */
-        readonly header_flags?: OPTIONAL<HeaderFlags>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        target_realm: UTF8String,
+        cookie?: OPTIONAL<OCTET_STRING>,
+        header_flags?: OPTIONAL<HeaderFlags>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.target_realm = target_realm;
+        this.cookie = cookie;
+        this.header_flags = header_flags;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a IAKERB_HEADER

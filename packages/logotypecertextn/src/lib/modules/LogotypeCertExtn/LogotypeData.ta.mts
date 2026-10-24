@@ -41,36 +41,42 @@ import { LogotypeAudio, _decode_LogotypeAudio, _encode_LogotypeAudio } from "../
  */
 export
 class LogotypeData {
+    /**
+     * Image-file variants of this logotype. Every logotype included
+     * in a certificate has at least one image, even though this
+     * component is optional in the ASN.1. Clients accept
+     * `image/jpeg` and `image/gif`. Animated images should not be
+     * used. At least one variant should be between 60×45 and
+     * 200×150 pixels.
+     *
+     * [RFC 3709, section 3](https://www.rfc-editor.org/rfc/rfc3709#section-3)
+     * and [section 4.1](https://www.rfc-editor.org/rfc/rfc3709#section-4.1).
+     * @public
+     * @readonly
+     */
+    public readonly image?: OPTIONAL<LogotypeImage[]>;
+    /**
+     * Audio-file variants of this logotype. Optional for the
+     * certificate and optional for implementations. A client that
+     * does support audio accepts `audio/mpeg`. At least one
+     * variant should play for between 1 and 30 seconds. At most
+     * one sequence from this logotype plays at a time, and
+     * [section 6](https://www.rfc-editor.org/rfc/rfc3709#section-6)
+     * also allows only one logotype audio sequence in total.
+     *
+     * [RFC 3709, section 3](https://www.rfc-editor.org/rfc/rfc3709#section-3).
+     * @public
+     * @readonly
+     */
+    public readonly audio?: OPTIONAL<LogotypeAudio[]>;
+
     constructor (
-        /**
-         * Image-file variants of this logotype. Every logotype included
-         * in a certificate has at least one image, even though this
-         * component is optional in the ASN.1. Clients accept
-         * `image/jpeg` and `image/gif`. Animated images should not be
-         * used. At least one variant should be between 60×45 and
-         * 200×150 pixels.
-         *
-         * [RFC 3709, section 3](https://www.rfc-editor.org/rfc/rfc3709#section-3)
-         * and [section 4.1](https://www.rfc-editor.org/rfc/rfc3709#section-4.1).
-         * @public
-         * @readonly
-         */
-        readonly image?: OPTIONAL<LogotypeImage[]>,
-        /**
-         * Audio-file variants of this logotype. Optional for the
-         * certificate and optional for implementations. A client that
-         * does support audio accepts `audio/mpeg`. At least one
-         * variant should play for between 1 and 30 seconds. At most
-         * one sequence from this logotype plays at a time, and
-         * [section 6](https://www.rfc-editor.org/rfc/rfc3709#section-6)
-         * also allows only one logotype audio sequence in total.
-         *
-         * [RFC 3709, section 3](https://www.rfc-editor.org/rfc/rfc3709#section-3).
-         * @public
-         * @readonly
-         */
-        readonly audio?: OPTIONAL<LogotypeAudio[]>
-    ) {}
+        image?: OPTIONAL<LogotypeImage[]>,
+        audio?: OPTIONAL<LogotypeAudio[]>
+    ) {
+        this.image = image;
+        this.audio = audio;
+    }
 
     /**
      * @summary Restructures an object into a LogotypeData

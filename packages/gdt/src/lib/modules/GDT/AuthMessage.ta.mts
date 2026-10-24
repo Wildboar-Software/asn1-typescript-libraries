@@ -27,26 +27,34 @@ import { Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Param
  */
 export
 class AuthMessage {
+    /**
+     * @summary `auth_action`.
+     * @public
+     * @readonly
+     */
+    public readonly auth_action: AuthAction;
+    /**
+     * @summary `params`.
+     * @public
+     * @readonly
+     */
+    public readonly params?: OPTIONAL<Parameters>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `auth_action`.
-         * @public
-         * @readonly
-         */
-        readonly auth_action: AuthAction,
-        /**
-         * @summary `params`.
-         * @public
-         * @readonly
-         */
-        readonly params?: OPTIONAL<Parameters>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        auth_action: AuthAction,
+        params?: OPTIONAL<Parameters>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.auth_action = auth_action;
+        this.params = params;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AuthMessage

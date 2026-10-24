@@ -44,56 +44,68 @@ import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59Strin
  */
 export
 class V18Diag_Item {
+    /**
+     * @summary `modeV18`.
+     * @description
+     *
+     * V.18 operating-mode capability. Table 5/V.59: `notSupported`(0),
+     * `default`(1) preferred, `enabled`(2), `disabled`(3) supported but
+     * off. Tag-ID `2300`. ITU-T Rec. V.59 (11/2000) §6.8.15.
+     * @public
+     * @readonly
+     */
+    public readonly modeV18: Capabilities;
+    /**
+     * @summary `v18used`.
+     * @description
+     *
+     * V.18 mode achieved on the last call (Table 15/V.59). Tag-ID `2301`.
+     * ITU-T Rec. V.59 (11/2000) §6.8.15.
+     * @public
+     * @readonly
+     */
+    public readonly v18used: V18Diag_Item_v18used;
+    /**
+     * @summary `v18TxLevel`.
+     * @description
+     *
+     * V.18 transmit power (`TxPowerLevel`). ITU-T Rec. V.59 (11/2000)
+     * §6.8.15.
+     * @public
+     * @readonly
+     */
+    public readonly v18TxLevel: TxPowerLevel;
+    /**
+     * @summary `rxLevelEstimate`.
+     * @description
+     *
+     * Receive power at the modem input, with units (e.g. `-25dBm0`). May
+     * differ from a measurement at the line interface. IA5 `simpleText`
+     * (§6.2.1). Tag-ID `4E`. ITU-T Rec. V.59 (11/2000) §6.4.
+     * @public
+     * @readonly
+     */
+    public readonly rxLevelEstimate?: OPTIONAL<V59String>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `modeV18`.
-         * @description
-         *
-         * V.18 operating-mode capability. Table 5/V.59: `notSupported`(0),
-         * `default`(1) preferred, `enabled`(2), `disabled`(3) supported but
-         * off. Tag-ID `2300`. ITU-T Rec. V.59 (11/2000) §6.8.15.
-         * @public
-         * @readonly
-         */
-        readonly modeV18: Capabilities,
-        /**
-         * @summary `v18used`.
-         * @description
-         *
-         * V.18 mode achieved on the last call (Table 15/V.59). Tag-ID `2301`.
-         * ITU-T Rec. V.59 (11/2000) §6.8.15.
-         * @public
-         * @readonly
-         */
-        readonly v18used: V18Diag_Item_v18used,
-        /**
-         * @summary `v18TxLevel`.
-         * @description
-         *
-         * V.18 transmit power (`TxPowerLevel`). ITU-T Rec. V.59 (11/2000)
-         * §6.8.15.
-         * @public
-         * @readonly
-         */
-        readonly v18TxLevel: TxPowerLevel,
-        /**
-         * @summary `rxLevelEstimate`.
-         * @description
-         *
-         * Receive power at the modem input, with units (e.g. `-25dBm0`). May
-         * differ from a measurement at the line interface. IA5 `simpleText`
-         * (§6.2.1). Tag-ID `4E`. ITU-T Rec. V.59 (11/2000) §6.4.
-         * @public
-         * @readonly
-         */
-        readonly rxLevelEstimate?: OPTIONAL<V59String>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        modeV18: Capabilities,
+        v18used: V18Diag_Item_v18used,
+        v18TxLevel: TxPowerLevel,
+        rxLevelEstimate?: OPTIONAL<V59String>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.modeV18 = modeV18;
+        this.v18used = v18used;
+        this.v18TxLevel = v18TxLevel;
+        this.rxLevelEstimate = rxLevelEstimate;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a V18Diag_Item

@@ -43,33 +43,39 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class StcAMsgContent {
+    /**
+     * @summary `sessionID`.
+     * @description
+     *
+     * Session identifier, 10 octets (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sessionID: OCTET_STRING;
+    /**
+     * @summary `statusInfo`.
+     * @description
+     *
+     * 1 octet (Annex A): `0x01` CAM-DSC ID
+     * validation fail; `0x02` MEK or ICCIEK hash
+     * verification fail; `0x03` CCI hash
+     * verification fail; `0x04` HMAC verification
+     * fail; `0x05` RSA signature verification fail;
+     * `0x06`–`0xFF` reserved.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly statusInfo: OCTET_STRING;
+
     constructor (
-        /**
-         * @summary `sessionID`.
-         * @description
-         *
-         * Session identifier, 10 octets (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sessionID: OCTET_STRING,
-        /**
-         * @summary `statusInfo`.
-         * @description
-         *
-         * 1 octet (Annex A): `0x01` CAM-DSC ID
-         * validation fail; `0x02` MEK or ICCIEK hash
-         * verification fail; `0x03` CCI hash
-         * verification fail; `0x04` HMAC verification
-         * fail; `0x05` RSA signature verification fail;
-         * `0x06`–`0xFF` reserved.
-         *
-         * @public
-         * @readonly
-         */
-        readonly statusInfo: OCTET_STRING
-    ) {}
+        sessionID: OCTET_STRING,
+        statusInfo: OCTET_STRING
+    ) {
+        this.sessionID = sessionID;
+        this.statusInfo = statusInfo;
+    }
 
     /**
      * @summary Restructures an object into a StcAMsgContent

@@ -44,42 +44,50 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class RCASRnMsgContent {
+    /**
+     * @summary `downloadSchedule`.
+     * @description
+     *
+     * CACS download time as 12 octets
+     * `YYMMDDhhmmss`. Example: 2013-05-13 17:50:30
+     * → `130513175030` (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly downloadSchedule: OCTET_STRING;
+    /**
+     * @summary `keyRequest_Req`.
+     * @description
+     *
+     * Present and `TRUE` to ask the CAM to send
+     * KeyRequest (key upgrade). Annex A.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly keyRequest_Req?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `purchaseReport_Req`.
+     * @description
+     *
+     * Present and `TRUE` to ask the CAM to send
+     * PurchaseReport. Annex A.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly purchaseReport_Req?: OPTIONAL<BOOLEAN>;
+
     constructor (
-        /**
-         * @summary `downloadSchedule`.
-         * @description
-         *
-         * CACS download time as 12 octets
-         * `YYMMDDhhmmss`. Example: 2013-05-13 17:50:30
-         * → `130513175030` (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly downloadSchedule: OCTET_STRING,
-        /**
-         * @summary `keyRequest_Req`.
-         * @description
-         *
-         * Present and `TRUE` to ask the CAM to send
-         * KeyRequest (key upgrade). Annex A.
-         *
-         * @public
-         * @readonly
-         */
-        readonly keyRequest_Req?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `purchaseReport_Req`.
-         * @description
-         *
-         * Present and `TRUE` to ask the CAM to send
-         * PurchaseReport. Annex A.
-         *
-         * @public
-         * @readonly
-         */
-        readonly purchaseReport_Req?: OPTIONAL<BOOLEAN>
-    ) {}
+        downloadSchedule: OCTET_STRING,
+        keyRequest_Req?: OPTIONAL<BOOLEAN>,
+        purchaseReport_Req?: OPTIONAL<BOOLEAN>
+    ) {
+        this.downloadSchedule = downloadSchedule;
+        this.keyRequest_Req = keyRequest_Req;
+        this.purchaseReport_Req = purchaseReport_Req;
+    }
 
     /**
      * @summary Restructures an object into a RCASRnMsgContent

@@ -38,28 +38,34 @@ import {
  *
  */
 export class ProtectedPart {
+  /**
+   * @summary `header`.
+   * @description
+   *
+   * `PKIHeader` included in the protected encoding ([RFC 4210 §5.1.3](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.3)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly header: PKIHeader;
+  /**
+   * @summary `body`.
+   * @description
+   *
+   * `PKIBody` included in the protected encoding ([RFC 4210 §5.1.3](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.3)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly body: PKIBody;
+
   constructor(
-    /**
-     * @summary `header`.
-     * @description
-     *
-     * `PKIHeader` included in the protected encoding ([RFC 4210 §5.1.3](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.3)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly header: PKIHeader,
-    /**
-     * @summary `body`.
-     * @description
-     *
-     * `PKIBody` included in the protected encoding ([RFC 4210 §5.1.3](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.3)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly body: PKIBody
-  ) {}
+    header: PKIHeader,
+    body: PKIBody
+  ) {
+    this.header = header;
+    this.body = body;
+  }
 
   /**
    * @summary Restructures an object into a ProtectedPart

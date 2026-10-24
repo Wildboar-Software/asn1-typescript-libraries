@@ -58,58 +58,68 @@ import {
  *
  */
 export class ReachabilityChangeSyntax {
+    /**
+     * @summary `newState`.
+     * @description
+     *
+     * Reachability after the change (`down` or `up`).
+     * ITU-T Rec. X.283 (12/97)
+     * [§5.7](https://www.itu.int/rec/T-REC-X.283-199712-I).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly newState: ReachabilityChangeSyntax_newState;
+    /**
+     * @summary `nAddresses`.
+     * @description
+     *
+     * For an IS change: NET of that IS. For an ES change: NSAP addresses of
+     * that ES.
+     * ITU-T Rec. X.283 (12/97)
+     * [§5.7](https://www.itu.int/rec/T-REC-X.283-199712-I).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly nAddresses: NAddress[];
+    /**
+     * @summary `sNPAAddress`.
+     * @description
+     *
+     * SNPA of the neighbour, when available.
+     * ITU-T Rec. X.283 (12/97)
+     * [§5.7](https://www.itu.int/rec/T-REC-X.283-199712-I).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sNPAAddress?: OPTIONAL<SNPAAddress>;
+    /**
+     * @summary `reason`.
+     * @description
+     *
+     * `holdingTimerExpired` or `circuitDisabled`. Present only when
+     * `newState` is `down` (§6.2 "Down only").
+     * ITU-T Rec. X.283 (12/97)
+     * [§5.7](https://www.itu.int/rec/T-REC-X.283-199712-I).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reason?: OPTIONAL<ReachabilityChangeSyntax_reason>;
+
     constructor(
-        /**
-         * @summary `newState`.
-         * @description
-         *
-         * Reachability after the change (`down` or `up`).
-         * ITU-T Rec. X.283 (12/97)
-         * [§5.7](https://www.itu.int/rec/T-REC-X.283-199712-I).
-         *
-         * @public
-         * @readonly
-         */
-        readonly newState: ReachabilityChangeSyntax_newState,
-        /**
-         * @summary `nAddresses`.
-         * @description
-         *
-         * For an IS change: NET of that IS. For an ES change: NSAP addresses of
-         * that ES.
-         * ITU-T Rec. X.283 (12/97)
-         * [§5.7](https://www.itu.int/rec/T-REC-X.283-199712-I).
-         *
-         * @public
-         * @readonly
-         */
-        readonly nAddresses: NAddress[],
-        /**
-         * @summary `sNPAAddress`.
-         * @description
-         *
-         * SNPA of the neighbour, when available.
-         * ITU-T Rec. X.283 (12/97)
-         * [§5.7](https://www.itu.int/rec/T-REC-X.283-199712-I).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sNPAAddress?: OPTIONAL<SNPAAddress>,
-        /**
-         * @summary `reason`.
-         * @description
-         *
-         * `holdingTimerExpired` or `circuitDisabled`. Present only when
-         * `newState` is `down` (§6.2 "Down only").
-         * ITU-T Rec. X.283 (12/97)
-         * [§5.7](https://www.itu.int/rec/T-REC-X.283-199712-I).
-         *
-         * @public
-         * @readonly
-         */
-        readonly reason?: OPTIONAL<ReachabilityChangeSyntax_reason>
-    ) {}
+        newState: ReachabilityChangeSyntax_newState,
+        nAddresses: NAddress[],
+        sNPAAddress?: OPTIONAL<SNPAAddress>,
+        reason?: OPTIONAL<ReachabilityChangeSyntax_reason>
+    ) {
+        this.newState = newState;
+        this.nAddresses = nAddresses;
+        this.sNPAAddress = sNPAAddress;
+        this.reason = reason;
+    }
 
     /**
      * @summary Restructures an object into a ReachabilityChangeSyntax

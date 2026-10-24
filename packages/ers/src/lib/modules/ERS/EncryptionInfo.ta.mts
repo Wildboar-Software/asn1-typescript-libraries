@@ -39,32 +39,38 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class EncryptionInfo {
+    /**
+     * @summary `encryptionInfoType`.
+     * @description
+     *
+     * Object identifier selecting the encryption-info syntax
+     * (`ENCINFO-TYPE.&id` constrained by
+     * `SupportedEncryptionAlgorithms`). (RFC 4998 §6.1.2.)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly encryptionInfoType: OBJECT_IDENTIFIER;
+    /**
+     * @summary `encryptionInfoValue`.
+     * @description
+     *
+     * Type associated with `encryptionInfoType`
+     * (`ENCINFO-TYPE.&Type`). Encoding and meaning are defined by
+     * the mechanism identified by the OID. (RFC 4998 §6.1.2.)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly encryptionInfoValue: _Element;
+
     constructor (
-        /**
-         * @summary `encryptionInfoType`.
-         * @description
-         *
-         * Object identifier selecting the encryption-info syntax
-         * (`ENCINFO-TYPE.&id` constrained by
-         * `SupportedEncryptionAlgorithms`). (RFC 4998 §6.1.2.)
-         *
-         * @public
-         * @readonly
-         */
-        readonly encryptionInfoType: OBJECT_IDENTIFIER,
-        /**
-         * @summary `encryptionInfoValue`.
-         * @description
-         *
-         * Type associated with `encryptionInfoType`
-         * (`ENCINFO-TYPE.&Type`). Encoding and meaning are defined by
-         * the mechanism identified by the OID. (RFC 4998 §6.1.2.)
-         *
-         * @public
-         * @readonly
-         */
-        readonly encryptionInfoValue: _Element
-    ) {}
+        encryptionInfoType: OBJECT_IDENTIFIER,
+        encryptionInfoValue: _Element
+    ) {
+        this.encryptionInfoType = encryptionInfoType;
+        this.encryptionInfoValue = encryptionInfoValue;
+    }
 
     /**
      * @summary Restructures an object into a EncryptionInfo
