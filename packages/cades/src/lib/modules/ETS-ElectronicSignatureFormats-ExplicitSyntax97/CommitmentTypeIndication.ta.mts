@@ -34,29 +34,35 @@ import { CommitmentTypeQualifier, _decode_CommitmentTypeQualifier, _encode_Commi
  */
 export
 class CommitmentTypeIndication {
+    /**
+     * @summary `commitmentTypeId`.
+     * @description
+     *
+     * Commitment type, e.g. `id-cti-ets-proofOfOrigin`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly commitmentTypeId: CommitmentTypeIdentifier;
+    /**
+     * @summary `commitmentTypeQualifier`.
+     * @description
+     *
+     * Optional qualifiers of the commitment. Their use is
+     * outside the scope of TS 101 733.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly commitmentTypeQualifier?: OPTIONAL<CommitmentTypeQualifier[]>;
+
     constructor (
-        /**
-         * @summary `commitmentTypeId`.
-         * @description
-         *
-         * Commitment type, e.g. `id-cti-ets-proofOfOrigin`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly commitmentTypeId: CommitmentTypeIdentifier,
-        /**
-         * @summary `commitmentTypeQualifier`.
-         * @description
-         *
-         * Optional qualifiers of the commitment. Their use is
-         * outside the scope of TS 101 733.
-         *
-         * @public
-         * @readonly
-         */
-        readonly commitmentTypeQualifier?: OPTIONAL<CommitmentTypeQualifier[]>
-    ) {}
+        commitmentTypeId: CommitmentTypeIdentifier,
+        commitmentTypeQualifier?: OPTIONAL<CommitmentTypeQualifier[]>
+    ) {
+        this.commitmentTypeId = commitmentTypeId;
+        this.commitmentTypeQualifier = commitmentTypeQualifier;
+    }
 
     /**
      * @summary Restructures an object into a CommitmentTypeIndication

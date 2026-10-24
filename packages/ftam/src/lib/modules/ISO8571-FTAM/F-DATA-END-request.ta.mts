@@ -43,30 +43,36 @@ import {
  *
  */
 export class F_DATA_END_request {
+  /**
+   * @summary `action_result`.
+   * @description
+   *
+   * Success, or unsuccessful as a rejection of F-READ. Default
+   * `success`. ISO 8571-3:1988 §13.2, §24.4.2.1.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly action_result?: OPTIONAL<Action_Result>;
+  /**
+   * @summary `diagnostic`.
+   * @description
+   *
+   * Amplifies action-result; carries the reason when rejecting
+   * F-READ. ISO 8571-3:1988 §13.13, §24.4.2.2.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly diagnostic?: OPTIONAL<Diagnostic>;
+
   constructor(
-    /**
-     * @summary `action_result`.
-     * @description
-     *
-     * Success, or unsuccessful as a rejection of F-READ. Default
-     * `success`. ISO 8571-3:1988 §13.2, §24.4.2.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly action_result?: OPTIONAL<Action_Result>,
-    /**
-     * @summary `diagnostic`.
-     * @description
-     *
-     * Amplifies action-result; carries the reason when rejecting
-     * F-READ. ISO 8571-3:1988 §13.13, §24.4.2.2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly diagnostic?: OPTIONAL<Diagnostic>
-  ) {}
+    action_result?: OPTIONAL<Action_Result>,
+    diagnostic?: OPTIONAL<Diagnostic>
+  ) {
+    this.action_result = action_result;
+    this.diagnostic = diagnostic;
+  }
 
   /**
    * @summary Restructures an object into a F_DATA_END_request

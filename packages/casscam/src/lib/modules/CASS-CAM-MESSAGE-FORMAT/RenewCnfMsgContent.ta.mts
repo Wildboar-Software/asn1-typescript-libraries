@@ -40,28 +40,34 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class RenewCnfMsgContent {
+    /**
+     * @summary `sessionID`.
+     * @description
+     *
+     * Session identifier, 10 octets (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sessionID: OCTET_STRING;
+    /**
+     * @summary `downloadStatus`.
+     * @description
+     *
+     * `TRUE` success, `FALSE` fail (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly downloadStatus: BOOLEAN;
+
     constructor (
-        /**
-         * @summary `sessionID`.
-         * @description
-         *
-         * Session identifier, 10 octets (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sessionID: OCTET_STRING,
-        /**
-         * @summary `downloadStatus`.
-         * @description
-         *
-         * `TRUE` success, `FALSE` fail (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly downloadStatus: BOOLEAN
-    ) {}
+        sessionID: OCTET_STRING,
+        downloadStatus: BOOLEAN
+    ) {
+        this.sessionID = sessionID;
+        this.downloadStatus = downloadStatus;
+    }
 
     /**
      * @summary Restructures an object into a RenewCnfMsgContent

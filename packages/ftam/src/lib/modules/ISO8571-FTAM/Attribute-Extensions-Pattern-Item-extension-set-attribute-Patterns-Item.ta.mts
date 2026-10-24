@@ -27,29 +27,35 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class Attribute_Extensions_Pattern_Item_extension_set_attribute_Patterns_Item {
+  /**
+   * @summary `extension_attribute_identifier`.
+   * @description
+   *
+   * OID of the extension attribute (`TYPE-IDENTIFIER.&id`).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly extension_attribute_identifier: OBJECT_IDENTIFIER;
+  /**
+   * @summary `extension_attribute_Pattern`.
+   * @description
+   *
+   * Pattern value whose type is bound by that identifier. ASN.1:
+   * may be defined in terms of other patterns in this module.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly extension_attribute_Pattern: _Element;
+
   constructor(
-    /**
-     * @summary `extension_attribute_identifier`.
-     * @description
-     *
-     * OID of the extension attribute (`TYPE-IDENTIFIER.&id`).
-     *
-     * @public
-     * @readonly
-     */
-    readonly extension_attribute_identifier: OBJECT_IDENTIFIER,
-    /**
-     * @summary `extension_attribute_Pattern`.
-     * @description
-     *
-     * Pattern value whose type is bound by that identifier. ASN.1:
-     * may be defined in terms of other patterns in this module.
-     *
-     * @public
-     * @readonly
-     */
-    readonly extension_attribute_Pattern: _Element
-  ) {}
+    extension_attribute_identifier: OBJECT_IDENTIFIER,
+    extension_attribute_Pattern: _Element
+  ) {
+    this.extension_attribute_identifier = extension_attribute_identifier;
+    this.extension_attribute_Pattern = extension_attribute_Pattern;
+  }
 
   /**
    * @summary Restructures an object into a Attribute_Extensions_Pattern_Item_extension_set_attribute_Patterns_Item

@@ -41,45 +41,53 @@ import {
  *
  */
 export class NonStandardDPS {
+    /**
+     * @summary `subscription`.
+     * @description
+     *
+     * `true` if the X.2 non-standard default packet sizes facility is
+     * subscribed.
+     * ITU-T Rec. X.283 (12/97)
+     * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subscription: BOOLEAN;
+    /**
+     * @summary `supportedPacketSizes`.
+     * @description
+     *
+     * Packet sizes this PLE supports under the facility.
+     * ITU-T Rec. X.283 (12/97)
+     * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly supportedPacketSizes?: OPTIONAL<INTEGER[]>;
+    /**
+     * @summary `selectedPacketSizes`.
+     * @description
+     *
+     * Selected default packet sizes (incoming/outgoing).
+     * ITU-T Rec. X.283 (12/97)
+     * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly selectedPacketSizes?: OPTIONAL<BidirectionalValues>;
+
     constructor(
-        /**
-         * @summary `subscription`.
-         * @description
-         *
-         * `true` if the X.2 non-standard default packet sizes facility is
-         * subscribed.
-         * ITU-T Rec. X.283 (12/97)
-         * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
-         *
-         * @public
-         * @readonly
-         */
-        readonly subscription: BOOLEAN,
-        /**
-         * @summary `supportedPacketSizes`.
-         * @description
-         *
-         * Packet sizes this PLE supports under the facility.
-         * ITU-T Rec. X.283 (12/97)
-         * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
-         *
-         * @public
-         * @readonly
-         */
-        readonly supportedPacketSizes?: OPTIONAL<INTEGER[]>,
-        /**
-         * @summary `selectedPacketSizes`.
-         * @description
-         *
-         * Selected default packet sizes (incoming/outgoing).
-         * ITU-T Rec. X.283 (12/97)
-         * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
-         *
-         * @public
-         * @readonly
-         */
-        readonly selectedPacketSizes?: OPTIONAL<BidirectionalValues>
-    ) {}
+        subscription: BOOLEAN,
+        supportedPacketSizes?: OPTIONAL<INTEGER[]>,
+        selectedPacketSizes?: OPTIONAL<BidirectionalValues>
+    ) {
+        this.subscription = subscription;
+        this.supportedPacketSizes = supportedPacketSizes;
+        this.selectedPacketSizes = selectedPacketSizes;
+    }
 
     /**
      * @summary Restructures an object into a NonStandardDPS

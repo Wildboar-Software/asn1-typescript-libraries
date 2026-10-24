@@ -54,68 +54,78 @@ import {
  */
 export
 class ArchiveTimeStamp {
+    /**
+     * @summary `digestAlgorithm`.
+     * @description
+     *
+     * Digest algorithm (and parameters) used within the reduced hash
+     * tree. For RFC 3161 timestamps when this field is absent, the
+     * value matches `hashAlgorithm` of `TSTInfo.messageImprint`.
+     * (RFC 4998 §4.1, §4.2.)
+     *
+     * > If the optional field digestAlgorithm is not present, the
+     * > digest algorithm of the timestamp MUST be used.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly digestAlgorithm: OPTIONAL<AlgorithmIdentifier>;
+    /**
+     * @summary `attributes`.
+     * @description
+     *
+     * Optional LTA information documenting renewal steps and
+     * creation of this `ArchiveTimeStamp` (e.g. applied policies).
+     * Ordering is relevant because the structure may be protected
+     * by hash and timestamps, hence ASN.1 `SET` rather than
+     * `SEQUENCE`. (RFC 4998 §4.1.)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly attributes: OPTIONAL<Attributes>;
+    /**
+     * @summary `reducedHashtree`.
+     * @description
+     *
+     * Lists of hash values as `PartialHashtree`s, derived by
+     * reducing a Merkle tree to nodes needed to verify a single
+     * data object (or group). Hash values are octet strings. If
+     * absent, this is simply an ordinary timestamp. (RFC 4998
+     * §4.1, §4.2.)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reducedHashtree: OPTIONAL<PartialHashtree[]>;
+    /**
+     * @summary `timeStamp`.
+     * @description
+     *
+     * The timestamp (RFC 4998 §1.3), e.g. an RFC 3161
+     * `TimeStampToken` as CMS `ContentInfo`. Other timestamp types
+     * MAY be used if they contain time data, timestamped data, and
+     * a cryptographically secure TSA confirmation. Data needed to
+     * verify the timestamp MUST be preserved and SHOULD be stored
+     * in the timestamp itself unless that causes unnecessary
+     * duplication. (RFC 4998 §4.1, §4.2.)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly timeStamp: ContentInfo;
+
     constructor (
-        /**
-         * @summary `digestAlgorithm`.
-         * @description
-         *
-         * Digest algorithm (and parameters) used within the reduced hash
-         * tree. For RFC 3161 timestamps when this field is absent, the
-         * value matches `hashAlgorithm` of `TSTInfo.messageImprint`.
-         * (RFC 4998 §4.1, §4.2.)
-         *
-         * > If the optional field digestAlgorithm is not present, the
-         * > digest algorithm of the timestamp MUST be used.
-         *
-         * @public
-         * @readonly
-         */
-        readonly digestAlgorithm: OPTIONAL<AlgorithmIdentifier>,
-        /**
-         * @summary `attributes`.
-         * @description
-         *
-         * Optional LTA information documenting renewal steps and
-         * creation of this `ArchiveTimeStamp` (e.g. applied policies).
-         * Ordering is relevant because the structure may be protected
-         * by hash and timestamps, hence ASN.1 `SET` rather than
-         * `SEQUENCE`. (RFC 4998 §4.1.)
-         *
-         * @public
-         * @readonly
-         */
-        readonly attributes: OPTIONAL<Attributes>,
-        /**
-         * @summary `reducedHashtree`.
-         * @description
-         *
-         * Lists of hash values as `PartialHashtree`s, derived by
-         * reducing a Merkle tree to nodes needed to verify a single
-         * data object (or group). Hash values are octet strings. If
-         * absent, this is simply an ordinary timestamp. (RFC 4998
-         * §4.1, §4.2.)
-         *
-         * @public
-         * @readonly
-         */
-        readonly reducedHashtree: OPTIONAL<PartialHashtree[]>,
-        /**
-         * @summary `timeStamp`.
-         * @description
-         *
-         * The timestamp (RFC 4998 §1.3), e.g. an RFC 3161
-         * `TimeStampToken` as CMS `ContentInfo`. Other timestamp types
-         * MAY be used if they contain time data, timestamped data, and
-         * a cryptographically secure TSA confirmation. Data needed to
-         * verify the timestamp MUST be preserved and SHOULD be stored
-         * in the timestamp itself unless that causes unnecessary
-         * duplication. (RFC 4998 §4.1, §4.2.)
-         *
-         * @public
-         * @readonly
-         */
-        readonly timeStamp: ContentInfo
-    ) {}
+        digestAlgorithm: OPTIONAL<AlgorithmIdentifier>,
+        attributes: OPTIONAL<Attributes>,
+        reducedHashtree: OPTIONAL<PartialHashtree[]>,
+        timeStamp: ContentInfo
+    ) {
+        this.digestAlgorithm = digestAlgorithm;
+        this.attributes = attributes;
+        this.reducedHashtree = reducedHashtree;
+        this.timeStamp = timeStamp;
+    }
 
     /**
      * @summary Restructures an object into a ArchiveTimeStamp

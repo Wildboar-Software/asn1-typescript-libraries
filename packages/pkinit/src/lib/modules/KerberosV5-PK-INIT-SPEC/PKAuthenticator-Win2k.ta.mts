@@ -40,56 +40,69 @@ import { KerberosTime, _decode_KerberosTime, _encode_KerberosTime } from "@wildb
  */
 export
 class PKAuthenticator_Win2k {
+    /**
+     * Named `kdcName` in this module. RFC 4556 does not define
+     * the field or say how a peer checks it.
+     * @public
+     * @readonly
+     */
+    public readonly kdcName: PrincipalName;
+    /**
+     * Named `kdcRealm` in this module. RFC 4556 does not define
+     * the field. Appendix C says Microsoft Kerberos realm names
+     * are domain-style and strictly uppercase.
+     *
+     * [RFC 4556, Appendix C](https://www.rfc-editor.org/rfc/rfc4556#appendix-C).
+     * @public
+     * @readonly
+     */
+    public readonly kdcRealm: Realm;
+    /**
+     * Integer in 0..4294967295. That is wider than the
+     * 0..999999 range of {@link PKAuthenticator.cusec}.
+     * RFC 4556 does not define this field.
+     * @public
+     * @readonly
+     */
+    public readonly cusec: INTEGER;
+    /**
+     * RFC 4556 does not define this field, so it does not say
+     * whether the replay checks on
+     * {@link PKAuthenticator.ctime} apply here.
+     * @public
+     * @readonly
+     */
+    public readonly ctime: KerberosTime;
+    /**
+     * Integer in -2147483648..2147483647, a signed 32-bit
+     * range. {@link PKAuthenticator.nonce} is an unsigned
+     * value in 0..4294967295. RFC 4556 does not define this
+     * field or say whether it must match another nonce.
+     * @public
+     * @readonly
+     */
+    public readonly nonce: INTEGER;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * Named `kdcName` in this module. RFC 4556 does not define
-         * the field or say how a peer checks it.
-         * @public
-         * @readonly
-         */
-        readonly kdcName: PrincipalName,
-        /**
-         * Named `kdcRealm` in this module. RFC 4556 does not define
-         * the field. Appendix C says Microsoft Kerberos realm names
-         * are domain-style and strictly uppercase.
-         *
-         * [RFC 4556, Appendix C](https://www.rfc-editor.org/rfc/rfc4556#appendix-C).
-         * @public
-         * @readonly
-         */
-        readonly kdcRealm: Realm,
-        /**
-         * Integer in 0..4294967295. That is wider than the
-         * 0..999999 range of {@link PKAuthenticator.cusec}.
-         * RFC 4556 does not define this field.
-         * @public
-         * @readonly
-         */
-        readonly cusec: INTEGER,
-        /**
-         * RFC 4556 does not define this field, so it does not say
-         * whether the replay checks on
-         * {@link PKAuthenticator.ctime} apply here.
-         * @public
-         * @readonly
-         */
-        readonly ctime: KerberosTime,
-        /**
-         * Integer in -2147483648..2147483647, a signed 32-bit
-         * range. {@link PKAuthenticator.nonce} is an unsigned
-         * value in 0..4294967295. RFC 4556 does not define this
-         * field or say whether it must match another nonce.
-         * @public
-         * @readonly
-         */
-        readonly nonce: INTEGER,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
+        kdcName: PrincipalName,
+        kdcRealm: Realm,
+        cusec: INTEGER,
+        ctime: KerberosTime,
+        nonce: INTEGER,
+        _unrecognizedExtensionsList: _Element[] = []
     ) {
+        this.kdcName = kdcName;
+        this.kdcRealm = kdcRealm;
+        this.cusec = cusec;
+        this.ctime = ctime;
+        this.nonce = nonce;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
         const cusecNumber = typeof this.cusec === "bigint" ? Number(this.cusec) : this.cusec;
         if (cusecNumber < 0 || cusecNumber > 4294967295) {
             throw new ASN1OverflowError("PKAuthenticator-Win2k.cusec violates INTEGER range");

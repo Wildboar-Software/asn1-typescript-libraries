@@ -41,30 +41,36 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class Timer {
+    /**
+     * @summary `exponent`.
+     * @description
+     *
+     * Power of ten. Constrained to `-62..63`. Combined
+     * with `mantissa` as `mantissa * 10^exponent`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly exponent: INTEGER;
+    /**
+     * @summary `mantissa`.
+     * @description
+     *
+     * Constrained to `0..65535`. Combined with
+     * `exponent` as `mantissa * 10^exponent`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mantissa: INTEGER;
+
     constructor (
-        /**
-         * @summary `exponent`.
-         * @description
-         *
-         * Power of ten. Constrained to `-62..63`. Combined
-         * with `mantissa` as `mantissa * 10^exponent`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly exponent: INTEGER,
-        /**
-         * @summary `mantissa`.
-         * @description
-         *
-         * Constrained to `0..65535`. Combined with
-         * `exponent` as `mantissa * 10^exponent`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mantissa: INTEGER
-    ) {}
+        exponent: INTEGER,
+        mantissa: INTEGER
+    ) {
+        this.exponent = exponent;
+        this.mantissa = mantissa;
+    }
 
     /**
      * @summary Restructures an object into a Timer

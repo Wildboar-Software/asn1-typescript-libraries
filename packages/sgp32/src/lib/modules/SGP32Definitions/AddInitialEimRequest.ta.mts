@@ -34,28 +34,32 @@ import { EimConfigurationData, _decode_EimConfigurationData, _encode_EimConfigur
  */
 export
 class AddInitialEimRequest {
+    /**
+     * @summary `eimConfigurationDataList`.
+     * @description
+     *
+     * eIM Configuration Data to store. Each entry includes eimId, counterValue,
+     * and either eimPublicKey or eimCertificate. Uniqueness of eimId is the IPA's
+     * responsibility (section 5.9.4 NOTE).
+     *
+     * If eimIdType is absent the eUICC stores eimIdTypeProprietary. If
+     * eimSupportedProtocol is absent the eUICC stores only the eimProprietary bit.
+     * If euiccCiPKId is absent the eUICC stores the first entry of
+     * euiccCiPKIdListForSigning in eUICCInfo2. associationToken set to -1 requests
+     * calculation of an association token. eimFqdn and trustedPublicKeyDataTls may
+     * be included.
+     *
+     * SGP.32 v1.2, section 5.9.4.
+     * @public
+     * @readonly
+     */
+    public readonly eimConfigurationDataList: EimConfigurationData[];
+
     constructor (
-        /**
-         * @summary `eimConfigurationDataList`.
-         * @description
-         *
-         * eIM Configuration Data to store. Each entry includes eimId, counterValue,
-         * and either eimPublicKey or eimCertificate. Uniqueness of eimId is the IPA's
-         * responsibility (section 5.9.4 NOTE).
-         *
-         * If eimIdType is absent the eUICC stores eimIdTypeProprietary. If
-         * eimSupportedProtocol is absent the eUICC stores only the eimProprietary bit.
-         * If euiccCiPKId is absent the eUICC stores the first entry of
-         * euiccCiPKIdListForSigning in eUICCInfo2. associationToken set to -1 requests
-         * calculation of an association token. eimFqdn and trustedPublicKeyDataTls may
-         * be included.
-         *
-         * SGP.32 v1.2, section 5.9.4.
-         * @public
-         * @readonly
-         */
-        readonly eimConfigurationDataList: EimConfigurationData[]
-    ) {}
+        eimConfigurationDataList: EimConfigurationData[]
+    ) {
+        this.eimConfigurationDataList = eimConfigurationDataList;
+    }
 
     /**
      * @summary Restructures an object into a AddInitialEimRequest

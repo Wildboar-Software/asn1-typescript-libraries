@@ -28,30 +28,36 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class OptionalCategoryData {
+    /**
+     * @summary `optCatDataId`.
+     * @description
+     *
+     * `OC-DATA.&id` selecting the encoding of `categorydata`.
+     * X.841 §6.2.2.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly optCatDataId: OBJECT_IDENTIFIER;
+    /**
+     * @summary `categorydata`.
+     * @description
+     *
+     * Open-type value (`OC-DATA.&Type`) identified by
+     * `optCatDataId`. X.841 §6.2.2.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly categorydata: _Element;
+
     constructor(
-        /**
-         * @summary `optCatDataId`.
-         * @description
-         *
-         * `OC-DATA.&id` selecting the encoding of `categorydata`.
-         * X.841 §6.2.2.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly optCatDataId: OBJECT_IDENTIFIER,
-        /**
-         * @summary `categorydata`.
-         * @description
-         *
-         * Open-type value (`OC-DATA.&Type`) identified by
-         * `optCatDataId`. X.841 §6.2.2.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly categorydata: _Element
-    ) {}
+        optCatDataId: OBJECT_IDENTIFIER,
+        categorydata: _Element
+    ) {
+        this.optCatDataId = optCatDataId;
+        this.categorydata = categorydata;
+    }
 
     /**
      * @summary Restructures an object into a OptionalCategoryData

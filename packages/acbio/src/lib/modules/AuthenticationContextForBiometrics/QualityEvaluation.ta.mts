@@ -36,20 +36,26 @@ import {
  *
  */
 export class QualityEvaluation {
+    /**
+     * @summary `biometricProcessQualityInformation`.
+     * @public
+     * @readonly
+     */
+    public readonly biometricProcessQualityInformation?: OPTIONAL<BiometricProcessQualityInformation>;
+    /**
+     * @summary `qualityEvaluationExtensionInformation`.
+     * @public
+     * @readonly
+     */
+    public readonly qualityEvaluationExtensionInformation?: OPTIONAL<QualityEvaluationExtensionInformation>;
+
     constructor(
-        /**
-         * @summary `biometricProcessQualityInformation`.
-         * @public
-         * @readonly
-         */
-        readonly biometricProcessQualityInformation?: OPTIONAL<BiometricProcessQualityInformation>,
-        /**
-         * @summary `qualityEvaluationExtensionInformation`.
-         * @public
-         * @readonly
-         */
-        readonly qualityEvaluationExtensionInformation?: OPTIONAL<QualityEvaluationExtensionInformation>
-    ) {}
+        biometricProcessQualityInformation?: OPTIONAL<BiometricProcessQualityInformation>,
+        qualityEvaluationExtensionInformation?: OPTIONAL<QualityEvaluationExtensionInformation>
+    ) {
+        this.biometricProcessQualityInformation = biometricProcessQualityInformation;
+        this.qualityEvaluationExtensionInformation = qualityEvaluationExtensionInformation;
+    }
 
     /**
      * @summary Restructures an object into a QualityEvaluation

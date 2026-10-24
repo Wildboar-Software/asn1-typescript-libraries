@@ -44,45 +44,53 @@ import {
  */
 export
 class TokenBA1 {
+    /**
+     * @summary `randomB`.
+     * @description
+     *
+     * Server challenge R_B. The client includes this value in the
+     * signed `TBSDataAB` of `TokenAB` so the server can verify the
+     * echo (RFC 3163 §2.4 / §2.5). MUST be from a cryptographically
+     * strong RNG (RFC 3163 §7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly randomB: RandomNumber;
+    /**
+     * @summary `entityB`.
+     * @description
+     *
+     * Optional server distinguishing name(s). When present in a
+     * later `TokenAB`, the client SHOULD echo the identity it
+     * believes belongs to the server (RFC 3163 §3.1–§3.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly entityB?: OPTIONAL<GeneralNames>;
+    /**
+     * @summary `certPref`.
+     * @description
+     *
+     * Ordered preferences for certificates / public-key pairs the
+     * client should use; each element is a `TrustedAuth`
+     * (RFC 3163 §3.1 / §3.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certPref?: OPTIONAL<TrustedAuth[]>;
+
     constructor (
-        /**
-         * @summary `randomB`.
-         * @description
-         *
-         * Server challenge R_B. The client includes this value in the
-         * signed `TBSDataAB` of `TokenAB` so the server can verify the
-         * echo (RFC 3163 §2.4 / §2.5). MUST be from a cryptographically
-         * strong RNG (RFC 3163 §7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly randomB: RandomNumber,
-        /**
-         * @summary `entityB`.
-         * @description
-         *
-         * Optional server distinguishing name(s). When present in a
-         * later `TokenAB`, the client SHOULD echo the identity it
-         * believes belongs to the server (RFC 3163 §3.1–§3.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly entityB?: OPTIONAL<GeneralNames>,
-        /**
-         * @summary `certPref`.
-         * @description
-         *
-         * Ordered preferences for certificates / public-key pairs the
-         * client should use; each element is a `TrustedAuth`
-         * (RFC 3163 §3.1 / §3.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly certPref?: OPTIONAL<TrustedAuth[]>
-    ) {}
+        randomB: RandomNumber,
+        entityB?: OPTIONAL<GeneralNames>,
+        certPref?: OPTIONAL<TrustedAuth[]>
+    ) {
+        this.randomB = randomB;
+        this.entityB = entityB;
+        this.certPref = certPref;
+    }
 
     /**
      * @summary Restructures an object into a TokenBA1

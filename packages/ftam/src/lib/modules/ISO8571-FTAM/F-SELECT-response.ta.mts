@@ -70,71 +70,85 @@ import {
  *
  */
 export class F_SELECT_response {
+  /**
+   * @summary `state_result`.
+   * @description
+   *
+   * Whether the select regime was established. Default `success`.
+   * ISO 8571-3:1988 §15.1.2.1.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly state_result: OPTIONAL<State_Result>;
+  /**
+   * @summary `action_result`.
+   * @description
+   *
+   * Default `success`. ISO 8571-3:1988 §15.1.2.2 / §13.2.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly action_result: OPTIONAL<Action_Result>;
+  /**
+   * @summary `attributes`.
+   * @description
+   *
+   * Filename only; may not match the request.
+   * ISO 8571-3:1988 §15.1.2.3.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly attributes: Select_Attributes;
+  /**
+   * @summary `referent_indicator`.
+   * @description
+   *
+   * Absent from ISO 8571:1988 Parts 1–4. ASN.1 comment: send only
+   * when the limited-filestore-management FU is available.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly referent_indicator?: OPTIONAL<Referent_Indicator>;
+  /**
+   * @summary `shared_ASE_information`.
+   * @description
+   *
+   * ISO 8571-3:1988 §15.1.2.7 / §13.10.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>;
+  /**
+   * @summary `diagnostic`.
+   * @description
+   *
+   * ISO 8571-3:1988 §15.1.2.9 / §13.13.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly diagnostic?: OPTIONAL<Diagnostic>;
+
   constructor(
-    /**
-     * @summary `state_result`.
-     * @description
-     *
-     * Whether the select regime was established. Default `success`.
-     * ISO 8571-3:1988 §15.1.2.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly state_result: OPTIONAL<State_Result>,
-    /**
-     * @summary `action_result`.
-     * @description
-     *
-     * Default `success`. ISO 8571-3:1988 §15.1.2.2 / §13.2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly action_result: OPTIONAL<Action_Result>,
-    /**
-     * @summary `attributes`.
-     * @description
-     *
-     * Filename only; may not match the request.
-     * ISO 8571-3:1988 §15.1.2.3.
-     *
-     * @public
-     * @readonly
-     */
-    readonly attributes: Select_Attributes,
-    /**
-     * @summary `referent_indicator`.
-     * @description
-     *
-     * Absent from ISO 8571:1988 Parts 1–4. ASN.1 comment: send only
-     * when the limited-filestore-management FU is available.
-     *
-     * @public
-     * @readonly
-     */
-    readonly referent_indicator?: OPTIONAL<Referent_Indicator>,
-    /**
-     * @summary `shared_ASE_information`.
-     * @description
-     *
-     * ISO 8571-3:1988 §15.1.2.7 / §13.10.
-     *
-     * @public
-     * @readonly
-     */
-    readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
-    /**
-     * @summary `diagnostic`.
-     * @description
-     *
-     * ISO 8571-3:1988 §15.1.2.9 / §13.13.
-     *
-     * @public
-     * @readonly
-     */
-    readonly diagnostic?: OPTIONAL<Diagnostic>
-  ) {}
+    state_result: OPTIONAL<State_Result>,
+    action_result: OPTIONAL<Action_Result>,
+    attributes: Select_Attributes,
+    referent_indicator?: OPTIONAL<Referent_Indicator>,
+    shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
+    diagnostic?: OPTIONAL<Diagnostic>
+  ) {
+    this.state_result = state_result;
+    this.action_result = action_result;
+    this.attributes = attributes;
+    this.referent_indicator = referent_indicator;
+    this.shared_ASE_information = shared_ASE_information;
+    this.diagnostic = diagnostic;
+  }
 
   /**
    * @summary Restructures an object into a F_SELECT_response

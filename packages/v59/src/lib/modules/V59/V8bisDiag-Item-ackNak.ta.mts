@@ -39,29 +39,35 @@ import { V8bisDiag_Item_ackNak_nAK, _decode_V8bisDiag_Item_ackNak_nAK, _encode_V
  */
 export
 class V8bisDiag_Item_ackNak {
+    /**
+     * @summary `aCK`.
+     * @description
+     *
+     * ACK type (Table 10/V.59). Tag-ID `080A`. ITU-T Rec. V.59 (11/2000)
+     * §6.8.2.
+     * @public
+     * @readonly
+     */
+    public readonly aCK: V8bisDiag_Item_ackNak_aCK;
+    /**
+     * @summary `nAK`.
+     * @description
+     *
+     * NAK type (Table 11/V.59 as corrected by ITU-T Rec. V.59 Cor.2
+     * (03/2002) clause 4.1). Tag-ID `080B`. ITU-T Rec. V.59 (11/2000)
+     * §6.8.2.
+     * @public
+     * @readonly
+     */
+    public readonly nAK: V8bisDiag_Item_ackNak_nAK;
+
     constructor (
-        /**
-         * @summary `aCK`.
-         * @description
-         *
-         * ACK type (Table 10/V.59). Tag-ID `080A`. ITU-T Rec. V.59 (11/2000)
-         * §6.8.2.
-         * @public
-         * @readonly
-         */
-        readonly aCK: V8bisDiag_Item_ackNak_aCK,
-        /**
-         * @summary `nAK`.
-         * @description
-         *
-         * NAK type (Table 11/V.59 as corrected by ITU-T Rec. V.59 Cor.2
-         * (03/2002) clause 4.1). Tag-ID `080B`. ITU-T Rec. V.59 (11/2000)
-         * §6.8.2.
-         * @public
-         * @readonly
-         */
-        readonly nAK: V8bisDiag_Item_ackNak_nAK
-    ) {}
+        aCK: V8bisDiag_Item_ackNak_aCK,
+        nAK: V8bisDiag_Item_ackNak_nAK
+    ) {
+        this.aCK = aCK;
+        this.nAK = nAK;
+    }
 
     /**
      * @summary Restructures an object into a V8bisDiag_Item_ackNak

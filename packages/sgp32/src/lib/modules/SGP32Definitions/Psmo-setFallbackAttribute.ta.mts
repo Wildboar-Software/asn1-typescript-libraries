@@ -32,24 +32,28 @@ import { type Iccid, _decode_Iccid, _encode_Iccid } from "@wildboar/sgp22/RSPDef
  */
 export
 class Psmo_setFallbackAttribute {
+    /**
+     * @summary `iccid`.
+     * @description
+     * ICCID of the Profile that receives the Fallback Attribute, as defined in
+     * SGP.22. SGP.32 v1.2, section 2.11.1.1. An unknown ICCID yields
+     * iccidOrAidNotFound. The command returns ok when this Profile already has the
+     * attribute. fallbackAllowed is TRUE; an absent or FALSE flag yields
+     * fallbackNotAllowed(2). An Emergency Profile with ecallIndication TRUE yields
+     * undefinedError(127). When another Profile already has the attribute and is
+     * enabled, the result is fallbackProfileEnabled(3). When that other Profile is
+     * disabled, its attribute is cleared and this Profile receives it. SGP.32
+     * v1.2, section 3.4.6.
+     * @public
+     * @readonly
+     */
+    public readonly iccid: Iccid;
+
     constructor (
-        /**
-         * @summary `iccid`.
-         * @description
-         * ICCID of the Profile that receives the Fallback Attribute, as defined in
-         * SGP.22. SGP.32 v1.2, section 2.11.1.1. An unknown ICCID yields
-         * iccidOrAidNotFound. The command returns ok when this Profile already has the
-         * attribute. fallbackAllowed is TRUE; an absent or FALSE flag yields
-         * fallbackNotAllowed(2). An Emergency Profile with ecallIndication TRUE yields
-         * undefinedError(127). When another Profile already has the attribute and is
-         * enabled, the result is fallbackProfileEnabled(3). When that other Profile is
-         * disabled, its attribute is cleared and this Profile receives it. SGP.32
-         * v1.2, section 3.4.6.
-         * @public
-         * @readonly
-         */
-        readonly iccid: Iccid
-    ) {}
+        iccid: Iccid
+    ) {
+        this.iccid = iccid;
+    }
 
     /**
      * @summary Restructures an object into a Psmo_setFallbackAttribute

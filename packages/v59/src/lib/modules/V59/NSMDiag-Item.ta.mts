@@ -33,35 +33,42 @@ import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59Strin
  */
 export
 class NSMDiag_Item {
+    /**
+     * @summary `proprietaryMode`.
+     * @description
+     *
+     * Name of the proprietary mode(s) whose diagnostics are in `fieldData`.
+     * IA5 `simpleText` (§6.2.1). Tag-ID `2601`. ITU-T Rec. V.59 (11/2000)
+     * §6.8.18.
+     * @public
+     * @readonly
+     */
+    public readonly proprietaryMode?: OPTIONAL<V59String>;
+    /**
+     * @summary `fieldData`.
+     * @description
+     *
+     * Delimited manufacturer-defined diagnostic objects. IA5String SIZE
+     * 1..256. Tag-ID `2602`. ITU-T Rec. V.59 (11/2000) §6.8.18.
+     * @public
+     * @readonly
+     */
+    public readonly fieldData?: OPTIONAL<IA5String>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `proprietaryMode`.
-         * @description
-         *
-         * Name of the proprietary mode(s) whose diagnostics are in `fieldData`.
-         * IA5 `simpleText` (§6.2.1). Tag-ID `2601`. ITU-T Rec. V.59 (11/2000)
-         * §6.8.18.
-         * @public
-         * @readonly
-         */
-        readonly proprietaryMode?: OPTIONAL<V59String>,
-        /**
-         * @summary `fieldData`.
-         * @description
-         *
-         * Delimited manufacturer-defined diagnostic objects. IA5String SIZE
-         * 1..256. Tag-ID `2602`. ITU-T Rec. V.59 (11/2000) §6.8.18.
-         * @public
-         * @readonly
-         */
-        readonly fieldData?: OPTIONAL<IA5String>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
+        proprietaryMode?: OPTIONAL<V59String>,
+        fieldData?: OPTIONAL<IA5String>,
+        _unrecognizedExtensionsList: _Element[] = []
     ) {
+        this.proprietaryMode = proprietaryMode;
+        this.fieldData = fieldData;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
         if (this.fieldData !== undefined) { if (this.fieldData.length < 1 || this.fieldData.length > 256) {
                 throw new ASN1SizeError("NSMDiag_Item.fieldData violates SIZE constraint");
             } }}

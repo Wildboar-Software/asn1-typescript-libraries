@@ -49,43 +49,51 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class ImageInfo {
+    /**
+     * @summary `dSIP`.
+     * @description
+     *
+     * Download server IP, 16 octets. Absent for a
+     * Common Image. IPv4 vs IPv6 layout is not
+     * specified (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dSIP: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `tm`.
+     * @description
+     *
+     * Transport: `0x01` Carousel, `0x02` TFTP,
+     * `0x03` HTTP, `0x04`–`0xFF` reserved
+     * (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly tm: OCTET_STRING;
+    /**
+     * @summary `fn`.
+     * @description
+     *
+     * File name. Absent for a Common Image
+     * (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly fn?: OPTIONAL<PrintableString>;
+
     constructor (
-        /**
-         * @summary `dSIP`.
-         * @description
-         *
-         * Download server IP, 16 octets. Absent for a
-         * Common Image. IPv4 vs IPv6 layout is not
-         * specified (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly dSIP: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `tm`.
-         * @description
-         *
-         * Transport: `0x01` Carousel, `0x02` TFTP,
-         * `0x03` HTTP, `0x04`–`0xFF` reserved
-         * (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly tm: OCTET_STRING,
-        /**
-         * @summary `fn`.
-         * @description
-         *
-         * File name. Absent for a Common Image
-         * (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly fn?: OPTIONAL<PrintableString>
-    ) {}
+        dSIP: OPTIONAL<OCTET_STRING>,
+        tm: OCTET_STRING,
+        fn?: OPTIONAL<PrintableString>
+    ) {
+        this.dSIP = dSIP;
+        this.tm = tm;
+        this.fn = fn;
+    }
 
     /**
      * @summary Restructures an object into a ImageInfo

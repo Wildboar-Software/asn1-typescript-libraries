@@ -39,53 +39,63 @@ import { BioTempIssuer, _decode_BioTempIssuer, _encode_BioTempIssuer } from "../
  */
 export
 class BCBiometricInformationTemplateContent {
+    /**
+     * @summary `biometricTemplateVersion`.
+     * @description
+     *
+     * Version of the BIT in the BC. Only `v0(0)` is defined.
+     * X.1089 §8.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly biometricTemplateVersion: BiometricTemplateVersion;
+    /**
+     * @summary `biometricTemplateInfo`.
+     * @description
+     *
+     * BIT data in the BC (CBEFF patron format or a later
+     * alternative). X.1089 §8.7.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly biometricTemplateInfo: BiometricTemplateInfo;
+    /**
+     * @summary `issuerDigitalSignatureAlgorithm`.
+     * @description
+     *
+     * Algorithm used to sign this BIT. X.509
+     * `AlgorithmIdentifier` from `SupportedAlgorithms`.
+     * X.1089 §8.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly issuerDigitalSignatureAlgorithm?: OPTIONAL<AlgorithmIdentifier>;
+    /**
+     * @summary `bioTempIssuer`.
+     * @description
+     *
+     * Issuer of this BIT, which may differ from the BC
+     * issuer. X.1089 §8.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly bioTempIssuer?: OPTIONAL<BioTempIssuer>;
+
     constructor (
-        /**
-         * @summary `biometricTemplateVersion`.
-         * @description
-         *
-         * Version of the BIT in the BC. Only `v0(0)` is defined.
-         * X.1089 §8.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly biometricTemplateVersion: BiometricTemplateVersion,
-        /**
-         * @summary `biometricTemplateInfo`.
-         * @description
-         *
-         * BIT data in the BC (CBEFF patron format or a later
-         * alternative). X.1089 §8.7.
-         *
-         * @public
-         * @readonly
-         */
-        readonly biometricTemplateInfo: BiometricTemplateInfo,
-        /**
-         * @summary `issuerDigitalSignatureAlgorithm`.
-         * @description
-         *
-         * Algorithm used to sign this BIT. X.509
-         * `AlgorithmIdentifier` from `SupportedAlgorithms`.
-         * X.1089 §8.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly issuerDigitalSignatureAlgorithm?: OPTIONAL<AlgorithmIdentifier>,
-        /**
-         * @summary `bioTempIssuer`.
-         * @description
-         *
-         * Issuer of this BIT, which may differ from the BC
-         * issuer. X.1089 §8.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly bioTempIssuer?: OPTIONAL<BioTempIssuer>
-    ) {}
+        biometricTemplateVersion: BiometricTemplateVersion,
+        biometricTemplateInfo: BiometricTemplateInfo,
+        issuerDigitalSignatureAlgorithm?: OPTIONAL<AlgorithmIdentifier>,
+        bioTempIssuer?: OPTIONAL<BioTempIssuer>
+    ) {
+        this.biometricTemplateVersion = biometricTemplateVersion;
+        this.biometricTemplateInfo = biometricTemplateInfo;
+        this.issuerDigitalSignatureAlgorithm = issuerDigitalSignatureAlgorithm;
+        this.bioTempIssuer = bioTempIssuer;
+    }
 
     /**
      * @summary Restructures an object into a BCBiometricInformationTemplateContent

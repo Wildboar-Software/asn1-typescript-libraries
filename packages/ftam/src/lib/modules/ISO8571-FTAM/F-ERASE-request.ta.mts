@@ -34,19 +34,23 @@ import {
  *
  */
 export class F_ERASE_request {
+  /**
+   * @summary `file_access_data_unit_identity`.
+   * @description
+   *
+   * FADU to erase. ISO 8571-3:1988 §20.3.2.2 / §13.12;
+   * ISO 8571-2:1988 §11.6.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly file_access_data_unit_identity: FADU_Identity;
+
   constructor(
-    /**
-     * @summary `file_access_data_unit_identity`.
-     * @description
-     *
-     * FADU to erase. ISO 8571-3:1988 §20.3.2.2 / §13.12;
-     * ISO 8571-2:1988 §11.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly file_access_data_unit_identity: FADU_Identity
-  ) {}
+    file_access_data_unit_identity: FADU_Identity
+  ) {
+    this.file_access_data_unit_identity = file_access_data_unit_identity;
+  }
 
   /**
    * @summary Restructures an object into a F_ERASE_request

@@ -28,20 +28,24 @@ import { CrlValidatedID, _decode_CrlValidatedID, _encode_CrlValidatedID } from "
  */
 export
 class CRLListID {
+    /**
+     * @summary `crls`.
+     * @description
+     *
+     * Identifiers of the CRLs used. If a Delta CRL is
+     * identified, include the set of CRLs needed for a
+     * complete revocation list.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly crls: CrlValidatedID[];
+
     constructor (
-        /**
-         * @summary `crls`.
-         * @description
-         *
-         * Identifiers of the CRLs used. If a Delta CRL is
-         * identified, include the set of CRLs needed for a
-         * complete revocation list.
-         *
-         * @public
-         * @readonly
-         */
-        readonly crls: CrlValidatedID[]
-    ) {}
+        crls: CrlValidatedID[]
+    ) {
+        this.crls = crls;
+    }
 
     /**
      * @summary Restructures an object into a CRLListID

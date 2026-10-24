@@ -50,110 +50,130 @@ import { SM_TC, _decode_SM_TC, _encode_SM_TC } from "../SMRS/SM-TC.ta.mjs";
  */
 export
 class RPDataMT {
+    /**
+     * @summary `mt_priority_request`.
+     * @description
+     *
+     * Priority request. Clause 3.2 includes the flag and does not
+     * state when it is set.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mt_priority_request: BOOLEAN;
+    /**
+     * @summary `mt_mms`.
+     * @description
+     *
+     * More messages to send. When this mechanism is used, clause
+     * 2.2 requires `mt-message-reference` to stay unchanged until
+     * every message for that destination has been sent. Clause
+     * 3.2 names the flag `mt-more-messages-to-send` and makes it
+     * optional.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mt_mms: BOOLEAN;
+    /**
+     * @summary `mt_message_reference`.
+     * @description
+     *
+     * Correlates this relay with `RPAck` or `RPError`. When
+     * `mt-mms` is used, clause 2.2 keeps this value unchanged
+     * until every message to that destination has been sent.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mt_message_reference: RP_MR;
+    /**
+     * @summary `mt_originating_address`.
+     * @description
+     *
+     * Originating address of the mobile-terminated relay. The
+     * report does not add a format constraint for this component.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mt_originating_address: SMS_Address;
+    /**
+     * @summary `mt_destination_address`.
+     * @description
+     *
+     * Address of the mobile station the GMSC relays toward
+     * (clause 3.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mt_destination_address: SMS_Address;
+    /**
+     * @summary `mt_user_data`.
+     * @description
+     *
+     * The SMS transfer-layer PDU being relayed (clause 3.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mt_user_data: RP_UD;
+    /**
+     * @summary `mt_origVMSCAddr`.
+     * @description
+     *
+     * Originating mobile station's VMSC address. Optional Nokia
+     * component. Clause 3.2 has no such field.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mt_origVMSCAddr?: OPTIONAL<SMS_Address>;
+    /**
+     * @summary `mt_tariffClass`.
+     * @description
+     *
+     * Service tariff. Optional Nokia component. The report does
+     * not define the tariff numbering.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mt_tariffClass?: OPTIONAL<SM_TC>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions after the root components. The Nokia
+     * profile leaves the sequence open.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `mt_priority_request`.
-         * @description
-         *
-         * Priority request. Clause 3.2 includes the flag and does not
-         * state when it is set.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mt_priority_request: BOOLEAN,
-        /**
-         * @summary `mt_mms`.
-         * @description
-         *
-         * More messages to send. When this mechanism is used, clause
-         * 2.2 requires `mt-message-reference` to stay unchanged until
-         * every message for that destination has been sent. Clause
-         * 3.2 names the flag `mt-more-messages-to-send` and makes it
-         * optional.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mt_mms: BOOLEAN,
-        /**
-         * @summary `mt_message_reference`.
-         * @description
-         *
-         * Correlates this relay with `RPAck` or `RPError`. When
-         * `mt-mms` is used, clause 2.2 keeps this value unchanged
-         * until every message to that destination has been sent.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mt_message_reference: RP_MR,
-        /**
-         * @summary `mt_originating_address`.
-         * @description
-         *
-         * Originating address of the mobile-terminated relay. The
-         * report does not add a format constraint for this component.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mt_originating_address: SMS_Address,
-        /**
-         * @summary `mt_destination_address`.
-         * @description
-         *
-         * Address of the mobile station the GMSC relays toward
-         * (clause 3.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mt_destination_address: SMS_Address,
-        /**
-         * @summary `mt_user_data`.
-         * @description
-         *
-         * The SMS transfer-layer PDU being relayed (clause 3.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mt_user_data: RP_UD,
-        /**
-         * @summary `mt_origVMSCAddr`.
-         * @description
-         *
-         * Originating mobile station's VMSC address. Optional Nokia
-         * component. Clause 3.2 has no such field.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mt_origVMSCAddr?: OPTIONAL<SMS_Address>,
-        /**
-         * @summary `mt_tariffClass`.
-         * @description
-         *
-         * Service tariff. Optional Nokia component. The report does
-         * not define the tariff numbering.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mt_tariffClass?: OPTIONAL<SM_TC>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions after the root components. The Nokia
-         * profile leaves the sequence open.
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        mt_priority_request: BOOLEAN,
+        mt_mms: BOOLEAN,
+        mt_message_reference: RP_MR,
+        mt_originating_address: SMS_Address,
+        mt_destination_address: SMS_Address,
+        mt_user_data: RP_UD,
+        mt_origVMSCAddr?: OPTIONAL<SMS_Address>,
+        mt_tariffClass?: OPTIONAL<SM_TC>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.mt_priority_request = mt_priority_request;
+        this.mt_mms = mt_mms;
+        this.mt_message_reference = mt_message_reference;
+        this.mt_originating_address = mt_originating_address;
+        this.mt_destination_address = mt_destination_address;
+        this.mt_user_data = mt_user_data;
+        this.mt_origVMSCAddr = mt_origVMSCAddr;
+        this.mt_tariffClass = mt_tariffClass;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a RPDataMT

@@ -45,51 +45,61 @@ import {
  */
 export
 class TBSDataAB {
+    /**
+     * @summary `randomA`.
+     * @description
+     *
+     * Client nonce R_A from `TokenAB` (RFC 3163 §3.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly randomA: RandomNumber;
+    /**
+     * @summary `randomB`.
+     * @description
+     *
+     * Echo of the server challenge R_B from `TokenBA1`. The server
+     * verifies this matches the value it sent (RFC 3163 §2.4 / §2.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly randomB: RandomNumber;
+    /**
+     * @summary `entityB`.
+     * @description
+     *
+     * Optional server identity; presence must match `TokenAB.entityB`
+     * (RFC 3163 §3.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly entityB?: OPTIONAL<GeneralNames>;
+    /**
+     * @summary `authID`.
+     * @description
+     *
+     * Optional authorization identity; presence must match
+     * `TokenAB.authID` (RFC 3163 §3.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly authID?: OPTIONAL<GeneralNames>;
+
     constructor (
-        /**
-         * @summary `randomA`.
-         * @description
-         *
-         * Client nonce R_A from `TokenAB` (RFC 3163 §3.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly randomA: RandomNumber,
-        /**
-         * @summary `randomB`.
-         * @description
-         *
-         * Echo of the server challenge R_B from `TokenBA1`. The server
-         * verifies this matches the value it sent (RFC 3163 §2.4 / §2.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly randomB: RandomNumber,
-        /**
-         * @summary `entityB`.
-         * @description
-         *
-         * Optional server identity; presence must match `TokenAB.entityB`
-         * (RFC 3163 §3.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly entityB?: OPTIONAL<GeneralNames>,
-        /**
-         * @summary `authID`.
-         * @description
-         *
-         * Optional authorization identity; presence must match
-         * `TokenAB.authID` (RFC 3163 §3.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly authID?: OPTIONAL<GeneralNames>
-    ) {}
+        randomA: RandomNumber,
+        randomB: RandomNumber,
+        entityB?: OPTIONAL<GeneralNames>,
+        authID?: OPTIONAL<GeneralNames>
+    ) {
+        this.randomA = randomA;
+        this.randomB = randomB;
+        this.entityB = entityB;
+        this.authID = authID;
+    }
 
     /**
      * @summary Restructures an object into a TBSDataAB

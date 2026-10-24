@@ -57,63 +57,75 @@ import {
  *
  */
 export class F_TRANSFER_END_response {
+  /**
+   * @summary `action_result`.
+   * @description
+   *
+   * Outcome of the transfer. Default `success`.
+   * ISO 8571-3:1988 §13.2, §24.5.2.1.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly action_result?: OPTIONAL<Action_Result>;
+  /**
+   * @summary `shared_ASE_information`.
+   * @description
+   *
+   * Other ASE information bound to this primitive
+   * (ISO 8571-3:1988 §13.10).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>;
+  /**
+   * @summary `diagnostic`.
+   * @description
+   *
+   * Amplifies action-result (ISO 8571-3:1988 §13.13, §24.5.2.3).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly diagnostic?: OPTIONAL<Diagnostic>;
+  /**
+   * @summary `request_type`.
+   * @description
+   *
+   * Direction of the BDT (read or write). Not in ISO 8571:1988
+   * Parts 1–4. Module comment: conditional on consecutive or
+   * concurrent access.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly request_type?: OPTIONAL<Request_Type>;
+  /**
+   * @summary `transfer_number`.
+   * @description
+   *
+   * Not in ISO 8571:1988 Parts 1–4. Module comment: conditional on
+   * consecutive or concurrent access.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly transfer_number?: OPTIONAL<INTEGER>;
+
   constructor(
-    /**
-     * @summary `action_result`.
-     * @description
-     *
-     * Outcome of the transfer. Default `success`.
-     * ISO 8571-3:1988 §13.2, §24.5.2.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly action_result?: OPTIONAL<Action_Result>,
-    /**
-     * @summary `shared_ASE_information`.
-     * @description
-     *
-     * Other ASE information bound to this primitive
-     * (ISO 8571-3:1988 §13.10).
-     *
-     * @public
-     * @readonly
-     */
-    readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
-    /**
-     * @summary `diagnostic`.
-     * @description
-     *
-     * Amplifies action-result (ISO 8571-3:1988 §13.13, §24.5.2.3).
-     *
-     * @public
-     * @readonly
-     */
-    readonly diagnostic?: OPTIONAL<Diagnostic>,
-    /**
-     * @summary `request_type`.
-     * @description
-     *
-     * Direction of the BDT (read or write). Not in ISO 8571:1988
-     * Parts 1–4. Module comment: conditional on consecutive or
-     * concurrent access.
-     *
-     * @public
-     * @readonly
-     */
-    readonly request_type?: OPTIONAL<Request_Type>,
-    /**
-     * @summary `transfer_number`.
-     * @description
-     *
-     * Not in ISO 8571:1988 Parts 1–4. Module comment: conditional on
-     * consecutive or concurrent access.
-     *
-     * @public
-     * @readonly
-     */
-    readonly transfer_number?: OPTIONAL<INTEGER>
-  ) {}
+    action_result?: OPTIONAL<Action_Result>,
+    shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
+    diagnostic?: OPTIONAL<Diagnostic>,
+    request_type?: OPTIONAL<Request_Type>,
+    transfer_number?: OPTIONAL<INTEGER>
+  ) {
+    this.action_result = action_result;
+    this.shared_ASE_information = shared_ASE_information;
+    this.diagnostic = diagnostic;
+    this.request_type = request_type;
+    this.transfer_number = transfer_number;
+  }
 
   /**
    * @summary Restructures an object into a F_TRANSFER_END_response

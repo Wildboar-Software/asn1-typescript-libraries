@@ -35,29 +35,35 @@ import {
  *
  */
 export class ETYPE_INFO_ENTRY {
+  /**
+   * @summary `etype`.
+   * @description
+   *
+   * Encryption type for the associated key ([RFC 4120 §5.2.7.4](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.7.4)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly etype: Int32;
+  /**
+   * @summary `salt`.
+   * @description
+   *
+   * Optional salt for string-to-key; character set unspecified /
+   * likely locale-specific ([RFC 4120 §5.2.7.4](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.7.4)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly salt?: OPTIONAL<OCTET_STRING>;
+
   constructor(
-    /**
-     * @summary `etype`.
-     * @description
-     *
-     * Encryption type for the associated key ([RFC 4120 §5.2.7.4](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.7.4)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly etype: Int32,
-    /**
-     * @summary `salt`.
-     * @description
-     *
-     * Optional salt for string-to-key; character set unspecified /
-     * likely locale-specific ([RFC 4120 §5.2.7.4](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.7.4)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly salt?: OPTIONAL<OCTET_STRING>
-  ) {}
+    etype: Int32,
+    salt?: OPTIONAL<OCTET_STRING>
+  ) {
+    this.etype = etype;
+    this.salt = salt;
+  }
 
   /**
    * @summary Restructures an object into a ETYPE_INFO_ENTRY

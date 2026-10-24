@@ -31,31 +31,36 @@ import { ASDU, _decode_ASDU, _encode_ASDU } from "../IEC61850/ASDU.ta.mjs";
  */
 export
 class SavPdu {
+    /**
+     * @summary `noASDU`.
+     * @description
+     *
+     * Number of ASDUs in `seqASDU`. 9-2LE sends 1 ASDU per
+     * APDU on MSVCB01 (80 samples per nominal period) and 8
+     * on MSVCB02 (256 samples per nominal period)
+     * (clause 7.1.4, Table 9).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly noASDU: INTEGER;
+    /**
+     * @summary `seqASDU`.
+     * @description
+     *
+     * ASDUs in this APDU. Its length is `noASDU`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly seqASDU: ASDU[];
+
     constructor (
-        /**
-         * @summary `noASDU`.
-         * @description
-         *
-         * Number of ASDUs in `seqASDU`. 9-2LE sends 1 ASDU per
-         * APDU on MSVCB01 (80 samples per nominal period) and 8
-         * on MSVCB02 (256 samples per nominal period)
-         * (clause 7.1.4, Table 9).
-         *
-         * @public
-         * @readonly
-         */
-        readonly noASDU: INTEGER,
-        /**
-         * @summary `seqASDU`.
-         * @description
-         *
-         * ASDUs in this APDU. Its length is `noASDU`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly seqASDU: ASDU[]
+        noASDU: INTEGER,
+        seqASDU: ASDU[]
     ) {
+        this.noASDU = noASDU;
+        this.seqASDU = seqASDU;
         if (typeof noASDU === "bigint" ? (noASDU < 0n || noASDU > 65535n) : (noASDU < 0 || noASDU > 65535)) {
             throw new ASN1OverflowError("SavPdu.noASDU violates INTEGER constraint");
         }

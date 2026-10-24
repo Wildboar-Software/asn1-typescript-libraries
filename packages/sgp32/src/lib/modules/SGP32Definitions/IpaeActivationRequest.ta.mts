@@ -33,17 +33,21 @@ import { IpaeActivationRequest_ipaeOption, _decode_IpaeActivationRequest_ipaeOpt
  */
 export
 class IpaeActivationRequest {
+    /**
+     * @summary `ipaeOption`.
+     * @description
+     * Options for IPAe activation. The `activateIpae` bit requests activation of
+     * the IPA in the eUICC. SGP.32 v1.2, section 3.8.4.
+     * @public
+     * @readonly
+     */
+    public readonly ipaeOption: IpaeActivationRequest_ipaeOption;
+
     constructor (
-        /**
-         * @summary `ipaeOption`.
-         * @description
-         * Options for IPAe activation. The `activateIpae` bit requests activation of
-         * the IPA in the eUICC. SGP.32 v1.2, section 3.8.4.
-         * @public
-         * @readonly
-         */
-        readonly ipaeOption: IpaeActivationRequest_ipaeOption
-    ) {}
+        ipaeOption: IpaeActivationRequest_ipaeOption
+    ) {
+        this.ipaeOption = ipaeOption;
+    }
 
     /**
      * @summary Restructures an object into a IpaeActivationRequest

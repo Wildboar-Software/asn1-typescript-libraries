@@ -35,32 +35,38 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  */
 export
 class AttributeCertificateIdentifier {
+    /**
+     * @summary `hashAlgorithm`.
+     * @description
+     *
+     * Hash algorithm used for `hashOverSignatureValue`, as
+     * RFC 5280 `AlgorithmIdentifier`. `parameters` SHOULD NOT
+     * be used. §3.1.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly hashAlgorithm: AlgorithmIdentifier;
+    /**
+     * @summary `hashOverSignatureValue`.
+     * @description
+     *
+     * Digest of the referenced certificate's BIT STRING
+     * `signatureValue` (excluding tag, length, and unused-bits).
+     * §3.1.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly hashOverSignatureValue: OCTET_STRING;
+
     constructor (
-        /**
-         * @summary `hashAlgorithm`.
-         * @description
-         *
-         * Hash algorithm used for `hashOverSignatureValue`, as
-         * RFC 5280 `AlgorithmIdentifier`. `parameters` SHOULD NOT
-         * be used. §3.1.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly hashAlgorithm: AlgorithmIdentifier,
-        /**
-         * @summary `hashOverSignatureValue`.
-         * @description
-         *
-         * Digest of the referenced certificate's BIT STRING
-         * `signatureValue` (excluding tag, length, and unused-bits).
-         * §3.1.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly hashOverSignatureValue: OCTET_STRING
-    ) {}
+        hashAlgorithm: AlgorithmIdentifier,
+        hashOverSignatureValue: OCTET_STRING
+    ) {
+        this.hashAlgorithm = hashAlgorithm;
+        this.hashOverSignatureValue = hashOverSignatureValue;
+    }
 
     /**
      * @summary Restructures an object into a AttributeCertificateIdentifier

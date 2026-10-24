@@ -37,54 +37,66 @@ import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59Strin
  */
 export
 class ModeCapability_Item_protocolmode {
+    /**
+     * @summary `modeV42`.
+     * @description
+     *
+     * V.42 operating-mode capability. Tag-ID `2F00`. ITU-T Rec. V.59
+     * (11/2000) §6.6, §6.12.
+     * @public
+     * @readonly
+     */
+    public readonly modeV42: Capabilities;
+    /**
+     * @summary `modeV42B`.
+     * @description
+     *
+     * V.42 bis operating-mode capability. Tag-ID `3000`. ITU-T Rec. V.59
+     * (11/2000) §6.6, §6.12.
+     * @public
+     * @readonly
+     */
+    public readonly modeV42B: Capabilities;
+    /**
+     * @summary `modeV44`.
+     * @description
+     *
+     * V.44 operating-mode capability. Tag-ID `300A`. ITU-T Rec. V.59
+     * (11/2000) §6.6, §6.12.
+     * @public
+     * @readonly
+     */
+    public readonly modeV44: Capabilities;
+    /**
+     * @summary `otherProtMode`.
+     * @description
+     *
+     * Proprietary or other protocol modes. IA5 `simpleText` (§6.2.1).
+     * Tag-ID `0102`. ITU-T Rec. V.59 (11/2000) §6.6.
+     * @public
+     * @readonly
+     */
+    public readonly otherProtMode?: OPTIONAL<V59String>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `modeV42`.
-         * @description
-         *
-         * V.42 operating-mode capability. Tag-ID `2F00`. ITU-T Rec. V.59
-         * (11/2000) §6.6, §6.12.
-         * @public
-         * @readonly
-         */
-        readonly modeV42: Capabilities,
-        /**
-         * @summary `modeV42B`.
-         * @description
-         *
-         * V.42 bis operating-mode capability. Tag-ID `3000`. ITU-T Rec. V.59
-         * (11/2000) §6.6, §6.12.
-         * @public
-         * @readonly
-         */
-        readonly modeV42B: Capabilities,
-        /**
-         * @summary `modeV44`.
-         * @description
-         *
-         * V.44 operating-mode capability. Tag-ID `300A`. ITU-T Rec. V.59
-         * (11/2000) §6.6, §6.12.
-         * @public
-         * @readonly
-         */
-        readonly modeV44: Capabilities,
-        /**
-         * @summary `otherProtMode`.
-         * @description
-         *
-         * Proprietary or other protocol modes. IA5 `simpleText` (§6.2.1).
-         * Tag-ID `0102`. ITU-T Rec. V.59 (11/2000) §6.6.
-         * @public
-         * @readonly
-         */
-        readonly otherProtMode?: OPTIONAL<V59String>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        modeV42: Capabilities,
+        modeV42B: Capabilities,
+        modeV44: Capabilities,
+        otherProtMode?: OPTIONAL<V59String>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.modeV42 = modeV42;
+        this.modeV42B = modeV42B;
+        this.modeV44 = modeV44;
+        this.otherProtMode = otherProtMode;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ModeCapability_Item_protocolmode

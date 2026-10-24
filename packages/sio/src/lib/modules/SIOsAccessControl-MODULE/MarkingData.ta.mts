@@ -37,30 +37,36 @@ import {
  *
  */
 export class MarkingData {
+    /**
+     * @summary `markingPhrase`.
+     * @description
+     *
+     * Text attached to the data object. If omitted, marking
+     * codes apply to `classificationName`. X.841 §6.2.2.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly markingPhrase?: OPTIONAL<MarkingPhrase>;
+    /**
+     * @summary `markingCodes`.
+     * @description
+     *
+     * Where the marking is physically displayed (page top,
+     * bottom, document start/end, etc.). X.841 §6.2.2.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly markingCodes?: OPTIONAL<MarkingCodes>;
+
     constructor(
-        /**
-         * @summary `markingPhrase`.
-         * @description
-         *
-         * Text attached to the data object. If omitted, marking
-         * codes apply to `classificationName`. X.841 §6.2.2.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly markingPhrase?: OPTIONAL<MarkingPhrase>,
-        /**
-         * @summary `markingCodes`.
-         * @description
-         *
-         * Where the marking is physically displayed (page top,
-         * bottom, document start/end, etc.). X.841 §6.2.2.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly markingCodes?: OPTIONAL<MarkingCodes>
-    ) {}
+        markingPhrase?: OPTIONAL<MarkingPhrase>,
+        markingCodes?: OPTIONAL<MarkingCodes>
+    ) {
+        this.markingPhrase = markingPhrase;
+        this.markingCodes = markingCodes;
+    }
 
     /**
      * @summary Restructures an object into a MarkingData

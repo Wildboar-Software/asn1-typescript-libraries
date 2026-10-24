@@ -42,26 +42,32 @@ import {
  *
  */
 export class Attribute {
+  /**
+   * @summary `qualified_name`.
+   * @description [prefix], [namespace name], and [local
+   * name]; ATTRIBUTE NAME category. ITU-T Rec. X.891
+   * (05/2005) §7.4.4.
+   * @public
+   * @readonly
+   */
+  public readonly qualified_name: QualifiedNameOrIndex;
+  /**
+   * @summary `normalized_value`.
+   * @description [normalized value]; ATTRIBUTE VALUE
+   * category. At most 2³² characters. ITU-T Rec. X.891
+   * (05/2005) §7.4.5–§7.4.6.
+   * @public
+   * @readonly
+   */
+  public readonly normalized_value: NonIdentifyingStringOrIndex;
+
   constructor(
-    /**
-     * @summary `qualified_name`.
-     * @description [prefix], [namespace name], and [local
-     * name]; ATTRIBUTE NAME category. ITU-T Rec. X.891
-     * (05/2005) §7.4.4.
-     * @public
-     * @readonly
-     */
-    readonly qualified_name: QualifiedNameOrIndex,
-    /**
-     * @summary `normalized_value`.
-     * @description [normalized value]; ATTRIBUTE VALUE
-     * category. At most 2³² characters. ITU-T Rec. X.891
-     * (05/2005) §7.4.5–§7.4.6.
-     * @public
-     * @readonly
-     */
-    readonly normalized_value: NonIdentifyingStringOrIndex
-  ) {}
+    qualified_name: QualifiedNameOrIndex,
+    normalized_value: NonIdentifyingStringOrIndex
+  ) {
+    this.qualified_name = qualified_name;
+    this.normalized_value = normalized_value;
+  }
 
   /**
    * @summary Restructures an object into a Attribute

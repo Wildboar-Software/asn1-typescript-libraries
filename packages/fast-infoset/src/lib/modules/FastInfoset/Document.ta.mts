@@ -123,91 +123,111 @@ import {
  *
  */
 export class Document {
+  /**
+   * @summary `additional_data`.
+   * @description Optional extra processing data (for example
+   * indexes for random access). A processor may ignore any
+   * `additional-datum` whose URI it does not recognize;
+   * ignoring all still yields an equivalent XML infoset.
+   * Duplicate URIs are allowed. At most 2²⁰ items.
+   * ITU-T Rec. X.891 (05/2005) §7.2.7–§7.2.10.
+   * @public
+   * @readonly
+   */
+  public readonly additional_data: OPTIONAL<
+      Document_additional_data_additional_datum[]
+    >;
+  /**
+   * @summary `initial_vocabulary`.
+   * @description Seeds the restricted-alphabet, encoding-
+   * algorithm, string, and name tables. If absent, only
+   * built-in entries apply. If present, at least one nested
+   * component shall be present. ITU-T Rec. X.891 (05/2005)
+   * §7.2.11–§7.2.23.
+   * @public
+   * @readonly
+   */
+  public readonly initial_vocabulary: OPTIONAL<Document_initial_vocabulary>;
+  /**
+   * @summary `notations`.
+   * @description [notations] of the document information
+   * item. Sequence-of rather than set-of so table indexes
+   * are assigned in a defined order. ITU-T Rec. X.891
+   * (05/2005) §7.2.24.
+   * @public
+   * @readonly
+   */
+  public readonly notations: OPTIONAL<Notation[]>;
+  /**
+   * @summary `unparsed_entities`.
+   * @description [unparsed entities] of the document
+   * information item. Sequence-of rather than set-of so
+   * table indexes are assigned in a defined order.
+   * ITU-T Rec. X.891 (05/2005) §7.2.25.
+   * @public
+   * @readonly
+   */
+  public readonly unparsed_entities: OPTIONAL<UnparsedEntity[]>;
+  /**
+   * @summary `character_encoding_scheme`.
+   * @description [character encoding scheme], UTF-8 encoded.
+   * Absent means `"UTF-8"`. Lets XML round-trip preserve the
+   * encoding declaration. ITU-T Rec. X.891 (05/2005) §7.2.26.
+   * @public
+   * @readonly
+   */
+  public readonly character_encoding_scheme: OPTIONAL<NonEmptyOctetString>;
+  /**
+   * @summary `standalone`.
+   * @description [standalone]: `TRUE` is yes, `FALSE` is no.
+   * Absent means the property has no value. ITU-T Rec. X.891
+   * (05/2005) §7.2.27.
+   * @public
+   * @readonly
+   */
+  public readonly standalone: OPTIONAL<BOOLEAN>;
+  /**
+   * @summary `version`.
+   * @description [version], OTHER STRING category. Absent
+   * means the property has no value. ITU-T Rec. X.891
+   * (05/2005) §7.2.28.
+   * @public
+   * @readonly
+   */
+  public readonly version: OPTIONAL<NonIdentifyingStringOrIndex>;
+  /**
+   * @summary `children`.
+   * @description [children]. Exactly one item shall be
+   * `element`; at most one shall be
+   * `document-type-declaration`; the rest (if any) are
+   * `processing-instruction` or `comment`. ITU-T Rec. X.891
+   * (05/2005) §7.2.29–§7.2.30.
+   * @public
+   * @readonly
+   */
+  public readonly children: Document_children_Item[];
+
   constructor(
-    /**
-     * @summary `additional_data`.
-     * @description Optional extra processing data (for example
-     * indexes for random access). A processor may ignore any
-     * `additional-datum` whose URI it does not recognize;
-     * ignoring all still yields an equivalent XML infoset.
-     * Duplicate URIs are allowed. At most 2²⁰ items.
-     * ITU-T Rec. X.891 (05/2005) §7.2.7–§7.2.10.
-     * @public
-     * @readonly
-     */
-    readonly additional_data: OPTIONAL<
+    additional_data: OPTIONAL<
       Document_additional_data_additional_datum[]
     >,
-    /**
-     * @summary `initial_vocabulary`.
-     * @description Seeds the restricted-alphabet, encoding-
-     * algorithm, string, and name tables. If absent, only
-     * built-in entries apply. If present, at least one nested
-     * component shall be present. ITU-T Rec. X.891 (05/2005)
-     * §7.2.11–§7.2.23.
-     * @public
-     * @readonly
-     */
-    readonly initial_vocabulary: OPTIONAL<Document_initial_vocabulary>,
-    /**
-     * @summary `notations`.
-     * @description [notations] of the document information
-     * item. Sequence-of rather than set-of so table indexes
-     * are assigned in a defined order. ITU-T Rec. X.891
-     * (05/2005) §7.2.24.
-     * @public
-     * @readonly
-     */
-    readonly notations: OPTIONAL<Notation[]>,
-    /**
-     * @summary `unparsed_entities`.
-     * @description [unparsed entities] of the document
-     * information item. Sequence-of rather than set-of so
-     * table indexes are assigned in a defined order.
-     * ITU-T Rec. X.891 (05/2005) §7.2.25.
-     * @public
-     * @readonly
-     */
-    readonly unparsed_entities: OPTIONAL<UnparsedEntity[]>,
-    /**
-     * @summary `character_encoding_scheme`.
-     * @description [character encoding scheme], UTF-8 encoded.
-     * Absent means `"UTF-8"`. Lets XML round-trip preserve the
-     * encoding declaration. ITU-T Rec. X.891 (05/2005) §7.2.26.
-     * @public
-     * @readonly
-     */
-    readonly character_encoding_scheme: OPTIONAL<NonEmptyOctetString>,
-    /**
-     * @summary `standalone`.
-     * @description [standalone]: `TRUE` is yes, `FALSE` is no.
-     * Absent means the property has no value. ITU-T Rec. X.891
-     * (05/2005) §7.2.27.
-     * @public
-     * @readonly
-     */
-    readonly standalone: OPTIONAL<BOOLEAN>,
-    /**
-     * @summary `version`.
-     * @description [version], OTHER STRING category. Absent
-     * means the property has no value. ITU-T Rec. X.891
-     * (05/2005) §7.2.28.
-     * @public
-     * @readonly
-     */
-    readonly version: OPTIONAL<NonIdentifyingStringOrIndex>,
-    /**
-     * @summary `children`.
-     * @description [children]. Exactly one item shall be
-     * `element`; at most one shall be
-     * `document-type-declaration`; the rest (if any) are
-     * `processing-instruction` or `comment`. ITU-T Rec. X.891
-     * (05/2005) §7.2.29–§7.2.30.
-     * @public
-     * @readonly
-     */
-    readonly children: Document_children_Item[]
-  ) {}
+    initial_vocabulary: OPTIONAL<Document_initial_vocabulary>,
+    notations: OPTIONAL<Notation[]>,
+    unparsed_entities: OPTIONAL<UnparsedEntity[]>,
+    character_encoding_scheme: OPTIONAL<NonEmptyOctetString>,
+    standalone: OPTIONAL<BOOLEAN>,
+    version: OPTIONAL<NonIdentifyingStringOrIndex>,
+    children: Document_children_Item[]
+  ) {
+    this.additional_data = additional_data;
+    this.initial_vocabulary = initial_vocabulary;
+    this.notations = notations;
+    this.unparsed_entities = unparsed_entities;
+    this.character_encoding_scheme = character_encoding_scheme;
+    this.standalone = standalone;
+    this.version = version;
+    this.children = children;
+  }
 
   /**
    * @summary Restructures an object into a Document

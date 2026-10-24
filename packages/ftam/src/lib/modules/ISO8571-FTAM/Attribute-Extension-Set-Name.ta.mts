@@ -39,28 +39,34 @@ import {
  *
  */
 export class Attribute_Extension_Set_Name {
+  /**
+   * @summary `extension_set_identifier`.
+   * @description
+   *
+   * OID of the extension set.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly extension_set_identifier: Extension_Set_Identifier;
+  /**
+   * @summary `extension_attribute_names`.
+   * @description
+   *
+   * OIDs of the attributes requested from this set.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly extension_attribute_names: Extension_Attribute_identifier[];
+
   constructor(
-    /**
-     * @summary `extension_set_identifier`.
-     * @description
-     *
-     * OID of the extension set.
-     *
-     * @public
-     * @readonly
-     */
-    readonly extension_set_identifier: Extension_Set_Identifier,
-    /**
-     * @summary `extension_attribute_names`.
-     * @description
-     *
-     * OIDs of the attributes requested from this set.
-     *
-     * @public
-     * @readonly
-     */
-    readonly extension_attribute_names: Extension_Attribute_identifier[]
-  ) {}
+    extension_set_identifier: Extension_Set_Identifier,
+    extension_attribute_names: Extension_Attribute_identifier[]
+  ) {
+    this.extension_set_identifier = extension_set_identifier;
+    this.extension_attribute_names = extension_attribute_names;
+  }
 
   /**
    * @summary Restructures an object into a Attribute_Extension_Set_Name

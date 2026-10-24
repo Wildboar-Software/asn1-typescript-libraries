@@ -76,87 +76,103 @@ import {
  *
  */
 export class F_SELECT_request {
+  /**
+   * @summary `attributes`.
+   * @description
+   *
+   * Filename only (the sole identifier). Response/confirm may return
+   * a filename that is not identical to the request.
+   * ISO 8571-3:1988 §15.1.2.3.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly attributes: Select_Attributes;
+  /**
+   * @summary `requested_access`.
+   * @description
+   *
+   * Maximum facilities for the whole select regime. If not
+   * permitted, select fails. ISO 8571-3:1988 §15.1.2.4.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly requested_access: Access_Request;
+  /**
+   * @summary `access_passwords`.
+   * @description
+   *
+   * Conditional on the security group. Must match a non-empty
+   * password in some access-control condition, else select fails.
+   * Sets current access passwords. ISO 8571-3:1988 §15.1.2.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly access_passwords?: OPTIONAL<Access_Passwords>;
+  /**
+   * @summary `path_access_passwords`.
+   * @description
+   *
+   * Absent from ISO 8571:1988 Parts 1–4. ASN.1 comment: send only
+   * when limited-filestore-management, object-manipulation, or
+   * group-manipulation FUs are available.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly path_access_passwords?: OPTIONAL<Path_Access_Passwords>;
+  /**
+   * @summary `concurrency_control`.
+   * @description
+   *
+   * If the required concurrency is unavailable, select fails.
+   * ISO 8571-3:1988 §15.1.2.6.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly concurrency_control?: OPTIONAL<Concurrency_Control>;
+  /**
+   * @summary `shared_ASE_information`.
+   * @description
+   *
+   * ISO 8571-3:1988 §15.1.2.7 / §13.10.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>;
+  /**
+   * @summary `account`.
+   * @description
+   *
+   * Overrides the F-INITIALIZE account for this select regime.
+   * ISO 8571-3:1988 §15.1.2.8.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly account?: OPTIONAL<Account>;
+
   constructor(
-    /**
-     * @summary `attributes`.
-     * @description
-     *
-     * Filename only (the sole identifier). Response/confirm may return
-     * a filename that is not identical to the request.
-     * ISO 8571-3:1988 §15.1.2.3.
-     *
-     * @public
-     * @readonly
-     */
-    readonly attributes: Select_Attributes,
-    /**
-     * @summary `requested_access`.
-     * @description
-     *
-     * Maximum facilities for the whole select regime. If not
-     * permitted, select fails. ISO 8571-3:1988 §15.1.2.4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly requested_access: Access_Request,
-    /**
-     * @summary `access_passwords`.
-     * @description
-     *
-     * Conditional on the security group. Must match a non-empty
-     * password in some access-control condition, else select fails.
-     * Sets current access passwords. ISO 8571-3:1988 §15.1.2.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly access_passwords?: OPTIONAL<Access_Passwords>,
-    /**
-     * @summary `path_access_passwords`.
-     * @description
-     *
-     * Absent from ISO 8571:1988 Parts 1–4. ASN.1 comment: send only
-     * when limited-filestore-management, object-manipulation, or
-     * group-manipulation FUs are available.
-     *
-     * @public
-     * @readonly
-     */
-    readonly path_access_passwords?: OPTIONAL<Path_Access_Passwords>,
-    /**
-     * @summary `concurrency_control`.
-     * @description
-     *
-     * If the required concurrency is unavailable, select fails.
-     * ISO 8571-3:1988 §15.1.2.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly concurrency_control?: OPTIONAL<Concurrency_Control>,
-    /**
-     * @summary `shared_ASE_information`.
-     * @description
-     *
-     * ISO 8571-3:1988 §15.1.2.7 / §13.10.
-     *
-     * @public
-     * @readonly
-     */
-    readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
-    /**
-     * @summary `account`.
-     * @description
-     *
-     * Overrides the F-INITIALIZE account for this select regime.
-     * ISO 8571-3:1988 §15.1.2.8.
-     *
-     * @public
-     * @readonly
-     */
-    readonly account?: OPTIONAL<Account>
-  ) {}
+    attributes: Select_Attributes,
+    requested_access: Access_Request,
+    access_passwords?: OPTIONAL<Access_Passwords>,
+    path_access_passwords?: OPTIONAL<Path_Access_Passwords>,
+    concurrency_control?: OPTIONAL<Concurrency_Control>,
+    shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
+    account?: OPTIONAL<Account>
+  ) {
+    this.attributes = attributes;
+    this.requested_access = requested_access;
+    this.access_passwords = access_passwords;
+    this.path_access_passwords = path_access_passwords;
+    this.concurrency_control = concurrency_control;
+    this.shared_ASE_information = shared_ASE_information;
+    this.account = account;
+  }
 
   /**
    * @summary Restructures an object into a F_SELECT_request

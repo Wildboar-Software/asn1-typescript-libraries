@@ -48,40 +48,48 @@ import {
  *
  */
 export class OOBCertHash {
+  /**
+   * @summary `hashAlg`.
+   * @description
+   *
+   * Optional hash AlgorithmIdentifier ([RFC 4210 §5.2.5](https://datatracker.ietf.org/doc/html/rfc4210#section-5.2.5)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly hashAlg: OPTIONAL<AlgorithmIdentifier>;
+  /**
+   * @summary `certId`.
+   * @description
+   *
+   * Optional certificate identifier (`CertId` from CRMF)
+   * ([RFC 4210 §5.2.5](https://datatracker.ietf.org/doc/html/rfc4210#section-5.2.5)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly certId: OPTIONAL<CertId>;
+  /**
+   * @summary `hashVal`.
+   * @description
+   *
+   * Hash value of the CA self-signed certificate for out-of-band
+   * integrity verification ([RFC 4210 §5.2.5](https://datatracker.ietf.org/doc/html/rfc4210#section-5.2.5)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly hashVal: BIT_STRING;
+
   constructor(
-    /**
-     * @summary `hashAlg`.
-     * @description
-     *
-     * Optional hash AlgorithmIdentifier ([RFC 4210 §5.2.5](https://datatracker.ietf.org/doc/html/rfc4210#section-5.2.5)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly hashAlg: OPTIONAL<AlgorithmIdentifier>,
-    /**
-     * @summary `certId`.
-     * @description
-     *
-     * Optional certificate identifier (`CertId` from CRMF)
-     * ([RFC 4210 §5.2.5](https://datatracker.ietf.org/doc/html/rfc4210#section-5.2.5)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly certId: OPTIONAL<CertId>,
-    /**
-     * @summary `hashVal`.
-     * @description
-     *
-     * Hash value of the CA self-signed certificate for out-of-band
-     * integrity verification ([RFC 4210 §5.2.5](https://datatracker.ietf.org/doc/html/rfc4210#section-5.2.5)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly hashVal: BIT_STRING
-  ) {}
+    hashAlg: OPTIONAL<AlgorithmIdentifier>,
+    certId: OPTIONAL<CertId>,
+    hashVal: BIT_STRING
+  ) {
+    this.hashAlg = hashAlg;
+    this.certId = certId;
+    this.hashVal = hashVal;
+  }
 
   /**
    * @summary Restructures an object into a OOBCertHash

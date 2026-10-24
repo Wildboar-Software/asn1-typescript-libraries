@@ -48,176 +48,208 @@ import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59Strin
  */
 export
 class ModeCapability_Item_modulationMode {
+    /**
+     * @summary `modeV90`.
+     * @description
+     *
+     * V.90 operating-mode capability. Table 5/V.59: `notSupported`(0),
+     * `default`(1) preferred, `enabled`(2), `disabled`(3) supported but
+     * off. Tag-ID `0900`. ITU-T Rec. V.59 (11/2000) §6.6.
+     * @public
+     * @readonly
+     */
+    public readonly modeV90: Capabilities;
+    /**
+     * @summary `modeV91`.
+     * @description
+     *
+     * V.91 operating-mode capability. Table 5/V.59: `notSupported`(0),
+     * `default`(1) preferred, `enabled`(2), `disabled`(3) supported but
+     * off. Tag-ID `0A00`. ITU-T Rec. V.59 (11/2000) §6.6.
+     * @public
+     * @readonly
+     */
+    public readonly modeV91: Capabilities;
+    /**
+     * @summary `modeV92`.
+     * @description
+     *
+     * V.92 operating-mode capability. Table 5/V.59: `notSupported`(0),
+     * `default`(1) preferred, `enabled`(2), `disabled`(3) supported but
+     * off. Tag-ID `0B00`. ITU-T Rec. V.59 (11/2000) §6.6.
+     * @public
+     * @readonly
+     */
+    public readonly modeV92: Capabilities;
+    /**
+     * @summary `modeV34`.
+     * @description
+     *
+     * V.34 duplex operating-mode capability. Table 5/V.59:
+     * `notSupported`(0), `default`(1) preferred, `enabled`(2),
+     * `disabled`(3) supported but off. Tag-ID `0C00`. ITU-T Rec. V.59
+     * (11/2000) §6.6.
+     * @public
+     * @readonly
+     */
+    public readonly modeV34: Capabilities;
+    /**
+     * @summary `modeV32B`.
+     * @description
+     *
+     * V.32 / V.32 bis operating-mode capability. Table 5/V.59:
+     * `notSupported`(0), `default`(1) preferred, `enabled`(2),
+     * `disabled`(3) supported but off. Tag-ID `0D00`. ITU-T Rec. V.59
+     * (11/2000) §6.6.
+     * @public
+     * @readonly
+     */
+    public readonly modeV32B: Capabilities;
+    /**
+     * @summary `modeV22B`.
+     * @description
+     *
+     * V.22 / V.22 bis operating-mode capability. Table 5/V.59:
+     * `notSupported`(0), `default`(1) preferred, `enabled`(2),
+     * `disabled`(3) supported but off. Tag-ID `0E00`. ITU-T Rec. V.59
+     * (11/2000) §6.6.
+     * @public
+     * @readonly
+     */
+    public readonly modeV22B: Capabilities;
+    /**
+     * @summary `modeV23`.
+     * @description
+     *
+     * V.23 operating-mode capability. Table 5/V.59: `notSupported`(0),
+     * `default`(1) preferred, `enabled`(2), `disabled`(3) supported but
+     * off. Tag-ID `0F00`. ITU-T Rec. V.59 (11/2000) §6.6.
+     * @public
+     * @readonly
+     */
+    public readonly modeV23: Capabilities;
+    /**
+     * @summary `modeV21`.
+     * @description
+     *
+     * V.21 operating-mode capability. Table 5/V.59: `notSupported`(0),
+     * `default`(1) preferred, `enabled`(2), `disabled`(3) supported but
+     * off. Tag-ID `1000`. ITU-T Rec. V.59 (11/2000) §6.6.
+     * @public
+     * @readonly
+     */
+    public readonly modeV21: Capabilities;
+    /**
+     * @summary `modeV34H`.
+     * @description
+     *
+     * V.34 half-duplex facsimile operating-mode capability. Table 5/V.59:
+     * `notSupported`(0), `default`(1) preferred, `enabled`(2),
+     * `disabled`(3) supported but off. Tag-ID `1500`. ITU-T Rec. V.59
+     * (11/2000) §6.6.
+     * @public
+     * @readonly
+     */
+    public readonly modeV34H: Capabilities;
+    /**
+     * @summary `modeV17`.
+     * @description
+     *
+     * V.17 facsimile operating-mode capability. Table 5/V.59:
+     * `notSupported`(0), `default`(1) preferred, `enabled`(2),
+     * `disabled`(3) supported but off. Tag-ID `1600`. ITU-T Rec. V.59
+     * (11/2000) §6.6.
+     * @public
+     * @readonly
+     */
+    public readonly modeV17: Capabilities;
+    /**
+     * @summary `modeV29`.
+     * @description
+     *
+     * V.29 facsimile operating-mode capability. Table 5/V.59:
+     * `notSupported`(0), `default`(1) preferred, `enabled`(2),
+     * `disabled`(3) supported but off. Tag-ID `1700`. ITU-T Rec. V.59
+     * (11/2000) §6.6.
+     * @public
+     * @readonly
+     */
+    public readonly modeV29: Capabilities;
+    /**
+     * @summary `modeV27T`.
+     * @description
+     *
+     * V.27 ter facsimile operating-mode capability. Table 5/V.59:
+     * `notSupported`(0), `default`(1) preferred, `enabled`(2),
+     * `disabled`(3) supported but off. Tag-ID `1800`. ITU-T Rec. V.59
+     * (11/2000) §6.6.
+     * @public
+     * @readonly
+     */
+    public readonly modeV27T: Capabilities;
+    /**
+     * @summary `modeV18`.
+     * @description
+     *
+     * V.18 text telephone operating-mode capability. Table 5/V.59:
+     * `notSupported`(0), `default`(1) preferred, `enabled`(2),
+     * `disabled`(3) supported but off. Tag-ID `2300`. ITU-T Rec. V.59
+     * (11/2000) §6.6.
+     * @public
+     * @readonly
+     */
+    public readonly modeV18: Capabilities;
+    /**
+     * @summary `otherModMode`.
+     * @description
+     *
+     * Proprietary or other standard modulation modes supported. IA5
+     * `simpleText` (§6.2.1). Tag-ID `0101`. Optional in Annex A. ITU-T Rec.
+     * V.59 (11/2000) §6.6.
+     * @public
+     * @readonly
+     */
+    public readonly otherModMode?: OPTIONAL<V59String>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `modeV90`.
-         * @description
-         *
-         * V.90 operating-mode capability. Table 5/V.59: `notSupported`(0),
-         * `default`(1) preferred, `enabled`(2), `disabled`(3) supported but
-         * off. Tag-ID `0900`. ITU-T Rec. V.59 (11/2000) §6.6.
-         * @public
-         * @readonly
-         */
-        readonly modeV90: Capabilities,
-        /**
-         * @summary `modeV91`.
-         * @description
-         *
-         * V.91 operating-mode capability. Table 5/V.59: `notSupported`(0),
-         * `default`(1) preferred, `enabled`(2), `disabled`(3) supported but
-         * off. Tag-ID `0A00`. ITU-T Rec. V.59 (11/2000) §6.6.
-         * @public
-         * @readonly
-         */
-        readonly modeV91: Capabilities,
-        /**
-         * @summary `modeV92`.
-         * @description
-         *
-         * V.92 operating-mode capability. Table 5/V.59: `notSupported`(0),
-         * `default`(1) preferred, `enabled`(2), `disabled`(3) supported but
-         * off. Tag-ID `0B00`. ITU-T Rec. V.59 (11/2000) §6.6.
-         * @public
-         * @readonly
-         */
-        readonly modeV92: Capabilities,
-        /**
-         * @summary `modeV34`.
-         * @description
-         *
-         * V.34 duplex operating-mode capability. Table 5/V.59:
-         * `notSupported`(0), `default`(1) preferred, `enabled`(2),
-         * `disabled`(3) supported but off. Tag-ID `0C00`. ITU-T Rec. V.59
-         * (11/2000) §6.6.
-         * @public
-         * @readonly
-         */
-        readonly modeV34: Capabilities,
-        /**
-         * @summary `modeV32B`.
-         * @description
-         *
-         * V.32 / V.32 bis operating-mode capability. Table 5/V.59:
-         * `notSupported`(0), `default`(1) preferred, `enabled`(2),
-         * `disabled`(3) supported but off. Tag-ID `0D00`. ITU-T Rec. V.59
-         * (11/2000) §6.6.
-         * @public
-         * @readonly
-         */
-        readonly modeV32B: Capabilities,
-        /**
-         * @summary `modeV22B`.
-         * @description
-         *
-         * V.22 / V.22 bis operating-mode capability. Table 5/V.59:
-         * `notSupported`(0), `default`(1) preferred, `enabled`(2),
-         * `disabled`(3) supported but off. Tag-ID `0E00`. ITU-T Rec. V.59
-         * (11/2000) §6.6.
-         * @public
-         * @readonly
-         */
-        readonly modeV22B: Capabilities,
-        /**
-         * @summary `modeV23`.
-         * @description
-         *
-         * V.23 operating-mode capability. Table 5/V.59: `notSupported`(0),
-         * `default`(1) preferred, `enabled`(2), `disabled`(3) supported but
-         * off. Tag-ID `0F00`. ITU-T Rec. V.59 (11/2000) §6.6.
-         * @public
-         * @readonly
-         */
-        readonly modeV23: Capabilities,
-        /**
-         * @summary `modeV21`.
-         * @description
-         *
-         * V.21 operating-mode capability. Table 5/V.59: `notSupported`(0),
-         * `default`(1) preferred, `enabled`(2), `disabled`(3) supported but
-         * off. Tag-ID `1000`. ITU-T Rec. V.59 (11/2000) §6.6.
-         * @public
-         * @readonly
-         */
-        readonly modeV21: Capabilities,
-        /**
-         * @summary `modeV34H`.
-         * @description
-         *
-         * V.34 half-duplex facsimile operating-mode capability. Table 5/V.59:
-         * `notSupported`(0), `default`(1) preferred, `enabled`(2),
-         * `disabled`(3) supported but off. Tag-ID `1500`. ITU-T Rec. V.59
-         * (11/2000) §6.6.
-         * @public
-         * @readonly
-         */
-        readonly modeV34H: Capabilities,
-        /**
-         * @summary `modeV17`.
-         * @description
-         *
-         * V.17 facsimile operating-mode capability. Table 5/V.59:
-         * `notSupported`(0), `default`(1) preferred, `enabled`(2),
-         * `disabled`(3) supported but off. Tag-ID `1600`. ITU-T Rec. V.59
-         * (11/2000) §6.6.
-         * @public
-         * @readonly
-         */
-        readonly modeV17: Capabilities,
-        /**
-         * @summary `modeV29`.
-         * @description
-         *
-         * V.29 facsimile operating-mode capability. Table 5/V.59:
-         * `notSupported`(0), `default`(1) preferred, `enabled`(2),
-         * `disabled`(3) supported but off. Tag-ID `1700`. ITU-T Rec. V.59
-         * (11/2000) §6.6.
-         * @public
-         * @readonly
-         */
-        readonly modeV29: Capabilities,
-        /**
-         * @summary `modeV27T`.
-         * @description
-         *
-         * V.27 ter facsimile operating-mode capability. Table 5/V.59:
-         * `notSupported`(0), `default`(1) preferred, `enabled`(2),
-         * `disabled`(3) supported but off. Tag-ID `1800`. ITU-T Rec. V.59
-         * (11/2000) §6.6.
-         * @public
-         * @readonly
-         */
-        readonly modeV27T: Capabilities,
-        /**
-         * @summary `modeV18`.
-         * @description
-         *
-         * V.18 text telephone operating-mode capability. Table 5/V.59:
-         * `notSupported`(0), `default`(1) preferred, `enabled`(2),
-         * `disabled`(3) supported but off. Tag-ID `2300`. ITU-T Rec. V.59
-         * (11/2000) §6.6.
-         * @public
-         * @readonly
-         */
-        readonly modeV18: Capabilities,
-        /**
-         * @summary `otherModMode`.
-         * @description
-         *
-         * Proprietary or other standard modulation modes supported. IA5
-         * `simpleText` (§6.2.1). Tag-ID `0101`. Optional in Annex A. ITU-T Rec.
-         * V.59 (11/2000) §6.6.
-         * @public
-         * @readonly
-         */
-        readonly otherModMode?: OPTIONAL<V59String>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        modeV90: Capabilities,
+        modeV91: Capabilities,
+        modeV92: Capabilities,
+        modeV34: Capabilities,
+        modeV32B: Capabilities,
+        modeV22B: Capabilities,
+        modeV23: Capabilities,
+        modeV21: Capabilities,
+        modeV34H: Capabilities,
+        modeV17: Capabilities,
+        modeV29: Capabilities,
+        modeV27T: Capabilities,
+        modeV18: Capabilities,
+        otherModMode?: OPTIONAL<V59String>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.modeV90 = modeV90;
+        this.modeV91 = modeV91;
+        this.modeV92 = modeV92;
+        this.modeV34 = modeV34;
+        this.modeV32B = modeV32B;
+        this.modeV22B = modeV22B;
+        this.modeV23 = modeV23;
+        this.modeV21 = modeV21;
+        this.modeV34H = modeV34H;
+        this.modeV17 = modeV17;
+        this.modeV29 = modeV29;
+        this.modeV27T = modeV27T;
+        this.modeV18 = modeV18;
+        this.otherModMode = otherModMode;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ModeCapability_Item_modulationMode

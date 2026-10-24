@@ -59,69 +59,83 @@ import {
  *
  */
 export class EncKrbCredPart {
+  /**
+   * @summary `ticket_info`.
+   * @description
+   *
+   * One `KrbCredInfo` per ticket in `tickets` ([RFC 4120 §5.8.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.8.1)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly ticket_info: KrbCredInfo[];
+  /**
+   * @summary `nonce`.
+   * @description
+   *
+   * Optional recipient-generated nonce for freshness; MUST NEVER
+   * be reused ([RFC 4120 §5.8.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.8.1)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly nonce?: OPTIONAL<UInt32>;
+  /**
+   * @summary `timestamp`.
+   * @description
+   *
+   * Generation time of the `KRB-CRED` ([RFC 4120 §5.8.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.8.1)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly timestamp?: OPTIONAL<KerberosTime>;
+  /**
+   * @summary `usec`.
+   * @description
+   *
+   * Microseconds of `timestamp` ([RFC 4120 §5.8.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.8.1)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly usec?: OPTIONAL<Microseconds>;
+  /**
+   * @summary `s_address`.
+   * @description
+   *
+   * Optional sender address ([RFC 4120 §5.8.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.8.1), [RFC 4120 §5.6.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.6.1)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly s_address?: OPTIONAL<HostAddress>;
+  /**
+   * @summary `r_address`.
+   * @description
+   *
+   * Optional recipient address ([RFC 4120 §5.8.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.8.1), [RFC 4120 §5.6.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.6.1)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly r_address?: OPTIONAL<HostAddress>;
+
   constructor(
-    /**
-     * @summary `ticket_info`.
-     * @description
-     *
-     * One `KrbCredInfo` per ticket in `tickets` ([RFC 4120 §5.8.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.8.1)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly ticket_info: KrbCredInfo[],
-    /**
-     * @summary `nonce`.
-     * @description
-     *
-     * Optional recipient-generated nonce for freshness; MUST NEVER
-     * be reused ([RFC 4120 §5.8.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.8.1)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly nonce?: OPTIONAL<UInt32>,
-    /**
-     * @summary `timestamp`.
-     * @description
-     *
-     * Generation time of the `KRB-CRED` ([RFC 4120 §5.8.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.8.1)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly timestamp?: OPTIONAL<KerberosTime>,
-    /**
-     * @summary `usec`.
-     * @description
-     *
-     * Microseconds of `timestamp` ([RFC 4120 §5.8.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.8.1)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly usec?: OPTIONAL<Microseconds>,
-    /**
-     * @summary `s_address`.
-     * @description
-     *
-     * Optional sender address ([RFC 4120 §5.8.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.8.1), [RFC 4120 §5.6.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.6.1)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly s_address?: OPTIONAL<HostAddress>,
-    /**
-     * @summary `r_address`.
-     * @description
-     *
-     * Optional recipient address ([RFC 4120 §5.8.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.8.1), [RFC 4120 §5.6.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.6.1)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly r_address?: OPTIONAL<HostAddress>
-  ) {}
+    ticket_info: KrbCredInfo[],
+    nonce?: OPTIONAL<UInt32>,
+    timestamp?: OPTIONAL<KerberosTime>,
+    usec?: OPTIONAL<Microseconds>,
+    s_address?: OPTIONAL<HostAddress>,
+    r_address?: OPTIONAL<HostAddress>
+  ) {
+    this.ticket_info = ticket_info;
+    this.nonce = nonce;
+    this.timestamp = timestamp;
+    this.usec = usec;
+    this.s_address = s_address;
+    this.r_address = r_address;
+  }
 
   /**
    * @summary Restructures an object into a EncKrbCredPart

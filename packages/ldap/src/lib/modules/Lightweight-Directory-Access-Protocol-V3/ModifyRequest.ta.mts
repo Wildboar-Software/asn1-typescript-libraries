@@ -46,35 +46,43 @@ import {
  *
  */
 export class ModifyRequest {
+  /**
+   * @summary `object`.
+   * @description
+   *
+   * Target DN. Server SHALL NOT alias-dereference.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly object: LDAPDN;
+  /**
+   * @summary `changes`.
+   * @description
+   *
+   * Ordered; applied as one atomic operation. Intermediate schema
+   * violations are allowed; the resulting entry MUST be valid.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly changes: ModifyRequest_changes_change[];
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  public readonly _unrecognizedExtensionsList: _Element[];
+
   constructor(
-    /**
-     * @summary `object`.
-     * @description
-     *
-     * Target DN. Server SHALL NOT alias-dereference.
-     *
-     * @public
-     * @readonly
-     */
-    readonly object: LDAPDN,
-    /**
-     * @summary `changes`.
-     * @description
-     *
-     * Ordered; applied as one atomic operation. Intermediate schema
-     * violations are allowed; the resulting entry MUST be valid.
-     *
-     * @public
-     * @readonly
-     */
-    readonly changes: ModifyRequest_changes_change[],
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = []
-  ) {}
+    object: LDAPDN,
+    changes: ModifyRequest_changes_change[],
+    _unrecognizedExtensionsList: _Element[] = []
+  ) {
+    this.object = object;
+    this.changes = changes;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+  }
 
   /**
    * @summary Restructures an object into a ModifyRequest

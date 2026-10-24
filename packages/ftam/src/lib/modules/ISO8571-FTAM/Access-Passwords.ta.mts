@@ -54,110 +54,132 @@ import {
  *
  */
 export class Access_Passwords {
+  /**
+   * @summary `read_password`.
+   * @description
+   *
+   * Password for action `read`(0).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly read_password: Password;
+  /**
+   * @summary `insert_password`.
+   * @description
+   *
+   * Password for action `insert`(1).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly insert_password: Password;
+  /**
+   * @summary `replace_password`.
+   * @description
+   *
+   * Password for action `replace`(2).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly replace_password: Password;
+  /**
+   * @summary `extend_password`.
+   * @description
+   *
+   * Password for action `extend`(3).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly extend_password: Password;
+  /**
+   * @summary `erase_password`.
+   * @description
+   *
+   * Password for action `erase`(4).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly erase_password: Password;
+  /**
+   * @summary `read_attribute_password`.
+   * @description
+   *
+   * Password for action `read-attribute`(5).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly read_attribute_password: Password;
+  /**
+   * @summary `change_attribute_password`.
+   * @description
+   *
+   * Password for action `change-attribute`(6).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly change_attribute_password: Password;
+  /**
+   * @summary `delete_password`.
+   * @description
+   *
+   * Password for action `delete-file`(7) (ISO 8571-4:1988).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly delete_password: Password;
+  /**
+   * @summary `pass_passwords`.
+   * @description
+   *
+   * Not present in ISO 8571-4:1988 (eight action passwords
+   * only).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly pass_passwords?: OPTIONAL<Pass_Passwords>;
+  /**
+   * @summary `link_password`.
+   * @description
+   *
+   * Not present in ISO 8571-4:1988 (eight action passwords
+   * only).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly link_password?: OPTIONAL<Password>;
+
   constructor(
-    /**
-     * @summary `read_password`.
-     * @description
-     *
-     * Password for action `read`(0).
-     *
-     * @public
-     * @readonly
-     */
-    readonly read_password: Password,
-    /**
-     * @summary `insert_password`.
-     * @description
-     *
-     * Password for action `insert`(1).
-     *
-     * @public
-     * @readonly
-     */
-    readonly insert_password: Password,
-    /**
-     * @summary `replace_password`.
-     * @description
-     *
-     * Password for action `replace`(2).
-     *
-     * @public
-     * @readonly
-     */
-    readonly replace_password: Password,
-    /**
-     * @summary `extend_password`.
-     * @description
-     *
-     * Password for action `extend`(3).
-     *
-     * @public
-     * @readonly
-     */
-    readonly extend_password: Password,
-    /**
-     * @summary `erase_password`.
-     * @description
-     *
-     * Password for action `erase`(4).
-     *
-     * @public
-     * @readonly
-     */
-    readonly erase_password: Password,
-    /**
-     * @summary `read_attribute_password`.
-     * @description
-     *
-     * Password for action `read-attribute`(5).
-     *
-     * @public
-     * @readonly
-     */
-    readonly read_attribute_password: Password,
-    /**
-     * @summary `change_attribute_password`.
-     * @description
-     *
-     * Password for action `change-attribute`(6).
-     *
-     * @public
-     * @readonly
-     */
-    readonly change_attribute_password: Password,
-    /**
-     * @summary `delete_password`.
-     * @description
-     *
-     * Password for action `delete-file`(7) (ISO 8571-4:1988).
-     *
-     * @public
-     * @readonly
-     */
-    readonly delete_password: Password,
-    /**
-     * @summary `pass_passwords`.
-     * @description
-     *
-     * Not present in ISO 8571-4:1988 (eight action passwords
-     * only).
-     *
-     * @public
-     * @readonly
-     */
-    readonly pass_passwords?: OPTIONAL<Pass_Passwords>,
-    /**
-     * @summary `link_password`.
-     * @description
-     *
-     * Not present in ISO 8571-4:1988 (eight action passwords
-     * only).
-     *
-     * @public
-     * @readonly
-     */
-    readonly link_password?: OPTIONAL<Password>
-  ) {}
+    read_password: Password,
+    insert_password: Password,
+    replace_password: Password,
+    extend_password: Password,
+    erase_password: Password,
+    read_attribute_password: Password,
+    change_attribute_password: Password,
+    delete_password: Password,
+    pass_passwords?: OPTIONAL<Pass_Passwords>,
+    link_password?: OPTIONAL<Password>
+  ) {
+    this.read_password = read_password;
+    this.insert_password = insert_password;
+    this.replace_password = replace_password;
+    this.extend_password = extend_password;
+    this.erase_password = erase_password;
+    this.read_attribute_password = read_attribute_password;
+    this.change_attribute_password = change_attribute_password;
+    this.delete_password = delete_password;
+    this.pass_passwords = pass_passwords;
+    this.link_password = link_password;
+  }
 
   /**
    * @summary Restructures an object into a Access_Passwords

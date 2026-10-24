@@ -29,41 +29,49 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class Pentanomial {
+    /**
+     * @summary `k1`.
+     * @description
+     *
+     * Smallest exponent; `1 ≤ k1 < k2 < k3 ≤ m-1`.
+     * ANSI X9.62-1998 §6.1 note 5, §4.1.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly k1: INTEGER;
+    /**
+     * @summary `k2`.
+     * @description
+     *
+     * Middle exponent of `x^m + x^k3 + x^k2 + x^k1 + 1`.
+     * ANSI X9.62-1998 §6.1 note 5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly k2: INTEGER;
+    /**
+     * @summary `k3`.
+     * @description
+     *
+     * Largest exponent of the reduction pentanomial.
+     * ANSI X9.62-1998 §6.1 note 5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly k3: INTEGER;
+
     constructor(
-        /**
-         * @summary `k1`.
-         * @description
-         *
-         * Smallest exponent; `1 ≤ k1 < k2 < k3 ≤ m-1`.
-         * ANSI X9.62-1998 §6.1 note 5, §4.1.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly k1: INTEGER,
-        /**
-         * @summary `k2`.
-         * @description
-         *
-         * Middle exponent of `x^m + x^k3 + x^k2 + x^k1 + 1`.
-         * ANSI X9.62-1998 §6.1 note 5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly k2: INTEGER,
-        /**
-         * @summary `k3`.
-         * @description
-         *
-         * Largest exponent of the reduction pentanomial.
-         * ANSI X9.62-1998 §6.1 note 5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly k3: INTEGER
-    ) {}
+        k1: INTEGER,
+        k2: INTEGER,
+        k3: INTEGER
+    ) {
+        this.k1 = k1;
+        this.k2 = k2;
+        this.k3 = k3;
+    }
 
     /**
      * @summary Restructures an object into a Pentanomial

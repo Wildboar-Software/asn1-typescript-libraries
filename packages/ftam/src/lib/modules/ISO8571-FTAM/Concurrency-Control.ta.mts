@@ -48,89 +48,107 @@ import {
  *
  */
 export class Concurrency_Control {
+  /**
+   * @summary `read`.
+   * @description
+   *
+   * Lock for file-access action `read`.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly read: Lock;
+  /**
+   * @summary `insert`.
+   * @description
+   *
+   * Lock for file-access action `insert`.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly insert: Lock;
+  /**
+   * @summary `replace`.
+   * @description
+   *
+   * Lock for file-access action `replace`.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly replace: Lock;
+  /**
+   * @summary `extend`.
+   * @description
+   *
+   * Lock for file-access action `extend`.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly extend: Lock;
+  /**
+   * @summary `erase`.
+   * @description
+   *
+   * Lock for file-access action `erase`.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly erase: Lock;
+  /**
+   * @summary `read_attribute`.
+   * @description
+   *
+   * Lock for complete-file action `read attribute`.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly read_attribute: Lock;
+  /**
+   * @summary `change_attribute`.
+   * @description
+   *
+   * Lock for complete-file action `change attribute`.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly change_attribute: Lock;
+  /**
+   * @summary `delete_Object`.
+   * @description
+   *
+   * Lock for complete-file action `delete file`.
+   * ISO 8571-4:1988 names this `delete-file`.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly delete_Object: Lock;
+
   constructor(
-    /**
-     * @summary `read`.
-     * @description
-     *
-     * Lock for file-access action `read`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly read: Lock,
-    /**
-     * @summary `insert`.
-     * @description
-     *
-     * Lock for file-access action `insert`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly insert: Lock,
-    /**
-     * @summary `replace`.
-     * @description
-     *
-     * Lock for file-access action `replace`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly replace: Lock,
-    /**
-     * @summary `extend`.
-     * @description
-     *
-     * Lock for file-access action `extend`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly extend: Lock,
-    /**
-     * @summary `erase`.
-     * @description
-     *
-     * Lock for file-access action `erase`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly erase: Lock,
-    /**
-     * @summary `read_attribute`.
-     * @description
-     *
-     * Lock for complete-file action `read attribute`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly read_attribute: Lock,
-    /**
-     * @summary `change_attribute`.
-     * @description
-     *
-     * Lock for complete-file action `change attribute`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly change_attribute: Lock,
-    /**
-     * @summary `delete_Object`.
-     * @description
-     *
-     * Lock for complete-file action `delete file`.
-     * ISO 8571-4:1988 names this `delete-file`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly delete_Object: Lock
-  ) {}
+    read: Lock,
+    insert: Lock,
+    replace: Lock,
+    extend: Lock,
+    erase: Lock,
+    read_attribute: Lock,
+    change_attribute: Lock,
+    delete_Object: Lock
+  ) {
+    this.read = read;
+    this.insert = insert;
+    this.replace = replace;
+    this.extend = extend;
+    this.erase = erase;
+    this.read_attribute = read_attribute;
+    this.change_attribute = change_attribute;
+    this.delete_Object = delete_Object;
+  }
 
   /**
    * @summary Restructures an object into a Concurrency_Control

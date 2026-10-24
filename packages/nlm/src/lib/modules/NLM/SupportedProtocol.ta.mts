@@ -41,45 +41,53 @@ import {
  *
  */
 export class SupportedProtocol {
+    /**
+     * @summary `protocol`.
+     * @description
+     *
+     * Registered OID of the International Standard that specifies the
+     * protocol (unless several protocols share one Standard).
+     * ITU-T Rec. X.283 (12/97)
+     * [§5.6](https://www.itu.int/rec/T-REC-X.283-199712-I).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly protocol: OBJECT_IDENTIFIER;
+    /**
+     * @summary `versions`.
+     * @description
+     *
+     * Protocol versions supported or in operation.
+     * ITU-T Rec. X.283 (12/97)
+     * [§5.6](https://www.itu.int/rec/T-REC-X.283-199712-I).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly versions: ProtocolVersion[];
+    /**
+     * @summary `defectsRepaired`.
+     * @description
+     *
+     * Optional OIDs identifying implemented defect repairs.
+     * ITU-T Rec. X.283 (12/97)
+     * [§6.2](https://www.itu.int/rec/T-REC-X.283-199712-I).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly defectsRepaired?: OPTIONAL<OBJECT_IDENTIFIER[]>;
+
     constructor(
-        /**
-         * @summary `protocol`.
-         * @description
-         *
-         * Registered OID of the International Standard that specifies the
-         * protocol (unless several protocols share one Standard).
-         * ITU-T Rec. X.283 (12/97)
-         * [§5.6](https://www.itu.int/rec/T-REC-X.283-199712-I).
-         *
-         * @public
-         * @readonly
-         */
-        readonly protocol: OBJECT_IDENTIFIER,
-        /**
-         * @summary `versions`.
-         * @description
-         *
-         * Protocol versions supported or in operation.
-         * ITU-T Rec. X.283 (12/97)
-         * [§5.6](https://www.itu.int/rec/T-REC-X.283-199712-I).
-         *
-         * @public
-         * @readonly
-         */
-        readonly versions: ProtocolVersion[],
-        /**
-         * @summary `defectsRepaired`.
-         * @description
-         *
-         * Optional OIDs identifying implemented defect repairs.
-         * ITU-T Rec. X.283 (12/97)
-         * [§6.2](https://www.itu.int/rec/T-REC-X.283-199712-I).
-         *
-         * @public
-         * @readonly
-         */
-        readonly defectsRepaired?: OPTIONAL<OBJECT_IDENTIFIER[]>
-    ) {}
+        protocol: OBJECT_IDENTIFIER,
+        versions: ProtocolVersion[],
+        defectsRepaired?: OPTIONAL<OBJECT_IDENTIFIER[]>
+    ) {
+        this.protocol = protocol;
+        this.versions = versions;
+        this.defectsRepaired = defectsRepaired;
+    }
 
     /**
      * @summary Restructures an object into a SupportedProtocol

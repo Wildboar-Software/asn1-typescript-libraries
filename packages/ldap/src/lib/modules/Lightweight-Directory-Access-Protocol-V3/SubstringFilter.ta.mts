@@ -48,36 +48,44 @@ import {
  *
  */
 export class SubstringFilter {
+  /**
+   * @summary `type_`.
+   * @description
+   *
+   * Attribute whose SUBSTR rule is applied.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly type_: AttributeDescription;
+  /**
+   * @summary `substrings`.
+   * @description
+   *
+   * Ordered; SIZE(1..MAX). `initial` first if present, `final` last
+   * if present; each at most once. Values use EQUALITY assertion
+   * syntax.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly substrings: SubstringFilter_substrings_substring[];
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  public readonly _unrecognizedExtensionsList: _Element[];
+
   constructor(
-    /**
-     * @summary `type_`.
-     * @description
-     *
-     * Attribute whose SUBSTR rule is applied.
-     *
-     * @public
-     * @readonly
-     */
-    readonly type_: AttributeDescription,
-    /**
-     * @summary `substrings`.
-     * @description
-     *
-     * Ordered; SIZE(1..MAX). `initial` first if present, `final` last
-     * if present; each at most once. Values use EQUALITY assertion
-     * syntax.
-     *
-     * @public
-     * @readonly
-     */
-    readonly substrings: SubstringFilter_substrings_substring[],
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = []
-  ) {}
+    type_: AttributeDescription,
+    substrings: SubstringFilter_substrings_substring[],
+    _unrecognizedExtensionsList: _Element[] = []
+  ) {
+    this.type_ = type_;
+    this.substrings = substrings;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+  }
 
   /**
    * @summary Restructures an object into a SubstringFilter

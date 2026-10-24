@@ -42,24 +42,30 @@ import {
  *
  */
 export class ProcessingInstruction {
+  /**
+   * @summary `target`.
+   * @description [target]; OTHER NCNAME category. ITU-T Rec.
+   * X.891 (05/2005) §7.5.4.
+   * @public
+   * @readonly
+   */
+  public readonly target: IdentifyingStringOrIndex;
+  /**
+   * @summary `content`.
+   * @description [content]; OTHER STRING category. At most
+   * 2³² characters. ITU-T Rec. X.891 (05/2005) §7.5.5–§7.5.6.
+   * @public
+   * @readonly
+   */
+  public readonly content: NonIdentifyingStringOrIndex;
+
   constructor(
-    /**
-     * @summary `target`.
-     * @description [target]; OTHER NCNAME category. ITU-T Rec.
-     * X.891 (05/2005) §7.5.4.
-     * @public
-     * @readonly
-     */
-    readonly target: IdentifyingStringOrIndex,
-    /**
-     * @summary `content`.
-     * @description [content]; OTHER STRING category. At most
-     * 2³² characters. ITU-T Rec. X.891 (05/2005) §7.5.5–§7.5.6.
-     * @public
-     * @readonly
-     */
-    readonly content: NonIdentifyingStringOrIndex
-  ) {}
+    target: IdentifyingStringOrIndex,
+    content: NonIdentifyingStringOrIndex
+  ) {
+    this.target = target;
+    this.content = content;
+  }
 
   /**
    * @summary Restructures an object into a ProcessingInstruction

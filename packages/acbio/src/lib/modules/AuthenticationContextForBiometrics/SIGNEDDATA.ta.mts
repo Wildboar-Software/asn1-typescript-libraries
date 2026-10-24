@@ -51,44 +51,58 @@ import {
  *
  */
 export class SIGNEDDATA<EncapsulatedContentInfo> {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: CMSVersion;
+    /**
+     * @summary `digestAlgorithms`.
+     * @public
+     * @readonly
+     */
+    public readonly digestAlgorithms: DigestAlgorithmIdentifier[];
+    /**
+     * @summary `encapContentInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly encapContentInfo: EncapsulatedContentInfo;
+    /**
+     * @summary `certificates`.
+     * @public
+     * @readonly
+     */
+    public readonly certificates: OPTIONAL<CertificateSet>;
+    /**
+     * @summary `crls`.
+     * @public
+     * @readonly
+     */
+    public readonly crls: OPTIONAL<RevocationInfoChoices>;
+    /**
+     * @summary `signerInfos`.
+     * @public
+     * @readonly
+     */
+    public readonly signerInfos: SignerInfos;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: CMSVersion,
-        /**
-         * @summary `digestAlgorithms`.
-         * @public
-         * @readonly
-         */
-        readonly digestAlgorithms: DigestAlgorithmIdentifier[],
-        /**
-         * @summary `encapContentInfo`.
-         * @public
-         * @readonly
-         */
-        readonly encapContentInfo: EncapsulatedContentInfo,
-        /**
-         * @summary `certificates`.
-         * @public
-         * @readonly
-         */
-        readonly certificates: OPTIONAL<CertificateSet>,
-        /**
-         * @summary `crls`.
-         * @public
-         * @readonly
-         */
-        readonly crls: OPTIONAL<RevocationInfoChoices>,
-        /**
-         * @summary `signerInfos`.
-         * @public
-         * @readonly
-         */
-        readonly signerInfos: SignerInfos
-    ) {}
+        version: CMSVersion,
+        digestAlgorithms: DigestAlgorithmIdentifier[],
+        encapContentInfo: EncapsulatedContentInfo,
+        certificates: OPTIONAL<CertificateSet>,
+        crls: OPTIONAL<RevocationInfoChoices>,
+        signerInfos: SignerInfos
+    ) {
+        this.version = version;
+        this.digestAlgorithms = digestAlgorithms;
+        this.encapContentInfo = encapContentInfo;
+        this.certificates = certificates;
+        this.crls = crls;
+        this.signerInfos = signerInfos;
+    }
 
     /**
      * @summary Restructures an object into a SIGNEDDATA

@@ -34,68 +34,80 @@ import {
  *
  */
 export class DomainParameters {
+    /**
+     * @summary `p`.
+     * @description
+     *
+     * Odd prime defining GF(p); `p = jq + 1`. Bit length `L = 256n`
+     * with `n ≥ 4` (so `p` is at least 1024 bits). ANS X9.42-2003
+     * §7.1, §A.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly p: INTEGER;
+    /**
+     * @summary `g`.
+     * @description
+     *
+     * Generator of the multiplicative subgroup of order `q`
+     * (`g^q ≡ 1 (mod p)`). Valid if `2 ≤ g ≤ p-2`. ANS X9.42-2003
+     * §7.2, §A.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly g: INTEGER;
+    /**
+     * @summary `q`.
+     * @description
+     *
+     * Prime factor of `p-1`. Bit length `m ≥ 160`. ANS X9.42-2003
+     * §7.1, §A.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly q: INTEGER;
+    /**
+     * @summary `j`.
+     * @description
+     *
+     * Cofactor with `p = jq + 1` and `j ≥ 2`. Optional aid for
+     * verifying domain parameters; required when using the cofactor
+     * method. ANS X9.42-2003 §A.2.1, §A.7.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly j?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `validationParms`.
+     * @description
+     *
+     * `seed` and `pGenCounter` from prime generation (Annex B.1.2).
+     * Both present or both absent. Lets a party validate that `p`
+     * and `q` were generated as specified. ANS X9.42-2003 §7.1,
+     * §7.2, §A.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly validationParms?: OPTIONAL<ValidationParms>;
+
     constructor(
-        /**
-         * @summary `p`.
-         * @description
-         *
-         * Odd prime defining GF(p); `p = jq + 1`. Bit length `L = 256n`
-         * with `n ≥ 4` (so `p` is at least 1024 bits). ANS X9.42-2003
-         * §7.1, §A.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly p: INTEGER,
-        /**
-         * @summary `g`.
-         * @description
-         *
-         * Generator of the multiplicative subgroup of order `q`
-         * (`g^q ≡ 1 (mod p)`). Valid if `2 ≤ g ≤ p-2`. ANS X9.42-2003
-         * §7.2, §A.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly g: INTEGER,
-        /**
-         * @summary `q`.
-         * @description
-         *
-         * Prime factor of `p-1`. Bit length `m ≥ 160`. ANS X9.42-2003
-         * §7.1, §A.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly q: INTEGER,
-        /**
-         * @summary `j`.
-         * @description
-         *
-         * Cofactor with `p = jq + 1` and `j ≥ 2`. Optional aid for
-         * verifying domain parameters; required when using the cofactor
-         * method. ANS X9.42-2003 §A.2.1, §A.7.
-         *
-         * @public
-         * @readonly
-         */
-        readonly j?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `validationParms`.
-         * @description
-         *
-         * `seed` and `pGenCounter` from prime generation (Annex B.1.2).
-         * Both present or both absent. Lets a party validate that `p`
-         * and `q` were generated as specified. ANS X9.42-2003 §7.1,
-         * §7.2, §A.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly validationParms?: OPTIONAL<ValidationParms>
-    ) {}
+        p: INTEGER,
+        g: INTEGER,
+        q: INTEGER,
+        j?: OPTIONAL<INTEGER>,
+        validationParms?: OPTIONAL<ValidationParms>
+    ) {
+        this.p = p;
+        this.g = g;
+        this.q = q;
+        this.j = j;
+        this.validationParms = validationParms;
+    }
 
     /**
      * @summary Restructures an object into a DomainParameters

@@ -42,26 +42,34 @@ import {
  *
  */
 export class PKICertificateInformation {
+    /**
+     * @summary `pkiCertificateSerialNumber`.
+     * @public
+     * @readonly
+     */
+    public readonly pkiCertificateSerialNumber: CertificateSerialNumber;
+    /**
+     * @summary `pkiCertificateIssuerName`.
+     * @public
+     * @readonly
+     */
+    public readonly pkiCertificateIssuerName: Name;
+    /**
+     * @summary `pkiCertificateIssuerUniqueIdentifier`.
+     * @public
+     * @readonly
+     */
+    public readonly pkiCertificateIssuerUniqueIdentifier?: OPTIONAL<UniqueIdentifier>;
+
     constructor(
-        /**
-         * @summary `pkiCertificateSerialNumber`.
-         * @public
-         * @readonly
-         */
-        readonly pkiCertificateSerialNumber: CertificateSerialNumber,
-        /**
-         * @summary `pkiCertificateIssuerName`.
-         * @public
-         * @readonly
-         */
-        readonly pkiCertificateIssuerName: Name,
-        /**
-         * @summary `pkiCertificateIssuerUniqueIdentifier`.
-         * @public
-         * @readonly
-         */
-        readonly pkiCertificateIssuerUniqueIdentifier?: OPTIONAL<UniqueIdentifier>
-    ) {}
+        pkiCertificateSerialNumber: CertificateSerialNumber,
+        pkiCertificateIssuerName: Name,
+        pkiCertificateIssuerUniqueIdentifier?: OPTIONAL<UniqueIdentifier>
+    ) {
+        this.pkiCertificateSerialNumber = pkiCertificateSerialNumber;
+        this.pkiCertificateIssuerName = pkiCertificateIssuerName;
+        this.pkiCertificateIssuerUniqueIdentifier = pkiCertificateIssuerUniqueIdentifier;
+    }
 
     /**
      * @summary Restructures an object into a PKICertificateInformation

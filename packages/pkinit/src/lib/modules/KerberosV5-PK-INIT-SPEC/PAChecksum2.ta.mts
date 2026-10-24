@@ -35,21 +35,27 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  */
 export
 class PAChecksum2 {
+    /**
+     * Checksum computed over `KDC-REQ-BODY`. The module does
+     * not say which encoding of that body is hashed.
+     * @public
+     * @readonly
+     */
+    public readonly checksum: OCTET_STRING;
+    /**
+     * Digest algorithm used to compute `checksum`.
+     * @public
+     * @readonly
+     */
+    public readonly algorithmIdentifier: AlgorithmIdentifier;
+
     constructor (
-        /**
-         * Checksum computed over `KDC-REQ-BODY`. The module does
-         * not say which encoding of that body is hashed.
-         * @public
-         * @readonly
-         */
-        readonly checksum: OCTET_STRING,
-        /**
-         * Digest algorithm used to compute `checksum`.
-         * @public
-         * @readonly
-         */
-        readonly algorithmIdentifier: AlgorithmIdentifier
-    ) {}
+        checksum: OCTET_STRING,
+        algorithmIdentifier: AlgorithmIdentifier
+    ) {
+        this.checksum = checksum;
+        this.algorithmIdentifier = algorithmIdentifier;
+    }
 
     /**
      * @summary Restructures an object into a PAChecksum2

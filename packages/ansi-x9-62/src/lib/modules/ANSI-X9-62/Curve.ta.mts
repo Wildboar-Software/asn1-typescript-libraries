@@ -35,45 +35,53 @@ import {
  *
  */
 export class Curve {
+    /**
+     * @summary `a`.
+     * @description
+     *
+     * Curve coefficient a. Over Fp: `y^2 = x^3 + ax + b`. Over
+     * F2^m: `y^2 + xy = x^3 + ax^2 + b`. ANSI X9.62-1998 §6.3,
+     * §4.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly a: FieldElement;
+    /**
+     * @summary `b`.
+     * @description
+     *
+     * Curve coefficient b. Over F2^m, b shall be nonzero. Over
+     * Fp, `4a^3 + 27b^2 ≠ 0 (mod p)`. ANSI X9.62-1998 §6.3,
+     * §4.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly b: FieldElement;
+    /**
+     * @summary `seed`.
+     * @description
+     *
+     * SEED used to derive coefficients of a randomly generated
+     * curve (Annex A.3.3). At least 160 bits. Optional in
+     * X9.62-1998; later `SpecifiedECDomain` versions 2 and 3
+     * require it. ANSI X9.62-1998 §6.3, §5.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly seed?: OPTIONAL<BIT_STRING>;
+
     constructor(
-        /**
-         * @summary `a`.
-         * @description
-         *
-         * Curve coefficient a. Over Fp: `y^2 = x^3 + ax + b`. Over
-         * F2^m: `y^2 + xy = x^3 + ax^2 + b`. ANSI X9.62-1998 §6.3,
-         * §4.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly a: FieldElement,
-        /**
-         * @summary `b`.
-         * @description
-         *
-         * Curve coefficient b. Over F2^m, b shall be nonzero. Over
-         * Fp, `4a^3 + 27b^2 ≠ 0 (mod p)`. ANSI X9.62-1998 §6.3,
-         * §4.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly b: FieldElement,
-        /**
-         * @summary `seed`.
-         * @description
-         *
-         * SEED used to derive coefficients of a randomly generated
-         * curve (Annex A.3.3). At least 160 bits. Optional in
-         * X9.62-1998; later `SpecifiedECDomain` versions 2 and 3
-         * require it. ANSI X9.62-1998 §6.3, §5.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly seed?: OPTIONAL<BIT_STRING>
-    ) {}
+        a: FieldElement,
+        b: FieldElement,
+        seed?: OPTIONAL<BIT_STRING>
+    ) {
+        this.a = a;
+        this.b = b;
+        this.seed = seed;
+    }
 
     /**
      * @summary Restructures an object into a Curve

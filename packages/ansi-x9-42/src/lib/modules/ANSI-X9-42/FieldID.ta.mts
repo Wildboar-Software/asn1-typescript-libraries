@@ -26,30 +26,36 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class FieldID {
+    /**
+     * @summary `fieldType`.
+     * @description
+     *
+     * OID for the field kind. Currently only `gfPrime` (GF(p)).
+     * ANS X9.42-2003 §A.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly fieldType: OBJECT_IDENTIFIER;
+    /**
+     * @summary `parameters`.
+     * @description
+     *
+     * Parameters for that field type. For `gfPrime`,
+     * `DomainParameters`. ANS X9.42-2003 §A.1, §A.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly parameters: _Element;
+
     constructor(
-        /**
-         * @summary `fieldType`.
-         * @description
-         *
-         * OID for the field kind. Currently only `gfPrime` (GF(p)).
-         * ANS X9.42-2003 §A.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly fieldType: OBJECT_IDENTIFIER,
-        /**
-         * @summary `parameters`.
-         * @description
-         *
-         * Parameters for that field type. For `gfPrime`,
-         * `DomainParameters`. ANS X9.42-2003 §A.1, §A.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly parameters: _Element
-    ) {}
+        fieldType: OBJECT_IDENTIFIER,
+        parameters: _Element
+    ) {
+        this.fieldType = fieldType;
+        this.parameters = parameters;
+    }
 
     /**
      * @summary Restructures an object into a FieldID

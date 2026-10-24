@@ -27,31 +27,37 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class FieldID {
+    /**
+     * @summary `fieldType`.
+     * @description
+     *
+     * OID naming the field kind (`prime-field` or
+     * `characteristic-two-field`). Determines the type of
+     * `parameters`. ANSI X9.62-1998 §6.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly fieldType: OBJECT_IDENTIFIER;
+    /**
+     * @summary `parameters`.
+     * @description
+     *
+     * Field parameters: `Prime-p` or `Characteristic-two`, as
+     * selected by `fieldType`. ANSI X9.62-1998 §6.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly parameters: _Element;
+
     constructor(
-        /**
-         * @summary `fieldType`.
-         * @description
-         *
-         * OID naming the field kind (`prime-field` or
-         * `characteristic-two-field`). Determines the type of
-         * `parameters`. ANSI X9.62-1998 §6.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly fieldType: OBJECT_IDENTIFIER,
-        /**
-         * @summary `parameters`.
-         * @description
-         *
-         * Field parameters: `Prime-p` or `Characteristic-two`, as
-         * selected by `fieldType`. ANSI X9.62-1998 §6.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly parameters: _Element
-    ) {}
+        fieldType: OBJECT_IDENTIFIER,
+        parameters: _Element
+    ) {
+        this.fieldType = fieldType;
+        this.parameters = parameters;
+    }
 
     /**
      * @summary Restructures an object into a FieldID

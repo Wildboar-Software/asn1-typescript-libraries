@@ -31,20 +31,26 @@ import {
  *
  */
 export class Hash {
+    /**
+     * @summary `algorithmIdentifier`.
+     * @public
+     * @readonly
+     */
+    public readonly algorithmIdentifier: AlgorithmIdentifier;
+    /**
+     * @summary `hashValue`.
+     * @public
+     * @readonly
+     */
+    public readonly hashValue: OCTET_STRING;
+
     constructor(
-        /**
-         * @summary `algorithmIdentifier`.
-         * @public
-         * @readonly
-         */
-        readonly algorithmIdentifier: AlgorithmIdentifier,
-        /**
-         * @summary `hashValue`.
-         * @public
-         * @readonly
-         */
-        readonly hashValue: OCTET_STRING
-    ) {}
+        algorithmIdentifier: AlgorithmIdentifier,
+        hashValue: OCTET_STRING
+    ) {
+        this.algorithmIdentifier = algorithmIdentifier;
+        this.hashValue = hashValue;
+    }
 
     /**
      * @summary Restructures an object into a Hash

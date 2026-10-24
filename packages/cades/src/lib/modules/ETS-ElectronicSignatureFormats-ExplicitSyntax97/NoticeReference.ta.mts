@@ -31,28 +31,34 @@ import { DisplayText, _decode_DisplayText, _encode_DisplayText } from "../ETS-El
  */
 export
 class NoticeReference {
+    /**
+     * @summary `organization`.
+     * @description
+     *
+     * Organization that originated the referenced notice.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly organization: DisplayText;
+    /**
+     * @summary `noticeNumbers`.
+     * @description
+     *
+     * Notice numbers within that organization.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly noticeNumbers: INTEGER[];
+
     constructor (
-        /**
-         * @summary `organization`.
-         * @description
-         *
-         * Organization that originated the referenced notice.
-         *
-         * @public
-         * @readonly
-         */
-        readonly organization: DisplayText,
-        /**
-         * @summary `noticeNumbers`.
-         * @description
-         *
-         * Notice numbers within that organization.
-         *
-         * @public
-         * @readonly
-         */
-        readonly noticeNumbers: INTEGER[]
-    ) {}
+        organization: DisplayText,
+        noticeNumbers: INTEGER[]
+    ) {
+        this.organization = organization;
+        this.noticeNumbers = noticeNumbers;
+    }
 
     /**
      * @summary Restructures an object into a NoticeReference

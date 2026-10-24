@@ -31,32 +31,38 @@ import {
  *
  */
 export class SubjectPublicKeyInfo {
+    /**
+     * @summary `algorithm`.
+     * @description
+     *
+     * Shall identify `dhPublicNumber`; parameters are the
+     * `DomainParameters` for this key. ANS X9.42-2003 §A.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly algorithm: AlgorithmIdentifier;
+    /**
+     * @summary `subjectPublicKey`.
+     * @description
+     *
+     * BIT STRING whose contents are the **entire DER encoding** of
+     * `DiffieHellmanPublicNumber` (tag, length, and INTEGER
+     * octets). Same double-encoding as DSA public keys in
+     * ANS X9.57. ANS X9.42-2003 §A.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subjectPublicKey: BIT_STRING;
+
     constructor(
-        /**
-         * @summary `algorithm`.
-         * @description
-         *
-         * Shall identify `dhPublicNumber`; parameters are the
-         * `DomainParameters` for this key. ANS X9.42-2003 §A.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly algorithm: AlgorithmIdentifier,
-        /**
-         * @summary `subjectPublicKey`.
-         * @description
-         *
-         * BIT STRING whose contents are the **entire DER encoding** of
-         * `DiffieHellmanPublicNumber` (tag, length, and INTEGER
-         * octets). Same double-encoding as DSA public keys in
-         * ANS X9.57. ANS X9.42-2003 §A.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly subjectPublicKey: BIT_STRING
-    ) {}
+        algorithm: AlgorithmIdentifier,
+        subjectPublicKey: BIT_STRING
+    ) {
+        this.algorithm = algorithm;
+        this.subjectPublicKey = subjectPublicKey;
+    }
 
     /**
      * @summary Restructures an object into a SubjectPublicKeyInfo

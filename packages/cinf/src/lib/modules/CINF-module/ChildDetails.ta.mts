@@ -38,33 +38,39 @@ import {
  *
  */
 export class ChildDetails {
+  /**
+   * @summary `orsSupported`.
+   * @description
+   *
+   * `true` if this child is itself ORS-supported: every
+   * DNS-mapped name for it exists and its zone files meet
+   * X.672, including the mandatory NAPTR records
+   * (§3.2.23). If `false`, an ORS query on that child
+   * should return DNS RCODE 3.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly orsSupported: BOOLEAN;
+  /**
+   * @summary `unicodeLabels`.
+   * @description
+   *
+   * Integer-valued Unicode label of this child arc, plus
+   * any non-integer Unicode labels on the same arc.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly unicodeLabels: UnicodeLabels;
+
   constructor(
-    /**
-     * @summary `orsSupported`.
-     * @description
-     *
-     * `true` if this child is itself ORS-supported: every
-     * DNS-mapped name for it exists and its zone files meet
-     * X.672, including the mandatory NAPTR records
-     * (§3.2.23). If `false`, an ORS query on that child
-     * should return DNS RCODE 3.
-     *
-     * @public
-     * @readonly
-     */
-    readonly orsSupported: BOOLEAN,
-    /**
-     * @summary `unicodeLabels`.
-     * @description
-     *
-     * Integer-valued Unicode label of this child arc, plus
-     * any non-integer Unicode labels on the same arc.
-     *
-     * @public
-     * @readonly
-     */
-    readonly unicodeLabels: UnicodeLabels
-  ) {}
+    orsSupported: BOOLEAN,
+    unicodeLabels: UnicodeLabels
+  ) {
+    this.orsSupported = orsSupported;
+    this.unicodeLabels = unicodeLabels;
+  }
 
   /**
    * @summary Restructures an object into a ChildDetails

@@ -79,108 +79,128 @@ import {
  *
  */
 export class F_GROUP_SELECT_request {
+  /**
+   * @summary `attribute_value_assertions`.
+   * @description
+   *
+   * Match criteria for objects to select into the group.
+   * Absent from ISO 8571:1988 Parts 1–4.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly attribute_value_assertions: Attribute_Value_Assertions;
+  /**
+   * @summary `requested_access`.
+   * @description
+   *
+   * Actions required for this (group) selection. ISO
+   * 8571-3:1988 §13.6.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly requested_access: Access_Request;
+  /**
+   * @summary `access_passwords`.
+   * @description
+   *
+   * Passwords for the requested actions. Same role as ISO
+   * 8571-3:1988 §13.7; only if the security group was
+   * negotiated.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly access_passwords: OPTIONAL<Access_Passwords>;
+  /**
+   * @summary `path_access_passwords`.
+   * @description
+   *
+   * Per-path-element passwords. Absent from ISO 8571:1988.
+   * ASN.1 on F-SELECT-request: send only when
+   * limited-filestore-management, object-manipulation, or
+   * group-manipulation is available.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly path_access_passwords: OPTIONAL<Path_Access_Passwords>;
+  /**
+   * @summary `concurrency_control`.
+   * @description
+   *
+   * Locks relative to other users. ISO 8571-3:1988 §13.8.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly concurrency_control: OPTIONAL<Concurrency_Control>;
+  /**
+   * @summary `maximum_set_size`.
+   * @description
+   *
+   * Maximum objects in the group. ASN.1: `0` implies no
+   * limit. Default `0`.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly maximum_set_size: OPTIONAL<INTEGER>;
+  /**
+   * @summary `scope`.
+   * @description
+   *
+   * How far the match applies. Absent from ISO 8571:1988
+   * Parts 1–4.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly scope: Scope;
+  /**
+   * @summary `account`.
+   * @description
+   *
+   * Account to charge for the regime. ISO 8571-3:1988 §13.3.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly account?: OPTIONAL<Account>;
+  /**
+   * @summary `shared_ASE_information`.
+   * @description
+   *
+   * Other ASE information on this primitive. ISO 8571-3:1988
+   * §13.10.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>;
+
   constructor(
-    /**
-     * @summary `attribute_value_assertions`.
-     * @description
-     *
-     * Match criteria for objects to select into the group.
-     * Absent from ISO 8571:1988 Parts 1–4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly attribute_value_assertions: Attribute_Value_Assertions,
-    /**
-     * @summary `requested_access`.
-     * @description
-     *
-     * Actions required for this (group) selection. ISO
-     * 8571-3:1988 §13.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly requested_access: Access_Request,
-    /**
-     * @summary `access_passwords`.
-     * @description
-     *
-     * Passwords for the requested actions. Same role as ISO
-     * 8571-3:1988 §13.7; only if the security group was
-     * negotiated.
-     *
-     * @public
-     * @readonly
-     */
-    readonly access_passwords: OPTIONAL<Access_Passwords>,
-    /**
-     * @summary `path_access_passwords`.
-     * @description
-     *
-     * Per-path-element passwords. Absent from ISO 8571:1988.
-     * ASN.1 on F-SELECT-request: send only when
-     * limited-filestore-management, object-manipulation, or
-     * group-manipulation is available.
-     *
-     * @public
-     * @readonly
-     */
-    readonly path_access_passwords: OPTIONAL<Path_Access_Passwords>,
-    /**
-     * @summary `concurrency_control`.
-     * @description
-     *
-     * Locks relative to other users. ISO 8571-3:1988 §13.8.
-     *
-     * @public
-     * @readonly
-     */
-    readonly concurrency_control: OPTIONAL<Concurrency_Control>,
-    /**
-     * @summary `maximum_set_size`.
-     * @description
-     *
-     * Maximum objects in the group. ASN.1: `0` implies no
-     * limit. Default `0`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly maximum_set_size: OPTIONAL<INTEGER>,
-    /**
-     * @summary `scope`.
-     * @description
-     *
-     * How far the match applies. Absent from ISO 8571:1988
-     * Parts 1–4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly scope: Scope,
-    /**
-     * @summary `account`.
-     * @description
-     *
-     * Account to charge for the regime. ISO 8571-3:1988 §13.3.
-     *
-     * @public
-     * @readonly
-     */
-    readonly account?: OPTIONAL<Account>,
-    /**
-     * @summary `shared_ASE_information`.
-     * @description
-     *
-     * Other ASE information on this primitive. ISO 8571-3:1988
-     * §13.10.
-     *
-     * @public
-     * @readonly
-     */
-    readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>
-  ) {}
+    attribute_value_assertions: Attribute_Value_Assertions,
+    requested_access: Access_Request,
+    access_passwords: OPTIONAL<Access_Passwords>,
+    path_access_passwords: OPTIONAL<Path_Access_Passwords>,
+    concurrency_control: OPTIONAL<Concurrency_Control>,
+    maximum_set_size: OPTIONAL<INTEGER>,
+    scope: Scope,
+    account?: OPTIONAL<Account>,
+    shared_ASE_information?: OPTIONAL<Shared_ASE_Information>
+  ) {
+    this.attribute_value_assertions = attribute_value_assertions;
+    this.requested_access = requested_access;
+    this.access_passwords = access_passwords;
+    this.path_access_passwords = path_access_passwords;
+    this.concurrency_control = concurrency_control;
+    this.maximum_set_size = maximum_set_size;
+    this.scope = scope;
+    this.account = account;
+    this.shared_ASE_information = shared_ASE_information;
+  }
 
   /**
    * @summary Restructures an object into a F_GROUP_SELECT_request

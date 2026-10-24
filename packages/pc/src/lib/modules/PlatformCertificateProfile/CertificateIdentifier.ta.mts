@@ -39,30 +39,36 @@ import {
  */
 export
 class CertificateIdentifier {
+    /**
+     * @summary `attributeCertIdentifier`.
+     * @description
+     *
+     * Hash over the referenced attribute certificate's
+     * `signatureValue`. §3.1.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly attributeCertIdentifier?: OPTIONAL<AttributeCertificateIdentifier>;
+    /**
+     * @summary `genericCertIdentifier`.
+     * @description
+     *
+     * Issuer name and serial number of the referenced
+     * certificate (`IssuerSerial` from RFC 5755). §3.1.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly genericCertIdentifier?: OPTIONAL<IssuerSerial>;
+
     constructor (
-        /**
-         * @summary `attributeCertIdentifier`.
-         * @description
-         *
-         * Hash over the referenced attribute certificate's
-         * `signatureValue`. §3.1.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly attributeCertIdentifier?: OPTIONAL<AttributeCertificateIdentifier>,
-        /**
-         * @summary `genericCertIdentifier`.
-         * @description
-         *
-         * Issuer name and serial number of the referenced
-         * certificate (`IssuerSerial` from RFC 5755). §3.1.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly genericCertIdentifier?: OPTIONAL<IssuerSerial>
-    ) {}
+        attributeCertIdentifier?: OPTIONAL<AttributeCertificateIdentifier>,
+        genericCertIdentifier?: OPTIONAL<IssuerSerial>
+    ) {
+        this.attributeCertIdentifier = attributeCertIdentifier;
+        this.genericCertIdentifier = genericCertIdentifier;
+    }
 
     /**
      * @summary Restructures an object into a CertificateIdentifier

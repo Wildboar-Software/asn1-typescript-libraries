@@ -49,41 +49,49 @@ import {
  *
  */
 export class F_GROUP_SELECT_response {
+  /**
+   * @summary `action_result`.
+   * @description
+   *
+   * Success, transient error, or permanent error. ISO
+   * 8571-3:1988 §13.2. Default `success`.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly action_result?: OPTIONAL<Action_Result>;
+  /**
+   * @summary `shared_ASE_information`.
+   * @description
+   *
+   * Other ASE information on this primitive. ISO 8571-3:1988
+   * §13.10.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>;
+  /**
+   * @summary `diagnostic`.
+   * @description
+   *
+   * Detail accompanying `action-result`. ISO 8571-3:1988
+   * §13.13.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly diagnostic?: OPTIONAL<Diagnostic>;
+
   constructor(
-    /**
-     * @summary `action_result`.
-     * @description
-     *
-     * Success, transient error, or permanent error. ISO
-     * 8571-3:1988 §13.2. Default `success`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly action_result?: OPTIONAL<Action_Result>,
-    /**
-     * @summary `shared_ASE_information`.
-     * @description
-     *
-     * Other ASE information on this primitive. ISO 8571-3:1988
-     * §13.10.
-     *
-     * @public
-     * @readonly
-     */
-    readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
-    /**
-     * @summary `diagnostic`.
-     * @description
-     *
-     * Detail accompanying `action-result`. ISO 8571-3:1988
-     * §13.13.
-     *
-     * @public
-     * @readonly
-     */
-    readonly diagnostic?: OPTIONAL<Diagnostic>
-  ) {}
+    action_result?: OPTIONAL<Action_Result>,
+    shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
+    diagnostic?: OPTIONAL<Diagnostic>
+  ) {
+    this.action_result = action_result;
+    this.shared_ASE_information = shared_ASE_information;
+    this.diagnostic = diagnostic;
+  }
 
   /**
    * @summary Restructures an object into a F_GROUP_SELECT_response

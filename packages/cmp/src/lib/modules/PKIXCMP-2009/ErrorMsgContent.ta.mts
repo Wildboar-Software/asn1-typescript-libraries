@@ -45,39 +45,47 @@ import {
  *
  */
 export class ErrorMsgContent {
+  /**
+   * @summary `pKIStatusInfo`.
+   * @description
+   *
+   * Status and optional failure info ([RFC 4210 §5.3.21](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.21)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly pKIStatusInfo: PKIStatusInfo;
+  /**
+   * @summary `errorCode`.
+   * @description
+   *
+   * Optional implementation-specific error code ([RFC 4210 §5.3.21](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.21)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly errorCode?: OPTIONAL<INTEGER>;
+  /**
+   * @summary `errorDetails`.
+   * @description
+   *
+   * Optional implementation-specific error details (`PKIFreeText`)
+   * ([RFC 4210 §5.3.21](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.21)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly errorDetails?: OPTIONAL<PKIFreeText>;
+
   constructor(
-    /**
-     * @summary `pKIStatusInfo`.
-     * @description
-     *
-     * Status and optional failure info ([RFC 4210 §5.3.21](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.21)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly pKIStatusInfo: PKIStatusInfo,
-    /**
-     * @summary `errorCode`.
-     * @description
-     *
-     * Optional implementation-specific error code ([RFC 4210 §5.3.21](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.21)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly errorCode?: OPTIONAL<INTEGER>,
-    /**
-     * @summary `errorDetails`.
-     * @description
-     *
-     * Optional implementation-specific error details (`PKIFreeText`)
-     * ([RFC 4210 §5.3.21](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.21)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly errorDetails?: OPTIONAL<PKIFreeText>
-  ) {}
+    pKIStatusInfo: PKIStatusInfo,
+    errorCode?: OPTIONAL<INTEGER>,
+    errorDetails?: OPTIONAL<PKIFreeText>
+  ) {
+    this.pKIStatusInfo = pKIStatusInfo;
+    this.errorCode = errorCode;
+    this.errorDetails = errorDetails;
+  }
 
   /**
    * @summary Restructures an object into a ErrorMsgContent

@@ -38,31 +38,37 @@ import {
  *
  */
 export class ServiceLocator {
+    /**
+     * @summary `issuer`.
+     * @description
+     *
+     * Issuer `Name` from the subject certificate
+     * ([RFC 6960 §4.4.6](https://datatracker.ietf.org/doc/html/rfc6960#section-4.4.6)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly issuer: Name;
+    /**
+     * @summary `locator`.
+     * @description
+     *
+     * Authority Information Access syntax from the subject
+     * certificate, locating the authoritative OCSP service
+     * ([RFC 6960 §4.4.6](https://datatracker.ietf.org/doc/html/rfc6960#section-4.4.6)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locator: AuthorityInfoAccessSyntax;
+
     constructor(
-        /**
-         * @summary `issuer`.
-         * @description
-         *
-         * Issuer `Name` from the subject certificate
-         * ([RFC 6960 §4.4.6](https://datatracker.ietf.org/doc/html/rfc6960#section-4.4.6)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly issuer: Name,
-        /**
-         * @summary `locator`.
-         * @description
-         *
-         * Authority Information Access syntax from the subject
-         * certificate, locating the authoritative OCSP service
-         * ([RFC 6960 §4.4.6](https://datatracker.ietf.org/doc/html/rfc6960#section-4.4.6)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly locator: AuthorityInfoAccessSyntax
-    ) {}
+        issuer: Name,
+        locator: AuthorityInfoAccessSyntax
+    ) {
+        this.issuer = issuer;
+        this.locator = locator;
+    }
 
     /**
      * @summary Restructures an object into a ServiceLocator

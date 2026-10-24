@@ -42,54 +42,64 @@ import { RSAEncryptedContent, _decode_RSAEncryptedContent, _encode_RSAEncryptedC
  */
 export
 class KeyRspMsgContent {
+    /**
+     * @summary `sessionID`.
+     * @description
+     *
+     * Session identifier, 10 octets; same session
+     * as the KeyRequest (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sessionID: OCTET_STRING;
+    /**
+     * @summary `cASSCertificate`.
+     * @description
+     *
+     * CASS X.509 certificate, DER. The CAM extracts
+     * the CASS public key from this (§7.2, Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cASSCertificate: BIT_STRING;
+    /**
+     * @summary `rSAEncryptedContent`.
+     * @description
+     *
+     * RSA ciphertext of CHK, IHK, three RAND_AC
+     * values, and KPK, enciphered to the CAM
+     * (§7.2, Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rSAEncryptedContent: RSAEncryptedContent;
+    /**
+     * @summary `sIGN_kpk`.
+     * @description
+     *
+     * 128 octets named `SIGN-kpk` in Annex A. The
+     * Recommendation does not further specify its
+     * construction.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sIGN_kpk: OCTET_STRING;
+
     constructor (
-        /**
-         * @summary `sessionID`.
-         * @description
-         *
-         * Session identifier, 10 octets; same session
-         * as the KeyRequest (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sessionID: OCTET_STRING,
-        /**
-         * @summary `cASSCertificate`.
-         * @description
-         *
-         * CASS X.509 certificate, DER. The CAM extracts
-         * the CASS public key from this (§7.2, Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cASSCertificate: BIT_STRING,
-        /**
-         * @summary `rSAEncryptedContent`.
-         * @description
-         *
-         * RSA ciphertext of CHK, IHK, three RAND_AC
-         * values, and KPK, enciphered to the CAM
-         * (§7.2, Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly rSAEncryptedContent: RSAEncryptedContent,
-        /**
-         * @summary `sIGN_kpk`.
-         * @description
-         *
-         * 128 octets named `SIGN-kpk` in Annex A. The
-         * Recommendation does not further specify its
-         * construction.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sIGN_kpk: OCTET_STRING
-    ) {}
+        sessionID: OCTET_STRING,
+        cASSCertificate: BIT_STRING,
+        rSAEncryptedContent: RSAEncryptedContent,
+        sIGN_kpk: OCTET_STRING
+    ) {
+        this.sessionID = sessionID;
+        this.cASSCertificate = cASSCertificate;
+        this.rSAEncryptedContent = rSAEncryptedContent;
+        this.sIGN_kpk = sIGN_kpk;
+    }
 
     /**
      * @summary Restructures an object into a KeyRspMsgContent

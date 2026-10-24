@@ -42,36 +42,44 @@ import {
  *
  */
 export class AddRequest {
+  /**
+   * @summary `entry`.
+   * @description
+   *
+   * DN of the new entry. MUST NOT exist; parent MUST exist. No alias
+   * deref.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly entry: LDAPDN;
+  /**
+   * @summary `attributes`.
+   * @description
+   *
+   * Entry content plus optional RDN attributes. Each Attribute needs
+   * ≥1 value. Order not significant.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly attributes: AttributeList;
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  public readonly _unrecognizedExtensionsList: _Element[];
+
   constructor(
-    /**
-     * @summary `entry`.
-     * @description
-     *
-     * DN of the new entry. MUST NOT exist; parent MUST exist. No alias
-     * deref.
-     *
-     * @public
-     * @readonly
-     */
-    readonly entry: LDAPDN,
-    /**
-     * @summary `attributes`.
-     * @description
-     *
-     * Entry content plus optional RDN attributes. Each Attribute needs
-     * ≥1 value. Order not significant.
-     *
-     * @public
-     * @readonly
-     */
-    readonly attributes: AttributeList,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = []
-  ) {}
+    entry: LDAPDN,
+    attributes: AttributeList,
+    _unrecognizedExtensionsList: _Element[] = []
+  ) {
+    this.entry = entry;
+    this.attributes = attributes;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+  }
 
   /**
    * @summary Restructures an object into a AddRequest

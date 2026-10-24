@@ -38,35 +38,43 @@ import {
  *
  */
 export class ModifyRequest_changes_change {
+  /**
+   * @summary `operation`.
+   * @description
+   *
+   * `add`(0), `delete_`(1), `replace`(2). Extensible.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly operation: ModifyRequest_changes_change_operation;
+  /**
+   * @summary `modification`.
+   * @description
+   *
+   * Attribute type and optional values. Empty `vals` is meaningful
+   * for delete/replace.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly modification: PartialAttribute;
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  public readonly _unrecognizedExtensionsList: _Element[];
+
   constructor(
-    /**
-     * @summary `operation`.
-     * @description
-     *
-     * `add`(0), `delete_`(1), `replace`(2). Extensible.
-     *
-     * @public
-     * @readonly
-     */
-    readonly operation: ModifyRequest_changes_change_operation,
-    /**
-     * @summary `modification`.
-     * @description
-     *
-     * Attribute type and optional values. Empty `vals` is meaningful
-     * for delete/replace.
-     *
-     * @public
-     * @readonly
-     */
-    readonly modification: PartialAttribute,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = []
-  ) {}
+    operation: ModifyRequest_changes_change_operation,
+    modification: PartialAttribute,
+    _unrecognizedExtensionsList: _Element[] = []
+  ) {
+    this.operation = operation;
+    this.modification = modification;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+  }
 
   /**
    * @summary Restructures an object into a ModifyRequest_changes_change

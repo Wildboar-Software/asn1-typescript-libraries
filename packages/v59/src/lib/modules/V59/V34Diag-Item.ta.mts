@@ -60,261 +60,309 @@ import { CarrierFreq, _decode_CarrierFreq, _encode_CarrierFreq } from "../V59/Ca
  */
 export
 class V34Diag_Item {
+    /**
+     * @summary `modeV34`.
+     * @description
+     *
+     * V.34 duplex operating-mode capability. Table 5/V.59:
+     * `notSupported`(0), `default`(1) preferred, `enabled`(2),
+     * `disabled`(3) supported but off. Tag-ID `0C00`. ITU-T Rec. V.59
+     * (11/2000) §6.8.6.
+     * @public
+     * @readonly
+     */
+    public readonly modeV34: Capabilities;
+    /**
+     * @summary `iNFO0Tx`.
+     * @description
+     *
+     * INFO0 sequence transmitted. Hex `dataSequence` (§6.2.2): first bit in
+     * time is the LSB of each hex word; omit start/stop/fill bits and CRCs;
+     * `;` delimits N-bit words. Common Tag-ID `41`. ITU-T Rec. V.59
+     * (11/2000) §6.4.
+     * @public
+     * @readonly
+     */
+    public readonly iNFO0Tx: V59String;
+    /**
+     * @summary `iNFO0Rx`.
+     * @description
+     *
+     * INFO0 sequence received. Hex `dataSequence` (§6.2.2): first bit in
+     * time is the LSB of each hex word; omit start/stop/fill bits and CRCs;
+     * `;` delimits N-bit words. Common Tag-ID `42`. ITU-T Rec. V.59
+     * (11/2000) §6.4.
+     * @public
+     * @readonly
+     */
+    public readonly iNFO0Rx: V59String;
+    /**
+     * @summary `iNFO1c`.
+     * @description
+     *
+     * INFO1c sequence transmitted or received. Hex `dataSequence` (§6.2.2):
+     * first bit in time is the LSB of each hex word; omit start/stop/fill
+     * bits and CRCs; `;` delimits N-bit words. Tag-ID `0C01`. ITU-T Rec.
+     * V.59 (11/2000) §6.8.6.
+     * @public
+     * @readonly
+     */
+    public readonly iNFO1c: V59String;
+    /**
+     * @summary `iNFO1a`.
+     * @description
+     *
+     * INFO1a sequence transmitted or received. Hex `dataSequence` (§6.2.2):
+     * first bit in time is the LSB of each hex word; omit start/stop/fill
+     * bits and CRCs; `;` delimits N-bit words. Tag-ID `0C02`. ITU-T Rec.
+     * V.59 (11/2000) §6.8.6.
+     * @public
+     * @readonly
+     */
+    public readonly iNFO1a: V59String;
+    /**
+     * @summary `mPTx`.
+     * @description
+     *
+     * MP sequence transmitted. Type-1 precoder coefficients are not
+     * included. Hex `dataSequence` (§6.2.2): first bit in time is the LSB
+     * of each hex word; omit start/stop/fill bits and CRCs; `;` delimits
+     * N-bit words. Tag-ID `0C03`. ITU-T Rec. V.59 (11/2000) §6.8.6.
+     * @public
+     * @readonly
+     */
+    public readonly mPTx: V59String;
+    /**
+     * @summary `mPRx`.
+     * @description
+     *
+     * MP sequence received. Type-1 precoder coefficients are not included.
+     * Hex `dataSequence` (§6.2.2): first bit in time is the LSB of each hex
+     * word; omit start/stop/fill bits and CRCs; `;` delimits N-bit words.
+     * Tag-ID `0C04`. ITU-T Rec. V.59 (11/2000) §6.8.6.
+     * @public
+     * @readonly
+     */
+    public readonly mPRx: V59String;
+    /**
+     * @summary `precodeCoeffTx`.
+     * @description
+     *
+     * Transmitter precoder coefficients, taken out of a type-1 MP sequence
+     * as real/imaginary hex pairs: `h(1);h(2);h(3)` with commas inside each
+     * pair. 16-bit coefficients. Hex `dataSequence` (§6.2.2): first bit in
+     * time is the LSB of each hex word; omit start/stop/fill bits and CRCs;
+     * `;` delimits N-bit words. Tag-ID `43`. ITU-T Rec. V.59 (11/2000)
+     * §6.4.
+     * @public
+     * @readonly
+     */
+    public readonly precodeCoeffTx: OPTIONAL<V59String>;
+    /**
+     * @summary `precodeCoeffRx`.
+     * @description
+     *
+     * Receiver precoder coefficients; same format as `precodeCoeffTx`.
+     * Tag-ID `44`. ITU-T Rec. V.59 (11/2000) §6.4.
+     * @public
+     * @readonly
+     */
+    public readonly precodeCoeffRx: OPTIONAL<V59String>;
+    /**
+     * @summary `v34TxLevel`.
+     * @description
+     *
+     * V.34 transmit power (`TxPowerLevel`). ITU-T Rec. V.59 (11/2000)
+     * §6.8.6.
+     * @public
+     * @readonly
+     */
+    public readonly v34TxLevel: TxPowerLevel;
+    /**
+     * @summary `txSymbolRate`.
+     * @description
+     *
+     * Transmitter symbol rate (Table 1/V.59). `sR8000` = PCM. Tag-ID `48`.
+     * ITU-T Rec. V.59 (11/2000) §6.4.
+     * @public
+     * @readonly
+     */
+    public readonly txSymbolRate: OPTIONAL<SymbolRate>;
+    /**
+     * @summary `rxSymbolRate`.
+     * @description
+     *
+     * Receiver symbol rate (Table 1/V.59). `sR8000` = PCM. Tag-ID `49`.
+     * ITU-T Rec. V.59 (11/2000) §6.4.
+     * @public
+     * @readonly
+     */
+    public readonly rxSymbolRate: OPTIONAL<SymbolRate>;
+    /**
+     * @summary `txCarrierFreq`.
+     * @description
+     *
+     * Transmitter carrier frequency matching the symbol rate (Table
+     * 2/V.59). Tag-ID `4A`. ITU-T Rec. V.59 (11/2000) §6.4.
+     * @public
+     * @readonly
+     */
+    public readonly txCarrierFreq: OPTIONAL<CarrierFreq>;
+    /**
+     * @summary `rxCarrierFreq`.
+     * @description
+     *
+     * Receiver carrier frequency matching the receive symbol rate (Table
+     * 2/V.59). Tag-ID `4B`. ITU-T Rec. V.59 (11/2000) §6.4.
+     * @public
+     * @readonly
+     */
+    public readonly rxCarrierFreq: OPTIONAL<CarrierFreq>;
+    /**
+     * @summary `txDataHistory`.
+     * @description
+     *
+     * Transmitter primary data rates used. Example:
+     * `45333;44000;33333;33600`. IA5 `simpleText` (§6.2.1). History lists
+     * oldest event first, most recent last (§6.2.6). Tag-ID `4C`. ITU-T
+     * Rec. V.59 (11/2000) §6.4.
+     * @public
+     * @readonly
+     */
+    public readonly txDataHistory: V59String;
+    /**
+     * @summary `rxDataHistory`.
+     * @description
+     *
+     * Receiver primary data rates used (same format as `txDataHistory`).
+     * History lists oldest event first, most recent last (§6.2.6). Tag-ID
+     * `4D`. ITU-T Rec. V.59 (11/2000) §6.4.
+     * @public
+     * @readonly
+     */
+    public readonly rxDataHistory: V59String;
+    /**
+     * @summary `rxLevelEstimate`.
+     * @description
+     *
+     * Receive power at the modem input, with units (e.g. `-25dBm0`). May
+     * differ from a measurement at the line interface. IA5 `simpleText`
+     * (§6.2.1). Tag-ID `4E`. ITU-T Rec. V.59 (11/2000) §6.4.
+     * @public
+     * @readonly
+     */
+    public readonly rxLevelEstimate?: OPTIONAL<V59String>;
+    /**
+     * @summary `noiseEstimate`.
+     * @description
+     *
+     * Noise level with units (e.g. `-55dBm`, `35dBrn`). IA5 `simpleText`
+     * (§6.2.1). Tag-ID `4F`. ITU-T Rec. V.59 (11/2000) §6.4.
+     * @public
+     * @readonly
+     */
+    public readonly noiseEstimate?: OPTIONAL<V59String>;
+    /**
+     * @summary `rxSignalQuality`.
+     * @description
+     *
+     * Receiver signal quality at start and, if available, near end of call.
+     * Fractional form 1.0 best / 0.0 worst (e.g. `0.445;0.312`), or a
+     * proprietary integer as text. IA5 `simpleText` (§6.2.1). Tag-ID `50`.
+     * ITU-T Rec. V.59 (11/2000) §6.4.
+     * @public
+     * @readonly
+     */
+    public readonly rxSignalQuality?: OPTIONAL<V59String>;
+    /**
+     * @summary `nearEchoEstimate`.
+     * @description
+     *
+     * Near-end echo at start and, if available, end of call. Units in the
+     * string; omitted units mean a custom scale. IA5 `simpleText` (§6.2.1).
+     * Tag-ID `51`. ITU-T Rec. V.59 (11/2000) §6.4.
+     * @public
+     * @readonly
+     */
+    public readonly nearEchoEstimate?: OPTIONAL<V59String>;
+    /**
+     * @summary `farEchoEstimate`.
+     * @description
+     *
+     * Far-end echo at start and, if available, end of call. Units in the
+     * string; omitted units mean a custom scale. IA5 `simpleText` (§6.2.1).
+     * Tag-ID `52`. ITU-T Rec. V.59 (11/2000) §6.4.
+     * @public
+     * @readonly
+     */
+    public readonly farEchoEstimate?: OPTIONAL<V59String>;
+    /**
+     * @summary `roundTripDelay`.
+     * @description
+     *
+     * Round-trip delay with units (`25ms`, `0.025s`, or `166T` where T is
+     * symbol periods). IA5 `simpleText` (§6.2.1). Tag-ID `53`. ITU-T Rec.
+     * V.59 (11/2000) §6.4.
+     * @public
+     * @readonly
+     */
+    public readonly roundTripDelay?: OPTIONAL<V59String>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `modeV34`.
-         * @description
-         *
-         * V.34 duplex operating-mode capability. Table 5/V.59:
-         * `notSupported`(0), `default`(1) preferred, `enabled`(2),
-         * `disabled`(3) supported but off. Tag-ID `0C00`. ITU-T Rec. V.59
-         * (11/2000) §6.8.6.
-         * @public
-         * @readonly
-         */
-        readonly modeV34: Capabilities,
-        /**
-         * @summary `iNFO0Tx`.
-         * @description
-         *
-         * INFO0 sequence transmitted. Hex `dataSequence` (§6.2.2): first bit in
-         * time is the LSB of each hex word; omit start/stop/fill bits and CRCs;
-         * `;` delimits N-bit words. Common Tag-ID `41`. ITU-T Rec. V.59
-         * (11/2000) §6.4.
-         * @public
-         * @readonly
-         */
-        readonly iNFO0Tx: V59String,
-        /**
-         * @summary `iNFO0Rx`.
-         * @description
-         *
-         * INFO0 sequence received. Hex `dataSequence` (§6.2.2): first bit in
-         * time is the LSB of each hex word; omit start/stop/fill bits and CRCs;
-         * `;` delimits N-bit words. Common Tag-ID `42`. ITU-T Rec. V.59
-         * (11/2000) §6.4.
-         * @public
-         * @readonly
-         */
-        readonly iNFO0Rx: V59String,
-        /**
-         * @summary `iNFO1c`.
-         * @description
-         *
-         * INFO1c sequence transmitted or received. Hex `dataSequence` (§6.2.2):
-         * first bit in time is the LSB of each hex word; omit start/stop/fill
-         * bits and CRCs; `;` delimits N-bit words. Tag-ID `0C01`. ITU-T Rec.
-         * V.59 (11/2000) §6.8.6.
-         * @public
-         * @readonly
-         */
-        readonly iNFO1c: V59String,
-        /**
-         * @summary `iNFO1a`.
-         * @description
-         *
-         * INFO1a sequence transmitted or received. Hex `dataSequence` (§6.2.2):
-         * first bit in time is the LSB of each hex word; omit start/stop/fill
-         * bits and CRCs; `;` delimits N-bit words. Tag-ID `0C02`. ITU-T Rec.
-         * V.59 (11/2000) §6.8.6.
-         * @public
-         * @readonly
-         */
-        readonly iNFO1a: V59String,
-        /**
-         * @summary `mPTx`.
-         * @description
-         *
-         * MP sequence transmitted. Type-1 precoder coefficients are not
-         * included. Hex `dataSequence` (§6.2.2): first bit in time is the LSB
-         * of each hex word; omit start/stop/fill bits and CRCs; `;` delimits
-         * N-bit words. Tag-ID `0C03`. ITU-T Rec. V.59 (11/2000) §6.8.6.
-         * @public
-         * @readonly
-         */
-        readonly mPTx: V59String,
-        /**
-         * @summary `mPRx`.
-         * @description
-         *
-         * MP sequence received. Type-1 precoder coefficients are not included.
-         * Hex `dataSequence` (§6.2.2): first bit in time is the LSB of each hex
-         * word; omit start/stop/fill bits and CRCs; `;` delimits N-bit words.
-         * Tag-ID `0C04`. ITU-T Rec. V.59 (11/2000) §6.8.6.
-         * @public
-         * @readonly
-         */
-        readonly mPRx: V59String,
-        /**
-         * @summary `precodeCoeffTx`.
-         * @description
-         *
-         * Transmitter precoder coefficients, taken out of a type-1 MP sequence
-         * as real/imaginary hex pairs: `h(1);h(2);h(3)` with commas inside each
-         * pair. 16-bit coefficients. Hex `dataSequence` (§6.2.2): first bit in
-         * time is the LSB of each hex word; omit start/stop/fill bits and CRCs;
-         * `;` delimits N-bit words. Tag-ID `43`. ITU-T Rec. V.59 (11/2000)
-         * §6.4.
-         * @public
-         * @readonly
-         */
-        readonly precodeCoeffTx: OPTIONAL<V59String>,
-        /**
-         * @summary `precodeCoeffRx`.
-         * @description
-         *
-         * Receiver precoder coefficients; same format as `precodeCoeffTx`.
-         * Tag-ID `44`. ITU-T Rec. V.59 (11/2000) §6.4.
-         * @public
-         * @readonly
-         */
-        readonly precodeCoeffRx: OPTIONAL<V59String>,
-        /**
-         * @summary `v34TxLevel`.
-         * @description
-         *
-         * V.34 transmit power (`TxPowerLevel`). ITU-T Rec. V.59 (11/2000)
-         * §6.8.6.
-         * @public
-         * @readonly
-         */
-        readonly v34TxLevel: TxPowerLevel,
-        /**
-         * @summary `txSymbolRate`.
-         * @description
-         *
-         * Transmitter symbol rate (Table 1/V.59). `sR8000` = PCM. Tag-ID `48`.
-         * ITU-T Rec. V.59 (11/2000) §6.4.
-         * @public
-         * @readonly
-         */
-        readonly txSymbolRate: OPTIONAL<SymbolRate>,
-        /**
-         * @summary `rxSymbolRate`.
-         * @description
-         *
-         * Receiver symbol rate (Table 1/V.59). `sR8000` = PCM. Tag-ID `49`.
-         * ITU-T Rec. V.59 (11/2000) §6.4.
-         * @public
-         * @readonly
-         */
-        readonly rxSymbolRate: OPTIONAL<SymbolRate>,
-        /**
-         * @summary `txCarrierFreq`.
-         * @description
-         *
-         * Transmitter carrier frequency matching the symbol rate (Table
-         * 2/V.59). Tag-ID `4A`. ITU-T Rec. V.59 (11/2000) §6.4.
-         * @public
-         * @readonly
-         */
-        readonly txCarrierFreq: OPTIONAL<CarrierFreq>,
-        /**
-         * @summary `rxCarrierFreq`.
-         * @description
-         *
-         * Receiver carrier frequency matching the receive symbol rate (Table
-         * 2/V.59). Tag-ID `4B`. ITU-T Rec. V.59 (11/2000) §6.4.
-         * @public
-         * @readonly
-         */
-        readonly rxCarrierFreq: OPTIONAL<CarrierFreq>,
-        /**
-         * @summary `txDataHistory`.
-         * @description
-         *
-         * Transmitter primary data rates used. Example:
-         * `45333;44000;33333;33600`. IA5 `simpleText` (§6.2.1). History lists
-         * oldest event first, most recent last (§6.2.6). Tag-ID `4C`. ITU-T
-         * Rec. V.59 (11/2000) §6.4.
-         * @public
-         * @readonly
-         */
-        readonly txDataHistory: V59String,
-        /**
-         * @summary `rxDataHistory`.
-         * @description
-         *
-         * Receiver primary data rates used (same format as `txDataHistory`).
-         * History lists oldest event first, most recent last (§6.2.6). Tag-ID
-         * `4D`. ITU-T Rec. V.59 (11/2000) §6.4.
-         * @public
-         * @readonly
-         */
-        readonly rxDataHistory: V59String,
-        /**
-         * @summary `rxLevelEstimate`.
-         * @description
-         *
-         * Receive power at the modem input, with units (e.g. `-25dBm0`). May
-         * differ from a measurement at the line interface. IA5 `simpleText`
-         * (§6.2.1). Tag-ID `4E`. ITU-T Rec. V.59 (11/2000) §6.4.
-         * @public
-         * @readonly
-         */
-        readonly rxLevelEstimate?: OPTIONAL<V59String>,
-        /**
-         * @summary `noiseEstimate`.
-         * @description
-         *
-         * Noise level with units (e.g. `-55dBm`, `35dBrn`). IA5 `simpleText`
-         * (§6.2.1). Tag-ID `4F`. ITU-T Rec. V.59 (11/2000) §6.4.
-         * @public
-         * @readonly
-         */
-        readonly noiseEstimate?: OPTIONAL<V59String>,
-        /**
-         * @summary `rxSignalQuality`.
-         * @description
-         *
-         * Receiver signal quality at start and, if available, near end of call.
-         * Fractional form 1.0 best / 0.0 worst (e.g. `0.445;0.312`), or a
-         * proprietary integer as text. IA5 `simpleText` (§6.2.1). Tag-ID `50`.
-         * ITU-T Rec. V.59 (11/2000) §6.4.
-         * @public
-         * @readonly
-         */
-        readonly rxSignalQuality?: OPTIONAL<V59String>,
-        /**
-         * @summary `nearEchoEstimate`.
-         * @description
-         *
-         * Near-end echo at start and, if available, end of call. Units in the
-         * string; omitted units mean a custom scale. IA5 `simpleText` (§6.2.1).
-         * Tag-ID `51`. ITU-T Rec. V.59 (11/2000) §6.4.
-         * @public
-         * @readonly
-         */
-        readonly nearEchoEstimate?: OPTIONAL<V59String>,
-        /**
-         * @summary `farEchoEstimate`.
-         * @description
-         *
-         * Far-end echo at start and, if available, end of call. Units in the
-         * string; omitted units mean a custom scale. IA5 `simpleText` (§6.2.1).
-         * Tag-ID `52`. ITU-T Rec. V.59 (11/2000) §6.4.
-         * @public
-         * @readonly
-         */
-        readonly farEchoEstimate?: OPTIONAL<V59String>,
-        /**
-         * @summary `roundTripDelay`.
-         * @description
-         *
-         * Round-trip delay with units (`25ms`, `0.025s`, or `166T` where T is
-         * symbol periods). IA5 `simpleText` (§6.2.1). Tag-ID `53`. ITU-T Rec.
-         * V.59 (11/2000) §6.4.
-         * @public
-         * @readonly
-         */
-        readonly roundTripDelay?: OPTIONAL<V59String>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        modeV34: Capabilities,
+        iNFO0Tx: V59String,
+        iNFO0Rx: V59String,
+        iNFO1c: V59String,
+        iNFO1a: V59String,
+        mPTx: V59String,
+        mPRx: V59String,
+        precodeCoeffTx: OPTIONAL<V59String>,
+        precodeCoeffRx: OPTIONAL<V59String>,
+        v34TxLevel: TxPowerLevel,
+        txSymbolRate: OPTIONAL<SymbolRate>,
+        rxSymbolRate: OPTIONAL<SymbolRate>,
+        txCarrierFreq: OPTIONAL<CarrierFreq>,
+        rxCarrierFreq: OPTIONAL<CarrierFreq>,
+        txDataHistory: V59String,
+        rxDataHistory: V59String,
+        rxLevelEstimate?: OPTIONAL<V59String>,
+        noiseEstimate?: OPTIONAL<V59String>,
+        rxSignalQuality?: OPTIONAL<V59String>,
+        nearEchoEstimate?: OPTIONAL<V59String>,
+        farEchoEstimate?: OPTIONAL<V59String>,
+        roundTripDelay?: OPTIONAL<V59String>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.modeV34 = modeV34;
+        this.iNFO0Tx = iNFO0Tx;
+        this.iNFO0Rx = iNFO0Rx;
+        this.iNFO1c = iNFO1c;
+        this.iNFO1a = iNFO1a;
+        this.mPTx = mPTx;
+        this.mPRx = mPRx;
+        this.precodeCoeffTx = precodeCoeffTx;
+        this.precodeCoeffRx = precodeCoeffRx;
+        this.v34TxLevel = v34TxLevel;
+        this.txSymbolRate = txSymbolRate;
+        this.rxSymbolRate = rxSymbolRate;
+        this.txCarrierFreq = txCarrierFreq;
+        this.rxCarrierFreq = rxCarrierFreq;
+        this.txDataHistory = txDataHistory;
+        this.rxDataHistory = rxDataHistory;
+        this.rxLevelEstimate = rxLevelEstimate;
+        this.noiseEstimate = noiseEstimate;
+        this.rxSignalQuality = rxSignalQuality;
+        this.nearEchoEstimate = nearEchoEstimate;
+        this.farEchoEstimate = farEchoEstimate;
+        this.roundTripDelay = roundTripDelay;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a V34Diag_Item

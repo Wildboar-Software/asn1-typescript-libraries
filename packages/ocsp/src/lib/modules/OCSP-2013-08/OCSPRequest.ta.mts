@@ -40,34 +40,40 @@ import {
  *
  */
 export class OCSPRequest {
+    /**
+     * @summary `tbsRequest`.
+     * @description
+     *
+     * Optionally signed OCSP request body
+     * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly tbsRequest: TBSRequest;
+    /**
+     * @summary `optionalSignature`.
+     * @description
+     *
+     * Optional request signature: algorithm identifier and
+     * parameters in `signatureAlgorithm`, signature value in
+     * `signature`, and optionally certificates the server needs
+     * to verify the signed request (normally up to but not
+     * including the client's root certificate)
+     * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly optionalSignature?: OPTIONAL<Signature>;
+
     constructor(
-        /**
-         * @summary `tbsRequest`.
-         * @description
-         *
-         * Optionally signed OCSP request body
-         * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly tbsRequest: TBSRequest,
-        /**
-         * @summary `optionalSignature`.
-         * @description
-         *
-         * Optional request signature: algorithm identifier and
-         * parameters in `signatureAlgorithm`, signature value in
-         * `signature`, and optionally certificates the server needs
-         * to verify the signed request (normally up to but not
-         * including the client's root certificate)
-         * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly optionalSignature?: OPTIONAL<Signature>
-    ) {}
+        tbsRequest: TBSRequest,
+        optionalSignature?: OPTIONAL<Signature>
+    ) {
+        this.tbsRequest = tbsRequest;
+        this.optionalSignature = optionalSignature;
+    }
 
     /**
      * @summary Restructures an object into a OCSPRequest

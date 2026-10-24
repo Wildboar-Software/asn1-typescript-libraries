@@ -51,31 +51,37 @@ import { InformationData, _decode_InformationData, _encode_InformationData } fro
  */
 export
 class CommunicationsInformation {
+    /**
+     * @summary `informationType`.
+     * @description
+     *
+     * Kind of communications information. Required.
+     * GDMO MATCHES FOR EQUALITY. X.723 §9.10, §12.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly informationType: InformationType;
+    /**
+     * @summary `informationData`.
+     * @description
+     *
+     * Optional payload. Present in the corresponding
+     * log record iff present in the event report.
+     * X.723 §9.9, §7.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly informationData?: OPTIONAL<InformationData>;
+
     constructor (
-        /**
-         * @summary `informationType`.
-         * @description
-         *
-         * Kind of communications information. Required.
-         * GDMO MATCHES FOR EQUALITY. X.723 §9.10, §12.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly informationType: InformationType,
-        /**
-         * @summary `informationData`.
-         * @description
-         *
-         * Optional payload. Present in the corresponding
-         * log record iff present in the event report.
-         * X.723 §9.9, §7.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly informationData?: OPTIONAL<InformationData>
-    ) {}
+        informationType: InformationType,
+        informationData?: OPTIONAL<InformationData>
+    ) {
+        this.informationType = informationType;
+        this.informationData = informationData;
+    }
 
     /**
      * @summary Restructures an object into a CommunicationsInformation

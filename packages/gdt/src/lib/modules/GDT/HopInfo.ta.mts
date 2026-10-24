@@ -27,26 +27,34 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class HopInfo {
+    /**
+     * @summary `current_hop`.
+     * @public
+     * @readonly
+     */
+    public readonly current_hop: INTEGER;
+    /**
+     * @summary `max_hops`.
+     * @public
+     * @readonly
+     */
+    public readonly max_hops: INTEGER;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `current_hop`.
-         * @public
-         * @readonly
-         */
-        readonly current_hop: INTEGER,
-        /**
-         * @summary `max_hops`.
-         * @public
-         * @readonly
-         */
-        readonly max_hops: INTEGER,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        current_hop: INTEGER,
+        max_hops: INTEGER,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.current_hop = current_hop;
+        this.max_hops = max_hops;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a HopInfo

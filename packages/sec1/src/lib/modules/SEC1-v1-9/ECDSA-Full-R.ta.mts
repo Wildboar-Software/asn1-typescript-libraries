@@ -32,28 +32,34 @@ import { ECPoint, _decode_ECPoint, _encode_ECPoint } from "../SEC1-v1-9/ECPoint.
  */
 export
 class ECDSA_Full_R {
+    /**
+     * @summary `r`.
+     * @description
+     *
+     * Ephemeral public point R itself, not `x_R mod n`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly r: ECPoint;
+    /**
+     * @summary `s`.
+     * @description
+     *
+     * The ECDSA `s` integer. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §4.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly s: INTEGER;
+
     constructor (
-        /**
-         * @summary `r`.
-         * @description
-         *
-         * Ephemeral public point R itself, not `x_R mod n`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly r: ECPoint,
-        /**
-         * @summary `s`.
-         * @description
-         *
-         * The ECDSA `s` integer. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §4.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly s: INTEGER
-    ) {}
+        r: ECPoint,
+        s: INTEGER
+    ) {
+        this.r = r;
+        this.s = s;
+    }
 
     /**
      * @summary Restructures an object into a ECDSA_Full_R

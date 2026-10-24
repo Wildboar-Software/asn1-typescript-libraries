@@ -33,21 +33,25 @@ import { SecurityLevelofPrivilege_bioSecLevel, _decode_SecurityLevelofPrivilege_
  */
 export
 class SecurityLevelofPrivilege {
+    /**
+     * @summary `bioSecLevel`.
+     * @description
+     *
+     * Identifies the biometric-authentication result
+     * security level: an X.520 unique identifier of the
+     * biometric parameter info, or a simple integer assigned
+     * by the AC issuer. X.1089 §11.5.2–11.5.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly bioSecLevel: SecurityLevelofPrivilege_bioSecLevel;
+
     constructor (
-        /**
-         * @summary `bioSecLevel`.
-         * @description
-         *
-         * Identifies the biometric-authentication result
-         * security level: an X.520 unique identifier of the
-         * biometric parameter info, or a simple integer assigned
-         * by the AC issuer. X.1089 §11.5.2–11.5.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly bioSecLevel: SecurityLevelofPrivilege_bioSecLevel
-    ) {}
+        bioSecLevel: SecurityLevelofPrivilege_bioSecLevel
+    ) {
+        this.bioSecLevel = bioSecLevel;
+    }
 
     /**
      * @summary Restructures an object into a SecurityLevelofPrivilege

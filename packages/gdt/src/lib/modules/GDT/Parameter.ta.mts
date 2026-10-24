@@ -27,26 +27,34 @@ import { _decode_ParameterType, _encode_ParameterType, ParameterType } from "../
  */
 export
 class Parameter {
+    /**
+     * @summary `id`.
+     * @public
+     * @readonly
+     */
+    public readonly id: ParameterType;
+    /**
+     * @summary `value`.
+     * @public
+     * @readonly
+     */
+    public readonly value?: OPTIONAL<OCTET_STRING[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `id`.
-         * @public
-         * @readonly
-         */
-        readonly id: ParameterType,
-        /**
-         * @summary `value`.
-         * @public
-         * @readonly
-         */
-        readonly value?: OPTIONAL<OCTET_STRING[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        id: ParameterType,
+        value?: OPTIONAL<OCTET_STRING[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.id = id;
+        this.value = value;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Parameter

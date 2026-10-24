@@ -52,59 +52,71 @@ import {
  *
  */
 export class RevAnnContent {
+  /**
+   * @summary `status`.
+   * @description
+   *
+   * `PKIStatus` for the announcement (typically
+   * `revocationWarning` or `revocationNotification`)
+   * ([RFC 4210 §5.3.15](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.15), [RFC 4210 §5.2.3](https://datatracker.ietf.org/doc/html/rfc4210#section-5.2.3)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly status: PKIStatus;
+  /**
+   * @summary `certId`.
+   * @description
+   *
+   * Identifier of the certificate being (or about to be) revoked
+   * ([RFC 4210 §5.3.15](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.15)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly certId: CertId;
+  /**
+   * @summary `willBeRevokedAt`.
+   * @description
+   *
+   * Time at which a new entry will be added to the relevant CRLs
+   * ([RFC 4210 §5.3.15](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.15)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly willBeRevokedAt: GeneralizedTime;
+  /**
+   * @summary `badSinceDate`.
+   * @public
+   * @readonly
+   */
+  public readonly badSinceDate: GeneralizedTime;
+  /**
+   * @summary `crlDetails`.
+   * @description
+   *
+   * Optional extra CRL details (e.g., CRL number, reason, location)
+   * (`Extensions`) ([RFC 4210 §5.3.15](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.15) / ASN.1 comments).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly crlDetails?: OPTIONAL<Extensions>;
+
   constructor(
-    /**
-     * @summary `status`.
-     * @description
-     *
-     * `PKIStatus` for the announcement (typically
-     * `revocationWarning` or `revocationNotification`)
-     * ([RFC 4210 §5.3.15](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.15), [RFC 4210 §5.2.3](https://datatracker.ietf.org/doc/html/rfc4210#section-5.2.3)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly status: PKIStatus,
-    /**
-     * @summary `certId`.
-     * @description
-     *
-     * Identifier of the certificate being (or about to be) revoked
-     * ([RFC 4210 §5.3.15](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.15)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly certId: CertId,
-    /**
-     * @summary `willBeRevokedAt`.
-     * @description
-     *
-     * Time at which a new entry will be added to the relevant CRLs
-     * ([RFC 4210 §5.3.15](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.15)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly willBeRevokedAt: GeneralizedTime,
-    /**
-     * @summary `badSinceDate`.
-     * @public
-     * @readonly
-     */
-    readonly badSinceDate: GeneralizedTime,
-    /**
-     * @summary `crlDetails`.
-     * @description
-     *
-     * Optional extra CRL details (e.g., CRL number, reason, location)
-     * (`Extensions`) ([RFC 4210 §5.3.15](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.15) / ASN.1 comments).
-     *
-     * @public
-     * @readonly
-     */
-    readonly crlDetails?: OPTIONAL<Extensions>
-  ) {}
+    status: PKIStatus,
+    certId: CertId,
+    willBeRevokedAt: GeneralizedTime,
+    badSinceDate: GeneralizedTime,
+    crlDetails?: OPTIONAL<Extensions>
+  ) {
+    this.status = status;
+    this.certId = certId;
+    this.willBeRevokedAt = willBeRevokedAt;
+    this.badSinceDate = badSinceDate;
+    this.crlDetails = crlDetails;
+  }
 
   /**
    * @summary Restructures an object into a RevAnnContent

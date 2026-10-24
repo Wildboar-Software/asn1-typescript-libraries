@@ -40,50 +40,60 @@ import {
  *
  */
 export class UpdateInformationData {
+    /**
+     * @summary `sPIFVersionNumber`.
+     * @description
+     *
+     * Distinguishes versions of SPIF information for the
+     * policy named in `securityPolicyIdData`. X.841 §6.2.2.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sPIFVersionNumber: SPIFVersionNumber;
+    /**
+     * @summary `creationDate`.
+     * @description
+     *
+     * When this SPIF was generated. X.841 §6.2.2.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly creationDate: GeneralizedTime;
+    /**
+     * @summary `originatorDistinguishedName`.
+     * @description
+     *
+     * Distinguished name of the SPIF signer. X.841 §6.2.2.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly originatorDistinguishedName: Name;
+    /**
+     * @summary `keyIdentifier`.
+     * @description
+     *
+     * Identifies the key used to sign the SPIF. X.841
+     * §6.2.2.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly keyIdentifier?: OPTIONAL<OCTET_STRING>;
+
     constructor(
-        /**
-         * @summary `sPIFVersionNumber`.
-         * @description
-         *
-         * Distinguishes versions of SPIF information for the
-         * policy named in `securityPolicyIdData`. X.841 §6.2.2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sPIFVersionNumber: SPIFVersionNumber,
-        /**
-         * @summary `creationDate`.
-         * @description
-         *
-         * When this SPIF was generated. X.841 §6.2.2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly creationDate: GeneralizedTime,
-        /**
-         * @summary `originatorDistinguishedName`.
-         * @description
-         *
-         * Distinguished name of the SPIF signer. X.841 §6.2.2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly originatorDistinguishedName: Name,
-        /**
-         * @summary `keyIdentifier`.
-         * @description
-         *
-         * Identifies the key used to sign the SPIF. X.841
-         * §6.2.2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly keyIdentifier?: OPTIONAL<OCTET_STRING>
-    ) {}
+        sPIFVersionNumber: SPIFVersionNumber,
+        creationDate: GeneralizedTime,
+        originatorDistinguishedName: Name,
+        keyIdentifier?: OPTIONAL<OCTET_STRING>
+    ) {
+        this.sPIFVersionNumber = sPIFVersionNumber;
+        this.creationDate = creationDate;
+        this.originatorDistinguishedName = originatorDistinguishedName;
+        this.keyIdentifier = keyIdentifier;
+    }
 
     /**
      * @summary Restructures an object into a UpdateInformationData

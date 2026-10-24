@@ -42,29 +42,35 @@ import {
  *
  */
 export class F_READ_ATTRIB_request {
+  /**
+   * @summary `attribute_names`.
+   * @description
+   *
+   * Which kernel or negotiated-group attributes to read. Does not
+   * set activity attributes. ISO 8571-3:1988 §16.1.2.2.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly attribute_names: Attribute_Names;
+  /**
+   * @summary `attribute_extension_names`.
+   * @description
+   *
+   * Absent from ISO 8571:1988 Parts 1–4.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly attribute_extension_names?: OPTIONAL<Attribute_Extension_Names>;
+
   constructor(
-    /**
-     * @summary `attribute_names`.
-     * @description
-     *
-     * Which kernel or negotiated-group attributes to read. Does not
-     * set activity attributes. ISO 8571-3:1988 §16.1.2.2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly attribute_names: Attribute_Names,
-    /**
-     * @summary `attribute_extension_names`.
-     * @description
-     *
-     * Absent from ISO 8571:1988 Parts 1–4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly attribute_extension_names?: OPTIONAL<Attribute_Extension_Names>
-  ) {}
+    attribute_names: Attribute_Names,
+    attribute_extension_names?: OPTIONAL<Attribute_Extension_Names>
+  ) {
+    this.attribute_names = attribute_names;
+    this.attribute_extension_names = attribute_extension_names;
+  }
 
   /**
    * @summary Restructures an object into a F_READ_ATTRIB_request

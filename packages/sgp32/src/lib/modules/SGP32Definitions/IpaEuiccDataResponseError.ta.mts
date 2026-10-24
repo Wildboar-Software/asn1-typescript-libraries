@@ -31,26 +31,32 @@ import { IpaEuiccDataErrorCode, _decode_IpaEuiccDataErrorCode, _encode_IpaEuiccD
  */
 export
 class IpaEuiccDataResponseError {
+    /**
+     * @summary `eimTransactionId`.
+     * @description
+     * Copied from the request when the request included it. SGP.32 v1.2, section
+     * 2.11.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly eimTransactionId: OPTIONAL<TransactionId>;
+    /**
+     * @summary `ipaEuiccDataErrorCode`.
+     * @description
+     * Reason the IPA stopped. `ecallActive` is required when the Emergency Profile
+     * is enabled. SGP.32 v1.2, section 2.11.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly ipaEuiccDataErrorCode: IpaEuiccDataErrorCode;
+
     constructor (
-        /**
-         * @summary `eimTransactionId`.
-         * @description
-         * Copied from the request when the request included it. SGP.32 v1.2, section
-         * 2.11.2.2.
-         * @public
-         * @readonly
-         */
-        readonly eimTransactionId: OPTIONAL<TransactionId>,
-        /**
-         * @summary `ipaEuiccDataErrorCode`.
-         * @description
-         * Reason the IPA stopped. `ecallActive` is required when the Emergency Profile
-         * is enabled. SGP.32 v1.2, section 2.11.2.2.
-         * @public
-         * @readonly
-         */
-        readonly ipaEuiccDataErrorCode: IpaEuiccDataErrorCode
-    ) {}
+        eimTransactionId: OPTIONAL<TransactionId>,
+        ipaEuiccDataErrorCode: IpaEuiccDataErrorCode
+    ) {
+        this.eimTransactionId = eimTransactionId;
+        this.ipaEuiccDataErrorCode = ipaEuiccDataErrorCode;
+    }
 
     /**
      * @summary Restructures an object into a IpaEuiccDataResponseError

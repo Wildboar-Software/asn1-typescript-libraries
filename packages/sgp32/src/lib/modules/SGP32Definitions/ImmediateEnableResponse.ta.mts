@@ -34,17 +34,21 @@ import { _decode_ImmediateEnableResponse_immediateEnableResult, _encode_Immediat
  */
 export
 class ImmediateEnableResponse {
+    /**
+     * @summary `immediateEnableResult`.
+     * @description
+     * Outcome of ES10b.ImmediateEnable. See the named codes. SGP.32 v1.2, section
+     * 5.9.15.
+     * @public
+     * @readonly
+     */
+    public readonly immediateEnableResult: ImmediateEnableResponse_immediateEnableResult;
+
     constructor (
-        /**
-         * @summary `immediateEnableResult`.
-         * @description
-         * Outcome of ES10b.ImmediateEnable. See the named codes. SGP.32 v1.2, section
-         * 5.9.15.
-         * @public
-         * @readonly
-         */
-        readonly immediateEnableResult: ImmediateEnableResponse_immediateEnableResult
-    ) {}
+        immediateEnableResult: ImmediateEnableResponse_immediateEnableResult
+    ) {
+        this.immediateEnableResult = immediateEnableResult;
+    }
 
     /**
      * @summary Restructures an object into a ImmediateEnableResponse

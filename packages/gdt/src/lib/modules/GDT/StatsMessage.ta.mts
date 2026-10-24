@@ -27,26 +27,34 @@ import { Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Param
  */
 export
 class StatsMessage {
+    /**
+     * @summary `stats_action`.
+     * @public
+     * @readonly
+     */
+    public readonly stats_action: StatsAction;
+    /**
+     * @summary `params`.
+     * @public
+     * @readonly
+     */
+    public readonly params?: OPTIONAL<Parameters>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `stats_action`.
-         * @public
-         * @readonly
-         */
-        readonly stats_action: StatsAction,
-        /**
-         * @summary `params`.
-         * @public
-         * @readonly
-         */
-        readonly params?: OPTIONAL<Parameters>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        stats_action: StatsAction,
+        params?: OPTIONAL<Parameters>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.stats_action = stats_action;
+        this.params = params;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a StatsMessage

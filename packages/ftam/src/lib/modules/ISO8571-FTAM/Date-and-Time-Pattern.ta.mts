@@ -36,29 +36,35 @@ import {
  *
  */
 export class Date_and_Time_Pattern {
+  /**
+   * @summary `relational_camparision`.
+   * @description
+   *
+   * Whether `no-value-available` and equals match. ASN.1 spelling
+   * `relational-camparision`; type is `Equality-Comparision`.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly relational_camparision: Equality_Comparision;
+  /**
+   * @summary `time_and_date_value`.
+   * @description
+   *
+   * Test time for the equality comparison.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly time_and_date_value: GeneralizedTime;
+
   constructor(
-    /**
-     * @summary `relational_camparision`.
-     * @description
-     *
-     * Whether `no-value-available` and equals match. ASN.1 spelling
-     * `relational-camparision`; type is `Equality-Comparision`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly relational_camparision: Equality_Comparision,
-    /**
-     * @summary `time_and_date_value`.
-     * @description
-     *
-     * Test time for the equality comparison.
-     *
-     * @public
-     * @readonly
-     */
-    readonly time_and_date_value: GeneralizedTime
-  ) {}
+    relational_camparision: Equality_Comparision,
+    time_and_date_value: GeneralizedTime
+  ) {
+    this.relational_camparision = relational_camparision;
+    this.time_and_date_value = time_and_date_value;
+  }
 
   /**
    * @summary Restructures an object into a Date_and_Time_Pattern

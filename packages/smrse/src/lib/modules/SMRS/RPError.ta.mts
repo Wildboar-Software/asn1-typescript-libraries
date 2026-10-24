@@ -44,75 +44,89 @@ import { RP_UD, _decode_RP_UD, _encode_RP_UD } from "../SMRS/RP-UD.ta.mjs";
  */
 export
 class RPError {
+    /**
+     * @summary `error_reason`.
+     * @description
+     *
+     * Why the relay failed. Mobile-terminated and
+     * mobile-originated causes share this integer. See
+     * `Error-reason` and the clause 2.5 mapping.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly error_reason: Error_reason;
+    /**
+     * @summary `msg_waiting_set`.
+     * @description
+     *
+     * Message-waiting indication. Clause 3.2 includes the flag
+     * and does not state when it is set.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly msg_waiting_set: BOOLEAN;
+    /**
+     * @summary `message_reference`.
+     * @description
+     *
+     * Message reference of the `RPDataMT` or `RPDataMO` that
+     * failed.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly message_reference: RP_MR;
+    /**
+     * @summary `alerting_MS_ISDN`.
+     * @description
+     *
+     * Optional Nokia component. Clause 3.2 does not include it,
+     * and the report does not define it.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly alerting_MS_ISDN?: OPTIONAL<SMS_Address>;
+    /**
+     * @summary `sm_diag_info`.
+     * @description
+     *
+     * Optional Nokia diagnostic user data. Clause 3.2 does not
+     * include it, and the report does not define it.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sm_diag_info?: OPTIONAL<RP_UD>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions after the root components. The Nokia
+     * profile leaves the sequence open.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `error_reason`.
-         * @description
-         *
-         * Why the relay failed. Mobile-terminated and
-         * mobile-originated causes share this integer. See
-         * `Error-reason` and the clause 2.5 mapping.
-         *
-         * @public
-         * @readonly
-         */
-        readonly error_reason: Error_reason,
-        /**
-         * @summary `msg_waiting_set`.
-         * @description
-         *
-         * Message-waiting indication. Clause 3.2 includes the flag
-         * and does not state when it is set.
-         *
-         * @public
-         * @readonly
-         */
-        readonly msg_waiting_set: BOOLEAN,
-        /**
-         * @summary `message_reference`.
-         * @description
-         *
-         * Message reference of the `RPDataMT` or `RPDataMO` that
-         * failed.
-         *
-         * @public
-         * @readonly
-         */
-        readonly message_reference: RP_MR,
-        /**
-         * @summary `alerting_MS_ISDN`.
-         * @description
-         *
-         * Optional Nokia component. Clause 3.2 does not include it,
-         * and the report does not define it.
-         *
-         * @public
-         * @readonly
-         */
-        readonly alerting_MS_ISDN?: OPTIONAL<SMS_Address>,
-        /**
-         * @summary `sm_diag_info`.
-         * @description
-         *
-         * Optional Nokia diagnostic user data. Clause 3.2 does not
-         * include it, and the report does not define it.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sm_diag_info?: OPTIONAL<RP_UD>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions after the root components. The Nokia
-         * profile leaves the sequence open.
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        error_reason: Error_reason,
+        msg_waiting_set: BOOLEAN,
+        message_reference: RP_MR,
+        alerting_MS_ISDN?: OPTIONAL<SMS_Address>,
+        sm_diag_info?: OPTIONAL<RP_UD>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.error_reason = error_reason;
+        this.msg_waiting_set = msg_waiting_set;
+        this.message_reference = message_reference;
+        this.alerting_MS_ISDN = alerting_MS_ISDN;
+        this.sm_diag_info = sm_diag_info;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a RPError

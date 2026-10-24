@@ -49,130 +49,154 @@ import { AttributeStatus, _enum_for_AttributeStatus, _decode_AttributeStatus, _e
  */
 export
 class ComponentIdentifier {
+    /**
+     * @summary `componentClass`.
+     * @description
+     *
+     * Type of component: a registry OID plus a 4-octet
+     * registry-specific value. MUST be present. §3.1.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly componentClass: ComponentClass;
+    /**
+     * @summary `componentManufacturer`.
+     * @description
+     *
+     * Component manufacturer name. MUST be present. Bounded by
+     * `strmax`. §3.1.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly componentManufacturer: UTF8String;
+    /**
+     * @summary `componentModel`.
+     * @description
+     *
+     * Component model. MUST be present. Bounded by `strmax`.
+     * §3.1.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly componentModel: UTF8String;
+    /**
+     * @summary `componentSerial`.
+     * @description
+     *
+     * Component serial number. Bounded by `strmax`. §3.1.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly componentSerial?: OPTIONAL<UTF8String>;
+    /**
+     * @summary `componentRevision`.
+     * @description
+     *
+     * Component revision. Bounded by `strmax`. §3.1.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly componentRevision?: OPTIONAL<UTF8String>;
+    /**
+     * @summary `componentManufacturerId`.
+     * @description
+     *
+     * Component manufacturer's IANA Private Enterprise Number.
+     * §3.1.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly componentManufacturerId?: OPTIONAL<PrivateEnterpriseNumber>;
+    /**
+     * @summary `fieldReplaceable`.
+     * @description
+     *
+     * Whether the component is field-replaceable. §3.1.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly fieldReplaceable?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `componentAddresses`.
+     * @description
+     *
+     * Network addresses of the component (Ethernet, WLAN, or
+     * Bluetooth MAC). §2.1.5.14, §3.1.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly componentAddresses?: OPTIONAL<ComponentAddress[]>;
+    /**
+     * @summary `componentPlatformCert`.
+     * @description
+     *
+     * The component's own Platform Certificate. Lets the issuer
+     * build a tree of platforms; the verifier can walk
+     * `attributeCertIdentifier` or `genericCertIdentifier` to
+     * confirm as-built components. The issuer MUST include one
+     * of those two identifiers. §3.1.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly componentPlatformCert?: OPTIONAL<CertificateIdentifier>;
+    /**
+     * @summary `componentPlatformCertUri`.
+     * @description
+     *
+     * Public distribution point of the component Platform
+     * Certificate. §3.1.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly componentPlatformCertUri?: OPTIONAL<URIReference>;
+    /**
+     * @summary `status`.
+     * @description
+     *
+     * Whether this component was added, modified, or removed
+     * relative to the base certificate. MUST be used only in
+     * Delta Platform Certificates. §3.1.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly status?: OPTIONAL<AttributeStatus>;
+
     constructor (
-        /**
-         * @summary `componentClass`.
-         * @description
-         *
-         * Type of component: a registry OID plus a 4-octet
-         * registry-specific value. MUST be present. §3.1.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly componentClass: ComponentClass,
-        /**
-         * @summary `componentManufacturer`.
-         * @description
-         *
-         * Component manufacturer name. MUST be present. Bounded by
-         * `strmax`. §3.1.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly componentManufacturer: UTF8String,
-        /**
-         * @summary `componentModel`.
-         * @description
-         *
-         * Component model. MUST be present. Bounded by `strmax`.
-         * §3.1.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly componentModel: UTF8String,
-        /**
-         * @summary `componentSerial`.
-         * @description
-         *
-         * Component serial number. Bounded by `strmax`. §3.1.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly componentSerial?: OPTIONAL<UTF8String>,
-        /**
-         * @summary `componentRevision`.
-         * @description
-         *
-         * Component revision. Bounded by `strmax`. §3.1.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly componentRevision?: OPTIONAL<UTF8String>,
-        /**
-         * @summary `componentManufacturerId`.
-         * @description
-         *
-         * Component manufacturer's IANA Private Enterprise Number.
-         * §3.1.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly componentManufacturerId?: OPTIONAL<PrivateEnterpriseNumber>,
-        /**
-         * @summary `fieldReplaceable`.
-         * @description
-         *
-         * Whether the component is field-replaceable. §3.1.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly fieldReplaceable?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `componentAddresses`.
-         * @description
-         *
-         * Network addresses of the component (Ethernet, WLAN, or
-         * Bluetooth MAC). §2.1.5.14, §3.1.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly componentAddresses?: OPTIONAL<ComponentAddress[]>,
-        /**
-         * @summary `componentPlatformCert`.
-         * @description
-         *
-         * The component's own Platform Certificate. Lets the issuer
-         * build a tree of platforms; the verifier can walk
-         * `attributeCertIdentifier` or `genericCertIdentifier` to
-         * confirm as-built components. The issuer MUST include one
-         * of those two identifiers. §3.1.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly componentPlatformCert?: OPTIONAL<CertificateIdentifier>,
-        /**
-         * @summary `componentPlatformCertUri`.
-         * @description
-         *
-         * Public distribution point of the component Platform
-         * Certificate. §3.1.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly componentPlatformCertUri?: OPTIONAL<URIReference>,
-        /**
-         * @summary `status`.
-         * @description
-         *
-         * Whether this component was added, modified, or removed
-         * relative to the base certificate. MUST be used only in
-         * Delta Platform Certificates. §3.1.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly status?: OPTIONAL<AttributeStatus>
-    ) {}
+        componentClass: ComponentClass,
+        componentManufacturer: UTF8String,
+        componentModel: UTF8String,
+        componentSerial?: OPTIONAL<UTF8String>,
+        componentRevision?: OPTIONAL<UTF8String>,
+        componentManufacturerId?: OPTIONAL<PrivateEnterpriseNumber>,
+        fieldReplaceable?: OPTIONAL<BOOLEAN>,
+        componentAddresses?: OPTIONAL<ComponentAddress[]>,
+        componentPlatformCert?: OPTIONAL<CertificateIdentifier>,
+        componentPlatformCertUri?: OPTIONAL<URIReference>,
+        status?: OPTIONAL<AttributeStatus>
+    ) {
+        this.componentClass = componentClass;
+        this.componentManufacturer = componentManufacturer;
+        this.componentModel = componentModel;
+        this.componentSerial = componentSerial;
+        this.componentRevision = componentRevision;
+        this.componentManufacturerId = componentManufacturerId;
+        this.fieldReplaceable = fieldReplaceable;
+        this.componentAddresses = componentAddresses;
+        this.componentPlatformCert = componentPlatformCert;
+        this.componentPlatformCertUri = componentPlatformCertUri;
+        this.status = status;
+    }
 
     /**
      * @summary Restructures an object into a ComponentIdentifier

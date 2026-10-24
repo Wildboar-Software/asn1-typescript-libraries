@@ -43,29 +43,35 @@ import {
  */
 export
 class OtherSigningCertificate {
+    /**
+     * @summary `certs`.
+     * @description
+     *
+     * Certificate identifiers. The first shall identify the
+     * signer's certificate used to verify the signature.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certs: OtherCertID[];
+    /**
+     * @summary `policies`.
+     * @description
+     *
+     * Not used in TS 101 733.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly policies?: OPTIONAL<PolicyInformation[]>;
+
     constructor (
-        /**
-         * @summary `certs`.
-         * @description
-         *
-         * Certificate identifiers. The first shall identify the
-         * signer's certificate used to verify the signature.
-         *
-         * @public
-         * @readonly
-         */
-        readonly certs: OtherCertID[],
-        /**
-         * @summary `policies`.
-         * @description
-         *
-         * Not used in TS 101 733.
-         *
-         * @public
-         * @readonly
-         */
-        readonly policies?: OPTIONAL<PolicyInformation[]>
-    ) {}
+        certs: OtherCertID[],
+        policies?: OPTIONAL<PolicyInformation[]>
+    ) {
+        this.certs = certs;
+        this.policies = policies;
+    }
 
     /**
      * @summary Restructures an object into a OtherSigningCertificate

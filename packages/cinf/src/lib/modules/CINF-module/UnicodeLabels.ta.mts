@@ -39,32 +39,38 @@ import {
  *
  */
 export class UnicodeLabels {
+  /**
+   * @summary `numericLabel`.
+   * @description
+   *
+   * Integer-valued Unicode label (primary integer) of the
+   * child arc. Canonical OID-IRI is a path of only these
+   * values (X.672 §3.2.3).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly numericLabel: INTEGER;
+  /**
+   * @summary `non_numeric`.
+   * @description
+   *
+   * Non-integer Unicode labels on the same arc (may be
+   * empty). Each is unambiguous among sibling arcs but
+   * not globally unique (Annex K).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly non_numeric: Non_numericUnicodeLabel[];
+
   constructor(
-    /**
-     * @summary `numericLabel`.
-     * @description
-     *
-     * Integer-valued Unicode label (primary integer) of the
-     * child arc. Canonical OID-IRI is a path of only these
-     * values (X.672 §3.2.3).
-     *
-     * @public
-     * @readonly
-     */
-    readonly numericLabel: INTEGER,
-    /**
-     * @summary `non_numeric`.
-     * @description
-     *
-     * Non-integer Unicode labels on the same arc (may be
-     * empty). Each is unambiguous among sibling arcs but
-     * not globally unique (Annex K).
-     *
-     * @public
-     * @readonly
-     */
-    readonly non_numeric: Non_numericUnicodeLabel[]
-  ) {}
+    numericLabel: INTEGER,
+    non_numeric: Non_numericUnicodeLabel[]
+  ) {
+    this.numericLabel = numericLabel;
+    this.non_numeric = non_numeric;
+  }
 
   /**
    * @summary Restructures an object into a UnicodeLabels

@@ -88,61 +88,73 @@ import {
  *
  */
 export class LDAPResult {
+  /**
+   * @summary `resultCode`.
+   * @description
+   *
+   * Extensible ENUMERATED. `success` is not used with Compare
+   * (`compareTrue`/`compareFalse` instead). `referral` requires
+   * `referral`; all other codes omit it.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly resultCode: LDAPResult_resultCode;
+  /**
+   * @summary `matchedDN`.
+   * @description
+   *
+   * Last entry (object or alias) used finding the target -- typically
+   * for `noSuchObject`, `aliasProblem`, `invalidDNSyntax`,
+   * `aliasDereferencingProblem`. Otherwise empty. Subject to access
+   * controls.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly matchedDN: LDAPDN;
+  /**
+   * @summary `diagnosticMessage`.
+   * @description
+   *
+   * Optional human-readable text; MUST be empty if none. Not
+   * standardized -- do not parse or rely on values.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly diagnosticMessage: LDAPString;
+  /**
+   * @summary `referral`.
+   * @description
+   *
+   * Present if and only if `resultCode` is `referral`; absent
+   * otherwise. SIZE(1..MAX) URIs; any supported URI may be followed.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly referral?: OPTIONAL<Referral>;
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  public readonly _unrecognizedExtensionsList: _Element[];
+
   constructor(
-    /**
-     * @summary `resultCode`.
-     * @description
-     *
-     * Extensible ENUMERATED. `success` is not used with Compare
-     * (`compareTrue`/`compareFalse` instead). `referral` requires
-     * `referral`; all other codes omit it.
-     *
-     * @public
-     * @readonly
-     */
-    readonly resultCode: LDAPResult_resultCode,
-    /**
-     * @summary `matchedDN`.
-     * @description
-     *
-     * Last entry (object or alias) used finding the target -- typically
-     * for `noSuchObject`, `aliasProblem`, `invalidDNSyntax`,
-     * `aliasDereferencingProblem`. Otherwise empty. Subject to access
-     * controls.
-     *
-     * @public
-     * @readonly
-     */
-    readonly matchedDN: LDAPDN,
-    /**
-     * @summary `diagnosticMessage`.
-     * @description
-     *
-     * Optional human-readable text; MUST be empty if none. Not
-     * standardized -- do not parse or rely on values.
-     *
-     * @public
-     * @readonly
-     */
-    readonly diagnosticMessage: LDAPString,
-    /**
-     * @summary `referral`.
-     * @description
-     *
-     * Present if and only if `resultCode` is `referral`; absent
-     * otherwise. SIZE(1..MAX) URIs; any supported URI may be followed.
-     *
-     * @public
-     * @readonly
-     */
-    readonly referral?: OPTIONAL<Referral>,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = []
-  ) {}
+    resultCode: LDAPResult_resultCode,
+    matchedDN: LDAPDN,
+    diagnosticMessage: LDAPString,
+    referral?: OPTIONAL<Referral>,
+    _unrecognizedExtensionsList: _Element[] = []
+  ) {
+    this.resultCode = resultCode;
+    this.matchedDN = matchedDN;
+    this.diagnosticMessage = diagnosticMessage;
+    this.referral = referral;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+  }
 
   /**
    * @summary Restructures an object into a LDAPResult

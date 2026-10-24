@@ -36,19 +36,23 @@ import {
  *
  */
 export class F_TERMINATE_request {
+  /**
+   * @summary `shared_ASE_information`.
+   * @description
+   *
+   * `EXTERNAL` carrying other ASE information bound to this
+   * primitive. ISO 8571-3:1988 §13.10, §14.2.2.1.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>;
+
   constructor(
-    /**
-     * @summary `shared_ASE_information`.
-     * @description
-     *
-     * `EXTERNAL` carrying other ASE information bound to this
-     * primitive. ISO 8571-3:1988 §13.10, §14.2.2.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>
-  ) {}
+    shared_ASE_information?: OPTIONAL<Shared_ASE_Information>
+  ) {
+    this.shared_ASE_information = shared_ASE_information;
+  }
 
   /**
    * @summary Restructures an object into a F_TERMINATE_request

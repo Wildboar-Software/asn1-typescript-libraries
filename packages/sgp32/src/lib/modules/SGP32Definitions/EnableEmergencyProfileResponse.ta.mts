@@ -34,17 +34,21 @@ import { _decode_EnableEmergencyProfileResponse_enableEmergencyProfileResult, _e
  */
 export
 class EnableEmergencyProfileResponse {
+    /**
+     * @summary `enableEmergencyProfileResult`.
+     * @description
+     * Outcome of enabling the Emergency Profile. Codes are defined in section
+     * 5.9.22. SGP.32 v1.2 does not further define undefinedError(127).
+     * @public
+     * @readonly
+     */
+    public readonly enableEmergencyProfileResult: EnableEmergencyProfileResponse_enableEmergencyProfileResult;
+
     constructor (
-        /**
-         * @summary `enableEmergencyProfileResult`.
-         * @description
-         * Outcome of enabling the Emergency Profile. Codes are defined in section
-         * 5.9.22. SGP.32 v1.2 does not further define undefinedError(127).
-         * @public
-         * @readonly
-         */
-        readonly enableEmergencyProfileResult: EnableEmergencyProfileResponse_enableEmergencyProfileResult
-    ) {}
+        enableEmergencyProfileResult: EnableEmergencyProfileResponse_enableEmergencyProfileResult
+    ) {
+        this.enableEmergencyProfileResult = enableEmergencyProfileResult;
+    }
 
     /**
      * @summary Restructures an object into a EnableEmergencyProfileResponse

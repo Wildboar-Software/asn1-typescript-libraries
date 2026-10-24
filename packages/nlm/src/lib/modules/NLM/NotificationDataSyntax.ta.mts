@@ -41,57 +41,67 @@ import {
  *
  */
 export class NotificationDataSyntax {
+    /**
+     * @summary `channel`.
+     * @description
+     *
+     * Logical channel of the call that caused the notification, when
+     * applicable.
+     * ITU-T Rec. X.283 (12/97)
+     * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly channel: OPTIONAL<LogicalChannelId>;
+    /**
+     * @summary `packetHeader`.
+     * @description
+     *
+     * Header of the X.25 packet related to the event.
+     * ITU-T Rec. X.283 (12/97)
+     * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly packetHeader: OCTET_STRING;
+    /**
+     * @summary `diagnosticCode`.
+     * @description
+     *
+     * X.25 diagnostic code from the packet.
+     * ITU-T Rec. X.283 (12/97)
+     * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly diagnosticCode: OCTET_STRING;
+    /**
+     * @summary `causeCode`.
+     * @description
+     *
+     * X.25 cause code from the packet.
+     * ITU-T Rec. X.283 (12/97)
+     * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly causeCode: OCTET_STRING;
+
     constructor(
-        /**
-         * @summary `channel`.
-         * @description
-         *
-         * Logical channel of the call that caused the notification, when
-         * applicable.
-         * ITU-T Rec. X.283 (12/97)
-         * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
-         *
-         * @public
-         * @readonly
-         */
-        readonly channel: OPTIONAL<LogicalChannelId>,
-        /**
-         * @summary `packetHeader`.
-         * @description
-         *
-         * Header of the X.25 packet related to the event.
-         * ITU-T Rec. X.283 (12/97)
-         * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
-         *
-         * @public
-         * @readonly
-         */
-        readonly packetHeader: OCTET_STRING,
-        /**
-         * @summary `diagnosticCode`.
-         * @description
-         *
-         * X.25 diagnostic code from the packet.
-         * ITU-T Rec. X.283 (12/97)
-         * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
-         *
-         * @public
-         * @readonly
-         */
-        readonly diagnosticCode: OCTET_STRING,
-        /**
-         * @summary `causeCode`.
-         * @description
-         *
-         * X.25 cause code from the packet.
-         * ITU-T Rec. X.283 (12/97)
-         * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
-         *
-         * @public
-         * @readonly
-         */
-        readonly causeCode: OCTET_STRING
-    ) {}
+        channel: OPTIONAL<LogicalChannelId>,
+        packetHeader: OCTET_STRING,
+        diagnosticCode: OCTET_STRING,
+        causeCode: OCTET_STRING
+    ) {
+        this.channel = channel;
+        this.packetHeader = packetHeader;
+        this.diagnosticCode = diagnosticCode;
+        this.causeCode = causeCode;
+    }
 
     /**
      * @summary Restructures an object into a NotificationDataSyntax

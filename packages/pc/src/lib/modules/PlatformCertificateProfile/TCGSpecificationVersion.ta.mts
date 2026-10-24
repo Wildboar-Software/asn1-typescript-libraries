@@ -36,38 +36,46 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class TCGSpecificationVersion {
+    /**
+     * @summary `majorVersion`.
+     * @description
+     *
+     * Specification major version. §3.1.3, §3.1.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly majorVersion: INTEGER;
+    /**
+     * @summary `minorVersion`.
+     * @description
+     *
+     * Specification minor version. §3.1.3, §3.1.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly minorVersion: INTEGER;
+    /**
+     * @summary `revision`.
+     * @description
+     *
+     * Specification revision. §3.1.3, §3.1.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly revision: INTEGER;
+
     constructor (
-        /**
-         * @summary `majorVersion`.
-         * @description
-         *
-         * Specification major version. §3.1.3, §3.1.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly majorVersion: INTEGER,
-        /**
-         * @summary `minorVersion`.
-         * @description
-         *
-         * Specification minor version. §3.1.3, §3.1.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly minorVersion: INTEGER,
-        /**
-         * @summary `revision`.
-         * @description
-         *
-         * Specification revision. §3.1.3, §3.1.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly revision: INTEGER
-    ) {}
+        majorVersion: INTEGER,
+        minorVersion: INTEGER,
+        revision: INTEGER
+    ) {
+        this.majorVersion = majorVersion;
+        this.minorVersion = minorVersion;
+        this.revision = revision;
+    }
 
     /**
      * @summary Restructures an object into a TCGSpecificationVersion

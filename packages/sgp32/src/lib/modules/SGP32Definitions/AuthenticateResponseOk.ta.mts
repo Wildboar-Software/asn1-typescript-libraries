@@ -37,54 +37,64 @@ import { type Certificate, _decode_Certificate, _encode_Certificate } from "@wil
  */
 export
 class AuthenticateResponseOk {
+    /**
+     * @summary `euiccSigned1`.
+     * @description
+     *
+     * Information signed by the eUICC for ES10b.AuthenticateServer, including the
+     * Transaction ID, server address, server challenge, euiccInfo2, and
+     * ctxParams1.
+     *
+     * SGP.32 v1.2, section 5.14.3.
+     * @public
+     * @readonly
+     */
+    public readonly euiccSigned1: EuiccSigned1;
+    /**
+     * @summary `euiccSignature1`.
+     * @description
+     *
+     * eUICC signature EUICC_Sign1 (tag '5F37') on EuiccSigned1.
+     *
+     * SGP.32 v1.2, section 5.14.3.
+     * @public
+     * @readonly
+     */
+    public readonly euiccSignature1: OCTET_STRING;
+    /**
+     * @summary `euiccCertificate`.
+     * @description
+     *
+     * eUICC certificate CERT.EUICC.ECDSA, signed by the EUM.
+     *
+     * SGP.32 v1.2, section 5.14.3.
+     * @public
+     * @readonly
+     */
+    public readonly euiccCertificate: Certificate;
+    /**
+     * @summary `eumCertificate`.
+     * @description
+     *
+     * EUM certificate CERT.EUM.ECDSA, signed by the requested CI.
+     *
+     * SGP.32 v1.2, section 5.14.3.
+     * @public
+     * @readonly
+     */
+    public readonly eumCertificate: Certificate;
+
     constructor (
-        /**
-         * @summary `euiccSigned1`.
-         * @description
-         *
-         * Information signed by the eUICC for ES10b.AuthenticateServer, including the
-         * Transaction ID, server address, server challenge, euiccInfo2, and
-         * ctxParams1.
-         *
-         * SGP.32 v1.2, section 5.14.3.
-         * @public
-         * @readonly
-         */
-        readonly euiccSigned1: EuiccSigned1,
-        /**
-         * @summary `euiccSignature1`.
-         * @description
-         *
-         * eUICC signature EUICC_Sign1 (tag '5F37') on EuiccSigned1.
-         *
-         * SGP.32 v1.2, section 5.14.3.
-         * @public
-         * @readonly
-         */
-        readonly euiccSignature1: OCTET_STRING,
-        /**
-         * @summary `euiccCertificate`.
-         * @description
-         *
-         * eUICC certificate CERT.EUICC.ECDSA, signed by the EUM.
-         *
-         * SGP.32 v1.2, section 5.14.3.
-         * @public
-         * @readonly
-         */
-        readonly euiccCertificate: Certificate,
-        /**
-         * @summary `eumCertificate`.
-         * @description
-         *
-         * EUM certificate CERT.EUM.ECDSA, signed by the requested CI.
-         *
-         * SGP.32 v1.2, section 5.14.3.
-         * @public
-         * @readonly
-         */
-        readonly eumCertificate: Certificate
-    ) {}
+        euiccSigned1: EuiccSigned1,
+        euiccSignature1: OCTET_STRING,
+        euiccCertificate: Certificate,
+        eumCertificate: Certificate
+    ) {
+        this.euiccSigned1 = euiccSigned1;
+        this.euiccSignature1 = euiccSignature1;
+        this.euiccCertificate = euiccCertificate;
+        this.eumCertificate = eumCertificate;
+    }
 
     /**
      * @summary Restructures an object into a AuthenticateResponseOk

@@ -41,41 +41,49 @@ import {
  *
  */
 export class CertStatus {
+  /**
+   * @summary `certHash`.
+   * @description
+   *
+   * Hash of the certificate, using the same hash algorithm as used to
+   * create and verify the certificate signature ([RFC 4210 §5.3.18](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.18)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly certHash: OCTET_STRING;
+  /**
+   * @summary `certReqId`.
+   * @description
+   *
+   * Matches this confirmation with the corresponding request/response
+   * ([RFC 4210 §5.3.18](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.18)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly certReqId: INTEGER;
+  /**
+   * @summary `statusInfo`.
+   * @description
+   *
+   * Optional explicit acceptance/rejection detail. Omitted means
+   * ACCEPTANCE ([RFC 4210 §5.3.18](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.18)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly statusInfo?: OPTIONAL<PKIStatusInfo>;
+
   constructor(
-    /**
-     * @summary `certHash`.
-     * @description
-     *
-     * Hash of the certificate, using the same hash algorithm as used to
-     * create and verify the certificate signature ([RFC 4210 §5.3.18](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.18)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly certHash: OCTET_STRING,
-    /**
-     * @summary `certReqId`.
-     * @description
-     *
-     * Matches this confirmation with the corresponding request/response
-     * ([RFC 4210 §5.3.18](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.18)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly certReqId: INTEGER,
-    /**
-     * @summary `statusInfo`.
-     * @description
-     *
-     * Optional explicit acceptance/rejection detail. Omitted means
-     * ACCEPTANCE ([RFC 4210 §5.3.18](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.18)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly statusInfo?: OPTIONAL<PKIStatusInfo>
-  ) {}
+    certHash: OCTET_STRING,
+    certReqId: INTEGER,
+    statusInfo?: OPTIONAL<PKIStatusInfo>
+  ) {
+    this.certHash = certHash;
+    this.certReqId = certReqId;
+    this.statusInfo = statusInfo;
+  }
 
   /**
    * @summary Restructures an object into a CertStatus

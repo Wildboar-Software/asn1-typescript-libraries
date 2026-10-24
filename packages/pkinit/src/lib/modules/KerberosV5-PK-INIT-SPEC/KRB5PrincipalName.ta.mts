@@ -48,29 +48,35 @@ import { PrincipalName, _decode_PrincipalName, _encode_PrincipalName } from "@wi
  */
 export
 class KRB5PrincipalName {
+    /**
+     * Realm of the principal named by this SAN. Microsoft
+     * realm names are domain-style and strictly uppercase.
+     *
+     * [RFC 4556, section 3.2.2](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.2)
+     * and
+     * [Appendix C](https://www.rfc-editor.org/rfc/rfc4556#appendix-C).
+     * @public
+     * @readonly
+     */
+    public readonly realm: Realm;
+    /**
+     * Principal named by this SAN. When a KDC certificate uses
+     * the SAN to show that it is a KDC, this is the TGS name of
+     * the target realm.
+     *
+     * [RFC 4556, section 3.2.4](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.4).
+     * @public
+     * @readonly
+     */
+    public readonly principalName: PrincipalName;
+
     constructor (
-        /**
-         * Realm of the principal named by this SAN. Microsoft
-         * realm names are domain-style and strictly uppercase.
-         *
-         * [RFC 4556, section 3.2.2](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.2)
-         * and
-         * [Appendix C](https://www.rfc-editor.org/rfc/rfc4556#appendix-C).
-         * @public
-         * @readonly
-         */
-        readonly realm: Realm,
-        /**
-         * Principal named by this SAN. When a KDC certificate uses
-         * the SAN to show that it is a KDC, this is the TGS name of
-         * the target realm.
-         *
-         * [RFC 4556, section 3.2.4](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.4).
-         * @public
-         * @readonly
-         */
-        readonly principalName: PrincipalName
-    ) {}
+        realm: Realm,
+        principalName: PrincipalName
+    ) {
+        this.realm = realm;
+        this.principalName = principalName;
+    }
 
     /**
      * @summary Restructures an object into a KRB5PrincipalName

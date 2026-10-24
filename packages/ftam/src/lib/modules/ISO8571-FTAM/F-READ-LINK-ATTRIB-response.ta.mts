@@ -50,41 +50,49 @@ import {
  *
  */
 export class F_READ_LINK_ATTRIB_response {
+  /**
+   * @summary `action_result`.
+   * @description
+   *
+   * Success, transient error, or permanent error. ISO
+   * 8571-3:1988 §13.2. Default `success`.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly action_result?: OPTIONAL<Action_Result>;
+  /**
+   * @summary `attributes`.
+   * @description
+   *
+   * Returned link attributes. Same role as F-READ-ATTRIB
+   * (ISO 8571-3:1988 §16.1.2.3).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly attributes?: OPTIONAL<Read_Attributes>;
+  /**
+   * @summary `diagnostic`.
+   * @description
+   *
+   * Detail accompanying `action-result`. ISO 8571-3:1988
+   * §13.13.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly diagnostic?: OPTIONAL<Diagnostic>;
+
   constructor(
-    /**
-     * @summary `action_result`.
-     * @description
-     *
-     * Success, transient error, or permanent error. ISO
-     * 8571-3:1988 §13.2. Default `success`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly action_result?: OPTIONAL<Action_Result>,
-    /**
-     * @summary `attributes`.
-     * @description
-     *
-     * Returned link attributes. Same role as F-READ-ATTRIB
-     * (ISO 8571-3:1988 §16.1.2.3).
-     *
-     * @public
-     * @readonly
-     */
-    readonly attributes?: OPTIONAL<Read_Attributes>,
-    /**
-     * @summary `diagnostic`.
-     * @description
-     *
-     * Detail accompanying `action-result`. ISO 8571-3:1988
-     * §13.13.
-     *
-     * @public
-     * @readonly
-     */
-    readonly diagnostic?: OPTIONAL<Diagnostic>
-  ) {}
+    action_result?: OPTIONAL<Action_Result>,
+    attributes?: OPTIONAL<Read_Attributes>,
+    diagnostic?: OPTIONAL<Diagnostic>
+  ) {
+    this.action_result = action_result;
+    this.attributes = attributes;
+    this.diagnostic = diagnostic;
+  }
 
   /**
    * @summary Restructures an object into a F_READ_LINK_ATTRIB_response

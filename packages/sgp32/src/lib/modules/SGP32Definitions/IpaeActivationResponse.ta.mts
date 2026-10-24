@@ -29,17 +29,21 @@ import { _decode_IpaeActivationResponse_ipaeActivationResult, _encode_IpaeActiva
  */
 export
 class IpaeActivationResponse {
+    /**
+     * @summary `ipaeActivationResult`.
+     * @description
+     * `ok(0)` or `notSupported(1)`. SGP.32 v1.2 section 3.8.4 does not further
+     * define the condition for either value. Annex C.
+     * @public
+     * @readonly
+     */
+    public readonly ipaeActivationResult: IpaeActivationResponse_ipaeActivationResult;
+
     constructor (
-        /**
-         * @summary `ipaeActivationResult`.
-         * @description
-         * `ok(0)` or `notSupported(1)`. SGP.32 v1.2 section 3.8.4 does not further
-         * define the condition for either value. Annex C.
-         * @public
-         * @readonly
-         */
-        readonly ipaeActivationResult: IpaeActivationResponse_ipaeActivationResult
-    ) {}
+        ipaeActivationResult: IpaeActivationResponse_ipaeActivationResult
+    ) {
+        this.ipaeActivationResult = ipaeActivationResult;
+    }
 
     /**
      * @summary Restructures an object into a IpaeActivationResponse

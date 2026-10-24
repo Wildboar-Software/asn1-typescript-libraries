@@ -38,40 +38,48 @@ import { CAMClientInfo, _decode_CAMClientInfo, _encode_CAMClientInfo } from "../
  */
 export
 class CAMClientVersion {
+    /**
+     * @summary `hWVersion`.
+     * @description
+     *
+     * CAM chip version, 4 octets (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly hWVersion: OCTET_STRING;
+    /**
+     * @summary `sWversion`.
+     * @description
+     *
+     * Bootloader software version, 4 octets
+     * (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sWversion: OCTET_STRING;
+    /**
+     * @summary `cAMClientInfo`.
+     * @description
+     *
+     * Per-image CACS type, priority, vendor, and
+     * version (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cAMClientInfo: CAMClientInfo[];
+
     constructor (
-        /**
-         * @summary `hWVersion`.
-         * @description
-         *
-         * CAM chip version, 4 octets (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly hWVersion: OCTET_STRING,
-        /**
-         * @summary `sWversion`.
-         * @description
-         *
-         * Bootloader software version, 4 octets
-         * (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sWversion: OCTET_STRING,
-        /**
-         * @summary `cAMClientInfo`.
-         * @description
-         *
-         * Per-image CACS type, priority, vendor, and
-         * version (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cAMClientInfo: CAMClientInfo[]
-    ) {}
+        hWVersion: OCTET_STRING,
+        sWversion: OCTET_STRING,
+        cAMClientInfo: CAMClientInfo[]
+    ) {
+        this.hWVersion = hWVersion;
+        this.sWversion = sWversion;
+        this.cAMClientInfo = cAMClientInfo;
+    }
 
     /**
      * @summary Restructures an object into a CAMClientVersion

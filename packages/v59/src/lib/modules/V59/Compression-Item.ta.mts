@@ -53,146 +53,175 @@ import { Compression_Item_v44CompressionActive, _enum_for_Compression_Item_v44Co
  */
 export
 class Compression_Item {
+    /**
+     * @summary `compressionNegotiationResult`.
+     * @description
+     *
+     * Compression actually negotiated (Table 20/V.59). Tag-ID `3001`. ITU-T
+     * Rec. V.59 (11/2000) §6.12.
+     * @public
+     * @readonly
+     */
+    public readonly compressionNegotiationResult: Compression_Item_compressionNegotiationResult;
+    /**
+     * @summary `modeV42B`.
+     * @description
+     *
+     * V.42 bis operating-mode capability. Table 5/V.59: `notSupported`(0),
+     * `default`(1) preferred, `enabled`(2), `disabled`(3) supported but
+     * off. Tag-ID `3000`. ITU-T Rec. V.59 (11/2000) §6.12.
+     * @public
+     * @readonly
+     */
+    public readonly modeV42B: Capabilities;
+    /**
+     * @summary `v42bisCompressionActive`.
+     * @description
+     *
+     * V.42 bis P0 from the last call; `none` if V.42 bis was not enabled
+     * (Table 21/V.59). Tag-ID `3002`. ITU-T Rec. V.59 (11/2000) §6.12.
+     * @public
+     * @readonly
+     */
+    public readonly v42bisCompressionActive: Compression_Item_v42bisCompressionActive;
+    /**
+     * @summary `v42bisDictionarySize`.
+     * @description
+     *
+     * Dictionary codewords used (512..65535 in Annex A). Tag-ID `3003`.
+     * ITU-T Rec. V.59 (11/2000) §6.12.
+     * @public
+     * @readonly
+     */
+    public readonly v42bisDictionarySize: OPTIONAL<INTEGER>;
+    /**
+     * @summary `v42bisStringLength`.
+     * @description
+     *
+     * Maximum string length negotiated, in octets (6..250). Tag-ID `3004`.
+     * ITU-T Rec. V.59 (11/2000) §6.12.
+     * @public
+     * @readonly
+     */
+    public readonly v42bisStringLength: OPTIONAL<INTEGER>;
+    /**
+     * @summary `modeV44`.
+     * @description
+     *
+     * V.44 operating-mode capability. Table 5/V.59: `notSupported`(0),
+     * `default`(1) preferred, `enabled`(2), `disabled`(3) supported but
+     * off. Tag-ID `300A`. ITU-T Rec. V.59 (11/2000) §6.12.
+     * @public
+     * @readonly
+     */
+    public readonly modeV44: Capabilities;
+    /**
+     * @summary `v44CompressionActive`.
+     * @description
+     *
+     * V.44 P0 from the last call; `none` if V.44 was not enabled (Table
+     * 22/V.59). Tag-ID `300B`. ITU-T Rec. V.59 (11/2000) §6.12.
+     * @public
+     * @readonly
+     */
+    public readonly v44CompressionActive: Compression_Item_v44CompressionActive;
+    /**
+     * @summary `v44EncoderDictionarySize`.
+     * @description
+     *
+     * Encoder dictionary codewords (256..65535). Tag-ID `300C`. ITU-T Rec.
+     * V.59 (11/2000) §6.12.
+     * @public
+     * @readonly
+     */
+    public readonly v44EncoderDictionarySize?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `v44EncoderHistorySize`.
+     * @description
+     *
+     * Encoder history buffer length (512..1677215). Tag-ID `300D`. ITU-T
+     * Rec. V.59 (11/2000) §6.12.
+     * @public
+     * @readonly
+     */
+    public readonly v44EncoderHistorySize?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `v44EncoderStringLength`.
+     * @description
+     *
+     * Encoder maximum string length in octets (32..255). Tag-ID `300E`.
+     * ITU-T Rec. V.59 (11/2000) §6.12.
+     * @public
+     * @readonly
+     */
+    public readonly v44EncoderStringLength?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `v44DecoderDictionarySize`.
+     * @description
+     *
+     * Decoder dictionary codewords (256..65535). Tag-ID `300F`. ITU-T Rec.
+     * V.59 (11/2000) §6.12.
+     * @public
+     * @readonly
+     */
+    public readonly v44DecoderDictionarySize?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `v44DecoderHistorySize`.
+     * @description
+     *
+     * Decoder history buffer length (512..1677215). Tag-ID `3010`. ITU-T
+     * Rec. V.59 (11/2000) §6.12.
+     * @public
+     * @readonly
+     */
+    public readonly v44DecoderHistorySize?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `v44DecoderStringLength`.
+     * @description
+     *
+     * Decoder maximum string length in octets (32..255). Tag-ID `3011`.
+     * ITU-T Rec. V.59 (11/2000) §6.12.
+     * @public
+     * @readonly
+     */
+    public readonly v44DecoderStringLength?: OPTIONAL<INTEGER>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `compressionNegotiationResult`.
-         * @description
-         *
-         * Compression actually negotiated (Table 20/V.59). Tag-ID `3001`. ITU-T
-         * Rec. V.59 (11/2000) §6.12.
-         * @public
-         * @readonly
-         */
-        readonly compressionNegotiationResult: Compression_Item_compressionNegotiationResult,
-        /**
-         * @summary `modeV42B`.
-         * @description
-         *
-         * V.42 bis operating-mode capability. Table 5/V.59: `notSupported`(0),
-         * `default`(1) preferred, `enabled`(2), `disabled`(3) supported but
-         * off. Tag-ID `3000`. ITU-T Rec. V.59 (11/2000) §6.12.
-         * @public
-         * @readonly
-         */
-        readonly modeV42B: Capabilities,
-        /**
-         * @summary `v42bisCompressionActive`.
-         * @description
-         *
-         * V.42 bis P0 from the last call; `none` if V.42 bis was not enabled
-         * (Table 21/V.59). Tag-ID `3002`. ITU-T Rec. V.59 (11/2000) §6.12.
-         * @public
-         * @readonly
-         */
-        readonly v42bisCompressionActive: Compression_Item_v42bisCompressionActive,
-        /**
-         * @summary `v42bisDictionarySize`.
-         * @description
-         *
-         * Dictionary codewords used (512..65535 in Annex A). Tag-ID `3003`.
-         * ITU-T Rec. V.59 (11/2000) §6.12.
-         * @public
-         * @readonly
-         */
-        readonly v42bisDictionarySize: OPTIONAL<INTEGER>,
-        /**
-         * @summary `v42bisStringLength`.
-         * @description
-         *
-         * Maximum string length negotiated, in octets (6..250). Tag-ID `3004`.
-         * ITU-T Rec. V.59 (11/2000) §6.12.
-         * @public
-         * @readonly
-         */
-        readonly v42bisStringLength: OPTIONAL<INTEGER>,
-        /**
-         * @summary `modeV44`.
-         * @description
-         *
-         * V.44 operating-mode capability. Table 5/V.59: `notSupported`(0),
-         * `default`(1) preferred, `enabled`(2), `disabled`(3) supported but
-         * off. Tag-ID `300A`. ITU-T Rec. V.59 (11/2000) §6.12.
-         * @public
-         * @readonly
-         */
-        readonly modeV44: Capabilities,
-        /**
-         * @summary `v44CompressionActive`.
-         * @description
-         *
-         * V.44 P0 from the last call; `none` if V.44 was not enabled (Table
-         * 22/V.59). Tag-ID `300B`. ITU-T Rec. V.59 (11/2000) §6.12.
-         * @public
-         * @readonly
-         */
-        readonly v44CompressionActive: Compression_Item_v44CompressionActive,
-        /**
-         * @summary `v44EncoderDictionarySize`.
-         * @description
-         *
-         * Encoder dictionary codewords (256..65535). Tag-ID `300C`. ITU-T Rec.
-         * V.59 (11/2000) §6.12.
-         * @public
-         * @readonly
-         */
-        readonly v44EncoderDictionarySize?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `v44EncoderHistorySize`.
-         * @description
-         *
-         * Encoder history buffer length (512..1677215). Tag-ID `300D`. ITU-T
-         * Rec. V.59 (11/2000) §6.12.
-         * @public
-         * @readonly
-         */
-        readonly v44EncoderHistorySize?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `v44EncoderStringLength`.
-         * @description
-         *
-         * Encoder maximum string length in octets (32..255). Tag-ID `300E`.
-         * ITU-T Rec. V.59 (11/2000) §6.12.
-         * @public
-         * @readonly
-         */
-        readonly v44EncoderStringLength?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `v44DecoderDictionarySize`.
-         * @description
-         *
-         * Decoder dictionary codewords (256..65535). Tag-ID `300F`. ITU-T Rec.
-         * V.59 (11/2000) §6.12.
-         * @public
-         * @readonly
-         */
-        readonly v44DecoderDictionarySize?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `v44DecoderHistorySize`.
-         * @description
-         *
-         * Decoder history buffer length (512..1677215). Tag-ID `3010`. ITU-T
-         * Rec. V.59 (11/2000) §6.12.
-         * @public
-         * @readonly
-         */
-        readonly v44DecoderHistorySize?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `v44DecoderStringLength`.
-         * @description
-         *
-         * Decoder maximum string length in octets (32..255). Tag-ID `3011`.
-         * ITU-T Rec. V.59 (11/2000) §6.12.
-         * @public
-         * @readonly
-         */
-        readonly v44DecoderStringLength?: OPTIONAL<INTEGER>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
+        compressionNegotiationResult: Compression_Item_compressionNegotiationResult,
+        modeV42B: Capabilities,
+        v42bisCompressionActive: Compression_Item_v42bisCompressionActive,
+        v42bisDictionarySize: OPTIONAL<INTEGER>,
+        v42bisStringLength: OPTIONAL<INTEGER>,
+        modeV44: Capabilities,
+        v44CompressionActive: Compression_Item_v44CompressionActive,
+        v44EncoderDictionarySize?: OPTIONAL<INTEGER>,
+        v44EncoderHistorySize?: OPTIONAL<INTEGER>,
+        v44EncoderStringLength?: OPTIONAL<INTEGER>,
+        v44DecoderDictionarySize?: OPTIONAL<INTEGER>,
+        v44DecoderHistorySize?: OPTIONAL<INTEGER>,
+        v44DecoderStringLength?: OPTIONAL<INTEGER>,
+        _unrecognizedExtensionsList: _Element[] = []
     ) {
+        this.compressionNegotiationResult = compressionNegotiationResult;
+        this.modeV42B = modeV42B;
+        this.v42bisCompressionActive = v42bisCompressionActive;
+        this.v42bisDictionarySize = v42bisDictionarySize;
+        this.v42bisStringLength = v42bisStringLength;
+        this.modeV44 = modeV44;
+        this.v44CompressionActive = v44CompressionActive;
+        this.v44EncoderDictionarySize = v44EncoderDictionarySize;
+        this.v44EncoderHistorySize = v44EncoderHistorySize;
+        this.v44EncoderStringLength = v44EncoderStringLength;
+        this.v44DecoderDictionarySize = v44DecoderDictionarySize;
+        this.v44DecoderHistorySize = v44DecoderHistorySize;
+        this.v44DecoderStringLength = v44DecoderStringLength;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
         if (this.v42bisDictionarySize !== undefined) {
                 const _n = typeof this.v42bisDictionarySize === "bigint" ? Number(this.v42bisDictionarySize) : this.v42bisDictionarySize;
                 if (_n < 512 || _n > 65535) {

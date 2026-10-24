@@ -27,26 +27,34 @@ import { Body, _decode_Body, _encode_Body } from "../GDT/Body.ta.mjs";
  */
 export
 class GDTMessage {
+    /**
+     * @summary `header`.
+     * @public
+     * @readonly
+     */
+    public readonly header: Header;
+    /**
+     * @summary `body`.
+     * @public
+     * @readonly
+     */
+    public readonly body?: OPTIONAL<Body>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `header`.
-         * @public
-         * @readonly
-         */
-        readonly header: Header,
-        /**
-         * @summary `body`.
-         * @public
-         * @readonly
-         */
-        readonly body?: OPTIONAL<Body>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        header: Header,
+        body?: OPTIONAL<Body>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.header = header;
+        this.body = body;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a GDTMessage

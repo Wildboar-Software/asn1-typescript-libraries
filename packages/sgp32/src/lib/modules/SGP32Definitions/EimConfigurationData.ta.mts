@@ -71,139 +71,162 @@ import { type VendorSpecificExtension, _decode_VendorSpecificExtension, _encode_
  */
 export
 class EimConfigurationData {
+    /**
+     * @summary `eimId`.
+     * @description
+     * Unique identifier of this Associated eIM inside the eUICC. Length is 1 to
+     * 128 bytes (SGP.32 v1.2, sections 2.11.1.1 and 4.3). Mandatory on addEim,
+     * updateEim, and deleteEim. On updateEim it selects the stored row; the stored
+     * identifier itself stays unchanged.
+     * @public
+     * @readonly
+     */
+    public readonly eimId: UTF8String;
+    /**
+     * @summary `eimFqdn`.
+     * @description
+     * FQDN of the eIM, or of an intermediate server such as an MQTT broker placed
+     * between the eIM and the IoT Device (SGP.32 v1.2, section 2.11.1.1). Required
+     * when eimIdType is eimIdTypeOid or eimIdTypeProprietary. When eimIdType is
+     * eimIdTypeFqdn this component is omitted, because eimId already holds that
+     * FQDN.
+     * @public
+     * @readonly
+     */
+    public readonly eimFqdn?: OPTIONAL<UTF8String>;
+    /**
+     * @summary `eimIdType`.
+     * @description
+     * Encoding of eimId: an OID, an FQDN, or a proprietary string (SGP.32 v1.2,
+     * sections 2.11.1.1 and 4.3). Optional on add. When it is absent the eUICC
+     * stores eimIdTypeProprietary before saving the configuration.
+     * @public
+     * @readonly
+     */
+    public readonly eimIdType?: OPTIONAL<EimIdType>;
+    /**
+     * @summary `counterValue`.
+     * @description
+     * Replay counter for eUICC Packages from this eIM. On addEim it is the initial
+     * value and is mandatory. The eUICC stores the highest counter it has accepted
+     * from this eIM and accepts a later package only when the new counter is
+     * greater. The implementation handles values through 8388607 (0x7FFFFF)
+     * inclusive; a larger value produces counterValueOutOfRange (SGP.32 v1.2,
+     * sections 2.11.1.1 and 5.9.1). On updateEim a lower value is accepted only
+     * together with a new eimPublicKeyData.
+     * @public
+     * @readonly
+     */
+    public readonly counterValue?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `associationToken`.
+     * @description
+     * Optional anti-replay value taken from one eUICC-wide counter. That counter
+     * starts at zero, advances by one each time a token is requested, and
+     * therefore issues 1 as its first token. No operation, including eUICC Memory
+     * Reset, resets it (SGP.32 v1.2, section 2.11.1.1).
+     *
+     * On addEim, the value -1 asks the eUICC to allocate the next token; any other
+     * request omits this component. A value other than -1 on that request produces
+     * invalidAssociationToken (section 5.9.4). On updateEim this component is
+     * omitted. eIM and eUICC signatures are computed over the signed bytes
+     * concatenated with this token; when no token is configured, the value zero is
+     * used.
+     * @public
+     * @readonly
+     */
+    public readonly associationToken?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `eimPublicKeyData`.
+     * @description
+     * eIM public key used to verify eUICC Package signatures, as a raw key or as a
+     * certificate, X.509 encoded (SGP.32 v1.2, section 2.11.1.1). Mandatory on
+     * addEim. On updateEim it may be one of the changed components, and it is
+     * required when counterValue is lowered.
+     * @public
+     * @readonly
+     */
+    public readonly eimPublicKeyData?: OPTIONAL<EimConfigurationData_eimPublicKeyData>;
+    /**
+     * @summary `trustedPublicKeyDataTls`.
+     * @description
+     * Optional TLS or DTLS trust material for this eIM (SGP.32 v1.2, section
+     * 2.11.1.1). It should be present on addEim when eUICCInfo2.ipaMode is ipae
+     * and eimSupportedProtocol has eimRetrieveHttps or eimRetrieveCoaps set. An
+     * IPAd may ignore it. Some IPAd implementations read it back with
+     * GetEimConfigurationData, which requires that addEim included it.
+     * @public
+     * @readonly
+     */
+    public readonly trustedPublicKeyDataTls?: OPTIONAL<EimConfigurationData_trustedPublicKeyDataTls>;
+    /**
+     * @summary `eimSupportedProtocol`.
+     * @description
+     * ESipa transports and transfer methods this eIM supports (SGP.32 v1.2,
+     * sections 2.11.1.1 and 4.2). Optional. When it is absent the eUICC stores the
+     * value in which only the eimProprietary bit is set.
+     * @public
+     * @readonly
+     */
+    public readonly eimSupportedProtocol?: OPTIONAL<EimSupportedProtocol>;
+    /**
+     * @summary `euiccCiPKId`.
+     * @description
+     * CI public key identifier that selects the eUICC certificate used to sign
+     * results returned to this eIM (SGP.32 v1.2, section 2.11.1.1). Optional. When
+     * it is absent the eUICC stores the first entry of euiccCiPKIdListForSigning
+     * in eUICCInfo2. A value outside that list produces ciPKUnknown (section
+     * 3.5.1.1). When several SK.EUICC.ECDSA keys exist, the result is signed with
+     * the key that chains to this CI public key (section 2.11.2.1).
+     * @public
+     * @readonly
+     */
+    public readonly euiccCiPKId?: OPTIONAL<SubjectKeyIdentifier>;
+    /**
+     * @summary `indirectProfileDownload`.
+     * @description
+     * Present when this eIM supports indirect Profile download using the protocol
+     * named by eimSupportedProtocol (SGP.32 v1.2, section 2.11.1.1). On updateEim,
+     * its presence satisfies the rule that at least one updatable component is
+     * supplied.
+     * @public
+     * @readonly
+     */
+    public readonly indirectProfileDownload?: OPTIONAL<NULL>;
+    /**
+     * @summary `eSipaProprietaryProtocolInformation`.
+     * @description
+     * SGP.32 v1.2 does not further define this component. Section 2.11.1.1 and
+     * Annex C end EimConfigurationData at indirectProfileDownload.
+     * @public
+     * @readonly
+     */
+    public readonly eSipaProprietaryProtocolInformation?: OPTIONAL<VendorSpecificExtension>;
+
     constructor (
-        /**
-         * @summary `eimId`.
-         * @description
-         * Unique identifier of this Associated eIM inside the eUICC. Length is 1 to
-         * 128 bytes (SGP.32 v1.2, sections 2.11.1.1 and 4.3). Mandatory on addEim,
-         * updateEim, and deleteEim. On updateEim it selects the stored row; the stored
-         * identifier itself stays unchanged.
-         * @public
-         * @readonly
-         */
-        readonly eimId: UTF8String,
-        /**
-         * @summary `eimFqdn`.
-         * @description
-         * FQDN of the eIM, or of an intermediate server such as an MQTT broker placed
-         * between the eIM and the IoT Device (SGP.32 v1.2, section 2.11.1.1). Required
-         * when eimIdType is eimIdTypeOid or eimIdTypeProprietary. When eimIdType is
-         * eimIdTypeFqdn this component is omitted, because eimId already holds that
-         * FQDN.
-         * @public
-         * @readonly
-         */
-        readonly eimFqdn?: OPTIONAL<UTF8String>,
-        /**
-         * @summary `eimIdType`.
-         * @description
-         * Encoding of eimId: an OID, an FQDN, or a proprietary string (SGP.32 v1.2,
-         * sections 2.11.1.1 and 4.3). Optional on add. When it is absent the eUICC
-         * stores eimIdTypeProprietary before saving the configuration.
-         * @public
-         * @readonly
-         */
-        readonly eimIdType?: OPTIONAL<EimIdType>,
-        /**
-         * @summary `counterValue`.
-         * @description
-         * Replay counter for eUICC Packages from this eIM. On addEim it is the initial
-         * value and is mandatory. The eUICC stores the highest counter it has accepted
-         * from this eIM and accepts a later package only when the new counter is
-         * greater. The implementation handles values through 8388607 (0x7FFFFF)
-         * inclusive; a larger value produces counterValueOutOfRange (SGP.32 v1.2,
-         * sections 2.11.1.1 and 5.9.1). On updateEim a lower value is accepted only
-         * together with a new eimPublicKeyData.
-         * @public
-         * @readonly
-         */
-        readonly counterValue?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `associationToken`.
-         * @description
-         * Optional anti-replay value taken from one eUICC-wide counter. That counter
-         * starts at zero, advances by one each time a token is requested, and
-         * therefore issues 1 as its first token. No operation, including eUICC Memory
-         * Reset, resets it (SGP.32 v1.2, section 2.11.1.1).
-         *
-         * On addEim, the value -1 asks the eUICC to allocate the next token; any other
-         * request omits this component. A value other than -1 on that request produces
-         * invalidAssociationToken (section 5.9.4). On updateEim this component is
-         * omitted. eIM and eUICC signatures are computed over the signed bytes
-         * concatenated with this token; when no token is configured, the value zero is
-         * used.
-         * @public
-         * @readonly
-         */
-        readonly associationToken?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `eimPublicKeyData`.
-         * @description
-         * eIM public key used to verify eUICC Package signatures, as a raw key or as a
-         * certificate, X.509 encoded (SGP.32 v1.2, section 2.11.1.1). Mandatory on
-         * addEim. On updateEim it may be one of the changed components, and it is
-         * required when counterValue is lowered.
-         * @public
-         * @readonly
-         */
-        readonly eimPublicKeyData?: OPTIONAL<EimConfigurationData_eimPublicKeyData>,
-        /**
-         * @summary `trustedPublicKeyDataTls`.
-         * @description
-         * Optional TLS or DTLS trust material for this eIM (SGP.32 v1.2, section
-         * 2.11.1.1). It should be present on addEim when eUICCInfo2.ipaMode is ipae
-         * and eimSupportedProtocol has eimRetrieveHttps or eimRetrieveCoaps set. An
-         * IPAd may ignore it. Some IPAd implementations read it back with
-         * GetEimConfigurationData, which requires that addEim included it.
-         * @public
-         * @readonly
-         */
-        readonly trustedPublicKeyDataTls?: OPTIONAL<EimConfigurationData_trustedPublicKeyDataTls>,
-        /**
-         * @summary `eimSupportedProtocol`.
-         * @description
-         * ESipa transports and transfer methods this eIM supports (SGP.32 v1.2,
-         * sections 2.11.1.1 and 4.2). Optional. When it is absent the eUICC stores the
-         * value in which only the eimProprietary bit is set.
-         * @public
-         * @readonly
-         */
-        readonly eimSupportedProtocol?: OPTIONAL<EimSupportedProtocol>,
-        /**
-         * @summary `euiccCiPKId`.
-         * @description
-         * CI public key identifier that selects the eUICC certificate used to sign
-         * results returned to this eIM (SGP.32 v1.2, section 2.11.1.1). Optional. When
-         * it is absent the eUICC stores the first entry of euiccCiPKIdListForSigning
-         * in eUICCInfo2. A value outside that list produces ciPKUnknown (section
-         * 3.5.1.1). When several SK.EUICC.ECDSA keys exist, the result is signed with
-         * the key that chains to this CI public key (section 2.11.2.1).
-         * @public
-         * @readonly
-         */
-        readonly euiccCiPKId?: OPTIONAL<SubjectKeyIdentifier>,
-        /**
-         * @summary `indirectProfileDownload`.
-         * @description
-         * Present when this eIM supports indirect Profile download using the protocol
-         * named by eimSupportedProtocol (SGP.32 v1.2, section 2.11.1.1). On updateEim,
-         * its presence satisfies the rule that at least one updatable component is
-         * supplied.
-         * @public
-         * @readonly
-         */
-        readonly indirectProfileDownload?: OPTIONAL<NULL>,
-        /**
-         * @summary `eSipaProprietaryProtocolInformation`.
-         * @description
-         * SGP.32 v1.2 does not further define this component. Section 2.11.1.1 and
-         * Annex C end EimConfigurationData at indirectProfileDownload.
-         * @public
-         * @readonly
-         */
-        readonly eSipaProprietaryProtocolInformation?: OPTIONAL<VendorSpecificExtension>
+        eimId: UTF8String,
+        eimFqdn?: OPTIONAL<UTF8String>,
+        eimIdType?: OPTIONAL<EimIdType>,
+        counterValue?: OPTIONAL<INTEGER>,
+        associationToken?: OPTIONAL<INTEGER>,
+        eimPublicKeyData?: OPTIONAL<EimConfigurationData_eimPublicKeyData>,
+        trustedPublicKeyDataTls?: OPTIONAL<EimConfigurationData_trustedPublicKeyDataTls>,
+        eimSupportedProtocol?: OPTIONAL<EimSupportedProtocol>,
+        euiccCiPKId?: OPTIONAL<SubjectKeyIdentifier>,
+        indirectProfileDownload?: OPTIONAL<NULL>,
+        eSipaProprietaryProtocolInformation?: OPTIONAL<VendorSpecificExtension>
     ) {
+        this.eimId = eimId;
+        this.eimFqdn = eimFqdn;
+        this.eimIdType = eimIdType;
+        this.counterValue = counterValue;
+        this.associationToken = associationToken;
+        this.eimPublicKeyData = eimPublicKeyData;
+        this.trustedPublicKeyDataTls = trustedPublicKeyDataTls;
+        this.eimSupportedProtocol = eimSupportedProtocol;
+        this.euiccCiPKId = euiccCiPKId;
+        this.indirectProfileDownload = indirectProfileDownload;
+        this.eSipaProprietaryProtocolInformation = eSipaProprietaryProtocolInformation;
         if (this.eimId.length < 1 || this.eimId.length > 128) {
             throw new ASN1SizeError("EimConfigurationData.eimId violates SIZE constraint");
         }

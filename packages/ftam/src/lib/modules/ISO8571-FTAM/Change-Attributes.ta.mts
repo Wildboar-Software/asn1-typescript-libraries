@@ -87,104 +87,124 @@ import {
  *
  */
 export class Change_Attributes {
+  /**
+   * @summary `pathname`.
+   * @description
+   *
+   * 1988 filename (kernel). Changeable. ISO 8571-2:1988 §12.1.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly pathname?: OPTIONAL<Pathname_Attribute>;
+  /**
+   * @summary `storage_account`.
+   * @description
+   *
+   * Storage group. Changeable. ISO 8571-2:1988 §12.4.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly storage_account?: OPTIONAL<Account_Attribute>;
+  /**
+   * @summary `object_availability`.
+   * @description
+   *
+   * 1988 file-availability (storage group). Changeable.
+   * ISO 8571-2:1988 §12.13.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly object_availability?: OPTIONAL<Object_Availability_Attribute>;
+  /**
+   * @summary `future_Object_size`.
+   * @description
+   *
+   * 1988 future-filesize (storage group). Changeable. Filesize
+   * itself is not settable on change. ISO 8571-2:1988 §12.15 /
+   * §12.14.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly future_Object_size?: OPTIONAL<Object_Size_Attribute>;
+  /**
+   * @summary `access_control`.
+   * @description
+   *
+   * Security group. SET of conditions: OR of conditions, AND of
+   * terms within one. Changeable. ISO 8571-2:1988 §12.16.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly access_control?: OPTIONAL<Access_Control_Change_Attribute>;
+  /**
+   * @summary `path_access_control`.
+   * @description
+   *
+   * Later extension; absent from ISO 8571:1988 Parts 1–4. ASN.1
+   * comment: enhanced-filestore-management FU.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly path_access_control?: OPTIONAL<Access_Control_Change_Attribute>;
+  /**
+   * @summary `legal_qualification`.
+   * @description
+   *
+   * Security group. Changeable. ISO 8571-2:1988 §12.17.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly legal_qualification?: OPTIONAL<Legal_Qualification_Attribute>;
+  /**
+   * @summary `private_use`.
+   * @description
+   *
+   * Private group. Meaning not defined in ISO 8571-2:1988 §12.18.
+   * Changeable.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly private_use?: OPTIONAL<Private_Use_Attribute>;
+  /**
+   * @summary `attribute_extensions`.
+   * @description
+   *
+   * Later extension; absent from ISO 8571:1988 Parts 1–4.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly attribute_extensions?: OPTIONAL<Attribute_Extensions>;
+
   constructor(
-    /**
-     * @summary `pathname`.
-     * @description
-     *
-     * 1988 filename (kernel). Changeable. ISO 8571-2:1988 §12.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly pathname?: OPTIONAL<Pathname_Attribute>,
-    /**
-     * @summary `storage_account`.
-     * @description
-     *
-     * Storage group. Changeable. ISO 8571-2:1988 §12.4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly storage_account?: OPTIONAL<Account_Attribute>,
-    /**
-     * @summary `object_availability`.
-     * @description
-     *
-     * 1988 file-availability (storage group). Changeable.
-     * ISO 8571-2:1988 §12.13.
-     *
-     * @public
-     * @readonly
-     */
-    readonly object_availability?: OPTIONAL<Object_Availability_Attribute>,
-    /**
-     * @summary `future_Object_size`.
-     * @description
-     *
-     * 1988 future-filesize (storage group). Changeable. Filesize
-     * itself is not settable on change. ISO 8571-2:1988 §12.15 /
-     * §12.14.
-     *
-     * @public
-     * @readonly
-     */
-    readonly future_Object_size?: OPTIONAL<Object_Size_Attribute>,
-    /**
-     * @summary `access_control`.
-     * @description
-     *
-     * Security group. SET of conditions: OR of conditions, AND of
-     * terms within one. Changeable. ISO 8571-2:1988 §12.16.
-     *
-     * @public
-     * @readonly
-     */
-    readonly access_control?: OPTIONAL<Access_Control_Change_Attribute>,
-    /**
-     * @summary `path_access_control`.
-     * @description
-     *
-     * Later extension; absent from ISO 8571:1988 Parts 1–4. ASN.1
-     * comment: enhanced-filestore-management FU.
-     *
-     * @public
-     * @readonly
-     */
-    readonly path_access_control?: OPTIONAL<Access_Control_Change_Attribute>,
-    /**
-     * @summary `legal_qualification`.
-     * @description
-     *
-     * Security group. Changeable. ISO 8571-2:1988 §12.17.
-     *
-     * @public
-     * @readonly
-     */
-    readonly legal_qualification?: OPTIONAL<Legal_Qualification_Attribute>,
-    /**
-     * @summary `private_use`.
-     * @description
-     *
-     * Private group. Meaning not defined in ISO 8571-2:1988 §12.18.
-     * Changeable.
-     *
-     * @public
-     * @readonly
-     */
-    readonly private_use?: OPTIONAL<Private_Use_Attribute>,
-    /**
-     * @summary `attribute_extensions`.
-     * @description
-     *
-     * Later extension; absent from ISO 8571:1988 Parts 1–4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly attribute_extensions?: OPTIONAL<Attribute_Extensions>
-  ) {}
+    pathname?: OPTIONAL<Pathname_Attribute>,
+    storage_account?: OPTIONAL<Account_Attribute>,
+    object_availability?: OPTIONAL<Object_Availability_Attribute>,
+    future_Object_size?: OPTIONAL<Object_Size_Attribute>,
+    access_control?: OPTIONAL<Access_Control_Change_Attribute>,
+    path_access_control?: OPTIONAL<Access_Control_Change_Attribute>,
+    legal_qualification?: OPTIONAL<Legal_Qualification_Attribute>,
+    private_use?: OPTIONAL<Private_Use_Attribute>,
+    attribute_extensions?: OPTIONAL<Attribute_Extensions>
+  ) {
+    this.pathname = pathname;
+    this.storage_account = storage_account;
+    this.object_availability = object_availability;
+    this.future_Object_size = future_Object_size;
+    this.access_control = access_control;
+    this.path_access_control = path_access_control;
+    this.legal_qualification = legal_qualification;
+    this.private_use = private_use;
+    this.attribute_extensions = attribute_extensions;
+  }
 
   /**
    * @summary Restructures an object into a Change_Attributes

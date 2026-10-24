@@ -56,67 +56,77 @@ import { OtherLogotypeInfo, _decode_OtherLogotypeInfo, _encode_OtherLogotypeInfo
  */
 export
 class LogotypeExtn {
+    /**
+     * Community logotypes for communities with which the issuer is
+     * affiliated. Each entry is a different community. A community
+     * logotype is a shared service mark: many issuers co-brand one
+     * widely recognized mark, as independent card issuers do with
+     * a global card brand. Order is preference, most preferred
+     * first and least preferred last. A client may show a subset
+     * of this sequence.
+     *
+     * The issuer asserts the affiliation. How the issuer checks
+     * that claim is outside the scope of RFC 3709.
+     *
+     * [RFC 3709, section 2](https://www.rfc-editor.org/rfc/rfc3709#section-2)
+     * and [section 4.1](https://www.rfc-editor.org/rfc/rfc3709#section-4.1).
+     * @public
+     * @readonly
+     */
+    public readonly communityLogos?: OPTIONAL<LogotypeInfo[]>;
+    /**
+     * Logotype of the organization named as the issuer. It is
+     * consistent with, and its presence requires, an organization
+     * name in the organization attribute of the issuer field. The
+     * issuer asserts this representation. How that is checked is
+     * outside the scope of RFC 3709.
+     *
+     * [RFC 3709, section 2](https://www.rfc-editor.org/rfc/rfc3709#section-2)
+     * and [section 4.1](https://www.rfc-editor.org/rfc/rfc3709#section-4.1).
+     * @public
+     * @readonly
+     */
+    public readonly issuerLogo?: OPTIONAL<LogotypeInfo>;
+    /**
+     * Logotype of the organization named as the subject. It is
+     * consistent with, and its presence requires, an organization
+     * name in the organization attribute of the subject field.
+     * The issuer asserts this representation. How that is checked
+     * is outside the scope of RFC 3709.
+     *
+     * [RFC 3709, section 2](https://www.rfc-editor.org/rfc/rfc3709#section-2)
+     * and [section 4.1](https://www.rfc-editor.org/rfc/rfc3709#section-4.1).
+     * @public
+     * @readonly
+     */
+    public readonly subjectLogo?: OPTIONAL<LogotypeInfo>;
+    /**
+     * Logotypes outside the three standard classes: partners,
+     * products, services, or anything else the local application
+     * chooses to show. Each entry's OID selects the class. This
+     * specification defines {@link id_logo_loyalty} (more than one
+     * is allowed) and {@link id_logo_background} (at most one).
+     * Any other OID is a local definition, and what it means is up
+     * to the application that displays it.
+     *
+     * [RFC 3709, section 4.1](https://www.rfc-editor.org/rfc/rfc3709#section-4.1)
+     * and [section 4.2](https://www.rfc-editor.org/rfc/rfc3709#section-4.2).
+     * @public
+     * @readonly
+     */
+    public readonly otherLogos?: OPTIONAL<OtherLogotypeInfo[]>;
+
     constructor (
-        /**
-         * Community logotypes for communities with which the issuer is
-         * affiliated. Each entry is a different community. A community
-         * logotype is a shared service mark: many issuers co-brand one
-         * widely recognized mark, as independent card issuers do with
-         * a global card brand. Order is preference, most preferred
-         * first and least preferred last. A client may show a subset
-         * of this sequence.
-         *
-         * The issuer asserts the affiliation. How the issuer checks
-         * that claim is outside the scope of RFC 3709.
-         *
-         * [RFC 3709, section 2](https://www.rfc-editor.org/rfc/rfc3709#section-2)
-         * and [section 4.1](https://www.rfc-editor.org/rfc/rfc3709#section-4.1).
-         * @public
-         * @readonly
-         */
-        readonly communityLogos?: OPTIONAL<LogotypeInfo[]>,
-        /**
-         * Logotype of the organization named as the issuer. It is
-         * consistent with, and its presence requires, an organization
-         * name in the organization attribute of the issuer field. The
-         * issuer asserts this representation. How that is checked is
-         * outside the scope of RFC 3709.
-         *
-         * [RFC 3709, section 2](https://www.rfc-editor.org/rfc/rfc3709#section-2)
-         * and [section 4.1](https://www.rfc-editor.org/rfc/rfc3709#section-4.1).
-         * @public
-         * @readonly
-         */
-        readonly issuerLogo?: OPTIONAL<LogotypeInfo>,
-        /**
-         * Logotype of the organization named as the subject. It is
-         * consistent with, and its presence requires, an organization
-         * name in the organization attribute of the subject field.
-         * The issuer asserts this representation. How that is checked
-         * is outside the scope of RFC 3709.
-         *
-         * [RFC 3709, section 2](https://www.rfc-editor.org/rfc/rfc3709#section-2)
-         * and [section 4.1](https://www.rfc-editor.org/rfc/rfc3709#section-4.1).
-         * @public
-         * @readonly
-         */
-        readonly subjectLogo?: OPTIONAL<LogotypeInfo>,
-        /**
-         * Logotypes outside the three standard classes: partners,
-         * products, services, or anything else the local application
-         * chooses to show. Each entry's OID selects the class. This
-         * specification defines {@link id_logo_loyalty} (more than one
-         * is allowed) and {@link id_logo_background} (at most one).
-         * Any other OID is a local definition, and what it means is up
-         * to the application that displays it.
-         *
-         * [RFC 3709, section 4.1](https://www.rfc-editor.org/rfc/rfc3709#section-4.1)
-         * and [section 4.2](https://www.rfc-editor.org/rfc/rfc3709#section-4.2).
-         * @public
-         * @readonly
-         */
-        readonly otherLogos?: OPTIONAL<OtherLogotypeInfo[]>
-    ) {}
+        communityLogos?: OPTIONAL<LogotypeInfo[]>,
+        issuerLogo?: OPTIONAL<LogotypeInfo>,
+        subjectLogo?: OPTIONAL<LogotypeInfo>,
+        otherLogos?: OPTIONAL<OtherLogotypeInfo[]>
+    ) {
+        this.communityLogos = communityLogos;
+        this.issuerLogo = issuerLogo;
+        this.subjectLogo = subjectLogo;
+        this.otherLogos = otherLogos;
+    }
 
     /**
      * @summary Restructures an object into a LogotypeExtn

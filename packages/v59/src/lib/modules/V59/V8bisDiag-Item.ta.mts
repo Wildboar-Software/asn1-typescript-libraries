@@ -64,76 +64,91 @@ import { V8bisDiag_Item_ackNak, _decode_V8bisDiag_Item_ackNak, _encode_V8bisDiag
  */
 export
 class V8bisDiag_Item {
+    /**
+     * @summary `v8bisTransaction`.
+     * @description
+     *
+     * V.8 bis transaction type used, INTEGER 1..13. Tag-ID `0801`. ITU-T
+     * Rec. V.59 (11/2000) §6.8.2.
+     * @public
+     * @readonly
+     */
+    public readonly v8bisTransaction: INTEGER;
+    /**
+     * @summary `mR`.
+     * @description
+     *
+     * MR type and sequence. Tag-IDs `0802`/`0803`. ITU-T Rec. V.59
+     * (11/2000) §6.8.2.
+     * @public
+     * @readonly
+     */
+    public readonly mR: V8bisDiag_Item_mR;
+    /**
+     * @summary `cR`.
+     * @description
+     *
+     * CR type and sequence. Tag-IDs `0804`/`0805`. ITU-T Rec. V.59
+     * (11/2000) §6.8.2.
+     * @public
+     * @readonly
+     */
+    public readonly cR: V8bisDiag_Item_cR;
+    /**
+     * @summary `cL`.
+     * @description
+     *
+     * CL sequence. Tag-ID `0806`. ITU-T Rec. V.59 (11/2000) §6.8.2.
+     * @public
+     * @readonly
+     */
+    public readonly cL: V8bisDiag_Item_cL;
+    /**
+     * @summary `cLR`.
+     * @description
+     *
+     * CLR sequence. Tag-ID `0807`. ITU-T Rec. V.59 (11/2000) §6.8.2.
+     * @public
+     * @readonly
+     */
+    public readonly cLR: V8bisDiag_Item_cLR;
+    /**
+     * @summary `eS`.
+     * @description
+     *
+     * ES type and sequence. Tag-IDs `0808`/`0809`. ITU-T Rec. V.59
+     * (11/2000) §6.8.2.
+     * @public
+     * @readonly
+     */
+    public readonly eS: V8bisDiag_Item_eS;
+    /**
+     * @summary `ackNak`.
+     * @description
+     *
+     * ACK and NAK message types. Tag-IDs `080A`/`080B`. ITU-T Rec. V.59
+     * (11/2000) §6.8.2.
+     * @public
+     * @readonly
+     */
+    public readonly ackNak: V8bisDiag_Item_ackNak;
+
     constructor (
-        /**
-         * @summary `v8bisTransaction`.
-         * @description
-         *
-         * V.8 bis transaction type used, INTEGER 1..13. Tag-ID `0801`. ITU-T
-         * Rec. V.59 (11/2000) §6.8.2.
-         * @public
-         * @readonly
-         */
-        readonly v8bisTransaction: INTEGER,
-        /**
-         * @summary `mR`.
-         * @description
-         *
-         * MR type and sequence. Tag-IDs `0802`/`0803`. ITU-T Rec. V.59
-         * (11/2000) §6.8.2.
-         * @public
-         * @readonly
-         */
-        readonly mR: V8bisDiag_Item_mR,
-        /**
-         * @summary `cR`.
-         * @description
-         *
-         * CR type and sequence. Tag-IDs `0804`/`0805`. ITU-T Rec. V.59
-         * (11/2000) §6.8.2.
-         * @public
-         * @readonly
-         */
-        readonly cR: V8bisDiag_Item_cR,
-        /**
-         * @summary `cL`.
-         * @description
-         *
-         * CL sequence. Tag-ID `0806`. ITU-T Rec. V.59 (11/2000) §6.8.2.
-         * @public
-         * @readonly
-         */
-        readonly cL: V8bisDiag_Item_cL,
-        /**
-         * @summary `cLR`.
-         * @description
-         *
-         * CLR sequence. Tag-ID `0807`. ITU-T Rec. V.59 (11/2000) §6.8.2.
-         * @public
-         * @readonly
-         */
-        readonly cLR: V8bisDiag_Item_cLR,
-        /**
-         * @summary `eS`.
-         * @description
-         *
-         * ES type and sequence. Tag-IDs `0808`/`0809`. ITU-T Rec. V.59
-         * (11/2000) §6.8.2.
-         * @public
-         * @readonly
-         */
-        readonly eS: V8bisDiag_Item_eS,
-        /**
-         * @summary `ackNak`.
-         * @description
-         *
-         * ACK and NAK message types. Tag-IDs `080A`/`080B`. ITU-T Rec. V.59
-         * (11/2000) §6.8.2.
-         * @public
-         * @readonly
-         */
-        readonly ackNak: V8bisDiag_Item_ackNak
+        v8bisTransaction: INTEGER,
+        mR: V8bisDiag_Item_mR,
+        cR: V8bisDiag_Item_cR,
+        cL: V8bisDiag_Item_cL,
+        cLR: V8bisDiag_Item_cLR,
+        eS: V8bisDiag_Item_eS,
+        ackNak: V8bisDiag_Item_ackNak
     ) {
+        this.v8bisTransaction = v8bisTransaction;
+        this.mR = mR;
+        this.cR = cR;
+        this.cL = cL;
+        this.cLR = cLR;
+        this.eS = eS;
+        this.ackNak = ackNak;
         {
                 const _n = typeof this.v8bisTransaction === "bigint" ? Number(this.v8bisTransaction) : this.v8bisTransaction;
                 if (_n < 1 || _n > 13) {

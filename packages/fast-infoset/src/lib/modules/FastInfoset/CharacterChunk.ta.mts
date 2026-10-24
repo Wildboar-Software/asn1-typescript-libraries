@@ -36,17 +36,21 @@ import {
  *
  */
 export class CharacterChunk {
+  /**
+   * @summary `character_codes`.
+   * @description Concatenated [character code] values of the
+   * chunk; CONTENT CHARACTER CHUNK category. ITU-T Rec.
+   * X.891 (05/2005) §7.7.5–§7.7.6.
+   * @public
+   * @readonly
+   */
+  public readonly character_codes: NonIdentifyingStringOrIndex;
+
   constructor(
-    /**
-     * @summary `character_codes`.
-     * @description Concatenated [character code] values of the
-     * chunk; CONTENT CHARACTER CHUNK category. ITU-T Rec.
-     * X.891 (05/2005) §7.7.5–§7.7.6.
-     * @public
-     * @readonly
-     */
-    readonly character_codes: NonIdentifyingStringOrIndex
-  ) {}
+    character_codes: NonIdentifyingStringOrIndex
+  ) {
+    this.character_codes = character_codes;
+  }
 
   /**
    * @summary Restructures an object into a CharacterChunk

@@ -33,30 +33,36 @@ import {
  *
  */
 export class AuthorizationData_Item {
+  /**
+   * @summary `ad_type`.
+   * @description
+   *
+   * Format of `ad-data`. Negative values reserved for local use;
+   * non-negative for registered use ([RFC 4120 §5.2.6](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.6), [RFC 4120 §7.5.4](https://datatracker.ietf.org/doc/html/rfc4120#section-7.5.4)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly ad_type: Int32;
+  /**
+   * @summary `ad_data`.
+   * @description
+   *
+   * Authorization data interpreted per `ad-type`
+   * ([RFC 4120 §5.2.6](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.6)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly ad_data: OCTET_STRING;
+
   constructor(
-    /**
-     * @summary `ad_type`.
-     * @description
-     *
-     * Format of `ad-data`. Negative values reserved for local use;
-     * non-negative for registered use ([RFC 4120 §5.2.6](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.6), [RFC 4120 §7.5.4](https://datatracker.ietf.org/doc/html/rfc4120#section-7.5.4)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly ad_type: Int32,
-    /**
-     * @summary `ad_data`.
-     * @description
-     *
-     * Authorization data interpreted per `ad-type`
-     * ([RFC 4120 §5.2.6](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.6)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly ad_data: OCTET_STRING
-  ) {}
+    ad_type: Int32,
+    ad_data: OCTET_STRING
+  ) {
+    this.ad_type = ad_type;
+    this.ad_data = ad_data;
+  }
 
   /**
    * @summary Restructures an object into a AuthorizationData_Item

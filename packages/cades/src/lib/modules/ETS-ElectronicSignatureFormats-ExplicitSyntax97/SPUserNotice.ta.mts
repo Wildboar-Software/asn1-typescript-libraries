@@ -32,29 +32,35 @@ import { DisplayText, _decode_DisplayText, _encode_DisplayText } from "../ETS-El
  */
 export
 class SPUserNotice {
+    /**
+     * @summary `noticeRef`.
+     * @description
+     *
+     * Reference to a notice stored elsewhere (organization
+     * plus notice numbers).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly noticeRef?: OPTIONAL<NoticeReference>;
+    /**
+     * @summary `explicitText`.
+     * @description
+     *
+     * Notice text to display, up to 200 characters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly explicitText?: OPTIONAL<DisplayText>;
+
     constructor (
-        /**
-         * @summary `noticeRef`.
-         * @description
-         *
-         * Reference to a notice stored elsewhere (organization
-         * plus notice numbers).
-         *
-         * @public
-         * @readonly
-         */
-        readonly noticeRef?: OPTIONAL<NoticeReference>,
-        /**
-         * @summary `explicitText`.
-         * @description
-         *
-         * Notice text to display, up to 200 characters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly explicitText?: OPTIONAL<DisplayText>
-    ) {}
+        noticeRef?: OPTIONAL<NoticeReference>,
+        explicitText?: OPTIONAL<DisplayText>
+    ) {
+        this.noticeRef = noticeRef;
+        this.explicitText = explicitText;
+    }
 
     /**
      * @summary Restructures an object into a SPUserNotice

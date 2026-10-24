@@ -41,30 +41,36 @@ import {
  */
 export
 class OtherCertID {
+    /**
+     * @summary `otherCertHash`.
+     * @description
+     *
+     * Hash of the referenced certificate. Shall match that
+     * certificate.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly otherCertHash: OtherHash;
+    /**
+     * @summary `issuerSerial`.
+     * @description
+     *
+     * Issuer name and serial number. Required when this
+     * identifier is used in `complete-certificate-references`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly issuerSerial?: OPTIONAL<IssuerSerial>;
+
     constructor (
-        /**
-         * @summary `otherCertHash`.
-         * @description
-         *
-         * Hash of the referenced certificate. Shall match that
-         * certificate.
-         *
-         * @public
-         * @readonly
-         */
-        readonly otherCertHash: OtherHash,
-        /**
-         * @summary `issuerSerial`.
-         * @description
-         *
-         * Issuer name and serial number. Required when this
-         * identifier is used in `complete-certificate-references`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly issuerSerial?: OPTIONAL<IssuerSerial>
-    ) {}
+        otherCertHash: OtherHash,
+        issuerSerial?: OPTIONAL<IssuerSerial>
+    ) {
+        this.otherCertHash = otherCertHash;
+        this.issuerSerial = issuerSerial;
+    }
 
     /**
      * @summary Restructures an object into a OtherCertID

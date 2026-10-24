@@ -37,26 +37,34 @@ import {
  *
  */
 export class BiometricProcess {
+    /**
+     * @summary `subprocessIndexList`.
+     * @public
+     * @readonly
+     */
+    public readonly subprocessIndexList: SubprocessIndexList;
+    /**
+     * @summary `bpuInputExecutionInformationList`.
+     * @public
+     * @readonly
+     */
+    public readonly bpuInputExecutionInformationList?: OPTIONAL<BPUIOExecutionInformationList>;
+    /**
+     * @summary `bpuOuputExecutionInformationList`.
+     * @public
+     * @readonly
+     */
+    public readonly bpuOuputExecutionInformationList?: OPTIONAL<BPUIOExecutionInformationList>;
+
     constructor(
-        /**
-         * @summary `subprocessIndexList`.
-         * @public
-         * @readonly
-         */
-        readonly subprocessIndexList: SubprocessIndexList,
-        /**
-         * @summary `bpuInputExecutionInformationList`.
-         * @public
-         * @readonly
-         */
-        readonly bpuInputExecutionInformationList?: OPTIONAL<BPUIOExecutionInformationList>,
-        /**
-         * @summary `bpuOuputExecutionInformationList`.
-         * @public
-         * @readonly
-         */
-        readonly bpuOuputExecutionInformationList?: OPTIONAL<BPUIOExecutionInformationList>
-    ) {}
+        subprocessIndexList: SubprocessIndexList,
+        bpuInputExecutionInformationList?: OPTIONAL<BPUIOExecutionInformationList>,
+        bpuOuputExecutionInformationList?: OPTIONAL<BPUIOExecutionInformationList>
+    ) {
+        this.subprocessIndexList = subprocessIndexList;
+        this.bpuInputExecutionInformationList = bpuInputExecutionInformationList;
+        this.bpuOuputExecutionInformationList = bpuOuputExecutionInformationList;
+    }
 
     /**
      * @summary Restructures an object into a BiometricProcess

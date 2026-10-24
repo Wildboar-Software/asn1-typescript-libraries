@@ -40,31 +40,37 @@ import {
  *
  */
 export class PrincipalName {
+  /**
+   * @summary `name_type`.
+   * @description
+   *
+   * Type of the following name. Pre-defined values in [RFC 4120 §6.2](https://datatracker.ietf.org/doc/html/rfc4120#section-6.2) /
+   * [RFC 4120 §7.5.8](https://datatracker.ietf.org/doc/html/rfc4120#section-7.5.8). SHOULD be treated as a hint; ignoring type, no two
+   * names can be the same ([RFC 4120 §5.2.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.2)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly name_type: Int32;
+  /**
+   * @summary `name_string`.
+   * @description
+   *
+   * Sequence of name components, each a `KerberosString`
+   * ([RFC 4120 §5.2.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.2)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly name_string: KerberosString[];
+
   constructor(
-    /**
-     * @summary `name_type`.
-     * @description
-     *
-     * Type of the following name. Pre-defined values in [RFC 4120 §6.2](https://datatracker.ietf.org/doc/html/rfc4120#section-6.2) /
-     * [RFC 4120 §7.5.8](https://datatracker.ietf.org/doc/html/rfc4120#section-7.5.8). SHOULD be treated as a hint; ignoring type, no two
-     * names can be the same ([RFC 4120 §5.2.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.2)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly name_type: Int32,
-    /**
-     * @summary `name_string`.
-     * @description
-     *
-     * Sequence of name components, each a `KerberosString`
-     * ([RFC 4120 §5.2.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.2)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly name_string: KerberosString[]
-  ) {}
+    name_type: Int32,
+    name_string: KerberosString[]
+  ) {
+    this.name_type = name_type;
+    this.name_string = name_string;
+  }
 
   /**
    * @summary Restructures an object into a PrincipalName

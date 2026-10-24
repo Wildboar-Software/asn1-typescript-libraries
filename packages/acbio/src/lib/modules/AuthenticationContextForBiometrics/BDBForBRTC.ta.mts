@@ -69,56 +69,74 @@ import {
  *
  */
 export class BDBForBRTC {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: OPTIONAL<Version>;
+    /**
+     * @summary `originalBDBHashList`.
+     * @public
+     * @readonly
+     */
+    public readonly originalBDBHashList: HashList;
+    /**
+     * @summary `originalBIRReferrer`.
+     * @public
+     * @readonly
+     */
+    public readonly originalBIRReferrer: OPTIONAL<URI>;
+    /**
+     * @summary `originalBIRPatronFormat`.
+     * @public
+     * @readonly
+     */
+    public readonly originalBIRPatronFormat: PatronFormat;
+    /**
+     * @summary `originalBDBPosition`.
+     * @public
+     * @readonly
+     */
+    public readonly originalBDBPosition: INTEGER;
+    /**
+     * @summary `userInformation`.
+     * @public
+     * @readonly
+     */
+    public readonly userInformation?: OPTIONAL<UserInformation>;
+    /**
+     * @summary `pkiCertificateInformation`.
+     * @public
+     * @readonly
+     */
+    public readonly pkiCertificateInformation?: OPTIONAL<PKICertificateInformation>;
+    /**
+     * @summary `enrolmentACBioInstances`.
+     * @public
+     * @readonly
+     */
+    public readonly enrolmentACBioInstances?: OPTIONAL<SequenceOfACBioInstances>;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: OPTIONAL<Version>,
-        /**
-         * @summary `originalBDBHashList`.
-         * @public
-         * @readonly
-         */
-        readonly originalBDBHashList: HashList,
-        /**
-         * @summary `originalBIRReferrer`.
-         * @public
-         * @readonly
-         */
-        readonly originalBIRReferrer: OPTIONAL<URI>,
-        /**
-         * @summary `originalBIRPatronFormat`.
-         * @public
-         * @readonly
-         */
-        readonly originalBIRPatronFormat: PatronFormat,
-        /**
-         * @summary `originalBDBPosition`.
-         * @public
-         * @readonly
-         */
-        readonly originalBDBPosition: INTEGER,
-        /**
-         * @summary `userInformation`.
-         * @public
-         * @readonly
-         */
-        readonly userInformation?: OPTIONAL<UserInformation>,
-        /**
-         * @summary `pkiCertificateInformation`.
-         * @public
-         * @readonly
-         */
-        readonly pkiCertificateInformation?: OPTIONAL<PKICertificateInformation>,
-        /**
-         * @summary `enrolmentACBioInstances`.
-         * @public
-         * @readonly
-         */
-        readonly enrolmentACBioInstances?: OPTIONAL<SequenceOfACBioInstances>
-    ) {}
+        version: OPTIONAL<Version>,
+        originalBDBHashList: HashList,
+        originalBIRReferrer: OPTIONAL<URI>,
+        originalBIRPatronFormat: PatronFormat,
+        originalBDBPosition: INTEGER,
+        userInformation?: OPTIONAL<UserInformation>,
+        pkiCertificateInformation?: OPTIONAL<PKICertificateInformation>,
+        enrolmentACBioInstances?: OPTIONAL<SequenceOfACBioInstances>
+    ) {
+        this.version = version;
+        this.originalBDBHashList = originalBDBHashList;
+        this.originalBIRReferrer = originalBIRReferrer;
+        this.originalBIRPatronFormat = originalBIRPatronFormat;
+        this.originalBDBPosition = originalBDBPosition;
+        this.userInformation = userInformation;
+        this.pkiCertificateInformation = pkiCertificateInformation;
+        this.enrolmentACBioInstances = enrolmentACBioInstances;
+    }
 
     /**
      * @summary Restructures an object into a BDBForBRTC

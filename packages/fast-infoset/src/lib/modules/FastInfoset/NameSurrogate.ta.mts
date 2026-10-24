@@ -41,36 +41,44 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class NameSurrogate {
+  /**
+   * @summary `prefix_string_index`.
+   * @description PREFIX table index. Present only if
+   * `namespace-name-string-index` is present (prefixed
+   * name). ITU-T Rec. X.891 (05/2005) §7.15.4–§7.15.5,
+   * §8.5.3 a.
+   * @public
+   * @readonly
+   */
+  public readonly prefix_string_index: OPTIONAL<INTEGER>;
+  /**
+   * @summary `namespace_name_string_index`.
+   * @description NAMESPACE NAME table index. Absent only
+   * when the name has no namespace (and then `prefix` is
+   * also absent). ITU-T Rec. X.891 (05/2005) §7.15.4,
+   * §8.5.3 b–c.
+   * @public
+   * @readonly
+   */
+  public readonly namespace_name_string_index: OPTIONAL<INTEGER>;
+  /**
+   * @summary `local_name_string_index`.
+   * @description LOCAL NAME table index; always present.
+   * ITU-T Rec. X.891 (05/2005) §7.15.4, §8.5.2 c.
+   * @public
+   * @readonly
+   */
+  public readonly local_name_string_index: INTEGER;
+
   constructor(
-    /**
-     * @summary `prefix_string_index`.
-     * @description PREFIX table index. Present only if
-     * `namespace-name-string-index` is present (prefixed
-     * name). ITU-T Rec. X.891 (05/2005) §7.15.4–§7.15.5,
-     * §8.5.3 a.
-     * @public
-     * @readonly
-     */
-    readonly prefix_string_index: OPTIONAL<INTEGER>,
-    /**
-     * @summary `namespace_name_string_index`.
-     * @description NAMESPACE NAME table index. Absent only
-     * when the name has no namespace (and then `prefix` is
-     * also absent). ITU-T Rec. X.891 (05/2005) §7.15.4,
-     * §8.5.3 b–c.
-     * @public
-     * @readonly
-     */
-    readonly namespace_name_string_index: OPTIONAL<INTEGER>,
-    /**
-     * @summary `local_name_string_index`.
-     * @description LOCAL NAME table index; always present.
-     * ITU-T Rec. X.891 (05/2005) §7.15.4, §8.5.2 c.
-     * @public
-     * @readonly
-     */
-    readonly local_name_string_index: INTEGER
-  ) {}
+    prefix_string_index: OPTIONAL<INTEGER>,
+    namespace_name_string_index: OPTIONAL<INTEGER>,
+    local_name_string_index: INTEGER
+  ) {
+    this.prefix_string_index = prefix_string_index;
+    this.namespace_name_string_index = namespace_name_string_index;
+    this.local_name_string_index = local_name_string_index;
+  }
 
   /**
    * @summary Restructures an object into a NameSurrogate

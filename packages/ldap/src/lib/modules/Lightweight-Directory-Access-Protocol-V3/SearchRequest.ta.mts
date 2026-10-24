@@ -71,104 +71,124 @@ import {
  *
  */
 export class SearchRequest {
+  /**
+   * @summary `baseObject`.
+   * @description
+   *
+   * Base DN (or empty for root DSE). Alias handling depends on
+   * `derefAliases`.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly baseObject: LDAPDN;
+  /**
+   * @summary `scope`.
+   * @description
+   *
+   * `baseObject` = that entry only; `singleLevel` = immediate
+   * children, not the base; `wholeSubtree` = base plus all
+   * subordinates. Extensible.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly scope: SearchRequest_scope;
+  /**
+   * @summary `derefAliases`.
+   * @description
+   *
+   * Alias deref is recursive; servers MUST detect loops. Not an
+   * extensible ENUMERATED in RFC 4511.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly derefAliases: SearchRequest_derefAliases;
+  /**
+   * @summary `sizeLimit`.
+   * @description
+   *
+   * Max entries returned. 0 = no client-requested limit. Range
+   * 0..maxInt.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly sizeLimit: INTEGER;
+  /**
+   * @summary `timeLimit`.
+   * @description
+   *
+   * Max seconds. 0 = no client-requested limit. Range 0..maxInt.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly timeLimit: INTEGER;
+  /**
+   * @summary `typesOnly`.
+   * @description
+   *
+   * TRUE: return attribute descriptions only (`vals` empty). FALSE:
+   * descriptions and values.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly typesOnly: BOOLEAN;
+  /**
+   * @summary `filter`.
+   * @description
+   *
+   * Three-valued logic (TRUE/FALSE/Undefined). FALSE or Undefined →
+   * entry omitted. Unrecognized types/rules → Undefined, not an
+   * error.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly filter: Filter;
+  /**
+   * @summary `attributes`.
+   * @description
+   *
+   * Empty list = all user attributes. `"*"` = all user attrs plus
+   * any listed operational. `"1.1"` alone = no attributes. Duplicates
+   * and unknown names are ignored. Operational attrs only if named.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly attributes: AttributeSelection;
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  public readonly _unrecognizedExtensionsList: _Element[];
+
   constructor(
-    /**
-     * @summary `baseObject`.
-     * @description
-     *
-     * Base DN (or empty for root DSE). Alias handling depends on
-     * `derefAliases`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly baseObject: LDAPDN,
-    /**
-     * @summary `scope`.
-     * @description
-     *
-     * `baseObject` = that entry only; `singleLevel` = immediate
-     * children, not the base; `wholeSubtree` = base plus all
-     * subordinates. Extensible.
-     *
-     * @public
-     * @readonly
-     */
-    readonly scope: SearchRequest_scope,
-    /**
-     * @summary `derefAliases`.
-     * @description
-     *
-     * Alias deref is recursive; servers MUST detect loops. Not an
-     * extensible ENUMERATED in RFC 4511.
-     *
-     * @public
-     * @readonly
-     */
-    readonly derefAliases: SearchRequest_derefAliases,
-    /**
-     * @summary `sizeLimit`.
-     * @description
-     *
-     * Max entries returned. 0 = no client-requested limit. Range
-     * 0..maxInt.
-     *
-     * @public
-     * @readonly
-     */
-    readonly sizeLimit: INTEGER,
-    /**
-     * @summary `timeLimit`.
-     * @description
-     *
-     * Max seconds. 0 = no client-requested limit. Range 0..maxInt.
-     *
-     * @public
-     * @readonly
-     */
-    readonly timeLimit: INTEGER,
-    /**
-     * @summary `typesOnly`.
-     * @description
-     *
-     * TRUE: return attribute descriptions only (`vals` empty). FALSE:
-     * descriptions and values.
-     *
-     * @public
-     * @readonly
-     */
-    readonly typesOnly: BOOLEAN,
-    /**
-     * @summary `filter`.
-     * @description
-     *
-     * Three-valued logic (TRUE/FALSE/Undefined). FALSE or Undefined →
-     * entry omitted. Unrecognized types/rules → Undefined, not an
-     * error.
-     *
-     * @public
-     * @readonly
-     */
-    readonly filter: Filter,
-    /**
-     * @summary `attributes`.
-     * @description
-     *
-     * Empty list = all user attributes. `"*"` = all user attrs plus
-     * any listed operational. `"1.1"` alone = no attributes. Duplicates
-     * and unknown names are ignored. Operational attrs only if named.
-     *
-     * @public
-     * @readonly
-     */
-    readonly attributes: AttributeSelection,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = []
-  ) {}
+    baseObject: LDAPDN,
+    scope: SearchRequest_scope,
+    derefAliases: SearchRequest_derefAliases,
+    sizeLimit: INTEGER,
+    timeLimit: INTEGER,
+    typesOnly: BOOLEAN,
+    filter: Filter,
+    attributes: AttributeSelection,
+    _unrecognizedExtensionsList: _Element[] = []
+  ) {
+    this.baseObject = baseObject;
+    this.scope = scope;
+    this.derefAliases = derefAliases;
+    this.sizeLimit = sizeLimit;
+    this.timeLimit = timeLimit;
+    this.typesOnly = typesOnly;
+    this.filter = filter;
+    this.attributes = attributes;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+  }
 
   /**
    * @summary Restructures an object into a SearchRequest

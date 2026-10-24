@@ -40,58 +40,68 @@ import {
  *
  */
 export class CertID {
+    /**
+     * @summary `hashAlgorithm`.
+     * @description
+     *
+     * Hash algorithm used to generate `issuerNameHash` and
+     * `issuerKeyHash`
+     * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly hashAlgorithm: AlgorithmIdentifier;
+    /**
+     * @summary `issuerNameHash`.
+     * @description
+     *
+     * Hash of the issuer's distinguished name, calculated over the
+     * DER encoding of the issuer's name field in the certificate
+     * being checked
+     * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly issuerNameHash: OCTET_STRING;
+    /**
+     * @summary `issuerKeyHash`.
+     * @description
+     *
+     * Hash of the issuer's public key, calculated over the value
+     * (excluding tag and length) of the subject public key field
+     * in the issuer's certificate
+     * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly issuerKeyHash: OCTET_STRING;
+    /**
+     * @summary `serialNumber`.
+     * @description
+     *
+     * Serial number of the certificate for which status is
+     * requested
+     * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serialNumber: CertificateSerialNumber;
+
     constructor(
-        /**
-         * @summary `hashAlgorithm`.
-         * @description
-         *
-         * Hash algorithm used to generate `issuerNameHash` and
-         * `issuerKeyHash`
-         * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly hashAlgorithm: AlgorithmIdentifier,
-        /**
-         * @summary `issuerNameHash`.
-         * @description
-         *
-         * Hash of the issuer's distinguished name, calculated over the
-         * DER encoding of the issuer's name field in the certificate
-         * being checked
-         * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly issuerNameHash: OCTET_STRING,
-        /**
-         * @summary `issuerKeyHash`.
-         * @description
-         *
-         * Hash of the issuer's public key, calculated over the value
-         * (excluding tag and length) of the subject public key field
-         * in the issuer's certificate
-         * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly issuerKeyHash: OCTET_STRING,
-        /**
-         * @summary `serialNumber`.
-         * @description
-         *
-         * Serial number of the certificate for which status is
-         * requested
-         * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly serialNumber: CertificateSerialNumber
-    ) {}
+        hashAlgorithm: AlgorithmIdentifier,
+        issuerNameHash: OCTET_STRING,
+        issuerKeyHash: OCTET_STRING,
+        serialNumber: CertificateSerialNumber
+    ) {
+        this.hashAlgorithm = hashAlgorithm;
+        this.issuerNameHash = issuerNameHash;
+        this.issuerKeyHash = issuerKeyHash;
+        this.serialNumber = serialNumber;
+    }
 
     /**
      * @summary Restructures an object into a CertID

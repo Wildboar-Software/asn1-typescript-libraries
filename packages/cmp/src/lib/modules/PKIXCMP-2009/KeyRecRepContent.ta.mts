@@ -48,49 +48,59 @@ import {
  *
  */
 export class KeyRecRepContent {
+  /**
+   * @summary `status`.
+   * @description
+   *
+   * Overall status (`PKIStatusInfo`) ([RFC 4210 §5.3.8](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.8)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly status: PKIStatusInfo;
+  /**
+   * @summary `newSigCert`.
+   * @description
+   *
+   * Optional new signature certificate ([RFC 4210 §5.3.8](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.8)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly newSigCert?: OPTIONAL<CMPCertificate>;
+  /**
+   * @summary `caCerts`.
+   * @description
+   *
+   * Optional CA certificates ([RFC 4210 §5.3.8](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.8)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly caCerts?: OPTIONAL<CMPCertificate[]>;
+  /**
+   * @summary `keyPairHist`.
+   * @description
+   *
+   * Optional recovered key pair history (`CertifiedKeyPair` sequence)
+   * ([RFC 4210 §5.3.8](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.8)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly keyPairHist?: OPTIONAL<CertifiedKeyPair[]>;
+
   constructor(
-    /**
-     * @summary `status`.
-     * @description
-     *
-     * Overall status (`PKIStatusInfo`) ([RFC 4210 §5.3.8](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.8)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly status: PKIStatusInfo,
-    /**
-     * @summary `newSigCert`.
-     * @description
-     *
-     * Optional new signature certificate ([RFC 4210 §5.3.8](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.8)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly newSigCert?: OPTIONAL<CMPCertificate>,
-    /**
-     * @summary `caCerts`.
-     * @description
-     *
-     * Optional CA certificates ([RFC 4210 §5.3.8](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.8)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly caCerts?: OPTIONAL<CMPCertificate[]>,
-    /**
-     * @summary `keyPairHist`.
-     * @description
-     *
-     * Optional recovered key pair history (`CertifiedKeyPair` sequence)
-     * ([RFC 4210 §5.3.8](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.8)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly keyPairHist?: OPTIONAL<CertifiedKeyPair[]>
-  ) {}
+    status: PKIStatusInfo,
+    newSigCert?: OPTIONAL<CMPCertificate>,
+    caCerts?: OPTIONAL<CMPCertificate[]>,
+    keyPairHist?: OPTIONAL<CertifiedKeyPair[]>
+  ) {
+    this.status = status;
+    this.newSigCert = newSigCert;
+    this.caCerts = caCerts;
+    this.keyPairHist = keyPairHist;
+  }
 
   /**
    * @summary Restructures an object into a KeyRecRepContent

@@ -34,29 +34,35 @@ import { KeyWrapFunction, _decode_KeyWrapFunction, _encode_KeyWrapFunction } fro
  */
 export
 class ECWKTParameters {
+    /**
+     * @summary `kdf`.
+     * @description
+     *
+     * KDF applied to the 1-pass KA shared secret. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §5.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly kdf?: OPTIONAL<KeyDerivationFunction>;
+    /**
+     * @summary `wrap`.
+     * @description
+     *
+     * AES key-wrap algorithm applied to the content-encryption key. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §3.9,
+     * §5.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly wrap?: OPTIONAL<KeyWrapFunction>;
+
     constructor (
-        /**
-         * @summary `kdf`.
-         * @description
-         *
-         * KDF applied to the 1-pass KA shared secret. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §5.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly kdf?: OPTIONAL<KeyDerivationFunction>,
-        /**
-         * @summary `wrap`.
-         * @description
-         *
-         * AES key-wrap algorithm applied to the content-encryption key. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §3.9,
-         * §5.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly wrap?: OPTIONAL<KeyWrapFunction>
-    ) {}
+        kdf?: OPTIONAL<KeyDerivationFunction>,
+        wrap?: OPTIONAL<KeyWrapFunction>
+    ) {
+        this.kdf = kdf;
+        this.wrap = wrap;
+    }
 
     /**
      * @summary Restructures an object into a ECWKTParameters

@@ -35,20 +35,26 @@ import {
  *
  */
 export class BRTCContentInformation {
+    /**
+     * @summary `sbhForBRTC`.
+     * @public
+     * @readonly
+     */
+    public readonly sbhForBRTC: SBHForBRTC;
+    /**
+     * @summary `bdbForBRTC`.
+     * @public
+     * @readonly
+     */
+    public readonly bdbForBRTC: BDBForBRTC;
+
     constructor(
-        /**
-         * @summary `sbhForBRTC`.
-         * @public
-         * @readonly
-         */
-        readonly sbhForBRTC: SBHForBRTC,
-        /**
-         * @summary `bdbForBRTC`.
-         * @public
-         * @readonly
-         */
-        readonly bdbForBRTC: BDBForBRTC
-    ) {}
+        sbhForBRTC: SBHForBRTC,
+        bdbForBRTC: BDBForBRTC
+    ) {
+        this.sbhForBRTC = sbhForBRTC;
+        this.bdbForBRTC = bdbForBRTC;
+    }
 
     /**
      * @summary Restructures an object into a BRTCContentInformation

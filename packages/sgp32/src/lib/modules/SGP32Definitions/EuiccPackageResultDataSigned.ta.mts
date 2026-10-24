@@ -40,62 +40,73 @@ import { EuiccResultData, _decode_EuiccResultData, _encode_EuiccResultData } fro
  */
 export
 class EuiccPackageResultDataSigned {
+    /**
+     * @summary `eimId`.
+     * @description
+     * eimId from the request, echoed so the eIM can match this result to the
+     * package it sent (SGP.32 v1.2, section 2.11.1.1). Length 1 to 128 bytes
+     * (section 4.3).
+     * @public
+     * @readonly
+     */
+    public readonly eimId: UTF8String;
+    /**
+     * @summary `counterValue`.
+     * @description
+     * counterValue from the accepted package, echoed for the same match (SGP.32
+     * v1.2, section 2.11.1.1). After this signed result is produced, the eUICC
+     * stores it as the highest counter received from this eIM (section 5.9.1). The
+     * eIM had incremented its own counter by 1 before sending.
+     * @public
+     * @readonly
+     */
+    public readonly counterValue: INTEGER;
+    /**
+     * @summary `eimTransactionId`.
+     * @description
+     * Present when the request contained eimTransactionId; the eUICC echoes it
+     * (SGP.32 v1.2, section 2.11.2.1). The eIM may use it to link the package to
+     * this result (section 3.3.1). The identifier is as defined in SGP.22, which
+     * SGP.32 cites from section 2.11.1.1.
+     * @public
+     * @readonly
+     */
+    public readonly eimTransactionId: OPTIONAL<TransactionId>;
+    /**
+     * @summary `seqNumber`.
+     * @description
+     * The next unused eUICC sequence number, the same counter SGP.22 defines for
+     * Notifications, which SGP.32 cites (SGP.32 v1.2, sections 2.11.2.1 and
+     * 5.9.1). The signed data includes that value, and the eUICC then increments
+     * the stored number by 1. The eIM discards a result whose sequence number is
+     * less than or equal to the one it expects (section 5.14.6).
+     * @public
+     * @readonly
+     */
+    public readonly seqNumber: INTEGER;
+    /**
+     * @summary `euiccResult`.
+     * @description
+     * One entry per PSMO or eCO that ran, in command order (SGP.32 v1.2, section
+     * 5.9.1). When a command fails, the eUICC appends processingTerminated and
+     * stops the remaining commands.
+     * @public
+     * @readonly
+     */
+    public readonly euiccResult: EuiccResultData[];
+
     constructor (
-        /**
-         * @summary `eimId`.
-         * @description
-         * eimId from the request, echoed so the eIM can match this result to the
-         * package it sent (SGP.32 v1.2, section 2.11.1.1). Length 1 to 128 bytes
-         * (section 4.3).
-         * @public
-         * @readonly
-         */
-        readonly eimId: UTF8String,
-        /**
-         * @summary `counterValue`.
-         * @description
-         * counterValue from the accepted package, echoed for the same match (SGP.32
-         * v1.2, section 2.11.1.1). After this signed result is produced, the eUICC
-         * stores it as the highest counter received from this eIM (section 5.9.1). The
-         * eIM had incremented its own counter by 1 before sending.
-         * @public
-         * @readonly
-         */
-        readonly counterValue: INTEGER,
-        /**
-         * @summary `eimTransactionId`.
-         * @description
-         * Present when the request contained eimTransactionId; the eUICC echoes it
-         * (SGP.32 v1.2, section 2.11.2.1). The eIM may use it to link the package to
-         * this result (section 3.3.1). The identifier is as defined in SGP.22, which
-         * SGP.32 cites from section 2.11.1.1.
-         * @public
-         * @readonly
-         */
-        readonly eimTransactionId: OPTIONAL<TransactionId>,
-        /**
-         * @summary `seqNumber`.
-         * @description
-         * The next unused eUICC sequence number, the same counter SGP.22 defines for
-         * Notifications, which SGP.32 cites (SGP.32 v1.2, sections 2.11.2.1 and
-         * 5.9.1). The signed data includes that value, and the eUICC then increments
-         * the stored number by 1. The eIM discards a result whose sequence number is
-         * less than or equal to the one it expects (section 5.14.6).
-         * @public
-         * @readonly
-         */
-        readonly seqNumber: INTEGER,
-        /**
-         * @summary `euiccResult`.
-         * @description
-         * One entry per PSMO or eCO that ran, in command order (SGP.32 v1.2, section
-         * 5.9.1). When a command fails, the eUICC appends processingTerminated and
-         * stops the remaining commands.
-         * @public
-         * @readonly
-         */
-        readonly euiccResult: EuiccResultData[]
+        eimId: UTF8String,
+        counterValue: INTEGER,
+        eimTransactionId: OPTIONAL<TransactionId>,
+        seqNumber: INTEGER,
+        euiccResult: EuiccResultData[]
     ) {
+        this.eimId = eimId;
+        this.counterValue = counterValue;
+        this.eimTransactionId = eimTransactionId;
+        this.seqNumber = seqNumber;
+        this.euiccResult = euiccResult;
         if (this.eimId.length < 1 || this.eimId.length > 128) {
             throw new ASN1SizeError("EuiccPackageResultDataSigned.eimId violates SIZE constraint");
         }

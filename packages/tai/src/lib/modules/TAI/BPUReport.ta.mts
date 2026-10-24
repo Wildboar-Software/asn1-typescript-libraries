@@ -36,30 +36,36 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class BPUReport {
+    /**
+     * @summary `contentType`.
+     * @description
+     *
+     * OID of the report content type; must identify a member
+     * of `ContentTypeBPUReport`. X.1089 Annex A.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly contentType: OBJECT_IDENTIFIER;
+    /**
+     * @summary `content`.
+     * @description
+     *
+     * Report payload whose type is determined by
+     * `contentType`. X.1089 Annex A.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly content: _Element;
+
     constructor (
-        /**
-         * @summary `contentType`.
-         * @description
-         *
-         * OID of the report content type; must identify a member
-         * of `ContentTypeBPUReport`. X.1089 Annex A.
-         *
-         * @public
-         * @readonly
-         */
-        readonly contentType: OBJECT_IDENTIFIER,
-        /**
-         * @summary `content`.
-         * @description
-         *
-         * Report payload whose type is determined by
-         * `contentType`. X.1089 Annex A.
-         *
-         * @public
-         * @readonly
-         */
-        readonly content: _Element
-    ) {}
+        contentType: OBJECT_IDENTIFIER,
+        content: _Element
+    ) {
+        this.contentType = contentType;
+        this.content = content;
+    }
 
     /**
      * @summary Restructures an object into a BPUReport

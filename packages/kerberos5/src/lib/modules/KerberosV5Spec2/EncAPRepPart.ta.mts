@@ -52,51 +52,61 @@ import {
  *
  */
 export class EncAPRepPart {
+  /**
+   * @summary `ctime`.
+   * @description
+   *
+   * Client time from the authenticator ([RFC 4120 §5.5.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.2)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly ctime: KerberosTime;
+  /**
+   * @summary `cusec`.
+   * @description
+   *
+   * Microseconds from the authenticator ([RFC 4120 §5.5.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.2)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly cusec: Microseconds;
+  /**
+   * @summary `subkey`.
+   * @description
+   *
+   * Optional per-association key (see [RFC 4120 §3.2.6](https://datatracker.ietf.org/doc/html/rfc4120#section-3.2.6)). If
+   * omitted, use authenticator subkey or ticket session key
+   * ([RFC 4120 §5.5.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.2)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly subkey?: OPTIONAL<EncryptionKey>;
+  /**
+   * @summary `seq_number`.
+   * @description
+   *
+   * Initial sequence number for messages from server→client
+   * ([RFC 4120 §5.5.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.2)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly seq_number?: OPTIONAL<UInt32>;
+
   constructor(
-    /**
-     * @summary `ctime`.
-     * @description
-     *
-     * Client time from the authenticator ([RFC 4120 §5.5.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.2)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly ctime: KerberosTime,
-    /**
-     * @summary `cusec`.
-     * @description
-     *
-     * Microseconds from the authenticator ([RFC 4120 §5.5.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.2)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly cusec: Microseconds,
-    /**
-     * @summary `subkey`.
-     * @description
-     *
-     * Optional per-association key (see [RFC 4120 §3.2.6](https://datatracker.ietf.org/doc/html/rfc4120#section-3.2.6)). If
-     * omitted, use authenticator subkey or ticket session key
-     * ([RFC 4120 §5.5.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.2)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly subkey?: OPTIONAL<EncryptionKey>,
-    /**
-     * @summary `seq_number`.
-     * @description
-     *
-     * Initial sequence number for messages from server→client
-     * ([RFC 4120 §5.5.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.2)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly seq_number?: OPTIONAL<UInt32>
-  ) {}
+    ctime: KerberosTime,
+    cusec: Microseconds,
+    subkey?: OPTIONAL<EncryptionKey>,
+    seq_number?: OPTIONAL<UInt32>
+  ) {
+    this.ctime = ctime;
+    this.cusec = cusec;
+    this.subkey = subkey;
+    this.seq_number = seq_number;
+  }
 
   /**
    * @summary Restructures an object into a EncAPRepPart

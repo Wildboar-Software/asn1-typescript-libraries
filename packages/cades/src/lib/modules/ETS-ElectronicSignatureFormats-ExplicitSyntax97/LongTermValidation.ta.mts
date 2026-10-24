@@ -59,57 +59,67 @@ import {
  */
 export
 class LongTermValidation {
+    /**
+     * @summary `poeDate`.
+     * @description
+     *
+     * Approximate date this attribute was added. Shall be
+     * later than all previous instances' `poeDate`. Used to
+     * order instances; the proven time is the date inside
+     * the PoE itself. Need not equal the PoE creation date
+     * (e.g. when the PoE comes from an external system).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly poeDate: GeneralizedTime;
+    /**
+     * @summary `poeValue`.
+     * @description
+     *
+     * Proof of existence: RFC 3161 time-stamp or RFC 4998
+     * evidence record. For a TST, `messageImprint` is a
+     * tree-hash over `SignedData` as specified in §6.5.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly poeValue?: OPTIONAL<LongTermValidation_poeValue>;
+    /**
+     * @summary `extraCertificates`.
+     * @description
+     *
+     * Extra certificates to help validate the document
+     * signature, time-stamps, or an older LTV instance.
+     * Included in the tree-hash `Hc`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extraCertificates?: OPTIONAL<CertificateSet>;
+    /**
+     * @summary `extraRevocation`.
+     * @description
+     *
+     * Extra revocation info (CRLs/OCSP) for the same
+     * purpose. Included in the tree-hash `Hr`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extraRevocation?: OPTIONAL<RevocationInfoChoices>;
+
     constructor (
-        /**
-         * @summary `poeDate`.
-         * @description
-         *
-         * Approximate date this attribute was added. Shall be
-         * later than all previous instances' `poeDate`. Used to
-         * order instances; the proven time is the date inside
-         * the PoE itself. Need not equal the PoE creation date
-         * (e.g. when the PoE comes from an external system).
-         *
-         * @public
-         * @readonly
-         */
-        readonly poeDate: GeneralizedTime,
-        /**
-         * @summary `poeValue`.
-         * @description
-         *
-         * Proof of existence: RFC 3161 time-stamp or RFC 4998
-         * evidence record. For a TST, `messageImprint` is a
-         * tree-hash over `SignedData` as specified in §6.5.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly poeValue?: OPTIONAL<LongTermValidation_poeValue>,
-        /**
-         * @summary `extraCertificates`.
-         * @description
-         *
-         * Extra certificates to help validate the document
-         * signature, time-stamps, or an older LTV instance.
-         * Included in the tree-hash `Hc`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extraCertificates?: OPTIONAL<CertificateSet>,
-        /**
-         * @summary `extraRevocation`.
-         * @description
-         *
-         * Extra revocation info (CRLs/OCSP) for the same
-         * purpose. Included in the tree-hash `Hr`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extraRevocation?: OPTIONAL<RevocationInfoChoices>
-    ) {}
+        poeDate: GeneralizedTime,
+        poeValue?: OPTIONAL<LongTermValidation_poeValue>,
+        extraCertificates?: OPTIONAL<CertificateSet>,
+        extraRevocation?: OPTIONAL<RevocationInfoChoices>
+    ) {
+        this.poeDate = poeDate;
+        this.poeValue = poeValue;
+        this.extraCertificates = extraCertificates;
+        this.extraRevocation = extraRevocation;
+    }
 
     /**
      * @summary Restructures an object into a LongTermValidation

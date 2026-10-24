@@ -36,46 +36,54 @@ import { BiometricPara, _decode_BiometricPara, _encode_BiometricPara } from "../
  */
 export
 class SecurityLevelBioRef {
+    /**
+     * @summary `biometricSecurityLevelId`.
+     * @description
+     *
+     * Unique identifier for the biometric security level.
+     * May be a hash of the modality policy and biometric
+     * parameters. May be placed in an AC biometric extension
+     * when the AC is created. X.1089 §9.7, Appendix I.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly biometricSecurityLevelId: BiometricSecurityLevelId;
+    /**
+     * @summary `modalityPolicy`.
+     * @description
+     *
+     * Policy on modality choice, capture actions (trials,
+     * liveness), fusion, and related behaviour needed to
+     * achieve this security level. X.1089 §9.8.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly modalityPolicy: ModalityPolicy;
+    /**
+     * @summary `biometricPara`.
+     * @description
+     *
+     * Adjustable parameters for one or more modalities. If
+     * more than one item is present, the fusion mechanism
+     * should be identified in `modalityPolicy`. X.1089
+     * §9.10, §9.13.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly biometricPara: BiometricPara;
+
     constructor (
-        /**
-         * @summary `biometricSecurityLevelId`.
-         * @description
-         *
-         * Unique identifier for the biometric security level.
-         * May be a hash of the modality policy and biometric
-         * parameters. May be placed in an AC biometric extension
-         * when the AC is created. X.1089 §9.7, Appendix I.
-         *
-         * @public
-         * @readonly
-         */
-        readonly biometricSecurityLevelId: BiometricSecurityLevelId,
-        /**
-         * @summary `modalityPolicy`.
-         * @description
-         *
-         * Policy on modality choice, capture actions (trials,
-         * liveness), fusion, and related behaviour needed to
-         * achieve this security level. X.1089 §9.8.
-         *
-         * @public
-         * @readonly
-         */
-        readonly modalityPolicy: ModalityPolicy,
-        /**
-         * @summary `biometricPara`.
-         * @description
-         *
-         * Adjustable parameters for one or more modalities. If
-         * more than one item is present, the fusion mechanism
-         * should be identified in `modalityPolicy`. X.1089
-         * §9.10, §9.13.
-         *
-         * @public
-         * @readonly
-         */
-        readonly biometricPara: BiometricPara
-    ) {}
+        biometricSecurityLevelId: BiometricSecurityLevelId,
+        modalityPolicy: ModalityPolicy,
+        biometricPara: BiometricPara
+    ) {
+        this.biometricSecurityLevelId = biometricSecurityLevelId;
+        this.modalityPolicy = modalityPolicy;
+        this.biometricPara = biometricPara;
+    }
 
     /**
      * @summary Restructures an object into a SecurityLevelBioRef

@@ -33,30 +33,36 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class SigPolicyQualifierInfo {
+    /**
+     * @summary `sigPolicyQualifierId`.
+     * @description
+     *
+     * Selects the syntax of `qualifier` (e.g.
+     * `id-spq-ets-uri` or `id-spq-ets-unotice`).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sigPolicyQualifierId: OBJECT_IDENTIFIER;
+    /**
+     * @summary `qualifier`.
+     * @description
+     *
+     * Qualifier value whose syntax is associated with
+     * `sigPolicyQualifierId`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly qualifier?: OPTIONAL<_Element>;
+
     constructor (
-        /**
-         * @summary `sigPolicyQualifierId`.
-         * @description
-         *
-         * Selects the syntax of `qualifier` (e.g.
-         * `id-spq-ets-uri` or `id-spq-ets-unotice`).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sigPolicyQualifierId: OBJECT_IDENTIFIER,
-        /**
-         * @summary `qualifier`.
-         * @description
-         *
-         * Qualifier value whose syntax is associated with
-         * `sigPolicyQualifierId`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly qualifier?: OPTIONAL<_Element>
-    ) {}
+        sigPolicyQualifierId: OBJECT_IDENTIFIER,
+        qualifier?: OPTIONAL<_Element>
+    ) {
+        this.sigPolicyQualifierId = sigPolicyQualifierId;
+        this.qualifier = qualifier;
+    }
 
     /**
      * @summary Restructures an object into a SigPolicyQualifierInfo

@@ -36,30 +36,36 @@ import {
  *
  */
 export class ECPKRestrictions {
+    /**
+     * @summary `ecDomain`.
+     * @description
+     *
+     * Domain parameters for this public key. Not in ANSI
+     * X9.62-1998.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ecDomain: ECDomainParameters;
+    /**
+     * @summary `eccAlgorithms`.
+     * @description
+     *
+     * Algorithms permitted with this key, in preference order.
+     * Not in ANSI X9.62-1998.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eccAlgorithms: ECCAlgorithms;
+
     constructor(
-        /**
-         * @summary `ecDomain`.
-         * @description
-         *
-         * Domain parameters for this public key. Not in ANSI
-         * X9.62-1998.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ecDomain: ECDomainParameters,
-        /**
-         * @summary `eccAlgorithms`.
-         * @description
-         *
-         * Algorithms permitted with this key, in preference order.
-         * Not in ANSI X9.62-1998.
-         *
-         * @public
-         * @readonly
-         */
-        readonly eccAlgorithms: ECCAlgorithms
-    ) {}
+        ecDomain: ECDomainParameters,
+        eccAlgorithms: ECCAlgorithms
+    ) {
+        this.ecDomain = ecDomain;
+        this.eccAlgorithms = eccAlgorithms;
+    }
 
     /**
      * @summary Restructures an object into a ECPKRestrictions

@@ -38,29 +38,35 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class LogRcAMessageContent {
+    /**
+     * @summary `sessionID`.
+     * @description
+     *
+     * Session identifier, 10 octets (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sessionID: OCTET_STRING;
+    /**
+     * @summary `logResponseInfo`.
+     * @description
+     *
+     * Log payload. Format is not specified
+     * (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly logResponseInfo?: OPTIONAL<OCTET_STRING>;
+
     constructor (
-        /**
-         * @summary `sessionID`.
-         * @description
-         *
-         * Session identifier, 10 octets (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sessionID: OCTET_STRING,
-        /**
-         * @summary `logResponseInfo`.
-         * @description
-         *
-         * Log payload. Format is not specified
-         * (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly logResponseInfo?: OPTIONAL<OCTET_STRING>
-    ) {}
+        sessionID: OCTET_STRING,
+        logResponseInfo?: OPTIONAL<OCTET_STRING>
+    ) {
+        this.sessionID = sessionID;
+        this.logResponseInfo = logResponseInfo;
+    }
 
     /**
      * @summary Restructures an object into a LogRcAMessageContent

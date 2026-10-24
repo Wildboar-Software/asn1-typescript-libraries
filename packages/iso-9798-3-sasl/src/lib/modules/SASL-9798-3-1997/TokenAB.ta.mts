@@ -63,70 +63,82 @@ import {
  */
 export
 class TokenAB {
+    /**
+     * @summary `randomA`.
+     * @description
+     *
+     * Client nonce R_A. Included in the signed material so the
+     * server cannot obtain a client signature on data chosen before
+     * authentication starts (RFC 3163 §7). MUST be from a
+     * cryptographically strong RNG (RFC 3163 §7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly randomA: RandomNumber;
+    /**
+     * @summary `entityB`.
+     * @description
+     *
+     * Optional server identity. SHALL be present in `TokenAB` iff
+     * also present in `TBSDataAB`. SHOULD be present whenever the
+     * client believes it knows the server's identity
+     * (RFC 3163 §3.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly entityB: OPTIONAL<GeneralNames>;
+    /**
+     * @summary `certA`.
+     * @description
+     *
+     * Client's X.509 certificate (or URL) and related chain sent to
+     * the server (RFC 3163 §3.2 / §3.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certA: CertData;
+    /**
+     * @summary `authID`.
+     * @description
+     *
+     * Authorization identity when access-control identity differs
+     * from the signer's certificate identity. If absent, the
+     * identity from the client's X.509 certificate shall be used
+     * (RFC 3163 §3.2). SHALL be present in `TokenAB` iff also
+     * present in `TBSDataAB`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly authID: OPTIONAL<GeneralNames>;
+    /**
+     * @summary `signature`.
+     * @description
+     *
+     * Client signature over DER-encoded `TBSDataAB`
+     * (`SIGNATURE { TBSDataAB }`) (RFC 3163 §3.2 / §3.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signature: SIGNATURE;
+
     constructor (
-        /**
-         * @summary `randomA`.
-         * @description
-         *
-         * Client nonce R_A. Included in the signed material so the
-         * server cannot obtain a client signature on data chosen before
-         * authentication starts (RFC 3163 §7). MUST be from a
-         * cryptographically strong RNG (RFC 3163 §7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly randomA: RandomNumber,
-        /**
-         * @summary `entityB`.
-         * @description
-         *
-         * Optional server identity. SHALL be present in `TokenAB` iff
-         * also present in `TBSDataAB`. SHOULD be present whenever the
-         * client believes it knows the server's identity
-         * (RFC 3163 §3.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly entityB: OPTIONAL<GeneralNames>,
-        /**
-         * @summary `certA`.
-         * @description
-         *
-         * Client's X.509 certificate (or URL) and related chain sent to
-         * the server (RFC 3163 §3.2 / §3.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly certA: CertData,
-        /**
-         * @summary `authID`.
-         * @description
-         *
-         * Authorization identity when access-control identity differs
-         * from the signer's certificate identity. If absent, the
-         * identity from the client's X.509 certificate shall be used
-         * (RFC 3163 §3.2). SHALL be present in `TokenAB` iff also
-         * present in `TBSDataAB`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly authID: OPTIONAL<GeneralNames>,
-        /**
-         * @summary `signature`.
-         * @description
-         *
-         * Client signature over DER-encoded `TBSDataAB`
-         * (`SIGNATURE { TBSDataAB }`) (RFC 3163 §3.2 / §3.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly signature: SIGNATURE,
-    ) {}
+        randomA: RandomNumber,
+        entityB: OPTIONAL<GeneralNames>,
+        certA: CertData,
+        authID: OPTIONAL<GeneralNames>,
+        signature: SIGNATURE,
+    ) {
+        this.randomA = randomA;
+        this.entityB = entityB;
+        this.certA = certA;
+        this.authID = authID;
+        this.signature = signature;
+    }
 
     /**
      * @summary Restructures an object into a TokenAB

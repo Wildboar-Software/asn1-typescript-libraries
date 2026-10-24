@@ -49,79 +49,95 @@ import {
  *
  */
 export class ECParameters {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * Shall be 1 (`ecpVer1`) in ANSI X9.62-1998 §6.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: ECParameters_version;
+    /**
+     * @summary `fieldID`.
+     * @description
+     *
+     * Underlying field Fq (`prime-field` or
+     * `characteristic-two-field`). ANSI X9.62-1998 §6.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly fieldID: FieldID;
+    /**
+     * @summary `curve`.
+     * @description
+     *
+     * Coefficients `a`, `b` and optional SEED of E.
+     * ANSI X9.62-1998 §6.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly curve: Curve;
+    /**
+     * @summary `base`.
+     * @description
+     *
+     * Base point G of prime order n; G is not the point at
+     * infinity. ANSI X9.62-1998 §6.3, §5.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly base: ECPoint;
+    /**
+     * @summary `order`.
+     * @description
+     *
+     * Prime order n of G. Require `n > 2^160` and
+     * `n > 4 * sqrt(q)`. ANSI X9.62-1998 §6.3, §5.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly order: INTEGER;
+    /**
+     * @summary `cofactor`.
+     * @description
+     *
+     * `h = #E(Fq) / n`. Unused by ECDSA; optional for X9.63
+     * compatibility. ANSI X9.62-1998 §6.3, §5.1.1.2 note 1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cofactor?: OPTIONAL<INTEGER>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * Shall be 1 (`ecpVer1`) in ANSI X9.62-1998 §6.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: ECParameters_version,
-        /**
-         * @summary `fieldID`.
-         * @description
-         *
-         * Underlying field Fq (`prime-field` or
-         * `characteristic-two-field`). ANSI X9.62-1998 §6.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly fieldID: FieldID,
-        /**
-         * @summary `curve`.
-         * @description
-         *
-         * Coefficients `a`, `b` and optional SEED of E.
-         * ANSI X9.62-1998 §6.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly curve: Curve,
-        /**
-         * @summary `base`.
-         * @description
-         *
-         * Base point G of prime order n; G is not the point at
-         * infinity. ANSI X9.62-1998 §6.3, §5.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly base: ECPoint,
-        /**
-         * @summary `order`.
-         * @description
-         *
-         * Prime order n of G. Require `n > 2^160` and
-         * `n > 4 * sqrt(q)`. ANSI X9.62-1998 §6.3, §5.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly order: INTEGER,
-        /**
-         * @summary `cofactor`.
-         * @description
-         *
-         * `h = #E(Fq) / n`. Unused by ECDSA; optional for X9.63
-         * compatibility. ANSI X9.62-1998 §6.3, §5.1.1.2 note 1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly cofactor?: OPTIONAL<INTEGER>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        version: ECParameters_version,
+        fieldID: FieldID,
+        curve: Curve,
+        base: ECPoint,
+        order: INTEGER,
+        cofactor?: OPTIONAL<INTEGER>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.version = version;
+        this.fieldID = fieldID;
+        this.curve = curve;
+        this.base = base;
+        this.order = order;
+        this.cofactor = cofactor;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ECParameters

@@ -90,116 +90,136 @@ import {
  *
  */
 export class F_CREATE_request {
+  /**
+   * @summary `override`.
+   * @description
+   *
+   * If the named file already exists: 0 create-failure, 1
+   * select-old-file, 2 delete-and-create-with-old-attributes, 3
+   * delete-and-create-with-new-attributes. Values (c) and (d) need
+   * a delete password if access control requires it. Default
+   * `create-failure`. ISO 8571-3:1988 §15.3.2.3.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly override: OPTIONAL<Override>;
+  /**
+   * @summary `initial_attributes`.
+   * @description
+   *
+   * Kernel always; others if negotiated. Omitted values are locally
+   * defaulted (may be no-value-available). Responder may change
+   * non-filename / non-permitted-actions to no-value-available
+   * only. ISO 8571-3:1988 §15.3.2.4.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly initial_attributes: Create_Attributes;
+  /**
+   * @summary `create_password`.
+   * @description
+   *
+   * Extra to the filestore password; may be required to prove
+   * permission to create. Does not set activity attributes.
+   * ISO 8571-3:1988 §15.3.2.5; ISO 8571-4:1988 F-CREATE-request.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly create_password: OPTIONAL<Password>;
+  /**
+   * @summary `requested_access`.
+   * @description
+   *
+   * Must be a subset of the created capabilities (including
+   * responder defaults in kernel or negotiated groups).
+   * Incompatible request → select fails even if create succeeded.
+   * ISO 8571-3:1988 §15.3.2.6.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly requested_access: Access_Request;
+  /**
+   * @summary `access_passwords`.
+   * @description
+   *
+   * Authenticate requested access/concurrency. If override
+   * creates/recreates with new attributes, used only to verify
+   * delete. Sets current access passwords if override selected an
+   * existing file. ISO 8571-3:1988 §15.3.2.7.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly access_passwords?: OPTIONAL<Access_Passwords>;
+  /**
+   * @summary `path_access_passwords`.
+   * @description
+   *
+   * Absent from ISO 8571:1988 Parts 1–4. ASN.1 comment: send only
+   * when limited-filestore-management, object-manipulation, or
+   * group-manipulation FUs are available.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly path_access_passwords?: OPTIONAL<Path_Access_Passwords>;
+  /**
+   * @summary `concurrency_control`.
+   * @description
+   *
+   * Table 17: conditional. ISO 8571-3:1988 §15.3.2.8 / §13.8.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly concurrency_control?: OPTIONAL<Concurrency_Control>;
+  /**
+   * @summary `shared_ASE_information`.
+   * @description
+   *
+   * ISO 8571-3:1988 §15.3.2.9 / §13.10.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>;
+  /**
+   * @summary `account`.
+   * @description
+   *
+   * Overrides the F-INITIALIZE account for this selection.
+   * ISO 8571-3:1988 §15.3.2.10.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly account?: OPTIONAL<Account>;
+
   constructor(
-    /**
-     * @summary `override`.
-     * @description
-     *
-     * If the named file already exists: 0 create-failure, 1
-     * select-old-file, 2 delete-and-create-with-old-attributes, 3
-     * delete-and-create-with-new-attributes. Values (c) and (d) need
-     * a delete password if access control requires it. Default
-     * `create-failure`. ISO 8571-3:1988 §15.3.2.3.
-     *
-     * @public
-     * @readonly
-     */
-    readonly override: OPTIONAL<Override>,
-    /**
-     * @summary `initial_attributes`.
-     * @description
-     *
-     * Kernel always; others if negotiated. Omitted values are locally
-     * defaulted (may be no-value-available). Responder may change
-     * non-filename / non-permitted-actions to no-value-available
-     * only. ISO 8571-3:1988 §15.3.2.4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly initial_attributes: Create_Attributes,
-    /**
-     * @summary `create_password`.
-     * @description
-     *
-     * Extra to the filestore password; may be required to prove
-     * permission to create. Does not set activity attributes.
-     * ISO 8571-3:1988 §15.3.2.5; ISO 8571-4:1988 F-CREATE-request.
-     *
-     * @public
-     * @readonly
-     */
-    readonly create_password: OPTIONAL<Password>,
-    /**
-     * @summary `requested_access`.
-     * @description
-     *
-     * Must be a subset of the created capabilities (including
-     * responder defaults in kernel or negotiated groups).
-     * Incompatible request → select fails even if create succeeded.
-     * ISO 8571-3:1988 §15.3.2.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly requested_access: Access_Request,
-    /**
-     * @summary `access_passwords`.
-     * @description
-     *
-     * Authenticate requested access/concurrency. If override
-     * creates/recreates with new attributes, used only to verify
-     * delete. Sets current access passwords if override selected an
-     * existing file. ISO 8571-3:1988 §15.3.2.7.
-     *
-     * @public
-     * @readonly
-     */
-    readonly access_passwords?: OPTIONAL<Access_Passwords>,
-    /**
-     * @summary `path_access_passwords`.
-     * @description
-     *
-     * Absent from ISO 8571:1988 Parts 1–4. ASN.1 comment: send only
-     * when limited-filestore-management, object-manipulation, or
-     * group-manipulation FUs are available.
-     *
-     * @public
-     * @readonly
-     */
-    readonly path_access_passwords?: OPTIONAL<Path_Access_Passwords>,
-    /**
-     * @summary `concurrency_control`.
-     * @description
-     *
-     * Table 17: conditional. ISO 8571-3:1988 §15.3.2.8 / §13.8.
-     *
-     * @public
-     * @readonly
-     */
-    readonly concurrency_control?: OPTIONAL<Concurrency_Control>,
-    /**
-     * @summary `shared_ASE_information`.
-     * @description
-     *
-     * ISO 8571-3:1988 §15.3.2.9 / §13.10.
-     *
-     * @public
-     * @readonly
-     */
-    readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
-    /**
-     * @summary `account`.
-     * @description
-     *
-     * Overrides the F-INITIALIZE account for this selection.
-     * ISO 8571-3:1988 §15.3.2.10.
-     *
-     * @public
-     * @readonly
-     */
-    readonly account?: OPTIONAL<Account>
-  ) {}
+    override: OPTIONAL<Override>,
+    initial_attributes: Create_Attributes,
+    create_password: OPTIONAL<Password>,
+    requested_access: Access_Request,
+    access_passwords?: OPTIONAL<Access_Passwords>,
+    path_access_passwords?: OPTIONAL<Path_Access_Passwords>,
+    concurrency_control?: OPTIONAL<Concurrency_Control>,
+    shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
+    account?: OPTIONAL<Account>
+  ) {
+    this.override = override;
+    this.initial_attributes = initial_attributes;
+    this.create_password = create_password;
+    this.requested_access = requested_access;
+    this.access_passwords = access_passwords;
+    this.path_access_passwords = path_access_passwords;
+    this.concurrency_control = concurrency_control;
+    this.shared_ASE_information = shared_ASE_information;
+    this.account = account;
+  }
 
   /**
    * @summary Restructures an object into a F_CREATE_request

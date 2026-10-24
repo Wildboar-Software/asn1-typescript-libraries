@@ -50,66 +50,78 @@ import { type TransactionId, _decode_TransactionId, _encode_TransactionId } from
  */
 export
 class IpaEuiccDataRequest {
+    /**
+     * @summary `tagList`.
+     * @description
+     * Tags of the items to return, concatenated. Defined tags are `'A0'`
+     * (Notifications), `'81'` (default SM-DP+ address, as defined in SGP.22),
+     * `'A2'` (eUICC Package Results), `'BF20'` (eUICCInfo1, section 5.9.2),
+     * `'BF22'` (eUICCInfo2, section 5.9.2), `'83'` (Root SM-DS address, as defined
+     * in SGP.22), `'84'` (association token, sections 2.11.1 and 5.9.18), `'A5'`
+     * (EUM certificate, as defined in SGP.22), `'A6'` (eUICC certificate, as
+     * defined in SGP.22), `'A8'` (IPA Capabilities, section 4.1), and `'A9'`
+     * (Device Information, SGP.22 section 4.2). Any other tag is ignored
+     * without error. SGP.32 v1.2, section 2.11.1.2.
+     * @public
+     * @readonly
+     */
+    public readonly tagList: OCTET_STRING;
+    /**
+     * @summary `euiccCiPKIdentifierToBeUsed`.
+     * @description
+     * Selects which EUM certificate and eUICC certificate to return when the eUICC
+     * holds more than one. Absent: use the first entry of
+     * `euiccCiPKIdListForSigning` in eUICCInfo1 or eUICCInfo2. Present: send the
+     * full 20-byte CI Public Key Identifier to an IPA that lacks
+     * `minimizeEsipaBytes`. To an IPA with that capability, send only enough
+     * leading bytes for the IPA to uniquely match one identifier in that list.
+     * SGP.32 v1.2, section 2.11.1.2.
+     * @public
+     * @readonly
+     */
+    public readonly euiccCiPKIdentifierToBeUsed?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `searchCriteriaNotification`.
+     * @description
+     * Filters Notifications, and only when `tagList` contains `'A0'`. If `'A0'` is
+     * absent, the IPA ignores this value. SGP.32 v1.2, section 2.11.1.2.
+     * @public
+     * @readonly
+     */
+    public readonly searchCriteriaNotification?: OPTIONAL<IpaEuiccDataRequest_searchCriteriaNotification>;
+    /**
+     * @summary `searchCriteriaEuiccPackageResult`.
+     * @description
+     * Filters eUICC Package Results, and only when `tagList` contains `'A2'`. If
+     * `'A2'` is absent, the IPA ignores this value. SGP.32 v1.2, section 2.11.1.2.
+     * @public
+     * @readonly
+     */
+    public readonly searchCriteriaEuiccPackageResult?: OPTIONAL<IpaEuiccDataRequest_searchCriteriaEuiccPackageResult>;
+    /**
+     * @summary `eimTransactionId`.
+     * @description
+     * Optional correlator supplied by the eIM. If it is present, the IPA returns
+     * the same value in `IpaEuiccData` or `IpaEuiccDataResponseError`. SGP.32
+     * v1.2, sections 2.11.1.2 and 2.11.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly eimTransactionId?: OPTIONAL<TransactionId>;
+
     constructor (
-        /**
-         * @summary `tagList`.
-         * @description
-         * Tags of the items to return, concatenated. Defined tags are `'A0'`
-         * (Notifications), `'81'` (default SM-DP+ address, as defined in SGP.22),
-         * `'A2'` (eUICC Package Results), `'BF20'` (eUICCInfo1, section 5.9.2),
-         * `'BF22'` (eUICCInfo2, section 5.9.2), `'83'` (Root SM-DS address, as defined
-         * in SGP.22), `'84'` (association token, sections 2.11.1 and 5.9.18), `'A5'`
-         * (EUM certificate, as defined in SGP.22), `'A6'` (eUICC certificate, as
-         * defined in SGP.22), `'A8'` (IPA Capabilities, section 4.1), and `'A9'`
-         * (Device Information, SGP.22 section 4.2). Any other tag is ignored
-         * without error. SGP.32 v1.2, section 2.11.1.2.
-         * @public
-         * @readonly
-         */
-        readonly tagList: OCTET_STRING,
-        /**
-         * @summary `euiccCiPKIdentifierToBeUsed`.
-         * @description
-         * Selects which EUM certificate and eUICC certificate to return when the eUICC
-         * holds more than one. Absent: use the first entry of
-         * `euiccCiPKIdListForSigning` in eUICCInfo1 or eUICCInfo2. Present: send the
-         * full 20-byte CI Public Key Identifier to an IPA that lacks
-         * `minimizeEsipaBytes`. To an IPA with that capability, send only enough
-         * leading bytes for the IPA to uniquely match one identifier in that list.
-         * SGP.32 v1.2, section 2.11.1.2.
-         * @public
-         * @readonly
-         */
-        readonly euiccCiPKIdentifierToBeUsed?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `searchCriteriaNotification`.
-         * @description
-         * Filters Notifications, and only when `tagList` contains `'A0'`. If `'A0'` is
-         * absent, the IPA ignores this value. SGP.32 v1.2, section 2.11.1.2.
-         * @public
-         * @readonly
-         */
-        readonly searchCriteriaNotification?: OPTIONAL<IpaEuiccDataRequest_searchCriteriaNotification>,
-        /**
-         * @summary `searchCriteriaEuiccPackageResult`.
-         * @description
-         * Filters eUICC Package Results, and only when `tagList` contains `'A2'`. If
-         * `'A2'` is absent, the IPA ignores this value. SGP.32 v1.2, section 2.11.1.2.
-         * @public
-         * @readonly
-         */
-        readonly searchCriteriaEuiccPackageResult?: OPTIONAL<IpaEuiccDataRequest_searchCriteriaEuiccPackageResult>,
-        /**
-         * @summary `eimTransactionId`.
-         * @description
-         * Optional correlator supplied by the eIM. If it is present, the IPA returns
-         * the same value in `IpaEuiccData` or `IpaEuiccDataResponseError`. SGP.32
-         * v1.2, sections 2.11.1.2 and 2.11.2.2.
-         * @public
-         * @readonly
-         */
-        readonly eimTransactionId?: OPTIONAL<TransactionId>
-    ) {}
+        tagList: OCTET_STRING,
+        euiccCiPKIdentifierToBeUsed?: OPTIONAL<OCTET_STRING>,
+        searchCriteriaNotification?: OPTIONAL<IpaEuiccDataRequest_searchCriteriaNotification>,
+        searchCriteriaEuiccPackageResult?: OPTIONAL<IpaEuiccDataRequest_searchCriteriaEuiccPackageResult>,
+        eimTransactionId?: OPTIONAL<TransactionId>
+    ) {
+        this.tagList = tagList;
+        this.euiccCiPKIdentifierToBeUsed = euiccCiPKIdentifierToBeUsed;
+        this.searchCriteriaNotification = searchCriteriaNotification;
+        this.searchCriteriaEuiccPackageResult = searchCriteriaEuiccPackageResult;
+        this.eimTransactionId = eimTransactionId;
+    }
 
     /**
      * @summary Restructures an object into a IpaEuiccDataRequest

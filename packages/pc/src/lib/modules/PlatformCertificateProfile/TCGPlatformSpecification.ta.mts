@@ -35,31 +35,37 @@ import { TCGSpecificationVersion, _decode_TCGSpecificationVersion, _encode_TCGSp
  */
 export
 class TCGPlatformSpecification {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * Major, minor, and revision of the platform-specific TCG
+     * specification. §3.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: TCGSpecificationVersion;
+    /**
+     * @summary `platformClass`.
+     * @description
+     *
+     * 4-octet platform class. Values are defined in the TCG
+     * Registry of Reserved TPM 2.0 Handles and Localities §4.
+     * §3.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly platformClass: OCTET_STRING;
+
     constructor (
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * Major, minor, and revision of the platform-specific TCG
-         * specification. §3.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: TCGSpecificationVersion,
-        /**
-         * @summary `platformClass`.
-         * @description
-         *
-         * 4-octet platform class. Values are defined in the TCG
-         * Registry of Reserved TPM 2.0 Handles and Localities §4.
-         * §3.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly platformClass: OCTET_STRING
-    ) {}
+        version: TCGSpecificationVersion,
+        platformClass: OCTET_STRING
+    ) {
+        this.version = version;
+        this.platformClass = platformClass;
+    }
 
     /**
      * @summary Restructures an object into a TCGPlatformSpecification

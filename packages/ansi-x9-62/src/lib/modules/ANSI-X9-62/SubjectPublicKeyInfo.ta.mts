@@ -32,30 +32,36 @@ import {
  *
  */
 export class SubjectPublicKeyInfo {
+    /**
+     * @summary `algorithm`.
+     * @description
+     *
+     * Key type and domain parameters (`ECPKAlgorithms`).
+     * ANSI X9.62-1998 §6.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly algorithm: ECPKAlgorithm;
+    /**
+     * @summary `subjectPublicKey`.
+     * @description
+     *
+     * The `ECPoint` octet string mapped bit-for-bit into a
+     * BIT STRING. ANSI X9.62-1998 §6.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subjectPublicKey: BIT_STRING;
+
     constructor(
-        /**
-         * @summary `algorithm`.
-         * @description
-         *
-         * Key type and domain parameters (`ECPKAlgorithms`).
-         * ANSI X9.62-1998 §6.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly algorithm: ECPKAlgorithm,
-        /**
-         * @summary `subjectPublicKey`.
-         * @description
-         *
-         * The `ECPoint` octet string mapped bit-for-bit into a
-         * BIT STRING. ANSI X9.62-1998 §6.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly subjectPublicKey: BIT_STRING
-    ) {}
+        algorithm: ECPKAlgorithm,
+        subjectPublicKey: BIT_STRING
+    ) {
+        this.algorithm = algorithm;
+        this.subjectPublicKey = subjectPublicKey;
+    }
 
     /**
      * @summary Restructures an object into a SubjectPublicKeyInfo

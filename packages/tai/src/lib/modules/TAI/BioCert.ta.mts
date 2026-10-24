@@ -43,51 +43,59 @@ import { ObjectDigestInfo, _decode_ObjectDigestInfo, _encode_ObjectDigestInfo } 
  */
 export
 class BioCert {
+    /**
+     * @summary `baseCertificateID`.
+     * @description
+     *
+     * Issuer and serial number of the holder's BC. If this
+     * basic index is present, only that BC may be used, even
+     * if `entityName` is also present. X.1089 §11.4.2–11.4.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly baseCertificateID?: OPTIONAL<IssuerSerial>;
+    /**
+     * @summary `entityName`.
+     * @description
+     *
+     * One or more names of the AC holder. If this is the
+     * only component, any BC whose subject is one of these
+     * names may be used. If the basic index is also present,
+     * this helps the privilege verifier locate that BC.
+     * X.1089 §11.4.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly entityName?: OPTIONAL<GeneralNames>;
+    /**
+     * @summary `objectDigestInfo`.
+     * @description
+     *
+     * Digest used to authenticate the AC holder, including
+     * an executable holder (e.g. an applet). The verifier
+     * hashes corresponding BC information (version, serial,
+     * validity, holder/issuer unique IDs, BIT attributes,
+     * etc.) with the algorithm named here and compares.
+     * Equal digests authenticate the holder for asserting
+     * privileges with this AC. See ISO/IEC TR 24722.
+     * X.1089 §11.4.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly objectDigestInfo?: OPTIONAL<ObjectDigestInfo>;
+
     constructor (
-        /**
-         * @summary `baseCertificateID`.
-         * @description
-         *
-         * Issuer and serial number of the holder's BC. If this
-         * basic index is present, only that BC may be used, even
-         * if `entityName` is also present. X.1089 §11.4.2–11.4.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly baseCertificateID?: OPTIONAL<IssuerSerial>,
-        /**
-         * @summary `entityName`.
-         * @description
-         *
-         * One or more names of the AC holder. If this is the
-         * only component, any BC whose subject is one of these
-         * names may be used. If the basic index is also present,
-         * this helps the privilege verifier locate that BC.
-         * X.1089 §11.4.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly entityName?: OPTIONAL<GeneralNames>,
-        /**
-         * @summary `objectDigestInfo`.
-         * @description
-         *
-         * Digest used to authenticate the AC holder, including
-         * an executable holder (e.g. an applet). The verifier
-         * hashes corresponding BC information (version, serial,
-         * validity, holder/issuer unique IDs, BIT attributes,
-         * etc.) with the algorithm named here and compares.
-         * Equal digests authenticate the holder for asserting
-         * privileges with this AC. See ISO/IEC TR 24722.
-         * X.1089 §11.4.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly objectDigestInfo?: OPTIONAL<ObjectDigestInfo>
-    ) {}
+        baseCertificateID?: OPTIONAL<IssuerSerial>,
+        entityName?: OPTIONAL<GeneralNames>,
+        objectDigestInfo?: OPTIONAL<ObjectDigestInfo>
+    ) {
+        this.baseCertificateID = baseCertificateID;
+        this.entityName = entityName;
+        this.objectDigestInfo = objectDigestInfo;
+    }
 
     /**
      * @summary Restructures an object into a BioCert

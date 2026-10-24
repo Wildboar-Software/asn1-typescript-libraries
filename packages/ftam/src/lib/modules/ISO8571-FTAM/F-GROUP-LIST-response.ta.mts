@@ -49,41 +49,49 @@ import {
  *
  */
 export class F_GROUP_LIST_response {
+  /**
+   * @summary `action_result`.
+   * @description
+   *
+   * Success, transient error, or permanent error. ISO
+   * 8571-3:1988 §13.2. Default `success`.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly action_result?: OPTIONAL<Action_Result>;
+  /**
+   * @summary `objects_attributes_list`.
+   * @description
+   *
+   * Returned attributes per matched object. Each item
+   * parallels F-READ-ATTRIB (ISO 8571-3:1988 §16.1.2.3).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly objects_attributes_list?: OPTIONAL<Objects_Attributes_List>;
+  /**
+   * @summary `diagnostic`.
+   * @description
+   *
+   * Detail accompanying `action-result`. ISO 8571-3:1988
+   * §13.13.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly diagnostic?: OPTIONAL<Diagnostic>;
+
   constructor(
-    /**
-     * @summary `action_result`.
-     * @description
-     *
-     * Success, transient error, or permanent error. ISO
-     * 8571-3:1988 §13.2. Default `success`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly action_result?: OPTIONAL<Action_Result>,
-    /**
-     * @summary `objects_attributes_list`.
-     * @description
-     *
-     * Returned attributes per matched object. Each item
-     * parallels F-READ-ATTRIB (ISO 8571-3:1988 §16.1.2.3).
-     *
-     * @public
-     * @readonly
-     */
-    readonly objects_attributes_list?: OPTIONAL<Objects_Attributes_List>,
-    /**
-     * @summary `diagnostic`.
-     * @description
-     *
-     * Detail accompanying `action-result`. ISO 8571-3:1988
-     * §13.13.
-     *
-     * @public
-     * @readonly
-     */
-    readonly diagnostic?: OPTIONAL<Diagnostic>
-  ) {}
+    action_result?: OPTIONAL<Action_Result>,
+    objects_attributes_list?: OPTIONAL<Objects_Attributes_List>,
+    diagnostic?: OPTIONAL<Diagnostic>
+  ) {
+    this.action_result = action_result;
+    this.objects_attributes_list = objects_attributes_list;
+    this.diagnostic = diagnostic;
+  }
 
   /**
    * @summary Restructures an object into a F_GROUP_LIST_response
