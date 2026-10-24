@@ -21,12 +21,15 @@ import * as $ from "@wildboar/asn1/functional";
  * @enum {number}
  */
 export
-enum _enum_for_NegTokenTarg_negResult {
-    accept_completed = 0,
-    accept_incomplete = 1,
-    reject = 2,
-    request_mic = 3,
-}
+const _enum_for_NegTokenTarg_negResult = {
+    accept_completed: 0,
+    accept_incomplete: 1,
+    reject: 2,
+    request_mic: 3,
+} as const;
+
+export
+type _enum_for_NegTokenTarg_negResult = (typeof _enum_for_NegTokenTarg_negResult)[keyof typeof _enum_for_NegTokenTarg_negResult];
 
 /**
  * @summary NegTokenTarg_negResult

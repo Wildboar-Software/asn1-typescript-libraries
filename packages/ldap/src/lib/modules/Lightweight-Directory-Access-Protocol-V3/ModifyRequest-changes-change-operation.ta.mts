@@ -13,11 +13,13 @@ import {
 import * as $ from '@wildboar/asn1/functional';
 
 
-export enum _enum_for_ModifyRequest_changes_change_operation {
-  add = 0,
-  delete_ = 1,
-  replace = 2,
-}
+export const _enum_for_ModifyRequest_changes_change_operation = {
+  add: 0,
+  delete_: 1,
+  replace: 2,
+} as const;
+
+export type _enum_for_ModifyRequest_changes_change_operation = (typeof _enum_for_ModifyRequest_changes_change_operation)[keyof typeof _enum_for_ModifyRequest_changes_change_operation];
 
 
 /**

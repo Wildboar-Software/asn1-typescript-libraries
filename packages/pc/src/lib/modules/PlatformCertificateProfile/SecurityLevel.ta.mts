@@ -33,12 +33,15 @@ import * as $ from "@wildboar/asn1/functional";
  * @enum {number}
  */
 export
-enum _enum_for_SecurityLevel {
-    level1 = 1,
-    level2 = 2,
-    level3 = 3,
-    level4 = 4,
-}
+const _enum_for_SecurityLevel = {
+    level1: 1,
+    level2: 2,
+    level3: 3,
+    level4: 4,
+} as const;
+
+export
+type _enum_for_SecurityLevel = (typeof _enum_for_SecurityLevel)[keyof typeof _enum_for_SecurityLevel];
 
 /**
  * @summary SecurityLevel

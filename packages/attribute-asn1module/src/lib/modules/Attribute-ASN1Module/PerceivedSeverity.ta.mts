@@ -34,14 +34,17 @@ import * as $ from "@wildboar/asn1/functional";
  * @enum {number}
  */
 export
-enum _enum_for_PerceivedSeverity {
-    indeterminate = 0,
-    critical = 1,
-    major = 2,
-    minor = 3,
-    warning = 4,
-    cleared = 5,
-}
+const _enum_for_PerceivedSeverity = {
+    indeterminate: 0,
+    critical: 1,
+    major: 2,
+    minor: 3,
+    warning: 4,
+    cleared: 5,
+} as const;
+
+export
+type _enum_for_PerceivedSeverity = (typeof _enum_for_PerceivedSeverity)[keyof typeof _enum_for_PerceivedSeverity];
 
 /**
  * @summary PerceivedSeverity

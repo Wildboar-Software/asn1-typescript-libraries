@@ -13,18 +13,20 @@ import {
 import * as $ from '@wildboar/asn1/functional';
 
 
-export enum _enum_for_SubprocessName {
-    data_capture = 1,
-    intermediate_signal_processing = 2,
-    final_signal_processing = 3,
-    storage = 4,
-    comparison = 5,
-    decision = 6,
-    sample_fusion = 7,
-    feature_fusion = 8,
-    score_fusion = 9,
-    decision_fusion = 10,
-}
+export const _enum_for_SubprocessName = {
+    data_capture: 1,
+    intermediate_signal_processing: 2,
+    final_signal_processing: 3,
+    storage: 4,
+    comparison: 5,
+    decision: 6,
+    sample_fusion: 7,
+    feature_fusion: 8,
+    score_fusion: 9,
+    decision_fusion: 10,
+} as const;
+
+export type _enum_for_SubprocessName = (typeof _enum_for_SubprocessName)[keyof typeof _enum_for_SubprocessName];
 
 
 /**

@@ -30,11 +30,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @enum {number}
  */
 export
-enum _enum_for_TrendIndication {
-    lessSevere = 0,
-    noChange = 1,
-    moreSevere = 2,
-}
+const _enum_for_TrendIndication = {
+    lessSevere: 0,
+    noChange: 1,
+    moreSevere: 2,
+} as const;
+
+export
+type _enum_for_TrendIndication = (typeof _enum_for_TrendIndication)[keyof typeof _enum_for_TrendIndication];
 
 /**
  * @summary TrendIndication

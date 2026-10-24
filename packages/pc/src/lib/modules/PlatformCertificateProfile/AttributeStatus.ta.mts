@@ -33,11 +33,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @enum {number}
  */
 export
-enum _enum_for_AttributeStatus {
-    added = 0,
-    modified = 1,
-    removed = 2,
-}
+const _enum_for_AttributeStatus = {
+    added: 0,
+    modified: 1,
+    removed: 2,
+} as const;
+
+export
+type _enum_for_AttributeStatus = (typeof _enum_for_AttributeStatus)[keyof typeof _enum_for_AttributeStatus];
 
 /**
  * @summary AttributeStatus

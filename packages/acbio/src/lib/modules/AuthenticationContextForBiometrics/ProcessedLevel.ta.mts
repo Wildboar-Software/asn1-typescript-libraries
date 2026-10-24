@@ -13,13 +13,15 @@ import {
 import * as $ from '@wildboar/asn1/functional';
 
 
-export enum _enum_for_ProcessedLevel {
-    raw_data = 1,
-    intermediate_data = 2,
-    processed_data = 3,
-    comparison_score = 4,
-    comparison_decision = 5,
-}
+export const _enum_for_ProcessedLevel = {
+    raw_data: 1,
+    intermediate_data: 2,
+    processed_data: 3,
+    comparison_score: 4,
+    comparison_decision: 5,
+} as const;
+
+export type _enum_for_ProcessedLevel = (typeof _enum_for_ProcessedLevel)[keyof typeof _enum_for_ProcessedLevel];
 
 
 /**

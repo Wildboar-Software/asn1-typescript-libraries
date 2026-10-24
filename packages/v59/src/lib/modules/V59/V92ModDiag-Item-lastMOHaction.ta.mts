@@ -13,12 +13,15 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 
 export
-enum _enum_for_V92ModDiag_Item_lastMOHaction {
-    mohaccepted = 0,
-    mohdeclined = 1,
-    mohdenied = 2,
-    mohclrdn = 3,
-}
+const _enum_for_V92ModDiag_Item_lastMOHaction = {
+    mohaccepted: 0,
+    mohdeclined: 1,
+    mohdenied: 2,
+    mohclrdn: 3,
+} as const;
+
+export
+type _enum_for_V92ModDiag_Item_lastMOHaction = (typeof _enum_for_V92ModDiag_Item_lastMOHaction)[keyof typeof _enum_for_V92ModDiag_Item_lastMOHaction];
 
 /**
  * @summary V92ModDiag_Item_lastMOHaction

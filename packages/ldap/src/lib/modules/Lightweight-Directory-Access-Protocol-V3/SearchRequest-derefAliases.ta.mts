@@ -28,12 +28,14 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_SearchRequest_derefAliases {
-  neverDerefAliases = 0,
-  derefInSearching = 1,
-  derefFindingBaseObj = 2,
-  derefAlways = 3,
-}
+export const _enum_for_SearchRequest_derefAliases = {
+  neverDerefAliases: 0,
+  derefInSearching: 1,
+  derefFindingBaseObj: 2,
+  derefAlways: 3,
+} as const;
+
+export type _enum_for_SearchRequest_derefAliases = (typeof _enum_for_SearchRequest_derefAliases)[keyof typeof _enum_for_SearchRequest_derefAliases];
 
 
 /**

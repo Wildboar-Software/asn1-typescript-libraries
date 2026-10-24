@@ -28,11 +28,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @enum {number}
  */
 export
-enum _enum_for_V8Diag_Item_v8Result {
-    v8ComNeg = 0,
-    v8NoComNeg = 1,
-    v8NoNegAuto = 2,
-}
+const _enum_for_V8Diag_Item_v8Result = {
+    v8ComNeg: 0,
+    v8NoComNeg: 1,
+    v8NoNegAuto: 2,
+} as const;
+
+export
+type _enum_for_V8Diag_Item_v8Result = (typeof _enum_for_V8Diag_Item_v8Result)[keyof typeof _enum_for_V8Diag_Item_v8Result];
 
 /**
  * @summary V8Diag_Item_v8Result

@@ -20,32 +20,34 @@ import * as $ from '@wildboar/asn1/functional';
  * all share numeric value 8; Annex A treats them as distinct.
  * ITU-T Rec. T.38 (11/2015) §7.4, Table 5.
  */
-export enum _enum_for_Data_Field_Item_field_type {
+export const _enum_for_Data_Field_Item_field_type = {
   /** HDLC frame octets without FCS; bit stuffing removed. */
-  hdlc_data = 0,
+  hdlc_data: 0,
   /** HDLC energy below turn-off; no `field-data`. */
-  hdlc_sig_end = 1,
+  hdlc_sig_end: 1,
   /** End of HDLC frame, FCS good, more frames follow. */
-  hdlc_fcs_OK = 2,
+  hdlc_fcs_OK: 2,
   /** End of HDLC frame, FCS bad, more frames follow. */
-  hdlc_fcs_BAD = 3,
+  hdlc_fcs_BAD: 3,
   /** End of HDLC frame, FCS good; stop V.21 or send V.34 flags. */
-  hdlc_fcs_OK_sig_end = 4,
+  hdlc_fcs_OK_sig_end: 4,
   /** End of HDLC frame, FCS bad; final frame, stop transmission. */
-  hdlc_fcs_BAD_sig_end = 5,
+  hdlc_fcs_BAD_sig_end: 5,
   /** Non-ECM T.4 Phase C or Method-2 TCF; not the last chunk. */
-  t4_non_ecm_data = 6,
+  t4_non_ecm_data: 6,
   /** Last non-ECM T.4 Phase C or Method-2 TCF chunk. */
-  t4_non_ecm_sig_end = 7,
+  t4_non_ecm_sig_end: 7,
   /** V.8 CM as FAP profile digit `1`..`6`. */
-  cm_message = 8,
+  cm_message: 8,
   /** ACK/NAK to `cm-message` (`A0` / `N0`..`N2`). */
-  jm_message = 8,
+  jm_message: 8,
   /** V.8 CI: IA5 `4` (send) or `5` (receive). */
-  ci_message = 8,
+  ci_message: 8,
   /** V.34 primary DSR; three IA5 digits, rate/100. */
-  v34rate = 8,
-}
+  v34rate: 8,
+} as const;
+
+export type _enum_for_Data_Field_Item_field_type = (typeof _enum_for_Data_Field_Item_field_type)[keyof typeof _enum_for_Data_Field_Item_field_type];
 
 
 /**

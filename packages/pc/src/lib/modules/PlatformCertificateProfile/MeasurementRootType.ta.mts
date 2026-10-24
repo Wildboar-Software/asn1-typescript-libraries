@@ -38,14 +38,17 @@ import * as $ from "@wildboar/asn1/functional";
  * @enum {number}
  */
 export
-enum _enum_for_MeasurementRootType {
-    static_ = 0,
-    dynamic = 1,
-    nonHost = 2,
-    hybrid = 3,
-    physical = 4,
-    virtual = 5,
-}
+const _enum_for_MeasurementRootType = {
+    static_: 0,
+    dynamic: 1,
+    nonHost: 2,
+    hybrid: 3,
+    physical: 4,
+    virtual: 5,
+} as const;
+
+export
+type _enum_for_MeasurementRootType = (typeof _enum_for_MeasurementRootType)[keyof typeof _enum_for_MeasurementRootType];
 
 /**
  * @summary MeasurementRootType

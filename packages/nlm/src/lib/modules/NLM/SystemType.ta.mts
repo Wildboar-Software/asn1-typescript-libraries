@@ -31,10 +31,12 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_SystemType {
-    eS = 1,
-    iS = 2,
-}
+export const _enum_for_SystemType = {
+    eS: 1,
+    iS: 2,
+} as const;
+
+export type _enum_for_SystemType = (typeof _enum_for_SystemType)[keyof typeof _enum_for_SystemType];
 
 
 /**

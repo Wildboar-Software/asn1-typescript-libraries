@@ -29,14 +29,16 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * @enum {number}
  */
-export enum _enum_for_OCSPResponseStatus {
-    successful = 0,
-    malformedRequest = 1,
-    internalError = 2,
-    tryLater = 3,
-    sigRequired = 5,
-    unauthorized = 6,
-}
+export const _enum_for_OCSPResponseStatus = {
+    successful: 0,
+    malformedRequest: 1,
+    internalError: 2,
+    tryLater: 3,
+    sigRequired: 5,
+    unauthorized: 6,
+} as const;
+
+export type _enum_for_OCSPResponseStatus = (typeof _enum_for_OCSPResponseStatus)[keyof typeof _enum_for_OCSPResponseStatus];
 
 
 /**

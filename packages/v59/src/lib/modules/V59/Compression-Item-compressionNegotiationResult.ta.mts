@@ -31,14 +31,17 @@ import * as $ from "@wildboar/asn1/functional";
  * @enum {number}
  */
 export
-enum _enum_for_Compression_Item_compressionNegotiationResult {
-    none = 0,
-    v42bisOnly = 1,
-    v42bisBoth = 2,
-    v44Both = 3,
-    v44Only = 4,
-    other = 5,
-}
+const _enum_for_Compression_Item_compressionNegotiationResult = {
+    none: 0,
+    v42bisOnly: 1,
+    v42bisBoth: 2,
+    v44Both: 3,
+    v44Only: 4,
+    other: 5,
+} as const;
+
+export
+type _enum_for_Compression_Item_compressionNegotiationResult = (typeof _enum_for_Compression_Item_compressionNegotiationResult)[keyof typeof _enum_for_Compression_Item_compressionNegotiationResult];
 
 /**
  * @summary Compression_Item_compressionNegotiationResult

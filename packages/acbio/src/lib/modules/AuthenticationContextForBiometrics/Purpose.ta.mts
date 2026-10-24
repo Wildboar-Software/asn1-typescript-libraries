@@ -25,10 +25,12 @@ import * as $ from '@wildboar/asn1/functional';
  * ```
  * @enum {number}
  */
-export enum _enum_for_Purpose {
-    reference = 1,
-    sample = 2,
-}
+export const _enum_for_Purpose = {
+    reference: 1,
+    sample: 2,
+} as const;
+
+export type _enum_for_Purpose = (typeof _enum_for_Purpose)[keyof typeof _enum_for_Purpose];
 
 
 /**
