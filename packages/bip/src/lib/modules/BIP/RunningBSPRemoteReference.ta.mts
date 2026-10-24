@@ -47,40 +47,48 @@ import {
  *
  */
 export class RunningBSPRemoteReference {
+  /**
+   * @summary `referrerEndpointIRI`.
+   * @description
+   *
+   * Master that holds this reference; not the local endpoint.
+   * X.1083 §18.6.2.1.
+   *
+   * @public
+   * @readonly
+   */
+  readonly referrerEndpointIRI: EndpointIRI;
+  /**
+   * @summary `bspProductUuid`.
+   * @description
+   *
+   * Product UUID of the registered BSP. X.1083 §18.6.2.2.
+   *
+   * @public
+   * @readonly
+   */
+  readonly bspProductUuid: BioAPI_UUID;
+  /**
+   * @summary `unitEventSubscription`.
+   * @description
+   *
+   * Whether the framework must send `unitEvent` notifications
+   * to that master. X.1083 §18.6.2.3.
+   *
+   * @public
+   * @readonly
+   */
+  readonly unitEventSubscription: BOOLEAN;
+
   constructor(
-    /**
-     * @summary `referrerEndpointIRI`.
-     * @description
-     *
-     * Master that holds this reference; not the local endpoint.
-     * X.1083 §18.6.2.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly referrerEndpointIRI: EndpointIRI,
-    /**
-     * @summary `bspProductUuid`.
-     * @description
-     *
-     * Product UUID of the registered BSP. X.1083 §18.6.2.2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bspProductUuid: BioAPI_UUID,
-    /**
-     * @summary `unitEventSubscription`.
-     * @description
-     *
-     * Whether the framework must send `unitEvent` notifications
-     * to that master. X.1083 §18.6.2.3.
-     *
-     * @public
-     * @readonly
-     */
-    readonly unitEventSubscription: BOOLEAN
-  ) {}
+    referrerEndpointIRI: EndpointIRI,
+    bspProductUuid: BioAPI_UUID,
+    unitEventSubscription: BOOLEAN
+  ) {
+    this.referrerEndpointIRI = referrerEndpointIRI;
+    this.bspProductUuid = bspProductUuid;
+    this.unitEventSubscription = unitEventSubscription;
+  }
 
   /**
    * @summary Restructures an object into a RunningBSPRemoteReference

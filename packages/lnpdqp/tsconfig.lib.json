@@ -9,6 +9,7 @@
     "rootDir": ".",
     "strict": true,
     "strictNullChecks": true,
+    "erasableSyntaxOnly": true,
     "noImplicitOverride": true,
     "noImplicitReturns": true,
     "noUnusedLocals": true,

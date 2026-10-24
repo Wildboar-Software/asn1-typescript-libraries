@@ -44,41 +44,49 @@ import { CASSInfo, _decode_CASSInfo, _encode_CASSInfo } from "../CASS-CAM-MESSAG
  */
 export
 class RcasAncMsgContent {
+    /**
+     * @summary `protocolTypeFlag`.
+     * @description
+     *
+     * `0x01` normal mode (this module); `0x02` fast
+     * mode (Annex B). Other values reserved.
+     *
+     * @public
+     * @readonly
+     */
+    readonly protocolTypeFlag: OCTET_STRING;
+    /**
+     * @summary `cAMClientVersion`.
+     * @description
+     *
+     * CAM hardware, bootloader, and CACS image
+     * versions announced to CAMs (§7.1).
+     *
+     * @public
+     * @readonly
+     */
+    readonly cAMClientVersion: CAMClientVersion[];
+    /**
+     * @summary `cASSInfo`.
+     * @description
+     *
+     * CASS unique ID, IP, UDP/TCP, and listening
+     * port so the CAM can reach this CASS (§7.1).
+     *
+     * @public
+     * @readonly
+     */
+    readonly cASSInfo: CASSInfo;
+
     constructor (
-        /**
-         * @summary `protocolTypeFlag`.
-         * @description
-         *
-         * `0x01` normal mode (this module); `0x02` fast
-         * mode (Annex B). Other values reserved.
-         *
-         * @public
-         * @readonly
-         */
-        readonly protocolTypeFlag: OCTET_STRING,
-        /**
-         * @summary `cAMClientVersion`.
-         * @description
-         *
-         * CAM hardware, bootloader, and CACS image
-         * versions announced to CAMs (§7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cAMClientVersion: CAMClientVersion[],
-        /**
-         * @summary `cASSInfo`.
-         * @description
-         *
-         * CASS unique ID, IP, UDP/TCP, and listening
-         * port so the CAM can reach this CASS (§7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cASSInfo: CASSInfo
-    ) {}
+        protocolTypeFlag: OCTET_STRING,
+        cAMClientVersion: CAMClientVersion[],
+        cASSInfo: CASSInfo
+    ) {
+        this.protocolTypeFlag = protocolTypeFlag;
+        this.cAMClientVersion = cAMClientVersion;
+        this.cASSInfo = cASSInfo;
+    }
 
     /**
      * @summary Restructures an object into a RcasAncMsgContent

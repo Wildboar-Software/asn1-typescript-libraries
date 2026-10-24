@@ -32,39 +32,46 @@ import { Name, _decode_Name, _encode_Name } from "../MEDIA-GATEWAY-CONTROL/Name.
  */
 export
 class PackagesItem {
+    /**
+     * @summary `packageName`.
+     * @description
+     *
+     * Two-octet package identifier (`Name`).
+     *
+     * @public
+     * @readonly
+     */
+    readonly packageName: Name;
+    /**
+     * @summary `packageVersion`.
+     * @description
+     *
+     * Package version, 0 to 99.
+     *
+     * @public
+     * @readonly
+     */
+    readonly packageVersion: INTEGER;
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `packageName`.
-         * @description
-         *
-         * Two-octet package identifier (`Name`).
-         *
-         * @public
-         * @readonly
-         */
-        readonly packageName: Name,
-        /**
-         * @summary `packageVersion`.
-         * @description
-         *
-         * Package version, 0 to 99.
-         *
-         * @public
-         * @readonly
-         */
-        readonly packageVersion: INTEGER,
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
+        packageName: Name,
+        packageVersion: INTEGER,
+        _unrecognizedExtensionsList: _Element[] = []
     ) {
+        this.packageName = packageName;
+        this.packageVersion = packageVersion;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
             const n = typeof packageVersion === "bigint" ? packageVersion : BigInt(packageVersion);
             if (n < 0n || n > 99n) {
                 throw new ASN1OverflowError("PackagesItem.packageVersion violates INTEGER range");

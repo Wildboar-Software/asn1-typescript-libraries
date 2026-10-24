@@ -13,15 +13,17 @@ import {
 import * as $ from '@wildboar/asn1/functional';
 
 
-export enum _enum_for_BioAPI_BIR_PURPOSE {
-  verify = 0,
-  identify = 1,
-  enroll = 2,
-  enrollVerify = 3,
-  enrollIdentify = 4,
-  audit = 5,
-  any_ = 6,
-}
+export const _enum_for_BioAPI_BIR_PURPOSE = {
+  verify: 0,
+  identify: 1,
+  enroll: 2,
+  enrollVerify: 3,
+  enrollIdentify: 4,
+  audit: 5,
+  any_: 6,
+} as const;
+
+export type _enum_for_BioAPI_BIR_PURPOSE = (typeof _enum_for_BioAPI_BIR_PURPOSE)[keyof typeof _enum_for_BioAPI_BIR_PURPOSE];
 
 
 /**

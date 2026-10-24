@@ -41,29 +41,35 @@ import {
  *
  */
 export class F_LOCATE_request {
+  /**
+   * @summary `file_access_data_unit_identity`.
+   * @description
+   *
+   * Any ISO 8571-2 identity, including next, first, or last. Sets
+   * current location. ISO 8571-3:1988 §20.2.2.2 / §13.12.
+   *
+   * @public
+   * @readonly
+   */
+  readonly file_access_data_unit_identity: FADU_Identity;
+  /**
+   * @summary `fadu_lock`.
+   * @description
+   *
+   * ISO 8571-3:1988 §20.2.2.3 / §13.9.
+   *
+   * @public
+   * @readonly
+   */
+  readonly fadu_lock?: OPTIONAL<FADU_Lock>;
+
   constructor(
-    /**
-     * @summary `file_access_data_unit_identity`.
-     * @description
-     *
-     * Any ISO 8571-2 identity, including next, first, or last. Sets
-     * current location. ISO 8571-3:1988 §20.2.2.2 / §13.12.
-     *
-     * @public
-     * @readonly
-     */
-    readonly file_access_data_unit_identity: FADU_Identity,
-    /**
-     * @summary `fadu_lock`.
-     * @description
-     *
-     * ISO 8571-3:1988 §20.2.2.3 / §13.9.
-     *
-     * @public
-     * @readonly
-     */
-    readonly fadu_lock?: OPTIONAL<FADU_Lock>
-  ) {}
+    file_access_data_unit_identity: FADU_Identity,
+    fadu_lock?: OPTIONAL<FADU_Lock>
+  ) {
+    this.file_access_data_unit_identity = file_access_data_unit_identity;
+    this.fadu_lock = fadu_lock;
+  }
 
   /**
    * @summary Restructures an object into a F_LOCATE_request

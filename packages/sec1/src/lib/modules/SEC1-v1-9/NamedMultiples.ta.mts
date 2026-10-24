@@ -30,30 +30,36 @@ import { ECPoint, _decode_ECPoint, _encode_ECPoint } from "../SEC1-v1-9/ECPoint.
  */
 export
 class NamedMultiples {
+    /**
+     * @summary `multiples`.
+     * @description
+     *
+     * OID naming the set of scalars. SEC 1 does not assign specific values.
+     * [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
+     *
+     * @public
+     * @readonly
+     */
+    readonly multiples: OBJECT_IDENTIFIER;
+    /**
+     * @summary `points`.
+     * @description
+     *
+     * Points corresponding to those scalars, in the order implied by `multiples`.
+     * [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
+     *
+     * @public
+     * @readonly
+     */
+    readonly points: ECPoint[];
+
     constructor (
-        /**
-         * @summary `multiples`.
-         * @description
-         *
-         * OID naming the set of scalars. SEC 1 does not assign specific values.
-         * [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly multiples: OBJECT_IDENTIFIER,
-        /**
-         * @summary `points`.
-         * @description
-         *
-         * Points corresponding to those scalars, in the order implied by `multiples`.
-         * [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly points: ECPoint[]
-    ) {}
+        multiples: OBJECT_IDENTIFIER,
+        points: ECPoint[]
+    ) {
+        this.multiples = multiples;
+        this.points = points;
+    }
 
     /**
      * @summary Restructures an object into a NamedMultiples

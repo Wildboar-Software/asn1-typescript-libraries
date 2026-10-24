@@ -33,13 +33,15 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_Value {
-  versionMismatch = 0,
-  mustUnderstand = 1,
-  dataEncodingUnknown = 2,
-  sender = 3,
-  receiver = 4,
-}
+export const _enum_for_Value = {
+  versionMismatch: 0,
+  mustUnderstand: 1,
+  dataEncodingUnknown: 2,
+  sender: 3,
+  receiver: 4,
+} as const;
+
+export type _enum_for_Value = (typeof _enum_for_Value)[keyof typeof _enum_for_Value];
 
 
 /**
@@ -200,12 +202,12 @@ export const receiver: Value =
 
 
 
-export const _decode_Value = $._decodeEnumerated;
+export const _decode_Value = $._decodeEnumerated as $.ASN1Decoder<Value>;
 
 
 
 
-export const _encode_Value = $._encodeEnumerated;
+export const _encode_Value = $._encodeEnumerated as $.ASN1Encoder<Value>;
 
 
 /* eslint-enable */

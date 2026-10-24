@@ -43,89 +43,107 @@ import {
  *
  */
 export class Concurrency_Access {
+  /**
+   * @summary `read`.
+   * @description
+   *
+   * Concurrency key for file-access action `read`.
+   *
+   * @public
+   * @readonly
+   */
+  readonly read: Concurrency_Key;
+  /**
+   * @summary `insert`.
+   * @description
+   *
+   * Concurrency key for file-access action `insert`.
+   *
+   * @public
+   * @readonly
+   */
+  readonly insert: Concurrency_Key;
+  /**
+   * @summary `replace`.
+   * @description
+   *
+   * Concurrency key for file-access action `replace`.
+   *
+   * @public
+   * @readonly
+   */
+  readonly replace: Concurrency_Key;
+  /**
+   * @summary `extend`.
+   * @description
+   *
+   * Concurrency key for file-access action `extend`.
+   *
+   * @public
+   * @readonly
+   */
+  readonly extend: Concurrency_Key;
+  /**
+   * @summary `erase`.
+   * @description
+   *
+   * Concurrency key for file-access action `erase`.
+   *
+   * @public
+   * @readonly
+   */
+  readonly erase: Concurrency_Key;
+  /**
+   * @summary `read_attribute`.
+   * @description
+   *
+   * Concurrency key for complete-file action `read attribute`.
+   *
+   * @public
+   * @readonly
+   */
+  readonly read_attribute: Concurrency_Key;
+  /**
+   * @summary `change_attribute`.
+   * @description
+   *
+   * Concurrency key for complete-file action `change attribute`.
+   *
+   * @public
+   * @readonly
+   */
+  readonly change_attribute: Concurrency_Key;
+  /**
+   * @summary `delete_Object`.
+   * @description
+   *
+   * Concurrency key for complete-file action `delete file`.
+   * ISO 8571-4:1988 names this `delete-file`.
+   *
+   * @public
+   * @readonly
+   */
+  readonly delete_Object: Concurrency_Key;
+
   constructor(
-    /**
-     * @summary `read`.
-     * @description
-     *
-     * Concurrency key for file-access action `read`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly read: Concurrency_Key,
-    /**
-     * @summary `insert`.
-     * @description
-     *
-     * Concurrency key for file-access action `insert`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly insert: Concurrency_Key,
-    /**
-     * @summary `replace`.
-     * @description
-     *
-     * Concurrency key for file-access action `replace`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly replace: Concurrency_Key,
-    /**
-     * @summary `extend`.
-     * @description
-     *
-     * Concurrency key for file-access action `extend`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly extend: Concurrency_Key,
-    /**
-     * @summary `erase`.
-     * @description
-     *
-     * Concurrency key for file-access action `erase`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly erase: Concurrency_Key,
-    /**
-     * @summary `read_attribute`.
-     * @description
-     *
-     * Concurrency key for complete-file action `read attribute`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly read_attribute: Concurrency_Key,
-    /**
-     * @summary `change_attribute`.
-     * @description
-     *
-     * Concurrency key for complete-file action `change attribute`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly change_attribute: Concurrency_Key,
-    /**
-     * @summary `delete_Object`.
-     * @description
-     *
-     * Concurrency key for complete-file action `delete file`.
-     * ISO 8571-4:1988 names this `delete-file`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly delete_Object: Concurrency_Key
-  ) {}
+    read: Concurrency_Key,
+    insert: Concurrency_Key,
+    replace: Concurrency_Key,
+    extend: Concurrency_Key,
+    erase: Concurrency_Key,
+    read_attribute: Concurrency_Key,
+    change_attribute: Concurrency_Key,
+    delete_Object: Concurrency_Key
+  ) {
+    this.read = read;
+    this.insert = insert;
+    this.replace = replace;
+    this.extend = extend;
+    this.erase = erase;
+    this.read_attribute = read_attribute;
+    this.change_attribute = change_attribute;
+    this.delete_Object = delete_Object;
+  }
 
   /**
    * @summary Restructures an object into a Concurrency_Access

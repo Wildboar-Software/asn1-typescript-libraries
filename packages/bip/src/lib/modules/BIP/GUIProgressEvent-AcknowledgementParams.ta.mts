@@ -38,19 +38,23 @@ import {
  *
  */
 export class GUIProgressEvent_AcknowledgementParams {
+  /**
+   * @summary `response`.
+   * @description
+   *
+   * Handler's GUI response; written to `Response`. X.1083
+   * §17.4.9, Table 133.
+   *
+   * @public
+   * @readonly
+   */
+  readonly response: BioAPI_GUI_RESPONSE;
+
   constructor(
-    /**
-     * @summary `response`.
-     * @description
-     *
-     * Handler's GUI response; written to `Response`. X.1083
-     * §17.4.9, Table 133.
-     *
-     * @public
-     * @readonly
-     */
-    readonly response: BioAPI_GUI_RESPONSE
-  ) {}
+    response: BioAPI_GUI_RESPONSE
+  ) {
+    this.response = response;
+  }
 
   /**
    * @summary Restructures an object into a GUIProgressEvent_AcknowledgementParams

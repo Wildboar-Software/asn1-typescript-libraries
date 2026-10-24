@@ -29,20 +29,24 @@ import { _decode_EnableProfileResponse_enableResult, _encode_EnableProfileRespon
  */
 export
 class EnableProfileResponse {
+    /**
+     * @summary `enableResult`.
+     * @description
+     * 
+     * `ok`, not found, not disabled, disallowed by policy, wrong profile
+     * re-enabled after a test profile, CAT busy, or undefined. SGP.22 v3.1
+     * §5.7.16.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly enableResult: EnableProfileResponse_enableResult;
+
     constructor (
-        /**
-         * @summary `enableResult`.
-         * @description
-         * 
-         * `ok`, not found, not disabled, disallowed by policy, wrong profile
-         * re-enabled after a test profile, CAT busy, or undefined. SGP.22 v3.1
-         * §5.7.16.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly enableResult: EnableProfileResponse_enableResult
-    ) {}
+        enableResult: EnableProfileResponse_enableResult
+    ) {
+        this.enableResult = enableResult;
+    }
 
     /**
      * @summary Restructures an object into a EnableProfileResponse

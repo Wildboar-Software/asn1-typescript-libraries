@@ -36,69 +36,81 @@ import { InitialiseSecureChannelRequest, _decode_InitialiseSecureChannelRequest,
  */
 export
 class BoundProfilePackage {
+    /**
+     * @summary `initialiseSecureChannelRequest`.
+     * @description
+     * 
+     * Clear ES8+.InitialiseSecureChannel TLV (tag `'BF23'`). Not encrypted.
+     * Integrity comes from `smdpSign`. SGP.22 v3.1 §2.5.4.1.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly initialiseSecureChannelRequest: InitialiseSecureChannelRequest;
+    /**
+     * @summary `firstSequenceOf87`.
+     * @description
+     * 
+     * `'87'` BSP segments containing ES8+.ConfigureISDP, encrypted and
+     * MACed with S-ENC and S-MAC from the key agreement. SGP.22 v3.1 §2.5.4
+     * Table 4.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly firstSequenceOf87: OCTET_STRING[];
+    /**
+     * @summary `sequenceOf88`.
+     * @description
+     * 
+     * `'88'` BSP segments containing ES8+.StoreMetadata. MACed with S-MAC
+     * and not encrypted, so the LPA can read the metadata. Further segments
+     * carry the rest of the metadata when one TLV is not enough. SGP.22
+     * v3.1 §2.5.4.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly sequenceOf88: OCTET_STRING[];
+    /**
+     * @summary `secondSequenceOf87`.
+     * @description
+     * 
+     * Optional `'87'` segments containing ES8+.ReplaceSessionKeys,
+     * encrypted with the keys from the key agreement. Absent when the
+     * profile elements stay under those session keys instead of PPK-ENC and
+     * PPK-MAC. SGP.22 v3.1 §2.5.4.4.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly secondSequenceOf87: OPTIONAL<OCTET_STRING[]>;
+    /**
+     * @summary `sequenceOf86`.
+     * @description
+     * 
+     * `'86'` BSP segments of the Protected Profile Package (the Profile
+     * Elements). Protected with PPK-ENC and PPK-MAC, or with S-ENC and
+     * S-MAC if ReplaceSessionKeys was not used. SGP.22 v3.1 §2.5.4 Table 4.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly sequenceOf86: OCTET_STRING[];
+
     constructor (
-        /**
-         * @summary `initialiseSecureChannelRequest`.
-         * @description
-         * 
-         * Clear ES8+.InitialiseSecureChannel TLV (tag `'BF23'`). Not encrypted.
-         * Integrity comes from `smdpSign`. SGP.22 v3.1 §2.5.4.1.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly initialiseSecureChannelRequest: InitialiseSecureChannelRequest,
-        /**
-         * @summary `firstSequenceOf87`.
-         * @description
-         * 
-         * `'87'` BSP segments containing ES8+.ConfigureISDP, encrypted and
-         * MACed with S-ENC and S-MAC from the key agreement. SGP.22 v3.1 §2.5.4
-         * Table 4.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly firstSequenceOf87: OCTET_STRING[],
-        /**
-         * @summary `sequenceOf88`.
-         * @description
-         * 
-         * `'88'` BSP segments containing ES8+.StoreMetadata. MACed with S-MAC
-         * and not encrypted, so the LPA can read the metadata. Further segments
-         * carry the rest of the metadata when one TLV is not enough. SGP.22
-         * v3.1 §2.5.4.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly sequenceOf88: OCTET_STRING[],
-        /**
-         * @summary `secondSequenceOf87`.
-         * @description
-         * 
-         * Optional `'87'` segments containing ES8+.ReplaceSessionKeys,
-         * encrypted with the keys from the key agreement. Absent when the
-         * profile elements stay under those session keys instead of PPK-ENC and
-         * PPK-MAC. SGP.22 v3.1 §2.5.4.4.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly secondSequenceOf87: OPTIONAL<OCTET_STRING[]>,
-        /**
-         * @summary `sequenceOf86`.
-         * @description
-         * 
-         * `'86'` BSP segments of the Protected Profile Package (the Profile
-         * Elements). Protected with PPK-ENC and PPK-MAC, or with S-ENC and
-         * S-MAC if ReplaceSessionKeys was not used. SGP.22 v3.1 §2.5.4 Table 4.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly sequenceOf86: OCTET_STRING[]
-    ) {}
+        initialiseSecureChannelRequest: InitialiseSecureChannelRequest,
+        firstSequenceOf87: OCTET_STRING[],
+        sequenceOf88: OCTET_STRING[],
+        secondSequenceOf87: OPTIONAL<OCTET_STRING[]>,
+        sequenceOf86: OCTET_STRING[]
+    ) {
+        this.initialiseSecureChannelRequest = initialiseSecureChannelRequest;
+        this.firstSequenceOf87 = firstSequenceOf87;
+        this.sequenceOf88 = sequenceOf88;
+        this.secondSequenceOf87 = secondSequenceOf87;
+        this.sequenceOf86 = sequenceOf86;
+    }
 
     /**
      * @summary Restructures an object into a BoundProfilePackage

@@ -35,41 +35,49 @@ import { _decode_ErrorReason, _encode_ErrorReason, ErrorReason } from "../RSPDef
  */
 export
 class ErrorResult {
+    /**
+     * @summary `bppCommandId`.
+     * @description
+     * 
+     * ES8+ command that failed. SGP.22 v3.1 §2.5.6.1 Table 4a.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly bppCommandId: BppCommandId;
+    /**
+     * @summary `errorReason`.
+     * @description
+     * 
+     * Cause. Only the combinations in SGP.22 v3.1 §2.5.6.1 Table 4a are
+     * authorised. Memory and interruption are temporary; other reasons are
+     * permanent.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly errorReason: ErrorReason;
+    /**
+     * @summary `simaResponse`.
+     * @description
+     * 
+     * Profile Package Interpreter response, present when a Profile Element
+     * produced the error. SGP.22 v3.1 calls this `ppiResponse`.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly simaResponse?: OPTIONAL<OCTET_STRING>;
+
     constructor (
-        /**
-         * @summary `bppCommandId`.
-         * @description
-         * 
-         * ES8+ command that failed. SGP.22 v3.1 §2.5.6.1 Table 4a.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly bppCommandId: BppCommandId,
-        /**
-         * @summary `errorReason`.
-         * @description
-         * 
-         * Cause. Only the combinations in SGP.22 v3.1 §2.5.6.1 Table 4a are
-         * authorised. Memory and interruption are temporary; other reasons are
-         * permanent.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly errorReason: ErrorReason,
-        /**
-         * @summary `simaResponse`.
-         * @description
-         * 
-         * Profile Package Interpreter response, present when a Profile Element
-         * produced the error. SGP.22 v3.1 calls this `ppiResponse`.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly simaResponse?: OPTIONAL<OCTET_STRING>
-    ) {}
+        bppCommandId: BppCommandId,
+        errorReason: ErrorReason,
+        simaResponse?: OPTIONAL<OCTET_STRING>
+    ) {
+        this.bppCommandId = bppCommandId;
+        this.errorReason = errorReason;
+        this.simaResponse = simaResponse;
+    }
 
     /**
      * @summary Restructures an object into a ErrorResult

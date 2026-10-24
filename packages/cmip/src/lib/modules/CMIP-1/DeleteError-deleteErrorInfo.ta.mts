@@ -13,9 +13,11 @@ import {
 import * as $ from '@wildboar/asn1/functional';
 
 
-export enum _enum_for_DeleteError_deleteErrorInfo {
-  accessDenied = 2,
-}
+export const _enum_for_DeleteError_deleteErrorInfo = {
+  accessDenied: 2,
+} as const;
+
+export type _enum_for_DeleteError_deleteErrorInfo = (typeof _enum_for_DeleteError_deleteErrorInfo)[keyof typeof _enum_for_DeleteError_deleteErrorInfo];
 
 
 /**
@@ -58,12 +60,12 @@ export const accessDenied: DeleteError_deleteErrorInfo = DeleteError_deleteError
 
 
 
-export const _decode_DeleteError_deleteErrorInfo = $._decodeEnumerated;
+export const _decode_DeleteError_deleteErrorInfo = $._decodeEnumerated as $.ASN1Decoder<DeleteError_deleteErrorInfo>;
 
 
 
 
-export const _encode_DeleteError_deleteErrorInfo = $._encodeEnumerated;
+export const _encode_DeleteError_deleteErrorInfo = $._encodeEnumerated as $.ASN1Encoder<DeleteError_deleteErrorInfo>;
 
 
 /* eslint-enable */

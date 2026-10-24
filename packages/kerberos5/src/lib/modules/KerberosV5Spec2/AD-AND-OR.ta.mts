@@ -42,30 +42,36 @@ import {
  *
  */
 export class AD_AND_OR {
+  /**
+   * @summary `condition_count`.
+   * @description
+   *
+   * Minimum number of encapsulated elements that must be
+   * satisfied ([RFC 4120 §5.2.6.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.6.3)).
+   *
+   * @public
+   * @readonly
+   */
+  readonly condition_count: Int32;
+  /**
+   * @summary `elements`.
+   * @description
+   *
+   * Restrictive authorization elements under the AND/OR
+   * condition ([RFC 4120 §5.2.6.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.6.3)).
+   *
+   * @public
+   * @readonly
+   */
+  readonly elements: AuthorizationData;
+
   constructor(
-    /**
-     * @summary `condition_count`.
-     * @description
-     *
-     * Minimum number of encapsulated elements that must be
-     * satisfied ([RFC 4120 §5.2.6.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.6.3)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly condition_count: Int32,
-    /**
-     * @summary `elements`.
-     * @description
-     *
-     * Restrictive authorization elements under the AND/OR
-     * condition ([RFC 4120 §5.2.6.3](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.6.3)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly elements: AuthorizationData
-  ) {}
+    condition_count: Int32,
+    elements: AuthorizationData
+  ) {
+    this.condition_count = condition_count;
+    this.elements = elements;
+  }
 
   /**
    * @summary Restructures an object into a AD_AND_OR

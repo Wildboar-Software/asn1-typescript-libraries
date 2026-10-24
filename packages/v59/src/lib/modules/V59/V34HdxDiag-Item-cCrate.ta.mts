@@ -28,12 +28,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @enum {number}
  */
 export
-enum _enum_for_V34HdxDiag_Item_cCrate {
-    t12R12 = 0,
-    t24R24 = 1,
-    t12R24 = 2,
-    t24R12 = 3,
-}
+const _enum_for_V34HdxDiag_Item_cCrate = {
+    t12R12: 0,
+    t24R24: 1,
+    t12R24: 2,
+    t24R12: 3,
+} as const;
+
+export type _enum_for_V34HdxDiag_Item_cCrate = (typeof _enum_for_V34HdxDiag_Item_cCrate)[keyof typeof _enum_for_V34HdxDiag_Item_cCrate];
 
 /**
  * @summary V34HdxDiag_Item_cCrate
@@ -152,7 +154,7 @@ const V34HdxDiag_Item_cCrate_t24R12: V34HdxDiag_Item_cCrate = V34HdxDiag_Item_cC
  */
 export
 const t24R12: V34HdxDiag_Item_cCrate = V34HdxDiag_Item_cCrate.t24R12; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_V34HdxDiag_Item_cCrate = $._decodeEnumerated;
-export const _encode_V34HdxDiag_Item_cCrate = $._encodeEnumerated;
+export const _decode_V34HdxDiag_Item_cCrate = $._decodeEnumerated as $.ASN1Decoder<V34HdxDiag_Item_cCrate>;
+export const _encode_V34HdxDiag_Item_cCrate = $._encodeEnumerated as $.ASN1Encoder<V34HdxDiag_Item_cCrate>;
 
 /* eslint-enable */

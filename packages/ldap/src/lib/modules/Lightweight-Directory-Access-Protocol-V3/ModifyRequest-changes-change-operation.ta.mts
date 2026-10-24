@@ -13,11 +13,13 @@ import {
 import * as $ from '@wildboar/asn1/functional';
 
 
-export enum _enum_for_ModifyRequest_changes_change_operation {
-  add = 0,
-  delete_ = 1,
-  replace = 2,
-}
+export const _enum_for_ModifyRequest_changes_change_operation = {
+  add: 0,
+  delete_: 1,
+  replace: 2,
+} as const;
+
+export type _enum_for_ModifyRequest_changes_change_operation = (typeof _enum_for_ModifyRequest_changes_change_operation)[keyof typeof _enum_for_ModifyRequest_changes_change_operation];
 
 
 /**
@@ -126,7 +128,7 @@ export const replace: ModifyRequest_changes_change_operation = ModifyRequest_cha
  * @returns {ModifyRequest_changes_change_operation} The decoded data structure.
  */
 export function _decode_ModifyRequest_changes_change_operation(el: _Element): ModifyRequest_changes_change_operation {
-  return $._decodeEnumerated(el);
+  return $._decodeEnumerated(el) as ModifyRequest_changes_change_operation;
 }
 
 
@@ -141,7 +143,7 @@ export function _encode_ModifyRequest_changes_change_operation(
   value: ModifyRequest_changes_change_operation,
   elGetter: $.ASN1Encoder<ModifyRequest_changes_change_operation>
 ): _Element {
-  return $._encodeEnumerated(value, elGetter);
+  return $._encodeEnumerated(value, elGetter as $.ASN1Encoder<number>);
 }
 
 

@@ -27,26 +27,34 @@ import { Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Param
  */
 export
 class FilterMessage {
+    /**
+     * @summary `filter_action`.
+     * @public
+     * @readonly
+     */
+    readonly filter_action: FilterAction;
+    /**
+     * @summary `params`.
+     * @public
+     * @readonly
+     */
+    readonly params?: OPTIONAL<Parameters>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `filter_action`.
-         * @public
-         * @readonly
-         */
-        readonly filter_action: FilterAction,
-        /**
-         * @summary `params`.
-         * @public
-         * @readonly
-         */
-        readonly params?: OPTIONAL<Parameters>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        filter_action: FilterAction,
+        params?: OPTIONAL<Parameters>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.filter_action = filter_action;
+        this.params = params;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a FilterMessage

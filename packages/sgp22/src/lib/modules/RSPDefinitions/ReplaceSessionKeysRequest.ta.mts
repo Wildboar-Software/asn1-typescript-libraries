@@ -38,41 +38,49 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class ReplaceSessionKeysRequest {
+    /**
+     * @summary `initialMacChainingValue`.
+     * @description
+     * 
+     * MAC chaining value used for the first block protected by the new
+     * keys. SGP.22 v3.1 §5.5.4.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly initialMacChainingValue: OCTET_STRING;
+    /**
+     * @summary `ppkEnc`.
+     * @description
+     * 
+     * PPK-ENC, the profile-protection encryption key. Same length and
+     * algorithm as S-ENC. SGP.22 v3.1 §5.5.4.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly ppkEnc: OCTET_STRING;
+    /**
+     * @summary `ppkCmac`.
+     * @description
+     * 
+     * PPK-CMAC, the profile-protection MAC key. Same length and algorithm
+     * as S-MAC. SGP.22 v3.1 §5.5.4.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly ppkCmac: OCTET_STRING;
+
     constructor (
-        /**
-         * @summary `initialMacChainingValue`.
-         * @description
-         * 
-         * MAC chaining value used for the first block protected by the new
-         * keys. SGP.22 v3.1 §5.5.4.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly initialMacChainingValue: OCTET_STRING,
-        /**
-         * @summary `ppkEnc`.
-         * @description
-         * 
-         * PPK-ENC, the profile-protection encryption key. Same length and
-         * algorithm as S-ENC. SGP.22 v3.1 §5.5.4.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly ppkEnc: OCTET_STRING,
-        /**
-         * @summary `ppkCmac`.
-         * @description
-         * 
-         * PPK-CMAC, the profile-protection MAC key. Same length and algorithm
-         * as S-MAC. SGP.22 v3.1 §5.5.4.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly ppkCmac: OCTET_STRING
-    ) {}
+        initialMacChainingValue: OCTET_STRING,
+        ppkEnc: OCTET_STRING,
+        ppkCmac: OCTET_STRING
+    ) {
+        this.initialMacChainingValue = initialMacChainingValue;
+        this.ppkEnc = ppkEnc;
+        this.ppkCmac = ppkCmac;
+    }
 
     /**
      * @summary Restructures an object into a ReplaceSessionKeysRequest

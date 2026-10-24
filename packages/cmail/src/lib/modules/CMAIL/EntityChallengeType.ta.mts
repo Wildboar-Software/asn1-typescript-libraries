@@ -42,26 +42,32 @@ import {
  *
  */
 export class EntityChallengeType {
+  /**
+   * @summary `secretQuestion`.
+   * @description Random request plus hash algorithm for
+   * RandomNumber||RSCK (digest filled by the recipient).
+   * ITU-T Rec. X.1341 (09/2015) §9.2–§9.3.
+   * @public
+   * @readonly
+   */
+  readonly secretQuestion: SecretQuestionType;
+  /**
+   * @summary `signature`.
+   * @description Signature over the challenge. XSD uses
+   * XMLDSig `ds:SignatureType`; Annex B is `String`.
+   * ITU-T Rec. X.1341 (09/2015) Annex A–B.
+   * @public
+   * @readonly
+   */
+  readonly signature: SignatureType;
+
   constructor(
-    /**
-     * @summary `secretQuestion`.
-     * @description Random request plus hash algorithm for
-     * RandomNumber||RSCK (digest filled by the recipient).
-     * ITU-T Rec. X.1341 (09/2015) §9.2–§9.3.
-     * @public
-     * @readonly
-     */
-    readonly secretQuestion: SecretQuestionType,
-    /**
-     * @summary `signature`.
-     * @description Signature over the challenge. XSD uses
-     * XMLDSig `ds:SignatureType`; Annex B is `String`.
-     * ITU-T Rec. X.1341 (09/2015) Annex A–B.
-     * @public
-     * @readonly
-     */
-    readonly signature: SignatureType
-  ) {}
+    secretQuestion: SecretQuestionType,
+    signature: SignatureType
+  ) {
+    this.secretQuestion = secretQuestion;
+    this.signature = signature;
+  }
 
   /**
    * @summary Restructures an object into a EntityChallengeType

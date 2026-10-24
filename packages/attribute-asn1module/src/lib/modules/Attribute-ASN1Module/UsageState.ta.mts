@@ -30,11 +30,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @enum {number}
  */
 export
-enum _enum_for_UsageState {
-    idle = 0,
-    active = 1,
-    busy = 2,
-}
+const _enum_for_UsageState = {
+    idle: 0,
+    active: 1,
+    busy: 2,
+} as const;
+
+export type _enum_for_UsageState = (typeof _enum_for_UsageState)[keyof typeof _enum_for_UsageState];
 
 /**
  * @summary UsageState
@@ -153,10 +155,10 @@ export
 const busy: UsageState = UsageState.busy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_UsageState = $._decodeEnumerated;
+export const _decode_UsageState = $._decodeEnumerated as $.ASN1Decoder<UsageState>;
 
 
-export const _encode_UsageState = $._encodeEnumerated;
+export const _encode_UsageState = $._encodeEnumerated as $.ASN1Encoder<UsageState>;
 
 
 /* eslint-enable */

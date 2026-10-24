@@ -43,60 +43,70 @@ import {
  */
 export
 class BulkPDU {
+    /**
+     * @summary `request_id`.
+     * @description
+     *
+     * Same role as in `PDU`; echoed in the Response
+     * ([RFC 3416 §4.1](https://datatracker.ietf.org/doc/html/rfc3416#section-4.1),
+     * [§4.2.3](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.3)).
+     * Range -214783648..214783647.
+     *
+     * @public
+     * @readonly
+     */
+    readonly request_id: INTEGER;
+    /**
+     * @summary `non_repeaters`.
+     * @description
+     *
+     * N: number of leading request bindings that each produce one
+     * GetNext-style binding in the Response (capped by the binding
+     * count)
+     * ([RFC 3416 §4.2.3](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.3)).
+     * Range 0..`max-bindings`.
+     *
+     * @public
+     * @readonly
+     */
+    readonly non_repeaters: INTEGER;
+    /**
+     * @summary `max_repetitions`.
+     * @description
+     *
+     * M: max lexicographic successors requested for each of the R
+     * repeating bindings after the first N
+     * ([RFC 3416 §4.2.3](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.3)).
+     * Range 0..`max-bindings`.
+     *
+     * @public
+     * @readonly
+     */
+    readonly max_repetitions: INTEGER;
+    /**
+     * @summary `variable_bindings`.
+     * @description
+     *
+     * Request bindings (values ignored). Response may contain up to
+     * N + (M × R) bindings, possibly fewer for size or end-of-view
+     * ([RFC 3416 §4.2.3](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.3)).
+     *
+     * @public
+     * @readonly
+     */
+    readonly variable_bindings: VarBindList;
+
     constructor (
-        /**
-         * @summary `request_id`.
-         * @description
-         *
-         * Same role as in `PDU`; echoed in the Response
-         * ([RFC 3416 §4.1](https://datatracker.ietf.org/doc/html/rfc3416#section-4.1),
-         * [§4.2.3](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.3)).
-         * Range -214783648..214783647.
-         *
-         * @public
-         * @readonly
-         */
-        readonly request_id: INTEGER,
-        /**
-         * @summary `non_repeaters`.
-         * @description
-         *
-         * N: number of leading request bindings that each produce one
-         * GetNext-style binding in the Response (capped by the binding
-         * count)
-         * ([RFC 3416 §4.2.3](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.3)).
-         * Range 0..`max-bindings`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly non_repeaters: INTEGER,
-        /**
-         * @summary `max_repetitions`.
-         * @description
-         *
-         * M: max lexicographic successors requested for each of the R
-         * repeating bindings after the first N
-         * ([RFC 3416 §4.2.3](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.3)).
-         * Range 0..`max-bindings`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly max_repetitions: INTEGER,
-        /**
-         * @summary `variable_bindings`.
-         * @description
-         *
-         * Request bindings (values ignored). Response may contain up to
-         * N + (M × R) bindings, possibly fewer for size or end-of-view
-         * ([RFC 3416 §4.2.3](https://datatracker.ietf.org/doc/html/rfc3416#section-4.2.3)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly variable_bindings: VarBindList
-    ) {}
+        request_id: INTEGER,
+        non_repeaters: INTEGER,
+        max_repetitions: INTEGER,
+        variable_bindings: VarBindList
+    ) {
+        this.request_id = request_id;
+        this.non_repeaters = non_repeaters;
+        this.max_repetitions = max_repetitions;
+        this.variable_bindings = variable_bindings;
+    }
 
     /**
      * @summary Restructures an object into a BulkPDU

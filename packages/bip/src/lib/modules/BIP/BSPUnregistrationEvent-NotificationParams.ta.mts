@@ -39,19 +39,23 @@ import {
  *
  */
 export class BSPUnregistrationEvent_NotificationParams {
+  /**
+   * @summary `bspProductUuid`.
+   * @description
+   *
+   * Product UUID of the BSP that was unregistered. X.1083
+   * §16.60.2.
+   *
+   * @public
+   * @readonly
+   */
+  readonly bspProductUuid: BioAPI_UUID;
+
   constructor(
-    /**
-     * @summary `bspProductUuid`.
-     * @description
-     *
-     * Product UUID of the BSP that was unregistered. X.1083
-     * §16.60.2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bspProductUuid: BioAPI_UUID
-  ) {}
+    bspProductUuid: BioAPI_UUID
+  ) {
+    this.bspProductUuid = bspProductUuid;
+  }
 
   /**
    * @summary Restructures an object into a BSPUnregistrationEvent_NotificationParams

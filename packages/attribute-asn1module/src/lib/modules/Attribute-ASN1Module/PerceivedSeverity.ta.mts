@@ -34,14 +34,16 @@ import * as $ from "@wildboar/asn1/functional";
  * @enum {number}
  */
 export
-enum _enum_for_PerceivedSeverity {
-    indeterminate = 0,
-    critical = 1,
-    major = 2,
-    minor = 3,
-    warning = 4,
-    cleared = 5,
-}
+const _enum_for_PerceivedSeverity = {
+    indeterminate: 0,
+    critical: 1,
+    major: 2,
+    minor: 3,
+    warning: 4,
+    cleared: 5,
+} as const;
+
+export type _enum_for_PerceivedSeverity = (typeof _enum_for_PerceivedSeverity)[keyof typeof _enum_for_PerceivedSeverity];
 
 /**
  * @summary PerceivedSeverity
@@ -250,10 +252,10 @@ export
 const cleared: PerceivedSeverity = PerceivedSeverity.cleared; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_PerceivedSeverity = $._decodeEnumerated;
+export const _decode_PerceivedSeverity = $._decodeEnumerated as $.ASN1Decoder<PerceivedSeverity>;
 
 
-export const _encode_PerceivedSeverity = $._encodeEnumerated;
+export const _encode_PerceivedSeverity = $._encodeEnumerated as $.ASN1Encoder<PerceivedSeverity>;
 
 
 /* eslint-enable */

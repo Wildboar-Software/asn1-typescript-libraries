@@ -29,28 +29,34 @@ import { EuiccCancelSessionSigned, _decode_EuiccCancelSessionSigned, _encode_Eui
  */
 export
 class CancelSessionResponseOk {
+    /**
+     * @summary `euiccCancelSessionSigned`.
+     * @description
+     * 
+     * TransactionID, SM-DP+ OID, and reason. SGP.22 v3.1 §5.7.14.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly euiccCancelSessionSigned: EuiccCancelSessionSigned;
+    /**
+     * @summary `euiccCancelSessionSignature`.
+     * @description
+     * 
+     * Signature under SK.EUICC.SIG, tag `'5F37'`. SGP.22 v3.1 §5.7.14.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly euiccCancelSessionSignature: OCTET_STRING;
+
     constructor (
-        /**
-         * @summary `euiccCancelSessionSigned`.
-         * @description
-         * 
-         * TransactionID, SM-DP+ OID, and reason. SGP.22 v3.1 §5.7.14.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly euiccCancelSessionSigned: EuiccCancelSessionSigned,
-        /**
-         * @summary `euiccCancelSessionSignature`.
-         * @description
-         * 
-         * Signature under SK.EUICC.SIG, tag `'5F37'`. SGP.22 v3.1 §5.7.14.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly euiccCancelSessionSignature: OCTET_STRING
-    ) {}
+        euiccCancelSessionSigned: EuiccCancelSessionSigned,
+        euiccCancelSessionSignature: OCTET_STRING
+    ) {
+        this.euiccCancelSessionSigned = euiccCancelSessionSigned;
+        this.euiccCancelSessionSignature = euiccCancelSessionSignature;
+    }
 
     /**
      * @summary Restructures an object into a CancelSessionResponseOk

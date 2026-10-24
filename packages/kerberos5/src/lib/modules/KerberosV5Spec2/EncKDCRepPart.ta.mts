@@ -81,134 +81,160 @@ import {
  *
  */
 export class EncKDCRepPart {
+  /**
+   * @summary `key`.
+   * @description
+   *
+   * Session key (same role as in the ticket) ([RFC 4120 §5.4.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.2)).
+   *
+   * @public
+   * @readonly
+   */
+  readonly key: EncryptionKey;
+  /**
+   * @summary `last_req`.
+   * @description
+   *
+   * Times of last requests by the principal; aids detecting
+   * unauthorized use ([RFC 4120 §5.4.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.2)).
+   *
+   * @public
+   * @readonly
+   */
+  readonly last_req: LastReq;
+  /**
+   * @summary `nonce`.
+   * @description
+   *
+   * Echo of the request nonce for freshness ([RFC 4120 §5.4.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.2),
+   * [RFC 4120 §5.4.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.1)).
+   *
+   * @public
+   * @readonly
+   */
+  readonly nonce: UInt32;
+  /**
+   * @summary `key_expiration`.
+   * @description
+   *
+   * Client secret-key / account expiration. Deprecated; prefer
+   * `last-req`. Usually omitted from TGS replies
+   * ([RFC 4120 §5.4.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.2)).
+   *
+   * @public
+   * @readonly
+   */
+  readonly key_expiration: OPTIONAL<KerberosTime>;
+  /**
+   * @summary `flags`.
+   * @description
+   *
+   * Duplicate of ticket `flags` for client checks/caching
+   * ([RFC 4120 §5.4.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.2)).
+   *
+   * @public
+   * @readonly
+   */
+  readonly flags: TicketFlags;
+  /**
+   * @summary `authtime`.
+   * @description
+   *
+   * Duplicate of ticket `authtime` ([RFC 4120 §5.4.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.2)).
+   *
+   * @public
+   * @readonly
+   */
+  readonly authtime: KerberosTime;
+  /**
+   * @summary `starttime`.
+   * @description
+   *
+   * Duplicate of ticket `starttime` ([RFC 4120 §5.4.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.2)).
+   *
+   * @public
+   * @readonly
+   */
+  readonly starttime: OPTIONAL<KerberosTime>;
+  /**
+   * @summary `endtime`.
+   * @description
+   *
+   * Duplicate of ticket `endtime` ([RFC 4120 §5.4.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.2)).
+   *
+   * @public
+   * @readonly
+   */
+  readonly endtime: KerberosTime;
+  /**
+   * @summary `renew_till`.
+   * @description
+   *
+   * Duplicate of ticket `renew-till` ([RFC 4120 §5.4.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.2)).
+   *
+   * @public
+   * @readonly
+   */
+  readonly renew_till: OPTIONAL<KerberosTime>;
+  /**
+   * @summary `srealm`.
+   * @description
+   *
+   * Server realm (as in the ticket) ([RFC 4120 §5.4.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.2)).
+   *
+   * @public
+   * @readonly
+   */
+  readonly srealm: Realm;
+  /**
+   * @summary `sname`.
+   * @description
+   *
+   * Server principal name ([RFC 4120 §5.4.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.2)).
+   *
+   * @public
+   * @readonly
+   */
+  readonly sname: PrincipalName;
+  /**
+   * @summary `caddr`.
+   * @description
+   *
+   * Duplicate of ticket addresses. In TGS-REP filled mainly for
+   * proxy/forwarded or address-subset cases ([RFC 4120 §5.4.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.2)).
+   *
+   * @public
+   * @readonly
+   */
+  readonly caddr?: OPTIONAL<HostAddresses>;
+
   constructor(
-    /**
-     * @summary `key`.
-     * @description
-     *
-     * Session key (same role as in the ticket) ([RFC 4120 §5.4.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.2)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly key: EncryptionKey,
-    /**
-     * @summary `last_req`.
-     * @description
-     *
-     * Times of last requests by the principal; aids detecting
-     * unauthorized use ([RFC 4120 §5.4.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.2)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly last_req: LastReq,
-    /**
-     * @summary `nonce`.
-     * @description
-     *
-     * Echo of the request nonce for freshness ([RFC 4120 §5.4.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.2),
-     * [RFC 4120 §5.4.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.1)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly nonce: UInt32,
-    /**
-     * @summary `key_expiration`.
-     * @description
-     *
-     * Client secret-key / account expiration. Deprecated; prefer
-     * `last-req`. Usually omitted from TGS replies
-     * ([RFC 4120 §5.4.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.2)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly key_expiration: OPTIONAL<KerberosTime>,
-    /**
-     * @summary `flags`.
-     * @description
-     *
-     * Duplicate of ticket `flags` for client checks/caching
-     * ([RFC 4120 §5.4.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.2)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly flags: TicketFlags,
-    /**
-     * @summary `authtime`.
-     * @description
-     *
-     * Duplicate of ticket `authtime` ([RFC 4120 §5.4.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.2)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly authtime: KerberosTime,
-    /**
-     * @summary `starttime`.
-     * @description
-     *
-     * Duplicate of ticket `starttime` ([RFC 4120 §5.4.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.2)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly starttime: OPTIONAL<KerberosTime>,
-    /**
-     * @summary `endtime`.
-     * @description
-     *
-     * Duplicate of ticket `endtime` ([RFC 4120 §5.4.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.2)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly endtime: KerberosTime,
-    /**
-     * @summary `renew_till`.
-     * @description
-     *
-     * Duplicate of ticket `renew-till` ([RFC 4120 §5.4.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.2)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly renew_till: OPTIONAL<KerberosTime>,
-    /**
-     * @summary `srealm`.
-     * @description
-     *
-     * Server realm (as in the ticket) ([RFC 4120 §5.4.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.2)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly srealm: Realm,
-    /**
-     * @summary `sname`.
-     * @description
-     *
-     * Server principal name ([RFC 4120 §5.4.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.2)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly sname: PrincipalName,
-    /**
-     * @summary `caddr`.
-     * @description
-     *
-     * Duplicate of ticket addresses. In TGS-REP filled mainly for
-     * proxy/forwarded or address-subset cases ([RFC 4120 §5.4.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.4.2)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly caddr?: OPTIONAL<HostAddresses>
-  ) {}
+    key: EncryptionKey,
+    last_req: LastReq,
+    nonce: UInt32,
+    key_expiration: OPTIONAL<KerberosTime>,
+    flags: TicketFlags,
+    authtime: KerberosTime,
+    starttime: OPTIONAL<KerberosTime>,
+    endtime: KerberosTime,
+    renew_till: OPTIONAL<KerberosTime>,
+    srealm: Realm,
+    sname: PrincipalName,
+    caddr?: OPTIONAL<HostAddresses>
+  ) {
+    this.key = key;
+    this.last_req = last_req;
+    this.nonce = nonce;
+    this.key_expiration = key_expiration;
+    this.flags = flags;
+    this.authtime = authtime;
+    this.starttime = starttime;
+    this.endtime = endtime;
+    this.renew_till = renew_till;
+    this.srealm = srealm;
+    this.sname = sname;
+    this.caddr = caddr;
+  }
 
   /**
    * @summary Restructures an object into a EncKDCRepPart

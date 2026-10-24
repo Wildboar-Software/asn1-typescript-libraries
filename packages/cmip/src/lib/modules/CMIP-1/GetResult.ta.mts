@@ -53,54 +53,66 @@ import {
  *
  */
 export class GetResult {
+  /**
+   * @summary `managedObjectClass`.
+   * @description
+   *
+   * Class of the object whose attributes are returned.
+   *
+   * @public
+   * @readonly
+   */
+  readonly managedObjectClass?: OPTIONAL<ObjectClass>;
+  /**
+   * @summary `managedObjectInstance`.
+   * @description
+   *
+   * Instance whose attributes are returned.
+   *
+   * @public
+   * @readonly
+   */
+  readonly managedObjectInstance?: OPTIONAL<ObjectInstance>;
+  /**
+   * @summary `currentTime`.
+   * @description
+   *
+   * Time associated with this result, if supplied.
+   *
+   * @public
+   * @readonly
+   */
+  readonly currentTime?: OPTIONAL<GeneralizedTime>;
+  /**
+   * @summary `attributeList`.
+   * @description
+   *
+   * Retrieved attribute values.
+   *
+   * @public
+   * @readonly
+   */
+  readonly attributeList?: OPTIONAL<Attribute[]>;
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  readonly _unrecognizedExtensionsList: _Element[];
+
   constructor(
-    /**
-     * @summary `managedObjectClass`.
-     * @description
-     *
-     * Class of the object whose attributes are returned.
-     *
-     * @public
-     * @readonly
-     */
-    readonly managedObjectClass?: OPTIONAL<ObjectClass>,
-    /**
-     * @summary `managedObjectInstance`.
-     * @description
-     *
-     * Instance whose attributes are returned.
-     *
-     * @public
-     * @readonly
-     */
-    readonly managedObjectInstance?: OPTIONAL<ObjectInstance>,
-    /**
-     * @summary `currentTime`.
-     * @description
-     *
-     * Time associated with this result, if supplied.
-     *
-     * @public
-     * @readonly
-     */
-    readonly currentTime?: OPTIONAL<GeneralizedTime>,
-    /**
-     * @summary `attributeList`.
-     * @description
-     *
-     * Retrieved attribute values.
-     *
-     * @public
-     * @readonly
-     */
-    readonly attributeList?: OPTIONAL<Attribute[]>,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = []
-  ) {}
+    managedObjectClass?: OPTIONAL<ObjectClass>,
+    managedObjectInstance?: OPTIONAL<ObjectInstance>,
+    currentTime?: OPTIONAL<GeneralizedTime>,
+    attributeList?: OPTIONAL<Attribute[]>,
+    _unrecognizedExtensionsList: _Element[] = []
+  ) {
+    this.managedObjectClass = managedObjectClass;
+    this.managedObjectInstance = managedObjectInstance;
+    this.currentTime = currentTime;
+    this.attributeList = attributeList;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+  }
 
   /**
    * @summary Restructures an object into a GetResult

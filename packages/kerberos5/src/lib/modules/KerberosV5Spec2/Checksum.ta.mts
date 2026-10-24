@@ -35,28 +35,34 @@ import {
  *
  */
 export class Checksum {
+  /**
+   * @summary `cksumtype`.
+   * @description
+   *
+   * Algorithm used to generate `checksum` ([RFC 4120 §5.2.9](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.9)).
+   *
+   * @public
+   * @readonly
+   */
+  readonly cksumtype: Int32;
+  /**
+   * @summary `checksum`.
+   * @description
+   *
+   * Checksum value as OCTET STRING ([RFC 4120 §5.2.9](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.9)).
+   *
+   * @public
+   * @readonly
+   */
+  readonly checksum: OCTET_STRING;
+
   constructor(
-    /**
-     * @summary `cksumtype`.
-     * @description
-     *
-     * Algorithm used to generate `checksum` ([RFC 4120 §5.2.9](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.9)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly cksumtype: Int32,
-    /**
-     * @summary `checksum`.
-     * @description
-     *
-     * Checksum value as OCTET STRING ([RFC 4120 §5.2.9](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.9)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly checksum: OCTET_STRING
-  ) {}
+    cksumtype: Int32,
+    checksum: OCTET_STRING
+  ) {
+    this.cksumtype = cksumtype;
+    this.checksum = checksum;
+  }
 
   /**
    * @summary Restructures an object into a Checksum

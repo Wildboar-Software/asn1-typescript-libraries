@@ -20,54 +20,56 @@ import * as $ from '@wildboar/asn1/functional';
  * all share numeric value 16; Annex A treats them as distinct.
  * ITU-T Rec. T.38 (11/2015) §7.3.1, Table 3.
  */
-export enum _enum_for_Type_of_msg_t30_indicator {
+export const _enum_for_Type_of_msg_t30_indicator = {
   /** No TDM signal (e.g. V.21 to V.17). */
-  no_signal = 0,
+  no_signal: 0,
   /** CNG calling tone, 1100 Hz. */
-  cng = 1,
+  cng: 1,
   /** CED called-station identification, 2100 Hz. */
-  ced = 2,
+  ced: 2,
   /** V.21 HDLC preamble flags. */
-  v21_preamble = 3,
+  v21_preamble: 3,
   /** V.27 ter 2400 bit/s training. */
-  v27_2400_training = 4,
+  v27_2400_training: 4,
   /** V.27 ter 4800 bit/s training. */
-  v27_4800_training = 5,
+  v27_4800_training: 5,
   /** V.29 7200 bit/s training. */
-  v29_7200_training = 6,
+  v29_7200_training: 6,
   /** V.29 9600 bit/s training. */
-  v29_9600_training = 7,
+  v29_9600_training: 7,
   /** V.17 7200 bit/s short training. */
-  v17_7200_short_training = 8,
+  v17_7200_short_training: 8,
   /** V.17 7200 bit/s long training. */
-  v17_7200_long_training = 9,
+  v17_7200_long_training: 9,
   /** V.17 9600 bit/s short training. */
-  v17_9600_short_training = 10,
+  v17_9600_short_training: 10,
   /** V.17 9600 bit/s long training. */
-  v17_9600_long_training = 11,
+  v17_9600_long_training: 11,
   /** V.17 12 000 bit/s short training. */
-  v17_12000_short_training = 12,
+  v17_12000_short_training: 12,
   /** V.17 12 000 bit/s long training. */
-  v17_12000_long_training = 13,
+  v17_12000_long_training: 13,
   /** V.17 14 400 bit/s short training. */
-  v17_14400_short_training = 14,
+  v17_14400_short_training: 14,
   /** V.17 14 400 bit/s long training. */
-  v17_14400_long_training = 15,
+  v17_14400_long_training: 15,
   /** V.8 ANSam. Report as `ced` to a non-V.34 peer. */
-  v8_ansam = 16,
+  v8_ansam: 16,
   /** V.8 signal (e.g. turn-around polling after DTC). */
-  v8_signal = 16,
+  v8_signal: 16,
   /** V.34 control channel at 1200 bit/s. */
-  v34_cntl_channel_1200 = 16,
+  v34_cntl_channel_1200: 16,
   /** Transition to the V.34 primary channel. */
-  v34_pri_channel = 16,
+  v34_pri_channel: 16,
   /** V.34 control-channel retrain (primary-rate change). */
-  v34_CC_retrain = 16,
+  v34_CC_retrain: 16,
   /** V.33 12 000 bit/s training. */
-  v33_12000_training = 16,
+  v33_12000_training: 16,
   /** V.33 14 400 bit/s training. */
-  v33_14400_training = 16,
-}
+  v33_14400_training: 16,
+} as const;
+
+export type _enum_for_Type_of_msg_t30_indicator = (typeof _enum_for_Type_of_msg_t30_indicator)[keyof typeof _enum_for_Type_of_msg_t30_indicator];
 
 
 /**

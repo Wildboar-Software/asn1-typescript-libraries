@@ -42,35 +42,43 @@ import {
  *
  */
 export class CompareRequest {
+  /**
+   * @summary `entry`.
+   * @description
+   *
+   * Target DN. Server SHALL NOT alias-dereference.
+   *
+   * @public
+   * @readonly
+   */
+  readonly entry: LDAPDN;
+  /**
+   * @summary `ava`.
+   * @description
+   *
+   * Assertion compared with EQUALITY. Assertion syntax is that of
+   * the EQUALITY matching rule (RFC 4517).
+   *
+   * @public
+   * @readonly
+   */
+  readonly ava: AttributeValueAssertion;
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  readonly _unrecognizedExtensionsList: _Element[];
+
   constructor(
-    /**
-     * @summary `entry`.
-     * @description
-     *
-     * Target DN. Server SHALL NOT alias-dereference.
-     *
-     * @public
-     * @readonly
-     */
-    readonly entry: LDAPDN,
-    /**
-     * @summary `ava`.
-     * @description
-     *
-     * Assertion compared with EQUALITY. Assertion syntax is that of
-     * the EQUALITY matching rule (RFC 4517).
-     *
-     * @public
-     * @readonly
-     */
-    readonly ava: AttributeValueAssertion,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = []
-  ) {}
+    entry: LDAPDN,
+    ava: AttributeValueAssertion,
+    _unrecognizedExtensionsList: _Element[] = []
+  ) {
+    this.entry = entry;
+    this.ava = ava;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+  }
 
   /**
    * @summary Restructures an object into a CompareRequest

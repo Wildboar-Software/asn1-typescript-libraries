@@ -45,29 +45,35 @@ import {
  *
  */
 export class Access_Context {
+  /**
+   * @summary `access_context`.
+   * @description
+   *
+   * HA, HN, FA, FL, FS, UA or US (ISO 8571-2:1988 §7.5).
+   *
+   * @public
+   * @readonly
+   */
+  readonly access_context: Access_Context_access_context;
+  /**
+   * @summary `level_number`.
+   * @description
+   *
+   * Depth relative to the addressed FADU root. Present iff FL
+   * (ISO 8571-3:1988 §13.12; ISO 8571-4:1988 Access-Context).
+   *
+   * @public
+   * @readonly
+   */
+  readonly level_number?: OPTIONAL<INTEGER>;
+
   constructor(
-    /**
-     * @summary `access_context`.
-     * @description
-     *
-     * HA, HN, FA, FL, FS, UA or US (ISO 8571-2:1988 §7.5).
-     *
-     * @public
-     * @readonly
-     */
-    readonly access_context: Access_Context_access_context,
-    /**
-     * @summary `level_number`.
-     * @description
-     *
-     * Depth relative to the addressed FADU root. Present iff FL
-     * (ISO 8571-3:1988 §13.12; ISO 8571-4:1988 Access-Context).
-     *
-     * @public
-     * @readonly
-     */
-    readonly level_number?: OPTIONAL<INTEGER>
-  ) {}
+    access_context: Access_Context_access_context,
+    level_number?: OPTIONAL<INTEGER>
+  ) {
+    this.access_context = access_context;
+    this.level_number = level_number;
+  }
 
   /**
    * @summary Restructures an object into a Access_Context

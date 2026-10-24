@@ -34,30 +34,36 @@ import {
  *
  */
 export class Contents_Type_Attribute_document_type {
+  /**
+   * @summary `document_type_name`.
+   * @description
+   *
+   * Identifies the document type; that definition supplies the
+   * parameter type (ISO 8571-2:1988 §12.3).
+   *
+   * @public
+   * @readonly
+   */
+  readonly document_type_name: Document_Type_Name;
+  /**
+   * @summary `parameter`.
+   * @description
+   *
+   * Optional value whose type is defined in the named document
+   * type (ISO 8571-4:1988 Figure 11).
+   *
+   * @public
+   * @readonly
+   */
+  readonly parameter?: OPTIONAL<_Element>;
+
   constructor(
-    /**
-     * @summary `document_type_name`.
-     * @description
-     *
-     * Identifies the document type; that definition supplies the
-     * parameter type (ISO 8571-2:1988 §12.3).
-     *
-     * @public
-     * @readonly
-     */
-    readonly document_type_name: Document_Type_Name,
-    /**
-     * @summary `parameter`.
-     * @description
-     *
-     * Optional value whose type is defined in the named document
-     * type (ISO 8571-4:1988 Figure 11).
-     *
-     * @public
-     * @readonly
-     */
-    readonly parameter?: OPTIONAL<_Element>
-  ) {}
+    document_type_name: Document_Type_Name,
+    parameter?: OPTIONAL<_Element>
+  ) {
+    this.document_type_name = document_type_name;
+    this.parameter = parameter;
+  }
 
   /**
    * @summary Restructures an object into a Contents_Type_Attribute_document_type

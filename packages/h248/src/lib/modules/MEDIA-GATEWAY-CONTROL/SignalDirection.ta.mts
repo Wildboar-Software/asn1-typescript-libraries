@@ -7,23 +7,25 @@ import * as $ from "@wildboar/asn1/functional";
 
 
 export
-enum _enum_for_SignalDirection {
+const _enum_for_SignalDirection = {
     /**
      * The signal is played into the context, toward the other terminations
      * (clause 7.1.11.9).
      */
-    internal = 0,
+    internal: 0,
     /**
      * The signal is sent from the MG toward an external point. This is the
      * usual default (clause 7.1.11.9).
      */
-    external = 1,
+    external: 1,
     /**
      * The signal is sent both into the context and toward the outside (clause
      * 7.1.11.9). The Recommendation's prose calls this "bothway".
      */
-    both = 2,
-}
+    both: 2,
+} as const;
+
+export type _enum_for_SignalDirection = (typeof _enum_for_SignalDirection)[keyof typeof _enum_for_SignalDirection];
 
 /**
  * @summary SignalDirection
@@ -116,8 +118,8 @@ const SignalDirection_both: SignalDirection = 2; /* LONG_NAMED_ENUMERATED_VALUE 
  */
 export
 const both: SignalDirection = SignalDirection_both; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_SignalDirection = $._decodeEnumerated;
-export const _encode_SignalDirection = $._encodeEnumerated;
+export const _decode_SignalDirection = $._decodeEnumerated as $.ASN1Decoder<SignalDirection>;
+export const _encode_SignalDirection = $._encodeEnumerated as $.ASN1Encoder<SignalDirection>;
 
 
 /* eslint-enable */

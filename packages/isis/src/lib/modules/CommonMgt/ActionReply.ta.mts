@@ -38,33 +38,39 @@ import {
  *
  */
 export class ActionReply {
+  /**
+   * @summary `responseCode`.
+   * @description
+   *
+   * Success or failure OID under `{proi responseCode(1001)}`.
+   *
+   * (ISO/IEC 10589:2002 Annex E.1.11 and E.2).
+   *
+   * @public
+   * @readonly
+   */
+  readonly responseCode: OBJECT_IDENTIFIER;
+  /**
+   * @summary `responseArgs`.
+   * @description
+   *
+   * Optional extra parameters (for example a failure reason when
+   * `responseCode` is `failureResponse`).
+   *
+   * (ISO/IEC 10589:2002 Annex E.1.11).
+   *
+   * @public
+   * @readonly
+   */
+  readonly responseArgs?: OPTIONAL<Parameter[]>;
+
   constructor(
-    /**
-     * @summary `responseCode`.
-     * @description
-     *
-     * Success or failure OID under `{proi responseCode(1001)}`.
-     *
-     * (ISO/IEC 10589:2002 Annex E.1.11 and E.2).
-     *
-     * @public
-     * @readonly
-     */
-    readonly responseCode: OBJECT_IDENTIFIER,
-    /**
-     * @summary `responseArgs`.
-     * @description
-     *
-     * Optional extra parameters (for example a failure reason when
-     * `responseCode` is `failureResponse`).
-     *
-     * (ISO/IEC 10589:2002 Annex E.1.11).
-     *
-     * @public
-     * @readonly
-     */
-    readonly responseArgs?: OPTIONAL<Parameter[]>
-  ) {}
+    responseCode: OBJECT_IDENTIFIER,
+    responseArgs?: OPTIONAL<Parameter[]>
+  ) {
+    this.responseCode = responseCode;
+    this.responseArgs = responseArgs;
+  }
 
   /**
    * @summary Restructures an object into a ActionReply

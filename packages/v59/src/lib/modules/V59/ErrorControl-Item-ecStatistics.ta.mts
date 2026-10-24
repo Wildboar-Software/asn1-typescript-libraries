@@ -33,48 +33,57 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class ErrorControl_Item_ecStatistics {
+    /**
+     * @summary `framesSentAck`.
+     * @description
+     *
+     * User-data frames transmitted for which acknowledgement was received
+     * (0..65535). Tag-ID `2F08`. ITU-T Rec. V.59 (11/2000) §6.12.
+     * @public
+     * @readonly
+     */
+    readonly framesSentAck?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `framesRetransmitted`.
+     * @description
+     *
+     * User-data frames retransmitted (0..65535). Tag-ID `2F09`. ITU-T Rec.
+     * V.59 (11/2000) §6.12.
+     * @public
+     * @readonly
+     */
+    readonly framesRetransmitted?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `framesReceivedAck`.
+     * @description
+     *
+     * User-data frames received for which acknowledgement was sent
+     * (0..65535). Tag-ID `2F0A`. ITU-T Rec. V.59 (11/2000) §6.12.
+     * @public
+     * @readonly
+     */
+    readonly framesReceivedAck?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `framesReceivedDiscard`.
+     * @description
+     *
+     * Frames discarded (0..65535). Tag-ID `2F0B`. ITU-T Rec. V.59 (11/2000)
+     * §6.12.
+     * @public
+     * @readonly
+     */
+    readonly framesReceivedDiscard?: OPTIONAL<INTEGER>;
+
     constructor (
-        /**
-         * @summary `framesSentAck`.
-         * @description
-         *
-         * User-data frames transmitted for which acknowledgement was received
-         * (0..65535). Tag-ID `2F08`. ITU-T Rec. V.59 (11/2000) §6.12.
-         * @public
-         * @readonly
-         */
-        readonly framesSentAck?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `framesRetransmitted`.
-         * @description
-         *
-         * User-data frames retransmitted (0..65535). Tag-ID `2F09`. ITU-T Rec.
-         * V.59 (11/2000) §6.12.
-         * @public
-         * @readonly
-         */
-        readonly framesRetransmitted?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `framesReceivedAck`.
-         * @description
-         *
-         * User-data frames received for which acknowledgement was sent
-         * (0..65535). Tag-ID `2F0A`. ITU-T Rec. V.59 (11/2000) §6.12.
-         * @public
-         * @readonly
-         */
-        readonly framesReceivedAck?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `framesReceivedDiscard`.
-         * @description
-         *
-         * Frames discarded (0..65535). Tag-ID `2F0B`. ITU-T Rec. V.59 (11/2000)
-         * §6.12.
-         * @public
-         * @readonly
-         */
-        readonly framesReceivedDiscard?: OPTIONAL<INTEGER>
+        framesSentAck?: OPTIONAL<INTEGER>,
+        framesRetransmitted?: OPTIONAL<INTEGER>,
+        framesReceivedAck?: OPTIONAL<INTEGER>,
+        framesReceivedDiscard?: OPTIONAL<INTEGER>
     ) {
+        this.framesSentAck = framesSentAck;
+        this.framesRetransmitted = framesRetransmitted;
+        this.framesReceivedAck = framesReceivedAck;
+        this.framesReceivedDiscard = framesReceivedDiscard;
         if (this.framesSentAck !== undefined) {
                 const _n = typeof this.framesSentAck === "bigint" ? Number(this.framesSentAck) : this.framesSentAck;
                 if (_n < 0 || _n > 65535) {

@@ -42,43 +42,51 @@ import {
  *
  */
 export class SignedPublicKeyAndChallenge {
+    /**
+     * @summary `publicKeyAndChallenge`.
+     * @description
+     *
+     * `SEQUENCE` of `spki` and `challenge`. Signed with
+     * `signatureAlgorithm` (using the corresponding private key) to
+     * produce `signature` (draft-leggett-spkac §2.3).
+     *
+     * @public
+     * @readonly
+     */
+    readonly publicKeyAndChallenge: PublicKeyAndChallenge;
+    /**
+     * @summary `signatureAlgorithm`.
+     * @description
+     *
+     * `AlgorithmIdentifier` (RFC 5911) naming the algorithm used to
+     * sign `publicKeyAndChallenge` (draft-leggett-spkac §2.4).
+     *
+     * @public
+     * @readonly
+     */
+    readonly signatureAlgorithm: AlgorithmIdentifier;
+    /**
+     * @summary `signature`.
+     * @description
+     *
+     * `BIT STRING` signature over the DER-encoded
+     * `publicKeyAndChallenge`, using `signatureAlgorithm`
+     * (draft-leggett-spkac §2.5).
+     *
+     * @public
+     * @readonly
+     */
+    readonly signature: BIT_STRING;
+
     constructor(
-        /**
-         * @summary `publicKeyAndChallenge`.
-         * @description
-         *
-         * `SEQUENCE` of `spki` and `challenge`. Signed with
-         * `signatureAlgorithm` (using the corresponding private key) to
-         * produce `signature` (draft-leggett-spkac §2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly publicKeyAndChallenge: PublicKeyAndChallenge,
-        /**
-         * @summary `signatureAlgorithm`.
-         * @description
-         *
-         * `AlgorithmIdentifier` (RFC 5911) naming the algorithm used to
-         * sign `publicKeyAndChallenge` (draft-leggett-spkac §2.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly signatureAlgorithm: AlgorithmIdentifier,
-        /**
-         * @summary `signature`.
-         * @description
-         *
-         * `BIT STRING` signature over the DER-encoded
-         * `publicKeyAndChallenge`, using `signatureAlgorithm`
-         * (draft-leggett-spkac §2.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly signature: BIT_STRING
-    ) {}
+        publicKeyAndChallenge: PublicKeyAndChallenge,
+        signatureAlgorithm: AlgorithmIdentifier,
+        signature: BIT_STRING
+    ) {
+        this.publicKeyAndChallenge = publicKeyAndChallenge;
+        this.signatureAlgorithm = signatureAlgorithm;
+        this.signature = signature;
+    }
 
     /**
      * @summary Restructures an object into a SignedPublicKeyAndChallenge

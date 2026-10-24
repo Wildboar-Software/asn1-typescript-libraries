@@ -64,110 +64,130 @@ import {
  *
  */
 export class Verify_RequestParams {
+  /**
+   * @summary `originalBSPHandle`.
+   * @description
+   *
+   * Attach-session handle on the hosting (slave) endpoint.
+   * BioAPI `BSPHandle` is rewritten via clauses 24 and 26.
+   * X.1083 §16.37.5.
+   *
+   * @public
+   * @readonly
+   */
+  readonly originalBSPHandle: BioAPI_HANDLE;
+  /**
+   * @summary `maxFMRRequested`.
+   * @description
+   *
+   * Maximum false-match rate requested, from BioAPI
+   * `MaxFMRRequested`. X.1083 §16.37.5.
+   *
+   * @public
+   * @readonly
+   */
+  readonly maxFMRRequested: BioAPI_FMR;
+  /**
+   * @summary `referenceTemplate`.
+   * @description
+   *
+   * Reference template to verify against. C `NULL` is
+   * unconvertible (clause 19). X.1083 §16.37.5.
+   *
+   * @public
+   * @readonly
+   */
+  readonly referenceTemplate: BioAPI_INPUT_BIR;
+  /**
+   * @summary `subtype`.
+   * @description
+   *
+   * Requested BIR subtype, from BioAPI `Subtype`. X.1083
+   * §16.37.5.
+   *
+   * @public
+   * @readonly
+   */
+  readonly subtype: BioAPI_BIR_SUBTYPE;
+  /**
+   * @summary `timeout`.
+   * @description
+   *
+   * Verify timeout from BioAPI `Timeout`. X.1083 §16.37.5.
+   *
+   * @public
+   * @readonly
+   */
+  readonly timeout: SignedInt;
+  /**
+   * @summary `no_adaptedBIR`.
+   * @description
+   *
+   * `TRUE` if the caller passed a NULL `AdaptedBIR` pointer
+   * (do not return an adapted BIR). X.1083 §16.37.5,
+   * clause 21.
+   *
+   * @public
+   * @readonly
+   */
+  readonly no_adaptedBIR: BOOLEAN;
+  /**
+   * @summary `no_fmrAchieved`.
+   * @description
+   *
+   * `TRUE` if the caller passed a NULL `FMRAchieved` pointer
+   * (do not return the achieved FMR). X.1083 §16.37.5,
+   * clause 21.
+   *
+   * @public
+   * @readonly
+   */
+  readonly no_fmrAchieved: BOOLEAN;
+  /**
+   * @summary `no_payload`.
+   * @description
+   *
+   * `TRUE` if the caller passed a NULL `Payload` pointer (do
+   * not return payload). X.1083 §16.37.5, clause 21.
+   *
+   * @public
+   * @readonly
+   */
+  readonly no_payload: BOOLEAN;
+  /**
+   * @summary `no_auditData`.
+   * @description
+   *
+   * `TRUE` if the caller passed a NULL `AuditData` pointer
+   * (do not return an audit BIR). X.1083 §16.37.5,
+   * clause 21.
+   *
+   * @public
+   * @readonly
+   */
+  readonly no_auditData: BOOLEAN;
+
   constructor(
-    /**
-     * @summary `originalBSPHandle`.
-     * @description
-     *
-     * Attach-session handle on the hosting (slave) endpoint.
-     * BioAPI `BSPHandle` is rewritten via clauses 24 and 26.
-     * X.1083 §16.37.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly originalBSPHandle: BioAPI_HANDLE,
-    /**
-     * @summary `maxFMRRequested`.
-     * @description
-     *
-     * Maximum false-match rate requested, from BioAPI
-     * `MaxFMRRequested`. X.1083 §16.37.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly maxFMRRequested: BioAPI_FMR,
-    /**
-     * @summary `referenceTemplate`.
-     * @description
-     *
-     * Reference template to verify against. C `NULL` is
-     * unconvertible (clause 19). X.1083 §16.37.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly referenceTemplate: BioAPI_INPUT_BIR,
-    /**
-     * @summary `subtype`.
-     * @description
-     *
-     * Requested BIR subtype, from BioAPI `Subtype`. X.1083
-     * §16.37.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly subtype: BioAPI_BIR_SUBTYPE,
-    /**
-     * @summary `timeout`.
-     * @description
-     *
-     * Verify timeout from BioAPI `Timeout`. X.1083 §16.37.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly timeout: SignedInt,
-    /**
-     * @summary `no_adaptedBIR`.
-     * @description
-     *
-     * `TRUE` if the caller passed a NULL `AdaptedBIR` pointer
-     * (do not return an adapted BIR). X.1083 §16.37.5,
-     * clause 21.
-     *
-     * @public
-     * @readonly
-     */
-    readonly no_adaptedBIR: BOOLEAN,
-    /**
-     * @summary `no_fmrAchieved`.
-     * @description
-     *
-     * `TRUE` if the caller passed a NULL `FMRAchieved` pointer
-     * (do not return the achieved FMR). X.1083 §16.37.5,
-     * clause 21.
-     *
-     * @public
-     * @readonly
-     */
-    readonly no_fmrAchieved: BOOLEAN,
-    /**
-     * @summary `no_payload`.
-     * @description
-     *
-     * `TRUE` if the caller passed a NULL `Payload` pointer (do
-     * not return payload). X.1083 §16.37.5, clause 21.
-     *
-     * @public
-     * @readonly
-     */
-    readonly no_payload: BOOLEAN,
-    /**
-     * @summary `no_auditData`.
-     * @description
-     *
-     * `TRUE` if the caller passed a NULL `AuditData` pointer
-     * (do not return an audit BIR). X.1083 §16.37.5,
-     * clause 21.
-     *
-     * @public
-     * @readonly
-     */
-    readonly no_auditData: BOOLEAN
-  ) {}
+    originalBSPHandle: BioAPI_HANDLE,
+    maxFMRRequested: BioAPI_FMR,
+    referenceTemplate: BioAPI_INPUT_BIR,
+    subtype: BioAPI_BIR_SUBTYPE,
+    timeout: SignedInt,
+    no_adaptedBIR: BOOLEAN,
+    no_fmrAchieved: BOOLEAN,
+    no_payload: BOOLEAN,
+    no_auditData: BOOLEAN
+  ) {
+    this.originalBSPHandle = originalBSPHandle;
+    this.maxFMRRequested = maxFMRRequested;
+    this.referenceTemplate = referenceTemplate;
+    this.subtype = subtype;
+    this.timeout = timeout;
+    this.no_adaptedBIR = no_adaptedBIR;
+    this.no_fmrAchieved = no_fmrAchieved;
+    this.no_payload = no_payload;
+    this.no_auditData = no_auditData;
+  }
 
   /**
    * @summary Restructures an object into a Verify_RequestParams

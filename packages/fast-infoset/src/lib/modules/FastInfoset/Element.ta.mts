@@ -63,43 +63,53 @@ import {
  *
  */
 export class Element {
+  /**
+   * @summary `namespace_attributes`.
+   * @description [namespace attributes]. Sequence-of rather
+   * than set-of. Typed as `NamespaceAttribute`, not
+   * `Attribute`. ITU-T Rec. X.891 (05/2005) §7.3.4.
+   * @public
+   * @readonly
+   */
+  readonly namespace_attributes: OPTIONAL<NamespaceAttribute[]>;
+  /**
+   * @summary `qualified_name`.
+   * @description [prefix], [namespace name], and [local
+   * name]; ELEMENT NAME category. ITU-T Rec. X.891 (05/2005)
+   * §7.3.5.
+   * @public
+   * @readonly
+   */
+  readonly qualified_name: QualifiedNameOrIndex;
+  /**
+   * @summary `attributes`.
+   * @description [attributes] (non-namespace). Sequence-of
+   * rather than set-of. ITU-T Rec. X.891 (05/2005) §7.3.6.
+   * @public
+   * @readonly
+   */
+  readonly attributes: OPTIONAL<Attribute[]>;
+  /**
+   * @summary `children`.
+   * @description [children]. Adjacent character information
+   * items may be one `character-chunk` or several. ITU-T Rec.
+   * X.891 (05/2005) §7.3.7.
+   * @public
+   * @readonly
+   */
+  readonly children: Element_children_Item[];
+
   constructor(
-    /**
-     * @summary `namespace_attributes`.
-     * @description [namespace attributes]. Sequence-of rather
-     * than set-of. Typed as `NamespaceAttribute`, not
-     * `Attribute`. ITU-T Rec. X.891 (05/2005) §7.3.4.
-     * @public
-     * @readonly
-     */
-    readonly namespace_attributes: OPTIONAL<NamespaceAttribute[]>,
-    /**
-     * @summary `qualified_name`.
-     * @description [prefix], [namespace name], and [local
-     * name]; ELEMENT NAME category. ITU-T Rec. X.891 (05/2005)
-     * §7.3.5.
-     * @public
-     * @readonly
-     */
-    readonly qualified_name: QualifiedNameOrIndex,
-    /**
-     * @summary `attributes`.
-     * @description [attributes] (non-namespace). Sequence-of
-     * rather than set-of. ITU-T Rec. X.891 (05/2005) §7.3.6.
-     * @public
-     * @readonly
-     */
-    readonly attributes: OPTIONAL<Attribute[]>,
-    /**
-     * @summary `children`.
-     * @description [children]. Adjacent character information
-     * items may be one `character-chunk` or several. ITU-T Rec.
-     * X.891 (05/2005) §7.3.7.
-     * @public
-     * @readonly
-     */
-    readonly children: Element_children_Item[]
-  ) {}
+    namespace_attributes: OPTIONAL<NamespaceAttribute[]>,
+    qualified_name: QualifiedNameOrIndex,
+    attributes: OPTIONAL<Attribute[]>,
+    children: Element_children_Item[]
+  ) {
+    this.namespace_attributes = namespace_attributes;
+    this.qualified_name = qualified_name;
+    this.attributes = attributes;
+    this.children = children;
+  }
 
   /**
    * @summary Restructures an object into a Element

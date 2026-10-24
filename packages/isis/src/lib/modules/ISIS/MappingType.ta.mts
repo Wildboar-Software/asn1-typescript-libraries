@@ -28,12 +28,14 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_MappingType {
-  none = 0,
-  explicit = 1,
-  extractIDI = 2,
-  extractDSP = 3,
-}
+export const _enum_for_MappingType = {
+  none: 0,
+  explicit: 1,
+  extractIDI: 2,
+  extractDSP: 3,
+} as const;
+
+export type _enum_for_MappingType = (typeof _enum_for_MappingType)[keyof typeof _enum_for_MappingType];
 
 /**
  * @summary MappingType
@@ -165,10 +167,10 @@ export const extractDSP: MappingType =
   MappingType.extractDSP; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_MappingType = $._decodeEnumerated;
+export const _decode_MappingType = $._decodeEnumerated as $.ASN1Decoder<MappingType>;
 
 
-export const _encode_MappingType = $._encodeEnumerated;
+export const _encode_MappingType = $._encodeEnumerated as $.ASN1Encoder<MappingType>;
 
 
 /* eslint-enable */

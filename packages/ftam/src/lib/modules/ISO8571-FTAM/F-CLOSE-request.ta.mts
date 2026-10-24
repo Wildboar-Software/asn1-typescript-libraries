@@ -51,41 +51,49 @@ import {
  *
  */
 export class F_CLOSE_request {
+  /**
+   * @summary `action_result`.
+   * @description
+   *
+   * IFS request: transient error between FERPMs. EFS: only on
+   * response/confirm. Open terminates regardless. Default
+   * `success`. ISO 8571-3:1988 §17.2.2.1.
+   *
+   * @public
+   * @readonly
+   */
+  readonly action_result?: OPTIONAL<Action_Result>;
+  /**
+   * @summary `shared_ASE_information`.
+   * @description
+   *
+   * ISO 8571-3:1988 §17.2.2.2 / §13.10.
+   *
+   * @public
+   * @readonly
+   */
+  readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>;
+  /**
+   * @summary `diagnostic`.
+   * @description
+   *
+   * Qualifies `action-result` when that field is present.
+   * ISO 8571-3:1988 §17.2.2.3.
+   *
+   * @public
+   * @readonly
+   */
+  readonly diagnostic?: OPTIONAL<Diagnostic>;
+
   constructor(
-    /**
-     * @summary `action_result`.
-     * @description
-     *
-     * IFS request: transient error between FERPMs. EFS: only on
-     * response/confirm. Open terminates regardless. Default
-     * `success`. ISO 8571-3:1988 §17.2.2.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly action_result?: OPTIONAL<Action_Result>,
-    /**
-     * @summary `shared_ASE_information`.
-     * @description
-     *
-     * ISO 8571-3:1988 §17.2.2.2 / §13.10.
-     *
-     * @public
-     * @readonly
-     */
-    readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
-    /**
-     * @summary `diagnostic`.
-     * @description
-     *
-     * Qualifies `action-result` when that field is present.
-     * ISO 8571-3:1988 §17.2.2.3.
-     *
-     * @public
-     * @readonly
-     */
-    readonly diagnostic?: OPTIONAL<Diagnostic>
-  ) {}
+    action_result?: OPTIONAL<Action_Result>,
+    shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
+    diagnostic?: OPTIONAL<Diagnostic>
+  ) {
+    this.action_result = action_result;
+    this.shared_ASE_information = shared_ASE_information;
+    this.diagnostic = diagnostic;
+  }
 
   /**
    * @summary Restructures an object into a F_CLOSE_request

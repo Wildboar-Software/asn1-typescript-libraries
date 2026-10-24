@@ -43,32 +43,38 @@ import {
  *
  */
 export class NotifyGUISelectEvent_ResponseParams {
+  /**
+   * @summary `selectedInstances`.
+   * @description
+   *
+   * Subtype mask of instances selected by the GUI handler.
+   * With no subscriber, clause 30 defaults this to
+   * `selectableInstances`. X.1083 §16.25.6, clause 30.
+   *
+   * @public
+   * @readonly
+   */
+  readonly selectedInstances: BioAPI_BIR_SUBTYPE_MASK;
+  /**
+   * @summary `response`.
+   * @description
+   *
+   * GUI handler's response to the select event. With no
+   * subscriber, clause 30 defaults this to `default`. X.1083
+   * §16.25.6, clause 30.
+   *
+   * @public
+   * @readonly
+   */
+  readonly response: BioAPI_GUI_RESPONSE;
+
   constructor(
-    /**
-     * @summary `selectedInstances`.
-     * @description
-     *
-     * Subtype mask of instances selected by the GUI handler.
-     * With no subscriber, clause 30 defaults this to
-     * `selectableInstances`. X.1083 §16.25.6, clause 30.
-     *
-     * @public
-     * @readonly
-     */
-    readonly selectedInstances: BioAPI_BIR_SUBTYPE_MASK,
-    /**
-     * @summary `response`.
-     * @description
-     *
-     * GUI handler's response to the select event. With no
-     * subscriber, clause 30 defaults this to `default`. X.1083
-     * §16.25.6, clause 30.
-     *
-     * @public
-     * @readonly
-     */
-    readonly response: BioAPI_GUI_RESPONSE
-  ) {}
+    selectedInstances: BioAPI_BIR_SUBTYPE_MASK,
+    response: BioAPI_GUI_RESPONSE
+  ) {
+    this.selectedInstances = selectedInstances;
+    this.response = response;
+  }
 
   /**
    * @summary Restructures an object into a NotifyGUISelectEvent_ResponseParams

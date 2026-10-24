@@ -29,29 +29,35 @@ import { BoundProfilePackage, _decode_BoundProfilePackage, _encode_BoundProfileP
  */
 export
 class GetBoundProfilePackageOk {
+    /**
+     * @summary `transactionId`.
+     * @description
+     * 
+     * Same session id. SGP.22 v3.1 §5.6.2.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly transactionId: TransactionId;
+    /**
+     * @summary `boundProfilePackage`.
+     * @description
+     * 
+     * Package to segment and send with ES10b.LoadBoundProfilePackage.
+     * SGP.22 v3.1 §2.5.5 and §5.7.6.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly boundProfilePackage: BoundProfilePackage;
+
     constructor (
-        /**
-         * @summary `transactionId`.
-         * @description
-         * 
-         * Same session id. SGP.22 v3.1 §5.6.2.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly transactionId: TransactionId,
-        /**
-         * @summary `boundProfilePackage`.
-         * @description
-         * 
-         * Package to segment and send with ES10b.LoadBoundProfilePackage.
-         * SGP.22 v3.1 §2.5.5 and §5.7.6.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly boundProfilePackage: BoundProfilePackage
-    ) {}
+        transactionId: TransactionId,
+        boundProfilePackage: BoundProfilePackage
+    ) {
+        this.transactionId = transactionId;
+        this.boundProfilePackage = boundProfilePackage;
+    }
 
     /**
      * @summary Restructures an object into a GetBoundProfilePackageOk

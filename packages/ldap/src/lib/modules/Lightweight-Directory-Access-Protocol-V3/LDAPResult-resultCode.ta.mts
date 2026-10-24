@@ -12,47 +12,49 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 
-export enum _enum_for_LDAPResult_resultCode {
-  success = 0,
-  operationsError = 1,
-  protocolError = 2,
-  timeLimitExceeded = 3,
-  sizeLimitExceeded = 4,
-  compareFalse = 5,
-  compareTrue = 6,
-  authMethodNotSupported = 7,
-  strongerAuthRequired = 8,
-  referral = 10,
-  adminLimitExceeded = 11,
-  unavailableCriticalExtension = 12,
-  confidentialityRequired = 13,
-  saslBindInProgress = 14,
-  noSuchAttribute = 16,
-  undefinedAttributeType = 17,
-  inappropriateMatching = 18,
-  constraintViolation = 19,
-  attributeOrValueExists = 20,
-  invalidAttributeSyntax = 21,
-  noSuchObject = 32,
-  aliasProblem = 33,
-  invalidDNSyntax = 34,
-  aliasDereferencingProblem = 36,
-  inappropriateAuthentication = 48,
-  invalidCredentials = 49,
-  insufficientAccessRights = 50,
-  busy = 51,
-  unavailable = 52,
-  unwillingToPerform = 53,
-  loopDetect = 54,
-  namingViolation = 64,
-  objectClassViolation = 65,
-  notAllowedOnNonLeaf = 66,
-  notAllowedOnRDN = 67,
-  entryAlreadyExists = 68,
-  objectClassModsProhibited = 69,
-  affectsMultipleDSAs = 71,
-  other = 80,
-}
+export const _enum_for_LDAPResult_resultCode = {
+  success: 0,
+  operationsError: 1,
+  protocolError: 2,
+  timeLimitExceeded: 3,
+  sizeLimitExceeded: 4,
+  compareFalse: 5,
+  compareTrue: 6,
+  authMethodNotSupported: 7,
+  strongerAuthRequired: 8,
+  referral: 10,
+  adminLimitExceeded: 11,
+  unavailableCriticalExtension: 12,
+  confidentialityRequired: 13,
+  saslBindInProgress: 14,
+  noSuchAttribute: 16,
+  undefinedAttributeType: 17,
+  inappropriateMatching: 18,
+  constraintViolation: 19,
+  attributeOrValueExists: 20,
+  invalidAttributeSyntax: 21,
+  noSuchObject: 32,
+  aliasProblem: 33,
+  invalidDNSyntax: 34,
+  aliasDereferencingProblem: 36,
+  inappropriateAuthentication: 48,
+  invalidCredentials: 49,
+  insufficientAccessRights: 50,
+  busy: 51,
+  unavailable: 52,
+  unwillingToPerform: 53,
+  loopDetect: 54,
+  namingViolation: 64,
+  objectClassViolation: 65,
+  notAllowedOnNonLeaf: 66,
+  notAllowedOnRDN: 67,
+  entryAlreadyExists: 68,
+  objectClassModsProhibited: 69,
+  affectsMultipleDSAs: 71,
+  other: 80,
+} as const;
+
+export type _enum_for_LDAPResult_resultCode = (typeof _enum_for_LDAPResult_resultCode)[keyof typeof _enum_for_LDAPResult_resultCode];
 
 /**
  * @summary LDAPResult_resultCode
@@ -978,7 +980,7 @@ export const other: LDAPResult_resultCode = LDAPResult_resultCode_other; /* SHOR
  * @param {_Element} el The element being decoded.
  * @returns {LDAPResult_resultCode} The decoded data structure.
  */
-export const _decode_LDAPResult_resultCode: $.ASN1Decoder<LDAPResult_resultCode> = $._decodeEnumerated;
+export const _decode_LDAPResult_resultCode: $.ASN1Decoder<LDAPResult_resultCode> = $._decodeEnumerated as $.ASN1Decoder<LDAPResult_resultCode>;
 
 /**
  * @summary Encodes a(n) LDAPResult_resultCode into an ASN.1 Element.
@@ -987,6 +989,6 @@ export const _decode_LDAPResult_resultCode: $.ASN1Decoder<LDAPResult_resultCode>
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LDAPResult_resultCode, encoded as an ASN.1 Element.
  */
-export const _encode_LDAPResult_resultCode: $.ASN1Encoder<LDAPResult_resultCode> = $._encodeEnumerated;
+export const _encode_LDAPResult_resultCode: $.ASN1Encoder<LDAPResult_resultCode> = $._encodeEnumerated as $.ASN1Encoder<LDAPResult_resultCode>;
 
 /* eslint-enable */

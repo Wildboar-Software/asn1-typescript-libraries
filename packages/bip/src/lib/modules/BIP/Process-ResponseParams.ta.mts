@@ -33,20 +33,24 @@ import {
  *
  */
 export class Process_ResponseParams {
+  /**
+   * @summary `processedBIR`.
+   * @description
+   *
+   * Handle of the processed BIR on the hosting endpoint.
+   * Maps to BioAPI `ProcessedBIR` (clause 20). X.1083
+   * §16.32.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly processedBIR: BioAPI_BIR_HANDLE;
+
   constructor(
-    /**
-     * @summary `processedBIR`.
-     * @description
-     *
-     * Handle of the processed BIR on the hosting endpoint.
-     * Maps to BioAPI `ProcessedBIR` (clause 20). X.1083
-     * §16.32.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly processedBIR: BioAPI_BIR_HANDLE
-  ) {}
+    processedBIR: BioAPI_BIR_HANDLE
+  ) {
+    this.processedBIR = processedBIR;
+  }
 
   /**
    * @summary Restructures an object into a Process_ResponseParams

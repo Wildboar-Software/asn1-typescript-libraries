@@ -38,32 +38,38 @@ import {
  *
  */
 export class PA_DATA {
+  /**
+   * @summary `padata_type`.
+   * @description
+   *
+   * How to interpret `padata-value`. Negative values unregistered;
+   * non-negative registered ([RFC 4120 §5.2.7](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.7), [RFC 4120 §7.5.2](https://datatracker.ietf.org/doc/html/rfc4120#section-7.5.2)).
+   * Examples: 1=`pa-tgs-req`, 2=`pa-enc-timestamp`,
+   * 11=`pa-etype-info`, 19=`pa-etype-info2`.
+   *
+   * @public
+   * @readonly
+   */
+  readonly padata_type: Int32;
+  /**
+   * @summary `padata_value`.
+   * @description
+   *
+   * Usually DER of another type identified by `padata-type`
+   * (e.g. encoded `AP-REQ` for `pa-tgs-req`) ([RFC 4120 §5.2.7](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.7)).
+   *
+   * @public
+   * @readonly
+   */
+  readonly padata_value: OCTET_STRING;
+
   constructor(
-    /**
-     * @summary `padata_type`.
-     * @description
-     *
-     * How to interpret `padata-value`. Negative values unregistered;
-     * non-negative registered ([RFC 4120 §5.2.7](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.7), [RFC 4120 §7.5.2](https://datatracker.ietf.org/doc/html/rfc4120#section-7.5.2)).
-     * Examples: 1=`pa-tgs-req`, 2=`pa-enc-timestamp`,
-     * 11=`pa-etype-info`, 19=`pa-etype-info2`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly padata_type: Int32,
-    /**
-     * @summary `padata_value`.
-     * @description
-     *
-     * Usually DER of another type identified by `padata-type`
-     * (e.g. encoded `AP-REQ` for `pa-tgs-req`) ([RFC 4120 §5.2.7](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.7)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly padata_value: OCTET_STRING
-  ) {}
+    padata_type: Int32,
+    padata_value: OCTET_STRING
+  ) {
+    this.padata_type = padata_type;
+    this.padata_value = padata_value;
+  }
 
   /**
    * @summary Restructures an object into a PA_DATA

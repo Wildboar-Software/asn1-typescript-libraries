@@ -38,39 +38,47 @@ import {
  *
  */
 export class KRB_PRIV {
+  /**
+   * @summary `pvno`.
+   * @description
+   *
+   * Protocol version 5 ([RFC 4120 §5.7.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.7.1)).
+   *
+   * @public
+   * @readonly
+   */
+  readonly pvno: INTEGER;
+  /**
+   * @summary `msg_type`.
+   * @description
+   *
+   * `KRB_PRIV` (21) ([RFC 4120 §5.7.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.7.1)).
+   *
+   * @public
+   * @readonly
+   */
+  readonly msg_type: INTEGER;
+  /**
+   * @summary `enc_part`.
+   * @description
+   *
+   * Encrypted `EncKrbPrivPart` under the session key, key usage
+   * 13 ([RFC 4120 §5.7.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.7.1)).
+   *
+   * @public
+   * @readonly
+   */
+  readonly enc_part: EncryptedData;
+
   constructor(
-    /**
-     * @summary `pvno`.
-     * @description
-     *
-     * Protocol version 5 ([RFC 4120 §5.7.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.7.1)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly pvno: INTEGER,
-    /**
-     * @summary `msg_type`.
-     * @description
-     *
-     * `KRB_PRIV` (21) ([RFC 4120 §5.7.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.7.1)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly msg_type: INTEGER,
-    /**
-     * @summary `enc_part`.
-     * @description
-     *
-     * Encrypted `EncKrbPrivPart` under the session key, key usage
-     * 13 ([RFC 4120 §5.7.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.7.1)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly enc_part: EncryptedData
-  ) {}
+    pvno: INTEGER,
+    msg_type: INTEGER,
+    enc_part: EncryptedData
+  ) {
+    this.pvno = pvno;
+    this.msg_type = msg_type;
+    this.enc_part = enc_part;
+  }
 
   /**
    * @summary Restructures an object into a KRB_PRIV

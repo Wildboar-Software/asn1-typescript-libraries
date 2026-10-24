@@ -44,31 +44,37 @@ import {
  *
  */
 export class Identify_ResponseParams {
+  /**
+   * @summary `candidates`.
+   * @description
+   *
+   * Identification candidates, in order. Length is BioAPI
+   * `NumberOfResults`. Empty when none match. X.1083
+   * §16.38.6–16.38.8.
+   *
+   * @public
+   * @readonly
+   */
+  readonly candidates: BioAPI_CANDIDATE[];
+  /**
+   * @summary `auditData`.
+   * @description
+   *
+   * Handle of the audit BIR, if requested. Absent when
+   * `no-auditData` was `TRUE`. X.1083 §16.38.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly auditData?: OPTIONAL<BioAPI_BIR_HANDLE>;
+
   constructor(
-    /**
-     * @summary `candidates`.
-     * @description
-     *
-     * Identification candidates, in order. Length is BioAPI
-     * `NumberOfResults`. Empty when none match. X.1083
-     * §16.38.6–16.38.8.
-     *
-     * @public
-     * @readonly
-     */
-    readonly candidates: BioAPI_CANDIDATE[],
-    /**
-     * @summary `auditData`.
-     * @description
-     *
-     * Handle of the audit BIR, if requested. Absent when
-     * `no-auditData` was `TRUE`. X.1083 §16.38.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly auditData?: OPTIONAL<BioAPI_BIR_HANDLE>
-  ) {}
+    candidates: BioAPI_CANDIDATE[],
+    auditData?: OPTIONAL<BioAPI_BIR_HANDLE>
+  ) {
+    this.candidates = candidates;
+    this.auditData = auditData;
+  }
 
   /**
    * @summary Restructures an object into a Identify_ResponseParams

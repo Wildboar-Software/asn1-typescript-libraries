@@ -7,20 +7,22 @@ import * as $ from "@wildboar/asn1/functional";
 
 
 export
-enum _enum_for_TopologyRequest_topologyDirectionExtension {
+const _enum_for_TopologyRequest_topologyDirectionExtension = {
     /**
      * T2 receives the media that T1 sends externally, and not the reverse. ALL
      * is not used for T1 (clause 7.1.18.3). When this extension is present it
      * replaces `topologyDirection`.
      */
-    onewayexternal = 0,
+    onewayexternal: 0,
     /**
      * T2 receives both the media T1 sends externally and the media T1 receives
      * from outside, and not the reverse. ALL is not used for T1 or T2 (clause
      * 7.1.18.3).
      */
-    onewayboth = 1,
-}
+    onewayboth: 1,
+} as const;
+
+export type _enum_for_TopologyRequest_topologyDirectionExtension = (typeof _enum_for_TopologyRequest_topologyDirectionExtension)[keyof typeof _enum_for_TopologyRequest_topologyDirectionExtension];
 
 /**
  * @summary TopologyRequest_topologyDirectionExtension
@@ -89,8 +91,8 @@ const TopologyRequest_topologyDirectionExtension_onewayboth: TopologyRequest_top
  */
 export
 const onewayboth: TopologyRequest_topologyDirectionExtension = TopologyRequest_topologyDirectionExtension_onewayboth; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_TopologyRequest_topologyDirectionExtension = $._decodeEnumerated;
-export const _encode_TopologyRequest_topologyDirectionExtension = $._encodeEnumerated;
+export const _decode_TopologyRequest_topologyDirectionExtension = $._decodeEnumerated as $.ASN1Decoder<TopologyRequest_topologyDirectionExtension>;
+export const _encode_TopologyRequest_topologyDirectionExtension = $._encodeEnumerated as $.ASN1Encoder<TopologyRequest_topologyDirectionExtension>;
 
 
 /* eslint-enable */

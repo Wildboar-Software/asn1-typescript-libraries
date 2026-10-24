@@ -36,41 +36,49 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class BioAPI_DATE {
+  /**
+   * @summary `year`.
+   * @description
+   *
+   * 0 only as part of the all-zero date; else 1900–9999.
+   * X.1083 §15.23.4.
+   *
+   * @public
+   * @readonly
+   */
+  readonly year: INTEGER;
+  /**
+   * @summary `month`.
+   * @description
+   *
+   * 0 only as part of the all-zero date; else 1–12. X.1083
+   * §15.23.4.
+   *
+   * @public
+   * @readonly
+   */
+  readonly month: INTEGER;
+  /**
+   * @summary `day`.
+   * @description
+   *
+   * 0 only as part of the all-zero date; else 1–31. X.1083
+   * §15.23.4.
+   *
+   * @public
+   * @readonly
+   */
+  readonly day: INTEGER;
+
   constructor(
-    /**
-     * @summary `year`.
-     * @description
-     *
-     * 0 only as part of the all-zero date; else 1900–9999.
-     * X.1083 §15.23.4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly year: INTEGER,
-    /**
-     * @summary `month`.
-     * @description
-     *
-     * 0 only as part of the all-zero date; else 1–12. X.1083
-     * §15.23.4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly month: INTEGER,
-    /**
-     * @summary `day`.
-     * @description
-     *
-     * 0 only as part of the all-zero date; else 1–31. X.1083
-     * §15.23.4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly day: INTEGER
-  ) {}
+    year: INTEGER,
+    month: INTEGER,
+    day: INTEGER
+  ) {
+    this.year = year;
+    this.month = month;
+    this.day = day;
+  }
 
   /**
    * @summary Restructures an object into a BioAPI_DATE

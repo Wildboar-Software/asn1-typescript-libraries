@@ -33,21 +33,25 @@ import {
  *
  */
 export class UnlinkCallParams {
+  /**
+   * @summary `slaveEndpointIRI`.
+   * @description
+   *
+   * `SlaveEndpointIRI` of `BioAPI_UnlinkFromEndpoint`: slave
+   * to unlink. Must already appear in `VisibleEndpoints`. A
+   * NULL C pointer maps to the local endpoint IRI. X.1083
+   * §16.5.4, §16.5.6, §15.3.
+   *
+   * @public
+   * @readonly
+   */
+  readonly slaveEndpointIRI: EndpointIRI;
+
   constructor(
-    /**
-     * @summary `slaveEndpointIRI`.
-     * @description
-     *
-     * `SlaveEndpointIRI` of `BioAPI_UnlinkFromEndpoint`: slave
-     * to unlink. Must already appear in `VisibleEndpoints`. A
-     * NULL C pointer maps to the local endpoint IRI. X.1083
-     * §16.5.4, §16.5.6, §15.3.
-     *
-     * @public
-     * @readonly
-     */
-    readonly slaveEndpointIRI: EndpointIRI
-  ) {}
+    slaveEndpointIRI: EndpointIRI
+  ) {
+    this.slaveEndpointIRI = slaveEndpointIRI;
+  }
 
   /**
    * @summary Restructures an object into a UnlinkCallParams

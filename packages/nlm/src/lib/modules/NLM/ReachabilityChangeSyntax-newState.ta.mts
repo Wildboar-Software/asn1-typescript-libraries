@@ -28,10 +28,12 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_ReachabilityChangeSyntax_newState {
-    down = 0,
-    up = 1,
-}
+export const _enum_for_ReachabilityChangeSyntax_newState = {
+    down: 0,
+    up: 1,
+} as const;
+
+export type _enum_for_ReachabilityChangeSyntax_newState = (typeof _enum_for_ReachabilityChangeSyntax_newState)[keyof typeof _enum_for_ReachabilityChangeSyntax_newState];
 
 
 /**
@@ -144,7 +146,7 @@ let _cached_decoder_for_ReachabilityChangeSyntax_newState: $.ASN1Decoder<Reachab
 export function _decode_ReachabilityChangeSyntax_newState(el: _Element): ReachabilityChangeSyntax_newState {
     if (!_cached_decoder_for_ReachabilityChangeSyntax_newState) {
         _cached_decoder_for_ReachabilityChangeSyntax_newState =
-            $._decodeEnumerated;
+            $._decodeEnumerated as $.ASN1Decoder<ReachabilityChangeSyntax_newState>;
     }
     return _cached_decoder_for_ReachabilityChangeSyntax_newState(el);
 }
@@ -166,7 +168,7 @@ export function _encode_ReachabilityChangeSyntax_newState(
 ): _Element {
     if (!_cached_encoder_for_ReachabilityChangeSyntax_newState) {
         _cached_encoder_for_ReachabilityChangeSyntax_newState =
-            $._encodeEnumerated;
+            $._encodeEnumerated as $.ASN1Encoder<ReachabilityChangeSyntax_newState>;
     }
     return _cached_encoder_for_ReachabilityChangeSyntax_newState(
         value,

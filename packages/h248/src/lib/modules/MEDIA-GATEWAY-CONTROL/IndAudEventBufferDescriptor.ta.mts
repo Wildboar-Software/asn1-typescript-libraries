@@ -32,39 +32,47 @@ import { StreamID, _decode_StreamID, _encode_StreamID } from "../MEDIA-GATEWAY-C
  */
 export
 class IndAudEventBufferDescriptor {
+    /**
+     * @summary `eventName`.
+     * @description
+     *
+     * Package and event enabled in the event buffer.
+     *
+     * @public
+     * @readonly
+     */
+    readonly eventName: PkgdName;
+    /**
+     * @summary `streamID`.
+     * @description
+     *
+     * Stream of that buffered event, if the event is stream-specific.
+     *
+     * @public
+     * @readonly
+     */
+    readonly streamID?: OPTIONAL<StreamID>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `eventName`.
-         * @description
-         *
-         * Package and event enabled in the event buffer.
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventName: PkgdName,
-        /**
-         * @summary `streamID`.
-         * @description
-         *
-         * Stream of that buffered event, if the event is stream-specific.
-         *
-         * @public
-         * @readonly
-         */
-        readonly streamID?: OPTIONAL<StreamID>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        eventName: PkgdName,
+        streamID?: OPTIONAL<StreamID>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.eventName = eventName;
+        this.streamID = streamID;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a IndAudEventBufferDescriptor

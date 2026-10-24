@@ -33,32 +33,38 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class Parameter {
+  /**
+   * @summary `paramId`.
+   * @description
+   *
+   * `PARAMETER.&id` — identifies which parameter this is.
+   *
+   * (ISO/IEC 10589:2002 Annex E.2).
+   *
+   * @public
+   * @readonly
+   */
+  readonly paramId: OBJECT_IDENTIFIER;
+  /**
+   * @summary `paramInfo`.
+   * @description
+   *
+   * `PARAMETER.&Type` selected by `paramId` (`ANY DEFINED BY paramId`).
+   *
+   * (ISO/IEC 10589:2002 Annex E.2).
+   *
+   * @public
+   * @readonly
+   */
+  readonly paramInfo: _Element;
+
   constructor(
-    /**
-     * @summary `paramId`.
-     * @description
-     *
-     * `PARAMETER.&id` — identifies which parameter this is.
-     *
-     * (ISO/IEC 10589:2002 Annex E.2).
-     *
-     * @public
-     * @readonly
-     */
-    readonly paramId: OBJECT_IDENTIFIER,
-    /**
-     * @summary `paramInfo`.
-     * @description
-     *
-     * `PARAMETER.&Type` selected by `paramId` (`ANY DEFINED BY paramId`).
-     *
-     * (ISO/IEC 10589:2002 Annex E.2).
-     *
-     * @public
-     * @readonly
-     */
-    readonly paramInfo: _Element
-  ) {}
+    paramId: OBJECT_IDENTIFIER,
+    paramInfo: _Element
+  ) {
+    this.paramId = paramId;
+    this.paramInfo = paramInfo;
+  }
 
   /**
    * @summary Restructures an object into a Parameter

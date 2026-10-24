@@ -45,36 +45,44 @@ import {
  *
  */
 export class PartialAttribute {
+  /**
+   * @summary `type_`.
+   * @description
+   *
+   * Attribute description. Servers SHOULD return a short name when
+   * unambiguous.
+   *
+   * @public
+   * @readonly
+   */
+  readonly type_: AttributeDescription;
+  /**
+   * @summary `vals`.
+   * @description
+   *
+   * Unordered SET; empty allowed. No equivalent duplicates. Empty in
+   * Search when `typesOnly` is TRUE or values are withheld.
+   *
+   * @public
+   * @readonly
+   */
+  readonly vals: AttributeValue[];
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  readonly _unrecognizedExtensionsList: _Element[];
+
   constructor(
-    /**
-     * @summary `type_`.
-     * @description
-     *
-     * Attribute description. Servers SHOULD return a short name when
-     * unambiguous.
-     *
-     * @public
-     * @readonly
-     */
-    readonly type_: AttributeDescription,
-    /**
-     * @summary `vals`.
-     * @description
-     *
-     * Unordered SET; empty allowed. No equivalent duplicates. Empty in
-     * Search when `typesOnly` is TRUE or values are withheld.
-     *
-     * @public
-     * @readonly
-     */
-    readonly vals: AttributeValue[],
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = []
-  ) {}
+    type_: AttributeDescription,
+    vals: AttributeValue[],
+    _unrecognizedExtensionsList: _Element[] = []
+  ) {
+    this.type_ = type_;
+    this.vals = vals;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+  }
 
   /**
    * @summary Restructures an object into a PartialAttribute

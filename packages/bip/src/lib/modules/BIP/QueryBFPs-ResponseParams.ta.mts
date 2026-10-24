@@ -34,20 +34,24 @@ import {
  *
  */
 export class QueryBFPs_ResponseParams {
+  /**
+   * @summary `bfps`.
+   * @description
+   *
+   * BFPs used by the queried BSP. Maps to
+   * BFPList/NumberOfElements (clause 20). X.1083 §16.12.6–16.12.8,
+   * Table 46.
+   *
+   * @public
+   * @readonly
+   */
+  readonly bfps: BioAPI_BFP_LIST_ELEMENT[];
+
   constructor(
-    /**
-     * @summary `bfps`.
-     * @description
-     *
-     * BFPs used by the queried BSP. Maps to
-     * BFPList/NumberOfElements (clause 20). X.1083 §16.12.6–16.12.8,
-     * Table 46.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bfps: BioAPI_BFP_LIST_ELEMENT[]
-  ) {}
+    bfps: BioAPI_BFP_LIST_ELEMENT[]
+  ) {
+    this.bfps = bfps;
+  }
 
   /**
    * @summary Restructures an object into a QueryBFPs_ResponseParams

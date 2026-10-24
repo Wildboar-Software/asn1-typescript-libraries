@@ -48,53 +48,63 @@ import {
  *
  */
 export class Information {
+  /**
+   * @summary `description`.
+   * @description
+   *
+   * Purpose and use cases of this OID allocation (F.3.1).
+   *
+   * @public
+   * @readonly
+   */
+  readonly description: HTMLString;
+  /**
+   * @summary `additionalInformation`.
+   * @description
+   *
+   * Further text about the node; same markup rules as
+   * `description`.
+   *
+   * @public
+   * @readonly
+   */
+  readonly additionalInformation?: OPTIONAL<HTMLString>;
+  /**
+   * @summary `firstRegistration`.
+   * @description
+   *
+   * Original registration of this node, if disclosed.
+   * Optional fields need the current registrant's
+   * permission (D.2.3).
+   *
+   * @public
+   * @readonly
+   */
+  readonly firstRegistration?: OPTIONAL<RegistrationDetails>;
+  /**
+   * @summary `currentRegistration`.
+   * @description
+   *
+   * Current owner of this node. Recommended when
+   * available (D.2.5). Optional fields need that
+   * registrant's permission (D.2.3).
+   *
+   * @public
+   * @readonly
+   */
+  readonly currentRegistration?: OPTIONAL<RegistrationDetails>;
+
   constructor(
-    /**
-     * @summary `description`.
-     * @description
-     *
-     * Purpose and use cases of this OID allocation (F.3.1).
-     *
-     * @public
-     * @readonly
-     */
-    readonly description: HTMLString,
-    /**
-     * @summary `additionalInformation`.
-     * @description
-     *
-     * Further text about the node; same markup rules as
-     * `description`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly additionalInformation?: OPTIONAL<HTMLString>,
-    /**
-     * @summary `firstRegistration`.
-     * @description
-     *
-     * Original registration of this node, if disclosed.
-     * Optional fields need the current registrant's
-     * permission (D.2.3).
-     *
-     * @public
-     * @readonly
-     */
-    readonly firstRegistration?: OPTIONAL<RegistrationDetails>,
-    /**
-     * @summary `currentRegistration`.
-     * @description
-     *
-     * Current owner of this node. Recommended when
-     * available (D.2.5). Optional fields need that
-     * registrant's permission (D.2.3).
-     *
-     * @public
-     * @readonly
-     */
-    readonly currentRegistration?: OPTIONAL<RegistrationDetails>
-  ) {}
+    description: HTMLString,
+    additionalInformation?: OPTIONAL<HTMLString>,
+    firstRegistration?: OPTIONAL<RegistrationDetails>,
+    currentRegistration?: OPTIONAL<RegistrationDetails>
+  ) {
+    this.description = description;
+    this.additionalInformation = additionalInformation;
+    this.firstRegistration = firstRegistration;
+    this.currentRegistration = currentRegistration;
+  }
 
   /**
    * @summary Restructures an object into a Information

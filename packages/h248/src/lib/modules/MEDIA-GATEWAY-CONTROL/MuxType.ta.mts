@@ -7,29 +7,31 @@ import * as $ from "@wildboar/asn1/functional";
 
 
 export
-enum _enum_for_MuxType {
+const _enum_for_MuxType = {
     /**
      * ITU-T H.221 frame multiplex (clause 7.1.3).
      */
-    h221 = 0,
+    h221: 0,
     /**
      * ITU-T H.223 multiplex (clause 7.1.3).
      */
-    h223 = 1,
+    h223: 1,
     /**
      * ITU-T H.226 multiplex (clause 7.1.3).
      */
-    h226 = 2,
+    h226: 2,
     /**
      * ITU-T V.76 multiplex (clause 7.1.3).
      */
-    v76 = 3,
+    v76: 3,
     /**
      * N x 64 kbit/s service. One wideband stream toward the context; each
      * bearer termination is 64 kbit/s (clause 7.1.3).
      */
-    nx64k = 4,
-}
+    nx64k: 4,
+} as const;
+
+export type _enum_for_MuxType = (typeof _enum_for_MuxType)[keyof typeof _enum_for_MuxType];
 
 /**
  * @summary MuxType
@@ -162,8 +164,8 @@ const MuxType_nx64k: MuxType = 4; /* LONG_NAMED_ENUMERATED_VALUE */
  */
 export
 const nx64k: MuxType = MuxType_nx64k; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_MuxType = $._decodeEnumerated;
-export const _encode_MuxType = $._encodeEnumerated;
+export const _decode_MuxType = $._decodeEnumerated as $.ASN1Decoder<MuxType>;
+export const _encode_MuxType = $._encodeEnumerated as $.ASN1Encoder<MuxType>;
 
 
 /* eslint-enable */

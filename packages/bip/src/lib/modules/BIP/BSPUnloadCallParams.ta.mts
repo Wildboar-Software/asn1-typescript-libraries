@@ -42,43 +42,51 @@ import {
  *
  */
 export class BSPUnloadCallParams {
+  /**
+   * @summary `bspUuid`.
+   * @description
+   *
+   * `BSPUuid` of `BioAPI_BSPUnload`: BSP product or access
+   * UUID. X.1083 §16.10.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly bspUuid: BioAPI_UUID;
+  /**
+   * @summary `unitEventHandlerAddress`.
+   * @description
+   *
+   * `EventHandler` of `BioAPI_BSPUnload`. Must match the
+   * address stored at load. A non-zero value sets
+   * `unitEventSubscription` TRUE on the wire request.
+   * X.1083 §16.10.4.2, §16.10.6, §15.1.7.
+   *
+   * @public
+   * @readonly
+   */
+  readonly unitEventHandlerAddress: MemoryAddress;
+  /**
+   * @summary `unitEventHandlerContext`.
+   * @description
+   *
+   * `EventHandlerCtx` of `BioAPI_BSPUnload`. Must match the
+   * context stored at load. X.1083 §16.10.4.1, §16.10.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly unitEventHandlerContext: MemoryAddress;
+
   constructor(
-    /**
-     * @summary `bspUuid`.
-     * @description
-     *
-     * `BSPUuid` of `BioAPI_BSPUnload`: BSP product or access
-     * UUID. X.1083 §16.10.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bspUuid: BioAPI_UUID,
-    /**
-     * @summary `unitEventHandlerAddress`.
-     * @description
-     *
-     * `EventHandler` of `BioAPI_BSPUnload`. Must match the
-     * address stored at load. A non-zero value sets
-     * `unitEventSubscription` TRUE on the wire request.
-     * X.1083 §16.10.4.2, §16.10.6, §15.1.7.
-     *
-     * @public
-     * @readonly
-     */
-    readonly unitEventHandlerAddress: MemoryAddress,
-    /**
-     * @summary `unitEventHandlerContext`.
-     * @description
-     *
-     * `EventHandlerCtx` of `BioAPI_BSPUnload`. Must match the
-     * context stored at load. X.1083 §16.10.4.1, §16.10.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly unitEventHandlerContext: MemoryAddress
-  ) {}
+    bspUuid: BioAPI_UUID,
+    unitEventHandlerAddress: MemoryAddress,
+    unitEventHandlerContext: MemoryAddress
+  ) {
+    this.bspUuid = bspUuid;
+    this.unitEventHandlerAddress = unitEventHandlerAddress;
+    this.unitEventHandlerContext = unitEventHandlerContext;
+  }
 
   /**
    * @summary Restructures an object into a BSPUnloadCallParams

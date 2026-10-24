@@ -31,10 +31,12 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_SystemType {
-    eS = 1,
-    iS = 2,
-}
+export const _enum_for_SystemType = {
+    eS: 1,
+    iS: 2,
+} as const;
+
+export type _enum_for_SystemType = (typeof _enum_for_SystemType)[keyof typeof _enum_for_SystemType];
 
 
 /**
@@ -141,12 +143,12 @@ export const iS: SystemType = SystemType.iS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
-export const _decode_SystemType = $._decodeEnumerated;
+export const _decode_SystemType = $._decodeEnumerated as $.ASN1Decoder<SystemType>;
 
 
 
 
-export const _encode_SystemType = $._encodeEnumerated;
+export const _encode_SystemType = $._encodeEnumerated as $.ASN1Encoder<SystemType>;
 
 
 /* eslint-enable */

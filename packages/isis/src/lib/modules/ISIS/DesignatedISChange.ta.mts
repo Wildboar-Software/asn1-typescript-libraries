@@ -29,10 +29,12 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_DesignatedISChange {
-  resigned = 0,
-  elected = 1,
-}
+export const _enum_for_DesignatedISChange = {
+  resigned: 0,
+  elected: 1,
+} as const;
+
+export type _enum_for_DesignatedISChange = (typeof _enum_for_DesignatedISChange)[keyof typeof _enum_for_DesignatedISChange];
 
 /**
  * @summary DesignatedISChange
@@ -119,10 +121,10 @@ export const elected: DesignatedISChange =
   DesignatedISChange.elected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_DesignatedISChange = $._decodeEnumerated;
+export const _decode_DesignatedISChange = $._decodeEnumerated as $.ASN1Decoder<DesignatedISChange>;
 
 
-export const _encode_DesignatedISChange = $._encodeEnumerated;
+export const _encode_DesignatedISChange = $._encodeEnumerated as $.ASN1Encoder<DesignatedISChange>;
 
 
 /* eslint-enable */

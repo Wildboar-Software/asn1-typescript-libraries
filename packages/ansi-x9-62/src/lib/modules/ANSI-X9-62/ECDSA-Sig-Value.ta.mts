@@ -28,30 +28,36 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class ECDSA_Sig_Value {
+    /**
+     * @summary `r`.
+     * @description
+     *
+     * `x1 mod n` where `(x1, y1) = kG`. Regenerated if `r = 0`.
+     * ANSI X9.62-1998 §5.3.3, §6.5.
+     *
+     * @public
+     * @readonly
+     */
+    readonly r: INTEGER;
+    /**
+     * @summary `s`.
+     * @description
+     *
+     * `k^{-1}(e + d r) mod n`, with `e = SHA-1(M)`. Regenerated
+     * if `s = 0`. ANSI X9.62-1998 §5.3.3, §6.5.
+     *
+     * @public
+     * @readonly
+     */
+    readonly s: INTEGER;
+
     constructor(
-        /**
-         * @summary `r`.
-         * @description
-         *
-         * `x1 mod n` where `(x1, y1) = kG`. Regenerated if `r = 0`.
-         * ANSI X9.62-1998 §5.3.3, §6.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly r: INTEGER,
-        /**
-         * @summary `s`.
-         * @description
-         *
-         * `k^{-1}(e + d r) mod n`, with `e = SHA-1(M)`. Regenerated
-         * if `s = 0`. ANSI X9.62-1998 §5.3.3, §6.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly s: INTEGER
-    ) {}
+        r: INTEGER,
+        s: INTEGER
+    ) {
+        this.r = r;
+        this.s = s;
+    }
 
     /**
      * @summary Restructures an object into a ECDSA_Sig_Value

@@ -33,38 +33,46 @@ import { ECCSupplements, _decode_ECCSupplements, _encode_ECCSupplements } from "
  */
 export
 class ECPKSupplements {
+    /**
+     * @summary `ecDomain`.
+     * @description
+     *
+     * Domain parameters associated with this public key. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
+     *
+     * @public
+     * @readonly
+     */
+    readonly ecDomain: ECDomainParameters;
+    /**
+     * @summary `eccAlgorithms`.
+     * @description
+     *
+     * Algorithms this key may be used with. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
+     *
+     * @public
+     * @readonly
+     */
+    readonly eccAlgorithms: ECCAlgorithms;
+    /**
+     * @summary `eccSupplements`.
+     * @description
+     *
+     * Precomputed multiples of the public key. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
+     *
+     * @public
+     * @readonly
+     */
+    readonly eccSupplements: ECCSupplements;
+
     constructor (
-        /**
-         * @summary `ecDomain`.
-         * @description
-         *
-         * Domain parameters associated with this public key. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ecDomain: ECDomainParameters,
-        /**
-         * @summary `eccAlgorithms`.
-         * @description
-         *
-         * Algorithms this key may be used with. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly eccAlgorithms: ECCAlgorithms,
-        /**
-         * @summary `eccSupplements`.
-         * @description
-         *
-         * Precomputed multiples of the public key. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly eccSupplements: ECCSupplements
-    ) {}
+        ecDomain: ECDomainParameters,
+        eccAlgorithms: ECCAlgorithms,
+        eccSupplements: ECCSupplements
+    ) {
+        this.ecDomain = ecDomain;
+        this.eccAlgorithms = eccAlgorithms;
+        this.eccSupplements = eccSupplements;
+    }
 
     /**
      * @summary Restructures an object into a ECPKSupplements

@@ -40,40 +40,48 @@ import { ServiceChangeParm, _decode_ServiceChangeParm, _encode_ServiceChangeParm
  */
 export
 class ServiceChangeRequest {
+    /**
+     * @summary `terminationID`.
+     * @description
+     *
+     * Terminations affected. Root means the whole gateway. Wildcarding is
+     * allowed; CHOOSE is not (clause 7.2.8).
+     *
+     * @public
+     * @readonly
+     */
+    readonly terminationID: TerminationIDList;
+    /**
+     * @summary `serviceChangeParms`.
+     * @description
+     *
+     * Method, reason, and the optional parameters of clause 7.2.8.1.
+     *
+     * @public
+     * @readonly
+     */
+    readonly serviceChangeParms: ServiceChangeParm;
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `terminationID`.
-         * @description
-         *
-         * Terminations affected. Root means the whole gateway. Wildcarding is
-         * allowed; CHOOSE is not (clause 7.2.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly terminationID: TerminationIDList,
-        /**
-         * @summary `serviceChangeParms`.
-         * @description
-         *
-         * Method, reason, and the optional parameters of clause 7.2.8.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceChangeParms: ServiceChangeParm,
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        terminationID: TerminationIDList,
+        serviceChangeParms: ServiceChangeParm,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.terminationID = terminationID;
+        this.serviceChangeParms = serviceChangeParms;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ServiceChangeRequest

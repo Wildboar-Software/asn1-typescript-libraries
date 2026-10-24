@@ -36,38 +36,50 @@ import { MechTypeList, _decode_MechTypeList, _encode_MechTypeList } from "../Spn
  */
 export
 class NegTokenTarg {
+    /**
+     * @summary `negResult`.
+     * @public
+     * @readonly
+     */
+    readonly negResult?: OPTIONAL<NegTokenTarg_negResult>;
+    /**
+     * @summary `supportedMech`.
+     * @public
+     * @readonly
+     */
+    readonly supportedMech?: OPTIONAL<MechType>;
+    /**
+     * @summary `responseToken`.
+     * @public
+     * @readonly
+     */
+    readonly responseToken?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `mechListMIC`.
+     * @public
+     * @readonly
+     */
+    readonly mechListMIC?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `mechTypes`.
+     * @public
+     * @readonly
+     */
+    readonly mechTypes?: OPTIONAL<MechTypeList>;
+
     constructor (
-        /**
-         * @summary `negResult`.
-         * @public
-         * @readonly
-         */
-        readonly negResult?: OPTIONAL<NegTokenTarg_negResult>,
-        /**
-         * @summary `supportedMech`.
-         * @public
-         * @readonly
-         */
-        readonly supportedMech?: OPTIONAL<MechType>,
-        /**
-         * @summary `responseToken`.
-         * @public
-         * @readonly
-         */
-        readonly responseToken?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `mechListMIC`.
-         * @public
-         * @readonly
-         */
-        readonly mechListMIC?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `mechTypes`.
-         * @public
-         * @readonly
-         */
-        readonly mechTypes?: OPTIONAL<MechTypeList>
-    ) {}
+        negResult?: OPTIONAL<NegTokenTarg_negResult>,
+        supportedMech?: OPTIONAL<MechType>,
+        responseToken?: OPTIONAL<OCTET_STRING>,
+        mechListMIC?: OPTIONAL<OCTET_STRING>,
+        mechTypes?: OPTIONAL<MechTypeList>
+    ) {
+        this.negResult = negResult;
+        this.supportedMech = supportedMech;
+        this.responseToken = responseToken;
+        this.mechListMIC = mechListMIC;
+        this.mechTypes = mechTypes;
+    }
 
     /**
      * @summary Restructures an object into a NegTokenTarg

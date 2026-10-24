@@ -34,52 +34,62 @@ import { Octet16, _decode_Octet16, _encode_Octet16 } from "../RSPDefinitions/Oct
  */
 export
 class ServerSigned1 {
+    /**
+     * @summary `transactionId`.
+     * @description
+     * 
+     * Session id the RSP Server just allocated. SGP.22 v3.1 §5.6.1.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly transactionId: TransactionId;
+    /**
+     * @summary `euiccChallenge`.
+     * @description
+     * 
+     * Must equal the challenge from ES10b.GetEUICCChallenge. Otherwise the
+     * eUICC returns `euiccChallengeMismatch`. SGP.22 v3.1 §5.7.13.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly euiccChallenge: Octet16;
+    /**
+     * @summary `serverAddress`.
+     * @description
+     * 
+     * FQDN of the RSP Server the LPA contacted. The server itself rejects
+     * InitiateAuthentication if this is not its own address. SGP.22 v3.1
+     * §5.6.1.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly serverAddress: UTF8String;
+    /**
+     * @summary `serverChallenge`.
+     * @description
+     * 
+     * Server nonce that `euiccSigned1` must echo, so the eUICC signature is
+     * bound to this server challenge. SGP.22 v3.1 §5.7.13.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly serverChallenge: Octet16;
+
     constructor (
-        /**
-         * @summary `transactionId`.
-         * @description
-         * 
-         * Session id the RSP Server just allocated. SGP.22 v3.1 §5.6.1.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly transactionId: TransactionId,
-        /**
-         * @summary `euiccChallenge`.
-         * @description
-         * 
-         * Must equal the challenge from ES10b.GetEUICCChallenge. Otherwise the
-         * eUICC returns `euiccChallengeMismatch`. SGP.22 v3.1 §5.7.13.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly euiccChallenge: Octet16,
-        /**
-         * @summary `serverAddress`.
-         * @description
-         * 
-         * FQDN of the RSP Server the LPA contacted. The server itself rejects
-         * InitiateAuthentication if this is not its own address. SGP.22 v3.1
-         * §5.6.1.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly serverAddress: UTF8String,
-        /**
-         * @summary `serverChallenge`.
-         * @description
-         * 
-         * Server nonce that `euiccSigned1` must echo, so the eUICC signature is
-         * bound to this server challenge. SGP.22 v3.1 §5.7.13.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly serverChallenge: Octet16
-    ) {}
+        transactionId: TransactionId,
+        euiccChallenge: Octet16,
+        serverAddress: UTF8String,
+        serverChallenge: Octet16
+    ) {
+        this.transactionId = transactionId;
+        this.euiccChallenge = euiccChallenge;
+        this.serverAddress = serverAddress;
+        this.serverChallenge = serverChallenge;
+    }
 
     /**
      * @summary Restructures an object into a ServerSigned1

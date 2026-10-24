@@ -53,35 +53,43 @@ import { ModeCapability_Item_protocolmode, _decode_ModeCapability_Item_protocolm
  */
 export
 class ModeCapability_Item {
+    /**
+     * @summary `modulationMode`.
+     * @description
+     *
+     * Per-modulation capability codes (Tag-IDs `0900`…`2300` plus
+     * `otherModMode` `0101`). ITU-T Rec. V.59 (11/2000) §6.6.
+     * @public
+     * @readonly
+     */
+    readonly modulationMode: ModeCapability_Item_modulationMode;
+    /**
+     * @summary `protocolmode`.
+     * @description
+     *
+     * Per-protocol capability: V.42 (`2F00`), V.42 bis (`3000`), V.44
+     * (`300A`), optional `otherProtMode` (`0102`). ITU-T Rec. V.59
+     * (11/2000) §6.6.
+     * @public
+     * @readonly
+     */
+    readonly protocolmode: ModeCapability_Item_protocolmode;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `modulationMode`.
-         * @description
-         *
-         * Per-modulation capability codes (Tag-IDs `0900`…`2300` plus
-         * `otherModMode` `0101`). ITU-T Rec. V.59 (11/2000) §6.6.
-         * @public
-         * @readonly
-         */
-        readonly modulationMode: ModeCapability_Item_modulationMode,
-        /**
-         * @summary `protocolmode`.
-         * @description
-         *
-         * Per-protocol capability: V.42 (`2F00`), V.42 bis (`3000`), V.44
-         * (`300A`), optional `otherProtMode` (`0102`). ITU-T Rec. V.59
-         * (11/2000) §6.6.
-         * @public
-         * @readonly
-         */
-        readonly protocolmode: ModeCapability_Item_protocolmode,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        modulationMode: ModeCapability_Item_modulationMode,
+        protocolmode: ModeCapability_Item_protocolmode,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.modulationMode = modulationMode;
+        this.protocolmode = protocolmode;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ModeCapability_Item

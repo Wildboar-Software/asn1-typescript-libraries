@@ -32,28 +32,34 @@ import {
  *
  */
 export class TYPED_DATA_Item {
+  /**
+   * @summary `data_type`.
+   * @description
+   *
+   * Type of `data-value` ([RFC 4120 §5.9.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.9.1)).
+   *
+   * @public
+   * @readonly
+   */
+  readonly data_type: Int32;
+  /**
+   * @summary `data_value`.
+   * @description
+   *
+   * Optional typed payload ([RFC 4120 §5.9.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.9.1)).
+   *
+   * @public
+   * @readonly
+   */
+  readonly data_value?: OPTIONAL<OCTET_STRING>;
+
   constructor(
-    /**
-     * @summary `data_type`.
-     * @description
-     *
-     * Type of `data-value` ([RFC 4120 §5.9.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.9.1)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly data_type: Int32,
-    /**
-     * @summary `data_value`.
-     * @description
-     *
-     * Optional typed payload ([RFC 4120 §5.9.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.9.1)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly data_value?: OPTIONAL<OCTET_STRING>
-  ) {}
+    data_type: Int32,
+    data_value?: OPTIONAL<OCTET_STRING>
+  ) {
+    this.data_type = data_type;
+    this.data_value = data_value;
+  }
 
   /**
    * @summary Restructures an object into a TYPED_DATA_Item

@@ -34,41 +34,49 @@ import { ProfilePolicyAuthorisationRule_pprFlags, _decode_ProfilePolicyAuthorisa
  */
 export
 class ProfilePolicyAuthorisationRule {
+    /**
+     * @summary `pprIds`.
+     * @description
+     * 
+     * Which PPRs this rule authorises. One or more of PPR1 and PPR2.
+     * `pprUpdateControl` is not a PPR. SGP.22 v3.1 §2.9.2.1.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly pprIds: PprIds;
+    /**
+     * @summary `allowedOperators`.
+     * @description
+     * 
+     * Profile Owners allowed to use those PPRs. Compared with
+     * `profileOwner`. Wildcards are defined in SGP.22 v3.1 §2.9.2.1.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly allowedOperators: OperatorId[];
+    /**
+     * @summary `pprFlags`.
+     * @description
+     * 
+     * `consentRequired` forces the LPA to ask the End User before
+     * installing a Profile that uses these PPRs. SGP.22 v3.1 §2.9.2.1.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly pprFlags: ProfilePolicyAuthorisationRule_pprFlags;
+
     constructor (
-        /**
-         * @summary `pprIds`.
-         * @description
-         * 
-         * Which PPRs this rule authorises. One or more of PPR1 and PPR2.
-         * `pprUpdateControl` is not a PPR. SGP.22 v3.1 §2.9.2.1.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly pprIds: PprIds,
-        /**
-         * @summary `allowedOperators`.
-         * @description
-         * 
-         * Profile Owners allowed to use those PPRs. Compared with
-         * `profileOwner`. Wildcards are defined in SGP.22 v3.1 §2.9.2.1.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly allowedOperators: OperatorId[],
-        /**
-         * @summary `pprFlags`.
-         * @description
-         * 
-         * `consentRequired` forces the LPA to ask the End User before
-         * installing a Profile that uses these PPRs. SGP.22 v3.1 §2.9.2.1.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly pprFlags: ProfilePolicyAuthorisationRule_pprFlags
-    ) {}
+        pprIds: PprIds,
+        allowedOperators: OperatorId[],
+        pprFlags: ProfilePolicyAuthorisationRule_pprFlags
+    ) {
+        this.pprIds = pprIds;
+        this.allowedOperators = allowedOperators;
+        this.pprFlags = pprFlags;
+    }
 
     /**
      * @summary Restructures an object into a ProfilePolicyAuthorisationRule

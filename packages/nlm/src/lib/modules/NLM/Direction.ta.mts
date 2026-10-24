@@ -28,10 +28,12 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_Direction {
-    incoming = 0,
-    outgoing = 1,
-}
+export const _enum_for_Direction = {
+    incoming: 0,
+    outgoing: 1,
+} as const;
+
+export type _enum_for_Direction = (typeof _enum_for_Direction)[keyof typeof _enum_for_Direction];
 
 
 /**
@@ -134,12 +136,12 @@ export const outgoing: Direction =
 
 
 
-export const _decode_Direction = $._decodeEnumerated;
+export const _decode_Direction = $._decodeEnumerated as $.ASN1Decoder<Direction>;
 
 
 
 
-export const _encode_Direction = $._encodeEnumerated;
+export const _encode_Direction = $._encodeEnumerated as $.ASN1Encoder<Direction>;
 
 
 /* eslint-enable */

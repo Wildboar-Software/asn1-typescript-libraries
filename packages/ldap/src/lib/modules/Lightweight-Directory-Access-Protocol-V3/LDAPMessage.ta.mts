@@ -71,51 +71,61 @@ import {
  *
  */
 export class LDAPMessage {
+  /**
+   * @summary `messageID`.
+   * @description
+   *
+   * 0 is reserved for unsolicited notifications. Request IDs MUST be
+   * non-zero and unique among in-progress operations on the session.
+   * Reuse only after the earlier op is known finished (Abandon and
+   * successfully abandoned ops send no response).
+   *
+   * @public
+   * @readonly
+   */
+  readonly messageID: MessageID;
+  /**
+   * @summary `protocolOp`.
+   * @description
+   *
+   * Request or response CHOICE. Unsolicited notifications use
+   * `extendedResp`. IntermediateResponse is an extension addition.
+   *
+   * @public
+   * @readonly
+   */
+  readonly protocolOp: LDAPMessage_protocolOp;
+  /**
+   * @summary `controls`.
+   * @description
+   *
+   * Affect only this message. Order ignored unless a control spec
+   * says otherwise. Invalid or unspecified combinations →
+   * `protocolError`; non-critical controls may be dropped to form a
+   * valid combination.
+   *
+   * @public
+   * @readonly
+   */
+  readonly controls?: OPTIONAL<Controls>;
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  readonly _unrecognizedExtensionsList: _Element[];
+
   constructor(
-    /**
-     * @summary `messageID`.
-     * @description
-     *
-     * 0 is reserved for unsolicited notifications. Request IDs MUST be
-     * non-zero and unique among in-progress operations on the session.
-     * Reuse only after the earlier op is known finished (Abandon and
-     * successfully abandoned ops send no response).
-     *
-     * @public
-     * @readonly
-     */
-    readonly messageID: MessageID,
-    /**
-     * @summary `protocolOp`.
-     * @description
-     *
-     * Request or response CHOICE. Unsolicited notifications use
-     * `extendedResp`. IntermediateResponse is an extension addition.
-     *
-     * @public
-     * @readonly
-     */
-    readonly protocolOp: LDAPMessage_protocolOp,
-    /**
-     * @summary `controls`.
-     * @description
-     *
-     * Affect only this message. Order ignored unless a control spec
-     * says otherwise. Invalid or unspecified combinations →
-     * `protocolError`; non-critical controls may be dropped to form a
-     * valid combination.
-     *
-     * @public
-     * @readonly
-     */
-    readonly controls?: OPTIONAL<Controls>,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = []
-  ) {}
+    messageID: MessageID,
+    protocolOp: LDAPMessage_protocolOp,
+    controls?: OPTIONAL<Controls>,
+    _unrecognizedExtensionsList: _Element[] = []
+  ) {
+    this.messageID = messageID;
+    this.protocolOp = protocolOp;
+    this.controls = controls;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+  }
 
   /**
    * @summary Restructures an object into a LDAPMessage

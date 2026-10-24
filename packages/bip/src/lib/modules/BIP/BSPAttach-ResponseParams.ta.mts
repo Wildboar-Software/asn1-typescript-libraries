@@ -35,20 +35,24 @@ import {
  *
  */
 export class BSPAttach_ResponseParams {
+  /**
+   * @summary `newOriginalBSPHandle`.
+   * @description
+   *
+   * Attach-session handle allocated at the hosting endpoint.
+   * Master does not return this to the application.
+   * X.1083 §16.13.4.2 g, Table 48.
+   *
+   * @public
+   * @readonly
+   */
+  readonly newOriginalBSPHandle: BioAPI_HANDLE;
+
   constructor(
-    /**
-     * @summary `newOriginalBSPHandle`.
-     * @description
-     *
-     * Attach-session handle allocated at the hosting endpoint.
-     * Master does not return this to the application.
-     * X.1083 §16.13.4.2 g, Table 48.
-     *
-     * @public
-     * @readonly
-     */
-    readonly newOriginalBSPHandle: BioAPI_HANDLE
-  ) {}
+    newOriginalBSPHandle: BioAPI_HANDLE
+  ) {
+    this.newOriginalBSPHandle = newOriginalBSPHandle;
+  }
 
   /**
    * @summary Restructures an object into a BSPAttach_ResponseParams

@@ -34,30 +34,36 @@ import { RP_MR, _decode_RP_MR, _encode_RP_MR } from "../SMRS/RP-MR.ta.mjs";
  */
 export
 class RPAck {
+    /**
+     * @summary `message_reference`.
+     * @description
+     *
+     * Message reference of the `RPDataMT` or `RPDataMO` being
+     * acknowledged.
+     *
+     * @public
+     * @readonly
+     */
+    readonly message_reference: RP_MR;
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions after `message-reference`. The Nokia
+     * profile leaves the sequence open.
+     *
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `message_reference`.
-         * @description
-         *
-         * Message reference of the `RPDataMT` or `RPDataMO` being
-         * acknowledged.
-         *
-         * @public
-         * @readonly
-         */
-        readonly message_reference: RP_MR,
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions after `message-reference`. The Nokia
-         * profile leaves the sequence open.
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        message_reference: RP_MR,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.message_reference = message_reference;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a RPAck

@@ -32,18 +32,22 @@ import { LpaeActivationRequest_lpaeOption, _decode_LpaeActivationRequest_lpaeOpt
  */
 export
 class LpaeActivationRequest {
+    /**
+     * @summary `lpaeOption`.
+     * @description
+     * 
+     * Exactly one of CAT-based or SCWS-based LPAe. SGP.22 v3.1 §5.7.1.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly lpaeOption: LpaeActivationRequest_lpaeOption;
+
     constructor (
-        /**
-         * @summary `lpaeOption`.
-         * @description
-         * 
-         * Exactly one of CAT-based or SCWS-based LPAe. SGP.22 v3.1 §5.7.1.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly lpaeOption: LpaeActivationRequest_lpaeOption
-    ) {}
+        lpaeOption: LpaeActivationRequest_lpaeOption
+    ) {
+        this.lpaeOption = lpaeOption;
+    }
 
     /**
      * @summary Restructures an object into a LpaeActivationRequest

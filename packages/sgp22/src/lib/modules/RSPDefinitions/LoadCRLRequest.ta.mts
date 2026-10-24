@@ -29,21 +29,25 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class LoadCRLRequest {
+    /**
+     * @summary `crl`.
+     * @description
+     * 
+     * One DER-encoded PKIX `CertificateList`. The pre-v3 LoadCRL command.
+     * SGP.22 v3.1 §5.7.12 withdraws the command. A CRL retrieved over HTTP
+     * is still a DER `CertificateList`, Base64-encoded in the body
+     * (§4.6.4).
+     * 
+     * @public
+     * @readonly
+     */
+    readonly crl: _Element;
+
     constructor (
-        /**
-         * @summary `crl`.
-         * @description
-         * 
-         * One DER-encoded PKIX `CertificateList`. The pre-v3 LoadCRL command.
-         * SGP.22 v3.1 §5.7.12 withdraws the command. A CRL retrieved over HTTP
-         * is still a DER `CertificateList`, Base64-encoded in the body
-         * (§4.6.4).
-         * 
-         * @public
-         * @readonly
-         */
-        readonly crl: _Element
-    ) {}
+        crl: _Element
+    ) {
+        this.crl = crl;
+    }
 
     /**
      * @summary Restructures an object into a LoadCRLRequest

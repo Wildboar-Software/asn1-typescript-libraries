@@ -109,164 +109,194 @@ import {
  *
  */
 export class GUIStateEventInfo {
+  /**
+   * @summary `subscriberEndpointIRI`.
+   * @description
+   *
+   * Endpoint that is to receive the event (local IRI, attach
+   * referrer, or redirector subscriber). X.1083
+   * §17.3.5–17.3.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly subscriberEndpointIRI: EndpointIRI;
+  /**
+   * @summary `guiEventSubscriptionUuid`.
+   * @description
+   *
+   * Absent for a primary subscription. Present and taken from
+   * the redirector when redirected. X.1083 §8.3, §17.3.5.
+   *
+   * @public
+   * @readonly
+   */
+  readonly guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>;
+  /**
+   * @summary `hostingEndpointIRI`.
+   * @description
+   *
+   * Endpoint whose BSP raised the event. X.1083
+   * §17.3.5–17.3.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly hostingEndpointIRI: EndpointIRI;
+  /**
+   * @summary `bspProductUuid`.
+   * @description
+   *
+   * Copied from the matching notification component. X.1083
+   * §17.3.5–17.3.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly bspProductUuid: BioAPI_UUID;
+  /**
+   * @summary `unitID`.
+   * @description
+   *
+   * Copied from the matching notification component. X.1083
+   * §17.3.5–17.3.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly unitID: BioAPI_UNIT_ID;
+  /**
+   * @summary `originalBSPHandle`.
+   * @description
+   *
+   * Copied from the notification unless a matching
+   * `GUIEventRedirector` applies, in which case it is absent.
+   * X.1083 §17.3.5 d.
+   *
+   * @public
+   * @readonly
+   */
+  readonly originalBSPHandle: OPTIONAL<BioAPI_HANDLE>;
+  /**
+   * @summary `operation`.
+   * @description
+   *
+   * Copied from the matching notification component. X.1083
+   * §17.3.5–17.3.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly operation: BioAPI_GUI_OPERATION;
+  /**
+   * @summary `suboperation`.
+   * @description
+   *
+   * Copied from the matching notification component. X.1083
+   * §17.3.5–17.3.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly suboperation: BioAPI_GUI_SUBOPERATION;
+  /**
+   * @summary `purpose`.
+   * @description
+   *
+   * Copied from the matching notification component. X.1083
+   * §17.3.5–17.3.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly purpose: BioAPI_BIR_PURPOSE;
+  /**
+   * @summary `moment`.
+   * @description
+   *
+   * Copied from the matching notification component. X.1083
+   * §17.3.5–17.3.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly moment: BioAPI_GUI_MOMENT;
+  /**
+   * @summary `resultCode`.
+   * @description
+   *
+   * Copied from the matching notification component. X.1083
+   * §17.3.5–17.3.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly resultCode: BioAPI_RETURN;
+  /**
+   * @summary `enrollSampleIndex`.
+   * @description
+   *
+   * Copied from the matching notification component. X.1083
+   * §17.3.5–17.3.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly enrollSampleIndex: SignedInt;
+  /**
+   * @summary `bitmaps`.
+   * @description
+   *
+   * Copied from the matching notification component. X.1083
+   * §17.3.5–17.3.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly bitmaps?: OPTIONAL<BioAPI_GUI_BITMAP_ARRAY>;
+  /**
+   * @summary `text`.
+   * @description
+   *
+   * Copied from the matching notification component. X.1083
+   * §17.3.5–17.3.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly text?: OPTIONAL<UTF8String>;
+
   constructor(
-    /**
-     * @summary `subscriberEndpointIRI`.
-     * @description
-     *
-     * Endpoint that is to receive the event (local IRI, attach
-     * referrer, or redirector subscriber). X.1083
-     * §17.3.5–17.3.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly subscriberEndpointIRI: EndpointIRI,
-    /**
-     * @summary `guiEventSubscriptionUuid`.
-     * @description
-     *
-     * Absent for a primary subscription. Present and taken from
-     * the redirector when redirected. X.1083 §8.3, §17.3.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>,
-    /**
-     * @summary `hostingEndpointIRI`.
-     * @description
-     *
-     * Endpoint whose BSP raised the event. X.1083
-     * §17.3.5–17.3.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly hostingEndpointIRI: EndpointIRI,
-    /**
-     * @summary `bspProductUuid`.
-     * @description
-     *
-     * Copied from the matching notification component. X.1083
-     * §17.3.5–17.3.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bspProductUuid: BioAPI_UUID,
-    /**
-     * @summary `unitID`.
-     * @description
-     *
-     * Copied from the matching notification component. X.1083
-     * §17.3.5–17.3.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly unitID: BioAPI_UNIT_ID,
-    /**
-     * @summary `originalBSPHandle`.
-     * @description
-     *
-     * Copied from the notification unless a matching
-     * `GUIEventRedirector` applies, in which case it is absent.
-     * X.1083 §17.3.5 d.
-     *
-     * @public
-     * @readonly
-     */
-    readonly originalBSPHandle: OPTIONAL<BioAPI_HANDLE>,
-    /**
-     * @summary `operation`.
-     * @description
-     *
-     * Copied from the matching notification component. X.1083
-     * §17.3.5–17.3.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly operation: BioAPI_GUI_OPERATION,
-    /**
-     * @summary `suboperation`.
-     * @description
-     *
-     * Copied from the matching notification component. X.1083
-     * §17.3.5–17.3.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly suboperation: BioAPI_GUI_SUBOPERATION,
-    /**
-     * @summary `purpose`.
-     * @description
-     *
-     * Copied from the matching notification component. X.1083
-     * §17.3.5–17.3.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly purpose: BioAPI_BIR_PURPOSE,
-    /**
-     * @summary `moment`.
-     * @description
-     *
-     * Copied from the matching notification component. X.1083
-     * §17.3.5–17.3.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly moment: BioAPI_GUI_MOMENT,
-    /**
-     * @summary `resultCode`.
-     * @description
-     *
-     * Copied from the matching notification component. X.1083
-     * §17.3.5–17.3.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly resultCode: BioAPI_RETURN,
-    /**
-     * @summary `enrollSampleIndex`.
-     * @description
-     *
-     * Copied from the matching notification component. X.1083
-     * §17.3.5–17.3.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly enrollSampleIndex: SignedInt,
-    /**
-     * @summary `bitmaps`.
-     * @description
-     *
-     * Copied from the matching notification component. X.1083
-     * §17.3.5–17.3.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bitmaps?: OPTIONAL<BioAPI_GUI_BITMAP_ARRAY>,
-    /**
-     * @summary `text`.
-     * @description
-     *
-     * Copied from the matching notification component. X.1083
-     * §17.3.5–17.3.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly text?: OPTIONAL<UTF8String>
-  ) {}
+    subscriberEndpointIRI: EndpointIRI,
+    guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>,
+    hostingEndpointIRI: EndpointIRI,
+    bspProductUuid: BioAPI_UUID,
+    unitID: BioAPI_UNIT_ID,
+    originalBSPHandle: OPTIONAL<BioAPI_HANDLE>,
+    operation: BioAPI_GUI_OPERATION,
+    suboperation: BioAPI_GUI_SUBOPERATION,
+    purpose: BioAPI_BIR_PURPOSE,
+    moment: BioAPI_GUI_MOMENT,
+    resultCode: BioAPI_RETURN,
+    enrollSampleIndex: SignedInt,
+    bitmaps?: OPTIONAL<BioAPI_GUI_BITMAP_ARRAY>,
+    text?: OPTIONAL<UTF8String>
+  ) {
+    this.subscriberEndpointIRI = subscriberEndpointIRI;
+    this.guiEventSubscriptionUuid = guiEventSubscriptionUuid;
+    this.hostingEndpointIRI = hostingEndpointIRI;
+    this.bspProductUuid = bspProductUuid;
+    this.unitID = unitID;
+    this.originalBSPHandle = originalBSPHandle;
+    this.operation = operation;
+    this.suboperation = suboperation;
+    this.purpose = purpose;
+    this.moment = moment;
+    this.resultCode = resultCode;
+    this.enrollSampleIndex = enrollSampleIndex;
+    this.bitmaps = bitmaps;
+    this.text = text;
+  }
 
   /**
    * @summary Restructures an object into a GUIStateEventInfo

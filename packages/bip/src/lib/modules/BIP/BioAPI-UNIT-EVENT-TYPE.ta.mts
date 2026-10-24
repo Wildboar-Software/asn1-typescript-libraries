@@ -13,13 +13,15 @@ import {
 import * as $ from '@wildboar/asn1/functional';
 
 
-export enum _enum_for_BioAPI_UNIT_EVENT_TYPE {
-  insert = 0,
-  remove = 1,
-  fault = 2,
-  sourcePresent = 3,
-  sourceRemoved = 4,
-}
+export const _enum_for_BioAPI_UNIT_EVENT_TYPE = {
+  insert: 0,
+  remove: 1,
+  fault: 2,
+  sourcePresent: 3,
+  sourceRemoved: 4,
+} as const;
+
+export type _enum_for_BioAPI_UNIT_EVENT_TYPE = (typeof _enum_for_BioAPI_UNIT_EVENT_TYPE)[keyof typeof _enum_for_BioAPI_UNIT_EVENT_TYPE];
 
 
 /**

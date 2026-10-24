@@ -13,11 +13,13 @@ import {
 import * as $ from '@wildboar/asn1/functional';
 
 
-export enum _enum_for_BioAPI_GUI_MOMENT {
-  beforeStart = 0,
-  during = 1,
-  afterEnd = 2,
-}
+export const _enum_for_BioAPI_GUI_MOMENT = {
+  beforeStart: 0,
+  during: 1,
+  afterEnd: 2,
+} as const;
+
+export type _enum_for_BioAPI_GUI_MOMENT = (typeof _enum_for_BioAPI_GUI_MOMENT)[keyof typeof _enum_for_BioAPI_GUI_MOMENT];
 
 
 /**

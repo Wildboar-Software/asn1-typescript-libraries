@@ -42,47 +42,57 @@ import {
  *
  */
 export class Control {
+  /**
+   * @summary `controlType`.
+   * @description
+   *
+   * Numericoid uniquely identifying the control. Response controls
+   * often reuse the request control's OID.
+   *
+   * @public
+   * @readonly
+   */
+  readonly controlType: LDAPOID;
+  /**
+   * @summary `criticality`.
+   * @description
+   *
+   * DEFAULT FALSE. Meaningful only on requests other than Unbind.
+   *
+   * @public
+   * @readonly
+   */
+  readonly criticality?: OPTIONAL<BOOLEAN>;
+  /**
+   * @summary `controlValue`.
+   * @description
+   *
+   * Opaque; format defined by the control spec. Prepare for arbitrary
+   * contents including NULs. BER-encoded inner values follow §4
+   * extensibility.
+   *
+   * @public
+   * @readonly
+   */
+  readonly controlValue?: OPTIONAL<OCTET_STRING>;
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  readonly _unrecognizedExtensionsList: _Element[];
+
   constructor(
-    /**
-     * @summary `controlType`.
-     * @description
-     *
-     * Numericoid uniquely identifying the control. Response controls
-     * often reuse the request control's OID.
-     *
-     * @public
-     * @readonly
-     */
-    readonly controlType: LDAPOID,
-    /**
-     * @summary `criticality`.
-     * @description
-     *
-     * DEFAULT FALSE. Meaningful only on requests other than Unbind.
-     *
-     * @public
-     * @readonly
-     */
-    readonly criticality?: OPTIONAL<BOOLEAN>,
-    /**
-     * @summary `controlValue`.
-     * @description
-     *
-     * Opaque; format defined by the control spec. Prepare for arbitrary
-     * contents including NULs. BER-encoded inner values follow §4
-     * extensibility.
-     *
-     * @public
-     * @readonly
-     */
-    readonly controlValue?: OPTIONAL<OCTET_STRING>,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = []
-  ) {}
+    controlType: LDAPOID,
+    criticality?: OPTIONAL<BOOLEAN>,
+    controlValue?: OPTIONAL<OCTET_STRING>,
+    _unrecognizedExtensionsList: _Element[] = []
+  ) {
+    this.controlType = controlType;
+    this.criticality = criticality;
+    this.controlValue = controlValue;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+  }
 
   /**
    * @summary Restructures an object into a Control

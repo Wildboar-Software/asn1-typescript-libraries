@@ -41,32 +41,38 @@ import {
  *
  */
 export class DTEAddress {
+    /**
+     * @summary `numberingPlanId`.
+     * @description
+     *
+     * Numbering plan: unknown, X.121, or E.164.
+     * ITU-T Rec. X.283 (12/97)
+     * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+     *
+     * @public
+     * @readonly
+     */
+    readonly numberingPlanId: DTEAddress_numberingPlanId;
+    /**
+     * @summary `addressDigits`.
+     * @description
+     *
+     * Address digits in that numbering plan.
+     * ITU-T Rec. X.283 (12/97)
+     * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+     *
+     * @public
+     * @readonly
+     */
+    readonly addressDigits: OCTET_STRING;
+
     constructor(
-        /**
-         * @summary `numberingPlanId`.
-         * @description
-         *
-         * Numbering plan: unknown, X.121, or E.164.
-         * ITU-T Rec. X.283 (12/97)
-         * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
-         *
-         * @public
-         * @readonly
-         */
-        readonly numberingPlanId: DTEAddress_numberingPlanId,
-        /**
-         * @summary `addressDigits`.
-         * @description
-         *
-         * Address digits in that numbering plan.
-         * ITU-T Rec. X.283 (12/97)
-         * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
-         *
-         * @public
-         * @readonly
-         */
-        readonly addressDigits: OCTET_STRING
-    ) {}
+        numberingPlanId: DTEAddress_numberingPlanId,
+        addressDigits: OCTET_STRING
+    ) {
+        this.numberingPlanId = numberingPlanId;
+        this.addressDigits = addressDigits;
+    }
 
     /**
      * @summary Restructures an object into a DTEAddress

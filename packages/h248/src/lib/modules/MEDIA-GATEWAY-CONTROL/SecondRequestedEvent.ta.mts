@@ -37,60 +37,72 @@ import { EventParameter, _decode_EventParameter, _encode_EventParameter } from "
  */
 export
 class SecondRequestedEvent {
+    /**
+     * @summary `pkgdName`.
+     * @description
+     *
+     * Package and event identifier. See `PkgdName`.
+     *
+     * @public
+     * @readonly
+     */
+    readonly pkgdName: PkgdName;
+    /**
+     * @summary `streamID`.
+     * @description
+     *
+     * Stream the embedded event applies to. 0 means not stream-specific.
+     *
+     * @public
+     * @readonly
+     */
+    readonly streamID: OPTIONAL<StreamID>;
+    /**
+     * @summary `eventAction`.
+     * @description
+     *
+     * Actions for this embedded event. No further Events descriptor can be
+     * nested here (clause 7.1.9.8).
+     *
+     * @public
+     * @readonly
+     */
+    readonly eventAction: OPTIONAL<SecondRequestedActions>;
+    /**
+     * @summary `evParList`.
+     * @description
+     *
+     * Parameters of the embedded event.
+     *
+     * @public
+     * @readonly
+     */
+    readonly evParList: EventParameter[];
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `pkgdName`.
-         * @description
-         *
-         * Package and event identifier. See `PkgdName`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly pkgdName: PkgdName,
-        /**
-         * @summary `streamID`.
-         * @description
-         *
-         * Stream the embedded event applies to. 0 means not stream-specific.
-         *
-         * @public
-         * @readonly
-         */
-        readonly streamID: OPTIONAL<StreamID>,
-        /**
-         * @summary `eventAction`.
-         * @description
-         *
-         * Actions for this embedded event. No further Events descriptor can be
-         * nested here (clause 7.1.9.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventAction: OPTIONAL<SecondRequestedActions>,
-        /**
-         * @summary `evParList`.
-         * @description
-         *
-         * Parameters of the embedded event.
-         *
-         * @public
-         * @readonly
-         */
-        readonly evParList: EventParameter[],
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        pkgdName: PkgdName,
+        streamID: OPTIONAL<StreamID>,
+        eventAction: OPTIONAL<SecondRequestedActions>,
+        evParList: EventParameter[],
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.pkgdName = pkgdName;
+        this.streamID = streamID;
+        this.eventAction = eventAction;
+        this.evParList = evParList;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SecondRequestedEvent

@@ -42,26 +42,32 @@ import {
  *
  */
 export class SignedTransitNoticeType {
+  /**
+   * @summary `digitalPostmark`.
+   * @description Receiving Cmail server's postmark from
+   * the notice of transit. ITU-T Rec. X.1341 (09/2015)
+   * §8.17–§8.18.
+   * @public
+   * @readonly
+   */
+  readonly digitalPostmark: DigitalPostmarkType;
+  /**
+   * @summary `envelopeInformation`.
+   * @description Envelope hashes, Message-ID, and
+   * entities, as on a signed deposit notice. ITU-T Rec.
+   * X.1341 (09/2015) §8.18, Figure A.4.
+   * @public
+   * @readonly
+   */
+  readonly envelopeInformation: EnvelopeInformationType;
+
   constructor(
-    /**
-     * @summary `digitalPostmark`.
-     * @description Receiving Cmail server's postmark from
-     * the notice of transit. ITU-T Rec. X.1341 (09/2015)
-     * §8.17–§8.18.
-     * @public
-     * @readonly
-     */
-    readonly digitalPostmark: DigitalPostmarkType,
-    /**
-     * @summary `envelopeInformation`.
-     * @description Envelope hashes, Message-ID, and
-     * entities, as on a signed deposit notice. ITU-T Rec.
-     * X.1341 (09/2015) §8.18, Figure A.4.
-     * @public
-     * @readonly
-     */
-    readonly envelopeInformation: EnvelopeInformationType
-  ) {}
+    digitalPostmark: DigitalPostmarkType,
+    envelopeInformation: EnvelopeInformationType
+  ) {
+    this.digitalPostmark = digitalPostmark;
+    this.envelopeInformation = envelopeInformation;
+  }
 
   /**
    * @summary Restructures an object into a SignedTransitNoticeType

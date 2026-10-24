@@ -34,28 +34,34 @@ import {
  *
  */
 export class InvalidArgumentValue_eventValue {
+  /**
+   * @summary `eventType`.
+   * @description
+   *
+   * Event type whose information was invalid.
+   *
+   * @public
+   * @readonly
+   */
+  readonly eventType: EventTypeId;
+  /**
+   * @summary `eventInfo`.
+   * @description
+   *
+   * Invalid event-specific information, if present.
+   *
+   * @public
+   * @readonly
+   */
+  readonly eventInfo?: OPTIONAL<_Element>;
+
   constructor(
-    /**
-     * @summary `eventType`.
-     * @description
-     *
-     * Event type whose information was invalid.
-     *
-     * @public
-     * @readonly
-     */
-    readonly eventType: EventTypeId,
-    /**
-     * @summary `eventInfo`.
-     * @description
-     *
-     * Invalid event-specific information, if present.
-     *
-     * @public
-     * @readonly
-     */
-    readonly eventInfo?: OPTIONAL<_Element>
-  ) {}
+    eventType: EventTypeId,
+    eventInfo?: OPTIONAL<_Element>
+  ) {
+    this.eventType = eventType;
+    this.eventInfo = eventInfo;
+  }
 
   /**
    * @summary Restructures an object into a InvalidArgumentValue_eventValue

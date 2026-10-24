@@ -30,12 +30,14 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_ProtocolVersion {
-    iSO8208V1 = 0,
-    iSO8208V2 = 1,
-    x2584 = 2,
-    x2588 = 3,
-}
+export const _enum_for_ProtocolVersion = {
+    iSO8208V1: 0,
+    iSO8208V2: 1,
+    x2584: 2,
+    x2588: 3,
+} as const;
+
+export type _enum_for_ProtocolVersion = (typeof _enum_for_ProtocolVersion)[keyof typeof _enum_for_ProtocolVersion];
 
 
 /**
@@ -202,12 +204,12 @@ export const x2588: ProtocolVersion =
 
 
 
-export const _decode_ProtocolVersion = $._decodeEnumerated;
+export const _decode_ProtocolVersion = $._decodeEnumerated as $.ASN1Decoder<ProtocolVersion>;
 
 
 
 
-export const _encode_ProtocolVersion = $._encodeEnumerated;
+export const _encode_ProtocolVersion = $._encodeEnumerated as $.ASN1Encoder<ProtocolVersion>;
 
 
 /* eslint-enable */

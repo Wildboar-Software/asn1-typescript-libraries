@@ -35,43 +35,51 @@ import { TerminationAudit, _decode_TerminationAudit, _encode_TerminationAudit } 
  */
 export
 class AmmsReply {
+    /**
+     * @summary `terminationID`.
+     * @description
+     *
+     * Termination the reply concerns. When the request used CHOOSE, this is
+     * the identifier the MG selected. When the MG cannot substitute a
+     * concrete identifier for a wildcard, it echoes the wildcard (clause
+     * 8).
+     *
+     * @public
+     * @readonly
+     */
+    readonly terminationID: TerminationIDList;
+    /**
+     * @summary `terminationAudit`.
+     * @description
+     *
+     * Descriptors and individual items actually returned for this
+     * termination.
+     *
+     * @public
+     * @readonly
+     */
+    readonly terminationAudit?: OPTIONAL<TerminationAudit>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `terminationID`.
-         * @description
-         *
-         * Termination the reply concerns. When the request used CHOOSE, this is
-         * the identifier the MG selected. When the MG cannot substitute a
-         * concrete identifier for a wildcard, it echoes the wildcard (clause
-         * 8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly terminationID: TerminationIDList,
-        /**
-         * @summary `terminationAudit`.
-         * @description
-         *
-         * Descriptors and individual items actually returned for this
-         * termination.
-         *
-         * @public
-         * @readonly
-         */
-        readonly terminationAudit?: OPTIONAL<TerminationAudit>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        terminationID: TerminationIDList,
+        terminationAudit?: OPTIONAL<TerminationAudit>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.terminationID = terminationID;
+        this.terminationAudit = terminationAudit;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AmmsReply

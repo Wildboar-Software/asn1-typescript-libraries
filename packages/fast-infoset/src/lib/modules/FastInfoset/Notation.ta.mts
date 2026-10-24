@@ -36,34 +36,42 @@ import {
  *
  */
 export class Notation {
+  /**
+   * @summary `name`.
+   * @description [name]; OTHER NCNAME category. ITU-T Rec.
+   * X.891 (05/2005) §7.11.4.
+   * @public
+   * @readonly
+   */
+  readonly name: IdentifyingStringOrIndex;
+  /**
+   * @summary `system_identifier`.
+   * @description [system identifier]; OTHER URI category.
+   * Absent means the property has no value. ITU-T Rec. X.891
+   * (05/2005) §7.11.5.
+   * @public
+   * @readonly
+   */
+  readonly system_identifier?: OPTIONAL<IdentifyingStringOrIndex>;
+  /**
+   * @summary `public_identifier`.
+   * @description [public identifier]; OTHER URI category.
+   * Absent means the property has no value. ITU-T Rec. X.891
+   * (05/2005) §7.11.6.
+   * @public
+   * @readonly
+   */
+  readonly public_identifier?: OPTIONAL<IdentifyingStringOrIndex>;
+
   constructor(
-    /**
-     * @summary `name`.
-     * @description [name]; OTHER NCNAME category. ITU-T Rec.
-     * X.891 (05/2005) §7.11.4.
-     * @public
-     * @readonly
-     */
-    readonly name: IdentifyingStringOrIndex,
-    /**
-     * @summary `system_identifier`.
-     * @description [system identifier]; OTHER URI category.
-     * Absent means the property has no value. ITU-T Rec. X.891
-     * (05/2005) §7.11.5.
-     * @public
-     * @readonly
-     */
-    readonly system_identifier?: OPTIONAL<IdentifyingStringOrIndex>,
-    /**
-     * @summary `public_identifier`.
-     * @description [public identifier]; OTHER URI category.
-     * Absent means the property has no value. ITU-T Rec. X.891
-     * (05/2005) §7.11.6.
-     * @public
-     * @readonly
-     */
-    readonly public_identifier?: OPTIONAL<IdentifyingStringOrIndex>
-  ) {}
+    name: IdentifyingStringOrIndex,
+    system_identifier?: OPTIONAL<IdentifyingStringOrIndex>,
+    public_identifier?: OPTIONAL<IdentifyingStringOrIndex>
+  ) {
+    this.name = name;
+    this.system_identifier = system_identifier;
+    this.public_identifier = public_identifier;
+  }
 
   /**
    * @summary Restructures an object into a Notation

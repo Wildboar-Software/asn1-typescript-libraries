@@ -52,41 +52,49 @@ import {
  *
  */
 export class DbOpen_RequestParams {
+  /**
+   * @summary `originalBSPHandle`.
+   * @description
+   *
+   * Hosting-endpoint BSP handle. Rewritten from the master's local
+   * `BSPHandle` (cl.26) (`X.1083 §16.42`, Table 97).
+   *
+   * @public
+   * @readonly
+   */
+  readonly originalBSPHandle: BioAPI_HANDLE;
+  /**
+   * @summary `dbUuid`.
+   * @description
+   *
+   * Database UUID from C `DbUuid`. Not OPTIONAL: a NULL pointer is
+   * unconvertible (cl.19, §15.58) (`X.1083 §16.42`, Table 97).
+   *
+   * @public
+   * @readonly
+   */
+  readonly dbUuid: BioAPI_UUID;
+  /**
+   * @summary `accessRequest`.
+   * @description
+   *
+   * Access requested by C `AccessRequest` (`read`/`write` bits)
+   * (`X.1083 §16.42`, Table 97, §15.24).
+   *
+   * @public
+   * @readonly
+   */
+  readonly accessRequest: BioAPI_DB_ACCESS_TYPE;
+
   constructor(
-    /**
-     * @summary `originalBSPHandle`.
-     * @description
-     *
-     * Hosting-endpoint BSP handle. Rewritten from the master's local
-     * `BSPHandle` (cl.26) (`X.1083 §16.42`, Table 97).
-     *
-     * @public
-     * @readonly
-     */
-    readonly originalBSPHandle: BioAPI_HANDLE,
-    /**
-     * @summary `dbUuid`.
-     * @description
-     *
-     * Database UUID from C `DbUuid`. Not OPTIONAL: a NULL pointer is
-     * unconvertible (cl.19, §15.58) (`X.1083 §16.42`, Table 97).
-     *
-     * @public
-     * @readonly
-     */
-    readonly dbUuid: BioAPI_UUID,
-    /**
-     * @summary `accessRequest`.
-     * @description
-     *
-     * Access requested by C `AccessRequest` (`read`/`write` bits)
-     * (`X.1083 §16.42`, Table 97, §15.24).
-     *
-     * @public
-     * @readonly
-     */
-    readonly accessRequest: BioAPI_DB_ACCESS_TYPE
-  ) {}
+    originalBSPHandle: BioAPI_HANDLE,
+    dbUuid: BioAPI_UUID,
+    accessRequest: BioAPI_DB_ACCESS_TYPE
+  ) {
+    this.originalBSPHandle = originalBSPHandle;
+    this.dbUuid = dbUuid;
+    this.accessRequest = accessRequest;
+  }
 
   /**
    * @summary Restructures an object into a DbOpen_RequestParams

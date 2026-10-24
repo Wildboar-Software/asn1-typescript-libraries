@@ -33,31 +33,37 @@ import { Value, _decode_Value, _encode_Value } from "../MEDIA-GATEWAY-CONTROL/Va
  */
 export
 class StatisticsParameter {
+    /**
+     * @summary `statName`.
+     * @description
+     *
+     * Package and statistic identifier. See `PkgdName` for wildcarding,
+     * including ALL to reactivate every statistic in a package.
+     *
+     * @public
+     * @readonly
+     */
+    readonly statName: PkgdName;
+    /**
+     * @summary `statValue`.
+     * @description
+     *
+     * Current value, double-wrapped as in Annex A. Absent in a request that
+     * only selects the statistic. More than one octet string encodes a
+     * sub-list.
+     *
+     * @public
+     * @readonly
+     */
+    readonly statValue?: OPTIONAL<Value>;
+
     constructor (
-        /**
-         * @summary `statName`.
-         * @description
-         *
-         * Package and statistic identifier. See `PkgdName` for wildcarding,
-         * including ALL to reactivate every statistic in a package.
-         *
-         * @public
-         * @readonly
-         */
-        readonly statName: PkgdName,
-        /**
-         * @summary `statValue`.
-         * @description
-         *
-         * Current value, double-wrapped as in Annex A. Absent in a request that
-         * only selects the statistic. More than one octet string encodes a
-         * sub-list.
-         *
-         * @public
-         * @readonly
-         */
-        readonly statValue?: OPTIONAL<Value>
-    ) {}
+        statName: PkgdName,
+        statValue?: OPTIONAL<Value>
+    ) {
+        this.statName = statName;
+        this.statValue = statValue;
+    }
 
     /**
      * @summary Restructures an object into a StatisticsParameter

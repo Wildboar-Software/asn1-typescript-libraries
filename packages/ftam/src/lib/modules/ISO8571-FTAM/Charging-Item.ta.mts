@@ -30,41 +30,49 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class Charging_Item {
+  /**
+   * @summary `resource_identifier`.
+   * @description
+   *
+   * Implementation-dependent name of the resource charged
+   * (ISO 8571-3:1988 §13.4).
+   *
+   * @public
+   * @readonly
+   */
+  readonly resource_identifier: GraphicString;
+  /**
+   * @summary `charging_unit`.
+   * @description
+   *
+   * Implementation-dependent unit of charge
+   * (ISO 8571-3:1988 §13.4).
+   *
+   * @public
+   * @readonly
+   */
+  readonly charging_unit: GraphicString;
+  /**
+   * @summary `charging_value`.
+   * @description
+   *
+   * Integer charge; omit the item if the charge is zero
+   * (ISO 8571-3:1988 §13.4).
+   *
+   * @public
+   * @readonly
+   */
+  readonly charging_value: INTEGER;
+
   constructor(
-    /**
-     * @summary `resource_identifier`.
-     * @description
-     *
-     * Implementation-dependent name of the resource charged
-     * (ISO 8571-3:1988 §13.4).
-     *
-     * @public
-     * @readonly
-     */
-    readonly resource_identifier: GraphicString,
-    /**
-     * @summary `charging_unit`.
-     * @description
-     *
-     * Implementation-dependent unit of charge
-     * (ISO 8571-3:1988 §13.4).
-     *
-     * @public
-     * @readonly
-     */
-    readonly charging_unit: GraphicString,
-    /**
-     * @summary `charging_value`.
-     * @description
-     *
-     * Integer charge; omit the item if the charge is zero
-     * (ISO 8571-3:1988 §13.4).
-     *
-     * @public
-     * @readonly
-     */
-    readonly charging_value: INTEGER
-  ) {}
+    resource_identifier: GraphicString,
+    charging_unit: GraphicString,
+    charging_value: INTEGER
+  ) {
+    this.resource_identifier = resource_identifier;
+    this.charging_unit = charging_unit;
+    this.charging_value = charging_value;
+  }
 
   /**
    * @summary Restructures an object into a Charging_Item

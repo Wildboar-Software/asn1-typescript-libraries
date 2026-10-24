@@ -30,30 +30,36 @@ import { NonStandardIdentifier, _decode_NonStandardIdentifier, _encode_NonStanda
  */
 export
 class NonStandardData {
+    /**
+     * @summary `nonStandardIdentifier`.
+     * @description
+     *
+     * Who defined `data`: an object identifier, an H.221/T.35 manufacturer
+     * code, or an eight-character experimental string starting with "X-" or
+     * "X+".
+     *
+     * @public
+     * @readonly
+     */
+    readonly nonStandardIdentifier: NonStandardIdentifier;
+    /**
+     * @summary `data`.
+     * @description
+     *
+     * The non-standard octets, interpreted by the owner of the identifier.
+     *
+     * @public
+     * @readonly
+     */
+    readonly data: OCTET_STRING;
+
     constructor (
-        /**
-         * @summary `nonStandardIdentifier`.
-         * @description
-         *
-         * Who defined `data`: an object identifier, an H.221/T.35 manufacturer
-         * code, or an eight-character experimental string starting with "X-" or
-         * "X+".
-         *
-         * @public
-         * @readonly
-         */
-        readonly nonStandardIdentifier: NonStandardIdentifier,
-        /**
-         * @summary `data`.
-         * @description
-         *
-         * The non-standard octets, interpreted by the owner of the identifier.
-         *
-         * @public
-         * @readonly
-         */
-        readonly data: OCTET_STRING
-    ) {}
+        nonStandardIdentifier: NonStandardIdentifier,
+        data: OCTET_STRING
+    ) {
+        this.nonStandardIdentifier = nonStandardIdentifier;
+        this.data = data;
+    }
 
     /**
      * @summary Restructures an object into a NonStandardData

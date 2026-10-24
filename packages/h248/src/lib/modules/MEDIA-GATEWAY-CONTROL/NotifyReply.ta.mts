@@ -30,39 +30,47 @@ import { ErrorDescriptor, _decode_ErrorDescriptor, _encode_ErrorDescriptor } fro
  */
 export
 class NotifyReply {
+    /**
+     * @summary `terminationID`.
+     * @description
+     *
+     * Termination the Notify referred to.
+     *
+     * @public
+     * @readonly
+     */
+    readonly terminationID: TerminationIDList;
+    /**
+     * @summary `errorDescriptor`.
+     * @description
+     *
+     * Present when the MGC rejects the notification.
+     *
+     * @public
+     * @readonly
+     */
+    readonly errorDescriptor?: OPTIONAL<ErrorDescriptor>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `terminationID`.
-         * @description
-         *
-         * Termination the Notify referred to.
-         *
-         * @public
-         * @readonly
-         */
-        readonly terminationID: TerminationIDList,
-        /**
-         * @summary `errorDescriptor`.
-         * @description
-         *
-         * Present when the MGC rejects the notification.
-         *
-         * @public
-         * @readonly
-         */
-        readonly errorDescriptor?: OPTIONAL<ErrorDescriptor>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        terminationID: TerminationIDList,
+        errorDescriptor?: OPTIONAL<ErrorDescriptor>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.terminationID = terminationID;
+        this.errorDescriptor = errorDescriptor;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a NotifyReply

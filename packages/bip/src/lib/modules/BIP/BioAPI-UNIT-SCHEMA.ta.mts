@@ -85,109 +85,143 @@ import {
  *
  */
 export class BioAPI_UNIT_SCHEMA {
+  /**
+   * @summary `bspProductUuid`.
+   * @description
+   *
+   * Product UUID of the BSP that manages this unit. X.1083
+   * §15.57.
+   *
+   * @public
+   * @readonly
+   */
+  readonly bspProductUuid: BioAPI_UUID;
+  /**
+   * @summary `unitManagerProductUuid`.
+   * @public
+   * @readonly
+   */
+  readonly unitManagerProductUuid: BioAPI_UUID;
+  /**
+   * @summary `unitId`.
+   * @public
+   * @readonly
+   */
+  readonly unitId: BioAPI_UNIT_ID;
+  /**
+   * @summary `category`.
+   * @public
+   * @readonly
+   */
+  readonly category: BioAPI_CATEGORY;
+  /**
+   * @summary `unitProperties`.
+   * @public
+   * @readonly
+   */
+  readonly unitProperties: BioAPI_UUID;
+  /**
+   * @summary `vendorInformation`.
+   * @public
+   * @readonly
+   */
+  readonly vendorInformation: BioAPI_STRING;
+  /**
+   * @summary `supportedUnitEvents`.
+   * @public
+   * @readonly
+   */
+  readonly supportedUnitEvents: BioAPI_UNIT_EVENT_TYPE_MASK;
+  /**
+   * @summary `propertyUuid`.
+   * @public
+   * @readonly
+   */
+  readonly propertyUuid: BioAPI_UUID;
+  /**
+   * @summary `property`.
+   * @public
+   * @readonly
+   */
+  readonly property: BioAPI_DATA;
+  /**
+   * @summary `hardwareVersion`.
+   * @public
+   * @readonly
+   */
+  readonly hardwareVersion: BioAPI_STRING;
+  /**
+   * @summary `firmwareVersion`.
+   * @public
+   * @readonly
+   */
+  readonly firmwareVersion: BioAPI_STRING;
+  /**
+   * @summary `softwareVersion`.
+   * @public
+   * @readonly
+   */
+  readonly softwareVersion: BioAPI_STRING;
+  /**
+   * @summary `hardwareSerialNumber`.
+   * @public
+   * @readonly
+   */
+  readonly hardwareSerialNumber: BioAPI_STRING;
+  /**
+   * @summary `authenticatedHardware`.
+   * @public
+   * @readonly
+   */
+  readonly authenticatedHardware: BOOLEAN;
+  /**
+   * @summary `maxBSPDbSize`.
+   * @public
+   * @readonly
+   */
+  readonly maxBSPDbSize: UnsignedInt;
+  /**
+   * @summary `maxIdentify`.
+   * @public
+   * @readonly
+   */
+  readonly maxIdentify: UnsignedInt;
+
   constructor(
-    /**
-     * @summary `bspProductUuid`.
-     * @description
-     *
-     * Product UUID of the BSP that manages this unit. X.1083
-     * §15.57.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bspProductUuid: BioAPI_UUID,
-    /**
-     * @summary `unitManagerProductUuid`.
-     * @public
-     * @readonly
-     */
-    readonly unitManagerProductUuid: BioAPI_UUID,
-    /**
-     * @summary `unitId`.
-     * @public
-     * @readonly
-     */
-    readonly unitId: BioAPI_UNIT_ID,
-    /**
-     * @summary `category`.
-     * @public
-     * @readonly
-     */
-    readonly category: BioAPI_CATEGORY,
-    /**
-     * @summary `unitProperties`.
-     * @public
-     * @readonly
-     */
-    readonly unitProperties: BioAPI_UUID,
-    /**
-     * @summary `vendorInformation`.
-     * @public
-     * @readonly
-     */
-    readonly vendorInformation: BioAPI_STRING,
-    /**
-     * @summary `supportedUnitEvents`.
-     * @public
-     * @readonly
-     */
-    readonly supportedUnitEvents: BioAPI_UNIT_EVENT_TYPE_MASK,
-    /**
-     * @summary `propertyUuid`.
-     * @public
-     * @readonly
-     */
-    readonly propertyUuid: BioAPI_UUID,
-    /**
-     * @summary `property`.
-     * @public
-     * @readonly
-     */
-    readonly property: BioAPI_DATA,
-    /**
-     * @summary `hardwareVersion`.
-     * @public
-     * @readonly
-     */
-    readonly hardwareVersion: BioAPI_STRING,
-    /**
-     * @summary `firmwareVersion`.
-     * @public
-     * @readonly
-     */
-    readonly firmwareVersion: BioAPI_STRING,
-    /**
-     * @summary `softwareVersion`.
-     * @public
-     * @readonly
-     */
-    readonly softwareVersion: BioAPI_STRING,
-    /**
-     * @summary `hardwareSerialNumber`.
-     * @public
-     * @readonly
-     */
-    readonly hardwareSerialNumber: BioAPI_STRING,
-    /**
-     * @summary `authenticatedHardware`.
-     * @public
-     * @readonly
-     */
-    readonly authenticatedHardware: BOOLEAN,
-    /**
-     * @summary `maxBSPDbSize`.
-     * @public
-     * @readonly
-     */
-    readonly maxBSPDbSize: UnsignedInt,
-    /**
-     * @summary `maxIdentify`.
-     * @public
-     * @readonly
-     */
-    readonly maxIdentify: UnsignedInt
-  ) {}
+    bspProductUuid: BioAPI_UUID,
+    unitManagerProductUuid: BioAPI_UUID,
+    unitId: BioAPI_UNIT_ID,
+    category: BioAPI_CATEGORY,
+    unitProperties: BioAPI_UUID,
+    vendorInformation: BioAPI_STRING,
+    supportedUnitEvents: BioAPI_UNIT_EVENT_TYPE_MASK,
+    propertyUuid: BioAPI_UUID,
+    property: BioAPI_DATA,
+    hardwareVersion: BioAPI_STRING,
+    firmwareVersion: BioAPI_STRING,
+    softwareVersion: BioAPI_STRING,
+    hardwareSerialNumber: BioAPI_STRING,
+    authenticatedHardware: BOOLEAN,
+    maxBSPDbSize: UnsignedInt,
+    maxIdentify: UnsignedInt
+  ) {
+    this.bspProductUuid = bspProductUuid;
+    this.unitManagerProductUuid = unitManagerProductUuid;
+    this.unitId = unitId;
+    this.category = category;
+    this.unitProperties = unitProperties;
+    this.vendorInformation = vendorInformation;
+    this.supportedUnitEvents = supportedUnitEvents;
+    this.propertyUuid = propertyUuid;
+    this.property = property;
+    this.hardwareVersion = hardwareVersion;
+    this.firmwareVersion = firmwareVersion;
+    this.softwareVersion = softwareVersion;
+    this.hardwareSerialNumber = hardwareSerialNumber;
+    this.authenticatedHardware = authenticatedHardware;
+    this.maxBSPDbSize = maxBSPDbSize;
+    this.maxIdentify = maxIdentify;
+  }
 
   /**
    * @summary Restructures an object into a BioAPI_UNIT_SCHEMA

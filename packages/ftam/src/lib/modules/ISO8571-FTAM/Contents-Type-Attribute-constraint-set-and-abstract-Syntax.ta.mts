@@ -38,30 +38,36 @@ import {
  *
  */
 export class Contents_Type_Attribute_constraint_set_and_abstract_Syntax {
+  /**
+   * @summary `constraint_set_name`.
+   * @description
+   *
+   * Constraint set paired with `abstract_Syntax_name`
+   * (ISO 8571-2:1988 §12.3).
+   *
+   * @public
+   * @readonly
+   */
+  readonly constraint_set_name: Constraint_Set_Name;
+  /**
+   * @summary `abstract_Syntax_name`.
+   * @description
+   *
+   * Abstract syntax paired with `constraint_set_name`
+   * (ISO 8571-2:1988 §12.3).
+   *
+   * @public
+   * @readonly
+   */
+  readonly abstract_Syntax_name: Abstract_Syntax_Name;
+
   constructor(
-    /**
-     * @summary `constraint_set_name`.
-     * @description
-     *
-     * Constraint set paired with `abstract_Syntax_name`
-     * (ISO 8571-2:1988 §12.3).
-     *
-     * @public
-     * @readonly
-     */
-    readonly constraint_set_name: Constraint_Set_Name,
-    /**
-     * @summary `abstract_Syntax_name`.
-     * @description
-     *
-     * Abstract syntax paired with `constraint_set_name`
-     * (ISO 8571-2:1988 §12.3).
-     *
-     * @public
-     * @readonly
-     */
-    readonly abstract_Syntax_name: Abstract_Syntax_Name
-  ) {}
+    constraint_set_name: Constraint_Set_Name,
+    abstract_Syntax_name: Abstract_Syntax_Name
+  ) {
+    this.constraint_set_name = constraint_set_name;
+    this.abstract_Syntax_name = abstract_Syntax_name;
+  }
 
   /**
    * @summary Restructures an object into a Contents_Type_Attribute_constraint_set_and_abstract_Syntax

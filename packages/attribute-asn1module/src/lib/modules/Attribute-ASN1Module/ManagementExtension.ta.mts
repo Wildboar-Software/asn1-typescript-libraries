@@ -35,42 +35,50 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class ManagementExtension {
+    /**
+     * @summary `identifier`.
+     * @description
+     *
+     * `DMI-EXTENSION.&id` from `ManagementExtensionSet`. ITU-T Rec. X.721
+     * (02/92) Cor.4 §14.2.
+     *
+     * @public
+     * @readonly
+     */
+    readonly identifier: OBJECT_IDENTIFIER;
+    /**
+     * @summary `significance`.
+     * @description
+     *
+     * `DEFAULT FALSE`. TRUE means the information is significant to
+     * interpreting the notification. ITU-T Rec. X.721 (02/92) §14.2; ITU-T
+     * Rec. X.733 | ISO/IEC 10164-4 §8.1.2.14.
+     *
+     * @public
+     * @readonly
+     */
+    readonly significance: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `information`.
+     * @description
+     *
+     * `DMI-EXTENSION.&Value` selected by `identifier`. ITU-T Rec. X.721
+     * (02/92) Cor.4 §14.2.
+     *
+     * @public
+     * @readonly
+     */
+    readonly information: _Element;
+
     constructor (
-        /**
-         * @summary `identifier`.
-         * @description
-         *
-         * `DMI-EXTENSION.&id` from `ManagementExtensionSet`. ITU-T Rec. X.721
-         * (02/92) Cor.4 §14.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly identifier: OBJECT_IDENTIFIER,
-        /**
-         * @summary `significance`.
-         * @description
-         *
-         * `DEFAULT FALSE`. TRUE means the information is significant to
-         * interpreting the notification. ITU-T Rec. X.721 (02/92) §14.2; ITU-T
-         * Rec. X.733 | ISO/IEC 10164-4 §8.1.2.14.
-         *
-         * @public
-         * @readonly
-         */
-        readonly significance: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `information`.
-         * @description
-         *
-         * `DMI-EXTENSION.&Value` selected by `identifier`. ITU-T Rec. X.721
-         * (02/92) Cor.4 §14.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly information: _Element
-    ) {}
+        identifier: OBJECT_IDENTIFIER,
+        significance: OPTIONAL<BOOLEAN>,
+        information: _Element
+    ) {
+        this.identifier = identifier;
+        this.significance = significance;
+        this.information = information;
+    }
 
     /**
      * @summary Restructures an object into a ManagementExtension

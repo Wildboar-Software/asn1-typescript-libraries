@@ -39,54 +39,64 @@ import { ThresholdLevelInd, _decode_ThresholdLevelInd, _encode_ThresholdLevelInd
  */
 export
 class ThresholdInfo {
+    /**
+     * @summary `triggeredThreshold`.
+     * @description
+     *
+     * Attribute ID of the threshold that fired. ITU-T Rec. X.721 (02/92)
+     * §14.2; ITU-T Rec. X.733 | ISO/IEC 10164-4 §8.1.2.7.
+     *
+     * @public
+     * @readonly
+     */
+    readonly triggeredThreshold: AttributeId;
+    /**
+     * @summary `observedValue`.
+     * @description
+     *
+     * Gauge or counter value at the crossing. ITU-T Rec. X.721 (02/92)
+     * §14.2; ITU-T Rec. X.733 | ISO/IEC 10164-4 §8.1.2.7.
+     *
+     * @public
+     * @readonly
+     */
+    readonly observedValue: ObservedValue;
+    /**
+     * @summary `thresholdLevel`.
+     * @description
+     *
+     * Present for multi-level thresholds: the high/low pair that was
+     * crossed. `up` is the only permitted choice for a counter. ITU-T Rec.
+     * X.721 (02/92) §14.2.
+     *
+     * @public
+     * @readonly
+     */
+    readonly thresholdLevel?: OPTIONAL<ThresholdLevelInd>;
+    /**
+     * @summary `armTime`.
+     * @description
+     *
+     * When the threshold was last armed (offset applied, or hysteresis
+     * re-enabled, or count initialized). ITU-T Rec. X.721 (02/92)
+     * §9.3.1–§9.3.2, §14.2.
+     *
+     * @public
+     * @readonly
+     */
+    readonly armTime?: OPTIONAL<GeneralizedTime>;
+
     constructor (
-        /**
-         * @summary `triggeredThreshold`.
-         * @description
-         *
-         * Attribute ID of the threshold that fired. ITU-T Rec. X.721 (02/92)
-         * §14.2; ITU-T Rec. X.733 | ISO/IEC 10164-4 §8.1.2.7.
-         *
-         * @public
-         * @readonly
-         */
-        readonly triggeredThreshold: AttributeId,
-        /**
-         * @summary `observedValue`.
-         * @description
-         *
-         * Gauge or counter value at the crossing. ITU-T Rec. X.721 (02/92)
-         * §14.2; ITU-T Rec. X.733 | ISO/IEC 10164-4 §8.1.2.7.
-         *
-         * @public
-         * @readonly
-         */
-        readonly observedValue: ObservedValue,
-        /**
-         * @summary `thresholdLevel`.
-         * @description
-         *
-         * Present for multi-level thresholds: the high/low pair that was
-         * crossed. `up` is the only permitted choice for a counter. ITU-T Rec.
-         * X.721 (02/92) §14.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly thresholdLevel?: OPTIONAL<ThresholdLevelInd>,
-        /**
-         * @summary `armTime`.
-         * @description
-         *
-         * When the threshold was last armed (offset applied, or hysteresis
-         * re-enabled, or count initialized). ITU-T Rec. X.721 (02/92)
-         * §9.3.1–§9.3.2, §14.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly armTime?: OPTIONAL<GeneralizedTime>
-    ) {}
+        triggeredThreshold: AttributeId,
+        observedValue: ObservedValue,
+        thresholdLevel?: OPTIONAL<ThresholdLevelInd>,
+        armTime?: OPTIONAL<GeneralizedTime>
+    ) {
+        this.triggeredThreshold = triggeredThreshold;
+        this.observedValue = observedValue;
+        this.thresholdLevel = thresholdLevel;
+        this.armTime = armTime;
+    }
 
     /**
      * @summary Restructures an object into a ThresholdInfo

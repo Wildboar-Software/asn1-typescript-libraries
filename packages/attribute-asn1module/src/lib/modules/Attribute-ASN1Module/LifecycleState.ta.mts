@@ -30,11 +30,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @enum {number}
  */
 export
-enum _enum_for_LifecycleState {
-    planned = 0,
-    installed = 1,
-    pendingRemoval = 2,
-}
+const _enum_for_LifecycleState = {
+    planned: 0,
+    installed: 1,
+    pendingRemoval: 2,
+} as const;
+
+export type _enum_for_LifecycleState = (typeof _enum_for_LifecycleState)[keyof typeof _enum_for_LifecycleState];
 
 /**
  * @summary LifecycleState
@@ -149,10 +151,10 @@ export
 const pendingRemoval: LifecycleState = LifecycleState.pendingRemoval; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_LifecycleState = $._decodeEnumerated;
+export const _decode_LifecycleState = $._decodeEnumerated as $.ASN1Decoder<LifecycleState>;
 
 
-export const _encode_LifecycleState = $._encodeEnumerated;
+export const _encode_LifecycleState = $._encodeEnumerated as $.ASN1Encoder<LifecycleState>;
 
 
 /* eslint-enable */

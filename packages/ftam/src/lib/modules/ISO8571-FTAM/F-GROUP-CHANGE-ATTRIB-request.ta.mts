@@ -55,52 +55,62 @@ import {
  *
  */
 export class F_GROUP_CHANGE_ATTRIB_request {
+  /**
+   * @summary `attributes`.
+   * @description
+   *
+   * New attribute values. Same role as F-CHANGE-ATTRIB (ISO
+   * 8571-3:1988 §16.2 / §13.5).
+   *
+   * @public
+   * @readonly
+   */
+  readonly attributes: Change_Attributes;
+  /**
+   * @summary `error_action`.
+   * @description
+   *
+   * `terminate` or `continue` after a per-object error.
+   * Absent from ISO 8571:1988 Parts 1–4.
+   *
+   * @public
+   * @readonly
+   */
+  readonly error_action: Error_Action;
+  /**
+   * @summary `request_Operation_result`.
+   * @description
+   *
+   * Whether the response should carry a success count or
+   * names. Absent from ISO 8571:1988 Parts 1–4.
+   *
+   * @public
+   * @readonly
+   */
+  readonly request_Operation_result?: OPTIONAL<Request_Operation_Result>;
+  /**
+   * @summary `shared_ASE_information`.
+   * @description
+   *
+   * Other ASE information on this primitive. ISO 8571-3:1988
+   * §13.10.
+   *
+   * @public
+   * @readonly
+   */
+  readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>;
+
   constructor(
-    /**
-     * @summary `attributes`.
-     * @description
-     *
-     * New attribute values. Same role as F-CHANGE-ATTRIB (ISO
-     * 8571-3:1988 §16.2 / §13.5).
-     *
-     * @public
-     * @readonly
-     */
-    readonly attributes: Change_Attributes,
-    /**
-     * @summary `error_action`.
-     * @description
-     *
-     * `terminate` or `continue` after a per-object error.
-     * Absent from ISO 8571:1988 Parts 1–4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly error_action: Error_Action,
-    /**
-     * @summary `request_Operation_result`.
-     * @description
-     *
-     * Whether the response should carry a success count or
-     * names. Absent from ISO 8571:1988 Parts 1–4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly request_Operation_result?: OPTIONAL<Request_Operation_Result>,
-    /**
-     * @summary `shared_ASE_information`.
-     * @description
-     *
-     * Other ASE information on this primitive. ISO 8571-3:1988
-     * §13.10.
-     *
-     * @public
-     * @readonly
-     */
-    readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>
-  ) {}
+    attributes: Change_Attributes,
+    error_action: Error_Action,
+    request_Operation_result?: OPTIONAL<Request_Operation_Result>,
+    shared_ASE_information?: OPTIONAL<Shared_ASE_Information>
+  ) {
+    this.attributes = attributes;
+    this.error_action = error_action;
+    this.request_Operation_result = request_Operation_result;
+    this.shared_ASE_information = shared_ASE_information;
+  }
 
   /**
    * @summary Restructures an object into a F_GROUP_CHANGE_ATTRIB_request

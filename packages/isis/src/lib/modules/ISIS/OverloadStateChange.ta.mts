@@ -29,10 +29,12 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_OverloadStateChange {
-  on = 0,
-  waiting = 1,
-}
+export const _enum_for_OverloadStateChange = {
+  on: 0,
+  waiting: 1,
+} as const;
+
+export type _enum_for_OverloadStateChange = (typeof _enum_for_OverloadStateChange)[keyof typeof _enum_for_OverloadStateChange];
 
 /**
  * @summary OverloadStateChange
@@ -119,10 +121,10 @@ export const waiting: OverloadStateChange =
   OverloadStateChange.waiting; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_OverloadStateChange = $._decodeEnumerated;
+export const _decode_OverloadStateChange = $._decodeEnumerated as $.ASN1Decoder<OverloadStateChange>;
 
 
-export const _encode_OverloadStateChange = $._encodeEnumerated;
+export const _encode_OverloadStateChange = $._encodeEnumerated as $.ASN1Encoder<OverloadStateChange>;
 
 
 /* eslint-enable */

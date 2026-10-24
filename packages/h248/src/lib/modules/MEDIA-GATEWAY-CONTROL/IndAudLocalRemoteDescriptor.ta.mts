@@ -35,40 +35,47 @@ import { IndAudPropertyGroup, _decode_IndAudPropertyGroup, _encode_IndAudPropert
  */
 export
 class IndAudLocalRemoteDescriptor {
+    /**
+     * @summary `propGroupID`.
+     * @description
+     *
+     * Property group to audit, 0 to 65535. Group 1 is the first group the
+     * MG reserved (clause 7.2.5).
+     *
+     * @public
+     * @readonly
+     */
+    readonly propGroupID: OPTIONAL<INTEGER>;
+    /**
+     * @summary `propGrps`.
+     * @description
+     *
+     * Properties inside that group to return.
+     *
+     * @public
+     * @readonly
+     */
+    readonly propGrps: IndAudPropertyGroup;
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `propGroupID`.
-         * @description
-         *
-         * Property group to audit, 0 to 65535. Group 1 is the first group the
-         * MG reserved (clause 7.2.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly propGroupID: OPTIONAL<INTEGER>,
-        /**
-         * @summary `propGrps`.
-         * @description
-         *
-         * Properties inside that group to return.
-         *
-         * @public
-         * @readonly
-         */
-        readonly propGrps: IndAudPropertyGroup,
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
+        propGroupID: OPTIONAL<INTEGER>,
+        propGrps: IndAudPropertyGroup,
+        _unrecognizedExtensionsList: _Element[] = []
     ) {
+        this.propGroupID = propGroupID;
+        this.propGrps = propGrps;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
         if (propGroupID !== undefined) {
             const n = typeof propGroupID === "bigint" ? propGroupID : BigInt(propGroupID);
             if (n < 0n || n > 65535n) {

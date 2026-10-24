@@ -7,24 +7,26 @@ import * as $ from "@wildboar/asn1/functional";
 
 
 export
-enum _enum_for_SignalType {
+const _enum_for_SignalType = {
     /**
      * Plays out on its own. No duration is required. The signal remains in the
      * descriptor until removed, but a replacement descriptor is not guaranteed
      * to stop it (clause 7.1.11.7).
      */
-    brief = 0,
+    brief: 0,
     /**
      * Continues until an empty Signals descriptor, or a replacement that omits
      * it, turns it off (clause 7.1.11.7). A duration, if present, is ignored.
      */
-    onOff = 1,
+    onOff: 1,
     /**
      * Continues until turned off or until `duration` elapses. Stays in the
      * Signals descriptor until explicitly removed (clause 7.1.11.7).
      */
-    timeOut = 2,
-}
+    timeOut: 2,
+} as const;
+
+export type _enum_for_SignalType = (typeof _enum_for_SignalType)[keyof typeof _enum_for_SignalType];
 
 /**
  * @summary SignalType
@@ -119,8 +121,8 @@ const SignalType_timeOut: SignalType = 2; /* LONG_NAMED_ENUMERATED_VALUE */
  */
 export
 const timeOut: SignalType = SignalType_timeOut; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_SignalType = $._decodeEnumerated;
-export const _encode_SignalType = $._encodeEnumerated;
+export const _decode_SignalType = $._decodeEnumerated as $.ASN1Decoder<SignalType>;
+export const _encode_SignalType = $._encodeEnumerated as $.ASN1Encoder<SignalType>;
 
 
 /* eslint-enable */

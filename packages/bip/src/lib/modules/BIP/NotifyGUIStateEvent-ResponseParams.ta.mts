@@ -43,32 +43,38 @@ import {
  *
  */
 export class NotifyGUIStateEvent_ResponseParams {
+  /**
+   * @summary `response`.
+   * @description
+   *
+   * GUI handler's response to the state event. With no
+   * subscriber, clause 31 defaults this to `default`. X.1083
+   * §16.26.6, clause 31.
+   *
+   * @public
+   * @readonly
+   */
+  readonly response: BioAPI_GUI_RESPONSE;
+  /**
+   * @summary `enrollSampleIndexToRecapture`.
+   * @description
+   *
+   * Index of the enroll sample to recapture, as returned by
+   * the GUI handler. With no subscriber, clause 31 defaults
+   * this to 0. X.1083 §16.26.6, clause 31.
+   *
+   * @public
+   * @readonly
+   */
+  readonly enrollSampleIndexToRecapture: SignedInt;
+
   constructor(
-    /**
-     * @summary `response`.
-     * @description
-     *
-     * GUI handler's response to the state event. With no
-     * subscriber, clause 31 defaults this to `default`. X.1083
-     * §16.26.6, clause 31.
-     *
-     * @public
-     * @readonly
-     */
-    readonly response: BioAPI_GUI_RESPONSE,
-    /**
-     * @summary `enrollSampleIndexToRecapture`.
-     * @description
-     *
-     * Index of the enroll sample to recapture, as returned by
-     * the GUI handler. With no subscriber, clause 31 defaults
-     * this to 0. X.1083 §16.26.6, clause 31.
-     *
-     * @public
-     * @readonly
-     */
-    readonly enrollSampleIndexToRecapture: SignedInt
-  ) {}
+    response: BioAPI_GUI_RESPONSE,
+    enrollSampleIndexToRecapture: SignedInt
+  ) {
+    this.response = response;
+    this.enrollSampleIndexToRecapture = enrollSampleIndexToRecapture;
+  }
 
   /**
    * @summary Restructures an object into a NotifyGUIStateEvent_ResponseParams

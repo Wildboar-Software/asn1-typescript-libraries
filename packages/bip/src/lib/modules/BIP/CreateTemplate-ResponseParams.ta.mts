@@ -43,31 +43,37 @@ import {
  *
  */
 export class CreateTemplate_ResponseParams {
+  /**
+   * @summary `newTemplate`.
+   * @description
+   *
+   * Handle of the newly created template BIR on the hosting
+   * endpoint. Maps to BioAPI `NewTemplate` (clause 20).
+   * X.1083 §16.31.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly newTemplate: BioAPI_BIR_HANDLE;
+  /**
+   * @summary `templateUuid`.
+   * @description
+   *
+   * UUID assigned to the new template, if requested. Absent
+   * when `no-templateUuid` was `TRUE`. X.1083 §16.31.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly templateUuid?: OPTIONAL<BioAPI_UUID>;
+
   constructor(
-    /**
-     * @summary `newTemplate`.
-     * @description
-     *
-     * Handle of the newly created template BIR on the hosting
-     * endpoint. Maps to BioAPI `NewTemplate` (clause 20).
-     * X.1083 §16.31.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly newTemplate: BioAPI_BIR_HANDLE,
-    /**
-     * @summary `templateUuid`.
-     * @description
-     *
-     * UUID assigned to the new template, if requested. Absent
-     * when `no-templateUuid` was `TRUE`. X.1083 §16.31.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly templateUuid?: OPTIONAL<BioAPI_UUID>
-  ) {}
+    newTemplate: BioAPI_BIR_HANDLE,
+    templateUuid?: OPTIONAL<BioAPI_UUID>
+  ) {
+    this.newTemplate = newTemplate;
+    this.templateUuid = templateUuid;
+  }
 
   /**
    * @summary Restructures an object into a CreateTemplate_ResponseParams

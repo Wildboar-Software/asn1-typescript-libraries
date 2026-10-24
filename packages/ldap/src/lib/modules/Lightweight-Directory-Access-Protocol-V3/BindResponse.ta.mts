@@ -63,65 +63,79 @@ import {
  *
  */
 export class BindResponse {
+  /**
+   * @summary `resultCode`.
+   * @description
+   *
+   * See LDAPResult. `saslBindInProgress` is not an error.
+   *
+   * @public
+   * @readonly
+   */
+  readonly resultCode: LDAPResult_resultCode;
+  /**
+   * @summary `matchedDN`.
+   * @description
+   *
+   * Last entry used finding the bind name, or empty.
+   *
+   * @public
+   * @readonly
+   */
+  readonly matchedDN: LDAPDN;
+  /**
+   * @summary `diagnosticMessage`.
+   * @description
+   *
+   * Optional diagnostic; empty if none. Not standardized.
+   *
+   * @public
+   * @readonly
+   */
+  readonly diagnosticMessage: LDAPString;
+  /**
+   * @summary `referral`.
+   * @description
+   *
+   * Present iff `resultCode` is `referral`.
+   *
+   * @public
+   * @readonly
+   */
+  readonly referral?: OPTIONAL<Referral>;
+  /**
+   * @summary `serverSaslCreds`.
+   * @description
+   *
+   * SASL challenge / server-auth material. Absent for simple bind
+   * and mechanisms that return nothing to the client.
+   *
+   * @public
+   * @readonly
+   */
+  readonly serverSaslCreds?: OPTIONAL<OCTET_STRING>;
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  readonly _unrecognizedExtensionsList: _Element[];
+
   constructor(
-    /**
-     * @summary `resultCode`.
-     * @description
-     *
-     * See LDAPResult. `saslBindInProgress` is not an error.
-     *
-     * @public
-     * @readonly
-     */
-    readonly resultCode: LDAPResult_resultCode /* REPLICATED_COMPONENT */,
-    /**
-     * @summary `matchedDN`.
-     * @description
-     *
-     * Last entry used finding the bind name, or empty.
-     *
-     * @public
-     * @readonly
-     */
-    readonly matchedDN: LDAPDN /* REPLICATED_COMPONENT */,
-    /**
-     * @summary `diagnosticMessage`.
-     * @description
-     *
-     * Optional diagnostic; empty if none. Not standardized.
-     *
-     * @public
-     * @readonly
-     */
-    readonly diagnosticMessage: LDAPString /* REPLICATED_COMPONENT */,
-    /**
-     * @summary `referral`.
-     * @description
-     *
-     * Present iff `resultCode` is `referral`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly referral?: OPTIONAL<Referral> /* REPLICATED_COMPONENT */,
-    /**
-     * @summary `serverSaslCreds`.
-     * @description
-     *
-     * SASL challenge / server-auth material. Absent for simple bind
-     * and mechanisms that return nothing to the client.
-     *
-     * @public
-     * @readonly
-     */
-    readonly serverSaslCreds?: OPTIONAL<OCTET_STRING>,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = []
-  ) {}
+    resultCode: LDAPResult_resultCode /* REPLICATED_COMPONENT */,
+    matchedDN: LDAPDN /* REPLICATED_COMPONENT */,
+    diagnosticMessage: LDAPString /* REPLICATED_COMPONENT */,
+    referral?: OPTIONAL<Referral> /* REPLICATED_COMPONENT */,
+    serverSaslCreds?: OPTIONAL<OCTET_STRING>,
+    _unrecognizedExtensionsList: _Element[] = []
+  ) {
+    this.resultCode = resultCode;
+    this.matchedDN = matchedDN;
+    this.diagnosticMessage = diagnosticMessage;
+    this.referral = referral;
+    this.serverSaslCreds = serverSaslCreds;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+  }
 
   /**
    * @summary Restructures an object into a BindResponse

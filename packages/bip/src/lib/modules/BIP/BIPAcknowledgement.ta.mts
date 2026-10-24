@@ -60,73 +60,87 @@ import {
  *
  */
 export class BIPAcknowledgement {
+  /**
+   * @summary `masterEndpointIRI`.
+   * @description
+   *
+   * Copied from the matching notification. X.1083 §13.5.
+   *
+   * @public
+   * @readonly
+   */
+  readonly masterEndpointIRI: EndpointIRI;
+  /**
+   * @summary `slaveEndpointIRI`.
+   * @description
+   *
+   * Copied from the matching notification. Destination of
+   * this acknowledgement. X.1083 §13.5.
+   *
+   * @public
+   * @readonly
+   */
+  readonly slaveEndpointIRI: EndpointIRI;
+  /**
+   * @summary `linkNumber`.
+   * @description
+   *
+   * Copied from the matching notification. X.1083 §13.5.
+   *
+   * @public
+   * @readonly
+   */
+  readonly linkNumber: UnsignedInt;
+  /**
+   * @summary `notificationId`.
+   * @description
+   *
+   * Copied from the matching notification so the slave can
+   * pair the two. X.1083 §7.2.4, §13.5.
+   *
+   * @public
+   * @readonly
+   */
+  readonly notificationId: UnsignedInt;
+  /**
+   * @summary `params`.
+   * @description
+   *
+   * Shall use the same alternative name as the corresponding
+   * notification (`guiSelectEvent`, `guiStateEvent`, or
+   * `guiProgressEvent`). X.1083 §13.5, §13.7.
+   *
+   * @public
+   * @readonly
+   */
+  readonly params: BIPAcknowledgement_params;
+  /**
+   * @summary `returnValue`.
+   * @description
+   *
+   * BioAPI status from the master's GUI-event handler. 0
+   * means success. X.1083 §13.5, §15.52.
+   *
+   * @public
+   * @readonly
+   */
+  readonly returnValue: BioAPI_RETURN;
+
   constructor(
-    /**
-     * @summary `masterEndpointIRI`.
-     * @description
-     *
-     * Copied from the matching notification. X.1083 §13.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly masterEndpointIRI: EndpointIRI,
-    /**
-     * @summary `slaveEndpointIRI`.
-     * @description
-     *
-     * Copied from the matching notification. Destination of
-     * this acknowledgement. X.1083 §13.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly slaveEndpointIRI: EndpointIRI,
-    /**
-     * @summary `linkNumber`.
-     * @description
-     *
-     * Copied from the matching notification. X.1083 §13.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly linkNumber: UnsignedInt,
-    /**
-     * @summary `notificationId`.
-     * @description
-     *
-     * Copied from the matching notification so the slave can
-     * pair the two. X.1083 §7.2.4, §13.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly notificationId: UnsignedInt,
-    /**
-     * @summary `params`.
-     * @description
-     *
-     * Shall use the same alternative name as the corresponding
-     * notification (`guiSelectEvent`, `guiStateEvent`, or
-     * `guiProgressEvent`). X.1083 §13.5, §13.7.
-     *
-     * @public
-     * @readonly
-     */
-    readonly params: BIPAcknowledgement_params,
-    /**
-     * @summary `returnValue`.
-     * @description
-     *
-     * BioAPI status from the master's GUI-event handler. 0
-     * means success. X.1083 §13.5, §15.52.
-     *
-     * @public
-     * @readonly
-     */
-    readonly returnValue: BioAPI_RETURN
-  ) {}
+    masterEndpointIRI: EndpointIRI,
+    slaveEndpointIRI: EndpointIRI,
+    linkNumber: UnsignedInt,
+    notificationId: UnsignedInt,
+    params: BIPAcknowledgement_params,
+    returnValue: BioAPI_RETURN
+  ) {
+    this.masterEndpointIRI = masterEndpointIRI;
+    this.slaveEndpointIRI = slaveEndpointIRI;
+    this.linkNumber = linkNumber;
+    this.notificationId = notificationId;
+    this.params = params;
+    this.returnValue = returnValue;
+  }
 
   /**
    * @summary Restructures an object into a BIPAcknowledgement

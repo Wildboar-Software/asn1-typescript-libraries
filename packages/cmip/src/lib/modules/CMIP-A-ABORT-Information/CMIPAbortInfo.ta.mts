@@ -43,31 +43,37 @@ import {
  *
  */
 export class CMIPAbortInfo {
+  /**
+   * @summary `abortSource`.
+   * @description
+   *
+   * `cmiseServiceUser` on a user-initiated A-ABORT;
+   * `cmiseServiceProvider` when the CMIPM detects a
+   * protocol error. X.711 Annex A.4.1, A.4.4.
+   *
+   * @public
+   * @readonly
+   */
+  readonly abortSource: CMIPAbortSource;
+  /**
+   * @summary `userInfo`.
+   * @description
+   *
+   * Additional CMISE-service-user information. Encoding
+   * is not defined by X.711. X.711 §7.3.2.
+   *
+   * @public
+   * @readonly
+   */
+  readonly userInfo?: OPTIONAL<EXTERNAL>;
+
   constructor(
-    /**
-     * @summary `abortSource`.
-     * @description
-     *
-     * `cmiseServiceUser` on a user-initiated A-ABORT;
-     * `cmiseServiceProvider` when the CMIPM detects a
-     * protocol error. X.711 Annex A.4.1, A.4.4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly abortSource: CMIPAbortSource,
-    /**
-     * @summary `userInfo`.
-     * @description
-     *
-     * Additional CMISE-service-user information. Encoding
-     * is not defined by X.711. X.711 §7.3.2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly userInfo?: OPTIONAL<EXTERNAL>
-  ) {}
+    abortSource: CMIPAbortSource,
+    userInfo?: OPTIONAL<EXTERNAL>
+  ) {
+    this.abortSource = abortSource;
+    this.userInfo = userInfo;
+  }
 
   /**
    * @summary Restructures an object into a CMIPAbortInfo

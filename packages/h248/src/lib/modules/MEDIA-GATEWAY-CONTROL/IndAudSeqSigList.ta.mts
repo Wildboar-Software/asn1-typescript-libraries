@@ -31,29 +31,34 @@ import { IndAudSignal, _decode_IndAudSignal, _encode_IndAudSignal } from "../MED
  */
 export
 class IndAudSeqSigList {
+    /**
+     * @summary `id`.
+     * @description
+     *
+     * Signal list identifier, 0 to 65535.
+     *
+     * @public
+     * @readonly
+     */
+    readonly id: INTEGER;
+    /**
+     * @summary `signalList`.
+     * @description
+     *
+     * One signal inside the list to audit. Omitted, the audit names the
+     * list rather than a single signal in it.
+     *
+     * @public
+     * @readonly
+     */
+    readonly signalList?: OPTIONAL<IndAudSignal>;
+
     constructor (
-        /**
-         * @summary `id`.
-         * @description
-         *
-         * Signal list identifier, 0 to 65535.
-         *
-         * @public
-         * @readonly
-         */
-        readonly id: INTEGER,
-        /**
-         * @summary `signalList`.
-         * @description
-         *
-         * One signal inside the list to audit. Omitted, the audit names the
-         * list rather than a single signal in it.
-         *
-         * @public
-         * @readonly
-         */
-        readonly signalList?: OPTIONAL<IndAudSignal>
+        id: INTEGER,
+        signalList?: OPTIONAL<IndAudSignal>
     ) {
+        this.id = id;
+        this.signalList = signalList;
             const n = typeof id === "bigint" ? id : BigInt(id);
             if (n < 0n || n > 65535n) {
                 throw new ASN1OverflowError("IndAudSeqSigList.id violates INTEGER range");

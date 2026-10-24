@@ -42,30 +42,36 @@ import {
  *
  */
 export class DbClose_RequestParams {
+  /**
+   * @summary `originalBSPHandle`.
+   * @description
+   *
+   * Hosting-endpoint BSP handle. Rewritten from the master's local
+   * `BSPHandle` (cl.26) (`X.1083 §16.43`, Table 99).
+   *
+   * @public
+   * @readonly
+   */
+  readonly originalBSPHandle: BioAPI_HANDLE;
+  /**
+   * @summary `dbHandle`.
+   * @description
+   *
+   * Database to close, from C `DbHandle` (`X.1083 §16.43`, Table 99,
+   * §15.26). No local/original rewrite is specified.
+   *
+   * @public
+   * @readonly
+   */
+  readonly dbHandle: BioAPI_DB_HANDLE;
+
   constructor(
-    /**
-     * @summary `originalBSPHandle`.
-     * @description
-     *
-     * Hosting-endpoint BSP handle. Rewritten from the master's local
-     * `BSPHandle` (cl.26) (`X.1083 §16.43`, Table 99).
-     *
-     * @public
-     * @readonly
-     */
-    readonly originalBSPHandle: BioAPI_HANDLE,
-    /**
-     * @summary `dbHandle`.
-     * @description
-     *
-     * Database to close, from C `DbHandle` (`X.1083 §16.43`, Table 99,
-     * §15.26). No local/original rewrite is specified.
-     *
-     * @public
-     * @readonly
-     */
-    readonly dbHandle: BioAPI_DB_HANDLE
-  ) {}
+    originalBSPHandle: BioAPI_HANDLE,
+    dbHandle: BioAPI_DB_HANDLE
+  ) {
+    this.originalBSPHandle = originalBSPHandle;
+    this.dbHandle = dbHandle;
+  }
 
   /**
    * @summary Restructures an object into a DbClose_RequestParams

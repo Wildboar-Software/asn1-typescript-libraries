@@ -101,132 +101,158 @@ import {
  *
  */
 export class GUIProgressEventHandlerCallbackParams {
+  /**
+   * @summary `guiProgressEventHandlerAddress`.
+   * @description
+   *
+   * Address of the function to invoke; not a function
+   * parameter. Conversion applies X.1083 §15.1.7. X.1083
+   * §17.4.11, Table 134.
+   *
+   * @public
+   * @readonly
+   */
+  readonly guiProgressEventHandlerAddress: MemoryAddress;
+  /**
+   * @summary `guiProgressEventHandlerContext`.
+   * @description
+   *
+   * Passed as `GUIProgressEventHandlerCtx`. X.1083 §17.4.10,
+   * Table 134.
+   *
+   * @public
+   * @readonly
+   */
+  readonly guiProgressEventHandlerContext: MemoryAddress;
+  /**
+   * @summary `bspUuid`.
+   * @description
+   *
+   * Passed as `BSPUuid`. X.1083 §17.4.10, Table 134.
+   *
+   * @public
+   * @readonly
+   */
+  readonly bspUuid: BioAPI_UUID;
+  /**
+   * @summary `unitID`.
+   * @description
+   *
+   * Passed as `UnitID`. X.1083 §17.4.10, Table 134.
+   *
+   * @public
+   * @readonly
+   */
+  readonly unitID: BioAPI_UNIT_ID;
+  /**
+   * @summary `bspHandle`.
+   * @description
+   *
+   * Passed as `BSPHandle`. X.1083 §17.4.10, Table 134.
+   *
+   * @public
+   * @readonly
+   */
+  readonly bspHandle: OPTIONAL<BioAPI_HANDLE>;
+  /**
+   * @summary `operation`.
+   * @description
+   *
+   * Passed as `Operation`. X.1083 §17.4.10, Table 134.
+   *
+   * @public
+   * @readonly
+   */
+  readonly operation: BioAPI_GUI_OPERATION;
+  /**
+   * @summary `suboperation`.
+   * @description
+   *
+   * Passed as `Suboperation`. X.1083 §17.4.10, Table 134.
+   *
+   * @public
+   * @readonly
+   */
+  readonly suboperation: BioAPI_GUI_SUBOPERATION;
+  /**
+   * @summary `purpose`.
+   * @description
+   *
+   * Passed as `Purpose`. X.1083 §17.4.10, Table 134.
+   *
+   * @public
+   * @readonly
+   */
+  readonly purpose: BioAPI_BIR_PURPOSE;
+  /**
+   * @summary `moment`.
+   * @description
+   *
+   * Passed as `Moment`. X.1083 §17.4.10, Table 134.
+   *
+   * @public
+   * @readonly
+   */
+  readonly moment: BioAPI_GUI_MOMENT;
+  /**
+   * @summary `suboperationProgress`.
+   * @description
+   *
+   * Passed as `SuboperationProgress`. X.1083 §17.4.10,
+   * Table 134.
+   *
+   * @public
+   * @readonly
+   */
+  readonly suboperationProgress: UnsignedByte;
+  /**
+   * @summary `bitmaps`.
+   * @description
+   *
+   * Passed as `Bitmaps`. X.1083 §17.4.10, Table 134.
+   *
+   * @public
+   * @readonly
+   */
+  readonly bitmaps?: OPTIONAL<BioAPI_GUI_BITMAP_ARRAY>;
+  /**
+   * @summary `text`.
+   * @description
+   *
+   * Passed as `Text`. X.1083 §17.4.10, Table 134.
+   *
+   * @public
+   * @readonly
+   */
+  readonly text?: OPTIONAL<UTF8String>;
+
   constructor(
-    /**
-     * @summary `guiProgressEventHandlerAddress`.
-     * @description
-     *
-     * Address of the function to invoke; not a function
-     * parameter. Conversion applies X.1083 §15.1.7. X.1083
-     * §17.4.11, Table 134.
-     *
-     * @public
-     * @readonly
-     */
-    readonly guiProgressEventHandlerAddress: MemoryAddress,
-    /**
-     * @summary `guiProgressEventHandlerContext`.
-     * @description
-     *
-     * Passed as `GUIProgressEventHandlerCtx`. X.1083 §17.4.10,
-     * Table 134.
-     *
-     * @public
-     * @readonly
-     */
-    readonly guiProgressEventHandlerContext: MemoryAddress,
-    /**
-     * @summary `bspUuid`.
-     * @description
-     *
-     * Passed as `BSPUuid`. X.1083 §17.4.10, Table 134.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bspUuid: BioAPI_UUID,
-    /**
-     * @summary `unitID`.
-     * @description
-     *
-     * Passed as `UnitID`. X.1083 §17.4.10, Table 134.
-     *
-     * @public
-     * @readonly
-     */
-    readonly unitID: BioAPI_UNIT_ID,
-    /**
-     * @summary `bspHandle`.
-     * @description
-     *
-     * Passed as `BSPHandle`. X.1083 §17.4.10, Table 134.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bspHandle: OPTIONAL<BioAPI_HANDLE>,
-    /**
-     * @summary `operation`.
-     * @description
-     *
-     * Passed as `Operation`. X.1083 §17.4.10, Table 134.
-     *
-     * @public
-     * @readonly
-     */
-    readonly operation: BioAPI_GUI_OPERATION,
-    /**
-     * @summary `suboperation`.
-     * @description
-     *
-     * Passed as `Suboperation`. X.1083 §17.4.10, Table 134.
-     *
-     * @public
-     * @readonly
-     */
-    readonly suboperation: BioAPI_GUI_SUBOPERATION,
-    /**
-     * @summary `purpose`.
-     * @description
-     *
-     * Passed as `Purpose`. X.1083 §17.4.10, Table 134.
-     *
-     * @public
-     * @readonly
-     */
-    readonly purpose: BioAPI_BIR_PURPOSE,
-    /**
-     * @summary `moment`.
-     * @description
-     *
-     * Passed as `Moment`. X.1083 §17.4.10, Table 134.
-     *
-     * @public
-     * @readonly
-     */
-    readonly moment: BioAPI_GUI_MOMENT,
-    /**
-     * @summary `suboperationProgress`.
-     * @description
-     *
-     * Passed as `SuboperationProgress`. X.1083 §17.4.10,
-     * Table 134.
-     *
-     * @public
-     * @readonly
-     */
-    readonly suboperationProgress: UnsignedByte,
-    /**
-     * @summary `bitmaps`.
-     * @description
-     *
-     * Passed as `Bitmaps`. X.1083 §17.4.10, Table 134.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bitmaps?: OPTIONAL<BioAPI_GUI_BITMAP_ARRAY>,
-    /**
-     * @summary `text`.
-     * @description
-     *
-     * Passed as `Text`. X.1083 §17.4.10, Table 134.
-     *
-     * @public
-     * @readonly
-     */
-    readonly text?: OPTIONAL<UTF8String>
-  ) {}
+    guiProgressEventHandlerAddress: MemoryAddress,
+    guiProgressEventHandlerContext: MemoryAddress,
+    bspUuid: BioAPI_UUID,
+    unitID: BioAPI_UNIT_ID,
+    bspHandle: OPTIONAL<BioAPI_HANDLE>,
+    operation: BioAPI_GUI_OPERATION,
+    suboperation: BioAPI_GUI_SUBOPERATION,
+    purpose: BioAPI_BIR_PURPOSE,
+    moment: BioAPI_GUI_MOMENT,
+    suboperationProgress: UnsignedByte,
+    bitmaps?: OPTIONAL<BioAPI_GUI_BITMAP_ARRAY>,
+    text?: OPTIONAL<UTF8String>
+  ) {
+    this.guiProgressEventHandlerAddress = guiProgressEventHandlerAddress;
+    this.guiProgressEventHandlerContext = guiProgressEventHandlerContext;
+    this.bspUuid = bspUuid;
+    this.unitID = unitID;
+    this.bspHandle = bspHandle;
+    this.operation = operation;
+    this.suboperation = suboperation;
+    this.purpose = purpose;
+    this.moment = moment;
+    this.suboperationProgress = suboperationProgress;
+    this.bitmaps = bitmaps;
+    this.text = text;
+  }
 
   /**
    * @summary Restructures an object into a GUIProgressEventHandlerCallbackParams

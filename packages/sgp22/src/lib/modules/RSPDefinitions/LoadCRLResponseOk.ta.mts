@@ -30,20 +30,24 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class LoadCRLResponseOk {
+    /**
+     * @summary `missingParts`.
+     * @description
+     * 
+     * Partial-CRL segment numbers still missing after a successful pre-v3
+     * LoadCRL. Omitted when the CRL is complete. SGP.22 v3.1 does not
+     * define this field.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly missingParts?: OPTIONAL<INTEGER[]>;
+
     constructor (
-        /**
-         * @summary `missingParts`.
-         * @description
-         * 
-         * Partial-CRL segment numbers still missing after a successful pre-v3
-         * LoadCRL. Omitted when the CRL is complete. SGP.22 v3.1 does not
-         * define this field.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly missingParts?: OPTIONAL<INTEGER[]>
-    ) {}
+        missingParts?: OPTIONAL<INTEGER[]>
+    ) {
+        this.missingParts = missingParts;
+    }
 
     /**
      * @summary Restructures an object into a LoadCRLResponseOk

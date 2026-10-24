@@ -29,32 +29,42 @@ import { Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Param
  */
 export
 class ServiceMessage {
+    /**
+     * @summary `service_id`.
+     * @public
+     * @readonly
+     */
+    readonly service_id: ServiceId;
+    /**
+     * @summary `service_action`.
+     * @public
+     * @readonly
+     */
+    readonly service_action: ServiceAction;
+    /**
+     * @summary `params`.
+     * @public
+     * @readonly
+     */
+    readonly params?: OPTIONAL<Parameters>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `service_id`.
-         * @public
-         * @readonly
-         */
-        readonly service_id: ServiceId,
-        /**
-         * @summary `service_action`.
-         * @public
-         * @readonly
-         */
-        readonly service_action: ServiceAction,
-        /**
-         * @summary `params`.
-         * @public
-         * @readonly
-         */
-        readonly params?: OPTIONAL<Parameters>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        service_id: ServiceId,
+        service_action: ServiceAction,
+        params?: OPTIONAL<Parameters>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.service_id = service_id;
+        this.service_action = service_action;
+        this.params = params;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ServiceMessage

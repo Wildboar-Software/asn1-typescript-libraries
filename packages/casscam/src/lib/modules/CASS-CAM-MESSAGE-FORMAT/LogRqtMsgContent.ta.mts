@@ -40,28 +40,34 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class LogRqtMsgContent {
+    /**
+     * @summary `sessionID`.
+     * @description
+     *
+     * Session identifier, 10 octets (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    readonly sessionID: OCTET_STRING;
+    /**
+     * @summary `logRequest_Req`.
+     * @description
+     *
+     * Shall be `TRUE` (request). Annex A.
+     *
+     * @public
+     * @readonly
+     */
+    readonly logRequest_Req: BOOLEAN;
+
     constructor (
-        /**
-         * @summary `sessionID`.
-         * @description
-         *
-         * Session identifier, 10 octets (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sessionID: OCTET_STRING,
-        /**
-         * @summary `logRequest_Req`.
-         * @description
-         *
-         * Shall be `TRUE` (request). Annex A.
-         *
-         * @public
-         * @readonly
-         */
-        readonly logRequest_Req: BOOLEAN
-    ) {}
+        sessionID: OCTET_STRING,
+        logRequest_Req: BOOLEAN
+    ) {
+        this.sessionID = sessionID;
+        this.logRequest_Req = logRequest_Req;
+    }
 
     /**
      * @summary Restructures an object into a LogRqtMsgContent

@@ -26,20 +26,26 @@ import { NumberOfBits, _decode_NumberOfBits, _encode_NumberOfBits } from "../NIS
  */
 export
 class CFBParameters {
+    /**
+     * @summary `aes_IV`.
+     * @public
+     * @readonly
+     */
+    readonly aes_IV: AES_IV;
+    /**
+     * @summary `numberOfBits`.
+     * @public
+     * @readonly
+     */
+    readonly numberOfBits: NumberOfBits;
+
     constructor (
-        /**
-         * @summary `aes_IV`.
-         * @public
-         * @readonly
-         */
-        readonly aes_IV: AES_IV,
-        /**
-         * @summary `numberOfBits`.
-         * @public
-         * @readonly
-         */
-        readonly numberOfBits: NumberOfBits
-    ) {}
+        aes_IV: AES_IV,
+        numberOfBits: NumberOfBits
+    ) {
+        this.aes_IV = aes_IV;
+        this.numberOfBits = numberOfBits;
+    }
 
     /**
      * @summary Restructures an object into a CFBParameters

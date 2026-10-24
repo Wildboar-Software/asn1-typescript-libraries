@@ -39,32 +39,38 @@ import {
  *
  */
 export class Information {
+  /**
+   * @summary `disclosedChildren`.
+   * @description
+   *
+   * Child arcs this parent has agreement to name (C.2.2).
+   * May be empty if every child is withheld.
+   *
+   * @public
+   * @readonly
+   */
+  readonly disclosedChildren: ChildDetails[];
+  /**
+   * @summary `otherChildren`.
+   * @description
+   *
+   * Number of additional children not listed, or `-1` if
+   * this node will not disclose that count (`-1..MAX`).
+   * Optional to reveal even when some children are named
+   * (C.2.2).
+   *
+   * @public
+   * @readonly
+   */
+  readonly otherChildren: INTEGER;
+
   constructor(
-    /**
-     * @summary `disclosedChildren`.
-     * @description
-     *
-     * Child arcs this parent has agreement to name (C.2.2).
-     * May be empty if every child is withheld.
-     *
-     * @public
-     * @readonly
-     */
-    readonly disclosedChildren: ChildDetails[],
-    /**
-     * @summary `otherChildren`.
-     * @description
-     *
-     * Number of additional children not listed, or `-1` if
-     * this node will not disclose that count (`-1..MAX`).
-     * Optional to reveal even when some children are named
-     * (C.2.2).
-     *
-     * @public
-     * @readonly
-     */
-    readonly otherChildren: INTEGER
-  ) {}
+    disclosedChildren: ChildDetails[],
+    otherChildren: INTEGER
+  ) {
+    this.disclosedChildren = disclosedChildren;
+    this.otherChildren = otherChildren;
+  }
 
   /**
    * @summary Restructures an object into a Information

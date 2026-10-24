@@ -32,30 +32,36 @@ import { PrepareDownloadResponse, _decode_PrepareDownloadResponse, _encode_Prepa
  */
 export
 class GetBoundProfilePackageRequest {
+    /**
+     * @summary `transactionId`.
+     * @description
+     * 
+     * Must identify an ongoing session. Otherwise the SM-DP+ reports an
+     * unknown TransactionID. SGP.22 v3.1 §5.6.2.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly transactionId: TransactionId;
+    /**
+     * @summary `prepareDownloadResponse`.
+     * @description
+     * 
+     * The ES10b.PrepareDownload response. The SM-DP+ verifies
+     * `euiccSignature2` and the Confirmation Code hash. SGP.22 v3.1 §5.6.2.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly prepareDownloadResponse: PrepareDownloadResponse;
+
     constructor (
-        /**
-         * @summary `transactionId`.
-         * @description
-         * 
-         * Must identify an ongoing session. Otherwise the SM-DP+ reports an
-         * unknown TransactionID. SGP.22 v3.1 §5.6.2.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly transactionId: TransactionId,
-        /**
-         * @summary `prepareDownloadResponse`.
-         * @description
-         * 
-         * The ES10b.PrepareDownload response. The SM-DP+ verifies
-         * `euiccSignature2` and the Confirmation Code hash. SGP.22 v3.1 §5.6.2.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly prepareDownloadResponse: PrepareDownloadResponse
-    ) {}
+        transactionId: TransactionId,
+        prepareDownloadResponse: PrepareDownloadResponse
+    ) {
+        this.transactionId = transactionId;
+        this.prepareDownloadResponse = prepareDownloadResponse;
+    }
 
     /**
      * @summary Restructures an object into a GetBoundProfilePackageRequest

@@ -33,32 +33,38 @@ import {
  *
  */
 export class PublicKeyAndChallenge {
+    /**
+     * @summary `spki`.
+     * @description
+     *
+     * `SubjectPublicKeyInfo` (RFC 5912): algorithm used by the public
+     * key, and the public key itself (draft-leggett-spkac §2.1).
+     *
+     * @public
+     * @readonly
+     */
+    readonly spki: SubjectPublicKeyInfo;
+    /**
+     * @summary `challenge`.
+     * @description
+     *
+     * `IA5String` that MUST be a CA-provided value that is difficult
+     * to predict. The end entity encodes it in the SPKAC, signs with
+     * the private key for `spki`, and returns it to the CA
+     * (draft-leggett-spkac §2.2).
+     *
+     * @public
+     * @readonly
+     */
+    readonly challenge: IA5String;
+
     constructor(
-        /**
-         * @summary `spki`.
-         * @description
-         *
-         * `SubjectPublicKeyInfo` (RFC 5912): algorithm used by the public
-         * key, and the public key itself (draft-leggett-spkac §2.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly spki: SubjectPublicKeyInfo,
-        /**
-         * @summary `challenge`.
-         * @description
-         *
-         * `IA5String` that MUST be a CA-provided value that is difficult
-         * to predict. The end entity encodes it in the SPKAC, signs with
-         * the private key for `spki`, and returns it to the CA
-         * (draft-leggett-spkac §2.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly challenge: IA5String
-    ) {}
+        spki: SubjectPublicKeyInfo,
+        challenge: IA5String
+    ) {
+        this.spki = spki;
+        this.challenge = challenge;
+    }
 
     /**
      * @summary Restructures an object into a PublicKeyAndChallenge

@@ -88,100 +88,126 @@ import {
  *
  */
 export class BioAPI_BFP_SCHEMA {
+  /**
+   * @summary `bfpProductUuid`.
+   * @description
+   *
+   * Persistent product UUID of the BFP. X.1083 §15.5.
+   *
+   * @public
+   * @readonly
+   */
+  readonly bfpProductUuid: BioAPI_UUID;
+  /**
+   * @summary `category`.
+   * @public
+   * @readonly
+   */
+  readonly category: BioAPI_CATEGORY;
+  /**
+   * @summary `description`.
+   * @public
+   * @readonly
+   */
+  readonly description: BioAPI_STRING;
+  /**
+   * @summary `path`.
+   * @description
+   *
+   * Installation path as UTF-8. Absent C NULL is unconvertible
+   * (this component is not OPTIONAL). X.1083 §15.2, §15.5.
+   *
+   * @public
+   * @readonly
+   */
+  readonly path: UTF8String;
+  /**
+   * @summary `specVersion`.
+   * @public
+   * @readonly
+   */
+  readonly specVersion: BioAPI_VERSION;
+  /**
+   * @summary `productVersion`.
+   * @public
+   * @readonly
+   */
+  readonly productVersion: BioAPI_STRING;
+  /**
+   * @summary `vendor`.
+   * @public
+   * @readonly
+   */
+  readonly vendor: BioAPI_STRING;
+  /**
+   * @summary `supportedFormats`.
+   * @description
+   *
+   * BDB formats the BFP supports. C count is the sequence
+   * length. X.1083 §15.5.4–15.5.5.
+   *
+   * @public
+   * @readonly
+   */
+  readonly supportedFormats: BioAPI_BIR_BIOMETRIC_DATA_FORMAT[];
+  /**
+   * @summary `factorsMask`.
+   * @public
+   * @readonly
+   */
+  readonly factorsMask: BioAPI_BIR_BIOMETRIC_TYPE;
+  /**
+   * @summary `propertyUuid`.
+   * @public
+   * @readonly
+   */
+  readonly propertyUuid: BioAPI_UUID;
+  /**
+   * @summary `property`.
+   * @public
+   * @readonly
+   */
+  readonly property: BioAPI_DATA;
+  /**
+   * @summary `hostingEndpointIRI`.
+   * @description
+   *
+   * Endpoint where this BFP is hosted. The local endpoint IRI
+   * means local (C NULL). Present so an app can EnumBFPs, then
+   * remotely load a BSP on that endpoint. X.1083 §15.3, §15.5.
+   *
+   * @public
+   * @readonly
+   */
+  readonly hostingEndpointIRI: EndpointIRI;
+
   constructor(
-    /**
-     * @summary `bfpProductUuid`.
-     * @description
-     *
-     * Persistent product UUID of the BFP. X.1083 §15.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bfpProductUuid: BioAPI_UUID,
-    /**
-     * @summary `category`.
-     * @public
-     * @readonly
-     */
-    readonly category: BioAPI_CATEGORY,
-    /**
-     * @summary `description`.
-     * @public
-     * @readonly
-     */
-    readonly description: BioAPI_STRING,
-    /**
-     * @summary `path`.
-     * @description
-     *
-     * Installation path as UTF-8. Absent C NULL is unconvertible
-     * (this component is not OPTIONAL). X.1083 §15.2, §15.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly path: UTF8String,
-    /**
-     * @summary `specVersion`.
-     * @public
-     * @readonly
-     */
-    readonly specVersion: BioAPI_VERSION,
-    /**
-     * @summary `productVersion`.
-     * @public
-     * @readonly
-     */
-    readonly productVersion: BioAPI_STRING,
-    /**
-     * @summary `vendor`.
-     * @public
-     * @readonly
-     */
-    readonly vendor: BioAPI_STRING,
-    /**
-     * @summary `supportedFormats`.
-     * @description
-     *
-     * BDB formats the BFP supports. C count is the sequence
-     * length. X.1083 §15.5.4–15.5.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly supportedFormats: BioAPI_BIR_BIOMETRIC_DATA_FORMAT[],
-    /**
-     * @summary `factorsMask`.
-     * @public
-     * @readonly
-     */
-    readonly factorsMask: BioAPI_BIR_BIOMETRIC_TYPE,
-    /**
-     * @summary `propertyUuid`.
-     * @public
-     * @readonly
-     */
-    readonly propertyUuid: BioAPI_UUID,
-    /**
-     * @summary `property`.
-     * @public
-     * @readonly
-     */
-    readonly property: BioAPI_DATA,
-    /**
-     * @summary `hostingEndpointIRI`.
-     * @description
-     *
-     * Endpoint where this BFP is hosted. The local endpoint IRI
-     * means local (C NULL). Present so an app can EnumBFPs, then
-     * remotely load a BSP on that endpoint. X.1083 §15.3, §15.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly hostingEndpointIRI: EndpointIRI
-  ) {}
+    bfpProductUuid: BioAPI_UUID,
+    category: BioAPI_CATEGORY,
+    description: BioAPI_STRING,
+    path: UTF8String,
+    specVersion: BioAPI_VERSION,
+    productVersion: BioAPI_STRING,
+    vendor: BioAPI_STRING,
+    supportedFormats: BioAPI_BIR_BIOMETRIC_DATA_FORMAT[],
+    factorsMask: BioAPI_BIR_BIOMETRIC_TYPE,
+    propertyUuid: BioAPI_UUID,
+    property: BioAPI_DATA,
+    hostingEndpointIRI: EndpointIRI
+  ) {
+    this.bfpProductUuid = bfpProductUuid;
+    this.category = category;
+    this.description = description;
+    this.path = path;
+    this.specVersion = specVersion;
+    this.productVersion = productVersion;
+    this.vendor = vendor;
+    this.supportedFormats = supportedFormats;
+    this.factorsMask = factorsMask;
+    this.propertyUuid = propertyUuid;
+    this.property = property;
+    this.hostingEndpointIRI = hostingEndpointIRI;
+  }
 
   /**
    * @summary Restructures an object into a BioAPI_BFP_SCHEMA

@@ -40,29 +40,35 @@ import {
  *
  */
 export class FreeBIRHandle_RequestParams {
+  /**
+   * @summary `originalBSPHandle`.
+   * @description
+   *
+   * Attach-session handle at the hosting endpoint, not the
+   * application's local handle. X.1083 Table 57, clause 26.
+   *
+   * @public
+   * @readonly
+   */
+  readonly originalBSPHandle: BioAPI_HANDLE;
+  /**
+   * @summary `birHandle`.
+   * @description
+   *
+   * BIR handle to free. X.1083 Table 57, §15.12.
+   *
+   * @public
+   * @readonly
+   */
+  readonly birHandle: BioAPI_BIR_HANDLE;
+
   constructor(
-    /**
-     * @summary `originalBSPHandle`.
-     * @description
-     *
-     * Attach-session handle at the hosting endpoint, not the
-     * application's local handle. X.1083 Table 57, clause 26.
-     *
-     * @public
-     * @readonly
-     */
-    readonly originalBSPHandle: BioAPI_HANDLE,
-    /**
-     * @summary `birHandle`.
-     * @description
-     *
-     * BIR handle to free. X.1083 Table 57, §15.12.
-     *
-     * @public
-     * @readonly
-     */
-    readonly birHandle: BioAPI_BIR_HANDLE
-  ) {}
+    originalBSPHandle: BioAPI_HANDLE,
+    birHandle: BioAPI_BIR_HANDLE
+  ) {
+    this.originalBSPHandle = originalBSPHandle;
+    this.birHandle = birHandle;
+  }
 
   /**
    * @summary Restructures an object into a FreeBIRHandle_RequestParams

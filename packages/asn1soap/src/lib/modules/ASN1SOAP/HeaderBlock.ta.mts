@@ -48,55 +48,65 @@ import {
  *
  */
 export class HeaderBlock {
+  /**
+   * @summary `mustUnderstand`.
+   * @description If present and not `FALSE`, maps to SOAP
+   * `mustUnderstand="1"`. A targeted node that does not process
+   * the block must fault (`mustUnderstand`). Omitted or `FALSE`
+   * produces no attribute.
+   * ITU-T Rec. X.892 (05/2005) §7.2.2.1, §8.2.2.1.
+   * W3C SOAP 1.2 Part 1
+   * [§5.2.3](https://www.w3.org/TR/2003/REC-soap12-part1-20030624/#soapmu).
+   * @public
+   * @readonly
+   */
+  readonly mustUnderstand: OPTIONAL<BOOLEAN>;
+  /**
+   * @summary `relay`.
+   * @description If present and not `FALSE`, maps to SOAP
+   * `relay="1"`: an intermediary that does not process the
+   * block shall forward it. Omitted or `FALSE` produces no
+   * attribute (SOAP default: do not relay).
+   * ITU-T Rec. X.892 (05/2005) §7.2.2.2, §8.2.2.2.
+   * W3C SOAP 1.2 Part 1
+   * [§5.2.4](https://www.w3.org/TR/2003/REC-soap12-part1-20030624/#soaprelay).
+   * @public
+   * @readonly
+   */
+  readonly relay: OPTIONAL<BOOLEAN>;
+  /**
+   * @summary `role`.
+   * @description SOAP role URI this block is targeted at.
+   * Default {@link ultimateReceiver}. The `role` attribute is
+   * generated only when the value differs from that default.
+   * ITU-T Rec. X.892 (05/2005) §7.2.2.3, §8.2.2.3.
+   * W3C SOAP 1.2 Part 1
+   * [§5.2.2](https://www.w3.org/TR/2003/REC-soap12-part1-20030624/#soaprole).
+   * @public
+   * @readonly
+   */
+  readonly role: OPTIONAL<AnyURI>;
+  /**
+   * @summary `content`.
+   * @description Header-block payload: an embedded ASN.1
+   * encoding, a fast infoset document, or a NotUnderstood
+   * block. ITU-T Rec. X.892 (05/2005) §7.2.2, §7.5.
+   * @public
+   * @readonly
+   */
+  readonly content: Content;
+
   constructor(
-    /**
-     * @summary `mustUnderstand`.
-     * @description If present and not `FALSE`, maps to SOAP
-     * `mustUnderstand="1"`. A targeted node that does not process
-     * the block must fault (`mustUnderstand`). Omitted or `FALSE`
-     * produces no attribute.
-     * ITU-T Rec. X.892 (05/2005) §7.2.2.1, §8.2.2.1.
-     * W3C SOAP 1.2 Part 1
-     * [§5.2.3](https://www.w3.org/TR/2003/REC-soap12-part1-20030624/#soapmu).
-     * @public
-     * @readonly
-     */
-    readonly mustUnderstand: OPTIONAL<BOOLEAN>,
-    /**
-     * @summary `relay`.
-     * @description If present and not `FALSE`, maps to SOAP
-     * `relay="1"`: an intermediary that does not process the
-     * block shall forward it. Omitted or `FALSE` produces no
-     * attribute (SOAP default: do not relay).
-     * ITU-T Rec. X.892 (05/2005) §7.2.2.2, §8.2.2.2.
-     * W3C SOAP 1.2 Part 1
-     * [§5.2.4](https://www.w3.org/TR/2003/REC-soap12-part1-20030624/#soaprelay).
-     * @public
-     * @readonly
-     */
-    readonly relay: OPTIONAL<BOOLEAN>,
-    /**
-     * @summary `role`.
-     * @description SOAP role URI this block is targeted at.
-     * Default {@link ultimateReceiver}. The `role` attribute is
-     * generated only when the value differs from that default.
-     * ITU-T Rec. X.892 (05/2005) §7.2.2.3, §8.2.2.3.
-     * W3C SOAP 1.2 Part 1
-     * [§5.2.2](https://www.w3.org/TR/2003/REC-soap12-part1-20030624/#soaprole).
-     * @public
-     * @readonly
-     */
-    readonly role: OPTIONAL<AnyURI>,
-    /**
-     * @summary `content`.
-     * @description Header-block payload: an embedded ASN.1
-     * encoding, a fast infoset document, or a NotUnderstood
-     * block. ITU-T Rec. X.892 (05/2005) §7.2.2, §7.5.
-     * @public
-     * @readonly
-     */
-    readonly content: Content
-  ) {}
+    mustUnderstand: OPTIONAL<BOOLEAN>,
+    relay: OPTIONAL<BOOLEAN>,
+    role: OPTIONAL<AnyURI>,
+    content: Content
+  ) {
+    this.mustUnderstand = mustUnderstand;
+    this.relay = relay;
+    this.role = role;
+    this.content = content;
+  }
 
   /**
    * @summary Restructures an object into a HeaderBlock

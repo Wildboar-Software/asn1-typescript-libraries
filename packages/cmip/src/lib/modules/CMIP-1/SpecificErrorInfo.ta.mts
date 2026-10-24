@@ -32,30 +32,36 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class SpecificErrorInfo {
+  /**
+   * @summary `errorId`.
+   * @description
+   *
+   * Specific-error identifier
+   * (`CMIP-SPECIFICERROR.&id`).
+   *
+   * @public
+   * @readonly
+   */
+  readonly errorId: OBJECT_IDENTIFIER;
+  /**
+   * @summary `errorInfo`.
+   * @description
+   *
+   * Value matching `errorId`
+   * (`CMIP-SPECIFICERROR.&Value`).
+   *
+   * @public
+   * @readonly
+   */
+  readonly errorInfo: _Element;
+
   constructor(
-    /**
-     * @summary `errorId`.
-     * @description
-     *
-     * Specific-error identifier
-     * (`CMIP-SPECIFICERROR.&id`).
-     *
-     * @public
-     * @readonly
-     */
-    readonly errorId: OBJECT_IDENTIFIER,
-    /**
-     * @summary `errorInfo`.
-     * @description
-     *
-     * Value matching `errorId`
-     * (`CMIP-SPECIFICERROR.&Value`).
-     *
-     * @public
-     * @readonly
-     */
-    readonly errorInfo: _Element
-  ) {}
+    errorId: OBJECT_IDENTIFIER,
+    errorInfo: _Element
+  ) {
+    this.errorId = errorId;
+    this.errorInfo = errorInfo;
+  }
 
   /**
    * @summary Restructures an object into a SpecificErrorInfo

@@ -52,41 +52,49 @@ import {
  *
  */
 export class DbGetNextBIR_RequestParams {
+  /**
+   * @summary `originalBSPHandle`.
+   * @description
+   *
+   * Hosting-endpoint BSP handle. Rewritten from the master's local
+   * `BSPHandle` (cl.26) (`X.1083 §16.50`, Table 109).
+   *
+   * @public
+   * @readonly
+   */
+  readonly originalBSPHandle: BioAPI_HANDLE;
+  /**
+   * @summary `dbHandle`.
+   * @description
+   *
+   * Database to iterate, from C `DbHandle` (`X.1083 §16.50`,
+   * Table 109, §15.26). No local/original rewrite is specified.
+   *
+   * @public
+   * @readonly
+   */
+  readonly dbHandle: BioAPI_DB_HANDLE;
+  /**
+   * @summary `markerHandle`.
+   * @description
+   *
+   * Marker to advance, from C `MarkerHandle` (`X.1083 §16.50`,
+   * Table 109, §15.25).
+   *
+   * @public
+   * @readonly
+   */
+  readonly markerHandle: BioAPI_DB_MARKER_HANDLE;
+
   constructor(
-    /**
-     * @summary `originalBSPHandle`.
-     * @description
-     *
-     * Hosting-endpoint BSP handle. Rewritten from the master's local
-     * `BSPHandle` (cl.26) (`X.1083 §16.50`, Table 109).
-     *
-     * @public
-     * @readonly
-     */
-    readonly originalBSPHandle: BioAPI_HANDLE,
-    /**
-     * @summary `dbHandle`.
-     * @description
-     *
-     * Database to iterate, from C `DbHandle` (`X.1083 §16.50`,
-     * Table 109, §15.26). No local/original rewrite is specified.
-     *
-     * @public
-     * @readonly
-     */
-    readonly dbHandle: BioAPI_DB_HANDLE,
-    /**
-     * @summary `markerHandle`.
-     * @description
-     *
-     * Marker to advance, from C `MarkerHandle` (`X.1083 §16.50`,
-     * Table 109, §15.25).
-     *
-     * @public
-     * @readonly
-     */
-    readonly markerHandle: BioAPI_DB_MARKER_HANDLE
-  ) {}
+    originalBSPHandle: BioAPI_HANDLE,
+    dbHandle: BioAPI_DB_HANDLE,
+    markerHandle: BioAPI_DB_MARKER_HANDLE
+  ) {
+    this.originalBSPHandle = originalBSPHandle;
+    this.dbHandle = dbHandle;
+    this.markerHandle = markerHandle;
+  }
 
   /**
    * @summary Restructures an object into a DbGetNextBIR_RequestParams

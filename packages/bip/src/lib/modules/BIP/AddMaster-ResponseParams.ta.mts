@@ -50,47 +50,55 @@ import {
  *
  */
 export class AddMaster_ResponseParams {
+  /**
+   * @summary `fwSchema`.
+   * @description
+   *
+   * Slave's framework schema. OPTIONAL here; a conforming slave
+   * always includes it. Master returns
+   * `BioAPIERR_FRAMEWORK_SCHEMA_ABSENT` if missing.
+   * X.1083 §16.4.4 k, §16.4.5 h.
+   *
+   * @public
+   * @readonly
+   */
+  readonly fwSchema: OPTIONAL<BioAPI_FRAMEWORK_SCHEMA>;
+  /**
+   * @summary `bspSchemas`.
+   * @description
+   *
+   * BSP schemas hosted at the slave. Each `bspAccessUuid` is
+   * sixteen zero octets; master generates a new access UUID.
+   * Duplicate `bspProductUuid` →
+   * `BioAPIERR_DUPLICATE_BSP_PRODUCT_UUID`. X.1083 §16.4.4 l, o,
+   * §16.4.5 i.
+   *
+   * @public
+   * @readonly
+   */
+  readonly bspSchemas: BioAPI_BSP_SCHEMA[];
+  /**
+   * @summary `bfpSchemas`.
+   * @description
+   *
+   * BFP schemas hosted at the slave. Duplicate `bfpProductUuid` →
+   * `BioAPIERR_DUPLICATE_BFP_PRODUCT_UUID`. X.1083 §16.4.4 m, p,
+   * §16.4.5 j.
+   *
+   * @public
+   * @readonly
+   */
+  readonly bfpSchemas: BioAPI_BFP_SCHEMA[];
+
   constructor(
-    /**
-     * @summary `fwSchema`.
-     * @description
-     *
-     * Slave's framework schema. OPTIONAL here; a conforming slave
-     * always includes it. Master returns
-     * `BioAPIERR_FRAMEWORK_SCHEMA_ABSENT` if missing.
-     * X.1083 §16.4.4 k, §16.4.5 h.
-     *
-     * @public
-     * @readonly
-     */
-    readonly fwSchema: OPTIONAL<BioAPI_FRAMEWORK_SCHEMA>,
-    /**
-     * @summary `bspSchemas`.
-     * @description
-     *
-     * BSP schemas hosted at the slave. Each `bspAccessUuid` is
-     * sixteen zero octets; master generates a new access UUID.
-     * Duplicate `bspProductUuid` →
-     * `BioAPIERR_DUPLICATE_BSP_PRODUCT_UUID`. X.1083 §16.4.4 l, o,
-     * §16.4.5 i.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bspSchemas: BioAPI_BSP_SCHEMA[],
-    /**
-     * @summary `bfpSchemas`.
-     * @description
-     *
-     * BFP schemas hosted at the slave. Duplicate `bfpProductUuid` →
-     * `BioAPIERR_DUPLICATE_BFP_PRODUCT_UUID`. X.1083 §16.4.4 m, p,
-     * §16.4.5 j.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bfpSchemas: BioAPI_BFP_SCHEMA[]
-  ) {}
+    fwSchema: OPTIONAL<BioAPI_FRAMEWORK_SCHEMA>,
+    bspSchemas: BioAPI_BSP_SCHEMA[],
+    bfpSchemas: BioAPI_BFP_SCHEMA[]
+  ) {
+    this.fwSchema = fwSchema;
+    this.bspSchemas = bspSchemas;
+    this.bfpSchemas = bfpSchemas;
+  }
 
   /**
    * @summary Restructures an object into a AddMaster_ResponseParams

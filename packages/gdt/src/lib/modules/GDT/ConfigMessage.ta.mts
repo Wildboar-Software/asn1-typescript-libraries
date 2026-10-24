@@ -29,32 +29,42 @@ import { Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Param
  */
 export
 class ConfigMessage {
+    /**
+     * @summary `action`.
+     * @public
+     * @readonly
+     */
+    readonly action: ConfigAction;
+    /**
+     * @summary `payload`.
+     * @public
+     * @readonly
+     */
+    readonly payload?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `params`.
+     * @public
+     * @readonly
+     */
+    readonly params?: OPTIONAL<Parameters>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `action`.
-         * @public
-         * @readonly
-         */
-        readonly action: ConfigAction,
-        /**
-         * @summary `payload`.
-         * @public
-         * @readonly
-         */
-        readonly payload?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `params`.
-         * @public
-         * @readonly
-         */
-        readonly params?: OPTIONAL<Parameters>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        action: ConfigAction,
+        payload?: OPTIONAL<OCTET_STRING>,
+        params?: OPTIONAL<Parameters>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.action = action;
+        this.payload = payload;
+        this.params = params;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ConfigMessage

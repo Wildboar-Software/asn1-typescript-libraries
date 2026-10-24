@@ -34,30 +34,36 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  */
 export
 class SubjectPublicKeyInfo {
+    /**
+     * @summary `algorithm`.
+     * @description
+     *
+     * Key type and domain parameters (`ECPKAlgorithms`). The `parameters` component
+     * shall be present. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
+     *
+     * @public
+     * @readonly
+     */
+    readonly algorithm: AlgorithmIdentifier;
+    /**
+     * @summary `subjectPublicKey`.
+     * @description
+     *
+     * The `ECPoint` octet string mapped bit-for-bit into a BIT STRING (first bit of
+     * the first octet becomes the first bit of the BIT STRING). [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
+     *
+     * @public
+     * @readonly
+     */
+    readonly subjectPublicKey: BIT_STRING;
+
     constructor (
-        /**
-         * @summary `algorithm`.
-         * @description
-         *
-         * Key type and domain parameters (`ECPKAlgorithms`). The `parameters` component
-         * shall be present. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly algorithm: AlgorithmIdentifier,
-        /**
-         * @summary `subjectPublicKey`.
-         * @description
-         *
-         * The `ECPoint` octet string mapped bit-for-bit into a BIT STRING (first bit of
-         * the first octet becomes the first bit of the BIT STRING). [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly subjectPublicKey: BIT_STRING
-    ) {}
+        algorithm: AlgorithmIdentifier,
+        subjectPublicKey: BIT_STRING
+    ) {
+        this.algorithm = algorithm;
+        this.subjectPublicKey = subjectPublicKey;
+    }
 
     /**
      * @summary Restructures an object into a SubjectPublicKeyInfo

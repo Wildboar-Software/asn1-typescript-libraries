@@ -41,40 +41,48 @@ import {
  *
  */
 export class ETYPE_INFO2_ENTRY {
+  /**
+   * @summary `etype`.
+   * @description
+   *
+   * Encryption type ([RFC 4120 §5.2.7.5](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.7.5)).
+   *
+   * @public
+   * @readonly
+   */
+  readonly etype: Int32;
+  /**
+   * @summary `salt`.
+   * @description
+   *
+   * Optional salt as `KerberosString` ([RFC 4120 §5.2.7.5](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.7.5)).
+   *
+   * @public
+   * @readonly
+   */
+  readonly salt?: OPTIONAL<KerberosString>;
+  /**
+   * @summary `s2kparams`.
+   * @description
+   *
+   * Optional string-to-key parameters; interpretation is per
+   * cryptosystem for `etype`. Omitted → cryptosystem default
+   * ([RFC 4120 §5.2.7.5](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.7.5)).
+   *
+   * @public
+   * @readonly
+   */
+  readonly s2kparams?: OPTIONAL<OCTET_STRING>;
+
   constructor(
-    /**
-     * @summary `etype`.
-     * @description
-     *
-     * Encryption type ([RFC 4120 §5.2.7.5](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.7.5)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly etype: Int32,
-    /**
-     * @summary `salt`.
-     * @description
-     *
-     * Optional salt as `KerberosString` ([RFC 4120 §5.2.7.5](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.7.5)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly salt?: OPTIONAL<KerberosString>,
-    /**
-     * @summary `s2kparams`.
-     * @description
-     *
-     * Optional string-to-key parameters; interpretation is per
-     * cryptosystem for `etype`. Omitted → cryptosystem default
-     * ([RFC 4120 §5.2.7.5](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.7.5)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly s2kparams?: OPTIONAL<OCTET_STRING>
-  ) {}
+    etype: Int32,
+    salt?: OPTIONAL<KerberosString>,
+    s2kparams?: OPTIONAL<OCTET_STRING>
+  ) {
+    this.etype = etype;
+    this.salt = salt;
+    this.s2kparams = s2kparams;
+  }
 
   /**
    * @summary Restructures an object into a ETYPE_INFO2_ENTRY

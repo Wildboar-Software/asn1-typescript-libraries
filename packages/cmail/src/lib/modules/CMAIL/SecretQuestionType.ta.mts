@@ -45,27 +45,33 @@ import {
  *
  */
 export class SecretQuestionType {
+  /**
+   * @summary `request`.
+   * @description May hold a `RandomNumber` concatenated
+   * with RSCK before hashing. ITU-T Rec. X.1341 (09/2015)
+   * §8.15, §9.3.
+   * @public
+   * @readonly
+   */
+  readonly request: RequestType;
+  /**
+   * @summary `response`.
+   * @description Hash algorithm for the challenge; the
+   * recipient writes the digest into the signed notice of
+   * reception. Emptied by the server on `RETR`. ITU-T Rec.
+   * X.1341 (09/2015) §8.15, §9.2–§9.3.
+   * @public
+   * @readonly
+   */
+  readonly response: ResponseType;
+
   constructor(
-    /**
-     * @summary `request`.
-     * @description May hold a `RandomNumber` concatenated
-     * with RSCK before hashing. ITU-T Rec. X.1341 (09/2015)
-     * §8.15, §9.3.
-     * @public
-     * @readonly
-     */
-    readonly request: RequestType,
-    /**
-     * @summary `response`.
-     * @description Hash algorithm for the challenge; the
-     * recipient writes the digest into the signed notice of
-     * reception. Emptied by the server on `RETR`. ITU-T Rec.
-     * X.1341 (09/2015) §8.15, §9.2–§9.3.
-     * @public
-     * @readonly
-     */
-    readonly response: ResponseType
-  ) {}
+    request: RequestType,
+    response: ResponseType
+  ) {
+    this.request = request;
+    this.response = response;
+  }
 
   /**
    * @summary Restructures an object into a SecretQuestionType

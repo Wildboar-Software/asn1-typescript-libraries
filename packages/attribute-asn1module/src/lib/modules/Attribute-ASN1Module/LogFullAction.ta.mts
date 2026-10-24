@@ -30,10 +30,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @enum {number}
  */
 export
-enum _enum_for_LogFullAction {
-    wrap = 0,
-    halt = 1,
-}
+const _enum_for_LogFullAction = {
+    wrap: 0,
+    halt: 1,
+} as const;
+
+export type _enum_for_LogFullAction = (typeof _enum_for_LogFullAction)[keyof typeof _enum_for_LogFullAction];
 
 /**
  * @summary LogFullAction
@@ -126,10 +128,10 @@ export
 const halt: LogFullAction = LogFullAction.halt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_LogFullAction = $._decodeEnumerated;
+export const _decode_LogFullAction = $._decodeEnumerated as $.ASN1Decoder<LogFullAction>;
 
 
-export const _encode_LogFullAction = $._encodeEnumerated;
+export const _encode_LogFullAction = $._encodeEnumerated as $.ASN1Encoder<LogFullAction>;
 
 
 /* eslint-enable */

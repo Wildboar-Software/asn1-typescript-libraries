@@ -44,29 +44,35 @@ import {
  *
  */
 export class F_U_ABORT_request {
+  /**
+   * @summary `action_result`.
+   * @description
+   *
+   * Summary of `diagnostic`. ISO 8571-3:1988 §13.2, §14.3.2.1.
+   *
+   * @public
+   * @readonly
+   */
+  readonly action_result?: OPTIONAL<Action_Result>;
+  /**
+   * @summary `diagnostic`.
+   * @description
+   *
+   * Detailed failure information amplifying `action-result`.
+   * ISO 8571-3:1988 §13.13, §14.3.2.2.
+   *
+   * @public
+   * @readonly
+   */
+  readonly diagnostic?: OPTIONAL<Diagnostic>;
+
   constructor(
-    /**
-     * @summary `action_result`.
-     * @description
-     *
-     * Summary of `diagnostic`. ISO 8571-3:1988 §13.2, §14.3.2.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly action_result?: OPTIONAL<Action_Result>,
-    /**
-     * @summary `diagnostic`.
-     * @description
-     *
-     * Detailed failure information amplifying `action-result`.
-     * ISO 8571-3:1988 §13.13, §14.3.2.2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly diagnostic?: OPTIONAL<Diagnostic>
-  ) {}
+    action_result?: OPTIONAL<Action_Result>,
+    diagnostic?: OPTIONAL<Diagnostic>
+  ) {
+    this.action_result = action_result;
+    this.diagnostic = diagnostic;
+  }
 
   /**
    * @summary Restructures an object into a F_U_ABORT_request

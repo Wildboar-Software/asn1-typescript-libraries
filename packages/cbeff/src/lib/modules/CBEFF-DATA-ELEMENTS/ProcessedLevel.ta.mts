@@ -24,12 +24,14 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_ProcessedLevel {
-  no_value_available = 0,
-  raw = 1,
-  intermediate = 2,
-  processed = 3,
-}
+export const _enum_for_ProcessedLevel = {
+  no_value_available: 0,
+  raw: 1,
+  intermediate: 2,
+  processed: 3,
+} as const;
+
+export type _enum_for_ProcessedLevel = (typeof _enum_for_ProcessedLevel)[keyof typeof _enum_for_ProcessedLevel];
 
 /**
  * @summary ProcessedLevel

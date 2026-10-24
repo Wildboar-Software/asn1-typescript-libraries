@@ -29,29 +29,35 @@ import { IndAudStreamParms, _decode_IndAudStreamParms, _encode_IndAudStreamParms
  */
 export
 class IndAudStreamDescriptor {
+    /**
+     * @summary `streamID`.
+     * @description
+     *
+     * Stream to audit. Streams use 1 to 65535 (clause 7.1.4).
+     *
+     * @public
+     * @readonly
+     */
+    readonly streamID: StreamID;
+    /**
+     * @summary `streamParms`.
+     * @description
+     *
+     * Which of LocalControl, Local, Remote, and Statistics to return for
+     * that stream.
+     *
+     * @public
+     * @readonly
+     */
+    readonly streamParms: IndAudStreamParms;
+
     constructor (
-        /**
-         * @summary `streamID`.
-         * @description
-         *
-         * Stream to audit. Streams use 1 to 65535 (clause 7.1.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly streamID: StreamID,
-        /**
-         * @summary `streamParms`.
-         * @description
-         *
-         * Which of LocalControl, Local, Remote, and Statistics to return for
-         * that stream.
-         *
-         * @public
-         * @readonly
-         */
-        readonly streamParms: IndAudStreamParms
-    ) {}
+        streamID: StreamID,
+        streamParms: IndAudStreamParms
+    ) {
+        this.streamID = streamID;
+        this.streamParms = streamParms;
+    }
 
     /**
      * @summary Restructures an object into a IndAudStreamDescriptor

@@ -43,79 +43,93 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class CamRegMsgContent {
+    /**
+     * @summary `sessionID`.
+     * @description
+     *
+     * Session identifier, 10 octets (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    readonly sessionID: OCTET_STRING;
+    /**
+     * @summary `nONCE_CAM`.
+     * @description
+     *
+     * Session-unique 16-octet random (`NONCE_CAM`).
+     * Each session is required to have a unique
+     * value (§8.3 Table 1).
+     *
+     * @public
+     * @readonly
+     */
+    readonly nONCE_CAM: OCTET_STRING;
+    /**
+     * @summary `cAMID`.
+     * @description
+     *
+     * CAM identifier, 40 octets in Annex A. §3.2.2
+     * defines `CAM_ID` as 8 bytes; the
+     * Recommendation does not reconcile the two
+     * sizes.
+     *
+     * @public
+     * @readonly
+     */
+    readonly cAMID: OCTET_STRING;
+    /**
+     * @summary `hWVersion`.
+     * @description
+     *
+     * CAM chip version, 4 octets. Used in cloning
+     * detection version checks (Annex C).
+     *
+     * @public
+     * @readonly
+     */
+    readonly hWVersion: OCTET_STRING;
+    /**
+     * @summary `sWversion`.
+     * @description
+     *
+     * Bootloader software version, 4 octets
+     * (Annex A, Annex C).
+     *
+     * @public
+     * @readonly
+     */
+    readonly sWversion: OCTET_STRING;
+    /**
+     * @summary `hashed_MEK_ICCIEK`.
+     * @description
+     *
+     * 20-octet hash of MEK and ICCIEK. CASS
+     * regenerates those keys (Figure 4) and
+     * compares; mismatch → Status `0x02`. How the
+     * two keys are combined before hashing is not
+     * specified (§7.3).
+     *
+     * @public
+     * @readonly
+     */
+    readonly hashed_MEK_ICCIEK: OCTET_STRING;
+
     constructor (
-        /**
-         * @summary `sessionID`.
-         * @description
-         *
-         * Session identifier, 10 octets (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sessionID: OCTET_STRING,
-        /**
-         * @summary `nONCE_CAM`.
-         * @description
-         *
-         * Session-unique 16-octet random (`NONCE_CAM`).
-         * Each session is required to have a unique
-         * value (§8.3 Table 1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly nONCE_CAM: OCTET_STRING,
-        /**
-         * @summary `cAMID`.
-         * @description
-         *
-         * CAM identifier, 40 octets in Annex A. §3.2.2
-         * defines `CAM_ID` as 8 bytes; the
-         * Recommendation does not reconcile the two
-         * sizes.
-         *
-         * @public
-         * @readonly
-         */
-        readonly cAMID: OCTET_STRING,
-        /**
-         * @summary `hWVersion`.
-         * @description
-         *
-         * CAM chip version, 4 octets. Used in cloning
-         * detection version checks (Annex C).
-         *
-         * @public
-         * @readonly
-         */
-        readonly hWVersion: OCTET_STRING,
-        /**
-         * @summary `sWversion`.
-         * @description
-         *
-         * Bootloader software version, 4 octets
-         * (Annex A, Annex C).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sWversion: OCTET_STRING,
-        /**
-         * @summary `hashed_MEK_ICCIEK`.
-         * @description
-         *
-         * 20-octet hash of MEK and ICCIEK. CASS
-         * regenerates those keys (Figure 4) and
-         * compares; mismatch → Status `0x02`. How the
-         * two keys are combined before hashing is not
-         * specified (§7.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly hashed_MEK_ICCIEK: OCTET_STRING
-    ) {}
+        sessionID: OCTET_STRING,
+        nONCE_CAM: OCTET_STRING,
+        cAMID: OCTET_STRING,
+        hWVersion: OCTET_STRING,
+        sWversion: OCTET_STRING,
+        hashed_MEK_ICCIEK: OCTET_STRING
+    ) {
+        this.sessionID = sessionID;
+        this.nONCE_CAM = nONCE_CAM;
+        this.cAMID = cAMID;
+        this.hWVersion = hWVersion;
+        this.sWversion = sWversion;
+        this.hashed_MEK_ICCIEK = hashed_MEK_ICCIEK;
+    }
 
     /**
      * @summary Restructures an object into a CamRegMsgContent

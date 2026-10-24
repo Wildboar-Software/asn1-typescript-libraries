@@ -35,29 +35,35 @@ import {
  *
  */
 export class Integer_Pattern {
+  /**
+   * @summary `relational_comparision`.
+   * @description
+   *
+   * Whether `no-value-available`, equals, less-than, and
+   * greater-than match.
+   *
+   * @public
+   * @readonly
+   */
+  readonly relational_comparision: Relational_Comparision;
+  /**
+   * @summary `integer_value`.
+   * @description
+   *
+   * Test value for the comparison.
+   *
+   * @public
+   * @readonly
+   */
+  readonly integer_value: INTEGER;
+
   constructor(
-    /**
-     * @summary `relational_comparision`.
-     * @description
-     *
-     * Whether `no-value-available`, equals, less-than, and
-     * greater-than match.
-     *
-     * @public
-     * @readonly
-     */
-    readonly relational_comparision: Relational_Comparision,
-    /**
-     * @summary `integer_value`.
-     * @description
-     *
-     * Test value for the comparison.
-     *
-     * @public
-     * @readonly
-     */
-    readonly integer_value: INTEGER
-  ) {}
+    relational_comparision: Relational_Comparision,
+    integer_value: INTEGER
+  ) {
+    this.relational_comparision = relational_comparision;
+    this.integer_value = integer_value;
+  }
 
   /**
    * @summary Restructures an object into a Integer_Pattern

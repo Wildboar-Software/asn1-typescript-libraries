@@ -31,20 +31,26 @@ import {
  *
  */
 export class BIRValidityPeriod {
+  /**
+   * @summary `not_valid_before`.
+   * @public
+   * @readonly
+   */
+  readonly not_valid_before?: OPTIONAL<Date_Time>;
+  /**
+   * @summary `not_valid_after`.
+   * @public
+   * @readonly
+   */
+  readonly not_valid_after?: OPTIONAL<Date_Time>;
+
   constructor(
-    /**
-     * @summary `not_valid_before`.
-     * @public
-     * @readonly
-     */
-    readonly not_valid_before?: OPTIONAL<Date_Time>,
-    /**
-     * @summary `not_valid_after`.
-     * @public
-     * @readonly
-     */
-    readonly not_valid_after?: OPTIONAL<Date_Time>
-  ) {}
+    not_valid_before?: OPTIONAL<Date_Time>,
+    not_valid_after?: OPTIONAL<Date_Time>
+  ) {
+    this.not_valid_before = not_valid_before;
+    this.not_valid_after = not_valid_after;
+  }
 
   /**
    * @summary Restructures an object into a BIRValidityPeriod

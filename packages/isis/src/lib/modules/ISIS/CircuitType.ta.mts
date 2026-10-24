@@ -29,13 +29,15 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_CircuitType {
-  broadcast = 0,
-  ptToPt = 1,
-  staticIn = 2,
-  staticOut = 3,
-  dA = 4,
-}
+export const _enum_for_CircuitType = {
+  broadcast: 0,
+  ptToPt: 1,
+  staticIn: 2,
+  staticOut: 3,
+  dA: 4,
+} as const;
+
+export type _enum_for_CircuitType = (typeof _enum_for_CircuitType)[keyof typeof _enum_for_CircuitType];
 
 /**
  * @summary CircuitType
@@ -189,10 +191,10 @@ export const dA: CircuitType =
   CircuitType.dA; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_CircuitType = $._decodeEnumerated;
+export const _decode_CircuitType = $._decodeEnumerated as $.ASN1Decoder<CircuitType>;
 
 
-export const _encode_CircuitType = $._encodeEnumerated;
+export const _encode_CircuitType = $._encodeEnumerated as $.ASN1Encoder<CircuitType>;
 
 
 /* eslint-enable */

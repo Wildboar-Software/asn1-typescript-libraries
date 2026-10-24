@@ -12,11 +12,13 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 
-export enum _enum_for_SearchRequest_scope {
-  baseObject = 0,
-  singleLevel = 1,
-  wholeSubtree = 2,
-}
+export const _enum_for_SearchRequest_scope = {
+  baseObject: 0,
+  singleLevel: 1,
+  wholeSubtree: 2,
+} as const;
+
+export type _enum_for_SearchRequest_scope = (typeof _enum_for_SearchRequest_scope)[keyof typeof _enum_for_SearchRequest_scope];
 
 /**
  * @summary SearchRequest_scope
@@ -108,7 +110,7 @@ export const wholeSubtree: SearchRequest_scope = SearchRequest_scope_wholeSubtre
  * @param {_Element} el The element being decoded.
  * @returns {SearchRequest_scope} The decoded data structure.
  */
-export const _decode_SearchRequest_scope: $.ASN1Decoder<SearchRequest_scope> = $._decodeEnumerated;
+export const _decode_SearchRequest_scope: $.ASN1Decoder<SearchRequest_scope> = $._decodeEnumerated as $.ASN1Decoder<SearchRequest_scope>;
 
 /**
  * @summary Encodes a(n) SearchRequest_scope into an ASN.1 Element.
@@ -117,6 +119,6 @@ export const _decode_SearchRequest_scope: $.ASN1Decoder<SearchRequest_scope> = $
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SearchRequest_scope, encoded as an ASN.1 Element.
  */
-export const _encode_SearchRequest_scope: $.ASN1Encoder<SearchRequest_scope> = $._encodeEnumerated;
+export const _encode_SearchRequest_scope: $.ASN1Encoder<SearchRequest_scope> = $._encodeEnumerated as $.ASN1Encoder<SearchRequest_scope>;
 
 /* eslint-enable */

@@ -7,25 +7,27 @@ import * as $ from "@wildboar/asn1/functional";
 
 
 export
-enum _enum_for_ServiceState {
+const _enum_for_ServiceState = {
     /**
      * The termination is being tested (clause 7.1.5.1.1). Entered and left only
      * by Modify from the MGC. While in Test the MG sends only Forced or
      * Graceful ServiceChange (Annex F.6).
      */
-    test = 0,
+    test: 0,
     /**
      * The termination is out of service and cannot carry traffic (clause
      * 7.1.5.1.1). Add and Move are not used. Reaching this state from InService
      * is a ServiceChange, not a Modify.
      */
-    outOfSvc = 1,
+    outOfSvc: 1,
     /**
      * The termination is in service. This is the default (clause 7.1.5.1.1). On
      * Root, a Restart ServiceChange marks every termination InService.
      */
-    inSvc = 2,
-}
+    inSvc: 2,
+} as const;
+
+export type _enum_for_ServiceState = (typeof _enum_for_ServiceState)[keyof typeof _enum_for_ServiceState];
 
 /**
  * @summary ServiceState
@@ -124,8 +126,8 @@ const ServiceState_inSvc: ServiceState = 2; /* LONG_NAMED_ENUMERATED_VALUE */
  */
 export
 const inSvc: ServiceState = ServiceState_inSvc; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_ServiceState = $._decodeEnumerated;
-export const _encode_ServiceState = $._encodeEnumerated;
+export const _decode_ServiceState = $._decodeEnumerated as $.ASN1Decoder<ServiceState>;
+export const _encode_ServiceState = $._encodeEnumerated as $.ASN1Encoder<ServiceState>;
 
 
 /* eslint-enable */

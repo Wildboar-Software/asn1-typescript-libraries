@@ -36,41 +36,49 @@ import { EUICCInfo1, _decode_EUICCInfo1, _encode_EUICCInfo1 } from "../RSPDefini
  */
 export
 class InitiateAuthenticationRequest {
+    /**
+     * @summary `euiccChallenge`.
+     * @description
+     * 
+     * From ES10b.GetEUICCChallenge. SGP.22 v3.1 §5.6.1.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly euiccChallenge: Octet16;
+    /**
+     * @summary `smdpAddress`.
+     * @description
+     * 
+     * FQDN the LPA believes it is calling. The server compares it to its
+     * own address, case-insensitive, and refuses a mismatch. SGP.22 v3.1
+     * §5.6.1.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly smdpAddress: UTF8String;
+    /**
+     * @summary `euiccInfo1`.
+     * @description
+     * 
+     * From ES10b.GetEUICCInfo. The server uses the CI key lists and the
+     * SVN. SGP.22 v3.1 §5.6.1. The encoded object includes its tag.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly euiccInfo1: EUICCInfo1;
+
     constructor (
-        /**
-         * @summary `euiccChallenge`.
-         * @description
-         * 
-         * From ES10b.GetEUICCChallenge. SGP.22 v3.1 §5.6.1.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly euiccChallenge: Octet16,
-        /**
-         * @summary `smdpAddress`.
-         * @description
-         * 
-         * FQDN the LPA believes it is calling. The server compares it to its
-         * own address, case-insensitive, and refuses a mismatch. SGP.22 v3.1
-         * §5.6.1.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly smdpAddress: UTF8String,
-        /**
-         * @summary `euiccInfo1`.
-         * @description
-         * 
-         * From ES10b.GetEUICCInfo. The server uses the CI key lists and the
-         * SVN. SGP.22 v3.1 §5.6.1. The encoded object includes its tag.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly euiccInfo1: EUICCInfo1
-    ) {}
+        euiccChallenge: Octet16,
+        smdpAddress: UTF8String,
+        euiccInfo1: EUICCInfo1
+    ) {
+        this.euiccChallenge = euiccChallenge;
+        this.smdpAddress = smdpAddress;
+        this.euiccInfo1 = euiccInfo1;
+    }
 
     /**
      * @summary Restructures an object into a InitiateAuthenticationRequest

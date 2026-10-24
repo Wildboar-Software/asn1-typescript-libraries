@@ -41,54 +41,64 @@ import { NonStandardData, _decode_NonStandardData, _encode_NonStandardData } fro
  */
 export
 class MuxDescriptor {
+    /**
+     * @summary `muxType`.
+     * @description
+     *
+     * Multiplex: H.221, H.223, H.226, V.76, or Nx64K (clause 7.1.3).
+     * Further types are extensions.
+     *
+     * @public
+     * @readonly
+     */
+    readonly muxType: MuxType;
+    /**
+     * @summary `termList`.
+     * @description
+     *
+     * Bearer terminations, in frame order. For Nx64K, each implied bearer
+     * takes the multiplex termination's stream parameters except that its
+     * bandwidth is 64 kbit/s (clause 7.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    readonly termList: TerminationID[];
+    /**
+     * @summary `nonStandardData`.
+     * @description
+     *
+     * Non-standard multiplex data, identified either by an object
+     * identifier, an H.221 non-standard identifier, or an experimental
+     * string (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    readonly nonStandardData?: OPTIONAL<NonStandardData>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `muxType`.
-         * @description
-         *
-         * Multiplex: H.221, H.223, H.226, V.76, or Nx64K (clause 7.1.3).
-         * Further types are extensions.
-         *
-         * @public
-         * @readonly
-         */
-        readonly muxType: MuxType,
-        /**
-         * @summary `termList`.
-         * @description
-         *
-         * Bearer terminations, in frame order. For Nx64K, each implied bearer
-         * takes the multiplex termination's stream parameters except that its
-         * bandwidth is 64 kbit/s (clause 7.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly termList: TerminationID[],
-        /**
-         * @summary `nonStandardData`.
-         * @description
-         *
-         * Non-standard multiplex data, identified either by an object
-         * identifier, an H.221 non-standard identifier, or an experimental
-         * string (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly nonStandardData?: OPTIONAL<NonStandardData>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        muxType: MuxType,
+        termList: TerminationID[],
+        nonStandardData?: OPTIONAL<NonStandardData>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.muxType = muxType;
+        this.termList = termList;
+        this.nonStandardData = nonStandardData;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a MuxDescriptor

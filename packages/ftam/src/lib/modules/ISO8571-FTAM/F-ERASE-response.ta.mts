@@ -41,28 +41,34 @@ import {
  *
  */
 export class F_ERASE_response {
+  /**
+   * @summary `action_result`.
+   * @description
+   *
+   * Default `success`. ISO 8571-3:1988 §20.3.2.1.
+   *
+   * @public
+   * @readonly
+   */
+  readonly action_result?: OPTIONAL<Action_Result>;
+  /**
+   * @summary `diagnostic`.
+   * @description
+   *
+   * ISO 8571-3:1988 §20.3.2.3 / §13.13.
+   *
+   * @public
+   * @readonly
+   */
+  readonly diagnostic?: OPTIONAL<Diagnostic>;
+
   constructor(
-    /**
-     * @summary `action_result`.
-     * @description
-     *
-     * Default `success`. ISO 8571-3:1988 §20.3.2.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly action_result?: OPTIONAL<Action_Result>,
-    /**
-     * @summary `diagnostic`.
-     * @description
-     *
-     * ISO 8571-3:1988 §20.3.2.3 / §13.13.
-     *
-     * @public
-     * @readonly
-     */
-    readonly diagnostic?: OPTIONAL<Diagnostic>
-  ) {}
+    action_result?: OPTIONAL<Action_Result>,
+    diagnostic?: OPTIONAL<Diagnostic>
+  ) {
+    this.action_result = action_result;
+    this.diagnostic = diagnostic;
+  }
 
   /**
    * @summary Restructures an object into a F_ERASE_response

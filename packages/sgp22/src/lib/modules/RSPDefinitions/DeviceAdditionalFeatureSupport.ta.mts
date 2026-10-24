@@ -30,33 +30,39 @@ import { VersionType, _decode_VersionType, _encode_VersionType } from "../RSPDef
  */
 export
 class DeviceAdditionalFeatureSupport {
+    /**
+     * @summary `naiSupport`.
+     * @description
+     * 
+     * Highest version of Network Access Identifier support, if the Device
+     * has it. Relevant to a Profile that uses an NAI instead of an IMSI.
+     * SGP.22 v3.1 Annex H. The module comment on LoadProfileElements notes
+     * that EFIMSI may be absent in that case.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly naiSupport?: OPTIONAL<VersionType>;
+    /**
+     * @summary `groupOfDeviceManufacturerOid`.
+     * @description
+     * 
+     * OID of the device manufacturer, or of a group of manufacturers, as
+     * this module's ASN.1 comment attributes to SGP.29. SGP.22 v3.1 Annex H
+     * does not include this component.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly groupOfDeviceManufacturerOid?: OPTIONAL<OBJECT_IDENTIFIER>;
+
     constructor (
-        /**
-         * @summary `naiSupport`.
-         * @description
-         * 
-         * Highest version of Network Access Identifier support, if the Device
-         * has it. Relevant to a Profile that uses an NAI instead of an IMSI.
-         * SGP.22 v3.1 Annex H. The module comment on LoadProfileElements notes
-         * that EFIMSI may be absent in that case.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly naiSupport?: OPTIONAL<VersionType>,
-        /**
-         * @summary `groupOfDeviceManufacturerOid`.
-         * @description
-         * 
-         * OID of the device manufacturer, or of a group of manufacturers, as
-         * this module's ASN.1 comment attributes to SGP.29. SGP.22 v3.1 Annex H
-         * does not include this component.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly groupOfDeviceManufacturerOid?: OPTIONAL<OBJECT_IDENTIFIER>
-    ) {}
+        naiSupport?: OPTIONAL<VersionType>,
+        groupOfDeviceManufacturerOid?: OPTIONAL<OBJECT_IDENTIFIER>
+    ) {
+        this.naiSupport = naiSupport;
+        this.groupOfDeviceManufacturerOid = groupOfDeviceManufacturerOid;
+    }
 
     /**
      * @summary Restructures an object into a DeviceAdditionalFeatureSupport

@@ -41,65 +41,79 @@ import { ModemIdentity_Item_multimediaMode, _decode_ModemIdentity_Item_multimedi
  */
 export
 class ModemIdentity_Item {
+    /**
+     * @summary `manufacturer`.
+     * @description
+     *
+     * Modem manufacturer. IA5 `simpleText` (§6.2.1). Tag-ID `0001`. ITU-T
+     * Rec. V.59 (11/2000) §6.5.
+     * @public
+     * @readonly
+     */
+    readonly manufacturer: V59String;
+    /**
+     * @summary `model`.
+     * @description
+     *
+     * Model or product name. IA5 `simpleText` (§6.2.1). Tag-ID `0002`.
+     * ITU-T Rec. V.59 (11/2000) §6.5.
+     * @public
+     * @readonly
+     */
+    readonly model: V59String;
+    /**
+     * @summary `firmwareVersion`.
+     * @description
+     *
+     * Firmware revision. IA5 `simpleText` (§6.2.1). Tag-ID `0003`. ITU-T
+     * Rec. V.59 (11/2000) §6.5.
+     * @public
+     * @readonly
+     */
+    readonly firmwareVersion: V59String;
+    /**
+     * @summary `diagnosticVersion`.
+     * @description
+     *
+     * Version of V.59 managed objects supported. Clause 1 assigns this
+     * Recommendation version 1 (approved November 2000). IA5 `simpleText`
+     * (§6.2.1). Tag-ID `0004`. ITU-T Rec. V.59 (11/2000) §1, §6.5.
+     * @public
+     * @readonly
+     */
+    readonly diagnosticVersion: V59String;
+    /**
+     * @summary `multimediaMode`.
+     * @description
+     *
+     * Multimedia capability bits: `1` capable, `0` not (Table 4/V.59).
+     * Tag-ID `0005`. ITU-T Rec. V.59 (11/2000) §6.5.
+     * @public
+     * @readonly
+     */
+    readonly multimediaMode?: OPTIONAL<ModemIdentity_Item_multimediaMode>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `manufacturer`.
-         * @description
-         *
-         * Modem manufacturer. IA5 `simpleText` (§6.2.1). Tag-ID `0001`. ITU-T
-         * Rec. V.59 (11/2000) §6.5.
-         * @public
-         * @readonly
-         */
-        readonly manufacturer: V59String,
-        /**
-         * @summary `model`.
-         * @description
-         *
-         * Model or product name. IA5 `simpleText` (§6.2.1). Tag-ID `0002`.
-         * ITU-T Rec. V.59 (11/2000) §6.5.
-         * @public
-         * @readonly
-         */
-        readonly model: V59String,
-        /**
-         * @summary `firmwareVersion`.
-         * @description
-         *
-         * Firmware revision. IA5 `simpleText` (§6.2.1). Tag-ID `0003`. ITU-T
-         * Rec. V.59 (11/2000) §6.5.
-         * @public
-         * @readonly
-         */
-        readonly firmwareVersion: V59String,
-        /**
-         * @summary `diagnosticVersion`.
-         * @description
-         *
-         * Version of V.59 managed objects supported. Clause 1 assigns this
-         * Recommendation version 1 (approved November 2000). IA5 `simpleText`
-         * (§6.2.1). Tag-ID `0004`. ITU-T Rec. V.59 (11/2000) §1, §6.5.
-         * @public
-         * @readonly
-         */
-        readonly diagnosticVersion: V59String,
-        /**
-         * @summary `multimediaMode`.
-         * @description
-         *
-         * Multimedia capability bits: `1` capable, `0` not (Table 4/V.59).
-         * Tag-ID `0005`. ITU-T Rec. V.59 (11/2000) §6.5.
-         * @public
-         * @readonly
-         */
-        readonly multimediaMode?: OPTIONAL<ModemIdentity_Item_multimediaMode>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        manufacturer: V59String,
+        model: V59String,
+        firmwareVersion: V59String,
+        diagnosticVersion: V59String,
+        multimediaMode?: OPTIONAL<ModemIdentity_Item_multimediaMode>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.manufacturer = manufacturer;
+        this.model = model;
+        this.firmwareVersion = firmwareVersion;
+        this.diagnosticVersion = diagnosticVersion;
+        this.multimediaMode = multimediaMode;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ModemIdentity_Item

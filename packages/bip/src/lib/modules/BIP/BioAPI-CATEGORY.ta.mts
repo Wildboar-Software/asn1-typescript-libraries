@@ -13,12 +13,14 @@ import {
 import * as $ from '@wildboar/asn1/functional';
 
 
-export enum _enum_for_BioAPI_CATEGORY {
-  archive = 0,
-  comparisonAlgorithm = 1,
-  processingAlgorithm = 2,
-  sensor = 3,
-}
+export const _enum_for_BioAPI_CATEGORY = {
+  archive: 0,
+  comparisonAlgorithm: 1,
+  processingAlgorithm: 2,
+  sensor: 3,
+} as const;
+
+export type _enum_for_BioAPI_CATEGORY = (typeof _enum_for_BioAPI_CATEGORY)[keyof typeof _enum_for_BioAPI_CATEGORY];
 
 
 /**

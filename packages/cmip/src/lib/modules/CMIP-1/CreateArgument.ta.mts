@@ -67,69 +67,83 @@ import {
  *
  */
 export class CreateArgument {
+  /**
+   * @summary `managedObjectClass`.
+   * @description
+   *
+   * Class of the managed object to create.
+   *
+   * @public
+   * @readonly
+   */
+  readonly managedObjectClass: ObjectClass;
+  /**
+   * @summary `managedOrSuperiorObjectInstance`.
+   * @description
+   *
+   * Either the new instance name or the superior under
+   * which the performer names it. If the instance is
+   * omitted here, it shall appear in `CreateResult`.
+   *
+   * @public
+   * @readonly
+   */
+  readonly managedOrSuperiorObjectInstance?: OPTIONAL<CreateArgument_managedOrSuperiorObjectInstance>;
+  /**
+   * @summary `accessControl`.
+   * @description
+   *
+   * Optional CMIS access-control, carried as `EXTERNAL`.
+   *
+   * @public
+   * @readonly
+   */
+  readonly accessControl?: OPTIONAL<AccessControl>;
+  /**
+   * @summary `referenceObjectInstance`.
+   * @description
+   *
+   * Existing instance whose attribute values may be used
+   * as a template. Unknown yields
+   * `noSuchReferenceObject`.
+   *
+   * @public
+   * @readonly
+   */
+  readonly referenceObjectInstance?: OPTIONAL<ObjectInstance>;
+  /**
+   * @summary `attributeList`.
+   * @description
+   *
+   * Attribute values for the new instance. Missing
+   * required values yield `missingAttributeValue`.
+   *
+   * @public
+   * @readonly
+   */
+  readonly attributeList?: OPTIONAL<Attribute[]>;
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  readonly _unrecognizedExtensionsList: _Element[];
+
   constructor(
-    /**
-     * @summary `managedObjectClass`.
-     * @description
-     *
-     * Class of the managed object to create.
-     *
-     * @public
-     * @readonly
-     */
-    readonly managedObjectClass: ObjectClass,
-    /**
-     * @summary `managedOrSuperiorObjectInstance`.
-     * @description
-     *
-     * Either the new instance name or the superior under
-     * which the performer names it. If the instance is
-     * omitted here, it shall appear in `CreateResult`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly managedOrSuperiorObjectInstance?: OPTIONAL<CreateArgument_managedOrSuperiorObjectInstance>,
-    /**
-     * @summary `accessControl`.
-     * @description
-     *
-     * Optional CMIS access-control, carried as `EXTERNAL`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly accessControl?: OPTIONAL<AccessControl>,
-    /**
-     * @summary `referenceObjectInstance`.
-     * @description
-     *
-     * Existing instance whose attribute values may be used
-     * as a template. Unknown yields
-     * `noSuchReferenceObject`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly referenceObjectInstance?: OPTIONAL<ObjectInstance>,
-    /**
-     * @summary `attributeList`.
-     * @description
-     *
-     * Attribute values for the new instance. Missing
-     * required values yield `missingAttributeValue`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly attributeList?: OPTIONAL<Attribute[]>,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = []
-  ) {}
+    managedObjectClass: ObjectClass,
+    managedOrSuperiorObjectInstance?: OPTIONAL<CreateArgument_managedOrSuperiorObjectInstance>,
+    accessControl?: OPTIONAL<AccessControl>,
+    referenceObjectInstance?: OPTIONAL<ObjectInstance>,
+    attributeList?: OPTIONAL<Attribute[]>,
+    _unrecognizedExtensionsList: _Element[] = []
+  ) {
+    this.managedObjectClass = managedObjectClass;
+    this.managedOrSuperiorObjectInstance = managedOrSuperiorObjectInstance;
+    this.accessControl = accessControl;
+    this.referenceObjectInstance = referenceObjectInstance;
+    this.attributeList = attributeList;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+  }
 
   /**
    * @summary Restructures an object into a CreateArgument

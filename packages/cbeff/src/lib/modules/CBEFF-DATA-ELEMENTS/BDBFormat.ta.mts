@@ -27,20 +27,26 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class BDBFormat {
+  /**
+   * @summary `format_owner`.
+   * @public
+   * @readonly
+   */
+  readonly format_owner: INTEGER;
+  /**
+   * @summary `format_type`.
+   * @public
+   * @readonly
+   */
+  readonly format_type: INTEGER;
+
   constructor(
-    /**
-     * @summary `format_owner`.
-     * @public
-     * @readonly
-     */
-    readonly format_owner: INTEGER,
-    /**
-     * @summary `format_type`.
-     * @public
-     * @readonly
-     */
-    readonly format_type: INTEGER
-  ) {}
+    format_owner: INTEGER,
+    format_type: INTEGER
+  ) {
+    this.format_owner = format_owner;
+    this.format_type = format_type;
+  }
 
   /**
    * @summary Restructures an object into a BDBFormat

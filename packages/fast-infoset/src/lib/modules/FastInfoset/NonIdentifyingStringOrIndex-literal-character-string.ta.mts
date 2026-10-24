@@ -36,27 +36,33 @@ import {
  *
  */
 export class NonIdentifyingStringOrIndex_literal_character_string {
+  /**
+   * @summary `add_to_table`.
+   * @description `TRUE` if the processor shall add
+   * `character-string` to the applicable string table;
+   * `FALSE` if this occurrence is not tabled. ITU-T Rec.
+   * X.891 (05/2005) §7.14.7 b, §7.14.8 b–c.
+   * @public
+   * @readonly
+   */
+  readonly add_to_table: BOOLEAN;
+  /**
+   * @summary `character_string`.
+   * @description The character string in the encoding named
+   * by `encoding-format`. ITU-T Rec. X.891 (05/2005) §7.14.4,
+   * §7.17.
+   * @public
+   * @readonly
+   */
+  readonly character_string: EncodedCharacterString;
+
   constructor(
-    /**
-     * @summary `add_to_table`.
-     * @description `TRUE` if the processor shall add
-     * `character-string` to the applicable string table;
-     * `FALSE` if this occurrence is not tabled. ITU-T Rec.
-     * X.891 (05/2005) §7.14.7 b, §7.14.8 b–c.
-     * @public
-     * @readonly
-     */
-    readonly add_to_table: BOOLEAN,
-    /**
-     * @summary `character_string`.
-     * @description The character string in the encoding named
-     * by `encoding-format`. ITU-T Rec. X.891 (05/2005) §7.14.4,
-     * §7.17.
-     * @public
-     * @readonly
-     */
-    readonly character_string: EncodedCharacterString
-  ) {}
+    add_to_table: BOOLEAN,
+    character_string: EncodedCharacterString
+  ) {
+    this.add_to_table = add_to_table;
+    this.character_string = character_string;
+  }
 
   /**
    * @summary Restructures an object into a NonIdentifyingStringOrIndex_literal_character_string

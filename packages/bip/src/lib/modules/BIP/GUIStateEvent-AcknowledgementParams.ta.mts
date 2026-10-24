@@ -45,30 +45,36 @@ import {
  *
  */
 export class GUIStateEvent_AcknowledgementParams {
+  /**
+   * @summary `response`.
+   * @description
+   *
+   * Handler's GUI response; written to `Response`. X.1083
+   * §17.3.9, Table 129.
+   *
+   * @public
+   * @readonly
+   */
+  readonly response: BioAPI_GUI_RESPONSE;
+  /**
+   * @summary `enrollSampleIndexToRecapture`.
+   * @description
+   *
+   * Index of the enroll sample to recapture; written to
+   * `EnrollSampleIndexToRecapture`. X.1083 §17.3.9, Table 129.
+   *
+   * @public
+   * @readonly
+   */
+  readonly enrollSampleIndexToRecapture: SignedInt;
+
   constructor(
-    /**
-     * @summary `response`.
-     * @description
-     *
-     * Handler's GUI response; written to `Response`. X.1083
-     * §17.3.9, Table 129.
-     *
-     * @public
-     * @readonly
-     */
-    readonly response: BioAPI_GUI_RESPONSE,
-    /**
-     * @summary `enrollSampleIndexToRecapture`.
-     * @description
-     *
-     * Index of the enroll sample to recapture; written to
-     * `EnrollSampleIndexToRecapture`. X.1083 §17.3.9, Table 129.
-     *
-     * @public
-     * @readonly
-     */
-    readonly enrollSampleIndexToRecapture: SignedInt
-  ) {}
+    response: BioAPI_GUI_RESPONSE,
+    enrollSampleIndexToRecapture: SignedInt
+  ) {
+    this.response = response;
+    this.enrollSampleIndexToRecapture = enrollSampleIndexToRecapture;
+  }
 
   /**
    * @summary Restructures an object into a GUIStateEvent_AcknowledgementParams

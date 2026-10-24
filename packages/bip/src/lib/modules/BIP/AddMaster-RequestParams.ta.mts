@@ -33,20 +33,24 @@ import {
  *
  */
 export class AddMaster_RequestParams {
+  /**
+   * @summary `bipVersion`.
+   * @description
+   *
+   * Version of this Recommendation: major 1, minor 0. Slave may
+   * return `BioAPIERR_INCOMPATIBLE_VERSION` if different.
+   * X.1083 §16.4.4 f, §16.4.5 c, §13.15.
+   *
+   * @public
+   * @readonly
+   */
+  readonly bipVersion: BioAPI_VERSION;
+
   constructor(
-    /**
-     * @summary `bipVersion`.
-     * @description
-     *
-     * Version of this Recommendation: major 1, minor 0. Slave may
-     * return `BioAPIERR_INCOMPATIBLE_VERSION` if different.
-     * X.1083 §16.4.4 f, §16.4.5 c, §13.15.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bipVersion: BioAPI_VERSION
-  ) {}
+    bipVersion: BioAPI_VERSION
+  ) {
+    this.bipVersion = bipVersion;
+  }
 
   /**
    * @summary Restructures an object into a AddMaster_RequestParams

@@ -34,19 +34,23 @@ import {
  *
  */
 export class DbStoreBIR_ResponseParams {
+  /**
+   * @summary `birUuid`.
+   * @description
+   *
+   * Stored-BIR UUID written to C `BirUuid` (cl.20, §15.58). Required
+   * on a conforming response (`X.1083 §16.48`, Table 106).
+   *
+   * @public
+   * @readonly
+   */
+  readonly birUuid: BioAPI_UUID;
+
   constructor(
-    /**
-     * @summary `birUuid`.
-     * @description
-     *
-     * Stored-BIR UUID written to C `BirUuid` (cl.20, §15.58). Required
-     * on a conforming response (`X.1083 §16.48`, Table 106).
-     *
-     * @public
-     * @readonly
-     */
-    readonly birUuid: BioAPI_UUID
-  ) {}
+    birUuid: BioAPI_UUID
+  ) {
+    this.birUuid = birUuid;
+  }
 
   /**
    * @summary Restructures an object into a DbStoreBIR_ResponseParams

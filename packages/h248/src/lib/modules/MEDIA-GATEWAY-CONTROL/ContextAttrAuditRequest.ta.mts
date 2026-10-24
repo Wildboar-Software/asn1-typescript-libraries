@@ -52,116 +52,137 @@ import { SelectLogic, _decode_SelectLogic, _encode_SelectLogic } from "../MEDIA-
  */
 export
 class ContextAttrAuditRequest {
+    /**
+     * @summary `topology`.
+     * @description
+     *
+     * Present to audit the Topology descriptor (clause 7.2.9).
+     *
+     * @public
+     * @readonly
+     */
+    readonly topology?: OPTIONAL<NULL>;
+    /**
+     * @summary `emergency`.
+     * @description
+     *
+     * Present to audit the emergency-call indicator.
+     *
+     * @public
+     * @readonly
+     */
+    readonly emergency?: OPTIONAL<NULL>;
+    /**
+     * @summary `priority`.
+     * @description
+     *
+     * Present to audit the context priority.
+     *
+     * @public
+     * @readonly
+     */
+    readonly priority?: OPTIONAL<NULL>;
+    /**
+     * @summary `iepscallind`.
+     * @description
+     *
+     * Present to audit the IEPS-call indicator.
+     *
+     * @public
+     * @readonly
+     */
+    readonly iepscallind?: OPTIONAL<NULL>;
+    /**
+     * @summary `contextPropAud`.
+     * @description
+     *
+     * Individual packaged context properties to audit, or to use as
+     * selection criteria (Annex A). AND/OR logic for property selection is
+     * the action's `selectLogic`.
+     *
+     * @public
+     * @readonly
+     */
+    readonly contextPropAud?: OPTIONAL<IndAudPropertyParm[]>;
+    /**
+     * @summary `selectpriority`.
+     * @description
+     *
+     * Return only contexts whose priority equals this value, 0 to 15 (Annex
+     * A).
+     *
+     * @public
+     * @readonly
+     */
+    readonly selectpriority?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `selectemergency`.
+     * @description
+     *
+     * Filter on whether the emergency indicator is set. True selects
+     * contexts where it is set; false selects contexts where it is not
+     * (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    readonly selectemergency?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `selectiepscallind`.
+     * @description
+     *
+     * Filter on whether the IEPS indicator is set. True selects contexts
+     * where it is set; false selects contexts where it is not (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    readonly selectiepscallind?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `selectLogic`.
+     * @description
+     *
+     * How multiple selection criteria combine. Omitted means AND (clauses
+     * 7.2.5 and 7.2.9, Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    readonly selectLogic?: OPTIONAL<SelectLogic>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `topology`.
-         * @description
-         *
-         * Present to audit the Topology descriptor (clause 7.2.9).
-         *
-         * @public
-         * @readonly
-         */
-        readonly topology?: OPTIONAL<NULL>,
-        /**
-         * @summary `emergency`.
-         * @description
-         *
-         * Present to audit the emergency-call indicator.
-         *
-         * @public
-         * @readonly
-         */
-        readonly emergency?: OPTIONAL<NULL>,
-        /**
-         * @summary `priority`.
-         * @description
-         *
-         * Present to audit the context priority.
-         *
-         * @public
-         * @readonly
-         */
-        readonly priority?: OPTIONAL<NULL>,
-        /**
-         * @summary `iepscallind`.
-         * @description
-         *
-         * Present to audit the IEPS-call indicator.
-         *
-         * @public
-         * @readonly
-         */
-        readonly iepscallind?: OPTIONAL<NULL>,
-        /**
-         * @summary `contextPropAud`.
-         * @description
-         *
-         * Individual packaged context properties to audit, or to use as
-         * selection criteria (Annex A). AND/OR logic for property selection is
-         * the action's `selectLogic`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly contextPropAud?: OPTIONAL<IndAudPropertyParm[]>,
-        /**
-         * @summary `selectpriority`.
-         * @description
-         *
-         * Return only contexts whose priority equals this value, 0 to 15 (Annex
-         * A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly selectpriority?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `selectemergency`.
-         * @description
-         *
-         * Filter on whether the emergency indicator is set. True selects
-         * contexts where it is set; false selects contexts where it is not
-         * (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly selectemergency?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `selectiepscallind`.
-         * @description
-         *
-         * Filter on whether the IEPS indicator is set. True selects contexts
-         * where it is set; false selects contexts where it is not (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly selectiepscallind?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `selectLogic`.
-         * @description
-         *
-         * How multiple selection criteria combine. Omitted means AND (clauses
-         * 7.2.5 and 7.2.9, Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly selectLogic?: OPTIONAL<SelectLogic>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
+        topology?: OPTIONAL<NULL>,
+        emergency?: OPTIONAL<NULL>,
+        priority?: OPTIONAL<NULL>,
+        iepscallind?: OPTIONAL<NULL>,
+        contextPropAud?: OPTIONAL<IndAudPropertyParm[]>,
+        selectpriority?: OPTIONAL<INTEGER>,
+        selectemergency?: OPTIONAL<BOOLEAN>,
+        selectiepscallind?: OPTIONAL<BOOLEAN>,
+        selectLogic?: OPTIONAL<SelectLogic>,
+        _unrecognizedExtensionsList: _Element[] = []
     ) {
+        this.topology = topology;
+        this.emergency = emergency;
+        this.priority = priority;
+        this.iepscallind = iepscallind;
+        this.contextPropAud = contextPropAud;
+        this.selectpriority = selectpriority;
+        this.selectemergency = selectemergency;
+        this.selectiepscallind = selectiepscallind;
+        this.selectLogic = selectLogic;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
         if (selectpriority !== undefined) {
             const n = typeof selectpriority === "bigint" ? selectpriority : BigInt(selectpriority);
             if (n < 0n || n > 15n) {

@@ -39,28 +39,34 @@ import {
  *
  */
 export class NoSuchArgument_eventId {
+  /**
+   * @summary `managedObjectClass`.
+   * @description
+   *
+   * Class on which the unknown event info was used.
+   *
+   * @public
+   * @readonly
+   */
+  readonly managedObjectClass: OPTIONAL<ObjectClass>;
+  /**
+   * @summary `eventType`.
+   * @description
+   *
+   * Event whose information is unknown.
+   *
+   * @public
+   * @readonly
+   */
+  readonly eventType: EventTypeId;
+
   constructor(
-    /**
-     * @summary `managedObjectClass`.
-     * @description
-     *
-     * Class on which the unknown event info was used.
-     *
-     * @public
-     * @readonly
-     */
-    readonly managedObjectClass: OPTIONAL<ObjectClass>,
-    /**
-     * @summary `eventType`.
-     * @description
-     *
-     * Event whose information is unknown.
-     *
-     * @public
-     * @readonly
-     */
-    readonly eventType: EventTypeId
-  ) {}
+    managedObjectClass: OPTIONAL<ObjectClass>,
+    eventType: EventTypeId
+  ) {
+    this.managedObjectClass = managedObjectClass;
+    this.eventType = eventType;
+  }
 
   /**
    * @summary Restructures an object into a NoSuchArgument_eventId

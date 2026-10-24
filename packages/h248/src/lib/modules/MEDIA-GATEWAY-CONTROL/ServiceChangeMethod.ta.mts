@@ -7,45 +7,47 @@ import * as $ from "@wildboar/asn1/functional";
 
 
 export
-enum _enum_for_ServiceChangeMethod {
+const _enum_for_ServiceChangeMethod = {
     /**
      * Primary MG is out of service and a secondary is taking over, or the MG
      * has detected MGC failure (clause 7.2.8.1.1). Root only (Annex F.4).
      * Reasons 908, 909, 919, and 920 are the failover reasons in Table F.1.
      */
-    failover = 0,
+    failover: 0,
     /**
      * Terminations were taken out of service abruptly. Connections may be lost.
      * The MGC subtracts a non-Root termination; on Root it treats every
      * connection as lost (clause 7.2.8.1.1).
      */
-    forced = 1,
+    forced: 1,
     /**
      * Terminations will go OutOfService after `serviceChangeDelay`, or when
      * they reach the NULL context if the delay is null. Existing connections
      * are not cut immediately (clause 7.2.8.1.1).
      */
-    graceful = 2,
+    graceful: 2,
     /**
      * Service returns after `serviceChangeDelay`. On Root, every termination is
      * then assumed InService; those that are not are reported by later Forced
      * commands (clause 7.2.8.1.1). This is the registration method.
      */
-    restart = 3,
+    restart: 3,
     /**
      * The MG lost contact with the MGC and then reached the same MGC again.
      * Always sent on Root (clause 7.2.8.1.1). The MGC may audit to
      * resynchronize.
      */
-    disconnected = 4,
+    disconnected: 4,
     /**
      * The association moves to another MGC. From the MGC, this announces that
      * it is leaving. From the MG, this is the attempt to register with the
      * replacement named by a previous handoff (clauses 7.2.8.1.1 and 11.5).
      * Root only.
      */
-    handOff = 5,
-}
+    handOff: 5,
+} as const;
+
+export type _enum_for_ServiceChangeMethod = (typeof _enum_for_ServiceChangeMethod)[keyof typeof _enum_for_ServiceChangeMethod];
 
 /**
  * @summary ServiceChangeMethod
@@ -215,8 +217,8 @@ const ServiceChangeMethod_handOff: ServiceChangeMethod = 5; /* LONG_NAMED_ENUMER
  */
 export
 const handOff: ServiceChangeMethod = ServiceChangeMethod_handOff; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_ServiceChangeMethod = $._decodeEnumerated;
-export const _encode_ServiceChangeMethod = $._encodeEnumerated;
+export const _decode_ServiceChangeMethod = $._decodeEnumerated as $.ASN1Decoder<ServiceChangeMethod>;
+export const _encode_ServiceChangeMethod = $._encodeEnumerated as $.ASN1Encoder<ServiceChangeMethod>;
 
 
 /* eslint-enable */

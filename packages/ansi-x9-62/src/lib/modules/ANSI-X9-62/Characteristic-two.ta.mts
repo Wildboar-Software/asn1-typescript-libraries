@@ -28,40 +28,48 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class Characteristic_two {
+    /**
+     * @summary `m`.
+     * @description
+     *
+     * Degree of F2^m (field size `2^m`). ANSI X9.62-1998 §6.1.
+     *
+     * @public
+     * @readonly
+     */
+    readonly m: INTEGER;
+    /**
+     * @summary `basis`.
+     * @description
+     *
+     * Representation: `gnBasis`, `tpBasis`, or `ppBasis`.
+     * ANSI X9.62-1998 §6.1, §4.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    readonly basis: OBJECT_IDENTIFIER;
+    /**
+     * @summary `parameters`.
+     * @description
+     *
+     * `NULL` (GNB), `Trinomial` (TPB), or `Pentanomial` (PPB).
+     * ANSI X9.62-1998 §6.1.
+     *
+     * @public
+     * @readonly
+     */
+    readonly parameters: _Element;
+
     constructor(
-        /**
-         * @summary `m`.
-         * @description
-         *
-         * Degree of F2^m (field size `2^m`). ANSI X9.62-1998 §6.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly m: INTEGER,
-        /**
-         * @summary `basis`.
-         * @description
-         *
-         * Representation: `gnBasis`, `tpBasis`, or `ppBasis`.
-         * ANSI X9.62-1998 §6.1, §4.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly basis: OBJECT_IDENTIFIER,
-        /**
-         * @summary `parameters`.
-         * @description
-         *
-         * `NULL` (GNB), `Trinomial` (TPB), or `Pentanomial` (PPB).
-         * ANSI X9.62-1998 §6.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly parameters: _Element
-    ) {}
+        m: INTEGER,
+        basis: OBJECT_IDENTIFIER,
+        parameters: _Element
+    ) {
+        this.m = m;
+        this.basis = basis;
+        this.parameters = parameters;
+    }
 
     /**
      * @summary Restructures an object into a Characteristic_two

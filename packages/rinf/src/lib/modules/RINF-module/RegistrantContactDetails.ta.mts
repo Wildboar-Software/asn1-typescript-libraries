@@ -41,52 +41,66 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class RegistrantContactDetails {
+  /**
+   * @summary `familyNameOrOrganization`.
+   * @public
+   * @readonly
+   */
+  readonly familyNameOrOrganization?: OPTIONAL<UTF8String>;
+  /**
+   * @summary `givenName`.
+   * @public
+   * @readonly
+   */
+  readonly givenName?: OPTIONAL<UTF8String>;
+  /**
+   * @summary `e_mailAddress`.
+   * @public
+   * @readonly
+   */
+  readonly e_mailAddress?: OPTIONAL<UTF8String>;
+  /**
+   * @summary `phone`.
+   * @description
+   *
+   * Shall start with `+` (D.2.5).
+   *
+   * @public
+   * @readonly
+   */
+  readonly phone?: OPTIONAL<IA5String>;
+  /**
+   * @summary `fax`.
+   * @description
+   *
+   * Shall start with `+` (D.2.5).
+   *
+   * @public
+   * @readonly
+   */
+  readonly fax?: OPTIONAL<IA5String>;
+  /**
+   * @summary `postalAddress`.
+   * @public
+   * @readonly
+   */
+  readonly postalAddress?: OPTIONAL<UTF8String[]>;
+
   constructor(
-    /**
-     * @summary `familyNameOrOrganization`.
-     * @public
-     * @readonly
-     */
-    readonly familyNameOrOrganization?: OPTIONAL<UTF8String>,
-    /**
-     * @summary `givenName`.
-     * @public
-     * @readonly
-     */
-    readonly givenName?: OPTIONAL<UTF8String>,
-    /**
-     * @summary `e_mailAddress`.
-     * @public
-     * @readonly
-     */
-    readonly e_mailAddress?: OPTIONAL<UTF8String>,
-    /**
-     * @summary `phone`.
-     * @description
-     *
-     * Shall start with `+` (D.2.5).
-     *
-     * @public
-     * @readonly
-     */
-    readonly phone?: OPTIONAL<IA5String>,
-    /**
-     * @summary `fax`.
-     * @description
-     *
-     * Shall start with `+` (D.2.5).
-     *
-     * @public
-     * @readonly
-     */
-    readonly fax?: OPTIONAL<IA5String>,
-    /**
-     * @summary `postalAddress`.
-     * @public
-     * @readonly
-     */
-    readonly postalAddress?: OPTIONAL<UTF8String[]>
-  ) {}
+    familyNameOrOrganization?: OPTIONAL<UTF8String>,
+    givenName?: OPTIONAL<UTF8String>,
+    e_mailAddress?: OPTIONAL<UTF8String>,
+    phone?: OPTIONAL<IA5String>,
+    fax?: OPTIONAL<IA5String>,
+    postalAddress?: OPTIONAL<UTF8String[]>
+  ) {
+    this.familyNameOrOrganization = familyNameOrOrganization;
+    this.givenName = givenName;
+    this.e_mailAddress = e_mailAddress;
+    this.phone = phone;
+    this.fax = fax;
+    this.postalAddress = postalAddress;
+  }
 
   /**
    * @summary Restructures an object into a RegistrantContactDetails

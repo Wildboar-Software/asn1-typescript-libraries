@@ -29,19 +29,23 @@ import { Octet16, _decode_Octet16, _encode_Octet16 } from "../RSPDefinitions/Oct
  */
 export
 class GetEuiccChallengeResponse {
+    /**
+     * @summary `euiccChallenge`.
+     * @description
+     * 
+     * Sixteen fresh random octets. The server must echo them in
+     * `serverSigned1`. SGP.22 v3.1 §5.7.7.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly euiccChallenge: Octet16;
+
     constructor (
-        /**
-         * @summary `euiccChallenge`.
-         * @description
-         * 
-         * Sixteen fresh random octets. The server must echo them in
-         * `serverSigned1`. SGP.22 v3.1 §5.7.7.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly euiccChallenge: Octet16
-    ) {}
+        euiccChallenge: Octet16
+    ) {
+        this.euiccChallenge = euiccChallenge;
+    }
 
     /**
      * @summary Restructures an object into a GetEuiccChallengeResponse

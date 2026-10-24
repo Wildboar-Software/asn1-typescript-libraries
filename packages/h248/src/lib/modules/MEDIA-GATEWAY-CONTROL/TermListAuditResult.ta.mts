@@ -32,41 +32,49 @@ import { TerminationAudit, _decode_TerminationAudit, _encode_TerminationAudit } 
  */
 export
 class TermListAuditResult {
+    /**
+     * @summary `terminationIDList`.
+     * @description
+     *
+     * Terminations this single audit body covers.
+     *
+     * @public
+     * @readonly
+     */
+    readonly terminationIDList: TerminationIDList;
+    /**
+     * @summary `terminationAuditResult`.
+     * @description
+     *
+     * Returned descriptors and items. In a wildcard union, values that
+     * differ across terminations are all present, with duplicates removed
+     * (clause 6.3.4).
+     *
+     * @public
+     * @readonly
+     */
+    readonly terminationAuditResult: TerminationAudit;
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `terminationIDList`.
-         * @description
-         *
-         * Terminations this single audit body covers.
-         *
-         * @public
-         * @readonly
-         */
-        readonly terminationIDList: TerminationIDList,
-        /**
-         * @summary `terminationAuditResult`.
-         * @description
-         *
-         * Returned descriptors and items. In a wildcard union, values that
-         * differ across terminations are all present, with duplicates removed
-         * (clause 6.3.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly terminationAuditResult: TerminationAudit,
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        terminationIDList: TerminationIDList,
+        terminationAuditResult: TerminationAudit,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.terminationIDList = terminationIDList;
+        this.terminationAuditResult = terminationAuditResult;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TermListAuditResult

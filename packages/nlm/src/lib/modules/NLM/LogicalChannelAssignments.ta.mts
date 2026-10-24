@@ -45,57 +45,67 @@ import {
  *
  */
 export class LogicalChannelAssignments {
+    /**
+     * @summary `pVC`.
+     * @description
+     *
+     * PVC channel identifiers. Cardinality 0..(LIC-1); each value in
+     * 1..(LIC-1).
+     * ITU-T Rec. X.283 (12/97)
+     * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+     *
+     * @public
+     * @readonly
+     */
+    readonly pVC: LogicalChannelId[];
+    /**
+     * @summary `incoming`.
+     * @description
+     *
+     * Incoming-only LCN range. Absent ⇒ none assigned.
+     * ITU-T Rec. X.283 (12/97)
+     * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+     *
+     * @public
+     * @readonly
+     */
+    readonly incoming?: OPTIONAL<LogicalChannelRange>;
+    /**
+     * @summary `twoWay`.
+     * @description
+     *
+     * Two-way LCN range. Absent ⇒ none assigned.
+     * ITU-T Rec. X.283 (12/97)
+     * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+     *
+     * @public
+     * @readonly
+     */
+    readonly twoWay?: OPTIONAL<LogicalChannelRange>;
+    /**
+     * @summary `outgoing`.
+     * @description
+     *
+     * Outgoing-only LCN range. Absent ⇒ none assigned.
+     * ITU-T Rec. X.283 (12/97)
+     * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+     *
+     * @public
+     * @readonly
+     */
+    readonly outgoing?: OPTIONAL<LogicalChannelRange>;
+
     constructor(
-        /**
-         * @summary `pVC`.
-         * @description
-         *
-         * PVC channel identifiers. Cardinality 0..(LIC-1); each value in
-         * 1..(LIC-1).
-         * ITU-T Rec. X.283 (12/97)
-         * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pVC: LogicalChannelId[],
-        /**
-         * @summary `incoming`.
-         * @description
-         *
-         * Incoming-only LCN range. Absent ⇒ none assigned.
-         * ITU-T Rec. X.283 (12/97)
-         * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
-         *
-         * @public
-         * @readonly
-         */
-        readonly incoming?: OPTIONAL<LogicalChannelRange>,
-        /**
-         * @summary `twoWay`.
-         * @description
-         *
-         * Two-way LCN range. Absent ⇒ none assigned.
-         * ITU-T Rec. X.283 (12/97)
-         * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
-         *
-         * @public
-         * @readonly
-         */
-        readonly twoWay?: OPTIONAL<LogicalChannelRange>,
-        /**
-         * @summary `outgoing`.
-         * @description
-         *
-         * Outgoing-only LCN range. Absent ⇒ none assigned.
-         * ITU-T Rec. X.283 (12/97)
-         * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
-         *
-         * @public
-         * @readonly
-         */
-        readonly outgoing?: OPTIONAL<LogicalChannelRange>
-    ) {}
+        pVC: LogicalChannelId[],
+        incoming?: OPTIONAL<LogicalChannelRange>,
+        twoWay?: OPTIONAL<LogicalChannelRange>,
+        outgoing?: OPTIONAL<LogicalChannelRange>
+    ) {
+        this.pVC = pVC;
+        this.incoming = incoming;
+        this.twoWay = twoWay;
+        this.outgoing = outgoing;
+    }
 
     /**
      * @summary Restructures an object into a LogicalChannelAssignments

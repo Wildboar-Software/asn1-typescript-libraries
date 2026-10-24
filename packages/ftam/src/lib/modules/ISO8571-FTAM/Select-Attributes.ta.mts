@@ -35,20 +35,24 @@ import {
  *
  */
 export class Select_Attributes {
+  /**
+   * @summary `pathname`.
+   * @description
+   *
+   * 1988 filename (kernel). The only attribute used to identify
+   * the file on F-SELECT. ISO 8571-2:1988 §12.1;
+   * ISO 8571-3:1988 §15.1.2.3.
+   *
+   * @public
+   * @readonly
+   */
+  readonly pathname: Pathname_Attribute;
+
   constructor(
-    /**
-     * @summary `pathname`.
-     * @description
-     *
-     * 1988 filename (kernel). The only attribute used to identify
-     * the file on F-SELECT. ISO 8571-2:1988 §12.1;
-     * ISO 8571-3:1988 §15.1.2.3.
-     *
-     * @public
-     * @readonly
-     */
-    readonly pathname: Pathname_Attribute
-  ) {}
+    pathname: Pathname_Attribute
+  ) {
+    this.pathname = pathname;
+  }
 
   /**
    * @summary Restructures an object into a Select_Attributes

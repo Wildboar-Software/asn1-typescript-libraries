@@ -53,58 +53,68 @@ import {
  *
  */
 export class CMIPUserInfo {
+  /**
+   * @summary `protocolVersion`.
+   * @description
+   *
+   * Versions this CMIPM supports. Default `{version1}`.
+   * X.711 §5.4 defines version 2, which replaces version
+   * 1; this Recommendation does not define interworking
+   * between them. X.711 §7.3.1, Annex A.2.
+   *
+   * @public
+   * @readonly
+   */
+  readonly protocolVersion?: OPTIONAL<ProtocolVersion>;
+  /**
+   * @summary `functionalUnits`.
+   * @description
+   *
+   * Functional units this CMISE-service-user supports.
+   * Default `{}` (kernel only). Bit `i` is one iff unit
+   * `i` is supported. X.711 §7.3.1.
+   *
+   * @public
+   * @readonly
+   */
+  readonly functionalUnits?: OPTIONAL<FunctionalUnits>;
+  /**
+   * @summary `accessControl`.
+   * @description
+   *
+   * Optional access-control value from the CMISE-service-
+   * user. The responder verifies it; failure rejects the
+   * association (`rejected by responder (permanent)`).
+   * Encoding of further user information is not defined
+   * here. X.711 §7.3.1, Annex A.2.2.
+   *
+   * @public
+   * @readonly
+   */
+  readonly accessControl?: OPTIONAL<EXTERNAL>;
+  /**
+   * @summary `userInfo`.
+   * @description
+   *
+   * Additional CMISE-service-user information. Encoding
+   * is not defined by X.711. X.711 §7.3.1.
+   *
+   * @public
+   * @readonly
+   */
+  readonly userInfo?: OPTIONAL<EXTERNAL>;
+
   constructor(
-    /**
-     * @summary `protocolVersion`.
-     * @description
-     *
-     * Versions this CMIPM supports. Default `{version1}`.
-     * X.711 §5.4 defines version 2, which replaces version
-     * 1; this Recommendation does not define interworking
-     * between them. X.711 §7.3.1, Annex A.2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly protocolVersion?: OPTIONAL<ProtocolVersion>,
-    /**
-     * @summary `functionalUnits`.
-     * @description
-     *
-     * Functional units this CMISE-service-user supports.
-     * Default `{}` (kernel only). Bit `i` is one iff unit
-     * `i` is supported. X.711 §7.3.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly functionalUnits?: OPTIONAL<FunctionalUnits>,
-    /**
-     * @summary `accessControl`.
-     * @description
-     *
-     * Optional access-control value from the CMISE-service-
-     * user. The responder verifies it; failure rejects the
-     * association (`rejected by responder (permanent)`).
-     * Encoding of further user information is not defined
-     * here. X.711 §7.3.1, Annex A.2.2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly accessControl?: OPTIONAL<EXTERNAL>,
-    /**
-     * @summary `userInfo`.
-     * @description
-     *
-     * Additional CMISE-service-user information. Encoding
-     * is not defined by X.711. X.711 §7.3.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly userInfo?: OPTIONAL<EXTERNAL>
-  ) {}
+    protocolVersion?: OPTIONAL<ProtocolVersion>,
+    functionalUnits?: OPTIONAL<FunctionalUnits>,
+    accessControl?: OPTIONAL<EXTERNAL>,
+    userInfo?: OPTIONAL<EXTERNAL>
+  ) {
+    this.protocolVersion = protocolVersion;
+    this.functionalUnits = functionalUnits;
+    this.accessControl = accessControl;
+    this.userInfo = userInfo;
+  }
 
   /**
    * @summary Restructures an object into a CMIPUserInfo

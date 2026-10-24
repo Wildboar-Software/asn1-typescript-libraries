@@ -42,30 +42,36 @@ import {
  *
  */
 export class DbDelete_RequestParams {
+  /**
+   * @summary `originalBSPHandle`.
+   * @description
+   *
+   * Hosting-endpoint BSP handle. Rewritten from the master's local
+   * `BSPHandle` (cl.26) (`X.1083 §16.45`, Table 102).
+   *
+   * @public
+   * @readonly
+   */
+  readonly originalBSPHandle: BioAPI_HANDLE;
+  /**
+   * @summary `dbUuid`.
+   * @description
+   *
+   * Database UUID from C `DbUuid`. Not OPTIONAL: a NULL pointer is
+   * unconvertible (cl.19, §15.58) (`X.1083 §16.45`, Table 102).
+   *
+   * @public
+   * @readonly
+   */
+  readonly dbUuid: BioAPI_UUID;
+
   constructor(
-    /**
-     * @summary `originalBSPHandle`.
-     * @description
-     *
-     * Hosting-endpoint BSP handle. Rewritten from the master's local
-     * `BSPHandle` (cl.26) (`X.1083 §16.45`, Table 102).
-     *
-     * @public
-     * @readonly
-     */
-    readonly originalBSPHandle: BioAPI_HANDLE,
-    /**
-     * @summary `dbUuid`.
-     * @description
-     *
-     * Database UUID from C `DbUuid`. Not OPTIONAL: a NULL pointer is
-     * unconvertible (cl.19, §15.58) (`X.1083 §16.45`, Table 102).
-     *
-     * @public
-     * @readonly
-     */
-    readonly dbUuid: BioAPI_UUID
-  ) {}
+    originalBSPHandle: BioAPI_HANDLE,
+    dbUuid: BioAPI_UUID
+  ) {
+    this.originalBSPHandle = originalBSPHandle;
+    this.dbUuid = dbUuid;
+  }
 
   /**
    * @summary Restructures an object into a DbDelete_RequestParams

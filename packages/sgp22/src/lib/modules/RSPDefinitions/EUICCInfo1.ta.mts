@@ -36,47 +36,55 @@ import { VersionType, _decode_VersionType, _encode_VersionType } from "../RSPDef
  */
 export
 class EUICCInfo1 {
+    /**
+     * @summary `svn`.
+     * @description
+     * 
+     * SGP.22 version the eUICC supports. v3.1 Annex H names the
+     * corresponding field `lowestSvn`. The SM-DP+ rejects a version it does
+     * not support. SGP.22 v3.1 §4.3 and §5.6.1.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly svn: VersionType;
+    /**
+     * @summary `euiccCiPKIdListForVerification`.
+     * @description
+     * 
+     * Subject key identifiers of eSIM CA Root CA keys the eUICC can use to
+     * verify signatures. The server must choose a CERT.DPauth.SIG or
+     * CERT.DSauth.SIG that chains to one of these. SGP.22 v3.1 §4.3 and
+     * §5.6.1.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly euiccCiPKIdListForVerification: OCTET_STRING[];
+    /**
+     * @summary `euiccCiPKIdListForSigning`.
+     * @description
+     * 
+     * Subject key identifiers of eSIM CA Root CA keys under which the eUICC
+     * can create signatures that a Variant O chain can verify. The server
+     * picks one and returns it as `euiccCiPKIdToBeUsed`. SGP.22 v3.1 §4.3.
+     * v3.1 separates Variant Ov3/A/B/C keys into
+     * `euiccCiPKIdListForSigningV3`.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly euiccCiPKIdListForSigning: OCTET_STRING[];
+
     constructor (
-        /**
-         * @summary `svn`.
-         * @description
-         * 
-         * SGP.22 version the eUICC supports. v3.1 Annex H names the
-         * corresponding field `lowestSvn`. The SM-DP+ rejects a version it does
-         * not support. SGP.22 v3.1 §4.3 and §5.6.1.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly svn: VersionType,
-        /**
-         * @summary `euiccCiPKIdListForVerification`.
-         * @description
-         * 
-         * Subject key identifiers of eSIM CA Root CA keys the eUICC can use to
-         * verify signatures. The server must choose a CERT.DPauth.SIG or
-         * CERT.DSauth.SIG that chains to one of these. SGP.22 v3.1 §4.3 and
-         * §5.6.1.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly euiccCiPKIdListForVerification: OCTET_STRING[],
-        /**
-         * @summary `euiccCiPKIdListForSigning`.
-         * @description
-         * 
-         * Subject key identifiers of eSIM CA Root CA keys under which the eUICC
-         * can create signatures that a Variant O chain can verify. The server
-         * picks one and returns it as `euiccCiPKIdToBeUsed`. SGP.22 v3.1 §4.3.
-         * v3.1 separates Variant Ov3/A/B/C keys into
-         * `euiccCiPKIdListForSigningV3`.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly euiccCiPKIdListForSigning: OCTET_STRING[]
-    ) {}
+        svn: VersionType,
+        euiccCiPKIdListForVerification: OCTET_STRING[],
+        euiccCiPKIdListForSigning: OCTET_STRING[]
+    ) {
+        this.svn = svn;
+        this.euiccCiPKIdListForVerification = euiccCiPKIdListForVerification;
+        this.euiccCiPKIdListForSigning = euiccCiPKIdListForSigning;
+    }
 
     /**
      * @summary Restructures an object into a EUICCInfo1

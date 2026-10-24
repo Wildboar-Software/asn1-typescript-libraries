@@ -43,63 +43,75 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class CamRegCnfMsgContent {
+    /**
+     * @summary `sessionID`.
+     * @description
+     *
+     * Session identifier, 10 octets (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    readonly sessionID: OCTET_STRING;
+    /**
+     * @summary `mEK_IV`.
+     * @description
+     *
+     * AES-128-CBC IV for MEK, 16 octets, unique per
+     * session (§7.3, §8.3).
+     *
+     * @public
+     * @readonly
+     */
+    readonly mEK_IV: OCTET_STRING;
+    /**
+     * @summary `iCCIEK_IV`.
+     * @description
+     *
+     * AES-128-CBC IV for ICCIEK, 16 octets
+     * (§7.3, §8.3).
+     *
+     * @public
+     * @readonly
+     */
+    readonly iCCIEK_IV: OCTET_STRING;
+    /**
+     * @summary `cCCIEK_IV`.
+     * @description
+     *
+     * AES-128-CBC IV for CCCIEK, 16 octets
+     * (§7.3, §8.3).
+     *
+     * @public
+     * @readonly
+     */
+    readonly cCCIEK_IV: OCTET_STRING;
+    /**
+     * @summary `cCCIEK`.
+     * @description
+     *
+     * Common CAM client image encryption key, 16
+     * octets (128 bits). Generation is in Figure 5
+     * (§7.3, §8.3).
+     *
+     * @public
+     * @readonly
+     */
+    readonly cCCIEK: OCTET_STRING;
+
     constructor (
-        /**
-         * @summary `sessionID`.
-         * @description
-         *
-         * Session identifier, 10 octets (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sessionID: OCTET_STRING,
-        /**
-         * @summary `mEK_IV`.
-         * @description
-         *
-         * AES-128-CBC IV for MEK, 16 octets, unique per
-         * session (§7.3, §8.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mEK_IV: OCTET_STRING,
-        /**
-         * @summary `iCCIEK_IV`.
-         * @description
-         *
-         * AES-128-CBC IV for ICCIEK, 16 octets
-         * (§7.3, §8.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly iCCIEK_IV: OCTET_STRING,
-        /**
-         * @summary `cCCIEK_IV`.
-         * @description
-         *
-         * AES-128-CBC IV for CCCIEK, 16 octets
-         * (§7.3, §8.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cCCIEK_IV: OCTET_STRING,
-        /**
-         * @summary `cCCIEK`.
-         * @description
-         *
-         * Common CAM client image encryption key, 16
-         * octets (128 bits). Generation is in Figure 5
-         * (§7.3, §8.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cCCIEK: OCTET_STRING
-    ) {}
+        sessionID: OCTET_STRING,
+        mEK_IV: OCTET_STRING,
+        iCCIEK_IV: OCTET_STRING,
+        cCCIEK_IV: OCTET_STRING,
+        cCCIEK: OCTET_STRING
+    ) {
+        this.sessionID = sessionID;
+        this.mEK_IV = mEK_IV;
+        this.iCCIEK_IV = iCCIEK_IV;
+        this.cCCIEK_IV = cCCIEK_IV;
+        this.cCCIEK = cCCIEK;
+    }
 
     /**
      * @summary Restructures an object into a CamRegCnfMsgContent

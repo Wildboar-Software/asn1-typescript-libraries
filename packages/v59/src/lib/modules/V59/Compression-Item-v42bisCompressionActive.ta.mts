@@ -28,12 +28,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @enum {number}
  */
 export
-enum _enum_for_Compression_Item_v42bisCompressionActive {
-    none = 0,
-    initOnly = 1,
-    respOnly = 2,
-    both = 3,
-}
+const _enum_for_Compression_Item_v42bisCompressionActive = {
+    none: 0,
+    initOnly: 1,
+    respOnly: 2,
+    both: 3,
+} as const;
+
+export type _enum_for_Compression_Item_v42bisCompressionActive = (typeof _enum_for_Compression_Item_v42bisCompressionActive)[keyof typeof _enum_for_Compression_Item_v42bisCompressionActive];
 
 /**
  * @summary Compression_Item_v42bisCompressionActive
@@ -150,7 +152,7 @@ const Compression_Item_v42bisCompressionActive_both: Compression_Item_v42bisComp
  */
 export
 const both: Compression_Item_v42bisCompressionActive = Compression_Item_v42bisCompressionActive.both; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_Compression_Item_v42bisCompressionActive = $._decodeEnumerated;
-export const _encode_Compression_Item_v42bisCompressionActive = $._encodeEnumerated;
+export const _decode_Compression_Item_v42bisCompressionActive = $._decodeEnumerated as $.ASN1Decoder<Compression_Item_v42bisCompressionActive>;
+export const _encode_Compression_Item_v42bisCompressionActive = $._encodeEnumerated as $.ASN1Encoder<Compression_Item_v42bisCompressionActive>;
 
 /* eslint-enable */

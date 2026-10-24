@@ -44,57 +44,67 @@ import { ScopedPduData, _decode_ScopedPduData, _encode_ScopedPduData } from "../
  */
 export
 class SNMPv3Message {
+    /**
+     * @summary `msgVersion`.
+     * @description
+     *
+     * Set to `snmpv3(3)`; identifies an SNMPv3 message
+     * ([RFC 3412 §6.1](https://datatracker.ietf.org/doc/html/rfc3412#section-6.1)).
+     * Range 0..2147483647.
+     *
+     * @public
+     * @readonly
+     */
+    readonly msgVersion: INTEGER;
+    /**
+     * @summary `msgGlobalData`.
+     * @description
+     *
+     * Administrative header: `msgID`, `msgMaxSize`, `msgFlags`,
+     * `msgSecurityModel`
+     * ([RFC 3412 §6](https://datatracker.ietf.org/doc/html/rfc3412#section-6)).
+     *
+     * @public
+     * @readonly
+     */
+    readonly msgGlobalData: HeaderData;
+    /**
+     * @summary `msgSecurityParameters`.
+     * @description
+     *
+     * Security Model-specific parameters as an opaque OCTET STRING.
+     * Not interpreted by the v3MP; passed to the Security Model
+     * named by `msgSecurityModel`
+     * ([RFC 3412 §6.6](https://datatracker.ietf.org/doc/html/rfc3412#section-6.6)).
+     *
+     * @public
+     * @readonly
+     */
+    readonly msgSecurityParameters: OCTET_STRING;
+    /**
+     * @summary `msgData`.
+     * @description
+     *
+     * Plaintext `ScopedPDU` or encrypted scopedPDU OCTET STRING,
+     * selected by `privFlag` in `msgFlags`
+     * ([RFC 3412 §6.7](https://datatracker.ietf.org/doc/html/rfc3412#section-6.7)).
+     *
+     * @public
+     * @readonly
+     */
+    readonly msgData: ScopedPduData;
+
     constructor (
-        /**
-         * @summary `msgVersion`.
-         * @description
-         *
-         * Set to `snmpv3(3)`; identifies an SNMPv3 message
-         * ([RFC 3412 §6.1](https://datatracker.ietf.org/doc/html/rfc3412#section-6.1)).
-         * Range 0..2147483647.
-         *
-         * @public
-         * @readonly
-         */
-        readonly msgVersion: INTEGER,
-        /**
-         * @summary `msgGlobalData`.
-         * @description
-         *
-         * Administrative header: `msgID`, `msgMaxSize`, `msgFlags`,
-         * `msgSecurityModel`
-         * ([RFC 3412 §6](https://datatracker.ietf.org/doc/html/rfc3412#section-6)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly msgGlobalData: HeaderData,
-        /**
-         * @summary `msgSecurityParameters`.
-         * @description
-         *
-         * Security Model-specific parameters as an opaque OCTET STRING.
-         * Not interpreted by the v3MP; passed to the Security Model
-         * named by `msgSecurityModel`
-         * ([RFC 3412 §6.6](https://datatracker.ietf.org/doc/html/rfc3412#section-6.6)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly msgSecurityParameters: OCTET_STRING,
-        /**
-         * @summary `msgData`.
-         * @description
-         *
-         * Plaintext `ScopedPDU` or encrypted scopedPDU OCTET STRING,
-         * selected by `privFlag` in `msgFlags`
-         * ([RFC 3412 §6.7](https://datatracker.ietf.org/doc/html/rfc3412#section-6.7)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly msgData: ScopedPduData
-    ) {}
+        msgVersion: INTEGER,
+        msgGlobalData: HeaderData,
+        msgSecurityParameters: OCTET_STRING,
+        msgData: ScopedPduData
+    ) {
+        this.msgVersion = msgVersion;
+        this.msgGlobalData = msgGlobalData;
+        this.msgSecurityParameters = msgSecurityParameters;
+        this.msgData = msgData;
+    }
 
     /**
      * @summary Restructures an object into a SNMPv3Message

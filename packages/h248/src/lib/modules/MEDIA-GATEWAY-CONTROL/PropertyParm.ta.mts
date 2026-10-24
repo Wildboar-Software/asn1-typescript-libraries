@@ -52,55 +52,65 @@ import { PropertyParm_extraInfo, _decode_PropertyParm_extraInfo, _encode_Propert
  */
 export
 class PropertyParm {
+    /**
+     * @summary `propertyName`.
+     * @description
+     *
+     * Package and property identifier, four octets. The Recommendation
+     * calls this field `name`. See `PkgdName` for wildcarding and for the
+     * Annex C native-tag convention.
+     *
+     * @public
+     * @readonly
+     */
+    readonly propertyName: PkgdName;
+    /**
+     * @summary `value`.
+     * @description
+     *
+     * Property values, each double-wrapped as an octet string (Annex A).
+     * Empty means CHOOSE. The MG chooses one element unless `sublist` is
+     * selected. Order is descending preference.
+     *
+     * @public
+     * @readonly
+     */
+    readonly value: PropertyID[];
+    /**
+     * @summary `extraInfo`.
+     * @description
+     *
+     * Relation, inclusive range, or sub-list. See the Annex A rules
+     * restated on `PropertyParm-extraInfo`. Omitted for a plain single
+     * value or a plain list of alternatives.
+     *
+     * @public
+     * @readonly
+     */
+    readonly extraInfo?: OPTIONAL<PropertyParm_extraInfo>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `propertyName`.
-         * @description
-         *
-         * Package and property identifier, four octets. The Recommendation
-         * calls this field `name`. See `PkgdName` for wildcarding and for the
-         * Annex C native-tag convention.
-         *
-         * @public
-         * @readonly
-         */
-        readonly propertyName: PkgdName,
-        /**
-         * @summary `value`.
-         * @description
-         *
-         * Property values, each double-wrapped as an octet string (Annex A).
-         * Empty means CHOOSE. The MG chooses one element unless `sublist` is
-         * selected. Order is descending preference.
-         *
-         * @public
-         * @readonly
-         */
-        readonly value: PropertyID[],
-        /**
-         * @summary `extraInfo`.
-         * @description
-         *
-         * Relation, inclusive range, or sub-list. See the Annex A rules
-         * restated on `PropertyParm-extraInfo`. Omitted for a plain single
-         * value or a plain list of alternatives.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extraInfo?: OPTIONAL<PropertyParm_extraInfo>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        propertyName: PkgdName,
+        value: PropertyID[],
+        extraInfo?: OPTIONAL<PropertyParm_extraInfo>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.propertyName = propertyName;
+        this.value = value;
+        this.extraInfo = extraInfo;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PropertyParm

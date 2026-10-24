@@ -31,38 +31,50 @@ import { Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Param
  */
 export
 class DataRetentionMessage {
+    /**
+     * @summary `payload_type`.
+     * @public
+     * @readonly
+     */
+    readonly payload_type: OPTIONAL<PayloadType>;
+    /**
+     * @summary `payload`.
+     * @public
+     * @readonly
+     */
+    readonly payload: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `dr_action`.
+     * @public
+     * @readonly
+     */
+    readonly dr_action: DataRetentionAction;
+    /**
+     * @summary `params`.
+     * @public
+     * @readonly
+     */
+    readonly params?: OPTIONAL<Parameters>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `payload_type`.
-         * @public
-         * @readonly
-         */
-        readonly payload_type: OPTIONAL<PayloadType>,
-        /**
-         * @summary `payload`.
-         * @public
-         * @readonly
-         */
-        readonly payload: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `dr_action`.
-         * @public
-         * @readonly
-         */
-        readonly dr_action: DataRetentionAction,
-        /**
-         * @summary `params`.
-         * @public
-         * @readonly
-         */
-        readonly params?: OPTIONAL<Parameters>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        payload_type: OPTIONAL<PayloadType>,
+        payload: OPTIONAL<OCTET_STRING>,
+        dr_action: DataRetentionAction,
+        params?: OPTIONAL<Parameters>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.payload_type = payload_type;
+        this.payload = payload;
+        this.dr_action = dr_action;
+        this.params = params;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a DataRetentionMessage

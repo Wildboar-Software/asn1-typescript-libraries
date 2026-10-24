@@ -13,13 +13,15 @@ import {
 import * as $ from '@wildboar/asn1/functional';
 
 
-export enum _enum_for_BioAPI_INDICATOR_STATUS {
-  accept = 0,
-  reject = 1,
-  ready = 2,
-  busy = 3,
-  failure = 4,
-}
+export const _enum_for_BioAPI_INDICATOR_STATUS = {
+  accept: 0,
+  reject: 1,
+  ready: 2,
+  busy: 3,
+  failure: 4,
+} as const;
+
+export type _enum_for_BioAPI_INDICATOR_STATUS = (typeof _enum_for_BioAPI_INDICATOR_STATUS)[keyof typeof _enum_for_BioAPI_INDICATOR_STATUS];
 
 
 /**

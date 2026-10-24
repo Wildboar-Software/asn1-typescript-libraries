@@ -21,12 +21,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @enum {number}
  */
 export
-enum _enum_for_NegTokenTarg_negResult {
-    accept_completed = 0,
-    accept_incomplete = 1,
-    reject = 2,
-    request_mic = 3,
-}
+const _enum_for_NegTokenTarg_negResult = {
+    accept_completed: 0,
+    accept_incomplete: 1,
+    reject: 2,
+    request_mic: 3,
+} as const;
+
+export type _enum_for_NegTokenTarg_negResult = (typeof _enum_for_NegTokenTarg_negResult)[keyof typeof _enum_for_NegTokenTarg_negResult];
 
 /**
  * @summary NegTokenTarg_negResult
@@ -131,8 +133,8 @@ const NegTokenTarg_negResult_request_mic: NegTokenTarg_negResult = NegTokenTarg_
  */
 export
 const request_mic: NegTokenTarg_negResult = NegTokenTarg_negResult.request_mic; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_NegTokenTarg_negResult = $._decodeEnumerated;
-export const _encode_NegTokenTarg_negResult = $._encodeEnumerated;
+export const _decode_NegTokenTarg_negResult = $._decodeEnumerated as $.ASN1Decoder<NegTokenTarg_negResult>;
+export const _encode_NegTokenTarg_negResult = $._encodeEnumerated as $.ASN1Encoder<NegTokenTarg_negResult>;
 
 
 /* eslint-enable */

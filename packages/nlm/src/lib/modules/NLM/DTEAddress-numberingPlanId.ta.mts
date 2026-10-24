@@ -28,11 +28,13 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_DTEAddress_numberingPlanId {
-    unknown = 0,
-    x121 = 1,
-    e164 = 2,
-}
+export const _enum_for_DTEAddress_numberingPlanId = {
+    unknown: 0,
+    x121: 1,
+    e164: 2,
+} as const;
+
+export type _enum_for_DTEAddress_numberingPlanId = (typeof _enum_for_DTEAddress_numberingPlanId)[keyof typeof _enum_for_DTEAddress_numberingPlanId];
 
 
 /**
@@ -165,12 +167,12 @@ export const e164: DTEAddress_numberingPlanId =
 
 
 
-export const _decode_DTEAddress_numberingPlanId = $._decodeEnumerated;
+export const _decode_DTEAddress_numberingPlanId = $._decodeEnumerated as $.ASN1Decoder<DTEAddress_numberingPlanId>;
 
 
 
 
-export const _encode_DTEAddress_numberingPlanId = $._encodeEnumerated;
+export const _encode_DTEAddress_numberingPlanId = $._encodeEnumerated as $.ASN1Encoder<DTEAddress_numberingPlanId>;
 
 
 /* eslint-enable */

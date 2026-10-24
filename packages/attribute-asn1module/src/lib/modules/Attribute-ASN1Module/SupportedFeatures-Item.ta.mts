@@ -27,30 +27,36 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class SupportedFeatures_Item {
+    /**
+     * @summary `featureIdentifier`.
+     * @description
+     *
+     * `DMI-SUPPORTEDFEATURES.&id` from `SupportedFeaturesSet`. ITU-T Rec.
+     * X.721 (02/92) Cor.4 §14.2.
+     *
+     * @public
+     * @readonly
+     */
+    readonly featureIdentifier: OBJECT_IDENTIFIER;
+    /**
+     * @summary `featureInfo`.
+     * @description
+     *
+     * `DMI-SUPPORTEDFEATURES.&Value` selected by `featureIdentifier`. ITU-T
+     * Rec. X.721 (02/92) Cor.4 §14.2.
+     *
+     * @public
+     * @readonly
+     */
+    readonly featureInfo: _Element;
+
     constructor (
-        /**
-         * @summary `featureIdentifier`.
-         * @description
-         *
-         * `DMI-SUPPORTEDFEATURES.&id` from `SupportedFeaturesSet`. ITU-T Rec.
-         * X.721 (02/92) Cor.4 §14.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly featureIdentifier: OBJECT_IDENTIFIER,
-        /**
-         * @summary `featureInfo`.
-         * @description
-         *
-         * `DMI-SUPPORTEDFEATURES.&Value` selected by `featureIdentifier`. ITU-T
-         * Rec. X.721 (02/92) Cor.4 §14.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly featureInfo: _Element
-    ) {}
+        featureIdentifier: OBJECT_IDENTIFIER,
+        featureInfo: _Element
+    ) {
+        this.featureIdentifier = featureIdentifier;
+        this.featureInfo = featureInfo;
+    }
 
     /**
      * @summary Restructures an object into a SupportedFeatures_Item

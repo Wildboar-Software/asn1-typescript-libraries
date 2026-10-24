@@ -77,76 +77,92 @@ import {
  *
  */
 export class DeleteArgument implements BaseManagedObjectId {
+  /**
+   * @summary `baseManagedObjectClass`.
+   * @description
+   *
+   * Class of the base managed object of the scoped set.
+   *
+   * @public
+   * @readonly
+   */
+  readonly baseManagedObjectClass: ObjectClass;
+  /**
+   * @summary `baseManagedObjectInstance`.
+   * @description
+   *
+   * Instance of the base managed object of the scoped set.
+   *
+   * @public
+   * @readonly
+   */
+  readonly baseManagedObjectInstance: ObjectInstance;
+  /**
+   * @summary `accessControl`.
+   * @description
+   *
+   * Optional CMIS access-control, carried as `EXTERNAL`.
+   *
+   * @public
+   * @readonly
+   */
+  readonly accessControl?: OPTIONAL<AccessControl>;
+  /**
+   * @summary `synchronization`.
+   * @description
+   *
+   * Default `bestEffort`. Performer may return
+   * `syncNotSupported`.
+   *
+   * @public
+   * @readonly
+   */
+  readonly synchronization?: OPTIONAL<CMISSync>;
+  /**
+   * @summary `scope`.
+   * @description
+   *
+   * Default `namedNumbers:baseObject`.
+   *
+   * @public
+   * @readonly
+   */
+  readonly scope?: OPTIONAL<Scope>;
+  /**
+   * @summary `filter`.
+   * @description
+   *
+   * Default `and:{}`. Selects among objects in the
+   * scoped set.
+   *
+   * @public
+   * @readonly
+   */
+  readonly filter?: OPTIONAL<CMISFilter>;
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  readonly _unrecognizedExtensionsList: _Element[];
+
   constructor(
-    /**
-     * @summary `baseManagedObjectClass`.
-     * @description
-     *
-     * Class of the base managed object of the scoped set.
-     *
-     * @public
-     * @readonly
-     */
-    readonly baseManagedObjectClass: ObjectClass /* REPLICATED_COMPONENT */,
-    /**
-     * @summary `baseManagedObjectInstance`.
-     * @description
-     *
-     * Instance of the base managed object of the scoped set.
-     *
-     * @public
-     * @readonly
-     */
-    readonly baseManagedObjectInstance: ObjectInstance /* REPLICATED_COMPONENT */,
-    /**
-     * @summary `accessControl`.
-     * @description
-     *
-     * Optional CMIS access-control, carried as `EXTERNAL`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly accessControl?: OPTIONAL<AccessControl>,
-    /**
-     * @summary `synchronization`.
-     * @description
-     *
-     * Default `bestEffort`. Performer may return
-     * `syncNotSupported`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly synchronization?: OPTIONAL<CMISSync>,
-    /**
-     * @summary `scope`.
-     * @description
-     *
-     * Default `namedNumbers:baseObject`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly scope?: OPTIONAL<Scope>,
-    /**
-     * @summary `filter`.
-     * @description
-     *
-     * Default `and:{}`. Selects among objects in the
-     * scoped set.
-     *
-     * @public
-     * @readonly
-     */
-    readonly filter?: OPTIONAL<CMISFilter>,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = []
-  ) {}
+    baseManagedObjectClass: ObjectClass /* REPLICATED_COMPONENT */,
+    baseManagedObjectInstance: ObjectInstance /* REPLICATED_COMPONENT */,
+    accessControl?: OPTIONAL<AccessControl>,
+    synchronization?: OPTIONAL<CMISSync>,
+    scope?: OPTIONAL<Scope>,
+    filter?: OPTIONAL<CMISFilter>,
+    _unrecognizedExtensionsList: _Element[] = []
+  ) {
+    this.baseManagedObjectClass = baseManagedObjectClass;
+    this.baseManagedObjectInstance = baseManagedObjectInstance;
+    this.accessControl = accessControl;
+    this.synchronization = synchronization;
+    this.scope = scope;
+    this.filter = filter;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+  }
 
   /**
    * @summary Restructures an object into a DeleteArgument

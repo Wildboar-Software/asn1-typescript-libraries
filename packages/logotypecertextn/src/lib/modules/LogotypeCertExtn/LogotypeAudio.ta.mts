@@ -33,21 +33,27 @@ import { LogotypeAudioInfo, _decode_LogotypeAudioInfo, _encode_LogotypeAudioInfo
  */
 export
 class LogotypeAudio {
+    /**
+     * How to fetch and authenticate this audio file.
+     * @public
+     * @readonly
+     */
+    readonly audioDetails: LogotypeDetails;
+    /**
+     * Duration, channel layout, sample rate, and language. Absent
+     * when the issuer supplies none.
+     * @public
+     * @readonly
+     */
+    readonly audioInfo?: OPTIONAL<LogotypeAudioInfo>;
+
     constructor (
-        /**
-         * How to fetch and authenticate this audio file.
-         * @public
-         * @readonly
-         */
-        readonly audioDetails: LogotypeDetails,
-        /**
-         * Duration, channel layout, sample rate, and language. Absent
-         * when the issuer supplies none.
-         * @public
-         * @readonly
-         */
-        readonly audioInfo?: OPTIONAL<LogotypeAudioInfo>
-    ) {}
+        audioDetails: LogotypeDetails,
+        audioInfo?: OPTIONAL<LogotypeAudioInfo>
+    ) {
+        this.audioDetails = audioDetails;
+        this.audioInfo = audioInfo;
+    }
 
     /**
      * @summary Restructures an object into a LogotypeAudio

@@ -56,43 +56,51 @@ import {
  *
  */
 export class F_READ_ATTRIB_response {
+  /**
+   * @summary `action_result`.
+   * @description
+   *
+   * Default `success`. ISO 8571-3:1988 §16.1.2.1 / §13.2.
+   *
+   * @public
+   * @readonly
+   */
+  readonly action_result?: OPTIONAL<Action_Result>;
+  /**
+   * @summary `attributes`.
+   * @description
+   *
+   * Conditional on at least one requested attribute with a
+   * returnable value. Unrequested names and non-negotiated groups
+   * are omitted. Passwords in access-control are never returned
+   * (ASN.1); other access-control parts are a local choice, not
+   * conformance-tested. Partial support → no-value-available.
+   * ISO 8571-3:1988 §16.1.2.3; ISO 8571-4:1988 F-READ-ATTRIB-response.
+   *
+   * @public
+   * @readonly
+   */
+  readonly attributes?: OPTIONAL<Read_Attributes>;
+  /**
+   * @summary `diagnostic`.
+   * @description
+   *
+   * ISO 8571-3:1988 §16.1.2.4 / §13.13.
+   *
+   * @public
+   * @readonly
+   */
+  readonly diagnostic?: OPTIONAL<Diagnostic>;
+
   constructor(
-    /**
-     * @summary `action_result`.
-     * @description
-     *
-     * Default `success`. ISO 8571-3:1988 §16.1.2.1 / §13.2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly action_result?: OPTIONAL<Action_Result>,
-    /**
-     * @summary `attributes`.
-     * @description
-     *
-     * Conditional on at least one requested attribute with a
-     * returnable value. Unrequested names and non-negotiated groups
-     * are omitted. Passwords in access-control are never returned
-     * (ASN.1); other access-control parts are a local choice, not
-     * conformance-tested. Partial support → no-value-available.
-     * ISO 8571-3:1988 §16.1.2.3; ISO 8571-4:1988 F-READ-ATTRIB-response.
-     *
-     * @public
-     * @readonly
-     */
-    readonly attributes?: OPTIONAL<Read_Attributes>,
-    /**
-     * @summary `diagnostic`.
-     * @description
-     *
-     * ISO 8571-3:1988 §16.1.2.4 / §13.13.
-     *
-     * @public
-     * @readonly
-     */
-    readonly diagnostic?: OPTIONAL<Diagnostic>
-  ) {}
+    action_result?: OPTIONAL<Action_Result>,
+    attributes?: OPTIONAL<Read_Attributes>,
+    diagnostic?: OPTIONAL<Diagnostic>
+  ) {
+    this.action_result = action_result;
+    this.attributes = attributes;
+    this.diagnostic = diagnostic;
+  }
 
   /**
    * @summary Restructures an object into a F_READ_ATTRIB_response

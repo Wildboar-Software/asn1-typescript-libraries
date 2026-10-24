@@ -43,49 +43,59 @@ import {
  *
  */
 export class KRB_SAFE {
+  /**
+   * @summary `pvno`.
+   * @description
+   *
+   * Protocol version 5 ([RFC 4120 §5.6.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.6.1)).
+   *
+   * @public
+   * @readonly
+   */
+  readonly pvno: INTEGER;
+  /**
+   * @summary `msg_type`.
+   * @description
+   *
+   * `KRB_SAFE` (20) ([RFC 4120 §5.6.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.6.1)).
+   *
+   * @public
+   * @readonly
+   */
+  readonly msg_type: INTEGER;
+  /**
+   * @summary `safe_body`.
+   * @description
+   *
+   * Body of the safe message ([RFC 4120 §5.6.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.6.1)).
+   *
+   * @public
+   * @readonly
+   */
+  readonly safe_body: KRB_SAFE_BODY;
+  /**
+   * @summary `cksum`.
+   * @description
+   *
+   * Checksum over the `KRB-SAFE` encoding (cksum zeroed first),
+   * key usage 15 ([RFC 4120 §5.6.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.6.1)).
+   *
+   * @public
+   * @readonly
+   */
+  readonly cksum: Checksum;
+
   constructor(
-    /**
-     * @summary `pvno`.
-     * @description
-     *
-     * Protocol version 5 ([RFC 4120 §5.6.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.6.1)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly pvno: INTEGER,
-    /**
-     * @summary `msg_type`.
-     * @description
-     *
-     * `KRB_SAFE` (20) ([RFC 4120 §5.6.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.6.1)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly msg_type: INTEGER,
-    /**
-     * @summary `safe_body`.
-     * @description
-     *
-     * Body of the safe message ([RFC 4120 §5.6.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.6.1)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly safe_body: KRB_SAFE_BODY,
-    /**
-     * @summary `cksum`.
-     * @description
-     *
-     * Checksum over the `KRB-SAFE` encoding (cksum zeroed first),
-     * key usage 15 ([RFC 4120 §5.6.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.6.1)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly cksum: Checksum
-  ) {}
+    pvno: INTEGER,
+    msg_type: INTEGER,
+    safe_body: KRB_SAFE_BODY,
+    cksum: Checksum
+  ) {
+    this.pvno = pvno;
+    this.msg_type = msg_type;
+    this.safe_body = safe_body;
+    this.cksum = cksum;
+  }
 
   /**
    * @summary Restructures an object into a KRB_SAFE

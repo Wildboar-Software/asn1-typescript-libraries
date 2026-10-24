@@ -53,55 +53,67 @@ import {
  *
  */
 export class GetListError {
+  /**
+   * @summary `managedObjectClass`.
+   * @description
+   *
+   * Class of the object this list applies to.
+   *
+   * @public
+   * @readonly
+   */
+  readonly managedObjectClass: OPTIONAL<ObjectClass>;
+  /**
+   * @summary `managedObjectInstance`.
+   * @description
+   *
+   * Instance this list applies to.
+   *
+   * @public
+   * @readonly
+   */
+  readonly managedObjectInstance: OPTIONAL<ObjectInstance>;
+  /**
+   * @summary `currentTime`.
+   * @description
+   *
+   * Time associated with this error, if supplied.
+   *
+   * @public
+   * @readonly
+   */
+  readonly currentTime: OPTIONAL<GeneralizedTime>;
+  /**
+   * @summary `getInfoList`.
+   * @description
+   *
+   * Per-attribute success (`attribute`) or failure
+   * (`attributeIdError`).
+   *
+   * @public
+   * @readonly
+   */
+  readonly getInfoList: GetInfoStatus[];
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  readonly _unrecognizedExtensionsList: _Element[];
+
   constructor(
-    /**
-     * @summary `managedObjectClass`.
-     * @description
-     *
-     * Class of the object this list applies to.
-     *
-     * @public
-     * @readonly
-     */
-    readonly managedObjectClass: OPTIONAL<ObjectClass>,
-    /**
-     * @summary `managedObjectInstance`.
-     * @description
-     *
-     * Instance this list applies to.
-     *
-     * @public
-     * @readonly
-     */
-    readonly managedObjectInstance: OPTIONAL<ObjectInstance>,
-    /**
-     * @summary `currentTime`.
-     * @description
-     *
-     * Time associated with this error, if supplied.
-     *
-     * @public
-     * @readonly
-     */
-    readonly currentTime: OPTIONAL<GeneralizedTime>,
-    /**
-     * @summary `getInfoList`.
-     * @description
-     *
-     * Per-attribute success (`attribute`) or failure
-     * (`attributeIdError`).
-     *
-     * @public
-     * @readonly
-     */
-    readonly getInfoList: GetInfoStatus[],
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = []
-  ) {}
+    managedObjectClass: OPTIONAL<ObjectClass>,
+    managedObjectInstance: OPTIONAL<ObjectInstance>,
+    currentTime: OPTIONAL<GeneralizedTime>,
+    getInfoList: GetInfoStatus[],
+    _unrecognizedExtensionsList: _Element[] = []
+  ) {
+    this.managedObjectClass = managedObjectClass;
+    this.managedObjectInstance = managedObjectInstance;
+    this.currentTime = currentTime;
+    this.getInfoList = getInfoList;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+  }
 
   /**
    * @summary Restructures an object into a GetListError

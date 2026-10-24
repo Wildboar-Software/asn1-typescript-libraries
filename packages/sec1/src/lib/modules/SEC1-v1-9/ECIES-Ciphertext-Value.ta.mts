@@ -35,41 +35,49 @@ import { ECPoint, _decode_ECPoint, _encode_ECPoint } from "../SEC1-v1-9/ECPoint.
  */
 export
 class ECIES_Ciphertext_Value {
+    /**
+     * @summary `ephemeralPublicKey`.
+     * @description
+     *
+     * Sender's ephemeral public key R, encoded as `ECPoint` (compressed or not per
+     * setup). [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §5.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    readonly ephemeralPublicKey: ECPoint;
+    /**
+     * @summary `symmetricCiphertext`.
+     * @description
+     *
+     * EM = Enc_EK(M). EK is taken from the KDF output (leftmost `enckeylen` octets,
+     * unless XOR v2 split). [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §5.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    readonly symmetricCiphertext: OCTET_STRING;
+    /**
+     * @summary `macTag`.
+     * @description
+     *
+     * D = MAC_MK(EM || [SharedInfo_2]). MK is the other half of the KDF output.
+     * [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §5.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    readonly macTag: OCTET_STRING;
+
     constructor (
-        /**
-         * @summary `ephemeralPublicKey`.
-         * @description
-         *
-         * Sender's ephemeral public key R, encoded as `ECPoint` (compressed or not per
-         * setup). [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §5.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ephemeralPublicKey: ECPoint,
-        /**
-         * @summary `symmetricCiphertext`.
-         * @description
-         *
-         * EM = Enc_EK(M). EK is taken from the KDF output (leftmost `enckeylen` octets,
-         * unless XOR v2 split). [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §5.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly symmetricCiphertext: OCTET_STRING,
-        /**
-         * @summary `macTag`.
-         * @description
-         *
-         * D = MAC_MK(EM || [SharedInfo_2]). MK is the other half of the KDF output.
-         * [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §5.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly macTag: OCTET_STRING
-    ) {}
+        ephemeralPublicKey: ECPoint,
+        symmetricCiphertext: OCTET_STRING,
+        macTag: OCTET_STRING
+    ) {
+        this.ephemeralPublicKey = ephemeralPublicKey;
+        this.symmetricCiphertext = symmetricCiphertext;
+        this.macTag = macTag;
+    }
 
     /**
      * @summary Restructures an object into a ECIES_Ciphertext_Value

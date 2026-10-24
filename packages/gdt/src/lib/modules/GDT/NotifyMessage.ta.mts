@@ -29,32 +29,42 @@ import { Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Param
  */
 export
 class NotifyMessage {
+    /**
+     * @summary `message_type`.
+     * @public
+     * @readonly
+     */
+    readonly message_type: NotifyMessageType;
+    /**
+     * @summary `message`.
+     * @public
+     * @readonly
+     */
+    readonly message?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `params`.
+     * @public
+     * @readonly
+     */
+    readonly params?: OPTIONAL<Parameters>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `message_type`.
-         * @public
-         * @readonly
-         */
-        readonly message_type: NotifyMessageType,
-        /**
-         * @summary `message`.
-         * @public
-         * @readonly
-         */
-        readonly message?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `params`.
-         * @public
-         * @readonly
-         */
-        readonly params?: OPTIONAL<Parameters>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        message_type: NotifyMessageType,
+        message?: OPTIONAL<OCTET_STRING>,
+        params?: OPTIONAL<Parameters>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.message_type = message_type;
+        this.message = message;
+        this.params = params;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a NotifyMessage

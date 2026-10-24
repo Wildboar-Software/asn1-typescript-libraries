@@ -39,32 +39,38 @@ import {
  *
  */
 export class BSPUnload_RequestParams {
+  /**
+   * @summary `bspProductUuid`.
+   * @description
+   *
+   * Product UUID of the BSP to unload. Application may have passed
+   * an access UUID; this component is always the product UUID.
+   * X.1083 §16.10.4, clause 23.
+   *
+   * @public
+   * @readonly
+   */
+  readonly bspProductUuid: BioAPI_UUID;
+  /**
+   * @summary `unitEventSubscription`.
+   * @description
+   *
+   * TRUE if the master's EventHandler address is non-zero. Paired
+   * with `bspProductUuid` to identify the remote reference to
+   * drop. X.1083 §16.10.4.2 a, §16.10.5 e.
+   *
+   * @public
+   * @readonly
+   */
+  readonly unitEventSubscription: BOOLEAN;
+
   constructor(
-    /**
-     * @summary `bspProductUuid`.
-     * @description
-     *
-     * Product UUID of the BSP to unload. Application may have passed
-     * an access UUID; this component is always the product UUID.
-     * X.1083 §16.10.4, clause 23.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bspProductUuid: BioAPI_UUID,
-    /**
-     * @summary `unitEventSubscription`.
-     * @description
-     *
-     * TRUE if the master's EventHandler address is non-zero. Paired
-     * with `bspProductUuid` to identify the remote reference to
-     * drop. X.1083 §16.10.4.2 a, §16.10.5 e.
-     *
-     * @public
-     * @readonly
-     */
-    readonly unitEventSubscription: BOOLEAN
-  ) {}
+    bspProductUuid: BioAPI_UUID,
+    unitEventSubscription: BOOLEAN
+  ) {
+    this.bspProductUuid = bspProductUuid;
+    this.unitEventSubscription = unitEventSubscription;
+  }
 
   /**
    * @summary Restructures an object into a BSPUnload_RequestParams

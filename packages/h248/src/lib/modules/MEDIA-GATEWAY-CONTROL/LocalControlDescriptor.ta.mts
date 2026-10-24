@@ -44,67 +44,79 @@ import { PropertyParm, _decode_PropertyParm, _encode_PropertyParm } from "../MED
  */
 export
 class LocalControlDescriptor {
+    /**
+     * @summary `streamMode`.
+     * @description
+     *
+     * Direction of media for this stream across the edge of the context.
+     * Default Inactive. Also called Mode in the prose of the
+     * Recommendation; the two names are the same property (clause 7.1.7).
+     *
+     * @public
+     * @readonly
+     */
+    readonly streamMode: OPTIONAL<StreamMode>;
+    /**
+     * @summary `reserveValue`.
+     * @description
+     *
+     * True: reserve as many alternative property values as the MG can
+     * within the selected group, or within each group if ReserveGroup is
+     * also true. False: reserve one set. Default false (clause 7.1.7.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    readonly reserveValue: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `reserveGroup`.
+     * @description
+     *
+     * True: reserve as many Local/Remote property groups as the MG can.
+     * False: reserve one group from Local and one from Remote. Default
+     * false (clause 7.1.7.1.2). A property group is one `PropertyGroup`, or
+     * one SDP session description in the text encoding.
+     *
+     * @public
+     * @readonly
+     */
+    readonly reserveGroup: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `propertyParms`.
+     * @description
+     *
+     * Packaged properties that are stream-specific and meaningful between
+     * MG and MGC (clause 7.1.7).
+     *
+     * @public
+     * @readonly
+     */
+    readonly propertyParms: PropertyParm[];
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `streamMode`.
-         * @description
-         *
-         * Direction of media for this stream across the edge of the context.
-         * Default Inactive. Also called Mode in the prose of the
-         * Recommendation; the two names are the same property (clause 7.1.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly streamMode: OPTIONAL<StreamMode>,
-        /**
-         * @summary `reserveValue`.
-         * @description
-         *
-         * True: reserve as many alternative property values as the MG can
-         * within the selected group, or within each group if ReserveGroup is
-         * also true. False: reserve one set. Default false (clause 7.1.7.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly reserveValue: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `reserveGroup`.
-         * @description
-         *
-         * True: reserve as many Local/Remote property groups as the MG can.
-         * False: reserve one group from Local and one from Remote. Default
-         * false (clause 7.1.7.1.2). A property group is one `PropertyGroup`, or
-         * one SDP session description in the text encoding.
-         *
-         * @public
-         * @readonly
-         */
-        readonly reserveGroup: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `propertyParms`.
-         * @description
-         *
-         * Packaged properties that are stream-specific and meaningful between
-         * MG and MGC (clause 7.1.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly propertyParms: PropertyParm[],
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        streamMode: OPTIONAL<StreamMode>,
+        reserveValue: OPTIONAL<BOOLEAN>,
+        reserveGroup: OPTIONAL<BOOLEAN>,
+        propertyParms: PropertyParm[],
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.streamMode = streamMode;
+        this.reserveValue = reserveValue;
+        this.reserveGroup = reserveGroup;
+        this.propertyParms = propertyParms;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a LocalControlDescriptor

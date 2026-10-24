@@ -8,6 +8,7 @@
     ],
     "strict": true,
     "strictNullChecks": true,
+    "erasableSyntaxOnly": true,
     "noPropertyAccessFromIndexSignature": true,
     "rootDir": "."
   },

@@ -36,29 +36,35 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class F_CHECK_response {
+  /**
+   * @summary `checkpoint_identifier`.
+   * @description
+   *
+   * 1..999998; first in a BDT is 1, then increment by 1
+   * (ISO 8571-3:1988 §23.2, §25.1.2.1).
+   *
+   * @public
+   * @readonly
+   */
+  readonly checkpoint_identifier: INTEGER;
+  /**
+   * @summary `transfer_number`.
+   * @description
+   *
+   * Not in ISO 8571:1988 Parts 1–4.
+   *
+   * @public
+   * @readonly
+   */
+  readonly transfer_number: INTEGER;
+
   constructor(
-    /**
-     * @summary `checkpoint_identifier`.
-     * @description
-     *
-     * 1..999998; first in a BDT is 1, then increment by 1
-     * (ISO 8571-3:1988 §23.2, §25.1.2.1).
-     *
-     * @public
-     * @readonly
-     */
-    readonly checkpoint_identifier: INTEGER,
-    /**
-     * @summary `transfer_number`.
-     * @description
-     *
-     * Not in ISO 8571:1988 Parts 1–4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly transfer_number: INTEGER
-  ) {}
+    checkpoint_identifier: INTEGER,
+    transfer_number: INTEGER
+  ) {
+    this.checkpoint_identifier = checkpoint_identifier;
+    this.transfer_number = transfer_number;
+  }
 
   /**
    * @summary Restructures an object into a F_CHECK_response

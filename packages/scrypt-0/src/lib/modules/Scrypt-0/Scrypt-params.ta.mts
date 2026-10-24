@@ -37,74 +37,86 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class Scrypt_params {
+    /**
+     * @summary `salt`.
+     * @description
+     *
+     * Salt value (octet string). RFC 7914 §2: normally uniquely and
+     * randomly generated (see RFC 4086).
+     *
+     * @public
+     * @readonly
+     */
+    readonly salt: OCTET_STRING;
+    /**
+     * @summary `costParameter`.
+     * @description
+     *
+     * CPU/Memory cost parameter N (RFC 7914 §7). Per §2 / §6: must be
+     * larger than 1, a power of 2, and less than `2^(128 * r / 8)`
+     * where `r` is `blockSize`.
+     *
+     * @public
+     * @readonly
+     */
+    readonly costParameter: INTEGER;
+    /**
+     * @summary `blockSize`.
+     * @description
+     *
+     * Block size parameter r (RFC 7914 §7). Affects memory and the
+     * bounds on N and p (RFC 7914 §2).
+     *
+     * @public
+     * @readonly
+     */
+    readonly blockSize: INTEGER;
+    /**
+     * @summary `parallelizationParameter`.
+     * @description
+     *
+     * Parallelization parameter p (RFC 7914 §7). Per §2 / §6: a
+     * positive integer less than or equal to
+     * `((2^32 - 1) * 32) / (128 * r)` where `r` is `blockSize`.
+     * Independent `SMix` runs; large p raises CPU cost without
+     * raising memory (RFC 7914 §2).
+     *
+     * @public
+     * @readonly
+     */
+    readonly parallelizationParameter: INTEGER;
+    /**
+     * @summary `keyLength`.
+     * @description
+     *
+     * Optional intended length in octets of the derived key (dkLen).
+     *
+     * > The maximum key length allowed depends on the implementation;
+     * > it is expected that implementation profiles may further
+     * > constrain the bounds. This field only provides convenience;
+     * > the key length is not cryptographically protected.
+     *
+     * (RFC 7914 §7.) Per §2 / §6, dkLen is a positive integer less
+     * than or equal to `(2^32 - 1) * 32`.
+     *
+     * @public
+     * @readonly
+     */
+    readonly keyLength?: OPTIONAL<INTEGER>;
+
     constructor (
-        /**
-         * @summary `salt`.
-         * @description
-         *
-         * Salt value (octet string). RFC 7914 §2: normally uniquely and
-         * randomly generated (see RFC 4086).
-         *
-         * @public
-         * @readonly
-         */
-        readonly salt: OCTET_STRING,
-        /**
-         * @summary `costParameter`.
-         * @description
-         *
-         * CPU/Memory cost parameter N (RFC 7914 §7). Per §2 / §6: must be
-         * larger than 1, a power of 2, and less than `2^(128 * r / 8)`
-         * where `r` is `blockSize`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly costParameter: INTEGER,
-        /**
-         * @summary `blockSize`.
-         * @description
-         *
-         * Block size parameter r (RFC 7914 §7). Affects memory and the
-         * bounds on N and p (RFC 7914 §2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly blockSize: INTEGER,
-        /**
-         * @summary `parallelizationParameter`.
-         * @description
-         *
-         * Parallelization parameter p (RFC 7914 §7). Per §2 / §6: a
-         * positive integer less than or equal to
-         * `((2^32 - 1) * 32) / (128 * r)` where `r` is `blockSize`.
-         * Independent `SMix` runs; large p raises CPU cost without
-         * raising memory (RFC 7914 §2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly parallelizationParameter: INTEGER,
-        /**
-         * @summary `keyLength`.
-         * @description
-         *
-         * Optional intended length in octets of the derived key (dkLen).
-         *
-         * > The maximum key length allowed depends on the implementation;
-         * > it is expected that implementation profiles may further
-         * > constrain the bounds. This field only provides convenience;
-         * > the key length is not cryptographically protected.
-         *
-         * (RFC 7914 §7.) Per §2 / §6, dkLen is a positive integer less
-         * than or equal to `(2^32 - 1) * 32`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly keyLength?: OPTIONAL<INTEGER>
-    ) {}
+        salt: OCTET_STRING,
+        costParameter: INTEGER,
+        blockSize: INTEGER,
+        parallelizationParameter: INTEGER,
+        keyLength?: OPTIONAL<INTEGER>
+    ) {
+        this.salt = salt;
+        this.costParameter = costParameter;
+        this.blockSize = blockSize;
+        this.parallelizationParameter = parallelizationParameter;
+        this.keyLength = keyLength;
+    }
 
     /**
      * @summary Restructures an object into a Scrypt_params
