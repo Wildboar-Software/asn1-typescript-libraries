@@ -45,77 +45,90 @@ import { TimeNotation, _decode_TimeNotation, _encode_TimeNotation } from "../MED
  */
 export
 class ServiceChangeResParm {
+    /**
+     * @summary `serviceChangeMgcId`.
+     * @description
+     *
+     * Controller the MG should register with instead. The MG reissues
+     * ServiceChange to that controller before trying any other alternate
+     * (clause 7.2.8.1.11).
+     *
+     * @public
+     * @readonly
+     */
+    readonly serviceChangeMgcId?: OPTIONAL<MId>;
+    /**
+     * @summary `serviceChangeAddress`.
+     * @description
+     *
+     * Destination for later transaction requests from the MG. Replies still
+     * return to the source of each request (clause 7.2.8.1.11).
+     *
+     * @public
+     * @readonly
+     */
+    readonly serviceChangeAddress?: OPTIONAL<ServiceChangeAddress>;
+    /**
+     * @summary `serviceChangeVersion`.
+     * @description
+     *
+     * Protocol version the responder will use for the association (clause
+     * 11.3). If the responder supports the requested version it may omit
+     * this.
+     *
+     * @public
+     * @readonly
+     */
+    readonly serviceChangeVersion?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `serviceChangeProfile`.
+     * @description
+     *
+     * Profile the responder will use. Returned only when the responder
+     * cannot support a profile named in the request. "NoProfile" means none
+     * is supported (clause 7.2.8.1.11).
+     *
+     * @public
+     * @readonly
+     */
+    readonly serviceChangeProfile?: OPTIONAL<ServiceChangeProfile>;
+    /**
+     * @summary `timestamp`.
+     * @description
+     *
+     * Responder's clock, same role as the request timestamp (clause
+     * 7.2.8.1.7). Sent with the registration reply.
+     *
+     * @public
+     * @readonly
+     */
+    readonly timestamp?: OPTIONAL<TimeNotation>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `serviceChangeMgcId`.
-         * @description
-         *
-         * Controller the MG should register with instead. The MG reissues
-         * ServiceChange to that controller before trying any other alternate
-         * (clause 7.2.8.1.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceChangeMgcId?: OPTIONAL<MId>,
-        /**
-         * @summary `serviceChangeAddress`.
-         * @description
-         *
-         * Destination for later transaction requests from the MG. Replies still
-         * return to the source of each request (clause 7.2.8.1.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceChangeAddress?: OPTIONAL<ServiceChangeAddress>,
-        /**
-         * @summary `serviceChangeVersion`.
-         * @description
-         *
-         * Protocol version the responder will use for the association (clause
-         * 11.3). If the responder supports the requested version it may omit
-         * this.
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceChangeVersion?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `serviceChangeProfile`.
-         * @description
-         *
-         * Profile the responder will use. Returned only when the responder
-         * cannot support a profile named in the request. "NoProfile" means none
-         * is supported (clause 7.2.8.1.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceChangeProfile?: OPTIONAL<ServiceChangeProfile>,
-        /**
-         * @summary `timestamp`.
-         * @description
-         *
-         * Responder's clock, same role as the request timestamp (clause
-         * 7.2.8.1.7). Sent with the registration reply.
-         *
-         * @public
-         * @readonly
-         */
-        readonly timestamp?: OPTIONAL<TimeNotation>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
+        serviceChangeMgcId?: OPTIONAL<MId>,
+        serviceChangeAddress?: OPTIONAL<ServiceChangeAddress>,
+        serviceChangeVersion?: OPTIONAL<INTEGER>,
+        serviceChangeProfile?: OPTIONAL<ServiceChangeProfile>,
+        timestamp?: OPTIONAL<TimeNotation>,
+        _unrecognizedExtensionsList: _Element[] = []
     ) {
+        this.serviceChangeMgcId = serviceChangeMgcId;
+        this.serviceChangeAddress = serviceChangeAddress;
+        this.serviceChangeVersion = serviceChangeVersion;
+        this.serviceChangeProfile = serviceChangeProfile;
+        this.timestamp = timestamp;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
         if (serviceChangeVersion !== undefined) {
             const n = typeof serviceChangeVersion === "bigint" ? serviceChangeVersion : BigInt(serviceChangeVersion);
             if (n < 0n || n > 99n) {

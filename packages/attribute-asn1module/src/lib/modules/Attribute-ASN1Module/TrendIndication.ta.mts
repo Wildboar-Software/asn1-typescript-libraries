@@ -30,11 +30,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @enum {number}
  */
 export
-enum _enum_for_TrendIndication {
-    lessSevere = 0,
-    noChange = 1,
-    moreSevere = 2,
-}
+const _enum_for_TrendIndication = {
+    lessSevere: 0,
+    noChange: 1,
+    moreSevere: 2,
+} as const;
+
+export type _enum_for_TrendIndication = (typeof _enum_for_TrendIndication)[keyof typeof _enum_for_TrendIndication];
 
 /**
  * @summary TrendIndication
@@ -153,10 +155,10 @@ export
 const moreSevere: TrendIndication = TrendIndication.moreSevere; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_TrendIndication = $._decodeEnumerated;
+export const _decode_TrendIndication = $._decodeEnumerated as $.ASN1Decoder<TrendIndication>;
 
 
-export const _encode_TrendIndication = $._encodeEnumerated;
+export const _encode_TrendIndication = $._encodeEnumerated as $.ASN1Encoder<TrendIndication>;
 
 
 /* eslint-enable */

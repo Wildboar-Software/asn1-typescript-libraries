@@ -44,54 +44,64 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class CAMClientInfo {
+    /**
+     * @summary `clientType`.
+     * @description
+     *
+     * `0x01` CAS, `0x02` ASD, `0x03` DRM,
+     * `0x04`–`0xFF` reserved (Annex A).
+     * `RenewInfoMsgContent.clientType` uses a
+     * different mapping (DRM and ASD swapped).
+     *
+     * @public
+     * @readonly
+     */
+    readonly clientType: OCTET_STRING;
+    /**
+     * @summary `clientPriority`.
+     * @description
+     *
+     * 1 octet. Encoding is not specified beyond
+     * size (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    readonly clientPriority: OCTET_STRING;
+    /**
+     * @summary `clientVendor`.
+     * @description
+     *
+     * 2 octets. Encoding is not specified beyond
+     * size (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    readonly clientVendor: OCTET_STRING;
+    /**
+     * @summary `clientVersion`.
+     * @description
+     *
+     * 2 octets. Encoding is not specified beyond
+     * size (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    readonly clientVersion: OCTET_STRING;
+
     constructor (
-        /**
-         * @summary `clientType`.
-         * @description
-         *
-         * `0x01` CAS, `0x02` ASD, `0x03` DRM,
-         * `0x04`–`0xFF` reserved (Annex A).
-         * `RenewInfoMsgContent.clientType` uses a
-         * different mapping (DRM and ASD swapped).
-         *
-         * @public
-         * @readonly
-         */
-        readonly clientType: OCTET_STRING,
-        /**
-         * @summary `clientPriority`.
-         * @description
-         *
-         * 1 octet. Encoding is not specified beyond
-         * size (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly clientPriority: OCTET_STRING,
-        /**
-         * @summary `clientVendor`.
-         * @description
-         *
-         * 2 octets. Encoding is not specified beyond
-         * size (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly clientVendor: OCTET_STRING,
-        /**
-         * @summary `clientVersion`.
-         * @description
-         *
-         * 2 octets. Encoding is not specified beyond
-         * size (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly clientVersion: OCTET_STRING
-    ) {}
+        clientType: OCTET_STRING,
+        clientPriority: OCTET_STRING,
+        clientVendor: OCTET_STRING,
+        clientVersion: OCTET_STRING
+    ) {
+        this.clientType = clientType;
+        this.clientPriority = clientPriority;
+        this.clientVendor = clientVendor;
+        this.clientVersion = clientVersion;
+    }
 
     /**
      * @summary Restructures an object into a CAMClientInfo

@@ -29,13 +29,15 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_NeighbourSystemType {
-  unknown = 0,
-  endSystem = 1,
-  intermediateSystem = 2,
-  l1IntermediateSystem = 3,
-  l2IntermediateSystem = 4,
-}
+export const _enum_for_NeighbourSystemType = {
+  unknown: 0,
+  endSystem: 1,
+  intermediateSystem: 2,
+  l1IntermediateSystem: 3,
+  l2IntermediateSystem: 4,
+} as const;
+
+export type _enum_for_NeighbourSystemType = (typeof _enum_for_NeighbourSystemType)[keyof typeof _enum_for_NeighbourSystemType];
 
 /**
  * @summary NeighbourSystemType
@@ -188,10 +190,10 @@ export const l2IntermediateSystem: NeighbourSystemType =
   NeighbourSystemType.l2IntermediateSystem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_NeighbourSystemType = $._decodeEnumerated;
+export const _decode_NeighbourSystemType = $._decodeEnumerated as $.ASN1Decoder<NeighbourSystemType>;
 
 
-export const _encode_NeighbourSystemType = $._encodeEnumerated;
+export const _encode_NeighbourSystemType = $._encodeEnumerated as $.ASN1Encoder<NeighbourSystemType>;
 
 
 /* eslint-enable */

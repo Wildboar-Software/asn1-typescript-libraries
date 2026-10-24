@@ -39,52 +39,62 @@ import { ProfileInstallationResultData_finalResult, _decode_ProfileInstallationR
  */
 export
 class ProfileInstallationResultData {
+    /**
+     * @summary `transactionId`.
+     * @description
+     * 
+     * TransactionID the SM-DP+ assigned to this download. SGP.22 v3.1
+     * §2.5.6.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly transactionId: TransactionId;
+    /**
+     * @summary `notificationMetadata`.
+     * @description
+     * 
+     * Sequence number, operation, recipient address, and ICCID of this
+     * installation result, so it can sit in the notification list beside
+     * enable, disable, and delete notifications. SGP.22 v3.1 §2.5.6.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly notificationMetadata: NotificationMetadata;
+    /**
+     * @summary `smdpOid`.
+     * @description
+     * 
+     * OID of the SM-DP+ that bound the package. Same value as in
+     * CERT.DPpb.SIG. SGP.22 v3.1 §2.5.6.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly smdpOid: OBJECT_IDENTIFIER;
+    /**
+     * @summary `finalResult`.
+     * @description
+     * 
+     * `successResult` or `errorResult`. SGP.22 v3.1 §2.5.6.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly finalResult: ProfileInstallationResultData_finalResult;
+
     constructor (
-        /**
-         * @summary `transactionId`.
-         * @description
-         * 
-         * TransactionID the SM-DP+ assigned to this download. SGP.22 v3.1
-         * §2.5.6.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly transactionId: TransactionId,
-        /**
-         * @summary `notificationMetadata`.
-         * @description
-         * 
-         * Sequence number, operation, recipient address, and ICCID of this
-         * installation result, so it can sit in the notification list beside
-         * enable, disable, and delete notifications. SGP.22 v3.1 §2.5.6.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly notificationMetadata: NotificationMetadata,
-        /**
-         * @summary `smdpOid`.
-         * @description
-         * 
-         * OID of the SM-DP+ that bound the package. Same value as in
-         * CERT.DPpb.SIG. SGP.22 v3.1 §2.5.6.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly smdpOid: OBJECT_IDENTIFIER,
-        /**
-         * @summary `finalResult`.
-         * @description
-         * 
-         * `successResult` or `errorResult`. SGP.22 v3.1 §2.5.6.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly finalResult: ProfileInstallationResultData_finalResult
-    ) {}
+        transactionId: TransactionId,
+        notificationMetadata: NotificationMetadata,
+        smdpOid: OBJECT_IDENTIFIER,
+        finalResult: ProfileInstallationResultData_finalResult
+    ) {
+        this.transactionId = transactionId;
+        this.notificationMetadata = notificationMetadata;
+        this.smdpOid = smdpOid;
+        this.finalResult = finalResult;
+    }
 
     /**
      * @summary Restructures an object into a ProfileInstallationResultData

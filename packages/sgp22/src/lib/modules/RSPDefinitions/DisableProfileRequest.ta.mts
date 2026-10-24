@@ -35,28 +35,34 @@ import { DisableProfileRequest_profileIdentifier, _decode_DisableProfileRequest_
  */
 export
 class DisableProfileRequest {
+    /**
+     * @summary `profileIdentifier`.
+     * @description
+     * 
+     * ISD-P AID or ICCID of the Profile to disable. SGP.22 v3.1 §5.7.17.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly profileIdentifier: DisableProfileRequest_profileIdentifier;
+    /**
+     * @summary `refreshFlag`.
+     * @description
+     * 
+     * Same REFRESH rule as EnableProfile. SGP.22 v3.1 §5.7.17.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly refreshFlag: BOOLEAN;
+
     constructor (
-        /**
-         * @summary `profileIdentifier`.
-         * @description
-         * 
-         * ISD-P AID or ICCID of the Profile to disable. SGP.22 v3.1 §5.7.17.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly profileIdentifier: DisableProfileRequest_profileIdentifier,
-        /**
-         * @summary `refreshFlag`.
-         * @description
-         * 
-         * Same REFRESH rule as EnableProfile. SGP.22 v3.1 §5.7.17.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly refreshFlag: BOOLEAN
-    ) {}
+        profileIdentifier: DisableProfileRequest_profileIdentifier,
+        refreshFlag: BOOLEAN
+    ) {
+        this.profileIdentifier = profileIdentifier;
+        this.refreshFlag = refreshFlag;
+    }
 
     /**
      * @summary Restructures an object into a DisableProfileRequest

@@ -29,12 +29,14 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_AdjacencyUsage {
-  undefined = 0,
-  level1 = 1,
-  level2 = 2,
-  level1and2 = 3,
-}
+export const _enum_for_AdjacencyUsage = {
+  undefined: 0,
+  level1: 1,
+  level2: 2,
+  level1and2: 3,
+} as const;
+
+export type _enum_for_AdjacencyUsage = (typeof _enum_for_AdjacencyUsage)[keyof typeof _enum_for_AdjacencyUsage];
 
 /**
  * @summary AdjacencyUsage
@@ -165,10 +167,10 @@ export const level1and2: AdjacencyUsage =
   AdjacencyUsage.level1and2; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_AdjacencyUsage = $._decodeEnumerated;
+export const _decode_AdjacencyUsage = $._decodeEnumerated as $.ASN1Decoder<AdjacencyUsage>;
 
 
-export const _encode_AdjacencyUsage = $._encodeEnumerated;
+export const _encode_AdjacencyUsage = $._encodeEnumerated as $.ASN1Encoder<AdjacencyUsage>;
 
 
 /* eslint-enable */

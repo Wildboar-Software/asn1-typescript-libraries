@@ -42,29 +42,35 @@ import {
  *
  */
 export class CalibrateSensor_RequestParams {
+  /**
+   * @summary `originalBSPHandle`.
+   * @description
+   *
+   * Hosting-endpoint BSP handle. Rewritten from the master's local
+   * `BSPHandle` (cl.26) (`X.1083 §16.52`, Table 112).
+   *
+   * @public
+   * @readonly
+   */
+  readonly originalBSPHandle: BioAPI_HANDLE;
+  /**
+   * @summary `timeout`.
+   * @description
+   *
+   * From C `Timeout` (`X.1083 §16.52`, Table 112, §15.1.6).
+   *
+   * @public
+   * @readonly
+   */
+  readonly timeout: SignedInt;
+
   constructor(
-    /**
-     * @summary `originalBSPHandle`.
-     * @description
-     *
-     * Hosting-endpoint BSP handle. Rewritten from the master's local
-     * `BSPHandle` (cl.26) (`X.1083 §16.52`, Table 112).
-     *
-     * @public
-     * @readonly
-     */
-    readonly originalBSPHandle: BioAPI_HANDLE,
-    /**
-     * @summary `timeout`.
-     * @description
-     *
-     * From C `Timeout` (`X.1083 §16.52`, Table 112, §15.1.6).
-     *
-     * @public
-     * @readonly
-     */
-    readonly timeout: SignedInt
-  ) {}
+    originalBSPHandle: BioAPI_HANDLE,
+    timeout: SignedInt
+  ) {
+    this.originalBSPHandle = originalBSPHandle;
+    this.timeout = timeout;
+  }
 
   /**
    * @summary Restructures an object into a CalibrateSensor_RequestParams

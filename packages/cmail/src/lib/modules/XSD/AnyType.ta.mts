@@ -35,26 +35,34 @@ import { String, _decode_String, _encode_String } from '../XSD/String.ta.mjs';
  *
  */
 export class AnyType {
+  /**
+   * @summary `embed_values`.
+   * @public
+   * @readonly
+   */
+  readonly embed_values: String[];
+  /**
+   * @summary `attr`.
+   * @public
+   * @readonly
+   */
+  readonly attr: String[];
+  /**
+   * @summary `elem_list`.
+   * @public
+   * @readonly
+   */
+  readonly elem_list: String[];
+
   constructor(
-    /**
-     * @summary `embed_values`.
-     * @public
-     * @readonly
-     */
-    readonly embed_values: String[],
-    /**
-     * @summary `attr`.
-     * @public
-     * @readonly
-     */
-    readonly attr: String[],
-    /**
-     * @summary `elem_list`.
-     * @public
-     * @readonly
-     */
-    readonly elem_list: String[]
-  ) {}
+    embed_values: String[],
+    attr: String[],
+    elem_list: String[]
+  ) {
+    this.embed_values = embed_values;
+    this.attr = attr;
+    this.elem_list = elem_list;
+  }
 
   /**
    * @summary Restructures an object into a AnyType

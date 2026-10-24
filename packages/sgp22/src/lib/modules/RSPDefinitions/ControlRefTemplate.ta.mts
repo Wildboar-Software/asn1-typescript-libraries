@@ -35,41 +35,49 @@ import { OctetTo16, _decode_OctetTo16, _encode_OctetTo16 } from "../RSPDefinitio
  */
 export
 class ControlRefTemplate {
+    /**
+     * @summary `keyType`.
+     * @description
+     * 
+     * GlobalPlatform key type. `'88'` for AES, `'89'` for SM4. Tag `'80'`.
+     * SGP.22 v3.1 §5.5.1.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly keyType: Octet1;
+    /**
+     * @summary `keyLen`.
+     * @description
+     * 
+     * Key length in octets. `'10'` (16 octets) for both AES-128 and SM4 in
+     * this specification. Tag `'81'`. SGP.22 v3.1 §5.5.1.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly keyLen: Octet1;
+    /**
+     * @summary `hostId`.
+     * @description
+     * 
+     * Host identifier, tag `'84'`. Its length and value are the HostID-LV
+     * input to X9.63 key derivation, next to the EID. SGP.22 v3.1 §2.6.4.2.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly hostId: OctetTo16;
+
     constructor (
-        /**
-         * @summary `keyType`.
-         * @description
-         * 
-         * GlobalPlatform key type. `'88'` for AES, `'89'` for SM4. Tag `'80'`.
-         * SGP.22 v3.1 §5.5.1.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly keyType: Octet1,
-        /**
-         * @summary `keyLen`.
-         * @description
-         * 
-         * Key length in octets. `'10'` (16 octets) for both AES-128 and SM4 in
-         * this specification. Tag `'81'`. SGP.22 v3.1 §5.5.1.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly keyLen: Octet1,
-        /**
-         * @summary `hostId`.
-         * @description
-         * 
-         * Host identifier, tag `'84'`. Its length and value are the HostID-LV
-         * input to X9.63 key derivation, next to the EID. SGP.22 v3.1 §2.6.4.2.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly hostId: OctetTo16
-    ) {}
+        keyType: Octet1,
+        keyLen: Octet1,
+        hostId: OctetTo16
+    ) {
+        this.keyType = keyType;
+        this.keyLen = keyLen;
+        this.hostId = hostId;
+    }
 
     /**
      * @summary Restructures an object into a ControlRefTemplate

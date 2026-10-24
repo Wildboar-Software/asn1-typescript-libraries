@@ -28,30 +28,36 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class ValidationParms {
+    /**
+     * @summary `seed`.
+     * @description
+     *
+     * Seed input to the prime-generation process. If specified,
+     * `pGenCounter` shall also be specified. ANS X9.42-2003 §A.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    readonly seed: BIT_STRING;
+    /**
+     * @summary `pGenCounter`.
+     * @description
+     *
+     * Integer output of the prime-generation process. If specified,
+     * `seed` shall also be specified. ANS X9.42-2003 §A.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    readonly pGenCounter: INTEGER;
+
     constructor(
-        /**
-         * @summary `seed`.
-         * @description
-         *
-         * Seed input to the prime-generation process. If specified,
-         * `pGenCounter` shall also be specified. ANS X9.42-2003 §A.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly seed: BIT_STRING,
-        /**
-         * @summary `pGenCounter`.
-         * @description
-         *
-         * Integer output of the prime-generation process. If specified,
-         * `seed` shall also be specified. ANS X9.42-2003 §A.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly pGenCounter: INTEGER
-    ) {}
+        seed: BIT_STRING,
+        pGenCounter: INTEGER
+    ) {
+        this.seed = seed;
+        this.pGenCounter = pGenCounter;
+    }
 
     /**
      * @summary Restructures an object into a ValidationParms

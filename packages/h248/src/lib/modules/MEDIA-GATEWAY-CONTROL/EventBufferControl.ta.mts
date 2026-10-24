@@ -7,13 +7,13 @@ import * as $ from "@wildboar/asn1/functional";
 
 
 export
-enum _enum_for_EventBufferControl {
+const _enum_for_EventBufferControl = {
     /**
      * Events are processed immediately against the active Events descriptor.
      * This is the default. Setting Off discards anything already buffered
      * (clauses 7.1.5.1.2 and 7.1.9.4).
      */
-    off = 0,
+    off: 0,
     /**
      * After a recognized event, further events that are listed in the
      * EventBuffer descriptor are queued, with detection time, until a new
@@ -21,8 +21,10 @@ enum _enum_for_EventBufferControl {
      * timestamp is the detection time, not the time the new descriptor was
      * loaded.
      */
-    lockStep = 1,
-}
+    lockStep: 1,
+} as const;
+
+export type _enum_for_EventBufferControl = (typeof _enum_for_EventBufferControl)[keyof typeof _enum_for_EventBufferControl];
 
 /**
  * @summary EventBufferControl
@@ -98,8 +100,8 @@ const EventBufferControl_lockStep: EventBufferControl = 1; /* LONG_NAMED_ENUMERA
  */
 export
 const lockStep: EventBufferControl = EventBufferControl_lockStep; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_EventBufferControl = $._decodeEnumerated;
-export const _encode_EventBufferControl = $._encodeEnumerated;
+export const _decode_EventBufferControl = $._decodeEnumerated as $.ASN1Decoder<EventBufferControl>;
+export const _encode_EventBufferControl = $._encodeEnumerated as $.ASN1Encoder<EventBufferControl>;
 
 
 /* eslint-enable */

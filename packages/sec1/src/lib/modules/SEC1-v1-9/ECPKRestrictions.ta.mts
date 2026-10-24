@@ -32,29 +32,35 @@ import { ECCAlgorithms, _decode_ECCAlgorithms, _encode_ECCAlgorithms } from "../
  */
 export
 class ECPKRestrictions {
+    /**
+     * @summary `ecDomain`.
+     * @description
+     *
+     * Domain parameters associated with this public key. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
+     *
+     * @public
+     * @readonly
+     */
+    readonly ecDomain: ECDomainParameters;
+    /**
+     * @summary `eccAlgorithms`.
+     * @description
+     *
+     * Algorithms this key may be used with, optionally in preference order.
+     * [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
+     *
+     * @public
+     * @readonly
+     */
+    readonly eccAlgorithms: ECCAlgorithms;
+
     constructor (
-        /**
-         * @summary `ecDomain`.
-         * @description
-         *
-         * Domain parameters associated with this public key. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ecDomain: ECDomainParameters,
-        /**
-         * @summary `eccAlgorithms`.
-         * @description
-         *
-         * Algorithms this key may be used with, optionally in preference order.
-         * [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly eccAlgorithms: ECCAlgorithms
-    ) {}
+        ecDomain: ECDomainParameters,
+        eccAlgorithms: ECCAlgorithms
+    ) {
+        this.ecDomain = ecDomain;
+        this.eccAlgorithms = eccAlgorithms;
+    }
 
     /**
      * @summary Restructures an object into a ECPKRestrictions

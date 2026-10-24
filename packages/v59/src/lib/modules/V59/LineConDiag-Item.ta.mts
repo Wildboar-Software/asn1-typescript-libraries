@@ -34,59 +34,71 @@ import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59Strin
  */
 export
 class LineConDiag_Item {
+    /**
+     * @summary `lineProbeValues`.
+     * @description
+     *
+     * Line-probe results, lowest frequency first. Real magnitudes or
+     * complex pairs `X ± JY`, comma-separated. Example:
+     * `-0.05+J0.4,0.33-J0.001`. IA5 `simpleText` (§6.2.1). Tag-ID `2D01`.
+     * ITU-T Rec. V.59 (11/2000) §6.10.
+     * @public
+     * @readonly
+     */
+    readonly lineProbeValues?: OPTIONAL<V59String>;
+    /**
+     * @summary `phaseJitter`.
+     * @description
+     *
+     * Phase-jitter estimate as `D@F` (magnitude @ frequency). Units if
+     * calibrated (e.g. `3.2d@60H`). IA5 `simpleText` (§6.2.1). Tag-ID
+     * `2D02`. ITU-T Rec. V.59 (11/2000) §6.10.
+     * @public
+     * @readonly
+     */
+    readonly phaseJitter?: OPTIONAL<V59String>;
+    /**
+     * @summary `ampJitter`.
+     * @description
+     *
+     * Amplitude-jitter estimate; a single number with units if calibrated
+     * (e.g. `0.5dB`). IA5 `simpleText` (§6.2.1). Tag-ID `2D03`. ITU-T Rec.
+     * V.59 (11/2000) §6.10.
+     * @public
+     * @readonly
+     */
+    readonly ampJitter?: OPTIONAL<V59String>;
+    /**
+     * @summary `nLD`.
+     * @description
+     *
+     * Non-linear distortion estimate; a single number with units if
+     * calibrated (e.g. `2.1dB`). IA5 `simpleText` (§6.2.1). Tag-ID `2D04`.
+     * ITU-T Rec. V.59 (11/2000) §6.10.
+     * @public
+     * @readonly
+     */
+    readonly nLD?: OPTIONAL<V59String>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `lineProbeValues`.
-         * @description
-         *
-         * Line-probe results, lowest frequency first. Real magnitudes or
-         * complex pairs `X ± JY`, comma-separated. Example:
-         * `-0.05+J0.4,0.33-J0.001`. IA5 `simpleText` (§6.2.1). Tag-ID `2D01`.
-         * ITU-T Rec. V.59 (11/2000) §6.10.
-         * @public
-         * @readonly
-         */
-        readonly lineProbeValues?: OPTIONAL<V59String>,
-        /**
-         * @summary `phaseJitter`.
-         * @description
-         *
-         * Phase-jitter estimate as `D@F` (magnitude @ frequency). Units if
-         * calibrated (e.g. `3.2d@60H`). IA5 `simpleText` (§6.2.1). Tag-ID
-         * `2D02`. ITU-T Rec. V.59 (11/2000) §6.10.
-         * @public
-         * @readonly
-         */
-        readonly phaseJitter?: OPTIONAL<V59String>,
-        /**
-         * @summary `ampJitter`.
-         * @description
-         *
-         * Amplitude-jitter estimate; a single number with units if calibrated
-         * (e.g. `0.5dB`). IA5 `simpleText` (§6.2.1). Tag-ID `2D03`. ITU-T Rec.
-         * V.59 (11/2000) §6.10.
-         * @public
-         * @readonly
-         */
-        readonly ampJitter?: OPTIONAL<V59String>,
-        /**
-         * @summary `nLD`.
-         * @description
-         *
-         * Non-linear distortion estimate; a single number with units if
-         * calibrated (e.g. `2.1dB`). IA5 `simpleText` (§6.2.1). Tag-ID `2D04`.
-         * ITU-T Rec. V.59 (11/2000) §6.10.
-         * @public
-         * @readonly
-         */
-        readonly nLD?: OPTIONAL<V59String>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        lineProbeValues?: OPTIONAL<V59String>,
+        phaseJitter?: OPTIONAL<V59String>,
+        ampJitter?: OPTIONAL<V59String>,
+        nLD?: OPTIONAL<V59String>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.lineProbeValues = lineProbeValues;
+        this.phaseJitter = phaseJitter;
+        this.ampJitter = ampJitter;
+        this.nLD = nLD;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a LineConDiag_Item

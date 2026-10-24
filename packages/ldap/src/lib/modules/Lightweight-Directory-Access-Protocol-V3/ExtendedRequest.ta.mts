@@ -39,35 +39,43 @@ import {
  *
  */
 export class ExtendedRequest {
+  /**
+   * @summary `requestName`.
+   * @description
+   *
+   * Numericoid of the extended operation.
+   *
+   * @public
+   * @readonly
+   */
+  readonly requestName: LDAPOID;
+  /**
+   * @summary `requestValue`.
+   * @description
+   *
+   * Opaque; may contain NULs. Absent if the operation defines no
+   * value. BER-encoded inner values follow §4 extensibility.
+   *
+   * @public
+   * @readonly
+   */
+  readonly requestValue?: OPTIONAL<OCTET_STRING>;
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  readonly _unrecognizedExtensionsList: _Element[];
+
   constructor(
-    /**
-     * @summary `requestName`.
-     * @description
-     *
-     * Numericoid of the extended operation.
-     *
-     * @public
-     * @readonly
-     */
-    readonly requestName: LDAPOID,
-    /**
-     * @summary `requestValue`.
-     * @description
-     *
-     * Opaque; may contain NULs. Absent if the operation defines no
-     * value. BER-encoded inner values follow §4 extensibility.
-     *
-     * @public
-     * @readonly
-     */
-    readonly requestValue?: OPTIONAL<OCTET_STRING>,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = []
-  ) {}
+    requestName: LDAPOID,
+    requestValue?: OPTIONAL<OCTET_STRING>,
+    _unrecognizedExtensionsList: _Element[] = []
+  ) {
+    this.requestName = requestName;
+    this.requestValue = requestValue;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+  }
 
   /**
    * @summary Restructures an object into a ExtendedRequest

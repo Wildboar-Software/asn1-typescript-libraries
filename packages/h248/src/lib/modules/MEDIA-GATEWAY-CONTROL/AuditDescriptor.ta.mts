@@ -53,44 +53,52 @@ import { IndAuditParameter, _decode_IndAuditParameter, _encode_IndAuditParameter
  */
 export
 class AuditDescriptor {
+    /**
+     * @summary `auditToken`.
+     * @description
+     *
+     * Whole descriptors to return: Mux, Modem, Media, Events, Signals,
+     * DigitMap, Statistics, ObservedEvents, Packages, EventBuffer. Modem is
+     * deprecated (clause 7.1.2).
+     *
+     * @public
+     * @readonly
+     */
+    readonly auditToken?: OPTIONAL<AuditDescriptor_auditToken>;
+    /**
+     * @summary `auditPropertyToken`.
+     * @description
+     *
+     * Individual items to return, including filters. Several criteria
+     * combine with AND unless the audit also carries OR logic (clause
+     * 7.2.5). GroupID, where used, numbers Local/Remote property groups
+     * from 1 in reservation order.
+     *
+     * @public
+     * @readonly
+     */
+    readonly auditPropertyToken?: OPTIONAL<IndAuditParameter[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `auditToken`.
-         * @description
-         *
-         * Whole descriptors to return: Mux, Modem, Media, Events, Signals,
-         * DigitMap, Statistics, ObservedEvents, Packages, EventBuffer. Modem is
-         * deprecated (clause 7.1.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly auditToken?: OPTIONAL<AuditDescriptor_auditToken>,
-        /**
-         * @summary `auditPropertyToken`.
-         * @description
-         *
-         * Individual items to return, including filters. Several criteria
-         * combine with AND unless the audit also carries OR logic (clause
-         * 7.2.5). GroupID, where used, numbers Local/Remote property groups
-         * from 1 in reservation order.
-         *
-         * @public
-         * @readonly
-         */
-        readonly auditPropertyToken?: OPTIONAL<IndAuditParameter[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        auditToken?: OPTIONAL<AuditDescriptor_auditToken>,
+        auditPropertyToken?: OPTIONAL<IndAuditParameter[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.auditToken = auditToken;
+        this.auditPropertyToken = auditPropertyToken;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AuditDescriptor

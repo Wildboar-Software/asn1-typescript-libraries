@@ -34,43 +34,51 @@ import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../
  */
 export
 class SmdpSigned2 {
+    /**
+     * @summary `transactionId`.
+     * @description
+     * 
+     * Session id the SM-DP+ assigned. SGP.22 v3.1 §5.7.5.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly transactionId: TransactionId;
+    /**
+     * @summary `ccRequiredFlag`.
+     * @description
+     * 
+     * True when the End User must enter the Confirmation Code before the
+     * LPA calls GetBoundProfilePackage. The code is distributed out of
+     * band. SGP.22 v3.1 §4.7 and §5.7.5.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly ccRequiredFlag: BOOLEAN;
+    /**
+     * @summary `bppEuiccOtpk`.
+     * @description
+     * 
+     * otPK.EUICC.KA already used to bind a BPP for this eUICC, tag
+     * `'5F49'`. Present when the SM-DP+ wants the eUICC to reuse that key
+     * pair so a previously generated package can be re-signed rather than
+     * rebuilt. SGP.22 v3.1 §5.6.2 and §5.7.5.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly bppEuiccOtpk?: OPTIONAL<OCTET_STRING>;
+
     constructor (
-        /**
-         * @summary `transactionId`.
-         * @description
-         * 
-         * Session id the SM-DP+ assigned. SGP.22 v3.1 §5.7.5.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly transactionId: TransactionId,
-        /**
-         * @summary `ccRequiredFlag`.
-         * @description
-         * 
-         * True when the End User must enter the Confirmation Code before the
-         * LPA calls GetBoundProfilePackage. The code is distributed out of
-         * band. SGP.22 v3.1 §4.7 and §5.7.5.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly ccRequiredFlag: BOOLEAN,
-        /**
-         * @summary `bppEuiccOtpk`.
-         * @description
-         * 
-         * otPK.EUICC.KA already used to bind a BPP for this eUICC, tag
-         * `'5F49'`. Present when the SM-DP+ wants the eUICC to reuse that key
-         * pair so a previously generated package can be re-signed rather than
-         * rebuilt. SGP.22 v3.1 §5.6.2 and §5.7.5.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly bppEuiccOtpk?: OPTIONAL<OCTET_STRING>
-    ) {}
+        transactionId: TransactionId,
+        ccRequiredFlag: BOOLEAN,
+        bppEuiccOtpk?: OPTIONAL<OCTET_STRING>
+    ) {
+        this.transactionId = transactionId;
+        this.ccRequiredFlag = ccRequiredFlag;
+        this.bppEuiccOtpk = bppEuiccOtpk;
+    }
 
     /**
      * @summary Restructures an object into a SmdpSigned2

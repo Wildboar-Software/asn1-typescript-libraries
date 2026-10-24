@@ -39,36 +39,44 @@ import {
  *
  */
 export class SaslCredentials {
+  /**
+   * @summary `mechanism`.
+   * @description
+   *
+   * SASL mechanism name. Empty string aborts (server →
+   * `authMethodNotSupported`).
+   *
+   * @public
+   * @readonly
+   */
+  readonly mechanism: LDAPString;
+  /**
+   * @summary `credentials`.
+   * @description
+   *
+   * Mechanism-defined octets; omit if none this round. May contain
+   * NULs.
+   *
+   * @public
+   * @readonly
+   */
+  readonly credentials?: OPTIONAL<OCTET_STRING>;
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  readonly _unrecognizedExtensionsList: _Element[];
+
   constructor(
-    /**
-     * @summary `mechanism`.
-     * @description
-     *
-     * SASL mechanism name. Empty string aborts (server →
-     * `authMethodNotSupported`).
-     *
-     * @public
-     * @readonly
-     */
-    readonly mechanism: LDAPString,
-    /**
-     * @summary `credentials`.
-     * @description
-     *
-     * Mechanism-defined octets; omit if none this round. May contain
-     * NULs.
-     *
-     * @public
-     * @readonly
-     */
-    readonly credentials?: OPTIONAL<OCTET_STRING>,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = []
-  ) {}
+    mechanism: LDAPString,
+    credentials?: OPTIONAL<OCTET_STRING>,
+    _unrecognizedExtensionsList: _Element[] = []
+  ) {
+    this.mechanism = mechanism;
+    this.credentials = credentials;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+  }
 
   /**
    * @summary Restructures an object into a SaslCredentials

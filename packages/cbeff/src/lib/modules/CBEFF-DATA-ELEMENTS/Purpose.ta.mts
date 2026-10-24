@@ -25,15 +25,17 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_Purpose {
-  no_value_available = 0,
-  verify = 1,
-  identify = 2,
-  enroll = 3,
-  enroll_verify = 4,
-  enroll_identify = 5,
-  audit = 6,
-}
+export const _enum_for_Purpose = {
+  no_value_available: 0,
+  verify: 1,
+  identify: 2,
+  enroll: 3,
+  enroll_verify: 4,
+  enroll_identify: 5,
+  audit: 6,
+} as const;
+
+export type _enum_for_Purpose = (typeof _enum_for_Purpose)[keyof typeof _enum_for_Purpose];
 
 /**
  * @summary Purpose

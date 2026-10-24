@@ -36,67 +36,79 @@ import { StatisticsDescriptor, _decode_StatisticsDescriptor, _encode_StatisticsD
  */
 export
 class StreamParms {
+    /**
+     * @summary `localControlDescriptor`.
+     * @description
+     *
+     * Mode, reserve behaviour, and packaged properties of interest between
+     * MG and MGC. A new setting replaces the previous one entirely (clause
+     * 7.1.7).
+     *
+     * @public
+     * @readonly
+     */
+    readonly localControlDescriptor?: OPTIONAL<LocalControlDescriptor>;
+    /**
+     * @summary `localDescriptor`.
+     * @description
+     *
+     * Media the MG receives from the remote entity. Empty means release
+     * resources reserved for that received flow (clauses 7.1.8 and
+     * 7.1.8.2.2).
+     *
+     * @public
+     * @readonly
+     */
+    readonly localDescriptor?: OPTIONAL<LocalRemoteDescriptor>;
+    /**
+     * @summary `remoteDescriptor`.
+     * @description
+     *
+     * Media the MG sends to the remote entity. Empty means release
+     * resources reserved for that sent flow (clauses 7.1.8 and 7.1.8.2.2).
+     *
+     * @public
+     * @readonly
+     */
+    readonly remoteDescriptor?: OPTIONAL<LocalRemoteDescriptor>;
+    /**
+     * @summary `statisticsDescriptor`.
+     * @description
+     *
+     * Statistics collected for this stream. Setting a new descriptor
+     * overrides the previous one; statistics that are repeated keep their
+     * values, and a statistic that is removed and later put back is reset
+     * (clause 7.1.15).
+     *
+     * @public
+     * @readonly
+     */
+    readonly statisticsDescriptor?: OPTIONAL<StatisticsDescriptor>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `localControlDescriptor`.
-         * @description
-         *
-         * Mode, reserve behaviour, and packaged properties of interest between
-         * MG and MGC. A new setting replaces the previous one entirely (clause
-         * 7.1.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly localControlDescriptor?: OPTIONAL<LocalControlDescriptor>,
-        /**
-         * @summary `localDescriptor`.
-         * @description
-         *
-         * Media the MG receives from the remote entity. Empty means release
-         * resources reserved for that received flow (clauses 7.1.8 and
-         * 7.1.8.2.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly localDescriptor?: OPTIONAL<LocalRemoteDescriptor>,
-        /**
-         * @summary `remoteDescriptor`.
-         * @description
-         *
-         * Media the MG sends to the remote entity. Empty means release
-         * resources reserved for that sent flow (clauses 7.1.8 and 7.1.8.2.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly remoteDescriptor?: OPTIONAL<LocalRemoteDescriptor>,
-        /**
-         * @summary `statisticsDescriptor`.
-         * @description
-         *
-         * Statistics collected for this stream. Setting a new descriptor
-         * overrides the previous one; statistics that are repeated keep their
-         * values, and a statistic that is removed and later put back is reset
-         * (clause 7.1.15).
-         *
-         * @public
-         * @readonly
-         */
-        readonly statisticsDescriptor?: OPTIONAL<StatisticsDescriptor>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        localControlDescriptor?: OPTIONAL<LocalControlDescriptor>,
+        localDescriptor?: OPTIONAL<LocalRemoteDescriptor>,
+        remoteDescriptor?: OPTIONAL<LocalRemoteDescriptor>,
+        statisticsDescriptor?: OPTIONAL<StatisticsDescriptor>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.localControlDescriptor = localControlDescriptor;
+        this.localDescriptor = localDescriptor;
+        this.remoteDescriptor = remoteDescriptor;
+        this.statisticsDescriptor = statisticsDescriptor;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a StreamParms

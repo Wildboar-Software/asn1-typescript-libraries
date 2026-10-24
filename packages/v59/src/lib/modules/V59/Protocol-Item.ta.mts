@@ -33,34 +33,42 @@ import { Compression, _decode_Compression, _encode_Compression } from "../V59/Co
  */
 export
 class Protocol_Item {
+    /**
+     * @summary `errorControlStat`.
+     * @description
+     *
+     * V.42 / error-control negotiation and counters. ITU-T Rec. V.59
+     * (11/2000) §6.12.
+     * @public
+     * @readonly
+     */
+    readonly errorControlStat: ErrorControl;
+    /**
+     * @summary `compStat`.
+     * @description
+     *
+     * V.42 bis / V.44 compression negotiation and parameters. ITU-T Rec.
+     * V.59 (11/2000) §6.12.
+     * @public
+     * @readonly
+     */
+    readonly compStat: Compression;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `errorControlStat`.
-         * @description
-         *
-         * V.42 / error-control negotiation and counters. ITU-T Rec. V.59
-         * (11/2000) §6.12.
-         * @public
-         * @readonly
-         */
-        readonly errorControlStat: ErrorControl,
-        /**
-         * @summary `compStat`.
-         * @description
-         *
-         * V.42 bis / V.44 compression negotiation and parameters. ITU-T Rec.
-         * V.59 (11/2000) §6.12.
-         * @public
-         * @readonly
-         */
-        readonly compStat: Compression,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        errorControlStat: ErrorControl,
+        compStat: Compression,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.errorControlStat = errorControlStat;
+        this.compStat = compStat;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Protocol_Item

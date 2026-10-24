@@ -13,16 +13,18 @@ import {
 import * as $ from '@wildboar/asn1/functional';
 
 
-export enum _enum_for_BioAPI_GUI_OPERATION {
-  capture = 0,
-  process = 1,
-  createtemplate = 2,
-  verifymatch = 3,
-  identifymatch = 4,
-  verify = 5,
-  identify = 6,
-  enroll = 7,
-}
+export const _enum_for_BioAPI_GUI_OPERATION = {
+  capture: 0,
+  process: 1,
+  createtemplate: 2,
+  verifymatch: 3,
+  identifymatch: 4,
+  verify: 5,
+  identify: 6,
+  enroll: 7,
+} as const;
+
+export type _enum_for_BioAPI_GUI_OPERATION = (typeof _enum_for_BioAPI_GUI_OPERATION)[keyof typeof _enum_for_BioAPI_GUI_OPERATION];
 
 
 /**

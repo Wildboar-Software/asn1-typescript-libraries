@@ -28,12 +28,14 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_SearchRequest_derefAliases {
-  neverDerefAliases = 0,
-  derefInSearching = 1,
-  derefFindingBaseObj = 2,
-  derefAlways = 3,
-}
+export const _enum_for_SearchRequest_derefAliases = {
+  neverDerefAliases: 0,
+  derefInSearching: 1,
+  derefFindingBaseObj: 2,
+  derefAlways: 3,
+} as const;
+
+export type _enum_for_SearchRequest_derefAliases = (typeof _enum_for_SearchRequest_derefAliases)[keyof typeof _enum_for_SearchRequest_derefAliases];
 
 
 /**
@@ -193,7 +195,7 @@ export const derefAlways: SearchRequest_derefAliases =
  * @returns {SearchRequest_derefAliases} The decoded data structure.
  */
 export function _decode_SearchRequest_derefAliases(el: _Element): SearchRequest_derefAliases {
-  return $._decodeEnumerated(el);
+  return $._decodeEnumerated(el) as SearchRequest_derefAliases;
 }
 
 
@@ -208,7 +210,7 @@ export function _encode_SearchRequest_derefAliases(
   value: SearchRequest_derefAliases,
   elGetter: $.ASN1Encoder<SearchRequest_derefAliases>
 ): _Element {
-  return $._encodeEnumerated(value, elGetter);
+  return $._encodeEnumerated(value, elGetter as $.ASN1Encoder<number>);
 }
 
 

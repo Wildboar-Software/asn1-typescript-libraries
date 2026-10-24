@@ -37,34 +37,42 @@ import {
  *
  */
 export class Content_encoded_value {
+  /**
+   * @summary `schema_identifier`.
+   * @description Optional 16-octet schema identifier. Ignored
+   * when mapping to a SOAP infoset, and omitted when mapping
+   * from one. ITU-T Rec. X.892 (05/2005) §7.5.3.6, §8.5.3.5.
+   * @public
+   * @readonly
+   */
+  readonly schema_identifier: OPTIONAL<OCTET_STRING>;
+  /**
+   * @summary `id`.
+   * @description Identifies the ASN.1 type of `encoding`. If the
+   * node cannot resolve it, it shall fault (`sender` /
+   * `NotIdentified`). ITU-T Rec. X.892 (05/2005) §9.2, §9.5.
+   * @public
+   * @readonly
+   */
+  readonly id: Identifier;
+  /**
+   * @summary `encoding`.
+   * @description Basic Aligned PER of the identified ASN.1
+   * value. ITU-T Rec. X.892 (05/2005) §7.5.3.5, §9.3, §13.9.
+   * @public
+   * @readonly
+   */
+  readonly encoding: OCTET_STRING;
+
   constructor(
-    /**
-     * @summary `schema_identifier`.
-     * @description Optional 16-octet schema identifier. Ignored
-     * when mapping to a SOAP infoset, and omitted when mapping
-     * from one. ITU-T Rec. X.892 (05/2005) §7.5.3.6, §8.5.3.5.
-     * @public
-     * @readonly
-     */
-    readonly schema_identifier: OPTIONAL<OCTET_STRING>,
-    /**
-     * @summary `id`.
-     * @description Identifies the ASN.1 type of `encoding`. If the
-     * node cannot resolve it, it shall fault (`sender` /
-     * `NotIdentified`). ITU-T Rec. X.892 (05/2005) §9.2, §9.5.
-     * @public
-     * @readonly
-     */
-    readonly id: Identifier,
-    /**
-     * @summary `encoding`.
-     * @description Basic Aligned PER of the identified ASN.1
-     * value. ITU-T Rec. X.892 (05/2005) §7.5.3.5, §9.3, §13.9.
-     * @public
-     * @readonly
-     */
-    readonly encoding: OCTET_STRING
-  ) {}
+    schema_identifier: OPTIONAL<OCTET_STRING>,
+    id: Identifier,
+    encoding: OCTET_STRING
+  ) {
+    this.schema_identifier = schema_identifier;
+    this.id = id;
+    this.encoding = encoding;
+  }
 
   /**
    * @summary Restructures an object into a Content_encoded_value

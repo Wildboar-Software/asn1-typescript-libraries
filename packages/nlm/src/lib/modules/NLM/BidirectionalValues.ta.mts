@@ -39,35 +39,41 @@ import {
  *
  */
 export class BidirectionalValues {
+    /**
+     * @summary `incoming`.
+     * @description
+     *
+     * Value applying to the incoming direction. `dontCare` means use the
+     * protocol/facility default (128-octet packets, window 2, or normal
+     * throughput class, depending on the attribute).
+     * ITU-T Rec. X.283 (12/97)
+     * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+     *
+     * @public
+     * @readonly
+     */
+    readonly incoming: ChoiceInteger;
+    /**
+     * @summary `outgoing`.
+     * @description
+     *
+     * Value applying to the outgoing direction. Same `dontCare` convention
+     * as `incoming`.
+     * ITU-T Rec. X.283 (12/97)
+     * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
+     *
+     * @public
+     * @readonly
+     */
+    readonly outgoing: ChoiceInteger;
+
     constructor(
-        /**
-         * @summary `incoming`.
-         * @description
-         *
-         * Value applying to the incoming direction. `dontCare` means use the
-         * protocol/facility default (128-octet packets, window 2, or normal
-         * throughput class, depending on the attribute).
-         * ITU-T Rec. X.283 (12/97)
-         * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
-         *
-         * @public
-         * @readonly
-         */
-        readonly incoming: ChoiceInteger,
-        /**
-         * @summary `outgoing`.
-         * @description
-         *
-         * Value applying to the outgoing direction. Same `dontCare` convention
-         * as `incoming`.
-         * ITU-T Rec. X.283 (12/97)
-         * [§5.10](https://www.itu.int/rec/T-REC-X.283-199712-I).
-         *
-         * @public
-         * @readonly
-         */
-        readonly outgoing: ChoiceInteger
-    ) {}
+        incoming: ChoiceInteger,
+        outgoing: ChoiceInteger
+    ) {
+        this.incoming = incoming;
+        this.outgoing = outgoing;
+    }
 
     /**
      * @summary Restructures an object into a BidirectionalValues

@@ -52,53 +52,63 @@ import {
  *
  */
 export class F_READ_request {
+  /**
+   * @summary `file_access_data_unit_identity`.
+   * @description
+   *
+   * FADU(s) to read. Sets current location (ISO 8571-3:1988
+   * §13.12). Location after the read is unchanged
+   * (ISO 8571-2:1988 §11.2).
+   *
+   * @public
+   * @readonly
+   */
+  readonly file_access_data_unit_identity: FADU_Identity;
+  /**
+   * @summary `access_context`.
+   * @description
+   *
+   * View of the file access structure used for this transfer
+   * (ISO 8571-3:1988 §20.1.2 Table 27).
+   *
+   * @public
+   * @readonly
+   */
+  readonly access_context: Access_Context;
+  /**
+   * @summary `fadu_lock`.
+   * @description
+   *
+   * Optional per-FADU lock for this transfer (ISO 8571-3:1988
+   * §13.9; Table 25).
+   *
+   * @public
+   * @readonly
+   */
+  readonly fadu_lock?: OPTIONAL<FADU_Lock>;
+  /**
+   * @summary `transfer_number`.
+   * @description
+   *
+   * Not in ISO 8571:1988 Parts 1–4. Module comment: conditional on
+   * consecutive or concurrent access.
+   *
+   * @public
+   * @readonly
+   */
+  readonly transfer_number?: OPTIONAL<INTEGER>;
+
   constructor(
-    /**
-     * @summary `file_access_data_unit_identity`.
-     * @description
-     *
-     * FADU(s) to read. Sets current location (ISO 8571-3:1988
-     * §13.12). Location after the read is unchanged
-     * (ISO 8571-2:1988 §11.2).
-     *
-     * @public
-     * @readonly
-     */
-    readonly file_access_data_unit_identity: FADU_Identity,
-    /**
-     * @summary `access_context`.
-     * @description
-     *
-     * View of the file access structure used for this transfer
-     * (ISO 8571-3:1988 §20.1.2 Table 27).
-     *
-     * @public
-     * @readonly
-     */
-    readonly access_context: Access_Context,
-    /**
-     * @summary `fadu_lock`.
-     * @description
-     *
-     * Optional per-FADU lock for this transfer (ISO 8571-3:1988
-     * §13.9; Table 25).
-     *
-     * @public
-     * @readonly
-     */
-    readonly fadu_lock?: OPTIONAL<FADU_Lock>,
-    /**
-     * @summary `transfer_number`.
-     * @description
-     *
-     * Not in ISO 8571:1988 Parts 1–4. Module comment: conditional on
-     * consecutive or concurrent access.
-     *
-     * @public
-     * @readonly
-     */
-    readonly transfer_number?: OPTIONAL<INTEGER>
-  ) {}
+    file_access_data_unit_identity: FADU_Identity,
+    access_context: Access_Context,
+    fadu_lock?: OPTIONAL<FADU_Lock>,
+    transfer_number?: OPTIONAL<INTEGER>
+  ) {
+    this.file_access_data_unit_identity = file_access_data_unit_identity;
+    this.access_context = access_context;
+    this.fadu_lock = fadu_lock;
+    this.transfer_number = transfer_number;
+  }
 
   /**
    * @summary Restructures an object into a F_READ_request

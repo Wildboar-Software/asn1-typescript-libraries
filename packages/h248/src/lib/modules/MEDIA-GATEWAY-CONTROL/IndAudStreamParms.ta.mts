@@ -34,64 +34,76 @@ import { IndAudStatisticsDescriptor, _decode_IndAudStatisticsDescriptor, _encode
  */
 export
 class IndAudStreamParms {
+    /**
+     * @summary `localControlDescriptor`.
+     * @description
+     *
+     * LocalControl items: mode, reserve flags, and packaged stream
+     * properties. Do not send both `streamMode` and `streamModeSel`; if
+     * both appear, only `streamModeSel` is honoured (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    readonly localControlDescriptor?: OPTIONAL<IndAudLocalControlDescriptor>;
+    /**
+     * @summary `localDescriptor`.
+     * @description
+     *
+     * Local descriptor items. `propGroupID` selects one reserved property
+     * group; group 1 is the first group reserved (clause 7.2.5).
+     *
+     * @public
+     * @readonly
+     */
+    readonly localDescriptor?: OPTIONAL<IndAudLocalRemoteDescriptor>;
+    /**
+     * @summary `remoteDescriptor`.
+     * @description
+     *
+     * Remote descriptor items. Same group numbering as the Local
+     * descriptor.
+     *
+     * @public
+     * @readonly
+     */
+    readonly remoteDescriptor?: OPTIONAL<IndAudLocalRemoteDescriptor>;
+    /**
+     * @summary `statisticsDescriptor`.
+     * @description
+     *
+     * One stream-level statistic to return. The statistic is not reset by
+     * the audit (clause 7.2.5).
+     *
+     * @public
+     * @readonly
+     */
+    readonly statisticsDescriptor?: OPTIONAL<IndAudStatisticsDescriptor>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `localControlDescriptor`.
-         * @description
-         *
-         * LocalControl items: mode, reserve flags, and packaged stream
-         * properties. Do not send both `streamMode` and `streamModeSel`; if
-         * both appear, only `streamModeSel` is honoured (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly localControlDescriptor?: OPTIONAL<IndAudLocalControlDescriptor>,
-        /**
-         * @summary `localDescriptor`.
-         * @description
-         *
-         * Local descriptor items. `propGroupID` selects one reserved property
-         * group; group 1 is the first group reserved (clause 7.2.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly localDescriptor?: OPTIONAL<IndAudLocalRemoteDescriptor>,
-        /**
-         * @summary `remoteDescriptor`.
-         * @description
-         *
-         * Remote descriptor items. Same group numbering as the Local
-         * descriptor.
-         *
-         * @public
-         * @readonly
-         */
-        readonly remoteDescriptor?: OPTIONAL<IndAudLocalRemoteDescriptor>,
-        /**
-         * @summary `statisticsDescriptor`.
-         * @description
-         *
-         * One stream-level statistic to return. The statistic is not reset by
-         * the audit (clause 7.2.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly statisticsDescriptor?: OPTIONAL<IndAudStatisticsDescriptor>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        localControlDescriptor?: OPTIONAL<IndAudLocalControlDescriptor>,
+        localDescriptor?: OPTIONAL<IndAudLocalRemoteDescriptor>,
+        remoteDescriptor?: OPTIONAL<IndAudLocalRemoteDescriptor>,
+        statisticsDescriptor?: OPTIONAL<IndAudStatisticsDescriptor>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.localControlDescriptor = localControlDescriptor;
+        this.localDescriptor = localDescriptor;
+        this.remoteDescriptor = remoteDescriptor;
+        this.statisticsDescriptor = statisticsDescriptor;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a IndAudStreamParms

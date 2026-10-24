@@ -33,20 +33,24 @@ import {
  *
  */
 export class LinkCallParams {
+  /**
+   * @summary `slaveEndpointIRI`.
+   * @description
+   *
+   * `SlaveEndpointIRI` of `BioAPI_LinkToEndpoint`: endpoint
+   * that will be slave on the new link. A NULL C pointer maps
+   * to the local endpoint IRI. X.1083 §16.4.6, §15.3.
+   *
+   * @public
+   * @readonly
+   */
+  readonly slaveEndpointIRI: EndpointIRI;
+
   constructor(
-    /**
-     * @summary `slaveEndpointIRI`.
-     * @description
-     *
-     * `SlaveEndpointIRI` of `BioAPI_LinkToEndpoint`: endpoint
-     * that will be slave on the new link. A NULL C pointer maps
-     * to the local endpoint IRI. X.1083 §16.4.6, §15.3.
-     *
-     * @public
-     * @readonly
-     */
-    readonly slaveEndpointIRI: EndpointIRI
-  ) {}
+    slaveEndpointIRI: EndpointIRI
+  ) {
+    this.slaveEndpointIRI = slaveEndpointIRI;
+  }
 
   /**
    * @summary Restructures an object into a LinkCallParams

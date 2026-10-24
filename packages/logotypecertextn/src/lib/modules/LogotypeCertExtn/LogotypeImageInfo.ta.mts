@@ -38,55 +38,69 @@ import { LogotypeImageResolution, _decode_LogotypeImageResolution, _encode_Logot
  */
 export
 class LogotypeImageInfo {
+    /**
+     * `grayScale` (0) or `color` (1). Omitted means `color`.
+     *
+     * [RFC 3709, section 4.1](https://www.rfc-editor.org/rfc/rfc3709#section-4.1).
+     * @public
+     * @readonly
+     */
+    readonly type_: OPTIONAL<LogotypeImageType>;
+    /**
+     * Length of the image file, in octets.
+     * @public
+     * @readonly
+     */
+    readonly fileSize: INTEGER;
+    /**
+     * Width in pixels. Together with `ySize`, at least one image
+     * of the logotype should lie between 60×45 and 200×150.
+     *
+     * [RFC 3709, section 3](https://www.rfc-editor.org/rfc/rfc3709#section-3).
+     * @public
+     * @readonly
+     */
+    readonly xSize: INTEGER;
+    /**
+     * Height in pixels. See `xSize` for the recommended range.
+     * @public
+     * @readonly
+     */
+    readonly ySize: INTEGER;
+    /**
+     * Color or grayscale depth. Absent when the issuer does not
+     * state it. RFC 3709 does not say whether to use `numBits` or
+     * `tableSize` for a given image.
+     * @public
+     * @readonly
+     */
+    readonly resolution?: OPTIONAL<LogotypeImageResolution>;
+    /**
+     * Language of text in the image, as an
+     * [RFC 3066](https://www.rfc-editor.org/rfc/rfc3066) language
+     * tag. Absent when no language is claimed.
+     *
+     * [RFC 3709, section 4.1](https://www.rfc-editor.org/rfc/rfc3709#section-4.1).
+     * @public
+     * @readonly
+     */
+    readonly language?: OPTIONAL<IA5String>;
+
     constructor (
-        /**
-         * `grayScale` (0) or `color` (1). Omitted means `color`.
-         *
-         * [RFC 3709, section 4.1](https://www.rfc-editor.org/rfc/rfc3709#section-4.1).
-         * @public
-         * @readonly
-         */
-        readonly type_: OPTIONAL<LogotypeImageType>,
-        /**
-         * Length of the image file, in octets.
-         * @public
-         * @readonly
-         */
-        readonly fileSize: INTEGER,
-        /**
-         * Width in pixels. Together with `ySize`, at least one image
-         * of the logotype should lie between 60×45 and 200×150.
-         *
-         * [RFC 3709, section 3](https://www.rfc-editor.org/rfc/rfc3709#section-3).
-         * @public
-         * @readonly
-         */
-        readonly xSize: INTEGER,
-        /**
-         * Height in pixels. See `xSize` for the recommended range.
-         * @public
-         * @readonly
-         */
-        readonly ySize: INTEGER,
-        /**
-         * Color or grayscale depth. Absent when the issuer does not
-         * state it. RFC 3709 does not say whether to use `numBits` or
-         * `tableSize` for a given image.
-         * @public
-         * @readonly
-         */
-        readonly resolution?: OPTIONAL<LogotypeImageResolution>,
-        /**
-         * Language of text in the image, as an
-         * [RFC 3066](https://www.rfc-editor.org/rfc/rfc3066) language
-         * tag. Absent when no language is claimed.
-         *
-         * [RFC 3709, section 4.1](https://www.rfc-editor.org/rfc/rfc3709#section-4.1).
-         * @public
-         * @readonly
-         */
-        readonly language?: OPTIONAL<IA5String>
-    ) {}
+        type_: OPTIONAL<LogotypeImageType>,
+        fileSize: INTEGER,
+        xSize: INTEGER,
+        ySize: INTEGER,
+        resolution?: OPTIONAL<LogotypeImageResolution>,
+        language?: OPTIONAL<IA5String>
+    ) {
+        this.type_ = type_;
+        this.fileSize = fileSize;
+        this.xSize = xSize;
+        this.ySize = ySize;
+        this.resolution = resolution;
+        this.language = language;
+    }
 
     /**
      * @summary Restructures an object into a LogotypeImageInfo

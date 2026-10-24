@@ -36,54 +36,64 @@ import { type Certificate, _decode_Certificate, _encode_Certificate } from "@wil
  */
 export
 class PrepareDownloadRequest {
+    /**
+     * @summary `smdpSigned2`.
+     * @description
+     * 
+     * SM-DP+ binding data, including whether a Confirmation Code is
+     * required. SGP.22 v3.1 §5.7.5.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly smdpSigned2: SmdpSigned2;
+    /**
+     * @summary `smdpSignature2`.
+     * @description
+     * 
+     * Signature under SK.DPpb.SIG, tag `'5F37'`. The eUICC verifies it
+     * before releasing otPK.EUICC.KA. SGP.22 v3.1 §5.7.5.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly smdpSignature2: OCTET_STRING;
+    /**
+     * @summary `hashCc`.
+     * @description
+     * 
+     * Hashed Confirmation Code, present when the End User supplied one.
+     * SHA-256(SHA-256(UTF-8 code) concatenated with the TransactionID).
+     * SGP.22 v3.1 §3.1.3 and §4.7.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly hashCc: OPTIONAL<Octet32>;
+    /**
+     * @summary `smdpCertificate`.
+     * @description
+     * 
+     * CERT.DPpb.SIG. The eUICC verifies the binding signature with this
+     * key. SGP.22 v3.1 §5.7.5. v3.1 names the usage SIG rather than ECDSA;
+     * this module's ASN.1 comment still says ECDSA.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly smdpCertificate: Certificate;
+
     constructor (
-        /**
-         * @summary `smdpSigned2`.
-         * @description
-         * 
-         * SM-DP+ binding data, including whether a Confirmation Code is
-         * required. SGP.22 v3.1 §5.7.5.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly smdpSigned2: SmdpSigned2,
-        /**
-         * @summary `smdpSignature2`.
-         * @description
-         * 
-         * Signature under SK.DPpb.SIG, tag `'5F37'`. The eUICC verifies it
-         * before releasing otPK.EUICC.KA. SGP.22 v3.1 §5.7.5.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly smdpSignature2: OCTET_STRING,
-        /**
-         * @summary `hashCc`.
-         * @description
-         * 
-         * Hashed Confirmation Code, present when the End User supplied one.
-         * SHA-256(SHA-256(UTF-8 code) concatenated with the TransactionID).
-         * SGP.22 v3.1 §3.1.3 and §4.7.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly hashCc: OPTIONAL<Octet32>,
-        /**
-         * @summary `smdpCertificate`.
-         * @description
-         * 
-         * CERT.DPpb.SIG. The eUICC verifies the binding signature with this
-         * key. SGP.22 v3.1 §5.7.5. v3.1 names the usage SIG rather than ECDSA;
-         * this module's ASN.1 comment still says ECDSA.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly smdpCertificate: Certificate
-    ) {}
+        smdpSigned2: SmdpSigned2,
+        smdpSignature2: OCTET_STRING,
+        hashCc: OPTIONAL<Octet32>,
+        smdpCertificate: Certificate
+    ) {
+        this.smdpSigned2 = smdpSigned2;
+        this.smdpSignature2 = smdpSignature2;
+        this.hashCc = hashCc;
+        this.smdpCertificate = smdpCertificate;
+    }
 
     /**
      * @summary Restructures an object into a PrepareDownloadRequest

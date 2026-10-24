@@ -52,42 +52,50 @@ import {
  *
  */
 export class F_CHANGE_ATTRIB_response {
+  /**
+   * @summary `action_result`.
+   * @description
+   *
+   * Unsuccessful means none of the changes were performed.
+   * Default `success`. ISO 8571-3:1988 §16.2.2.1.
+   *
+   * @public
+   * @readonly
+   */
+  readonly action_result?: OPTIONAL<Action_Result>;
+  /**
+   * @summary `attributes`.
+   * @description
+   *
+   * Conditional on at least one name/value on the request.
+   * Passwords in access-control never returned; other attributes
+   * returned as implementation choice (ASN.1).
+   * ISO 8571-3:1988 §16.2.2.2; ISO 8571-4:1988 F-CHANGE-ATTRIB-response.
+   *
+   * @public
+   * @readonly
+   */
+  readonly attributes?: OPTIONAL<Change_Attributes>;
+  /**
+   * @summary `diagnostic`.
+   * @description
+   *
+   * ISO 8571-3:1988 §16.2.2.3 / §13.13.
+   *
+   * @public
+   * @readonly
+   */
+  readonly diagnostic?: OPTIONAL<Diagnostic>;
+
   constructor(
-    /**
-     * @summary `action_result`.
-     * @description
-     *
-     * Unsuccessful means none of the changes were performed.
-     * Default `success`. ISO 8571-3:1988 §16.2.2.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly action_result?: OPTIONAL<Action_Result>,
-    /**
-     * @summary `attributes`.
-     * @description
-     *
-     * Conditional on at least one name/value on the request.
-     * Passwords in access-control never returned; other attributes
-     * returned as implementation choice (ASN.1).
-     * ISO 8571-3:1988 §16.2.2.2; ISO 8571-4:1988 F-CHANGE-ATTRIB-response.
-     *
-     * @public
-     * @readonly
-     */
-    readonly attributes?: OPTIONAL<Change_Attributes>,
-    /**
-     * @summary `diagnostic`.
-     * @description
-     *
-     * ISO 8571-3:1988 §16.2.2.3 / §13.13.
-     *
-     * @public
-     * @readonly
-     */
-    readonly diagnostic?: OPTIONAL<Diagnostic>
-  ) {}
+    action_result?: OPTIONAL<Action_Result>,
+    attributes?: OPTIONAL<Change_Attributes>,
+    diagnostic?: OPTIONAL<Diagnostic>
+  ) {
+    this.action_result = action_result;
+    this.attributes = attributes;
+    this.diagnostic = diagnostic;
+  }
 
   /**
    * @summary Restructures an object into a F_CHANGE_ATTRIB_response

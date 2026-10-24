@@ -32,12 +32,14 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_FastSelect {
-    notSpecified = 0,
-    fastSelect = 1,
-    fastSelectWithRestrictedResponse = 2,
-    noFastSelect = 3,
-}
+export const _enum_for_FastSelect = {
+    notSpecified: 0,
+    fastSelect: 1,
+    fastSelectWithRestrictedResponse: 2,
+    noFastSelect: 3,
+} as const;
+
+export type _enum_for_FastSelect = (typeof _enum_for_FastSelect)[keyof typeof _enum_for_FastSelect];
 
 
 /**
@@ -208,12 +210,12 @@ export const noFastSelect: FastSelect =
 
 
 
-export const _decode_FastSelect = $._decodeEnumerated;
+export const _decode_FastSelect = $._decodeEnumerated as $.ASN1Decoder<FastSelect>;
 
 
 
 
-export const _encode_FastSelect = $._encodeEnumerated;
+export const _encode_FastSelect = $._encodeEnumerated as $.ASN1Encoder<FastSelect>;
 
 
 /* eslint-enable */

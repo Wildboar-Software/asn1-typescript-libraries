@@ -57,51 +57,61 @@ import {
  *
  */
 export class UnitEvent_NotificationParams {
+  /**
+   * @summary `bspProductUuid`.
+   * @description
+   *
+   * Product UUID of the BSP that raised the event (`BSPUuid` of
+   * `BioSPI_EVENT_HANDLER`). X.1083 §17.1.7, Table 122.
+   *
+   * @public
+   * @readonly
+   */
+  readonly bspProductUuid: BioAPI_UUID;
+  /**
+   * @summary `unitID`.
+   * @description
+   *
+   * Unit that raised the event. X.1083 §17.1.7, Table 122.
+   *
+   * @public
+   * @readonly
+   */
+  readonly unitID: BioAPI_UNIT_ID;
+  /**
+   * @summary `unitSchema`.
+   * @description
+   *
+   * Schema of that unit, if the BSP supplied one. X.1083
+   * §17.1.7, Table 122.
+   *
+   * @public
+   * @readonly
+   */
+  readonly unitSchema: OPTIONAL<BioAPI_UNIT_SCHEMA>;
+  /**
+   * @summary `unitEventType`.
+   * @description
+   *
+   * Kind of unit event (`EventType` of
+   * `BioSPI_EVENT_HANDLER`). X.1083 §17.1.7, Table 122.
+   *
+   * @public
+   * @readonly
+   */
+  readonly unitEventType: BioAPI_UNIT_EVENT_TYPE;
+
   constructor(
-    /**
-     * @summary `bspProductUuid`.
-     * @description
-     *
-     * Product UUID of the BSP that raised the event (`BSPUuid` of
-     * `BioSPI_EVENT_HANDLER`). X.1083 §17.1.7, Table 122.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bspProductUuid: BioAPI_UUID,
-    /**
-     * @summary `unitID`.
-     * @description
-     *
-     * Unit that raised the event. X.1083 §17.1.7, Table 122.
-     *
-     * @public
-     * @readonly
-     */
-    readonly unitID: BioAPI_UNIT_ID,
-    /**
-     * @summary `unitSchema`.
-     * @description
-     *
-     * Schema of that unit, if the BSP supplied one. X.1083
-     * §17.1.7, Table 122.
-     *
-     * @public
-     * @readonly
-     */
-    readonly unitSchema: OPTIONAL<BioAPI_UNIT_SCHEMA>,
-    /**
-     * @summary `unitEventType`.
-     * @description
-     *
-     * Kind of unit event (`EventType` of
-     * `BioSPI_EVENT_HANDLER`). X.1083 §17.1.7, Table 122.
-     *
-     * @public
-     * @readonly
-     */
-    readonly unitEventType: BioAPI_UNIT_EVENT_TYPE
-  ) {}
+    bspProductUuid: BioAPI_UUID,
+    unitID: BioAPI_UNIT_ID,
+    unitSchema: OPTIONAL<BioAPI_UNIT_SCHEMA>,
+    unitEventType: BioAPI_UNIT_EVENT_TYPE
+  ) {
+    this.bspProductUuid = bspProductUuid;
+    this.unitID = unitID;
+    this.unitSchema = unitSchema;
+    this.unitEventType = unitEventType;
+  }
 
   /**
    * @summary Restructures an object into a UnitEvent_NotificationParams

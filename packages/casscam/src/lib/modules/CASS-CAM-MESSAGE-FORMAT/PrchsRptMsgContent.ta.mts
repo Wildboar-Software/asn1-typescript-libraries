@@ -39,29 +39,35 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class PrchsRptMsgContent {
+    /**
+     * @summary `sessionID`.
+     * @description
+     *
+     * Session identifier, 10 octets (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    readonly sessionID: OCTET_STRING;
+    /**
+     * @summary `purchaseInfo`.
+     * @description
+     *
+     * Purchase data. Format is not specified
+     * (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    readonly purchaseInfo: OCTET_STRING;
+
     constructor (
-        /**
-         * @summary `sessionID`.
-         * @description
-         *
-         * Session identifier, 10 octets (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sessionID: OCTET_STRING,
-        /**
-         * @summary `purchaseInfo`.
-         * @description
-         *
-         * Purchase data. Format is not specified
-         * (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly purchaseInfo: OCTET_STRING
-    ) {}
+        sessionID: OCTET_STRING,
+        purchaseInfo: OCTET_STRING
+    ) {
+        this.sessionID = sessionID;
+        this.purchaseInfo = purchaseInfo;
+    }
 
     /**
      * @summary Restructures an object into a PrchsRptMsgContent

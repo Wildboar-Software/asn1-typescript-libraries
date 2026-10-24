@@ -30,10 +30,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @enum {number}
  */
 export
-enum _enum_for_OperationalState {
-    disabled = 0,
-    enabled = 1,
-}
+const _enum_for_OperationalState = {
+    disabled: 0,
+    enabled: 1,
+} as const;
+
+export type _enum_for_OperationalState = (typeof _enum_for_OperationalState)[keyof typeof _enum_for_OperationalState];
 
 /**
  * @summary OperationalState
@@ -126,10 +128,10 @@ export
 const enabled: OperationalState = OperationalState.enabled; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_OperationalState = $._decodeEnumerated;
+export const _decode_OperationalState = $._decodeEnumerated as $.ASN1Decoder<OperationalState>;
 
 
-export const _encode_OperationalState = $._encodeEnumerated;
+export const _encode_OperationalState = $._encodeEnumerated as $.ASN1Encoder<OperationalState>;
 
 
 /* eslint-enable */

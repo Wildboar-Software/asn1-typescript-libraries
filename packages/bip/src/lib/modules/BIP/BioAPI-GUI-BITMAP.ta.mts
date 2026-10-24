@@ -50,37 +50,47 @@ import {
  *
  */
 export class BioAPI_GUI_BITMAP {
+  /**
+   * @summary `subtypeMask`.
+   * @public
+   * @readonly
+   */
+  readonly subtypeMask: BioAPI_BIR_SUBTYPE_MASK;
+  /**
+   * @summary `width`.
+   * @public
+   * @readonly
+   */
+  readonly width: UnsignedInt;
+  /**
+   * @summary `height`.
+   * @public
+   * @readonly
+   */
+  readonly height: UnsignedInt;
+  /**
+   * @summary `bitmap`.
+   * @description
+   *
+   * Pixel octets. Absent if the C `Data` pointer is NULL.
+   * X.1083 §15.22, §15.34.
+   *
+   * @public
+   * @readonly
+   */
+  readonly bitmap?: OPTIONAL<BioAPI_DATA>;
+
   constructor(
-    /**
-     * @summary `subtypeMask`.
-     * @public
-     * @readonly
-     */
-    readonly subtypeMask: BioAPI_BIR_SUBTYPE_MASK,
-    /**
-     * @summary `width`.
-     * @public
-     * @readonly
-     */
-    readonly width: UnsignedInt,
-    /**
-     * @summary `height`.
-     * @public
-     * @readonly
-     */
-    readonly height: UnsignedInt,
-    /**
-     * @summary `bitmap`.
-     * @description
-     *
-     * Pixel octets. Absent if the C `Data` pointer is NULL.
-     * X.1083 §15.22, §15.34.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bitmap?: OPTIONAL<BioAPI_DATA>
-  ) {}
+    subtypeMask: BioAPI_BIR_SUBTYPE_MASK,
+    width: UnsignedInt,
+    height: UnsignedInt,
+    bitmap?: OPTIONAL<BioAPI_DATA>
+  ) {
+    this.subtypeMask = subtypeMask;
+    this.width = width;
+    this.height = height;
+    this.bitmap = bitmap;
+  }
 
   /**
    * @summary Restructures an object into a BioAPI_GUI_BITMAP

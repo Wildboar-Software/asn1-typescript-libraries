@@ -33,19 +33,21 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_Reason {
-  holdingTimerExpired = 0,
-  checksumError = 1,
-  oneWayConnectivity = 2,
-  callRejected = 3,
-  reserveTimerExpired = 4,
-  circuitDisabled = 5,
-  versionSkew = 6,
-  areaMismatch = 7,
-  maximumBroadcastIntermediateSystemsExceeded = 8,
-  maximumBroadcastEndSystemsExceeded = 9,
-  wrongSystemType = 10,
-}
+export const _enum_for_Reason = {
+  holdingTimerExpired: 0,
+  checksumError: 1,
+  oneWayConnectivity: 2,
+  callRejected: 3,
+  reserveTimerExpired: 4,
+  circuitDisabled: 5,
+  versionSkew: 6,
+  areaMismatch: 7,
+  maximumBroadcastIntermediateSystemsExceeded: 8,
+  maximumBroadcastEndSystemsExceeded: 9,
+  wrongSystemType: 10,
+} as const;
+
+export type _enum_for_Reason = (typeof _enum_for_Reason)[keyof typeof _enum_for_Reason];
 
 /**
  * @summary Reason
@@ -338,10 +340,10 @@ export const wrongSystemType: Reason =
   Reason.wrongSystemType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_Reason = $._decodeEnumerated;
+export const _decode_Reason = $._decodeEnumerated as $.ASN1Decoder<Reason>;
 
 
-export const _encode_Reason = $._encodeEnumerated;
+export const _encode_Reason = $._encodeEnumerated as $.ASN1Encoder<Reason>;
 
 
 /* eslint-enable */

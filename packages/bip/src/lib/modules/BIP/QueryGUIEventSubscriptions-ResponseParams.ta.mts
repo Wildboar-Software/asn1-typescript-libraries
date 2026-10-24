@@ -40,21 +40,25 @@ import {
  *
  */
 export class QueryGUIEventSubscriptions_ResponseParams {
+  /**
+   * @summary `guiEventSubscriptions`.
+   * @description
+   *
+   * Secondary GUI-event subscriptions for the named BSP.
+   * Empty when none exist. Maps to BioAPI
+   * `GUIEventSubscriptionList`/`NumberOfElements` (clause
+   * 20). X.1083 §16.24.6–16.24.8.
+   *
+   * @public
+   * @readonly
+   */
+  readonly guiEventSubscriptions: BioAPI_GUI_EVENT_SUBSCRIPTION[];
+
   constructor(
-    /**
-     * @summary `guiEventSubscriptions`.
-     * @description
-     *
-     * Secondary GUI-event subscriptions for the named BSP.
-     * Empty when none exist. Maps to BioAPI
-     * `GUIEventSubscriptionList`/`NumberOfElements` (clause
-     * 20). X.1083 §16.24.6–16.24.8.
-     *
-     * @public
-     * @readonly
-     */
-    readonly guiEventSubscriptions: BioAPI_GUI_EVENT_SUBSCRIPTION[]
-  ) {}
+    guiEventSubscriptions: BioAPI_GUI_EVENT_SUBSCRIPTION[]
+  ) {
+    this.guiEventSubscriptions = guiEventSubscriptions;
+  }
 
   /**
    * @summary Restructures an object into a QueryGUIEventSubscriptions_ResponseParams

@@ -48,39 +48,47 @@ import {
  *
  */
 export class F_LOCATE_response {
+  /**
+   * @summary `action_result`.
+   * @description
+   *
+   * Default `success`. ISO 8571-3:1988 §20.2.2.1.
+   *
+   * @public
+   * @readonly
+   */
+  readonly action_result?: OPTIONAL<Action_Result>;
+  /**
+   * @summary `file_access_data_unit_identity`.
+   * @description
+   *
+   * One of: begin, end, node-name, sequence of node-names, or node
+   * number. ISO 8571-3:1988 §20.2.2.2.
+   *
+   * @public
+   * @readonly
+   */
+  readonly file_access_data_unit_identity?: OPTIONAL<FADU_Identity>;
+  /**
+   * @summary `diagnostic`.
+   * @description
+   *
+   * ISO 8571-3:1988 §20.2.2.4 / §13.13.
+   *
+   * @public
+   * @readonly
+   */
+  readonly diagnostic?: OPTIONAL<Diagnostic>;
+
   constructor(
-    /**
-     * @summary `action_result`.
-     * @description
-     *
-     * Default `success`. ISO 8571-3:1988 §20.2.2.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly action_result?: OPTIONAL<Action_Result>,
-    /**
-     * @summary `file_access_data_unit_identity`.
-     * @description
-     *
-     * One of: begin, end, node-name, sequence of node-names, or node
-     * number. ISO 8571-3:1988 §20.2.2.2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly file_access_data_unit_identity?: OPTIONAL<FADU_Identity>,
-    /**
-     * @summary `diagnostic`.
-     * @description
-     *
-     * ISO 8571-3:1988 §20.2.2.4 / §13.13.
-     *
-     * @public
-     * @readonly
-     */
-    readonly diagnostic?: OPTIONAL<Diagnostic>
-  ) {}
+    action_result?: OPTIONAL<Action_Result>,
+    file_access_data_unit_identity?: OPTIONAL<FADU_Identity>,
+    diagnostic?: OPTIONAL<Diagnostic>
+  ) {
+    this.action_result = action_result;
+    this.file_access_data_unit_identity = file_access_data_unit_identity;
+    this.diagnostic = diagnostic;
+  }
 
   /**
    * @summary Restructures an object into a F_LOCATE_response

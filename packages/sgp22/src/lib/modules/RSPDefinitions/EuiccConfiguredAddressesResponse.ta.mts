@@ -31,29 +31,35 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class EuiccConfiguredAddressesResponse {
+    /**
+     * @summary `defaultDpAddress`.
+     * @description
+     * 
+     * Configured default SM-DP+ FQDN. Omitted if none is set. SGP.22 v3.1
+     * §5.7.3.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly defaultDpAddress: OPTIONAL<UTF8String>;
+    /**
+     * @summary `rootDsAddress`.
+     * @description
+     * 
+     * Root SM-DS FQDN. Always present. SGP.22 v3.1 §5.7.3.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly rootDsAddress: UTF8String;
+
     constructor (
-        /**
-         * @summary `defaultDpAddress`.
-         * @description
-         * 
-         * Configured default SM-DP+ FQDN. Omitted if none is set. SGP.22 v3.1
-         * §5.7.3.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly defaultDpAddress: OPTIONAL<UTF8String>,
-        /**
-         * @summary `rootDsAddress`.
-         * @description
-         * 
-         * Root SM-DS FQDN. Always present. SGP.22 v3.1 §5.7.3.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly rootDsAddress: UTF8String
-    ) {}
+        defaultDpAddress: OPTIONAL<UTF8String>,
+        rootDsAddress: UTF8String
+    ) {
+        this.defaultDpAddress = defaultDpAddress;
+        this.rootDsAddress = rootDsAddress;
+    }
 
     /**
      * @summary Restructures an object into a EuiccConfiguredAddressesResponse

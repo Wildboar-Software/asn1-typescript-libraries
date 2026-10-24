@@ -64,74 +64,88 @@ import {
  *
  */
 export class F_SELECT_ANOTHER_response {
+  /**
+   * @summary `state_result`.
+   * @description
+   *
+   * Whether the regime change succeeded. ISO 8571-3:1988
+   * §13.1. Default `success`.
+   *
+   * @public
+   * @readonly
+   */
+  readonly state_result?: OPTIONAL<State_Result>;
+  /**
+   * @summary `action_result`.
+   * @description
+   *
+   * Success, transient error, or permanent error. ISO
+   * 8571-3:1988 §13.2. Default `success`.
+   *
+   * @public
+   * @readonly
+   */
+  readonly action_result?: OPTIONAL<Action_Result>;
+  /**
+   * @summary `last_member_indicator`.
+   * @description
+   *
+   * True if this is the last member of the group. Default
+   * `FALSE`.
+   *
+   * @public
+   * @readonly
+   */
+  readonly last_member_indicator?: OPTIONAL<BOOLEAN>;
+  /**
+   * @summary `referent_indicator`.
+   * @description
+   *
+   * Whether the selected object is a referent. Absent from
+   * ISO 8571:1988 Parts 1–4.
+   *
+   * @public
+   * @readonly
+   */
+  readonly referent_indicator?: OPTIONAL<Referent_Indicator>;
+  /**
+   * @summary `shared_ASE_information`.
+   * @description
+   *
+   * Other ASE information on this primitive. ISO 8571-3:1988
+   * §13.10.
+   *
+   * @public
+   * @readonly
+   */
+  readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>;
+  /**
+   * @summary `diagnostic`.
+   * @description
+   *
+   * Detail accompanying `action-result`. ISO 8571-3:1988
+   * §13.13.
+   *
+   * @public
+   * @readonly
+   */
+  readonly diagnostic?: OPTIONAL<Diagnostic>;
+
   constructor(
-    /**
-     * @summary `state_result`.
-     * @description
-     *
-     * Whether the regime change succeeded. ISO 8571-3:1988
-     * §13.1. Default `success`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly state_result?: OPTIONAL<State_Result>,
-    /**
-     * @summary `action_result`.
-     * @description
-     *
-     * Success, transient error, or permanent error. ISO
-     * 8571-3:1988 §13.2. Default `success`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly action_result?: OPTIONAL<Action_Result>,
-    /**
-     * @summary `last_member_indicator`.
-     * @description
-     *
-     * True if this is the last member of the group. Default
-     * `FALSE`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly last_member_indicator?: OPTIONAL<BOOLEAN>,
-    /**
-     * @summary `referent_indicator`.
-     * @description
-     *
-     * Whether the selected object is a referent. Absent from
-     * ISO 8571:1988 Parts 1–4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly referent_indicator?: OPTIONAL<Referent_Indicator>,
-    /**
-     * @summary `shared_ASE_information`.
-     * @description
-     *
-     * Other ASE information on this primitive. ISO 8571-3:1988
-     * §13.10.
-     *
-     * @public
-     * @readonly
-     */
-    readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
-    /**
-     * @summary `diagnostic`.
-     * @description
-     *
-     * Detail accompanying `action-result`. ISO 8571-3:1988
-     * §13.13.
-     *
-     * @public
-     * @readonly
-     */
-    readonly diagnostic?: OPTIONAL<Diagnostic>
-  ) {}
+    state_result?: OPTIONAL<State_Result>,
+    action_result?: OPTIONAL<Action_Result>,
+    last_member_indicator?: OPTIONAL<BOOLEAN>,
+    referent_indicator?: OPTIONAL<Referent_Indicator>,
+    shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
+    diagnostic?: OPTIONAL<Diagnostic>
+  ) {
+    this.state_result = state_result;
+    this.action_result = action_result;
+    this.last_member_indicator = last_member_indicator;
+    this.referent_indicator = referent_indicator;
+    this.shared_ASE_information = shared_ASE_information;
+    this.diagnostic = diagnostic;
+  }
 
   /**
    * @summary Restructures an object into a F_SELECT_ANOTHER_response

@@ -28,28 +28,34 @@ import { ECPoint, _decode_ECPoint, _encode_ECPoint } from "../SEC1-v1-9/ECPoint.
  */
 export
 class SpecifiedMultiples_Item {
+    /**
+     * @summary `multiple`.
+     * @description
+     *
+     * Integer scalar k.
+     *
+     * @public
+     * @readonly
+     */
+    readonly multiple: INTEGER;
+    /**
+     * @summary `point`.
+     * @description
+     *
+     * The point kQ.
+     *
+     * @public
+     * @readonly
+     */
+    readonly point: ECPoint;
+
     constructor (
-        /**
-         * @summary `multiple`.
-         * @description
-         *
-         * Integer scalar k.
-         *
-         * @public
-         * @readonly
-         */
-        readonly multiple: INTEGER,
-        /**
-         * @summary `point`.
-         * @description
-         *
-         * The point kQ.
-         *
-         * @public
-         * @readonly
-         */
-        readonly point: ECPoint
-    ) {}
+        multiple: INTEGER,
+        point: ECPoint
+    ) {
+        this.multiple = multiple;
+        this.point = point;
+    }
 
     /**
      * @summary Restructures an object into a SpecifiedMultiples_Item

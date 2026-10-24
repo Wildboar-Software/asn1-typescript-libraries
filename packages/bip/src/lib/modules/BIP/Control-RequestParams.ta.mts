@@ -53,52 +53,62 @@ import {
  *
  */
 export class Control_RequestParams {
+  /**
+   * @summary `originalBSPHandle`.
+   * @description
+   *
+   * Attach-session handle at the hosting endpoint, not the
+   * application's local handle. X.1083 Table 55, clause 26.
+   *
+   * @public
+   * @readonly
+   */
+  readonly originalBSPHandle: BioAPI_HANDLE;
+  /**
+   * @summary `unitID`.
+   * @description
+   *
+   * Unit to control. X.1083 Table 55, §15.55.
+   *
+   * @public
+   * @readonly
+   */
+  readonly unitID: BioAPI_UNIT_ID;
+  /**
+   * @summary `controlCode`.
+   * @description
+   *
+   * Control-code UUID for the unit, from ControlCode.
+   * X.1083 Table 55.
+   *
+   * @public
+   * @readonly
+   */
+  readonly controlCode: BioAPI_UUID;
+  /**
+   * @summary `inputData`.
+   * @description
+   *
+   * Input payload of the control operation. Maps from InputData
+   * (clause 19, §15.22). Not OPTIONAL; a NULL C pointer is
+   * unconvertible. X.1083 Table 55.
+   *
+   * @public
+   * @readonly
+   */
+  readonly inputData: BioAPI_DATA;
+
   constructor(
-    /**
-     * @summary `originalBSPHandle`.
-     * @description
-     *
-     * Attach-session handle at the hosting endpoint, not the
-     * application's local handle. X.1083 Table 55, clause 26.
-     *
-     * @public
-     * @readonly
-     */
-    readonly originalBSPHandle: BioAPI_HANDLE,
-    /**
-     * @summary `unitID`.
-     * @description
-     *
-     * Unit to control. X.1083 Table 55, §15.55.
-     *
-     * @public
-     * @readonly
-     */
-    readonly unitID: BioAPI_UNIT_ID,
-    /**
-     * @summary `controlCode`.
-     * @description
-     *
-     * Control-code UUID for the unit, from ControlCode.
-     * X.1083 Table 55.
-     *
-     * @public
-     * @readonly
-     */
-    readonly controlCode: BioAPI_UUID,
-    /**
-     * @summary `inputData`.
-     * @description
-     *
-     * Input payload of the control operation. Maps from InputData
-     * (clause 19, §15.22). Not OPTIONAL; a NULL C pointer is
-     * unconvertible. X.1083 Table 55.
-     *
-     * @public
-     * @readonly
-     */
-    readonly inputData: BioAPI_DATA
-  ) {}
+    originalBSPHandle: BioAPI_HANDLE,
+    unitID: BioAPI_UNIT_ID,
+    controlCode: BioAPI_UUID,
+    inputData: BioAPI_DATA
+  ) {
+    this.originalBSPHandle = originalBSPHandle;
+    this.unitID = unitID;
+    this.controlCode = controlCode;
+    this.inputData = inputData;
+  }
 
   /**
    * @summary Restructures an object into a Control_RequestParams

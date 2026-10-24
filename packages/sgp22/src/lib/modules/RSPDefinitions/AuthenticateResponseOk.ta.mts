@@ -34,49 +34,59 @@ import { type Certificate, _decode_Certificate, _encode_Certificate } from "@wil
  */
 export
 class AuthenticateResponseOk {
+    /**
+     * @summary `euiccSigned1`.
+     * @description
+     * 
+     * Signed eUICC response, including `EUICCInfo2`. SGP.22 v3.1 §5.7.13.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly euiccSigned1: EuiccSigned1;
+    /**
+     * @summary `euiccSignature1`.
+     * @description
+     * 
+     * Signature under SK.EUICC.SIG, tag `'5F37'`. SGP.22 v3.1 §5.7.13.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly euiccSignature1: OCTET_STRING;
+    /**
+     * @summary `euiccCertificate`.
+     * @description
+     * 
+     * CERT.EUICC.SIG, signed by the EUM. SGP.22 v3.1 §5.7.13.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly euiccCertificate: Certificate;
+    /**
+     * @summary `eumCertificate`.
+     * @description
+     * 
+     * CERT.EUM.SIG, signed by the CI identified by `euiccCiPKIdToBeUsed`.
+     * SGP.22 v3.1 §5.7.13.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly eumCertificate: Certificate;
+
     constructor (
-        /**
-         * @summary `euiccSigned1`.
-         * @description
-         * 
-         * Signed eUICC response, including `EUICCInfo2`. SGP.22 v3.1 §5.7.13.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly euiccSigned1: EuiccSigned1,
-        /**
-         * @summary `euiccSignature1`.
-         * @description
-         * 
-         * Signature under SK.EUICC.SIG, tag `'5F37'`. SGP.22 v3.1 §5.7.13.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly euiccSignature1: OCTET_STRING,
-        /**
-         * @summary `euiccCertificate`.
-         * @description
-         * 
-         * CERT.EUICC.SIG, signed by the EUM. SGP.22 v3.1 §5.7.13.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly euiccCertificate: Certificate,
-        /**
-         * @summary `eumCertificate`.
-         * @description
-         * 
-         * CERT.EUM.SIG, signed by the CI identified by `euiccCiPKIdToBeUsed`.
-         * SGP.22 v3.1 §5.7.13.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly eumCertificate: Certificate
-    ) {}
+        euiccSigned1: EuiccSigned1,
+        euiccSignature1: OCTET_STRING,
+        euiccCertificate: Certificate,
+        eumCertificate: Certificate
+    ) {
+        this.euiccSigned1 = euiccSigned1;
+        this.euiccSignature1 = euiccSignature1;
+        this.euiccCertificate = euiccCertificate;
+        this.eumCertificate = eumCertificate;
+    }
 
     /**
      * @summary Restructures an object into a AuthenticateResponseOk

@@ -37,28 +37,34 @@ import {
  *
  */
 export class Scope_Item {
+  /**
+   * @summary `root_directory`.
+   * @description
+   *
+   * Starting pathname for this bound. Optional.
+   *
+   * @public
+   * @readonly
+   */
+  readonly root_directory: OPTIONAL<Pathname_Attribute>;
+  /**
+   * @summary `retrieval_scope`.
+   * @description
+   *
+   * How far to walk: `child` (0) or `all` (1).
+   *
+   * @public
+   * @readonly
+   */
+  readonly retrieval_scope: Scope_Item_retrieval_scope;
+
   constructor(
-    /**
-     * @summary `root_directory`.
-     * @description
-     *
-     * Starting pathname for this bound. Optional.
-     *
-     * @public
-     * @readonly
-     */
-    readonly root_directory: OPTIONAL<Pathname_Attribute>,
-    /**
-     * @summary `retrieval_scope`.
-     * @description
-     *
-     * How far to walk: `child` (0) or `all` (1).
-     *
-     * @public
-     * @readonly
-     */
-    readonly retrieval_scope: Scope_Item_retrieval_scope
-  ) {}
+    root_directory: OPTIONAL<Pathname_Attribute>,
+    retrieval_scope: Scope_Item_retrieval_scope
+  ) {
+    this.root_directory = root_directory;
+    this.retrieval_scope = retrieval_scope;
+  }
 
   /**
    * @summary Restructures an object into a Scope_Item

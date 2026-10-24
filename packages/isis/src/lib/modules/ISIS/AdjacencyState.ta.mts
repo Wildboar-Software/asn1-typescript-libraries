@@ -29,12 +29,14 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_AdjacencyState {
-  initializing = 0,
-  up = 1,
-  failed = 2,
-  down = 3,
-}
+export const _enum_for_AdjacencyState = {
+  initializing: 0,
+  up: 1,
+  failed: 2,
+  down: 3,
+} as const;
+
+export type _enum_for_AdjacencyState = (typeof _enum_for_AdjacencyState)[keyof typeof _enum_for_AdjacencyState];
 
 /**
  * @summary AdjacencyState
@@ -166,10 +168,10 @@ export const down: AdjacencyState =
   AdjacencyState.down; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_AdjacencyState = $._decodeEnumerated;
+export const _decode_AdjacencyState = $._decodeEnumerated as $.ASN1Decoder<AdjacencyState>;
 
 
-export const _encode_AdjacencyState = $._encodeEnumerated;
+export const _encode_AdjacencyState = $._encodeEnumerated as $.ASN1Encoder<AdjacencyState>;
 
 
 /* eslint-enable */

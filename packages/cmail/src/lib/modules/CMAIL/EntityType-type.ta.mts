@@ -27,16 +27,18 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_EntityType_type {
+export const _enum_for_EntityType_type = {
   /** Originator (`MAIL FROM`). ASN.1 `from`. */
-  from_ = 0,
+  from_: 0,
   /** Primary recipient (`RCPT TO`). */
-  to = 1,
+  to: 1,
   /** Carbon-copy recipient. */
-  cc = 2,
+  cc: 2,
   /** Transit Cmail server (inter-server hop). */
-  transit = 3,
-}
+  transit: 3,
+} as const;
+
+export type _enum_for_EntityType_type = (typeof _enum_for_EntityType_type)[keyof typeof _enum_for_EntityType_type];
 
 
 /**
@@ -157,12 +159,12 @@ export const transit: EntityType_type =
 
 
 
-export const _decode_EntityType_type = $._decodeEnumerated;
+export const _decode_EntityType_type = $._decodeEnumerated as $.ASN1Decoder<EntityType_type>;
 
 
 
 
-export const _encode_EntityType_type = $._encodeEnumerated;
+export const _encode_EntityType_type = $._encodeEnumerated as $.ASN1Encoder<EntityType_type>;
 
 
 /* eslint-enable */

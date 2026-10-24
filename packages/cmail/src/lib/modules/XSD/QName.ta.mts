@@ -28,20 +28,26 @@ import { NCName, _decode_NCName, _encode_NCName } from '../XSD/NCName.ta.mjs';
  *
  */
 export class QName {
+  /**
+   * @summary `uri`.
+   * @public
+   * @readonly
+   */
+  readonly uri: OPTIONAL<AnyURI>;
+  /**
+   * @summary `name`.
+   * @public
+   * @readonly
+   */
+  readonly name: NCName;
+
   constructor(
-    /**
-     * @summary `uri`.
-     * @public
-     * @readonly
-     */
-    readonly uri: OPTIONAL<AnyURI>,
-    /**
-     * @summary `name`.
-     * @public
-     * @readonly
-     */
-    readonly name: NCName
-  ) {}
+    uri: OPTIONAL<AnyURI>,
+    name: NCName
+  ) {
+    this.uri = uri;
+    this.name = name;
+  }
 
   /**
    * @summary Restructures an object into a QName

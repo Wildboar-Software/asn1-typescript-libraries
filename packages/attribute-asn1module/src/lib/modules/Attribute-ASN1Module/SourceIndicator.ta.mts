@@ -32,11 +32,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @enum {number}
  */
 export
-enum _enum_for_SourceIndicator {
-    resourceOperation = 0,
-    managementOperation = 1,
-    unknown = 2,
-}
+const _enum_for_SourceIndicator = {
+    resourceOperation: 0,
+    managementOperation: 1,
+    unknown: 2,
+} as const;
+
+export type _enum_for_SourceIndicator = (typeof _enum_for_SourceIndicator)[keyof typeof _enum_for_SourceIndicator];
 
 /**
  * @summary SourceIndicator
@@ -157,10 +159,10 @@ export
 const unknown: SourceIndicator = SourceIndicator.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_SourceIndicator = $._decodeEnumerated;
+export const _decode_SourceIndicator = $._decodeEnumerated as $.ASN1Decoder<SourceIndicator>;
 
 
-export const _encode_SourceIndicator = $._encodeEnumerated;
+export const _encode_SourceIndicator = $._encodeEnumerated as $.ASN1Encoder<SourceIndicator>;
 
 
 /* eslint-enable */

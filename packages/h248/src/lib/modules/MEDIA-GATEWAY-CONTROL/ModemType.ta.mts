@@ -7,44 +7,46 @@ import * as $ from "@wildboar/asn1/functional";
 
 
 export
-enum _enum_for_ModemType {
+const _enum_for_ModemType = {
     /**
      * ITU-T V.18 (clause 7.1.2). The Modem descriptor itself is deprecated.
      */
-    v18 = 0,
+    v18: 0,
     /**
      * ITU-T V.22 (clause 7.1.2).
      */
-    v22 = 1,
+    v22: 1,
     /**
      * ITU-T V.22 bis (clause 7.1.2).
      */
-    v22bis = 2,
+    v22bis: 2,
     /**
      * ITU-T V.32 (clause 7.1.2).
      */
-    v32 = 3,
+    v32: 3,
     /**
      * ITU-T V.32 bis (clause 7.1.2).
      */
-    v32bis = 4,
+    v32bis: 4,
     /**
      * ITU-T V.34 (clause 7.1.2).
      */
-    v34 = 5,
+    v34: 5,
     /**
      * ITU-T V.90 (clause 7.1.2).
      */
-    v90 = 6,
+    v90: 6,
     /**
      * ITU-T V.91 (clause 7.1.2).
      */
-    v91 = 7,
+    v91: 7,
     /**
      * Synchronous ISDN modem (clause 7.1.2).
      */
-    synchISDN = 8,
-}
+    synchISDN: 8,
+} as const;
+
+export type _enum_for_ModemType = (typeof _enum_for_ModemType)[keyof typeof _enum_for_ModemType];
 
 /**
  * @summary ModemType
@@ -257,8 +259,8 @@ const ModemType_synchISDN: ModemType = 8; /* LONG_NAMED_ENUMERATED_VALUE */
  */
 export
 const synchISDN: ModemType = ModemType_synchISDN; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_ModemType = $._decodeEnumerated;
-export const _encode_ModemType = $._encodeEnumerated;
+export const _decode_ModemType = $._decodeEnumerated as $.ASN1Decoder<ModemType>;
+export const _encode_ModemType = $._encodeEnumerated as $.ASN1Encoder<ModemType>;
 
 
 /* eslint-enable */

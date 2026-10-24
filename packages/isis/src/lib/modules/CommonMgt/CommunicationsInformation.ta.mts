@@ -43,33 +43,39 @@ import {
  *
  */
 export class CommunicationsInformation {
+  /**
+   * @summary `informationType`.
+   * @description
+   *
+   * Identifies the event (IS-IS values such as `sequenceNumberSkip` are OIDs
+   * under `se`).
+   *
+   * (ISO/IEC 10589:2002 Annex E.1.12).
+   *
+   * @public
+   * @readonly
+   */
+  readonly informationType: InformationType;
+  /**
+   * @summary `informationData`.
+   * @description
+   *
+   * Optional additional parameters of the event.
+   *
+   * (ISO/IEC 10589:2002 Annex E.1.12).
+   *
+   * @public
+   * @readonly
+   */
+  readonly informationData?: OPTIONAL<InformationData>;
+
   constructor(
-    /**
-     * @summary `informationType`.
-     * @description
-     *
-     * Identifies the event (IS-IS values such as `sequenceNumberSkip` are OIDs
-     * under `se`).
-     *
-     * (ISO/IEC 10589:2002 Annex E.1.12).
-     *
-     * @public
-     * @readonly
-     */
-    readonly informationType: InformationType,
-    /**
-     * @summary `informationData`.
-     * @description
-     *
-     * Optional additional parameters of the event.
-     *
-     * (ISO/IEC 10589:2002 Annex E.1.12).
-     *
-     * @public
-     * @readonly
-     */
-    readonly informationData?: OPTIONAL<InformationData>
-  ) {}
+    informationType: InformationType,
+    informationData?: OPTIONAL<InformationData>
+  ) {
+    this.informationType = informationType;
+    this.informationData = informationData;
+  }
 
   /**
    * @summary Restructures an object into a CommunicationsInformation

@@ -7,23 +7,25 @@ import * as $ from "@wildboar/asn1/functional";
 
 
 export
-enum _enum_for_Relation {
+const _enum_for_Relation = {
     /**
      * The MG chooses a value strictly greater than the single supplied value
      * (Annex A).
      */
-    greaterThan = 0,
+    greaterThan: 0,
     /**
      * The MG chooses a value strictly smaller than the single supplied value
      * (Annex A).
      */
-    smallerThan = 1,
+    smallerThan: 1,
     /**
      * The MG chooses a value different from the single supplied value (Annex
      * A).
      */
-    unequalTo = 2,
-}
+    unequalTo: 2,
+} as const;
+
+export type _enum_for_Relation = (typeof _enum_for_Relation)[keyof typeof _enum_for_Relation];
 
 /**
  * @summary Relation
@@ -113,8 +115,8 @@ const Relation_unequalTo: Relation = 2; /* LONG_NAMED_ENUMERATED_VALUE */
  */
 export
 const unequalTo: Relation = Relation_unequalTo; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_Relation = $._decodeEnumerated;
-export const _encode_Relation = $._encodeEnumerated;
+export const _decode_Relation = $._decodeEnumerated as $.ASN1Decoder<Relation>;
+export const _encode_Relation = $._encodeEnumerated as $.ASN1Encoder<Relation>;
 
 
 /* eslint-enable */

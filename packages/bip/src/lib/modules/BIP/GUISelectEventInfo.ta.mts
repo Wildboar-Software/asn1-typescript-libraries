@@ -103,168 +103,198 @@ import {
  *
  */
 export class GUISelectEventInfo {
+  /**
+   * @summary `subscriberEndpointIRI`.
+   * @description
+   *
+   * Endpoint that is to receive the event: local IRI when the
+   * notification arrived from a slave; otherwise the referrer
+   * of a matching attach-session remote reference, a matching
+   * redirector, or the local IRI. X.1083 §17.2.5–17.2.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly subscriberEndpointIRI: EndpointIRI;
+  /**
+   * @summary `guiEventSubscriptionUuid`.
+   * @description
+   *
+   * Absent for a primary subscription (including conversion
+   * from a local BioSPI callback with no redirector). Present
+   * and taken from the redirector when redirected. X.1083
+   * §8.3, §17.2.5.
+   *
+   * @public
+   * @readonly
+   */
+  readonly guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>;
+  /**
+   * @summary `hostingEndpointIRI`.
+   * @description
+   *
+   * Endpoint whose BSP raised the event: local IRI after a
+   * BioSPI callback, or `slaveEndpointIRI` of the incoming
+   * notification. X.1083 §17.2.5–17.2.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly hostingEndpointIRI: EndpointIRI;
+  /**
+   * @summary `bspProductUuid`.
+   * @description
+   *
+   * Copied from the matching notification component. X.1083
+   * §17.2.5–17.2.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly bspProductUuid: BioAPI_UUID;
+  /**
+   * @summary `unitID`.
+   * @description
+   *
+   * Copied from the matching notification component. X.1083
+   * §17.2.5–17.2.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly unitID: BioAPI_UNIT_ID;
+  /**
+   * @summary `originalBSPHandle`.
+   * @description
+   *
+   * Copied from the notification unless a matching
+   * `GUIEventRedirector` applies, in which case it is absent.
+   * X.1083 §17.2.5 d.
+   *
+   * @public
+   * @readonly
+   */
+  readonly originalBSPHandle: OPTIONAL<BioAPI_HANDLE>;
+  /**
+   * @summary `enrollType`.
+   * @description
+   *
+   * Copied from the matching notification component. X.1083
+   * §17.2.5–17.2.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly enrollType: BioAPI_GUI_ENROLL_TYPE;
+  /**
+   * @summary `operation`.
+   * @description
+   *
+   * Copied from the matching notification component. X.1083
+   * §17.2.5–17.2.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly operation: BioAPI_GUI_OPERATION;
+  /**
+   * @summary `moment`.
+   * @description
+   *
+   * Copied from the matching notification component. X.1083
+   * §17.2.5–17.2.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly moment: BioAPI_GUI_MOMENT;
+  /**
+   * @summary `resultCode`.
+   * @description
+   *
+   * Copied from the matching notification component. X.1083
+   * §17.2.5–17.2.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly resultCode: BioAPI_RETURN;
+  /**
+   * @summary `maxNumEnrollSamples`.
+   * @description
+   *
+   * Copied from the matching notification component. X.1083
+   * §17.2.5–17.2.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly maxNumEnrollSamples: UnsignedInt;
+  /**
+   * @summary `selectableInstances`.
+   * @description
+   *
+   * Copied from the matching notification component. X.1083
+   * §17.2.5–17.2.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly selectableInstances: BioAPI_BIR_SUBTYPE_MASK;
+  /**
+   * @summary `capturedInstances`.
+   * @description
+   *
+   * Copied from the matching notification component. X.1083
+   * §17.2.5–17.2.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly capturedInstances: BioAPI_BIR_SUBTYPE_MASK;
+  /**
+   * @summary `text`.
+   * @description
+   *
+   * Copied from the matching notification component. X.1083
+   * §17.2.5–17.2.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly text?: OPTIONAL<UTF8String>;
+
   constructor(
-    /**
-     * @summary `subscriberEndpointIRI`.
-     * @description
-     *
-     * Endpoint that is to receive the event: local IRI when the
-     * notification arrived from a slave; otherwise the referrer
-     * of a matching attach-session remote reference, a matching
-     * redirector, or the local IRI. X.1083 §17.2.5–17.2.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly subscriberEndpointIRI: EndpointIRI,
-    /**
-     * @summary `guiEventSubscriptionUuid`.
-     * @description
-     *
-     * Absent for a primary subscription (including conversion
-     * from a local BioSPI callback with no redirector). Present
-     * and taken from the redirector when redirected. X.1083
-     * §8.3, §17.2.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>,
-    /**
-     * @summary `hostingEndpointIRI`.
-     * @description
-     *
-     * Endpoint whose BSP raised the event: local IRI after a
-     * BioSPI callback, or `slaveEndpointIRI` of the incoming
-     * notification. X.1083 §17.2.5–17.2.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly hostingEndpointIRI: EndpointIRI,
-    /**
-     * @summary `bspProductUuid`.
-     * @description
-     *
-     * Copied from the matching notification component. X.1083
-     * §17.2.5–17.2.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bspProductUuid: BioAPI_UUID,
-    /**
-     * @summary `unitID`.
-     * @description
-     *
-     * Copied from the matching notification component. X.1083
-     * §17.2.5–17.2.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly unitID: BioAPI_UNIT_ID,
-    /**
-     * @summary `originalBSPHandle`.
-     * @description
-     *
-     * Copied from the notification unless a matching
-     * `GUIEventRedirector` applies, in which case it is absent.
-     * X.1083 §17.2.5 d.
-     *
-     * @public
-     * @readonly
-     */
-    readonly originalBSPHandle: OPTIONAL<BioAPI_HANDLE>,
-    /**
-     * @summary `enrollType`.
-     * @description
-     *
-     * Copied from the matching notification component. X.1083
-     * §17.2.5–17.2.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly enrollType: BioAPI_GUI_ENROLL_TYPE,
-    /**
-     * @summary `operation`.
-     * @description
-     *
-     * Copied from the matching notification component. X.1083
-     * §17.2.5–17.2.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly operation: BioAPI_GUI_OPERATION,
-    /**
-     * @summary `moment`.
-     * @description
-     *
-     * Copied from the matching notification component. X.1083
-     * §17.2.5–17.2.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly moment: BioAPI_GUI_MOMENT,
-    /**
-     * @summary `resultCode`.
-     * @description
-     *
-     * Copied from the matching notification component. X.1083
-     * §17.2.5–17.2.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly resultCode: BioAPI_RETURN,
-    /**
-     * @summary `maxNumEnrollSamples`.
-     * @description
-     *
-     * Copied from the matching notification component. X.1083
-     * §17.2.5–17.2.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly maxNumEnrollSamples: UnsignedInt,
-    /**
-     * @summary `selectableInstances`.
-     * @description
-     *
-     * Copied from the matching notification component. X.1083
-     * §17.2.5–17.2.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly selectableInstances: BioAPI_BIR_SUBTYPE_MASK,
-    /**
-     * @summary `capturedInstances`.
-     * @description
-     *
-     * Copied from the matching notification component. X.1083
-     * §17.2.5–17.2.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly capturedInstances: BioAPI_BIR_SUBTYPE_MASK,
-    /**
-     * @summary `text`.
-     * @description
-     *
-     * Copied from the matching notification component. X.1083
-     * §17.2.5–17.2.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly text?: OPTIONAL<UTF8String>
-  ) {}
+    subscriberEndpointIRI: EndpointIRI,
+    guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>,
+    hostingEndpointIRI: EndpointIRI,
+    bspProductUuid: BioAPI_UUID,
+    unitID: BioAPI_UNIT_ID,
+    originalBSPHandle: OPTIONAL<BioAPI_HANDLE>,
+    enrollType: BioAPI_GUI_ENROLL_TYPE,
+    operation: BioAPI_GUI_OPERATION,
+    moment: BioAPI_GUI_MOMENT,
+    resultCode: BioAPI_RETURN,
+    maxNumEnrollSamples: UnsignedInt,
+    selectableInstances: BioAPI_BIR_SUBTYPE_MASK,
+    capturedInstances: BioAPI_BIR_SUBTYPE_MASK,
+    text?: OPTIONAL<UTF8String>
+  ) {
+    this.subscriberEndpointIRI = subscriberEndpointIRI;
+    this.guiEventSubscriptionUuid = guiEventSubscriptionUuid;
+    this.hostingEndpointIRI = hostingEndpointIRI;
+    this.bspProductUuid = bspProductUuid;
+    this.unitID = unitID;
+    this.originalBSPHandle = originalBSPHandle;
+    this.enrollType = enrollType;
+    this.operation = operation;
+    this.moment = moment;
+    this.resultCode = resultCode;
+    this.maxNumEnrollSamples = maxNumEnrollSamples;
+    this.selectableInstances = selectableInstances;
+    this.capturedInstances = capturedInstances;
+    this.text = text;
+  }
 
   /**
    * @summary Restructures an object into a GUISelectEventInfo

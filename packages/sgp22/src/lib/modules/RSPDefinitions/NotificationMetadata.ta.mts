@@ -35,53 +35,63 @@ import { Iccid, _decode_Iccid, _encode_Iccid } from "../RSPDefinitions/Iccid.ta.
  */
 export
 class NotificationMetadata {
+    /**
+     * @summary `seqNumber`.
+     * @description
+     * 
+     * eUICC-assigned sequence number. The LPA passes it to
+     * RetrieveNotificationsList and, after a successful send, to
+     * RemoveNotificationFromList. SGP.22 v3.1 §5.7.9.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly seqNumber: INTEGER;
+    /**
+     * @summary `profileManagementOperation`.
+     * @description
+     * 
+     * Exactly one bit set: install, enable, disable, or delete. SGP.22 v3.1
+     * §5.7.9. The ASN.1 comment in this module states that restriction.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly profileManagementOperation: NotificationEvent;
+    /**
+     * @summary `notificationAddress`.
+     * @description
+     * 
+     * FQDN the signed notification is sent to. Copied from the matching
+     * metadata entry. SGP.22 v3.1 §5.5.3.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly notificationAddress: UTF8String;
+    /**
+     * @summary `iccid`.
+     * @description
+     * 
+     * Profile the notification is about. Omitted when the notification is
+     * not tied to one Profile. SGP.22 v3.1 §5.7.9.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly iccid?: OPTIONAL<Iccid>;
+
     constructor (
-        /**
-         * @summary `seqNumber`.
-         * @description
-         * 
-         * eUICC-assigned sequence number. The LPA passes it to
-         * RetrieveNotificationsList and, after a successful send, to
-         * RemoveNotificationFromList. SGP.22 v3.1 §5.7.9.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly seqNumber: INTEGER,
-        /**
-         * @summary `profileManagementOperation`.
-         * @description
-         * 
-         * Exactly one bit set: install, enable, disable, or delete. SGP.22 v3.1
-         * §5.7.9. The ASN.1 comment in this module states that restriction.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly profileManagementOperation: NotificationEvent,
-        /**
-         * @summary `notificationAddress`.
-         * @description
-         * 
-         * FQDN the signed notification is sent to. Copied from the matching
-         * metadata entry. SGP.22 v3.1 §5.5.3.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly notificationAddress: UTF8String,
-        /**
-         * @summary `iccid`.
-         * @description
-         * 
-         * Profile the notification is about. Omitted when the notification is
-         * not tied to one Profile. SGP.22 v3.1 §5.7.9.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly iccid?: OPTIONAL<Iccid>
-    ) {}
+        seqNumber: INTEGER,
+        profileManagementOperation: NotificationEvent,
+        notificationAddress: UTF8String,
+        iccid?: OPTIONAL<Iccid>
+    ) {
+        this.seqNumber = seqNumber;
+        this.profileManagementOperation = profileManagementOperation;
+        this.notificationAddress = notificationAddress;
+        this.iccid = iccid;
+    }
 
     /**
      * @summary Restructures an object into a NotificationMetadata

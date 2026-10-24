@@ -53,35 +53,43 @@ import {
  *
  */
 export class UDPTLPacket {
+  /**
+   * @summary `seq_number`.
+   * @description Identifies this primary for reordering and
+   * loss detection. First primary is 0; each later primary is
+   * the next integer. ITU-T Rec. T.38 (11/2015) §9.1.2.1.
+   * @public
+   * @readonly
+   */
+  readonly seq_number: INTEGER;
+  /**
+   * @summary `primary_ifp_packet`.
+   * @description The IFP packet for `seq-number`, as an open
+   * type (`TYPE-IDENTIFIER.&Type(IFPPacket)`). Decode with
+   * `_decode_IFPPacket`. ITU-T Rec. T.38 (11/2015) §9.1.1.
+   * @public
+   * @readonly
+   */
+  readonly primary_ifp_packet: _Element;
+  /**
+   * @summary `error_recovery`.
+   * @description Either redundant prior primaries or parity
+   * FEC, chosen from capabilities exchange. Mixing both in one
+   * packet is invalid. ITU-T Rec. T.38 (11/2015) §9.1.3.
+   * @public
+   * @readonly
+   */
+  readonly error_recovery: UDPTLPacket_error_recovery;
+
   constructor(
-    /**
-     * @summary `seq_number`.
-     * @description Identifies this primary for reordering and
-     * loss detection. First primary is 0; each later primary is
-     * the next integer. ITU-T Rec. T.38 (11/2015) §9.1.2.1.
-     * @public
-     * @readonly
-     */
-    readonly seq_number: INTEGER,
-    /**
-     * @summary `primary_ifp_packet`.
-     * @description The IFP packet for `seq-number`, as an open
-     * type (`TYPE-IDENTIFIER.&Type(IFPPacket)`). Decode with
-     * `_decode_IFPPacket`. ITU-T Rec. T.38 (11/2015) §9.1.1.
-     * @public
-     * @readonly
-     */
-    readonly primary_ifp_packet: _Element,
-    /**
-     * @summary `error_recovery`.
-     * @description Either redundant prior primaries or parity
-     * FEC, chosen from capabilities exchange. Mixing both in one
-     * packet is invalid. ITU-T Rec. T.38 (11/2015) §9.1.3.
-     * @public
-     * @readonly
-     */
-    readonly error_recovery: UDPTLPacket_error_recovery
-  ) {}
+    seq_number: INTEGER,
+    primary_ifp_packet: _Element,
+    error_recovery: UDPTLPacket_error_recovery
+  ) {
+    this.seq_number = seq_number;
+    this.primary_ifp_packet = primary_ifp_packet;
+    this.error_recovery = error_recovery;
+  }
 
   /**
    * @summary Restructures an object into a UDPTLPacket

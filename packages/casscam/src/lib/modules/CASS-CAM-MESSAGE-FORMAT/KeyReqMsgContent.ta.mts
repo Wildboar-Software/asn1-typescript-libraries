@@ -44,43 +44,51 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class KeyReqMsgContent {
+    /**
+     * @summary `sessionID`.
+     * @description
+     *
+     * Session identifier, 10 octets. Assignment is
+     * not specified (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    readonly sessionID: OCTET_STRING;
+    /**
+     * @summary `keyParingID`.
+     * @description
+     *
+     * KeyPairingID: `CAM_ID || DSC_ID` (§3.2.2).
+     * 48 octets (8-byte CAM_ID + 40-byte DSC_ID).
+     * ASN.1 spelling is `keyParingID`.
+     *
+     * @public
+     * @readonly
+     */
+    readonly keyParingID: OCTET_STRING;
+    /**
+     * @summary `cAMCertificate`.
+     * @description
+     *
+     * CAM X.509 certificate. Must be DER (Annex A;
+     * [ITU-T X.509]). The AC uses it to authenticate
+     * the CAM (§7.2).
+     *
+     * @public
+     * @readonly
+     */
+    readonly cAMCertificate: BIT_STRING;
+
     constructor (
-        /**
-         * @summary `sessionID`.
-         * @description
-         *
-         * Session identifier, 10 octets. Assignment is
-         * not specified (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sessionID: OCTET_STRING,
-        /**
-         * @summary `keyParingID`.
-         * @description
-         *
-         * KeyPairingID: `CAM_ID || DSC_ID` (§3.2.2).
-         * 48 octets (8-byte CAM_ID + 40-byte DSC_ID).
-         * ASN.1 spelling is `keyParingID`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly keyParingID: OCTET_STRING,
-        /**
-         * @summary `cAMCertificate`.
-         * @description
-         *
-         * CAM X.509 certificate. Must be DER (Annex A;
-         * [ITU-T X.509]). The AC uses it to authenticate
-         * the CAM (§7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cAMCertificate: BIT_STRING
-    ) {}
+        sessionID: OCTET_STRING,
+        keyParingID: OCTET_STRING,
+        cAMCertificate: BIT_STRING
+    ) {
+        this.sessionID = sessionID;
+        this.keyParingID = keyParingID;
+        this.cAMCertificate = cAMCertificate;
+    }
 
     /**
      * @summary Restructures an object into a KeyReqMsgContent

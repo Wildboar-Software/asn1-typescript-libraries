@@ -40,19 +40,23 @@ import {
  *
  */
 export class UnregisterBFP_RequestParams {
+  /**
+   * @summary `bfpProductUuid`.
+   * @description
+   *
+   * Product UUID of the BFP to unregister, from C `BFPProductUuid`
+   * (`X.1083 §16.62`, Table 121, §15.58).
+   *
+   * @public
+   * @readonly
+   */
+  readonly bfpProductUuid: BioAPI_UUID;
+
   constructor(
-    /**
-     * @summary `bfpProductUuid`.
-     * @description
-     *
-     * Product UUID of the BFP to unregister, from C `BFPProductUuid`
-     * (`X.1083 §16.62`, Table 121, §15.58).
-     *
-     * @public
-     * @readonly
-     */
-    readonly bfpProductUuid: BioAPI_UUID
-  ) {}
+    bfpProductUuid: BioAPI_UUID
+  ) {
+    this.bfpProductUuid = bfpProductUuid;
+  }
 
   /**
    * @summary Restructures an object into a UnregisterBFP_RequestParams

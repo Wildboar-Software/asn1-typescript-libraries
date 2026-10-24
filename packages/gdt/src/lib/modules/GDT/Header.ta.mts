@@ -39,68 +39,90 @@ import { EncryptionInfo, _decode_EncryptionInfo, _encode_EncryptionInfo } from "
  */
 export
 class Header {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    readonly version: INTEGER;
+    /**
+     * @summary `source`.
+     * @public
+     * @readonly
+     */
+    readonly source: EndPointDescriptor;
+    /**
+     * @summary `destination`.
+     * @public
+     * @readonly
+     */
+    readonly destination: EndPointDescriptor;
+    /**
+     * @summary `uuid`.
+     * @public
+     * @readonly
+     */
+    readonly uuid: OCTET_STRING;
+    /**
+     * @summary `sequence_num`.
+     * @public
+     * @readonly
+     */
+    readonly sequence_num: INTEGER;
+    /**
+     * @summary `sequence_flag`.
+     * @public
+     * @readonly
+     */
+    readonly sequence_flag: SequenceFlag;
+    /**
+     * @summary `enc_info`.
+     * @public
+     * @readonly
+     */
+    readonly enc_info?: OPTIONAL<EncryptionInfo>;
+    /**
+     * @summary `hop_info`.
+     * @public
+     * @readonly
+     */
+    readonly hop_info?: OPTIONAL<HopInfo>;
+    /**
+     * @summary `status`.
+     * @public
+     * @readonly
+     */
+    readonly status?: OPTIONAL<ErrorCode>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: INTEGER,
-        /**
-         * @summary `source`.
-         * @public
-         * @readonly
-         */
-        readonly source: EndPointDescriptor,
-        /**
-         * @summary `destination`.
-         * @public
-         * @readonly
-         */
-        readonly destination: EndPointDescriptor,
-        /**
-         * @summary `uuid`.
-         * @public
-         * @readonly
-         */
-        readonly uuid: OCTET_STRING,
-        /**
-         * @summary `sequence_num`.
-         * @public
-         * @readonly
-         */
-        readonly sequence_num: INTEGER,
-        /**
-         * @summary `sequence_flag`.
-         * @public
-         * @readonly
-         */
-        readonly sequence_flag: SequenceFlag,
-        /**
-         * @summary `enc_info`.
-         * @public
-         * @readonly
-         */
-        readonly enc_info?: OPTIONAL<EncryptionInfo>,
-        /**
-         * @summary `hop_info`.
-         * @public
-         * @readonly
-         */
-        readonly hop_info?: OPTIONAL<HopInfo>,
-        /**
-         * @summary `status`.
-         * @public
-         * @readonly
-         */
-        readonly status?: OPTIONAL<ErrorCode>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        version: INTEGER,
+        source: EndPointDescriptor,
+        destination: EndPointDescriptor,
+        uuid: OCTET_STRING,
+        sequence_num: INTEGER,
+        sequence_flag: SequenceFlag,
+        enc_info?: OPTIONAL<EncryptionInfo>,
+        hop_info?: OPTIONAL<HopInfo>,
+        status?: OPTIONAL<ErrorCode>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.version = version;
+        this.source = source;
+        this.destination = destination;
+        this.uuid = uuid;
+        this.sequence_num = sequence_num;
+        this.sequence_flag = sequence_flag;
+        this.enc_info = enc_info;
+        this.hop_info = hop_info;
+        this.status = status;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Header

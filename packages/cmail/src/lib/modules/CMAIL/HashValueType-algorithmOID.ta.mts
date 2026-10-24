@@ -28,12 +28,14 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_HashValueType_algorithmOID {
+export const _enum_for_HashValueType_algorithmOID = {
   /** SHA-1. XER text `1.3.14.3.2.26`. */
-  sha_1 = 0,
+  sha_1: 0,
   /** SHA-256. XER text `2.16.840.1.101.3.4.2.1`. */
-  sha_256 = 1,
-}
+  sha_256: 1,
+} as const;
+
+export type _enum_for_HashValueType_algorithmOID = (typeof _enum_for_HashValueType_algorithmOID)[keyof typeof _enum_for_HashValueType_algorithmOID];
 
 
 /**
@@ -114,12 +116,12 @@ export const sha_256: HashValueType_algorithmOID =
 
 
 
-export const _decode_HashValueType_algorithmOID = $._decodeEnumerated;
+export const _decode_HashValueType_algorithmOID = $._decodeEnumerated as $.ASN1Decoder<HashValueType_algorithmOID>;
 
 
 
 
-export const _encode_HashValueType_algorithmOID = $._encodeEnumerated;
+export const _encode_HashValueType_algorithmOID = $._encodeEnumerated as $.ASN1Encoder<HashValueType_algorithmOID>;
 
 
 /* eslint-enable */

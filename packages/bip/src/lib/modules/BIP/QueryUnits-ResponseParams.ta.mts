@@ -36,20 +36,24 @@ import {
  *
  */
 export class QueryUnits_ResponseParams {
+  /**
+   * @summary `unitSchemas`.
+   * @description
+   *
+   * Unit schemas of the queried BSP. Maps to
+   * UnitSchemaArray/NumberOfElements (clause 20).
+   * X.1083 §16.11.6–16.11.8, Table 44.
+   *
+   * @public
+   * @readonly
+   */
+  readonly unitSchemas: BioAPI_UNIT_SCHEMA[];
+
   constructor(
-    /**
-     * @summary `unitSchemas`.
-     * @description
-     *
-     * Unit schemas of the queried BSP. Maps to
-     * UnitSchemaArray/NumberOfElements (clause 20).
-     * X.1083 §16.11.6–16.11.8, Table 44.
-     *
-     * @public
-     * @readonly
-     */
-    readonly unitSchemas: BioAPI_UNIT_SCHEMA[]
-  ) {}
+    unitSchemas: BioAPI_UNIT_SCHEMA[]
+  ) {
+    this.unitSchemas = unitSchemas;
+  }
 
   /**
    * @summary Restructures an object into a QueryUnits_ResponseParams

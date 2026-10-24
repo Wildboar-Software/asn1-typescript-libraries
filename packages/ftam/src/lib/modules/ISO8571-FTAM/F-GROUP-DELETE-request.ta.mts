@@ -43,30 +43,36 @@ import {
  *
  */
 export class F_GROUP_DELETE_request {
+  /**
+   * @summary `request_Operation_result`.
+   * @description
+   *
+   * Whether the response should carry a success count or
+   * names. Absent from ISO 8571:1988 Parts 1–4.
+   *
+   * @public
+   * @readonly
+   */
+  readonly request_Operation_result?: OPTIONAL<Request_Operation_Result>;
+  /**
+   * @summary `shared_ASE_information`.
+   * @description
+   *
+   * Other ASE information on this primitive. ISO 8571-3:1988
+   * §13.10.
+   *
+   * @public
+   * @readonly
+   */
+  readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>;
+
   constructor(
-    /**
-     * @summary `request_Operation_result`.
-     * @description
-     *
-     * Whether the response should carry a success count or
-     * names. Absent from ISO 8571:1988 Parts 1–4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly request_Operation_result?: OPTIONAL<Request_Operation_Result>,
-    /**
-     * @summary `shared_ASE_information`.
-     * @description
-     *
-     * Other ASE information on this primitive. ISO 8571-3:1988
-     * §13.10.
-     *
-     * @public
-     * @readonly
-     */
-    readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>
-  ) {}
+    request_Operation_result?: OPTIONAL<Request_Operation_Result>,
+    shared_ASE_information?: OPTIONAL<Shared_ASE_Information>
+  ) {
+    this.request_Operation_result = request_Operation_result;
+    this.shared_ASE_information = shared_ASE_information;
+  }
 
   /**
    * @summary Restructures an object into a F_GROUP_DELETE_request

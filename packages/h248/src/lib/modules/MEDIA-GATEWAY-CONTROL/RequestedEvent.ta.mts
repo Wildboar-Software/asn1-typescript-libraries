@@ -42,64 +42,76 @@ import { EventParameter, _decode_EventParameter, _encode_EventParameter } from "
  */
 export
 class RequestedEvent {
+    /**
+     * @summary `eventName`.
+     * @description
+     *
+     * Package and event. The Recommendation calls this field `pkgdName`.
+     * The compiled name is `eventName` (`doc/h248v3.asn1`). Four octets;
+     * see `PkgdName`.
+     *
+     * @public
+     * @readonly
+     */
+    readonly eventName: EventName;
+    /**
+     * @summary `streamID`.
+     * @description
+     *
+     * Stream the event applies to. Omitted or 0 means the event is not tied
+     * to one stream (clause 7.1.9.2).
+     *
+     * @public
+     * @readonly
+     */
+    readonly streamID: OPTIONAL<StreamID>;
+    /**
+     * @summary `eventAction`.
+     * @description
+     *
+     * KeepActive, digit map, embedded Events or Signals descriptor,
+     * notification behaviour, and ResetEventsDescriptor. At most one level
+     * of embedding is allowed (clause 7.1.9.8).
+     *
+     * @public
+     * @readonly
+     */
+    readonly eventAction: OPTIONAL<RequestedActions>;
+    /**
+     * @summary `evParList`.
+     * @description
+     *
+     * Parameters of the event, as defined by its package.
+     *
+     * @public
+     * @readonly
+     */
+    readonly evParList: EventParameter[];
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `eventName`.
-         * @description
-         *
-         * Package and event. The Recommendation calls this field `pkgdName`.
-         * The compiled name is `eventName` (`doc/h248v3.asn1`). Four octets;
-         * see `PkgdName`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventName: EventName,
-        /**
-         * @summary `streamID`.
-         * @description
-         *
-         * Stream the event applies to. Omitted or 0 means the event is not tied
-         * to one stream (clause 7.1.9.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly streamID: OPTIONAL<StreamID>,
-        /**
-         * @summary `eventAction`.
-         * @description
-         *
-         * KeepActive, digit map, embedded Events or Signals descriptor,
-         * notification behaviour, and ResetEventsDescriptor. At most one level
-         * of embedding is allowed (clause 7.1.9.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventAction: OPTIONAL<RequestedActions>,
-        /**
-         * @summary `evParList`.
-         * @description
-         *
-         * Parameters of the event, as defined by its package.
-         *
-         * @public
-         * @readonly
-         */
-        readonly evParList: EventParameter[],
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        eventName: EventName,
+        streamID: OPTIONAL<StreamID>,
+        eventAction: OPTIONAL<RequestedActions>,
+        evParList: EventParameter[],
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.eventName = eventName;
+        this.streamID = streamID;
+        this.eventAction = eventAction;
+        this.evParList = evParList;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a RequestedEvent

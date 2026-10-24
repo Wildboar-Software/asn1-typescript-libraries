@@ -36,35 +36,41 @@ import { Message, _decode_Message, _encode_Message } from "../MEDIA-GATEWAY-CONT
  */
 export
 class MegacoMessage {
+    /**
+     * @summary `authHeader`.
+     * @description
+     *
+     * Interim AH header: security parameters index, sequence number, and
+     * authentication data, with the same field meanings as the transport
+     * mode of IETF RFC 2402. The integrity check covers the concatenated
+     * transactions prefixed by a synthesized header of source address,
+     * destination address, and destination port (ITU-T Rec. H.248.1
+     * (03/2013) clause 10.2).
+     *
+     * @public
+     * @readonly
+     */
+    readonly authHeader: OPTIONAL<AuthenticationHeader>;
+    /**
+     * @summary `mess`.
+     * @description
+     *
+     * Protocol message: version, sender identity, and either a
+     * message-level error or one or more independent transactions (ITU-T
+     * Rec. H.248.1 (03/2013) clause 8.3).
+     *
+     * @public
+     * @readonly
+     */
+    readonly mess: Message;
+
     constructor (
-        /**
-         * @summary `authHeader`.
-         * @description
-         *
-         * Interim AH header: security parameters index, sequence number, and
-         * authentication data, with the same field meanings as the transport
-         * mode of IETF RFC 2402. The integrity check covers the concatenated
-         * transactions prefixed by a synthesized header of source address,
-         * destination address, and destination port (ITU-T Rec. H.248.1
-         * (03/2013) clause 10.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly authHeader: OPTIONAL<AuthenticationHeader>,
-        /**
-         * @summary `mess`.
-         * @description
-         *
-         * Protocol message: version, sender identity, and either a
-         * message-level error or one or more independent transactions (ITU-T
-         * Rec. H.248.1 (03/2013) clause 8.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mess: Message
-    ) {}
+        authHeader: OPTIONAL<AuthenticationHeader>,
+        mess: Message
+    ) {
+        this.authHeader = authHeader;
+        this.mess = mess;
+    }
 
     /**
      * @summary Restructures an object into a MegacoMessage

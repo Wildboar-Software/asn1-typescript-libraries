@@ -35,46 +35,54 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class OperatorId {
+    /**
+     * @summary `mccMnc`.
+     * @description
+     * 
+     * Mobile Country Code and Mobile Network Code, three octets, coded as
+     * in 3GPP TS 24.008. In a PPAR, a nibble of `'E'` is a wildcard. In
+     * `profileOwner`, wildcards are not allowed, and the value must match
+     * EFIMSI. SGP.22 v3.1 §2.9.2.1 and §5.5.5.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly mccMnc: OCTET_STRING;
+    /**
+     * @summary `gid1`.
+     * @description
+     * 
+     * Contents of EFGID1 (file `'6F3E'`, 3GPP TS 31.102). Empty (length
+     * zero) is a wildcard in a PPAR. Omitted matches only a `profileOwner`
+     * that also omits it. If present on `profileOwner`, EFGID1 must exist,
+     * match, and be marked available in EFUST. SGP.22 v3.1 §2.9.2.1 and
+     * §5.5.5.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly gid1?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `gid2`.
+     * @description
+     * 
+     * Contents of EFGID2 (file `'6F3F'`). Same wildcard and EFUST rules as
+     * `gid1`. SGP.22 v3.1 §2.9.2.1 and §5.5.5.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly gid2?: OPTIONAL<OCTET_STRING>;
+
     constructor (
-        /**
-         * @summary `mccMnc`.
-         * @description
-         * 
-         * Mobile Country Code and Mobile Network Code, three octets, coded as
-         * in 3GPP TS 24.008. In a PPAR, a nibble of `'E'` is a wildcard. In
-         * `profileOwner`, wildcards are not allowed, and the value must match
-         * EFIMSI. SGP.22 v3.1 §2.9.2.1 and §5.5.5.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly mccMnc: OCTET_STRING,
-        /**
-         * @summary `gid1`.
-         * @description
-         * 
-         * Contents of EFGID1 (file `'6F3E'`, 3GPP TS 31.102). Empty (length
-         * zero) is a wildcard in a PPAR. Omitted matches only a `profileOwner`
-         * that also omits it. If present on `profileOwner`, EFGID1 must exist,
-         * match, and be marked available in EFUST. SGP.22 v3.1 §2.9.2.1 and
-         * §5.5.5.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly gid1?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `gid2`.
-         * @description
-         * 
-         * Contents of EFGID2 (file `'6F3F'`). Same wildcard and EFUST rules as
-         * `gid1`. SGP.22 v3.1 §2.9.2.1 and §5.5.5.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly gid2?: OPTIONAL<OCTET_STRING>
-    ) {}
+        mccMnc: OCTET_STRING,
+        gid1?: OPTIONAL<OCTET_STRING>,
+        gid2?: OPTIONAL<OCTET_STRING>
+    ) {
+        this.mccMnc = mccMnc;
+        this.gid1 = gid1;
+        this.gid2 = gid2;
+    }
 
     /**
      * @summary Restructures an object into a OperatorId

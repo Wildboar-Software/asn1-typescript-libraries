@@ -34,20 +34,24 @@ import {
  *
  */
 export class QueryBFPs_RequestParams {
+  /**
+   * @summary `bspProductUuid`.
+   * @description
+   *
+   * Product UUID of the BSP whose BFPs are queried. Application
+   * may have passed an access UUID; this component is always the
+   * product UUID. X.1083 Table 45, clause 25.
+   *
+   * @public
+   * @readonly
+   */
+  readonly bspProductUuid: BioAPI_UUID;
+
   constructor(
-    /**
-     * @summary `bspProductUuid`.
-     * @description
-     *
-     * Product UUID of the BSP whose BFPs are queried. Application
-     * may have passed an access UUID; this component is always the
-     * product UUID. X.1083 Table 45, clause 25.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bspProductUuid: BioAPI_UUID
-  ) {}
+    bspProductUuid: BioAPI_UUID
+  ) {
+    this.bspProductUuid = bspProductUuid;
+  }
 
   /**
    * @summary Restructures an object into a QueryBFPs_RequestParams

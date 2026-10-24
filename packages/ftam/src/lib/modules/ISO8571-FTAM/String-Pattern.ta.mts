@@ -45,28 +45,34 @@ import {
  *
  */
 export class String_Pattern {
+  /**
+   * @summary `equality_comparision`.
+   * @description
+   *
+   * Whether `no-value-available` and equals match.
+   *
+   * @public
+   * @readonly
+   */
+  readonly equality_comparision: Equality_Comparision;
+  /**
+   * @summary `string_value`.
+   * @description
+   *
+   * Ordered pieces matched against the attribute string.
+   *
+   * @public
+   * @readonly
+   */
+  readonly string_value: String_Pattern_string_value_Item[];
+
   constructor(
-    /**
-     * @summary `equality_comparision`.
-     * @description
-     *
-     * Whether `no-value-available` and equals match.
-     *
-     * @public
-     * @readonly
-     */
-    readonly equality_comparision: Equality_Comparision,
-    /**
-     * @summary `string_value`.
-     * @description
-     *
-     * Ordered pieces matched against the attribute string.
-     *
-     * @public
-     * @readonly
-     */
-    readonly string_value: String_Pattern_string_value_Item[]
-  ) {}
+    equality_comparision: Equality_Comparision,
+    string_value: String_Pattern_string_value_Item[]
+  ) {
+    this.equality_comparision = equality_comparision;
+    this.string_value = string_value;
+  }
 
   /**
    * @summary Restructures an object into a String_Pattern

@@ -40,36 +40,44 @@ import {
  *
  */
 export class IntermediateResponse {
+  /**
+   * @summary `responseName`.
+   * @description
+   *
+   * Identifies the kind of intermediate message. Required when
+   * solicited by a request control.
+   *
+   * @public
+   * @readonly
+   */
+  readonly responseName?: OPTIONAL<LDAPOID>;
+  /**
+   * @summary `responseValue`.
+   * @description
+   *
+   * Opaque; format defined by the soliciting extension. May contain
+   * NULs.
+   *
+   * @public
+   * @readonly
+   */
+  readonly responseValue?: OPTIONAL<OCTET_STRING>;
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  readonly _unrecognizedExtensionsList: _Element[];
+
   constructor(
-    /**
-     * @summary `responseName`.
-     * @description
-     *
-     * Identifies the kind of intermediate message. Required when
-     * solicited by a request control.
-     *
-     * @public
-     * @readonly
-     */
-    readonly responseName?: OPTIONAL<LDAPOID>,
-    /**
-     * @summary `responseValue`.
-     * @description
-     *
-     * Opaque; format defined by the soliciting extension. May contain
-     * NULs.
-     *
-     * @public
-     * @readonly
-     */
-    readonly responseValue?: OPTIONAL<OCTET_STRING>,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = []
-  ) {}
+    responseName?: OPTIONAL<LDAPOID>,
+    responseValue?: OPTIONAL<OCTET_STRING>,
+    _unrecognizedExtensionsList: _Element[] = []
+  ) {
+    this.responseName = responseName;
+    this.responseValue = responseValue;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+  }
 
   /**
    * @summary Restructures an object into a IntermediateResponse

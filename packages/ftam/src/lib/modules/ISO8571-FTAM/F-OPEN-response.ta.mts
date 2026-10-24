@@ -90,116 +90,138 @@ import {
  *
  */
 export class F_OPEN_response {
+  /**
+   * @summary `state_result`.
+   * @description
+   *
+   * Whether the open regime was established. Default `success`.
+   * ISO 8571-3:1988 §17.1.2.1.
+   *
+   * @public
+   * @readonly
+   */
+  readonly state_result: OPTIONAL<State_Result>;
+  /**
+   * @summary `action_result`.
+   * @description
+   *
+   * Default `success`. ISO 8571-3:1988 §17.1.2.2 / §13.2.
+   *
+   * @public
+   * @readonly
+   */
+  readonly action_result: OPTIONAL<Action_Result>;
+  /**
+   * @summary `contents_type`.
+   * @description
+   *
+   * Always the valid file contents type (the attribute, or a
+   * simplification/relaxation if requested).
+   * ISO 8571-3:1988 §17.1.2.4.
+   *
+   * @public
+   * @readonly
+   */
+  readonly contents_type: Contents_Type_Attribute;
+  /**
+   * @summary `concurrency_control`.
+   * @description
+   *
+   * Table 21: dependent on response/confirm.
+   * ISO 8571-3:1988 §17.1.2.5.
+   *
+   * @public
+   * @readonly
+   */
+  readonly concurrency_control?: OPTIONAL<Concurrency_Control>;
+  /**
+   * @summary `shared_ASE_information`.
+   * @description
+   *
+   * ISO 8571-3:1988 §17.1.2.6 / §13.10.
+   *
+   * @public
+   * @readonly
+   */
+  readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>;
+  /**
+   * @summary `diagnostic`.
+   * @description
+   *
+   * ISO 8571-3:1988 §17.1.2.8 / §13.13.
+   *
+   * @public
+   * @readonly
+   */
+  readonly diagnostic?: OPTIONAL<Diagnostic>;
+  /**
+   * @summary `recovery_mode`.
+   * @description
+   *
+   * Value established for the open; responder may return a lower
+   * value. Default `none`. ISO 8571-3:1988 §17.1.2.10.
+   *
+   * @public
+   * @readonly
+   */
+  readonly recovery_mode?: OPTIONAL<F_OPEN_response_recovery_mode>;
+  /**
+   * @summary `presentation_action`.
+   * @description
+   *
+   * Responder will follow with P-ALTER-CONTEXT (ASN.1). Default
+   * FALSE. ISO 8571-4:1988 F-OPEN-response.
+   *
+   * @public
+   * @readonly
+   */
+  readonly presentation_action?: OPTIONAL<BOOLEAN>;
+  /**
+   * @summary `degree_of_overlap`.
+   * @description
+   *
+   * Absent from ISO 8571:1988 Parts 1–4. ASN.1 comment: conditional
+   * on consecutive-access or concurrent-access FUs.
+   *
+   * @public
+   * @readonly
+   */
+  readonly degree_of_overlap?: OPTIONAL<Degree_Of_Overlap>;
+  /**
+   * @summary `transfer_window`.
+   * @description
+   *
+   * Absent from ISO 8571:1988 Parts 1–4. ASN.1 comment: conditional
+   * on consecutive-access or concurrent-access FUs.
+   *
+   * @public
+   * @readonly
+   */
+  readonly transfer_window?: OPTIONAL<INTEGER>;
+
   constructor(
-    /**
-     * @summary `state_result`.
-     * @description
-     *
-     * Whether the open regime was established. Default `success`.
-     * ISO 8571-3:1988 §17.1.2.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly state_result: OPTIONAL<State_Result>,
-    /**
-     * @summary `action_result`.
-     * @description
-     *
-     * Default `success`. ISO 8571-3:1988 §17.1.2.2 / §13.2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly action_result: OPTIONAL<Action_Result>,
-    /**
-     * @summary `contents_type`.
-     * @description
-     *
-     * Always the valid file contents type (the attribute, or a
-     * simplification/relaxation if requested).
-     * ISO 8571-3:1988 §17.1.2.4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly contents_type: Contents_Type_Attribute,
-    /**
-     * @summary `concurrency_control`.
-     * @description
-     *
-     * Table 21: dependent on response/confirm.
-     * ISO 8571-3:1988 §17.1.2.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly concurrency_control?: OPTIONAL<Concurrency_Control>,
-    /**
-     * @summary `shared_ASE_information`.
-     * @description
-     *
-     * ISO 8571-3:1988 §17.1.2.6 / §13.10.
-     *
-     * @public
-     * @readonly
-     */
-    readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
-    /**
-     * @summary `diagnostic`.
-     * @description
-     *
-     * ISO 8571-3:1988 §17.1.2.8 / §13.13.
-     *
-     * @public
-     * @readonly
-     */
-    readonly diagnostic?: OPTIONAL<Diagnostic>,
-    /**
-     * @summary `recovery_mode`.
-     * @description
-     *
-     * Value established for the open; responder may return a lower
-     * value. Default `none`. ISO 8571-3:1988 §17.1.2.10.
-     *
-     * @public
-     * @readonly
-     */
-    readonly recovery_mode?: OPTIONAL<F_OPEN_response_recovery_mode>,
-    /**
-     * @summary `presentation_action`.
-     * @description
-     *
-     * Responder will follow with P-ALTER-CONTEXT (ASN.1). Default
-     * FALSE. ISO 8571-4:1988 F-OPEN-response.
-     *
-     * @public
-     * @readonly
-     */
-    readonly presentation_action?: OPTIONAL<BOOLEAN>,
-    /**
-     * @summary `degree_of_overlap`.
-     * @description
-     *
-     * Absent from ISO 8571:1988 Parts 1–4. ASN.1 comment: conditional
-     * on consecutive-access or concurrent-access FUs.
-     *
-     * @public
-     * @readonly
-     */
-    readonly degree_of_overlap?: OPTIONAL<Degree_Of_Overlap>,
-    /**
-     * @summary `transfer_window`.
-     * @description
-     *
-     * Absent from ISO 8571:1988 Parts 1–4. ASN.1 comment: conditional
-     * on consecutive-access or concurrent-access FUs.
-     *
-     * @public
-     * @readonly
-     */
-    readonly transfer_window?: OPTIONAL<INTEGER>
-  ) {}
+    state_result: OPTIONAL<State_Result>,
+    action_result: OPTIONAL<Action_Result>,
+    contents_type: Contents_Type_Attribute,
+    concurrency_control?: OPTIONAL<Concurrency_Control>,
+    shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
+    diagnostic?: OPTIONAL<Diagnostic>,
+    recovery_mode?: OPTIONAL<F_OPEN_response_recovery_mode>,
+    presentation_action?: OPTIONAL<BOOLEAN>,
+    degree_of_overlap?: OPTIONAL<Degree_Of_Overlap>,
+    transfer_window?: OPTIONAL<INTEGER>
+  ) {
+    this.state_result = state_result;
+    this.action_result = action_result;
+    this.contents_type = contents_type;
+    this.concurrency_control = concurrency_control;
+    this.shared_ASE_information = shared_ASE_information;
+    this.diagnostic = diagnostic;
+    this.recovery_mode = recovery_mode;
+    this.presentation_action = presentation_action;
+    this.degree_of_overlap = degree_of_overlap;
+    this.transfer_window = transfer_window;
+  }
 
   /**
    * @summary Restructures an object into a F_OPEN_response

@@ -28,28 +28,34 @@ import { PrioritisedObject_Item_priority, _decode_PrioritisedObject_Item_priorit
  */
 export
 class PrioritisedObject_Item {
+    /**
+     * @summary `object`.
+     * @description
+     *
+     * Related managed-object instance. ITU-T Rec. X.721 (02/92) §14.2.
+     *
+     * @public
+     * @readonly
+     */
+    readonly object: ObjectInstance;
+    /**
+     * @summary `priority`.
+     * @description
+     *
+     * `0` = highest, `127` = lowest. ITU-T Rec. X.721 (02/92) §14.2.
+     *
+     * @public
+     * @readonly
+     */
+    readonly priority: PrioritisedObject_Item_priority;
+
     constructor (
-        /**
-         * @summary `object`.
-         * @description
-         *
-         * Related managed-object instance. ITU-T Rec. X.721 (02/92) §14.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly object: ObjectInstance,
-        /**
-         * @summary `priority`.
-         * @description
-         *
-         * `0` = highest, `127` = lowest. ITU-T Rec. X.721 (02/92) §14.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly priority: PrioritisedObject_Item_priority
-    ) {}
+        object: ObjectInstance,
+        priority: PrioritisedObject_Item_priority
+    ) {
+        this.object = object;
+        this.priority = priority;
+    }
 
     /**
      * @summary Restructures an object into a PrioritisedObject_Item

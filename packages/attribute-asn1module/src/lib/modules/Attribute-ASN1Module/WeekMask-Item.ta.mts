@@ -28,29 +28,35 @@ import { IntervalsOfDay, _decode_IntervalsOfDay, _encode_IntervalsOfDay } from "
  */
 export
 class WeekMask_Item {
+    /**
+     * @summary `daysOfWeek`.
+     * @description
+     *
+     * SIZE(7) bit string: bit 0 Sunday through bit 6 Saturday. ITU-T Rec.
+     * X.721 (02/92) §14.2.
+     *
+     * @public
+     * @readonly
+     */
+    readonly daysOfWeek: WeekMask_Item_daysOfWeek;
+    /**
+     * @summary `intervalsOfDay`.
+     * @description
+     *
+     * Time windows on the selected days. ITU-T Rec. X.721 (02/92) §14.2.
+     *
+     * @public
+     * @readonly
+     */
+    readonly intervalsOfDay: IntervalsOfDay;
+
     constructor (
-        /**
-         * @summary `daysOfWeek`.
-         * @description
-         *
-         * SIZE(7) bit string: bit 0 Sunday through bit 6 Saturday. ITU-T Rec.
-         * X.721 (02/92) §14.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly daysOfWeek: WeekMask_Item_daysOfWeek,
-        /**
-         * @summary `intervalsOfDay`.
-         * @description
-         *
-         * Time windows on the selected days. ITU-T Rec. X.721 (02/92) §14.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly intervalsOfDay: IntervalsOfDay
-    ) {}
+        daysOfWeek: WeekMask_Item_daysOfWeek,
+        intervalsOfDay: IntervalsOfDay
+    ) {
+        this.daysOfWeek = daysOfWeek;
+        this.intervalsOfDay = intervalsOfDay;
+    }
 
     /**
      * @summary Restructures an object into a WeekMask_Item

@@ -30,10 +30,12 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_VirtualLinkChange {
-  deleted = 0,
-  created = 1,
-}
+export const _enum_for_VirtualLinkChange = {
+  deleted: 0,
+  created: 1,
+} as const;
+
+export type _enum_for_VirtualLinkChange = (typeof _enum_for_VirtualLinkChange)[keyof typeof _enum_for_VirtualLinkChange];
 
 /**
  * @summary VirtualLinkChange
@@ -122,10 +124,10 @@ export const created: VirtualLinkChange =
   VirtualLinkChange.created; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_VirtualLinkChange = $._decodeEnumerated;
+export const _decode_VirtualLinkChange = $._decodeEnumerated as $.ASN1Decoder<VirtualLinkChange>;
 
 
-export const _encode_VirtualLinkChange = $._encodeEnumerated;
+export const _encode_VirtualLinkChange = $._encodeEnumerated as $.ASN1Encoder<VirtualLinkChange>;
 
 
 /* eslint-enable */

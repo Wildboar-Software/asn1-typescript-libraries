@@ -41,32 +41,38 @@ import {
  *
  */
 export class PresetIdentifyPopulation_RequestParams {
+  /**
+   * @summary `originalBSPHandle`.
+   * @description
+   *
+   * Attach-session handle on the hosting (slave) endpoint.
+   * BioAPI `BSPHandle` is rewritten via clauses 24 and 26.
+   * X.1083 §16.40.5.
+   *
+   * @public
+   * @readonly
+   */
+  readonly originalBSPHandle: BioAPI_HANDLE;
+  /**
+   * @summary `population`.
+   * @description
+   *
+   * Identification population to preset, from BioAPI
+   * `Population`. C `NULL` is unconvertible (clause 19).
+   * X.1083 §16.40.5.
+   *
+   * @public
+   * @readonly
+   */
+  readonly population: BioAPI_IDENTIFY_POPULATION;
+
   constructor(
-    /**
-     * @summary `originalBSPHandle`.
-     * @description
-     *
-     * Attach-session handle on the hosting (slave) endpoint.
-     * BioAPI `BSPHandle` is rewritten via clauses 24 and 26.
-     * X.1083 §16.40.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly originalBSPHandle: BioAPI_HANDLE,
-    /**
-     * @summary `population`.
-     * @description
-     *
-     * Identification population to preset, from BioAPI
-     * `Population`. C `NULL` is unconvertible (clause 19).
-     * X.1083 §16.40.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly population: BioAPI_IDENTIFY_POPULATION
-  ) {}
+    originalBSPHandle: BioAPI_HANDLE,
+    population: BioAPI_IDENTIFY_POPULATION
+  ) {
+    this.originalBSPHandle = originalBSPHandle;
+    this.population = population;
+  }
 
   /**
    * @summary Restructures an object into a PresetIdentifyPopulation_RequestParams

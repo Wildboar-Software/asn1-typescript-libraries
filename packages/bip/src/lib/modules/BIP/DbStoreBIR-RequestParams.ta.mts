@@ -51,41 +51,49 @@ import {
  *
  */
 export class DbStoreBIR_RequestParams {
+  /**
+   * @summary `originalBSPHandle`.
+   * @description
+   *
+   * Hosting-endpoint BSP handle. Rewritten from the master's local
+   * `BSPHandle` (cl.26) (`X.1083 §16.48`, Table 105).
+   *
+   * @public
+   * @readonly
+   */
+  readonly originalBSPHandle: BioAPI_HANDLE;
+  /**
+   * @summary `birToStore`.
+   * @description
+   *
+   * BIR to store, from C `BIRToStore`. Not OPTIONAL: a NULL pointer
+   * is unconvertible (cl.19, §15.46) (`X.1083 §16.48`, Table 105).
+   *
+   * @public
+   * @readonly
+   */
+  readonly birToStore: BioAPI_INPUT_BIR;
+  /**
+   * @summary `dbHandle`.
+   * @description
+   *
+   * Target database, from C `DbHandle` (`X.1083 §16.48`, Table 105,
+   * §15.26). No local/original rewrite is specified.
+   *
+   * @public
+   * @readonly
+   */
+  readonly dbHandle: BioAPI_DB_HANDLE;
+
   constructor(
-    /**
-     * @summary `originalBSPHandle`.
-     * @description
-     *
-     * Hosting-endpoint BSP handle. Rewritten from the master's local
-     * `BSPHandle` (cl.26) (`X.1083 §16.48`, Table 105).
-     *
-     * @public
-     * @readonly
-     */
-    readonly originalBSPHandle: BioAPI_HANDLE,
-    /**
-     * @summary `birToStore`.
-     * @description
-     *
-     * BIR to store, from C `BIRToStore`. Not OPTIONAL: a NULL pointer
-     * is unconvertible (cl.19, §15.46) (`X.1083 §16.48`, Table 105).
-     *
-     * @public
-     * @readonly
-     */
-    readonly birToStore: BioAPI_INPUT_BIR,
-    /**
-     * @summary `dbHandle`.
-     * @description
-     *
-     * Target database, from C `DbHandle` (`X.1083 §16.48`, Table 105,
-     * §15.26). No local/original rewrite is specified.
-     *
-     * @public
-     * @readonly
-     */
-    readonly dbHandle: BioAPI_DB_HANDLE
-  ) {}
+    originalBSPHandle: BioAPI_HANDLE,
+    birToStore: BioAPI_INPUT_BIR,
+    dbHandle: BioAPI_DB_HANDLE
+  ) {
+    this.originalBSPHandle = originalBSPHandle;
+    this.birToStore = birToStore;
+    this.dbHandle = dbHandle;
+  }
 
   /**
    * @summary Restructures an object into a DbStoreBIR_RequestParams

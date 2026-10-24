@@ -35,24 +35,26 @@ import * as $ from "@wildboar/asn1/functional";
  * @enum {number}
  */
 export
-enum _enum_for_V18Diag_Item_v18used {
-    none = 0,
-    v18_V21Hi = 1,
-    v18_V21Lo = 2,
-    v18_V61C = 3,
-    v18_V61A = 4,
-    v21Hi = 5,
-    v21Lo = 6,
-    dTMF = 7,
-    eDT = 8,
-    baudot45 = 9,
-    baudot47 = 10,
-    baudot50 = 11,
-    v23Hi = 12,
-    v23Lo = 13,
-    bellHi = 14,
-    bellLo = 15,
-}
+const _enum_for_V18Diag_Item_v18used = {
+    none: 0,
+    v18_V21Hi: 1,
+    v18_V21Lo: 2,
+    v18_V61C: 3,
+    v18_V61A: 4,
+    v21Hi: 5,
+    v21Lo: 6,
+    dTMF: 7,
+    eDT: 8,
+    baudot45: 9,
+    baudot47: 10,
+    baudot50: 11,
+    v23Hi: 12,
+    v23Lo: 13,
+    bellHi: 14,
+    bellLo: 15,
+} as const;
+
+export type _enum_for_V18Diag_Item_v18used = (typeof _enum_for_V18Diag_Item_v18used)[keyof typeof _enum_for_V18Diag_Item_v18used];
 
 /**
  * @summary V18Diag_Item_v18used
@@ -421,7 +423,7 @@ const V18Diag_Item_v18used_bellLo: V18Diag_Item_v18used = V18Diag_Item_v18used.b
  */
 export
 const bellLo: V18Diag_Item_v18used = V18Diag_Item_v18used.bellLo; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_V18Diag_Item_v18used = $._decodeEnumerated;
-export const _encode_V18Diag_Item_v18used = $._encodeEnumerated;
+export const _decode_V18Diag_Item_v18used = $._decodeEnumerated as $.ASN1Decoder<V18Diag_Item_v18used>;
+export const _encode_V18Diag_Item_v18used = $._encodeEnumerated as $.ASN1Encoder<V18Diag_Item_v18used>;
 
 /* eslint-enable */

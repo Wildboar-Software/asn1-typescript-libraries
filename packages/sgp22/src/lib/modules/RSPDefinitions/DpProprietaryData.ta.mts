@@ -31,20 +31,24 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class DpProprietaryData {
+    /**
+     * @summary `dpOid`.
+     * @description
+     * 
+     * OID in the tree of the SM-DP+ that created the Profile. Further
+     * SM-DP+-defined objects may follow inside the same sequence. SGP.22
+     * v3.1 §5.5.2.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly dpOid: OBJECT_IDENTIFIER;
+
     constructor (
-        /**
-         * @summary `dpOid`.
-         * @description
-         * 
-         * OID in the tree of the SM-DP+ that created the Profile. Further
-         * SM-DP+-defined objects may follow inside the same sequence. SGP.22
-         * v3.1 §5.5.2.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly dpOid: OBJECT_IDENTIFIER
-    ) {}
+        dpOid: OBJECT_IDENTIFIER
+    ) {
+        this.dpOid = dpOid;
+    }
 
     /**
      * @summary Restructures an object into a DpProprietaryData

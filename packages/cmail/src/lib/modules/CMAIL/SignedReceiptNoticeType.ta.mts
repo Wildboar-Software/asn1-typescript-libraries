@@ -42,28 +42,34 @@ import {
  *
  */
 export class SignedReceiptNoticeType {
+  /**
+   * @summary `operatorPostmark`.
+   * @description Cmail server's digital postmark, as on
+   * the unsigned notice of reception. ITU-T Rec. X.1341
+   * (09/2015) §9.2–§9.3, Annex B.
+   * @public
+   * @readonly
+   */
+  readonly operatorPostmark: DigitalPostmarkType;
+  /**
+   * @summary `envelopeInformation`.
+   * @description Recipient `Entity` copied from the
+   * notice of deposit (Response emptied on `RETR`, then
+   * filled by the recipient) plus body hashes and
+   * `EntityChallenge`. ITU-T Rec. X.1341 (09/2015)
+   * §9.2–§9.3.
+   * @public
+   * @readonly
+   */
+  readonly envelopeInformation: EntityEnvelopeInformationType;
+
   constructor(
-    /**
-     * @summary `operatorPostmark`.
-     * @description Cmail server's digital postmark, as on
-     * the unsigned notice of reception. ITU-T Rec. X.1341
-     * (09/2015) §9.2–§9.3, Annex B.
-     * @public
-     * @readonly
-     */
-    readonly operatorPostmark: DigitalPostmarkType,
-    /**
-     * @summary `envelopeInformation`.
-     * @description Recipient `Entity` copied from the
-     * notice of deposit (Response emptied on `RETR`, then
-     * filled by the recipient) plus body hashes and
-     * `EntityChallenge`. ITU-T Rec. X.1341 (09/2015)
-     * §9.2–§9.3.
-     * @public
-     * @readonly
-     */
-    readonly envelopeInformation: EntityEnvelopeInformationType
-  ) {}
+    operatorPostmark: DigitalPostmarkType,
+    envelopeInformation: EntityEnvelopeInformationType
+  ) {
+    this.operatorPostmark = operatorPostmark;
+    this.envelopeInformation = envelopeInformation;
+  }
 
   /**
    * @summary Restructures an object into a SignedReceiptNoticeType

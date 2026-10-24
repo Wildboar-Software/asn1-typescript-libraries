@@ -54,113 +54,133 @@ import {
  *
  */
 export class UnsubscribeFromGUIEventsCallParams {
+  /**
+   * @summary `guiEventSubscriptionUuid`.
+   * @description
+   *
+   * `GUIEventSubscriptionUuid`. Must match the subscribe call
+   * (presence and value). X.1083 §16.23.4.1, §16.23.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>;
+  /**
+   * @summary `bspUuid`.
+   * @description
+   *
+   * `BSPUuid`. Exactly one of this and `bspHandle` shall be
+   * absent (NULL in C). X.1083 §16.23.4.
+   *
+   * @public
+   * @readonly
+   */
+  readonly bspUuid: OPTIONAL<BioAPI_UUID>;
+  /**
+   * @summary `bspHandle`.
+   * @description
+   *
+   * `BSPHandle`. Exactly one of this and `bspUuid` shall be
+   * absent (NULL in C). X.1083 §16.23.4.
+   *
+   * @public
+   * @readonly
+   */
+  readonly bspHandle: OPTIONAL<BioAPI_HANDLE>;
+  /**
+   * @summary `guiSelectEventHandlerAddress`.
+   * @description
+   *
+   * `GUISelectEventHandler`. Must match the address stored at
+   * subscribe. Non-zero sets `guiSelectEventSubscribed` TRUE
+   * on the wire request. X.1083 §16.23.4.2, §16.23.6,
+   * §15.1.7.
+   *
+   * @public
+   * @readonly
+   */
+  readonly guiSelectEventHandlerAddress: MemoryAddress;
+  /**
+   * @summary `guiSelectEventHandlerContext`.
+   * @description
+   *
+   * `GUISelectEventHandlerCtx`. Must match the context stored
+   * at subscribe. X.1083 §16.23.4.1, §16.23.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly guiSelectEventHandlerContext: MemoryAddress;
+  /**
+   * @summary `guiStateEventHandlerAddress`.
+   * @description
+   *
+   * `GUIStateEventHandler`. Must match the address stored at
+   * subscribe. Non-zero sets `guiStateEventSubscribed` TRUE
+   * on the wire request. X.1083 §16.23.4.2, §16.23.6,
+   * §15.1.7.
+   *
+   * @public
+   * @readonly
+   */
+  readonly guiStateEventHandlerAddress: MemoryAddress;
+  /**
+   * @summary `guiStateEventHandlerContext`.
+   * @description
+   *
+   * `GUIStateEventHandlerCtx`. Must match the context stored
+   * at subscribe. X.1083 §16.23.4.1, §16.23.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly guiStateEventHandlerContext: MemoryAddress;
+  /**
+   * @summary `guiProgressEventHandlerAddress`.
+   * @description
+   *
+   * `GUIProgressEventHandler`. Must match the address stored
+   * at subscribe. Non-zero sets `guiProgressEventSubscribed`
+   * TRUE on the wire request. X.1083 §16.23.4.2, §16.23.6,
+   * §15.1.7.
+   *
+   * @public
+   * @readonly
+   */
+  readonly guiProgressEventHandlerAddress: MemoryAddress;
+  /**
+   * @summary `guiProgressEventHandlerContext`.
+   * @description
+   *
+   * `GUIProgressEventHandlerCtx`. Must match the context
+   * stored at subscribe. X.1083 §16.23.4.1, §16.23.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly guiProgressEventHandlerContext: MemoryAddress;
+
   constructor(
-    /**
-     * @summary `guiEventSubscriptionUuid`.
-     * @description
-     *
-     * `GUIEventSubscriptionUuid`. Must match the subscribe call
-     * (presence and value). X.1083 §16.23.4.1, §16.23.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>,
-    /**
-     * @summary `bspUuid`.
-     * @description
-     *
-     * `BSPUuid`. Exactly one of this and `bspHandle` shall be
-     * absent (NULL in C). X.1083 §16.23.4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bspUuid: OPTIONAL<BioAPI_UUID>,
-    /**
-     * @summary `bspHandle`.
-     * @description
-     *
-     * `BSPHandle`. Exactly one of this and `bspUuid` shall be
-     * absent (NULL in C). X.1083 §16.23.4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bspHandle: OPTIONAL<BioAPI_HANDLE>,
-    /**
-     * @summary `guiSelectEventHandlerAddress`.
-     * @description
-     *
-     * `GUISelectEventHandler`. Must match the address stored at
-     * subscribe. Non-zero sets `guiSelectEventSubscribed` TRUE
-     * on the wire request. X.1083 §16.23.4.2, §16.23.6,
-     * §15.1.7.
-     *
-     * @public
-     * @readonly
-     */
-    readonly guiSelectEventHandlerAddress: MemoryAddress,
-    /**
-     * @summary `guiSelectEventHandlerContext`.
-     * @description
-     *
-     * `GUISelectEventHandlerCtx`. Must match the context stored
-     * at subscribe. X.1083 §16.23.4.1, §16.23.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly guiSelectEventHandlerContext: MemoryAddress,
-    /**
-     * @summary `guiStateEventHandlerAddress`.
-     * @description
-     *
-     * `GUIStateEventHandler`. Must match the address stored at
-     * subscribe. Non-zero sets `guiStateEventSubscribed` TRUE
-     * on the wire request. X.1083 §16.23.4.2, §16.23.6,
-     * §15.1.7.
-     *
-     * @public
-     * @readonly
-     */
-    readonly guiStateEventHandlerAddress: MemoryAddress,
-    /**
-     * @summary `guiStateEventHandlerContext`.
-     * @description
-     *
-     * `GUIStateEventHandlerCtx`. Must match the context stored
-     * at subscribe. X.1083 §16.23.4.1, §16.23.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly guiStateEventHandlerContext: MemoryAddress,
-    /**
-     * @summary `guiProgressEventHandlerAddress`.
-     * @description
-     *
-     * `GUIProgressEventHandler`. Must match the address stored
-     * at subscribe. Non-zero sets `guiProgressEventSubscribed`
-     * TRUE on the wire request. X.1083 §16.23.4.2, §16.23.6,
-     * §15.1.7.
-     *
-     * @public
-     * @readonly
-     */
-    readonly guiProgressEventHandlerAddress: MemoryAddress,
-    /**
-     * @summary `guiProgressEventHandlerContext`.
-     * @description
-     *
-     * `GUIProgressEventHandlerCtx`. Must match the context
-     * stored at subscribe. X.1083 §16.23.4.1, §16.23.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly guiProgressEventHandlerContext: MemoryAddress
-  ) {}
+    guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>,
+    bspUuid: OPTIONAL<BioAPI_UUID>,
+    bspHandle: OPTIONAL<BioAPI_HANDLE>,
+    guiSelectEventHandlerAddress: MemoryAddress,
+    guiSelectEventHandlerContext: MemoryAddress,
+    guiStateEventHandlerAddress: MemoryAddress,
+    guiStateEventHandlerContext: MemoryAddress,
+    guiProgressEventHandlerAddress: MemoryAddress,
+    guiProgressEventHandlerContext: MemoryAddress
+  ) {
+    this.guiEventSubscriptionUuid = guiEventSubscriptionUuid;
+    this.bspUuid = bspUuid;
+    this.bspHandle = bspHandle;
+    this.guiSelectEventHandlerAddress = guiSelectEventHandlerAddress;
+    this.guiSelectEventHandlerContext = guiSelectEventHandlerContext;
+    this.guiStateEventHandlerAddress = guiStateEventHandlerAddress;
+    this.guiStateEventHandlerContext = guiStateEventHandlerContext;
+    this.guiProgressEventHandlerAddress = guiProgressEventHandlerAddress;
+    this.guiProgressEventHandlerContext = guiProgressEventHandlerContext;
+  }
 
   /**
    * @summary Restructures an object into a UnsubscribeFromGUIEventsCallParams

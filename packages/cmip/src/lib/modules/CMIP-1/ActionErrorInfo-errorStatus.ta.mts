@@ -13,12 +13,14 @@ import {
 import * as $ from '@wildboar/asn1/functional';
 
 
-export enum _enum_for_ActionErrorInfo_errorStatus {
-  accessDenied = 2,
-  noSuchAction = 9,
-  noSuchArgument = 14,
-  invalidArgumentValue = 15,
-}
+export const _enum_for_ActionErrorInfo_errorStatus = {
+  accessDenied: 2,
+  noSuchAction: 9,
+  noSuchArgument: 14,
+  invalidArgumentValue: 15,
+} as const;
+
+export type _enum_for_ActionErrorInfo_errorStatus = (typeof _enum_for_ActionErrorInfo_errorStatus)[keyof typeof _enum_for_ActionErrorInfo_errorStatus];
 
 
 /**
@@ -110,12 +112,12 @@ export const invalidArgumentValue: ActionErrorInfo_errorStatus = ActionErrorInfo
 
 
 
-export const _decode_ActionErrorInfo_errorStatus = $._decodeEnumerated;
+export const _decode_ActionErrorInfo_errorStatus = $._decodeEnumerated as $.ASN1Decoder<ActionErrorInfo_errorStatus>;
 
 
 
 
-export const _encode_ActionErrorInfo_errorStatus = $._encodeEnumerated;
+export const _encode_ActionErrorInfo_errorStatus = $._encodeEnumerated as $.ASN1Encoder<ActionErrorInfo_errorStatus>;
 
 
 /* eslint-enable */

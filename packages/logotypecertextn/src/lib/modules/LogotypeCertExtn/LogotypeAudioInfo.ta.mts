@@ -34,49 +34,61 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class LogotypeAudioInfo {
+    /**
+     * Length of the audio file, in octets.
+     * @public
+     * @readonly
+     */
+    readonly fileSize: INTEGER;
+    /**
+     * Duration in milliseconds. At least one audio file of the
+     * logotype should last between 1 and 30 seconds (1000 through
+     * 30000).
+     *
+     * [RFC 3709, section 3](https://www.rfc-editor.org/rfc/rfc3709#section-3).
+     * @public
+     * @readonly
+     */
+    readonly playTime: INTEGER;
+    /**
+     * Channel count. 1 is mono, 2 is stereo, and 4 is quad.
+     * RFC 3709 assigns no meaning to any other value.
+     * @public
+     * @readonly
+     */
+    readonly channels: INTEGER;
+    /**
+     * Samples per second. Absent when not stated.
+     * @public
+     * @readonly
+     */
+    readonly sampleRate?: OPTIONAL<INTEGER>;
+    /**
+     * Language of the spoken content, as an
+     * [RFC 3066](https://www.rfc-editor.org/rfc/rfc3066) language
+     * tag. Another language is still a variant of the same audio.
+     * Absent when no language is claimed.
+     *
+     * [RFC 3709, section 3](https://www.rfc-editor.org/rfc/rfc3709#section-3)
+     * and [section 4.1](https://www.rfc-editor.org/rfc/rfc3709#section-4.1).
+     * @public
+     * @readonly
+     */
+    readonly language?: OPTIONAL<IA5String>;
+
     constructor (
-        /**
-         * Length of the audio file, in octets.
-         * @public
-         * @readonly
-         */
-        readonly fileSize: INTEGER,
-        /**
-         * Duration in milliseconds. At least one audio file of the
-         * logotype should last between 1 and 30 seconds (1000 through
-         * 30000).
-         *
-         * [RFC 3709, section 3](https://www.rfc-editor.org/rfc/rfc3709#section-3).
-         * @public
-         * @readonly
-         */
-        readonly playTime: INTEGER,
-        /**
-         * Channel count. 1 is mono, 2 is stereo, and 4 is quad.
-         * RFC 3709 assigns no meaning to any other value.
-         * @public
-         * @readonly
-         */
-        readonly channels: INTEGER,
-        /**
-         * Samples per second. Absent when not stated.
-         * @public
-         * @readonly
-         */
-        readonly sampleRate?: OPTIONAL<INTEGER>,
-        /**
-         * Language of the spoken content, as an
-         * [RFC 3066](https://www.rfc-editor.org/rfc/rfc3066) language
-         * tag. Another language is still a variant of the same audio.
-         * Absent when no language is claimed.
-         *
-         * [RFC 3709, section 3](https://www.rfc-editor.org/rfc/rfc3709#section-3)
-         * and [section 4.1](https://www.rfc-editor.org/rfc/rfc3709#section-4.1).
-         * @public
-         * @readonly
-         */
-        readonly language?: OPTIONAL<IA5String>
-    ) {}
+        fileSize: INTEGER,
+        playTime: INTEGER,
+        channels: INTEGER,
+        sampleRate?: OPTIONAL<INTEGER>,
+        language?: OPTIONAL<IA5String>
+    ) {
+        this.fileSize = fileSize;
+        this.playTime = playTime;
+        this.channels = channels;
+        this.sampleRate = sampleRate;
+        this.language = language;
+    }
 
     /**
      * @summary Restructures an object into a LogotypeAudioInfo

@@ -43,43 +43,51 @@ import { RequestedEvent, _decode_RequestedEvent, _encode_RequestedEvent } from "
  */
 export
 class EventsDescriptor {
+    /**
+     * @summary `requestID`.
+     * @description
+     *
+     * Correlates this request with the Notify it produces. Required when
+     * `eventList` is not empty. Omitted on an empty descriptor (clause
+     * 7.1.9.1). On an AuditCapability reply that returns every event, ALL
+     * is encoded as 0xFFFFFFFF (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    readonly requestID: OPTIONAL<RequestID>;
+    /**
+     * @summary `eventList`.
+     * @description
+     *
+     * Events to detect. The ALL wildcard may be used as the event
+     * identifier inside a package (clause 7.1.9.2).
+     *
+     * @public
+     * @readonly
+     */
+    readonly eventList: RequestedEvent[];
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `requestID`.
-         * @description
-         *
-         * Correlates this request with the Notify it produces. Required when
-         * `eventList` is not empty. Omitted on an empty descriptor (clause
-         * 7.1.9.1). On an AuditCapability reply that returns every event, ALL
-         * is encoded as 0xFFFFFFFF (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly requestID: OPTIONAL<RequestID>,
-        /**
-         * @summary `eventList`.
-         * @description
-         *
-         * Events to detect. The ALL wildcard may be used as the event
-         * identifier inside a package (clause 7.1.9.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventList: RequestedEvent[],
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        requestID: OPTIONAL<RequestID>,
+        eventList: RequestedEvent[],
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.requestID = requestID;
+        this.eventList = eventList;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a EventsDescriptor

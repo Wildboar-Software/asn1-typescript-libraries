@@ -45,35 +45,43 @@ import {
  *
  */
 export class SearchResultEntry {
+  /**
+   * @summary `objectName`.
+   * @description
+   *
+   * DN of the entry found (after any alias deref).
+   *
+   * @public
+   * @readonly
+   */
+  readonly objectName: LDAPDN;
+  /**
+   * @summary `attributes`.
+   * @description
+   *
+   * May be empty. Order is not significant. Each description at most
+   * once.
+   *
+   * @public
+   * @readonly
+   */
+  readonly attributes: PartialAttributeList;
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  readonly _unrecognizedExtensionsList: _Element[];
+
   constructor(
-    /**
-     * @summary `objectName`.
-     * @description
-     *
-     * DN of the entry found (after any alias deref).
-     *
-     * @public
-     * @readonly
-     */
-    readonly objectName: LDAPDN,
-    /**
-     * @summary `attributes`.
-     * @description
-     *
-     * May be empty. Order is not significant. Each description at most
-     * once.
-     *
-     * @public
-     * @readonly
-     */
-    readonly attributes: PartialAttributeList,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = []
-  ) {}
+    objectName: LDAPDN,
+    attributes: PartialAttributeList,
+    _unrecognizedExtensionsList: _Element[] = []
+  ) {
+    this.objectName = objectName;
+    this.attributes = attributes;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+  }
 
   /**
    * @summary Restructures an object into a SearchResultEntry

@@ -31,14 +31,16 @@ import * as $ from "@wildboar/asn1/functional";
  * @enum {number}
  */
 export
-enum _enum_for_Compression_Item_compressionNegotiationResult {
-    none = 0,
-    v42bisOnly = 1,
-    v42bisBoth = 2,
-    v44Both = 3,
-    v44Only = 4,
-    other = 5,
-}
+const _enum_for_Compression_Item_compressionNegotiationResult = {
+    none: 0,
+    v42bisOnly: 1,
+    v42bisBoth: 2,
+    v44Both: 3,
+    v44Only: 4,
+    other: 5,
+} as const;
+
+export type _enum_for_Compression_Item_compressionNegotiationResult = (typeof _enum_for_Compression_Item_compressionNegotiationResult)[keyof typeof _enum_for_Compression_Item_compressionNegotiationResult];
 
 /**
  * @summary Compression_Item_compressionNegotiationResult
@@ -202,7 +204,7 @@ const Compression_Item_compressionNegotiationResult_other: Compression_Item_comp
  */
 export
 const other: Compression_Item_compressionNegotiationResult = Compression_Item_compressionNegotiationResult.other; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_Compression_Item_compressionNegotiationResult = $._decodeEnumerated;
-export const _encode_Compression_Item_compressionNegotiationResult = $._encodeEnumerated;
+export const _decode_Compression_Item_compressionNegotiationResult = $._decodeEnumerated as $.ASN1Decoder<Compression_Item_compressionNegotiationResult>;
+export const _encode_Compression_Item_compressionNegotiationResult = $._encodeEnumerated as $.ASN1Encoder<Compression_Item_compressionNegotiationResult>;
 
 /* eslint-enable */

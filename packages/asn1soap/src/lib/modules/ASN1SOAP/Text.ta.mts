@@ -38,25 +38,31 @@ import {
  *
  */
 export class Text {
+  /**
+   * @summary `lang`.
+   * @description Language of `text`. Maps to `xml:lang` on the
+   * SOAP Text element (`http://www.w3.org/XML/1998/namespace`).
+   * ITU-T Rec. X.892 (05/2005) §7.4.4.2.
+   * @public
+   * @readonly
+   */
+  readonly lang: Language;
+  /**
+   * @summary `text`.
+   * @description Reason phrase (child character information of
+   * SOAP Text). ITU-T Rec. X.892 (05/2005) §7.4.4.3.
+   * @public
+   * @readonly
+   */
+  readonly text: UTF8String;
+
   constructor(
-    /**
-     * @summary `lang`.
-     * @description Language of `text`. Maps to `xml:lang` on the
-     * SOAP Text element (`http://www.w3.org/XML/1998/namespace`).
-     * ITU-T Rec. X.892 (05/2005) §7.4.4.2.
-     * @public
-     * @readonly
-     */
-    readonly lang: Language,
-    /**
-     * @summary `text`.
-     * @description Reason phrase (child character information of
-     * SOAP Text). ITU-T Rec. X.892 (05/2005) §7.4.4.3.
-     * @public
-     * @readonly
-     */
-    readonly text: UTF8String
-  ) {}
+    lang: Language,
+    text: UTF8String
+  ) {
+    this.lang = lang;
+    this.text = text;
+  }
 
   /**
    * @summary Restructures an object into a Text

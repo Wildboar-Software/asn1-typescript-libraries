@@ -37,42 +37,50 @@ import { FieldElement, _decode_FieldElement, _encode_FieldElement } from "../SEC
  */
 export
 class Curve {
+    /**
+     * @summary `a`.
+     * @description
+     *
+     * Coefficient a of the defining equation, encoded as a `FieldElement`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf)
+     * §2.2.
+     *
+     * @public
+     * @readonly
+     */
+    readonly a: FieldElement;
+    /**
+     * @summary `b`.
+     * @description
+     *
+     * Coefficient b of the defining equation, encoded as a `FieldElement`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf)
+     * §2.2.
+     *
+     * @public
+     * @readonly
+     */
+    readonly b: FieldElement;
+    /**
+     * @summary `seed`.
+     * @description
+     *
+     * Seed S from which the curve and/or base point were derived verifiably at
+     * random (§3.1.3). Shall be present when `SpecifiedECDomain.version` is
+     * `ecdpVer2` or `ecdpVer3`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.2.
+     *
+     * @public
+     * @readonly
+     */
+    readonly seed?: OPTIONAL<BIT_STRING>;
+
     constructor (
-        /**
-         * @summary `a`.
-         * @description
-         *
-         * Coefficient a of the defining equation, encoded as a `FieldElement`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf)
-         * §2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly a: FieldElement,
-        /**
-         * @summary `b`.
-         * @description
-         *
-         * Coefficient b of the defining equation, encoded as a `FieldElement`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf)
-         * §2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly b: FieldElement,
-        /**
-         * @summary `seed`.
-         * @description
-         *
-         * Seed S from which the curve and/or base point were derived verifiably at
-         * random (§3.1.3). Shall be present when `SpecifiedECDomain.version` is
-         * `ecdpVer2` or `ecdpVer3`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly seed?: OPTIONAL<BIT_STRING>
-    ) {}
+        a: FieldElement,
+        b: FieldElement,
+        seed?: OPTIONAL<BIT_STRING>
+    ) {
+        this.a = a;
+        this.b = b;
+        this.seed = seed;
+    }
 
     /**
      * @summary Restructures an object into a Curve

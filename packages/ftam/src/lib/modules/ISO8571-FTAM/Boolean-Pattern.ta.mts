@@ -35,28 +35,34 @@ import {
  *
  */
 export class Boolean_Pattern {
+  /**
+   * @summary `equality_comparision`.
+   * @description
+   *
+   * Whether `no-value-available` and equals match.
+   *
+   * @public
+   * @readonly
+   */
+  readonly equality_comparision: Equality_Comparision;
+  /**
+   * @summary `boolean_value`.
+   * @description
+   *
+   * Test boolean.
+   *
+   * @public
+   * @readonly
+   */
+  readonly boolean_value: BOOLEAN;
+
   constructor(
-    /**
-     * @summary `equality_comparision`.
-     * @description
-     *
-     * Whether `no-value-available` and equals match.
-     *
-     * @public
-     * @readonly
-     */
-    readonly equality_comparision: Equality_Comparision,
-    /**
-     * @summary `boolean_value`.
-     * @description
-     *
-     * Test boolean.
-     *
-     * @public
-     * @readonly
-     */
-    readonly boolean_value: BOOLEAN
-  ) {}
+    equality_comparision: Equality_Comparision,
+    boolean_value: BOOLEAN
+  ) {
+    this.equality_comparision = equality_comparision;
+    this.boolean_value = boolean_value;
+  }
 
   /**
    * @summary Restructures an object into a Boolean_Pattern

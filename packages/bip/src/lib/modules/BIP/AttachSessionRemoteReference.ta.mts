@@ -51,40 +51,48 @@ import {
  *
  */
 export class AttachSessionRemoteReference {
+  /**
+   * @summary `referrerEndpointIRI`.
+   * @description
+   *
+   * Master that holds this reference; not the local endpoint.
+   * X.1083 §18.9.2.1.
+   *
+   * @public
+   * @readonly
+   */
+  readonly referrerEndpointIRI: EndpointIRI;
+  /**
+   * @summary `bspProductUuid`.
+   * @description
+   *
+   * Product UUID of the registered BSP. X.1083 §18.9.2.2.
+   *
+   * @public
+   * @readonly
+   */
+  readonly bspProductUuid: BioAPI_UUID;
+  /**
+   * @summary `originalBSPHandle`.
+   * @description
+   *
+   * Attach-session handle; unique in this table. X.1083
+   * §18.9.2.3–18.9.2.4.
+   *
+   * @public
+   * @readonly
+   */
+  readonly originalBSPHandle: BioAPI_HANDLE;
+
   constructor(
-    /**
-     * @summary `referrerEndpointIRI`.
-     * @description
-     *
-     * Master that holds this reference; not the local endpoint.
-     * X.1083 §18.9.2.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly referrerEndpointIRI: EndpointIRI,
-    /**
-     * @summary `bspProductUuid`.
-     * @description
-     *
-     * Product UUID of the registered BSP. X.1083 §18.9.2.2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bspProductUuid: BioAPI_UUID,
-    /**
-     * @summary `originalBSPHandle`.
-     * @description
-     *
-     * Attach-session handle; unique in this table. X.1083
-     * §18.9.2.3–18.9.2.4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly originalBSPHandle: BioAPI_HANDLE
-  ) {}
+    referrerEndpointIRI: EndpointIRI,
+    bspProductUuid: BioAPI_UUID,
+    originalBSPHandle: BioAPI_HANDLE
+  ) {
+    this.referrerEndpointIRI = referrerEndpointIRI;
+    this.bspProductUuid = bspProductUuid;
+    this.originalBSPHandle = originalBSPHandle;
+  }
 
   /**
    * @summary Restructures an object into a AttachSessionRemoteReference

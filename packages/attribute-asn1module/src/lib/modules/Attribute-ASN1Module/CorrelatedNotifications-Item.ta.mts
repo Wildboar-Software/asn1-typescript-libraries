@@ -29,30 +29,36 @@ import { ObjectInstance, _decode_ObjectInstance, _encode_ObjectInstance } from "
  */
 export
 class CorrelatedNotifications_Item {
+    /**
+     * @summary `correlatedNotifications`.
+     * @description
+     *
+     * `NotificationIdentifier` values of the related notifications. ITU-T
+     * Rec. X.721 (02/92) §10.7.1.7.
+     *
+     * @public
+     * @readonly
+     */
+    readonly correlatedNotifications: NotificationIdentifier[];
+    /**
+     * @summary `sourceObjectInst`.
+     * @description
+     *
+     * Managed object that issued those notifications, if not this object.
+     * ITU-T Rec. X.721 (02/92) §10.7.1.7.
+     *
+     * @public
+     * @readonly
+     */
+    readonly sourceObjectInst?: OPTIONAL<ObjectInstance>;
+
     constructor (
-        /**
-         * @summary `correlatedNotifications`.
-         * @description
-         *
-         * `NotificationIdentifier` values of the related notifications. ITU-T
-         * Rec. X.721 (02/92) §10.7.1.7.
-         *
-         * @public
-         * @readonly
-         */
-        readonly correlatedNotifications: NotificationIdentifier[],
-        /**
-         * @summary `sourceObjectInst`.
-         * @description
-         *
-         * Managed object that issued those notifications, if not this object.
-         * ITU-T Rec. X.721 (02/92) §10.7.1.7.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sourceObjectInst?: OPTIONAL<ObjectInstance>
-    ) {}
+        correlatedNotifications: NotificationIdentifier[],
+        sourceObjectInst?: OPTIONAL<ObjectInstance>
+    ) {
+        this.correlatedNotifications = correlatedNotifications;
+        this.sourceObjectInst = sourceObjectInst;
+    }
 
     /**
      * @summary Restructures an object into a CorrelatedNotifications_Item

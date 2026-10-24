@@ -27,18 +27,22 @@ import { Octet16, _decode_Octet16, _encode_Octet16 } from "../RSPDefinitions/Oct
  */
 export
 class GetEuiccDataResponse {
+    /**
+     * @summary `eidValue`.
+     * @description
+     * 
+     * EID, sixteen octets, tag `'5A'`. SGP.22 v3.1 §4.3.1 and §5.7.20.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly eidValue: Octet16;
+
     constructor (
-        /**
-         * @summary `eidValue`.
-         * @description
-         * 
-         * EID, sixteen octets, tag `'5A'`. SGP.22 v3.1 §4.3.1 and §5.7.20.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly eidValue: Octet16
-    ) {}
+        eidValue: Octet16
+    ) {
+        this.eidValue = eidValue;
+    }
 
     /**
      * @summary Restructures an object into a GetEuiccDataResponse

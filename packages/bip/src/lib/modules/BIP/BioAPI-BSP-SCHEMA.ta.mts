@@ -111,164 +111,208 @@ import {
  *
  */
 export class BioAPI_BSP_SCHEMA {
+  /**
+   * @summary `bspProductUuid`.
+   * @description
+   *
+   * Persistent vendor UUID of the BSP product. Same across
+   * installations. Distinct from `bspAccessUuid`. X.1083 §3.7,
+   * §11.3, §15.19.
+   *
+   * @public
+   * @readonly
+   */
+  readonly bspProductUuid: BioAPI_UUID;
+  /**
+   * @summary `description`.
+   * @public
+   * @readonly
+   */
+  readonly description: BioAPI_STRING;
+  /**
+   * @summary `path`.
+   * @description
+   *
+   * Installation path as UTF-8. C NULL is unconvertible (not
+   * OPTIONAL). X.1083 §15.2, §15.19.
+   *
+   * @public
+   * @readonly
+   */
+  readonly path: UTF8String;
+  /**
+   * @summary `specVersion`.
+   * @public
+   * @readonly
+   */
+  readonly specVersion: BioAPI_VERSION;
+  /**
+   * @summary `productVersion`.
+   * @public
+   * @readonly
+   */
+  readonly productVersion: BioAPI_STRING;
+  /**
+   * @summary `vendor`.
+   * @public
+   * @readonly
+   */
+  readonly vendor: BioAPI_STRING;
+  /**
+   * @summary `supportedFormats`.
+   * @description
+   *
+   * BDB formats the BSP supports. C count is the sequence
+   * length. X.1083 §15.19.4–15.19.5.
+   *
+   * @public
+   * @readonly
+   */
+  readonly supportedFormats: BioAPI_BIR_BIOMETRIC_DATA_FORMAT[];
+  /**
+   * @summary `factorsMask`.
+   * @public
+   * @readonly
+   */
+  readonly factorsMask: BioAPI_BIR_BIOMETRIC_TYPE;
+  /**
+   * @summary `operations`.
+   * @public
+   * @readonly
+   */
+  readonly operations: BioAPI_OPERATIONS_MASK;
+  /**
+   * @summary `options`.
+   * @public
+   * @readonly
+   */
+  readonly options: BioAPI_OPTIONS_MASK;
+  /**
+   * @summary `payloadPolicy`.
+   * @public
+   * @readonly
+   */
+  readonly payloadPolicy: BioAPI_FMR;
+  /**
+   * @summary `maxPayloadSize`.
+   * @public
+   * @readonly
+   */
+  readonly maxPayloadSize: UnsignedInt;
+  /**
+   * @summary `defaultVerifyTimeout`.
+   * @public
+   * @readonly
+   */
+  readonly defaultVerifyTimeout: SignedInt;
+  /**
+   * @summary `defaultIdentifyTimeout`.
+   * @public
+   * @readonly
+   */
+  readonly defaultIdentifyTimeout: SignedInt;
+  /**
+   * @summary `defaultCaptureTimeout`.
+   * @public
+   * @readonly
+   */
+  readonly defaultCaptureTimeout: SignedInt;
+  /**
+   * @summary `defaultEnrollTimeout`.
+   * @public
+   * @readonly
+   */
+  readonly defaultEnrollTimeout: SignedInt;
+  /**
+   * @summary `defaultCalibrateTimeout`.
+   * @public
+   * @readonly
+   */
+  readonly defaultCalibrateTimeout: SignedInt;
+  /**
+   * @summary `maxBSPDbSize`.
+   * @public
+   * @readonly
+   */
+  readonly maxBSPDbSize: UnsignedInt;
+  /**
+   * @summary `maxIdentify`.
+   * @public
+   * @readonly
+   */
+  readonly maxIdentify: UnsignedInt;
+  /**
+   * @summary `hostingEndpointIRI`.
+   * @description
+   *
+   * Endpoint where this BSP is registered. The local endpoint
+   * IRI means local (C NULL). Needed because BIP lists BSPs on
+   * remote endpoints. X.1083 §11.6, §15.3, §15.19.
+   *
+   * @public
+   * @readonly
+   */
+  readonly hostingEndpointIRI: EndpointIRI;
+  /**
+   * @summary `bspAccessUuid`.
+   * @description
+   *
+   * Non-persistent UUID generated per BioAPI_Init / link so
+   * the application can address this BSP-plus-endpoint without
+   * colliding with the same product elsewhere. Meaningless
+   * outside the generating endpoint. X.1083 §3.6, §11.5–11.6,
+   * §15.19.
+   *
+   * @public
+   * @readonly
+   */
+  readonly bspAccessUuid: BioAPI_UUID;
+
   constructor(
-    /**
-     * @summary `bspProductUuid`.
-     * @description
-     *
-     * Persistent vendor UUID of the BSP product. Same across
-     * installations. Distinct from `bspAccessUuid`. X.1083 §3.7,
-     * §11.3, §15.19.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bspProductUuid: BioAPI_UUID,
-    /**
-     * @summary `description`.
-     * @public
-     * @readonly
-     */
-    readonly description: BioAPI_STRING,
-    /**
-     * @summary `path`.
-     * @description
-     *
-     * Installation path as UTF-8. C NULL is unconvertible (not
-     * OPTIONAL). X.1083 §15.2, §15.19.
-     *
-     * @public
-     * @readonly
-     */
-    readonly path: UTF8String,
-    /**
-     * @summary `specVersion`.
-     * @public
-     * @readonly
-     */
-    readonly specVersion: BioAPI_VERSION,
-    /**
-     * @summary `productVersion`.
-     * @public
-     * @readonly
-     */
-    readonly productVersion: BioAPI_STRING,
-    /**
-     * @summary `vendor`.
-     * @public
-     * @readonly
-     */
-    readonly vendor: BioAPI_STRING,
-    /**
-     * @summary `supportedFormats`.
-     * @description
-     *
-     * BDB formats the BSP supports. C count is the sequence
-     * length. X.1083 §15.19.4–15.19.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly supportedFormats: BioAPI_BIR_BIOMETRIC_DATA_FORMAT[],
-    /**
-     * @summary `factorsMask`.
-     * @public
-     * @readonly
-     */
-    readonly factorsMask: BioAPI_BIR_BIOMETRIC_TYPE,
-    /**
-     * @summary `operations`.
-     * @public
-     * @readonly
-     */
-    readonly operations: BioAPI_OPERATIONS_MASK,
-    /**
-     * @summary `options`.
-     * @public
-     * @readonly
-     */
-    readonly options: BioAPI_OPTIONS_MASK,
-    /**
-     * @summary `payloadPolicy`.
-     * @public
-     * @readonly
-     */
-    readonly payloadPolicy: BioAPI_FMR,
-    /**
-     * @summary `maxPayloadSize`.
-     * @public
-     * @readonly
-     */
-    readonly maxPayloadSize: UnsignedInt,
-    /**
-     * @summary `defaultVerifyTimeout`.
-     * @public
-     * @readonly
-     */
-    readonly defaultVerifyTimeout: SignedInt,
-    /**
-     * @summary `defaultIdentifyTimeout`.
-     * @public
-     * @readonly
-     */
-    readonly defaultIdentifyTimeout: SignedInt,
-    /**
-     * @summary `defaultCaptureTimeout`.
-     * @public
-     * @readonly
-     */
-    readonly defaultCaptureTimeout: SignedInt,
-    /**
-     * @summary `defaultEnrollTimeout`.
-     * @public
-     * @readonly
-     */
-    readonly defaultEnrollTimeout: SignedInt,
-    /**
-     * @summary `defaultCalibrateTimeout`.
-     * @public
-     * @readonly
-     */
-    readonly defaultCalibrateTimeout: SignedInt,
-    /**
-     * @summary `maxBSPDbSize`.
-     * @public
-     * @readonly
-     */
-    readonly maxBSPDbSize: UnsignedInt,
-    /**
-     * @summary `maxIdentify`.
-     * @public
-     * @readonly
-     */
-    readonly maxIdentify: UnsignedInt,
-    /**
-     * @summary `hostingEndpointIRI`.
-     * @description
-     *
-     * Endpoint where this BSP is registered. The local endpoint
-     * IRI means local (C NULL). Needed because BIP lists BSPs on
-     * remote endpoints. X.1083 §11.6, §15.3, §15.19.
-     *
-     * @public
-     * @readonly
-     */
-    readonly hostingEndpointIRI: EndpointIRI,
-    /**
-     * @summary `bspAccessUuid`.
-     * @description
-     *
-     * Non-persistent UUID generated per BioAPI_Init / link so
-     * the application can address this BSP-plus-endpoint without
-     * colliding with the same product elsewhere. Meaningless
-     * outside the generating endpoint. X.1083 §3.6, §11.5–11.6,
-     * §15.19.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bspAccessUuid: BioAPI_UUID
-  ) {}
+    bspProductUuid: BioAPI_UUID,
+    description: BioAPI_STRING,
+    path: UTF8String,
+    specVersion: BioAPI_VERSION,
+    productVersion: BioAPI_STRING,
+    vendor: BioAPI_STRING,
+    supportedFormats: BioAPI_BIR_BIOMETRIC_DATA_FORMAT[],
+    factorsMask: BioAPI_BIR_BIOMETRIC_TYPE,
+    operations: BioAPI_OPERATIONS_MASK,
+    options: BioAPI_OPTIONS_MASK,
+    payloadPolicy: BioAPI_FMR,
+    maxPayloadSize: UnsignedInt,
+    defaultVerifyTimeout: SignedInt,
+    defaultIdentifyTimeout: SignedInt,
+    defaultCaptureTimeout: SignedInt,
+    defaultEnrollTimeout: SignedInt,
+    defaultCalibrateTimeout: SignedInt,
+    maxBSPDbSize: UnsignedInt,
+    maxIdentify: UnsignedInt,
+    hostingEndpointIRI: EndpointIRI,
+    bspAccessUuid: BioAPI_UUID
+  ) {
+    this.bspProductUuid = bspProductUuid;
+    this.description = description;
+    this.path = path;
+    this.specVersion = specVersion;
+    this.productVersion = productVersion;
+    this.vendor = vendor;
+    this.supportedFormats = supportedFormats;
+    this.factorsMask = factorsMask;
+    this.operations = operations;
+    this.options = options;
+    this.payloadPolicy = payloadPolicy;
+    this.maxPayloadSize = maxPayloadSize;
+    this.defaultVerifyTimeout = defaultVerifyTimeout;
+    this.defaultIdentifyTimeout = defaultIdentifyTimeout;
+    this.defaultCaptureTimeout = defaultCaptureTimeout;
+    this.defaultEnrollTimeout = defaultEnrollTimeout;
+    this.defaultCalibrateTimeout = defaultCalibrateTimeout;
+    this.maxBSPDbSize = maxBSPDbSize;
+    this.maxIdentify = maxIdentify;
+    this.hostingEndpointIRI = hostingEndpointIRI;
+    this.bspAccessUuid = bspAccessUuid;
+  }
 
   /**
    * @summary Restructures an object into a BioAPI_BSP_SCHEMA

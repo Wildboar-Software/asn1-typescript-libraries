@@ -32,20 +32,24 @@ import { _decode_EuiccMemoryResetRequest_resetOptions, _encode_EuiccMemoryResetR
  */
 export
 class EuiccMemoryResetRequest {
+    /**
+     * @summary `resetOptions`.
+     * @description
+     * 
+     * Operational profiles, field-loaded test profiles, and/or the default
+     * SM-DP+ address. Does not touch the RAT or a provisioning Profile.
+     * SGP.22 v3.1 §5.7.19.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly resetOptions: EuiccMemoryResetRequest_resetOptions;
+
     constructor (
-        /**
-         * @summary `resetOptions`.
-         * @description
-         * 
-         * Operational profiles, field-loaded test profiles, and/or the default
-         * SM-DP+ address. Does not touch the RAT or a provisioning Profile.
-         * SGP.22 v3.1 §5.7.19.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly resetOptions: EuiccMemoryResetRequest_resetOptions
-    ) {}
+        resetOptions: EuiccMemoryResetRequest_resetOptions
+    ) {
+        this.resetOptions = resetOptions;
+    }
 
     /**
      * @summary Restructures an object into a EuiccMemoryResetRequest

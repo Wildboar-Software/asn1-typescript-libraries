@@ -46,79 +46,92 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class DigitMapValue {
+    /**
+     * @summary `startTimer`.
+     * @description
+     *
+     * Start timer T, in seconds, 0 to 99. Zero disables it. Used before any
+     * digit has been collected (clause 7.1.14.2).
+     *
+     * @public
+     * @readonly
+     */
+    readonly startTimer: OPTIONAL<INTEGER>;
+    /**
+     * @summary `shortTimer`.
+     * @description
+     *
+     * Short inter-event timer S, in seconds, 0 to 99. Applied when the
+     * digits already match a pattern but a longer pattern is still possible
+     * (clause 7.1.14.2).
+     *
+     * @public
+     * @readonly
+     */
+    readonly shortTimer: OPTIONAL<INTEGER>;
+    /**
+     * @summary `longTimer`.
+     * @description
+     *
+     * Long inter-event timer L, in seconds, 0 to 99. Applied when at least
+     * one more digit is required to match any pattern (clause 7.1.14.2).
+     *
+     * @public
+     * @readonly
+     */
+    readonly longTimer: OPTIONAL<INTEGER>;
+    /**
+     * @summary `digitMapBody`.
+     * @description
+     *
+     * The map. Digits 0-9 and letters A-K are events. `x` is any digit 0-9.
+     * A dot repeats the preceding selector. `S` and `L` override the
+     * inter-event timer, `Z` requires a long-duration event, and `|`
+     * separates alternatives (clauses 7.1.14.3 and A.3). An example is
+     * `(0|00|[1-7]xxx|8xxxxxxx|Fxxxxxxx|Exx|91xxxxxxxxxx|9011x.)`.
+     *
+     * @public
+     * @readonly
+     */
+    readonly digitMapBody: IA5String;
+    /**
+     * @summary `durationTimer`.
+     * @description
+     *
+     * Long-duration threshold used by `Z`, in hundreds of milliseconds, 0
+     * to 99, so 100 ms to 9.9 s (Annex A). Overrides the value provisioned
+     * in the MG.
+     *
+     * @public
+     * @readonly
+     */
+    readonly durationTimer?: OPTIONAL<INTEGER>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `startTimer`.
-         * @description
-         *
-         * Start timer T, in seconds, 0 to 99. Zero disables it. Used before any
-         * digit has been collected (clause 7.1.14.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly startTimer: OPTIONAL<INTEGER>,
-        /**
-         * @summary `shortTimer`.
-         * @description
-         *
-         * Short inter-event timer S, in seconds, 0 to 99. Applied when the
-         * digits already match a pattern but a longer pattern is still possible
-         * (clause 7.1.14.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly shortTimer: OPTIONAL<INTEGER>,
-        /**
-         * @summary `longTimer`.
-         * @description
-         *
-         * Long inter-event timer L, in seconds, 0 to 99. Applied when at least
-         * one more digit is required to match any pattern (clause 7.1.14.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly longTimer: OPTIONAL<INTEGER>,
-        /**
-         * @summary `digitMapBody`.
-         * @description
-         *
-         * The map. Digits 0-9 and letters A-K are events. `x` is any digit 0-9.
-         * A dot repeats the preceding selector. `S` and `L` override the
-         * inter-event timer, `Z` requires a long-duration event, and `|`
-         * separates alternatives (clauses 7.1.14.3 and A.3). An example is
-         * `(0|00|[1-7]xxx|8xxxxxxx|Fxxxxxxx|Exx|91xxxxxxxxxx|9011x.)`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly digitMapBody: IA5String,
-        /**
-         * @summary `durationTimer`.
-         * @description
-         *
-         * Long-duration threshold used by `Z`, in hundreds of milliseconds, 0
-         * to 99, so 100 ms to 9.9 s (Annex A). Overrides the value provisioned
-         * in the MG.
-         *
-         * @public
-         * @readonly
-         */
-        readonly durationTimer?: OPTIONAL<INTEGER>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
+        startTimer: OPTIONAL<INTEGER>,
+        shortTimer: OPTIONAL<INTEGER>,
+        longTimer: OPTIONAL<INTEGER>,
+        digitMapBody: IA5String,
+        durationTimer?: OPTIONAL<INTEGER>,
+        _unrecognizedExtensionsList: _Element[] = []
     ) {
+        this.startTimer = startTimer;
+        this.shortTimer = shortTimer;
+        this.longTimer = longTimer;
+        this.digitMapBody = digitMapBody;
+        this.durationTimer = durationTimer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
         if (startTimer !== undefined) {
             const n = typeof startTimer === "bigint" ? startTimer : BigInt(startTimer);
             if (n < 0n || n > 99n) {

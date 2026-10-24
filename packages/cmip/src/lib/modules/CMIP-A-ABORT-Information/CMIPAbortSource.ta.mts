@@ -30,10 +30,12 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_CMIPAbortSource {
-  cmiseServiceUser = 0,
-  cmiseServiceProvider = 1,
-}
+export const _enum_for_CMIPAbortSource = {
+  cmiseServiceUser: 0,
+  cmiseServiceProvider: 1,
+} as const;
+
+export type _enum_for_CMIPAbortSource = (typeof _enum_for_CMIPAbortSource)[keyof typeof _enum_for_CMIPAbortSource];
 
 
 /**
@@ -122,12 +124,12 @@ export const cmiseServiceProvider: CMIPAbortSource =
 
 
 
-export const _decode_CMIPAbortSource = $._decodeEnumerated;
+export const _decode_CMIPAbortSource = $._decodeEnumerated as $.ASN1Decoder<CMIPAbortSource>;
 
 
 
 
-export const _encode_CMIPAbortSource = $._encodeEnumerated;
+export const _encode_CMIPAbortSource = $._encodeEnumerated as $.ASN1Encoder<CMIPAbortSource>;
 
 
 /* eslint-enable */

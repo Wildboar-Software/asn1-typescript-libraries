@@ -53,88 +53,104 @@ import {
  *
  */
 export class VerifyMatch_RequestParams {
+  /**
+   * @summary `originalBSPHandle`.
+   * @description
+   *
+   * Attach-session handle on the hosting (slave) endpoint.
+   * BioAPI `BSPHandle` is rewritten via clauses 24 and 26.
+   * X.1083 §16.34.5.
+   *
+   * @public
+   * @readonly
+   */
+  readonly originalBSPHandle: BioAPI_HANDLE;
+  /**
+   * @summary `maxFMRRequested`.
+   * @description
+   *
+   * Maximum false-match rate requested for the comparison,
+   * from BioAPI `MaxFMRRequested`. X.1083 §16.34.5.
+   *
+   * @public
+   * @readonly
+   */
+  readonly maxFMRRequested: BioAPI_FMR;
+  /**
+   * @summary `processedBIR`.
+   * @description
+   *
+   * Processed BIR to compare. C `NULL` is unconvertible
+   * (clause 19). X.1083 §16.34.5.
+   *
+   * @public
+   * @readonly
+   */
+  readonly processedBIR: BioAPI_INPUT_BIR;
+  /**
+   * @summary `referenceTemplate`.
+   * @description
+   *
+   * Reference template to compare against. C `NULL` is
+   * unconvertible (clause 19). X.1083 §16.34.5.
+   *
+   * @public
+   * @readonly
+   */
+  readonly referenceTemplate: BioAPI_INPUT_BIR;
+  /**
+   * @summary `no_adaptedBIR`.
+   * @description
+   *
+   * `TRUE` if the caller passed a NULL `AdaptedBIR` pointer
+   * (do not return an adapted BIR). X.1083 §16.34.5,
+   * clause 21.
+   *
+   * @public
+   * @readonly
+   */
+  readonly no_adaptedBIR: BOOLEAN;
+  /**
+   * @summary `no_fmrAchieved`.
+   * @description
+   *
+   * `TRUE` if the caller passed a NULL `FMRAchieved` pointer
+   * (do not return the achieved FMR). X.1083 §16.34.5,
+   * clause 21.
+   *
+   * @public
+   * @readonly
+   */
+  readonly no_fmrAchieved: BOOLEAN;
+  /**
+   * @summary `no_payload`.
+   * @description
+   *
+   * `TRUE` if the caller passed a NULL `Payload` pointer (do
+   * not return payload). X.1083 §16.34.5, clause 21.
+   *
+   * @public
+   * @readonly
+   */
+  readonly no_payload: BOOLEAN;
+
   constructor(
-    /**
-     * @summary `originalBSPHandle`.
-     * @description
-     *
-     * Attach-session handle on the hosting (slave) endpoint.
-     * BioAPI `BSPHandle` is rewritten via clauses 24 and 26.
-     * X.1083 §16.34.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly originalBSPHandle: BioAPI_HANDLE,
-    /**
-     * @summary `maxFMRRequested`.
-     * @description
-     *
-     * Maximum false-match rate requested for the comparison,
-     * from BioAPI `MaxFMRRequested`. X.1083 §16.34.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly maxFMRRequested: BioAPI_FMR,
-    /**
-     * @summary `processedBIR`.
-     * @description
-     *
-     * Processed BIR to compare. C `NULL` is unconvertible
-     * (clause 19). X.1083 §16.34.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly processedBIR: BioAPI_INPUT_BIR,
-    /**
-     * @summary `referenceTemplate`.
-     * @description
-     *
-     * Reference template to compare against. C `NULL` is
-     * unconvertible (clause 19). X.1083 §16.34.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly referenceTemplate: BioAPI_INPUT_BIR,
-    /**
-     * @summary `no_adaptedBIR`.
-     * @description
-     *
-     * `TRUE` if the caller passed a NULL `AdaptedBIR` pointer
-     * (do not return an adapted BIR). X.1083 §16.34.5,
-     * clause 21.
-     *
-     * @public
-     * @readonly
-     */
-    readonly no_adaptedBIR: BOOLEAN,
-    /**
-     * @summary `no_fmrAchieved`.
-     * @description
-     *
-     * `TRUE` if the caller passed a NULL `FMRAchieved` pointer
-     * (do not return the achieved FMR). X.1083 §16.34.5,
-     * clause 21.
-     *
-     * @public
-     * @readonly
-     */
-    readonly no_fmrAchieved: BOOLEAN,
-    /**
-     * @summary `no_payload`.
-     * @description
-     *
-     * `TRUE` if the caller passed a NULL `Payload` pointer (do
-     * not return payload). X.1083 §16.34.5, clause 21.
-     *
-     * @public
-     * @readonly
-     */
-    readonly no_payload: BOOLEAN
-  ) {}
+    originalBSPHandle: BioAPI_HANDLE,
+    maxFMRRequested: BioAPI_FMR,
+    processedBIR: BioAPI_INPUT_BIR,
+    referenceTemplate: BioAPI_INPUT_BIR,
+    no_adaptedBIR: BOOLEAN,
+    no_fmrAchieved: BOOLEAN,
+    no_payload: BOOLEAN
+  ) {
+    this.originalBSPHandle = originalBSPHandle;
+    this.maxFMRRequested = maxFMRRequested;
+    this.processedBIR = processedBIR;
+    this.referenceTemplate = referenceTemplate;
+    this.no_adaptedBIR = no_adaptedBIR;
+    this.no_fmrAchieved = no_fmrAchieved;
+    this.no_payload = no_payload;
+  }
 
   /**
    * @summary Restructures an object into a VerifyMatch_RequestParams

@@ -41,19 +41,23 @@ import {
  *
  */
 export class BioAPI_IDENTIFY_POPULATION {
+  /**
+   * @summary `birs`.
+   * @description
+   *
+   * Database handle, in-message BIR array, or preset array.
+   * X.1083 §15.43–15.44.
+   *
+   * @public
+   * @readonly
+   */
+  readonly birs: BioAPI_IDENTIFY_POPULATION_birs;
+
   constructor(
-    /**
-     * @summary `birs`.
-     * @description
-     *
-     * Database handle, in-message BIR array, or preset array.
-     * X.1083 §15.43–15.44.
-     *
-     * @public
-     * @readonly
-     */
-    readonly birs: BioAPI_IDENTIFY_POPULATION_birs
-  ) {}
+    birs: BioAPI_IDENTIFY_POPULATION_birs
+  ) {
+    this.birs = birs;
+  }
 
   /**
    * @summary Restructures an object into a BioAPI_IDENTIFY_POPULATION

@@ -35,31 +35,37 @@ import { ISDRProprietaryApplicationTemplate_lpaeSupport, _decode_ISDRProprietary
  */
 export
 class ISDRProprietaryApplicationTemplate {
+    /**
+     * @summary `svn`.
+     * @description
+     * 
+     * SGP.22 version in the select response. v3.1 §5.7.1 calls this
+     * `lowestSvn` and deprecates it; the LPA uses ES10b.GetEUICCInfo
+     * instead.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly svn: VersionType;
+    /**
+     * @summary `lpaeSupport`.
+     * @description
+     * 
+     * On-card LPA transports the eUICC supports. Absent if it reports none.
+     * SGP.22 v3.1 §5.7.1.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly lpaeSupport?: OPTIONAL<ISDRProprietaryApplicationTemplate_lpaeSupport>;
+
     constructor (
-        /**
-         * @summary `svn`.
-         * @description
-         * 
-         * SGP.22 version in the select response. v3.1 §5.7.1 calls this
-         * `lowestSvn` and deprecates it; the LPA uses ES10b.GetEUICCInfo
-         * instead.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly svn: VersionType,
-        /**
-         * @summary `lpaeSupport`.
-         * @description
-         * 
-         * On-card LPA transports the eUICC supports. Absent if it reports none.
-         * SGP.22 v3.1 §5.7.1.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly lpaeSupport?: OPTIONAL<ISDRProprietaryApplicationTemplate_lpaeSupport>
-    ) {}
+        svn: VersionType,
+        lpaeSupport?: OPTIONAL<ISDRProprietaryApplicationTemplate_lpaeSupport>
+    ) {
+        this.svn = svn;
+        this.lpaeSupport = lpaeSupport;
+    }
 
     /**
      * @summary Restructures an object into a ISDRProprietaryApplicationTemplate

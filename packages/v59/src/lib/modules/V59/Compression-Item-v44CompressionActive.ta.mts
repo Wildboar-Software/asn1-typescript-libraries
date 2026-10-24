@@ -27,12 +27,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @enum {number}
  */
 export
-enum _enum_for_Compression_Item_v44CompressionActive {
-    none = 0,
-    txOnly = 1,
-    rxOnly = 2,
-    both = 3,
-}
+const _enum_for_Compression_Item_v44CompressionActive = {
+    none: 0,
+    txOnly: 1,
+    rxOnly: 2,
+    both: 3,
+} as const;
+
+export type _enum_for_Compression_Item_v44CompressionActive = (typeof _enum_for_Compression_Item_v44CompressionActive)[keyof typeof _enum_for_Compression_Item_v44CompressionActive];
 
 /**
  * @summary Compression_Item_v44CompressionActive
@@ -145,7 +147,7 @@ const Compression_Item_v44CompressionActive_both: Compression_Item_v44Compressio
  */
 export
 const both: Compression_Item_v44CompressionActive = Compression_Item_v44CompressionActive.both; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_Compression_Item_v44CompressionActive = $._decodeEnumerated;
-export const _encode_Compression_Item_v44CompressionActive = $._encodeEnumerated;
+export const _decode_Compression_Item_v44CompressionActive = $._decodeEnumerated as $.ASN1Decoder<Compression_Item_v44CompressionActive>;
+export const _encode_Compression_Item_v44CompressionActive = $._encodeEnumerated as $.ASN1Encoder<Compression_Item_v44CompressionActive>;
 
 /* eslint-enable */

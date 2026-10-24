@@ -41,38 +41,50 @@ import {
  *
  */
 export class BiometricInformationTemplate {
+  /**
+   * @summary `algorithmReference`.
+   * @public
+   * @readonly
+   */
+  readonly algorithmReference: OPTIONAL<OCTET_STRING>;
+  /**
+   * @summary `referenceDataQualifier`.
+   * @public
+   * @readonly
+   */
+  readonly referenceDataQualifier: OPTIONAL<OCTET_STRING>;
+  /**
+   * @summary `biometricHeaderTemplate`.
+   * @public
+   * @readonly
+   */
+  readonly biometricHeaderTemplate: BiometricHeaderTemplate;
+  /**
+   * @summary `bdbReferenceData`.
+   * @public
+   * @readonly
+   */
+  readonly bdbReferenceData?: OPTIONAL<EXTERNAL>;
+  /**
+   * @summary `birPayLoad`.
+   * @public
+   * @readonly
+   */
+  readonly birPayLoad?: OPTIONAL<OCTET_STRING>;
+
   constructor(
-    /**
-     * @summary `algorithmReference`.
-     * @public
-     * @readonly
-     */
-    readonly algorithmReference: OPTIONAL<OCTET_STRING>,
-    /**
-     * @summary `referenceDataQualifier`.
-     * @public
-     * @readonly
-     */
-    readonly referenceDataQualifier: OPTIONAL<OCTET_STRING>,
-    /**
-     * @summary `biometricHeaderTemplate`.
-     * @public
-     * @readonly
-     */
-    readonly biometricHeaderTemplate: BiometricHeaderTemplate,
-    /**
-     * @summary `bdbReferenceData`.
-     * @public
-     * @readonly
-     */
-    readonly bdbReferenceData?: OPTIONAL<EXTERNAL>,
-    /**
-     * @summary `birPayLoad`.
-     * @public
-     * @readonly
-     */
-    readonly birPayLoad?: OPTIONAL<OCTET_STRING>
-  ) {}
+    algorithmReference: OPTIONAL<OCTET_STRING>,
+    referenceDataQualifier: OPTIONAL<OCTET_STRING>,
+    biometricHeaderTemplate: BiometricHeaderTemplate,
+    bdbReferenceData?: OPTIONAL<EXTERNAL>,
+    birPayLoad?: OPTIONAL<OCTET_STRING>
+  ) {
+    this.algorithmReference = algorithmReference;
+    this.referenceDataQualifier = referenceDataQualifier;
+    this.biometricHeaderTemplate = biometricHeaderTemplate;
+    this.bdbReferenceData = bdbReferenceData;
+    this.birPayLoad = birPayLoad;
+  }
 
   /**
    * @summary Restructures an object into a BiometricInformationTemplate

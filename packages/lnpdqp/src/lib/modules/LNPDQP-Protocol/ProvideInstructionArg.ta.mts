@@ -30,26 +30,34 @@ import { OriginatingStationType, _decode_OriginatingStationType, _encode_Origina
  */
 export
 class ProvideInstructionArg {
+    /**
+     * @summary `calledPartyNumber`.
+     * @public
+     * @readonly
+     */
+    readonly calledPartyNumber: ServiceKey;
+    /**
+     * @summary `digits`.
+     * @public
+     * @readonly
+     */
+    readonly digits: Digits;
+    /**
+     * @summary `oli`.
+     * @public
+     * @readonly
+     */
+    readonly oli: OriginatingStationType;
+
     constructor (
-        /**
-         * @summary `calledPartyNumber`.
-         * @public
-         * @readonly
-         */
-        readonly calledPartyNumber: ServiceKey,
-        /**
-         * @summary `digits`.
-         * @public
-         * @readonly
-         */
-        readonly digits: Digits,
-        /**
-         * @summary `oli`.
-         * @public
-         * @readonly
-         */
-        readonly oli: OriginatingStationType
-    ) {}
+        calledPartyNumber: ServiceKey,
+        digits: Digits,
+        oli: OriginatingStationType
+    ) {
+        this.calledPartyNumber = calledPartyNumber;
+        this.digits = digits;
+        this.oli = oli;
+    }
 
     /**
      * @summary Restructures an object into a ProvideInstructionArg

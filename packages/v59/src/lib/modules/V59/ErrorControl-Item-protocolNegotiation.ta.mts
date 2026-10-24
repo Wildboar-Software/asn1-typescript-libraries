@@ -13,11 +13,13 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 
 export
-enum _enum_for_ErrorControl_Item_protocolNegotiation {
-    disabled = 0,
-    lapm = 1,
-    v42annexA = 2,
-}
+const _enum_for_ErrorControl_Item_protocolNegotiation = {
+    disabled: 0,
+    lapm: 1,
+    v42annexA: 2,
+} as const;
+
+export type _enum_for_ErrorControl_Item_protocolNegotiation = (typeof _enum_for_ErrorControl_Item_protocolNegotiation)[keyof typeof _enum_for_ErrorControl_Item_protocolNegotiation];
 
 /**
  * @summary ErrorControl_Item_protocolNegotiation
@@ -95,7 +97,7 @@ const ErrorControl_Item_protocolNegotiation_v42annexA: ErrorControl_Item_protoco
  */
 export
 const v42annexA: ErrorControl_Item_protocolNegotiation = ErrorControl_Item_protocolNegotiation_v42annexA; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_ErrorControl_Item_protocolNegotiation = $._decodeEnumerated;
-export const _encode_ErrorControl_Item_protocolNegotiation = $._encodeEnumerated;
+export const _decode_ErrorControl_Item_protocolNegotiation = $._decodeEnumerated as $.ASN1Decoder<ErrorControl_Item_protocolNegotiation>;
+export const _encode_ErrorControl_Item_protocolNegotiation = $._encodeEnumerated as $.ASN1Encoder<ErrorControl_Item_protocolNegotiation>;
 
 /* eslint-enable */

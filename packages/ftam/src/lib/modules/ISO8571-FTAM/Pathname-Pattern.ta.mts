@@ -42,28 +42,34 @@ import {
  *
  */
 export class Pathname_Pattern {
+  /**
+   * @summary `equality_comparision`.
+   * @description
+   *
+   * Whether `no-value-available` and equals match.
+   *
+   * @public
+   * @readonly
+   */
+  readonly equality_comparision: Equality_Comparision;
+  /**
+   * @summary `pathname_value`.
+   * @description
+   *
+   * Path components to match, in order.
+   *
+   * @public
+   * @readonly
+   */
+  readonly pathname_value: Pathname_Pattern_pathname_value_Item[];
+
   constructor(
-    /**
-     * @summary `equality_comparision`.
-     * @description
-     *
-     * Whether `no-value-available` and equals match.
-     *
-     * @public
-     * @readonly
-     */
-    readonly equality_comparision: Equality_Comparision,
-    /**
-     * @summary `pathname_value`.
-     * @description
-     *
-     * Path components to match, in order.
-     *
-     * @public
-     * @readonly
-     */
-    readonly pathname_value: Pathname_Pattern_pathname_value_Item[]
-  ) {}
+    equality_comparision: Equality_Comparision,
+    pathname_value: Pathname_Pattern_pathname_value_Item[]
+  ) {
+    this.equality_comparision = equality_comparision;
+    this.pathname_value = pathname_value;
+  }
 
   /**
    * @summary Restructures an object into a Pathname_Pattern

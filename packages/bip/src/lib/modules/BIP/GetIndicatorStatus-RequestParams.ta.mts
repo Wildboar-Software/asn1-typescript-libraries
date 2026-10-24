@@ -46,30 +46,36 @@ import {
  *
  */
 export class GetIndicatorStatus_RequestParams {
+  /**
+   * @summary `originalBSPHandle`.
+   * @description
+   *
+   * Hosting-endpoint BSP handle. Rewritten from the master's local
+   * `BSPHandle` (cl.26) (`X.1083 §16.55`, Table 115).
+   *
+   * @public
+   * @readonly
+   */
+  readonly originalBSPHandle: BioAPI_HANDLE;
+  /**
+   * @summary `unitID`.
+   * @description
+   *
+   * Unit whose indicator is read, from C `UnitID` (`X.1083 §16.55`,
+   * Table 115, §15.55).
+   *
+   * @public
+   * @readonly
+   */
+  readonly unitID: BioAPI_UNIT_ID;
+
   constructor(
-    /**
-     * @summary `originalBSPHandle`.
-     * @description
-     *
-     * Hosting-endpoint BSP handle. Rewritten from the master's local
-     * `BSPHandle` (cl.26) (`X.1083 §16.55`, Table 115).
-     *
-     * @public
-     * @readonly
-     */
-    readonly originalBSPHandle: BioAPI_HANDLE,
-    /**
-     * @summary `unitID`.
-     * @description
-     *
-     * Unit whose indicator is read, from C `UnitID` (`X.1083 §16.55`,
-     * Table 115, §15.55).
-     *
-     * @public
-     * @readonly
-     */
-    readonly unitID: BioAPI_UNIT_ID
-  ) {}
+    originalBSPHandle: BioAPI_HANDLE,
+    unitID: BioAPI_UNIT_ID
+  ) {
+    this.originalBSPHandle = originalBSPHandle;
+    this.unitID = unitID;
+  }
 
   /**
    * @summary Restructures an object into a GetIndicatorStatus_RequestParams

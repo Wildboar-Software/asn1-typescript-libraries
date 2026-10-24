@@ -31,28 +31,34 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class FieldID {
+    /**
+     * @summary `fieldType`.
+     * @description
+     *
+     * `prime-field` or `characteristic-two-field`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.1.
+     *
+     * @public
+     * @readonly
+     */
+    readonly fieldType: OBJECT_IDENTIFIER;
+    /**
+     * @summary `parameters`.
+     * @description
+     *
+     * `Prime-p` or `Characteristic-two`, selected by `fieldType`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.1.
+     *
+     * @public
+     * @readonly
+     */
+    readonly parameters: _Element;
+
     constructor (
-        /**
-         * @summary `fieldType`.
-         * @description
-         *
-         * `prime-field` or `characteristic-two-field`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly fieldType: OBJECT_IDENTIFIER,
-        /**
-         * @summary `parameters`.
-         * @description
-         *
-         * `Prime-p` or `Characteristic-two`, selected by `fieldType`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly parameters: _Element
-    ) {}
+        fieldType: OBJECT_IDENTIFIER,
+        parameters: _Element
+    ) {
+        this.fieldType = fieldType;
+        this.parameters = parameters;
+    }
 
     /**
      * @summary Restructures an object into a FieldID

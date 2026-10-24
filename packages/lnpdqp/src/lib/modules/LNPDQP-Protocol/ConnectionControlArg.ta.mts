@@ -28,20 +28,26 @@ import { BillingIndicators, _decode_BillingIndicators, _encode_BillingIndicators
  */
 export
 class ConnectionControlArg {
+    /**
+     * @summary `digits`.
+     * @public
+     * @readonly
+     */
+    readonly digits: Digits;
+    /**
+     * @summary `billingIndicators`.
+     * @public
+     * @readonly
+     */
+    readonly billingIndicators: BillingIndicators;
+
     constructor (
-        /**
-         * @summary `digits`.
-         * @public
-         * @readonly
-         */
-        readonly digits: Digits,
-        /**
-         * @summary `billingIndicators`.
-         * @public
-         * @readonly
-         */
-        readonly billingIndicators: BillingIndicators
-    ) {}
+        digits: Digits,
+        billingIndicators: BillingIndicators
+    ) {
+        this.digits = digits;
+        this.billingIndicators = billingIndicators;
+    }
 
     /**
      * @summary Restructures an object into a ConnectionControlArg

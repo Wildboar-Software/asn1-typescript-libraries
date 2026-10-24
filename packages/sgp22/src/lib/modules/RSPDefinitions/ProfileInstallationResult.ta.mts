@@ -33,29 +33,35 @@ import { EuiccSignPIR, _decode_EuiccSignPIR, _encode_EuiccSignPIR } from "../RSP
  */
 export
 class ProfileInstallationResult {
+    /**
+     * @summary `profileInstallationResultData`.
+     * @description
+     * 
+     * The signed content. Tag `'BF27'`. SGP.22 v3.1 §2.5.6.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly profileInstallationResultData: ProfileInstallationResultData;
+    /**
+     * @summary `euiccSignPIR`.
+     * @description
+     * 
+     * eUICC signature over `profileInstallationResultData`. Tag `'5F37'`.
+     * SGP.22 v3.1 §2.5.6.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly euiccSignPIR: EuiccSignPIR;
+
     constructor (
-        /**
-         * @summary `profileInstallationResultData`.
-         * @description
-         * 
-         * The signed content. Tag `'BF27'`. SGP.22 v3.1 §2.5.6.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly profileInstallationResultData: ProfileInstallationResultData,
-        /**
-         * @summary `euiccSignPIR`.
-         * @description
-         * 
-         * eUICC signature over `profileInstallationResultData`. Tag `'5F37'`.
-         * SGP.22 v3.1 §2.5.6.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly euiccSignPIR: EuiccSignPIR
-    ) {}
+        profileInstallationResultData: ProfileInstallationResultData,
+        euiccSignPIR: EuiccSignPIR
+    ) {
+        this.profileInstallationResultData = profileInstallationResultData;
+        this.euiccSignPIR = euiccSignPIR;
+    }
 
     /**
      * @summary Restructures an object into a ProfileInstallationResult

@@ -30,11 +30,13 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_DatabaseState {
-  off = 0,
-  on = 1,
-  waiting = 2,
-}
+export const _enum_for_DatabaseState = {
+  off: 0,
+  on: 1,
+  waiting: 2,
+} as const;
+
+export type _enum_for_DatabaseState = (typeof _enum_for_DatabaseState)[keyof typeof _enum_for_DatabaseState];
 
 /**
  * @summary DatabaseState
@@ -148,10 +150,10 @@ export const waiting: DatabaseState =
   DatabaseState.waiting; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_DatabaseState = $._decodeEnumerated;
+export const _decode_DatabaseState = $._decodeEnumerated as $.ASN1Decoder<DatabaseState>;
 
 
-export const _encode_DatabaseState = $._encodeEnumerated;
+export const _encode_DatabaseState = $._encodeEnumerated as $.ASN1Encoder<DatabaseState>;
 
 
 /* eslint-enable */

@@ -35,22 +35,26 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class F_BEGIN_GROUP_request {
+  /**
+   * @summary `threshold`.
+   * @description
+   *
+   * Count of primitives after BEGIN-GROUP that must analyse
+   * without `state-result` failure before any part of the group
+   * succeeds. Primitives with only `action-result` count as
+   * successful. Does not set activity attributes.
+   * ISO 8571-3:1988 §18.1.2.1.
+   *
+   * @public
+   * @readonly
+   */
+  readonly threshold: INTEGER;
+
   constructor(
-    /**
-     * @summary `threshold`.
-     * @description
-     *
-     * Count of primitives after BEGIN-GROUP that must analyse
-     * without `state-result` failure before any part of the group
-     * succeeds. Primitives with only `action-result` count as
-     * successful. Does not set activity attributes.
-     * ISO 8571-3:1988 §18.1.2.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly threshold: INTEGER
-  ) {}
+    threshold: INTEGER
+  ) {
+    this.threshold = threshold;
+  }
 
   /**
    * @summary Restructures an object into a F_BEGIN_GROUP_request

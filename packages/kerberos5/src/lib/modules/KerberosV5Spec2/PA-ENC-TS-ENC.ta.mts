@@ -41,29 +41,35 @@ import {
  *
  */
 export class PA_ENC_TS_ENC {
+  /**
+   * @summary `patimestamp`.
+   * @description
+   *
+   * Client's time ([RFC 4120 §5.2.7.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.7.2)).
+   *
+   * @public
+   * @readonly
+   */
+  readonly patimestamp: KerberosTime;
+  /**
+   * @summary `pausec`.
+   * @description
+   *
+   * Microseconds; MAY be omitted if the client will not generate
+   * more than one request per second ([RFC 4120 §5.2.7.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.7.2)).
+   *
+   * @public
+   * @readonly
+   */
+  readonly pausec?: OPTIONAL<Microseconds>;
+
   constructor(
-    /**
-     * @summary `patimestamp`.
-     * @description
-     *
-     * Client's time ([RFC 4120 §5.2.7.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.7.2)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly patimestamp: KerberosTime,
-    /**
-     * @summary `pausec`.
-     * @description
-     *
-     * Microseconds; MAY be omitted if the client will not generate
-     * more than one request per second ([RFC 4120 §5.2.7.2](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.7.2)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly pausec?: OPTIONAL<Microseconds>
-  ) {}
+    patimestamp: KerberosTime,
+    pausec?: OPTIONAL<Microseconds>
+  ) {
+    this.patimestamp = patimestamp;
+    this.pausec = pausec;
+  }
 
   /**
    * @summary Restructures an object into a PA_ENC_TS_ENC

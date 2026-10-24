@@ -44,42 +44,50 @@ import {
  *
  */
 export class Enroll_ResponseParams {
+  /**
+   * @summary `newTemplate`.
+   * @description
+   *
+   * Handle of the newly enrolled template BIR on the hosting
+   * endpoint. Maps to BioAPI `NewTemplate` (clause 20).
+   * X.1083 §16.36.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly newTemplate: BioAPI_BIR_HANDLE;
+  /**
+   * @summary `auditData`.
+   * @description
+   *
+   * Handle of the audit BIR, if requested. Absent when
+   * `no-auditData` was `TRUE`. X.1083 §16.36.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly auditData?: OPTIONAL<BioAPI_BIR_HANDLE>;
+  /**
+   * @summary `templateUuid`.
+   * @description
+   *
+   * UUID assigned to the new template, if requested. Absent
+   * when `no-templateUuid` was `TRUE`. X.1083 §16.36.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly templateUuid?: OPTIONAL<BioAPI_UUID>;
+
   constructor(
-    /**
-     * @summary `newTemplate`.
-     * @description
-     *
-     * Handle of the newly enrolled template BIR on the hosting
-     * endpoint. Maps to BioAPI `NewTemplate` (clause 20).
-     * X.1083 §16.36.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly newTemplate: BioAPI_BIR_HANDLE,
-    /**
-     * @summary `auditData`.
-     * @description
-     *
-     * Handle of the audit BIR, if requested. Absent when
-     * `no-auditData` was `TRUE`. X.1083 §16.36.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly auditData?: OPTIONAL<BioAPI_BIR_HANDLE>,
-    /**
-     * @summary `templateUuid`.
-     * @description
-     *
-     * UUID assigned to the new template, if requested. Absent
-     * when `no-templateUuid` was `TRUE`. X.1083 §16.36.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly templateUuid?: OPTIONAL<BioAPI_UUID>
-  ) {}
+    newTemplate: BioAPI_BIR_HANDLE,
+    auditData?: OPTIONAL<BioAPI_BIR_HANDLE>,
+    templateUuid?: OPTIONAL<BioAPI_UUID>
+  ) {
+    this.newTemplate = newTemplate;
+    this.auditData = auditData;
+    this.templateUuid = templateUuid;
+  }
 
   /**
    * @summary Restructures an object into a Enroll_ResponseParams

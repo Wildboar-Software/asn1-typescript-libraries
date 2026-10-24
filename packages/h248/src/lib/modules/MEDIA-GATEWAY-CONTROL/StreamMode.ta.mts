@@ -7,33 +7,35 @@ import * as $ from "@wildboar/asn1/functional";
 
 
 export
-enum _enum_for_StreamMode {
+const _enum_for_StreamMode = {
     /**
      * Media passes from inside the context to the outside. Received media is
      * not passed into the context (clause 7.1.7.1.1).
      */
-    sendOnly = 0,
+    sendOnly: 0,
     /**
      * Media passes from outside the context to the inside. The termination does
      * not send media out (clause 7.1.7.1.1).
      */
-    recvOnly = 1,
+    recvOnly: 1,
     /**
      * Media passes both into and out of the context (clause 7.1.7.1.1).
      */
-    sendRecv = 2,
+    sendRecv: 2,
     /**
      * No media passes for this stream. This is the default. Signals and events
      * are unaffected (clause 7.1.7).
      */
-    inactive = 3,
+    inactive: 3,
     /**
      * Media received on the termination is sent back toward the sender, using
      * the Remote descriptor. Nothing is passed between this termination and the
      * others in the context (clause 7.1.7).
      */
-    loopBack = 4,
-}
+    loopBack: 4,
+} as const;
+
+export type _enum_for_StreamMode = (typeof _enum_for_StreamMode)[keyof typeof _enum_for_StreamMode];
 
 /**
  * @summary StreamMode
@@ -171,8 +173,8 @@ const StreamMode_loopBack: StreamMode = 4; /* LONG_NAMED_ENUMERATED_VALUE */
  */
 export
 const loopBack: StreamMode = StreamMode_loopBack; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_StreamMode = $._decodeEnumerated;
-export const _encode_StreamMode = $._encodeEnumerated;
+export const _decode_StreamMode = $._decodeEnumerated as $.ASN1Decoder<StreamMode>;
+export const _encode_StreamMode = $._encodeEnumerated as $.ASN1Encoder<StreamMode>;
 
 
 /* eslint-enable */

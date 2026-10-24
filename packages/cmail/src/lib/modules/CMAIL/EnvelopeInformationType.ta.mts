@@ -50,37 +50,45 @@ import {
  *
  */
 export class EnvelopeInformationType {
+  /**
+   * @summary `contentEnvelopeInformation`.
+   * @description Hashes of the unciphered and ciphered
+   * ENVELOPE, plus Message-ID. ITU-T Rec. X.1341 (09/2015)
+   * Annex B.
+   * @public
+   * @readonly
+   */
+  readonly contentEnvelopeInformation: ContentEnvelopeInformationType;
+  /**
+   * @summary `entities`.
+   * @description At least one `Entity` (sender,
+   * recipients, cc, transit). Each recipient's `Entity`
+   * is the challenge of Figure A.6. ITU-T Rec. X.1341
+   * (09/2015) §8.15.
+   * @public
+   * @readonly
+   */
+  readonly entities: EntitiesType;
+  /**
+   * @summary `signature`.
+   * @description Additional signatures
+   * (`SIZE(0..MAX)`). XSD uses XMLDSig `ds:SignatureType`;
+   * Annex B is `String`. XER: untagged, name `Signature`.
+   * ITU-T Rec. X.1341 (09/2015) Annex A–B.
+   * @public
+   * @readonly
+   */
+  readonly signature: SignatureType[];
+
   constructor(
-    /**
-     * @summary `contentEnvelopeInformation`.
-     * @description Hashes of the unciphered and ciphered
-     * ENVELOPE, plus Message-ID. ITU-T Rec. X.1341 (09/2015)
-     * Annex B.
-     * @public
-     * @readonly
-     */
-    readonly contentEnvelopeInformation: ContentEnvelopeInformationType,
-    /**
-     * @summary `entities`.
-     * @description At least one `Entity` (sender,
-     * recipients, cc, transit). Each recipient's `Entity`
-     * is the challenge of Figure A.6. ITU-T Rec. X.1341
-     * (09/2015) §8.15.
-     * @public
-     * @readonly
-     */
-    readonly entities: EntitiesType,
-    /**
-     * @summary `signature`.
-     * @description Additional signatures
-     * (`SIZE(0..MAX)`). XSD uses XMLDSig `ds:SignatureType`;
-     * Annex B is `String`. XER: untagged, name `Signature`.
-     * ITU-T Rec. X.1341 (09/2015) Annex A–B.
-     * @public
-     * @readonly
-     */
-    readonly signature: SignatureType[]
-  ) {}
+    contentEnvelopeInformation: ContentEnvelopeInformationType,
+    entities: EntitiesType,
+    signature: SignatureType[]
+  ) {
+    this.contentEnvelopeInformation = contentEnvelopeInformation;
+    this.entities = entities;
+    this.signature = signature;
+  }
 
   /**
    * @summary Restructures an object into a EnvelopeInformationType

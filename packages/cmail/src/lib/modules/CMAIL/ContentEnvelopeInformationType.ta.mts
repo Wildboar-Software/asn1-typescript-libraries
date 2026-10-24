@@ -43,35 +43,43 @@ import {
  *
  */
 export class ContentEnvelopeInformationType {
+  /**
+   * @summary `uncipheredEnvelopeHash`.
+   * @description Hash of the ENVELOPE before AES (RSCK)
+   * encryption. Annex B's `HashValueType` names only the
+   * algorithm. ITU-T Rec. X.1341 (09/2015) Annex B.
+   * @public
+   * @readonly
+   */
+  readonly uncipheredEnvelopeHash: HashValueType;
+  /**
+   * @summary `cipheredEnvelopeHash`.
+   * @description Hash of the ciphered ENVELOPE. Annex B's
+   * `HashValueType` names only the algorithm. ITU-T Rec.
+   * X.1341 (09/2015) Annex B.
+   * @public
+   * @readonly
+   */
+  readonly cipheredEnvelopeHash: HashValueType;
+  /**
+   * @summary `messageId`.
+   * @description MIME Message-ID of the ENVELOPE. XER
+   * attribute `MessageId`. ITU-T Rec. X.1341 (09/2015)
+   * Annex B, Appendix I.4.
+   * @public
+   * @readonly
+   */
+  readonly messageId: String;
+
   constructor(
-    /**
-     * @summary `uncipheredEnvelopeHash`.
-     * @description Hash of the ENVELOPE before AES (RSCK)
-     * encryption. Annex B's `HashValueType` names only the
-     * algorithm. ITU-T Rec. X.1341 (09/2015) Annex B.
-     * @public
-     * @readonly
-     */
-    readonly uncipheredEnvelopeHash: HashValueType,
-    /**
-     * @summary `cipheredEnvelopeHash`.
-     * @description Hash of the ciphered ENVELOPE. Annex B's
-     * `HashValueType` names only the algorithm. ITU-T Rec.
-     * X.1341 (09/2015) Annex B.
-     * @public
-     * @readonly
-     */
-    readonly cipheredEnvelopeHash: HashValueType,
-    /**
-     * @summary `messageId`.
-     * @description MIME Message-ID of the ENVELOPE. XER
-     * attribute `MessageId`. ITU-T Rec. X.1341 (09/2015)
-     * Annex B, Appendix I.4.
-     * @public
-     * @readonly
-     */
-    readonly messageId: String
-  ) {}
+    uncipheredEnvelopeHash: HashValueType,
+    cipheredEnvelopeHash: HashValueType,
+    messageId: String
+  ) {
+    this.uncipheredEnvelopeHash = uncipheredEnvelopeHash;
+    this.cipheredEnvelopeHash = cipheredEnvelopeHash;
+    this.messageId = messageId;
+  }
 
   /**
    * @summary Restructures an object into a ContentEnvelopeInformationType

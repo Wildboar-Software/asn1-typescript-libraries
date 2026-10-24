@@ -32,31 +32,37 @@ import {
  *
  */
 export class Access_Control_Change_Attribute_actual_values {
+  /**
+   * @summary `insert_values`.
+   * @description
+   *
+   * New elements to insert into the access-control attribute
+   * (ISO 8571-4:1988 Figure 11; ISO 8571-2:1988 §10.3).
+   *
+   * @public
+   * @readonly
+   */
+  readonly insert_values?: OPTIONAL<Access_Control_Element[]>;
+  /**
+   * @summary `delete_values`.
+   * @description
+   *
+   * Existing elements to remove from the access-control
+   * attribute (ISO 8571-4:1988 Figure 11; ISO 8571-2:1988
+   * §10.3).
+   *
+   * @public
+   * @readonly
+   */
+  readonly delete_values?: OPTIONAL<Access_Control_Element[]>;
+
   constructor(
-    /**
-     * @summary `insert_values`.
-     * @description
-     *
-     * New elements to insert into the access-control attribute
-     * (ISO 8571-4:1988 Figure 11; ISO 8571-2:1988 §10.3).
-     *
-     * @public
-     * @readonly
-     */
-    readonly insert_values?: OPTIONAL<Access_Control_Element[]>,
-    /**
-     * @summary `delete_values`.
-     * @description
-     *
-     * Existing elements to remove from the access-control
-     * attribute (ISO 8571-4:1988 Figure 11; ISO 8571-2:1988
-     * §10.3).
-     *
-     * @public
-     * @readonly
-     */
-    readonly delete_values?: OPTIONAL<Access_Control_Element[]>
-  ) {}
+    insert_values?: OPTIONAL<Access_Control_Element[]>,
+    delete_values?: OPTIONAL<Access_Control_Element[]>
+  ) {
+    this.insert_values = insert_values;
+    this.delete_values = delete_values;
+  }
 
   /**
    * @summary Restructures an object into a Access_Control_Change_Attribute_actual_values

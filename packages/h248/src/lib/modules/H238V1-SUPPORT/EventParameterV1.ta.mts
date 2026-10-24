@@ -35,30 +35,36 @@ import { EventParameterName, _decode_EventParameterName, _encode_EventParameterN
  */
 export
 class EventParameterV1 {
+    /**
+     * @summary `eventParamterName`.
+     * @description
+     *
+     * Parameter name. The support module spells the field
+     * `eventParamterName`.
+     *
+     * @public
+     * @readonly
+     */
+    readonly eventParamterName: EventParameterName;
+    /**
+     * @summary `value`.
+     * @description
+     *
+     * Single double-wrapped parameter value. Version 3 uses a sequence of
+     * such octet strings.
+     *
+     * @public
+     * @readonly
+     */
+    readonly value: EventParamValueV1;
+
     constructor (
-        /**
-         * @summary `eventParamterName`.
-         * @description
-         *
-         * Parameter name. The support module spells the field
-         * `eventParamterName`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventParamterName: EventParameterName,
-        /**
-         * @summary `value`.
-         * @description
-         *
-         * Single double-wrapped parameter value. Version 3 uses a sequence of
-         * such octet strings.
-         *
-         * @public
-         * @readonly
-         */
-        readonly value: EventParamValueV1
-    ) {}
+        eventParamterName: EventParameterName,
+        value: EventParamValueV1
+    ) {
+        this.eventParamterName = eventParamterName;
+        this.value = value;
+    }
 
     /**
      * @summary Restructures an object into a EventParameterV1

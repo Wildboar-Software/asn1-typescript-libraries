@@ -34,19 +34,23 @@ import {
  *
  */
 export class GetBIRFromHandle_ResponseParams {
+  /**
+   * @summary `bir`.
+   * @description
+   *
+   * BIR identified by the request handle. Maps to BIR (clause 20,
+   * §15.6). X.1083 Table 59.
+   *
+   * @public
+   * @readonly
+   */
+  readonly bir: BioAPI_BIR;
+
   constructor(
-    /**
-     * @summary `bir`.
-     * @description
-     *
-     * BIR identified by the request handle. Maps to BIR (clause 20,
-     * §15.6). X.1083 Table 59.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bir: BioAPI_BIR
-  ) {}
+    bir: BioAPI_BIR
+  ) {
+    this.bir = bir;
+  }
 
   /**
    * @summary Restructures an object into a GetBIRFromHandle_ResponseParams

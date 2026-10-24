@@ -49,62 +49,74 @@ import {
  *
  */
 export class AP_REQ {
+  /**
+   * @summary `pvno`.
+   * @description
+   *
+   * Protocol version 5 ([RFC 4120 §5.5.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.1)).
+   *
+   * @public
+   * @readonly
+   */
+  readonly pvno: INTEGER;
+  /**
+   * @summary `msg_type`.
+   * @description
+   *
+   * `KRB_AP_REQ` (14) ([RFC 4120 §5.5.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.1)).
+   *
+   * @public
+   * @readonly
+   */
+  readonly msg_type: INTEGER;
+  /**
+   * @summary `ap_options`.
+   * @description
+   *
+   * Processing options (`APOptions`): use-session-key,
+   * mutual-required ([RFC 4120 §5.5.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.1)).
+   *
+   * @public
+   * @readonly
+   */
+  readonly ap_options: APOptions;
+  /**
+   * @summary `ticket`.
+   * @description
+   *
+   * Ticket authenticating the client to the server
+   * ([RFC 4120 §5.5.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.1)).
+   *
+   * @public
+   * @readonly
+   */
+  readonly ticket: Ticket;
+  /**
+   * @summary `authenticator`.
+   * @description
+   *
+   * Encrypted `Authenticator` under the ticket session key
+   * (usage 11 normally; usage 7 in `PA-TGS-REQ`)
+   * ([RFC 4120 §5.5.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.1)).
+   *
+   * @public
+   * @readonly
+   */
+  readonly authenticator: EncryptedData;
+
   constructor(
-    /**
-     * @summary `pvno`.
-     * @description
-     *
-     * Protocol version 5 ([RFC 4120 §5.5.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.1)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly pvno: INTEGER,
-    /**
-     * @summary `msg_type`.
-     * @description
-     *
-     * `KRB_AP_REQ` (14) ([RFC 4120 §5.5.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.1)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly msg_type: INTEGER,
-    /**
-     * @summary `ap_options`.
-     * @description
-     *
-     * Processing options (`APOptions`): use-session-key,
-     * mutual-required ([RFC 4120 §5.5.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.1)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly ap_options: APOptions,
-    /**
-     * @summary `ticket`.
-     * @description
-     *
-     * Ticket authenticating the client to the server
-     * ([RFC 4120 §5.5.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.1)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly ticket: Ticket,
-    /**
-     * @summary `authenticator`.
-     * @description
-     *
-     * Encrypted `Authenticator` under the ticket session key
-     * (usage 11 normally; usage 7 in `PA-TGS-REQ`)
-     * ([RFC 4120 §5.5.1](https://datatracker.ietf.org/doc/html/rfc4120#section-5.5.1)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly authenticator: EncryptedData
-  ) {}
+    pvno: INTEGER,
+    msg_type: INTEGER,
+    ap_options: APOptions,
+    ticket: Ticket,
+    authenticator: EncryptedData
+  ) {
+    this.pvno = pvno;
+    this.msg_type = msg_type;
+    this.ap_options = ap_options;
+    this.ticket = ticket;
+    this.authenticator = authenticator;
+  }
 
   /**
    * @summary Restructures an object into a AP_REQ

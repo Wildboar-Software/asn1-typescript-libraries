@@ -28,11 +28,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @enum {number}
  */
 export
-enum _enum_for_V8Diag_Item_v8Result {
-    v8ComNeg = 0,
-    v8NoComNeg = 1,
-    v8NoNegAuto = 2,
-}
+const _enum_for_V8Diag_Item_v8Result = {
+    v8ComNeg: 0,
+    v8NoComNeg: 1,
+    v8NoNegAuto: 2,
+} as const;
+
+export type _enum_for_V8Diag_Item_v8Result = (typeof _enum_for_V8Diag_Item_v8Result)[keyof typeof _enum_for_V8Diag_Item_v8Result];
 
 /**
  * @summary V8Diag_Item_v8Result
@@ -129,7 +131,7 @@ const V8Diag_Item_v8Result_v8NoNegAuto: V8Diag_Item_v8Result = V8Diag_Item_v8Res
  */
 export
 const v8NoNegAuto: V8Diag_Item_v8Result = V8Diag_Item_v8Result.v8NoNegAuto; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_V8Diag_Item_v8Result = $._decodeEnumerated;
-export const _encode_V8Diag_Item_v8Result = $._encodeEnumerated;
+export const _decode_V8Diag_Item_v8Result = $._decodeEnumerated as $.ASN1Decoder<V8Diag_Item_v8Result>;
+export const _encode_V8Diag_Item_v8Result = $._encodeEnumerated as $.ASN1Encoder<V8Diag_Item_v8Result>;
 
 /* eslint-enable */

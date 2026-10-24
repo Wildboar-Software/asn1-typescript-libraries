@@ -42,42 +42,50 @@ import { AuditDescriptor, _decode_AuditDescriptor, _encode_AuditDescriptor } fro
  */
 export
 class SubtractRequest {
+    /**
+     * @summary `terminationID`.
+     * @description
+     *
+     * Terminations to subtract. May be wildcarded. CHOOSE is an error
+     * (clause 7.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    readonly terminationID: TerminationIDList;
+    /**
+     * @summary `auditDescriptor`.
+     * @description
+     *
+     * Items to return instead of the default Statistics descriptor. An
+     * empty Audit descriptor returns only the TerminationID, which
+     * suppresses statistics. Omitted, Statistics is returned.
+     *
+     * @public
+     * @readonly
+     */
+    readonly auditDescriptor?: OPTIONAL<AuditDescriptor>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `terminationID`.
-         * @description
-         *
-         * Terminations to subtract. May be wildcarded. CHOOSE is an error
-         * (clause 7.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly terminationID: TerminationIDList,
-        /**
-         * @summary `auditDescriptor`.
-         * @description
-         *
-         * Items to return instead of the default Statistics descriptor. An
-         * empty Audit descriptor returns only the TerminationID, which
-         * suppresses statistics. Omitted, Statistics is returned.
-         *
-         * @public
-         * @readonly
-         */
-        readonly auditDescriptor?: OPTIONAL<AuditDescriptor>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        terminationID: TerminationIDList,
+        auditDescriptor?: OPTIONAL<AuditDescriptor>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.terminationID = terminationID;
+        this.auditDescriptor = auditDescriptor;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SubtractRequest

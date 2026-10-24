@@ -35,40 +35,48 @@ import { TideMark, _decode_TideMark, _encode_TideMark } from "../Attribute-ASN1M
  */
 export
 class TideMarkInfo {
+    /**
+     * @summary `currentTideMark`.
+     * @description
+     *
+     * Extreme reached since the last reset. ITU-T Rec. X.721 (02/92) §9.4.
+     *
+     * @public
+     * @readonly
+     */
+    readonly currentTideMark: TideMark;
+    /**
+     * @summary `previousTideMark`.
+     * @description
+     *
+     * Value immediately before the last reset. ITU-T Rec. X.721 (02/92)
+     * §9.4.
+     *
+     * @public
+     * @readonly
+     */
+    readonly previousTideMark: TideMark;
+    /**
+     * @summary `resetTime`.
+     * @description
+     *
+     * Time of the last reset (SET-TO-DEFAULT). ITU-T Rec. X.721 (02/92)
+     * §9.4.
+     *
+     * @public
+     * @readonly
+     */
+    readonly resetTime: GeneralizedTime;
+
     constructor (
-        /**
-         * @summary `currentTideMark`.
-         * @description
-         *
-         * Extreme reached since the last reset. ITU-T Rec. X.721 (02/92) §9.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly currentTideMark: TideMark,
-        /**
-         * @summary `previousTideMark`.
-         * @description
-         *
-         * Value immediately before the last reset. ITU-T Rec. X.721 (02/92)
-         * §9.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly previousTideMark: TideMark,
-        /**
-         * @summary `resetTime`.
-         * @description
-         *
-         * Time of the last reset (SET-TO-DEFAULT). ITU-T Rec. X.721 (02/92)
-         * §9.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly resetTime: GeneralizedTime
-    ) {}
+        currentTideMark: TideMark,
+        previousTideMark: TideMark,
+        resetTime: GeneralizedTime
+    ) {
+        this.currentTideMark = currentTideMark;
+        this.previousTideMark = previousTideMark;
+        this.resetTime = resetTime;
+    }
 
     /**
      * @summary Restructures an object into a TideMarkInfo

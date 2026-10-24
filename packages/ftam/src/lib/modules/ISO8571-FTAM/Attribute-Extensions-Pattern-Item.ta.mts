@@ -36,28 +36,34 @@ import {
  *
  */
 export class Attribute_Extensions_Pattern_Item {
+  /**
+   * @summary `extension_set_identifier`.
+   * @description
+   *
+   * OID of the extension set whose attributes are matched.
+   *
+   * @public
+   * @readonly
+   */
+  readonly extension_set_identifier: Extension_Set_Identifier;
+  /**
+   * @summary `extension_set_attribute_Patterns`.
+   * @description
+   *
+   * Per-attribute patterns in this set.
+   *
+   * @public
+   * @readonly
+   */
+  readonly extension_set_attribute_Patterns: Attribute_Extensions_Pattern_Item_extension_set_attribute_Patterns_Item[];
+
   constructor(
-    /**
-     * @summary `extension_set_identifier`.
-     * @description
-     *
-     * OID of the extension set whose attributes are matched.
-     *
-     * @public
-     * @readonly
-     */
-    readonly extension_set_identifier: Extension_Set_Identifier,
-    /**
-     * @summary `extension_set_attribute_Patterns`.
-     * @description
-     *
-     * Per-attribute patterns in this set.
-     *
-     * @public
-     * @readonly
-     */
-    readonly extension_set_attribute_Patterns: Attribute_Extensions_Pattern_Item_extension_set_attribute_Patterns_Item[]
-  ) {}
+    extension_set_identifier: Extension_Set_Identifier,
+    extension_set_attribute_Patterns: Attribute_Extensions_Pattern_Item_extension_set_attribute_Patterns_Item[]
+  ) {
+    this.extension_set_identifier = extension_set_identifier;
+    this.extension_set_attribute_Patterns = extension_set_attribute_Patterns;
+  }
 
   /**
    * @summary Restructures an object into a Attribute_Extensions_Pattern_Item

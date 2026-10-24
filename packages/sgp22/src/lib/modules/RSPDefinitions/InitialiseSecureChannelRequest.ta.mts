@@ -40,67 +40,79 @@ import { ControlRefTemplate, _decode_ControlRefTemplate, _encode_ControlRefTempl
  */
 export
 class InitialiseSecureChannelRequest {
+    /**
+     * @summary `remoteOpId`.
+     * @description
+     * 
+     * Must be `installBoundProfilePackage`. That value also fixes the key
+     * usage to MAC and encryption. SGP.22 v3.1 §5.5.1.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly remoteOpId: RemoteOpId;
+    /**
+     * @summary `transactionId`.
+     * @description
+     * 
+     * Must match the ongoing RSP session from ES10b.PrepareDownload.
+     * Otherwise `invalidTransactionId`. SGP.22 v3.1 §5.5.1.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly transactionId: TransactionId;
+    /**
+     * @summary `controlRefTemplate`.
+     * @description
+     * 
+     * Key type, key length, and host id for the key agreement. Checked
+     * against the selected algorithm. SGP.22 v3.1 §5.5.1.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly controlRefTemplate: ControlRefTemplate;
+    /**
+     * @summary `smdpOtpk`.
+     * @description
+     * 
+     * otPK.DP.KA, tag `'5F49'`. The eUICC combines it with otSK.EUICC.KA to
+     * derive S-ENC, S-MAC, and the initial MAC chaining value. SGP.22 v3.1
+     * §2.6.4 and §5.5.1.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly smdpOtpk: OCTET_STRING;
+    /**
+     * @summary `smdpSign`.
+     * @description
+     * 
+     * Signature under SK.DPpb.SIG over `remoteOpId`, `transactionId`,
+     * `controlRefTemplate`, `smdpOtpk`, and the `euiccOtpk` from
+     * PrepareDownload. Tag `'5F37'`. Failure is `invalidSignature`, the
+     * session context is discarded, and installation stops. SGP.22 v3.1
+     * §5.5.1.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly smdpSign: OCTET_STRING;
+
     constructor (
-        /**
-         * @summary `remoteOpId`.
-         * @description
-         * 
-         * Must be `installBoundProfilePackage`. That value also fixes the key
-         * usage to MAC and encryption. SGP.22 v3.1 §5.5.1.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly remoteOpId: RemoteOpId,
-        /**
-         * @summary `transactionId`.
-         * @description
-         * 
-         * Must match the ongoing RSP session from ES10b.PrepareDownload.
-         * Otherwise `invalidTransactionId`. SGP.22 v3.1 §5.5.1.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly transactionId: TransactionId,
-        /**
-         * @summary `controlRefTemplate`.
-         * @description
-         * 
-         * Key type, key length, and host id for the key agreement. Checked
-         * against the selected algorithm. SGP.22 v3.1 §5.5.1.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly controlRefTemplate: ControlRefTemplate,
-        /**
-         * @summary `smdpOtpk`.
-         * @description
-         * 
-         * otPK.DP.KA, tag `'5F49'`. The eUICC combines it with otSK.EUICC.KA to
-         * derive S-ENC, S-MAC, and the initial MAC chaining value. SGP.22 v3.1
-         * §2.6.4 and §5.5.1.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly smdpOtpk: OCTET_STRING,
-        /**
-         * @summary `smdpSign`.
-         * @description
-         * 
-         * Signature under SK.DPpb.SIG over `remoteOpId`, `transactionId`,
-         * `controlRefTemplate`, `smdpOtpk`, and the `euiccOtpk` from
-         * PrepareDownload. Tag `'5F37'`. Failure is `invalidSignature`, the
-         * session context is discarded, and installation stops. SGP.22 v3.1
-         * §5.5.1.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly smdpSign: OCTET_STRING
-    ) {}
+        remoteOpId: RemoteOpId,
+        transactionId: TransactionId,
+        controlRefTemplate: ControlRefTemplate,
+        smdpOtpk: OCTET_STRING,
+        smdpSign: OCTET_STRING
+    ) {
+        this.remoteOpId = remoteOpId;
+        this.transactionId = transactionId;
+        this.controlRefTemplate = controlRefTemplate;
+        this.smdpOtpk = smdpOtpk;
+        this.smdpSign = smdpSign;
+    }
 
     /**
      * @summary Restructures an object into a InitialiseSecureChannelRequest

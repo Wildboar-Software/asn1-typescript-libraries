@@ -57,51 +57,61 @@ import {
  *
  */
 export class DbCreate_RequestParams {
+  /**
+   * @summary `originalBSPHandle`.
+   * @description
+   *
+   * Hosting-endpoint BSP handle. Rewritten from the master's local
+   * `BSPHandle` (cl.26) (`X.1083 §16.44`, Table 100).
+   *
+   * @public
+   * @readonly
+   */
+  readonly originalBSPHandle: BioAPI_HANDLE;
+  /**
+   * @summary `dbUuid`.
+   * @description
+   *
+   * Database UUID from C `DbUuid`. Not OPTIONAL: a NULL pointer is
+   * unconvertible (cl.19, §15.58) (`X.1083 §16.44`, Table 100).
+   *
+   * @public
+   * @readonly
+   */
+  readonly dbUuid: BioAPI_UUID;
+  /**
+   * @summary `numberOfRecords`.
+   * @description
+   *
+   * From C `NumberOfRecords` (`X.1083 §16.44`, Table 100, §15.1.5).
+   *
+   * @public
+   * @readonly
+   */
+  readonly numberOfRecords: UnsignedInt;
+  /**
+   * @summary `accessRequest`.
+   * @description
+   *
+   * Access requested by C `AccessRequest` (`read`/`write` bits)
+   * (`X.1083 §16.44`, Table 100, §15.24).
+   *
+   * @public
+   * @readonly
+   */
+  readonly accessRequest: BioAPI_DB_ACCESS_TYPE;
+
   constructor(
-    /**
-     * @summary `originalBSPHandle`.
-     * @description
-     *
-     * Hosting-endpoint BSP handle. Rewritten from the master's local
-     * `BSPHandle` (cl.26) (`X.1083 §16.44`, Table 100).
-     *
-     * @public
-     * @readonly
-     */
-    readonly originalBSPHandle: BioAPI_HANDLE,
-    /**
-     * @summary `dbUuid`.
-     * @description
-     *
-     * Database UUID from C `DbUuid`. Not OPTIONAL: a NULL pointer is
-     * unconvertible (cl.19, §15.58) (`X.1083 §16.44`, Table 100).
-     *
-     * @public
-     * @readonly
-     */
-    readonly dbUuid: BioAPI_UUID,
-    /**
-     * @summary `numberOfRecords`.
-     * @description
-     *
-     * From C `NumberOfRecords` (`X.1083 §16.44`, Table 100, §15.1.5).
-     *
-     * @public
-     * @readonly
-     */
-    readonly numberOfRecords: UnsignedInt,
-    /**
-     * @summary `accessRequest`.
-     * @description
-     *
-     * Access requested by C `AccessRequest` (`read`/`write` bits)
-     * (`X.1083 §16.44`, Table 100, §15.24).
-     *
-     * @public
-     * @readonly
-     */
-    readonly accessRequest: BioAPI_DB_ACCESS_TYPE
-  ) {}
+    originalBSPHandle: BioAPI_HANDLE,
+    dbUuid: BioAPI_UUID,
+    numberOfRecords: UnsignedInt,
+    accessRequest: BioAPI_DB_ACCESS_TYPE
+  ) {
+    this.originalBSPHandle = originalBSPHandle;
+    this.dbUuid = dbUuid;
+    this.numberOfRecords = numberOfRecords;
+    this.accessRequest = accessRequest;
+  }
 
   /**
    * @summary Restructures an object into a DbCreate_RequestParams

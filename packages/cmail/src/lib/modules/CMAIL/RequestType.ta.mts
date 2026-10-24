@@ -38,18 +38,22 @@ import {
  *
  */
 export class RequestType {
+  /**
+   * @summary `randomNumer`.
+   * @description Random nonce for the challenge (ASN.1
+   * spelling; XER `RandomNumber`). Concatenated with RSCK
+   * before hashing. ITU-T Rec. X.1341 (09/2015) §8.15,
+   * §9.3.
+   * @public
+   * @readonly
+   */
+  readonly randomNumer: String;
+
   constructor(
-    /**
-     * @summary `randomNumer`.
-     * @description Random nonce for the challenge (ASN.1
-     * spelling; XER `RandomNumber`). Concatenated with RSCK
-     * before hashing. ITU-T Rec. X.1341 (09/2015) §8.15,
-     * §9.3.
-     * @public
-     * @readonly
-     */
-    readonly randomNumer: String
-  ) {}
+    randomNumer: String
+  ) {
+    this.randomNumer = randomNumer;
+  }
 
   /**
    * @summary Restructures an object into a RequestType

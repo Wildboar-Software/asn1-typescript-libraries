@@ -38,29 +38,35 @@ import {
  *
  */
 export class ActionInfo {
+  /**
+   * @summary `actionType`.
+   * @description
+   *
+   * Action type (`CMIP-ACTION.&id`).
+   *
+   * @public
+   * @readonly
+   */
+  readonly actionType: ActionTypeId;
+  /**
+   * @summary `actionInfoArg`.
+   * @description
+   *
+   * Argument matching `actionType`
+   * (`CMIP-ACTION.&Value`).
+   *
+   * @public
+   * @readonly
+   */
+  readonly actionInfoArg?: OPTIONAL<_Element>;
+
   constructor(
-    /**
-     * @summary `actionType`.
-     * @description
-     *
-     * Action type (`CMIP-ACTION.&id`).
-     *
-     * @public
-     * @readonly
-     */
-    readonly actionType: ActionTypeId,
-    /**
-     * @summary `actionInfoArg`.
-     * @description
-     *
-     * Argument matching `actionType`
-     * (`CMIP-ACTION.&Value`).
-     *
-     * @public
-     * @readonly
-     */
-    readonly actionInfoArg?: OPTIONAL<_Element>
-  ) {}
+    actionType: ActionTypeId,
+    actionInfoArg?: OPTIONAL<_Element>
+  ) {
+    this.actionType = actionType;
+    this.actionInfoArg = actionInfoArg;
+  }
 
   /**
    * @summary Restructures an object into a ActionInfo

@@ -32,30 +32,36 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class ServiceUser {
+    /**
+     * @summary `identifier`.
+     * @description
+     *
+     * `DMI-SERVICEUSER.&id` from `ServiceUserSet`. ITU-T Rec. X.721 (02/92)
+     * Cor.4 §14.2.
+     *
+     * @public
+     * @readonly
+     */
+    readonly identifier: OBJECT_IDENTIFIER;
+    /**
+     * @summary `details`.
+     * @description
+     *
+     * `DMI-SERVICEUSER.&Value` selected by `identifier`. ITU-T Rec. X.721
+     * (02/92) Cor.4 §14.2.
+     *
+     * @public
+     * @readonly
+     */
+    readonly details: _Element;
+
     constructor (
-        /**
-         * @summary `identifier`.
-         * @description
-         *
-         * `DMI-SERVICEUSER.&id` from `ServiceUserSet`. ITU-T Rec. X.721 (02/92)
-         * Cor.4 §14.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly identifier: OBJECT_IDENTIFIER,
-        /**
-         * @summary `details`.
-         * @description
-         *
-         * `DMI-SERVICEUSER.&Value` selected by `identifier`. ITU-T Rec. X.721
-         * (02/92) Cor.4 §14.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly details: _Element
-    ) {}
+        identifier: OBJECT_IDENTIFIER,
+        details: _Element
+    ) {
+        this.identifier = identifier;
+        this.details = details;
+    }
 
     /**
      * @summary Restructures an object into a ServiceUser

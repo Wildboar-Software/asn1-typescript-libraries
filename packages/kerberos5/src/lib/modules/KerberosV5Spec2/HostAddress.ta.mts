@@ -35,30 +35,36 @@ import {
  *
  */
 export class HostAddress {
+  /**
+   * @summary `addr_type`.
+   * @description
+   *
+   * Address family. Pre-defined values in [RFC 4120 §7.5.3](https://datatracker.ietf.org/doc/html/rfc4120#section-7.5.3)
+   * ([RFC 4120 §5.2.5](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.5)).
+   *
+   * @public
+   * @readonly
+   */
+  readonly addr_type: Int32;
+  /**
+   * @summary `address`.
+   * @description
+   *
+   * Single address of type `addr-type`, as an OCTET STRING
+   * ([RFC 4120 §5.2.5](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.5)).
+   *
+   * @public
+   * @readonly
+   */
+  readonly address: OCTET_STRING;
+
   constructor(
-    /**
-     * @summary `addr_type`.
-     * @description
-     *
-     * Address family. Pre-defined values in [RFC 4120 §7.5.3](https://datatracker.ietf.org/doc/html/rfc4120#section-7.5.3)
-     * ([RFC 4120 §5.2.5](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.5)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly addr_type: Int32,
-    /**
-     * @summary `address`.
-     * @description
-     *
-     * Single address of type `addr-type`, as an OCTET STRING
-     * ([RFC 4120 §5.2.5](https://datatracker.ietf.org/doc/html/rfc4120#section-5.2.5)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly address: OCTET_STRING
-  ) {}
+    addr_type: Int32,
+    address: OCTET_STRING
+  ) {
+    this.addr_type = addr_type;
+    this.address = address;
+  }
 
   /**
    * @summary Restructures an object into a HostAddress

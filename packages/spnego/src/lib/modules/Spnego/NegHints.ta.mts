@@ -27,20 +27,26 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class NegHints {
+    /**
+     * @summary `hintName`.
+     * @public
+     * @readonly
+     */
+    readonly hintName?: OPTIONAL<GeneralString>;
+    /**
+     * @summary `hintAddress`.
+     * @public
+     * @readonly
+     */
+    readonly hintAddress?: OPTIONAL<OCTET_STRING>;
+
     constructor (
-        /**
-         * @summary `hintName`.
-         * @public
-         * @readonly
-         */
-        readonly hintName?: OPTIONAL<GeneralString>,
-        /**
-         * @summary `hintAddress`.
-         * @public
-         * @readonly
-         */
-        readonly hintAddress?: OPTIONAL<OCTET_STRING>
-    ) {}
+        hintName?: OPTIONAL<GeneralString>,
+        hintAddress?: OPTIONAL<OCTET_STRING>
+    ) {
+        this.hintName = hintName;
+        this.hintAddress = hintAddress;
+    }
 
     /**
      * @summary Restructures an object into a NegHints

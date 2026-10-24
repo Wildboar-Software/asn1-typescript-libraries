@@ -41,20 +41,26 @@ import {
  *
  */
 export class BioAPI_DBBIR_ID {
+  /**
+   * @summary `dbHandle`.
+   * @public
+   * @readonly
+   */
+  readonly dbHandle: BioAPI_DB_HANDLE;
+  /**
+   * @summary `keyValue`.
+   * @public
+   * @readonly
+   */
+  readonly keyValue: BioAPI_UUID;
+
   constructor(
-    /**
-     * @summary `dbHandle`.
-     * @public
-     * @readonly
-     */
-    readonly dbHandle: BioAPI_DB_HANDLE,
-    /**
-     * @summary `keyValue`.
-     * @public
-     * @readonly
-     */
-    readonly keyValue: BioAPI_UUID
-  ) {}
+    dbHandle: BioAPI_DB_HANDLE,
+    keyValue: BioAPI_UUID
+  ) {
+    this.dbHandle = dbHandle;
+    this.keyValue = keyValue;
+  }
 
   /**
    * @summary Restructures an object into a BioAPI_DBBIR_ID

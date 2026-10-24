@@ -59,52 +59,62 @@ import {
  *
  */
 export class AttributeError {
+  /**
+   * @summary `errorStatus`.
+   * @description
+   *
+   * Which attribute-level error occurred. Numeric values
+   * match the corresponding ROSE error codes where they
+   * exist (`accessDenied` 2, `noSuchAttribute` 5,
+   * `invalidAttributeValue` 6).
+   *
+   * @public
+   * @readonly
+   */
+  readonly errorStatus: AttributeError_errorStatus;
+  /**
+   * @summary `modifyOperator`.
+   * @description
+   *
+   * Present when `errorStatus` is `invalidOperator` or
+   * `invalidOperation`.
+   *
+   * @public
+   * @readonly
+   */
+  readonly modifyOperator: OPTIONAL<ModifyOperator>;
+  /**
+   * @summary `attributeId`.
+   * @description
+   *
+   * Attribute to which the error applies.
+   *
+   * @public
+   * @readonly
+   */
+  readonly attributeId: AttributeId;
+  /**
+   * @summary `attributeValue`.
+   * @description
+   *
+   * Offending value, if any. Absent for `setToDefault`.
+   *
+   * @public
+   * @readonly
+   */
+  readonly attributeValue?: OPTIONAL<_Element>;
+
   constructor(
-    /**
-     * @summary `errorStatus`.
-     * @description
-     *
-     * Which attribute-level error occurred. Numeric values
-     * match the corresponding ROSE error codes where they
-     * exist (`accessDenied` 2, `noSuchAttribute` 5,
-     * `invalidAttributeValue` 6).
-     *
-     * @public
-     * @readonly
-     */
-    readonly errorStatus: AttributeError_errorStatus,
-    /**
-     * @summary `modifyOperator`.
-     * @description
-     *
-     * Present when `errorStatus` is `invalidOperator` or
-     * `invalidOperation`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly modifyOperator: OPTIONAL<ModifyOperator>,
-    /**
-     * @summary `attributeId`.
-     * @description
-     *
-     * Attribute to which the error applies.
-     *
-     * @public
-     * @readonly
-     */
-    readonly attributeId: AttributeId,
-    /**
-     * @summary `attributeValue`.
-     * @description
-     *
-     * Offending value, if any. Absent for `setToDefault`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly attributeValue?: OPTIONAL<_Element>
-  ) {}
+    errorStatus: AttributeError_errorStatus,
+    modifyOperator: OPTIONAL<ModifyOperator>,
+    attributeId: AttributeId,
+    attributeValue?: OPTIONAL<_Element>
+  ) {
+    this.errorStatus = errorStatus;
+    this.modifyOperator = modifyOperator;
+    this.attributeId = attributeId;
+    this.attributeValue = attributeValue;
+  }
 
   /**
    * @summary Restructures an object into a AttributeError

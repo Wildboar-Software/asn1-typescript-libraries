@@ -39,19 +39,23 @@ import {
  *
  */
 export class BFPUnregistrationEvent_NotificationParams {
+  /**
+   * @summary `bfpProductUuid`.
+   * @description
+   *
+   * Product UUID of the BFP that was unregistered. X.1083
+   * §16.62.2.
+   *
+   * @public
+   * @readonly
+   */
+  readonly bfpProductUuid: BioAPI_UUID;
+
   constructor(
-    /**
-     * @summary `bfpProductUuid`.
-     * @description
-     *
-     * Product UUID of the BFP that was unregistered. X.1083
-     * §16.62.2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bfpProductUuid: BioAPI_UUID
-  ) {}
+    bfpProductUuid: BioAPI_UUID
+  ) {
+    this.bfpProductUuid = bfpProductUuid;
+  }
 
   /**
    * @summary Restructures an object into a BFPUnregistrationEvent_NotificationParams

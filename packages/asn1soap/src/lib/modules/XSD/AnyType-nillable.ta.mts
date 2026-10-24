@@ -48,33 +48,41 @@ import {
  *
  */
 export class AnyType_nillable {
+  /**
+   * @summary `embed_values`.
+   * @description Character data interleaved with child elements
+   * (XER `EMBED-VALUES`). ITU-T Rec. X.693 | ISO/IEC 8825-4,
+   * clause 25.
+   * @public
+   * @readonly
+   */
+  readonly embed_values: String[];
+  /**
+   * @summary `attr`.
+   * @description Wildcard attributes; each item is
+   * `AnyAttributeFormat` (X.693 clause 18).
+   * @public
+   * @readonly
+   */
+  readonly attr: String[];
+  /**
+   * @summary `content`.
+   * @description Child elements when the element is not nil.
+   * Omit for `xsi:nil="true"`. ITU-T Rec. X.694 (`USE-NIL`).
+   * @public
+   * @readonly
+   */
+  readonly content?: OPTIONAL<AnyType_nillable_content>;
+
   constructor(
-    /**
-     * @summary `embed_values`.
-     * @description Character data interleaved with child elements
-     * (XER `EMBED-VALUES`). ITU-T Rec. X.693 | ISO/IEC 8825-4,
-     * clause 25.
-     * @public
-     * @readonly
-     */
-    readonly embed_values: String[],
-    /**
-     * @summary `attr`.
-     * @description Wildcard attributes; each item is
-     * `AnyAttributeFormat` (X.693 clause 18).
-     * @public
-     * @readonly
-     */
-    readonly attr: String[],
-    /**
-     * @summary `content`.
-     * @description Child elements when the element is not nil.
-     * Omit for `xsi:nil="true"`. ITU-T Rec. X.694 (`USE-NIL`).
-     * @public
-     * @readonly
-     */
-    readonly content?: OPTIONAL<AnyType_nillable_content>
-  ) {}
+    embed_values: String[],
+    attr: String[],
+    content?: OPTIONAL<AnyType_nillable_content>
+  ) {
+    this.embed_values = embed_values;
+    this.attr = attr;
+    this.content = content;
+  }
 
   /**
    * @summary Restructures an object into a AnyType_nillable

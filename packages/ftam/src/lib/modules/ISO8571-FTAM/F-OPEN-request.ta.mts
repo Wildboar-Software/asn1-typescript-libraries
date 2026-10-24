@@ -96,135 +96,159 @@ import {
  *
  */
 export class F_OPEN_request {
+  /**
+   * @summary `processing_mode`.
+   * @description
+   *
+   * Subset of the current access request: read, insert, replace,
+   * extend, erase. Sets current processing mode. Default
+   * `{f-read}`. ISO 8571-3:1988 §17.1.2.3.
+   *
+   * @public
+   * @readonly
+   */
+  readonly processing_mode: OPTIONAL<F_OPEN_request_processing_mode>;
+  /**
+   * @summary `contents_type`.
+   * @description
+   *
+   * `unknown` or proposed; must match the file attribute (write
+   * exact; read may simplify/relax document types per
+   * ISO 8571-2:1988 §12.3). Sets active contents type.
+   * ISO 8571-3:1988 §17.1.2.4.
+   *
+   * @public
+   * @readonly
+   */
+  readonly contents_type: F_OPEN_request_contents_type;
+  /**
+   * @summary `concurrency_control`.
+   * @description
+   *
+   * May only become more restrictive than select (not-required,
+   * shared, exclusive, no-access). ISO 8571-3:1988 §17.1.2.5.
+   *
+   * @public
+   * @readonly
+   */
+  readonly concurrency_control?: OPTIONAL<Concurrency_Control>;
+  /**
+   * @summary `shared_ASE_information`.
+   * @description
+   *
+   * ISO 8571-3:1988 §17.1.2.6 / §13.10.
+   *
+   * @public
+   * @readonly
+   */
+  readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>;
+  /**
+   * @summary `enable_fadu_locking`.
+   * @description
+   *
+   * Only if FADU-locking FU + storage group + concurrency present
+   * (mandatory then). Sets current locking style. Open will not
+   * fail for concurrency, but later FADU locks may. Default FALSE.
+   * ISO 8571-3:1988 §17.1.2.7.
+   *
+   * @public
+   * @readonly
+   */
+  readonly enable_fadu_locking?: OPTIONAL<BOOLEAN>;
+  /**
+   * @summary `activity_identifier`.
+   * @description
+   *
+   * IFS; mandatory if the recovery FU was negotiated.
+   * ISO 8571-3:1988 §17.1.2.9 / §13.11.
+   *
+   * @public
+   * @readonly
+   */
+  readonly activity_identifier?: OPTIONAL<Activity_Identifier>;
+  /**
+   * @summary `recovery_mode`.
+   * @description
+   *
+   * `none` / `at-start-of-file` / `at-any-active-checkpoint` in
+   * decreasing order. IFS; mandatory if restart or recovery was
+   * negotiated. Does not prevent open. Default `none`.
+   * ISO 8571-3:1988 §17.1.2.10.
+   *
+   * @public
+   * @readonly
+   */
+  readonly recovery_mode?: OPTIONAL<F_OPEN_request_recovery_mode>;
+  /**
+   * @summary `remove_contexts`.
+   * @description
+   *
+   * Abstract syntaxes to drop from the defined context list.
+   * ISO 8571-4:1988 F-OPEN-request.
+   *
+   * @public
+   * @readonly
+   */
+  readonly remove_contexts?: OPTIONAL<Abstract_Syntax_Name[]>;
+  /**
+   * @summary `define_contexts`.
+   * @description
+   *
+   * Abstract syntaxes to add to the defined context list.
+   * ISO 8571-4:1988 F-OPEN-request.
+   *
+   * @public
+   * @readonly
+   */
+  readonly define_contexts?: OPTIONAL<Abstract_Syntax_Name[]>;
+  /**
+   * @summary `degree_of_overlap`.
+   * @description
+   *
+   * Absent from ISO 8571:1988 Parts 1–4. ASN.1 comment: conditional
+   * on consecutive-overlap or concurrent-overlap FUs.
+   *
+   * @public
+   * @readonly
+   */
+  readonly degree_of_overlap?: OPTIONAL<Degree_Of_Overlap>;
+  /**
+   * @summary `transfer_window`.
+   * @description
+   *
+   * Absent from ISO 8571:1988 Parts 1–4. ASN.1 comment: conditional
+   * on consecutive-overlap or concurrent-overlap FUs.
+   *
+   * @public
+   * @readonly
+   */
+  readonly transfer_window?: OPTIONAL<INTEGER>;
+
   constructor(
-    /**
-     * @summary `processing_mode`.
-     * @description
-     *
-     * Subset of the current access request: read, insert, replace,
-     * extend, erase. Sets current processing mode. Default
-     * `{f-read}`. ISO 8571-3:1988 §17.1.2.3.
-     *
-     * @public
-     * @readonly
-     */
-    readonly processing_mode: OPTIONAL<F_OPEN_request_processing_mode>,
-    /**
-     * @summary `contents_type`.
-     * @description
-     *
-     * `unknown` or proposed; must match the file attribute (write
-     * exact; read may simplify/relax document types per
-     * ISO 8571-2:1988 §12.3). Sets active contents type.
-     * ISO 8571-3:1988 §17.1.2.4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly contents_type: F_OPEN_request_contents_type,
-    /**
-     * @summary `concurrency_control`.
-     * @description
-     *
-     * May only become more restrictive than select (not-required,
-     * shared, exclusive, no-access). ISO 8571-3:1988 §17.1.2.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly concurrency_control?: OPTIONAL<Concurrency_Control>,
-    /**
-     * @summary `shared_ASE_information`.
-     * @description
-     *
-     * ISO 8571-3:1988 §17.1.2.6 / §13.10.
-     *
-     * @public
-     * @readonly
-     */
-    readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
-    /**
-     * @summary `enable_fadu_locking`.
-     * @description
-     *
-     * Only if FADU-locking FU + storage group + concurrency present
-     * (mandatory then). Sets current locking style. Open will not
-     * fail for concurrency, but later FADU locks may. Default FALSE.
-     * ISO 8571-3:1988 §17.1.2.7.
-     *
-     * @public
-     * @readonly
-     */
-    readonly enable_fadu_locking?: OPTIONAL<BOOLEAN>,
-    /**
-     * @summary `activity_identifier`.
-     * @description
-     *
-     * IFS; mandatory if the recovery FU was negotiated.
-     * ISO 8571-3:1988 §17.1.2.9 / §13.11.
-     *
-     * @public
-     * @readonly
-     */
-    readonly activity_identifier?: OPTIONAL<Activity_Identifier>,
-    /**
-     * @summary `recovery_mode`.
-     * @description
-     *
-     * `none` / `at-start-of-file` / `at-any-active-checkpoint` in
-     * decreasing order. IFS; mandatory if restart or recovery was
-     * negotiated. Does not prevent open. Default `none`.
-     * ISO 8571-3:1988 §17.1.2.10.
-     *
-     * @public
-     * @readonly
-     */
-    readonly recovery_mode?: OPTIONAL<F_OPEN_request_recovery_mode>,
-    /**
-     * @summary `remove_contexts`.
-     * @description
-     *
-     * Abstract syntaxes to drop from the defined context list.
-     * ISO 8571-4:1988 F-OPEN-request.
-     *
-     * @public
-     * @readonly
-     */
-    readonly remove_contexts?: OPTIONAL<Abstract_Syntax_Name[]>,
-    /**
-     * @summary `define_contexts`.
-     * @description
-     *
-     * Abstract syntaxes to add to the defined context list.
-     * ISO 8571-4:1988 F-OPEN-request.
-     *
-     * @public
-     * @readonly
-     */
-    readonly define_contexts?: OPTIONAL<Abstract_Syntax_Name[]>,
-    /**
-     * @summary `degree_of_overlap`.
-     * @description
-     *
-     * Absent from ISO 8571:1988 Parts 1–4. ASN.1 comment: conditional
-     * on consecutive-overlap or concurrent-overlap FUs.
-     *
-     * @public
-     * @readonly
-     */
-    readonly degree_of_overlap?: OPTIONAL<Degree_Of_Overlap>,
-    /**
-     * @summary `transfer_window`.
-     * @description
-     *
-     * Absent from ISO 8571:1988 Parts 1–4. ASN.1 comment: conditional
-     * on consecutive-overlap or concurrent-overlap FUs.
-     *
-     * @public
-     * @readonly
-     */
-    readonly transfer_window?: OPTIONAL<INTEGER>
-  ) {}
+    processing_mode: OPTIONAL<F_OPEN_request_processing_mode>,
+    contents_type: F_OPEN_request_contents_type,
+    concurrency_control?: OPTIONAL<Concurrency_Control>,
+    shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,
+    enable_fadu_locking?: OPTIONAL<BOOLEAN>,
+    activity_identifier?: OPTIONAL<Activity_Identifier>,
+    recovery_mode?: OPTIONAL<F_OPEN_request_recovery_mode>,
+    remove_contexts?: OPTIONAL<Abstract_Syntax_Name[]>,
+    define_contexts?: OPTIONAL<Abstract_Syntax_Name[]>,
+    degree_of_overlap?: OPTIONAL<Degree_Of_Overlap>,
+    transfer_window?: OPTIONAL<INTEGER>
+  ) {
+    this.processing_mode = processing_mode;
+    this.contents_type = contents_type;
+    this.concurrency_control = concurrency_control;
+    this.shared_ASE_information = shared_ASE_information;
+    this.enable_fadu_locking = enable_fadu_locking;
+    this.activity_identifier = activity_identifier;
+    this.recovery_mode = recovery_mode;
+    this.remove_contexts = remove_contexts;
+    this.define_contexts = define_contexts;
+    this.degree_of_overlap = degree_of_overlap;
+    this.transfer_window = transfer_window;
+  }
 
   /**
    * @summary Restructures an object into a F_OPEN_request

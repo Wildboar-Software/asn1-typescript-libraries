@@ -30,10 +30,12 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_MetricType {
-  internal = 0,
-  external = 1,
-}
+export const _enum_for_MetricType = {
+  internal: 0,
+  external: 1,
+} as const;
+
+export type _enum_for_MetricType = (typeof _enum_for_MetricType)[keyof typeof _enum_for_MetricType];
 
 /**
  * @summary MetricType
@@ -123,10 +125,10 @@ export const external: MetricType =
   MetricType.external; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_MetricType = $._decodeEnumerated;
+export const _decode_MetricType = $._decodeEnumerated as $.ASN1Decoder<MetricType>;
 
 
-export const _encode_MetricType = $._encodeEnumerated;
+export const _encode_MetricType = $._encodeEnumerated as $.ASN1Encoder<MetricType>;
 
 
 /* eslint-enable */

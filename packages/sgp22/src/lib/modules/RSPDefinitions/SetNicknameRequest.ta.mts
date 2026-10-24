@@ -31,29 +31,34 @@ import { Iccid, _decode_Iccid, _encode_Iccid } from "../RSPDefinitions/Iccid.ta.
  */
 export
 class SetNicknameRequest {
+    /**
+     * @summary `iccid`.
+     * @description
+     * 
+     * Profile to rename. Unknown ICCID is `iccidNotFound`. SGP.22 v3.1
+     * §5.7.21.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly iccid: Iccid;
+    /**
+     * @summary `profileNickname`.
+     * @description
+     * 
+     * UTF-8 nickname, 0 to 64 characters. SGP.22 v3.1 §5.7.21.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly profileNickname: UTF8String;
+
     constructor (
-        /**
-         * @summary `iccid`.
-         * @description
-         * 
-         * Profile to rename. Unknown ICCID is `iccidNotFound`. SGP.22 v3.1
-         * §5.7.21.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly iccid: Iccid,
-        /**
-         * @summary `profileNickname`.
-         * @description
-         * 
-         * UTF-8 nickname, 0 to 64 characters. SGP.22 v3.1 §5.7.21.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly profileNickname: UTF8String
+        iccid: Iccid,
+        profileNickname: UTF8String
     ) {
+        this.iccid = iccid;
+        this.profileNickname = profileNickname;
         if (this.profileNickname.length > 64) {
             throw new ASN1SizeError("SetNicknameRequest.profileNickname violates SIZE constraint");
         }

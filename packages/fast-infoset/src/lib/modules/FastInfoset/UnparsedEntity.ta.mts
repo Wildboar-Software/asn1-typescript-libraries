@@ -39,41 +39,51 @@ import {
  *
  */
 export class UnparsedEntity {
+  /**
+   * @summary `name`.
+   * @description [name]; OTHER NCNAME category. ITU-T Rec.
+   * X.891 (05/2005) §7.10.4.
+   * @public
+   * @readonly
+   */
+  readonly name: IdentifyingStringOrIndex;
+  /**
+   * @summary `system_identifier`.
+   * @description [system identifier]; OTHER URI category.
+   * ITU-T Rec. X.891 (05/2005) §7.10.5.
+   * @public
+   * @readonly
+   */
+  readonly system_identifier: IdentifyingStringOrIndex;
+  /**
+   * @summary `public_identifier`.
+   * @description [public identifier]; OTHER URI category.
+   * Absent means the property has no value. ITU-T Rec. X.891
+   * (05/2005) §7.10.6.
+   * @public
+   * @readonly
+   */
+  readonly public_identifier: OPTIONAL<IdentifyingStringOrIndex>;
+  /**
+   * @summary `notation_name`.
+   * @description [notation name]; OTHER NCNAME category.
+   * ITU-T Rec. X.891 (05/2005) §7.10.7.
+   * @public
+   * @readonly
+   */
+  readonly notation_name: IdentifyingStringOrIndex;
+
   constructor(
-    /**
-     * @summary `name`.
-     * @description [name]; OTHER NCNAME category. ITU-T Rec.
-     * X.891 (05/2005) §7.10.4.
-     * @public
-     * @readonly
-     */
-    readonly name: IdentifyingStringOrIndex,
-    /**
-     * @summary `system_identifier`.
-     * @description [system identifier]; OTHER URI category.
-     * ITU-T Rec. X.891 (05/2005) §7.10.5.
-     * @public
-     * @readonly
-     */
-    readonly system_identifier: IdentifyingStringOrIndex,
-    /**
-     * @summary `public_identifier`.
-     * @description [public identifier]; OTHER URI category.
-     * Absent means the property has no value. ITU-T Rec. X.891
-     * (05/2005) §7.10.6.
-     * @public
-     * @readonly
-     */
-    readonly public_identifier: OPTIONAL<IdentifyingStringOrIndex>,
-    /**
-     * @summary `notation_name`.
-     * @description [notation name]; OTHER NCNAME category.
-     * ITU-T Rec. X.891 (05/2005) §7.10.7.
-     * @public
-     * @readonly
-     */
-    readonly notation_name: IdentifyingStringOrIndex
-  ) {}
+    name: IdentifyingStringOrIndex,
+    system_identifier: IdentifyingStringOrIndex,
+    public_identifier: OPTIONAL<IdentifyingStringOrIndex>,
+    notation_name: IdentifyingStringOrIndex
+  ) {
+    this.name = name;
+    this.system_identifier = system_identifier;
+    this.public_identifier = public_identifier;
+    this.notation_name = notation_name;
+  }
 
   /**
    * @summary Restructures an object into a UnparsedEntity

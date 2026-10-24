@@ -34,39 +34,47 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class Characteristic_two {
+    /**
+     * @summary `m`.
+     * @description
+     *
+     * Field size 2^m. SEC 1 uses `m` in {163, 233, 239, 283, 409, 571}. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf)
+     * §2.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    readonly m: INTEGER;
+    /**
+     * @summary `basis`.
+     * @description
+     *
+     * `gnBasis`, `tpBasis`, or `ppBasis`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.1.
+     *
+     * @public
+     * @readonly
+     */
+    readonly basis: OBJECT_IDENTIFIER;
+    /**
+     * @summary `parameters`.
+     * @description
+     *
+     * `NULL` (normal basis), `Trinomial`, or `Pentanomial`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.1.
+     *
+     * @public
+     * @readonly
+     */
+    readonly parameters: _Element;
+
     constructor (
-        /**
-         * @summary `m`.
-         * @description
-         *
-         * Field size 2^m. SEC 1 uses `m` in {163, 233, 239, 283, 409, 571}. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf)
-         * §2.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly m: INTEGER,
-        /**
-         * @summary `basis`.
-         * @description
-         *
-         * `gnBasis`, `tpBasis`, or `ppBasis`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly basis: OBJECT_IDENTIFIER,
-        /**
-         * @summary `parameters`.
-         * @description
-         *
-         * `NULL` (normal basis), `Trinomial`, or `Pentanomial`. [SEC 1 v2](https://www.secg.org/sec1-v2.pdf) §C.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly parameters: _Element
-    ) {}
+        m: INTEGER,
+        basis: OBJECT_IDENTIFIER,
+        parameters: _Element
+    ) {
+        this.m = m;
+        this.basis = basis;
+        this.parameters = parameters;
+    }
 
     /**
      * @summary Restructures an object into a Characteristic_two

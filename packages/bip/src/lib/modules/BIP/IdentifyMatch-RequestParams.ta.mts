@@ -68,97 +68,115 @@ import {
  *
  */
 export class IdentifyMatch_RequestParams {
+  /**
+   * @summary `originalBSPHandle`.
+   * @description
+   *
+   * Attach-session handle on the hosting (slave) endpoint.
+   * BioAPI `BSPHandle` is rewritten via clauses 24 and 26.
+   * X.1083 §16.35.5.
+   *
+   * @public
+   * @readonly
+   */
+  readonly originalBSPHandle: BioAPI_HANDLE;
+  /**
+   * @summary `maxFMRRequested`.
+   * @description
+   *
+   * Maximum false-match rate requested for identification,
+   * from BioAPI `MaxFMRRequested`. X.1083 §16.35.5.
+   *
+   * @public
+   * @readonly
+   */
+  readonly maxFMRRequested: BioAPI_FMR;
+  /**
+   * @summary `processedBIR`.
+   * @description
+   *
+   * Processed BIR to identify. C `NULL` is unconvertible
+   * (clause 19). X.1083 §16.35.5.
+   *
+   * @public
+   * @readonly
+   */
+  readonly processedBIR: BioAPI_INPUT_BIR;
+  /**
+   * @summary `population`.
+   * @description
+   *
+   * Identification population to search. C `NULL` is
+   * unconvertible (clause 19). X.1083 §16.35.5.
+   *
+   * @public
+   * @readonly
+   */
+  readonly population: BioAPI_IDENTIFY_POPULATION;
+  /**
+   * @summary `totalNumberOfTemplates`.
+   * @description
+   *
+   * Total number of templates in the population, from BioAPI
+   * `TotalNumberOfTemplates`. X.1083 §16.35.5.
+   *
+   * @public
+   * @readonly
+   */
+  readonly totalNumberOfTemplates: UnsignedInt;
+  /**
+   * @summary `binning`.
+   * @description
+   *
+   * Whether binning is requested, from BioAPI `Binning`.
+   * X.1083 §16.35.5.
+   *
+   * @public
+   * @readonly
+   */
+  readonly binning: BOOLEAN;
+  /**
+   * @summary `maxNumberOfResults`.
+   * @description
+   *
+   * Maximum number of candidates to return, from BioAPI
+   * `MaxNumberOfResults`. X.1083 §16.35.5.
+   *
+   * @public
+   * @readonly
+   */
+  readonly maxNumberOfResults: UnsignedInt;
+  /**
+   * @summary `timeout`.
+   * @description
+   *
+   * Identification timeout from BioAPI `Timeout`. X.1083
+   * §16.35.5.
+   *
+   * @public
+   * @readonly
+   */
+  readonly timeout: SignedInt;
+
   constructor(
-    /**
-     * @summary `originalBSPHandle`.
-     * @description
-     *
-     * Attach-session handle on the hosting (slave) endpoint.
-     * BioAPI `BSPHandle` is rewritten via clauses 24 and 26.
-     * X.1083 §16.35.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly originalBSPHandle: BioAPI_HANDLE,
-    /**
-     * @summary `maxFMRRequested`.
-     * @description
-     *
-     * Maximum false-match rate requested for identification,
-     * from BioAPI `MaxFMRRequested`. X.1083 §16.35.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly maxFMRRequested: BioAPI_FMR,
-    /**
-     * @summary `processedBIR`.
-     * @description
-     *
-     * Processed BIR to identify. C `NULL` is unconvertible
-     * (clause 19). X.1083 §16.35.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly processedBIR: BioAPI_INPUT_BIR,
-    /**
-     * @summary `population`.
-     * @description
-     *
-     * Identification population to search. C `NULL` is
-     * unconvertible (clause 19). X.1083 §16.35.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly population: BioAPI_IDENTIFY_POPULATION,
-    /**
-     * @summary `totalNumberOfTemplates`.
-     * @description
-     *
-     * Total number of templates in the population, from BioAPI
-     * `TotalNumberOfTemplates`. X.1083 §16.35.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly totalNumberOfTemplates: UnsignedInt,
-    /**
-     * @summary `binning`.
-     * @description
-     *
-     * Whether binning is requested, from BioAPI `Binning`.
-     * X.1083 §16.35.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly binning: BOOLEAN,
-    /**
-     * @summary `maxNumberOfResults`.
-     * @description
-     *
-     * Maximum number of candidates to return, from BioAPI
-     * `MaxNumberOfResults`. X.1083 §16.35.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly maxNumberOfResults: UnsignedInt,
-    /**
-     * @summary `timeout`.
-     * @description
-     *
-     * Identification timeout from BioAPI `Timeout`. X.1083
-     * §16.35.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly timeout: SignedInt
-  ) {}
+    originalBSPHandle: BioAPI_HANDLE,
+    maxFMRRequested: BioAPI_FMR,
+    processedBIR: BioAPI_INPUT_BIR,
+    population: BioAPI_IDENTIFY_POPULATION,
+    totalNumberOfTemplates: UnsignedInt,
+    binning: BOOLEAN,
+    maxNumberOfResults: UnsignedInt,
+    timeout: SignedInt
+  ) {
+    this.originalBSPHandle = originalBSPHandle;
+    this.maxFMRRequested = maxFMRRequested;
+    this.processedBIR = processedBIR;
+    this.population = population;
+    this.totalNumberOfTemplates = totalNumberOfTemplates;
+    this.binning = binning;
+    this.maxNumberOfResults = maxNumberOfResults;
+    this.timeout = timeout;
+  }
 
   /**
    * @summary Restructures an object into a IdentifyMatch_RequestParams

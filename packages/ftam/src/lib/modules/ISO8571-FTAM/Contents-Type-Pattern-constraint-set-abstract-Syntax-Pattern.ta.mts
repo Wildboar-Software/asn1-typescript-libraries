@@ -32,28 +32,34 @@ import {
  *
  */
 export class Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern {
+  /**
+   * @summary `constraint_Set_Pattern`.
+   * @description
+   *
+   * Absent implies any constraint-set OID equals.
+   *
+   * @public
+   * @readonly
+   */
+  readonly constraint_Set_Pattern?: OPTIONAL<Object_Identifier_Pattern>;
+  /**
+   * @summary `abstract_Syntax_Pattern`.
+   * @description
+   *
+   * Absent implies any abstract-syntax OID equals.
+   *
+   * @public
+   * @readonly
+   */
+  readonly abstract_Syntax_Pattern?: OPTIONAL<Object_Identifier_Pattern>;
+
   constructor(
-    /**
-     * @summary `constraint_Set_Pattern`.
-     * @description
-     *
-     * Absent implies any constraint-set OID equals.
-     *
-     * @public
-     * @readonly
-     */
-    readonly constraint_Set_Pattern?: OPTIONAL<Object_Identifier_Pattern>,
-    /**
-     * @summary `abstract_Syntax_Pattern`.
-     * @description
-     *
-     * Absent implies any abstract-syntax OID equals.
-     *
-     * @public
-     * @readonly
-     */
-    readonly abstract_Syntax_Pattern?: OPTIONAL<Object_Identifier_Pattern>
-  ) {}
+    constraint_Set_Pattern?: OPTIONAL<Object_Identifier_Pattern>,
+    abstract_Syntax_Pattern?: OPTIONAL<Object_Identifier_Pattern>
+  ) {
+    this.constraint_Set_Pattern = constraint_Set_Pattern;
+    this.abstract_Syntax_Pattern = abstract_Syntax_Pattern;
+  }
 
   /**
    * @summary Restructures an object into a Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern

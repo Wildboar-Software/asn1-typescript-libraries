@@ -34,41 +34,49 @@ import { SignalsDescriptor, _decode_SignalsDescriptor, _encode_SignalsDescriptor
  */
 export
 class RegulatedEmbeddedDescriptor {
+    /**
+     * @summary `secondEvent`.
+     * @description
+     *
+     * Events descriptor activated when the regulated notification is
+     * suppressed.
+     *
+     * @public
+     * @readonly
+     */
+    readonly secondEvent?: OPTIONAL<SecondEventsDescriptor>;
+    /**
+     * @summary `signalsDescriptor`.
+     * @description
+     *
+     * Signals descriptor activated when the regulated notification is
+     * suppressed.
+     *
+     * @public
+     * @readonly
+     */
+    readonly signalsDescriptor?: OPTIONAL<SignalsDescriptor>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `secondEvent`.
-         * @description
-         *
-         * Events descriptor activated when the regulated notification is
-         * suppressed.
-         *
-         * @public
-         * @readonly
-         */
-        readonly secondEvent?: OPTIONAL<SecondEventsDescriptor>,
-        /**
-         * @summary `signalsDescriptor`.
-         * @description
-         *
-         * Signals descriptor activated when the regulated notification is
-         * suppressed.
-         *
-         * @public
-         * @readonly
-         */
-        readonly signalsDescriptor?: OPTIONAL<SignalsDescriptor>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        secondEvent?: OPTIONAL<SecondEventsDescriptor>,
+        signalsDescriptor?: OPTIONAL<SignalsDescriptor>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.secondEvent = secondEvent;
+        this.signalsDescriptor = signalsDescriptor;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a RegulatedEmbeddedDescriptor

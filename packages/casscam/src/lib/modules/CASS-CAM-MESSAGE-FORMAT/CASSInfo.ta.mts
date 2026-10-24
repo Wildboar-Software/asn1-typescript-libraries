@@ -49,60 +49,72 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class CASSInfo {
+    /**
+     * @summary `cASSUniqueID`.
+     * @description
+     *
+     * CASS identifier, 4 octets (§7.2 CASS ID).
+     *
+     * @public
+     * @readonly
+     */
+    readonly cASSUniqueID: OCTET_STRING;
+    /**
+     * @summary `cASSIPAddrType`.
+     * @description
+     *
+     * `0x01` IPv4, `0x02` IPv6 (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    readonly cASSIPAddrType: OCTET_STRING;
+    /**
+     * @summary `cASSIPAddr`.
+     * @description
+     *
+     * CASS IP address, 50 octets. Layout of IPv4
+     * vs IPv6 in that field is not specified
+     * (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    readonly cASSIPAddr: OCTET_STRING;
+    /**
+     * @summary `cASSConnectionType`.
+     * @description
+     *
+     * `0x01` UDP, `0x02` TCP (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    readonly cASSConnectionType: OCTET_STRING;
+    /**
+     * @summary `cASSListeningPort`.
+     * @description
+     *
+     * CASS listening port, 4 octets (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    readonly cASSListeningPort: OCTET_STRING;
+
     constructor (
-        /**
-         * @summary `cASSUniqueID`.
-         * @description
-         *
-         * CASS identifier, 4 octets (§7.2 CASS ID).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cASSUniqueID: OCTET_STRING,
-        /**
-         * @summary `cASSIPAddrType`.
-         * @description
-         *
-         * `0x01` IPv4, `0x02` IPv6 (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cASSIPAddrType: OCTET_STRING,
-        /**
-         * @summary `cASSIPAddr`.
-         * @description
-         *
-         * CASS IP address, 50 octets. Layout of IPv4
-         * vs IPv6 in that field is not specified
-         * (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cASSIPAddr: OCTET_STRING,
-        /**
-         * @summary `cASSConnectionType`.
-         * @description
-         *
-         * `0x01` UDP, `0x02` TCP (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cASSConnectionType: OCTET_STRING,
-        /**
-         * @summary `cASSListeningPort`.
-         * @description
-         *
-         * CASS listening port, 4 octets (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cASSListeningPort: OCTET_STRING
-    ) {}
+        cASSUniqueID: OCTET_STRING,
+        cASSIPAddrType: OCTET_STRING,
+        cASSIPAddr: OCTET_STRING,
+        cASSConnectionType: OCTET_STRING,
+        cASSListeningPort: OCTET_STRING
+    ) {
+        this.cASSUniqueID = cASSUniqueID;
+        this.cASSIPAddrType = cASSIPAddrType;
+        this.cASSIPAddr = cASSIPAddr;
+        this.cASSConnectionType = cASSConnectionType;
+        this.cASSListeningPort = cASSListeningPort;
+    }
 
     /**
      * @summary Restructures an object into a CASSInfo

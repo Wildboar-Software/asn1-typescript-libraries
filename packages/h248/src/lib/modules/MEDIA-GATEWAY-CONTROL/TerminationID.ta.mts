@@ -44,42 +44,49 @@ import { WildcardField, _decode_WildcardField, _encode_WildcardField } from "../
  */
 export
 class TerminationID {
+    /**
+     * @summary `wildcard`.
+     * @description
+     *
+     * Zero or more wildcard octets that partially mask `id`. See clause A.1
+     * for the bit layout. Absent when the identifier is fully specified.
+     *
+     * @public
+     * @readonly
+     */
+    readonly wildcard: WildcardField[];
+    /**
+     * @summary `id`.
+     * @description
+     *
+     * Termination identifier, 1 to 8 octets. 0xFFFFFFFFFFFFFFFF is Root
+     * (Annex A). Hierarchy, such as trunk group and trunk, is provisioned
+     * in the MG.
+     *
+     * @public
+     * @readonly
+     */
+    readonly id: OCTET_STRING;
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `wildcard`.
-         * @description
-         *
-         * Zero or more wildcard octets that partially mask `id`. See clause A.1
-         * for the bit layout. Absent when the identifier is fully specified.
-         *
-         * @public
-         * @readonly
-         */
-        readonly wildcard: WildcardField[],
-        /**
-         * @summary `id`.
-         * @description
-         *
-         * Termination identifier, 1 to 8 octets. 0xFFFFFFFFFFFFFFFF is Root
-         * (Annex A). Hierarchy, such as trunk group and trunk, is provisioned
-         * in the MG.
-         *
-         * @public
-         * @readonly
-         */
-        readonly id: OCTET_STRING,
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
+        wildcard: WildcardField[],
+        id: OCTET_STRING,
+        _unrecognizedExtensionsList: _Element[] = []
     ) {
+        this.wildcard = wildcard;
+        this.id = id;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
             if (id.length < 1 || id.length > 8) {
                 throw new ASN1SizeError("TerminationID.id violates SIZE constraint");
             }

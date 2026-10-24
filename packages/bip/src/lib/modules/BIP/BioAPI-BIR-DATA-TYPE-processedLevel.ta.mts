@@ -13,11 +13,13 @@ import {
 import * as $ from '@wildboar/asn1/functional';
 
 
-export enum _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel {
-  raw = 0,
-  intermediate = 1,
-  processed = 2,
-}
+export const _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel = {
+  raw: 0,
+  intermediate: 1,
+  processed: 2,
+} as const;
+
+export type _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel = (typeof _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel)[keyof typeof _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel];
 
 
 /**

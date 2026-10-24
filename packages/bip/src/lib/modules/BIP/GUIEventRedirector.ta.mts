@@ -59,97 +59,115 @@ import {
  *
  */
 export class GUIEventRedirector {
+  /**
+   * @summary `referrerEndpointIRI`.
+   * @description
+   *
+   * Endpoint that holds an attach-session reference (local or
+   * a master) for this redirector. X.1083 §18.12.2.1.
+   *
+   * @public
+   * @readonly
+   */
+  readonly referrerEndpointIRI: EndpointIRI;
+  /**
+   * @summary `bspProductUuid`.
+   * @description
+   *
+   * Product UUID of the BSP whose GUI events are redirected.
+   * X.1083 §18.12.2.2.
+   *
+   * @public
+   * @readonly
+   */
+  readonly bspProductUuid: BioAPI_UUID;
+  /**
+   * @summary `originalBSPHandle`.
+   * @description
+   *
+   * Limits redirection to GUI events of this attach session.
+   * X.1083 §18.12.2.3.
+   *
+   * @public
+   * @readonly
+   */
+  readonly originalBSPHandle: BioAPI_HANDLE;
+  /**
+   * @summary `subscriberEndpointIRI`.
+   * @description
+   *
+   * Endpoint that is to receive the redirected GUI
+   * notifications (local or a master). X.1083 §18.12.2.4.
+   *
+   * @public
+   * @readonly
+   */
+  readonly subscriberEndpointIRI: EndpointIRI;
+  /**
+   * @summary `guiEventSubscriptionUuid`.
+   * @description
+   *
+   * UUID assigned to `guiEventSubscriptionUuid` of the
+   * redirected GUI notifications. X.1083 §18.12.2.5.
+   *
+   * @public
+   * @readonly
+   */
+  readonly guiEventSubscriptionUuid: BioAPI_UUID;
+  /**
+   * @summary `guiSelectEventRedirected`.
+   * @description
+   *
+   * Whether GUI select events are redirected. X.1083
+   * §18.12.2.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly guiSelectEventRedirected: BOOLEAN;
+  /**
+   * @summary `guiStateEventRedirected`.
+   * @description
+   *
+   * Whether GUI state events are redirected. X.1083
+   * §18.12.2.7.
+   *
+   * @public
+   * @readonly
+   */
+  readonly guiStateEventRedirected: BOOLEAN;
+  /**
+   * @summary `guiProgressEventRedirected`.
+   * @description
+   *
+   * Whether GUI progress events are redirected. At least one
+   * of the three redirected flags shall be `TRUE`. X.1083
+   * §18.12.2.8.
+   *
+   * @public
+   * @readonly
+   */
+  readonly guiProgressEventRedirected: BOOLEAN;
+
   constructor(
-    /**
-     * @summary `referrerEndpointIRI`.
-     * @description
-     *
-     * Endpoint that holds an attach-session reference (local or
-     * a master) for this redirector. X.1083 §18.12.2.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly referrerEndpointIRI: EndpointIRI,
-    /**
-     * @summary `bspProductUuid`.
-     * @description
-     *
-     * Product UUID of the BSP whose GUI events are redirected.
-     * X.1083 §18.12.2.2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bspProductUuid: BioAPI_UUID,
-    /**
-     * @summary `originalBSPHandle`.
-     * @description
-     *
-     * Limits redirection to GUI events of this attach session.
-     * X.1083 §18.12.2.3.
-     *
-     * @public
-     * @readonly
-     */
-    readonly originalBSPHandle: BioAPI_HANDLE,
-    /**
-     * @summary `subscriberEndpointIRI`.
-     * @description
-     *
-     * Endpoint that is to receive the redirected GUI
-     * notifications (local or a master). X.1083 §18.12.2.4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly subscriberEndpointIRI: EndpointIRI,
-    /**
-     * @summary `guiEventSubscriptionUuid`.
-     * @description
-     *
-     * UUID assigned to `guiEventSubscriptionUuid` of the
-     * redirected GUI notifications. X.1083 §18.12.2.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly guiEventSubscriptionUuid: BioAPI_UUID,
-    /**
-     * @summary `guiSelectEventRedirected`.
-     * @description
-     *
-     * Whether GUI select events are redirected. X.1083
-     * §18.12.2.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly guiSelectEventRedirected: BOOLEAN,
-    /**
-     * @summary `guiStateEventRedirected`.
-     * @description
-     *
-     * Whether GUI state events are redirected. X.1083
-     * §18.12.2.7.
-     *
-     * @public
-     * @readonly
-     */
-    readonly guiStateEventRedirected: BOOLEAN,
-    /**
-     * @summary `guiProgressEventRedirected`.
-     * @description
-     *
-     * Whether GUI progress events are redirected. At least one
-     * of the three redirected flags shall be `TRUE`. X.1083
-     * §18.12.2.8.
-     *
-     * @public
-     * @readonly
-     */
-    readonly guiProgressEventRedirected: BOOLEAN
-  ) {}
+    referrerEndpointIRI: EndpointIRI,
+    bspProductUuid: BioAPI_UUID,
+    originalBSPHandle: BioAPI_HANDLE,
+    subscriberEndpointIRI: EndpointIRI,
+    guiEventSubscriptionUuid: BioAPI_UUID,
+    guiSelectEventRedirected: BOOLEAN,
+    guiStateEventRedirected: BOOLEAN,
+    guiProgressEventRedirected: BOOLEAN
+  ) {
+    this.referrerEndpointIRI = referrerEndpointIRI;
+    this.bspProductUuid = bspProductUuid;
+    this.originalBSPHandle = originalBSPHandle;
+    this.subscriberEndpointIRI = subscriberEndpointIRI;
+    this.guiEventSubscriptionUuid = guiEventSubscriptionUuid;
+    this.guiSelectEventRedirected = guiSelectEventRedirected;
+    this.guiStateEventRedirected = guiStateEventRedirected;
+    this.guiProgressEventRedirected = guiProgressEventRedirected;
+  }
 
   /**
    * @summary Restructures an object into a GUIEventRedirector

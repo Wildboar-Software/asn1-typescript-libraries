@@ -31,38 +31,50 @@ import { NegHints, _decode_NegHints, _encode_NegHints } from "../Spnego/NegHints
  */
 export
 class NegTokenInit2 {
+    /**
+     * @summary `mechTypes`.
+     * @public
+     * @readonly
+     */
+    readonly mechTypes?: OPTIONAL<MechTypeList>;
+    /**
+     * @summary `reqFlags`.
+     * @public
+     * @readonly
+     */
+    readonly reqFlags?: OPTIONAL<ContextFlags>;
+    /**
+     * @summary `mechToken`.
+     * @public
+     * @readonly
+     */
+    readonly mechToken?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `negHints`.
+     * @public
+     * @readonly
+     */
+    readonly negHints?: OPTIONAL<NegHints>;
+    /**
+     * @summary `mechListMIC`.
+     * @public
+     * @readonly
+     */
+    readonly mechListMIC?: OPTIONAL<OCTET_STRING>;
+
     constructor (
-        /**
-         * @summary `mechTypes`.
-         * @public
-         * @readonly
-         */
-        readonly mechTypes?: OPTIONAL<MechTypeList>,
-        /**
-         * @summary `reqFlags`.
-         * @public
-         * @readonly
-         */
-        readonly reqFlags?: OPTIONAL<ContextFlags>,
-        /**
-         * @summary `mechToken`.
-         * @public
-         * @readonly
-         */
-        readonly mechToken?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `negHints`.
-         * @public
-         * @readonly
-         */
-        readonly negHints?: OPTIONAL<NegHints>,
-        /**
-         * @summary `mechListMIC`.
-         * @public
-         * @readonly
-         */
-        readonly mechListMIC?: OPTIONAL<OCTET_STRING>
-    ) {}
+        mechTypes?: OPTIONAL<MechTypeList>,
+        reqFlags?: OPTIONAL<ContextFlags>,
+        mechToken?: OPTIONAL<OCTET_STRING>,
+        negHints?: OPTIONAL<NegHints>,
+        mechListMIC?: OPTIONAL<OCTET_STRING>
+    ) {
+        this.mechTypes = mechTypes;
+        this.reqFlags = reqFlags;
+        this.mechToken = mechToken;
+        this.negHints = negHints;
+        this.mechListMIC = mechListMIC;
+    }
 
     /**
      * @summary Restructures an object into a NegTokenInit2

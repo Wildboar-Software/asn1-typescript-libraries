@@ -110,139 +110,165 @@ import {
  *
  */
 export class Create_Attributes {
+  /**
+   * @summary `pathname`.
+   * @description
+   *
+   * 1988 filename (kernel). Set at create; changeable.
+   * ISO 8571-2:1988 §12.1.
+   *
+   * @public
+   * @readonly
+   */
+  readonly pathname: Pathname_Attribute;
+  /**
+   * @summary `object_type`.
+   * @description
+   *
+   * Later extension; absent from ISO 8571:1988 Parts 1–4. ASN.1
+   * comment: limited-filestore-management FU. Default `file`.
+   *
+   * @public
+   * @readonly
+   */
+  readonly object_type: OPTIONAL<Object_Type_Attribute>;
+  /**
+   * @summary `permitted_actions`.
+   * @description
+   *
+   * Kernel. Set at create; not changeable. ISO 8571-2:1988 §12.2.
+   *
+   * @public
+   * @readonly
+   */
+  readonly permitted_actions: Permitted_Actions_Attribute;
+  /**
+   * @summary `contents_type`.
+   * @description
+   *
+   * Kernel. Set at create; not changeable. ISO 8571-2:1988 §12.3.
+   *
+   * @public
+   * @readonly
+   */
+  readonly contents_type: Contents_Type_Attribute;
+  /**
+   * @summary `storage_account`.
+   * @description
+   *
+   * Storage group. Set at create; changeable. ISO 8571-2:1988
+   * §12.4.
+   *
+   * @public
+   * @readonly
+   */
+  readonly storage_account?: OPTIONAL<Account_Attribute>;
+  /**
+   * @summary `object_availability`.
+   * @description
+   *
+   * 1988 file-availability (storage group). Set at create;
+   * changeable. ISO 8571-2:1988 §12.13.
+   *
+   * @public
+   * @readonly
+   */
+  readonly object_availability?: OPTIONAL<Object_Availability_Attribute>;
+  /**
+   * @summary `future_Object_size`.
+   * @description
+   *
+   * 1988 future-filesize (storage group). Set at create;
+   * changeable. Filesize itself is not settable on create.
+   * ISO 8571-2:1988 §12.15 / §12.14.
+   *
+   * @public
+   * @readonly
+   */
+  readonly future_Object_size?: OPTIONAL<Object_Size_Attribute>;
+  /**
+   * @summary `access_control`.
+   * @description
+   *
+   * Security group. SET of conditions: OR of conditions, AND of
+   * terms within one. Set at create; changeable.
+   * ISO 8571-2:1988 §12.16.
+   *
+   * @public
+   * @readonly
+   */
+  readonly access_control?: OPTIONAL<Access_Control_Attribute>;
+  /**
+   * @summary `path_access_control`.
+   * @description
+   *
+   * Later extension; absent from ISO 8571:1988 Parts 1–4. ASN.1
+   * comment: enhanced-filestore-management FU.
+   *
+   * @public
+   * @readonly
+   */
+  readonly path_access_control?: OPTIONAL<Access_Control_Attribute>;
+  /**
+   * @summary `legal_qualification`.
+   * @description
+   *
+   * Security group. Set at create; changeable. ISO 8571-2:1988
+   * §12.17.
+   *
+   * @public
+   * @readonly
+   */
+  readonly legal_qualification?: OPTIONAL<Legal_Qualification_Attribute>;
+  /**
+   * @summary `private_use`.
+   * @description
+   *
+   * Private group. Meaning not defined in ISO 8571-2:1988 §12.18.
+   * Set at create; changeable.
+   *
+   * @public
+   * @readonly
+   */
+  readonly private_use?: OPTIONAL<Private_Use_Attribute>;
+  /**
+   * @summary `attribute_extensions`.
+   * @description
+   *
+   * Later extension; absent from ISO 8571:1988 Parts 1–4.
+   *
+   * @public
+   * @readonly
+   */
+  readonly attribute_extensions?: OPTIONAL<Attribute_Extensions>;
+
   constructor(
-    /**
-     * @summary `pathname`.
-     * @description
-     *
-     * 1988 filename (kernel). Set at create; changeable.
-     * ISO 8571-2:1988 §12.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly pathname: Pathname_Attribute,
-    /**
-     * @summary `object_type`.
-     * @description
-     *
-     * Later extension; absent from ISO 8571:1988 Parts 1–4. ASN.1
-     * comment: limited-filestore-management FU. Default `file`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly object_type: OPTIONAL<Object_Type_Attribute>,
-    /**
-     * @summary `permitted_actions`.
-     * @description
-     *
-     * Kernel. Set at create; not changeable. ISO 8571-2:1988 §12.2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly permitted_actions: Permitted_Actions_Attribute,
-    /**
-     * @summary `contents_type`.
-     * @description
-     *
-     * Kernel. Set at create; not changeable. ISO 8571-2:1988 §12.3.
-     *
-     * @public
-     * @readonly
-     */
-    readonly contents_type: Contents_Type_Attribute,
-    /**
-     * @summary `storage_account`.
-     * @description
-     *
-     * Storage group. Set at create; changeable. ISO 8571-2:1988
-     * §12.4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly storage_account?: OPTIONAL<Account_Attribute>,
-    /**
-     * @summary `object_availability`.
-     * @description
-     *
-     * 1988 file-availability (storage group). Set at create;
-     * changeable. ISO 8571-2:1988 §12.13.
-     *
-     * @public
-     * @readonly
-     */
-    readonly object_availability?: OPTIONAL<Object_Availability_Attribute>,
-    /**
-     * @summary `future_Object_size`.
-     * @description
-     *
-     * 1988 future-filesize (storage group). Set at create;
-     * changeable. Filesize itself is not settable on create.
-     * ISO 8571-2:1988 §12.15 / §12.14.
-     *
-     * @public
-     * @readonly
-     */
-    readonly future_Object_size?: OPTIONAL<Object_Size_Attribute>,
-    /**
-     * @summary `access_control`.
-     * @description
-     *
-     * Security group. SET of conditions: OR of conditions, AND of
-     * terms within one. Set at create; changeable.
-     * ISO 8571-2:1988 §12.16.
-     *
-     * @public
-     * @readonly
-     */
-    readonly access_control?: OPTIONAL<Access_Control_Attribute>,
-    /**
-     * @summary `path_access_control`.
-     * @description
-     *
-     * Later extension; absent from ISO 8571:1988 Parts 1–4. ASN.1
-     * comment: enhanced-filestore-management FU.
-     *
-     * @public
-     * @readonly
-     */
-    readonly path_access_control?: OPTIONAL<Access_Control_Attribute>,
-    /**
-     * @summary `legal_qualification`.
-     * @description
-     *
-     * Security group. Set at create; changeable. ISO 8571-2:1988
-     * §12.17.
-     *
-     * @public
-     * @readonly
-     */
-    readonly legal_qualification?: OPTIONAL<Legal_Qualification_Attribute>,
-    /**
-     * @summary `private_use`.
-     * @description
-     *
-     * Private group. Meaning not defined in ISO 8571-2:1988 §12.18.
-     * Set at create; changeable.
-     *
-     * @public
-     * @readonly
-     */
-    readonly private_use?: OPTIONAL<Private_Use_Attribute>,
-    /**
-     * @summary `attribute_extensions`.
-     * @description
-     *
-     * Later extension; absent from ISO 8571:1988 Parts 1–4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly attribute_extensions?: OPTIONAL<Attribute_Extensions>
-  ) {}
+    pathname: Pathname_Attribute,
+    object_type: OPTIONAL<Object_Type_Attribute>,
+    permitted_actions: Permitted_Actions_Attribute,
+    contents_type: Contents_Type_Attribute,
+    storage_account?: OPTIONAL<Account_Attribute>,
+    object_availability?: OPTIONAL<Object_Availability_Attribute>,
+    future_Object_size?: OPTIONAL<Object_Size_Attribute>,
+    access_control?: OPTIONAL<Access_Control_Attribute>,
+    path_access_control?: OPTIONAL<Access_Control_Attribute>,
+    legal_qualification?: OPTIONAL<Legal_Qualification_Attribute>,
+    private_use?: OPTIONAL<Private_Use_Attribute>,
+    attribute_extensions?: OPTIONAL<Attribute_Extensions>
+  ) {
+    this.pathname = pathname;
+    this.object_type = object_type;
+    this.permitted_actions = permitted_actions;
+    this.contents_type = contents_type;
+    this.storage_account = storage_account;
+    this.object_availability = object_availability;
+    this.future_Object_size = future_Object_size;
+    this.access_control = access_control;
+    this.path_access_control = path_access_control;
+    this.legal_qualification = legal_qualification;
+    this.private_use = private_use;
+    this.attribute_extensions = attribute_extensions;
+  }
 
   /**
    * @summary Restructures an object into a Create_Attributes

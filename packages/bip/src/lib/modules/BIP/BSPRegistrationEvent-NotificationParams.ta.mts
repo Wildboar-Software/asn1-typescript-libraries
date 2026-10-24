@@ -41,31 +41,37 @@ import {
  *
  */
 export class BSPRegistrationEvent_NotificationParams {
+  /**
+   * @summary `bspSchema`.
+   * @description
+   *
+   * BSP schema as registered (or updated) in the slave
+   * registry. X.1083 §16.59.2.
+   *
+   * @public
+   * @readonly
+   */
+  readonly bspSchema: BioAPI_BSP_SCHEMA;
+  /**
+   * @summary `update`.
+   * @description
+   *
+   * `TRUE` if this replaces an existing registration of the
+   * same BSP product UUID at that endpoint; `FALSE` if it is a
+   * new registration. X.1083 §16.59.3.1, §16.59.5.
+   *
+   * @public
+   * @readonly
+   */
+  readonly update: BOOLEAN;
+
   constructor(
-    /**
-     * @summary `bspSchema`.
-     * @description
-     *
-     * BSP schema as registered (or updated) in the slave
-     * registry. X.1083 §16.59.2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bspSchema: BioAPI_BSP_SCHEMA,
-    /**
-     * @summary `update`.
-     * @description
-     *
-     * `TRUE` if this replaces an existing registration of the
-     * same BSP product UUID at that endpoint; `FALSE` if it is a
-     * new registration. X.1083 §16.59.3.1, §16.59.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly update: BOOLEAN
-  ) {}
+    bspSchema: BioAPI_BSP_SCHEMA,
+    update: BOOLEAN
+  ) {
+    this.bspSchema = bspSchema;
+    this.update = update;
+  }
 
   /**
    * @summary Restructures an object into a BSPRegistrationEvent_NotificationParams

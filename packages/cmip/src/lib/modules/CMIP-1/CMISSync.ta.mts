@@ -30,10 +30,12 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_CMISSync {
-  bestEffort = 0,
-  atomic = 1,
-}
+export const _enum_for_CMISSync = {
+  bestEffort: 0,
+  atomic: 1,
+} as const;
+
+export type _enum_for_CMISSync = (typeof _enum_for_CMISSync)[keyof typeof _enum_for_CMISSync];
 
 
 /**
@@ -113,12 +115,12 @@ export const atomic: CMISSync =
 
 
 
-export const _decode_CMISSync = $._decodeEnumerated;
+export const _decode_CMISSync = $._decodeEnumerated as $.ASN1Decoder<CMISSync>;
 
 
 
 
-export const _encode_CMISSync = $._encodeEnumerated;
+export const _encode_CMISSync = $._encodeEnumerated as $.ASN1Encoder<CMISSync>;
 
 
 /* eslint-enable */

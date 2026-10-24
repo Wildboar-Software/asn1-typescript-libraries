@@ -13,11 +13,13 @@ import {
 import * as $ from '@wildboar/asn1/functional';
 
 
-export enum _enum_for_BioAPI_POWER_MODE {
-  normal = 0,
-  detect = 1,
-  sleep = 2,
-}
+export const _enum_for_BioAPI_POWER_MODE = {
+  normal: 0,
+  detect: 1,
+  sleep: 2,
+} as const;
+
+export type _enum_for_BioAPI_POWER_MODE = (typeof _enum_for_BioAPI_POWER_MODE)[keyof typeof _enum_for_BioAPI_POWER_MODE];
 
 
 /**

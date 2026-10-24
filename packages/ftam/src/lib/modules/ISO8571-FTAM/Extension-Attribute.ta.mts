@@ -33,28 +33,34 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class Extension_Attribute {
+  /**
+   * @summary `extension_attribute_identifier`.
+   * @description
+   *
+   * OID of this extension attribute (`TYPE-IDENTIFIER.&id`).
+   *
+   * @public
+   * @readonly
+   */
+  readonly extension_attribute_identifier: OBJECT_IDENTIFIER;
+  /**
+   * @summary `extension_attribute`.
+   * @description
+   *
+   * Open-type value bound by that identifier.
+   *
+   * @public
+   * @readonly
+   */
+  readonly extension_attribute: _Element;
+
   constructor(
-    /**
-     * @summary `extension_attribute_identifier`.
-     * @description
-     *
-     * OID of this extension attribute (`TYPE-IDENTIFIER.&id`).
-     *
-     * @public
-     * @readonly
-     */
-    readonly extension_attribute_identifier: OBJECT_IDENTIFIER,
-    /**
-     * @summary `extension_attribute`.
-     * @description
-     *
-     * Open-type value bound by that identifier.
-     *
-     * @public
-     * @readonly
-     */
-    readonly extension_attribute: _Element
-  ) {}
+    extension_attribute_identifier: OBJECT_IDENTIFIER,
+    extension_attribute: _Element
+  ) {
+    this.extension_attribute_identifier = extension_attribute_identifier;
+    this.extension_attribute = extension_attribute;
+  }
 
   /**
    * @summary Restructures an object into a Extension_Attribute

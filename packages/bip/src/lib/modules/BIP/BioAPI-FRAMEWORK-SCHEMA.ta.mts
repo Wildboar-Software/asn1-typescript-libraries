@@ -66,76 +66,96 @@ import {
  *
  */
 export class BioAPI_FRAMEWORK_SCHEMA {
+  /**
+   * @summary `fwProductUuid`.
+   * @description
+   *
+   * Persistent product UUID of the framework. X.1083 §15.33.
+   *
+   * @public
+   * @readonly
+   */
+  readonly fwProductUuid: BioAPI_UUID;
+  /**
+   * @summary `description`.
+   * @public
+   * @readonly
+   */
+  readonly description: BioAPI_STRING;
+  /**
+   * @summary `path`.
+   * @description
+   *
+   * Installation path as UTF-8. C NULL is unconvertible (not
+   * OPTIONAL). X.1083 §15.2, §15.33.
+   *
+   * @public
+   * @readonly
+   */
+  readonly path: UTF8String;
+  /**
+   * @summary `specVersion`.
+   * @public
+   * @readonly
+   */
+  readonly specVersion: BioAPI_VERSION;
+  /**
+   * @summary `productVersion`.
+   * @public
+   * @readonly
+   */
+  readonly productVersion: BioAPI_STRING;
+  /**
+   * @summary `vendor`.
+   * @public
+   * @readonly
+   */
+  readonly vendor: BioAPI_STRING;
+  /**
+   * @summary `propertyUuid`.
+   * @public
+   * @readonly
+   */
+  readonly propertyUuid: BioAPI_UUID;
+  /**
+   * @summary `property`.
+   * @public
+   * @readonly
+   */
+  readonly property: BioAPI_DATA;
+  /**
+   * @summary `hostingEndpointIRI`.
+   * @description
+   *
+   * Endpoint where this framework instance runs. The local
+   * endpoint IRI means local (C NULL). X.1083 §15.3, §15.33.
+   *
+   * @public
+   * @readonly
+   */
+  readonly hostingEndpointIRI: EndpointIRI;
+
   constructor(
-    /**
-     * @summary `fwProductUuid`.
-     * @description
-     *
-     * Persistent product UUID of the framework. X.1083 §15.33.
-     *
-     * @public
-     * @readonly
-     */
-    readonly fwProductUuid: BioAPI_UUID,
-    /**
-     * @summary `description`.
-     * @public
-     * @readonly
-     */
-    readonly description: BioAPI_STRING,
-    /**
-     * @summary `path`.
-     * @description
-     *
-     * Installation path as UTF-8. C NULL is unconvertible (not
-     * OPTIONAL). X.1083 §15.2, §15.33.
-     *
-     * @public
-     * @readonly
-     */
-    readonly path: UTF8String,
-    /**
-     * @summary `specVersion`.
-     * @public
-     * @readonly
-     */
-    readonly specVersion: BioAPI_VERSION,
-    /**
-     * @summary `productVersion`.
-     * @public
-     * @readonly
-     */
-    readonly productVersion: BioAPI_STRING,
-    /**
-     * @summary `vendor`.
-     * @public
-     * @readonly
-     */
-    readonly vendor: BioAPI_STRING,
-    /**
-     * @summary `propertyUuid`.
-     * @public
-     * @readonly
-     */
-    readonly propertyUuid: BioAPI_UUID,
-    /**
-     * @summary `property`.
-     * @public
-     * @readonly
-     */
-    readonly property: BioAPI_DATA,
-    /**
-     * @summary `hostingEndpointIRI`.
-     * @description
-     *
-     * Endpoint where this framework instance runs. The local
-     * endpoint IRI means local (C NULL). X.1083 §15.3, §15.33.
-     *
-     * @public
-     * @readonly
-     */
-    readonly hostingEndpointIRI: EndpointIRI
-  ) {}
+    fwProductUuid: BioAPI_UUID,
+    description: BioAPI_STRING,
+    path: UTF8String,
+    specVersion: BioAPI_VERSION,
+    productVersion: BioAPI_STRING,
+    vendor: BioAPI_STRING,
+    propertyUuid: BioAPI_UUID,
+    property: BioAPI_DATA,
+    hostingEndpointIRI: EndpointIRI
+  ) {
+    this.fwProductUuid = fwProductUuid;
+    this.description = description;
+    this.path = path;
+    this.specVersion = specVersion;
+    this.productVersion = productVersion;
+    this.vendor = vendor;
+    this.propertyUuid = propertyUuid;
+    this.property = property;
+    this.hostingEndpointIRI = hostingEndpointIRI;
+  }
 
   /**
    * @summary Restructures an object into a BioAPI_FRAMEWORK_SCHEMA

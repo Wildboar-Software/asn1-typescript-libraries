@@ -49,41 +49,49 @@ import {
  *
  */
 export class SetIndicatorStatus_RequestParams {
+  /**
+   * @summary `originalBSPHandle`.
+   * @description
+   *
+   * Hosting-endpoint BSP handle. Rewritten from the master's local
+   * `BSPHandle` (cl.26) (`X.1083 §16.54`, Table 114).
+   *
+   * @public
+   * @readonly
+   */
+  readonly originalBSPHandle: BioAPI_HANDLE;
+  /**
+   * @summary `unitID`.
+   * @description
+   *
+   * Unit whose indicator is set, from C `UnitID` (`X.1083 §16.54`,
+   * Table 114, §15.55).
+   *
+   * @public
+   * @readonly
+   */
+  readonly unitID: BioAPI_UNIT_ID;
+  /**
+   * @summary `indicatorStatus`.
+   * @description
+   *
+   * From C `IndicatorStatus` (`accept`/`reject`/`ready`/`busy`/
+   * `failure`) (`X.1083 §16.54`, Table 114, §15.45).
+   *
+   * @public
+   * @readonly
+   */
+  readonly indicatorStatus: BioAPI_INDICATOR_STATUS;
+
   constructor(
-    /**
-     * @summary `originalBSPHandle`.
-     * @description
-     *
-     * Hosting-endpoint BSP handle. Rewritten from the master's local
-     * `BSPHandle` (cl.26) (`X.1083 §16.54`, Table 114).
-     *
-     * @public
-     * @readonly
-     */
-    readonly originalBSPHandle: BioAPI_HANDLE,
-    /**
-     * @summary `unitID`.
-     * @description
-     *
-     * Unit whose indicator is set, from C `UnitID` (`X.1083 §16.54`,
-     * Table 114, §15.55).
-     *
-     * @public
-     * @readonly
-     */
-    readonly unitID: BioAPI_UNIT_ID,
-    /**
-     * @summary `indicatorStatus`.
-     * @description
-     *
-     * From C `IndicatorStatus` (`accept`/`reject`/`ready`/`busy`/
-     * `failure`) (`X.1083 §16.54`, Table 114, §15.45).
-     *
-     * @public
-     * @readonly
-     */
-    readonly indicatorStatus: BioAPI_INDICATOR_STATUS
-  ) {}
+    originalBSPHandle: BioAPI_HANDLE,
+    unitID: BioAPI_UNIT_ID,
+    indicatorStatus: BioAPI_INDICATOR_STATUS
+  ) {
+    this.originalBSPHandle = originalBSPHandle;
+    this.unitID = unitID;
+    this.indicatorStatus = indicatorStatus;
+  }
 
   /**
    * @summary Restructures an object into a SetIndicatorStatus_RequestParams

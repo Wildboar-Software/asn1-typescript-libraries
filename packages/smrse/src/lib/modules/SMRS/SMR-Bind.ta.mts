@@ -41,45 +41,53 @@ import { Password, _decode_Password, _encode_Password } from "../SMRS/Password.t
  */
 export
 class SMR_Bind {
+    /**
+     * @summary `sc_address`.
+     * @description
+     *
+     * PLMN address of the service centre as seen by mobile
+     * stations. Clause 3.2 uses that description for
+     * `iSDNAddress` inside `Name`. The Nokia profile also
+     * requires the international format.
+     *
+     * @public
+     * @readonly
+     */
+    readonly sc_address: SMS_Address;
+    /**
+     * @summary `password`.
+     * @description
+     *
+     * May assist in authentication (clause 3.2). The report
+     * limits it to `ub-password-length` (20) and makes it
+     * optional on bind. This profile requires it. `Password`
+     * does not enforce the length.
+     *
+     * @public
+     * @readonly
+     */
+    readonly password: Password;
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions after the root components. The Nokia
+     * profile leaves the sequence open.
+     *
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `sc_address`.
-         * @description
-         *
-         * PLMN address of the service centre as seen by mobile
-         * stations. Clause 3.2 uses that description for
-         * `iSDNAddress` inside `Name`. The Nokia profile also
-         * requires the international format.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sc_address: SMS_Address,
-        /**
-         * @summary `password`.
-         * @description
-         *
-         * May assist in authentication (clause 3.2). The report
-         * limits it to `ub-password-length` (20) and makes it
-         * optional on bind. This profile requires it. `Password`
-         * does not enforce the length.
-         *
-         * @public
-         * @readonly
-         */
-        readonly password: Password,
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions after the root components. The Nokia
-         * profile leaves the sequence open.
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        sc_address: SMS_Address,
+        password: Password,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.sc_address = sc_address;
+        this.password = password;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SMR_Bind

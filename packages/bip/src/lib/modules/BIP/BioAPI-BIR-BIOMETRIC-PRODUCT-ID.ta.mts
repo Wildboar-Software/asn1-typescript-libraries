@@ -38,20 +38,26 @@ import {
  *
  */
 export class BioAPI_BIR_BIOMETRIC_PRODUCT_ID {
+  /**
+   * @summary `productOwner`.
+   * @public
+   * @readonly
+   */
+  readonly productOwner: UnsignedShort;
+  /**
+   * @summary `productType`.
+   * @public
+   * @readonly
+   */
+  readonly productType: UnsignedShort;
+
   constructor(
-    /**
-     * @summary `productOwner`.
-     * @public
-     * @readonly
-     */
-    readonly productOwner: UnsignedShort,
-    /**
-     * @summary `productType`.
-     * @public
-     * @readonly
-     */
-    readonly productType: UnsignedShort
-  ) {}
+    productOwner: UnsignedShort,
+    productType: UnsignedShort
+  ) {
+    this.productOwner = productOwner;
+    this.productType = productType;
+  }
 
   /**
    * @summary Restructures an object into a BioAPI_BIR_BIOMETRIC_PRODUCT_ID

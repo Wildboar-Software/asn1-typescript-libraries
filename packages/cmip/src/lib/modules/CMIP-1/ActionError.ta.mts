@@ -51,54 +51,66 @@ import {
  *
  */
 export class ActionError {
+  /**
+   * @summary `managedObjectClass`.
+   * @description
+   *
+   * Class of the object on which the action failed.
+   *
+   * @public
+   * @readonly
+   */
+  readonly managedObjectClass: OPTIONAL<ObjectClass>;
+  /**
+   * @summary `managedObjectInstance`.
+   * @description
+   *
+   * Instance on which the action failed.
+   *
+   * @public
+   * @readonly
+   */
+  readonly managedObjectInstance: OPTIONAL<ObjectInstance>;
+  /**
+   * @summary `currentTime`.
+   * @description
+   *
+   * Time associated with this error, if supplied.
+   *
+   * @public
+   * @readonly
+   */
+  readonly currentTime: OPTIONAL<GeneralizedTime>;
+  /**
+   * @summary `actionErrorInfo`.
+   * @description
+   *
+   * Status and identifying information for the failure.
+   *
+   * @public
+   * @readonly
+   */
+  readonly actionErrorInfo: ActionErrorInfo;
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  readonly _unrecognizedExtensionsList: _Element[];
+
   constructor(
-    /**
-     * @summary `managedObjectClass`.
-     * @description
-     *
-     * Class of the object on which the action failed.
-     *
-     * @public
-     * @readonly
-     */
-    readonly managedObjectClass: OPTIONAL<ObjectClass>,
-    /**
-     * @summary `managedObjectInstance`.
-     * @description
-     *
-     * Instance on which the action failed.
-     *
-     * @public
-     * @readonly
-     */
-    readonly managedObjectInstance: OPTIONAL<ObjectInstance>,
-    /**
-     * @summary `currentTime`.
-     * @description
-     *
-     * Time associated with this error, if supplied.
-     *
-     * @public
-     * @readonly
-     */
-    readonly currentTime: OPTIONAL<GeneralizedTime>,
-    /**
-     * @summary `actionErrorInfo`.
-     * @description
-     *
-     * Status and identifying information for the failure.
-     *
-     * @public
-     * @readonly
-     */
-    readonly actionErrorInfo: ActionErrorInfo,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = []
-  ) {}
+    managedObjectClass: OPTIONAL<ObjectClass>,
+    managedObjectInstance: OPTIONAL<ObjectInstance>,
+    currentTime: OPTIONAL<GeneralizedTime>,
+    actionErrorInfo: ActionErrorInfo,
+    _unrecognizedExtensionsList: _Element[] = []
+  ) {
+    this.managedObjectClass = managedObjectClass;
+    this.managedObjectInstance = managedObjectInstance;
+    this.currentTime = currentTime;
+    this.actionErrorInfo = actionErrorInfo;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+  }
 
   /**
    * @summary Restructures an object into a ActionError

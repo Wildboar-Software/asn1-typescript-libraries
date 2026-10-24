@@ -30,11 +30,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @enum {number}
  */
 export
-enum _enum_for_AdministrativeState {
-    locked = 0,
-    unlocked = 1,
-    shuttingDown = 2,
-}
+const _enum_for_AdministrativeState = {
+    locked: 0,
+    unlocked: 1,
+    shuttingDown: 2,
+} as const;
+
+export type _enum_for_AdministrativeState = (typeof _enum_for_AdministrativeState)[keyof typeof _enum_for_AdministrativeState];
 
 /**
  * @summary AdministrativeState
@@ -155,10 +157,10 @@ export
 const shuttingDown: AdministrativeState = AdministrativeState.shuttingDown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_AdministrativeState = $._decodeEnumerated;
+export const _decode_AdministrativeState = $._decodeEnumerated as $.ASN1Decoder<AdministrativeState>;
 
 
-export const _encode_AdministrativeState = $._encodeEnumerated;
+export const _encode_AdministrativeState = $._encodeEnumerated as $.ASN1Encoder<AdministrativeState>;
 
 
 /* eslint-enable */

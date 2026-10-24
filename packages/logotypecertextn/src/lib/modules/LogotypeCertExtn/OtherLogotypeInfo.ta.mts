@@ -36,24 +36,30 @@ import { LogotypeInfo, _decode_LogotypeInfo, _encode_LogotypeInfo } from "../Log
  */
 export
 class OtherLogotypeInfo {
+    /**
+     * Class of this logotype. {@link id_logo_loyalty} and
+     * {@link id_logo_background} are defined here; any other OID
+     * is a local definition.
+     *
+     * [RFC 3709, section 4.2](https://www.rfc-editor.org/rfc/rfc3709#section-4.2).
+     * @public
+     * @readonly
+     */
+    readonly logotypeType: OBJECT_IDENTIFIER;
+    /**
+     * The logotype data, addressed directly or indirectly.
+     * @public
+     * @readonly
+     */
+    readonly info: LogotypeInfo;
+
     constructor (
-        /**
-         * Class of this logotype. {@link id_logo_loyalty} and
-         * {@link id_logo_background} are defined here; any other OID
-         * is a local definition.
-         *
-         * [RFC 3709, section 4.2](https://www.rfc-editor.org/rfc/rfc3709#section-4.2).
-         * @public
-         * @readonly
-         */
-        readonly logotypeType: OBJECT_IDENTIFIER,
-        /**
-         * The logotype data, addressed directly or indirectly.
-         * @public
-         * @readonly
-         */
-        readonly info: LogotypeInfo
-    ) {}
+        logotypeType: OBJECT_IDENTIFIER,
+        info: LogotypeInfo
+    ) {
+        this.logotypeType = logotypeType;
+        this.info = info;
+    }
 
     /**
      * @summary Restructures an object into a OtherLogotypeInfo

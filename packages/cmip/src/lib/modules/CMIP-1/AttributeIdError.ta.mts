@@ -44,34 +44,42 @@ import {
  *
  */
 export class AttributeIdError {
+  /**
+   * @summary `errorStatus`.
+   * @description
+   *
+   * `accessDenied` (2) or `noSuchAttribute` (5).
+   *
+   * @public
+   * @readonly
+   */
+  readonly errorStatus: AttributeIdError_errorStatus;
+  /**
+   * @summary `attributeId`.
+   * @description
+   *
+   * Attribute to which the error applies.
+   *
+   * @public
+   * @readonly
+   */
+  readonly attributeId: AttributeId;
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  readonly _unrecognizedExtensionsList: _Element[];
+
   constructor(
-    /**
-     * @summary `errorStatus`.
-     * @description
-     *
-     * `accessDenied` (2) or `noSuchAttribute` (5).
-     *
-     * @public
-     * @readonly
-     */
-    readonly errorStatus: AttributeIdError_errorStatus,
-    /**
-     * @summary `attributeId`.
-     * @description
-     *
-     * Attribute to which the error applies.
-     *
-     * @public
-     * @readonly
-     */
-    readonly attributeId: AttributeId,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = []
-  ) {}
+    errorStatus: AttributeIdError_errorStatus,
+    attributeId: AttributeId,
+    _unrecognizedExtensionsList: _Element[] = []
+  ) {
+    this.errorStatus = errorStatus;
+    this.attributeId = attributeId;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+  }
 
   /**
    * @summary Restructures an object into a AttributeIdError

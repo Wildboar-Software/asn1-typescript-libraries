@@ -66,65 +66,77 @@ import {
  *
  */
 export class UnitEventInfo {
+  /**
+   * @summary `hostingEndpointIRI`.
+   * @description
+   *
+   * Endpoint whose BSP raised the event: local IRI after a
+   * BioSPI callback, or `slaveEndpointIRI` of the incoming
+   * `unitEvent` notification. X.1083 §17.1.5–17.1.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly hostingEndpointIRI: EndpointIRI;
+  /**
+   * @summary `bspProductUuid`.
+   * @description
+   *
+   * Copied from the matching component of
+   * `UnitEvent-NotificationParams`. X.1083 §17.1.5–17.1.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly bspProductUuid: BioAPI_UUID;
+  /**
+   * @summary `unitID`.
+   * @description
+   *
+   * Copied from the matching component of
+   * `UnitEvent-NotificationParams`. X.1083 §17.1.5–17.1.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly unitID: BioAPI_UNIT_ID;
+  /**
+   * @summary `unitSchema`.
+   * @description
+   *
+   * Copied from the matching component of
+   * `UnitEvent-NotificationParams` (presence and value).
+   * X.1083 §17.1.5–17.1.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly unitSchema: OPTIONAL<BioAPI_UNIT_SCHEMA>;
+  /**
+   * @summary `unitEventType`.
+   * @description
+   *
+   * Copied from the matching component of
+   * `UnitEvent-NotificationParams`. X.1083 §17.1.5–17.1.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly unitEventType: BioAPI_UNIT_EVENT_TYPE;
+
   constructor(
-    /**
-     * @summary `hostingEndpointIRI`.
-     * @description
-     *
-     * Endpoint whose BSP raised the event: local IRI after a
-     * BioSPI callback, or `slaveEndpointIRI` of the incoming
-     * `unitEvent` notification. X.1083 §17.1.5–17.1.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly hostingEndpointIRI: EndpointIRI,
-    /**
-     * @summary `bspProductUuid`.
-     * @description
-     *
-     * Copied from the matching component of
-     * `UnitEvent-NotificationParams`. X.1083 §17.1.5–17.1.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bspProductUuid: BioAPI_UUID,
-    /**
-     * @summary `unitID`.
-     * @description
-     *
-     * Copied from the matching component of
-     * `UnitEvent-NotificationParams`. X.1083 §17.1.5–17.1.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly unitID: BioAPI_UNIT_ID,
-    /**
-     * @summary `unitSchema`.
-     * @description
-     *
-     * Copied from the matching component of
-     * `UnitEvent-NotificationParams` (presence and value).
-     * X.1083 §17.1.5–17.1.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly unitSchema: OPTIONAL<BioAPI_UNIT_SCHEMA>,
-    /**
-     * @summary `unitEventType`.
-     * @description
-     *
-     * Copied from the matching component of
-     * `UnitEvent-NotificationParams`. X.1083 §17.1.5–17.1.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly unitEventType: BioAPI_UNIT_EVENT_TYPE
-  ) {}
+    hostingEndpointIRI: EndpointIRI,
+    bspProductUuid: BioAPI_UUID,
+    unitID: BioAPI_UNIT_ID,
+    unitSchema: OPTIONAL<BioAPI_UNIT_SCHEMA>,
+    unitEventType: BioAPI_UNIT_EVENT_TYPE
+  ) {
+    this.hostingEndpointIRI = hostingEndpointIRI;
+    this.bspProductUuid = bspProductUuid;
+    this.unitID = unitID;
+    this.unitSchema = unitSchema;
+    this.unitEventType = unitEventType;
+  }
 
   /**
    * @summary Restructures an object into a UnitEventInfo

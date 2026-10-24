@@ -28,20 +28,26 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class SBFormat {
+  /**
+   * @summary `sb_owner`.
+   * @public
+   * @readonly
+   */
+  readonly sb_owner?: OPTIONAL<INTEGER>;
+  /**
+   * @summary `sb_type`.
+   * @public
+   * @readonly
+   */
+  readonly sb_type?: OPTIONAL<INTEGER>;
+
   constructor(
-    /**
-     * @summary `sb_owner`.
-     * @public
-     * @readonly
-     */
-    readonly sb_owner?: OPTIONAL<INTEGER>,
-    /**
-     * @summary `sb_type`.
-     * @public
-     * @readonly
-     */
-    readonly sb_type?: OPTIONAL<INTEGER>
-  ) {}
+    sb_owner?: OPTIONAL<INTEGER>,
+    sb_type?: OPTIONAL<INTEGER>
+  ) {
+    this.sb_owner = sb_owner;
+    this.sb_type = sb_type;
+  }
 
   /**
    * @summary Restructures an object into a SBFormat

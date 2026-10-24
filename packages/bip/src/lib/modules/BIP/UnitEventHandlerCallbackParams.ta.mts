@@ -66,70 +66,84 @@ import {
  *
  */
 export class UnitEventHandlerCallbackParams {
+  /**
+   * @summary `unitEventHandlerAddress`.
+   * @description
+   *
+   * Address of the `BioAPI_EVENT_HANDLER` to invoke; not a
+   * function parameter. Conversion applies X.1083 §15.1.7.
+   * X.1083 §17.1.9, Table 123.
+   *
+   * @public
+   * @readonly
+   */
+  readonly unitEventHandlerAddress: MemoryAddress;
+  /**
+   * @summary `unitEventHandlerContext`.
+   * @description
+   *
+   * Passed as `EventHandlerCtx`. X.1083 §17.1.8, Table 123.
+   *
+   * @public
+   * @readonly
+   */
+  readonly unitEventHandlerContext: MemoryAddress;
+  /**
+   * @summary `bspUuid`.
+   * @description
+   *
+   * Passed as `BSPUuid`. X.1083 §17.1.8, Table 123.
+   *
+   * @public
+   * @readonly
+   */
+  readonly bspUuid: BioAPI_UUID;
+  /**
+   * @summary `unitID`.
+   * @description
+   *
+   * Passed as `UnitID`. X.1083 §17.1.8, Table 123.
+   *
+   * @public
+   * @readonly
+   */
+  readonly unitID: BioAPI_UNIT_ID;
+  /**
+   * @summary `unitSchema`.
+   * @description
+   *
+   * Passed as `UnitSchema`. X.1083 §17.1.8, Table 123.
+   *
+   * @public
+   * @readonly
+   */
+  readonly unitSchema: OPTIONAL<BioAPI_UNIT_SCHEMA>;
+  /**
+   * @summary `unitEventType`.
+   * @description
+   *
+   * Passed as `EventType`. X.1083 §17.1.8, Table 123.
+   *
+   * @public
+   * @readonly
+   */
+  readonly unitEventType: BioAPI_UNIT_EVENT_TYPE;
+
   constructor(
-    /**
-     * @summary `unitEventHandlerAddress`.
-     * @description
-     *
-     * Address of the `BioAPI_EVENT_HANDLER` to invoke; not a
-     * function parameter. Conversion applies X.1083 §15.1.7.
-     * X.1083 §17.1.9, Table 123.
-     *
-     * @public
-     * @readonly
-     */
-    readonly unitEventHandlerAddress: MemoryAddress,
-    /**
-     * @summary `unitEventHandlerContext`.
-     * @description
-     *
-     * Passed as `EventHandlerCtx`. X.1083 §17.1.8, Table 123.
-     *
-     * @public
-     * @readonly
-     */
-    readonly unitEventHandlerContext: MemoryAddress,
-    /**
-     * @summary `bspUuid`.
-     * @description
-     *
-     * Passed as `BSPUuid`. X.1083 §17.1.8, Table 123.
-     *
-     * @public
-     * @readonly
-     */
-    readonly bspUuid: BioAPI_UUID,
-    /**
-     * @summary `unitID`.
-     * @description
-     *
-     * Passed as `UnitID`. X.1083 §17.1.8, Table 123.
-     *
-     * @public
-     * @readonly
-     */
-    readonly unitID: BioAPI_UNIT_ID,
-    /**
-     * @summary `unitSchema`.
-     * @description
-     *
-     * Passed as `UnitSchema`. X.1083 §17.1.8, Table 123.
-     *
-     * @public
-     * @readonly
-     */
-    readonly unitSchema: OPTIONAL<BioAPI_UNIT_SCHEMA>,
-    /**
-     * @summary `unitEventType`.
-     * @description
-     *
-     * Passed as `EventType`. X.1083 §17.1.8, Table 123.
-     *
-     * @public
-     * @readonly
-     */
-    readonly unitEventType: BioAPI_UNIT_EVENT_TYPE
-  ) {}
+    unitEventHandlerAddress: MemoryAddress,
+    unitEventHandlerContext: MemoryAddress,
+    bspUuid: BioAPI_UUID,
+    unitID: BioAPI_UNIT_ID,
+    unitSchema: OPTIONAL<BioAPI_UNIT_SCHEMA>,
+    unitEventType: BioAPI_UNIT_EVENT_TYPE
+  ) {
+    this.unitEventHandlerAddress = unitEventHandlerAddress;
+    this.unitEventHandlerContext = unitEventHandlerContext;
+    this.bspUuid = bspUuid;
+    this.unitID = unitID;
+    this.unitSchema = unitSchema;
+    this.unitEventType = unitEventType;
+  }
 
   /**
    * @summary Restructures an object into a UnitEventHandlerCallbackParams

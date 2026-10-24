@@ -27,19 +27,23 @@ import { _decode_EuiccMemoryResetResponse_resetResult, _encode_EuiccMemoryResetR
  */
 export
 class EuiccMemoryResetResponse {
+    /**
+     * @summary `resetResult`.
+     * @description
+     * 
+     * `ok`, `nothingToDelete`, `catBusy`, or `undefinedError`. SGP.22 v3.1
+     * §5.7.19.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly resetResult: EuiccMemoryResetResponse_resetResult;
+
     constructor (
-        /**
-         * @summary `resetResult`.
-         * @description
-         * 
-         * `ok`, `nothingToDelete`, `catBusy`, or `undefinedError`. SGP.22 v3.1
-         * §5.7.19.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly resetResult: EuiccMemoryResetResponse_resetResult
-    ) {}
+        resetResult: EuiccMemoryResetResponse_resetResult
+    ) {
+        this.resetResult = resetResult;
+    }
 
     /**
      * @summary Restructures an object into a EuiccMemoryResetResponse

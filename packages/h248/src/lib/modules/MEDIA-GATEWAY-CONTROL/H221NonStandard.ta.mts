@@ -34,59 +34,70 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class H221NonStandard {
+    /**
+     * @summary `t35CountryCode1`.
+     * @description
+     *
+     * First T.35 country-code octet, 0 to 255.
+     *
+     * @public
+     * @readonly
+     */
+    readonly t35CountryCode1: INTEGER;
+    /**
+     * @summary `t35CountryCode2`.
+     * @description
+     *
+     * Second T.35 country-code octet, 0 to 255 (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    readonly t35CountryCode2: INTEGER;
+    /**
+     * @summary `t35Extension`.
+     * @description
+     *
+     * Nationally assigned extension, 0 to 255.
+     *
+     * @public
+     * @readonly
+     */
+    readonly t35Extension: INTEGER;
+    /**
+     * @summary `manufacturerCode`.
+     * @description
+     *
+     * Nationally assigned manufacturer code, 0 to 65535.
+     *
+     * @public
+     * @readonly
+     */
+    readonly manufacturerCode: INTEGER;
+    /**
+     * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version does not define. Kept so a later
+     * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+     *
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `t35CountryCode1`.
-         * @description
-         *
-         * First T.35 country-code octet, 0 to 255.
-         *
-         * @public
-         * @readonly
-         */
-        readonly t35CountryCode1: INTEGER,
-        /**
-         * @summary `t35CountryCode2`.
-         * @description
-         *
-         * Second T.35 country-code octet, 0 to 255 (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly t35CountryCode2: INTEGER,
-        /**
-         * @summary `t35Extension`.
-         * @description
-         *
-         * Nationally assigned extension, 0 to 255.
-         *
-         * @public
-         * @readonly
-         */
-        readonly t35Extension: INTEGER,
-        /**
-         * @summary `manufacturerCode`.
-         * @description
-         *
-         * Nationally assigned manufacturer code, 0 to 65535.
-         *
-         * @public
-         * @readonly
-         */
-        readonly manufacturerCode: INTEGER,
-        /**
-         * @summary Extensions that are not recognized.
-         * @description
-         *
-         * Extension additions this version does not define. Kept so a later
-         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
+        t35CountryCode1: INTEGER,
+        t35CountryCode2: INTEGER,
+        t35Extension: INTEGER,
+        manufacturerCode: INTEGER,
+        _unrecognizedExtensionsList: _Element[] = []
     ) {
+        this.t35CountryCode1 = t35CountryCode1;
+        this.t35CountryCode2 = t35CountryCode2;
+        this.t35Extension = t35Extension;
+        this.manufacturerCode = manufacturerCode;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
         {
             const n = typeof t35CountryCode1 === "bigint" ? t35CountryCode1 : BigInt(t35CountryCode1);
             if (n < 0n || n > 255n) {

@@ -31,30 +31,36 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class CertificationDataObject {
+    /**
+     * @summary `platformLabel`.
+     * @description
+     * 
+     * GlobalPlatform DLOA Platform_Label for this eUICC. SGP.22 v3.1 Annex
+     * H.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly platformLabel: UTF8String;
+    /**
+     * @summary `discoveryBaseURL`.
+     * @description
+     * 
+     * Discovery base URL of the default DLOA Registrar. SGP.22 v3.1 Annex
+     * H.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly discoveryBaseURL: UTF8String;
+
     constructor (
-        /**
-         * @summary `platformLabel`.
-         * @description
-         * 
-         * GlobalPlatform DLOA Platform_Label for this eUICC. SGP.22 v3.1 Annex
-         * H.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly platformLabel: UTF8String,
-        /**
-         * @summary `discoveryBaseURL`.
-         * @description
-         * 
-         * Discovery base URL of the default DLOA Registrar. SGP.22 v3.1 Annex
-         * H.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly discoveryBaseURL: UTF8String
-    ) {}
+        platformLabel: UTF8String,
+        discoveryBaseURL: UTF8String
+    ) {
+        this.platformLabel = platformLabel;
+        this.discoveryBaseURL = discoveryBaseURL;
+    }
 
     /**
      * @summary Restructures an object into a CertificationDataObject

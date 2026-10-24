@@ -13,12 +13,14 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 
 export
-enum _enum_for_V92ModDiag_Item_lastMOHaction {
-    mohaccepted = 0,
-    mohdeclined = 1,
-    mohdenied = 2,
-    mohclrdn = 3,
-}
+const _enum_for_V92ModDiag_Item_lastMOHaction = {
+    mohaccepted: 0,
+    mohdeclined: 1,
+    mohdenied: 2,
+    mohclrdn: 3,
+} as const;
+
+export type _enum_for_V92ModDiag_Item_lastMOHaction = (typeof _enum_for_V92ModDiag_Item_lastMOHaction)[keyof typeof _enum_for_V92ModDiag_Item_lastMOHaction];
 
 /**
  * @summary V92ModDiag_Item_lastMOHaction
@@ -121,7 +123,7 @@ const V92ModDiag_Item_lastMOHaction_mohclrdn: V92ModDiag_Item_lastMOHaction = 3;
  */
 export
 const mohclrdn: V92ModDiag_Item_lastMOHaction = V92ModDiag_Item_lastMOHaction_mohclrdn; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_V92ModDiag_Item_lastMOHaction = $._decodeEnumerated;
-export const _encode_V92ModDiag_Item_lastMOHaction = $._encodeEnumerated;
+export const _decode_V92ModDiag_Item_lastMOHaction = $._decodeEnumerated as $.ASN1Decoder<V92ModDiag_Item_lastMOHaction>;
+export const _encode_V92ModDiag_Item_lastMOHaction = $._encodeEnumerated as $.ASN1Encoder<V92ModDiag_Item_lastMOHaction>;
 
 /* eslint-enable */

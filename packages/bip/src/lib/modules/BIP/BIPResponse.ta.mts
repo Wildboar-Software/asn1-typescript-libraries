@@ -111,74 +111,88 @@ import {
  *
  */
 export class BIPResponse {
+  /**
+   * @summary `slaveEndpointIRI`.
+   * @description
+   *
+   * Copied from the matching request. X.1083 §13.3.
+   *
+   * @public
+   * @readonly
+   */
+  readonly slaveEndpointIRI: EndpointIRI;
+  /**
+   * @summary `masterEndpointIRI`.
+   * @description
+   *
+   * Copied from the matching request. Destination of this
+   * response. Implicitly identifies the application whose
+   * call is returning. X.1083 §11.2, §13.3.
+   *
+   * @public
+   * @readonly
+   */
+  readonly masterEndpointIRI: EndpointIRI;
+  /**
+   * @summary `linkNumber`.
+   * @description
+   *
+   * Copied from the matching request. X.1083 §13.3.
+   *
+   * @public
+   * @readonly
+   */
+  readonly linkNumber: UnsignedInt;
+  /**
+   * @summary `requestId`.
+   * @description
+   *
+   * Copied from the matching request so the master can pair
+   * the two. X.1083 §7.2.4, §13.3.
+   *
+   * @public
+   * @readonly
+   */
+  readonly requestId: UnsignedInt;
+  /**
+   * @summary `params`.
+   * @description
+   *
+   * Result parameters. Shall use the same alternative name as
+   * the corresponding request. X.1083 §13.3, §13.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly params: BIPResponse_params;
+  /**
+   * @summary `returnValue`.
+   * @description
+   *
+   * BioAPI status of the invoked operation. 0 means success;
+   * any other value is a BioAPI error code. X.1083 §13.3,
+   * §15.52.
+   *
+   * @public
+   * @readonly
+   */
+  readonly returnValue: BioAPI_RETURN;
+
   constructor(
-    /**
-     * @summary `slaveEndpointIRI`.
-     * @description
-     *
-     * Copied from the matching request. X.1083 §13.3.
-     *
-     * @public
-     * @readonly
-     */
-    readonly slaveEndpointIRI: EndpointIRI,
-    /**
-     * @summary `masterEndpointIRI`.
-     * @description
-     *
-     * Copied from the matching request. Destination of this
-     * response. Implicitly identifies the application whose
-     * call is returning. X.1083 §11.2, §13.3.
-     *
-     * @public
-     * @readonly
-     */
-    readonly masterEndpointIRI: EndpointIRI,
-    /**
-     * @summary `linkNumber`.
-     * @description
-     *
-     * Copied from the matching request. X.1083 §13.3.
-     *
-     * @public
-     * @readonly
-     */
-    readonly linkNumber: UnsignedInt,
-    /**
-     * @summary `requestId`.
-     * @description
-     *
-     * Copied from the matching request so the master can pair
-     * the two. X.1083 §7.2.4, §13.3.
-     *
-     * @public
-     * @readonly
-     */
-    readonly requestId: UnsignedInt,
-    /**
-     * @summary `params`.
-     * @description
-     *
-     * Result parameters. Shall use the same alternative name as
-     * the corresponding request. X.1083 §13.3, §13.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly params: BIPResponse_params,
-    /**
-     * @summary `returnValue`.
-     * @description
-     *
-     * BioAPI status of the invoked operation. 0 means success;
-     * any other value is a BioAPI error code. X.1083 §13.3,
-     * §15.52.
-     *
-     * @public
-     * @readonly
-     */
-    readonly returnValue: BioAPI_RETURN
-  ) {}
+    slaveEndpointIRI: EndpointIRI,
+    masterEndpointIRI: EndpointIRI,
+    linkNumber: UnsignedInt,
+    requestId: UnsignedInt,
+    params: BIPResponse_params,
+    returnValue: BioAPI_RETURN
+  ) {
+    this.slaveEndpointIRI = slaveEndpointIRI;
+    this.masterEndpointIRI = masterEndpointIRI;
+    this.linkNumber = linkNumber;
+    this.requestId = requestId;
+    this.params = params;
+    this.returnValue = returnValue;
+  }
 
   /**
    * @summary Restructures an object into a BIPResponse

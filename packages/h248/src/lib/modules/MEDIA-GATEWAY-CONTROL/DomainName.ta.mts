@@ -38,30 +38,35 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class DomainName {
+    /**
+     * @summary `name`.
+     * @description
+     *
+     * Domain name. Starts with an alphanumeric character, followed by
+     * alphanumerics, hyphens, and dots. No two dots occur consecutively
+     * (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    readonly name: IA5String;
+    /**
+     * @summary `portNumber`.
+     * @description
+     *
+     * Port, 0 to 65535. Omitted when the name alone identifies the entity.
+     *
+     * @public
+     * @readonly
+     */
+    readonly portNumber?: OPTIONAL<INTEGER>;
+
     constructor (
-        /**
-         * @summary `name`.
-         * @description
-         *
-         * Domain name. Starts with an alphanumeric character, followed by
-         * alphanumerics, hyphens, and dots. No two dots occur consecutively
-         * (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly name: IA5String,
-        /**
-         * @summary `portNumber`.
-         * @description
-         *
-         * Port, 0 to 65535. Omitted when the name alone identifies the entity.
-         *
-         * @public
-         * @readonly
-         */
-        readonly portNumber?: OPTIONAL<INTEGER>
+        name: IA5String,
+        portNumber?: OPTIONAL<INTEGER>
     ) {
+        this.name = name;
+        this.portNumber = portNumber;
         if (portNumber !== undefined) {
             const n = typeof portNumber === "bigint" ? portNumber : BigInt(portNumber);
             if (n < 0n || n > 65535n) {

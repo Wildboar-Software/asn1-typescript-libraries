@@ -51,74 +51,98 @@ import { BIRIndex, _decode_BIRIndex, _encode_BIRIndex } from "../CBEFF-SMARTCARD
  */
 export
 class BiometricHeaderTemplate {
+    /**
+     * @summary `patronHeaderVersion`.
+     * @public
+     * @readonly
+     */
+    readonly patronHeaderVersion: OPTIONAL<PatronHeaderVersion>;
+    /**
+     * @summary `bdbBiometricType`.
+     * @public
+     * @readonly
+     */
+    readonly bdbBiometricType: OPTIONAL<BiometricType>;
+    /**
+     * @summary `bdbBiometricSubType`.
+     * @public
+     * @readonly
+     */
+    readonly bdbBiometricSubType: OPTIONAL<BiometricSubType>;
+    /**
+     * @summary `bdbCreationDate`.
+     * @public
+     * @readonly
+     */
+    readonly bdbCreationDate: OPTIONAL<BCDTime>;
+    /**
+     * @summary `birCreator`.
+     * @public
+     * @readonly
+     */
+    readonly birCreator: OPTIONAL<Creator>;
+    /**
+     * @summary `bdbValidityPeriod`.
+     * @public
+     * @readonly
+     */
+    readonly bdbValidityPeriod: OPTIONAL<BCDDatePeriod>;
+    /**
+     * @summary `bdbPID`.
+     * @public
+     * @readonly
+     */
+    readonly bdbPID: OPTIONAL<ProductID>;
+    /**
+     * @summary `bdbFormatOwner`.
+     * @public
+     * @readonly
+     */
+    readonly bdbFormatOwner: FormatOwner;
+    /**
+     * @summary `bdbFormatType`.
+     * @public
+     * @readonly
+     */
+    readonly bdbFormatType: FormatType;
+    /**
+     * @summary `birIndex`.
+     * @public
+     * @readonly
+     */
+    readonly birIndex?: OPTIONAL<BIRIndex>;
+    /**
+     * @summary `matchingAlgParameters`.
+     * @public
+     * @readonly
+     */
+    readonly matchingAlgParameters?: OPTIONAL<OCTET_STRING>;
+
     constructor (
-        /**
-         * @summary `patronHeaderVersion`.
-         * @public
-         * @readonly
-         */
-        readonly patronHeaderVersion: OPTIONAL<PatronHeaderVersion>,
-        /**
-         * @summary `bdbBiometricType`.
-         * @public
-         * @readonly
-         */
-        readonly bdbBiometricType: OPTIONAL<BiometricType>,
-        /**
-         * @summary `bdbBiometricSubType`.
-         * @public
-         * @readonly
-         */
-        readonly bdbBiometricSubType: OPTIONAL<BiometricSubType>,
-        /**
-         * @summary `bdbCreationDate`.
-         * @public
-         * @readonly
-         */
-        readonly bdbCreationDate: OPTIONAL<BCDTime>,
-        /**
-         * @summary `birCreator`.
-         * @public
-         * @readonly
-         */
-        readonly birCreator: OPTIONAL<Creator>,
-        /**
-         * @summary `bdbValidityPeriod`.
-         * @public
-         * @readonly
-         */
-        readonly bdbValidityPeriod: OPTIONAL<BCDDatePeriod>,
-        /**
-         * @summary `bdbPID`.
-         * @public
-         * @readonly
-         */
-        readonly bdbPID: OPTIONAL<ProductID>,
-        /**
-         * @summary `bdbFormatOwner`.
-         * @public
-         * @readonly
-         */
-        readonly bdbFormatOwner: FormatOwner,
-        /**
-         * @summary `bdbFormatType`.
-         * @public
-         * @readonly
-         */
-        readonly bdbFormatType: FormatType,
-        /**
-         * @summary `birIndex`.
-         * @public
-         * @readonly
-         */
-        readonly birIndex?: OPTIONAL<BIRIndex>,
-        /**
-         * @summary `matchingAlgParameters`.
-         * @public
-         * @readonly
-         */
-        readonly matchingAlgParameters?: OPTIONAL<OCTET_STRING>
-    ) {}
+        patronHeaderVersion: OPTIONAL<PatronHeaderVersion>,
+        bdbBiometricType: OPTIONAL<BiometricType>,
+        bdbBiometricSubType: OPTIONAL<BiometricSubType>,
+        bdbCreationDate: OPTIONAL<BCDTime>,
+        birCreator: OPTIONAL<Creator>,
+        bdbValidityPeriod: OPTIONAL<BCDDatePeriod>,
+        bdbPID: OPTIONAL<ProductID>,
+        bdbFormatOwner: FormatOwner,
+        bdbFormatType: FormatType,
+        birIndex?: OPTIONAL<BIRIndex>,
+        matchingAlgParameters?: OPTIONAL<OCTET_STRING>
+    ) {
+        this.patronHeaderVersion = patronHeaderVersion;
+        this.bdbBiometricType = bdbBiometricType;
+        this.bdbBiometricSubType = bdbBiometricSubType;
+        this.bdbCreationDate = bdbCreationDate;
+        this.birCreator = birCreator;
+        this.bdbValidityPeriod = bdbValidityPeriod;
+        this.bdbPID = bdbPID;
+        this.bdbFormatOwner = bdbFormatOwner;
+        this.bdbFormatType = bdbFormatType;
+        this.birIndex = birIndex;
+        this.matchingAlgParameters = matchingAlgParameters;
+    }
 
     /**
      * @summary Restructures an object into a BiometricHeaderTemplate

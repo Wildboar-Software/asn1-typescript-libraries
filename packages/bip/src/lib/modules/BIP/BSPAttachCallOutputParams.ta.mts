@@ -35,22 +35,26 @@ import {
  *
  */
 export class BSPAttachCallOutputParams {
+  /**
+   * @summary `newBSPHandle`.
+   * @description
+   *
+   * Handle returned to the local application
+   * (`localBSPHandle`). Any value distinct from all current
+   * `AttachSessionLocalReferences` local handles; the
+   * generation method is unspecified. X.1083 §16.13.4.1,
+   * §16.13.10.
+   *
+   * @public
+   * @readonly
+   */
+  readonly newBSPHandle: BioAPI_HANDLE;
+
   constructor(
-    /**
-     * @summary `newBSPHandle`.
-     * @description
-     *
-     * Handle returned to the local application
-     * (`localBSPHandle`). Any value distinct from all current
-     * `AttachSessionLocalReferences` local handles; the
-     * generation method is unspecified. X.1083 §16.13.4.1,
-     * §16.13.10.
-     *
-     * @public
-     * @readonly
-     */
-    readonly newBSPHandle: BioAPI_HANDLE
-  ) {}
+    newBSPHandle: BioAPI_HANDLE
+  ) {
+    this.newBSPHandle = newBSPHandle;
+  }
 
   /**
    * @summary Restructures an object into a BSPAttachCallOutputParams

@@ -163,264 +163,314 @@ import {
  *
  */
 export class Read_Attributes {
+  /**
+   * @summary `pathname`.
+   * @description
+   *
+   * 1988 filename (kernel). ISO 8571-2:1988 §12.1.
+   *
+   * @public
+   * @readonly
+   */
+  readonly pathname?: OPTIONAL<Pathname_Attribute>;
+  /**
+   * @summary `object_type`.
+   * @description
+   *
+   * Later extension; absent from ISO 8571:1988 Parts 1–4. ASN.1
+   * comment: limited-filestore-management FU.
+   *
+   * @public
+   * @readonly
+   */
+  readonly object_type?: OPTIONAL<Object_Type_Attribute>;
+  /**
+   * @summary `permitted_actions`.
+   * @description
+   *
+   * Kernel. Set at create; not changeable. ISO 8571-2:1988 §12.2.
+   *
+   * @public
+   * @readonly
+   */
+  readonly permitted_actions?: OPTIONAL<Permitted_Actions_Attribute>;
+  /**
+   * @summary `contents_type`.
+   * @description
+   *
+   * Kernel. Set at create; not changeable. ISO 8571-2:1988 §12.3.
+   *
+   * @public
+   * @readonly
+   */
+  readonly contents_type?: OPTIONAL<Contents_Type_Attribute>;
+  /**
+   * @summary `linked_Object`.
+   * @description
+   *
+   * Later extension; absent from ISO 8571:1988 Parts 1–4. ASN.1
+   * comment: limited-filestore-management FU.
+   *
+   * @public
+   * @readonly
+   */
+  readonly linked_Object?: OPTIONAL<Pathname_Attribute>;
+  /**
+   * @summary `child_objects`.
+   * @description
+   *
+   * Later extension; absent from ISO 8571:1988 Parts 1–4. ASN.1
+   * comment: limited-filestore-management FU.
+   *
+   * @public
+   * @readonly
+   */
+  readonly child_objects?: OPTIONAL<Child_Objects_Attribute>;
+  /**
+   * @summary `primaty_pathname`.
+   * @description
+   *
+   * Later extension; absent from ISO 8571:1988 Parts 1–4.
+   *
+   * @public
+   * @readonly
+   */
+  readonly primaty_pathname?: OPTIONAL<Pathname_Attribute>;
+  /**
+   * @summary `storage_account`.
+   * @description
+   *
+   * Storage group. ISO 8571-2:1988 §12.4.
+   *
+   * @public
+   * @readonly
+   */
+  readonly storage_account?: OPTIONAL<Account_Attribute>;
+  /**
+   * @summary `date_and_time_of_creation`.
+   * @description
+   *
+   * Storage group. Set at create; not changeable.
+   * ISO 8571-2:1988 §12.5.
+   *
+   * @public
+   * @readonly
+   */
+  readonly date_and_time_of_creation?: OPTIONAL<Date_and_Time_Attribute>;
+  /**
+   * @summary `date_and_time_of_last_modification`.
+   * @description
+   *
+   * Storage group. Updated on close after write-mode open; not
+   * changeable. ISO 8571-2:1988 §12.6.
+   *
+   * @public
+   * @readonly
+   */
+  readonly date_and_time_of_last_modification?: OPTIONAL<Date_and_Time_Attribute>;
+  /**
+   * @summary `date_and_time_of_last_read_access`.
+   * @description
+   *
+   * Storage group. Updated on close after read open; not
+   * changeable. ISO 8571-2:1988 §12.7.
+   *
+   * @public
+   * @readonly
+   */
+  readonly date_and_time_of_last_read_access?: OPTIONAL<Date_and_Time_Attribute>;
+  /**
+   * @summary `date_and_time_of_last_attribute_modification`.
+   * @description
+   *
+   * Storage group. Updated by successful F-CHANGE-ATTRIB; not
+   * changeable. ISO 8571-2:1988 §12.8.
+   *
+   * @public
+   * @readonly
+   */
+  readonly date_and_time_of_last_attribute_modification?: OPTIONAL<Date_and_Time_Attribute>;
+  /**
+   * @summary `identity_of_creator`.
+   * @description
+   *
+   * Storage group. Set at create; not changeable.
+   * ISO 8571-2:1988 §12.9.
+   *
+   * @public
+   * @readonly
+   */
+  readonly identity_of_creator?: OPTIONAL<User_Identity_Attribute>;
+  /**
+   * @summary `identity_of_last_modifier`.
+   * @description
+   *
+   * Storage group. Updated on close after write-mode open; not
+   * changeable. ISO 8571-2:1988 §12.10.
+   *
+   * @public
+   * @readonly
+   */
+  readonly identity_of_last_modifier?: OPTIONAL<User_Identity_Attribute>;
+  /**
+   * @summary `identity_of_last_reader`.
+   * @description
+   *
+   * Storage group. Updated on close after read open; not
+   * changeable. ISO 8571-2:1988 §12.11.
+   *
+   * @public
+   * @readonly
+   */
+  readonly identity_of_last_reader?: OPTIONAL<User_Identity_Attribute>;
+  /**
+   * @summary `identity_last_attribute_modifier`.
+   * @description
+   *
+   * Storage group. Updated by successful F-CHANGE-ATTRIB; not
+   * changeable. ISO 8571-2:1988 §12.12.
+   *
+   * @public
+   * @readonly
+   */
+  readonly identity_last_attribute_modifier?: OPTIONAL<User_Identity_Attribute>;
+  /**
+   * @summary `object_availability`.
+   * @description
+   *
+   * 1988 file-availability (storage group). ISO 8571-2:1988
+   * §12.13.
+   *
+   * @public
+   * @readonly
+   */
+  readonly object_availability?: OPTIONAL<Object_Availability_Attribute>;
+  /**
+   * @summary `object_size`.
+   * @description
+   *
+   * 1988 filesize (storage group). Not settable on create/change.
+   * ISO 8571-2:1988 §12.14.
+   *
+   * @public
+   * @readonly
+   */
+  readonly object_size?: OPTIONAL<Object_Size_Attribute>;
+  /**
+   * @summary `future_Object_size`.
+   * @description
+   *
+   * 1988 future-filesize (storage group). ISO 8571-2:1988 §12.15.
+   *
+   * @public
+   * @readonly
+   */
+  readonly future_Object_size?: OPTIONAL<Object_Size_Attribute>;
+  /**
+   * @summary `access_control`.
+   * @description
+   *
+   * Security group. SET of conditions: OR of conditions, AND of
+   * terms within one. Passwords never returned.
+   * ISO 8571-2:1988 §12.16; ISO 8571-4:1988 F-READ-ATTRIB-response.
+   *
+   * @public
+   * @readonly
+   */
+  readonly access_control?: OPTIONAL<Access_Control_Attribute>;
+  /**
+   * @summary `path_access_control`.
+   * @description
+   *
+   * Later extension; absent from ISO 8571:1988 Parts 1–4. ASN.1
+   * comment: limited-filestore-management FU.
+   *
+   * @public
+   * @readonly
+   */
+  readonly path_access_control?: OPTIONAL<Access_Control_Attribute>;
+  /**
+   * @summary `legal_qualification`.
+   * @description
+   *
+   * Security group. ISO 8571-2:1988 §12.17.
+   *
+   * @public
+   * @readonly
+   */
+  readonly legal_qualification?: OPTIONAL<Legal_Qualification_Attribute>;
+  /**
+   * @summary `private_use`.
+   * @description
+   *
+   * Private group. Meaning not defined in ISO 8571-2:1988 §12.18.
+   *
+   * @public
+   * @readonly
+   */
+  readonly private_use?: OPTIONAL<Private_Use_Attribute>;
+  /**
+   * @summary `attribute_extensions`.
+   * @description
+   *
+   * Later extension; absent from ISO 8571:1988 Parts 1–4.
+   *
+   * @public
+   * @readonly
+   */
+  readonly attribute_extensions?: OPTIONAL<Attribute_Extensions>;
+
   constructor(
-    /**
-     * @summary `pathname`.
-     * @description
-     *
-     * 1988 filename (kernel). ISO 8571-2:1988 §12.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly pathname?: OPTIONAL<Pathname_Attribute>,
-    /**
-     * @summary `object_type`.
-     * @description
-     *
-     * Later extension; absent from ISO 8571:1988 Parts 1–4. ASN.1
-     * comment: limited-filestore-management FU.
-     *
-     * @public
-     * @readonly
-     */
-    readonly object_type?: OPTIONAL<Object_Type_Attribute>,
-    /**
-     * @summary `permitted_actions`.
-     * @description
-     *
-     * Kernel. Set at create; not changeable. ISO 8571-2:1988 §12.2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly permitted_actions?: OPTIONAL<Permitted_Actions_Attribute>,
-    /**
-     * @summary `contents_type`.
-     * @description
-     *
-     * Kernel. Set at create; not changeable. ISO 8571-2:1988 §12.3.
-     *
-     * @public
-     * @readonly
-     */
-    readonly contents_type?: OPTIONAL<Contents_Type_Attribute>,
-    /**
-     * @summary `linked_Object`.
-     * @description
-     *
-     * Later extension; absent from ISO 8571:1988 Parts 1–4. ASN.1
-     * comment: limited-filestore-management FU.
-     *
-     * @public
-     * @readonly
-     */
-    readonly linked_Object?: OPTIONAL<Pathname_Attribute>,
-    /**
-     * @summary `child_objects`.
-     * @description
-     *
-     * Later extension; absent from ISO 8571:1988 Parts 1–4. ASN.1
-     * comment: limited-filestore-management FU.
-     *
-     * @public
-     * @readonly
-     */
-    readonly child_objects?: OPTIONAL<Child_Objects_Attribute>,
-    /**
-     * @summary `primaty_pathname`.
-     * @description
-     *
-     * Later extension; absent from ISO 8571:1988 Parts 1–4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly primaty_pathname?: OPTIONAL<Pathname_Attribute>,
-    /**
-     * @summary `storage_account`.
-     * @description
-     *
-     * Storage group. ISO 8571-2:1988 §12.4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly storage_account?: OPTIONAL<Account_Attribute>,
-    /**
-     * @summary `date_and_time_of_creation`.
-     * @description
-     *
-     * Storage group. Set at create; not changeable.
-     * ISO 8571-2:1988 §12.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly date_and_time_of_creation?: OPTIONAL<Date_and_Time_Attribute>,
-    /**
-     * @summary `date_and_time_of_last_modification`.
-     * @description
-     *
-     * Storage group. Updated on close after write-mode open; not
-     * changeable. ISO 8571-2:1988 §12.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly date_and_time_of_last_modification?: OPTIONAL<Date_and_Time_Attribute>,
-    /**
-     * @summary `date_and_time_of_last_read_access`.
-     * @description
-     *
-     * Storage group. Updated on close after read open; not
-     * changeable. ISO 8571-2:1988 §12.7.
-     *
-     * @public
-     * @readonly
-     */
-    readonly date_and_time_of_last_read_access?: OPTIONAL<Date_and_Time_Attribute>,
-    /**
-     * @summary `date_and_time_of_last_attribute_modification`.
-     * @description
-     *
-     * Storage group. Updated by successful F-CHANGE-ATTRIB; not
-     * changeable. ISO 8571-2:1988 §12.8.
-     *
-     * @public
-     * @readonly
-     */
-    readonly date_and_time_of_last_attribute_modification?: OPTIONAL<Date_and_Time_Attribute>,
-    /**
-     * @summary `identity_of_creator`.
-     * @description
-     *
-     * Storage group. Set at create; not changeable.
-     * ISO 8571-2:1988 §12.9.
-     *
-     * @public
-     * @readonly
-     */
-    readonly identity_of_creator?: OPTIONAL<User_Identity_Attribute>,
-    /**
-     * @summary `identity_of_last_modifier`.
-     * @description
-     *
-     * Storage group. Updated on close after write-mode open; not
-     * changeable. ISO 8571-2:1988 §12.10.
-     *
-     * @public
-     * @readonly
-     */
-    readonly identity_of_last_modifier?: OPTIONAL<User_Identity_Attribute>,
-    /**
-     * @summary `identity_of_last_reader`.
-     * @description
-     *
-     * Storage group. Updated on close after read open; not
-     * changeable. ISO 8571-2:1988 §12.11.
-     *
-     * @public
-     * @readonly
-     */
-    readonly identity_of_last_reader?: OPTIONAL<User_Identity_Attribute>,
-    /**
-     * @summary `identity_last_attribute_modifier`.
-     * @description
-     *
-     * Storage group. Updated by successful F-CHANGE-ATTRIB; not
-     * changeable. ISO 8571-2:1988 §12.12.
-     *
-     * @public
-     * @readonly
-     */
-    readonly identity_last_attribute_modifier?: OPTIONAL<User_Identity_Attribute>,
-    /**
-     * @summary `object_availability`.
-     * @description
-     *
-     * 1988 file-availability (storage group). ISO 8571-2:1988
-     * §12.13.
-     *
-     * @public
-     * @readonly
-     */
-    readonly object_availability?: OPTIONAL<Object_Availability_Attribute>,
-    /**
-     * @summary `object_size`.
-     * @description
-     *
-     * 1988 filesize (storage group). Not settable on create/change.
-     * ISO 8571-2:1988 §12.14.
-     *
-     * @public
-     * @readonly
-     */
-    readonly object_size?: OPTIONAL<Object_Size_Attribute>,
-    /**
-     * @summary `future_Object_size`.
-     * @description
-     *
-     * 1988 future-filesize (storage group). ISO 8571-2:1988 §12.15.
-     *
-     * @public
-     * @readonly
-     */
-    readonly future_Object_size?: OPTIONAL<Object_Size_Attribute>,
-    /**
-     * @summary `access_control`.
-     * @description
-     *
-     * Security group. SET of conditions: OR of conditions, AND of
-     * terms within one. Passwords never returned.
-     * ISO 8571-2:1988 §12.16; ISO 8571-4:1988 F-READ-ATTRIB-response.
-     *
-     * @public
-     * @readonly
-     */
-    readonly access_control?: OPTIONAL<Access_Control_Attribute>,
-    /**
-     * @summary `path_access_control`.
-     * @description
-     *
-     * Later extension; absent from ISO 8571:1988 Parts 1–4. ASN.1
-     * comment: limited-filestore-management FU.
-     *
-     * @public
-     * @readonly
-     */
-    readonly path_access_control?: OPTIONAL<Access_Control_Attribute>,
-    /**
-     * @summary `legal_qualification`.
-     * @description
-     *
-     * Security group. ISO 8571-2:1988 §12.17.
-     *
-     * @public
-     * @readonly
-     */
-    readonly legal_qualification?: OPTIONAL<Legal_Qualification_Attribute>,
-    /**
-     * @summary `private_use`.
-     * @description
-     *
-     * Private group. Meaning not defined in ISO 8571-2:1988 §12.18.
-     *
-     * @public
-     * @readonly
-     */
-    readonly private_use?: OPTIONAL<Private_Use_Attribute>,
-    /**
-     * @summary `attribute_extensions`.
-     * @description
-     *
-     * Later extension; absent from ISO 8571:1988 Parts 1–4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly attribute_extensions?: OPTIONAL<Attribute_Extensions>
-  ) {}
+    pathname?: OPTIONAL<Pathname_Attribute>,
+    object_type?: OPTIONAL<Object_Type_Attribute>,
+    permitted_actions?: OPTIONAL<Permitted_Actions_Attribute>,
+    contents_type?: OPTIONAL<Contents_Type_Attribute>,
+    linked_Object?: OPTIONAL<Pathname_Attribute>,
+    child_objects?: OPTIONAL<Child_Objects_Attribute>,
+    primaty_pathname?: OPTIONAL<Pathname_Attribute>,
+    storage_account?: OPTIONAL<Account_Attribute>,
+    date_and_time_of_creation?: OPTIONAL<Date_and_Time_Attribute>,
+    date_and_time_of_last_modification?: OPTIONAL<Date_and_Time_Attribute>,
+    date_and_time_of_last_read_access?: OPTIONAL<Date_and_Time_Attribute>,
+    date_and_time_of_last_attribute_modification?: OPTIONAL<Date_and_Time_Attribute>,
+    identity_of_creator?: OPTIONAL<User_Identity_Attribute>,
+    identity_of_last_modifier?: OPTIONAL<User_Identity_Attribute>,
+    identity_of_last_reader?: OPTIONAL<User_Identity_Attribute>,
+    identity_last_attribute_modifier?: OPTIONAL<User_Identity_Attribute>,
+    object_availability?: OPTIONAL<Object_Availability_Attribute>,
+    object_size?: OPTIONAL<Object_Size_Attribute>,
+    future_Object_size?: OPTIONAL<Object_Size_Attribute>,
+    access_control?: OPTIONAL<Access_Control_Attribute>,
+    path_access_control?: OPTIONAL<Access_Control_Attribute>,
+    legal_qualification?: OPTIONAL<Legal_Qualification_Attribute>,
+    private_use?: OPTIONAL<Private_Use_Attribute>,
+    attribute_extensions?: OPTIONAL<Attribute_Extensions>
+  ) {
+    this.pathname = pathname;
+    this.object_type = object_type;
+    this.permitted_actions = permitted_actions;
+    this.contents_type = contents_type;
+    this.linked_Object = linked_Object;
+    this.child_objects = child_objects;
+    this.primaty_pathname = primaty_pathname;
+    this.storage_account = storage_account;
+    this.date_and_time_of_creation = date_and_time_of_creation;
+    this.date_and_time_of_last_modification = date_and_time_of_last_modification;
+    this.date_and_time_of_last_read_access = date_and_time_of_last_read_access;
+    this.date_and_time_of_last_attribute_modification = date_and_time_of_last_attribute_modification;
+    this.identity_of_creator = identity_of_creator;
+    this.identity_of_last_modifier = identity_of_last_modifier;
+    this.identity_of_last_reader = identity_of_last_reader;
+    this.identity_last_attribute_modifier = identity_last_attribute_modifier;
+    this.object_availability = object_availability;
+    this.object_size = object_size;
+    this.future_Object_size = future_Object_size;
+    this.access_control = access_control;
+    this.path_access_control = path_access_control;
+    this.legal_qualification = legal_qualification;
+    this.private_use = private_use;
+    this.attribute_extensions = attribute_extensions;
+  }
 
   /**
    * @summary Restructures an object into a Read_Attributes

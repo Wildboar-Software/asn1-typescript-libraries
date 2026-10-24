@@ -19,10 +19,12 @@ import * as $ from '@wildboar/asn1/functional';
  * XER text is `CertifiedMail`. ITU-T Rec. X.1341 (09/2015)
  * Table 1, §8.3, Annex B.
  */
-export enum _enum_for_DigitalPostmarkType_deliveryType {
+export const _enum_for_DigitalPostmarkType_deliveryType = {
   /** Sole named mode; CMTP `DELV certifiedMail`. */
-  certifiedMail = 0,
-}
+  certifiedMail: 0,
+} as const;
+
+export type _enum_for_DigitalPostmarkType_deliveryType = (typeof _enum_for_DigitalPostmarkType_deliveryType)[keyof typeof _enum_for_DigitalPostmarkType_deliveryType];
 
 
 /**
@@ -66,12 +68,12 @@ export const certifiedMail: DigitalPostmarkType_deliveryType = DigitalPostmarkTy
 
 
 
-export const _decode_DigitalPostmarkType_deliveryType = $._decodeEnumerated;
+export const _decode_DigitalPostmarkType_deliveryType = $._decodeEnumerated as $.ASN1Decoder<DigitalPostmarkType_deliveryType>;
 
 
 
 
-export const _encode_DigitalPostmarkType_deliveryType = $._encodeEnumerated;
+export const _encode_DigitalPostmarkType_deliveryType = $._encodeEnumerated as $.ASN1Encoder<DigitalPostmarkType_deliveryType>;
 
 
 /* eslint-enable */

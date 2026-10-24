@@ -36,17 +36,21 @@ import {
  *
  */
 export class DepositNoticeType {
+  /**
+   * @summary `digitalPostmark`.
+   * @description Server postmark (envelope id, `DELV` type,
+   * MIME hash) signed with the Cmail server's private key.
+   * ITU-T Rec. X.1341 (09/2015) §8.14.
+   * @public
+   * @readonly
+   */
+  readonly digitalPostmark: DigitalPostmarkType;
+
   constructor(
-    /**
-     * @summary `digitalPostmark`.
-     * @description Server postmark (envelope id, `DELV` type,
-     * MIME hash) signed with the Cmail server's private key.
-     * ITU-T Rec. X.1341 (09/2015) §8.14.
-     * @public
-     * @readonly
-     */
-    readonly digitalPostmark: DigitalPostmarkType
-  ) {}
+    digitalPostmark: DigitalPostmarkType
+  ) {
+    this.digitalPostmark = digitalPostmark;
+  }
 
   /**
    * @summary Restructures an object into a DepositNoticeType

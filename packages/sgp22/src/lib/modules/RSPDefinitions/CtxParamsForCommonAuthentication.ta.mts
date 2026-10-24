@@ -34,31 +34,37 @@ import { DeviceInfo, _decode_DeviceInfo, _encode_DeviceInfo } from "../RSPDefini
  */
 export
 class CtxParamsForCommonAuthentication {
+    /**
+     * @summary `matchingId`.
+     * @description
+     * 
+     * Activation Code token or SM-DS event id. Omitted or empty both mean
+     * there is no MatchingID. A present value has non-zero length and
+     * contains only `A-Z`, `0-9`, and `-`. SGP.22 v3.1 §4.1.1.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly matchingId: OPTIONAL<UTF8String>;
+    /**
+     * @summary `deviceInfo`.
+     * @description
+     * 
+     * TAC, capabilities, and optional IMEI for the eligibility check.
+     * SGP.22 v3.1 §4.2.
+     * 
+     * @public
+     * @readonly
+     */
+    readonly deviceInfo: DeviceInfo;
+
     constructor (
-        /**
-         * @summary `matchingId`.
-         * @description
-         * 
-         * Activation Code token or SM-DS event id. Omitted or empty both mean
-         * there is no MatchingID. A present value has non-zero length and
-         * contains only `A-Z`, `0-9`, and `-`. SGP.22 v3.1 §4.1.1.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly matchingId: OPTIONAL<UTF8String>,
-        /**
-         * @summary `deviceInfo`.
-         * @description
-         * 
-         * TAC, capabilities, and optional IMEI for the eligibility check.
-         * SGP.22 v3.1 §4.2.
-         * 
-         * @public
-         * @readonly
-         */
-        readonly deviceInfo: DeviceInfo
-    ) {}
+        matchingId: OPTIONAL<UTF8String>,
+        deviceInfo: DeviceInfo
+    ) {
+        this.matchingId = matchingId;
+        this.deviceInfo = deviceInfo;
+    }
 
     /**
      * @summary Restructures an object into a CtxParamsForCommonAuthentication

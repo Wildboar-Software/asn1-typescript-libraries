@@ -34,19 +34,23 @@ import {
  *
  */
 export class DbCreate_ResponseParams {
+  /**
+   * @summary `dbHandle`.
+   * @description
+   *
+   * Created-database handle written to C `DbHandle` (cl.20, §15.26).
+   * Required on a conforming response (`X.1083 §16.44`, Table 101).
+   *
+   * @public
+   * @readonly
+   */
+  readonly dbHandle: BioAPI_DB_HANDLE;
+
   constructor(
-    /**
-     * @summary `dbHandle`.
-     * @description
-     *
-     * Created-database handle written to C `DbHandle` (cl.20, §15.26).
-     * Required on a conforming response (`X.1083 §16.44`, Table 101).
-     *
-     * @public
-     * @readonly
-     */
-    readonly dbHandle: BioAPI_DB_HANDLE
-  ) {}
+    dbHandle: BioAPI_DB_HANDLE
+  ) {
+    this.dbHandle = dbHandle;
+  }
 
   /**
    * @summary Restructures an object into a DbCreate_ResponseParams

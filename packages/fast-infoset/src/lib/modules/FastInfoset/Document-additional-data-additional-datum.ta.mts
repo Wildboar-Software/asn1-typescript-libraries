@@ -37,26 +37,32 @@ import {
  *
  */
 export class Document_additional_data_additional_datum {
+  /**
+   * @summary `id`.
+   * @description URI of the specification that defines the
+   * form and semantics of `data`. ITU-T Rec. X.891 (05/2005)
+   * §7.2.8 a.
+   * @public
+   * @readonly
+   */
+  readonly id: URI;
+  /**
+   * @summary `data`.
+   * @description Additional processing octets as defined by
+   * the specification identified by `id`. ITU-T Rec. X.891
+   * (05/2005) §7.2.8 b.
+   * @public
+   * @readonly
+   */
+  readonly data: NonEmptyOctetString;
+
   constructor(
-    /**
-     * @summary `id`.
-     * @description URI of the specification that defines the
-     * form and semantics of `data`. ITU-T Rec. X.891 (05/2005)
-     * §7.2.8 a.
-     * @public
-     * @readonly
-     */
-    readonly id: URI,
-    /**
-     * @summary `data`.
-     * @description Additional processing octets as defined by
-     * the specification identified by `id`. ITU-T Rec. X.891
-     * (05/2005) §7.2.8 b.
-     * @public
-     * @readonly
-     */
-    readonly data: NonEmptyOctetString
-  ) {}
+    id: URI,
+    data: NonEmptyOctetString
+  ) {
+    this.id = id;
+    this.data = data;
+  }
 
   /**
    * @summary Restructures an object into a Document_additional_data_additional_datum

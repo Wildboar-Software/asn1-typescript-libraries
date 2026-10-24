@@ -13,18 +13,20 @@ import {
 import * as $ from '@wildboar/asn1/functional';
 
 
-export enum _enum_for_BioAPI_GUI_RESPONSE {
-  default_ = 0,
-  opComplete = 1,
-  opCancel = 2,
-  cycleStart = 3,
-  cycleRestart = 4,
-  subopStart = 5,
-  subopNext = 6,
-  progressContinue = 7,
-  progressCancel = 8,
-  recapture = 9,
-}
+export const _enum_for_BioAPI_GUI_RESPONSE = {
+  default_: 0,
+  opComplete: 1,
+  opCancel: 2,
+  cycleStart: 3,
+  cycleRestart: 4,
+  subopStart: 5,
+  subopNext: 6,
+  progressContinue: 7,
+  progressCancel: 8,
+  recapture: 9,
+} as const;
+
+export type _enum_for_BioAPI_GUI_RESPONSE = (typeof _enum_for_BioAPI_GUI_RESPONSE)[keyof typeof _enum_for_BioAPI_GUI_RESPONSE];
 
 
 /**
