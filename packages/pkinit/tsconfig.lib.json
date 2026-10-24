@@ -1,7 +1,6 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "erasableSyntaxOnly": true,
     "rootDir": "src",
     "outDir": "../../dist/packages/pkinit",
     "tsBuildInfoFile": "../../dist/packages/pkinit/tsconfig.lib.tsbuildinfo",
