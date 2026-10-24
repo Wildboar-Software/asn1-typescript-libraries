@@ -73,25 +73,26 @@ function indentAt(text, pos) {
     return raw;
 }
 
-function reindentComment(commentText, fromIndent, toIndent) {
-    const parts = commentText.split(/(\r\n|\n)/);
+function reindentComment(commentText, fromIndentString, toIndentString) {
+    // The capture keeps each line break (`\n` or `\r\n`) so it can be written
+    // back unchanged. Even indexes are the line text; odd indexes are breaks.
+    const linesAndBreaks = commentText.split(/(\r\n|\n)/);
     let out = "";
-    for (let i = 0; i < parts.length; i++) {
-        if (i % 2 === 1) {
-            out += parts[i];
-            continue;
-        }
-        const line = parts[i];
+    for (let i = 0; i < linesAndBreaks.length; i += 2) {
+        const line = linesAndBreaks[i];
+        const lineBreak = linesAndBreaks[i + 1] ?? "";
         if (i === 0) {
-            out += line;
+            out += line + lineBreak;
             continue;
         }
-        if (line.trim() === "") continue;
-        if (fromIndent.length > 0 && line.startsWith(fromIndent)) {
-            out += toIndent + line.slice(fromIndent.length);
-        } else {
-            out += line;
+        if (line.trim() === "") {
+            out += lineBreak;
+            continue;
         }
+        const body = fromIndentString.length > 0 && line.startsWith(fromIndentString)
+            ? line.slice(fromIndentString.length)
+            : line.trimStart();
+        out += toIndentString + body + lineBreak;
     }
     return out;
 }
@@ -121,6 +122,8 @@ function modifierText(param) {
 }
 
 function typeSlice(text, param) {
+    // `nameEnd` is the first character after the identifier, so this span
+    // is `?: Type` or `: Type`, including the space that follows the colon.
     const nameEnd = param.getNameNode().getEnd();
     const typeNode = param.getTypeNode();
     if (typeNode) return text.slice(nameEnd, typeNode.getEnd());
@@ -133,8 +136,8 @@ function leadingCommentText(text, param, memberIndent) {
     const ranges = param.getLeadingCommentRanges();
     if (ranges.length === 0) return "";
     const raw = text.slice(ranges[0].getPos(), ranges[ranges.length - 1].getEnd());
-    const fromIndent = indentAt(text, ranges[0].getPos()) ?? "";
-    return memberIndent + reindentComment(raw, fromIndent, memberIndent);
+    const fromIndentString = indentAt(text, ranges[0].getPos()) ?? "";
+    return memberIndent + reindentComment(raw, fromIndentString, memberIndent);
 }
 
 /**
