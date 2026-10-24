@@ -11,11 +11,11 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CMSVersion, _decode_CMSVersion, _encode_CMSVersion } from "../X9-84-CMS/CMSVersion.ta.mjs";
+import { type CMSVersion, _decode_CMSVersion, _encode_CMSVersion } from "../X9-84-CMS/CMSVersion.ta.mjs";
 
 import { OriginatorInfo, _decode_OriginatorInfo, _encode_OriginatorInfo } from "../X9-84-CMS/OriginatorInfo.ta.mjs";
 
-import { RecipientInfos, _decode_RecipientInfos, _encode_RecipientInfos } from "../X9-84-CMS/RecipientInfos.ta.mjs";
+import { type RecipientInfos, _decode_RecipientInfos, _encode_RecipientInfos } from "../X9-84-CMS/RecipientInfos.ta.mjs";
 
 import { EncryptedContentInfo, _decode_EncryptedContentInfo, _encode_EncryptedContentInfo } from "../X9-84-CMS/EncryptedContentInfo.ta.mjs";
 

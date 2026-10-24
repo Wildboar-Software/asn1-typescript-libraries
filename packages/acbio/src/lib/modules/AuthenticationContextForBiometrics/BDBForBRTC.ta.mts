@@ -13,18 +13,18 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Version,
+    type Version,
     v0 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Version,
     _encode_Version,
 } from '../AuthenticationContextForBiometrics/Version.ta.mjs';
 import {
-    HashList,
+    type HashList,
     _decode_HashList,
     _encode_HashList,
 } from '../AuthenticationContextForBiometrics/HashList.ta.mjs';
 import {
-    URI,
+    type URI,
     _decode_URI,
     _encode_URI,
 } from '../AuthenticationContextForBiometrics/URI.ta.mjs';
@@ -44,7 +44,7 @@ import {
     _encode_PKICertificateInformation,
 } from '../AuthenticationContextForBiometrics/PKICertificateInformation.ta.mjs';
 import {
-    SequenceOfACBioInstances,
+    type SequenceOfACBioInstances,
     _decode_SequenceOfACBioInstances,
     _encode_SequenceOfACBioInstances,
 } from '../AuthenticationContextForBiometrics/SequenceOfACBioInstances.ta.mjs';

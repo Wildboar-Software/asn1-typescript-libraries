@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TraceDepth, _decode_TraceDepth, _encode_TraceDepth, _enum_for_TraceDepth } from "../MAP-OM-DataTypes/TraceDepth.ta.mjs";
-import { TraceDepthExtension, _decode_TraceDepthExtension, _encode_TraceDepthExtension, _enum_for_TraceDepthExtension } from "../MAP-OM-DataTypes/TraceDepthExtension.ta.mjs";
+import { type TraceDepth, _decode_TraceDepth, _encode_TraceDepth, _enum_for_TraceDepth } from "../MAP-OM-DataTypes/TraceDepth.ta.mjs";
+import { type TraceDepthExtension, _decode_TraceDepthExtension, _encode_TraceDepthExtension, _enum_for_TraceDepthExtension } from "../MAP-OM-DataTypes/TraceDepthExtension.ta.mjs";
 
 
 /**

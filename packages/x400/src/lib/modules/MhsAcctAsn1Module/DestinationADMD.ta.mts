@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AdministrationDomainName,
+    type AdministrationDomainName,
     _decode_AdministrationDomainName,
     _encode_AdministrationDomainName,
 } from '../MTSAbstractService/AdministrationDomainName.ta.mjs';

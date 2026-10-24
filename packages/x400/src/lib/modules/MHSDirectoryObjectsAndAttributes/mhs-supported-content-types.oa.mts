@@ -17,7 +17,7 @@ import {
     _encode_AttributeUsage,
 } from '@wildboar/x500/InformationFramework';
 import {
-    ExtendedContentType,
+    type ExtendedContentType,
     _decode_ExtendedContentType,
     _encode_ExtendedContentType,
 } from '../MTSAbstractService/ExtendedContentType.ta.mjs';

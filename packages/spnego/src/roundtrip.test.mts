@@ -29,7 +29,7 @@ import {
     _encode_NegTokenInit2,
 } from "./lib/modules/Spnego/NegTokenInit2.ta.mjs";
 import {
-    NegotiationToken,
+    type NegotiationToken,
     _decode_NegotiationToken,
     _encode_NegotiationToken,
 } from "./lib/modules/Spnego/NegotiationToken.ta.mjs";

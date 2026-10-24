@@ -17,7 +17,7 @@ import {
     _encode_Code,
 } from '@wildboar/rose';
 import {
-    CallingPartyAddress,
+    type CallingPartyAddress,
     _decode_CallingPartyAddress,
     _encode_CallingPartyAddress,
 } from '../TCAP-Examples/CallingPartyAddress.ta.mjs';

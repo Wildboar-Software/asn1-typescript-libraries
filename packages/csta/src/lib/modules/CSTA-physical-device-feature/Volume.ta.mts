@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import { ASN1Element as _Element } from "@wildboar/asn1";
-import { VolAbs, _decode_VolAbs, _encode_VolAbs } from "../CSTA-physical-device-feature/VolAbs.ta.mjs";
+import { type VolAbs, _decode_VolAbs, _encode_VolAbs } from "../CSTA-physical-device-feature/VolAbs.ta.mjs";
 
 import { VolInc, _decode_VolInc, _encode_VolInc } from "../CSTA-physical-device-feature/VolInc.ta.mjs";
 

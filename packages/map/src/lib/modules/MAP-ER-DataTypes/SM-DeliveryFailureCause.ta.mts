@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SignalInfo, _decode_SignalInfo, _encode_SignalInfo } from "../MAP-CommonDataTypes/SignalInfo.ta.mjs";
+import { type SignalInfo, _decode_SignalInfo, _encode_SignalInfo } from "../MAP-CommonDataTypes/SignalInfo.ta.mjs";
 import { SM_EnumeratedDeliveryFailureCause, _decode_SM_EnumeratedDeliveryFailureCause, _encode_SM_EnumeratedDeliveryFailureCause, _enum_for_SM_EnumeratedDeliveryFailureCause } from "../MAP-ER-DataTypes/SM-EnumeratedDeliveryFailureCause.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 

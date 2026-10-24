@@ -12,22 +12,22 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
 import {
-    AttributeId,
+    type AttributeId,
     _decode_AttributeId,
     _encode_AttributeId,
 } from '@wildboar/cmip';
 import {
-    NumericAttributeIdArray,
+    type NumericAttributeIdArray,
     _decode_NumericAttributeIdArray,
     _encode_NumericAttributeIdArray,
 } from '../SummarizationASN1Productions/NumericAttributeIdArray.ta.mjs';
 import {
-    ReportTimeAttributeIdList,
+    type ReportTimeAttributeIdList,
     _decode_ReportTimeAttributeIdList,
     _encode_ReportTimeAttributeIdList,
 } from '../SummarizationASN1Productions/ReportTimeAttributeIdList.ta.mjs';

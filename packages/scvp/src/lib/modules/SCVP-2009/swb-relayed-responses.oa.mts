@@ -10,7 +10,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-  SCVPResponses,
+  type SCVPResponses,
   _decode_SCVPResponses,
   _encode_SCVPResponses,
 } from '../SCVP-2009/SCVPResponses.ta.mjs';

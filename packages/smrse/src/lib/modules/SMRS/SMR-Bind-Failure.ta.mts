@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_Connect_fail, _encode_Connect_fail, Connect_fail } from "../SMRS/Connect-fail.ta.mjs";
+import { _decode_Connect_fail, _encode_Connect_fail, type Connect_fail } from "../SMRS/Connect-fail.ta.mjs";
 
 
 /**

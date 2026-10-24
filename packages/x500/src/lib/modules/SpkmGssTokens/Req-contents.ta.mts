@@ -6,7 +6,7 @@ import {
     type INTEGER,
     type OCTET_STRING,
     type OPTIONAL,
-    UTCTime,
+    type UTCTime,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -15,7 +15,7 @@ import {
     _encode_Validity,
 } from "../AuthenticationFramework/Validity.ta.mjs";
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
@@ -25,12 +25,12 @@ import {
     _encode_Context_Data,
 } from "../SpkmGssTokens/Context-Data.ta.mjs";
 import {
-    Key_Estb_Algs,
+    type Key_Estb_Algs,
     _decode_Key_Estb_Algs,
     _encode_Key_Estb_Algs,
 } from "../SpkmGssTokens/Key-Estb-Algs.ta.mjs";
 import {
-    Random_Integer,
+    type Random_Integer,
     _decode_Random_Integer,
     _encode_Random_Integer,
 } from "../SpkmGssTokens/Random-Integer.ta.mjs";

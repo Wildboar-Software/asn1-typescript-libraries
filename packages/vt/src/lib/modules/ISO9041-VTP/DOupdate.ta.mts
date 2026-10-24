@@ -2,7 +2,7 @@
 import {
     type INTEGER,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -14,12 +14,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_ExplicitPointer, _encode_ExplicitPointer, ExplicitPointer } from "../G/ExplicitPointer.ta.mjs";
-import { Pointer, _decode_Pointer, _encode_Pointer } from "../ISO9041-VTP/Pointer.ta.mjs";
+import { type Pointer, _decode_Pointer, _encode_Pointer } from "../ISO9041-VTP/Pointer.ta.mjs";
 import { DOupdate_repeatText, _decode_DOupdate_repeatText, _encode_DOupdate_repeatText } from "../ISO9041-VTP/DOupdate-repeatText.ta.mjs";
 import { DOupdate_writeAttr, _decode_DOupdate_writeAttr, _encode_DOupdate_writeAttr } from "../ISO9041-VTP/DOupdate-writeAttr.ta.mjs";
 import { DOupdate_erase, _decode_DOupdate_erase, _encode_DOupdate_erase } from "../ISO9041-VTP/DOupdate-erase.ta.mjs";
 import { _decode_LogExpPointer, _encode_LogExpPointer, LogExpPointer } from "../G/LogExpPointer.ta.mjs";
-import { LogPointer, _decode_LogPointer, _encode_LogPointer } from "../ISO9041-VTP/LogPointer.ta.mjs";
+import { type LogPointer, _decode_LogPointer, _encode_LogPointer } from "../ISO9041-VTP/LogPointer.ta.mjs";
 import { DOupdate_logText, _decode_DOupdate_logText, _encode_DOupdate_logText } from "../ISO9041-VTP/DOupdate-logText.ta.mjs";
 import { DOupdate_repeatLogText, _decode_DOupdate_repeatLogText, _encode_DOupdate_repeatLogText } from "../ISO9041-VTP/DOupdate-repeatLogText.ta.mjs";
 import { DOupdate_writeLogAttr, _decode_DOupdate_writeLogAttr, _encode_DOupdate_writeLogAttr } from "../ISO9041-VTP/DOupdate-writeLogAttr.ta.mjs";

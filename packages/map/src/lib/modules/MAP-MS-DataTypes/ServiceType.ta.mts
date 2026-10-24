@@ -5,10 +5,10 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { LCSServiceTypeID, _decode_LCSServiceTypeID, _encode_LCSServiceTypeID } from "../MAP-CommonDataTypes/LCSServiceTypeID.ta.mjs";
+import { type LCSServiceTypeID, _decode_LCSServiceTypeID, _encode_LCSServiceTypeID } from "../MAP-CommonDataTypes/LCSServiceTypeID.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { GMLC_Restriction, _decode_GMLC_Restriction, _encode_GMLC_Restriction, _enum_for_GMLC_Restriction } from "../MAP-MS-DataTypes/GMLC-Restriction.ta.mjs";
-import { NotificationToMSUser, _decode_NotificationToMSUser, _encode_NotificationToMSUser, _enum_for_NotificationToMSUser } from "../MAP-MS-DataTypes/NotificationToMSUser.ta.mjs";
+import { type GMLC_Restriction, _decode_GMLC_Restriction, _encode_GMLC_Restriction, _enum_for_GMLC_Restriction } from "../MAP-MS-DataTypes/GMLC-Restriction.ta.mjs";
+import { type NotificationToMSUser, _decode_NotificationToMSUser, _encode_NotificationToMSUser, _enum_for_NotificationToMSUser } from "../MAP-MS-DataTypes/NotificationToMSUser.ta.mjs";
 
 
 /**

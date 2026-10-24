@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1ConstructionError as _ConstructionError
 } from "@wildboar/asn1";
-import { AuditoryApparatusID, _decode_AuditoryApparatusID, _encode_AuditoryApparatusID } from "../CSTA-physical-device-feature/AuditoryApparatusID.ta.mjs";
+import { type AuditoryApparatusID, _decode_AuditoryApparatusID, _encode_AuditoryApparatusID } from "../CSTA-physical-device-feature/AuditoryApparatusID.ta.mjs";
 
 import {
     AuditoryApparatusList_Item_auditoryApparatusType,
@@ -18,24 +18,24 @@ import {
 } from "../CSTA-physical-device-feature/AuditoryApparatusList-Item-auditoryApparatusType.ta.mjs";
 
 import {
-    AuditoryApparatusList_Item_speaker,
+    type AuditoryApparatusList_Item_speaker,
     _decode_AuditoryApparatusList_Item_speaker,
     _encode_AuditoryApparatusList_Item_speaker
 } from "../CSTA-physical-device-feature/AuditoryApparatusList-Item-speaker.ta.mjs";
 
 import {
-    AuditoryApparatusList_Item_microphone,
+    type AuditoryApparatusList_Item_microphone,
     _decode_AuditoryApparatusList_Item_microphone,
     _encode_AuditoryApparatusList_Item_microphone
 } from "../CSTA-physical-device-feature/AuditoryApparatusList-Item-microphone.ta.mjs";
 
 import {
-    AuditoryApparatusList_Item_hookswitch,
+    type AuditoryApparatusList_Item_hookswitch,
     _decode_AuditoryApparatusList_Item_hookswitch,
     _encode_AuditoryApparatusList_Item_hookswitch
 } from "../CSTA-physical-device-feature/AuditoryApparatusList-Item-hookswitch.ta.mjs";
 
-import { HookswitchID, _decode_HookswitchID, _encode_HookswitchID } from "../CSTA-physical-device-feature/HookswitchID.ta.mjs";
+import { type HookswitchID, _decode_HookswitchID, _encode_HookswitchID } from "../CSTA-physical-device-feature/HookswitchID.ta.mjs";
 
 
 

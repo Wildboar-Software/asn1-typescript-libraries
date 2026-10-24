@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    GeneralizedTime,
+    type GeneralizedTime,
     type INTEGER,
     type OCTET_STRING,
     type OPTIONAL,
@@ -8,8 +8,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PacketReportIndications, _decode_PacketReportIndications, _encode_PacketReportIndications } from "../IPAccessPDU/PacketReportIndications.ta.mjs";
-import { PacketReportTrigger, _decode_PacketReportTrigger, _encode_PacketReportTrigger } from "../IPAccessPDU/PacketReportTrigger.ta.mjs";
+import { type PacketReportIndications, _decode_PacketReportIndications, _encode_PacketReportIndications } from "../IPAccessPDU/PacketReportIndications.ta.mjs";
+import { type PacketReportTrigger, _decode_PacketReportTrigger, _encode_PacketReportTrigger } from "../IPAccessPDU/PacketReportTrigger.ta.mjs";
 
 
 /**

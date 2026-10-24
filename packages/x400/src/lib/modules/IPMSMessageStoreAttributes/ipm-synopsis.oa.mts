@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    IPMSynopsis,
+    type IPMSynopsis,
     _decode_IPMSynopsis,
     _encode_IPMSynopsis,
 } from '../IPMSMessageStoreAttributes/IPMSynopsis.ta.mjs';

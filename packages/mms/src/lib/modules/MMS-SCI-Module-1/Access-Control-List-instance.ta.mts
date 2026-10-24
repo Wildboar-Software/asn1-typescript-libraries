@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
-import { Access_Control_List_instance_definition, _decode_Access_Control_List_instance_definition, _encode_Access_Control_List_instance_definition } from "../MMS-SCI-Module-1/Access-Control-List-instance-definition.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type Access_Control_List_instance_definition, _decode_Access_Control_List_instance_definition, _encode_Access_Control_List_instance_definition } from "../MMS-SCI-Module-1/Access-Control-List-instance-definition.ta.mjs";
 
 
 /**

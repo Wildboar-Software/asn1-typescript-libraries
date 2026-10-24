@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ServiceInstanceAttribute, _decode_ServiceInstanceAttribute, _encode_ServiceInstanceAttribute } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/ServiceInstanceAttribute.ta.mjs";
+import { type ServiceInstanceAttribute, _decode_ServiceInstanceAttribute, _encode_ServiceInstanceAttribute } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/ServiceInstanceAttribute.ta.mjs";
 
 
 /**

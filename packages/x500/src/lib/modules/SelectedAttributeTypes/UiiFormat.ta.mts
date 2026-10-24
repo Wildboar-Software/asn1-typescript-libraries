@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    UiiFormat_next,
+    type UiiFormat_next,
     _decode_UiiFormat_next,
     _encode_UiiFormat_next,
 } from "../SelectedAttributeTypes/UiiFormat-next.ta.mjs";
@@ -18,7 +18,7 @@ import {
     _enum_for_UiiFormat_subset,
 } from "../SelectedAttributeTypes/UiiFormat-subset.ta.mjs";
 import {
-    URI,
+    type URI,
     _decode_URI,
     _encode_URI,
 } from "../SelectedAttributeTypes/URI.ta.mjs";

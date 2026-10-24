@@ -4,25 +4,25 @@ import {
     _decode_DomainParameters,
     _encode_DomainParameters,
 } from "@wildboar/ansi-x9-42";
-import { ASN1Element as _Element, OPTIONAL } from "@wildboar/asn1";
+import { ASN1Element as _Element, type OPTIONAL } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    DHPublicKeyChoice,
+    type DHPublicKeyChoice,
     _decode_DHPublicKeyChoice,
     _encode_DHPublicKeyChoice,
 } from "../PKCS-15/DHPublicKeyChoice.ta.mjs";
 import {
-    KeyInfo,
+    type KeyInfo,
     _get_decoder_for_KeyInfo,
     _get_encoder_for_KeyInfo,
 } from "../PKCS-15/KeyInfo.ta.mjs";
 import {
-    ObjectValue,
+    type ObjectValue,
     _get_decoder_for_ObjectValue,
     _get_encoder_for_ObjectValue,
 } from "../PKCS-15/ObjectValue.ta.mjs";
 import {
-    PublicKeyOperations,
+    type PublicKeyOperations,
     _decode_PublicKeyOperations,
     _encode_PublicKeyOperations,
 } from "../PKCS-15/PublicKeyOperations.ta.mjs";

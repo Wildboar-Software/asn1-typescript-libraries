@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CMSVersion,
+    type CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
 } from "../CryptographicMessageSyntax/CMSVersion.ta.mjs";
@@ -16,7 +16,7 @@ import {
     _encode_EncryptedContentInfo,
 } from "../CryptographicMessageSyntax/EncryptedContentInfo.ta.mjs";
 import {
-    UnprotectedAttributes,
+    type UnprotectedAttributes,
     _decode_UnprotectedAttributes,
     _encode_UnprotectedAttributes,
 } from "../CryptographicMessageSyntax/UnprotectedAttributes.ta.mjs";

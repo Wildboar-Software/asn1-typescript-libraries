@@ -2,21 +2,21 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1ConstructionError as _ConstructionError
 } from "@wildboar/asn1";
-import { CallControlServices, _decode_CallControlServices, _encode_CallControlServices } from "../CSTA-application-context-information-csta3/CallControlServices.ta.mjs";
+import { type CallControlServices, _decode_CallControlServices, _encode_CallControlServices } from "../CSTA-application-context-information-csta3/CallControlServices.ta.mjs";
 
-import { CallAssociatedServices, _decode_CallAssociatedServices, _encode_CallAssociatedServices } from "../CSTA-application-context-information-csta3/CallAssociatedServices.ta.mjs";
+import { type CallAssociatedServices, _decode_CallAssociatedServices, _encode_CallAssociatedServices } from "../CSTA-application-context-information-csta3/CallAssociatedServices.ta.mjs";
 
-import { MediaAttachmentServices, _decode_MediaAttachmentServices, _encode_MediaAttachmentServices } from "../CSTA-application-context-information-csta3/MediaAttachmentServices.ta.mjs";
+import { type MediaAttachmentServices, _decode_MediaAttachmentServices, _encode_MediaAttachmentServices } from "../CSTA-application-context-information-csta3/MediaAttachmentServices.ta.mjs";
 
-import { RouteingServices, _decode_RouteingServices, _encode_RouteingServices } from "../CSTA-application-context-information-csta3/RouteingServices.ta.mjs";
+import { type RouteingServices, _decode_RouteingServices, _encode_RouteingServices } from "../CSTA-application-context-information-csta3/RouteingServices.ta.mjs";
 
-import { VoiceUnitServices, _decode_VoiceUnitServices, _encode_VoiceUnitServices } from "../CSTA-application-context-information-csta3/VoiceUnitServices.ta.mjs";
+import { type VoiceUnitServices, _decode_VoiceUnitServices, _encode_VoiceUnitServices } from "../CSTA-application-context-information-csta3/VoiceUnitServices.ta.mjs";
 
 
 

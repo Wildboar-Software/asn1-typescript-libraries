@@ -7,7 +7,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 
 import {
-    GetSwitchingFunctionCapsArgument,
+    type GetSwitchingFunctionCapsArgument,
     _decode_GetSwitchingFunctionCapsArgument,
     _encode_GetSwitchingFunctionCapsArgument
 } from "../CSTA-get-switching-function-capabilities/GetSwitchingFunctionCapsArgument.ta.mjs";

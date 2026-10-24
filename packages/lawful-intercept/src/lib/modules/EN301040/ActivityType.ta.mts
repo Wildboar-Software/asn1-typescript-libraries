@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     type BIT_STRING,
-    OPTIONAL
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_ActivityClassType, _encode_ActivityClassType, _enum_for_ActivityClassType, ActivityClassType } from "../EN301040/ActivityClassType.ta.mjs";

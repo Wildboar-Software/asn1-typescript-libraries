@@ -13,12 +13,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    IndexOrOperSpec,
+    type IndexOrOperSpec,
     _decode_IndexOrOperSpec,
     _encode_IndexOrOperSpec,
 } from '../Schedulerev1-ASN1Module/IndexOrOperSpec.ta.mjs';
 import {
-    Schedule,
+    type Schedule,
     _decode_Schedule,
     _encode_Schedule,
 } from '../Schedulerev1-ASN1Module/Schedule.ta.mjs';

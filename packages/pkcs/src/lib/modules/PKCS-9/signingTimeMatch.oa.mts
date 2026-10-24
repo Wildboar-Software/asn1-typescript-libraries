@@ -2,7 +2,7 @@
 import { type MATCHING_RULE } from "@wildboar/x500/InformationFramework";
 import { pkcs_9_mr_signingTimeMatch } from "../PKCS-9/pkcs-9-mr-signingTimeMatch.va.mjs";
 import {
-    SigningTime,
+    type SigningTime,
     _decode_SigningTime,
     _encode_SigningTime,
 } from "../PKCS-9/SigningTime.ta.mjs";

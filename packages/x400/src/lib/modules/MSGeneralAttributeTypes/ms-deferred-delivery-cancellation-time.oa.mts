@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    DeferredDeliveryCancellationTime,
+    type DeferredDeliveryCancellationTime,
     _decode_DeferredDeliveryCancellationTime,
     _encode_DeferredDeliveryCancellationTime,
 } from '../MSGeneralAttributeTypes/DeferredDeliveryCancellationTime.ta.mjs';

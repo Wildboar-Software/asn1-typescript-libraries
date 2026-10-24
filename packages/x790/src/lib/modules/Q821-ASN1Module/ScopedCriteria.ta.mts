@@ -1,26 +1,26 @@
 /* eslint-disable */
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from "../CMIP-1/ObjectInstance.ta.mjs";
 
 import {
-    Scope,
+    type Scope,
     _decode_Scope,
     _encode_Scope,
 } from "../CMIP-1/Scope.ta.mjs";
 
 import {
-    CMISFilter,
+    type CMISFilter,
     _decode_CMISFilter,
     _encode_CMISFilter,
 } from "../CMIP-1/CMISFilter.ta.mjs";

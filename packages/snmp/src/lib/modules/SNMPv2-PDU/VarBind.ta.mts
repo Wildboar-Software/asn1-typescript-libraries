@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../SNMPv2-PDU/ObjectName.ta.mjs";
-import { VarBind_valueType, _decode_VarBind_valueType, _encode_VarBind_valueType } from "../SNMPv2-PDU/VarBind-valueType.ta.mjs";
+import { type ObjectName, _decode_ObjectName, _encode_ObjectName } from "../SNMPv2-PDU/ObjectName.ta.mjs";
+import { type VarBind_valueType, _decode_VarBind_valueType, _encode_VarBind_valueType } from "../SNMPv2-PDU/VarBind-valueType.ta.mjs";
 
 /**
  * @summary VarBind

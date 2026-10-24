@@ -12,17 +12,17 @@ import {
     _encode_DayTimeBand,
 } from "../SelectedAttributeTypes/DayTimeBand.ta.mjs";
 import {
-    Period_days,
+    type Period_days,
     _decode_Period_days,
     _encode_Period_days,
 } from "../SelectedAttributeTypes/Period-days.ta.mjs";
 import {
-    Period_months,
+    type Period_months,
     _decode_Period_months,
     _encode_Period_months,
 } from "../SelectedAttributeTypes/Period-months.ta.mjs";
 import {
-    Period_weeks,
+    type Period_weeks,
     _decode_Period_weeks,
     _encode_Period_weeks,
 } from "../SelectedAttributeTypes/Period-weeks.ta.mjs";

@@ -10,15 +10,15 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CMSVersion, _decode_CMSVersion, _encode_CMSVersion } from "../X9-84-CMS/CMSVersion.ta.mjs";
+import { type CMSVersion, _decode_CMSVersion, _encode_CMSVersion } from "../X9-84-CMS/CMSVersion.ta.mjs";
 
-import { SignerIdentifier, _decode_SignerIdentifier, _encode_SignerIdentifier } from "../X9-84-CMS/SignerIdentifier.ta.mjs";
+import { type SignerIdentifier, _decode_SignerIdentifier, _encode_SignerIdentifier } from "../X9-84-CMS/SignerIdentifier.ta.mjs";
 
-import { DigestAlgorithmIdentifier, _decode_DigestAlgorithmIdentifier, _encode_DigestAlgorithmIdentifier } from "../X9-84-CMS/DigestAlgorithmIdentifier.ta.mjs";
+import { type DigestAlgorithmIdentifier, _decode_DigestAlgorithmIdentifier, _encode_DigestAlgorithmIdentifier } from "../X9-84-CMS/DigestAlgorithmIdentifier.ta.mjs";
 
-import { SignatureAlgorithmIdentifier, _decode_SignatureAlgorithmIdentifier, _encode_SignatureAlgorithmIdentifier } from "../X9-84-CMS/SignatureAlgorithmIdentifier.ta.mjs";
+import { type SignatureAlgorithmIdentifier, _decode_SignatureAlgorithmIdentifier, _encode_SignatureAlgorithmIdentifier } from "../X9-84-CMS/SignatureAlgorithmIdentifier.ta.mjs";
 
-import { SignatureValue, _decode_SignatureValue, _encode_SignatureValue } from "../X9-84-CMS/SignatureValue.ta.mjs";
+import { type SignatureValue, _decode_SignatureValue, _encode_SignatureValue } from "../X9-84-CMS/SignatureValue.ta.mjs";
 
 
 

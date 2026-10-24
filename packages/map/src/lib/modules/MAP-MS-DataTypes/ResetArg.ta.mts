@@ -5,12 +5,12 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { HLR_List, _decode_HLR_List, _encode_HLR_List } from "../MAP-CommonDataTypes/HLR-List.ta.mjs";
+import { type HLR_List, _decode_HLR_List, _encode_HLR_List } from "../MAP-CommonDataTypes/HLR-List.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { DeleteSubscriberDataArg, _decode_DeleteSubscriberDataArg, _encode_DeleteSubscriberDataArg } from "../MAP-MS-DataTypes/DeleteSubscriberDataArg.ta.mjs";
 import { InsertSubscriberDataArg, _decode_InsertSubscriberDataArg, _encode_InsertSubscriberDataArg } from "../MAP-MS-DataTypes/InsertSubscriberDataArg.ta.mjs";
-import { Reset_Id_List, _decode_Reset_Id_List, _encode_Reset_Id_List } from "../MAP-MS-DataTypes/Reset-Id-List.ta.mjs";
-import { SendingNode_Number, _decode_SendingNode_Number, _encode_SendingNode_Number } from "../MAP-MS-DataTypes/SendingNode-Number.ta.mjs";
+import { type Reset_Id_List, _decode_Reset_Id_List, _encode_Reset_Id_List } from "../MAP-MS-DataTypes/Reset-Id-List.ta.mjs";
+import { type SendingNode_Number, _decode_SendingNode_Number, _encode_SendingNode_Number } from "../MAP-MS-DataTypes/SendingNode-Number.ta.mjs";
 
 
 /**

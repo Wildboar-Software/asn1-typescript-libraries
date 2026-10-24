@@ -8,19 +8,19 @@ import {
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RecordType, _decode_RecordType, _encode_RecordType } from "../CSChargingDataTypes/RecordType.ta.mjs";
-import { TrunkGroup, _decode_TrunkGroup, _encode_TrunkGroup } from "../CSChargingDataTypes/TrunkGroup.ta.mjs";
-import { BasicService, _decode_BasicService, _encode_BasicService } from "../CSChargingDataTypes/BasicService.ta.mjs";
+import { type RecordType, _decode_RecordType, _encode_RecordType } from "../CSChargingDataTypes/RecordType.ta.mjs";
+import { type TrunkGroup, _decode_TrunkGroup, _encode_TrunkGroup } from "../CSChargingDataTypes/TrunkGroup.ta.mjs";
+import { type BasicService, _decode_BasicService, _encode_BasicService } from "../CSChargingDataTypes/BasicService.ta.mjs";
 import { TransparencyInd, _decode_TransparencyInd, _encode_TransparencyInd, _enum_for_TransparencyInd } from "../CSChargingDataTypes/TransparencyInd.ta.mjs";
 import { ChangeOfService, _decode_ChangeOfService, _encode_ChangeOfService } from "../CSChargingDataTypes/ChangeOfService.ta.mjs";
 import { SuppServiceUsed, _decode_SuppServiceUsed, _encode_SuppServiceUsed } from "../CSChargingDataTypes/SuppServiceUsed.ta.mjs";
-import { CauseForTerm, _decode_CauseForTerm, _encode_CauseForTerm } from "../CSChargingDataTypes/CauseForTerm.ta.mjs";
-import { HLRIntResult, _decode_HLRIntResult, _encode_HLRIntResult } from "../CSChargingDataTypes/HLRIntResult.ta.mjs";
+import { type CauseForTerm, _decode_CauseForTerm, _encode_CauseForTerm } from "../CSChargingDataTypes/CauseForTerm.ta.mjs";
+import { type HLRIntResult, _decode_HLRIntResult, _encode_HLRIntResult } from "../CSChargingDataTypes/HLRIntResult.ta.mjs";
 import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExtension } from "../CSChargingDataTypes/ManagementExtension.ta.mjs";
-import { RoamingRecord_lrnSoInd, _decode_RoamingRecord_lrnSoInd, _encode_RoamingRecord_lrnSoInd } from "../CSChargingDataTypes/RoamingRecord-lrnSoInd.ta.mjs";
-import { RoamingRecord_lrnQuryStatus, _decode_RoamingRecord_lrnQuryStatus, _encode_RoamingRecord_lrnQuryStatus } from "../CSChargingDataTypes/RoamingRecord-lrnQuryStatus.ta.mjs";
-import { RoamingRecord_jIPSoInd, _decode_RoamingRecord_jIPSoInd, _encode_RoamingRecord_jIPSoInd } from "../CSChargingDataTypes/RoamingRecord-jIPSoInd.ta.mjs";
-import { RoamingRecord_jIPQuryStatus, _decode_RoamingRecord_jIPQuryStatus, _encode_RoamingRecord_jIPQuryStatus } from "../CSChargingDataTypes/RoamingRecord-jIPQuryStatus.ta.mjs";
+import { type RoamingRecord_lrnSoInd, _decode_RoamingRecord_lrnSoInd, _encode_RoamingRecord_lrnSoInd } from "../CSChargingDataTypes/RoamingRecord-lrnSoInd.ta.mjs";
+import { type RoamingRecord_lrnQuryStatus, _decode_RoamingRecord_lrnQuryStatus, _encode_RoamingRecord_lrnQuryStatus } from "../CSChargingDataTypes/RoamingRecord-lrnQuryStatus.ta.mjs";
+import { type RoamingRecord_jIPSoInd, _decode_RoamingRecord_jIPSoInd, _encode_RoamingRecord_jIPSoInd } from "../CSChargingDataTypes/RoamingRecord-jIPSoInd.ta.mjs";
+import { type RoamingRecord_jIPQuryStatus, _decode_RoamingRecord_jIPQuryStatus, _encode_RoamingRecord_jIPQuryStatus } from "../CSChargingDataTypes/RoamingRecord-jIPQuryStatus.ta.mjs";
 import { PartialRecordType, _decode_PartialRecordType, _encode_PartialRecordType, _enum_for_PartialRecordType } from "../CSChargingDataTypes/PartialRecordType.ta.mjs";
 
 

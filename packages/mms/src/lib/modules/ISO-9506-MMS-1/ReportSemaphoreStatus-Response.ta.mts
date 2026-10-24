@@ -12,9 +12,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ReportSemaphoreStatus_Response_class, _decode_ReportSemaphoreStatus_Response_class, _encode_ReportSemaphoreStatus_Response_class } from "../ISO-9506-MMS-1/ReportSemaphoreStatus-Response-class.ta.mjs";
-import { Unsigned16, _decode_Unsigned16, _encode_Unsigned16 } from "../ISO-9506-MMS-1/Unsigned16.ta.mjs";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type ReportSemaphoreStatus_Response_class, _decode_ReportSemaphoreStatus_Response_class, _encode_ReportSemaphoreStatus_Response_class } from "../ISO-9506-MMS-1/ReportSemaphoreStatus-Response-class.ta.mjs";
+import { type Unsigned16, _decode_Unsigned16, _encode_Unsigned16 } from "../ISO-9506-MMS-1/Unsigned16.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
 
 
 /**

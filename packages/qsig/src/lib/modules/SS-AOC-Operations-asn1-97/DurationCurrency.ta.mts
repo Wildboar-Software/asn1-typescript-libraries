@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Currency, _decode_Currency, _encode_Currency } from "../SS-AOC-Operations-asn1-97/Currency.ta.mjs";
+import { type Currency, _decode_Currency, _encode_Currency } from "../SS-AOC-Operations-asn1-97/Currency.ta.mjs";
 import { Amount, _decode_Amount, _encode_Amount } from "../SS-AOC-Operations-asn1-97/Amount.ta.mjs";
 import { ChargingType, _decode_ChargingType, _encode_ChargingType, _enum_for_ChargingType } from "../SS-AOC-Operations-asn1-97/ChargingType.ta.mjs";
 import { Time, _decode_Time, _encode_Time } from "../SS-AOC-Operations-asn1-97/Time.ta.mjs";

@@ -2,7 +2,7 @@
 import { ASN1Element as _Element } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    PrivateKeyInfo,
+    type PrivateKeyInfo,
     _decode_PrivateKeyInfo,
     _encode_PrivateKeyInfo,
 } from "../AsymmetricKeyPackageModuleV1/PrivateKeyInfo.ta.mjs";

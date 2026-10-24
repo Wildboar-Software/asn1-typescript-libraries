@@ -10,15 +10,15 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CMSVersion, _decode_CMSVersion, _encode_CMSVersion } from "../X9-84-CMS/CMSVersion.ta.mjs";
+import { type CMSVersion, _decode_CMSVersion, _encode_CMSVersion } from "../X9-84-CMS/CMSVersion.ta.mjs";
 
-import { RecipientInfos, _decode_RecipientInfos, _encode_RecipientInfos } from "../X9-84-CMS/RecipientInfos.ta.mjs";
+import { type RecipientInfos, _decode_RecipientInfos, _encode_RecipientInfos } from "../X9-84-CMS/RecipientInfos.ta.mjs";
 
-import { MACAlgorithmIdentifier, _decode_MACAlgorithmIdentifier, _encode_MACAlgorithmIdentifier } from "../X9-84-CMS/MACAlgorithmIdentifier.ta.mjs";
+import { type MACAlgorithmIdentifier, _decode_MACAlgorithmIdentifier, _encode_MACAlgorithmIdentifier } from "../X9-84-CMS/MACAlgorithmIdentifier.ta.mjs";
 
 import { EncapsulatedContentInfo, _decode_EncapsulatedContentInfo, _encode_EncapsulatedContentInfo } from "../X9-84-CMS/EncapsulatedContentInfo.ta.mjs";
 
-import { MessageAuthenticationCode, _decode_MessageAuthenticationCode, _encode_MessageAuthenticationCode } from "../X9-84-CMS/MessageAuthenticationCode.ta.mjs";
+import { type MessageAuthenticationCode, _decode_MessageAuthenticationCode, _encode_MessageAuthenticationCode } from "../X9-84-CMS/MessageAuthenticationCode.ta.mjs";
 
 
 

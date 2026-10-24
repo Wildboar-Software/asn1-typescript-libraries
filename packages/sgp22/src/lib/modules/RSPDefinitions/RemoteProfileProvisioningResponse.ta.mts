@@ -4,11 +4,11 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { InitiateAuthenticationResponse, _decode_InitiateAuthenticationResponse, _encode_InitiateAuthenticationResponse } from "../RSPDefinitions/InitiateAuthenticationResponse.ta.mjs";
-import { AuthenticateClientResponseEs9, _decode_AuthenticateClientResponseEs9, _encode_AuthenticateClientResponseEs9 } from "../RSPDefinitions/AuthenticateClientResponseEs9.ta.mjs";
-import { GetBoundProfilePackageResponse, _decode_GetBoundProfilePackageResponse, _encode_GetBoundProfilePackageResponse } from "../RSPDefinitions/GetBoundProfilePackageResponse.ta.mjs";
-import { CancelSessionResponseEs9, _decode_CancelSessionResponseEs9, _encode_CancelSessionResponseEs9 } from "../RSPDefinitions/CancelSessionResponseEs9.ta.mjs";
-import { AuthenticateClientResponseEs11, _decode_AuthenticateClientResponseEs11, _encode_AuthenticateClientResponseEs11 } from "../RSPDefinitions/AuthenticateClientResponseEs11.ta.mjs";
+import { type InitiateAuthenticationResponse, _decode_InitiateAuthenticationResponse, _encode_InitiateAuthenticationResponse } from "../RSPDefinitions/InitiateAuthenticationResponse.ta.mjs";
+import { type AuthenticateClientResponseEs9, _decode_AuthenticateClientResponseEs9, _encode_AuthenticateClientResponseEs9 } from "../RSPDefinitions/AuthenticateClientResponseEs9.ta.mjs";
+import { type GetBoundProfilePackageResponse, _decode_GetBoundProfilePackageResponse, _encode_GetBoundProfilePackageResponse } from "../RSPDefinitions/GetBoundProfilePackageResponse.ta.mjs";
+import { type CancelSessionResponseEs9, _decode_CancelSessionResponseEs9, _encode_CancelSessionResponseEs9 } from "../RSPDefinitions/CancelSessionResponseEs9.ta.mjs";
+import { type AuthenticateClientResponseEs11, _decode_AuthenticateClientResponseEs11, _encode_AuthenticateClientResponseEs11 } from "../RSPDefinitions/AuthenticateClientResponseEs11.ta.mjs";
 
 
 /**

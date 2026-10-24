@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    FunctionalUnits,
+    type FunctionalUnits,
     _decode_FunctionalUnits,
     _encode_FunctionalUnits,
 } from '@wildboar/cmip';

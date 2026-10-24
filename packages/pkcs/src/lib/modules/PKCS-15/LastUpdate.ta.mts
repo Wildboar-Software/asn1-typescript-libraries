@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { ASN1Element as _Element, GeneralizedTime } from "@wildboar/asn1";
+import { ASN1Element as _Element, type GeneralizedTime } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ReferencedValue,
+    type ReferencedValue,
     _get_decoder_for_ReferencedValue,
     _get_encoder_for_ReferencedValue,
 } from "../PKCS-15/ReferencedValue.ta.mjs";

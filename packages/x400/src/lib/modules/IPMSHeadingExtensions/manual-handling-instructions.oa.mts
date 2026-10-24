@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    ManualHandlingInstructions,
+    type ManualHandlingInstructions,
     _decode_ManualHandlingInstructions,
     _encode_ManualHandlingInstructions,
 } from '../IPMSHeadingExtensions/ManualHandlingInstructions.ta.mjs';

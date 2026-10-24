@@ -11,4 +11,4 @@ type SubstringsMatcher = (
     selection?: SubstringSelection,
 ) => boolean;
 
-export default SubstringsMatcher;
+export type { SubstringsMatcher as default };

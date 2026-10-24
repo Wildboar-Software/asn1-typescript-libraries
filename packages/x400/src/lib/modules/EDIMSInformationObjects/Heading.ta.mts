@@ -13,17 +13,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ThisEDIMField,
+    type ThisEDIMField,
     _decode_ThisEDIMField,
     _encode_ThisEDIMField,
 } from '../EDIMSInformationObjects/ThisEDIMField.ta.mjs';
 import {
-    OriginatorField,
+    type OriginatorField,
     _decode_OriginatorField,
     _encode_OriginatorField,
 } from '../EDIMSInformationObjects/OriginatorField.ta.mjs';
 import {
-    RecipientsField,
+    type RecipientsField,
     _decode_RecipientsField,
     _encode_RecipientsField,
 } from '../EDIMSInformationObjects/RecipientsField.ta.mjs';
@@ -33,32 +33,32 @@ import {
     _encode_EDINReceiverField,
 } from '../EDIMSInformationObjects/EDINReceiverField.ta.mjs';
 import {
-    ResponsibilityForwarded,
+    type ResponsibilityForwarded,
     _decode_ResponsibilityForwarded,
     _encode_ResponsibilityForwarded,
 } from '../EDIMSInformationObjects/ResponsibilityForwarded.ta.mjs';
 import {
-    EDIBodyPartType,
+    type EDIBodyPartType,
     _decode_EDIBodyPartType,
     _encode_EDIBodyPartType,
 } from '../EDIMSInformationObjects/EDIBodyPartType.ta.mjs';
 import {
-    IncompleteCopyField,
+    type IncompleteCopyField,
     _decode_IncompleteCopyField,
     _encode_IncompleteCopyField,
 } from '../EDIMSInformationObjects/IncompleteCopyField.ta.mjs';
 import {
-    ExpiryTimeField,
+    type ExpiryTimeField,
     _decode_ExpiryTimeField,
     _encode_ExpiryTimeField,
 } from '../EDIMSInformationObjects/ExpiryTimeField.ta.mjs';
 import {
-    RelatedMessagesField,
+    type RelatedMessagesField,
     _decode_RelatedMessagesField,
     _encode_RelatedMessagesField,
 } from '../EDIMSInformationObjects/RelatedMessagesField.ta.mjs';
 import {
-    ObsoletedEDIMsField,
+    type ObsoletedEDIMsField,
     _decode_ObsoletedEDIMsField,
     _encode_ObsoletedEDIMsField,
 } from '../EDIMSInformationObjects/ObsoletedEDIMsField.ta.mjs';
@@ -68,12 +68,12 @@ import {
     _encode_EDIApplicationSecurityElementsField,
 } from '../EDIMSInformationObjects/EDIApplicationSecurityElementsField.ta.mjs';
 import {
-    CrossReferencingInformationField,
+    type CrossReferencingInformationField,
     _decode_CrossReferencingInformationField,
     _encode_CrossReferencingInformationField,
 } from '../EDIMSInformationObjects/CrossReferencingInformationField.ta.mjs';
 import {
-    EDIMessageTypeField,
+    type EDIMessageTypeField,
     _decode_EDIMessageTypeField,
     _encode_EDIMessageTypeField,
 } from '../EDIMSInformationObjects/EDIMessageTypeField.ta.mjs';
@@ -93,17 +93,17 @@ import {
     _encode_InterchangeSenderField,
 } from '../EDIMSInformationObjects/InterchangeSenderField.ta.mjs';
 import {
-    DateAndTimeOfPreparationField,
+    type DateAndTimeOfPreparationField,
     _decode_DateAndTimeOfPreparationField,
     _encode_DateAndTimeOfPreparationField,
 } from '../EDIMSInformationObjects/DateAndTimeOfPreparationField.ta.mjs';
 import {
-    ApplicationReferenceField,
+    type ApplicationReferenceField,
     _decode_ApplicationReferenceField,
     _encode_ApplicationReferenceField,
 } from '../EDIMSInformationObjects/ApplicationReferenceField.ta.mjs';
 import {
-    HeadingExtensionsField,
+    type HeadingExtensionsField,
     _decode_HeadingExtensionsField,
     _encode_HeadingExtensionsField,
 } from '../EDIMSInformationObjects/HeadingExtensionsField.ta.mjs';

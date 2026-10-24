@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AutoForwardComment,
+    type AutoForwardComment,
     _decode_AutoForwardComment,
     _encode_AutoForwardComment,
 } from '../IPMSInformationObjects/AutoForwardComment.ta.mjs';

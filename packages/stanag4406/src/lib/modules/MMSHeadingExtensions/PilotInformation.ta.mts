@@ -16,8 +16,8 @@ import {
     _decode_SecurityLabel,
     _encode_SecurityLabel,
 } from "@wildboar/x400/MTSAbstractService";
-import { MMHSPrecedence, _decode_MMHSPrecedence, _encode_MMHSPrecedence } from "../MMSHeadingExtensions/MMHSPrecedence.ta.mjs";
-import { MilitaryString, _decode_MilitaryString, _encode_MilitaryString } from "../MMSHeadingExtensions/MilitaryString.ta.mjs";
+import { type MMHSPrecedence, _decode_MMHSPrecedence, _encode_MMHSPrecedence } from "../MMSHeadingExtensions/MMHSPrecedence.ta.mjs";
+import { type MilitaryString, _decode_MilitaryString, _encode_MilitaryString } from "../MMSHeadingExtensions/MilitaryString.ta.mjs";
 
 
 /**

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { id_algo_multipleSignaturesAlgo } from "../CryptoTools/id-algo-multipleSignaturesAlgo.va.mjs";
 import {
-    MultipleSignaturesAlgo,
+    type MultipleSignaturesAlgo,
     _decode_MultipleSignaturesAlgo,
     _encode_MultipleSignaturesAlgo,
 } from "../CryptoTools/MultipleSignaturesAlgo.ta.mjs";

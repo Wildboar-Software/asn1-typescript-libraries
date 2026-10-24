@@ -4,7 +4,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TS36413CoarseUELocation, _decode_TS36413CoarseUELocation, _encode_TS36413CoarseUELocation } from "../TS33128Payloads/TS36413CoarseUELocation.ta.mjs";
+import { type TS36413CoarseUELocation, _decode_TS36413CoarseUELocation, _encode_TS36413CoarseUELocation } from "../TS33128Payloads/TS36413CoarseUELocation.ta.mjs";
 // export { TS36413CoarseUELocation, _decode_TS36413CoarseUELocation, _encode_TS36413CoarseUELocation } from "../TS33128Payloads/TS36413CoarseUELocation.ta.mjs";
 
 

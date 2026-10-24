@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ModemType, _decode_ModemType, _encode_ModemType } from "../MEDIA-GATEWAY-CONTROL/ModemType.ta.mjs";
+import { type ModemType, _decode_ModemType, _encode_ModemType } from "../MEDIA-GATEWAY-CONTROL/ModemType.ta.mjs";
 import { PropertyParm, _decode_PropertyParm, _encode_PropertyParm } from "../MEDIA-GATEWAY-CONTROL/PropertyParm.ta.mjs";
 import { NonStandardData, _decode_NonStandardData, _encode_NonStandardData } from "../MEDIA-GATEWAY-CONTROL/NonStandardData.ta.mjs";
 

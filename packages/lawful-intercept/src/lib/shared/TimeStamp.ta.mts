@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    UTCTime,
+    type UTCTime,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";

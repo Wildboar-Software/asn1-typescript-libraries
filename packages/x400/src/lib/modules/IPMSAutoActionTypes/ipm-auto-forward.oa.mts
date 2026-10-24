@@ -14,7 +14,7 @@ import {
     _encode_AutoActionType,
 } from '../MSAbstractService/AutoActionType.ta.mjs';
 import {
-    ipm_auto_forward_RegistrationParameter,
+    type ipm_auto_forward_RegistrationParameter,
     _decode_ipm_auto_forward_RegistrationParameter,
     _encode_ipm_auto_forward_RegistrationParameter,
 } from '../IPMSAutoActionTypes/ipm-auto-forward-RegistrationParameter.ta.mjs';

@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    NameType,
+    type NameType,
     _decode_NameType,
     _encode_NameType,
 } from '../ASN1DefinedTypesModule/NameType.ta.mjs';
 import {
-    PointerOrNull,
+    type PointerOrNull,
     _decode_PointerOrNull,
     _encode_PointerOrNull,
 } from '../ASN1DefinedTypesModule/PointerOrNull.ta.mjs';

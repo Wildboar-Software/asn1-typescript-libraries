@@ -17,7 +17,7 @@ import {
     _encode_AttributeUsage,
 } from '@wildboar/x500/InformationFramework';
 import {
-    Notifications,
+    type Notifications,
     _decode_Notifications,
     _encode_Notifications,
 } from '../DefinitionASN1Module/Notifications.ta.mjs';

@@ -16,7 +16,7 @@ import {
     _encode_MessageParameters,
 } from '../IPMSInformationObjects/MessageParameters.ta.mjs';
 import {
-    MessageData,
+    type MessageData,
     _decode_MessageData,
     _encode_MessageData,
 } from '../IPMSInformationObjects/MessageData.ta.mjs';

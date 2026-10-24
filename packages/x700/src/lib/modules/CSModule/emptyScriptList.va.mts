@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    AvailableScriptList,
+    type AvailableScriptList,
     _decode_AvailableScriptList,
     _encode_AvailableScriptList,
 } from '../CSModule/AvailableScriptList.ta.mjs';

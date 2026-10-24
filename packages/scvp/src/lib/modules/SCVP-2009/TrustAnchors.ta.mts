@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  PKCReference,
+  type PKCReference,
   _decode_PKCReference,
   _encode_PKCReference,
 } from '../SCVP-2009/PKCReference.ta.mjs';

@@ -5,7 +5,7 @@ import {
 } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
 import { id_alg_CMSRC2wrap } from "../CryptographicMessageSyntaxAlgorithms-2009/id-alg-CMSRC2wrap.va.mjs";
 import {
-    RC2wrapParameter,
+    type RC2wrapParameter,
     _decode_RC2wrapParameter,
     _encode_RC2wrapParameter,
 } from "../CryptographicMessageSyntaxAlgorithms-2009/RC2wrapParameter.ta.mjs";

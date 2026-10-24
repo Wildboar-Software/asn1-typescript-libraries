@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta.mjs";
+import { type IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { RequestedEquipmentInfo, _decode_RequestedEquipmentInfo, _encode_RequestedEquipmentInfo } from "../MAP-MS-DataTypes/RequestedEquipmentInfo.ta.mjs";
+import { type RequestedEquipmentInfo, _decode_RequestedEquipmentInfo, _encode_RequestedEquipmentInfo } from "../MAP-MS-DataTypes/RequestedEquipmentInfo.ta.mjs";
 
 
 /**

@@ -8,7 +8,7 @@ import { ConnectResponse_PDU, _decode_ConnectResponse_PDU, _encode_ConnectRespon
 import { ReleaseRequest_PDU, _decode_ReleaseRequest_PDU, _encode_ReleaseRequest_PDU } from "../RFC1085-PS/ReleaseRequest-PDU.ta.mjs";
 import { ReleaseResponse_PDU, _decode_ReleaseResponse_PDU, _encode_ReleaseResponse_PDU } from "../RFC1085-PS/ReleaseResponse-PDU.ta.mjs";
 import { Abort_PDU, _decode_Abort_PDU, _encode_Abort_PDU } from "../RFC1085-PS/Abort-PDU.ta.mjs";
-import { UserData_PDU, _decode_UserData_PDU, _encode_UserData_PDU } from "../RFC1085-PS/UserData-PDU.ta.mjs";
+import { type UserData_PDU, _decode_UserData_PDU, _encode_UserData_PDU } from "../RFC1085-PS/UserData-PDU.ta.mjs";
 import { CL_UserData_PDU, _decode_CL_UserData_PDU, _encode_CL_UserData_PDU } from "../RFC1085-PS/CL-UserData-PDU.ta.mjs";
 
 

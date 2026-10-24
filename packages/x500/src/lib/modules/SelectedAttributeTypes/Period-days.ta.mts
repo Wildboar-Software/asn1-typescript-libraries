@@ -1,13 +1,13 @@
 /* eslint-disable */
-import { ASN1Element as _Element, INTEGER } from "@wildboar/asn1";
+import { ASN1Element as _Element, type INTEGER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Period_days_bitDay,
+    type Period_days_bitDay,
     _decode_Period_days_bitDay,
     _encode_Period_days_bitDay,
 } from "../SelectedAttributeTypes/Period-days-bitDay.ta.mjs";
 import {
-    XDayOf,
+    type XDayOf,
     _decode_XDayOf,
     _encode_XDayOf,
 } from "../SelectedAttributeTypes/XDayOf.ta.mjs";

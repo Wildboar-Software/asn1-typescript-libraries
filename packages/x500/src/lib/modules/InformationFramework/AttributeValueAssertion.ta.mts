@@ -7,7 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AttributeValueAssertion_assertedContexts,
+    type AttributeValueAssertion_assertedContexts,
     _decode_AttributeValueAssertion_assertedContexts,
     _encode_AttributeValueAssertion_assertedContexts,
 } from "../InformationFramework/AttributeValueAssertion-assertedContexts.ta.mjs";

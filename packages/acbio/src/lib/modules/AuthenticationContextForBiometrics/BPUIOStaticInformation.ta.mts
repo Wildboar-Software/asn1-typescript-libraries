@@ -12,10 +12,10 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    BiometricType,
+    type BiometricType,
     _decode_BiometricType,
     _encode_BiometricType,
-    BiometricSubtype,
+    type BiometricSubtype,
     _decode_BiometricSubtype,
     _encode_BiometricSubtype,
 } from '@wildboar/cbeff';
@@ -25,7 +25,7 @@ import {
     _encode_DataType,
 } from '../AuthenticationContextForBiometrics/DataType.ta.mjs';
 import {
-    IOIndex,
+    type IOIndex,
     _decode_IOIndex,
     _encode_IOIndex,
 } from '../AuthenticationContextForBiometrics/IOIndex.ta.mjs';

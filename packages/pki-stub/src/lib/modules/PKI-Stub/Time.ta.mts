@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    UTCTime,
-    GeneralizedTime,
+    type UTCTime,
+    type GeneralizedTime,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,

@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    RecipientField,
+    type RecipientField,
     _decode_RecipientField,
     _encode_RecipientField,
 } from '../EDIMSInformationObjects/RecipientField.ta.mjs';

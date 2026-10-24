@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Password,
+  type Password,
   _decode_Password,
   _encode_Password,
 } from '../ISO8571-FTAM/Password.ta.mjs';
 import {
-  Pass_Passwords,
+  type Pass_Passwords,
   _decode_Pass_Passwords,
   _encode_Pass_Passwords,
 } from '../ISO8571-FTAM/Pass-Passwords.ta.mjs';

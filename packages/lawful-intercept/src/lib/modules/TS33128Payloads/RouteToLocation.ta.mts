@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DNAI, _decode_DNAI, _encode_DNAI } from "../TS33128Payloads/DNAI.ta.mjs";
+import { type DNAI, _decode_DNAI, _encode_DNAI } from "../TS33128Payloads/DNAI.ta.mjs";
 // export { DNAI, _decode_DNAI, _encode_DNAI } from "../TS33128Payloads/DNAI.ta.mjs";
 import { RouteInfo, _decode_RouteInfo, _encode_RouteInfo } from "../TS33128Payloads/RouteInfo.ta.mjs";
 // export { RouteInfo, _decode_RouteInfo, _encode_RouteInfo } from "../TS33128Payloads/RouteInfo.ta.mjs";

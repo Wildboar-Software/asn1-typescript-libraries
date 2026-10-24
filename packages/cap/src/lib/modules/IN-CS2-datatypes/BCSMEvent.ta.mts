@@ -13,8 +13,8 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { EventTypeBCSM, _enum_for_EventTypeBCSM, _decode_EventTypeBCSM, _encode_EventTypeBCSM } from "../IN-CS2-datatypes/EventTypeBCSM.ta.mjs";
 import { MonitorMode, _enum_for_MonitorMode, _decode_MonitorMode, _encode_MonitorMode } from "../IN-CS2-datatypes/MonitorMode.ta.mjs";
-import { LegID, _decode_LegID, _encode_LegID } from "../IN-CS2-datatypes/LegID.ta.mjs";
-import { DpSpecificCriteria, _decode_DpSpecificCriteria, _encode_DpSpecificCriteria } from "../IN-CS2-datatypes/DpSpecificCriteria.ta.mjs";
+import { type LegID, _decode_LegID, _encode_LegID } from "../IN-CS2-datatypes/LegID.ta.mjs";
+import { type DpSpecificCriteria, _decode_DpSpecificCriteria, _encode_DpSpecificCriteria } from "../IN-CS2-datatypes/DpSpecificCriteria.ta.mjs";
 
 
 /**

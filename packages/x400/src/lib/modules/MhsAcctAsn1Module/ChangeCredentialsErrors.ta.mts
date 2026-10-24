@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AdministrationError,
+    type AdministrationError,
     _decode_AdministrationError,
     _encode_AdministrationError,
 } from '../MhsAcctAsn1Module/AdministrationError.ta.mjs';

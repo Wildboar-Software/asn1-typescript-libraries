@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { LCS_FormatIndicator, _decode_LCS_FormatIndicator, _encode_LCS_FormatIndicator, _enum_for_LCS_FormatIndicator } from "../MAP-LCS-DataTypes/LCS-FormatIndicator.ta.mjs";
-import { NameString, _decode_NameString, _encode_NameString } from "../MAP-LCS-DataTypes/NameString.ta.mjs";
-import { USSD_DataCodingScheme, _decode_USSD_DataCodingScheme, _encode_USSD_DataCodingScheme } from "../MAP-SS-DataTypes/USSD-DataCodingScheme.ta.mjs";
+import { type LCS_FormatIndicator, _decode_LCS_FormatIndicator, _encode_LCS_FormatIndicator, _enum_for_LCS_FormatIndicator } from "../MAP-LCS-DataTypes/LCS-FormatIndicator.ta.mjs";
+import { type NameString, _decode_NameString, _encode_NameString } from "../MAP-LCS-DataTypes/NameString.ta.mjs";
+import { type USSD_DataCodingScheme, _decode_USSD_DataCodingScheme, _encode_USSD_DataCodingScheme } from "../MAP-SS-DataTypes/USSD-DataCodingScheme.ta.mjs";
 
 
 /**

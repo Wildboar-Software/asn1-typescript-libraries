@@ -2,7 +2,7 @@
 import { type KEY_AGREEMENT } from "../ANSI-X9-42/KEY-AGREEMENT.oca.mjs";
 import { mqv2 } from "../ANSI-X9-42/mqv2.va.mjs";
 import {
-    SchemeParameters,
+    type SchemeParameters,
     _decode_SchemeParameters,
     _encode_SchemeParameters,
 } from "../ANSI-X9-42/SchemeParameters.ta.mjs";

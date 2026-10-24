@@ -6,17 +6,17 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MBMSinformation_mbms_Mode, _decode_MBMSinformation_mbms_Mode, _encode_MBMSinformation_mbms_Mode, _enum_for_MBMSinformation_mbms_Mode } from "../MBMSUmtsHI2Operations/MBMSinformation-mbms-Mode.ta.mjs";
+import { type MBMSinformation_mbms_Mode, _decode_MBMSinformation_mbms_Mode, _encode_MBMSinformation_mbms_Mode, _enum_for_MBMSinformation_mbms_Mode } from "../MBMSUmtsHI2Operations/MBMSinformation-mbms-Mode.ta.mjs";
 // export { MBMSinformation_mbms_Mode, _enum_for_MBMSinformation_mbms_Mode, MBMSinformation_mbms_Mode_multicast /* IMPORTED_LONG_ENUMERATION_ITEM */, multicast /* IMPORTED_SHORT_ENUMERATION_ITEM */, MBMSinformation_mbms_Mode_broadcast /* IMPORTED_LONG_ENUMERATION_ITEM */, broadcast /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MBMSinformation_mbms_Mode, _encode_MBMSinformation_mbms_Mode } from "../MBMSUmtsHI2Operations/MBMSinformation-mbms-Mode.ta.mjs";
 import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../HI2Operations/IPAddress.ta.mjs";
 // export { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../HI2Operations/IPAddress.ta.mjs";
-import { MBMSinformation_mbmsLeavingReason, _decode_MBMSinformation_mbmsLeavingReason, _encode_MBMSinformation_mbmsLeavingReason, _enum_for_MBMSinformation_mbmsLeavingReason } from "../MBMSUmtsHI2Operations/MBMSinformation-mbmsLeavingReason.ta.mjs";
+import { type MBMSinformation_mbmsLeavingReason, _decode_MBMSinformation_mbmsLeavingReason, _encode_MBMSinformation_mbmsLeavingReason, _enum_for_MBMSinformation_mbmsLeavingReason } from "../MBMSUmtsHI2Operations/MBMSinformation-mbmsLeavingReason.ta.mjs";
 // export { MBMSinformation_mbmsLeavingReason, _enum_for_MBMSinformation_mbmsLeavingReason, MBMSinformation_mbmsLeavingReason_uEinitiatedRequested /* IMPORTED_LONG_ENUMERATION_ITEM */, uEinitiatedRequested /* IMPORTED_SHORT_ENUMERATION_ITEM */, MBMSinformation_mbmsLeavingReason_bMSCorNetworkTerminated /* IMPORTED_LONG_ENUMERATION_ITEM */, bMSCorNetworkTerminated /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MBMSinformation_mbmsLeavingReason, _encode_MBMSinformation_mbmsLeavingReason } from "../MBMSUmtsHI2Operations/MBMSinformation-mbmsLeavingReason.ta.mjs";
-import { MBMSinformation_mbmsSubsTermReason, _decode_MBMSinformation_mbmsSubsTermReason, _encode_MBMSinformation_mbmsSubsTermReason, _enum_for_MBMSinformation_mbmsSubsTermReason } from "../MBMSUmtsHI2Operations/MBMSinformation-mbmsSubsTermReason.ta.mjs";
+import { type MBMSinformation_mbmsSubsTermReason, _decode_MBMSinformation_mbmsSubsTermReason, _encode_MBMSinformation_mbmsSubsTermReason, _enum_for_MBMSinformation_mbmsSubsTermReason } from "../MBMSUmtsHI2Operations/MBMSinformation-mbmsSubsTermReason.ta.mjs";
 // export { MBMSinformation_mbmsSubsTermReason, _enum_for_MBMSinformation_mbmsSubsTermReason, MBMSinformation_mbmsSubsTermReason_userInitiated /* IMPORTED_LONG_ENUMERATION_ITEM */, userInitiated /* IMPORTED_SHORT_ENUMERATION_ITEM */, MBMSinformation_mbmsSubsTermReason_subscriptionExpired /* IMPORTED_LONG_ENUMERATION_ITEM */, subscriptionExpired /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MBMSinformation_mbmsSubsTermReason, _encode_MBMSinformation_mbmsSubsTermReason } from "../MBMSUmtsHI2Operations/MBMSinformation-mbmsSubsTermReason.ta.mjs";
-import { MBMSSerSubscriberList, _decode_MBMSSerSubscriberList, _encode_MBMSSerSubscriberList } from "../MBMSUmtsHI2Operations/MBMSSerSubscriberList.ta.mjs";
+import { type MBMSSerSubscriberList, _decode_MBMSSerSubscriberList, _encode_MBMSSerSubscriberList } from "../MBMSUmtsHI2Operations/MBMSSerSubscriberList.ta.mjs";
 // export { MBMSSerSubscriberList, _decode_MBMSSerSubscriberList, _encode_MBMSSerSubscriberList } from "../MBMSUmtsHI2Operations/MBMSSerSubscriberList.ta.mjs";
-import { MBMSNodeList, _decode_MBMSNodeList, _encode_MBMSNodeList } from "../MBMSUmtsHI2Operations/MBMSNodeList.ta.mjs";
+import { type MBMSNodeList, _decode_MBMSNodeList, _encode_MBMSNodeList } from "../MBMSUmtsHI2Operations/MBMSNodeList.ta.mjs";
 // export { MBMSNodeList, _decode_MBMSNodeList, _encode_MBMSNodeList } from "../MBMSUmtsHI2Operations/MBMSNodeList.ta.mjs";
 
 

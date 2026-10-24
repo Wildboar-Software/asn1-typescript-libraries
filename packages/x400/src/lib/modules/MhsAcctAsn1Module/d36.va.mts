@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    SettlementPolicy,
+    type SettlementPolicy,
     _decode_SettlementPolicy,
     _encode_SettlementPolicy,
 } from '../MhsAcctAsn1Module/SettlementPolicy.ta.mjs';

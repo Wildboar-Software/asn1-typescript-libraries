@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AuditResultV1, _decode_AuditResultV1, _encode_AuditResultV1 } from "../H238V1-SUPPORT/AuditResultV1.ta.mjs";
+import { type AuditResultV1, _decode_AuditResultV1, _encode_AuditResultV1 } from "../H238V1-SUPPORT/AuditResultV1.ta.mjs";
 import { TerminationID, _decode_TerminationID, _encode_TerminationID } from "../MEDIA-GATEWAY-CONTROL/TerminationID.ta.mjs";
 
 

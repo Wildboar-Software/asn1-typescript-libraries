@@ -4,7 +4,7 @@ import {
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_SMServingNodeAddress, _encode_SMServingNodeAddress, SMServingNodeAddress } from "../MAP-SM-DataTypes/SMServingNodeAddress.ta.mjs";
+import { _decode_SMServingNodeAddress, _encode_SMServingNodeAddress, type SMServingNodeAddress } from "../MAP-SM-DataTypes/SMServingNodeAddress.ta.mjs";
 
 
 import { maxNumOfSMServingNodeAddresses } from "./maxNumOfSMServingNodeAddresses.va.mjs";

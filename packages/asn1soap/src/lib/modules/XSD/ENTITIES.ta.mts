@@ -10,7 +10,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
-import { ENTITY, _decode_ENTITY, _encode_ENTITY } from '../XSD/ENTITY.ta.mjs';
+import { type ENTITY, _decode_ENTITY, _encode_ENTITY } from '../XSD/ENTITY.ta.mjs';
 
 /**
  * @summary ENTITIES

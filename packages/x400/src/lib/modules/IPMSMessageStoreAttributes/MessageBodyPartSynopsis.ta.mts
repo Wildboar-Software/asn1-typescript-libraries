@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SequenceNumber,
+    type SequenceNumber,
     _decode_SequenceNumber,
     _encode_SequenceNumber,
 } from '../MSAbstractService/SequenceNumber.ta.mjs';
 import {
-    IPMSynopsis,
+    type IPMSynopsis,
     _decode_IPMSynopsis,
     _encode_IPMSynopsis,
 } from '../IPMSMessageStoreAttributes/IPMSynopsis.ta.mjs';

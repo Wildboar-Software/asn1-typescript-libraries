@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { UniqueIdentifierOfBioParaInfo, _decode_UniqueIdentifierOfBioParaInfo, _encode_UniqueIdentifierOfBioParaInfo } from "../TAI/UniqueIdentifierOfBioParaInfo.ta.mjs";
+import { type UniqueIdentifierOfBioParaInfo, _decode_UniqueIdentifierOfBioParaInfo, _encode_UniqueIdentifierOfBioParaInfo } from "../TAI/UniqueIdentifierOfBioParaInfo.ta.mjs";
 /**
  * @summary SecurityLevelofPrivilege_bioSecLevel
  * @description

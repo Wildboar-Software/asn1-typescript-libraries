@@ -7,21 +7,21 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { AreaScope, _decode_AreaScope, _encode_AreaScope } from "../MAP-OM-DataTypes/AreaScope.ta.mjs";
-import { EventThreshold1F, _decode_EventThreshold1F, _encode_EventThreshold1F } from "../MAP-OM-DataTypes/EventThreshold1F.ta.mjs";
-import { EventThreshold1I, _decode_EventThreshold1I, _encode_EventThreshold1I } from "../MAP-OM-DataTypes/EventThreshold1I.ta.mjs";
-import { EventThresholdRSRP, _decode_EventThresholdRSRP, _encode_EventThresholdRSRP } from "../MAP-OM-DataTypes/EventThresholdRSRP.ta.mjs";
-import { EventThresholdRSRQ, _decode_EventThresholdRSRQ, _encode_EventThresholdRSRQ } from "../MAP-OM-DataTypes/EventThresholdRSRQ.ta.mjs";
+import { type EventThreshold1F, _decode_EventThreshold1F, _encode_EventThreshold1F } from "../MAP-OM-DataTypes/EventThreshold1F.ta.mjs";
+import { type EventThreshold1I, _decode_EventThreshold1I, _encode_EventThreshold1I } from "../MAP-OM-DataTypes/EventThreshold1I.ta.mjs";
+import { type EventThresholdRSRP, _decode_EventThresholdRSRP, _encode_EventThresholdRSRP } from "../MAP-OM-DataTypes/EventThresholdRSRP.ta.mjs";
+import { type EventThresholdRSRQ, _decode_EventThresholdRSRQ, _encode_EventThresholdRSRQ } from "../MAP-OM-DataTypes/EventThresholdRSRQ.ta.mjs";
 import { JobType, _decode_JobType, _encode_JobType, _enum_for_JobType } from "../MAP-OM-DataTypes/JobType.ta.mjs";
-import { ListOfMeasurements, _decode_ListOfMeasurements, _encode_ListOfMeasurements } from "../MAP-OM-DataTypes/ListOfMeasurements.ta.mjs";
+import { type ListOfMeasurements, _decode_ListOfMeasurements, _encode_ListOfMeasurements } from "../MAP-OM-DataTypes/ListOfMeasurements.ta.mjs";
 import { LoggingDuration, _decode_LoggingDuration, _encode_LoggingDuration, _enum_for_LoggingDuration } from "../MAP-OM-DataTypes/LoggingDuration.ta.mjs";
 import { LoggingInterval, _decode_LoggingInterval, _encode_LoggingInterval, _enum_for_LoggingInterval } from "../MAP-OM-DataTypes/LoggingInterval.ta.mjs";
-import { MDT_Allowed_PLMNId_List, _decode_MDT_Allowed_PLMNId_List, _encode_MDT_Allowed_PLMNId_List } from "../MAP-OM-DataTypes/MDT-Allowed-PLMNId-List.ta.mjs";
-import { MeasurementQuantity, _decode_MeasurementQuantity, _encode_MeasurementQuantity } from "../MAP-OM-DataTypes/MeasurementQuantity.ta.mjs";
+import { type MDT_Allowed_PLMNId_List, _decode_MDT_Allowed_PLMNId_List, _encode_MDT_Allowed_PLMNId_List } from "../MAP-OM-DataTypes/MDT-Allowed-PLMNId-List.ta.mjs";
+import { type MeasurementQuantity, _decode_MeasurementQuantity, _encode_MeasurementQuantity } from "../MAP-OM-DataTypes/MeasurementQuantity.ta.mjs";
 import { PeriodLTE, _decode_PeriodLTE, _encode_PeriodLTE, _enum_for_PeriodLTE } from "../MAP-OM-DataTypes/PeriodLTE.ta.mjs";
 import { PeriodUMTS, _decode_PeriodUMTS, _encode_PeriodUMTS, _enum_for_PeriodUMTS } from "../MAP-OM-DataTypes/PeriodUMTS.ta.mjs";
-import { PositioningMethod, _decode_PositioningMethod, _encode_PositioningMethod } from "../MAP-OM-DataTypes/PositioningMethod.ta.mjs";
+import { type PositioningMethod, _decode_PositioningMethod, _encode_PositioningMethod } from "../MAP-OM-DataTypes/PositioningMethod.ta.mjs";
 import { ReportAmount, _decode_ReportAmount, _encode_ReportAmount, _enum_for_ReportAmount } from "../MAP-OM-DataTypes/ReportAmount.ta.mjs";
-import { ReportingTrigger, _decode_ReportingTrigger, _encode_ReportingTrigger } from "../MAP-OM-DataTypes/ReportingTrigger.ta.mjs";
+import { type ReportingTrigger, _decode_ReportingTrigger, _encode_ReportingTrigger } from "../MAP-OM-DataTypes/ReportingTrigger.ta.mjs";
 import { ReportInterval, _decode_ReportInterval, _encode_ReportInterval, _enum_for_ReportInterval } from "../MAP-OM-DataTypes/ReportInterval.ta.mjs";
 
 

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { id_algo_multiplePublicKeyAlgo } from "../CryptoTools/id-algo-multiplePublicKeyAlgo.va.mjs";
 import {
-    MultiplePublicKeyAlgo,
+    type MultiplePublicKeyAlgo,
     _decode_MultiplePublicKeyAlgo,
     _encode_MultiplePublicKeyAlgo,
 } from "../CryptoTools/MultiplePublicKeyAlgo.ta.mjs";

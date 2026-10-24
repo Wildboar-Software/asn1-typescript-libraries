@@ -13,7 +13,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_AccessRuleOffer, _encode_AccessRuleOffer, type AccessRuleOffer } from "../CSS/AccessRuleOffer.ta.mjs";
-import { ParameterOffers_defaultCOPriority, _decode_ParameterOffers_defaultCOPriority, _encode_ParameterOffers_defaultCOPriority } from "../DEV/ParameterOffers-defaultCOPriority.ta.mjs";
+import { type ParameterOffers_defaultCOPriority, _decode_ParameterOffers_defaultCOPriority, _encode_ParameterOffers_defaultCOPriority } from "../DEV/ParameterOffers-defaultCOPriority.ta.mjs";
 import { _decode_CompoundRepertoireOffer, _encode_CompoundRepertoireOffer, CompoundRepertoireOffer } from "../CDS/CompoundRepertoireOffer.ta.mjs";
 import { _decode_CompoundEmphasisOffer, _encode_CompoundEmphasisOffer, type CompoundEmphasisOffer } from "../CDS/CompoundEmphasisOffer.ta.mjs";
 import { _decode_CompoundColourOffer, _encode_CompoundColourOffer, CompoundColourOffer } from "../CDS/CompoundColourOffer.ta.mjs";
@@ -21,7 +21,7 @@ import { _decode_IntegerOffer, _encode_IntegerOffer, type IntegerOffer } from ".
 import { ParameterOffers_terminationEventList_Item_Item, _decode_ParameterOffers_terminationEventList_Item_Item, _encode_ParameterOffers_terminationEventList_Item_Item } from "../DEV/ParameterOffers-terminationEventList-Item-Item.ta.mjs";
 import { ParameterOffers_terminationLength, _decode_ParameterOffers_terminationLength, _encode_ParameterOffers_terminationLength } from "../DEV/ParameterOffers-terminationLength.ta.mjs";
 import { ParameterOffers_terminationTimeout, _decode_ParameterOffers_terminationTimeout, _encode_ParameterOffers_terminationTimeout } from "../DEV/ParameterOffers-terminationTimeout.ta.mjs";
-import { ParameterOffers_defaultCOtrigger, _decode_ParameterOffers_defaultCOtrigger, _encode_ParameterOffers_defaultCOtrigger } from "../DEV/ParameterOffers-defaultCOtrigger.ta.mjs";
+import { type ParameterOffers_defaultCOtrigger, _decode_ParameterOffers_defaultCOtrigger, _encode_ParameterOffers_defaultCOtrigger } from "../DEV/ParameterOffers-defaultCOtrigger.ta.mjs";
 import { ParameterOffers_defaultCOinitialValue_Item, _decode_ParameterOffers_defaultCOinitialValue_Item, _encode_ParameterOffers_defaultCOinitialValue_Item } from "../DEV/ParameterOffers-defaultCOinitialValue-Item.ta.mjs";
 
 

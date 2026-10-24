@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    CapabilityIdentitiesList_Item,
+    type CapabilityIdentitiesList_Item,
     _decode_CapabilityIdentitiesList_Item,
     _encode_CapabilityIdentitiesList_Item,
 } from '../AccessControl-ASN1Module/CapabilityIdentitiesList-Item.ta.mjs';

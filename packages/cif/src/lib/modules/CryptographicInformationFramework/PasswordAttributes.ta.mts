@@ -3,7 +3,7 @@ import {
     type OPTIONAL,
     type INTEGER,
     type OCTET_STRING,
-    GeneralizedTime,
+    type GeneralizedTime,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -16,9 +16,9 @@ import {
     ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PasswordFlags, _decode_PasswordFlags, _encode_PasswordFlags } from "../CryptographicInformationFramework/PasswordFlags.ta.mjs";
-import { PasswordType, _enum_for_PasswordType, _decode_PasswordType, _encode_PasswordType } from "../CryptographicInformationFramework/PasswordType.ta.mjs";
-import { Reference, _decode_Reference, _encode_Reference } from "../CryptographicInformationFramework/Reference.ta.mjs";
+import { type PasswordFlags, _decode_PasswordFlags, _encode_PasswordFlags } from "../CryptographicInformationFramework/PasswordFlags.ta.mjs";
+import { type PasswordType, _enum_for_PasswordType, _decode_PasswordType, _encode_PasswordType } from "../CryptographicInformationFramework/PasswordType.ta.mjs";
+import { type Reference, _decode_Reference, _encode_Reference } from "../CryptographicInformationFramework/Reference.ta.mjs";
 import { Path, _decode_Path, _encode_Path } from "../CryptographicInformationFramework/Path.ta.mjs";
 import { cia_lb_minPasswordLength } from "../CryptographicInformationFramework/cia-lb-minPasswordLength.va.mjs";
 import { cia_ub_minPasswordLength } from "../CryptographicInformationFramework/cia-ub-minPasswordLength.va.mjs";

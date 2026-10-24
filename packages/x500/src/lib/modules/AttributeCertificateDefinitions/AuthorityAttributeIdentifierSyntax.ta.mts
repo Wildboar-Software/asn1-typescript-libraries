@@ -2,7 +2,7 @@
 import { ASN1Element as _Element } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AuthAttId,
+    type AuthAttId,
     _decode_AuthAttId,
     _encode_AuthAttId,
 } from "../AttributeCertificateDefinitions/AuthAttId.ta.mjs";

@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ExplicitConversion,
+    type ExplicitConversion,
     _decode_ExplicitConversion,
     _encode_ExplicitConversion,
 } from '../MTSAbstractService/ExplicitConversion.ta.mjs';
 import {
-    GenericConversion,
+    type GenericConversion,
     _decode_GenericConversion,
     _encode_GenericConversion,
 } from '../MhsMTAAsn1Module/GenericConversion.ta.mjs';

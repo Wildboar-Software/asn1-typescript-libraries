@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    ObsoletedIPMsSubfield,
+    type ObsoletedIPMsSubfield,
     _decode_ObsoletedIPMsSubfield,
     _encode_ObsoletedIPMsSubfield,
 } from '../IPMSInformationObjects/ObsoletedIPMsSubfield.ta.mjs';

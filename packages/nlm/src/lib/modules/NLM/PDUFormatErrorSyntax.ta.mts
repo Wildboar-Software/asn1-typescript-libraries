@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    PDUHeader,
+    type PDUHeader,
     _decode_PDUHeader,
     _encode_PDUHeader,
 } from '../NLM/PDUHeader.ta.mjs';

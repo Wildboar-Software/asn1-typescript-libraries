@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
+import { type Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
 import { NameArg_nameSequence, _decode_NameArg_nameSequence, _encode_NameArg_nameSequence } from "../Name-Operations-asn1-97/NameArg-nameSequence.ta.mjs";
 
 /**

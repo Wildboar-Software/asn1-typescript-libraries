@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DiagnosticRcfStart, _decode_DiagnosticRcfStart, _encode_DiagnosticRcfStart } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/DiagnosticRcfStart.ta.mjs";
+import { type DiagnosticRcfStart, _decode_DiagnosticRcfStart, _encode_DiagnosticRcfStart } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/DiagnosticRcfStart.ta.mjs";
 
 
 /**

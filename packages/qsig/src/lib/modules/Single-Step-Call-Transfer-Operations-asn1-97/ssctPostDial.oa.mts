@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-import { DummyArg, _decode_DummyArg, _encode_DummyArg } from "../Single-Step-Call-Transfer-Operations-asn1-97/DummyArg.ta.mjs";
+import { type DummyArg, _decode_DummyArg, _encode_DummyArg } from "../Single-Step-Call-Transfer-Operations-asn1-97/DummyArg.ta.mjs";
 
 /**
  * @summary ssctPostDial

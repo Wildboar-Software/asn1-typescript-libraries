@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  AttributeDescription,
+  type AttributeDescription,
   _decode_AttributeDescription,
   _encode_AttributeDescription,
 } from '../Lightweight-Directory-Access-Protocol-V3/AttributeDescription.ta.mjs';
 import {
-  SubstringFilter_substrings_substring,
+  type SubstringFilter_substrings_substring,
   _decode_SubstringFilter_substrings_substring,
   _encode_SubstringFilter_substrings_substring,
 } from '../Lightweight-Directory-Access-Protocol-V3/SubstringFilter-substrings-substring.ta.mjs';

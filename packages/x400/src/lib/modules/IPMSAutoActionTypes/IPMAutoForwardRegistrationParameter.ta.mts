@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Filter,
+    type Filter,
     _decode_Filter,
     _encode_Filter,
 } from '../MSAbstractService/Filter.ta.mjs';
@@ -27,7 +27,7 @@ import {
     _encode_Heading,
 } from '../IPMSInformationObjects/Heading.ta.mjs';
 import {
-    BodyPart,
+    type BodyPart,
     _decode_BodyPart,
     _encode_BodyPart,
 } from '../IPMSInformationObjects/BodyPart.ta.mjs';
@@ -37,12 +37,12 @@ import {
     _encode_MSSubmissionOptions,
 } from '../MSAbstractService/MSSubmissionOptions.ta.mjs';
 import {
-    AutoForwardComment,
+    type AutoForwardComment,
     _decode_AutoForwardComment,
     _encode_AutoForwardComment,
 } from '../IPMSInformationObjects/AutoForwardComment.ta.mjs';
 import {
-    IPMAutoForwardOptions,
+    type IPMAutoForwardOptions,
     _decode_IPMAutoForwardOptions,
     _encode_IPMAutoForwardOptions,
 } from '../IPMSAutoActionTypes/IPMAutoForwardOptions.ta.mjs';

@@ -1,18 +1,18 @@
 /* eslint-disable */
-import { ASN1Element as _Element, ASN1TagClass as _TagClass, OPTIONAL } from "@wildboar/asn1";
+import { ASN1Element as _Element, ASN1TagClass as _TagClass, type OPTIONAL } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CMSVersion,
+    type CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
 } from "../CryptographicMessageSyntax-2010/CMSVersion.ta.mjs";
 import {
-    EncryptedContentInfo,
+    type EncryptedContentInfo,
     _decode_EncryptedContentInfo,
     _encode_EncryptedContentInfo,
 } from "../CryptographicMessageSyntax-2010/EncryptedContentInfo.ta.mjs";
 import {
-    Attributes,
+    type Attributes,
     _encode_Attributes,
     _decode_Attributes,
 } from "../CryptographicMessageSyntax-2010/Attributes.ta.mjs";

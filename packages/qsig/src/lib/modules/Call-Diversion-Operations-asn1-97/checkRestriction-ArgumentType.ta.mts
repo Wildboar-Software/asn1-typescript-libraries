@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
+import { type PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { BasicService, _decode_BasicService, _encode_BasicService, _enum_for_BasicService } from "../Call-Diversion-Operations-asn1-97/BasicService.ta.mjs";
-import { _decode_checkRestriction_ArgumentType_extension, _encode_checkRestriction_ArgumentType_extension, checkRestriction_ArgumentType_extension } from "../Call-Diversion-Operations-asn1-97/checkRestriction-ArgumentType-extension.ta.mjs";
+import { _decode_checkRestriction_ArgumentType_extension, _encode_checkRestriction_ArgumentType_extension, type checkRestriction_ArgumentType_extension } from "../Call-Diversion-Operations-asn1-97/checkRestriction-ArgumentType-extension.ta.mjs";
 
 /**
  * @summary checkRestriction_ArgumentType

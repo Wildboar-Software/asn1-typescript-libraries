@@ -10,13 +10,13 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { hi3CCLinkIdOperationId } from "../HI3CCLinkData/hi3CCLinkIdOperationId.va.mjs";
-import { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
+import { type LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
 // export { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
 import { CommunicationIdentifier, _decode_CommunicationIdentifier, _encode_CommunicationIdentifier } from "../HI2Operations/CommunicationIdentifier.ta.mjs";
 // export { CommunicationIdentifier, _decode_CommunicationIdentifier, _encode_CommunicationIdentifier } from "../HI2Operations/CommunicationIdentifier.ta.mjs";
-import { CC_Link_Identifier, _decode_CC_Link_Identifier, _encode_CC_Link_Identifier } from "../HI2Operations/CC-Link-Identifier.ta.mjs";
+import { type CC_Link_Identifier, _decode_CC_Link_Identifier, _encode_CC_Link_Identifier } from "../HI2Operations/CC-Link-Identifier.ta.mjs";
 // export { CC_Link_Identifier, _decode_CC_Link_Identifier, _encode_CC_Link_Identifier } from "../HI2Operations/CC-Link-Identifier.ta.mjs";
-import { Direction_Indication, _decode_Direction_Indication, _encode_Direction_Indication, _enum_for_Direction_Indication } from "../HI3CCLinkData/Direction-Indication.ta.mjs";
+import { type Direction_Indication, _decode_Direction_Indication, _encode_Direction_Indication, _enum_for_Direction_Indication } from "../HI3CCLinkData/Direction-Indication.ta.mjs";
 // export { Direction_Indication, _enum_for_Direction_Indication, Direction_Indication_mono_mode /* IMPORTED_LONG_ENUMERATION_ITEM */, mono_mode /* IMPORTED_SHORT_ENUMERATION_ITEM */, Direction_Indication_cc_from_target /* IMPORTED_LONG_ENUMERATION_ITEM */, cc_from_target /* IMPORTED_SHORT_ENUMERATION_ITEM */, Direction_Indication_cc_from_other_party /* IMPORTED_LONG_ENUMERATION_ITEM */, cc_from_other_party /* IMPORTED_SHORT_ENUMERATION_ITEM */, Direction_Indication_direction_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, direction_unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Direction_Indication, _encode_Direction_Indication } from "../HI3CCLinkData/Direction-Indication.ta.mjs";
 import { Service_Information, _decode_Service_Information, _encode_Service_Information } from "../HI3CCLinkData/Service-Information.ta.mjs";
 // export { Service_Information, _decode_Service_Information, _encode_Service_Information } from "../HI3CCLinkData/Service-Information.ta.mjs";

@@ -6,12 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AllowedAttributeAssignments_Item_attributes_Item,
+    type AllowedAttributeAssignments_Item_attributes_Item,
     _decode_AllowedAttributeAssignments_Item_attributes_Item,
     _encode_AllowedAttributeAssignments_Item_attributes_Item,
 } from "../AttributeCertificateDefinitions/AllowedAttributeAssignments-Item-attributes-Item.ta.mjs";
 import {
-    GeneralName,
+    type GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";

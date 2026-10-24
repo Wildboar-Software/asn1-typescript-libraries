@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  OCTET_STRING,
+  type OPTIONAL,
+  type OCTET_STRING,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  HashAlgorithm,
+  type HashAlgorithm,
   _decode_HashAlgorithm,
   _encode_HashAlgorithm,
 } from '../SCVP-2009/HashAlgorithm.ta.mjs';

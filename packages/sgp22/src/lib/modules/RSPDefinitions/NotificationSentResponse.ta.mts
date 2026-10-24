@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_NotificationSentResponse_deleteNotificationStatus, _encode_NotificationSentResponse_deleteNotificationStatus, NotificationSentResponse_deleteNotificationStatus } from "../RSPDefinitions/NotificationSentResponse-deleteNotificationStatus.ta.mjs";
+import { _decode_NotificationSentResponse_deleteNotificationStatus, _encode_NotificationSentResponse_deleteNotificationStatus, type NotificationSentResponse_deleteNotificationStatus } from "../RSPDefinitions/NotificationSentResponse-deleteNotificationStatus.ta.mjs";
 
 
 /**

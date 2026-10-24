@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    MessageOriginAuthenticationCheck,
+    type MessageOriginAuthenticationCheck,
     _decode_MessageOriginAuthenticationCheck,
     _encode_MessageOriginAuthenticationCheck,
 } from '../MTSAbstractService/MessageOriginAuthenticationCheck.ta.mjs';

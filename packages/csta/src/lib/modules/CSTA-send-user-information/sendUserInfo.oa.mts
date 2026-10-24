@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { SendUserInfoArgument, _decode_SendUserInfoArgument, _encode_SendUserInfoArgument } from "../CSTA-send-user-information/SendUserInfoArgument.ta.mjs";
 
-import { SendUserInfoResult, _decode_SendUserInfoResult, _encode_SendUserInfoResult } from "../CSTA-send-user-information/SendUserInfoResult.ta.mjs";
+import { type SendUserInfoResult, _decode_SendUserInfoResult, _encode_SendUserInfoResult } from "../CSTA-send-user-information/SendUserInfoResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

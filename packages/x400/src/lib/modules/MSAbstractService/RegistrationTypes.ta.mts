@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RegistrationTypes_registrations,
+    type RegistrationTypes_registrations,
     _decode_RegistrationTypes_registrations,
     _encode_RegistrationTypes_registrations,
 } from '../MSAbstractService/RegistrationTypes-registrations.ta.mjs';

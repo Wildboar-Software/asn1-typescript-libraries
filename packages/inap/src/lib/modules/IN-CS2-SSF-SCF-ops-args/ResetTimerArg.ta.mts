@@ -7,11 +7,11 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { TimerID, TimerID_tssf /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_TimerID, _encode_TimerID, _enum_for_TimerID } from "../IN-CS2-datatypes/TimerID.ta.mjs";
 // export { TimerID, _enum_for_TimerID, TimerID_tssf /* IMPORTED_LONG_ENUMERATION_ITEM */, tssf /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TimerID, _encode_TimerID } from "../IN-CS2-datatypes/TimerID.ta.mjs";
-import { TimerValue, _decode_TimerValue, _encode_TimerValue } from "../IN-CS2-datatypes/TimerValue.ta.mjs";
+import { type TimerValue, _decode_TimerValue, _encode_TimerValue } from "../IN-CS2-datatypes/TimerValue.ta.mjs";
 // export { TimerValue, _decode_TimerValue, _encode_TimerValue } from "../IN-CS2-datatypes/TimerValue.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS2-datatypes/ExtensionField.ta.mjs";
 // export { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS2-datatypes/ExtensionField.ta.mjs";
-import { CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from "../IN-CS2-datatypes/CallSegmentID.ta.mjs";
+import { type CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from "../IN-CS2-datatypes/CallSegmentID.ta.mjs";
 // export { CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from "../IN-CS2-datatypes/CallSegmentID.ta.mjs";
 
 

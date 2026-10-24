@@ -5,7 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    GraphicString64,
+    type GraphicString64,
     _decode_GraphicString64,
     _encode_GraphicString64,
 } from "../X790ASN1Module/GraphicString64.ta.mjs";

@@ -3,54 +3,54 @@
 import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { CallBackNonCallRel, _decode_CallBackNonCallRel, _encode_CallBackNonCallRel } from "../CSTA-capability-exchange/CallBackNonCallRel.ta.mjs";
+import { type CallBackNonCallRel, _decode_CallBackNonCallRel, _encode_CallBackNonCallRel } from "../CSTA-capability-exchange/CallBackNonCallRel.ta.mjs";
 
-import { CallBackMsgNonCallRel, _decode_CallBackMsgNonCallRel, _encode_CallBackMsgNonCallRel } from "../CSTA-capability-exchange/CallBackMsgNonCallRel.ta.mjs";
+import { type CallBackMsgNonCallRel, _decode_CallBackMsgNonCallRel, _encode_CallBackMsgNonCallRel } from "../CSTA-capability-exchange/CallBackMsgNonCallRel.ta.mjs";
 
-import { CancelCallBack, _decode_CancelCallBack, _encode_CancelCallBack } from "../CSTA-capability-exchange/CancelCallBack.ta.mjs";
+import { type CancelCallBack, _decode_CancelCallBack, _encode_CancelCallBack } from "../CSTA-capability-exchange/CancelCallBack.ta.mjs";
 
-import { CancelCallBackMsg, _decode_CancelCallBackMsg, _encode_CancelCallBackMsg } from "../CSTA-capability-exchange/CancelCallBackMsg.ta.mjs";
+import { type CancelCallBackMsg, _decode_CancelCallBackMsg, _encode_CancelCallBackMsg } from "../CSTA-capability-exchange/CancelCallBackMsg.ta.mjs";
 
-import { GetAgentState, _decode_GetAgentState, _encode_GetAgentState } from "../CSTA-capability-exchange/GetAgentState.ta.mjs";
+import { type GetAgentState, _decode_GetAgentState, _encode_GetAgentState } from "../CSTA-capability-exchange/GetAgentState.ta.mjs";
 
-import { GetAutoAnswer, _decode_GetAutoAnswer, _encode_GetAutoAnswer } from "../CSTA-capability-exchange/GetAutoAnswer.ta.mjs";
+import { type GetAutoAnswer, _decode_GetAutoAnswer, _encode_GetAutoAnswer } from "../CSTA-capability-exchange/GetAutoAnswer.ta.mjs";
 
-import { GetAutoWorkMode, _decode_GetAutoWorkMode, _encode_GetAutoWorkMode } from "../CSTA-capability-exchange/GetAutoWorkMode.ta.mjs";
+import { type GetAutoWorkMode, _decode_GetAutoWorkMode, _encode_GetAutoWorkMode } from "../CSTA-capability-exchange/GetAutoWorkMode.ta.mjs";
 
-import { GetCallerIDStatus, _decode_GetCallerIDStatus, _encode_GetCallerIDStatus } from "../CSTA-capability-exchange/GetCallerIDStatus.ta.mjs";
+import { type GetCallerIDStatus, _decode_GetCallerIDStatus, _encode_GetCallerIDStatus } from "../CSTA-capability-exchange/GetCallerIDStatus.ta.mjs";
 
-import { GetCallBack, _decode_GetCallBack, _encode_GetCallBack } from "../CSTA-capability-exchange/GetCallBack.ta.mjs";
+import { type GetCallBack, _decode_GetCallBack, _encode_GetCallBack } from "../CSTA-capability-exchange/GetCallBack.ta.mjs";
 
-import { GetDoNotDisturb, _decode_GetDoNotDisturb, _encode_GetDoNotDisturb } from "../CSTA-capability-exchange/GetDoNotDisturb.ta.mjs";
+import { type GetDoNotDisturb, _decode_GetDoNotDisturb, _encode_GetDoNotDisturb } from "../CSTA-capability-exchange/GetDoNotDisturb.ta.mjs";
 
-import { GetForwarding, _decode_GetForwarding, _encode_GetForwarding } from "../CSTA-capability-exchange/GetForwarding.ta.mjs";
+import { type GetForwarding, _decode_GetForwarding, _encode_GetForwarding } from "../CSTA-capability-exchange/GetForwarding.ta.mjs";
 
-import { GetLastNumberDialed, _decode_GetLastNumberDialed, _encode_GetLastNumberDialed } from "../CSTA-capability-exchange/GetLastNumberDialed.ta.mjs";
+import { type GetLastNumberDialed, _decode_GetLastNumberDialed, _encode_GetLastNumberDialed } from "../CSTA-capability-exchange/GetLastNumberDialed.ta.mjs";
 
-import { GetPresenceState, _decode_GetPresenceState, _encode_GetPresenceState } from "../CSTA-capability-exchange/GetPresenceState.ta.mjs";
+import { type GetPresenceState, _decode_GetPresenceState, _encode_GetPresenceState } from "../CSTA-capability-exchange/GetPresenceState.ta.mjs";
 
-import { GetRouteingMode, _decode_GetRouteingMode, _encode_GetRouteingMode } from "../CSTA-capability-exchange/GetRouteingMode.ta.mjs";
+import { type GetRouteingMode, _decode_GetRouteingMode, _encode_GetRouteingMode } from "../CSTA-capability-exchange/GetRouteingMode.ta.mjs";
 
-import { SetAgentState, _decode_SetAgentState, _encode_SetAgentState } from "../CSTA-capability-exchange/SetAgentState.ta.mjs";
+import { type SetAgentState, _decode_SetAgentState, _encode_SetAgentState } from "../CSTA-capability-exchange/SetAgentState.ta.mjs";
 
-import { SetAutoAnswer, _decode_SetAutoAnswer, _encode_SetAutoAnswer } from "../CSTA-capability-exchange/SetAutoAnswer.ta.mjs";
+import { type SetAutoAnswer, _decode_SetAutoAnswer, _encode_SetAutoAnswer } from "../CSTA-capability-exchange/SetAutoAnswer.ta.mjs";
 
-import { SetAutoWorkMode, _decode_SetAutoWorkMode, _encode_SetAutoWorkMode } from "../CSTA-capability-exchange/SetAutoWorkMode.ta.mjs";
+import { type SetAutoWorkMode, _decode_SetAutoWorkMode, _encode_SetAutoWorkMode } from "../CSTA-capability-exchange/SetAutoWorkMode.ta.mjs";
 
-import { SetCallerIDStatus, _decode_SetCallerIDStatus, _encode_SetCallerIDStatus } from "../CSTA-capability-exchange/SetCallerIDStatus.ta.mjs";
+import { type SetCallerIDStatus, _decode_SetCallerIDStatus, _encode_SetCallerIDStatus } from "../CSTA-capability-exchange/SetCallerIDStatus.ta.mjs";
 
-import { SetDoNotDisturb, _decode_SetDoNotDisturb, _encode_SetDoNotDisturb } from "../CSTA-capability-exchange/SetDoNotDisturb.ta.mjs";
+import { type SetDoNotDisturb, _decode_SetDoNotDisturb, _encode_SetDoNotDisturb } from "../CSTA-capability-exchange/SetDoNotDisturb.ta.mjs";
 
-import { SetForwarding, _decode_SetForwarding, _encode_SetForwarding } from "../CSTA-capability-exchange/SetForwarding.ta.mjs";
+import { type SetForwarding, _decode_SetForwarding, _encode_SetForwarding } from "../CSTA-capability-exchange/SetForwarding.ta.mjs";
 
-import { SetPresenceState, _decode_SetPresenceState, _encode_SetPresenceState } from "../CSTA-capability-exchange/SetPresenceState.ta.mjs";
+import { type SetPresenceState, _decode_SetPresenceState, _encode_SetPresenceState } from "../CSTA-capability-exchange/SetPresenceState.ta.mjs";
 
-import { SetRouteingMode, _decode_SetRouteingMode, _encode_SetRouteingMode } from "../CSTA-capability-exchange/SetRouteingMode.ta.mjs";
+import { type SetRouteingMode, _decode_SetRouteingMode, _encode_SetRouteingMode } from "../CSTA-capability-exchange/SetRouteingMode.ta.mjs";
 
 
 

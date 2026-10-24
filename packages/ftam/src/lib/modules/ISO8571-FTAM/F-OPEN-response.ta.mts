@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  BOOLEAN,
-  INTEGER,
+  type OPTIONAL,
+  type BOOLEAN,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -14,19 +14,19 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  State_Result,
+  type State_Result,
   State_Result_success,
   _decode_State_Result,
   _encode_State_Result,
 } from '../ISO8571-FTAM/State-Result.ta.mjs';
 import {
-  Action_Result,
+  type Action_Result,
     Action_Result_success,
   _decode_Action_Result,
   _encode_Action_Result,
 } from '../ISO8571-FTAM/Action-Result.ta.mjs';
 import {
-  Contents_Type_Attribute,
+  type Contents_Type_Attribute,
   _decode_Contents_Type_Attribute,
   _encode_Contents_Type_Attribute,
 } from '../ISO8571-FTAM/Contents-Type-Attribute.ta.mjs';
@@ -36,23 +36,23 @@ import {
   _encode_Concurrency_Control,
 } from '../ISO8571-FTAM/Concurrency-Control.ta.mjs';
 import {
-  Shared_ASE_Information,
+  type Shared_ASE_Information,
   _decode_Shared_ASE_Information,
   _encode_Shared_ASE_Information,
 } from '../ISO8571-FTAM/Shared-ASE-Information.ta.mjs';
 import {
-  Diagnostic,
+  type Diagnostic,
   _decode_Diagnostic,
   _encode_Diagnostic,
 } from '../ISO8571-FTAM/Diagnostic.ta.mjs';
 import {
-  F_OPEN_response_recovery_mode,
+  type F_OPEN_response_recovery_mode,
   none /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_F_OPEN_response_recovery_mode,
   _encode_F_OPEN_response_recovery_mode,
 } from '../ISO8571-FTAM/F-OPEN-response-recovery-mode.ta.mjs';
 import {
-  Degree_Of_Overlap,
+  type Degree_Of_Overlap,
   _decode_Degree_Of_Overlap,
   _encode_Degree_Of_Overlap,
 } from '../ISO8571-FTAM/Degree-Of-Overlap.ta.mjs';

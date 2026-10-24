@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ObjectIdentifier as _OID,
-    OBJECT_IDENTIFIER
+    type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { lawfulInterceptDomainId } from "../VoIP-HI3-IMS/lawfulInterceptDomainId.va.mjs";
 // export { lawfulInterceptDomainId } from "../VoIP-HI3-IMS/lawfulInterceptDomainId.va.mjs";

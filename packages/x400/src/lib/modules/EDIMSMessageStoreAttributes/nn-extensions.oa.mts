@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    NNExtensionsSubField,
+    type NNExtensionsSubField,
     _decode_NNExtensionsSubField,
     _encode_NNExtensionsSubField,
 } from '../EDIMSInformationObjects/NNExtensionsSubField.ta.mjs';

@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Header, _decode_Header, _encode_Header } from "../GDT/Header.ta.mjs";
-import { Body, _decode_Body, _encode_Body } from "../GDT/Body.ta.mjs";
+import { type Body, _decode_Body, _encode_Body } from "../GDT/Body.ta.mjs";
 
 
 /**

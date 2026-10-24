@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Operations,
+    type Operations,
     _decode_Operations,
     _encode_Operations,
 } from '../MTSAbstractService/Operations.ta.mjs';
 import {
-    WaitingMessages,
+    type WaitingMessages,
     _decode_WaitingMessages,
     _encode_WaitingMessages,
 } from '../MTSAbstractService/WaitingMessages.ta.mjs';
 import {
-    ContentType,
+    type ContentType,
     _decode_ContentType,
     _encode_ContentType,
 } from '../MTSAbstractService/ContentType.ta.mjs';

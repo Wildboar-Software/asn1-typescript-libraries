@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    DeliveredIPNStatus,
+    type DeliveredIPNStatus,
     _decode_DeliveredIPNStatus,
     _encode_DeliveredIPNStatus,
 } from '../IPMSMessageStoreAttributes/DeliveredIPNStatus.ta.mjs';

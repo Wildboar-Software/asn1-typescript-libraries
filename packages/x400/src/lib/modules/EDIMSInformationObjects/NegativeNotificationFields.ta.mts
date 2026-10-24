@@ -17,17 +17,17 @@ import {
     _encode_CommonFields,
 } from '../EDIMSInformationObjects/CommonFields.ta.mjs';
 import {
-    NNReasonCodeField,
+    type NNReasonCodeField,
     _decode_NNReasonCodeField,
     _encode_NNReasonCodeField,
 } from '../EDIMSInformationObjects/NNReasonCodeField.ta.mjs';
 import {
-    EDISupplementaryInformation,
+    type EDISupplementaryInformation,
     _decode_EDISupplementaryInformation,
     _encode_EDISupplementaryInformation,
 } from '../EDIMSInformationObjects/EDISupplementaryInformation.ta.mjs';
 import {
-    NNExtensionsField,
+    type NNExtensionsField,
     _decode_NNExtensionsField,
     _encode_NNExtensionsField,
 } from '../EDIMSInformationObjects/NNExtensionsField.ta.mjs';

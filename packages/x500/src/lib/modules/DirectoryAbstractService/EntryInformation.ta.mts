@@ -7,12 +7,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    EntryInformation_information_Item,
+    type EntryInformation_information_Item,
     _decode_EntryInformation_information_Item,
     _encode_EntryInformation_information_Item,
 } from "../DirectoryAbstractService/EntryInformation-information-Item.ta.mjs";
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";

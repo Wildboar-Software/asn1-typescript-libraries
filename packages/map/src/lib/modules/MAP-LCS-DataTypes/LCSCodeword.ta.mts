@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { LCSCodewordString, _decode_LCSCodewordString, _encode_LCSCodewordString } from "../MAP-LCS-DataTypes/LCSCodewordString.ta.mjs";
-import { USSD_DataCodingScheme, _decode_USSD_DataCodingScheme, _encode_USSD_DataCodingScheme } from "../MAP-SS-DataTypes/USSD-DataCodingScheme.ta.mjs";
+import { type LCSCodewordString, _decode_LCSCodewordString, _encode_LCSCodewordString } from "../MAP-LCS-DataTypes/LCSCodewordString.ta.mjs";
+import { type USSD_DataCodingScheme, _decode_USSD_DataCodingScheme, _encode_USSD_DataCodingScheme } from "../MAP-SS-DataTypes/USSD-DataCodingScheme.ta.mjs";
 
 
 /**

@@ -2,7 +2,7 @@
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 // export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 // export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-import { ApplyChargingReportArg, _decode_ApplyChargingReportArg, _encode_ApplyChargingReportArg } from "../IN-CS-1-Datatypes/ApplyChargingReportArg.ta.mjs";
+import { type ApplyChargingReportArg, _decode_ApplyChargingReportArg, _encode_ApplyChargingReportArg } from "../IN-CS-1-Datatypes/ApplyChargingReportArg.ta.mjs";
 // export { ApplyChargingReportArg, _decode_ApplyChargingReportArg, _encode_ApplyChargingReportArg } from "../IN-CS-1-Datatypes/ApplyChargingReportArg.ta.mjs";
 import { missingParameter } from "../IN-CS-1-Errors/missingParameter.oa.mjs";
 // export { missingParameter } from "../IN-CS-1-Errors/missingParameter.oa.mjs";

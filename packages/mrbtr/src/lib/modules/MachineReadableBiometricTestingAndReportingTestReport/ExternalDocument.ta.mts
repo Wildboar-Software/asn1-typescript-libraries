@@ -12,9 +12,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { URI, _decode_URI, _encode_URI } from "../MachineReadableBiometricTestingAndReportingTestReport/URI.ta.mjs";
+import { type URI, _decode_URI, _encode_URI } from "../MachineReadableBiometricTestingAndReportingTestReport/URI.ta.mjs";
 import { TypeDocument, _enum_for_TypeDocument, _decode_TypeDocument, _encode_TypeDocument } from "../MachineReadableBiometricTestingAndReportingTestReport/TypeDocument.ta.mjs";
-import { Date, _decode_Date, _encode_Date } from "../MachineReadableBiometricTestingAndReportingTestReport/Date.ta.mjs";
+import { type Date, _decode_Date, _encode_Date } from "../MachineReadableBiometricTestingAndReportingTestReport/Date.ta.mjs";
 import { Availability, _enum_for_Availability, _decode_Availability, _encode_Availability } from "../MachineReadableBiometricTestingAndReportingTestReport/Availability.ta.mjs";
 
 

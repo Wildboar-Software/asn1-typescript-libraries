@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { UINT8, _decode_UINT8, _encode_UINT8 } from "../TSM/UINT8.ta.mjs";
+import { type UINT8, _decode_UINT8, _encode_UINT8 } from "../TSM/UINT8.ta.mjs";
 
 
 

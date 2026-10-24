@@ -11,9 +11,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { GetEventEnrollmentAttributes_Request_scopeOfRequest, client /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_GetEventEnrollmentAttributes_Request_scopeOfRequest, _encode_GetEventEnrollmentAttributes_Request_scopeOfRequest } from "../ISO-9506-MMS-1/GetEventEnrollmentAttributes-Request-scopeOfRequest.ta.mjs";
-import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
-import { Nullable, _get_decoder_for_Nullable, _get_encoder_for_Nullable } from "../ISO-9506-MMS-1/Nullable.ta.mjs";
+import { type GetEventEnrollmentAttributes_Request_scopeOfRequest, client /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_GetEventEnrollmentAttributes_Request_scopeOfRequest, _encode_GetEventEnrollmentAttributes_Request_scopeOfRequest } from "../ISO-9506-MMS-1/GetEventEnrollmentAttributes-Request-scopeOfRequest.ta.mjs";
+import { type ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
+import { type Nullable, _get_decoder_for_Nullable, _get_encoder_for_Nullable } from "../ISO-9506-MMS-1/Nullable.ta.mjs";
 import { ApplicationReference, _decode_ApplicationReference, _encode_ApplicationReference } from "../MMS-Environment-1/ApplicationReference.ta.mjs";
 
 

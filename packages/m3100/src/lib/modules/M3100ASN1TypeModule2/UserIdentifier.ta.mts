@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    NameType,
+    type NameType,
     _decode_NameType,
     _encode_NameType,
 } from '../ASN1DefinedTypesModule/NameType.ta.mjs';

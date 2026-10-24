@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import { id_spq_ets_uri } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/id-spq-ets-uri.va.mjs";
-import { SPuri, _decode_SPuri, _encode_SPuri } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SPuri.ta.mjs";
+import { type SPuri, _decode_SPuri, _encode_SPuri } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SPuri.ta.mjs";
 import { type SIG_POLICY_QUALIFIER } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SIG-POLICY-QUALIFIER.oca.mjs";
 /**
  * @summary pointerToSigPolSpec

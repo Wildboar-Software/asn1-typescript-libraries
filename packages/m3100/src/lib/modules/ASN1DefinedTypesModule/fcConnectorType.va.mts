@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    ConnectorType,
+    type ConnectorType,
     _decode_ConnectorType,
     _encode_ConnectorType,
 } from '../ASN1DefinedTypesModule/ConnectorType.ta.mjs';

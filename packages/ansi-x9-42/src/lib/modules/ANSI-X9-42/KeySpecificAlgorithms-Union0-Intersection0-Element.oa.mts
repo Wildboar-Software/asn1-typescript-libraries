@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type ALGORITHM_ID } from "../ANSI-X9-42/ALGORITHM-ID.oca.mjs";
 import {
-    Counter,
+    type Counter,
     _decode_Counter,
     _encode_Counter,
 } from "../ANSI-X9-42/Counter.ta.mjs";

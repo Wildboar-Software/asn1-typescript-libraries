@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     type INTEGER,
-    OPTIONAL
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_CauseType, _encode_CauseType, _enum_for_CauseType, CauseType } from "../MONTEChargingDataTypes/CauseType.ta.mjs";

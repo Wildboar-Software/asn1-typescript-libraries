@@ -6,7 +6,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { LogotypeInfo, _decode_LogotypeInfo, _encode_LogotypeInfo } from "../LogotypeCertExtn/LogotypeInfo.ta.mjs";
+import { type LogotypeInfo, _decode_LogotypeInfo, _encode_LogotypeInfo } from "../LogotypeCertExtn/LogotypeInfo.ta.mjs";
 // export { LogotypeInfo, _decode_LogotypeInfo, _encode_LogotypeInfo } from "../LogotypeCertExtn/LogotypeInfo.ta.mjs";
 
 

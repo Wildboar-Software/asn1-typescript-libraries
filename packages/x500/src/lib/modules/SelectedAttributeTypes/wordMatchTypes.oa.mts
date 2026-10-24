@@ -5,7 +5,7 @@ import {
 } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { id_cat_wordMatchType } from "../SelectedAttributeTypes/id-cat-wordMatchType.va.mjs";
 import {
-    WordMatchTypes,
+    type WordMatchTypes,
     _decode_WordMatchTypes,
     _encode_WordMatchTypes,
 } from "../SelectedAttributeTypes/WordMatchTypes.ta.mjs";

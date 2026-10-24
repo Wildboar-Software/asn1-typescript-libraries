@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    PDUType,
+    type PDUType,
     _decode_PDUType,
     _encode_PDUType,
 } from '../TestCategories-ASN1Module/PDUType.ta.mjs';
@@ -22,12 +22,12 @@ import {
     _encode_Parameter,
 } from '../TestCategories-ASN1Module/Parameter.ta.mjs';
 import {
-    ContCond,
+    type ContCond,
     _decode_ContCond,
     _encode_ContCond,
 } from '../TestCategories-ASN1Module/ContCond.ta.mjs';
 import {
-    WaitDuration,
+    type WaitDuration,
     _decode_WaitDuration,
     _encode_WaitDuration,
 } from '../TestCategories-ASN1Module/WaitDuration.ta.mjs';

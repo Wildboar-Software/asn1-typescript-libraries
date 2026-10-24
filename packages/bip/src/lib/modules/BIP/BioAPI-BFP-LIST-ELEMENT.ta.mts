@@ -11,13 +11,13 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_CATEGORY,
+  type BioAPI_CATEGORY,
   _enum_for_BioAPI_CATEGORY,
   _decode_BioAPI_CATEGORY,
   _encode_BioAPI_CATEGORY,
 } from '../BIP/BioAPI-CATEGORY.ta.mjs';
 import {
-  BioAPI_UUID,
+  type BioAPI_UUID,
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
 } from '../BIP/BioAPI-UUID.ta.mjs';

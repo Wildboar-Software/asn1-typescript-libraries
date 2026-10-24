@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { GenerateDigitsArgument, _decode_GenerateDigitsArgument, _encode_GenerateDigitsArgument } from "../CSTA-generate-digits/GenerateDigitsArgument.ta.mjs";
 
-import { GenerateDigitsResult, _decode_GenerateDigitsResult, _encode_GenerateDigitsResult } from "../CSTA-generate-digits/GenerateDigitsResult.ta.mjs";
+import { type GenerateDigitsResult, _decode_GenerateDigitsResult, _encode_GenerateDigitsResult } from "../CSTA-generate-digits/GenerateDigitsResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

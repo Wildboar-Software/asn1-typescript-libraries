@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
     type BOOLEAN,
-    GraphicString,
+    type GraphicString,
     type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AccessCorrelationID, _decode_AccessCorrelationID, _encode_AccessCorrelationID } from "./AccessCorrelationID.ta.mjs";
+import { type AccessCorrelationID, _decode_AccessCorrelationID, _encode_AccessCorrelationID } from "./AccessCorrelationID.ta.mjs";
 
 
 /**

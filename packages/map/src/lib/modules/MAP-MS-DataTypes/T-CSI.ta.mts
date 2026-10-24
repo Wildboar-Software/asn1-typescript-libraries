@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { CamelCapabilityHandling, _decode_CamelCapabilityHandling, _encode_CamelCapabilityHandling } from "../MAP-MS-DataTypes/CamelCapabilityHandling.ta.mjs";
-import { T_BcsmCamelTDPDataList, _decode_T_BcsmCamelTDPDataList, _encode_T_BcsmCamelTDPDataList } from "../MAP-MS-DataTypes/T-BcsmCamelTDPDataList.ta.mjs";
+import { type CamelCapabilityHandling, _decode_CamelCapabilityHandling, _encode_CamelCapabilityHandling } from "../MAP-MS-DataTypes/CamelCapabilityHandling.ta.mjs";
+import { type T_BcsmCamelTDPDataList, _decode_T_BcsmCamelTDPDataList, _encode_T_BcsmCamelTDPDataList } from "../MAP-MS-DataTypes/T-BcsmCamelTDPDataList.ta.mjs";
 
 
 /**

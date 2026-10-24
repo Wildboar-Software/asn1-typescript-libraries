@@ -1,4 +1,4 @@
-import { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { ASN1Element, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
 
 /**
  * @summary An X.500 attribute type identifier and value.
@@ -13,4 +13,4 @@ import { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 export
 type AttributeTypeAndValue = [ type: OBJECT_IDENTIFIER, value: ASN1Element ];
 
-export default AttributeTypeAndValue;
+export type { AttributeTypeAndValue as default };

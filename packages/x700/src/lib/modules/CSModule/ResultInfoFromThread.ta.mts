@@ -11,17 +11,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ExecutionType,
+    type ExecutionType,
     _decode_ExecutionType,
     _encode_ExecutionType,
 } from '../CSModule/ExecutionType.ta.mjs';
 import {
-    ErrorCode,
+    type ErrorCode,
     _decode_ErrorCode,
     _encode_ErrorCode,
 } from '../CSModule/ErrorCode.ta.mjs';
 import {
-    ExecutionResultType,
+    type ExecutionResultType,
     _decode_ExecutionResultType,
     _encode_ExecutionResultType,
 } from '../CSModule/ExecutionResultType.ta.mjs';

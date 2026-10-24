@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    BindingError_integer,
+    type BindingError_integer,
     _decode_BindingError_integer,
     _encode_BindingError_integer,
 } from '../MhsAcctAsn1Module/BindingError-integer.ta.mjs';
 import {
-    MSBindError,
+    type MSBindError,
     _decode_MSBindError,
     _encode_MSBindError,
 } from '../MhsAcctAsn1Module/MSBindError.ta.mjs';

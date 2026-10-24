@@ -5,8 +5,8 @@ import {
     type OPTIONAL,
     type BOOLEAN,
     type INTEGER,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -17,9 +17,9 @@ import {
     _encode_MediaServiceType
 } from "../CSTA-media-services/MediaServiceType.ta.mjs";
 
-import { MediaServiceInstanceID, _decode_MediaServiceInstanceID, _encode_MediaServiceInstanceID } from "../CSTA-media-services/MediaServiceInstanceID.ta.mjs";
+import { type MediaServiceInstanceID, _decode_MediaServiceInstanceID, _encode_MediaServiceInstanceID } from "../CSTA-media-services/MediaServiceInstanceID.ta.mjs";
 
-import { ConnectionModeBMap, _decode_ConnectionModeBMap, _encode_ConnectionModeBMap } from "../CSTA-media-services/ConnectionModeBMap.ta.mjs";
+import { type ConnectionModeBMap, _decode_ConnectionModeBMap, _encode_ConnectionModeBMap } from "../CSTA-media-services/ConnectionModeBMap.ta.mjs";
 
 
 

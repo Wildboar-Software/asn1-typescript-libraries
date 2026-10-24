@@ -5,7 +5,7 @@ import {
     type OPTIONAL,
     type BOOLEAN,
     type INTEGER,
-    SEQUENCE,
+    type SEQUENCE,
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import { ForwardList_Item, _decode_ForwardList_Item, _encode_ForwardList_Item } from "../CSTA-device-feature-types/ForwardList-Item.ta.mjs";

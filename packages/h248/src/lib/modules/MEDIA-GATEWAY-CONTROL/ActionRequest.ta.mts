@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ContextID, _decode_ContextID, _encode_ContextID } from "../MEDIA-GATEWAY-CONTROL/ContextID.ta.mjs";
+import { type ContextID, _decode_ContextID, _encode_ContextID } from "../MEDIA-GATEWAY-CONTROL/ContextID.ta.mjs";
 import { ContextRequest, _decode_ContextRequest, _encode_ContextRequest } from "../MEDIA-GATEWAY-CONTROL/ContextRequest.ta.mjs";
 import { ContextAttrAuditRequest, _decode_ContextAttrAuditRequest, _encode_ContextAttrAuditRequest } from "../MEDIA-GATEWAY-CONTROL/ContextAttrAuditRequest.ta.mjs";
 import { CommandRequest, _decode_CommandRequest, _encode_CommandRequest } from "../MEDIA-GATEWAY-CONTROL/CommandRequest.ta.mjs";

@@ -14,7 +14,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    MessageGroupName,
+    type MessageGroupName,
     _decode_MessageGroupName,
     _encode_MessageGroupName,
 } from '../MSAbstractService/MessageGroupName.ta.mjs';

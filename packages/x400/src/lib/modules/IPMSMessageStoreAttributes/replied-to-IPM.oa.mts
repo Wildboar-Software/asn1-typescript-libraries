@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    RepliedToIPMField,
+    type RepliedToIPMField,
     _decode_RepliedToIPMField,
     _encode_RepliedToIPMField,
 } from '../IPMSInformationObjects/RepliedToIPMField.ta.mjs';

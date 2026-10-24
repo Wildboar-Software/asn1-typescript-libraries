@@ -18,18 +18,18 @@ import {
     _encode_Attribute,
 } from "../InformationFramework/Attribute.ta.mjs";
 import {
-    DistinguishedName,
+    type DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";
 import {
-    OpBindingErrorParam_problem,
+    type OpBindingErrorParam_problem,
     _decode_OpBindingErrorParam_problem,
     _encode_OpBindingErrorParam_problem,
     _enum_for_OpBindingErrorParam_problem,
 } from "../OperationalBindingManagement/OpBindingErrorParam-problem.ta.mjs";
 import {
-    Time,
+    type Time,
     _decode_Time,
     _encode_Time,
 } from "../OperationalBindingManagement/Time.ta.mjs";

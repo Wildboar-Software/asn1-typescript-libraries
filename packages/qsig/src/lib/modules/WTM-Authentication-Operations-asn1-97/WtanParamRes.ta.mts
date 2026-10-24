@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { WtanParamInfo, _decode_WtanParamInfo, _encode_WtanParamInfo } from "../WTM-Authentication-Operations-asn1-97/WtanParamInfo.ta.mjs";
-import { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../WTM-Authentication-Operations-asn1-97/DummyExtension.ta.mjs";
+import { type WtanParamInfo, _decode_WtanParamInfo, _encode_WtanParamInfo } from "../WTM-Authentication-Operations-asn1-97/WtanParamInfo.ta.mjs";
+import { type DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../WTM-Authentication-Operations-asn1-97/DummyExtension.ta.mjs";
 
 /**
  * @summary WtanParamRes

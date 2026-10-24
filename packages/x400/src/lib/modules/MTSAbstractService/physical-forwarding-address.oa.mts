@@ -18,7 +18,7 @@ import {
     _encode_Criticality,
 } from '../MTSAbstractService/Criticality.ta.mjs';
 import {
-    PhysicalForwardingAddress,
+    type PhysicalForwardingAddress,
     _decode_PhysicalForwardingAddress,
     _encode_PhysicalForwardingAddress,
 } from '../MTSAbstractService/PhysicalForwardingAddress.ta.mjs';

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { doNotDisturbActivateQ } from "../Do-Not-Disturb-Operations-asn1-97/doNotDisturbActivateQ.oa.mjs";
 import { doNotDisturbDeactivateQ } from "../Do-Not-Disturb-Operations-asn1-97/doNotDisturbDeactivateQ.oa.mjs";
 import { doNotDisturbInterrogateQ } from "../Do-Not-Disturb-Operations-asn1-97/doNotDisturbInterrogateQ.oa.mjs";

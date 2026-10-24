@@ -2,7 +2,7 @@
 import { type ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.mjs";
 import { id_ecPublicKey } from "../ANSI-X9-62/id-ecPublicKey.va.mjs";
 import {
-    ECDomainParameters,
+    type ECDomainParameters,
     _decode_ECDomainParameters,
     _encode_ECDomainParameters,
 } from "./ECDomainParameters.ta.mjs";

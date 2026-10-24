@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PulseUnits, _decode_PulseUnits, _encode_PulseUnits } from "../Tariffing-Data-Types/PulseUnits.ta.mjs";
-import { ChargeUnitTimeInterval, _decode_ChargeUnitTimeInterval, _encode_ChargeUnitTimeInterval } from "../Tariffing-Data-Types/ChargeUnitTimeInterval.ta.mjs";
-import { TariffDuration, _decode_TariffDuration, _encode_TariffDuration } from "../Tariffing-Data-Types/TariffDuration.ta.mjs";
+import { type PulseUnits, _decode_PulseUnits, _encode_PulseUnits } from "../Tariffing-Data-Types/PulseUnits.ta.mjs";
+import { type ChargeUnitTimeInterval, _decode_ChargeUnitTimeInterval, _encode_ChargeUnitTimeInterval } from "../Tariffing-Data-Types/ChargeUnitTimeInterval.ta.mjs";
+import { type TariffDuration, _decode_TariffDuration, _encode_TariffDuration } from "../Tariffing-Data-Types/TariffDuration.ta.mjs";
 
 
 /**

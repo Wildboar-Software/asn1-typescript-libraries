@@ -6,17 +6,17 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ContentIdentifier,
+    type ContentIdentifier,
     _decode_ContentIdentifier,
     _encode_ContentIdentifier,
 } from "../ExtendedSecurityServices-2006/ContentIdentifier.ta.mjs";
 import {
-    ReceiptsFrom,
+    type ReceiptsFrom,
     _decode_ReceiptsFrom,
     _encode_ReceiptsFrom,
 } from "../ExtendedSecurityServices-2006/ReceiptsFrom.ta.mjs";
 import {
-    GeneralNames,
+    type GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
 } from "@wildboar/gn";

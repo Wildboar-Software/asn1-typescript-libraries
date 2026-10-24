@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Associate_source_diagnostic_acse_service_user,
+  type Associate_source_diagnostic_acse_service_user,
   _decode_Associate_source_diagnostic_acse_service_user,
   _encode_Associate_source_diagnostic_acse_service_user,
 } from '../ACSE-1/Associate-source-diagnostic-acse-service-user.ta.mjs';
 import {
-  Associate_source_diagnostic_acse_service_provider,
+  type Associate_source_diagnostic_acse_service_provider,
   _decode_Associate_source_diagnostic_acse_service_provider,
   _encode_Associate_source_diagnostic_acse_service_provider,
 } from '../ACSE-1/Associate-source-diagnostic-acse-service-provider.ta.mjs';

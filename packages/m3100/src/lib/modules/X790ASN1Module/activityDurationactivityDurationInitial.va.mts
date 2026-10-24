@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    ActivityDuration,
+    type ActivityDuration,
     _decode_ActivityDuration,
     _encode_ActivityDuration,
 } from '../X790ASN1Module/ActivityDuration.ta.mjs';

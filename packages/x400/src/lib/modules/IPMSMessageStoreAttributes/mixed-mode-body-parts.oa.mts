@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    MixedModeBodyPart,
+    type MixedModeBodyPart,
     _decode_MixedModeBodyPart,
     _encode_MixedModeBodyPart,
 } from '../IPMSInformationObjects/MixedModeBodyPart.ta.mjs';

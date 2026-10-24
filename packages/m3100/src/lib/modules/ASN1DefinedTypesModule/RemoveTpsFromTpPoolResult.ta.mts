@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RemoveTpsFromTpPoolResult_Item,
+    type RemoveTpsFromTpPoolResult_Item,
     _decode_RemoveTpsFromTpPoolResult_Item,
     _encode_RemoveTpsFromTpPoolResult_Item,
 } from '../ASN1DefinedTypesModule/RemoveTpsFromTpPoolResult-Item.ta.mjs';

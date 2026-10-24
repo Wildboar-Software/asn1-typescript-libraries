@@ -6,12 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item_pdv,
+    type ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item_pdv,
     _decode_ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item_pdv,
     _encode_ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item_pdv,
 } from "../OSIProtocolSpecification/ARU-PPDU-normal-mode-parameters-user-data-fully-encoded-data-Item-pdv.ta.mjs";
 import {
-    Presentation_context_identifier,
+    type Presentation_context_identifier,
     _decode_Presentation_context_identifier,
     _encode_Presentation_context_identifier,
 } from "../OSIProtocolSpecification/Presentation-context-identifier.ta.mjs";

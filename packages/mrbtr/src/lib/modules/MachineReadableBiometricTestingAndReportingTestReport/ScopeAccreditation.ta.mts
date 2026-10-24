@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AScopeAccreditation, _enum_for_AScopeAccreditation, _decode_AScopeAccreditation, _encode_AScopeAccreditation } from "../MachineReadableBiometricTestingAndReportingTestReport/AScopeAccreditation.ta.mjs";
+import { type AScopeAccreditation, _enum_for_AScopeAccreditation, _decode_AScopeAccreditation, _encode_AScopeAccreditation } from "../MachineReadableBiometricTestingAndReportingTestReport/AScopeAccreditation.ta.mjs";
 
 
 /**

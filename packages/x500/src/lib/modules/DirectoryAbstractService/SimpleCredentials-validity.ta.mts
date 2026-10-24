@@ -7,12 +7,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    SimpleCredentials_validity_time1,
+    type SimpleCredentials_validity_time1,
     _decode_SimpleCredentials_validity_time1,
     _encode_SimpleCredentials_validity_time1,
 } from "../DirectoryAbstractService/SimpleCredentials-validity-time1.ta.mjs";
 import {
-    SimpleCredentials_validity_time2,
+    type SimpleCredentials_validity_time2,
     _decode_SimpleCredentials_validity_time2,
     _encode_SimpleCredentials_validity_time2,
 } from "../DirectoryAbstractService/SimpleCredentials-validity-time2.ta.mjs";

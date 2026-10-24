@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ObjectIdentifier as _OID,
-    OBJECT_IDENTIFIER
+    type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { threeGPPSUBDomainId } from "../CONFHI2Operations/threeGPPSUBDomainId.va.mjs";
 // export { threeGPPSUBDomainId } from "../CONFHI2Operations/threeGPPSUBDomainId.va.mjs";

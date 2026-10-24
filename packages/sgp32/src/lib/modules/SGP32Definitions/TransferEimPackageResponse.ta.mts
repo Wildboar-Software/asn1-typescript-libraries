@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EuiccPackageResult, _decode_EuiccPackageResult, _encode_EuiccPackageResult } from "../SGP32Definitions/EuiccPackageResult.ta.mjs";
+import { type EuiccPackageResult, _decode_EuiccPackageResult, _encode_EuiccPackageResult } from "../SGP32Definitions/EuiccPackageResult.ta.mjs";
 import { TransferEimPackageResponse_ePRAndNotifications, _decode_TransferEimPackageResponse_ePRAndNotifications, _encode_TransferEimPackageResponse_ePRAndNotifications } from "../SGP32Definitions/TransferEimPackageResponse-ePRAndNotifications.ta.mjs";
-import { IpaEuiccDataResponse, _decode_IpaEuiccDataResponse, _encode_IpaEuiccDataResponse } from "../SGP32Definitions/IpaEuiccDataResponse.ta.mjs";
+import { type IpaEuiccDataResponse, _decode_IpaEuiccDataResponse, _encode_IpaEuiccDataResponse } from "../SGP32Definitions/IpaEuiccDataResponse.ta.mjs";
 import { EimPackageReceivedWithCid, _decode_EimPackageReceivedWithCid, _encode_EimPackageReceivedWithCid } from "../SGP32Definitions/EimPackageReceivedWithCid.ta.mjs";
-import { TransferEimPackageResponse_eimPackageError, _decode_TransferEimPackageResponse_eimPackageError, _encode_TransferEimPackageResponse_eimPackageError } from "../SGP32Definitions/TransferEimPackageResponse-eimPackageError.ta.mjs";
+import { type TransferEimPackageResponse_eimPackageError, _decode_TransferEimPackageResponse_eimPackageError, _encode_TransferEimPackageResponse_eimPackageError } from "../SGP32Definitions/TransferEimPackageResponse-eimPackageError.ta.mjs";
 import { EimPackageErrorWithCid, _decode_EimPackageErrorWithCid, _encode_EimPackageErrorWithCid } from "../SGP32Definitions/EimPackageErrorWithCid.ta.mjs";
 
 

@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { NPartsMessage, _decode_NPartsMessage, _encode_NPartsMessage } from "../IN-CS3-SCF-SDF-datatypes/NPartsMessage.ta.mjs";
+import { type NPartsMessage, _decode_NPartsMessage, _encode_NPartsMessage } from "../IN-CS3-SCF-SDF-datatypes/NPartsMessage.ta.mjs";
 // export { NPartsMessage, _decode_NPartsMessage, _encode_NPartsMessage } from "../IN-CS3-SCF-SDF-datatypes/NPartsMessage.ta.mjs";
 import { id_mt_fillSecurityTokens } from "../IN-CS3-object-identifiers/id-mt-fillSecurityTokens.va.mjs";
 // export { id_mt_fillSecurityTokens } from "../IN-CS3-object-identifiers/id-mt-fillSecurityTokens.va.mjs";

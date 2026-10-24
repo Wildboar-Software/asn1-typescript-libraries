@@ -5,7 +5,7 @@ import {
 } from "@wildboar/x500/InformationFramework";
 import { caseIgnoreMatch } from "@wildboar/x500/SelectedAttributeTypes";
 import {
-    DirectoryString,
+    type DirectoryString,
     _decode_DirectoryString,
     _encode_DirectoryString,
 } from "@wildboar/x500/SelectedAttributeTypes";

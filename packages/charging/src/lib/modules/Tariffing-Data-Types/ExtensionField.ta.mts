@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Code, _decode_Code, _encode_Code } from "../Tariffing-Data-Types/Code.ta.mjs";
+import { type Code, _decode_Code, _encode_Code } from "../Tariffing-Data-Types/Code.ta.mjs";
 import { CriticalityType, CriticalityType_ignore /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_CriticalityType, _encode_CriticalityType, _enum_for_CriticalityType } from "../Tariffing-Data-Types/CriticalityType.ta.mjs";
 
 

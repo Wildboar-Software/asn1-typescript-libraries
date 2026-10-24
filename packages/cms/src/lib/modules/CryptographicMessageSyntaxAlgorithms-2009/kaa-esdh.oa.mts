@@ -6,7 +6,7 @@ import {
 } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
 import { id_alg_ESDH } from "../CryptographicMessageSyntaxAlgorithms-2009/id-alg-ESDH.va.mjs";
 import {
-    KeyWrapAlgorithm,
+    type KeyWrapAlgorithm,
     _decode_KeyWrapAlgorithm,
     _encode_KeyWrapAlgorithm,
 } from "../CryptographicMessageSyntaxAlgorithms-2009/KeyWrapAlgorithm.ta.mjs";

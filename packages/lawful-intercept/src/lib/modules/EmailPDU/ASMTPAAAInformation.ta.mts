@@ -8,9 +8,9 @@ import {
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_AAAauthMethod, _encode_AAAauthMethod, _enum_for_AAAauthMethod, AAAauthMethod } from "../EmailPDU/AAAauthMethod.ta.mjs";
+import { _decode_AAAauthMethod, _encode_AAAauthMethod, _enum_for_AAAauthMethod, type AAAauthMethod } from "../EmailPDU/AAAauthMethod.ta.mjs";
 // export { AAAauthMethod, _enum_for_AAAauthMethod, AAAauthMethod_undefinedAuthMethod /* IMPORTED_LONG_ENUMERATION_ITEM */, undefinedAuthMethod /* IMPORTED_SHORT_ENUMERATION_ITEM */, AAAauthMethod_cramMD5 /* IMPORTED_LONG_ENUMERATION_ITEM */, cramMD5 /* IMPORTED_SHORT_ENUMERATION_ITEM */, AAAauthMethod_digestMD5 /* IMPORTED_LONG_ENUMERATION_ITEM */, digestMD5 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AAAauthMethod, _encode_AAAauthMethod } from "../EmailPDU/AAAauthMethod.ta.mjs";
-import { _decode_AAAResult, _encode_AAAResult, _enum_for_AAAResult, AAAResult } from "../EmailPDU/AAAResult.ta.mjs";
+import { _decode_AAAResult, _encode_AAAResult, _enum_for_AAAResult, type AAAResult } from "../EmailPDU/AAAResult.ta.mjs";
 // export { AAAResult, _enum_for_AAAResult, AAAResult_resultUnknown /* IMPORTED_LONG_ENUMERATION_ITEM */, resultUnknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, AAAResult_aAAFailed /* IMPORTED_LONG_ENUMERATION_ITEM */, aAAFailed /* IMPORTED_SHORT_ENUMERATION_ITEM */, AAAResult_aAASucceeded /* IMPORTED_LONG_ENUMERATION_ITEM */, aAASucceeded /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AAAResult, _encode_AAAResult } from "../EmailPDU/AAAResult.ta.mjs";
 
 

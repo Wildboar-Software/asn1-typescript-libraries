@@ -17,7 +17,7 @@ import {
   _encode_CancelProblem,
 } from '../TCAP-Tools/CancelProblem.ta.mjs';
 import {
-  TCInvokeIdSet,
+  type TCInvokeIdSet,
   _decode_TCInvokeIdSet,
   _encode_TCInvokeIdSet,
 } from '../TCAPMessages/TCInvokeIdSet.ta.mjs';

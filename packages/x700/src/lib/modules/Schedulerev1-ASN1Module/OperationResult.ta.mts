@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    OperationResult_Item,
+    type OperationResult_Item,
     _decode_OperationResult_Item,
     _encode_OperationResult_Item,
 } from '../Schedulerev1-ASN1Module/OperationResult-Item.ta.mjs';

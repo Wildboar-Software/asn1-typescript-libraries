@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    NonDeliveryReasonCode,
+    type NonDeliveryReasonCode,
     _decode_NonDeliveryReasonCode,
     _encode_NonDeliveryReasonCode,
 } from '../MTSAbstractService/NonDeliveryReasonCode.ta.mjs';
 import {
-    NonDeliveryDiagnosticCode,
+    type NonDeliveryDiagnosticCode,
     _decode_NonDeliveryDiagnosticCode,
     _encode_NonDeliveryDiagnosticCode,
 } from '../MTSAbstractService/NonDeliveryDiagnosticCode.ta.mjs';
 import {
-    SupplementaryInformation,
+    type SupplementaryInformation,
     _decode_SupplementaryInformation,
     _encode_SupplementaryInformation,
 } from '../MTSAbstractService/SupplementaryInformation.ta.mjs';

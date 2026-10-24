@@ -6,8 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AreaDefinition, _decode_AreaDefinition, _encode_AreaDefinition } from "../MAP-LCS-DataTypes/AreaDefinition.ta.mjs";
-import { IntervalTime, _decode_IntervalTime, _encode_IntervalTime } from "../MAP-LCS-DataTypes/IntervalTime.ta.mjs";
-import { OccurrenceInfo, _decode_OccurrenceInfo, _encode_OccurrenceInfo, _enum_for_OccurrenceInfo } from "../MAP-LCS-DataTypes/OccurrenceInfo.ta.mjs";
+import { type IntervalTime, _decode_IntervalTime, _encode_IntervalTime } from "../MAP-LCS-DataTypes/IntervalTime.ta.mjs";
+import { type OccurrenceInfo, _decode_OccurrenceInfo, _encode_OccurrenceInfo, _enum_for_OccurrenceInfo } from "../MAP-LCS-DataTypes/OccurrenceInfo.ta.mjs";
 
 
 /**

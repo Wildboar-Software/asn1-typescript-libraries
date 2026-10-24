@@ -1,7 +1,7 @@
 /* eslint-disable */
-import { type BOOLEAN, OBJECT_IDENTIFIER, UTF8String } from "@wildboar/asn1";
+import { type BOOLEAN, type OBJECT_IDENTIFIER, type UTF8String } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AttributeUsage } from "../InformationFramework/AttributeUsage.ta.mjs";
+import { type AttributeUsage } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 /**
  * @summary ATTRIBUTE

@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CK, _decode_CK, _encode_CK } from "../MAP-MS-DataTypes/CK.ta.mjs";
-import { IK, _decode_IK, _encode_IK } from "../MAP-MS-DataTypes/IK.ta.mjs";
-import { KSI, _decode_KSI, _encode_KSI } from "../MAP-MS-DataTypes/KSI.ta.mjs";
+import { type CK, _decode_CK, _encode_CK } from "../MAP-MS-DataTypes/CK.ta.mjs";
+import { type IK, _decode_IK, _encode_IK } from "../MAP-MS-DataTypes/IK.ta.mjs";
+import { type KSI, _decode_KSI, _encode_KSI } from "../MAP-MS-DataTypes/KSI.ta.mjs";
 
 
 /**

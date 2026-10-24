@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RecipientName,
+    type RecipientName,
     _decode_RecipientName,
     _encode_RecipientName,
 } from '../MhsAcctAsn1Module/RecipientName.ta.mjs';

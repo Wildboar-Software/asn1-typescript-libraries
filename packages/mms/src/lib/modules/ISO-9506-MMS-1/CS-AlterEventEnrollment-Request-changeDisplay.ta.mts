@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     type INTEGER,
-    NULL,
+    type NULL,
     type VisibleString,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,

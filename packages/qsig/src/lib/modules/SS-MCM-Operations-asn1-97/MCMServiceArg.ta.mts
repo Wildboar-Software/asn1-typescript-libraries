@@ -6,8 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyInfo, _decode_PartyInfo, _encode_PartyInfo } from "../SS-MCM-Operations-asn1-97/PartyInfo.ta.mjs";
-import { MCMChange, _decode_MCMChange, _encode_MCMChange } from "../SS-MCM-Operations-asn1-97/MCMChange.ta.mjs";
-import { MCMExtensions, _decode_MCMExtensions, _encode_MCMExtensions } from "../SS-MCM-Operations-asn1-97/MCMExtensions.ta.mjs";
+import { type MCMChange, _decode_MCMChange, _encode_MCMChange } from "../SS-MCM-Operations-asn1-97/MCMChange.ta.mjs";
+import { type MCMExtensions, _decode_MCMExtensions, _encode_MCMExtensions } from "../SS-MCM-Operations-asn1-97/MCMExtensions.ta.mjs";
 
 /**
  * @summary MCMServiceArg

@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { NetworkIdentification, _decode_NetworkIdentification, _encode_NetworkIdentification } from "../Tariffing-Data-Types/NetworkIdentification.ta.mjs";
-import { ReferenceID, _decode_ReferenceID, _encode_ReferenceID } from "../Tariffing-Data-Types/ReferenceID.ta.mjs";
+import { type NetworkIdentification, _decode_NetworkIdentification, _encode_NetworkIdentification } from "../Tariffing-Data-Types/NetworkIdentification.ta.mjs";
+import { type ReferenceID, _decode_ReferenceID, _encode_ReferenceID } from "../Tariffing-Data-Types/ReferenceID.ta.mjs";
 
 
 /**

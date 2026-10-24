@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    MonthMask,
+    type MonthMask,
     _decode_MonthMask,
     _encode_MonthMask,
 } from '../Schedulerev1-ASN1Module/MonthMask.ta.mjs';

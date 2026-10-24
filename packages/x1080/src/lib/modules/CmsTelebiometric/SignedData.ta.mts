@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    CMSVersion,
+    type CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
 } from '../CmsTelebiometric/CMSVersion.ta.mjs';
@@ -27,12 +27,12 @@ import {
     _encode_EncapsulatedContentInfo,
 } from '../CmsTelebiometric/EncapsulatedContentInfo.ta.mjs';
 import {
-    Certificate,
+    type Certificate,
     _decode_Certificate,
     _encode_Certificate,
 } from '@wildboar/x500/AuthenticationFramework';
 import {
-    SignerInfos,
+    type SignerInfos,
     _decode_SignerInfos,
     _encode_SignerInfos,
 } from '../CmsTelebiometric/SignerInfos.ta.mjs';

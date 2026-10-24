@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    BodyPartReference,
+    type BodyPartReference,
     _decode_BodyPartReference,
     _encode_BodyPartReference,
 } from '../IPMSInformationObjects/BodyPartReference.ta.mjs';

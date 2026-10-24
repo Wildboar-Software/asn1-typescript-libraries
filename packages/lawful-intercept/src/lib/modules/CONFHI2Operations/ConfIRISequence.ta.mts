@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ConfIRIContent, _decode_ConfIRIContent, _encode_ConfIRIContent } from "../CONFHI2Operations/ConfIRIContent.ta.mjs";
+import { type ConfIRIContent, _decode_ConfIRIContent, _encode_ConfIRIContent } from "../CONFHI2Operations/ConfIRIContent.ta.mjs";
 // export { ConfIRIContent, _decode_ConfIRIContent, _encode_ConfIRIContent } from "../CONFHI2Operations/ConfIRIContent.ta.mjs";
 
 

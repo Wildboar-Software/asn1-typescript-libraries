@@ -5,13 +5,13 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CSAID, _decode_CSAID, _encode_CSAID } from "../IN-CS3-SSF-SCF-datatypes/CSAID.ta.mjs";
+import { type CSAID, _decode_CSAID, _encode_CSAID } from "../IN-CS3-SSF-SCF-datatypes/CSAID.ta.mjs";
 // export { CSAID, _decode_CSAID, _encode_CSAID } from "../IN-CS3-SSF-SCF-datatypes/CSAID.ta.mjs";
 import { MoveCallSegmentsArg_callSegments_Item, _decode_MoveCallSegmentsArg_callSegments_Item, _encode_MoveCallSegmentsArg_callSegments_Item } from "../IN-CS3-SSF-SCF-ops-args/MoveCallSegmentsArg-callSegments-Item.ta.mjs";
 // export { MoveCallSegmentsArg_callSegments_Item, _decode_MoveCallSegmentsArg_callSegments_Item, _encode_MoveCallSegmentsArg_callSegments_Item } from "../IN-CS3-SSF-SCF-ops-args/MoveCallSegmentsArg-callSegments-Item.ta.mjs";
 import { MoveCallSegmentsArg_legs_Item, _decode_MoveCallSegmentsArg_legs_Item, _encode_MoveCallSegmentsArg_legs_Item } from "../IN-CS3-SSF-SCF-ops-args/MoveCallSegmentsArg-legs-Item.ta.mjs";
 // export { MoveCallSegmentsArg_legs_Item, _decode_MoveCallSegmentsArg_legs_Item, _encode_MoveCallSegmentsArg_legs_Item } from "../IN-CS3-SSF-SCF-ops-args/MoveCallSegmentsArg-legs-Item.ta.mjs";
-import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-common-datatypes/Extensions.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-common-datatypes/Extensions.ta.mjs";
 // export { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-common-datatypes/Extensions.ta.mjs";
 
 

@@ -16,18 +16,18 @@ import {
   _encode_HashValueType,
 } from '../CMAIL/HashValueType.ta.mjs';
 import {
-  SignatureType,
+  type SignatureType,
   _decode_SignatureType,
   _encode_SignatureType,
 } from '../CMAIL/SignatureType.ta.mjs';
 import {
-  DigitalPostmarkType_deliveryType,
+  type DigitalPostmarkType_deliveryType,
   _enum_for_DigitalPostmarkType_deliveryType,
   _decode_DigitalPostmarkType_deliveryType,
   _encode_DigitalPostmarkType_deliveryType,
 } from '../CMAIL/DigitalPostmarkType-deliveryType.ta.mjs';
 import {
-    String,
+    type String,
     _decode_String,
     _encode_String,
 } from '../XSD/String.ta.mjs';

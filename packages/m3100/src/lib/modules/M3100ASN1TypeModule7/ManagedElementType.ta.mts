@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ManagedElementType_Item,
+    type ManagedElementType_Item,
     _decode_ManagedElementType_Item,
     _encode_ManagedElementType_Item,
 } from '../M3100ASN1TypeModule7/ManagedElementType-Item.ta.mjs';

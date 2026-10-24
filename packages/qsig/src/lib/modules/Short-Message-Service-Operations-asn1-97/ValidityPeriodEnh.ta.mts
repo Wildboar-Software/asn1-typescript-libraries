@@ -6,7 +6,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EnhancedVP, _decode_EnhancedVP, _encode_EnhancedVP } from "../Short-Message-Service-Operations-asn1-97/EnhancedVP.ta.mjs";
+import { type EnhancedVP, _decode_EnhancedVP, _encode_EnhancedVP } from "../Short-Message-Service-Operations-asn1-97/EnhancedVP.ta.mjs";
 
 /**
  * @summary ValidityPeriodEnh

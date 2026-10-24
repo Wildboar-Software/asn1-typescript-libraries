@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PromptId, _decode_PromptId, _encode_PromptId } from "../AccessControlFormat-prompt-1/PromptId.ta.mjs";
-import { Response_Item_promptResponse, _decode_Response_Item_promptResponse, _encode_Response_Item_promptResponse } from "../AccessControlFormat-prompt-1/Response-Item-promptResponse.ta.mjs";
+import { type PromptId, _decode_PromptId, _encode_PromptId } from "../AccessControlFormat-prompt-1/PromptId.ta.mjs";
+import { type Response_Item_promptResponse, _decode_Response_Item_promptResponse, _encode_Response_Item_promptResponse } from "../AccessControlFormat-prompt-1/Response-Item-promptResponse.ta.mjs";
 
 
 /**

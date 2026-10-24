@@ -11,12 +11,12 @@ import {
     _encode_FamilyEntries,
 } from "../DirectoryAbstractService/FamilyEntries.ta.mjs";
 import {
-    FamilyEntry_information_Item,
+    type FamilyEntry_information_Item,
     _decode_FamilyEntry_information_Item,
     _encode_FamilyEntry_information_Item,
 } from "../DirectoryAbstractService/FamilyEntry-information-Item.ta.mjs";
 import {
-    RelativeDistinguishedName,
+    type RelativeDistinguishedName,
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
 } from "../InformationFramework/RelativeDistinguishedName.ta.mjs";

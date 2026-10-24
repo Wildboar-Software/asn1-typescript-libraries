@@ -7,7 +7,7 @@ import {
     _decode_AttributeCertificateExactAssertion,
 } from "../../modules/AttributeCertificateDefinitions/AttributeCertificateExactAssertion.ta.mjs";
 import {
-    AttributeCertificate,
+    type AttributeCertificate,
     _decode_AttributeCertificate,
 } from "../../modules/AttributeCertificateDefinitions/AttributeCertificate.ta.mjs";
 import compareAttCertIssuer from "../../comparators/compareAttCertIssuer.mjs";

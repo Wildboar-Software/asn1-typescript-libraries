@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  GeneralizedTime,
+  type OPTIONAL,
+  type GeneralizedTime,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  PKIStatus,
+  type PKIStatus,
   _decode_PKIStatus,
   _encode_PKIStatus,
 } from '../PKIXCMP-2009/PKIStatus.ta.mjs';
@@ -23,7 +23,7 @@ import {
   _encode_CertId,
 } from '@wildboar/crmf';
 import {
-  Extensions,
+  type Extensions,
   _decode_Extensions,
   _encode_Extensions,
 } from '@wildboar/x500/AuthenticationFramework';

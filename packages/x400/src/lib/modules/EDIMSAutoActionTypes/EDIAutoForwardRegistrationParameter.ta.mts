@@ -13,17 +13,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Filter,
+    type Filter,
     _decode_Filter,
     _encode_Filter,
 } from '../MSAbstractService/Filter.ta.mjs';
 import {
-    EDISupplementaryInformation,
+    type EDISupplementaryInformation,
     _decode_EDISupplementaryInformation,
     _encode_EDISupplementaryInformation,
 } from '../EDIMSInformationObjects/EDISupplementaryInformation.ta.mjs';
 import {
-    EDIAutoForwardRegistrationParameter_edi_forwarding_mode,
+    type EDIAutoForwardRegistrationParameter_edi_forwarding_mode,
     _decode_EDIAutoForwardRegistrationParameter_edi_forwarding_mode,
     _encode_EDIAutoForwardRegistrationParameter_edi_forwarding_mode,
 } from '../EDIMSAutoActionTypes/EDIAutoForwardRegistrationParameter-edi-forwarding-mode.ta.mjs';

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 // export { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { trafficFlowControl } from "../IN-CS3-SCF-SDF-Operations/trafficFlowControl.oa.mjs";
 // export { trafficFlowControl } from "../IN-CS3-SCF-SDF-Operations/trafficFlowControl.oa.mjs";

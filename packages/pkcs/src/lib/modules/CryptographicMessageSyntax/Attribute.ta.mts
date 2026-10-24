@@ -7,7 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AttributeValue,
+    type AttributeValue,
     _decode_AttributeValue,
     _encode_AttributeValue,
 } from "../CryptographicMessageSyntax/AttributeValue.ta.mjs";

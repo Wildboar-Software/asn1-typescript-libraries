@@ -8,7 +8,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ServiceControlOptions,
+    type ServiceControlOptions,
     _decode_ServiceControlOptions,
     _encode_ServiceControlOptions,
 } from "../DirectoryAbstractService/ServiceControlOptions.ta.mjs";
@@ -19,12 +19,12 @@ import {
 } from "../DirectoryAbstractService/ServiceControls-manageDSAITPlaneRef.ta.mjs";
 import {
     medium /* IMPORTED_SHORT_NAMED_INTEGER */,
-    ServiceControls_priority,
+    type ServiceControls_priority,
     _decode_ServiceControls_priority,
     _encode_ServiceControls_priority,
 } from "../DirectoryAbstractService/ServiceControls-priority.ta.mjs";
 import {
-    ServiceControls_scopeOfReferral,
+    type ServiceControls_scopeOfReferral,
     _decode_ServiceControls_scopeOfReferral,
     _encode_ServiceControls_scopeOfReferral,
 } from "../DirectoryAbstractService/ServiceControls-scopeOfReferral.ta.mjs";

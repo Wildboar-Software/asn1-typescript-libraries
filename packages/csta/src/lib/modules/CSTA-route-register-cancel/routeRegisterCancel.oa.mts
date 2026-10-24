@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { RouteRegisterCancelArgument, _decode_RouteRegisterCancelArgument, _encode_RouteRegisterCancelArgument } from "../CSTA-route-register-cancel/RouteRegisterCancelArgument.ta.mjs";
 
-import { RouteRegisterCancelResult, _decode_RouteRegisterCancelResult, _encode_RouteRegisterCancelResult } from "../CSTA-route-register-cancel/RouteRegisterCancelResult.ta.mjs";
+import { type RouteRegisterCancelResult, _decode_RouteRegisterCancelResult, _encode_RouteRegisterCancelResult } from "../CSTA-route-register-cancel/RouteRegisterCancelResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

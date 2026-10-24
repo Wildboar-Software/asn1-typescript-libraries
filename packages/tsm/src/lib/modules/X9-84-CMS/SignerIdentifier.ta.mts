@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Hash, _decode_Hash, _encode_Hash } from "../X9-84-CMS/Hash.ta.mjs";
+import { type Hash, _decode_Hash, _encode_Hash } from "../X9-84-CMS/Hash.ta.mjs";
 
 
 

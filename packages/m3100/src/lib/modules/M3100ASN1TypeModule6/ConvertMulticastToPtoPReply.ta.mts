@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ConvertMulticastToPtoPReply_Item,
+    type ConvertMulticastToPtoPReply_Item,
     _decode_ConvertMulticastToPtoPReply_Item,
     _encode_ConvertMulticastToPtoPReply_Item,
 } from '../M3100ASN1TypeModule6/ConvertMulticastToPtoPReply-Item.ta.mjs';

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,28 +12,28 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Attribute_Value_Assertions,
+  type Attribute_Value_Assertions,
   _decode_Attribute_Value_Assertions,
   _encode_Attribute_Value_Assertions,
 } from '../ISO8571-FTAM/Attribute-Value-Assertions.ta.mjs';
-import { Scope, _decode_Scope, _encode_Scope } from '../ISO8571-FTAM/Scope.ta.mjs';
+import { type Scope, _decode_Scope, _encode_Scope } from '../ISO8571-FTAM/Scope.ta.mjs';
 import {
   Access_Passwords,
   _decode_Access_Passwords,
   _encode_Access_Passwords,
 } from '../ISO8571-FTAM/Access-Passwords.ta.mjs';
 import {
-  Path_Access_Passwords,
+  type Path_Access_Passwords,
   _decode_Path_Access_Passwords,
   _encode_Path_Access_Passwords,
 } from '../ISO8571-FTAM/Path-Access-Passwords.ta.mjs';
 import {
-  Attribute_Names,
+  type Attribute_Names,
   _decode_Attribute_Names,
   _encode_Attribute_Names,
 } from '../ISO8571-FTAM/Attribute-Names.ta.mjs';
 import {
-  Attribute_Extension_Names,
+  type Attribute_Extension_Names,
   _decode_Attribute_Extension_Names,
   _encode_Attribute_Extension_Names,
 } from '../ISO8571-FTAM/Attribute-Extension-Names.ta.mjs';

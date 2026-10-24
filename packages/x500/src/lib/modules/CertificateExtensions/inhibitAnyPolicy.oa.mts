@@ -2,7 +2,7 @@
 import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 import { id_ce_inhibitAnyPolicy } from "../CertificateExtensions/id-ce-inhibitAnyPolicy.va.mjs";
 import {
-    SkipCerts,
+    type SkipCerts,
     _decode_SkipCerts,
     _encode_SkipCerts,
 } from "../CertificateExtensions/SkipCerts.ta.mjs";

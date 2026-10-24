@@ -16,12 +16,12 @@ import {
     _encode_ORName,
 } from '../MTSAbstractService/ORName.ta.mjs';
 import {
-    ORNamePattern,
+    type ORNamePattern,
     _decode_ORNamePattern,
     _encode_ORNamePattern,
 } from '../MHSDirectoryObjectsAndAttributes/ORNamePattern.ta.mjs';
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from '@wildboar/dn';

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    GeneralizedTime,
+    type GeneralizedTime,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ReferencedValue, _decode_ReferencedValue, _encode_ReferencedValue } from "../CryptographicInformationFramework/ReferencedValue.ta.mjs";
+import { type ReferencedValue, _decode_ReferencedValue, _encode_ReferencedValue } from "../CryptographicInformationFramework/ReferencedValue.ta.mjs";
 
 
 /**

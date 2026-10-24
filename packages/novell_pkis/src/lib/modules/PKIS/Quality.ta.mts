@@ -9,8 +9,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { assertIntegerRange } from "../../assertIntegerRange.mjs";
-import { CompusecQuality, _decode_CompusecQuality, _encode_CompusecQuality } from "../PKIS/CompusecQuality.ta.mjs";
-import { CryptoQuality, _decode_CryptoQuality, _encode_CryptoQuality } from "../PKIS/CryptoQuality.ta.mjs";
+import { type CompusecQuality, _decode_CompusecQuality, _encode_CompusecQuality } from "../PKIS/CompusecQuality.ta.mjs";
+import { type CryptoQuality, _decode_CryptoQuality, _encode_CryptoQuality } from "../PKIS/CryptoQuality.ta.mjs";
 
 
 /**

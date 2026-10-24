@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ConnectInformation_Item_itemType,
+    type ConnectInformation_Item_itemType,
     _decode_ConnectInformation_Item_itemType,
     _encode_ConnectInformation_Item_itemType,
 } from '../ASN1DefinedTypesModule/ConnectInformation-Item-itemType.ta.mjs';
@@ -28,17 +28,17 @@ import {
     _encode_NamedCrossConnection,
 } from '../ASN1DefinedTypesModule/NamedCrossConnection.ta.mjs';
 import {
-    AdditionalInformation,
+    type AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
 } from '@wildboar/attribute-asn1module';
 import {
-    UserLabel,
+    type UserLabel,
     _decode_UserLabel,
     _encode_UserLabel,
 } from '../ASN1DefinedTypesModule/UserLabel.ta.mjs';
 import {
-    Boolean,
+    type Boolean,
     _decode_Boolean,
     _encode_Boolean,
 } from '../ASN1DefinedTypesModule/Boolean.ta.mjs';

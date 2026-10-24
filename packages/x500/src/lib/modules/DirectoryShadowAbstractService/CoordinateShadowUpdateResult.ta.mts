@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, NULL } from "@wildboar/asn1";
+import { ASN1Element as _Element, type NULL } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
     CoordinateShadowUpdateResultData,
@@ -7,7 +7,7 @@ import {
     _encode_CoordinateShadowUpdateResultData,
 } from "../DirectoryShadowAbstractService/CoordinateShadowUpdateResultData.ta.mjs";
 import {
-    OPTIONALLY_PROTECTED,
+    type OPTIONALLY_PROTECTED,
     _get_decoder_for_OPTIONALLY_PROTECTED,
     _get_encoder_for_OPTIONALLY_PROTECTED,
 } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";

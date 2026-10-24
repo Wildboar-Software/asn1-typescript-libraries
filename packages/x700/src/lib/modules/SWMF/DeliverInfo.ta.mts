@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    DeliverId,
+    type DeliverId,
     _decode_DeliverId,
     _encode_DeliverId,
 } from '../SWMF/DeliverId.ta.mjs';
 import {
-    DistributedSoftware,
+    type DistributedSoftware,
     _decode_DistributedSoftware,
     _encode_DistributedSoftware,
 } from '../SWMF/DistributedSoftware.ta.mjs';
 import {
-    Destination,
+    type Destination,
     _decode_Destination,
     _encode_Destination,
 } from '@wildboar/attribute-asn1module';

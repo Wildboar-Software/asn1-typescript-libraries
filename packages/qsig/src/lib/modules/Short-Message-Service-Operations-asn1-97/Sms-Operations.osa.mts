@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { smsSubmit } from "../Short-Message-Service-Operations-asn1-97/smsSubmit.oa.mjs";
 import { smsDeliver } from "../Short-Message-Service-Operations-asn1-97/smsDeliver.oa.mjs";
 import { smsStatusReport } from "../Short-Message-Service-Operations-asn1-97/smsStatusReport.oa.mjs";

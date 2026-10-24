@@ -20,7 +20,7 @@ import {
     _encode_Criticality,
 } from '../MTSAbstractService/Criticality.ta.mjs';
 import {
-    OriginatorRequestedAlternateRecipient,
+    type OriginatorRequestedAlternateRecipient,
     _decode_OriginatorRequestedAlternateRecipient,
     _encode_OriginatorRequestedAlternateRecipient,
 } from '../MTSAbstractService/OriginatorRequestedAlternateRecipient.ta.mjs';

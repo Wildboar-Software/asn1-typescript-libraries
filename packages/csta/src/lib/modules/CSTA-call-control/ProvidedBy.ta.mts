@@ -2,16 +2,16 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     type IA5String,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1ConstructionError as _ConstructionError
 } from "@wildboar/asn1";
-import { NenaCompanyIDType, _decode_NenaCompanyIDType, _encode_NenaCompanyIDType } from "../CSTA-call-control/NenaCompanyIDType.ta.mjs";
+import { type NenaCompanyIDType, _decode_NenaCompanyIDType, _encode_NenaCompanyIDType } from "../CSTA-call-control/NenaCompanyIDType.ta.mjs";
 
-import { TelUri247Type, _decode_TelUri247Type, _encode_TelUri247Type } from "../CSTA-call-control/TelUri247Type.ta.mjs";
+import { type TelUri247Type, _decode_TelUri247Type, _encode_TelUri247Type } from "../CSTA-call-control/TelUri247Type.ta.mjs";
 
 
 

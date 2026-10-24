@@ -21,7 +21,7 @@ import {
     _encode_OrderedAttribute,
 } from '../MSAbstractService/OrderedAttribute.ta.mjs';
 import {
-    AttributeType,
+    type AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
 } from "./AttributeType.ta.mjs";

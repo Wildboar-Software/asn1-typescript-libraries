@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AlphaCode,
+    type AlphaCode,
     _decode_AlphaCode,
     _encode_AlphaCode,
 } from '../IPMSHeadingExtensions/AlphaCode.ta.mjs';

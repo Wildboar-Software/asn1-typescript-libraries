@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    EDIApplicationSecurityExtension,
+    type EDIApplicationSecurityExtension,
     _decode_EDIApplicationSecurityExtension,
     _encode_EDIApplicationSecurityExtension,
 } from '../EDIMSInformationObjects/EDIApplicationSecurityExtension.ta.mjs';

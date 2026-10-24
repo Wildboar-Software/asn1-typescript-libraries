@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-import { DNDInterrogateArg_argumentExtension, _decode_DNDInterrogateArg_argumentExtension, _encode_DNDInterrogateArg_argumentExtension } from "../Do-Not-Disturb-Operations-asn1-97/DNDInterrogateArg-argumentExtension.ta.mjs";
+import { type PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
+import { type DNDInterrogateArg_argumentExtension, _decode_DNDInterrogateArg_argumentExtension, _encode_DNDInterrogateArg_argumentExtension } from "../Do-Not-Disturb-Operations-asn1-97/DNDInterrogateArg-argumentExtension.ta.mjs";
 
 /**
  * @summary DNDInterrogateArg

@@ -4,8 +4,8 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { InvokeIdOrNull, _decode_InvokeIdOrNull, _encode_InvokeIdOrNull } from "../PSS1-Service-APDUs-asn1-97/InvokeIdOrNull.ta.mjs";
-import { Reject_problem, _decode_Reject_problem, _encode_Reject_problem } from "../PSS1-Service-APDUs-asn1-97/Reject-problem.ta.mjs";
+import { type InvokeIdOrNull, _decode_InvokeIdOrNull, _encode_InvokeIdOrNull } from "../PSS1-Service-APDUs-asn1-97/InvokeIdOrNull.ta.mjs";
+import { type Reject_problem, _decode_Reject_problem, _encode_Reject_problem } from "../PSS1-Service-APDUs-asn1-97/Reject-problem.ta.mjs";
 
 /**
  * @summary Reject

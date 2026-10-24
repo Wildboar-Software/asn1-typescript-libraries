@@ -15,9 +15,9 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { Journal_instance, _decode_Journal_instance, _encode_Journal_instance } from "../MMS-SCI-Module-1/Journal-instance.ta.mjs";
 import { ApplicationReference, _decode_ApplicationReference, _encode_ApplicationReference } from "../MMS-Environment-1/ApplicationReference.ta.mjs";
-import { TimeOfDay, _decode_TimeOfDay, _encode_TimeOfDay } from "../ISO-9506-MMS-1/TimeOfDay.ta.mjs";
+import { type TimeOfDay, _decode_TimeOfDay, _encode_TimeOfDay } from "../ISO-9506-MMS-1/TimeOfDay.ta.mjs";
 import { Journal_Entry_instance_informationType, _enum_for_Journal_Entry_instance_informationType, _decode_Journal_Entry_instance_informationType, _encode_Journal_Entry_instance_informationType } from "../MMS-SCI-Module-1/Journal-Entry-instance-informationType.ta.mjs";
-import { MMS255String, _decode_MMS255String, _encode_MMS255String } from "../ISO-9506-MMS-1/MMS255String.ta.mjs";
+import { type MMS255String, _decode_MMS255String, _encode_MMS255String } from "../ISO-9506-MMS-1/MMS255String.ta.mjs";
 import { Journal_Entry_instance_eventTransitionRecord, _decode_Journal_Entry_instance_eventTransitionRecord, _encode_Journal_Entry_instance_eventTransitionRecord } from "../MMS-SCI-Module-1/Journal-Entry-instance-eventTransitionRecord.ta.mjs";
 import { Journal_Entry_instance_journalVariables_Item, _decode_Journal_Entry_instance_journalVariables_Item, _encode_Journal_Entry_instance_journalVariables_Item } from "../MMS-SCI-Module-1/Journal-Entry-instance-journalVariables-Item.ta.mjs";
 

@@ -5,7 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CcOptionalArg_fullArg, _decode_CcOptionalArg_fullArg, _encode_CcOptionalArg_fullArg } from "../SS-CC-Operations-asn1-97/CcOptionalArg-fullArg.ta.mjs";
-import { CcExtension, _decode_CcExtension, _encode_CcExtension } from "../SS-CC-Operations-asn1-97/CcExtension.ta.mjs";
+import { type CcExtension, _decode_CcExtension, _encode_CcExtension } from "../SS-CC-Operations-asn1-97/CcExtension.ta.mjs";
 
 /**
  * @summary CcOptionalArg

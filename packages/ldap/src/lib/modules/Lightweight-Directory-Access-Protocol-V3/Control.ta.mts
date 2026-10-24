@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  BOOLEAN,
-  OCTET_STRING,
+  type OPTIONAL,
+  type BOOLEAN,
+  type OCTET_STRING,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -14,7 +14,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  LDAPOID,
+  type LDAPOID,
   _decode_LDAPOID,
   _encode_LDAPOID,
 } from '../Lightweight-Directory-Access-Protocol-V3/LDAPOID.ta.mjs';

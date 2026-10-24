@@ -11,17 +11,17 @@ import {
     _encode_BaseRevocationInfo,
 } from "../CertificateExtensions/BaseRevocationInfo.ta.mjs";
 import {
-    DistributionPointName,
+    type DistributionPointName,
     _decode_DistributionPointName,
     _encode_DistributionPointName,
 } from "../CertificateExtensions/DistributionPointName.ta.mjs";
 import {
-    GeneralName,
+    type GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";
 import {
-    GeneralNames,
+    type GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
 } from "../CertificateExtensions/GeneralNames.ta.mjs";
@@ -31,12 +31,12 @@ import {
     _encode_NumberRange,
 } from "../CertificateExtensions/NumberRange.ta.mjs";
 import {
-    OnlyCertificateTypes,
+    type OnlyCertificateTypes,
     _decode_OnlyCertificateTypes,
     _encode_OnlyCertificateTypes,
 } from "../CertificateExtensions/OnlyCertificateTypes.ta.mjs";
 import {
-    ReasonFlags,
+    type ReasonFlags,
     _decode_ReasonFlags,
     _encode_ReasonFlags,
 } from "../CertificateExtensions/ReasonFlags.ta.mjs";

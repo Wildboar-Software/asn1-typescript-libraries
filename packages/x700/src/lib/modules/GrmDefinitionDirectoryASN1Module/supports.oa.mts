@@ -17,7 +17,7 @@ import {
     _encode_AttributeUsage,
 } from '@wildboar/x500/InformationFramework';
 import {
-    SupportedChoice,
+    type SupportedChoice,
     _decode_SupportedChoice,
     _encode_SupportedChoice,
 } from '../GrmAttributeDefinitionModule/SupportedChoice.ta.mjs';

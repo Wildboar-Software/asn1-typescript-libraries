@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    NotificationExtensionsSubField,
+    type NotificationExtensionsSubField,
     _decode_NotificationExtensionsSubField,
     _encode_NotificationExtensionsSubField,
 } from '../EDIMSInformationObjects/NotificationExtensionsSubField.ta.mjs';

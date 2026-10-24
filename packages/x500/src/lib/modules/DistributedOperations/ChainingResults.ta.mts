@@ -16,12 +16,12 @@ import {
     _encode_CrossReference,
 } from "../DistributedOperations/CrossReference.ta.mjs";
 import {
-    DomainInfo,
+    type DomainInfo,
     _decode_DomainInfo,
     _encode_DomainInfo,
 } from "../DistributedOperations/DomainInfo.ta.mjs";
 import {
-    Exclusions,
+    type Exclusions,
     _decode_Exclusions,
     _encode_Exclusions,
 } from "../DistributedOperations/Exclusions.ta.mjs";

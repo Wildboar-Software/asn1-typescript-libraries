@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AccessNetworkProtocolId, _decode_AccessNetworkProtocolId, _encode_AccessNetworkProtocolId, _enum_for_AccessNetworkProtocolId } from "../MAP-CommonDataTypes/AccessNetworkProtocolId.ta.mjs";
-import { LongSignalInfo, _decode_LongSignalInfo, _encode_LongSignalInfo } from "../MAP-CommonDataTypes/LongSignalInfo.ta.mjs";
+import { type AccessNetworkProtocolId, _decode_AccessNetworkProtocolId, _encode_AccessNetworkProtocolId, _enum_for_AccessNetworkProtocolId } from "../MAP-CommonDataTypes/AccessNetworkProtocolId.ta.mjs";
+import { type LongSignalInfo, _decode_LongSignalInfo, _encode_LongSignalInfo } from "../MAP-CommonDataTypes/LongSignalInfo.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 

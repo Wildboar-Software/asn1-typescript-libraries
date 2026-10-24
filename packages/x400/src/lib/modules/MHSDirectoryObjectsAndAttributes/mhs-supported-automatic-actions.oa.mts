@@ -19,7 +19,7 @@ import {
 import { objectIdentifierMatch } from '@wildboar/x500/InformationFramework';
 import { id_at_mhs_supported_automatic_actions } from '../MHSObjectIdentifiers/id-at-mhs-supported-automatic-actions.va.mjs';
 import {
-    AutoActionType,
+    type AutoActionType,
     _decode_AutoActionType,
     _encode_AutoActionType,
 } from "../MSAbstractService/AutoActionType.ta.mjs";

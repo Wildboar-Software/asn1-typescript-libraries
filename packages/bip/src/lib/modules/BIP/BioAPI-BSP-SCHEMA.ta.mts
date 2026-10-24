@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  UTF8String,
+  type UTF8String,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_UUID,
+  type BioAPI_UUID,
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
 } from '../BIP/BioAPI-UUID.ta.mjs';
 import {
-  BioAPI_STRING,
+  type BioAPI_STRING,
   _decode_BioAPI_STRING,
   _encode_BioAPI_STRING,
 } from '../BIP/BioAPI-STRING.ta.mjs';
@@ -32,37 +32,37 @@ import {
   _encode_BioAPI_BIR_BIOMETRIC_DATA_FORMAT,
 } from '../BIP/BioAPI-BIR-BIOMETRIC-DATA-FORMAT.ta.mjs';
 import {
-  BioAPI_BIR_BIOMETRIC_TYPE,
+  type BioAPI_BIR_BIOMETRIC_TYPE,
   _decode_BioAPI_BIR_BIOMETRIC_TYPE,
   _encode_BioAPI_BIR_BIOMETRIC_TYPE,
 } from '../BIP/BioAPI-BIR-BIOMETRIC-TYPE.ta.mjs';
 import {
-  BioAPI_OPERATIONS_MASK,
+  type BioAPI_OPERATIONS_MASK,
   _decode_BioAPI_OPERATIONS_MASK,
   _encode_BioAPI_OPERATIONS_MASK,
 } from '../BIP/BioAPI-OPERATIONS-MASK.ta.mjs';
 import {
-  BioAPI_OPTIONS_MASK,
+  type BioAPI_OPTIONS_MASK,
   _decode_BioAPI_OPTIONS_MASK,
   _encode_BioAPI_OPTIONS_MASK,
 } from '../BIP/BioAPI-OPTIONS-MASK.ta.mjs';
 import {
-  BioAPI_FMR,
+  type BioAPI_FMR,
   _decode_BioAPI_FMR,
   _encode_BioAPI_FMR,
 } from '../BIP/BioAPI-FMR.ta.mjs';
 import {
-  UnsignedInt,
+  type UnsignedInt,
   _decode_UnsignedInt,
   _encode_UnsignedInt,
 } from '../BIP/UnsignedInt.ta.mjs';
 import {
-  SignedInt,
+  type SignedInt,
   _decode_SignedInt,
   _encode_SignedInt,
 } from '../BIP/SignedInt.ta.mjs';
 import {
-  EndpointIRI,
+  type EndpointIRI,
   _decode_EndpointIRI,
   _encode_EndpointIRI,
 } from '../BIP/EndpointIRI.ta.mjs';

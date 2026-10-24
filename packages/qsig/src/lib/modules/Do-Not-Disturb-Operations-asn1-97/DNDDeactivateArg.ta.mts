@@ -6,8 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { BasicService, _decode_BasicService, _encode_BasicService, _enum_for_BasicService } from "../Call-Diversion-Operations-asn1-97/BasicService.ta.mjs";
-import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-import { DNDDeactivateArg_argumentExtension, _decode_DNDDeactivateArg_argumentExtension, _encode_DNDDeactivateArg_argumentExtension } from "../Do-Not-Disturb-Operations-asn1-97/DNDDeactivateArg-argumentExtension.ta.mjs";
+import { type PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
+import { type DNDDeactivateArg_argumentExtension, _decode_DNDDeactivateArg_argumentExtension, _encode_DNDDeactivateArg_argumentExtension } from "../Do-Not-Disturb-Operations-asn1-97/DNDDeactivateArg-argumentExtension.ta.mjs";
 
 /**
  * @summary DNDDeactivateArg

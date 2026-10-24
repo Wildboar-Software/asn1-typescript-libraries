@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    ApplicationReferenceField,
+    type ApplicationReferenceField,
     _decode_ApplicationReferenceField,
     _encode_ApplicationReferenceField,
 } from '../EDIMSInformationObjects/ApplicationReferenceField.ta.mjs';

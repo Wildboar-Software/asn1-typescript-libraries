@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     type OBJECT_IDENTIFIER,
-    OPTIONAL
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 // export { METHOD } from "../IN-CS3-SCF-SDF-Classes/METHOD.oca.mjs";

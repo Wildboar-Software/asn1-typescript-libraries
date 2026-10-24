@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Version,
+    type Version,
     _decode_Version,
     _encode_Version,
 } from "../Wrapper/Version.ta.mjs";

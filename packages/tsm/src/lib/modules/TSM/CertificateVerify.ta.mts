@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Signature, _decode_Signature, _encode_Signature } from "../TSM/Signature.ta.mjs";
+import { type Signature, _decode_Signature, _encode_Signature } from "../TSM/Signature.ta.mjs";
 
 
 

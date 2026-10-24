@@ -2,7 +2,7 @@
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 // export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 // export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-import { AnnouncementCompletionReportArg, _decode_AnnouncementCompletionReportArg, _encode_AnnouncementCompletionReportArg } from "../IN-SCF-SCF-ops-args/AnnouncementCompletionReportArg.ta.mjs";
+import { type AnnouncementCompletionReportArg, _decode_AnnouncementCompletionReportArg, _encode_AnnouncementCompletionReportArg } from "../IN-SCF-SCF-ops-args/AnnouncementCompletionReportArg.ta.mjs";
 // export { AnnouncementCompletionReportArg, _decode_AnnouncementCompletionReportArg, _encode_AnnouncementCompletionReportArg } from "../IN-SCF-SCF-ops-args/AnnouncementCompletionReportArg.ta.mjs";
 import { opcode_announcementCompletionReport } from "../IN-operationcodes/opcode-announcementCompletionReport.va.mjs";
 // export { opcode_announcementCompletionReport } from "../IN-operationcodes/opcode-announcementCompletionReport.va.mjs";

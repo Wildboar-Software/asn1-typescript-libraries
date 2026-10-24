@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import { x9_63_kdf } from "../SEC1-v1-9/x9-63-kdf.va.mjs";
-import { HashAlgorithm, _decode_HashAlgorithm, _encode_HashAlgorithm } from "../SEC1-v1-9/HashAlgorithm.ta.mjs";
+import { type HashAlgorithm, _decode_HashAlgorithm, _encode_HashAlgorithm } from "../SEC1-v1-9/HashAlgorithm.ta.mjs";
 import { type ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
 /**
  * @summary KDFSet_Union0_Intersection0_Element

@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TemplateName,
+    type TemplateName,
     _decode_TemplateName,
     _encode_TemplateName,
 } from '../DefinitionASN1Module/TemplateName.ta.mjs';
 import {
-    TemplateLabel_documentId,
+    type TemplateLabel_documentId,
     _decode_TemplateLabel_documentId,
     _encode_TemplateLabel_documentId,
 } from '../DefinitionASN1Module/TemplateLabel-documentId.ta.mjs';

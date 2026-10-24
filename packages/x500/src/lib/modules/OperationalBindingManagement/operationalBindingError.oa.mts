@@ -2,7 +2,7 @@
 import { type ERROR } from "../CommonProtocolSpecification/ERROR.oca.mjs";
 import { id_err_operationalBindingError } from "../CommonProtocolSpecification/id-err-operationalBindingError.va.mjs";
 import {
-    OPTIONALLY_PROTECTED_SEQ,
+    type OPTIONALLY_PROTECTED_SEQ,
     _get_decoder_for_OPTIONALLY_PROTECTED_SEQ,
     _get_encoder_for_OPTIONALLY_PROTECTED_SEQ,
 } from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta.mjs";

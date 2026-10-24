@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    AllowedAttributeAssignments,
+    type AllowedAttributeAssignments,
     _decode_AllowedAttributeAssignments,
     _encode_AllowedAttributeAssignments,
 } from "../AttributeCertificateDefinitions/AllowedAttributeAssignments.ta.mjs";

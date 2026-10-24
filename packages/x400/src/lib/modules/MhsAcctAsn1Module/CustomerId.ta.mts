@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SimpleNameType,
+    type SimpleNameType,
     _decode_SimpleNameType,
     _encode_SimpleNameType,
 } from '@wildboar/attribute-asn1module';

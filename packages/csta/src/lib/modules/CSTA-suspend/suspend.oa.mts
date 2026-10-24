@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { SuspendArgument, _decode_SuspendArgument, _encode_SuspendArgument } from "../CSTA-suspend/SuspendArgument.ta.mjs";
 
-import { SuspendResult, _decode_SuspendResult, _encode_SuspendResult } from "../CSTA-suspend/SuspendResult.ta.mjs";
+import { type SuspendResult, _decode_SuspendResult, _encode_SuspendResult } from "../CSTA-suspend/SuspendResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

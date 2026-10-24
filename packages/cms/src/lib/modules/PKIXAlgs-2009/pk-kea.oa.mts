@@ -5,7 +5,7 @@ import {
 import { type PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.mjs";
 import { id_keyExchangeAlgorithm } from "../PKIXAlgs-2009/id-keyExchangeAlgorithm.va.mjs";
 import {
-    KEA_Params_Id,
+    type KEA_Params_Id,
     _decode_KEA_Params_Id,
     _encode_KEA_Params_Id,
 } from "../PKIXAlgs-2009/KEA-Params-Id.ta.mjs";

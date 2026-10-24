@@ -9,7 +9,7 @@ import { BERElement, ASN1TagClass, ASN1Construction, ASN1UniversalType, ObjectId
 import { _decode_Filter, _encode_Filter } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/Filter.ta.mjs";
 import destringifyFilter from "../lib/filterFromString.mjs";
 import stringifyFilter from "../lib/filterToString.mjs";
-import evaluateFilter, { EvaluateFilterOptions } from "../lib/evaluateFilter.mjs";
+import evaluateFilter, { type EvaluateFilterOptions } from "../lib/evaluateFilter.mjs";
 import encodeLDAPOID from "../lib/encodeLDAPOID.mjs";
 import { integer as decodeInteger } from "../lib/syntaxDecoders.mjs";
 import SubstringSelection from "../lib/types/SubstringSelection.mjs";

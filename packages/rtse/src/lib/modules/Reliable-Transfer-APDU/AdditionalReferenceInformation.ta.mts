@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  T61String,
+  type T61String,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,

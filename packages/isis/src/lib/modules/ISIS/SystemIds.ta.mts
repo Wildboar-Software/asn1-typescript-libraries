@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  SystemId,
+  type SystemId,
   _decode_SystemId,
   _encode_SystemId,
 } from '../ISIS/SystemId.ta.mjs';

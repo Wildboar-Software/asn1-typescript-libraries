@@ -6,7 +6,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { AuthSessionKeyInfo, _decode_AuthSessionKeyInfo, _encode_AuthSessionKeyInfo } from "../CT-Authentication-Operations/AuthSessionKeyInfo.ta.mjs";
 // export { AuthSessionKeyInfo, _decode_AuthSessionKeyInfo, _encode_AuthSessionKeyInfo } from "../CT-Authentication-Operations/AuthSessionKeyInfo.ta.mjs";
-import { CalcCtatInfo, _decode_CalcCtatInfo, _encode_CalcCtatInfo } from "../CT-Authentication-Operations/CalcCtatInfo.ta.mjs";
+import { type CalcCtatInfo, _decode_CalcCtatInfo, _encode_CalcCtatInfo } from "../CT-Authentication-Operations/CalcCtatInfo.ta.mjs";
 // export { CalcCtatInfo, _decode_CalcCtatInfo, _encode_CalcCtatInfo } from "../CT-Authentication-Operations/CalcCtatInfo.ta.mjs";
 
 

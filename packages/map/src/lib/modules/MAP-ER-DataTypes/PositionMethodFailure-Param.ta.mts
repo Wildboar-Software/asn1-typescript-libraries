@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PositionMethodFailure_Diagnostic, _decode_PositionMethodFailure_Diagnostic, _encode_PositionMethodFailure_Diagnostic, _enum_for_PositionMethodFailure_Diagnostic } from "../MAP-ER-DataTypes/PositionMethodFailure-Diagnostic.ta.mjs";
+import { type PositionMethodFailure_Diagnostic, _decode_PositionMethodFailure_Diagnostic, _encode_PositionMethodFailure_Diagnostic, _enum_for_PositionMethodFailure_Diagnostic } from "../MAP-ER-DataTypes/PositionMethodFailure-Diagnostic.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 

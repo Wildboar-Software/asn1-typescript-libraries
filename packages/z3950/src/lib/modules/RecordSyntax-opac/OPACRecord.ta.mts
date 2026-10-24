@@ -6,7 +6,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { HoldingsRecord, _decode_HoldingsRecord, _encode_HoldingsRecord } from "../RecordSyntax-opac/HoldingsRecord.ta.mjs";
+import { type HoldingsRecord, _decode_HoldingsRecord, _encode_HoldingsRecord } from "../RecordSyntax-opac/HoldingsRecord.ta.mjs";
 
 
 /**

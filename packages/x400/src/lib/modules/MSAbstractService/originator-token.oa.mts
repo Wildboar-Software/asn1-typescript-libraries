@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    OriginatorToken,
+    type OriginatorToken,
     _decode_OriginatorToken,
     _encode_OriginatorToken,
 } from '../MSAbstractService/OriginatorToken.ta.mjs';

@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ISDRProprietaryApplicationTemplateIoT_euiccConfiguration, _decode_ISDRProprietaryApplicationTemplateIoT_euiccConfiguration, _encode_ISDRProprietaryApplicationTemplateIoT_euiccConfiguration } from "../SGP32Definitions/ISDRProprietaryApplicationTemplateIoT-euiccConfiguration.ta.mjs";
+import { type ISDRProprietaryApplicationTemplateIoT_euiccConfiguration, _decode_ISDRProprietaryApplicationTemplateIoT_euiccConfiguration, _encode_ISDRProprietaryApplicationTemplateIoT_euiccConfiguration } from "../SGP32Definitions/ISDRProprietaryApplicationTemplateIoT-euiccConfiguration.ta.mjs";
 
 
 /**

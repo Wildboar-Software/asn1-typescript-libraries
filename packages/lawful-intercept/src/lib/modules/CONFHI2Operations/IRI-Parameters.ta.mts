@@ -7,33 +7,33 @@ import {
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
+import { type LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
 // export { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
-import { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
+import { type TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
 // export { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
 import { PartyIdentity, _decode_PartyIdentity, _encode_PartyIdentity } from "../CONFHI2Operations/PartyIdentity.ta.mjs";
 // export { PartyIdentity, _decode_PartyIdentity, _encode_PartyIdentity } from "../CONFHI2Operations/PartyIdentity.ta.mjs";
-import { National_Parameters, _decode_National_Parameters, _encode_National_Parameters } from "../HI2Operations/National-Parameters.ta.mjs";
+import { type National_Parameters, _decode_National_Parameters, _encode_National_Parameters } from "../HI2Operations/National-Parameters.ta.mjs";
 // export { National_Parameters, _decode_National_Parameters, _encode_National_Parameters } from "../HI2Operations/National-Parameters.ta.mjs";
 import { Network_Identifier, _decode_Network_Identifier, _encode_Network_Identifier } from "../HI2Operations/Network-Identifier.ta.mjs";
 // export { Network_Identifier, _decode_Network_Identifier, _encode_Network_Identifier } from "../HI2Operations/Network-Identifier.ta.mjs";
-import { ConfEvent, _decode_ConfEvent, _encode_ConfEvent, _enum_for_ConfEvent } from "../CONFHI2Operations/ConfEvent.ta.mjs";
+import { type ConfEvent, _decode_ConfEvent, _encode_ConfEvent, _enum_for_ConfEvent } from "../CONFHI2Operations/ConfEvent.ta.mjs";
 // export { ConfEvent, _enum_for_ConfEvent, ConfEvent_confStartSuccessfull /* IMPORTED_LONG_ENUMERATION_ITEM */, confStartSuccessfull /* IMPORTED_SHORT_ENUMERATION_ITEM */, ConfEvent_confStartUnsuccessfull /* IMPORTED_LONG_ENUMERATION_ITEM */, confStartUnsuccessfull /* IMPORTED_SHORT_ENUMERATION_ITEM */, ConfEvent_startOfInterceptionConferenceActive /* IMPORTED_LONG_ENUMERATION_ITEM */, startOfInterceptionConferenceActive /* IMPORTED_SHORT_ENUMERATION_ITEM */, ConfEvent_confPartyJoinSuccessfull /* IMPORTED_LONG_ENUMERATION_ITEM */, confPartyJoinSuccessfull /* IMPORTED_SHORT_ENUMERATION_ITEM */, ConfEvent_confPartyJoinUnsuccessfull /* IMPORTED_LONG_ENUMERATION_ITEM */, confPartyJoinUnsuccessfull /* IMPORTED_SHORT_ENUMERATION_ITEM */, ConfEvent_confPartyLeaveSuccessfull /* IMPORTED_LONG_ENUMERATION_ITEM */, confPartyLeaveSuccessfull /* IMPORTED_SHORT_ENUMERATION_ITEM */, ConfEvent_confPartyLeaveUnsuccessfull /* IMPORTED_LONG_ENUMERATION_ITEM */, confPartyLeaveUnsuccessfull /* IMPORTED_SHORT_ENUMERATION_ITEM */, ConfEvent_confPartyBearerModifySuccessfull /* IMPORTED_LONG_ENUMERATION_ITEM */, confPartyBearerModifySuccessfull /* IMPORTED_SHORT_ENUMERATION_ITEM */, ConfEvent_confPartyBearerModifyUnsuccessfull /* IMPORTED_LONG_ENUMERATION_ITEM */, confPartyBearerModifyUnsuccessfull /* IMPORTED_SHORT_ENUMERATION_ITEM */, ConfEvent_confEndSuccessfull /* IMPORTED_LONG_ENUMERATION_ITEM */, confEndSuccessfull /* IMPORTED_SHORT_ENUMERATION_ITEM */, ConfEvent_confEndUnsuccessfull /* IMPORTED_LONG_ENUMERATION_ITEM */, confEndUnsuccessfull /* IMPORTED_SHORT_ENUMERATION_ITEM */, ConfEvent_confServCreation /* IMPORTED_LONG_ENUMERATION_ITEM */, confServCreation /* IMPORTED_SHORT_ENUMERATION_ITEM */, ConfEvent_confServUpdate /* IMPORTED_LONG_ENUMERATION_ITEM */, confServUpdate /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ConfEvent, _encode_ConfEvent } from "../CONFHI2Operations/ConfEvent.ta.mjs";
-import { ConfCorrelation, _decode_ConfCorrelation, _encode_ConfCorrelation } from "../CONFHI2Operations/ConfCorrelation.ta.mjs";
+import { type ConfCorrelation, _decode_ConfCorrelation, _encode_ConfCorrelation } from "../CONFHI2Operations/ConfCorrelation.ta.mjs";
 // export { ConfCorrelation, _decode_ConfCorrelation, _encode_ConfCorrelation } from "../CONFHI2Operations/ConfCorrelation.ta.mjs";
 import { IMSIdentity, _decode_IMSIdentity, _encode_IMSIdentity } from "../CONFHI2Operations/IMSIdentity.ta.mjs";
 // export { IMSIdentity, _decode_IMSIdentity, _encode_IMSIdentity } from "../CONFHI2Operations/IMSIdentity.ta.mjs";
 import { ConfPartyInformation, _decode_ConfPartyInformation, _encode_ConfPartyInformation } from "../CONFHI2Operations/ConfPartyInformation.ta.mjs";
 // export { ConfPartyInformation, _decode_ConfPartyInformation, _encode_ConfPartyInformation } from "../CONFHI2Operations/ConfPartyInformation.ta.mjs";
-import { ConfEventInitiator, _decode_ConfEventInitiator, _encode_ConfEventInitiator } from "../CONFHI2Operations/ConfEventInitiator.ta.mjs";
+import { type ConfEventInitiator, _decode_ConfEventInitiator, _encode_ConfEventInitiator } from "../CONFHI2Operations/ConfEventInitiator.ta.mjs";
 // export { ConfEventInitiator, _decode_ConfEventInitiator, _encode_ConfEventInitiator } from "../CONFHI2Operations/ConfEventInitiator.ta.mjs";
-import { ConfEventFailureReason, _decode_ConfEventFailureReason, _encode_ConfEventFailureReason } from "../CONFHI2Operations/ConfEventFailureReason.ta.mjs";
+import { type ConfEventFailureReason, _decode_ConfEventFailureReason, _encode_ConfEventFailureReason } from "../CONFHI2Operations/ConfEventFailureReason.ta.mjs";
 // export { ConfEventFailureReason, _decode_ConfEventFailureReason, _encode_ConfEventFailureReason } from "../CONFHI2Operations/ConfEventFailureReason.ta.mjs";
-import { Reason, _decode_Reason, _encode_Reason } from "../CONFHI2Operations/Reason.ta.mjs";
+import { type Reason, _decode_Reason, _encode_Reason } from "../CONFHI2Operations/Reason.ta.mjs";
 // export { Reason, _decode_Reason, _encode_Reason } from "../CONFHI2Operations/Reason.ta.mjs";
 import { RecurrenceInfo, _decode_RecurrenceInfo, _encode_RecurrenceInfo } from "../CONFHI2Operations/RecurrenceInfo.ta.mjs";
 // export { RecurrenceInfo, _decode_RecurrenceInfo, _encode_RecurrenceInfo } from "../CONFHI2Operations/RecurrenceInfo.ta.mjs";
-import { MediaModification, _decode_MediaModification, _encode_MediaModification, _enum_for_MediaModification } from "../CONFHI2Operations/MediaModification.ta.mjs";
+import { type MediaModification, _decode_MediaModification, _encode_MediaModification, _enum_for_MediaModification } from "../CONFHI2Operations/MediaModification.ta.mjs";
 // export { MediaModification, _enum_for_MediaModification, MediaModification_add /* IMPORTED_LONG_ENUMERATION_ITEM */, add /* IMPORTED_SHORT_ENUMERATION_ITEM */, MediaModification_remove /* IMPORTED_LONG_ENUMERATION_ITEM */, remove /* IMPORTED_SHORT_ENUMERATION_ITEM */, MediaModification_change /* IMPORTED_LONG_ENUMERATION_ITEM */, change /* IMPORTED_SHORT_ENUMERATION_ITEM */, MediaModification_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MediaModification, _encode_MediaModification } from "../CONFHI2Operations/MediaModification.ta.mjs";
 
 

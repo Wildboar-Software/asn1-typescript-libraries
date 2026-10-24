@@ -6,10 +6,10 @@ import {
     ASN1Error
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ParameterName, _decode_ParameterName, _encode_ParameterName,
+import { type ParameterName, _decode_ParameterName, _encode_ParameterName,
     ParameterName_requestedGvcid
 } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/ParameterName.ta.mjs";
-import { RequestedGvcId, _decode_RequestedGvcId, _encode_RequestedGvcId } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/RequestedGvcId.ta.mjs";
+import { type RequestedGvcId, _decode_RequestedGvcId, _encode_RequestedGvcId } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/RequestedGvcId.ta.mjs";
 
 
 

@@ -4,8 +4,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RoseAPDU, _decode_RoseAPDU, _encode_RoseAPDU } from "../PSS1-Service-APDUs-asn1-97/RoseAPDU.ta.mjs";
-import { AcseAPDU, _decode_AcseAPDU, _encode_AcseAPDU } from "../Association-Control-Apdus-asn1-97/AcseAPDU.ta.mjs";
+import { type RoseAPDU, _decode_RoseAPDU, _encode_RoseAPDU } from "../PSS1-Service-APDUs-asn1-97/RoseAPDU.ta.mjs";
+import { type AcseAPDU, _decode_AcseAPDU, _encode_AcseAPDU } from "../Association-Control-Apdus-asn1-97/AcseAPDU.ta.mjs";
 
 /**
  * @summary RemoteOperationsPortion_Item

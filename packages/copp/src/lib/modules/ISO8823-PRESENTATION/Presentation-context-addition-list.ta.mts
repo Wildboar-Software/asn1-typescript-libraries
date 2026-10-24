@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Context_list,
+    type Context_list,
     _decode_Context_list,
     _encode_Context_list,
 } from '../ISO8823-PRESENTATION/Context-list.ta.mjs';

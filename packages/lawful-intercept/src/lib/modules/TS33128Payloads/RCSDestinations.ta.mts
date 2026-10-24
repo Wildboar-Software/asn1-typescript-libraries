@@ -4,7 +4,7 @@ import {
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RCSDestination, _decode_RCSDestination, _encode_RCSDestination } from "../TS33128Payloads/RCSDestination.ta.mjs";
+import { type RCSDestination, _decode_RCSDestination, _encode_RCSDestination } from "../TS33128Payloads/RCSDestination.ta.mjs";
 // export { RCSDestination, _decode_RCSDestination, _encode_RCSDestination } from "../TS33128Payloads/RCSDestination.ta.mjs";
 
 

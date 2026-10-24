@@ -4,7 +4,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EimIdInfo, _decode_EimIdInfo, _encode_EimIdInfo } from "../SGP32Definitions/EimIdInfo.ta.mjs";
-import { ListEimResult_listEimError, _decode_ListEimResult_listEimError, _encode_ListEimResult_listEimError } from "../SGP32Definitions/ListEimResult-listEimError.ta.mjs";
+import { type ListEimResult_listEimError, _decode_ListEimResult_listEimError, _encode_ListEimResult_listEimError } from "../SGP32Definitions/ListEimResult-listEimError.ta.mjs";
 
 
 /**

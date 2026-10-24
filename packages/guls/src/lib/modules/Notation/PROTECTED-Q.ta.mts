@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  PROTECTED,
+  type PROTECTED,
   _get_decoder_for_PROTECTED,
   _get_encoder_for_PROTECTED,
 } from '../Notation/PROTECTED.ta.mjs';

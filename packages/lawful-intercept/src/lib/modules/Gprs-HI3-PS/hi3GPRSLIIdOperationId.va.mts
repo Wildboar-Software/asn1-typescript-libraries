@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ObjectIdentifier as _OID,
-    OBJECT_IDENTIFIER
+    type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { hi3GPRSLIId } from "../Gprs-HI3-PS/hi3GPRSLIId.va.mjs";
 // export { hi3GPRSLIId } from "../Gprs-HI3-PS/hi3GPRSLIId.va.mjs";

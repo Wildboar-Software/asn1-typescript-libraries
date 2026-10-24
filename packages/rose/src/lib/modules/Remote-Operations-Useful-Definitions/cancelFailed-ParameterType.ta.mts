@@ -11,13 +11,13 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  CancelProblem,
+  type CancelProblem,
   _enum_for_CancelProblem,
   _decode_CancelProblem,
   _encode_CancelProblem,
 } from '../Remote-Operations-Useful-Definitions/CancelProblem.ta.mjs';
 import {
-  InvokeId,
+  type InvokeId,
   _decode_InvokeId,
   _encode_InvokeId,
 } from '../Remote-Operations-Generic-ROS-PDUs/InvokeId.ta.mjs';

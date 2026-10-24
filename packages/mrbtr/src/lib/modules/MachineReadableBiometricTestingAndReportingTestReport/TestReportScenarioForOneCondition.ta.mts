@@ -14,8 +14,8 @@ import * as $ from "@wildboar/asn1/functional";
 import { TestCrewInformation, _decode_TestCrewInformation, _encode_TestCrewInformation } from "../MachineReadableBiometricTestingAndReportingTestReport/TestCrewInformation.ta.mjs";
 import { LevelPolicyAssistance, _decode_LevelPolicyAssistance, _encode_LevelPolicyAssistance } from "../MachineReadableBiometricTestingAndReportingTestReport/LevelPolicyAssistance.ta.mjs";
 import { EnvironmentalInformation, _decode_EnvironmentalInformation, _encode_EnvironmentalInformation } from "../MachineReadableBiometricTestingAndReportingTestReport/EnvironmentalInformation.ta.mjs";
-import { Date, _decode_Date, _encode_Date } from "../MachineReadableBiometricTestingAndReportingTestReport/Date.ta.mjs";
-import { TestResult, _decode_TestResult, _encode_TestResult } from "../MachineReadableBiometricTestingAndReportingTestReport/TestResult.ta.mjs";
+import { type Date, _decode_Date, _encode_Date } from "../MachineReadableBiometricTestingAndReportingTestReport/Date.ta.mjs";
+import { type TestResult, _decode_TestResult, _encode_TestResult } from "../MachineReadableBiometricTestingAndReportingTestReport/TestResult.ta.mjs";
 
 
 /**

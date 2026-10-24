@@ -7,12 +7,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Criteria,
+    type Criteria,
     _decode_Criteria,
     _encode_Criteria,
 } from "../SelectedAttributeTypes/Criteria.ta.mjs";
 import {
-    EnhancedGuide_subset,
+    type EnhancedGuide_subset,
     oneLevel /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_EnhancedGuide_subset,
     _encode_EnhancedGuide_subset,

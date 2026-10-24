@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SignalRate,
+    type SignalRate,
     _decode_SignalRate,
     _encode_SignalRate,
 } from '../M3100ASN1TypeModule2/SignalRate.ta.mjs';
 import {
-    MappingList,
+    type MappingList,
     _decode_MappingList,
     _encode_MappingList,
 } from '../M3100ASN1TypeModule2/MappingList.ta.mjs';
 import {
-    NameType,
+    type NameType,
     _encode_NameType,
     _decode_NameType,
 } from '../ASN1DefinedTypesModule/NameType.ta.mjs';

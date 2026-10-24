@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { FQDN, _decode_FQDN, _encode_FQDN } from "../TS33128Payloads/FQDN.ta.mjs";
+import { type FQDN, _decode_FQDN, _encode_FQDN } from "../TS33128Payloads/FQDN.ta.mjs";
 // export { FQDN, _decode_FQDN, _encode_FQDN } from "../TS33128Payloads/FQDN.ta.mjs";
-import { UAProtocolID, _decode_UAProtocolID, _encode_UAProtocolID } from "../TS33128Payloads/UAProtocolID.ta.mjs";
+import { type UAProtocolID, _decode_UAProtocolID, _encode_UAProtocolID } from "../TS33128Payloads/UAProtocolID.ta.mjs";
 // export { UAProtocolID, _decode_UAProtocolID, _encode_UAProtocolID } from "../TS33128Payloads/UAProtocolID.ta.mjs";
 
 

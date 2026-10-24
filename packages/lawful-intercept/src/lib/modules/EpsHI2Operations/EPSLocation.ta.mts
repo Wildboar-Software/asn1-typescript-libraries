@@ -7,13 +7,13 @@ import {
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { GSMLocation, _decode_GSMLocation, _encode_GSMLocation } from "../EpsHI2Operations/GSMLocation.ta.mjs";
+import { type GSMLocation, _decode_GSMLocation, _encode_GSMLocation } from "../EpsHI2Operations/GSMLocation.ta.mjs";
 // export { GSMLocation, _decode_GSMLocation, _encode_GSMLocation } from "../EpsHI2Operations/GSMLocation.ta.mjs";
-import { UMTSLocation, _decode_UMTSLocation, _encode_UMTSLocation } from "../EpsHI2Operations/UMTSLocation.ta.mjs";
+import { type UMTSLocation, _decode_UMTSLocation, _encode_UMTSLocation } from "../EpsHI2Operations/UMTSLocation.ta.mjs";
 // export { UMTSLocation, _decode_UMTSLocation, _encode_UMTSLocation } from "../EpsHI2Operations/UMTSLocation.ta.mjs";
-import { CivicAddress, _decode_CivicAddress, _encode_CivicAddress } from "../UmtsHI2Operations/CivicAddress.ta.mjs";
+import { type CivicAddress, _decode_CivicAddress, _encode_CivicAddress } from "../UmtsHI2Operations/CivicAddress.ta.mjs";
 // export { CivicAddress, _decode_CivicAddress, _encode_CivicAddress } from "../UmtsHI2Operations/CivicAddress.ta.mjs";
-import { EPSLocation_uELocationTimestamp, _decode_EPSLocation_uELocationTimestamp, _encode_EPSLocation_uELocationTimestamp } from "../EpsHI2Operations/EPSLocation-uELocationTimestamp.ta.mjs";
+import { type EPSLocation_uELocationTimestamp, _decode_EPSLocation_uELocationTimestamp, _encode_EPSLocation_uELocationTimestamp } from "../EpsHI2Operations/EPSLocation-uELocationTimestamp.ta.mjs";
 // export { EPSLocation_uELocationTimestamp, _decode_EPSLocation_uELocationTimestamp, _encode_EPSLocation_uELocationTimestamp } from "../EpsHI2Operations/EPSLocation-uELocationTimestamp.ta.mjs";
 
 

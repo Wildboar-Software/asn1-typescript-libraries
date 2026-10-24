@@ -12,7 +12,7 @@ import {
     _encode_RecipientKeyIdentifier,
 } from "../CryptographicMessageSyntax-2010/RecipientKeyIdentifier.ta.mjs";
 import {
-    SubjectKeyIdentifier,
+    type SubjectKeyIdentifier,
     _decode_SubjectKeyIdentifier,
     _encode_SubjectKeyIdentifier,
 } from "../CryptographicMessageSyntax-2010/SubjectKeyIdentifier.ta.mjs";

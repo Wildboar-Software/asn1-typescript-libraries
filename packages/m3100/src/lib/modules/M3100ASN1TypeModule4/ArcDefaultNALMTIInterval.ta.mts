@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ArcTime,
+    type ArcTime,
     _decode_ArcTime,
     _encode_ArcTime,
 } from '../M3100ASN1TypeModule4/ArcTime.ta.mjs';

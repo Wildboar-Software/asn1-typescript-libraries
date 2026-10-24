@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ObjectIdentifier as _OID,
-    OBJECT_IDENTIFIER
+    type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { bsi_de } from "../Doc-9303-Part-11-Module/bsi-de.va.mjs";
 // export { bsi_de } from "../Doc-9303-Part-11-Module/bsi-de.va.mjs";

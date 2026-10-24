@@ -12,12 +12,12 @@ import {
     _encode_SecurityParameters,
 } from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
 import {
-    UpdateErrorData_attributeInfo_Item,
+    type UpdateErrorData_attributeInfo_Item,
     _decode_UpdateErrorData_attributeInfo_Item,
     _encode_UpdateErrorData_attributeInfo_Item,
 } from "../DirectoryAbstractService/UpdateErrorData-attributeInfo-Item.ta.mjs";
 import {
-    UpdateProblem,
+    type UpdateProblem,
     _decode_UpdateProblem,
     _encode_UpdateProblem,
 } from "../DirectoryAbstractService/UpdateProblem.ta.mjs";
@@ -27,7 +27,7 @@ import {
     _encode_Attribute,
 } from "../InformationFramework/Attribute.ta.mjs";
 import {
-    DistinguishedName,
+    type DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";

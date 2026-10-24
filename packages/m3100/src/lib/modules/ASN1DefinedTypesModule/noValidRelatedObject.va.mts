@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    GeneralErrorCause,
+    type GeneralErrorCause,
     _decode_GeneralErrorCause,
     _encode_GeneralErrorCause,
 } from '../ASN1DefinedTypesModule/GeneralErrorCause.ta.mjs';

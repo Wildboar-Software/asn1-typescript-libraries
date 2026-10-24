@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    SearchControlOptions,
+    type SearchControlOptions,
     _decode_SearchControlOptions,
     _encode_SearchControlOptions,
 } from "../DirectoryAbstractService/SearchControlOptions.ta.mjs";

@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
 import { GetAccessControlListAttributes_Response_accessControlListElements, _decode_GetAccessControlListAttributes_Response_accessControlListElements, _encode_GetAccessControlListAttributes_Response_accessControlListElements } from "../ISO-9506-MMS-1/GetAccessControlListAttributes-Response-accessControlListElements.ta.mjs";
 import { GetAccessControlListAttributes_Response_references_Item, _decode_GetAccessControlListAttributes_Response_references_Item, _encode_GetAccessControlListAttributes_Response_references_Item } from "../ISO-9506-MMS-1/GetAccessControlListAttributes-Response-references-Item.ta.mjs";
 

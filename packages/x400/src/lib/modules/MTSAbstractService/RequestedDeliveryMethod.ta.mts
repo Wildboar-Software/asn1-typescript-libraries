@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RequestedDeliveryMethod_Item,
+    type RequestedDeliveryMethod_Item,
     _decode_RequestedDeliveryMethod_Item,
     _encode_RequestedDeliveryMethod_Item,
 } from '../MTSAbstractService/RequestedDeliveryMethod-Item.ta.mjs';

@@ -11,16 +11,16 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ParameterOffers_dimensionOffer, _decode_ParameterOffers_dimensionOffer, _encode_ParameterOffers_dimensionOffer } from "../CDS/ParameterOffers-dimensionOffer.ta.mjs";
+import { type ParameterOffers_dimensionOffer, _decode_ParameterOffers_dimensionOffer, _encode_ParameterOffers_dimensionOffer } from "../CDS/ParameterOffers-dimensionOffer.ta.mjs";
 import { DimensionParamOffer, _decode_DimensionParamOffer, _encode_DimensionParamOffer } from "../CDS/DimensionParamOffer.ta.mjs";
-import { ParameterOffers_erasure, _decode_ParameterOffers_erasure, _encode_ParameterOffers_erasure } from "../CDS/ParameterOffers-erasure.ta.mjs";
+import { type ParameterOffers_erasure, _decode_ParameterOffers_erasure, _encode_ParameterOffers_erasure } from "../CDS/ParameterOffers-erasure.ta.mjs";
 import { CompoundRepertoireOffer, _decode_CompoundRepertoireOffer, _encode_CompoundRepertoireOffer } from "../CDS/CompoundRepertoireOffer.ta.mjs";
-import { CompoundEmphasisOffer, _decode_CompoundEmphasisOffer, _encode_CompoundEmphasisOffer } from "../CDS/CompoundEmphasisOffer.ta.mjs";
+import { type CompoundEmphasisOffer, _decode_CompoundEmphasisOffer, _encode_CompoundEmphasisOffer } from "../CDS/CompoundEmphasisOffer.ta.mjs";
 import { CompoundColourOffer, _decode_CompoundColourOffer, _encode_CompoundColourOffer } from "../CDS/CompoundColourOffer.ta.mjs";
-import { ParameterOffers_access, _decode_ParameterOffers_access, _encode_ParameterOffers_access } from "../CDS/ParameterOffers-access.ta.mjs";
+import { type ParameterOffers_access, _decode_ParameterOffers_access, _encode_ParameterOffers_access } from "../CDS/ParameterOffers-access.ta.mjs";
 import { BlockParamOffer, _decode_BlockParamOffer, _encode_BlockParamOffer } from "../CDS/BlockParamOffer.ta.mjs";
 import { FieldParamOffer, _decode_FieldParamOffer, _encode_FieldParamOffer } from "../CDS/FieldParamOffer.ta.mjs";
-import { ParameterOffers_rippleCapability, _decode_ParameterOffers_rippleCapability, _encode_ParameterOffers_rippleCapability } from "../CDS/ParameterOffers-rippleCapability.ta.mjs";
+import { type ParameterOffers_rippleCapability, _decode_ParameterOffers_rippleCapability, _encode_ParameterOffers_rippleCapability } from "../CDS/ParameterOffers-rippleCapability.ta.mjs";
 
 
 /**

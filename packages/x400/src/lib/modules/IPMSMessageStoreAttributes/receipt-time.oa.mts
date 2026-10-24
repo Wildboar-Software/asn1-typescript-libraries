@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    ReceiptTimeField,
+    type ReceiptTimeField,
     _decode_ReceiptTimeField,
     _encode_ReceiptTimeField,
 } from '../IPMSInformationObjects/ReceiptTimeField.ta.mjs';

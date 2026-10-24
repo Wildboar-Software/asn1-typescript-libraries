@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { VersionType, _decode_VersionType, _encode_VersionType } from "../RSPDefinitions/VersionType.ta.mjs";
-import { CatSupportedClasses, _decode_CatSupportedClasses, _encode_CatSupportedClasses } from "../RSPDefinitions/CatSupportedClasses.ta.mjs";
-import { EuiccFormFactorType, _decode_EuiccFormFactorType, _encode_EuiccFormFactorType } from "../RSPDefinitions/EuiccFormFactorType.ta.mjs";
+import { type VersionType, _decode_VersionType, _encode_VersionType } from "../RSPDefinitions/VersionType.ta.mjs";
+import { type CatSupportedClasses, _decode_CatSupportedClasses, _encode_CatSupportedClasses } from "../RSPDefinitions/CatSupportedClasses.ta.mjs";
+import { type EuiccFormFactorType, _decode_EuiccFormFactorType, _encode_EuiccFormFactorType } from "../RSPDefinitions/EuiccFormFactorType.ta.mjs";
 import { DeviceAdditionalFeatureSupport, _decode_DeviceAdditionalFeatureSupport, _encode_DeviceAdditionalFeatureSupport } from "../RSPDefinitions/DeviceAdditionalFeatureSupport.ta.mjs";
 
 

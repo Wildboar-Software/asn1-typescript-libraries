@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    GeneralizedTime,
+    type GeneralizedTime,
     type INTEGER,
     type OCTET_STRING,
     type OPTIONAL,
@@ -9,25 +9,25 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MMSCorrelationNumber, _decode_MMSCorrelationNumber, _encode_MMSCorrelationNumber } from "../MmsHI2Operations/MMSCorrelationNumber.ta.mjs";
+import { type MMSCorrelationNumber, _decode_MMSCorrelationNumber, _encode_MMSCorrelationNumber } from "../MmsHI2Operations/MMSCorrelationNumber.ta.mjs";
 // export { MMSCorrelationNumber, _decode_MMSCorrelationNumber, _encode_MMSCorrelationNumber } from "../MmsHI2Operations/MMSCorrelationNumber.ta.mjs";
-import { Addresses, _decode_Addresses, _encode_Addresses } from "../MmsHI2Operations/Addresses.ta.mjs";
+import { type Addresses, _decode_Addresses, _encode_Addresses } from "../MmsHI2Operations/Addresses.ta.mjs";
 // export { Addresses, _decode_Addresses, _encode_Addresses } from "../MmsHI2Operations/Addresses.ta.mjs";
-import { From, _decode_From, _encode_From } from "../MmsHI2Operations/From.ta.mjs";
+import { type From, _decode_From, _encode_From } from "../MmsHI2Operations/From.ta.mjs";
 // export { From, _decode_From, _encode_From } from "../MmsHI2Operations/From.ta.mjs";
 import { PreviouslySentBy, _decode_PreviouslySentBy, _encode_PreviouslySentBy } from "../MmsHI2Operations/PreviouslySentBy.ta.mjs";
 // export { PreviouslySentBy, _decode_PreviouslySentBy, _encode_PreviouslySentBy } from "../MmsHI2Operations/PreviouslySentBy.ta.mjs";
 import { PreviouslySentByDateTime, _decode_PreviouslySentByDateTime, _encode_PreviouslySentByDateTime } from "../MmsHI2Operations/PreviouslySentByDateTime.ta.mjs";
 // export { PreviouslySentByDateTime, _decode_PreviouslySentByDateTime, _encode_PreviouslySentByDateTime } from "../MmsHI2Operations/PreviouslySentByDateTime.ta.mjs";
-import { MMSState, _decode_MMSState, _encode_MMSState, _enum_for_MMSState } from "../MmsHI2Operations/MMSState.ta.mjs";
+import { type MMSState, _decode_MMSState, _encode_MMSState, _enum_for_MMSState } from "../MmsHI2Operations/MMSState.ta.mjs";
 // export { MMSState, _enum_for_MMSState, MMSState_draft /* IMPORTED_LONG_ENUMERATION_ITEM */, draft /* IMPORTED_SHORT_ENUMERATION_ITEM */, MMSState_sent /* IMPORTED_LONG_ENUMERATION_ITEM */, sent /* IMPORTED_SHORT_ENUMERATION_ITEM */, MMSState_new /* IMPORTED_LONG_ENUMERATION_ITEM */, new_ /* IMPORTED_SHORT_ENUMERATION_ITEM */, MMSState_retreived /* IMPORTED_LONG_ENUMERATION_ITEM */, retreived /* IMPORTED_SHORT_ENUMERATION_ITEM */, MMSState_forwarded /* IMPORTED_LONG_ENUMERATION_ITEM */, forwarded /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MMSState, _encode_MMSState } from "../MmsHI2Operations/MMSState.ta.mjs";
 import { MMFlags, _decode_MMFlags, _encode_MMFlags } from "../MmsHI2Operations/MMFlags.ta.mjs";
 // export { MMFlags, _decode_MMFlags, _encode_MMFlags } from "../MmsHI2Operations/MMFlags.ta.mjs";
-import { MessageClass, _decode_MessageClass, _encode_MessageClass } from "../MmsHI2Operations/MessageClass.ta.mjs";
+import { type MessageClass, _decode_MessageClass, _encode_MessageClass } from "../MmsHI2Operations/MessageClass.ta.mjs";
 // export { MessageClass, _decode_MessageClass, _encode_MessageClass } from "../MmsHI2Operations/MessageClass.ta.mjs";
-import { Priority, _decode_Priority, _encode_Priority, _enum_for_Priority } from "../MmsHI2Operations/Priority.ta.mjs";
+import { type Priority, _decode_Priority, _encode_Priority, _enum_for_Priority } from "../MmsHI2Operations/Priority.ta.mjs";
 // export { Priority, _enum_for_Priority, Priority_low /* IMPORTED_LONG_ENUMERATION_ITEM */, low /* IMPORTED_SHORT_ENUMERATION_ITEM */, Priority_normal /* IMPORTED_LONG_ENUMERATION_ITEM */, normal /* IMPORTED_SHORT_ENUMERATION_ITEM */, Priority_high /* IMPORTED_LONG_ENUMERATION_ITEM */, high /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Priority, _encode_Priority } from "../MmsHI2Operations/Priority.ta.mjs";
-import { YesNo, _decode_YesNo, _encode_YesNo } from "../MmsHI2Operations/YesNo.ta.mjs";
+import { type YesNo, _decode_YesNo, _encode_YesNo } from "../MmsHI2Operations/YesNo.ta.mjs";
 // export { YesNo, _decode_YesNo, _encode_YesNo } from "../MmsHI2Operations/YesNo.ta.mjs";
 import { ContentLocation, _decode_ContentLocation, _encode_ContentLocation } from "../MmsHI2Operations/ContentLocation.ta.mjs";
 // export { ContentLocation, _decode_ContentLocation, _encode_ContentLocation } from "../MmsHI2Operations/ContentLocation.ta.mjs";

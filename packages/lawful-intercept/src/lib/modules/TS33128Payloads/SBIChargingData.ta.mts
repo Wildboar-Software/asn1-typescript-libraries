@@ -4,7 +4,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EncapsulatedSBIChargingData, _decode_EncapsulatedSBIChargingData, _encode_EncapsulatedSBIChargingData } from "../TS33128Payloads/EncapsulatedSBIChargingData.ta.mjs";
+import { type EncapsulatedSBIChargingData, _decode_EncapsulatedSBIChargingData, _encode_EncapsulatedSBIChargingData } from "../TS33128Payloads/EncapsulatedSBIChargingData.ta.mjs";
 // export { EncapsulatedSBIChargingData, _decode_EncapsulatedSBIChargingData, _encode_EncapsulatedSBIChargingData } from "../TS33128Payloads/EncapsulatedSBIChargingData.ta.mjs";
 
 

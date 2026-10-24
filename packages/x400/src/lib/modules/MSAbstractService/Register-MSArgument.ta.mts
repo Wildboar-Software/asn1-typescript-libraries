@@ -42,7 +42,7 @@ import {
     _encode_MSSubmissionOptions,
 } from '../MSAbstractService/MSSubmissionOptions.ta.mjs';
 import {
-    MessageGroupRegistrations,
+    type MessageGroupRegistrations,
     _decode_MessageGroupRegistrations,
     _encode_MessageGroupRegistrations,
 } from '../MSAbstractService/MessageGroupRegistrations.ta.mjs';
@@ -52,12 +52,12 @@ import {
     _encode_RegistrationTypes,
 } from '../MSAbstractService/RegistrationTypes.ta.mjs';
 import {
-    MSExtensions,
+    type MSExtensions,
     _decode_MSExtensions,
     _encode_MSExtensions,
 } from '../MSAbstractService/MSExtensions.ta.mjs';
 import {
-    AttributeType,
+    type AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
 } from "./AttributeType.ta.mjs";

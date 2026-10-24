@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    BuiltInContentType,
+    type BuiltInContentType,
     _decode_BuiltInContentType,
     _encode_BuiltInContentType,
 } from '../MTSAbstractService/BuiltInContentType.ta.mjs';
 import {
-    ExtendedContentType,
+    type ExtendedContentType,
     _decode_ExtendedContentType,
     _encode_ExtendedContentType,
 } from '../MTSAbstractService/ExtendedContentType.ta.mjs';

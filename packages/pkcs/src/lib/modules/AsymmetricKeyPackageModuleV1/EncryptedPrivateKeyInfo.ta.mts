@@ -6,12 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    EncryptedData,
+    type EncryptedData,
     _decode_EncryptedData,
     _encode_EncryptedData,
 } from "../AsymmetricKeyPackageModuleV1/EncryptedData.ta.mjs";
 import {
-    EncryptionAlgorithmIdentifier,
+    type EncryptionAlgorithmIdentifier,
     _decode_EncryptionAlgorithmIdentifier,
     _encode_EncryptionAlgorithmIdentifier,
 } from "../AsymmetricKeyPackageModuleV1/EncryptionAlgorithmIdentifier.ta.mjs";

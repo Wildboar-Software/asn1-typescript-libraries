@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    ID,
+    type ID,
     _decode_ID,
     _encode_ID,
 } from '../MHSProtocolObjectIdentifiers/ID.ta.mjs';

@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    CommunicationsAgreementIdField,
+    type CommunicationsAgreementIdField,
     _decode_CommunicationsAgreementIdField,
     _encode_CommunicationsAgreementIdField,
 } from '../EDIMSInformationObjects/CommunicationsAgreementIdField.ta.mjs';

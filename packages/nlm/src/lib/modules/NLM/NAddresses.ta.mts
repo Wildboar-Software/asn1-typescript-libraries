@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    NAddress,
+    type NAddress,
     _decode_NAddress,
     _encode_NAddress,
 } from '../NLM/NAddress.ta.mjs';

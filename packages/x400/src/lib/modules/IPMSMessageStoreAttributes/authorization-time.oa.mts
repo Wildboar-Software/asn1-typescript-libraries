@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    AuthorizationTime,
+    type AuthorizationTime,
     _decode_AuthorizationTime,
     _encode_AuthorizationTime,
 } from '../IPMSHeadingExtensions/AuthorizationTime.ta.mjs';

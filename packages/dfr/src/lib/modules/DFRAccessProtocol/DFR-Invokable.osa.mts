@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
-import { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { create } from "../DFRAbstractService/create.oa.mjs";
 import { delete_ } from "../DFRAbstractService/delete.oa.mjs";
 import { copy } from "../DFRAbstractService/copy.oa.mjs";

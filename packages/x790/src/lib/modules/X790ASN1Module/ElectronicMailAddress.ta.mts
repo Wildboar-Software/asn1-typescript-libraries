@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    SET,
+    type SET,
     type IA5String,
     ASN1Element as _Element,
     ASN1SizeError,

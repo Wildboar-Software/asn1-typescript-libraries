@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ObjectIdentifier as _OID,
-    OBJECT_IDENTIFIER
+    type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { hi3CCLinkId } from "../HI3CCLinkData/hi3CCLinkId.va.mjs";
 // export { hi3CCLinkId } from "../HI3CCLinkData/hi3CCLinkId.va.mjs";

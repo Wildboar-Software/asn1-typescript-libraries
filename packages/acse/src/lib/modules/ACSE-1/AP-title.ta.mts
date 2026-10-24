@@ -11,22 +11,22 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  AP_title_form1,
+  type AP_title_form1,
   _decode_AP_title_form1,
   _encode_AP_title_form1,
 } from '../ACSE-1/AP-title-form1.ta.mjs';
 import {
-  AP_title_form2,
+  type AP_title_form2,
   _decode_AP_title_form2,
   _encode_AP_title_form2,
 } from '../ACSE-1/AP-title-form2.ta.mjs';
 import {
-  AP_title_form3,
+  type AP_title_form3,
   _decode_AP_title_form3,
   _encode_AP_title_form3,
 } from '../ACSE-1/AP-title-form3.ta.mjs';
 import {
-  AP_title_form4,
+  type AP_title_form4,
   _decode_AP_title_form4,
   _encode_AP_title_form4,
 } from '../ACSE-1/AP-title-form4.ta.mjs';

@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BasicGapCriteria, _decode_BasicGapCriteria, _encode_BasicGapCriteria } from "../IN-SSF-SCF-datatypes/BasicGapCriteria.ta.mjs";
+import { type BasicGapCriteria, _decode_BasicGapCriteria, _encode_BasicGapCriteria } from "../IN-SSF-SCF-datatypes/BasicGapCriteria.ta.mjs";
 // export { BasicGapCriteria, _decode_BasicGapCriteria, _encode_BasicGapCriteria } from "../IN-SSF-SCF-datatypes/BasicGapCriteria.ta.mjs";
-import { ScfID, _decode_ScfID, _encode_ScfID } from "../IN-SSF-SCF-datatypes/ScfID.ta.mjs";
+import { type ScfID, _decode_ScfID, _encode_ScfID } from "../IN-SSF-SCF-datatypes/ScfID.ta.mjs";
 // export { ScfID, _decode_ScfID, _encode_ScfID } from "../IN-SSF-SCF-datatypes/ScfID.ta.mjs";
 
 

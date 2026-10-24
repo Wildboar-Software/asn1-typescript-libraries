@@ -6,8 +6,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ProtocolIdentifier, _decode_ProtocolIdentifier, _encode_ProtocolIdentifier } from "../Short-Message-Service-Operations-asn1-97/ProtocolIdentifier.ta.mjs";
-import { ValidityPeriod, _decode_ValidityPeriod, _encode_ValidityPeriod } from "../Short-Message-Service-Operations-asn1-97/ValidityPeriod.ta.mjs";
+import { type ProtocolIdentifier, _decode_ProtocolIdentifier, _encode_ProtocolIdentifier } from "../Short-Message-Service-Operations-asn1-97/ProtocolIdentifier.ta.mjs";
+import { type ValidityPeriod, _decode_ValidityPeriod, _encode_ValidityPeriod } from "../Short-Message-Service-Operations-asn1-97/ValidityPeriod.ta.mjs";
 
 /**
  * @summary SmSubmitParameter

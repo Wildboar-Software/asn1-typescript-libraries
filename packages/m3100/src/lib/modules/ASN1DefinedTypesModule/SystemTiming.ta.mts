@@ -18,7 +18,7 @@ import {
     _encode_SystemTiming_sourceType,
 } from '../ASN1DefinedTypesModule/SystemTiming-sourceType.ta.mjs';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';

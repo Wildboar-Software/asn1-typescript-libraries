@@ -7,13 +7,13 @@ import {
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IMSSubscriberIDs, _decode_IMSSubscriberIDs, _encode_IMSSubscriberIDs } from "../TS33128Payloads/IMSSubscriberIDs.ta.mjs";
+import { type IMSSubscriberIDs, _decode_IMSSubscriberIDs, _encode_IMSSubscriberIDs } from "../TS33128Payloads/IMSSubscriberIDs.ta.mjs";
 // export { IMSSubscriberIDs, _decode_IMSSubscriberIDs, _encode_IMSSubscriberIDs } from "../TS33128Payloads/IMSSubscriberIDs.ta.mjs";
-import { IMPU, _decode_IMPU, _encode_IMPU } from "../TS33128Payloads/IMPU.ta.mjs";
+import { type IMPU, _decode_IMPU, _encode_IMPU } from "../TS33128Payloads/IMPU.ta.mjs";
 // export { IMPU, _decode_IMPU, _encode_IMPU } from "../TS33128Payloads/IMPU.ta.mjs";
 import { ApplicationUEInformation, _decode_ApplicationUEInformation, _encode_ApplicationUEInformation } from "../TS33128Payloads/ApplicationUEInformation.ta.mjs";
 // export { ApplicationUEInformation, _decode_ApplicationUEInformation, _encode_ApplicationUEInformation } from "../TS33128Payloads/ApplicationUEInformation.ta.mjs";
-import { ApplicationResponse, _decode_ApplicationResponse, _encode_ApplicationResponse } from "../TS33128Payloads/ApplicationResponse.ta.mjs";
+import { type ApplicationResponse, _decode_ApplicationResponse, _encode_ApplicationResponse } from "../TS33128Payloads/ApplicationResponse.ta.mjs";
 // export { ApplicationResponse, _decode_ApplicationResponse, _encode_ApplicationResponse } from "../TS33128Payloads/ApplicationResponse.ta.mjs";
 
 

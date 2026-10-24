@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ActivityCode_number,
+    type ActivityCode_number,
     approved,
     assign,
     cancel,

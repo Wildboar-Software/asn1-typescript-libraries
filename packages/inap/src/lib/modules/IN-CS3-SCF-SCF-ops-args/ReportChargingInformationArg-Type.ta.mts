@@ -9,21 +9,21 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { CallRecord, _decode_CallRecord, _encode_CallRecord } from "../IN-CS3-SCF-SCF-datatypes/CallRecord.ta.mjs";
 // export { CallRecord, _decode_CallRecord, _encode_CallRecord } from "../IN-CS3-SCF-SCF-datatypes/CallRecord.ta.mjs";
-import { UserCredit, _decode_UserCredit, _encode_UserCredit } from "../IN-CS3-SCF-SCF-datatypes/UserCredit.ta.mjs";
+import { type UserCredit, _decode_UserCredit, _encode_UserCredit } from "../IN-CS3-SCF-SCF-datatypes/UserCredit.ta.mjs";
 // export { UserCredit, _decode_UserCredit, _encode_UserCredit } from "../IN-CS3-SCF-SCF-datatypes/UserCredit.ta.mjs";
-import { CallIdentifier, _decode_CallIdentifier, _encode_CallIdentifier } from "../IN-CS3-SCF-SCF-datatypes/CallIdentifier.ta.mjs";
+import { type CallIdentifier, _decode_CallIdentifier, _encode_CallIdentifier } from "../IN-CS3-SCF-SCF-datatypes/CallIdentifier.ta.mjs";
 // export { CallIdentifier, _decode_CallIdentifier, _encode_CallIdentifier } from "../IN-CS3-SCF-SCF-datatypes/CallIdentifier.ta.mjs";
-import { AccountNumber, _decode_AccountNumber, _encode_AccountNumber } from "../IN-CS3-SCF-SCF-datatypes/AccountNumber.ta.mjs";
+import { type AccountNumber, _decode_AccountNumber, _encode_AccountNumber } from "../IN-CS3-SCF-SCF-datatypes/AccountNumber.ta.mjs";
 // export { AccountNumber, _decode_AccountNumber, _encode_AccountNumber } from "../IN-CS3-SCF-SCF-datatypes/AccountNumber.ta.mjs";
 import { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParameters } from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
 // export { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParameters } from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
-import { Meters, _decode_Meters, _encode_Meters } from "../IN-CS3-SCF-SCF-datatypes/Meters.ta.mjs";
+import { type Meters, _decode_Meters, _encode_Meters } from "../IN-CS3-SCF-SCF-datatypes/Meters.ta.mjs";
 // export { Meters, _decode_Meters, _encode_Meters } from "../IN-CS3-SCF-SCF-datatypes/Meters.ta.mjs";
-import { FreeContainer, _decode_FreeContainer, _encode_FreeContainer } from "../IN-CS3-SCF-SCF-datatypes/FreeContainer.ta.mjs";
+import { type FreeContainer, _decode_FreeContainer, _encode_FreeContainer } from "../IN-CS3-SCF-SCF-datatypes/FreeContainer.ta.mjs";
 // export { FreeContainer, _decode_FreeContainer, _encode_FreeContainer } from "../IN-CS3-SCF-SCF-datatypes/FreeContainer.ta.mjs";
-import { CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../IN-CS3-SSF-SCF-datatypes/CorrelationID.ta.mjs";
+import { type CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../IN-CS3-SSF-SCF-datatypes/CorrelationID.ta.mjs";
 // export { CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../IN-CS3-SSF-SCF-datatypes/CorrelationID.ta.mjs";
-import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-common-datatypes/Extensions.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-common-datatypes/Extensions.ta.mjs";
 // export { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-common-datatypes/Extensions.ta.mjs";
 
 

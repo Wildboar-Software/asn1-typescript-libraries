@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ProofOfSubmission,
+    type ProofOfSubmission,
     _decode_ProofOfSubmission,
     _encode_ProofOfSubmission,
 } from '../MTSAbstractService/ProofOfSubmission.ta.mjs';
 import {
-    OriginatingMTACertificate,
+    type OriginatingMTACertificate,
     _decode_OriginatingMTACertificate,
     _encode_OriginatingMTACertificate,
 } from '../MTSAbstractService/OriginatingMTACertificate.ta.mjs';

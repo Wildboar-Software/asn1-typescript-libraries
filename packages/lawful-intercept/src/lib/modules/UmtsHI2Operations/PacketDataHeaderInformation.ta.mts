@@ -4,9 +4,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PacketDataHeaderReport, _decode_PacketDataHeaderReport, _encode_PacketDataHeaderReport } from "../UmtsHI2Operations/PacketDataHeaderReport.ta.mjs";
+import { type PacketDataHeaderReport, _decode_PacketDataHeaderReport, _encode_PacketDataHeaderReport } from "../UmtsHI2Operations/PacketDataHeaderReport.ta.mjs";
 // export { PacketDataHeaderReport, _decode_PacketDataHeaderReport, _encode_PacketDataHeaderReport } from "../UmtsHI2Operations/PacketDataHeaderReport.ta.mjs";
-import { PacketDataSummaryReport, _decode_PacketDataSummaryReport, _encode_PacketDataSummaryReport } from "../UmtsHI2Operations/PacketDataSummaryReport.ta.mjs";
+import { type PacketDataSummaryReport, _decode_PacketDataSummaryReport, _encode_PacketDataSummaryReport } from "../UmtsHI2Operations/PacketDataSummaryReport.ta.mjs";
 // export { PacketDataSummaryReport, _decode_PacketDataSummaryReport, _encode_PacketDataSummaryReport } from "../UmtsHI2Operations/PacketDataSummaryReport.ta.mjs";
 
 

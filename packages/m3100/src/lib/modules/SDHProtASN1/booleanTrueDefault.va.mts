@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    Boolean,
+    type Boolean,
     _decode_Boolean,
     _encode_Boolean,
 } from '../SDHProtASN1/Boolean.ta.mjs';

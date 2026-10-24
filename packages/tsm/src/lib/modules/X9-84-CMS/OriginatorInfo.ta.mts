@@ -11,9 +11,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CertificateSet, _decode_CertificateSet, _encode_CertificateSet } from "../X9-84-CMS/CertificateSet.ta.mjs";
+import { type CertificateSet, _decode_CertificateSet, _encode_CertificateSet } from "../X9-84-CMS/CertificateSet.ta.mjs";
 
-import { CertificateRevocationLists, _decode_CertificateRevocationLists, _encode_CertificateRevocationLists } from "../X9-84-CMS/CertificateRevocationLists.ta.mjs";
+import { type CertificateRevocationLists, _decode_CertificateRevocationLists, _encode_CertificateRevocationLists } from "../X9-84-CMS/CertificateRevocationLists.ta.mjs";
 
 
 

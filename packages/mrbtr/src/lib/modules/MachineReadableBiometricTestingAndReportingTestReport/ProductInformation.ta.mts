@@ -14,7 +14,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { Provider, _decode_Provider, _encode_Provider } from "../MachineReadableBiometricTestingAndReportingTestReport/Provider.ta.mjs";
 import { NameProduct, _decode_NameProduct, _encode_NameProduct } from "../MachineReadableBiometricTestingAndReportingTestReport/NameProduct.ta.mjs";
-import { Function, _enum_for_Function, _decode_Function, _encode_Function } from "../MachineReadableBiometricTestingAndReportingTestReport/Function.ta.mjs";
+import { type Function, _enum_for_Function, _decode_Function, _encode_Function } from "../MachineReadableBiometricTestingAndReportingTestReport/Function.ta.mjs";
 import { DataType, _decode_DataType, _encode_DataType } from "../MachineReadableBiometricTestingAndReportingTestReport/DataType.ta.mjs";
 import { Modality, _decode_Modality, _encode_Modality } from "../MachineReadableBiometricTestingAndReportingTestReport/Modality.ta.mjs";
 

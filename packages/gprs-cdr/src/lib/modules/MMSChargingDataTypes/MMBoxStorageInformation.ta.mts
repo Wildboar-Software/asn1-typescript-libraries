@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MMState, _decode_MMState, _encode_MMState, _enum_for_MMState } from "../MMSChargingDataTypes/MMState.ta.mjs";
-import { StoreStatus, _decode_StoreStatus, _encode_StoreStatus } from "../MMSChargingDataTypes/StoreStatus.ta.mjs";
+import { type StoreStatus, _decode_StoreStatus, _encode_StoreStatus } from "../MMSChargingDataTypes/StoreStatus.ta.mjs";
 
 
 /**

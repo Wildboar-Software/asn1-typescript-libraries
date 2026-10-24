@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { METHOD } from "../IN-CS3-SCF-SDF-Classes/METHOD.oca.mjs";
+import { type METHOD } from "../IN-CS3-SCF-SDF-Classes/METHOD.oca.mjs";
 // export { METHOD } from "../IN-CS3-SCF-SDF-Classes/METHOD.oca.mjs";
 
 

@@ -5,11 +5,11 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
+import { type SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
 // export { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
-import { PEI, _decode_PEI, _encode_PEI } from "../TS33128Payloads/PEI.ta.mjs";
+import { type PEI, _decode_PEI, _encode_PEI } from "../TS33128Payloads/PEI.ta.mjs";
 // export { PEI, _decode_PEI, _encode_PEI } from "../TS33128Payloads/PEI.ta.mjs";
-import { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
+import { type GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
 // export { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
 import { GUAMI, _decode_GUAMI, _encode_GUAMI } from "../TS33128Payloads/GUAMI.ta.mjs";
 // export { GUAMI, _decode_GUAMI, _encode_GUAMI } from "../TS33128Payloads/GUAMI.ta.mjs";
@@ -21,7 +21,7 @@ import { UDMServingSystemMethod, _decode_UDMServingSystemMethod, _encode_UDMServ
 // export { UDMServingSystemMethod, _enum_for_UDMServingSystemMethod, UDMServingSystemMethod_amf3GPPAccessRegistration /* IMPORTED_LONG_ENUMERATION_ITEM */, amf3GPPAccessRegistration /* IMPORTED_SHORT_ENUMERATION_ITEM */, UDMServingSystemMethod_amfNon3GPPAccessRegistration /* IMPORTED_LONG_ENUMERATION_ITEM */, amfNon3GPPAccessRegistration /* IMPORTED_SHORT_ENUMERATION_ITEM */, UDMServingSystemMethod_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_UDMServingSystemMethod, _encode_UDMServingSystemMethod } from "../TS33128Payloads/UDMServingSystemMethod.ta.mjs";
 import { ServiceID, _decode_ServiceID, _encode_ServiceID } from "../TS33128Payloads/ServiceID.ta.mjs";
 // export { ServiceID, _decode_ServiceID, _encode_ServiceID } from "../TS33128Payloads/ServiceID.ta.mjs";
-import { RoamingIndicator, _decode_RoamingIndicator, _encode_RoamingIndicator } from "../TS33128Payloads/RoamingIndicator.ta.mjs";
+import { type RoamingIndicator, _decode_RoamingIndicator, _encode_RoamingIndicator } from "../TS33128Payloads/RoamingIndicator.ta.mjs";
 // export { RoamingIndicator, _decode_RoamingIndicator, _encode_RoamingIndicator } from "../TS33128Payloads/RoamingIndicator.ta.mjs";
 
 

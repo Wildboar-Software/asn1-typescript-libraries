@@ -2,7 +2,7 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    GraphicString,
+    type GraphicString,
     type INTEGER,
     ASN1OverflowError
 } from "@wildboar/asn1";

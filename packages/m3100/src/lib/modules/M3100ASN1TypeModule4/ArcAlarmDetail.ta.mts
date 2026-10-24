@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ProbableCause,
+    type ProbableCause,
     _decode_ProbableCause,
     _encode_ProbableCause,
 } from '@wildboar/attribute-asn1module';
 import {
-    AlarmStatus,
+    type AlarmStatus,
     _decode_AlarmStatus,
     _encode_AlarmStatus,
 } from '@wildboar/attribute-asn1module';
@@ -28,7 +28,7 @@ import {
     _encode_PerceivedSeverity,
 } from '@wildboar/attribute-asn1module';
 import {
-    EventTime,
+    type EventTime,
     _decode_EventTime,
     _encode_EventTime,
 } from '@wildboar/attribute-asn1module';

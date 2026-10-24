@@ -2,18 +2,18 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    GeneralizedTime,
+    type GeneralizedTime,
     type OBJECT_IDENTIFIER,
     type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CertificateSerialNumber,
+    type CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
 } from "../AuthenticationFramework/CertificateSerialNumber.ta.mjs";
 import {
-    Time,
+    type Time,
     _decode_Time,
     _encode_Time,
 } from "../AuthenticationFramework/Time.ta.mjs";
@@ -28,17 +28,17 @@ import {
     _encode_AuthorityKeyIdentifier,
 } from "../CertificateExtensions/AuthorityKeyIdentifier.ta.mjs";
 import {
-    CertPolicySet,
+    type CertPolicySet,
     _decode_CertPolicySet,
     _encode_CertPolicySet,
 } from "../CertificateExtensions/CertPolicySet.ta.mjs";
 import {
-    GeneralNames,
+    type GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
 } from "../CertificateExtensions/GeneralNames.ta.mjs";
 import {
-    KeyUsage,
+    type KeyUsage,
     _decode_KeyUsage,
     _encode_KeyUsage,
 } from "../CertificateExtensions/KeyUsage.ta.mjs";
@@ -48,12 +48,12 @@ import {
     _encode_NameConstraintsSyntax,
 } from "../CertificateExtensions/NameConstraintsSyntax.ta.mjs";
 import {
-    SubjectKeyIdentifier,
+    type SubjectKeyIdentifier,
     _decode_SubjectKeyIdentifier,
     _encode_SubjectKeyIdentifier,
 } from "../CertificateExtensions/SubjectKeyIdentifier.ta.mjs";
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";

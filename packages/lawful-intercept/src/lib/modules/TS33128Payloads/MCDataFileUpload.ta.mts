@@ -6,9 +6,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MCServiceID, _decode_MCServiceID, _encode_MCServiceID } from "../TS33128Payloads/MCServiceID.ta.mjs";
+import { type MCServiceID, _decode_MCServiceID, _encode_MCServiceID } from "../TS33128Payloads/MCServiceID.ta.mjs";
 // export { MCServiceID, _decode_MCServiceID, _encode_MCServiceID } from "../TS33128Payloads/MCServiceID.ta.mjs";
-import { MCServiceGroupID, _decode_MCServiceGroupID, _encode_MCServiceGroupID } from "../TS33128Payloads/MCServiceGroupID.ta.mjs";
+import { type MCServiceGroupID, _decode_MCServiceGroupID, _encode_MCServiceGroupID } from "../TS33128Payloads/MCServiceGroupID.ta.mjs";
 // export { MCServiceGroupID, _decode_MCServiceGroupID, _encode_MCServiceGroupID } from "../TS33128Payloads/MCServiceGroupID.ta.mjs";
 import { MCDataRequestType, _decode_MCDataRequestType, _encode_MCDataRequestType, _enum_for_MCDataRequestType } from "../TS33128Payloads/MCDataRequestType.ta.mjs";
 // export { MCDataRequestType, _enum_for_MCDataRequestType, MCDataRequestType_oneToOneFD /* IMPORTED_LONG_ENUMERATION_ITEM */, oneToOneFD /* IMPORTED_SHORT_ENUMERATION_ITEM */, MCDataRequestType_groupFD /* IMPORTED_LONG_ENUMERATION_ITEM */, groupFD /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MCDataRequestType, _encode_MCDataRequestType } from "../TS33128Payloads/MCDataRequestType.ta.mjs";

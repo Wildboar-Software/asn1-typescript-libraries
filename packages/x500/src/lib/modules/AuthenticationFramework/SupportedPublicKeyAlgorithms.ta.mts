@@ -12,7 +12,7 @@ import {
     _encode_AlgorithmIdentifier,
 } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 import {
-    OidOrAttr,
+    type OidOrAttr,
     _decode_OidOrAttr,
     _encode_OidOrAttr,
 } from "../AuthenticationFramework/OidOrAttr.ta.mjs";

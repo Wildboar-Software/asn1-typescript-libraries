@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Pathname_Attribute,
+  type Pathname_Attribute,
   _decode_Pathname_Attribute,
   _encode_Pathname_Attribute,
 } from '../ISO8571-FTAM/Pathname-Attribute.ta.mjs';
 import {
-  Scope_Item_retrieval_scope,
+  type Scope_Item_retrieval_scope,
   _decode_Scope_Item_retrieval_scope,
   _encode_Scope_Item_retrieval_scope,
 } from '../ISO8571-FTAM/Scope-Item-retrieval-scope.ta.mjs';

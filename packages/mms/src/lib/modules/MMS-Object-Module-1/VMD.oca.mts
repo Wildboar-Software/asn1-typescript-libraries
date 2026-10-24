@@ -2,7 +2,7 @@
 import {
     type BOOLEAN,
     type BIT_STRING,
-    ABSTRACT_SYNTAX,
+    type ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -14,29 +14,29 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ApplicationReference, _decode_ApplicationReference, _encode_ApplicationReference } from "../MMS-Environment-1/ApplicationReference.ta.mjs";
-import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS-1/MMSString.ta.mjs";
-import { TRANSACTION } from "../MMS-Object-Module-1/TRANSACTION.oca.mjs";
-import { APPLICATION_ASSOCIATION } from "../MMS-Object-Module-1/APPLICATION-ASSOCIATION.oca.mjs";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
-import { LogicalStatus, _decode_LogicalStatus, _encode_LogicalStatus } from "../MMS-Object-Module-1/LogicalStatus.ta.mjs";
-import { PhysicalStatus, _decode_PhysicalStatus, _encode_PhysicalStatus } from "../MMS-Object-Module-1/PhysicalStatus.ta.mjs";
-import { ACCESS_CONTROL_LIST } from "../MMS-Object-Module-1/ACCESS-CONTROL-LIST.oca.mjs";
-import { DOMAIN } from "../MMS-Object-Module-1/DOMAIN.oca.mjs";
-import { PROGRAM_INVOCATION } from "../MMS-Object-Module-1/PROGRAM-INVOCATION.oca.mjs";
-import { UNIT_CONTROL } from "../MMS-Object-Module-1/UNIT-CONTROL.oca.mjs";
-import { UNNAMED_VARIABLE } from "../MMS-Object-Module-1/UNNAMED-VARIABLE.oca.mjs";
-import { NAMED_VARIABLE } from "../MMS-Object-Module-1/NAMED-VARIABLE.oca.mjs";
-import { NAMED_VARIABLE_LIST } from "../MMS-Object-Module-1/NAMED-VARIABLE-LIST.oca.mjs";
-import { NAMED_TYPE } from "../MMS-Object-Module-1/NAMED-TYPE.oca.mjs";
-import { DATA_EXCHANGE } from "../MMS-Object-Module-1/DATA-EXCHANGE.oca.mjs";
-import { SEMAPHORE } from "../MMS-Object-Module-1/SEMAPHORE.oca.mjs";
-import { OPERATOR_STATION } from "../MMS-Object-Module-1/OPERATOR-STATION.oca.mjs";
-import { EVENT_CONDITION } from "../MMS-Object-Module-1/EVENT-CONDITION.oca.mjs";
-import { EVENT_ACTION } from "../MMS-Object-Module-1/EVENT-ACTION.oca.mjs";
-import { EVENT_ENROLLMENT } from "../MMS-Object-Module-1/EVENT-ENROLLMENT.oca.mjs";
-import { EVENT_CONDITION_LIST } from "../MMS-Object-Module-1/EVENT-CONDITION-LIST.oca.mjs";
-import { JOURNAL } from "../MMS-Object-Module-1/JOURNAL.oca.mjs";
-import { VMDState, _decode_VMDState, _encode_VMDState } from "../MMS-Object-Module-1/VMDState.ta.mjs";
+import { type MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS-1/MMSString.ta.mjs";
+import { type TRANSACTION } from "../MMS-Object-Module-1/TRANSACTION.oca.mjs";
+import { type APPLICATION_ASSOCIATION } from "../MMS-Object-Module-1/APPLICATION-ASSOCIATION.oca.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type LogicalStatus, _decode_LogicalStatus, _encode_LogicalStatus } from "../MMS-Object-Module-1/LogicalStatus.ta.mjs";
+import { type PhysicalStatus, _decode_PhysicalStatus, _encode_PhysicalStatus } from "../MMS-Object-Module-1/PhysicalStatus.ta.mjs";
+import { type ACCESS_CONTROL_LIST } from "../MMS-Object-Module-1/ACCESS-CONTROL-LIST.oca.mjs";
+import { type DOMAIN } from "../MMS-Object-Module-1/DOMAIN.oca.mjs";
+import { type PROGRAM_INVOCATION } from "../MMS-Object-Module-1/PROGRAM-INVOCATION.oca.mjs";
+import { type UNIT_CONTROL } from "../MMS-Object-Module-1/UNIT-CONTROL.oca.mjs";
+import { type UNNAMED_VARIABLE } from "../MMS-Object-Module-1/UNNAMED-VARIABLE.oca.mjs";
+import { type NAMED_VARIABLE } from "../MMS-Object-Module-1/NAMED-VARIABLE.oca.mjs";
+import { type NAMED_VARIABLE_LIST } from "../MMS-Object-Module-1/NAMED-VARIABLE-LIST.oca.mjs";
+import { type NAMED_TYPE } from "../MMS-Object-Module-1/NAMED-TYPE.oca.mjs";
+import { type DATA_EXCHANGE } from "../MMS-Object-Module-1/DATA-EXCHANGE.oca.mjs";
+import { type SEMAPHORE } from "../MMS-Object-Module-1/SEMAPHORE.oca.mjs";
+import { type OPERATOR_STATION } from "../MMS-Object-Module-1/OPERATOR-STATION.oca.mjs";
+import { type EVENT_CONDITION } from "../MMS-Object-Module-1/EVENT-CONDITION.oca.mjs";
+import { type EVENT_ACTION } from "../MMS-Object-Module-1/EVENT-ACTION.oca.mjs";
+import { type EVENT_ENROLLMENT } from "../MMS-Object-Module-1/EVENT-ENROLLMENT.oca.mjs";
+import { type EVENT_CONDITION_LIST } from "../MMS-Object-Module-1/EVENT-CONDITION-LIST.oca.mjs";
+import { type JOURNAL } from "../MMS-Object-Module-1/JOURNAL.oca.mjs";
+import { type VMDState, _decode_VMDState, _encode_VMDState } from "../MMS-Object-Module-1/VMDState.ta.mjs";
 
 
 /**

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   TRUE_BIT,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
@@ -13,83 +13,83 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  AARE_apdu_protocol_version,
+  type AARE_apdu_protocol_version,
   AARE_apdu_protocol_version_version1 /* IMPORTED_LONG_NAMED_BIT */,
   _decode_AARE_apdu_protocol_version,
   _encode_AARE_apdu_protocol_version,
 } from '../ACSE-1/AARE-apdu-protocol-version.ta.mjs';
 import {
-  ASO_context_name,
+  type ASO_context_name,
   _decode_ASO_context_name,
   _encode_ASO_context_name,
 } from '../ACSE-1/ASO-context-name.ta.mjs';
 import {
-  Associate_result,
+  type Associate_result,
   _decode_Associate_result,
   _encode_Associate_result,
 } from '../ACSE-1/Associate-result.ta.mjs';
 import {
-  Associate_source_diagnostic,
+  type Associate_source_diagnostic,
   _decode_Associate_source_diagnostic,
   _encode_Associate_source_diagnostic,
 } from '../ACSE-1/Associate-source-diagnostic.ta.mjs';
 import {
-  AP_title,
+  type AP_title,
   _decode_AP_title,
   _encode_AP_title,
 } from '../ACSE-1/AP-title.ta.mjs';
 import {
-  AE_qualifier,
+  type AE_qualifier,
   _decode_AE_qualifier,
   _encode_AE_qualifier,
 } from '../ACSE-1/AE-qualifier.ta.mjs';
 import {
-  AP_invocation_identifier,
+  type AP_invocation_identifier,
   _decode_AP_invocation_identifier,
   _encode_AP_invocation_identifier,
 } from '../ACSE-1/AP-invocation-identifier.ta.mjs';
 import {
-  AE_invocation_identifier,
+  type AE_invocation_identifier,
   _decode_AE_invocation_identifier,
   _encode_AE_invocation_identifier,
 } from '../ACSE-1/AE-invocation-identifier.ta.mjs';
 import {
-  ACSE_requirements,
+  type ACSE_requirements,
   _decode_ACSE_requirements,
   _encode_ACSE_requirements,
 } from '../ACSE-1/ACSE-requirements.ta.mjs';
 import {
-  Mechanism_name,
+  type Mechanism_name,
   _decode_Mechanism_name,
   _encode_Mechanism_name,
 } from '../ACSE-1/Mechanism-name.ta.mjs';
 import {
-  Authentication_value,
+  type Authentication_value,
   _decode_Authentication_value,
   _encode_Authentication_value,
 } from '../ACSE-1/Authentication-value.ta.mjs';
 import {
-  ASO_context_name_list,
+  type ASO_context_name_list,
   _decode_ASO_context_name_list,
   _encode_ASO_context_name_list,
 } from '../ACSE-1/ASO-context-name-list.ta.mjs';
 import {
-  Implementation_data,
+  type Implementation_data,
   _decode_Implementation_data,
   _encode_Implementation_data,
 } from '../ACSE-1/Implementation-data.ta.mjs';
 import {
-  Association_data,
+  type Association_data,
   _decode_Association_data,
   _encode_Association_data,
 } from '../ACSE-1/Association-data.ta.mjs';
 import {
-  P_context_result_list,
+  type P_context_result_list,
   _decode_P_context_result_list,
   _encode_P_context_result_list,
 } from '../ACSE-1/P-context-result-list.ta.mjs';
 import {
-  ASOI_tag,
+  type ASOI_tag,
   _decode_ASOI_tag,
   _encode_ASOI_tag,
 } from '../ACSE-1/ASOI-tag.ta.mjs';

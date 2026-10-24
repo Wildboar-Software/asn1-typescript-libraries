@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RequestShadowUpdateResult, _decode_RequestShadowUpdateResult, _encode_RequestShadowUpdateResult } from "../DirectoryShadowAbstractService/RequestShadowUpdateResult.ta.mjs";
+import { type RequestShadowUpdateResult, _decode_RequestShadowUpdateResult, _encode_RequestShadowUpdateResult } from "../DirectoryShadowAbstractService/RequestShadowUpdateResult.ta.mjs";
 // export { RequestShadowUpdateResult, _decode_RequestShadowUpdateResult, _encode_RequestShadowUpdateResult } from "../DirectoryShadowAbstractService/RequestShadowUpdateResult.ta.mjs";
 
 

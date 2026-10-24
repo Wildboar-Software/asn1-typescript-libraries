@@ -3,8 +3,8 @@
 import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     type IA5String,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass

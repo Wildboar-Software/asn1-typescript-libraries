@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { UUI, _decode_UUI, _encode_UUI } from "../MAP-CH-DataTypes/UUI.ta.mjs";
-import { UUIndicator, _decode_UUIndicator, _encode_UUIndicator } from "../MAP-CH-DataTypes/UUIndicator.ta.mjs";
+import { type UUI, _decode_UUI, _encode_UUI } from "../MAP-CH-DataTypes/UUI.ta.mjs";
+import { type UUIndicator, _decode_UUIndicator, _encode_UUIndicator } from "../MAP-CH-DataTypes/UUIndicator.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 

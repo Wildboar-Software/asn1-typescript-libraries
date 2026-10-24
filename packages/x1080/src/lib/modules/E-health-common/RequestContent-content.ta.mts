@@ -13,18 +13,18 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SessionType,
+    type SessionType,
     _decode_SessionType,
     _encode_SessionType,
 } from "./SessionType.ta.mjs";
 import {
-    ExchangeMode,
+    type ExchangeMode,
     ExchangeMode_sync,
     _decode_ExchangeMode,
     _encode_ExchangeMode,
 } from "./ExchangeMode.ta.mjs";
 import {
-    Requirements,
+    type Requirements,
     Requirements_none,
     _decode_Requirements,
     _encode_Requirements,

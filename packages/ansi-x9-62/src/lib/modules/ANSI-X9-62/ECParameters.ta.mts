@@ -8,12 +8,12 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { Curve, _decode_Curve, _encode_Curve } from "../ANSI-X9-62/Curve.ta.mjs";
 import {
-    ECParameters_version,
+    type ECParameters_version,
     _decode_ECParameters_version,
     _encode_ECParameters_version,
 } from "../ANSI-X9-62/ECParameters-version.ta.mjs";
 import {
-    ECPoint,
+    type ECPoint,
     _decode_ECPoint,
     _encode_ECPoint,
 } from "../ANSI-X9-62/ECPoint.ta.mjs";

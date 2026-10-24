@@ -7,11 +7,11 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ReferenceId, _decode_ReferenceId, _encode_ReferenceId } from "../Z39-50-APDU-2001/ReferenceId.ta.mjs";
-import { ResultSetId, _decode_ResultSetId, _encode_ResultSetId } from "../Z39-50-APDU-2001/ResultSetId.ta.mjs";
+import { type ReferenceId, _decode_ReferenceId, _encode_ReferenceId } from "../Z39-50-APDU-2001/ReferenceId.ta.mjs";
+import { type ResultSetId, _decode_ResultSetId, _encode_ResultSetId } from "../Z39-50-APDU-2001/ResultSetId.ta.mjs";
 import { Range, _decode_Range, _encode_Range } from "../Z39-50-APDU-2001/Range.ta.mjs";
-import { PresentRequest_recordComposition, _decode_PresentRequest_recordComposition, _encode_PresentRequest_recordComposition } from "../Z39-50-APDU-2001/PresentRequest-recordComposition.ta.mjs";
-import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } from "../Z39-50-APDU-2001/OtherInformation.ta.mjs";
+import { type PresentRequest_recordComposition, _decode_PresentRequest_recordComposition, _encode_PresentRequest_recordComposition } from "../Z39-50-APDU-2001/PresentRequest-recordComposition.ta.mjs";
+import { type OtherInformation, _decode_OtherInformation, _encode_OtherInformation } from "../Z39-50-APDU-2001/OtherInformation.ta.mjs";
 
 
 /**

@@ -7,7 +7,7 @@ import {
     _encode_ChangePasswordArgumentData,
 } from "../DirectoryAbstractService/ChangePasswordArgumentData.ta.mjs";
 import {
-    OPTIONALLY_PROTECTED_SEQ,
+    type OPTIONALLY_PROTECTED_SEQ,
     _get_decoder_for_OPTIONALLY_PROTECTED_SEQ,
     _get_encoder_for_OPTIONALLY_PROTECTED_SEQ,
 } from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta.mjs";

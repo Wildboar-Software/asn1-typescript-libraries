@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    MSString,
+    type MSString,
     _decode_MSString,
     _encode_MSString,
 } from '../MSMatchingRules/MSString.ta.mjs';

@@ -12,9 +12,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { GetAlarmSummary_Request_acknowledgementFilter, not_acked /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_GetAlarmSummary_Request_acknowledgementFilter, _encode_GetAlarmSummary_Request_acknowledgementFilter } from "../ISO-9506-MMS-1/GetAlarmSummary-Request-acknowledgementFilter.ta.mjs";
+import { type GetAlarmSummary_Request_acknowledgementFilter, not_acked /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_GetAlarmSummary_Request_acknowledgementFilter, _encode_GetAlarmSummary_Request_acknowledgementFilter } from "../ISO-9506-MMS-1/GetAlarmSummary-Request-acknowledgementFilter.ta.mjs";
 import { GetAlarmSummary_Request_severityFilter, _decode_GetAlarmSummary_Request_severityFilter, _encode_GetAlarmSummary_Request_severityFilter } from "../ISO-9506-MMS-1/GetAlarmSummary-Request-severityFilter.ta.mjs";
-import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
+import { type ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
 
 
 /**

@@ -17,7 +17,7 @@ import {
     _encode_AttributeUsage,
 } from '@wildboar/x500/InformationFramework';
 import {
-    MatchesFor,
+    type MatchesFor,
     _decode_MatchesFor,
     _encode_MatchesFor,
 } from '../DefinitionASN1Module/MatchesFor.ta.mjs';

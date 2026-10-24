@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    OriginatingMTACertificate,
+    type OriginatingMTACertificate,
     _decode_OriginatingMTACertificate,
     _encode_OriginatingMTACertificate,
 } from '../MTSAbstractService/OriginatingMTACertificate.ta.mjs';

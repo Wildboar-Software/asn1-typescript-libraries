@@ -7,8 +7,8 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { DiversionReason, _decode_DiversionReason, _encode_DiversionReason, _enum_for_DiversionReason } from "../Call-Diversion-Operations-asn1-97/DiversionReason.ta.mjs";
 import { SubscriptionOption, _decode_SubscriptionOption, _encode_SubscriptionOption, _enum_for_SubscriptionOption } from "../Call-Diversion-Operations-asn1-97/SubscriptionOption.ta.mjs";
-import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-import { _decode_divertingLegInformation1_ArgumentType_extension, _encode_divertingLegInformation1_ArgumentType_extension, divertingLegInformation1_ArgumentType_extension } from "../Call-Diversion-Operations-asn1-97/divertingLegInformation1-ArgumentType-extension.ta.mjs";
+import { type PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
+import { _decode_divertingLegInformation1_ArgumentType_extension, _encode_divertingLegInformation1_ArgumentType_extension, type divertingLegInformation1_ArgumentType_extension } from "../Call-Diversion-Operations-asn1-97/divertingLegInformation1-ArgumentType-extension.ta.mjs";
 
 /**
  * @summary divertingLegInformation1_ArgumentType

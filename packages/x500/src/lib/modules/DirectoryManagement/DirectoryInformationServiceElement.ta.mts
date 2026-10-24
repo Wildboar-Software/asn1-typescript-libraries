@@ -6,17 +6,17 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    DirectoryInformationServiceElement_operationType,
+    type DirectoryInformationServiceElement_operationType,
     _decode_DirectoryInformationServiceElement_operationType,
     _encode_DirectoryInformationServiceElement_operationType,
 } from "../DirectoryManagement/DirectoryInformationServiceElement-operationType.ta.mjs";
 import {
-    AttributeType,
+    type AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
 } from "../InformationFramework/AttributeType.ta.mjs";
 import {
-    AttributeValue,
+    type AttributeValue,
     _decode_AttributeValue,
     _encode_AttributeValue,
 } from "../InformationFramework/AttributeValue.ta.mjs";

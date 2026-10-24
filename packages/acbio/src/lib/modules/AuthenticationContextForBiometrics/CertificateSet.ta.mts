@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    CertificateChoices,
+    type CertificateChoices,
     _decode_CertificateChoices,
     _encode_CertificateChoices,
 } from '../AuthenticationContextForBiometrics/CertificateChoices.ta.mjs';

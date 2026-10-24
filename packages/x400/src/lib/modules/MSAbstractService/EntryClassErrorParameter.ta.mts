@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    EntryClass,
+    type EntryClass,
     _decode_EntryClass,
     _encode_EntryClass,
 } from '../MSAbstractService/EntryClass.ta.mjs';
 import {
-    EntryClassErrorParameter_problem,
+    type EntryClassErrorParameter_problem,
     _decode_EntryClassErrorParameter_problem,
     _encode_EntryClassErrorParameter_problem,
 } from '../MSAbstractService/EntryClassErrorParameter-problem.ta.mjs';

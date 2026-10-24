@@ -9,7 +9,7 @@ import { systemFailure } from "../MAP-Errors/systemFailure.oa.mjs";
 import { teleserviceNotProvisioned } from "../MAP-Errors/teleserviceNotProvisioned.oa.mjs";
 import { unexpectedDataValue } from "../MAP-Errors/unexpectedDataValue.oa.mjs";
 import { RegisterSS_Arg, _decode_RegisterSS_Arg, _encode_RegisterSS_Arg } from "../MAP-SS-DataTypes/RegisterSS-Arg.ta.mjs";
-import { SS_Info, _decode_SS_Info, _encode_SS_Info } from "../MAP-SS-DataTypes/SS-Info.ta.mjs";
+import { type SS_Info, _decode_SS_Info, _encode_SS_Info } from "../MAP-SS-DataTypes/SS-Info.ta.mjs";
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 
 

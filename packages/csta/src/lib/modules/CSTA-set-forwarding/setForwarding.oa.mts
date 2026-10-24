@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { SetForwardingArgument, _decode_SetForwardingArgument, _encode_SetForwardingArgument } from "../CSTA-set-forwarding/SetForwardingArgument.ta.mjs";
 
-import { SetForwardingResult, _decode_SetForwardingResult, _encode_SetForwardingResult } from "../CSTA-set-forwarding/SetForwardingResult.ta.mjs";
+import { type SetForwardingResult, _decode_SetForwardingResult, _encode_SetForwardingResult } from "../CSTA-set-forwarding/SetForwardingResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

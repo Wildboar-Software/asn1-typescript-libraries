@@ -17,7 +17,7 @@ import {
     _encode_AttributeUsage,
 } from '@wildboar/x500/InformationFramework';
 import {
-    MappedRelationshipClass,
+    type MappedRelationshipClass,
     _decode_MappedRelationshipClass,
     _encode_MappedRelationshipClass,
 } from '../GrmAttributeDefinitionModule/MappedRelationshipClass.ta.mjs';

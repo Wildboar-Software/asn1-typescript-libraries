@@ -17,7 +17,7 @@ import {
     _encode_AttributeUsage,
 } from '@wildboar/x500/InformationFramework';
 import {
-    DLSubmitPermission,
+    type DLSubmitPermission,
     _decode_DLSubmitPermission,
     _encode_DLSubmitPermission,
 } from '../MHSDirectoryObjectsAndAttributes/DLSubmitPermission.ta.mjs';

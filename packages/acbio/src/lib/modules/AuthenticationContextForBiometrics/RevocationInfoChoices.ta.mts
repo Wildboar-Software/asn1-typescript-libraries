@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RevocationInfoChoice,
+    type RevocationInfoChoice,
     _decode_RevocationInfoChoice,
     _encode_RevocationInfoChoice,
 } from '../AuthenticationContextForBiometrics/RevocationInfoChoice.ta.mjs';

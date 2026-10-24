@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SupplReceiptInfoField,
+    type SupplReceiptInfoField,
     _decode_SupplReceiptInfoField,
     _encode_SupplReceiptInfoField,
 } from '../IPMSInformationObjects/SupplReceiptInfoField.ta.mjs';

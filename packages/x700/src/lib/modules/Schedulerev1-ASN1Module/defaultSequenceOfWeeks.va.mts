@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    SequenceOfWeeks,
+    type SequenceOfWeeks,
     _decode_SequenceOfWeeks,
     _encode_SequenceOfWeeks,
 } from '../Schedulerev1-ASN1Module/SequenceOfWeeks.ta.mjs';

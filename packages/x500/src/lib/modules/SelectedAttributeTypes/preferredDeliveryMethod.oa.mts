@@ -6,7 +6,7 @@ import {
 import { deliveryMethod } from "../SelectedAttributeTypes/deliveryMethod.oa.mjs";
 import { id_at_preferredDeliveryMethod } from "../SelectedAttributeTypes/id-at-preferredDeliveryMethod.va.mjs";
 import {
-    PreferredDeliveryMethod,
+    type PreferredDeliveryMethod,
     _decode_PreferredDeliveryMethod,
     _encode_PreferredDeliveryMethod,
 } from "../SelectedAttributeTypes/PreferredDeliveryMethod.ta.mjs";

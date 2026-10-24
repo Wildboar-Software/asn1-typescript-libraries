@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { DataCollectionSuspendedArgument, _decode_DataCollectionSuspendedArgument, _encode_DataCollectionSuspendedArgument } from "../CSTA-data-collection-suspended/DataCollectionSuspendedArgument.ta.mjs";
 
-import { DataCollectionSuspendedResult, _decode_DataCollectionSuspendedResult, _encode_DataCollectionSuspendedResult } from "../CSTA-data-collection-suspended/DataCollectionSuspendedResult.ta.mjs";
+import { type DataCollectionSuspendedResult, _decode_DataCollectionSuspendedResult, _encode_DataCollectionSuspendedResult } from "../CSTA-data-collection-suspended/DataCollectionSuspendedResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

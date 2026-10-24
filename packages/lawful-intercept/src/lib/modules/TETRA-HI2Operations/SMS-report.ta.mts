@@ -7,7 +7,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { CommunicationIdentifier, _decode_CommunicationIdentifier, _encode_CommunicationIdentifier } from "../TETRA-HI2Operations/CommunicationIdentifier.ta.mjs";
 // export { CommunicationIdentifier, _decode_CommunicationIdentifier, _encode_CommunicationIdentifier } from "../TETRA-HI2Operations/CommunicationIdentifier.ta.mjs";
-import { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../TETRA-HI2Operations/TimeStamp.ta.mjs";
+import { type TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../TETRA-HI2Operations/TimeStamp.ta.mjs";
 // export { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../TETRA-HI2Operations/TimeStamp.ta.mjs";
 import { SMS_report_sMS_Contents, _decode_SMS_report_sMS_Contents, _encode_SMS_report_sMS_Contents } from "../TETRA-HI2Operations/SMS-report-sMS-Contents.ta.mjs";
 // export { SMS_report_sMS_Contents, _decode_SMS_report_sMS_Contents, _encode_SMS_report_sMS_Contents } from "../TETRA-HI2Operations/SMS-report-sMS-Contents.ta.mjs";

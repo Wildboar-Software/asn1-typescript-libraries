@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Query, _decode_Query, _encode_Query } from "../Z39-50-APDU-2001/Query.ta.mjs";
+import { type Query, _decode_Query, _encode_Query } from "../Z39-50-APDU-2001/Query.ta.mjs";
 
 
 /**

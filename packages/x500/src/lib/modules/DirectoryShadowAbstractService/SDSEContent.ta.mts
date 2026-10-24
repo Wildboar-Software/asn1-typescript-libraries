@@ -7,7 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    SDSEType,
+    type SDSEType,
     _decode_SDSEType,
     _encode_SDSEType,
 } from "../DirectoryShadowAbstractService/SDSEType.ta.mjs";
@@ -17,7 +17,7 @@ import {
     _encode_Attribute,
 } from "../InformationFramework/Attribute.ta.mjs";
 import {
-    AttributeType,
+    type AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
 } from "../InformationFramework/AttributeType.ta.mjs";

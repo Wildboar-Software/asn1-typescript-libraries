@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ModificationList,
+    type ModificationList,
     _decode_ModificationList,
     _encode_ModificationList,
 } from '../Schedulerev1-ASN1Module/ModificationList.ta.mjs';

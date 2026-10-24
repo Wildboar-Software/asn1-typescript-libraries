@@ -7,12 +7,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OtherPrimeInfos,
+    type OtherPrimeInfos,
     _decode_OtherPrimeInfos,
     _encode_OtherPrimeInfos,
 } from "../PKCS-1/OtherPrimeInfos.ta.mjs";
 import {
-    Version,
+    type Version,
     _decode_Version,
     _encode_Version,
 } from "../PKCS-1/Version.ta.mjs";

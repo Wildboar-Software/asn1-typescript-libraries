@@ -4,7 +4,7 @@ import {
     directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";
 import {
-    HierarchyBelow,
+    type HierarchyBelow,
     _decode_HierarchyBelow,
     _encode_HierarchyBelow,
 } from "../InformationFramework/HierarchyBelow.ta.mjs";

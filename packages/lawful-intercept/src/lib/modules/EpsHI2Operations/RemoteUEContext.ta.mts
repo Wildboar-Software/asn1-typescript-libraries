@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RemoteUserID, _decode_RemoteUserID, _encode_RemoteUserID } from "../EpsHI2Operations/RemoteUserID.ta.mjs";
+import { type RemoteUserID, _decode_RemoteUserID, _encode_RemoteUserID } from "../EpsHI2Operations/RemoteUserID.ta.mjs";
 // export { RemoteUserID, _decode_RemoteUserID, _encode_RemoteUserID } from "../EpsHI2Operations/RemoteUserID.ta.mjs";
-import { RemoteUEIPInformation, _decode_RemoteUEIPInformation, _encode_RemoteUEIPInformation } from "../EpsHI2Operations/RemoteUEIPInformation.ta.mjs";
+import { type RemoteUEIPInformation, _decode_RemoteUEIPInformation, _encode_RemoteUEIPInformation } from "../EpsHI2Operations/RemoteUEIPInformation.ta.mjs";
 // export { RemoteUEIPInformation, _decode_RemoteUEIPInformation, _encode_RemoteUEIPInformation } from "../EpsHI2Operations/RemoteUEIPInformation.ta.mjs";
 
 

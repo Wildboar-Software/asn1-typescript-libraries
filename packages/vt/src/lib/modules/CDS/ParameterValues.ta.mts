@@ -15,9 +15,9 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { DimensionParamValues, _decode_DimensionParamValues, _encode_DimensionParamValues } from "../CDS/DimensionParamValues.ta.mjs";
 import { CompoundRepertoireValue, _decode_CompoundRepertoireValue, _encode_CompoundRepertoireValue } from "../CDS/CompoundRepertoireValue.ta.mjs";
-import { CompoundEmphasisValue, _decode_CompoundEmphasisValue, _encode_CompoundEmphasisValue } from "../CDS/CompoundEmphasisValue.ta.mjs";
+import { type CompoundEmphasisValue, _decode_CompoundEmphasisValue, _encode_CompoundEmphasisValue } from "../CDS/CompoundEmphasisValue.ta.mjs";
 import { CompoundColourValue, _decode_CompoundColourValue, _encode_CompoundColourValue } from "../CDS/CompoundColourValue.ta.mjs";
-import { ParameterValues_access, _decode_ParameterValues_access, _encode_ParameterValues_access } from "../CDS/ParameterValues-access.ta.mjs";
+import { type ParameterValues_access, _decode_ParameterValues_access, _encode_ParameterValues_access } from "../CDS/ParameterValues-access.ta.mjs";
 import { BlockParamValues, _decode_BlockParamValues, _encode_BlockParamValues } from "../CDS/BlockParamValues.ta.mjs";
 import { FieldParamValues, _decode_FieldParamValues, _encode_FieldParamValues } from "../CDS/FieldParamValues.ta.mjs";
 

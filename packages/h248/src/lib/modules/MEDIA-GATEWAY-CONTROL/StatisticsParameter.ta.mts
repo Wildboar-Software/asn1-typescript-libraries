@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PkgdName, _decode_PkgdName, _encode_PkgdName } from "../MEDIA-GATEWAY-CONTROL/PkgdName.ta.mjs";
-import { Value, _decode_Value, _encode_Value } from "../MEDIA-GATEWAY-CONTROL/Value.ta.mjs";
+import { type PkgdName, _decode_PkgdName, _encode_PkgdName } from "../MEDIA-GATEWAY-CONTROL/PkgdName.ta.mjs";
+import { type Value, _decode_Value, _encode_Value } from "../MEDIA-GATEWAY-CONTROL/Value.ta.mjs";
 
 
 /**

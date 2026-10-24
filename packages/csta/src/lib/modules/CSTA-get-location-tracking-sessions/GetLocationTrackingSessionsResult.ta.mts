@@ -3,13 +3,13 @@
 import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import {
-    GetLocationTrackingSessionsResult_crossRefIDorRegistrationData,
+    type GetLocationTrackingSessionsResult_crossRefIDorRegistrationData,
     _decode_GetLocationTrackingSessionsResult_crossRefIDorRegistrationData,
     _encode_GetLocationTrackingSessionsResult_crossRefIDorRegistrationData
 } from "../CSTA-get-location-tracking-sessions/GetLocationTrackingSessionsResult-crossRefIDorRegistrationData.ta.mjs";

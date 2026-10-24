@@ -20,7 +20,7 @@ import {
     _encode_Criticality,
 } from '../MTSAbstractService/Criticality.ta.mjs';
 import {
-    PhysicalDeliveryReportRequest,
+    type PhysicalDeliveryReportRequest,
     return_of_undeliverable_mail_by_PDS /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_PhysicalDeliveryReportRequest,
     _encode_PhysicalDeliveryReportRequest,

@@ -11,7 +11,7 @@ import {
     _encode_KeyAgreement_keyEncryptionAlgorithm,
 } from "../PkiPmiWrapper/KeyAgreement-keyEncryptionAlgorithm.ta.mjs";
 import {
-    SenderDhInfo,
+    type SenderDhInfo,
     _decode_SenderDhInfo,
     _encode_SenderDhInfo,
 } from "../PkiPmiWrapper/SenderDhInfo.ta.mjs";

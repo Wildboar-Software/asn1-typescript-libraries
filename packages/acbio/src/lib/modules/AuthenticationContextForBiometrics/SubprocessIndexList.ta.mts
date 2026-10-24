@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SubprocessIndex,
+    type SubprocessIndex,
     _decode_SubprocessIndex,
     _encode_SubprocessIndex,
 } from '../AuthenticationContextForBiometrics/SubprocessIndex.ta.mjs';

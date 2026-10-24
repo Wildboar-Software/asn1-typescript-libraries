@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    FileIdentifier,
+    type FileIdentifier,
     _decode_FileIdentifier,
     _encode_FileIdentifier,
 } from '../IPMSFileTransferBodyPartType/FileIdentifier.ta.mjs';
 import {
-    Relationship,
+    type Relationship,
     _decode_Relationship,
     _encode_Relationship,
 } from '../IPMSFileTransferBodyPartType/Relationship.ta.mjs';

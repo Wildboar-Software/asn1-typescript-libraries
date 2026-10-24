@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
-import { Name, _decode_Name, _encode_Name } from '../X790ASN1Module/Name.ta.mjs';
+import { type Name, _decode_Name, _encode_Name } from '../X790ASN1Module/Name.ta.mjs';
 
 /**
  * @summary Names

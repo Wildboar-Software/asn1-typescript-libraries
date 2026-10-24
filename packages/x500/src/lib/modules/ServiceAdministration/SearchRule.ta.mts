@@ -8,7 +8,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    FamilyGrouping,
+    type FamilyGrouping,
     _decode_FamilyGrouping,
     _encode_FamilyGrouping,
     _enum_for_FamilyGrouping,
@@ -19,17 +19,17 @@ import {
     _encode_FamilyReturn,
 } from "../DirectoryAbstractService/FamilyReturn.ta.mjs";
 import {
-    AttributeType,
+    type AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
 } from "../InformationFramework/AttributeType.ta.mjs";
 import {
-    AllowedSubset,
+    type AllowedSubset,
     _decode_AllowedSubset,
     _encode_AllowedSubset,
 } from "../ServiceAdministration/AllowedSubset.ta.mjs";
 import {
-    AttributeCombination,
+    type AttributeCombination,
     _decode_AttributeCombination,
     _encode_AttributeCombination,
 } from "../ServiceAdministration/AttributeCombination.ta.mjs";
@@ -44,7 +44,7 @@ import {
     _encode_EntryLimit,
 } from "../ServiceAdministration/EntryLimit.ta.mjs";
 import {
-    ImposedSubset,
+    type ImposedSubset,
     _decode_ImposedSubset,
     _encode_ImposedSubset,
     _enum_for_ImposedSubset,

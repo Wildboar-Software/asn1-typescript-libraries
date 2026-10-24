@@ -9,15 +9,15 @@ import {
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RecordType, _decode_RecordType, _encode_RecordType } from "../CSChargingDataTypes/RecordType.ta.mjs";
-import { TrunkGroup, _decode_TrunkGroup, _encode_TrunkGroup } from "../CSChargingDataTypes/TrunkGroup.ta.mjs";
-import { CauseForTerm, _decode_CauseForTerm, _encode_CauseForTerm } from "../CSChargingDataTypes/CauseForTerm.ta.mjs";
-import { HLRIntResult, _decode_HLRIntResult, _encode_HLRIntResult } from "../CSChargingDataTypes/HLRIntResult.ta.mjs";
+import { type RecordType, _decode_RecordType, _encode_RecordType } from "../CSChargingDataTypes/RecordType.ta.mjs";
+import { type TrunkGroup, _decode_TrunkGroup, _encode_TrunkGroup } from "../CSChargingDataTypes/TrunkGroup.ta.mjs";
+import { type CauseForTerm, _decode_CauseForTerm, _encode_CauseForTerm } from "../CSChargingDataTypes/CauseForTerm.ta.mjs";
+import { type HLRIntResult, _decode_HLRIntResult, _encode_HLRIntResult } from "../CSChargingDataTypes/HLRIntResult.ta.mjs";
 import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExtension } from "../CSChargingDataTypes/ManagementExtension.ta.mjs";
-import { OutGatewayRecord_lrnSoInd, _decode_OutGatewayRecord_lrnSoInd, _encode_OutGatewayRecord_lrnSoInd } from "../CSChargingDataTypes/OutGatewayRecord-lrnSoInd.ta.mjs";
-import { OutGatewayRecord_lrnQuryStatus, _decode_OutGatewayRecord_lrnQuryStatus, _encode_OutGatewayRecord_lrnQuryStatus } from "../CSChargingDataTypes/OutGatewayRecord-lrnQuryStatus.ta.mjs";
-import { OutGatewayRecord_jIPSoInd, _decode_OutGatewayRecord_jIPSoInd, _encode_OutGatewayRecord_jIPSoInd } from "../CSChargingDataTypes/OutGatewayRecord-jIPSoInd.ta.mjs";
-import { OutGatewayRecord_jIPQuryStatus, _decode_OutGatewayRecord_jIPQuryStatus, _encode_OutGatewayRecord_jIPQuryStatus } from "../CSChargingDataTypes/OutGatewayRecord-jIPQuryStatus.ta.mjs";
+import { type OutGatewayRecord_lrnSoInd, _decode_OutGatewayRecord_lrnSoInd, _encode_OutGatewayRecord_lrnSoInd } from "../CSChargingDataTypes/OutGatewayRecord-lrnSoInd.ta.mjs";
+import { type OutGatewayRecord_lrnQuryStatus, _decode_OutGatewayRecord_lrnQuryStatus, _encode_OutGatewayRecord_lrnQuryStatus } from "../CSChargingDataTypes/OutGatewayRecord-lrnQuryStatus.ta.mjs";
+import { type OutGatewayRecord_jIPSoInd, _decode_OutGatewayRecord_jIPSoInd, _encode_OutGatewayRecord_jIPSoInd } from "../CSChargingDataTypes/OutGatewayRecord-jIPSoInd.ta.mjs";
+import { type OutGatewayRecord_jIPQuryStatus, _decode_OutGatewayRecord_jIPQuryStatus, _encode_OutGatewayRecord_jIPQuryStatus } from "../CSChargingDataTypes/OutGatewayRecord-jIPQuryStatus.ta.mjs";
 import { ReasonForServiceChange, _decode_ReasonForServiceChange, _encode_ReasonForServiceChange, _enum_for_ReasonForServiceChange } from "../CSChargingDataTypes/ReasonForServiceChange.ta.mjs";
 
 

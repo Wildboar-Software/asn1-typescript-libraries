@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
-import { PreviousPlatformCertificates, _decode_PreviousPlatformCertificates, _encode_PreviousPlatformCertificates } from "../PlatformCertificateProfileV2/PreviousPlatformCertificates.ta.mjs";
+import { type PreviousPlatformCertificates, _decode_PreviousPlatformCertificates, _encode_PreviousPlatformCertificates } from "../PlatformCertificateProfileV2/PreviousPlatformCertificates.ta.mjs";
 import { tcg_at_previousPlatformCertificates } from "../PlatformCertificateProfileV2/tcg-at-previousPlatformCertificates.va.mjs";
 
 

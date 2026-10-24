@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Packages,
+    type Packages,
     _decode_Packages,
     _encode_Packages,
 } from '@wildboar/attribute-asn1module';

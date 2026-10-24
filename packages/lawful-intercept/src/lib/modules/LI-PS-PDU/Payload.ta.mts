@@ -8,14 +8,14 @@ import { IRIPayload, _decode_IRIPayload, _encode_IRIPayload } from "../TS33128Pa
 // export { IRIPayload, _decode_IRIPayload, _encode_IRIPayload } from "../TS33128Payloads/IRIPayload.ta.mjs";
 import { CCPayload, _decode_CCPayload, _encode_CCPayload } from "../TS33128Payloads/CCPayload.ta.mjs";
 // export { CCPayload, _decode_CCPayload, _encode_CCPayload } from "../TS33128Payloads/CCPayload.ta.mjs";
-import { TRIPayload, _decode_TRIPayload, _encode_TRIPayload } from "../LI-PS-PDU/TRIPayload.ta.mjs";
+import { type TRIPayload, _decode_TRIPayload, _encode_TRIPayload } from "../LI-PS-PDU/TRIPayload.ta.mjs";
 // export { TRIPayload, _decode_TRIPayload, _encode_TRIPayload } from "../LI-PS-PDU/TRIPayload.ta.mjs";
 // export { HI1_Operation, _decode_HI1_Operation, _encode_HI1_Operation } from "../HI1NotificationOperations/HI1-Operation.ta.mjs";
 import { EncryptionContainer, _decode_EncryptionContainer, _encode_EncryptionContainer } from "../LI-PS-PDU/EncryptionContainer.ta.mjs";
 // export { EncryptionContainer, _decode_EncryptionContainer, _encode_EncryptionContainer } from "../LI-PS-PDU/EncryptionContainer.ta.mjs";
 // export { ThreeGPP_HI1_Operation, _decode_ThreeGPP_HI1_Operation, _encode_ThreeGPP_HI1_Operation } from "../ThreeGPP-HI1NotificationOperations/ThreeGPP-HI1-Operation.ta.mjs";
 // export { ILHIPayload, _decode_ILHIPayload, _encode_ILHIPayload } from "../ILHIPDU/ILHIPayload.ta.mjs";
-import { HI4Payload, _decode_HI4Payload, _encode_HI4Payload } from "../LI-PS-PDU/HI4Payload.ta.mjs";
+import { type HI4Payload, _decode_HI4Payload, _encode_HI4Payload } from "../LI-PS-PDU/HI4Payload.ta.mjs";
 import * as HI1NotificationOperations from "../HI1NotificationOperations/index.mjs";
 import * as ILHIPDU from "../ILHIPDU/index.mjs";
 import * as ThreeGPP_HI1NotificationOperations from "../ThreeGPP-HI1NotificationOperations/index.mjs";

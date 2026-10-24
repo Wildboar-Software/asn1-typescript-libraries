@@ -2,7 +2,7 @@
 import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 import { id_ce_statusReferrals } from "../CertificateExtensions/id-ce-statusReferrals.va.mjs";
 import {
-    StatusReferrals,
+    type StatusReferrals,
     _decode_StatusReferrals,
     _encode_StatusReferrals,
 } from "../CertificateExtensions/StatusReferrals.ta.mjs";

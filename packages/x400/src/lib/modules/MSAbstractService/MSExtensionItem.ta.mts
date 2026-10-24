@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    INSTANCE_OF,
+    type INSTANCE_OF,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,

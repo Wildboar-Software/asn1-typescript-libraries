@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { LegType, _decode_LegType, _encode_LegType } from "../Core-INAP-CS1-DataTypes/LegType.ta.mjs";
+import { type LegType, _decode_LegType, _encode_LegType } from "../Core-INAP-CS1-DataTypes/LegType.ta.mjs";
 
 
 /**

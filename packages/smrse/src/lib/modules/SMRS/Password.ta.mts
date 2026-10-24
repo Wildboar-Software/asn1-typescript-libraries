@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    PrintableString
+    type PrintableString
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 

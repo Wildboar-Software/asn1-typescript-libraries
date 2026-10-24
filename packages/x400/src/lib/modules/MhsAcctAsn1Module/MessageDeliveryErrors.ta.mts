@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    DeliveryError,
+    type DeliveryError,
     _decode_DeliveryError,
     _encode_DeliveryError,
 } from '../MhsAcctAsn1Module/DeliveryError.ta.mjs';

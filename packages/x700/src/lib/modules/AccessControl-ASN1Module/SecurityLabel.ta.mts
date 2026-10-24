@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SecurityLabel_Item,
+    type SecurityLabel_Item,
     _decode_SecurityLabel_Item,
     _encode_SecurityLabel_Item,
 } from '../AccessControl-ASN1Module/SecurityLabel-Item.ta.mjs';

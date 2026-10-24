@@ -6,7 +6,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ElementaryMessageID, _decode_ElementaryMessageID, _encode_ElementaryMessageID } from "../IN-CS3-SCF-SRF-datatypes/ElementaryMessageID.ta.mjs";
+import { type ElementaryMessageID, _decode_ElementaryMessageID, _encode_ElementaryMessageID } from "../IN-CS3-SCF-SRF-datatypes/ElementaryMessageID.ta.mjs";
 // export { ElementaryMessageID, _decode_ElementaryMessageID, _encode_ElementaryMessageID } from "../IN-CS3-SCF-SRF-datatypes/ElementaryMessageID.ta.mjs";
 import { InformationToRecord_controlDigits, _decode_InformationToRecord_controlDigits, _encode_InformationToRecord_controlDigits } from "../IN-CS3-SCF-SRF-datatypes/InformationToRecord-controlDigits.ta.mjs";
 // export { InformationToRecord_controlDigits, _decode_InformationToRecord_controlDigits, _encode_InformationToRecord_controlDigits } from "../IN-CS3-SCF-SRF-datatypes/InformationToRecord-controlDigits.ta.mjs";

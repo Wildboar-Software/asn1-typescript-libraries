@@ -7,8 +7,8 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { TerminationID, _decode_TerminationID, _encode_TerminationID } from "../MEDIA-GATEWAY-CONTROL/TerminationID.ta.mjs";
 import { TopologyRequest_topologyDirection, _decode_TopologyRequest_topologyDirection, _encode_TopologyRequest_topologyDirection, _enum_for_TopologyRequest_topologyDirection } from "../MEDIA-GATEWAY-CONTROL/TopologyRequest-topologyDirection.ta.mjs";
-import { StreamID, _decode_StreamID, _encode_StreamID } from "../MEDIA-GATEWAY-CONTROL/StreamID.ta.mjs";
-import { TopologyRequest_topologyDirectionExtension, _decode_TopologyRequest_topologyDirectionExtension, _encode_TopologyRequest_topologyDirectionExtension, _enum_for_TopologyRequest_topologyDirectionExtension } from "../MEDIA-GATEWAY-CONTROL/TopologyRequest-topologyDirectionExtension.ta.mjs";
+import { type StreamID, _decode_StreamID, _encode_StreamID } from "../MEDIA-GATEWAY-CONTROL/StreamID.ta.mjs";
+import { type TopologyRequest_topologyDirectionExtension, _decode_TopologyRequest_topologyDirectionExtension, _encode_TopologyRequest_topologyDirectionExtension, _enum_for_TopologyRequest_topologyDirectionExtension } from "../MEDIA-GATEWAY-CONTROL/TopologyRequest-topologyDirectionExtension.ta.mjs";
 
 
 /**

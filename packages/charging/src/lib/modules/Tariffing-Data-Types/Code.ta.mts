@@ -2,7 +2,7 @@
 import {
     ASN1Element as _Element,
     type INTEGER,
-    OBJECT_IDENTIFIER
+    type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 

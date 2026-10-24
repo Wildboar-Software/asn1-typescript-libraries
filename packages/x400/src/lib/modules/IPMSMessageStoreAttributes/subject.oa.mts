@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    SubjectField,
+    type SubjectField,
     _decode_SubjectField,
     _encode_SubjectField,
 } from '../IPMSInformationObjects/SubjectField.ta.mjs';

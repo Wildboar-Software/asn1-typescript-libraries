@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BlockingTimeoutPeriod, _decode_BlockingTimeoutPeriod, _encode_BlockingTimeoutPeriod } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/BlockingTimeoutPeriod.ta.mjs";
+import { type BlockingTimeoutPeriod, _decode_BlockingTimeoutPeriod, _encode_BlockingTimeoutPeriod } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/BlockingTimeoutPeriod.ta.mjs";
 
 
 /**

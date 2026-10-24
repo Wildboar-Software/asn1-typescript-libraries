@@ -7,7 +7,7 @@ import {
     type OBJECT_IDENTIFIER,
     type OCTET_STRING,
     type OPTIONAL,
-    UTF8String
+    type UTF8String
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { strmax } from "../PlatformCertificateProfileV2/strmax.va.mjs";

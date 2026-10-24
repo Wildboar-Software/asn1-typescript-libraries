@@ -20,7 +20,7 @@ import {
     _encode_Criticality,
 } from '../MTSAbstractService/Criticality.ta.mjs';
 import {
-    ReportOriginAuthenticationCheck,
+    type ReportOriginAuthenticationCheck,
     _decode_ReportOriginAuthenticationCheck,
     _encode_ReportOriginAuthenticationCheck,
 } from '../MTSAbstractService/ReportOriginAuthenticationCheck.ta.mjs';

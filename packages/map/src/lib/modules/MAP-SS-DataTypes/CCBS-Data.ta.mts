@@ -6,9 +6,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExternalSignalInfo, _decode_ExternalSignalInfo, _encode_ExternalSignalInfo } from "../MAP-CommonDataTypes/ExternalSignalInfo.ta.mjs";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { CCBS_Feature, _decode_CCBS_Feature, _encode_CCBS_Feature } from "../MAP-SS-DataTypes/CCBS-Feature.ta.mjs";
-import { ServiceIndicator, _decode_ServiceIndicator, _encode_ServiceIndicator } from "../MAP-SS-DataTypes/ServiceIndicator.ta.mjs";
+import { type ServiceIndicator, _decode_ServiceIndicator, _encode_ServiceIndicator } from "../MAP-SS-DataTypes/ServiceIndicator.ta.mjs";
 
 
 /**

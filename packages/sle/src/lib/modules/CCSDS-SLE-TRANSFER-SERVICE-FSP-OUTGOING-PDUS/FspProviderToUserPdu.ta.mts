@@ -15,7 +15,7 @@ import { FspStatusReportInvocation, _decode_FspStatusReportInvocation, _encode_F
 import { FspGetParameterReturn, _decode_FspGetParameterReturn, _encode_FspGetParameterReturn } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-OUTGOING-PDUS/FspGetParameterReturn.ta.mjs";
 import { FspThrowEventReturn, _decode_FspThrowEventReturn, _encode_FspThrowEventReturn } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-OUTGOING-PDUS/FspThrowEventReturn.ta.mjs";
 import { FspInvokeDirectiveReturn, _decode_FspInvokeDirectiveReturn, _encode_FspInvokeDirectiveReturn } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-OUTGOING-PDUS/FspInvokeDirectiveReturn.ta.mjs";
-import { SlePeerAbort, _decode_SlePeerAbort, _encode_SlePeerAbort } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/SlePeerAbort.ta.mjs";
+import { type SlePeerAbort, _decode_SlePeerAbort, _encode_SlePeerAbort } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/SlePeerAbort.ta.mjs";
 
 
 /**

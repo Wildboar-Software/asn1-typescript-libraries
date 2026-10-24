@@ -2,7 +2,7 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN
+    type BOOLEAN
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_Incomplete_CDR_Indication_aCRInterimLost, _encode_Incomplete_CDR_Indication_aCRInterimLost, _enum_for_Incomplete_CDR_Indication_aCRInterimLost, Incomplete_CDR_Indication_aCRInterimLost } from "./Incomplete-CDR-Indication-aCRInterimLost.ta.mjs";

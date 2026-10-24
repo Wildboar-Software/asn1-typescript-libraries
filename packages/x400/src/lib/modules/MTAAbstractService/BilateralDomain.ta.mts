@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    CountryName,
+    type CountryName,
     _decode_CountryName,
     _encode_CountryName,
 } from '../MTSAbstractService/CountryName.ta.mjs';
 import {
-    BilateralDomain_domain,
+    type BilateralDomain_domain,
     _decode_BilateralDomain_domain,
     _encode_BilateralDomain_domain,
 } from '../MTAAbstractService/BilateralDomain-domain.ta.mjs';

@@ -6,12 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    InvokeId,
+    type InvokeId,
     _decode_InvokeId,
     _encode_InvokeId,
 } from "../CommonProtocolSpecification/InvokeId.ta.mjs";
 import {
-    OsiRej_problem,
+    type OsiRej_problem,
     _decode_OsiRej_problem,
     _encode_OsiRej_problem,
 } from "../OSIProtocolSpecification/OsiRej-problem.ta.mjs";

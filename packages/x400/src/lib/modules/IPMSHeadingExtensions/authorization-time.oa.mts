@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    AuthorizationTime,
+    type AuthorizationTime,
     _decode_AuthorizationTime,
     _encode_AuthorizationTime,
 } from '../IPMSHeadingExtensions/AuthorizationTime.ta.mjs';

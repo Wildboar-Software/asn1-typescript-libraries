@@ -6,10 +6,10 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
-import { ClientPartToKeep_resultSetDisposition, _decode_ClientPartToKeep_resultSetDisposition, _encode_ClientPartToKeep_resultSetDisposition } from "../ESFormat-PeriodicQuerySchedule/ClientPartToKeep-resultSetDisposition.ta.mjs";
-import { Destination, _decode_Destination, _encode_Destination } from "../ESFormat-ExportSpecification/Destination.ta.mjs";
-import { ClientPartToKeep_exportParameters, _decode_ClientPartToKeep_exportParameters, _encode_ClientPartToKeep_exportParameters } from "../ESFormat-PeriodicQuerySchedule/ClientPartToKeep-exportParameters.ta.mjs";
+import { type InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
+import { type ClientPartToKeep_resultSetDisposition, _decode_ClientPartToKeep_resultSetDisposition, _encode_ClientPartToKeep_resultSetDisposition } from "../ESFormat-PeriodicQuerySchedule/ClientPartToKeep-resultSetDisposition.ta.mjs";
+import { type Destination, _decode_Destination, _encode_Destination } from "../ESFormat-ExportSpecification/Destination.ta.mjs";
+import { type ClientPartToKeep_exportParameters, _decode_ClientPartToKeep_exportParameters, _encode_ClientPartToKeep_exportParameters } from "../ESFormat-PeriodicQuerySchedule/ClientPartToKeep-exportParameters.ta.mjs";
 
 
 /**

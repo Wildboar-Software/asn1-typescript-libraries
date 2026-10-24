@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    SET,
+    type SET,
     ASN1Element as _Element,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ProbableCause,
+    type ProbableCause,
     _decode_ProbableCause,
     _encode_ProbableCause,
 } from "../Attribute-ASN1Module/ProbableCause.ta.mjs";

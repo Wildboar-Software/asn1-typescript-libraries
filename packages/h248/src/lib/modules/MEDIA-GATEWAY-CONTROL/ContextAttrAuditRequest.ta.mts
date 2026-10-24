@@ -2,7 +2,7 @@
 import {
     type BOOLEAN,
     type INTEGER,
-    NULL,
+    type NULL,
     type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
@@ -10,7 +10,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IndAudPropertyParm, _decode_IndAudPropertyParm, _encode_IndAudPropertyParm } from "../MEDIA-GATEWAY-CONTROL/IndAudPropertyParm.ta.mjs";
-import { SelectLogic, _decode_SelectLogic, _encode_SelectLogic } from "../MEDIA-GATEWAY-CONTROL/SelectLogic.ta.mjs";
+import { type SelectLogic, _decode_SelectLogic, _encode_SelectLogic } from "../MEDIA-GATEWAY-CONTROL/SelectLogic.ta.mjs";
 
 
 /**

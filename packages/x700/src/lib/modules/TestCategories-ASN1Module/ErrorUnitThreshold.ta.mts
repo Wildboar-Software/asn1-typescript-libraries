@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    UnitsType,
+    type UnitsType,
     _decode_UnitsType,
     _encode_UnitsType,
 } from '../TestCategories-ASN1Module/UnitsType.ta.mjs';
 import {
-    UnitsTotal,
+    type UnitsTotal,
     _decode_UnitsTotal,
     _encode_UnitsTotal,
 } from '../TestCategories-ASN1Module/UnitsTotal.ta.mjs';

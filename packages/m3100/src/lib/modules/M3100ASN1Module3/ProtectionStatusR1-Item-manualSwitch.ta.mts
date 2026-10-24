@@ -17,7 +17,7 @@ import {
     _encode_SwitchStatus,
 } from '../SDHProtASN1/SwitchStatus.ta.mjs';
 import {
-    FromAndToProtectionUnit,
+    type FromAndToProtectionUnit,
     _decode_FromAndToProtectionUnit,
     _encode_FromAndToProtectionUnit,
 } from '../M3100ASN1Module3/FromAndToProtectionUnit.ta.mjs';

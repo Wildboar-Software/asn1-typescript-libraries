@@ -16,7 +16,7 @@ import {
     _encode_GlobalDomainIdentifier,
 } from '../MTSAbstractService/GlobalDomainIdentifier.ta.mjs';
 import {
-    LocalIdentifier,
+    type LocalIdentifier,
     _decode_LocalIdentifier,
     _encode_LocalIdentifier,
 } from '../MTSAbstractService/LocalIdentifier.ta.mjs';

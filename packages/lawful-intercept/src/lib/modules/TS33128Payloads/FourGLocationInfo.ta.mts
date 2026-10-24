@@ -6,7 +6,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { EPSLocationInformation, _decode_EPSLocationInformation, _encode_EPSLocationInformation } from "../TS33128Payloads/EPSLocationInformation.ta.mjs";
 // export { EPSLocationInformation, _decode_EPSLocationInformation, _encode_EPSLocationInformation } from "../TS33128Payloads/EPSLocationInformation.ta.mjs";
-import { EPSUserLocationInformation, _decode_EPSUserLocationInformation, _encode_EPSUserLocationInformation } from "../TS33128Payloads/EPSUserLocationInformation.ta.mjs";
+import { type EPSUserLocationInformation, _decode_EPSUserLocationInformation, _encode_EPSUserLocationInformation } from "../TS33128Payloads/EPSUserLocationInformation.ta.mjs";
 // export { EPSUserLocationInformation, _decode_EPSUserLocationInformation, _encode_EPSUserLocationInformation } from "../TS33128Payloads/EPSUserLocationInformation.ta.mjs";
 
 

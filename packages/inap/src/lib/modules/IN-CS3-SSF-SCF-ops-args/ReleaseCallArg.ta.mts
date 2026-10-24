@@ -4,7 +4,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Cause, _decode_Cause, _encode_Cause } from "../IN-CS3-SSF-SCF-datatypes/Cause.ta.mjs";
+import { type Cause, _decode_Cause, _encode_Cause } from "../IN-CS3-SSF-SCF-datatypes/Cause.ta.mjs";
 // export { Cause, _decode_Cause, _encode_Cause } from "../IN-CS3-SSF-SCF-datatypes/Cause.ta.mjs";
 import { ReleaseCallArg_callSegmentToRelease, _decode_ReleaseCallArg_callSegmentToRelease, _encode_ReleaseCallArg_callSegmentToRelease } from "../IN-CS3-SSF-SCF-ops-args/ReleaseCallArg-callSegmentToRelease.ta.mjs";
 // export { ReleaseCallArg_callSegmentToRelease, _decode_ReleaseCallArg_callSegmentToRelease, _encode_ReleaseCallArg_callSegmentToRelease } from "../IN-CS3-SSF-SCF-ops-args/ReleaseCallArg-callSegmentToRelease.ta.mjs";

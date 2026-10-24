@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectSyntax, _decode_ObjectSyntax, _encode_ObjectSyntax } from "../SNMPv2-PDU/ObjectSyntax.ta.mjs";
+import { type ObjectSyntax, _decode_ObjectSyntax, _encode_ObjectSyntax } from "../SNMPv2-PDU/ObjectSyntax.ta.mjs";
 /**
  * @summary VarBind_valueType
  * @description

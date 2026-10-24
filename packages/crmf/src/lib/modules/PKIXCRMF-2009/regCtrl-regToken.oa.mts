@@ -2,7 +2,7 @@
 import type { ATTRIBUTE } from "@wildboar/x500/InformationFramework";
 import { id_regCtrl_regToken } from "../PKIXCRMF-2009/id-regCtrl-regToken.va.mjs";
 import {
-    RegToken,
+    type RegToken,
     _decode_RegToken,
     _encode_RegToken,
 } from "../PKIXCRMF-2009/RegToken.ta.mjs";

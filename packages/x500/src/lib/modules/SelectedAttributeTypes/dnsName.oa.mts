@@ -6,7 +6,7 @@ import {
 import { dnsNameMatch } from "../SelectedAttributeTypes/dnsNameMatch.oa.mjs";
 import { dnsString } from "../SelectedAttributeTypes/dnsString.oa.mjs";
 import {
-    DomainName,
+    type DomainName,
     _decode_DomainName,
     _encode_DomainName,
 } from "../SelectedAttributeTypes/DomainName.ta.mjs";

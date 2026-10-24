@@ -7,7 +7,7 @@ import {
     _encode_IssuerAndSerialNumber,
 } from "@wildboar/x500/EnhancedSecurity";
 import {
-    SubjectKeyIdentifier,
+    type SubjectKeyIdentifier,
     _decode_SubjectKeyIdentifier,
     _encode_SubjectKeyIdentifier,
 } from "@wildboar/x500/CertificateExtensions";

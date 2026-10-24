@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ExtendedCertificate,
+    type ExtendedCertificate,
     _decode_ExtendedCertificate,
     _encode_ExtendedCertificate,
 } from '../MTSAbstractService/ExtendedCertificate.ta.mjs';

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { id_at_certificationPracticeStmt } from "../AuthenticationFramework/id-at-certificationPracticeStmt.va.mjs";
 import {
-    InfoSyntax,
+    type InfoSyntax,
     _decode_InfoSyntax,
     _encode_InfoSyntax,
 } from "../AuthenticationFramework/InfoSyntax.ta.mjs";

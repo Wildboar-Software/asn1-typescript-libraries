@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    Code,
+    type Code,
     _decode_Code,
     _encode_Code,
 } from '@wildboar/rose';

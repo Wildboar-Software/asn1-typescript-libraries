@@ -10,7 +10,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-  AttributeCertificate,
+  type AttributeCertificate,
   _decode_AttributeCertificate,
   _encode_AttributeCertificate,
 } from '@wildboar/x500/AttributeCertificateDefinitions';

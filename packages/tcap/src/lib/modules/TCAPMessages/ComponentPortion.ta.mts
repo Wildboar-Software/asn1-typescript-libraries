@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Component,
+  type Component,
   _decode_Component,
   _encode_Component,
 } from '../TCAPMessages/Component.ta.mjs';

@@ -6,12 +6,12 @@ import { attributeError } from "../DirectoryAbstractService/attributeError.oa.mj
 import { nameError } from "../DirectoryAbstractService/nameError.oa.mjs";
 import { referral } from "../DirectoryAbstractService/referral.oa.mjs";
 import {
-    SearchArgument,
+    type SearchArgument,
     _decode_SearchArgument,
     _encode_SearchArgument,
 } from "../DirectoryAbstractService/SearchArgument.ta.mjs";
 import {
-    SearchResult,
+    type SearchResult,
     _decode_SearchResult,
     _encode_SearchResult,
 } from "../DirectoryAbstractService/SearchResult.ta.mjs";

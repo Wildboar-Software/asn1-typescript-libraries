@@ -4,7 +4,7 @@ import {
     ASN1TagClass as _TagClass,
     type INTEGER,
     type OPTIONAL,
-    UTCTime,
+    type UTCTime,
     type UTF8String,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";

@@ -14,17 +14,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Range,
+    type Range,
     _decode_Range,
     _encode_Range,
 } from '../MSAbstractService/Range.ta.mjs';
 import {
-    Filter,
+    type Filter,
     _decode_Filter,
     _encode_Filter,
 } from '../MSAbstractService/Filter.ta.mjs';
 import {
-    OverrideRestrictions,
+    type OverrideRestrictions,
     _decode_OverrideRestrictions,
     _encode_OverrideRestrictions,
 } from '../MSAbstractService/OverrideRestrictions.ta.mjs';

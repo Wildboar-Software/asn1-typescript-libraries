@@ -16,7 +16,7 @@ import {
     _encode_Proxy,
 } from '../AccessControl-ASN1Module/Proxy.ta.mjs';
 import {
-    InitiatorName,
+    type InitiatorName,
     _decode_InitiatorName,
     _encode_InitiatorName,
 } from '../AccessControl-ASN1Module/InitiatorName.ta.mjs';

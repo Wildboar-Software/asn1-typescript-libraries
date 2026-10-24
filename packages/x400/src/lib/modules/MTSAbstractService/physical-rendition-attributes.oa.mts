@@ -20,7 +20,7 @@ import {
     _encode_Criticality,
 } from '../MTSAbstractService/Criticality.ta.mjs';
 import {
-    PhysicalRenditionAttributes,
+    type PhysicalRenditionAttributes,
     _decode_PhysicalRenditionAttributes,
     _encode_PhysicalRenditionAttributes,
 } from '../MTSAbstractService/PhysicalRenditionAttributes.ta.mjs';

@@ -6,17 +6,17 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ContentEncryptionAlgorithmIdentifier,
+    type ContentEncryptionAlgorithmIdentifier,
     _decode_ContentEncryptionAlgorithmIdentifier,
     _encode_ContentEncryptionAlgorithmIdentifier,
 } from "../CryptographicMessageSyntax/ContentEncryptionAlgorithmIdentifier.ta.mjs";
 import {
-    ContentType,
+    type ContentType,
     _decode_ContentType,
     _encode_ContentType,
 } from "../CryptographicMessageSyntax/ContentType.ta.mjs";
 import {
-    EncryptedContent,
+    type EncryptedContent,
     _decode_EncryptedContent,
     _encode_EncryptedContent,
 } from "../CryptographicMessageSyntax/EncryptedContent.ta.mjs";

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { chargeRequest } from "../SS-AOC-Operations-asn1-97/chargeRequest.oa.mjs";
 import { getFinalCharge } from "../SS-AOC-Operations-asn1-97/getFinalCharge.oa.mjs";
 import { aocFinal } from "../SS-AOC-Operations-asn1-97/aocFinal.oa.mjs";

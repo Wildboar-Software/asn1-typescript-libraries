@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ID } from "../UsefulDefinitions/ID.ta.mjs";
+import { type ID } from "../UsefulDefinitions/ID.ta.mjs";
 import { operationalBinding } from "../UsefulDefinitions/operationalBinding.va.mjs";
 /**
  * @summary id_ob

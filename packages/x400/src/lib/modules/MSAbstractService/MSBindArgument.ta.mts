@@ -13,17 +13,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ORAddressAndOrDirectoryName,
+    type ORAddressAndOrDirectoryName,
     _decode_ORAddressAndOrDirectoryName,
     _encode_ORAddressAndOrDirectoryName,
 } from '../MTSAbstractService/ORAddressAndOrDirectoryName.ta.mjs';
 import {
-    InitiatorCredentials,
+    type InitiatorCredentials,
     _decode_InitiatorCredentials,
     _encode_InitiatorCredentials,
 } from '../MTSAbstractService/InitiatorCredentials.ta.mjs';
 import {
-    SecurityContext,
+    type SecurityContext,
     _decode_SecurityContext,
     _encode_SecurityContext,
 } from '../MTSAbstractService/SecurityContext.ta.mjs';
@@ -33,12 +33,12 @@ import {
     _encode_Restrictions,
 } from '../MSAbstractService/Restrictions.ta.mjs';
 import {
-    RegistrationIdentifier,
+    type RegistrationIdentifier,
     _decode_RegistrationIdentifier,
     _encode_RegistrationIdentifier,
 } from '../MSAbstractService/RegistrationIdentifier.ta.mjs';
 import {
-    MSExtensions,
+    type MSExtensions,
     _decode_MSExtensions,
     _encode_MSExtensions,
 } from '../MSAbstractService/MSExtensions.ta.mjs';

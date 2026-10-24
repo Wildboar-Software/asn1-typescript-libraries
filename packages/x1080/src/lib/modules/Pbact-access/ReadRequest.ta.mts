@@ -19,7 +19,7 @@ import {
     _encode_CommonReqComp,
 } from '../Pbact-access/CommonReqComp.ta.mjs';
 import {
-    DistinguishedName,
+    type DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from '@wildboar/dn';
@@ -29,7 +29,7 @@ import {
     _encode_InformationSelection,
 } from '../Pbact-access/InformationSelection.ta.mjs';
 import {
-    AttributeCertificates,
+    type AttributeCertificates,
     _decode_AttributeCertificates,
     _encode_AttributeCertificates,
 } from '../Pbact-access/AttributeCertificates.ta.mjs';

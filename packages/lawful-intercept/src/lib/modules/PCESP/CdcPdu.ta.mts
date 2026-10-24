@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ProtocolVersion, _decode_ProtocolVersion, _encode_ProtocolVersion, _enum_for_ProtocolVersion } from "../PCESP/ProtocolVersion.ta.mjs";
+import { type ProtocolVersion, _decode_ProtocolVersion, _encode_ProtocolVersion, _enum_for_ProtocolVersion } from "../PCESP/ProtocolVersion.ta.mjs";
 // export { ProtocolVersion, _enum_for_ProtocolVersion, ProtocolVersion_v3 /* IMPORTED_LONG_ENUMERATION_ITEM */, v3 /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProtocolVersion_v4 /* IMPORTED_LONG_ENUMERATION_ITEM */, v4 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ProtocolVersion, _encode_ProtocolVersion } from "../PCESP/ProtocolVersion.ta.mjs";
-import { Message, _decode_Message, _encode_Message } from "../PCESP/Message.ta.mjs";
+import { type Message, _decode_Message, _encode_Message } from "../PCESP/Message.ta.mjs";
 // export { Message, _decode_Message, _encode_Message } from "../PCESP/Message.ta.mjs";
 
 

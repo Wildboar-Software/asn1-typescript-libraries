@@ -4,7 +4,7 @@ import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";
 import {
-    CharacterMatchTypes,
+    type CharacterMatchTypes,
     _decode_CharacterMatchTypes,
     _encode_CharacterMatchTypes,
 } from "../SelectedAttributeTypes/CharacterMatchTypes.ta.mjs";

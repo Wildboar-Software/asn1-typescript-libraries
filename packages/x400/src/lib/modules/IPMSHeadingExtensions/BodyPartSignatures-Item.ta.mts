@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    BodyPartNumber,
+    type BodyPartNumber,
     _decode_BodyPartNumber,
     _encode_BodyPartNumber,
 } from '../IPMSHeadingExtensions/BodyPartNumber.ta.mjs';
 import {
-    BodyPartSignature,
+    type BodyPartSignature,
     _decode_BodyPartSignature,
     _encode_BodyPartSignature,
 } from '../IPMSHeadingExtensions/BodyPartSignature.ta.mjs';
@@ -27,7 +27,7 @@ import {
     _encode_CertificateAssertion,
 } from '@wildboar/x500/CertificateExtensions';
 import {
-    ExtendedCertificates,
+    type ExtendedCertificates,
     _decode_ExtendedCertificates,
     _encode_ExtendedCertificates,
 } from '../MTSAbstractService/ExtendedCertificates.ta.mjs';

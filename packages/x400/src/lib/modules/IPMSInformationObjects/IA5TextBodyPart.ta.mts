@@ -16,7 +16,7 @@ import {
     _encode_IA5TextParameters,
 } from '../IPMSInformationObjects/IA5TextParameters.ta.mjs';
 import {
-    IA5TextData,
+    type IA5TextData,
     _decode_IA5TextData,
     _encode_IA5TextData,
 } from '../IPMSInformationObjects/IA5TextData.ta.mjs';

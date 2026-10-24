@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AutoRestoreSource,
+    type AutoRestoreSource,
     _decode_AutoRestoreSource,
     _encode_AutoRestoreSource,
 } from '../SWMF/AutoRestoreSource.ta.mjs';

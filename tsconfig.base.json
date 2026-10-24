@@ -7,6 +7,7 @@
     "emitDeclarationOnly": false,
     "importHelpers": false,
     "isolatedModules": true,
+    "verbatimModuleSyntax": true,
     "lib": [
       "es2022"
     ],

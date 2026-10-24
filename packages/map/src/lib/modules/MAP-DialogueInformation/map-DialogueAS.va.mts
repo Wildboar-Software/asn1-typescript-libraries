@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ObjectIdentifier as _OID,
-    OBJECT_IDENTIFIER
+    type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { as_Id } from "../MobileDomainDefinitions/as-Id.va.mjs";
 import { gsm_NetworkId } from "../MobileDomainDefinitions/gsm-NetworkId.va.mjs";

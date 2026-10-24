@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ConnectResult_Item,
+    type ConnectResult_Item,
     _decode_ConnectResult_Item,
     _encode_ConnectResult_Item,
 } from '../ASN1DefinedTypesModule/ConnectResult-Item.ta.mjs';

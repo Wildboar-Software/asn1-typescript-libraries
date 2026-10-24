@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { InvokeID, _decode_InvokeID, _encode_InvokeID } from "../IN-CS2-datatypes/InvokeID.ta.mjs";
+import { type InvokeID, _decode_InvokeID, _encode_InvokeID } from "../IN-CS2-datatypes/InvokeID.ta.mjs";
 // export { InvokeID, _decode_InvokeID, _encode_InvokeID } from "../IN-CS2-datatypes/InvokeID.ta.mjs";
-import { CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from "../IN-CS2-datatypes/CallSegmentID.ta.mjs";
+import { type CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from "../IN-CS2-datatypes/CallSegmentID.ta.mjs";
 // export { CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from "../IN-CS2-datatypes/CallSegmentID.ta.mjs";
 
 

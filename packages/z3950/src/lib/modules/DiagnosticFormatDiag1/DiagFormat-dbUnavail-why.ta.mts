@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DiagFormat_dbUnavail_why_reasonCode, _decode_DiagFormat_dbUnavail_why_reasonCode, _encode_DiagFormat_dbUnavail_why_reasonCode } from "../DiagnosticFormatDiag1/DiagFormat-dbUnavail-why-reasonCode.ta.mjs";
-import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
+import { type DiagFormat_dbUnavail_why_reasonCode, _decode_DiagFormat_dbUnavail_why_reasonCode, _encode_DiagFormat_dbUnavail_why_reasonCode } from "../DiagnosticFormatDiag1/DiagFormat-dbUnavail-why-reasonCode.ta.mjs";
+import { type InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
 
 
 /**

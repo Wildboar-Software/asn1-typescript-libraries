@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ContentTypes,
+    type ContentTypes,
     _decode_ContentTypes,
     _encode_ContentTypes,
 } from '../MTSAbstractService/ContentTypes.ta.mjs';
 import {
-    ContentLength,
+    type ContentLength,
     _decode_ContentLength,
     _encode_ContentLength,
 } from '../MTSAbstractService/ContentLength.ta.mjs';
@@ -27,17 +27,17 @@ import {
     _encode_EncodedInformationTypesConstraints,
 } from '../MTSAbstractService/EncodedInformationTypesConstraints.ta.mjs';
 import {
-    SecurityContext,
+    type SecurityContext,
     _decode_SecurityContext,
     _encode_SecurityContext,
 } from '../MTSAbstractService/SecurityContext.ta.mjs';
 import {
-    Priority,
+    type Priority,
     _decode_Priority,
     _encode_Priority,
 } from '../MTSAbstractService/Priority.ta.mjs';
 import {
-    MessageClass_objects,
+    type MessageClass_objects,
     _enum_for_MessageClass_objects,
     MessageClass_objects_both /* IMPORTED_LONG_ENUMERATION_ITEM */,
     _decode_MessageClass_objects,

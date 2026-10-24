@@ -22,7 +22,7 @@ import {
     _encode_RequestArgument,
 } from '../TCAP-Examples/RequestArgument.ta.mjs';
 import {
-    RoutingInformation,
+    type RoutingInformation,
     _decode_RoutingInformation,
     _encode_RoutingInformation,
 } from '../TCAP-Examples/RoutingInformation.ta.mjs';

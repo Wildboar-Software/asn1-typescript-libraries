@@ -7,17 +7,17 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "@wildboar/x500/AuthenticationFramework";
 import {
-    CMSVersion,
+    type CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
 } from "../CryptographicMessageSyntax-2010/CMSVersion.ta.mjs";
 import {
-    EncryptedKey,
+    type EncryptedKey,
     _decode_EncryptedKey,
     _encode_EncryptedKey,
 } from "../CryptographicMessageSyntax-2010/EncryptedKey.ta.mjs";
 import {
-    RecipientIdentifier,
+    type RecipientIdentifier,
     _decode_RecipientIdentifier,
     _encode_RecipientIdentifier,
 } from "../CryptographicMessageSyntax-2010/RecipientIdentifier.ta.mjs";

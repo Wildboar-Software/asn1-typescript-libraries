@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { CMIP_AVA } from "../CSChargingDataTypes/CMIP-AVA.oca.mjs";
+import { type CMIP_AVA } from "../CSChargingDataTypes/CMIP-AVA.oca.mjs";
 
 
 /**

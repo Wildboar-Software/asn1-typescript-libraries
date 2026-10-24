@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    IPMLocation,
+    type IPMLocation,
     _decode_IPMLocation,
     _encode_IPMLocation,
 } from '../IPMSMessageStoreAttributes/IPMLocation.ta.mjs';

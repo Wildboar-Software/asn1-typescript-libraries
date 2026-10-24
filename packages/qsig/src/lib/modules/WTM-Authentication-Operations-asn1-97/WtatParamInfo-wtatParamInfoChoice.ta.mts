@@ -7,8 +7,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AuthSessionKeyInfo, _decode_AuthSessionKeyInfo, _encode_AuthSessionKeyInfo } from "../WTM-Authentication-Operations-asn1-97/AuthSessionKeyInfo.ta.mjs";
-import { CalcWtatInfo, _decode_CalcWtatInfo, _encode_CalcWtatInfo } from "../WTM-Authentication-Operations-asn1-97/CalcWtatInfo.ta.mjs";
-import { AuthKey, _decode_AuthKey, _encode_AuthKey } from "../WTM-Authentication-Operations-asn1-97/AuthKey.ta.mjs";
+import { type CalcWtatInfo, _decode_CalcWtatInfo, _encode_CalcWtatInfo } from "../WTM-Authentication-Operations-asn1-97/CalcWtatInfo.ta.mjs";
+import { type AuthKey, _decode_AuthKey, _encode_AuthKey } from "../WTM-Authentication-Operations-asn1-97/AuthKey.ta.mjs";
 
 /**
  * @summary WtatParamInfo_wtatParamInfoChoice

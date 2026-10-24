@@ -16,7 +16,7 @@ import {
     _encode_Message,
 } from '../MTAAbstractService/Message.ta.mjs';
 import {
-    Probe,
+    type Probe,
     _decode_Probe,
     _encode_Probe,
 } from '../MTAAbstractService/Probe.ta.mjs';

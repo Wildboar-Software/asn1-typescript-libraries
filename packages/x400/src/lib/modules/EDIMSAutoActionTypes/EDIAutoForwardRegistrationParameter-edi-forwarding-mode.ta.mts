@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    NewRecipient,
+    type NewRecipient,
     _decode_NewRecipient,
     _encode_NewRecipient,
 } from '../EDIMSAutoActionTypes/NewRecipient.ta.mjs';

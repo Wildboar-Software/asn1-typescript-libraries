@@ -13,7 +13,7 @@ import { assistRequestInstructions } from "../CAP-gsmSSF-gsmSCF-ops-args/assistR
 import { cancel } from "../CAP-gsmSSF-gsmSCF-ops-args/cancel.oa.mjs";
 import { playAnnouncement } from "../CAP-gsmSCF-gsmSRF-ops-args/playAnnouncement.oa.mjs";
 import { promptAndCollectUserInformation } from "../CAP-gsmSCF-gsmSRF-ops-args/promptAndCollectUserInformation.oa.mjs";
-import { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { activityTest } from "../CAP-gsmSSF-gsmSCF-ops-args/activityTest.oa.mjs";
 
 

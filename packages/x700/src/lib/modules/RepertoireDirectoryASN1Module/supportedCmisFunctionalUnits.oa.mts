@@ -17,7 +17,7 @@ import {
     _encode_AttributeUsage,
 } from '@wildboar/x500/InformationFramework';
 import {
-    FunctionalUnits,
+    type FunctionalUnits,
     _decode_FunctionalUnits,
     _encode_FunctionalUnits,
 } from '@wildboar/cmip';

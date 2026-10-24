@@ -24,12 +24,12 @@ import {
     _encode_SwitchStatus,
 } from '../SDHProtASN1/SwitchStatus.ta.mjs';
 import {
-    FromAndToProtectionUnit,
+    type FromAndToProtectionUnit,
     _decode_FromAndToProtectionUnit,
     _encode_FromAndToProtectionUnit,
 } from '../SDHProtASN1/FromAndToProtectionUnit.ta.mjs';
 import {
-    AutoSwitchReason,
+    type AutoSwitchReason,
     _decode_AutoSwitchReason,
     _encode_AutoSwitchReason,
 } from '../SDHProtASN1/AutoSwitchReason.ta.mjs';

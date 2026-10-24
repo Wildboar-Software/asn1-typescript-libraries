@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     type OPTIONAL,
-    GraphicString,
+    type GraphicString,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RestrictionsOnSLC_restrictionId,
+    type RestrictionsOnSLC_restrictionId,
     _enum_for_RestrictionsOnSLC_restrictionId,
     _decode_RestrictionsOnSLC_restrictionId,
     _encode_RestrictionsOnSLC_restrictionId,

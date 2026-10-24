@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { locUpdate } from "../WTM-Location-Registration-Operations-asn1-97/locUpdate.oa.mjs";
 import { locDelete } from "../WTM-Location-Registration-Operations-asn1-97/locDelete.oa.mjs";
 import { locDeReg } from "../WTM-Location-Registration-Operations-asn1-97/locDeReg.oa.mjs";

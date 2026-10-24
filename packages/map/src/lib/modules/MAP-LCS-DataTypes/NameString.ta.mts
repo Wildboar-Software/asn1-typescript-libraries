@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_USSD_String, _encode_USSD_String, USSD_String } from "../MAP-SS-DataTypes/USSD-String.ta.mjs";
+import { _decode_USSD_String, _encode_USSD_String, type USSD_String } from "../MAP-SS-DataTypes/USSD-String.ta.mjs";
 
 
 

@@ -6,22 +6,22 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ACIItem_itemOrUserFirst,
+    type ACIItem_itemOrUserFirst,
     _decode_ACIItem_itemOrUserFirst,
     _encode_ACIItem_itemOrUserFirst,
 } from "../BasicAccessControl/ACIItem-itemOrUserFirst.ta.mjs";
 import {
-    AuthenticationLevel,
+    type AuthenticationLevel,
     _decode_AuthenticationLevel,
     _encode_AuthenticationLevel,
 } from "../BasicAccessControl/AuthenticationLevel.ta.mjs";
 import {
-    Precedence,
+    type Precedence,
     _decode_Precedence,
     _encode_Precedence,
 } from "../BasicAccessControl/Precedence.ta.mjs";
 import {
-    UnboundedDirectoryString,
+    type UnboundedDirectoryString,
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";

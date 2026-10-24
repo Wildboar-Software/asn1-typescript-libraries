@@ -2,12 +2,12 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    GeneralizedTime,
+    type GeneralizedTime,
     type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CRLScopeSyntax,
+    type CRLScopeSyntax,
     _decode_CRLScopeSyntax,
     _encode_CRLScopeSyntax,
 } from "../CertificateExtensions/CRLScopeSyntax.ta.mjs";
@@ -17,7 +17,7 @@ import {
     _encode_DeltaRefInfo,
 } from "../CertificateExtensions/DeltaRefInfo.ta.mjs";
 import {
-    GeneralName,
+    type GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";

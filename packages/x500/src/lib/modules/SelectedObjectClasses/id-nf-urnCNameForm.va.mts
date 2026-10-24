@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { ObjectIdentifier as _OID, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import { id_nf } from "../UsefulDefinitions/id-nf.va.mjs";
 /**
  * @summary id_nf_urnCNameForm

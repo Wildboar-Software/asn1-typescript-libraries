@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    DefaultIndex,
+    type DefaultIndex,
     _decode_DefaultIndex,
     _encode_DefaultIndex,
 } from '../Schedulerev1-ASN1Module/DefaultIndex.ta.mjs';

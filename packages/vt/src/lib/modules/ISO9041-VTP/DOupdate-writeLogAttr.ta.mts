@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AttrId, _decode_AttrId, _encode_AttrId } from "../ISO9041-VTP/AttrId.ta.mjs";
-import { LogAttrExtent, _decode_LogAttrExtent, _encode_LogAttrExtent } from "../ISO9041-VTP/LogAttrExtent.ta.mjs";
+import { type AttrId, _decode_AttrId, _encode_AttrId } from "../ISO9041-VTP/AttrId.ta.mjs";
+import { type LogAttrExtent, _decode_LogAttrExtent, _encode_LogAttrExtent } from "../ISO9041-VTP/LogAttrExtent.ta.mjs";
 
 
 /**

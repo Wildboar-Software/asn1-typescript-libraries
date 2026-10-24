@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CompressionAlgorithmIdentifier, _decode_CompressionAlgorithmIdentifier, _encode_CompressionAlgorithmIdentifier } from "../CompressedDataType/CompressionAlgorithmIdentifier.ta.mjs";
+import { type CompressionAlgorithmIdentifier, _decode_CompressionAlgorithmIdentifier, _encode_CompressionAlgorithmIdentifier } from "../CompressedDataType/CompressionAlgorithmIdentifier.ta.mjs";
 import { CompressedContentInfo, _decode_CompressedContentInfo, _encode_CompressedContentInfo } from "../CompressedDataType/CompressedContentInfo.ta.mjs";
 
 

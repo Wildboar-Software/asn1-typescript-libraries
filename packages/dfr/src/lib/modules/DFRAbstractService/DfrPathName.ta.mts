@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DfrTitle, _decode_DfrTitle, _encode_DfrTitle } from "../DFRAbstractService/DfrTitle.ta.mjs";
+import { type DfrTitle, _decode_DfrTitle, _encode_DfrTitle } from "../DFRAbstractService/DfrTitle.ta.mjs";
 
 
 /**

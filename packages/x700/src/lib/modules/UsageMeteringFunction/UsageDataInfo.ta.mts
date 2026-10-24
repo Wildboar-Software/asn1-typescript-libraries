@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
 import {
-    NotificationCause,
+    type NotificationCause,
     _decode_NotificationCause,
     _encode_NotificationCause,
 } from '../UsageMeteringFunction/NotificationCause.ta.mjs';
@@ -32,12 +32,12 @@ import {
     _encode_AuditInfo,
 } from '../UsageMeteringFunction/AuditInfo.ta.mjs';
 import {
-    DataErrors,
+    type DataErrors,
     _decode_DataErrors,
     _encode_DataErrors,
 } from '../UsageMeteringFunction/DataErrors.ta.mjs';
 import {
-    ProviderId,
+    type ProviderId,
     _decode_ProviderId,
     _encode_ProviderId,
 } from '../UsageMeteringFunction/ProviderId.ta.mjs';

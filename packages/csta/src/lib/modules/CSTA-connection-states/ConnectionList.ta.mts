@@ -3,8 +3,8 @@
 import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
-    NULL,
-    SEQUENCE,
+    type NULL,
+    type SEQUENCE,
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import { ConnectionList_Item, _decode_ConnectionList_Item, _encode_ConnectionList_Item } from "../CSTA-connection-states/ConnectionList-Item.ta.mjs";

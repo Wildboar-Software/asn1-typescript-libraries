@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ChangedParameters_changeFlags, _decode_ChangedParameters_changeFlags, _encode_ChangedParameters_changeFlags } from "../CSChargingDataTypes/ChangedParameters-changeFlags.ta.mjs";
+import { type ChangedParameters_changeFlags, _decode_ChangedParameters_changeFlags, _encode_ChangedParameters_changeFlags } from "../CSChargingDataTypes/ChangedParameters-changeFlags.ta.mjs";
 import { CAMELModificationParameters, _decode_CAMELModificationParameters, _encode_CAMELModificationParameters } from "../CSChargingDataTypes/CAMELModificationParameters.ta.mjs";
 
 

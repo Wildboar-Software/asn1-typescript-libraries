@@ -17,7 +17,7 @@ import {
   _encode_Code,
 } from '@wildboar/rose';
 import {
-  LinkedReplyArgument,
+  type LinkedReplyArgument,
   _decode_LinkedReplyArgument,
   _encode_LinkedReplyArgument,
 } from '../CMIP-1/LinkedReplyArgument.ta.mjs';

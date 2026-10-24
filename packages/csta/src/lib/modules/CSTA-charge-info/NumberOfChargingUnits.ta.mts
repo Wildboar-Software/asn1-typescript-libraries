@@ -4,7 +4,7 @@ import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
     type INTEGER,
-    SEQUENCE,
+    type SEQUENCE,
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import { NumberOfChargingUnits_Item, _decode_NumberOfChargingUnits_Item, _encode_NumberOfChargingUnits_Item } from "../CSTA-charge-info/NumberOfChargingUnits-Item.ta.mjs";

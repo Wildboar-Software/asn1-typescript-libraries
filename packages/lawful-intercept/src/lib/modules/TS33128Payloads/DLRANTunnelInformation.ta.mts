@@ -7,7 +7,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { QOSFlowTunnelInformation, _decode_QOSFlowTunnelInformation, _encode_QOSFlowTunnelInformation } from "../TS33128Payloads/QOSFlowTunnelInformation.ta.mjs";
 // export { QOSFlowTunnelInformation, _decode_QOSFlowTunnelInformation, _encode_QOSFlowTunnelInformation } from "../TS33128Payloads/QOSFlowTunnelInformation.ta.mjs";
-import { QOSFlowTunnelInformationList, _decode_QOSFlowTunnelInformationList, _encode_QOSFlowTunnelInformationList } from "../TS33128Payloads/QOSFlowTunnelInformationList.ta.mjs";
+import { type QOSFlowTunnelInformationList, _decode_QOSFlowTunnelInformationList, _encode_QOSFlowTunnelInformationList } from "../TS33128Payloads/QOSFlowTunnelInformationList.ta.mjs";
 // export { QOSFlowTunnelInformationList, _decode_QOSFlowTunnelInformationList, _encode_QOSFlowTunnelInformationList } from "../TS33128Payloads/QOSFlowTunnelInformationList.ta.mjs";
 
 

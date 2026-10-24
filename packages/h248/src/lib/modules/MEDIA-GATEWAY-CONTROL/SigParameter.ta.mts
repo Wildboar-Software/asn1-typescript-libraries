@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SigParameterName, _decode_SigParameterName, _encode_SigParameterName } from "../MEDIA-GATEWAY-CONTROL/SigParameterName.ta.mjs";
-import { SigParamValues, _decode_SigParamValues, _encode_SigParamValues } from "../MEDIA-GATEWAY-CONTROL/SigParamValues.ta.mjs";
-import { SigParameter_extraInfo, _decode_SigParameter_extraInfo, _encode_SigParameter_extraInfo } from "../MEDIA-GATEWAY-CONTROL/SigParameter-extraInfo.ta.mjs";
+import { type SigParameterName, _decode_SigParameterName, _encode_SigParameterName } from "../MEDIA-GATEWAY-CONTROL/SigParameterName.ta.mjs";
+import { type SigParamValues, _decode_SigParamValues, _encode_SigParamValues } from "../MEDIA-GATEWAY-CONTROL/SigParamValues.ta.mjs";
+import { type SigParameter_extraInfo, _decode_SigParameter_extraInfo, _encode_SigParameter_extraInfo } from "../MEDIA-GATEWAY-CONTROL/SigParameter-extraInfo.ta.mjs";
 
 
 /**

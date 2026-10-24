@@ -22,17 +22,17 @@ import {
     _encode_PDUReception,
 } from '../TestCategories-ASN1Module/PDUReception.ta.mjs';
 import {
-    WaitingInterval,
+    type WaitingInterval,
     _decode_WaitingInterval,
     _encode_WaitingInterval,
 } from '../TestCategories-ASN1Module/WaitingInterval.ta.mjs';
 import {
-    StartTime,
+    type StartTime,
     _decode_StartTime,
     _encode_StartTime,
 } from '@wildboar/attribute-asn1module';
 import {
-    StopTime,
+    type StopTime,
     _decode_StopTime,
     _encode_StopTime,
 } from '@wildboar/attribute-asn1module';

@@ -8,11 +8,11 @@ import {
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNumber } from "../HI2Operations/CallingPartyNumber.ta.mjs";
+import { type CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNumber } from "../HI2Operations/CallingPartyNumber.ta.mjs";
 // export { CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNumber } from "../HI2Operations/CallingPartyNumber.ta.mjs";
-import { CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber } from "../HI2Operations/CalledPartyNumber.ta.mjs";
+import { type CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber } from "../HI2Operations/CalledPartyNumber.ta.mjs";
 // export { CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber } from "../HI2Operations/CalledPartyNumber.ta.mjs";
-import { PartyInformation_partyIdentity_party_Validity, _decode_PartyInformation_partyIdentity_party_Validity, _encode_PartyInformation_partyIdentity_party_Validity, _enum_for_PartyInformation_partyIdentity_party_Validity } from "../HI2Operations/PartyInformation-partyIdentity-party-Validity.ta.mjs";
+import { type PartyInformation_partyIdentity_party_Validity, _decode_PartyInformation_partyIdentity_party_Validity, _encode_PartyInformation_partyIdentity_party_Validity, _enum_for_PartyInformation_partyIdentity_party_Validity } from "../HI2Operations/PartyInformation-partyIdentity-party-Validity.ta.mjs";
 // export { PartyInformation_partyIdentity_party_Validity, _enum_for_PartyInformation_partyIdentity_party_Validity, PartyInformation_partyIdentity_party_Validity_trusted /* IMPORTED_LONG_ENUMERATION_ITEM */, trusted /* IMPORTED_SHORT_ENUMERATION_ITEM */, PartyInformation_partyIdentity_party_Validity_untrusted /* IMPORTED_LONG_ENUMERATION_ITEM */, untrusted /* IMPORTED_SHORT_ENUMERATION_ITEM */, PartyInformation_partyIdentity_party_Validity_operator_added /* IMPORTED_LONG_ENUMERATION_ITEM */, operator_added /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PartyInformation_partyIdentity_party_Validity, _encode_PartyInformation_partyIdentity_party_Validity } from "../HI2Operations/PartyInformation-partyIdentity-party-Validity.ta.mjs";
 
 

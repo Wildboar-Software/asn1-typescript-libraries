@@ -11,7 +11,7 @@ import {
     _encode_SimpleCredentials,
 } from "../DirectoryAbstractService/SimpleCredentials.ta.mjs";
 import {
-    SpkmCredentials,
+    type SpkmCredentials,
     _decode_SpkmCredentials,
     _encode_SpkmCredentials,
 } from "../DirectoryAbstractService/SpkmCredentials.ta.mjs";

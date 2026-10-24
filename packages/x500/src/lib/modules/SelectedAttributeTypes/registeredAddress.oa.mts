@@ -7,7 +7,7 @@ import { id_at_registeredAddress } from "../SelectedAttributeTypes/id-at-registe
 import { postalAddr } from "../SelectedAttributeTypes/postalAddr.oa.mjs";
 import { postalAddress } from "../SelectedAttributeTypes/postalAddress.oa.mjs";
 import {
-    PostalAddress,
+    type PostalAddress,
     _decode_PostalAddress,
     _encode_PostalAddress,
 } from "../SelectedAttributeTypes/PostalAddress.ta.mjs";

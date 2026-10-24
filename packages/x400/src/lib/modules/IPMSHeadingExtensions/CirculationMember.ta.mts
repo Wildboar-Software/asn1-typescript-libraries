@@ -17,7 +17,7 @@ import {
     _encode_RecipientSpecifier,
 } from '../IPMSInformationObjects/RecipientSpecifier.ta.mjs';
 import {
-    Checkmark,
+    type Checkmark,
     _decode_Checkmark,
     _encode_Checkmark,
 } from '../IPMSHeadingExtensions/Checkmark.ta.mjs';

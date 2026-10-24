@@ -6,12 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CategoryGroup,
+    type CategoryGroup,
     _decode_CategoryGroup,
     _encode_CategoryGroup,
 } from "../SIOsAccessControl-MODULE/CategoryGroup.ta.mjs";
 import {
-    Operation,
+    type Operation,
     _decode_Operation,
     _encode_Operation,
 } from "../SIOsAccessControl-MODULE/Operation.ta.mjs";

@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    GraphicString,
+    type GraphicString,
     type INTEGER,
     type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { InvolvedParty, _decode_InvolvedParty, _encode_InvolvedParty } from "./InvolvedParty.ta.mjs";
+import { type InvolvedParty, _decode_InvolvedParty, _encode_InvolvedParty } from "./InvolvedParty.ta.mjs";
 
 
 /**

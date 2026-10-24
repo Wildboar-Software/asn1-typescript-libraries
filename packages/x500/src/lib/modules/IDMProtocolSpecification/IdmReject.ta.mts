@@ -7,7 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    IdmReject_reason,
+    type IdmReject_reason,
     _decode_IdmReject_reason,
     _encode_IdmReject_reason,
     _enum_for_IdmReject_reason,

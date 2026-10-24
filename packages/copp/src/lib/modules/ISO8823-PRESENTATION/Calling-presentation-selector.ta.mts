@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Presentation_selector,
+    type Presentation_selector,
     _decode_Presentation_selector,
     _encode_Presentation_selector,
 } from '../ISO8823-PRESENTATION/Presentation-selector.ta.mjs';

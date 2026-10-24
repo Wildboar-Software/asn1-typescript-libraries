@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type TransactionId, _decode_TransactionId, _encode_TransactionId } from "@wildboar/sgp22/RSPDefinitions";
-import { IpaEuiccDataErrorCode, _decode_IpaEuiccDataErrorCode, _encode_IpaEuiccDataErrorCode } from "../SGP32Definitions/IpaEuiccDataErrorCode.ta.mjs";
+import { type IpaEuiccDataErrorCode, _decode_IpaEuiccDataErrorCode, _encode_IpaEuiccDataErrorCode } from "../SGP32Definitions/IpaEuiccDataErrorCode.ta.mjs";
 
 
 /**

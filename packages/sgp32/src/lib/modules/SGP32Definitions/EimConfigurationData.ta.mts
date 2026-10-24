@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     type INTEGER,
-    NULL,
+    type NULL,
     type OPTIONAL,
     type UTF8String,
     ASN1Element as _Element,
@@ -9,10 +9,10 @@ import {
 } from "@wildboar/asn1";
 import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EimIdType, _decode_EimIdType, _encode_EimIdType } from "../SGP32Definitions/EimIdType.ta.mjs";
-import { EimConfigurationData_eimPublicKeyData, _decode_EimConfigurationData_eimPublicKeyData, _encode_EimConfigurationData_eimPublicKeyData } from "../SGP32Definitions/EimConfigurationData-eimPublicKeyData.ta.mjs";
-import { EimConfigurationData_trustedPublicKeyDataTls, _decode_EimConfigurationData_trustedPublicKeyDataTls, _encode_EimConfigurationData_trustedPublicKeyDataTls } from "../SGP32Definitions/EimConfigurationData-trustedPublicKeyDataTls.ta.mjs";
-import { EimSupportedProtocol, _decode_EimSupportedProtocol, _encode_EimSupportedProtocol } from "../SGP32Definitions/EimSupportedProtocol.ta.mjs";
+import { type EimIdType, _decode_EimIdType, _encode_EimIdType } from "../SGP32Definitions/EimIdType.ta.mjs";
+import { type EimConfigurationData_eimPublicKeyData, _decode_EimConfigurationData_eimPublicKeyData, _encode_EimConfigurationData_eimPublicKeyData } from "../SGP32Definitions/EimConfigurationData-eimPublicKeyData.ta.mjs";
+import { type EimConfigurationData_trustedPublicKeyDataTls, _decode_EimConfigurationData_trustedPublicKeyDataTls, _encode_EimConfigurationData_trustedPublicKeyDataTls } from "../SGP32Definitions/EimConfigurationData-trustedPublicKeyDataTls.ta.mjs";
+import { type EimSupportedProtocol, _decode_EimSupportedProtocol, _encode_EimSupportedProtocol } from "../SGP32Definitions/EimSupportedProtocol.ta.mjs";
 import { type SubjectKeyIdentifier, _decode_SubjectKeyIdentifier, _encode_SubjectKeyIdentifier } from "@wildboar/x500/CertificateExtensions";
 import { type VendorSpecificExtension, _decode_VendorSpecificExtension, _encode_VendorSpecificExtension } from "@wildboar/sgp22/RSPDefinitions";
 

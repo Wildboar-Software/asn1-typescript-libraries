@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ConsumerInformation,
+    type ConsumerInformation,
     _decode_ConsumerInformation,
     _encode_ConsumerInformation,
 } from "../DSAOperationalAttributeTypes/ConsumerInformation.ta.mjs";

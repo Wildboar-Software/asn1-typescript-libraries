@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    CorrelatedDeliveredReplies,
+    type CorrelatedDeliveredReplies,
     _decode_CorrelatedDeliveredReplies,
     _encode_CorrelatedDeliveredReplies,
 } from '../IPMSMessageStoreAttributes/CorrelatedDeliveredReplies.ta.mjs';

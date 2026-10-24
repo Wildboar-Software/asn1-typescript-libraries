@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AttributeProblem,
+    type AttributeProblem,
     _decode_AttributeProblem,
     _encode_AttributeProblem,
 } from '../MSAbstractService/AttributeProblem.ta.mjs';
 import {
-    AttributeType,
+    type AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
 } from "./AttributeType.ta.mjs";

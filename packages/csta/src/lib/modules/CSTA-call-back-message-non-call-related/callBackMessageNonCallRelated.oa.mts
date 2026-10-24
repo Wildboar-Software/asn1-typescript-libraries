@@ -13,7 +13,7 @@ import {
 } from "../CSTA-call-back-message-non-call-related/CallBackMessageNonCallRelatedArgument.ta.mjs";
 
 import {
-    CallBackMessageNonCallRelatedResult,
+    type CallBackMessageNonCallRelatedResult,
     _decode_CallBackMessageNonCallRelatedResult,
     _encode_CallBackMessageNonCallRelatedResult
 } from "../CSTA-call-back-message-non-call-related/CallBackMessageNonCallRelatedResult.ta.mjs";

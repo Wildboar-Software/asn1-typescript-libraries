@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  BOOLEAN,
+  type OPTIONAL,
+  type BOOLEAN,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -13,13 +13,13 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  InvocationId,
+  type InvocationId,
   _decode_InvocationId,
   _encode_InvocationId,
 } from '../SeseAPDUs/InvocationId.ta.mjs';
 import { noInvocationId } from '../SeseAPDUs/noInvocationId.va.mjs';
 import {
-    Identifier,
+    type Identifier,
     _decode_Identifier,
     _encode_Identifier,
 } from '../Notation/Identifier.ta.mjs';

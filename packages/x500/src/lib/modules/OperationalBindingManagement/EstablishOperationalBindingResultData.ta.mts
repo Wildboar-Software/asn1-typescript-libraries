@@ -23,12 +23,12 @@ import {
     _encode_Attribute,
 } from "../InformationFramework/Attribute.ta.mjs";
 import {
-    DistinguishedName,
+    type DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";
 import {
-    EstablishOperationalBindingResultData_initiator,
+    type EstablishOperationalBindingResultData_initiator,
     _decode_EstablishOperationalBindingResultData_initiator,
     _encode_EstablishOperationalBindingResultData_initiator,
 } from "../OperationalBindingManagement/EstablishOperationalBindingResultData-initiator.ta.mjs";

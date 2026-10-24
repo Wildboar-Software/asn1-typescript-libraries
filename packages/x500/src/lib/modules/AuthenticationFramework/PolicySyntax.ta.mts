@@ -6,12 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    InfoSyntax,
+    type InfoSyntax,
     _decode_InfoSyntax,
     _encode_InfoSyntax,
 } from "../AuthenticationFramework/InfoSyntax.ta.mjs";
 import {
-    PolicyID,
+    type PolicyID,
     _decode_PolicyID,
     _encode_PolicyID,
 } from "../AuthenticationFramework/PolicyID.ta.mjs";

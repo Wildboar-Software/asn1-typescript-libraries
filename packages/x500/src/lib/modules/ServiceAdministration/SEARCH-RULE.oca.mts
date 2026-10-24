@@ -1,14 +1,14 @@
 /* eslint-disable */
-import { type INTEGER, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { type INTEGER, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { FamilyGrouping } from "../DirectoryAbstractService/FamilyGrouping.ta.mjs";
+import { type FamilyGrouping } from "../DirectoryAbstractService/FamilyGrouping.ta.mjs";
 import { FamilyReturn } from "../DirectoryAbstractService/FamilyReturn.ta.mjs";
-import { AttributeType } from "../InformationFramework/AttributeType.ta.mjs";
-import { AllowedSubset } from "../ServiceAdministration/AllowedSubset.ta.mjs";
-import { AttributeCombination } from "../ServiceAdministration/AttributeCombination.ta.mjs";
+import { type AttributeType } from "../InformationFramework/AttributeType.ta.mjs";
+import { type AllowedSubset } from "../ServiceAdministration/AllowedSubset.ta.mjs";
+import { type AttributeCombination } from "../ServiceAdministration/AttributeCombination.ta.mjs";
 import { ControlOptions } from "../ServiceAdministration/ControlOptions.ta.mjs";
 import { EntryLimit } from "../ServiceAdministration/EntryLimit.ta.mjs";
-import { ImposedSubset } from "../ServiceAdministration/ImposedSubset.ta.mjs";
+import { type ImposedSubset } from "../ServiceAdministration/ImposedSubset.ta.mjs";
 import { RelaxationPolicy } from "../ServiceAdministration/RelaxationPolicy.ta.mjs";
 import { type REQUEST_ATTRIBUTE } from "../ServiceAdministration/REQUEST-ATTRIBUTE.oca.mjs";
 import { type RESULT_ATTRIBUTE } from "../ServiceAdministration/RESULT-ATTRIBUTE.oca.mjs";

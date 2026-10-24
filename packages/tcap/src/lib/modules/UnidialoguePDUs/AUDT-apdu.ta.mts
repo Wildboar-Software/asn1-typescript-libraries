@@ -16,7 +16,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AUDT_apdu_protocol_version,
+    type AUDT_apdu_protocol_version,
     AUDT_apdu_protocol_version_version1 /* IMPORTED_LONG_NAMED_BIT */,
     _decode_AUDT_apdu_protocol_version,
     _encode_AUDT_apdu_protocol_version,

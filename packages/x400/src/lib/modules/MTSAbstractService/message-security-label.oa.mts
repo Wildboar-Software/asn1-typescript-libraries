@@ -20,7 +20,7 @@ import {
     _encode_Criticality,
 } from '../MTSAbstractService/Criticality.ta.mjs';
 import {
-    MessageSecurityLabel,
+    type MessageSecurityLabel,
     _decode_MessageSecurityLabel,
     _encode_MessageSecurityLabel,
 } from '../MTSAbstractService/MessageSecurityLabel.ta.mjs';

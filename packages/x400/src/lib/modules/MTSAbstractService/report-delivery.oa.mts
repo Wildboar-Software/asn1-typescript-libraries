@@ -23,7 +23,7 @@ import {
     _encode_ReportDeliveryArgument,
 } from '../MTSAbstractService/ReportDeliveryArgument.ta.mjs';
 import {
-    ReportDeliveryResult,
+    type ReportDeliveryResult,
     _decode_ReportDeliveryResult,
     _encode_ReportDeliveryResult,
 } from '../MTSAbstractService/ReportDeliveryResult.ta.mjs';

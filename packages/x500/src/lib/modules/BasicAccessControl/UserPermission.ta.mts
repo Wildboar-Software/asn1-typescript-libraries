@@ -6,12 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    GrantsAndDenials,
+    type GrantsAndDenials,
     _decode_GrantsAndDenials,
     _encode_GrantsAndDenials,
 } from "../BasicAccessControl/GrantsAndDenials.ta.mjs";
 import {
-    Precedence,
+    type Precedence,
     _decode_Precedence,
     _encode_Precedence,
 } from "../BasicAccessControl/Precedence.ta.mjs";

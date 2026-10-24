@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EventParamValueV1, _decode_EventParamValueV1, _encode_EventParamValueV1 } from "../H238V1-SUPPORT/EventParamValueV1.ta.mjs";
-import { EventParameterName, _decode_EventParameterName, _encode_EventParameterName } from "../MEDIA-GATEWAY-CONTROL/EventParameterName.ta.mjs";
+import { type EventParamValueV1, _decode_EventParamValueV1, _encode_EventParamValueV1 } from "../H238V1-SUPPORT/EventParamValueV1.ta.mjs";
+import { type EventParameterName, _decode_EventParameterName, _encode_EventParameterName } from "../MEDIA-GATEWAY-CONTROL/EventParameterName.ta.mjs";
 
 
 /**

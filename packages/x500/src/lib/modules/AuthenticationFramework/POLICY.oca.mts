@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { TYPE_IDENTIFIER } from "@wildboar/asn1";
+import { type TYPE_IDENTIFIER } from "@wildboar/asn1";
 
 /**
  * @summary POLICY

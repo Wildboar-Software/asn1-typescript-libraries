@@ -18,7 +18,7 @@ import {
     _encode_TimeInterval,
 } from '../X790ASN1Module/TimeInterval.ta.mjs';
 import {
-    ActivityType,
+    type ActivityType,
     _decode_ActivityType,
     _encode_ActivityType,
 } from '../X790ASN1Module/ActivityType.ta.mjs';

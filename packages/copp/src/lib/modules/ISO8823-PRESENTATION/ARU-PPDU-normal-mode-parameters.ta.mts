@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Presentation_context_identifier_list,
+    type Presentation_context_identifier_list,
     _decode_Presentation_context_identifier_list,
     _encode_Presentation_context_identifier_list,
 } from '../ISO8823-PRESENTATION/Presentation-context-identifier-list.ta.mjs';
 import {
-    User_data,
+    type User_data,
     _decode_User_data,
     _encode_User_data,
 } from '../ISO8823-PRESENTATION/User-data.ta.mjs';

@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { DialDigitsArgument, _decode_DialDigitsArgument, _encode_DialDigitsArgument } from "../CSTA-dial-digits/DialDigitsArgument.ta.mjs";
 
-import { DialDigitsResult, _decode_DialDigitsResult, _encode_DialDigitsResult } from "../CSTA-dial-digits/DialDigitsResult.ta.mjs";
+import { type DialDigitsResult, _decode_DialDigitsResult, _encode_DialDigitsResult } from "../CSTA-dial-digits/DialDigitsResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

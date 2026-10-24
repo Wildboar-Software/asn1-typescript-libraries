@@ -7,7 +7,7 @@ import {
     _encode_DomainParameters,
 } from "@wildboar/ansi-x9-42";
 import {
-    ECDomainParameters,
+    type ECDomainParameters,
     _decode_ECDomainParameters,
     _encode_ECDomainParameters,
 } from "@wildboar/ansi-x9-62";

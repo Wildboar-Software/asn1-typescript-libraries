@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    WeekMask_daysOfWeek,
+    type WeekMask_daysOfWeek,
     sunday,
     monday,
     tuesday,

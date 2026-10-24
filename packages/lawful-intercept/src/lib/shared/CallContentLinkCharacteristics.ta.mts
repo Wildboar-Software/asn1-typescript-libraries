@@ -7,11 +7,11 @@ import {
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CCLink_State, _decode_CCLink_State, _encode_CCLink_State, _enum_for_CCLink_State } from "./CCLink-State.ta.mjs";
+import { type CCLink_State, _decode_CCLink_State, _encode_CCLink_State, _enum_for_CCLink_State } from "./CCLink-State.ta.mjs";
 // export { CCLink_State, _enum_for_CCLink_State, CCLink_State_setUpInProcess /* IMPORTED_LONG_ENUMERATION_ITEM */, setUpInProcess /* IMPORTED_SHORT_ENUMERATION_ITEM */, CCLink_State_callActive /* IMPORTED_LONG_ENUMERATION_ITEM */, callActive /* IMPORTED_SHORT_ENUMERATION_ITEM */, CCLink_State_callReleased /* IMPORTED_LONG_ENUMERATION_ITEM */, callReleased /* IMPORTED_SHORT_ENUMERATION_ITEM */, CCLink_State_lack_of_resource /* IMPORTED_LONG_ENUMERATION_ITEM */, lack_of_resource /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CCLink_State, _encode_CCLink_State } from "./CCLink-State.ta.mjs";
-import { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "./TimeStamp.ta.mjs";
+import { type TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "./TimeStamp.ta.mjs";
 // export { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "./TimeStamp.ta.mjs";
-import { CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber } from "./CalledPartyNumber.ta.mjs";
+import { type CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber } from "./CalledPartyNumber.ta.mjs";
 // export { CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber } from "./CalledPartyNumber.ta.mjs";
 
 

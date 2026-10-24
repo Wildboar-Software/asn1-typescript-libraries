@@ -6,9 +6,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
+import { type TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
 import { NotificationMetadata, _decode_NotificationMetadata, _encode_NotificationMetadata } from "../RSPDefinitions/NotificationMetadata.ta.mjs";
-import { ProfileInstallationResultData_finalResult, _decode_ProfileInstallationResultData_finalResult, _encode_ProfileInstallationResultData_finalResult } from "../RSPDefinitions/ProfileInstallationResultData-finalResult.ta.mjs";
+import { type ProfileInstallationResultData_finalResult, _decode_ProfileInstallationResultData_finalResult, _encode_ProfileInstallationResultData_finalResult } from "../RSPDefinitions/ProfileInstallationResultData-finalResult.ta.mjs";
 
 
 /**

@@ -12,22 +12,22 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SubjectEDIMField,
+    type SubjectEDIMField,
     _decode_SubjectEDIMField,
     _encode_SubjectEDIMField,
 } from '../EDIMSInformationObjects/SubjectEDIMField.ta.mjs';
 import {
-    EDINOriginatorField,
+    type EDINOriginatorField,
     _decode_EDINOriginatorField,
     _encode_EDINOriginatorField,
 } from '../EDIMSInformationObjects/EDINOriginatorField.ta.mjs';
 import {
-    FirstRecipientField,
+    type FirstRecipientField,
     _decode_FirstRecipientField,
     _encode_FirstRecipientField,
 } from '../EDIMSInformationObjects/FirstRecipientField.ta.mjs';
 import {
-    NotificationTimeField,
+    type NotificationTimeField,
     _decode_NotificationTimeField,
     _encode_NotificationTimeField,
 } from '../EDIMSInformationObjects/NotificationTimeField.ta.mjs';
@@ -43,7 +43,7 @@ import {
     _encode_EDINInitiatorField,
 } from '../EDIMSInformationObjects/EDINInitiatorField.ta.mjs';
 import {
-    NotificationExtensionsField,
+    type NotificationExtensionsField,
     _decode_NotificationExtensionsField,
     _encode_NotificationExtensionsField,
 } from '../EDIMSInformationObjects/NotificationExtensionsField.ta.mjs';

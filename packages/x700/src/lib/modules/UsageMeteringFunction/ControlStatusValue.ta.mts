@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ControlStatus,
+    type ControlStatus,
     _decode_ControlStatus,
     _encode_ControlStatus,
 } from '@wildboar/attribute-asn1module';

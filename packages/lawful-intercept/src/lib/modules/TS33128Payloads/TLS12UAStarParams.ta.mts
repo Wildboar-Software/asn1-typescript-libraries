@@ -11,7 +11,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { TLSPRFAlgorithm, _decode_TLSPRFAlgorithm, _encode_TLSPRFAlgorithm, _enum_for_TLSPRFAlgorithm } from "../TS33128Payloads/TLSPRFAlgorithm.ta.mjs";
 // export { TLSPRFAlgorithm, _enum_for_TLSPRFAlgorithm, TLSPRFAlgorithm_rfc5246 /* IMPORTED_LONG_ENUMERATION_ITEM */, rfc5246 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TLSPRFAlgorithm, _encode_TLSPRFAlgorithm } from "../TS33128Payloads/TLSPRFAlgorithm.ta.mjs";
-import { TLSCipherSuite, _decode_TLSCipherSuite, _encode_TLSCipherSuite } from "../TS33128Payloads/TLSCipherSuite.ta.mjs";
+import { type TLSCipherSuite, _decode_TLSCipherSuite, _encode_TLSCipherSuite } from "../TS33128Payloads/TLSCipherSuite.ta.mjs";
 // export { TLSCipherSuite, _decode_TLSCipherSuite, _encode_TLSCipherSuite } from "../TS33128Payloads/TLSCipherSuite.ta.mjs";
 import { TLSCipherType, _decode_TLSCipherType, _encode_TLSCipherType, _enum_for_TLSCipherType } from "../TS33128Payloads/TLSCipherType.ta.mjs";
 // export { TLSCipherType, _enum_for_TLSCipherType, TLSCipherType_stream /* IMPORTED_LONG_ENUMERATION_ITEM */, stream /* IMPORTED_SHORT_ENUMERATION_ITEM */, TLSCipherType_block /* IMPORTED_LONG_ENUMERATION_ITEM */, block /* IMPORTED_SHORT_ENUMERATION_ITEM */, TLSCipherType_aead /* IMPORTED_LONG_ENUMERATION_ITEM */, aead /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TLSCipherType, _encode_TLSCipherType } from "../TS33128Payloads/TLSCipherType.ta.mjs";

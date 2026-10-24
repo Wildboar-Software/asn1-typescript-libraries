@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RevertInfo,
+    type RevertInfo,
     _decode_RevertInfo,
     _encode_RevertInfo,
 } from '../SWMF/RevertInfo.ta.mjs';

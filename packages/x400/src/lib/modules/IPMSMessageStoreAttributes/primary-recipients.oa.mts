@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    PrimaryRecipientsSubfield,
+    type PrimaryRecipientsSubfield,
     _decode_PrimaryRecipientsSubfield,
     _encode_PrimaryRecipientsSubfield,
 } from '../IPMSInformationObjects/PrimaryRecipientsSubfield.ta.mjs';

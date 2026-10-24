@@ -5,11 +5,11 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ISUP_parameters, _decode_ISUP_parameters, _encode_ISUP_parameters } from "./ISUP-parameters.ta.mjs";
+import { type ISUP_parameters, _decode_ISUP_parameters, _encode_ISUP_parameters } from "./ISUP-parameters.ta.mjs";
 // export { ISUP_parameters, _decode_ISUP_parameters, _encode_ISUP_parameters } from "./ISUP-parameters.ta.mjs";
-import { DSS1_parameters_codeset_0, _decode_DSS1_parameters_codeset_0, _encode_DSS1_parameters_codeset_0 } from "./DSS1-parameters-codeset-0.ta.mjs";
+import { type DSS1_parameters_codeset_0, _decode_DSS1_parameters_codeset_0, _encode_DSS1_parameters_codeset_0 } from "./DSS1-parameters-codeset-0.ta.mjs";
 // export { DSS1_parameters_codeset_0, _decode_DSS1_parameters_codeset_0, _encode_DSS1_parameters_codeset_0 } from "./DSS1-parameters-codeset-0.ta.mjs";
-import { MAP_parameters, _decode_MAP_parameters, _encode_MAP_parameters } from "./MAP-parameters.ta.mjs";
+import { type MAP_parameters, _decode_MAP_parameters, _encode_MAP_parameters } from "./MAP-parameters.ta.mjs";
 // export { MAP_parameters, _decode_MAP_parameters, _encode_MAP_parameters } from "./MAP-parameters.ta.mjs";
 
 

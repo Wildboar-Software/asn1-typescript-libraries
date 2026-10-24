@@ -8,9 +8,9 @@ import { InbandInfo, _decode_InbandInfo, _encode_InbandInfo } from "../IN-CS3-SC
 // export { InbandInfo, _decode_InbandInfo, _encode_InbandInfo } from "../IN-CS3-SCF-SRF-datatypes/InbandInfo.ta.mjs";
 import { Tone, _decode_Tone, _encode_Tone } from "../IN-CS3-SCF-SRF-datatypes/Tone.ta.mjs";
 // export { Tone, _decode_Tone, _encode_Tone } from "../IN-CS3-SCF-SRF-datatypes/Tone.ta.mjs";
-import { DisplayInformation, _decode_DisplayInformation, _encode_DisplayInformation } from "../IN-CS3-SSF-SCF-datatypes/DisplayInformation.ta.mjs";
+import { type DisplayInformation, _decode_DisplayInformation, _encode_DisplayInformation } from "../IN-CS3-SSF-SCF-datatypes/DisplayInformation.ta.mjs";
 // export { DisplayInformation, _decode_DisplayInformation, _encode_DisplayInformation } from "../IN-CS3-SSF-SCF-datatypes/DisplayInformation.ta.mjs";
-import { SDSSinformation, _decode_SDSSinformation, _encode_SDSSinformation } from "../IN-CS3-SSF-SCF-datatypes/SDSSinformation.ta.mjs";
+import { type SDSSinformation, _decode_SDSSinformation, _encode_SDSSinformation } from "../IN-CS3-SSF-SCF-datatypes/SDSSinformation.ta.mjs";
 // export { SDSSinformation, _decode_SDSSinformation, _encode_SDSSinformation } from "../IN-CS3-SSF-SCF-datatypes/SDSSinformation.ta.mjs";
 
 

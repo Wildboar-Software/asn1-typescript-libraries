@@ -17,7 +17,7 @@ import {
     _encode_TONotCreated_reason,
 } from '../Test-ASN1Module/TONotCreated-reason.ta.mjs';
 import {
-    AttributeList,
+    type AttributeList,
     _decode_AttributeList,
     _encode_AttributeList,
 } from '@wildboar/attribute-asn1module';

@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SupplementaryInformation,
+    type SupplementaryInformation,
     _decode_SupplementaryInformation,
     _encode_SupplementaryInformation,
 } from '../MTSAbstractService/SupplementaryInformation.ta.mjs';

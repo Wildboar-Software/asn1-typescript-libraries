@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ASN1Error,
-    OBJECT_IDENTIFIER
+    type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { tcg_kp_AdditionalPlatformAttributeCertificate } from "../PlatformCertificateProfileV2/tcg-kp-AdditionalPlatformAttributeCertificate.va.mjs";

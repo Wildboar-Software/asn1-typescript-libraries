@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ECCAlgorithm, _decode_ECCAlgorithm, _encode_ECCAlgorithm } from "../SEC1-v1-9/ECCAlgorithm.ta.mjs";
+import { type ECCAlgorithm, _decode_ECCAlgorithm, _encode_ECCAlgorithm } from "../SEC1-v1-9/ECCAlgorithm.ta.mjs";
 /**
  * @summary ECCAlgorithms
  * @description

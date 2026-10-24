@@ -6,12 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    BaseDistance,
+    type BaseDistance,
     _decode_BaseDistance,
     _encode_BaseDistance,
 } from "../CertificateExtensions/BaseDistance.ta.mjs";
 import {
-    GeneralName,
+    type GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";

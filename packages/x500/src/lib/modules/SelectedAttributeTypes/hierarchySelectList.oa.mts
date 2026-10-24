@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    HierarchySelections,
+    type HierarchySelections,
     _decode_HierarchySelections,
     _encode_HierarchySelections,
 } from "../DirectoryAbstractService/HierarchySelections.ta.mjs";

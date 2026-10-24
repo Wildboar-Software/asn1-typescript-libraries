@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { StopCDRTransmissionArgument, _decode_StopCDRTransmissionArgument, _encode_StopCDRTransmissionArgument } from "../CSTA-stop-call-detail-records/StopCDRTransmissionArgument.ta.mjs";
 
-import { StopCDRTransmissionResult, _decode_StopCDRTransmissionResult, _encode_StopCDRTransmissionResult } from "../CSTA-stop-call-detail-records/StopCDRTransmissionResult.ta.mjs";
+import { type StopCDRTransmissionResult, _decode_StopCDRTransmissionResult, _encode_StopCDRTransmissionResult } from "../CSTA-stop-call-detail-records/StopCDRTransmissionResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

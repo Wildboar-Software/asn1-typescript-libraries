@@ -14,11 +14,11 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { BiometricMethod, _decode_BiometricMethod, _encode_BiometricMethod } from "../TSM/BiometricMethod.ta.mjs";
 
-import { BioAPI_FMR, _decode_BioAPI_FMR, _encode_BioAPI_FMR } from "../BIP/BioAPI-FMR.ta.mjs";
+import { type BioAPI_FMR, _decode_BioAPI_FMR, _encode_BioAPI_FMR } from "../BIP/BioAPI-FMR.ta.mjs";
 
-import { Quality, _decode_Quality, _encode_Quality } from "../TSM/Quality.ta.mjs";
+import { type Quality, _decode_Quality, _encode_Quality } from "../TSM/Quality.ta.mjs";
 
-import { XtsmTemplate, _decode_XtsmTemplate, _encode_XtsmTemplate } from "../TSM/XtsmTemplate.ta.mjs";
+import { type XtsmTemplate, _decode_XtsmTemplate, _encode_XtsmTemplate } from "../TSM/XtsmTemplate.ta.mjs";
 
 
 

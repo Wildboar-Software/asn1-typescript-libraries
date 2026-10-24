@@ -16,7 +16,7 @@ import {
     _encode_IndependentTestResponse,
 } from '../Test-ASN1Module/IndependentTestResponse.ta.mjs';
 import {
-    TONotCreated,
+    type TONotCreated,
     _decode_TONotCreated,
     _encode_TONotCreated,
 } from '../Test-ASN1Module/TONotCreated.ta.mjs';

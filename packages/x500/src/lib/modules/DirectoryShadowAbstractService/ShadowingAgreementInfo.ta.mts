@@ -12,7 +12,7 @@ import {
     _encode_UnitOfReplication,
 } from "../DirectoryShadowAbstractService/UnitOfReplication.ta.mjs";
 import {
-    UpdateMode,
+    type UpdateMode,
     _decode_UpdateMode,
     _encode_UpdateMode,
 } from "../DirectoryShadowAbstractService/UpdateMode.ta.mjs";

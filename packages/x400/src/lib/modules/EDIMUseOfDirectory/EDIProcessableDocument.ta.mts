@@ -12,37 +12,37 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SyntaxVersion,
+    type SyntaxVersion,
     _decode_SyntaxVersion,
     _encode_SyntaxVersion,
 } from '../EDIMSInformationObjects/SyntaxVersion.ta.mjs';
 import {
-    SyntaxIdentifier,
+    type SyntaxIdentifier,
     _decode_SyntaxIdentifier,
     _encode_SyntaxIdentifier,
 } from '../EDIMSInformationObjects/SyntaxIdentifier.ta.mjs';
 import {
-    EDIMessageTypeFieldSubField,
+    type EDIMessageTypeFieldSubField,
     _decode_EDIMessageTypeFieldSubField,
     _encode_EDIMessageTypeFieldSubField,
 } from '../EDIMSInformationObjects/EDIMessageTypeFieldSubField.ta.mjs';
 import {
-    DocumentVersion,
+    type DocumentVersion,
     _decode_DocumentVersion,
     _encode_DocumentVersion,
 } from '../EDIMUseOfDirectory/DocumentVersion.ta.mjs';
 import {
-    DocumentRelease,
+    type DocumentRelease,
     _decode_DocumentRelease,
     _encode_DocumentRelease,
 } from '../EDIMUseOfDirectory/DocumentRelease.ta.mjs';
 import {
-    ControllingAgency,
+    type ControllingAgency,
     _decode_ControllingAgency,
     _encode_ControllingAgency,
 } from '../EDIMUseOfDirectory/ControllingAgency.ta.mjs';
 import {
-    AssociationAssignedCode,
+    type AssociationAssignedCode,
     _decode_AssociationAssignedCode,
     _encode_AssociationAssignedCode,
 } from '../EDIMUseOfDirectory/AssociationAssignedCode.ta.mjs';

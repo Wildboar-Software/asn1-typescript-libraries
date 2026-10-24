@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    DescriptionString,
+    type DescriptionString,
     _decode_DescriptionString,
     _encode_DescriptionString,
 } from '../IPMSHeadingExtensions/DescriptionString.ta.mjs';

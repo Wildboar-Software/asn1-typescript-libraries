@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_IpaeActivationResponse_ipaeActivationResult, _encode_IpaeActivationResponse_ipaeActivationResult, IpaeActivationResponse_ipaeActivationResult } from "../SGP32Definitions/IpaeActivationResponse-ipaeActivationResult.ta.mjs";
+import { _decode_IpaeActivationResponse_ipaeActivationResult, _encode_IpaeActivationResponse_ipaeActivationResult, type IpaeActivationResponse_ipaeActivationResult } from "../SGP32Definitions/IpaeActivationResponse-ipaeActivationResult.ta.mjs";
 
 
 /**

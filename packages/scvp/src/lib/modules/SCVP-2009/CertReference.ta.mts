@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  PKCReference,
+  type PKCReference,
   _decode_PKCReference,
   _encode_PKCReference,
 } from '../SCVP-2009/PKCReference.ta.mjs';
 import {
-  ACReference,
+  type ACReference,
   _decode_ACReference,
   _encode_ACReference,
 } from '../SCVP-2009/ACReference.ta.mjs';

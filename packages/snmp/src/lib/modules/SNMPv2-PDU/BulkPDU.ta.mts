@@ -12,7 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    VarBindList,
+    type VarBindList,
     _decode_VarBindList,
     _encode_VarBindList,
 } from "./VarBindList.ta.mjs";

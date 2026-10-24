@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SignatureStatus,
+    type SignatureStatus,
     signature_absent /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_SignatureStatus,
     _encode_SignatureStatus,

@@ -17,7 +17,7 @@ import {
 } from '@wildboar/rose';
 import type { ERROR } from '@wildboar/rose';
 import {
-  CMISFilter,
+  type CMISFilter,
   _decode_CMISFilter,
   _encode_CMISFilter,
 } from '../CMIP-1/CMISFilter.ta.mjs';

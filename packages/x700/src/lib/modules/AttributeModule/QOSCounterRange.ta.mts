@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    QOSErrorCounter,
+    type QOSErrorCounter,
     _decode_QOSErrorCounter,
     _encode_QOSErrorCounter,
 } from '../AttributeModule/QOSErrorCounter.ta.mjs';

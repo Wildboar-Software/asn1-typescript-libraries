@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SMS_Address_address_type, _decode_SMS_Address_address_type, _encode_SMS_Address_address_type } from "../SMRS/SMS-Address-address-type.ta.mjs";
-import { SMS_Address_numbering_plan, _decode_SMS_Address_numbering_plan, _encode_SMS_Address_numbering_plan } from "../SMRS/SMS-Address-numbering-plan.ta.mjs";
-import { SMS_Address_address_value, _decode_SMS_Address_address_value, _encode_SMS_Address_address_value } from "../SMRS/SMS-Address-address-value.ta.mjs";
+import { type SMS_Address_address_type, _decode_SMS_Address_address_type, _encode_SMS_Address_address_type } from "../SMRS/SMS-Address-address-type.ta.mjs";
+import { type SMS_Address_numbering_plan, _decode_SMS_Address_numbering_plan, _encode_SMS_Address_numbering_plan } from "../SMRS/SMS-Address-numbering-plan.ta.mjs";
+import { type SMS_Address_address_value, _decode_SMS_Address_address_value, _encode_SMS_Address_address_value } from "../SMRS/SMS-Address-address-value.ta.mjs";
 
 
 /**

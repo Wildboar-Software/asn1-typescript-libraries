@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MSNetworkCapability, _decode_MSNetworkCapability, _encode_MSNetworkCapability } from "../MAP-MS-DataTypes/MSNetworkCapability.ta.mjs";
-import { MSRadioAccessCapability, _decode_MSRadioAccessCapability, _encode_MSRadioAccessCapability } from "../MAP-MS-DataTypes/MSRadioAccessCapability.ta.mjs";
+import { type MSNetworkCapability, _decode_MSNetworkCapability, _encode_MSNetworkCapability } from "../MAP-MS-DataTypes/MSNetworkCapability.ta.mjs";
+import { type MSRadioAccessCapability, _decode_MSRadioAccessCapability, _encode_MSRadioAccessCapability } from "../MAP-MS-DataTypes/MSRadioAccessCapability.ta.mjs";
 
 
 /**

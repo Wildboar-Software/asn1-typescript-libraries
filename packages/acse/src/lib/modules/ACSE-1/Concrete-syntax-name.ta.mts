@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Transfer_syntax_name,
+  type Transfer_syntax_name,
   _decode_Transfer_syntax_name,
   _encode_Transfer_syntax_name,
 } from '../ACSE-1/Transfer-syntax-name.ta.mjs';

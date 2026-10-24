@@ -23,7 +23,7 @@ import {
     _encode_Heading,
 } from '../IPMSInformationObjects/Heading.ta.mjs';
 import {
-    AutoForwardComment,
+    type AutoForwardComment,
     _decode_AutoForwardComment,
     _encode_AutoForwardComment,
 } from '../IPMSInformationObjects/AutoForwardComment.ta.mjs';

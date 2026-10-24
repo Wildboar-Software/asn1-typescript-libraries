@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RefreshInformation, _decode_RefreshInformation, _encode_RefreshInformation } from "../DirectoryShadowAbstractService/RefreshInformation.ta.mjs";
+import { type RefreshInformation, _decode_RefreshInformation, _encode_RefreshInformation } from "../DirectoryShadowAbstractService/RefreshInformation.ta.mjs";
 // export { RefreshInformation, _decode_RefreshInformation, _encode_RefreshInformation } from "../DirectoryShadowAbstractService/RefreshInformation.ta.mjs";
 
 

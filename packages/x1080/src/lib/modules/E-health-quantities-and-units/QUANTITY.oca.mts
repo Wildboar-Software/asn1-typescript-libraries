@@ -3,7 +3,7 @@ import {
     type OBJECT_IDENTIFIER,
     type PrintableString,
     type UniversalString,
-    RELATIVE_OID_IRI,
+    type RELATIVE_OID_IRI,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -12,7 +12,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-    ENUMERATED,
+    type ENUMERATED,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import { type SYMBOLS } from '../E-health-quantities-and-units/SYMBOLS.oca.mjs';

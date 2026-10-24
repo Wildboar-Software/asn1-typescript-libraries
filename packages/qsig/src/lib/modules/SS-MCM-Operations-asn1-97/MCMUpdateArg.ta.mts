@@ -8,8 +8,8 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { PartyInfo, _decode_PartyInfo, _encode_PartyInfo } from "../SS-MCM-Operations-asn1-97/PartyInfo.ta.mjs";
 import { MessageType, _decode_MessageType, _encode_MessageType, _enum_for_MessageType } from "../SS-MCM-Operations-asn1-97/MessageType.ta.mjs";
-import { UpdateInfo, _decode_UpdateInfo, _encode_UpdateInfo } from "../SS-MCM-Operations-asn1-97/UpdateInfo.ta.mjs";
-import { MCMExtensions, _decode_MCMExtensions, _encode_MCMExtensions } from "../SS-MCM-Operations-asn1-97/MCMExtensions.ta.mjs";
+import { type UpdateInfo, _decode_UpdateInfo, _encode_UpdateInfo } from "../SS-MCM-Operations-asn1-97/UpdateInfo.ta.mjs";
+import { type MCMExtensions, _decode_MCMExtensions, _encode_MCMExtensions } from "../SS-MCM-Operations-asn1-97/MCMExtensions.ta.mjs";
 
 /**
  * @summary MCMUpdateArg

@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ApplicationContext,
+    type ApplicationContext,
     _decode_ApplicationContext,
     _encode_ApplicationContext,
 } from '../MhsMTAAsn1Module/ApplicationContext.ta.mjs';

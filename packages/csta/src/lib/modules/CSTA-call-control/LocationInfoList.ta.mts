@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import { type SEQUENCE, ASN1Element as _Element } from "@wildboar/asn1";
-import { LocationInfo, _decode_LocationInfo, _encode_LocationInfo } from "../CSTA-call-control/LocationInfo.ta.mjs";
+import { type LocationInfo, _decode_LocationInfo, _encode_LocationInfo } from "../CSTA-call-control/LocationInfo.ta.mjs";
 
 
 

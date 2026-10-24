@@ -4,9 +4,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Integer4, _decode_Integer4, _encode_Integer4 } from "../IN-common-datatypes/Integer4.ta.mjs";
+import { type Integer4, _decode_Integer4, _encode_Integer4 } from "../IN-common-datatypes/Integer4.ta.mjs";
 // export { Integer4, _decode_Integer4, _encode_Integer4 } from "../IN-common-datatypes/Integer4.ta.mjs";
-import { Interval, _decode_Interval, _encode_Interval } from "../IN-SSF-SCF-datatypes/Interval.ta.mjs";
+import { type Interval, _decode_Interval, _encode_Interval } from "../IN-SSF-SCF-datatypes/Interval.ta.mjs";
 // export { Interval, _decode_Interval, _encode_Interval } from "../IN-SSF-SCF-datatypes/Interval.ta.mjs";
 
 

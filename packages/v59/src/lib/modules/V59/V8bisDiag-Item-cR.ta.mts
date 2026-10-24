@@ -10,9 +10,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { V8bisSignalType, _decode_V8bisSignalType, _encode_V8bisSignalType } from "../V59/V8bisSignalType.ta.mjs";
+import { type V8bisSignalType, _decode_V8bisSignalType, _encode_V8bisSignalType } from "../V59/V8bisSignalType.ta.mjs";
 
-import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
+import { type V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
 
 /**
  * @summary V8bisDiag_Item_cR

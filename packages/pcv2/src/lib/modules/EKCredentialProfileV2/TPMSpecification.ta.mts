@@ -5,7 +5,7 @@ import {
     ASN1SizeError,
     ASN1TagClass as _TagClass,
     type INTEGER,
-    UTF8String
+    type UTF8String
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { strmax } from "../EKCredentialProfileV2/strmax.va.mjs";

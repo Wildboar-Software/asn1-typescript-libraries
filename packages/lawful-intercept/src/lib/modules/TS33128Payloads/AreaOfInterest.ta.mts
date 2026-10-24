@@ -5,11 +5,11 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AreaOfInterestTAIList, _decode_AreaOfInterestTAIList, _encode_AreaOfInterestTAIList } from "../TS33128Payloads/AreaOfInterestTAIList.ta.mjs";
+import { type AreaOfInterestTAIList, _decode_AreaOfInterestTAIList, _encode_AreaOfInterestTAIList } from "../TS33128Payloads/AreaOfInterestTAIList.ta.mjs";
 // export { AreaOfInterestTAIList, _decode_AreaOfInterestTAIList, _encode_AreaOfInterestTAIList } from "../TS33128Payloads/AreaOfInterestTAIList.ta.mjs";
-import { AreaOfInterestCellList, _decode_AreaOfInterestCellList, _encode_AreaOfInterestCellList } from "../TS33128Payloads/AreaOfInterestCellList.ta.mjs";
+import { type AreaOfInterestCellList, _decode_AreaOfInterestCellList, _encode_AreaOfInterestCellList } from "../TS33128Payloads/AreaOfInterestCellList.ta.mjs";
 // export { AreaOfInterestCellList, _decode_AreaOfInterestCellList, _encode_AreaOfInterestCellList } from "../TS33128Payloads/AreaOfInterestCellList.ta.mjs";
-import { AreaOfInterestRANNodeList, _decode_AreaOfInterestRANNodeList, _encode_AreaOfInterestRANNodeList } from "../TS33128Payloads/AreaOfInterestRANNodeList.ta.mjs";
+import { type AreaOfInterestRANNodeList, _decode_AreaOfInterestRANNodeList, _encode_AreaOfInterestRANNodeList } from "../TS33128Payloads/AreaOfInterestRANNodeList.ta.mjs";
 // export { AreaOfInterestRANNodeList, _decode_AreaOfInterestRANNodeList, _encode_AreaOfInterestRANNodeList } from "../TS33128Payloads/AreaOfInterestRANNodeList.ta.mjs";
 
 

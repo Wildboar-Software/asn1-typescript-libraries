@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    ReportLocation,
+    type ReportLocation,
     _decode_ReportLocation,
     _encode_ReportLocation,
 } from '../MSGeneralAttributeTypes/ReportLocation.ta.mjs';

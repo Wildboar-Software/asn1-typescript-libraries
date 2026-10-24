@@ -11,10 +11,10 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ServiceSupportOptions, _decode_ServiceSupportOptions, _encode_ServiceSupportOptions } from "../MMS-Object-Module-1/ServiceSupportOptions.ta.mjs";
-import { ParameterSupportOptions, _decode_ParameterSupportOptions, _encode_ParameterSupportOptions } from "../MMS-Object-Module-1/ParameterSupportOptions.ta.mjs";
-import { NullableAdditionalSupportOptions, _decode_NullableAdditionalSupportOptions, _encode_NullableAdditionalSupportOptions } from "../MMS-SCI-Module-1/NullableAdditionalSupportOptions.ta.mjs";
-import { NullableAdditionalCBBOptions, _decode_NullableAdditionalCBBOptions, _encode_NullableAdditionalCBBOptions } from "../MMS-SCI-Module-1/NullableAdditionalCBBOptions.ta.mjs";
+import { type ServiceSupportOptions, _decode_ServiceSupportOptions, _encode_ServiceSupportOptions } from "../MMS-Object-Module-1/ServiceSupportOptions.ta.mjs";
+import { type ParameterSupportOptions, _decode_ParameterSupportOptions, _encode_ParameterSupportOptions } from "../MMS-Object-Module-1/ParameterSupportOptions.ta.mjs";
+import { type NullableAdditionalSupportOptions, _decode_NullableAdditionalSupportOptions, _encode_NullableAdditionalSupportOptions } from "../MMS-SCI-Module-1/NullableAdditionalSupportOptions.ta.mjs";
+import { type NullableAdditionalCBBOptions, _decode_NullableAdditionalCBBOptions, _encode_NullableAdditionalCBBOptions } from "../MMS-SCI-Module-1/NullableAdditionalCBBOptions.ta.mjs";
 import { GeneralManagementParameters, _decode_GeneralManagementParameters, _encode_GeneralManagementParameters } from "../MMS-SCI-Module-1/GeneralManagementParameters.ta.mjs";
 import { VMDSupportParameters, _decode_VMDSupportParameters, _encode_VMDSupportParameters } from "../MMS-SCI-Module-1/VMDSupportParameters.ta.mjs";
 import { DomainManagementParameters, _decode_DomainManagementParameters, _encode_DomainManagementParameters } from "../MMS-SCI-Module-1/DomainManagementParameters.ta.mjs";

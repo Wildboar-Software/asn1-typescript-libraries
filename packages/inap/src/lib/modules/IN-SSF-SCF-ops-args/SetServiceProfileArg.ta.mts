@@ -7,7 +7,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { INprofile, _decode_INprofile, _encode_INprofile } from "../IN-SSF-SCF-datatypes/INprofile.ta.mjs";
 // export { INprofile, _decode_INprofile, _encode_INprofile } from "../IN-SSF-SCF-datatypes/INprofile.ta.mjs";
-import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
 // export { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
 
 

@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AccessType, _decode_AccessType, _encode_AccessType, _enum_for_AccessType } from "../GCSEHI2Operations/AccessType.ta.mjs";
+import { type AccessType, _decode_AccessType, _encode_AccessType, _enum_for_AccessType } from "../GCSEHI2Operations/AccessType.ta.mjs";
 // export { AccessType, _enum_for_AccessType, AccessType_ePS_Unicast /* IMPORTED_LONG_ENUMERATION_ITEM */, ePS_Unicast /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_ePS_Multicast /* IMPORTED_LONG_ENUMERATION_ITEM */, ePS_Multicast /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AccessType, _encode_AccessType } from "../GCSEHI2Operations/AccessType.ta.mjs";
-import { AccessID, _decode_AccessID, _encode_AccessID } from "../GCSEHI2Operations/AccessID.ta.mjs";
+import { type AccessID, _decode_AccessID, _encode_AccessID } from "../GCSEHI2Operations/AccessID.ta.mjs";
 // export { AccessID, _decode_AccessID, _encode_AccessID } from "../GCSEHI2Operations/AccessID.ta.mjs";
 
 

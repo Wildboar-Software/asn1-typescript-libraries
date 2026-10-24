@@ -14,7 +14,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    BindProblem,
+    type BindProblem,
     _enum_for_BindProblem,
     _decode_BindProblem,
     _encode_BindProblem,

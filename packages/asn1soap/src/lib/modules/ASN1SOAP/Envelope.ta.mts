@@ -10,9 +10,9 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
-import { Header, _decode_Header, _encode_Header } from '../ASN1SOAP/Header.ta.mjs';
+import { type Header, _decode_Header, _encode_Header } from '../ASN1SOAP/Header.ta.mjs';
 import {
-  Envelope_body_or_fault,
+  type Envelope_body_or_fault,
   _decode_Envelope_body_or_fault,
   _encode_Envelope_body_or_fault,
 } from '../ASN1SOAP/Envelope-body-or-fault.ta.mjs';

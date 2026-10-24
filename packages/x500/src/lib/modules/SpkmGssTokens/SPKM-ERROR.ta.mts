@@ -16,7 +16,7 @@ import {
     _encode_ERROR_TOKEN,
 } from "../SpkmGssTokens/ERROR-TOKEN.ta.mjs";
 import {
-    Integrity,
+    type Integrity,
     _decode_Integrity,
     _encode_Integrity,
 } from "../SpkmGssTokens/Integrity.ta.mjs";

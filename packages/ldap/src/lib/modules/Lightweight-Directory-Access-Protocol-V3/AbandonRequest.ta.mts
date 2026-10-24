@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  MessageID,
+  type MessageID,
   _decode_MessageID,
   _encode_MessageID,
 } from '../Lightweight-Directory-Access-Protocol-V3/MessageID.ta.mjs';

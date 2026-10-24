@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -27,7 +27,7 @@ import {
     _encode_ProtectionStatusR1_Item_forcedSwitch,
 } from '../M3100ASN1Module3/ProtectionStatusR1-Item-forcedSwitch.ta.mjs';
 import {
-    ProtectionStatusR1_Item_lockout,
+    type ProtectionStatusR1_Item_lockout,
     _decode_ProtectionStatusR1_Item_lockout,
     _encode_ProtectionStatusR1_Item_lockout,
 } from '../M3100ASN1Module3/ProtectionStatusR1-Item-lockout.ta.mjs';

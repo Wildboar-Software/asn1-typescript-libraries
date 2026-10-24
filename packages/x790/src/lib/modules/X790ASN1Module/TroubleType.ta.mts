@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    TroubleType_number,
+    type TroubleType_number,
     noDialToneGroup,
     noDialTone,
     slowDialTone,

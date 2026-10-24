@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BRANCH_IDENTIFIER_initiators_name,
+  type BRANCH_IDENTIFIER_initiators_name,
   _decode_BRANCH_IDENTIFIER_initiators_name,
   _encode_BRANCH_IDENTIFIER_initiators_name,
 } from '../CCR/BRANCH-IDENTIFIER-initiators-name.ta.mjs';
 import {
-  BRANCH_IDENTIFIER_branch_suffix,
+  type BRANCH_IDENTIFIER_branch_suffix,
   _decode_BRANCH_IDENTIFIER_branch_suffix,
   _encode_BRANCH_IDENTIFIER_branch_suffix,
 } from '../CCR/BRANCH-IDENTIFIER-branch-suffix.ta.mjs';

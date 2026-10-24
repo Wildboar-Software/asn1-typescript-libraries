@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CS_AlterEventEnrollment_Request_changeDisplay, _decode_CS_AlterEventEnrollment_Request_changeDisplay, _encode_CS_AlterEventEnrollment_Request_changeDisplay } from "../ISO-9506-MMS-1/CS-AlterEventEnrollment-Request-changeDisplay.ta.mjs";
+import { type CS_AlterEventEnrollment_Request_changeDisplay, _decode_CS_AlterEventEnrollment_Request_changeDisplay, _encode_CS_AlterEventEnrollment_Request_changeDisplay } from "../ISO-9506-MMS-1/CS-AlterEventEnrollment-Request-changeDisplay.ta.mjs";
 
 
 /**

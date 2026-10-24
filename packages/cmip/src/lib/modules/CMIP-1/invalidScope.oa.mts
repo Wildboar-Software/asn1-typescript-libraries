@@ -16,7 +16,7 @@ import {
   _encode_Code,
 } from '@wildboar/rose';
 import type { ERROR } from '@wildboar/rose';
-import { Scope, _decode_Scope, _encode_Scope } from '../CMIP-1/Scope.ta.mjs';
+import { type Scope, _decode_Scope, _encode_Scope } from '../CMIP-1/Scope.ta.mjs';
 
 /**
  * @summary invalidScope

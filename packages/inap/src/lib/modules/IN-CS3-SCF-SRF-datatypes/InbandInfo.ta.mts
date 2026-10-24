@@ -6,9 +6,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MessageID, _decode_MessageID, _encode_MessageID } from "../IN-CS3-SCF-SRF-datatypes/MessageID.ta.mjs";
+import { type MessageID, _decode_MessageID, _encode_MessageID } from "../IN-CS3-SCF-SRF-datatypes/MessageID.ta.mjs";
 // export { MessageID, _decode_MessageID, _encode_MessageID } from "../IN-CS3-SCF-SRF-datatypes/MessageID.ta.mjs";
-import { Language, _decode_Language, _encode_Language } from "../IN-CS3-SCF-SRF-datatypes/Language.ta.mjs";
+import { type Language, _decode_Language, _encode_Language } from "../IN-CS3-SCF-SRF-datatypes/Language.ta.mjs";
 // export { Language, _decode_Language, _encode_Language } from "../IN-CS3-SCF-SRF-datatypes/Language.ta.mjs";
 
 

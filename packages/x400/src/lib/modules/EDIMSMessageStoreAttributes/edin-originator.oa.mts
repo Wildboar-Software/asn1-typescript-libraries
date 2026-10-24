@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    EDINOriginatorField,
+    type EDINOriginatorField,
     _decode_EDINOriginatorField,
     _encode_EDINOriginatorField,
 } from '../EDIMSInformationObjects/EDINOriginatorField.ta.mjs';

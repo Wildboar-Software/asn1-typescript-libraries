@@ -35,7 +35,7 @@ import {
 import type {
     Name,
 } from "../../src/lib/modules/InformationFramework/Name.ta.mjs";
-import { evaluateFilter, EvaluateFilterSettings } from "../../src/lib/utils/evaluateFilter.mjs";
+import { evaluateFilter, type EvaluateFilterSettings } from "../../src/lib/utils/evaluateFilter.mjs";
 import type EqualityMatcher from "../../src/lib/types/EqualityMatcher.mjs";
 import type OrderingMatcher from "../../src/lib/types/OrderingMatcher.mjs";
 import type SubstringsMatcher from "../../src/lib/types/SubstringsMatcher.mjs";

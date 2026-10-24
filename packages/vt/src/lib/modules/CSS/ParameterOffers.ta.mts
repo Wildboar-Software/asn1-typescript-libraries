@@ -11,13 +11,13 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ParameterOffers_typeIdentifier_Item, _decode_ParameterOffers_typeIdentifier_Item, _encode_ParameterOffers_typeIdentifier_Item } from "../CSS/ParameterOffers-typeIdentifier-Item.ta.mjs";
-import { AccessRuleOffer, _decode_AccessRuleOffer, _encode_AccessRuleOffer } from "../CSS/AccessRuleOffer.ta.mjs";
-import { ParameterOffers_trigger, _decode_ParameterOffers_trigger, _encode_ParameterOffers_trigger } from "../CSS/ParameterOffers-trigger.ta.mjs";
+import { type ParameterOffers_typeIdentifier_Item, _decode_ParameterOffers_typeIdentifier_Item, _encode_ParameterOffers_typeIdentifier_Item } from "../CSS/ParameterOffers-typeIdentifier-Item.ta.mjs";
+import { type AccessRuleOffer, _decode_AccessRuleOffer, _encode_AccessRuleOffer } from "../CSS/AccessRuleOffer.ta.mjs";
+import { type ParameterOffers_trigger, _decode_ParameterOffers_trigger, _encode_ParameterOffers_trigger } from "../CSS/ParameterOffers-trigger.ta.mjs";
 import { _decode_IntegerOffer, _encode_IntegerOffer, type IntegerOffer } from "../G/IntegerOffer.ta.mjs";
-import { ParameterOffers_category, _decode_ParameterOffers_category, _encode_ParameterOffers_category } from "../CSS/ParameterOffers-category.ta.mjs";
+import { type ParameterOffers_category, _decode_ParameterOffers_category, _encode_ParameterOffers_category } from "../CSS/ParameterOffers-category.ta.mjs";
 import { _decode_RepertoireAssignment, _encode_RepertoireAssignment, RepertoireAssignment } from "../CDS/RepertoireAssignment.ta.mjs";
-import { ParameterOffers_priority, _decode_ParameterOffers_priority, _encode_ParameterOffers_priority } from "../CSS/ParameterOffers-priority.ta.mjs";
+import { type ParameterOffers_priority, _decode_ParameterOffers_priority, _encode_ParameterOffers_priority } from "../CSS/ParameterOffers-priority.ta.mjs";
 import { ParameterOffers_structure, _decode_ParameterOffers_structure, _encode_ParameterOffers_structure } from "../CSS/ParameterOffers-structure.ta.mjs";
 import { ElementParamOffer, _decode_ElementParamOffer, _encode_ElementParamOffer } from "../CSS/ElementParamOffer.ta.mjs";
 

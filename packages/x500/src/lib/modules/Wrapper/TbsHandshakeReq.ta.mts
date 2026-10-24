@@ -17,29 +17,29 @@ import {
     _decode_AlgorithmWithInvoke,
     _encode_AlgorithmWithInvoke,
 } from "@wildboar/pki-stub";
-import { AssoID, _decode_AssoID, _encode_AssoID } from "../Wrapper/AssoID.ta.mjs";
+import { type AssoID, _decode_AssoID, _encode_AssoID } from "../Wrapper/AssoID.ta.mjs";
 import {
-    DER_AttributeCertificate,
+    type DER_AttributeCertificate,
     _decode_DER_AttributeCertificate,
     _encode_DER_AttributeCertificate,
 } from "../Wrapper/DER-AttributeCertificate.ta.mjs";
 import {
-    DER_PkiPath,
+    type DER_PkiPath,
     _decode_DER_PkiPath,
     _encode_DER_PkiPath,
 } from "../Wrapper/DER-PkiPath.ta.mjs";
 import {
-    TbsHandshakeReq_encr_mode,
+    type TbsHandshakeReq_encr_mode,
     _decode_TbsHandshakeReq_encr_mode,
     _encode_TbsHandshakeReq_encr_mode,
 } from "../Wrapper/TbsHandshakeReq-encr-mode.ta.mjs";
 import {
-    TimeStamp,
+    type TimeStamp,
     _decode_TimeStamp,
     _encode_TimeStamp,
 } from "../Wrapper/TimeStamp.ta.mjs";
 import {
-    Version,
+    type Version,
     Version_v1 /* IMPORTED_LONG_NAMED_BIT */,
     _decode_Version,
     _encode_Version,

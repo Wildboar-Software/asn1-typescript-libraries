@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AvailabilityStatus,
+    type AvailabilityStatus,
     _decode_AvailabilityStatus,
     _encode_AvailabilityStatus,
 } from '@wildboar/attribute-asn1module';

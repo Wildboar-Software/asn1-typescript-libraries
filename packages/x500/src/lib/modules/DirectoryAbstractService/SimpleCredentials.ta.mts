@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    SimpleCredentials_password,
+    type SimpleCredentials_password,
     _decode_SimpleCredentials_password,
     _encode_SimpleCredentials_password,
 } from "../DirectoryAbstractService/SimpleCredentials-password.ta.mjs";
@@ -16,7 +16,7 @@ import {
     _encode_SimpleCredentials_validity,
 } from "../DirectoryAbstractService/SimpleCredentials-validity.ta.mjs";
 import {
-    DistinguishedName,
+    type DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";

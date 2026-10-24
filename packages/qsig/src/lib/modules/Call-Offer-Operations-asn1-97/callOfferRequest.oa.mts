@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-import { DummyArg, _decode_DummyArg, _encode_DummyArg } from "../Call-Offer-Operations-asn1-97/DummyArg.ta.mjs";
-import { DummyRes, _decode_DummyRes, _encode_DummyRes } from "../Call-Offer-Operations-asn1-97/DummyRes.ta.mjs";
+import { type DummyArg, _decode_DummyArg, _encode_DummyArg } from "../Call-Offer-Operations-asn1-97/DummyArg.ta.mjs";
+import { type DummyRes, _decode_DummyRes, _encode_DummyRes } from "../Call-Offer-Operations-asn1-97/DummyRes.ta.mjs";
 import { notAvailable } from "../General-Error-List/notAvailable.oa.mjs";
 import { notBusy } from "../Call-Offer-Operations-asn1-97/notBusy.oa.mjs";
 import { temporarilyUnavailable } from "../Call-Offer-Operations-asn1-97/temporarilyUnavailable.oa.mjs";

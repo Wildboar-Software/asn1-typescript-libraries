@@ -6,7 +6,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RANUES1APID, _decode_RANUES1APID, _encode_RANUES1APID } from "../TS33128Payloads/RANUES1APID.ta.mjs";
+import { type RANUES1APID, _decode_RANUES1APID, _encode_RANUES1APID } from "../TS33128Payloads/RANUES1APID.ta.mjs";
 // export { RANUES1APID, _decode_RANUES1APID, _encode_RANUES1APID } from "../TS33128Payloads/RANUES1APID.ta.mjs";
 import { BBFTunnelInformation, _decode_BBFTunnelInformation, _encode_BBFTunnelInformation } from "../TS33128Payloads/BBFTunnelInformation.ta.mjs";
 // export { BBFTunnelInformation, _decode_BBFTunnelInformation, _encode_BBFTunnelInformation } from "../TS33128Payloads/BBFTunnelInformation.ta.mjs";

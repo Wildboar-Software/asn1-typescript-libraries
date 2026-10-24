@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { ASN1Element as _Element, GeneralizedTime } from "@wildboar/asn1";
+import { ASN1Element as _Element, type GeneralizedTime } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    TimeStampToken,
+    type TimeStampToken,
     _decode_TimeStampToken,
     _encode_TimeStampToken,
 } from "../TrustedTimeStamp/TimeStampToken.ta.mjs";

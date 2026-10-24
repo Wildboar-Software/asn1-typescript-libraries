@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    EDINotificationSecurity,
+    type EDINotificationSecurity,
     _decode_EDINotificationSecurity,
     _encode_EDINotificationSecurity,
 } from '../EDIMSInformationObjects/EDINotificationSecurity.ta.mjs';

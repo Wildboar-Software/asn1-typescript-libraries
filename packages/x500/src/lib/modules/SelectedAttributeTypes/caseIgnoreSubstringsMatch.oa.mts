@@ -3,7 +3,7 @@ import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mj
 import { id_mr_caseIgnoreSubstringsMatch } from "../SelectedAttributeTypes/id-mr-caseIgnoreSubstringsMatch.va.mjs";
 import { substringAssertion } from "../SelectedAttributeTypes/substringAssertion.oa.mjs";
 import {
-    SubstringAssertion,
+    type SubstringAssertion,
     _decode_SubstringAssertion,
     _encode_SubstringAssertion,
 } from "../SelectedAttributeTypes/SubstringAssertion.ta.mjs";

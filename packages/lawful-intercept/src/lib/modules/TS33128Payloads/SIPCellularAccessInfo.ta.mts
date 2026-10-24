@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SIPAccessInfo, _decode_SIPAccessInfo, _encode_SIPAccessInfo } from "../TS33128Payloads/SIPAccessInfo.ta.mjs";
+import { type SIPAccessInfo, _decode_SIPAccessInfo, _encode_SIPAccessInfo } from "../TS33128Payloads/SIPAccessInfo.ta.mjs";
 // export { SIPAccessInfo, _decode_SIPAccessInfo, _encode_SIPAccessInfo } from "../TS33128Payloads/SIPAccessInfo.ta.mjs";
-import { SIPCNICellInfoAge, _decode_SIPCNICellInfoAge, _encode_SIPCNICellInfoAge } from "../TS33128Payloads/SIPCNICellInfoAge.ta.mjs";
+import { type SIPCNICellInfoAge, _decode_SIPCNICellInfoAge, _encode_SIPCNICellInfoAge } from "../TS33128Payloads/SIPCNICellInfoAge.ta.mjs";
 // export { SIPCNICellInfoAge, _decode_SIPCNICellInfoAge, _encode_SIPCNICellInfoAge } from "../TS33128Payloads/SIPCNICellInfoAge.ta.mjs";
 
 

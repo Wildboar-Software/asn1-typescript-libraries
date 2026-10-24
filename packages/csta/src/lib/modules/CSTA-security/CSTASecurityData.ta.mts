@@ -4,14 +4,14 @@ import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
     type INTEGER,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { TimeInfo, _decode_TimeInfo, _encode_TimeInfo } from "../CSTA-security/TimeInfo.ta.mjs";
+import { type TimeInfo, _decode_TimeInfo, _encode_TimeInfo } from "../CSTA-security/TimeInfo.ta.mjs";
 
-import { SecurityInfo, _decode_SecurityInfo, _encode_SecurityInfo } from "../CSTA-security/SecurityInfo.ta.mjs";
+import { type SecurityInfo, _decode_SecurityInfo, _encode_SecurityInfo } from "../CSTA-security/SecurityInfo.ta.mjs";
 
 
 

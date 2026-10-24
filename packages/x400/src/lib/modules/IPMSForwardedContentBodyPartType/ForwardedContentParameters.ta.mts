@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    MessageDeliveryTime,
+    type MessageDeliveryTime,
     _decode_MessageDeliveryTime,
     _encode_MessageDeliveryTime,
 } from '../MTSAbstractService/MessageDeliveryTime.ta.mjs';
@@ -22,7 +22,7 @@ import {
     _encode_OtherMessageDeliveryFields,
 } from '../MTSAbstractService/OtherMessageDeliveryFields.ta.mjs';
 import {
-    MessageDeliveryIdentifier,
+    type MessageDeliveryIdentifier,
     _decode_MessageDeliveryIdentifier,
     _encode_MessageDeliveryIdentifier,
 } from '../MTSAbstractService/MessageDeliveryIdentifier.ta.mjs';

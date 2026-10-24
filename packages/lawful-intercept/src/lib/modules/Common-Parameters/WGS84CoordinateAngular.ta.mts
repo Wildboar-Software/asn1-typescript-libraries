@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { WGS84LatitudeAngular, _decode_WGS84LatitudeAngular, _encode_WGS84LatitudeAngular } from "../Common-Parameters/WGS84LatitudeAngular.ta.mjs";
+import { type WGS84LatitudeAngular, _decode_WGS84LatitudeAngular, _encode_WGS84LatitudeAngular } from "../Common-Parameters/WGS84LatitudeAngular.ta.mjs";
 // export { WGS84LatitudeAngular, _decode_WGS84LatitudeAngular, _encode_WGS84LatitudeAngular } from "../Common-Parameters/WGS84LatitudeAngular.ta.mjs";
-import { WGS84LongitudeAngular, _decode_WGS84LongitudeAngular, _encode_WGS84LongitudeAngular } from "../Common-Parameters/WGS84LongitudeAngular.ta.mjs";
+import { type WGS84LongitudeAngular, _decode_WGS84LongitudeAngular, _encode_WGS84LongitudeAngular } from "../Common-Parameters/WGS84LongitudeAngular.ta.mjs";
 // export { WGS84LongitudeAngular, _decode_WGS84LongitudeAngular, _encode_WGS84LongitudeAngular } from "../Common-Parameters/WGS84LongitudeAngular.ta.mjs";
 
 

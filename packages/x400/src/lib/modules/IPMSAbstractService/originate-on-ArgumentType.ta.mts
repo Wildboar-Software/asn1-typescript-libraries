@@ -15,7 +15,7 @@ import {
     _decode_MessageSubmissionEnvelope,
     _encode_MessageSubmissionEnvelope,
 } from '../MTSAbstractService/MessageSubmissionEnvelope.ta.mjs';
-import { ON, _decode_ON, _encode_ON } from '../IPMSInformationObjects/ON.ta.mjs';
+import { type ON, _decode_ON, _encode_ON } from '../IPMSInformationObjects/ON.ta.mjs';
 /**
  * @summary originate_on_ArgumentType
  * @description

@@ -3,17 +3,17 @@
 import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
-import { ConnectionList_Item_endpoint, _decode_ConnectionList_Item_endpoint, _encode_ConnectionList_Item_endpoint } from "../CSTA-connection-states/ConnectionList-Item-endpoint.ta.mjs";
+import { type ConnectionList_Item_endpoint, _decode_ConnectionList_Item_endpoint, _encode_ConnectionList_Item_endpoint } from "../CSTA-connection-states/ConnectionList-Item-endpoint.ta.mjs";
 
 import {
-    ConnectionList_Item_associatedNID,
+    type ConnectionList_Item_associatedNID,
     _decode_ConnectionList_Item_associatedNID,
     _encode_ConnectionList_Item_associatedNID
 } from "../CSTA-connection-states/ConnectionList-Item-associatedNID.ta.mjs";

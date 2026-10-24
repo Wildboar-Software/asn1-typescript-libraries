@@ -3,8 +3,8 @@
 import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     type IA5String,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
@@ -26,7 +26,7 @@ import {
     _encode_NamedDeviceTypes
 } from "../CSTA-capability-exchange/NamedDeviceTypes.ta.mjs";
 
-import { DeviceAttributes, _decode_DeviceAttributes, _encode_DeviceAttributes } from "../CSTA-switching-function-devices/DeviceAttributes.ta.mjs";
+import { type DeviceAttributes, _decode_DeviceAttributes, _encode_DeviceAttributes } from "../CSTA-switching-function-devices/DeviceAttributes.ta.mjs";
 
 
 

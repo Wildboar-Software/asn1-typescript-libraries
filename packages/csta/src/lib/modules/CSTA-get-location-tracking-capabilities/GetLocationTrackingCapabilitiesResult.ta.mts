@@ -5,9 +5,9 @@ import {
     type OPTIONAL,
     type BOOLEAN,
     type INTEGER,
-    ENUMERATED,
-    SEQUENCE,
-    SET,
+    type ENUMERATED,
+    type SEQUENCE,
+    type SET,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";

@@ -6,7 +6,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Currency, _decode_Currency, _encode_Currency } from "../PKIS/Currency.ta.mjs";
+import { type Currency, _decode_Currency, _encode_Currency } from "../PKIS/Currency.ta.mjs";
 
 
 /**

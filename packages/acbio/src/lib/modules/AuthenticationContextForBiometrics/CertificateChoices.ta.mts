@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Certificate,
+    type Certificate,
     _decode_Certificate,
     _encode_Certificate,
 } from '@wildboar/x500/AuthenticationFramework';
 import {
-    AttributeCertificateV2,
+    type AttributeCertificateV2,
     _decode_AttributeCertificateV2,
     _encode_AttributeCertificateV2,
 } from '../AuthenticationContextForBiometrics/AttributeCertificateV2.ta.mjs';

@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RegistrationProblem,
+    type RegistrationProblem,
     _enum_for_RegistrationProblem,
     _decode_RegistrationProblem,
     _encode_RegistrationProblem,

@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RelatedObjectInstance,
+    type RelatedObjectInstance,
     _decode_RelatedObjectInstance,
     _encode_RelatedObjectInstance,
 } from '../ASN1DefinedTypesModule/RelatedObjectInstance.ta.mjs';

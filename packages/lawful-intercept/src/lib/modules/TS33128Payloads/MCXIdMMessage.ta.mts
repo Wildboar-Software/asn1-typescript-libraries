@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MCID, _decode_MCID, _encode_MCID } from "../TS33128Payloads/MCID.ta.mjs";
+import { type MCID, _decode_MCID, _encode_MCID } from "../TS33128Payloads/MCID.ta.mjs";
 // export { MCID, _decode_MCID, _encode_MCID } from "../TS33128Payloads/MCID.ta.mjs";
-import { MCServiceID, _decode_MCServiceID, _encode_MCServiceID } from "../TS33128Payloads/MCServiceID.ta.mjs";
+import { type MCServiceID, _decode_MCServiceID, _encode_MCServiceID } from "../TS33128Payloads/MCServiceID.ta.mjs";
 // export { MCServiceID, _decode_MCServiceID, _encode_MCServiceID } from "../TS33128Payloads/MCServiceID.ta.mjs";
 import { IdMMessage, _decode_IdMMessage, _encode_IdMMessage } from "../TS33128Payloads/IdMMessage.ta.mjs";
 // export { IdMMessage, _decode_IdMMessage, _encode_IdMMessage } from "../TS33128Payloads/IdMMessage.ta.mjs";

@@ -10,9 +10,9 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
-import { URI, _decode_URI, _encode_URI } from '../FastInfoset/URI.ta.mjs';
+import { type URI, _decode_URI, _encode_URI } from '../FastInfoset/URI.ta.mjs';
 import {
-  NonEmptyOctetString,
+  type NonEmptyOctetString,
   _decode_NonEmptyOctetString,
   _encode_NonEmptyOctetString,
 } from '../FastInfoset/NonEmptyOctetString.ta.mjs';

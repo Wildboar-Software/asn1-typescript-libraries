@@ -6,22 +6,22 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CertificateRevocationLists,
+    type CertificateRevocationLists,
     _decode_CertificateRevocationLists,
     _encode_CertificateRevocationLists,
 } from "../CryptographicMessageSyntax/CertificateRevocationLists.ta.mjs";
 import {
-    CertificateSet,
+    type CertificateSet,
     _decode_CertificateSet,
     _encode_CertificateSet,
 } from "../CryptographicMessageSyntax/CertificateSet.ta.mjs";
 import {
-    CMSVersion,
+    type CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
 } from "../CryptographicMessageSyntax/CMSVersion.ta.mjs";
 import {
-    DigestAlgorithmIdentifiers,
+    type DigestAlgorithmIdentifiers,
     _decode_DigestAlgorithmIdentifiers,
     _encode_DigestAlgorithmIdentifiers,
 } from "../CryptographicMessageSyntax/DigestAlgorithmIdentifiers.ta.mjs";
@@ -31,7 +31,7 @@ import {
     _encode_EncapsulatedContentInfo,
 } from "../CryptographicMessageSyntax/EncapsulatedContentInfo.ta.mjs";
 import {
-    SignerInfos,
+    type SignerInfos,
     _decode_SignerInfos,
     _encode_SignerInfos,
 } from "../CryptographicMessageSyntax/SignerInfos.ta.mjs";

@@ -2,7 +2,7 @@
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    SearchResult,
+    type SearchResult,
     _decode_SearchResult,
     _encode_SearchResult,
 } from "../DirectoryAbstractService/SearchResult.ta.mjs";

@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  OCTET_STRING,
-  GeneralizedTime,
+  type OPTIONAL,
+  type OCTET_STRING,
+  type GeneralizedTime,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -14,12 +14,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  PKIHeader_pvno,
+  type PKIHeader_pvno,
   _decode_PKIHeader_pvno,
   _encode_PKIHeader_pvno,
 } from '../PKIXCMP-2009/PKIHeader-pvno.ta.mjs';
 import {
-  GeneralName,
+  type GeneralName,
   _decode_GeneralName,
   _encode_GeneralName,
 } from '@wildboar/gn';
@@ -29,12 +29,12 @@ import {
   _encode_AlgorithmIdentifier,
 } from '@wildboar/x500/AuthenticationFramework';
 import {
-  KeyIdentifier,
+  type KeyIdentifier,
   _decode_KeyIdentifier,
   _encode_KeyIdentifier,
 } from '@wildboar/x500/CertificateExtensions';
 import {
-  PKIFreeText,
+  type PKIFreeText,
   _decode_PKIFreeText,
   _encode_PKIFreeText,
 } from '../PKIXCMP-2009/PKIFreeText.ta.mjs';

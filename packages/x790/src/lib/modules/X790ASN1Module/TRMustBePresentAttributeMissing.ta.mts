@@ -4,7 +4,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AttributeIDList,
+    type AttributeIDList,
     _decode_AttributeIDList,
     _encode_AttributeIDList,
 } from "../X790ASN1Module/AttributeIDList.ta.mjs";

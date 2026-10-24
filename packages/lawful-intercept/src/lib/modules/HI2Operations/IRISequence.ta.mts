@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IRIContent, _decode_IRIContent, _encode_IRIContent } from "../HI2Operations/IRIContent.ta.mjs";
+import { type IRIContent, _decode_IRIContent, _encode_IRIContent } from "../HI2Operations/IRIContent.ta.mjs";
 // export { IRIContent, _decode_IRIContent, _encode_IRIContent } from "../HI2Operations/IRIContent.ta.mjs";
 
 

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     type BIT_STRING,
-    GraphicString,
+    type GraphicString,
     type OCTET_STRING,
     type OPTIONAL,
     ASN1Element as _Element,
@@ -9,10 +9,10 @@ import {
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RecordType, _decode_RecordType, _encode_RecordType } from "../CSChargingDataTypes/RecordType.ta.mjs";
+import { type RecordType, _decode_RecordType, _encode_RecordType } from "../CSChargingDataTypes/RecordType.ta.mjs";
 import { Location_info, _decode_Location_info, _encode_Location_info } from "../CSChargingDataTypes/Location-info.ta.mjs";
 import { InterOperatorIdentifiers, _decode_InterOperatorIdentifiers, _encode_InterOperatorIdentifiers } from "../CSChargingDataTypes/InterOperatorIdentifiers.ta.mjs";
-import { HLRIntResult, _decode_HLRIntResult, _encode_HLRIntResult } from "../CSChargingDataTypes/HLRIntResult.ta.mjs";
+import { type HLRIntResult, _decode_HLRIntResult, _encode_HLRIntResult } from "../CSChargingDataTypes/HLRIntResult.ta.mjs";
 import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExtension } from "../CSChargingDataTypes/ManagementExtension.ta.mjs";
 
 

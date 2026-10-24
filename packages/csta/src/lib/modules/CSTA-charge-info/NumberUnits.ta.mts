@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "@wildboar/asn1";
-import { NumberOfChargingUnits, _decode_NumberOfChargingUnits, _encode_NumberOfChargingUnits } from "../CSTA-charge-info/NumberOfChargingUnits.ta.mjs";
+import { type NumberOfChargingUnits, _decode_NumberOfChargingUnits, _encode_NumberOfChargingUnits } from "../CSTA-charge-info/NumberOfChargingUnits.ta.mjs";
 
 import { NumberOfCurrencyUnits, _decode_NumberOfCurrencyUnits, _encode_NumberOfCurrencyUnits } from "../CSTA-charge-info/NumberOfCurrencyUnits.ta.mjs";
 

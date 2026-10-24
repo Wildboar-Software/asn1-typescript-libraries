@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { PSS1InformationElement, _decode_PSS1InformationElement, _encode_PSS1InformationElement } from "../PSS1-generic-parameters-definition-asn1-97/PSS1InformationElement.ta.mjs";
+import { type PSS1InformationElement, _decode_PSS1InformationElement, _encode_PSS1InformationElement } from "../PSS1-generic-parameters-definition-asn1-97/PSS1InformationElement.ta.mjs";
 import { type NOTIFICATION } from "../Notification-class-asn1-97/NOTIFICATION.oca.mjs";
 
 /**

@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     type INTEGER,
-    OPTIONAL
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_ActionPerformed, _encode_ActionPerformed, _enum_for_ActionPerformed, ActionPerformed } from "../IN-CS3-SSF-SCF-datatypes/ActionPerformed.ta.mjs";

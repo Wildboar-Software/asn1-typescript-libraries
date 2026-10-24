@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
 import {
-    OperationSpecifications_Item_scheduledOperations,
+    type OperationSpecifications_Item_scheduledOperations,
     _decode_OperationSpecifications_Item_scheduledOperations,
     _encode_OperationSpecifications_Item_scheduledOperations,
 } from '../Schedulerev1-ASN1Module/OperationSpecifications-Item-scheduledOperations.ta.mjs';

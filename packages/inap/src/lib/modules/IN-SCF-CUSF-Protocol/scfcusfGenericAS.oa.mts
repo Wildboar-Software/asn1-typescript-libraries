@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ABSTRACT_SYNTAX
+    type ABSTRACT_SYNTAX
 } from "@wildboar/asn1";
-import { SCFCUSFGenericPDUs, _decode_SCFCUSFGenericPDUs, _encode_SCFCUSFGenericPDUs } from "../IN-SCF-CUSF-Protocol/SCFCUSFGenericPDUs.ta.mjs";
+import { type SCFCUSFGenericPDUs, _decode_SCFCUSFGenericPDUs, _encode_SCFCUSFGenericPDUs } from "../IN-SCF-CUSF-Protocol/SCFCUSFGenericPDUs.ta.mjs";
 // export { SCFCUSFGenericPDUs, _decode_SCFCUSFGenericPDUs, _encode_SCFCUSFGenericPDUs } from "../IN-SCF-CUSF-Protocol/SCFCUSFGenericPDUs.ta.mjs";
 import { id_asscfcusfGeneric } from "../IN-object-identifiers/id-asscfcusfGeneric.va.mjs";
 // export { id_asscfcusfGeneric } from "../IN-object-identifiers/id-asscfcusfGeneric.va.mjs";

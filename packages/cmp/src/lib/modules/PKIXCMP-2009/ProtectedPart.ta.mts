@@ -16,7 +16,7 @@ import {
   _encode_PKIHeader,
 } from '../PKIXCMP-2009/PKIHeader.ta.mjs';
 import {
-  PKIBody,
+  type PKIBody,
   _decode_PKIBody,
   _encode_PKIBody,
 } from '../PKIXCMP-2009/PKIBody.ta.mjs';

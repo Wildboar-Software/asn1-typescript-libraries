@@ -8,13 +8,13 @@ import {
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SignalName, _decode_SignalName, _encode_SignalName } from "../MEDIA-GATEWAY-CONTROL/SignalName.ta.mjs";
-import { StreamID, _decode_StreamID, _encode_StreamID } from "../MEDIA-GATEWAY-CONTROL/StreamID.ta.mjs";
-import { SignalType, _decode_SignalType, _encode_SignalType, _enum_for_SignalType } from "../MEDIA-GATEWAY-CONTROL/SignalType.ta.mjs";
-import { NotifyCompletion, _decode_NotifyCompletion, _encode_NotifyCompletion } from "../MEDIA-GATEWAY-CONTROL/NotifyCompletion.ta.mjs";
+import { type SignalName, _decode_SignalName, _encode_SignalName } from "../MEDIA-GATEWAY-CONTROL/SignalName.ta.mjs";
+import { type StreamID, _decode_StreamID, _encode_StreamID } from "../MEDIA-GATEWAY-CONTROL/StreamID.ta.mjs";
+import { type SignalType, _decode_SignalType, _encode_SignalType, _enum_for_SignalType } from "../MEDIA-GATEWAY-CONTROL/SignalType.ta.mjs";
+import { type NotifyCompletion, _decode_NotifyCompletion, _encode_NotifyCompletion } from "../MEDIA-GATEWAY-CONTROL/NotifyCompletion.ta.mjs";
 import { SigParameter, _decode_SigParameter, _encode_SigParameter } from "../MEDIA-GATEWAY-CONTROL/SigParameter.ta.mjs";
-import { SignalDirection, _decode_SignalDirection, _encode_SignalDirection, _enum_for_SignalDirection } from "../MEDIA-GATEWAY-CONTROL/SignalDirection.ta.mjs";
-import { RequestID, _decode_RequestID, _encode_RequestID } from "../MEDIA-GATEWAY-CONTROL/RequestID.ta.mjs";
+import { type SignalDirection, _decode_SignalDirection, _encode_SignalDirection, _enum_for_SignalDirection } from "../MEDIA-GATEWAY-CONTROL/SignalDirection.ta.mjs";
+import { type RequestID, _decode_RequestID, _encode_RequestID } from "../MEDIA-GATEWAY-CONTROL/RequestID.ta.mjs";
 
 
 /**

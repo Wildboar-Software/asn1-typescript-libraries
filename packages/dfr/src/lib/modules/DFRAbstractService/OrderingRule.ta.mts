@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { OrderingAttributes, _decode_OrderingAttributes, _encode_OrderingAttributes } from "../DFRAbstractService/OrderingAttributes.ta.mjs";
+import { type OrderingAttributes, _decode_OrderingAttributes, _encode_OrderingAttributes } from "../DFRAbstractService/OrderingAttributes.ta.mjs";
 
 
 /**

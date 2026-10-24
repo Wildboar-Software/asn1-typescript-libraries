@@ -2,8 +2,8 @@
 import {
     type OPTIONAL,
     type BOOLEAN,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     TRUE,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
@@ -16,7 +16,7 @@ import {
 } from "../X790ASN1Module/TimeInterval.ta.mjs";
 
 import {
-    ActivityType,
+    type ActivityType,
     _decode_ActivityType,
     _encode_ActivityType,
 } from "../X790ASN1Module/ActivityType.ta.mjs";

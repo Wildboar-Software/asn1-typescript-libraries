@@ -2,17 +2,17 @@
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CASP_error,
+    type CASP_error,
     _decode_CASP_error,
     _encode_CASP_error,
 } from "../PkiPMIProtocolSpecifications/CASP-error.ta.mjs";
 import {
-    EnvelopedData_error,
+    type EnvelopedData_error,
     _decode_EnvelopedData_error,
     _encode_EnvelopedData_error,
 } from "../PkiPMIProtocolSpecifications/EnvelopedData-error.ta.mjs";
 import {
-    SignedData_error,
+    type SignedData_error,
     _decode_SignedData_error,
     _encode_SignedData_error,
 } from "../PkiPMIProtocolSpecifications/SignedData-error.ta.mjs";

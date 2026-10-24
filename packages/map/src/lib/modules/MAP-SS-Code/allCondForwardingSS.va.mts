@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
+import { type SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
 
 
 /**

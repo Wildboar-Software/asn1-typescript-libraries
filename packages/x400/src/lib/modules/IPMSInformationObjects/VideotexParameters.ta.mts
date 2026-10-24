@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    VideotexSyntax,
+    type VideotexSyntax,
     _decode_VideotexSyntax,
     _encode_VideotexSyntax,
 } from '../IPMSInformationObjects/VideotexSyntax.ta.mjs';

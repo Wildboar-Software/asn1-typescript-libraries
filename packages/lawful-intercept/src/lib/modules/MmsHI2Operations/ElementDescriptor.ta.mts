@@ -6,9 +6,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ParameterName, _decode_ParameterName, _encode_ParameterName } from "../MmsHI2Operations/ParameterName.ta.mjs";
+import { type ParameterName, _decode_ParameterName, _encode_ParameterName } from "../MmsHI2Operations/ParameterName.ta.mjs";
 // export { ParameterName, _decode_ParameterName, _encode_ParameterName } from "../MmsHI2Operations/ParameterName.ta.mjs";
-import { ParameterValue, _decode_ParameterValue, _encode_ParameterValue } from "../MmsHI2Operations/ParameterValue.ta.mjs";
+import { type ParameterValue, _decode_ParameterValue, _encode_ParameterValue } from "../MmsHI2Operations/ParameterValue.ta.mjs";
 // export { ParameterValue, _decode_ParameterValue, _encode_ParameterValue } from "../MmsHI2Operations/ParameterValue.ta.mjs";
 
 

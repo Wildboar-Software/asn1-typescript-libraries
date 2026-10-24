@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TimeInterval,
+    type TimeInterval,
     _decode_TimeInterval,
     _encode_TimeInterval,
 } from '../TimeMF/TimeInterval.ta.mjs';

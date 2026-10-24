@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    CallBackInfoList_Item,
+    type CallBackInfoList_Item,
     _decode_CallBackInfoList_Item,
     _encode_CallBackInfoList_Item,
 } from '../X790ASN1Module/CallBackInfoList-Item.ta.mjs';

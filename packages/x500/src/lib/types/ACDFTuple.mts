@@ -27,4 +27,4 @@ type ACDFTuple = [
     Precedence,
 ];
 
-export default ACDFTuple;
+export type { ACDFTuple as default };

@@ -7,7 +7,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../HI2Operations/IPAddress.ta.mjs";
 // export { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../HI2Operations/IPAddress.ta.mjs";
-import { Port_Number, _decode_Port_Number, _encode_Port_Number } from "../UmtsHI2Operations/Port-Number.ta.mjs";
+import { type Port_Number, _decode_Port_Number, _encode_Port_Number } from "../UmtsHI2Operations/Port-Number.ta.mjs";
 // export { Port_Number, _decode_Port_Number, _encode_Port_Number } from "../UmtsHI2Operations/Port-Number.ta.mjs";
 
 

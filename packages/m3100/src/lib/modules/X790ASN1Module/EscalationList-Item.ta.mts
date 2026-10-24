@@ -12,13 +12,13 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RequestState,
+    type RequestState,
     _enum_for_RequestState,
     _decode_RequestState,
     _encode_RequestState,
 } from '../X790ASN1Module/RequestState.ta.mjs';
 import {
-    EscalationTime,
+    type EscalationTime,
     _decode_EscalationTime,
     _encode_EscalationTime,
 } from '../X790ASN1Module/EscalationTime.ta.mjs';
@@ -28,7 +28,7 @@ import {
     _encode_PersonReach,
 } from '../X790ASN1Module/PersonReach.ta.mjs';
 import {
-    OrgLevel,
+    type OrgLevel,
     _decode_OrgLevel,
     _encode_OrgLevel,
 } from '../X790ASN1Module/OrgLevel.ta.mjs';

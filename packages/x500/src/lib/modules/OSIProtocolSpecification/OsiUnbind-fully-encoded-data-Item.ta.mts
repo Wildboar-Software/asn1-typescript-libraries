@@ -6,12 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OsiUnbind_fully_encoded_data_Item_presentation_data_values,
+    type OsiUnbind_fully_encoded_data_Item_presentation_data_values,
     _decode_OsiUnbind_fully_encoded_data_Item_presentation_data_values,
     _encode_OsiUnbind_fully_encoded_data_Item_presentation_data_values,
 } from "../OSIProtocolSpecification/OsiUnbind-fully-encoded-data-Item-presentation-data-values.ta.mjs";
 import {
-    Presentation_context_identifier,
+    type Presentation_context_identifier,
     _decode_Presentation_context_identifier,
     _encode_Presentation_context_identifier,
 } from "../OSIProtocolSpecification/Presentation-context-identifier.ta.mjs";

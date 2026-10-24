@@ -6,13 +6,13 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CollectedInfo, _decode_CollectedInfo, _encode_CollectedInfo } from "../IN-CS3-SCF-SRF-datatypes/CollectedInfo.ta.mjs";
+import { type CollectedInfo, _decode_CollectedInfo, _encode_CollectedInfo } from "../IN-CS3-SCF-SRF-datatypes/CollectedInfo.ta.mjs";
 // export { CollectedInfo, _decode_CollectedInfo, _encode_CollectedInfo } from "../IN-CS3-SCF-SRF-datatypes/CollectedInfo.ta.mjs";
-import { InformationToSend, _decode_InformationToSend, _encode_InformationToSend } from "../IN-CS3-SCF-SRF-datatypes/InformationToSend.ta.mjs";
+import { type InformationToSend, _decode_InformationToSend, _encode_InformationToSend } from "../IN-CS3-SCF-SRF-datatypes/InformationToSend.ta.mjs";
 // export { InformationToSend, _decode_InformationToSend, _encode_InformationToSend } from "../IN-CS3-SCF-SRF-datatypes/InformationToSend.ta.mjs";
-import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-common-datatypes/Extensions.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-common-datatypes/Extensions.ta.mjs";
 // export { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-common-datatypes/Extensions.ta.mjs";
-import { CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from "../IN-CS3-SSF-SCF-datatypes/CallSegmentID.ta.mjs";
+import { type CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from "../IN-CS3-SSF-SCF-datatypes/CallSegmentID.ta.mjs";
 // export { CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from "../IN-CS3-SSF-SCF-datatypes/CallSegmentID.ta.mjs";
 
 

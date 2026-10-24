@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     type INTEGER,
-    NULL,
+    type NULL,
     type OPTIONAL,
     type OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
@@ -19,12 +19,12 @@ import {
     _encode_RestrictedValue,
 } from "../BasicAccessControl/RestrictedValue.ta.mjs";
 import {
-    Filter,
+    type Filter,
     _decode_Filter,
     _encode_Filter,
 } from "../DirectoryAbstractService/Filter.ta.mjs";
 import {
-    AttributeType,
+    type AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
 } from "../InformationFramework/AttributeType.ta.mjs";
@@ -39,7 +39,7 @@ import {
     _encode_ContextAssertion,
 } from "../InformationFramework/ContextAssertion.ta.mjs";
 import {
-    Refinement,
+    type Refinement,
     _decode_Refinement,
     _encode_Refinement,
 } from "../InformationFramework/Refinement.ta.mjs";

@@ -16,8 +16,8 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "@wildboar/pki-stub";
-import { Attributes, _decode_Attributes, _encode_Attributes } from "../ERS/Attributes.ta.mjs";
-import { PartialHashtree, _decode_PartialHashtree, _encode_PartialHashtree } from "../ERS/PartialHashtree.ta.mjs";
+import { type Attributes, _decode_Attributes, _encode_Attributes } from "../ERS/Attributes.ta.mjs";
+import { type PartialHashtree, _decode_PartialHashtree, _encode_PartialHashtree } from "../ERS/PartialHashtree.ta.mjs";
 import {
     ContentInfo,
     _decode_ContentInfo,

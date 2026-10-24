@@ -8,7 +8,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 // export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-import { DirectoryString, _decode_DirectoryString, _encode_DirectoryString } from "../SelectedAttributeTypes/DirectoryString.ta.mjs";
+import { type DirectoryString, _decode_DirectoryString, _encode_DirectoryString } from "../SelectedAttributeTypes/DirectoryString.ta.mjs";
 // export { DirectoryString, _decode_DirectoryString, _encode_DirectoryString } from "../SelectedAttributeTypes/DirectoryString.ta.mjs";
 // export { ub_schema } from "../UpperBounds/ub-schema.va.mjs";
 // export { METHOD } from "../IN-CS3-SCF-SDF-Classes/METHOD.oca.mjs";

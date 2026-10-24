@@ -4,9 +4,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Digits, _decode_Digits, _encode_Digits } from "../IN-CS-1-Datatypes/Digits.ta.mjs";
+import { type Digits, _decode_Digits, _encode_Digits } from "../IN-CS-1-Datatypes/Digits.ta.mjs";
 // export { Digits, _decode_Digits, _encode_Digits } from "../IN-CS-1-Datatypes/Digits.ta.mjs";
-import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../IN-CS-1-Datatypes/ServiceKey.ta.mjs";
+import { type ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../IN-CS-1-Datatypes/ServiceKey.ta.mjs";
 // export { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../IN-CS-1-Datatypes/ServiceKey.ta.mjs";
 import { FilteringCriteria_addressAndService, _decode_FilteringCriteria_addressAndService, _encode_FilteringCriteria_addressAndService } from "../IN-CS-1-Datatypes/FilteringCriteria-addressAndService.ta.mjs";
 // export { FilteringCriteria_addressAndService, _decode_FilteringCriteria_addressAndService, _encode_FilteringCriteria_addressAndService } from "../IN-CS-1-Datatypes/FilteringCriteria-addressAndService.ta.mjs";

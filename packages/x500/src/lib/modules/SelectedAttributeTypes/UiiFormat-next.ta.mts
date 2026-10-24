@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { ASN1Element as _Element, INTEGER } from "@wildboar/asn1";
+import { ASN1Element as _Element, type INTEGER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    UiiFilter,
+    type UiiFilter,
     _decode_UiiFilter,
     _encode_UiiFilter,
 } from "../SelectedAttributeTypes/UiiFilter.ta.mjs";

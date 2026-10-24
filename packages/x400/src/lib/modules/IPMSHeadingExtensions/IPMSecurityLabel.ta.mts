@@ -17,7 +17,7 @@ import {
     _encode_SecurityLabel,
 } from '../MTSAbstractService/SecurityLabel.ta.mjs';
 import {
-    BodyPartSecurityLabel,
+    type BodyPartSecurityLabel,
     _decode_BodyPartSecurityLabel,
     _encode_BodyPartSecurityLabel,
 } from '../IPMSHeadingExtensions/BodyPartSecurityLabel.ta.mjs';

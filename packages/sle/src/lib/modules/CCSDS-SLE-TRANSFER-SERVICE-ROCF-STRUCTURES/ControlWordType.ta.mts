@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TcVcid, _decode_TcVcid, _encode_TcVcid } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/TcVcid.ta.mjs";
+import { type TcVcid, _decode_TcVcid, _encode_TcVcid } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/TcVcid.ta.mjs";
 
 
 /**

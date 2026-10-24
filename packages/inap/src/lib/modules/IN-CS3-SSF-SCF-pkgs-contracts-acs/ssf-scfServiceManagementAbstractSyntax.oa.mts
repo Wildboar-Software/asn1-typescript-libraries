@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ABSTRACT_SYNTAX
+    type ABSTRACT_SYNTAX
 } from "@wildboar/asn1";
-import { ServiceManagementSSF_SCF_PDUs, _decode_ServiceManagementSSF_SCF_PDUs, _encode_ServiceManagementSSF_SCF_PDUs } from "../IN-CS3-SSF-SCF-pkgs-contracts-acs/ServiceManagementSSF-SCF-PDUs.ta.mjs";
+import { type ServiceManagementSSF_SCF_PDUs, _decode_ServiceManagementSSF_SCF_PDUs, _encode_ServiceManagementSSF_SCF_PDUs } from "../IN-CS3-SSF-SCF-pkgs-contracts-acs/ServiceManagementSSF-SCF-PDUs.ta.mjs";
 // export { ServiceManagementSSF_SCF_PDUs, _decode_ServiceManagementSSF_SCF_PDUs, _encode_ServiceManagementSSF_SCF_PDUs } from "../IN-CS3-SSF-SCF-pkgs-contracts-acs/ServiceManagementSSF-SCF-PDUs.ta.mjs";
 import { id_as_ssf_scfServiceManagementAS } from "../IN-CS3-object-identifiers/id-as-ssf-scfServiceManagementAS.va.mjs";
 // export { id_as_ssf_scfServiceManagementAS } from "../IN-CS3-object-identifiers/id-as-ssf-scfServiceManagementAS.va.mjs";

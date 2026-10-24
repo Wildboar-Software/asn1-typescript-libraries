@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-import { DummyArg, _decode_DummyArg, _encode_DummyArg } from "../Common-Information-Operations-asn1-97/DummyArg.ta.mjs";
+import { type DummyArg, _decode_DummyArg, _encode_DummyArg } from "../Common-Information-Operations-asn1-97/DummyArg.ta.mjs";
 import { CmnArg, _decode_CmnArg, _encode_CmnArg } from "../Common-Information-Operations-asn1-97/CmnArg.ta.mjs";
 
 /**

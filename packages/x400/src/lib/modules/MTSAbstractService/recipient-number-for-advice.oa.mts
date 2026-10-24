@@ -20,7 +20,7 @@ import {
     _encode_Criticality,
 } from '../MTSAbstractService/Criticality.ta.mjs';
 import {
-    RecipientNumberForAdvice,
+    type RecipientNumberForAdvice,
     _decode_RecipientNumberForAdvice,
     _encode_RecipientNumberForAdvice,
 } from '../MTSAbstractService/RecipientNumberForAdvice.ta.mjs';

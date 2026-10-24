@@ -1,7 +1,7 @@
 /* eslint-disable */
 import type { EXTENSION } from "@wildboar/pki-stub";
 import {
-    AcceptableResponses,
+    type AcceptableResponses,
     _decode_AcceptableResponses,
     _encode_AcceptableResponses,
 } from "../OCSP-2013-08/AcceptableResponses.ta.mjs";

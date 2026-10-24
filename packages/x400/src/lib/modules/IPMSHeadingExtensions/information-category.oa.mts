@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    InformationCategories,
+    type InformationCategories,
     _decode_InformationCategories,
     _encode_InformationCategories,
 } from '../IPMSHeadingExtensions/InformationCategories.ta.mjs';

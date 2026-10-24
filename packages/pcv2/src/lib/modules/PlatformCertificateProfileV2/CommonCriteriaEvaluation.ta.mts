@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ASN1SizeError,
-    GeneralizedTime,
+    type GeneralizedTime,
     type OPTIONAL,
     type UTF8String,
     ASN1Element as _Element,

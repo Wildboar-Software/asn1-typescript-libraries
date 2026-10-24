@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TestTerminateError_Item,
+    type TestTerminateError_Item,
     _decode_TestTerminateError_Item,
     _encode_TestTerminateError_Item,
 } from '../Test-ASN1Module/TestTerminateError-Item.ta.mjs';

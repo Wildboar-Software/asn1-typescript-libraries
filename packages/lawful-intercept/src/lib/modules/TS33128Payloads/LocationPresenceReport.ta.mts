@@ -7,11 +7,11 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { AMFEventType, _decode_AMFEventType, _encode_AMFEventType, _enum_for_AMFEventType } from "../TS33128Payloads/AMFEventType.ta.mjs";
 // export { AMFEventType, _enum_for_AMFEventType, AMFEventType_locationReport /* IMPORTED_LONG_ENUMERATION_ITEM */, locationReport /* IMPORTED_SHORT_ENUMERATION_ITEM */, AMFEventType_presenceInAOIReport /* IMPORTED_LONG_ENUMERATION_ITEM */, presenceInAOIReport /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AMFEventType, _encode_AMFEventType } from "../TS33128Payloads/AMFEventType.ta.mjs";
-import { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
+import { type Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
 // export { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
 import { AMFEventArea, _decode_AMFEventArea, _encode_AMFEventArea } from "../TS33128Payloads/AMFEventArea.ta.mjs";
 // export { AMFEventArea, _decode_AMFEventArea, _encode_AMFEventArea } from "../TS33128Payloads/AMFEventArea.ta.mjs";
-import { TimeZone, _decode_TimeZone, _encode_TimeZone } from "../TS33128Payloads/TimeZone.ta.mjs";
+import { type TimeZone, _decode_TimeZone, _encode_TimeZone } from "../TS33128Payloads/TimeZone.ta.mjs";
 // export { TimeZone, _decode_TimeZone, _encode_TimeZone } from "../TS33128Payloads/TimeZone.ta.mjs";
 import { AccessType, _decode_AccessType, _encode_AccessType } from "../TS33128Payloads/AccessType.ta.mjs";
 // export { AccessType, _enum_for_AccessType, AccessType_threeGPPAccess /* IMPORTED_LONG_ENUMERATION_ITEM */, threeGPPAccess /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_nonThreeGPPAccess /* IMPORTED_LONG_ENUMERATION_ITEM */, nonThreeGPPAccess /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_threeGPPandNonThreeGPPAccess /* IMPORTED_LONG_ENUMERATION_ITEM */, threeGPPandNonThreeGPPAccess /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AccessType, _encode_AccessType } from "../TS33128Payloads/AccessType.ta.mjs";

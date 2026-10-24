@@ -12,12 +12,12 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TrustAnchorInfoVersion, v1 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_TrustAnchorInfoVersion, _encode_TrustAnchorInfoVersion } from "../TrustAnchorInfoModule/TrustAnchorInfoVersion.ta.mjs";
+import { type TrustAnchorInfoVersion, v1 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_TrustAnchorInfoVersion, _encode_TrustAnchorInfoVersion } from "../TrustAnchorInfoModule/TrustAnchorInfoVersion.ta.mjs";
 import { SubjectPublicKeyInfo, _decode_SubjectPublicKeyInfo, _encode_SubjectPublicKeyInfo } from "@wildboar/x500/AuthenticationFramework";
-import { KeyIdentifier, _decode_KeyIdentifier, _encode_KeyIdentifier } from "@wildboar/x500/CertificateExtensions";
-import { TrustAnchorTitle, _decode_TrustAnchorTitle, _encode_TrustAnchorTitle } from "../TrustAnchorInfoModule/TrustAnchorTitle.ta.mjs";
+import { type KeyIdentifier, _decode_KeyIdentifier, _encode_KeyIdentifier } from "@wildboar/x500/CertificateExtensions";
+import { type TrustAnchorTitle, _decode_TrustAnchorTitle, _encode_TrustAnchorTitle } from "../TrustAnchorInfoModule/TrustAnchorTitle.ta.mjs";
 import { CertPathControls, _decode_CertPathControls, _encode_CertPathControls } from "../TrustAnchorInfoModule/CertPathControls.ta.mjs";
-import { Extensions, _decode_Extensions, _encode_Extensions } from "@wildboar/x500/AuthenticationFramework";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "@wildboar/x500/AuthenticationFramework";
 
 /**
  * @summary TrustAnchorInfo

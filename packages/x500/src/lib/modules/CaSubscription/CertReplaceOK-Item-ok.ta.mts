@@ -6,11 +6,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CertificateSerialNumber,
+    type CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
 } from "@wildboar/pki-stub";
-import { Name, _decode_Name, _encode_Name } from "@wildboar/dn";
+import { type Name, _decode_Name, _encode_Name } from "@wildboar/dn";
 /**
  * @summary CertReplaceOK_Item_ok
  * @description

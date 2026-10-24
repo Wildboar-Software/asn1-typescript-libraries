@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { PlatformHardwareCapabilities, _decode_PlatformHardwareCapabilities, _encode_PlatformHardwareCapabilities } from "../PlatformCertificateProfileV2/PlatformHardwareCapabilities.ta.mjs";
+import { type PlatformHardwareCapabilities, _decode_PlatformHardwareCapabilities, _encode_PlatformHardwareCapabilities } from "../PlatformCertificateProfileV2/PlatformHardwareCapabilities.ta.mjs";
 import { tcg_tr_ID_platformHardwareCapabilities } from "../PlatformCertificateProfileV2/tcg-tr-ID-platformHardwareCapabilities.va.mjs";
 import { type TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
 

@@ -10,18 +10,18 @@ import {
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RecordType, _decode_RecordType, _encode_RecordType } from "../CSChargingDataTypes/RecordType.ta.mjs";
-import { DefaultCallHandling, _decode_DefaultCallHandling, _encode_DefaultCallHandling, _enum_for_DefaultCallHandling } from "../CSChargingDataTypes/DefaultCallHandling.ta.mjs";
+import { type RecordType, _decode_RecordType, _encode_RecordType } from "../CSChargingDataTypes/RecordType.ta.mjs";
+import { type DefaultCallHandling, _decode_DefaultCallHandling, _encode_DefaultCallHandling, _enum_for_DefaultCallHandling } from "../CSChargingDataTypes/DefaultCallHandling.ta.mjs";
 import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExtension } from "../CSChargingDataTypes/ManagementExtension.ta.mjs";
-import { TrunkGroup, _decode_TrunkGroup, _encode_TrunkGroup } from "../CSChargingDataTypes/TrunkGroup.ta.mjs";
-import { CauseForTerm, _decode_CauseForTerm, _encode_CauseForTerm } from "../CSChargingDataTypes/CauseForTerm.ta.mjs";
-import { HLRIntResult, _decode_HLRIntResult, _encode_HLRIntResult } from "../CSChargingDataTypes/HLRIntResult.ta.mjs";
-import { TermCAMELRecord_levelOfCAMELService, _decode_TermCAMELRecord_levelOfCAMELService, _encode_TermCAMELRecord_levelOfCAMELService } from "../CSChargingDataTypes/TermCAMELRecord-levelOfCAMELService.ta.mjs";
+import { type TrunkGroup, _decode_TrunkGroup, _encode_TrunkGroup } from "../CSChargingDataTypes/TrunkGroup.ta.mjs";
+import { type CauseForTerm, _decode_CauseForTerm, _encode_CauseForTerm } from "../CSChargingDataTypes/CauseForTerm.ta.mjs";
+import { type HLRIntResult, _decode_HLRIntResult, _encode_HLRIntResult } from "../CSChargingDataTypes/HLRIntResult.ta.mjs";
+import { type TermCAMELRecord_levelOfCAMELService, _decode_TermCAMELRecord_levelOfCAMELService, _encode_TermCAMELRecord_levelOfCAMELService } from "../CSChargingDataTypes/TermCAMELRecord-levelOfCAMELService.ta.mjs";
 import { CAMELInformation, _decode_CAMELInformation, _encode_CAMELInformation } from "../CSChargingDataTypes/CAMELInformation.ta.mjs";
-import { TermCAMELRecord_lrnSoInd, _decode_TermCAMELRecord_lrnSoInd, _encode_TermCAMELRecord_lrnSoInd } from "../CSChargingDataTypes/TermCAMELRecord-lrnSoInd.ta.mjs";
-import { TermCAMELRecord_lrnQuryStatus, _decode_TermCAMELRecord_lrnQuryStatus, _encode_TermCAMELRecord_lrnQuryStatus } from "../CSChargingDataTypes/TermCAMELRecord-lrnQuryStatus.ta.mjs";
-import { TermCAMELRecord_jIPSoInd, _decode_TermCAMELRecord_jIPSoInd, _encode_TermCAMELRecord_jIPSoInd } from "../CSChargingDataTypes/TermCAMELRecord-jIPSoInd.ta.mjs";
-import { TermCAMELRecord_jIPQuryStatus, _decode_TermCAMELRecord_jIPQuryStatus, _encode_TermCAMELRecord_jIPQuryStatus } from "../CSChargingDataTypes/TermCAMELRecord-jIPQuryStatus.ta.mjs";
+import { type TermCAMELRecord_lrnSoInd, _decode_TermCAMELRecord_lrnSoInd, _encode_TermCAMELRecord_lrnSoInd } from "../CSChargingDataTypes/TermCAMELRecord-lrnSoInd.ta.mjs";
+import { type TermCAMELRecord_lrnQuryStatus, _decode_TermCAMELRecord_lrnQuryStatus, _encode_TermCAMELRecord_lrnQuryStatus } from "../CSChargingDataTypes/TermCAMELRecord-lrnQuryStatus.ta.mjs";
+import { type TermCAMELRecord_jIPSoInd, _decode_TermCAMELRecord_jIPSoInd, _encode_TermCAMELRecord_jIPSoInd } from "../CSChargingDataTypes/TermCAMELRecord-jIPSoInd.ta.mjs";
+import { type TermCAMELRecord_jIPQuryStatus, _decode_TermCAMELRecord_jIPQuryStatus, _encode_TermCAMELRecord_jIPQuryStatus } from "../CSChargingDataTypes/TermCAMELRecord-jIPQuryStatus.ta.mjs";
 import { PartialRecordType, _decode_PartialRecordType, _encode_PartialRecordType, _enum_for_PartialRecordType } from "../CSChargingDataTypes/PartialRecordType.ta.mjs";
 
 

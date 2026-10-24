@@ -11,12 +11,12 @@ import {
     _encode_ExtendedCertificateInfo,
 } from "../CryptographicMessageSyntax-2010/ExtendedCertificateInfo.ta.mjs";
 import {
-    Signature,
+    type Signature,
     _decode_Signature,
     _encode_Signature,
 } from "../CryptographicMessageSyntax-2010/Signature.ta.mjs";
 import {
-    SignatureAlgorithmIdentifier,
+    type SignatureAlgorithmIdentifier,
     _decode_SignatureAlgorithmIdentifier,
     _encode_SignatureAlgorithmIdentifier,
 } from "../CryptographicMessageSyntax-2010/SignatureAlgorithmIdentifier.ta.mjs";

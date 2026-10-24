@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  BIT_STRING,
-  EMBEDDED_PDV,
+  type BIT_STRING,
+  type EMBEDDED_PDV,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -18,7 +18,7 @@ import {
   _get_encoder_for_PROTECTED_dirSign,
 } from '../Notation/PROTECTED-dirSign.ta.mjs';
 import {
-  SyntaxStructure,
+  type SyntaxStructure,
   _decode_SyntaxStructure,
   _encode_SyntaxStructure,
 } from '../GenericProtectingTransferSyntax/SyntaxStructure.ta.mjs';

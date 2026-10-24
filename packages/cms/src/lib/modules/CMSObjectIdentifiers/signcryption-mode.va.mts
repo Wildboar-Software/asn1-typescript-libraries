@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "@wildboar/asn1";
-import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
+import { type OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
 import { signcryption } from "../CMSObjectIdentifiers/signcryption.va.mjs";
 
 /**

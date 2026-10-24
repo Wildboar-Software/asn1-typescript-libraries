@@ -7,7 +7,7 @@ import {
     _encode_TargetCert,
 } from "../AttributeCertificateDefinitions/TargetCert.ta.mjs";
 import {
-    GeneralName,
+    type GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";

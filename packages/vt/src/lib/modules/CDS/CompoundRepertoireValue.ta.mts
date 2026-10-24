@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RepertoireFontValue, _decode_RepertoireFontValue, _encode_RepertoireFontValue } from "../CDS/RepertoireFontValue.ta.mjs";
+import { type RepertoireFontValue, _decode_RepertoireFontValue, _encode_RepertoireFontValue } from "../CDS/RepertoireFontValue.ta.mjs";
 
 
 /**

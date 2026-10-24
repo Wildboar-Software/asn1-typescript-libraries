@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    LatestDeliveryTime,
+    type LatestDeliveryTime,
     _decode_LatestDeliveryTime,
     _encode_LatestDeliveryTime,
 } from '../MTSAbstractService/LatestDeliveryTime.ta.mjs';

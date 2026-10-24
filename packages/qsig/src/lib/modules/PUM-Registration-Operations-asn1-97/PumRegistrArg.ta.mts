@@ -5,13 +5,13 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PumRegistrArg_pumUserId, _decode_PumRegistrArg_pumUserId, _encode_PumRegistrArg_pumUserId } from "../PUM-Registration-Operations-asn1-97/PumRegistrArg-pumUserId.ta.mjs";
+import { type PumRegistrArg_pumUserId, _decode_PumRegistrArg_pumUserId, _encode_PumRegistrArg_pumUserId } from "../PUM-Registration-Operations-asn1-97/PumRegistrArg-pumUserId.ta.mjs";
 import { BasicService, _decode_BasicService, _encode_BasicService, _enum_for_BasicService } from "../Call-Diversion-Operations-asn1-97/BasicService.ta.mjs";
-import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
+import { type PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { ServiceOption, ServiceOption_inCallRegistration /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_ServiceOption, _encode_ServiceOption, _enum_for_ServiceOption } from "../PUM-Registration-Operations-asn1-97/ServiceOption.ta.mjs";
 import { SessionParams, _decode_SessionParams, _encode_SessionParams } from "../PUM-Registration-Operations-asn1-97/SessionParams.ta.mjs";
-import { PumRegistrArg_userPin, _decode_PumRegistrArg_userPin, _encode_PumRegistrArg_userPin } from "../PUM-Registration-Operations-asn1-97/PumRegistrArg-userPin.ta.mjs";
-import { PumrExtension, _decode_PumrExtension, _encode_PumrExtension } from "../PUM-Registration-Operations-asn1-97/PumrExtension.ta.mjs";
+import { type PumRegistrArg_userPin, _decode_PumRegistrArg_userPin, _encode_PumRegistrArg_userPin } from "../PUM-Registration-Operations-asn1-97/PumRegistrArg-userPin.ta.mjs";
+import { type PumrExtension, _decode_PumrExtension, _encode_PumrExtension } from "../PUM-Registration-Operations-asn1-97/PumrExtension.ta.mjs";
 
 /**
  * @summary PumRegistrArg

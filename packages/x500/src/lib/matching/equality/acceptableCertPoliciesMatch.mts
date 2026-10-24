@@ -4,11 +4,11 @@ import {
     id_ce_acceptableCertPolicies,
 } from "../../modules/AttributeCertificateDefinitions/id-ce-acceptableCertPolicies.va.mjs";
 import {
-    AcceptableCertPoliciesSyntax,
+    type AcceptableCertPoliciesSyntax,
     _decode_AcceptableCertPoliciesSyntax,
 } from "../../modules/AttributeCertificateDefinitions/AcceptableCertPoliciesSyntax.ta.mjs";
 import {
-    AttributeCertificate,
+    type AttributeCertificate,
     _decode_AttributeCertificate,
 } from "../../modules/AttributeCertificateDefinitions/AttributeCertificate.ta.mjs";
 import type {

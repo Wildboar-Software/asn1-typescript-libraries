@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    FNReasonCodeField,
+    type FNReasonCodeField,
     _decode_FNReasonCodeField,
     _encode_FNReasonCodeField,
 } from '../EDIMSInformationObjects/FNReasonCodeField.ta.mjs';

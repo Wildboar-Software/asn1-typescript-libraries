@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    HeadingExtensionsSubField,
+    type HeadingExtensionsSubField,
     _decode_HeadingExtensionsSubField,
     _encode_HeadingExtensionsSubField,
 } from '../EDIMSInformationObjects/HeadingExtensionsSubField.ta.mjs';

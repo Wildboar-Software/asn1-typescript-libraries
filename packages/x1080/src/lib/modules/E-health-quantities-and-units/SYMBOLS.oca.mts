@@ -2,7 +2,7 @@
 import {
     type OBJECT_IDENTIFIER,
     type UniversalString,
-    RELATIVE_OID_IRI,
+    type RELATIVE_OID_IRI,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -14,7 +14,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    StringAttributes,
+    type StringAttributes,
     _decode_StringAttributes,
     _encode_StringAttributes,
 } from '../E-health-quantities-and-units/StringAttributes.ta.mjs';

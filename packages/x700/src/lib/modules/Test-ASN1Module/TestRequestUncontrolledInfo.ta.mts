@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TestCategoryInformation,
+    type TestCategoryInformation,
     _decode_TestCategoryInformation,
     _encode_TestCategoryInformation,
 } from '../Test-ASN1Module/TestCategoryInformation.ta.mjs';
@@ -22,17 +22,17 @@ import {
     _encode_TestSessionId,
 } from '../Test-ASN1Module/TestSessionId.ta.mjs';
 import {
-    TimeoutPeriod,
+    type TimeoutPeriod,
     _decode_TimeoutPeriod,
     _encode_TimeoutPeriod,
 } from '../Test-ASN1Module/TimeoutPeriod.ta.mjs';
 import {
-    AssociatedObjects,
+    type AssociatedObjects,
     _decode_AssociatedObjects,
     _encode_AssociatedObjects,
 } from '../Test-ASN1Module/AssociatedObjects.ta.mjs';
 import {
-    ToBeTestedMORTs,
+    type ToBeTestedMORTs,
     _decode_ToBeTestedMORTs,
     _encode_ToBeTestedMORTs,
 } from '../Test-ASN1Module/ToBeTestedMORTs.ta.mjs';

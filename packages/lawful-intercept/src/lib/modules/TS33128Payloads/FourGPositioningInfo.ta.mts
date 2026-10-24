@@ -17,7 +17,7 @@ import { GERANPositioningInfo, _decode_GERANPositioningInfo, _encode_GERANPositi
 // export { GERANPositioningInfo, _decode_GERANPositioningInfo, _encode_GERANPositioningInfo } from "../TS33128Payloads/GERANPositioningInfo.ta.mjs";
 import { UTRANPositioningInfo, _decode_UTRANPositioningInfo, _encode_UTRANPositioningInfo } from "../TS33128Payloads/UTRANPositioningInfo.ta.mjs";
 // export { UTRANPositioningInfo, _decode_UTRANPositioningInfo, _encode_UTRANPositioningInfo } from "../TS33128Payloads/UTRANPositioningInfo.ta.mjs";
-import { RawMLPResponse, _decode_RawMLPResponse, _encode_RawMLPResponse } from "../TS33128Payloads/RawMLPResponse.ta.mjs";
+import { type RawMLPResponse, _decode_RawMLPResponse, _encode_RawMLPResponse } from "../TS33128Payloads/RawMLPResponse.ta.mjs";
 // export { RawMLPResponse, _decode_RawMLPResponse, _encode_RawMLPResponse } from "../TS33128Payloads/RawMLPResponse.ta.mjs";
 
 

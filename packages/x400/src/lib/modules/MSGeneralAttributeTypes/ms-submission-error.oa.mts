@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    SubmissionError,
+    type SubmissionError,
     _decode_SubmissionError,
     _encode_SubmissionError,
 } from '../MSGeneralAttributeTypes/SubmissionError.ta.mjs';

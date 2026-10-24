@@ -3,7 +3,7 @@ import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mj
 import { dnsString } from "../SelectedAttributeTypes/dnsString.oa.mjs";
 import { id_mr_jidMatch } from "../SelectedAttributeTypes/id-mr-jidMatch.va.mjs";
 import {
-    Jid,
+    type Jid,
     _decode_Jid,
     _encode_Jid,
 } from "../SelectedAttributeTypes/Jid.ta.mjs";

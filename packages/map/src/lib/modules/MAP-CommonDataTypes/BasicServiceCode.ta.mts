@@ -4,8 +4,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BearerServiceCode, _decode_BearerServiceCode, _encode_BearerServiceCode } from "../MAP-BS-Code/BearerServiceCode.ta.mjs";
-import { TeleserviceCode, _decode_TeleserviceCode, _encode_TeleserviceCode } from "../MAP-TS-Code/TeleserviceCode.ta.mjs";
+import { type BearerServiceCode, _decode_BearerServiceCode, _encode_BearerServiceCode } from "../MAP-BS-Code/BearerServiceCode.ta.mjs";
+import { type TeleserviceCode, _decode_TeleserviceCode, _encode_TeleserviceCode } from "../MAP-TS-Code/TeleserviceCode.ta.mjs";
 
 
 /**

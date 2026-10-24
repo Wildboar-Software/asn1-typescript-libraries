@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    FetchRestrictionProblem,
+    type FetchRestrictionProblem,
     _decode_FetchRestrictionProblem,
     _encode_FetchRestrictionProblem,
 } from '../MSAbstractService/FetchRestrictionProblem.ta.mjs';
 import {
-    FetchRestrictionError_problems_Item_restriction,
+    type FetchRestrictionError_problems_Item_restriction,
     _decode_FetchRestrictionError_problems_Item_restriction,
     _encode_FetchRestrictionError_problems_Item_restriction,
 } from '../MhsAcctAsn1Module/FetchRestrictionError-problems-Item-restriction.ta.mjs';

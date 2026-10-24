@@ -11,9 +11,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
+import { type V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
 
-import { ModemIdentity_Item_multimediaMode, _decode_ModemIdentity_Item_multimediaMode, _encode_ModemIdentity_Item_multimediaMode } from "../V59/ModemIdentity-Item-multimediaMode.ta.mjs";
+import { type ModemIdentity_Item_multimediaMode, _decode_ModemIdentity_Item_multimediaMode, _encode_ModemIdentity_Item_multimediaMode } from "../V59/ModemIdentity-Item-multimediaMode.ta.mjs";
 
 /**
  * @summary ModemIdentity_Item

@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    EMailFromToEIT,
+    type EMailFromToEIT,
     _decode_EMailFromToEIT,
     _encode_EMailFromToEIT,
 } from '../MhsAcctAsn1Module/EMailFromToEIT.ta.mjs';

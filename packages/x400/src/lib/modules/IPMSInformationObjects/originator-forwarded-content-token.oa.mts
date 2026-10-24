@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    ForwardedContentToken,
+    type ForwardedContentToken,
     _decode_ForwardedContentToken,
     _encode_ForwardedContentToken,
 } from '../IPMSSecurityExtensions/ForwardedContentToken.ta.mjs';

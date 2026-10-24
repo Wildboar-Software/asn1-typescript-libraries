@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SummarizeErrors,
+    type SummarizeErrors,
     _decode_SummarizeErrors,
     _encode_SummarizeErrors,
 } from '../MhsAcctAsn1Module/SummarizeErrors.ta.mjs';

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    NumericString
+    type NumericString
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 

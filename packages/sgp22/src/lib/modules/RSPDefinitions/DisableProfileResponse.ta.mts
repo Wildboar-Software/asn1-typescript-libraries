@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_DisableProfileResponse_disableResult, _encode_DisableProfileResponse_disableResult, DisableProfileResponse_disableResult } from "../RSPDefinitions/DisableProfileResponse-disableResult.ta.mjs";
+import { _decode_DisableProfileResponse_disableResult, _encode_DisableProfileResponse_disableResult, type DisableProfileResponse_disableResult } from "../RSPDefinitions/DisableProfileResponse-disableResult.ta.mjs";
 
 
 /**

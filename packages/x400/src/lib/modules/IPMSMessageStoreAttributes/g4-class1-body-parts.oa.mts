@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    G4Class1BodyPart,
+    type G4Class1BodyPart,
     _decode_G4Class1BodyPart,
     _encode_G4Class1BodyPart,
 } from '../IPMSInformationObjects/G4Class1BodyPart.ta.mjs';

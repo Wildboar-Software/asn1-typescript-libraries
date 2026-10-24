@@ -7,7 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AlgoInvoke,
+    type AlgoInvoke,
     _decode_AlgoInvoke,
     _encode_AlgoInvoke,
 } from "@wildboar/pki-stub";

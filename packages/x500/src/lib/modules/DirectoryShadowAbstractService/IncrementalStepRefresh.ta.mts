@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    IncrementalStepRefresh_sDSEChanges,
+    type IncrementalStepRefresh_sDSEChanges,
     _decode_IncrementalStepRefresh_sDSEChanges,
     _encode_IncrementalStepRefresh_sDSEChanges,
 } from "../DirectoryShadowAbstractService/IncrementalStepRefresh-sDSEChanges.ta.mjs";

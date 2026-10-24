@@ -3,11 +3,11 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     type INTEGER,
-    OPTIONAL
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_AdditionalExceptionReports, _encode_AdditionalExceptionReports, _enum_for_AdditionalExceptionReports, AdditionalExceptionReports } from "../GPRSChargingDataTypes/AdditionalExceptionReports.ta.mjs";
-import { _decode_APNRateControlParameters_rateControlTimeUnit, _encode_APNRateControlParameters_rateControlTimeUnit, APNRateControlParameters_rateControlTimeUnit } from "../GPRSChargingDataTypes/APNRateControlParameters-rateControlTimeUnit.ta.mjs";
+import { _decode_APNRateControlParameters_rateControlTimeUnit, _encode_APNRateControlParameters_rateControlTimeUnit, type APNRateControlParameters_rateControlTimeUnit } from "../GPRSChargingDataTypes/APNRateControlParameters-rateControlTimeUnit.ta.mjs";
 
 
 /**

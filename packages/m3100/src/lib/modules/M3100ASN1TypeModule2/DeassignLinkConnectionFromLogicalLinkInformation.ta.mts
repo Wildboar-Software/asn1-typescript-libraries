@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    LinkConnectionList,
+    type LinkConnectionList,
     _decode_LinkConnectionList,
     _encode_LinkConnectionList,
 } from '../M3100ASN1TypeModule2/LinkConnectionList.ta.mjs';

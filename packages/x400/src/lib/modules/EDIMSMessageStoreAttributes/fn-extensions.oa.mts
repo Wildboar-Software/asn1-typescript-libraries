@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    FNExtensionsSubField,
+    type FNExtensionsSubField,
     _decode_FNExtensionsSubField,
     _encode_FNExtensionsSubField,
 } from '../EDIMSInformationObjects/FNExtensionsSubField.ta.mjs';

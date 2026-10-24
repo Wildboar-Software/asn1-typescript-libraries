@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { authWtmUser } from "../WTM-Authentication-Operations-asn1-97/authWtmUser.oa.mjs";
 import { getWtatParam } from "../WTM-Authentication-Operations-asn1-97/getWtatParam.oa.mjs";
 import { wtatParamEnq } from "../WTM-Authentication-Operations-asn1-97/wtatParamEnq.oa.mjs";

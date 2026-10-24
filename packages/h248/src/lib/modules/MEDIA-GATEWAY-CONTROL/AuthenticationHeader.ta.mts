@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SecurityParmIndex, _decode_SecurityParmIndex, _encode_SecurityParmIndex } from "../MEDIA-GATEWAY-CONTROL/SecurityParmIndex.ta.mjs";
-import { SequenceNum, _decode_SequenceNum, _encode_SequenceNum } from "../MEDIA-GATEWAY-CONTROL/SequenceNum.ta.mjs";
-import { AuthData, _decode_AuthData, _encode_AuthData } from "../MEDIA-GATEWAY-CONTROL/AuthData.ta.mjs";
+import { type SecurityParmIndex, _decode_SecurityParmIndex, _encode_SecurityParmIndex } from "../MEDIA-GATEWAY-CONTROL/SecurityParmIndex.ta.mjs";
+import { type SequenceNum, _decode_SequenceNum, _encode_SequenceNum } from "../MEDIA-GATEWAY-CONTROL/SequenceNum.ta.mjs";
+import { type AuthData, _decode_AuthData, _encode_AuthData } from "../MEDIA-GATEWAY-CONTROL/AuthData.ta.mjs";
 
 
 /**

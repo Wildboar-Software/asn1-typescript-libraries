@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    ReportingDLName,
+    type ReportingDLName,
     _decode_ReportingDLName,
     _encode_ReportingDLName,
 } from '../MTSAbstractService/ReportingDLName.ta.mjs';

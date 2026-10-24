@@ -6,7 +6,7 @@ import {
     id_tokenizedParts,
 } from "../CMSObjectIdentifiers/id-tokenizedParts.va.mjs";
 import {
-    TokenizedParts,
+    type TokenizedParts,
     _decode_TokenizedParts,
     _encode_TokenizedParts,
 } from "./TokenizedParts.ta.mjs";

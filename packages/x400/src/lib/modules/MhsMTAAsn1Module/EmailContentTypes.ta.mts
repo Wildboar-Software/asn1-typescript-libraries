@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    EMailContentType,
+    type EMailContentType,
     _decode_EMailContentType,
     _encode_EMailContentType,
 } from '../MhsMTAAsn1Module/EMailContentType.ta.mjs';

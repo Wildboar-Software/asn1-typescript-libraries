@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Address, _decode_Address, _encode_Address } from "../MmsHI2Operations/Address.ta.mjs";
+import { type Address, _decode_Address, _encode_Address } from "../MmsHI2Operations/Address.ta.mjs";
 // export { Address, _decode_Address, _encode_Address } from "../MmsHI2Operations/Address.ta.mjs";
 
 

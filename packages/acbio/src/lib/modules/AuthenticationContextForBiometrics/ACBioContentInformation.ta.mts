@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Version,
+    type Version,
     v0 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Version,
     _encode_Version,
@@ -29,7 +29,7 @@ import {
     _encode_BiometricProcess,
 } from '../AuthenticationContextForBiometrics/BiometricProcess.ta.mjs';
 import {
-    BRTCertificateInformation,
+    type BRTCertificateInformation,
     _decode_BRTCertificateInformation,
     _encode_BRTCertificateInformation,
 } from '../AuthenticationContextForBiometrics/BRTCertificateInformation.ta.mjs';

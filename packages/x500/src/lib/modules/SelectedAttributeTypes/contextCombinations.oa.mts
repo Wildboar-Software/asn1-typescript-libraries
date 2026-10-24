@@ -5,7 +5,7 @@ import {
 } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { id_not_contextCombinations } from "../SelectedAttributeTypes/id-not-contextCombinations.va.mjs";
 import {
-    ContextCombination,
+    type ContextCombination,
     _decode_ContextCombination,
     _encode_ContextCombination,
 } from "../ServiceAdministration/ContextCombination.ta.mjs";

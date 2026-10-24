@@ -8,4 +8,4 @@ import type Error_ from "./Error_.mjs";
 export
 type ChainedResultOrError = ChainedResult | Error_;
 
-export default ChainedResultOrError;
+export type { ChainedResultOrError as default };

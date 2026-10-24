@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ObjectIdentifier as _OID,
-    OBJECT_IDENTIFIER
+    type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { hi1NotificationOperationsId } from "../HI1NotificationOperations/hi1NotificationOperationsId.va.mjs";
 // export { hi1NotificationOperationsId } from "../HI1NotificationOperations/hi1NotificationOperationsId.va.mjs";

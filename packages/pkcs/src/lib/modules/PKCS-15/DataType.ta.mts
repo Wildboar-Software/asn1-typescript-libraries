@@ -2,17 +2,17 @@
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    DataObject,
+    type DataObject,
     _get_decoder_for_DataObject,
     _get_encoder_for_DataObject,
 } from "../PKCS-15/DataObject.ta.mjs";
 import {
-    ExternalIDO,
+    type ExternalIDO,
     _decode_ExternalIDO,
     _encode_ExternalIDO,
 } from "../PKCS-15/ExternalIDO.ta.mjs";
 import { OidDO, _decode_OidDO, _encode_OidDO } from "../PKCS-15/OidDO.ta.mjs";
-import { Opaque, _decode_Opaque, _encode_Opaque } from "../PKCS-15/Opaque.ta.mjs";
+import { type Opaque, _decode_Opaque, _encode_Opaque } from "../PKCS-15/Opaque.ta.mjs";
 
 /**
  * @summary DataType

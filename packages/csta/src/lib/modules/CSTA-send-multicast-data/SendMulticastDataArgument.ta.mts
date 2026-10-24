@@ -4,12 +4,12 @@ import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
     type OCTET_STRING,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { IOCrossRefID, _decode_IOCrossRefID, _encode_IOCrossRefID } from "../CSTA-device-feature-types/IOCrossRefID.ta.mjs";
+import { type IOCrossRefID, _decode_IOCrossRefID, _encode_IOCrossRefID } from "../CSTA-device-feature-types/IOCrossRefID.ta.mjs";
 
 import { DisplayAttributeList, _decode_DisplayAttributeList, _encode_DisplayAttributeList } from "../CSTA-device-feature-types/DisplayAttributeList.ta.mjs";
 

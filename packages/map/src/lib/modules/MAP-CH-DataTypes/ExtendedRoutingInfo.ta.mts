@@ -5,7 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CamelRoutingInfo, _decode_CamelRoutingInfo, _encode_CamelRoutingInfo } from "../MAP-CH-DataTypes/CamelRoutingInfo.ta.mjs";
-import { RoutingInfo, _decode_RoutingInfo, _encode_RoutingInfo } from "../MAP-CH-DataTypes/RoutingInfo.ta.mjs";
+import { type RoutingInfo, _decode_RoutingInfo, _encode_RoutingInfo } from "../MAP-CH-DataTypes/RoutingInfo.ta.mjs";
 
 
 /**

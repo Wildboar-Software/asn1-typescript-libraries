@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Attributes,
+    type Attributes,
     _decode_Attributes,
     _encode_Attributes,
 } from "../PKCS7/Attributes.ta.mjs";
@@ -16,17 +16,17 @@ import {
     _encode_ContentInfo,
 } from "../PKCS7/ContentInfo.ta.mjs";
 import {
-    DigestAlgorithmIdentifier,
+    type DigestAlgorithmIdentifier,
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
 } from "../PKCS7/DigestAlgorithmIdentifier.ta.mjs";
 import {
-    MessageAuthenticationCode,
+    type MessageAuthenticationCode,
     _decode_MessageAuthenticationCode,
     _encode_MessageAuthenticationCode,
 } from "../PKCS7/MessageAuthenticationCode.ta.mjs";
 import {
-    MessageAuthenticationCodeAlgorithmIdentifier,
+    type MessageAuthenticationCodeAlgorithmIdentifier,
     _decode_MessageAuthenticationCodeAlgorithmIdentifier,
     _encode_MessageAuthenticationCodeAlgorithmIdentifier,
 } from "../PKCS7/MessageAuthenticationCodeAlgorithmIdentifier.ta.mjs";
@@ -36,11 +36,11 @@ import {
     _encode_OriginatorInfo,
 } from "../PKCS7/OriginatorInfo.ta.mjs";
 import {
-    RecipientInfos,
+    type RecipientInfos,
     _decode_RecipientInfos,
     _encode_RecipientInfos,
 } from "../PKCS7/RecipientInfos.ta.mjs";
-import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.mjs";
+import { type Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.mjs";
 
 /**
  * @summary AuthenticatedData

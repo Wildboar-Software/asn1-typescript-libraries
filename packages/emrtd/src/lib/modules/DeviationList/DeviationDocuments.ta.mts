@@ -9,7 +9,7 @@ import {
     isPrintableCharacter,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DocumentSignerIdentifier, _decode_DocumentSignerIdentifier, _encode_DocumentSignerIdentifier } from "../DeviationList/DocumentSignerIdentifier.ta.mjs";
+import { type DocumentSignerIdentifier, _decode_DocumentSignerIdentifier, _encode_DocumentSignerIdentifier } from "../DeviationList/DocumentSignerIdentifier.ta.mjs";
 // export { DocumentSignerIdentifier, _decode_DocumentSignerIdentifier, _encode_DocumentSignerIdentifier } from "../DeviationList/DocumentSignerIdentifier.ta.mjs";
 import { IssuancePeriod, _decode_IssuancePeriod, _encode_IssuancePeriod } from "../DeviationList/IssuancePeriod.ta.mjs";
 // export { IssuancePeriod, _decode_IssuancePeriod, _encode_IssuancePeriod } from "../DeviationList/IssuancePeriod.ta.mjs";

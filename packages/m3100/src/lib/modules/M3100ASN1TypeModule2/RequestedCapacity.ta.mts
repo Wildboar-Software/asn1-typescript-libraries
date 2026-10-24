@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Channel,
+    type Channel,
     _decode_Channel,
     _encode_Channel,
 } from '../M3100ASN1TypeModule2/Channel.ta.mjs';
 import {
-    Capacity,
+    type Capacity,
     _decode_Capacity,
     _encode_Capacity,
 } from '../M3100ASN1TypeModule2/Capacity.ta.mjs';

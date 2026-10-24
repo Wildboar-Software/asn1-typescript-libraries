@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AutoDiscardProblem,
+    type AutoDiscardProblem,
     _decode_AutoDiscardProblem,
     _encode_AutoDiscardProblem,
 } from '../IPMSAutoActionTypes/AutoDiscardProblem.ta.mjs';

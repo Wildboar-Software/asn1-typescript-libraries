@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    BackupReply_reply,
+    type BackupReply_reply,
     _decode_BackupReply_reply,
     _encode_BackupReply_reply,
 } from '../BackupRestoreASN1Module/BackupReply-reply.ta.mjs';

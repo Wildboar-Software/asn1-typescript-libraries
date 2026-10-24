@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  KerberosString,
+  type KerberosString,
   _decode_KerberosString,
   _encode_KerberosString,
 } from '../KerberosV5Spec2/KerberosString.ta.mjs';

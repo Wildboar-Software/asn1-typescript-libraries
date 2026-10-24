@@ -2,7 +2,7 @@
 import type { ATTRIBUTE } from "@wildboar/x500/InformationFramework";
 import { id_regCtrl_protocolEncrKey } from "../PKIXCRMF-2009/id-regCtrl-protocolEncrKey.va.mjs";
 import {
-    ProtocolEncrKey,
+    type ProtocolEncrKey,
     _decode_ProtocolEncrKey,
     _encode_ProtocolEncrKey,
 } from "../PKIXCRMF-2009/ProtocolEncrKey.ta.mjs";

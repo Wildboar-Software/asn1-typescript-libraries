@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Mode_selector_mode_value,
+    type Mode_selector_mode_value,
     _decode_Mode_selector_mode_value,
     _encode_Mode_selector_mode_value,
 } from '../ISO8823-PRESENTATION/Mode-selector-mode-value.ta.mjs';

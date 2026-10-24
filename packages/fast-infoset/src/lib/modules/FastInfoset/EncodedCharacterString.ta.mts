@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  EncodedCharacterString_encoding_format,
+  type EncodedCharacterString_encoding_format,
   _decode_EncodedCharacterString_encoding_format,
   _encode_EncodedCharacterString_encoding_format,
 } from '../FastInfoset/EncodedCharacterString-encoding-format.ta.mjs';
 import {
-  NonEmptyOctetString,
+  type NonEmptyOctetString,
   _decode_NonEmptyOctetString,
   _encode_NonEmptyOctetString,
 } from '../FastInfoset/NonEmptyOctetString.ta.mjs';

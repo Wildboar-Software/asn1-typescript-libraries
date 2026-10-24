@@ -21,12 +21,12 @@ import {
     _get_encoder_for_FingerPrint,
 } from "../PKI-Stub/FingerPrint.ta.mjs";
 import {
-    Certificate,
+    type Certificate,
     _decode_Certificate,
     _encode_Certificate,
 } from "../PKI-Stub/Certificate.ta.mjs";
 import {
-    PublicKey,
+    type PublicKey,
     _decode_PublicKey,
     _encode_PublicKey,
 } from "../PKI-Stub/PublicKey.ta.mjs";

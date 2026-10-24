@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    ResponsibilityForwarded,
+    type ResponsibilityForwarded,
     _decode_ResponsibilityForwarded,
     _encode_ResponsibilityForwarded,
 } from '../EDIMSInformationObjects/ResponsibilityForwarded.ta.mjs';

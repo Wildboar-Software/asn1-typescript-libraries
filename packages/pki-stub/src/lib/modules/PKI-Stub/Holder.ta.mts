@@ -17,7 +17,7 @@ import {
     _encode_IssuerSerial,
 } from "../PKI-Stub/IssuerSerial.ta.mjs";
 import {
-    GeneralNames,
+    type GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
 } from "../PKI-Stub/GeneralNames.ta.mjs";

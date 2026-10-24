@@ -7,7 +7,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { HSSIdentities, _decode_HSSIdentities, _encode_HSSIdentities } from "../TS33128Payloads/HSSIdentities.ta.mjs";
 // export { HSSIdentities, _decode_HSSIdentities, _encode_HSSIdentities } from "../TS33128Payloads/HSSIdentities.ta.mjs";
-import { SubscriberRecordChangePayload, _decode_SubscriberRecordChangePayload, _encode_SubscriberRecordChangePayload } from "../TS33128Payloads/SubscriberRecordChangePayload.ta.mjs";
+import { type SubscriberRecordChangePayload, _decode_SubscriberRecordChangePayload, _encode_SubscriberRecordChangePayload } from "../TS33128Payloads/SubscriberRecordChangePayload.ta.mjs";
 // export { SubscriberRecordChangePayload, _decode_SubscriberRecordChangePayload, _encode_SubscriberRecordChangePayload } from "../TS33128Payloads/SubscriberRecordChangePayload.ta.mjs";
 
 

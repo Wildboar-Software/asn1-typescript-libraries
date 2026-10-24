@@ -11,10 +11,10 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { FieldParamOffer_capability, _decode_FieldParamOffer_capability, _encode_FieldParamOffer_capability } from "../CDS/FieldParamOffer-capability.ta.mjs";
+import { type FieldParamOffer_capability, _decode_FieldParamOffer_capability, _encode_FieldParamOffer_capability } from "../CDS/FieldParamOffer-capability.ta.mjs";
 import { FieldParamOffer_maxFields, _decode_FieldParamOffer_maxFields, _encode_FieldParamOffer_maxFields } from "../CDS/FieldParamOffer-maxFields.ta.mjs";
 import { FieldParamOffer_maxFieldElements, _decode_FieldParamOffer_maxFieldElements, _encode_FieldParamOffer_maxFieldElements } from "../CDS/FieldParamOffer-maxFieldElements.ta.mjs";
-import { FieldParamOffer_accessOutside, _decode_FieldParamOffer_accessOutside, _encode_FieldParamOffer_accessOutside } from "../CDS/FieldParamOffer-accessOutside.ta.mjs";
+import { type FieldParamOffer_accessOutside, _decode_FieldParamOffer_accessOutside, _encode_FieldParamOffer_accessOutside } from "../CDS/FieldParamOffer-accessOutside.ta.mjs";
 
 
 /**

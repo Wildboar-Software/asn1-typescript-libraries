@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { applicationContext } from "../UsefulDefinitions/applicationContext.va.mjs";
-import { ID } from "../UsefulDefinitions/ID.ta.mjs";
+import { type ID } from "../UsefulDefinitions/ID.ta.mjs";
 /**
  * @summary id_ac
  * @description

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  CertOrEncCert,
+  type CertOrEncCert,
   _decode_CertOrEncCert,
   _encode_CertOrEncCert,
 } from '../PKIXCMP-2009/CertOrEncCert.ta.mjs';

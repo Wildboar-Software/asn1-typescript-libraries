@@ -6,22 +6,22 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    BaseDistance,
+    type BaseDistance,
     _decode_BaseDistance,
     _encode_BaseDistance,
 } from "../InformationFramework/BaseDistance.ta.mjs";
 import {
-    ChopSpecification_specificExclusions_Item,
+    type ChopSpecification_specificExclusions_Item,
     _decode_ChopSpecification_specificExclusions_Item,
     _encode_ChopSpecification_specificExclusions_Item,
 } from "../InformationFramework/ChopSpecification-specificExclusions-Item.ta.mjs";
 import {
-    LocalName,
+    type LocalName,
     _decode_LocalName,
     _encode_LocalName,
 } from "../InformationFramework/LocalName.ta.mjs";
 import {
-    Refinement,
+    type Refinement,
     _decode_Refinement,
     _encode_Refinement,
 } from "../InformationFramework/Refinement.ta.mjs";

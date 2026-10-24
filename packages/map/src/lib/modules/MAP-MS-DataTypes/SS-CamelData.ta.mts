@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { SS_EventList, _decode_SS_EventList, _encode_SS_EventList } from "../MAP-MS-DataTypes/SS-EventList.ta.mjs";
+import { type SS_EventList, _decode_SS_EventList, _encode_SS_EventList } from "../MAP-MS-DataTypes/SS-EventList.ta.mjs";
 
 
 /**

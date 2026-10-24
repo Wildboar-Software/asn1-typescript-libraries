@@ -16,7 +16,7 @@ import {
     _encode_PhysicalPortSignalRateAndMappingList_diverse,
 } from '../ASN1DefinedTypesModule/PhysicalPortSignalRateAndMappingList-diverse.ta.mjs';
 import {
-    SignalRateAndMappingList,
+    type SignalRateAndMappingList,
     _decode_SignalRateAndMappingList,
     _encode_SignalRateAndMappingList,
 } from '../ASN1DefinedTypesModule/SignalRateAndMappingList.ta.mjs';

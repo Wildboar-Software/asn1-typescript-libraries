@@ -1,19 +1,19 @@
 /* eslint-disable */
 import {
     type OPTIONAL,
-    UTCTime,
+    type UTCTime,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     BERElement
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ScfID, _decode_ScfID, _encode_ScfID } from "../IN-CS2-datatypes/ScfID.ta.mjs";
+import { type ScfID, _decode_ScfID, _encode_ScfID } from "../IN-CS2-datatypes/ScfID.ta.mjs";
 // export { ScfID, _decode_ScfID, _encode_ScfID } from "../IN-CS2-datatypes/ScfID.ta.mjs";
-import { SubscriberId, _decode_SubscriberId, _encode_SubscriberId } from "../IN-CS2-datatypes/SubscriberId.ta.mjs";
+import { type SubscriberId, _decode_SubscriberId, _encode_SubscriberId } from "../IN-CS2-datatypes/SubscriberId.ta.mjs";
 // export { SubscriberId, _decode_SubscriberId, _encode_SubscriberId } from "../IN-CS2-datatypes/SubscriberId.ta.mjs";
-import { TraceInformation, _decode_TraceInformation, _encode_TraceInformation } from "../IN-CS2-datatypes/TraceInformation.ta.mjs";
+import { type TraceInformation, _decode_TraceInformation, _encode_TraceInformation } from "../IN-CS2-datatypes/TraceInformation.ta.mjs";
 // export { TraceInformation, _decode_TraceInformation, _encode_TraceInformation } from "../IN-CS2-datatypes/TraceInformation.ta.mjs";
-import { AuthenticationLevel, _decode_AuthenticationLevel, _encode_AuthenticationLevel } from "../BasicAccessControl/AuthenticationLevel.ta.mjs";
+import { type AuthenticationLevel, _decode_AuthenticationLevel, _encode_AuthenticationLevel } from "../BasicAccessControl/AuthenticationLevel.ta.mjs";
 // export { AuthenticationLevel, _decode_AuthenticationLevel, _encode_AuthenticationLevel } from "../BasicAccessControl/AuthenticationLevel.ta.mjs";
 import { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParameters } from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
 // export { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParameters } from "../DirectoryAbstractService/SecurityParameters.ta.mjs";

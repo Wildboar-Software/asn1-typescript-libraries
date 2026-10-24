@@ -10,12 +10,12 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PrivateKeys, _decode_PrivateKeys, _encode_PrivateKeys } from "../CryptographicInformationFramework/PrivateKeys.ta.mjs";
-import { PublicKeys, _decode_PublicKeys, _encode_PublicKeys } from "../CryptographicInformationFramework/PublicKeys.ta.mjs";
-import { SecretKeys, _decode_SecretKeys, _encode_SecretKeys } from "../CryptographicInformationFramework/SecretKeys.ta.mjs";
-import { Certificates, _decode_Certificates, _encode_Certificates } from "../CryptographicInformationFramework/Certificates.ta.mjs";
-import { DataContainerObjects, _decode_DataContainerObjects, _encode_DataContainerObjects } from "../CryptographicInformationFramework/DataContainerObjects.ta.mjs";
-import { AuthObjects, _decode_AuthObjects, _encode_AuthObjects } from "../CryptographicInformationFramework/AuthObjects.ta.mjs";
+import { type PrivateKeys, _decode_PrivateKeys, _encode_PrivateKeys } from "../CryptographicInformationFramework/PrivateKeys.ta.mjs";
+import { type PublicKeys, _decode_PublicKeys, _encode_PublicKeys } from "../CryptographicInformationFramework/PublicKeys.ta.mjs";
+import { type SecretKeys, _decode_SecretKeys, _encode_SecretKeys } from "../CryptographicInformationFramework/SecretKeys.ta.mjs";
+import { type Certificates, _decode_Certificates, _encode_Certificates } from "../CryptographicInformationFramework/Certificates.ta.mjs";
+import { type DataContainerObjects, _decode_DataContainerObjects, _encode_DataContainerObjects } from "../CryptographicInformationFramework/DataContainerObjects.ta.mjs";
+import { type AuthObjects, _decode_AuthObjects, _encode_AuthObjects } from "../CryptographicInformationFramework/AuthObjects.ta.mjs";
 
 
 /**

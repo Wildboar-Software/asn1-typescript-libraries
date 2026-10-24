@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IMEICheckDigit, _decode_IMEICheckDigit, _encode_IMEICheckDigit } from "../Common-Parameters/IMEICheckDigit.ta.mjs";
+import { type IMEICheckDigit, _decode_IMEICheckDigit, _encode_IMEICheckDigit } from "../Common-Parameters/IMEICheckDigit.ta.mjs";
 // export { IMEICheckDigit, _decode_IMEICheckDigit, _encode_IMEICheckDigit } from "../Common-Parameters/IMEICheckDigit.ta.mjs";
 
 

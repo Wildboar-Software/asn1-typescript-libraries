@@ -5,7 +5,7 @@ import {
     _encode_AlgorithmIdentifier,
 } from "@wildboar/x500/AuthenticationFramework";
 import { id_mgf1 } from "../PKCS-1/id-mgf1.va.mjs";
-import { MaskGenAlgorithm } from "../PKCS-1/MaskGenAlgorithm.ta.mjs";
+import { type MaskGenAlgorithm } from "../PKCS-1/MaskGenAlgorithm.ta.mjs";
 import { sha1 } from "../PKCS-1/sha1.va.mjs";
 
 

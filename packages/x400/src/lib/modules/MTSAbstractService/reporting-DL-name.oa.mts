@@ -18,7 +18,7 @@ import {
     _encode_Criticality,
 } from '../MTSAbstractService/Criticality.ta.mjs';
 import {
-    ReportingDLName,
+    type ReportingDLName,
     _decode_ReportingDLName,
     _encode_ReportingDLName,
 } from '../MTSAbstractService/ReportingDLName.ta.mjs';

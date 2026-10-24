@@ -4,7 +4,7 @@ import {
     ASN1Error
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_ForwardDuStatus, _encode_ForwardDuStatus, ForwardDuStatus,
+import { _decode_ForwardDuStatus, _encode_ForwardDuStatus, type ForwardDuStatus,
     ForwardDuStatus_acknowledged,
     ForwardDuStatus_radiated,
     ForwardDuStatus_productionStarted,

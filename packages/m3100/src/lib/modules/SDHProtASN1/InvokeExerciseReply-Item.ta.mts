@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RelativeDistinguishedName,
+    type RelativeDistinguishedName,
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
 } from '@wildboar/dn';
 import {
-    LastAttemptResult,
+    type LastAttemptResult,
     _decode_LastAttemptResult,
     _encode_LastAttemptResult,
 } from '../SDHProtASN1/LastAttemptResult.ta.mjs';

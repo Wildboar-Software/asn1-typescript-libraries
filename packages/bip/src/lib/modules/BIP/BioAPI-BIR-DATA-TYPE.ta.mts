@@ -11,13 +11,13 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_BIR_DATA_TYPE_processedLevel,
+  type BioAPI_BIR_DATA_TYPE_processedLevel,
   _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel,
   _decode_BioAPI_BIR_DATA_TYPE_processedLevel,
   _encode_BioAPI_BIR_DATA_TYPE_processedLevel,
 } from '../BIP/BioAPI-BIR-DATA-TYPE-processedLevel.ta.mjs';
 import {
-  BioAPI_BIR_DATA_TYPE_flags,
+  type BioAPI_BIR_DATA_TYPE_flags,
   _decode_BioAPI_BIR_DATA_TYPE_flags,
   _encode_BioAPI_BIR_DATA_TYPE_flags,
 } from '../BIP/BioAPI-BIR-DATA-TYPE-flags.ta.mjs';

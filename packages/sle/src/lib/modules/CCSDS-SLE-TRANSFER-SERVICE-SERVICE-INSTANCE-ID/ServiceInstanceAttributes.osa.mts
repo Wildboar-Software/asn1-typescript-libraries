@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/ATTRIBUTE.oca.mjs";
+import { type ATTRIBUTE } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/ATTRIBUTE.oca.mjs";
 import { GeneralAttributes } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/GeneralAttributes.osa.mjs";
 import { ServiceNames } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/ServiceNames.osa.mjs";
 

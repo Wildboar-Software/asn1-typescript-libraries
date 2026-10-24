@@ -17,7 +17,7 @@ import {
     _encode_ORDescriptor,
 } from '../IPMSInformationObjects/ORDescriptor.ta.mjs';
 import {
-    Time,
+    type Time,
     _decode_Time,
     _encode_Time,
 } from '../IPMSInformationObjects/Time.ta.mjs';

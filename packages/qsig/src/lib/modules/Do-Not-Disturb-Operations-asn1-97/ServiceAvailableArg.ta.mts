@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ServiceList, _decode_ServiceList, _encode_ServiceList } from "../Do-Not-Disturb-Operations-asn1-97/ServiceList.ta.mjs";
+import { type ServiceList, _decode_ServiceList, _encode_ServiceList } from "../Do-Not-Disturb-Operations-asn1-97/ServiceList.ta.mjs";
 import { ServiceAvailableArg_extendedServiceList, _decode_ServiceAvailableArg_extendedServiceList, _encode_ServiceAvailableArg_extendedServiceList } from "../Do-Not-Disturb-Operations-asn1-97/ServiceAvailableArg-extendedServiceList.ta.mjs";
 
 /**

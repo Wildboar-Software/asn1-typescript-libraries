@@ -7,7 +7,7 @@ import {
     _encode_AbandonFailedData,
 } from "../DirectoryAbstractService/AbandonFailedData.ta.mjs";
 import {
-    OPTIONALLY_PROTECTED,
+    type OPTIONALLY_PROTECTED,
     _get_decoder_for_OPTIONALLY_PROTECTED,
     _get_encoder_for_OPTIONALLY_PROTECTED,
 } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";

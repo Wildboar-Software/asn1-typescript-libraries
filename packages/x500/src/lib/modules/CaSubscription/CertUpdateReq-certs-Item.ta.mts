@@ -6,17 +6,17 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CertStatus,
+    type CertStatus,
     _decode_CertStatus,
     _encode_CertStatus,
     _enum_for_CertStatus,
 } from "../CaSubscription/CertStatus.ta.mjs";
 import {
-    CertificateSerialNumber,
+    type CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
 } from "@wildboar/pki-stub";
-import { Name, _decode_Name, _encode_Name } from "@wildboar/dn";
+import { type Name, _decode_Name, _encode_Name } from "@wildboar/dn";
 /**
  * @summary CertUpdateReq_certs_Item
  * @description

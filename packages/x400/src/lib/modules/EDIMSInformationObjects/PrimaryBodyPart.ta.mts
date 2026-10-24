@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    EDIBodyPart,
+    type EDIBodyPart,
     _decode_EDIBodyPart,
     _encode_EDIBodyPart,
 } from '../EDIMSInformationObjects/EDIBodyPart.ta.mjs';

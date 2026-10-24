@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ProtectionStatusR1,
+    type ProtectionStatusR1,
     _decode_ProtectionStatusR1,
     _encode_ProtectionStatusR1,
 } from '../M3100ASN1Module3/ProtectionStatusR1.ta.mjs';

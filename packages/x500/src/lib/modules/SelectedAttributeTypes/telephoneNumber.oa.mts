@@ -6,7 +6,7 @@ import {
 import { id_at_telephoneNumber } from "../SelectedAttributeTypes/id-at-telephoneNumber.va.mjs";
 import { printableString } from "../SelectedAttributeTypes/printableString.oa.mjs";
 import {
-    TelephoneNumber,
+    type TelephoneNumber,
     _decode_TelephoneNumber,
     _encode_TelephoneNumber,
 } from "../SelectedAttributeTypes/TelephoneNumber.ta.mjs";

@@ -22,7 +22,7 @@ import {
     _encode_PrivateKEAKeyAttributes,
 } from "../PKCS-15/PrivateKEAKeyAttributes.ta.mjs";
 import {
-    PrivateKeyObject,
+    type PrivateKeyObject,
     _get_decoder_for_PrivateKeyObject,
     _get_encoder_for_PrivateKeyObject,
 } from "../PKCS-15/PrivateKeyObject.ta.mjs";

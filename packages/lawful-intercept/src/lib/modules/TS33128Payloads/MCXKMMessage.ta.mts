@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MCServiceID, _decode_MCServiceID, _encode_MCServiceID } from "../TS33128Payloads/MCServiceID.ta.mjs";
+import { type MCServiceID, _decode_MCServiceID, _encode_MCServiceID } from "../TS33128Payloads/MCServiceID.ta.mjs";
 // export { MCServiceID, _decode_MCServiceID, _encode_MCServiceID } from "../TS33128Payloads/MCServiceID.ta.mjs";
 import { KMMessage, _decode_KMMessage, _encode_KMMessage } from "../TS33128Payloads/KMMessage.ta.mjs";
 // export { KMMessage, _decode_KMMessage, _encode_KMMessage } from "../TS33128Payloads/KMMessage.ta.mjs";

@@ -11,7 +11,7 @@ import {
     _encode_MasterKeyEncryptedHMACkey,
 } from "../CMSDBKeyManagement/MasterKeyEncryptedHMACkey.ta.mjs";
 import {
-    UniqueIdentifier,
+    type UniqueIdentifier,
     _decode_UniqueIdentifier,
     _encode_UniqueIdentifier,
 } from "../CMSDBKeyManagement/UniqueIdentifier.ta.mjs";

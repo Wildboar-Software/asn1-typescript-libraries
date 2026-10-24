@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    CoincidentUnidirectionalConnections,
+    type CoincidentUnidirectionalConnections,
     _decode_CoincidentUnidirectionalConnections,
     _encode_CoincidentUnidirectionalConnections,
 } from '../M3100ASN1TypeModule6/CoincidentUnidirectionalConnections.ta.mjs';

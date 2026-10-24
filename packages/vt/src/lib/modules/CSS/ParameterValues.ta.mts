@@ -13,12 +13,12 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ParameterValues_typeIdentifier, _decode_ParameterValues_typeIdentifier, _encode_ParameterValues_typeIdentifier } from "../CSS/ParameterValues-typeIdentifier.ta.mjs";
-import { AccessRuleValue, _decode_AccessRuleValue, _encode_AccessRuleValue } from "../CSS/AccessRuleValue.ta.mjs";
-import { ParameterValues_category, _decode_ParameterValues_category, _encode_ParameterValues_category } from "../CSS/ParameterValues-category.ta.mjs";
+import { type ParameterValues_typeIdentifier, _decode_ParameterValues_typeIdentifier, _encode_ParameterValues_typeIdentifier } from "../CSS/ParameterValues-typeIdentifier.ta.mjs";
+import { type AccessRuleValue, _decode_AccessRuleValue, _encode_AccessRuleValue } from "../CSS/AccessRuleValue.ta.mjs";
+import { type ParameterValues_category, _decode_ParameterValues_category, _encode_ParameterValues_category } from "../CSS/ParameterValues-category.ta.mjs";
 import { _decode_RepertoireAssignment, _encode_RepertoireAssignment, RepertoireAssignment } from "../CDS/RepertoireAssignment.ta.mjs";
-import { ParameterValues_priority, _decode_ParameterValues_priority, _encode_ParameterValues_priority } from "../CSS/ParameterValues-priority.ta.mjs";
-import { ParameterValues_structure, _decode_ParameterValues_structure, _encode_ParameterValues_structure } from "../CSS/ParameterValues-structure.ta.mjs";
+import { type ParameterValues_priority, _decode_ParameterValues_priority, _encode_ParameterValues_priority } from "../CSS/ParameterValues-priority.ta.mjs";
+import { type ParameterValues_structure, _decode_ParameterValues_structure, _encode_ParameterValues_structure } from "../CSS/ParameterValues-structure.ta.mjs";
 import { ElementParamValue, _decode_ElementParamValue, _encode_ElementParamValue } from "../CSS/ElementParamValue.ta.mjs";
 
 

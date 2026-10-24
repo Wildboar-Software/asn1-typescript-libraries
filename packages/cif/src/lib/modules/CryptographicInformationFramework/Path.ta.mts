@@ -14,7 +14,7 @@ import {
     ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Path_efidOrTagChoice, _decode_Path_efidOrTagChoice, _encode_Path_efidOrTagChoice } from "../CryptographicInformationFramework/Path-efidOrTagChoice.ta.mjs";
+import { type Path_efidOrTagChoice, _decode_Path_efidOrTagChoice, _encode_Path_efidOrTagChoice } from "../CryptographicInformationFramework/Path-efidOrTagChoice.ta.mjs";
 import { cia_ub_index } from "../CryptographicInformationFramework/cia-ub-index.va.mjs";
 
 

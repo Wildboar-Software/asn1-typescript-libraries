@@ -16,18 +16,18 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AARE_apdu_protocol_version,
+    type AARE_apdu_protocol_version,
     AARE_apdu_protocol_version_version1 /* IMPORTED_LONG_NAMED_BIT */,
     _decode_AARE_apdu_protocol_version,
     _encode_AARE_apdu_protocol_version,
 } from '../DialoguePDUs/AARE-apdu-protocol-version.ta.mjs';
 import {
-    Associate_result,
+    type Associate_result,
     _decode_Associate_result,
     _encode_Associate_result,
 } from '../DialoguePDUs/Associate-result.ta.mjs';
 import {
-    Associate_source_diagnostic,
+    type Associate_source_diagnostic,
     _decode_Associate_source_diagnostic,
     _encode_Associate_source_diagnostic,
 } from '../DialoguePDUs/Associate-source-diagnostic.ta.mjs';

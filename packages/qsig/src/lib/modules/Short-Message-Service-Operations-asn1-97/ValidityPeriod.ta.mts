@@ -4,8 +4,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ValidityPeriodRel, _decode_ValidityPeriodRel, _encode_ValidityPeriodRel } from "../Short-Message-Service-Operations-asn1-97/ValidityPeriodRel.ta.mjs";
-import { ValidityPeriodAbs, _decode_ValidityPeriodAbs, _encode_ValidityPeriodAbs } from "../Short-Message-Service-Operations-asn1-97/ValidityPeriodAbs.ta.mjs";
+import { type ValidityPeriodRel, _decode_ValidityPeriodRel, _encode_ValidityPeriodRel } from "../Short-Message-Service-Operations-asn1-97/ValidityPeriodRel.ta.mjs";
+import { type ValidityPeriodAbs, _decode_ValidityPeriodAbs, _encode_ValidityPeriodAbs } from "../Short-Message-Service-Operations-asn1-97/ValidityPeriodAbs.ta.mjs";
 import { ValidityPeriodEnh, _decode_ValidityPeriodEnh, _encode_ValidityPeriodEnh } from "../Short-Message-Service-Operations-asn1-97/ValidityPeriodEnh.ta.mjs";
 
 /**

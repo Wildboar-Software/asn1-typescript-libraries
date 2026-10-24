@@ -2,7 +2,7 @@
 import {
     ASN1Element as _Element,
     ASN1SizeError,
-    PrintableString
+    type PrintableString
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ub_military_string } from "../MMSUpperBounds/ub-military-string.va.mjs";

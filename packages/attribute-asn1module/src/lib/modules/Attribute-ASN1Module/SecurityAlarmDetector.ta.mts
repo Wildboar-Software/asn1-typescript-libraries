@@ -11,8 +11,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectInstance, _decode_ObjectInstance, _encode_ObjectInstance } from "@wildboar/cmip";
-import { AE_title, _decode_AE_title, _encode_AE_title } from "@wildboar/acse";
+import { type ObjectInstance, _decode_ObjectInstance, _encode_ObjectInstance } from "@wildboar/cmip";
+import { type AE_title, _decode_AE_title, _encode_AE_title } from "@wildboar/acse";
 /**
  * @summary SecurityAlarmDetector
  * @description

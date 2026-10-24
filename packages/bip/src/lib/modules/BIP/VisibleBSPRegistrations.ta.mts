@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  VisibleBSPRegistration,
+  type VisibleBSPRegistration,
   _decode_VisibleBSPRegistration,
   _encode_VisibleBSPRegistration,
 } from '../BIP/VisibleBSPRegistration.ta.mjs';

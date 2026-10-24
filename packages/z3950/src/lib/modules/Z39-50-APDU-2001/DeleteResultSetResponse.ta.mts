@@ -6,11 +6,11 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ReferenceId, _decode_ReferenceId, _encode_ReferenceId } from "../Z39-50-APDU-2001/ReferenceId.ta.mjs";
-import { DeleteSetStatus, _decode_DeleteSetStatus, _encode_DeleteSetStatus } from "../Z39-50-APDU-2001/DeleteSetStatus.ta.mjs";
-import { ListStatuses, _decode_ListStatuses, _encode_ListStatuses } from "../Z39-50-APDU-2001/ListStatuses.ta.mjs";
-import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
-import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } from "../Z39-50-APDU-2001/OtherInformation.ta.mjs";
+import { type ReferenceId, _decode_ReferenceId, _encode_ReferenceId } from "../Z39-50-APDU-2001/ReferenceId.ta.mjs";
+import { type DeleteSetStatus, _decode_DeleteSetStatus, _encode_DeleteSetStatus } from "../Z39-50-APDU-2001/DeleteSetStatus.ta.mjs";
+import { type ListStatuses, _decode_ListStatuses, _encode_ListStatuses } from "../Z39-50-APDU-2001/ListStatuses.ta.mjs";
+import { type InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
+import { type OtherInformation, _decode_OtherInformation, _encode_OtherInformation } from "../Z39-50-APDU-2001/OtherInformation.ta.mjs";
 
 
 /**

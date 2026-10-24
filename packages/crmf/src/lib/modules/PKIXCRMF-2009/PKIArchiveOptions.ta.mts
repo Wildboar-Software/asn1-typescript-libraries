@@ -6,12 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    EncryptedKey,
+    type EncryptedKey,
     _decode_EncryptedKey,
     _encode_EncryptedKey,
 } from "../PKIXCRMF-2009/EncryptedKey.ta.mjs";
 import {
-    KeyGenParameters,
+    type KeyGenParameters,
     _decode_KeyGenParameters,
     _encode_KeyGenParameters,
 } from "../PKIXCRMF-2009/KeyGenParameters.ta.mjs";

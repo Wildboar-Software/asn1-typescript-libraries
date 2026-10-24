@@ -7,11 +7,11 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { TriggerStatus, _decode_TriggerStatus, _encode_TriggerStatus, _enum_for_TriggerStatus } from "../IN-CS3-SSF-SCF-datatypes/TriggerStatus.ta.mjs";
 // export { TriggerStatus, _enum_for_TriggerStatus, TriggerStatus_created /* IMPORTED_LONG_ENUMERATION_ITEM */, created /* IMPORTED_SHORT_ENUMERATION_ITEM */, TriggerStatus_alreadyExist /* IMPORTED_LONG_ENUMERATION_ITEM */, alreadyExist /* IMPORTED_SHORT_ENUMERATION_ITEM */, TriggerStatus_deleted /* IMPORTED_LONG_ENUMERATION_ITEM */, deleted /* IMPORTED_SHORT_ENUMERATION_ITEM */, TriggerStatus_unknownTrigger /* IMPORTED_LONG_ENUMERATION_ITEM */, unknownTrigger /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TriggerStatus, _encode_TriggerStatus } from "../IN-CS3-SSF-SCF-datatypes/TriggerStatus.ta.mjs";
-import { TDPIdentifier, _decode_TDPIdentifier, _encode_TDPIdentifier } from "../IN-CS3-SSF-SCF-datatypes/TDPIdentifier.ta.mjs";
+import { type TDPIdentifier, _decode_TDPIdentifier, _encode_TDPIdentifier } from "../IN-CS3-SSF-SCF-datatypes/TDPIdentifier.ta.mjs";
 // export { TDPIdentifier, _decode_TDPIdentifier, _encode_TDPIdentifier } from "../IN-CS3-SSF-SCF-datatypes/TDPIdentifier.ta.mjs";
-import { RegistratorIdentifier, _decode_RegistratorIdentifier, _encode_RegistratorIdentifier } from "../IN-CS3-SSF-SCF-datatypes/RegistratorIdentifier.ta.mjs";
+import { type RegistratorIdentifier, _decode_RegistratorIdentifier, _encode_RegistratorIdentifier } from "../IN-CS3-SSF-SCF-datatypes/RegistratorIdentifier.ta.mjs";
 // export { RegistratorIdentifier, _decode_RegistratorIdentifier, _encode_RegistratorIdentifier } from "../IN-CS3-SSF-SCF-datatypes/RegistratorIdentifier.ta.mjs";
-import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-common-datatypes/Extensions.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-common-datatypes/Extensions.ta.mjs";
 // export { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-common-datatypes/Extensions.ta.mjs";
 
 

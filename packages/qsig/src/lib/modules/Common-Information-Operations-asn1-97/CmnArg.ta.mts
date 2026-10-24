@@ -7,10 +7,10 @@ import {
     ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { FeatureIdList, _decode_FeatureIdList, _encode_FeatureIdList } from "../Common-Information-Operations-asn1-97/FeatureIdList.ta.mjs";
+import { type FeatureIdList, _decode_FeatureIdList, _encode_FeatureIdList } from "../Common-Information-Operations-asn1-97/FeatureIdList.ta.mjs";
 import { EquipmentId, _decode_EquipmentId, _encode_EquipmentId } from "../Common-Information-Operations-asn1-97/EquipmentId.ta.mjs";
 import { PartyCategory, _decode_PartyCategory, _encode_PartyCategory, _enum_for_PartyCategory } from "../Common-Information-Operations-asn1-97/PartyCategory.ta.mjs";
-import { CmnArg_extension, _decode_CmnArg_extension, _encode_CmnArg_extension } from "../Common-Information-Operations-asn1-97/CmnArg-extension.ta.mjs";
+import { type CmnArg_extension, _decode_CmnArg_extension, _encode_CmnArg_extension } from "../Common-Information-Operations-asn1-97/CmnArg-extension.ta.mjs";
 
 /**
  * @summary CmnArg

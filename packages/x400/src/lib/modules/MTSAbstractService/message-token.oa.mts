@@ -20,7 +20,7 @@ import {
     _encode_Criticality,
 } from '../MTSAbstractService/Criticality.ta.mjs';
 import {
-    MessageToken,
+    type MessageToken,
     _decode_MessageToken,
     _encode_MessageToken,
 } from '../MTSAbstractService/MessageToken.ta.mjs';

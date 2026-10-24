@@ -4,7 +4,7 @@ import {
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_MM_Code, _encode_MM_Code, MM_Code } from "../MAP-MS-DataTypes/MM-Code.ta.mjs";
+import { _decode_MM_Code, _encode_MM_Code, type MM_Code } from "../MAP-MS-DataTypes/MM-Code.ta.mjs";
 
 
 import { maxNumOfMobilityTriggers } from "./maxNumOfMobilityTriggers.va.mjs";

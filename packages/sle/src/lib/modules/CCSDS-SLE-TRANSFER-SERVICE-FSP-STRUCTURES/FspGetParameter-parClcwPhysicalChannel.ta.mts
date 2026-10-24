@@ -6,10 +6,10 @@ import {
     ASN1Error
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ParameterName, _decode_ParameterName, _encode_ParameterName,
+import { type ParameterName, _decode_ParameterName, _encode_ParameterName,
     ParameterName_clcwPhysicalChannel
 } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/ParameterName.ta.mjs";
-import { ClcwPhysicalChannel, _decode_ClcwPhysicalChannel, _encode_ClcwPhysicalChannel } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/ClcwPhysicalChannel.ta.mjs";
+import { type ClcwPhysicalChannel, _decode_ClcwPhysicalChannel, _encode_ClcwPhysicalChannel } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/ClcwPhysicalChannel.ta.mjs";
 
 
 

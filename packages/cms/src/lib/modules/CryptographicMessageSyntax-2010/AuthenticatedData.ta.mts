@@ -6,17 +6,17 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AuthAttributes,
+    type AuthAttributes,
     _decode_AuthAttributes,
     _encode_AuthAttributes,
 } from "../CryptographicMessageSyntax-2010/AuthAttributes.ta.mjs";
 import {
-    CMSVersion,
+    type CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
 } from "../CryptographicMessageSyntax-2010/CMSVersion.ta.mjs";
 import {
-    DigestAlgorithmIdentifier,
+    type DigestAlgorithmIdentifier,
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
 } from "../CryptographicMessageSyntax-2010/DigestAlgorithmIdentifier.ta.mjs";
@@ -26,12 +26,12 @@ import {
     _encode_EncapsulatedContentInfo,
 } from "../CryptographicMessageSyntax-2010/EncapsulatedContentInfo.ta.mjs";
 import {
-    MessageAuthenticationCode,
+    type MessageAuthenticationCode,
     _decode_MessageAuthenticationCode,
     _encode_MessageAuthenticationCode,
 } from "../CryptographicMessageSyntax-2010/MessageAuthenticationCode.ta.mjs";
 import {
-    MessageAuthenticationCodeAlgorithm,
+    type MessageAuthenticationCodeAlgorithm,
     _decode_MessageAuthenticationCodeAlgorithm,
     _encode_MessageAuthenticationCodeAlgorithm,
 } from "../CryptographicMessageSyntax-2010/MessageAuthenticationCodeAlgorithm.ta.mjs";
@@ -41,12 +41,12 @@ import {
     _encode_OriginatorInfo,
 } from "../CryptographicMessageSyntax-2010/OriginatorInfo.ta.mjs";
 import {
-    RecipientInfos,
+    type RecipientInfos,
     _decode_RecipientInfos,
     _encode_RecipientInfos,
 } from "../CryptographicMessageSyntax-2010/RecipientInfos.ta.mjs";
 import {
-    UnauthAttributes,
+    type UnauthAttributes,
     _decode_UnauthAttributes,
     _encode_UnauthAttributes,
 } from "../CryptographicMessageSyntax-2010/UnauthAttributes.ta.mjs";

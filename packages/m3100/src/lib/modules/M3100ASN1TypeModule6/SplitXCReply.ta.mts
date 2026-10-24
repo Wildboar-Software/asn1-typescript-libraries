@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SplitXCReply_Item,
+    type SplitXCReply_Item,
     _decode_SplitXCReply_Item,
     _encode_SplitXCReply_Item,
 } from '../M3100ASN1TypeModule6/SplitXCReply-Item.ta.mjs';

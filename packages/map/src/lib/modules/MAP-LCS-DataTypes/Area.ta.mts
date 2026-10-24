@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AreaIdentification, _decode_AreaIdentification, _encode_AreaIdentification } from "../MAP-LCS-DataTypes/AreaIdentification.ta.mjs";
-import { AreaType, _decode_AreaType, _encode_AreaType, _enum_for_AreaType } from "../MAP-LCS-DataTypes/AreaType.ta.mjs";
+import { type AreaIdentification, _decode_AreaIdentification, _encode_AreaIdentification } from "../MAP-LCS-DataTypes/AreaIdentification.ta.mjs";
+import { type AreaType, _decode_AreaType, _encode_AreaType, _enum_for_AreaType } from "../MAP-LCS-DataTypes/AreaType.ta.mjs";
 
 
 /**

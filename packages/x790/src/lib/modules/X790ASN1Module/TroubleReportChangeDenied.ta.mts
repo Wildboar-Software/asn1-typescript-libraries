@@ -1,27 +1,27 @@
 /* eslint-disable */
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ChangeDeniedReason,
+    type ChangeDeniedReason,
     _enum_for_ChangeDeniedReason,
     _decode_ChangeDeniedReason,
     _encode_ChangeDeniedReason,
 } from "../X790ASN1Module/ChangeDeniedReason.ta.mjs";
 
 import {
-    ObjectClass,
+    type ObjectClass,
     _decode_ObjectClass,
     _encode_ObjectClass,
 } from "../CMIP-1/ObjectClass.ta.mjs";
 
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from "../CMIP-1/ObjectInstance.ta.mjs";

@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    CharacteristicInformation,
+    type CharacteristicInformation,
     _decode_CharacteristicInformation,
     _encode_CharacteristicInformation,
 } from '../ASN1DefinedTypesModule/CharacteristicInformation.ta.mjs';

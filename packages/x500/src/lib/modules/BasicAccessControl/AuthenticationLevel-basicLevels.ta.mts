@@ -8,7 +8,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AuthenticationLevel_basicLevels_level,
+    type AuthenticationLevel_basicLevels_level,
     _decode_AuthenticationLevel_basicLevels_level,
     _encode_AuthenticationLevel_basicLevels_level,
     _enum_for_AuthenticationLevel_basicLevels_level,

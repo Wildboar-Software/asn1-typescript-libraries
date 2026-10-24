@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Command, _decode_Command, _encode_Command } from "../MEDIA-GATEWAY-CONTROL/Command.ta.mjs";
+import { type Command, _decode_Command, _encode_Command } from "../MEDIA-GATEWAY-CONTROL/Command.ta.mjs";
 
 
 /**

@@ -4,8 +4,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { LAIFixedLength, _decode_LAIFixedLength, _encode_LAIFixedLength } from "../MAP-CommonDataTypes/LAIFixedLength.ta.mjs";
-import { LAC, _decode_LAC, _encode_LAC } from "../MAP-MS-DataTypes/LAC.ta.mjs";
+import { type LAIFixedLength, _decode_LAIFixedLength, _encode_LAIFixedLength } from "../MAP-CommonDataTypes/LAIFixedLength.ta.mjs";
+import { type LAC, _decode_LAC, _encode_LAC } from "../MAP-MS-DataTypes/LAC.ta.mjs";
 
 
 /**

@@ -18,7 +18,7 @@ import {
     _encode_Criticality,
 } from '../MTSAbstractService/Criticality.ta.mjs';
 import {
-    BlindCopyRecipientsField,
+    type BlindCopyRecipientsField,
     _decode_BlindCopyRecipientsField,
     _encode_BlindCopyRecipientsField,
 } from '../IPMSInformationObjects/BlindCopyRecipientsField.ta.mjs';

@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    PrimaryOrRemoved,
+    type PrimaryOrRemoved,
     _decode_PrimaryOrRemoved,
     _encode_PrimaryOrRemoved,
 } from '../EDIMSInformationObjects/PrimaryOrRemoved.ta.mjs';
 import {
-    AdditionalBodyParts,
+    type AdditionalBodyParts,
     _decode_AdditionalBodyParts,
     _encode_AdditionalBodyParts,
 } from '../EDIMSInformationObjects/AdditionalBodyParts.ta.mjs';

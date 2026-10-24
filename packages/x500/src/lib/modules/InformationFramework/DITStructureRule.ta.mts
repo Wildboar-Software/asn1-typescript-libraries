@@ -7,7 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    RuleIdentifier,
+    type RuleIdentifier,
     _decode_RuleIdentifier,
     _encode_RuleIdentifier,
 } from "../InformationFramework/RuleIdentifier.ta.mjs";

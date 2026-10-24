@@ -7,13 +7,13 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { ActionIndicator, _decode_ActionIndicator, _encode_ActionIndicator, _enum_for_ActionIndicator } from "../IN-SSF-SCF-datatypes/ActionIndicator.ta.mjs";
 // export { ActionIndicator, _enum_for_ActionIndicator, ActionIndicator_activate /* IMPORTED_LONG_ENUMERATION_ITEM */, activate /* IMPORTED_SHORT_ENUMERATION_ITEM */, ActionIndicator_deactivate /* IMPORTED_LONG_ENUMERATION_ITEM */, deactivate /* IMPORTED_SHORT_ENUMERATION_ITEM */, ActionIndicator_retrieve /* IMPORTED_LONG_ENUMERATION_ITEM */, retrieve /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ActionIndicator, _encode_ActionIndicator } from "../IN-SSF-SCF-datatypes/ActionIndicator.ta.mjs";
-import { ManageTriggerDataArg_triggerDataIdentifier, _decode_ManageTriggerDataArg_triggerDataIdentifier, _encode_ManageTriggerDataArg_triggerDataIdentifier } from "../IN-SSF-SCF-ops-args/ManageTriggerDataArg-triggerDataIdentifier.ta.mjs";
+import { type ManageTriggerDataArg_triggerDataIdentifier, _decode_ManageTriggerDataArg_triggerDataIdentifier, _encode_ManageTriggerDataArg_triggerDataIdentifier } from "../IN-SSF-SCF-ops-args/ManageTriggerDataArg-triggerDataIdentifier.ta.mjs";
 // export { ManageTriggerDataArg_triggerDataIdentifier, _decode_ManageTriggerDataArg_triggerDataIdentifier, _encode_ManageTriggerDataArg_triggerDataIdentifier } from "../IN-SSF-SCF-ops-args/ManageTriggerDataArg-triggerDataIdentifier.ta.mjs";
-import { RegistratorIdentifier, _decode_RegistratorIdentifier, _encode_RegistratorIdentifier } from "../IN-SSF-SCF-datatypes/RegistratorIdentifier.ta.mjs";
+import { type RegistratorIdentifier, _decode_RegistratorIdentifier, _encode_RegistratorIdentifier } from "../IN-SSF-SCF-datatypes/RegistratorIdentifier.ta.mjs";
 // export { RegistratorIdentifier, _decode_RegistratorIdentifier, _encode_RegistratorIdentifier } from "../IN-SSF-SCF-datatypes/RegistratorIdentifier.ta.mjs";
-import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
 // export { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
-import { TDPIdentifier, _decode_TDPIdentifier, _encode_TDPIdentifier } from "../IN-SSF-SCF-datatypes/TDPIdentifier.ta.mjs";
+import { type TDPIdentifier, _decode_TDPIdentifier, _encode_TDPIdentifier } from "../IN-SSF-SCF-datatypes/TDPIdentifier.ta.mjs";
 // export { TDPIdentifier, _decode_TDPIdentifier, _encode_TDPIdentifier } from "../IN-SSF-SCF-datatypes/TDPIdentifier.ta.mjs";
 
 

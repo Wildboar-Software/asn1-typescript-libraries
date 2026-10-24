@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    LineImage,
+    type LineImage,
     _decode_LineImage,
     _encode_LineImage,
 } from '../DefinitionASN1Module/LineImage.ta.mjs';

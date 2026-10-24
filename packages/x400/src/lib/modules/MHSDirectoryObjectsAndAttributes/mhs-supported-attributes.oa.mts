@@ -19,7 +19,7 @@ import {
 import { objectIdentifierMatch } from '@wildboar/x500/InformationFramework';
 import { id_at_mhs_supported_attributes } from '../MHSObjectIdentifiers/id-at-mhs-supported-attributes.va.mjs';
 import {
-    AttributeType,
+    type AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
 } from "../MSAbstractService/AttributeType.ta.mjs";

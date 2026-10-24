@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    SEQUENCE,
+    type SEQUENCE,
     ASN1Element as _Element,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";

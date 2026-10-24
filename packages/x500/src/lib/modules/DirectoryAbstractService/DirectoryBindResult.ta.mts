@@ -7,7 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Credentials,
+    type Credentials,
     _decode_Credentials,
     _encode_Credentials,
 } from "../DirectoryAbstractService/Credentials.ta.mjs";
@@ -17,7 +17,7 @@ import {
     _encode_PwdResponseValue,
 } from "../DirectoryAbstractService/PwdResponseValue.ta.mjs";
 import {
-    Versions,
+    type Versions,
     Versions_v1 /* IMPORTED_LONG_NAMED_BIT */,
     _decode_Versions,
     _encode_Versions,

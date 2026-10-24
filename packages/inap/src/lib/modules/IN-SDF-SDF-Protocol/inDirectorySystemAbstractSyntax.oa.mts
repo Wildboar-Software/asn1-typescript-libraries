@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ABSTRACT_SYNTAX
+    type ABSTRACT_SYNTAX
 } from "@wildboar/asn1";
-import { BasicDSP_PDUs, _decode_BasicDSP_PDUs, _encode_BasicDSP_PDUs } from "../IN-SDF-SDF-Protocol/BasicDSP-PDUs.ta.mjs";
+import { type BasicDSP_PDUs, _decode_BasicDSP_PDUs, _encode_BasicDSP_PDUs } from "../IN-SDF-SDF-Protocol/BasicDSP-PDUs.ta.mjs";
 // export { BasicDSP_PDUs, _decode_BasicDSP_PDUs, _encode_BasicDSP_PDUs } from "../IN-SDF-SDF-Protocol/BasicDSP-PDUs.ta.mjs";
 import { id_as_indirectorySystemAS } from "../IN-object-identifiers/id-as-indirectorySystemAS.va.mjs";
 // export { id_as_indirectorySystemAS } from "../IN-object-identifiers/id-as-indirectorySystemAS.va.mjs";

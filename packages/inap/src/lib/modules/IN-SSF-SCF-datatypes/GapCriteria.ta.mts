@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BasicGapCriteria, _decode_BasicGapCriteria, _encode_BasicGapCriteria } from "../IN-SSF-SCF-datatypes/BasicGapCriteria.ta.mjs";
+import { type BasicGapCriteria, _decode_BasicGapCriteria, _encode_BasicGapCriteria } from "../IN-SSF-SCF-datatypes/BasicGapCriteria.ta.mjs";
 // export { BasicGapCriteria, _decode_BasicGapCriteria, _encode_BasicGapCriteria } from "../IN-SSF-SCF-datatypes/BasicGapCriteria.ta.mjs";
 import { CompoundCriteria, _decode_CompoundCriteria, _encode_CompoundCriteria } from "../IN-SSF-SCF-datatypes/CompoundCriteria.ta.mjs";
 // export { CompoundCriteria, _decode_CompoundCriteria, _encode_CompoundCriteria } from "../IN-SSF-SCF-datatypes/CompoundCriteria.ta.mjs";

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  INTEGER,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  UDPTLPacket_error_recovery,
+  type UDPTLPacket_error_recovery,
   _decode_UDPTLPacket_error_recovery,
   _encode_UDPTLPacket_error_recovery,
 } from '../T38/UDPTLPacket-error-recovery.ta.mjs';

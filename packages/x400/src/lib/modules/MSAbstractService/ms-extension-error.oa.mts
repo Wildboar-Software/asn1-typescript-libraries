@@ -18,7 +18,7 @@ import {
     _encode_Code,
 } from '@wildboar/rose';
 import {
-    MSExtensionErrorParameter,
+    type MSExtensionErrorParameter,
     _decode_MSExtensionErrorParameter,
     _encode_MSExtensionErrorParameter,
 } from '../MSAbstractService/MSExtensionErrorParameter.ta.mjs';

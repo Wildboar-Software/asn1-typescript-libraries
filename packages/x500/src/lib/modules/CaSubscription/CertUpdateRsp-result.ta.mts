@@ -7,7 +7,7 @@ import {
     _encode_CertUpdateErr,
 } from "../CaSubscription/CertUpdateErr.ta.mjs";
 import {
-    CertUpdateOK,
+    type CertUpdateOK,
     _decode_CertUpdateOK,
     _encode_CertUpdateOK,
 } from "../CaSubscription/CertUpdateOK.ta.mjs";

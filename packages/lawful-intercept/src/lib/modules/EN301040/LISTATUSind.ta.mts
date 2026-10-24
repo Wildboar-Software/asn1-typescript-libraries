@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    UTCTime,
+    type UTCTime,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TLIIdType, _decode_TLIIdType, _encode_TLIIdType } from "../EN301040/TLIIdType.ta.mjs";
+import { type TLIIdType, _decode_TLIIdType, _encode_TLIIdType } from "../EN301040/TLIIdType.ta.mjs";
 // export { TLIIdType, _decode_TLIIdType, _encode_TLIIdType } from "../EN301040/TLIIdType.ta.mjs";
 import { StatusType, _decode_StatusType, _encode_StatusType, _enum_for_StatusType } from "../EN301040/StatusType.ta.mjs";
 // export { StatusType, _enum_for_StatusType, StatusType_networkFullyAvailable /* IMPORTED_LONG_ENUMERATION_ITEM */, networkFullyAvailable /* IMPORTED_SHORT_ENUMERATION_ITEM */, StatusType_networkErrorsAffectingIntercept /* IMPORTED_LONG_ENUMERATION_ITEM */, networkErrorsAffectingIntercept /* IMPORTED_SHORT_ENUMERATION_ITEM */, StatusType_reconfigurationInProgress /* IMPORTED_LONG_ENUMERATION_ITEM */, reconfigurationInProgress /* IMPORTED_SHORT_ENUMERATION_ITEM */, StatusType_sessionExpired /* IMPORTED_LONG_ENUMERATION_ITEM */, sessionExpired /* IMPORTED_SHORT_ENUMERATION_ITEM */, StatusType_gatewayServicesUnavailable /* IMPORTED_LONG_ENUMERATION_ITEM */, gatewayServicesUnavailable /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_StatusType, _encode_StatusType } from "../EN301040/StatusType.ta.mjs";

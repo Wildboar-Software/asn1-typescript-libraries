@@ -2,7 +2,7 @@
 import type { EXTENSION } from "@wildboar/x500/AuthenticationFramework";
 import { id_pe_qcStatements } from "../PKIXqualified97/id-pe-qcStatements.va.mjs";
 import {
-    QCStatements,
+    type QCStatements,
     _decode_QCStatements,
     _encode_QCStatements,
 } from "../PKIXqualified97/QCStatements.ta.mjs";

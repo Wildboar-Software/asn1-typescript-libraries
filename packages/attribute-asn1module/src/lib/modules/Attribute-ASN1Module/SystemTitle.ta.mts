@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DistinguishedName, _decode_DistinguishedName, _encode_DistinguishedName } from "@wildboar/dn";
+import { type DistinguishedName, _decode_DistinguishedName, _encode_DistinguishedName } from "@wildboar/dn";
 /**
  * @summary SystemTitle
  * @description

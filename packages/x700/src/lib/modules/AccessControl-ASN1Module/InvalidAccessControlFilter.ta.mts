@@ -18,7 +18,7 @@ import {
     _encode_InvalidAccessControlFilter_errorId,
 } from '../AccessControl-ASN1Module/InvalidAccessControlFilter-errorId.ta.mjs';
 import {
-    CMISFilter,
+    type CMISFilter,
     _decode_CMISFilter,
     _encode_CMISFilter,
 } from '@wildboar/cmip';

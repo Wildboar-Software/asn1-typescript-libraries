@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-import { _decode_cfnrDivertedLegFailed_ArgumentType, _encode_cfnrDivertedLegFailed_ArgumentType, cfnrDivertedLegFailed_ArgumentType } from "../Call-Diversion-Operations-asn1-97/cfnrDivertedLegFailed-ArgumentType.ta.mjs";
+import { _decode_cfnrDivertedLegFailed_ArgumentType, _encode_cfnrDivertedLegFailed_ArgumentType, type cfnrDivertedLegFailed_ArgumentType } from "../Call-Diversion-Operations-asn1-97/cfnrDivertedLegFailed-ArgumentType.ta.mjs";
 
 /**
  * @summary cfnrDivertedLegFailed

@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  CertReqMessages,
+  type CertReqMessages,
   _decode_CertReqMessages,
   _encode_CertReqMessages,
 } from '@wildboar/crmf';
@@ -26,12 +26,12 @@ import {
   _encode_CertificationRequest,
 } from '@wildboar/pkcs/PKCS-10';
 import {
-  POPODecKeyChallContent,
+  type POPODecKeyChallContent,
   _decode_POPODecKeyChallContent,
   _encode_POPODecKeyChallContent,
 } from '../PKIXCMP-2009/POPODecKeyChallContent.ta.mjs';
 import {
-  POPODecKeyRespContent,
+  type POPODecKeyRespContent,
   _decode_POPODecKeyRespContent,
   _encode_POPODecKeyRespContent,
 } from '../PKIXCMP-2009/POPODecKeyRespContent.ta.mjs';
@@ -41,7 +41,7 @@ import {
   _encode_KeyRecRepContent,
 } from '../PKIXCMP-2009/KeyRecRepContent.ta.mjs';
 import {
-  RevReqContent,
+  type RevReqContent,
   _decode_RevReqContent,
   _encode_RevReqContent,
 } from '../PKIXCMP-2009/RevReqContent.ta.mjs';
@@ -56,7 +56,7 @@ import {
   _encode_CAKeyUpdAnnContent,
 } from '../PKIXCMP-2009/CAKeyUpdAnnContent.ta.mjs';
 import {
-  CertAnnContent,
+  type CertAnnContent,
   _decode_CertAnnContent,
   _encode_CertAnnContent,
 } from '../PKIXCMP-2009/CertAnnContent.ta.mjs';
@@ -66,27 +66,27 @@ import {
   _encode_RevAnnContent,
 } from '../PKIXCMP-2009/RevAnnContent.ta.mjs';
 import {
-  CRLAnnContent,
+  type CRLAnnContent,
   _decode_CRLAnnContent,
   _encode_CRLAnnContent,
 } from '../PKIXCMP-2009/CRLAnnContent.ta.mjs';
 import {
-  PKIConfirmContent,
+  type PKIConfirmContent,
   _decode_PKIConfirmContent,
   _encode_PKIConfirmContent,
 } from '../PKIXCMP-2009/PKIConfirmContent.ta.mjs';
 import {
-  NestedMessageContent,
+  type NestedMessageContent,
   _decode_NestedMessageContent,
   _encode_NestedMessageContent,
 } from '../PKIXCMP-2009/NestedMessageContent.ta.mjs';
 import {
-  GenMsgContent,
+  type GenMsgContent,
   _decode_GenMsgContent,
   _encode_GenMsgContent,
 } from '../PKIXCMP-2009/GenMsgContent.ta.mjs';
 import {
-  GenRepContent,
+  type GenRepContent,
   _decode_GenRepContent,
   _encode_GenRepContent,
 } from '../PKIXCMP-2009/GenRepContent.ta.mjs';
@@ -96,17 +96,17 @@ import {
   _encode_ErrorMsgContent,
 } from '../PKIXCMP-2009/ErrorMsgContent.ta.mjs';
 import {
-  CertConfirmContent,
+  type CertConfirmContent,
   _decode_CertConfirmContent,
   _encode_CertConfirmContent,
 } from '../PKIXCMP-2009/CertConfirmContent.ta.mjs';
 import {
-  PollReqContent,
+  type PollReqContent,
   _decode_PollReqContent,
   _encode_PollReqContent,
 } from '../PKIXCMP-2009/PollReqContent.ta.mjs';
 import {
-  PollRepContent,
+  type PollRepContent,
   _decode_PollRepContent,
   _encode_PollRepContent,
 } from '../PKIXCMP-2009/PollRepContent.ta.mjs';

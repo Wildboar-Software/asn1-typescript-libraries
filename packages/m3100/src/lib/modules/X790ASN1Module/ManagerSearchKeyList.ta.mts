@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ManagerSearchKeyList_Item,
+    type ManagerSearchKeyList_Item,
     _decode_ManagerSearchKeyList_Item,
     _encode_ManagerSearchKeyList_Item,
 } from '../X790ASN1Module/ManagerSearchKeyList-Item.ta.mjs';

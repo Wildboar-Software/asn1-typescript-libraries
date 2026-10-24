@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SecurityLevelofPrivilege_bioSecLevel, _decode_SecurityLevelofPrivilege_bioSecLevel, _encode_SecurityLevelofPrivilege_bioSecLevel } from "../TAI/SecurityLevelofPrivilege-bioSecLevel.ta.mjs";
+import { type SecurityLevelofPrivilege_bioSecLevel, _decode_SecurityLevelofPrivilege_bioSecLevel, _encode_SecurityLevelofPrivilege_bioSecLevel } from "../TAI/SecurityLevelofPrivilege-bioSecLevel.ta.mjs";
 
 /**
  * @summary SecurityLevelofPrivilege

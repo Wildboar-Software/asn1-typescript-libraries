@@ -10,7 +10,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-  SNPAPrefix,
+  type SNPAPrefix,
   _decode_SNPAPrefix,
   _encode_SNPAPrefix,
 } from '../ISIS/SNPAPrefix.ta.mjs';

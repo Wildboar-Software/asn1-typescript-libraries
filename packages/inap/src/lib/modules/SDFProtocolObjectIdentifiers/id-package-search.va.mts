@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ObjectIdentifier as _OID,
-    OBJECT_IDENTIFIER
+    type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { id_package } from "../SDFProtocolObjectIdentifiers/id-package.va.mjs";
 // export { id_package } from "../SDFProtocolObjectIdentifiers/id-package.va.mjs";

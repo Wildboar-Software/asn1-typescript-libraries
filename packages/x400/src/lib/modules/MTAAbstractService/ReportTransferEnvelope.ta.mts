@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ReportIdentifier,
+    type ReportIdentifier,
     _decode_ReportIdentifier,
     _encode_ReportIdentifier,
 } from '../MTAAbstractService/ReportIdentifier.ta.mjs';
 import {
-    ReportDestinationName,
+    type ReportDestinationName,
     _decode_ReportDestinationName,
     _encode_ReportDestinationName,
 } from '../MTAAbstractService/ReportDestinationName.ta.mjs';
 import {
-    TraceInformation,
+    type TraceInformation,
     _decode_TraceInformation,
     _encode_TraceInformation,
 } from '../MTAAbstractService/TraceInformation.ta.mjs';

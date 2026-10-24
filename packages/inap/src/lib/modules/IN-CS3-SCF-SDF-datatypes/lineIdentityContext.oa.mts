@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { IsdnAddress, _decode_IsdnAddress, _encode_IsdnAddress } from "../IN-CS3-SCF-SDF-datatypes/IsdnAddress.ta.mjs";
+import { type IsdnAddress, _decode_IsdnAddress, _encode_IsdnAddress } from "../IN-CS3-SCF-SDF-datatypes/IsdnAddress.ta.mjs";
 // export { IsdnAddress, _decode_IsdnAddress, _encode_IsdnAddress } from "../IN-CS3-SCF-SDF-datatypes/IsdnAddress.ta.mjs";
 import { id_avc_lineIdentity } from "../IN-CS3-object-identifiers/id-avc-lineIdentity.va.mjs";
 // export { id_avc_lineIdentity } from "../IN-CS3-object-identifiers/id-avc-lineIdentity.va.mjs";

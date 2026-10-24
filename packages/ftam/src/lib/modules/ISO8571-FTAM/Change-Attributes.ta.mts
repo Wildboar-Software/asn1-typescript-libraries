@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,42 +12,42 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Pathname_Attribute,
+  type Pathname_Attribute,
   _decode_Pathname_Attribute,
   _encode_Pathname_Attribute,
 } from '../ISO8571-FTAM/Pathname-Attribute.ta.mjs';
 import {
-  Account_Attribute,
+  type Account_Attribute,
   _decode_Account_Attribute,
   _encode_Account_Attribute,
 } from '../ISO8571-FTAM/Account-Attribute.ta.mjs';
 import {
-  Object_Availability_Attribute,
+  type Object_Availability_Attribute,
   _decode_Object_Availability_Attribute,
   _encode_Object_Availability_Attribute,
 } from '../ISO8571-FTAM/Object-Availability-Attribute.ta.mjs';
 import {
-  Object_Size_Attribute,
+  type Object_Size_Attribute,
   _decode_Object_Size_Attribute,
   _encode_Object_Size_Attribute,
 } from '../ISO8571-FTAM/Object-Size-Attribute.ta.mjs';
 import {
-  Access_Control_Change_Attribute,
+  type Access_Control_Change_Attribute,
   _decode_Access_Control_Change_Attribute,
   _encode_Access_Control_Change_Attribute,
 } from '../ISO8571-FTAM/Access-Control-Change-Attribute.ta.mjs';
 import {
-  Legal_Qualification_Attribute,
+  type Legal_Qualification_Attribute,
   _decode_Legal_Qualification_Attribute,
   _encode_Legal_Qualification_Attribute,
 } from '../ISO8571-FTAM/Legal-Qualification-Attribute.ta.mjs';
 import {
-  Private_Use_Attribute,
+  type Private_Use_Attribute,
   _decode_Private_Use_Attribute,
   _encode_Private_Use_Attribute,
 } from '../ISO8571-FTAM/Private-Use-Attribute.ta.mjs';
 import {
-  Attribute_Extensions,
+  type Attribute_Extensions,
   _decode_Attribute_Extensions,
   _encode_Attribute_Extensions,
 } from '../ISO8571-FTAM/Attribute-Extensions.ta.mjs';

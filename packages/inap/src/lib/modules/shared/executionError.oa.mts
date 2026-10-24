@@ -7,9 +7,9 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 // export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 // export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-import { OPTIONALLY_PROTECTED, _get_decoder_for_OPTIONALLY_PROTECTED, _get_encoder_for_OPTIONALLY_PROTECTED } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
+import { type OPTIONALLY_PROTECTED, _get_decoder_for_OPTIONALLY_PROTECTED, _get_encoder_for_OPTIONALLY_PROTECTED } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
 // export { OPTIONALLY_PROTECTED, _get_decoder_for_OPTIONALLY_PROTECTED, _get_encoder_for_OPTIONALLY_PROTECTED } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
-import { ExecutionProblem, _decode_ExecutionProblem, _encode_ExecutionProblem } from "../IN-errortypes/ExecutionProblem.ta.mjs";
+import { type ExecutionProblem, _decode_ExecutionProblem, _encode_ExecutionProblem } from "../IN-errortypes/ExecutionProblem.ta.mjs";
 // export { ExecutionProblem, ExecutionProblem_missingInputValues /* IMPORTED_LONG_NAMED_INTEGER */, missingInputValues /* IMPORTED_SHORT_NAMED_INTEGER */, ExecutionProblem_executionFailure /* IMPORTED_LONG_NAMED_INTEGER */, executionFailure /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ExecutionProblem, _encode_ExecutionProblem } from "../IN-errortypes/ExecutionProblem.ta.mjs";
 import { CommonResults } from "../DirectoryAbstractService/CommonResults.ta.mjs";
 // export { CommonResults, _decode_CommonResults, _encode_CommonResults } from "../DirectoryAbstractService/CommonResults.ta.mjs";

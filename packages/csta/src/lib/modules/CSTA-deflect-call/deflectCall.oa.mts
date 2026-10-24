@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { DeflectCallArgument, _decode_DeflectCallArgument, _encode_DeflectCallArgument } from "../CSTA-deflect-call/DeflectCallArgument.ta.mjs";
 
-import { DeflectCallResult, _decode_DeflectCallResult, _encode_DeflectCallResult } from "../CSTA-deflect-call/DeflectCallResult.ta.mjs";
+import { type DeflectCallResult, _decode_DeflectCallResult, _encode_DeflectCallResult } from "../CSTA-deflect-call/DeflectCallResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

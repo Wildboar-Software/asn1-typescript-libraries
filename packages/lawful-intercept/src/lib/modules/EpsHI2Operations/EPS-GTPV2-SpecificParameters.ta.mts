@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type OCTET_STRING,
     type OPTIONAL,
     ASN1Element as _Element,
@@ -10,13 +10,13 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { ProtConfigOptions, _decode_ProtConfigOptions, _encode_ProtConfigOptions } from "../EpsHI2Operations/ProtConfigOptions.ta.mjs";
 // export { ProtConfigOptions, _decode_ProtConfigOptions, _encode_ProtConfigOptions } from "../EpsHI2Operations/ProtConfigOptions.ta.mjs";
-import { TypeOfBearer, _decode_TypeOfBearer, _encode_TypeOfBearer, _enum_for_TypeOfBearer } from "../EpsHI2Operations/TypeOfBearer.ta.mjs";
+import { type TypeOfBearer, _decode_TypeOfBearer, _encode_TypeOfBearer, _enum_for_TypeOfBearer } from "../EpsHI2Operations/TypeOfBearer.ta.mjs";
 // export { TypeOfBearer, _enum_for_TypeOfBearer, TypeOfBearer_defaultBearer /* IMPORTED_LONG_ENUMERATION_ITEM */, defaultBearer /* IMPORTED_SHORT_ENUMERATION_ITEM */, TypeOfBearer_dedicatedBearer /* IMPORTED_LONG_ENUMERATION_ITEM */, dedicatedBearer /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TypeOfBearer, _encode_TypeOfBearer } from "../EpsHI2Operations/TypeOfBearer.ta.mjs";
 import { EPSLocation, _decode_EPSLocation, _encode_EPSLocation } from "../EpsHI2Operations/EPSLocation.ta.mjs";
 // export { EPSLocation, _decode_EPSLocation, _encode_EPSLocation } from "../EpsHI2Operations/EPSLocation.ta.mjs";
-import { RemoteUeContextConnected, _decode_RemoteUeContextConnected, _encode_RemoteUeContextConnected } from "../EpsHI2Operations/RemoteUeContextConnected.ta.mjs";
+import { type RemoteUeContextConnected, _decode_RemoteUeContextConnected, _encode_RemoteUeContextConnected } from "../EpsHI2Operations/RemoteUeContextConnected.ta.mjs";
 // export { RemoteUeContextConnected, _decode_RemoteUeContextConnected, _encode_RemoteUeContextConnected } from "../EpsHI2Operations/RemoteUeContextConnected.ta.mjs";
-import { RemoteUeContextDisconnected, _decode_RemoteUeContextDisconnected, _encode_RemoteUeContextDisconnected } from "../EpsHI2Operations/RemoteUeContextDisconnected.ta.mjs";
+import { type RemoteUeContextDisconnected, _decode_RemoteUeContextDisconnected, _encode_RemoteUeContextDisconnected } from "../EpsHI2Operations/RemoteUeContextDisconnected.ta.mjs";
 // export { RemoteUeContextDisconnected, _decode_RemoteUeContextDisconnected, _encode_RemoteUeContextDisconnected } from "../EpsHI2Operations/RemoteUeContextDisconnected.ta.mjs";
 
 

@@ -3,26 +3,26 @@
 import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { CallControlEvents, _decode_CallControlEvents, _encode_CallControlEvents } from "../CSTA-application-context-information-csta3/CallControlEvents.ta.mjs";
+import { type CallControlEvents, _decode_CallControlEvents, _encode_CallControlEvents } from "../CSTA-application-context-information-csta3/CallControlEvents.ta.mjs";
 
-import { CallAssociatedEvents, _decode_CallAssociatedEvents, _encode_CallAssociatedEvents } from "../CSTA-application-context-information-csta3/CallAssociatedEvents.ta.mjs";
+import { type CallAssociatedEvents, _decode_CallAssociatedEvents, _encode_CallAssociatedEvents } from "../CSTA-application-context-information-csta3/CallAssociatedEvents.ta.mjs";
 
-import { MediaAttachmentEvents, _decode_MediaAttachmentEvents, _encode_MediaAttachmentEvents } from "../CSTA-application-context-information-csta3/MediaAttachmentEvents.ta.mjs";
+import { type MediaAttachmentEvents, _decode_MediaAttachmentEvents, _encode_MediaAttachmentEvents } from "../CSTA-application-context-information-csta3/MediaAttachmentEvents.ta.mjs";
 
-import { PhysicalDeviceFeatureEvents, _decode_PhysicalDeviceFeatureEvents, _encode_PhysicalDeviceFeatureEvents } from "../CSTA-application-context-information-csta3/PhysicalDeviceFeatureEvents.ta.mjs";
+import { type PhysicalDeviceFeatureEvents, _decode_PhysicalDeviceFeatureEvents, _encode_PhysicalDeviceFeatureEvents } from "../CSTA-application-context-information-csta3/PhysicalDeviceFeatureEvents.ta.mjs";
 
-import { LogicalDeviceFeatureEvents, _decode_LogicalDeviceFeatureEvents, _encode_LogicalDeviceFeatureEvents } from "../CSTA-application-context-information-csta3/LogicalDeviceFeatureEvents.ta.mjs";
+import { type LogicalDeviceFeatureEvents, _decode_LogicalDeviceFeatureEvents, _encode_LogicalDeviceFeatureEvents } from "../CSTA-application-context-information-csta3/LogicalDeviceFeatureEvents.ta.mjs";
 
-import { DeviceMaintenanceEvents, _decode_DeviceMaintenanceEvents, _encode_DeviceMaintenanceEvents } from "../CSTA-application-context-information-csta3/DeviceMaintenanceEvents.ta.mjs";
+import { type DeviceMaintenanceEvents, _decode_DeviceMaintenanceEvents, _encode_DeviceMaintenanceEvents } from "../CSTA-application-context-information-csta3/DeviceMaintenanceEvents.ta.mjs";
 
-import { VoiceUnitEvents, _decode_VoiceUnitEvents, _encode_VoiceUnitEvents } from "../CSTA-application-context-information-csta3/VoiceUnitEvents.ta.mjs";
+import { type VoiceUnitEvents, _decode_VoiceUnitEvents, _encode_VoiceUnitEvents } from "../CSTA-application-context-information-csta3/VoiceUnitEvents.ta.mjs";
 
-import { VendorSpecEvents, _decode_VendorSpecEvents, _encode_VendorSpecEvents } from "../CSTA-application-context-information-csta3/VendorSpecEvents.ta.mjs";
+import { type VendorSpecEvents, _decode_VendorSpecEvents, _encode_VendorSpecEvents } from "../CSTA-application-context-information-csta3/VendorSpecEvents.ta.mjs";
 
 
 

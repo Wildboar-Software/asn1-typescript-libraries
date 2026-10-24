@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { CDRNotificationArgument, _decode_CDRNotificationArgument, _encode_CDRNotificationArgument } from "../CSTA-call-detail-records-notification/CDRNotificationArgument.ta.mjs";
 
-import { CDRNotificationResult, _decode_CDRNotificationResult, _encode_CDRNotificationResult } from "../CSTA-call-detail-records-notification/CDRNotificationResult.ta.mjs";
+import { type CDRNotificationResult, _decode_CDRNotificationResult, _encode_CDRNotificationResult } from "../CSTA-call-detail-records-notification/CDRNotificationResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

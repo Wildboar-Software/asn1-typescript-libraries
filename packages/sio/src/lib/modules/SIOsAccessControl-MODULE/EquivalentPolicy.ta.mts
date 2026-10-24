@@ -7,7 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    SecurityPolicyName,
+    type SecurityPolicyName,
     _decode_SecurityPolicyName,
     _encode_SecurityPolicyName,
 } from "../SIOsAccessControl-MODULE/SecurityPolicyName.ta.mjs";

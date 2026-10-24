@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     type OPTIONAL,
-    GeneralizedTime,
+    type GeneralizedTime,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -12,10 +12,10 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BiometricFlags, _decode_BiometricFlags, _encode_BiometricFlags } from "../CryptographicInformationFramework/BiometricFlags.ta.mjs";
-import { BiometricTemplateIdentifier, _decode_BiometricTemplateIdentifier, _encode_BiometricTemplateIdentifier } from "../CryptographicInformationFramework/BiometricTemplateIdentifier.ta.mjs";
-import { BiometricType, _decode_BiometricType, _encode_BiometricType } from "../CryptographicInformationFramework/BiometricType.ta.mjs";
-import { Reference, _decode_Reference, _encode_Reference } from "../CryptographicInformationFramework/Reference.ta.mjs";
+import { type BiometricFlags, _decode_BiometricFlags, _encode_BiometricFlags } from "../CryptographicInformationFramework/BiometricFlags.ta.mjs";
+import { type BiometricTemplateIdentifier, _decode_BiometricTemplateIdentifier, _encode_BiometricTemplateIdentifier } from "../CryptographicInformationFramework/BiometricTemplateIdentifier.ta.mjs";
+import { type BiometricType, _decode_BiometricType, _encode_BiometricType } from "../CryptographicInformationFramework/BiometricType.ta.mjs";
+import { type Reference, _decode_Reference, _encode_Reference } from "../CryptographicInformationFramework/Reference.ta.mjs";
 import { Path, _decode_Path, _encode_Path } from "../CryptographicInformationFramework/Path.ta.mjs";
 
 

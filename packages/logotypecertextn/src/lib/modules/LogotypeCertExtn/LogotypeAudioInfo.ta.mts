@@ -4,7 +4,7 @@ import {
     ASN1TagClass as _TagClass,
     type IA5String,
     type INTEGER,
-    OPTIONAL
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 

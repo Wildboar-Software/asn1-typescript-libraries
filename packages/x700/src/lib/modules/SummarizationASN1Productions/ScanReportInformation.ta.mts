@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     type OPTIONAL,
-    GeneralizedTime,
+    type GeneralizedTime,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -13,27 +13,27 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    OnceReportAttributeList,
+    type OnceReportAttributeList,
     _decode_OnceReportAttributeList,
     _encode_OnceReportAttributeList,
 } from '../SummarizationASN1Productions/OnceReportAttributeList.ta.mjs';
 import {
-    ObservationScanList,
+    type ObservationScanList,
     _decode_ObservationScanList,
     _encode_ObservationScanList,
 } from '../SummarizationASN1Productions/ObservationScanList.ta.mjs';
 import {
-    IncompleteScan,
+    type IncompleteScan,
     _decode_IncompleteScan,
     _encode_IncompleteScan,
 } from '../SummarizationASN1Productions/IncompleteScan.ta.mjs';
 import {
-    AdditionalText,
+    type AdditionalText,
     _decode_AdditionalText,
     _encode_AdditionalText,
 } from '@wildboar/attribute-asn1module';
 import {
-    AdditionalInformation,
+    type AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
 } from '@wildboar/attribute-asn1module';

@@ -6,12 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AccessMode,
+    type AccessMode,
     _decode_AccessMode,
     _encode_AccessMode,
 } from "../PKCS-15/AccessMode.ta.mjs";
 import {
-    SecurityCondition,
+    type SecurityCondition,
     _decode_SecurityCondition,
     _encode_SecurityCondition,
 } from "../PKCS-15/SecurityCondition.ta.mjs";

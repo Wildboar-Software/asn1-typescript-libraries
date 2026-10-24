@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    GraphicString,
+    type GraphicString,
     type INTEGER,
     type OCTET_STRING,
     type OPTIONAL,
@@ -9,9 +9,9 @@ import {
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ServiceType, _decode_ServiceType, _encode_ServiceType } from "../MMTelChargingDataTypes/ServiceType.ta.mjs";
-import { ServiceMode, _decode_ServiceMode, _encode_ServiceMode } from "../MMTelChargingDataTypes/ServiceMode.ta.mjs";
-import { InvolvedParty, _decode_InvolvedParty, _encode_InvolvedParty } from "../MMTelChargingDataTypes/InvolvedParty.ta.mjs";
+import { type ServiceType, _decode_ServiceType, _encode_ServiceType } from "../MMTelChargingDataTypes/ServiceType.ta.mjs";
+import { type ServiceMode, _decode_ServiceMode, _encode_ServiceMode } from "../MMTelChargingDataTypes/ServiceMode.ta.mjs";
+import { type InvolvedParty, _decode_InvolvedParty, _encode_InvolvedParty } from "../MMTelChargingDataTypes/InvolvedParty.ta.mjs";
 import { ParticipantActionType, _decode_ParticipantActionType, _encode_ParticipantActionType, _enum_for_ParticipantActionType } from "../MMTelChargingDataTypes/ParticipantActionType.ta.mjs";
 import { AoCInformation, _decode_AoCInformation, _encode_AoCInformation } from "../MMTelChargingDataTypes/AoCInformation.ta.mjs";
 

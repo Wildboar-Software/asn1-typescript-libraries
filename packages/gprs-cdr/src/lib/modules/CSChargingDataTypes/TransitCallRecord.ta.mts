@@ -8,16 +8,16 @@ import {
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RecordType, _decode_RecordType, _encode_RecordType } from "../CSChargingDataTypes/RecordType.ta.mjs";
-import { TrunkGroup, _decode_TrunkGroup, _encode_TrunkGroup } from "../CSChargingDataTypes/TrunkGroup.ta.mjs";
+import { type RecordType, _decode_RecordType, _encode_RecordType } from "../CSChargingDataTypes/RecordType.ta.mjs";
+import { type TrunkGroup, _decode_TrunkGroup, _encode_TrunkGroup } from "../CSChargingDataTypes/TrunkGroup.ta.mjs";
 import { IsdnBasicService, _decode_IsdnBasicService, _encode_IsdnBasicService, _enum_for_IsdnBasicService } from "../CSChargingDataTypes/IsdnBasicService.ta.mjs";
-import { CauseForTerm, _decode_CauseForTerm, _encode_CauseForTerm } from "../CSChargingDataTypes/CauseForTerm.ta.mjs";
-import { HLRIntResult, _decode_HLRIntResult, _encode_HLRIntResult } from "../CSChargingDataTypes/HLRIntResult.ta.mjs";
+import { type CauseForTerm, _decode_CauseForTerm, _encode_CauseForTerm } from "../CSChargingDataTypes/CauseForTerm.ta.mjs";
+import { type HLRIntResult, _decode_HLRIntResult, _encode_HLRIntResult } from "../CSChargingDataTypes/HLRIntResult.ta.mjs";
 import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExtension } from "../CSChargingDataTypes/ManagementExtension.ta.mjs";
-import { TransitCallRecord_lrnSoInd, _decode_TransitCallRecord_lrnSoInd, _encode_TransitCallRecord_lrnSoInd } from "../CSChargingDataTypes/TransitCallRecord-lrnSoInd.ta.mjs";
-import { TransitCallRecord_lrnQuryStatus, _decode_TransitCallRecord_lrnQuryStatus, _encode_TransitCallRecord_lrnQuryStatus } from "../CSChargingDataTypes/TransitCallRecord-lrnQuryStatus.ta.mjs";
-import { TransitCallRecord_jIPSoInd, _decode_TransitCallRecord_jIPSoInd, _encode_TransitCallRecord_jIPSoInd } from "../CSChargingDataTypes/TransitCallRecord-jIPSoInd.ta.mjs";
-import { TransitCallRecord_jIPQuryStatus, _decode_TransitCallRecord_jIPQuryStatus, _encode_TransitCallRecord_jIPQuryStatus } from "../CSChargingDataTypes/TransitCallRecord-jIPQuryStatus.ta.mjs";
+import { type TransitCallRecord_lrnSoInd, _decode_TransitCallRecord_lrnSoInd, _encode_TransitCallRecord_lrnSoInd } from "../CSChargingDataTypes/TransitCallRecord-lrnSoInd.ta.mjs";
+import { type TransitCallRecord_lrnQuryStatus, _decode_TransitCallRecord_lrnQuryStatus, _encode_TransitCallRecord_lrnQuryStatus } from "../CSChargingDataTypes/TransitCallRecord-lrnQuryStatus.ta.mjs";
+import { type TransitCallRecord_jIPSoInd, _decode_TransitCallRecord_jIPSoInd, _encode_TransitCallRecord_jIPSoInd } from "../CSChargingDataTypes/TransitCallRecord-jIPSoInd.ta.mjs";
+import { type TransitCallRecord_jIPQuryStatus, _decode_TransitCallRecord_jIPQuryStatus, _encode_TransitCallRecord_jIPQuryStatus } from "../CSChargingDataTypes/TransitCallRecord-jIPQuryStatus.ta.mjs";
 
 
 /**

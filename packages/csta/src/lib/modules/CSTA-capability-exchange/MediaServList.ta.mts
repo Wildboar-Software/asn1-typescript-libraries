@@ -3,14 +3,14 @@
 import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { AttachMediaService, _decode_AttachMediaService, _encode_AttachMediaService } from "../CSTA-capability-exchange/AttachMediaService.ta.mjs";
+import { type AttachMediaService, _decode_AttachMediaService, _encode_AttachMediaService } from "../CSTA-capability-exchange/AttachMediaService.ta.mjs";
 
-import { DetachMediaService, _decode_DetachMediaService, _encode_DetachMediaService } from "../CSTA-capability-exchange/DetachMediaService.ta.mjs";
+import { type DetachMediaService, _decode_DetachMediaService, _encode_DetachMediaService } from "../CSTA-capability-exchange/DetachMediaService.ta.mjs";
 
 
 

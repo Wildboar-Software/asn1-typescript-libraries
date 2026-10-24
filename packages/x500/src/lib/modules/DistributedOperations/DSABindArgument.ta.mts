@@ -7,13 +7,13 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Versions,
+    type Versions,
     Versions_v1 /* IMPORTED_LONG_NAMED_BIT */,
     _decode_Versions,
     _encode_Versions,
 } from "../DirectoryAbstractService/Versions.ta.mjs";
 import {
-    DSACredentials,
+    type DSACredentials,
     _decode_DSACredentials,
     _encode_DSACredentials,
 } from "../DistributedOperations/DSACredentials.ta.mjs";

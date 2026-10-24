@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    GeneralSubtrees,
+    type GeneralSubtrees,
     _decode_GeneralSubtrees,
     _encode_GeneralSubtrees,
 } from "../AttributeCertificateDefinitions/GeneralSubtrees.ta.mjs";

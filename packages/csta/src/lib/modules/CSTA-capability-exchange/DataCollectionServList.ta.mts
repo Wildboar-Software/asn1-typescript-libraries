@@ -3,24 +3,24 @@
 import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { DataCollected, _decode_DataCollected, _encode_DataCollected } from "../CSTA-capability-exchange/DataCollected.ta.mjs";
+import { type DataCollected, _decode_DataCollected, _encode_DataCollected } from "../CSTA-capability-exchange/DataCollected.ta.mjs";
 
-import { DataCollectionResumed, _decode_DataCollectionResumed, _encode_DataCollectionResumed } from "../CSTA-capability-exchange/DataCollectionResumed.ta.mjs";
+import { type DataCollectionResumed, _decode_DataCollectionResumed, _encode_DataCollectionResumed } from "../CSTA-capability-exchange/DataCollectionResumed.ta.mjs";
 
-import { DataCollectionSuspended, _decode_DataCollectionSuspended, _encode_DataCollectionSuspended } from "../CSTA-capability-exchange/DataCollectionSuspended.ta.mjs";
+import { type DataCollectionSuspended, _decode_DataCollectionSuspended, _encode_DataCollectionSuspended } from "../CSTA-capability-exchange/DataCollectionSuspended.ta.mjs";
 
-import { ResumeDataCollection, _decode_ResumeDataCollection, _encode_ResumeDataCollection } from "../CSTA-capability-exchange/ResumeDataCollection.ta.mjs";
+import { type ResumeDataCollection, _decode_ResumeDataCollection, _encode_ResumeDataCollection } from "../CSTA-capability-exchange/ResumeDataCollection.ta.mjs";
 
-import { StartDataCollection, _decode_StartDataCollection, _encode_StartDataCollection } from "../CSTA-capability-exchange/StartDataCollection.ta.mjs";
+import { type StartDataCollection, _decode_StartDataCollection, _encode_StartDataCollection } from "../CSTA-capability-exchange/StartDataCollection.ta.mjs";
 
-import { StopDataCollection, _decode_StopDataCollection, _encode_StopDataCollection } from "../CSTA-capability-exchange/StopDataCollection.ta.mjs";
+import { type StopDataCollection, _decode_StopDataCollection, _encode_StopDataCollection } from "../CSTA-capability-exchange/StopDataCollection.ta.mjs";
 
-import { SuspendDataCollection, _decode_SuspendDataCollection, _encode_SuspendDataCollection } from "../CSTA-capability-exchange/SuspendDataCollection.ta.mjs";
+import { type SuspendDataCollection, _decode_SuspendDataCollection, _encode_SuspendDataCollection } from "../CSTA-capability-exchange/SuspendDataCollection.ta.mjs";
 
 
 

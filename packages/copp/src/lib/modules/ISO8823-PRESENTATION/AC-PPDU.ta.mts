@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Presentation_context_addition_list,
+    type Presentation_context_addition_list,
     _decode_Presentation_context_addition_list,
     _encode_Presentation_context_addition_list,
 } from '../ISO8823-PRESENTATION/Presentation-context-addition-list.ta.mjs';
 import {
-    Presentation_context_deletion_list,
+    type Presentation_context_deletion_list,
     _decode_Presentation_context_deletion_list,
     _encode_Presentation_context_deletion_list,
 } from '../ISO8823-PRESENTATION/Presentation-context-deletion-list.ta.mjs';
 import {
-    User_data,
+    type User_data,
     _decode_User_data,
     _encode_User_data,
 } from '../ISO8823-PRESENTATION/User-data.ta.mjs';

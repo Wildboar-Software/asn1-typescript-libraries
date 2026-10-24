@@ -7,7 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ECPKAlgorithm,
+    type ECPKAlgorithm,
     _decode_ECPKAlgorithm,
     _encode_ECPKAlgorithm,
 } from "../ANSI-X9-62/ECPKAlgorithm.ta.mjs";

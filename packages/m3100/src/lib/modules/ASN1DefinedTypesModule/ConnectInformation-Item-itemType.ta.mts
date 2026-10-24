@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ConnectionType,
+    type ConnectionType,
     _decode_ConnectionType,
     _encode_ConnectionType,
 } from '../ASN1DefinedTypesModule/ConnectionType.ta.mjs';
 import {
-    ConnectionTypeBi,
+    type ConnectionTypeBi,
     _decode_ConnectionTypeBi,
     _encode_ConnectionTypeBi,
 } from '../ASN1DefinedTypesModule/ConnectionTypeBi.ta.mjs';

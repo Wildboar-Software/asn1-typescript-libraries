@@ -16,7 +16,7 @@ import {
     _encode_BilateralDomain,
 } from '../MTAAbstractService/BilateralDomain.ta.mjs';
 import {
-    CountryName,
+    type CountryName,
     _decode_CountryName,
     _encode_CountryName,
 } from '../MTSAbstractService/CountryName.ta.mjs';
@@ -32,7 +32,7 @@ import {
     _root_component_type_list_1_spec_for_BilateralDomain,
 } from '../MTAAbstractService/BilateralDomain.ta.mjs';
 import {
-    BilateralDomain_domain,
+    type BilateralDomain_domain,
     _decode_BilateralDomain_domain,
     _encode_BilateralDomain_domain,
 } from '../MTAAbstractService/BilateralDomain-domain.ta.mjs';

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { NOTIFICATION } from "../Notification-class-asn1-97/NOTIFICATION.oca.mjs";
+import { type NOTIFICATION } from "../Notification-class-asn1-97/NOTIFICATION.oca.mjs";
 
 /**
  * @summary NotificationSet

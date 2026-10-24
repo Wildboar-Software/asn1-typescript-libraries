@@ -7,7 +7,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { PLMNID, _decode_PLMNID, _encode_PLMNID } from "../EpsHI2Operations/PLMNID.ta.mjs";
 // export { PLMNID, _decode_PLMNID, _encode_PLMNID } from "../EpsHI2Operations/PLMNID.ta.mjs";
-import { NRCellID, _decode_NRCellID, _encode_NRCellID } from "../EpsHI2Operations/NRCellID.ta.mjs";
+import { type NRCellID, _decode_NRCellID, _encode_NRCellID } from "../EpsHI2Operations/NRCellID.ta.mjs";
 // export { NRCellID, _decode_NRCellID, _encode_NRCellID } from "../EpsHI2Operations/NRCellID.ta.mjs";
 
 

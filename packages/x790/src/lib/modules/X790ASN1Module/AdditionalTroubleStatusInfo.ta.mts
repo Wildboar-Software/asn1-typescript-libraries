@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    SET,
-    GraphicString,
+    type SET,
+    type GraphicString,
     ASN1Element as _Element,
     ASN1SizeError,
 } from "@wildboar/asn1";

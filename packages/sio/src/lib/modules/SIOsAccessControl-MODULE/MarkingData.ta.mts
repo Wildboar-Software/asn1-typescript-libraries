@@ -6,12 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    MarkingCodes,
+    type MarkingCodes,
     _decode_MarkingCodes,
     _encode_MarkingCodes,
 } from "../SIOsAccessControl-MODULE/MarkingCodes.ta.mjs";
 import {
-    MarkingPhrase,
+    type MarkingPhrase,
     _decode_MarkingPhrase,
     _encode_MarkingPhrase,
 } from "../SIOsAccessControl-MODULE/MarkingPhrase.ta.mjs";

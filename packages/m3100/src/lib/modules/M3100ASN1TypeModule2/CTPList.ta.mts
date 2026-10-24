@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    NWTPList,
+    type NWTPList,
     _decode_NWTPList,
     _encode_NWTPList,
 } from '../M3100ASN1TypeModule2/NWTPList.ta.mjs';

@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectSel_objSelect,
+    type ObjectSel_objSelect,
     _decode_ObjectSel_objSelect,
     _encode_ObjectSel_objSelect,
 } from '../Pbact-access/ObjectSel-objSelect.ta.mjs';

@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SecurityAction,
+    type SecurityAction,
     _decode_SecurityAction,
     _encode_SecurityAction,
 } from '../MhsAcctAsn1Module/SecurityAction.ta.mjs';

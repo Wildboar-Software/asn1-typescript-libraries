@@ -12,8 +12,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
-import { CS_GetProgramInvocationAttributes_Response_control_controlling_runningMode, _decode_CS_GetProgramInvocationAttributes_Response_control_controlling_runningMode, _encode_CS_GetProgramInvocationAttributes_Response_control_controlling_runningMode } from "../ISO-9506-MMS-1/CS-GetProgramInvocationAttributes-Response-control-controlling-runningMode.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type CS_GetProgramInvocationAttributes_Response_control_controlling_runningMode, _decode_CS_GetProgramInvocationAttributes_Response_control_controlling_runningMode, _encode_CS_GetProgramInvocationAttributes_Response_control_controlling_runningMode } from "../ISO-9506-MMS-1/CS-GetProgramInvocationAttributes-Response-control-controlling-runningMode.ta.mjs";
 
 
 /**

@@ -13,11 +13,11 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AuthenticationAttribute, _decode_AuthenticationAttribute, _encode_AuthenticationAttribute } from "../DFRAbstractService/AuthenticationAttribute.ta.mjs";
+import { type AuthenticationAttribute, _decode_AuthenticationAttribute, _encode_AuthenticationAttribute } from "../DFRAbstractService/AuthenticationAttribute.ta.mjs";
 import { ConstraintsType, _decode_ConstraintsType, _encode_ConstraintsType } from "../DFRAbstractService/ConstraintsType.ta.mjs";
 import { TypeAndAttribute, _decode_TypeAndAttribute, _encode_TypeAndAttribute } from "../DFRAbstractService/TypeAndAttribute.ta.mjs";
 import { FunctionSetType, _enum_for_FunctionSetType, _decode_FunctionSetType, _encode_FunctionSetType } from "../DFRAbstractService/FunctionSetType.ta.mjs";
-import { ROAProtocols, _decode_ROAProtocols, _encode_ROAProtocols } from "../DFRAbstractService/ROAProtocols.ta.mjs";
+import { type ROAProtocols, _decode_ROAProtocols, _encode_ROAProtocols } from "../DFRAbstractService/ROAProtocols.ta.mjs";
 
 
 /**

@@ -16,12 +16,12 @@ import {
     _encode_TimeStamp,
 } from '../TimeRepresentation/TimeStamp.ta.mjs';
 import {
-    CumLeapSeconds,
+    type CumLeapSeconds,
     _decode_CumLeapSeconds,
     _encode_CumLeapSeconds,
 } from '../TimeRepresentation/CumLeapSeconds.ta.mjs';
 import {
-    TimeZone,
+    type TimeZone,
     _decode_TimeZone,
     _encode_TimeZone,
 } from '../TimeRepresentation/TimeZone.ta.mjs';

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    AuthorizationList,
+    type AuthorizationList,
 } from "../X790ASN1Module/AuthorizationList.ta.mjs";
 import {
     AuthorizationList_Item,

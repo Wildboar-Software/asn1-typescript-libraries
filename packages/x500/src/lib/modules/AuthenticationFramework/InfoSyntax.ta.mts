@@ -7,7 +7,7 @@ import {
     _encode_InfoSyntax_pointer,
 } from "../AuthenticationFramework/InfoSyntax-pointer.ta.mjs";
 import {
-    UnboundedDirectoryString,
+    type UnboundedDirectoryString,
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";

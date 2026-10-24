@@ -17,12 +17,12 @@ import {
     _encode_AlgorithmIdentifier,
 } from '@wildboar/x500/AuthenticationFramework';
 import {
-    TBSAsymmetricToken_name,
+    type TBSAsymmetricToken_name,
     _decode_TBSAsymmetricToken_name,
     _encode_TBSAsymmetricToken_name,
 } from '../MTSAbstractService/TBSAsymmetricToken-name.ta.mjs';
 import {
-    Time,
+    type Time,
     _decode_Time,
     _encode_Time,
 } from '../MTSAbstractService/Time.ta.mjs';
@@ -32,7 +32,7 @@ import {
     _encode_TokenData,
 } from '../MTSAbstractService/TokenData.ta.mjs';
 import {
-    ENCRYPTED,
+    type ENCRYPTED,
     _get_decoder_for_ENCRYPTED,
     _get_encoder_for_ENCRYPTED,
 } from '@wildboar/x500/AuthenticationFramework';

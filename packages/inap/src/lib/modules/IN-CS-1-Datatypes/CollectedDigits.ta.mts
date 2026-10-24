@@ -5,7 +5,7 @@ import {
     type BOOLEAN,
     type INTEGER,
     type OCTET_STRING,
-    OPTIONAL
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_ErrorTreatment, _encode_ErrorTreatment, _enum_for_ErrorTreatment, ErrorTreatment, ErrorTreatment_reportErrorToScf /* IMPORTED_LONG_ENUMERATION_ITEM */ } from "../IN-CS-1-Datatypes/ErrorTreatment.ta.mjs";

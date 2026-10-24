@@ -7,11 +7,11 @@ import {
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TetraLocation, _decode_TetraLocation, _encode_TetraLocation } from "../HI2Operations/TetraLocation.ta.mjs";
+import { type TetraLocation, _decode_TetraLocation, _encode_TetraLocation } from "../HI2Operations/TetraLocation.ta.mjs";
 // export { TetraLocation, _decode_TetraLocation, _encode_TetraLocation } from "../HI2Operations/TetraLocation.ta.mjs";
-import { GSMLocation, _decode_GSMLocation, _encode_GSMLocation } from "../HI2Operations/GSMLocation.ta.mjs";
+import { type GSMLocation, _decode_GSMLocation, _encode_GSMLocation } from "../HI2Operations/GSMLocation.ta.mjs";
 // export { GSMLocation, _decode_GSMLocation, _encode_GSMLocation } from "../HI2Operations/GSMLocation.ta.mjs";
-import { UMTSLocation, _decode_UMTSLocation, _encode_UMTSLocation } from "../HI2Operations/UMTSLocation.ta.mjs";
+import { type UMTSLocation, _decode_UMTSLocation, _encode_UMTSLocation } from "../HI2Operations/UMTSLocation.ta.mjs";
 // export { UMTSLocation, _decode_UMTSLocation, _encode_UMTSLocation } from "../HI2Operations/UMTSLocation.ta.mjs";
 
 

@@ -17,7 +17,7 @@ import {
     _encode_AttributeUsage,
 } from '@wildboar/x500/InformationFramework';
 import {
-    ExtendedEncodedInformationType,
+    type ExtendedEncodedInformationType,
     _decode_ExtendedEncodedInformationType,
     _encode_ExtendedEncodedInformationType,
 } from '../MTSAbstractService/ExtendedEncodedInformationType.ta.mjs';

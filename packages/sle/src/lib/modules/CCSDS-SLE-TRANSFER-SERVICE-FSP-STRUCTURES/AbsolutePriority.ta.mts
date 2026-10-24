@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { VcOrMapId, _decode_VcOrMapId, _encode_VcOrMapId } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/VcOrMapId.ta.mjs";
-import { Priority, _decode_Priority, _encode_Priority } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/Priority.ta.mjs";
+import { type VcOrMapId, _decode_VcOrMapId, _encode_VcOrMapId } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/VcOrMapId.ta.mjs";
+import { type Priority, _decode_Priority, _encode_Priority } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/Priority.ta.mjs";
 
 
 /**

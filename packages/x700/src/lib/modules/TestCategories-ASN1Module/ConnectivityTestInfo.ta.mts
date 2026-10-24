@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ConnectivityTestInfo_timeoutPeriod,
+    type ConnectivityTestInfo_timeoutPeriod,
     _decode_ConnectivityTestInfo_timeoutPeriod,
     _encode_ConnectivityTestInfo_timeoutPeriod,
 } from '../TestCategories-ASN1Module/ConnectivityTestInfo-timeoutPeriod.ta.mjs';
 import {
-    Timespec,
+    type Timespec,
     _decode_Timespec,
     _encode_Timespec,
 } from '../Test-ASN1Module/Timespec.ta.mjs';

@@ -5,7 +5,7 @@ import {
 } from "@wildboar/x500/InformationFramework";
 import { objectIdentifierMatch } from "@wildboar/x500/InformationFramework";
 import {
-    ContentType,
+    type ContentType,
     _decode_ContentType,
     _encode_ContentType,
 } from "../PKCS-9/ContentType.ta.mjs";

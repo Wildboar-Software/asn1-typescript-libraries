@@ -18,7 +18,7 @@ import {
     _encode_Code,
 } from '@wildboar/rose';
 import {
-    Probe,
+    type Probe,
     _decode_Probe,
     _encode_Probe,
 } from '../MTAAbstractService/Probe.ta.mjs';

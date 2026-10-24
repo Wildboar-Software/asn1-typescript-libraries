@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -11,27 +11,27 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { VMDStop_Request, _decode_VMDStop_Request, _encode_VMDStop_Request } from "../ISO-9506-MMS-1/VMDStop-Request.ta.mjs";
-import { VMDReset_Request, _decode_VMDReset_Request, _encode_VMDReset_Request } from "../ISO-9506-MMS-1/VMDReset-Request.ta.mjs";
+import { type VMDStop_Request, _decode_VMDStop_Request, _encode_VMDStop_Request } from "../ISO-9506-MMS-1/VMDStop-Request.ta.mjs";
+import { type VMDReset_Request, _decode_VMDReset_Request, _encode_VMDReset_Request } from "../ISO-9506-MMS-1/VMDReset-Request.ta.mjs";
 import { Select_Request, _decode_Select_Request, _encode_Select_Request } from "../ISO-9506-MMS-1/Select-Request.ta.mjs";
 import { AlterProgramInvocationAttributes_Request, _decode_AlterProgramInvocationAttributes_Request, _encode_AlterProgramInvocationAttributes_Request } from "../ISO-9506-MMS-1/AlterProgramInvocationAttributes-Request.ta.mjs";
-import { InitiateUnitControlLoad_Request, _decode_InitiateUnitControlLoad_Request, _encode_InitiateUnitControlLoad_Request } from "../ISO-9506-MMS-1/InitiateUnitControlLoad-Request.ta.mjs";
-import { UnitControlLoadSegment_Request, _decode_UnitControlLoadSegment_Request, _encode_UnitControlLoadSegment_Request } from "../ISO-9506-MMS-1/UnitControlLoadSegment-Request.ta.mjs";
+import { type InitiateUnitControlLoad_Request, _decode_InitiateUnitControlLoad_Request, _encode_InitiateUnitControlLoad_Request } from "../ISO-9506-MMS-1/InitiateUnitControlLoad-Request.ta.mjs";
+import { type UnitControlLoadSegment_Request, _decode_UnitControlLoadSegment_Request, _encode_UnitControlLoadSegment_Request } from "../ISO-9506-MMS-1/UnitControlLoadSegment-Request.ta.mjs";
 import { UnitControlUpload_Request, _decode_UnitControlUpload_Request, _encode_UnitControlUpload_Request } from "../ISO-9506-MMS-1/UnitControlUpload-Request.ta.mjs";
 import { StartUnitControl_Request, _decode_StartUnitControl_Request, _encode_StartUnitControl_Request } from "../ISO-9506-MMS-1/StartUnitControl-Request.ta.mjs";
-import { StopUnitControl_Request, _decode_StopUnitControl_Request, _encode_StopUnitControl_Request } from "../ISO-9506-MMS-1/StopUnitControl-Request.ta.mjs";
+import { type StopUnitControl_Request, _decode_StopUnitControl_Request, _encode_StopUnitControl_Request } from "../ISO-9506-MMS-1/StopUnitControl-Request.ta.mjs";
 import { CreateUnitControl_Request, _decode_CreateUnitControl_Request, _encode_CreateUnitControl_Request } from "../ISO-9506-MMS-1/CreateUnitControl-Request.ta.mjs";
 import { AddToUnitControl_Request, _decode_AddToUnitControl_Request, _encode_AddToUnitControl_Request } from "../ISO-9506-MMS-1/AddToUnitControl-Request.ta.mjs";
 import { RemoveFromUnitControl_Request, _decode_RemoveFromUnitControl_Request, _encode_RemoveFromUnitControl_Request } from "../ISO-9506-MMS-1/RemoveFromUnitControl-Request.ta.mjs";
-import { GetUnitControlAttributes_Request, _decode_GetUnitControlAttributes_Request, _encode_GetUnitControlAttributes_Request } from "../ISO-9506-MMS-1/GetUnitControlAttributes-Request.ta.mjs";
+import { type GetUnitControlAttributes_Request, _decode_GetUnitControlAttributes_Request, _encode_GetUnitControlAttributes_Request } from "../ISO-9506-MMS-1/GetUnitControlAttributes-Request.ta.mjs";
 import { LoadUnitControlFromFile_Request, _decode_LoadUnitControlFromFile_Request, _encode_LoadUnitControlFromFile_Request } from "../ISO-9506-MMS-1/LoadUnitControlFromFile-Request.ta.mjs";
 import { StoreUnitControlToFile_Request, _decode_StoreUnitControlToFile_Request, _encode_StoreUnitControlToFile_Request } from "../ISO-9506-MMS-1/StoreUnitControlToFile-Request.ta.mjs";
-import { DeleteUnitControl_Request, _decode_DeleteUnitControl_Request, _encode_DeleteUnitControl_Request } from "../ISO-9506-MMS-1/DeleteUnitControl-Request.ta.mjs";
+import { type DeleteUnitControl_Request, _decode_DeleteUnitControl_Request, _encode_DeleteUnitControl_Request } from "../ISO-9506-MMS-1/DeleteUnitControl-Request.ta.mjs";
 import { DefineEventConditionList_Request, _decode_DefineEventConditionList_Request, _encode_DefineEventConditionList_Request } from "../ISO-9506-MMS-1/DefineEventConditionList-Request.ta.mjs";
-import { DeleteEventConditionList_Request, _decode_DeleteEventConditionList_Request, _encode_DeleteEventConditionList_Request } from "../ISO-9506-MMS-1/DeleteEventConditionList-Request.ta.mjs";
+import { type DeleteEventConditionList_Request, _decode_DeleteEventConditionList_Request, _encode_DeleteEventConditionList_Request } from "../ISO-9506-MMS-1/DeleteEventConditionList-Request.ta.mjs";
 import { AddEventConditionListReference_Request, _decode_AddEventConditionListReference_Request, _encode_AddEventConditionListReference_Request } from "../ISO-9506-MMS-1/AddEventConditionListReference-Request.ta.mjs";
 import { RemoveEventConditionListReference_Request, _decode_RemoveEventConditionListReference_Request, _encode_RemoveEventConditionListReference_Request } from "../ISO-9506-MMS-1/RemoveEventConditionListReference-Request.ta.mjs";
-import { GetEventConditionListAttributes_Request, _decode_GetEventConditionListAttributes_Request, _encode_GetEventConditionListAttributes_Request } from "../ISO-9506-MMS-1/GetEventConditionListAttributes-Request.ta.mjs";
+import { type GetEventConditionListAttributes_Request, _decode_GetEventConditionListAttributes_Request, _encode_GetEventConditionListAttributes_Request } from "../ISO-9506-MMS-1/GetEventConditionListAttributes-Request.ta.mjs";
 import { ReportEventConditionListStatus_Request, _decode_ReportEventConditionListStatus_Request, _encode_ReportEventConditionListStatus_Request } from "../ISO-9506-MMS-1/ReportEventConditionListStatus-Request.ta.mjs";
 import { AlterEventConditionListMonitoring_Request, _decode_AlterEventConditionListMonitoring_Request, _encode_AlterEventConditionListMonitoring_Request } from "../ISO-9506-MMS-1/AlterEventConditionListMonitoring-Request.ta.mjs";
 

@@ -17,7 +17,7 @@ import {
     _encode_AttributeUsage,
 } from '@wildboar/x500/InformationFramework';
 import {
-    Context,
+    type Context,
     _decode_Context,
     _encode_Context,
 } from '../DefinitionASN1Module/Context.ta.mjs';

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { _decode_PlatformFirmwareSignatureVerification, _encode_PlatformFirmwareSignatureVerification, PlatformFirmwareSignatureVerification } from "../PlatformCertificateProfileV2/PlatformFirmwareSignatureVerification.ta.mjs";
+import { _decode_PlatformFirmwareSignatureVerification, _encode_PlatformFirmwareSignatureVerification, type PlatformFirmwareSignatureVerification } from "../PlatformCertificateProfileV2/PlatformFirmwareSignatureVerification.ta.mjs";
 import { tcg_tr_ID_platformFirmwareSignatureVerification } from "../PlatformCertificateProfileV2/tcg-tr-ID-platformFirmwareSignatureVerification.va.mjs";
 import { type TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
 

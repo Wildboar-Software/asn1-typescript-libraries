@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ControlStatus_Item, _decode_ControlStatus_Item, _encode_ControlStatus_Item } from "../Attribute-ASN1Module/ControlStatus-Item.ta.mjs";
+import { type ControlStatus_Item, _decode_ControlStatus_Item, _encode_ControlStatus_Item } from "../Attribute-ASN1Module/ControlStatus-Item.ta.mjs";
 /**
  * @summary ControlStatus
  * @description

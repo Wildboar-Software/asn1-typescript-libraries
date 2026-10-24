@@ -7,7 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    NameRegistrationAuthorities,
+    type NameRegistrationAuthorities,
     _decode_NameRegistrationAuthorities,
     _encode_NameRegistrationAuthorities,
 } from "../PKIXqualified97/NameRegistrationAuthorities.ta.mjs";

@@ -16,7 +16,7 @@ import {
     _encode_StrongCredentials,
 } from '../MTSAbstractService/StrongCredentials.ta.mjs';
 import {
-    GenericStrongCredentials,
+    type GenericStrongCredentials,
     _decode_GenericStrongCredentials,
     _encode_GenericStrongCredentials,
 } from '../MhsMTAAsn1Module/GenericStrongCredentials.ta.mjs';

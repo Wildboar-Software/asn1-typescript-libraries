@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DestinationNumberLengthList, _decode_DestinationNumberLengthList, _encode_DestinationNumberLengthList } from "../MAP-MS-DataTypes/DestinationNumberLengthList.ta.mjs";
-import { DestinationNumberList, _decode_DestinationNumberList, _encode_DestinationNumberList } from "../MAP-MS-DataTypes/DestinationNumberList.ta.mjs";
+import { type DestinationNumberLengthList, _decode_DestinationNumberLengthList, _encode_DestinationNumberLengthList } from "../MAP-MS-DataTypes/DestinationNumberLengthList.ta.mjs";
+import { type DestinationNumberList, _decode_DestinationNumberList, _encode_DestinationNumberList } from "../MAP-MS-DataTypes/DestinationNumberList.ta.mjs";
 import { MatchType, _decode_MatchType, _encode_MatchType, _enum_for_MatchType } from "../MAP-MS-DataTypes/MatchType.ta.mjs";
 
 

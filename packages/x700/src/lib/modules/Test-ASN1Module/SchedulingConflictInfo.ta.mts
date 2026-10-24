@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TestInvocationId,
+    type TestInvocationId,
     _decode_TestInvocationId,
     _encode_TestInvocationId,
 } from '../Test-ASN1Module/TestInvocationId.ta.mjs';
@@ -22,32 +22,32 @@ import {
     _encode_TestSessionId,
 } from '../Test-ASN1Module/TestSessionId.ta.mjs';
 import {
-    StartTime,
+    type StartTime,
     _decode_StartTime,
     _encode_StartTime,
 } from '@wildboar/attribute-asn1module';
 import {
-    EndTime,
+    type EndTime,
     _decode_EndTime,
     _encode_EndTime,
 } from '../Test-ASN1Module/EndTime.ta.mjs';
 import {
-    ActualStartTime,
+    type ActualStartTime,
     _decode_ActualStartTime,
     _encode_ActualStartTime,
 } from '../Test-ASN1Module/ActualStartTime.ta.mjs';
 import {
-    ActualStopTime,
+    type ActualStopTime,
     _decode_ActualStopTime,
     _encode_ActualStopTime,
 } from '../Test-ASN1Module/ActualStopTime.ta.mjs';
 import {
-    AdditionalText,
+    type AdditionalText,
     _decode_AdditionalText,
     _encode_AdditionalText,
 } from '@wildboar/attribute-asn1module';
 import {
-    AdditionalInformation,
+    type AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
 } from '@wildboar/attribute-asn1module';

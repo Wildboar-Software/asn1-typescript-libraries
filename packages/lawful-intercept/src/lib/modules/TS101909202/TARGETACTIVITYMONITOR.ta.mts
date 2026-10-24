@@ -3,20 +3,20 @@ import {
     type BIT_STRING,
     type INTEGER,
     type OPTIONAL,
-    UTCTime,
+    type UTCTime,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { LIIDType, _decode_LIIDType, _encode_LIIDType } from "../TS101909202/LIIDType.ta.mjs";
+import { type LIIDType, _decode_LIIDType, _encode_LIIDType } from "../TS101909202/LIIDType.ta.mjs";
 // export { LIIDType, _decode_LIIDType, _encode_LIIDType } from "../TS101909202/LIIDType.ta.mjs";
-import { LocationType, _decode_LocationType, _encode_LocationType } from "../TS101909202/LocationType.ta.mjs";
+import { type LocationType, _decode_LocationType, _encode_LocationType } from "../TS101909202/LocationType.ta.mjs";
 // export { LocationType, _decode_LocationType, _encode_LocationType } from "../TS101909202/LocationType.ta.mjs";
 import { DirectionType, _decode_DirectionType, _encode_DirectionType, _enum_for_DirectionType } from "../TS101909202/DirectionType.ta.mjs";
 // export { DirectionType, _enum_for_DirectionType, DirectionType_toTarget /* IMPORTED_LONG_ENUMERATION_ITEM */, toTarget /* IMPORTED_SHORT_ENUMERATION_ITEM */, DirectionType_fromTarget /* IMPORTED_LONG_ENUMERATION_ITEM */, fromTarget /* IMPORTED_SHORT_ENUMERATION_ITEM */, DirectionType_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DirectionType, _encode_DirectionType } from "../TS101909202/DirectionType.ta.mjs";
 import { IRITransactionType, IRITransactionType_iRIreport /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_IRITransactionType, _encode_IRITransactionType, _enum_for_IRITransactionType } from "../TS101909202/IRITransactionType.ta.mjs";
 // export { IRITransactionType, _enum_for_IRITransactionType, IRITransactionType_iRIbegin /* IMPORTED_LONG_ENUMERATION_ITEM */, iRIbegin /* IMPORTED_SHORT_ENUMERATION_ITEM */, IRITransactionType_iRIcontinue /* IMPORTED_LONG_ENUMERATION_ITEM */, iRIcontinue /* IMPORTED_SHORT_ENUMERATION_ITEM */, IRITransactionType_iRIend /* IMPORTED_LONG_ENUMERATION_ITEM */, iRIend /* IMPORTED_SHORT_ENUMERATION_ITEM */, IRITransactionType_iRIreport /* IMPORTED_LONG_ENUMERATION_ITEM */, iRIreport /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_IRITransactionType, _encode_IRITransactionType } from "../TS101909202/IRITransactionType.ta.mjs";
-import { UserSignalType, _decode_UserSignalType, _encode_UserSignalType } from "../TS101909202/UserSignalType.ta.mjs";
+import { type UserSignalType, _decode_UserSignalType, _encode_UserSignalType } from "../TS101909202/UserSignalType.ta.mjs";
 // export { UserSignalType, _decode_UserSignalType, _encode_UserSignalType } from "../TS101909202/UserSignalType.ta.mjs";
 
 

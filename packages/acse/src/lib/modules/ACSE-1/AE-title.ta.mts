@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  AE_title_form1,
+  type AE_title_form1,
   _decode_AE_title_form1,
   _encode_AE_title_form1,
 } from '../ACSE-1/AE-title-form1.ta.mjs';
 import {
-  AE_title_form2,
+  type AE_title_form2,
   _decode_AE_title_form2,
   _encode_AE_title_form2,
 } from '../ACSE-1/AE-title-form2.ta.mjs';

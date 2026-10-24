@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { GetEimConfigurationDataRequest_searchCriteria, _decode_GetEimConfigurationDataRequest_searchCriteria, _encode_GetEimConfigurationDataRequest_searchCriteria } from "../SGP32Definitions/GetEimConfigurationDataRequest-searchCriteria.ta.mjs";
+import { type GetEimConfigurationDataRequest_searchCriteria, _decode_GetEimConfigurationDataRequest_searchCriteria, _encode_GetEimConfigurationDataRequest_searchCriteria } from "../SGP32Definitions/GetEimConfigurationDataRequest-searchCriteria.ta.mjs";
 
 
 /**

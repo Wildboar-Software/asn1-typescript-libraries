@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RecipientCertificate,
+    type RecipientCertificate,
     _decode_RecipientCertificate,
     _encode_RecipientCertificate,
 } from '../MTSAbstractService/RecipientCertificate.ta.mjs';
 import {
-    ProofOfDelivery,
+    type ProofOfDelivery,
     _decode_ProofOfDelivery,
     _encode_ProofOfDelivery,
 } from '../MTSAbstractService/ProofOfDelivery.ta.mjs';

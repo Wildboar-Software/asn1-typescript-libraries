@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    RecipientSecurityRequest,
+    type RecipientSecurityRequest,
     _decode_RecipientSecurityRequest,
     _encode_RecipientSecurityRequest,
 } from '../IPMSSecurityExtensions/RecipientSecurityRequest.ta.mjs';

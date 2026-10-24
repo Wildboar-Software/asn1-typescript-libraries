@@ -5,7 +5,7 @@ import {
 } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { objectIdentifierMatch } from "../InformationFramework/objectIdentifierMatch.oa.mjs";
 import {
-    CommunicationsService,
+    type CommunicationsService,
     _decode_CommunicationsService,
     _encode_CommunicationsService,
 } from "../SelectedAttributeTypes/CommunicationsService.ta.mjs";

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
   joint_iso_itu_t,
-  ABSTRACT_SYNTAX,
+  type ABSTRACT_SYNTAX,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,7 +12,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    ACSE_apdu,
+    type ACSE_apdu,
     _decode_ACSE_apdu,
     _encode_ACSE_apdu,
 } from '@wildboar/acse';

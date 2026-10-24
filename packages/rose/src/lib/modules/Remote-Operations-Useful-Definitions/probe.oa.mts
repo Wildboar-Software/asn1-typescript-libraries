@@ -24,7 +24,7 @@ import {
   _encode_probe_ArgumentType,
 } from '../Remote-Operations-Useful-Definitions/probe-ArgumentType.ta.mjs';
 import {
-  probe_ResultType,
+  type probe_ResultType,
   _enum_for_probe_ResultType,
   _decode_probe_ResultType,
   _encode_probe_ResultType,

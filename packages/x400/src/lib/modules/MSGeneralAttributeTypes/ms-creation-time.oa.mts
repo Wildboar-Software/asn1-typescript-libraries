@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    CreationTime,
+    type CreationTime,
     _decode_CreationTime,
     _encode_CreationTime,
 } from '../MSAbstractService/CreationTime.ta.mjs';

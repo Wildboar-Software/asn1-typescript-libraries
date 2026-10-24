@@ -13,12 +13,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RelatedStoredFile,
+    type RelatedStoredFile,
     _decode_RelatedStoredFile,
     _encode_RelatedStoredFile,
 } from '../IPMSFileTransferBodyPartType/RelatedStoredFile.ta.mjs';
 import {
-    ContentsTypeParameter,
+    type ContentsTypeParameter,
     _decode_ContentsTypeParameter,
     _encode_ContentsTypeParameter,
 } from '../IPMSFileTransferBodyPartType/ContentsTypeParameter.ta.mjs';
@@ -38,7 +38,7 @@ import {
     _encode_FileAttributes,
 } from '../IPMSFileTransferBodyPartType/FileAttributes.ta.mjs';
 import {
-    ExtensionsField,
+    type ExtensionsField,
     _decode_ExtensionsField,
     _encode_ExtensionsField,
 } from '../IPMSInformationObjects/ExtensionsField.ta.mjs';

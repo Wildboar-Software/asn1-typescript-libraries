@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SearchResult, _decode_SearchResult, _encode_SearchResult } from "../DirectoryAbstractService/SearchResult.ta.mjs";
+import { type SearchResult, _decode_SearchResult, _encode_SearchResult } from "../DirectoryAbstractService/SearchResult.ta.mjs";
 // export { SearchResult, _decode_SearchResult, _encode_SearchResult } from "../DirectoryAbstractService/SearchResult.ta.mjs";
 
 

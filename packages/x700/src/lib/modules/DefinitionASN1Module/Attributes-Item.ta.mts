@@ -22,7 +22,7 @@ import {
     _encode_PropertyList,
 } from '../DefinitionASN1Module/PropertyList.ta.mjs';
 import {
-    TemplateList,
+    type TemplateList,
     _decode_TemplateList,
     _encode_TemplateList,
 } from '../DefinitionASN1Module/TemplateList.ta.mjs';

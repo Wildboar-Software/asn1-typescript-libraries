@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    Language,
+    type Language,
     _decode_Language,
     _encode_Language,
 } from '../IPMSHeadingExtensions/Language.ta.mjs';

@@ -3,20 +3,20 @@
 import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { EscapeRegister, _decode_EscapeRegister, _encode_EscapeRegister } from "../CSTA-capability-exchange/EscapeRegister.ta.mjs";
+import { type EscapeRegister, _decode_EscapeRegister, _encode_EscapeRegister } from "../CSTA-capability-exchange/EscapeRegister.ta.mjs";
 
-import { EscapeRegisterCancel, _decode_EscapeRegisterCancel, _encode_EscapeRegisterCancel } from "../CSTA-capability-exchange/EscapeRegisterCancel.ta.mjs";
+import { type EscapeRegisterCancel, _decode_EscapeRegisterCancel, _encode_EscapeRegisterCancel } from "../CSTA-capability-exchange/EscapeRegisterCancel.ta.mjs";
 
-import { EscapeRegisterAbort, _decode_EscapeRegisterAbort, _encode_EscapeRegisterAbort } from "../CSTA-capability-exchange/EscapeRegisterAbort.ta.mjs";
+import { type EscapeRegisterAbort, _decode_EscapeRegisterAbort, _encode_EscapeRegisterAbort } from "../CSTA-capability-exchange/EscapeRegisterAbort.ta.mjs";
 
-import { Escape, _decode_Escape, _encode_Escape } from "../CSTA-capability-exchange/Escape.ta.mjs";
+import { type Escape, _decode_Escape, _encode_Escape } from "../CSTA-capability-exchange/Escape.ta.mjs";
 
-import { PrivateDataVersionSelection, _decode_PrivateDataVersionSelection, _encode_PrivateDataVersionSelection } from "../CSTA-capability-exchange/PrivateDataVersionSelection.ta.mjs";
+import { type PrivateDataVersionSelection, _decode_PrivateDataVersionSelection, _encode_PrivateDataVersionSelection } from "../CSTA-capability-exchange/PrivateDataVersionSelection.ta.mjs";
 
 
 

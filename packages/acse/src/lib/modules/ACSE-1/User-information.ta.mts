@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Association_data,
+  type Association_data,
   _decode_Association_data,
   _encode_Association_data,
 } from '../ACSE-1/Association-data.ta.mjs';

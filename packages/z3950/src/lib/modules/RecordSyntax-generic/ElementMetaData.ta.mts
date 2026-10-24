@@ -10,9 +10,9 @@ import * as $ from "@wildboar/asn1/functional";
 import { Order, _decode_Order, _encode_Order } from "../RecordSyntax-generic/Order.ta.mjs";
 import { Usage, _decode_Usage, _encode_Usage } from "../RecordSyntax-generic/Usage.ta.mjs";
 import { HitVector, _decode_HitVector, _encode_HitVector } from "../RecordSyntax-generic/HitVector.ta.mjs";
-import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
+import { type InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
 import { Variant, _decode_Variant, _encode_Variant } from "../RecordSyntax-generic/Variant.ta.mjs";
-import { TagPath, _decode_TagPath, _encode_TagPath } from "../RecordSyntax-generic/TagPath.ta.mjs";
+import { type TagPath, _decode_TagPath, _encode_TagPath } from "../RecordSyntax-generic/TagPath.ta.mjs";
 
 
 /**

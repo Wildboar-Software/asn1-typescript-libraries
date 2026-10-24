@@ -4,11 +4,11 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { NumberOfDigits, _decode_NumberOfDigits, _encode_NumberOfDigits } from "../IN-SSF-SCF-datatypes/NumberOfDigits.ta.mjs";
+import { type NumberOfDigits, _decode_NumberOfDigits, _encode_NumberOfDigits } from "../IN-SSF-SCF-datatypes/NumberOfDigits.ta.mjs";
 // export { NumberOfDigits, _decode_NumberOfDigits, _encode_NumberOfDigits } from "../IN-SSF-SCF-datatypes/NumberOfDigits.ta.mjs";
-import { ApplicationTimer, _decode_ApplicationTimer, _encode_ApplicationTimer } from "../IN-SSF-SCF-datatypes/ApplicationTimer.ta.mjs";
+import { type ApplicationTimer, _decode_ApplicationTimer, _encode_ApplicationTimer } from "../IN-SSF-SCF-datatypes/ApplicationTimer.ta.mjs";
 // export { ApplicationTimer, _decode_ApplicationTimer, _encode_ApplicationTimer } from "../IN-SSF-SCF-datatypes/ApplicationTimer.ta.mjs";
-import { MidCallControlInfo, _decode_MidCallControlInfo, _encode_MidCallControlInfo } from "../IN-SSF-SCF-datatypes/MidCallControlInfo.ta.mjs";
+import { type MidCallControlInfo, _decode_MidCallControlInfo, _encode_MidCallControlInfo } from "../IN-SSF-SCF-datatypes/MidCallControlInfo.ta.mjs";
 // export { MidCallControlInfo, _decode_MidCallControlInfo, _encode_MidCallControlInfo } from "../IN-SSF-SCF-datatypes/MidCallControlInfo.ta.mjs";
 import { DpSpecificCriteria_numberOfDigitsTwo, _decode_DpSpecificCriteria_numberOfDigitsTwo, _encode_DpSpecificCriteria_numberOfDigitsTwo } from "../IN-SSF-SCF-datatypes/DpSpecificCriteria-numberOfDigitsTwo.ta.mjs";
 // export { DpSpecificCriteria_numberOfDigitsTwo, _decode_DpSpecificCriteria_numberOfDigitsTwo, _encode_DpSpecificCriteria_numberOfDigitsTwo } from "../IN-SSF-SCF-datatypes/DpSpecificCriteria-numberOfDigitsTwo.ta.mjs";

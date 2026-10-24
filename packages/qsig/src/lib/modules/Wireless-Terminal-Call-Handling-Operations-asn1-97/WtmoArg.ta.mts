@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-import { WtmoArg_extension, _decode_WtmoArg_extension, _encode_WtmoArg_extension } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/WtmoArg-extension.ta.mjs";
+import { type PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
+import { type WtmoArg_extension, _decode_WtmoArg_extension, _encode_WtmoArg_extension } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/WtmoArg-extension.ta.mjs";
 
 /**
  * @summary WtmoArg

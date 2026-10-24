@@ -32,7 +32,7 @@ import {
   _encode_EntityType_type,
 } from '../CMAIL/EntityType-type.ta.mjs';
 import {
-    String,
+    type String,
     _decode_String,
     _encode_String,
 } from '../XSD/String.ta.mjs';

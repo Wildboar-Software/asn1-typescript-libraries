@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RedirectionClass,
+    type RedirectionClass,
     _decode_RedirectionClass,
     _encode_RedirectionClass,
 } from '../MTSAbstractService/RedirectionClass.ta.mjs';
 import {
-    RecipientAssignedAlternateRecipient,
+    type RecipientAssignedAlternateRecipient,
     _decode_RecipientAssignedAlternateRecipient,
     _encode_RecipientAssignedAlternateRecipient,
 } from '../MTSAbstractService/RecipientAssignedAlternateRecipient.ta.mjs';

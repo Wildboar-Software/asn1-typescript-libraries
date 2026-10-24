@@ -1,23 +1,23 @@
 /* eslint-disable */
 import {
     type OPTIONAL,
-    UTCTime,
+    type UTCTime,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     BERElement
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ScfID, _decode_ScfID, _encode_ScfID } from "../IN-SSF-SCF-datatypes/ScfID.ta.mjs";
+import { type ScfID, _decode_ScfID, _encode_ScfID } from "../IN-SSF-SCF-datatypes/ScfID.ta.mjs";
 // export { ScfID, _decode_ScfID, _encode_ScfID } from "../IN-SSF-SCF-datatypes/ScfID.ta.mjs";
-import { SubscriberID, _decode_SubscriberID, _encode_SubscriberID } from "../IN-SCF-SCF-datatypes/SubscriberID.ta.mjs";
+import { type SubscriberID, _decode_SubscriberID, _encode_SubscriberID } from "../IN-SCF-SCF-datatypes/SubscriberID.ta.mjs";
 // export { SubscriberID, _decode_SubscriberID, _encode_SubscriberID } from "../IN-SCF-SCF-datatypes/SubscriberID.ta.mjs";
-import { TraceInformation, _decode_TraceInformation, _encode_TraceInformation } from "../IN-SCF-SCF-datatypes/TraceInformation.ta.mjs";
+import { type TraceInformation, _decode_TraceInformation, _encode_TraceInformation } from "../IN-SCF-SCF-datatypes/TraceInformation.ta.mjs";
 // export { TraceInformation, _decode_TraceInformation, _encode_TraceInformation } from "../IN-SCF-SCF-datatypes/TraceInformation.ta.mjs";
-import { AuthenticationLevel, _decode_AuthenticationLevel, _encode_AuthenticationLevel } from "../BasicAccessControl/AuthenticationLevel.ta.mjs";
+import { type AuthenticationLevel, _decode_AuthenticationLevel, _encode_AuthenticationLevel } from "../BasicAccessControl/AuthenticationLevel.ta.mjs";
 // export { AuthenticationLevel, _decode_AuthenticationLevel, _encode_AuthenticationLevel } from "../BasicAccessControl/AuthenticationLevel.ta.mjs";
 import { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParameters } from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
 // export { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParameters } from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
-import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
 // export { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
 
 

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    NULL
+    type NULL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { id_icao_mrtd_security_extensions_nameChange } from "../Doc-9303-Part-12-Module/id-icao-mrtd-security-extensions-nameChange.va.mjs";

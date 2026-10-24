@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ORAddressFilter_attribute_type,
+    type ORAddressFilter_attribute_type,
     _decode_ORAddressFilter_attribute_type,
     _encode_ORAddressFilter_attribute_type,
 } from '../MHSRoutingORAddressSubtree/ORAddressFilter-attribute-type.ta.mjs';
 import {
-    ExtendedRegularExpression,
+    type ExtendedRegularExpression,
     _decode_ExtendedRegularExpression,
     _encode_ExtendedRegularExpression,
 } from '../MHSRoutingORAddressSubtree/ExtendedRegularExpression.ta.mjs';

@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PublicTypeOfNumber, _decode_PublicTypeOfNumber, _encode_PublicTypeOfNumber, _enum_for_PublicTypeOfNumber } from "../Addressing-Data-Elements-asn1-97/PublicTypeOfNumber.ta.mjs";
-import { NumberDigits, _decode_NumberDigits, _encode_NumberDigits } from "../Addressing-Data-Elements-asn1-97/NumberDigits.ta.mjs";
+import { type NumberDigits, _decode_NumberDigits, _encode_NumberDigits } from "../Addressing-Data-Elements-asn1-97/NumberDigits.ta.mjs";
 
 /**
  * @summary PublicPartyNumber

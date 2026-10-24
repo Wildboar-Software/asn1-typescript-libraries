@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    DistributedSoftware,
+    type DistributedSoftware,
     _decode_DistributedSoftware,
     _encode_DistributedSoftware,
 } from '../SWMF/DistributedSoftware.ta.mjs';

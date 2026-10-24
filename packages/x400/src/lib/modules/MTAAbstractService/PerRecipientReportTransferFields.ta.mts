@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ActualRecipientName,
+    type ActualRecipientName,
     _decode_ActualRecipientName,
     _encode_ActualRecipientName,
 } from '../MTAAbstractService/ActualRecipientName.ta.mjs';
 import {
-    OriginallySpecifiedRecipientNumber,
+    type OriginallySpecifiedRecipientNumber,
     _decode_OriginallySpecifiedRecipientNumber,
     _encode_OriginallySpecifiedRecipientNumber,
 } from '../MTAAbstractService/OriginallySpecifiedRecipientNumber.ta.mjs';
 import {
-    PerRecipientIndicators,
+    type PerRecipientIndicators,
     _decode_PerRecipientIndicators,
     _encode_PerRecipientIndicators,
 } from '../MTAAbstractService/PerRecipientIndicators.ta.mjs';
@@ -32,12 +32,12 @@ import {
     _encode_LastTraceInformation,
 } from '../MTAAbstractService/LastTraceInformation.ta.mjs';
 import {
-    OriginallyIntendedRecipientName,
+    type OriginallyIntendedRecipientName,
     _decode_OriginallyIntendedRecipientName,
     _encode_OriginallyIntendedRecipientName,
 } from '../MTAAbstractService/OriginallyIntendedRecipientName.ta.mjs';
 import {
-    SupplementaryInformation,
+    type SupplementaryInformation,
     _decode_SupplementaryInformation,
     _encode_SupplementaryInformation,
 } from '../MTSAbstractService/SupplementaryInformation.ta.mjs';

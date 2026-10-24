@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ID } from "../UsefulDefinitions/ID.ta.mjs";
+import { type ID } from "../UsefulDefinitions/ID.ta.mjs";
 import { ldap_x509 } from "../UsefulDefinitions/ldap-x509.va.mjs";
 /**
  * @summary id_ldx

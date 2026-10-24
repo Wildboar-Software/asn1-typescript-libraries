@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    EstablishmentTime,
+    type EstablishmentTime,
     _decode_EstablishmentTime,
     _encode_EstablishmentTime,
 } from '../TestCategories-ASN1Module/EstablishmentTime.ta.mjs';

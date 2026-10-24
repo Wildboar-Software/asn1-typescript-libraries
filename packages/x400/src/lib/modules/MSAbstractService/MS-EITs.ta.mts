@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    MS_EIT,
+    type MS_EIT,
     _decode_MS_EIT,
     _encode_MS_EIT,
 } from '../MSAbstractService/MS-EIT.ta.mjs';

@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TransferRecipientField,
+    type TransferRecipientField,
     _decode_TransferRecipientField,
     _encode_TransferRecipientField,
 } from '../MhsAcctAsn1Module/TransferRecipientField.ta.mjs';

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { Code } from "../CommonProtocolSpecification/Code.ta.mjs";
+import { type Code } from "../CommonProtocolSpecification/Code.ta.mjs";
 /**
  * @summary id_errcode_shadowError
  * @description

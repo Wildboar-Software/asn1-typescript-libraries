@@ -2,7 +2,7 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    GeneralizedTime,
+    type GeneralizedTime,
     type OCTET_STRING,
     type OPTIONAL,
 } from "@wildboar/asn1";

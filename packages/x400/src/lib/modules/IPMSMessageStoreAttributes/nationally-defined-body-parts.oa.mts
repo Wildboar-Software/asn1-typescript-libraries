@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    NationallyDefinedBodyPart,
+    type NationallyDefinedBodyPart,
     _decode_NationallyDefinedBodyPart,
     _encode_NationallyDefinedBodyPart,
 } from '../IPMSInformationObjects/NationallyDefinedBodyPart.ta.mjs';

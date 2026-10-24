@@ -11,9 +11,9 @@ import {
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ServiceConditionChange, _decode_ServiceConditionChange, _encode_ServiceConditionChange } from "../GPRSChargingDataTypes/ServiceConditionChange.ta.mjs";
+import { type ServiceConditionChange, _decode_ServiceConditionChange, _encode_ServiceConditionChange } from "../GPRSChargingDataTypes/ServiceConditionChange.ta.mjs";
 import { EPCQoSInformation, _decode_EPCQoSInformation, _encode_EPCQoSInformation } from "../GPRSChargingDataTypes/EPCQoSInformation.ta.mjs";
-import { GSNAddress, _decode_GSNAddress, _encode_GSNAddress } from "../GPRSChargingDataTypes/GSNAddress.ta.mjs";
+import { type GSNAddress, _decode_GSNAddress, _encode_GSNAddress } from "../GPRSChargingDataTypes/GSNAddress.ta.mjs";
 import { PSFurnishChargingInformation, _decode_PSFurnishChargingInformation, _encode_PSFurnishChargingInformation } from "../GPRSChargingDataTypes/PSFurnishChargingInformation.ta.mjs";
 import { AFRecordInformation, _decode_AFRecordInformation, _encode_AFRecordInformation } from "../GPRSChargingDataTypes/AFRecordInformation.ta.mjs";
 import { EventBasedChargingInformation, _decode_EventBasedChargingInformation, _encode_EventBasedChargingInformation } from "../GPRSChargingDataTypes/EventBasedChargingInformation.ta.mjs";
@@ -25,7 +25,7 @@ import { UWANUserLocationInfo, _decode_UWANUserLocationInfo, _encode_UWANUserLoc
 import { RelatedChangeOfServiceCondition, _decode_RelatedChangeOfServiceCondition, _encode_RelatedChangeOfServiceCondition } from "../GPRSChargingDataTypes/RelatedChangeOfServiceCondition.ta.mjs";
 import { ServingPLMNRateControl, _decode_ServingPLMNRateControl, _encode_ServingPLMNRateControl } from "../GPRSChargingDataTypes/ServingPLMNRateControl.ta.mjs";
 import { APNRateControl, _decode_APNRateControl, _encode_APNRateControl } from "../GPRSChargingDataTypes/APNRateControl.ta.mjs";
-import { ThreeGPPPSDataOffStatus, _decode_ThreeGPPPSDataOffStatus, _encode_ThreeGPPPSDataOffStatus, _enum_for_ThreeGPPPSDataOffStatus } from "../GPRSChargingDataTypes/ThreeGPPPSDataOffStatus.ta.mjs";
+import { type ThreeGPPPSDataOffStatus, _decode_ThreeGPPPSDataOffStatus, _encode_ThreeGPPPSDataOffStatus, _enum_for_ThreeGPPPSDataOffStatus } from "../GPRSChargingDataTypes/ThreeGPPPSDataOffStatus.ta.mjs";
 import { TWANUserLocationInfo, _decode_TWANUserLocationInfo, _encode_TWANUserLocationInfo } from "../GPRSChargingDataTypes/TWANUserLocationInfo.ta.mjs";
 import { PresenceReportingAreaInfo, _decode_PresenceReportingAreaInfo, _encode_PresenceReportingAreaInfo } from "../GPRSChargingDataTypes/PresenceReportingAreaInfo.ta.mjs";
 

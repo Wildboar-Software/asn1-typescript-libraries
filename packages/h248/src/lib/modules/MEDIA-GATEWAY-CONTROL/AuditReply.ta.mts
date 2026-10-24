@@ -4,7 +4,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TerminationIDList, _decode_TerminationIDList, _encode_TerminationIDList } from "../MEDIA-GATEWAY-CONTROL/TerminationIDList.ta.mjs";
+import { type TerminationIDList, _decode_TerminationIDList, _encode_TerminationIDList } from "../MEDIA-GATEWAY-CONTROL/TerminationIDList.ta.mjs";
 import { ErrorDescriptor, _decode_ErrorDescriptor, _encode_ErrorDescriptor } from "../MEDIA-GATEWAY-CONTROL/ErrorDescriptor.ta.mjs";
 import { AuditResult, _decode_AuditResult, _encode_AuditResult } from "../MEDIA-GATEWAY-CONTROL/AuditResult.ta.mjs";
 import { TermListAuditResult, _decode_TermListAuditResult, _encode_TermListAuditResult } from "../MEDIA-GATEWAY-CONTROL/TermListAuditResult.ta.mjs";

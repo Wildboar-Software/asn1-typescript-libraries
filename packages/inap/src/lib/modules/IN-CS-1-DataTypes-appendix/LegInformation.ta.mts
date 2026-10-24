@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { LegID, _decode_LegID, _encode_LegID } from "../IN-CS-1-Datatypes/LegID.ta.mjs";
+import { type LegID, _decode_LegID, _encode_LegID } from "../IN-CS-1-Datatypes/LegID.ta.mjs";
 // export { LegID, _decode_LegID, _encode_LegID } from "../IN-CS-1-Datatypes/LegID.ta.mjs";
 import { LegStatus, _decode_LegStatus, _encode_LegStatus, _enum_for_LegStatus } from "../IN-CS-1-DataTypes-appendix/LegStatus.ta.mjs";
 // export { LegStatus, _enum_for_LegStatus, LegStatus_connected /* IMPORTED_LONG_ENUMERATION_ITEM */, connected /* IMPORTED_SHORT_ENUMERATION_ITEM */, LegStatus_unconnected /* IMPORTED_LONG_ENUMERATION_ITEM */, unconnected /* IMPORTED_SHORT_ENUMERATION_ITEM */, LegStatus_pending /* IMPORTED_LONG_ENUMERATION_ITEM */, pending /* IMPORTED_SHORT_ENUMERATION_ITEM */, LegStatus_interacting /* IMPORTED_LONG_ENUMERATION_ITEM */, interacting /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_LegStatus, _encode_LegStatus } from "../IN-CS-1-DataTypes-appendix/LegStatus.ta.mjs";

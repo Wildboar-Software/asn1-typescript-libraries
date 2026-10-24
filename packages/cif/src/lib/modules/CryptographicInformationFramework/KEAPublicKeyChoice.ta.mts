@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { KEAPublicKey, _decode_KEAPublicKey, _encode_KEAPublicKey } from "../CryptographicInformationFramework/KEAPublicKey.ta.mjs";
+import { type KEAPublicKey, _decode_KEAPublicKey, _encode_KEAPublicKey } from "../CryptographicInformationFramework/KEAPublicKey.ta.mjs";
 import { SubjectPublicKeyInfo, _decode_SubjectPublicKeyInfo, _encode_SubjectPublicKeyInfo } from "../AuthenticationFramework/SubjectPublicKeyInfo.ta.mjs";
 
 

@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { InvokeIdType, _decode_InvokeIdType, _encode_InvokeIdType } from "../IN-CS-1-Datatypes/InvokeIdType.ta.mjs";
+import { type InvokeIdType, _decode_InvokeIdType, _encode_InvokeIdType } from "../IN-CS-1-Datatypes/InvokeIdType.ta.mjs";
 // export { InvokeIdType, _decode_InvokeIdType, _encode_InvokeIdType } from "../IN-CS-1-Datatypes/InvokeIdType.ta.mjs";
 
 

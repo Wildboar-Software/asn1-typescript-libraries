@@ -11,7 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RequestedInformationType, _enum_for_RequestedInformationType, _decode_RequestedInformationType, _encode_RequestedInformationType } from "../IN-CS2-datatypes/RequestedInformationType.ta.mjs";
-import { RequestedInformationValue, _decode_RequestedInformationValue, _encode_RequestedInformationValue } from "../IN-CS2-datatypes/RequestedInformationValue.ta.mjs";
+import { type RequestedInformationValue, _decode_RequestedInformationValue, _encode_RequestedInformationValue } from "../IN-CS2-datatypes/RequestedInformationValue.ta.mjs";
 
 
 /**

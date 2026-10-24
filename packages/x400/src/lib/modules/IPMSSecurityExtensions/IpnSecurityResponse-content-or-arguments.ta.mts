@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    OriginalContent,
+    type OriginalContent,
     _decode_OriginalContent,
     _encode_OriginalContent,
 } from '../IPMSSecurityExtensions/OriginalContent.ta.mjs';

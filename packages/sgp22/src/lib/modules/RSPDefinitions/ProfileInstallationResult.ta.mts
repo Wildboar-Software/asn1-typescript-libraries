@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ProfileInstallationResultData, _decode_ProfileInstallationResultData, _encode_ProfileInstallationResultData } from "../RSPDefinitions/ProfileInstallationResultData.ta.mjs";
-import { EuiccSignPIR, _decode_EuiccSignPIR, _encode_EuiccSignPIR } from "../RSPDefinitions/EuiccSignPIR.ta.mjs";
+import { type EuiccSignPIR, _decode_EuiccSignPIR, _encode_EuiccSignPIR } from "../RSPDefinitions/EuiccSignPIR.ta.mjs";
 
 
 /**

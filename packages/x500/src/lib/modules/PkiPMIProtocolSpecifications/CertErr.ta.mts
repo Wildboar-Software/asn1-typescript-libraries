@@ -6,12 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CertErr_notOK,
+    type CertErr_notOK,
     _decode_CertErr_notOK,
     _encode_CertErr_notOK,
 } from "../PkiPMIProtocolSpecifications/CertErr-notOK.ta.mjs";
 import {
-    Notifications,
+    type Notifications,
     _decode_Notifications,
     _encode_Notifications,
 } from "../PkiPMIProtocolSpecifications/Notifications.ta.mjs";

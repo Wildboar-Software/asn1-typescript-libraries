@@ -16,7 +16,7 @@ import {
     _encode_DynamicSimpleScanArgument_scopeOrListChoice_scopedSelection,
 } from '../SummarizationASN1Productions/DynamicSimpleScanArgument-scopeOrListChoice-scopedSelection.ta.mjs';
 import {
-    ObjectList,
+    type ObjectList,
     _decode_ObjectList,
     _encode_ObjectList,
 } from '../SummarizationASN1Productions/ObjectList.ta.mjs';

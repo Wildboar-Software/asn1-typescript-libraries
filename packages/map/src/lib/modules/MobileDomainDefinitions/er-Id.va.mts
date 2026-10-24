@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { CommonComponentId } from "../MobileDomainDefinitions/CommonComponentId.ta.mjs";
+import { type CommonComponentId } from "../MobileDomainDefinitions/CommonComponentId.ta.mjs";
 
 
 /**

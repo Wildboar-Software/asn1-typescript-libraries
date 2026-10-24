@@ -2,11 +2,11 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    NULL,
+    type NULL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AttributeTypes,
+    type AttributeTypes,
     _decode_AttributeTypes,
     _encode_AttributeTypes,
 } from "../DirectoryShadowAbstractService/AttributeTypes.ta.mjs";

@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ORAddressAndDirectoryName,
+    type ORAddressAndDirectoryName,
     _decode_ORAddressAndDirectoryName,
     _encode_ORAddressAndDirectoryName,
 } from '../MHSRoutingORAddressSubtree/ORAddressAndDirectoryName.ta.mjs';

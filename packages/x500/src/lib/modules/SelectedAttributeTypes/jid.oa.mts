@@ -5,7 +5,7 @@ import {
 } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { id_at_jid } from "../SelectedAttributeTypes/id-at-jid.va.mjs";
 import {
-    Jid,
+    type Jid,
     _decode_Jid,
     _encode_Jid,
 } from "../SelectedAttributeTypes/Jid.ta.mjs";

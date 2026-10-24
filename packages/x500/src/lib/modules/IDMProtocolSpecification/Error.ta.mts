@@ -7,7 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Code,
+    type Code,
     _encode_Code,
     _decode_Code,
 } from "../CommonProtocolSpecification/Code.ta.mjs";

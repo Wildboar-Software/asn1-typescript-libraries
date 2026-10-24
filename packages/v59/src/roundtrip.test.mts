@@ -11,12 +11,12 @@ import { V8bisDiag_Item_cLR } from "./lib/modules/V59/V8bisDiag-Item-cLR.ta.mjs"
 import { V8bisDiag_Item_eS } from "./lib/modules/V59/V8bisDiag-Item-eS.ta.mjs";
 import { V8bisDiag_Item_ackNak } from "./lib/modules/V59/V8bisDiag-Item-ackNak.ta.mjs";
 import {
-    V8bisDiag,
+    type V8bisDiag,
     _encode_V8bisDiag,
     _decode_V8bisDiag,
 } from "./lib/modules/V59/V8bisDiag.ta.mjs";
 import {
-    V59Objects,
+    type V59Objects,
     _encode_V59Objects,
     _decode_V59Objects,
 } from "./lib/modules/V59/V59Objects.ta.mjs";

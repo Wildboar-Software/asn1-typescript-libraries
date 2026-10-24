@@ -3,12 +3,12 @@ import { id_opcode_list } from "../CommonProtocolSpecification/id-opcode-list.va
 import { type OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
 import { abandoned } from "../DirectoryAbstractService/abandoned.oa.mjs";
 import {
-    ListArgument,
+    type ListArgument,
     _decode_ListArgument,
     _encode_ListArgument,
 } from "../DirectoryAbstractService/ListArgument.ta.mjs";
 import {
-    ListResult,
+    type ListResult,
     _decode_ListResult,
     _encode_ListResult,
 } from "../DirectoryAbstractService/ListResult.ta.mjs";

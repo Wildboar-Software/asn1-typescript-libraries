@@ -10,13 +10,13 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ProtocolIdentifier, _decode_ProtocolIdentifier, _encode_ProtocolIdentifier } from "../TSM/ProtocolIdentifier.ta.mjs";
+import { type ProtocolIdentifier, _decode_ProtocolIdentifier, _encode_ProtocolIdentifier } from "../TSM/ProtocolIdentifier.ta.mjs";
 
-import { ContentType, _enum_for_ContentType, _decode_ContentType, _encode_ContentType } from "../TSM/ContentType.ta.mjs";
+import { type ContentType, _enum_for_ContentType, _decode_ContentType, _encode_ContentType } from "../TSM/ContentType.ta.mjs";
 
 import { ProtocolVersion, _decode_ProtocolVersion, _encode_ProtocolVersion } from "../TSM/ProtocolVersion.ta.mjs";
 
-import { TSMCipherText_fragment, _decode_TSMCipherText_fragment, _encode_TSMCipherText_fragment } from "../TSM/TSMCipherText-fragment.ta.mjs";
+import { type TSMCipherText_fragment, _decode_TSMCipherText_fragment, _encode_TSMCipherText_fragment } from "../TSM/TSMCipherText-fragment.ta.mjs";
 
 
 

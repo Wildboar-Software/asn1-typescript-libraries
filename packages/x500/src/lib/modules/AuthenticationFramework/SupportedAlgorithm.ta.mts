@@ -11,12 +11,12 @@ import {
     _encode_AlgorithmIdentifier,
 } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 import {
-    CertificatePoliciesSyntax,
+    type CertificatePoliciesSyntax,
     _decode_CertificatePoliciesSyntax,
     _encode_CertificatePoliciesSyntax,
 } from "../CertificateExtensions/CertificatePoliciesSyntax.ta.mjs";
 import {
-    KeyUsage,
+    type KeyUsage,
     _decode_KeyUsage,
     _encode_KeyUsage,
 } from "../CertificateExtensions/KeyUsage.ta.mjs";

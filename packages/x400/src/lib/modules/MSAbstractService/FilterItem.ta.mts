@@ -26,7 +26,7 @@ import {
     _encode_MatchingRuleAssertion,
 } from '../MSAbstractService/MatchingRuleAssertion.ta.mjs';
 import {
-    AttributeType,
+    type AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
 } from "./AttributeType.ta.mjs";

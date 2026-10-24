@@ -4,7 +4,7 @@ import {
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_GlobalCellId, _encode_GlobalCellId, GlobalCellId } from "../MAP-CommonDataTypes/GlobalCellId.ta.mjs";
+import { _decode_GlobalCellId, _encode_GlobalCellId, type GlobalCellId } from "../MAP-CommonDataTypes/GlobalCellId.ta.mjs";
 
 
 /**

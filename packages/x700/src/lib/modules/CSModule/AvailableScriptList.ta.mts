@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ScriptList,
+    type ScriptList,
     _decode_ScriptList,
     _encode_ScriptList,
 } from '../CSModule/ScriptList.ta.mjs';

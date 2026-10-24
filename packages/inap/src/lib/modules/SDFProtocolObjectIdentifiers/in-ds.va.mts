@@ -2,7 +2,7 @@
 import {
     ObjectIdentifier as _OID,
     itu_t,
-    OBJECT_IDENTIFIER
+    type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 
 

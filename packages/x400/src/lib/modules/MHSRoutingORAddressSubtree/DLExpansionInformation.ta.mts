@@ -18,7 +18,7 @@ import {
     _encode_TargetRoutingCollective,
 } from '../MHSRoutingORAddressSubtree/TargetRoutingCollective.ta.mjs';
 import {
-    MHSDistributionListName,
+    type MHSDistributionListName,
     _decode_MHSDistributionListName,
     _encode_MHSDistributionListName,
 } from '../MHSRoutingORAddressSubtree/MHSDistributionListName.ta.mjs';

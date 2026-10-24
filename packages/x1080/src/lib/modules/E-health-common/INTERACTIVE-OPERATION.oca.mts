@@ -13,18 +13,18 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SessionType,
+    type SessionType,
     _decode_SessionType,
     _encode_SessionType,
 } from '../E-health-common/SessionType.ta.mjs';
 import {
-    Requirements,
+    type Requirements,
     _enum_for_Requirements,
     _decode_Requirements,
     _encode_Requirements,
 } from '../E-health-common/Requirements.ta.mjs';
 import {
-    ExchangeMode,
+    type ExchangeMode,
     _enum_for_ExchangeMode,
     _decode_ExchangeMode,
     _encode_ExchangeMode,

@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    BPUSubprocessInformationList,
+    type BPUSubprocessInformationList,
     _decode_BPUSubprocessInformationList,
     _encode_BPUSubprocessInformationList,
 } from '../AuthenticationContextForBiometrics/BPUSubprocessInformationList.ta.mjs';
 import {
-    BPUIOStaticInformationList,
+    type BPUIOStaticInformationList,
     _decode_BPUIOStaticInformationList,
     _encode_BPUIOStaticInformationList,
 } from '../AuthenticationContextForBiometrics/BPUIOStaticInformationList.ta.mjs';

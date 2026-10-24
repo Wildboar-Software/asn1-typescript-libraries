@@ -2,18 +2,18 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    GeneralizedTime,
+    type GeneralizedTime,
     type OCTET_STRING,
     type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from "@wildboar/dn";
 import {
-    SPIFVersionNumber,
+    type SPIFVersionNumber,
     _decode_SPIFVersionNumber,
     _encode_SPIFVersionNumber,
 } from "../SIOsAccessControl-MODULE/SPIFVersionNumber.ta.mjs";

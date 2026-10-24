@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    EDINotificationRequests,
+    type EDINotificationRequests,
     _decode_EDINotificationRequests,
     _encode_EDINotificationRequests,
 } from '../EDIMSInformationObjects/EDINotificationRequests.ta.mjs';
 import {
-    EDINotificationSecurity,
+    type EDINotificationSecurity,
     _decode_EDINotificationSecurity,
     _encode_EDINotificationSecurity,
 } from '../EDIMSInformationObjects/EDINotificationSecurity.ta.mjs';
 import {
-    EDIReceptionSecurity,
+    type EDIReceptionSecurity,
     _decode_EDIReceptionSecurity,
     _encode_EDIReceptionSecurity,
 } from '../EDIMSInformationObjects/EDIReceptionSecurity.ta.mjs';

@@ -8,7 +8,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Extensions,
+    type Extensions,
     _decode_Extensions,
     _encode_Extensions,
 } from "@wildboar/pki-stub";
@@ -18,12 +18,12 @@ import {
     _encode_MessageImprint,
 } from "../PKIXTSP/MessageImprint.ta.mjs";
 import {
-    TimeStampReq_version,
+    type TimeStampReq_version,
     _decode_TimeStampReq_version,
     _encode_TimeStampReq_version,
 } from "../PKIXTSP/TimeStampReq-version.ta.mjs";
 import {
-    TSAPolicyId,
+    type TSAPolicyId,
     _decode_TSAPolicyId,
     _encode_TSAPolicyId,
 } from "../PKIXTSP/TSAPolicyId.ta.mjs";

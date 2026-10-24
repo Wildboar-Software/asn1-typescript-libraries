@@ -16,7 +16,7 @@ import {
     _encode_Heading,
 } from '../IPMSInformationObjects/Heading.ta.mjs';
 import {
-    Body,
+    type Body,
     _decode_Body,
     _encode_Body,
 } from '../IPMSInformationObjects/Body.ta.mjs';

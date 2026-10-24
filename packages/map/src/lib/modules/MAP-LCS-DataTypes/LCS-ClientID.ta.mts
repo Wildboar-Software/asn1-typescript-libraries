@@ -5,13 +5,13 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AddressString, _decode_AddressString, _encode_AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
+import { type AddressString, _decode_AddressString, _encode_AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
 import { LCSClientExternalID, _decode_LCSClientExternalID, _encode_LCSClientExternalID } from "../MAP-CommonDataTypes/LCSClientExternalID.ta.mjs";
-import { LCSClientInternalID, _decode_LCSClientInternalID, _encode_LCSClientInternalID, _enum_for_LCSClientInternalID } from "../MAP-CommonDataTypes/LCSClientInternalID.ta.mjs";
+import { type LCSClientInternalID, _decode_LCSClientInternalID, _encode_LCSClientInternalID, _enum_for_LCSClientInternalID } from "../MAP-CommonDataTypes/LCSClientInternalID.ta.mjs";
 import { LCSClientName, _decode_LCSClientName, _encode_LCSClientName } from "../MAP-LCS-DataTypes/LCSClientName.ta.mjs";
-import { LCSClientType, _decode_LCSClientType, _encode_LCSClientType, _enum_for_LCSClientType } from "../MAP-LCS-DataTypes/LCSClientType.ta.mjs";
+import { type LCSClientType, _decode_LCSClientType, _encode_LCSClientType, _enum_for_LCSClientType } from "../MAP-LCS-DataTypes/LCSClientType.ta.mjs";
 import { LCSRequestorID, _decode_LCSRequestorID, _encode_LCSRequestorID } from "../MAP-LCS-DataTypes/LCSRequestorID.ta.mjs";
-import { APN, _decode_APN, _encode_APN } from "../MAP-MS-DataTypes/APN.ta.mjs";
+import { type APN, _decode_APN, _encode_APN } from "../MAP-MS-DataTypes/APN.ta.mjs";
 
 
 /**

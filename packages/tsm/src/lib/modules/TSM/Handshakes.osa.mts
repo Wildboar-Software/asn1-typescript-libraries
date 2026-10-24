@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
-import { HANDSHAKE } from "../TSM/HANDSHAKE.oca.mjs";
+import { type HANDSHAKE } from "../TSM/HANDSHAKE.oca.mjs";
 
 import { helloRequest } from "../TSM/helloRequest.oa.mjs";
 

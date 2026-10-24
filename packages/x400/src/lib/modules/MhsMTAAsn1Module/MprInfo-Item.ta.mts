@@ -11,17 +11,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    EMailMpduIdentifier,
+    type EMailMpduIdentifier,
     _decode_EMailMpduIdentifier,
     _encode_EMailMpduIdentifier,
 } from '../MhsMTAAsn1Module/EMailMpduIdentifier.ta.mjs';
 import {
-    Time,
+    type Time,
     _decode_Time,
     _encode_Time,
 } from '../MTSAbstractService/Time.ta.mjs';
 import {
-    ProcessingState,
+    type ProcessingState,
     _decode_ProcessingState,
     _encode_ProcessingState,
 } from '../MhsMTAAsn1Module/ProcessingState.ta.mjs';

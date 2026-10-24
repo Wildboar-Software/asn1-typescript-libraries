@@ -4,8 +4,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { OtherRecipientDesignator_type, _decode_OtherRecipientDesignator_type, _encode_OtherRecipientDesignator_type } from "../MMSHeadingExtensions/OtherRecipientDesignator-type.ta.mjs";
-import { MilitaryString, _decode_MilitaryString, _encode_MilitaryString } from "../MMSHeadingExtensions/MilitaryString.ta.mjs";
+import { type OtherRecipientDesignator_type, _decode_OtherRecipientDesignator_type, _encode_OtherRecipientDesignator_type } from "../MMSHeadingExtensions/OtherRecipientDesignator-type.ta.mjs";
+import { type MilitaryString, _decode_MilitaryString, _encode_MilitaryString } from "../MMSHeadingExtensions/MilitaryString.ta.mjs";
 
 
 /**

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    AES_InitializationVector,
+    type AES_InitializationVector,
     _decode_AES_InitializationVector,
     _encode_AES_InitializationVector,
 } from "../AlgorithmObjectIdentifiers/AES-InitializationVector.ta.mjs";

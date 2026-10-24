@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    AuthorizationList,
+    type AuthorizationList,
     _decode_AuthorizationList,
     _encode_AuthorizationList,
 } from '../X790ASN1Module/AuthorizationList.ta.mjs';

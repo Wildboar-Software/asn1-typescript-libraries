@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    EXTERNAL
+    type EXTERNAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 

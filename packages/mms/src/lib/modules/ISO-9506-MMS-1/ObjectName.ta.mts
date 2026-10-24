@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
 import { ObjectName_domain_specific, _decode_ObjectName_domain_specific, _encode_ObjectName_domain_specific } from "../ISO-9506-MMS-1/ObjectName-domain-specific.ta.mjs";
 
 

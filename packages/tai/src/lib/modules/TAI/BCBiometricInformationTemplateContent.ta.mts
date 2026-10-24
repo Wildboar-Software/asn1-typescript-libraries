@@ -11,8 +11,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BiometricTemplateVersion, _decode_BiometricTemplateVersion, _encode_BiometricTemplateVersion } from "../TAI/BiometricTemplateVersion.ta.mjs";
-import { BiometricTemplateInfo, _decode_BiometricTemplateInfo, _encode_BiometricTemplateInfo } from "../TAI/BiometricTemplateInfo.ta.mjs";
+import { type BiometricTemplateVersion, _decode_BiometricTemplateVersion, _encode_BiometricTemplateVersion } from "../TAI/BiometricTemplateVersion.ta.mjs";
+import { type BiometricTemplateInfo, _decode_BiometricTemplateInfo, _encode_BiometricTemplateInfo } from "../TAI/BiometricTemplateInfo.ta.mjs";
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "@wildboar/x500/AuthenticationFramework";
 import { BioTempIssuer, _decode_BioTempIssuer, _encode_BioTempIssuer } from "../TAI/BioTempIssuer.ta.mjs";
 

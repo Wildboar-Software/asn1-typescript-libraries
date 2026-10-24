@@ -6,8 +6,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MechTypeList, _decode_MechTypeList, _encode_MechTypeList } from "../Spnego/MechTypeList.ta.mjs";
-import { ContextFlags, _decode_ContextFlags, _encode_ContextFlags } from "../Spnego/ContextFlags.ta.mjs";
+import { type MechTypeList, _decode_MechTypeList, _encode_MechTypeList } from "../Spnego/MechTypeList.ta.mjs";
+import { type ContextFlags, _decode_ContextFlags, _encode_ContextFlags } from "../Spnego/ContextFlags.ta.mjs";
 
 
 /**

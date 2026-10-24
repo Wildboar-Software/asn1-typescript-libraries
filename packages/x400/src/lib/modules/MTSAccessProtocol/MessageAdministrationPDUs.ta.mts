@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ROS_SingleAS,
+    type ROS_SingleAS,
     _decode_ROS_SingleAS,
     _encode_ROS_SingleAS,
 } from '@wildboar/rose';

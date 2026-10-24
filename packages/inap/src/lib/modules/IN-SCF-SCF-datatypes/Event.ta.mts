@@ -2,7 +2,7 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_Event_event, _encode_Event_event, Event_event } from "../IN-SCF-SCF-datatypes/Event-event.ta.mjs";

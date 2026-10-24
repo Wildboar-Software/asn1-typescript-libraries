@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    OriginatorReturnAddress,
+    type OriginatorReturnAddress,
     _decode_OriginatorReturnAddress,
     _encode_OriginatorReturnAddress,
 } from '../MTSAbstractService/OriginatorReturnAddress.ta.mjs';

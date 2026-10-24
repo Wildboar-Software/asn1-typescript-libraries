@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    BackupResult,
+    type BackupResult,
     _decode_BackupResult,
     _encode_BackupResult,
 } from '../SWMF/BackupResult.ta.mjs';

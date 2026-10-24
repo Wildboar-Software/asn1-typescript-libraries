@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TestSessionId_globalRef,
+    type TestSessionId_globalRef,
     _decode_TestSessionId_globalRef,
     _encode_TestSessionId_globalRef,
 } from '../Test-ASN1Module/TestSessionId-globalRef.ta.mjs';

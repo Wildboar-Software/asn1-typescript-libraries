@@ -4,7 +4,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    StopTime,
+    type StopTime,
     _decode_StopTime,
     _encode_StopTime,
 } from "../X790ASN1Module/StopTime.ta.mjs";

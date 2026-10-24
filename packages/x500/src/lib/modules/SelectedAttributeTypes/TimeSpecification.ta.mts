@@ -7,12 +7,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    TimeSpecification_time,
+    type TimeSpecification_time,
     _decode_TimeSpecification_time,
     _encode_TimeSpecification_time,
 } from "../SelectedAttributeTypes/TimeSpecification-time.ta.mjs";
 import {
-    TimeZone,
+    type TimeZone,
     _decode_TimeZone,
     _encode_TimeZone,
 } from "../SelectedAttributeTypes/TimeZone.ta.mjs";

@@ -11,7 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SIGNED, _get_decoder_for_SIGNED, _get_encoder_for_SIGNED } from "@wildboar/x500/AuthenticationFramework";
-import { BiometricDeviceCertificateInfo, _decode_BiometricDeviceCertificateInfo, _encode_BiometricDeviceCertificateInfo } from "../TAI/BiometricDeviceCertificateInfo.ta.mjs";
+import { type BiometricDeviceCertificateInfo, _decode_BiometricDeviceCertificateInfo, _encode_BiometricDeviceCertificateInfo } from "../TAI/BiometricDeviceCertificateInfo.ta.mjs";
 /**
  * @summary BiometricDeviceCertificate
  * @description

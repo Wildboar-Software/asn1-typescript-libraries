@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { pumRegistr } from "../PUM-Registration-Operations-asn1-97/pumRegistr.oa.mjs";
 import { pumDelReg } from "../PUM-Registration-Operations-asn1-97/pumDelReg.oa.mjs";
 import { pumDe_reg } from "../PUM-Registration-Operations-asn1-97/pumDe-reg.oa.mjs";

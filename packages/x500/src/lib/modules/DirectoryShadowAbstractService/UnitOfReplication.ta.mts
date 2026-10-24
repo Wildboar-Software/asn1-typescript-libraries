@@ -7,7 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ContextSelection,
+    type ContextSelection,
     _decode_ContextSelection,
     _encode_ContextSelection,
 } from "../DirectoryAbstractService/ContextSelection.ta.mjs";
@@ -17,7 +17,7 @@ import {
     _encode_AreaSpecification,
 } from "../DirectoryShadowAbstractService/AreaSpecification.ta.mjs";
 import {
-    AttributeSelection,
+    type AttributeSelection,
     _decode_AttributeSelection,
     _encode_AttributeSelection,
 } from "../DirectoryShadowAbstractService/AttributeSelection.ta.mjs";
@@ -27,7 +27,7 @@ import {
     _encode_Knowledge,
 } from "../DirectoryShadowAbstractService/Knowledge.ta.mjs";
 import {
-    UnitOfReplication_supplyContexts,
+    type UnitOfReplication_supplyContexts,
     _decode_UnitOfReplication_supplyContexts,
     _encode_UnitOfReplication_supplyContexts,
 } from "../DirectoryShadowAbstractService/UnitOfReplication-supplyContexts.ta.mjs";

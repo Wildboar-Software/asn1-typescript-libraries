@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ProtectionStatus,
+    type ProtectionStatus,
     _decode_ProtectionStatus,
     _encode_ProtectionStatus,
 } from '../SDHProtASN1/ProtectionStatus.ta.mjs';

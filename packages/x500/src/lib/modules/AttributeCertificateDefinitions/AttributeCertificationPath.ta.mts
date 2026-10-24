@@ -11,7 +11,7 @@ import {
     _encode_ACPathData,
 } from "../AttributeCertificateDefinitions/ACPathData.ta.mjs";
 import {
-    AttributeCertificate,
+    type AttributeCertificate,
     _decode_AttributeCertificate,
     _encode_AttributeCertificate,
 } from "../AttributeCertificateDefinitions/AttributeCertificate.ta.mjs";

@@ -4,13 +4,13 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MCServiceID, _decode_MCServiceID, _encode_MCServiceID } from "../TS33128Payloads/MCServiceID.ta.mjs";
+import { type MCServiceID, _decode_MCServiceID, _encode_MCServiceID } from "../TS33128Payloads/MCServiceID.ta.mjs";
 // export { MCServiceID, _decode_MCServiceID, _encode_MCServiceID } from "../TS33128Payloads/MCServiceID.ta.mjs";
-import { IMPU, _decode_IMPU, _encode_IMPU } from "../TS33128Payloads/IMPU.ta.mjs";
+import { type IMPU, _decode_IMPU, _encode_IMPU } from "../TS33128Payloads/IMPU.ta.mjs";
 // export { IMPU, _decode_IMPU, _encode_IMPU } from "../TS33128Payloads/IMPU.ta.mjs";
-import { IMPI, _decode_IMPI, _encode_IMPI } from "../TS33128Payloads/IMPI.ta.mjs";
+import { type IMPI, _decode_IMPI, _encode_IMPI } from "../TS33128Payloads/IMPI.ta.mjs";
 // export { IMPI, _decode_IMPI, _encode_IMPI } from "../TS33128Payloads/IMPI.ta.mjs";
-import { InstanceIdentifierURN, _decode_InstanceIdentifierURN, _encode_InstanceIdentifierURN } from "../TS33128Payloads/InstanceIdentifierURN.ta.mjs";
+import { type InstanceIdentifierURN, _decode_InstanceIdentifierURN, _encode_InstanceIdentifierURN } from "../TS33128Payloads/InstanceIdentifierURN.ta.mjs";
 // export { InstanceIdentifierURN, _decode_InstanceIdentifierURN, _encode_InstanceIdentifierURN } from "../TS33128Payloads/InstanceIdentifierURN.ta.mjs";
 
 

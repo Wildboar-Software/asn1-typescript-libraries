@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RIOreference_operations_Item_operation, _decode_RIOreference_operations_Item_operation, _encode_RIOreference_operations_Item_operation } from "../G/RIOreference-operations-Item-operation.ta.mjs";
+import { type RIOreference_operations_Item_operation, _decode_RIOreference_operations_Item_operation, _encode_RIOreference_operations_Item_operation } from "../G/RIOreference-operations-Item-operation.ta.mjs";
 
 
 /**

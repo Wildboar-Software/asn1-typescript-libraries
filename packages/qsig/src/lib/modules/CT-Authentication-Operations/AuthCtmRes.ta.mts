@@ -7,7 +7,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { AuthCtmRes_result, _decode_AuthCtmRes_result, _encode_AuthCtmRes_result, _enum_for_AuthCtmRes_result } from "../CT-Authentication-Operations/AuthCtmRes-result.ta.mjs";
 // export { AuthCtmRes_result, _enum_for_AuthCtmRes_result, AuthCtmRes_result_auth_res_correct /* IMPORTED_LONG_ENUMERATION_ITEM */, auth_res_correct /* IMPORTED_SHORT_ENUMERATION_ITEM */, AuthCtmRes_result_auth_res_incorrect /* IMPORTED_LONG_ENUMERATION_ITEM */, auth_res_incorrect /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AuthCtmRes_result, _encode_AuthCtmRes_result } from "../CT-Authentication-Operations/AuthCtmRes-result.ta.mjs";
-import { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../CT-Authentication-Operations/DummyExtension.ta.mjs";
+import { type DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../CT-Authentication-Operations/DummyExtension.ta.mjs";
 // export { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../CT-Authentication-Operations/DummyExtension.ta.mjs";
 
 

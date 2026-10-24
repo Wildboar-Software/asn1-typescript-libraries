@@ -2,24 +2,24 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    GeneralizedTime,
+    type GeneralizedTime,
     type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AVMPsequence,
+    type AVMPsequence,
     _decode_AVMPsequence,
     _encode_AVMPsequence,
 } from "../PkiPMIProtocolSpecifications/AVMPsequence.ta.mjs";
 import {
-    AVMPversion,
+    type AVMPversion,
     AVMPversion_v1 /* IMPORTED_LONG_ENUMERATION_ITEM */,
     _decode_AVMPversion,
     _encode_AVMPversion,
     _enum_for_AVMPversion,
 } from "../PkiPMIProtocolSpecifications/AVMPversion.ta.mjs";
 import {
-    DeleteAvlRsp_result,
+    type DeleteAvlRsp_result,
     _decode_DeleteAvlRsp_result,
     _encode_DeleteAvlRsp_result,
 } from "../PkiPMIProtocolSpecifications/DeleteAvlRsp-result.ta.mjs";

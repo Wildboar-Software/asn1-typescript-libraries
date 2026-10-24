@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type OCTET_STRING,
     type OPTIONAL,
     ASN1Element as _Element,
@@ -9,7 +9,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AccessTransferType, _decode_AccessTransferType, _encode_AccessTransferType, _enum_for_AccessTransferType } from "../IMSChargingDataTypes/AccessTransferType.ta.mjs";
-import { NodeAddress, _decode_NodeAddress, _encode_NodeAddress } from "../IMSChargingDataTypes/NodeAddress.ta.mjs";
+import { type NodeAddress, _decode_NodeAddress, _encode_NodeAddress } from "../IMSChargingDataTypes/NodeAddress.ta.mjs";
 import { SubscriberEquipmentNumber, _decode_SubscriberEquipmentNumber, _encode_SubscriberEquipmentNumber } from "../IMSChargingDataTypes/SubscriberEquipmentNumber.ta.mjs";
 
 

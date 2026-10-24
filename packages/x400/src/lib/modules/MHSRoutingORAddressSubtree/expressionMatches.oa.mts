@@ -17,7 +17,7 @@ import {
     _encode_AttributeUsage,
 } from '@wildboar/x500/InformationFramework';
 import {
-    ExpressionMatches,
+    type ExpressionMatches,
     _decode_ExpressionMatches,
     _encode_ExpressionMatches,
 } from '../MHSRoutingORAddressSubtree/ExpressionMatches.ta.mjs';

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { GeneralizedTime } from "@wildboar/asn1";
+import { type GeneralizedTime } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { generalizedTime } from "../SelectedAttributeTypes/generalizedTime.oa.mjs";

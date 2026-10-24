@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  OCTET_STRING,
+  type OPTIONAL,
+  type OCTET_STRING,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Data_Field_Item_field_type,
+  type Data_Field_Item_field_type,
   _enum_for_Data_Field_Item_field_type,
   _decode_Data_Field_Item_field_type,
   _encode_Data_Field_Item_field_type,

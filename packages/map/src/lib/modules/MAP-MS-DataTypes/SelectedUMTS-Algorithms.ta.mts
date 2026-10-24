@@ -6,8 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { ChosenEncryptionAlgorithm, _decode_ChosenEncryptionAlgorithm, _encode_ChosenEncryptionAlgorithm } from "../MAP-MS-DataTypes/ChosenEncryptionAlgorithm.ta.mjs";
-import { ChosenIntegrityProtectionAlgorithm, _decode_ChosenIntegrityProtectionAlgorithm, _encode_ChosenIntegrityProtectionAlgorithm } from "../MAP-MS-DataTypes/ChosenIntegrityProtectionAlgorithm.ta.mjs";
+import { type ChosenEncryptionAlgorithm, _decode_ChosenEncryptionAlgorithm, _encode_ChosenEncryptionAlgorithm } from "../MAP-MS-DataTypes/ChosenEncryptionAlgorithm.ta.mjs";
+import { type ChosenIntegrityProtectionAlgorithm, _decode_ChosenIntegrityProtectionAlgorithm, _encode_ChosenIntegrityProtectionAlgorithm } from "../MAP-MS-DataTypes/ChosenIntegrityProtectionAlgorithm.ta.mjs";
 
 
 /**

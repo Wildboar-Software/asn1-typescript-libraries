@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    CMISFilter,
+    type CMISFilter,
     _decode_CMISFilter,
     _encode_CMISFilter,
 } from '@wildboar/cmip';

@@ -9,12 +9,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ContextSelection,
+    type ContextSelection,
     _decode_ContextSelection,
     _encode_ContextSelection,
 } from "../DirectoryAbstractService/ContextSelection.ta.mjs";
 import {
-    FamilyGrouping,
+    type FamilyGrouping,
     FamilyGrouping_entryOnly /* IMPORTED_LONG_ENUMERATION_ITEM */,
     _decode_FamilyGrouping,
     _encode_FamilyGrouping,
@@ -36,7 +36,7 @@ import {
     _encode_AccessPoint,
 } from "../DistributedOperations/AccessPoint.ta.mjs";
 import {
-    Exclusions,
+    type Exclusions,
     _decode_Exclusions,
     _encode_Exclusions,
 } from "../DistributedOperations/Exclusions.ta.mjs";
@@ -46,7 +46,7 @@ import {
     _encode_OperationProgress,
 } from "../DistributedOperations/OperationProgress.ta.mjs";
 import {
-    ReferenceType,
+    type ReferenceType,
     _decode_ReferenceType,
     _encode_ReferenceType,
     _enum_for_ReferenceType,
@@ -57,12 +57,12 @@ import {
     _encode_Attribute,
 } from "../InformationFramework/Attribute.ta.mjs";
 import {
-    DistinguishedName,
+    type DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";

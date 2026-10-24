@@ -6,17 +6,17 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    KeyManagementInfo,
+    type KeyManagementInfo,
     _decode_KeyManagementInfo,
     _encode_KeyManagementInfo,
 } from "../PKCS-15/KeyManagementInfo.ta.mjs";
 import {
-    PKCS15Objects,
+    type PKCS15Objects,
     _decode_PKCS15Objects,
     _encode_PKCS15Objects,
 } from "../PKCS-15/PKCS15Objects.ta.mjs";
 import {
-    PKCS15Token_version,
+    type PKCS15Token_version,
     _decode_PKCS15Token_version,
     _encode_PKCS15Token_version,
 } from "../PKCS-15/PKCS15Token-version.ta.mjs";

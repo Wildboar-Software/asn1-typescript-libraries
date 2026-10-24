@@ -8,9 +8,9 @@ import {
     isPrintableCharacter,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DocumentTypeListVersion, _decode_DocumentTypeListVersion, _encode_DocumentTypeListVersion } from "../Doc-9303-Part-12-Module/DocumentTypeListVersion.ta.mjs";
+import { type DocumentTypeListVersion, _decode_DocumentTypeListVersion, _encode_DocumentTypeListVersion } from "../Doc-9303-Part-12-Module/DocumentTypeListVersion.ta.mjs";
 // export { DocumentTypeListVersion, DocumentTypeListVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */, v0 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DocumentTypeListVersion, _encode_DocumentTypeListVersion } from "../Doc-9303-Part-12-Module/DocumentTypeListVersion.ta.mjs";
-import { DocumentType, _decode_DocumentType, _encode_DocumentType } from "../Doc-9303-Part-12-Module/DocumentType.ta.mjs";
+import { type DocumentType, _decode_DocumentType, _encode_DocumentType } from "../Doc-9303-Part-12-Module/DocumentType.ta.mjs";
 // export { DocumentType, _decode_DocumentType, _encode_DocumentType } from "../Doc-9303-Part-12-Module/DocumentType.ta.mjs";
 
 

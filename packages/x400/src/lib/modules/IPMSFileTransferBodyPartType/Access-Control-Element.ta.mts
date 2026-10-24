@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Access_Request,
+    type Access_Request,
     _decode_Access_Request,
     _encode_Access_Request,
 } from '../IPMSFileTransferBodyPartType/Access-Request.ta.mjs';
@@ -22,7 +22,7 @@ import {
     _encode_Concurrency_Access,
 } from '@wildboar/ftam';
 import {
-    User_Identity,
+    type User_Identity,
     _decode_User_Identity,
     _encode_User_Identity,
 } from '../IPMSFileTransferBodyPartType/User-Identity.ta.mjs';

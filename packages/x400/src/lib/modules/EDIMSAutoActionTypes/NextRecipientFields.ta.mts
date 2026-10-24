@@ -13,12 +13,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RecipientField,
+    type RecipientField,
     _decode_RecipientField,
     _encode_RecipientField,
 } from '../EDIMSInformationObjects/RecipientField.ta.mjs';
 import {
-    ActionRequestField,
+    type ActionRequestField,
     _decode_ActionRequestField,
     _encode_ActionRequestField,
 } from '../EDIMSInformationObjects/ActionRequestField.ta.mjs';
@@ -28,7 +28,7 @@ import {
     _encode_EDINotificationRequestsField,
 } from '../EDIMSInformationObjects/EDINotificationRequestsField.ta.mjs';
 import {
-    ResponsibilityPassingAllowedField,
+    type ResponsibilityPassingAllowedField,
     _decode_ResponsibilityPassingAllowedField,
     _encode_ResponsibilityPassingAllowedField,
 } from '../EDIMSInformationObjects/ResponsibilityPassingAllowedField.ta.mjs';

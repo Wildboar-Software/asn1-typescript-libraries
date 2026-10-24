@@ -7,7 +7,7 @@ import {
     _encode_AccessPointInformation,
 } from "../DistributedOperations/AccessPointInformation.ta.mjs";
 import {
-    DistinguishedName,
+    type DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";

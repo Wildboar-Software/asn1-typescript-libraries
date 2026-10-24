@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 import {
-    HoldInstruction,
+    type HoldInstruction,
     _decode_HoldInstruction,
     _encode_HoldInstruction,
 } from "../CertificateExtensions/HoldInstruction.ta.mjs";

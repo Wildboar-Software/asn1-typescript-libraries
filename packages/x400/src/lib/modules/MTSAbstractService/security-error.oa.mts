@@ -18,7 +18,7 @@ import {
     _encode_Code,
 } from '@wildboar/rose';
 import {
-    SecurityProblem,
+    type SecurityProblem,
     _decode_SecurityProblem,
     _encode_SecurityProblem,
 } from '../MTSAbstractService/SecurityProblem.ta.mjs';

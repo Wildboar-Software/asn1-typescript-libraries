@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    AttributeIntegrityInfo,
+    type AttributeIntegrityInfo,
     _decode_AttributeIntegrityInfo,
     _encode_AttributeIntegrityInfo,
 } from "../EnhancedSecurity/AttributeIntegrityInfo.ta.mjs";

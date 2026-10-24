@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    NonReceiptReasonField,
+    type NonReceiptReasonField,
     _enum_for_NonReceiptReasonField,
     _decode_NonReceiptReasonField,
     _encode_NonReceiptReasonField,

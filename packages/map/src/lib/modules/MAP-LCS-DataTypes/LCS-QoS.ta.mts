@@ -1,16 +1,16 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { Horizontal_Accuracy, _decode_Horizontal_Accuracy, _encode_Horizontal_Accuracy } from "../MAP-LCS-DataTypes/Horizontal-Accuracy.ta.mjs";
-import { LCS_QoS_Class, _decode_LCS_QoS_Class, _encode_LCS_QoS_Class, _enum_for_LCS_QoS_Class } from "../MAP-LCS-DataTypes/LCS-QoS-Class.ta.mjs";
+import { type Horizontal_Accuracy, _decode_Horizontal_Accuracy, _encode_Horizontal_Accuracy } from "../MAP-LCS-DataTypes/Horizontal-Accuracy.ta.mjs";
+import { type LCS_QoS_Class, _decode_LCS_QoS_Class, _encode_LCS_QoS_Class, _enum_for_LCS_QoS_Class } from "../MAP-LCS-DataTypes/LCS-QoS-Class.ta.mjs";
 import { ResponseTime, _decode_ResponseTime, _encode_ResponseTime } from "../MAP-LCS-DataTypes/ResponseTime.ta.mjs";
-import { Vertical_Accuracy, _decode_Vertical_Accuracy, _encode_Vertical_Accuracy } from "../MAP-LCS-DataTypes/Vertical-Accuracy.ta.mjs";
+import { type Vertical_Accuracy, _decode_Vertical_Accuracy, _encode_Vertical_Accuracy } from "../MAP-LCS-DataTypes/Vertical-Accuracy.ta.mjs";
 
 
 /**

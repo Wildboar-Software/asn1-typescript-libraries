@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RelatedObject,
+    type RelatedObject,
     _decode_RelatedObject,
     _encode_RelatedObject,
 } from '../X790ASN1Module/RelatedObject.ta.mjs';

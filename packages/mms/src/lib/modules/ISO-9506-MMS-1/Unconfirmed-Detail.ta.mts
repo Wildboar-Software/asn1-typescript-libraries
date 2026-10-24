@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CS_EventNotification, _decode_CS_EventNotification, _encode_CS_EventNotification } from "../ISO-9506-MMS-1/CS-EventNotification.ta.mjs";
+import { type CS_EventNotification, _decode_CS_EventNotification, _encode_CS_EventNotification } from "../ISO-9506-MMS-1/CS-EventNotification.ta.mjs";
 
 
 /**

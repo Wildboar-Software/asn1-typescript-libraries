@@ -4,7 +4,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    InvokeIDType,
+    type InvokeIDType,
     _decode_InvokeIDType,
     _encode_InvokeIDType,
 } from "../CMIP-1/InvokeIDType.ta.mjs";

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    GeneralizedTime
+    type GeneralizedTime
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 

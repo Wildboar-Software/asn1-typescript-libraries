@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    IncompleteCopyField,
+    type IncompleteCopyField,
     _decode_IncompleteCopyField,
     _encode_IncompleteCopyField,
 } from '../EDIMSInformationObjects/IncompleteCopyField.ta.mjs';

@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { STIRSHAKENDestination, _decode_STIRSHAKENDestination, _encode_STIRSHAKENDestination } from "../TS33128Payloads/STIRSHAKENDestination.ta.mjs";
+import { type STIRSHAKENDestination, _decode_STIRSHAKENDestination, _encode_STIRSHAKENDestination } from "../TS33128Payloads/STIRSHAKENDestination.ta.mjs";
 // export { STIRSHAKENDestination, _decode_STIRSHAKENDestination, _encode_STIRSHAKENDestination } from "../TS33128Payloads/STIRSHAKENDestination.ta.mjs";
 
 

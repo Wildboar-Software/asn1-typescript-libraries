@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { _decode_checkRestriction_ArgumentType, _encode_checkRestriction_ArgumentType, checkRestriction_ArgumentType } from "../Call-Diversion-Operations-asn1-97/checkRestriction-ArgumentType.ta.mjs";
-import { _decode_checkRestriction_ResultType, _encode_checkRestriction_ResultType, checkRestriction_ResultType } from "../Call-Diversion-Operations-asn1-97/checkRestriction-ResultType.ta.mjs";
+import { _decode_checkRestriction_ResultType, _encode_checkRestriction_ResultType, type checkRestriction_ResultType } from "../Call-Diversion-Operations-asn1-97/checkRestriction-ResultType.ta.mjs";
 import { notAvailable } from "../General-Error-List/notAvailable.oa.mjs";
 import { invalidServedUserNr } from "../General-Error-List/invalidServedUserNr.oa.mjs";
 import { invalidDivertedToNr } from "../Call-Diversion-Operations-asn1-97/invalidDivertedToNr.oa.mjs";

@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AES_IV, _decode_AES_IV, _encode_AES_IV } from "../NIST-AES/AES-IV.ta.mjs";
-import { NumberOfBits, _decode_NumberOfBits, _encode_NumberOfBits } from "../NIST-AES/NumberOfBits.ta.mjs";
+import { type AES_IV, _decode_AES_IV, _encode_AES_IV } from "../NIST-AES/AES-IV.ta.mjs";
+import { type NumberOfBits, _decode_NumberOfBits, _encode_NumberOfBits } from "../NIST-AES/NumberOfBits.ta.mjs";
 
 
 /**

@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_ReturnFromFallbackResponse_returnFromFallbackResult, _encode_ReturnFromFallbackResponse_returnFromFallbackResult, ReturnFromFallbackResponse_returnFromFallbackResult } from "../SGP32Definitions/ReturnFromFallbackResponse-returnFromFallbackResult.ta.mjs";
+import { _decode_ReturnFromFallbackResponse_returnFromFallbackResult, _encode_ReturnFromFallbackResponse_returnFromFallbackResult, type ReturnFromFallbackResponse_returnFromFallbackResult } from "../SGP32Definitions/ReturnFromFallbackResponse-returnFromFallbackResult.ta.mjs";
 
 
 /**

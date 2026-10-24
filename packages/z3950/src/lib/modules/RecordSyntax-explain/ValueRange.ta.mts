@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ValueDescription, _decode_ValueDescription, _encode_ValueDescription } from "../RecordSyntax-explain/ValueDescription.ta.mjs";
+import { type ValueDescription, _decode_ValueDescription, _encode_ValueDescription } from "../RecordSyntax-explain/ValueDescription.ta.mjs";
 
 
 /**

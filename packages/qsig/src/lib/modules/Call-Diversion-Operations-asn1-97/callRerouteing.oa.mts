@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { _decode_callRerouteing_ArgumentType, _encode_callRerouteing_ArgumentType, callRerouteing_ArgumentType } from "../Call-Diversion-Operations-asn1-97/callRerouteing-ArgumentType.ta.mjs";
-import { _decode_callRerouteing_ResultType, _encode_callRerouteing_ResultType, callRerouteing_ResultType } from "../Call-Diversion-Operations-asn1-97/callRerouteing-ResultType.ta.mjs";
+import { _decode_callRerouteing_ResultType, _encode_callRerouteing_ResultType, type callRerouteing_ResultType } from "../Call-Diversion-Operations-asn1-97/callRerouteing-ResultType.ta.mjs";
 import { userNotSubscribed } from "../General-Error-List/userNotSubscribed.oa.mjs";
 import { notAvailable } from "../General-Error-List/notAvailable.oa.mjs";
 import { resourceUnavailable } from "../General-Error-List/resourceUnavailable.oa.mjs";

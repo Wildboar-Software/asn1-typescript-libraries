@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    OPTIONAL
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Code, _decode_Code, _encode_Code } from "../Notification-class-asn1-97/Code.ta.mjs";
+import { type Code, _decode_Code, _encode_Code } from "../Notification-class-asn1-97/Code.ta.mjs";
 
 /**
  * @summary NotificationDataStructure

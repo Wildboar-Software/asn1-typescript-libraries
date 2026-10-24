@@ -8,7 +8,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AuthenticationLevel,
+    type AuthenticationLevel,
     _decode_AuthenticationLevel,
     _encode_AuthenticationLevel,
 } from "../BasicAccessControl/AuthenticationLevel.ta.mjs";
@@ -18,12 +18,12 @@ import {
     _encode_SecurityParameters,
 } from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
 import {
-    DomainInfo,
+    type DomainInfo,
     _decode_DomainInfo,
     _encode_DomainInfo,
 } from "../DistributedOperations/DomainInfo.ta.mjs";
 import {
-    Exclusions,
+    type Exclusions,
     _decode_Exclusions,
     _encode_Exclusions,
 } from "../DistributedOperations/Exclusions.ta.mjs";
@@ -33,29 +33,29 @@ import {
     _encode_OperationProgress,
 } from "../DistributedOperations/OperationProgress.ta.mjs";
 import {
-    ReferenceType,
+    type ReferenceType,
     ReferenceType_superior /* IMPORTED_LONG_ENUMERATION_ITEM */,
     _decode_ReferenceType,
     _encode_ReferenceType,
     _enum_for_ReferenceType,
 } from "../DistributedOperations/ReferenceType.ta.mjs";
 import {
-    Time,
+    type Time,
     _decode_Time,
     _encode_Time,
 } from "../DistributedOperations/Time.ta.mjs";
 import {
-    TraceInformation,
+    type TraceInformation,
     _decode_TraceInformation,
     _encode_TraceInformation,
 } from "../DistributedOperations/TraceInformation.ta.mjs";
 import {
-    DistinguishedName,
+    type DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";
 import {
-    UniqueIdentifier,
+    type UniqueIdentifier,
     _decode_UniqueIdentifier,
     _encode_UniqueIdentifier,
 } from "../SelectedAttributeTypes/UniqueIdentifier.ta.mjs";

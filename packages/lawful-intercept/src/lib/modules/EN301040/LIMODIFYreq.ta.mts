@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
     type INTEGER,
-    UTCTime,
+    type UTCTime,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TLIIdType, _decode_TLIIdType, _encode_TLIIdType } from "../EN301040/TLIIdType.ta.mjs";
+import { type TLIIdType, _decode_TLIIdType, _encode_TLIIdType } from "../EN301040/TLIIdType.ta.mjs";
 // export { TLIIdType, _decode_TLIIdType, _encode_TLIIdType } from "../EN301040/TLIIdType.ta.mjs";
-import { LIMODIFYreq_modificationType, _decode_LIMODIFYreq_modificationType, _encode_LIMODIFYreq_modificationType } from "../EN301040/LIMODIFYreq-modificationType.ta.mjs";
+import { type LIMODIFYreq_modificationType, _decode_LIMODIFYreq_modificationType, _encode_LIMODIFYreq_modificationType } from "../EN301040/LIMODIFYreq-modificationType.ta.mjs";
 // export { LIMODIFYreq_modificationType, _decode_LIMODIFYreq_modificationType, _encode_LIMODIFYreq_modificationType } from "../EN301040/LIMODIFYreq-modificationType.ta.mjs";
 
 

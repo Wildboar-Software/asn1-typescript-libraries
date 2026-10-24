@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { NOTIFICATION } from "../Notification-class-asn1-97/NOTIFICATION.oca.mjs";
+import { type NOTIFICATION } from "../Notification-class-asn1-97/NOTIFICATION.oca.mjs";
 import { interruptionIsImpending } from "../Call-Interruption-Notifications-asn1-97/interruptionIsImpending.oa.mjs";
 import { interruptionTerminated } from "../Call-Interruption-Notifications-asn1-97/interruptionTerminated.oa.mjs";
 import { interruptionForcedRelease } from "../Call-Interruption-Notifications-asn1-97/interruptionForcedRelease.oa.mjs";

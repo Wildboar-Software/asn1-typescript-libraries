@@ -12,15 +12,15 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Access_Control_List_instance, _decode_Access_Control_List_instance, _encode_Access_Control_List_instance } from "../MMS-SCI-Module-1/Access-Control-List-instance.ta.mjs";
-import { EE_Class, _decode_EE_Class, _encode_EE_Class } from "../MMS-Object-Module-1/EE-Class.ta.mjs";
+import { type EE_Class, _decode_EE_Class, _encode_EE_Class } from "../MMS-Object-Module-1/EE-Class.ta.mjs";
 import { Event_Condition_instance, _decode_Event_Condition_instance, _encode_Event_Condition_instance } from "../MMS-SCI-Module-1/Event-Condition-instance.ta.mjs";
-import { Transitions, _decode_Transitions, _encode_Transitions } from "../MMS-Object-Module-1/Transitions.ta.mjs";
-import { Event_Enrollment_instance_definition_details_remainingDelay, _decode_Event_Enrollment_instance_definition_details_remainingDelay, _encode_Event_Enrollment_instance_definition_details_remainingDelay } from "../MMS-SCI-Module-1/Event-Enrollment-instance-definition-details-remainingDelay.ta.mjs";
+import { type Transitions, _decode_Transitions, _encode_Transitions } from "../MMS-Object-Module-1/Transitions.ta.mjs";
+import { type Event_Enrollment_instance_definition_details_remainingDelay, _decode_Event_Enrollment_instance_definition_details_remainingDelay, _encode_Event_Enrollment_instance_definition_details_remainingDelay } from "../MMS-SCI-Module-1/Event-Enrollment-instance-definition-details-remainingDelay.ta.mjs";
 import { Event_Action_instance, _decode_Event_Action_instance, _encode_Event_Action_instance } from "../MMS-SCI-Module-1/Event-Action-instance.ta.mjs";
-import { EE_Duration, _decode_EE_Duration, _encode_EE_Duration } from "../MMS-Object-Module-1/EE-Duration.ta.mjs";
+import { type EE_Duration, _decode_EE_Duration, _encode_EE_Duration } from "../MMS-Object-Module-1/EE-Duration.ta.mjs";
 import { ApplicationReference, _decode_ApplicationReference, _encode_ApplicationReference } from "../MMS-Environment-1/ApplicationReference.ta.mjs";
-import { AlarmAckRule, _decode_AlarmAckRule, _encode_AlarmAckRule } from "../MMS-Object-Module-1/AlarmAckRule.ta.mjs";
-import { Event_Enrollment_instance_definition_details_displayEnhancement, _decode_Event_Enrollment_instance_definition_details_displayEnhancement, _encode_Event_Enrollment_instance_definition_details_displayEnhancement } from "../MMS-SCI-Module-1/Event-Enrollment-instance-definition-details-displayEnhancement.ta.mjs";
+import { type AlarmAckRule, _decode_AlarmAckRule, _encode_AlarmAckRule } from "../MMS-Object-Module-1/AlarmAckRule.ta.mjs";
+import { type Event_Enrollment_instance_definition_details_displayEnhancement, _decode_Event_Enrollment_instance_definition_details_displayEnhancement, _encode_Event_Enrollment_instance_definition_details_displayEnhancement } from "../MMS-SCI-Module-1/Event-Enrollment-instance-definition-details-displayEnhancement.ta.mjs";
 
 
 /**

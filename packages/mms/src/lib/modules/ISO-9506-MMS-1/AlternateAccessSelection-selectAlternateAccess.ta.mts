@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AlternateAccessSelection_selectAlternateAccess_accessSelection, _decode_AlternateAccessSelection_selectAlternateAccess_accessSelection, _encode_AlternateAccessSelection_selectAlternateAccess_accessSelection } from "../ISO-9506-MMS-1/AlternateAccessSelection-selectAlternateAccess-accessSelection.ta.mjs";
-import { AlternateAccess, _decode_AlternateAccess, _encode_AlternateAccess } from "../ISO-9506-MMS-1/AlternateAccess.ta.mjs";
+import { type AlternateAccessSelection_selectAlternateAccess_accessSelection, _decode_AlternateAccessSelection_selectAlternateAccess_accessSelection, _encode_AlternateAccessSelection_selectAlternateAccess_accessSelection } from "../ISO-9506-MMS-1/AlternateAccessSelection-selectAlternateAccess-accessSelection.ta.mjs";
+import { type AlternateAccess, _decode_AlternateAccess, _encode_AlternateAccess } from "../ISO-9506-MMS-1/AlternateAccess.ta.mjs";
 
 
 /**

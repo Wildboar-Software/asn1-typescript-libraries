@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ABSTRACT_SYNTAX,
+    type ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    MessageRetrievalPDUs88,
+    type MessageRetrievalPDUs88,
     _decode_MessageRetrievalPDUs88,
     _encode_MessageRetrievalPDUs88,
 } from '../MSAccessProtocol/MessageRetrievalPDUs88.ta.mjs';

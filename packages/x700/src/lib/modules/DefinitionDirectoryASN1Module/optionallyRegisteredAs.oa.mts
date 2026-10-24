@@ -17,7 +17,7 @@ import {
     _encode_AttributeUsage,
 } from '@wildboar/x500/InformationFramework';
 import {
-    OptionallyRegisteredAs,
+    type OptionallyRegisteredAs,
     _decode_OptionallyRegisteredAs,
     _encode_OptionallyRegisteredAs,
 } from '../DefinitionASN1Module/OptionallyRegisteredAs.ta.mjs';

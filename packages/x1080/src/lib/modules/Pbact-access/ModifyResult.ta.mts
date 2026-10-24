@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ModifyResult_result,
+    type ModifyResult_result,
     _decode_ModifyResult_result,
     _encode_ModifyResult_result,
 } from '../Pbact-access/ModifyResult-result.ta.mjs';

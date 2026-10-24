@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AppliedPatches,
+    type AppliedPatches,
     _decode_AppliedPatches,
     _encode_AppliedPatches,
 } from '../SWMF/AppliedPatches.ta.mjs';

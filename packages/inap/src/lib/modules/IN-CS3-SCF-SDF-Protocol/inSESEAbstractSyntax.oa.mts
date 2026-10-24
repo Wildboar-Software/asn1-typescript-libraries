@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ABSTRACT_SYNTAX
+    type ABSTRACT_SYNTAX
 } from "@wildboar/asn1";
-import { SESEapdus, _decode_SESEapdus, _encode_SESEapdus } from "../SeseAPDUs/SESEapdus.ta.mjs";
+import { type SESEapdus, _decode_SESEapdus, _encode_SESEapdus } from "../SeseAPDUs/SESEapdus.ta.mjs";
 // export { SESEapdus, _decode_SESEapdus, _encode_SESEapdus } from "../SeseAPDUs/SESEapdus.ta.mjs";
 import { id_as_inSESEAS } from "../IN-CS3-object-identifiers/id-as-inSESEAS.va.mjs";
 // export { id_as_inSESEAS } from "../IN-CS3-object-identifiers/id-as-inSESEAS.va.mjs";

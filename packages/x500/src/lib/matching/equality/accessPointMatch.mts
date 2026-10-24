@@ -7,7 +7,7 @@ import {
 } from "@wildboar/asn1";
 import { readDecoded } from "../readValue.mjs";
 import {
-    Name,
+    type Name,
     _decode_Name,
 } from "../../modules/InformationFramework/Name.ta.mjs";
 import {

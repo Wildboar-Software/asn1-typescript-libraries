@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    GraphicString,
+    type GraphicString,
     ASN1Element as _Element,
     ASN1SizeError,
 } from "@wildboar/asn1";

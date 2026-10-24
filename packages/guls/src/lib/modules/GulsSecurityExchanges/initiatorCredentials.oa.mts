@@ -12,7 +12,7 @@ import {
 import { authenticationFailure } from '../GulsSecurityExchanges/authenticationFailure.oa.mjs';
 import { type SEC_EXCHG_ITEM } from '../Notation/SEC-EXCHG-ITEM.oca.mjs';
 import {
-    Credentials,
+    type Credentials,
     _decode_Credentials,
     _encode_Credentials,
 } from "@wildboar/x500/DirectoryAbstractService";

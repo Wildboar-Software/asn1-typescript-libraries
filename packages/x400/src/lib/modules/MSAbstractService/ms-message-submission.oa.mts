@@ -23,7 +23,7 @@ import {
     _encode_MSMessageSubmissionArgument,
 } from '../MSAbstractService/MSMessageSubmissionArgument.ta.mjs';
 import {
-    MSMessageSubmissionResult,
+    type MSMessageSubmissionResult,
     _decode_MSMessageSubmissionResult,
     _encode_MSMessageSubmissionResult,
 } from '../MSAbstractService/MSMessageSubmissionResult.ta.mjs';

@@ -16,7 +16,7 @@ import {
     _encode_OrderedAttribute_attribute_values_Item,
 } from '../MSAbstractService/OrderedAttribute-attribute-values-Item.ta.mjs';
 import {
-    AttributeType,
+    type AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
 } from "./AttributeType.ta.mjs";

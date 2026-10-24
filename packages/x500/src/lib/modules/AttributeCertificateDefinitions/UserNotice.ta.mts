@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    DisplayText,
+    type DisplayText,
     _decode_DisplayText,
     _encode_DisplayText,
 } from "../AttributeCertificateDefinitions/DisplayText.ta.mjs";

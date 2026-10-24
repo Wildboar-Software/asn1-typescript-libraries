@@ -2,7 +2,7 @@
 import { ASN1Element as _Element } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Sidechain,
+    type Sidechain,
     _decode_Sidechain,
     _encode_Sidechain,
 } from "../CMSProfileAttributes/Sidechain.ta.mjs";

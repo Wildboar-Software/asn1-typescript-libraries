@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ABSTRACT_SYNTAX
+    type ABSTRACT_SYNTAX
 } from "@wildboar/asn1";
-import { RouteMonitoringSCF_SSF_PDUs, _decode_RouteMonitoringSCF_SSF_PDUs, _encode_RouteMonitoringSCF_SSF_PDUs } from "../IN-SSF-SCF-pkgs-contracts-acs/RouteMonitoringSCF-SSF-PDUs.ta.mjs";
+import { type RouteMonitoringSCF_SSF_PDUs, _decode_RouteMonitoringSCF_SSF_PDUs, _encode_RouteMonitoringSCF_SSF_PDUs } from "../IN-SSF-SCF-pkgs-contracts-acs/RouteMonitoringSCF-SSF-PDUs.ta.mjs";
 // export { RouteMonitoringSCF_SSF_PDUs, _decode_RouteMonitoringSCF_SSF_PDUs, _encode_RouteMonitoringSCF_SSF_PDUs } from "../IN-SSF-SCF-pkgs-contracts-acs/RouteMonitoringSCF-SSF-PDUs.ta.mjs";
 import { id_as_scf_ssfRouteMonitoringAS } from "../IN-object-identifiers/id-as-scf-ssfRouteMonitoringAS.va.mjs";
 // export { id_as_scf_ssfRouteMonitoringAS } from "../IN-object-identifiers/id-as-scf-ssfRouteMonitoringAS.va.mjs";

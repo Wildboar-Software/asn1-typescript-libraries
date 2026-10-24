@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     type EXTERNAL,
-    GeneralizedTime,
+    type GeneralizedTime,
     type OBJECT_IDENTIFIER,
     type OCTET_STRING,
     type OPTIONAL,
@@ -9,11 +9,11 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
+import { type InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
 import { IntUnit, _decode_IntUnit, _encode_IntUnit } from "../Z39-50-APDU-2001/IntUnit.ta.mjs";
-import { Permissions, _decode_Permissions, _encode_Permissions } from "../Z39-50-APDU-2001/Permissions.ta.mjs";
-import { TaskPackage_taskStatus, _decode_TaskPackage_taskStatus, _encode_TaskPackage_taskStatus } from "../RecordSyntax-ESTaskPackage/TaskPackage-taskStatus.ta.mjs";
-import { DiagRec, _decode_DiagRec, _encode_DiagRec } from "../Z39-50-APDU-2001/DiagRec.ta.mjs";
+import { type Permissions, _decode_Permissions, _encode_Permissions } from "../Z39-50-APDU-2001/Permissions.ta.mjs";
+import { type TaskPackage_taskStatus, _decode_TaskPackage_taskStatus, _encode_TaskPackage_taskStatus } from "../RecordSyntax-ESTaskPackage/TaskPackage-taskStatus.ta.mjs";
+import { type DiagRec, _decode_DiagRec, _encode_DiagRec } from "../Z39-50-APDU-2001/DiagRec.ta.mjs";
 
 
 /**

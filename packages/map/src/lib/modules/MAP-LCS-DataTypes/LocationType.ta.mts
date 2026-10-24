@@ -2,11 +2,11 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_DeferredLocationEventType, _encode_DeferredLocationEventType, DeferredLocationEventType } from "../MAP-LCS-DataTypes/DeferredLocationEventType.ta.mjs";
-import { _decode_LocationEstimateType, _encode_LocationEstimateType, _enum_for_LocationEstimateType, LocationEstimateType } from "../MAP-LCS-DataTypes/LocationEstimateType.ta.mjs";
+import { _decode_DeferredLocationEventType, _encode_DeferredLocationEventType, type DeferredLocationEventType } from "../MAP-LCS-DataTypes/DeferredLocationEventType.ta.mjs";
+import { _decode_LocationEstimateType, _encode_LocationEstimateType, _enum_for_LocationEstimateType, type LocationEstimateType } from "../MAP-LCS-DataTypes/LocationEstimateType.ta.mjs";
 
 
 /**

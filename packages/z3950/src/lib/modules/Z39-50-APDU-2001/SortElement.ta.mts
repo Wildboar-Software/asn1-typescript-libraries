@@ -4,7 +4,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SortKey, _decode_SortKey, _encode_SortKey } from "../Z39-50-APDU-2001/SortKey.ta.mjs";
+import { type SortKey, _decode_SortKey, _encode_SortKey } from "../Z39-50-APDU-2001/SortKey.ta.mjs";
 import { SortElement_datbaseSpecific_Item, _decode_SortElement_datbaseSpecific_Item, _encode_SortElement_datbaseSpecific_Item } from "../Z39-50-APDU-2001/SortElement-datbaseSpecific-Item.ta.mjs";
 
 

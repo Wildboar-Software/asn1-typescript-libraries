@@ -4,7 +4,7 @@ import {
 } from "@wildboar/x500/InformationFramework";
 import { id_parentBlock } from "./id-parentBlock.va.mjs";
 import {
-    ParentBlock,
+    type ParentBlock,
     _decode_ParentBlock,
     _encode_ParentBlock,
 } from "./ParentBlock.ta.mjs";

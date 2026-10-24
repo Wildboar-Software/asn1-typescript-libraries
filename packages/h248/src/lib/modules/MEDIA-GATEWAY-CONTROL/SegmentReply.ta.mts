@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../MEDIA-GATEWAY-CONTROL/TransactionId.ta.mjs";
-import { SegmentNumber, _decode_SegmentNumber, _encode_SegmentNumber } from "../MEDIA-GATEWAY-CONTROL/SegmentNumber.ta.mjs";
+import { type TransactionId, _decode_TransactionId, _encode_TransactionId } from "../MEDIA-GATEWAY-CONTROL/TransactionId.ta.mjs";
+import { type SegmentNumber, _decode_SegmentNumber, _encode_SegmentNumber } from "../MEDIA-GATEWAY-CONTROL/SegmentNumber.ta.mjs";
 
 
 /**

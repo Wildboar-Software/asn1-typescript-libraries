@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    NameBinding,
+    type NameBinding,
     _decode_NameBinding,
     _encode_NameBinding,
 } from '@wildboar/attribute-asn1module';

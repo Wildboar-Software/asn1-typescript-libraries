@@ -17,7 +17,7 @@ import {
     _encode_CmsErrorCode,
 } from '../CmsTelebiometric/CmsErrorCode.ta.mjs';
 import {
-    PbactErr,
+    type PbactErr,
     _enum_for_PbactErr,
     _decode_PbactErr,
     _encode_PbactErr,

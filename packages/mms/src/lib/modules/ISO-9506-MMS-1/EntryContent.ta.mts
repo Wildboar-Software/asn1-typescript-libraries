@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TimeOfDay, _decode_TimeOfDay, _encode_TimeOfDay } from "../ISO-9506-MMS-1/TimeOfDay.ta.mjs";
-import { EntryContent_entryForm, _decode_EntryContent_entryForm, _encode_EntryContent_entryForm } from "../ISO-9506-MMS-1/EntryContent-entryForm.ta.mjs";
+import { type TimeOfDay, _decode_TimeOfDay, _encode_TimeOfDay } from "../ISO-9506-MMS-1/TimeOfDay.ta.mjs";
+import { type EntryContent_entryForm, _decode_EntryContent_entryForm, _encode_EntryContent_entryForm } from "../ISO-9506-MMS-1/EntryContent-entryForm.ta.mjs";
 
 
 /**

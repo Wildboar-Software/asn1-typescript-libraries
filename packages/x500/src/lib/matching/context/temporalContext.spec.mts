@@ -1,4 +1,4 @@
-import EqualityMatcher from "../../types/EqualityMatcher.mjs";
+import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import { TRUE, DERElement, ASN1TagClass, ASN1Construction, ASN1UniversalType } from "@wildboar/asn1";
 import {
     TimeSpecification,
@@ -6,7 +6,7 @@ import {
     _encode_TimeSpecification,
 } from "../../modules/SelectedAttributeTypes/TimeSpecification.ta.mjs";
 import {
-    TimeAssertion,
+    type TimeAssertion,
     _encode_TimeAssertion,
 } from "../../modules/SelectedAttributeTypes/TimeAssertion.ta.mjs";
 import {

@@ -2,7 +2,7 @@
 import { ObjectIdentifier as _OID } from "@wildboar/asn1";
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { tETRADomainId } from "../TETRA-HI2Operations/tETRADomainId.va.mjs";
-import { TETRAIRIsContent, _decode_TETRAIRIsContent, _encode_TETRAIRIsContent } from "../TETRA-HI2Operations/TETRAIRIsContent.ta.mjs";
+import { type TETRAIRIsContent, _decode_TETRAIRIsContent, _encode_TETRAIRIsContent } from "../TETRA-HI2Operations/TETRAIRIsContent.ta.mjs";
 import { OperationErrors } from "../TETRA-HI2Operations/OperationErrors.osa.mjs";
 
 /**

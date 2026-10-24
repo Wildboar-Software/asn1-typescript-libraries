@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    CrossConnectionName,
+    type CrossConnectionName,
     _decode_CrossConnectionName,
     _encode_CrossConnectionName,
 } from '../ASN1DefinedTypesModule/CrossConnectionName.ta.mjs';

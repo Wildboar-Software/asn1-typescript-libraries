@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { ObjectIdentifier as _OID, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import { c_TwoCurve } from "../ANSI-X9-62/c-TwoCurve.va.mjs";
 /**
  * @summary c2pnb163v1

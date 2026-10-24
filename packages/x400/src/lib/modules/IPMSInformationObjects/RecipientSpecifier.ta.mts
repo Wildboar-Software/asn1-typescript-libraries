@@ -18,12 +18,12 @@ import {
     _encode_ORDescriptor,
 } from '../IPMSInformationObjects/ORDescriptor.ta.mjs';
 import {
-    NotificationRequests,
+    type NotificationRequests,
     _decode_NotificationRequests,
     _encode_NotificationRequests,
 } from '../IPMSInformationObjects/NotificationRequests.ta.mjs';
 import {
-    RecipientExtensionsField,
+    type RecipientExtensionsField,
     _decode_RecipientExtensionsField,
     _encode_RecipientExtensionsField,
 } from '../IPMSInformationObjects/RecipientExtensionsField.ta.mjs';

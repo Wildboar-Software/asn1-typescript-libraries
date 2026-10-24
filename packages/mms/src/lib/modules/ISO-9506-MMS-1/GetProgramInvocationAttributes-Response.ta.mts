@@ -12,9 +12,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ProgramInvocationState, _decode_ProgramInvocationState, _encode_ProgramInvocationState } from "../MMS-Object-Module-1/ProgramInvocationState.ta.mjs";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
-import { GetProgramInvocationAttributes_Response_executionArgument, _decode_GetProgramInvocationAttributes_Response_executionArgument, _encode_GetProgramInvocationAttributes_Response_executionArgument } from "../ISO-9506-MMS-1/GetProgramInvocationAttributes-Response-executionArgument.ta.mjs";
+import { type ProgramInvocationState, _decode_ProgramInvocationState, _encode_ProgramInvocationState } from "../MMS-Object-Module-1/ProgramInvocationState.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type GetProgramInvocationAttributes_Response_executionArgument, _decode_GetProgramInvocationAttributes_Response_executionArgument, _encode_GetProgramInvocationAttributes_Response_executionArgument } from "../ISO-9506-MMS-1/GetProgramInvocationAttributes-Response-executionArgument.ta.mjs";
 
 
 /**

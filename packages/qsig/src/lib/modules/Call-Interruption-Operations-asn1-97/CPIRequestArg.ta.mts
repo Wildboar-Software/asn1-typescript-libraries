@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CPICapabilityLevel, _decode_CPICapabilityLevel, _encode_CPICapabilityLevel, _enum_for_CPICapabilityLevel } from "../Call-Interruption-Operations-asn1-97/CPICapabilityLevel.ta.mjs";
-import { CPIRequestArg_argumentExtension, _decode_CPIRequestArg_argumentExtension, _encode_CPIRequestArg_argumentExtension } from "../Call-Interruption-Operations-asn1-97/CPIRequestArg-argumentExtension.ta.mjs";
+import { type CPIRequestArg_argumentExtension, _decode_CPIRequestArg_argumentExtension, _encode_CPIRequestArg_argumentExtension } from "../Call-Interruption-Operations-asn1-97/CPIRequestArg-argumentExtension.ta.mjs";
 
 /**
  * @summary CPIRequestArg

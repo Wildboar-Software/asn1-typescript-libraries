@@ -26,12 +26,12 @@ import {
     _encode_RTORJapdu,
 } from '@wildboar/rtse';
 import {
-    RTTPapdu,
+    type RTTPapdu,
     _decode_RTTPapdu,
     _encode_RTTPapdu,
 } from '../MTSAccessProtocol/RTTPapdu.ta.mjs';
 import {
-    RTTRapdu,
+    type RTTRapdu,
     _decode_RTTRapdu,
     _encode_RTTRapdu,
 } from '../MTSAccessProtocol/RTTRapdu.ta.mjs';

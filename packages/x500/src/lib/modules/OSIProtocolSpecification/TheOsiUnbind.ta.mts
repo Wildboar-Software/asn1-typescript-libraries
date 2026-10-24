@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Release_request_reason,
+    type Release_request_reason,
     _decode_Release_request_reason,
     _encode_Release_request_reason,
 } from "../OSIProtocolSpecification/Release-request-reason.ta.mjs";

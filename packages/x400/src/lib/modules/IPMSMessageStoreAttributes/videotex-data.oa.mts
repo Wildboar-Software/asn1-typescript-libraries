@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    VideotexData,
+    type VideotexData,
     _decode_VideotexData,
     _encode_VideotexData,
 } from '../IPMSInformationObjects/VideotexData.ta.mjs';

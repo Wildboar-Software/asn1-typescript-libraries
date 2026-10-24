@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MMEGI, _decode_MMEGI, _encode_MMEGI } from "../TS33128Payloads/MMEGI.ta.mjs";
+import { type MMEGI, _decode_MMEGI, _encode_MMEGI } from "../TS33128Payloads/MMEGI.ta.mjs";
 // export { MMEGI, _decode_MMEGI, _encode_MMEGI } from "../TS33128Payloads/MMEGI.ta.mjs";
-import { MMEC, _decode_MMEC, _encode_MMEC } from "../TS33128Payloads/MMEC.ta.mjs";
+import { type MMEC, _decode_MMEC, _encode_MMEC } from "../TS33128Payloads/MMEC.ta.mjs";
 // export { MMEC, _decode_MMEC, _encode_MMEC } from "../TS33128Payloads/MMEC.ta.mjs";
 
 

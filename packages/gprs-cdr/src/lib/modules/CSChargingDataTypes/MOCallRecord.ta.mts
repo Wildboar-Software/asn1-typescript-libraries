@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     type BOOLEAN,
-    GraphicString,
+    type GraphicString,
     type INTEGER,
-    NULL,
+    type NULL,
     type OCTET_STRING,
     type OPTIONAL,
     ASN1Element as _Element,
@@ -12,11 +12,11 @@ import {
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RecordType, _decode_RecordType, _encode_RecordType } from "../CSChargingDataTypes/RecordType.ta.mjs";
-import { TrunkGroup, _decode_TrunkGroup, _encode_TrunkGroup } from "../CSChargingDataTypes/TrunkGroup.ta.mjs";
+import { type RecordType, _decode_RecordType, _encode_RecordType } from "../CSChargingDataTypes/RecordType.ta.mjs";
+import { type TrunkGroup, _decode_TrunkGroup, _encode_TrunkGroup } from "../CSChargingDataTypes/TrunkGroup.ta.mjs";
 import { LocationAreaAndCell, _decode_LocationAreaAndCell, _encode_LocationAreaAndCell } from "../CSChargingDataTypes/LocationAreaAndCell.ta.mjs";
 import { LocationChange, _decode_LocationChange, _encode_LocationChange } from "../CSChargingDataTypes/LocationChange.ta.mjs";
-import { BasicService, _decode_BasicService, _encode_BasicService } from "../CSChargingDataTypes/BasicService.ta.mjs";
+import { type BasicService, _decode_BasicService, _encode_BasicService } from "../CSChargingDataTypes/BasicService.ta.mjs";
 import { TransparencyInd, _decode_TransparencyInd, _encode_TransparencyInd, _enum_for_TransparencyInd } from "../CSChargingDataTypes/TransparencyInd.ta.mjs";
 import { ChangeOfService, _decode_ChangeOfService, _encode_ChangeOfService } from "../CSChargingDataTypes/ChangeOfService.ta.mjs";
 import { SuppServiceUsed, _decode_SuppServiceUsed, _encode_SuppServiceUsed } from "../CSChargingDataTypes/SuppServiceUsed.ta.mjs";
@@ -26,23 +26,23 @@ import { ChangeOfClassmark, _decode_ChangeOfClassmark, _encode_ChangeOfClassmark
 import { RadioChanRequested, _decode_RadioChanRequested, _encode_RadioChanRequested, _enum_for_RadioChanRequested } from "../CSChargingDataTypes/RadioChanRequested.ta.mjs";
 import { TrafficChannel, _decode_TrafficChannel, _encode_TrafficChannel, _enum_for_TrafficChannel } from "../CSChargingDataTypes/TrafficChannel.ta.mjs";
 import { ChangeOfRadioChannel, _decode_ChangeOfRadioChannel, _encode_ChangeOfRadioChannel } from "../CSChargingDataTypes/ChangeOfRadioChannel.ta.mjs";
-import { CauseForTerm, _decode_CauseForTerm, _encode_CauseForTerm } from "../CSChargingDataTypes/CauseForTerm.ta.mjs";
-import { HLRIntResult, _decode_HLRIntResult, _encode_HLRIntResult } from "../CSChargingDataTypes/HLRIntResult.ta.mjs";
+import { type CauseForTerm, _decode_CauseForTerm, _encode_CauseForTerm } from "../CSChargingDataTypes/CauseForTerm.ta.mjs";
+import { type HLRIntResult, _decode_HLRIntResult, _encode_HLRIntResult } from "../CSChargingDataTypes/HLRIntResult.ta.mjs";
 import { AdditionalChgInfo, _decode_AdditionalChgInfo, _encode_AdditionalChgInfo } from "../CSChargingDataTypes/AdditionalChgInfo.ta.mjs";
 import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExtension } from "../CSChargingDataTypes/ManagementExtension.ta.mjs";
 import { CAMELInitCFIndicator, _decode_CAMELInitCFIndicator, _encode_CAMELInitCFIndicator, _enum_for_CAMELInitCFIndicator } from "../CSChargingDataTypes/CAMELInitCFIndicator.ta.mjs";
-import { DefaultCallHandling, _decode_DefaultCallHandling, _encode_DefaultCallHandling, _enum_for_DefaultCallHandling } from "../CSChargingDataTypes/DefaultCallHandling.ta.mjs";
+import { type DefaultCallHandling, _decode_DefaultCallHandling, _encode_DefaultCallHandling, _enum_for_DefaultCallHandling } from "../CSChargingDataTypes/DefaultCallHandling.ta.mjs";
 import { HSCSDParmsChange, _decode_HSCSDParmsChange, _encode_HSCSDParmsChange } from "../CSChargingDataTypes/HSCSDParmsChange.ta.mjs";
 import { Fnur, _decode_Fnur, _encode_Fnur, _enum_for_Fnur } from "../CSChargingDataTypes/Fnur.ta.mjs";
 import { AiurRequested, _decode_AiurRequested, _encode_AiurRequested, _enum_for_AiurRequested } from "../CSChargingDataTypes/AiurRequested.ta.mjs";
 import { ChannelCoding, _decode_ChannelCoding, _encode_ChannelCoding, _enum_for_ChannelCoding } from "../CSChargingDataTypes/ChannelCoding.ta.mjs";
-import { MOCallRecord_levelOfCAMELService, _decode_MOCallRecord_levelOfCAMELService, _encode_MOCallRecord_levelOfCAMELService } from "../CSChargingDataTypes/MOCallRecord-levelOfCAMELService.ta.mjs";
+import { type MOCallRecord_levelOfCAMELService, _decode_MOCallRecord_levelOfCAMELService, _encode_MOCallRecord_levelOfCAMELService } from "../CSChargingDataTypes/MOCallRecord-levelOfCAMELService.ta.mjs";
 import { CAMELInformation, _decode_CAMELInformation, _encode_CAMELInformation } from "../CSChargingDataTypes/CAMELInformation.ta.mjs";
-import { SystemType, _decode_SystemType, _encode_SystemType, _enum_for_SystemType } from "../CSChargingDataTypes/SystemType.ta.mjs";
-import { MOCallRecord_lrnSoInd, _decode_MOCallRecord_lrnSoInd, _encode_MOCallRecord_lrnSoInd } from "../CSChargingDataTypes/MOCallRecord-lrnSoInd.ta.mjs";
-import { MOCallRecord_lrnQuryStatus, _decode_MOCallRecord_lrnQuryStatus, _encode_MOCallRecord_lrnQuryStatus } from "../CSChargingDataTypes/MOCallRecord-lrnQuryStatus.ta.mjs";
-import { MOCallRecord_jIPSoInd, _decode_MOCallRecord_jIPSoInd, _encode_MOCallRecord_jIPSoInd } from "../CSChargingDataTypes/MOCallRecord-jIPSoInd.ta.mjs";
-import { MOCallRecord_jIPQuryStatus, _decode_MOCallRecord_jIPQuryStatus, _encode_MOCallRecord_jIPQuryStatus } from "../CSChargingDataTypes/MOCallRecord-jIPQuryStatus.ta.mjs";
+import { type SystemType, _decode_SystemType, _encode_SystemType, _enum_for_SystemType } from "../CSChargingDataTypes/SystemType.ta.mjs";
+import { type MOCallRecord_lrnSoInd, _decode_MOCallRecord_lrnSoInd, _encode_MOCallRecord_lrnSoInd } from "../CSChargingDataTypes/MOCallRecord-lrnSoInd.ta.mjs";
+import { type MOCallRecord_lrnQuryStatus, _decode_MOCallRecord_lrnQuryStatus, _encode_MOCallRecord_lrnQuryStatus } from "../CSChargingDataTypes/MOCallRecord-lrnQuryStatus.ta.mjs";
+import { type MOCallRecord_jIPSoInd, _decode_MOCallRecord_jIPSoInd, _encode_MOCallRecord_jIPSoInd } from "../CSChargingDataTypes/MOCallRecord-jIPSoInd.ta.mjs";
+import { type MOCallRecord_jIPQuryStatus, _decode_MOCallRecord_jIPQuryStatus, _encode_MOCallRecord_jIPQuryStatus } from "../CSChargingDataTypes/MOCallRecord-jIPQuryStatus.ta.mjs";
 import { PartialRecordType, _decode_PartialRecordType, _encode_PartialRecordType, _enum_for_PartialRecordType } from "../CSChargingDataTypes/PartialRecordType.ta.mjs";
 import { GuaranteedBitRate, _decode_GuaranteedBitRate, _encode_GuaranteedBitRate, _enum_for_GuaranteedBitRate } from "../CSChargingDataTypes/GuaranteedBitRate.ta.mjs";
 import { MaximumBitRate, _decode_MaximumBitRate, _encode_MaximumBitRate, _enum_for_MaximumBitRate } from "../CSChargingDataTypes/MaximumBitRate.ta.mjs";

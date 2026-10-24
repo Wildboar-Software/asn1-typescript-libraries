@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    GeneralizedTime,
+    type GeneralizedTime,
     type UTF8String,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass

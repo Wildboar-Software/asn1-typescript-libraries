@@ -3,30 +3,30 @@
 import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ChangeSystemStatusFilter, _decode_ChangeSystemStatusFilter, _encode_ChangeSystemStatusFilter } from "../CSTA-capability-exchange/ChangeSystemStatusFilter.ta.mjs";
+import { type ChangeSystemStatusFilter, _decode_ChangeSystemStatusFilter, _encode_ChangeSystemStatusFilter } from "../CSTA-capability-exchange/ChangeSystemStatusFilter.ta.mjs";
 
-import { SystemRegister, _decode_SystemRegister, _encode_SystemRegister } from "../CSTA-capability-exchange/SystemRegister.ta.mjs";
+import { type SystemRegister, _decode_SystemRegister, _encode_SystemRegister } from "../CSTA-capability-exchange/SystemRegister.ta.mjs";
 
-import { SystemStatusRegisterAbort, _decode_SystemStatusRegisterAbort, _encode_SystemStatusRegisterAbort } from "../CSTA-capability-exchange/SystemStatusRegisterAbort.ta.mjs";
+import { type SystemStatusRegisterAbort, _decode_SystemStatusRegisterAbort, _encode_SystemStatusRegisterAbort } from "../CSTA-capability-exchange/SystemStatusRegisterAbort.ta.mjs";
 
-import { SystemStatusRegisterCancel, _decode_SystemStatusRegisterCancel, _encode_SystemStatusRegisterCancel } from "../CSTA-capability-exchange/SystemStatusRegisterCancel.ta.mjs";
+import { type SystemStatusRegisterCancel, _decode_SystemStatusRegisterCancel, _encode_SystemStatusRegisterCancel } from "../CSTA-capability-exchange/SystemStatusRegisterCancel.ta.mjs";
 
-import { RequestSystemStatus, _decode_RequestSystemStatus, _encode_RequestSystemStatus } from "../CSTA-capability-exchange/RequestSystemStatus.ta.mjs";
+import { type RequestSystemStatus, _decode_RequestSystemStatus, _encode_RequestSystemStatus } from "../CSTA-capability-exchange/RequestSystemStatus.ta.mjs";
 
-import { SystemStatus, _decode_SystemStatus, _encode_SystemStatus } from "../CSTA-capability-exchange/SystemStatus.ta.mjs";
+import { type SystemStatus, _decode_SystemStatus, _encode_SystemStatus } from "../CSTA-capability-exchange/SystemStatus.ta.mjs";
 
-import { SwFunctionCapsChanged, _decode_SwFunctionCapsChanged, _encode_SwFunctionCapsChanged } from "../CSTA-capability-exchange/SwFunctionCapsChanged.ta.mjs";
+import { type SwFunctionCapsChanged, _decode_SwFunctionCapsChanged, _encode_SwFunctionCapsChanged } from "../CSTA-capability-exchange/SwFunctionCapsChanged.ta.mjs";
 
-import { SwFunctionDevicesChanged, _decode_SwFunctionDevicesChanged, _encode_SwFunctionDevicesChanged } from "../CSTA-capability-exchange/SwFunctionDevicesChanged.ta.mjs";
+import { type SwFunctionDevicesChanged, _decode_SwFunctionDevicesChanged, _encode_SwFunctionDevicesChanged } from "../CSTA-capability-exchange/SwFunctionDevicesChanged.ta.mjs";
 
-import { GetRegistrations, _decode_GetRegistrations, _encode_GetRegistrations } from "../CSTA-capability-exchange/GetRegistrations.ta.mjs";
+import { type GetRegistrations, _decode_GetRegistrations, _encode_GetRegistrations } from "../CSTA-capability-exchange/GetRegistrations.ta.mjs";
 
-import { RegistrationInfo, _decode_RegistrationInfo, _encode_RegistrationInfo } from "../CSTA-capability-exchange/RegistrationInfo.ta.mjs";
+import { type RegistrationInfo, _decode_RegistrationInfo, _encode_RegistrationInfo } from "../CSTA-capability-exchange/RegistrationInfo.ta.mjs";
 
 
 

@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ResourcePointer,
+    type ResourcePointer,
     _decode_ResourcePointer,
     _encode_ResourcePointer,
 } from '../SDHProtASN1/ResourcePointer.ta.mjs';

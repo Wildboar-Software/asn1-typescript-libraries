@@ -6,8 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { ODB_GeneralData, _decode_ODB_GeneralData, _encode_ODB_GeneralData } from "../MAP-MS-DataTypes/ODB-GeneralData.ta.mjs";
-import { ODB_HPLMN_Data, _decode_ODB_HPLMN_Data, _encode_ODB_HPLMN_Data } from "../MAP-MS-DataTypes/ODB-HPLMN-Data.ta.mjs";
+import { type ODB_GeneralData, _decode_ODB_GeneralData, _encode_ODB_GeneralData } from "../MAP-MS-DataTypes/ODB-GeneralData.ta.mjs";
+import { type ODB_HPLMN_Data, _decode_ODB_HPLMN_Data, _encode_ODB_HPLMN_Data } from "../MAP-MS-DataTypes/ODB-HPLMN-Data.ta.mjs";
 
 
 /**

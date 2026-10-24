@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  INTEGER,
-  OCTET_STRING,
-  OBJECT_IDENTIFIER,
-  UTF8String,
+  type OPTIONAL,
+  type INTEGER,
+  type OCTET_STRING,
+  type OBJECT_IDENTIFIER,
+  type UTF8String,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -17,17 +17,17 @@ import {
 import * as $ from '@wildboar/asn1/functional';
 import { Query, _decode_Query, _encode_Query } from '../SCVP-2009/Query.ta.mjs';
 import {
-  GeneralNames,
+  type GeneralNames,
   _decode_GeneralNames,
   _encode_GeneralNames,
 } from '@wildboar/gn';
 import {
-  GeneralName,
+  type GeneralName,
   _decode_GeneralName,
   _encode_GeneralName,
 } from '@wildboar/gn';
 import {
-  Extensions,
+  type Extensions,
   _decode_Extensions,
   _encode_Extensions,
 } from '@wildboar/x500/AuthenticationFramework';

@@ -2,7 +2,7 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INSTANCE_OF,
+    type INSTANCE_OF,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {

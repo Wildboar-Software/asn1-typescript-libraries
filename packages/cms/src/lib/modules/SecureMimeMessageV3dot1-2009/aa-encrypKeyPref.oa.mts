@@ -2,7 +2,7 @@
 import type { ATTRIBUTE } from "@wildboar/x500/InformationFramework";
 import { id_aa_encrypKeyPref } from "../SecureMimeMessageV3dot1-2009/id-aa-encrypKeyPref.va.mjs";
 import {
-    SMIMEEncryptionKeyPreference,
+    type SMIMEEncryptionKeyPreference,
     _decode_SMIMEEncryptionKeyPreference,
     _encode_SMIMEEncryptionKeyPreference,
 } from "../SecureMimeMessageV3dot1-2009/SMIMEEncryptionKeyPreference.ta.mjs";

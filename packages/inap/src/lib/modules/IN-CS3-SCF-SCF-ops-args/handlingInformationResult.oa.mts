@@ -1,13 +1,13 @@
 import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 /* eslint-disable */
 import {
-    NULL
+    type NULL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 // export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 // export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-import { HandlingInformationResultArg, _decode_HandlingInformationResultArg, _encode_HandlingInformationResultArg } from "../IN-CS3-SCF-SCF-ops-args/HandlingInformationResultArg.ta.mjs";
+import { type HandlingInformationResultArg, _decode_HandlingInformationResultArg, _encode_HandlingInformationResultArg } from "../IN-CS3-SCF-SCF-ops-args/HandlingInformationResultArg.ta.mjs";
 // export { HandlingInformationResultArg, _decode_HandlingInformationResultArg, _encode_HandlingInformationResultArg } from "../IN-CS3-SCF-SCF-ops-args/HandlingInformationResultArg.ta.mjs";
 import { missingParameter } from "../IN-CS3-errortypes/missingParameter.oa.mjs";
 // export { missingParameter } from "../IN-CS3-errortypes/missingParameter.oa.mjs";

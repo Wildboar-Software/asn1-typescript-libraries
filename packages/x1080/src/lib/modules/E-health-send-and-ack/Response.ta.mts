@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    EncryptionOptions,
+    type EncryptionOptions,
     _decode_EncryptionOptions,
     _encode_EncryptionOptions,
 } from '../E-health-setup/EncryptionOptions.ta.mjs';
 import {
-    IntegrityOptions,
+    type IntegrityOptions,
     _decode_IntegrityOptions,
     _encode_IntegrityOptions,
 } from '../E-health-setup/IntegrityOptions.ta.mjs';

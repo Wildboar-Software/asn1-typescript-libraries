@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -11,7 +11,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
-import { String, _decode_String, _encode_String } from '../XSD/String.ta.mjs';
+import { type String, _decode_String, _encode_String } from '../XSD/String.ta.mjs';
 import {
   AnyType_nillable_content,
   _decode_AnyType_nillable_content,

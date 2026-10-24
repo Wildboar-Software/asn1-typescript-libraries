@@ -11,7 +11,7 @@ import {
     _encode_AttCertIssuer,
 } from "../AttributeCertificateDefinitions/AttCertIssuer.ta.mjs";
 import {
-    CertificateSerialNumber,
+    type CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
 } from "../AuthenticationFramework/CertificateSerialNumber.ta.mjs";

@@ -11,13 +11,13 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  ActionErrorInfo_errorStatus,
+  type ActionErrorInfo_errorStatus,
   _enum_for_ActionErrorInfo_errorStatus,
   _decode_ActionErrorInfo_errorStatus,
   _encode_ActionErrorInfo_errorStatus,
 } from '../CMIP-1/ActionErrorInfo-errorStatus.ta.mjs';
 import {
-  ActionErrorInfo_errorInfo,
+  type ActionErrorInfo_errorInfo,
   _decode_ActionErrorInfo_errorInfo,
   _encode_ActionErrorInfo_errorInfo,
 } from '../CMIP-1/ActionErrorInfo-errorInfo.ta.mjs';

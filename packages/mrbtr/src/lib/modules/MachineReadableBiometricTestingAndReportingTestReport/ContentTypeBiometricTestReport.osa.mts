@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
-import { CONTENT_TYPE } from "../CryptographicMessageSyntax-2009/CONTENT-TYPE.oca.mjs";
+import { type CONTENT_TYPE } from "../CryptographicMessageSyntax-2009/CONTENT-TYPE.oca.mjs";
 import { testReportTechnology } from "../MachineReadableBiometricTestingAndReportingTestReport/testReportTechnology.oa.mjs";
 import { testReportScenario } from "../MachineReadableBiometricTestingAndReportingTestReport/testReportScenario.oa.mjs";
 import { signedTestReport } from "../MachineReadableBiometricTestingAndReportingTestReport/signedTestReport.oa.mjs";

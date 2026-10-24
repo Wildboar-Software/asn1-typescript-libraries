@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  RevocationInfo,
+  type RevocationInfo,
   _decode_RevocationInfo,
   _encode_RevocationInfo,
 } from '../SCVP-2009/RevocationInfo.ta.mjs';

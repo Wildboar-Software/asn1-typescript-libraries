@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    InterchangeControlReferenceField,
+    type InterchangeControlReferenceField,
     _decode_InterchangeControlReferenceField,
     _encode_InterchangeControlReferenceField,
 } from '../EDIMSInformationObjects/InterchangeControlReferenceField.ta.mjs';

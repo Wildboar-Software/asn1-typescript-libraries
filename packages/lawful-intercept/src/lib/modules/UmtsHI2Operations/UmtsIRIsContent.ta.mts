@@ -3,9 +3,9 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { UmtsIRIContent, _decode_UmtsIRIContent, _encode_UmtsIRIContent } from "../UmtsHI2Operations/UmtsIRIContent.ta.mjs";
+import { type UmtsIRIContent, _decode_UmtsIRIContent, _encode_UmtsIRIContent } from "../UmtsHI2Operations/UmtsIRIContent.ta.mjs";
 // export { UmtsIRIContent, _decode_UmtsIRIContent, _encode_UmtsIRIContent } from "../UmtsHI2Operations/UmtsIRIContent.ta.mjs";
-import { UmtsIRISequence, _decode_UmtsIRISequence, _encode_UmtsIRISequence } from "../UmtsHI2Operations/UmtsIRISequence.ta.mjs";
+import { type UmtsIRISequence, _decode_UmtsIRISequence, _encode_UmtsIRISequence } from "../UmtsHI2Operations/UmtsIRISequence.ta.mjs";
 // export { UmtsIRISequence, _decode_UmtsIRISequence, _encode_UmtsIRISequence } from "../UmtsHI2Operations/UmtsIRISequence.ta.mjs";
 
 

@@ -17,7 +17,7 @@ import {
     _encode_AttributeUsage,
 } from '@wildboar/x500/InformationFramework';
 import {
-    AndAttributeIds,
+    type AndAttributeIds,
     _decode_AndAttributeIds,
     _encode_AndAttributeIds,
 } from '../DefinitionASN1Module/AndAttributeIds.ta.mjs';

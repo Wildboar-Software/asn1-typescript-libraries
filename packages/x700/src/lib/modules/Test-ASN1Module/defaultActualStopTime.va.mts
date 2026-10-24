@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    ActualStopTime,
+    type ActualStopTime,
     _decode_ActualStopTime,
     _encode_ActualStopTime,
 } from '../Test-ASN1Module/ActualStopTime.ta.mjs';

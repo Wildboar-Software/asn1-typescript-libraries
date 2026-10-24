@@ -9,7 +9,7 @@ import {
     _decode_NameConstraintsSyntax,
 } from "../../modules/CertificateExtensions/NameConstraintsSyntax.ta.mjs";
 import {
-    AttributeCertificate,
+    type AttributeCertificate,
     _decode_AttributeCertificate,
 } from "../../modules/AttributeCertificateDefinitions/AttributeCertificate.ta.mjs";
 import type {

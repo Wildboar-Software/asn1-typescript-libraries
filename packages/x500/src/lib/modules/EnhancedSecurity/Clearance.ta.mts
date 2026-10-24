@@ -8,7 +8,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ClassList,
+    type ClassList,
     ClassList_unclassified /* IMPORTED_LONG_NAMED_BIT */,
     _decode_ClassList,
     _encode_ClassList,

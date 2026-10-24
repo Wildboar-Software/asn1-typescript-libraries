@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AuthAlgorithm, _decode_AuthAlgorithm, _encode_AuthAlgorithm } from "../WTM-Authentication-Operations-asn1-97/AuthAlgorithm.ta.mjs";
-import { WtatParamInfo_wtatParamInfoChoice, _decode_WtatParamInfo_wtatParamInfoChoice, _encode_WtatParamInfo_wtatParamInfoChoice } from "../WTM-Authentication-Operations-asn1-97/WtatParamInfo-wtatParamInfoChoice.ta.mjs";
+import { type WtatParamInfo_wtatParamInfoChoice, _decode_WtatParamInfo_wtatParamInfoChoice, _encode_WtatParamInfo_wtatParamInfoChoice } from "../WTM-Authentication-Operations-asn1-97/WtatParamInfo-wtatParamInfoChoice.ta.mjs";
 
 /**
  * @summary WtatParamInfo

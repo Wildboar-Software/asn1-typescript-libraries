@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TimeOffer_Item, _decode_TimeOffer_Item, _encode_TimeOffer_Item } from "../DEV/TimeOffer-Item.ta.mjs";
+import { type TimeOffer_Item, _decode_TimeOffer_Item, _encode_TimeOffer_Item } from "../DEV/TimeOffer-Item.ta.mjs";
 
 
 /**

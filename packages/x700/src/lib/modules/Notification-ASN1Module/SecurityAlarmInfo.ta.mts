@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SecurityAlarmCause,
+    type SecurityAlarmCause,
     _decode_SecurityAlarmCause,
     _encode_SecurityAlarmCause,
 } from '@wildboar/attribute-asn1module';
 import {
-    SecurityAlarmSeverity,
+    type SecurityAlarmSeverity,
     _decode_SecurityAlarmSeverity,
     _encode_SecurityAlarmSeverity,
 } from '@wildboar/attribute-asn1module';
 import {
-    SecurityAlarmDetector,
+    type SecurityAlarmDetector,
     _decode_SecurityAlarmDetector,
     _encode_SecurityAlarmDetector,
 } from '@wildboar/attribute-asn1module';
@@ -32,27 +32,27 @@ import {
     _encode_ServiceUser,
 } from '@wildboar/attribute-asn1module';
 import {
-    ServiceProvider,
+    type ServiceProvider,
     _decode_ServiceProvider,
     _encode_ServiceProvider,
 } from '@wildboar/attribute-asn1module';
 import {
-    NotificationIdentifier,
+    type NotificationIdentifier,
     _decode_NotificationIdentifier,
     _encode_NotificationIdentifier,
 } from '@wildboar/attribute-asn1module';
 import {
-    CorrelatedNotifications,
+    type CorrelatedNotifications,
     _decode_CorrelatedNotifications,
     _encode_CorrelatedNotifications,
 } from '@wildboar/attribute-asn1module';
 import {
-    AdditionalText,
+    type AdditionalText,
     _decode_AdditionalText,
     _encode_AdditionalText,
 } from '@wildboar/attribute-asn1module';
 import {
-    AdditionalInformation,
+    type AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
 } from '@wildboar/attribute-asn1module';

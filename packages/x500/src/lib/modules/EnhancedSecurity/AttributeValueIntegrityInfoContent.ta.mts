@@ -6,12 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AVIHash,
+    type AVIHash,
     _decode_AVIHash,
     _encode_AVIHash,
 } from "../EnhancedSecurity/AVIHash.ta.mjs";
 import {
-    Signer,
+    type Signer,
     _decode_Signer,
     _encode_Signer,
 } from "../EnhancedSecurity/Signer.ta.mjs";

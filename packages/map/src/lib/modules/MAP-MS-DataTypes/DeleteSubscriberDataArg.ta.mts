@@ -1,20 +1,20 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
+import { type IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { BasicServiceList, _decode_BasicServiceList, _encode_BasicServiceList } from "../MAP-MS-DataTypes/BasicServiceList.ta.mjs";
-import { EPS_SubscriptionDataWithdraw, _decode_EPS_SubscriptionDataWithdraw, _encode_EPS_SubscriptionDataWithdraw } from "../MAP-MS-DataTypes/EPS-SubscriptionDataWithdraw.ta.mjs";
-import { GPRSSubscriptionDataWithdraw, _decode_GPRSSubscriptionDataWithdraw, _encode_GPRSSubscriptionDataWithdraw } from "../MAP-MS-DataTypes/GPRSSubscriptionDataWithdraw.ta.mjs";
-import { LSAInformationWithdraw, _decode_LSAInformationWithdraw, _encode_LSAInformationWithdraw } from "../MAP-MS-DataTypes/LSAInformationWithdraw.ta.mjs";
-import { SpecificCSI_Withdraw, _decode_SpecificCSI_Withdraw, _encode_SpecificCSI_Withdraw } from "../MAP-MS-DataTypes/SpecificCSI-Withdraw.ta.mjs";
-import { ZoneCode, _decode_ZoneCode, _encode_ZoneCode } from "../MAP-MS-DataTypes/ZoneCode.ta.mjs";
-import { SS_List, _decode_SS_List, _encode_SS_List } from "../MAP-SS-DataTypes/SS-List.ta.mjs";
+import { type BasicServiceList, _decode_BasicServiceList, _encode_BasicServiceList } from "../MAP-MS-DataTypes/BasicServiceList.ta.mjs";
+import { type EPS_SubscriptionDataWithdraw, _decode_EPS_SubscriptionDataWithdraw, _encode_EPS_SubscriptionDataWithdraw } from "../MAP-MS-DataTypes/EPS-SubscriptionDataWithdraw.ta.mjs";
+import { type GPRSSubscriptionDataWithdraw, _decode_GPRSSubscriptionDataWithdraw, _encode_GPRSSubscriptionDataWithdraw } from "../MAP-MS-DataTypes/GPRSSubscriptionDataWithdraw.ta.mjs";
+import { type LSAInformationWithdraw, _decode_LSAInformationWithdraw, _encode_LSAInformationWithdraw } from "../MAP-MS-DataTypes/LSAInformationWithdraw.ta.mjs";
+import { type SpecificCSI_Withdraw, _decode_SpecificCSI_Withdraw, _encode_SpecificCSI_Withdraw } from "../MAP-MS-DataTypes/SpecificCSI-Withdraw.ta.mjs";
+import { type ZoneCode, _decode_ZoneCode, _encode_ZoneCode } from "../MAP-MS-DataTypes/ZoneCode.ta.mjs";
+import { type SS_List, _decode_SS_List, _encode_SS_List } from "../MAP-SS-DataTypes/SS-List.ta.mjs";
 
 
 /**

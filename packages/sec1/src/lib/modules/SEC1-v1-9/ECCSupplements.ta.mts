@@ -11,7 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NamedMultiples, _decode_NamedMultiples, _encode_NamedMultiples } from "../SEC1-v1-9/NamedMultiples.ta.mjs";
-import { SpecifiedMultiples, _decode_SpecifiedMultiples, _encode_SpecifiedMultiples } from "../SEC1-v1-9/SpecifiedMultiples.ta.mjs";
+import { type SpecifiedMultiples, _decode_SpecifiedMultiples, _encode_SpecifiedMultiples } from "../SEC1-v1-9/SpecifiedMultiples.ta.mjs";
 /**
  * @summary ECCSupplements
  * @description

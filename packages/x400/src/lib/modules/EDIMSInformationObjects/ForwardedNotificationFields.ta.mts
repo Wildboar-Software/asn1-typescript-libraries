@@ -17,22 +17,22 @@ import {
     _encode_CommonFields,
 } from '../EDIMSInformationObjects/CommonFields.ta.mjs';
 import {
-    ForwardedTo,
+    type ForwardedTo,
     _decode_ForwardedTo,
     _encode_ForwardedTo,
 } from '../EDIMSInformationObjects/ForwardedTo.ta.mjs';
 import {
-    FNReasonCodeField,
+    type FNReasonCodeField,
     _decode_FNReasonCodeField,
     _encode_FNReasonCodeField,
 } from '../EDIMSInformationObjects/FNReasonCodeField.ta.mjs';
 import {
-    EDISupplementaryInformation,
+    type EDISupplementaryInformation,
     _decode_EDISupplementaryInformation,
     _encode_EDISupplementaryInformation,
 } from '../EDIMSInformationObjects/EDISupplementaryInformation.ta.mjs';
 import {
-    FNExtensionsField,
+    type FNExtensionsField,
     _decode_FNExtensionsField,
     _encode_FNExtensionsField,
 } from '../EDIMSInformationObjects/FNExtensionsField.ta.mjs';

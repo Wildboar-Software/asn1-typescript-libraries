@@ -12,7 +12,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { ECPrivateKey, _decode_ECPrivateKey, _encode_ECPrivateKey } from "../SEC1-v1-9/ECPrivateKey.ta.mjs";
 import { SubjectPublicKeyInfo, _decode_SubjectPublicKeyInfo, _encode_SubjectPublicKeyInfo } from "../SEC1-v1-9/SubjectPublicKeyInfo.ta.mjs";
-import { ECDSA_Signature, _decode_ECDSA_Signature, _encode_ECDSA_Signature } from "../SEC1-v1-9/ECDSA-Signature.ta.mjs";
+import { type ECDSA_Signature, _decode_ECDSA_Signature, _encode_ECDSA_Signature } from "../SEC1-v1-9/ECDSA-Signature.ta.mjs";
 import { ECIES_Ciphertext_Value, _decode_ECIES_Ciphertext_Value, _encode_ECIES_Ciphertext_Value } from "../SEC1-v1-9/ECIES-Ciphertext-Value.ta.mjs";
 import { ASN1SharedInfo, _decode_ASN1SharedInfo, _encode_ASN1SharedInfo } from "../SEC1-v1-9/ASN1SharedInfo.ta.mjs";
 /**

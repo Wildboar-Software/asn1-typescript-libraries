@@ -10,9 +10,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { NumberOfDigits, _decode_NumberOfDigits, _encode_NumberOfDigits } from "../IN-CS2-datatypes/NumberOfDigits.ta.mjs";
-import { ApplicationTimer, _decode_ApplicationTimer, _encode_ApplicationTimer } from "../IN-CS2-datatypes/ApplicationTimer.ta.mjs";
-import { MidCallControlInfo, _decode_MidCallControlInfo, _encode_MidCallControlInfo } from "../IN-CS2-datatypes/MidCallControlInfo.ta.mjs";
+import { type NumberOfDigits, _decode_NumberOfDigits, _encode_NumberOfDigits } from "../IN-CS2-datatypes/NumberOfDigits.ta.mjs";
+import { type ApplicationTimer, _decode_ApplicationTimer, _encode_ApplicationTimer } from "../IN-CS2-datatypes/ApplicationTimer.ta.mjs";
+import { type MidCallControlInfo, _decode_MidCallControlInfo, _encode_MidCallControlInfo } from "../IN-CS2-datatypes/MidCallControlInfo.ta.mjs";
 
 
 /**

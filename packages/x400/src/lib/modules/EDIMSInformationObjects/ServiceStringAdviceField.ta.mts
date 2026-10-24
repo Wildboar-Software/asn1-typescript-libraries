@@ -12,32 +12,32 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ComponentDataElementSeparator,
+    type ComponentDataElementSeparator,
     _decode_ComponentDataElementSeparator,
     _encode_ComponentDataElementSeparator,
 } from '../EDIMSInformationObjects/ComponentDataElementSeparator.ta.mjs';
 import {
-    DataElementSeparator,
+    type DataElementSeparator,
     _decode_DataElementSeparator,
     _encode_DataElementSeparator,
 } from '../EDIMSInformationObjects/DataElementSeparator.ta.mjs';
 import {
-    DecimalNotation,
+    type DecimalNotation,
     _decode_DecimalNotation,
     _encode_DecimalNotation,
 } from '../EDIMSInformationObjects/DecimalNotation.ta.mjs';
 import {
-    ReleaseIndicator,
+    type ReleaseIndicator,
     _decode_ReleaseIndicator,
     _encode_ReleaseIndicator,
 } from '../EDIMSInformationObjects/ReleaseIndicator.ta.mjs';
 import {
-    Reserved,
+    type Reserved,
     _decode_Reserved,
     _encode_Reserved,
 } from '../EDIMSInformationObjects/Reserved.ta.mjs';
 import {
-    SegmentTerminator,
+    type SegmentTerminator,
     _decode_SegmentTerminator,
     _encode_SegmentTerminator,
 } from '../EDIMSInformationObjects/SegmentTerminator.ta.mjs';

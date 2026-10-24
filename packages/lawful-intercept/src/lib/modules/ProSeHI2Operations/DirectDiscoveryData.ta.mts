@@ -9,7 +9,7 @@ import {
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ProSeAppMask, _decode_ProSeAppMask, _encode_ProSeAppMask } from "../ProSeHI2Operations/ProSeAppMask.ta.mjs";
+import { type ProSeAppMask, _decode_ProSeAppMask, _encode_ProSeAppMask } from "../ProSeHI2Operations/ProSeAppMask.ta.mjs";
 // export { ProSeAppMask, _decode_ProSeAppMask, _encode_ProSeAppMask } from "../ProSeHI2Operations/ProSeAppMask.ta.mjs";
 
 

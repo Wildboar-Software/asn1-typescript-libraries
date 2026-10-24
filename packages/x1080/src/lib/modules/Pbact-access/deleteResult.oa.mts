@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    DeleteResult,
+    type DeleteResult,
     _decode_DeleteResult,
     _encode_DeleteResult,
 } from '../Pbact-access/DeleteResult.ta.mjs';

@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  INTEGER,
-  OCTET_STRING,
-  UTF8String,
-  GeneralizedTime,
+  type OPTIONAL,
+  type INTEGER,
+  type OCTET_STRING,
+  type UTF8String,
+  type GeneralizedTime,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -21,12 +21,12 @@ import {
   _encode_ResponseStatus,
 } from '../SCVP-2009/ResponseStatus.ta.mjs';
 import {
-  RespValidationPolicy,
+  type RespValidationPolicy,
   _decode_RespValidationPolicy,
   _encode_RespValidationPolicy,
 } from '../SCVP-2009/RespValidationPolicy.ta.mjs';
 import {
-  RequestReference,
+  type RequestReference,
   _decode_RequestReference,
   _encode_RequestReference,
 } from '../SCVP-2009/RequestReference.ta.mjs';
@@ -36,7 +36,7 @@ import {
   _encode_GeneralNames,
 } from '@wildboar/gn';
 import {
-  ReplyObjects,
+  type ReplyObjects,
   _decode_ReplyObjects,
   _encode_ReplyObjects,
 } from '../SCVP-2009/ReplyObjects.ta.mjs';

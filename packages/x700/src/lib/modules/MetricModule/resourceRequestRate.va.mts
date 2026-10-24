@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    SpecificIdentifier,
+    type SpecificIdentifier,
     _decode_SpecificIdentifier,
     _encode_SpecificIdentifier,
 } from '@wildboar/attribute-asn1module';

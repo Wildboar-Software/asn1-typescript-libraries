@@ -5,12 +5,12 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PumDe_regArg_pumUserId, _decode_PumDe_regArg_pumUserId, _encode_PumDe_regArg_pumUserId } from "../PUM-Registration-Operations-asn1-97/PumDe-regArg-pumUserId.ta.mjs";
+import { type PumDe_regArg_pumUserId, _decode_PumDe_regArg_pumUserId, _encode_PumDe_regArg_pumUserId } from "../PUM-Registration-Operations-asn1-97/PumDe-regArg-pumUserId.ta.mjs";
 import { BasicService, _decode_BasicService, _encode_BasicService, _enum_for_BasicService } from "../Call-Diversion-Operations-asn1-97/BasicService.ta.mjs";
-import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
+import { type PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { ServiceOption, ServiceOption_inCallRegistration /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_ServiceOption, _encode_ServiceOption, _enum_for_ServiceOption } from "../PUM-Registration-Operations-asn1-97/ServiceOption.ta.mjs";
-import { PumDe_regArg_userPin, _decode_PumDe_regArg_userPin, _encode_PumDe_regArg_userPin } from "../PUM-Registration-Operations-asn1-97/PumDe-regArg-userPin.ta.mjs";
-import { PumrExtension, _decode_PumrExtension, _encode_PumrExtension } from "../PUM-Registration-Operations-asn1-97/PumrExtension.ta.mjs";
+import { type PumDe_regArg_userPin, _decode_PumDe_regArg_userPin, _encode_PumDe_regArg_userPin } from "../PUM-Registration-Operations-asn1-97/PumDe-regArg-userPin.ta.mjs";
+import { type PumrExtension, _decode_PumrExtension, _encode_PumrExtension } from "../PUM-Registration-Operations-asn1-97/PumrExtension.ta.mjs";
 
 /**
  * @summary PumDe_regArg

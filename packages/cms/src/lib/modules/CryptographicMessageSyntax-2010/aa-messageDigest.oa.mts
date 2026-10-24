@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { id_messageDigest } from "../CryptographicMessageSyntax-2010/id-messageDigest.va.mjs";
 import {
-    MessageDigest,
+    type MessageDigest,
     _decode_MessageDigest,
     _encode_MessageDigest,
 } from "../CryptographicMessageSyntax-2010/MessageDigest.ta.mjs";

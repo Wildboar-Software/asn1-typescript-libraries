@@ -11,17 +11,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SessionType,
+    type SessionType,
     _decode_SessionType,
     _encode_SessionType,
 } from '../E-health-common/SessionType.ta.mjs';
 import {
-    SessionId,
+    type SessionId,
     _decode_SessionId,
     _encode_SessionId,
 } from '../E-health-common/SessionId.ta.mjs';
 import {
-    SetupError,
+    type SetupError,
     _enum_for_SetupError,
     _decode_SetupError,
     _encode_SetupError,

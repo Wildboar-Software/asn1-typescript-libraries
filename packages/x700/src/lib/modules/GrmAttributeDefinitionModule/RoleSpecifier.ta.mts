@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Identifier,
+    type Identifier,
     _decode_Identifier,
     _encode_Identifier,
 } from '../DefinitionASN1Module/Identifier.ta.mjs';
@@ -27,12 +27,12 @@ import {
     _encode_DefinedType,
 } from '../DefinitionASN1Module/DefinedType.ta.mjs';
 import {
-    OptionalIdentifier,
+    type OptionalIdentifier,
     _decode_OptionalIdentifier,
     _encode_OptionalIdentifier,
 } from '../GrmAttributeDefinitionModule/OptionalIdentifier.ta.mjs';
 import {
-    OptionallyRegisteredAs,
+    type OptionallyRegisteredAs,
     _decode_OptionallyRegisteredAs,
     _encode_OptionallyRegisteredAs,
 } from '../DefinitionASN1Module/OptionallyRegisteredAs.ta.mjs';

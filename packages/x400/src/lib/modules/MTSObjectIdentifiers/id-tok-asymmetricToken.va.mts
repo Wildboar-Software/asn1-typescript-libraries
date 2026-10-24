@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { ID, _decode_ID, _encode_ID } from '../MTSObjectIdentifiers/ID.ta.mjs';
+import { type ID, _decode_ID, _encode_ID } from '../MTSObjectIdentifiers/ID.ta.mjs';
 import { id_tok } from '../MTSObjectIdentifiers/id-tok.va.mjs';
 /**
  * @summary id_tok_asymmetricToken

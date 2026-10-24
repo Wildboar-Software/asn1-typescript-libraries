@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  ObjectClass,
+  type ObjectClass,
   _decode_ObjectClass,
   _encode_ObjectClass,
 } from '../CMIP-1/ObjectClass.ta.mjs';
 import {
-    ActionTypeId,
+    type ActionTypeId,
     _decode_ActionTypeId,
     _encode_ActionTypeId,
 } from '../CMIP-1/ActionTypeId.ta.mjs';

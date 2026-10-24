@@ -7,7 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ObjectIdName,
+    type ObjectIdName,
     _decode_ObjectIdName,
     _encode_ObjectIdName,
 } from "../SIOsAccessControl-MODULE/ObjectIdName.ta.mjs";

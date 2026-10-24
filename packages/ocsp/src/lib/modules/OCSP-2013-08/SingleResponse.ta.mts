@@ -2,12 +2,12 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    GeneralizedTime,
+    type GeneralizedTime,
     type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Extensions,
+    type Extensions,
     _decode_Extensions,
     _encode_Extensions,
 } from "@wildboar/pki-stub";
@@ -17,7 +17,7 @@ import {
     _encode_CertID,
 } from "../OCSP-2013-08/CertID.ta.mjs";
 import {
-    CertStatus,
+    type CertStatus,
     _decode_CertStatus,
     _encode_CertStatus,
 } from "../OCSP-2013-08/CertStatus.ta.mjs";

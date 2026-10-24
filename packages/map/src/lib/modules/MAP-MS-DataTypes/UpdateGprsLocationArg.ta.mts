@@ -1,24 +1,24 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DiameterIdentity, _decode_DiameterIdentity, _encode_DiameterIdentity } from "../MAP-CommonDataTypes/DiameterIdentity.ta.mjs";
-import { GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../MAP-CommonDataTypes/GSN-Address.ta.mjs";
-import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type DiameterIdentity, _decode_DiameterIdentity, _encode_DiameterIdentity } from "../MAP-CommonDataTypes/DiameterIdentity.ta.mjs";
+import { type GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../MAP-CommonDataTypes/GSN-Address.ta.mjs";
+import { type IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { ADD_Info, _decode_ADD_Info, _encode_ADD_Info } from "../MAP-MS-DataTypes/ADD-Info.ta.mjs";
-import { AdjacentPLMN_List, _decode_AdjacentPLMN_List, _encode_AdjacentPLMN_List } from "../MAP-MS-DataTypes/AdjacentPLMN-List.ta.mjs";
-import { EPLMN_List, _decode_EPLMN_List, _encode_EPLMN_List } from "../MAP-MS-DataTypes/EPLMN-List.ta.mjs";
-import { EPS_Info, _decode_EPS_Info, _encode_EPS_Info } from "../MAP-MS-DataTypes/EPS-Info.ta.mjs";
+import { type AdjacentPLMN_List, _decode_AdjacentPLMN_List, _encode_AdjacentPLMN_List } from "../MAP-MS-DataTypes/AdjacentPLMN-List.ta.mjs";
+import { type EPLMN_List, _decode_EPLMN_List, _encode_EPLMN_List } from "../MAP-MS-DataTypes/EPLMN-List.ta.mjs";
+import { type EPS_Info, _decode_EPS_Info, _encode_EPS_Info } from "../MAP-MS-DataTypes/EPS-Info.ta.mjs";
 import { SGSN_Capability, _decode_SGSN_Capability, _encode_SGSN_Capability } from "../MAP-MS-DataTypes/SGSN-Capability.ta.mjs";
-import { SMSRegisterRequest, _decode_SMSRegisterRequest, _encode_SMSRegisterRequest, _enum_for_SMSRegisterRequest } from "../MAP-MS-DataTypes/SMSRegisterRequest.ta.mjs";
-import { UE_SRVCC_Capability, _decode_UE_SRVCC_Capability, _encode_UE_SRVCC_Capability, _enum_for_UE_SRVCC_Capability } from "../MAP-MS-DataTypes/UE-SRVCC-Capability.ta.mjs";
-import { Used_RAT_Type, _decode_Used_RAT_Type, _encode_Used_RAT_Type, _enum_for_Used_RAT_Type } from "../MAP-MS-DataTypes/Used-RAT-Type.ta.mjs";
+import { type SMSRegisterRequest, _decode_SMSRegisterRequest, _encode_SMSRegisterRequest, _enum_for_SMSRegisterRequest } from "../MAP-MS-DataTypes/SMSRegisterRequest.ta.mjs";
+import { type UE_SRVCC_Capability, _decode_UE_SRVCC_Capability, _encode_UE_SRVCC_Capability, _enum_for_UE_SRVCC_Capability } from "../MAP-MS-DataTypes/UE-SRVCC-Capability.ta.mjs";
+import { type Used_RAT_Type, _decode_Used_RAT_Type, _encode_Used_RAT_Type, _enum_for_Used_RAT_Type } from "../MAP-MS-DataTypes/Used-RAT-Type.ta.mjs";
 
 
 /**

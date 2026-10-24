@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Attribute,
+  type Attribute,
   _decode_Attribute,
   _encode_Attribute,
 } from '../Lightweight-Directory-Access-Protocol-V3/Attribute.ta.mjs';

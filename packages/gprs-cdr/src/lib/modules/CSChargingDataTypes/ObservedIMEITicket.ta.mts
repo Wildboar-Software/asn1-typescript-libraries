@@ -9,7 +9,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { IMEIStatus, _decode_IMEIStatus, _encode_IMEIStatus, _enum_for_IMEIStatus } from "../CSChargingDataTypes/IMEIStatus.ta.mjs";
 import { LocationAreaAndCell, _decode_LocationAreaAndCell, _encode_LocationAreaAndCell } from "../CSChargingDataTypes/LocationAreaAndCell.ta.mjs";
-import { ObservedIMEITicket_imeiCheckEvent, _decode_ObservedIMEITicket_imeiCheckEvent, _encode_ObservedIMEITicket_imeiCheckEvent } from "../CSChargingDataTypes/ObservedIMEITicket-imeiCheckEvent.ta.mjs";
+import { type ObservedIMEITicket_imeiCheckEvent, _decode_ObservedIMEITicket_imeiCheckEvent, _encode_ObservedIMEITicket_imeiCheckEvent } from "../CSChargingDataTypes/ObservedIMEITicket-imeiCheckEvent.ta.mjs";
 import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExtension } from "../CSChargingDataTypes/ManagementExtension.ta.mjs";
 
 

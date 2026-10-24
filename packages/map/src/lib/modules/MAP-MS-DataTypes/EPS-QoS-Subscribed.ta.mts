@@ -7,7 +7,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { Allocation_Retention_Priority, _decode_Allocation_Retention_Priority, _encode_Allocation_Retention_Priority } from "../MAP-MS-DataTypes/Allocation-Retention-Priority.ta.mjs";
-import { QoS_Class_Identifier, _decode_QoS_Class_Identifier, _encode_QoS_Class_Identifier } from "../MAP-MS-DataTypes/QoS-Class-Identifier.ta.mjs";
+import { type QoS_Class_Identifier, _decode_QoS_Class_Identifier, _encode_QoS_Class_Identifier } from "../MAP-MS-DataTypes/QoS-Class-Identifier.ta.mjs";
 
 
 /**

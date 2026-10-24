@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { UnknownSubscriberDiagnostic, _decode_UnknownSubscriberDiagnostic, _encode_UnknownSubscriberDiagnostic, _enum_for_UnknownSubscriberDiagnostic } from "../MAP-ER-DataTypes/UnknownSubscriberDiagnostic.ta.mjs";
+import { type UnknownSubscriberDiagnostic, _decode_UnknownSubscriberDiagnostic, _encode_UnknownSubscriberDiagnostic, _enum_for_UnknownSubscriberDiagnostic } from "../MAP-ER-DataTypes/UnknownSubscriberDiagnostic.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 

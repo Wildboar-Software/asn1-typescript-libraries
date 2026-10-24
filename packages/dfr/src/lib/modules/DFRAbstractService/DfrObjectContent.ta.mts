@@ -10,10 +10,10 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DfrDocumentContent, _decode_DfrDocumentContent, _encode_DfrDocumentContent } from "../DFRAbstractService/DfrDocumentContent.ta.mjs";
-import { DfrGroupContent, _decode_DfrGroupContent, _encode_DfrGroupContent } from "../DFRAbstractService/DfrGroupContent.ta.mjs";
-import { DfrReferenceContent, _decode_DfrReferenceContent, _encode_DfrReferenceContent } from "../DFRAbstractService/DfrReferenceContent.ta.mjs";
-import { DfrSearchResultListContent, _decode_DfrSearchResultListContent, _encode_DfrSearchResultListContent } from "../DFRAbstractService/DfrSearchResultListContent.ta.mjs";
+import { type DfrDocumentContent, _decode_DfrDocumentContent, _encode_DfrDocumentContent } from "../DFRAbstractService/DfrDocumentContent.ta.mjs";
+import { type DfrGroupContent, _decode_DfrGroupContent, _encode_DfrGroupContent } from "../DFRAbstractService/DfrGroupContent.ta.mjs";
+import { type DfrReferenceContent, _decode_DfrReferenceContent, _encode_DfrReferenceContent } from "../DFRAbstractService/DfrReferenceContent.ta.mjs";
+import { type DfrSearchResultListContent, _decode_DfrSearchResultListContent, _encode_DfrSearchResultListContent } from "../DFRAbstractService/DfrSearchResultListContent.ta.mjs";
 
 
 /**

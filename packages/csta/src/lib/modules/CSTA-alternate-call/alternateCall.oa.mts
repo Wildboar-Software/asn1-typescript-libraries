@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { AlternateCallArgument, _decode_AlternateCallArgument, _encode_AlternateCallArgument } from "../CSTA-alternate-call/AlternateCallArgument.ta.mjs";
 
-import { AlternateCallResult, _decode_AlternateCallResult, _encode_AlternateCallResult } from "../CSTA-alternate-call/AlternateCallResult.ta.mjs";
+import { type AlternateCallResult, _decode_AlternateCallResult, _encode_AlternateCallResult } from "../CSTA-alternate-call/AlternateCallResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

@@ -13,7 +13,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { Compression_Item_compressionNegotiationResult, _enum_for_Compression_Item_compressionNegotiationResult, _decode_Compression_Item_compressionNegotiationResult, _encode_Compression_Item_compressionNegotiationResult } from "../V59/Compression-Item-compressionNegotiationResult.ta.mjs";
 
-import { Capabilities, _decode_Capabilities, _encode_Capabilities } from "../V59/Capabilities.ta.mjs";
+import { type Capabilities, _decode_Capabilities, _encode_Capabilities } from "../V59/Capabilities.ta.mjs";
 
 import { Compression_Item_v42bisCompressionActive, _enum_for_Compression_Item_v42bisCompressionActive, _decode_Compression_Item_v42bisCompressionActive, _encode_Compression_Item_v42bisCompressionActive } from "../V59/Compression-Item-v42bisCompressionActive.ta.mjs";
 

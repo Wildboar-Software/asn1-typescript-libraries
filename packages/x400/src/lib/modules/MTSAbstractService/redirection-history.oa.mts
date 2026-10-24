@@ -18,7 +18,7 @@ import {
     _encode_Criticality,
 } from '../MTSAbstractService/Criticality.ta.mjs';
 import {
-    RedirectionHistory,
+    type RedirectionHistory,
     _decode_RedirectionHistory,
     _encode_RedirectionHistory,
 } from '../MTSAbstractService/RedirectionHistory.ta.mjs';

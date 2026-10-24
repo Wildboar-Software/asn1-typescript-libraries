@@ -9,17 +9,17 @@ import {
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
+import { type LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
 // export { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
-import { VoipCorrelationNumber, _decode_VoipCorrelationNumber, _encode_VoipCorrelationNumber } from "../VoIP-HI3-IMS/VoipCorrelationNumber.ta.mjs";
+import { type VoipCorrelationNumber, _decode_VoipCorrelationNumber, _encode_VoipCorrelationNumber } from "../VoIP-HI3-IMS/VoipCorrelationNumber.ta.mjs";
 // export { VoipCorrelationNumber, _decode_VoipCorrelationNumber, _encode_VoipCorrelationNumber } from "../VoIP-HI3-IMS/VoipCorrelationNumber.ta.mjs";
-import { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
+import { type TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
 // export { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
 import { TPDU_direction, _decode_TPDU_direction, _encode_TPDU_direction, _enum_for_TPDU_direction } from "../VoIP-HI3-IMS/TPDU-direction.ta.mjs";
 // export { TPDU_direction, _enum_for_TPDU_direction, TPDU_direction_from_target /* IMPORTED_LONG_ENUMERATION_ITEM */, from_target /* IMPORTED_SHORT_ENUMERATION_ITEM */, TPDU_direction_to_target /* IMPORTED_LONG_ENUMERATION_ITEM */, to_target /* IMPORTED_SHORT_ENUMERATION_ITEM */, TPDU_direction_combined /* IMPORTED_LONG_ENUMERATION_ITEM */, combined /* IMPORTED_SHORT_ENUMERATION_ITEM */, TPDU_direction_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_TPDU_direction, _encode_TPDU_direction } from "../VoIP-HI3-IMS/TPDU-direction.ta.mjs";
 import { National_HI3_ASN1parameters, _decode_National_HI3_ASN1parameters, _encode_National_HI3_ASN1parameters } from "../Eps-HI3-PS/National-HI3-ASN1parameters.ta.mjs";
 // export { National_HI3_ASN1parameters, _decode_National_HI3_ASN1parameters, _encode_National_HI3_ASN1parameters } from "../Eps-HI3-PS/National-HI3-ASN1parameters.ta.mjs";
-import { ICE_type, _decode_ICE_type, _encode_ICE_type, _enum_for_ICE_type } from "../VoIP-HI3-IMS/ICE-type.ta.mjs";
+import { type ICE_type, _decode_ICE_type, _encode_ICE_type, _enum_for_ICE_type } from "../VoIP-HI3-IMS/ICE-type.ta.mjs";
 // export { ICE_type, _enum_for_ICE_type, ICE_type_ggsn /* IMPORTED_LONG_ENUMERATION_ITEM */, ggsn /* IMPORTED_SHORT_ENUMERATION_ITEM */, ICE_type_pDN_GW /* IMPORTED_LONG_ENUMERATION_ITEM */, pDN_GW /* IMPORTED_SHORT_ENUMERATION_ITEM */, ICE_type_aGW /* IMPORTED_LONG_ENUMERATION_ITEM */, aGW /* IMPORTED_SHORT_ENUMERATION_ITEM */, ICE_type_trGW /* IMPORTED_LONG_ENUMERATION_ITEM */, trGW /* IMPORTED_SHORT_ENUMERATION_ITEM */, ICE_type_mGW /* IMPORTED_LONG_ENUMERATION_ITEM */, mGW /* IMPORTED_SHORT_ENUMERATION_ITEM */, ICE_type_other /* IMPORTED_LONG_ENUMERATION_ITEM */, other /* IMPORTED_SHORT_ENUMERATION_ITEM */, ICE_type_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, ICE_type_mRF /* IMPORTED_LONG_ENUMERATION_ITEM */, mRF /* IMPORTED_SHORT_ENUMERATION_ITEM */, ICE_type_lmISF /* IMPORTED_LONG_ENUMERATION_ITEM */, lmISF /* IMPORTED_SHORT_ENUMERATION_ITEM */, ICE_type_sGW /* IMPORTED_LONG_ENUMERATION_ITEM */, sGW /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ICE_type, _encode_ICE_type } from "../VoIP-HI3-IMS/ICE-type.ta.mjs";
 import { Payload_description, _decode_Payload_description, _encode_Payload_description } from "../VoIP-HI3-IMS/Payload-description.ta.mjs";
 // export { Payload_description, _decode_Payload_description, _encode_Payload_description } from "../VoIP-HI3-IMS/Payload-description.ta.mjs";

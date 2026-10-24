@@ -6,7 +6,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EnableProfileRequest_profileIdentifier, _decode_EnableProfileRequest_profileIdentifier, _encode_EnableProfileRequest_profileIdentifier } from "../RSPDefinitions/EnableProfileRequest-profileIdentifier.ta.mjs";
+import { type EnableProfileRequest_profileIdentifier, _decode_EnableProfileRequest_profileIdentifier, _encode_EnableProfileRequest_profileIdentifier } from "../RSPDefinitions/EnableProfileRequest-profileIdentifier.ta.mjs";
 
 
 /**

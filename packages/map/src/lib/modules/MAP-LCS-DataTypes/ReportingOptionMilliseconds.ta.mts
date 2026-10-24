@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ReportingAmountMilliseconds, _decode_ReportingAmountMilliseconds, _encode_ReportingAmountMilliseconds } from "../MAP-LCS-DataTypes/ReportingAmountMilliseconds.ta.mjs";
-import { ReportingIntervalMilliseconds, _decode_ReportingIntervalMilliseconds, _encode_ReportingIntervalMilliseconds } from "../MAP-LCS-DataTypes/ReportingIntervalMilliseconds.ta.mjs";
+import { type ReportingAmountMilliseconds, _decode_ReportingAmountMilliseconds, _encode_ReportingAmountMilliseconds } from "../MAP-LCS-DataTypes/ReportingAmountMilliseconds.ta.mjs";
+import { type ReportingIntervalMilliseconds, _decode_ReportingIntervalMilliseconds, _encode_ReportingIntervalMilliseconds } from "../MAP-LCS-DataTypes/ReportingIntervalMilliseconds.ta.mjs";
 
 
 /**

@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    DeliverId,
+    type DeliverId,
     _decode_DeliverId,
     _encode_DeliverId,
 } from '../SWMF/DeliverId.ta.mjs';
 import {
-    DeliverResult,
+    type DeliverResult,
     _decode_DeliverResult,
     _encode_DeliverResult,
 } from '../SWMF/DeliverResult.ta.mjs';

@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    IncompleteCopy,
+    type IncompleteCopy,
     _decode_IncompleteCopy,
     _encode_IncompleteCopy,
 } from '../IPMSHeadingExtensions/IncompleteCopy.ta.mjs';

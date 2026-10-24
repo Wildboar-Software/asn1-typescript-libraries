@@ -7,7 +7,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DefaultDiagFormat_addinfo, _decode_DefaultDiagFormat_addinfo, _encode_DefaultDiagFormat_addinfo } from "../Z39-50-APDU-2001/DefaultDiagFormat-addinfo.ta.mjs";
+import { type DefaultDiagFormat_addinfo, _decode_DefaultDiagFormat_addinfo, _encode_DefaultDiagFormat_addinfo } from "../Z39-50-APDU-2001/DefaultDiagFormat-addinfo.ta.mjs";
 
 
 /**

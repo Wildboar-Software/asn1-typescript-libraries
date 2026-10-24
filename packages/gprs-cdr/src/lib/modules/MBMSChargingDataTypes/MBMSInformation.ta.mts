@@ -8,11 +8,11 @@ import {
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MBMSInformation_mBMSServiceType, _decode_MBMSInformation_mBMSServiceType, _encode_MBMSInformation_mBMSServiceType, _enum_for_MBMSInformation_mBMSServiceType } from "../MBMSChargingDataTypes/MBMSInformation-mBMSServiceType.ta.mjs";
-import { MBMSInformation_mBMSUserServiceType, _decode_MBMSInformation_mBMSUserServiceType, _encode_MBMSInformation_mBMSUserServiceType, _enum_for_MBMSInformation_mBMSUserServiceType } from "../MBMSChargingDataTypes/MBMSInformation-mBMSUserServiceType.ta.mjs";
-import { MBMSInformation_mBMS2G3GIndicator, _decode_MBMSInformation_mBMS2G3GIndicator, _encode_MBMSInformation_mBMS2G3GIndicator, _enum_for_MBMSInformation_mBMS2G3GIndicator } from "../MBMSChargingDataTypes/MBMSInformation-mBMS2G3GIndicator.ta.mjs";
-import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../MBMSChargingDataTypes/IPAddress.ta.mjs";
-import { MBMSInformation_cNIPMulticastDistribution, _decode_MBMSInformation_cNIPMulticastDistribution, _encode_MBMSInformation_cNIPMulticastDistribution, _enum_for_MBMSInformation_cNIPMulticastDistribution } from "../MBMSChargingDataTypes/MBMSInformation-cNIPMulticastDistribution.ta.mjs";
+import { type MBMSInformation_mBMSServiceType, _decode_MBMSInformation_mBMSServiceType, _encode_MBMSInformation_mBMSServiceType, _enum_for_MBMSInformation_mBMSServiceType } from "../MBMSChargingDataTypes/MBMSInformation-mBMSServiceType.ta.mjs";
+import { type MBMSInformation_mBMSUserServiceType, _decode_MBMSInformation_mBMSUserServiceType, _encode_MBMSInformation_mBMSUserServiceType, _enum_for_MBMSInformation_mBMSUserServiceType } from "../MBMSChargingDataTypes/MBMSInformation-mBMSUserServiceType.ta.mjs";
+import { type MBMSInformation_mBMS2G3GIndicator, _decode_MBMSInformation_mBMS2G3GIndicator, _encode_MBMSInformation_mBMS2G3GIndicator, _enum_for_MBMSInformation_mBMS2G3GIndicator } from "../MBMSChargingDataTypes/MBMSInformation-mBMS2G3GIndicator.ta.mjs";
+import { type IPAddress, _decode_IPAddress, _encode_IPAddress } from "../MBMSChargingDataTypes/IPAddress.ta.mjs";
+import { type MBMSInformation_cNIPMulticastDistribution, _decode_MBMSInformation_cNIPMulticastDistribution, _encode_MBMSInformation_cNIPMulticastDistribution, _enum_for_MBMSInformation_cNIPMulticastDistribution } from "../MBMSChargingDataTypes/MBMSInformation-cNIPMulticastDistribution.ta.mjs";
 
 
 /**

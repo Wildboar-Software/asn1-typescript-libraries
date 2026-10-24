@@ -18,12 +18,12 @@ import {
     _encode_Code,
 } from '@wildboar/rose';
 import {
-    MTABindArgument,
+    type MTABindArgument,
     _decode_MTABindArgument,
     _encode_MTABindArgument,
 } from '../MTAAbstractService/MTABindArgument.ta.mjs';
 import {
-    MTABindResult,
+    type MTABindResult,
     _decode_MTABindResult,
     _encode_MTABindResult,
 } from '../MTAAbstractService/MTABindResult.ta.mjs';

@@ -6,10 +6,10 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 
 import {
-    MessageSubmissionIdentifier,
+    type MessageSubmissionIdentifier,
     _decode_MessageSubmissionIdentifier,
     _encode_MessageSubmissionIdentifier,
-    MessageSubmissionTime,
+    type MessageSubmissionTime,
     _decode_MessageSubmissionTime,
     _encode_MessageSubmissionTime,
 } from "@wildboar/x400/MTSAbstractService";

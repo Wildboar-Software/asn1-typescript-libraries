@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    BodyPartSignatures,
+    type BodyPartSignatures,
     _decode_BodyPartSignatures,
     _encode_BodyPartSignatures,
 } from '../IPMSHeadingExtensions/BodyPartSignatures.ta.mjs';

@@ -3,33 +3,33 @@
 import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { RouteRegister, _decode_RouteRegister, _encode_RouteRegister } from "../CSTA-capability-exchange/RouteRegister.ta.mjs";
+import { type RouteRegister, _decode_RouteRegister, _encode_RouteRegister } from "../CSTA-capability-exchange/RouteRegister.ta.mjs";
 
-import { RouteRegisterCancel, _decode_RouteRegisterCancel, _encode_RouteRegisterCancel } from "../CSTA-capability-exchange/RouteRegisterCancel.ta.mjs";
+import { type RouteRegisterCancel, _decode_RouteRegisterCancel, _encode_RouteRegisterCancel } from "../CSTA-capability-exchange/RouteRegisterCancel.ta.mjs";
 
-import { RouteRegisterAbort, _decode_RouteRegisterAbort, _encode_RouteRegisterAbort } from "../CSTA-capability-exchange/RouteRegisterAbort.ta.mjs";
+import { type RouteRegisterAbort, _decode_RouteRegisterAbort, _encode_RouteRegisterAbort } from "../CSTA-capability-exchange/RouteRegisterAbort.ta.mjs";
 
-import { ReRoute, _decode_ReRoute, _encode_ReRoute } from "../CSTA-capability-exchange/ReRoute.ta.mjs";
+import { type ReRoute, _decode_ReRoute, _encode_ReRoute } from "../CSTA-capability-exchange/ReRoute.ta.mjs";
 
-import { RouteEnd, _decode_RouteEnd, _encode_RouteEnd } from "../CSTA-capability-exchange/RouteEnd.ta.mjs";
+import { type RouteEnd, _decode_RouteEnd, _encode_RouteEnd } from "../CSTA-capability-exchange/RouteEnd.ta.mjs";
 
-import { RouteReject, _decode_RouteReject, _encode_RouteReject } from "../CSTA-capability-exchange/RouteReject.ta.mjs";
+import { type RouteReject, _decode_RouteReject, _encode_RouteReject } from "../CSTA-capability-exchange/RouteReject.ta.mjs";
 
-import { RouteRequest, _decode_RouteRequest, _encode_RouteRequest } from "../CSTA-capability-exchange/RouteRequest.ta.mjs";
+import { type RouteRequest, _decode_RouteRequest, _encode_RouteRequest } from "../CSTA-capability-exchange/RouteRequest.ta.mjs";
 
 import {
-    RouteSelect,
+    type RouteSelect,
     routeUsed /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_RouteSelect,
     _encode_RouteSelect
 } from "../CSTA-capability-exchange/RouteSelect.ta.mjs";
 
-import { RouteUsed, _decode_RouteUsed, _encode_RouteUsed } from "../CSTA-capability-exchange/RouteUsed.ta.mjs";
+import { type RouteUsed, _decode_RouteUsed, _encode_RouteUsed } from "../CSTA-capability-exchange/RouteUsed.ta.mjs";
 
 
 

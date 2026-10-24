@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    CreationTime,
+    type CreationTime,
     _decode_CreationTime,
     _encode_CreationTime,
 } from '../MSAbstractService/CreationTime.ta.mjs';

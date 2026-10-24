@@ -5,10 +5,10 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-import { ChargingAssociation, _decode_ChargingAssociation, _encode_ChargingAssociation } from "../SS-AOC-Operations-asn1-97/ChargingAssociation.ta.mjs";
+import { type PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
+import { type ChargingAssociation, _decode_ChargingAssociation, _encode_ChargingAssociation } from "../SS-AOC-Operations-asn1-97/ChargingAssociation.ta.mjs";
 import { DiversionType, _decode_DiversionType, _encode_DiversionType, _enum_for_DiversionType } from "../SS-AOC-Operations-asn1-97/DiversionType.ta.mjs";
-import { AocDivChargeReqArg_aocDivChargeReqArgExt, _decode_AocDivChargeReqArg_aocDivChargeReqArgExt, _encode_AocDivChargeReqArg_aocDivChargeReqArgExt } from "../SS-AOC-Operations-asn1-97/AocDivChargeReqArg-aocDivChargeReqArgExt.ta.mjs";
+import { type AocDivChargeReqArg_aocDivChargeReqArgExt, _decode_AocDivChargeReqArg_aocDivChargeReqArgExt, _encode_AocDivChargeReqArg_aocDivChargeReqArgExt } from "../SS-AOC-Operations-asn1-97/AocDivChargeReqArg-aocDivChargeReqArgExt.ta.mjs";
 
 /**
  * @summary AocDivChargeReqArg

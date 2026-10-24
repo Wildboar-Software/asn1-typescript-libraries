@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    BRTCertificateList,
+    type BRTCertificateList,
     _decode_BRTCertificateList,
     _encode_BRTCertificateList,
 } from '../AuthenticationContextForBiometrics/BRTCertificateList.ta.mjs';
 import {
-    BRTCertificateReferrerList,
+    type BRTCertificateReferrerList,
     _decode_BRTCertificateReferrerList,
     _encode_BRTCertificateReferrerList,
 } from '../AuthenticationContextForBiometrics/BRTCertificateReferrerList.ta.mjs';

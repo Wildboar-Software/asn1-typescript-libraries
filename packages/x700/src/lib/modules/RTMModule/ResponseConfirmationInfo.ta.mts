@@ -12,37 +12,37 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
 import {
-    GroupObjects,
+    type GroupObjects,
     _decode_GroupObjects,
     _encode_GroupObjects,
 } from '@wildboar/attribute-asn1module';
 import {
-    RequestIdentifier,
+    type RequestIdentifier,
     _decode_RequestIdentifier,
     _encode_RequestIdentifier,
 } from '../RTMModule/RequestIdentifier.ta.mjs';
 import {
-    NotificationIdentifier,
+    type NotificationIdentifier,
     _decode_NotificationIdentifier,
     _encode_NotificationIdentifier,
 } from '@wildboar/attribute-asn1module';
 import {
-    CorrelatedNotifications,
+    type CorrelatedNotifications,
     _decode_CorrelatedNotifications,
     _encode_CorrelatedNotifications,
 } from '@wildboar/attribute-asn1module';
 import {
-    ResponseTime,
+    type ResponseTime,
     _decode_ResponseTime,
     _encode_ResponseTime,
 } from '../RTMModule/ResponseTime.ta.mjs';
 import {
-    Integer,
+    type Integer,
     _decode_Integer,
     _encode_Integer,
 } from '../MetricModule/Integer.ta.mjs';
@@ -53,17 +53,17 @@ import {
     _encode_ResponseSync,
 } from '../RTMModule/ResponseSync.ta.mjs';
 import {
-    TimePeriod,
+    type TimePeriod,
     _decode_TimePeriod,
     _encode_TimePeriod,
 } from '../MetricModule/TimePeriod.ta.mjs';
 import {
-    AdditionalText,
+    type AdditionalText,
     _decode_AdditionalText,
     _encode_AdditionalText,
 } from '@wildboar/attribute-asn1module';
 import {
-    AdditionalInformation,
+    type AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
 } from '@wildboar/attribute-asn1module';

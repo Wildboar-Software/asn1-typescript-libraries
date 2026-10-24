@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ServiceProblem,
+    type ServiceProblem,
     _decode_ServiceProblem,
     _encode_ServiceProblem,
 } from '../MSAbstractService/ServiceProblem.ta.mjs';

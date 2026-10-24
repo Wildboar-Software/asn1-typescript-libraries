@@ -12,17 +12,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError, ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Capabilities, _decode_Capabilities, _encode_Capabilities } from "../V59/Capabilities.ta.mjs";
+import { type Capabilities, _decode_Capabilities, _encode_Capabilities } from "../V59/Capabilities.ta.mjs";
 
-import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
+import { type V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
 
-import { TxPowerLevel, _decode_TxPowerLevel, _encode_TxPowerLevel } from "../V59/TxPowerLevel.ta.mjs";
+import { type TxPowerLevel, _decode_TxPowerLevel, _encode_TxPowerLevel } from "../V59/TxPowerLevel.ta.mjs";
 
-import { SymbolRate, _decode_SymbolRate, _encode_SymbolRate } from "../V59/SymbolRate.ta.mjs";
+import { type SymbolRate, _decode_SymbolRate, _encode_SymbolRate } from "../V59/SymbolRate.ta.mjs";
 
-import { RobBitPatt, _decode_RobBitPatt, _encode_RobBitPatt } from "../V59/RobBitPatt.ta.mjs";
+import { type RobBitPatt, _decode_RobBitPatt, _encode_RobBitPatt } from "../V59/RobBitPatt.ta.mjs";
 
-import { V92ModDiag_Item_lastMOHaction, _enum_for_V92ModDiag_Item_lastMOHaction, _decode_V92ModDiag_Item_lastMOHaction, _encode_V92ModDiag_Item_lastMOHaction } from "../V59/V92ModDiag-Item-lastMOHaction.ta.mjs";
+import { type V92ModDiag_Item_lastMOHaction, _enum_for_V92ModDiag_Item_lastMOHaction, _decode_V92ModDiag_Item_lastMOHaction, _encode_V92ModDiag_Item_lastMOHaction } from "../V59/V92ModDiag-Item-lastMOHaction.ta.mjs";
 
 /**
  * @summary V92ModDiag_Item

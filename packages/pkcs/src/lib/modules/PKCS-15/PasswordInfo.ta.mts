@@ -10,7 +10,7 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "@wildboar/x500/AuthenticationFramework";
-import { Label, _decode_Label, _encode_Label } from "../PKCS-15/Label.ta.mjs";
+import { type Label, _decode_Label, _encode_Label } from "../PKCS-15/Label.ta.mjs";
 
 /**
  * @summary PasswordInfo

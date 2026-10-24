@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CIUnwantedUserStatus, _decode_CIUnwantedUserStatus, _encode_CIUnwantedUserStatus, _enum_for_CIUnwantedUserStatus } from "../Call-Intrusion-Operations-asn1-97/CIUnwantedUserStatus.ta.mjs";
-import { CIRequestRes_resultExtension, _decode_CIRequestRes_resultExtension, _encode_CIRequestRes_resultExtension } from "../Call-Intrusion-Operations-asn1-97/CIRequestRes-resultExtension.ta.mjs";
+import { type CIRequestRes_resultExtension, _decode_CIRequestRes_resultExtension, _encode_CIRequestRes_resultExtension } from "../Call-Intrusion-Operations-asn1-97/CIRequestRes-resultExtension.ta.mjs";
 
 /**
  * @summary CIRequestRes

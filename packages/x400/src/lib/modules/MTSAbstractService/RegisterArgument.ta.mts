@@ -12,32 +12,32 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    UserName,
+    type UserName,
     _decode_UserName,
     _encode_UserName,
 } from '../MTSAbstractService/UserName.ta.mjs';
 import {
-    UserAddress,
+    type UserAddress,
     _decode_UserAddress,
     _encode_UserAddress,
 } from '../MTSAbstractService/UserAddress.ta.mjs';
 import {
-    DeliverableClass,
+    type DeliverableClass,
     _decode_DeliverableClass,
     _encode_DeliverableClass,
 } from '../MTSAbstractService/DeliverableClass.ta.mjs';
 import {
-    DefaultDeliveryControls,
+    type DefaultDeliveryControls,
     _decode_DefaultDeliveryControls,
     _encode_DefaultDeliveryControls,
 } from '../MTSAbstractService/DefaultDeliveryControls.ta.mjs';
 import {
-    Redirections,
+    type Redirections,
     _decode_Redirections,
     _encode_Redirections,
 } from '../MTSAbstractService/Redirections.ta.mjs';
 import {
-    RestrictedDelivery,
+    type RestrictedDelivery,
     _decode_RestrictedDelivery,
     _encode_RestrictedDelivery,
 } from '../MTSAbstractService/RestrictedDelivery.ta.mjs';

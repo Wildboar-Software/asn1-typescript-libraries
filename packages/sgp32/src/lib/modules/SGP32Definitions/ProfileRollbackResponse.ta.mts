@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ProfileRollbackResponse_cmdResult, _decode_ProfileRollbackResponse_cmdResult, _encode_ProfileRollbackResponse_cmdResult } from "../SGP32Definitions/ProfileRollbackResponse-cmdResult.ta.mjs";
-import { EuiccPackageResult, _decode_EuiccPackageResult, _encode_EuiccPackageResult } from "../SGP32Definitions/EuiccPackageResult.ta.mjs";
+import { type ProfileRollbackResponse_cmdResult, _decode_ProfileRollbackResponse_cmdResult, _encode_ProfileRollbackResponse_cmdResult } from "../SGP32Definitions/ProfileRollbackResponse-cmdResult.ta.mjs";
+import { type EuiccPackageResult, _decode_EuiccPackageResult, _encode_EuiccPackageResult } from "../SGP32Definitions/EuiccPackageResult.ta.mjs";
 
 
 /**

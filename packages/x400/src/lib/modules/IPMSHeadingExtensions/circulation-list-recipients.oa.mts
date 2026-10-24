@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    CirculationList,
+    type CirculationList,
     _decode_CirculationList,
     _encode_CirculationList,
 } from '../IPMSHeadingExtensions/CirculationList.ta.mjs';

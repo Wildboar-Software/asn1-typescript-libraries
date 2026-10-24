@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    MessageData,
+    type MessageData,
     _decode_MessageData,
     _encode_MessageData,
 } from '../IPMSInformationObjects/MessageData.ta.mjs';

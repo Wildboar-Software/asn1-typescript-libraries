@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    NULL,
-    GraphicString,
+    type NULL,
+    type GraphicString,
     ASN1Element as _Element,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";

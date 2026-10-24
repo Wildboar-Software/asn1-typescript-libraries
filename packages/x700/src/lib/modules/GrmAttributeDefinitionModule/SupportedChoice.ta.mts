@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    OptionalIdentifier,
+    type OptionalIdentifier,
     _decode_OptionalIdentifier,
     _encode_OptionalIdentifier,
 } from '../GrmAttributeDefinitionModule/OptionalIdentifier.ta.mjs';

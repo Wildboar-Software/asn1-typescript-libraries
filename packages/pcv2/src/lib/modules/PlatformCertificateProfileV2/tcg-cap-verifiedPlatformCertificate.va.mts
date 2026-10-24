@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ObjectIdentifier as _OID,
-    OBJECT_IDENTIFIER
+    type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { tcg_ca_policy } from "../PlatformCertificateProfileV2/tcg-ca-policy.va.mjs";
 

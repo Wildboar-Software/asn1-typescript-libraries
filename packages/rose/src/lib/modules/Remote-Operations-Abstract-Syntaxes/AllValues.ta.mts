@@ -11,17 +11,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Bind,
+  type Bind,
   _decode_Bind,
   _encode_Bind,
 } from '../Remote-Operations-Generic-ROS-PDUs/Bind.ta.mjs';
 import {
-  Unbind,
+  type Unbind,
   _decode_Unbind,
   _encode_Unbind,
 } from '../Remote-Operations-Generic-ROS-PDUs/Unbind.ta.mjs';
 import {
-  ROS_SingleAS,
+  type ROS_SingleAS,
   _decode_ROS_SingleAS,
   _encode_ROS_SingleAS,
 } from '../Remote-Operations-Abstract-Syntaxes/ROS-SingleAS.ta.mjs';

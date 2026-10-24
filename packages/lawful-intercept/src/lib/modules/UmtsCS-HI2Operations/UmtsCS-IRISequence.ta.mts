@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { UmtsCS_IRIContent, _decode_UmtsCS_IRIContent, _encode_UmtsCS_IRIContent } from "../UmtsCS-HI2Operations/UmtsCS-IRIContent.ta.mjs";
+import { type UmtsCS_IRIContent, _decode_UmtsCS_IRIContent, _encode_UmtsCS_IRIContent } from "../UmtsCS-HI2Operations/UmtsCS-IRIContent.ta.mjs";
 // export { UmtsCS_IRIContent, _decode_UmtsCS_IRIContent, _encode_UmtsCS_IRIContent } from "../UmtsCS-HI2Operations/UmtsCS-IRIContent.ta.mjs";
 
 

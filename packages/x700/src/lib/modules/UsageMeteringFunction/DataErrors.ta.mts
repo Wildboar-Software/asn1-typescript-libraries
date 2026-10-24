@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    PossibleError,
+    type PossibleError,
     _decode_PossibleError,
     _encode_PossibleError,
 } from '../UsageMeteringFunction/PossibleError.ta.mjs';

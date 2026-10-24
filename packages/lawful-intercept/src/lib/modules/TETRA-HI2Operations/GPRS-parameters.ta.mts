@@ -7,7 +7,7 @@ import {
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DataNodeAddress, _decode_DataNodeAddress, _encode_DataNodeAddress } from "../TETRA-HI2Operations/DataNodeAddress.ta.mjs";
+import { type DataNodeAddress, _decode_DataNodeAddress, _encode_DataNodeAddress } from "../TETRA-HI2Operations/DataNodeAddress.ta.mjs";
 // export { DataNodeAddress, _decode_DataNodeAddress, _encode_DataNodeAddress } from "../TETRA-HI2Operations/DataNodeAddress.ta.mjs";
 
 

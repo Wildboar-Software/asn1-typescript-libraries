@@ -5,25 +5,25 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ContinueWithArgumentArg_legorCSID, _decode_ContinueWithArgumentArg_legorCSID, _encode_ContinueWithArgumentArg_legorCSID } from "../IN-CS3-SSF-SCF-ops-args/ContinueWithArgumentArg-legorCSID.ta.mjs";
+import { type ContinueWithArgumentArg_legorCSID, _decode_ContinueWithArgumentArg_legorCSID, _encode_ContinueWithArgumentArg_legorCSID } from "../IN-CS3-SSF-SCF-ops-args/ContinueWithArgumentArg-legorCSID.ta.mjs";
 // export { ContinueWithArgumentArg_legorCSID, _decode_ContinueWithArgumentArg_legorCSID, _encode_ContinueWithArgumentArg_legorCSID } from "../IN-CS3-SSF-SCF-ops-args/ContinueWithArgumentArg-legorCSID.ta.mjs";
 import { leg1 } from "../IN-CS3-SSF-SCF-datatypes/leg1.va.mjs";
 // export { leg1 } from "../IN-CS3-SSF-SCF-datatypes/leg1.va.mjs";
-import { AlertingPattern, _decode_AlertingPattern, _encode_AlertingPattern } from "../IN-CS3-SSF-SCF-datatypes/AlertingPattern.ta.mjs";
+import { type AlertingPattern, _decode_AlertingPattern, _encode_AlertingPattern } from "../IN-CS3-SSF-SCF-datatypes/AlertingPattern.ta.mjs";
 // export { AlertingPattern, _decode_AlertingPattern, _encode_AlertingPattern } from "../IN-CS3-SSF-SCF-datatypes/AlertingPattern.ta.mjs";
-import { GenericName, _decode_GenericName, _encode_GenericName } from "../IN-CS3-SSF-SCF-datatypes/GenericName.ta.mjs";
+import { type GenericName, _decode_GenericName, _encode_GenericName } from "../IN-CS3-SSF-SCF-datatypes/GenericName.ta.mjs";
 // export { GenericName, _decode_GenericName, _encode_GenericName } from "../IN-CS3-SSF-SCF-datatypes/GenericName.ta.mjs";
-import { INServiceCompatibilityResponse, _decode_INServiceCompatibilityResponse, _encode_INServiceCompatibilityResponse } from "../IN-CS3-SSF-SCF-datatypes/INServiceCompatibilityResponse.ta.mjs";
+import { type INServiceCompatibilityResponse, _decode_INServiceCompatibilityResponse, _encode_INServiceCompatibilityResponse } from "../IN-CS3-SSF-SCF-datatypes/INServiceCompatibilityResponse.ta.mjs";
 // export { INServiceCompatibilityResponse, _decode_INServiceCompatibilityResponse, _encode_INServiceCompatibilityResponse } from "../IN-CS3-SSF-SCF-datatypes/INServiceCompatibilityResponse.ta.mjs";
-import { ForwardGVNS, _decode_ForwardGVNS, _encode_ForwardGVNS } from "../IN-CS3-SSF-SCF-datatypes/ForwardGVNS.ta.mjs";
+import { type ForwardGVNS, _decode_ForwardGVNS, _encode_ForwardGVNS } from "../IN-CS3-SSF-SCF-datatypes/ForwardGVNS.ta.mjs";
 // export { ForwardGVNS, _decode_ForwardGVNS, _encode_ForwardGVNS } from "../IN-CS3-SSF-SCF-datatypes/ForwardGVNS.ta.mjs";
-import { BackwardGVNS, _decode_BackwardGVNS, _encode_BackwardGVNS } from "../IN-CS3-SSF-SCF-datatypes/BackwardGVNS.ta.mjs";
+import { type BackwardGVNS, _decode_BackwardGVNS, _encode_BackwardGVNS } from "../IN-CS3-SSF-SCF-datatypes/BackwardGVNS.ta.mjs";
 // export { BackwardGVNS, _decode_BackwardGVNS, _encode_BackwardGVNS } from "../IN-CS3-SSF-SCF-datatypes/BackwardGVNS.ta.mjs";
-import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-common-datatypes/Extensions.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-common-datatypes/Extensions.ta.mjs";
 // export { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-common-datatypes/Extensions.ta.mjs";
 import { ServiceInteractionIndicatorsTwo, _decode_ServiceInteractionIndicatorsTwo, _encode_ServiceInteractionIndicatorsTwo } from "../IN-CS3-SSF-SCF-datatypes/ServiceInteractionIndicatorsTwo.ta.mjs";
 // export { ServiceInteractionIndicatorsTwo, _decode_ServiceInteractionIndicatorsTwo, _encode_ServiceInteractionIndicatorsTwo } from "../IN-CS3-SSF-SCF-datatypes/ServiceInteractionIndicatorsTwo.ta.mjs";
-import { SDSSinformation, _decode_SDSSinformation, _encode_SDSSinformation } from "../IN-CS3-SSF-SCF-datatypes/SDSSinformation.ta.mjs";
+import { type SDSSinformation, _decode_SDSSinformation, _encode_SDSSinformation } from "../IN-CS3-SSF-SCF-datatypes/SDSSinformation.ta.mjs";
 // export { SDSSinformation, _decode_SDSSinformation, _encode_SDSSinformation } from "../IN-CS3-SSF-SCF-datatypes/SDSSinformation.ta.mjs";
 
 

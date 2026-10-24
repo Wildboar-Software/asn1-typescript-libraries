@@ -10,13 +10,13 @@ import {
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RecordType, _decode_RecordType, _encode_RecordType } from "../CHFChargingDataTypes/RecordType.ta.mjs";
+import { type RecordType, _decode_RecordType, _encode_RecordType } from "../CHFChargingDataTypes/RecordType.ta.mjs";
 import { SubscriptionID, _decode_SubscriptionID, _encode_SubscriptionID } from "../CHFChargingDataTypes/SubscriptionID.ta.mjs";
 import { NetworkFunctionInformation, _decode_NetworkFunctionInformation, _encode_NetworkFunctionInformation } from "../CHFChargingDataTypes/NetworkFunctionInformation.ta.mjs";
-import { Trigger, _decode_Trigger, _encode_Trigger } from "../CHFChargingDataTypes/Trigger.ta.mjs";
+import { type Trigger, _decode_Trigger, _encode_Trigger } from "../CHFChargingDataTypes/Trigger.ta.mjs";
 import { MultipleUnitUsage, _decode_MultipleUnitUsage, _encode_MultipleUnitUsage } from "../CHFChargingDataTypes/MultipleUnitUsage.ta.mjs";
-import { CauseForRecClosing, _decode_CauseForRecClosing, _encode_CauseForRecClosing } from "../CHFChargingDataTypes/CauseForRecClosing.ta.mjs";
-import { Diagnostics, _decode_Diagnostics, _encode_Diagnostics } from "../CHFChargingDataTypes/Diagnostics.ta.mjs";
+import { type CauseForRecClosing, _decode_CauseForRecClosing, _encode_CauseForRecClosing } from "../CHFChargingDataTypes/CauseForRecClosing.ta.mjs";
+import { type Diagnostics, _decode_Diagnostics, _encode_Diagnostics } from "../CHFChargingDataTypes/Diagnostics.ta.mjs";
 import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExtension } from "../CHFChargingDataTypes/ManagementExtension.ta.mjs";
 import { PDUSessionChargingInformation, _decode_PDUSessionChargingInformation, _encode_PDUSessionChargingInformation } from "../CHFChargingDataTypes/PDUSessionChargingInformation.ta.mjs";
 import { RoamingQBCInformation, _decode_RoamingQBCInformation, _encode_RoamingQBCInformation } from "../CHFChargingDataTypes/RoamingQBCInformation.ta.mjs";

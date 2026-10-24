@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    RepairActivityList,
+    type RepairActivityList,
     _decode_RepairActivityList,
     _encode_RepairActivityList,
 } from '../X790ASN1Module/RepairActivityList.ta.mjs';

@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    AcknowledgementRequestField,
+    type AcknowledgementRequestField,
     _decode_AcknowledgementRequestField,
     _encode_AcknowledgementRequestField,
 } from '../EDIMSInformationObjects/AcknowledgementRequestField.ta.mjs';

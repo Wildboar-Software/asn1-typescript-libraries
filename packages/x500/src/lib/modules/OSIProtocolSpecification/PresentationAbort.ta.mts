@@ -7,7 +7,7 @@ import {
     _encode_ARP_PPDU,
 } from "../OSIProtocolSpecification/ARP-PPDU.ta.mjs";
 import {
-    ARU_PPDU,
+    type ARU_PPDU,
     _decode_ARU_PPDU,
     _encode_ARU_PPDU,
 } from "../OSIProtocolSpecification/ARU-PPDU.ta.mjs";

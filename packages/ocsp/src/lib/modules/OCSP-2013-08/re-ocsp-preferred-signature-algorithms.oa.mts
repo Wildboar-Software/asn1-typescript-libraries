@@ -2,7 +2,7 @@
 import type { EXTENSION } from "@wildboar/pki-stub";
 import { id_pkix_ocsp_pref_sig_algs } from "../OCSP-2013-08/id-pkix-ocsp-pref-sig-algs.va.mjs";
 import {
-    PreferredSignatureAlgorithms,
+    type PreferredSignatureAlgorithms,
     _decode_PreferredSignatureAlgorithms,
     _encode_PreferredSignatureAlgorithms,
 } from "../OCSP-2013-08/PreferredSignatureAlgorithms.ta.mjs";

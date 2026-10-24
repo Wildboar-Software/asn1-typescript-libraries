@@ -7,7 +7,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { CallReportData, _decode_CallReportData, _encode_CallReportData } from "../MAP-CH-DataTypes/CallReportData.ta.mjs";
 import { EventReportData, _decode_EventReportData, _encode_EventReportData } from "../MAP-CH-DataTypes/EventReportData.ta.mjs";
-import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
+import { type IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 

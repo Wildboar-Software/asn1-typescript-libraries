@@ -16,7 +16,7 @@ import {
     _encode_EDIM_ExtendedBodyPart,
 } from '../EDIMSInformationObjects/EDIM-ExtendedBodyPart.ta.mjs';
 import {
-    BodyPartPlaceHolder,
+    type BodyPartPlaceHolder,
     _decode_BodyPartPlaceHolder,
     _encode_BodyPartPlaceHolder,
 } from '../EDIMSInformationObjects/BodyPartPlaceHolder.ta.mjs';

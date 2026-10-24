@@ -8,7 +8,7 @@ import {
     ASN1Error
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MasterChannelComposition_mcOrVcList, _decode_MasterChannelComposition_mcOrVcList, _encode_MasterChannelComposition_mcOrVcList } from "./MasterChannelComposition-mcOrVcList.ta.mjs";
+import { type MasterChannelComposition_mcOrVcList, _decode_MasterChannelComposition_mcOrVcList, _encode_MasterChannelComposition_mcOrVcList } from "./MasterChannelComposition-mcOrVcList.ta.mjs";
 
 
 

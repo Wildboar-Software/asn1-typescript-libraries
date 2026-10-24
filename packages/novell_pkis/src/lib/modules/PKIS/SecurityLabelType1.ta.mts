@@ -9,7 +9,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { assertIntegerRange } from "../../assertIntegerRange.mjs";
-import { Singletons, _decode_Singletons, _encode_Singletons } from "../PKIS/Singletons.ta.mjs";
+import { type Singletons, _decode_Singletons, _encode_Singletons } from "../PKIS/Singletons.ta.mjs";
 
 
 /**

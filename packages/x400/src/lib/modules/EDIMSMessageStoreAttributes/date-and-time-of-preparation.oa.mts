@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    DateAndTimeOfPreparationField,
+    type DateAndTimeOfPreparationField,
     _decode_DateAndTimeOfPreparationField,
     _encode_DateAndTimeOfPreparationField,
 } from '../EDIMSInformationObjects/DateAndTimeOfPreparationField.ta.mjs';

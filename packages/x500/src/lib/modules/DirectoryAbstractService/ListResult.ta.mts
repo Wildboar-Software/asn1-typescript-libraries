@@ -2,12 +2,12 @@
 import { ASN1Element as _Element } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ListResultData,
+    type ListResultData,
     _decode_ListResultData,
     _encode_ListResultData,
 } from "../DirectoryAbstractService/ListResultData.ta.mjs";
 import {
-    OPTIONALLY_PROTECTED,
+    type OPTIONALLY_PROTECTED,
     _get_decoder_for_OPTIONALLY_PROTECTED,
     _get_encoder_for_OPTIONALLY_PROTECTED,
 } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";

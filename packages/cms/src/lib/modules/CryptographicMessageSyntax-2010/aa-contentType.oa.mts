@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ContentType,
+    type ContentType,
     _decode_ContentType,
     _encode_ContentType,
 } from "../CryptographicMessageSyntax-2010/ContentType.ta.mjs";

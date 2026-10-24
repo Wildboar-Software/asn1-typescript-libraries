@@ -12,22 +12,22 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RecipientName,
+    type RecipientName,
     _decode_RecipientName,
     _encode_RecipientName,
 } from '../MTAAbstractService/RecipientName.ta.mjs';
 import {
-    OriginallySpecifiedRecipientNumber,
+    type OriginallySpecifiedRecipientNumber,
     _decode_OriginallySpecifiedRecipientNumber,
     _encode_OriginallySpecifiedRecipientNumber,
 } from '../MTAAbstractService/OriginallySpecifiedRecipientNumber.ta.mjs';
 import {
-    PerRecipientIndicators,
+    type PerRecipientIndicators,
     _decode_PerRecipientIndicators,
     _encode_PerRecipientIndicators,
 } from '../MTAAbstractService/PerRecipientIndicators.ta.mjs';
 import {
-    ExplicitConversion,
+    type ExplicitConversion,
     _decode_ExplicitConversion,
     _encode_ExplicitConversion,
 } from '../MTSAbstractService/ExplicitConversion.ta.mjs';

@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ProcessedLevel,
+    type ProcessedLevel,
     _enum_for_ProcessedLevel,
     _decode_ProcessedLevel,
     _encode_ProcessedLevel,

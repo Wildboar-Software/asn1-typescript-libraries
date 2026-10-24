@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { CamelCapabilityHandling, _decode_CamelCapabilityHandling, _encode_CamelCapabilityHandling } from "../MAP-MS-DataTypes/CamelCapabilityHandling.ta.mjs";
-import { GPRS_CamelTDPDataList, _decode_GPRS_CamelTDPDataList, _encode_GPRS_CamelTDPDataList } from "../MAP-MS-DataTypes/GPRS-CamelTDPDataList.ta.mjs";
+import { type CamelCapabilityHandling, _decode_CamelCapabilityHandling, _encode_CamelCapabilityHandling } from "../MAP-MS-DataTypes/CamelCapabilityHandling.ta.mjs";
+import { type GPRS_CamelTDPDataList, _decode_GPRS_CamelTDPDataList, _encode_GPRS_CamelTDPDataList } from "../MAP-MS-DataTypes/GPRS-CamelTDPDataList.ta.mjs";
 
 
 /**

@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import { dhSinglePass_cofactorDH_specifiedKDF } from "../SEC1-v1-9/dhSinglePass-cofactorDH-specifiedKDF.va.mjs";
-import { KeyDerivationFunction, _decode_KeyDerivationFunction, _encode_KeyDerivationFunction } from "../SEC1-v1-9/KeyDerivationFunction.ta.mjs";
+import { type KeyDerivationFunction, _decode_KeyDerivationFunction, _encode_KeyDerivationFunction } from "../SEC1-v1-9/KeyDerivationFunction.ta.mjs";
 import { type ALGORITHM } from "../SEC1-v1-9/ALGORITHM.oca.mjs";
 /**
  * @summary ECDHAlgorithmSet_Union3_Intersection0_Element

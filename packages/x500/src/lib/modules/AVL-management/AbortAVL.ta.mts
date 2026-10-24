@@ -6,13 +6,13 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AVMP_error,
+    type AVMP_error,
     _decode_AVMP_error,
     _encode_AVMP_error,
     _enum_for_AVMP_error,
 } from "../AVL-management/AVMP-error.ta.mjs";
 import {
-    InvokeID,
+    type InvokeID,
     _decode_InvokeID,
     _encode_InvokeID,
 } from "../AVL-management/InvokeID.ta.mjs";

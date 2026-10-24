@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  BOOLEAN,
+  type OPTIONAL,
+  type BOOLEAN,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -23,13 +23,13 @@ import {
   _encode_BRANCH_IDENTIFIER,
 } from '../CCR/BRANCH-IDENTIFIER.ta.mjs';
 import {
-  C_RECOVER_RI_recovery_state,
+  type C_RECOVER_RI_recovery_state,
   _enum_for_C_RECOVER_RI_recovery_state,
   _decode_C_RECOVER_RI_recovery_state,
   _encode_C_RECOVER_RI_recovery_state,
 } from '../CCR/C-RECOVER-RI-recovery-state.ta.mjs';
 import {
-  User_data,
+  type User_data,
   _decode_User_data,
   _encode_User_data,
 } from '../CCR/User-data.ta.mjs';

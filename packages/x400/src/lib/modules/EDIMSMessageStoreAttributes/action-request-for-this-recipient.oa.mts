@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    ActionRequestField,
+    type ActionRequestField,
     _decode_ActionRequestField,
     _encode_ActionRequestField,
 } from '../EDIMSInformationObjects/ActionRequestField.ta.mjs';

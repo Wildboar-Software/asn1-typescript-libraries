@@ -13,7 +13,7 @@ import {
     _encode_NameFormInformation,
 } from "../SchemaAdministration/NameFormInformation.ta.mjs";
 import {
-    UnboundedDirectoryString,
+    type UnboundedDirectoryString,
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";

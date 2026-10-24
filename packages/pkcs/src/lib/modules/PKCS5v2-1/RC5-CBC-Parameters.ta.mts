@@ -8,7 +8,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    RC5_CBC_Parameters_version,
+    type RC5_CBC_Parameters_version,
     _decode_RC5_CBC_Parameters_version,
     _encode_RC5_CBC_Parameters_version,
 } from "../PKCS5v2-1/RC5-CBC-Parameters-version.ta.mjs";

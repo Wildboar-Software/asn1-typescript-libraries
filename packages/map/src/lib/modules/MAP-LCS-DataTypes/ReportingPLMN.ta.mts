@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataTypes/PLMN-Id.ta.mjs";
-import { RAN_Technology, _decode_RAN_Technology, _encode_RAN_Technology, _enum_for_RAN_Technology } from "../MAP-LCS-DataTypes/RAN-Technology.ta.mjs";
+import { type PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataTypes/PLMN-Id.ta.mjs";
+import { type RAN_Technology, _decode_RAN_Technology, _encode_RAN_Technology, _enum_for_RAN_Technology } from "../MAP-LCS-DataTypes/RAN-Technology.ta.mjs";
 
 
 /**

@@ -7,7 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PresenceReportingAreaInfo_presenceReportingAreaStatus, _decode_PresenceReportingAreaInfo_presenceReportingAreaStatus, _encode_PresenceReportingAreaInfo_presenceReportingAreaStatus, _enum_for_PresenceReportingAreaInfo_presenceReportingAreaStatus } from "../CHFChargingDataTypes/PresenceReportingAreaInfo-presenceReportingAreaStatus.ta.mjs";
-import { PresenceReportingAreaInfo_presenceReportingAreaNode, _decode_PresenceReportingAreaInfo_presenceReportingAreaNode, _encode_PresenceReportingAreaInfo_presenceReportingAreaNode } from "../CHFChargingDataTypes/PresenceReportingAreaInfo-presenceReportingAreaNode.ta.mjs";
+import { type PresenceReportingAreaInfo_presenceReportingAreaNode, _decode_PresenceReportingAreaInfo_presenceReportingAreaNode, _encode_PresenceReportingAreaInfo_presenceReportingAreaNode } from "../CHFChargingDataTypes/PresenceReportingAreaInfo-presenceReportingAreaNode.ta.mjs";
 
 
 /**

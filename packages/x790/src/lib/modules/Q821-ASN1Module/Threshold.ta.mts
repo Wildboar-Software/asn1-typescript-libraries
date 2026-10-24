@@ -25,7 +25,7 @@ import {
 } from "../Q821-ASN1Module/ValueDuration.ta.mjs";
 
 import {
-    GaugeParameters,
+    type GaugeParameters,
     _decode_GaugeParameters,
     _encode_GaugeParameters,
 } from "../Q821-ASN1Module/GaugeParameters.ta.mjs";

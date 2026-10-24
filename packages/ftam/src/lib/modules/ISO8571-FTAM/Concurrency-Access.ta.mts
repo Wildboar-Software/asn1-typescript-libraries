@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Concurrency_Key,
+  type Concurrency_Key,
   _decode_Concurrency_Key,
   _encode_Concurrency_Key,
 } from '../ISO8571-FTAM/Concurrency-Key.ta.mjs';

@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import { type MATCHING_RULE } from '@wildboar/x500/InformationFramework';
 import {
-    MSString,
+    type MSString,
     _decode_MSString,
     _encode_MSString,
 } from '../MSMatchingRules/MSString.ta.mjs';

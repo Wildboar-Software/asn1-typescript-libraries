@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    ServiceReportCause,
+    type ServiceReportCause,
     _decode_ServiceReportCause,
     _encode_ServiceReportCause,
 } from '../SecurityAuditTrail-ASN1Module/ServiceReportCause.ta.mjs';

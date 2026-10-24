@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    MS_EIT,
+    type MS_EIT,
     _decode_MS_EIT,
     _encode_MS_EIT,
 } from '../MSAbstractService/MS-EIT.ta.mjs';

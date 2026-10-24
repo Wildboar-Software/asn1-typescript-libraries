@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { NPartsMessage, _decode_NPartsMessage, _encode_NPartsMessage } from "../IN-SCF-SDF-datatypes/NPartsMessage.ta.mjs";
+import { type NPartsMessage, _decode_NPartsMessage, _encode_NPartsMessage } from "../IN-SCF-SDF-datatypes/NPartsMessage.ta.mjs";
 // export { NPartsMessage, _decode_NPartsMessage, _encode_NPartsMessage } from "../IN-SCF-SDF-datatypes/NPartsMessage.ta.mjs";
 
 

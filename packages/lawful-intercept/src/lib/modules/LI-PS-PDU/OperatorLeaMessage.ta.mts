@@ -7,7 +7,7 @@ import {
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { OperatorLeaMessagePriority, _decode_OperatorLeaMessagePriority, _encode_OperatorLeaMessagePriority, _enum_for_OperatorLeaMessagePriority } from "../LI-PS-PDU/OperatorLeaMessagePriority.ta.mjs";
+import { type OperatorLeaMessagePriority, _decode_OperatorLeaMessagePriority, _encode_OperatorLeaMessagePriority, _enum_for_OperatorLeaMessagePriority } from "../LI-PS-PDU/OperatorLeaMessagePriority.ta.mjs";
 // export { OperatorLeaMessagePriority, _enum_for_OperatorLeaMessagePriority, OperatorLeaMessagePriority_error /* IMPORTED_LONG_ENUMERATION_ITEM */, error /* IMPORTED_SHORT_ENUMERATION_ITEM */, OperatorLeaMessagePriority_informational /* IMPORTED_LONG_ENUMERATION_ITEM */, informational /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_OperatorLeaMessagePriority, _encode_OperatorLeaMessagePriority } from "../LI-PS-PDU/OperatorLeaMessagePriority.ta.mjs";
 
 

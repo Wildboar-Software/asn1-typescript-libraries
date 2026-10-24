@@ -4,7 +4,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Name, _decode_Name, _encode_Name } from "@wildboar/pki-stub";
+import { type Name, _decode_Name, _encode_Name } from "@wildboar/pki-stub";
 import { IssuerAndSerialNumber, _decode_IssuerAndSerialNumber, _encode_IssuerAndSerialNumber } from "@wildboar/cms";
 
 

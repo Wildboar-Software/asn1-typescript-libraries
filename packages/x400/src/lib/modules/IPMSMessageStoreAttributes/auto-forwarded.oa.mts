@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    AutoForwardedField,
+    type AutoForwardedField,
     _decode_AutoForwardedField,
     _encode_AutoForwardedField,
 } from '../IPMSInformationObjects/AutoForwardedField.ta.mjs';

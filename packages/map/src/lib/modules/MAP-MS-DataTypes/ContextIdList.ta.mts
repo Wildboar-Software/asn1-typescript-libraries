@@ -4,7 +4,7 @@ import {
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_ContextId, _encode_ContextId, ContextId } from "../MAP-MS-DataTypes/ContextId.ta.mjs";
+import { _decode_ContextId, _encode_ContextId, type ContextId } from "../MAP-MS-DataTypes/ContextId.ta.mjs";
 
 
 import { maxNumOfPDP_Contexts } from "./maxNumOfPDP-Contexts.va.mjs";

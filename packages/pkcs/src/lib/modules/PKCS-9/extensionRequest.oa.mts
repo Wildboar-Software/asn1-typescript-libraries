@@ -4,7 +4,7 @@ import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "@wildboar/x500/InformationFramework";
 import {
-    ExtensionRequest,
+    type ExtensionRequest,
     _decode_ExtensionRequest,
     _encode_ExtensionRequest,
 } from "../PKCS-9/ExtensionRequest.ta.mjs";

@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    ObsoletedEDIMsSubfield,
+    type ObsoletedEDIMsSubfield,
     _decode_ObsoletedEDIMsSubfield,
     _encode_ObsoletedEDIMsSubfield,
 } from '../EDIMSInformationObjects/ObsoletedEDIMsSubfield.ta.mjs';

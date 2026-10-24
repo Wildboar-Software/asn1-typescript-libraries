@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     type OPTIONAL,
-    GraphicString,
+    type GraphicString,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -18,7 +18,7 @@ import {
     _encode_FunctionalUnitPackage,
 } from '../SMASE-A-ASSOCIATE-Information/FunctionalUnitPackage.ta.mjs';
 import {
-    Reason,
+    type Reason,
     _decode_Reason,
     _encode_Reason,
 } from '../SMASE-A-ASSOCIATE-Information/Reason.ta.mjs';

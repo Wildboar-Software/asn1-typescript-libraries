@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Lock,
+  type Lock,
   _decode_Lock,
   _encode_Lock,
 } from '../ISO8571-FTAM/Lock.ta.mjs';

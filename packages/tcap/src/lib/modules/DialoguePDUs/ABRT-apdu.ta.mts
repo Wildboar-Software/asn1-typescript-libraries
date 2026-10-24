@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ABRT_source,
+    type ABRT_source,
     _decode_ABRT_source,
     _encode_ABRT_source,
 } from '../DialoguePDUs/ABRT-source.ta.mjs';

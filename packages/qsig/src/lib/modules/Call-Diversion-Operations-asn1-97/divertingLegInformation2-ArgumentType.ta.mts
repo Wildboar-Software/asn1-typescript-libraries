@@ -8,9 +8,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DiversionReason, _decode_DiversionReason, _encode_DiversionReason, _enum_for_DiversionReason } from "../Call-Diversion-Operations-asn1-97/DiversionReason.ta.mjs";
-import { PresentedNumberUnscreened, _decode_PresentedNumberUnscreened, _encode_PresentedNumberUnscreened } from "../Addressing-Data-Elements-asn1-97/PresentedNumberUnscreened.ta.mjs";
-import { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
-import { _decode_divertingLegInformation2_ArgumentType_extension, _encode_divertingLegInformation2_ArgumentType_extension, divertingLegInformation2_ArgumentType_extension } from "../Call-Diversion-Operations-asn1-97/divertingLegInformation2-ArgumentType-extension.ta.mjs";
+import { type PresentedNumberUnscreened, _decode_PresentedNumberUnscreened, _encode_PresentedNumberUnscreened } from "../Addressing-Data-Elements-asn1-97/PresentedNumberUnscreened.ta.mjs";
+import { type Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
+import { _decode_divertingLegInformation2_ArgumentType_extension, _encode_divertingLegInformation2_ArgumentType_extension, type divertingLegInformation2_ArgumentType_extension } from "../Call-Diversion-Operations-asn1-97/divertingLegInformation2-ArgumentType-extension.ta.mjs";
 
 /**
  * @summary divertingLegInformation2_ArgumentType

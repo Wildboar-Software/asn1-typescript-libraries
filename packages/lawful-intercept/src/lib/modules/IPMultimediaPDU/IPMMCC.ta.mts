@@ -4,12 +4,12 @@ import {
     ASN1TagClass as _TagClass,
     type OCTET_STRING,
     type OPTIONAL,
-    RELATIVE_OID
+    type RELATIVE_OID
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_FrameType, _encode_FrameType, _enum_for_FrameType, FrameType } from "../IPMultimediaPDU/FrameType.ta.mjs";
+import { _decode_FrameType, _encode_FrameType, _enum_for_FrameType, type FrameType } from "../IPMultimediaPDU/FrameType.ta.mjs";
 // export { FrameType, _enum_for_FrameType, FrameType_ipFrame /* IMPORTED_LONG_ENUMERATION_ITEM */, ipFrame /* IMPORTED_SHORT_ENUMERATION_ITEM */, FrameType_udpFrame /* IMPORTED_LONG_ENUMERATION_ITEM */, udpFrame /* IMPORTED_SHORT_ENUMERATION_ITEM */, FrameType_rtpFrame /* IMPORTED_LONG_ENUMERATION_ITEM */, rtpFrame /* IMPORTED_SHORT_ENUMERATION_ITEM */, FrameType_audioFrame /* IMPORTED_LONG_ENUMERATION_ITEM */, audioFrame /* IMPORTED_SHORT_ENUMERATION_ITEM */, FrameType_tcpFrame /* IMPORTED_LONG_ENUMERATION_ITEM */, tcpFrame /* IMPORTED_SHORT_ENUMERATION_ITEM */, FrameType_artificialRtpFrame /* IMPORTED_LONG_ENUMERATION_ITEM */, artificialRtpFrame /* IMPORTED_SHORT_ENUMERATION_ITEM */, FrameType_udptlFrame /* IMPORTED_LONG_ENUMERATION_ITEM */, udptlFrame /* IMPORTED_SHORT_ENUMERATION_ITEM */, FrameType_msrpFrame /* IMPORTED_LONG_ENUMERATION_ITEM */, msrpFrame /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_FrameType, _encode_FrameType } from "../IPMultimediaPDU/FrameType.ta.mjs";
-import { _decode_MMCCprotocol, _encode_MMCCprotocol, _enum_for_MMCCprotocol, MMCCprotocol } from "../IPMultimediaPDU/MMCCprotocol.ta.mjs";
+import { _decode_MMCCprotocol, _encode_MMCCprotocol, _enum_for_MMCCprotocol, type MMCCprotocol } from "../IPMultimediaPDU/MMCCprotocol.ta.mjs";
 // export { MMCCprotocol, _enum_for_MMCCprotocol, MMCCprotocol_rTP /* IMPORTED_LONG_ENUMERATION_ITEM */, rTP /* IMPORTED_SHORT_ENUMERATION_ITEM */, MMCCprotocol_mSRP /* IMPORTED_LONG_ENUMERATION_ITEM */, mSRP /* IMPORTED_SHORT_ENUMERATION_ITEM */, MMCCprotocol_uDPTL /* IMPORTED_LONG_ENUMERATION_ITEM */, uDPTL /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MMCCprotocol, _encode_MMCCprotocol } from "../IPMultimediaPDU/MMCCprotocol.ta.mjs";
 
 

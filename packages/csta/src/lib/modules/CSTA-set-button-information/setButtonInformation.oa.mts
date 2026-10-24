@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { SetButtonInformationArgument, _decode_SetButtonInformationArgument, _encode_SetButtonInformationArgument } from "../CSTA-set-button-information/SetButtonInformationArgument.ta.mjs";
 
-import { SetButtonInformationResult, _decode_SetButtonInformationResult, _encode_SetButtonInformationResult } from "../CSTA-set-button-information/SetButtonInformationResult.ta.mjs";
+import { type SetButtonInformationResult, _decode_SetButtonInformationResult, _encode_SetButtonInformationResult } from "../CSTA-set-button-information/SetButtonInformationResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

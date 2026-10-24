@@ -2,15 +2,15 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "@wildboar/asn1";
-import { NumberDigits, _decode_NumberDigits, _encode_NumberDigits } from "../CSTA-device-identifiers/NumberDigits.ta.mjs";
+import { type NumberDigits, _decode_NumberDigits, _encode_NumberDigits } from "../CSTA-device-identifiers/NumberDigits.ta.mjs";
 
-import { DeviceNumber, _decode_DeviceNumber, _encode_DeviceNumber } from "../CSTA-device-identifiers/DeviceNumber.ta.mjs";
+import { type DeviceNumber, _decode_DeviceNumber, _encode_DeviceNumber } from "../CSTA-device-identifiers/DeviceNumber.ta.mjs";
 
-import { PublicTON, _decode_PublicTON, _encode_PublicTON } from "../CSTA-device-identifiers/PublicTON.ta.mjs";
+import { type PublicTON, _decode_PublicTON, _encode_PublicTON } from "../CSTA-device-identifiers/PublicTON.ta.mjs";
 
-import { PrivateTON, _decode_PrivateTON, _encode_PrivateTON } from "../CSTA-device-identifiers/PrivateTON.ta.mjs";
+import { type PrivateTON, _decode_PrivateTON, _encode_PrivateTON } from "../CSTA-device-identifiers/PrivateTON.ta.mjs";
 
-import { OtherPlan, _decode_OtherPlan, _encode_OtherPlan } from "../CSTA-device-identifiers/OtherPlan.ta.mjs";
+import { type OtherPlan, _decode_OtherPlan, _encode_OtherPlan } from "../CSTA-device-identifiers/OtherPlan.ta.mjs";
 
 
 

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TroubleFound_number,
+    type TroubleFound_number,
     _decode_TroubleFound_number,
     _encode_TroubleFound_number,
 } from '../X790ASN1Module/TroubleFound-number.ta.mjs';

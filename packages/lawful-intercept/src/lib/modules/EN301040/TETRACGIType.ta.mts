@@ -5,13 +5,13 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MCCType, _decode_MCCType, _encode_MCCType } from "../EN301040/MCCType.ta.mjs";
+import { type MCCType, _decode_MCCType, _encode_MCCType } from "../EN301040/MCCType.ta.mjs";
 // export { MCCType, _decode_MCCType, _encode_MCCType } from "../EN301040/MCCType.ta.mjs";
-import { MNCType, _decode_MNCType, _encode_MNCType } from "../EN301040/MNCType.ta.mjs";
+import { type MNCType, _decode_MNCType, _encode_MNCType } from "../EN301040/MNCType.ta.mjs";
 // export { MNCType, _decode_MNCType, _encode_MNCType } from "../EN301040/MNCType.ta.mjs";
-import { LocationAreaType, _decode_LocationAreaType, _encode_LocationAreaType } from "../EN301040/LocationAreaType.ta.mjs";
+import { type LocationAreaType, _decode_LocationAreaType, _encode_LocationAreaType } from "../EN301040/LocationAreaType.ta.mjs";
 // export { LocationAreaType, _decode_LocationAreaType, _encode_LocationAreaType } from "../EN301040/LocationAreaType.ta.mjs";
-import { CellIdType, _decode_CellIdType, _encode_CellIdType } from "../EN301040/CellIdType.ta.mjs";
+import { type CellIdType, _decode_CellIdType, _encode_CellIdType } from "../EN301040/CellIdType.ta.mjs";
 // export { CellIdType, _decode_CellIdType, _encode_CellIdType } from "../EN301040/CellIdType.ta.mjs";
 
 

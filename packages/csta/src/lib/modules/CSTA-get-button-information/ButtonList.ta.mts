@@ -4,7 +4,7 @@ import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
     type BOOLEAN,
-    SEQUENCE,
+    type SEQUENCE,
     type IA5String,
     ASN1Element as _Element
 } from "@wildboar/asn1";

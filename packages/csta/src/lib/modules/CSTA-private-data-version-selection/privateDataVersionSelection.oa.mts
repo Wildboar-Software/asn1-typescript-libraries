@@ -7,13 +7,13 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 
 import {
-    PrivateDataVersionSelectionArgument,
+    type PrivateDataVersionSelectionArgument,
     _decode_PrivateDataVersionSelectionArgument,
     _encode_PrivateDataVersionSelectionArgument
 } from "../CSTA-private-data-version-selection/PrivateDataVersionSelectionArgument.ta.mjs";
 
 import {
-    PrivateDataVersionSelectionResult,
+    type PrivateDataVersionSelectionResult,
     _decode_PrivateDataVersionSelectionResult,
     _encode_PrivateDataVersionSelectionResult
 } from "../CSTA-private-data-version-selection/PrivateDataVersionSelectionResult.ta.mjs";

@@ -2,7 +2,7 @@
 import { TRUE } from "@wildboar/asn1";
 import { id_avc_attributeValueSecurityLabelContext } from "../EnhancedSecurity/id-avc-attributeValueSecurityLabelContext.va.mjs";
 import {
-    SignedSecurityLabel,
+    type SignedSecurityLabel,
     _decode_SignedSecurityLabel,
     _encode_SignedSecurityLabel,
 } from "../EnhancedSecurity/SignedSecurityLabel.ta.mjs";

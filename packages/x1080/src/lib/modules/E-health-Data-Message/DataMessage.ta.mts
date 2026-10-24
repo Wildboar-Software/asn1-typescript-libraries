@@ -14,7 +14,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    NormalValues,
+    type NormalValues,
     _decode_NormalValues,
     _encode_NormalValues,
 } from '../E-health-Data-Message/NormalValues.ta.mjs';

@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    BilaterallyDefinedBodyPart,
+    type BilaterallyDefinedBodyPart,
     _decode_BilaterallyDefinedBodyPart,
     _encode_BilaterallyDefinedBodyPart,
 } from '../IPMSInformationObjects/BilaterallyDefinedBodyPart.ta.mjs';

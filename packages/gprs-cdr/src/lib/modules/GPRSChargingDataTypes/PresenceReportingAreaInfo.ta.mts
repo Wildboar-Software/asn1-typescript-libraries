@@ -7,7 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PresenceReportingAreaStatus, _decode_PresenceReportingAreaStatus, _encode_PresenceReportingAreaStatus, _enum_for_PresenceReportingAreaStatus } from "../GPRSChargingDataTypes/PresenceReportingAreaStatus.ta.mjs";
-import { PresenceReportingAreaInfo_presenceReportingAreaNode, _decode_PresenceReportingAreaInfo_presenceReportingAreaNode, _encode_PresenceReportingAreaInfo_presenceReportingAreaNode } from "../GPRSChargingDataTypes/PresenceReportingAreaInfo-presenceReportingAreaNode.ta.mjs";
+import { type PresenceReportingAreaInfo_presenceReportingAreaNode, _decode_PresenceReportingAreaInfo_presenceReportingAreaNode, _encode_PresenceReportingAreaInfo_presenceReportingAreaNode } from "../GPRSChargingDataTypes/PresenceReportingAreaInfo-presenceReportingAreaNode.ta.mjs";
 
 
 /**

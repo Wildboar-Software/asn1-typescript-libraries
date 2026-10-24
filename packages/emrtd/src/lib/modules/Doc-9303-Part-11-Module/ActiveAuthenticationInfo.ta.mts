@@ -5,7 +5,7 @@ import {
     ASN1Error,
     ASN1TagClass as _TagClass,
     type INTEGER,
-    OBJECT_IDENTIFIER
+    type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { id_icao_mrtd_security_aaProtocolObject } from "../Doc-9303-Part-11-Module/id-icao-mrtd-security-aaProtocolObject.va.mjs";

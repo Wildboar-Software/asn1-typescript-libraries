@@ -4,12 +4,12 @@ import {
 } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
 import { type PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.mjs";
 import {
-    ECParameters,
+    type ECParameters,
     _decode_ECParameters,
     _encode_ECParameters,
 } from "../PKIXAlgs-2009/ECParameters.ta.mjs";
 import {
-    ECPoint,
+    type ECPoint,
     _decode_ECPoint,
     _encode_ECPoint,
 } from "../PKIXAlgs-2009/ECPoint.ta.mjs";

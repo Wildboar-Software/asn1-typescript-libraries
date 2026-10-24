@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AuthenticationCheck,
+    type AuthenticationCheck,
     _decode_AuthenticationCheck,
     _encode_AuthenticationCheck,
 } from '../MhsAcctAsn1Module/AuthenticationCheck.ta.mjs';

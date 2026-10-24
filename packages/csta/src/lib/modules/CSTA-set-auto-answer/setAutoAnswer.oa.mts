@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { SetAutoAnswerArgument, _decode_SetAutoAnswerArgument, _encode_SetAutoAnswerArgument } from "../CSTA-set-auto-answer/SetAutoAnswerArgument.ta.mjs";
 
-import { SetAutoAnswerResult, _decode_SetAutoAnswerResult, _encode_SetAutoAnswerResult } from "../CSTA-set-auto-answer/SetAutoAnswerResult.ta.mjs";
+import { type SetAutoAnswerResult, _decode_SetAutoAnswerResult, _encode_SetAutoAnswerResult } from "../CSTA-set-auto-answer/SetAutoAnswerResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

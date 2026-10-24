@@ -17,7 +17,7 @@ import {
     _encode_AttributeUsage,
 } from '@wildboar/x500/InformationFramework';
 import {
-    SyntaxOrAttribute,
+    type SyntaxOrAttribute,
     _decode_SyntaxOrAttribute,
     _encode_SyntaxOrAttribute,
 } from '../DefinitionASN1Module/SyntaxOrAttribute.ta.mjs';

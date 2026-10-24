@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ABSTRACT_SYNTAX
+    type ABSTRACT_SYNTAX
 } from "@wildboar/asn1";
-import { TFCBinding_PDUs, _decode_TFCBinding_PDUs, _encode_TFCBinding_PDUs } from "../IN-CS3-SCF-SDF-Protocol/TFCBinding-PDUs.ta.mjs";
+import { type TFCBinding_PDUs, _decode_TFCBinding_PDUs, _encode_TFCBinding_PDUs } from "../IN-CS3-SCF-SDF-Protocol/TFCBinding-PDUs.ta.mjs";
 // export { TFCBinding_PDUs, _decode_TFCBinding_PDUs, _encode_TFCBinding_PDUs } from "../IN-CS3-SCF-SDF-Protocol/TFCBinding-PDUs.ta.mjs";
 import { id_as_tfcBindingAS } from "../IN-CS3-object-identifiers/id-as-tfcBindingAS.va.mjs";
 // export { id_as_tfcBindingAS } from "../IN-CS3-object-identifiers/id-as-tfcBindingAS.va.mjs";

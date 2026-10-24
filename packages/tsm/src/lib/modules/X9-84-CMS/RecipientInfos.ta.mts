@@ -11,7 +11,7 @@ import {
     ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RecipientInfo, _decode_RecipientInfo, _encode_RecipientInfo } from "../X9-84-CMS/RecipientInfo.ta.mjs";
+import { type RecipientInfo, _decode_RecipientInfo, _encode_RecipientInfo } from "../X9-84-CMS/RecipientInfo.ta.mjs";
 
 
 

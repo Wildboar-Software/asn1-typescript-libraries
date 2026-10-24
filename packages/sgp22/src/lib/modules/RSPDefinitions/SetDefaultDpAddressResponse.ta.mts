@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_SetDefaultDpAddressResponse_setDefaultDpAddressResult, _encode_SetDefaultDpAddressResponse_setDefaultDpAddressResult, SetDefaultDpAddressResponse_setDefaultDpAddressResult } from "../RSPDefinitions/SetDefaultDpAddressResponse-setDefaultDpAddressResult.ta.mjs";
+import { _decode_SetDefaultDpAddressResponse_setDefaultDpAddressResult, _encode_SetDefaultDpAddressResponse_setDefaultDpAddressResult, type SetDefaultDpAddressResponse_setDefaultDpAddressResult } from "../RSPDefinitions/SetDefaultDpAddressResponse-setDefaultDpAddressResult.ta.mjs";
 
 
 /**

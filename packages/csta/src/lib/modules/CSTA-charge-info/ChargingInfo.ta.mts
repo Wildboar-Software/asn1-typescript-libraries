@@ -2,14 +2,14 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ENUMERATED,
-    SEQUENCE,
-    SET,
+    type ENUMERATED,
+    type SEQUENCE,
+    type SET,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1ConstructionError as _ConstructionError
 } from "@wildboar/asn1";
-import { NumberUnits, _decode_NumberUnits, _encode_NumberUnits } from "../CSTA-charge-info/NumberUnits.ta.mjs";
+import { type NumberUnits, _decode_NumberUnits, _encode_NumberUnits } from "../CSTA-charge-info/NumberUnits.ta.mjs";
 
 import {
     ChargingInfo_typeOfChargingInfo,

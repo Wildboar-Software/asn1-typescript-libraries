@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { BMPString } from "@wildboar/asn1";
+import { type BMPString } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import type { ATTRIBUTE } from "@wildboar/x500/InformationFramework";
 import {

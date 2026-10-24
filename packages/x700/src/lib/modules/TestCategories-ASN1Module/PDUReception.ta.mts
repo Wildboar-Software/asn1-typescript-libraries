@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    PDUType,
+    type PDUType,
     _decode_PDUType,
     _encode_PDUType,
 } from '../TestCategories-ASN1Module/PDUType.ta.mjs';
@@ -22,7 +22,7 @@ import {
     _encode_Parameter,
 } from '../TestCategories-ASN1Module/Parameter.ta.mjs';
 import {
-    ResponseTimeout,
+    type ResponseTimeout,
     _decode_ResponseTimeout,
     _encode_ResponseTimeout,
 } from '../TestCategories-ASN1Module/ResponseTimeout.ta.mjs';

@@ -13,4 +13,4 @@ interface Result {
     result?: ASN1Element;
 }
 
-export default Result;
+export type { Result as default };

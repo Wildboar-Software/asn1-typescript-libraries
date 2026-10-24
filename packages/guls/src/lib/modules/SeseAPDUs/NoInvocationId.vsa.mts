@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  InvocationId,
+  type InvocationId,
   _decode_InvocationId,
   _encode_InvocationId,
 } from '../SeseAPDUs/InvocationId.ta.mjs';

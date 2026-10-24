@@ -1,20 +1,20 @@
 /* eslint-disable */
 import {
     type BOOLEAN,
-    NULL,
+    type NULL,
     type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AddressString, _decode_AddressString, _encode_AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
-import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type AddressString, _decode_AddressString, _encode_AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
+import { type IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../MAP-SM-DataTypes/CorrelationID.ta.mjs";
-import { SM_DeliveryNotIntended, _decode_SM_DeliveryNotIntended, _encode_SM_DeliveryNotIntended, _enum_for_SM_DeliveryNotIntended } from "../MAP-SM-DataTypes/SM-DeliveryNotIntended.ta.mjs";
-import { SM_RP_MTI, _decode_SM_RP_MTI, _encode_SM_RP_MTI } from "../MAP-SM-DataTypes/SM-RP-MTI.ta.mjs";
-import { SM_RP_SMEA, _decode_SM_RP_SMEA, _encode_SM_RP_SMEA } from "../MAP-SM-DataTypes/SM-RP-SMEA.ta.mjs";
+import { type SM_DeliveryNotIntended, _decode_SM_DeliveryNotIntended, _encode_SM_DeliveryNotIntended, _enum_for_SM_DeliveryNotIntended } from "../MAP-SM-DataTypes/SM-DeliveryNotIntended.ta.mjs";
+import { type SM_RP_MTI, _decode_SM_RP_MTI, _encode_SM_RP_MTI } from "../MAP-SM-DataTypes/SM-RP-MTI.ta.mjs";
+import { type SM_RP_SMEA, _decode_SM_RP_SMEA, _encode_SM_RP_SMEA } from "../MAP-SM-DataTypes/SM-RP-SMEA.ta.mjs";
 
 
 /**

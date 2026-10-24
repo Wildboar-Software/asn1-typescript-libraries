@@ -6,10 +6,10 @@ import {
     ASN1Error
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ParameterName, _decode_ParameterName, _encode_ParameterName,
+import { type ParameterName, _decode_ParameterName, _encode_ParameterName,
     ParameterName_blockingTimeoutPeriod
 } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/ParameterName.ta.mjs";
-import { FspGetParameter_parBlockingTimeout_parameterValue, _decode_FspGetParameter_parBlockingTimeout_parameterValue, _encode_FspGetParameter_parBlockingTimeout_parameterValue } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/FspGetParameter-parBlockingTimeout-parameterValue.ta.mjs";
+import { type FspGetParameter_parBlockingTimeout_parameterValue, _decode_FspGetParameter_parBlockingTimeout_parameterValue, _encode_FspGetParameter_parBlockingTimeout_parameterValue } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/FspGetParameter-parBlockingTimeout-parameterValue.ta.mjs";
 
 
 

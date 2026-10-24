@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Integer4, _decode_Integer4, _encode_Integer4 } from "../IN-CS3-common-datatypes/Integer4.ta.mjs";
+import { type Integer4, _decode_Integer4, _encode_Integer4 } from "../IN-CS3-common-datatypes/Integer4.ta.mjs";
 // export { Integer4, _decode_Integer4, _encode_Integer4 } from "../IN-CS3-common-datatypes/Integer4.ta.mjs";
-import { VariablePart, _decode_VariablePart, _encode_VariablePart } from "../IN-CS3-SCF-SRF-datatypes/VariablePart.ta.mjs";
+import { type VariablePart, _decode_VariablePart, _encode_VariablePart } from "../IN-CS3-SCF-SRF-datatypes/VariablePart.ta.mjs";
 // export { VariablePart, _decode_VariablePart, _encode_VariablePart } from "../IN-CS3-SCF-SRF-datatypes/VariablePart.ta.mjs";
 
 

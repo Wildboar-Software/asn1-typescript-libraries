@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { LegType } from "../IN-CS2-datatypes/LegType.ta.mjs";
+import { type LegType } from "../IN-CS2-datatypes/LegType.ta.mjs";
 // export { LegType, _decode_LegType, _encode_LegType } from "../IN-CS2-datatypes/LegType.ta.mjs";
 
 

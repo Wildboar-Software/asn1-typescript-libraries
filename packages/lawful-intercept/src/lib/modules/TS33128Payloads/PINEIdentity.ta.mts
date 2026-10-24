@@ -4,11 +4,11 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PINClientID, _decode_PINClientID, _encode_PINClientID } from "../TS33128Payloads/PINClientID.ta.mjs";
+import { type PINClientID, _decode_PINClientID, _encode_PINClientID } from "../TS33128Payloads/PINClientID.ta.mjs";
 // export { PINClientID, _decode_PINClientID, _encode_PINClientID } from "../TS33128Payloads/PINClientID.ta.mjs";
-import { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
+import { type GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
 // export { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
-import { IdentityToken, _decode_IdentityToken, _encode_IdentityToken } from "../TS33128Payloads/IdentityToken.ta.mjs";
+import { type IdentityToken, _decode_IdentityToken, _encode_IdentityToken } from "../TS33128Payloads/IdentityToken.ta.mjs";
 // export { IdentityToken, _decode_IdentityToken, _encode_IdentityToken } from "../TS33128Payloads/IdentityToken.ta.mjs";
 
 

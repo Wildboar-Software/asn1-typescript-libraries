@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ArcInterval,
+    type ArcInterval,
     _decode_ArcInterval,
     _encode_ArcInterval,
 } from '../M3100ASN1TypeModule4/ArcInterval.ta.mjs';

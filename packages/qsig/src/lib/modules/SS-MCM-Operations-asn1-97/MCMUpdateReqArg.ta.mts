@@ -5,10 +5,10 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
+import { type PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { MessageType, _decode_MessageType, _encode_MessageType, _enum_for_MessageType } from "../SS-MCM-Operations-asn1-97/MessageType.ta.mjs";
-import { MsgCentreId, _decode_MsgCentreId, _encode_MsgCentreId } from "../SS-MCM-Operations-asn1-97/MsgCentreId.ta.mjs";
-import { MCMUpdateReqArg_argumentExt, _decode_MCMUpdateReqArg_argumentExt, _encode_MCMUpdateReqArg_argumentExt } from "../SS-MCM-Operations-asn1-97/MCMUpdateReqArg-argumentExt.ta.mjs";
+import { type MsgCentreId, _decode_MsgCentreId, _encode_MsgCentreId } from "../SS-MCM-Operations-asn1-97/MsgCentreId.ta.mjs";
+import { type MCMUpdateReqArg_argumentExt, _decode_MCMUpdateReqArg_argumentExt, _encode_MCMUpdateReqArg_argumentExt } from "../SS-MCM-Operations-asn1-97/MCMUpdateReqArg-argumentExt.ta.mjs";
 
 /**
  * @summary MCMUpdateReqArg

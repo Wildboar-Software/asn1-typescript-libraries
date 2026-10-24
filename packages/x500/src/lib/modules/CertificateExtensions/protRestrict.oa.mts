@@ -2,7 +2,7 @@
 import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 import { id_ce_protRestrict } from "../CertificateExtensions/id-ce-protRestrict.va.mjs";
 import {
-    ProtRestriction,
+    type ProtRestriction,
     _decode_ProtRestriction,
     _encode_ProtRestriction,
 } from "../CertificateExtensions/ProtRestriction.ta.mjs";

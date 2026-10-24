@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  BOOLEAN,
-  INTEGER,
+  type OPTIONAL,
+  type BOOLEAN,
+  type INTEGER,
   TRUE_BIT,
   FALSE_BIT,
   ASN1Element as _Element,
@@ -16,57 +16,57 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Protocol_Version,
+  type Protocol_Version,
   _decode_Protocol_Version,
   _encode_Protocol_Version,
 } from '../ISO8571-FTAM/Protocol-Version.ta.mjs';
 import {
-  Implementation_Information,
+  type Implementation_Information,
   _decode_Implementation_Information,
   _encode_Implementation_Information,
 } from '../ISO8571-FTAM/Implementation-Information.ta.mjs';
 import {
-  Service_Class,
+  type Service_Class,
   _decode_Service_Class,
   _encode_Service_Class,
 } from '../ISO8571-FTAM/Service-Class.ta.mjs';
 import {
-  Functional_Units,
+  type Functional_Units,
   _decode_Functional_Units,
   _encode_Functional_Units,
 } from '../ISO8571-FTAM/Functional-Units.ta.mjs';
 import {
-  Attribute_Groups,
+  type Attribute_Groups,
   _decode_Attribute_Groups,
   _encode_Attribute_Groups,
 } from '../ISO8571-FTAM/Attribute-Groups.ta.mjs';
 import {
-  Shared_ASE_Information,
+  type Shared_ASE_Information,
   _decode_Shared_ASE_Information,
   _encode_Shared_ASE_Information,
 } from '../ISO8571-FTAM/Shared-ASE-Information.ta.mjs';
 import {
-  FTAM_Quality_of_Service,
+  type FTAM_Quality_of_Service,
   _decode_FTAM_Quality_of_Service,
   _encode_FTAM_Quality_of_Service,
 } from '../ISO8571-FTAM/FTAM-Quality-of-Service.ta.mjs';
 import {
-  Contents_Type_List,
+  type Contents_Type_List,
   _decode_Contents_Type_List,
   _encode_Contents_Type_List,
 } from '../ISO8571-FTAM/Contents-Type-List.ta.mjs';
 import {
-  User_Identity,
+  type User_Identity,
   _decode_User_Identity,
   _encode_User_Identity,
 } from '../ISO8571-FTAM/User-Identity.ta.mjs';
 import {
-  Account,
+  type Account,
   _decode_Account,
   _encode_Account,
 } from '../ISO8571-FTAM/Account.ta.mjs';
 import {
-  Password,
+  type Password,
   _decode_Password,
   _encode_Password,
 } from '../ISO8571-FTAM/Password.ta.mjs';

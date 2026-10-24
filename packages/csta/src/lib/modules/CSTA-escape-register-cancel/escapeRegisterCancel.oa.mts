@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { EscapeRegisterCancelArgument, _decode_EscapeRegisterCancelArgument, _encode_EscapeRegisterCancelArgument } from "../CSTA-escape-register-cancel/EscapeRegisterCancelArgument.ta.mjs";
 
-import { EscapeRegisterCancelResult, _decode_EscapeRegisterCancelResult, _encode_EscapeRegisterCancelResult } from "../CSTA-escape-register-cancel/EscapeRegisterCancelResult.ta.mjs";
+import { type EscapeRegisterCancelResult, _decode_EscapeRegisterCancelResult, _encode_EscapeRegisterCancelResult } from "../CSTA-escape-register-cancel/EscapeRegisterCancelResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    MS_EITs,
+    type MS_EITs,
     _decode_MS_EITs,
     _encode_MS_EITs,
 } from '../MSAbstractService/MS-EITs.ta.mjs';

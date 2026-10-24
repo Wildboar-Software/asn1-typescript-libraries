@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    BlindCopyRecipientsSubfield,
+    type BlindCopyRecipientsSubfield,
     _decode_BlindCopyRecipientsSubfield,
     _encode_BlindCopyRecipientsSubfield,
 } from '../IPMSInformationObjects/BlindCopyRecipientsSubfield.ta.mjs';

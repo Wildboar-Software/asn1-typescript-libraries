@@ -23,7 +23,7 @@ import {
     _encode_DeleteArgument,
 } from '../MSAbstractService/DeleteArgument.ta.mjs';
 import {
-    DeleteResult,
+    type DeleteResult,
     _decode_DeleteResult,
     _encode_DeleteResult,
 } from '../MSAbstractService/DeleteResult.ta.mjs';

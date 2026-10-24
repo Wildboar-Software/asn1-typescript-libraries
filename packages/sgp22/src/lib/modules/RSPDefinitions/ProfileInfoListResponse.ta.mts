@@ -5,7 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ProfileInfo, _decode_ProfileInfo, _encode_ProfileInfo } from "../RSPDefinitions/ProfileInfo.ta.mjs";
-import { ProfileInfoListError, _decode_ProfileInfoListError, _encode_ProfileInfoListError } from "../RSPDefinitions/ProfileInfoListError.ta.mjs";
+import { type ProfileInfoListError, _decode_ProfileInfoListError, _encode_ProfileInfoListError } from "../RSPDefinitions/ProfileInfoListError.ta.mjs";
 
 
 /**

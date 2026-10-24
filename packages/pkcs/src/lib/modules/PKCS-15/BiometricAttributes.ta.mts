@@ -2,24 +2,24 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    GeneralizedTime,
+    type GeneralizedTime,
     type OBJECT_IDENTIFIER,
     type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    BiometricFlags,
+    type BiometricFlags,
     _decode_BiometricFlags,
     _encode_BiometricFlags,
 } from "../PKCS-15/BiometricFlags.ta.mjs";
 import {
-    BiometricType,
+    type BiometricType,
     _decode_BiometricType,
     _encode_BiometricType,
 } from "../PKCS-15/BiometricType.ta.mjs";
 import { Path, _decode_Path, _encode_Path } from "../PKCS-15/Path.ta.mjs";
 import {
-    Reference,
+    type Reference,
     _decode_Reference,
     _encode_Reference,
 } from "../PKCS-15/Reference.ta.mjs";

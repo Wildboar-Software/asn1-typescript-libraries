@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    EMailMtsUserName,
+    type EMailMtsUserName,
     _decode_EMailMtsUserName,
     _encode_EMailMtsUserName,
 } from '../MhsMTAAsn1Module/EMailMtsUserName.ta.mjs';

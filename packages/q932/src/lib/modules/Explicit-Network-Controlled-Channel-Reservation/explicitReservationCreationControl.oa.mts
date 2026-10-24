@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { _decode_explicitReservationCreationControl_ArgumentType, _encode_explicitReservationCreationControl_ArgumentType, explicitReservationCreationControl_ArgumentType } from "../Explicit-Network-Controlled-Channel-Reservation/explicitReservationCreationControl-ArgumentType.ta.mjs";
-import { ReservationIndicator, _decode_ReservationIndicator, _encode_ReservationIndicator } from "../Explicit-Network-Controlled-Channel-Reservation/ReservationIndicator.ta.mjs";
+import { type ReservationIndicator, _decode_ReservationIndicator, _encode_ReservationIndicator } from "../Explicit-Network-Controlled-Channel-Reservation/ReservationIndicator.ta.mjs";
 import { maximumNumberOfReservationsReached } from "../Explicit-Network-Controlled-Channel-Reservation/maximumNumberOfReservationsReached.oa.mjs";
 import { unwantedReservationCreated } from "../Explicit-Network-Controlled-Channel-Reservation/unwantedReservationCreated.oa.mjs";
 import { notAvailable } from "../Explicit-Network-Controlled-Channel-Reservation/notAvailable.oa.mjs";

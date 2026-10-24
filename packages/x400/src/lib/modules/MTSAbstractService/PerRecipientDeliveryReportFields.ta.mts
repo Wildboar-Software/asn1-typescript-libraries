@@ -12,22 +12,22 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    MessageDeliveryTime,
+    type MessageDeliveryTime,
     _decode_MessageDeliveryTime,
     _encode_MessageDeliveryTime,
 } from '../MTSAbstractService/MessageDeliveryTime.ta.mjs';
 import {
-    TypeOfMTSUser,
+    type TypeOfMTSUser,
     _decode_TypeOfMTSUser,
     _encode_TypeOfMTSUser,
 } from '../MTSAbstractService/TypeOfMTSUser.ta.mjs';
 import {
-    RecipientCertificate,
+    type RecipientCertificate,
     _decode_RecipientCertificate,
     _encode_RecipientCertificate,
 } from '../MTSAbstractService/RecipientCertificate.ta.mjs';
 import {
-    ProofOfDelivery,
+    type ProofOfDelivery,
     _decode_ProofOfDelivery,
     _encode_ProofOfDelivery,
 } from '../MTSAbstractService/ProofOfDelivery.ta.mjs';

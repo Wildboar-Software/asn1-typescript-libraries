@@ -6,8 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyInfo, _decode_PartyInfo, _encode_PartyInfo } from "../SS-MCM-Operations-asn1-97/PartyInfo.ta.mjs";
-import { MailboxFullFor, _decode_MailboxFullFor, _encode_MailboxFullFor } from "../SS-MCM-Operations-asn1-97/MailboxFullFor.ta.mjs";
-import { MCMExtensions, _decode_MCMExtensions, _encode_MCMExtensions } from "../SS-MCM-Operations-asn1-97/MCMExtensions.ta.mjs";
+import { type MailboxFullFor, _decode_MailboxFullFor, _encode_MailboxFullFor } from "../SS-MCM-Operations-asn1-97/MailboxFullFor.ta.mjs";
+import { type MCMExtensions, _decode_MCMExtensions, _encode_MCMExtensions } from "../SS-MCM-Operations-asn1-97/MCMExtensions.ta.mjs";
 
 /**
  * @summary MCMailboxFullArg

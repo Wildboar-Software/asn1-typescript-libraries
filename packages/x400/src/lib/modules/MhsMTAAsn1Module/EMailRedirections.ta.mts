@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Label,
+    type Label,
     _decode_Label,
     _encode_Label,
 } from '../MhsMTAAsn1Module/Label.ta.mjs';
 import {
-    EMailRedirections_address,
+    type EMailRedirections_address,
     _decode_EMailRedirections_address,
     _encode_EMailRedirections_address,
 } from '../MhsMTAAsn1Module/EMailRedirections-address.ta.mjs';

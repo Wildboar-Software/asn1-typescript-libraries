@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { StopArgument, _decode_StopArgument, _encode_StopArgument } from "../CSTA-stop/StopArgument.ta.mjs";
 
-import { StopResult, _decode_StopResult, _encode_StopResult } from "../CSTA-stop/StopResult.ta.mjs";
+import { type StopResult, _decode_StopResult, _encode_StopResult } from "../CSTA-stop/StopResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

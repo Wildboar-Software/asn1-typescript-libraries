@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca.mjs";
 import {
-    EncodingParameters,
+    type EncodingParameters,
     _decode_EncodingParameters,
     _encode_EncodingParameters,
 } from "../PKCS-1/EncodingParameters.ta.mjs";

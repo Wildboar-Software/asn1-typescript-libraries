@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RepertoireAssignment_value, _decode_RepertoireAssignment_value, _encode_RepertoireAssignment_value } from "../CDS/RepertoireAssignment-value.ta.mjs";
+import { type RepertoireAssignment_value, _decode_RepertoireAssignment_value, _encode_RepertoireAssignment_value } from "../CDS/RepertoireAssignment-value.ta.mjs";
 
 
 /**

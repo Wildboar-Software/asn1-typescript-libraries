@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SecurityExtensionsSubField,
+    type SecurityExtensionsSubField,
     _decode_SecurityExtensionsSubField,
     _encode_SecurityExtensionsSubField,
 } from '../EDIMSInformationObjects/SecurityExtensionsSubField.ta.mjs';

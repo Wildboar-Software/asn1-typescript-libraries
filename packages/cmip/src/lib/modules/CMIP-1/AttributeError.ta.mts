@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,18 +12,18 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  AttributeError_errorStatus,
+  type AttributeError_errorStatus,
   _enum_for_AttributeError_errorStatus,
   _decode_AttributeError_errorStatus,
   _encode_AttributeError_errorStatus,
 } from '../CMIP-1/AttributeError-errorStatus.ta.mjs';
 import {
-  ModifyOperator,
+  type ModifyOperator,
   _decode_ModifyOperator,
   _encode_ModifyOperator,
 } from '../CMIP-1/ModifyOperator.ta.mjs';
 import {
-    AttributeId,
+    type AttributeId,
     _decode_AttributeId,
     _encode_AttributeId,
 } from '../CMIP-1/AttributeId.ta.mjs';

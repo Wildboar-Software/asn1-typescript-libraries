@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Identity, _decode_Identity, _encode_Identity } from "../MAP-CommonDataTypes/Identity.ta.mjs";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-import { LMSI, _decode_LMSI, _encode_LMSI } from "../MAP-CommonDataTypes/LMSI.ta.mjs";
+import { type Identity, _decode_Identity, _encode_Identity } from "../MAP-CommonDataTypes/Identity.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type LMSI, _decode_LMSI, _encode_LMSI } from "../MAP-CommonDataTypes/LMSI.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { CancellationType, _decode_CancellationType, _encode_CancellationType, _enum_for_CancellationType } from "../MAP-MS-DataTypes/CancellationType.ta.mjs";
-import { TypeOfUpdate, _decode_TypeOfUpdate, _encode_TypeOfUpdate, _enum_for_TypeOfUpdate } from "../MAP-MS-DataTypes/TypeOfUpdate.ta.mjs";
+import { type CancellationType, _decode_CancellationType, _encode_CancellationType, _enum_for_CancellationType } from "../MAP-MS-DataTypes/CancellationType.ta.mjs";
+import { type TypeOfUpdate, _decode_TypeOfUpdate, _encode_TypeOfUpdate, _enum_for_TypeOfUpdate } from "../MAP-MS-DataTypes/TypeOfUpdate.ta.mjs";
 
 
 /**

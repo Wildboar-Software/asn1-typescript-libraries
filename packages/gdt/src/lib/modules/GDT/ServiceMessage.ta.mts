@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ServiceId, _decode_ServiceId, _encode_ServiceId } from "../GDT/ServiceId.ta.mjs";
-import { ServiceAction, _decode_ServiceAction, _encode_ServiceAction } from "../GDT/ServiceAction.ta.mjs";
-import { Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Parameters.ta.mjs";
+import { type ServiceId, _decode_ServiceId, _encode_ServiceId } from "../GDT/ServiceId.ta.mjs";
+import { type ServiceAction, _decode_ServiceAction, _encode_ServiceAction } from "../GDT/ServiceAction.ta.mjs";
+import { type Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Parameters.ta.mjs";
 
 
 /**

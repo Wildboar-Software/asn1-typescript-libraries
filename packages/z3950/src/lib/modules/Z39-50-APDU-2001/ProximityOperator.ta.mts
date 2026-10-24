@@ -7,8 +7,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ProximityOperator_relationType, _decode_ProximityOperator_relationType, _encode_ProximityOperator_relationType } from "../Z39-50-APDU-2001/ProximityOperator-relationType.ta.mjs";
-import { ProximityOperator_proximityUnitCode, _decode_ProximityOperator_proximityUnitCode, _encode_ProximityOperator_proximityUnitCode } from "../Z39-50-APDU-2001/ProximityOperator-proximityUnitCode.ta.mjs";
+import { type ProximityOperator_relationType, _decode_ProximityOperator_relationType, _encode_ProximityOperator_relationType } from "../Z39-50-APDU-2001/ProximityOperator-relationType.ta.mjs";
+import { type ProximityOperator_proximityUnitCode, _decode_ProximityOperator_proximityUnitCode, _encode_ProximityOperator_proximityUnitCode } from "../Z39-50-APDU-2001/ProximityOperator-proximityUnitCode.ta.mjs";
 
 
 /**

@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Language,
+    type Language,
     _decode_Language,
     _encode_Language,
 } from '../IPMSHeadingExtensions/Language.ta.mjs';

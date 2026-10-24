@@ -4,7 +4,7 @@ import {
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_LSAIdentity, _encode_LSAIdentity, LSAIdentity } from "../MAP-MS-DataTypes/LSAIdentity.ta.mjs";
+import { _decode_LSAIdentity, _encode_LSAIdentity, type LSAIdentity } from "../MAP-MS-DataTypes/LSAIdentity.ta.mjs";
 
 
 import { maxNumOfLSAs } from "./maxNumOfLSAs.va.mjs";

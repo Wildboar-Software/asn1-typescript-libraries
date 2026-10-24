@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    EncryptedData,
+    type EncryptedData,
     _decode_EncryptedData,
     _encode_EncryptedData,
 } from '../IPMSInformationObjects/EncryptedData.ta.mjs';

@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ActionTypeId,
+    type ActionTypeId,
     _decode_ActionTypeId,
     _encode_ActionTypeId,
 } from '@wildboar/cmip';
 import {
-    FilterList,
+    type FilterList,
     _decode_FilterList,
     _encode_FilterList,
 } from '../AccessControl-ASN1Module/FilterList.ta.mjs';

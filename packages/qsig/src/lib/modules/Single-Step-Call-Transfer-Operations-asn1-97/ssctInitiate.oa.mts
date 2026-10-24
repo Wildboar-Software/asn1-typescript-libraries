@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { SSCTInitiateArg, _decode_SSCTInitiateArg, _encode_SSCTInitiateArg } from "../Single-Step-Call-Transfer-Operations-asn1-97/SSCTInitiateArg.ta.mjs";
-import { DummyRes, _decode_DummyRes, _encode_DummyRes } from "../Single-Step-Call-Transfer-Operations-asn1-97/DummyRes.ta.mjs";
+import { type DummyRes, _decode_DummyRes, _encode_DummyRes } from "../Single-Step-Call-Transfer-Operations-asn1-97/DummyRes.ta.mjs";
 import { notAvailable } from "../General-Error-List/notAvailable.oa.mjs";
 import { invalidCallState } from "../General-Error-List/invalidCallState.oa.mjs";
 import { invalidRerouteingNumber } from "../Call-Transfer-Operations-asn1-97/invalidRerouteingNumber.oa.mjs";

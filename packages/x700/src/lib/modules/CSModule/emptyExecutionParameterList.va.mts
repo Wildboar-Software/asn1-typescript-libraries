@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    ExecutionParameterList,
+    type ExecutionParameterList,
     _decode_ExecutionParameterList,
     _encode_ExecutionParameterList,
 } from '../CSModule/ExecutionParameterList.ta.mjs';

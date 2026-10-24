@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RelatedIPMsSubfield,
+    type RelatedIPMsSubfield,
     _decode_RelatedIPMsSubfield,
     _encode_RelatedIPMsSubfield,
 } from '../IPMSInformationObjects/RelatedIPMsSubfield.ta.mjs';

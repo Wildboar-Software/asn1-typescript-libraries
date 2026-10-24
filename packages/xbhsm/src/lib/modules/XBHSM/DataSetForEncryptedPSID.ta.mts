@@ -7,12 +7,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    PSIDEncryptionAlgorithm,
+    type PSIDEncryptionAlgorithm,
     _decode_PSIDEncryptionAlgorithm,
     _encode_PSIDEncryptionAlgorithm,
 } from "../XBHSM/PSIDEncryptionAlgorithm.ta.mjs";
 import {
-    EncryptedPsid,
+    type EncryptedPsid,
     _decode_EncryptedPsid,
     _encode_EncryptedPsid,
 } from "../XBHSM/EncryptedPsid.ta.mjs";

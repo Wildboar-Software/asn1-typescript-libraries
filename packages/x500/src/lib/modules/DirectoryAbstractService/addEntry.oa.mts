@@ -2,12 +2,12 @@
 import { id_opcode_addEntry } from "../CommonProtocolSpecification/id-opcode-addEntry.va.mjs";
 import { type OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
 import {
-    AddEntryArgument,
+    type AddEntryArgument,
     _decode_AddEntryArgument,
     _encode_AddEntryArgument,
 } from "../DirectoryAbstractService/AddEntryArgument.ta.mjs";
 import {
-    AddEntryResult,
+    type AddEntryResult,
     _decode_AddEntryResult,
     _encode_AddEntryResult,
 } from "../DirectoryAbstractService/AddEntryResult.ta.mjs";

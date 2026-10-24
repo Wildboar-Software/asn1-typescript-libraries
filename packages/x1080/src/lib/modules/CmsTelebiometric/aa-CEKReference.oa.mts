@@ -17,7 +17,7 @@ import {
     _encode_AttributeUsage,
 } from '@wildboar/x500/InformationFramework';
 import {
-    CEKReference,
+    type CEKReference,
     _decode_CEKReference,
     _encode_CEKReference,
 } from '../CmsTelebiometric/CEKReference.ta.mjs';

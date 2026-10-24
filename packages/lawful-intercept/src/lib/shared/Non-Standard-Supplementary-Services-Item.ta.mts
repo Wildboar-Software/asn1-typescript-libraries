@@ -4,9 +4,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SimpleIndication, _decode_SimpleIndication, _encode_SimpleIndication } from "./SimpleIndication.ta.mjs";
+import { type SimpleIndication, _decode_SimpleIndication, _encode_SimpleIndication } from "./SimpleIndication.ta.mjs";
 // export { SimpleIndication, _enum_for_SimpleIndication, SimpleIndication_call_Waiting_Indication /* IMPORTED_LONG_ENUMERATION_ITEM */, call_Waiting_Indication /* IMPORTED_SHORT_ENUMERATION_ITEM */, SimpleIndication_add_conf_Indication /* IMPORTED_LONG_ENUMERATION_ITEM */, add_conf_Indication /* IMPORTED_SHORT_ENUMERATION_ITEM */, SimpleIndication_call_on_hold_Indication /* IMPORTED_LONG_ENUMERATION_ITEM */, call_on_hold_Indication /* IMPORTED_SHORT_ENUMERATION_ITEM */, SimpleIndication_retrieve_Indication /* IMPORTED_LONG_ENUMERATION_ITEM */, retrieve_Indication /* IMPORTED_SHORT_ENUMERATION_ITEM */, SimpleIndication_suspend_Indication /* IMPORTED_LONG_ENUMERATION_ITEM */, suspend_Indication /* IMPORTED_SHORT_ENUMERATION_ITEM */, SimpleIndication_resume_Indication /* IMPORTED_LONG_ENUMERATION_ITEM */, resume_Indication /* IMPORTED_SHORT_ENUMERATION_ITEM */, SimpleIndication_answer_Indication /* IMPORTED_LONG_ENUMERATION_ITEM */, answer_Indication /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SimpleIndication, _encode_SimpleIndication } from "./SimpleIndication.ta.mjs";
-import { SciDataMode, _decode_SciDataMode, _encode_SciDataMode } from "./SciDataMode.ta.mjs";
+import { type SciDataMode, _decode_SciDataMode, _encode_SciDataMode } from "./SciDataMode.ta.mjs";
 // export { SciDataMode, _decode_SciDataMode, _encode_SciDataMode } from "./SciDataMode.ta.mjs";
 
 

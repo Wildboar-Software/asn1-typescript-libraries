@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RedirectionReason,
+    type RedirectionReason,
     _enum_for_RedirectionReason,
     _decode_RedirectionReason,
     _encode_RedirectionReason,

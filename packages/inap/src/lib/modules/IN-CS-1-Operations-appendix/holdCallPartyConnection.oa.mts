@@ -4,7 +4,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 // export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { HoldCallPartyConnectionArg, _decode_HoldCallPartyConnectionArg, _encode_HoldCallPartyConnectionArg } from "../IN-CS-1-DataTypes-appendix/HoldCallPartyConnectionArg.ta.mjs";
 // export { HoldCallPartyConnectionArg, _decode_HoldCallPartyConnectionArg, _encode_HoldCallPartyConnectionArg } from "../IN-CS-1-DataTypes-appendix/HoldCallPartyConnectionArg.ta.mjs";
-import { CallPartyHandlingResultsArg, _decode_CallPartyHandlingResultsArg, _encode_CallPartyHandlingResultsArg } from "../IN-CS-1-DataTypes-appendix/CallPartyHandlingResultsArg.ta.mjs";
+import { type CallPartyHandlingResultsArg, _decode_CallPartyHandlingResultsArg, _encode_CallPartyHandlingResultsArg } from "../IN-CS-1-DataTypes-appendix/CallPartyHandlingResultsArg.ta.mjs";
 // export { CallPartyHandlingResultsArg, _decode_CallPartyHandlingResultsArg, _encode_CallPartyHandlingResultsArg } from "../IN-CS-1-DataTypes-appendix/CallPartyHandlingResultsArg.ta.mjs";
 import { dataUnavailable } from "../IN-CS-1-Errors-appendix/dataUnavailable.oa.mjs";
 // export { dataUnavailable } from "../IN-CS-1-Errors-appendix/dataUnavailable.oa.mjs";

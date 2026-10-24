@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { NULL } from "@wildboar/asn1";
+import { type NULL } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { id_hmacWithSHA224 } from "../AlgorithmObjectIdentifiers/id-hmacWithSHA224.va.mjs";
 import { type ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";

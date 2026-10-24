@@ -16,7 +16,7 @@ import {
     _encode_EncryptedParameters,
 } from '../IPMSInformationObjects/EncryptedParameters.ta.mjs';
 import {
-    EncryptedData,
+    type EncryptedData,
     _decode_EncryptedData,
     _encode_EncryptedData,
 } from '../IPMSInformationObjects/EncryptedData.ta.mjs';

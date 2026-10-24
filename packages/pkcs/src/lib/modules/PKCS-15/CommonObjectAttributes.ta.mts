@@ -12,16 +12,16 @@ import {
     _encode_AccessControlRule,
 } from "../PKCS-15/AccessControlRule.ta.mjs";
 import {
-    CommonObjectFlags,
+    type CommonObjectFlags,
     _decode_CommonObjectFlags,
     _encode_CommonObjectFlags,
 } from "../PKCS-15/CommonObjectFlags.ta.mjs";
 import {
-    Identifier,
+    type Identifier,
     _decode_Identifier,
     _encode_Identifier,
 } from "../PKCS-15/Identifier.ta.mjs";
-import { Label, _decode_Label, _encode_Label } from "../PKCS-15/Label.ta.mjs";
+import { type Label, _decode_Label, _encode_Label } from "../PKCS-15/Label.ta.mjs";
 
 
 /**

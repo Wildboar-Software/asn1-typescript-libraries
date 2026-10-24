@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RestoreSource,
+    type RestoreSource,
     _decode_RestoreSource,
     _encode_RestoreSource,
 } from '../BackupRestoreASN1Module/RestoreSource.ta.mjs';

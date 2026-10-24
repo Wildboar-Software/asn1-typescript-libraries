@@ -7,23 +7,23 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ContextSelection,
+    type ContextSelection,
     _decode_ContextSelection,
     _encode_ContextSelection,
 } from "../DirectoryAbstractService/ContextSelection.ta.mjs";
 import {
-    EntryInformationSelection_attributes,
+    type EntryInformationSelection_attributes,
     _decode_EntryInformationSelection_attributes,
     _encode_EntryInformationSelection_attributes,
 } from "../DirectoryAbstractService/EntryInformationSelection-attributes.ta.mjs";
 import {
-    EntryInformationSelection_extraAttributes,
+    type EntryInformationSelection_extraAttributes,
     _decode_EntryInformationSelection_extraAttributes,
     _encode_EntryInformationSelection_extraAttributes,
 } from "../DirectoryAbstractService/EntryInformationSelection-extraAttributes.ta.mjs";
 import {
     attributeTypesAndValues /* IMPORTED_SHORT_NAMED_INTEGER */,
-    EntryInformationSelection_infoTypes,
+    type EntryInformationSelection_infoTypes,
     _decode_EntryInformationSelection_infoTypes,
     _encode_EntryInformationSelection_infoTypes,
 } from "../DirectoryAbstractService/EntryInformationSelection-infoTypes.ta.mjs";

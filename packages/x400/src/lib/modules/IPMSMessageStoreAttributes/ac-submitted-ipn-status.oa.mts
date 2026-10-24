@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    SubmittedIPNStatus,
+    type SubmittedIPNStatus,
     _decode_SubmittedIPNStatus,
     _encode_SubmittedIPNStatus,
 } from '../IPMSMessageStoreAttributes/SubmittedIPNStatus.ta.mjs';

@@ -12,7 +12,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { SignedData, _decode_SignedData, _encode_SignedData } from "../X9-84-CMS/SignedData.ta.mjs";
 
-import { SignedDataACBio, _decode_SignedDataACBio, _encode_SignedDataACBio } from "../AuthenticationContextForBiometrics/SignedDataACBio.ta.mjs";
+import { type SignedDataACBio, _decode_SignedDataACBio, _encode_SignedDataACBio } from "../AuthenticationContextForBiometrics/SignedDataACBio.ta.mjs";
 
 
 

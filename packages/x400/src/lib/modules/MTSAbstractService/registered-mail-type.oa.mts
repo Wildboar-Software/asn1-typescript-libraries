@@ -20,7 +20,7 @@ import {
     _encode_Criticality,
 } from '../MTSAbstractService/Criticality.ta.mjs';
 import {
-    RegisteredMailType,
+    type RegisteredMailType,
     non_registered_mail /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_RegisteredMailType,
     _encode_RegisteredMailType,

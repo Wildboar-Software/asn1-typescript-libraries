@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ProbeSubmissionIdentifier,
+    type ProbeSubmissionIdentifier,
     _decode_ProbeSubmissionIdentifier,
     _encode_ProbeSubmissionIdentifier,
 } from '../MTSAbstractService/ProbeSubmissionIdentifier.ta.mjs';
 import {
-    ProbeSubmissionTime,
+    type ProbeSubmissionTime,
     _decode_ProbeSubmissionTime,
     _encode_ProbeSubmissionTime,
 } from '../MTSAbstractService/ProbeSubmissionTime.ta.mjs';

@@ -5,7 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GetBoundProfilePackageOkEsipa, _decode_GetBoundProfilePackageOkEsipa, _encode_GetBoundProfilePackageOkEsipa } from "../SGP32Definitions/GetBoundProfilePackageOkEsipa.ta.mjs";
-import { GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa, _decode_GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa, _encode_GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa } from "../SGP32Definitions/GetBoundProfilePackageResponseEsipa-getBoundProfilePackageErrorEsipa.ta.mjs";
+import { type GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa, _decode_GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa, _encode_GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa } from "../SGP32Definitions/GetBoundProfilePackageResponseEsipa-getBoundProfilePackageErrorEsipa.ta.mjs";
 
 
 /**

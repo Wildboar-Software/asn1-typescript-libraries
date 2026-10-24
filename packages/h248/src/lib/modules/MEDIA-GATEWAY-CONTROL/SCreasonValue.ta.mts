@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SCreasonValueOctetStr, _decode_SCreasonValueOctetStr, _encode_SCreasonValueOctetStr } from "../MEDIA-GATEWAY-CONTROL/SCreasonValueOctetStr.ta.mjs";
+import { type SCreasonValueOctetStr, _decode_SCreasonValueOctetStr, _encode_SCreasonValueOctetStr } from "../MEDIA-GATEWAY-CONTROL/SCreasonValueOctetStr.ta.mjs";
 
 
 /**

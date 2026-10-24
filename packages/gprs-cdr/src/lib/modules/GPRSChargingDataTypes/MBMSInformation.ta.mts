@@ -8,11 +8,11 @@ import {
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MBMSInformation_mBMSServiceType, _decode_MBMSInformation_mBMSServiceType, _encode_MBMSInformation_mBMSServiceType, _enum_for_MBMSInformation_mBMSServiceType } from "../GPRSChargingDataTypes/MBMSInformation-mBMSServiceType.ta.mjs";
-import { MBMSInformation_mBMSUserServiceType, _decode_MBMSInformation_mBMSUserServiceType, _encode_MBMSInformation_mBMSUserServiceType, _enum_for_MBMSInformation_mBMSUserServiceType } from "../GPRSChargingDataTypes/MBMSInformation-mBMSUserServiceType.ta.mjs";
-import { MBMSInformation_mBMS2G3GIndicator, _decode_MBMSInformation_mBMS2G3GIndicator, _encode_MBMSInformation_mBMS2G3GIndicator, _enum_for_MBMSInformation_mBMS2G3GIndicator } from "../GPRSChargingDataTypes/MBMSInformation-mBMS2G3GIndicator.ta.mjs";
-import { GSNAddress, _decode_GSNAddress, _encode_GSNAddress } from "../GPRSChargingDataTypes/GSNAddress.ta.mjs";
-import { MBMSInformation_cNIPMulticastDistribution, _decode_MBMSInformation_cNIPMulticastDistribution, _encode_MBMSInformation_cNIPMulticastDistribution, _enum_for_MBMSInformation_cNIPMulticastDistribution } from "../GPRSChargingDataTypes/MBMSInformation-cNIPMulticastDistribution.ta.mjs";
+import { type MBMSInformation_mBMSServiceType, _decode_MBMSInformation_mBMSServiceType, _encode_MBMSInformation_mBMSServiceType, _enum_for_MBMSInformation_mBMSServiceType } from "../GPRSChargingDataTypes/MBMSInformation-mBMSServiceType.ta.mjs";
+import { type MBMSInformation_mBMSUserServiceType, _decode_MBMSInformation_mBMSUserServiceType, _encode_MBMSInformation_mBMSUserServiceType, _enum_for_MBMSInformation_mBMSUserServiceType } from "../GPRSChargingDataTypes/MBMSInformation-mBMSUserServiceType.ta.mjs";
+import { type MBMSInformation_mBMS2G3GIndicator, _decode_MBMSInformation_mBMS2G3GIndicator, _encode_MBMSInformation_mBMS2G3GIndicator, _enum_for_MBMSInformation_mBMS2G3GIndicator } from "../GPRSChargingDataTypes/MBMSInformation-mBMS2G3GIndicator.ta.mjs";
+import { type GSNAddress, _decode_GSNAddress, _encode_GSNAddress } from "../GPRSChargingDataTypes/GSNAddress.ta.mjs";
+import { type MBMSInformation_cNIPMulticastDistribution, _decode_MBMSInformation_cNIPMulticastDistribution, _encode_MBMSInformation_cNIPMulticastDistribution, _enum_for_MBMSInformation_cNIPMulticastDistribution } from "../GPRSChargingDataTypes/MBMSInformation-cNIPMulticastDistribution.ta.mjs";
 
 
 /**

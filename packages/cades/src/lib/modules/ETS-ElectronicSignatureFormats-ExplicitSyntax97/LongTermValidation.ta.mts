@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     type OPTIONAL,
-    GeneralizedTime,
+    type GeneralizedTime,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -12,12 +12,12 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { LongTermValidation_poeValue, _decode_LongTermValidation_poeValue, _encode_LongTermValidation_poeValue } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/LongTermValidation-poeValue.ta.mjs";
+import { type LongTermValidation_poeValue, _decode_LongTermValidation_poeValue, _encode_LongTermValidation_poeValue } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/LongTermValidation-poeValue.ta.mjs";
 import {
-    CertificateSet,
+    type CertificateSet,
     _decode_CertificateSet,
     _encode_CertificateSet,
-    RevocationInfoChoices,
+    type RevocationInfoChoices,
     _decode_RevocationInfoChoices,
     _encode_RevocationInfoChoices,
 } from "@wildboar/cms";

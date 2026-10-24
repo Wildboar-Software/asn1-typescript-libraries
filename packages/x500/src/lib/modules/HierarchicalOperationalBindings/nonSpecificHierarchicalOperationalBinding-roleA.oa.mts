@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    NHOBSuperiorToSubordinate,
+    type NHOBSuperiorToSubordinate,
     _decode_NHOBSuperiorToSubordinate,
     _encode_NHOBSuperiorToSubordinate,
 } from "../HierarchicalOperationalBindings/NHOBSuperiorToSubordinate.ta.mjs";

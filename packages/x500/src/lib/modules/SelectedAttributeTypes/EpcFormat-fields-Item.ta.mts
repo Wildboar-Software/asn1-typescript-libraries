@@ -7,7 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    EpcFormat_fields_Item_charField,
+    type EpcFormat_fields_Item_charField,
     _decode_EpcFormat_fields_Item_charField,
     _encode_EpcFormat_fields_Item_charField,
 } from "../SelectedAttributeTypes/EpcFormat-fields-Item-charField.ta.mjs";

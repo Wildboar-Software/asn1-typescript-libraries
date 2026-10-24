@@ -3,14 +3,14 @@
 import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { RequestTypes, _decode_RequestTypes, _encode_RequestTypes } from "../CSTA-system-register/RequestTypes.ta.mjs";
+import { type RequestTypes, _decode_RequestTypes, _encode_RequestTypes } from "../CSTA-system-register/RequestTypes.ta.mjs";
 
-import { StatusFilter, _decode_StatusFilter, _encode_StatusFilter } from "../CSTA-system-register/StatusFilter.ta.mjs";
+import { type StatusFilter, _decode_StatusFilter, _encode_StatusFilter } from "../CSTA-system-register/StatusFilter.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 

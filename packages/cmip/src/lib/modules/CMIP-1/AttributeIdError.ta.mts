@@ -11,13 +11,13 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  AttributeIdError_errorStatus,
+  type AttributeIdError_errorStatus,
   _enum_for_AttributeIdError_errorStatus,
   _decode_AttributeIdError_errorStatus,
   _encode_AttributeIdError_errorStatus,
 } from '../CMIP-1/AttributeIdError-errorStatus.ta.mjs';
 import {
-  AttributeId,
+  type AttributeId,
   _decode_AttributeId,
   _encode_AttributeId,
 } from '../CMIP-1/AttributeId.ta.mjs';

@@ -11,11 +11,11 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BiometricType, _decode_BiometricType, _encode_BiometricType } from "../TSM/BiometricType.ta.mjs";
+import { type BiometricType, _decode_BiometricType, _encode_BiometricType } from "../TSM/BiometricType.ta.mjs";
 
-import { BSP_BFP_Schema, _decode_BSP_BFP_Schema, _encode_BSP_BFP_Schema } from "../TSM/BSP-BFP-Schema.ta.mjs";
+import { type BSP_BFP_Schema, _decode_BSP_BFP_Schema, _encode_BSP_BFP_Schema } from "../TSM/BSP-BFP-Schema.ta.mjs";
 
-import { NetworkAuthenticationModel, _enum_for_NetworkAuthenticationModel, _decode_NetworkAuthenticationModel, _encode_NetworkAuthenticationModel } from "../TSM/NetworkAuthenticationModel.ta.mjs";
+import { type NetworkAuthenticationModel, _enum_for_NetworkAuthenticationModel, _decode_NetworkAuthenticationModel, _encode_NetworkAuthenticationModel } from "../TSM/NetworkAuthenticationModel.ta.mjs";
 
 
 

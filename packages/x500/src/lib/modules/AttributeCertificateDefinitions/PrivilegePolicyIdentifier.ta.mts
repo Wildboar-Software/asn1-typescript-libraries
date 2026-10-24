@@ -6,12 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    PrivilegePolicy,
+    type PrivilegePolicy,
     _decode_PrivilegePolicy,
     _encode_PrivilegePolicy,
 } from "../AttributeCertificateDefinitions/PrivilegePolicy.ta.mjs";
 import {
-    InfoSyntax,
+    type InfoSyntax,
     _decode_InfoSyntax,
     _encode_InfoSyntax,
 } from "../AuthenticationFramework/InfoSyntax.ta.mjs";

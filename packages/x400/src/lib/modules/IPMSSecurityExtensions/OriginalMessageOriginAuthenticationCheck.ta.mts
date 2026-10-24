@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    MessageOriginAuthenticationCheck,
+    type MessageOriginAuthenticationCheck,
     _decode_MessageOriginAuthenticationCheck,
     _encode_MessageOriginAuthenticationCheck,
 } from '../MTSAbstractService/MessageOriginAuthenticationCheck.ta.mjs';

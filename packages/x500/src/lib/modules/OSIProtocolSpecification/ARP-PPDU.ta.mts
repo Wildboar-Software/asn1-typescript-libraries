@@ -6,12 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Abort_reason,
+    type Abort_reason,
     _decode_Abort_reason,
     _encode_Abort_reason,
 } from "../OSIProtocolSpecification/Abort-reason.ta.mjs";
 import {
-    Event_identifier,
+    type Event_identifier,
     _decode_Event_identifier,
     _encode_Event_identifier,
 } from "../OSIProtocolSpecification/Event-identifier.ta.mjs";

@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ChargedItem, _decode_ChargedItem, _encode_ChargedItem, _enum_for_ChargedItem } from "../SS-AOC-Operations-asn1-97/ChargedItem.ta.mjs";
-import { AOCSCurrencyInfo_rateType, _decode_AOCSCurrencyInfo_rateType, _encode_AOCSCurrencyInfo_rateType } from "../SS-AOC-Operations-asn1-97/AOCSCurrencyInfo-rateType.ta.mjs";
+import { type AOCSCurrencyInfo_rateType, _decode_AOCSCurrencyInfo_rateType, _encode_AOCSCurrencyInfo_rateType } from "../SS-AOC-Operations-asn1-97/AOCSCurrencyInfo-rateType.ta.mjs";
 
 /**
  * @summary AOCSCurrencyInfo

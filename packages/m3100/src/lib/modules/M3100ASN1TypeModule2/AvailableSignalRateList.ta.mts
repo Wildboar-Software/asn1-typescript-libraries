@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SignalRate,
+    type SignalRate,
     _decode_SignalRate,
     _encode_SignalRate,
 } from '../M3100ASN1TypeModule2/SignalRate.ta.mjs';

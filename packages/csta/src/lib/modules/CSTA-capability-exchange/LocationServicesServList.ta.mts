@@ -3,38 +3,38 @@
 import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { GetLocationInformation, _decode_GetLocationInformation, _encode_GetLocationInformation } from "../CSTA-capability-exchange/GetLocationInformation.ta.mjs";
+import { type GetLocationInformation, _decode_GetLocationInformation, _encode_GetLocationInformation } from "../CSTA-capability-exchange/GetLocationInformation.ta.mjs";
 
-import { SetLocationInformation, _decode_SetLocationInformation, _encode_SetLocationInformation } from "../CSTA-capability-exchange/SetLocationInformation.ta.mjs";
+import { type SetLocationInformation, _decode_SetLocationInformation, _encode_SetLocationInformation } from "../CSTA-capability-exchange/SetLocationInformation.ta.mjs";
 
-import { LocationTrackingSessionResumed, _decode_LocationTrackingSessionResumed, _encode_LocationTrackingSessionResumed } from "../CSTA-capability-exchange/LocationTrackingSessionResumed.ta.mjs";
+import { type LocationTrackingSessionResumed, _decode_LocationTrackingSessionResumed, _encode_LocationTrackingSessionResumed } from "../CSTA-capability-exchange/LocationTrackingSessionResumed.ta.mjs";
 
 import {
-    LocationTrackingSessionSuspended,
+    type LocationTrackingSessionSuspended,
     _decode_LocationTrackingSessionSuspended,
     _encode_LocationTrackingSessionSuspended
 } from "../CSTA-capability-exchange/LocationTrackingSessionSuspended.ta.mjs";
 
-import { ResumeLocationTrackingSession, _decode_ResumeLocationTrackingSession, _encode_ResumeLocationTrackingSession } from "../CSTA-capability-exchange/ResumeLocationTrackingSession.ta.mjs";
+import { type ResumeLocationTrackingSession, _decode_ResumeLocationTrackingSession, _encode_ResumeLocationTrackingSession } from "../CSTA-capability-exchange/ResumeLocationTrackingSession.ta.mjs";
 
-import { LocationInformationReport, _decode_LocationInformationReport, _encode_LocationInformationReport } from "../CSTA-capability-exchange/LocationInformationReport.ta.mjs";
+import { type LocationInformationReport, _decode_LocationInformationReport, _encode_LocationInformationReport } from "../CSTA-capability-exchange/LocationInformationReport.ta.mjs";
 
-import { StartLocationTrackingSession, _decode_StartLocationTrackingSession, _encode_StartLocationTrackingSession } from "../CSTA-capability-exchange/StartLocationTrackingSession.ta.mjs";
+import { type StartLocationTrackingSession, _decode_StartLocationTrackingSession, _encode_StartLocationTrackingSession } from "../CSTA-capability-exchange/StartLocationTrackingSession.ta.mjs";
 
-import { StopLocationTrackingSession, _decode_StopLocationTrackingSession, _encode_StopLocationTrackingSession } from "../CSTA-capability-exchange/StopLocationTrackingSession.ta.mjs";
+import { type StopLocationTrackingSession, _decode_StopLocationTrackingSession, _encode_StopLocationTrackingSession } from "../CSTA-capability-exchange/StopLocationTrackingSession.ta.mjs";
 
-import { SuspendLocationTrackingSession, _decode_SuspendLocationTrackingSession, _encode_SuspendLocationTrackingSession } from "../CSTA-capability-exchange/SuspendLocationTrackingSession.ta.mjs";
+import { type SuspendLocationTrackingSession, _decode_SuspendLocationTrackingSession, _encode_SuspendLocationTrackingSession } from "../CSTA-capability-exchange/SuspendLocationTrackingSession.ta.mjs";
 
-import { GetLocationTrackingCapabilities, _decode_GetLocationTrackingCapabilities, _encode_GetLocationTrackingCapabilities } from "../CSTA-capability-exchange/GetLocationTrackingCapabilities.ta.mjs";
+import { type GetLocationTrackingCapabilities, _decode_GetLocationTrackingCapabilities, _encode_GetLocationTrackingCapabilities } from "../CSTA-capability-exchange/GetLocationTrackingCapabilities.ta.mjs";
 
-import { GetLocationTrackingSessions, _decode_GetLocationTrackingSessions, _encode_GetLocationTrackingSessions } from "../CSTA-capability-exchange/GetLocationTrackingSessions.ta.mjs";
+import { type GetLocationTrackingSessions, _decode_GetLocationTrackingSessions, _encode_GetLocationTrackingSessions } from "../CSTA-capability-exchange/GetLocationTrackingSessions.ta.mjs";
 
-import { LocationSessionInfo, _decode_LocationSessionInfo, _encode_LocationSessionInfo } from "../CSTA-capability-exchange/LocationSessionInfo.ta.mjs";
+import { type LocationSessionInfo, _decode_LocationSessionInfo, _encode_LocationSessionInfo } from "../CSTA-capability-exchange/LocationSessionInfo.ta.mjs";
 
 
 

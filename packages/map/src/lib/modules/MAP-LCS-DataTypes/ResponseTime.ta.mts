@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ResponseTimeCategory, _decode_ResponseTimeCategory, _encode_ResponseTimeCategory, _enum_for_ResponseTimeCategory } from "../MAP-LCS-DataTypes/ResponseTimeCategory.ta.mjs";
+import { type ResponseTimeCategory, _decode_ResponseTimeCategory, _encode_ResponseTimeCategory, _enum_for_ResponseTimeCategory } from "../MAP-LCS-DataTypes/ResponseTimeCategory.ta.mjs";
 
 
 /**

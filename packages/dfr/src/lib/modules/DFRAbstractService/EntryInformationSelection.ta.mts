@@ -12,7 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EntryInformationSelection_read_selector, _enum_for_EntryInformationSelection_read_selector, EntryInformationSelection_read_selector_attributes_only /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_EntryInformationSelection_read_selector, _encode_EntryInformationSelection_read_selector } from "../DFRAbstractService/EntryInformationSelection-read-selector.ta.mjs";
-import { AttributeSelection, _decode_AttributeSelection, _encode_AttributeSelection } from "../DFRAbstractService/AttributeSelection.ta.mjs";
+import { type AttributeSelection, _decode_AttributeSelection, _encode_AttributeSelection } from "../DFRAbstractService/AttributeSelection.ta.mjs";
 
 
 /**

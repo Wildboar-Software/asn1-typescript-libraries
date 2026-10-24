@@ -3,46 +3,46 @@
 import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { Bridged, _decode_Bridged, _encode_Bridged } from "../CSTA-capability-exchange/Bridged.ta.mjs";
+import { type Bridged, _decode_Bridged, _encode_Bridged } from "../CSTA-capability-exchange/Bridged.ta.mjs";
 
-import { CallCleared, _decode_CallCleared, _encode_CallCleared } from "../CSTA-capability-exchange/CallCleared.ta.mjs";
+import { type CallCleared, _decode_CallCleared, _encode_CallCleared } from "../CSTA-capability-exchange/CallCleared.ta.mjs";
 
-import { Conferenced, _decode_Conferenced, _encode_Conferenced } from "../CSTA-capability-exchange/Conferenced.ta.mjs";
+import { type Conferenced, _decode_Conferenced, _encode_Conferenced } from "../CSTA-capability-exchange/Conferenced.ta.mjs";
 
-import { ConnectionCleared, _decode_ConnectionCleared, _encode_ConnectionCleared } from "../CSTA-capability-exchange/ConnectionCleared.ta.mjs";
+import { type ConnectionCleared, _decode_ConnectionCleared, _encode_ConnectionCleared } from "../CSTA-capability-exchange/ConnectionCleared.ta.mjs";
 
-import { Delivered, _decode_Delivered, _encode_Delivered } from "../CSTA-capability-exchange/Delivered.ta.mjs";
+import { type Delivered, _decode_Delivered, _encode_Delivered } from "../CSTA-capability-exchange/Delivered.ta.mjs";
 
-import { DigitsDialed, _decode_DigitsDialed, _encode_DigitsDialed } from "../CSTA-capability-exchange/DigitsDialed.ta.mjs";
+import { type DigitsDialed, _decode_DigitsDialed, _encode_DigitsDialed } from "../CSTA-capability-exchange/DigitsDialed.ta.mjs";
 
-import { Diverted, _decode_Diverted, _encode_Diverted } from "../CSTA-capability-exchange/Diverted.ta.mjs";
+import { type Diverted, _decode_Diverted, _encode_Diverted } from "../CSTA-capability-exchange/Diverted.ta.mjs";
 
-import { Established, _decode_Established, _encode_Established } from "../CSTA-capability-exchange/Established.ta.mjs";
+import { type Established, _decode_Established, _encode_Established } from "../CSTA-capability-exchange/Established.ta.mjs";
 
-import { Failed, _decode_Failed, _encode_Failed } from "../CSTA-capability-exchange/Failed.ta.mjs";
+import { type Failed, _decode_Failed, _encode_Failed } from "../CSTA-capability-exchange/Failed.ta.mjs";
 
-import { Held, _decode_Held, _encode_Held } from "../CSTA-capability-exchange/Held.ta.mjs";
+import { type Held, _decode_Held, _encode_Held } from "../CSTA-capability-exchange/Held.ta.mjs";
 
-import { NetwCapsChanged, _decode_NetwCapsChanged, _encode_NetwCapsChanged } from "../CSTA-capability-exchange/NetwCapsChanged.ta.mjs";
+import { type NetwCapsChanged, _decode_NetwCapsChanged, _encode_NetwCapsChanged } from "../CSTA-capability-exchange/NetwCapsChanged.ta.mjs";
 
-import { NetwReached, _decode_NetwReached, _encode_NetwReached } from "../CSTA-capability-exchange/NetwReached.ta.mjs";
+import { type NetwReached, _decode_NetwReached, _encode_NetwReached } from "../CSTA-capability-exchange/NetwReached.ta.mjs";
 
-import { Offered, _decode_Offered, _encode_Offered } from "../CSTA-capability-exchange/Offered.ta.mjs";
+import { type Offered, _decode_Offered, _encode_Offered } from "../CSTA-capability-exchange/Offered.ta.mjs";
 
-import { Originated, _decode_Originated, _encode_Originated } from "../CSTA-capability-exchange/Originated.ta.mjs";
+import { type Originated, _decode_Originated, _encode_Originated } from "../CSTA-capability-exchange/Originated.ta.mjs";
 
-import { Queued, _decode_Queued, _encode_Queued } from "../CSTA-capability-exchange/Queued.ta.mjs";
+import { type Queued, _decode_Queued, _encode_Queued } from "../CSTA-capability-exchange/Queued.ta.mjs";
 
-import { Retrieved, _decode_Retrieved, _encode_Retrieved } from "../CSTA-capability-exchange/Retrieved.ta.mjs";
+import { type Retrieved, _decode_Retrieved, _encode_Retrieved } from "../CSTA-capability-exchange/Retrieved.ta.mjs";
 
-import { ServiceInitiated, _decode_ServiceInitiated, _encode_ServiceInitiated } from "../CSTA-capability-exchange/ServiceInitiated.ta.mjs";
+import { type ServiceInitiated, _decode_ServiceInitiated, _encode_ServiceInitiated } from "../CSTA-capability-exchange/ServiceInitiated.ta.mjs";
 
-import { Transferred, _decode_Transferred, _encode_Transferred } from "../CSTA-capability-exchange/Transferred.ta.mjs";
+import { type Transferred, _decode_Transferred, _encode_Transferred } from "../CSTA-capability-exchange/Transferred.ta.mjs";
 
 
 

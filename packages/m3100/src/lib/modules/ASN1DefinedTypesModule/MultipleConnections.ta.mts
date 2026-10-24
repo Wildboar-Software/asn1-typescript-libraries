@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    MultipleConnections_Item,
+    type MultipleConnections_Item,
     _decode_MultipleConnections_Item,
     _encode_MultipleConnections_Item,
 } from '../ASN1DefinedTypesModule/MultipleConnections-Item.ta.mjs';

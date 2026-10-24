@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Realm, _decode_Realm, _encode_Realm } from "@wildboar/kerberos5";
+import { type Realm, _decode_Realm, _encode_Realm } from "@wildboar/kerberos5";
 import { PrincipalName, _decode_PrincipalName, _encode_PrincipalName } from "@wildboar/kerberos5";
 
 

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ObjectIdentifier as _OID,
-    OBJECT_IDENTIFIER
+    type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { modules } from "../IN-object-identifiers/modules.va.mjs";
 // export { modules } from "../IN-object-identifiers/modules.va.mjs";

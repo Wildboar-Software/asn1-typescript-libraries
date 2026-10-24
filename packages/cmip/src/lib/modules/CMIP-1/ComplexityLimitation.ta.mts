@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -11,9 +11,9 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
-import { Scope, _decode_Scope, _encode_Scope } from '../CMIP-1/Scope.ta.mjs';
+import { type Scope, _decode_Scope, _encode_Scope } from '../CMIP-1/Scope.ta.mjs';
 import {
-  CMISFilter,
+  type CMISFilter,
   _decode_CMISFilter,
   _encode_CMISFilter,
 } from '../CMIP-1/CMISFilter.ta.mjs';

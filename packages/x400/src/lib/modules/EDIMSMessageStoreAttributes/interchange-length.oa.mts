@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    InterchangeLength,
+    type InterchangeLength,
     _decode_InterchangeLength,
     _encode_InterchangeLength,
 } from '../EDIMSMessageStoreAttributes/InterchangeLength.ta.mjs';

@@ -7,7 +7,7 @@ import {
     _encode_SpecificallyIdentified,
 } from "../EnhancedSecurity/SpecificallyIdentified.ta.mjs";
 import {
-    ThisEntry,
+    type ThisEntry,
     _decode_ThisEntry,
     _encode_ThisEntry,
 } from "../EnhancedSecurity/ThisEntry.ta.mjs";

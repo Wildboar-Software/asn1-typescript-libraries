@@ -21,7 +21,7 @@ import {
     _encode_ReceiptFields,
 } from '../IPMSInformationObjects/ReceiptFields.ta.mjs';
 import {
-    OtherNotificationTypeFields,
+    type OtherNotificationTypeFields,
     _decode_OtherNotificationTypeFields,
     _encode_OtherNotificationTypeFields,
 } from '../IPMSInformationObjects/OtherNotificationTypeFields.ta.mjs';

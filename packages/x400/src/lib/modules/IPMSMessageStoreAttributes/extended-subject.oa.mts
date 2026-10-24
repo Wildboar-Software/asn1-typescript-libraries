@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    ExtendedSubject,
+    type ExtendedSubject,
     _decode_ExtendedSubject,
     _encode_ExtendedSubject,
 } from '../IPMSHeadingExtensions/ExtendedSubject.ta.mjs';

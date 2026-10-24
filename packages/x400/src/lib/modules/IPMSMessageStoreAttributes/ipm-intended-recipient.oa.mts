@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    IPMIntendedRecipientField,
+    type IPMIntendedRecipientField,
     _decode_IPMIntendedRecipientField,
     _encode_IPMIntendedRecipientField,
 } from '../IPMSInformationObjects/IPMIntendedRecipientField.ta.mjs';

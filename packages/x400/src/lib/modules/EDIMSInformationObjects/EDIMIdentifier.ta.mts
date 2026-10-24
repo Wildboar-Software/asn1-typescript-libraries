@@ -16,7 +16,7 @@ import {
     _encode_ORName,
 } from '../MTSAbstractService/ORName.ta.mjs';
 import {
-    LocalReference,
+    type LocalReference,
     _decode_LocalReference,
     _encode_LocalReference,
 } from '../EDIMSInformationObjects/LocalReference.ta.mjs';

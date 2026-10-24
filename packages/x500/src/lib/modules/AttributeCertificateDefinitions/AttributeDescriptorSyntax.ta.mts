@@ -7,17 +7,17 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AttributeDescription,
+    type AttributeDescription,
     _decode_AttributeDescription,
     _encode_AttributeDescription,
 } from "../AttributeCertificateDefinitions/AttributeDescription.ta.mjs";
 import {
-    AttributeIdentifier,
+    type AttributeIdentifier,
     _decode_AttributeIdentifier,
     _encode_AttributeIdentifier,
 } from "../AttributeCertificateDefinitions/AttributeIdentifier.ta.mjs";
 import {
-    AttributeName,
+    type AttributeName,
     _decode_AttributeName,
     _encode_AttributeName,
 } from "../AttributeCertificateDefinitions/AttributeName.ta.mjs";

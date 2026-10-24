@@ -11,17 +11,17 @@ import {
     _encode_SecurityParameters,
 } from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
 import {
-    AgreementID,
+    type AgreementID,
     _decode_AgreementID,
     _encode_AgreementID,
 } from "../DirectoryShadowAbstractService/AgreementID.ta.mjs";
 import {
-    RequestShadowUpdateArgumentData_requestedStrategy,
+    type RequestShadowUpdateArgumentData_requestedStrategy,
     _decode_RequestShadowUpdateArgumentData_requestedStrategy,
     _encode_RequestShadowUpdateArgumentData_requestedStrategy,
 } from "../DirectoryShadowAbstractService/RequestShadowUpdateArgumentData-requestedStrategy.ta.mjs";
 import {
-    Time,
+    type Time,
     _decode_Time,
     _encode_Time,
 } from "../DirectoryShadowAbstractService/Time.ta.mjs";

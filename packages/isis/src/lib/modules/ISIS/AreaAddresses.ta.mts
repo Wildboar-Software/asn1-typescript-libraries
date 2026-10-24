@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  AreaAddress,
+  type AreaAddress,
   _decode_AreaAddress,
   _encode_AreaAddress,
 } from '../ISIS/AreaAddress.ta.mjs';

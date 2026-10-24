@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TextualRepresentation,
+    type TextualRepresentation,
     _decode_TextualRepresentation,
     _encode_TextualRepresentation,
 } from '../DefinitionASN1Module/TextualRepresentation.ta.mjs';

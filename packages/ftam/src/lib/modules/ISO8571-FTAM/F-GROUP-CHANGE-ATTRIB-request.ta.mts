@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -17,17 +17,17 @@ import {
   _encode_Change_Attributes,
 } from '../ISO8571-FTAM/Change-Attributes.ta.mjs';
 import {
-  Error_Action,
+  type Error_Action,
   _decode_Error_Action,
   _encode_Error_Action,
 } from '../ISO8571-FTAM/Error-Action.ta.mjs';
 import {
-  Request_Operation_Result,
+  type Request_Operation_Result,
   _decode_Request_Operation_Result,
   _encode_Request_Operation_Result,
 } from '../ISO8571-FTAM/Request-Operation-Result.ta.mjs';
 import {
-  Shared_ASE_Information,
+  type Shared_ASE_Information,
   _decode_Shared_ASE_Information,
   _encode_Shared_ASE_Information,
 } from '../ISO8571-FTAM/Shared-ASE-Information.ta.mjs';

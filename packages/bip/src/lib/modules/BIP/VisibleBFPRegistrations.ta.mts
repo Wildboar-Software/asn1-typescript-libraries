@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  VisibleBFPRegistration,
+  type VisibleBFPRegistration,
   _decode_VisibleBFPRegistration,
   _encode_VisibleBFPRegistration,
 } from '../BIP/VisibleBFPRegistration.ta.mjs';

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ObjectIdentifier as _OID,
-    OBJECT_IDENTIFIER
+    type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { tcg_tr_registry } from "../PlatformCertificateProfileV2/tcg-tr-registry.va.mjs";
 

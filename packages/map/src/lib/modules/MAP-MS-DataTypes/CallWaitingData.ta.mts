@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Ext_CwFeatureList, _decode_Ext_CwFeatureList, _encode_Ext_CwFeatureList } from "../MAP-MS-DataTypes/Ext-CwFeatureList.ta.mjs";
+import { type Ext_CwFeatureList, _decode_Ext_CwFeatureList, _encode_Ext_CwFeatureList } from "../MAP-MS-DataTypes/Ext-CwFeatureList.ta.mjs";
 
 
 /**

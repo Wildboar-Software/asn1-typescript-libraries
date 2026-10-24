@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AttributeList, _decode_AttributeList, _encode_AttributeList } from "../Z39-50-APDU-2001/AttributeList.ta.mjs";
-import { DiagFormat_scan_posInResponse, _decode_DiagFormat_scan_posInResponse, _encode_DiagFormat_scan_posInResponse } from "../DiagnosticFormatDiag1/DiagFormat-scan-posInResponse.ta.mjs";
+import { type AttributeList, _decode_AttributeList, _encode_AttributeList } from "../Z39-50-APDU-2001/AttributeList.ta.mjs";
+import { type DiagFormat_scan_posInResponse, _decode_DiagFormat_scan_posInResponse, _encode_DiagFormat_scan_posInResponse } from "../DiagnosticFormatDiag1/DiagFormat-scan-posInResponse.ta.mjs";
 
 
 /**

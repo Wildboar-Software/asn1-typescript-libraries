@@ -4,12 +4,12 @@ import { type OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs
 import { securityError } from "../DirectoryAbstractService/securityError.oa.mjs";
 import { operationalBindingError } from "../OperationalBindingManagement/operationalBindingError.oa.mjs";
 import {
-    TerminateOperationalBindingArgument,
+    type TerminateOperationalBindingArgument,
     _decode_TerminateOperationalBindingArgument,
     _encode_TerminateOperationalBindingArgument,
 } from "../OperationalBindingManagement/TerminateOperationalBindingArgument.ta.mjs";
 import {
-    TerminateOperationalBindingResult,
+    type TerminateOperationalBindingResult,
     _decode_TerminateOperationalBindingResult,
     _encode_TerminateOperationalBindingResult,
 } from "../OperationalBindingManagement/TerminateOperationalBindingResult.ta.mjs";

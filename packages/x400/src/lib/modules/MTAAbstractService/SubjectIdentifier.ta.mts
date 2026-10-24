@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    MessageOrProbeIdentifier,
+    type MessageOrProbeIdentifier,
     _decode_MessageOrProbeIdentifier,
     _encode_MessageOrProbeIdentifier,
 } from '../MTAAbstractService/MessageOrProbeIdentifier.ta.mjs';

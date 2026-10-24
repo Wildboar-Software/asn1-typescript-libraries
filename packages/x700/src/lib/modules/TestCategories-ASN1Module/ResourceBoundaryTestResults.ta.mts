@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SignalReceived,
+    type SignalReceived,
     _decode_SignalReceived,
     _encode_SignalReceived,
 } from '../TestCategories-ASN1Module/SignalReceived.ta.mjs';

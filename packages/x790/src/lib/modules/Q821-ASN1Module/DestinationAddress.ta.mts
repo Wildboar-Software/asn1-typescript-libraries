@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    GraphicString,
+    type GraphicString,
     ASN1Element as _Element,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AE_title,
+    type AE_title,
     _decode_AE_title,
     _encode_AE_title,
 } from "@wildboar/acse";

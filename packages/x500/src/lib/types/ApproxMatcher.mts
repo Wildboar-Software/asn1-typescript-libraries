@@ -6,4 +6,4 @@ import type EqualityMatcher from "./EqualityMatcher.mjs";
 export
 type ApproxMatcher = EqualityMatcher;
 
-export default ApproxMatcher;
+export type { ApproxMatcher as default };

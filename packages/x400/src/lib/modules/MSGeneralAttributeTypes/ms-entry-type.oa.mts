@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    EntryType,
+    type EntryType,
     _decode_EntryType,
     _encode_EntryType,
 } from '../MSAbstractService/EntryType.ta.mjs';

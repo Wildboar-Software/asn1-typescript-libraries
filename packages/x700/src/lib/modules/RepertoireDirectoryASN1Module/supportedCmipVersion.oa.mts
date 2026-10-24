@@ -17,7 +17,7 @@ import {
     _encode_AttributeUsage,
 } from '@wildboar/x500/InformationFramework';
 import {
-    ProtocolVersion,
+    type ProtocolVersion,
     _decode_ProtocolVersion,
     _encode_ProtocolVersion,
 } from '@wildboar/cmip';

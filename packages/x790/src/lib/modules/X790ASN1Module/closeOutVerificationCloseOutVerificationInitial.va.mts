@@ -1,7 +1,7 @@
 /* eslint-disable */
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CloseOutVerification,
+    type CloseOutVerification,
     CloseOutVerification_noAction,
     noAction,
 } from "../X790ASN1Module/CloseOutVerification.ta.mjs";

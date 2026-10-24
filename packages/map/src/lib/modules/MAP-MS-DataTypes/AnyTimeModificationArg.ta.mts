@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-import { SubscriberIdentity, _decode_SubscriberIdentity, _encode_SubscriberIdentity } from "../MAP-CommonDataTypes/SubscriberIdentity.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type SubscriberIdentity, _decode_SubscriberIdentity, _encode_SubscriberIdentity } from "../MAP-CommonDataTypes/SubscriberIdentity.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { ModificationRequestFor_CB_Info, _decode_ModificationRequestFor_CB_Info, _encode_ModificationRequestFor_CB_Info } from "../MAP-MS-DataTypes/ModificationRequestFor-CB-Info.ta.mjs";
 import { ModificationRequestFor_CF_Info, _decode_ModificationRequestFor_CF_Info, _encode_ModificationRequestFor_CF_Info } from "../MAP-MS-DataTypes/ModificationRequestFor-CF-Info.ta.mjs";
@@ -20,7 +20,7 @@ import { ModificationRequestFor_CW_Info, _decode_ModificationRequestFor_CW_Info,
 import { ModificationRequestFor_ECT_Info, _decode_ModificationRequestFor_ECT_Info, _encode_ModificationRequestFor_ECT_Info } from "../MAP-MS-DataTypes/ModificationRequestFor-ECT-Info.ta.mjs";
 import { ModificationRequestFor_IP_SM_GW_Data, _decode_ModificationRequestFor_IP_SM_GW_Data, _encode_ModificationRequestFor_IP_SM_GW_Data } from "../MAP-MS-DataTypes/ModificationRequestFor-IP-SM-GW-Data.ta.mjs";
 import { ModificationRequestFor_ODB_data, _decode_ModificationRequestFor_ODB_data, _encode_ModificationRequestFor_ODB_data } from "../MAP-MS-DataTypes/ModificationRequestFor-ODB-data.ta.mjs";
-import { RequestedServingNode, _decode_RequestedServingNode, _encode_RequestedServingNode } from "../MAP-MS-DataTypes/RequestedServingNode.ta.mjs";
+import { type RequestedServingNode, _decode_RequestedServingNode, _encode_RequestedServingNode } from "../MAP-MS-DataTypes/RequestedServingNode.ta.mjs";
 
 
 /**

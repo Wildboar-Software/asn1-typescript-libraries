@@ -4,9 +4,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { NamePresentationAllowed, _decode_NamePresentationAllowed, _encode_NamePresentationAllowed } from "../Name-Operations-asn1-97/NamePresentationAllowed.ta.mjs";
-import { NamePresentationRestricted, _decode_NamePresentationRestricted, _encode_NamePresentationRestricted } from "../Name-Operations-asn1-97/NamePresentationRestricted.ta.mjs";
-import { NameNotAvailable, _decode_NameNotAvailable, _encode_NameNotAvailable } from "../Name-Operations-asn1-97/NameNotAvailable.ta.mjs";
+import { type NamePresentationAllowed, _decode_NamePresentationAllowed, _encode_NamePresentationAllowed } from "../Name-Operations-asn1-97/NamePresentationAllowed.ta.mjs";
+import { type NamePresentationRestricted, _decode_NamePresentationRestricted, _encode_NamePresentationRestricted } from "../Name-Operations-asn1-97/NamePresentationRestricted.ta.mjs";
+import { type NameNotAvailable, _decode_NameNotAvailable, _encode_NameNotAvailable } from "../Name-Operations-asn1-97/NameNotAvailable.ta.mjs";
 
 /**
  * @summary Name

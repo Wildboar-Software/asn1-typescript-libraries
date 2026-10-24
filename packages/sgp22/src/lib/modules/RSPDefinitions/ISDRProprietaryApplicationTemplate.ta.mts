@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { VersionType, _decode_VersionType, _encode_VersionType } from "../RSPDefinitions/VersionType.ta.mjs";
-import { ISDRProprietaryApplicationTemplate_lpaeSupport, _decode_ISDRProprietaryApplicationTemplate_lpaeSupport, _encode_ISDRProprietaryApplicationTemplate_lpaeSupport } from "../RSPDefinitions/ISDRProprietaryApplicationTemplate-lpaeSupport.ta.mjs";
+import { type VersionType, _decode_VersionType, _encode_VersionType } from "../RSPDefinitions/VersionType.ta.mjs";
+import { type ISDRProprietaryApplicationTemplate_lpaeSupport, _decode_ISDRProprietaryApplicationTemplate_lpaeSupport, _encode_ISDRProprietaryApplicationTemplate_lpaeSupport } from "../RSPDefinitions/ISDRProprietaryApplicationTemplate-lpaeSupport.ta.mjs";
 
 
 /**

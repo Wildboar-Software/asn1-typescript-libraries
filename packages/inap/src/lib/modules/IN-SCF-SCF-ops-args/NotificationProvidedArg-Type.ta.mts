@@ -7,13 +7,13 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { Notification, _decode_Notification, _encode_Notification, _enum_for_Notification } from "../IN-SCF-SCF-datatypes/Notification.ta.mjs";
 // export { Notification, _enum_for_Notification, Notification_userAbandon /* IMPORTED_LONG_ENUMERATION_ITEM */, userAbandon /* IMPORTED_SHORT_ENUMERATION_ITEM */, Notification_callFailure /* IMPORTED_LONG_ENUMERATION_ITEM */, callFailure /* IMPORTED_SHORT_ENUMERATION_ITEM */, Notification_noReply /* IMPORTED_LONG_ENUMERATION_ITEM */, noReply /* IMPORTED_SHORT_ENUMERATION_ITEM */, Notification_callRelease /* IMPORTED_LONG_ENUMERATION_ITEM */, callRelease /* IMPORTED_SHORT_ENUMERATION_ITEM */, Notification_ssInvocation /* IMPORTED_LONG_ENUMERATION_ITEM */, ssInvocation /* IMPORTED_SHORT_ENUMERATION_ITEM */, Notification_creditLimitReached /* IMPORTED_LONG_ENUMERATION_ITEM */, creditLimitReached /* IMPORTED_SHORT_ENUMERATION_ITEM */, Notification_callDuration /* IMPORTED_LONG_ENUMERATION_ITEM */, callDuration /* IMPORTED_SHORT_ENUMERATION_ITEM */, Notification_calledNumber /* IMPORTED_LONG_ENUMERATION_ITEM */, calledNumber /* IMPORTED_SHORT_ENUMERATION_ITEM */, Notification_answeredCall /* IMPORTED_LONG_ENUMERATION_ITEM */, answeredCall /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Notification, _encode_Notification } from "../IN-SCF-SCF-datatypes/Notification.ta.mjs";
-import { NotificationInformation, _decode_NotificationInformation, _encode_NotificationInformation } from "../IN-SCF-SCF-datatypes/NotificationInformation.ta.mjs";
+import { type NotificationInformation, _decode_NotificationInformation, _encode_NotificationInformation } from "../IN-SCF-SCF-datatypes/NotificationInformation.ta.mjs";
 // export { NotificationInformation, _decode_NotificationInformation, _encode_NotificationInformation } from "../IN-SCF-SCF-datatypes/NotificationInformation.ta.mjs";
 import { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParameters } from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
 // export { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParameters } from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
-import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
 // export { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
-import { PartyID, _decode_PartyID, _encode_PartyID } from "../IN-SCF-SCF-datatypes/PartyID.ta.mjs";
+import { type PartyID, _decode_PartyID, _encode_PartyID } from "../IN-SCF-SCF-datatypes/PartyID.ta.mjs";
 // export { PartyID, _decode_PartyID, _encode_PartyID } from "../IN-SCF-SCF-datatypes/PartyID.ta.mjs";
 
 

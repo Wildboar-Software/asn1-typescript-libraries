@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -17,7 +17,7 @@ import {
     _encode_LoopbackTestResult_passed,
 } from '../TestCategories-ASN1Module/LoopbackTestResult-passed.ta.mjs';
 import {
-    LoopbackFailInfo,
+    type LoopbackFailInfo,
     _decode_LoopbackFailInfo,
     _encode_LoopbackFailInfo,
 } from '../TestCategories-ASN1Module/LoopbackFailInfo.ta.mjs';

@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    OptionallyRegisteredAs,
+    type OptionallyRegisteredAs,
     _decode_OptionallyRegisteredAs,
     _encode_OptionallyRegisteredAs,
 } from '../DefinitionASN1Module/OptionallyRegisteredAs.ta.mjs';

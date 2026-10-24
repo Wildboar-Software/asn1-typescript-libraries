@@ -4,9 +4,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { NumberDigits, _decode_NumberDigits, _encode_NumberDigits } from "../Addressing-Data-Elements/NumberDigits.ta.mjs";
+import { type NumberDigits, _decode_NumberDigits, _encode_NumberDigits } from "../Addressing-Data-Elements/NumberDigits.ta.mjs";
 import { PublicPartyNumber, _decode_PublicPartyNumber, _encode_PublicPartyNumber } from "../Addressing-Data-Elements/PublicPartyNumber.ta.mjs";
-import { NsapEncodedNumber, _decode_NsapEncodedNumber, _encode_NsapEncodedNumber } from "../Addressing-Data-Elements/NsapEncodedNumber.ta.mjs";
+import { type NsapEncodedNumber, _decode_NsapEncodedNumber, _encode_NsapEncodedNumber } from "../Addressing-Data-Elements/NsapEncodedNumber.ta.mjs";
 import { PrivatePartyNumber, _decode_PrivatePartyNumber, _encode_PrivatePartyNumber } from "../Addressing-Data-Elements/PrivatePartyNumber.ta.mjs";
 
 

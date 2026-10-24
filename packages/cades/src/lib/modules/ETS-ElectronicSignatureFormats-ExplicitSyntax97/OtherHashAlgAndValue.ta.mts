@@ -13,7 +13,7 @@ import * as $ from "@wildboar/asn1/functional";
 import {
     AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier
 } from "@wildboar/x500/AuthenticationFramework";
-import { OtherHashValue, _decode_OtherHashValue, _encode_OtherHashValue } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherHashValue.ta.mjs";
+import { type OtherHashValue, _decode_OtherHashValue, _encode_OtherHashValue } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherHashValue.ta.mjs";
 /**
  * @summary OtherHashAlgAndValue
  * @description

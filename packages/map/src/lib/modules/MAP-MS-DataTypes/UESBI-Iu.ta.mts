@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { UESBI_IuA, _decode_UESBI_IuA, _encode_UESBI_IuA } from "../MAP-MS-DataTypes/UESBI-IuA.ta.mjs";
-import { UESBI_IuB, _decode_UESBI_IuB, _encode_UESBI_IuB } from "../MAP-MS-DataTypes/UESBI-IuB.ta.mjs";
+import { type UESBI_IuA, _decode_UESBI_IuA, _encode_UESBI_IuA } from "../MAP-MS-DataTypes/UESBI-IuA.ta.mjs";
+import { type UESBI_IuB, _decode_UESBI_IuB, _encode_UESBI_IuB } from "../MAP-MS-DataTypes/UESBI-IuB.ta.mjs";
 
 
 /**

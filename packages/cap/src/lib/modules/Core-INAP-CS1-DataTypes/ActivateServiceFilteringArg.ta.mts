@@ -12,10 +12,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { FilteredCallTreatment, _decode_FilteredCallTreatment, _encode_FilteredCallTreatment } from "../Core-INAP-CS1-DataTypes/FilteredCallTreatment.ta.mjs";
-import { FilteringCharacteristics, _decode_FilteringCharacteristics, _encode_FilteringCharacteristics } from "../Core-INAP-CS1-DataTypes/FilteringCharacteristics.ta.mjs";
-import { FilteringTimeOut, _decode_FilteringTimeOut, _encode_FilteringTimeOut } from "../Core-INAP-CS1-DataTypes/FilteringTimeOut.ta.mjs";
-import { FilteringCriteria, _decode_FilteringCriteria, _encode_FilteringCriteria } from "../Core-INAP-CS1-DataTypes/FilteringCriteria.ta.mjs";
-import { DateAndTime, _decode_DateAndTime, _encode_DateAndTime } from "../Core-INAP-CS1-DataTypes/DateAndTime.ta.mjs";
+import { type FilteringCharacteristics, _decode_FilteringCharacteristics, _encode_FilteringCharacteristics } from "../Core-INAP-CS1-DataTypes/FilteringCharacteristics.ta.mjs";
+import { type FilteringTimeOut, _decode_FilteringTimeOut, _encode_FilteringTimeOut } from "../Core-INAP-CS1-DataTypes/FilteringTimeOut.ta.mjs";
+import { type FilteringCriteria, _decode_FilteringCriteria, _encode_FilteringCriteria } from "../Core-INAP-CS1-DataTypes/FilteringCriteria.ta.mjs";
+import { type DateAndTime, _decode_DateAndTime, _encode_DateAndTime } from "../Core-INAP-CS1-DataTypes/DateAndTime.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../Core-INAP-CS1-DataTypes/ExtensionField.ta.mjs";
 
 

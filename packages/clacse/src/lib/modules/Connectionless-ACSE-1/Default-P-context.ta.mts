@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Abstract_syntax_name,
+    type Abstract_syntax_name,
     _decode_Abstract_syntax_name,
     _encode_Abstract_syntax_name,
 } from '../Connectionless-ACSE-1/Abstract-syntax-name.ta.mjs';
 import {
-    Transfer_syntax_name,
+    type Transfer_syntax_name,
     _decode_Transfer_syntax_name,
     _encode_Transfer_syntax_name,
 } from '../Connectionless-ACSE-1/Transfer-syntax-name.ta.mjs';

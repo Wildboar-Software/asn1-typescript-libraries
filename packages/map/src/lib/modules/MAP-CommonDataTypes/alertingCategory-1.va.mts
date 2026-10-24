@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { AlertingPattern } from "../MAP-CommonDataTypes/AlertingPattern.ta.mjs";
+import { type AlertingPattern } from "../MAP-CommonDataTypes/AlertingPattern.ta.mjs";
 
 
 /**

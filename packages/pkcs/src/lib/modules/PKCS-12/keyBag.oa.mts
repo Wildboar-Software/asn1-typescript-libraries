@@ -2,7 +2,7 @@
 import { ObjectIdentifier as _OID } from "@wildboar/asn1";
 import { type BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.mjs";
 import { bagtypes } from "../PKCS-12/bagtypes.va.mjs";
-import { KeyBag, _decode_KeyBag, _encode_KeyBag } from "../PKCS-12/KeyBag.ta.mjs";
+import { type KeyBag, _decode_KeyBag, _encode_KeyBag } from "../PKCS-12/KeyBag.ta.mjs";
 
 /**
  * @summary keyBag

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    PolicyID,
+    type PolicyID,
     _decode_PolicyID,
     _encode_PolicyID,
 } from "../AuthenticationFramework/PolicyID.ta.mjs";

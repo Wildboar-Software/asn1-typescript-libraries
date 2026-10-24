@@ -18,7 +18,7 @@ import {
     _encode_Criticality,
 } from '../MTSAbstractService/Criticality.ta.mjs';
 import {
-    ProofOfDelivery,
+    type ProofOfDelivery,
     _decode_ProofOfDelivery,
     _encode_ProofOfDelivery,
 } from '../MTSAbstractService/ProofOfDelivery.ta.mjs';

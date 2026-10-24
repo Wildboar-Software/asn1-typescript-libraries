@@ -7,7 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { APNRateControlParameters_additionalExceptionReports, _decode_APNRateControlParameters_additionalExceptionReports, _encode_APNRateControlParameters_additionalExceptionReports, _enum_for_APNRateControlParameters_additionalExceptionReports } from "../CPDTChargingDataTypes/APNRateControlParameters-additionalExceptionReports.ta.mjs";
-import { APNRateControlParameters_rateControlTimeUnit, _decode_APNRateControlParameters_rateControlTimeUnit, _encode_APNRateControlParameters_rateControlTimeUnit } from "../CPDTChargingDataTypes/APNRateControlParameters-rateControlTimeUnit.ta.mjs";
+import { type APNRateControlParameters_rateControlTimeUnit, _decode_APNRateControlParameters_rateControlTimeUnit, _encode_APNRateControlParameters_rateControlTimeUnit } from "../CPDTChargingDataTypes/APNRateControlParameters-rateControlTimeUnit.ta.mjs";
 
 
 /**

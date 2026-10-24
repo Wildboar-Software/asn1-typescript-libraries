@@ -11,7 +11,7 @@ import {
     _encode_SDSEContent,
 } from "../DirectoryShadowAbstractService/SDSEContent.ta.mjs";
 import {
-    RelativeDistinguishedName,
+    type RelativeDistinguishedName,
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
 } from "../InformationFramework/RelativeDistinguishedName.ta.mjs";

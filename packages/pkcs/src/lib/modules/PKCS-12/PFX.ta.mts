@@ -11,7 +11,7 @@ import {
     _encode_MacData,
 } from "../PKCS-12/MacData.ta.mjs";
 import {
-    PFX_version,
+    type PFX_version,
     _decode_PFX_version,
     _encode_PFX_version,
 } from "../PKCS-12/PFX-version.ta.mjs";

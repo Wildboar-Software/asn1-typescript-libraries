@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    IdentificationCode,
+    type IdentificationCode,
     _decode_IdentificationCode,
     _encode_IdentificationCode,
 } from '../EDIMSInformationObjects/IdentificationCode.ta.mjs';
 import {
-    IdentificationCodeQualifier,
+    type IdentificationCodeQualifier,
     _decode_IdentificationCodeQualifier,
     _encode_IdentificationCodeQualifier,
 } from '../EDIMSInformationObjects/IdentificationCodeQualifier.ta.mjs';
 import {
-    RoutingAddress,
+    type RoutingAddress,
     _decode_RoutingAddress,
     _encode_RoutingAddress,
 } from '../EDIMSInformationObjects/RoutingAddress.ta.mjs';

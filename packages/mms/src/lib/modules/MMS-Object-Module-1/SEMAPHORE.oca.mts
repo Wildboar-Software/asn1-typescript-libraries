@@ -11,10 +11,10 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
-import { NAMED_TOKEN } from "../MMS-Object-Module-1/NAMED-TOKEN.oca.mjs";
-import { SEMAPHORE_ENTRY } from "../MMS-Object-Module-1/SEMAPHORE-ENTRY.oca.mjs";
+import { type ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type NAMED_TOKEN } from "../MMS-Object-Module-1/NAMED-TOKEN.oca.mjs";
+import { type SEMAPHORE_ENTRY } from "../MMS-Object-Module-1/SEMAPHORE-ENTRY.oca.mjs";
 
 
 /**

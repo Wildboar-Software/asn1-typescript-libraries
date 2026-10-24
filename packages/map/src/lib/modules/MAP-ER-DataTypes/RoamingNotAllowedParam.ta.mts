@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AdditionalRoamingNotAllowedCause, _decode_AdditionalRoamingNotAllowedCause, _encode_AdditionalRoamingNotAllowedCause, _enum_for_AdditionalRoamingNotAllowedCause } from "../MAP-ER-DataTypes/AdditionalRoamingNotAllowedCause.ta.mjs";
+import { type AdditionalRoamingNotAllowedCause, _decode_AdditionalRoamingNotAllowedCause, _encode_AdditionalRoamingNotAllowedCause, _enum_for_AdditionalRoamingNotAllowedCause } from "../MAP-ER-DataTypes/AdditionalRoamingNotAllowedCause.ta.mjs";
 import { RoamingNotAllowedCause, _decode_RoamingNotAllowedCause, _encode_RoamingNotAllowedCause, _enum_for_RoamingNotAllowedCause } from "../MAP-ER-DataTypes/RoamingNotAllowedCause.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 

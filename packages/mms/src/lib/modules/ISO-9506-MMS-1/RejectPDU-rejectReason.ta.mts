@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -11,17 +11,17 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RejectPDU_rejectReason_confirmed_requestPDU, _decode_RejectPDU_rejectReason_confirmed_requestPDU, _encode_RejectPDU_rejectReason_confirmed_requestPDU } from "../ISO-9506-MMS-1/RejectPDU-rejectReason-confirmed-requestPDU.ta.mjs";
-import { RejectPDU_rejectReason_confirmed_responsePDU, _decode_RejectPDU_rejectReason_confirmed_responsePDU, _encode_RejectPDU_rejectReason_confirmed_responsePDU } from "../ISO-9506-MMS-1/RejectPDU-rejectReason-confirmed-responsePDU.ta.mjs";
-import { RejectPDU_rejectReason_confirmed_errorPDU, _decode_RejectPDU_rejectReason_confirmed_errorPDU, _encode_RejectPDU_rejectReason_confirmed_errorPDU } from "../ISO-9506-MMS-1/RejectPDU-rejectReason-confirmed-errorPDU.ta.mjs";
-import { RejectPDU_rejectReason_unconfirmedPDU, _decode_RejectPDU_rejectReason_unconfirmedPDU, _encode_RejectPDU_rejectReason_unconfirmedPDU } from "../ISO-9506-MMS-1/RejectPDU-rejectReason-unconfirmedPDU.ta.mjs";
-import { RejectPDU_rejectReason_pdu_error, _decode_RejectPDU_rejectReason_pdu_error, _encode_RejectPDU_rejectReason_pdu_error } from "../ISO-9506-MMS-1/RejectPDU-rejectReason-pdu-error.ta.mjs";
-import { RejectPDU_rejectReason_cancel_requestPDU, _decode_RejectPDU_rejectReason_cancel_requestPDU, _encode_RejectPDU_rejectReason_cancel_requestPDU } from "../ISO-9506-MMS-1/RejectPDU-rejectReason-cancel-requestPDU.ta.mjs";
-import { RejectPDU_rejectReason_cancel_responsePDU, _decode_RejectPDU_rejectReason_cancel_responsePDU, _encode_RejectPDU_rejectReason_cancel_responsePDU } from "../ISO-9506-MMS-1/RejectPDU-rejectReason-cancel-responsePDU.ta.mjs";
-import { RejectPDU_rejectReason_cancel_errorPDU, _decode_RejectPDU_rejectReason_cancel_errorPDU, _encode_RejectPDU_rejectReason_cancel_errorPDU } from "../ISO-9506-MMS-1/RejectPDU-rejectReason-cancel-errorPDU.ta.mjs";
-import { RejectPDU_rejectReason_conclude_requestPDU, _decode_RejectPDU_rejectReason_conclude_requestPDU, _encode_RejectPDU_rejectReason_conclude_requestPDU } from "../ISO-9506-MMS-1/RejectPDU-rejectReason-conclude-requestPDU.ta.mjs";
-import { RejectPDU_rejectReason_conclude_responsePDU, _decode_RejectPDU_rejectReason_conclude_responsePDU, _encode_RejectPDU_rejectReason_conclude_responsePDU } from "../ISO-9506-MMS-1/RejectPDU-rejectReason-conclude-responsePDU.ta.mjs";
-import { RejectPDU_rejectReason_conclude_errorPDU, _decode_RejectPDU_rejectReason_conclude_errorPDU, _encode_RejectPDU_rejectReason_conclude_errorPDU } from "../ISO-9506-MMS-1/RejectPDU-rejectReason-conclude-errorPDU.ta.mjs";
+import { type RejectPDU_rejectReason_confirmed_requestPDU, _decode_RejectPDU_rejectReason_confirmed_requestPDU, _encode_RejectPDU_rejectReason_confirmed_requestPDU } from "../ISO-9506-MMS-1/RejectPDU-rejectReason-confirmed-requestPDU.ta.mjs";
+import { type RejectPDU_rejectReason_confirmed_responsePDU, _decode_RejectPDU_rejectReason_confirmed_responsePDU, _encode_RejectPDU_rejectReason_confirmed_responsePDU } from "../ISO-9506-MMS-1/RejectPDU-rejectReason-confirmed-responsePDU.ta.mjs";
+import { type RejectPDU_rejectReason_confirmed_errorPDU, _decode_RejectPDU_rejectReason_confirmed_errorPDU, _encode_RejectPDU_rejectReason_confirmed_errorPDU } from "../ISO-9506-MMS-1/RejectPDU-rejectReason-confirmed-errorPDU.ta.mjs";
+import { type RejectPDU_rejectReason_unconfirmedPDU, _decode_RejectPDU_rejectReason_unconfirmedPDU, _encode_RejectPDU_rejectReason_unconfirmedPDU } from "../ISO-9506-MMS-1/RejectPDU-rejectReason-unconfirmedPDU.ta.mjs";
+import { type RejectPDU_rejectReason_pdu_error, _decode_RejectPDU_rejectReason_pdu_error, _encode_RejectPDU_rejectReason_pdu_error } from "../ISO-9506-MMS-1/RejectPDU-rejectReason-pdu-error.ta.mjs";
+import { type RejectPDU_rejectReason_cancel_requestPDU, _decode_RejectPDU_rejectReason_cancel_requestPDU, _encode_RejectPDU_rejectReason_cancel_requestPDU } from "../ISO-9506-MMS-1/RejectPDU-rejectReason-cancel-requestPDU.ta.mjs";
+import { type RejectPDU_rejectReason_cancel_responsePDU, _decode_RejectPDU_rejectReason_cancel_responsePDU, _encode_RejectPDU_rejectReason_cancel_responsePDU } from "../ISO-9506-MMS-1/RejectPDU-rejectReason-cancel-responsePDU.ta.mjs";
+import { type RejectPDU_rejectReason_cancel_errorPDU, _decode_RejectPDU_rejectReason_cancel_errorPDU, _encode_RejectPDU_rejectReason_cancel_errorPDU } from "../ISO-9506-MMS-1/RejectPDU-rejectReason-cancel-errorPDU.ta.mjs";
+import { type RejectPDU_rejectReason_conclude_requestPDU, _decode_RejectPDU_rejectReason_conclude_requestPDU, _encode_RejectPDU_rejectReason_conclude_requestPDU } from "../ISO-9506-MMS-1/RejectPDU-rejectReason-conclude-requestPDU.ta.mjs";
+import { type RejectPDU_rejectReason_conclude_responsePDU, _decode_RejectPDU_rejectReason_conclude_responsePDU, _encode_RejectPDU_rejectReason_conclude_responsePDU } from "../ISO-9506-MMS-1/RejectPDU-rejectReason-conclude-responsePDU.ta.mjs";
+import { type RejectPDU_rejectReason_conclude_errorPDU, _decode_RejectPDU_rejectReason_conclude_errorPDU, _encode_RejectPDU_rejectReason_conclude_errorPDU } from "../ISO-9506-MMS-1/RejectPDU-rejectReason-conclude-errorPDU.ta.mjs";
 
 
 /**

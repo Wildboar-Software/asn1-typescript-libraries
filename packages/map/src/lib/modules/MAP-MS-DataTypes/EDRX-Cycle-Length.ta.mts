@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EDRX_Cycle_Length_Value, _decode_EDRX_Cycle_Length_Value, _encode_EDRX_Cycle_Length_Value } from "../MAP-MS-DataTypes/EDRX-Cycle-Length-Value.ta.mjs";
-import { Used_RAT_Type, _decode_Used_RAT_Type, _encode_Used_RAT_Type, _enum_for_Used_RAT_Type } from "../MAP-MS-DataTypes/Used-RAT-Type.ta.mjs";
+import { type EDRX_Cycle_Length_Value, _decode_EDRX_Cycle_Length_Value, _encode_EDRX_Cycle_Length_Value } from "../MAP-MS-DataTypes/EDRX-Cycle-Length-Value.ta.mjs";
+import { type Used_RAT_Type, _decode_Used_RAT_Type, _encode_Used_RAT_Type, _enum_for_Used_RAT_Type } from "../MAP-MS-DataTypes/Used-RAT-Type.ta.mjs";
 
 
 /**

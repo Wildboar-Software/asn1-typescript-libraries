@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TroubleReportStatus,
+    type TroubleReportStatus,
     _decode_TroubleReportStatus,
     _encode_TroubleReportStatus,
 } from '../X790ASN1Module/TroubleReportStatus.ta.mjs';
 import {
-    AdditionalTroubleStatusInfo,
+    type AdditionalTroubleStatusInfo,
     _decode_AdditionalTroubleStatusInfo,
     _encode_AdditionalTroubleStatusInfo,
 } from '../X790ASN1Module/AdditionalTroubleStatusInfo.ta.mjs';

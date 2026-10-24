@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Release_response_reason,
+    type Release_response_reason,
     _decode_Release_response_reason,
     _encode_Release_response_reason,
 } from '../DialoguePDUs/Release-response-reason.ta.mjs';

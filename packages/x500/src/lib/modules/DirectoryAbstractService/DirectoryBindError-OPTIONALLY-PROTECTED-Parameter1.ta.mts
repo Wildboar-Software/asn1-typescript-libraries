@@ -7,7 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error,
+    type DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error,
     _decode_DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error,
     _encode_DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error,
 } from "../DirectoryAbstractService/DirectoryBindError-OPTIONALLY-PROTECTED-Parameter1-error.ta.mjs";
@@ -17,7 +17,7 @@ import {
     _encode_SecurityParameters,
 } from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
 import {
-    Versions,
+    type Versions,
     Versions_v1 /* IMPORTED_LONG_NAMED_BIT */,
     _decode_Versions,
     _encode_Versions,

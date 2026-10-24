@@ -12,27 +12,27 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ScanAttributeIdList,
+    type ScanAttributeIdList,
     _decode_ScanAttributeIdList,
     _encode_ScanAttributeIdList,
 } from '../SummarizationASN1Productions/ScanAttributeIdList.ta.mjs';
 import {
-    NumericAttributeIdArray,
+    type NumericAttributeIdArray,
     _decode_NumericAttributeIdArray,
     _encode_NumericAttributeIdArray,
 } from '../SummarizationASN1Productions/NumericAttributeIdArray.ta.mjs';
 import {
-    DynamicSimpleScanArgument_scopeOrListChoice,
+    type DynamicSimpleScanArgument_scopeOrListChoice,
     _decode_DynamicSimpleScanArgument_scopeOrListChoice,
     _encode_DynamicSimpleScanArgument_scopeOrListChoice,
 } from '../SummarizationASN1Productions/DynamicSimpleScanArgument-scopeOrListChoice.ta.mjs';
 import {
-    SuppressObjectInstance,
+    type SuppressObjectInstance,
     _decode_SuppressObjectInstance,
     _encode_SuppressObjectInstance,
 } from '../SummarizationASN1Productions/SuppressObjectInstance.ta.mjs';
 import {
-    OnceReportAttributeIdList,
+    type OnceReportAttributeIdList,
     _decode_OnceReportAttributeIdList,
     _encode_OnceReportAttributeIdList,
 } from '../SummarizationASN1Productions/OnceReportAttributeIdList.ta.mjs';

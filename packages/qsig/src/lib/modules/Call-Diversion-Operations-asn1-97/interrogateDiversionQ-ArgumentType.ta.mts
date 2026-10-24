@@ -7,8 +7,8 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { Procedure, _decode_Procedure, _encode_Procedure, _enum_for_Procedure } from "../Call-Diversion-Operations-asn1-97/Procedure.ta.mjs";
 import { BasicService, _decode_BasicService, _encode_BasicService, _enum_for_BasicService, allServices /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../Call-Diversion-Operations-asn1-97/BasicService.ta.mjs";
-import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-import { _decode_interrogateDiversionQ_ArgumentType_extension, _encode_interrogateDiversionQ_ArgumentType_extension, interrogateDiversionQ_ArgumentType_extension } from "../Call-Diversion-Operations-asn1-97/interrogateDiversionQ-ArgumentType-extension.ta.mjs";
+import { type PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
+import { _decode_interrogateDiversionQ_ArgumentType_extension, _encode_interrogateDiversionQ_ArgumentType_extension, type interrogateDiversionQ_ArgumentType_extension } from "../Call-Diversion-Operations-asn1-97/interrogateDiversionQ-ArgumentType-extension.ta.mjs";
 
 /**
  * @summary interrogateDiversionQ_ArgumentType

@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    DeliveryServiceType,
+    type DeliveryServiceType,
     _decode_DeliveryServiceType,
     _encode_DeliveryServiceType,
 } from '../MhsAcctAsn1Module/DeliveryServiceType.ta.mjs';
 import {
-    PerMessageComponentRate,
+    type PerMessageComponentRate,
     _decode_PerMessageComponentRate,
     _encode_PerMessageComponentRate,
 } from '../MhsAcctAsn1Module/PerMessageComponentRate.ta.mjs';
 import {
-    PerOctetComponentRate,
+    type PerOctetComponentRate,
     _decode_PerOctetComponentRate,
     _encode_PerOctetComponentRate,
 } from '../MhsAcctAsn1Module/PerOctetComponentRate.ta.mjs';

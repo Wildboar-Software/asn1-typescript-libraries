@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    DistributionCodes,
+    type DistributionCodes,
     _decode_DistributionCodes,
     _encode_DistributionCodes,
 } from '../IPMSHeadingExtensions/DistributionCodes.ta.mjs';

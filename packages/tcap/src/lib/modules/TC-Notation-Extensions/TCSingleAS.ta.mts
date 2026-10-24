@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TCMessage,
+    type TCMessage,
     _decode_TCMessage,
     _encode_TCMessage,
 } from '../TCAPMessages/TCMessage.ta.mjs';

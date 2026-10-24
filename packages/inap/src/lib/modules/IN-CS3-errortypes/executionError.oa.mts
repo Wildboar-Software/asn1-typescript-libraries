@@ -1,7 +1,7 @@
 /* eslint-disable */
 // export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 // export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-import { OPTIONALLY_PROTECTED, _get_decoder_for_OPTIONALLY_PROTECTED, _get_encoder_for_OPTIONALLY_PROTECTED } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
+import { type OPTIONALLY_PROTECTED, _get_decoder_for_OPTIONALLY_PROTECTED, _get_encoder_for_OPTIONALLY_PROTECTED } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
 // export { OPTIONALLY_PROTECTED, _get_decoder_for_OPTIONALLY_PROTECTED, _get_encoder_for_OPTIONALLY_PROTECTED } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
 import { _decode_executionError_ParameterType_Type, _encode_executionError_ParameterType_Type, executionError_ParameterType_Type } from "../IN-CS3-errortypes/executionError-ParameterType-Type.ta.mjs";
 // export { executionError_ParameterType_Type, _decode_executionError_ParameterType_Type, _encode_executionError_ParameterType_Type } from "../IN-CS3-errortypes/executionError-ParameterType-Type.ta.mjs";

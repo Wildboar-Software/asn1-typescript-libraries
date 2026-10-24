@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  ASO_context_name,
+  type ASO_context_name,
   _decode_ASO_context_name,
   _encode_ASO_context_name,
 } from '../ACSE-1/ASO-context-name.ta.mjs';

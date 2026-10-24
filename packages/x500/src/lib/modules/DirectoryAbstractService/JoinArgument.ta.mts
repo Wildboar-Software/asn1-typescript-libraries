@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    DomainLocalID,
+    type DomainLocalID,
     _decode_DomainLocalID,
     _encode_DomainLocalID,
 } from "../DirectoryAbstractService/DomainLocalID.ta.mjs";
@@ -16,12 +16,12 @@ import {
     _encode_EntryInformationSelection,
 } from "../DirectoryAbstractService/EntryInformationSelection.ta.mjs";
 import {
-    Filter,
+    type Filter,
     _decode_Filter,
     _encode_Filter,
 } from "../DirectoryAbstractService/Filter.ta.mjs";
 import {
-    JoinArgument_joinSubset,
+    type JoinArgument_joinSubset,
     JoinArgument_joinSubset_baseObject /* IMPORTED_LONG_ENUMERATION_ITEM */,
     _decode_JoinArgument_joinSubset,
     _encode_JoinArgument_joinSubset,
@@ -33,7 +33,7 @@ import {
     _encode_JoinAttPair,
 } from "../DirectoryAbstractService/JoinAttPair.ta.mjs";
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";

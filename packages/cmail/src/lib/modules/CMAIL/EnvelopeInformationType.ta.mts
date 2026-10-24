@@ -21,7 +21,7 @@ import {
   _encode_EntitiesType,
 } from '../CMAIL/EntitiesType.ta.mjs';
 import {
-  SignatureType,
+  type SignatureType,
   _decode_SignatureType,
   _encode_SignatureType,
 } from '../CMAIL/SignatureType.ta.mjs';

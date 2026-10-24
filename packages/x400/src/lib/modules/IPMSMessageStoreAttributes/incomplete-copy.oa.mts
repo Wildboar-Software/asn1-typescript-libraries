@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    IncompleteCopy,
+    type IncompleteCopy,
     _decode_IncompleteCopy,
     _encode_IncompleteCopy,
 } from '../IPMSHeadingExtensions/IncompleteCopy.ta.mjs';

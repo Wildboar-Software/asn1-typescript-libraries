@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    CryptoModuleSecurityInformation,
+    type CryptoModuleSecurityInformation,
     _decode_CryptoModuleSecurityInformation,
     _encode_CryptoModuleSecurityInformation,
 } from '../AuthenticationContextForBiometrics/CryptoModuleSecurityInformation.ta.mjs';
 import {
-    BiometricProcessSecurityInformation,
+    type BiometricProcessSecurityInformation,
     _decode_BiometricProcessSecurityInformation,
     _encode_BiometricProcessSecurityInformation,
 } from '../AuthenticationContextForBiometrics/BiometricProcessSecurityInformation.ta.mjs';
 import {
-    SecurityEvaluationExtensionInformation,
+    type SecurityEvaluationExtensionInformation,
     _decode_SecurityEvaluationExtensionInformation,
     _encode_SecurityEvaluationExtensionInformation,
 } from '../AuthenticationContextForBiometrics/SecurityEvaluationExtensionInformation.ta.mjs';

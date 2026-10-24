@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { DivertArg, _decode_DivertArg, _encode_DivertArg } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/DivertArg.ta.mjs";
-import { DummyRes, _decode_DummyRes, _encode_DummyRes } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/DummyRes.ta.mjs";
+import { type DummyRes, _decode_DummyRes, _encode_DummyRes } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/DummyRes.ta.mjs";
 import { notAvailable } from "../General-Error-List/notAvailable.oa.mjs";
 import { unspecified } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/unspecified.oa.mjs";
 

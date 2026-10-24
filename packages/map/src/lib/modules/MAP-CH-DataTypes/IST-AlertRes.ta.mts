@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CallTerminationIndicator, _decode_CallTerminationIndicator, _encode_CallTerminationIndicator, _enum_for_CallTerminationIndicator } from "../MAP-CH-DataTypes/CallTerminationIndicator.ta.mjs";
+import { type CallTerminationIndicator, _decode_CallTerminationIndicator, _encode_CallTerminationIndicator, _enum_for_CallTerminationIndicator } from "../MAP-CH-DataTypes/CallTerminationIndicator.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { IST_AlertTimerValue, _decode_IST_AlertTimerValue, _encode_IST_AlertTimerValue } from "../MAP-MS-DataTypes/IST-AlertTimerValue.ta.mjs";
+import { type IST_AlertTimerValue, _decode_IST_AlertTimerValue, _encode_IST_AlertTimerValue } from "../MAP-MS-DataTypes/IST-AlertTimerValue.ta.mjs";
 
 
 /**

@@ -17,12 +17,12 @@ import {
     _encode_OperationalBindingID,
 } from "../OperationalBindingManagement/OperationalBindingID.ta.mjs";
 import {
-    TerminateOperationalBindingArgumentData_initiator,
+    type TerminateOperationalBindingArgumentData_initiator,
     _decode_TerminateOperationalBindingArgumentData_initiator,
     _encode_TerminateOperationalBindingArgumentData_initiator,
 } from "../OperationalBindingManagement/TerminateOperationalBindingArgumentData-initiator.ta.mjs";
 import {
-    Time,
+    type Time,
     _decode_Time,
     _encode_Time,
 } from "../OperationalBindingManagement/Time.ta.mjs";

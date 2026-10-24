@@ -16,7 +16,7 @@ import {
     _encode_Attribute,
 } from '@wildboar/x500/InformationFramework';
 import {
-    AttributeType,
+    type AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
 } from '@wildboar/x500/InformationFramework';

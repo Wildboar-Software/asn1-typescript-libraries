@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    OriginatorReportRequest,
+    type OriginatorReportRequest,
     _decode_OriginatorReportRequest,
     _encode_OriginatorReportRequest,
 } from '../MTSAbstractService/OriginatorReportRequest.ta.mjs';

@@ -6,10 +6,10 @@ import {
     ASN1Error
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ParameterName, _decode_ParameterName, _encode_ParameterName,
+import { type ParameterName, _decode_ParameterName, _encode_ParameterName,
     ParameterName_deliveryMode
 } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/ParameterName.ta.mjs";
-import { RafDeliveryMode, _decode_RafDeliveryMode, _encode_RafDeliveryMode } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/RafDeliveryMode.ta.mjs";
+import { type RafDeliveryMode, _decode_RafDeliveryMode, _encode_RafDeliveryMode } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/RafDeliveryMode.ta.mjs";
 
 
 

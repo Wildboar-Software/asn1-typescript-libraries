@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -22,7 +22,7 @@ import {
 } from "../ASN1DefinedTypesModule/AlarmStatus.ta.mjs";
 
 import {
-    ProbableCause,
+    type ProbableCause,
     _decode_ProbableCause,
     _encode_ProbableCause,
 } from "../Attribute-ASN1Module/ProbableCause.ta.mjs";

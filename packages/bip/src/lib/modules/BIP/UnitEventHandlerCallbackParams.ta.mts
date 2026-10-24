@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  MemoryAddress,
+  type MemoryAddress,
   _decode_MemoryAddress,
   _encode_MemoryAddress,
 } from '../BIP/MemoryAddress.ta.mjs';
 import {
-  BioAPI_UUID,
+  type BioAPI_UUID,
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
 } from '../BIP/BioAPI-UUID.ta.mjs';
 import {
-  BioAPI_UNIT_ID,
+  type BioAPI_UNIT_ID,
   _decode_BioAPI_UNIT_ID,
   _encode_BioAPI_UNIT_ID,
 } from '../BIP/BioAPI-UNIT-ID.ta.mjs';
@@ -32,7 +32,7 @@ import {
   _encode_BioAPI_UNIT_SCHEMA,
 } from '../BIP/BioAPI-UNIT-SCHEMA.ta.mjs';
 import {
-  BioAPI_UNIT_EVENT_TYPE,
+  type BioAPI_UNIT_EVENT_TYPE,
   _enum_for_BioAPI_UNIT_EVENT_TYPE,
   _decode_BioAPI_UNIT_EVENT_TYPE,
   _encode_BioAPI_UNIT_EVENT_TYPE,

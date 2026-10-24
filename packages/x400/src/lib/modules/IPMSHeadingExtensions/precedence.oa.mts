@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    Precedence,
+    type Precedence,
     _decode_Precedence,
     _encode_Precedence,
 } from '../IPMSHeadingExtensions/Precedence.ta.mjs';

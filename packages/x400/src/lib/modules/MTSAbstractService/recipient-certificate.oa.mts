@@ -18,7 +18,7 @@ import {
     _encode_Criticality,
 } from '../MTSAbstractService/Criticality.ta.mjs';
 import {
-    RecipientCertificate,
+    type RecipientCertificate,
     _decode_RecipientCertificate,
     _encode_RecipientCertificate,
 } from '../MTSAbstractService/RecipientCertificate.ta.mjs';

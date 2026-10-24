@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ABSTRACT_SYNTAX
+    type ABSTRACT_SYNTAX
 } from "@wildboar/asn1";
-import { TriggerManagementSCF_SSF_PDUs, _decode_TriggerManagementSCF_SSF_PDUs, _encode_TriggerManagementSCF_SSF_PDUs } from "../IN-SSF-SCF-pkgs-contracts-acs/TriggerManagementSCF-SSF-PDUs.ta.mjs";
+import { type TriggerManagementSCF_SSF_PDUs, _decode_TriggerManagementSCF_SSF_PDUs, _encode_TriggerManagementSCF_SSF_PDUs } from "../IN-SSF-SCF-pkgs-contracts-acs/TriggerManagementSCF-SSF-PDUs.ta.mjs";
 // export { TriggerManagementSCF_SSF_PDUs, _decode_TriggerManagementSCF_SSF_PDUs, _encode_TriggerManagementSCF_SSF_PDUs } from "../IN-SSF-SCF-pkgs-contracts-acs/TriggerManagementSCF-SSF-PDUs.ta.mjs";
 import { id_as_scf_ssfTriggerManagementAS } from "../IN-object-identifiers/id-as-scf-ssfTriggerManagementAS.va.mjs";
 // export { id_as_scf_ssfTriggerManagementAS } from "../IN-object-identifiers/id-as-scf-ssfTriggerManagementAS.va.mjs";

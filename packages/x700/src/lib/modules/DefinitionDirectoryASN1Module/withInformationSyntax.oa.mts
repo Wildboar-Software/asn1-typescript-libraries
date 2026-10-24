@@ -17,7 +17,7 @@ import {
     _encode_AttributeUsage,
 } from '@wildboar/x500/InformationFramework';
 import {
-    WithSyntax,
+    type WithSyntax,
     _decode_WithSyntax,
     _encode_WithSyntax,
 } from '../DefinitionASN1Module/WithSyntax.ta.mjs';

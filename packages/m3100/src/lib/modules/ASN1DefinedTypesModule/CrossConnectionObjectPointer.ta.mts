@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
 import {
-    MultipleConnections,
+    type MultipleConnections,
     _decode_MultipleConnections,
     _encode_MultipleConnections,
 } from '../ASN1DefinedTypesModule/MultipleConnections.ta.mjs';

@@ -7,12 +7,12 @@ import {
     _encode_SchemeIdentifier,
 } from "../ANSI-X9-42/SchemeIdentifier.ta.mjs";
 import {
-    SchemeNumber,
+    type SchemeNumber,
     _decode_SchemeNumber,
     _encode_SchemeNumber,
 } from "../ANSI-X9-42/SchemeNumber.ta.mjs";
 import {
-    SchemeOID,
+    type SchemeOID,
     _decode_SchemeOID,
     _encode_SchemeOID,
 } from "../ANSI-X9-42/SchemeOID.ta.mjs";

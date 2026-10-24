@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RelationshipInstance,
+    type RelationshipInstance,
     _decode_RelationshipInstance,
     _encode_RelationshipInstance,
 } from '../ChangeOverASN1Productions/RelationshipInstance.ta.mjs';

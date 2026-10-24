@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    CTPList,
+    type CTPList,
     _decode_CTPList,
     _encode_CTPList,
 } from '../M3100ASN1TypeModule2/CTPList.ta.mjs';

@@ -11,7 +11,7 @@ import {
     _get_encoder_for_HASH,
 } from "../AuthenticationFramework/HASH.ta.mjs";
 import {
-    KeyIdentifier,
+    type KeyIdentifier,
     _decode_KeyIdentifier,
     _encode_KeyIdentifier,
 } from "../CertificateExtensions/KeyIdentifier.ta.mjs";
@@ -26,7 +26,7 @@ import {
     _encode_AttributeTypeAndValue,
 } from "../InformationFramework/AttributeTypeAndValue.ta.mjs";
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";

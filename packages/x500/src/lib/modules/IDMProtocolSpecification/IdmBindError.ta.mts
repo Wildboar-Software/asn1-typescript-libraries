@@ -7,12 +7,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    GeneralName,
+    type GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";
 import {
-    IdmBindError_aETitleError,
+    type IdmBindError_aETitleError,
     _decode_IdmBindError_aETitleError,
     _encode_IdmBindError_aETitleError,
     _enum_for_IdmBindError_aETitleError,

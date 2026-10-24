@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { LpaeActivationRequest_lpaeOption, _decode_LpaeActivationRequest_lpaeOption, _encode_LpaeActivationRequest_lpaeOption } from "../RSPDefinitions/LpaeActivationRequest-lpaeOption.ta.mjs";
+import { type LpaeActivationRequest_lpaeOption, _decode_LpaeActivationRequest_lpaeOption, _encode_LpaeActivationRequest_lpaeOption } from "../RSPDefinitions/LpaeActivationRequest-lpaeOption.ta.mjs";
 
 
 /**

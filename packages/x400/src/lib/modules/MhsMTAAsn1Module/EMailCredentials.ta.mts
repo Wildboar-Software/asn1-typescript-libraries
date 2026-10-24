@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    EMailSimpleCredentials,
+    type EMailSimpleCredentials,
     _decode_EMailSimpleCredentials,
     _encode_EMailSimpleCredentials,
 } from '../MhsMTAAsn1Module/EMailSimpleCredentials.ta.mjs';
 import {
-    EMailStrongCredentials,
+    type EMailStrongCredentials,
     _decode_EMailStrongCredentials,
     _encode_EMailStrongCredentials,
 } from '../MhsMTAAsn1Module/EMailStrongCredentials.ta.mjs';

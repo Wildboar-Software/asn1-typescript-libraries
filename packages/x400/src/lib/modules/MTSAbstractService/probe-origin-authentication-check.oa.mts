@@ -20,7 +20,7 @@ import {
     _encode_Criticality,
 } from '../MTSAbstractService/Criticality.ta.mjs';
 import {
-    ProbeOriginAuthenticationCheck,
+    type ProbeOriginAuthenticationCheck,
     _decode_ProbeOriginAuthenticationCheck,
     _encode_ProbeOriginAuthenticationCheck,
 } from '../MTSAbstractService/ProbeOriginAuthenticationCheck.ta.mjs';

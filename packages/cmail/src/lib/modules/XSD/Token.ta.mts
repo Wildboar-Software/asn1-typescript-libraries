@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  NormalizedString,
+  type NormalizedString,
   _decode_NormalizedString,
   _encode_NormalizedString,
 } from '../XSD/NormalizedString.ta.mjs';

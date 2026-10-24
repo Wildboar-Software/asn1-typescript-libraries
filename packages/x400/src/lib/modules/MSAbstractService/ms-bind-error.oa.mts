@@ -18,7 +18,7 @@ import {
     _encode_Code,
 } from '@wildboar/rose';
 import {
-    ms_bind_error_ParameterType,
+    type ms_bind_error_ParameterType,
     _decode_ms_bind_error_ParameterType,
     _encode_ms_bind_error_ParameterType,
 } from '../MSAbstractService/ms-bind-error-ParameterType.ta.mjs';

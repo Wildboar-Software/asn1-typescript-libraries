@@ -12,7 +12,7 @@ import {
     _encode_ContextProfile,
 } from "../ServiceAdministration/ContextProfile.ta.mjs";
 import {
-    ResultAttribute_outputValues,
+    type ResultAttribute_outputValues,
     _decode_ResultAttribute_outputValues,
     _encode_ResultAttribute_outputValues,
 } from "../ServiceAdministration/ResultAttribute-outputValues.ta.mjs";

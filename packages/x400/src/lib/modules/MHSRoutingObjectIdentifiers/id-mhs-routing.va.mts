@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    ID,
+    type ID,
     _decode_ID,
     _encode_ID,
 } from '../MHSRoutingObjectIdentifiers/ID.ta.mjs';

@@ -26,7 +26,7 @@ import {
   _encode_Bitstring_Pattern,
 } from '../ISO8571-FTAM/Bitstring-Pattern.ta.mjs';
 import {
-  Contents_Type_Pattern,
+  type Contents_Type_Pattern,
   _decode_Contents_Type_Pattern,
   _encode_Contents_Type_Pattern,
 } from '../ISO8571-FTAM/Contents-Type-Pattern.ta.mjs';
@@ -41,7 +41,7 @@ import {
   _encode_Date_and_Time_Pattern,
 } from '../ISO8571-FTAM/Date-and-Time-Pattern.ta.mjs';
 import {
-  User_Identity_Pattern,
+  type User_Identity_Pattern,
   _decode_User_Identity_Pattern,
   _encode_User_Identity_Pattern,
 } from '../ISO8571-FTAM/User-Identity-Pattern.ta.mjs';
@@ -51,7 +51,7 @@ import {
   _encode_Boolean_Pattern,
 } from '../ISO8571-FTAM/Boolean-Pattern.ta.mjs';
 import {
-  Attribute_Extensions_Pattern,
+  type Attribute_Extensions_Pattern,
   _decode_Attribute_Extensions_Pattern,
   _encode_Attribute_Extensions_Pattern,
 } from '../ISO8571-FTAM/Attribute-Extensions-Pattern.ta.mjs';

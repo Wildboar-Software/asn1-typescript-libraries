@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
+import { type V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
 
 import { V8Diag_Item_v8Result, _enum_for_V8Diag_Item_v8Result, _decode_V8Diag_Item_v8Result, _encode_V8Diag_Item_v8Result } from "../V59/V8Diag-Item-v8Result.ta.mjs";
 

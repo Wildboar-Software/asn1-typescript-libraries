@@ -6,9 +6,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Cause, _decode_Cause, _encode_Cause } from "../IN-SSF-SCF-datatypes/Cause.ta.mjs";
+import { type Cause, _decode_Cause, _encode_Cause } from "../IN-SSF-SCF-datatypes/Cause.ta.mjs";
 // export { Cause, _decode_Cause, _encode_Cause } from "../IN-SSF-SCF-datatypes/Cause.ta.mjs";
-import { TimerValue, _decode_TimerValue, _encode_TimerValue } from "../IN-SSF-SCF-datatypes/TimerValue.ta.mjs";
+import { type TimerValue, _decode_TimerValue, _encode_TimerValue } from "../IN-SSF-SCF-datatypes/TimerValue.ta.mjs";
 // export { TimerValue, _decode_TimerValue, _encode_TimerValue } from "../IN-SSF-SCF-datatypes/TimerValue.ta.mjs";
 
 

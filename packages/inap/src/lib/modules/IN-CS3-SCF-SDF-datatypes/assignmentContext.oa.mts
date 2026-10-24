@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { DistinguishedName, _decode_DistinguishedName, _encode_DistinguishedName } from "../InformationFramework/DistinguishedName.ta.mjs";
+import { type DistinguishedName, _decode_DistinguishedName, _encode_DistinguishedName } from "../InformationFramework/DistinguishedName.ta.mjs";
 // export { DistinguishedName, _decode_DistinguishedName, _encode_DistinguishedName } from "../InformationFramework/DistinguishedName.ta.mjs";
 import { id_avc_assignment } from "../IN-CS3-object-identifiers/id-avc-assignment.va.mjs";
 // export { id_avc_assignment } from "../IN-CS3-object-identifiers/id-avc-assignment.va.mjs";

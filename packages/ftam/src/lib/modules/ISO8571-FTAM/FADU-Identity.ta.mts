@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  INTEGER,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,22 +12,22 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  FADU_Identity_first_last,
+  type FADU_Identity_first_last,
   _decode_FADU_Identity_first_last,
   _encode_FADU_Identity_first_last,
 } from '../ISO8571-FTAM/FADU-Identity-first-last.ta.mjs';
 import {
-  FADU_Identity_relative,
+  type FADU_Identity_relative,
   _decode_FADU_Identity_relative,
   _encode_FADU_Identity_relative,
 } from '../ISO8571-FTAM/FADU-Identity-relative.ta.mjs';
 import {
-  FADU_Identity_begin_end,
+  type FADU_Identity_begin_end,
   _decode_FADU_Identity_begin_end,
   _encode_FADU_Identity_begin_end,
 } from '../ISO8571-FTAM/FADU-Identity-begin-end.ta.mjs';
 import {
-  Node_Name,
+  type Node_Name,
   _decode_Node_Name,
   _encode_Node_Name,
 } from '../ISO8571-FTAM/Node-Name.ta.mjs';
